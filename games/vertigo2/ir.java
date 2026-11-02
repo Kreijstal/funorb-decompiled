@@ -21,7 +21,7 @@ final class ir {
         field_c = null;
     }
 
-    final static boolean a(int param0, r param1, r param2, r param3) {
+    final static boolean a(int param0, Archive param1, Archive param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
@@ -76,8 +76,8 @@ final class ir {
     }
 
     final static void a(int param0, byte param1) {
-        r var3 = null;
-        r var3Lifetime1;
+        Archive var3 = null;
+        Archive var3Lifetime1;
         rm.field_B = (param0 & 63) >> 4;
         oa.field_p = param0 >> 2 & 3;
         if (!(rm.field_B <= 2)) {
@@ -93,8 +93,8 @@ final class ir {
             mf.field_b = 2;
             return;
           }
-          var3 = (r) null;
-          ir.a(50, (r) null, (r) null, (r) null);
+          var3 = (Archive) null;
+          ir.a(50, (Archive) null, (Archive) null, (Archive) null);
           if (mf.field_b > 2) {
             mf.field_b = 2;
             return;
@@ -102,8 +102,8 @@ final class ir {
           return;
         }
         if (param1 != -65) {
-          var3Lifetime1 = (r) null;
-          ir.a(50, (r) null, (r) null, (r) null);
+          var3Lifetime1 = (Archive) null;
+          ir.a(50, (Archive) null, (Archive) null, (Archive) null);
           if (mf.field_b <= 2) {
             return;
           }

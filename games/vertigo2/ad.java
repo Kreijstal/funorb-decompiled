@@ -3,8 +3,8 @@
  */
 final class ad {
     static boolean field_h;
-    static UiWidget field_e;
-    static UiWidget field_f;
+    static UiPanel field_e;
+    static UiPanel field_f;
     static im field_g;
     static String field_d;
     static String field_c;

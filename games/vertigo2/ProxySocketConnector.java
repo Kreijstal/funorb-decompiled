@@ -319,7 +319,7 @@ final class ProxySocketConnector extends SocketConnector {
         int var6 = Vertigo2.field_L ? 1 : 0;
         BitPacketBuffer var7 = uh.field_Wb;
         BitPacketBuffer var8 = var7;
-        var8.j(param0, 120);
+        var8.writeCipheredByte(param0, 120);
         var8.position = var8.position + 1;
         int var4 = var8.position;
         var8.writeByte(1, 85);

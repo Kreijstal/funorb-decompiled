@@ -48,7 +48,7 @@ final class ao extends d {
         }
     }
 
-    final static void a(int param0, r param1) {
+    final static void a(int param0, Archive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -87,7 +87,7 @@ final class ao extends d {
         field_Q = null;
     }
 
-    final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -97,13 +97,13 @@ final class ao extends d {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        r var13 = null;
+        Archive var13 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, param3, param4, (byte) -119, param6)) {
             if (param5 > -107) {
-              var13 = (r) null;
-              ao.a(41, (r) null);
+              var13 = (Archive) null;
+              ao.a(41, (Archive) null);
             }
             return false;
           }

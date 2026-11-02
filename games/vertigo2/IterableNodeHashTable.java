@@ -9,9 +9,9 @@ final class IterableNodeHashTable implements Iterable {
     IntrusiveNode[] field_f;
     private IntrusiveNode field_g;
     static lb field_e;
-    static UiWidget[] field_h;
-    static UiWidget field_a;
-    static UiWidget field_b;
+    static UiPanel[] field_h;
+    static UiPanel field_a;
+    static UiPanel field_b;
 
     final static int b(boolean param0) {
         if (!param0) {
@@ -26,7 +26,7 @@ final class IterableNodeHashTable implements Iterable {
         field_h = null;
         field_b = null;
         if (param0) {
-          field_b = (UiWidget) null;
+          field_b = (UiPanel) null;
         }
         field_d = null;
     }
@@ -53,15 +53,15 @@ final class IterableNodeHashTable implements Iterable {
         int var16Lifetime2;
         var18 = Vertigo2.field_L ? 1 : 0;
         try {
-          var12 = pk.a((byte) -14, cj.field_D, param6, ua.field_e);
-          var13 = pk.a((byte) -14, cj.field_D, param5, ua.field_e);
+          var12 = pk.a((byte) -14, WidgetContainer.field_D, param6, ua.field_e);
+          var13 = pk.a((byte) -14, WidgetContainer.field_D, param5, ua.field_e);
           var14 = pk.a((byte) -14, ib.field_a, param3, ap.field_e);
           var15 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
           if (param1 >= -122) {
-            field_h = (UiWidget[]) null;
+            field_h = (UiPanel[]) null;
           }
-          var8_int = pk.a((byte) -14, cj.field_D, param0 + param6, ua.field_e);
-          var9 = pk.a((byte) -14, cj.field_D, -param0 + param5, ua.field_e);
+          var8_int = pk.a((byte) -14, WidgetContainer.field_D, param0 + param6, ua.field_e);
+          var9 = pk.a((byte) -14, WidgetContainer.field_D, -param0 + param5, ua.field_e);
           for (var16 = var12; var16 < var8_int; var16++) {
             ki.a(-111, var14, vl.field_e[var16], var15, param7);
           }

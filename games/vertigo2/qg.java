@@ -30,7 +30,7 @@ final class qg extends oh {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_8_0 = 0;
@@ -119,7 +119,7 @@ final class qg extends oh {
         }
     }
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         int stackIn_12_1 = 0;
         int stackIn_15_2 = 0;
         int stackIn_19_1 = 0;
@@ -194,7 +194,7 @@ final class qg extends oh {
         }
     }
 
-    final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_A = 0;
@@ -213,7 +213,7 @@ final class qg extends oh {
     final static void a(int param0, int param1, int param2, boolean param3, String param4, long param5) {
         int var7_int = 0;
         try {
-          uh.field_Wb.j(param0, 127);
+          uh.field_Wb.writeCipheredByte(param0, 127);
           uh.field_Wb.position = uh.field_Wb.position + 1;
           var7_int = uh.field_Wb.position;
           if (param2 != 0) {
@@ -229,7 +229,7 @@ final class qg extends oh {
         }
     }
 
-    private qg(int param0, int param1, int param2, int param3, ur param4, uf param5, iq param6, boolean param7, boolean param8) {
+    private qg(int param0, int param1, int param2, int param3, WidgetListener param4, uf param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_K = 2147483647;
         this.field_L = 2147483647;

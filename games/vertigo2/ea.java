@@ -4,7 +4,7 @@
 final class ea {
     static String field_f;
     static String field_a;
-    static UiWidget field_c;
+    static UiPanel field_c;
     static int field_g;
     static int[] field_h;
     static int field_e;
@@ -28,7 +28,7 @@ final class ea {
 
     final static void a(int param0, boolean param1) {
         BitPacketBuffer var2 = uh.field_Wb;
-        var2.j(param0, 122);
+        var2.writeCipheredByte(param0, 122);
         var2.writeByte(1, -99);
         var2.writeByte(3, 98);
         if (param1) {

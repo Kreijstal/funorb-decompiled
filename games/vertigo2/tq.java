@@ -48,10 +48,10 @@ final class tq {
               var11 = param2 - var6;
               var12 = param2 + var6;
               if (var12 >= ua.field_e &&
-                cj.field_D >= var11) {
+                WidgetContainer.field_D >= var11) {
                 var13 = pk.a((byte) -14, ib.field_a, param0 + var5_int, ap.field_e);
                 var14 = pk.a((byte) -14, ib.field_a, param0 - var5_int, ap.field_e);
-                if (var12 <= cj.field_D) {
+                if (var12 <= WidgetContainer.field_D) {
                   ki.a(-123, var14, vl.field_e[var12], var13, param3);
                 }
                 if (ua.field_e <= var11) {
@@ -65,12 +65,12 @@ final class tq {
             if (var12Lifetime1 < ua.field_e) {
               continue;
             }
-            if (var11Lifetime1 > cj.field_D) {
+            if (var11Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
             var13Lifetime1 = pk.a((byte) -14, ib.field_a, var6 + param0, ap.field_e);
             var14Lifetime1 = pk.a((byte) -14, ib.field_a, -var6 + param0, ap.field_e);
-            if (cj.field_D >= var12Lifetime1) {
+            if (WidgetContainer.field_D >= var12Lifetime1) {
               ki.a(-88, var14Lifetime1, vl.field_e[var12Lifetime1], var13Lifetime1, param3);
             }
             if (var11Lifetime1 < ua.field_e) {
@@ -325,10 +325,10 @@ final class tq {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
                     if (var3Lifetime5 == 0) {
-                      r.field_h = 0L;
+                      Archive.field_h = 0L;
                       return;
                     }
-                    r.field_h = (long)var3Lifetime5 + gk.a(102);
+                    Archive.field_h = (long)var3Lifetime5 + gk.a(102);
                     return;
                   }
                   if (var2 == 22) {
@@ -420,7 +420,7 @@ final class tq {
             gd.field_j = new uh(ol.field_A);
             gd.field_j.a(-1, (long)var3Lifetime1);
             ph.a(gd.field_j, true, var1, false);
-            r.field_h = 0L;
+            Archive.field_h = 0L;
           } else {
             gd.field_j = null;
           }

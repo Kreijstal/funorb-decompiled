@@ -28,7 +28,7 @@ final class oe extends fj implements ij {
         RuntimeException var4 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var4_int = param3.c((byte) -96, param2);
+          var4_int = param3.readBits((byte) -96, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -36,18 +36,18 @@ final class oe extends fj implements ij {
             param1.length != var4_int) {
             param1 = new byte[var4_int];
           }
-          var5 = param3.c((byte) -118, 3);
+          var5 = param3.readBits((byte) -118, 3);
           if (param0 != 12635) {
             field_qb = (ee) null;
           }
-          var6 = (byte)param3.c((byte) -101, 8);
+          var6 = (byte)param3.readBits((byte) -101, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (byte)(param3.c((byte) -125, var5) + var6);
+              param1[var7] = (byte)(param3.readBits((byte) -125, var5) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param1);

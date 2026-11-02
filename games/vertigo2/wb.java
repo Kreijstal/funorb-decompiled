@@ -215,7 +215,7 @@ final class wb extends TextureOperator {
         if (param2 <= 85) {
           wb.b((byte) 118);
         }
-        var5 = qb.field_b[var4 * 255 >> 12 & 255];
+        var5 = JaggrabClient.field_b[var4 * 255 >> 12 & 255];
         var5 = (var5 << 12) / this.field_z;
         var5 = (var5 << 12) / this.field_B;
         var5 = var5 * this.field_D >> 12;
@@ -228,7 +228,7 @@ final class wb extends TextureOperator {
         int var5;
         boolean stackIn_6_0 = false;
         var4 = this.field_z * (param0 - param1) >> 12;
-        var5 = qb.field_b[var4 * 255 >> 12 & 255];
+        var5 = JaggrabClient.field_b[var4 * 255 >> 12 & 255];
         var5 = (var5 << 12) / this.field_z;
         var5 = (var5 << 12) / this.field_B;
         var5 = var5 * this.field_D >> 12;

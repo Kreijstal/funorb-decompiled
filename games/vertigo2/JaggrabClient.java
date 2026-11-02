@@ -3,18 +3,18 @@
  */
 import java.io.*;
 
-final class qb implements Runnable {
+final class JaggrabClient implements Runnable {
     private java.net.URL field_g;
     private DataInputStream field_k;
     static sd field_d;
-    private wk field_c;
+    private AsyncRequest field_c;
     private PlatformTaskDispatcher field_i;
-    private wk field_h;
+    private AsyncRequest field_h;
     private int field_e;
     private PacketBuffer field_j;
     static int[] field_b;
-    private wk field_a;
-    static lg[] field_f;
+    private AsyncRequest field_a;
+    static Model[] field_f;
 
     final static boolean a(CharSequence param0, int param1) {
         int var2_int = 0;
@@ -45,7 +45,7 @@ final class qb implements Runnable {
     final static int a(int param0, int param1, boolean param2, int param3) {
         if (param3 != 10000) {
           CharSequence var5 = (CharSequence) null;
-          qb.a((CharSequence) null, -15);
+          JaggrabClient.a((CharSequence) null, -15);
           return pk.a(1);
         }
         return pk.a(1);
@@ -99,7 +99,7 @@ final class qb implements Runnable {
         }
         if (~this.field_e == param0) {
           if (this.field_a == null) {
-            this.field_a = this.field_i.a(-90, this.field_g);
+            this.field_a = this.field_i.requestUrlStream(-90, this.field_g);
           }
           if (this.field_a.field_b == 0) {
             return false;
@@ -112,7 +112,7 @@ final class qb implements Runnable {
         }
         if (this.field_e == 1) {
           if (null == this.field_h) {
-            this.field_h = this.field_i.a(-82, 443, this.field_g.getHost());
+            this.field_h = this.field_i.requestSocket(-82, 443, this.field_g.getHost());
           }
           if (this.field_h.field_b == 0) {
             return false;
@@ -148,7 +148,7 @@ final class qb implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_c) {
-              this.field_c = this.field_i.a(5, (Runnable) (this), ~param0);
+              this.field_c = this.field_i.startThread(5, (Runnable) (this), ~param0);
             }
             if (0 == this.field_c.field_b) {
               return false;
@@ -162,7 +162,7 @@ final class qb implements Runnable {
           }
         }
         if (null == this.field_c) {
-          this.field_c = this.field_i.a(5, (Runnable) (this), ~param0);
+          this.field_c = this.field_i.startThread(5, (Runnable) (this), ~param0);
         }
         if (0 == this.field_c.field_b) {
           return false;
@@ -181,7 +181,7 @@ final class qb implements Runnable {
           field_f = null;
           return;
         }
-        qb.a(73, 2, true, 112);
+        JaggrabClient.a(73, 2, true, 112);
         field_d = null;
         field_f = null;
     }
@@ -195,7 +195,7 @@ final class qb implements Runnable {
         try {
           fj.a(cq.field_i, 811497217, param0, q.field_x, ug.field_b, 0, true);
           if (param1 != 2) {
-            field_f = (lg[]) null;
+            field_f = (Model[]) null;
           }
           for (var2_int = 0; cq.field_i > var2_int; var2_int++) {
             ac.field_I[var2_int + param0] = var2_int;
@@ -232,7 +232,7 @@ final class qb implements Runnable {
               break;
             }
             if (this.field_j.position == this.field_j.payload.length) {
-              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_g));
+              throw JaggrabClient.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_g));
             }
             var1 = this;
             synchronized (var1) {
@@ -257,7 +257,7 @@ final class qb implements Runnable {
         }
     }
 
-    qb(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    JaggrabClient(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_i = param0;
           this.field_g = param1;
@@ -268,7 +268,7 @@ final class qb implements Runnable {
     }
 
     static {
-        field_f = new lg[2];
+        field_f = new Model[2];
     }
 
     @SuppressWarnings("unchecked")

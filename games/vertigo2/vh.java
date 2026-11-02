@@ -39,7 +39,7 @@ final class vh extends IntrusiveNode {
     private boolean field_R;
     private static int field_L;
 
-    private final static boolean a(r param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_M) {
           var1 = param0.a(0, 0, (byte) -54);
@@ -510,7 +510,7 @@ final class vh extends IntrusiveNode {
         return var0;
     }
 
-    final static vh a(r param0, String param1, String param2) {
+    final static vh a(Archive param0, String param1, String param2) {
         try {
           vh var4_ref = null;
           if (!vh.a(param0)) {
@@ -613,7 +613,7 @@ final class vh extends IntrusiveNode {
         field_Q = 0;
     }
 
-    final static vh a(r param0, int param1, int param2) {
+    final static vh a(Archive param0, int param1, int param2) {
         try {
           vh var4_ref = null;
           if (!vh.a(param0)) {

@@ -37,9 +37,9 @@ final class pf {
         boolean stackIn_4_3;
         boolean stackIn_5_4 = false;
         tp stackIn_12_0 = null;
-        UiWidget stackIn_37_0 = null;
+        UiPanel stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        UiWidget stackIn_41_0 = null;
+        UiPanel stackIn_41_0 = null;
         String stackIn_42_1 = null;
         int stackIn_46_0 = 0;
         Object stackIn_101_0 = null;
@@ -68,11 +68,11 @@ final class pf {
         var19 = Vertigo2.field_L ? 1 : 0;
         try {
           stackIn_4_0 = h.field_D.field_Lb;
-          stackIn_4_1 = param2 * ((2 + r.field_f) * 3);
+          stackIn_4_1 = param2 * ((2 + Archive.field_f) * 3);
           stackIn_4_2 = 2;
           stackIn_4_3 = param1;
           stackIn_5_4 = (wq.field_M == h.field_D.field_Lb);
-          var3_int = ((od) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -5, 2 + r.field_f) ? 1 : 0;
+          var3_int = ((od) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -5, 2 + Archive.field_f) ? 1 : 0;
           var4 = h.field_D.field_Mb.field_M;
           if (param0) {
             pf.a(true, true, 108);
@@ -95,11 +95,11 @@ final class pf {
                 break;
               }
               if (stackIn_12_0.field_M == null) {
-                var7.field_Jb = new UiWidget(0L, IterableNodeHashTable.field_b);
+                var7.field_Jb = new UiPanel(0L, IterableNodeHashTable.field_b);
                 var7.b(var7.field_Jb, 119);
-                var7.field_Kb = new UiWidget(0L, tm.field_b);
+                var7.field_Kb = new UiPanel(0L, tm.field_b);
                 var7.b(var7.field_Kb, 126);
-                var7.field_Ob = new UiWidget(0L, IterableNodeHashTable.field_b);
+                var7.field_Ob = new UiPanel(0L, IterableNodeHashTable.field_b);
                 var7.b(var7.field_Ob, 125);
                 var7.field_Kb.field_O = 2;
                 var8 = 1;
@@ -123,7 +123,7 @@ final class pf {
                 var7.field_Ob.field_Db = qr.field_q;
                 var7.field_Ob.field_B = var11;
                 var12 = 1;
-                var7.field_Ob.a(100, qr.field_q.field_x + 3, r.field_f, var9, 0);
+                var7.field_Ob.a(100, qr.field_q.field_x + 3, Archive.field_f, var9, 0);
               }
               var7.field_Kb.field_B = var11;
               var7.field_Jb.field_B = var11;
@@ -143,10 +143,10 @@ final class pf {
               if (var14 <= 0) {
                 stackIn_38_1 = var7.field_Mb;
               } else {
-                stackIn_38_1 = cc.a(var7.field_Jb.field_z, var7.field_Mb, var14);
+                stackIn_38_1 = BitmapFont.a(var7.field_Jb.field_z, var7.field_Mb, var14);
               }
               stackIn_37_0.field_S = stackIn_38_1;
-              var7.field_Jb.a(81, var14, r.field_f, var9, var13);
+              var7.field_Jb.a(81, var14, Archive.field_f, var9, var13);
               stackIn_41_0 = var7.field_Kb;
               if (null == var7.field_Lb) {
                 stackIn_42_1 = aq.field_f;
@@ -154,15 +154,15 @@ final class pf {
                 stackIn_42_1 = var7.field_Lb;
               }
               stackIn_41_0.field_S = stackIn_42_1;
-              var7.field_Kb.a(97, 80, r.field_f, var9, -80 + var7.field_Fb);
+              var7.field_Kb.a(97, 80, Archive.field_f, var9, -80 + var7.field_Fb);
               stackIn_46_0 = (var7.field_Jb.field_S.equals(var7.field_Mb)) ? 0 : 1;
               var15 = stackIn_46_0;
-              var9 = var9 + r.field_f;
+              var9 = var9 + Archive.field_f;
               if (var3_int == 0) {
                 var7.field_kb = var9 - var7.field_db;
               }
               if (var8 != 0) {
-                h.field_D.field_Mb.a((byte) 121, (UiWidget) (var6), var7, 2);
+                h.field_D.field_Mb.a((byte) 121, (UiPanel) (var6), var7, 2);
               }
               var6 = var7;
               if (var7.field_Ob == null ||

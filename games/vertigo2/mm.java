@@ -11,7 +11,7 @@ final class mm {
           return;
         }
         try {
-          var3.j(param0, 118);
+          var3.writeCipheredByte(param0, 118);
           var3.writeByte(5, 105);
           var3.writeByte(0, -82);
           var3.writeShort(param1.field_p, -1783);

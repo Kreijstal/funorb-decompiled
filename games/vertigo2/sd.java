@@ -28,7 +28,7 @@ final class sd extends oh {
     }
 
     public sd() {
-        super(0, 0, gi.field_m, im.field_h, (ur) null, (uf) null);
+        super(0, 0, gi.field_m, im.field_h, (WidgetListener) null, (uf) null);
         this.field_J = new IntrusiveDeque();
     }
 
@@ -47,17 +47,17 @@ final class sd extends oh {
         }
     }
 
-    final iq a(int param0) {
+    final UiWidget a(int param0) {
         IntrusiveDequeCursor var2;
         nm var3;
         int var4;
-        iq var5;
+        UiWidget var5;
         var4 = Vertigo2.field_L ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_J);
         var3 = (nm) (var2.d(4));
         if (param0 != 15197) {
-          var5 = (iq) null;
-          this.b((iq) null, 32);
+          var5 = (UiWidget) null;
+          this.b((UiWidget) null, 32);
         }
         while (var3 != null) {
           if (var3.field_I) {
@@ -78,7 +78,7 @@ final class sd extends oh {
           }
           var3 = (nm) (var2.c(2));
         }
-        this.field_C = (iq) ((Object) this.k(param0 + param0));
+        this.field_C = (UiWidget) ((Object) this.k(param0 + param0));
     }
 
     final static void f(byte param0) {
@@ -89,7 +89,7 @@ final class sd extends oh {
         }
     }
 
-    final void b(iq param0, int param1) {
+    final void b(UiWidget param0, int param1) {
         nm var3 = null;
         try {
           if (!(param0 instanceof nm)) {
@@ -101,7 +101,7 @@ final class sd extends oh {
           if (param1 != 0) {
             sd.f((byte) 122);
           }
-          var3.a((byte) 116, (iq) (this));
+          var3.a((byte) 116, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "sd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -110,16 +110,16 @@ final class sd extends oh {
     final void a(boolean param0, int param1, int param2, int param3) {
         int var7 = Vertigo2.field_L ? 1 : 0;
         if (null != this.field_B) {
-          this.field_B.a(true, param2, true, (iq) (this), param3);
+          this.field_B.a(true, param2, true, (UiWidget) (this), param3);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_J);
         if (param0) {
           this.a(45);
         }
-        iq var6 = (iq) (var5.b(4));
+        UiWidget var6 = (UiWidget) (var5.b(4));
         while (var6 != null) {
           var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
-          var6 = (iq) (var5.a((byte) 50));
+          var6 = (UiWidget) (var5.a((byte) 50));
         }
     }
 

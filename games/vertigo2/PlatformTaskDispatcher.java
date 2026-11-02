@@ -9,11 +9,11 @@ final class PlatformTaskDispatcher implements Runnable {
     private fl field_w;
     boolean field_p;
     static String field_m;
-    private wk field_b;
+    private AsyncRequest field_b;
     private Object field_c;
     private boolean field_u;
     RandomAccessCacheFile field_k;
-    private wk field_s;
+    private AsyncRequest field_s;
     private static volatile long field_l;
     private static String field_t;
     static String field_v;
@@ -71,23 +71,23 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final wk b(int param0) {
+    final AsyncRequest requestDisplayModes(int param0) {
         if (param0 > -105) {
           this.field_c = (Object) null;
         }
-        return this.a(0, (Object) null, 0, 5, 0);
+        return this.enqueueTask(0, (Object) null, 0, 5, 0);
     }
 
-    private final wk a(int param0, Object param1, int param2, int param3, int param4) {
-        wk var6 = null;
+    private final AsyncRequest enqueueTask(int param0, Object param1, int param2, int param3, int param4) {
+        AsyncRequest var6 = null;
         String var9 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         if (param4 != 0) {
           var9 = (String) null;
-          this.a(-30, (Class) null, (String) null);
+          this.requestDeclaredField(-30, (Class) null, (String) null);
         }
-        var6 = new wk();
+        var6 = new AsyncRequest();
         var6.field_a = param3;
         var6.field_f = param1;
         var6.field_c = param2;
@@ -106,54 +106,54 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final wk a(int param0, int param1, int param2, int param3, int param4) {
+    final AsyncRequest requestEnterFullscreen(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 1636602704) {
           Runnable var7 = (Runnable) null;
-          this.a(-115, (Runnable) null, -90);
+          this.startThread(-115, (Runnable) null, -90);
         }
-        return this.a((param1 << 16) + param0, (Object) null, (param3 << 16) + param2, 6, 0);
+        return this.enqueueTask((param1 << 16) + param0, (Object) null, (param3 << 16) + param2, 6, 0);
     }
 
-    final wk a(int param0, Class param1, String param2) {
+    final AsyncRequest requestDeclaredField(int param0, Class param1, String param2) {
         if (param0 > -50) {
           this.run();
         }
-        return this.a(0, new Object[]{param1, param2}, 0, 9, 0);
+        return this.enqueueTask(0, new Object[]{param1, param2}, 0, 9, 0);
     }
 
-    private final wk a(boolean param0, String param1, int param2, int param3) {
+    private final AsyncRequest requestSocketInternal(boolean param0, String param1, int param2, int param3) {
         if (param2 != 1) {
-          return (wk) null;
+          return (AsyncRequest) null;
         }
-        return this.a(param3, param1, 0, param0 ? 22 : 1, 0);
+        return this.enqueueTask(param3, param1, 0, param0 ? 22 : 1, 0);
     }
 
-    final wk a(boolean param0, java.awt.Frame param1) {
+    final AsyncRequest requestExitFullscreen(boolean param0, java.awt.Frame param1) {
         if (param0) {
-          return (wk) null;
+          return (AsyncRequest) null;
         }
-        return this.a(0, param1, 0, 7, 0);
+        return this.enqueueTask(0, param1, 0, 7, 0);
     }
 
-    final wk a(int param0, Runnable param1, int param2) {
+    final AsyncRequest startThread(int param0, Runnable param1, int param2) {
         if (param2 != 0) {
-          return (wk) null;
+          return (AsyncRequest) null;
         }
-        return this.a(param0, param1, 0, 2, 0);
+        return this.enqueueTask(param0, param1, 0, 2, 0);
     }
 
-    final wk a(Class[] param0, int param1, Class param2, String param3) {
+    final AsyncRequest requestDeclaredMethod(Class[] param0, int param1, Class param2, String param3) {
         if (param1 < 29) {
           this.a(38);
         }
-        return this.a(0, new Object[]{param2, param3, param0}, 0, 8, 0);
+        return this.enqueueTask(0, new Object[]{param2, param3, param0}, 0, 8, 0);
     }
 
-    final wk a(int param0, int param1, String param2) {
+    final AsyncRequest requestSocket(int param0, int param1, String param2) {
         if (param0 >= -79) {
           field_f = -84;
         }
-        return this.a(false, param2, 1, param1);
+        return this.requestSocketInternal(false, param2, 1, param1);
     }
 
     final boolean a(int param0) {
@@ -169,9 +169,9 @@ final class PlatformTaskDispatcher implements Runnable {
         return null != this.field_c ? true : false;
     }
 
-    final wk a(int param0, java.net.URL param1) {
+    final AsyncRequest requestUrlStream(int param0, java.net.URL param1) {
         int var3 = -127 % ((48 - param0) / 60);
-        return this.a(0, param1, 0, 4, 0);
+        return this.enqueueTask(0, param1, 0, 4, 0);
     }
 
     public final void run() {
@@ -191,7 +191,7 @@ final class PlatformTaskDispatcher implements Runnable {
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
-          wk var8 = null;
+          AsyncRequest var8 = null;
           Thread var9 = null;
           java.awt.datatransfer.Clipboard var10 = null;
           java.awt.Component var11 = null;

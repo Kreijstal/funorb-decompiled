@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends sn {
+final class rq extends PcmStream {
     static String field_x;
     private db field_s;
     static String field_A;
     IntrusiveDeque field_w;
     static int field_B;
     fp field_z;
-    static UiWidget field_t;
+    static UiPanel field_t;
     static int field_u;
     static String field_v;
     static boolean field_y;
-    static lg field_r;
+    static Model field_r;
 
-    final static void a(cc param0, int param1, r param2) {
+    final static void a(BitmapFont param0, int param1, Archive param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -34,7 +34,7 @@ final class rq extends sn {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = np.field_Lb;
-          ql.field_L = new UiWidget(0L, (UiWidget) null);
+          ql.field_L = new UiPanel(0L, (UiPanel) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             ke.a((Throwable) null, "QC1", 0);
@@ -51,7 +51,7 @@ final class rq extends sn {
             return;
           }
           pe.a(var4, 97);
-          mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (cc) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
+          mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (BitmapFont) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
           fo.field_c = nq.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
           va.field_h = nq.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
           var5 = bi.field_e;
@@ -86,7 +86,7 @@ final class rq extends sn {
         }
     }
 
-    final static Sprite a(r param0, String param1, String param2, byte param3) {
+    final static Sprite a(Archive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -239,7 +239,7 @@ final class rq extends sn {
         int var10 = 0;
         ra var11 = null;
         int var12 = 0;
-        r var13 = null;
+        Archive var13 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
           if (0 != (4 & this.field_s.field_N[param4.field_q]) &&
@@ -285,8 +285,8 @@ final class rq extends sn {
           }
           param4.field_J.b(param1, param0, param2);
           if (param3 < 49) {
-            var13 = (r) null;
-            rq.a((cc) null, 118, (r) null);
+            var13 = (Archive) null;
+            rq.a((BitmapFont) null, 118, (Archive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -489,13 +489,13 @@ final class rq extends sn {
         }
     }
 
-    final sn c() {
+    final PcmStream c() {
         pe var1 = (pe) (this.field_w.a((byte) 100));
         if (var1 == null) {
           return null;
         }
         if (var1.field_J != null) {
-          return (sn) ((Object) var1.field_J);
+          return (PcmStream) ((Object) var1.field_J);
         }
         return this.a();
     }
@@ -510,7 +510,7 @@ final class rq extends sn {
         }
     }
 
-    final sn a() {
+    final PcmStream a() {
         pe var1_ref = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
         do {
@@ -519,7 +519,7 @@ final class rq extends sn {
             return null;
           }
         } while (var1_ref.field_J == null);
-        return (sn) ((Object) var1_ref.field_J);
+        return (PcmStream) ((Object) var1_ref.field_J);
     }
 
     final static boolean a(byte param0) {

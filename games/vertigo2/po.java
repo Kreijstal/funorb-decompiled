@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class po {
-    static r field_e;
+    static Archive field_e;
     static int[] field_c;
     static String field_b;
     static String field_d;
-    static UiWidget field_a;
+    static UiPanel field_a;
 
     final static void b(byte param0) {
         if (param0 == -52) {
@@ -30,7 +30,7 @@ final class po {
           field_d = null;
           return;
         }
-        field_a = (UiWidget) null;
+        field_a = (UiPanel) null;
         field_e = null;
         field_d = null;
     }

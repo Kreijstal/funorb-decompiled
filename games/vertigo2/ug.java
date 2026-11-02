@@ -81,7 +81,7 @@ abstract class ug {
           var5 = 0;
           while (true) {
             if (var4.length <= var5) {
-              stackIn_20_0 = UiWidget.b(var3[var3.length - 1], 0);
+              stackIn_20_0 = UiPanel.b(var3[var3.length - 1], 0);
               return stackIn_20_0;
             }
             var6 = var4[var5];
@@ -108,7 +108,7 @@ abstract class ug {
         }
     }
 
-    final static r a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
+    final static Archive a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
         if (!param3) {
           return vo.a(false, 124, param4, param0, param1, param2);
         }

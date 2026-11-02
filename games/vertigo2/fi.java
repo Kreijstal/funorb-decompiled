@@ -124,7 +124,7 @@ final class fi {
         return var29;
     }
 
-    final static co a(int param0, r param1, r param2, int param3, byte param4) {
+    final static co a(int param0, Archive param1, Archive param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;

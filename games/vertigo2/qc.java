@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qc extends DualLinkNode {
-    static r field_B;
+    static Archive field_B;
     static db field_v;
     static int field_A;
     int field_C;
@@ -11,7 +11,7 @@ abstract class qc extends DualLinkNode {
     static int field_z;
     static int field_t;
     static byte[] field_w;
-    static cc field_x;
+    static BitmapFont field_x;
 
     abstract Object a(byte param0);
 

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj {
-    static UiWidget field_d;
+    static UiPanel field_d;
     static byte[] field_a;
     static ba field_c;
-    static UiWidget field_b;
+    static UiPanel field_b;
     private static String field_z;
 
     public static void a(int param0) {

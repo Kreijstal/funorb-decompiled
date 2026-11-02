@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kn implements ur {
+final class kn implements WidgetListener {
     private int field_e;
     private int field_c;
     static PacketBuffer[][] field_h;
-    private cc field_b;
+    private BitmapFont field_b;
     private int field_j;
     private int field_d;
     private int field_n;
     private int field_i;
     private int field_o;
-    static lg field_p;
+    static Model field_p;
     static String field_m;
     private int field_f;
     private int field_g;
@@ -19,8 +19,8 @@ final class kn implements ur {
     private int field_k;
     private int field_l;
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
-        iq stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -33,7 +33,7 @@ final class kn implements ur {
         ck var11 = null;
         try {
           if (param3 instanceof ck) {
-            stackIn_3_0 = (iq) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -86,7 +86,7 @@ final class kn implements ur {
         }
     }
 
-    kn(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    kn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_o = 1;
         this.field_l = 1;
         try {

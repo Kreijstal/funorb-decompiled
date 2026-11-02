@@ -3,7 +3,7 @@
  */
 final class hl extends IntrusiveNode {
     byte[] field_n;
-    static UiWidget[] field_q;
+    static UiPanel[] field_q;
     static String field_o;
     int field_r;
     long field_p;
@@ -12,7 +12,7 @@ final class hl extends IntrusiveNode {
         field_o = null;
         field_q = null;
         if (param0 != -118) {
-          field_q = (UiWidget[]) null;
+          field_q = (UiPanel[]) null;
         }
     }
 

@@ -5,9 +5,9 @@ final class la {
     private DualLinkNode field_b;
     static int[] field_d;
     static ej field_i;
-    static UiWidget field_f;
-    static cc field_a;
-    static r field_e;
+    static UiPanel field_f;
+    static BitmapFont field_a;
+    static Archive field_e;
     static String field_c;
     private ak field_h;
     private jl field_g;
@@ -58,7 +58,7 @@ final class la {
           field_a = null;
           return;
         }
-        field_a = (cc) null;
+        field_a = (BitmapFont) null;
         field_i = null;
         field_c = null;
         field_f = null;

@@ -7,7 +7,7 @@ final class hr extends TextureOperator {
     private int field_E;
     private int[] field_y;
     private short[] field_F;
-    static UiWidget field_C;
+    static UiPanel field_C;
     static int field_D;
     private int[] field_A;
 
@@ -267,7 +267,7 @@ final class hr extends TextureOperator {
             var24 = this.field_B[-1 + var3];
             var35 = this.field_B[var3];
             var7 = (-var24[0] + var4 << 12) / (-var24[0] + var35[0]);
-            var8 = 4096 - qb.field_b[var7 >> 5 & 255] >> 1;
+            var8 = 4096 - JaggrabClient.field_b[var7 >> 5 & 255] >> 1;
             var9 = 4096 - var8;
             var10 = var8 * var35[1] + var9 * var24[1] >> 12;
             if (-32768 >= var10) {

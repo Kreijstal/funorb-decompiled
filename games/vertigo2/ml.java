@@ -4,24 +4,24 @@
 import java.io.*;
 
 class ml extends va {
-    static r field_u;
+    static Archive field_u;
     static int field_v;
     static String field_A;
     static int field_w;
     static String field_x;
     static int[] field_t;
-    static r field_y;
+    static Archive field_y;
     static int field_z;
 
     ml(int param0) {
         this(qc.field_x, param0);
     }
 
-    ml(cc param0, int param1) {
+    ml(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_z, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         try {
           if (param0) {
             h.a(param1 + param3.field_o, 1, param3.field_t + param4, param3.field_n, param3.field_s);
@@ -38,7 +38,7 @@ class ml extends va {
         if (param1 >= ap.field_e &&
           ib.field_a >= param4 &&
           param3 >= ua.field_e &&
-          cj.field_D >= param2) {
+          WidgetContainer.field_D >= param2) {
           bg.a(param0, 61, param4, param3, param1, param2);
         } else {
           hb.b(param4, param2, 94, param0, param3, param1);
@@ -51,7 +51,7 @@ class ml extends va {
         field_t = null;
         field_A = null;
         if (param0 != -15) {
-          field_u = (r) null;
+          field_u = (Archive) null;
         }
         field_y = null;
     }

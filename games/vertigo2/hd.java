@@ -7,11 +7,11 @@ final class hd {
     static String field_c;
     static long[] field_d;
     private int field_a;
-    static cc field_f;
-    static UiWidget field_g;
+    static BitmapFont field_f;
+    static UiPanel field_g;
     static String field_h;
     private IntrusiveDeque field_e;
-    static r field_b;
+    static Archive field_b;
 
     final int a(byte param0, int param1) {
         IntrusiveDequeCursor var4 = null;
@@ -222,7 +222,7 @@ final class hd {
         jo.field_g = null;
         ba.field_b = null;
         if (param0 != 47) {
-          field_f = (cc) null;
+          field_f = (BitmapFont) null;
         }
     }
 

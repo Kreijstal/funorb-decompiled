@@ -18,7 +18,7 @@ abstract class bg {
 
     abstract void a(boolean param0, int[] param1, boolean param2, boolean param3);
 
-    fc a(lg param0, int param1, int param2, byte param3) {
+    fc a(Model param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

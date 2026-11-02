@@ -3,7 +3,7 @@
  */
 final class vc {
     static String field_a;
-    static UiWidget field_b;
+    static UiPanel field_b;
 
     final static void a(int param0) {
         int var1_int = 0;

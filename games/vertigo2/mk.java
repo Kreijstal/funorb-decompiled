@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk extends cj implements cm, ij, nc {
+final class mk extends WidgetContainer implements cm, ij, nc {
     private br field_L;
     private ck field_R;
     private br field_F;
@@ -92,20 +92,20 @@ final class mk extends cj implements cm, ij, nc {
         return bg.a(this.field_H.field_w, var2, this.field_F.field_w, this.field_R.field_G, this.field_U.field_w, (byte) 66, this);
     }
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           super.a((byte) 34, param1, param2, param3);
           this.field_I.field_F = this.l(-6551);
           if (param0 <= 6) {
-            iq var6 = (iq) null;
-            this.a('￳', -83, 76, (iq) null);
+            UiWidget var6 = (UiWidget) null;
+            this.a('￳', -83, 76, (UiWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "mk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int b(String param0, int param1, iq param2, int param3, int param4) {
+    private final int b(String param0, int param1, UiWidget param2, int param3, int param4) {
         boolean discarded$1 = false;
         mg var6 = null;
         RuntimeException var6_ref = null;
@@ -144,7 +144,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    private final int a(String param0, int param1, iq param2, int param3, int param4) {
+    private final int a(String param0, int param1, UiWidget param2, int param3, int param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         lr var7 = null;
@@ -160,7 +160,7 @@ final class mk extends cj implements cm, ij, nc {
         try {
           if (param4 != 268) {
             var8 = (String) null;
-            discarded$1 = this.a(107, -127, -24, (iq) null, (String) null, -91, (String) null);
+            discarded$1 = this.a(107, -127, -24, (UiWidget) null, (String) null, -91, (String) null);
           }
           var9 = new mg(20, param3, 120 + param1, 25, param2, false, 120, 3, qc.field_x, 16777215, param0);
           this.c((byte) -75, var9);
@@ -192,7 +192,7 @@ final class mk extends cj implements cm, ij, nc {
     public final void a(pn param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        iq var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -200,8 +200,8 @@ final class mk extends cj implements cm, ij, nc {
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param3 != 70) {
-            var7 = (iq) null;
-            this.a('\020', -23, 79, (iq) null);
+            var7 = (UiWidget) null;
+            this.a('\020', -23, 79, (UiWidget) null);
           }
           if (param1 == 0) {
             se.a("terms.ws", 12);
@@ -271,7 +271,7 @@ final class mk extends cj implements cm, ij, nc {
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -307,7 +307,7 @@ final class mk extends cj implements cm, ij, nc {
     }
 
     public mk() {
-        super(0, 0, 496, 0, (ur) null);
+        super(0, 0, 496, 0, (WidgetListener) null);
         this.field_H = new br("", (uf) null, 12);
         this.field_F = new br("", (uf) null, 100);
         this.field_L = new br("", (uf) null, 100);
@@ -332,17 +332,17 @@ final class mk extends cj implements cm, ij, nc {
         this.field_Q.a(true, new rf(this.field_Q, this.field_U));
         this.field_T.a(true, new na(this.field_T));
         this.field_I.field_F = false;
-        this.field_I.field_B = (ur) ((Object) new vo());
-        this.field_O.field_B = (ur) ((Object) new jc());
-        this.field_H.field_B = (ur) ((Object) new ml(10000536));
+        this.field_I.field_B = (WidgetListener) ((Object) new vo());
+        this.field_O.field_B = (WidgetListener) ((Object) new jc());
+        this.field_H.field_B = (WidgetListener) ((Object) new ml(10000536));
         ml dupTemp$0 = new ml(10000536);
-        this.field_L.field_B = (ur) ((Object) dupTemp$0);
-        this.field_F.field_B = (ur) ((Object) dupTemp$0);
-        this.field_T.field_B = (ur) ((Object) new ml(10000536));
-        this.field_R.field_B = (ur) ((Object) new kb());
+        this.field_L.field_B = (WidgetListener) ((Object) dupTemp$0);
+        this.field_F.field_B = (WidgetListener) ((Object) dupTemp$0);
+        this.field_T.field_B = (WidgetListener) ((Object) new ml(10000536));
+        this.field_R.field_B = (WidgetListener) ((Object) new kb());
         om dupTemp$1 = new om(10000536);
-        this.field_Q.field_B = (ur) ((Object) dupTemp$1);
-        this.field_U.field_B = (ur) ((Object) dupTemp$1);
+        this.field_Q.field_B = (WidgetListener) ((Object) dupTemp$1);
+        this.field_U.field_B = (WidgetListener) ((Object) dupTemp$1);
         String var2 = Vertigo2.a(new String[]{this.i(23559), this.j(10000536)}, k.field_b, -125);
         int var3 = 20;
         var3 = var3 + this.b(le.field_c, 48, this.field_F, 170, var3);
@@ -379,7 +379,7 @@ final class mk extends cj implements cm, ij, nc {
 
     final static void b(int param0, int param1) {
         BitPacketBuffer var2 = uh.field_Wb;
-        var2.j(param1, 120);
+        var2.writeCipheredByte(param1, 120);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(2, 87);
@@ -414,7 +414,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    private final int a(String param0, iq param1, int param2, String param3, int param4, int param5) {
+    private final int a(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -459,7 +459,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    private final int a(int param0, int param1, int param2, iq param3, String param4, int param5, String param6) {
+    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, int param5, String param6) {
         RuntimeException var8 = null;
         qe var9 = null;
         mg var10 = null;

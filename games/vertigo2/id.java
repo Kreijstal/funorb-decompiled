@@ -6,8 +6,8 @@ final class id {
     private jl field_e;
     static sq field_g;
     static BitPacketBuffer field_f;
-    private r field_h;
-    private r field_b;
+    private Archive field_h;
+    private Archive field_b;
     static long field_a;
     private jl field_c;
 
@@ -33,7 +33,7 @@ final class id {
     final static void a(int param0) {
         if (sq.field_c) {
           mg.field_O = true;
-          pm.a((byte) 52, true);
+          BufferedSocket.a((byte) 52, true);
           int var1 = 39 % ((param0 - 88) / 32);
           hn.field_w = 0;
           return;
@@ -52,7 +52,7 @@ final class id {
           if (param1 != -31980) {
             field_g = (sq) null;
           }
-          stackIn_5_0 = (param0.c((byte) -109, 1) == 1);
+          stackIn_5_0 = (param0.readBits((byte) -109, 1) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class id {
         }
     }
 
-    final static int a(int param0, short param1, short param2, lg param3, boolean param4, short param5) {
+    final static int a(int param0, short param1, short param2, Model param3, boolean param4, short param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -354,7 +354,7 @@ final class id {
         }
     }
 
-    id(r param0, r param1) {
+    id(Archive param0, Archive param1) {
         this.field_e = new jl(256);
         this.field_c = new jl(256);
         try {

@@ -8,7 +8,7 @@ final class w extends TextureOperator {
     static String field_A;
     static String field_D;
     static int field_z;
-    static UiWidget[] field_C;
+    static UiPanel[] field_C;
 
     final static ge a(byte[] param0, boolean param1) {
         ge var2 = null;
@@ -71,7 +71,7 @@ final class w extends TextureOperator {
         return var4Lifetime1;
     }
 
-    final static co a(r param0, r param1, String param2, String param3, int param4) {
+    final static co a(Archive param0, Archive param1, String param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -90,7 +90,7 @@ final class w extends TextureOperator {
         try {
           if (param4 <= 101) {
             var7 = (String) null;
-            w.a((r) null, (r) null, (String) null, (String) null, 73);
+            w.a((Archive) null, (Archive) null, (String) null, (String) null, 73);
           }
           var5_int = param1.a((byte) 118, param3);
           var6 = param1.a(var5_int, param2, 113);
@@ -154,7 +154,7 @@ final class w extends TextureOperator {
         }
     }
 
-    final static void a(r param0, r param1, r param2, byte param3) {
+    final static void a(Archive param0, Archive param1, Archive param2, byte param3) {
         int var5 = 0;
         int var6 = 0;
         byte[] var7 = null;

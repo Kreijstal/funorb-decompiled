@@ -78,18 +78,18 @@ final class NodeHashTableIterator implements Iterator {
     final static boolean a(byte param0) {
         if (param0 > -41) {
           NodeHashTableIterator.a(false);
-          if (qb.field_d == null) {
+          if (JaggrabClient.field_d == null) {
             return false;
           }
-          if (null != qb.field_d.k(0)) {
+          if (null != JaggrabClient.field_d.k(0)) {
             return true;
           }
           return false;
         }
-        if (qb.field_d == null) {
+        if (JaggrabClient.field_d == null) {
           return false;
         }
-        if (null != qb.field_d.k(0)) {
+        if (null != JaggrabClient.field_d.k(0)) {
           return true;
         }
         return false;

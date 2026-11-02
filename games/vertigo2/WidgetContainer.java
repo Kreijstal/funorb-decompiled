@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-class cj extends iq implements dq {
+class WidgetContainer extends UiWidget implements dq {
     IntrusiveDeque field_C;
     static int field_D;
 
-    boolean a(char param0, int param1, int param2, iq param3) {
+    boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
-        iq var6_ref_iq = null;
+        UiWidget var6_ref_iq = null;
         int var6 = 0;
         int var7 = 0;
         IntrusiveDequeCursor var8 = null;
@@ -24,14 +24,14 @@ class cj extends iq implements dq {
           if (param1 != 13) {
             this.field_C = (IntrusiveDeque) null;
           }
-          var6_ref_iq = (iq) (var8.d(param1 - 9));
+          var6_ref_iq = (UiWidget) (var8.d(param1 - 9));
           while (var6_ref_iq != null) {
             if (var6_ref_iq.b(92)) {
               if (var6_ref_iq.f(102) &&
                 var6_ref_iq.a(param0, param1 ^ 0, param2, param3)) {
                 return true;
               }
-              var6_ref_iq = (iq) (var8.c(2));
+              var6_ref_iq = (UiWidget) (var8.c(2));
               continue;
             }
             break;
@@ -40,7 +40,7 @@ class cj extends iq implements dq {
           if (var6 != 80) {
             return false;
           }
-          if (!UiWidget.field_eb[81]) {
+          if (!UiPanel.field_eb[81]) {
             stackIn_17_0 = this.b((byte) -89, param3);
           } else {
             stackIn_17_0 = this.a(32345, param3);
@@ -66,16 +66,16 @@ class cj extends iq implements dq {
         if (param0 != 2) {
           field_D = 47;
         }
-        iq var3 = (iq) (var2.d(param0 ^ 6));
+        UiWidget var3 = (UiWidget) (var2.d(param0 ^ 6));
         while (var3 != null) {
           var3.d((byte) 2);
-          var3 = (iq) (var2.c(param0 + 0));
+          var3 = (UiWidget) (var2.c(param0 + 0));
         }
     }
 
     String a(boolean param0) {
         IntrusiveDequeCursor var2;
-        iq var3;
+        UiWidget var3;
         String var4;
         int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
@@ -83,22 +83,22 @@ class cj extends iq implements dq {
           this.b(true);
         }
         var2 = new IntrusiveDequeCursor(this.field_C);
-        var3 = (iq) (var2.d(4));
+        var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
           var4 = var3.a(false);
           if (var4 != null) {
             return var4;
           }
-          var3 = (iq) (var2.c(2));
+          var3 = (UiWidget) (var2.c(2));
         }
         return null;
     }
 
-    final boolean b(byte param0, iq param1) {
+    final boolean b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        iq var4 = null;
+        UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
-        iq var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_20_0 = null;
@@ -111,21 +111,21 @@ class cj extends iq implements dq {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_C);
-          var4 = (iq) (var8.d(4));
+          var4 = (UiWidget) (var8.d(4));
           while (var4 != null) {
             if (var4.f(34)) {
               var5 = new IntrusiveDequeCursor(this.field_C);
               var5.a(-108, var4);
-              var6 = (iq) (var5.c(2));
+              var6 = (UiWidget) (var5.c(2));
               while (var6 != null) {
                 if (!var6.a((byte) 116, param1)) {
-                  var6 = (iq) (var5.c(2));
+                  var6 = (UiWidget) (var5.c(2));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (iq) (var8.c(2));
+            var4 = (UiWidget) (var8.c(2));
           }
           if (param0 < -63) {
             return false;
@@ -152,17 +152,17 @@ class cj extends iq implements dq {
         if (param0 != -641) {
           this.field_C = (IntrusiveDeque) null;
         }
-        iq var3 = (iq) (var2.d(4));
+        UiWidget var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
           var3.g(param0 + 553);
-          var3 = (iq) (var2.c(param0 + 643));
+          var3 = (UiWidget) (var2.c(param0 + 643));
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, iq param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, UiWidget param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        iq var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -172,14 +172,14 @@ class cj extends iq implements dq {
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
           var8 = new IntrusiveDequeCursor(this.field_C);
-          var9 = (iq) (var8.d(4));
+          var9 = (UiWidget) (var8.d(4));
           while (var9 != null) {
             if (var9.b(94)) {
               if (var9.f(61) &&
                 var9.a(param0, param1, param2, param3, param4, (byte) -123, param6)) {
                 return true;
               }
-              var9 = (iq) (var8.c(2));
+              var9 = (UiWidget) (var8.c(2));
               continue;
             }
             break;
@@ -200,7 +200,7 @@ class cj extends iq implements dq {
         }
     }
 
-    cj(int param0, int param1, int param2, int param3, ur param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4, (uf) null);
         this.field_C = new IntrusiveDeque();
     }
@@ -217,26 +217,26 @@ class cj extends iq implements dq {
         int var6 = Vertigo2.field_L ? 1 : 0;
         int var2 = 0;
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_C);
-        iq var4 = (iq) (var3.d(4));
+        UiWidget var4 = (UiWidget) (var3.d(4));
         if (param0 > -97) {
-          iq var7 = (iq) null;
-          this.a((byte) 126, 47, 97, (iq) null);
+          UiWidget var7 = (UiWidget) null;
+          this.a((byte) 126, 47, 97, (UiWidget) null);
         }
         while (var4 != null) {
           var5 = var4.c((byte) -121);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (iq) (var3.c(2));
+          var4 = (UiWidget) (var3.c(2));
         }
         return var2;
     }
 
-    final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
-        iq var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        iq var11 = null;
+        UiWidget var11 = null;
         IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -245,17 +245,17 @@ class cj extends iq implements dq {
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param5 > -107) {
-            var11 = (iq) null;
-            this.a(77, -56, -46, (iq) null, 32, (byte) 26, 97);
+            var11 = (UiWidget) null;
+            this.a(77, -56, -46, (UiWidget) null, 32, (byte) 26, 97);
           }
           var12 = new IntrusiveDequeCursor(this.field_C);
-          var9 = (iq) (var12.d(4));
+          var9 = (UiWidget) (var12.d(4));
           while (var9 != null) {
             if (var9.b(115)) {
               if (var9.a(param0, param1 + this.field_o, param2 + this.field_t, param3, param4, (byte) -108, param6)) {
                 return true;
               }
-              var9 = (iq) (var12.c(2));
+              var9 = (UiWidget) (var12.c(2));
               continue;
             }
             break;
@@ -285,7 +285,7 @@ class cj extends iq implements dq {
         int var7 = 0;
         StringBuilder discarded$4 = null;
         IntrusiveDequeCursor var5 = null;
-        iq var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -300,14 +300,14 @@ class cj extends iq implements dq {
           if (param1) {
             return;
           }
-          var6 = (iq) (var5.d(4));
+          var6 = (UiWidget) (var5.d(4));
           while (var6 != null) {
             discarded$3 = param2.append('\n');
             for (var7 = 0; param0 >= var7; var7++) {
               discarded$4 = param2.append(' ');
             }
             var6.a(param3, 1 + param0, (byte) -79, param2);
-            var6 = (iq) (var5.c(2));
+            var6 = (UiWidget) (var5.c(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -330,10 +330,10 @@ class cj extends iq implements dq {
         }
     }
 
-    final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
-        iq var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -345,11 +345,11 @@ class cj extends iq implements dq {
             return;
           }
           var7 = new IntrusiveDequeCursor(this.field_C);
-          var8 = (iq) (var7.d(4));
+          var8 = (UiWidget) (var7.d(4));
           while (var8 != null) {
             if (var8.b(125)) {
               var8.a(param0, (byte) 46, param2 + this.field_o, this.field_t + param3, param4, param5);
-              var8 = (iq) (var7.c(param1 - 44));
+              var8 = (UiWidget) (var7.c(param1 - 44));
               continue;
             }
             break;
@@ -369,11 +369,11 @@ class cj extends iq implements dq {
         }
     }
 
-    final boolean a(int param0, iq param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        iq var4 = null;
+        UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
-        iq var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_21_0 = null;
@@ -389,21 +389,21 @@ class cj extends iq implements dq {
           if (param0 != 32345) {
             this.field_C = (IntrusiveDeque) null;
           }
-          var4 = (iq) (var8.b(param0 - 32341));
+          var4 = (UiWidget) (var8.b(param0 - 32341));
           while (var4 != null) {
             if (var4.f(85)) {
               var5 = new IntrusiveDequeCursor(this.field_C);
               var5.a(var4, param0 - 32342);
-              var6 = (iq) (var5.a((byte) 76));
+              var6 = (UiWidget) (var5.a((byte) 76));
               while (var6 != null) {
                 if (!var6.a((byte) 116, param1)) {
-                  var6 = (iq) (var5.a((byte) 121));
+                  var6 = (UiWidget) (var5.a((byte) 121));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (iq) (var8.a((byte) 101));
+            var4 = (UiWidget) (var8.a((byte) 101));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -420,7 +420,7 @@ class cj extends iq implements dq {
         }
     }
 
-    final void c(byte param0, iq param1) {
+    final void c(byte param0, UiWidget param1) {
         try {
           int var3_int = 36 / ((param0 - 35) / 38);
           this.field_C.addFirst(param1, false);
@@ -429,21 +429,21 @@ class cj extends iq implements dq {
         }
     }
 
-    iq b(boolean param0) {
+    UiWidget b(boolean param0) {
         IntrusiveDequeCursor var2;
-        iq var3;
+        UiWidget var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (!param0) {
           this.a(false);
         }
         var2 = new IntrusiveDequeCursor(this.field_C);
-        var3 = (iq) (var2.d(4));
+        var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
           if (var3.f(93)) {
             return var3;
           }
-          var3 = (iq) (var2.c(2));
+          var3 = (UiWidget) (var2.c(2));
         }
         return null;
     }
@@ -452,16 +452,16 @@ class cj extends iq implements dq {
         int var7 = Vertigo2.field_L ? 1 : 0;
         if (param1 == 0 &&
           this.field_B != null) {
-          this.field_B.a(true, param2, true, (iq) (this), param3);
+          this.field_B.a(true, param2, true, (UiWidget) (this), param3);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_C);
         if (param0) {
           this.a(true, 10, -73, -106);
         }
-        iq var6 = (iq) (var5.b(4));
+        UiWidget var6 = (UiWidget) (var5.b(4));
         while (var6 != null) {
           var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
-          var6 = (iq) (var5.a((byte) 15));
+          var6 = (UiWidget) (var5.a((byte) 15));
         }
     }
 
@@ -506,12 +506,12 @@ class cj extends iq implements dq {
         }
     }
 
-    void a(byte param0, int param1, int param2, iq param3) {
+    void a(byte param0, int param1, int param2, UiWidget param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
-        iq var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
-        iq var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -521,14 +521,14 @@ class cj extends iq implements dq {
           super.a((byte) 66, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_C);
           if (param0 <= 6) {
-            var8 = (iq) null;
-            this.b((byte) 25, (iq) null);
+            var8 = (UiWidget) null;
+            this.b((byte) 25, (UiWidget) null);
           }
-          var6 = (iq) (var5.d(4));
+          var6 = (UiWidget) (var5.d(4));
           while (var6 != null) {
             if (var6.b(101)) {
               var6.a((byte) 73, param1 + this.field_o, this.field_t + param2, param3);
-              var6 = (iq) (var5.c(2));
+              var6 = (UiWidget) (var5.c(2));
               continue;
             }
             break;
@@ -551,7 +551,7 @@ class cj extends iq implements dq {
     final static void b(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var5;
-        if (!pm.field_a) {
+        if (!BufferedSocket.field_a) {
           return;
         }
         ql.field_L.a(0, param0);
@@ -578,10 +578,10 @@ class cj extends iq implements dq {
         }
     }
 
-    final boolean a(byte param0, iq param1) {
+    final boolean a(byte param0, UiWidget param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        iq var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -593,12 +593,12 @@ class cj extends iq implements dq {
             return true;
           }
           var3 = new IntrusiveDequeCursor(this.field_C);
-          var4 = (iq) (var3.d(param0 - 112));
+          var4 = (UiWidget) (var3.d(param0 - 112));
           while (var4 != null) {
             if (var4.a((byte) 116, param1)) {
               return true;
             }
-            var4 = (iq) (var3.c(2));
+            var4 = (UiWidget) (var3.c(2));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

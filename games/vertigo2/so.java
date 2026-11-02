@@ -10,7 +10,7 @@ final class so extends TextureOperator {
         super(1, false);
     }
 
-    final static void a(UiWidget param0, int param1, int param2, int param3, UiWidget param4, byte[] param5, UiWidget param6, int param7, int param8, int param9) {
+    final static void a(UiPanel param0, int param1, int param2, int param3, UiPanel param4, byte[] param5, UiPanel param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -67,7 +67,7 @@ final class so extends TextureOperator {
           kq.field_Rb.clear(0);
           ck.field_I = new fi(param9);
           lp.field_D = param2;
-          r.field_h = 0L;
+          Archive.field_h = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class so extends TextureOperator {
 
     final void a(byte param0, int param1, PacketBuffer param2) {
         RuntimeException var4 = null;
-        UiWidget var5 = null;
+        UiPanel var5 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -147,8 +147,8 @@ final class so extends TextureOperator {
           if (param0 == 110) {
             return;
           }
-          var5 = (UiWidget) null;
-          so.a((UiWidget) null, 27, 57, 9, (UiWidget) null, (byte[]) null, (UiWidget) null, 16, -49, -71);
+          var5 = (UiPanel) null;
+          so.a((UiPanel) null, 27, 57, 9, (UiPanel) null, (byte[]) null, (UiPanel) null, 16, -49, -71);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -10,13 +10,13 @@ final class ClientException extends RuntimeException {
     static String field_b;
 
     final static void a(int param0, int param1, boolean param2, boolean param3) {
-        UiWidget stackIn_9_0 = null;
+        UiPanel stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        UiWidget stackIn_16_0 = null;
+        UiPanel stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        UiWidget stackIn_21_0 = null;
+        UiPanel stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         km.i(202);
@@ -28,15 +28,15 @@ final class ClientException extends RuntimeException {
         stackIn_9_0 = ca.field_h;
         stackIn_9_1 = param0 ^ 0;
         stackIn_10_2 = (param3) && (!param2) && (!ce.field_c) && (null == gd.field_j) && (sj.field_d == null);
-        ((UiWidget) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+        ((UiPanel) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
         stackIn_16_0 = ud.field_A;
         stackIn_16_1 = 0;
         stackIn_17_2 = (param3) && (!param2) && (!ce.field_c) && (gd.field_j == null) && (null == sj.field_d);
-        ((UiWidget) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+        ((UiPanel) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
         stackIn_21_0 = oc.field_v;
         stackIn_21_1 = 0;
         stackIn_22_2 = (param3) && (!param2) && (ce.field_c);
-        ((UiWidget) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+        ((UiPanel) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
         qo.field_D.field_b.k(0);
         if (0 != vb.field_j.field_tb) {
           cn.field_v = true;
@@ -44,7 +44,7 @@ final class ClientException extends RuntimeException {
         if (0 != b.field_h.field_tb && (vb.field_g ||
           !(q.field_y <= 0) ||
           !(fn.field_z < 2) &&
-          UiWidget.field_eb[12])) {
+          UiPanel.field_eb[12])) {
           ah.a((byte) -50, param1);
         }
         if (la.field_f.field_tb != 0) {
@@ -83,7 +83,7 @@ final class ClientException extends RuntimeException {
         boolean stackIn_43_4 = false;
         int stackIn_46_0 = 0;
         int stackIn_57_0 = 0;
-        UiWidget stackIn_93_0 = null;
+        UiPanel stackIn_93_0 = null;
         int stackIn_93_1 = 0;
         int stackIn_94_2 = 0;
         RuntimeException stackIn_218_0 = null;
@@ -103,11 +103,11 @@ final class ClientException extends RuntimeException {
         int var12 = 0;
         bs var13 = null;
         int var14 = 0;
-        UiWidget var15 = null;
-        UiWidget var16 = null;
-        UiWidget var17 = null;
-        UiWidget var18 = null;
-        UiWidget var19 = null;
+        UiPanel var15 = null;
+        UiPanel var16 = null;
+        UiPanel var17 = null;
+        UiPanel var18 = null;
+        UiPanel var19 = null;
         int var20 = 0;
         String var21 = null;
         int var22 = 0;
@@ -187,11 +187,11 @@ final class ClientException extends RuntimeException {
             }
           }
           stackIn_42_0 = (od) (param1);
-          stackIn_42_1 = param3 * (r.field_f + 2) * 4;
+          stackIn_42_1 = param3 * (Archive.field_f + 2) * 4;
           stackIn_42_2 = 2;
           stackIn_42_3 = param2;
           stackIn_43_4 = (wq.field_M == param1);
-          stackIn_46_0 = (!((od) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_42_3, stackIn_43_4, -55, r.field_f * 2 + 4)) ? 0 : 1;
+          stackIn_46_0 = (!((od) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_42_3, stackIn_43_4, -55, Archive.field_f * 2 + 4)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
           var12 = 58 % ((param0 + 19) / 46);
           var10 = param1.field_Nb.field_M;
@@ -200,19 +200,19 @@ final class ClientException extends RuntimeException {
           while (var13 != null) {
             var14 = 0;
             if (null == var13.field_M) {
-              var13.field_Sb = new UiWidget(0L, IterableNodeHashTable.field_b);
+              var13.field_Sb = new UiPanel(0L, IterableNodeHashTable.field_b);
               var13.b(var13.field_Sb, 125);
-              var13.field_Nb = new UiWidget(0L, tm.field_b);
+              var13.field_Nb = new UiPanel(0L, tm.field_b);
               if (db.field_S) {
                 var13.b(var13.field_Nb, 120);
               }
               var13.field_Nb.field_O = 2;
-              var13.field_Qb = new UiWidget(0L, ee.field_b);
+              var13.field_Qb = new UiPanel(0L, ee.field_b);
               var13.b(var13.field_Qb, 122);
               var13.i(-2147483648);
-              var13.field_Tb = new UiWidget(0L, sc.field_c);
+              var13.field_Tb = new UiPanel(0L, sc.field_c);
               var13.b(var13.field_Tb, 123);
-              var13.field_Lb = new UiWidget(0L, gh.field_b);
+              var13.field_Lb = new UiPanel(0L, gh.field_b);
               var13.b(var13.field_Lb, 122);
               var14 = 1;
             }
@@ -243,7 +243,7 @@ final class ClientException extends RuntimeException {
             if (ja.field_f == param1) {
               var22 += 42;
             }
-            var34 = cc.a(var13.field_Sb.field_z, var33, var22);
+            var34 = BitmapFont.a(var13.field_Sb.field_z, var33, var22);
             var21 = var34;
             stackIn_57_0 = (var34.equals(var13.field_Wb)) ? 0 : 1;
             var23 = stackIn_57_0;
@@ -303,7 +303,7 @@ final class ClientException extends RuntimeException {
                 ao.field_N != var13.field_Pb) {
                 if (var13.field_Tb.field_S != null) {
                   var27 = var13.field_Tb.j(-21391) + ia.field_G * 2;
-                  var13.field_Tb.a(113, var27, r.field_f, var20, var26_int);
+                  var13.field_Tb.a(113, var27, Archive.field_f, var20, var26_int);
                   var26_int = var26_int + var27;
                 }
                 if (var13.field_Lb.field_S != null) {
@@ -312,7 +312,7 @@ final class ClientException extends RuntimeException {
                   } else {
                     var27Lifetime2 = 40;
                   }
-                  var13.field_Lb.a(106, var27Lifetime2, r.field_f, var20, var26_int);
+                  var13.field_Lb.a(106, var27Lifetime2, Archive.field_f, var20, var26_int);
                   var26_int = var26_int + var27Lifetime2;
                 }
               }
@@ -323,10 +323,10 @@ final class ClientException extends RuntimeException {
               } else {
                 stackIn_94_2 = 42;
               }
-              ((UiWidget) (Object) stackIn_93_0).a(stackIn_93_1, -stackIn_94_2 + var13.field_Fb - var26_int, r.field_f, var20, var26_int);
+              ((UiPanel) (Object) stackIn_93_0).a(stackIn_93_1, -stackIn_94_2 + var13.field_Fb - var26_int, Archive.field_f, var20, var26_int);
               var13.field_Nb.field_S = Integer.toString(var13.field_Rb);
-              var13.field_Nb.a(91, 40, r.field_f, var20, -40 + var13.field_Fb);
-              var20 = var20 + r.field_f;
+              var13.field_Nb.a(91, 40, Archive.field_f, var20, -40 + var13.field_Fb);
+              var20 = var20 + Archive.field_f;
               if (var13.field_Sb.field_pb &&
                 var23 != 0) {
                 ko.field_S = var13.field_Wb;
@@ -353,14 +353,14 @@ final class ClientException extends RuntimeException {
               var25_intLifetime1 = var13.field_Qb.field_z.b(var24, var13.field_Fb + (-ia.field_G - ia.field_G));
               var13.field_Qb.field_U = var13.field_Ub * 256 / lp.field_D;
               var13.field_Qb.field_S = var24;
-              var13.field_Qb.a(125, -(ia.field_G * 2) + var13.field_Fb, r.field_f * var25_intLifetime1, var20, ia.field_G);
-              var20 = var20 + r.field_f * var25_intLifetime1;
+              var13.field_Qb.a(125, -(ia.field_G * 2) + var13.field_Fb, Archive.field_f * var25_intLifetime1, var20, ia.field_G);
+              var20 = var20 + Archive.field_f * var25_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var13.field_kb = -var13.field_db + var20;
             }
             if (var14 != 0) {
-              param1.field_Nb.a((byte) 8, (UiWidget) (var11), var13, 2);
+              param1.field_Nb.a((byte) 8, (UiPanel) (var11), var13, 2);
             }
             if (0 != var13.field_tb &&
               !var13.k(15)) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mf {
-    static cc field_c;
+    static BitmapFont field_c;
     static int field_b;
     static String field_a;
 
@@ -17,7 +17,7 @@ final class mf {
         field_c = null;
     }
 
-    final static Sprite a(r param0, int param1, byte param2, int param3) {
+    final static Sprite a(Archive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;

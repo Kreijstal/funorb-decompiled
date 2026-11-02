@@ -4,9 +4,9 @@
 final class gk {
     static String field_b;
     static int[] field_a;
-    static UiWidget field_c;
+    static UiPanel field_c;
 
-    final static Sprite[] a(r param0, String param1, String param2, boolean param3) {
+    final static Sprite[] a(Archive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -77,7 +77,7 @@ final class gk {
           jm.field_y = var1;
           return so.field_y + var1;
         }
-        field_c = (UiWidget) null;
+        field_c = (UiPanel) null;
         var1Lifetime1 = System.currentTimeMillis();
         if (!(var1Lifetime1 >= jm.field_y)) {
           so.field_y = so.field_y + (-var1Lifetime1 + jm.field_y);

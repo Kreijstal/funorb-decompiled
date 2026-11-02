@@ -4,7 +4,7 @@
 final class qo extends TextureOperator {
     private jq[] field_z;
     static IntrusiveDeque field_B;
-    static lg field_A;
+    static Model field_A;
     static Sprite field_y;
     static String field_E;
     static lb field_D;
@@ -151,7 +151,7 @@ final class qo extends TextureOperator {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 17989) {
-            field_A = (lg) null;
+            field_A = (Model) null;
           }
           var3_int = we.field_M;
           var4 = aa.field_Vb;

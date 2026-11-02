@@ -8,7 +8,7 @@ final class ke {
     private int[] field_h;
     static String field_d;
     static String field_c;
-    static r field_b;
+    static Archive field_b;
     private byte[] field_f;
     static String field_i;
     static int[] field_e;
@@ -525,7 +525,7 @@ final class ke {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          wk var4 = null;
+          AsyncRequest var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -570,7 +570,7 @@ final class ke {
               stackIn_15_3 = null;
               stackIn_15_6 = "" + f.field_F;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_m).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_m).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var10).toString()));
             while (var4.field_b == 0) {
               um.a(true, 1L);
             }

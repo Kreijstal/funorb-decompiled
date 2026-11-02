@@ -3,7 +3,7 @@
  */
 final class lo {
     static String field_a;
-    static pm field_k;
+    static BufferedSocket field_k;
     static java.awt.Frame field_j;
     private int field_c;
     static String field_b;

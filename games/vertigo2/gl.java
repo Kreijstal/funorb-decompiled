@@ -95,11 +95,11 @@ final class gl {
     final static void a(int param0) {
         kg.c((byte) 76);
         if (param0 == 26780) {
-          nn.a(1, ia.field_G, r.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
+          nn.a(1, ia.field_G, Archive.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
           return;
         }
         field_o = false;
-        nn.a(1, ia.field_G, r.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
+        nn.a(1, ia.field_G, Archive.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
     }
 
     final static String a(int param0, boolean param1, boolean param2, int param3) {

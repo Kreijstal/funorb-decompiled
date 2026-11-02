@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends cj implements ih, ij {
+final class ob extends WidgetContainer implements ih, ij {
     private kp field_O;
     private d field_K;
     private boolean field_S;
@@ -37,7 +37,7 @@ final class ob extends cj implements ih, ij {
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_O.a((byte) 116, (iq) (this));
+            this.field_O.a((byte) 116, (UiWidget) (this));
           }
           if (param0 < 16) {
             var4 = (kp) null;
@@ -61,7 +61,7 @@ final class ob extends cj implements ih, ij {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -122,8 +122,8 @@ final class ob extends cj implements ih, ij {
 
     final void a(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          iq var6 = (iq) null;
-          this.a('g', -59, 99, (iq) null);
+          UiWidget var6 = (UiWidget) null;
+          this.a('g', -59, 99, (UiWidget) null);
         }
         if (null != this.field_P) {
           qc.field_x.a(this.field_P, this.field_o + param2 + 20, 15 + this.field_t + param3, this.field_n - 40, this.field_s, 16777215, -1, 1, 0, qc.field_x.field_z);
@@ -154,7 +154,7 @@ final class ob extends cj implements ih, ij {
     }
 
     ob(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (ur) null);
+        super(0, 0, 310, 190, (WidgetListener) null);
         mg dupTemp$0 = null;
         mg dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -173,7 +173,7 @@ final class ob extends cj implements ih, ij {
         RuntimeException decompiledCaughtException = null;
         vo var6 = null;
         RuntimeException var6_ref = null;
-        cc var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         ej var9 = null;
         mg var12 = null;
@@ -214,16 +214,16 @@ final class ob extends cj implements ih, ij {
               this.field_K = new d(pk.field_r, (uf) (this));
             }
           }
-          this.field_H.field_B = (ur) ((Object) new ml(10000536));
-          this.field_O.field_B = (ur) ((Object) new om(10000536));
+          this.field_H.field_B = (WidgetListener) ((Object) new ml(10000536));
+          this.field_O.field_B = (WidgetListener) ((Object) new om(10000536));
           var6 = new vo();
-          this.field_J.field_B = (ur) ((Object) var6);
+          this.field_J.field_B = (WidgetListener) ((Object) var6);
           if (this.field_G != null) {
-            this.field_G.field_B = (ur) ((Object) var6);
+            this.field_G.field_B = (WidgetListener) ((Object) var6);
           }
           this.field_H.field_q = wh.field_A;
           if (this.field_K != null) {
-            this.field_K.field_B = (ur) ((Object) var6);
+            this.field_K.field_B = (WidgetListener) ((Object) var6);
           }
           if (null != this.field_K) {
             this.field_K.field_q = ni.field_h;
@@ -232,10 +232,10 @@ final class ob extends cj implements ih, ij {
             this.field_G.field_q = fm.field_h;
           } else {
             if (!this.field_R) {
-              this.field_G.field_B = (ur) ((Object) new jc());
+              this.field_G.field_B = (WidgetListener) ((Object) new jc());
             } else {
               this.field_G.field_q = he.field_z;
-              this.field_G.field_B = (ur) ((Object) new jc());
+              this.field_G.field_B = (WidgetListener) ((Object) new jc());
             }
           }
           this.field_t = 15;
@@ -255,12 +255,12 @@ final class ob extends cj implements ih, ij {
           dupTemp$0 = new mg(10, this.field_t, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.c((byte) -107, dupTemp$0);
-          this.field_t = this.field_t + (5 + ((iq) ((Object) var12)).field_s);
+          this.field_t = this.field_t + (5 + ((UiWidget) ((Object) var12)).field_s);
           dupTemp$1 = new mg(10, this.field_t, -20 + this.field_n, 25, this.field_O, false, 80, 3, var7, 16777215, uc.field_c);
           var13 = dupTemp$1;
           this.c((byte) 83, dupTemp$1);
           this.field_J.field_v = (uf) (this);
-          this.field_t = this.field_t + (((iq) ((Object) var13)).field_s + 5);
+          this.field_t = this.field_t + (((UiWidget) ((Object) var13)).field_s + 5);
           if (null != this.field_K) {
             this.field_K.field_v = (uf) (this);
           }

@@ -11,7 +11,7 @@ final class lh {
     final static void a(int param0, hn param1, byte param2) {
         int var4 = 0;
         BitPacketBuffer var5 = uh.field_Wb;
-        var5.j(param0, 120);
+        var5.writeCipheredByte(param0, 120);
         var5.position = var5.position + 1;
         if (param2 != 81) {
           return;

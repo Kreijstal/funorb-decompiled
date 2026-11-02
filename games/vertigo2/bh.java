@@ -615,9 +615,9 @@ final class bh {
         int var5Lifetime2;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
-          param0.p(param1 + 0);
-          this.field_I = param0.c((byte) -115, 14);
-          this.field_e = param0.c((byte) -94, 3);
+          param0.beginBitAccess(param1 + 0);
+          this.field_I = param0.readBits((byte) -115, 14);
+          this.field_e = param0.readBits((byte) -94, 3);
           var3_int = 1;
           if (this.field_e == 7 ||
             6 == this.field_e ||
@@ -626,14 +626,14 @@ final class bh {
             this.b((byte) -112);
             var3_int = 0;
           }
-          this.field_n = param0.c((byte) -93, 8);
+          this.field_n = param0.readBits((byte) -93, 8);
           for (var4 = 0; this.field_f.length > var4; var4++) {
             this.field_f[var4].a(0, param0);
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (var3_int == 0) {
-            param0.b((byte) -76);
+            param0.endBitAccess((byte) -76);
             var4 = 0;
             var5 = param1;
             boolean decompiledNaturalLoopExit0 = false;
@@ -658,7 +658,7 @@ final class bh {
             for (var5Lifetime2 = 0; var5Lifetime2 < 15; var5Lifetime2++) {
               for (var6 = 0; var6 < 5; var6++) {
                 for (var7 = 0; 5 > var7; var7++) {
-                  var8 = param0.c((byte) -125, 5);
+                  var8 = param0.readBits((byte) -125, 5);
                   if (var8 == 0) {
                     incrementValue$0 = var4;
                     var4++;
@@ -675,11 +675,11 @@ final class bh {
                 }
               }
             }
-            this.field_t = param0.c((byte) -117, 9);
+            this.field_t = param0.readBits((byte) -117, 9);
             for (var5Lifetime2 = 0; this.field_t > var5Lifetime2; var5Lifetime2++) {
               this.field_i[var5Lifetime2] = new rn(param0);
             }
-            param0.b((byte) -76);
+            param0.endBitAccess((byte) -76);
             var4 = 0;
             var5Lifetime2 = param1;
             while (var5Lifetime2 < 375) {
@@ -2529,7 +2529,7 @@ final class bh {
         var4 = Vertigo2.field_L ? 1 : 0;
         if (param1) {
           var5 = (fe[]) null;
-          bh.a(56, -78, -92, (String[]) null, 72, (cc) null, -2, 117, (String[]) null, 127, 35, (fe[]) null, 56);
+          bh.a(56, -78, -92, (String[]) null, 72, (BitmapFont) null, -2, 117, (String[]) null, 127, 35, (fe[]) null, 56);
         }
         var3 = param0;
         if (var3 == 3) {
@@ -2570,7 +2570,7 @@ final class bh {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, String[] param3, int param4, cc param5, int param6, int param7, String[] param8, int param9, int param10, fe[] param11, int param12) {
+    final static void a(int param0, int param1, int param2, String[] param3, int param4, BitmapFont param5, int param6, int param7, String[] param8, int param9, int param10, fe[] param11, int param12) {
         int var16 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2599,7 +2599,7 @@ final class bh {
           var15 = param9;
           if (param10 != 128) {
             var18 = (fe[]) null;
-            bh.a(100, 111, -35, (String[]) null, -77, (cc) null, -38, -114, (String[]) null, 20, 47, (fe[]) null, 8);
+            bh.a(100, 111, -35, (String[]) null, -77, (BitmapFont) null, -38, -114, (String[]) null, 20, 47, (fe[]) null, 8);
           }
           for (var16 = param0; var16 < param4; var16++) {
             param11[var16].e(param7, var15 - param12 / 2);

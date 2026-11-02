@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends cj implements cm, ij {
+final class ue extends WidgetContainer implements cm, ij {
     static s field_J;
     private pn field_L;
     private d field_P;
@@ -62,11 +62,11 @@ final class ue extends cj implements cm, ij {
           param1 = param1 + (-param1 + ce.field_b) * var3 / var2;
         }
         td.field_c.a(91, 640, 120, param1, ml.field_w);
-        rg.a(640, r.field_j, 0, -24 + ce.field_b, param0 - 4880, ia.field_G, 5);
+        rg.a(640, Archive.field_j, 0, -24 + ce.field_b, param0 - 4880, ia.field_G, 5);
     }
 
     ue(oe param0) {
-        super(0, 0, 288, 0, (ur) null);
+        super(0, 0, 288, 0, (WidgetListener) null);
         String var7 = null;
         int var3 = 0;
         va var4 = null;
@@ -75,7 +75,7 @@ final class ue extends cj implements cm, ij {
         try {
           this.field_E = param0;
           this.field_P = new d(vi.field_x, (uf) null);
-          this.field_P.field_B = (ur) ((Object) new vo());
+          this.field_P.field_B = (WidgetListener) ((Object) new vo());
           var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, hi.field_n, -127);
           var3 = 20;
           var4 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
@@ -107,7 +107,7 @@ final class ue extends cj implements cm, ij {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;

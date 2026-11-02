@@ -38,7 +38,7 @@ final class lf extends TextureOperator {
             bm.field_I == rg.field_d)) {
             if (0 == uh.field_Wb.position &&
               (10000L + bm.field_H) < gk.a(55)) {
-              uh.field_Wb.j(param1, 121);
+              uh.field_Wb.writeCipheredByte(param1, 121);
             }
             if (param0 <= 37) {
               lf.g(-114);

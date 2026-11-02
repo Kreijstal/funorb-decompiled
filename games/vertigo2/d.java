@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class d extends iq {
+class d extends UiWidget {
     private boolean field_D;
     static float field_C;
     boolean field_F;
@@ -57,7 +57,7 @@ class d extends iq {
         }
     }
 
-    boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -199,7 +199,7 @@ class d extends iq {
         }
     }
 
-    boolean a(byte param0, iq param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -215,7 +215,7 @@ class d extends iq {
             this.field_D = true;
             if (null != this.field_v &&
               this.field_v instanceof hg) {
-              ((hg) (this.field_v)).a(9787, (iq) (this), this.field_D);
+              ((hg) (this.field_v)).a(9787, (UiWidget) (this), this.field_D);
             }
             return true;
           }
@@ -385,7 +385,7 @@ class d extends iq {
         }
     }
 
-    d(String param0, ur param1, uf param2) {
+    d(String param0, WidgetListener param1, uf param2) {
         super(param0, param1, param2);
         this.field_D = false;
         this.field_F = true;
@@ -417,7 +417,7 @@ class d extends iq {
             this.field_D = false;
             if (this.field_v != null &&
               this.field_v instanceof hg) {
-              ((hg) (this.field_v)).a(9787, (iq) (this), this.field_D);
+              ((hg) (this.field_v)).a(9787, (UiWidget) (this), this.field_D);
             }
           }
           if (param0 != 2) {
@@ -431,7 +431,7 @@ class d extends iq {
         }
     }
 
-    final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -444,7 +444,7 @@ class d extends iq {
           }
           this.field_A = 0;
           if (param1 != 46) {
-            this.a('u', -8, -87, (iq) null);
+            this.a('u', -8, -87, (UiWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -461,7 +461,7 @@ class d extends iq {
         }
     }
 
-    boolean a(char param0, int param1, int param2, iq param3) {
+    boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -495,7 +495,7 @@ class d extends iq {
         this(param0, eb.field_c.field_p, param1);
     }
 
-    void a(byte param0, int param1, int param2, iq param3) {
+    void a(byte param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;

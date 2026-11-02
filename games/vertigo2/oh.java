@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-abstract class oh extends iq implements dq {
+abstract class oh extends UiWidget implements dq {
     static String field_E;
     static IntrusiveDeque field_D;
-    iq field_C;
+    UiWidget field_C;
     static volatile boolean field_F;
 
     final void a(int param0, Hashtable param1, int param2, StringBuilder param3) {
@@ -102,9 +102,9 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    iq a(int param0) {
-        iq var2 = null;
-        iq var2Lifetime1;
+    UiWidget a(int param0) {
+        UiWidget var2 = null;
+        UiWidget var2Lifetime1;
         if (param0 != 15197) {
           field_D = (IntrusiveDeque) null;
           var2 = this.field_C;
@@ -142,18 +142,18 @@ abstract class oh extends iq implements dq {
           }
           var4 = ee.field_b.field_z.b(param0, 500);
           var5 = ee.field_b.field_z.a(param0, 500) + 6;
-          var6 = r.field_f * var4 + 2;
+          var6 = Archive.field_f * var4 + 2;
           var7 = jf.a(var5, 12, var2_int, 1);
           var8 = dm.a(20, 0, var6, var3);
           bi.e(var7, var8, var5, var6, 0);
           bi.b(1 + var7, var8 + 1, var5 - 2, var6 - 2, 16777088);
-          ee.field_b.field_z.a(param0, var7 + 3, -ee.field_b.field_z.field_z + (1 + (var8 + hc.field_b)), 500, 1000, 0, -1, 0, 0, r.field_f);
+          ee.field_b.field_z.a(param0, var7 + 3, -ee.field_b.field_z.field_z + (1 + (var8 + hc.field_b)), 500, 1000, 0, -1, 0, 0, Archive.field_f);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "oh.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(byte param0, iq param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -188,7 +188,7 @@ abstract class oh extends iq implements dq {
         return null == this.field_C ? 0 : this.field_C.c((byte) -105);
     }
 
-    void a(byte param0, int param1, int param2, iq param3) {
+    void a(byte param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         String var6 = null;
         RuntimeException stackIn_8_0 = null;
@@ -220,7 +220,7 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -278,7 +278,7 @@ abstract class oh extends iq implements dq {
             }
             return;
           }
-          this.field_B.a(true, param2, true, (iq) (this), param3);
+          this.field_B.a(true, param2, true, (UiWidget) (this), param3);
         }
         if (this.field_C != null) {
           this.field_C.a(param0, param1, this.field_o + param2, this.field_t + param3);
@@ -363,9 +363,9 @@ abstract class oh extends iq implements dq {
         return null != this.a(15197) ? true : false;
     }
 
-    boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
-        iq var9 = null;
+        UiWidget var9 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -373,8 +373,8 @@ abstract class oh extends iq implements dq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 >= -107) {
-            var9 = (iq) null;
-            this.a((byte) -57, -98, -76, (iq) null);
+            var9 = (UiWidget) null;
+            this.a((byte) -57, -98, -76, (UiWidget) null);
           }
           stackIn_6_0 = (this.field_C != null) && (this.field_C.a(param0, param1 + this.field_o, this.field_t + param2, param3, param4, (byte) -116, param6));
           return stackIn_6_0;
@@ -392,7 +392,7 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, iq param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_5_0 = false;
@@ -418,7 +418,7 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    final static u[] a(byte param0, String param1, String param2, r param3) {
+    final static u[] a(byte param0, String param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -467,11 +467,11 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    oh(int param0, int param1, int param2, int param3, ur param4, uf param5) {
+    oh(int param0, int param1, int param2, int param3, WidgetListener param4, uf param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final boolean a(int param0, iq param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -498,7 +498,7 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_13_0 = false;
@@ -519,7 +519,7 @@ abstract class oh extends iq implements dq {
           if (var5_int != 80) {
             return false;
           }
-          if (!UiWidget.field_eb[81]) {
+          if (!UiPanel.field_eb[81]) {
             stackIn_13_0 = this.a(param3, 16777088);
           } else {
             stackIn_13_0 = this.a(78, param3);
@@ -539,7 +539,7 @@ abstract class oh extends iq implements dq {
         }
     }
 
-    private final boolean a(iq param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;

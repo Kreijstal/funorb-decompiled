@@ -7,7 +7,7 @@ final class wc extends da {
     private kp field_l;
     private kp field_p;
     static int field_n;
-    static UiWidget field_m;
+    static UiPanel field_m;
 
     final String b(int param0, String param1) {
         String var3 = null;
@@ -143,13 +143,13 @@ final class wc extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = uh.field_Wb;
-          var6.j(param2, 119);
+          var6.writeCipheredByte(param2, 119);
           var6.position = var6.position + 1;
           var7 = var6.position;
           var6.writeByte(4, -93);
           var6.writeByte(param1, 94);
           if (param3 > -24) {
-            field_m = (UiWidget) null;
+            field_m = (UiPanel) null;
           }
           var8 = param5;
           if (param4) {
@@ -182,7 +182,7 @@ final class wc extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_m = (UiWidget) null;
+            field_m = (UiPanel) null;
           }
           stackIn_4_0 = Vertigo2.field_F.equals(rc.a((CharSequence) ((Object) param0), 320));
           return stackIn_4_0;
@@ -218,7 +218,7 @@ final class wc extends da {
         }
     }
 
-    final static void a(int param0, r param1) {
+    final static void a(int param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2643_0;
             StringBuilder stackIn_2643_1;
@@ -229,9 +229,9 @@ final class wc extends da {
             int var3;
             int var4;
             int param0;
-            r param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, r initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2643_0 = null;
@@ -2467,7 +2467,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("notyetachieved", false);
                 if (null != var2) {
-                  UiWidget.field_Z = in.a(0, var2);
+                  UiPanel.field_Z = in.a(0, var2);
                 }
                 var2 = tk.a("achieved", false);
                 if (null != var2) {
@@ -2590,7 +2590,7 @@ final class wc extends da {
                   ue.field_H = in.a(param0 ^ 0, var2);
                 }
                 if (param0 != 0) {
-                  wc.a(6, (r) null);
+                  wc.a(6, (Archive) null);
                 }
                 var2 = tk.a("mp_youofferdraw", false);
                 if (null != var2) {
@@ -3320,7 +3320,7 @@ final class wc extends da {
         String var7 = null;
         try {
           if (param1 != -67) {
-            field_m = (UiWidget) null;
+            field_m = (UiPanel) null;
           }
           var3 = this.field_l.field_w.toLowerCase();
           var4 = param0.toLowerCase();

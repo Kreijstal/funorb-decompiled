@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bq extends TextureOperator {
-    static UiWidget field_B;
+    static UiPanel field_B;
     private int field_y;
     static String field_A;
     static String[] field_G;

@@ -9,7 +9,7 @@ final class j extends IntrusiveNode {
     static String field_o;
     static String field_p;
     static Random field_r;
-    static UiWidget field_q;
+    static UiPanel field_q;
 
     private j() throws Throwable {
         throw new Error();
@@ -74,7 +74,7 @@ final class j extends IntrusiveNode {
               if (!c.a(1, (byte) -104)) {
                 return false;
               }
-              m.field_A = id.field_f.c((byte) 35);
+              m.field_A = id.field_f.readCipheredByte((byte) 35);
               id.field_f.position = 0;
               ca.field_b = param1[m.field_A];
             }

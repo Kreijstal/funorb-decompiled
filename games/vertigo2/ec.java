@@ -79,7 +79,7 @@ final class ec extends TextureOperator {
 
     final static void a(int param0, byte param1, be param2) {
         BitPacketBuffer var3 = uh.field_Wb;
-        var3.j(param0, 118);
+        var3.writeCipheredByte(param0, 118);
         if (param1 < 116) {
           return;
         }
@@ -95,7 +95,7 @@ final class ec extends TextureOperator {
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         int var5 = 38 % ((27 - param4) / 37);
         ap.field_e = param1;
-        cj.field_D = param0;
+        WidgetContainer.field_D = param0;
         ua.field_e = param3;
         ib.field_a = param2;
     }

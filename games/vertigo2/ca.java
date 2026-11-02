@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca {
-    static UiWidget field_f;
+    static UiPanel field_f;
     static int field_g;
-    static UiWidget field_h;
+    static UiPanel field_h;
     static int[] field_a;
     static String field_e;
     static int field_b;

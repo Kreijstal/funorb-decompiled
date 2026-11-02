@@ -6,7 +6,7 @@ final class ve {
     int field_e;
     int field_c;
     static int field_a;
-    static UiWidget field_f;
+    static UiPanel field_f;
     static String field_b;
 
     final static TextureOperator a(byte param0, PacketBuffer param1) {

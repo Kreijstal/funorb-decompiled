@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg extends sb {
+final class Model extends sb {
     int[] field_q;
     int[] field_e;
     byte[] field_J;
@@ -281,7 +281,7 @@ final class lg extends sb {
         this.b();
     }
 
-    final void a(lg param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    final void a(Model param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -379,15 +379,15 @@ final class lg extends sb {
         this.b();
     }
 
-    final static lg a(r param0, String param1, String param2) {
+    final static Model a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, 0);
         if (var3 == null) {
           return null;
         }
-        return new lg(var3);
+        return new Model(var3);
     }
 
-    private final int a(lg param0, int param1, short param2) {
+    private final int a(Model param0, int param1, short param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -1395,7 +1395,7 @@ final class lg extends sb {
         }
     }
 
-    private lg(byte[] param0) {
+    private Model(byte[] param0) {
         this.field_G = 0;
         this.field_O = 0;
         this.field_A = (byte) 0;
@@ -1408,7 +1408,7 @@ final class lg extends sb {
         }
     }
 
-    lg(int param0, int param1, int param2) {
+    Model(int param0, int param1, int param2) {
         this.field_G = 0;
         this.field_O = 0;
         this.field_A = (byte) 0;
@@ -1443,7 +1443,7 @@ final class lg extends sb {
         }
     }
 
-    lg(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7) {
+    Model(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7) {
         this.field_G = 0;
         this.field_O = 0;
         this.field_A = (byte) 0;
@@ -1494,7 +1494,7 @@ final class lg extends sb {
         }
     }
 
-    lg(lg[] param0, int param1) {
+    Model(Model[] param0, int param1) {
         int incrementValue$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_13_0 = 0;
@@ -1518,22 +1518,22 @@ final class lg extends sb {
         int var8;
         int var9;
         int var10;
-        lg var10_ref_lg;
-        lg var11;
+        Model var10_ref_lg;
+        Model var11;
         int var12;
         int var13;
         int var14;
-        lg var15;
-        lg var16;
+        Model var15;
+        Model var16;
         int var17;
-        lg var18;
-        lg var19;
+        Model var18;
+        Model var19;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        lg var11Lifetime1;
+        Model var11Lifetime1;
         this.field_G = 0;
         this.field_O = 0;
         this.field_A = (byte) 0;
@@ -1745,7 +1745,7 @@ final class lg extends sb {
         }
     }
 
-    lg(lg param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    Model(Model param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6;
         int var6Lifetime1;
         int var6Lifetime2;

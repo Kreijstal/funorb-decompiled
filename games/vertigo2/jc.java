@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc implements ur {
+final class jc implements WidgetListener {
     private int field_a;
     static String field_c;
-    private cc field_e;
+    private BitmapFont field_e;
     private int field_d;
     static int[] field_b;
 
@@ -34,7 +34,7 @@ final class jc implements ur {
         sl.field_q[10] = te.field_I;
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -129,7 +129,7 @@ final class jc implements ur {
         int var4 = 0;
         try {
           var5 = uh.field_Wb;
-          var5.j(param1, param0 ^ -14553);
+          var5.writeCipheredByte(param1, param0 ^ -14553);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, 121);
@@ -163,7 +163,7 @@ final class jc implements ur {
         this.field_e = qc.field_x;
     }
 
-    jc(cc param0, int param1, int param2) {
+    jc(BitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param1;
           this.field_d = param2;

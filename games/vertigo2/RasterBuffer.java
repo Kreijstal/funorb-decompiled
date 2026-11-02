@@ -10,7 +10,7 @@ abstract class RasterBuffer {
     java.awt.Image field_b;
     static String field_f;
     static String field_h;
-    static UiWidget field_a;
+    static UiPanel field_a;
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 
@@ -61,7 +61,7 @@ abstract class RasterBuffer {
           var8.unlinkSecondary(-102);
           sq.field_b = sq.field_b - 1;
           var5 = uh.field_Wb;
-          var5.j(param1, 120);
+          var5.writeCipheredByte(param1, 120);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(1, -96);

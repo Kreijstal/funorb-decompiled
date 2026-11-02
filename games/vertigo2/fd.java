@@ -6,7 +6,7 @@ final class fd extends IntrusiveNode {
     static int[] field_t;
     static String field_o;
     int field_n;
-    static UiWidget field_s;
+    static UiPanel field_s;
     static String field_p;
     static byte[] field_q;
 

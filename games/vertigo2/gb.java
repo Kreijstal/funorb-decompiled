@@ -5,8 +5,8 @@ import java.io.*;
 
 final class gb {
     static String field_a;
-    static cc field_b;
-    static UiWidget field_c;
+    static BitmapFont field_b;
+    static UiPanel field_c;
     static int field_d;
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {

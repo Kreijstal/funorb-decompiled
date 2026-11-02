@@ -8,7 +8,7 @@ abstract class rk extends DualLinkNode {
     static vl[] field_w;
     static String field_x;
     static int field_y;
-    static UiWidget field_v;
+    static UiPanel field_v;
     static String[] field_A;
 
     abstract int i(int param0);

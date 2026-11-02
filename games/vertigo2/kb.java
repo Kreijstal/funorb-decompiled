@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb implements ur {
+final class kb implements WidgetListener {
     static co field_c;
     static Sprite[] field_d;
     static GameKeyHandler field_a;
     static tk field_e;
-    static r field_b;
+    static Archive field_b;
     static String field_f;
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

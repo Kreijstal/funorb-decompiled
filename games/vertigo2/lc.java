@@ -6,7 +6,7 @@ final class lc {
     static int field_b;
     static String field_c;
     static int field_a;
-    static UiWidget field_e;
+    static UiPanel field_e;
     static double field_g;
     static int field_f;
 
@@ -166,7 +166,7 @@ final class lc {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 30015) {
-          field_e = (UiWidget) null;
+          field_e = (UiPanel) null;
         }
         field_e = null;
     }

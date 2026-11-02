@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends UiWidget {
+final class aa extends UiPanel {
     private int[] field_Ob;
     private int field_Rb;
     static int[] field_Jb;
@@ -56,7 +56,7 @@ final class aa extends UiWidget {
         return false;
     }
 
-    aa(long param0, UiWidget param1, UiWidget param2, UiWidget param3, aa[] param4, int[] param5, String[] param6, char[] param7) {
+    aa(long param0, UiPanel param1, UiPanel param2, UiPanel param3, aa[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -80,8 +80,8 @@ final class aa extends UiWidget {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        cc var17 = null;
-        cc var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Ub = -1;
         try {
           this.field_Hb = param7;
@@ -105,7 +105,7 @@ final class aa extends UiWidget {
               -1 == this.field_Ob[var13]) {
               var14 = fm.field_g;
             }
-            this.field_Lb[var13] = new nk(0L, param2, (UiWidget) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Lb[var13] = new nk(0L, param2, (UiPanel) null, param3, (Sprite) (var14), param6[var13]);
             this.b(this.field_Lb[var13], 118);
             var15 = var17.c(param6[var13]);
             if (var15 > this.field_Nb) {

@@ -67,7 +67,7 @@ final class ar {
         int var4 = 0;
         BitPacketBuffer var2 = uh.field_Wb;
         int var4Lifetime1;
-        var2.j(param1, 126);
+        var2.writeCipheredByte(param1, 126);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(5, -105);

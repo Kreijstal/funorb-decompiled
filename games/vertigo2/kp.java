@@ -30,7 +30,7 @@ class kp extends d {
           this.field_K = -119;
           return;
         }
-        this.field_B.a(this.field_F, param2, true, (iq) (this), param3);
+        this.field_B.a(this.field_F, param2, true, (UiWidget) (this), param3);
         if (!(this.field_B instanceof qa)) {
           if (!param0) {
             return;
@@ -42,7 +42,7 @@ class kp extends d {
         if (this.field_K == this.field_L) {
           var6 = gk.a(126);
           if (500L > (var6 - this.field_M) % 1000L) {
-            var5.a(-94, this.field_K, param2, (iq) (this), param3);
+            var5.a(-94, this.field_K, param2, (UiWidget) (this), param3);
           }
           if (!param0) {
             return;
@@ -50,10 +50,10 @@ class kp extends d {
           this.field_K = -119;
           return;
         }
-        var5.a((iq) (this), this.field_K, param0, this.field_L, param3, param2);
+        var5.a((UiWidget) (this), this.field_K, param0, this.field_L, param3, param2);
         var6Lifetime1 = gk.a(126);
         if (500L > (var6Lifetime1 - this.field_M) % 1000L) {
-          var5.a(-94, this.field_K, param2, (iq) (this), param3);
+          var5.a(-94, this.field_K, param2, (UiWidget) (this), param3);
         }
         if (!param0) {
           return;
@@ -157,9 +157,9 @@ class kp extends d {
           return;
         }
         var9 = (qa) ((Object) this.field_B);
-        var3 = var9.b((iq) (this), 64);
+        var3 = var9.b((UiWidget) (this), 64);
         var4 = var3.a(8783);
-        var5 = var9.a(-1, (iq) (this));
+        var5 = var9.a(-1, (UiWidget) (this));
         var6 = var9.a((byte) -91) >> 1;
         if (var4 < var5 - var6) {
           this.field_y = 0;
@@ -247,13 +247,13 @@ class kp extends d {
         this.field_K = param0;
         if (param1 >= -84) {
           this.a(true, -70, -56, -82);
-          if (!UiWidget.field_eb[81]) {
+          if (!UiPanel.field_eb[81]) {
             this.field_L = this.field_K;
             return;
           }
           return;
         }
-        if (UiWidget.field_eb[81]) {
+        if (UiPanel.field_eb[81]) {
           return;
         }
         this.field_L = this.field_K;
@@ -312,7 +312,7 @@ class kp extends d {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_22_0 = null;
@@ -328,7 +328,7 @@ class kp extends d {
           }
           if (super.a(param0, param1, param2, param3, param4, (byte) -111, param6) &&
             this.field_B instanceof qa) {
-            var8_int = ((qa) ((Object) this.field_B)).a(PacketBuffer.field_n, param2, 101, param1, (iq) (this), gb.field_d);
+            var8_int = ((qa) ((Object) this.field_B)).a(PacketBuffer.field_n, param2, 101, param1, (UiWidget) (this), gb.field_d);
             if (var8_int == -1) {
               stackIn_7_1 = 0;
             } else {
@@ -365,7 +365,7 @@ class kp extends d {
         }
     }
 
-    void a(byte param0, int param1, int param2, iq param3) {
+    void a(byte param0, int param1, int param2, UiWidget param3) {
         qa var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -384,7 +384,7 @@ class kp extends d {
           }
           if (this.field_B instanceof qa) {
             var5 = (qa) ((Object) this.field_B);
-            var6 = var5.a(PacketBuffer.field_n, param2, 106, param1, (iq) (this), gb.field_d);
+            var6 = var5.a(PacketBuffer.field_n, param2, 106, param1, (UiWidget) (this), gb.field_d);
             if (var6 != -1) {
               if (this.field_I &&
                 this.field_O > var6 &&
@@ -410,7 +410,7 @@ class kp extends d {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_41_1 = 0;
         int stackIn_70_1 = 0;
@@ -460,7 +460,7 @@ class kp extends d {
               if (param2 != 96) {
                 if (param2 == 97) {
                   if (this.field_K < this.field_w.length()) {
-                    if (!UiWidget.field_eb[82]) {
+                    if (!UiPanel.field_eb[82]) {
                       stackIn_70_1 = this.field_K + 1;
                     } else {
                       stackIn_70_1 = this.k(-27539);
@@ -481,17 +481,17 @@ class kp extends d {
                     this.g((byte) 100);
                     return true;
                   }
-                  if (UiWidget.field_eb[82] &&
+                  if (UiPanel.field_eb[82] &&
                     param2 == 65) {
                     this.e((byte) 35);
                     return true;
                   }
-                  if (UiWidget.field_eb[82] &&
+                  if (UiPanel.field_eb[82] &&
                     param2 == 66) {
                     this.f((byte) -127);
                     return true;
                   }
-                  if (UiWidget.field_eb[82] &&
+                  if (UiPanel.field_eb[82] &&
                     param2 == 67) {
                     this.i((byte) -35);
                     return true;
@@ -499,7 +499,7 @@ class kp extends d {
                 }
               } else {
                 if (this.field_K > 0) {
-                  if (!UiWidget.field_eb[82]) {
+                  if (!UiPanel.field_eb[82]) {
                     stackIn_41_1 = -1 + this.field_K;
                   } else {
                     stackIn_41_1 = this.l(-128);
@@ -579,7 +579,7 @@ class kp extends d {
     }
 
     final static void i(int param0) {
-        if (pm.field_a) {
+        if (BufferedSocket.field_a) {
           bi.d(bi.field_d, bi.field_f, -bi.field_d + bi.field_i, bi.field_c - bi.field_f);
           ql.field_L.b(false, param0 ^ 0);
           if (param0 != 0) {

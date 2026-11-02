@@ -6,7 +6,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_c;
     static wp field_a;
     static int field_d;
-    static cc field_f;
+    static BitmapFont field_f;
     static int[] field_e;
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

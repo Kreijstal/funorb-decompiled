@@ -4,7 +4,7 @@
 final class vl {
     static String field_g;
     static int[][] field_e;
-    static lg[][] field_a;
+    static Model[][] field_a;
     static String field_b;
     String field_i;
     boolean field_m;
@@ -22,7 +22,7 @@ final class vl {
         }
     }
 
-    final static u a(int param0, String param1, r param2, String param3) {
+    final static u a(int param0, String param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -403,7 +403,7 @@ final class vl {
     public static void a(byte param0) {
         field_j = null;
         field_b = null;
-        field_a = (lg[][]) null;
+        field_a = (Model[][]) null;
         field_f = null;
         field_e = (int[][]) null;
         field_d = null;
@@ -461,7 +461,7 @@ final class vl {
         field_b = "Email address is unavailable";
         field_f = "Orb coins: ";
         field_g = "<img=2> / <img=10><br><img=1> / <img=12><br><img=3> / <img=11><br><img=4> / <img=9><br><img=5> / <img=7><br><img=15> / <img=17><br><img=14> / <img=16><br><img=8>";
-        field_a = new lg[13][2];
+        field_a = new Model[13][2];
         field_h = "Password is valid";
         field_d = "Create unrated game";
     }

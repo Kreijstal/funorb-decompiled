@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class af extends cj implements ik {
+abstract class af extends WidgetContainer implements ik {
     private df field_K;
     static String field_L;
     static int field_E;
@@ -93,7 +93,7 @@ abstract class af extends cj implements ik {
 
     abstract int a(int param0);
 
-    af(int param0, int param1, int param2, int param3, ur param4) {
+    af(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4);
     }
 

@@ -65,7 +65,7 @@ final class nf extends IntrusiveNode {
             if (ua.field_e > param6 - param5) {
               GameApplet.a(param4, param1, -1, param3, param5, param6, param0);
             } else {
-              if (cj.field_D >= param6 + param5) {
+              if (WidgetContainer.field_D >= param6 + param5) {
                 cl.a(param1, param3, param4, param6, (byte) -40, param5, param0);
               } else {
                 GameApplet.a(param4, param1, -1, param3, param5, param6, param0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jo implements ur {
+final class jo implements WidgetListener {
     private int field_a;
     static int field_b;
     private int field_c;
@@ -12,7 +12,7 @@ final class jo implements ur {
     static int[] field_h;
     static String[] field_g;
     private int field_j;
-    private cc field_i;
+    private BitmapFont field_i;
 
     final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
@@ -38,9 +38,9 @@ final class jo implements ur {
         field_h = null;
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var10 = 0;
-        iq stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -56,7 +56,7 @@ final class jo implements ur {
           if (!(param3 instanceof jf)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (iq) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           var12 = (jf) (stackIn_4_0);
           if (!param2) {
@@ -91,7 +91,7 @@ final class jo implements ur {
         }
     }
 
-    jo(cc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    jo(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_k = param6;
           this.field_c = param2;

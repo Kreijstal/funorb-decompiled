@@ -8,7 +8,7 @@ final class hq extends IntrusiveNode {
     int field_p;
     boolean field_o;
 
-    final static boolean a(int param0, int param1, int param2, r param3) {
+    final static boolean a(int param0, int param1, int param2, Archive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -74,7 +74,7 @@ final class hq extends IntrusiveNode {
         RuntimeException var2 = null;
         Sprite var3 = null;
         int var4 = 0;
-        r var5 = null;
+        Archive var5 = null;
         Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -83,8 +83,8 @@ final class hq extends IntrusiveNode {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param1 != 202) {
-            var5 = (r) null;
-            hq.a(33, -77, -100, (r) null);
+            var5 = (Archive) null;
+            hq.a(33, -77, -100, (Archive) null);
           }
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             var3 = param0[var2_int];

@@ -3,8 +3,8 @@
  */
 final class nr extends tb implements ef {
     static String field_q;
-    private r field_j;
-    private r field_m;
+    private Archive field_j;
+    private Archive field_m;
     private boolean field_k;
     static char[] field_o;
     private int field_l;
@@ -31,7 +31,7 @@ final class nr extends tb implements ef {
         if (param0 == 212) {
           return this.e(param1, -1).field_h;
         }
-        this.field_m = (r) null;
+        this.field_m = (Archive) null;
         return this.e(param1, -1).field_h;
     }
 
@@ -73,13 +73,13 @@ final class nr extends tb implements ef {
     public final int[] a(float param0, int param1, int param2) {
         ta stackIn_5_0;
         Object stackIn_5_1;
-        r stackIn_5_2;
+        Archive stackIn_5_2;
         float stackIn_5_3;
         Object stackIn_6_1;
         boolean stackIn_7_4 = false;
         ta stackIn_14_0;
         Object stackIn_14_1;
-        r stackIn_14_2;
+        Archive stackIn_14_2;
         float stackIn_14_3;
         Object stackIn_15_1;
         boolean stackIn_16_4 = false;
@@ -236,7 +236,7 @@ final class nr extends tb implements ef {
         return var5;
     }
 
-    nr(r param0, r param1, r param2, int param3, boolean param4) {
+    nr(Archive param0, Archive param1, Archive param2, int param3, boolean param4) {
         super(param1, param0, param2);
         this.field_l = 50;
         this.field_k = false;
@@ -255,33 +255,33 @@ final class nr extends tb implements ef {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        iq.field_x.position = 0;
-        iq.field_x.writeByte(12, 105);
-        iq.field_x.writeInt(j.field_r.nextInt(), param0 - 115);
-        iq.field_x.writeInt(j.field_r.nextInt(), 0);
+        UiWidget.field_x.position = 0;
+        UiWidget.field_x.writeByte(12, 105);
+        UiWidget.field_x.writeInt(j.field_r.nextInt(), param0 - 115);
+        UiWidget.field_x.writeInt(j.field_r.nextInt(), 0);
         if (param0 == 115) {
-          iq.field_x.writeByte(param2, 101);
-          iq.field_x.writeByte(param3, -67);
-          iq.field_x.writeShort(param1, param0 ^ -1670);
-          iq.field_x.a(lp.field_E, jm.field_H, 9157);
-          uh.field_Wb.j(18, param0 + 5);
+          UiWidget.field_x.writeByte(param2, 101);
+          UiWidget.field_x.writeByte(param3, -67);
+          UiWidget.field_x.writeShort(param1, param0 ^ -1670);
+          UiWidget.field_x.a(lp.field_E, jm.field_H, 9157);
+          uh.field_Wb.writeCipheredByte(18, param0 + 5);
           fieldTemp$0 = uh.field_Wb.position + 1;
           uh.field_Wb.position = uh.field_Wb.position + 1;
           var4 = fieldTemp$0;
-          uh.field_Wb.a(0, -10140, iq.field_x.payload, iq.field_x.position);
+          uh.field_Wb.a(0, -10140, UiWidget.field_x.payload, UiWidget.field_x.position);
           uh.field_Wb.patchByteLength((byte) -95, -var4 + uh.field_Wb.position);
           return;
         }
         nr.a(-111, -84, -8, -110, 72);
-        iq.field_x.writeByte(param2, 101);
-        iq.field_x.writeByte(param3, -67);
-        iq.field_x.writeShort(param1, param0 ^ -1670);
-        iq.field_x.a(lp.field_E, jm.field_H, 9157);
-        uh.field_Wb.j(18, param0 + 5);
+        UiWidget.field_x.writeByte(param2, 101);
+        UiWidget.field_x.writeByte(param3, -67);
+        UiWidget.field_x.writeShort(param1, param0 ^ -1670);
+        UiWidget.field_x.a(lp.field_E, jm.field_H, 9157);
+        uh.field_Wb.writeCipheredByte(18, param0 + 5);
         int fieldTemp$1 = uh.field_Wb.position + 1;
         uh.field_Wb.position = uh.field_Wb.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        uh.field_Wb.a(0, -10140, iq.field_x.payload, iq.field_x.position);
+        uh.field_Wb.a(0, -10140, UiWidget.field_x.payload, UiWidget.field_x.position);
         uh.field_Wb.patchByteLength((byte) -95, -var4Lifetime1 + uh.field_Wb.position);
     }
 

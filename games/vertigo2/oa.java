@@ -7,7 +7,7 @@ final class oa extends da {
     private String field_n;
     private boolean field_r;
     static int field_p;
-    static UiWidget field_s;
+    static UiPanel field_s;
     private rf field_m;
     static int field_q;
 

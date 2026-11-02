@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sm extends UiWidget {
+final class sm extends UiPanel {
     static String field_Ib;
-    private UiWidget field_Hb;
-    private UiWidget field_Jb;
+    private UiPanel field_Hb;
+    private UiPanel field_Jb;
     static String field_Kb;
 
     sm(long param0, sm param1, String param2) {
@@ -33,11 +33,11 @@ final class sm extends UiWidget {
         this.field_Jb.a(80, this.field_Fb - var3Lifetime1, this.field_db, 0, var3Lifetime1);
     }
 
-    private sm(long param0, UiWidget param1, UiWidget param2, String param3) {
-        super(param0, (UiWidget) null);
+    private sm(long param0, UiPanel param1, UiPanel param2, String param3) {
+        super(param0, (UiPanel) null);
         try {
-          this.field_Hb = new UiWidget(0L, param1);
-          this.field_Jb = new UiWidget(0L, param2);
+          this.field_Hb = new UiPanel(0L, param1);
+          this.field_Jb = new UiPanel(0L, param2);
           this.field_Jb.field_S = param3;
           this.b(this.field_Hb, 126);
           this.b(this.field_Jb, 121);
@@ -55,8 +55,8 @@ final class sm extends UiWidget {
         this.a((byte) -101, param4);
     }
 
-    sm(long param0, Sprite param1, Sprite param2, int param3, UiWidget param4, String param5) {
-        this(param0, (UiWidget) null, param4, param5);
+    sm(long param0, Sprite param1, Sprite param2, int param3, UiPanel param4, String param5) {
+        this(param0, (UiPanel) null, param4, param5);
         try {
           this.field_Hb.field_Db = param2;
           this.field_Hb.field_ab = param3;

@@ -40,7 +40,7 @@ final class fa extends IntrusiveNode {
           }
           br.field_Q = param1;
           var4 = uh.field_Wb;
-          var4.j(param0, 125);
+          var4.writeCipheredByte(param0, 125);
           var4.writeByte(3, -86);
           var4.writeByte(11, -112);
           var4.writeShort(param1, -1783);

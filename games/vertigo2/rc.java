@@ -28,7 +28,7 @@ final class rc {
         int var11Lifetime1;
         int var11Lifetime2;
         jq.a(70, 20, 100, 600, 320);
-        cc var13 = tk.field_c;
+        BitmapFont var13 = tk.field_c;
         int var2 = 2 + var13.field_z;
         int var3 = var13.field_z;
         int var4 = var13.field_z + var13.field_M;

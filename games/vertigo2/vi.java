@@ -16,7 +16,7 @@ final class vi extends IntrusiveNode {
     static int[] field_w;
     static String field_s;
     static int[][] field_C;
-    static r field_n;
+    static Archive field_n;
     static String field_x;
     static String field_B;
 

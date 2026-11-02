@@ -156,7 +156,7 @@ abstract class GameShell extends GameApplet {
         }
         if (qc.field_A == 1) {
           if (0 != np.field_Lb) {
-            qc.field_B = pm.a(eh.field_f, 125);
+            qc.field_B = BufferedSocket.a(eh.field_f, 125);
           }
           ke.field_b = ug.a(mp.field_d, false, true, false, 1);
           la.field_e = ug.a(rh.field_F, false, true, false, 1);
@@ -203,7 +203,7 @@ abstract class GameShell extends GameApplet {
           }
           if (oq.field_E == null) {
             oq.field_E = rc.b(param1 + 130);
-            ee.field_c = iq.e(param1 + 12349);
+            ee.field_c = UiWidget.e(param1 + 12349);
           }
           t.a(oq.field_E, param1 + 1513245, ee.field_c, kb.field_b);
           la.field_e = null;
@@ -215,7 +215,7 @@ abstract class GameShell extends GameApplet {
         }
         if (10 == qc.field_A) {
           if (np.field_Lb != 0) {
-            IntrusiveDequeCursor.field_c = pm.a(rf.field_s, 123);
+            IntrusiveDequeCursor.field_c = BufferedSocket.a(rf.field_s, 123);
           }
           qc.field_A = 11;
         }
@@ -291,7 +291,7 @@ abstract class GameShell extends GameApplet {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = Vertigo2.field_L ? 1 : 0;
-          var4 = qb.a(np.field_Lb, uo.field_h, param2, 10000);
+          var4 = JaggrabClient.a(np.field_Lb, uo.field_h, param2, 10000);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -364,7 +364,7 @@ abstract class GameShell extends GameApplet {
             gm.a(ob.e((byte) -103), (byte) -126);
           }
           if (var4 == 10) {
-            uh.field_Wb.j(17, 127);
+            uh.field_Wb.writeCipheredByte(17, 127);
           }
           if (var4 == 11) {
             pd.a(ob.e((byte) -95), 1000000);
@@ -375,7 +375,7 @@ abstract class GameShell extends GameApplet {
           if (var4 == 13) {
             try {
               if (null == ja.field_d) {
-                ja.field_d = new qb(gi.field_s, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                ja.field_d = new JaggrabClient(gi.field_s, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (ja.field_d.b(-1)) {
                 var7 = ja.field_d.a(-4);
@@ -441,7 +441,7 @@ abstract class GameShell extends GameApplet {
           if (10 <= qc.field_A) {
             if (nl.a((byte) 107)) {
               if (0 != hn.field_w) {
-                iq.a((byte) -80, uo.field_h);
+                UiWidget.a((byte) -80, uo.field_h);
               } else {
                 discarded$6 = this.a(false, (byte) 116, false);
               }

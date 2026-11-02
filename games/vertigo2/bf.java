@@ -3,7 +3,7 @@
  */
 final class bf {
     static ee field_b;
-    static UiWidget field_c;
+    static UiPanel field_c;
     static boolean field_a;
     private static String field_z;
 

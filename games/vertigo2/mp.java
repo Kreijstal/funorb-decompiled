@@ -5,7 +5,7 @@ final class mp {
     private Sprite[] field_e;
     static String field_c;
     static fe field_a;
-    static UiWidget field_g;
+    static UiPanel field_g;
     static ch field_f;
     static int field_d;
     static int field_b;
@@ -126,14 +126,14 @@ final class mp {
         BitPacketBuffer var2Lifetime1;
         if (param1 > 17) {
           var2 = uh.field_Wb;
-          var2.j(param0, 118);
+          var2.writeCipheredByte(param0, 118);
           var2.writeByte(1, 112);
           var2.writeByte(0, 99);
           return;
         }
         mp.a(-79, -52);
         var2Lifetime1 = uh.field_Wb;
-        var2Lifetime1.j(param0, 118);
+        var2Lifetime1.writeCipheredByte(param0, 118);
         var2Lifetime1.writeByte(1, 112);
         var2Lifetime1.writeByte(0, 99);
     }

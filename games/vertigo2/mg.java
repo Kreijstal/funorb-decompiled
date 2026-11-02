@@ -8,7 +8,7 @@ final class mg extends oh {
     static IntrusiveDeque field_N;
     private int field_I;
     private boolean field_H;
-    private cc field_K;
+    private BitmapFont field_K;
     static nk[][] field_S;
     private int field_Q;
     static boolean field_O;
@@ -16,10 +16,10 @@ final class mg extends oh {
     static String field_L;
     static String field_G;
     static od field_R;
-    static UiWidget[] field_M;
+    static UiPanel[] field_M;
 
-    mg(int param0, int param1, int param2, int param3, iq param4, boolean param5, int param6, int param7, cc param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (ur) null, (uf) null);
+    mg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetListener) null, (uf) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -457,7 +457,7 @@ final class mg extends oh {
                 var13 = stackIn_204_0;
               }
               if (2 <= fn.field_z &&
-                UiWidget.field_eb[12]) {
+                UiPanel.field_eb[12]) {
                 var13 = 0;
                 var14 = 0;
                 var10 = 0;
@@ -493,7 +493,7 @@ final class mg extends oh {
                 }
                 uq.a(param3, var7, 20473, 0, -1, var9, -1, param2);
                 if (fn.field_z >= 2 &&
-                  UiWidget.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   gd.field_r = true;
                 }
                 if (!gd.field_r) {

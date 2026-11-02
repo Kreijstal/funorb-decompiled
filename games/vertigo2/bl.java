@@ -28,7 +28,7 @@ final class bl extends l {
     private boolean field_n;
     private Sprite field_A;
     static String[] field_z;
-    static cc field_N;
+    static BitmapFont field_N;
     private boolean field_H;
     static int[] field_r;
     private int field_D;
@@ -559,14 +559,14 @@ final class bl extends l {
           this.field_L = this.field_L + uo.field_h;
           if (0 <= this.field_t &&
             this.field_t < this.field_k.length) {
-            if (UiWidget.field_eb[98]) {
+            if (UiPanel.field_eb[98]) {
               if (this.field_O < 0) {
                 this.field_t = this.field_t - 1;
                 this.field_L = this.field_t;
                 this.field_O = wj.field_b;
               }
             } else {
-              if (!UiWidget.field_eb[99]) {
+              if (!UiPanel.field_eb[99]) {
                 this.field_O = -1;
               } else {
                 if (this.field_O < 0) {

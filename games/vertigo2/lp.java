@@ -62,16 +62,16 @@ final class lp extends TextureOperator {
               if (var3 != 2) {
                 if (var3 != 1) {
                   if (var3 == 3) {
-                    if (UiWidget.field_eb[86]) {
-                      stackIn_42_0 = (UiWidget.field_eb[82]) ? 1 : 0;
+                    if (UiPanel.field_eb[86]) {
+                      stackIn_42_0 = (UiPanel.field_eb[82]) ? 1 : 0;
                     } else {
                       stackIn_42_0 = 0;
                     }
                     var2 = stackIn_42_0;
                   } else {
                     if (0 == var3) {
-                      if (!UiWidget.field_eb[86]) {
-                        stackIn_49_0 = (!UiWidget.field_eb[82]) ? 1 : 0;
+                      if (!UiPanel.field_eb[86]) {
+                        stackIn_49_0 = (!UiPanel.field_eb[82]) ? 1 : 0;
                       } else {
                         stackIn_49_0 = 0;
                       }
@@ -79,16 +79,16 @@ final class lp extends TextureOperator {
                     }
                   }
                 } else {
-                  if (!UiWidget.field_eb[86]) {
-                    stackIn_35_0 = (UiWidget.field_eb[82]) ? 1 : 0;
+                  if (!UiPanel.field_eb[86]) {
+                    stackIn_35_0 = (UiPanel.field_eb[82]) ? 1 : 0;
                   } else {
                     stackIn_35_0 = 0;
                   }
                   var2 = stackIn_35_0;
                 }
               } else {
-                if (UiWidget.field_eb[86]) {
-                  stackIn_28_0 = (!UiWidget.field_eb[82]) ? 1 : 0;
+                if (UiPanel.field_eb[86]) {
+                  stackIn_28_0 = (!UiPanel.field_eb[82]) ? 1 : 0;
                 } else {
                   stackIn_28_0 = 0;
                 }

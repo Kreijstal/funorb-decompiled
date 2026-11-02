@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sn extends IntrusiveNode {
+abstract class PcmStream extends IntrusiveNode {
     int field_o;
     dr field_n;
     volatile boolean field_p;
-    sn field_q;
+    PcmStream field_q;
 
     abstract int d();
 
-    abstract sn a();
+    abstract PcmStream a();
 
     int b() {
         return 255;
@@ -27,9 +27,9 @@ abstract class sn extends IntrusiveNode {
 
     abstract void b(int[] param0, int param1, int param2);
 
-    abstract sn c();
+    abstract PcmStream c();
 
-    protected sn() {
+    protected PcmStream() {
         this.field_p = true;
     }
 }

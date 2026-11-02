@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends sn {
+final class ra extends PcmStream {
     private int field_w;
     private boolean field_A;
     private int field_B;
@@ -361,7 +361,7 @@ final class ra extends sn {
         this.unlink(2);
     }
 
-    final sn a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -1362,7 +1362,7 @@ final class ra extends sn {
         return param4 >> 1;
     }
 
-    final sn c() {
+    final PcmStream c() {
         return null;
     }
 

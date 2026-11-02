@@ -12,7 +12,7 @@ class jg extends bg {
     int field_l;
     int field_f;
     int field_s;
-    static UiWidget field_q;
+    static UiPanel field_q;
     static String field_m;
     boolean field_i;
     int field_r;
@@ -134,7 +134,7 @@ class jg extends bg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -97) {
-            this.a((lg) null, -11, -63, (byte) 4);
+            this.a((Model) null, -11, -63, (byte) 4);
           }
           var5_int = 64 + this.field_l - param2;
           var6 = 64 + (this.field_g - param0);
@@ -340,7 +340,7 @@ class jg extends bg {
         }
     }
 
-    final fc a(lg param0, int param1, int param2, byte param3) {
+    final fc a(Model param0, int param1, int param2, byte param3) {
         Object stackIn_8_0 = null;
         fc stackIn_11_0 = null;
         fc stackIn_41_0 = null;

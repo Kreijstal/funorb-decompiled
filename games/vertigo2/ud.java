@@ -7,11 +7,11 @@ final class ud extends DualLinkNode {
     boolean field_y;
     static String field_E;
     int[] field_z;
-    static UiWidget field_A;
+    static UiPanel field_A;
     static String field_w;
     static String field_t;
     String field_D;
-    static UiWidget field_x;
+    static UiPanel field_x;
     char[] field_v;
 
     private final void a(int param0, int param1, PacketBuffer param2) {

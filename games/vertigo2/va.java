@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class va implements ur, qa {
+class va implements WidgetListener, qa {
     int field_d;
     private boolean field_q;
     int field_n;
@@ -11,16 +11,16 @@ class va implements ur, qa {
     int field_a;
     static int[] field_b;
     static wn field_s;
-    static UiWidget field_f;
+    static UiPanel field_f;
     int field_e;
     int field_p;
     static String field_r;
-    static UiWidget field_h;
+    static UiPanel field_h;
     int field_i;
     int field_j;
     int field_c;
     int field_k;
-    cc field_l;
+    BitmapFont field_l;
 
     final static void b(int param0) {
         int var5 = 0;
@@ -184,7 +184,7 @@ class va implements ur, qa {
         return false;
     }
 
-    public final int a(iq param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -212,7 +212,7 @@ class va implements ur, qa {
         }
     }
 
-    public final int a(iq param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -241,7 +241,7 @@ class va implements ur, qa {
         }
     }
 
-    private final int a(int param0, byte param1, iq param2, int param3) {
+    private final int a(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -270,7 +270,7 @@ class va implements ur, qa {
         }
     }
 
-    public void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         if (!param2) {
           this.field_k = 26;
         }
@@ -284,7 +284,7 @@ class va implements ur, qa {
         }
     }
 
-    public final int b(iq param0, int param1, int param2) {
+    public final int b(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -313,7 +313,7 @@ class va implements ur, qa {
         }
     }
 
-    public final int a(iq param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -341,7 +341,7 @@ class va implements ur, qa {
         }
     }
 
-    private final int c(iq param0, int param1) {
+    private final int c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -350,7 +350,7 @@ class va implements ur, qa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_f = (UiWidget) null;
+            field_f = (UiPanel) null;
           }
           stackIn_3_0 = -this.field_c - this.field_k + param0.field_s;
           return stackIn_3_0;
@@ -368,7 +368,7 @@ class va implements ur, qa {
         }
     }
 
-    private final int a(int param0, byte param1, int param2, iq param3) {
+    private final int a(int param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -395,7 +395,7 @@ class va implements ur, qa {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, iq param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -465,7 +465,7 @@ class va implements ur, qa {
         }
     }
 
-    public final void a(int param0, int param1, int param2, iq param3, int param4) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, int param4) {
         ro var13 = null;
         ro var14 = null;
         int var7 = 0;
@@ -496,7 +496,7 @@ class va implements ur, qa {
         }
     }
 
-    public final int a(int param0, int param1, int param2, int param3, iq param4, int param5) {
+    public final int a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -526,7 +526,7 @@ class va implements ur, qa {
         }
     }
 
-    private final void a(int param0, int param1, int param2, iq param3) {
+    private final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.a(param2, this.field_g, 0, param1, 65, param3, this.field_e, param0);
         } catch (RuntimeException runtimeException) {
@@ -534,7 +534,7 @@ class va implements ur, qa {
         }
     }
 
-    private final void a(boolean param0, iq param1) {
+    private final void a(boolean param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -632,12 +632,12 @@ class va implements ur, qa {
         if (param0 == -91) {
           return this.field_l.field_M + this.field_l.field_z;
         }
-        iq var3 = (iq) null;
-        this.a((iq) null, (byte) 64);
+        UiWidget var3 = (UiWidget) null;
+        this.a((UiWidget) null, (byte) 64);
         return this.field_l.field_M + this.field_l.field_z;
     }
 
-    public final int a(int param0, iq param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -664,11 +664,11 @@ class va implements ur, qa {
         }
     }
 
-    va(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    va(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final void a(iq param0, int param1, boolean param2, int param3, int param4, int param5) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -758,7 +758,7 @@ class va implements ur, qa {
         field_f = null;
     }
 
-    String a(byte param0, iq param1) {
+    String a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -785,7 +785,7 @@ class va implements ur, qa {
         }
     }
 
-    public final ro b(iq param0, int param1) {
+    public final ro b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         ro stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -823,7 +823,7 @@ class va implements ur, qa {
     protected va() {
     }
 
-    va(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    va(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_g = param6;
           this.field_a = param11;

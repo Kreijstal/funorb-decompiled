@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class un extends UiWidget {
+final class un extends UiPanel {
     private StringBuilder field_Kb;
     static long[] field_Mb;
-    private UiWidget field_Nb;
+    private UiPanel field_Nb;
     static boolean field_Ib;
     static ee field_Hb;
-    private UiWidget field_Jb;
+    private UiPanel field_Jb;
     private int field_Ob;
     static b field_Lb;
 
@@ -421,7 +421,7 @@ final class un extends UiWidget {
         return 2;
     }
 
-    un(int param0, int param1, int param2, int param3, String param4, UiWidget param5, UiWidget param6, UiWidget param7) {
+    un(int param0, int param1, int param2, int param3, String param4, UiPanel param5, UiPanel param6, UiPanel param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -441,18 +441,18 @@ final class un extends UiWidget {
         int var13 = 0;
         this.field_Ob = 0;
         try {
-          this.field_Nb = new UiWidget(0L, param6, param4);
+          this.field_Nb = new UiPanel(0L, param6, param4);
           this.b(this.field_Nb, 127);
-          this.field_Jb = new UiWidget(0L, param7);
+          this.field_Jb = new UiPanel(0L, param7);
           this.field_Jb.field_A = 16764006;
           this.b(this.field_Jb, 123);
           this.field_Jb.field_J = "|";
           this.field_Kb = new StringBuilder(12);
           var9_int = this.field_Nb.j(-21391);
-          this.field_Nb.a(80, var9_int, r.field_f, 3, 5);
-          this.field_Jb.a(81, var9_int, r.field_f, r.field_f + 3, 5);
+          this.field_Nb.a(80, var9_int, Archive.field_f, 3, 5);
+          this.field_Jb.a(81, var9_int, Archive.field_f, Archive.field_f + 3, 5);
           var10 = 5 + var9_int + 5;
-          var11 = 3 + (3 + 2 * r.field_f);
+          var11 = 3 + (3 + 2 * Archive.field_f);
           var12 = jf.a(var10, param2, param0, 1);
           var13 = dm.a(param3, 0, var11, param1);
           this.a(123, var10, var11, var13, var12);
@@ -509,7 +509,7 @@ final class un extends UiWidget {
         return false;
     }
 
-    final static UiWidget b(byte param0) {
+    final static UiPanel b(byte param0) {
         int var1 = -13 / ((37 - param0) / 47);
         return pk.e(2);
     }

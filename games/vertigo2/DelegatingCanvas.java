@@ -33,20 +33,20 @@ final class DelegatingCanvas extends java.awt.Canvas {
         bl.a(false, 4, -30962);
     }
 
-    final static void a(int param0, UiWidget param1) {
-        UiWidget var4 = null;
-        UiWidget var2 = null;
+    final static void a(int param0, UiPanel param1) {
+        UiPanel var4 = null;
+        UiPanel var2 = null;
         int var3 = Vertigo2.field_L ? 1 : 0;
-        UiWidget var2Lifetime1;
+        UiPanel var2Lifetime1;
         try {
-          var4 = (UiWidget) (param1.field_M.a((byte) 100));
+          var4 = (UiPanel) (param1.field_M.a((byte) 100));
           var2 = var4;
           while (var4 != null) {
             var4.field_kb = 0;
             var4.field_N = 0;
             var4.field_L = 0;
             var4.field_db = 0;
-            var4 = (UiWidget) (param1.field_M.b(95));
+            var4 = (UiPanel) (param1.field_M.b(95));
             var2Lifetime1 = var4;
           }
           param1.field_kb = 0;
@@ -67,7 +67,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = uh.field_Wb;
-          var3.j(param0, 120);
+          var3.writeCipheredByte(param0, 120);
           var3.writeByte(param1.field_w, param2 + 96);
           var3.writeByte(param1.field_n, 103);
           if (param2 == 0) {

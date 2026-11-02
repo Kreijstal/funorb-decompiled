@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends sn {
+final class fk extends PcmStream {
     static String field_A;
     private int field_y;
     private int field_E;
@@ -99,7 +99,7 @@ final class fk extends sn {
         return param1 < 6144 ? -jc.field_b[-param1 + 6144] : jc.field_b[param1 - 6144];
     }
 
-    final sn a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -498,7 +498,7 @@ final class fk extends sn {
         }
     }
 
-    final sn c() {
+    final PcmStream c() {
         return null;
     }
 

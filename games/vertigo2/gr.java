@@ -22,7 +22,7 @@ final class gr extends sp implements ij {
     gr(sd param0, ll param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        iq var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -48,12 +48,12 @@ final class gr extends sp implements ij {
           } else {
             var3 = ko.field_U;
           }
-          var4 = new iq((String) (var3), (uf) null);
+          var4 = new UiWidget((String) (var3), (uf) null);
           var4.field_n = this.field_n;
           var4.field_s = 80;
           var4.field_t = 50;
           var4.field_o = 0;
-          var4.field_B = (ur) ((Object) new va(bl.field_N, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_B = (WidgetListener) ((Object) new va(bl.field_N, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.c((byte) 119, var4);
           this.field_X = this.a(-6, (uf) (this), lr.field_N);
           return;
@@ -145,7 +145,7 @@ final class gr extends sp implements ij {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new d(param2, param1);
-          var4.field_B = (ur) ((Object) new vo());
+          var4.field_B = (WidgetListener) ((Object) new vo());
           var5 = param0 + this.field_s;
           this.field_s = this.field_s + 38;
           var4.a(false, 15, var5, 30, -16 + (this.field_n - 14));
@@ -173,7 +173,7 @@ final class gr extends sp implements ij {
         }
     }
 
-    final static String a(String param0, byte param1, r param2, String param3, String param4) {
+    final static String a(String param0, byte param1, Archive param2, String param3, String param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_4_0 = null;
@@ -191,7 +191,7 @@ final class gr extends sp implements ij {
         try {
           if (param1 < 34) {
             var6 = (String) null;
-            gr.a((String) null, (byte) -120, (r) null, (String) null, (String) null);
+            gr.a((String) null, (byte) -120, (Archive) null, (String) null, (String) null);
           }
           if (param2.b(0)) {
             stackIn_6_0 = param3 + " - " + param2.a(param4, 0) + "%";

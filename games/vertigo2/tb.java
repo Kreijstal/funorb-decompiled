@@ -3,13 +3,13 @@
  */
 class tb implements ka {
     private int field_f;
-    private r field_i;
+    private Archive field_i;
     static String field_c;
     private la field_h;
     private ui[] field_g;
     static boolean field_b;
-    private r field_e;
-    static UiWidget field_a;
+    private Archive field_e;
+    static UiPanel field_a;
     static Sprite field_d;
 
     public final ui e(int param0, int param1) {
@@ -70,7 +70,7 @@ class tb implements ka {
         field_a = null;
     }
 
-    tb(r param0, r param1, r param2) {
+    tb(Archive param0, Archive param1, Archive param2) {
         ui stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         ui stackIn_19_0 = null;

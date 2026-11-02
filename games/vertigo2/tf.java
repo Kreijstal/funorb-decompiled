@@ -8,7 +8,7 @@ final class tf extends wm {
     static int[] field_p;
     static String field_m;
 
-    final static UiWidget b(byte param0) {
+    final static UiPanel b(byte param0) {
         if (param0 <= 90) {
           field_l = (am) null;
           return uk.field_v.field_Nb;
@@ -51,7 +51,7 @@ final class tf extends wm {
         try {
           var9 = uh.field_Wb;
           BitPacketBuffer var6 = var9;
-          var9.j(param4, 122);
+          var9.writeCipheredByte(param4, 122);
           var9.position = var9.position + 1;
           var7 = var9.position;
           int var8 = 33 % ((-45 - param2) / 39);

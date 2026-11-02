@@ -6,7 +6,7 @@ final class hk extends da {
     private String field_l;
     static int[] field_q;
     private boolean field_p;
-    static UiWidget field_o;
+    static UiPanel field_o;
     static String field_r;
     static int field_n;
 
@@ -65,7 +65,7 @@ final class hk extends da {
 
     final static void a(int param0, byte param1, int param2) {
         BitPacketBuffer var3 = uh.field_Wb;
-        var3.j(param0, param1 ^ 75);
+        var3.writeCipheredByte(param0, param1 ^ 75);
         if (param1 == 60) {
           var3.writeByte(3, 91);
           var3.writeByte(8, param1 + 41);
@@ -93,7 +93,7 @@ final class hk extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 3614) {
-            field_o = (UiWidget) null;
+            field_o = (UiPanel) null;
           }
           var5 = (CharSequence) ((Object) param1);
           var3 = gm.a((byte) 92, var5);

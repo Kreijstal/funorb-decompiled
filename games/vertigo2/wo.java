@@ -10,7 +10,7 @@ final class wo {
     private int field_K;
     static double field_S;
     int field_E;
-    static lg[] field_q;
+    static Model[] field_q;
     private int field_bb;
     private boolean field_x;
     boolean field_z;
@@ -316,44 +316,44 @@ final class wo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_c = -256 + param1.c((byte) -106, 10);
-          this.field_O = param1.c((byte) -113, 10) - 256;
-          this.field_ab = param1.c((byte) -122, 4);
-          this.field_Y = param1.c((byte) -100, 4) - 5;
-          this.field_U = param1.c((byte) -98, 3);
-          this.field_g = param1.c((byte) -104, 3);
-          this.field_W = param1.c((byte) -109, 15);
-          this.field_E = param1.c((byte) -117, 32);
-          this.field_y = param1.c((byte) -114, 32);
-          this.field_k = param1.c((byte) -106, 32);
-          this.field_f = param1.c((byte) -100, 4);
-          this.field_M = param1.c((byte) -118, 32);
-          this.field_Q = param1.c((byte) -112, 32);
-          stackIn_3_1 = (param1.c((byte) -123, 1) == 1);
+          this.field_c = -256 + param1.readBits((byte) -106, 10);
+          this.field_O = param1.readBits((byte) -113, 10) - 256;
+          this.field_ab = param1.readBits((byte) -122, 4);
+          this.field_Y = param1.readBits((byte) -100, 4) - 5;
+          this.field_U = param1.readBits((byte) -98, 3);
+          this.field_g = param1.readBits((byte) -104, 3);
+          this.field_W = param1.readBits((byte) -109, 15);
+          this.field_E = param1.readBits((byte) -117, 32);
+          this.field_y = param1.readBits((byte) -114, 32);
+          this.field_k = param1.readBits((byte) -106, 32);
+          this.field_f = param1.readBits((byte) -100, 4);
+          this.field_M = param1.readBits((byte) -118, 32);
+          this.field_Q = param1.readBits((byte) -112, 32);
+          stackIn_3_1 = (param1.readBits((byte) -123, 1) == 1);
           this.field_A = stackIn_3_1;
-          stackIn_6_1 = (1 == param1.c((byte) -115, 1));
+          stackIn_6_1 = (1 == param1.readBits((byte) -115, 1));
           this.field_z = stackIn_6_1;
-          stackIn_9_1 = (param1.c((byte) -95, 1) == 1);
+          stackIn_9_1 = (param1.readBits((byte) -95, 1) == 1);
           this.field_F = stackIn_9_1;
-          stackIn_12_1 = (1 == param1.c((byte) -96, 1));
+          stackIn_12_1 = (1 == param1.readBits((byte) -96, 1));
           this.field_o = stackIn_12_1;
-          stackIn_15_1 = (param1.c((byte) -101, 1) == 1);
+          stackIn_15_1 = (param1.readBits((byte) -101, 1) == 1);
           this.field_G = stackIn_15_1;
-          this.field_h = param1.c((byte) -103, 7) - 50;
-          this.field_X = -param1.c((byte) -105, 6);
-          this.field_n = param1.c((byte) -97, 11);
-          this.field_N = param1.c((byte) -114, 2);
-          this.field_K = param1.c((byte) -121, 10);
-          this.field_Z = param1.c((byte) -108, 10);
-          this.field_bb = param1.c((byte) -122, 12);
+          this.field_h = param1.readBits((byte) -103, 7) - 50;
+          this.field_X = -param1.readBits((byte) -105, 6);
+          this.field_n = param1.readBits((byte) -97, 11);
+          this.field_N = param1.readBits((byte) -114, 2);
+          this.field_K = param1.readBits((byte) -121, 10);
+          this.field_Z = param1.readBits((byte) -108, 10);
+          this.field_bb = param1.readBits((byte) -122, 12);
           if (param0 != 0) {
             wo.a(114, -101, false, -98, 72, -17);
           }
-          this.field_J = param1.c((byte) -105, 4);
-          this.field_t = -1 + param1.c((byte) -102, 9);
-          this.field_v = (byte)param1.c((byte) -125, 5);
-          this.field_B = param1.c((byte) -101, 4);
-          stackIn_20_1 = (param1.c((byte) -109, 1) == 1);
+          this.field_J = param1.readBits((byte) -105, 4);
+          this.field_t = -1 + param1.readBits((byte) -102, 9);
+          this.field_v = (byte)param1.readBits((byte) -125, 5);
+          this.field_B = param1.readBits((byte) -101, 4);
+          stackIn_20_1 = (param1.readBits((byte) -109, 1) == 1);
           this.field_R = stackIn_20_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1303,7 +1303,7 @@ final class wo {
     }
 
     static {
-        field_q = new lg[2];
+        field_q = new Model[2];
         field_S = 0.0;
         field_V = new String[]{"Game type", "Starting level", "Number of levels"};
         field_b = "Who can join";

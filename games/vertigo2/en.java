@@ -15,7 +15,7 @@ final class en {
         mg.field_N = new IntrusiveDeque();
     }
 
-    final static String a(boolean param0, String param1, r param2, int param3, String param4) {
+    final static String a(boolean param0, String param1, Archive param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -138,7 +138,7 @@ final class en {
           vd.field_a = vd.field_a - 1;
           var6 = 97 % ((param1 + 39) / 55);
           var5 = uh.field_Wb;
-          var5.j(param3, 120);
+          var5.writeCipheredByte(param3, 120);
           var5.position = var5.position + 1;
           var7 = var5.position;
           var5.writeByte(3, 81);

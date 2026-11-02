@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
       "sources": {
         "files": 437,
-        "sha256": "0ec71673712fa438e187e5d2475e381339536877a73b475cf2b325c31905ffc8"
+        "sha256": "1e9e6ce773e43dfa7a4f3664dfffaeb92bac8859c3fb6a488fce7576e286e3b0"
       },
       "dictionary": {
         "path": "decompilation/vertigo2-naming.json",
-        "sha256": "4bd9ae77de370951e7131269e64572a3b72798b22fbadda4ef9170157e714696"
+        "sha256": "70b2c724e68e71f741f91a2b0060dbb69f60b1caff6a85dd84bb66d3313ec335"
       },
       "readingGuide": {
         "path": "games/vertigo2/README.md",
-        "sha256": "c813772c7526105e1f97c7b86616ac7594e6d628056d14f5fc40f5e0de1cb6f1"
+        "sha256": "61918508f613ec8fb755dbac636fb562d5282dccba7c912b54ff1f4b215ce614"
       },
-      "rulesSha256": "9aebc88bf4353c11b0fc50a861d256c72c6129fa37815833797031b550eddb55",
+      "rulesSha256": "6c319fbe57984161a02d8d06b45a500937a84c821c85f1af1467995f6e137684",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12547,7 +12547,7 @@
         },
         "publishedSources": {
           "files": 437,
-          "sha256": "0ec71673712fa438e187e5d2475e381339536877a73b475cf2b325c31905ffc8"
+          "sha256": "1e9e6ce773e43dfa7a4f3664dfffaeb92bac8859c3fb6a488fce7576e286e3b0"
         }
       },
       "virogrid": {

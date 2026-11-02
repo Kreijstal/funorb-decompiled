@@ -3,7 +3,7 @@
  */
 final class sj {
     static volatile boolean field_b;
-    static UiWidget field_c;
+    static UiPanel field_c;
     static uh field_d;
     static boolean field_e;
     static String field_a;

@@ -4,7 +4,7 @@
 final class eq extends TextureOperator {
     private int field_y;
     private int field_A;
-    static UiWidget field_z;
+    static UiPanel field_z;
     static String field_E;
     static fe field_F;
     static String field_B;

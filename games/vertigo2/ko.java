@@ -138,7 +138,7 @@ final class ko extends af {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        UiWidget var5 = null;
+        UiPanel var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -178,7 +178,7 @@ final class ko extends af {
           if (ea.field_c.field_tb != 0) {
             up.field_z = new cb(ea.field_c.field_ob, ea.field_c.field_C, ea.field_c.field_Fb, ea.field_c.field_db, param2, hb.field_D, TextureOperator.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, (String) null, 0L);
           }
-          var9 = qr.a(ia.field_G, 55, param1, r.field_f);
+          var9 = qr.a(ia.field_G, 55, param1, Archive.field_f);
           if (var9 != null) {
             nd.a(var9, 32192);
           }
@@ -198,7 +198,7 @@ final class ko extends af {
         }
     }
 
-    ko(ur param0, boolean param1, int param2, int param3, int param4, int param5) {
+    ko(WidgetListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(false, param2, param3, param5, param4);
@@ -207,8 +207,8 @@ final class ko extends af {
         }
     }
 
-    private ko(ur param0, boolean param1) {
-        super(0, 0, 0, 0, (ur) null);
+    private ko(WidgetListener param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetListener) null);
         try {
           this.field_N = (kp) ((Object) new br("", (uf) null, 2));
           this.field_T = (kp) ((Object) new br("", (uf) null, 2));
@@ -259,7 +259,7 @@ final class ko extends af {
         }
     }
 
-    private final void a(int param0, int param1, int param2, iq param3, String param4) {
+    private final void a(int param0, int param1, int param2, UiWidget param3, String param4) {
         try {
           if (param1 != -626) {
             this.a(true, -28, 21, -75, 109);

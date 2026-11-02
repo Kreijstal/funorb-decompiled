@@ -38,7 +38,7 @@ final class an {
         Sprite var15 = null;
         int var16 = 0;
         int var18 = 0;
-        cc var19 = null;
+        BitmapFont var19 = null;
         int var8Lifetime1;
         int var8Lifetime2;
         int var8Lifetime3;
@@ -161,24 +161,24 @@ final class an {
     final static void a(boolean param0, int param1, boolean param2, int param3) {
         int stackIn_11_0 = 0;
         String stackIn_25_0 = null;
-        UiWidget stackIn_36_0 = null;
+        UiPanel stackIn_36_0 = null;
         String stackIn_37_1 = null;
-        UiWidget stackIn_39_0 = null;
+        UiPanel stackIn_39_0 = null;
         String[] stackIn_39_1 = null;
         String stackIn_40_2 = null;
-        UiWidget stackIn_73_0 = null;
+        UiPanel stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         boolean stackIn_74_2 = false;
-        UiWidget stackIn_78_0 = null;
+        UiPanel stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         boolean stackIn_79_2 = false;
-        UiWidget stackIn_83_0 = null;
+        UiPanel stackIn_83_0 = null;
         int stackIn_83_1 = 0;
         boolean stackIn_84_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        UiWidget var5 = null;
-        UiWidget var6 = null;
+        UiPanel var5 = null;
+        UiPanel var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -189,9 +189,9 @@ final class an {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        UiWidget var15 = null;
+        UiPanel var15 = null;
         String var16 = null;
-        UiWidget var17 = null;
+        UiPanel var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -277,7 +277,7 @@ final class an {
                 }
                 uq.a(sj.field_d, ol.field_A, 20473, 0, -1, -1, -1, true);
                 if (!(fn.field_z < 2) &&
-                  UiWidget.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   gd.field_r = true;
                 }
               }
@@ -339,15 +339,15 @@ final class an {
           stackIn_73_0 = hk.field_o;
           stackIn_73_1 = 0;
           stackIn_74_2 = (param2) && (!param0) && (!im.field_g);
-          ((UiWidget) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
+          ((UiPanel) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
           stackIn_78_0 = lb.field_c;
           stackIn_78_1 = 0;
           stackIn_79_2 = (param2) && (!param0) && (!im.field_g);
-          ((UiWidget) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
+          ((UiPanel) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
           stackIn_83_0 = wc.field_m;
           stackIn_83_1 = 0;
           stackIn_84_2 = (param2) && (!param0) && (im.field_g);
-          ((UiWidget) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
+          ((UiPanel) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (null != sj.field_d) {
             if (ne.field_G.field_tb != 0) {
@@ -384,8 +384,8 @@ final class an {
         cl[] var4 = null;
         cl var6 = null;
         int var7 = 0;
-        r var8 = null;
-        wk var9 = null;
+        Archive var8 = null;
+        AsyncRequest var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
@@ -395,10 +395,10 @@ final class an {
             return stackIn_4_0;
           }
           if (param0 != 8315) {
-            var8 = (r) null;
-            an.a(48, (r) null, 29, (byte) -55);
+            var8 = (Archive) null;
+            an.a(48, (Archive) null, 29, (byte) -55);
           }
-          var9 = param1.b(-108);
+          var9 = param1.requestDisplayModes(-108);
           while (var9.field_b == 0) {
             um.a(true, 10L);
           }
@@ -714,7 +714,7 @@ final class an {
         fq.field_j = fq.field_j + 0.00125;
     }
 
-    final static u[] a(int param0, r param1, int param2, byte param3) {
+    final static u[] a(int param0, Archive param1, int param2, byte param3) {
         RuntimeException var4 = null;
         String var5 = null;
         Object stackIn_2_0 = null;

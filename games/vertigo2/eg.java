@@ -6,7 +6,7 @@ import java.io.*;
 final class eg extends tk {
     static Sprite[] field_r;
     static String field_t;
-    private pm field_u;
+    private BufferedSocket field_u;
     static String field_q;
     static int[][] field_s;
 
@@ -258,7 +258,7 @@ final class eg extends tk {
               }
               this.field_u = null;
             }
-            this.field_u = (pm) (param0);
+            this.field_u = (BufferedSocket) (param0);
             this.g(0);
             this.a(param1, (byte) -50);
             this.field_h = null;

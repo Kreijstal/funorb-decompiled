@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class pm implements Runnable {
+final class BufferedSocket implements Runnable {
     static boolean field_a;
-    private wk field_e;
+    private AsyncRequest field_e;
     private java.net.Socket field_g;
     static boolean field_d;
     private int field_h;
@@ -135,7 +135,7 @@ final class pm implements Runnable {
             return;
           }
           if (param0 != 0) {
-            pm.a(79, 67);
+            BufferedSocket.a(79, 67);
           }
           synchronized (this) {
             this.field_c = true;
@@ -215,11 +215,11 @@ final class pm implements Runnable {
     final static void a(byte param0, boolean param1) {
         ak.a(false, param1, 3);
         if (param0 != 52) {
-          pm.a(-23, -49);
+          BufferedSocket.a(-23, -49);
         }
     }
 
-    pm(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -264,7 +264,7 @@ final class pm implements Runnable {
             }
             var7 = -118 / ((param2 + 29) / 52);
             if (this.field_e == null) {
-              this.field_e = this.field_k.a(3, (Runnable) (this), 0);
+              this.field_e = this.field_k.startThread(3, (Runnable) (this), 0);
             }
             this.notifyAll();
           }
@@ -283,14 +283,14 @@ final class pm implements Runnable {
         }
     }
 
-    final static r a(int param0, int param1) {
+    final static Archive a(int param0, int param1) {
         if (param1 <= 122) {
           field_d = true;
         }
         return vo.a(false, 126, 1, param0, false, true);
     }
 
-    private pm(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_l = 0;
         this.field_i = 0;
         this.field_c = false;

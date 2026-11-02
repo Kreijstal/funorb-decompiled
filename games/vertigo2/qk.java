@@ -67,7 +67,7 @@ final class qk extends wh {
         BitPacketBuffer var3Lifetime1;
         if (param2 == 18964) {
           var3 = uh.field_Wb;
-          var3.j(param1, 122);
+          var3.writeCipheredByte(param1, 122);
           var3.writeByte(3, 122);
           var3.writeByte(9, 107);
           var3.writeShort(param0, param2 ^ -19683);
@@ -75,7 +75,7 @@ final class qk extends wh {
         }
         qk.b(true);
         var3Lifetime1 = uh.field_Wb;
-        var3Lifetime1.j(param1, 122);
+        var3Lifetime1.writeCipheredByte(param1, 122);
         var3Lifetime1.writeByte(3, 122);
         var3Lifetime1.writeByte(9, 107);
         var3Lifetime1.writeShort(param0, param2 ^ -19683);

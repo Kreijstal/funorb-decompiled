@@ -130,8 +130,8 @@ final class jr implements Runnable {
         om.field_D = bi.field_j;
         km.i(202);
         qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));
-        bf.field_c.a(86, MouseWheelInput.field_k.field_Fb, r.field_f, 0, 0);
-        int var1 = 2 + r.field_f;
+        bf.field_c.a(86, MouseWheelInput.field_k.field_Fb, Archive.field_f, 0, 0);
+        int var1 = 2 + Archive.field_f;
         im.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (db.field_S ? var1 : 0), !db.field_S ? 0 : var1, 0);
         po.b((byte) -52);
         vb.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db - 40, 0);

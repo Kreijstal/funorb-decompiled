@@ -12,7 +12,7 @@ final class nq extends rk {
     byte[] field_L;
     static String field_K;
 
-    final static void a(int param0, int[] param1, int param2, int[] param3, int[] param4, byte[] param5, int[] param6, int[] param7, int[] param8, int[] param9, int[] param10, int param11, int[] param12, int param13, int param14, int param15, int param16, int[] param17, int[] param18, int param19, lg param20, int param21, int param22, int[] param23) {
+    final static void a(int param0, int[] param1, int param2, int[] param3, int[] param4, byte[] param5, int[] param6, int[] param7, int[] param8, int[] param9, int[] param10, int param11, int[] param12, int param13, int param14, int param15, int param16, int[] param17, int[] param18, int param19, Model param20, int param21, int param22, int[] param23) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -60,7 +60,7 @@ final class nq extends rk {
         int stackIn_116_0 = 0;
         int stackIn_124_0 = 0;
         int stackIn_259_0 = 0;
-        lg stackIn_312_0 = null;
+        Model stackIn_312_0 = null;
         RuntimeException stackIn_354_0 = null;
         StringBuilder stackIn_354_1 = null;
         String stackIn_355_2 = null;
@@ -169,7 +169,7 @@ final class nq extends rk {
           if (null == pq.field_c ||
             !(pq.field_c.length >= param14)) {
             var24_int = param14 + 100;
-            r.field_c = new int[var24_int];
+            Archive.field_c = new int[var24_int];
             pq.field_c = new int[var24_int];
           }
           if (ba.field_e == null ||
@@ -182,7 +182,7 @@ final class nq extends rk {
           if (wb.field_E == null) {
             wb.field_E = new int[16];
           }
-          var25 = r.field_c;
+          var25 = Archive.field_c;
           var26 = wb.field_E;
           var27 = ba.field_e;
           no.field_b = 0;
@@ -728,7 +728,7 @@ final class nq extends rk {
               var39Lifetime1 = 0;
               while (true) {
                 if (var39Lifetime1 < param11) {
-                  stackIn_312_0 = (lg) (param20);
+                  stackIn_312_0 = (Model) (param20);
                   if (var66 == 0) {
                     if (stackIn_312_0.field_E[var39Lifetime1] == 0) {
                       var34 = param20.field_M[var39Lifetime1];
@@ -1051,19 +1051,19 @@ final class nq extends rk {
         }
     }
 
-    final static UiWidget a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, cc param7, int param8, int param9, int param10, int param11, int param12) {
-        UiWidget var13 = null;
+    final static UiPanel a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
+        UiPanel var13 = null;
         RuntimeException var13_ref = null;
-        UiWidget stackIn_4_0 = null;
+        UiPanel stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param10 < 68) {
-            nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (lg) null, -20, 0, (int[]) null);
+            nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (Model) null, -20, 0, (int[]) null);
           }
-          var13 = new UiWidget(0L, (UiWidget) null);
+          var13 = new UiPanel(0L, (UiPanel) null);
           var13.field_Bb = fk.c(-127, param5, param9);
           var13.field_Q = fk.c(-127, param12, param2);
           var13.field_cb = fk.c(-127, param3, param6);
@@ -1094,7 +1094,7 @@ final class nq extends rk {
           field_I = null;
           field_J = null;
           if (param0 > -120) {
-            nq.a(57, -73, 44, 92, 52, -107, 58, (cc) null, -88, 65, 75, 44, 36);
+            nq.a(57, -73, 44, 92, 52, -107, 58, (BitmapFont) null, -88, 65, 75, 44, 36);
           }
           field_G = null;
           field_K = null;

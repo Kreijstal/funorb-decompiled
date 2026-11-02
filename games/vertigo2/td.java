@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td implements ur {
+final class td implements WidgetListener {
     private int field_f;
-    static UiWidget field_c;
+    static UiPanel field_c;
     private int field_e;
     private int field_h;
     private int field_k;
     private int field_j;
-    private cc field_d;
+    private BitmapFont field_d;
     static int field_g;
     private int field_b;
     private int field_i;
     static mp field_a;
     static String[] field_l;
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -23,7 +23,7 @@ final class td implements ur {
         int var12 = 0;
         int var13 = 0;
         ao var14 = null;
-        iq stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -34,7 +34,7 @@ final class td implements ur {
         int var12Lifetime1;
         try {
           if (param3 instanceof ao) {
-            stackIn_3_0 = (iq) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -166,7 +166,7 @@ final class td implements ur {
         mh.a(param1, false);
     }
 
-    td(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    td(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_f = param1;
           this.field_e = param5;

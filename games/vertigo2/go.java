@@ -117,11 +117,11 @@ final class go {
         }
     }
 
-    private go(r param0, int param1, String param2) {
+    private go(Archive param0, int param1, String param2) {
         this(param0, param1, param0.a(param1, param2, 111));
     }
 
-    go(r param0, String param1, String param2) {
+    go(Archive param0, String param1, String param2) {
         this(param0, param0.a((byte) 122, param1), param2);
     }
 
@@ -249,7 +249,7 @@ final class go {
         field_g = null;
     }
 
-    private go(r param0, int param1, int param2) {
+    private go(Archive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;

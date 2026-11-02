@@ -10,7 +10,7 @@ final class ch {
     boolean field_i;
     static String field_g;
     boolean field_a;
-    static lg[] field_d;
+    static Model[] field_d;
     static String field_f;
     static sd field_e;
 
@@ -50,7 +50,7 @@ final class ch {
             return true;
           }
           if (!MouseWheelInput.field_a) {
-            if (!pm.field_a &&
+            if (!BufferedSocket.field_a &&
               9 != de.field_f &&
               de.field_f != 10 &&
               de.field_f != 11) {
@@ -75,7 +75,7 @@ final class ch {
           }
         } else {
           if (!MouseWheelInput.field_a) {
-            if (pm.field_a) {
+            if (BufferedSocket.field_a) {
               return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
             }
             if (9 == de.field_f) {
@@ -122,7 +122,7 @@ final class ch {
     static {
         field_k = 82;
         field_g = "Spectate <%0>'s game";
-        field_d = new lg[2];
+        field_d = new Model[2];
         field_c = new fc(4096, 4096, 4096, false, true, false, false, 0, 0);
         field_f = "If you are not, please change your password to something more obscure!";
     }

@@ -3,8 +3,8 @@
  */
 final class gh {
     static int field_a;
-    static UiWidget field_b;
-    static UiWidget[] field_d;
+    static UiPanel field_b;
+    static UiPanel[] field_d;
     static String field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -23,7 +23,7 @@ final class gh {
           tq.a(param0, param4, param1, param2, false);
           return;
         }
-        if (param1 + param4 > cj.field_D) {
+        if (param1 + param4 > WidgetContainer.field_D) {
           tq.a(param0, param4, param1, param2, false);
           return;
         }
@@ -86,7 +86,7 @@ final class gh {
         return true;
     }
 
-    final static void a(UiWidget param0, byte param1, int param2) {
+    final static void a(UiPanel param0, byte param1, int param2) {
         b var9 = null;
         Sprite var11 = null;
         String var10 = null;
@@ -179,7 +179,7 @@ final class gh {
           var4 = param0.field_ob;
           var5 = param0.field_C;
           if (param1 != 42) {
-            field_d = (UiWidget[]) null;
+            field_d = (UiPanel[]) null;
           }
           var6 = param0.field_Fb;
           var7 = param0.field_db;

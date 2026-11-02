@@ -18,7 +18,7 @@ final class im {
     private byte[] field_m;
     private int field_b;
     static boolean field_g;
-    static UiWidget field_j;
+    static UiPanel field_j;
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_57_0 = null;

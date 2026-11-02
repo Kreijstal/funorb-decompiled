@@ -6,7 +6,7 @@ import java.util.*;
 final class lm extends TextureOperator {
     private int field_z;
     private int field_E;
-    static UiWidget field_F;
+    static UiPanel field_F;
     private int field_C;
     private int field_L;
     private int field_A;
@@ -95,7 +95,7 @@ final class lm extends TextureOperator {
         }
     }
 
-    final static boolean a(r param0, byte param1) {
+    final static boolean a(Archive param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -128,7 +128,7 @@ final class lm extends TextureOperator {
         int var6;
         int var7;
         int var8;
-        r var9;
+        Archive var9;
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = Vertigo2.field_L ? 1 : 0;
@@ -174,8 +174,8 @@ final class lm extends TextureOperator {
         }
         var6Lifetime1 = -140 + hm.field_F;
         if (param0 != 115) {
-          var9 = (r) null;
-          lm.a((String) null, -5, (String) null, (r) null);
+          var9 = (Archive) null;
+          lm.a((String) null, -5, (String) null, (Archive) null);
         }
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
@@ -187,7 +187,7 @@ final class lm extends TextureOperator {
         return;
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, r param3) {
+    final static Sprite[] a(String param0, int param1, String param2, Archive param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         Sprite[] var5 = null;
@@ -473,8 +473,8 @@ final class lm extends TextureOperator {
 
     final void a(int param0) {
         if (param0 > -98) {
-          r var3 = (r) null;
-          lm.a((r) null, (byte) 122);
+          Archive var3 = (Archive) null;
+          lm.a((Archive) null, (byte) 122);
         }
     }
 

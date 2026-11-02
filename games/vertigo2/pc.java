@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static UiWidget field_b;
+    static UiPanel field_b;
     static int[] field_a;
     static Sprite field_c;
     static String field_d;

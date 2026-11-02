@@ -12,7 +12,7 @@ final class rn extends jg {
     int field_x;
     static String field_y;
     int field_t;
-    static r field_u;
+    static Archive field_u;
     int field_A;
 
     private final void d(int param0) {
@@ -506,18 +506,18 @@ final class rn extends jg {
 
     private final void a(BitPacketBuffer param0, int param1) {
         try {
-          this.field_p = param0.c((byte) -119, 5);
-          this.field_A = param0.c((byte) -97, 3);
-          this.field_t = param0.c((byte) -102, 9);
-          this.field_k = (short)param0.c((byte) -125, 8);
-          this.field_l = param0.c((byte) -95, 10);
-          this.field_g = param0.c((byte) -114, 10);
-          this.field_s = param0.c((byte) -116, param1) - 193;
-          this.field_h = param0.c((byte) -121, 3);
-          this.field_r = param0.c((byte) -96, 3);
-          this.field_o = param0.c((byte) -113, 4);
-          this.field_C = 1 == param0.c((byte) -105, 1) ? true : false;
-          this.field_v = -5 + param0.c((byte) -106, 4);
+          this.field_p = param0.readBits((byte) -119, 5);
+          this.field_A = param0.readBits((byte) -97, 3);
+          this.field_t = param0.readBits((byte) -102, 9);
+          this.field_k = (short)param0.readBits((byte) -125, 8);
+          this.field_l = param0.readBits((byte) -95, 10);
+          this.field_g = param0.readBits((byte) -114, 10);
+          this.field_s = param0.readBits((byte) -116, param1) - 193;
+          this.field_h = param0.readBits((byte) -121, 3);
+          this.field_r = param0.readBits((byte) -96, 3);
+          this.field_o = param0.readBits((byte) -113, 4);
+          this.field_C = 1 == param0.readBits((byte) -105, 1) ? true : false;
+          this.field_v = -5 + param0.readBits((byte) -106, 4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "rn.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

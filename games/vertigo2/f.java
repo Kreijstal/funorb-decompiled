@@ -166,7 +166,7 @@ final class f extends TextureOperator {
           }
           try {
             if (param0 == al.field_t) {
-              pq.field_f = or.field_f.a(param0 - 108, rf.field_l, lm.field_H);
+              pq.field_f = or.field_f.requestSocket(param0 - 108, rf.field_l, lm.field_H);
               al.field_t = al.field_t + 1;
             }
             if (1 == al.field_t) {
@@ -179,7 +179,7 @@ final class f extends TextureOperator {
               }
             }
             if (al.field_t == 2) {
-              fn.field_y = new pm((java.net.Socket) (pq.field_f.field_d), or.field_f);
+              fn.field_y = new BufferedSocket((java.net.Socket) (pq.field_f.field_d), or.field_f);
               var2 = new PacketBuffer(13);
               jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
               var2.writeByte(15, param0 - 85);
@@ -266,17 +266,17 @@ final class f extends TextureOperator {
             if (null != dc.field_L &&
               dc.field_L.field_e) {
               cp.a((byte) 127);
-              qb.field_d.b(new gr(qb.field_d, sd.field_I), 0);
+              JaggrabClient.field_d.b(new gr(JaggrabClient.field_d, sd.field_I), 0);
             }
             return;
           }
           if (param0 != -6) {
             field_I = (String[]) null;
           }
-          qb.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
-          qb.field_d.l(0);
+          JaggrabClient.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
+          JaggrabClient.field_d.l(0);
           while (NodeHashTableIterator.a(false)) {
-            qb.field_d.a(-122, de.field_f, TextureOperator.field_r);
+            JaggrabClient.field_d.a(-122, de.field_f, TextureOperator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

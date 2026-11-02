@@ -27,7 +27,7 @@ final class oq extends qc {
         }
     }
 
-    final static void a(od param0, int param1, int param2, int param3, String param4, int[] param5, UiWidget param6, long param7, String param8) {
+    final static void a(od param0, int param1, int param2, int param3, String param4, int[] param5, UiPanel param6, long param7, String param8) {
         try {
           if (param2 != 4462) {
             oq.a(-92, 42, (byte) 11, 8, -120);

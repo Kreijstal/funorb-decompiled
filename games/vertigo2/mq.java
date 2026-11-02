@@ -74,7 +74,7 @@ final class mq extends va {
           var19 = var16 * (1 + var6_int);
           var20 = var15 * (-1 + var7);
           if (ua.field_e <= param4 &&
-            cj.field_D >= param4) {
+            WidgetContainer.field_D >= param4) {
             var21 = pk.a((byte) -14, ib.field_a, param5 + param3, ap.field_e);
             var22 = pk.a((byte) -14, ib.field_a, -param3 + param5, ap.field_e);
             ki.a(-86, var22, vl.field_e[param4], var21, param2);
@@ -109,7 +109,7 @@ final class mq extends va {
             if (var22Lifetime1 < ua.field_e) {
               continue;
             }
-            if (var21Lifetime1 > cj.field_D) {
+            if (var21Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
             var23 = pk.a((byte) -14, ib.field_a, param5 + var6_int, ap.field_e);
@@ -117,7 +117,7 @@ final class mq extends va {
             if (ua.field_e <= var21Lifetime1) {
               ki.a(-85, var24, vl.field_e[var21Lifetime1], var23, param2);
             }
-            if (cj.field_D < var22Lifetime1) {
+            if (WidgetContainer.field_D < var22Lifetime1) {
               continue;
             }
             ki.a(-76, var24, vl.field_e[var22Lifetime1], var23, param2);
@@ -315,8 +315,8 @@ final class mq extends va {
         }
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
-        iq stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -331,7 +331,7 @@ final class mq extends va {
         e var14 = null;
         try {
           if (param3 instanceof d) {
-            stackIn_3_0 = (iq) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -395,7 +395,7 @@ final class mq extends va {
         }
     }
 
-    final static void a(int param0, mp param1, int param2, cc param3, int param4, int param5, int param6, int param7, int param8, mp param9, byte param10, int param11, int param12, int param13, int param14, cc param15, int param16, int param17, int param18, mp param19, int param20) {
+    final static void a(int param0, mp param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, mp param9, byte param10, int param11, int param12, int param13, int param14, BitmapFont param15, int param16, int param17, int param18, mp param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

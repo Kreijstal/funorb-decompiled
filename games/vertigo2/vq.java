@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vq {
-    static lg field_i;
+    static Model field_i;
     int[] field_D;
     byte[] field_K;
     static String field_p;

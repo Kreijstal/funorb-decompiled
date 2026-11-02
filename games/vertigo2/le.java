@@ -4,7 +4,7 @@
 final class le {
     static th field_d;
     static String field_a;
-    static r field_f;
+    static Archive field_f;
     static String field_b;
     static String field_c;
     static String field_e;

@@ -19,14 +19,14 @@ final class MenuSelectionCursor {
         if (param0 != -87) {
           MenuSelectionCursor.a(-74, 73, 75, true, 41, -1);
           if (null == IntrusiveDeque.field_b) {
-            return pm.field_a ? true : false;
+            return BufferedSocket.field_a ? true : false;
           }
           return true;
         }
         if (null != IntrusiveDeque.field_b) {
           return true;
         }
-        if (!pm.field_a) {
+        if (!BufferedSocket.field_a) {
           return false;
         }
         return true;

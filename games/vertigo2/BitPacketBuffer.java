@@ -12,7 +12,7 @@ final class BitPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void writeBits(byte param0, int param1, int param2) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var4;
@@ -49,23 +49,23 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void j(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_v.a((byte) 72) + param0);
+        this.payload[fieldTemp$0] = (byte)(this.field_v.nextInt((byte) 72) + param0);
         if (param1 <= 117) {
-          this.c((byte) -52, 85);
+          this.readBits((byte) -52, 85);
         }
     }
 
-    final int c(byte param0) {
+    final int readCipheredByte(byte param0) {
         int var2 = -43 / ((param0 + 50) / 46);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$0] - this.field_v.a((byte) 72);
+        return 255 & this.payload[fieldTemp$0] - this.field_v.nextInt((byte) 72);
     }
 
-    final static Sprite[] a(String param0, r param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, Archive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -112,7 +112,7 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void p(int param0) {
+    final void beginBitAccess(int param0) {
         if (param0 != 0) {
           this.d(false);
           this.field_z = this.position * 8;
@@ -121,7 +121,7 @@ final class BitPacketBuffer extends PacketBuffer {
         this.field_z = this.position * 8;
     }
 
-    final int c(byte param0, int param1) {
+    final int readBits(byte param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var3 = 0;
@@ -188,7 +188,7 @@ final class BitPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param1; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_v.a((byte) 72));
+            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_v.nextInt((byte) 72));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,10 +205,10 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void b(int[] param0, int param1) {
+    final void setCipherSeed(int[] param0, int param1) {
         try {
           if (param1 < 33) {
-            this.j(40, -119);
+            this.writeCipheredByte(40, -119);
           }
           this.field_v = new IsaacCipher(param0);
         } catch (RuntimeException runtimeException) {
@@ -223,7 +223,7 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void b(byte param0) {
+    final void endBitAccess(byte param0) {
         this.position = (this.field_z + 7) / 8;
         if (param0 > -49) {
           this.field_v = (IsaacCipher) null;

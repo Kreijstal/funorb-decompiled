@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r {
+final class Archive {
     static u[] field_k;
     int field_d;
     private Object[][] field_i;
@@ -742,7 +742,7 @@ final class r {
 
     final synchronized boolean b(int param0) {
         if (param0 != 0) {
-          r.a(82);
+          Archive.a(82);
         }
         if (this.field_g == null) {
           this.field_g = this.field_a.a(true);
@@ -849,7 +849,7 @@ final class r {
         return true;
     }
 
-    r(ab param0, boolean param1, int param2) {
+    Archive(ab param0, boolean param1, int param2) {
         this.field_g = null;
         try {
           if (param2 < 0 ||

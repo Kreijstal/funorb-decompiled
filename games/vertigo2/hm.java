@@ -426,7 +426,7 @@ final class hm extends TextureOperator {
 
     final static void d(int param0, int param1) {
         BitPacketBuffer var2 = uh.field_Wb;
-        var2.j(param1, param0 + 120);
+        var2.writeCipheredByte(param1, param0 + 120);
         if (param0 != 0) {
           field_F = -89;
         }

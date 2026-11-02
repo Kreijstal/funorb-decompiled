@@ -4,7 +4,7 @@
 final class qp {
     static int[] field_g;
     static String field_c;
-    r field_i;
+    Archive field_i;
     String field_a;
     String field_e;
     static int field_d;

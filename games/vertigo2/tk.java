@@ -3,7 +3,7 @@
  */
 abstract class tk {
     static ba field_n;
-    static cc field_c;
+    static BitmapFont field_c;
     ak field_b;
     static boolean field_e;
     ak field_a;
@@ -254,7 +254,7 @@ abstract class tk {
           this.field_b.a(false, var8);
           return var8;
         }
-        field_c = (cc) null;
+        field_c = (BitmapFont) null;
         var6Lifetime1 = ((long)param1 << 32) + (long)param0;
         var8Lifetime1 = new ia();
         var8Lifetime1.field_B = param3;

@@ -14,13 +14,13 @@ final class vo extends va {
     static String field_v;
     private Sprite[] field_w;
 
-    final static r a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+    final static Archive a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           uk var8 = null;
           String var9 = null;
-          r stackIn_17_0 = null;
+          Archive stackIn_17_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -48,7 +48,7 @@ final class vo extends va {
               var9 = (String) null;
               vo.a((String) null, 52);
             }
-            stackIn_17_0 = new r(var8, param5, param2);
+            stackIn_17_0 = new Archive(var8, param5, param2);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class vo extends va {
         }
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends UiWidget {
+final class kl extends UiPanel {
     static String field_Nb;
     int field_Kb;
-    static UiWidget field_Ib;
-    private UiWidget[] field_Mb;
-    private UiWidget[] field_Lb;
+    static UiPanel field_Ib;
+    private UiPanel[] field_Mb;
+    private UiPanel[] field_Lb;
     static String field_Jb;
-    private UiWidget field_Hb;
+    private UiPanel field_Hb;
 
     private final void a(int param0, int param1, int param2) {
-        UiWidget dupTemp$0 = null;
+        UiPanel dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -125,14 +125,14 @@ final class kl extends UiWidget {
         this.field_db = param5;
         this.field_N = param6;
         if (param1 != 12318) {
-          this.field_Hb = (UiWidget) null;
+          this.field_Hb = (UiPanel) null;
         }
         this.field_wb = param2;
         this.a(param1 ^ -2, param4, param0);
     }
 
-    kl(long param0, UiWidget param1, String[] param2, UiWidget param3, UiWidget[] param4, int param5) {
-        super(param0, (UiWidget) null);
+    kl(long param0, UiPanel param1, String[] param2, UiPanel param3, UiPanel[] param4, int param5) {
+        super(param0, (UiPanel) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -145,15 +145,15 @@ final class kl extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        UiWidget var9 = null;
+        UiPanel var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Mb = new UiWidget[param2.length];
-          this.field_Hb = new UiWidget(0L, param3);
+          this.field_Mb = new UiPanel[param2.length];
+          this.field_Hb = new UiPanel(0L, param3);
           this.field_Lb = param4;
           for (var8_int = 0; param2.length > var8_int; var8_int++) {
-            var9 = new UiWidget(0L, param1);
+            var9 = new UiPanel(0L, param1);
             var9.field_S = param2[var8_int];
             this.field_Mb[var8_int] = var9;
             this.b(var9, 119);
@@ -202,8 +202,8 @@ final class kl extends UiWidget {
 
     final void k(int param0) {
         int var2 = 0;
-        UiWidget dupTemp$0 = null;
-        UiWidget dupTemp$1 = null;
+        UiPanel dupTemp$0 = null;
+        UiPanel dupTemp$1 = null;
         int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         for (var2 = param0; this.field_Mb.length > var2; var2++) {

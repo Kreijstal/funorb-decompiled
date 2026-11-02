@@ -6,12 +6,12 @@ final class nb extends TextureOperator {
     static boolean field_z;
     static String field_E;
     private int field_C;
-    static UiWidget field_D;
+    static UiPanel field_D;
     static fd field_F;
     static ve field_B;
     static String field_y;
 
-    final static void a(int param0, cc param1, cc param2, byte param3) {
+    final static void a(int param0, BitmapFont param1, BitmapFont param2, byte param3) {
         try {
           bc.field_c = param0;
           mf.field_c = param2;
@@ -412,8 +412,8 @@ final class nb extends TextureOperator {
         field_E = null;
         field_B = null;
         if (param0 != 0) {
-          cc var2 = (cc) null;
-          nb.a(102, (cc) null, (cc) null, (byte) 77);
+          BitmapFont var2 = (BitmapFont) null;
+          nb.a(102, (BitmapFont) null, (BitmapFont) null, (byte) 77);
         }
     }
 

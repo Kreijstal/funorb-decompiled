@@ -23,7 +23,7 @@ final class di extends TextureOperator {
         int var8 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var2_int = param0.c((byte) -120, 8);
+          var2_int = param0.readBits((byte) -120, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -33,16 +33,16 @@ final class di extends TextureOperator {
           var3 = id.a(param0, -31980) ? 1 : 0;
           var4 = id.a(param0, -31980) ? 1 : 0;
           var5 = new jp();
-          var5.field_F = (short)param0.c((byte) -96, 16);
+          var5.field_F = (short)param0.readBits((byte) -96, 16);
           var5.field_I = ee.a(param0, -126, 16, var5.field_I);
           var5.field_r = ee.a(param0, -92, 16, var5.field_r);
           var5.field_m = ee.a(param0, -120, 16, var5.field_m);
-          var5.field_w = (short)param0.c((byte) -114, 16);
+          var5.field_w = (short)param0.readBits((byte) -114, 16);
           var5.field_p = ee.a(param0, -39, 16, var5.field_p);
           var5.field_L = ee.a(param0, -95, 16, var5.field_L);
           var5.field_c = ee.a(param0, -40, 16, var5.field_c);
           if (var3 != 0) {
-            var5.field_K = (short)param0.c((byte) -125, 16);
+            var5.field_K = (short)param0.readBits((byte) -125, 16);
             var5.field_h = ee.a(param0, -90, 16, var5.field_h);
             var5.field_O = ee.a(param0, -34, 16, var5.field_O);
             var5.field_a = ee.a(param0, -109, 16, var5.field_a);
@@ -51,7 +51,7 @@ final class di extends TextureOperator {
             var5.field_C = ee.a(param0, -30, 16, var5.field_C);
           }
           if (var4 != 0) {
-            param0.c((byte) -94, 16);
+            param0.readBits((byte) -94, 16);
             var5.field_N = ee.a(param0, -65, 16, var5.field_N);
             var5.field_d = ee.a(param0, -55, 16, var5.field_d);
             var5.field_Q = ee.a(param0, -117, 16, var5.field_Q);

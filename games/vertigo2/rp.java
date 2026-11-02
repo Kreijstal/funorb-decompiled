@@ -8,7 +8,7 @@ final class rp implements ef {
     static String field_b;
     static int field_a;
     static String[] field_e;
-    static lg field_c;
+    static Model field_c;
     static String field_d;
 
     public final boolean c(int param0, int param1) {

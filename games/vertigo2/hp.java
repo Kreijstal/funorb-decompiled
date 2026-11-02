@@ -11,7 +11,7 @@ final class hp {
         return new ae(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static hp a(r param0, String param1, String param2) {
+    final static hp a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, 0);
         if (var3 == null) {
           return null;
@@ -19,7 +19,7 @@ final class hp {
         return new hp(new PacketBuffer(var3));
     }
 
-    final static hp a(r param0, int param1, int param2) {
+    final static hp a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, param2, (byte) -25);
         if (var3 == null) {
           return null;

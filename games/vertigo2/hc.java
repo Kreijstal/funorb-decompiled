@@ -7,7 +7,7 @@ final class hc {
 
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = uh.field_Wb;
-        var2.j(param1, 122);
+        var2.writeCipheredByte(param1, 122);
         var2.writeByte(1, -117);
         if (param0 < -25) {
           var2.writeByte(1, -90);

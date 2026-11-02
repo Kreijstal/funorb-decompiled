@@ -630,7 +630,7 @@ final class si extends IntrusiveNode {
         }
     }
 
-    final static si a(r param0, String param1, String param2) {
+    final static si a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, 0);
         if (var3 == null) {
           return null;

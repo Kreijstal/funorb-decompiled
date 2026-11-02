@@ -31,7 +31,7 @@ final class jl {
         }
     }
 
-    final static void a(r param0, byte param1) {
+    final static void a(Archive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         jp var5 = null;
@@ -51,14 +51,14 @@ final class jl {
           var8 = new BitPacketBuffer(param0.a("logo.fo3d", "", 0));
           var10 = var8;
           var3 = var10.readUnsignedByte(-11);
-          var10.p(0);
+          var10.beginBitAccess(0);
           wc.field_o = ng.a((byte) -108, var10);
           jg.field_j = new int[var3][];
           GameKeyHandler.field_b = new jp[var3];
           for (var4 = 0; var3 > var4; var4++) {
             GameKeyHandler.field_b[var4] = di.a(var8, true);
           }
-          var10.b((byte) -71);
+          var10.endBitAccess((byte) -71);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

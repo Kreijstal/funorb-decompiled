@@ -4,7 +4,7 @@
 final class tl {
     static String field_a;
     static byte[] field_b;
-    static r field_c;
+    static Archive field_c;
     private static String field_z;
 
     public static void a(boolean param0) {

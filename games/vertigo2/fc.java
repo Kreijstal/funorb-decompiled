@@ -2014,7 +2014,7 @@ final class fc extends bn {
         this.field_M = (byte) 0;
     }
 
-    fc(lg param0, int param1, int param2, int param3, int param4, int param5) {
+    fc(Model param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;

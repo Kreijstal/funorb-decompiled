@@ -54,7 +54,7 @@ final class kg extends TextureOperator {
         int var3 = var2 * (-tc.field_b + ce.field_b) / var1 + tc.field_b;
         td.field_c.a(82, 640, 120, var3, ml.field_w);
         int var4 = 65 % ((param0 + 14) / 47);
-        rg.a(640, r.field_j, 0, ce.field_b - 24, -4803, ia.field_G, 5);
+        rg.a(640, Archive.field_j, 0, ce.field_b - 24, -4803, ia.field_G, 5);
     }
 
     private final void a(int[] param0, int param1, int param2) {

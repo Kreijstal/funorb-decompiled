@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends cj implements ij {
+final class qm extends WidgetContainer implements ij {
     private d field_F;
     static ba field_G;
     private d field_E;
     private d field_H;
 
     public qm() {
-        super(0, 0, 476, 225, (ur) null);
+        super(0, 0, 476, 225, (WidgetListener) null);
         this.field_F = new d(pk.field_r, (uf) null);
         this.field_E = new d(tc.field_a, (uf) null);
         this.field_H = new d(fd.field_o, (uf) null);
         vo var1 = new vo();
-        this.field_F.field_B = (ur) ((Object) var1);
-        this.field_E.field_B = (ur) ((Object) var1);
-        this.field_H.field_B = (ur) ((Object) var1);
+        this.field_F.field_B = (WidgetListener) ((Object) var1);
+        this.field_E.field_B = (WidgetListener) ((Object) var1);
+        this.field_H.field_B = (WidgetListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
@@ -32,7 +32,7 @@ final class qm extends cj implements ij {
         this.c((byte) -29, this.field_H);
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;

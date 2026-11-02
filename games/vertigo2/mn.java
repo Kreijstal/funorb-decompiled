@@ -7,7 +7,7 @@ final class mn extends IntrusiveNode {
     static boolean[] field_t;
     static Sprite[] field_o;
     int field_r;
-    static UiWidget field_n;
+    static UiPanel field_n;
     static String field_u;
     static String[] field_q;
     int field_s;

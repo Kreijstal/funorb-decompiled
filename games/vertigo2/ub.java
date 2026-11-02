@@ -6,7 +6,7 @@ final class ub extends IntrusiveNode {
     int field_q;
     int field_o;
     int field_r;
-    static UiWidget field_t;
+    static UiPanel field_t;
     int field_u;
     int field_n;
     static int[] field_p;

@@ -6,7 +6,7 @@ final class IntrusiveDequeCursor {
     static int[] field_d;
     private IntrusiveNode field_a;
     private IntrusiveDeque field_e;
-    static r field_c;
+    static Archive field_c;
 
     final IntrusiveNode a(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;

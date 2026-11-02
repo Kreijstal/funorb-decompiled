@@ -11,9 +11,9 @@ abstract class SpriteState extends DualLinkNode {
     int field_z;
     static StringBuilder field_D;
     static int field_E;
-    static lg field_v;
+    static Model field_v;
     static String field_A;
-    static UiWidget field_u;
+    static UiPanel field_u;
 
     abstract void a(int param0, int param1, int param2, int param3, int param4);
 

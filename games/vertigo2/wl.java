@@ -16,15 +16,15 @@ final class wl {
           he.field_u[0] = j.field_r.nextInt();
           he.field_u[1] = j.field_r.nextInt();
           he.field_u[2] = (int)(dc.field_F >> 32);
-          iq.field_x.position = 0;
+          UiWidget.field_x.position = 0;
           he.field_u[3] = (int)dc.field_F;
-          iq.field_x.writeInt(he.field_u[0], 0);
-          iq.field_x.writeInt(he.field_u[1], 0);
-          iq.field_x.writeInt(he.field_u[2], 0);
-          iq.field_x.writeInt(he.field_u[3], 0);
-          cn.a(iq.field_x, 117);
-          iq.field_x.writeShort(param3, -1783);
-          param4.a(iq.field_x, 47);
+          UiWidget.field_x.writeInt(he.field_u[0], 0);
+          UiWidget.field_x.writeInt(he.field_u[1], 0);
+          UiWidget.field_x.writeInt(he.field_u[2], 0);
+          UiWidget.field_x.writeInt(he.field_u[3], 0);
+          cn.a(UiWidget.field_x, 117);
+          UiWidget.field_x.writeShort(param3, -1783);
+          param4.a(UiWidget.field_x, 47);
           uh.field_Wb.position = 0;
           if (param0) {
             uh.field_Wb.writeByte(18, 95);
@@ -60,7 +60,7 @@ final class wl {
             uh.field_Wb.a(684868900, go.field_g);
           }
           var8 = -1 % ((param2 - 22) / 34);
-          mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
+          mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, UiWidget.field_x);
           uh.field_Wb.patchShortLength((byte) -116, uh.field_Wb.position - var5_int);
           lf.d(50, -1);
           return;

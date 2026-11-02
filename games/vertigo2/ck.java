@@ -17,7 +17,7 @@ final class ck extends d {
         super.a(param0, param1, (byte) 126, param3);
     }
 
-    private ck(String param0, ur param1, uf param2) {
+    private ck(String param0, WidgetListener param1, uf param2) {
         super(param0, param1, param2);
         try {
           this.field_B = eb.field_c.field_g;

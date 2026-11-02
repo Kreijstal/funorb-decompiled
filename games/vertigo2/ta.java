@@ -9,7 +9,7 @@ final class ta extends DualLinkNode {
     private boolean field_y;
     private boolean field_w;
 
-    final int[] a(ka param0, r param1, float param2, boolean param3) {
+    final int[] a(ka param0, Archive param1, float param2, boolean param3) {
         int[] var5;
         int[] var6;
         int[] var7;

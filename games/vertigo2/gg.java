@@ -4,7 +4,7 @@
 final class gg extends IntrusiveNode {
     ra field_r;
     int field_p;
-    static UiWidget field_o;
+    static UiPanel field_o;
     static int[] field_n;
     IntrusiveNode field_q;
     static String field_s;

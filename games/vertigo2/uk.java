@@ -10,7 +10,7 @@ final class uk extends ab {
     private t field_p;
     private rk field_s;
     private jl field_q;
-    static UiWidget field_e;
+    static UiPanel field_e;
     private tk field_w;
     private int field_t;
     static String field_u;
@@ -34,13 +34,13 @@ final class uk extends ab {
         int var1_intLifetime1;
         try {
           if (null == eh.field_b ||
-            null == qb.field_b) {
-            qb.field_b = new int[256];
+            null == JaggrabClient.field_b) {
+            JaggrabClient.field_b = new int[256];
             eh.field_b = new int[256];
             for (var1_int = 0; 256 > var1_int; var1_int++) {
               var2 = 6.283185307179586 * ((double)var1_int / 255.0);
               eh.field_b[var1_int] = (int)(4096.0 * Math.sin(var2));
-              qb.field_b[var1_int] = (int)(Math.cos(var2) * 4096.0);
+              JaggrabClient.field_b[var1_int] = (int)(Math.cos(var2) * 4096.0);
             }
           }
           var1_intLifetime1 = -28 / ((param0 + 6) / 43);
@@ -530,7 +530,7 @@ final class uk extends ab {
         return (rk) (var5);
     }
 
-    final static void a(r param0, r param1, int param2) {
+    final static void a(Archive param0, Archive param1, int param2) {
         try {
           if (param2 < 115) {
             field_u = (String) null;

@@ -9,7 +9,7 @@ final class qr extends jq {
     static String field_o;
     static Sprite field_q;
     static Sprite field_h;
-    static UiWidget field_m;
+    static UiPanel field_m;
     private int field_r;
     static String[] field_k;
     private int field_p;
@@ -25,7 +25,7 @@ final class qr extends jq {
 
     final static tn a(int param0, int param1, int param2, int param3) {
         Object stackIn_40_0 = null;
-        UiWidget stackIn_40_1 = null;
+        UiPanel stackIn_40_1 = null;
         boolean stackIn_48_0 = false;
         Object var4;
         int var5;
@@ -55,7 +55,7 @@ final class qr extends jq {
             ll.field_b > var5) {
             var10_int = ab.a(0, var8_ref_tn.field_s);
             if (var8_ref_tn.a((byte) 44) >= var10_int && (var8_ref_tn.field_n ||
-              !iq.b(var8_ref_tn.field_a, 113))) {
+              !UiWidget.b(var8_ref_tn.field_a, 113))) {
               var9 = 1;
             }
           }
@@ -69,9 +69,9 @@ final class qr extends jq {
                 wg.field_g = wg.field_g + 1;
               }
               var10 = nb.a(var8_ref_tn, 106);
-              var11 = var10 + cc.b(var8_ref_tn.field_d);
+              var11 = var10 + BitmapFont.b(var8_ref_tn.field_d);
               var12 = mm.a(var8_ref_tn, 0);
-              var8_ref_tn.field_e = new UiWidget(0L, np.field_Ib, var11);
+              var8_ref_tn.field_e = new UiPanel(0L, np.field_Ib, var11);
               var8_ref_tn.field_e.field_A = var12;
               var8_ref_tn.field_e.field_B = (np.field_Ib.field_B >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
               var8_ref_tn.field_e.field_z = GameKeyHandler.field_f;

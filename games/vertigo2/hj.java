@@ -94,7 +94,7 @@ final class hj {
             stackIn_50_11 = (am.field_b) || (PacketBuffer.field_q);
             fn.$cfr$intArgs$a$946cf173619b(stackIn_44_0, stackIn_44_1, stackIn_44_2 != 0, stackIn_44_3, stackIn_44_4, stackIn_45_5, stackIn_48_6, stackIn_48_7, stackIn_48_8, stackIn_48_9, stackIn_48_10, stackIn_50_11);
             if (na.field_p) {
-              uh.field_Wb.j(57, 123);
+              uh.field_Wb.writeCipheredByte(57, 123);
               na.field_p = false;
             }
             if (param0 != 1726) {
@@ -103,7 +103,7 @@ final class hj {
             if (!cn.field_v) {
               return;
             }
-            uh.field_Wb.j(10, 122);
+            uh.field_Wb.writeCipheredByte(10, 122);
             cn.field_v = false;
             return;
           }
@@ -123,7 +123,7 @@ final class hj {
           fn.$cfr$intArgs$a$946cf173619b(stackIn_24_0, stackIn_24_1, stackIn_24_2 != 0, stackIn_24_3, stackIn_24_4, stackIn_25_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, stackIn_28_9, stackIn_28_10, stackIn_30_11);
         }
         if (na.field_p) {
-          uh.field_Wb.j(57, 123);
+          uh.field_Wb.writeCipheredByte(57, 123);
           na.field_p = false;
         }
         if (param0 != 1726) {
@@ -132,7 +132,7 @@ final class hj {
         if (!cn.field_v) {
           return;
         }
-        uh.field_Wb.j(10, 122);
+        uh.field_Wb.writeCipheredByte(10, 122);
         cn.field_v = false;
     }
 

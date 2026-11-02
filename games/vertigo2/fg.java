@@ -42,7 +42,7 @@ final class fg extends sp {
         }
     }
 
-    final static String a(r param0, String param1, String param2, int param3) {
+    final static String a(Archive param0, String param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

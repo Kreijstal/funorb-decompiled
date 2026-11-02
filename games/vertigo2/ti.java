@@ -29,7 +29,7 @@ final class ti {
         }
     }
 
-    final static void a(boolean param0, r param1, int param2, r param3) {
+    final static void a(boolean param0, Archive param1, int param2, Archive param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

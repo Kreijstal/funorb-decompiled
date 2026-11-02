@@ -174,7 +174,7 @@ abstract class l {
           }
           var1 = uh.field_Wb;
           while (GameShell.l(7)) {
-            var1.j(8, 118);
+            var1.writeCipheredByte(8, 118);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

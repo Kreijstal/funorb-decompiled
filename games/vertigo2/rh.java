@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends cj implements ij {
+final class rh extends WidgetContainer implements ij {
     static int[] field_O;
-    static UiWidget field_I;
+    static UiPanel field_I;
     private int field_N;
     private d[] field_P;
-    private cc field_M;
+    private BitmapFont field_M;
     static int field_H;
     private int[] field_J;
     static String field_E;
@@ -49,7 +49,7 @@ final class rh extends cj implements ij {
           this.field_P[var4_int] = this.a(param0, (uf) (this), -121);
           this.field_J[var4_int] = param1;
           if (param2 >= -24) {
-            field_I = (UiWidget) null;
+            field_I = (UiPanel) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,8 +74,8 @@ final class rh extends cj implements ij {
         }
     }
 
-    rh(fj param0, cc param1, String param2) {
-        super(0, 0, 288, 0, (ur) null);
+    rh(fj param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetListener) null);
         int var4_int = 0;
         this.field_N = 0;
         try {
@@ -188,7 +188,7 @@ final class rh extends cj implements ij {
 
     final static boolean e(byte param0) {
         if (param0 != 99) {
-          field_I = (UiWidget) null;
+          field_I = (UiPanel) null;
         }
         return ii.field_z;
     }
@@ -209,7 +209,7 @@ final class rh extends cj implements ij {
             this.field_N = 47;
           }
           var4 = new d(param0, param1);
-          var4.field_B = (ur) ((Object) new vo());
+          var4.field_B = (WidgetListener) ((Object) new vo());
           var5 = -2 + this.field_s;
           this.a(false, 0, 0, this.field_s + 34, this.field_n);
           var4.a(false, 7, var5, 30, -14 + this.field_n);

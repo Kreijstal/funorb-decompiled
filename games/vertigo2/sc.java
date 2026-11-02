@@ -3,7 +3,7 @@
  */
 final class sc {
     static String field_b;
-    static UiWidget field_c;
+    static UiPanel field_c;
     static String field_a;
 
     final static void a(boolean param0, int param1) {

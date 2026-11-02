@@ -5,8 +5,8 @@ final class jn {
     static String field_d;
     static fi field_g;
     private lo field_e;
-    private r field_f;
-    private r field_a;
+    private Archive field_f;
+    private Archive field_a;
     static int field_c;
     static Sprite[] field_b;
 
@@ -73,7 +73,7 @@ final class jn {
         }
     }
 
-    jn(int param0, r param1, r param2, jh param3) {
+    jn(int param0, Archive param1, Archive param2, jh param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

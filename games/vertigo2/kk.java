@@ -14,9 +14,9 @@ final class kk {
     private int field_b;
     private int[][][] field_l;
     static String field_h;
-    static UiWidget field_a;
+    static UiPanel field_a;
     boolean field_c;
-    static UiWidget field_f;
+    static UiPanel field_f;
 
     final int[][] a(int param0, int param1) {
         boolean stackIn_6_1 = false;

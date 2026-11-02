@@ -19,7 +19,7 @@ final class on {
         return (to.field_c & 1 << param1) != 0 ? true : false;
     }
 
-    final static void a(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, mp param7, mp param8, int param9, byte param10, int param11, mp param12, int param13, int param14, cc param15, int param16, int param17, int param18, int param19) {
+    final static void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, mp param7, mp param8, int param9, byte param10, int param11, mp param12, int param13, int param14, BitmapFont param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,8 +91,8 @@ final class on {
           field_d = null;
           return;
         }
-        cc var2 = (cc) null;
-        on.a((cc) null, -20, -80, 55, -39, 122, -59, (mp) null, (mp) null, 108, (byte) -25, -117, (mp) null, 111, 97, (cc) null, 20, -31, 110, 20);
+        BitmapFont var2 = (BitmapFont) null;
+        on.a((BitmapFont) null, -20, -80, 55, -39, 122, -59, (mp) null, (mp) null, 108, (byte) -25, -117, (mp) null, 111, 97, (BitmapFont) null, 20, -31, 110, 20);
         field_a = null;
         field_d = null;
     }
@@ -120,7 +120,7 @@ final class on {
     }
 
     final static void a(int param0) {
-        if (pm.field_a) {
+        if (BufferedSocket.field_a) {
           bm.g(0);
           if (param0 != 9110) {
             field_e = (int[]) null;

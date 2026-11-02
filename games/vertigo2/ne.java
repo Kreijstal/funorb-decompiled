@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends cj implements nc, ij {
+final class ne extends WidgetContainer implements nc, ij {
     private br field_H;
     static int field_P;
-    static UiWidget field_G;
+    static UiPanel field_G;
     static ej field_N;
     static int[] field_O;
     private d field_L;
@@ -38,14 +38,14 @@ final class ne extends cj implements nc, ij {
     }
 
     final static void c(boolean param0) {
-        MouseWheelInput.field_k = new UiWidget(0L, (UiWidget) null);
+        MouseWheelInput.field_k = new UiPanel(0L, (UiPanel) null);
         if (db.field_S) {
           MouseWheelInput.field_k.b(bf.field_c, 121);
         }
         MouseWheelInput.field_k.b(im.field_j, 118);
         if (!param0) {
           qo.field_D = new lb(SpriteState.field_A, MouseWheelInput.field_k);
-          ca.field_h = new UiWidget(0L, (UiWidget) null);
+          ca.field_h = new UiPanel(0L, (UiPanel) null);
           ca.field_h.b(qo.field_D.field_b, 123);
           ca.field_h.b(vb.field_j, 123);
           jr.a(98);
@@ -77,7 +77,7 @@ final class ne extends cj implements nc, ij {
         return true;
     }
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 < 6) {
             d var6 = (d) null;
@@ -90,7 +90,7 @@ final class ne extends cj implements nc, ij {
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, int param4, String param5, iq param6) {
+    private final int a(int param0, int param1, String param2, int param3, int param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         qe var9 = null;
         mg var10 = null;
@@ -168,7 +168,7 @@ final class ne extends cj implements nc, ij {
         }
     }
 
-    private final int a(String param0, String param1, iq param2, int param3, int param4, boolean param5) {
+    private final int a(String param0, String param1, UiWidget param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -228,18 +228,18 @@ final class ne extends cj implements nc, ij {
     }
 
     public ne() {
-        super(0, 0, 496, 0, (ur) null);
+        super(0, 0, 496, 0, (WidgetListener) null);
         this.field_H = new br("", (uf) null, 12);
         va var1 = new va(bl.field_N, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
-        iq var2 = new iq(km.field_v, var1, (uf) null);
+        UiWidget var2 = new UiWidget(km.field_v, var1, (uf) null);
         this.field_L = new d(bm.field_y, (uf) null);
         this.field_M = new d(mp.field_c, (uf) null);
         this.field_H.field_q = ho.field_d;
         this.field_H.a(true, new hk(this.field_H));
         this.field_L.field_F = false;
-        this.field_L.field_B = (ur) ((Object) new vo());
-        this.field_M.field_B = (ur) ((Object) new jc());
-        this.field_H.field_B = (ur) ((Object) new ml(10000536));
+        this.field_L.field_B = (WidgetListener) ((Object) new vo());
+        this.field_M.field_B = (WidgetListener) ((Object) new jc());
+        this.field_H.field_B = (WidgetListener) ((Object) new ml(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -259,10 +259,10 @@ final class ne extends cj implements nc, ij {
         this.a(false, 0, 0, var3 + 55 + var4, 496);
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         int discarded$1 = 0;
         RuntimeException var5 = null;
-        iq var6 = null;
+        UiWidget var6 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -271,8 +271,8 @@ final class ne extends cj implements nc, ij {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 13) {
-            var6 = (iq) null;
-            discarded$1 = this.a((String) null, (String) null, (iq) null, -104, -105, false);
+            var6 = (UiWidget) null;
+            discarded$1 = this.a((String) null, (String) null, (UiWidget) null, -104, -105, false);
           }
           if (super.a(param0, param1 + 0, param2, param3)) {
             return true;

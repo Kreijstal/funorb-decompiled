@@ -7,7 +7,7 @@ final class ii extends TextureOperator {
     static boolean field_z;
     static String field_A;
     private int field_B;
-    static r field_C;
+    static Archive field_C;
     private int field_D;
     private int field_y;
 
@@ -134,7 +134,7 @@ final class ii extends TextureOperator {
           }
           return var15;
         }
-        field_C = (r) null;
+        field_C = (Archive) null;
         var15Lifetime1 = this.field_x.a(param0, (byte) 66);
         var3Lifetime1 = var15Lifetime1;
         if (!this.field_x.field_i) {

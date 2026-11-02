@@ -3,7 +3,7 @@
  */
 final class vf extends TextureOperator {
     static int[] field_y;
-    static UiWidget field_B;
+    static UiPanel field_B;
     private int field_z;
     static IntrusiveDeque field_C;
 
@@ -233,7 +233,7 @@ final class vf extends TextureOperator {
     public static void b(byte param0) {
         field_C = null;
         if (param0 != 36) {
-          field_B = (UiWidget) null;
+          field_B = (UiPanel) null;
         }
         field_B = null;
         field_y = null;

@@ -488,7 +488,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final static void a(long param0, int param1, byte param2) {
         BitPacketBuffer var4 = uh.field_Wb;
-        var4.j(param1, 127);
+        var4.writeCipheredByte(param1, 127);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.writeByte(7, 98);
@@ -548,11 +548,11 @@ class PacketBuffer extends IntrusiveNode {
 
     final static void a(boolean param0, boolean param1) {
         IterableNodeHashTable.field_e = !param0 ? new lb(or.field_k, de.field_g) : new lb(GameKeyHandler.field_c, oi.field_a);
-        hk.field_o = new UiWidget(0L, (UiWidget) null);
+        hk.field_o = new UiPanel(0L, (UiPanel) null);
         hk.field_o.b(IterableNodeHashTable.field_e.field_b, 118);
         hk.field_o.b(ne.field_G, 118);
-        wc.field_m = new UiWidget(0L, hb.field_D);
-        lr.field_P = new UiWidget(0L, (UiWidget) null);
+        wc.field_m = new UiPanel(0L, hb.field_D);
+        lr.field_P = new UiPanel(0L, (UiPanel) null);
         wc.field_m.b(he.field_x, 118);
         wc.field_m.b(lr.field_P, 126);
         if (param1) {

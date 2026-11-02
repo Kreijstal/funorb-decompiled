@@ -4,7 +4,7 @@
 abstract class de implements of {
     static String field_c;
     static String field_b;
-    static UiWidget field_g;
+    static UiPanel field_g;
     static int field_f;
     static int[] field_d;
     private long field_e;

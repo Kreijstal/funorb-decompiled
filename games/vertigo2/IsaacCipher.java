@@ -109,7 +109,7 @@ final class IsaacCipher {
         }
     }
 
-    final int a(byte param0) {
+    final int nextInt(byte param0) {
         if (this.field_j == 0) {
           this.b(-93);
           this.field_j = 256;

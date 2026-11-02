@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fo {
-    static UiWidget field_f;
+    static UiPanel field_f;
     private int field_b;
     static boolean field_d;
     static si field_e;
     private MenuSelectionCursor field_a;
-    static UiWidget field_c;
+    static UiPanel field_c;
 
     final void c(int param0) {
         if (this.field_b == 19) {
@@ -185,7 +185,7 @@ final class fo {
             } else {
               if ((this.field_b == 19)) {
                 if (!mh.field_a) {
-                  uh.field_Wb.j(64, 123);
+                  uh.field_Wb.writeCipheredByte(64, 123);
                   uh.field_Wb.writeByte(1, 107);
                   uh.field_Wb.writeByte(0, 101);
                   mh.field_a = true;
@@ -481,7 +481,7 @@ final class fo {
             if (var9 != 0) {
               va.field_s.a(16725760, (byte) 84, -1, 250, wj.field_a, 10 + var8Lifetime1 + 240);
             } else {
-              va.field_s.a(16725760, (byte) 91, -1, 250, UiWidget.field_Z, 240 + var8Lifetime1 + 10);
+              va.field_s.a(16725760, (byte) 91, -1, 250, UiPanel.field_Z, 240 + var8Lifetime1 + 10);
             }
             var10 = 240;
             if (var9 == 0) {
@@ -497,7 +497,7 @@ final class fo {
             var14 = IntrusiveDeque.field_i[var7Lifetime1];
             if (var9 == 0 &&
               var7Lifetime1 == 12) {
-              var14 = iq.field_z;
+              var14 = UiWidget.field_z;
             }
             var15 = tk.field_c.a(var14, new int[]{310}, var13);
             for (var16 = 0; var16 < var15; var16++) {
@@ -565,7 +565,7 @@ final class fo {
           var3_int = 8;
           var4 = var3_int * 2 + 210;
           if (param0 != 7) {
-            field_c = (UiWidget) null;
+            field_c = (UiPanel) null;
           }
           var5 = 190;
           var6 = 180;
@@ -667,7 +667,7 @@ final class fo {
 
     private final void a(int param0) {
         if (param0 != 3767) {
-          field_c = (UiWidget) null;
+          field_c = (UiPanel) null;
         }
         ie.field_Hb.e(-(ie.field_Hb.field_y / 2) + 320, 240 - ie.field_Hb.field_t / 2);
     }
@@ -1166,7 +1166,7 @@ final class fo {
               var6_ref_String__ = var4.field_x[var5];
               var18 = var4.field_n[var5];
               var8 = 50 + (tk.field_c.field_z + 110);
-              var9 = iq.a(var5, var4, -1, uh.field_Xb);
+              var9 = UiWidget.a(var5, var4, -1, uh.field_Xb);
               for (var10 = 0; 10 > var10; var10++) {
                 if (var6_ref_String__[var10] != null) {
                   var11 = 16777215;

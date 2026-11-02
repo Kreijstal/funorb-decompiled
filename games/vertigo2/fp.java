@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fp extends sn {
+final class fp extends PcmStream {
     private IntrusiveDeque field_t;
     private IntrusiveDeque field_r;
     private int field_u;
@@ -18,11 +18,11 @@ final class fp extends sn {
         }
     }
 
-    final sn a() {
-        return (sn) (this.field_t.b(56));
+    final PcmStream a() {
+        return (PcmStream) (this.field_t.b(56));
     }
 
-    final synchronized void a(sn param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_t.addLast(param0, (byte) 27);
     }
 
@@ -45,10 +45,10 @@ final class fp extends sn {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        sn var4 = (sn) (this.field_t.a((byte) 100));
+        PcmStream var4 = (PcmStream) (this.field_t.a((byte) 100));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (sn) (this.field_t.b(52));
+          var4 = (PcmStream) (this.field_t.b(52));
         }
     }
 
@@ -140,8 +140,8 @@ final class fp extends sn {
         }
     }
 
-    final sn c() {
-        return (sn) (this.field_t.a((byte) 100));
+    final PcmStream c() {
+        return (PcmStream) (this.field_t.a((byte) 100));
     }
 
     final int d() {
@@ -149,14 +149,14 @@ final class fp extends sn {
     }
 
     private final void e(int param0) {
-        sn var2 = (sn) (this.field_t.a((byte) 100));
+        PcmStream var2 = (PcmStream) (this.field_t.a((byte) 100));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (sn) (this.field_t.b(88));
+          var2 = (PcmStream) (this.field_t.b(88));
         }
     }
 
-    final synchronized void b(sn param0) {
+    final synchronized void b(PcmStream param0) {
         param0.unlink(2);
     }
 

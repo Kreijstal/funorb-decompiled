@@ -89,7 +89,7 @@ final class rj {
         var3 = param0.field_x;
         var4 = param0.field_w;
         var5 = param0.field_C;
-        var15 = UiWidget.field_P;
+        var15 = UiPanel.field_P;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_t;
@@ -191,7 +191,7 @@ final class rj {
         param0.field_x = var3;
         param0.field_w = var4;
         param0.field_C = var5;
-        UiWidget.field_P = var6;
+        UiPanel.field_P = var6;
         param0.field_t = var7;
         param0.field_j = var8;
         param0.field_v = var9;
@@ -287,8 +287,8 @@ final class rj {
         var24 = null;
         var25 = null;
         param0.field_s = 1;
-        if (UiWidget.field_P == null) {
-          UiWidget.field_P = new int[param0.field_s * 100000];
+        if (UiPanel.field_P == null) {
+          UiPanel.field_P = new int[param0.field_s * 100000];
         }
         var26 = 1;
         while (true) {
@@ -459,14 +459,14 @@ final class rj {
                 param0.field_D[var4] = param0.field_D[var4] + param0.field_D[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(UiWidget.field_P[var4] & 255);
+                var1 = (byte)(UiPanel.field_P[var4] & 255);
                 dupTemp$1 = param0.field_D[var1 & 255];
-                UiWidget.field_P[dupTemp$1] = UiWidget.field_P[dupTemp$1] | var4 << 8;
+                UiPanel.field_P[dupTemp$1] = UiPanel.field_P[dupTemp$1] | var4 << 8;
                 param0.field_D[var1 & 255] = param0.field_D[var1 & 255] + 1;
               }
-              param0.field_t = UiWidget.field_P[param0.field_y] >> 8;
+              param0.field_t = UiPanel.field_P[param0.field_y] >> 8;
               param0.field_w = 0;
-              param0.field_t = UiWidget.field_P[param0.field_t];
+              param0.field_t = UiPanel.field_P[param0.field_t];
               param0.field_C = (byte)(param0.field_t & 255);
               param0.field_t = param0.field_t >> 8;
               param0.field_w = param0.field_w + 1;
@@ -530,7 +530,7 @@ final class rj {
               }
               dupTemp$0 = param0.field_c[var1 & 255] & 255;
               param0.field_G[dupTemp$0] = param0.field_G[dupTemp$0] + 1;
-              UiWidget.field_P[var14] = param0.field_c[var1 & 255] & 255;
+              UiPanel.field_P[var14] = param0.field_c[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -587,7 +587,7 @@ final class rj {
             var1 = param0.field_c[param0.field_f[param0.field_m[0]] & 255];
             param0.field_G[var1 & 255] = param0.field_G[var1 & 255] + var15;
             while (var15 > 0) {
-              UiWidget.field_P[var14] = var1 & 255;
+              UiPanel.field_P[var14] = var1 & 255;
               var14++;
               var15--;
             }

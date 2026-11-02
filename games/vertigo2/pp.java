@@ -10,7 +10,7 @@ final class pp extends IntrusiveNode {
     private int[] field_n;
     int field_z;
     private int[] field_o;
-    static r field_s;
+    static Archive field_s;
     private boolean[] field_t;
     static String field_x;
     private boolean[][] field_p;
@@ -28,7 +28,7 @@ final class pp extends IntrusiveNode {
         field_w = null;
     }
 
-    final static UiWidget f(int param0) {
+    final static UiPanel f(int param0) {
         int var1 = 87 % ((param0 + 53) / 59);
         return h.field_D.field_Mb;
     }
@@ -97,9 +97,9 @@ final class pp extends IntrusiveNode {
         return this.field_o[param1];
     }
 
-    final static UiWidget a(byte param0) {
+    final static UiPanel a(byte param0) {
         if (param0 != 116) {
-          return (UiWidget) null;
+          return (UiPanel) null;
         }
         return ja.field_f.field_Nb;
     }
@@ -119,7 +119,7 @@ final class pp extends IntrusiveNode {
         return this.field_q[param0];
     }
 
-    final static UiWidget a(int param0) {
+    final static UiPanel a(int param0) {
         if (param0 != 12) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           pp.a((java.applet.Applet) null, 100);
@@ -211,7 +211,7 @@ final class pp extends IntrusiveNode {
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
-          param2.p(0);
+          param2.beginBitAccess(0);
           if (param0 != -8) {
             return;
           }
@@ -219,23 +219,23 @@ final class pp extends IntrusiveNode {
             for (var5 = 0; var5 < 10; var5++) {
               stackIn_9_0 = this.field_p[var4_int];
               stackIn_9_1 = var5;
-              stackIn_10_2 = (1 == param2.c((byte) -120, 1));
+              stackIn_10_2 = (1 == param2.readBits((byte) -120, 1));
               stackIn_9_0[stackIn_9_1] = stackIn_10_2;
               if (!this.field_p[var4_int][var5]) {
-                this.field_u[var4_int][var5] = param2.c((byte) -104, 6);
+                this.field_u[var4_int][var5] = param2.readBits((byte) -104, 6);
               }
             }
           }
-          this.field_z = param2.c((byte) -122, 32);
+          this.field_z = param2.readBits((byte) -122, 32);
           if (0 <= param1) {
-            if (param2.c((byte) -101, 1) == 1) {
+            if (param2.readBits((byte) -101, 1) == 1) {
               this.field_t[param1] = true;
-              this.field_q[param1] = param2.c((byte) -108, 8);
+              this.field_q[param1] = param2.readBits((byte) -108, 8);
             }
-            this.field_o[param1] = param2.c((byte) -110, 4);
-            param2.b((byte) -90);
+            this.field_o[param1] = param2.readBits((byte) -110, 4);
+            param2.endBitAccess((byte) -90);
           } else {
-            param2.b((byte) -90);
+            param2.endBitAccess((byte) -90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

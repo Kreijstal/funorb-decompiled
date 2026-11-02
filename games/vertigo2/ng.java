@@ -38,11 +38,11 @@ final class ng {
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          var2_int = param1.c((byte) -107, 8);
+          var2_int = param1.readBits((byte) -107, 8);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.c((byte) -96, 12);
+          var3 = param1.readBits((byte) -96, 12);
           if (param0 > -96) {
             stackIn_6_0 = (uq[]) null;
             return stackIn_6_0;
@@ -51,16 +51,16 @@ final class ng {
           for (var5 = 0; var5 < var3; var5++) {
             if (id.a(param1, -31980)) {
               var6 = new uq();
-              param1.c((byte) -124, 24);
-              param1.c((byte) -121, 24);
-              var6.field_e = param1.c((byte) -120, 24);
-              param1.c((byte) -115, 9);
-              param1.c((byte) -105, 12);
-              param1.c((byte) -119, 12);
-              param1.c((byte) -106, 12);
+              param1.readBits((byte) -124, 24);
+              param1.readBits((byte) -121, 24);
+              var6.field_e = param1.readBits((byte) -120, 24);
+              param1.readBits((byte) -115, 9);
+              param1.readBits((byte) -105, 12);
+              param1.readBits((byte) -119, 12);
+              param1.readBits((byte) -106, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.c((byte) -128, ee.a(-1 + var5, 96));
+              var6_int = param1.readBits((byte) -128, ee.a(-1 + var5, 96));
               var4[var5] = var4[var6_int];
             }
           }
@@ -87,7 +87,7 @@ final class ng {
         if (ap.field_e <= param1 &&
           param3 <= ib.field_a &&
           param6 >= ua.field_e &&
-          param2 <= cj.field_D) {
+          param2 <= WidgetContainer.field_D) {
           if (param4 != 1) {
             nb.a(param6, param3, param0, (byte) -92, param4, param2, param1);
           } else {

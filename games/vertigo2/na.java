@@ -34,7 +34,7 @@ final class na extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!qb.a(var4, -51)) {
+          if (!JaggrabClient.a(var4, -51)) {
             stackIn_3_0 = ir.field_a;
             return stackIn_3_0;
           }

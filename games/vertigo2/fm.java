@@ -3,7 +3,7 @@
  */
 final class fm {
     static String field_h;
-    static UiWidget field_e;
+    static UiPanel field_e;
     static IntrusiveDeque field_b;
     static String field_c;
     static String field_a;
@@ -28,7 +28,7 @@ final class fm {
         }
     }
 
-    final static void a(UiWidget param0, UiWidget param1, UiWidget param2, ie param3, int param4, cc param5, UiWidget param6, boolean param7, UiWidget param8, UiWidget param9, UiWidget param10, UiWidget param11) {
+    final static void a(UiPanel param0, UiPanel param1, UiPanel param2, ie param3, int param4, BitmapFont param5, UiPanel param6, boolean param7, UiPanel param8, UiPanel param9, UiPanel param10, UiPanel param11) {
         String stackIn_16_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -59,7 +59,7 @@ final class fm {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        UiWidget var17 = null;
+        UiPanel var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -89,29 +89,29 @@ final class fm {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           if (param4 != 12895) {
-            fm.a((UiWidget) null, (UiWidget) null, (UiWidget) null, (ie) null, -50, (cc) null, (UiWidget) null, false, (UiWidget) null, (UiWidget) null, (UiWidget) null, (UiWidget) null);
+            fm.a((UiPanel) null, (UiPanel) null, (UiPanel) null, (ie) null, -50, (BitmapFont) null, (UiPanel) null, false, (UiPanel) null, (UiPanel) null, (UiPanel) null, (UiPanel) null);
           }
           var16[4] = var12;
-          td.field_c = new UiWidget(0L, param6);
-          ad.field_f = new UiWidget(0L, param0);
+          td.field_c = new UiPanel(0L, param6);
+          ad.field_f = new UiPanel(0L, param0);
           td.field_c.b(ad.field_f, param4 - 12771);
-          var17 = new UiWidget(0L, (UiWidget) null);
+          var17 = new UiPanel(0L, (UiPanel) null);
           var17.field_M = new IntrusiveDeque();
           mg.field_R = new od(0L, var17, param1, param3);
           ad.field_f.b(mg.field_R, 119);
-          bp.field_C = new UiWidget(0L, param11);
+          bp.field_C = new UiPanel(0L, param11);
           ad.field_f.b(bp.field_C, 125);
-          dj.field_d = new UiWidget(0L, param8);
+          dj.field_d = new UiPanel(0L, param8);
           dj.field_d.field_z = GameKeyHandler.field_f;
           bp.field_C.b(dj.field_d, 120);
           bp.field_C.i(-2147483648);
-          ui.field_b = new UiWidget(0L, (UiWidget) null);
+          ui.field_b = new UiPanel(0L, (UiPanel) null);
           ui.field_b.field_Bb = var16;
           bp.field_C.b(ui.field_b, 121);
-          hl.field_q = new UiWidget[5];
-          w.field_C = new UiWidget[5];
-          gh.field_d = new UiWidget[5];
-          mg.field_M = new UiWidget[5];
+          hl.field_q = new UiPanel[5];
+          w.field_C = new UiPanel[5];
+          gh.field_d = new UiPanel[5];
+          mg.field_M = new UiPanel[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (5 <= var18))) {
@@ -135,11 +135,11 @@ final class fm {
                 var19 = or.field_k;
               }
               if (decompiledFrameRemainder0) {
-                hl.field_q[var18] = new UiWidget(0L, param2);
-                gh.field_d[var18] = new UiWidget(0L, np.field_Ib, var19);
-                w.field_C[var18] = new UiWidget(0L, (UiWidget) null);
+                hl.field_q[var18] = new UiPanel(0L, param2);
+                gh.field_d[var18] = new UiPanel(0L, np.field_Ib, var19);
+                w.field_C[var18] = new UiPanel(0L, (UiPanel) null);
                 w.field_C[var18].field_ab = 1;
-                mg.field_M[var18] = new UiWidget(0L, np.field_Ib);
+                mg.field_M[var18] = new UiPanel(0L, np.field_Ib);
                 mg.field_M[var18].field_ab = 1;
                 hl.field_q[var18].b(gh.field_d[var18], 125);
                 hl.field_q[var18].b(w.field_C[var18], param4 ^ 12837);
@@ -154,7 +154,7 @@ final class fm {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            ea.field_c = new UiWidget(0L, param10);
+            ea.field_c = new UiPanel(0L, param10);
             ea.field_c.field_S = ad.field_c;
             td.field_c.b(ea.field_c, param4 - 12774);
             stackIn_34_0 = oe.q(76) ? 1 : 0;

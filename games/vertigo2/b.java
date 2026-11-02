@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class b {
-    UiWidget field_l;
+    UiPanel field_l;
     private int field_c;
     private int[] field_g;
     int field_j;
@@ -11,7 +11,7 @@ final class b {
     static ll field_d;
     static int field_i;
     static String field_a;
-    static UiWidget field_h;
+    static UiPanel field_h;
     static String field_f;
     static String field_b;
     private String field_e;
@@ -36,7 +36,7 @@ final class b {
             var7 = this.a(true);
             var4 = var7;
             var5 = vo.a(this.field_k, 0);
-            var6 = iq.b(this.field_k, 100) ? 1 : 0;
+            var6 = UiWidget.b(this.field_k, 100) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_n.a(Vertigo2.a(new String[]{var7}, ln.field_e, 69), 4, 0);
@@ -365,7 +365,7 @@ final class b {
 
     final boolean d(int param0) {
         if (param0 != 2) {
-          this.field_l = (UiWidget) null;
+          this.field_l = (UiPanel) null;
           if (this.field_n == null) {
             return false;
           }
@@ -586,7 +586,7 @@ final class b {
         return true;
     }
 
-    b(UiWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    b(UiPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_n = new kq(ar.field_c);
           this.field_l = param0;

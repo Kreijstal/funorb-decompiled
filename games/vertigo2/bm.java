@@ -29,7 +29,7 @@ final class bm extends TextureOperator {
         if (-param4 + param5 >= ap.field_e &&
           ib.field_a >= param5 + param4 &&
           ua.field_e <= param1 - param0 &&
-          param1 + param0 <= cj.field_D) {
+          param1 + param0 <= WidgetContainer.field_D) {
           rc.a(param4, param2, param0, param1, param5, (byte) -126);
         } else {
           mq.a(false, param0, param2, param4, param1, param5);
@@ -141,7 +141,7 @@ final class bm extends TextureOperator {
     }
 
     final static void g(int param0) {
-        pm.field_a = false;
+        BufferedSocket.field_a = false;
         if (null != TextureOperator.field_n) {
           TextureOperator.field_n.a((byte) 34);
         }

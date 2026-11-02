@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nm extends cj {
+abstract class nm extends WidgetContainer {
     boolean field_I;
     private sd field_H;
     static int field_E;
@@ -171,7 +171,7 @@ abstract class nm extends cj {
     }
 
     nm(sd param0, int param1, int param2) {
-        super(-param1 + gi.field_m >> 1, -param2 + im.field_h >> 1, param1, param2, (ur) null);
+        super(-param1 + gi.field_m >> 1, -param2 + im.field_h >> 1, param1, param2, (WidgetListener) null);
         try {
           this.field_I = false;
           this.field_H = param0;
@@ -181,12 +181,12 @@ abstract class nm extends cj {
         }
     }
 
-    final iq b(boolean param0) {
-        iq var2 = super.b(param0);
+    final UiWidget b(boolean param0) {
+        UiWidget var2 = super.b(param0);
         if (var2 != null) {
           return var2;
         }
-        return (iq) (this);
+        return (UiWidget) (this);
     }
 
     static {

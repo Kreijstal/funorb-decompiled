@@ -23,7 +23,7 @@ final class vm {
         if (pe.field_r) {
           return lq.field_a.a(-88, de.field_f, TextureOperator.field_r);
         }
-        if (pm.field_a) {
+        if (BufferedSocket.field_a) {
           return SecondaryNodeDequeIterator.a(31077, param0, param3);
         }
         if (mp.a(param3, param0, param2 ^ 1899)) {

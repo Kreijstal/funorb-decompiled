@@ -8,11 +8,11 @@ final class he extends DualLinkNode {
     static String field_t;
     private TextureOperator[] field_v;
     static String field_z;
-    static UiWidget field_x;
+    static UiPanel field_x;
     private TextureOperator field_A;
     static int[] field_u;
 
-    final int[] a(r param0, double param1, boolean param2, boolean param3, int param4, int param5, int param6, ka param7) {
+    final int[] a(Archive param0, double param1, boolean param2, boolean param3, int param4, int param5, int param6, ka param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_43_0 = null;
@@ -173,7 +173,7 @@ final class he extends DualLinkNode {
         int var4 = 0;
         try {
           var5 = uh.field_Wb;
-          var5.j(param0, 118);
+          var5.writeCipheredByte(param0, 118);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, 117);
@@ -193,7 +193,7 @@ final class he extends DualLinkNode {
         }
     }
 
-    final boolean a(r param0, ka param1, int param2) {
+    final boolean a(Archive param0, ka param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;

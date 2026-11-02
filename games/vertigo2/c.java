@@ -186,7 +186,7 @@ class c extends v {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, cc param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, Sprite[] param13, cc param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, BitmapFont param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, Sprite[] param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -317,7 +317,7 @@ class c extends v {
                 wo.a(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
               }
             }
-            qb.a(var5, 2);
+            JaggrabClient.a(var5, 2);
             dupTemp$0 = new String[2][var5];
             var3.field_t = dupTemp$0;
             var6 = dupTemp$0;

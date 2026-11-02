@@ -3,38 +3,38 @@
  */
 import java.util.*;
 
-final class uh extends UiWidget {
-    UiWidget field_pc;
-    UiWidget[] field_Zb;
+final class uh extends UiPanel {
+    UiPanel field_pc;
+    UiPanel[] field_Zb;
     int field_uc;
-    UiWidget field_Ob;
+    UiPanel field_Ob;
     boolean field_qc;
     boolean field_Sb;
     int field_Yb;
-    UiWidget field_Kb;
-    UiWidget field_bc;
-    UiWidget field_Rb;
-    UiWidget field_ec;
-    UiWidget field_ac;
+    UiPanel field_Kb;
+    UiPanel field_bc;
+    UiPanel field_Rb;
+    UiPanel field_ec;
+    UiPanel field_ac;
     int field_Qb;
     static BitPacketBuffer field_Wb;
     long field_Pb;
     int field_ic;
     boolean field_Tb;
-    UiWidget field_rc;
+    UiPanel field_rc;
     boolean field_dc;
-    UiWidget field_Vb;
+    UiPanel field_Vb;
     String[] field_Hb;
     static int field_oc;
     boolean field_vc;
     long field_hc;
     int field_Lb;
-    UiWidget field_jc;
-    UiWidget field_Jb;
+    UiPanel field_jc;
+    UiPanel field_Jb;
     boolean field_Mb;
-    UiWidget field_cc;
-    UiWidget field_nc;
-    UiWidget field_gc;
+    UiPanel field_cc;
+    UiPanel field_nc;
+    UiPanel field_gc;
     boolean field_kc;
     int field_tc;
     int field_Ub;
@@ -42,9 +42,9 @@ final class uh extends UiWidget {
     static int field_mc;
     String field_Nb;
     static vi field_Xb;
-    UiWidget field_Ib;
+    UiPanel field_Ib;
     static String field_lc;
-    UiWidget field_wc;
+    UiPanel field_wc;
     static volatile boolean field_sc;
     int field_xc;
 
@@ -64,7 +64,7 @@ final class uh extends UiWidget {
     }
 
     uh(int param0) {
-        super(0L, (UiWidget) null);
+        super(0L, (UiPanel) null);
         this.field_fc = new byte[param0];
     }
 

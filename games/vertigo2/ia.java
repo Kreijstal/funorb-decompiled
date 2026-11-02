@@ -78,12 +78,12 @@ final class ia extends rk {
             stackIn_20_0 = wh.field_B;
             return stackIn_20_0;
           }
-          if (iq.b(param2, 101)) {
+          if (UiWidget.b(param2, 101)) {
             stackIn_24_0 = Vertigo2.a(new String[]{param2}, p.field_a, 6);
             return stackIn_24_0;
           }
           var5 = uh.field_Wb;
-          var5.j(param1, 127);
+          var5.writeCipheredByte(param1, 127);
           if (param0 > -38) {
             stackIn_27_0 = (String) null;
             return stackIn_27_0;
@@ -204,7 +204,7 @@ final class ia extends rk {
           hk.field_q = param0.field_C;
           GameKeyHandler.field_e = param9.field_E;
           ga.field_jb = param9.field_N;
-          nq.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (lg) null, param5, param3, param2.field_a);
+          nq.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (Model) null, param5, param3, param2.field_a);
           param0.field_u = hm.field_C;
           param0.field_X = kc.field_e;
           param0.field_E = da.field_k;

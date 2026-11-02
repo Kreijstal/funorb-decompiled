@@ -3,9 +3,9 @@
  */
 final class qn extends IntrusiveNode {
     int field_n;
-    static lg field_p;
+    static Model field_p;
     static String field_z;
-    static UiWidget field_s;
+    static UiPanel field_s;
     static String field_o;
     static String field_v;
     static boolean field_q;

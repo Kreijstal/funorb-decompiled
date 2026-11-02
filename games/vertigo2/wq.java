@@ -34,12 +34,12 @@ final class wq extends oh {
     }
 
     public wq() {
-        super(0, 0, 0, 0, (ur) null, (uf) null);
+        super(0, 0, 0, 0, (WidgetListener) null, (uf) null);
         this.field_J = 256;
     }
 
-    wq(iq param0) {
-        super(param0.field_o, param0.field_t, param0.field_n, param0.field_s, (ur) null, (uf) null);
+    wq(UiWidget param0) {
+        super(param0.field_o, param0.field_t, param0.field_n, param0.field_s, (WidgetListener) null, (uf) null);
         try {
           param0.a(false, 0, 0, this.field_s, this.field_n);
           this.field_J = 256;

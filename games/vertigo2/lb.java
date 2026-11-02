@@ -6,7 +6,7 @@ final class lb {
     static String field_a;
     static tq field_e;
     kl field_b;
-    static UiWidget field_c;
+    static UiPanel field_c;
     static double field_g;
     static bh field_d;
 
@@ -66,10 +66,10 @@ final class lb {
           var6 = 24;
           var7 = 5;
           this.field_b.a(var7, 12318, param3, param2, var6, param4, param0);
-          IterableNodeHashTable.field_a.a(94, wi.field_g.field_Fb, r.field_f, 0, 0);
-          jg.field_q.a(114, -4 + (-re.field_k + wi.field_g.field_Fb - 80), 18, r.field_f + 2, 0);
-          va.field_f.a(param1 ^ 14013, 82 + re.field_k, 18, 2 + r.field_f, -82 + (wi.field_g.field_Fb - re.field_k));
-          h.field_D.a(-r.field_f + (wi.field_g.field_db - 2 - 20), 20, wi.field_g.field_Fb, 2, 1, 0, re.field_k, 2 + r.field_f + 20);
+          IterableNodeHashTable.field_a.a(94, wi.field_g.field_Fb, Archive.field_f, 0, 0);
+          jg.field_q.a(114, -4 + (-re.field_k + wi.field_g.field_Fb - 80), 18, Archive.field_f + 2, 0);
+          va.field_f.a(param1 ^ 14013, 82 + re.field_k, 18, 2 + Archive.field_f, -82 + (wi.field_g.field_Fb - re.field_k));
+          h.field_D.a(-Archive.field_f + (wi.field_g.field_db - 2 - 20), 20, wi.field_g.field_Fb, 2, 1, 0, re.field_k, 2 + Archive.field_f + 20);
           ao.field_O.a(re.field_k, true, 2, 20);
           return;
         }
@@ -87,12 +87,12 @@ final class lb {
         }
     }
 
-    lb(String param0, UiWidget param1) {
+    lb(String param0, UiPanel param1) {
         String[] var3 = null;
-        UiWidget[] var4 = null;
+        UiPanel[] var4 = null;
         try {
           var3 = new String[]{param0, uo.field_j, dm.field_Ib};
-          var4 = new UiWidget[]{param1, wi.field_g, (UiWidget) ((Object) ao.field_O)};
+          var4 = new UiPanel[]{param1, wi.field_g, (UiPanel) ((Object) ao.field_O)};
           this.field_b = new kl(0L, qr.field_m, var3, ab.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

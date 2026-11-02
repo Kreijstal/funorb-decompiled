@@ -197,11 +197,11 @@ final class bo extends IntrusiveNode {
         int var3_int = 0;
         int var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          param1.j(63, param0 + 124);
+          param1.writeCipheredByte(63, param0 + 124);
           param1.d(false);
-          param1.a((byte) 114, 8, this.field_q);
+          param1.writeBits((byte) 114, 8, this.field_q);
           for (var3_int = param0; var3_int < 10; var3_int++) {
-            param1.a((byte) 118, 6, this.a((byte) 117, this.field_o[var3_int]));
+            param1.writeBits((byte) 118, 6, this.a((byte) 117, this.field_o[var3_int]));
           }
           param1.q(param0 - 9);
           this.e(-85);

@@ -7,14 +7,14 @@ final class th {
     private int field_b;
     static MouseWheelInput field_g;
     private int field_i;
-    static lg[] field_a;
+    static Model[] field_a;
     float field_j;
     String field_h;
     static String field_k;
     static Sprite[] field_f;
     private int field_d;
 
-    final static UiWidget a(boolean param0) {
+    final static UiPanel a(boolean param0) {
         if (!param0) {
           th.a((byte) -18);
         }
@@ -70,13 +70,13 @@ final class th {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        lg var22 = null;
+        Model var22 = null;
         var21 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param2 != -27911) {
             th.a(false);
           }
-          var22 = new lg(672, 192, 96);
+          var22 = new Model(672, 192, 96);
           for (var4 = 0; 6 > var4; var4++) {
             for (var5 = 0; var5 < 4; var5++) {
               for (var6 = 0; var6 < 4; var6++) {
@@ -213,6 +213,6 @@ final class th {
     static {
         field_k = "2 players can work together to paint all the blocks on the map purple. If either player is killed, both players have to start again. This mode is only available in unrated games.";
         field_f = new Sprite[23];
-        field_a = new lg[2];
+        field_a = new Model[2];
     }
 }

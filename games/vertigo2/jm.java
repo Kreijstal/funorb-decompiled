@@ -14,7 +14,7 @@ final class jm extends TextureOperator {
 
     final static void d(int param0, int param1) {
         BitPacketBuffer var2 = uh.field_Wb;
-        var2.j(param1, 119);
+        var2.writeCipheredByte(param1, 119);
         var2.writeByte(2, param0 ^ 108);
         var2.writeByte(4, 101);
         var2.writeByte(hr.i(104), -97);

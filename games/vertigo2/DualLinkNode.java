@@ -5,7 +5,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode secondaryPrevious;
     long field_n;
     DualLinkNode secondaryNext;
-    static r field_s;
+    static Archive field_s;
     static String field_r;
     static String field_q;
 
@@ -40,7 +40,7 @@ class DualLinkNode extends IntrusiveNode {
         }
         this.field_n = param1;
         if (param0 != -1) {
-          field_s = (r) null;
+          field_s = (Archive) null;
         }
     }
 
@@ -100,9 +100,9 @@ class DualLinkNode extends IntrusiveNode {
               return;
             }
             var18.field_q = new byte[var18.field_n][][];
-            var18.field_t = new wk[var18.field_n];
+            var18.field_t = new AsyncRequest[var18.field_n];
             var18.field_o = new int[var18.field_n];
-            var18.field_w = new wk[var18.field_n];
+            var18.field_w = new AsyncRequest[var18.field_n];
             var18.field_y = new int[var18.field_n];
             var18.field_u = new int[var18.field_n];
             for (var5 = 0; var5 < var18.field_n; var5++) {
@@ -139,7 +139,7 @@ class DualLinkNode extends IntrusiveNode {
                       var12[var17] = eh.a(-1147375319, var10[var17]);
                       var17++;
                     }
-                    var18.field_w[var5] = param0.a(var12, 38, eh.a(-1147375319, var20), var21);
+                    var18.field_w[var5] = param0.requestDeclaredMethod(var12, 38, eh.a(-1147375319, var20), var21);
                     var18.field_q[var5] = var22;
                   }
                 } else {
@@ -151,7 +151,7 @@ class DualLinkNode extends IntrusiveNode {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_u[var5] = var9;
-                  var18.field_t[var5] = param0.a(-67, eh.a(-1147375319, var15), var16);
+                  var18.field_t[var5] = param0.requestDeclaredField(-67, eh.a(-1147375319, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

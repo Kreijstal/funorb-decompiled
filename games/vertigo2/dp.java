@@ -278,7 +278,7 @@ final class dp extends TextureOperator {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
-                UiWidget.field_eb[var5] = false;
+                UiPanel.field_eb[var5] = false;
                 var5++;
               }
               fh.field_w = bd.field_f;
@@ -287,10 +287,10 @@ final class dp extends TextureOperator {
                 var2 = bq.field_D[bd.field_f];
                 bd.field_f = 127 & bd.field_f + 1;
                 if (var2 >= 0) {
-                  UiWidget.field_eb[var2] = true;
+                  UiPanel.field_eb[var2] = true;
                   continue;
                 }
-                UiWidget.field_eb[~var2] = false;
+                UiPanel.field_eb[~var2] = false;
               }
             }
             ah.field_l = ro.field_e;

@@ -3,12 +3,12 @@
  */
 final class ja {
     static volatile int field_h;
-    static qb field_d;
-    static UiWidget field_b;
+    static JaggrabClient field_d;
+    static UiPanel field_b;
     static int field_a;
     static String field_g;
     static String field_c;
-    static UiWidget field_e;
+    static UiPanel field_e;
     static od field_f;
 
     final static boolean a(int param0) {

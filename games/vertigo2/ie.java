@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends UiWidget {
+final class ie extends UiPanel {
     static String field_Rb;
     static fe field_Hb;
-    private UiWidget field_Mb;
+    private UiPanel field_Mb;
     static String field_Sb;
-    private UiWidget field_Ib;
-    private UiWidget field_Lb;
+    private UiPanel field_Ib;
+    private UiPanel field_Lb;
     static int field_Kb;
-    private UiWidget field_Ob;
+    private UiPanel field_Ob;
     static long field_Nb;
-    private UiWidget field_Qb;
-    private UiWidget field_Pb;
+    private UiPanel field_Qb;
+    private UiPanel field_Pb;
     private int field_Jb;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
@@ -24,7 +24,7 @@ final class ie extends UiWidget {
           this.a(param5, param4, (byte) -52, param7);
           return;
         }
-        this.field_Lb = (UiWidget) null;
+        this.field_Lb = (UiPanel) null;
         this.field_wb = param6;
         this.a(param5, param4, (byte) -52, param7);
     }
@@ -117,30 +117,30 @@ final class ie extends UiWidget {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        UiWidget var14 = null;
-        UiWidget var15 = null;
-        UiWidget var16 = null;
-        UiWidget var17 = null;
-        UiWidget var18 = null;
-        UiWidget var19 = null;
-        UiWidget var14Lifetime1;
-        UiWidget var14Lifetime2;
-        UiWidget var14Lifetime3;
-        UiWidget var15Lifetime1;
-        UiWidget var15Lifetime2;
-        UiWidget var15Lifetime3;
-        UiWidget var16Lifetime1;
-        UiWidget var16Lifetime2;
-        UiWidget var16Lifetime3;
-        UiWidget var17Lifetime1;
-        UiWidget var17Lifetime2;
-        UiWidget var17Lifetime3;
-        UiWidget var18Lifetime1;
-        UiWidget var18Lifetime2;
-        UiWidget var18Lifetime3;
-        UiWidget var19Lifetime1;
-        UiWidget var19Lifetime2;
-        UiWidget var19Lifetime3;
+        UiPanel var14 = null;
+        UiPanel var15 = null;
+        UiPanel var16 = null;
+        UiPanel var17 = null;
+        UiPanel var18 = null;
+        UiPanel var19 = null;
+        UiPanel var14Lifetime1;
+        UiPanel var14Lifetime2;
+        UiPanel var14Lifetime3;
+        UiPanel var15Lifetime1;
+        UiPanel var15Lifetime2;
+        UiPanel var15Lifetime3;
+        UiPanel var16Lifetime1;
+        UiPanel var16Lifetime2;
+        UiPanel var16Lifetime3;
+        UiPanel var17Lifetime1;
+        UiPanel var17Lifetime2;
+        UiPanel var17Lifetime3;
+        UiPanel var18Lifetime1;
+        UiPanel var18Lifetime2;
+        UiPanel var18Lifetime3;
+        UiPanel var19Lifetime1;
+        UiPanel var19Lifetime2;
+        UiPanel var19Lifetime3;
         int var8Lifetime1;
         int var8Lifetime2;
         int var9Lifetime1;
@@ -404,8 +404,8 @@ final class ie extends UiWidget {
         return false;
     }
 
-    ie(long param0, UiWidget param1, UiWidget param2, UiWidget param3, UiWidget param4) {
-        super(param0, (UiWidget) null);
+    ie(long param0, UiPanel param1, UiPanel param2, UiPanel param3, UiPanel param4) {
+        super(param0, (UiPanel) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -417,24 +417,24 @@ final class ie extends UiWidget {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        UiWidget var9 = null;
-        UiWidget var10 = null;
+        UiPanel var9 = null;
+        UiPanel var10 = null;
         try {
-          this.field_Lb = new UiWidget(0L, param1);
-          this.field_Qb = new UiWidget(0L, param2);
+          this.field_Lb = new UiPanel(0L, param1);
+          this.field_Qb = new UiPanel(0L, param2);
           this.b(this.field_Lb, 126);
           this.b(this.field_Qb, 125);
-          this.field_Mb = new UiWidget(0L, (UiWidget) null);
+          this.field_Mb = new UiPanel(0L, (UiPanel) null);
           this.b(this.field_Mb, 125);
-          this.field_Ib = new UiWidget(0L, param3);
-          this.field_Ob = new UiWidget(0L, param3);
+          this.field_Ib = new UiPanel(0L, param3);
+          this.field_Ob = new UiPanel(0L, param3);
           var9 = this.field_Ib;
           var10 = var9;
           this.field_Ob.field_jb = true;
           var10.field_jb = true;
           this.field_Mb.b(this.field_Ib, 123);
           this.field_Mb.b(this.field_Ob, 118);
-          this.field_Pb = new UiWidget(0L, param4);
+          this.field_Pb = new UiPanel(0L, param4);
           this.field_Pb.field_X = true;
           this.field_Mb.b(this.field_Pb, 122);
           return;

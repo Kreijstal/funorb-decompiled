@@ -6,7 +6,7 @@ final class GameplayScreen {
     private IntrusiveDeque field_z;
     private wo[][] field_K;
     boolean field_i;
-    static UiWidget field_l;
+    static UiPanel field_l;
     private boolean[] field_p;
     private long field_j;
     private int field_x;
@@ -86,7 +86,7 @@ final class GameplayScreen {
 
     final void b(int param0, int param1) {
         try {
-          uh.field_Wb.j(64, 122);
+          uh.field_Wb.writeCipheredByte(64, 122);
           uh.field_Wb.writeByte(22, 119);
           uh.field_Wb.writeByte(1, -98);
           uh.field_Wb.writeByte(param0, param1 + 24174);
@@ -110,7 +110,7 @@ final class GameplayScreen {
           if (!this.field_o) {
             throw new IllegalStateException();
           }
-          uh.field_Wb.j(61, param0 + 27710);
+          uh.field_Wb.writeCipheredByte(61, param0 + 27710);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class GameplayScreen {
           if (!this.field_o) {
             throw new IllegalStateException();
           }
-          uh.field_Wb.j(60, 123);
+          uh.field_Wb.writeCipheredByte(60, 123);
           if (!param0) {
             this.e(113);
           }
@@ -624,39 +624,39 @@ final class GameplayScreen {
               if ((!MouseWheelInput.field_a) &&
                 (!tf.a((byte) 49))) {
                 var6 = this.field_G.a((byte) -126);
-                if (UiWidget.field_eb[s.field_y] ||
-                  UiWidget.field_eb[am.field_t]) {
+                if (UiPanel.field_eb[s.field_y] ||
+                  UiPanel.field_eb[am.field_t]) {
                   var5 = var5 | lp.field_B[(var6 + 0) % 4];
                 }
-                if (UiWidget.field_eb[ga.field_gb] ||
-                  UiWidget.field_eb[od.field_Mb]) {
+                if (UiPanel.field_eb[ga.field_gb] ||
+                  UiPanel.field_eb[od.field_Mb]) {
                   var5 = var5 | lp.field_B[(var6 + 2) % 4];
                 }
-                if (UiWidget.field_eb[q.field_u] ||
-                  UiWidget.field_eb[pn.field_O]) {
+                if (UiPanel.field_eb[q.field_u] ||
+                  UiPanel.field_eb[pn.field_O]) {
                   var5 = var5 | lp.field_B[(5 + var6) % 4];
                 }
-                if (UiWidget.field_eb[t.field_g] ||
-                  UiWidget.field_eb[ii.field_E]) {
+                if (UiPanel.field_eb[t.field_g] ||
+                  UiPanel.field_eb[ii.field_E]) {
                   var5 = var5 | lp.field_B[(var6 + 3) % 4];
                 }
               }
             } else {
               var6 = this.field_G.a((byte) -126);
-              if (UiWidget.field_eb[s.field_y] ||
-                UiWidget.field_eb[am.field_t]) {
+              if (UiPanel.field_eb[s.field_y] ||
+                UiPanel.field_eb[am.field_t]) {
                 var5 = var5 | lp.field_B[(var6 + 0) % 4];
               }
-              if (UiWidget.field_eb[ga.field_gb] ||
-                UiWidget.field_eb[od.field_Mb]) {
+              if (UiPanel.field_eb[ga.field_gb] ||
+                UiPanel.field_eb[od.field_Mb]) {
                 var5 = var5 | lp.field_B[(var6 + 2) % 4];
               }
-              if (UiWidget.field_eb[q.field_u] ||
-                UiWidget.field_eb[pn.field_O]) {
+              if (UiPanel.field_eb[q.field_u] ||
+                UiPanel.field_eb[pn.field_O]) {
                 var5 = var5 | lp.field_B[(5 + var6) % 4];
               }
-              if (UiWidget.field_eb[t.field_g] ||
-                UiWidget.field_eb[ii.field_E]) {
+              if (UiPanel.field_eb[t.field_g] ||
+                UiPanel.field_eb[ii.field_E]) {
                 var5 = var5 | lp.field_B[(var6 + 3) % 4];
               }
             }
@@ -871,7 +871,7 @@ final class GameplayScreen {
           if (!this.field_o) {
             throw new IllegalStateException();
           }
-          uh.field_Wb.j(59, 119);
+          uh.field_Wb.writeCipheredByte(59, 119);
           var2_int = -114 / ((45 - param0) / 43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

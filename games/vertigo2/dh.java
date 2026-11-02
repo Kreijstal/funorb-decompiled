@@ -257,11 +257,11 @@ abstract class dh {
               if (0 < q.field_y) {
                 pl.field_i = true;
               }
-              uh.field_Wb.b(he.field_u, 124);
+              uh.field_Wb.setCipherSeed(he.field_u, 124);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 he.field_u[var8Lifetime1] = he.field_u[var8Lifetime1] + 50;
               }
-              id.field_f.b(he.field_u, 61);
+              id.field_f.setCipherSeed(he.field_u, 61);
               stackIn_81_0 = lc.field_f;
               return stackIn_81_0;
             }

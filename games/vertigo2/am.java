@@ -71,7 +71,7 @@ final class am {
                 this.field_s.a(0, -125);
               }
               if (param2 &&
-                UiWidget.field_eb[MouseWheelInput.field_d] &&
+                UiPanel.field_eb[MouseWheelInput.field_d] &&
                 param0.h(param1 ^ -9869) == 1 &&
                 !var13.field_G &&
                 var13.b(param1 ^ 119) != 4 &&
@@ -674,7 +674,7 @@ final class am {
         wo[] var33 = null;
         Object var34 = null;
         hb var34_ref = null;
-        lg var35 = null;
+        Model var35 = null;
         fc var36 = null;
         Object var37 = null;
         hb var37_ref = null;
@@ -885,7 +885,7 @@ final class am {
           } else {
             if (null == dc.field_J ||
               dc.field_J.length != this.field_c.length) {
-              dc.field_J = new lg[this.field_c.length];
+              dc.field_J = new Model[this.field_c.length];
             }
             if (null == oe.field_ob ||
               this.field_c.length != oe.field_ob.length) {
@@ -982,7 +982,7 @@ final class am {
                     var26Lifetime1Lifetime1 = -(128 * (va.field_b[1] - oe.field_ob[var25][2]) / 960) + 128;
                     if (var26Lifetime1Lifetime1 > 10 &&
                       var26Lifetime1Lifetime1 <= 128) {
-                      var35 = new lg(dc.field_J[var25], false, true, true, true);
+                      var35 = new Model(dc.field_J[var25], false, true, true, true);
                       var35.b(var26Lifetime1Lifetime1, 128, var26Lifetime1Lifetime1);
                       var36 = this.field_a[var24].a(var35, oe.field_ob[var25][0], oe.field_ob[var25][1], (byte) -101);
                       if (var36 != null &&

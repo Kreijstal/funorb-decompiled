@@ -11,17 +11,17 @@ class wh extends TextureOperator {
     int[] field_y;
     int field_z;
 
-    final static u a(r param0, int param1, int param2, int param3) {
+    final static u a(Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        r var5 = null;
+        Archive var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 4080) {
-            var5 = (r) null;
-            wh.a((r) null, 40, -33, -13);
+            var5 = (Archive) null;
+            wh.a((Archive) null, 40, -33, -13);
           }
           if (hq.a(124, param3, param2, param0)) {
             return mc.a((byte) 9);

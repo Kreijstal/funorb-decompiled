@@ -10,9 +10,9 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static String field_b;
     static volatile int field_a;
 
-    final static UiWidget a(boolean param0) {
+    final static UiPanel a(boolean param0) {
         if (!param0) {
-          return (UiWidget) null;
+          return (UiPanel) null;
         }
         return pp.f(-126);
     }

@@ -3,13 +3,13 @@
  */
 final class ui {
     short field_f;
-    static UiWidget field_b;
+    static UiPanel field_b;
     boolean field_c;
     boolean field_a;
     static int field_g;
     boolean field_i;
     int field_h;
-    static lg field_e;
+    static Model field_e;
     static int field_d;
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -198,12 +198,12 @@ final class ui {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = uh.field_Wb;
-          var4.j(param1, 124);
+          var4.writeCipheredByte(param1, 124);
           var4.position = var4.position + 1;
           var5 = var4.position;
           var4.writeByte(6, 88);
           if (param2 < 85) {
-            field_b = (UiWidget) null;
+            field_b = (UiPanel) null;
           }
           var4.writeLong((byte) -117, param0);
           var4.patchByteLength((byte) 117, var4.position - var5);
@@ -247,7 +247,7 @@ final class ui {
             } else {
               var2 = Vertigo2.a(new String[]{ea.field_b}, qo.field_E, 91);
             }
-            if (pm.field_a) {
+            if (BufferedSocket.field_a) {
               dh.a((byte) -114, (String) (var2), 2, (String) null, 0, (String) null);
               on.a(9110);
             }
@@ -258,7 +258,7 @@ final class ui {
             var2 = na.field_l;
           }
           if (param0 != -485) {
-            field_b = (UiWidget) null;
+            field_b = (UiPanel) null;
           }
           if (null != var2) {
             ir.a((String) null, lj.field_p, (String) (var2), 0, 0);
@@ -332,7 +332,7 @@ final class ui {
                 }
               }
             }
-            ir.a(var5, gg.field_n[var6], var4 + cc.b(SpriteState.field_D.toString()), var7, 0);
+            ir.a(var5, gg.field_n[var6], var4 + BitmapFont.b(SpriteState.field_D.toString()), var7, 0);
             if (!MouseWheelInput.field_a) {
               field_b.field_pb = false;
             }

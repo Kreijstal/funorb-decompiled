@@ -6,7 +6,7 @@ final class ag {
     static String field_c;
     static String[] field_a;
 
-    final static aa a(UiWidget param0, UiWidget param1, int param2, int[] param3, UiWidget param4) {
+    final static aa a(UiPanel param0, UiPanel param1, int param2, int[] param3, UiPanel param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;

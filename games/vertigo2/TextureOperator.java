@@ -5,7 +5,7 @@ abstract class TextureOperator extends IntrusiveNode {
     boolean field_o;
     int field_t;
     static String field_q;
-    static UiWidget field_s;
+    static UiPanel field_s;
     static aa field_n;
     static fe field_p;
     kk field_v;

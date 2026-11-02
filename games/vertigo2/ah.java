@@ -8,7 +8,7 @@ class ah extends mo {
 
     final static void a(byte param0, int param1) {
         BitPacketBuffer var2 = uh.field_Wb;
-        var2.j(param1, 124);
+        var2.writeCipheredByte(param1, 124);
         if (param0 != -50) {
           return;
         }
@@ -32,7 +32,7 @@ class ah extends mo {
         }
     }
 
-    final static void a(int param0, r param1) {
+    final static void a(int param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1292_0;
             StringBuilder stackIn_1292_1;
@@ -43,9 +43,9 @@ class ah extends mo {
             int var3;
             int var4;
             int param0;
-            r param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, r initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1292_0 = null;
@@ -1392,7 +1392,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -57, "OBSCURED");
                 if (null != var2) {
-                  iq.field_z = in.a(0, var2);
+                  UiWidget.field_z = in.a(0, var2);
                 }
                 var2 = en.a((byte) -15, "TIMEATTACK_UNLUCKY");
                 if (var2 != null) {

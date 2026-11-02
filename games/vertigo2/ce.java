@@ -53,7 +53,7 @@ final class ce {
         long dupTemp$2 = 0L;
         int var2;
         if (null == hb.field_q) {
-          hb.field_q = kr.field_g.a(-121, cl.field_d, nb.field_y);
+          hb.field_q = kr.field_g.requestSocket(-121, cl.field_d, nb.field_y);
         }
         if (hb.field_q.field_b == 0) {
           return false;

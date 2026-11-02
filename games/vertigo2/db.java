@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends sn {
+final class db extends PcmStream {
     private int[] field_v;
     int[] field_B;
     private int field_z;
@@ -16,7 +16,7 @@ final class db extends sn {
     private int[] field_F;
     private int[] field_y;
     private int[] field_Q;
-    static UiWidget field_t;
+    static UiPanel field_t;
     private int[] field_R;
     private int[] field_T;
     private qd field_I;
@@ -899,7 +899,7 @@ final class db extends sn {
           var3_int = var3_int + ((this.field_W[param1.field_q] - 8192) * this.field_w[param1.field_q] >> 12);
           var4 = param1.field_p;
           if (param0 > -44) {
-            field_t = (UiWidget) null;
+            field_t = (UiPanel) null;
           }
           if (var4.field_b > 0 && (!(var4.field_c <= 0) ||
             this.field_X[param1.field_q] > 0)) {
@@ -1017,8 +1017,8 @@ final class db extends sn {
         }
     }
 
-    final synchronized sn c() {
-        return (sn) ((Object) this.field_P);
+    final synchronized PcmStream c() {
+        return (PcmStream) ((Object) this.field_P);
     }
 
     private final synchronized void a(int param0, int param1, boolean param2, boolean param3, boolean param4, si param5) {
@@ -1052,7 +1052,7 @@ final class db extends sn {
         }
     }
 
-    final synchronized sn a() {
+    final synchronized PcmStream a() {
         return null;
     }
 
@@ -1166,7 +1166,7 @@ final class db extends sn {
         this.b(param0, 8192);
     }
 
-    final synchronized boolean a(int param0, id param1, si param2, r param3, byte param4) {
+    final synchronized boolean a(int param0, id param1, si param2, Archive param3, byte param4) {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

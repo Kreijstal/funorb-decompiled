@@ -4,22 +4,22 @@
 final class mc {
     int field_a;
     int field_l;
-    ur field_p;
+    WidgetListener field_p;
     int field_b;
     int field_r;
     int field_d;
-    ur field_g;
+    WidgetListener field_g;
     private int field_j;
     int field_o;
     static IntrusiveDeque field_i;
     int field_m;
     static String field_f;
-    cc field_n;
-    ur field_c;
+    BitmapFont field_n;
+    WidgetListener field_c;
     static int field_e;
     private boolean field_k;
-    ur field_h;
-    ur field_q;
+    WidgetListener field_h;
+    WidgetListener field_q;
 
     private final void a(String param0, int param1, byte param2, int param3) {
         RuntimeException stackIn_28_0 = null;
@@ -117,7 +117,7 @@ final class mc {
           var6 = this.field_n.field_M + this.field_n.field_t;
           var7 = param0;
           if (param3 < 115) {
-            this.field_p = (ur) null;
+            this.field_p = (WidgetListener) null;
           }
           if (bi.field_e < var7 + (var5_int + 6)) {
             var7 = -var5_int + (bi.field_e - 6);
@@ -152,7 +152,7 @@ final class mc {
         }
     }
 
-    final void a(cc param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         va var17 = null;
         mq var4 = null;
         Sprite[] var5 = null;
@@ -177,7 +177,7 @@ final class mc {
         mq var14Lifetime2;
         try {
           var17 = new va(param0, 2, 2, 2236962, 1, 1, 1, param0.field_M + (param0.field_z + 2));
-          this.field_h = (ur) ((Object) var17);
+          this.field_h = (WidgetListener) ((Object) var17);
           var17.field_e = 16777215;
           var4 = new mq();
           if (param1 != -2) {
@@ -207,21 +207,21 @@ final class mc {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, 6216).a(true, -107).a(param1 ^ 127, var5);
           var4.a(5, 6216).a(-114, gb.a(0, 65793, 0, param1 ^ -28292, 0)).a(true, param1 ^ 90).a((byte) -68, -1);
-          this.field_p = (ur) ((Object) var4);
+          this.field_p = (WidgetListener) ((Object) var4);
           var6 = new mq(var4, true);
           var6.field_m = 0;
           var7 = new mq(var4, true);
           var7.field_m = 0;
           var7.a(an.a(-105, 8947848), (byte) 62);
           var7.a(1, 6216).a(-124, an.a(-115, 11184810)).a((byte) -105, 2236962);
-          this.field_g = (ur) ((Object) new kn(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_g = (WidgetListener) ((Object) new kn(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new td(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jo(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new mq();
           var17.a(16777215, var8);
           var8.a(0, param1 + 6218).a(param1 - 119, wp.a(7829367, (byte) 118, 10066329, 15658734)).a((byte) -57, 1118481).b(-1, -101);
           var8.a(4, 6216).a(true, param1 - 91).a(-117, var5);
-          this.field_c = (ur) ((Object) var8);
+          this.field_c = (WidgetListener) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -287,7 +287,7 @@ final class mc {
             this.a(param0, param2, (byte) 100, param3);
           }
           if (param1 >= -1) {
-            this.field_n = (cc) null;
+            this.field_n = (BitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

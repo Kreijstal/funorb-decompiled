@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb extends UiWidget {
-    private UiWidget field_Lb;
-    private UiWidget field_Jb;
-    private UiWidget field_Sb;
+final class cb extends UiPanel {
+    private UiPanel field_Lb;
+    private UiPanel field_Jb;
+    private UiPanel field_Sb;
     static boolean field_Ib;
     private int field_Tb;
-    private UiWidget[] field_Qb;
+    private UiPanel[] field_Qb;
     static String field_Pb;
-    private UiWidget field_Hb;
-    private UiWidget field_Nb;
+    private UiPanel field_Hb;
+    private UiPanel field_Nb;
     private sm field_Ob;
-    private UiWidget field_Rb;
+    private UiPanel field_Rb;
     private StringBuilder field_Mb;
     long field_Kb;
 
-    private final int a(int param0, UiWidget param1, String param2, int param3, int param4, UiWidget param5) {
-        UiWidget var7 = null;
+    private final int a(int param0, UiPanel param1, String param2, int param3, int param4, UiPanel param5) {
+        UiPanel var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -29,7 +29,7 @@ final class cb extends UiWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new UiWidget((long)param4, param5, 0, param0, param3, 24, param2);
+          var7 = new UiPanel((long)param4, param5, 0, param0, param3, 24, param2);
           param0 += 32;
           param1.b(var7, param4 + 121);
           stackIn_1_0 = param0;
@@ -63,13 +63,13 @@ final class cb extends UiWidget {
     final boolean k(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 22719) {
-          this.field_Lb = (UiWidget) null;
+          this.field_Lb = (UiPanel) null;
         }
         stackIn_6_0 = (null != this.field_Ob) && (this.field_Ob.field_V);
         return stackIn_6_0;
     }
 
-    private final int a(int param0, int param1, UiWidget param2, int param3, UiWidget param4) {
+    private final int a(int param0, int param1, UiPanel param2, int param3, UiPanel param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
@@ -116,7 +116,7 @@ final class cb extends UiWidget {
         int var3 = 0;
         sm stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        UiWidget stackIn_16_0 = null;
+        UiPanel stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
@@ -178,7 +178,7 @@ final class cb extends UiWidget {
         return true;
     }
 
-    cb(int param0, int param1, int param2, int param3, int param4, UiWidget param5, UiWidget param6, UiWidget param7, UiWidget param8, sm param9, UiWidget param10, String param11, long param12) {
+    cb(int param0, int param1, int param2, int param3, int param4, UiPanel param5, UiPanel param6, UiPanel param7, UiPanel param8, sm param9, UiPanel param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -191,7 +191,7 @@ final class cb extends UiWidget {
         sm stackIn_8_1;
         sm stackIn_8_2;
         String stackIn_8_5;
-        UiWidget stackIn_14_0 = null;
+        UiPanel stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -210,7 +210,7 @@ final class cb extends UiWidget {
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var15_int = 0;
-        UiWidget[] var15 = null;
+        UiPanel[] var15 = null;
         RuntimeException var15_ref = null;
         int var16 = 0;
         int var17 = 0;
@@ -223,7 +223,7 @@ final class cb extends UiWidget {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        UiWidget[] var28 = null;
+        UiPanel[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
         sm stackIn_8_1Lifetime1;
@@ -248,23 +248,23 @@ final class cb extends UiWidget {
         this.field_Tb = -2;
         try {
           this.field_Kb = param12;
-          this.field_Hb = new UiWidget(0L, param6, ol.field_z.toUpperCase());
+          this.field_Hb = new UiPanel(0L, param6, ol.field_z.toUpperCase());
           this.field_Hb.field_O = 1;
           this.b(this.field_Hb, 124);
-          this.field_Rb = new UiWidget(0L, param7);
+          this.field_Rb = new UiPanel(0L, param7);
           this.field_Hb.b(this.field_Rb, 127);
-          this.field_Nb = new UiWidget(0L, (UiWidget) null);
+          this.field_Nb = new UiPanel(0L, (UiPanel) null);
           this.b(this.field_Nb, 120);
           if (param11 != null) {
-            this.field_Lb = new UiWidget(0L, param8, oh.field_E);
+            this.field_Lb = new UiPanel(0L, param8, oh.field_E);
             this.field_Lb.field_A = 11184810;
             this.field_Lb.field_O = 1;
             this.field_Nb.b(this.field_Lb, 118);
-            this.field_Jb = new UiWidget(0L, param8, tl.field_a);
+            this.field_Jb = new UiPanel(0L, param8, tl.field_a);
             this.field_Jb.field_O = 1;
             this.field_Jb.field_A = 11184810;
             this.field_Nb.b(this.field_Jb, 125);
-            this.field_Sb = new UiWidget(0L, param8);
+            this.field_Sb = new UiPanel(0L, param8);
             this.field_Sb.field_A = 16764006;
             this.field_Nb.b(this.field_Sb, 126);
             this.field_Sb.field_J = "|";
@@ -295,18 +295,18 @@ final class cb extends UiWidget {
               this.field_Ob = new sm(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Nb.b(this.field_Ob, 120);
             }
-            var28 = new UiWidget[3];
+            var28 = new UiPanel[3];
             var15 = var28;
-            var28[0] = new UiWidget(0L, (UiWidget) null);
+            var28[0] = new UiPanel(0L, (UiPanel) null);
             this.field_Nb.b(var28[0], 118);
-            var28[1] = new UiWidget(0L, (UiWidget) null);
+            var28[1] = new UiPanel(0L, (UiPanel) null);
             this.field_Nb.b(var28[1], 125);
-            var28[2] = new UiWidget(0L, (UiWidget) null);
+            var28[2] = new UiPanel(0L, (UiPanel) null);
             this.field_Nb.b(var28[2], 126);
-            this.field_Qb = new UiWidget[kq.field_Jb];
+            this.field_Qb = new UiPanel[kq.field_Jb];
             for (var16 = 0; var16 < kq.field_Jb; var16++) {
               if (wj.field_c[var16] != null) {
-                this.field_Qb[var16] = new UiWidget(0L, param10, wj.field_c[var16]);
+                this.field_Qb[var16] = new UiPanel(0L, param10, wj.field_c[var16]);
                 this.field_Qb[var16].field_O = 0;
                 stackIn_14_0 = this.field_Qb[var16];
                 stackIn_15_1 = (param11 != null);
@@ -387,16 +387,16 @@ final class cb extends UiWidget {
             this.field_Hb.a(111, var19 + 26, 24, 0, 0);
             this.field_Rb.a(97, 15, 15, 5, this.field_Hb.field_Fb - 20);
             var21 = 10;
-            this.field_Lb.a(114, var19, r.field_f * 2, var21, 13);
-            var21 = var21 + r.field_f * 2;
-            this.field_Jb.a(84, var19, 2 * r.field_f, var21, 13);
-            var21 = var21 + (2 * r.field_f + 10);
-            this.field_Sb.a(101, 0, r.field_f, var21, 0);
-            var21 = var21 + (r.field_f + 10);
+            this.field_Lb.a(114, var19, Archive.field_f * 2, var21, 13);
+            var21 = var21 + Archive.field_f * 2;
+            this.field_Jb.a(84, var19, 2 * Archive.field_f, var21, 13);
+            var21 = var21 + (2 * Archive.field_f + 10);
+            this.field_Sb.a(101, 0, Archive.field_f, var21, 0);
+            var21 = var21 + (Archive.field_f + 10);
             if (this.field_Ob != null) {
               var20Lifetime3 = this.field_Ob.c(4, 0);
-              this.field_Ob.a(var20Lifetime3, var21, r.field_f, -36, 4, 13 + (-var20Lifetime3 + var19) / 2);
-              var21 = var21 + (r.field_f + 10);
+              this.field_Ob.a(var20Lifetime3, var21, Archive.field_f, -36, 4, 13 + (-var20Lifetime3 + var19) / 2);
+              var21 = var21 + (Archive.field_f + 10);
             }
             var28[0].a(78, var16Lifetime2, var17Lifetime5, var21, 13);
             var28[1].a(91, var16Lifetime2, var17Lifetime5, var21, var16Lifetime2 + 13 + 13);
@@ -411,15 +411,15 @@ final class cb extends UiWidget {
             this.a(92, var23, var24, var26, var25);
             return;
           }
-          this.field_Lb = new UiWidget(0L, param8, sd.field_H);
+          this.field_Lb = new UiPanel(0L, param8, sd.field_H);
           this.field_Lb.field_O = 1;
           this.field_Lb.field_A = 11184810;
           this.field_Nb.b(this.field_Lb, 123);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Lb.field_z.b(this.field_Lb.field_S, var15_int);
-          this.field_Lb.a(115, var15_int, var17Lifetime1 * r.field_f, var16Lifetime1, 13);
-          var16Lifetime1 = var16Lifetime1 + r.field_f * var17Lifetime1;
+          this.field_Lb.a(115, var15_int, var17Lifetime1 * Archive.field_f, var16Lifetime1, 13);
+          var16Lifetime1 = var16Lifetime1 + Archive.field_f * var17Lifetime1;
           this.field_Nb.a(109, 13 + (var15_int + 13), var16Lifetime1 + 10, 24, 0);
           this.field_Nb.field_Bb = vl.a(this.field_Nb.field_db, 3, 0, 2105376, 11579568, 8421504);
           var18Lifetime1 = 13 + (var15_int + 13);

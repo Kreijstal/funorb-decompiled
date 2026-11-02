@@ -4,7 +4,7 @@
 abstract class ab {
     static wp field_a;
     static boolean field_b;
-    static UiWidget field_d;
+    static UiPanel field_d;
     static String field_c;
 
     abstract int b(int param0, int param1);

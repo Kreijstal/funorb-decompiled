@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends UiWidget {
-    UiWidget field_Hb;
+final class dm extends UiPanel {
+    UiPanel field_Hb;
     static String field_Jb;
     static String field_Ib;
-    UiWidget field_Kb;
-    UiWidget field_Mb;
+    UiPanel field_Kb;
+    UiPanel field_Mb;
     od field_Lb;
 
     public static void l(int param0) {
@@ -237,7 +237,7 @@ final class dm extends UiWidget {
         int[] var12 = null;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (param2 <= cj.field_D &&
+          if (param2 <= WidgetContainer.field_D &&
             param5 >= ua.field_e) {
             if (param1 < ap.field_e) {
               var6_int = 0;
@@ -268,12 +268,12 @@ final class dm extends UiWidget {
             } else {
               param2 = ua.field_e;
             }
-            if (param5 <= cj.field_D) {
+            if (param5 <= WidgetContainer.field_D) {
               incrementValue$1 = param5;
               param5--;
               ki.a(-116, param1, vl.field_e[incrementValue$1], param3, param4);
             } else {
-              param5 = cj.field_D;
+              param5 = WidgetContainer.field_D;
             }
             if (var6_int != 0 &&
               var7 != 0) {
@@ -319,13 +319,13 @@ final class dm extends UiWidget {
         return bi.field_j - param2;
     }
 
-    dm(long param0, UiWidget param1, UiWidget param2, ie param3, UiWidget param4, String param5, String param6) {
+    dm(long param0, UiPanel param1, UiPanel param2, ie param3, UiPanel param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Mb = new UiWidget(0L, (UiWidget) null);
+          this.field_Mb = new UiPanel(0L, (UiPanel) null);
           this.field_Lb = new od(0L, this.field_Mb, param2, param3);
-          this.field_Hb = new UiWidget(0L, param4);
-          this.field_Kb = new UiWidget(0L, param4);
+          this.field_Hb = new UiPanel(0L, param4);
+          this.field_Kb = new UiPanel(0L, param4);
           this.field_Hb.field_S = param5;
           this.field_Kb.field_S = param6;
           this.b(this.field_Lb, 121);

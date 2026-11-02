@@ -4,7 +4,7 @@
 final class gi extends ah {
     static ve field_t;
     static PlatformTaskDispatcher field_s;
-    static r field_p;
+    static Archive field_p;
     static int field_m;
     static boolean field_r;
     static boolean field_o;

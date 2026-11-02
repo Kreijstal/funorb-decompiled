@@ -88,7 +88,7 @@ final class qe extends pn {
           var6 = this.field_J.a(-23996);
           var34 = (qa) ((Object) this.field_B);
           var9 = this.field_o + param2;
-          var10 = var34.a((iq) (this), 1, param3) + (var34.b((iq) (this), 110).b((byte) 91) >> 1);
+          var10 = var34.a((UiWidget) (this), 1, param3) + (var34.b((UiWidget) (this), 110).b((byte) 91) >> 1);
           if (tk.field_n == var6) {
             var20 = jn.field_b[0];
             var11 = var20.field_x << 1;
@@ -155,7 +155,7 @@ final class qe extends pn {
           var6 = this.field_J.a(-23996);
           var35 = (qa) ((Object) this.field_B);
           var9Lifetime1 = this.field_o + param2;
-          var10Lifetime1 = var35.a((iq) (this), 1, param3) + (var35.b((iq) (this), 110).b((byte) 91) >> 1);
+          var10Lifetime1 = var35.a((UiWidget) (this), 1, param3) + (var35.b((UiWidget) (this), 110).b((byte) 91) >> 1);
           if (tk.field_n == var6) {
             var26 = jn.field_b[0];
             var11Lifetime1 = var26.field_x << 1;
@@ -224,7 +224,7 @@ final class qe extends pn {
         var6Lifetime1 = this.field_J.a(-23996);
         var36 = (qa) ((Object) this.field_B);
         var9Lifetime2 = this.field_o + param2;
-        var10Lifetime2 = var36.a((iq) (this), 1, param3) + (var36.b((iq) (this), 110).b((byte) 91) >> 1);
+        var10Lifetime2 = var36.a((UiWidget) (this), 1, param3) + (var36.b((UiWidget) (this), 110).b((byte) 91) >> 1);
         if (tk.field_n == var6Lifetime1) {
           var31 = jn.field_b[0];
           var11Lifetime2 = var31.field_x << 1;
@@ -281,7 +281,7 @@ final class qe extends pn {
         this.field_bb.d(-(var30.field_x >> 1) + var9Lifetime2, -var30.field_B + var10Lifetime2, 256);
     }
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_Y = this.field_Y + 1;
           if (param0 < 6) {
@@ -304,7 +304,7 @@ final class qe extends pn {
         }
     }
 
-    final boolean a(byte param0, iq param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

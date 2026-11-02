@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gj extends TextureOperator {
-    static UiWidget field_z;
+    static UiPanel field_z;
     static int field_y;
 
     final int[][] b(int param0, int param1) {
@@ -173,7 +173,7 @@ final class gj extends TextureOperator {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
-        UiWidget stackIn_21_0 = null;
+        UiPanel stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
@@ -187,13 +187,13 @@ final class gj extends TextureOperator {
         boolean stackIn_136_0 = false;
         boolean stackIn_153_0 = false;
         int stackIn_160_0 = 0;
-        UiWidget stackIn_178_0 = null;
+        UiPanel stackIn_178_0 = null;
         int stackIn_178_1 = 0;
         boolean stackIn_179_2 = false;
-        UiWidget stackIn_183_0 = null;
+        UiPanel stackIn_183_0 = null;
         int stackIn_183_1 = 0;
         boolean stackIn_184_2 = false;
-        UiWidget stackIn_188_0 = null;
+        UiPanel stackIn_188_0 = null;
         int stackIn_188_1 = 0;
         boolean stackIn_189_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -201,9 +201,9 @@ final class gj extends TextureOperator {
         boolean stackOut_135_0;
         boolean stackOut_152_0;
         RuntimeException var5 = null;
-        UiWidget var6 = null;
-        UiWidget var7 = null;
-        UiWidget var8 = null;
+        UiPanel var6 = null;
+        UiPanel var7 = null;
+        UiPanel var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -225,12 +225,12 @@ final class gj extends TextureOperator {
         bs var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        UiWidget var22 = null;
+        UiPanel var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        UiWidget var27 = null;
+        UiPanel var27 = null;
         int stackIn_55_0Lifetime1;
         int stackIn_55_1Lifetime1;
         int stackIn_63_0Lifetime1;
@@ -296,7 +296,7 @@ final class gj extends TextureOperator {
               hd.field_g.a(82, -var9 + lb.field_c.field_Fb, 40, lb.field_c.field_db - 40, var9);
               hd.field_g.field_S = gm.field_a.toUpperCase();
               stackIn_21_0 = hd.field_g;
-              stackIn_22_1 = (param0) && (r.field_h == 0L);
+              stackIn_22_1 = (param0) && (Archive.field_h == 0L);
               stackIn_21_0.field_lb = stackIn_22_1;
               var8 = hd.field_g;
               var10 = 2;
@@ -393,7 +393,7 @@ final class gj extends TextureOperator {
                   break;
                 }
                 if (!(stackIn_69_0 > fn.field_z) &&
-                  UiWidget.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   var10 = 2;
                 }
               }
@@ -506,7 +506,7 @@ final class gj extends TextureOperator {
                   break;
                 }
                 if (stackIn_126_0 >= 2 &&
-                  UiWidget.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   var16 = 0;
                 }
                 if ((var16 == 0) &&
@@ -603,8 +603,8 @@ final class gj extends TextureOperator {
                 ko.field_S = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
             }
-            if (r.field_h != 0L) {
-              var9 = (int)(r.field_h - gk.a(param3 + 108));
+            if (Archive.field_h != 0L) {
+              var9 = (int)(Archive.field_h - gk.a(param3 + 108));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -616,15 +616,15 @@ final class gj extends TextureOperator {
           stackIn_178_0 = hk.field_o;
           stackIn_178_1 = 0;
           stackIn_179_2 = (param4) && (!param2) && (!im.field_g);
-          ((UiWidget) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
+          ((UiPanel) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
           stackIn_183_0 = lb.field_c;
           stackIn_183_1 = 0;
           stackIn_184_2 = (param4) && (!param2) && (!im.field_g);
-          ((UiWidget) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
+          ((UiPanel) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
           stackIn_188_0 = wc.field_m;
           stackIn_188_1 = param3;
           stackIn_189_2 = (param4) && (!param2) && (im.field_g);
-          ((UiWidget) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
+          ((UiPanel) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (gd.field_j != null) {
             if (ne.field_G.field_tb != 0) {

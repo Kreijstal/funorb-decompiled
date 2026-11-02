@@ -10,7 +10,7 @@ final class nn extends IntrusiveNode {
     int field_v;
     static String[] field_t;
     int field_x;
-    static r field_y;
+    static Archive field_y;
     static String field_p;
     int field_q;
     static int[] field_s;
@@ -91,7 +91,7 @@ final class nn extends IntrusiveNode {
           this.field_q = param0;
           this.field_r = param7;
           if (param5 != -550) {
-            field_y = (r) null;
+            field_y = (Archive) null;
           }
           this.field_x = param2;
           this.field_v = param1;

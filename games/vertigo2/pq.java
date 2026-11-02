@@ -4,7 +4,7 @@
 final class pq {
     static long field_e;
     static int[] field_c;
-    static wk field_f;
+    static AsyncRequest field_f;
     static String field_a;
     private int[] field_d;
     static String field_g;
@@ -18,7 +18,7 @@ final class pq {
         var6 = Vertigo2.field_L ? 1 : 0;
         var3 = -1 + (this.field_d.length >> 1);
         if (param1 != 1) {
-          field_f = (wk) null;
+          field_f = (AsyncRequest) null;
         }
         var4 = param0 & var3;
         while (true) {

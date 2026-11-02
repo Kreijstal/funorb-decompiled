@@ -12,7 +12,7 @@ final class i {
     private byte[] field_c;
     int field_h;
 
-    final static i a(r param0, int param1) {
+    final static i a(Archive param0, int param1) {
         byte[] var2 = param0.a(true, param1);
         if (var2 == null) {
           return null;
@@ -20,7 +20,7 @@ final class i {
         return i.a(var2)[0];
     }
 
-    final static i a(r param0, int param1, int param2) {
+    final static i a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, param2, (byte) -100);
         if (var3 == null) {
           return null;

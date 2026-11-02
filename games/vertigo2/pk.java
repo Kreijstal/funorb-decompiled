@@ -22,9 +22,9 @@ final class pk extends IntrusiveNode {
         field_v = null;
     }
 
-    final static UiWidget e(int param0) {
+    final static UiPanel e(int param0) {
         if (param0 != 2) {
-          return (UiWidget) null;
+          return (UiPanel) null;
         }
         return vd.field_d.field_Nb;
     }

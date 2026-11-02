@@ -98,9 +98,9 @@ final class bk {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, r param2, int param3) {
+    final static Sprite[] a(int param0, int param1, Archive param2, int param3) {
         RuntimeException var4 = null;
-        r var5 = null;
+        Archive var5 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -109,8 +109,8 @@ final class bk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -2724) {
-            var5 = (r) null;
-            bk.a(-14, -96, (r) null, 39);
+            var5 = (Archive) null;
+            bk.a(-14, -96, (Archive) null, 39);
           }
           if (hq.a(124, param0, param1, param2)) {
             stackIn_6_0 = IsaacCipher.c(param3 + 2846);

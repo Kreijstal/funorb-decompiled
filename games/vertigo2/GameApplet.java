@@ -23,7 +23,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           StringBuilder stackIn_23_1 = null;
           String stackIn_24_2 = null;
           Throwable decompiledCaughtException = null;
-          wk var8 = null;
+          AsyncRequest var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -54,7 +54,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param2, true);
               gi.field_s = dupTemp$0;
               mr.field_b = dupTemp$0;
-              var8 = gi.field_s.a(1, (Runnable) (this), 0);
+              var8 = gi.field_s.startThread(1, (Runnable) (this), 0);
               while (true) {
                 if (0 == var8.field_b) {
                   um.a(true, 10L);
@@ -543,7 +543,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var13 = param2;
           var14 = -1;
           if (param5 >= ua.field_e &&
-            cj.field_D >= param5) {
+            WidgetContainer.field_D >= param5) {
             var15_ref_int__ = vl.field_e[param5];
             var16 = pk.a((byte) -14, ib.field_a, -param4 + param3, ap.field_e);
             var17 = pk.a((byte) -14, ib.field_a, param4 + param3, ap.field_e);
@@ -574,14 +574,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var15 = -var9 + param5;
               var16Lifetime1 = var9 + param5;
               if (var16Lifetime1 >= ua.field_e &&
-                var15 <= cj.field_D) {
+                var15 <= WidgetContainer.field_D) {
                 if (var8 > var9) {
                   var17Lifetime1 = jo.field_h[var9];
                   var18Lifetime1 = pk.a((byte) -14, ib.field_a, param3 + var7_int, ap.field_e);
                   var19Lifetime1 = pk.a((byte) -14, ib.field_a, param3 - var7_int, ap.field_e);
                   var20 = pk.a((byte) -14, ib.field_a, param3 + var17Lifetime1, ap.field_e);
                   var21 = pk.a((byte) -14, ib.field_a, -var17Lifetime1 + param3, ap.field_e);
-                  if (cj.field_D >= var16Lifetime1) {
+                  if (WidgetContainer.field_D >= var16Lifetime1) {
                     var22 = vl.field_e[var16Lifetime1];
                     ki.a(-102, var19Lifetime1, var22, var21, param0);
                     ki.a(-98, var21, var22, var20, param1);
@@ -596,7 +596,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 } else {
                   var17Lifetime1 = pk.a((byte) -14, ib.field_a, var7_int + param3, ap.field_e);
                   var18Lifetime1 = pk.a((byte) -14, ib.field_a, -var7_int + param3, ap.field_e);
-                  if (var16Lifetime1 <= cj.field_D) {
+                  if (var16Lifetime1 <= WidgetContainer.field_D) {
                     ki.a(param2 ^ 87, var18Lifetime1, vl.field_e[var16Lifetime1], var17Lifetime1, param0);
                   }
                   if (var15 >= ua.field_e) {
@@ -609,7 +609,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var15Lifetime1 = -var7_int + param5;
             var16Lifetime1Lifetime1 = param5 + var7_int;
             if (var16Lifetime1Lifetime1 >= ua.field_e &&
-              var15Lifetime1 <= cj.field_D) {
+              var15Lifetime1 <= WidgetContainer.field_D) {
               var17Lifetime1Lifetime1 = param3 + var9;
               var18Lifetime1Lifetime1 = -var9 + param3;
               if (var17Lifetime1Lifetime1 >= ap.field_e &&
@@ -617,7 +617,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var17Lifetime1Lifetime1 = pk.a((byte) -14, ib.field_a, var17Lifetime1Lifetime1, ap.field_e);
                 var18Lifetime1Lifetime1 = pk.a((byte) -14, ib.field_a, var18Lifetime1Lifetime1, ap.field_e);
                 if (var8 <= var7_int) {
-                  if (cj.field_D >= var16Lifetime1Lifetime1) {
+                  if (WidgetContainer.field_D >= var16Lifetime1Lifetime1) {
                     ki.a(-91, var18Lifetime1Lifetime1, vl.field_e[var16Lifetime1Lifetime1], var17Lifetime1Lifetime1, param0);
                   }
                   if (!(var15Lifetime1 < ua.field_e)) {
@@ -634,7 +634,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   var19Lifetime1Lifetime1 = stackIn_73_0;
                   var20Lifetime1 = pk.a((byte) -14, ib.field_a, param3 + var19Lifetime1Lifetime1, ap.field_e);
                   var21Lifetime1 = pk.a((byte) -14, ib.field_a, param3 - var19Lifetime1Lifetime1, ap.field_e);
-                  if (var16Lifetime1Lifetime1 <= cj.field_D) {
+                  if (var16Lifetime1Lifetime1 <= WidgetContainer.field_D) {
                     var22Lifetime1 = vl.field_e[var16Lifetime1Lifetime1];
                     ki.a(-95, var18Lifetime1Lifetime1, var22Lifetime1, var21Lifetime1, param0);
                     ki.a(param2 - 98, var21Lifetime1, var22Lifetime1, var20Lifetime1, param1);
@@ -957,7 +957,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (qb.a((CharSequence) ((Object) var4), -69) &&
+                      if (JaggrabClient.a((CharSequence) ((Object) var4), -69) &&
                         !(10 <= SecondaryNodeDequeIterator.a(86, (CharSequence) ((Object) var4)))) {
                         this.a(0, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);

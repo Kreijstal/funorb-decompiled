@@ -11,12 +11,12 @@ final class lr extends d {
     static String field_N;
     private int field_Q;
     static aa field_H;
-    static UiWidget field_P;
+    static UiPanel field_P;
     static String field_M;
     static String field_T;
     private of field_R;
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 <= 6) {
             lr.a((byte) 76);
@@ -54,7 +54,7 @@ final class lr extends d {
         field_P = null;
     }
 
-    final boolean a(byte param0, iq param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -116,70 +116,70 @@ final class lr extends d {
           var15 = jn.field_b[0];
           var9 = var15.field_x << 1;
           var10 = var15.field_B << 1;
-          if (UiWidget.field_E == null) {
-            UiWidget.field_E = new Sprite(var9, var10);
-            lq.a(UiWidget.field_E, (byte) -94);
+          if (UiPanel.field_E == null) {
+            UiPanel.field_E = new Sprite(var9, var10);
+            lq.a(UiPanel.field_E, (byte) -94);
             var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiWidget.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          if (var9 > UiWidget.field_E.field_y) {
-            UiWidget.field_E = new Sprite(var9, var10);
-            lq.a(UiWidget.field_E, (byte) -94);
+          if (var9 > UiPanel.field_E.field_y) {
+            UiPanel.field_E = new Sprite(var9, var10);
+            lq.a(UiPanel.field_E, (byte) -94);
             var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiWidget.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          if (UiWidget.field_E.field_t < var10) {
-            UiWidget.field_E = new Sprite(var9, var10);
-            lq.a(UiWidget.field_E, (byte) -94);
+          if (UiPanel.field_E.field_t < var10) {
+            UiPanel.field_E = new Sprite(var9, var10);
+            lq.a(UiPanel.field_E, (byte) -94);
             var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiWidget.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          lq.a(UiWidget.field_E, (byte) -94);
+          lq.a(UiPanel.field_E, (byte) -94);
           bi.c();
           var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
-          UiWidget.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+          UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
           return;
         }
         if (dj.field_c == var8) {
           var16 = jn.field_b[0];
           var9Lifetime1 = var16.field_x << 1;
           var10Lifetime1 = var16.field_B << 1;
-          if (UiWidget.field_E == null) {
-            UiWidget.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
-            lq.a(UiWidget.field_E, (byte) -94);
+          if (UiPanel.field_E == null) {
+            UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
+            lq.a(UiPanel.field_E, (byte) -94);
             var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiWidget.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          if (var9Lifetime1 > UiWidget.field_E.field_y) {
-            UiWidget.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
-            lq.a(UiWidget.field_E, (byte) -94);
+          if (var9Lifetime1 > UiPanel.field_E.field_y) {
+            UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
+            lq.a(UiPanel.field_E, (byte) -94);
             var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiWidget.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          if (UiWidget.field_E.field_t < var10Lifetime1) {
-            UiWidget.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
-            lq.a(UiWidget.field_E, (byte) -94);
+          if (UiPanel.field_E.field_t < var10Lifetime1) {
+            UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
+            lq.a(UiPanel.field_E, (byte) -94);
             var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiWidget.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          lq.a(UiWidget.field_E, (byte) -94);
+          lq.a(UiPanel.field_E, (byte) -94);
           bi.c();
           var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
-          UiWidget.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+          UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
           return;
         }
         if (ir.field_a == var8) {

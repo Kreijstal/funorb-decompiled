@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we extends iq {
+final class we extends UiWidget {
     private int field_K;
     static String field_N;
     private Sprite[] field_D;
@@ -86,7 +86,7 @@ final class we extends iq {
         ea.b((byte) 111);
         vb.d(65);
         if (cd.b(-27440)) {
-          uh.field_Wb.j(1, param0 ^ -1733144137);
+          uh.field_Wb.writeCipheredByte(1, param0 ^ -1733144137);
           lf.d(61, 0);
         }
         rm.b((byte) 86);
@@ -150,7 +150,7 @@ final class we extends iq {
         }
     }
 
-    final static void a(r param0, boolean param1, byte param2, r param3, r param4) {
+    final static void a(Archive param0, boolean param1, byte param2, Archive param3, Archive param4) {
         cl.field_c = qc.a(param2 + 7, "");
         cl.field_c.a(0, false);
         if (param2 != -7) {
@@ -208,7 +208,7 @@ final class we extends iq {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (16711422 & param6) >> 1);
     }
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         Sprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -305,7 +305,7 @@ final class we extends iq {
         int var2 = 6 % ((-7 - param0) / 48);
     }
 
-    private final static void a(r param0, r param1, r param2, byte param3) {
+    private final static void a(Archive param0, Archive param1, Archive param2, byte param3) {
         Sprite var17 = null;
         u[] var5 = null;
         u[][] var6 = null;
@@ -332,16 +332,16 @@ final class we extends iq {
           if (param3 != -57) {
             field_L = (String) null;
           }
-          bl.field_N = (cc) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
-          qc.field_x = (cc) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
-          sg.field_a = (cc) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
+          bl.field_N = (BitmapFont) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
+          qc.field_x = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
+          sg.field_a = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
           var17 = new Sprite(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
           vl.a(0, "commonui", param1, "dropdown");
           var5 = oh.a((byte) -39, "screen_options", "commonui", param1);
           rg.field_e = new u[4];
           wh.field_F = new u[4];
-          r.field_k = new u[4];
-          var6 = new u[][]{wh.field_F, r.field_k, rg.field_e};
+          Archive.field_k = new u[4];
+          var6 = new u[][]{wh.field_F, Archive.field_k, rg.field_e};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
