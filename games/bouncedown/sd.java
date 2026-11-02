@@ -40,7 +40,7 @@ final class sd extends sh implements rc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class sd extends sh implements rc {
         try {
           this.field_kb = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class sd extends sh implements rc {
         RuntimeException var4_ref = null;
         uc var5 = null;
         int var6 = 0;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           this.field_ob = true;
           if (param0 != -1) {
@@ -143,7 +143,7 @@ final class sd extends sh implements rc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 

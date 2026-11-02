@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke extends ai {
+final class ke extends IntrusiveNode {
     static String field_l;
     int field_j;
     static boolean field_p;
@@ -21,7 +21,7 @@ final class ke extends ai {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (!param2) {
             return;
@@ -32,7 +32,7 @@ final class ke extends ai {
               ae.field_b = false;
               var3_int = 1;
             }
-            ai.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
+            IntrusiveNode.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
             return;
           }
           if (!tk.c(250)) {
@@ -58,7 +58,7 @@ final class ke extends ai {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

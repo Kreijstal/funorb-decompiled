@@ -20,7 +20,7 @@ final class wg extends tc {
           if (!param0) {
             field_u = (qj) null;
           }
-          stackIn_3_0 = dg.a(param1.field_h.length(), '*', -13810);
+          stackIn_3_0 = Platform.a(param1.field_h.length(), '*', -13810);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,7 +32,7 @@ final class wg extends tc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

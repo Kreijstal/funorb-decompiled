@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ug extends ai {
-    ug field_l;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode field_l;
     static java.security.SecureRandom field_g;
     static tg[] field_h;
-    ug field_i;
+    DualLinkNode field_i;
     long field_j;
     static ph field_k;
 
@@ -32,7 +32,7 @@ class ug extends ai {
         }
     }
 
-    protected ug() {
+    protected DualLinkNode() {
     }
 
     static {

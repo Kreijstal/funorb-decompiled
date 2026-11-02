@@ -59,7 +59,7 @@ final class g {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        wi var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -74,9 +74,9 @@ final class g {
         int var12Lifetime1;
         int var10Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        var16 = Bounce.field_N;
+        var16 = BounceDown.field_N;
         try {
-          var17 = new wi(ta.a(21125, param1));
+          var17 = new PacketBuffer(ta.a(21125, param1));
           var4 = var17.d((byte) -86);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -222,7 +222,7 @@ final class g {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_p[var11Lifetime1][var14Lifetime1] = var17.j(ud.a(param0, 10990));
+                  this.field_p[var11Lifetime1][var14Lifetime1] = var17.j(Slime.a(param0, 10990));
                 }
                 this.field_k[var11Lifetime1] = new da(this.field_p[var11Lifetime1]);
               }
@@ -241,7 +241,7 @@ final class g {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class g {
           }
           this.a(-10989, param0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

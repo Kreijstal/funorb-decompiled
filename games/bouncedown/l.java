@@ -44,7 +44,7 @@ final class l {
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var3Lifetime1;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             ef.field_i[var2_int] = 0;
@@ -92,7 +92,7 @@ final class l {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class l {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

@@ -6,7 +6,7 @@ final class dk {
     static String field_b;
     static int field_c;
 
-    final static void a(int param0, int param1, wi param2, int param3, java.math.BigInteger param4, java.math.BigInteger param5, byte[] param6) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, java.math.BigInteger param4, java.math.BigInteger param5, byte[] param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -26,21 +26,21 @@ final class dk {
         int[] var12 = null;
         int[] var13 = null;
         int var9Lifetime1;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           var7_int = ca.a(param0, (byte) 27);
-          if (null == ug.field_g) {
-            ug.field_g = new java.security.SecureRandom();
+          if (null == DualLinkNode.field_g) {
+            DualLinkNode.field_g = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = ug.field_g.nextInt();
+            var8[var9] = DualLinkNode.field_g.nextInt();
           }
           if (ae.field_a == null ||
             !(var7_int <= ae.field_a.field_i.length)) {
-            ae.field_a = new wi(var7_int);
+            ae.field_a = new PacketBuffer(var7_int);
           }
           ae.field_a.field_h = 0;
           ae.field_a.a(param1, true, param0, param6);
@@ -48,7 +48,7 @@ final class dk {
           ae.field_a.a(var13, 4);
           if (null == fb.field_jb ||
             !(fb.field_jb.field_i.length >= 100)) {
-            fb.field_jb = new wi(100);
+            fb.field_jb = new PacketBuffer(100);
           }
           fb.field_jb.field_h = 0;
           fb.field_jb.a(10, (byte) 54);
@@ -91,7 +91,7 @@ final class dk {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class dk {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
@@ -153,7 +153,7 @@ final class dk {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

@@ -63,7 +63,7 @@ final class ok {
         try {
           this.field_b = this.field_b + (long)param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ok.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ok.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class ok {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class ok {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class ok {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -173,8 +173,8 @@ final class ok {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          ii var4 = null;
-          ii var5 = null;
+          CipherPacketBuffer var4 = null;
+          CipherPacketBuffer var5 = null;
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == ec.field_P) {
@@ -196,9 +196,9 @@ final class ok {
               ak.field_z = stackIn_13_0;
               i.field_f = stackIn_13_0;
               ck.field_b = stackIn_13_0;
-              pj.field_a = ga.field_c;
+              pj.field_a = ClientException.field_c;
               var5.field_h = 0;
-              fj.a(fi.field_b, 6, cf.field_a, hh.field_p, of.field_c);
+              AppletShell.a(fi.field_b, 6, cf.field_a, hh.field_p, of.field_c);
               jj.a(-1, true);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

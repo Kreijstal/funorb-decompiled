@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends ai {
+final class ld extends IntrusiveNode {
     static pk field_l;
     boolean field_g;
     int field_k;
@@ -18,10 +18,10 @@ final class ld extends ai {
         Object var5 = null;
         int var6 = 0;
         bi var8 = null;
-        ii var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var13 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var9 = jc.field_g;
           if (param0 <= 36) {
@@ -29,7 +29,7 @@ final class ld extends ai {
           }
           var2 = var9.d((byte) -125);
           if (0 == var2) {
-            var8 = (bi) (kk.field_n.a((byte) -123));
+            var8 = (bi) (GameClient.field_n.a((byte) -123));
             if (var8 == null) {
               kc.a((byte) 18);
               return;
@@ -55,10 +55,10 @@ final class ld extends ai {
             return;
           }
           var3 = var9.j(-3);
-          var4_ref_gf = (gf) (ud.field_k.a((byte) -92));
+          var4_ref_gf = (gf) (Slime.field_k.a((byte) -92));
           while (var4_ref_gf != null) {
             if (var3 != var4_ref_gf.field_i) {
-              var4_ref_gf = (gf) (ud.field_k.d((byte) -73));
+              var4_ref_gf = (gf) (Slime.field_k.d((byte) -73));
               continue;
             }
             break;
@@ -72,7 +72,7 @@ final class ld extends ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "ld.C(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "ld.C(" + param0 + ')');
         }
     }
 

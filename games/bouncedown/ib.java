@@ -22,7 +22,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var4_int = -1;
           for (var5 = param2; param0 > var5; var5++) {
@@ -44,7 +44,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -62,11 +62,11 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var2 = ah.a(-3058, param0, "jagex-last-login-method");
           if (var2 == null) {
-            stackIn_4_0 = ug.field_k;
+            stackIn_4_0 = DualLinkNode.field_k;
             return stackIn_4_0;
           }
           var3 = ge.b(27579);
@@ -76,7 +76,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           var4 = 0;
           while (true) {
             if (var3.length <= var4) {
-              stackIn_14_0 = ug.field_k;
+              stackIn_14_0 = DualLinkNode.field_k;
               return stackIn_14_0;
             }
             var5 = var3[var4];
@@ -98,7 +98,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_p);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ib.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ib.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (param2 < 68) {
             return;
@@ -173,7 +173,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           int var5_int = 111 % ((-33 - param3) / 52);
           param2.drawImage(this.field_e, param1, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
             this.field_l = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ib.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ib.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ib.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ib.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
           param2.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
           this.c(64);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -62,7 +62,7 @@ class jd implements fc, sf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ class jd implements fc, sf {
               stackIn_5_3 = var14.field_a[1 + var7].field_f;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            ai.a(param4 + param0.field_r + param0.field_k, param0.field_m + param0.field_i + param3, param3 + param0.field_i, param0.field_r + param4, -19852);
+            IntrusiveNode.a(param4 + param0.field_r + param0.field_k, param0.field_m + param0.field_i + param3, param3 + param0.field_i, param0.field_r + param4, -19852);
             ma.field_m.a(var10, var11, this.field_j, false, var10, var12);
             ve.a(-124);
           }
@@ -187,7 +187,7 @@ class jd implements fc, sf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ class jd implements fc, sf {
           param0.field_m = this.field_m;
           param0.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jd.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jd.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ class jd implements fc, sf {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           if (param1 > param3) {
             var8 = new byte[param2];
@@ -256,7 +256,7 @@ class jd implements fc, sf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ class jd implements fc, sf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -306,9 +306,9 @@ class jd implements fc, sf {
         int var12 = 0;
         int var13 = 0;
         int var12Lifetime1;
-        var13 = Bounce.field_N;
+        var13 = BounceDown.field_N;
         try {
-          ai.a(param3.field_k + (param3.field_r + param4), param3.field_m + (param3.field_i + param6), param3.field_i + param6, param3.field_r + param4, -19852);
+          IntrusiveNode.a(param3.field_k + (param3.field_r + param4), param3.field_m + (param3.field_i + param6), param3.field_i + param6, param3.field_r + param4, -19852);
           var9_int = this.a(param3, (byte) -55);
           if (param2 != 41) {
             this.field_b = (tj) null;
@@ -359,7 +359,7 @@ class jd implements fc, sf {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ class jd implements fc, sf {
             }
             kc.a(param1, 27477);
           } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "jd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -437,7 +437,7 @@ class jd implements fc, sf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -464,7 +464,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -493,7 +493,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -516,7 +516,7 @@ class jd implements fc, sf {
         int var16 = 0;
         ed var17 = null;
         ed var18 = null;
-        var16 = Bounce.field_N;
+        var16 = BounceDown.field_N;
         try {
           if (param4 == param3) {
             return;
@@ -536,7 +536,7 @@ class jd implements fc, sf {
             }
             var10 = var18.b(var8, 0);
             var11 = var18.b(var9, 0);
-            ai.a(param1.field_k + param1.field_r + param0, param1.field_i + (param2 + param1.field_m), param1.field_i + param2, param1.field_r + param0, -19852);
+            IntrusiveNode.a(param1.field_k + param1.field_r + param0, param1.field_i + (param2 + param1.field_m), param1.field_i + param2, param1.field_r + param0, -19852);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_a[var12];
               if (var12 == var10) {
@@ -571,7 +571,7 @@ class jd implements fc, sf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -608,7 +608,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -635,7 +635,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -652,7 +652,7 @@ class jd implements fc, sf {
         int var7 = 0;
         lk var8 = null;
         int var6Lifetime1;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           if (param0 > -2) {
             var8 = (lk) null;
@@ -708,7 +708,7 @@ class jd implements fc, sf {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -719,7 +719,7 @@ class jd implements fc, sf {
         try {
           this.a(0, this.field_h, (byte) 41, param1, param0, this.field_c, param3, 0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jd.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jd.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -746,7 +746,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -774,7 +774,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -803,7 +803,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -812,7 +812,7 @@ class jd implements fc, sf {
         int var3;
         int var4;
         eh[] var5;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         var5 = ge.a(true);
         var2 = var5;
         var3 = 0;
@@ -853,7 +853,7 @@ class jd implements fc, sf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -865,7 +865,7 @@ class jd implements fc, sf {
           this.a(param4, param1, -9087, param0);
           int var6_int = -93 % ((param2 + 60) / 56);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -888,7 +888,7 @@ class jd implements fc, sf {
           this.field_h = param5;
           this.field_c = param6;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

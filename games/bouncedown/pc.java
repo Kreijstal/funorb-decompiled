@@ -34,7 +34,7 @@ final class pc implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = Bounce.field_N;
+          var6 = BounceDown.field_N;
           try {
             while (true) {
               var3 = this;
@@ -125,7 +125,7 @@ final class pc implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           if (this.field_l) {
             return;
@@ -162,7 +162,7 @@ final class pc implements Runnable {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class pc implements Runnable {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           if (this.field_l) {
             return;
@@ -201,7 +201,7 @@ final class pc implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class pc implements Runnable {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           if (param3 >= 2 &&
             param3 <= 36) {
@@ -291,14 +291,14 @@ final class pc implements Runnable {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(byte param0) {
         try {
           int var4 = 0;
-          var4 = Bounce.field_N;
+          var4 = BounceDown.field_N;
           if (this.field_l) {
             return;
           }
@@ -337,7 +337,7 @@ final class pc implements Runnable {
         int var8;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         if (oa.field_a < 0) {
           return;
         }
@@ -369,13 +369,13 @@ final class pc implements Runnable {
           if (var6 >= 20) {
             if (30 <= var6) {
               var7 = (-(var6 * 256) + 12800) / 20;
-              Bounce.field_G.a(var3, var4, var7);
+              BounceDown.field_G.a(var3, var4, var7);
             } else {
-              Bounce.field_G.a(var3, var4, 256);
+              BounceDown.field_G.a(var3, var4, 256);
             }
           } else {
             var7 = 256 * var6 / 20;
-            Bounce.field_G.a(var3, var4, var7);
+            BounceDown.field_G.a(var3, var4, var7);
           }
         }
         var6Lifetime1 = -140 + oa.field_a;
@@ -446,7 +446,7 @@ final class pc implements Runnable {
           this.field_k = this.field_n.getOutputStream();
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

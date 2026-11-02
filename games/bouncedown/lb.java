@@ -8,7 +8,7 @@ final class lb {
     int field_d;
     int field_f;
     int field_a;
-    static wi field_g;
+    static PacketBuffer field_g;
 
     final static void a(tj param0, int param1, int param2, tj param3) {
         try {
@@ -19,7 +19,7 @@ final class lb {
           int var4_int = -4 % ((param2 + 34) / 39);
           hh.b(param0.field_x + param0.field_F, param3.field_F, param0.field_F, param3.field_F + param3.field_x, 0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "lb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "lb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class lb {
         field_g = null;
     }
 
-    final static a[] a(int param0, ii param1) {
+    final static a[] a(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -47,7 +47,7 @@ final class lb {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           var2_int = param1.f(7, 8);
           if (param0 < 42) {
@@ -86,13 +86,13 @@ final class lb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     static {
         field_b = 0;
         field_c = new int[16384];
-        field_g = new wi(256);
+        field_g = new PacketBuffer(256);
     }
 }

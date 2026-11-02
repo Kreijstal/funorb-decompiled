@@ -42,7 +42,7 @@ abstract class kf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class kf {
         int var10 = 0;
         int var11 = 0;
         CharSequence var12 = null;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           if (2 <= param0 &&
             param0 <= 36) {
@@ -140,7 +140,7 @@ abstract class kf {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -20,15 +20,15 @@ final class vg implements fc {
         int stackIn_11_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
-        ii var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        ii var8 = null;
+        CipherPacketBuffer var8 = null;
         ne var9 = null;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         if (param1 != 3904) {
           vg.a((byte) 2);
         }
@@ -93,11 +93,11 @@ final class vg implements fc {
     final static void a(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ii var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = Bounce.field_N;
+        var3 = BounceDown.field_N;
         try {
           var1 = hh.field_p;
           if (param0 != -17) {
@@ -115,7 +115,7 @@ final class vg implements fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "vg.C(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "vg.C(" + param0 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class vg implements fc {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           if (!(param1 instanceof d)) {
             stackIn_4_0 = null;
@@ -167,7 +167,7 @@ final class vg implements fc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class vg implements fc {
           this.field_i = param3;
           this.field_h = param5;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

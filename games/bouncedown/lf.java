@@ -3,7 +3,7 @@
  */
 final class lf extends gj {
     static hc field_q;
-    wi field_p;
+    PacketBuffer field_p;
     int field_t;
     byte field_s;
     static int[][] field_r;
@@ -19,7 +19,7 @@ final class lf extends gj {
         throw new RuntimeException();
     }
 
-    final static jk a(ii param0, byte param1) {
+    final static jk a(CipherPacketBuffer param0, byte param1) {
         int var7 = 0;
         jk stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -33,13 +33,13 @@ final class lf extends gj {
         jk var5 = null;
         int var6 = 0;
         int var8 = 0;
-        ii var9 = null;
-        var8 = Bounce.field_N;
+        CipherPacketBuffer var9 = null;
+        var8 = BounceDown.field_N;
         try {
           var2_int = param0.f(7, 8);
           if (param1 > -32) {
-            var9 = (ii) null;
-            lf.a((ii) null, (byte) -64);
+            var9 = (CipherPacketBuffer) null;
+            lf.a((CipherPacketBuffer) null, (byte) -64);
           }
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
@@ -101,7 +101,7 @@ final class lf extends gj {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class lf extends gj {
         int var3;
         int var4;
         {
-          var4 = Bounce.field_N;
+          var4 = BounceDown.field_N;
           var3 = 35 / ((23 - param1) / 57);
           if ((param0 <= 0 ||
             128 <= param0) && (param0 < 160 ||
@@ -200,7 +200,7 @@ final class lf extends gj {
     lf() {
     }
 
-    final static void a(ai param0, ai param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (null != param1.field_f) {
             param1.c(2);
@@ -213,15 +213,15 @@ final class lf extends gj {
           param1.field_f.field_c = param1;
           param1.field_c.field_f = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static ld a(int param0, int param1) {
         ld var2 = new ld();
         if (param0 >= -59) {
-          ai var3 = (ai) null;
-          lf.a((ai) null, (ai) null, 33);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          lf.a((IntrusiveNode) null, (IntrusiveNode) null, 33);
         }
         ne.field_r.a(1, var2);
         ea.a(2, param1);

@@ -9,11 +9,11 @@ final class ca {
     static ef field_d;
 
     final static void a(boolean param0) {
-        ud dupTemp$4 = null;
-        ud dupTemp$0 = null;
-        ud dupTemp$1 = null;
-        ud dupTemp$2 = null;
-        ud dupTemp$3 = null;
+        Slime dupTemp$4 = null;
+        Slime dupTemp$0 = null;
+        Slime dupTemp$1 = null;
+        Slime dupTemp$2 = null;
+        Slime dupTemp$3 = null;
         RuntimeException decompiledCaughtException = null;
         boolean[] var1 = null;
         RuntimeException var1_ref = null;
@@ -27,7 +27,7 @@ final class ca {
         int var2Lifetime3;
         int var2Lifetime4;
         int var3Lifetime1;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           var5 = new boolean[]{false, false, param0};
           var1 = var5;
@@ -147,7 +147,7 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "ca.C(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "ca.C(" + param0 + ')');
         }
     }
 

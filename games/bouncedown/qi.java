@@ -21,7 +21,7 @@ final class qi extends jd {
         kg var6 = null;
         int var7 = 0;
         tg[] var8 = null;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           super.a(param2, (byte) -122);
           if (param1 != -19463) {
@@ -60,7 +60,7 @@ final class qi extends jd {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class qi extends jd {
         try {
           this.field_q[param1].field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "qi.IA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qi.IA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class qi extends jd {
             stackIn_3_0 = null;
           }
           var10 = (wd) (stackIn_3_0);
-          ai.a(param1.field_k + (param1.field_r + param4), param1.field_m + (param0 + param1.field_i), param0 + param1.field_i, param1.field_r + param4, -19852);
+          IntrusiveNode.a(param1.field_k + (param1.field_r + param4), param1.field_m + (param0 + param1.field_i), param0 + param1.field_i, param1.field_r + param4, -19852);
           if (var10 != null) {
             param3 = param3 & var10.field_y;
           }
@@ -171,7 +171,7 @@ final class qi extends jd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class qi extends jd {
         try {
           param0.a(param1, -19463, this);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class qi extends jd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class qi extends jd {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class qi extends jd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var8 = this.field_q;
           var3 = var8;
@@ -323,7 +323,7 @@ final class qi extends jd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class qi extends jd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -367,7 +367,7 @@ final class qi extends jd {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var7 = this.field_q;
           var3 = var7;
@@ -391,7 +391,7 @@ final class qi extends jd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -420,8 +420,8 @@ final class qi extends jd {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wi var16 = null;
-        wi var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -431,9 +431,9 @@ final class qi extends jd {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = Bounce.field_N;
+        var15 = BounceDown.field_N;
         try {
-          var16 = new wi(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.field_h = param0.length - 2;
           nj.field_p = var17.a(-1640531527);
@@ -488,7 +488,7 @@ final class qi extends jd {
             var11 = var17.d((byte) -118);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.k(ud.a(param1, -12011));
+                var8[var12] = var17.k(Slime.a(param1, -12011));
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
@@ -540,7 +540,7 @@ final class qi extends jd {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 

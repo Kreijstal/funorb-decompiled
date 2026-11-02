@@ -42,7 +42,7 @@ final class qd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class qd {
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
@@ -137,7 +137,7 @@ final class qd {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
         }
     }
 

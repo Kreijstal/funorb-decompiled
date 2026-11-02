@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oe {
-    private wi field_i;
+    private PacketBuffer field_i;
     private int[] field_h;
     int field_b;
     int[] field_d;
@@ -132,7 +132,7 @@ final class oe {
     }
 
     oe() {
-        this.field_i = new wi((byte[]) null);
+        this.field_i = new PacketBuffer((byte[]) null);
     }
 
     final void b() {
@@ -162,7 +162,7 @@ final class oe {
     }
 
     oe(byte[] param0) {
-        this.field_i = new wi((byte[]) null);
+        this.field_i = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

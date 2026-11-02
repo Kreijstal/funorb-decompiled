@@ -72,7 +72,7 @@ final class eh {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = Bounce.field_N;
+        var40 = BounceDown.field_N;
         try {
           var46 = param0;
           if (null != var46.field_v &&
@@ -146,12 +146,12 @@ final class eh {
               stackIn_32_0 = param0.field_Q[var14Lifetime1];
             }
             var20 = stackIn_32_0;
-            if (wi.field_g != null &&
+            if (PacketBuffer.field_g != null &&
               param0.field_p != null &&
               var14Lifetime1 < param0.field_p.length &&
               -1 != param0.field_p[var14Lifetime1] &&
-              wi.field_g.length > param0.field_p[var14Lifetime1]) {
-              stackIn_39_0 = wi.field_g[param0.field_p[var14Lifetime1]];
+              PacketBuffer.field_g.length > param0.field_p[var14Lifetime1]) {
+              stackIn_39_0 = PacketBuffer.field_g[param0.field_p[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }
@@ -198,7 +198,7 @@ final class eh {
               var39 = -385941249 & var30 * var35 >>> 8 | (16711929 & var30 * var36) >>> 8;
               var38 = var38 + var32 * 65793;
               var39 = var39 + var33 * 65793;
-              ud.a(var22, 255 & var37 >> 8, (var39 & 65522) >> 8, 255 & var38, var38 >> 16, 255 & var37, var37 >> 16, 100000, var39 >> 16, var25, var27, 255 & var38 >> 8, 255 & var39, var23, var24, var26);
+              Slime.a(var22, 255 & var37 >> 8, (var39 & 65522) >> 8, 255 & var38, var38 >> 16, 255 & var37, var37 >> 16, 100000, var39 >> 16, var25, var27, 255 & var38 >> 8, 255 & var39, var23, var24, var26);
             }
             var45++;
           }
@@ -213,7 +213,7 @@ final class eh {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class eh {
           kg.field_j = param0;
           oh.a(-92, 12);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "eh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "eh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

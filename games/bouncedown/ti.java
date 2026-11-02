@@ -39,7 +39,7 @@ final class ti extends ba implements wc {
           }
           this.field_M = -param1 + (uc.field_C - this.field_r);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ti.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ti.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ti extends ba implements wc {
           }
           this.field_N = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ti.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ti.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class ti extends ba implements wc {
           String var8 = null;
           String var9 = null;
           String var10 = null;
-          var6 = Bounce.field_N;
+          var6 = BounceDown.field_N;
           try {
             var3 = "";
             if (param0 != null) {
@@ -163,7 +163,7 @@ final class ti extends ba implements wc {
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           var1_int = jl.field_a;
           if (param0 != 6) {
@@ -236,7 +236,7 @@ final class ti extends ba implements wc {
               }
               var9 = stackIn_47_0;
               if (var9 != null) {
-                var9.a(var1_int, -kk.field_z + var8Lifetime1, (kk.field_z << 1) + var7Lifetime1, param0 ^ -21909, (cl.field_m << 1) + pb.field_j);
+                var9.a(var1_int, -GameClient.field_z + var8Lifetime1, (GameClient.field_z << 1) + var7Lifetime1, param0 ^ -21909, (cl.field_m << 1) + pb.field_j);
               }
               var1_int = var1_int + cl.field_m;
             }
@@ -252,7 +252,7 @@ final class ti extends ba implements wc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "ti.Q(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "ti.Q(" + param0 + ')');
         }
     }
 

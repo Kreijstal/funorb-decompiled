@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gj extends ug {
+abstract class gj extends DualLinkNode {
     volatile boolean field_n;
     boolean field_m;
     boolean field_o;

@@ -52,7 +52,7 @@ final class ek extends ji {
         int var38Lifetime2;
         int var39Lifetime2;
         int var40Lifetime2;
-        var42 = Bounce.field_N;
+        var42 = BounceDown.field_N;
         try {
           if (param12 >= 0 &&
             param13 < qk.field_g) {
@@ -338,7 +338,7 @@ final class ek extends ji {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 

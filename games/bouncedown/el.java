@@ -15,7 +15,7 @@ final class el extends sg {
         int var4;
         int var5;
         int var6;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         var4 = -123 % ((-65 - param0) / 37);
         if (this.field_j > this.field_d) {
           this.field_g = this.field_g + (this.field_j - this.field_d);
@@ -38,7 +38,7 @@ final class el extends sg {
     private final long b(int param0) {
         long var6 = 0L;
         int var8 = 0;
-        int var9 = Bounce.field_N;
+        int var9 = BounceDown.field_N;
         long var2 = System.nanoTime();
         long var4 = var2 - this.field_g;
         long var6Lifetime1;
@@ -117,9 +117,9 @@ final class el extends sg {
             String var3 = (String) null;
             el.a((byte) -31, (String) null);
           }
-          fj.a(false, sh.field_jb, -1);
+          AppletShell.a(false, sh.field_jb, -1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "el.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "el.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

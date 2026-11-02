@@ -43,7 +43,7 @@ final class vh {
           int var15 = 0;
           int var18 = 0;
           byte[] var19 = null;
-          var18 = Bounce.field_N;
+          var18 = BounceDown.field_N;
           var3 = this.field_b;
           synchronized (var3) {
             try {
@@ -183,7 +183,7 @@ final class vh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class vh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class vh {
           int var13 = 0;
           EOFException var14 = null;
           int var16 = 0;
-          var16 = Bounce.field_N;
+          var16 = BounceDown.field_N;
           try {
             var6 = this.field_b;
             synchronized (var6) {
@@ -271,7 +271,7 @@ final class vh {
                 this.field_f.a(0, fk.field_c, 6, 0);
                 var8 = 0;
                 var9 = param0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param2) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -287,7 +287,7 @@ final class vh {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = 255 & fk.field_c[9];
                         var12 = (fk.field_c[5] & 255) + ((fk.field_c[4] & 255) << 8);
@@ -303,7 +303,7 @@ final class vh {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (fk.field_c[5] << 8 & 65280) + (fk.field_c[4] << 16 & 16711680) + (255 & fk.field_c[6]);
                         var12 = ((fk.field_c[2] & 255) << 8) + (fk.field_c[3] & 255);
@@ -394,7 +394,7 @@ final class vh {
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -453,7 +453,7 @@ final class vh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -483,7 +483,7 @@ final class vh {
           this.field_c = param3;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

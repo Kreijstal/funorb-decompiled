@@ -4,7 +4,7 @@
 final class ua {
     static long field_d;
     static int field_b;
-    static dg[] field_c;
+    static Platform[] field_c;
     static int field_a;
     private static String field_z;
 
@@ -19,7 +19,7 @@ final class ua {
         field_z = "ua.A(";
         field_b = 50;
         field_d = 0L;
-        field_c = new dg[field_b];
+        field_c = new Platform[field_b];
         field_a = -1;
     }
 }

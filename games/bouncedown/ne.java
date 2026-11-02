@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends ug {
+final class ne extends DualLinkNode {
     private String[] field_p;
     private int[] field_t;
     static int field_w;
@@ -14,7 +14,7 @@ final class ne extends ug {
     static String field_q;
     static int field_n;
 
-    final static short[] a(int param0, int param1, short[] param2, ii param3) {
+    final static short[] a(int param0, int param1, short[] param2, CipherPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -29,7 +29,7 @@ final class ne extends ug {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var4_int = param3.f(7, param1);
           if (var4_int == 0) {
@@ -69,7 +69,7 @@ final class ne extends ug {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class ne extends ug {
         int var4 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var5 = Bounce.field_N;
+        int var5 = BounceDown.field_N;
         StringBuilder var6 = new StringBuilder(80);
         StringBuilder var2 = var6;
         int var3 = -44 / ((-51 - param0) / 41);
@@ -94,7 +94,7 @@ final class ne extends ug {
 
     final static tg a(boolean param0) {
         int var4_int = 0;
-        int var5 = Bounce.field_N;
+        int var5 = BounceDown.field_N;
         int var1 = ih.field_V[0] * qh.field_i[0];
         byte[] var2 = ph.field_c[0];
         int[] var3 = new int[var1];
@@ -109,7 +109,7 @@ final class ne extends ug {
         return var4;
     }
 
-    final void a(int param0, wi param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -118,7 +118,7 @@ final class ne extends ug {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           var3_int = -46 % ((-75 - param0) / 37);
           while (true) {
@@ -138,13 +138,13 @@ final class ne extends ug {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final void d(int param0) {
         int var2 = 0;
-        int var3 = Bounce.field_N;
+        int var3 = BounceDown.field_N;
         if (null != this.field_s) {
           for (var2 = 0; var2 < this.field_s.length; var2++) {
             this.field_s[var2] = ge.a(this.field_s[var2], 32768);
@@ -167,7 +167,7 @@ final class ne extends ug {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           if (param0 == null) {
             return false;
@@ -216,7 +216,7 @@ final class ne extends ug {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class ne extends ug {
         field_r = null;
     }
 
-    private final void a(byte param0, wi param1, int param2) {
+    private final void a(byte param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -251,7 +251,7 @@ final class ne extends ug {
         int var6 = 0;
         eh var7 = null;
         int var9 = 0;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           if (param0 != 18) {
             return;
@@ -298,7 +298,7 @@ final class ne extends ug {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 

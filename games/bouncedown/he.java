@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends ai {
+final class he extends IntrusiveNode {
     static mf field_p;
     int[] field_g;
     int field_m;
     int field_s;
     int field_q;
-    static ud[] field_n;
+    static Slime[] field_n;
     int field_r;
     int field_h;
     int field_j;
@@ -50,14 +50,14 @@ final class he extends ai {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ii var14 = null;
+        CipherPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         var3 = null;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           var14 = jc.field_g;
           var2 = var14.d((byte) -77);
@@ -139,7 +139,7 @@ final class he extends ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "he.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "he.A(" + param0 + ')');
         }
     }
 
@@ -168,13 +168,13 @@ final class he extends ai {
           this.field_s = param2;
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "he.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "he.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_l = "Checking";
-        field_n = new ud[3];
+        field_n = new Slime[3];
         field_p = new mf();
         field_i = "Unpacking graphics";
     }

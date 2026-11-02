@@ -24,7 +24,7 @@ class sh extends mh implements rc {
         RuntimeException var4 = null;
         int var5 = 0;
         uc var6 = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           if (this.field_ib) {
             return;
@@ -59,7 +59,7 @@ class sh extends mh implements rc {
                   this.a(10768, var6);
                   return;
                 }
-                var6.a(fj.field_d, (sk) (this), -4);
+                var6.a(AppletShell.field_d, (sk) (this), -4);
               }
             } else {
               var6.a(ck.field_f, 8, (byte) 97);
@@ -79,7 +79,7 @@ class sh extends mh implements rc {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ class sh extends mh implements rc {
           this.field_db.field_C = true;
           this.b(this.field_db, true);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ class sh extends mh implements rc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ class sh extends mh implements rc {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

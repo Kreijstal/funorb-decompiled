@@ -33,7 +33,7 @@ final class vd {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var3 = ih.a(param2, param1, false);
           var4 = 68 / ((-7 - param0) / 57);
@@ -64,11 +64,11 @@ final class vd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(byte param0, wi param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -90,7 +90,7 @@ final class vd {
           ed.field_b = ed.field_b + (var2_intLifetime2 >> 1);
           qe.field_i = qe.field_i + param1.a(-1640531527);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

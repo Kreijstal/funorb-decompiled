@@ -15,7 +15,7 @@ final class cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "cg.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "cg.A(" + param0 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 100, "loginm2");
                 if (null != var2) {
-                  dg.field_k = c.a(0, var2);
+                  Platform.field_k = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 112, "loginm1");
                 if (null != var2) {
@@ -1058,7 +1058,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 109, "changedisplayname");
                 if (null != var2) {
-                  fj.field_d = c.a(0, var2);
+                  AppletShell.field_d = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 116, "returntohomepage");
                 if (var2 != null) {
@@ -1294,7 +1294,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 105, "openinpopupwindow");
                 if (null != var2) {
-                  ud.field_b = c.a(0, var2);
+                  Slime.field_b = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 93, "create");
                 if (var2 != null) {
@@ -1530,7 +1530,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 87, "create_displayname_hint");
                 if (var2 != null) {
-                  dg.field_i = c.a(param0 ^ -99, var2);
+                  Platform.field_i = c.a(param0 ^ -99, var2);
                 }
                 var2 = hg.a((byte) 122, "create_password_tooltip");
                 if (var2 != null) {
@@ -1630,7 +1630,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 114, "create_alert_passcontainsname_partial");
                 if (var2 != null) {
-                  kk.field_t = c.a(0, var2);
+                  GameClient.field_t = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 89, "create_alert_checkname");
                 if (var2 != null) {
@@ -1822,7 +1822,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 91, "loading_soundeffects");
                 if (var2 != null) {
-                  fj.field_k = c.a(param0 + 99, var2);
+                  AppletShell.field_k = c.a(param0 + 99, var2);
                 }
                 var2 = hg.a((byte) 95, "loading_music");
                 if (var2 != null) {
@@ -1906,7 +1906,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 116, "fullscreen");
                 if (null != var2) {
-                  fj.field_g = c.a(0, var2);
+                  AppletShell.field_g = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 113, "screensize");
                 if (var2 != null) {
@@ -2032,7 +2032,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 112, "ok");
                 if (null != var2) {
-                  ga.field_b = c.a(0, var2);
+                  ClientException.field_b = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 85, "on");
                 if (null != var2) {
@@ -2300,7 +2300,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 124, "no_highscores");
                 if (null != var2) {
-                  kk.field_w = c.a(0, var2);
+                  GameClient.field_w = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 110, "hs_name");
                 if (null != var2) {
@@ -2520,7 +2520,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 127, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
-                  nb.field_h[4] = c.a(ud.a((int) param0, -99), var2);
+                  nb.field_h[4] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 96, "quickchat_shortcut_keys,5");
                 if (null != var2) {
@@ -2772,15 +2772,15 @@ final class cg {
                 }
                 var2 = hg.a((byte) 97, "hs_mode_name,2");
                 if (null != var2) {
-                  of.field_d[2] = c.a(ud.a((int) param0, -99), var2);
+                  of.field_d[2] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 110, "rating_mode_name,0");
                 if (null != var2) {
-                  dg.field_f[0] = c.a(0, var2);
+                  Platform.field_f[0] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 88, "rating_mode_name,1");
                 if (var2 != null) {
-                  dg.field_f[1] = c.a(param0 + 99, var2);
+                  Platform.field_f[1] = c.a(param0 + 99, var2);
                 }
                 var2 = hg.a((byte) 109, "rating_mode_long_name,0");
                 if (var2 != null) {
@@ -2875,7 +2875,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 119, "mustlogin2,6");
                 if (var2 != null) {
-                  hc.field_e[6] = c.a(ud.a((int) param0, -99), var2);
+                  hc.field_e[6] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 90, "mustlogin2,7");
                 if (var2 != null) {
@@ -2931,7 +2931,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 114, "mustlogin4,5");
                 if (var2 != null) {
-                  vg.field_a[5] = c.a(ud.a((int) param0, -99), var2);
+                  vg.field_a[5] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 119, "mustlogin4,6");
                 if (var2 != null) {
@@ -2939,7 +2939,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 85, "mustlogin4,7");
                 if (var2 != null) {
-                  vg.field_a[7] = c.a(ud.a((int) param0, -99), var2);
+                  vg.field_a[7] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 124, "mustlogin_notloggedin");
                 if (var2 != null) {
@@ -2955,7 +2955,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 106, "mustlogin_alternate,3");
                 if (var2 != null) {
-                  qi.field_s[3] = c.a(ud.a((int) param0, -99), var2);
+                  qi.field_s[3] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 98, "mustlogin_alternate,4");
             }
@@ -2965,11 +2965,11 @@ final class cg {
                 }
                 var2 = hg.a((byte) 117, "mustlogin_alternate,5");
                 if (var2 != null) {
-                  qi.field_s[5] = c.a(ud.a((int) param0, -99), var2);
+                  qi.field_s[5] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 120, "mustlogin_alternate,6");
                 if (null != var2) {
-                  qi.field_s[6] = c.a(ud.a((int) param0, -99), var2);
+                  qi.field_s[6] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 123, "mustlogin_alternate,7");
                 if (var2 != null) {
@@ -2989,7 +2989,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 116, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  ag.field_b[3] = c.a(ud.a((int) param0, -99), var2);
+                  ag.field_b[3] = c.a(Slime.a((int) param0, -99), var2);
                 }
                 var2 = hg.a((byte) 103, "subscription_cost_monthly,4");
                 if (null != var2) {
@@ -3034,7 +3034,7 @@ final class cg {
                 la.field_D = null;
             }
             void run() {
-                var3 = Bounce.field_N;
+                var3 = BounceDown.field_N;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -3054,12 +3054,12 @@ final class cg {
                   } else {
                     stackIn_2610_2 = "{...}";
                   }
-                  throw ii.a((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
+                  throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = fj.field_j;
+                  var4 = AppletShell.field_j;
                   var4++;
-                  fj.field_j = var4;
+                  AppletShell.field_j = var4;
                 }
             }
         }

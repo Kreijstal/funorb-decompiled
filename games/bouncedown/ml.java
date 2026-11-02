@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ml {
-    private ug field_a;
+    private DualLinkNode field_a;
     static jd field_e;
     static tg field_d;
     static String field_c;
     static int[] field_f;
-    private ug field_b;
+    private DualLinkNode field_b;
 
     final static void e(int param0) {
         ge.field_c = 0;
@@ -24,10 +24,10 @@ final class ml {
     }
 
     final int a(byte param0) {
-        ug var3 = null;
-        int var4 = Bounce.field_N;
+        DualLinkNode var3 = null;
+        int var4 = BounceDown.field_N;
         int var2 = 0;
-        ug var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (param0 == 12) {
           var3 = this.field_a.field_l;
           while (var3 != this.field_a) {
@@ -45,8 +45,8 @@ final class ml {
         return var2;
     }
 
-    final ug d(int param0) {
-        ug var2 = this.field_a.field_l;
+    final DualLinkNode d(int param0) {
+        DualLinkNode var2 = this.field_a.field_l;
         if (param0 >= -74) {
           field_c = (String) null;
           if (var2 != this.field_a) {
@@ -64,7 +64,7 @@ final class ml {
         return null;
     }
 
-    final void a(byte param0, ug param1) {
+    final void a(byte param0, DualLinkNode param1) {
         if (param1.field_i != null) {
           param1.a(92);
         }
@@ -77,14 +77,14 @@ final class ml {
         try {
           param1.field_l.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ml.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ml.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ug a(int param0) {
-        ug var2 = this.field_a.field_l;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a.field_l;
         if (param0 != -1) {
-          return (ug) null;
+          return (DualLinkNode) null;
         }
         if (this.field_a != var2) {
           var2.a(param0 ^ -7);
@@ -105,8 +105,8 @@ final class ml {
         field_e = null;
     }
 
-    final ug b(int param0) {
-        ug var2 = this.field_b;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_b;
         if (this.field_a == var2) {
           this.field_b = null;
           return null;
@@ -121,7 +121,7 @@ final class ml {
     }
 
     public ml() {
-        this.field_a = new ug();
+        this.field_a = new DualLinkNode();
         this.field_a.field_i = this.field_a;
         this.field_a.field_l = this.field_a;
     }

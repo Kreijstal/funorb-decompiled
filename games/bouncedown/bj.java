@@ -56,7 +56,7 @@ final class bj extends ak {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -72,11 +72,11 @@ final class bj extends ak {
           super.a(param0, param1, param2, param3, (int) (char)param4, param5);
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "bj.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "bj.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static void a(wi param0, byte param1, int param2, si param3) {
+    final static void a(PacketBuffer param0, byte param1, int param2, si param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -111,7 +111,7 @@ final class bj extends ak {
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
-          var14 = Bounce.field_N;
+          var14 = BounceDown.field_N;
           try {
             var18 = new hh();
             var18.field_j = param0.d((byte) -109);
@@ -215,7 +215,7 @@ final class bj extends ak {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -299,7 +299,7 @@ final class bj extends ak {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -328,16 +328,16 @@ final class bj extends ak {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = Bounce.field_N;
+        var3 = BounceDown.field_N;
         try {
-          Bounce.a(va.field_b, q.field_M, 22668, 0, w.field_d, param1, true);
+          BounceDown.a(va.field_b, q.field_M, 22668, 0, w.field_d, param1, true);
           if (param0 != -125) {
             field_E = (ng) null;
           }
           for (var2_int = 0; var2_int < q.field_M; var2_int++) {
             w.field_f[var2_int + param1] = var2_int;
           }
-          Bounce.a(mg.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
+          BounceDown.a(mg.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
           if (param1 < q.field_M) {
             q.field_M = param1;
           }
@@ -345,7 +345,7 @@ final class bj extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "bj.LA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "bj.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class bj extends ak {
           this.field_F = param7 ? true : false;
           this.field_x = param6;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "bj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "bj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -398,7 +398,7 @@ final class bj extends ak {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

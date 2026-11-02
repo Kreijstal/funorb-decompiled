@@ -38,7 +38,7 @@ final class nj extends al {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class nj extends al {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -137,51 +137,51 @@ final class nj extends al {
         int var8Lifetime3;
         int var5Lifetime2Lifetime1;
         int var7Lifetime1Lifetime1;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           ea.field_f = true;
           ne.field_u = param2;
           if (ne.field_u == 0) {
-            var3_int = r.a(ba.field_E, ga.field_g, vg.field_g, 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, gk.field_a);
             var4 = 3 + var3_int;
             se.field_E = new String[var4];
             m.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               m.field_a[var5] = -1;
             }
-            ii.field_n = new int[2];
+            CipherPacketBuffer.field_n = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              se.field_E[var5] = ga.field_g[var5];
+              se.field_E[var5] = ClientException.field_g[var5];
             }
             se.field_E[var4 - 3] = "";
             se.field_E[-2 + var4] = tb.field_o;
             m.field_a[var4 - 2] = 0;
-            ii.field_n[0] = 4;
+            CipherPacketBuffer.field_n[0] = 4;
             se.field_E[-1 + var4] = uk.field_b;
             m.field_a[var4 - 1] = 1;
-            ii.field_n[1] = 5;
+            CipherPacketBuffer.field_n[1] = 5;
           } else if (1 == ne.field_u) {
-            var3_int = r.a(ba.field_E, ga.field_g, vg.field_g, 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_g, 1, gk.field_a);
             var4 = var3_int + 2;
             se.field_E = new String[var4];
             m.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               m.field_a[var5] = -1;
             }
-            ii.field_n = new int[1];
+            CipherPacketBuffer.field_n = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              se.field_E[var5] = ga.field_g[var5];
+              se.field_E[var5] = ClientException.field_g[var5];
             }
             se.field_E[var4 - 2] = "";
             se.field_E[-1 + var4] = uk.field_b;
             m.field_a[var4 - 1] = 0;
-            ii.field_n[0] = 5;
+            CipherPacketBuffer.field_n[0] = 5;
           } else if (2 != ne.field_u) {
             if (ne.field_u == 3) {
               if (ck.field_e.field_l) {
-                var3_int = r.a(ba.field_E, ga.field_g, vg.field_f, param1 + 25699, gk.field_a);
+                var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_f, param1 + 25699, gk.field_a);
               } else {
-                var3_int = r.a(ba.field_E, ga.field_g, ra.field_f, param1 + 25699, gk.field_a);
+                var3_int = r.a(ba.field_E, ClientException.field_g, ra.field_f, param1 + 25699, gk.field_a);
               }
               var4 = 2 + var3_int;
               se.field_E = new String[var4];
@@ -189,58 +189,58 @@ final class nj extends al {
               for (var5 = 0; var5 < var4; var5++) {
                 m.field_a[var5] = -1;
               }
-              ii.field_n = new int[1];
+              CipherPacketBuffer.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                se.field_E[var5] = ga.field_g[var5];
+                se.field_E[var5] = ClientException.field_g[var5];
               }
               se.field_E[-2 + var4] = "";
               se.field_E[-1 + var4] = uk.field_b;
               m.field_a[var4 - 1] = 0;
-              ii.field_n[0] = 5;
+              CipherPacketBuffer.field_n[0] = 5;
             } else if (ne.field_u == 4) {
-              var3_int = r.a(ba.field_E, ga.field_g, of.field_a, 1, gk.field_a);
+              var3_int = r.a(ba.field_E, ClientException.field_g, of.field_a, 1, gk.field_a);
               var4 = var3_int + 2;
               m.field_a = new int[var4];
               se.field_E = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 m.field_a[var5] = -1;
               }
-              ii.field_n = new int[1];
+              CipherPacketBuffer.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                se.field_E[var5] = ga.field_g[var5];
+                se.field_E[var5] = ClientException.field_g[var5];
               }
               se.field_E[var4 - 2] = "";
               se.field_E[var4 - 1] = uk.field_b;
               m.field_a[-1 + var4] = 0;
-              ii.field_n[0] = 5;
+              CipherPacketBuffer.field_n[0] = 5;
             } else {
               if (5 != ne.field_u) {
                 throw new IllegalArgumentException();
               }
-              var3_int = r.a(ba.field_E, ga.field_g, pe.field_g, param1 + 25699, gk.field_a);
+              var3_int = r.a(ba.field_E, ClientException.field_g, pe.field_g, param1 + 25699, gk.field_a);
               var4 = 3 + var3_int;
               se.field_E = new String[var4];
               m.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 m.field_a[var5] = -1;
               }
-              ii.field_n = new int[2];
+              CipherPacketBuffer.field_n = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                se.field_E[var5] = ga.field_g[var5];
+                se.field_E[var5] = ClientException.field_g[var5];
               }
               se.field_E[-3 + var4] = "";
               se.field_E[var4 - 2] = wa.field_f;
               m.field_a[-2 + var4] = 0;
-              ii.field_n[0] = 3;
+              CipherPacketBuffer.field_n[0] = 3;
               se.field_E[-1 + var4] = uk.field_b;
               m.field_a[var4 - 1] = 1;
-              ii.field_n[1] = 5;
+              CipherPacketBuffer.field_n[1] = 5;
             }
           } else {
-            var3_int = r.a(ba.field_E, ga.field_g, jf.a(al.field_g, new String[]{"<br><%0><br>"}, (byte) -126), 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, jf.a(al.field_g, new String[]{"<br><%0><br>"}, (byte) -126), 1, gk.field_a);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ga.field_g[var5])) {
+              if (!"<%0>".equals(ClientException.field_g[var5])) {
                 continue;
               }
               var4 = var5;
@@ -250,13 +250,13 @@ final class nj extends al {
               throw new IllegalStateException();
             }
             eb.field_E = new String[var4];
-            cb.a(ga.field_g, 0, eb.field_E, 0, var4);
+            cb.a(ClientException.field_g, 0, eb.field_E, 0, var4);
             ll.field_E = new String[var3_int - var4 - 1];
-            cb.a(ga.field_g, var4 + 1, ll.field_E, 0, -var4 + (var3_int - 1));
+            cb.a(ClientException.field_g, var4 + 1, ll.field_E, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = r.a(ba.field_E, ga.field_g, jf.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, jf.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, gk.field_a);
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ga.field_g[var5])) {
+              if (!"<%0>".equals(ClientException.field_g[var5])) {
                 continue;
               }
               var4 = var5;
@@ -266,9 +266,9 @@ final class nj extends al {
               throw new IllegalStateException();
             }
             t.field_r = new String[var4];
-            cb.a(ga.field_g, 0, t.field_r, 0, var4);
+            cb.a(ClientException.field_g, 0, t.field_r, 0, var4);
             vb.field_k = new String[-1 + (var3_int - var4)];
-            cb.a(ga.field_g, var4 + 1, vb.field_k, 0, var3_int + (-var4 - 1));
+            cb.a(ClientException.field_g, var4 + 1, vb.field_k, 0, var3_int + (-var4 - 1));
             if (eb.field_E.length >= t.field_r.length) {
               stackIn_57_0 = eb.field_E.length;
             } else {
@@ -290,9 +290,9 @@ final class nj extends al {
             m.field_a[1] = 0;
             se.field_E[0] = mg.field_l;
             se.field_E[1] = eb.field_F;
-            ii.field_n = new int[2];
-            ii.field_n[0] = 5;
-            ii.field_n[1] = 2;
+            CipherPacketBuffer.field_n = new int[2];
+            CipherPacketBuffer.field_n[0] = 5;
+            CipherPacketBuffer.field_n[1] = 2;
             m.field_a[3] = 1;
             se.field_E[4] = ma.field_u;
             se.field_E[5] = "";
@@ -324,7 +324,7 @@ final class nj extends al {
             }
             gd.field_a = fa.a(109);
           }
-          cf.field_f.field_f = ii.field_n.length;
+          cf.field_f.field_f = CipherPacketBuffer.field_n.length;
           if (param1 != -25698) {
             nj.d(-32);
           }
@@ -378,9 +378,9 @@ final class nj extends al {
               var5Lifetime3 = var5Lifetime3 + hj.field_a;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + bi.field_h;
               lf.field_r[var4Lifetime3] = new int[4];
-              lf.field_r[var4Lifetime3][0] = -kk.field_z + var8Lifetime1;
+              lf.field_r[var4Lifetime3][0] = -GameClient.field_z + var8Lifetime1;
               lf.field_r[var4Lifetime3][1] = var5Lifetime3;
-              lf.field_r[var4Lifetime3][2] = (kk.field_z << 1) + var7Lifetime2;
+              lf.field_r[var4Lifetime3][2] = (GameClient.field_z << 1) + var7Lifetime2;
               lf.field_r[var4Lifetime3][3] = pb.field_j + (cl.field_m << 1);
               var5Lifetime3 = var5Lifetime3 + (pb.field_j + (hj.field_a + (cl.field_m << 1)));
             } else {
@@ -397,7 +397,7 @@ final class nj extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "nj.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "nj.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

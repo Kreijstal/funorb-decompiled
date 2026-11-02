@@ -29,7 +29,7 @@ final class ra extends oa {
         java.net.Socket var13 = null;
         String var14 = null;
         String var15 = null;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           var13 = new java.net.Socket(param0, param3);
           var13.setSoTimeout(10000);
@@ -100,7 +100,7 @@ final class ra extends oa {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ra extends oa {
         tk var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
-        var13 = Bounce.field_N;
+        var13 = BounceDown.field_N;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -215,7 +215,7 @@ final class ra extends oa {
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         int var5 = 0;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           var1 = qj.field_c;
           synchronized (var1) {
@@ -243,13 +243,13 @@ final class ra extends oa {
                 ng.field_a[~var2] = false;
               }
             }
-            ec.field_bb = Bounce.field_F;
+            ec.field_bb = BounceDown.field_F;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "ra.E(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "ra.E(" + param0 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class ra extends oa {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 

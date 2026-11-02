@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends ai {
+final class jc extends IntrusiveNode {
     static tg field_n;
     static int field_i;
     static volatile long field_k;
     static String field_m;
-    static ii field_g;
+    static CipherPacketBuffer field_g;
     static tj field_h;
     int field_j;
     int field_l;

@@ -59,7 +59,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "mj.C(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "mj.C(" + param0 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class mj {
               stackIn_10_0 = pc.field_p;
               return stackIn_10_0;
             }
-            stackIn_12_0 = ii.field_l;
+            stackIn_12_0 = CipherPacketBuffer.field_l;
             return stackIn_12_0;
           }
           if (!pa.field_i.c(83)) {
@@ -123,7 +123,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "mj.E(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "mj.E(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class mj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           if (param1 != -31729) {
             return;
@@ -174,7 +174,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var4), "mj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var4), "mj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class mj {
         boolean stackIn_132_1Lifetime1;
         int var3Lifetime1;
         int var3Lifetime2;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (~uc.field_C != ~this.field_h ||
             ~this.field_a != ~ll.field_y ||
@@ -238,7 +238,7 @@ final class mj {
             ua.field_a = -1;
           }
           var3 = 0;
-          L10: while (true) {
+          scanLoop1: while (true) {
             if (this.field_m.length > var3) {
               stackIn_69_0 = this.field_m[var3];
               stackOut_44_1 = this.field_b;
@@ -259,7 +259,7 @@ final class mj {
                 this.field_c[11].field_f = hi.field_b;
                 this.field_c[11].field_i = 10;
                 if (var4 == 0) {
-                  break L10;
+                  break scanLoop1;
                 }
               }
               this.field_c[11].field_f = qe.field_c;
@@ -272,7 +272,7 @@ final class mj {
             break;
           }
           var3Lifetime1 = 0;
-          L18: while (true) {
+          scanLoop2: while (true) {
             if (var3Lifetime1 < this.field_c.length) {
               stackIn_99_0 = this.field_c[var3Lifetime1];
               stackOut_72_1 = this.field_b;
@@ -293,7 +293,7 @@ final class mj {
                 this.field_g[0].field_f = hi.field_b;
                 this.field_g[0].field_i = 12;
                 if (var4 == 0) {
-                  break L18;
+                  break scanLoop2;
                 }
               }
               if (jh.b(767564065)) {
@@ -302,7 +302,7 @@ final class mj {
                 this.field_g[0].field_i = 12;
                 this.field_g[0].field_f = hi.field_b;
                 if (var4 == 0) {
-                  break L18;
+                  break scanLoop2;
                 }
               }
               this.field_g[0].field_f = hi.field_b;
@@ -315,7 +315,7 @@ final class mj {
             break;
           }
           var3Lifetime2 = 0;
-          L27: while (true) {
+          scanLoop3: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (this.field_g.length > var3Lifetime2) {
               stackIn_125_0 = this.field_g[var3Lifetime2];
@@ -349,7 +349,7 @@ final class mj {
               var3Lifetime2 = 0;
               while (this.field_i.length > var3Lifetime2) {
                 if (var4 != 0) {
-                  break L27;
+                  break scanLoop3;
                 }
                 stackIn_125_0Lifetime1 = this.field_i[var3Lifetime2];
                 stackIn_125_1Lifetime1 = this.field_b;
@@ -372,7 +372,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "mj.G(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "mj.G(" + param0 + ')');
         }
     }
 
@@ -402,7 +402,7 @@ final class mj {
         int stackIn_110_2Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
-        var13 = Bounce.field_N;
+        var13 = BounceDown.field_N;
         try {
           if (this.field_o) {
             this.field_n = -1;
@@ -423,9 +423,9 @@ final class mj {
             }
             if (decompiledFrameRemainder0) {
               if (pe.field_f.field_h != null) {
-                var2 = pe.field_f.field_h[ii.field_k];
-                var3 = pe.field_f.field_l[ii.field_k];
-                var4 = pe.field_f.field_o[ii.field_k];
+                var2 = pe.field_f.field_h[CipherPacketBuffer.field_k];
+                var3 = pe.field_f.field_l[CipherPacketBuffer.field_k];
+                var4 = pe.field_f.field_o[CipherPacketBuffer.field_k];
                 var5 = 0;
                 var6 = qc.field_a;
                 var7 = 0;
@@ -487,7 +487,7 @@ final class mj {
                   break;
                 }
                 if (stackIn_73_0 == 0) {
-                  this.field_c[6].field_f = kk.field_w;
+                  this.field_c[6].field_f = GameClient.field_w;
                 }
                 if (var13 != 0) {
                   this.field_c[6].field_f = jk.field_m;
@@ -557,7 +557,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2_ref), "mj.B(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "mj.B(" + param0 + ')');
         }
     }
 
@@ -575,7 +575,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "mj.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "mj.A(" + param0 + ')');
         }
     }
 
@@ -583,7 +583,7 @@ final class mj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           boolean decompiledFrameRemainder0 = true;
           this.field_o = false;
@@ -658,7 +658,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "mj.D(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "mj.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -667,8 +667,8 @@ final class mj {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = Bounce.field_N;
-        this.field_m = new nk[]{new nk(0, 22, c.field_b, 0, this), new nk(1, 54, nf.field_b, 1, this), new nk(2, 86, kl.field_m, 2, this), new nk(3, 118, qe.field_j, 3, this), new nk(4, 150, md.field_u, 5, this), new nk(5, 182, ob.field_b, 6, this), new nk(6, 214, fj.field_g, 7, this), new nk(7, 246, bk.field_d, 4, this), new nk(8, 278, kc.field_d, 8, this), new nk(9, 310, wa.field_c, 9, this)};
+        var2 = BounceDown.field_N;
+        this.field_m = new nk[]{new nk(0, 22, c.field_b, 0, this), new nk(1, 54, nf.field_b, 1, this), new nk(2, 86, kl.field_m, 2, this), new nk(3, 118, qe.field_j, 3, this), new nk(4, 150, md.field_u, 5, this), new nk(5, 182, ob.field_b, 6, this), new nk(6, 214, AppletShell.field_g, 7, this), new nk(7, 246, bk.field_d, 4, this), new nk(8, 278, kc.field_d, 8, this), new nk(9, 310, wa.field_c, 9, this)};
         this.field_c = new nk[]{new nk(0, -5, "", -1, this), new nk(1, 23, "", -2, this), new nk(2, 51, "", -3, this), new nk(3, 79, "", -4, this), new nk(4, 107, "", -5, this), new nk(5, 135, "", -6, this), new nk(6, 163, "", -7, this), new nk(7, 191, "", -8, this), new nk(8, 219, "", -9, this), new nk(9, 247, "", -10, this), new nk(10, 315, "", 11, this), new nk(11, 347, hi.field_b, 10, this)};
         this.field_g = new nk[]{new nk(0, 310, hi.field_b, 12, this), new nk(1, 347, bk.field_d, 4, this)};
         this.field_i = new nk[]{new nk(0, 347, hi.field_b, 13, this)};
@@ -712,7 +712,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) runtimeException), "mj.<init>()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mj.<init>()");
         }
     }
 

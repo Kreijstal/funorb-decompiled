@@ -41,7 +41,7 @@ final class fe {
         int var11Lifetime1;
         int var13Lifetime1;
         int var13Lifetime2;
-        var15 = Bounce.field_N;
+        var15 = BounceDown.field_N;
         try {
           var5_int = this.field_f + this.field_k;
           var6 = this.field_h + this.field_o;
@@ -55,8 +55,8 @@ final class fe {
           var11 = 1;
           if (var8 < var9 ||
             param0.indexOf("<br>") != -1) {
-            if (ai.field_a == null) {
-              ai.field_a = new String[16];
+            if (IntrusiveNode.field_a == null) {
+              IntrusiveNode.field_a = new String[16];
             }
             if (var9 <= var8) {
               var12 = var8;
@@ -64,11 +64,11 @@ final class fe {
               var13 = var9 / var8;
               var12 = 2 * ((-1 + var13 + var9 % var8) / var13) + var8;
             }
-            var11Lifetime1 = this.field_d.a(param0, new int[]{var12}, ai.field_a);
+            var11Lifetime1 = this.field_d.a(param0, new int[]{var12}, IntrusiveNode.field_a);
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_d.b(ai.field_a[var13Lifetime2]);
+              var14 = this.field_d.b(IntrusiveNode.field_a[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -100,7 +100,7 @@ final class fe {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class fe {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class fe {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class fe {
         tg var13 = null;
         qi var14 = null;
         qi var19 = null;
-        int var15 = Bounce.field_N;
+        int var15 = BounceDown.field_N;
         qi var14Lifetime1;
         qi var14Lifetime2;
         try {
@@ -277,7 +277,7 @@ final class fe {
           var19 = new qi(var4, true);
           var19.a(true, var13);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "fe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class fe {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

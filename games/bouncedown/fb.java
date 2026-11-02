@@ -4,7 +4,7 @@
 final class fb extends ih {
     int field_mb;
     static boolean field_nb;
-    static wi field_jb;
+    static PacketBuffer field_jb;
     String field_kb;
     static gi field_lb;
     String field_ob;
@@ -17,7 +17,7 @@ final class fb extends ih {
         int var3 = 0;
         hh var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = Bounce.field_N;
+        var3 = BounceDown.field_N;
         try {
           if (param0 != 102) {
             return false;
@@ -41,7 +41,7 @@ final class fb extends ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "fb.K(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "fb.K(" + param0 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class fb extends ih {
           param0.addMouseMotionListener(nj.field_o);
           param0.addFocusListener(nj.field_o);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "fb.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fb.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class fb extends ih {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

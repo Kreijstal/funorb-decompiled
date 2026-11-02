@@ -13,7 +13,7 @@ final class qj {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(wi param0, byte[] param1, byte param2) {
+    final void a(PacketBuffer param0, byte[] param1, byte param2) {
         try {
           try {
             if (param0.field_i[param0.field_h] != 31 ||
@@ -33,7 +33,7 @@ final class qj {
             }
             this.field_b.reset();
           } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -75,7 +75,7 @@ final class qj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

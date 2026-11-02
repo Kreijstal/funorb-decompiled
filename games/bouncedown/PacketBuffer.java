@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wi extends ai {
+class PacketBuffer extends IntrusiveNode {
     static a[] field_g;
     static tg field_j;
     int field_h;
@@ -28,7 +28,7 @@ class wi extends ai {
         int var3;
         int var4;
         CharSequence var5;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         int fieldTemp$0 = this.field_h;
         this.field_h = this.field_h + 1;
         var2 = this.field_i[fieldTemp$0];
@@ -41,7 +41,7 @@ class wi extends ai {
         }
         if (param0 != -10937) {
           var5 = (CharSequence) null;
-          wi.a((CharSequence) null, false);
+          PacketBuffer.a((CharSequence) null, false);
         }
         return var3 | var2;
     }
@@ -65,7 +65,7 @@ class wi extends ai {
           this.field_h = this.field_h + 1;
           this.field_i[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "wi.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "wi.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,7 +156,7 @@ class wi extends ai {
         int var9 = 0;
         int var10 = 0;
         tg[] var11 = null;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           var3_long = 0L;
           var5 = 0L;
@@ -189,7 +189,7 @@ class wi extends ai {
           }
           if (param1 >= -52) {
             var11 = (tg[]) null;
-            wi.a((tg[]) null, 99, -16, (byte) -80);
+            PacketBuffer.a((tg[]) null, 99, -16, (byte) -80);
           }
           this.b(494545288, var3_long);
           this.b(494545288, var5);
@@ -204,7 +204,7 @@ class wi extends ai {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -241,11 +241,11 @@ class wi extends ai {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var2_int = param0.length();
           if (!param1) {
-            wi.c((byte) -22);
+            PacketBuffer.c((byte) -22);
           }
           var3 = new byte[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
@@ -357,7 +357,7 @@ class wi extends ai {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -371,7 +371,7 @@ class wi extends ai {
           gh.field_H = param2;
           pg.a(param3 + 126);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "wi.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "wi.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -392,7 +392,7 @@ class wi extends ai {
         int var12 = 0;
         int var13 = 0;
         int[] var14 = null;
-        var13 = Bounce.field_N;
+        var13 = BounceDown.field_N;
         try {
           var5_int = this.field_h;
           this.field_h = param2;
@@ -438,7 +438,7 @@ class wi extends ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -451,7 +451,7 @@ class wi extends ai {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           if (param0 < 121) {
             this.b(99, (byte) 102);
@@ -472,7 +472,7 @@ class wi extends ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -534,13 +534,13 @@ class wi extends ai {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           var5_int = 0;
           var6 = -1;
           var7 = 1;
           if (param3) {
-            wi.e((byte) 50);
+            PacketBuffer.e((byte) 50);
           }
           while (param1.length() > var7) {
             var8 = param1.charAt(var7);
@@ -583,7 +583,7 @@ class wi extends ai {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ class wi extends ai {
         int var2 = ib.a(this.field_h, this.field_i, 0, (byte) -33);
         if (param0 >= -9) {
           CharSequence var4 = (CharSequence) null;
-          wi.a((CharSequence) null, false);
+          PacketBuffer.a((CharSequence) null, false);
         }
         int var3 = this.j(-3);
         if (var3 != var2) {
@@ -604,7 +604,7 @@ class wi extends ai {
     final void a(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         int var4;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         if (param1) {
           return;
         }
@@ -633,7 +633,7 @@ class wi extends ai {
         RuntimeException var5 = null;
         int var6 = 0;
         int[] var7 = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           if (!param1) {
             var7 = (int[]) null;
@@ -655,7 +655,7 @@ class wi extends ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -694,7 +694,7 @@ class wi extends ai {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           var3_int = this.field_h / 8;
           this.field_h = 0;
@@ -735,7 +735,7 @@ class wi extends ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -746,7 +746,7 @@ class wi extends ai {
         this.field_i[this.field_h + (-param1 - 1)] = (byte)param1;
         if (param0 >= -6) {
           CharSequence var4 = (CharSequence) null;
-          wi.a((CharSequence) null, true);
+          PacketBuffer.a((CharSequence) null, true);
         }
     }
 
@@ -771,7 +771,7 @@ class wi extends ai {
           this.e(-750655096, var8.length);
           this.a(0, true, var8.length, var8);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "wi.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "wi.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -840,7 +840,7 @@ class wi extends ai {
           this.field_h = this.field_h + 1;
           this.field_i[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "wi.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "wi.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -896,17 +896,17 @@ class wi extends ai {
         this.field_i[fieldTemp$6] = (byte)(int)param1;
     }
 
-    wi(int param0) {
+    PacketBuffer(int param0) {
         this.field_h = 0;
         this.field_i = jj.a(10000, param0);
     }
 
-    wi(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_h = 0;
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

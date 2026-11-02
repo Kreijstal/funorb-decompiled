@@ -56,7 +56,7 @@ final class uj {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           RuntimeException var2_ref = null;
-          var8 = Bounce.field_N;
+          var8 = BounceDown.field_N;
           try {
             try {
               var9 = param1.getParameter("cookieprefix");
@@ -95,7 +95,7 @@ final class uj {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

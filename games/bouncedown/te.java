@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class te extends ai {
+final class te extends IntrusiveNode {
     private static vj[] field_q;
     private static int[] field_y;
     private static float[] field_r;
@@ -677,7 +677,7 @@ final class te extends ai {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        wi var2 = new wi(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_j = var2.j(-3);
         this.field_v = var2.j(-3);
         this.field_H = var2.j(-3);

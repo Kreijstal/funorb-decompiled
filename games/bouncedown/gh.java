@@ -47,7 +47,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class gh extends lc implements ki, rc, rf {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           if (param3 != 0) {
             if (param3 == 1) {
@@ -86,7 +86,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ final class gh extends lc implements ki, rc, rf {
         var3 = var3 + (this.a("", l.field_a, 170, this.field_C, (byte) -123, 20, var3) + 5);
         var3 = var3 + this.a(this.field_A, ae.field_d, var3, 120, 170);
         var3 = var3 + (this.a(qh.field_d, ml.field_c, var3, (byte) -121, this.field_E, 170) + 5);
-        var3 = var3 + (5 + this.a(dg.field_i, pe.field_b, var3, (byte) -121, this.field_F, 170));
+        var3 = var3 + (5 + this.a(Platform.field_i, pe.field_b, var3, (byte) -121, this.field_F, 170));
         var3 = var3 + this.a(this.field_J, var3, 170, true, rj.field_h);
         hb var4 = new hb(46, var3, -90 + this.field_k, 25, this.field_G, true, -120 + this.field_k, 5, qj.field_d, 11579568, ll.field_D);
         this.b(var4, true);
@@ -273,8 +273,8 @@ final class gh extends lc implements ki, rc, rf {
         jd var5 = new jd(sg.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, sg.field_a.field_s, -1, 2147483647, true);
         this.field_L = new vc(var2, var5);
         this.field_L.field_q = "";
-        this.field_L.a(ud.field_b, 0, (byte) -77);
-        this.field_L.a(ud.field_b, 1, (byte) 36);
+        this.field_L.a(Slime.field_b, 0, (byte) -77);
+        this.field_L.a(Slime.field_b, 1, (byte) 36);
         this.field_L.field_n = (sk) (this);
         this.field_L.a(var3, (byte) -65, 46, -90 + this.field_k);
         var3 = var3 + (15 + this.field_L.field_m);
@@ -298,7 +298,7 @@ final class gh extends lc implements ki, rc, rf {
           super.a(param0, param1, param2, param3);
           this.field_D.field_y = this.k(2);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "gh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "gh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -379,7 +379,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -470,7 +470,7 @@ final class gh extends lc implements ki, rc, rf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -21,7 +21,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "d.F(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "d.F(" + param0 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "d.G(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "d.G(" + param0 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "d.C(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "d.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "d.H(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "d.H(" + param0 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class d extends wd {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = Bounce.field_N;
+        var14 = BounceDown.field_N;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
@@ -155,7 +155,7 @@ final class d extends wd {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class d extends wd {
           }
           gi.field_b = param2;
           ak.field_w = param0;
-          fj.a(param1, sh.field_jb, -1);
+          AppletShell.a(param1, sh.field_jb, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class d extends wd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class d extends wd {
         int stackIn_11_0 = 0;
         fb stackIn_62_0 = null;
         RuntimeException decompiledCaughtException = null;
-        ii var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -217,7 +217,7 @@ final class d extends wd {
         int var8 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var1 = jc.field_g;
           var2 = var1.d((byte) -113);
@@ -315,11 +315,11 @@ final class d extends wd {
           var6_ref.field_kb = (String) (var3Lifetime1);
           var6_ref.c(2);
           var7_ref = (fb) (oa.field_b.a((byte) -76));
-          L14: while (true) {
+          scanLoop1: while (true) {
             if (null != var7_ref) {
               stackIn_62_0 = var7_ref;
               if (var8 != 0) {
-                break L14;
+                break scanLoop1;
               }
               if (ja.a(stackIn_62_0, 200, var6_ref)) {
                 var7_ref = (fb) (oa.field_b.d((byte) -114));
@@ -340,7 +340,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "d.B(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "d.B(" + param0 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class d extends wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "d.<init>()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "d.<init>()");
         }
     }
 

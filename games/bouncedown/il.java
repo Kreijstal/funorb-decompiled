@@ -56,7 +56,7 @@ final class il {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           var4_int = param0.length();
           if (param2 > -28) {
@@ -105,7 +105,7 @@ final class il {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -10,7 +10,7 @@ final class th extends java.awt.Canvas {
         try {
           this.field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "th.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "th.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class th extends java.awt.Canvas {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class th extends java.awt.Canvas {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           var6_int = 120 / ((33 - param1) / 59);
           if (param3 != null &&
@@ -71,7 +71,7 @@ final class th extends java.awt.Canvas {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class th extends java.awt.Canvas {
         try {
           this.field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "th.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "th.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

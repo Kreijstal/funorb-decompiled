@@ -44,7 +44,7 @@ final class fh extends wd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class fh extends wd {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
@@ -93,7 +93,7 @@ final class fh extends wd {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

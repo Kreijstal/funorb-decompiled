@@ -96,7 +96,7 @@ abstract class ck implements uh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ abstract class ck implements uh {
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
-        var13 = Bounce.field_N;
+        var13 = BounceDown.field_N;
         try {
           if (param4 != 14677) {
             return;
@@ -209,7 +209,7 @@ abstract class ck implements uh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var5), "ck.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var5), "ck.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ abstract class ck implements uh {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var2_int = param1.length();
           if (20 < var2_int) {
@@ -276,7 +276,7 @@ abstract class ck implements uh {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

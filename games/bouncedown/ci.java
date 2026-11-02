@@ -27,7 +27,7 @@ final class ci extends lc implements gl, rc {
           var3.a(false, var4, true);
           this.field_z.h(117);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ci.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ci.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,22 +50,22 @@ final class ci extends lc implements gl, rc {
         jk var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        ii var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        ii var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
-          var8 = new ii(param1.b("logo.fo3d", "", -88));
+          var8 = new CipherPacketBuffer(param1.b("logo.fo3d", "", -88));
           var10 = var8;
           var3 = var10.d((byte) -124);
           var10.o(8);
-          wi.field_g = lb.a(98, var10);
+          PacketBuffer.field_g = lb.a(98, var10);
           li.field_e = new int[var3][];
           q.field_G = new jk[var3];
           for (var4 = 0; var3 > var4; var4++) {
@@ -97,7 +97,7 @@ final class ci extends lc implements gl, rc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class ci extends lc implements gl, rc {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           if (param0 <= 6) {
             this.field_J = false;
@@ -129,7 +129,7 @@ final class ci extends lc implements gl, rc {
                 }
               }
             } else {
-              ii.n(8);
+              CipherPacketBuffer.n(8);
             }
           }
           return;
@@ -143,7 +143,7 @@ final class ci extends lc implements gl, rc {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class ci extends lc implements gl, rc {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -364,7 +364,7 @@ final class ci extends lc implements gl, rc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class ci extends lc implements gl, rc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -440,7 +440,7 @@ final class ci extends lc implements gl, rc {
             this.field_I = (ba) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ci.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ci.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

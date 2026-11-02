@@ -10602,6 +10602,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "bouncedown": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/bouncedown"
+      },
+      "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
+      "sources": {
+        "files": 289,
+        "sha256": "042d73990262c737d597f9743463083746c82195691a4870d56f09d4b7d68fb1"
+      },
+      "dictionary": {
+        "path": "decompilation/bouncedown-naming.json",
+        "sha256": "6541b5a0ca604d3b0568fcccd0fc017c7106348c82cdebe71107198b010cc8e6"
+      },
+      "readingGuide": {
+        "path": "games/bouncedown/README.md",
+        "sha256": "19181a4b077869cf344f709a87cede09fffc084245b0b4a5bbd4113233f7e7ba"
+      },
+      "rulesSha256": "61609ef1d56ab273120dc3f072cc828da3a2a9cb5dc753c3462b56b7e98f2323",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -10974,6 +10998,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 289,
+          "sha256": "042d73990262c737d597f9743463083746c82195691a4870d56f09d4b7d68fb1"
         }
       },
       "brickabrac": {

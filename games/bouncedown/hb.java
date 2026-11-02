@@ -163,7 +163,7 @@ final class hb extends ak {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -174,18 +174,18 @@ final class hb extends ak {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        ii var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         ke var11 = null;
-        ii var12 = null;
+        CipherPacketBuffer var12 = null;
         ld var13 = null;
         int[] var14 = null;
         ld var15 = null;
         int[] var16 = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var12 = jc.field_g;
           if (param0 != 1790) {
@@ -200,9 +200,9 @@ final class hb extends ak {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((wi) ((Object) var5)).d((byte) -77);
+            var6 = ((PacketBuffer) ((Object) var5)).d((byte) -77);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((wi) ((Object) var5)).j(ud.a(param0, -1789));
+              var9[var7] = ((PacketBuffer) ((Object) var5)).j(Slime.a(param0, -1789));
             }
             var15 = (ld) (ne.field_r.a((byte) -86));
             if (var15 == null) {
@@ -242,7 +242,7 @@ final class hb extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "hb.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "hb.A(" + param0 + ')');
         }
     }
 
@@ -278,7 +278,7 @@ final class hb extends ak {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

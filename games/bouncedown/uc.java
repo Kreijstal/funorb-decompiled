@@ -24,7 +24,7 @@ final class uc extends lc implements rc {
           var4_int = null != this.field_z ? this.field_F.b(this.field_z, 260, this.field_F.field_s) : 0;
           this.b(var4_int + 22, 80, 288, 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class uc extends lc implements rc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class uc extends lc implements rc {
           this.field_H[var4_int] = this.a(param0, (sk) (this), -4);
           this.field_J[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "uc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "uc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class uc extends lc implements rc {
 
     private final void a(int param0, int param1) {
         int var5 = 0;
-        int var6 = Bounce.field_N;
+        int var6 = BounceDown.field_N;
         int var5Lifetime1;
         if (param1 <= this.field_B) {
           return;
@@ -160,7 +160,7 @@ final class uc extends lc implements rc {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           for (var6_int = 0; this.field_B > var6_int; var6_int++) {
             if (param4 != this.field_H[var6_int]) {
@@ -189,7 +189,7 @@ final class uc extends lc implements rc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class uc extends lc implements rc {
         tg var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = Bounce.field_N;
+        int var13 = BounceDown.field_N;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
@@ -227,9 +227,9 @@ final class uc extends lc implements rc {
           s.a(param0, "dropdown", 28576, "commonui");
           var5 = ff.a("screen_options", param0, (byte) 124, "commonui");
           nh.field_R = new we[4];
-          ga.field_d = new we[4];
+          ClientException.field_d = new we[4];
           tc.field_s = new we[4];
-          var6 = new we[][]{ga.field_d, tc.field_s, nh.field_R};
+          var6 = new we[][]{ClientException.field_d, tc.field_s, nh.field_R};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -265,7 +265,7 @@ final class uc extends lc implements rc {
           ve.a(-125);
           ih.field_T = new tg[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "uc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "uc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

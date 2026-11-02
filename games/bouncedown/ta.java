@@ -12,7 +12,7 @@ final class ta {
         tg var1 = null;
         tg var2 = null;
         int var3 = 0;
-        int var4 = Bounce.field_N;
+        int var4 = BounceDown.field_N;
         try {
           var1 = new tg(540, 140);
           kh.a(var1, param0 + 1);
@@ -25,11 +25,11 @@ final class ta {
             var2.e(-2, -2, 16777215);
             na.c(4, 4, 0, 0, 540, 140);
           }
-          Bounce.field_G.d();
+          BounceDown.field_G.d();
           var1.c(0, 0);
           ve.a(-122);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class ta {
           var4 = -1L;
           lj.a(param1, var2, var3, (byte) -74, var4);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class ta {
         int var1;
         int var2;
         java.applet.Applet var3;
-        var2 = Bounce.field_N;
+        var2 = BounceDown.field_N;
         ej.field_c = null;
         ng.field_b = false;
         if (param0 <= 86) {
@@ -101,13 +101,13 @@ final class ta {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        wi var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new wi(param1);
+          var9 = new PacketBuffer(param1);
           if (param0 != 21125) {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
@@ -154,7 +154,7 @@ final class ta {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

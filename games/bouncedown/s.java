@@ -20,27 +20,27 @@ final class s extends vc {
         tg var15;
         tg var16;
         vf var6Lifetime1;
-        L0: {
-          L1: {
-            L2: {
-              var13 = Bounce.field_N;
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              var13 = BounceDown.field_N;
               var6 = this.field_H.a((byte) 122);
               if (ui.field_o != var6 &&
                 mi.field_c != var6) {
                 var5 = this.field_H.c((byte) 66);
                 if (var5 == null) {
                   var5 = this.field_I;
-                  break L2;
+                  break regionExit3;
                 }
                 if (!var5.equals(this.field_h)) {
-                  break L1;
+                  break regionExit2;
                 }
-                break L0;
+                break regionExit1;
               }
               var5 = he.field_l;
             }
             if (var5.equals(this.field_h)) {
-              break L0;
+              break regionExit1;
             }
           }
           this.field_h = var5;
@@ -95,7 +95,7 @@ final class s extends vc {
         int var4 = 0;
         j var5 = null;
         int var7 = 0;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           if (pj.field_a != b.field_b) {
             return false;
@@ -167,7 +167,7 @@ final class s extends vc {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class s extends vc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class s extends vc {
           this.field_I = param1;
           this.b(param5, 80, param4, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class s extends vc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class s extends vc {
           this.field_L = this.field_L + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "s.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "s.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class s extends vc {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

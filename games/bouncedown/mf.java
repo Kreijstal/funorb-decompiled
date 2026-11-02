@@ -16,13 +16,13 @@ final class mf {
           field_b = null;
           return;
         }
-        wi var2 = (wi) null;
-        mf.a(-20, 44, (wi) null);
+        PacketBuffer var2 = (PacketBuffer) null;
+        mf.a(-20, 44, (PacketBuffer) null);
         field_d = null;
         field_b = null;
     }
 
-    final static String a(int param0, int param1, wi param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -61,7 +61,7 @@ final class mf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

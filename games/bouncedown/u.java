@@ -60,7 +60,7 @@ final class u {
         int var7Lifetime1;
         int var8Lifetime1;
         int var10Lifetime1;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           if (this.field_b != null) {
             var3_int = 14 + (int)((long)param0.length * (long)this.field_c / (long)this.field_e);
@@ -113,7 +113,7 @@ final class u {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class u {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hh extends ai {
+final class hh extends IntrusiveNode {
     int field_g;
     static byte[][] field_r;
     int field_j;
@@ -12,7 +12,7 @@ final class hh extends ai {
     static boolean field_k;
     int[] field_l;
     static byte[] field_q;
-    static ii field_p;
+    static CipherPacketBuffer field_p;
     mk[] field_n;
     int[] field_o;
     byte[][][] field_m;
@@ -25,7 +25,7 @@ final class hh extends ai {
           }
           mc.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class hh extends ai {
           RuntimeException var1_ref = null;
           IOException var2 = null;
           int var3 = 0;
-          var3 = Bounce.field_N;
+          var3 = BounceDown.field_N;
           try {
             if (null != tb.field_p) {
               tb.field_p.a(param0 - 134);
@@ -73,7 +73,7 @@ final class hh extends ai {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw ii.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
+            throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -115,7 +115,7 @@ final class hh extends ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

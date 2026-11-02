@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud {
+final class Slime {
     static int field_a;
     int field_p;
     double field_o;
@@ -40,10 +40,10 @@ final class ud {
         tg var17;
         int var6_intLifetime1;
         int var6_intLifetime1Lifetime1;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         var4 = 0;
         if (param1) {
-          this.a((dg[]) null, (rb) null, 62, (ue[]) null, -0.16860739722231136, (byte) 54);
+          this.a((Platform[]) null, (rb) null, 62, (ue[]) null, -0.16860739722231136, (byte) 54);
         }
         na.d();
         var5 = 0;
@@ -87,7 +87,7 @@ final class ud {
           var8 = (int)((double)param2 + this.field_u) - 50;
           var9 = -50 + (int)(this.field_j - this.field_e / 2.0);
           var6.d();
-          dg.field_a[param0].b(50, 0, -741572379, (int)this.field_o, 50);
+          Platform.field_a[param0].b(50, 0, -741572379, (int)this.field_o, 50);
           wj.field_d[param0].b((int)(-(1.3 * this.field_c) + (50.0 + this.field_e / 20.0)), 0, -741572379, (int)this.field_o, (int)(50.0 + this.field_e / 4.0 - 0.5 * this.field_q));
           if (this.field_d > 0.0) {
             se.field_A.b((int)(0.8 * this.field_c + 50.0), 0, -741572379, (int)this.field_o + 10, (int)(-(1.0 * this.field_e / 4.0) + 50.0 + this.field_q * 0.6));
@@ -205,7 +205,7 @@ final class ud {
         }
     }
 
-    final void a(dg[] param0, rb param1, int param2, ue[] param3, double param4, byte param5) {
+    final void a(Platform[] param0, rb param1, int param2, ue[] param3, double param4, byte param5) {
         RuntimeException stackIn_249_0 = null;
         StringBuilder stackIn_249_1 = null;
         String stackIn_250_2 = null;
@@ -219,7 +219,7 @@ final class ud {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           this.field_e = this.field_o * 50.0 / 128.0;
           if (96.0 > this.field_o) {
@@ -570,7 +570,7 @@ final class ud {
           } else {
             stackIn_256_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_249_0), ((StringBuilder) (Object) stackIn_255_1).append(stackIn_256_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_249_0), ((StringBuilder) (Object) stackIn_255_1).append(stackIn_256_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -610,7 +610,7 @@ final class ud {
             this.field_g = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ud.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ud.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -629,7 +629,7 @@ final class ud {
     final void a(ue[] param0, byte param1) {
         try {
           if (param1 != 106) {
-            this.a((dg[]) null, (rb) null, -3, (ue[]) null, -0.052863935081619066, (byte) 41);
+            this.a((Platform[]) null, (rb) null, -3, (ue[]) null, -0.052863935081619066, (byte) 41);
           }
           if (this.field_r != null) {
             if (wd.field_x) {
@@ -638,17 +638,17 @@ final class ud {
             this.field_r = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    ud() {
+    Slime() {
         this.a(true);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
-        var17 = Bounce.field_N;
+        var17 = BounceDown.field_N;
         if (param13 < param9) {
           if (param9 < param10) {
             ek.a(param4, na.field_d, param11, param15, param6, param12, param1, param9, param5, false, param14, param0, param10, param13, param2, param8, param3);

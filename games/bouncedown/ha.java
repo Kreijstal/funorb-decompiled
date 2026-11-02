@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ha implements Runnable {
-    private wi field_a;
+    private PacketBuffer field_a;
     private int field_e;
     private si field_i;
     private java.net.URL field_d;
@@ -32,7 +32,7 @@ final class ha implements Runnable {
           Throwable var3 = null;
           int var4 = 0;
           Throwable decompiledCaughtException = null;
-          var4 = Bounce.field_N;
+          var4 = BounceDown.field_N;
           try {
             while (this.field_a.field_i.length > this.field_a.field_h) {
               var1_int = this.field_c.read(this.field_a.field_i, this.field_a.field_h, -this.field_a.field_h + this.field_a.field_i.length);
@@ -68,14 +68,14 @@ final class ha implements Runnable {
         }
     }
 
-    final wi a(int param0) {
+    final PacketBuffer a(int param0) {
         if (this.field_e == 3) {
           return this.field_a;
         }
         if (param0 == 11951) {
           return null;
         }
-        return (wi) null;
+        return (PacketBuffer) null;
     }
 
     final synchronized boolean a(byte param0) {
@@ -127,7 +127,7 @@ final class ha implements Runnable {
           if (param0 < -46) {
             return false;
           }
-          this.field_a = (wi) null;
+          this.field_a = (PacketBuffer) null;
           return false;
         }
         try {
@@ -140,7 +140,7 @@ final class ha implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_d.getFile() + "\n\n"));
-            var3.write(wi.a(var5, true));
+            var3.write(PacketBuffer.a(var5, true));
             this.field_c = new DataInputStream(var4.getInputStream());
           }
           this.field_a.field_h = 0;
@@ -159,7 +159,7 @@ final class ha implements Runnable {
             if (param0 < -46) {
               return false;
             }
-            this.field_a = (wi) null;
+            this.field_a = (PacketBuffer) null;
             return false;
           }
           this.finalize();
@@ -167,7 +167,7 @@ final class ha implements Runnable {
           if (param0 < -46) {
             return false;
           }
-          this.field_a = (wi) null;
+          this.field_a = (PacketBuffer) null;
           return false;
         }
         if (this.field_h == null) {
@@ -181,13 +181,13 @@ final class ha implements Runnable {
           this.field_e = this.field_e + 1;
         }
         if (param0 >= -46) {
-          this.field_a = (wi) null;
+          this.field_a = (PacketBuffer) null;
         }
         return false;
     }
 
     final static void a(int param0, sa param1, int param2) {
-        ii var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -216,7 +216,7 @@ final class ha implements Runnable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -237,9 +237,9 @@ final class ha implements Runnable {
         try {
           this.field_i = param0;
           this.field_d = param1;
-          this.field_a = new wi(param2);
+          this.field_a = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

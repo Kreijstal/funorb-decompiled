@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class fj extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class AppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_k;
     static String field_d;
     boolean field_e;
@@ -15,7 +15,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
     public static boolean field_a;
     public static int field_f;
 
-    final static void a(int param0, int param1, int param2, wi param3, int param4) {
+    final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -41,7 +41,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) runtimeException), "fj.DA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.DA(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -172,7 +172,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         try {
           ua.field_d = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "fj.start()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.start()");
         }
     }
 
@@ -213,7 +213,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "fj.W(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "fj.W(" + param0 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (null != ch.field_h) {
             ch.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -252,8 +252,8 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
             ch.field_h.getParent().remove((java.awt.Component) ((Object) ch.field_h));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (ai.field_b != null) {
-            var2 = ai.field_b;
+          if (IntrusiveNode.field_b != null) {
+            var2 = IntrusiveNode.field_b;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -306,7 +306,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) (var2), "fj.KA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) (var2), "fj.KA(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "fj.getDocumentBase()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "fj.getDocumentBase()");
         }
     }
 
@@ -405,7 +405,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "fj.getAppletContext()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "fj.getAppletContext()");
         }
     }
 
@@ -428,7 +428,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -504,7 +504,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -523,7 +523,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
-          var9 = Bounce.field_N;
+          var9 = BounceDown.field_N;
           try {
             try {
               if (og.field_c != null) {
@@ -577,7 +577,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -602,7 +602,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           Throwable var3_ref_Throwable = null;
           String var4 = null;
           int var5 = 0;
-          var5 = Bounce.field_N;
+          var5 = BounceDown.field_N;
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -743,7 +743,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw ii.a((Throwable) (var1), "fj.run()");
+            throw CipherPacketBuffer.a((Throwable) (var1), "fj.run()");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -809,7 +809,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) runtimeException), "fj.BA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -821,7 +821,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         try {
           ua.field_d = 4000L + fa.a(-81);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "fj.stop()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.stop()");
         }
     }
 
@@ -848,10 +848,10 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
             ch.field_h.setSize(kj.field_i, jc.field_i);
             ch.field_h.setVisible(true);
             boolean decompiledSharedTail0 = (null != i.field_h &&
-              null == ai.field_b);
+              null == IntrusiveNode.field_b);
             if (!decompiledSharedTail0) {
               ch.field_h.setLocation(el.field_e, ob.field_d);
-              decompiledSharedTail0 = (Bounce.field_N != 0);
+              decompiledSharedTail0 = (BounceDown.field_N != 0);
             }
             if (decompiledSharedTail0) {
               var6 = i.field_h.getInsets();
@@ -863,7 +863,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) runtimeException), "fj.GA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.GA(" + param0 + ')');
         }
     }
 
@@ -887,7 +887,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -922,14 +922,14 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    protected fj() {
+    protected AppletShell() {
         this.field_e = false;
     }
 
@@ -951,7 +951,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) runtimeException), "fj.destroy()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.destroy()");
         }
     }
 

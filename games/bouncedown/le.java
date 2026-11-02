@@ -10,7 +10,7 @@ final class le {
           param1.removeFocusListener(qj.field_c);
           db.field_R = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "le.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "le.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

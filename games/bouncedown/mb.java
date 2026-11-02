@@ -46,7 +46,7 @@ final class mb extends ed {
         String[] var17 = null;
         String[] var18 = null;
         int var12Lifetime1;
-        var15 = Bounce.field_N;
+        var15 = BounceDown.field_N;
         try {
           if (0 == param7) {
             param7 = param1.field_p;
@@ -130,7 +130,7 @@ final class mb extends ed {
               } else {
                 stackIn_43_2 = this.a(param1.b(var13), param0, -127, var13);
               }
-              wi.a(stackIn_42_0, stackIn_42_1, stackIn_43_2, false, var14);
+              PacketBuffer.a(stackIn_42_0, stackIn_42_1, stackIn_43_2, false, var14);
             }
             var11 = var11 + param7;
             this.field_a[var12Lifetime1] = var14;
@@ -152,7 +152,7 @@ final class mb extends ed {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ final class mb extends ed {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -222,9 +222,9 @@ final class mb extends ed {
           var10.field_a[0] = -param1.b(param0) + param4;
           int var7 = 117 / ((1 - param3) / 57);
           var10.field_a[param0.length()] = param4;
-          wi.a(param1, param0, 0, false, var10);
+          PacketBuffer.a(param1, param0, 0, false, var10);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "mb.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mb.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -257,9 +257,9 @@ final class mb extends ed {
           var7 = param2.b(param1);
           var8.field_a[0] = param3 - (var7 >> 1);
           var8.field_a[param1.length()] = param3 + (var7 >> 1);
-          wi.a(param2, param1, 0, param4, var8);
+          PacketBuffer.a(param2, param1, 0, param4, var8);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "mb.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mb.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -285,9 +285,9 @@ final class mb extends ed {
           var7 = this.a(param1, (byte) 100, param0, param4);
           var7.field_a[0] = param3;
           var7.field_a[param0.length()] = param4.b(param0) + param3;
-          wi.a(param4, param0, 0, false, var7);
+          PacketBuffer.a(param4, param0, 0, false, var7);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "mb.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mb.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

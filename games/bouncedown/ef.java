@@ -18,7 +18,7 @@ abstract class ef {
           kc.a((byte) 18);
           return;
         }
-        ii var2 = jc.field_g;
+        CipherPacketBuffer var2 = jc.field_g;
         var2.j(-3);
         var2.j(-3);
         var2.j(-3);

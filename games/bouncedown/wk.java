@@ -69,7 +69,7 @@ abstract class wk extends ri {
         int var9Lifetime2;
         int var12Lifetime1;
         int var13Lifetime1;
-        var16 = Bounce.field_N;
+        var16 = BounceDown.field_N;
         if (param1 >= -6) {
           this.field_K = -102;
         }

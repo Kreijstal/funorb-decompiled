@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class di implements Iterator {
-    private ug field_c;
+    private DualLinkNode field_c;
     static int[] field_b;
     static String field_a;
-    private ug field_d;
+    private DualLinkNode field_d;
     private wh field_e;
 
     public static void a(boolean param0) {
@@ -29,7 +29,7 @@ final class di implements Iterator {
         try {
           td.field_a = param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,9 +39,9 @@ final class di implements Iterator {
           var1 = null;
           this.field_d = null;
         } else {
-          this.field_d = ((ug) (var1)).field_l;
+          this.field_d = ((DualLinkNode) (var1)).field_l;
         }
-        this.field_c = (ug) (var1);
+        this.field_c = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -56,7 +56,7 @@ final class di implements Iterator {
           this.field_d = this.field_e.field_a.field_l;
           this.field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class di implements Iterator {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           var10 = (CharSequence) ((Object) param2);
           var3_int = pj.a(false, param1, var10);
@@ -107,7 +107,7 @@ final class di implements Iterator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

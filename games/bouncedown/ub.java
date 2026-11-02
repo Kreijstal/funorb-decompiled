@@ -45,7 +45,7 @@ final class ub {
           bf.field_o.field_p = jl.field_c.field_q;
           ve.a(param0 ^ 100);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ub.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ub.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

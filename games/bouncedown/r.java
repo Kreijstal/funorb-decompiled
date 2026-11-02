@@ -33,7 +33,7 @@ final class r implements fc {
         int var12 = 0;
         int var13 = 0;
         int var6Lifetime1;
-        var13 = Bounce.field_N;
+        var13 = BounceDown.field_N;
         try {
           var5_int = param0.b(param2);
           if (param4 >= var5_int &&
@@ -97,7 +97,7 @@ final class r implements fc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class r implements fc {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           var6_int = -49 / ((-60 - param2) / 56);
           if (!param1.field_g &&
@@ -175,7 +175,7 @@ final class r implements fc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class r implements fc {
           this.field_e = param2;
           this.field_a = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

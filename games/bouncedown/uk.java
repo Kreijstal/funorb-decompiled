@@ -5,10 +5,10 @@ final class uk {
     private int field_h;
     private int field_a;
     static bc field_d;
-    private ai field_e;
-    private ai[] field_c;
+    private IntrusiveNode field_e;
+    private IntrusiveNode[] field_c;
     static String field_b;
-    private ai field_g;
+    private IntrusiveNode field_g;
     static tg[] field_f;
 
     public static void c(int param0) {
@@ -18,15 +18,15 @@ final class uk {
         field_b = null;
     }
 
-    final void a(long param0, int param1, ai param2) {
-        ai var5 = null;
+    final void a(long param0, int param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param2.field_f) {
             param2.c(2);
           }
           if (param1 < 18) {
-            ai var6 = (ai) null;
-            this.a(-59L, -124, (ai) null);
+            IntrusiveNode var6 = (IntrusiveNode) null;
+            this.a(-59L, -124, (IntrusiveNode) null);
           }
           var5 = this.field_c[(int)(param0 & (long)(this.field_a - 1))];
           param2.field_f = var5.field_f;
@@ -35,19 +35,19 @@ final class uk {
           param2.field_d = param0;
           param2.field_c.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "uk.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "uk.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ai a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        ai var4;
-        ai var5;
-        ai var6;
-        ai var9;
-        var3 = Bounce.field_N;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
+        IntrusiveNode var9;
+        var3 = BounceDown.field_N;
         if (param0 <= ~this.field_h) {
           do {
             if (this.field_a <= this.field_h) {
@@ -79,10 +79,10 @@ final class uk {
         return var6;
     }
 
-    final ai a(int param0, long param1) {
-        ai var5 = null;
-        int var6 = Bounce.field_N;
-        ai var4 = this.field_c[(int)(param1 & (long)(this.field_a - 1))];
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
+        int var6 = BounceDown.field_N;
+        IntrusiveNode var4 = this.field_c[(int)(param1 & (long)(this.field_a - 1))];
         this.field_g = var4.field_c;
         while (this.field_g != var4) {
           if (~param1 == ~this.field_g.field_d) {
@@ -100,7 +100,7 @@ final class uk {
         return null;
     }
 
-    final ai b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_h = param0;
         return this.a(-1);
     }
@@ -118,7 +118,7 @@ final class uk {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           var2_int = param1.length();
           var3 = 0;
@@ -153,7 +153,7 @@ final class uk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -166,21 +166,21 @@ final class uk {
           le.field_a = param3;
           cl.field_m = param1;
           d.field_F = param0;
-          kk.field_z = param4;
+          GameClient.field_z = param4;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     uk(int param0) {
         int var2 = 0;
-        ai dupTemp$1 = null;
-        ai var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_h = 0;
         this.field_a = param0;
-        this.field_c = new ai[param0];
+        this.field_c = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new ai();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_c[var2] = dupTemp$1;
           var3.field_c = var3;

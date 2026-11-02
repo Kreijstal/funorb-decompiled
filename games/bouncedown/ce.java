@@ -69,7 +69,7 @@ final class ce extends td {
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         if (this.field_s != null) {
           return this.field_s;
         }
@@ -165,7 +165,7 @@ final class ce extends td {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         var12 = (gj) (this.field_o.a(36, (long)param2));
         var4 = var12;
         if (var12 != null &&
@@ -208,7 +208,7 @@ final class ce extends td {
               var4 = this.field_f.a(param2, (byte) 2, 81, true, this.field_q);
             }
           }
-          this.field_o.a((long)param2, param1 - 172, (ai) (var4));
+          this.field_o.a((long)param2, param1 - 172, (IntrusiveNode) (var4));
         }
         if (((gj) (var4)).field_n) {
           return null;
@@ -266,7 +266,7 @@ final class ce extends td {
             if (((gj) (var4)).field_m &&
               !this.field_f.b(false)) {
               var4 = this.field_f.a(param2, (byte) 2, 36, true, this.field_q);
-              this.field_o.a((long)param2, 124, (ai) (var4));
+              this.field_o.a((long)param2, 124, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -305,7 +305,7 @@ final class ce extends td {
               return null;
             }
             var4 = this.field_f.a(param2, (byte) 2, -62, true, this.field_q);
-            this.field_o.a((long)param2, param1 ^ 202, (ai) (var4));
+            this.field_o.a((long)param2, param1 ^ 202, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -341,7 +341,7 @@ final class ce extends td {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           if (param0 == null) {
             stackIn_3_0 = null;
@@ -396,7 +396,7 @@ final class ce extends td {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -408,16 +408,16 @@ final class ce extends td {
         int var2;
         int var3_int;
         gj var3;
-        ai var4;
+        IntrusiveNode var4;
         int var5;
         int var6;
-        ai var7;
-        ai var8;
+        IntrusiveNode var7;
+        IntrusiveNode var8;
         int var3_intLifetime1;
         int var5Lifetime1;
-        ai var4Lifetime1;
+        IntrusiveNode var4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         var2 = 97 % ((46 - param0) / 34);
         if (this.field_h != null) {
           if (this.b(1) == null) {
@@ -448,7 +448,7 @@ final class ce extends td {
                   discarded$2 = this.a(1, 255, this.field_w);
                 }
                 if (this.field_p[this.field_w] == 0) {
-                  var7 = new ai();
+                  var7 = new IntrusiveNode();
                   var7.field_d = (long)this.field_w;
                   var3_int = 0;
                   this.field_h.a(1, var7);
@@ -481,18 +481,18 @@ final class ce extends td {
                 }
                 var4Lifetime1 = this.field_h.d((byte) -47);
               }
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_w < this.field_s.field_q.length) {
                   if (this.field_s.field_q[this.field_w] != 0) {
                     if (this.field_f.b((byte) 90)) {
                       var3_intLifetime1 = 0;
-                      break L3;
+                      break scanLoop1;
                     }
                     if (this.field_p[this.field_w] != 1) {
                       discarded$0 = this.a(2, 255, this.field_w);
                     }
                     if (1 != this.field_p[this.field_w]) {
-                      var8 = new ai();
+                      var8 = new IntrusiveNode();
                       var8.field_d = (long)this.field_w;
                       this.field_h.a(1, var8);
                       var3_intLifetime1 = 0;
@@ -537,10 +537,10 @@ final class ce extends td {
     final void d(int param0) {
         gj discarded$0 = null;
         gj discarded$1 = null;
-        ai var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         if (null == this.field_h) {
           return;
         }
@@ -652,7 +652,7 @@ final class ce extends td {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

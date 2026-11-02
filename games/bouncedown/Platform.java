@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg {
+final class Platform {
     int field_b;
     double field_c;
     static String field_k;
@@ -28,7 +28,7 @@ final class dg {
         int var3Lifetime3;
         int var3Lifetime4;
         boolean decompiledFrameRemainder0 = true;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         var4 = this.field_d;
         if (var4 == 0) {
           if (this.field_b != 0) {
@@ -38,7 +38,7 @@ final class dg {
             var5_int -= 64;
             var6 = od.field_f.b(hf.field_c);
             var7 = od.field_f.field_s;
-            ii.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
+            CipherPacketBuffer.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
             ve.a(8 + (var7 + 16), var5_int - 27, ig.field_d, (byte) -82, 8 + (var6 + 8), -8 + var4 - var6 / 2);
           } else {
             kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
@@ -117,7 +117,7 @@ final class dg {
     final void a(int param0) {
         int var2;
         int var3;
-        var3 = Bounce.field_N;
+        var3 = BounceDown.field_N;
         var2 = this.field_d;
         if (var2 != 0) {
           if (1 != var2) {
@@ -202,7 +202,7 @@ final class dg {
         }
     }
 
-    dg() {
+    Platform() {
         this.field_d = 0;
         this.field_c = 0.0;
         this.field_b = 0;
@@ -211,11 +211,11 @@ final class dg {
     }
 
     final static String a(int param0, char param1, int param2) {
-        int var5 = Bounce.field_N;
+        int var5 = BounceDown.field_N;
         char[] var3 = new char[param0];
         int var4 = 0;
         if (param2 != -13810) {
-          dg.b(32);
+          Platform.b(32);
         }
         while (var4 < param0) {
           var3[var4] = param1;
