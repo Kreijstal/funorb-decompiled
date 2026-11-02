@@ -4,8 +4,8 @@
 import java.io.*;
 
 final class ji {
-    static String field_a;
-    static String field_b;
+    static String abcdefghijklmnopqrstuvwxyzabcdefghijText;
+    static String useThisAlternativeAsText;
 
     final static int a(boolean param0) {
         try {
@@ -32,7 +32,7 @@ final class ji {
               cd.field_d = cd.field_d + 1;
             }
             if (!param0) {
-              field_b = (String) null;
+              useThisAlternativeAsText = (String) null;
             }
             if (cd.field_d == 1) {
               if (BufferedSocket.field_p.field_c == 2) {
@@ -176,7 +176,7 @@ final class ji {
             var3[-1 + var2_int - var4] = param0.charAt(var4);
           }
           if (param1 <= 61) {
-            field_b = (String) null;
+            useThisAlternativeAsText = (String) null;
           }
           stackIn_7_0 = new String(var3);
           return stackIn_7_0;
@@ -195,15 +195,15 @@ final class ji {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = null;
         if (param0 != 0) {
           return;
         }
-        field_b = null;
+        useThisAlternativeAsText = null;
     }
 
     static {
-        field_b = "Use this alternative as your account name";
-        field_a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        useThisAlternativeAsText = "Use this alternative as your account name";
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }
 }

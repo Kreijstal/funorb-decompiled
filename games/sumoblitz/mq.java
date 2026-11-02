@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mq {
-    static wb field_a;
+    static Sprite field_a;
     int field_c;
     int field_e;
     int field_j;
@@ -41,7 +41,7 @@ final class mq {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 89) {
-          field_a = (wb) null;
+          field_a = (Sprite) null;
         }
     }
 
@@ -111,7 +111,7 @@ final class mq {
           var6_int = -param0 + param4;
           var7 = 0;
           if (param2 >= -106) {
-            field_a = (wb) null;
+            field_a = (Sprite) null;
           }
           while (var6_int > var7) {
             {

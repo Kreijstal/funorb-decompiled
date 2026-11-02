@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf {
-    static jn field_c;
+    static IntrusiveDeque field_c;
     static int[] field_d;
     static int[] field_f;
     static int[] field_e;
-    static String field_b;
-    static String field_a;
+    static String thisIsAHiddenText;
+    static String waitingForInstrumentsText;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -51,25 +51,25 @@ final class jf {
         field_c = null;
         if (param0 > 78) {
           field_e = null;
-          field_b = null;
+          thisIsAHiddenText = null;
           field_d = null;
-          field_a = null;
+          waitingForInstrumentsText = null;
           field_f = null;
           return;
         }
         jf.a((byte) 7);
         field_e = null;
-        field_b = null;
+        thisIsAHiddenText = null;
         field_d = null;
-        field_a = null;
+        waitingForInstrumentsText = null;
         field_f = null;
     }
 
     static {
-        field_c = new jn();
+        field_c = new IntrusiveDeque();
         field_d = new int[128];
         field_e = new int[8192];
-        field_b = "This is a hidden Achievement";
-        field_a = "Waiting for instruments";
+        thisIsAHiddenText = "This is a hidden Achievement";
+        waitingForInstrumentsText = "Waiting for instruments";
     }
 }

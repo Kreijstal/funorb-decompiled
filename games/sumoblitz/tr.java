@@ -5,7 +5,7 @@ final class tr extends ak {
     static jj field_j;
     private int field_i;
 
-    final void a(int param0, ha param1, int param2) {
+    final void a(int param0, GraphicsToolkit param1, int param2) {
         int stackIn_4_0 = 0;
         hr stackIn_30_0 = null;
         int stackIn_30_1 = 0;
@@ -27,7 +27,7 @@ final class tr extends ak {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ha var10_ref_ha = null;
+        GraphicsToolkit var10_ref_ha = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -61,7 +61,7 @@ final class tr extends ak {
           var6 += 127;
           var7 = 0;
           for (var8 = 108; -120 + rl.field_k > var8; var8 += 52) {
-            for (var9 = 44; rj.field_c - 96 > var9; var9 += 112) {
+            for (var9 = 44; ResourceArchive.field_c - 96 > var9; var9 += 112) {
               if (var7 == 1 + bl.field_e &&
                 param0 >= 250 &&
                 !mq.a(8230, 25)) {
@@ -91,10 +91,10 @@ final class tr extends ak {
             var13 = up.field_c;
             wo.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (wm.field_f[this.field_i]) {
-              gt.field_db.a(tj.field_l.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
-              bq.field_c.a(tj.field_l.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), param2 + 2355);
-              gt.field_db.a(ps.field_b.toLowerCase() + go.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
-              bq.field_c.a(ps.field_b.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 + 2355);
+              gt.field_db.a(tj.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
+              bq.field_c.a(tj.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), param2 + 2355);
+              gt.field_db.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
+              bq.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 + 2355);
               var10 = 0;
               if (up.field_g[this.field_i]) {
                 var10++;
@@ -128,8 +128,8 @@ final class tr extends ak {
               ((hr) (Object) stackIn_36_0).a((float)(stackIn_36_1 + (stackIn_36_2 - (stackIn_36_3 - stackIn_37_4))), (float)(var9Lifetime1 + 40), 4096, 0, 3, -1, 1);
               return;
             }
-            gt.field_db.a(bi.field_b, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
-            bq.field_c.a(bi.field_b, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 ^ -2355);
+            gt.field_db.a(bi.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
+            bq.field_c.a(bi.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 ^ -2355);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

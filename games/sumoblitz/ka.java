@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ka {
-    static String field_a;
+    static String passwordIsValidText;
     static int field_b;
 
     final static int a(mp param0, int param1) {
@@ -45,7 +45,7 @@ abstract class ka {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        passwordIsValidText = null;
         if (param0 != -59) {
           mp var2 = (mp) null;
           ka.a((mp) null, 4);
@@ -53,6 +53,6 @@ abstract class ka {
     }
 
     static {
-        field_a = "Password is valid";
+        passwordIsValidText = "Password is valid";
     }
 }

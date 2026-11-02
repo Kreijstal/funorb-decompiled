@@ -7,25 +7,25 @@ final class mb {
     static int[] field_h;
     static gf field_f;
     static hv field_k;
-    static String[] field_g;
-    static String[] field_d;
+    static String[] upgradesHelpLines;
+    static String[] dronesHelpLines;
     static String[][] field_e;
-    static String[] field_j;
-    static String[] field_a;
-    static String[] field_i;
+    static String[] dronesHelpLinesPartTwo;
+    static String[] controlsHelpLines;
+    static String[] objectiveHelpLines;
 
     public static void a(boolean param0) {
-        field_a = null;
+        controlsHelpLines = null;
         field_f = null;
-        field_j = null;
+        dronesHelpLinesPartTwo = null;
         field_c = null;
         field_h = null;
         field_k = null;
-        field_i = null;
+        objectiveHelpLines = null;
         field_e = (String[][]) null;
         if (!param0) {
-          field_g = null;
-          field_d = null;
+          upgradesHelpLines = null;
+          dronesHelpLines = null;
           return;
         }
     }
@@ -46,7 +46,7 @@ final class mb {
         try {
           var2_int = param0.length();
           if (param1 != 32) {
-            field_g = (String[]) null;
+            upgradesHelpLines = (String[]) null;
           }
           var3 = new byte[var2_int];
           for (var4 = 0; var2_int > var4; var4++) {
@@ -175,11 +175,11 @@ final class mb {
         field_h = new int[1];
         field_f = new gf();
         field_k = new hv();
-        field_g = new String[]{"<b>Upgrades", "At the end of each level, GyojiBot will reward you with Powerup Points. Assign points to Speed, Traction and Bounce to upgrade your Sumo Drone.", "Soup-up your speed for superior swiftness.", "Top up your traction for terrific tenacity.", "Boost your bounce to better bump baddies.", "Occasionally, GyojiBot will drop temporary upgrades into the arena. He hopes you will accept his generous gifts."};
-        field_d = new String[]{"<b>Drones", "HyoujunBot", "He's eager to fight, but he has only normal eyesight. It is possible to hide from him.", "SuiminBot", "Wake him up with a bump. He's slower than HyoujunBot, but he has better traction.", "KosokuBot", "He's lighter than HyoujunBot, but faster, with very little traction."};
-        field_j = new String[]{"<b>Drones", "BunkatBot", "On death, he splits into smaller versions of himself.", "SosakuBot", "With high traction and a very long sight range, he'll hunt you down from far away."};
-        field_i = new String[]{"<b>Objective", "Force enemy Sumo Drones into the energy barrier surrounding the arena. Use obstacles to your advantage.", "GyojiBot bestows points multipliers upon those who destroy multiple drones quickly - but what GyojiBot giveth, GyojiBot also taketh away."};
-        field_a = new String[]{"<b>Controls", "MOUSE CONTROLS: ", "Use your left mouse button to direct your drone.", "KEYBOARD CONTROLS: ", "Use the WASD keys to direct your drone. Use Space to deploy an Energy Blast when the red Recharge Meter is full.", "Do not bore GyojiBot by remaining in one place for too long. For this, he will destroy your drone.", "GyojiBot wants you to know that this hurts him more than it hurts you."};
+        upgradesHelpLines = new String[]{"<b>Upgrades", "At the end of each level, GyojiBot will reward you with Powerup Points. Assign points to Speed, Traction and Bounce to upgrade your Sumo Drone.", "Soup-up your speed for superior swiftness.", "Top up your traction for terrific tenacity.", "Boost your bounce to better bump baddies.", "Occasionally, GyojiBot will drop temporary upgrades into the arena. He hopes you will accept his generous gifts."};
+        dronesHelpLines = new String[]{"<b>Drones", "HyoujunBot", "He's eager to fight, but he has only normal eyesight. It is possible to hide from him.", "SuiminBot", "Wake him up with a bump. He's slower than HyoujunBot, but he has better traction.", "KosokuBot", "He's lighter than HyoujunBot, but faster, with very little traction."};
+        dronesHelpLinesPartTwo = new String[]{"<b>Drones", "BunkatBot", "On death, he splits into smaller versions of himself.", "SosakuBot", "With high traction and a very long sight range, he'll hunt you down from far away."};
+        objectiveHelpLines = new String[]{"<b>Objective", "Force enemy Sumo Drones into the energy barrier surrounding the arena. Use obstacles to your advantage.", "GyojiBot bestows points multipliers upon those who destroy multiple drones quickly - but what GyojiBot giveth, GyojiBot also taketh away."};
+        controlsHelpLines = new String[]{"<b>Controls", "MOUSE CONTROLS: ", "Use your left mouse button to direct your drone.", "KEYBOARD CONTROLS: ", "Use the WASD keys to direct your drone. Use Space to deploy an Energy Blast when the red Recharge Meter is full.", "Do not bore GyojiBot by remaining in one place for too long. For this, he will destroy your drone.", "GyojiBot wants you to know that this hurts him more than it hurts you."};
         field_e = new String[5][];
     }
 }

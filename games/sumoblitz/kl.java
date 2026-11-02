@@ -10,9 +10,9 @@ final class kl extends jt {
         return this.field_B.get();
     }
 
-    final static ha a(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
+    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
         RuntimeException var5 = null;
-        ha stackIn_2_0 = null;
+        GraphicsToolkit stackIn_2_0 = null;
         qa stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -23,9 +23,9 @@ final class kl extends jt {
         try {
           if (param4 == -1) {
             stackIn_4_0 = new qa(param1, param2, param3, param0);
-            return (ha) ((Object) stackIn_4_0);
+            return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (ha) null;
+          stackIn_2_0 = (GraphicsToolkit) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

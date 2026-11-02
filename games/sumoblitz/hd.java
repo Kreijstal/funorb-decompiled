@@ -4,8 +4,8 @@
 final class hd extends ac {
     private ld field_M;
     Object[] field_K;
-    static String field_I;
-    static wb[] field_O;
+    static String regularText;
+    static Sprite[] field_O;
     private vn field_P;
     static ki field_H;
     int field_J;
@@ -13,7 +13,7 @@ final class hd extends ac {
     int field_L;
 
     public static void f(int param0) {
-        field_I = null;
+        regularText = null;
         field_H = null;
         int var1 = 84 / ((-18 - param0) / 55);
         field_O = null;
@@ -203,6 +203,6 @@ final class hd extends ac {
     }
 
     static {
-        field_I = "regular";
+        regularText = "regular";
     }
 }

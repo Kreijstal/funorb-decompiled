@@ -4,17 +4,17 @@
 final class l {
     static int[] field_c;
     int field_b;
-    static String[] field_a;
+    static String[] enemyVariantNames;
 
     public static void a(int param0) {
         if (param0 >= -54) {
-          field_a = (String[]) null;
+          enemyVariantNames = (String[]) null;
           field_c = null;
-          field_a = null;
+          enemyVariantNames = null;
           return;
         }
         field_c = null;
-        field_a = null;
+        enemyVariantNames = null;
     }
 
     final static int a(CharSequence param0, int param1) {
@@ -59,6 +59,6 @@ final class l {
     }
 
     static {
-        field_a = new String[]{"None", "Armoured", "Spiked", "Bomb", "Small", "Big", "Boss"};
+        enemyVariantNames = new String[]{"None", "Armoured", "Spiked", "Bomb", "Small", "Big", "Boss"};
     }
 }

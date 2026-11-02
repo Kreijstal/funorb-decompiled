@@ -14,7 +14,7 @@ class dh extends wp {
     private boolean field_O;
     static int[] field_H;
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_7_1 = 0;
         int stackIn_8_2 = 0;
         boolean stackIn_11_1 = false;
@@ -35,7 +35,7 @@ class dh extends wp {
           if (!(this.field_w instanceof de)) {
             return false;
           }
-          var8_int = ((de) ((Object) this.field_w)).a(param4, (pk) (this), ko.field_p, pi.field_e, -4059, param6);
+          var8_int = ((de) ((Object) this.field_w)).a(param4, (UiWidget) (this), ko.field_p, pi.field_e, -4059, param6);
           stackIn_7_1 = 124;
           if (-1 != var8_int) {
             stackIn_8_2 = var8_int;
@@ -244,7 +244,7 @@ class dh extends wp {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
@@ -433,12 +433,12 @@ class dh extends wp {
           return;
         }
         var9 = (de) ((Object) this.field_w);
-        var3 = var9.b(-3, (pk) (this));
+        var3 = var9.b(-3, (UiWidget) (this));
         var4 = var3.a((byte) -15);
         if (param0 != -44) {
           field_H = (int[]) null;
         }
-        var5 = var9.a(param0 ^ -120, (pk) (this));
+        var5 = var9.a(param0 ^ -120, (UiWidget) (this));
         var6 = var9.a(14763) >> 1;
         if (-var6 + var5 > var4) {
           this.field_n = 0;
@@ -483,7 +483,7 @@ class dh extends wp {
         }
     }
 
-    void a(int param0, int param1, pk param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         de var6 = null;
         int var7 = 0;
@@ -499,7 +499,7 @@ class dh extends wp {
           if (this.field_l == 1) {
             if (this.field_w instanceof de) {
               var6 = (de) ((Object) this.field_w);
-              var7 = var6.a(param0, (pk) (this), ko.field_p, pi.field_e, -4059, param3);
+              var7 = var6.a(param0, (UiWidget) (this), ko.field_p, pi.field_e, -4059, param3);
               if (var7 != -1) {
                 if (this.field_G &&
                   this.field_K > var7 &&
@@ -532,15 +532,15 @@ class dh extends wp {
         int discarded$0 = 0;
         if (null != this.field_w &&
           param3 == 0) {
-          this.field_w.a((pk) (this), param1, 5592405, this.field_x, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, this.field_x, param0);
           if (this.field_w instanceof de) {
             var8 = (de) ((Object) this.field_w);
             if (this.field_F != this.field_E) {
-              var8.a(param0, this.field_E, 0, this.field_F, (pk) (this), param1);
+              var8.a(param0, this.field_E, 0, this.field_F, (UiWidget) (this), param1);
             }
             var6 = wq.a(-6);
             if (500L > (-this.field_J + var6) % 1000L) {
-              var8.a(1, param0, param1, this.field_F, (pk) (this));
+              var8.a(1, param0, param1, this.field_F, (UiWidget) (this));
             }
           }
         }

@@ -27,7 +27,7 @@ final class ct extends ml {
             var2_double = vp.field_d[param1.field_N] * (double)gq.field_q[param1.field_Q];
             var2_double = var2_double + (double)(param1.field_G / 50);
             var2_double = var2_double * (double)pd.field_p;
-            cb.a((int)var2_double, -1372239541);
+            IntrusiveDequeCursor.a((int)var2_double, -1372239541);
             if ((1 << param1.field_Q & qk.field_T) == 0) {
               qk.field_T = qk.field_T | 1 << param1.field_Q;
               bi.field_c = bi.field_c + 1;
@@ -105,8 +105,8 @@ final class ct extends ml {
     final static void b(boolean param0) {
         aa.field_a = new ah[100];
         sm.a(72);
-        bj.field_b = new jn();
-        is.field_c = new jn();
+        bj.field_b = new IntrusiveDeque();
+        is.field_c = new IntrusiveDeque();
         he.field_o = new Random();
         db.field_l = 1;
         in.field_z = 0;

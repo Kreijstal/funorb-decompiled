@@ -175,7 +175,7 @@ final class jl {
         }
     }
 
-    jl(aw param0) {
+    jl(HardwareGraphicsToolkit param0) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -274,7 +274,7 @@ final class jl {
         }
     }
 
-    final void a(int param0, aw param1) {
+    final void a(int param0, HardwareGraphicsToolkit param1) {
         try {
           int var3_int = -4 % ((param0 - 65) / 32);
           this.field_c.a(24, (byte) -35, 786336);

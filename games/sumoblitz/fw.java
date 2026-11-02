@@ -4,8 +4,8 @@
 import java.io.*;
 
 final class fw extends IntrusiveNode {
-    ha field_k;
-    static wb[] field_m;
+    GraphicsToolkit field_k;
+    static Sprite[] field_m;
     pm field_l;
 
     final static cp c(boolean param0) {
@@ -60,7 +60,7 @@ final class fw extends IntrusiveNode {
               return false;
             }
             if (param0 <= 123) {
-              field_m = (wb[]) null;
+              field_m = (Sprite[]) null;
             }
             var4 = null;
             if (var4 == null) {
@@ -123,7 +123,7 @@ final class fw extends IntrusiveNode {
         }
     }
 
-    fw(ha param0, pm param1) {
+    fw(GraphicsToolkit param0, pm param1) {
         try {
           this.field_l = param1;
           this.field_k = param0;

@@ -4,7 +4,7 @@
 final class rh extends hj {
     static int field_p;
     static ri[] field_q;
-    jn field_t;
+    IntrusiveDeque field_t;
     static int[] field_s;
     static boolean[] field_r;
     private bs field_u;
@@ -281,7 +281,7 @@ final class rh extends hj {
     }
 
     rh(bs param0) {
-        this.field_t = new jn();
+        this.field_t = new IntrusiveDeque();
         this.field_o = new al();
         try {
           this.field_u = param0;

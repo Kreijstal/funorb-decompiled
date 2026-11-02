@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends wb {
+final class mg extends Sprite {
     final void d(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
@@ -43,7 +43,7 @@ final class mg extends wb {
           var6 <= 0) {
           return;
         }
-        mg.b(0, 0, 0, lk.field_a, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        mg.b(0, 0, 0, lk.field_a, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -170,7 +170,7 @@ final class mg extends wb {
             var17 = 0;
             var18 = 0;
             for (var19 = 0; var19 < 4; var19++) {
-              stackIn_20_0 = this.field_C;
+              stackIn_20_0 = this.pixels;
               stackIn_20_1 = var10 + (var19 & 1);
               if ((var19 & 2) != 0) {
                 stackIn_21_2 = 0;
@@ -240,7 +240,7 @@ final class mg extends wb {
           var5 <= 0) {
           return;
         }
-        mg.c(lk.field_a, this.field_C, 0, var4, var3, var6, var5, var7, var8);
+        mg.c(lk.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1) {
@@ -284,7 +284,7 @@ final class mg extends wb {
           var5 <= 0) {
           return;
         }
-        mg.c(lk.field_a, this.field_C, 0, var4, var3, var6, var5, var7, var8);
+        mg.c(lk.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -328,7 +328,7 @@ final class mg extends wb {
           var6 <= 0) {
           return;
         }
-        mg.d(lk.field_a, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+        mg.d(lk.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -457,6 +457,6 @@ final class mg extends wb {
           var6 <= 0) {
           return;
         }
-        mg.c(lk.field_a, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+        mg.c(lk.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 }

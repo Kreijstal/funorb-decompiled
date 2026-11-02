@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class wl {
-    static String field_b;
+    static String serviceUnavailableText;
     private gj field_c;
     private int field_a;
     private int field_d;
@@ -202,9 +202,9 @@ final class wl {
     }
 
     public static void a(byte param0) {
-        field_b = null;
+        serviceUnavailableText = null;
         if (param0 != -90) {
-          field_b = (String) null;
+          serviceUnavailableText = (String) null;
         }
     }
 
@@ -387,6 +387,6 @@ final class wl {
     }
 
     static {
-        field_b = "Service unavailable";
+        serviceUnavailableText = "Service unavailable";
     }
 }

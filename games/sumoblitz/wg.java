@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wg {
-    private on field_a;
+    private OpenGlGraphicsToolkit field_a;
     int field_b;
 
     final static int b(int param0, int param1, int param2) {
@@ -85,7 +85,7 @@ final class wg {
         super.finalize();
     }
 
-    wg(on param0, int param1, int param2) {
+    wg(OpenGlGraphicsToolkit param0, int param1, int param2) {
         try {
           this.field_b = param2;
           this.field_a = param0;
@@ -94,18 +94,18 @@ final class wg {
         }
     }
 
-    final static wb a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        wb var6 = new wb(param0, param0);
-        wb var3 = var6;
-        for (var4 = 0; var3.field_C.length > var4; var4++) {
-          var6.field_C[var4] = param1;
+        Sprite var6 = new Sprite(param0, param0);
+        Sprite var3 = var6;
+        for (var4 = 0; var3.pixels.length > var4; var4++) {
+          var6.pixels[var4] = param1;
         }
         if (param2 == 3) {
           return var3;
         }
-        return (wb) null;
+        return (Sprite) null;
     }
 
     static {

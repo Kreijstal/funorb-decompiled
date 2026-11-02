@@ -3,17 +3,17 @@
  */
 final class ea {
     static ts field_a;
-    static String field_b;
+    static String difficultyText;
 
     public static void b(int param0) {
         int var1 = -48 % ((-58 - param0) / 49);
         field_a = null;
-        field_b = null;
+        difficultyText = null;
     }
 
     final static al a(int param0) {
         if (param0 != 14263) {
-          field_b = (String) null;
+          difficultyText = (String) null;
           return sj.field_c;
         }
         return sj.field_c;
@@ -28,7 +28,7 @@ final class ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -73) {
-            field_b = (String) null;
+            difficultyText = (String) null;
           }
           stackIn_3_0 = uv.a(param2, param1, true, (byte) -86);
           return stackIn_3_0;
@@ -84,7 +84,7 @@ final class ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -25) {
-            field_b = (String) null;
+            difficultyText = (String) null;
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = tc.field_f.equals(uk.a(param1 ^ 24, var3));
@@ -121,6 +121,6 @@ final class ea {
 
     static {
         field_a = new ts(12, 0, 1, 0);
-        field_b = "Difficulty: ";
+        difficultyText = "Difficulty: ";
     }
 }

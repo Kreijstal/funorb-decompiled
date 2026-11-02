@@ -5,13 +5,13 @@ final class lq {
     static String field_a;
     static int field_d;
     static int field_b;
-    static String field_c;
+    static String toServerListText;
 
     public static void a(boolean param0) {
         if (!param0) {
           return;
         }
-        field_c = null;
+        toServerListText = null;
         field_a = null;
     }
 
@@ -30,11 +30,11 @@ final class lq {
     }
 
     final static void a(ki param0, int param1) {
-        wb var6 = null;
+        Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new wb(param0.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
+          var6 = new Sprite(param0.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
           var3 = var6.field_x;
           var4 = var6.field_u;
           GameApplet.j(103);
@@ -42,10 +42,10 @@ final class lq {
             ki var5 = (ki) null;
             lq.a(-58, (String) null, (String) null, (ki) null);
           }
-          kh.field_a = new wb(var3, var4 * 3 / 4);
+          kh.field_a = new Sprite(var3, var4 * 3 / 4);
           kh.field_a.d();
           var6.c(0, 0);
-          mq.field_a = new wb(var3, var4 - kh.field_a.field_u);
+          mq.field_a = new Sprite(var3, var4 - kh.field_a.field_u);
           mq.field_a.d();
           var6.c(0, -kh.field_a.field_u);
           mq.field_a.field_A = kh.field_a.field_u;
@@ -108,6 +108,6 @@ final class lq {
     static {
         field_b = -1;
         field_a = "If you do nothing the game will revert to normal view in <%0> seconds.";
-        field_c = "To server list";
+        toServerListText = "To server list";
     }
 }

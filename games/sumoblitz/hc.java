@@ -7,7 +7,7 @@ final class hc {
     static int field_f;
     static ri[] field_a;
     static ri field_b;
-    static String field_d;
+    static String continueToNextLevelText;
 
     private hc() throws Throwable {
         throw new Error();
@@ -16,7 +16,7 @@ final class hc {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        field_d = null;
+        continueToNextLevelText = null;
         field_e = null;
         int var1 = 80 / ((69 - param0) / 40);
         field_c = null;
@@ -110,7 +110,7 @@ final class hc {
     }
 
     static {
-        field_d = "Continue to next level?";
+        continueToNextLevelText = "Continue to next level?";
         field_f = 1;
     }
 }

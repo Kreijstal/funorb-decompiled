@@ -39,7 +39,7 @@ final class ud extends hj {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        wb[] var9 = null;
+        Sprite[] var9 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (this.field_u &&
@@ -66,8 +66,8 @@ final class ud extends hj {
             return;
           }
           if (param0 != 1) {
-            var9 = (wb[]) null;
-            ud.a(57, -30, 8, 30, (wb[]) null);
+            var9 = (Sprite[]) null;
+            ud.a(57, -30, 8, 30, (Sprite[]) null);
           }
           stackIn_22_1 = (param3);
           this.field_u = stackIn_22_1;
@@ -131,7 +131,7 @@ final class ud extends hj {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wb[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;

@@ -4,11 +4,11 @@
 final class ph {
     static ri[] field_a;
     static qu field_b;
-    static String field_d;
+    static String youHaveUnreadMessagesText;
     private DualLinkNode field_e;
     private ro field_g;
     private int field_f;
-    static String field_h;
+    static String usernameText;
     private te field_c;
 
     final DualLinkNode a(byte param0, long param1) {
@@ -67,15 +67,15 @@ final class ph {
           return;
         }
         field_b = null;
-        field_h = null;
-        field_d = null;
+        usernameText = null;
+        youHaveUnreadMessagesText = null;
         field_a = null;
     }
 
     final static void a(byte param0) {
         f.field_s = null;
         if (param0 > -77) {
-          field_h = (String) null;
+          usernameText = (String) null;
         }
         gf.field_a = null;
     }
@@ -139,7 +139,7 @@ final class ph {
               return;
             }
             if (param14 != -48) {
-              field_d = (String) null;
+              youHaveUnreadMessagesText = (String) null;
             }
             var34 = -param13 + param12;
             if (param13 == param16) {
@@ -425,7 +425,7 @@ final class ph {
     }
 
     static {
-        field_h = "Username: ";
-        field_d = "You have <%0> unread messages!";
+        usernameText = "Username: ";
+        youHaveUnreadMessagesText = "You have <%0> unread messages!";
     }
 }

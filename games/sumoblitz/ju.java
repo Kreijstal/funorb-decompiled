@@ -98,7 +98,7 @@ final class ju extends ua implements cr {
         super.a((byte) -87, this.field_o.field_j * param1);
     }
 
-    ju(on param0, io param1, boolean param2) {
+    ju(OpenGlGraphicsToolkit param0, io param1, boolean param2) {
         super(param0, 34963, param2);
         try {
           this.field_o = param1;

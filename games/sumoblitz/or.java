@@ -88,7 +88,7 @@ final class or extends bp implements ru {
         super.a(param0);
     }
 
-    or(on param0, iw param1, io param2, int param3, int param4) {
+    or(OpenGlGraphicsToolkit param0, iw param1, io param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param3 * param4, false);
         try {
           this.field_i = param3;
@@ -100,7 +100,7 @@ final class or extends bp implements ru {
         }
     }
 
-    or(on param0, iw param1, int param2, int param3, byte[] param4, int param5, int param6) {
+    or(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, byte[] param4, int param5, int param6) {
         super(param0, 34037, param1, io.field_g, param2 * param3, false);
         try {
           this.field_i = param2;
@@ -130,7 +130,7 @@ final class or extends bp implements ru {
         return false;
     }
 
-    or(on param0, iw param1, int param2, int param3, float[] param4, int param5, int param6) {
+    or(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, io.field_d, param2 * param3, false);
         try {
           this.field_j = param3;
@@ -144,7 +144,7 @@ final class or extends bp implements ru {
         }
     }
 
-    or(on param0, int param1, int param2, int[] param3, int param4, int param5) {
+    or(OpenGlGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         super(param0, 34037, nl.field_p, io.field_g, param2 * param1, false);
         try {
           this.field_j = param2;

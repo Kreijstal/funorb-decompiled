@@ -10,23 +10,23 @@ final class mc extends ao {
     private boolean field_H;
     static boolean field_E;
     private boolean field_A;
-    static String field_J;
+    static String thisPasswordContainsRepeatedText;
 
-    mc(int param0, int param1, int param2, int param3, mh param4, pk param5, mh param6) {
+    mc(int param0, int param1, int param2, int param3, mh param4, UiWidget param5, mh param6) {
         super(param0, param1, param2, param3, param4);
         we dupTemp$0 = null;
         try {
-          this.field_x = new pk[3];
+          this.field_x = new UiWidget[3];
           dupTemp$0 = new we(param0, param1, param2, param3, param6, param5);
           this.field_D = dupTemp$0;
-          this.field_x[2] = (pk) ((Object) dupTemp$0);
+          this.field_x[2] = (UiWidget) ((Object) dupTemp$0);
           this.e(false);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "mc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.a(param0, 65, param2, param3);
           this.g(1);
@@ -38,24 +38,24 @@ final class mc extends ao {
     }
 
     private final void f(int param0) {
-        pk var3 = null;
-        pk var3Lifetime1;
-        pk var3Lifetime2;
-        pk var3Lifetime3;
+        UiWidget var3 = null;
+        UiWidget var3Lifetime1;
+        UiWidget var3Lifetime2;
+        UiWidget var3Lifetime3;
         if (null != this.field_G) {
           this.field_D.field_y.field_r = -(int)((long)(-this.field_D.field_q + this.field_D.field_y.field_q) * (long)this.field_G.field_G >> 16);
           if (this.field_B == null) {
             if (param0 == 1) {
               return;
             }
-            var3 = (pk) null;
-            this.a((pk) null, 'g', (byte) -4, -28);
+            var3 = (UiWidget) null;
+            this.a((UiWidget) null, 'g', (byte) -4, -28);
             return;
           }
           this.field_D.field_y.field_v = -(int)((long)(this.field_D.field_y.field_p - this.field_D.field_p) * (long)this.field_B.field_D >> 16);
           if (param0 != 1) {
-            var3Lifetime3 = (pk) null;
-            this.a((pk) null, 'g', (byte) -4, -28);
+            var3Lifetime3 = (UiWidget) null;
+            this.a((UiWidget) null, 'g', (byte) -4, -28);
             return;
           }
           return;
@@ -65,21 +65,21 @@ final class mc extends ao {
           if (param0 == 1) {
             return;
           }
-          var3Lifetime1 = (pk) null;
-          this.a((pk) null, 'g', (byte) -4, -28);
+          var3Lifetime1 = (UiWidget) null;
+          this.a((UiWidget) null, 'g', (byte) -4, -28);
           return;
         }
         if (param0 == 1) {
           return;
         }
-        var3Lifetime2 = (pk) null;
-        this.a((pk) null, 'g', (byte) -4, -28);
+        var3Lifetime2 = (UiWidget) null;
+        this.a((UiWidget) null, 'g', (byte) -4, -28);
     }
 
     private final boolean a(int param0, int param1) {
         if (param1 != 0) {
-          pk var4 = (pk) null;
-          this.a((pk) null, '￠', (byte) -97, -36);
+          UiWidget var4 = (UiWidget) null;
+          this.a((UiWidget) null, '￠', (byte) -97, -36);
           if (this.field_B != null) {
             this.field_B.a(param1 ^ 0, param0 * this.field_B.field_E + this.field_B.field_D);
             return true;
@@ -93,7 +93,7 @@ final class mc extends ao {
         return false;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, pk param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -123,17 +123,17 @@ final class mc extends ao {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
-        pk var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 9) {
-            var6 = (pk) null;
-            this.a(20, 50, (pk) null, 57);
+            var6 = (UiWidget) null;
+            this.a(20, 50, (UiWidget) null, 57);
           }
           if (!super.a(param0, param1, (byte) 74, param3)) {
             return false;
@@ -160,7 +160,7 @@ final class mc extends ao {
         }
         try {
           this.field_B = param2;
-          this.field_x[1] = (pk) ((Object) param2);
+          this.field_x[1] = (UiWidget) ((Object) param2);
           this.field_H = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "mc.VA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -240,7 +240,7 @@ final class mc extends ao {
     }
 
     public static void f(boolean param0) {
-        field_J = null;
+        thisPasswordContainsRepeatedText = null;
         if (!param0) {
           field_F = (ri[]) null;
           field_C = null;
@@ -428,7 +428,7 @@ final class mc extends ao {
         int var4;
         int var5;
         if (param0) {
-          field_J = (String) null;
+          thisPasswordContainsRepeatedText = (String) null;
           if (this.field_H) {
             var2 = 0;
             if (!this.field_A &&
@@ -985,6 +985,6 @@ final class mc extends ao {
     }
 
     static {
-        field_J = "This password contains repeated characters, and would be easy to guess";
+        thisPasswordContainsRepeatedText = "This password contains repeated characters, and would be easy to guess";
     }
 }

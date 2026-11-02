@@ -6,7 +6,7 @@ final class pn extends rq {
     static String field_n;
     private wg field_f;
     static int field_r;
-    static jn field_q;
+    static IntrusiveDeque field_q;
     private boolean field_e;
     private wg field_g;
     private boolean field_u;
@@ -90,7 +90,7 @@ final class pn extends rq {
         this.a(true, 123);
     }
 
-    pn(on param0, ki param1) {
+    pn(OpenGlGraphicsToolkit param0, ki param1) {
         super(param0);
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
@@ -276,6 +276,6 @@ final class pn extends rq {
 
     static {
         field_k = new int[12];
-        field_q = new jn();
+        field_q = new IntrusiveDeque();
     }
 }

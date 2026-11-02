@@ -6,7 +6,7 @@ final class pm {
     private bl field_a;
     private bl field_e;
     private hr field_d;
-    private ha field_c;
+    private GraphicsToolkit field_c;
 
     final static void a(int param0, int param1, hg param2) {
         pl var5 = null;
@@ -160,7 +160,7 @@ final class pm {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    pm(ha param0) {
+    pm(GraphicsToolkit param0) {
         this.field_b = new int[4];
         this.field_d = null;
         try {

@@ -10,7 +10,7 @@ final class gk {
     int[] field_F;
     short[] field_g;
     short[] field_y;
-    static String field_H;
+    static String previousText;
     int[] field_i;
     short[] field_B;
     short[] field_b;
@@ -87,7 +87,7 @@ final class gk {
 
     public static void a(int param0) {
         field_N = null;
-        field_H = null;
+        previousText = null;
         field_v = null;
         field_o = null;
         if (param0 != 0) {
@@ -196,6 +196,6 @@ final class gk {
     }
 
     static {
-        field_H = "Previous";
+        previousText = "Previous";
     }
 }

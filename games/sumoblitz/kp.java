@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kp {
-    static String field_b;
+    static String classicText;
     static boolean field_a;
 
     final static int a(of param0, int param1, id param2, int param3) {
@@ -75,12 +75,12 @@ final class kp {
 
     public static void a(int param0) {
         if (param0 == -1) {
-          field_b = null;
+          classicText = null;
           return;
         }
         id var2 = (id) null;
         kp.a((of) null, -64, (id) null, -29);
-        field_b = null;
+        classicText = null;
     }
 
     final static void a(int param0, id param1, int param2) {
@@ -97,7 +97,7 @@ final class kp {
     }
 
     static {
-        field_b = "Classic";
+        classicText = "Classic";
         field_a = false;
     }
 }

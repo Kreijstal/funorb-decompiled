@@ -3,20 +3,20 @@
  */
 abstract class RasterBuffer {
     int field_h;
-    static String field_g;
+    static String invalidPasswordText;
     int[] field_c;
     java.awt.Image field_f;
     static ts field_i;
     static int[] field_a;
     static int[] field_e;
-    static String field_d;
+    static String quitText;
     int field_b;
 
     public static void a(byte param0) {
         field_a = null;
         field_e = null;
-        field_d = null;
-        field_g = null;
+        quitText = null;
+        invalidPasswordText = null;
         field_i = null;
         if (param0 < 33) {
           field_a = (int[]) null;
@@ -57,11 +57,11 @@ abstract class RasterBuffer {
         var1 = jk.field_c;
         if (var1 > 0) {
           if (1 != var1) {
-            t.field_s = ic.a(ph.field_d, new String[]{Integer.toString(var1)}, (byte) -128);
+            t.field_s = ic.a(ph.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
           } else {
-            t.field_s = kq.field_O;
+            t.field_s = kq.youHave1UnreadText;
           }
-          t.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) t.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.field_f)});
+          t.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) t.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.visitTheAccountManagementText)});
         }
         hc.field_c.n(param0 ^ -5);
         od.a(5178);
@@ -85,7 +85,7 @@ abstract class RasterBuffer {
             ut.field_o = aj.a(false, param1);
           }
           if (param0 != 1) {
-            field_d = (String) null;
+            quitText = (String) null;
           }
           stackIn_7_0 = ut.field_o;
           return stackIn_7_0;
@@ -112,8 +112,8 @@ abstract class RasterBuffer {
     }
 
     static {
-        field_g = "Invalid password.";
-        field_d = "Quit";
+        invalidPasswordText = "Invalid password.";
+        quitText = "Quit";
         field_e = new int[256];
         field_i = new ts(1, 2, 2, 0);
     }

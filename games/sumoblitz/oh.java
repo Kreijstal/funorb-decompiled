@@ -3,12 +3,12 @@
  */
 final class oh {
     long field_d;
-    private on field_a;
+    private OpenGlGraphicsToolkit field_a;
     static java.math.BigInteger field_c;
-    static String field_b;
+    static String toReturnToTheText;
     static int field_e;
 
-    oh(on param0, long param1, qj[] param2) {
+    oh(OpenGlGraphicsToolkit param0, long param1, qj[] param2) {
         try {
           this.field_a = param0;
           this.field_d = param1;
@@ -19,9 +19,9 @@ final class oh {
 
     public static void a(byte param0) {
         field_c = null;
-        field_b = null;
+        toReturnToTheText = null;
         if (param0 != -60) {
-          field_b = (String) null;
+          toReturnToTheText = (String) null;
         }
     }
 
@@ -32,6 +32,6 @@ final class oh {
 
     static {
         field_c = new java.math.BigInteger("65537");
-        field_b = "to return to the normal view.";
+        toReturnToTheText = "to return to the normal view.";
     }
 }

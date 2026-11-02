@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientException extends RuntimeException {
-    static String field_d;
+    static String unpackingMusicText;
     String field_a;
-    static String field_c;
+    static String creatingYourAccountText;
     Throwable field_b;
 
-    final static qj a(int param0, on param1, byte[] param2, int param3) {
+    final static qj a(int param0, OpenGlGraphicsToolkit param1, byte[] param2, int param3) {
         Object stackIn_15_0 = null;
         qj stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
@@ -74,7 +74,7 @@ final class ClientException extends RuntimeException {
     final static boolean a(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          ClientException.a(6, (on) null, (byte[]) null, -63);
+          ClientException.a(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
           if (!nt.field_r) {
             return vs.b((byte) 9) ? true : false;
           }
@@ -105,8 +105,8 @@ final class ClientException extends RuntimeException {
         if (param0 != -18) {
           return;
         }
-        field_c = null;
-        field_d = null;
+        creatingYourAccountText = null;
+        unpackingMusicText = null;
     }
 
     ClientException(Throwable param0, String param1) {
@@ -115,7 +115,7 @@ final class ClientException extends RuntimeException {
     }
 
     static {
-        field_d = "Unpacking music";
-        field_c = "Creating your account";
+        unpackingMusicText = "Unpacking music";
+        creatingYourAccountText = "Creating your account";
     }
 }

@@ -4,8 +4,8 @@
 final class pp implements Runnable {
     volatile du[] field_c;
     volatile boolean field_b;
-    static String field_f;
-    static String[] field_e;
+    static String membersText;
+    static String[] padTypeNames;
     PlatformTaskDispatcher field_g;
     volatile boolean field_a;
     static gm field_d;
@@ -128,12 +128,12 @@ final class pp implements Runnable {
         field_d = null;
         if (param0 != 2) {
           pp.a(-25);
-          field_f = null;
-          field_e = null;
+          membersText = null;
+          padTypeNames = null;
           return;
         }
-        field_f = null;
-        field_e = null;
+        membersText = null;
+        padTypeNames = null;
     }
 
     public final void run() {
@@ -186,8 +186,8 @@ final class pp implements Runnable {
     }
 
     static {
-        field_e = new String[]{"Accelerator pad", "Ice pad", "Teleporter pad", "Pinball bouncer", "Attractor", "Repeller", "Spike pad", "Landmine"};
-        field_f = "Members";
+        padTypeNames = new String[]{"Accelerator pad", "Ice pad", "Teleporter pad", "Pinball bouncer", "Attractor", "Repeller", "Spike pad", "Landmine"};
+        membersText = "Members";
     }
 
     @SuppressWarnings("unchecked")

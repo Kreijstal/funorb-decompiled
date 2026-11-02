@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends sp implements ai {
+final class lc extends WidgetContainer implements ai {
     private wp[] field_H;
     private int field_F;
     private vn field_C;

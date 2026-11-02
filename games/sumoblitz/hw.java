@@ -24,7 +24,7 @@ final class hw {
           wd.field_f = du.a(param6, param0, 0, param2);
           iv.field_a = du.a(param6, param0, 1, param7);
           sj.field_c = new al();
-          cb.field_c = param7;
+          IntrusiveDequeCursor.field_c = param7;
           iv.field_a.a(sj.field_c);
           qr.field_b = param5;
           if (param3 <= 103) {

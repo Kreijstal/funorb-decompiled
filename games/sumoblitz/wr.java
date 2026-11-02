@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wr extends wp {
-    static jn field_E;
+    static IntrusiveDeque field_E;
     static ci field_G;
     static int field_F;
 
@@ -120,7 +120,7 @@ final class wr extends wp {
               param1.field_E = 256;
             }
           } else {
-            if (rj.field_c - 52 < var4 &&
+            if (ResourceArchive.field_c - 52 < var4 &&
               param1.field_E > 0) {
               param1.field_E = -param1.field_E;
               if (param1.field_E == 0) {
@@ -165,7 +165,7 @@ final class wr extends wp {
     public static void a(int param0) {
         field_G = null;
         if (param0 != 454) {
-          field_E = (jn) null;
+          field_E = (IntrusiveDeque) null;
         }
         field_E = null;
     }
@@ -352,6 +352,6 @@ final class wr extends wp {
     }
 
     static {
-        field_E = new jn();
+        field_E = new IntrusiveDeque();
     }
 }

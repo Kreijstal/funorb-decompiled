@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class aj extends nt {
-    static String field_t;
+    static String pleaseCheckIfAddressText;
     static int field_B;
     private int field_E;
     private int field_w;
@@ -14,7 +14,7 @@ final class aj extends nt {
     static volatile boolean field_A;
     private double field_F;
     static Calendar field_y;
-    static String field_x;
+    static String createYourOwnFreeText;
     static br[] field_D;
     private int field_u;
     static boolean field_C;
@@ -30,7 +30,7 @@ final class aj extends nt {
         this.field_z = param5;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -177,7 +177,7 @@ final class aj extends nt {
         return super.a(-2567);
     }
 
-    final static hr[] a(ri[] param0, ha param1, int param2) {
+    final static hr[] a(ri[] param0, GraphicsToolkit param1, int param2) {
         int var4 = 0;
         hr[] var3 = null;
         RuntimeException var3_ref = null;
@@ -225,22 +225,22 @@ final class aj extends nt {
     public static void e(int param0) {
         field_y = null;
         if (param0 == 2) {
-          field_x = null;
-          field_t = null;
+          createYourOwnFreeText = null;
+          pleaseCheckIfAddressText = null;
           field_D = null;
           return;
         }
-        ha var2 = (ha) null;
-        aj.a((ri[]) null, (ha) null, -61);
-        field_x = null;
-        field_t = null;
+        GraphicsToolkit var2 = (GraphicsToolkit) null;
+        aj.a((ri[]) null, (GraphicsToolkit) null, -61);
+        createYourOwnFreeText = null;
+        pleaseCheckIfAddressText = null;
         field_D = null;
     }
 
     static {
-        field_t = "Please check if address is correct";
+        pleaseCheckIfAddressText = "Please check if address is correct";
         field_B = 0;
-        field_x = "Create your own free Jagex account";
+        createYourOwnFreeText = "Create your own free Jagex account";
         field_A = false;
         field_y = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
     }

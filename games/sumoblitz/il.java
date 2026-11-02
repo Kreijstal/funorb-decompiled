@@ -115,7 +115,7 @@ final class il {
     }
 
     final static void a(byte param0, String param1) {
-        System.out.println("Error: " + aw.a("%0a", param1, "\n", true));
+        System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", param1, "\n", true));
         if (param0 < 4) {
           il.a(81);
         }

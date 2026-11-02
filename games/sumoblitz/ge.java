@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ge extends IntrusiveNode {
-    static String[] field_k;
+    static String[] difficultyNames;
     int field_m;
-    static String field_l;
+    static String clickToContinueText;
 
     public static void a(int param0) {
-        field_l = null;
-        field_k = null;
+        clickToContinueText = null;
+        difficultyNames = null;
         if (param0 != 6334) {
-          field_l = (String) null;
+          clickToContinueText = (String) null;
         }
     }
 
@@ -19,7 +19,7 @@ final class ge extends IntrusiveNode {
     }
 
     static {
-        field_k = new String[]{"Normal", "Hard"};
-        field_l = "Click to continue";
+        difficultyNames = new String[]{"Normal", "Hard"};
+        clickToContinueText = "Click to continue";
     }
 }

@@ -18,7 +18,7 @@ final class gb extends nt {
         field_t = null;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int var3_int = (int)(255.0 * ((double)this.field_p / 30.0));
         int var4 = 0;
         if (param1 > -121) {

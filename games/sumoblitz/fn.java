@@ -10,7 +10,7 @@ abstract class fn extends GameApplet {
     static int field_s;
     private boolean field_q;
     private boolean field_z;
-    static String field_A;
+    static String waitingForSoundEffectsText;
     private long field_y;
     private int field_C;
     private int field_x;
@@ -86,8 +86,8 @@ abstract class fn extends GameApplet {
             this.field_B = false;
             kk.a((byte) -112);
             we.a((byte) 16);
-            rj.a((byte) 87, 2, ab.field_d);
-            ha.a(-36);
+            ResourceArchive.a((byte) 87, 2, ab.weClosedTheConnectionText);
+            GraphicsToolkit.a(-36);
             ts.field_d = true;
             sj.field_a = 15000L + wq.a(-96);
           }
@@ -132,18 +132,18 @@ abstract class fn extends GameApplet {
             if (10 <= jv.field_a) {
               we.a((byte) 70);
               if (gr.field_l == 3) {
-                rj.a((byte) -97, 256, o.field_a);
+                ResourceArchive.a((byte) -97, 256, o.field_a);
               } else {
                 if (gr.field_l == 4) {
-                  rj.a((byte) 61, 256, eg.field_n);
+                  ResourceArchive.a((byte) 61, 256, eg.field_n);
                 } else {
                   if (gr.field_l == 2) {
-                    rj.a((byte) 90, 256, bn.field_O);
+                    ResourceArchive.a((byte) 90, 256, bn.dataServerFullOrText);
                   } else {
                     if (gr.field_l == 5) {
-                      rj.a((byte) -113, 5, s.field_k);
+                      ResourceArchive.a((byte) -113, 5, s.thisGameHasBeenText);
                     } else {
-                      rj.a((byte) -97, 256, ao.field_z);
+                      ResourceArchive.a((byte) -97, 256, ao.unableToConnectToText);
                     }
                   }
                 }
@@ -205,7 +205,7 @@ abstract class fn extends GameApplet {
           ph.a((byte) -93);
           th.e(true);
           pu.field_m = false;
-          hn.field_k = li.field_y;
+          hn.field_k = li.loadingText;
           ea.a(hw.field_a, qn.field_a, (byte) 40, eb.field_f, wd.field_j);
           if (hv.field_c ||
             st.field_B != null) {
@@ -298,7 +298,7 @@ abstract class fn extends GameApplet {
             this.a("reconnect", 21253);
           }
           we.a((byte) 63);
-          rj.a((byte) 114, var2, MouseWheelInput.field_c);
+          ResourceArchive.a((byte) 114, var2, MouseWheelInput.field_c);
           ts.field_d = true;
           sj.field_a = 15000L + wq.a(-50);
           return var2;
@@ -322,7 +322,7 @@ abstract class fn extends GameApplet {
         boolean stackIn_12_2 = false;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0 <= 94) {
-          field_A = (String) null;
+          waitingForSoundEffectsText = (String) null;
         }
         if (we.g(-1)) {
           stackIn_11_1 = 16981;
@@ -520,7 +520,7 @@ abstract class fn extends GameApplet {
           field_t = -119;
         }
         field_u = null;
-        field_A = null;
+        waitingForSoundEffectsText = null;
     }
 
     final void a(int param0, String param1, int param2) {
@@ -657,7 +657,7 @@ abstract class fn extends GameApplet {
                   jv.field_a = 10;
                   IntrusiveNode.field_a = false;
                 } else {
-                  rj.a((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
+                  ResourceArchive.a((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
                   MouseWheelInput.field_c = null;
                 }
               }
@@ -705,10 +705,10 @@ abstract class fn extends GameApplet {
                 var12 = IntrusiveNode.field_e.b((byte) 126);
                 if (var12 != null) {
                   var7 = sd.a(var12.payload, 0, var12.position, 26564);
-                  ha.a((byte) 115, var7);
+                  GraphicsToolkit.a((byte) 115, var7);
                 } else {
                   var9 = (String) null;
-                  ha.a((byte) 122, (String) null);
+                  GraphicsToolkit.a((byte) 122, (String) null);
                 }
                 IntrusiveNode.field_e = null;
               }
@@ -717,7 +717,7 @@ abstract class fn extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               IntrusiveNode.a("S1", (Throwable) ((Object) var5), 0);
               var10 = (String) null;
-              ha.a((byte) 111, (String) null);
+              GraphicsToolkit.a((byte) 111, (String) null);
               IntrusiveNode.field_e = null;
             }
           }
@@ -783,6 +783,6 @@ abstract class fn extends GameApplet {
 
     static {
         field_s = 50;
-        field_A = "Waiting for sound effects";
+        waitingForSoundEffectsText = "Waiting for sound effects";
     }
 }

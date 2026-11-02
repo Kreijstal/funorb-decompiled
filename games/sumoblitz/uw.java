@@ -3,7 +3,7 @@
  */
 abstract class uw {
     static String[] field_b;
-    static wb field_a;
+    static Sprite field_a;
     static String[] field_c;
 
     final int b(int param0, long param1) {
@@ -57,7 +57,7 @@ abstract class uw {
               return;
             }
             if (param6 != 1955582416) {
-              field_a = (wb) null;
+              field_a = (Sprite) null;
             }
             var14 = param3 - param2;
             if (param8 == param2) {

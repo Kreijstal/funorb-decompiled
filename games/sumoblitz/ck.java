@@ -4,14 +4,14 @@
 final class ck {
     static java.awt.Frame field_c;
     static String field_a;
-    static String field_b;
+    static String nameIsAvailableText;
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
     public static void a(int param0) {
-        field_b = null;
+        nameIsAvailableText = null;
         field_c = null;
         field_a = null;
         if (param0 > -28) {
@@ -21,6 +21,6 @@ final class ck {
 
     static {
         field_a = ",";
-        field_b = "Name is available";
+        nameIsAvailableText = "Name is available";
     }
 }

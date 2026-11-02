@@ -5,9 +5,9 @@ import java.util.*;
 
 final class vu extends ab {
     private int[] field_f;
-    static jn field_g;
+    static IntrusiveDeque field_g;
     static hv field_h;
-    static String[] field_i;
+    static String[] powerupEffectNames;
 
     vu(int param0) {
         int dupTemp$0 = 0;
@@ -142,12 +142,12 @@ final class vu extends ab {
           vu.a((byte) 1);
         }
         field_h = null;
-        field_i = null;
+        powerupEffectNames = null;
     }
 
     static {
-        field_g = new jn();
+        field_g = new IntrusiveDeque();
         field_h = new hv();
-        field_i = new String[]{"None", "Permanent speed up", "Permanent bounce up", "Permanent traction up", "Temporary speed up", "Temporary bounce up", "Temporary traction up"};
+        powerupEffectNames = new String[]{"None", "Permanent speed up", "Permanent bounce up", "Permanent traction up", "Temporary speed up", "Temporary bounce up", "Temporary traction up"};
     }
 }

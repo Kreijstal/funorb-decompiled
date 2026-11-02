@@ -8,7 +8,7 @@ abstract class hf extends rg {
     private int field_G;
     static String[] field_F;
     static hr[] field_H;
-    static String[] field_L;
+    static String[] membershipPromoLines;
     private int field_N;
     private int field_K;
 
@@ -21,7 +21,7 @@ abstract class hf extends rg {
         return super.h(0);
     }
 
-    final static hr a(ha param0, ri param1, byte param2) {
+    final static hr a(GraphicsToolkit param0, ri param1, byte param2) {
         RuntimeException var3 = null;
         PlatformTaskDispatcher var4 = null;
         hr stackIn_3_0 = null;
@@ -64,7 +64,7 @@ abstract class hf extends rg {
         }
         field_H = null;
         field_F = null;
-        field_L = null;
+        membershipPromoLines = null;
     }
 
     void b(int param0, int param1, int param2) {
@@ -328,6 +328,6 @@ abstract class hf extends rg {
     }
 
     static {
-        field_L = new String[]{"Access the new turrets!", "Challenging levels!", "Diabolical bosses!"};
+        membershipPromoLines = new String[]{"Access the new turrets!", "Challenging levels!", "Diabolical bosses!"};
     }
 }

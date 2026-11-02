@@ -5,7 +5,7 @@ import java.io.*;
 
 class nt extends IntrusiveNode {
     int field_q;
-    static String field_l;
+    static String challengeText;
     int field_o;
     static qp[][] field_n;
     static boolean field_r;
@@ -22,7 +22,7 @@ class nt extends IntrusiveNode {
         return this.field_p == 0 ? true : false;
     }
 
-    void a(ha param0, int param1) {
+    void a(GraphicsToolkit param0, int param1) {
         if (param1 >= -121) {
           return;
         }
@@ -84,14 +84,14 @@ class nt extends IntrusiveNode {
     public static void d(int param0) {
         field_m = null;
         field_n = (qp[][]) null;
-        field_l = null;
+        challengeText = null;
         if (param0 != 31295) {
           field_r = true;
         }
     }
 
     static {
-        field_l = "challenge";
+        challengeText = "challenge";
         field_n = new qp[3][];
         field_m = new tv[9];
     }

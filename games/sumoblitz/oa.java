@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends ha implements e {
-    private jn field_o;
+final class oa extends GraphicsToolkit implements e {
+    private IntrusiveDeque field_o;
     long field_nativeid;
     private boolean field_m;
     private ya field_i;
@@ -138,7 +138,7 @@ final class oa extends ha implements e {
         Throwable var5 = null;
         this.field_m = false;
         this.field_nativeid = 0L;
-        this.field_o = new jn();
+        this.field_o = new IntrusiveDeque();
         this.field_n = 4096;
         this.field_j = 4096;
         this.field_q = new te(4);

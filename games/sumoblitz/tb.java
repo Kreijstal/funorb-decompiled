@@ -3,7 +3,7 @@
  */
 final class tb extends rq {
     private sk field_k;
-    private ir field_h;
+    private DirectXGraphicsToolkit field_h;
     private static float[] field_f;
     private boolean field_j;
     private jagdx.IDirect3DPixelShader field_i;
@@ -88,7 +88,7 @@ final class tb extends rq {
 
     final boolean b(byte param0) {
         if (param0 > -8) {
-          this.field_h = (ir) null;
+          this.field_h = (DirectXGraphicsToolkit) null;
           return this.field_j;
         }
         return this.field_j;
@@ -176,7 +176,7 @@ final class tb extends rq {
         }
     }
 
-    tb(ir param0, ki param1, sk param2) {
+    tb(DirectXGraphicsToolkit param0, ki param1, sk param2) {
         super(param0);
         boolean stackIn_14_1 = false;
         this.field_k = param2;

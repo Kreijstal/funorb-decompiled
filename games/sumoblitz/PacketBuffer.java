@@ -131,7 +131,7 @@ class PacketBuffer extends IntrusiveNode {
           bt.field_d = param6;
           jk.field_b = (gd) ((Object) new t());
           in.field_D = new ti(param0);
-          wt.field_i = new rj(jk.field_b, in.field_D);
+          wt.field_i = new ResourceArchive(jk.field_b, in.field_D);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "fs.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

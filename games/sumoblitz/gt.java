@@ -8,7 +8,7 @@ class gt extends ur implements ai {
     static int field_ab;
     private boolean field_cb;
     static da field_db;
-    static String field_hb;
+    static String loadingMusicText;
     static boolean field_bb;
     private pq field_ib;
     private boolean field_kb;
@@ -61,7 +61,7 @@ class gt extends ur implements ai {
     }
 
     public static void l(int param0) {
-        field_hb = null;
+        loadingMusicText = null;
         field_db = null;
         int var1 = 57 / ((param0 - 70) / 48);
         field_gb = null;
@@ -114,7 +114,7 @@ class gt extends ur implements ai {
         try {
           var3 = ji.a(param1, (byte) 66);
           if (param2 < 46) {
-            field_hb = (String) null;
+            loadingMusicText = (String) null;
           }
           if (param0.indexOf(param1) != -1) {
             return true;
@@ -148,8 +148,8 @@ class gt extends ur implements ai {
         lc var2 = null;
         this.field_ib.b(2121792, 4210752, 55);
         if (!param0) {
-          var2 = new lc(this, this.field_jb, ImageProducerRasterBuffer.field_j);
-          var2.a(id.field_m, 15, true);
+          var2 = new lc(this, this.field_jb, ImageProducerRasterBuffer.connectionRestoredText);
+          var2.a(id.returnToGameText, 15, true);
           this.b((byte) -121, var2);
           return;
         }
@@ -186,7 +186,7 @@ class gt extends ur implements ai {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         String var6 = null;
         boolean stackIn_7_0 = false;
@@ -226,13 +226,13 @@ class gt extends ur implements ai {
           if (qk.field_O != null && (0 > param1 ||
             ga.field_j == kw.field_c)) {
             if (as.field_v.position == 0 &&
-              (rj.field_a + 10000L) < wq.a(param0 - 14)) {
+              (ResourceArchive.field_a + 10000L) < wq.a(param0 - 14)) {
               as.field_v.g(param1, 8);
             }
             if (as.field_v.position > param0) {
               try {
                 qk.field_O.a(0, -2, as.field_v.payload, as.field_v.position);
-                rj.field_a = wq.a(-21);
+                ResourceArchive.field_a = wq.a(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -296,20 +296,20 @@ class gt extends ur implements ai {
             if (param1 != 256) {
               stackIn_15_0 = var6;
               if (this.field_cb) {
-                stackIn_16_1 = ii.field_b;
+                stackIn_16_1 = ii.retryText;
               } else {
-                stackIn_16_1 = cq.field_c;
+                stackIn_16_1 = cq.backText;
               }
               ((lc) (Object) stackIn_15_0).a(stackIn_16_1, -1, true);
             } else {
-              var6.a(ii.field_b, (byte) -123, (qm) (this));
+              var6.a(ii.retryText, (byte) -123, (qm) (this));
             }
           } else {
-            var6.a(vf.field_e, 11, true);
-            var6.a(of.field_k, 17, true);
+            var6.a(vf.reloadGameText, 11, true);
+            var6.a(of.quitToWebsiteText, 17, true);
           }
           if (param1 == 3) {
-            var6.a(lq.field_c, 7, true);
+            var6.a(lq.toServerListText, 7, true);
           } else {
             if (param1 != 4) {
               if (param1 != 6) {
@@ -317,12 +317,12 @@ class gt extends ur implements ai {
                   this.b((byte) -97, var6);
                   return;
                 }
-                var6.a(pl.field_s, (byte) -123, (qm) (this));
+                var6.a(pl.changeDisplayNameText, (byte) -123, (qm) (this));
               } else {
-                var6.a(eq.field_w, 9, true);
+                var6.a(eq.toCustomerSupportText, 9, true);
               }
             } else {
-              var6.a(ch.field_e, 8, true);
+              var6.a(ch.playFreeVersionText, 8, true);
             }
           }
           this.b((byte) -97, var6);
@@ -359,7 +359,7 @@ class gt extends ur implements ai {
 
     static {
         field_ab = 0;
-        field_hb = "Loading music";
+        loadingMusicText = "Loading music";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

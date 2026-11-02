@@ -16,7 +16,7 @@ final class gw extends nt {
     private double field_x;
     private int field_s;
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

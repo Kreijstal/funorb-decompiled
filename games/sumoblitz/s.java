@@ -11,18 +11,18 @@ final class s extends IntrusiveNode {
     int field_q;
     int field_s;
     int field_t;
-    static jn field_u;
-    static String field_k;
+    static IntrusiveDeque field_u;
+    static String thisGameHasBeenText;
 
     public static void a(int param0) {
         if (param0 == 18232) {
-          field_k = null;
+          thisGameHasBeenText = null;
           field_n = null;
           field_u = null;
           return;
         }
-        field_k = (String) null;
-        field_k = null;
+        thisGameHasBeenText = (String) null;
+        thisGameHasBeenText = null;
         field_n = null;
         field_u = null;
     }
@@ -38,6 +38,6 @@ final class s extends IntrusiveNode {
     static {
         field_u = null;
         field_m = Math.atan2(1.0, 0.0);
-        field_k = "This game has been updated! Please reload this page.";
+        thisGameHasBeenText = "This game has been updated! Please reload this page.";
     }
 }

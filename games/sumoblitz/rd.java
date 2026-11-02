@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rd extends IntrusiveNode {
-    static String field_m;
+    static String loadingExtraDataText;
     int[] field_k;
     static int field_q;
     byte[][][] field_u;
@@ -178,10 +178,10 @@ final class rd extends IntrusiveNode {
         if (param0) {
           return;
         }
-        field_m = null;
+        loadingExtraDataText = null;
     }
 
     static {
-        field_m = "Loading extra data";
+        loadingExtraDataText = "Loading extra data";
     }
 }

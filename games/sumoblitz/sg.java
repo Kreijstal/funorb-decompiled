@@ -4,7 +4,7 @@
 final class sg {
     int field_p;
     int[] field_b;
-    static String field_i;
+    static String loadingInstrumentsText;
     private int[][] field_o;
     private byte[] field_g;
     static long field_j;
@@ -19,7 +19,7 @@ final class sg {
     private int[] field_n;
     int[][] field_s;
     int[] field_r;
-    static String field_k;
+    static String passwordsMustBeBetweenText;
     int[] field_f;
 
     private final void a(byte[] param0, byte param1) {
@@ -245,8 +245,8 @@ final class sg {
         if (param0 > -67) {
           return;
         }
-        field_k = null;
-        field_i = null;
+        passwordsMustBeBetweenText = null;
+        loadingInstrumentsText = null;
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -281,7 +281,7 @@ final class sg {
     }
 
     static {
-        field_i = "Loading instruments";
-        field_k = "Passwords must be between 5 and 20 characters long";
+        loadingInstrumentsText = "Loading instruments";
+        passwordsMustBeBetweenText = "Passwords must be between 5 and 20 characters long";
     }
 }

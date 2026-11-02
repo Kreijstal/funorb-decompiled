@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends sp implements ai {
+final class pe extends WidgetContainer implements ai {
     private oe field_A;
     static ri[] field_F;
     private wp[] field_C;
     static gj field_E;
-    static String field_D;
+    static String orbPointsText;
     private String[] field_B;
 
     final static void a(int param0, float param1, String param2) {
@@ -27,7 +27,7 @@ final class pe extends sp implements ai {
         if (param0 != -18490) {
           field_F = (ri[]) null;
         }
-        field_D = null;
+        orbPointsText = null;
     }
 
     final void a(String[] param0, boolean param1) {
@@ -61,11 +61,11 @@ final class pe extends sp implements ai {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_C[var5] = new wp(this.field_B[var5], (qm) (this));
               this.field_C[var5].field_w = (mh) ((Object) var4);
-              this.field_C[var5].field_t = ji.field_b;
+              this.field_C[var5].field_t = ji.useThisAlternativeAsText;
               this.field_C[var5].a(103, 0, 16 * var5 + 20, 15, 80);
               this.a(this.field_C[var5], 64);
             }
-            this.field_C[var3_int] = new wp(BufferedSocket.field_h, (qm) (this));
+            this.field_C[var3_int] = new wp(BufferedSocket.moreSuggestionsText, (qm) (this));
             this.field_C[var3_int].field_w = (mh) ((Object) var4);
             this.field_C[var3_int].a(126, 0, 20 + 16 * var3_int + 16, 15, 100);
             this.a(this.field_C[var3_int], 89);
@@ -96,7 +96,7 @@ final class pe extends sp implements ai {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_11_0 = false;
@@ -231,7 +231,7 @@ final class pe extends sp implements ai {
           hh.field_a = ri.b(param3, "", "button_over");
           sk.field_c = ri.b(param3, "", "button_on");
           gq.field_o = ri.b(param3, "", "chargebar_vertical");
-          cb.field_e = ri.a(param3, "", "congratulations");
+          IntrusiveDequeCursor.field_e = ri.a(param3, "", "congratulations");
           ve.field_k = ri.a(param3, "", "mouse");
           BufferedSocket.field_n = ri.a(param3, "", "keyboard");
           rl.field_l = ri.b(param3, "", "player");
@@ -269,7 +269,7 @@ final class pe extends sp implements ai {
           sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
           hp.field_n = ri.b(param3, "", "electricity");
           ni.field_h = ri.b(param3, "", "electricity_flip");
-          rj.field_f = ri.a(param3, "", "attract");
+          ResourceArchive.field_f = ri.a(param3, "", "attract");
           uu.field_o = ri.a(param3, "", "repulse");
           lr.field_c = ri.a(param3, "", "icepatch");
           ei.field_b = ri.b(param3, "", "attractor");
@@ -297,7 +297,7 @@ final class pe extends sp implements ai {
         }
         vn var5 = kw.field_b;
         if (this.field_B != null) {
-          var5.a(NodeHashTableIterator.field_a, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
+          var5.a(NodeHashTableIterator.suggestedNamesText, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
         }
         if (param2 > -35) {
           this.a(120, -19, (byte) -32, 10);
@@ -305,7 +305,7 @@ final class pe extends sp implements ai {
     }
 
     static {
-        field_D = "Orb Points";
+        orbPointsText = "Orb Points";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

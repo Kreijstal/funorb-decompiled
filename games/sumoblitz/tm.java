@@ -9,7 +9,7 @@ final class tm implements mh {
     static jr field_a;
     static int[] field_c;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         try {
           if (param2 != 5592405) {
             field_a = (jr) null;

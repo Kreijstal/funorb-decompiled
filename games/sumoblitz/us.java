@@ -5,7 +5,7 @@ class us extends ht {
     int field_o;
     int field_l;
     private int field_k;
-    static String field_m;
+    static String loggingInText;
     private int field_n;
 
     final void a(int param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, boolean param7, byte param8, int param9) {
@@ -204,9 +204,9 @@ class us extends ht {
     }
 
     public static void c(byte param0) {
-        field_m = null;
+        loggingInText = null;
         if (param0 != 28) {
-          field_m = (String) null;
+          loggingInText = (String) null;
         }
     }
 
@@ -515,6 +515,6 @@ class us extends ht {
     }
 
     static {
-        field_m = "Logging in...";
+        loggingInText = "Logging in...";
     }
 }

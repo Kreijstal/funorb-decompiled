@@ -13,11 +13,11 @@ final class ec extends fj implements ru {
         return this.field_i;
     }
 
-    ec(ir param0, iw param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    ec(DirectXGraphicsToolkit param0, iw param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(null, null, null, false, param3 * param2);
         int var12 = 0;
         Object stackIn_3_0;
-        ir stackIn_3_1;
+        DirectXGraphicsToolkit stackIn_3_1;
         iw stackIn_3_2;
         io stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -28,7 +28,7 @@ final class ec extends fj implements ru {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (ir) (param0);
+        stackIn_3_1 = (DirectXGraphicsToolkit) (param0);
         stackIn_3_2 = (iw) (param1);
         stackIn_3_3 = io.field_g;
         if (param4) {
@@ -49,9 +49,9 @@ final class ec extends fj implements ru {
           this.field_i = param3;
         }
         if (param4) {
-          this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 0, 1024, ir.a(this.field_d, 126, io.field_g), 1);
+          this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 0, 1024, DirectXGraphicsToolkit.a(this.field_d, 126, io.field_g), 1);
         } else {
-          this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 1, 0, ir.a(this.field_d, -88, io.field_g), 1);
+          this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 1, 0, DirectXGraphicsToolkit.a(this.field_d, -88, io.field_g), 1);
         }
         var13 = this.field_b.field_Jc;
         var10 = this.field_f.LockRect(0, 0, 0, param2, param3, 0, var13);
@@ -82,10 +82,10 @@ final class ec extends fj implements ru {
         }
     }
 
-    ec(ir param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    ec(DirectXGraphicsToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(null, null, null, false, param1 * param2);
         Object stackIn_3_0;
-        ir stackIn_3_1;
+        DirectXGraphicsToolkit stackIn_3_1;
         iw stackIn_3_2;
         io stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -97,7 +97,7 @@ final class ec extends fj implements ru {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (ir) (param0);
+        stackIn_3_1 = (DirectXGraphicsToolkit) (param0);
         stackIn_3_2 = nl.field_p;
         stackIn_3_3 = io.field_g;
         if (param3) {
@@ -162,7 +162,7 @@ final class ec extends fj implements ru {
         return this.field_j;
     }
 
-    ec(ir param0, iw param1, io param2, int param3, int param4) {
+    ec(DirectXGraphicsToolkit param0, iw param1, io param2, int param3, int param4) {
         super(param0, param1, param2, false, param4 * param3);
         if (!this.field_b.field_Oc) {
           this.field_j = hn.a(false, param3);
@@ -171,7 +171,7 @@ final class ec extends fj implements ru {
           this.field_j = param3;
           this.field_i = param4;
         }
-        this.field_f = this.field_b.field_Cc.a(param3, param4, 1, 0, ir.a(this.field_d, -120, this.field_c), 1);
+        this.field_f = this.field_b.field_Cc.a(param3, param4, 1, 0, DirectXGraphicsToolkit.a(this.field_d, -120, this.field_c), 1);
     }
 
     public final void a(int param0) {

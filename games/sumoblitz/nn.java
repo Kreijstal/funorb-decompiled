@@ -120,7 +120,7 @@ abstract class nn {
 
     abstract void a(byte[] param0, int param1);
 
-    final static void a(int param0, int param1, int param2, int param3, wb[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

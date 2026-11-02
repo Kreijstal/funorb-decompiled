@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rj {
+final class ResourceArchive {
     private PacketBuffer field_d;
     static ri field_f;
     private am[] field_e;
@@ -80,7 +80,7 @@ final class rj {
         RuntimeException var2 = null;
         try {
           if (param0 != -94) {
-            rj.a((byte) 97, (String) null);
+            ResourceArchive.a((byte) 97, (String) null);
           }
           rp.field_b = param1;
           return;
@@ -126,7 +126,7 @@ final class rj {
             }
             this.field_d.position = 72 * param1 + 6;
             if (param0) {
-              rj.a((ki) null, 4);
+              ResourceArchive.a((ki) null, 4);
             }
             var6_int = this.field_d.c(true);
             stackIn_19_0 = this.field_d;
@@ -287,7 +287,7 @@ final class rj {
         try {
           field_f = null;
           if (param0 != 2) {
-            rj.a(true, true);
+            ResourceArchive.a(true, true);
           }
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "rj.H(" + param0 + ')');
@@ -562,31 +562,31 @@ final class rj {
           }
           var2Lifetime2 = ke.a((byte) 112, "institle");
           if (null != var2Lifetime2) {
-            br.field_i = uu.a(param1 ^ -5, var2Lifetime2);
+            br.instructionsText = uu.a(param1 ^ -5, var2Lifetime2);
           }
           var2Lifetime3 = ke.a((byte) 113, "scoretitle");
           if (var2Lifetime3 != null) {
-            se.field_a = uu.a(param1 ^ -5, var2Lifetime3);
+            se.scoreText = uu.a(param1 ^ -5, var2Lifetime3);
           }
           var2Lifetime4 = ke.a((byte) 88, "nametitle");
           if (var2Lifetime4 != null) {
-            pd.field_r = uu.a(param1 ^ -5, var2Lifetime4);
+            pd.nameText = uu.a(param1 ^ -5, var2Lifetime4);
           }
           var2Lifetime5 = ke.a((byte) 121, "bsths");
           if (var2Lifetime5 != null) {
-            jm.field_c = uu.a(param1 ^ -5, var2Lifetime5);
+            jm.bestHiscoresText = uu.a(param1 ^ -5, var2Lifetime5);
           }
           var2Lifetime6 = ke.a((byte) 112, "myhs");
           if (var2Lifetime6 != null) {
-            mu.field_r = uu.a(param1 ^ -5, var2Lifetime6);
+            SpriteState.myHiscoresText = uu.a(param1 ^ -5, var2Lifetime6);
           }
           var2Lifetime7 = ke.a((byte) 122, "allhs");
           if (null != var2Lifetime7) {
-            wq.field_a = uu.a(param1 + 5, var2Lifetime7);
+            wq.allHiscoresText = uu.a(param1 + 5, var2Lifetime7);
           }
           var2Lifetime8 = ke.a((byte) 106, "thisishidden");
           if (null != var2Lifetime8) {
-            jf.field_b = uu.a(0, var2Lifetime8);
+            jf.thisIsAHiddenText = uu.a(0, var2Lifetime8);
           }
           var2Lifetime9 = ke.a((byte) 99, "orbcoin");
           if (null != var2Lifetime9) {
@@ -598,15 +598,15 @@ final class rj {
           }
           var2Lifetime11 = ke.a((byte) 120, "orbpoints");
           if (var2Lifetime11 != null) {
-            pe.field_D = uu.a(0, var2Lifetime11);
+            pe.orbPointsText = uu.a(0, var2Lifetime11);
           }
           var2Lifetime12 = ke.a((byte) 102, "achievethisgame");
           if (null != var2Lifetime12) {
-            sd.field_b = uu.a(param1 + 5, var2Lifetime12);
+            sd.achievementsThisGameText = uu.a(param1 + 5, var2Lifetime12);
           }
           var2Lifetime13 = ke.a((byte) 107, "achieve");
           if (var2Lifetime13 != null) {
-            gd.field_o = uu.a(0, var2Lifetime13);
+            gd.achievementsText = uu.a(0, var2Lifetime13);
           }
           var2Lifetime14 = ke.a((byte) 112, "thousandseperator");
           if (var2Lifetime14 != null) {
@@ -618,63 +618,63 @@ final class rj {
           }
           var2Lifetime16 = ke.a((byte) 92, "startgame");
           if (null != var2Lifetime16) {
-            k.field_a = uu.a(0, var2Lifetime16);
+            k.startGameText = uu.a(0, var2Lifetime16);
           }
           var2Lifetime17 = ke.a((byte) 114, "startarcadegame");
           if (null != var2Lifetime17) {
-            dn.field_b = uu.a(0, var2Lifetime17);
+            dn.arcadeGameText = uu.a(0, var2Lifetime17);
           }
           var2Lifetime18 = ke.a((byte) 103, "arcadescores");
           if (var2Lifetime18 != null) {
-            nt.field_l = uu.a(0, var2Lifetime18);
+            nt.challengeText = uu.a(0, var2Lifetime18);
           }
           var2Lifetime19 = ke.a((byte) 123, "regularscores");
           if (null != var2Lifetime19) {
-            hd.field_I = uu.a(param1 + 5, var2Lifetime19);
+            hd.regularText = uu.a(param1 + 5, var2Lifetime19);
           }
           var2Lifetime20 = ke.a((byte) 119, "editorTx");
           if (null != var2Lifetime20) {
-            td.field_l = uu.a(0, var2Lifetime20);
+            td.editorText = uu.a(0, var2Lifetime20);
           }
           var2Lifetime21 = ke.a((byte) 119, "challengeModeTx");
           if (null != var2Lifetime21) {
-            pt.field_b = uu.a(0, var2Lifetime21);
+            pt.challengeText = uu.a(0, var2Lifetime21);
           }
           var2Lifetime22 = ke.a((byte) 117, "optionsTx");
           if (null != var2Lifetime22) {
-            nq.field_f = uu.a(0, var2Lifetime22);
+            nq.optionsText = uu.a(0, var2Lifetime22);
           }
           var2Lifetime23 = ke.a((byte) 113, "difficultyTx");
           if (null != var2Lifetime23) {
-            ea.field_b = uu.a(param1 ^ -5, var2Lifetime23);
+            ea.difficultyText = uu.a(param1 ^ -5, var2Lifetime23);
           }
           var2Lifetime24 = ke.a((byte) 93, "difficultyLevelTx,0");
           if (var2Lifetime24 != null) {
-            ge.field_k[0] = uu.a(0, var2Lifetime24);
+            ge.difficultyNames[0] = uu.a(0, var2Lifetime24);
           }
           var2Lifetime25 = ke.a((byte) 98, "difficultyLevelTx,1");
           if (null != var2Lifetime25) {
-            ge.field_k[1] = uu.a(0, var2Lifetime25);
+            ge.difficultyNames[1] = uu.a(0, var2Lifetime25);
           }
           var2Lifetime26 = ke.a((byte) 103, "resetTx");
           if (var2Lifetime26 != null) {
-            lh.field_p = uu.a(0, var2Lifetime26);
+            lh.resetStatsText = uu.a(0, var2Lifetime26);
           }
           var2Lifetime27 = ke.a((byte) 105, "dialogOptionsTx,0");
           if (var2Lifetime27 != null) {
-            lb.field_c[0] = uu.a(0, var2Lifetime27);
+            lb.yesNoLabels[0] = uu.a(0, var2Lifetime27);
           }
           var2Lifetime28 = ke.a((byte) 124, "dialogOptionsTx,1");
           if (null != var2Lifetime28) {
-            lb.field_c[1] = uu.a(0, var2Lifetime28);
+            lb.yesNoLabels[1] = uu.a(0, var2Lifetime28);
           }
           var2Lifetime29 = ke.a((byte) 105, "areYouSure");
           if (var2Lifetime29 != null) {
-            vq.field_D = uu.a(param1 ^ -5, var2Lifetime29);
+            vq.areYouSureYouText = uu.a(param1 ^ -5, var2Lifetime29);
           }
           var2Lifetime30 = ke.a((byte) 102, "continueTx");
           if (null != var2Lifetime30) {
-            hc.field_d = uu.a(0, var2Lifetime30);
+            hc.continueToNextLevelText = uu.a(0, var2Lifetime30);
           }
           var2Lifetime31 = ke.a((byte) 93, "continueOptionsTx,0");
           if (var2Lifetime31 != null) {
@@ -686,15 +686,15 @@ final class rj {
           }
           var2Lifetime33 = ke.a((byte) 127, "continueOptTx");
           if (null != var2Lifetime33) {
-            ls.field_l = uu.a(0, var2Lifetime33);
+            ls.continueText = uu.a(0, var2Lifetime33);
           }
           var2Lifetime34 = ke.a((byte) 125, "restartLevel");
           if (var2Lifetime34 != null) {
-            ss.field_a = uu.a(param1 ^ -5, var2Lifetime34);
+            ss.restartLevelText = uu.a(param1 ^ -5, var2Lifetime34);
           }
           var2Lifetime35 = ke.a((byte) 98, "returnToLevelSelect");
           if (null != var2Lifetime35) {
-            mm.field_d = uu.a(0, var2Lifetime35);
+            mm.levelSelectText = uu.a(0, var2Lifetime35);
           }
           var2Lifetime36 = ke.a((byte) 92, "restartChallenge");
           if (var2Lifetime36 != null) {
@@ -702,23 +702,23 @@ final class rj {
           }
           var2Lifetime37 = ke.a((byte) 110, "returnToMainMenu");
           if (var2Lifetime37 != null) {
-            wp.field_A = uu.a(0, var2Lifetime37);
+            wp.returnToMainMenuText = uu.a(0, var2Lifetime37);
           }
           var2Lifetime38 = ke.a((byte) 114, "respecTx");
           if (var2Lifetime38 != null) {
-            hv.field_a = uu.a(0, var2Lifetime38);
+            hv.reassignText = uu.a(0, var2Lifetime38);
           }
           var2Lifetime39 = ke.a((byte) 110, "respecTitle");
           if (var2Lifetime39 != null) {
-            bw.field_c = uu.a(0, var2Lifetime39);
+            bw.reassignPowerupsText = uu.a(0, var2Lifetime39);
           }
           var2Lifetime40 = ke.a((byte) 127, "respecInstructions");
           if (var2Lifetime40 != null) {
-            wh.field_r = uu.a(0, var2Lifetime40);
+            wh.clickToAssignPointsText = uu.a(0, var2Lifetime40);
           }
           var2Lifetime41 = ke.a((byte) 110, "pointsRemaining");
           if (null != var2Lifetime41) {
-            ar.field_M = uu.a(0, var2Lifetime41);
+            ar.pointsRemainingText = uu.a(0, var2Lifetime41);
           }
           var2Lifetime42 = ke.a((byte) 104, "cancelTx");
           if (var2Lifetime42 != null) {
@@ -762,230 +762,230 @@ final class rj {
           }
           var2Lifetime52 = ke.a((byte) 126, "achievement_names,0");
           if (var2Lifetime52 != null) {
-            rb.field_d[0] = uu.a(0, var2Lifetime52);
+            rb.achievementNames[0] = uu.a(0, var2Lifetime52);
           }
           var2Lifetime53 = ke.a((byte) 108, "achievement_names,1");
           if (null != var2Lifetime53) {
-            rb.field_d[1] = uu.a(0, var2Lifetime53);
+            rb.achievementNames[1] = uu.a(0, var2Lifetime53);
           }
           var2Lifetime54 = ke.a((byte) 112, "achievement_names,2");
           if (null != var2Lifetime54) {
-            rb.field_d[2] = uu.a(param1 + 5, var2Lifetime54);
+            rb.achievementNames[2] = uu.a(param1 + 5, var2Lifetime54);
           }
           var2Lifetime55 = ke.a((byte) 88, "achievement_names,3");
           if (null != var2Lifetime55) {
-            rb.field_d[3] = uu.a(jg.a(param1, -5), var2Lifetime55);
+            rb.achievementNames[3] = uu.a(jg.a(param1, -5), var2Lifetime55);
           }
           var2Lifetime56 = ke.a((byte) 103, "achievement_names,4");
           if (var2Lifetime56 != null) {
-            rb.field_d[4] = uu.a(0, var2Lifetime56);
+            rb.achievementNames[4] = uu.a(0, var2Lifetime56);
           }
           var2Lifetime57 = ke.a((byte) 92, "achievement_names,5");
           if (null != var2Lifetime57) {
-            rb.field_d[5] = uu.a(0, var2Lifetime57);
+            rb.achievementNames[5] = uu.a(0, var2Lifetime57);
           }
           var2Lifetime58 = ke.a((byte) 99, "achievement_names,6");
           if (null != var2Lifetime58) {
-            rb.field_d[6] = uu.a(0, var2Lifetime58);
+            rb.achievementNames[6] = uu.a(0, var2Lifetime58);
           }
           var2Lifetime59 = ke.a((byte) 95, "achievement_names,7");
           if (null != var2Lifetime59) {
-            rb.field_d[7] = uu.a(param1 + 5, var2Lifetime59);
+            rb.achievementNames[7] = uu.a(param1 + 5, var2Lifetime59);
           }
           var2Lifetime60 = ke.a((byte) 113, "achievement_names,8");
           if (null != var2Lifetime60) {
-            rb.field_d[8] = uu.a(0, var2Lifetime60);
+            rb.achievementNames[8] = uu.a(0, var2Lifetime60);
           }
           var2Lifetime61 = ke.a((byte) 122, "achievement_names,9");
           if (var2Lifetime61 != null) {
-            rb.field_d[9] = uu.a(0, var2Lifetime61);
+            rb.achievementNames[9] = uu.a(0, var2Lifetime61);
           }
           var2Lifetime62 = ke.a((byte) 95, "achievement_names,10");
           if (null != var2Lifetime62) {
-            rb.field_d[10] = uu.a(0, var2Lifetime62);
+            rb.achievementNames[10] = uu.a(0, var2Lifetime62);
           }
           var2Lifetime63 = ke.a((byte) 93, "achievement_names,11");
           if (null != var2Lifetime63) {
-            rb.field_d[11] = uu.a(0, var2Lifetime63);
+            rb.achievementNames[11] = uu.a(0, var2Lifetime63);
           }
           var2Lifetime64 = ke.a((byte) 104, "achievement_names,12");
           if (var2Lifetime64 != null) {
-            rb.field_d[12] = uu.a(param1 + 5, var2Lifetime64);
+            rb.achievementNames[12] = uu.a(param1 + 5, var2Lifetime64);
           }
           var2Lifetime65 = ke.a((byte) 104, "achievement_names,13");
           if (var2Lifetime65 != null) {
-            rb.field_d[13] = uu.a(0, var2Lifetime65);
+            rb.achievementNames[13] = uu.a(0, var2Lifetime65);
           }
           var2Lifetime66 = ke.a((byte) 116, "achievement_names,14");
           if (var2Lifetime66 != null) {
-            rb.field_d[14] = uu.a(0, var2Lifetime66);
+            rb.achievementNames[14] = uu.a(0, var2Lifetime66);
           }
           var2Lifetime67 = ke.a((byte) 97, "achievement_names,15");
           if (null != var2Lifetime67) {
-            rb.field_d[15] = uu.a(0, var2Lifetime67);
+            rb.achievementNames[15] = uu.a(0, var2Lifetime67);
           }
           var2Lifetime68 = ke.a((byte) 125, "achievement_names,16");
           if (null != var2Lifetime68) {
-            rb.field_d[16] = uu.a(0, var2Lifetime68);
+            rb.achievementNames[16] = uu.a(0, var2Lifetime68);
           }
           var2Lifetime69 = ke.a((byte) 109, "achievement_names,17");
           if (null != var2Lifetime69) {
-            rb.field_d[17] = uu.a(0, var2Lifetime69);
+            rb.achievementNames[17] = uu.a(0, var2Lifetime69);
           }
           var2Lifetime70 = ke.a((byte) 124, "achievement_names,18");
           if (null != var2Lifetime70) {
-            rb.field_d[18] = uu.a(jg.a(param1, -5), var2Lifetime70);
+            rb.achievementNames[18] = uu.a(jg.a(param1, -5), var2Lifetime70);
           }
           var2Lifetime71 = ke.a((byte) 104, "achievement_names,19");
           if (var2Lifetime71 != null) {
-            rb.field_d[19] = uu.a(jg.a(param1, -5), var2Lifetime71);
+            rb.achievementNames[19] = uu.a(jg.a(param1, -5), var2Lifetime71);
           }
           var2Lifetime72 = ke.a((byte) 114, "achievement_names,20");
           if (null != var2Lifetime72) {
-            rb.field_d[20] = uu.a(0, var2Lifetime72);
+            rb.achievementNames[20] = uu.a(0, var2Lifetime72);
           }
           var2Lifetime73 = ke.a((byte) 110, "achievement_names,21");
           if (var2Lifetime73 != null) {
-            rb.field_d[21] = uu.a(jg.a(param1, -5), var2Lifetime73);
+            rb.achievementNames[21] = uu.a(jg.a(param1, -5), var2Lifetime73);
           }
           var2Lifetime74 = ke.a((byte) 127, "achievement_names,22");
           if (var2Lifetime74 != null) {
-            rb.field_d[22] = uu.a(0, var2Lifetime74);
+            rb.achievementNames[22] = uu.a(0, var2Lifetime74);
           }
           var2Lifetime75 = ke.a((byte) 122, "achievement_names,23");
           if (null != var2Lifetime75) {
-            rb.field_d[23] = uu.a(0, var2Lifetime75);
+            rb.achievementNames[23] = uu.a(0, var2Lifetime75);
           }
           var2Lifetime76 = ke.a((byte) 98, "achievement_names,24");
           if (var2Lifetime76 != null) {
-            rb.field_d[24] = uu.a(jg.a(param1, -5), var2Lifetime76);
+            rb.achievementNames[24] = uu.a(jg.a(param1, -5), var2Lifetime76);
           }
           var2Lifetime77 = ke.a((byte) 95, "achievement_names,25");
           if (null != var2Lifetime77) {
-            rb.field_d[25] = uu.a(0, var2Lifetime77);
+            rb.achievementNames[25] = uu.a(0, var2Lifetime77);
           }
           var2Lifetime78 = ke.a((byte) 102, "achievement_names,26");
           if (var2Lifetime78 != null) {
-            rb.field_d[26] = uu.a(0, var2Lifetime78);
+            rb.achievementNames[26] = uu.a(0, var2Lifetime78);
           }
           var2Lifetime79 = ke.a((byte) 122, "achievement_names,27");
           if (var2Lifetime79 != null) {
-            rb.field_d[27] = uu.a(0, var2Lifetime79);
+            rb.achievementNames[27] = uu.a(0, var2Lifetime79);
           }
           var2Lifetime80 = ke.a((byte) 110, "achievement_criteria,0");
           if (var2Lifetime80 != null) {
-            jh.field_K[0] = uu.a(0, var2Lifetime80);
+            jh.achievementDescriptions[0] = uu.a(0, var2Lifetime80);
           }
           var2Lifetime81 = ke.a((byte) 120, "achievement_criteria,1");
           if (var2Lifetime81 != null) {
-            jh.field_K[1] = uu.a(0, var2Lifetime81);
+            jh.achievementDescriptions[1] = uu.a(0, var2Lifetime81);
           }
           var2Lifetime82 = ke.a((byte) 88, "achievement_criteria,2");
           if (null != var2Lifetime82) {
-            jh.field_K[2] = uu.a(0, var2Lifetime82);
+            jh.achievementDescriptions[2] = uu.a(0, var2Lifetime82);
           }
           var2Lifetime83 = ke.a((byte) 92, "achievement_criteria,3");
           if (null != var2Lifetime83) {
-            jh.field_K[3] = uu.a(param1 + 5, var2Lifetime83);
+            jh.achievementDescriptions[3] = uu.a(param1 + 5, var2Lifetime83);
           }
           var2Lifetime84 = ke.a((byte) 92, "achievement_criteria,4");
           if (null != var2Lifetime84) {
-            jh.field_K[4] = uu.a(jg.a(param1, -5), var2Lifetime84);
+            jh.achievementDescriptions[4] = uu.a(jg.a(param1, -5), var2Lifetime84);
           }
           var2Lifetime85 = ke.a((byte) 99, "achievement_criteria,5");
           if (var2Lifetime85 != null) {
-            jh.field_K[5] = uu.a(0, var2Lifetime85);
+            jh.achievementDescriptions[5] = uu.a(0, var2Lifetime85);
           }
           var2Lifetime86 = ke.a((byte) 120, "achievement_criteria,6");
           if (var2Lifetime86 != null) {
-            jh.field_K[6] = uu.a(0, var2Lifetime86);
+            jh.achievementDescriptions[6] = uu.a(0, var2Lifetime86);
           }
           var2Lifetime87 = ke.a((byte) 109, "achievement_criteria,7");
           if (null != var2Lifetime87) {
-            jh.field_K[7] = uu.a(0, var2Lifetime87);
+            jh.achievementDescriptions[7] = uu.a(0, var2Lifetime87);
           }
           var2Lifetime88 = ke.a((byte) 92, "achievement_criteria,8");
           if (var2Lifetime88 != null) {
-            jh.field_K[8] = uu.a(0, var2Lifetime88);
+            jh.achievementDescriptions[8] = uu.a(0, var2Lifetime88);
           }
           var2Lifetime89 = ke.a((byte) 113, "achievement_criteria,9");
           if (null != var2Lifetime89) {
-            jh.field_K[9] = uu.a(0, var2Lifetime89);
+            jh.achievementDescriptions[9] = uu.a(0, var2Lifetime89);
           }
           var2Lifetime90 = ke.a((byte) 90, "achievement_criteria,10");
           if (null != var2Lifetime90) {
-            jh.field_K[10] = uu.a(0, var2Lifetime90);
+            jh.achievementDescriptions[10] = uu.a(0, var2Lifetime90);
           }
           var2Lifetime91 = ke.a((byte) 92, "achievement_criteria,11");
           if (var2Lifetime91 != null) {
-            jh.field_K[11] = uu.a(0, var2Lifetime91);
+            jh.achievementDescriptions[11] = uu.a(0, var2Lifetime91);
           }
           var2Lifetime92 = ke.a((byte) 99, "achievement_criteria,12");
           if (var2Lifetime92 != null) {
-            jh.field_K[12] = uu.a(0, var2Lifetime92);
+            jh.achievementDescriptions[12] = uu.a(0, var2Lifetime92);
           }
           var2Lifetime93 = ke.a((byte) 88, "achievement_criteria,13");
           if (null != var2Lifetime93) {
-            jh.field_K[13] = uu.a(0, var2Lifetime93);
+            jh.achievementDescriptions[13] = uu.a(0, var2Lifetime93);
           }
           var2Lifetime94 = ke.a((byte) 101, "achievement_criteria,14");
           if (null != var2Lifetime94) {
-            jh.field_K[14] = uu.a(param1 + 5, var2Lifetime94);
+            jh.achievementDescriptions[14] = uu.a(param1 + 5, var2Lifetime94);
           }
           if (param1 != -5) {
-            rj.a((byte) 119, (String) null);
+            ResourceArchive.a((byte) 119, (String) null);
           }
           var2Lifetime95 = ke.a((byte) 113, "achievement_criteria,15");
           if (null != var2Lifetime95) {
-            jh.field_K[15] = uu.a(0, var2Lifetime95);
+            jh.achievementDescriptions[15] = uu.a(0, var2Lifetime95);
           }
           var2Lifetime96 = ke.a((byte) 92, "achievement_criteria,16");
           if (null != var2Lifetime96) {
-            jh.field_K[16] = uu.a(0, var2Lifetime96);
+            jh.achievementDescriptions[16] = uu.a(0, var2Lifetime96);
           }
           var2Lifetime97 = ke.a((byte) 94, "achievement_criteria,17");
           if (null != var2Lifetime97) {
-            jh.field_K[17] = uu.a(0, var2Lifetime97);
+            jh.achievementDescriptions[17] = uu.a(0, var2Lifetime97);
           }
           var2Lifetime98 = ke.a((byte) 119, "achievement_criteria,18");
           if (null != var2Lifetime98) {
-            jh.field_K[18] = uu.a(0, var2Lifetime98);
+            jh.achievementDescriptions[18] = uu.a(0, var2Lifetime98);
           }
           var2Lifetime99 = ke.a((byte) 100, "achievement_criteria,19");
           if (null != var2Lifetime99) {
-            jh.field_K[19] = uu.a(jg.a(param1, -5), var2Lifetime99);
+            jh.achievementDescriptions[19] = uu.a(jg.a(param1, -5), var2Lifetime99);
           }
           var2Lifetime100 = ke.a((byte) 101, "achievement_criteria,20");
           if (null != var2Lifetime100) {
-            jh.field_K[20] = uu.a(0, var2Lifetime100);
+            jh.achievementDescriptions[20] = uu.a(0, var2Lifetime100);
           }
           var2Lifetime101 = ke.a((byte) 114, "achievement_criteria,21");
           if (var2Lifetime101 != null) {
-            jh.field_K[21] = uu.a(param1 + 5, var2Lifetime101);
+            jh.achievementDescriptions[21] = uu.a(param1 + 5, var2Lifetime101);
           }
           var2Lifetime102 = ke.a((byte) 105, "achievement_criteria,22");
           if (null != var2Lifetime102) {
-            jh.field_K[22] = uu.a(0, var2Lifetime102);
+            jh.achievementDescriptions[22] = uu.a(0, var2Lifetime102);
           }
           var2Lifetime103 = ke.a((byte) 94, "achievement_criteria,23");
           if (null != var2Lifetime103) {
-            jh.field_K[23] = uu.a(0, var2Lifetime103);
+            jh.achievementDescriptions[23] = uu.a(0, var2Lifetime103);
           }
           var2Lifetime104 = ke.a((byte) 93, "achievement_criteria,24");
           if (var2Lifetime104 != null) {
-            jh.field_K[24] = uu.a(0, var2Lifetime104);
+            jh.achievementDescriptions[24] = uu.a(0, var2Lifetime104);
           }
           var2Lifetime105 = ke.a((byte) 105, "achievement_criteria,25");
           if (null != var2Lifetime105) {
-            jh.field_K[25] = uu.a(0, var2Lifetime105);
+            jh.achievementDescriptions[25] = uu.a(0, var2Lifetime105);
           }
           var2Lifetime106 = ke.a((byte) 92, "achievement_criteria,26");
           if (null != var2Lifetime106) {
-            jh.field_K[26] = uu.a(jg.a(param1, -5), var2Lifetime106);
+            jh.achievementDescriptions[26] = uu.a(jg.a(param1, -5), var2Lifetime106);
           }
           var2Lifetime107 = ke.a((byte) 92, "achievement_criteria,27");
           if (null != var2Lifetime107) {
-            jh.field_K[27] = uu.a(0, var2Lifetime107);
+            jh.achievementDescriptions[27] = uu.a(0, var2Lifetime107);
           }
           var2Lifetime108 = ke.a((byte) 121, "score_colon_space");
           if (var2Lifetime108 != null) {
@@ -993,115 +993,115 @@ final class rj {
           }
           var2Lifetime109 = ke.a((byte) 109, "instructionsPageObjective,0");
           if (null != var2Lifetime109) {
-            mb.field_i[0] = uu.a(0, var2Lifetime109);
+            mb.objectiveHelpLines[0] = uu.a(0, var2Lifetime109);
           }
           var2Lifetime110 = ke.a((byte) 117, "instructionsPageObjective,1");
           if (null != var2Lifetime110) {
-            mb.field_i[1] = uu.a(jg.a(param1, -5), var2Lifetime110);
+            mb.objectiveHelpLines[1] = uu.a(jg.a(param1, -5), var2Lifetime110);
           }
           var2Lifetime111 = ke.a((byte) 101, "instructionsPageObjective,2");
           if (null != var2Lifetime111) {
-            mb.field_i[2] = uu.a(0, var2Lifetime111);
+            mb.objectiveHelpLines[2] = uu.a(0, var2Lifetime111);
           }
           var2Lifetime112 = ke.a((byte) 109, "instructionsPageControls,0");
           if (var2Lifetime112 != null) {
-            mb.field_a[0] = uu.a(0, var2Lifetime112);
+            mb.controlsHelpLines[0] = uu.a(0, var2Lifetime112);
           }
           var2Lifetime113 = ke.a((byte) 108, "instructionsPageControls,1");
           if (var2Lifetime113 != null) {
-            mb.field_a[1] = uu.a(0, var2Lifetime113);
+            mb.controlsHelpLines[1] = uu.a(0, var2Lifetime113);
           }
           var2Lifetime114 = ke.a((byte) 102, "instructionsPageControls,2");
           if (null != var2Lifetime114) {
-            mb.field_a[2] = uu.a(0, var2Lifetime114);
+            mb.controlsHelpLines[2] = uu.a(0, var2Lifetime114);
           }
           var2Lifetime115 = ke.a((byte) 123, "instructionsPageControls,3");
           if (null != var2Lifetime115) {
-            mb.field_a[3] = uu.a(0, var2Lifetime115);
+            mb.controlsHelpLines[3] = uu.a(0, var2Lifetime115);
           }
           var2Lifetime116 = ke.a((byte) 115, "instructionsPageControls,4");
           if (var2Lifetime116 != null) {
-            mb.field_a[4] = uu.a(0, var2Lifetime116);
+            mb.controlsHelpLines[4] = uu.a(0, var2Lifetime116);
           }
           var2Lifetime117 = ke.a((byte) 111, "instructionsPageControls,5");
           if (var2Lifetime117 != null) {
-            mb.field_a[5] = uu.a(0, var2Lifetime117);
+            mb.controlsHelpLines[5] = uu.a(0, var2Lifetime117);
           }
           var2Lifetime118 = ke.a((byte) 109, "instructionsPageControls,6");
           if (null != var2Lifetime118) {
-            mb.field_a[6] = uu.a(param1 + 5, var2Lifetime118);
+            mb.controlsHelpLines[6] = uu.a(param1 + 5, var2Lifetime118);
           }
           var2Lifetime119 = ke.a((byte) 117, "instructionsPageEnemies,0");
           if (null != var2Lifetime119) {
-            mb.field_d[0] = uu.a(0, var2Lifetime119);
+            mb.dronesHelpLines[0] = uu.a(0, var2Lifetime119);
           }
           var2Lifetime120 = ke.a((byte) 98, "instructionsPageEnemies,1");
           if (var2Lifetime120 != null) {
-            mb.field_d[1] = uu.a(0, var2Lifetime120);
+            mb.dronesHelpLines[1] = uu.a(0, var2Lifetime120);
           }
           var2Lifetime121 = ke.a((byte) 102, "instructionsPageEnemies,2");
           if (null != var2Lifetime121) {
-            mb.field_d[2] = uu.a(jg.a(param1, -5), var2Lifetime121);
+            mb.dronesHelpLines[2] = uu.a(jg.a(param1, -5), var2Lifetime121);
           }
           var2Lifetime122 = ke.a((byte) 120, "instructionsPageEnemies,3");
           if (var2Lifetime122 != null) {
-            mb.field_d[3] = uu.a(0, var2Lifetime122);
+            mb.dronesHelpLines[3] = uu.a(0, var2Lifetime122);
           }
           var2Lifetime123 = ke.a((byte) 124, "instructionsPageEnemies,4");
           if (null != var2Lifetime123) {
-            mb.field_d[4] = uu.a(jg.a(param1, -5), var2Lifetime123);
+            mb.dronesHelpLines[4] = uu.a(jg.a(param1, -5), var2Lifetime123);
           }
           var2Lifetime124 = ke.a((byte) 110, "instructionsPageEnemies,5");
           if (null != var2Lifetime124) {
-            mb.field_d[5] = uu.a(0, var2Lifetime124);
+            mb.dronesHelpLines[5] = uu.a(0, var2Lifetime124);
           }
           var2Lifetime125 = ke.a((byte) 119, "instructionsPageEnemies,6");
           if (var2Lifetime125 != null) {
-            mb.field_d[6] = uu.a(0, var2Lifetime125);
+            mb.dronesHelpLines[6] = uu.a(0, var2Lifetime125);
           }
           var2Lifetime126 = ke.a((byte) 105, "instructionsPageEnemies2,0");
           if (null != var2Lifetime126) {
-            mb.field_j[0] = uu.a(0, var2Lifetime126);
+            mb.dronesHelpLinesPartTwo[0] = uu.a(0, var2Lifetime126);
           }
           var2Lifetime127 = ke.a((byte) 108, "instructionsPageEnemies2,1");
           if (null != var2Lifetime127) {
-            mb.field_j[1] = uu.a(0, var2Lifetime127);
+            mb.dronesHelpLinesPartTwo[1] = uu.a(0, var2Lifetime127);
           }
           var2Lifetime128 = ke.a((byte) 124, "instructionsPageEnemies2,2");
           if (null != var2Lifetime128) {
-            mb.field_j[2] = uu.a(0, var2Lifetime128);
+            mb.dronesHelpLinesPartTwo[2] = uu.a(0, var2Lifetime128);
           }
           var2Lifetime129 = ke.a((byte) 116, "instructionsPageEnemies2,3");
           if (null != var2Lifetime129) {
-            mb.field_j[3] = uu.a(0, var2Lifetime129);
+            mb.dronesHelpLinesPartTwo[3] = uu.a(0, var2Lifetime129);
           }
           var2Lifetime130 = ke.a((byte) 123, "instructionsPageEnemies2,4");
           if (null != var2Lifetime130) {
-            mb.field_j[4] = uu.a(0, var2Lifetime130);
+            mb.dronesHelpLinesPartTwo[4] = uu.a(0, var2Lifetime130);
           }
           var2Lifetime131 = ke.a((byte) 113, "instructionsPagePowerups,0");
           if (var2Lifetime131 != null) {
-            mb.field_g[0] = uu.a(0, var2Lifetime131);
+            mb.upgradesHelpLines[0] = uu.a(0, var2Lifetime131);
           }
           var2Lifetime132 = ke.a((byte) 90, "instructionsPagePowerups,1");
           if (null != var2Lifetime132) {
-            mb.field_g[1] = uu.a(jg.a(param1, -5), var2Lifetime132);
+            mb.upgradesHelpLines[1] = uu.a(jg.a(param1, -5), var2Lifetime132);
           }
           var2Lifetime133 = ke.a((byte) 99, "instructionsPagePowerups,2");
           if (var2Lifetime133 != null) {
-            mb.field_g[2] = uu.a(0, var2Lifetime133);
+            mb.upgradesHelpLines[2] = uu.a(0, var2Lifetime133);
           }
           var2Lifetime134 = ke.a((byte) 105, "instructionsPagePowerups,3");
           if (var2Lifetime134 != null) {
-            mb.field_g[3] = uu.a(0, var2Lifetime134);
+            mb.upgradesHelpLines[3] = uu.a(0, var2Lifetime134);
           }
           var2Lifetime135 = ke.a((byte) 100, "instructionsPagePowerups,4");
           if (var2Lifetime135 != null) {
-            mb.field_g[4] = uu.a(0, var2Lifetime135);
+            mb.upgradesHelpLines[4] = uu.a(0, var2Lifetime135);
           }
           var2Lifetime136 = ke.a((byte) 127, "instructionsPagePowerups,5");
           if (null != var2Lifetime136) {
-            mb.field_g[5] = uu.a(0, var2Lifetime136);
+            mb.upgradesHelpLines[5] = uu.a(0, var2Lifetime136);
           }
           var2Lifetime137 = ke.a((byte) 119, "tutorialon");
           if (var2Lifetime137 != null) {
@@ -1113,19 +1113,19 @@ final class rj {
           }
           var2Lifetime139 = ke.a((byte) 119, "benefits,0");
           if (null != var2Lifetime139) {
-            hf.field_L[0] = uu.a(0, var2Lifetime139);
+            hf.membershipPromoLines[0] = uu.a(0, var2Lifetime139);
           }
           var2Lifetime140 = ke.a((byte) 117, "benefits,1");
           if (null != var2Lifetime140) {
-            hf.field_L[1] = uu.a(0, var2Lifetime140);
+            hf.membershipPromoLines[1] = uu.a(0, var2Lifetime140);
           }
           var2Lifetime141 = ke.a((byte) 117, "benefits,2");
           if (null != var2Lifetime141) {
-            hf.field_L[2] = uu.a(param1 + 5, var2Lifetime141);
+            hf.membershipPromoLines[2] = uu.a(param1 + 5, var2Lifetime141);
           }
           var2Lifetime142 = ke.a((byte) 122, "arcadeunlocked");
           if (var2Lifetime142 != null) {
-            aa.field_b = uu.a(0, var2Lifetime142);
+            aa.arcadeModeUnlockedText = uu.a(0, var2Lifetime142);
           }
           var2Lifetime143 = ke.a((byte) 93, "levelSelect");
           if (var2Lifetime143 != null) {
@@ -1133,31 +1133,31 @@ final class rj {
           }
           var2Lifetime144 = ke.a((byte) 116, "deathMessages,0");
           if (null != var2Lifetime144) {
-            IntrusiveNode.field_f[0] = uu.a(param1 + 5, var2Lifetime144);
+            IntrusiveNode.exclamationPhrases[0] = uu.a(param1 + 5, var2Lifetime144);
           }
           var2Lifetime145 = ke.a((byte) 89, "deathMessages,1");
           if (var2Lifetime145 != null) {
-            IntrusiveNode.field_f[1] = uu.a(param1 + 5, var2Lifetime145);
+            IntrusiveNode.exclamationPhrases[1] = uu.a(param1 + 5, var2Lifetime145);
           }
           var2Lifetime146 = ke.a((byte) 121, "deathMessages,2");
           if (null != var2Lifetime146) {
-            IntrusiveNode.field_f[2] = uu.a(param1 + 5, var2Lifetime146);
+            IntrusiveNode.exclamationPhrases[2] = uu.a(param1 + 5, var2Lifetime146);
           }
           var2Lifetime147 = ke.a((byte) 101, "deathMessages,3");
           if (null != var2Lifetime147) {
-            IntrusiveNode.field_f[3] = uu.a(0, var2Lifetime147);
+            IntrusiveNode.exclamationPhrases[3] = uu.a(0, var2Lifetime147);
           }
           var2Lifetime148 = ke.a((byte) 106, "deathMessages,4");
           if (null != var2Lifetime148) {
-            IntrusiveNode.field_f[4] = uu.a(0, var2Lifetime148);
+            IntrusiveNode.exclamationPhrases[4] = uu.a(0, var2Lifetime148);
           }
           var2Lifetime149 = ke.a((byte) 90, "deathMessages,5");
           if (null != var2Lifetime149) {
-            IntrusiveNode.field_f[5] = uu.a(0, var2Lifetime149);
+            IntrusiveNode.exclamationPhrases[5] = uu.a(0, var2Lifetime149);
           }
           var2Lifetime150 = ke.a((byte) 109, "warningWave");
           if (null != var2Lifetime150) {
-            ff.field_m = uu.a(param1 ^ -5, var2Lifetime150);
+            ff.warningText = uu.a(param1 ^ -5, var2Lifetime150);
           }
           var2Lifetime151 = ke.a((byte) 106, "powerupRunningOut");
           if (var2Lifetime151 != null) {
@@ -1165,7 +1165,7 @@ final class rj {
           }
           var2Lifetime152 = ke.a((byte) 91, "powerupNearlyReady");
           if (null != var2Lifetime152) {
-            pu.field_a = uu.a(0, var2Lifetime152);
+            pu.blastReadyText = uu.a(0, var2Lifetime152);
           }
           var2Lifetime153 = ke.a((byte) 104, "spaceToDetonate");
           if (null != var2Lifetime153) {
@@ -1173,111 +1173,111 @@ final class rj {
           }
           var2Lifetime154 = ke.a((byte) 101, "gameOver");
           if (null != var2Lifetime154) {
-            tt.field_k = uu.a(param1 + 5, var2Lifetime154);
+            tt.defeatText = uu.a(param1 + 5, var2Lifetime154);
           }
           var2Lifetime155 = ke.a((byte) 118, "gameWon");
           if (null != var2Lifetime155) {
-            cm.field_b = uu.a(0, var2Lifetime155);
+            cm.levelCompleteText = uu.a(0, var2Lifetime155);
           }
           var2Lifetime156 = ke.a((byte) 118, "enemyTypes,0");
           if (null != var2Lifetime156) {
-            om.field_k[0] = uu.a(param1 + 5, var2Lifetime156);
+            om.droneNames[0] = uu.a(param1 + 5, var2Lifetime156);
           }
           var2Lifetime157 = ke.a((byte) 109, "enemyTypes,1");
           if (null != var2Lifetime157) {
-            om.field_k[1] = uu.a(0, var2Lifetime157);
+            om.droneNames[1] = uu.a(0, var2Lifetime157);
           }
           var2Lifetime158 = ke.a((byte) 89, "enemyTypes,2");
           if (null != var2Lifetime158) {
-            om.field_k[2] = uu.a(0, var2Lifetime158);
+            om.droneNames[2] = uu.a(0, var2Lifetime158);
           }
           var2Lifetime159 = ke.a((byte) 100, "enemyTypes,3");
           if (null != var2Lifetime159) {
-            om.field_k[3] = uu.a(0, var2Lifetime159);
+            om.droneNames[3] = uu.a(0, var2Lifetime159);
           }
           var2Lifetime160 = ke.a((byte) 122, "enemyTypes,4");
           if (null != var2Lifetime160) {
-            om.field_k[4] = uu.a(0, var2Lifetime160);
+            om.droneNames[4] = uu.a(0, var2Lifetime160);
           }
           var2Lifetime161 = ke.a((byte) 103, "enemyTypes,5");
           if (var2Lifetime161 != null) {
-            om.field_k[5] = uu.a(0, var2Lifetime161);
+            om.droneNames[5] = uu.a(0, var2Lifetime161);
           }
           var2Lifetime162 = ke.a((byte) 100, "enemyModifiers,0");
           if (var2Lifetime162 != null) {
-            l.field_a[0] = uu.a(0, var2Lifetime162);
+            l.enemyVariantNames[0] = uu.a(0, var2Lifetime162);
           }
           var2Lifetime163 = ke.a((byte) 122, "enemyModifiers,1");
           if (null != var2Lifetime163) {
-            l.field_a[1] = uu.a(0, var2Lifetime163);
+            l.enemyVariantNames[1] = uu.a(0, var2Lifetime163);
           }
           var2Lifetime164 = ke.a((byte) 126, "enemyModifiers,2");
           if (var2Lifetime164 != null) {
-            l.field_a[2] = uu.a(0, var2Lifetime164);
+            l.enemyVariantNames[2] = uu.a(0, var2Lifetime164);
           }
           var2Lifetime165 = ke.a((byte) 92, "enemyModifiers,3");
           if (null != var2Lifetime165) {
-            l.field_a[3] = uu.a(jg.a(param1, -5), var2Lifetime165);
+            l.enemyVariantNames[3] = uu.a(jg.a(param1, -5), var2Lifetime165);
           }
           var2Lifetime166 = ke.a((byte) 106, "enemyModifiers,4");
           if (null != var2Lifetime166) {
-            l.field_a[4] = uu.a(0, var2Lifetime166);
+            l.enemyVariantNames[4] = uu.a(0, var2Lifetime166);
           }
           var2Lifetime167 = ke.a((byte) 101, "enemyModifiers,5");
           if (var2Lifetime167 != null) {
-            l.field_a[5] = uu.a(0, var2Lifetime167);
+            l.enemyVariantNames[5] = uu.a(0, var2Lifetime167);
           }
           var2Lifetime168 = ke.a((byte) 103, "enemyModifiers,6");
           if (var2Lifetime168 != null) {
-            l.field_a[6] = uu.a(0, var2Lifetime168);
+            l.enemyVariantNames[6] = uu.a(0, var2Lifetime168);
           }
           var2Lifetime169 = ke.a((byte) 120, "powerupNames,0");
           if (null != var2Lifetime169) {
-            vu.field_i[0] = uu.a(0, var2Lifetime169);
+            vu.powerupEffectNames[0] = uu.a(0, var2Lifetime169);
           }
           var2Lifetime170 = ke.a((byte) 127, "powerupNames,1");
           if (var2Lifetime170 != null) {
-            vu.field_i[1] = uu.a(0, var2Lifetime170);
+            vu.powerupEffectNames[1] = uu.a(0, var2Lifetime170);
           }
           var2Lifetime171 = ke.a((byte) 97, "powerupNames,2");
           if (null != var2Lifetime171) {
-            vu.field_i[2] = uu.a(0, var2Lifetime171);
+            vu.powerupEffectNames[2] = uu.a(0, var2Lifetime171);
           }
           var2Lifetime172 = ke.a((byte) 122, "powerupNames,3");
           if (null != var2Lifetime172) {
-            vu.field_i[3] = uu.a(jg.a(param1, -5), var2Lifetime172);
+            vu.powerupEffectNames[3] = uu.a(jg.a(param1, -5), var2Lifetime172);
           }
           var2Lifetime173 = ke.a((byte) 96, "powerupNames,4");
           if (null != var2Lifetime173) {
-            vu.field_i[4] = uu.a(0, var2Lifetime173);
+            vu.powerupEffectNames[4] = uu.a(0, var2Lifetime173);
           }
           var2Lifetime174 = ke.a((byte) 107, "powerupNames,5");
           if (var2Lifetime174 != null) {
-            vu.field_i[5] = uu.a(0, var2Lifetime174);
+            vu.powerupEffectNames[5] = uu.a(0, var2Lifetime174);
           }
           var2Lifetime175 = ke.a((byte) 88, "powerupNames,6");
           if (null != var2Lifetime175) {
-            vu.field_i[6] = uu.a(param1 + 5, var2Lifetime175);
+            vu.powerupEffectNames[6] = uu.a(param1 + 5, var2Lifetime175);
           }
           var2Lifetime176 = ke.a((byte) 105, "powerupShortNames,0");
           if (null != var2Lifetime176) {
-            ee.field_a[0] = uu.a(0, var2Lifetime176);
+            UpgradeStatNames.names[0] = uu.a(0, var2Lifetime176);
           }
           var2Lifetime177 = ke.a((byte) 101, "powerupShortNames,1");
           if (null != var2Lifetime177) {
-            ee.field_a[1] = uu.a(0, var2Lifetime177);
+            UpgradeStatNames.names[1] = uu.a(0, var2Lifetime177);
           }
           var2Lifetime178 = ke.a((byte) 105, "powerupShortNames,2");
           if (null != var2Lifetime178) {
-            ee.field_a[2] = uu.a(0, var2Lifetime178);
+            UpgradeStatNames.names[2] = uu.a(0, var2Lifetime178);
           }
           var2Lifetime179 = ke.a((byte) 122, "powerupShortNames,3");
           if (var2Lifetime179 != null) {
-            ee.field_a[3] = uu.a(jg.a(param1, -5), var2Lifetime179);
+            UpgradeStatNames.names[3] = uu.a(jg.a(param1, -5), var2Lifetime179);
           }
           var2Lifetime180 = ke.a((byte) 93, "powerupShortNames,4");
           if (var2Lifetime180 != null) {
-            ee.field_a[4] = uu.a(0, var2Lifetime180);
+            UpgradeStatNames.names[4] = uu.a(0, var2Lifetime180);
           }
           var2Lifetime181 = ke.a((byte) 90, "chooseYourPowerup");
           if (null != var2Lifetime181) {
@@ -1289,35 +1289,35 @@ final class rj {
           }
           var2Lifetime183 = ke.a((byte) 98, "terrainNames,0");
           if (null != var2Lifetime183) {
-            pp.field_e[0] = uu.a(0, var2Lifetime183);
+            pp.padTypeNames[0] = uu.a(0, var2Lifetime183);
           }
           var2Lifetime184 = ke.a((byte) 120, "terrainNames,1");
           if (var2Lifetime184 != null) {
-            pp.field_e[1] = uu.a(param1 + 5, var2Lifetime184);
+            pp.padTypeNames[1] = uu.a(param1 + 5, var2Lifetime184);
           }
           var2Lifetime185 = ke.a((byte) 118, "terrainNames,2");
           if (var2Lifetime185 != null) {
-            pp.field_e[2] = uu.a(0, var2Lifetime185);
+            pp.padTypeNames[2] = uu.a(0, var2Lifetime185);
           }
           var2Lifetime186 = ke.a((byte) 112, "terrainNames,3");
           if (null != var2Lifetime186) {
-            pp.field_e[3] = uu.a(jg.a(param1, -5), var2Lifetime186);
+            pp.padTypeNames[3] = uu.a(jg.a(param1, -5), var2Lifetime186);
           }
           var2Lifetime187 = ke.a((byte) 127, "terrainNames,4");
           if (var2Lifetime187 != null) {
-            pp.field_e[4] = uu.a(0, var2Lifetime187);
+            pp.padTypeNames[4] = uu.a(0, var2Lifetime187);
           }
           var2Lifetime188 = ke.a((byte) 97, "terrainNames,5");
           if (var2Lifetime188 != null) {
-            pp.field_e[5] = uu.a(0, var2Lifetime188);
+            pp.padTypeNames[5] = uu.a(0, var2Lifetime188);
           }
           var2Lifetime189 = ke.a((byte) 104, "terrainNames,6");
           if (null != var2Lifetime189) {
-            pp.field_e[6] = uu.a(0, var2Lifetime189);
+            pp.padTypeNames[6] = uu.a(0, var2Lifetime189);
           }
           var2Lifetime190 = ke.a((byte) 121, "terrainNames,7");
           if (null != var2Lifetime190) {
-            pp.field_e[7] = uu.a(0, var2Lifetime190);
+            pp.padTypeNames[7] = uu.a(0, var2Lifetime190);
           }
           var2Lifetime191 = ke.a((byte) 96, "enemyTypeColon");
           if (var2Lifetime191 != null) {
@@ -1357,31 +1357,31 @@ final class rj {
           }
           var2Lifetime200 = ke.a((byte) 122, "editModes,0");
           if (var2Lifetime200 != null) {
-            vk.field_b[0] = uu.a(param1 + 5, var2Lifetime200);
+            vk.levelLoadStepLabels[0] = uu.a(param1 + 5, var2Lifetime200);
           }
           var2Lifetime201 = ke.a((byte) 95, "editModes,1");
           if (null != var2Lifetime201) {
-            vk.field_b[1] = uu.a(0, var2Lifetime201);
+            vk.levelLoadStepLabels[1] = uu.a(0, var2Lifetime201);
           }
           var2Lifetime202 = ke.a((byte) 101, "hudScore");
           if (var2Lifetime202 != null) {
-            ps.field_b = uu.a(0, var2Lifetime202);
+            ps.scoreText = uu.a(0, var2Lifetime202);
           }
           var2Lifetime203 = ke.a((byte) 118, "hudTime");
           if (var2Lifetime203 != null) {
-            tj.field_l = uu.a(param1 ^ -5, var2Lifetime203);
+            tj.timeText = uu.a(param1 ^ -5, var2Lifetime203);
           }
           var2Lifetime204 = ke.a((byte) 105, "hudLives");
           if (var2Lifetime204 != null) {
-            as.field_x = uu.a(param1 ^ -5, var2Lifetime204);
+            as.livesText = uu.a(param1 ^ -5, var2Lifetime204);
           }
           var2Lifetime205 = ke.a((byte) 99, "hudMultiplier");
           if (var2Lifetime205 != null) {
-            fq.field_e = uu.a(0, var2Lifetime205);
+            fq.multiplierText = uu.a(0, var2Lifetime205);
           }
           var2Lifetime206 = ke.a((byte) 126, "hudLevel");
           if (var2Lifetime206 != null) {
-            pl.field_x = uu.a(0, var2Lifetime206);
+            pl.levelText = uu.a(0, var2Lifetime206);
           }
           var2Lifetime207 = ke.a((byte) 123, "hudCharge");
           if (null != var2Lifetime207) {
@@ -1389,163 +1389,163 @@ final class rj {
           }
           var2Lifetime208 = ke.a((byte) 102, "notCompleted");
           if (null != var2Lifetime208) {
-            bi.field_b = uu.a(0, var2Lifetime208);
+            bi.notCompletedText = uu.a(0, var2Lifetime208);
           }
           var2Lifetime209 = ke.a((byte) 122, "clickToContinue");
           if (null != var2Lifetime209) {
-            ge.field_l = uu.a(0, var2Lifetime209);
+            ge.clickToContinueText = uu.a(0, var2Lifetime209);
           }
           var2Lifetime210 = ke.a((byte) 110, "tutorialSteps,0");
           if (null != var2Lifetime210) {
-            sr.field_j[0] = uu.a(0, var2Lifetime210);
+            sr.droneDescriptions[0] = uu.a(0, var2Lifetime210);
           }
           var2Lifetime211 = ke.a((byte) 117, "tutorialSteps,1");
           if (null != var2Lifetime211) {
-            sr.field_j[1] = uu.a(0, var2Lifetime211);
+            sr.droneDescriptions[1] = uu.a(0, var2Lifetime211);
           }
           var2Lifetime212 = ke.a((byte) 95, "tutorialSteps,2");
           if (var2Lifetime212 != null) {
-            sr.field_j[2] = uu.a(0, var2Lifetime212);
+            sr.droneDescriptions[2] = uu.a(0, var2Lifetime212);
           }
           var2Lifetime213 = ke.a((byte) 109, "tutorialSteps,3");
           if (var2Lifetime213 != null) {
-            sr.field_j[3] = uu.a(0, var2Lifetime213);
+            sr.droneDescriptions[3] = uu.a(0, var2Lifetime213);
           }
           var2Lifetime214 = ke.a((byte) 98, "tutorialSteps,4");
           if (var2Lifetime214 != null) {
-            sr.field_j[4] = uu.a(0, var2Lifetime214);
+            sr.droneDescriptions[4] = uu.a(0, var2Lifetime214);
           }
           var2Lifetime215 = ke.a((byte) 89, "tutorialSteps,5");
           if (null != var2Lifetime215) {
-            sr.field_j[5] = uu.a(0, var2Lifetime215);
+            sr.droneDescriptions[5] = uu.a(0, var2Lifetime215);
           }
           var2Lifetime216 = ke.a((byte) 119, "tutorialSteps,6");
           if (null != var2Lifetime216) {
-            sr.field_j[6] = uu.a(0, var2Lifetime216);
+            sr.droneDescriptions[6] = uu.a(0, var2Lifetime216);
           }
           var2Lifetime217 = ke.a((byte) 125, "tutorialSteps,7");
           if (null != var2Lifetime217) {
-            sr.field_j[7] = uu.a(0, var2Lifetime217);
+            sr.droneDescriptions[7] = uu.a(0, var2Lifetime217);
           }
           var2Lifetime218 = ke.a((byte) 93, "tutorialSteps,8");
           if (null != var2Lifetime218) {
-            sr.field_j[8] = uu.a(0, var2Lifetime218);
+            sr.droneDescriptions[8] = uu.a(0, var2Lifetime218);
           }
           var2Lifetime219 = ke.a((byte) 91, "tutorialSteps,9");
           if (null != var2Lifetime219) {
-            sr.field_j[9] = uu.a(0, var2Lifetime219);
+            sr.droneDescriptions[9] = uu.a(0, var2Lifetime219);
           }
           var2Lifetime220 = ke.a((byte) 114, "tutorialSteps,10");
           if (null != var2Lifetime220) {
-            sr.field_j[10] = uu.a(0, var2Lifetime220);
+            sr.droneDescriptions[10] = uu.a(0, var2Lifetime220);
           }
           var2Lifetime221 = ke.a((byte) 104, "tutorialSteps,11");
           if (var2Lifetime221 != null) {
-            sr.field_j[11] = uu.a(jg.a(param1, -5), var2Lifetime221);
+            sr.droneDescriptions[11] = uu.a(jg.a(param1, -5), var2Lifetime221);
           }
           var2Lifetime222 = ke.a((byte) 112, "tutorialSteps,12");
           if (var2Lifetime222 != null) {
-            sr.field_j[12] = uu.a(jg.a(param1, -5), var2Lifetime222);
+            sr.droneDescriptions[12] = uu.a(jg.a(param1, -5), var2Lifetime222);
           }
           var2Lifetime223 = ke.a((byte) 112, "tutorialSteps,13");
           if (null != var2Lifetime223) {
-            sr.field_j[13] = uu.a(0, var2Lifetime223);
+            sr.droneDescriptions[13] = uu.a(0, var2Lifetime223);
           }
           var2Lifetime224 = ke.a((byte) 93, "tutorialSteps,14");
           if (var2Lifetime224 != null) {
-            sr.field_j[14] = uu.a(0, var2Lifetime224);
+            sr.droneDescriptions[14] = uu.a(0, var2Lifetime224);
           }
           var2Lifetime225 = ke.a((byte) 114, "tutorialSteps,15");
           if (var2Lifetime225 != null) {
-            sr.field_j[15] = uu.a(param1 + 5, var2Lifetime225);
+            sr.droneDescriptions[15] = uu.a(param1 + 5, var2Lifetime225);
           }
           var2Lifetime226 = ke.a((byte) 104, "tutorialSteps,16");
           if (var2Lifetime226 != null) {
-            sr.field_j[16] = uu.a(param1 + 5, var2Lifetime226);
+            sr.droneDescriptions[16] = uu.a(param1 + 5, var2Lifetime226);
           }
           var2Lifetime227 = ke.a((byte) 105, "tutorialSteps,17");
           if (var2Lifetime227 != null) {
-            sr.field_j[17] = uu.a(0, var2Lifetime227);
+            sr.droneDescriptions[17] = uu.a(0, var2Lifetime227);
           }
           var2Lifetime228 = ke.a((byte) 115, "tutorialSteps,18");
           if (null != var2Lifetime228) {
-            sr.field_j[18] = uu.a(0, var2Lifetime228);
+            sr.droneDescriptions[18] = uu.a(0, var2Lifetime228);
           }
           var2Lifetime229 = ke.a((byte) 108, "tutorialSteps,19");
           if (var2Lifetime229 != null) {
-            sr.field_j[19] = uu.a(0, var2Lifetime229);
+            sr.droneDescriptions[19] = uu.a(0, var2Lifetime229);
           }
           var2Lifetime230 = ke.a((byte) 94, "tutorialSteps,20");
           if (null != var2Lifetime230) {
-            sr.field_j[20] = uu.a(0, var2Lifetime230);
+            sr.droneDescriptions[20] = uu.a(0, var2Lifetime230);
           }
           var2Lifetime231 = ke.a((byte) 109, "tutorialSteps,21");
           if (var2Lifetime231 != null) {
-            sr.field_j[21] = uu.a(param1 + 5, var2Lifetime231);
+            sr.droneDescriptions[21] = uu.a(param1 + 5, var2Lifetime231);
           }
           var2Lifetime232 = ke.a((byte) 101, "tutorialSteps,22");
           if (null != var2Lifetime232) {
-            sr.field_j[22] = uu.a(jg.a(param1, -5), var2Lifetime232);
+            sr.droneDescriptions[22] = uu.a(jg.a(param1, -5), var2Lifetime232);
           }
           var2Lifetime233 = ke.a((byte) 113, "tutorialSteps,23");
           if (var2Lifetime233 != null) {
-            sr.field_j[23] = uu.a(jg.a(param1, -5), var2Lifetime233);
+            sr.droneDescriptions[23] = uu.a(jg.a(param1, -5), var2Lifetime233);
           }
           var2Lifetime234 = ke.a((byte) 102, "tutorialSteps,24");
           if (var2Lifetime234 != null) {
-            sr.field_j[24] = uu.a(0, var2Lifetime234);
+            sr.droneDescriptions[24] = uu.a(0, var2Lifetime234);
           }
           var2Lifetime235 = ke.a((byte) 96, "tutorialSteps,25");
           if (null != var2Lifetime235) {
-            sr.field_j[25] = uu.a(0, var2Lifetime235);
+            sr.droneDescriptions[25] = uu.a(0, var2Lifetime235);
           }
           var2Lifetime236 = ke.a((byte) 97, "tutorialSteps,26");
           if (var2Lifetime236 != null) {
-            sr.field_j[26] = uu.a(0, var2Lifetime236);
+            sr.droneDescriptions[26] = uu.a(0, var2Lifetime236);
           }
           var2Lifetime237 = ke.a((byte) 120, "tutorialSteps,27");
           if (var2Lifetime237 != null) {
-            sr.field_j[27] = uu.a(0, var2Lifetime237);
+            sr.droneDescriptions[27] = uu.a(0, var2Lifetime237);
           }
           var2Lifetime238 = ke.a((byte) 89, "tutorialSteps,28");
           if (var2Lifetime238 != null) {
-            sr.field_j[28] = uu.a(0, var2Lifetime238);
+            sr.droneDescriptions[28] = uu.a(0, var2Lifetime238);
           }
           var2Lifetime239 = ke.a((byte) 106, "tutorialSteps,29");
           if (var2Lifetime239 != null) {
-            sr.field_j[29] = uu.a(0, var2Lifetime239);
+            sr.droneDescriptions[29] = uu.a(0, var2Lifetime239);
           }
           var2Lifetime240 = ke.a((byte) 126, "tutorialSteps,30");
           if (var2Lifetime240 != null) {
-            sr.field_j[30] = uu.a(0, var2Lifetime240);
+            sr.droneDescriptions[30] = uu.a(0, var2Lifetime240);
           }
           var2Lifetime241 = ke.a((byte) 103, "tutorialSteps,31");
           if (var2Lifetime241 != null) {
-            sr.field_j[31] = uu.a(0, var2Lifetime241);
+            sr.droneDescriptions[31] = uu.a(0, var2Lifetime241);
           }
           var2Lifetime242 = ke.a((byte) 112, "tutorialSteps,32");
           if (null != var2Lifetime242) {
-            sr.field_j[32] = uu.a(jg.a(param1, -5), var2Lifetime242);
+            sr.droneDescriptions[32] = uu.a(jg.a(param1, -5), var2Lifetime242);
           }
           var2Lifetime243 = ke.a((byte) 89, "tutorialSteps,33");
           if (var2Lifetime243 != null) {
-            sr.field_j[33] = uu.a(0, var2Lifetime243);
+            sr.droneDescriptions[33] = uu.a(0, var2Lifetime243);
           }
           var2Lifetime244 = ke.a((byte) 99, "tutorialSteps,34");
           if (var2Lifetime244 != null) {
-            sr.field_j[34] = uu.a(0, var2Lifetime244);
+            sr.droneDescriptions[34] = uu.a(0, var2Lifetime244);
           }
           var2Lifetime245 = ke.a((byte) 99, "tutorialSteps,35");
           if (var2Lifetime245 != null) {
-            sr.field_j[35] = uu.a(param1 + 5, var2Lifetime245);
+            sr.droneDescriptions[35] = uu.a(param1 + 5, var2Lifetime245);
           }
           var2Lifetime246 = ke.a((byte) 112, "tutorialSteps,36");
           if (var2Lifetime246 != null) {
-            sr.field_j[36] = uu.a(0, var2Lifetime246);
+            sr.droneDescriptions[36] = uu.a(0, var2Lifetime246);
           }
           var2Lifetime247 = ke.a((byte) 120, "tutorialSteps,37");
           if (var2Lifetime247 != null) {
-            sr.field_j[37] = uu.a(jg.a(param1, -5), var2Lifetime247);
+            sr.droneDescriptions[37] = uu.a(jg.a(param1, -5), var2Lifetime247);
           }
           ah.field_J = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1584,10 +1584,10 @@ final class rj {
               if (!pg.field_a) {
                 param2 = ih.field_b;
                 if (Sumoblitz.field_L) {
-                  param2 = RasterBuffer.field_g;
+                  param2 = RasterBuffer.invalidPasswordText;
                 }
               } else {
-                param2 = RasterBuffer.field_g;
+                param2 = RasterBuffer.invalidPasswordText;
               }
               no.field_a.a(-3499, ac.field_F);
             }
@@ -1598,10 +1598,10 @@ final class rj {
             }
             if (var4 != 0) {
               if (mc.field_E) {
-                param2 = ic.a(hh.field_b, new String[]{param2}, (byte) -128);
+                param2 = ic.a(hh.connectionLostText, new String[]{param2}, (byte) -128);
               }
               if (ih.field_c) {
-                param2 = se.field_c;
+                param2 = se.pleaseTryAgainInText;
               }
               hc.field_c.a(param2, param1, 21089);
             }
@@ -1626,11 +1626,11 @@ final class rj {
         }
     }
 
-    rj(gd param0, ti param1) {
+    ResourceArchive(gd param0, ti param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private rj(gd param0, ti param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ResourceArchive(gd param0, ti param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

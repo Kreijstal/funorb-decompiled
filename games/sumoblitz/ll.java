@@ -4,17 +4,17 @@
 final class ll {
     static long[] field_b;
     static long[][] field_a;
-    static String field_c;
+    static String resumeGameText;
 
     public static void b(int param0) {
         field_a = (long[][]) null;
         field_b = null;
         if (param0 >= -107) {
           field_b = (long[]) null;
-          field_c = null;
+          resumeGameText = null;
           return;
         }
-        field_c = null;
+        resumeGameText = null;
     }
 
     final static void c(int param0) {
@@ -100,6 +100,6 @@ final class ll {
             var1 = 8 * (-1 + var0);
             field_b[var0] = bi.a(bi.a(bi.a(bi.a(sd.a(4278190080L, field_a[4][4 + var1]), bi.a(sd.a(1095216660480L, field_a[3][var1 + 3]), bi.a(sd.a(280375465082880L, field_a[2][var1 + 2]), bi.a(sd.a(field_a[1][var1 + 1], 71776119061217280L), sd.a(field_a[0][var1], -72057594037927936L))))), sd.a(16711680L, field_a[5][var1 + 5])), sd.a(field_a[6][6 + var1], 65280L)), sd.a(field_a[7][7 + var1], 255L));
         }
-        field_c = "Resume Game";
+        resumeGameText = "Resume Game";
     }
 }

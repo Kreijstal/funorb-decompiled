@@ -4,18 +4,18 @@
 final class pi {
     static ph field_a;
     static hr field_d;
-    static String field_g;
+    static String passwordText;
     static int field_e;
     static ki field_c;
     static String field_b;
-    static String field_f;
+    static String yourEmailAddressIsText;
 
     public static void a(int param0) {
-        field_g = null;
+        passwordText = null;
         field_b = null;
         field_c = null;
         field_a = null;
-        field_f = null;
+        yourEmailAddressIsText = null;
         if (param0 == 20437) {
           field_d = null;
           return;
@@ -41,7 +41,7 @@ final class pi {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        jn var5 = null;
+        IntrusiveDeque var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -60,7 +60,7 @@ final class pi {
           if (1 < var3_int) {
             var4 = param0.e(-31302);
           }
-          var5 = new jn();
+          var5 = new IntrusiveDeque();
           if (param2 <= 50) {
             pi.a(116);
           }
@@ -101,8 +101,8 @@ final class pi {
 
     static {
         field_a = new ph(16);
-        field_g = "Password: ";
+        passwordText = "Password: ";
         field_e = 0;
-        field_f = "Your email address is used to identify this account";
+        yourEmailAddressIsText = "Your email address is used to identify this account";
     }
 }

@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa {
-    private static jn field_b;
+    private static IntrusiveDeque field_b;
     private static int field_a;
     private static boolean field_c;
 
     final synchronized static void a(int param0) {
-        jn stackIn_4_0 = null;
+        IntrusiveDeque stackIn_4_0 = null;
         ui var1;
         if (param0 >= -119) {
           return;
         }
-        stackIn_4_0 = (jn) (field_b);
+        stackIn_4_0 = (IntrusiveDeque) (field_b);
         while (true) {
-          var1 = (ui) (((jn) (Object) stackIn_4_0).c(9));
+          var1 = (ui) (((IntrusiveDeque) (Object) stackIn_4_0).c(9));
           if (var1 == null) {
             return;
           }
           var1.field_k.w(true);
           var1.b(false);
-          stackIn_4_0 = (jn) (field_b);
+          stackIn_4_0 = (IntrusiveDeque) (field_b);
         }
     }
 
@@ -29,7 +29,7 @@ final class pa {
         if (param0 < -113) {
           return;
         }
-        field_b = (jn) null;
+        field_b = (IntrusiveDeque) null;
     }
 
     final synchronized static void a(e param0, byte param1) {
@@ -77,6 +77,6 @@ final class pa {
     static {
         field_a = 0;
         field_c = false;
-        field_b = new jn();
+        field_b = new IntrusiveDeque();
     }
 }

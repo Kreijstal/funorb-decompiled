@@ -17,9 +17,9 @@ final class tl extends IntrusiveNode {
     static int field_v;
     private int field_l;
     private int field_o;
-    private jn field_r;
+    private IntrusiveDeque field_r;
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, GraphicsToolkit param1) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -103,11 +103,11 @@ final class tl extends IntrusiveNode {
     private final int d(byte param0) {
         int var2;
         int var3;
-        ha var4;
+        GraphicsToolkit var4;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0 < 28) {
-          var4 = (ha) null;
-          this.a(77, (ha) null);
+          var4 = (GraphicsToolkit) null;
+          this.a(77, (GraphicsToolkit) null);
         }
         var2 = -1414832128;
         if (this.field_n == 0) {
@@ -169,7 +169,7 @@ final class tl extends IntrusiveNode {
           }
           this.field_w = -this.field_w;
         } else {
-          if (this.field_x > -52 + rj.field_c << 8 &&
+          if (this.field_x > -52 + ResourceArchive.field_c << 8 &&
             this.field_w >= 0) {
             if (0 == this.field_w) {
               this.field_w = -256;
@@ -216,12 +216,12 @@ final class tl extends IntrusiveNode {
     }
 
     private final boolean e(int param0) {
-        cb var2;
+        IntrusiveDequeCursor var2;
         nm var3;
         int var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = new cb(is.field_c);
+        var2 = new IntrusiveDequeCursor(is.field_c);
         if (param0 > -106) {
           field_v = -85;
         }
@@ -273,7 +273,7 @@ final class tl extends IntrusiveNode {
         this.field_n = param1;
         this.field_l = 5120;
         this.field_x = param2;
-        this.field_r = new jn();
+        this.field_r = new IntrusiveDeque();
     }
 
     static {

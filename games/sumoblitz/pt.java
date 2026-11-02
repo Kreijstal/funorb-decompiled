@@ -6,7 +6,7 @@ import java.util.*;
 abstract class pt {
     static java.util.zip.CRC32 field_c;
     static volatile boolean field_a;
-    static String field_b;
+    static String challengeText;
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (param0) {
@@ -30,22 +30,22 @@ abstract class pt {
         if (param0 <= 12) {
           return;
         }
-        field_b = null;
+        challengeText = null;
         field_c = null;
     }
 
     final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
-        if (null != param2.field_o) {
+        if (null != param2.secondaryPrevious) {
           param2.c(-5106);
         }
         if (param1 != 2066481250) {
           return;
         }
         try {
-          param2.field_o = param0;
-          param2.field_m = param0.field_m;
-          param2.field_o.field_m = param2;
-          param2.field_m.field_o = param2;
+          param2.secondaryPrevious = param0;
+          param2.secondaryNext = param0.secondaryNext;
+          param2.secondaryPrevious.secondaryNext = param2;
+          param2.secondaryNext.secondaryPrevious = param2;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "pt.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -183,7 +183,7 @@ abstract class pt {
 
     static {
         field_c = new java.util.zip.CRC32();
-        field_b = "challenge";
+        challengeText = "challenge";
         field_a = true;
     }
 }

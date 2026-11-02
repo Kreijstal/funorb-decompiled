@@ -6,7 +6,7 @@ final class dv implements mh {
     static boolean field_b;
     static String field_c;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

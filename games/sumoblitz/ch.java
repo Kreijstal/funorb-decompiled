@@ -6,14 +6,14 @@ final class ch {
     ek field_b;
     ek field_c;
     us[] field_a;
-    static String field_e;
+    static String playFreeVersionText;
     static boolean field_h;
     boolean field_g;
     ek field_f;
     us[] field_i;
 
     public static void a(byte param0) {
-        field_e = null;
+        playFreeVersionText = null;
         if (param0 < 54) {
           ch.a(-75);
         }
@@ -27,7 +27,7 @@ final class ch {
         if (param0 != 0) {
           ch.a(20);
         }
-        oc.a(qe.field_b, false, (byte) 49);
+        oc.a(qe.connectionLostAttemptingToText, false, (byte) 49);
     }
 
     ch(fr param0) {
@@ -99,6 +99,6 @@ final class ch {
     }
 
     static {
-        field_e = "Play free version";
+        playFreeVersionText = "Play free version";
     }
 }

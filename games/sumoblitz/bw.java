@@ -3,19 +3,19 @@
  */
 final class bw extends qt {
     static boolean field_d;
-    static String field_c;
+    static String reassignPowerupsText;
 
     public static void c(byte param0) {
         if (param0 <= 110) {
           bw.c((byte) 4);
         }
-        field_c = null;
+        reassignPowerupsText = null;
     }
 
-    final void a(boolean param0, ha param1) {
+    final void a(boolean param0, GraphicsToolkit param1) {
         int var3_int = 0;
         int var4 = 0;
-        ha var5 = null;
+        GraphicsToolkit var5 = null;
         int var6 = 0;
         hr[] var7 = null;
         int var8 = 0;
@@ -30,7 +30,7 @@ final class bw extends qt {
             return;
           }
           wo.a(up.field_c, 360, -5, -16777216, 3, param1, 650, 50, 1, param0);
-          hc.field_e.a(hc.field_d, -1, -16777216, 150, 320, 0);
+          hc.field_e.a(hc.continueToNextLevelText, -1, -16777216, 150, 320, 0);
           var3_int = 45;
           var4 = 0;
           while (var3_int < 600) {
@@ -61,10 +61,10 @@ final class bw extends qt {
         }
     }
 
-    final static wb[] b(int param0) {
+    final static Sprite[] b(int param0) {
         int var7_int = 0;
         int var8 = 0;
-        wb[] var1;
+        Sprite[] var1;
         int var2;
         int var3;
         int var4;
@@ -77,7 +77,7 @@ final class bw extends qt {
         int[] var22;
         byte[] var23;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var1 = new wb[rl.field_n];
+        var1 = new Sprite[rl.field_n];
         var2 = 0;
         var3 = 126 / ((-69 - param0) / 52);
         while (var2 < rl.field_n) {
@@ -89,7 +89,7 @@ final class bw extends qt {
             for (var7_int = 0; var7_int < var4; var7_int++) {
               var10[var7_int] = iv.field_l[eb.a((int) var21[var7_int], 255)];
             }
-            var1[var2] = new wb(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var22);
+            var1[var2] = new Sprite(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var22);
           } else {
             var23 = fl.field_o[var2];
             var17 = new int[var4];
@@ -98,7 +98,7 @@ final class bw extends qt {
             for (var8 = 0; var8 < var4; var8++) {
               var7[var8] = ic.a(iv.field_l[eb.a((int) var21[var8], 255)], eb.a((int) var23[var8], 255) << 24);
             }
-            var1[var2] = (wb) ((Object) new mg(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var17));
+            var1[var2] = (Sprite) ((Object) new mg(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var17));
           }
           var2++;
         }
@@ -108,7 +108,7 @@ final class bw extends qt {
 
     final void c(int param0) {
         if (param0 != 5008) {
-          field_c = (String) null;
+          reassignPowerupsText = (String) null;
         }
         int var2 = (ko.field_p - 45) / 300;
         int var3 = (pi.field_e - 200) / 100;
@@ -156,6 +156,6 @@ final class bw extends qt {
     }
 
     static {
-        field_c = "REASSIGN POWERUPS";
+        reassignPowerupsText = "REASSIGN POWERUPS";
     }
 }

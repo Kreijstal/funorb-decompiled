@@ -9,11 +9,11 @@ final class jh extends ie {
     private boolean field_G;
     static df[] field_B;
     private int field_H;
-    static String field_I;
+    static String closeText;
     private int field_J;
     private boolean field_C;
-    static String[] field_K;
-    static String field_A;
+    static String[] achievementDescriptions;
+    static String backText;
     static an field_z;
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
@@ -62,7 +62,7 @@ final class jh extends ie {
         }
     }
 
-    final void a(pk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_l = 0;
@@ -71,7 +71,7 @@ final class jh extends ie {
         }
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         int stackIn_13_1 = 0;
         int stackIn_16_2 = 0;
         int stackIn_23_1 = 0;
@@ -151,19 +151,19 @@ final class jh extends ie {
         field_B = null;
         if (param0 == -1) {
           field_z = null;
-          field_I = null;
-          field_K = null;
-          field_A = null;
+          closeText = null;
+          achievementDescriptions = null;
+          backText = null;
           return;
         }
         field_z = (an) null;
         field_z = null;
-        field_I = null;
-        field_K = null;
-        field_A = null;
+        closeText = null;
+        achievementDescriptions = null;
+        backText = null;
     }
 
-    jh(int param0, int param1, int param2, int param3, mh param4, qm param5, pk param6, boolean param7, boolean param8) {
+    jh(int param0, int param1, int param2, int param3, mh param4, qm param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_F = 2147483647;
         this.field_D = 2147483647;
@@ -176,7 +176,7 @@ final class jh extends ie {
         }
     }
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_8_0 = 0;
@@ -224,19 +224,19 @@ final class jh extends ie {
         this.field_F = this.field_r;
         this.field_D = this.field_v;
         if (param0) {
-          pk var3 = (pk) null;
-          this.a((pk) null, 44, -30, 20, 44, -100, 90);
+          UiWidget var3 = (UiWidget) null;
+          this.a((UiWidget) null, 44, -30, 20, 44, -100, 90);
         }
     }
 
     static {
         int var0 = 0;
         field_B = new df[255];
-        field_I = "Close";
+        closeText = "Close";
         for (var0 = 0; field_B.length > var0; var0++) {
           field_B[var0] = new df();
         }
-        field_A = "Back";
-        field_K = new String[]{"Complete the final level with the highest level of speed", "Complete the final level with the highest level of traction", "Complete the final level with the highest level of bounce", "Complete the game without restarting a level", "Complete 10 levels without using any temporary powerups", "Complete 5 levels without using any speed powerups", "Complete 5 levels without using any traction powerups", "Complete 5 levels without using any bounce powerups", "Last 30 seconds without bumping into anything", "Destroy at least 10 enemies by using the Energy Blast to knock them into a hazard", "On a level where there are Zap Traps, defeat all enemies by pushing them into a wall", "On a level where there are Pinball Bouncers, bounce over 15 times in 5 seconds", "Get to the maximum multiplier 5 times during the course of a game", "Kill 5 different enemies in a row", "Earn 50,000 points during one level", "On level 8, burst big enemies before little enemies", "Complete the first 10 levels", "Complete the first 10 levels without dying", "Complete the full game", "Complete the full game without dying", "Complete Easy mode with 1,000,000 points", "Complete the full game on hard mode", "Last for 1 minute in Challenge Mode", "Last for 3 minutes in Challenge Mode", "Last for 5 minutes in Challenge Mode", "Last for 1 minute in Hard Challenge Mode", "Last for 3 minutes in Hard Challenge Mode", "Last for 5 minutes in Hard Challenge Mode"};
+        backText = "Back";
+        achievementDescriptions = new String[]{"Complete the final level with the highest level of speed", "Complete the final level with the highest level of traction", "Complete the final level with the highest level of bounce", "Complete the game without restarting a level", "Complete 10 levels without using any temporary powerups", "Complete 5 levels without using any speed powerups", "Complete 5 levels without using any traction powerups", "Complete 5 levels without using any bounce powerups", "Last 30 seconds without bumping into anything", "Destroy at least 10 enemies by using the Energy Blast to knock them into a hazard", "On a level where there are Zap Traps, defeat all enemies by pushing them into a wall", "On a level where there are Pinball Bouncers, bounce over 15 times in 5 seconds", "Get to the maximum multiplier 5 times during the course of a game", "Kill 5 different enemies in a row", "Earn 50,000 points during one level", "On level 8, burst big enemies before little enemies", "Complete the first 10 levels", "Complete the first 10 levels without dying", "Complete the full game", "Complete the full game without dying", "Complete Easy mode with 1,000,000 points", "Complete the full game on hard mode", "Last for 1 minute in Challenge Mode", "Last for 3 minutes in Challenge Mode", "Last for 5 minutes in Challenge Mode", "Last for 1 minute in Hard Challenge Mode", "Last for 3 minutes in Hard Challenge Mode", "Last for 5 minutes in Hard Challenge Mode"};
     }
 }

@@ -5,12 +5,12 @@ final class sn {
     static ki field_d;
     private fr field_b;
     long field_c;
-    static wb field_a;
+    static Sprite field_a;
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -30) {
-          field_a = (wb) null;
+          field_a = (Sprite) null;
           field_d = null;
           return;
         }
@@ -32,6 +32,6 @@ final class sn {
     }
 
     static {
-        field_a = new wb(540, 140);
+        field_a = new Sprite(540, 140);
     }
 }

@@ -16,7 +16,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var1 = null;
           this.field_c = null;
         } else {
-          this.field_c = ((DualLinkNode) (var1)).field_m;
+          this.field_c = ((DualLinkNode) (var1)).secondaryNext;
         }
         this.field_e = (DualLinkNode) (var1);
         return var1;
@@ -80,7 +80,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_d = param0;
           this.field_e = null;
-          this.field_c = this.field_d.field_c.field_m;
+          this.field_c = this.field_d.field_c.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "vv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

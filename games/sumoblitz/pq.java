@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pq extends pk {
-    static String field_N;
+final class pq extends UiWidget {
+    static String confirmEmailText;
     private int field_H;
-    private wb field_M;
+    private Sprite field_M;
     boolean field_J;
-    private wb[] field_z;
+    private Sprite[] field_z;
     private int field_K;
     int field_I;
     static float[] field_y;
     private int field_x;
     private int field_A;
-    private wb field_G;
+    private Sprite field_G;
     private int field_B;
     private int field_D;
-    private wb field_E;
+    private Sprite field_E;
     static ri[] field_F;
 
     public static void a(int param0) {
         field_y = null;
-        field_N = null;
+        confirmEmailText = null;
         if (param0 != -1346554936) {
           pq.a(-63);
         }
@@ -28,13 +28,13 @@ final class pq extends pk {
     }
 
     private final void g(int param0) {
-        this.field_z = new wb[]{this.a(this.field_K, (byte) -110, this.field_x), this.a(this.field_D, (byte) -5, this.field_B)};
+        this.field_z = new Sprite[]{this.a(this.field_K, (byte) -110, this.field_x), this.a(this.field_D, (byte) -5, this.field_B)};
         this.field_M = this.f(-53);
         if (param0 != 880072001) {
           this.field_K = -125;
         }
         this.field_G = this.field_M.a();
-        this.field_E = new wb(this.field_p >> 1, this.field_p);
+        this.field_E = new Sprite(this.field_p >> 1, this.field_p);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -48,7 +48,7 @@ final class pq extends pk {
         this.g(880072001);
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -79,17 +79,17 @@ final class pq extends pk {
         }
     }
 
-    private final wb f(int param0) {
+    private final Sprite f(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Sumoblitz.field_L ? 1 : 0;
         int var2 = this.field_p >> 1;
-        wb var3 = new wb(var2, this.field_p);
+        Sprite var3 = new Sprite(var2, this.field_p);
         jq.a(7161, var3);
         if (param0 > -23) {
-          this.field_M = (wb) null;
+          this.field_M = (Sprite) null;
         }
         for (var4 = 0; this.field_p > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -106,7 +106,7 @@ final class pq extends pk {
         return var3;
     }
 
-    private final wb a(int param0, byte param1, int param2) {
+    private final Sprite a(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -115,7 +115,7 @@ final class pq extends pk {
         int var12 = 0;
         int var6 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
-        wb var14 = new wb(2 * this.field_H, this.field_p);
+        Sprite var14 = new Sprite(2 * this.field_H, this.field_p);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -142,7 +142,7 @@ final class pq extends pk {
         return var14;
     }
 
-    private final void a(wb param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -234,7 +234,7 @@ final class pq extends pk {
         }
         int var5 = param0 + this.field_r;
         if (param2 >= -35) {
-          this.field_z = (wb[]) null;
+          this.field_z = (Sprite[]) null;
         }
         int var6 = this.field_v + param1;
         this.a(this.field_z[0], var6, 256, var5);
@@ -246,7 +246,7 @@ final class pq extends pk {
     }
 
     static {
-        field_N = "Confirm Email:";
+        confirmEmailText = "Confirm Email:";
         field_y = new float[16];
     }
 }

@@ -6,12 +6,12 @@ final class wh extends DualLinkNode {
     private fr field_u;
     private long field_t;
     static int field_x;
-    static String field_r;
+    static String clickToAssignPointsText;
     static int field_s;
     static String[] field_w;
 
     public static void a(int param0) {
-        field_r = null;
+        clickToAssignPointsText = null;
         if (param0 != -1) {
           return;
         }
@@ -39,7 +39,7 @@ final class wh extends DualLinkNode {
             var1 = kf.f(1);
           }
           if (var1.length() == 0) {
-            var1 = kq.field_R;
+            var1 = kq.playerText;
           }
           return var1;
         }
@@ -48,7 +48,7 @@ final class wh extends DualLinkNode {
           var1 = kf.f(1);
         }
         if (var1.length() == 0) {
-          var1 = kq.field_R;
+          var1 = kq.playerText;
         }
         return var1;
     }
@@ -76,7 +76,7 @@ final class wh extends DualLinkNode {
     }
 
     static {
-        field_r = "click to assign points <br> right-click to remove points";
+        clickToAssignPointsText = "click to assign points <br> right-click to remove points";
         field_x = 64;
         field_w = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }

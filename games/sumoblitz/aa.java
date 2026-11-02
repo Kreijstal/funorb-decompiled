@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class aa {
-    static String field_b;
+    static String arcadeModeUnlockedText;
     static char[] field_c;
     static ah[] field_a;
     static int[] field_d;
@@ -12,7 +12,7 @@ abstract class aa {
     }
 
     public static void a(boolean param0) {
-        field_b = null;
+        arcadeModeUnlockedText = null;
         field_a = null;
         field_c = null;
         field_d = null;
@@ -33,7 +33,7 @@ abstract class aa {
     }
 
     static {
-        field_b = "Arcade Mode unlocked!";
+        arcadeModeUnlockedText = "Arcade Mode unlocked!";
         field_c = new char[128];
         field_d = new int[8192];
         er discarded$0 = new er(1);

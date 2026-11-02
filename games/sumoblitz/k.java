@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class k {
-    static String field_a;
+    static String startGameText;
 
     final static boolean a(ki param0, int param1, int param2, int param3) {
         byte[] var4 = null;
@@ -16,7 +16,7 @@ final class k {
           var5 = param0.a((byte) 126, param1, param2);
           var4 = var5;
           if (param3 != -23046) {
-            field_a = (String) null;
+            startGameText = (String) null;
           }
           if (var5 == null) {
             return false;
@@ -41,7 +41,7 @@ final class k {
         pl var3 = null;
         try {
           if (param2 < 93) {
-            field_a = (String) null;
+            startGameText = (String) null;
           }
           var3 = as.field_v;
           var3.g(param1, 8);
@@ -54,14 +54,14 @@ final class k {
 
     public static void a(int param0) {
         if (param0 != 28322) {
-          field_a = (String) null;
-          field_a = null;
+          startGameText = (String) null;
+          startGameText = null;
           return;
         }
-        field_a = null;
+        startGameText = null;
     }
 
     static {
-        field_a = "start game";
+        startGameText = "start game";
     }
 }

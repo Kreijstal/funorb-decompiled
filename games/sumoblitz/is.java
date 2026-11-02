@@ -6,7 +6,7 @@ final class is {
     static boolean field_b;
     private sd field_f;
     private ki field_e;
-    static jn field_c;
+    static IntrusiveDeque field_c;
     static boolean field_a;
 
     final static void b(int param0) {

@@ -4,23 +4,23 @@
 import java.io.*;
 
 class IntrusiveNode {
-    static String field_c;
+    static String fullscreenPlayIsAnText;
     static cc field_e;
     IntrusiveNode next;
     static ri field_d;
     IntrusiveNode previous;
-    static String field_i;
+    static String createAFreeAccountText;
     static String[] field_j;
     static boolean field_a;
-    static String[] field_f;
+    static String[] exclamationPhrases;
     long key;
 
     public static void b(byte param0) {
-        field_i = null;
-        field_c = null;
+        createAFreeAccountText = null;
+        fullscreenPlayIsAnText = null;
         field_d = null;
         field_j = null;
-        field_f = null;
+        exclamationPhrases = null;
         field_e = null;
         if (param0 < 71) {
           field_j = (String[]) null;
@@ -77,10 +77,10 @@ class IntrusiveNode {
               var3 = var3 + param0;
             }
             il.a((byte) 96, var3);
-            var7 = aw.a(":", var3, "%3a", true);
-            var8 = aw.a("@", var7, "%40", true);
-            var9 = aw.a("&", var8, "%26", true);
-            var10 = aw.a("#", var9, "%23", true);
+            var7 = HardwareGraphicsToolkit.a(":", var3, "%3a", true);
+            var8 = HardwareGraphicsToolkit.a("@", var7, "%40", true);
+            var9 = HardwareGraphicsToolkit.a("&", var8, "%26", true);
+            var10 = HardwareGraphicsToolkit.a("#", var9, "%23", true);
             if (ct.field_z == null) {
               return;
             }
@@ -92,7 +92,7 @@ class IntrusiveNode {
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = ct.field_z.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(mu.field_s).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(SpriteState.field_s).append("&u=");
             if (dv.field_c != null) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -124,7 +124,7 @@ class IntrusiveNode {
 
     final boolean a(boolean param0) {
         if (param0) {
-          field_i = (String) null;
+          createAFreeAccountText = (String) null;
           if (null != this.previous) {
             return true;
           }
@@ -151,8 +151,8 @@ class IntrusiveNode {
     static {
         field_j = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_a = true;
-        field_c = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
-        field_i = "Create a free Account";
-        field_f = new String[]{"Zounds!", "Well, I never!", "My word!", "*monocle*", "I do declare!", "Great Scott!"};
+        fullscreenPlayIsAnText = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+        createAFreeAccountText = "Create a free Account";
+        exclamationPhrases = new String[]{"Zounds!", "Well, I never!", "My word!", "*monocle*", "I do declare!", "Great Scott!"};
     }
 }

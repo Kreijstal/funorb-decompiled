@@ -13,7 +13,7 @@ final class er {
     int field_g;
 
     final static void a(boolean param0) {
-        ha var2 = nq.field_h.a(-117);
+        GraphicsToolkit var2 = nq.field_h.a(-117);
         bq.field_c = var2.a(SocketConnector.field_a, ci.field_g, true);
         gt.field_db = var2.a(hu.field_c, mn.field_b, true);
         uq.field_a = var2.a(qr.field_a, wj.field_i, true);
@@ -31,12 +31,12 @@ final class er {
         ti.field_b = hf.a(var2, oi.field_d, (byte) -11);
         vm.field_a = aj.a(tk.field_c, var2, 28513);
         to.field_s = aj.a(jj.field_c, var2, 28513);
-        mu.field_B = aj.a(rw.field_r, var2, 28513);
+        SpriteState.field_B = aj.a(rw.field_r, var2, 28513);
         SecondaryNodeDequeIterator.field_a = aj.a(ok.field_d, var2, 28513);
-        jn.field_c = aj.a(hh.field_a, var2, 28513);
+        IntrusiveDeque.field_c = aj.a(hh.field_a, var2, 28513);
         ok.field_j = aj.a(sk.field_c, var2, 28513);
         pr.field_k = aj.a(gq.field_o, var2, 28513);
-        lu.field_e = hf.a(var2, cb.field_e, (byte) -11);
+        lu.field_e = hf.a(var2, IntrusiveDequeCursor.field_e, (byte) -11);
         to.field_m = hf.a(var2, ve.field_k, (byte) -11);
         bt.field_e = hf.a(var2, BufferedSocket.field_n, (byte) -11);
         ht.field_e = aj.a(rl.field_l, var2, 28513);
@@ -53,7 +53,7 @@ final class er {
           up.field_e = aj.a(cd.field_c, var2, 28513);
           th.field_B = hf.a(var2, lh.field_k, (byte) -11);
           aj.a(eu.field_a, var2, 28513);
-          jn.field_d = hf.a(var2, bl.field_a, (byte) -11);
+          IntrusiveDeque.field_d = hf.a(var2, bl.field_a, (byte) -11);
           ud.field_q = aj.a(uj.field_c, var2, 28513);
           hf.a(var2, df.field_d, (byte) -11);
           aj.a(cl.field_v, var2, 28513);
@@ -76,7 +76,7 @@ final class er {
           ml.field_w = aj.a(sd.field_a, var2, 28513);
           ok.field_f = aj.a(hp.field_n, var2, 28513);
           ff.field_k = aj.a(ni.field_h, var2, 28513);
-          hf.a(var2, rj.field_f, (byte) -11);
+          hf.a(var2, ResourceArchive.field_f, (byte) -11);
           hf.a(var2, uu.field_o, (byte) -11);
           si.field_e = hf.a(var2, lr.field_c, (byte) -11);
           aj.a(ei.field_b, var2, 28513);
@@ -102,7 +102,7 @@ final class er {
         up.field_e = aj.a(cd.field_c, var2, 28513);
         th.field_B = hf.a(var2, lh.field_k, (byte) -11);
         aj.a(eu.field_a, var2, 28513);
-        jn.field_d = hf.a(var2, bl.field_a, (byte) -11);
+        IntrusiveDeque.field_d = hf.a(var2, bl.field_a, (byte) -11);
         ud.field_q = aj.a(uj.field_c, var2, 28513);
         hf.a(var2, df.field_d, (byte) -11);
         aj.a(cl.field_v, var2, 28513);
@@ -125,7 +125,7 @@ final class er {
         ml.field_w = aj.a(sd.field_a, var2, 28513);
         ok.field_f = aj.a(hp.field_n, var2, 28513);
         ff.field_k = aj.a(ni.field_h, var2, 28513);
-        hf.a(var2, rj.field_f, (byte) -11);
+        hf.a(var2, ResourceArchive.field_f, (byte) -11);
         hf.a(var2, uu.field_o, (byte) -11);
         si.field_e = hf.a(var2, lr.field_c, (byte) -11);
         aj.a(ei.field_b, var2, 28513);

@@ -176,7 +176,7 @@ final class wo extends java.awt.Canvas {
         }
     }
 
-    final static void a(hr[] param0, int param1, int param2, int param3, int param4, ha param5, int param6, int param7, int param8, boolean param9) {
+    final static void a(hr[] param0, int param1, int param2, int param3, int param4, GraphicsToolkit param5, int param6, int param7, int param8, boolean param9) {
         int stackIn_14_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
@@ -250,7 +250,7 @@ final class wo extends java.awt.Canvas {
             var20 = -var14 + var16;
             var21 = var17;
             if (!param9) {
-              wo.a((hr[]) null, 78, -40, 98, -104, (ha) null, -45, 54, 115, true);
+              wo.a((hr[]) null, 78, -40, 98, -104, (GraphicsToolkit) null, -45, 54, 115, true);
             }
             var22 = var18;
             if (var21 > var22) {

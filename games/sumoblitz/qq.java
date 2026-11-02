@@ -5,18 +5,18 @@ final class qq extends dh implements op {
     private int field_T;
     static int field_P;
     private v field_S;
-    static String field_Q;
+    static String namesShouldContainAText;
     static vn field_R;
 
     public static void l(int param0) {
         if (param0 != -15648) {
           field_R = (vn) null;
           field_R = null;
-          field_Q = null;
+          namesShouldContainAText = null;
           return;
         }
         field_R = null;
-        field_Q = null;
+        namesShouldContainAText = null;
     }
 
     final void a(byte param0, v param1) {
@@ -43,7 +43,7 @@ final class qq extends dh implements op {
     final void g(byte param0) {
         super.g((byte) 127);
         if (param0 <= 78) {
-          field_Q = (String) null;
+          namesShouldContainAText = (String) null;
           if (null != this.field_S) {
             this.field_S.a((byte) -117);
             return;
@@ -107,7 +107,7 @@ final class qq extends dh implements op {
         return this.field_t;
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.a(param0, -86, param2, param3);
           int var5_int = 126 % ((param1 + 25) / 45);
@@ -118,6 +118,6 @@ final class qq extends dh implements op {
     }
 
     static {
-        field_Q = "Names should contain a maximum of 12 characters";
+        namesShouldContainAText = "Names should contain a maximum of 12 characters";
     }
 }

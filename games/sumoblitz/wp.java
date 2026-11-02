@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-class wp extends pk {
+class wp extends UiWidget {
     int field_B;
-    static String field_A;
+    static String returnToMainMenuText;
     private boolean field_y;
     private boolean field_D;
     boolean field_C;
     static boolean[] field_z;
     boolean field_x;
 
-    boolean a(pk param0, byte param1) {
+    boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -32,7 +32,7 @@ class wp extends pk {
           this.field_D = true;
           if (this.field_o != null &&
             this.field_o instanceof fc) {
-            ((fc) (this.field_o)).a(this.field_D, (pk) (this), -112);
+            ((fc) (this.field_o)).a(this.field_D, (UiWidget) (this), -112);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,10 +61,10 @@ class wp extends pk {
         if (!(this.field_o instanceof fc)) {
           return;
         }
-        ((fc) (this.field_o)).a(this.field_D, (pk) (this), -76);
+        ((fc) (this.field_o)).a(this.field_D, (UiWidget) (this), -76);
     }
 
-    boolean a(pk param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -155,7 +155,7 @@ class wp extends pk {
         this(param0, ks.field_x.field_h, param1);
     }
 
-    final void a(pk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param1) {
           return;
         }
@@ -170,17 +170,17 @@ class wp extends pk {
         }
     }
 
-    boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        pk var9 = null;
+        UiWidget var9 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -42) {
-            var9 = (pk) null;
-            this.a((pk) null, 108, 43, 75, 47, -24, -60);
+            var9 = (UiWidget) null;
+            this.a((UiWidget) null, 108, 43, 75, 47, -24, -60);
           }
           if (!this.field_x) {
             return false;
@@ -255,7 +255,7 @@ class wp extends pk {
         }
     }
 
-    void a(int param0, int param1, pk param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           int var5_int = -37 % ((-25 - param1) / 45);
           super.a(param0, 49, param2, param3);
@@ -277,7 +277,7 @@ class wp extends pk {
 
     public static void a(byte param0) {
         field_z = null;
-        field_A = null;
+        returnToMainMenuText = null;
         int var1 = 124 % ((param0 + 16) / 53);
     }
 
@@ -324,7 +324,7 @@ class wp extends pk {
     }
 
     static {
-        field_A = "Return to main menu";
+        returnToMainMenuText = "Return to main menu";
         field_z = new boolean[64];
     }
 }

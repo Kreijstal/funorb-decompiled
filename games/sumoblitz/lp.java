@@ -10,13 +10,13 @@ final class lp extends ak {
         super(11);
     }
 
-    final void a(int param0, ha param1, int param2) {
+    final void a(int param0, GraphicsToolkit param1, int param2) {
         try {
           wo.a(up.field_c, 360, -5, -16777216, 3, param1, 650, 50, 1, true);
-          be.field_t.a(tt.field_k, param0 << 24 | 5023231, -1, 105, 320, 0);
-          hc.field_e.a(tt.field_k, -1, -1, 105, 320, 0);
-          qv.field_k.a(100, 5023231 | param0 << 24, 0, 200, 220, (int[]) null, (hr[]) null, 90, -1, 0, 0, -8787, ps.field_b.toUpperCase() + " " + in.field_z + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
-          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 90, -1, 0, 0, -8787, ps.field_b.toUpperCase() + " " + in.field_z + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
+          be.field_t.a(tt.defeatText, param0 << 24 | 5023231, -1, 105, 320, 0);
+          hc.field_e.a(tt.defeatText, -1, -1, 105, 320, 0);
+          qv.field_k.a(100, 5023231 | param0 << 24, 0, 200, 220, (int[]) null, (hr[]) null, 90, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + in.field_z + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
+          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 90, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + in.field_z + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "lp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

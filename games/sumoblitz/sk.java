@@ -6,7 +6,7 @@ final class sk {
     nh field_f;
     static ri[] field_c;
     boolean field_g;
-    private aw field_a;
+    private HardwareGraphicsToolkit field_a;
     ru[] field_d;
     private ru[] field_b;
 
@@ -160,7 +160,7 @@ final class sk {
         }
     }
 
-    sk(aw param0) {
+    sk(HardwareGraphicsToolkit param0) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

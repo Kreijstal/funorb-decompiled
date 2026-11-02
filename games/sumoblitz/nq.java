@@ -7,7 +7,7 @@ final class nq extends na {
     static int field_i;
     static eg field_g;
     static int[] field_j;
-    static String field_f;
+    static String optionsText;
 
     final gf a(byte param0, String param1) {
         v var3 = null;
@@ -52,7 +52,7 @@ final class nq extends na {
 
     public static void c(byte param0) {
         field_j = null;
-        field_f = null;
+        optionsText = null;
         field_h = null;
         field_g = null;
         if (param0 != -31) {
@@ -112,7 +112,7 @@ final class nq extends na {
             if (var3 != null) {
               if (var3.c(param0 - 98) == qe.field_a &&
                 !param1.equals(this.field_e.field_m)) {
-                stackIn_8_0 = gq.field_p;
+                stackIn_8_0 = gq.thisEntryDoesnTText;
                 return stackIn_8_0;
               }
               stackIn_10_0 = var3.a(param0 + 3690);
@@ -120,7 +120,7 @@ final class nq extends na {
             }
           }
           if (!param1.equals(this.field_e.field_m)) {
-            stackIn_13_0 = gq.field_p;
+            stackIn_13_0 = gq.thisEntryDoesnTText;
             return stackIn_13_0;
           }
           if (param0 == 0) {
@@ -154,7 +154,7 @@ final class nq extends na {
 
     static {
         field_i = 0;
-        field_f = "options";
+        optionsText = "options";
         field_j = new int[1];
     }
 }

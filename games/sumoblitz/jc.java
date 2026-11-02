@@ -3,7 +3,7 @@
  */
 final class jc extends na {
     static int field_f;
-    static String field_e;
+    static String goBackText;
 
     final gf a(byte param0, String param1) {
         int var3_int = 0;
@@ -54,7 +54,7 @@ final class jc extends na {
     }
 
     public static void c(byte param0) {
-        field_e = null;
+        goBackText = null;
         int var1 = 5 % ((param0 + 18) / 53);
     }
 
@@ -68,7 +68,7 @@ final class jc extends na {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a((byte) 26, param1) == qr.field_e) {
-            stackIn_3_0 = gn.field_g;
+            stackIn_3_0 = gn.pleaseEnterYourAgeText;
             return stackIn_3_0;
           }
           if (param0 == 0) {
@@ -123,6 +123,6 @@ final class jc extends na {
 
     static {
         field_f = 0;
-        field_e = "Go Back";
+        goBackText = "Go Back";
     }
 }

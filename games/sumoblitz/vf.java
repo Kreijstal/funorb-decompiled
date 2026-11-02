@@ -4,7 +4,7 @@
 final class vf {
     static int field_b;
     static qr field_c;
-    static String field_e;
+    static String reloadGameText;
     static ki field_a;
     static int field_d;
 
@@ -95,12 +95,12 @@ final class vf {
           ki var2 = (ki) null;
           vf.a((ki) null, false, (String) null, (String) null, (ki) null);
           field_a = null;
-          field_e = null;
+          reloadGameText = null;
           field_c = null;
           return;
         }
         field_a = null;
-        field_e = null;
+        reloadGameText = null;
         field_c = null;
     }
 
@@ -129,7 +129,7 @@ final class vf {
 
     static {
         field_b = 200;
-        field_e = "Reload game";
+        reloadGameText = "Reload game";
         field_c = new qr();
     }
 }

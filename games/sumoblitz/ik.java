@@ -110,7 +110,7 @@ final class ik {
         bk var8 = null;
         int var9 = 0;
         int var10 = 0;
-        ha var11 = null;
+        GraphicsToolkit var11 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3 = null;
@@ -266,7 +266,7 @@ final class ik {
                   }
                 }
                 try {
-                  var11 = ks.a(var6.field_c, param1, this.field_e, true, var6.field_g, ha.field_g);
+                  var11 = ks.a(var6.field_c, param1, this.field_e, true, var6.field_g, GraphicsToolkit.field_g);
                   if (var11 != null) {
                     var8 = new bk(var11, var6, param1);
                     if (var6.a(var8, (byte) -36)) {
@@ -317,9 +317,9 @@ final class ik {
         }
     }
 
-    final ha a(int param0) {
+    final GraphicsToolkit a(int param0) {
         if (param0 >= -89) {
-          return (ha) null;
+          return (GraphicsToolkit) null;
         }
         if (this.field_c == null) {
           return null;
@@ -334,7 +334,7 @@ final class ik {
     private ik(ki param0, ki param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {
         this.field_b = false;
         try {
-          ha.field_g = param1;
+          GraphicsToolkit.field_g = param1;
           this.field_e = param2;
           sn.field_d = param0;
           ow.a(-18527, param0, param3);

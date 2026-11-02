@@ -14,7 +14,7 @@ final class ls {
     static ls field_d;
     static ls field_a;
     static int field_h;
-    static String field_l;
+    static String continueText;
 
     final static void b(int param0) {
         int var1_int = 0;
@@ -46,7 +46,7 @@ final class ls {
         if (param1 > -42) {
           return;
         }
-        ha.field_b = param0;
+        GraphicsToolkit.field_b = param0;
     }
 
     public final String toString() {
@@ -153,7 +153,7 @@ final class ls {
         field_g = null;
         field_d = null;
         field_b = null;
-        field_l = null;
+        continueText = null;
         field_e = null;
         field_c = null;
         field_j = null;
@@ -202,6 +202,6 @@ final class ls {
         field_d = new ls(5, 3, io.field_d);
         field_a = new ls(6, 4, io.field_d);
         field_h = mr.a(16, (byte) -115);
-        field_l = "Continue";
+        continueText = "Continue";
     }
 }

@@ -3,29 +3,29 @@
  */
 class DualLinkNode extends IntrusiveNode {
     static ts field_n;
-    DualLinkNode field_m;
-    DualLinkNode field_o;
+    DualLinkNode secondaryNext;
+    DualLinkNode secondaryPrevious;
     static int[] field_k;
     static int[] field_q;
     static long field_p;
-    long field_l;
+    long secondaryKey;
 
     final void c(int param0) {
-        if (this.field_o == null) {
+        if (this.secondaryPrevious == null) {
           return;
         }
         if (param0 == -5106) {
-          this.field_o.field_m = this.field_m;
-          this.field_m.field_o = this.field_o;
-          this.field_m = null;
-          this.field_o = null;
+          this.secondaryPrevious.secondaryNext = this.secondaryNext;
+          this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+          this.secondaryNext = null;
+          this.secondaryPrevious = null;
           return;
         }
         field_q = (int[]) null;
-        this.field_o.field_m = this.field_m;
-        this.field_m.field_o = this.field_o;
-        this.field_m = null;
-        this.field_o = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
     }
 
     public static void d(int param0) {

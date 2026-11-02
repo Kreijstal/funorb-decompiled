@@ -8,7 +8,7 @@ class ak {
     private int field_h;
     private int field_d;
     private int field_e;
-    static jn field_b;
+    static IntrusiveDeque field_b;
     static hr[] field_a;
 
     private final void a(boolean param0, int param1, int param2) {
@@ -51,7 +51,7 @@ class ak {
         Object var20 = null;
         int var20_int = 0;
         int var21 = 0;
-        ha var22 = null;
+        GraphicsToolkit var22 = null;
         String var17_ref_StringLifetime1;
         int var8Lifetime1;
         int var8Lifetime2;
@@ -72,9 +72,9 @@ class ak {
         var6 = 16777215 | param2 << 23;
         var7 = param2 << 24;
         var8 = 53;
-        var9 = gd.field_o;
+        var9 = gd.achievementsText;
         if (param0) {
-          var9 = sd.field_b;
+          var9 = sd.achievementsThisGameText;
         }
         var10 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         var11 = new boolean[]{false, false, false, true, true, false, false, false, false, true, true, true, false, true, false, true, false, false, false, false, true, true, false, true, true, false, true, false};
@@ -212,11 +212,11 @@ class ak {
           var15 = this.field_c;
         }
         if (var15 == -1) {
-          gt.field_db.a(hk.field_b, param2 << 24 | 5023231, -1, 348, 320, 0);
-          bq.field_c.a(hk.field_b, var5, -1, 348, 320, 0);
+          gt.field_db.a(hk.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
+          bq.field_c.a(hk.mouseOverAnIconText, var5, -1, 348, 320, 0);
           if (vs.b((byte) 9)) {
-            gt.field_db.a(tj.field_o, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
-            bq.field_c.a(tj.field_o, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
+            gt.field_db.a(tj.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
+            bq.field_c.a(tj.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
           }
         } else {
           wo.a(hf.field_H, 160, 140, param2 << 24, 3, var22, 360, 160, 1, true);
@@ -227,8 +227,8 @@ class ak {
             (1 << var15 & var14) == 0) {
             var17_ref_String = uu.field_s;
           }
-          gt.field_db.a(pe.field_D + ": " + var17_ref_String, param2 << 24 | 5023231, var7, var13Lifetime1, var8Lifetime2, 0);
-          bq.field_c.a(pe.field_D + ": " + var17_ref_String, var5, var7, var13Lifetime1, var8Lifetime2, 0);
+          gt.field_db.a(pe.orbPointsText + ": " + var17_ref_String, param2 << 24 | 5023231, var7, var13Lifetime1, var8Lifetime2, 0);
+          bq.field_c.a(pe.orbPointsText + ": " + var17_ref_String, var5, var7, var13Lifetime1, var8Lifetime2, 0);
           var13Lifetime1Lifetime1 = 280;
           var8Lifetime2Lifetime1 = 490;
           stackIn_77_0 = ((1 << var15 & var14) == 0) ? 0 : 1;
@@ -236,28 +236,28 @@ class ak {
           var8Lifetime2Lifetime2 = 390;
           var13Lifetime1Lifetime2 = 210;
           if (var18Lifetime1 == 0) {
-            gt.field_db.a(gi.field_f, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
-            bq.field_c.a(gi.field_f, 16720452 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            gt.field_db.a(gi.notYetAchievedText, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            bq.field_c.a(gi.notYetAchievedText, 16720452 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           if (var18Lifetime1 != 0 ||
             var21 != 0) {
-            gt.field_db.a(ab.field_e, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
-            bq.field_c.a(ab.field_e, param2 << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            gt.field_db.a(ab.achievedText, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            bq.field_c.a(ab.achievedText, param2 << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           var13Lifetime1Lifetime2 += 10;
           var8Lifetime2Lifetime2 -= 10;
           var19Lifetime1 = 160;
-          var17_ref_StringLifetime1 = jh.field_K[var15];
+          var17_ref_StringLifetime1 = jh.achievementDescriptions[var15];
           if (var11[var15] &&
             (var14 & 1 << var15) == 0) {
-            var17_ref_StringLifetime1 = jf.field_b;
+            var17_ref_StringLifetime1 = jf.thisIsAHiddenText;
           }
           gt.field_db.a(480, 5023231 | param2 << 24, 0, var19Lifetime1 + 20, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (hr[]) null, 8 + var13Lifetime1Lifetime2, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (aa) null, 1, 0);
           bq.field_c.a(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (hr[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (aa) null, 1, 0);
           var8Lifetime2Lifetime3 = 390;
           var13Lifetime1Lifetime3 = 190;
-          qv.field_k.a(rb.field_d[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
-          uq.field_a.a(rb.field_d[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          qv.field_k.a(rb.achievementNames[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          uq.field_a.a(rb.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
           var20_int = 200;
           if (var18Lifetime1 != 0) {
             qw.field_a[var15].a(160, -30 + var20_int, 0, var5, 1);
@@ -297,19 +297,19 @@ class ak {
         var4 = 130;
         var5 = 0;
         while (true) {
-          if (!(var5 < mb.field_i.length)) {
+          if (!(var5 < mb.objectiveHelpLines.length)) {
             var5 = 5;
             stackIn_12_0 = param1;
             break;
           }
-          stackIn_12_0 = mb.field_i[var5].startsWith("<b>");
+          stackIn_12_0 = mb.objectiveHelpLines[var5].startsWith("<b>");
           if (var6 == 0) {
             if (stackIn_12_0) {
-              qv.field_k.a(var4, var3, 5023231 | param0 << 24, mb.field_i[var5], (byte) -11, 0);
-              uq.field_a.a(var4, var3, 16777215 | param0 << 24, mb.field_i[var5], (byte) -37, 0);
+              qv.field_k.a(var4, var3, 5023231 | param0 << 24, mb.objectiveHelpLines[var5], (byte) -11, 0);
+              uq.field_a.a(var4, var3, 16777215 | param0 << 24, mb.objectiveHelpLines[var5], (byte) -37, 0);
             } else {
-              gt.field_db.a(100, param0 << 24 | 5023231, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.field_i[var5], (aa) null, 0, 1);
-              bq.field_c.a(100, 16777215 | param0 << 24, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.field_i[var5], (aa) null, 0, 1);
+              gt.field_db.a(100, param0 << 24 | 5023231, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.objectiveHelpLines[var5], (aa) null, 0, 1);
+              bq.field_c.a(100, 16777215 | param0 << 24, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.objectiveHelpLines[var5], (aa) null, 0, 1);
             }
             if (var5 >= 1) {
               var4 += 50;
@@ -322,9 +322,9 @@ class ak {
         if (!stackIn_12_0) {
           this.a(28, false);
         }
-        while (mb.field_a.length > var5) {
-          gt.field_db.a(100, 5023231 | param0 << 24, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.field_a[var5], (aa) null, 0, 1);
-          bq.field_c.a(100, param0 << 24 | 16777215, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.field_a[var5], (aa) null, 0, 1);
+        while (mb.controlsHelpLines.length > var5) {
+          gt.field_db.a(100, 5023231 | param0 << 24, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.controlsHelpLines[var5], (aa) null, 0, 1);
+          bq.field_c.a(100, param0 << 24 | 16777215, 0, 520, var3, (int[]) null, (hr[]) null, var4, -1, 0, 0, -8787, mb.controlsHelpLines[var5], (aa) null, 0, 1);
           if (var6 == 0) {
             if (var5 >= 1) {
               var4 += 50;
@@ -337,7 +337,7 @@ class ak {
         return;
     }
 
-    private final void a(boolean param0, int param1, int param2, ha param3, int param4) {
+    private final void a(boolean param0, int param1, int param2, GraphicsToolkit param3, int param4) {
         int discarded$0 = 0;
         boolean discarded$1 = false;
         String stackIn_30_0 = null;
@@ -391,7 +391,7 @@ class ak {
           if (param0) {
             if (hk.field_c != 1 &&
               !hw.field_b[84]) {
-              wo.a(jn.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
+              wo.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
                 wo.a(ok.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
                 wo.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
@@ -431,9 +431,9 @@ class ak {
               if (var8 != 27) {
                 if (var8 == 33) {
                   if (!gt.field_bb) {
-                    stackIn_30_0 = mm.field_d;
+                    stackIn_30_0 = mm.levelSelectText;
                   } else {
-                    stackIn_30_0 = wp.field_A;
+                    stackIn_30_0 = wp.returnToMainMenuText;
                   }
                   var22 = stackIn_30_0;
                   var18_ref_String = var22;
@@ -469,7 +469,7 @@ class ak {
                 return;
               }
             }
-            var24 = ea.field_b + ge.field_k[mi.field_a];
+            var24 = ea.difficultyText + ge.difficultyNames[mi.field_a];
             var18_ref_StringLifetime1 = var24.toUpperCase();
             var14_ref.a(var18_ref_StringLifetime1, param4 << 24 | 5023231, -1, var16 + (var17 + (var15_ref.field_i + var6_int)), (var10 >> 1) + (var7 - 4), 0);
             var13_ref.a(var18_ref_StringLifetime1, var12, -1, var17 + var6_int + (var15_ref.field_i + var16), -4 + (var7 + (var10 >> 1)), 0);
@@ -705,32 +705,32 @@ class ak {
         int var3 = 53;
         int var4 = 480;
         int var5 = 130;
-        qv.field_k.a(var5, var3, 5023231 | param1 << 24, mb.field_d[0], (byte) -37, 0);
-        uq.field_a.a(var5, var3, 16777215 | param1 << 24, mb.field_d[0], (byte) -8, 0);
+        qv.field_k.a(var5, var3, 5023231 | param1 << 24, mb.dronesHelpLines[0], (byte) -37, 0);
+        uq.field_a.a(var5, var3, 16777215 | param1 << 24, mb.dronesHelpLines[0], (byte) -8, 0);
         var5 += 30;
         dc.field_ab[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         dc.field_ab[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, mb.field_d[1], (byte) -120, 0);
-        bq.field_c.a(var5, 60 + var3, 5023231 | param1 << 24, mb.field_d[1], (byte) -56, 0);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_d[2], (aa) null, 0, 0);
-        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_d[2], (aa) null, 0, 0);
+        gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, mb.dronesHelpLines[1], (byte) -120, 0);
+        bq.field_c.a(var5, 60 + var3, 5023231 | param1 << 24, mb.dronesHelpLines[1], (byte) -56, 0);
+        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLines[2], (aa) null, 0, 0);
+        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLines[2], (aa) null, 0, 0);
         var5 += 70;
         s.field_n[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         s.field_n[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, mb.field_d[3], (byte) -110, 0);
-        bq.field_c.a(var5, 60 + var3, param1 << 24 | 5023231, mb.field_d[3], (byte) -117, 0);
-        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_d[4], (aa) null, 0, 0);
-        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_d[4], (aa) null, 0, 0);
+        gt.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, mb.dronesHelpLines[3], (byte) -110, 0);
+        bq.field_c.a(var5, 60 + var3, param1 << 24 | 5023231, mb.dronesHelpLines[3], (byte) -117, 0);
+        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLines[4], (aa) null, 0, 0);
+        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLines[4], (aa) null, 0, 0);
         var5 += 70;
         hv.field_d[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         hv.field_d[1].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         if (!param0) {
           this.b(-98, false);
         }
-        gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, mb.field_d[5], (byte) -92, 0);
-        bq.field_c.a(var5, var3 + 60, 5023231 | param1 << 24, mb.field_d[5], (byte) -59, 0);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_d[6], (aa) null, 0, 0);
-        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_d[6], (aa) null, 0, 0);
+        gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, mb.dronesHelpLines[5], (byte) -92, 0);
+        bq.field_c.a(var5, var3 + 60, 5023231 | param1 << 24, mb.dronesHelpLines[5], (byte) -59, 0);
+        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLines[6], (aa) null, 0, 0);
+        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLines[6], (aa) null, 0, 0);
     }
 
     private final void a(boolean param0, byte param1, int param2) {
@@ -871,7 +871,7 @@ class ak {
                     te.field_c = 0;
                     ph.field_b.c((byte) 112);
                     ut.field_j = 0;
-                    pk.d((byte) -60);
+                    UiWidget.d((byte) -60);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -884,7 +884,7 @@ class ak {
                     qb.d(10);
                     gg.a((byte) 104);
                     ph.field_b.c((byte) 112);
-                    pk.d((byte) -117);
+                    UiWidget.d((byte) -117);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -914,7 +914,7 @@ class ak {
                     }
                     ag.a(0, 0);
                     ut.field_j = 0;
-                    pk.d((byte) -107);
+                    UiWidget.d((byte) -107);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -960,7 +960,7 @@ class ak {
                     }
                     ut.field_j = 0;
                     ag.a(0, 0);
-                    pk.d((byte) -52);
+                    UiWidget.d((byte) -52);
                     ph.field_b.a(111);
                     if (var9 == 0) {
                       break regionExit2;
@@ -990,7 +990,7 @@ class ak {
                     if (!this.field_g.d(-31260)) {
                       break regionExit2;
                     }
-                    pk.d((byte) -32);
+                    UiWidget.d((byte) -32);
                     tt.a(30692);
                     av.a(-7753, param0, ut.field_j);
                     if (var9 == 0) {
@@ -1119,7 +1119,7 @@ class ak {
                       kq.l(34168);
                     }
                     if (this.field_g.g(116224)) {
-                      rj.a((byte) -6);
+                      ResourceArchive.a((byte) -6);
                     }
                     if (!this.field_g.b((byte) 52)) {
                       break regionExit2;
@@ -1313,28 +1313,28 @@ class ak {
         int var3 = 53;
         int var4 = 480;
         int var5 = 130;
-        qv.field_k.a(var5, var3, 5023231 | param0 << 24, mb.field_j[0], (byte) -21, 0);
-        uq.field_a.a(var5, var3, param0 << 24 | 16777215, mb.field_j[0], (byte) -15, 0);
+        qv.field_k.a(var5, var3, 5023231 | param0 << 24, mb.dronesHelpLinesPartTwo[0], (byte) -21, 0);
+        uq.field_a.a(var5, var3, param0 << 24 | 16777215, mb.dronesHelpLinesPartTwo[0], (byte) -15, 0);
         var5 += 30;
         field_a[0].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         field_a[1].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, var3 + 60, 5023231 | param0 << 24, mb.field_j[1], (byte) -76, 0);
-        bq.field_c.a(var5, var3 + 60, param0 << 24 | 5023231, mb.field_j[1], (byte) -28, 0);
-        gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_j[2], (aa) null, 0, 0);
-        bq.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_j[2], (aa) null, 0, 0);
+        gt.field_db.a(var5, var3 + 60, 5023231 | param0 << 24, mb.dronesHelpLinesPartTwo[1], (byte) -76, 0);
+        bq.field_c.a(var5, var3 + 60, param0 << 24 | 5023231, mb.dronesHelpLinesPartTwo[1], (byte) -28, 0);
+        gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLinesPartTwo[2], (aa) null, 0, 0);
+        bq.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLinesPartTwo[2], (aa) null, 0, 0);
         var5 += 70;
         mr.field_e[0].a((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         mr.field_e[1].a((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, mb.field_j[3], (byte) -44, 0);
-        bq.field_c.a(var5, 60 + var3, param0 << 24 | 5023231, mb.field_j[3], (byte) -117, 0);
-        gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_j[4], (aa) null, 0, 0);
-        bq.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_j[4], (aa) null, 0, 0);
+        gt.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, mb.dronesHelpLinesPartTwo[3], (byte) -44, 0);
+        bq.field_c.a(var5, 60 + var3, param0 << 24 | 5023231, mb.dronesHelpLinesPartTwo[3], (byte) -117, 0);
+        gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLinesPartTwo[4], (aa) null, 0, 0);
+        bq.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.dronesHelpLinesPartTwo[4], (aa) null, 0, 0);
         if (param1 >= -25) {
           this.b(-117);
         }
     }
 
-    void a(int param0, ha param1, int param2) {
+    void a(int param0, GraphicsToolkit param1, int param2) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_18_0 = 0;
@@ -1424,7 +1424,7 @@ class ak {
                   DualLinkNode.field_k[this.field_h] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
-                  qv.field_k.a(b.field_d, 5023231 | param0 << 24, -1, var6Lifetime1, 320, 0);
+                  qv.field_k.a(b.youAreNotCurrentlyText, 5023231 | param0 << 24, -1, var6Lifetime1, 320, 0);
                   stackIn_32_0 = qv.field_k;
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != te.field_c);
@@ -1442,7 +1442,7 @@ class ak {
                   stackIn_47_3 = false;
                   stackIn_48_4 = (0 != wj.field_e);
                   ((da) (Object) stackIn_44_0).a(vi.a(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), param0 << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
-                  uq.field_a.a(b.field_d, param0 << 24 | 16777215, -1, var6Lifetime1, 320, 0);
+                  uq.field_a.a(b.youAreNotCurrentlyText, param0 << 24 | 16777215, -1, var6Lifetime1, 320, 0);
                   stackIn_50_0 = uq.field_a;
                   stackIn_50_1 = false;
                   stackIn_51_2 = (te.field_c != 0);
@@ -1512,29 +1512,29 @@ class ak {
         int var3 = 53;
         int var4 = 520;
         int var5 = 130;
-        qv.field_k.a(var5, var3, 5023231 | param1 << 24, mb.field_g[0], (byte) -34, 0);
-        uq.field_a.a(var5, var3, param1 << 24 | 16777215, mb.field_g[0], (byte) -40, 0);
+        qv.field_k.a(var5, var3, 5023231 | param1 << 24, mb.upgradesHelpLines[0], (byte) -34, 0);
+        uq.field_a.a(var5, var3, param1 << 24 | 16777215, mb.upgradesHelpLines[0], (byte) -40, 0);
         var5 += 30;
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (hr[]) null, var5 - 30, -1, 0, 0, -8787, mb.field_g[1], (aa) null, 0, 1);
-        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[1], (aa) null, 0, 1);
+        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (hr[]) null, var5 - 30, -1, 0, 0, -8787, mb.upgradesHelpLines[1], (aa) null, 0, 1);
+        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[1], (aa) null, 0, 1);
         var5 += 42;
         ud.field_q[0].a((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[2], (aa) null, 0, 1);
-        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[2], (aa) null, 0, 1);
+        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[2], (aa) null, 0, 1);
+        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[2], (aa) null, 0, 1);
         var5 += 35;
         ud.field_q[1].a((float)(var3 + 30), (float)(20 + var5), 2048, 0, 1, 0, 2);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[3], (aa) null, 0, 1);
+        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[3], (aa) null, 0, 1);
         if (param0 > -54) {
           this.field_h = 74;
         }
-        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[3], (aa) null, 0, 1);
+        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[3], (aa) null, 0, 1);
         var5 += 35;
         ud.field_q[2].a((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
-        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5 - 30, -1, 0, 0, -8787, mb.field_g[4], (aa) null, 0, 1);
-        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[4], (aa) null, 0, 1);
+        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (hr[]) null, var5 - 30, -1, 0, 0, -8787, mb.upgradesHelpLines[4], (aa) null, 0, 1);
+        bq.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[4], (aa) null, 0, 1);
         var5 += 40;
-        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3, (int[]) null, (hr[]) null, var5 - 30, -1, 0, 0, -8787, mb.field_g[5], (aa) null, 0, 1);
-        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.field_g[5], (aa) null, 0, 1);
+        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3, (int[]) null, (hr[]) null, var5 - 30, -1, 0, 0, -8787, mb.upgradesHelpLines[5], (aa) null, 0, 1);
+        bq.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (hr[]) null, -30 + var5, -1, 0, 0, -8787, mb.upgradesHelpLines[5], (aa) null, 0, 1);
     }
 
     private final void b(byte param0, int param1) {
@@ -1545,7 +1545,7 @@ class ak {
         int[] var6;
         int var7;
         int var8;
-        ha var9;
+        GraphicsToolkit var9;
         var8 = Sumoblitz.field_L ? 1 : 0;
         var9 = nq.field_h.a(-125);
         var4 = param1 << 24 | 16777215;
@@ -1554,7 +1554,7 @@ class ak {
         if (param0 < 114) {
           return;
         }
-        this.a(br.field_i, param1, 29228);
+        this.a(br.instructionsText, param1, 29228);
         var6 = new int[50];
         var7 = 0;
         scanLoop1: while (true) {
@@ -1906,7 +1906,7 @@ class ak {
         String var17;
         String var18;
         int var19;
-        ha var20;
+        GraphicsToolkit var20;
         int stackIn_34_0 = 0;
         String stackIn_37_0 = null;
         int var12Lifetime1;
@@ -1922,18 +1922,18 @@ class ak {
         }
         if (3 == dk.field_c) {
         }
-        var5 = wq.field_a;
+        var5 = wq.allHiscoresText;
         if (1 == gu.field_j) {
-          var5 = mu.field_r;
+          var5 = SpriteState.myHiscoresText;
         }
         if (2 == gu.field_j) {
-          var5 = jm.field_c;
+          var5 = jm.bestHiscoresText;
         }
         regionExit1: {
           regionExit2: {
             this.a(var5, param0, param1 + 29227);
             if (vs.b((byte) 9)) {
-              var6 = ng.field_e;
+              var6 = ng.noHighscoresText;
               if (var19 == 0) {
                 break regionExit2;
               }
@@ -1944,12 +1944,12 @@ class ak {
             var7_ref_of = mr.field_f;
             if (var7_ref_of.field_q) {
               if (var7_ref_of.field_o == null) {
-                var6 = wl.field_b;
+                var6 = wl.serviceUnavailableText;
                 if (var19 == 0) {
                   break regionExit2;
                 }
               }
-              var6 = ng.field_e;
+              var6 = ng.noHighscoresText;
               var8 = var7_ref_of.field_o[gu.field_j];
               var9 = var7_ref_of.field_m[gu.field_j];
               var10 = kp.a(var7_ref_of, param1 - 2, GameKeyHandler.field_a, gu.field_j);
@@ -1963,13 +1963,13 @@ class ak {
                 Math.sqrt((double)var14);
               }
               var15 = param0 << 24 | 16777215;
-              qv.field_k.a(var11, var12, 5023231 | param0 << 24, pd.field_r, (byte) -30, -1);
+              qv.field_k.a(var11, var12, 5023231 | param0 << 24, pd.nameText, (byte) -30, -1);
               if (~var10 == ~var4) {
                 var15 = -17409;
               }
-              uq.field_a.a(var11, var12, var15, pd.field_r, (byte) -71, -1);
-              qv.field_k.a(-1, var13, se.field_a, var11, 5023231 | param0 << 24, 72);
-              uq.field_a.a(-1, var13, se.field_a, var11, var15, 59);
+              uq.field_a.a(var11, var12, var15, pd.nameText, (byte) -71, -1);
+              qv.field_k.a(-1, var13, se.scoreText, var11, 5023231 | param0 << 24, 72);
+              uq.field_a.a(-1, var13, se.scoreText, var11, var15, 59);
               var11 += 20;
               var4 = 0;
               while (10 > var4) {
@@ -2014,10 +2014,10 @@ class ak {
                 var4++;
               }
               if (var19 != 0) {
-                var6 = mm.field_b;
+                var6 = mm.pleaseWaitText;
               }
             } else {
-              var6 = mm.field_b;
+              var6 = mm.pleaseWaitText;
             }
           }
           stackIn_34_0 = 100 + (140 + SocketConnector.field_a.field_i);
@@ -2026,9 +2026,9 @@ class ak {
         gt.field_db.a(var6, 5023231 | param0 << 24, -1, var7, 320, 0);
         bq.field_c.a(var6, param0 << 24 | 16777215, -1, var7, 320, param1 - 1);
         if (!vs.b((byte) 9)) {
-          stackIn_37_0 = bv.field_b;
+          stackIn_37_0 = bv.friendsCanBeAddedText;
         } else {
-          stackIn_37_0 = tj.field_o;
+          stackIn_37_0 = tj.createAFreeAccountText;
         }
         var6Lifetime1 = stackIn_37_0;
         gt.field_db.a(var6Lifetime1, param0 << 24 | 5023231, -1, SocketConnector.field_a.field_i + 140 + 220, 320, 0);
@@ -2084,13 +2084,13 @@ class ak {
               var3Lifetime1 = 200;
               var4Lifetime1 = 370;
             }
-            if (mb.field_a[var6].startsWith("<b>")) {
-              qv.field_k.a(var5, var3Lifetime1, param0 << 24 | 5023231, mb.field_a[var6], (byte) -98, 0);
-              uq.field_a.a(var5, var3Lifetime1, param0 << 24 | 16777215, mb.field_a[var6], (byte) -32, 0);
+            if (mb.controlsHelpLines[var6].startsWith("<b>")) {
+              qv.field_k.a(var5, var3Lifetime1, param0 << 24 | 5023231, mb.controlsHelpLines[var6], (byte) -98, 0);
+              uq.field_a.a(var5, var3Lifetime1, param0 << 24 | 16777215, mb.controlsHelpLines[var6], (byte) -32, 0);
             } else if (var6 != 1) {
               if (3 != var6) {
-                gt.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_a[var6], (aa) null, 0, 1);
-                bq.field_c.a(100, 16777215 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.field_a[var6], (aa) null, 0, 1);
+                gt.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.controlsHelpLines[var6], (aa) null, 0, 1);
+                bq.field_c.a(100, 16777215 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (hr[]) null, var5, -1, 0, 0, -8787, mb.controlsHelpLines[var6], (aa) null, 0, 1);
               } else {
                 bt.field_e.a(var3Lifetime1 + 16, 14 + var5);
               }
@@ -2111,6 +2111,6 @@ class ak {
     }
 
     static {
-        field_b = new jn();
+        field_b = new IntrusiveDeque();
     }
 }

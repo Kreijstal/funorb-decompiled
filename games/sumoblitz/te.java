@@ -9,7 +9,7 @@ final class te {
     static iw field_f;
     private IntrusiveNode field_e;
     private IntrusiveNode field_d;
-    static jn field_g;
+    static IntrusiveDeque field_g;
     static String field_h;
 
     final IntrusiveNode a(boolean param0) {
@@ -101,7 +101,7 @@ final class te {
         if (param0) {
           field_h = (String) null;
         }
-        return (is.a(!param0 ? true : false, param1, param2) | oj.b(param1, param2, -126) | pk.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
+        return (is.a(!param0 ? true : false, param1, param2) | oj.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
     }
 
     final void a(IntrusiveNode param0, int param1, long param2) {
@@ -197,7 +197,7 @@ final class te {
     static {
         field_c = 0;
         field_f = new iw(1);
-        field_g = new jn();
+        field_g = new IntrusiveDeque();
         field_h = "Cancel";
     }
 }

@@ -5,7 +5,7 @@ final class kh {
     static int field_e;
     static byte[][] field_f;
     static int[][] field_c;
-    static wb field_a;
+    static Sprite field_a;
     static String field_d;
     static int[] field_b;
 

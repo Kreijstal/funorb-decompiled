@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wb extends mu {
-    int[] field_C;
+class Sprite extends SpriteState {
+    int[] pixels;
 
     final void d() {
-        lk.a(this.field_C, this.field_x, this.field_u);
+        lk.a(this.pixels, this.field_x, this.field_u);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -113,7 +113,7 @@ class wb extends mu {
           if (var6 <= 0) {
             return;
           }
-          wb.b(lk.field_a, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(lk.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -149,7 +149,7 @@ class wb extends mu {
             var11 = 0;
             var7 = 0;
           } else {
-            var7 = this.field_C[var6];
+            var7 = this.pixels[var6];
             if (var7 == 0) {
               stackIn_5_0 = 0;
             } else {
@@ -161,7 +161,7 @@ class wb extends mu {
             var12 = 0;
             var8 = 0;
           } else {
-            var8 = this.field_C[var6 + 1];
+            var8 = this.pixels[var6 + 1];
             if (var8 == 0) {
               stackIn_11_0 = 0;
             } else {
@@ -180,7 +180,7 @@ class wb extends mu {
             var13 = 0;
             var9 = 0;
           } else {
-            var9 = this.field_C[var6 + this.field_x];
+            var9 = this.pixels[var6 + this.field_x];
             if (var9 == 0) {
               stackIn_19_0 = 0;
             } else {
@@ -192,7 +192,7 @@ class wb extends mu {
             var14 = 0;
             var10 = 0;
           } else {
-            var10 = this.field_C[var6 + this.field_x + 1];
+            var10 = this.pixels[var6 + this.field_x + 1];
             if (var10 == 0) {
               stackIn_25_0 = 0;
             } else {
@@ -328,7 +328,7 @@ class wb extends mu {
           if (var6 <= 0) {
             return;
           }
-          wb.a(lk.field_a, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(lk.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -748,16 +748,16 @@ class wb extends mu {
         return;
     }
 
-    final wb b() {
+    final Sprite b() {
         int var3 = 0;
-        wb var1 = new wb(this.field_x, this.field_u);
+        Sprite var1 = new Sprite(this.field_x, this.field_u);
         var1.field_z = this.field_z;
         var1.field_w = this.field_w;
         var1.field_v = this.field_v;
         var1.field_A = this.field_A;
-        int var2 = this.field_C.length;
+        int var2 = this.pixels.length;
         for (var3 = 0; var3 < var2; var3++) {
-          var1.field_C[var3] = this.field_C[var3];
+          var1.pixels[var3] = this.pixels[var3];
         }
         return var1;
     }
@@ -775,10 +775,10 @@ class wb extends mu {
           for (var4 = this.field_u - 1; var4 >= 0; var4--) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_C[var3 + var4 * this.field_x];
+            var1[incrementValue$0] = this.pixels[var3 + var4 * this.field_x];
           }
         }
-        this.field_C = var1;
+        this.pixels = var1;
         var3Lifetime1 = this.field_A;
         this.field_A = this.field_v;
         this.field_v = this.field_w - this.field_u - var3Lifetime1;
@@ -790,17 +790,17 @@ class wb extends mu {
         this.field_z = var3Lifetime3;
     }
 
-    final wb a() {
+    final Sprite a() {
         int var2 = 0;
         int var3 = 0;
-        wb var1 = new wb(this.field_x, this.field_u);
+        Sprite var1 = new Sprite(this.field_x, this.field_u);
         var1.field_z = this.field_z;
         var1.field_w = this.field_w;
         var1.field_v = this.field_z - this.field_x - this.field_v;
         var1.field_A = this.field_A;
         for (var2 = 0; var2 < this.field_u; var2++) {
           for (var3 = 0; var3 < this.field_x; var3++) {
-            var1.field_C[var2 * this.field_x + var3] = this.field_C[var2 * this.field_x + this.field_x - 1 - var3];
+            var1.pixels[var2 * this.field_x + var3] = this.pixels[var2 * this.field_x + this.field_x - 1 - var3];
           }
         }
         return var1;
@@ -848,9 +848,9 @@ class wb extends mu {
             return;
           }
           if (param2 == 256) {
-            wb.a(0, 0, 0, lk.field_a, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, lk.field_a, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            wb.a(0, 0, 0, lk.field_a, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, lk.field_a, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -969,7 +969,7 @@ class wb extends mu {
           if (var5 <= 0) {
             return;
           }
-          wb.a(0, lk.field_a, this.field_C, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, lk.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1077,7 +1077,7 @@ class wb extends mu {
         int var4 = param0 + (this.field_x >> 1) > lk.field_j ? lk.field_j - param0 << 1 : this.field_x;
         int var5 = param1 < lk.field_i ? lk.field_i - param1 << 1 : 0;
         int var6 = param1 + (this.field_u >> 1) > lk.field_e ? lk.field_e - param1 << 1 : this.field_u;
-        wb.a(this.field_C, var5 * this.field_x + var3, (param1 + (var5 >> 1)) * lk.field_b + (param0 + (var3 >> 1)), (this.field_x << 1) - (var4 - var3) + (this.field_x & 1), lk.field_b - (var4 - var3 >> 1), this.field_x, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.pixels, var5 * this.field_x + var3, (param1 + (var5 >> 1)) * lk.field_b + (param0 + (var3 >> 1)), (this.field_x << 1) - (var4 - var3) + (this.field_x & 1), lk.field_b - (var4 - var3 >> 1), this.field_x, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -1121,7 +1121,7 @@ class wb extends mu {
           if (var6 <= 0) {
             return;
           }
-          wb.a(lk.field_a, this.field_C, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.a(lk.field_a, this.pixels, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1173,14 +1173,14 @@ class wb extends mu {
         }
     }
 
-    wb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_z = param0;
         this.field_w = param1;
         this.field_v = param2;
         this.field_A = param3;
         this.field_x = param4;
         this.field_u = param5;
-        this.field_C = param6;
+        this.pixels = param6;
     }
 
     void a(int param0, int param1) {
@@ -1224,7 +1224,7 @@ class wb extends mu {
           if (var5 <= 0) {
             return;
           }
-          wb.b(lk.field_a, this.field_C, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.b(lk.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1270,13 +1270,13 @@ class wb extends mu {
           if (var5 <= 0) {
             return;
           }
-          wb.a(lk.field_a, this.field_C, var4, var3, var6, var5, var7, var8);
+          Sprite.a(lk.field_a, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    wb(int param0, int param1) {
-        this.field_C = new int[param0 * param1];
+    Sprite(int param0, int param1) {
+        this.pixels = new int[param0 * param1];
         this.field_z = param0;
         this.field_x = param0;
         this.field_w = param1;
@@ -1285,7 +1285,7 @@ class wb extends mu {
         this.field_v = 0;
     }
 
-    wb(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;
@@ -1302,8 +1302,8 @@ class wb extends mu {
           this.field_w = this.field_u;
           this.field_v = 0;
           this.field_A = 0;
-          this.field_C = new int[this.field_x * this.field_u];
-          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_x, this.field_u, this.field_C, 0, this.field_x);
+          this.pixels = new int[this.field_x * this.field_u];
+          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_x, this.field_u, this.pixels, 0, this.field_x);
           var5.grabPixels();
         } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

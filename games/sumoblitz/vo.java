@@ -175,11 +175,11 @@ final class vo extends ao implements ai {
         if (param1 != -1) {
           return (ki) null;
         }
-        if (ha.field_g == null &&
+        if (GraphicsToolkit.field_g == null &&
           param0 != -1) {
           stackIn_7_0 = ng.a(1, -117, true, param0, false, true);
         } else {
-          stackIn_7_0 = ha.field_g;
+          stackIn_7_0 = GraphicsToolkit.field_g;
         }
         return stackIn_7_0;
     }
@@ -232,7 +232,7 @@ final class vo extends ao implements ai {
         }
     }
 
-    final boolean a(pk param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         jh var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_11_0 = null;
@@ -247,7 +247,7 @@ final class vo extends ao implements ai {
           if (var3 == null) {
             return false;
           }
-          if (!((pk) ((Object) var3)).a(param0, (byte) 61)) {
+          if (!((UiWidget) ((Object) var3)).a(param0, (byte) 61)) {
             return false;
           }
           return true;
@@ -360,7 +360,7 @@ final class vo extends ao implements ai {
         }
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -605,13 +605,13 @@ final class vo extends ao implements ai {
         this.field_C = 8192;
         this.field_G = 32768;
         try {
-          this.field_x = new pk[6];
+          this.field_x = new UiWidget[6];
           dupTemp$0 = new jh(param0, param1, param7, param8, (mh) null, (qm) null, new wp(0, 0, param7, param8, param6, (qm) null), false, false);
           this.field_H = dupTemp$0;
-          this.field_x[0] = (pk) ((Object) dupTemp$0);
+          this.field_x[0] = (UiWidget) ((Object) dupTemp$0);
           dupTemp$1 = new wp(param0, param1, param7, param8, param5, (qm) null);
           this.field_P = dupTemp$1;
-          this.field_x[1] = (pk) ((Object) dupTemp$1);
+          this.field_x[1] = (UiWidget) ((Object) dupTemp$1);
           this.field_L = param9;
           this.field_R = param10;
           stackIn_4_1 = (param12);
@@ -653,7 +653,7 @@ final class vo extends ao implements ai {
         return (this.field_H.field_p << 16) / this.field_P.field_p;
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;

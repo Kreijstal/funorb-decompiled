@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rn {
-    static String field_a;
+    static String unfortunatelyYouAreNotText;
 
     final static void a(String param0, int param1, int param2, int param3, int param4) {
         try {
@@ -16,7 +16,7 @@ final class rn {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        unfortunatelyYouAreNotText = null;
         if (param0 != 13921) {
           String var2 = (String) null;
           rn.a((String) null, 84, 7, -70, 53);
@@ -24,6 +24,6 @@ final class rn {
     }
 
     static {
-        field_a = "Unfortunately you are not eligible to create an account.";
+        unfortunatelyYouAreNotText = "Unfortunately you are not eligible to create an account.";
     }
 }

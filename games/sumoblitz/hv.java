@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hv {
-    static String field_a;
+    static String reassignText;
     static hr field_b;
-    static String field_e;
+    static String unpackingSoundEffectsText;
     static boolean field_c;
     static hr[] field_d;
 
@@ -21,17 +21,17 @@ final class hv {
 
     public static void b(int param0) {
         field_d = null;
-        field_a = null;
+        reassignText = null;
         field_b = null;
-        field_e = null;
+        unpackingSoundEffectsText = null;
         if (param0 != -7520) {
           hv.b(-61);
         }
     }
 
     static {
-        field_e = "Unpacking sound effects";
-        field_a = "reassign";
+        unpackingSoundEffectsText = "Unpacking sound effects";
+        reassignText = "reassign";
         field_c = false;
     }
 }

@@ -19,7 +19,7 @@ final class lr {
           int var4_int = -26 % ((76 - param2) / 42);
           ac.field_F = param3;
           kh.field_d = param1;
-          oc.a(us.field_m, param0, (byte) -99);
+          oc.a(us.loggingInText, param0, (byte) -99);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "lr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

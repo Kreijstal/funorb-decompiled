@@ -4,10 +4,10 @@
 final class qn {
     static java.awt.Canvas field_f;
     static String[] field_b;
-    private wb[] field_c;
+    private Sprite[] field_c;
     static boolean[] field_d;
     static PlatformTaskDispatcher field_e;
-    static String field_h;
+    static String creatingAJagexAccountText;
     static boolean field_a;
     static int field_g;
 
@@ -25,18 +25,18 @@ final class qn {
         field_b = null;
         field_d = null;
         if (param0 == 0) {
-          field_h = null;
+          creatingAJagexAccountText = null;
           field_e = null;
           return;
         }
         qn.a(-30);
-        field_h = null;
+        creatingAJagexAccountText = null;
         field_e = null;
     }
 
     static {
         field_d = new boolean[25];
-        field_h = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
+        creatingAJagexAccountText = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_g = 0;
     }
 }

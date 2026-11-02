@@ -3,7 +3,7 @@
  */
 final class qo {
     static ts field_b;
-    static String field_c;
+    static String ifYouDoNothingText;
     static dk field_a;
     private static String field_z;
 
@@ -22,20 +22,20 @@ final class qo {
         if (!param0) {
           field_a = null;
           field_b = null;
-          field_c = null;
+          ifYouDoNothingText = null;
           return;
         }
         String var2 = (String) null;
         qo.a((Throwable) null, (String) null);
         field_a = null;
         field_b = null;
-        field_c = null;
+        ifYouDoNothingText = null;
     }
 
     static {
         field_z = "qo.B(";
         field_b = new ts(11, 0, 1, 2);
-        field_c = "If you do nothing the game will revert to normal view in <%0> second.";
+        ifYouDoNothingText = "If you do nothing the game will revert to normal view in <%0> second.";
         field_a = new dk();
     }
 }

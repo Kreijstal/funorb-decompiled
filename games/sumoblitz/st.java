@@ -5,7 +5,7 @@ final class st extends ie {
     static mm field_z;
     static String field_B;
 
-    final void a(pk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         jh var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
@@ -30,7 +30,7 @@ final class st extends ie {
         }
     }
 
-    private st(int param0, int param1, int param2, int param3, mh param4, qm param5, pk param6) {
+    private st(int param0, int param1, int param2, int param3, mh param4, qm param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_y = param6;

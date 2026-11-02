@@ -3,7 +3,7 @@
  */
 final class no {
     static ri field_c;
-    static jn field_d;
+    static IntrusiveDeque field_d;
     static cv field_a;
     static String[] field_b;
 
@@ -45,6 +45,6 @@ final class no {
     }
 
     static {
-        field_d = new jn();
+        field_d = new IntrusiveDeque();
     }
 }

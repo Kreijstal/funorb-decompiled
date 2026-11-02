@@ -3,17 +3,17 @@
  */
 final class b {
     static volatile int field_a;
-    static String field_d;
+    static String youAreNotCurrentlyText;
     static boolean field_c;
     private fr field_e;
-    static String field_f;
+    static String loadingLevelsText;
     private sn field_b;
 
     public static void a(byte param0) {
-        field_f = null;
-        field_d = null;
+        loadingLevelsText = null;
+        youAreNotCurrentlyText = null;
         if (param0 != -69) {
-          field_f = (String) null;
+          loadingLevelsText = (String) null;
         }
     }
 
@@ -222,7 +222,7 @@ final class b {
 
     static {
         field_a = 0;
-        field_d = "You are not currently logged in to the<nbsp>game.";
-        field_f = "Loading levels";
+        youAreNotCurrentlyText = "You are not currently logged in to the<nbsp>game.";
+        loadingLevelsText = "Loading levels";
     }
 }

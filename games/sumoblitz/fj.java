@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class fj {
-    ir field_b;
+    DirectXGraphicsToolkit field_b;
     ji field_a;
     boolean field_e;
     io field_c;
@@ -19,7 +19,7 @@ abstract class fj {
 
     abstract jagdx.IDirect3DBaseTexture d(int param0);
 
-    fj(ir param0, iw param1, io param2, boolean param3, int param4) {
+    fj(DirectXGraphicsToolkit param0, iw param1, io param2, boolean param3, int param4) {
         this.field_a = ao.field_y;
         this.field_c = param2;
         this.field_b = param0;

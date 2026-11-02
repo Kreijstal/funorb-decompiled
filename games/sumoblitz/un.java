@@ -3,12 +3,12 @@
  */
 final class un {
     static int[] field_a;
-    static jn field_b;
-    static String field_c;
+    static IntrusiveDeque field_b;
+    static String playerNameText;
     private static String field_z;
 
     public static void a(boolean param0) {
-        field_c = null;
+        playerNameText = null;
         field_a = null;
         field_b = null;
         if (!param0) {
@@ -19,6 +19,6 @@ final class un {
     static {
         field_z = "un.A(";
         field_a = new int[]{1, 2, 3, 4, 5, 6};
-        field_c = "Player Name: ";
+        playerNameText = "Player Name: ";
     }
 }

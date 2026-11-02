@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk {
-    static jn field_a;
-    static String[] field_b;
+    static IntrusiveDeque field_a;
+    static String[] weekdayShortNames;
     static int field_c;
 
     public final String toString() {
@@ -41,7 +41,7 @@ final class dk {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        weekdayShortNames = null;
         field_a = null;
         if (param0 > -31) {
           dk.a(-122);
@@ -49,7 +49,7 @@ final class dk {
     }
 
     static {
-        field_a = new jn();
-        field_b = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        field_a = new IntrusiveDeque();
+        weekdayShortNames = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

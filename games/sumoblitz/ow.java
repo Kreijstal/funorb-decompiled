@@ -3,9 +3,9 @@
  */
 final class ow {
     private int[] field_c;
-    static jn field_f;
-    static String field_a;
-    static String field_b;
+    static IntrusiveDeque field_f;
+    static String loadingFontsText;
+    static String emailText;
     static int field_e;
     static byte[][] field_d;
 
@@ -229,7 +229,7 @@ final class ow {
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ha.field_e = param1;
+          GraphicsToolkit.field_e = param1;
           pn.field_n = "";
           if (param0 != -18527) {
             ow.a((byte) 19);
@@ -290,23 +290,23 @@ final class ow {
 
     public static void a(byte param0) {
         if (param0 == 123) {
-          field_a = null;
+          loadingFontsText = null;
           field_d = (byte[][]) null;
           field_f = null;
-          field_b = null;
+          emailText = null;
           return;
         }
-        field_f = (jn) null;
-        field_a = null;
+        field_f = (IntrusiveDeque) null;
+        loadingFontsText = null;
         field_d = (byte[][]) null;
         field_f = null;
-        field_b = null;
+        emailText = null;
     }
 
     static {
-        field_a = "Loading fonts";
-        field_f = new jn();
-        field_b = "Email: ";
+        loadingFontsText = "Loading fonts";
+        field_f = new IntrusiveDeque();
+        emailText = "Email: ";
         field_d = new byte[250][];
     }
 }

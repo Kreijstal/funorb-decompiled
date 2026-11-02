@@ -13,7 +13,7 @@ final class ol extends rq {
     private boolean field_e;
     private ru field_i;
     private jagdx.IDirect3DVertexShader field_p;
-    private ir field_l;
+    private DirectXGraphicsToolkit field_l;
 
     final void b(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
@@ -255,7 +255,7 @@ final class ol extends rq {
         this.a(false, -14);
     }
 
-    ol(ir param0, ki param1) {
+    ol(DirectXGraphicsToolkit param0, ki param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;

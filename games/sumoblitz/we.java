@@ -6,7 +6,7 @@ final class we extends ie {
     static int[] field_z;
     static int[] field_B;
 
-    we(int param0, int param1, int param2, int param3, mh param4, pk param5) {
+    we(int param0, int param1, int param2, int param3, mh param4, UiWidget param5) {
         super(param0, param1, param2, param3, param4, (qm) null);
         try {
           this.field_y = param5;
@@ -42,7 +42,7 @@ final class we extends ie {
             }
             return;
           }
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
           if (this.field_q == 0) {
             return;
           }
@@ -56,7 +56,7 @@ final class we extends ie {
         }
         if (param3 == 0 &&
           this.field_w != null) {
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
           if (this.field_q == 0) {
             return;
           }
@@ -79,7 +79,7 @@ final class we extends ie {
         ks.field_x.b((byte) -84);
     }
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

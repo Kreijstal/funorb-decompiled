@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class al extends hj {
-    private jn field_q;
-    private jn field_o;
+    private IntrusiveDeque field_q;
+    private IntrusiveDeque field_o;
     private int field_p;
     private int field_r;
 
@@ -23,7 +23,7 @@ final class al extends hj {
     private final void a(IntrusiveNode param0, md param1) {
         while (true) {
           if (param0 == this.field_o.field_e) {
-            ha.a(-2, param0, param1);
+            GraphicsToolkit.a(-2, param0, param1);
             this.field_r = ((md) (this.field_o.field_e.next)).field_k;
             return;
           }
@@ -33,7 +33,7 @@ final class al extends hj {
           }
           break;
         }
-        ha.a(-2, param0, param1);
+        GraphicsToolkit.a(-2, param0, param1);
         this.field_r = ((md) (this.field_o.field_e.next)).field_k;
         return;
     }
@@ -161,8 +161,8 @@ final class al extends hj {
     }
 
     public al() {
-        this.field_q = new jn();
-        this.field_o = new jn();
+        this.field_q = new IntrusiveDeque();
+        this.field_o = new IntrusiveDeque();
         this.field_r = -1;
         this.field_p = 0;
     }

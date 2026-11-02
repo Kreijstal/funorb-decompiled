@@ -83,11 +83,11 @@ final class di extends ak {
 
     public di() {
         super(12);
-        im.field_b = new jn();
+        im.field_b = new IntrusiveDeque();
     }
 
-    final void a(int param0, ha param1, int param2) {
-        ha var8 = null;
+    final void a(int param0, GraphicsToolkit param1, int param2) {
+        GraphicsToolkit var8 = null;
         hr[] var5 = null;
         nt var7 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;

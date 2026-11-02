@@ -11,9 +11,9 @@ final class cl extends nt {
     static ri[] field_v;
     static int[] field_z;
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException var3 = null;
-        ha var4 = null;
+        GraphicsToolkit var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -27,8 +27,8 @@ final class cl extends nt {
           if (param1 <= -121) {
             return;
           }
-          var4 = (ha) null;
-          this.a((ha) null, 121);
+          var4 = (GraphicsToolkit) null;
+          this.a((GraphicsToolkit) null, 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,42 +57,42 @@ final class cl extends nt {
           return;
         }
         fn.field_u = new String[34];
-        fn.field_u[16] = vp.field_b;
-        fn.field_u[1] = ll.field_c;
-        fn.field_u[5] = rf.field_c;
-        fn.field_u[11] = RasterBuffer.field_d;
-        fn.field_u[14] = kf.field_t;
-        fn.field_u[6] = rf.field_c;
-        fn.field_u[12] = ff.field_n;
-        fn.field_u[7] = nj.field_e;
-        fn.field_u[0] = k.field_a;
-        fn.field_u[3] = cp.field_k;
+        fn.field_u[16] = vp.discardText;
+        fn.field_u[1] = ll.resumeGameText;
+        fn.field_u[5] = rf.menuText;
+        fn.field_u[11] = RasterBuffer.quitText;
+        fn.field_u[14] = kf.achievementsText;
+        fn.field_u[6] = rf.menuText;
+        fn.field_u[12] = ff.soundText;
+        fn.field_u[7] = nj.endGameText;
+        fn.field_u[0] = k.startGameText;
+        fn.field_u[3] = cp.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
-        fn.field_u[15] = go.field_o;
+        fn.field_u[15] = go.logInCreateAccountText;
         fn.field_u[4] = ki.field_j;
         fn.field_u[2] = MouseInputHandler.field_a;
-        fn.field_u[13] = gu.field_h;
-        fn.field_u[21] = hd.field_I;
-        fn.field_u[25] = ea.field_b;
-        fn.field_u[18] = gk.field_H;
-        fn.field_u[10] = dj.field_r[2];
+        fn.field_u[13] = gu.musicText;
+        fn.field_u[21] = hd.regularText;
+        fn.field_u[25] = ea.difficultyText;
+        fn.field_u[18] = gk.previousText;
+        fn.field_u[10] = dj.scoreFilterLabels[2];
         fn.field_u[27] = ni.field_g;
-        fn.field_u[23] = pt.field_b;
-        fn.field_u[24] = nq.field_f;
-        fn.field_u[17] = in.field_B;
-        fn.field_u[28] = ss.field_a;
-        fn.field_u[19] = dn.field_b;
-        fn.field_u[22] = td.field_l;
-        BufferedSocket.field_i = new String[]{mn.field_k, bc.field_b};
-        fn.field_u[33] = mm.field_d;
-        fn.field_u[26] = lh.field_p;
-        fn.field_u[9] = dj.field_r[1];
-        fn.field_u[20] = nt.field_l;
-        fn.field_u[32] = mm.field_d;
-        fn.field_u[8] = dj.field_r[0];
-        fn.field_u[29] = hv.field_a;
+        fn.field_u[23] = pt.challengeText;
+        fn.field_u[24] = nq.optionsText;
+        fn.field_u[17] = in.nextText;
+        fn.field_u[28] = ss.restartLevelText;
+        fn.field_u[19] = dn.arcadeGameText;
+        fn.field_u[22] = td.editorText;
+        BufferedSocket.field_i = new String[]{mn.highText, bc.lowText};
+        fn.field_u[33] = mm.levelSelectText;
+        fn.field_u[26] = lh.resetStatsText;
+        fn.field_u[9] = dj.scoreFilterLabels[1];
+        fn.field_u[20] = nt.challengeText;
+        fn.field_u[32] = mm.levelSelectText;
+        fn.field_u[8] = dj.scoreFilterLabels[0];
+        fn.field_u[29] = hv.reassignText;
         fn.field_u[30] = ou.field_g;
-        fn.field_u[31] = ls.field_l;
+        fn.field_u[31] = ls.continueText;
     }
 
     final boolean a(int param0) {

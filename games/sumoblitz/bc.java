@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bc {
-    static String field_b;
+    static String lowText;
     static gj field_a;
     private static String field_z;
 
@@ -11,11 +11,11 @@ final class bc {
           return;
         }
         field_a = null;
-        field_b = null;
+        lowText = null;
     }
 
     static {
         field_z = "bc.A(";
-        field_b = "Low";
+        lowText = "Low";
     }
 }

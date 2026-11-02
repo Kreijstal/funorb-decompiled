@@ -14,7 +14,7 @@ final class kf extends DualLinkNode implements ft {
     int field_A;
     private int field_r;
     static ri[] field_w;
-    static String field_t;
+    static String achievementsText;
 
     final void a(boolean param0, int param1, int param2) {
         if (!param0) {
@@ -134,14 +134,14 @@ final class kf extends DualLinkNode implements ft {
           field_w = null;
           field_v = null;
           field_u = null;
-          field_t = null;
+          achievementsText = null;
           return;
         }
         field_w = (ri[]) null;
         field_w = null;
         field_v = null;
         field_u = null;
-        field_t = null;
+        achievementsText = null;
     }
 
     final static String a(CharSequence param0, byte param1) {
@@ -197,6 +197,6 @@ final class kf extends DualLinkNode implements ft {
     }
 
     static {
-        field_t = "Achievements";
+        achievementsText = "Achievements";
     }
 }

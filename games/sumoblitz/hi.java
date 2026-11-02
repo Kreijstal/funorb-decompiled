@@ -4,15 +4,15 @@
 final class hi implements vc {
     int field_a;
     private od field_e;
-    static jn field_f;
+    static IntrusiveDeque field_f;
     int[] field_c;
     int field_d;
     static int field_h;
     static ri[] field_b;
-    static String field_g;
+    static String checkingText;
 
     public static void a(int param0) {
-        field_g = null;
+        checkingText = null;
         field_b = null;
         field_f = null;
         if (param0 != 5423) {
@@ -120,7 +120,7 @@ final class hi implements vc {
     }
 
     static {
-        field_f = new jn();
-        field_g = "Checking";
+        field_f = new IntrusiveDeque();
+        checkingText = "Checking";
     }
 }

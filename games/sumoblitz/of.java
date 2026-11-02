@@ -8,7 +8,7 @@ final class of extends IntrusiveNode {
     String[][] field_o;
     long[][] field_r;
     int[][] field_m;
-    static String field_k;
+    static String quitToWebsiteText;
     boolean field_q;
     int field_l;
     int field_s;
@@ -151,13 +151,13 @@ final class of extends IntrusiveNode {
     public static void a(int param0) {
         if (param0 == -26437) {
           field_n = null;
-          field_k = null;
+          quitToWebsiteText = null;
           field_t = null;
           return;
         }
         of.c(-86);
         field_n = null;
-        field_k = null;
+        quitToWebsiteText = null;
         field_t = null;
     }
 
@@ -166,6 +166,6 @@ final class of extends IntrusiveNode {
 
     static {
         field_t = new int[8192];
-        field_k = "Quit to website";
+        quitToWebsiteText = "Quit to website";
     }
 }

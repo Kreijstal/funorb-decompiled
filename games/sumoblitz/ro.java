@@ -17,7 +17,7 @@ final class ro {
         if (param0 != -2) {
           return (DualLinkNode) null;
         }
-        this.field_b = var2.field_m;
+        this.field_b = var2.secondaryNext;
         return var2;
     }
 
@@ -27,10 +27,10 @@ final class ro {
           return 62;
         }
         int var2 = 0;
-        DualLinkNode var3 = this.field_e.field_m;
+        DualLinkNode var3 = this.field_e.secondaryNext;
         while (var3 != this.field_e) {
           var2++;
-          var3 = var3.field_m;
+          var3 = var3.secondaryNext;
         }
         return var2;
     }
@@ -115,10 +115,10 @@ final class ro {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = pk.a((byte) -24, var11[var18]);
+                      var13[var18] = UiWidget.a((byte) -24, var11[var18]);
                       var18++;
                     }
-                    var5.field_s[var6] = param2.a(0, pk.a((byte) -24, var20), var21, var13);
+                    var5.field_s[var6] = param2.a(0, UiWidget.a((byte) -24, var20), var21, var13);
                     var5.field_u[var6] = var22;
                   }
                 } else {
@@ -132,7 +132,7 @@ final class ro {
                   }
                   var5.field_r[var6] = var7_int;
                   var5.field_n[var6] = var10;
-                  var5.field_o[var6] = param2.a(0, var16, pk.a((byte) -24, var17));
+                  var5.field_o[var6] = param2.a(0, var16, UiWidget.a((byte) -24, var17));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -262,23 +262,23 @@ final class ro {
 
     final void a(DualLinkNode param0, byte param1) {
         try {
-          if (param0.field_o != null) {
+          if (param0.secondaryPrevious != null) {
             param0.c(-5106);
           }
-          param0.field_o = this.field_e.field_o;
+          param0.secondaryPrevious = this.field_e.secondaryPrevious;
           if (param1 > -100) {
             this.a((byte) 78);
           }
-          param0.field_m = this.field_e;
-          param0.field_o.field_m = param0;
-          param0.field_m.field_o = param0;
+          param0.secondaryNext = this.field_e;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ro.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_e.field_m;
+        DualLinkNode var2 = this.field_e.secondaryNext;
         if (param0 < 8) {
           this.field_e = (DualLinkNode) null;
         }
@@ -286,22 +286,22 @@ final class ro {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_m;
+        this.field_b = var2.secondaryNext;
         return var2;
     }
 
     final void a(DualLinkNode param0, int param1) {
         try {
-          if (param0.field_o != null) {
+          if (param0.secondaryPrevious != null) {
             param0.c(-5106);
           }
-          param0.field_o = this.field_e;
-          param0.field_m = this.field_e.field_m;
+          param0.secondaryPrevious = this.field_e;
+          param0.secondaryNext = this.field_e.secondaryNext;
           if (param1 != -4) {
             ro.c(-24);
           }
-          param0.field_o.field_m = param0;
-          param0.field_m.field_o = param0;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ro.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -311,7 +311,7 @@ final class ro {
         if (param0 != 72) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_e.field_m;
+        DualLinkNode var2 = this.field_e.secondaryNext;
         if (var2 == this.field_e) {
           return null;
         }
@@ -363,7 +363,7 @@ final class ro {
         if (param0 != 126) {
           this.field_e = (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_e.field_o;
+        DualLinkNode var2 = this.field_e.secondaryPrevious;
         if (var2 == this.field_e) {
           return null;
         }
@@ -373,8 +373,8 @@ final class ro {
 
     public ro() {
         this.field_e = new DualLinkNode();
-        this.field_e.field_o = this.field_e;
-        this.field_e.field_m = this.field_e;
+        this.field_e.secondaryPrevious = this.field_e;
+        this.field_e.secondaryNext = this.field_e;
     }
 
     static {

@@ -3,21 +3,21 @@
  */
 final class dg extends ie {
     private static int[] field_B;
-    private jn field_z;
+    private IntrusiveDeque field_z;
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var7 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_w != null) {
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
         }
         if (param2 >= -35) {
-          this.field_z = (jn) null;
+          this.field_z = (IntrusiveDeque) null;
         }
-        cb var5 = new cb(this.field_z);
-        pk var6 = (pk) (var5.a((byte) -119));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_z);
+        UiWidget var6 = (UiWidget) (var5.a((byte) -119));
         while (var6 != null) {
           var6.a(this.field_r + param0, param1 + this.field_v, (byte) -105, param3);
-          var6 = (pk) (var5.c((byte) 87));
+          var6 = (UiWidget) (var5.c((byte) 87));
         }
     }
 
@@ -26,7 +26,7 @@ final class dg extends ie {
         if (param0 >= -63) {
           this.h(45);
         }
-        cb var2 = new cb(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
         rg var3 = (rg) (var2.b((byte) -80));
         while (var3 != null) {
           if (var3.g(-28778)) {
@@ -34,7 +34,7 @@ final class dg extends ie {
           }
           var3 = (rg) (var2.b(0));
         }
-        this.field_y = (pk) ((Object) this.e((byte) 54));
+        this.field_y = (UiWidget) ((Object) this.e((byte) 54));
     }
 
     final void e(boolean param0) {
@@ -42,7 +42,7 @@ final class dg extends ie {
         if (param0) {
           return;
         }
-        cb var2 = new cb(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
         rg var3 = (rg) (var2.b((byte) -80));
         while (var3 != null) {
           if (var3.h(0)) {
@@ -60,14 +60,14 @@ final class dg extends ie {
     }
 
     final rg e(byte param0) {
-        cb var2;
+        IntrusiveDequeCursor var2;
         rg var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var2 = new cb(this.field_z);
+        var2 = new IntrusiveDequeCursor(this.field_z);
         var3 = (rg) (var2.b((byte) -80));
         if (param0 != 54) {
-          this.field_z = (jn) null;
+          this.field_z = (IntrusiveDeque) null;
         }
         while (var3 != null) {
           if (var3.field_D) {
@@ -80,18 +80,18 @@ final class dg extends ie {
 
     public dg() {
         super(0, 0, lj.field_b, cv.field_O, (mh) null, (qm) null);
-        this.field_z = new jn();
+        this.field_z = new IntrusiveDeque();
     }
 
-    final pk f(int param0) {
-        cb var2;
+    final UiWidget f(int param0) {
+        IntrusiveDequeCursor var2;
         rg var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != 16777216) {
           field_B = (int[]) null;
         }
-        var2 = new cb(this.field_z);
+        var2 = new IntrusiveDequeCursor(this.field_z);
         var3 = (rg) (var2.b((byte) -80));
         while (var3 != null) {
           if (var3.field_D) {
@@ -102,7 +102,7 @@ final class dg extends ie {
         return null;
     }
 
-    final void a(byte param0, pk param1) {
+    final void a(byte param0, UiWidget param1) {
         rg var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -116,9 +116,9 @@ final class dg extends ie {
           var3 = (rg) (param1);
           this.field_z.a(var3, -10295);
           var3.field_D = true;
-          var3.a((pk) (this), (byte) 61);
+          var3.a((UiWidget) (this), (byte) 61);
           if (param0 <= 90) {
-            this.field_z = (jn) null;
+            this.field_z = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,7 +138,7 @@ final class dg extends ie {
     final void a(byte param0) {
         int var5 = Sumoblitz.field_L ? 1 : 0;
         int var4 = 67 / ((35 - param0) / 49);
-        cb var2 = new cb(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
         rg var3 = (rg) (var2.b((byte) -80));
         while (var3 != null) {
           var3.field_D = false;

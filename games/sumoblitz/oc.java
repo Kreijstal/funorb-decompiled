@@ -13,7 +13,7 @@ final class oc extends rq {
         this.field_b.a(true, true);
     }
 
-    oc(aw param0) {
+    oc(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
@@ -34,7 +34,7 @@ final class oc extends rq {
         int var9 = 0;
         int var10 = 0;
         ah var11 = null;
-        cb var12 = null;
+        IntrusiveDequeCursor var12 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -69,7 +69,7 @@ final class oc extends rq {
               }
             }
           }
-          var12 = new cb(is.field_c);
+          var12 = new IntrusiveDequeCursor(is.field_c);
           var3 = (nm) (var12.b((byte) -80));
           if (param1) {
             return;
@@ -101,7 +101,7 @@ final class oc extends rq {
           if (-param0.field_m + param0.field_z < 6656) {
             param0.field_z = param0.field_z + (26 << param0.field_m + 9);
           }
-          if (param0.field_m + param0.field_C > rj.field_c - 26 << 8) {
+          if (param0.field_m + param0.field_C > ResourceArchive.field_c - 26 << 8) {
             param0.field_C = param0.field_C - (26 << 9 + param0.field_m);
           }
           if (rl.field_k - 26 << 8 < param0.field_m + param0.field_z) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class js extends sp implements ca, ai, oe {
+final class js extends WidgetContainer implements ca, ai, oe {
     private qq field_L;
     private wp field_M;
     private qq field_E;
@@ -16,7 +16,7 @@ final class js extends sp implements ca, ai, oe {
     private qq field_I;
     static ts field_G;
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -51,7 +51,7 @@ final class js extends sp implements ca, ai, oe {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_15_0 = false;
@@ -89,7 +89,7 @@ final class js extends sp implements ca, ai, oe {
         }
     }
 
-    private final int a(int param0, String param1, int param2, pk param3, int param4) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
         rt var6 = null;
         RuntimeException var6_ref = null;
         vr var7 = null;
@@ -226,7 +226,7 @@ final class js extends sp implements ca, ai, oe {
               fieldTemp$0 = jb.field_e;
               jb.field_e = jb.field_e + 1;
               var5.field_kb = fieldTemp$0;
-              mu.field_t.a((IntrusiveNode) (var5), (byte) 39);
+              SpriteState.field_t.a((IntrusiveNode) (var5), (byte) 39);
             }
             var5.field_jb = var4_ref_String;
             return;
@@ -313,7 +313,7 @@ final class js extends sp implements ca, ai, oe {
             stackIn_63_0 = -2;
             break;
           }
-          ha.a(stackIn_63_0, var7_ref, var6_ref);
+          GraphicsToolkit.a(stackIn_63_0, var7_ref, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -439,7 +439,7 @@ final class js extends sp implements ca, ai, oe {
         }
     }
 
-    private final int a(int param0, int param1, byte param2, int param3, String param4, pk param5, String param6) {
+    private final int a(int param0, int param1, byte param2, int param3, String param4, UiWidget param5, String param6) {
         rt var8 = null;
         RuntimeException var8_ref = null;
         bn var9 = null;
@@ -560,7 +560,7 @@ final class js extends sp implements ca, ai, oe {
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, pk param4) {
+    private final int a(String param0, int param1, int param2, int param3, UiWidget param4) {
         rt var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -620,15 +620,15 @@ final class js extends sp implements ca, ai, oe {
           this.field_K = new qq("", (qm) null, 3);
           var1_int = 1;
           this.field_H = new wr("", (qm) null, var1_int != 0);
-          this.field_M = new wp(ff.field_o, (qm) null);
-          this.field_D = new wp(jc.field_e, (qm) null);
-          this.field_A.field_t = rq.field_a;
-          this.field_I.field_t = pi.field_f;
-          this.field_E.field_t = kn.field_d;
-          this.field_N.field_t = pl.field_q;
-          this.field_L.field_t = tj.field_k;
-          this.field_K.field_t = dc.field_bb;
-          this.field_H.field_t = gr.field_g;
+          this.field_M = new wp(ff.createText, (qm) null);
+          this.field_D = new wp(jc.goBackText, (qm) null);
+          this.field_A.field_t = rq.enterTheNameYouText;
+          this.field_I.field_t = pi.yourEmailAddressIsText;
+          this.field_E.field_t = kn.typeYourEmailAddressText;
+          this.field_N.field_t = pl.enterAPasswordForText;
+          this.field_L.field_t = tj.typeYourPasswordAgainText;
+          this.field_K.field_t = dc.typeYourAgeInText;
+          this.field_H.field_t = gr.updatesWillSentToText;
           this.field_A.a((byte) -54, new ou(this.field_A));
           this.field_I.a((byte) 118, new ew(this.field_I));
           this.field_E.a((byte) -127, new wk(this.field_E, this.field_I));
@@ -647,22 +647,22 @@ final class js extends sp implements ca, ai, oe {
           dupTemp$1 = new c(10000536);
           this.field_L.field_w = (mh) ((Object) dupTemp$1);
           this.field_N.field_w = (mh) ((Object) dupTemp$1);
-          var2 = ic.a(cn.field_P, new String[]{this.e((byte) 66), this.k(128)}, (byte) -128);
+          var2 = ic.a(cn.byClickingCreateYouText, new String[]{this.e((byte) 66), this.k(128)}, (byte) -128);
           var3 = 20;
-          var3 = var3 + this.a(ks.field_u, 170, var3, 78, this.field_I);
-          var3 = var3 + (5 + this.a(var3, 170, (byte) 125, 20, "", this.field_E, pq.field_N));
-          var3 = var3 + this.a(pi.field_g, 170, var3, 55, this.field_N);
-          var3 = var3 + (5 + this.a(ht.field_b, 170, 15632, var3, qw.field_c, this.field_L));
-          var3 = var3 + (this.a(un.field_c, 170, 15632, var3, oq.field_r, this.field_A) + 5);
-          var3 = var3 + this.a(170, fm.field_a, var3, this.field_K, 64);
-          var4 = new rt(46, var3, -90 + this.field_q, 25, this.field_H, true, -120 + this.field_q, 5, jm.field_a, 11579568, lv.field_e);
+          var3 = var3 + this.a(ks.emailLoginText, 170, var3, 78, this.field_I);
+          var3 = var3 + (5 + this.a(var3, 170, (byte) 125, 20, "", this.field_E, pq.confirmEmailText));
+          var3 = var3 + this.a(pi.passwordText, 170, var3, 55, this.field_N);
+          var3 = var3 + (5 + this.a(ht.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.field_L));
+          var3 = var3 + (this.a(un.playerNameText, 170, 15632, var3, oq.playerNamesCanBeText, this.field_A) + 5);
+          var3 = var3 + this.a(170, fm.ageText, var3, this.field_K, 64);
+          var4 = new rt(46, var3, -90 + this.field_q, 25, this.field_H, true, -120 + this.field_q, 5, jm.field_a, 11579568, lv.pleaseSendMeNewsText);
           this.a(var4, 100);
           var3 = var3 + var4.field_p;
           var5 = new gm(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.field_s, -1, 2147483647, true);
           this.field_C = new ar(var2, var5);
           this.field_C.field_t = "";
-          this.field_C.a(-90, sb.field_e, 0);
-          this.field_C.a(-61, sb.field_e, 1);
+          this.field_C.a(-90, sb.openInPopupWindowText, 0);
+          this.field_C.a(-61, sb.openInPopupWindowText, 1);
           this.field_C.field_o = (qm) (this);
           this.field_C.a(var3, false, 46, this.field_q - 90);
           var3 = var3 + (15 + this.field_C.field_p);
@@ -684,7 +684,7 @@ final class js extends sp implements ca, ai, oe {
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, String param4, pk param5) {
+    private final int a(String param0, int param1, int param2, int param3, String param4, UiWidget param5) {
         RuntimeException var7 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_8_0 = null;

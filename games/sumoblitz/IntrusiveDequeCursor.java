@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb {
+final class IntrusiveDequeCursor {
     static ri field_e;
     private IntrusiveNode field_f;
     static boolean field_b;
     static wc[] field_a;
-    private jn field_d;
+    private IntrusiveDeque field_d;
     static int field_c;
 
     final IntrusiveNode b(byte param0) {
@@ -232,7 +232,7 @@ final class cb {
           var2_int = param0.length;
           if (!param1) {
             var7 = (cd[]) null;
-            cb.a((cd[]) null, true);
+            IntrusiveDequeCursor.a((cd[]) null, true);
           }
           for (var3 = 1; var2_int > var3; var3++) {
             var4 = param0[var3];
@@ -368,7 +368,7 @@ final class cb {
           ts.field_a = ts.field_a + param0;
         } else {
           if (gj.a((byte) -84, 10) >= 5) {
-            ha.field_f = ha.field_f - param0;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
           } else {
             fb.field_a = fb.field_a - param0;
           }
@@ -387,7 +387,7 @@ final class cb {
 
     final static int b(int param0, int param1) {
         if (param0 != -22415) {
-          cb.a((byte) 82, -115);
+          IntrusiveDequeCursor.a((byte) 82, -115);
         }
         if (65536L > (long)param1) {
           if ((long)param1 < 256L) {
@@ -434,14 +434,14 @@ final class cb {
     public static void a(int param0) {
         field_e = null;
         if (param0 != -1384583532) {
-          cb.b(67, -59);
+          IntrusiveDequeCursor.b(67, -59);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    cb(jn param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

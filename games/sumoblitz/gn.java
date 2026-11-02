@@ -3,7 +3,7 @@
  */
 final class gn {
     int field_e;
-    static String field_g;
+    static String pleaseEnterYourAgeText;
     static boolean field_b;
     String field_f;
     ki field_a;
@@ -68,7 +68,7 @@ final class gn {
     }
 
     public static void a(boolean param0) {
-        field_g = null;
+        pleaseEnterYourAgeText = null;
         if (!param0) {
           byte[] var2 = (byte[]) null;
           gn.a((byte[]) null, (byte) -96, -56, 90);
@@ -80,6 +80,6 @@ final class gn {
     }
 
     static {
-        field_g = "Please enter your age in years";
+        pleaseEnterYourAgeText = "Please enter your age in years";
     }
 }

@@ -7,15 +7,15 @@ final class be extends nt {
     private static long[] field_v;
     static da field_t;
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var4Lifetime1;
         try {
           var3_int = (int)((double)this.field_p / 100.0 * 255.0);
           if (param1 > -121) {
-            ha var5 = (ha) null;
-            this.a((ha) null, 95);
+            GraphicsToolkit var5 = (GraphicsToolkit) null;
+            this.a((GraphicsToolkit) null, 95);
           }
           var3_int += 20;
           var4 = 0;

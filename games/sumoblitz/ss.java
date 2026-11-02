@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ss {
-    static String field_a;
+    static String restartLevelText;
 
     public static void a(byte param0) {
-        field_a = null;
+        restartLevelText = null;
         if (param0 <= 69) {
-          field_a = (String) null;
+          restartLevelText = (String) null;
         }
     }
 
@@ -20,7 +20,7 @@ final class ss {
           qt.b(true);
           rw.a((byte) -90);
           if (param1 < 125) {
-            field_a = (String) null;
+            restartLevelText = (String) null;
           }
           td.field_u = 0 - gi.field_i;
         } catch (RuntimeException runtimeException) {
@@ -33,7 +33,7 @@ final class ss {
         try {
           var3 = as.field_v;
           if (param1 != 1000) {
-            field_a = (String) null;
+            restartLevelText = (String) null;
           }
           var3.g(param0, 8);
           var3.b((byte) 16, 2);
@@ -45,6 +45,6 @@ final class ss {
     }
 
     static {
-        field_a = "Restart level";
+        restartLevelText = "Restart level";
     }
 }

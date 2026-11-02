@@ -4,7 +4,7 @@
 final class rf extends Exception {
     static ts field_e;
     static String[] field_b;
-    static String field_c;
+    static String menuText;
     static dg field_a;
     static int field_d;
 
@@ -23,14 +23,14 @@ final class rf extends Exception {
         if (param0 == 1) {
           field_a = null;
           field_e = null;
-          field_c = null;
+          menuText = null;
           field_b = null;
           return;
         }
-        field_c = (String) null;
+        menuText = (String) null;
         field_a = null;
         field_e = null;
-        field_c = null;
+        menuText = null;
         field_b = null;
     }
 
@@ -67,7 +67,7 @@ final class rf extends Exception {
 
     static {
         field_e = new ts(8, 0, 4, 1);
-        field_c = "Menu";
+        menuText = "Menu";
         field_b = new String[255];
     }
 }

@@ -12,7 +12,7 @@ final class va implements mh {
     private int field_d;
     static int field_b;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         vb var14 = null;
         int var7 = 0;
         int var8 = 0;

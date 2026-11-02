@@ -4,7 +4,7 @@
 final class as extends nt {
     private int field_z;
     private int field_s;
-    static String field_x;
+    static String livesText;
     private int field_t;
     static int[] field_y;
     static pl field_v;
@@ -27,19 +27,19 @@ final class as extends nt {
           mk.field_d = aj.a((byte) -120, var4, false);
         }
         if (param0 != 23369) {
-          field_x = (String) null;
+          livesText = (String) null;
         }
     }
 
     public static void e(int param0) {
-        field_x = null;
+        livesText = null;
         field_y = null;
         field_w = null;
         field_v = null;
         int var1 = -34 % ((param0 + 2) / 42);
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -136,7 +136,7 @@ final class as extends nt {
         int var1 = 0;
         int var2 = 0;
         int var0;
-        field_x = "lives: ";
+        livesText = "lives: ";
         field_y = new int[256];
         for (var1 = 0; var1 < 256; var1++) {
           var0 = var1;

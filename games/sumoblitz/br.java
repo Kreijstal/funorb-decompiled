@@ -6,7 +6,7 @@ final class br {
     int field_c;
     private long field_j;
     private String field_d;
-    static String field_i;
+    static String instructionsText;
     private boolean field_f;
     int field_g;
     int[] field_b;
@@ -83,7 +83,7 @@ final class br {
         if (param0 != 23050) {
           return;
         }
-        field_i = null;
+        instructionsText = null;
     }
 
     br(boolean param0) {
@@ -103,6 +103,6 @@ final class br {
     }
 
     static {
-        field_i = "INSTRUCTIONS";
+        instructionsText = "INSTRUCTIONS";
     }
 }

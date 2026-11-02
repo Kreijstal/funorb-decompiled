@@ -8,8 +8,8 @@ final class m extends hf {
     private boolean field_P;
     private pq field_Q;
     static RasterBuffer field_R;
-    static String field_V;
-    static String field_T;
+    static String waitingForGraphicsText;
+    static String namesCannotStartOrText;
     private boolean field_S;
     static gj[] field_O;
 
@@ -34,7 +34,7 @@ final class m extends hf {
           }
           return;
         }
-        field_V = (String) null;
+        waitingForGraphicsText = (String) null;
         super.b(112, param1, param2);
         tq.field_a.a(this.field_W, param1 + (this.field_q >> 1), param2 + 103, 16777215, -1);
         if (null != this.field_U) {
@@ -44,16 +44,16 @@ final class m extends hf {
     }
 
     public static void e(boolean param0) {
-        field_T = null;
+        namesCannotStartOrText = null;
         field_O = null;
         if (param0) {
-          field_V = null;
+          waitingForGraphicsText = null;
           field_R = null;
           field_X = null;
           return;
         }
-        field_T = (String) null;
-        field_V = null;
+        namesCannotStartOrText = (String) null;
+        waitingForGraphicsText = null;
         field_R = null;
         field_X = null;
     }
@@ -94,7 +94,7 @@ final class m extends hf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            field_T = (String) null;
+            namesCannotStartOrText = (String) null;
           }
           stackIn_5_0 = (param3) ? 0 : 1;
           if (this.field_P) {
@@ -137,7 +137,7 @@ final class m extends hf {
 
     static {
         field_X = new iw(3);
-        field_T = "Names cannot start or end with space or underscore";
-        field_V = "Waiting for graphics";
+        namesCannotStartOrText = "Names cannot start or end with space or underscore";
+        waitingForGraphicsText = "Waiting for graphics";
     }
 }

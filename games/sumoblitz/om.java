@@ -3,10 +3,10 @@
  */
 final class om extends IntrusiveNode {
     private wc[] field_o;
-    static String field_n;
+    static String unpackingLevelsText;
     static boolean field_l;
     static ri[] field_m;
-    static String[] field_k;
+    static String[] droneNames;
 
     om(wc[] param0) {
         try {
@@ -17,9 +17,9 @@ final class om extends IntrusiveNode {
     }
 
     public static void a(byte param0) {
-        field_k = null;
+        droneNames = null;
         int var1 = -126 / ((param0 - 34) / 59);
-        field_n = null;
+        unpackingLevelsText = null;
         field_m = null;
     }
 
@@ -34,8 +34,8 @@ final class om extends IntrusiveNode {
     }
 
     static {
-        field_n = "Unpacking levels";
+        unpackingLevelsText = "Unpacking levels";
         field_l = false;
-        field_k = new String[]{"Player", "HyoujunBot", "SuiminBot", "KosokuBot", "BunkatBot", "SosakuBot"};
+        droneNames = new String[]{"Player", "HyoujunBot", "SuiminBot", "KosokuBot", "BunkatBot", "SosakuBot"};
     }
 }

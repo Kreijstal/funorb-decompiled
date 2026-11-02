@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class rb {
-    static String[] field_d;
+    static String[] achievementNames;
     static String field_c;
     static int field_b;
     static hr[] field_a;
@@ -118,7 +118,7 @@ abstract class rb {
 
     public static void a(byte param0) {
         field_a = null;
-        field_d = null;
+        achievementNames = null;
         field_c = null;
         if (param0 != -45) {
           field_b = -92;
@@ -132,6 +132,6 @@ abstract class rb {
     static {
         field_c = null;
         field_b = 500;
-        field_d = new String[]{"Speed Demon", "Get a Grip", "Bounce Master", "Survivalist", "By Skill Alone...", "Need for Speed", "Tractor Factor", "Ping Pong", "Trick Shot", "Detonator", "Sumo Master", "Pinball Wizard", "Manic Multiplier", "Variety", "Super Score", "Big Bursta", "Zapper", "Sparky", "Flashy", "The Blitz", "Peasy!", "Enough?", "Minuteman", "Hard Boiled", "5-a-day", "1 Minute Flat", "Scrambled", "300"};
+        achievementNames = new String[]{"Speed Demon", "Get a Grip", "Bounce Master", "Survivalist", "By Skill Alone...", "Need for Speed", "Tractor Factor", "Ping Pong", "Trick Shot", "Detonator", "Sumo Master", "Pinball Wizard", "Manic Multiplier", "Variety", "Super Score", "Big Bursta", "Zapper", "Sparky", "Flashy", "The Blitz", "Peasy!", "Enough?", "Minuteman", "Hard Boiled", "5-a-day", "1 Minute Flat", "Scrambled", "300"};
     }
 }

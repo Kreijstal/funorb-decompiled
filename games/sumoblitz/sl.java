@@ -4,7 +4,7 @@
 final class sl extends ln implements fk {
     static boolean field_d;
     static int[] field_c;
-    static String field_e;
+    static String largeScreenSizesAndText;
 
     sl(fr param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
@@ -18,10 +18,10 @@ final class sl extends ln implements fk {
     }
 
     public static void b(int param0) {
-        field_e = null;
+        largeScreenSizesAndText = null;
         field_c = null;
         if (param0 >= -83) {
-          field_e = (String) null;
+          largeScreenSizesAndText = (String) null;
         }
     }
 
@@ -57,6 +57,6 @@ final class sl extends ln implements fk {
     static {
         field_c = new int[]{1, 1, 1, 10, 3, 1, 1, 1, 2, 1, 5, 2, 3, 5, 2, 3, 1, 2, 2, 3, 2, 3, 1, 2, 3, 2, 3, 10};
         field_d = false;
-        field_e = "Large screen sizes and high resolutions may cause the game to run slowly. If so, try using lower resolutions or screen sizes.";
+        largeScreenSizesAndText = "Large screen sizes and high resolutions may cause the game to run slowly. If so, try using lower resolutions or screen sizes.";
     }
 }

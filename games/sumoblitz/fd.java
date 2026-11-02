@@ -7,7 +7,7 @@ final class fd extends uw {
     private long[] field_h;
     private int field_f;
     private long field_l;
-    static String field_i;
+    static String clickText;
     static long field_k;
     private long field_e;
     private long field_j;
@@ -94,7 +94,7 @@ final class fd extends uw {
     }
 
     public static void c(int param0) {
-        field_i = null;
+        clickText = null;
         int var1 = 121 % ((75 - param0) / 32);
         field_d = null;
     }
@@ -180,7 +180,7 @@ final class fd extends uw {
     }
 
     static {
-        field_i = "Click";
+        clickText = "Click";
         field_k = 0L;
         field_d = new Random();
     }

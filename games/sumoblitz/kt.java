@@ -81,14 +81,14 @@ final class kt {
             nj.field_a.field_g >= 0) {
             var3 = jo.field_b[nj.field_a.field_g];
             if (var3 == 2) {
-              ha.b(23639);
+              GraphicsToolkit.b(23639);
             } else if (var3 == 5) {
-              ha.b(23639);
+              GraphicsToolkit.b(23639);
             }
           } else {
             if (var2 != 0 &&
               cl.field_s != 2) {
-              ha.b(23639);
+              GraphicsToolkit.b(23639);
             }
           }
           if (var3 == 0 &&

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ur extends hf {
-    private pk field_V;
+    private UiWidget field_V;
     private int field_W;
     private int field_S;
-    static String field_X;
+    static String passwordsCanOnlyContainText;
     private in field_P;
     private int field_Z;
     static float field_R;
@@ -15,7 +15,7 @@ abstract class ur extends hf {
     private int field_T;
     static int field_O;
 
-    ur(dg param0, pk param1, int param2, int param3, int param4) {
+    ur(dg param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_q + 12, param1.field_p + (12 + param2));
         try {
           this.field_U = param2;
@@ -106,7 +106,7 @@ abstract class ur extends hf {
         return super.h(param0 ^ 0);
     }
 
-    boolean a(pk param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -143,7 +143,7 @@ abstract class ur extends hf {
         }
     }
 
-    private final void b(pk param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         try {
           int var3_int = -16 / ((param1 + 72) / 51);
           if (this.field_P != null) {
@@ -162,17 +162,17 @@ abstract class ur extends hf {
         }
     }
 
-    void b(byte param0, pk param1) {
+    void b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        pk var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -87) {
-            var4 = (pk) null;
-            this.b((pk) null, 78);
+            var4 = (UiWidget) null;
+            this.b((UiWidget) null, 78);
           }
           this.field_V = param1;
           if (lw.field_a == this.field_Y) {
@@ -203,10 +203,10 @@ abstract class ur extends hf {
     public static void k(int param0) {
         if (param0 != 0) {
           ur.k(65);
-          field_X = null;
+          passwordsCanOnlyContainText = null;
           return;
         }
-        field_X = null;
+        passwordsCanOnlyContainText = null;
     }
 
     final void i(int param0) {
@@ -222,6 +222,6 @@ abstract class ur extends hf {
 
     static {
         field_Q = -1;
-        field_X = "Passwords can only contain letters and numbers";
+        passwordsCanOnlyContainText = "Passwords can only contain letters and numbers";
     }
 }

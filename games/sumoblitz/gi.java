@@ -9,7 +9,7 @@ final class gi extends bq {
     static int[] field_k;
     static int field_h;
     static int field_i;
-    static String field_f;
+    static String notYetAchievedText;
 
     final void b(int param0) {
         if (param0 > -125) {
@@ -45,13 +45,13 @@ final class gi extends bq {
         if (param0 == 8192) {
           field_g = null;
           field_k = null;
-          field_f = null;
+          notYetAchievedText = null;
           return;
         }
-        field_f = (String) null;
+        notYetAchievedText = (String) null;
         field_g = null;
         field_k = null;
-        field_f = null;
+        notYetAchievedText = null;
     }
 
     final static String c(byte param0) {
@@ -73,7 +73,7 @@ final class gi extends bq {
     final void a(int param0, boolean param1) {
         this.field_b.a(20685, 8448, 260);
         if (param0 > -30) {
-          field_f = (String) null;
+          notYetAchievedText = (String) null;
         }
     }
 
@@ -239,6 +239,6 @@ final class gi extends bq {
     static {
         field_g = new qr();
         field_k = new int[8192];
-        field_f = "Not yet achieved";
+        notYetAchievedText = "Not yet achieved";
     }
 }

@@ -19,9 +19,9 @@ final class am extends rb {
     private int field_v;
     private boolean field_l;
     private int field_g;
-    private jn field_s;
+    private IntrusiveDeque field_s;
     private boolean field_o;
-    private jn field_n;
+    private IntrusiveDeque field_n;
     private long field_t;
     private boolean field_m;
 
@@ -348,7 +348,7 @@ final class am extends rb {
         }
         this.field_o = true;
         if (this.field_n == null) {
-          this.field_n = new jn();
+          this.field_n = new IntrusiveDeque();
         }
         int var2 = -71 / ((param0 + 2) / 46);
     }
@@ -544,14 +544,14 @@ final class am extends rb {
         RuntimeException var10 = null;
         this.field_k = new te(16);
         this.field_g = 0;
-        this.field_s = new jn();
+        this.field_s = new IntrusiveDeque();
         this.field_t = 0L;
         try {
           this.field_h = param1;
           this.field_u = param0;
           if (this.field_h != null) {
             this.field_l = true;
-            this.field_n = new jn();
+            this.field_n = new IntrusiveDeque();
           } else {
             this.field_l = false;
           }

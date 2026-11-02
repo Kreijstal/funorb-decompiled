@@ -185,7 +185,7 @@ final class t extends gd {
             while (var2 != null) {
               this.field_n.position = 0;
               this.field_n.b((byte) 55, 1);
-              this.field_n.b(var2.field_l, 1105594440);
+              this.field_n.b(var2.secondaryKey, 1105594440);
               this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
               this.field_h.a((DualLinkNode) (var2), (byte) -107);
               var2 = (fv) (this.field_l.d(-2));
@@ -194,7 +194,7 @@ final class t extends gd {
             while (var2Lifetime1 != null) {
               this.field_n.position = 0;
               this.field_n.b((byte) 86, 0);
-              this.field_n.b(var2Lifetime1.field_l, 1105594440);
+              this.field_n.b(var2Lifetime1.secondaryKey, 1105594440);
               this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
               this.field_g.a((DualLinkNode) (var2Lifetime1), (byte) -103);
               var2Lifetime1 = (fv) (this.field_f.d(-2));
@@ -243,7 +243,7 @@ final class t extends gd {
                       if (var11 != 0) {
                         var14_ref = (fv) (this.field_g.a(64));
                         while (var14_ref != null) {
-                          if (var14_ref.field_l == var12) {
+                          if (var14_ref.secondaryKey == var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -255,7 +255,7 @@ final class t extends gd {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (fv) (this.field_h.a(66));
                         while (var14_ref != null) {
-                          if (~var12 == ~var14_ref.field_l) {
+                          if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
                           var14_ref = (fv) (this.field_h.d(-2));

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hk {
-    static String field_b;
+    static String mouseOverAnIconText;
     static int field_c;
     static int field_a;
 
     public static void a(int param0) {
-        field_b = null;
+        mouseOverAnIconText = null;
         if (param0 != 0) {
           field_c = 88;
         }
@@ -20,7 +20,7 @@ final class hk {
 
     static {
         field_c = 0;
-        field_b = "Mouse over an icon for details";
+        mouseOverAnIconText = "Mouse over an icon for details";
         field_a = 0;
     }
 }

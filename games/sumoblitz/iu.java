@@ -11,9 +11,9 @@ final class iu implements mh {
     private int field_f;
     private int field_a;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         int var10 = 0;
-        pk stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -23,12 +23,12 @@ final class iu implements mh {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        pk var12 = null;
+        UiWidget var12 = null;
         fu var13 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 instanceof fu) {
-            stackIn_4_0 = (pk) (param0);
+            stackIn_4_0 = (UiWidget) (param0);
           } else {
             stackIn_4_0 = null;
           }
@@ -37,8 +37,8 @@ final class iu implements mh {
           if (var13 != null) {
           }
           if (param2 != 5592405) {
-            var12 = (pk) null;
-            this.a((pk) null, -54, -79, true, -72);
+            var12 = (UiWidget) null;
+            this.a((UiWidget) null, -54, -79, true, -72);
           }
           var7 = param0.field_q - var13.field_I * 2;
           var8 = param4 - (-param0.field_r - var13.field_I);

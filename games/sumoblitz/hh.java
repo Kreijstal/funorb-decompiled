@@ -8,7 +8,7 @@ final class hh extends IOException {
     static nb field_c;
     static ri[] field_a;
     static hr[] field_e;
-    static String field_b;
+    static String connectionLostText;
     static al field_d;
 
     final static void a(boolean param0, int param1, java.awt.Color param2, boolean param3, String param4) {
@@ -111,7 +111,7 @@ final class hh extends IOException {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        connectionLostText = null;
         field_a = null;
         field_d = null;
         int var1 = -11 % ((param0 - 24) / 60);
@@ -121,6 +121,6 @@ final class hh extends IOException {
 
     static {
         field_c = new nb(2);
-        field_b = "Connection lost. <%0>";
+        connectionLostText = "Connection lost. <%0>";
     }
 }

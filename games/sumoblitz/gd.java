@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class gd {
-    static String field_o;
+    static String achievementsText;
     static long[] field_k;
     ro field_l;
     static String field_a;
@@ -78,7 +78,7 @@ abstract class gd {
         long var6 = (long)param2 + ((long)param0 << 32);
         fv var8 = new fv();
         var8.field_t = param1 ? true : false;
-        var8.field_l = var6;
+        var8.secondaryKey = var6;
         var8.field_z = param4;
         int var9 = -16 % ((0 - param3) / 43);
         if (param1) {
@@ -97,7 +97,7 @@ abstract class gd {
 
     abstract void b(int param0);
 
-    final static void a(int param0, int param1, jn param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, IntrusiveDeque param2, int param3, int param4, int param5) {
         float[] dupTemp$0 = null;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
@@ -252,7 +252,7 @@ abstract class gd {
     }
 
     public static void a(boolean param0) {
-        field_o = null;
+        achievementsText = null;
         if (param0) {
           gd.a((byte) -88, 27);
           field_a = null;
@@ -281,6 +281,6 @@ abstract class gd {
 
     static {
         field_k = new long[32];
-        field_o = "ACHIEVEMENTS";
+        achievementsText = "ACHIEVEMENTS";
     }
 }

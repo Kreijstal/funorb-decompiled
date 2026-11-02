@@ -6,14 +6,14 @@ final class km extends IntrusiveNode {
     static lh field_o;
     int field_n;
     static long field_k;
-    static String field_m;
+    static String acceptText;
 
     public static void a(int param0) {
         if (param0 != -11807) {
           km.c(false);
         }
         field_o = null;
-        field_m = null;
+        acceptText = null;
     }
 
     final static void a(byte param0, int param1, id param2) {
@@ -139,6 +139,6 @@ final class km extends IntrusiveNode {
 
     static {
         field_o = null;
-        field_m = "Accept";
+        acceptText = "Accept";
     }
 }

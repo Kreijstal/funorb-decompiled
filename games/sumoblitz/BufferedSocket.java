@@ -13,7 +13,7 @@ final class BufferedSocket implements Runnable {
     private boolean field_l;
     private OutputStream field_k;
     static String[] field_i;
-    static String field_h;
+    static String moreSuggestionsText;
     private PlatformTaskDispatcher field_g;
     private int field_a;
     static boolean field_f;
@@ -264,7 +264,7 @@ final class BufferedSocket implements Runnable {
           BufferedSocket.d(-53);
         }
         field_i = null;
-        field_h = null;
+        moreSuggestionsText = null;
         field_p = null;
         field_n = null;
     }
@@ -309,7 +309,7 @@ final class BufferedSocket implements Runnable {
     }
 
     static {
-        field_h = "More suggestions";
+        moreSuggestionsText = "More suggestions";
         field_f = true;
     }
 }

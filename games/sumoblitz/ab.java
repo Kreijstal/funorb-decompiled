@@ -6,13 +6,13 @@ import java.util.*;
 abstract class ab {
     static te field_a;
     static Object field_b;
-    static String field_d;
-    static String field_e;
+    static String weClosedTheConnectionText;
+    static String achievedText;
     static int field_c;
 
     abstract void a(float param0, int param1, float param2, float param3, int param4, int param5, int param6, float[] param7, int param8, float param9, int param10);
 
-    final static void a(int param0, jn param1, ah param2, int param3, int param4, int param5, byte param6) {
+    final static void a(int param0, IntrusiveDeque param1, ah param2, int param3, int param4, int param5, byte param6) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -143,17 +143,17 @@ abstract class ab {
     }
 
     public static void a(int param0) {
-        field_d = null;
+        weClosedTheConnectionText = null;
         field_a = null;
         if (param0 != 64) {
           return;
         }
-        field_e = null;
+        achievedText = null;
         field_b = null;
     }
 
     static {
-        field_e = "Achieved";
-        field_d = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
+        achievedText = "Achieved";
+        weClosedTheConnectionText = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
     }
 }

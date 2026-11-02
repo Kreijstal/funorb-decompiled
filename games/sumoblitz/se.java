@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class se {
-    static String field_b;
-    static String field_c;
+    static String abcdefghijklmnopqrstuvwxyzabcdefghijText;
+    static String pleaseTryAgainInText;
     static int field_d;
-    static String field_a;
+    static String scoreText;
 
     final static int a(int param0) {
         int var1_int = 0;
@@ -20,7 +20,7 @@ abstract class se {
         RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
-          rf.field_a.a(wr.field_F, ha.field_b, true, param0 - 19887);
+          rf.field_a.a(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
           rf.field_a.h(-90);
           while (wd.c(param0 ^ -19954)) {
             rf.field_a.a(np.field_c, tg.field_a, true);
@@ -154,14 +154,14 @@ abstract class se {
         if (param0 != 8192) {
           field_d = 19;
         }
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = null;
+        scoreText = null;
+        pleaseTryAgainInText = null;
     }
 
     static {
-        field_b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
-        field_c = "Please try again in a few minutes.";
-        field_a = "Score";
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
+        pleaseTryAgainInText = "Please try again in a few minutes.";
+        scoreText = "Score";
     }
 }

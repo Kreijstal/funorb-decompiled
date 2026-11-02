@@ -5,11 +5,11 @@ import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
     private IterableNodeHashTable field_e;
-    static String[] field_c;
+    static String[] leaderboardSortStatusLabels;
     private IntrusiveNode field_b;
     static int field_d;
     private int field_f;
-    static String field_a;
+    static String suggestedNamesText;
     private IntrusiveNode field_g;
 
     public final Object next() {
@@ -65,8 +65,8 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     public static void a(int param0) {
-        field_c = null;
-        field_a = null;
+        leaderboardSortStatusLabels = null;
+        suggestedNamesText = null;
         if (param0 == 1) {
           return;
         }
@@ -97,7 +97,7 @@ final class NodeHashTableIterator implements Iterator {
     final static void a(int param0, byte param1) {
         int var2 = ps.field_e[param0];
         if (param1 != -82) {
-          field_a = (String) null;
+          suggestedNamesText = (String) null;
           so.a(var2, (byte) -127);
           return;
         }
@@ -105,7 +105,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     static {
-        field_a = "Suggested names: ";
-        field_c = new String[]{"Showing by rating", "Showing by win percentage"};
+        suggestedNamesText = "Suggested names: ";
+        leaderboardSortStatusLabels = new String[]{"Showing by rating", "Showing by win percentage"};
     }
 }

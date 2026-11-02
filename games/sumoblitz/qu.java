@@ -26,7 +26,7 @@ final class qu {
         int[][] stackIn_41_0 = null;
         int stackIn_42_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ha var2 = null;
+        GraphicsToolkit var2 = null;
         RuntimeException var2_ref = null;
         int var3_int = 0;
         int[] var3 = null;
@@ -141,7 +141,7 @@ final class qu {
         }
     }
 
-    private final void a(int param0, ha param1) {
+    private final void a(int param0, GraphicsToolkit param1) {
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_23_0 = 0;
@@ -237,7 +237,7 @@ final class qu {
         }
     }
 
-    final void a(int param0, ha param1, boolean param2) {
+    final void a(int param0, GraphicsToolkit param1, boolean param2) {
         Object stackIn_20_0 = null;
         int stackIn_34_0 = 0;
         to stackIn_44_0 = null;
@@ -387,7 +387,7 @@ final class qu {
     private final void e(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        cb var3 = null;
+        IntrusiveDequeCursor var3 = null;
         nm var4 = null;
         int var5 = 0;
         ah var6 = null;
@@ -397,7 +397,7 @@ final class qu {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2_int = 0;
-          var3 = new cb(is.field_c);
+          var3 = new IntrusiveDequeCursor(is.field_c);
           if (param0 < 59) {
             return;
           }
@@ -722,23 +722,23 @@ final class qu {
                 gn.a(27, true);
                 if (2 == var3.field_n) {
                   b.field_c = true;
-                  rn.a(ee.field_a[2] + "+", var2.field_C >> 8, var2.field_z >> 8, 16732416, 28807);
+                  rn.a(UpgradeStatNames.names[2] + "+", var2.field_C >> 8, var2.field_z >> 8, 16732416, 28807);
                 } else if (var3.field_n != 0) {
                   if (var3.field_n == 1) {
                     cl.field_w = true;
-                    rn.a(ee.field_a[1] + "+", var2.field_C >> 8, var2.field_z >> 8, 12714108, param0 + 43661);
+                    rn.a(UpgradeStatNames.names[1] + "+", var2.field_C >> 8, var2.field_z >> 8, 12714108, param0 + 43661);
                   } else if (3 != var3.field_n) {
                     if (4 == var3.field_n) {
                       cl.field_w = true;
-                      rn.a(ee.field_a[4], var2.field_C >> 8, var2.field_z >> 8, 44031, param0 + 43661);
+                      rn.a(UpgradeStatNames.names[4], var2.field_C >> 8, var2.field_z >> 8, 44031, param0 + 43661);
                     }
                   } else {
                     cl.field_w = true;
-                    rn.a(ee.field_a[3], var2.field_C >> 8, var2.field_z >> 8, 16711680, 28807);
+                    rn.a(UpgradeStatNames.names[3], var2.field_C >> 8, var2.field_z >> 8, 16711680, 28807);
                   }
                 } else {
                   SecondaryNodeDeque.field_e = true;
-                  rn.a(ee.field_a[0] + "+", var2.field_C >> 8, var2.field_z >> 8, 32780, 28807);
+                  rn.a(UpgradeStatNames.names[0] + "+", var2.field_C >> 8, var2.field_z >> 8, 32780, 28807);
                 }
                 vb.field_E = true;
                 var3.b(false);
@@ -871,14 +871,14 @@ final class qu {
         RuntimeException var2 = null;
         try {
           if (param0 != -120) {
-            this.a(109, (ha) null);
+            this.a(109, (GraphicsToolkit) null);
           }
           GameKeyHandler.field_a = null;
           ig.field_b.e(116);
           in.field_z = 0;
           f.field_w = false;
           fb.field_a = 0;
-          ha.field_f = 0;
+          GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           wj.field_e = 0;
           iw.field_b = 0;
@@ -897,7 +897,7 @@ final class qu {
         }
     }
 
-    private final void b(int param0, ha param1) {
+    private final void b(int param0, GraphicsToolkit param1) {
         int stackIn_10_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
@@ -1080,7 +1080,7 @@ final class qu {
             return;
           }
           if (param1 >= -65) {
-            this.a(-55, (ha) null);
+            this.a(-55, (GraphicsToolkit) null);
           }
           if (iw.field_b - uc.field_f == 100 &&
             !td.field_m &&
@@ -1090,7 +1090,7 @@ final class qu {
           boolean decompiledFrameRemainder2 = true;
           if (nd.field_F > 0) {
             ts.field_a = ts.field_a + 8;
-            ha.field_f = ha.field_f + 10;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
             fb.field_a = fb.field_a - 5;
             kn.field_b = kn.field_b - 3;
             iw.field_b = iw.field_b + 1;
@@ -1104,9 +1104,9 @@ final class qu {
                 if (var6 != 0) {
                   if (gj.a((byte) -84, 10) >= 5) {
                     fb.field_a = fb.field_a - 1;
-                    ha.field_f = ha.field_f - 1;
+                    GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   } else {
-                    ha.field_f = ha.field_f - 1;
+                    GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   }
                 }
               }
@@ -1114,10 +1114,10 @@ final class qu {
               if (gj.a((byte) -84, 10) >= 5) {
                 fb.field_a = fb.field_a - 1;
                 if (var6 != 0) {
-                  ha.field_f = ha.field_f - 1;
+                  GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                 }
               } else {
-                ha.field_f = ha.field_f - 1;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
               }
             }
           }
@@ -1204,12 +1204,12 @@ final class qu {
           if (stackIn_158_0 != -1) {
             boolean decompiledSharedTail0 = (-sr.field_b + iw.field_b != 5);
             if (!decompiledSharedTail0) {
-              rn.a(ff.field_m, 320, 240, 16755456, 28807);
+              rn.a(ff.warningText, 320, 240, 16755456, 28807);
               decompiledSharedTail0 = (var6 != 0);
             }
             if ((decompiledSharedTail0) &&
               (10 == -sr.field_b + iw.field_b)) {
-              rn.a(ff.field_m, 320, 255, 16776960, 28807);
+              rn.a(ff.warningText, 320, 255, 16776960, 28807);
             }
           }
           boolean decompiledFrameCompleted1 = true;
@@ -1297,7 +1297,7 @@ final class qu {
                   }
                   if (~an.field_a != ~(-1 + ku.field_J.length)) {
                     sr.field_b = iw.field_b;
-                    rn.a(ff.field_m, 320, 225, 16711680, 28807);
+                    rn.a(ff.warningText, 320, 225, 16711680, 28807);
                   }
                   an.field_a = an.field_a + 1;
                   gn.a(14, true);
@@ -1406,7 +1406,7 @@ final class qu {
           if (null != aa.field_a[0]) {
             var4Lifetime1 = aa.field_a[0];
             if (var4Lifetime1.i(-2)) {
-              this.a(231, 6356832, pu.field_a);
+              this.a(231, 6356832, pu.blastReadyText);
             }
             if (var4Lifetime1.g((byte) -59) &&
               this.field_b) {
@@ -1646,11 +1646,11 @@ final class qu {
             !f.field_w) {
             boolean decompiledSharedTail0 = !(!gt.field_bb);
             if (!decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(0, 65535, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
+              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(1, 65534, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
+              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
             }
             if (!vs.b((byte) 9)) {
               kp.a(3, GameKeyHandler.field_a, 79);
@@ -1675,7 +1675,7 @@ final class qu {
         }
     }
 
-    private final void a(byte param0, ha param1) {
+    private final void a(byte param0, GraphicsToolkit param1) {
         int stackIn_40_0 = 0;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
@@ -1712,33 +1712,33 @@ final class qu {
                 } else {
                   to.field_s[3].a(-to.field_s[4].c() + 567, 0);
                   to.field_s[4].a(567, 0);
-                  qv.field_k.a(19, 85, -11753985, ps.field_b + "" + in.field_z, (byte) -21, -1);
-                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.field_b + "</col>" + in.field_z, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.field_x + "" + (oh.field_e + 1) + " " + fq.field_e + "" + pd.field_p + "x " + as.field_x + "" + nd.field_F + "", 19, -11753985, 74);
+                  qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + in.field_z, (byte) -21, -1);
+                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.field_z, (byte) -18, -1);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.field_e + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + as.livesText + "" + nd.field_F + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.field_x + "</col>" + (1 + oh.field_e) + "<col=ffffff> " + fq.field_e + "</col>" + pd.field_p + "x" + "<col=ffffff> " + as.field_x + "</col>" + nd.field_F + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.field_e) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + as.livesText + "</col>" + nd.field_F + "", 19, -4720129, 120);
             }
-            mu.field_B[0].a(139, 448);
-            mu.field_B[1].a(-16 + to.field_s[0].c() + 155, 448);
+            SpriteState.field_B[0].a(139, 448);
+            SpriteState.field_B[1].a(-16 + to.field_s[0].c() + 155, 448);
             var5Lifetime1 = 145 + 2 * to.field_s[1].c();
             while (true) {
               if (var5Lifetime1 < 408) {
-                mu.field_B[2].a(-6 + var5Lifetime1, 448);
+                SpriteState.field_B[2].a(-6 + var5Lifetime1, 448);
                 var5Lifetime1 = var5Lifetime1 + to.field_s[1].c();
                 if (var7 == 0) {
                   continue;
                 }
               } else {
-                mu.field_B[3].a(-to.field_s[4].c() + 475 - 16, 448);
-                mu.field_B[4].a(459, 448);
-                qv.field_k.a(473, 320, -11753985, tj.field_l + dp.b(iw.field_b, -23620) + "", (byte) -73, -1);
-                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + tj.field_l + "</col>" + dp.b(iw.field_b, -23620) + "</col>", (byte) -76, -1);
+                SpriteState.field_B[3].a(-to.field_s[4].c() + 475 - 16, 448);
+                SpriteState.field_B[4].a(459, 448);
+                qv.field_k.a(473, 320, -11753985, tj.timeText + dp.b(iw.field_b, -23620) + "", (byte) -73, -1);
+                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + tj.timeText + "</col>" + dp.b(iw.field_b, -23620) + "</col>", (byte) -76, -1);
               }
               if (gt.field_bb) {
-                qv.field_k.a(473, 175, -11753985, ps.field_b + "" + in.field_z, (byte) -125, -1);
-                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.field_b + "</col>" + in.field_z, (byte) -112, -1);
+                qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + in.field_z, (byte) -125, -1);
+                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.field_z, (byte) -112, -1);
               }
               pr.field_k[0].a(3, 42);
               var3.a((byte) 75, 395 - var4.d((byte) -106) + 42, 42 + pr.field_k[0].a(), 0, 40);
@@ -1825,7 +1825,7 @@ final class qu {
           f.field_w = false;
           te.field_c = 0;
           oh.field_e = param0;
-          ha.field_f = 0;
+          GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           iw.field_b = 0;
           fb.field_a = 0;
@@ -1852,8 +1852,8 @@ final class qu {
         jp discarded$0 = null;
         lp discarded$1 = null;
         try {
-          ni.field_e = new jn();
-          rc.field_m = new jn();
+          ni.field_e = new IntrusiveDeque();
+          rc.field_m = new IntrusiveDeque();
           this.a(127);
           discarded$0 = new jp();
           ld.field_N = new bw();

@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-class sp extends pk implements ug {
+class WidgetContainer extends UiWidget implements ug {
     static qr field_z;
     static int[] field_x;
-    jn field_y;
+    IntrusiveDeque field_y;
 
     private final void a(StringBuilder param0, byte param1, Hashtable param2, int param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        cb var5 = null;
-        pk var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var8 = 0;
-        pk var9 = null;
+        UiWidget var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -25,11 +25,11 @@ class sp extends pk implements ug {
         RuntimeException var5_ref = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = new cb(this.field_y);
-          var6 = (pk) (var5.b((byte) -80));
+          var5 = new IntrusiveDequeCursor(this.field_y);
+          var6 = (UiWidget) (var5.b((byte) -80));
           if (param1 >= -30) {
-            var9 = (pk) null;
-            this.a((pk) null, (byte) -17);
+            var9 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) -17);
           }
           while (var6 != null) {
             discarded$3 = param0.append('\n');
@@ -37,7 +37,7 @@ class sp extends pk implements ug {
               discarded$4 = param0.append(' ');
             }
             var6.a(param3 + 1, param2, param0, 0);
-            var6 = (pk) (var5.b(0));
+            var6 = (UiWidget) (var5.b(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,15 +60,15 @@ class sp extends pk implements ug {
         }
     }
 
-    sp(int param0, int param1, int param2, int param3, mh param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, mh param4) {
         super(param0, param1, param2, param3, param4, (qm) null);
-        this.field_y = new jn();
+        this.field_y = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, pk param5, int param6) {
-        cb var8 = null;
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        pk var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -76,18 +76,18 @@ class sp extends pk implements ug {
         RuntimeException decompiledCaughtException = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new cb(this.field_y);
+          var8 = new IntrusiveDequeCursor(this.field_y);
           if (param2 != -1) {
             return true;
           }
-          var9 = (pk) (var8.b((byte) -80));
+          var9 = (UiWidget) (var8.b((byte) -80));
           while (var9 != null) {
             if (var9.a(false)) {
               if (var9.d(-1) &&
                 var9.a(param0, param1, -1, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (pk) (var8.b(~param2));
+              var9 = (UiWidget) (var8.b(~param2));
               continue;
             }
             break;
@@ -107,14 +107,14 @@ class sp extends pk implements ug {
         }
     }
 
-    final boolean a(byte param0, pk param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        pk var4_ref_pk = null;
+        UiWidget var4_ref_pk = null;
         int var4 = 0;
-        cb var5 = null;
-        pk var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
-        cb var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -124,21 +124,21 @@ class sp extends pk implements ug {
           if (this.field_y.a((byte) -86)) {
             return false;
           }
-          var8 = new cb(this.field_y);
-          var4_ref_pk = (pk) (var8.a((byte) -58));
+          var8 = new IntrusiveDequeCursor(this.field_y);
+          var4_ref_pk = (UiWidget) (var8.a((byte) -58));
           while (var4_ref_pk != null) {
             if (var4_ref_pk.d(-1)) {
-              var5 = new cb(this.field_y);
+              var5 = new IntrusiveDequeCursor(this.field_y);
               var5.a((byte) -70, (IntrusiveNode) (var4_ref_pk));
-              var6 = (pk) (var5.c((byte) 87));
+              var6 = (UiWidget) (var5.c((byte) 87));
               while (var6 != null) {
                 if (var6.a(param1, (byte) 61)) {
                   return true;
                 }
-                var6 = (pk) (var5.c((byte) 87));
+                var6 = (UiWidget) (var5.c((byte) 87));
               }
             }
-            var4_ref_pk = (pk) (var8.c((byte) 87));
+            var4_ref_pk = (UiWidget) (var8.c((byte) 87));
           }
           var4 = 39 % ((param0 - 84) / 34);
           return false;
@@ -156,12 +156,12 @@ class sp extends pk implements ug {
         }
     }
 
-    final boolean a(pk param0, boolean param1) {
-        cb var3 = null;
+    final boolean a(UiWidget param0, boolean param1) {
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        pk var4 = null;
-        cb var5 = null;
-        pk var6 = null;
+        UiWidget var4 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -172,21 +172,21 @@ class sp extends pk implements ug {
           if (this.field_y.a((byte) -87)) {
             return false;
           }
-          var3 = new cb(this.field_y);
-          var4 = (pk) (var3.b((byte) -80));
+          var3 = new IntrusiveDequeCursor(this.field_y);
+          var4 = (UiWidget) (var3.b((byte) -80));
           while (var4 != null) {
             if (var4.d(-1)) {
-              var5 = new cb(this.field_y);
+              var5 = new IntrusiveDequeCursor(this.field_y);
               var5.a(14, var4);
-              var6 = (pk) (var5.b(0));
+              var6 = (UiWidget) (var5.b(0));
               while (var6 != null) {
                 if (var6.a(param0, (byte) 61)) {
                   return true;
                 }
-                var6 = (pk) (var5.b(0));
+                var6 = (UiWidget) (var5.b(0));
               }
             }
-            var4 = (pk) (var3.b(0));
+            var4 = (UiWidget) (var3.b(0));
           }
           if (!param1) {
             return false;
@@ -221,7 +221,7 @@ class sp extends pk implements ug {
             this.a(param2, (byte) -57, param1, param0);
           }
           if (param3 != 0) {
-            this.field_y = (jn) null;
+            this.field_y = (IntrusiveDeque) null;
           }
           stackIn_6_0 = (StringBuilder) (param2);
           return stackIn_6_0;
@@ -246,24 +246,24 @@ class sp extends pk implements ug {
     }
 
     String c(int param0) {
-        cb var2;
-        pk var3;
+        IntrusiveDequeCursor var2;
+        UiWidget var3;
         String var4;
         int var5;
-        pk var6;
+        UiWidget var6;
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != -6696) {
-          var6 = (pk) null;
-          this.a((pk) null, (byte) 2);
+          var6 = (UiWidget) null;
+          this.a((UiWidget) null, (byte) 2);
         }
-        var2 = new cb(this.field_y);
-        var3 = (pk) (var2.b((byte) -80));
+        var2 = new IntrusiveDequeCursor(this.field_y);
+        var3 = (UiWidget) (var2.b((byte) -80));
         while (var3 != null) {
           var4 = var3.c(-6696);
           if (var4 != null) {
             return var4;
           }
-          var3 = (pk) (var2.b(0));
+          var3 = (UiWidget) (var2.b(0));
         }
         return null;
     }
@@ -272,16 +272,16 @@ class sp extends pk implements ug {
         int var7 = Sumoblitz.field_L ? 1 : 0;
         if (param3 == 0 &&
           null != this.field_w) {
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
         }
-        cb var5 = new cb(this.field_y);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_y);
         if (param2 >= -35) {
           field_x = (int[]) null;
         }
-        pk var6 = (pk) (var5.a((byte) -83));
+        UiWidget var6 = (UiWidget) (var5.a((byte) -83));
         while (var6 != null) {
           var6.a(this.field_r + param0, this.field_v + param1, (byte) -62, param3);
-          var6 = (pk) (var5.c((byte) 87));
+          var6 = (UiWidget) (var5.c((byte) 87));
         }
     }
 
@@ -289,23 +289,23 @@ class sp extends pk implements ug {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 0;
-        cb var3 = new cb(this.field_y);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_y);
         int var4 = 51 % ((param0 + 10) / 46);
-        pk var5 = (pk) (var3.b((byte) -80));
+        UiWidget var5 = (UiWidget) (var3.b((byte) -80));
         while (var5 != null) {
           var6 = var5.e(-99);
           if (var6 > var2) {
             var2 = var6;
           }
-          var5 = (pk) (var3.b(0));
+          var5 = (UiWidget) (var3.b(0));
         }
         return var2;
     }
 
-    boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        cb var8 = null;
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        pk var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -313,12 +313,12 @@ class sp extends pk implements ug {
         RuntimeException decompiledCaughtException = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new cb(this.field_y);
-          var9 = (pk) (var8.b((byte) -80));
+          var8 = new IntrusiveDequeCursor(this.field_y);
+          var9 = (UiWidget) (var8.b((byte) -80));
           while (var9 != null) {
             if (var9.a(false)) {
               if (!var9.a(param0, -79, param2, param3, param4 + this.field_r, param5, param6 + this.field_v)) {
-                var9 = (pk) (var8.b(0));
+                var9 = (UiWidget) (var8.b(0));
                 continue;
               }
               return true;
@@ -357,29 +357,29 @@ class sp extends pk implements ug {
         if (param0 != -29587) {
           field_x = (int[]) null;
         }
-        cb var2 = new cb(this.field_y);
-        pk var3 = (pk) (var2.b((byte) -80));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        UiWidget var3 = (UiWidget) (var2.b((byte) -80));
         while (var3 != null) {
           var3.c(false);
-          var3 = (pk) (var2.b(param0 + 29587));
+          var3 = (UiWidget) (var2.b(param0 + 29587));
         }
     }
 
-    pk f(int param0) {
+    UiWidget f(int param0) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        cb var2 = new cb(this.field_y);
-        pk var3_ref_pk = (pk) (var2.b((byte) -80));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        UiWidget var3_ref_pk = (UiWidget) (var2.b((byte) -80));
         while (var3_ref_pk != null) {
           if (var3_ref_pk.d(-1)) {
             return var3_ref_pk;
           }
-          var3_ref_pk = (pk) (var2.b(0));
+          var3_ref_pk = (UiWidget) (var2.b(0));
         }
         int var3 = -6 / ((param0 + 25) / 58);
         return null;
     }
 
-    final void a(pk param0, int param1) {
+    final void a(UiWidget param0, int param1) {
         try {
           this.field_y.a((IntrusiveNode) (param0), (byte) 39);
           if (param1 <= 59) {
@@ -392,38 +392,38 @@ class sp extends pk implements ug {
 
     void c(byte param0) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        cb var2 = new cb(this.field_y);
-        pk var5 = (pk) (var2.b((byte) -80));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        UiWidget var5 = (UiWidget) (var2.b((byte) -80));
         while (var5 != null) {
           var5.c((byte) 127);
-          var5 = (pk) (var2.b(0));
+          var5 = (UiWidget) (var2.b(0));
         }
         int var3 = -115 % ((param0 - 64) / 51);
     }
 
-    boolean a(pk param0, byte param1) {
-        cb var3 = null;
+    boolean a(UiWidget param0, byte param1) {
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        pk var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
-        pk var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3 = new cb(this.field_y);
-          var4 = (pk) (var3.b((byte) -80));
+          var3 = new IntrusiveDequeCursor(this.field_y);
+          var4 = (UiWidget) (var3.b((byte) -80));
           if (param1 != 61) {
-            var6 = (pk) null;
-            this.a(27, -11, (pk) null, -73);
+            var6 = (UiWidget) null;
+            this.a(27, -11, (UiWidget) null, -73);
           }
           while (var4 != null) {
             if (var4.a(param0, (byte) 61)) {
               return true;
             }
-            var4 = (pk) (var3.b(0));
+            var4 = (UiWidget) (var3.b(0));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -440,11 +440,11 @@ class sp extends pk implements ug {
         }
     }
 
-    void a(int param0, int param1, pk param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
-        cb var6 = null;
-        pk var7 = null;
+        IntrusiveDequeCursor var6 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -454,12 +454,12 @@ class sp extends pk implements ug {
         try {
           var5_int = -16 % ((-25 - param1) / 45);
           super.a(param0, 105, param2, param3);
-          var6 = new cb(this.field_y);
-          var7 = (pk) (var6.b((byte) -80));
+          var6 = new IntrusiveDequeCursor(this.field_y);
+          var7 = (UiWidget) (var6.b((byte) -80));
           while (var7 != null) {
             if (var7.a(false)) {
               var7.a(this.field_r + param0, -88, param2, param3 + this.field_v);
-              var7 = (pk) (var6.b(0));
+              var7 = (UiWidget) (var6.b(0));
               continue;
             }
             break;
@@ -492,10 +492,10 @@ class sp extends pk implements ug {
         this.a(-29587);
     }
 
-    final void a(pk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
-        cb var7 = null;
-        pk var8 = null;
+        IntrusiveDequeCursor var7 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -506,12 +506,12 @@ class sp extends pk implements ug {
           if (param1) {
             return;
           }
-          var7 = new cb(this.field_y);
-          var8 = (pk) (var7.b((byte) -80));
+          var7 = new IntrusiveDequeCursor(this.field_y);
+          var8 = (UiWidget) (var7.b((byte) -80));
           while (var8 != null) {
             if (var8.a(param1)) {
               var8.a(param0, false, param2 + this.field_r, param3, param4, this.field_v + param5);
-              var8 = (pk) (var7.b(0));
+              var8 = (UiWidget) (var7.b(0));
               continue;
             }
             break;
@@ -531,12 +531,12 @@ class sp extends pk implements ug {
         }
     }
 
-    boolean a(pk param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        cb var8 = null;
-        pk var9 = null;
+        IntrusiveDequeCursor var8 = null;
+        UiWidget var9 = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -544,8 +544,8 @@ class sp extends pk implements ug {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new cb(this.field_y);
-          var9 = (pk) (var8.b((byte) -80));
+          var8 = new IntrusiveDequeCursor(this.field_y);
+          var9 = (UiWidget) (var8.b((byte) -80));
           if (param2 <= 9) {
             field_x = (int[]) null;
           }
@@ -555,7 +555,7 @@ class sp extends pk implements ug {
                 var9.a(param0, param1, (byte) 67, param3)) {
                 return true;
               }
-              var9 = (pk) (var8.b(0));
+              var9 = (UiWidget) (var8.b(0));
               continue;
             }
             break;

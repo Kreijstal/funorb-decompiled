@@ -4,7 +4,7 @@
 final class lf extends ka {
     static tg field_e;
     static mp field_c;
-    static String[] field_d;
+    static String[] monthNames;
 
     final static void a(int param0, byte param1) {
         dj var2 = null;
@@ -82,7 +82,7 @@ final class lf extends ka {
         }
         field_e = null;
         field_c = null;
-        field_d = null;
+        monthNames = null;
     }
 
     lf(fr param0) {
@@ -124,7 +124,7 @@ final class lf extends ka {
 
     static {
         field_e = new tg();
-        field_d = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        monthNames = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_c = new mp();
     }
 }

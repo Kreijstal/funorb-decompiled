@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class ir extends aw {
+public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     jaclib.peer.pf field_Wc;
     private jagdx.IDirect3DVertexShader field_Vc;
     private static int[] field_Zc;
@@ -204,7 +204,7 @@ public final class ir extends aw {
           } else {
             this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].a(field_Mc, 111));
           }
-          var2 = ir.b(this.field_wb[this.field_mc], param0 - 23700);
+          var2 = DirectXGraphicsToolkit.b(this.field_wb[this.field_mc], param0 - 23700);
           if (var2 != this.field_Gc[this.field_mc]) {
             this.field_Cc.SetTextureStageState(this.field_mc, 24, var2);
             this.field_Gc[this.field_mc] = var2;
@@ -229,7 +229,7 @@ public final class ir extends aw {
         if (param0 > -74) {
           return;
         }
-        int var2 = !this.field_Ec[this.field_mc] ? 1 : ir.a(this.field_K[this.field_mc], -124);
+        int var2 = !this.field_Ec[this.field_mc] ? 1 : DirectXGraphicsToolkit.a(this.field_K[this.field_mc], -124);
         this.field_Cc.SetTextureStageState(this.field_mc, 1, var2);
     }
 
@@ -254,14 +254,14 @@ public final class ir extends aw {
         if (param0 == kr.field_a) {
           return 4;
         }
-        if (aw.field_t == param0) {
+        if (HardwareGraphicsToolkit.field_t == param0) {
           return 256;
         }
         if (param1 == 3103) {
           return 0;
         }
         var3 = (ji) null;
-        ir.a((ji) null, false);
+        DirectXGraphicsToolkit.a((ji) null, false);
         return 0;
     }
 
@@ -335,7 +335,7 @@ public final class ir extends aw {
         int var3;
         this.field_Cc.SetTexture(this.field_mc, param0.d(-22689));
         if (this.field_Dc[this.field_mc] != param0.field_a) {
-          var3 = ir.a(param0.field_a, false);
+          var3 = DirectXGraphicsToolkit.a(param0.field_a, false);
           this.field_Cc.SetSamplerState(this.field_mc, 6, var3);
           this.field_Cc.SetSamplerState(this.field_mc, 5, var3);
           this.field_Dc[this.field_mc] = param0.field_a;
@@ -348,7 +348,7 @@ public final class ir extends aw {
             if (!param0.field_e) {
               stackIn_16_3 = 0;
             } else {
-              stackIn_16_3 = ir.a(param0.field_a, false);
+              stackIn_16_3 = DirectXGraphicsToolkit.a(param0.field_a, false);
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_15_0).SetSamplerState(stackIn_15_1, stackIn_15_2, stackIn_16_3);
             this.field_ad[this.field_mc] = param0.field_e;
@@ -361,7 +361,7 @@ public final class ir extends aw {
             stackIn_7_1 = this.field_mc;
             stackIn_7_2 = 7;
             if (param0.field_e) {
-              stackIn_8_3 = ir.a(param0.field_a, false);
+              stackIn_8_3 = DirectXGraphicsToolkit.a(param0.field_a, false);
             } else {
               stackIn_8_3 = 0;
             }
@@ -394,7 +394,7 @@ public final class ir extends aw {
           var3.a((byte) 71);
           this.field_Pc.BackBufferWidth = 0;
           this.field_Pc.BackBufferHeight = 0;
-          if (ir.a(this.field_Xc, this.field_Ic, this.field_zc, this.field_Y, 6, this.field_Pc)) {
+          if (DirectXGraphicsToolkit.a(this.field_Xc, this.field_Ic, this.field_zc, this.field_Y, 6, this.field_Pc)) {
             var4 = this.field_Cc.Reset(this.field_Pc);
             if (jagdx.gv.b(var4, -72)) {
               var3.a(false, this.field_Cc.b(), this.field_Cc.b(0));
@@ -467,7 +467,7 @@ public final class ir extends aw {
           this.db(-77);
         }
         var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_6_0 = (jagdx.gv.b(this.field_Xc.a(this.field_zc, var4), -41)) && (jagdx.gv.b(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 3, ir.a(param1, -55, param0)), -63));
+        stackIn_6_0 = (jagdx.gv.b(this.field_Xc.a(this.field_zc, var4), -41)) && (jagdx.gv.b(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 3, DirectXGraphicsToolkit.a(param1, -55, param0)), -63));
         return stackIn_6_0;
     }
 
@@ -508,7 +508,7 @@ public final class ir extends aw {
         ji var3;
         if (param1 != -121) {
           var3 = (ji) null;
-          ir.a((ji) null, true);
+          DirectXGraphicsToolkit.a((ji) null, true);
         }
         if (param0 == tc.field_g) {
           return 2;
@@ -612,7 +612,7 @@ public final class ir extends aw {
         if (param1) {
           var7 = var7 | 16;
         }
-        this.field_Cc.SetTextureStageState(this.field_mc, var6, ir.a(param3, 21) | var7);
+        this.field_Cc.SetTextureStageState(this.field_mc, var6, DirectXGraphicsToolkit.a(param3, 21) | var7);
     }
 
     final void b(boolean param0) {
@@ -705,7 +705,7 @@ public final class ir extends aw {
         if (param0 > -80) {
           this.field_Cc = (jagdx.IDirect3DDevice) null;
         }
-        int var2 = !this.field_Ec[this.field_mc] ? 1 : ir.a(this.field_B[this.field_mc], -34);
+        int var2 = !this.field_Ec[this.field_mc] ? 1 : DirectXGraphicsToolkit.a(this.field_B[this.field_mc], -34);
         this.field_Cc.SetTextureStageState(this.field_mc, 4, var2);
     }
 
@@ -770,7 +770,7 @@ public final class ir extends aw {
         boolean stackIn_4_0 = false;
         var5 = -33 / ((70 - param0) / 42);
         var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_4_0 = (jagdx.gv.b(this.field_Xc.a(this.field_zc, var4), -85)) && (jagdx.gv.b(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 4, ir.a(param2, 68, param1)), -108));
+        stackIn_4_0 = (jagdx.gv.b(this.field_Xc.a(this.field_zc, var4), -85)) && (jagdx.gv.b(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 4, DirectXGraphicsToolkit.a(param2, 68, param1)), -108));
         return stackIn_4_0;
     }
 
@@ -903,7 +903,7 @@ public final class ir extends aw {
         if (param3) {
           var7 = var7 | 16;
         }
-        this.field_Cc.SetTextureStageState(this.field_mc, var6, ir.a(param4, 21) | var7);
+        this.field_Cc.SetTextureStageState(this.field_mc, var6, DirectXGraphicsToolkit.a(param4, 21) | var7);
     }
 
     final void a(byte param0, jagdx.IDirect3DPixelShader param1) {
@@ -914,9 +914,9 @@ public final class ir extends aw {
     final void a(int param0, int param1, int param2, ck param3) {
         if (param1 != 0) {
           Integer var6 = (Integer) null;
-          ir.createToolkit((java.awt.Canvas) null, (d) null, (ki) null, (Integer) null);
+          DirectXGraphicsToolkit.createToolkit((java.awt.Canvas) null, (d) null, (ki) null, (Integer) null);
         }
-        this.field_Cc.DrawPrimitive(ir.a(param3, (byte) -121), param0, param2);
+        this.field_Cc.DrawPrimitive(DirectXGraphicsToolkit.a(param3, (byte) -121), param0, param2);
     }
 
     final void A(int param0) {
@@ -939,7 +939,7 @@ public final class ir extends aw {
         super.d();
     }
 
-    private ir(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ki param10, int param11) {
+    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ki param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -1063,8 +1063,8 @@ public final class ir extends aw {
         this.field_Cc.BeginScene();
     }
 
-    final static ha createToolkit(java.awt.Canvas param0, d param1, ki param2, Integer param3) {
-        ir stackIn_42_0 = null;
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, ki param2, Integer param3) {
+        DirectXGraphicsToolkit stackIn_42_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
         int var5_int = 0;
@@ -1079,7 +1079,7 @@ public final class ir extends aw {
         jagdx.IDirect3DDevice var12_ref = null;
         kg var13 = null;
         jagdx.fg var14 = null;
-        ir var15 = null;
+        DirectXGraphicsToolkit var15 = null;
         var4 = null;
         try {
           var5_int = 0;
@@ -1125,7 +1125,7 @@ public final class ir extends aw {
             throw new RuntimeException("");
           }
           var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
-          if (!ir.a(var8, var6, var5_int, param3.intValue(), 6, var10)) {
+          if (!DirectXGraphicsToolkit.a(var8, var6, var5_int, param3.intValue(), 6, var10)) {
             throw new RuntimeException("");
           }
           var10.PresentationInterval = -2147483648;
@@ -1144,16 +1144,16 @@ public final class ir extends aw {
             var12_ref = var8.a(var5_int, var6, param0, 32 | var11, var10);
           }
           var13 = new kg(var12_ref.b(0), var12_ref.b());
-          var15 = new ir(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
+          var15 = new DirectXGraphicsToolkit(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
           var4 = var15;
           var15.e(false);
           stackIn_42_0 = var15;
-          return (ha) ((Object) stackIn_42_0);
+          return (GraphicsToolkit) ((Object) stackIn_42_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           if (var4 != null) {
-            ((ir) (var4)).d();
+            ((DirectXGraphicsToolkit) (var4)).d();
           }
           throw var5;
         }

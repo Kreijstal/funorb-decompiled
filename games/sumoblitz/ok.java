@@ -311,7 +311,7 @@ final class ok {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_gk = mr.field_b[var3];
             var4_ref_gk.a(false);
-            cb.a((byte) 79, var3);
+            IntrusiveDequeCursor.a((byte) 79, var3);
             var5 = var4_ref_gk.field_T + var4_ref_gk.field_t >> 1;
             var6 = var4_ref_gk.field_j + var4_ref_gk.field_f >> 1;
             var7 = var4_ref_gk.field_P + var4_ref_gk.field_S >> 1;
@@ -356,7 +356,7 @@ final class ok {
             }
             var21[var16] = -2147483648;
             var17 = mr.field_b[var16];
-            cb.a((byte) 79, var16);
+            IntrusiveDequeCursor.a((byte) 79, var16);
             for (var18 = 0; 3 > var18; var18++) {
               uc.field_b[var18] = uc.field_b[var18] + kh.field_c[var15][var18];
             }

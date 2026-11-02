@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class im {
-    static ha field_c;
+    static GraphicsToolkit field_c;
     static hr field_a;
-    static jn field_b;
+    static IntrusiveDeque field_b;
 
     public static void a(boolean param0) {
         if (!param0) {
@@ -26,7 +26,7 @@ final class im {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -23) {
-            field_c = (ha) null;
+            field_c = (GraphicsToolkit) null;
           }
           if (ad.field_p == vm.field_c) {
             stackIn_4_0 = null;

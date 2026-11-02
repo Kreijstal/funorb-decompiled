@@ -9,7 +9,7 @@ final class uk extends gt implements ai {
     private js field_mb;
 
     uk(dg param0, js param1) {
-        super(param0, tq.field_a, ClientException.field_c, false, false);
+        super(param0, tq.field_a, ClientException.creatingYourAccountText, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
@@ -45,7 +45,7 @@ final class uk extends gt implements ai {
                 if (!param0) {
                   gj.c(0);
                 }
-                var4 = rn.field_a;
+                var4 = rn.unfortunatelyYouAreNotText;
                 this.field_pb = true;
               }
             } else {
@@ -55,36 +55,36 @@ final class uk extends gt implements ai {
               }
             }
           } else {
-            var4 = vl.field_b;
+            var4 = vl.accountCreatedSuccessfullyText;
           }
           var5 = -1 / ((-1 - param1) / 45);
           var6 = new lc((gt) (this), tq.field_a, var4);
           if (!param2.field_b) {
             if (this.field_pb) {
-              var6.a(wd.field_h, (byte) -123, (qm) (this));
+              var6.a(wd.continueText, (byte) -123, (qm) (this));
             } else {
               if (param2.field_e != 5) {
-                var6.a(cq.field_c, -1, true);
+                var6.a(cq.backText, -1, true);
               } else {
-                var6.a(vf.field_e, 11, true);
-                var6.a(of.field_k, 17, true);
+                var6.a(vf.reloadGameText, 11, true);
+                var6.a(of.quitToWebsiteText, 17, true);
               }
             }
             if (param2.field_e == 3) {
-              var6.a(lq.field_c, 7, true);
+              var6.a(lq.toServerListText, 7, true);
             } else {
               if (param2.field_e != 6) {
                 this.b((byte) -123, var6);
                 return;
               }
-              var6.a(eq.field_w, 9, true);
+              var6.a(eq.toCustomerSupportText, 9, true);
             }
           } else {
             if (param2.field_c) {
               this.b((byte) -95, new th(this));
               return;
             }
-            var6.a(wd.field_h, (byte) -123, (qm) (this));
+            var6.a(wd.continueText, (byte) -123, (qm) (this));
           }
           this.b((byte) -123, var6);
           return;
@@ -103,7 +103,7 @@ final class uk extends gt implements ai {
     }
 
     final void f(boolean param0) {
-        this.a(param0, (byte) 127, au.a(-91, rn.field_a, 248));
+        this.a(param0, (byte) 127, au.a(-91, rn.unfortunatelyYouAreNotText, 248));
     }
 
     public final void a(int param0, int param1, wp param2, int param3, int param4) {

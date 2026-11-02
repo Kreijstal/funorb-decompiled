@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lb {
-    static String[] field_c;
+    static String[] yesNoLabels;
     static int field_b;
     static long field_a;
 
     public static void a(int param0) {
-        field_c = null;
+        yesNoLabels = null;
         if (param0 != 0) {
-          field_c = (String[]) null;
+          yesNoLabels = (String[]) null;
         }
     }
 
@@ -51,6 +51,6 @@ final class lb {
 
     static {
         field_b = 0;
-        field_c = new String[]{"Yes", "No"};
+        yesNoLabels = new String[]{"Yes", "No"};
     }
 }

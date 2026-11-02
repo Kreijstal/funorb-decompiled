@@ -10,8 +10,8 @@ final class uv extends gm {
 
     final static int b(int param0) {
         if (param0 != -25843) {
-          jn var2 = (jn) null;
-          uv.a(-92, -128, -112, -123, (jn) null, -24);
+          IntrusiveDeque var2 = (IntrusiveDeque) null;
+          uv.a(-92, -128, -112, -123, (IntrusiveDeque) null, -24);
           return -hu.field_b + dj.field_n;
         }
         return -hu.field_b + dj.field_n;
@@ -26,7 +26,7 @@ final class uv extends gm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, jn param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, IntrusiveDeque param4, int param5) {
         float[] dupTemp$2 = null;
         int var6_int = 0;
         float[] var7 = null;
@@ -85,7 +85,7 @@ final class uv extends gm {
         }
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;

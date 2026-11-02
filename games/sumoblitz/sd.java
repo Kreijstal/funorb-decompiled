@@ -8,7 +8,7 @@ final class sd {
     private SecondaryNodeDeque field_h;
     private int field_g;
     static PacketBuffer field_e;
-    static String field_b;
+    static String achievementsThisGameText;
     private IterableNodeHashTable field_c;
     static ri[] field_a;
     static int field_f;
@@ -109,12 +109,12 @@ final class sd {
           var6 = new av(var5, var7.field_z);
           this.field_c.a(-20657, var6, var7.key);
           this.field_h.a((DualLinkNode) (var6), (byte) -122);
-          ((jt) ((Object) var6)).field_l = 0L;
+          ((jt) ((Object) var6)).secondaryKey = 0L;
           var7.b(false);
           var7.c(-5106);
         } else {
           this.field_h.a((DualLinkNode) (var7), (byte) -124);
-          var7.field_l = 0L;
+          var7.secondaryKey = 0L;
         }
         if (param1 <= 43) {
           this.field_d = 126;
@@ -140,8 +140,8 @@ final class sd {
               this.field_d = this.field_d + var3.field_z;
             }
           } else {
-            fieldTemp$0 = var3.field_l + 1L;
-            var3.field_l = var3.field_l + 1L;
+            fieldTemp$0 = var3.secondaryKey + 1L;
+            var3.secondaryKey = var3.secondaryKey + 1L;
             if (fieldTemp$0 <= (long)param0) {
               var3 = (jt) (this.field_h.a((byte) -122));
               continue;
@@ -539,7 +539,7 @@ final class sd {
           field_a = (ri[]) null;
         }
         field_a = null;
-        field_b = null;
+        achievementsThisGameText = null;
         field_e = null;
     }
 
@@ -561,7 +561,7 @@ final class sd {
           this.field_c.a(-20657, var6_ref, param3);
           int var7 = 2 % ((12 - param1) / 33);
           this.field_h.a((DualLinkNode) (var6_ref), (byte) -122);
-          ((jt) ((Object) var6_ref)).field_l = 0L;
+          ((jt) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -583,6 +583,6 @@ final class sd {
 
     static {
         field_e = new PacketBuffer(256);
-        field_b = "ACHIEVEMENTS THIS GAME";
+        achievementsThisGameText = "ACHIEVEMENTS THIS GAME";
     }
 }

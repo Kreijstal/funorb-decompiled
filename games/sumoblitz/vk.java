@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vk {
-    static String[] field_b;
+    static String[] levelLoadStepLabels;
     int field_a;
     private fr field_c;
     static String field_d;
@@ -92,11 +92,11 @@ final class vk {
         if (param0 > -31) {
           vk.a(-31);
         }
-        qr.field_c = new jn();
+        qr.field_c = new IntrusiveDeque();
     }
 
     public static void b(int param0) {
-        field_b = null;
+        levelLoadStepLabels = null;
         if (param0 != 429166529) {
           vk.a(100, 10, (byte) 96, 17, -1, -25, true);
         }
@@ -113,7 +113,7 @@ final class vk {
     }
 
     static {
-        field_b = new String[]{"Placing enemies...", "Placing terrain..."};
+        levelLoadStepLabels = new String[]{"Placing enemies...", "Placing terrain..."};
         field_d = null;
     }
 }

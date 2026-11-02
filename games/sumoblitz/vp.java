@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vp {
-    static String field_b;
+    static String discardText;
     static qn field_e;
     static double[] field_d;
     static int[] field_c;
@@ -10,14 +10,14 @@ final class vp {
     private static String field_z;
 
     public static void a(byte param0) {
-        field_b = null;
+        discardText = null;
         if (param0 < -95) {
           field_c = null;
           field_e = null;
           field_d = null;
           return;
         }
-        field_b = (String) null;
+        discardText = (String) null;
         field_c = null;
         field_e = null;
         field_d = null;
@@ -26,6 +26,6 @@ final class vp {
     static {
         field_z = "vp.A(";
         field_d = new double[]{1.0, 1.5, 2.0, 1.5, 0.5, 1.25, 5.0};
-        field_b = "Discard";
+        discardText = "Discard";
     }
 }

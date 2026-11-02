@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class aw extends ha {
+abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     sk field_Mb;
     private Hashtable field_Q;
     Object field_Ib;
@@ -12,7 +12,7 @@ abstract class aw extends ha {
     static tf field_t;
     ki field_ab;
     private jagex3.graphics2.hw.NativeInterface field_nc;
-    private jn field_lb;
+    private IntrusiveDeque field_lb;
     int field_rb;
     long field_peer;
     private jaclib.memory.heap.NativeHeap field_gb;
@@ -135,7 +135,7 @@ abstract class aw extends ha {
         float[] var4;
         float[] var5;
         if (param0 != -88) {
-          aw.j((byte) -98);
+          HardwareGraphicsToolkit.j((byte) -98);
         }
         if (!this.field_zb) {
           var3 = this.field_fc;
@@ -1151,7 +1151,7 @@ abstract class aw extends ha {
         return;
     }
 
-    final static ha a(d param0, java.awt.Canvas param1, int param2, int param3) {
+    final static GraphicsToolkit a(d param0, java.awt.Canvas param1, int param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
         fr stackIn_3_0 = null;
@@ -1164,10 +1164,10 @@ abstract class aw extends ha {
         try {
           if (param3 != 27541) {
             var5 = (String) null;
-            aw.a((String) null, (String) null, (String) null, false);
+            HardwareGraphicsToolkit.a((String) null, (String) null, (String) null, false);
           }
           stackIn_3_0 = new fr(param1, param0, param2);
-          return (ha) ((Object) stackIn_3_0);
+          return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -1462,7 +1462,7 @@ abstract class aw extends ha {
 
     abstract void X(int param0);
 
-    aw(java.awt.Canvas param0, Object param1, d param2, ki param3, int param4, int param5) {
+    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, d param2, ki param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         wm var9 = null;
@@ -1479,7 +1479,7 @@ abstract class aw extends ha {
         Throwable decompiledCaughtException = null;
         Throwable var7 = null;
         RuntimeException var7_ref = null;
-        this.field_lb = new jn();
+        this.field_lb = new IntrusiveDeque();
         this.field_Db = true;
         this.field_Lb = new ut();
         ut discarded$3 = new ut();
@@ -2182,7 +2182,7 @@ abstract class aw extends ha {
 
     final ef d(byte param0) {
         if (param0 != 122) {
-          aw.j((byte) 73);
+          HardwareGraphicsToolkit.j((byte) 73);
         }
         if (this.field_uc == null) {
           return null;

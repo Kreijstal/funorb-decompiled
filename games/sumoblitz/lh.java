@@ -7,13 +7,13 @@ final class lh extends IntrusiveNode {
     static ri field_k;
     boolean field_o;
     static ji field_l;
-    static String field_p;
+    static String resetStatsText;
 
     public static void a(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;
-        field_p = null;
+        resetStatsText = null;
         int var1 = -90 / ((param0 - 71) / 51);
     }
 
@@ -82,6 +82,6 @@ final class lh extends IntrusiveNode {
     static {
         field_n = new il();
         field_l = new ji();
-        field_p = "reset stats";
+        resetStatsText = "reset stats";
     }
 }

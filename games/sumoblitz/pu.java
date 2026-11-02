@@ -12,10 +12,10 @@ final class pu extends hr {
     static boolean field_m;
     private int field_n;
     private int field_i;
-    private aw field_d;
+    private HardwareGraphicsToolkit field_d;
     private boolean field_h;
     private int field_c;
-    static String field_a;
+    static String blastReadyText;
 
     final int d() {
         return this.field_b + this.field_l + this.field_f;
@@ -171,7 +171,7 @@ final class pu extends hr {
           ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
           return;
         }
-        field_a = (String) null;
+        blastReadyText = (String) null;
         c.field_u[1] = iv.field_i;
         c.field_u[0] = ki.field_f;
         c.field_u[2] = hc.field_f;
@@ -180,7 +180,7 @@ final class pu extends hr {
 
     public static void a(int param0) {
         field_e = null;
-        field_a = null;
+        blastReadyText = null;
         if (param0 != 1) {
           pu.a(123);
         }
@@ -190,7 +190,7 @@ final class pu extends hr {
         return this.field_l;
     }
 
-    pu(aw param0, int param1, int param2, int[] param3, int param4, int param5) {
+    pu(HardwareGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         RuntimeException var7 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -272,6 +272,6 @@ final class pu extends hr {
     }
 
     static {
-        field_a = "BLAST READY";
+        blastReadyText = "BLAST READY";
     }
 }

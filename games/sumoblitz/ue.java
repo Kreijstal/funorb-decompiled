@@ -7,7 +7,7 @@ final class ue extends gm {
     private int field_q;
     static ri field_p;
     static volatile boolean field_o;
-    private wb[] field_r;
+    private Sprite[] field_r;
 
     public ue() {
         this(2188450, 2591221, 9543);
@@ -20,7 +20,7 @@ final class ue extends gm {
         field_p = null;
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;

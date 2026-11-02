@@ -36,37 +36,37 @@ final class tc extends na {
           }
           var5 = var4;
           if (ao.a(var5, 30996)) {
-            stackIn_5_0 = sg.field_k;
+            stackIn_5_0 = sg.passwordsMustBeBetweenText;
             return stackIn_5_0;
           }
           if (me.a(false, var5)) {
-            stackIn_8_0 = ur.field_X;
+            stackIn_8_0 = ur.passwordsCanOnlyContainText;
             return stackIn_8_0;
           }
           if (hp.a(var5, true)) {
-            stackIn_11_0 = mc.field_J;
+            stackIn_11_0 = mc.thisPasswordContainsRepeatedText;
             return stackIn_11_0;
           }
           if (this.b(-53, param1)) {
-            stackIn_14_0 = pc.field_a;
+            stackIn_14_0 = pc.thisPasswordContainsYourText;
             return stackIn_14_0;
           }
           if (var3.length() <= 0) {
-            stackIn_28_0 = ka.field_a;
+            stackIn_28_0 = ka.passwordIsValidText;
             return stackIn_28_0;
           }
           if (gt.a(var5, var3, 82)) {
-            stackIn_19_0 = vr.field_F;
+            stackIn_19_0 = vr.thisPasswordContainsYourText;
             return stackIn_19_0;
           }
           if (jd.a(var5, (byte) 114, var3)) {
-            stackIn_22_0 = mm.field_e;
+            stackIn_22_0 = mm.thisPasswordIsPartText;
             return stackIn_22_0;
           }
           if (!wv.a(false, var5, var3)) {
-            return sg.field_k;
+            return sg.passwordsMustBeBetweenText;
           }
-          stackIn_26_0 = vr.field_F;
+          stackIn_26_0 = vr.thisPasswordContainsYourText;
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

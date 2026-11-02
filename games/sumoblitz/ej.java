@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ej extends rq {
-    static String field_g;
+    static String loginText;
     private boolean field_e;
     private sk field_f;
     private boolean field_h;
@@ -41,13 +41,13 @@ final class ej extends rq {
 
     public static void d(boolean param0) {
         if (param0) {
-          field_g = (String) null;
+          loginText = (String) null;
         }
-        field_g = null;
+        loginText = null;
         field_i = null;
     }
 
-    ej(on param0, ki param1, sk param2) {
+    ej(OpenGlGraphicsToolkit param0, ki param1, sk param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -421,6 +421,6 @@ final class ej extends rq {
     }
 
     static {
-        field_g = "Login: ";
+        loginText = "Login: ";
     }
 }

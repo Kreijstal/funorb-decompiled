@@ -5,7 +5,7 @@ final class vh extends rq {
     private static float[] field_g;
     private jagdx.IDirect3DVertexShader field_e;
     private sk field_h;
-    private ir field_f;
+    private DirectXGraphicsToolkit field_f;
 
     final void c(boolean param0) {
         this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
@@ -37,7 +37,7 @@ final class vh extends rq {
           }
           return;
         }
-        this.field_f = (ir) null;
+        this.field_f = (DirectXGraphicsToolkit) null;
         jagdx.IDirect3DDevice var6 = this.field_f.field_Cc;
         if (this.field_h.field_g) {
           var5_floatLifetime1 = (float)(this.field_b.field_kc % 4000) / 4000.0f;
@@ -120,11 +120,11 @@ final class vh extends rq {
 
     final void a(int param0, int param1, ed param2) {
         if (param1 != 18834) {
-          this.field_f = (ir) null;
+          this.field_f = (DirectXGraphicsToolkit) null;
         }
     }
 
-    vh(ir param0, ki param1, sk param2) {
+    vh(DirectXGraphicsToolkit param0, ki param1, sk param2) {
         super(param0);
         this.field_f = param0;
         this.field_h = param2;
@@ -173,7 +173,7 @@ final class vh extends rq {
           this.a(260);
           return;
         }
-        this.field_f = (ir) null;
+        this.field_f = (DirectXGraphicsToolkit) null;
         this.field_f.a(-51, this.field_e);
         this.c((byte) 40);
         this.a((byte) -83);

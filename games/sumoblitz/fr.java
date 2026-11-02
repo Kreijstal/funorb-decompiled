@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fr extends ha {
+final class fr extends GraphicsToolkit {
     private int field_s;
     private long field_ob;
     private java.awt.Canvas field_ab;
@@ -13,7 +13,7 @@ final class fr extends ha {
     jaggl.OpenGL field_y;
     private Hashtable field_Gb;
     private int field_Z;
-    static String field_lb;
+    static String unfortunatelyYourConfigurationDoesnText;
     private ic field_O;
     private kk field_Pb;
     int field_X;
@@ -21,7 +21,7 @@ final class fr extends ha {
     private iv field_Kb;
     int field_Bc;
     private gq field_U;
-    private jn field_oc;
+    private IntrusiveDeque field_oc;
     jaclib.memory.heap.NativeHeap field_pb;
     int field_Ac;
     private boolean field_jc;
@@ -42,13 +42,13 @@ final class fr extends ha {
     int field_Xb;
     private int field_V;
     private int field_ic;
-    private jn field_fb;
-    private jn field_j;
-    private jn field_q;
-    private jn field_tc;
-    private jn field_fc;
-    private jn field_qb;
-    private jn field_cc;
+    private IntrusiveDeque field_fb;
+    private IntrusiveDeque field_j;
+    private IntrusiveDeque field_q;
+    private IntrusiveDeque field_tc;
+    private IntrusiveDeque field_fc;
+    private IntrusiveDeque field_qb;
+    private IntrusiveDeque field_cc;
     private int field_nb;
     private long field_vc;
     private int field_Ab;
@@ -333,7 +333,7 @@ final class fr extends ha {
         if (param0 != 66) {
           return;
         }
-        field_lb = null;
+        unfortunatelyYourConfigurationDoesnText = null;
     }
 
     private final void f(byte param0) {
@@ -569,7 +569,7 @@ final class fr extends ha {
         dl discarded$0 = new dl();
         dl discarded$1 = new dl();
         this.field_jc = false;
-        this.field_oc = new jn();
+        this.field_oc = new IntrusiveDeque();
         this.field_Jb = -1;
         this.field_qc = -1;
         this.field_m = new mw[4];
@@ -578,13 +578,13 @@ final class fr extends ha {
         this.field_dc = new mw[4];
         this.field_Db = new ro();
         this.field_nc = new te(16);
-        this.field_fb = new jn();
-        this.field_j = new jn();
-        this.field_q = new jn();
-        this.field_tc = new jn();
-        this.field_fc = new jn();
-        this.field_qb = new jn();
-        this.field_cc = new jn();
+        this.field_fb = new IntrusiveDeque();
+        this.field_j = new IntrusiveDeque();
+        this.field_q = new IntrusiveDeque();
+        this.field_tc = new IntrusiveDeque();
+        this.field_fc = new IntrusiveDeque();
+        this.field_qb = new IntrusiveDeque();
+        this.field_cc = new IntrusiveDeque();
         dl discarded$2 = new dl();
         this.field_M = new dl();
         this.field_mc = new dl();
@@ -956,7 +956,7 @@ final class fr extends ha {
           this.field_mb = false;
         }
         if (param0) {
-          this.field_cc = (jn) null;
+          this.field_cc = (IntrusiveDeque) null;
         }
     }
 
@@ -2167,7 +2167,7 @@ final class fr extends ha {
     private final void h(byte param0) {
         jaggl.OpenGL.glViewport(this.field_pc, this.field_bb, this.field_Z, this.field_Ec);
         if (param0 >= -16) {
-          this.field_qb = (jn) null;
+          this.field_qb = (IntrusiveDeque) null;
         }
     }
 
@@ -2459,7 +2459,7 @@ final class fr extends ha {
           this.field_nb = this.field_nb & -32;
         }
         if (param0 <= 52) {
-          this.field_oc = (jn) null;
+          this.field_oc = (IntrusiveDeque) null;
         }
     }
 
@@ -2481,6 +2481,6 @@ final class fr extends ha {
     }
 
     static {
-        field_lb = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
+        unfortunatelyYourConfigurationDoesnText = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }
 }

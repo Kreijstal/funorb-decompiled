@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class rq {
-    static String field_a;
+    static String enterTheNameYouText;
     static boolean field_d;
     static ri field_c;
-    aw field_b;
+    HardwareGraphicsToolkit field_b;
 
     void b(int param0) {
         int var2 = -35 / ((param0 - 41) / 46);
@@ -35,7 +35,7 @@ abstract class rq {
 
     public static void c(int param0) {
         field_c = null;
-        field_a = null;
+        enterTheNameYouText = null;
         if (param0 >= -99) {
           field_c = (ri) null;
         }
@@ -65,7 +65,7 @@ abstract class rq {
         }
     }
 
-    rq(aw param0) {
+    rq(HardwareGraphicsToolkit param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
@@ -138,7 +138,7 @@ abstract class rq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 28) {
-            field_a = (String) null;
+            enterTheNameYouText = (String) null;
           }
           var4_int = param1.a(0, param3);
           var5 = param1.a(var4_int, param0, (byte) 127);
@@ -181,6 +181,6 @@ abstract class rq {
     abstract void a(boolean param0, byte param1);
 
     static {
-        field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
+        enterTheNameYouText = "Enter the name you'd prefer. This is the name displayed to other players.";
     }
 }

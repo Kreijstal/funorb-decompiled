@@ -8,20 +8,20 @@ final class pd extends IntrusiveNode {
     static int field_l;
     static int field_p;
     static Object field_n;
-    static String field_r;
+    static String nameText;
     static int[] field_q;
 
     public static void a(byte param0) {
         if (param0 <= -117) {
           field_q = null;
-          field_r = null;
+          nameText = null;
           field_n = null;
           field_m = null;
           return;
         }
         pd.a((byte) 113);
         field_q = null;
-        field_r = null;
+        nameText = null;
         field_n = null;
         field_m = null;
     }
@@ -83,6 +83,6 @@ final class pd extends IntrusiveNode {
 
     static {
         field_m = new hv();
-        field_r = "Name";
+        nameText = "Name";
     }
 }

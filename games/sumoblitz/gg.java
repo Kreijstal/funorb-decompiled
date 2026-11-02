@@ -83,8 +83,8 @@ final class gg extends DualLinkNode {
           if (param0 <= 81) {
             field_t = (qr) null;
           }
-          bj.field_b = new jn();
-          is.field_c = new jn();
+          bj.field_b = new IntrusiveDeque();
+          is.field_c = new IntrusiveDeque();
           if (oh.field_e != -1) {
             is.field_c = dr.field_S[oh.field_e].field_d;
           }
@@ -97,7 +97,7 @@ final class gg extends DualLinkNode {
           if (-1 != oh.field_e) {
             if (!rh.field_r[oh.field_e]) {
               for (var2 = cj.field_e[oh.field_e]; var2 < 6 + cj.field_e[oh.field_e]; var2++) {
-                ku.field_J[var1_int] = cb.field_a[var2];
+                ku.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
                 var1_int++;
               }
             } else {
@@ -108,7 +108,7 @@ final class gg extends DualLinkNode {
           if (5 >= gj.a((byte) -84, 10)) {
             fb.field_a = fb.field_a + iw.field_b;
           } else {
-            ha.field_f = ha.field_f + iw.field_b;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.field_b;
           }
           iw.field_b = 0;
           td.field_m = false;

@@ -6,7 +6,7 @@ final class wd extends se {
     static GameKeyHandler field_e;
     private String field_g;
     static ki field_j;
-    static String field_h;
+    static String continueText;
     static du field_f;
 
     final static ki a(int param0, byte param1) {
@@ -47,14 +47,14 @@ final class wd extends se {
         if (param0 == 88) {
           field_j = null;
           field_f = null;
-          field_h = null;
+          continueText = null;
           field_e = null;
           return;
         }
-        field_h = (String) null;
+        continueText = (String) null;
         field_j = null;
         field_f = null;
-        field_h = null;
+        continueText = null;
         field_e = null;
     }
 
@@ -67,7 +67,7 @@ final class wd extends se {
         var1_ref = field_e;
         synchronized (var1_ref) {
           if (param0 > -20) {
-            field_h = (String) null;
+            continueText = (String) null;
           }
           if (ua.field_a == bj.field_a) {
             return false;
@@ -91,6 +91,6 @@ final class wd extends se {
 
     static {
         field_e = new GameKeyHandler();
-        field_h = "Continue";
+        continueText = "Continue";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qi {
-    static String[] field_a;
+    static String[] loadingTextTranslations;
 
     final static void a(int param0) {
         int fieldTemp$0 = 0;
@@ -25,7 +25,7 @@ final class qi {
           if (param0 == 8) {
             return;
           }
-          field_a = (String[]) null;
+          loadingTextTranslations = (String[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,14 +36,14 @@ final class qi {
 
     public static void a(byte param0) {
         if (param0 != 16) {
-          field_a = (String[]) null;
-          field_a = null;
+          loadingTextTranslations = (String[]) null;
+          loadingTextTranslations = null;
           return;
         }
-        field_a = null;
+        loadingTextTranslations = null;
     }
 
     static {
-        field_a = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
+        loadingTextTranslations = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
     }
 }

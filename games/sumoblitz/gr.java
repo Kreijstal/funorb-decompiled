@@ -6,7 +6,7 @@ final class gr extends bq {
     private ch field_j;
     static int[] field_h;
     private boolean field_k;
-    static String field_g;
+    static String updatesWillSentToText;
     private sn field_i;
     private boolean field_f;
     static int field_l;
@@ -71,7 +71,7 @@ final class gr extends bq {
     }
 
     public static void c(byte param0) {
-        field_g = null;
+        updatesWillSentToText = null;
         field_h = null;
         if (param0 != -19) {
           field_e = true;
@@ -218,7 +218,7 @@ final class gr extends bq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 53) {
-            field_g = (String) null;
+            updatesWillSentToText = (String) null;
           }
           stackIn_3_0 = sj.a(false, 126, param0);
           return stackIn_3_0;
@@ -238,7 +238,7 @@ final class gr extends bq {
 
     static {
         field_h = new int[1000];
-        field_g = "Updates will sent to the email address you've given";
+        updatesWillSentToText = "Updates will sent to the email address you've given";
         field_e = false;
     }
 }

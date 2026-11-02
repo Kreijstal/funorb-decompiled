@@ -11,7 +11,7 @@ final class mn {
     static ri field_c;
     private int field_h;
     private gn[] field_l;
-    static String field_k;
+    static String highText;
     static int field_i;
     static ri[] field_b;
 
@@ -21,7 +21,7 @@ final class mn {
           if (null != he.field_n) {
             he.field_n.k(-43);
           }
-          aw.j((byte) 89);
+          HardwareGraphicsToolkit.j((byte) 89);
           if (param0 != -116) {
             field_g = (String[]) null;
             return;
@@ -31,7 +31,7 @@ final class mn {
         if (null != he.field_n) {
           he.field_n.k(-43);
         }
-        aw.j((byte) 89);
+        HardwareGraphicsToolkit.j((byte) 89);
         if (param0 != -116) {
           field_g = (String[]) null;
           return;
@@ -189,7 +189,7 @@ final class mn {
         field_b = null;
         field_j = null;
         field_c = null;
-        field_k = null;
+        highText = null;
         if (param0 == 17) {
           return;
         }
@@ -201,7 +201,7 @@ final class mn {
     }
 
     static {
-        field_k = "High";
+        highText = "High";
         field_i = 0;
     }
 }

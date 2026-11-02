@@ -5,9 +5,9 @@ final class vr extends wp {
     static String field_G;
     private int field_E;
     private v field_H;
-    static String field_F;
+    static String thisPasswordContainsYourText;
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_E = this.field_E + 1;
           int var5_int = 46 / ((param1 + 25) / 45);
@@ -28,23 +28,23 @@ final class vr extends wp {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        wb var16 = null;
-        wb var17 = null;
-        wb var14 = null;
-        wb var15 = null;
+        Sprite var16 = null;
+        Sprite var17 = null;
+        Sprite var14 = null;
+        Sprite var15 = null;
         int var9 = 0;
         int var10 = 0;
-        pk var12 = null;
+        UiWidget var12 = null;
         int var11 = Sumoblitz.field_L ? 1 : 0;
-        pk var12Lifetime1;
-        pk var12Lifetime2;
-        pk var12Lifetime3;
-        pk var12Lifetime4;
-        pk var12Lifetime5;
-        pk var12Lifetime6;
-        pk var12Lifetime1Lifetime1;
-        pk var12Lifetime1Lifetime2;
-        pk var12Lifetime1Lifetime3;
+        UiWidget var12Lifetime1;
+        UiWidget var12Lifetime2;
+        UiWidget var12Lifetime3;
+        UiWidget var12Lifetime4;
+        UiWidget var12Lifetime5;
+        UiWidget var12Lifetime6;
+        UiWidget var12Lifetime1Lifetime1;
+        UiWidget var12Lifetime1Lifetime2;
+        UiWidget var12Lifetime1Lifetime3;
         int var9Lifetime1;
         int var10Lifetime1;
         super.a(param0, param1, (byte) -122, param3);
@@ -59,26 +59,26 @@ final class vr extends wp {
           var9 = var16.field_z << 1;
           var10 = var16.field_w << 1;
           if (kv.field_a == null) {
-            kv.field_a = new wb(var9, var10);
+            kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (param2 >= -35) {
-              var12 = (pk) null;
-              this.a(86, -51, (pk) null, 16);
+              var12 = (UiWidget) null;
+              this.a(86, -51, (UiWidget) null, 16);
             }
             return;
           }
           if (var9 > kv.field_a.field_x) {
-            kv.field_a = new wb(var9, var10);
+            kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (param2 >= -35) {
-              var12Lifetime4 = (pk) null;
-              this.a(86, -51, (pk) null, 16);
+              var12Lifetime4 = (UiWidget) null;
+              this.a(86, -51, (UiWidget) null, 16);
             }
             return;
           }
@@ -89,19 +89,19 @@ final class vr extends wp {
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (param2 >= -35) {
-              var12Lifetime5 = (pk) null;
-              this.a(86, -51, (pk) null, 16);
+              var12Lifetime5 = (UiWidget) null;
+              this.a(86, -51, (UiWidget) null, 16);
             }
             return;
           }
-          kv.field_a = new wb(var9, var10);
+          kv.field_a = new Sprite(var9, var10);
           jq.a(7161, kv.field_a);
           var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
           if (param2 >= -35) {
-            var12Lifetime6 = (pk) null;
-            this.a(86, -51, (pk) null, 16);
+            var12Lifetime6 = (UiWidget) null;
+            this.a(86, -51, (UiWidget) null, 16);
           }
           return;
         }
@@ -110,31 +110,31 @@ final class vr extends wp {
           var9Lifetime1 = var17.field_z << 1;
           var10Lifetime1 = var17.field_w << 1;
           if (kv.field_a == null) {
-            kv.field_a = new wb(var9Lifetime1, var10Lifetime1);
+            kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (param2 >= -35) {
-              var12Lifetime1 = (pk) null;
-              this.a(86, -51, (pk) null, 16);
+              var12Lifetime1 = (UiWidget) null;
+              this.a(86, -51, (UiWidget) null, 16);
             }
             return;
           }
           if (var9Lifetime1 > kv.field_a.field_x) {
-            kv.field_a = new wb(var9Lifetime1, var10Lifetime1);
+            kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (param2 >= -35) {
-              var12Lifetime1Lifetime1 = (pk) null;
-              this.a(86, -51, (pk) null, 16);
+              var12Lifetime1Lifetime1 = (UiWidget) null;
+              this.a(86, -51, (UiWidget) null, 16);
             }
             return;
           }
           if (var10Lifetime1 > kv.field_a.field_u) {
-            kv.field_a = new wb(var9Lifetime1, var10Lifetime1);
+            kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
@@ -142,8 +142,8 @@ final class vr extends wp {
             if (param2 < -35) {
               return;
             }
-            var12Lifetime1Lifetime2 = (pk) null;
-            this.a(86, -51, (pk) null, 16);
+            var12Lifetime1Lifetime2 = (UiWidget) null;
+            this.a(86, -51, (UiWidget) null, 16);
             return;
           }
           jq.a(7161, kv.field_a);
@@ -154,8 +154,8 @@ final class vr extends wp {
           if (param2 < -35) {
             return;
           }
-          var12Lifetime1Lifetime3 = (pk) null;
-          this.a(86, -51, (pk) null, 16);
+          var12Lifetime1Lifetime3 = (UiWidget) null;
+          this.a(86, -51, (UiWidget) null, 16);
           return;
         }
         if (qr.field_e == var8) {
@@ -164,8 +164,8 @@ final class vr extends wp {
           if (param2 < -35) {
             return;
           }
-          var12Lifetime2 = (pk) null;
-          this.a(86, -51, (pk) null, 16);
+          var12Lifetime2 = (UiWidget) null;
+          this.a(86, -51, (UiWidget) null, 16);
           return;
         }
         if (var8 == qe.field_a) {
@@ -175,8 +175,8 @@ final class vr extends wp {
         if (param2 < -35) {
           return;
         }
-        var12Lifetime3 = (pk) null;
-        this.a(86, -51, (pk) null, 16);
+        var12Lifetime3 = (UiWidget) null;
+        this.a(86, -51, (UiWidget) null, 16);
     }
 
     final String c(int param0) {
@@ -190,7 +190,7 @@ final class vr extends wp {
         return null;
     }
 
-    final boolean a(pk param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -218,7 +218,7 @@ final class vr extends wp {
 
     public static void a(int param0) {
         field_G = null;
-        field_F = null;
+        thisPasswordContainsYourText = null;
         if (param0 != -21433) {
           java.awt.Component var2 = (java.awt.Component) null;
           vr.a((java.awt.Component) null, -80);
@@ -234,6 +234,6 @@ final class vr extends wp {
     }
 
     static {
-        field_F = "This password contains your Player Name, and would be easy to guess";
+        thisPasswordContainsYourText = "This password contains your Player Name, and would be easy to guess";
     }
 }

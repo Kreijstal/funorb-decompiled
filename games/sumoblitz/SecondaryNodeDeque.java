@@ -15,14 +15,14 @@ final class SecondaryNodeDeque implements Iterable {
         DualLinkNode var2Lifetime1;
         if (param0 != -61) {
           SecondaryNodeDeque.a(102);
-          var2 = this.field_c.field_m;
+          var2 = this.field_c.secondaryNext;
           if (var2 != this.field_c) {
             var2.c(param0 - 5045);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_c.field_m;
+        var2Lifetime1 = this.field_c.secondaryNext;
         if (var2Lifetime1 != this.field_c) {
           var2Lifetime1.c(param0 - 5045);
           return var2Lifetime1;
@@ -44,7 +44,7 @@ final class SecondaryNodeDeque implements Iterable {
             SecondaryNodeDeque.a(-51);
           }
           if (param0 == null) {
-            var3 = this.field_c.field_m;
+            var3 = this.field_c.secondaryNext;
           } else {
             var3 = param0;
           }
@@ -53,7 +53,7 @@ final class SecondaryNodeDeque implements Iterable {
             stackIn_8_0 = null;
             return (DualLinkNode) (stackIn_8_0);
           }
-          this.field_a = var3.field_m;
+          this.field_a = var3.secondaryNext;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class SecondaryNodeDeque implements Iterable {
           return null;
         }
         if (param0 == -122) {
-          this.field_a = var2.field_m;
+          this.field_a = var2.secondaryNext;
           return var2;
         }
         return (DualLinkNode) null;
@@ -103,22 +103,22 @@ final class SecondaryNodeDeque implements Iterable {
 
     SecondaryNodeDeque() {
         this.field_c = new DualLinkNode();
-        this.field_c.field_o = this.field_c;
-        this.field_c.field_m = this.field_c;
+        this.field_c.secondaryPrevious = this.field_c;
+        this.field_c.secondaryNext = this.field_c;
     }
 
     final void a(DualLinkNode param0, byte param1) {
-        if (param0.field_o != null) {
+        if (param0.secondaryPrevious != null) {
           param0.c(-5106);
         }
-        param0.field_m = this.field_c;
-        param0.field_o = this.field_c.field_o;
+        param0.secondaryNext = this.field_c;
+        param0.secondaryPrevious = this.field_c.secondaryPrevious;
         if (param1 >= -103) {
           return;
         }
         try {
-          param0.field_o.field_m = param0;
-          param0.field_m.field_o = param0;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "hl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

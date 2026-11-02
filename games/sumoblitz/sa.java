@@ -34,7 +34,7 @@ final class sa extends bp implements ru {
         return param0 / (float)this.field_i;
     }
 
-    sa(on param0, iw param1, io param2, int param3, int param4) {
+    sa(OpenGlGraphicsToolkit param0, iw param1, io param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
           this.field_i = param3;
@@ -91,7 +91,7 @@ final class sa extends bp implements ru {
         }
     }
 
-    sa(on param0, iw param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+    sa(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
         super(param0, 3553, param1, io.field_d, param2 * param3, param4);
         RuntimeException var9 = null;
         RuntimeException stackIn_9_0 = null;
@@ -142,7 +142,7 @@ final class sa extends bp implements ru {
         }
     }
 
-    sa(on param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    sa(OpenGlGraphicsToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, 3553, nl.field_p, io.field_g, param1 * param2, param3);
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
@@ -223,7 +223,7 @@ final class sa extends bp implements ru {
         }
     }
 
-    sa(on param0, iw param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    sa(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, 3553, param1, io.field_g, param2 * param3, param4);
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

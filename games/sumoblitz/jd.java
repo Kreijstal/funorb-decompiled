@@ -340,7 +340,7 @@ final class jd extends ag {
             return stackIn_8_0;
           }
           if (kw.field_c == gg.field_t) {
-            aw.field_j = null;
+            HardwareGraphicsToolkit.field_j = null;
             as.field_v.position = 0;
             if (param6 != null) {
               var9 = 0;
@@ -405,7 +405,7 @@ final class jd extends ag {
             } else {
               if (var9Lifetime1 == 248) {
                 bw.a(false, ra.c(2));
-                MouseWheelInput.field_c = qk.field_R;
+                MouseWheelInput.field_c = qk.unfortunatelyWeAreUnableText;
                 kk.a((byte) -116);
                 sr.field_g = false;
                 stackIn_37_0 = var9Lifetime1;
@@ -417,7 +417,7 @@ final class jd extends ag {
                 kw.field_c = fm.field_b;
               } else {
                 ju.b(-1, br.b(-105));
-                aw.field_j = new Boolean(of.a(ig.field_a, 115));
+                HardwareGraphicsToolkit.field_j = new Boolean(of.a(ig.field_a, 115));
                 ig.field_a.position = 0;
               }
             }
@@ -457,9 +457,9 @@ final class jd extends ag {
           if (qk.field_O == null) {
             if (sr.field_g) {
               if (30000L < uc.b(26560)) {
-                MouseWheelInput.field_c = ar.field_F;
+                MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
               } else {
-                MouseWheelInput.field_c = nd.field_G;
+                MouseWheelInput.field_c = nd.errorConnectingToServerText;
               }
               sr.field_g = false;
               stackIn_65_0 = 249;

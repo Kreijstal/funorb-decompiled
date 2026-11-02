@@ -3,9 +3,9 @@
  */
 final class wq {
     static int field_b;
-    static String field_a;
+    static String allHiscoresText;
 
-    final static pm a(ha param0, byte param1) {
+    final static pm a(GraphicsToolkit param0, byte param1) {
         fw var2 = null;
         pm var3 = null;
         pm stackIn_3_0 = null;
@@ -17,7 +17,7 @@ final class wq {
         RuntimeException var2_ref = null;
         try {
           if (param0 == im.field_c) {
-            stackIn_3_0 = ha.field_c;
+            stackIn_3_0 = GraphicsToolkit.field_c;
             return stackIn_3_0;
           }
           var2 = (fw) (ar.field_N.a(122, (long)param0.field_a));
@@ -32,7 +32,7 @@ final class wq {
             ar.field_N.a(new fw(param0, var3), -1, (long)param0.field_a);
           }
           im.field_c = param0;
-          ha.field_c = var3;
+          GraphicsToolkit.field_c = var3;
           if (param1 <= 8) {
             field_b = 38;
           }
@@ -70,7 +70,7 @@ final class wq {
         if (param0) {
           return;
         }
-        field_a = null;
+        allHiscoresText = null;
     }
 
     final static void a(boolean param0, ki param1) {
@@ -141,6 +141,6 @@ final class wq {
     }
 
     static {
-        field_a = "ALL HISCORES";
+        allHiscoresText = "ALL HISCORES";
     }
 }

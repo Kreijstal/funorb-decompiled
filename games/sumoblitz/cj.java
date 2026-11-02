@@ -4,7 +4,7 @@
 final class cj {
     static int[] field_e;
     private int[] field_d;
-    static String[] field_c;
+    static String[] leaderboardSortLabels;
     private int[] field_g;
     private int field_a;
     private long field_f;
@@ -15,12 +15,12 @@ final class cj {
           return;
         }
         field_e = null;
-        field_c = null;
+        leaderboardSortLabels = null;
     }
 
     final void a(bk param0, int param1) {
-        ha var4 = null;
-        ha var3 = null;
+        GraphicsToolkit var4 = null;
+        GraphicsToolkit var3 = null;
         try {
           var4 = param0.field_g;
           var3 = var4;
@@ -34,7 +34,7 @@ final class cj {
     }
 
     final void a(int param0, bk param1) {
-        ha var3 = null;
+        GraphicsToolkit var3 = null;
         try {
           var3 = param1.field_g;
           var3.K(this.field_g);
@@ -56,6 +56,6 @@ final class cj {
 
     static {
         field_e = new int[]{0, 0, 1, 2, 0, 3, 0, 4, 0, 5, 6, 7, 0, 8, 9, 10, 0, 11, 0, 12, 0, 13, 14, 15, 0};
-        field_c = new String[]{"By rating", "By win percentage"};
+        leaderboardSortLabels = new String[]{"By rating", "By win percentage"};
     }
 }

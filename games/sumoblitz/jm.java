@@ -5,11 +5,11 @@ final class jm {
     static vn field_a;
     static long field_b;
     static String field_d;
-    static String field_c;
+    static String bestHiscoresText;
 
     public static void a(int param0) {
         field_d = null;
-        field_c = null;
+        bestHiscoresText = null;
         if (param0 != -23787) {
           jm.b(123);
           field_a = null;
@@ -35,6 +35,6 @@ final class jm {
     }
 
     static {
-        field_c = "BEST HISCORES";
+        bestHiscoresText = "BEST HISCORES";
     }
 }

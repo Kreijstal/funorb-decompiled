@@ -60,7 +60,7 @@ final class ih {
           var5_int = mr.a((-param4 + param3) * 3, (byte) -115);
           var6 = 3 * param4;
           var7 = -10 + var5_int;
-          aw.C(-114);
+          HardwareGraphicsToolkit.C(-114);
           if (0 < param1.field_E &&
             null != param1.field_a) {
             ad.c((byte) 71);

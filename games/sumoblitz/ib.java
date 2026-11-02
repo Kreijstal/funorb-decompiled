@@ -25,7 +25,7 @@ final class ib extends rq {
         this.field_e = -0.03486540541052818f;
     }
 
-    ib(aw param0, sk param1) {
+    ib(HardwareGraphicsToolkit param0, sk param1) {
         super(param0);
         this.field_e = 0.0f;
         try {

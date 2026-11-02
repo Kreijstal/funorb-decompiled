@@ -11,10 +11,10 @@ final class cm extends hr {
     private boolean field_e;
     private int field_f;
     private int field_i;
-    static String field_b;
+    static String levelCompleteText;
 
     public static void b(int param0) {
-        field_b = null;
+        levelCompleteText = null;
         if (param0 != 0) {
           cm.b(-59);
         }
@@ -358,6 +358,6 @@ final class cm extends hr {
     }
 
     static {
-        field_b = "LEVEL COMPLETE!";
+        levelCompleteText = "LEVEL COMPLETE!";
     }
 }

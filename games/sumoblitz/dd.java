@@ -73,7 +73,7 @@ final class dd extends hf implements ai {
         int var6_int = 0;
         String var6 = null;
         wp var6_ref = null;
-        pk var7 = null;
+        UiWidget var7 = null;
         cd var8 = null;
         String var10 = null;
         Object stackIn_50_0Lifetime1;
@@ -119,7 +119,7 @@ final class dd extends hf implements ai {
                 this.field_Z[incrementValue$0] = var3_ref_cd__[var5];
               }
             }
-            cb.a(this.field_Z, true);
+            IntrusiveDequeCursor.a(this.field_Z, true);
           }
           stackIn_31_1 = !(this.field_Z.length <= 0);
           this.field_R = stackIn_31_1;
@@ -163,11 +163,11 @@ final class dd extends hf implements ai {
           this.field_U.field_K = 83;
           this.field_U.c(-1, 5, 5);
           this.a(this.field_U, 93);
-          this.field_X = this.a(sb.field_d, (qm) (this), kp.field_b, (byte) -105);
+          this.field_X = this.a(sb.field_d, (qm) (this), kp.classicText, (byte) -105);
           if (var2_intLifetime1 != 0) {
-            this.field_Y = this.a(kn.field_f, (qm) (this), hq.field_c, (byte) 122);
+            this.field_Y = this.a(kn.field_f, (qm) (this), hq.resizableText, (byte) 122);
           }
-          this.field_T = this.a(sm.field_c, (qm) (this), dj.field_o, (byte) 110);
+          this.field_T = this.a(sm.field_c, (qm) (this), dj.fullScreenText, (byte) 110);
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -196,24 +196,24 @@ final class dd extends hf implements ai {
             this.field_ab.a(-103, this.field_T.field_r + this.field_U.field_r, -19 + (this.field_T.field_p + this.field_U.field_v + this.field_T.field_v), 18, 126);
             this.field_y.a(this.field_ab, -10295);
           }
-          this.field_P = this.a(-73, (qm) (this), jh.field_A);
+          this.field_P = this.a(-73, (qm) (this), jh.backText);
           var5Lifetime1 = this.field_P.field_r + this.field_P.field_q / 2;
           this.field_P.field_q = 150;
           this.field_P.field_r = -20 + var5Lifetime1 - this.field_P.field_q;
-          this.field_Q = this.a(-128, (qm) (this), dn.field_a);
+          this.field_Q = this.a(-128, (qm) (this), dn.applyText);
           this.field_Q.field_x = false;
           this.field_Q.field_q = this.field_P.field_q;
           this.field_Q.field_r = var5Lifetime1 + 20;
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 == 0) {
-              stackIn_74_0 = lw.field_c;
+              stackIn_74_0 = lw.moreMemoryIsRequiredText;
             } else {
-              stackIn_74_0 = sl.field_e;
+              stackIn_74_0 = sl.largeScreenSizesAndText;
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new pk(var10, (qm) null);
+            var7 = new UiWidget(var10, (qm) null);
             var7.field_r = 0;
             var7.field_q = this.field_q;
             var7.field_p = 80;
@@ -334,7 +334,7 @@ final class dd extends hf implements ai {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         wp discarded$0 = null;
         boolean stackIn_76_0 = false;
         Object stackIn_79_0 = null;
@@ -390,47 +390,47 @@ final class dd extends hf implements ai {
             case 96:
               if (this.field_T == var5) {
                 if (null == this.field_Y) {
-                  this.field_X.a((pk) (this), (byte) 61);
+                  this.field_X.a((UiWidget) (this), (byte) 61);
                   return true;
                 }
-                this.field_Y.a((pk) (this), (byte) 61);
+                this.field_Y.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               if (var5 == this.field_Y) {
-                this.field_X.a((pk) (this), (byte) 61);
+                this.field_X.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               if (this.field_Q == var5) {
-                this.field_P.a((pk) (this), (byte) 61);
+                this.field_P.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               break;
             case 97:
               if (this.field_X == var5) {
                 if (this.field_Y != null) {
-                  this.field_Y.a((pk) (this), (byte) 61);
+                  this.field_Y.a((UiWidget) (this), (byte) 61);
                 } else {
-                  this.field_T.a((pk) (this), (byte) 61);
+                  this.field_T.a((UiWidget) (this), (byte) 61);
                 }
                 return true;
               }
               if (var5 == this.field_Y) {
-                this.field_T.a((pk) (this), (byte) 61);
+                this.field_T.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               if (var5 == this.field_P &&
                 this.field_Q.field_x) {
-                this.field_Q.a((pk) (this), (byte) 61);
+                this.field_Q.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               break;
             case 98:
               if (var5 == this.field_P) {
-                this.field_X.a((pk) (this), (byte) 61);
+                this.field_X.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               if (this.field_Q == var5) {
-                this.field_T.a((pk) (this), (byte) 61);
+                this.field_T.a((UiWidget) (this), (byte) 61);
                 return true;
               }
               break;
@@ -441,13 +441,13 @@ final class dd extends hf implements ai {
                   break;
                 }
                 if (!this.field_Q.field_x) {
-                  this.field_P.a((pk) (this), (byte) 61);
+                  this.field_P.a((UiWidget) (this), (byte) 61);
                 } else {
-                  this.field_Q.a((pk) (this), (byte) 61);
+                  this.field_Q.a((UiWidget) (this), (byte) 61);
                 }
                 return true;
               }
-              this.field_P.a((pk) (this), (byte) 61);
+              this.field_P.a((UiWidget) (this), (byte) 61);
               return true;
             default:
               break;
@@ -550,7 +550,7 @@ final class dd extends hf implements ai {
             this.h((byte) 113);
           }
           this.field_O = param0;
-          param0.a((pk) (this), (byte) 61);
+          param0.a((UiWidget) (this), (byte) 61);
           var3 = this.g((byte) -2);
           stackIn_4_0 = this.field_Q;
           stackIn_5_1 = (param0 != var3);
@@ -606,7 +606,7 @@ final class dd extends hf implements ai {
               if (0 <= var2) {
                 SecondaryNodeDequeIterator.field_b.b(this.field_Z[var2].field_g, this.field_Z[var2].field_a, 67);
               }
-              rj.a(true, false);
+              ResourceArchive.a(true, false);
               this.field_E.a((byte) 108, new qk(this.field_E));
             }
           } else {
@@ -641,7 +641,7 @@ final class dd extends hf implements ai {
           var4.field_w = (mh) ((Object) new ue());
           var5 = -46 + this.field_p;
           var4.a(127, 15, var5, 30, this.field_q - 30);
-          this.a((pk) (var4), 80);
+          this.a((UiWidget) (var4), 80);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -664,7 +664,7 @@ final class dd extends hf implements ai {
         }
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
         wp[] var5 = null;
         int var5_int = 0;
@@ -686,7 +686,7 @@ final class dd extends hf implements ai {
             for (var6 = 0; var9.length > var6; var6++) {
               var7 = var9[var6];
               if (var7.field_k) {
-                var7.a((pk) (this), (byte) 61);
+                var7.a((UiWidget) (this), (byte) 61);
               }
             }
           }

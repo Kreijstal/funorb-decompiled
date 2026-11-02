@@ -132,12 +132,12 @@ final class ub extends IntrusiveNode {
         }
     }
 
-    final static wb[] a(ki param0, String param1, byte param2, String param3) {
+    final static Sprite[] a(ki param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        wb[] stackIn_2_0 = null;
-        wb[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -149,7 +149,7 @@ final class ub extends IntrusiveNode {
         try {
           var4_int = param0.a(0, param1);
           if (param2 != -56) {
-            stackIn_2_0 = (wb[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var5 = param0.a(var4_int, param3, (byte) 126);

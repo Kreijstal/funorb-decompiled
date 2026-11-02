@@ -4,7 +4,7 @@
 final class ps {
     static int field_a;
     static iw field_c;
-    static String field_b;
+    static String scoreText;
     static float[] field_d;
     static int[] field_e;
     private static String field_z;
@@ -15,13 +15,13 @@ final class ps {
         }
         field_d = null;
         field_e = null;
-        field_b = null;
+        scoreText = null;
         field_c = null;
     }
 
     static {
         field_z = "ps.A(";
-        field_b = "score: ";
+        scoreText = "score: ";
         field_a = 0;
         field_d = new float[4];
         field_c = new iw(2);

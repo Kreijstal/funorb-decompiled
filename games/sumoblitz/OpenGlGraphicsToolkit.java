@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends aw {
+final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     private jaggl.OpenGL field_Yc;
-    private jn field_Kc;
-    private jn field_Gc;
-    private jn field_Zc;
-    private jn field_Xc;
-    private jn field_Vc;
-    private jn field_Pc;
-    private jn field_Fc;
+    private IntrusiveDeque field_Kc;
+    private IntrusiveDeque field_Gc;
+    private IntrusiveDeque field_Zc;
+    private IntrusiveDeque field_Xc;
+    private IntrusiveDeque field_Vc;
+    private IntrusiveDeque field_Pc;
+    private IntrusiveDeque field_Fc;
     private boolean field_Dc;
     private boolean field_Lc;
     private sc[] field_zc;
@@ -678,7 +678,7 @@ final class on extends aw {
     final void V(int param0) {
         jaggl.OpenGL.glMatrixMode(5890);
         if (param0 != 26803) {
-          this.field_Zc = (jn) null;
+          this.field_Zc = (IntrusiveDeque) null;
         }
         if (ar.field_L != this.field_wb[this.field_mc]) {
           jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].b(-107, pq.field_y), 0);
@@ -717,7 +717,7 @@ final class on extends aw {
         }
     }
 
-    on(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ki param4, int param5) {
+    OpenGlGraphicsToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ki param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;
@@ -757,13 +757,13 @@ final class on extends aw {
         var28 = null;
         var29 = null;
         var30 = null;
-        this.field_Kc = new jn();
-        this.field_Gc = new jn();
-        this.field_Zc = new jn();
-        this.field_Xc = new jn();
-        this.field_Vc = new jn();
-        this.field_Pc = new jn();
-        this.field_Fc = new jn();
+        this.field_Kc = new IntrusiveDeque();
+        this.field_Gc = new IntrusiveDeque();
+        this.field_Zc = new IntrusiveDeque();
+        this.field_Xc = new IntrusiveDeque();
+        this.field_Vc = new IntrusiveDeque();
+        this.field_Pc = new IntrusiveDeque();
+        this.field_Fc = new IntrusiveDeque();
         this.field_zc = new sc[16];
         this.field_Qc = new jaggl.MapBuffer();
         this.field_Bc = new jaggl.MapBuffer();
@@ -949,7 +949,7 @@ final class on extends aw {
           jaggl.OpenGL.glDisable(2929);
         }
         if (param0 <= 19) {
-          this.field_Fc = (jn) null;
+          this.field_Fc = (IntrusiveDeque) null;
         }
     }
 
@@ -1169,7 +1169,7 @@ final class on extends aw {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param1 != 0) {
-            this.field_Pc = (jn) null;
+            this.field_Pc = (IntrusiveDeque) null;
           }
           if (param3 == tc.field_g) {
             var6 = 2 * param2;
@@ -1260,7 +1260,7 @@ final class on extends aw {
     final void x(int param0) {
         this.t((byte) 68);
         if (param0 != 0) {
-          this.field_Gc = (jn) null;
+          this.field_Gc = (IntrusiveDeque) null;
         }
     }
 
@@ -1334,7 +1334,7 @@ final class on extends aw {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 6) {
-            this.field_Kc = (jn) null;
+            this.field_Kc = (IntrusiveDeque) null;
           }
           stackIn_3_0 = new fq(param0);
           return (hq) ((Object) stackIn_3_0);
@@ -1490,7 +1490,7 @@ final class on extends aw {
     final rq d(int param0, int param1) {
         int var3;
         if (param0 != 0) {
-          this.field_Pc = (jn) null;
+          this.field_Pc = (IntrusiveDeque) null;
         }
         var3 = param1;
         if (var3 == 3) {

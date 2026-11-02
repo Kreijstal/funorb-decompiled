@@ -3,13 +3,13 @@
  */
 final class mm {
     static String field_c;
-    static String field_e;
+    static String thisPasswordIsPartText;
     static jf field_a;
-    static String field_d;
+    static String levelSelectText;
     static mi field_h;
     static String field_g;
     static int field_f;
-    static String field_b;
+    static String pleaseWaitText;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -20,21 +20,21 @@ final class mm {
         field_g = null;
         field_h = null;
         field_c = null;
-        field_d = null;
-        field_b = null;
-        field_e = null;
+        levelSelectText = null;
+        pleaseWaitText = null;
+        thisPasswordIsPartText = null;
         if (param0 <= 62) {
           field_h = (mi) null;
         }
     }
 
     static {
-        field_e = "This password is part of your Player Name, and would be easy to guess";
-        field_d = "Level select";
+        thisPasswordIsPartText = "This password is part of your Player Name, and would be easy to guess";
+        levelSelectText = "Level select";
         field_a = new jf();
         field_h = new mi();
         field_g = "Level Select";
         field_f = 20;
-        field_b = "Please wait...";
+        pleaseWaitText = "Please wait...";
     }
 }

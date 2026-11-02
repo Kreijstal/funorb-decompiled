@@ -3,7 +3,7 @@
  */
 final class oi {
     static qr field_a;
-    static jn field_b;
+    static IntrusiveDeque field_b;
     static String field_c;
     static ri field_d;
 
@@ -22,7 +22,7 @@ final class oi {
           field_d = null;
           return;
         }
-        field_b = (jn) null;
+        field_b = (IntrusiveDeque) null;
         field_c = null;
         field_b = null;
         field_a = null;
@@ -62,6 +62,6 @@ final class oi {
 
     static {
         field_a = new qr();
-        field_b = new jn();
+        field_b = new IntrusiveDeque();
     }
 }

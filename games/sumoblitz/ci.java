@@ -38,14 +38,14 @@ final class ci {
               this.field_c = null;
               return null;
             }
-            if (this.field_d != this.field_c.field_l) {
-              this.field_c = this.field_c.field_m;
+            if (this.field_d != this.field_c.secondaryKey) {
+              this.field_c = this.field_c.secondaryNext;
               continue;
             }
             break;
           }
           var3 = this.field_c;
-          this.field_c = this.field_c.field_m;
+          this.field_c = this.field_c.secondaryNext;
           return var3;
         }
         this.field_c = (DualLinkNode) null;
@@ -55,31 +55,31 @@ final class ci {
             this.field_c = null;
             return null;
           }
-          if (this.field_d != this.field_c.field_l) {
-            this.field_c = this.field_c.field_m;
+          if (this.field_d != this.field_c.secondaryKey) {
+            this.field_c = this.field_c.secondaryNext;
             continue;
           }
           break;
         }
         var3Lifetime1 = this.field_c;
-        this.field_c = this.field_c.field_m;
+        this.field_c = this.field_c.secondaryNext;
         return var3Lifetime1;
     }
 
     final void a(long param0, int param1, DualLinkNode param2) {
-        if (null != param2.field_o) {
+        if (null != param2.secondaryPrevious) {
           param2.c(-5106);
         }
         DualLinkNode var5 = this.field_a[(int)((long)(this.field_f - 1) & param0)];
-        param2.field_o = var5.field_o;
+        param2.secondaryPrevious = var5.secondaryPrevious;
         if (param1 != -8156) {
           return;
         }
         try {
-          param2.field_m = var5;
-          param2.field_o.field_m = param2;
-          param2.field_m.field_o = param2;
-          param2.field_l = param0;
+          param2.secondaryNext = var5;
+          param2.secondaryPrevious.secondaryNext = param2;
+          param2.secondaryNext.secondaryPrevious = param2;
+          param2.secondaryKey = param0;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -94,20 +94,20 @@ final class ci {
         this.field_d = param0;
         var5 = 121 % ((17 - param1) / 56);
         var4 = this.field_a[(int)((long)(-1 + this.field_f) & param0)];
-        this.field_c = var4.field_m;
+        this.field_c = var4.secondaryNext;
         while (true) {
           if (var4 == this.field_c) {
             this.field_c = null;
             return null;
           }
-          if (this.field_c.field_l != param0) {
-            this.field_c = this.field_c.field_m;
+          if (this.field_c.secondaryKey != param0) {
+            this.field_c = this.field_c.secondaryNext;
             continue;
           }
           break;
         }
         var6 = this.field_c;
-        this.field_c = this.field_c.field_m;
+        this.field_c = this.field_c.secondaryNext;
         return var6;
     }
 
@@ -121,8 +121,8 @@ final class ci {
           dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_a[var2] = dupTemp$0;
-          var3.field_o = var3;
-          var3.field_m = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

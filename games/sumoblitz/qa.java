@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends ha {
+final class qa extends GraphicsToolkit {
     private int field_s;
     private ce field_n;
     private java.awt.Canvas field_l;
@@ -32,7 +32,7 @@ final class qa extends ha {
     private int field_L;
     private rp[] field_i;
     private sd field_E;
-    private static String field_I;
+    private static String offText;
 
     final void f(int param0) {
         le var4 = null;
@@ -1938,7 +1938,7 @@ final class qa extends ha {
         java.awt.Graphics var3 = null;
         if (this.field_l == null ||
           this.field_n == null) {
-          throw new IllegalStateException(field_I);
+          throw new IllegalStateException(offText);
         }
         try {
           var3 = this.field_l.getGraphics();
@@ -1982,6 +1982,6 @@ final class qa extends ha {
     }
 
     static {
-        field_I = "off";
+        offText = "off";
     }
 }

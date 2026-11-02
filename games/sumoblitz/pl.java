@@ -3,14 +3,14 @@
  */
 final class pl extends PacketBuffer {
     static int field_u;
-    static String field_s;
+    static String changeDisplayNameText;
     private int field_w;
     static String[] field_r;
-    static jn field_v;
+    static IntrusiveDeque field_v;
     private ok field_t;
     static int field_y;
-    static String field_x;
-    static String field_q;
+    static String levelText;
+    static String enterAPasswordForText;
 
     final void g(int param0, int param1) {
         int fieldTemp$0 = this.position;
@@ -119,17 +119,17 @@ final class pl extends PacketBuffer {
     }
 
     public static void j(int param0) {
-        field_s = null;
+        changeDisplayNameText = null;
         if (param0 == 24599) {
-          field_q = null;
-          field_x = null;
+          enterAPasswordForText = null;
+          levelText = null;
           field_v = null;
           field_r = null;
           return;
         }
         field_y = 91;
-        field_q = null;
-        field_x = null;
+        enterAPasswordForText = null;
+        levelText = null;
         field_v = null;
         field_r = null;
     }
@@ -153,9 +153,9 @@ final class pl extends PacketBuffer {
 
     static {
         field_r = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
-        field_s = "Change display name";
-        field_v = new jn();
-        field_x = "level: ";
-        field_q = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
+        changeDisplayNameText = "Change display name";
+        field_v = new IntrusiveDeque();
+        levelText = "level: ";
+        enterAPasswordForText = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 }

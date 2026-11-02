@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
-    static String field_h;
+    static String emailIsValidText;
     static mm field_e;
     private java.net.ProxySelector field_g;
     static ri[] field_f;
@@ -124,7 +124,7 @@ final class ProxySocketConnector extends SocketConnector {
     public static void b(int param0) {
         field_f = null;
         field_e = null;
-        field_h = null;
+        emailIsValidText = null;
         if (param0 != 1183) {
           String var2 = (String) null;
           ProxySocketConnector.a((String) null, (byte) 106, 118, (ki) null, (String) null);
@@ -335,7 +335,7 @@ final class ProxySocketConnector extends SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 85) {
-            field_h = (String) null;
+            emailIsValidText = (String) null;
           }
           if (!param3.b((byte) 127)) {
             stackIn_5_0 = (String) (param0);
@@ -374,7 +374,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     static {
-        field_h = "Email is valid";
+        emailIsValidText = "Email is valid";
     }
 
     @SuppressWarnings("unchecked")

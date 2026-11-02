@@ -19,12 +19,12 @@ final class fp extends fj implements ef {
         }
     }
 
-    fp(ir param0, int param1, boolean param2, int[][] param3) {
+    fp(DirectXGraphicsToolkit param0, int param1, boolean param2, int[][] param3) {
         super(null, null, null, false, param1 * param1 * 6);
         int var6 = 0;
         int var9 = 0;
         Object stackIn_3_0;
-        ir stackIn_3_1;
+        DirectXGraphicsToolkit stackIn_3_1;
         iw stackIn_3_2;
         io stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -36,7 +36,7 @@ final class fp extends fj implements ef {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (ir) (param0);
+        stackIn_3_1 = (DirectXGraphicsToolkit) (param0);
         stackIn_3_2 = nl.field_p;
         stackIn_3_3 = io.field_g;
         if (param2) {

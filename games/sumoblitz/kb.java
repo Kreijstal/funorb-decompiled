@@ -30,12 +30,12 @@ abstract class kb {
 
     abstract void b(int param0);
 
-    final static wb[] a(String param0, ki param1, boolean param2, String param3) {
+    final static Sprite[] a(String param0, ki param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        wb[] stackIn_2_0 = null;
-        wb[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -47,7 +47,7 @@ abstract class kb {
         try {
           var4_int = param1.a(0, param3);
           if (!param2) {
-            stackIn_2_0 = (wb[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var5 = param1.a(var4_int, param0, (byte) 126);

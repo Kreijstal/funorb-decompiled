@@ -16,8 +16,8 @@ final class vg implements mh {
     private int field_e;
     private int field_h;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
-        pk stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -32,7 +32,7 @@ final class vg implements mh {
           if (!(param0 instanceof wr)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (pk) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           }
           var11 = (wr) (stackIn_3_0);
           if (var11 != null) {

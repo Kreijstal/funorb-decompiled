@@ -5,9 +5,9 @@ final class mv extends da {
     private pv field_d;
     private ru field_e;
     private boolean field_c;
-    private aw field_f;
+    private HardwareGraphicsToolkit field_f;
 
-    mv(aw param0, ta param1, ri[] param2, boolean param3) {
+    mv(HardwareGraphicsToolkit param0, ta param1, ri[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

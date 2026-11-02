@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hg extends IntrusiveNode {
-    static String field_t;
+    static String playTheGameWithoutText;
     int field_u;
     int field_n;
     static float[] field_l;
@@ -70,7 +70,7 @@ final class hg extends IntrusiveNode {
           int[] var2 = (int[]) null;
           hg.a(-33, (int[]) null);
         }
-        field_t = null;
+        playTheGameWithoutText = null;
         field_k = null;
         field_o = null;
     }
@@ -86,7 +86,7 @@ final class hg extends IntrusiveNode {
 
     static {
         int var2 = 0;
-        field_t = "Play the game without logging in just yet";
+        playTheGameWithoutText = "Play the game without logging in just yet";
         field_k = new float[16384];
         field_l = new float[16384];
         double var0 = 0.0003834951969714103;

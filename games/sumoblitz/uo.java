@@ -665,7 +665,7 @@ final class uo extends rq {
         return true;
     }
 
-    uo(aw param0) {
+    uo(HardwareGraphicsToolkit param0) {
         super(param0);
         this.field_f = false;
     }

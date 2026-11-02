@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class bq {
-    static String[] field_a;
+    static String[] monthShortNames;
     static int[] field_d;
     static da field_c;
     fr field_b;
@@ -19,12 +19,12 @@ abstract class bq {
 
     final static void a(int param0) {
         if (param0 == 8192) {
-          cb.field_b = false;
+          IntrusiveDequeCursor.field_b = false;
           ig.field_a.e(param0 ^ -23110);
           return;
         }
         field_d = (int[]) null;
-        cb.field_b = false;
+        IntrusiveDequeCursor.field_b = false;
         ig.field_a.e(param0 ^ -23110);
     }
 
@@ -39,7 +39,7 @@ abstract class bq {
     public static void a(byte param0) {
         field_c = null;
         field_d = null;
-        field_a = null;
+        monthShortNames = null;
         if (param0 != -76) {
           field_c = (da) null;
         }
@@ -59,6 +59,6 @@ abstract class bq {
 
     static {
         field_d = new int[8192];
-        field_a = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        monthShortNames = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     }
 }

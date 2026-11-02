@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rg extends sp {
+abstract class rg extends WidgetContainer {
     boolean field_D;
     dg field_E;
     private int field_B;
@@ -38,7 +38,7 @@ abstract class rg extends sp {
           return;
         }
         if (null == uw.field_a) {
-          uw.field_a = new wb(this.field_q, this.field_p);
+          uw.field_a = new Sprite(this.field_q, this.field_p);
           jq.a(7161, uw.field_a);
           lk.b();
           this.b(113, 0, 0);
@@ -55,7 +55,7 @@ abstract class rg extends sp {
           return;
         }
         if (uw.field_a.field_x < this.field_q) {
-          uw.field_a = new wb(this.field_q, this.field_p);
+          uw.field_a = new Sprite(this.field_q, this.field_p);
           jq.a(7161, uw.field_a);
           lk.b();
           this.b(113, 0, 0);
@@ -72,7 +72,7 @@ abstract class rg extends sp {
           return;
         }
         if (this.field_p > uw.field_a.field_u) {
-          uw.field_a = new wb(this.field_q, this.field_p);
+          uw.field_a = new Sprite(this.field_q, this.field_p);
           jq.a(7161, uw.field_a);
           lk.b();
           this.b(113, 0, 0);
@@ -213,13 +213,13 @@ abstract class rg extends sp {
 
     abstract void b(int param0, int param1, int param2);
 
-    final pk f(int param0) {
-        pk var2 = super.f(-105);
+    final UiWidget f(int param0) {
+        UiWidget var2 = super.f(-105);
         int var3 = -113 / ((param0 + 25) / 58);
         if (var2 != null) {
           return var2;
         }
-        return (pk) (this);
+        return (UiWidget) (this);
     }
 
     final static void a(byte param0, int param1) {

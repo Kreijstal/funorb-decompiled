@@ -6,13 +6,13 @@ final class qk extends hf implements ai {
     private wp field_P;
     private long field_W;
     private wp field_Q;
-    private pk field_S;
+    private UiWidget field_S;
     static BufferedSocket field_O;
-    static String field_R;
+    static String unfortunatelyWeAreUnableText;
     static int field_U;
     static ri[] field_V;
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -63,7 +63,7 @@ final class qk extends hf implements ai {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
@@ -74,11 +74,11 @@ final class qk extends hf implements ai {
         try {
           var5_int = param3;
           if (var5_int == 99) {
-            this.field_Q.a((pk) (this), (byte) 61);
+            this.field_Q.a((UiWidget) (this), (byte) 61);
             return true;
           }
           if (var5_int == 98) {
-            this.field_P.a((pk) (this), (byte) 61);
+            this.field_P.a((UiWidget) (this), (byte) 61);
             return true;
           }
           if (param2 <= 9) {
@@ -102,25 +102,25 @@ final class qk extends hf implements ai {
 
     qk(dg param0) {
         super(param0, 200, 200);
-        pk var3 = null;
+        UiWidget var3 = null;
         try {
           this.field_W = wq.a(-97);
-          var3 = new pk(ha.field_d, (qm) null);
+          var3 = new UiWidget(GraphicsToolkit.field_d, (qm) null);
           var3.field_p = 100;
           var3.field_v = 50;
           var3.field_q = this.field_q;
           var3.field_r = 0;
           var3.field_w = (mh) ((Object) new gm(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var3, 89);
-          this.field_S = new pk(ha.field_d, (qm) null);
+          this.field_S = new UiWidget(GraphicsToolkit.field_d, (qm) null);
           this.field_S.field_v = var3.field_p + (var3.field_v + 20);
           this.field_S.field_q = this.field_q;
           this.field_S.field_r = 0;
           this.field_S.field_p = 80;
           this.field_S.field_w = (mh) ((Object) new gm(tq.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(this.field_S, 117);
-          this.field_P = this.a((qm) (this), 20556, km.field_m);
-          this.field_Q = this.a((qm) (this), 20556, up.field_b);
+          this.field_P = this.a((qm) (this), 20556, km.acceptText);
+          this.field_Q = this.a((qm) (this), 20556, up.cancelText);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -188,7 +188,7 @@ final class qk extends hf implements ai {
     }
 
     public static void g(byte param0) {
-        field_R = null;
+        unfortunatelyWeAreUnableText = null;
         if (param0 != -43) {
           qk.g((byte) -2);
           field_V = null;
@@ -235,6 +235,6 @@ final class qk extends hf implements ai {
 
     static {
         field_T = 0;
-        field_R = "Unfortunately we are unable to create an account for you at this time.";
+        unfortunatelyWeAreUnableText = "Unfortunately we are unable to create an account for you at this time.";
     }
 }

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class td extends IntrusiveNode {
     byte[] field_q;
-    static String field_l;
+    static String editorText;
     qp[] field_o;
     byte[] field_t;
     mq[] field_n;
@@ -94,7 +94,7 @@ final class td extends IntrusiveNode {
     }
 
     public static void a(byte param0) {
-        field_l = null;
+        editorText = null;
         if (param0 <= 62) {
           td.a(86, -115L);
         }
@@ -768,7 +768,7 @@ final class td extends IntrusiveNode {
     }
 
     static {
-        field_l = "editor";
+        editorText = "editor";
         field_m = true;
     }
 }

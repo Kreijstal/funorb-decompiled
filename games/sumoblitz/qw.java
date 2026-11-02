@@ -5,7 +5,7 @@ import java.util.*;
 
 final class qw {
     static int field_b;
-    static String field_c;
+    static String passwordsMustBeBetweenText;
     static hr[] field_a;
 
     final static boolean a(int param0, char param1) {
@@ -13,7 +13,7 @@ final class qw {
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (param0 != 57) {
-          field_c = (String) null;
+          passwordsMustBeBetweenText = (String) null;
           if (param1 < 48) {
             if (param1 >= 65 &&
               param1 <= 90) {
@@ -85,7 +85,7 @@ final class qw {
         if (param0 > -116) {
           return;
         }
-        field_c = null;
+        passwordsMustBeBetweenText = null;
     }
 
     final static void a(byte param0) {
@@ -179,6 +179,6 @@ final class qw {
     }
 
     static {
-        field_c = "Passwords must be between 5 and 20 letters and numbers";
+        passwordsMustBeBetweenText = "Passwords must be between 5 and 20 letters and numbers";
     }
 }

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cn extends dq {
-    static String field_P;
+    static String byClickingCreateYouText;
     static dk field_ib;
     String field_gb;
     String field_jb;
     int field_kb;
-    static String field_hb;
+    static String theAccountNameYouText;
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
@@ -61,15 +61,15 @@ final class cn extends dq {
 
     public static void e(int param0) {
         if (param0 != 0) {
-          field_P = (String) null;
+          byClickingCreateYouText = (String) null;
           field_ib = null;
-          field_hb = null;
-          field_P = null;
+          theAccountNameYouText = null;
+          byClickingCreateYouText = null;
           return;
         }
         field_ib = null;
-        field_hb = null;
-        field_P = null;
+        theAccountNameYouText = null;
+        byClickingCreateYouText = null;
     }
 
     final static void a(float param0, ab param1, int param2, byte[] param3, int param4, float param5, float param6, float param7, int param8, float param9, int param10, int param11, int param12) {
@@ -169,7 +169,7 @@ final class cn extends dq {
 
     final static int c(int param0, int param1) {
         if (param0 != 0) {
-          field_hb = (String) null;
+          theAccountNameYouText = (String) null;
           param1 = param1 & 8191;
           if (param1 >= 4096) {
             return 6144 <= param1 ? ce.field_p[param1 - 6144] : -ce.field_p[-param1 + 6144];
@@ -184,8 +184,8 @@ final class cn extends dq {
     }
 
     static {
-        field_P = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        byClickingCreateYouText = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_ib = new dk();
-        field_hb = "The account name you use to access RuneScape and other Jagex.com games";
+        theAccountNameYouText = "The account name you use to access RuneScape and other Jagex.com games";
     }
 }

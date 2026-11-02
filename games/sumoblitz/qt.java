@@ -20,7 +20,7 @@ abstract class qt {
           }
           nk.b();
           sq.field_a = new int[260];
-          jn.field_b = 11;
+          IntrusiveDeque.field_b = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
             sq.field_a[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));

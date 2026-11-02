@@ -4,7 +4,7 @@
 final class jp extends ak {
     private int field_i;
     static int[] field_k;
-    static wb[] field_j;
+    static Sprite[] field_j;
 
     final void b(int param0) {
         int var2;
@@ -291,11 +291,11 @@ final class jp extends ak {
         }
     }
 
-    final void a(int param0, ha param1, int param2) {
+    final void a(int param0, GraphicsToolkit param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
-        ha var6_ref_ha = null;
+        GraphicsToolkit var6_ref_ha = null;
         int var6 = 0;
         int var7 = 0;
         hr[] var8 = null;
@@ -309,24 +309,24 @@ final class jp extends ak {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.c() / 2) + 290), param0 << 24, 3, param1, 100 + MouseWheelInput.field_b.c(), -5, 1, true);
-          be.field_t.a(cm.field_b, 5023231 | param0 << 24, -1, 55, 320, 0);
-          hc.field_e.a(cm.field_b, -1, -1, 55, 320, 0);
+          be.field_t.a(cm.levelCompleteText, 5023231 | param0 << 24, -1, 55, 320, 0);
+          hc.field_e.a(cm.levelCompleteText, -1, -1, 55, 320, 0);
           if (param2 != -2355) {
             this.field_i = 108;
           }
-          qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, param2 - 6432, ps.field_b.toUpperCase() + " " + il.field_a + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
-          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, -8787, ps.field_b.toUpperCase() + " " + il.field_a + "<br>" + tj.field_l.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
-          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, -8787, wh.field_r, (aa) null, 1, 0);
-          bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.field_r, (aa) null, 1, 0);
-          qv.field_k.a(ic.a(ar.field_M, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), param0 << 24 | 5023231, -1, 180, 320, 0);
-          uq.field_a.a(ic.a(ar.field_M, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, param2 - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
+          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
+          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), param0 << 24 | 5023231, -1, 180, 320, 0);
+          uq.field_a.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (400 > var4_int) {
             var6_ref_ha = param1;
             var7 = -10 + var4_int;
             if (this.field_i == var5) {
-              stackIn_8_0 = jn.field_c;
+              stackIn_8_0 = IntrusiveDeque.field_c;
             } else {
               stackIn_8_0 = SecondaryNodeDequeIterator.field_a;
             }
@@ -338,8 +338,8 @@ final class jp extends ak {
               stackIn_14_0 = 0;
             }
             var6 = stackIn_14_0;
-            qv.field_k.a(ee.field_a[var5].toUpperCase(), param0 << 24 | 5023231, -1, 225, -4 + (var4_int + 55), param2 + 2355);
-            uq.field_a.a(ee.field_a[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), param2 ^ -2355);
+            qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), param0 << 24 | 5023231, -1, 225, -4 + (var4_int + 55), param2 + 2355);
+            uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), param2 ^ -2355);
             if (var6 != 0) {
               ud.field_q[15 + var5].a(55 + (var4_int - (ud.field_q[var5].b() >> 1)), 200 + (ud.field_q[var5].d() >> 1), 1, 0, 2);
             } else {

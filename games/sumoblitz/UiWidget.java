@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class pk extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     String field_t;
     boolean field_k;
     int field_q;
@@ -44,7 +44,7 @@ class pk extends IntrusiveNode {
         this.field_s = 113;
     }
 
-    void a(pk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         try {
           this.field_l = 0;
           if (param1) {
@@ -99,7 +99,7 @@ class pk extends IntrusiveNode {
             return stackIn_24_0;
           }
           if (param0 != -24) {
-            pk.d((byte) -20);
+            UiWidget.d((byte) -20);
           }
           if (!param1.equals("C")) {
             return Class.forName(param1);
@@ -173,7 +173,7 @@ class pk extends IntrusiveNode {
         this.field_r = param1;
     }
 
-    void a(int param0, int param1, pk param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
@@ -258,7 +258,7 @@ class pk extends IntrusiveNode {
     final static void d(byte param0) {
         if (vs.b((byte) 9)) {
           if (param0 >= -15) {
-            pk.d((byte) -33);
+            UiWidget.d((byte) -33);
             return;
           }
           return;
@@ -267,7 +267,7 @@ class pk extends IntrusiveNode {
         if (null != ah.field_g) {
           pd.a(ah.field_g, 6, 5412);
           if (param0 >= -15) {
-            pk.d((byte) -33);
+            UiWidget.d((byte) -33);
             return;
           }
           return;
@@ -275,7 +275,7 @@ class pk extends IntrusiveNode {
         if (param0 < -15) {
           return;
         }
-        pk.d((byte) -33);
+        UiWidget.d((byte) -33);
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3) {
@@ -610,7 +610,7 @@ class pk extends IntrusiveNode {
         return param2;
     }
 
-    boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -709,7 +709,7 @@ class pk extends IntrusiveNode {
           }
           if (null != this.field_w) {
             discarded$4 = param2.append(" renderer=");
-            if (!(this.field_w instanceof pk)) {
+            if (!(this.field_w instanceof UiWidget)) {
               discarded$5 = param2.append(this.field_w);
               if (var6 != 0) {
                 param2 = this.a(param0 + 1, param3, param2, 0);
@@ -720,7 +720,7 @@ class pk extends IntrusiveNode {
           }
           if (this.field_o != null) {
             discarded$6 = param2.append(" listener=");
-            if (!(this.field_o instanceof pk)) {
+            if (!(this.field_o instanceof UiWidget)) {
               discarded$7 = param2.append(this.field_o);
               if (var6 == 0) {
                 return;
@@ -749,7 +749,7 @@ class pk extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, pk param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -779,34 +779,34 @@ class pk extends IntrusiveNode {
     }
 
     void a(int param0, int param1, byte param2, int param3) {
-        pk var6 = null;
-        pk var6Lifetime1;
-        pk var6Lifetime2;
+        UiWidget var6 = null;
+        UiWidget var6Lifetime1;
+        UiWidget var6Lifetime2;
         if (param3 != 0) {
           if (param2 < -35) {
             return;
           }
-          var6 = (pk) null;
-          this.a((pk) null, (byte) -58);
+          var6 = (UiWidget) null;
+          this.a((UiWidget) null, (byte) -58);
           return;
         }
         if (this.field_w == null) {
           if (param2 < -35) {
             return;
           }
-          var6Lifetime1 = (pk) null;
-          this.a((pk) null, (byte) -58);
+          var6Lifetime1 = (UiWidget) null;
+          this.a((UiWidget) null, (byte) -58);
           return;
         }
         this.field_w.a(this, param1, 5592405, true, param0);
         if (param2 < -35) {
           return;
         }
-        var6Lifetime2 = (pk) null;
-        this.a((pk) null, (byte) -58);
+        var6Lifetime2 = (UiWidget) null;
+        this.a((UiWidget) null, (byte) -58);
     }
 
-    pk(String param0, qm param1) {
+    UiWidget(String param0, qm param1) {
         this(param0, ks.field_x.field_e, param1);
     }
 
@@ -817,7 +817,7 @@ class pk extends IntrusiveNode {
         return 0 != (param0 & 52) ? true : false;
     }
 
-    boolean a(pk param0, byte param1) {
+    boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -890,7 +890,7 @@ class pk extends IntrusiveNode {
         return false;
     }
 
-    boolean a(pk param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -924,12 +924,12 @@ class pk extends IntrusiveNode {
         return !this.field_k ? null : this.field_t;
     }
 
-    protected pk() {
+    protected UiWidget() {
         this.field_n = 0;
         this.field_s = 0;
     }
 
-    pk(String param0, mh param1, qm param2) {
+    UiWidget(String param0, mh param1, qm param2) {
         RuntimeException runtimeException = null;
         de var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -978,7 +978,7 @@ class pk extends IntrusiveNode {
         }
     }
 
-    pk(int param0, int param1, int param2, int param3, mh param4, qm param5) {
+    UiWidget(int param0, int param1, int param2, int param3, mh param4, qm param5) {
         this.field_n = 0;
         this.field_s = 0;
         try {

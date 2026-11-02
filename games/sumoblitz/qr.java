@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qr {
-    static jn field_c;
+    static IntrusiveDeque field_c;
     static ta field_a;
     static gf field_e;
     static int[] field_d;
@@ -89,7 +89,7 @@ final class qr {
     }
 
     static {
-        field_c = new jn();
+        field_c = new IntrusiveDeque();
         field_e = new gf();
         field_d = new int[8192];
     }

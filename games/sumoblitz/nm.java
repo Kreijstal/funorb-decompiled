@@ -8,8 +8,8 @@ final class nm extends IntrusiveNode {
     int field_m;
     private boolean field_z;
     int field_y;
-    static String[] field_u;
-    static String field_n;
+    static String[] waitingForTextTranslations;
+    static String waitingForLevelsText;
     private int field_o;
     private int field_B;
     int field_l;
@@ -19,14 +19,14 @@ final class nm extends IntrusiveNode {
     private int field_v;
     private int field_k;
     private int field_t;
-    private jn field_w;
+    private IntrusiveDeque field_w;
     int field_q;
     private int field_p;
 
     public static void c(int param0) {
         try {
-          field_n = null;
-          field_u = null;
+          waitingForLevelsText = null;
+          waitingForTextTranslations = null;
           if (param0 != 1432625512) {
             nm.a((PacketBuffer) null, (byte) -50);
           }
@@ -103,8 +103,8 @@ final class nm extends IntrusiveNode {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        jn var5 = null;
-        cb var6 = null;
+        IntrusiveDeque var5 = null;
+        IntrusiveDequeCursor var6 = null;
         int var7 = 0;
         nm var8 = null;
         int var9 = 0;
@@ -259,7 +259,7 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder4)) {
             var5 = is.field_c;
             var7 = 0;
-            var6 = new cb(var5);
+            var6 = new IntrusiveDequeCursor(var5);
             var8 = (nm) (var6.b((byte) -80));
             while (true) {
               if (null != var8) {
@@ -377,7 +377,7 @@ final class nm extends IntrusiveNode {
         }
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
         String stackIn_98_2 = null;
@@ -702,7 +702,7 @@ final class nm extends IntrusiveNode {
           if (param0 != -115) {
             this.a(89);
           }
-          this.field_w = new jn();
+          this.field_w = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -741,7 +741,7 @@ final class nm extends IntrusiveNode {
     }
 
     static {
-        field_n = "Waiting for levels";
-        field_u = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
+        waitingForLevelsText = "Waiting for levels";
+        waitingForTextTranslations = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
     }
 }

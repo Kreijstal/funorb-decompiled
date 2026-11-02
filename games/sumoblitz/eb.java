@@ -5,7 +5,7 @@ final class eb {
     private cs field_d;
     static ki field_f;
     static og field_b;
-    private jn field_e;
+    private IntrusiveDeque field_e;
     private fr field_c;
     static int[] field_a;
 
@@ -54,7 +54,7 @@ final class eb {
     }
 
     eb(fr param0) {
-        this.field_e = new jn();
+        this.field_e = new IntrusiveDeque();
         try {
           this.field_c = param0;
           if (this.field_c.field_xc) {

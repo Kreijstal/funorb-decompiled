@@ -4,7 +4,7 @@
 final class wj extends rq {
     private sk field_f;
     static ts field_h;
-    private on field_j;
+    private OpenGlGraphicsToolkit field_j;
     private wg field_g;
     static int field_e;
     static boolean field_k;
@@ -15,7 +15,7 @@ final class wj extends rq {
         jaggl.OpenGL.glEnable(34336);
         this.field_b.a(ta.field_a, 0, param1 - 20186);
         if (param1 != 20186) {
-          this.field_j = (on) null;
+          this.field_j = (OpenGlGraphicsToolkit) null;
         }
     }
 
@@ -307,7 +307,7 @@ final class wj extends rq {
         }
     }
 
-    wj(on param0, ki param1, sk param2) {
+    wj(OpenGlGraphicsToolkit param0, ki param1, sk param2) {
         super(param0);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

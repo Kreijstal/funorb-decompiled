@@ -3,12 +3,12 @@
  */
 final class c extends nl {
     static int field_s;
-    static String field_q;
+    static String ifYouDoNothingText;
     static int field_r;
-    static String field_t;
+    static String unfortunatelyThereWasAText;
     static int[] field_u;
 
-    final String a(boolean param0, pk param1) {
+    final String a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -37,14 +37,14 @@ final class c extends nl {
 
     public static void c(int param0) {
         if (param0 == 22760) {
-          field_t = null;
-          field_q = null;
+          unfortunatelyThereWasAText = null;
+          ifYouDoNothingText = null;
           field_u = null;
           return;
         }
-        field_q = (String) null;
-        field_t = null;
-        field_q = null;
+        ifYouDoNothingText = (String) null;
+        unfortunatelyThereWasAText = null;
+        ifYouDoNothingText = null;
         field_u = null;
     }
 
@@ -102,8 +102,8 @@ final class c extends nl {
     }
 
     static {
-        field_q = "If you do nothing the game will revert to normal view once the timer reaches 0.";
-        field_t = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
+        ifYouDoNothingText = "If you do nothing the game will revert to normal view once the timer reaches 0.";
+        unfortunatelyThereWasAText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_u = new int[]{1, 1, 1};
     }
 }

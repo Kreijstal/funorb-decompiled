@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
-    static String field_c;
+    static String backText;
     java.awt.Frame field_b;
     volatile boolean field_a;
 
@@ -19,11 +19,11 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_c = (String) null;
-          field_c = null;
+          backText = (String) null;
+          backText = null;
           return;
         }
-        field_c = null;
+        backText = null;
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -51,6 +51,6 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        field_c = "Back";
+        backText = "Back";
     }
 }

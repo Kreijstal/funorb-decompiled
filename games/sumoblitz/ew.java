@@ -24,11 +24,11 @@ final class ew extends na {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a((byte) 26, param1) == qr.field_e) {
-            stackIn_2_0 = aj.field_t;
+            stackIn_2_0 = aj.pleaseCheckIfAddressText;
             return stackIn_2_0;
           }
           if (param0 == 0) {
-            stackIn_7_0 = ProxySocketConnector.field_h;
+            stackIn_7_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) null;

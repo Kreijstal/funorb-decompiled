@@ -4,7 +4,7 @@
 final class wt extends bq {
     private boolean field_j;
     private hp[] field_e;
-    static rj field_i;
+    static ResourceArchive field_i;
     private tq field_f;
     private boolean field_g;
     static int[] field_h;
@@ -73,7 +73,7 @@ final class wt extends bq {
         this.field_f.a(true);
         this.field_f.a(1, 4864);
         if (param0 > -116) {
-          field_i = (rj) null;
+          field_i = (ResourceArchive) null;
         }
         this.field_b.g(1, 102);
         jaggl.OpenGL.glDisable(3168);
@@ -250,7 +250,7 @@ final class wt extends bq {
     final static void a(int param0, byte param1) {
         ut.a(8, (byte) -55, nt.field_m[param0], true);
         if (param1 < 27) {
-          field_i = (rj) null;
+          field_i = (ResourceArchive) null;
         }
     }
 

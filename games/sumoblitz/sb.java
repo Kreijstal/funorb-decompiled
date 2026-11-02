@@ -4,16 +4,16 @@
 final class sb {
     static int field_c;
     static int field_a;
-    static String field_e;
+    static String openInPopupWindowText;
     static jg field_b;
     static ne[] field_d;
 
-    final static ha a(ki param0, int param1, d param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(ki param0, int param1, d param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
-        on var8 = null;
+        OpenGlGraphicsToolkit var8 = null;
         jaggl.OpenGL var9 = null;
-        on stackIn_9_0 = null;
+        OpenGlGraphicsToolkit stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -37,10 +37,10 @@ final class sb {
           if (var6 == 0L) {
             throw new RuntimeException("");
           }
-          var8 = new on(var9, param3, var6, param2, param0, param4);
+          var8 = new OpenGlGraphicsToolkit(var9, param3, var6, param2, param0, param4);
           var8.e(false);
           stackIn_9_0 = var8;
-          return (ha) ((Object) stackIn_9_0);
+          return (GraphicsToolkit) ((Object) stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -87,7 +87,7 @@ final class sb {
         if (!param0) {
           field_c = 40;
         }
-        field_e = null;
+        openInPopupWindowText = null;
         field_b = null;
         field_d = null;
     }
@@ -120,13 +120,13 @@ final class sb {
         try {
           var2_int = param1.a(param0 + 9937, "waves/");
           var23 = param1.a(var2_int, -25915);
-          cb.field_a = new wc[41];
+          IntrusiveDequeCursor.field_a = new wc[41];
           var4 = new wc[41];
           for (var5_int = 0; var23.length > var5_int; var5_int++) {
             var6_ref_fs = new PacketBuffer(param1.a((byte) 94, var23[var5_int], var2_int));
             var6_ref_fs.position = var6_ref_fs.position + 1;
             var4[var5_int] = wr.a(true, var6_ref_fs, false);
-            cb.field_a[var4[var5_int].field_a] = var4[var5_int];
+            IntrusiveDequeCursor.field_a[var4[var5_int].field_a] = var4[var5_int];
           }
           var2_int = param1.a(param0 ^ param0, "levels/");
           var24 = param1.a(var2_int, -25915);
@@ -162,7 +162,7 @@ final class sb {
                 var7_array[var9] = wr.a(true, var10, false);
                 var8[var16[var9].field_a] = var16[var9];
               }
-              ab.field_a.a(new om(var8), param0 ^ 9936, (long)sp.field_x[var6]);
+              ab.field_a.a(new om(var8), param0 ^ 9936, (long)WidgetContainer.field_x[var6]);
             }
           }
           return;
@@ -189,7 +189,7 @@ final class sb {
 
     static {
         field_a = 0;
-        field_e = "Open in popup window";
+        openInPopupWindowText = "Open in popup window";
         field_c = 250;
         field_b = new jg();
     }

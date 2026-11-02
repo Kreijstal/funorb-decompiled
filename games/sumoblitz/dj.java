@@ -3,8 +3,8 @@
  */
 final class dj extends IntrusiveNode {
     mf field_q;
-    static String field_o;
-    static String[] field_r;
+    static String fullScreenText;
+    static String[] scoreFilterLabels;
     static hr field_l;
     static int field_n;
     IntrusiveNode field_k;
@@ -25,15 +25,15 @@ final class dj extends IntrusiveNode {
     public static void a(int param0) {
         field_l = null;
         if (param0 == 1022768328) {
-          field_o = null;
+          fullScreenText = null;
           field_m = null;
-          field_r = null;
+          scoreFilterLabels = null;
           return;
         }
         dj.a(-56, -102);
-        field_o = null;
+        fullScreenText = null;
         field_m = null;
-        field_r = null;
+        scoreFilterLabels = null;
     }
 
     dj(mf param0, IntrusiveNode param1) {
@@ -48,7 +48,7 @@ final class dj extends IntrusiveNode {
     }
 
     static {
-        field_o = "Full screen";
-        field_r = new String[]{"All scores", "My scores", "Best each"};
+        fullScreenText = "Full screen";
+        scoreFilterLabels = new String[]{"All scores", "My scores", "Best each"};
     }
 }

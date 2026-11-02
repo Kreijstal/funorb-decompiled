@@ -49,10 +49,10 @@ abstract class na extends dw implements pw {
         }
     }
 
-    final static wb a(int param0, int param1, ki param2, int param3) {
+    final static Sprite a(int param0, int param1, ki param2, int param3) {
         RuntimeException var4 = null;
-        wb stackIn_5_0 = null;
-        wb stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -65,7 +65,7 @@ abstract class na extends dw implements pw {
             stackIn_7_0 = tj.c((byte) -8);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (wb) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

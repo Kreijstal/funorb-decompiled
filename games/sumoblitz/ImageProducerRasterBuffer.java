@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static String field_j;
+    static String connectionRestoredText;
     static int field_k;
     static mf[] field_n;
     private java.awt.image.ImageConsumer field_l;
@@ -113,7 +113,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 return stackIn_18_0;
               }
             } else {
-              if (ji.field_a.indexOf(var4) == -1) {
+              if (ji.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var4) == -1) {
                 stackIn_22_0 = gs.field_a;
                 return stackIn_22_0;
               }
@@ -285,7 +285,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param0 > -27) {
           return;
         }
-        field_j = null;
+        connectionRestoredText = null;
         field_n = null;
     }
 
@@ -297,7 +297,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     static {
         field_k = 0;
-        field_j = "Connection restored.";
+        connectionRestoredText = "Connection restored.";
         field_n = new mf[3];
     }
 }

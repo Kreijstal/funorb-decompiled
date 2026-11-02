@@ -344,7 +344,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               ke.field_a = this;
               th.field_H = 0;
-              mu.field_s = param4;
+              SpriteState.field_s = param4;
               gi.field_h = param3;
               vs.field_b = param3;
               si.field_c = 0;

@@ -3,9 +3,9 @@
  */
 class ac extends wp {
     static String field_F;
-    private pk field_E;
+    private UiWidget field_E;
 
-    final boolean a(pk param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -41,7 +41,7 @@ class ac extends wp {
         field_F = null;
     }
 
-    ac(pk param0) {
+    ac(UiWidget param0) {
         try {
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {

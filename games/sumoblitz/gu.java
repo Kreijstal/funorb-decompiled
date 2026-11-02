@@ -4,7 +4,7 @@
 final class gu extends ka {
     private lm field_g;
     private int field_e;
-    static String field_h;
+    static String musicText;
     static int field_d;
     private int field_c;
     static int field_j;
@@ -48,7 +48,7 @@ final class gu extends ka {
         this.field_g.a(-1);
     }
 
-    gu(aw param0, int param1, int param2, boolean param3, boolean param4) {
+    gu(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -94,13 +94,13 @@ final class gu extends ka {
     }
 
     public static void a(boolean param0) {
-        field_h = null;
+        musicText = null;
         if (!param0) {
           gu.a(true);
         }
     }
 
     static {
-        field_h = "Music: ";
+        musicText = "Music: ";
     }
 }

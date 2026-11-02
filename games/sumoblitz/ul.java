@@ -180,7 +180,7 @@ final class ul {
         qw.field_b = param2;
     }
 
-    final static wb[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var10 = null;
@@ -189,7 +189,7 @@ final class ul {
         int[] var5 = null;
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
-        wb[] var1 = new wb[rl.field_n];
+        Sprite[] var1 = new Sprite[rl.field_n];
         if (param0 != 255) {
           ul.a(79);
         }
@@ -202,7 +202,7 @@ final class ul {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = iv.field_l[eb.a(255, (int) var10[var6])];
           }
-          var1[var2] = new wb(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var11);
+          var1[var2] = new Sprite(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var11);
         }
         tl.a((byte) -79);
         return var1;

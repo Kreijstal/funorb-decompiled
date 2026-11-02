@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ig {
-    static jn field_b;
+    static IntrusiveDeque field_b;
     static pl field_a;
 
     final static boolean b(int param0) {
@@ -100,7 +100,7 @@ final class ig {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param1) {
-            field_b = (jn) null;
+            field_b = (IntrusiveDeque) null;
           }
           if (!qn.field_e.field_f) {
             stackIn_6_0 = -1;
@@ -116,15 +116,15 @@ final class ig {
             return stackIn_14_0;
           }
           var3 = pn.field_n + var10;
-          if (!ha.field_e.b("", var3, -1)) {
+          if (!GraphicsToolkit.field_e.b("", var3, -1)) {
             stackIn_17_0 = -1;
             return stackIn_17_0;
           }
-          if (!ha.field_e.a(var3, 100)) {
-            stackIn_20_0 = ha.field_e.a(var3, (byte) 33);
+          if (!GraphicsToolkit.field_e.a(var3, 100)) {
+            stackIn_20_0 = GraphicsToolkit.field_e.a(var3, (byte) 33);
             return stackIn_20_0;
           }
-          var15 = ha.field_e.a("", var3, -1);
+          var15 = GraphicsToolkit.field_e.a("", var3, -1);
           var13 = var15;
           var4 = var13;
           var5 = null;
@@ -198,6 +198,6 @@ final class ig {
     }
 
     static {
-        field_b = new jn();
+        field_b = new IntrusiveDeque();
     }
 }

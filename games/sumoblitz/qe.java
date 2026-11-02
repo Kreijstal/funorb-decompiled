@@ -3,7 +3,7 @@
  */
 final class qe {
     static gf field_a;
-    static String field_b;
+    static String connectionLostAttemptingToText;
 
     final static int[][] a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, float param8) {
         int var11 = 0;
@@ -30,12 +30,12 @@ final class qe {
         if (param0 != 0) {
           field_a = (gf) null;
         }
-        field_b = null;
+        connectionLostAttemptingToText = null;
         field_a = null;
     }
 
     static {
         field_a = new gf();
-        field_b = "Connection lost - attempting to reconnect";
+        connectionLostAttemptingToText = "Connection lost - attempting to reconnect";
     }
 }

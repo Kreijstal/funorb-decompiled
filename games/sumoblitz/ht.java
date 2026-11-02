@@ -9,7 +9,7 @@ abstract class ht implements ft {
     private int field_g;
     int field_c;
     static volatile int field_h;
-    static String field_b;
+    static String confirmPasswordText;
     private boolean field_i;
     static hr[] field_e;
 
@@ -61,11 +61,11 @@ abstract class ht implements ft {
         if (param0 != -81) {
           ht.a((byte) 94);
           field_e = null;
-          field_b = null;
+          confirmPasswordText = null;
           return;
         }
         field_e = null;
-        field_b = null;
+        confirmPasswordText = null;
     }
 
     final void a(boolean param0, int param1) {
@@ -83,7 +83,7 @@ abstract class ht implements ft {
         }
     }
 
-    final static oh a(qj[] param0, on param1, byte param2) {
+    final static oh a(qj[] param0, OpenGlGraphicsToolkit param1, byte param2) {
         int var3_int = 0;
         Object stackIn_25_0 = null;
         oh stackIn_27_0 = null;
@@ -259,6 +259,6 @@ abstract class ht implements ft {
 
     static {
         field_h = 0;
-        field_b = "Confirm Password: ";
+        confirmPasswordText = "Confirm Password: ";
     }
 }

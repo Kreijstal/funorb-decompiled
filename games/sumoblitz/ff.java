@@ -6,21 +6,21 @@ import java.util.*;
 class ff extends en {
     private int field_q;
     private int field_p;
-    static String field_n;
+    static String soundText;
     private byte[] field_r;
     static hr[] field_k;
     private int[] field_l;
-    static String field_m;
-    static String field_o;
+    static String warningText;
+    static String createText;
 
     public static void b(boolean param0) {
-        field_m = null;
-        field_o = null;
+        warningText = null;
+        createText = null;
         field_k = null;
         if (!param0) {
           return;
         }
-        field_n = null;
+        soundText = null;
     }
 
     final void b(int param0) {
@@ -29,8 +29,8 @@ class ff extends en {
         if (param0 <= -7) {
           return;
         }
-        jn var3 = (jn) null;
-        ff.a(-47, -118, 3, (jn) null, 110, (byte) -26);
+        IntrusiveDeque var3 = (IntrusiveDeque) null;
+        ff.a(-47, -118, 3, (IntrusiveDeque) null, 110, (byte) -26);
     }
 
     ff(int param0, int param1, int param2, int param3, int param4, float param5) {
@@ -42,7 +42,7 @@ class ff extends en {
         }
     }
 
-    final static void a(int param0, int param1, int param2, jn param3, int param4, byte param5) {
+    final static void a(int param0, int param1, int param2, IntrusiveDeque param3, int param4, byte param5) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -56,7 +56,7 @@ class ff extends en {
         int var7 = 0;
         float[] var8 = null;
         int var9 = 0;
-        jn var10 = null;
+        IntrusiveDeque var10 = null;
         float[] var11 = null;
         float[] var12 = null;
         float[] var13 = null;
@@ -71,8 +71,8 @@ class ff extends en {
           var6_int = stackIn_4_0;
           var7 = 0;
           if (param5 != 94) {
-            var10 = (jn) null;
-            ff.a(-96, 96, -59, (jn) null, -77, (byte) 95);
+            var10 = (IntrusiveDeque) null;
+            ff.a(-96, 96, -59, (IntrusiveDeque) null, -77, (byte) 95);
           }
           while (true) {
             stackIn_9_0 = (var6_int != 0) ? 20 : 40;
@@ -126,8 +126,8 @@ class ff extends en {
         if (param1 == 1157) {
           return;
         }
-        jn var5 = (jn) null;
-        ff.a(66, 11, -7, (jn) null, 98, (byte) -106);
+        IntrusiveDeque var5 = (IntrusiveDeque) null;
+        ff.a(66, 11, -7, (IntrusiveDeque) null, 98, (byte) -106);
     }
 
     final void a(boolean param0) {
@@ -197,8 +197,8 @@ class ff extends en {
           rc.field_l[36] = eb.field_b.b(0, "firework_particles3");
           rc.field_l[37] = eb.field_b.b(0, "firework_particles4");
           if (param0 > -42) {
-            jn var3 = (jn) null;
-            ff.a(98, 120, 16, (jn) null, 107, (byte) 5);
+            IntrusiveDeque var3 = (IntrusiveDeque) null;
+            ff.a(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);
           }
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ff.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -206,8 +206,8 @@ class ff extends en {
     }
 
     static {
-        field_n = "Sound: ";
-        field_m = "Warning!";
-        field_o = "Create";
+        soundText = "Sound: ";
+        warningText = "Warning!";
+        createText = "Create";
     }
 }

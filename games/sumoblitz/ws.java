@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ws {
     static int field_b;
-    static String field_a;
+    static String toKeepFullscreenOrText;
 
     final static int a(io param0, byte param1) {
         RuntimeException var2 = null;
@@ -74,7 +74,7 @@ final class ws {
 
     final static boolean b(byte param0) {
         if (param0 != 52) {
-          field_a = (String) null;
+          toKeepFullscreenOrText = (String) null;
           return is.field_b;
         }
         return is.field_b;
@@ -83,10 +83,10 @@ final class ws {
     public static void a(byte param0) {
         if (param0 != -71) {
           field_b = -48;
-          field_a = null;
+          toKeepFullscreenOrText = null;
           return;
         }
-        field_a = null;
+        toKeepFullscreenOrText = null;
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
@@ -182,6 +182,6 @@ final class ws {
     }
 
     static {
-        field_a = "to keep fullscreen or";
+        toKeepFullscreenOrText = "to keep fullscreen or";
     }
 }

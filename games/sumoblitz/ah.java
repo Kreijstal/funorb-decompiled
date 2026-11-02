@@ -36,7 +36,7 @@ class ah {
     int field_x;
     int field_a;
     double field_L;
-    private jn field_q;
+    private IntrusiveDeque field_q;
     int field_F;
     int field_I;
     private int field_K;
@@ -498,7 +498,7 @@ class ah {
     private final void m(byte param0) {
         this.field_c = 12;
         this.field_n = true;
-        this.field_q = new jn();
+        this.field_q = new IntrusiveDeque();
         ts.a(this.field_C, this.field_q, -16240, 40, lr.field_a[this.field_Q], this.field_z);
         int var2 = 111 % ((param0 - 57) / 38);
         gn.a(19 + fi.a(3, he.field_o, (byte) -96), true);
@@ -707,7 +707,7 @@ class ah {
         return true;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         hr stackIn_23_0 = null;
@@ -727,7 +727,7 @@ class ah {
         float stackIn_41_2;
         double stackIn_41_3;
         int stackIn_42_4;
-        ha stackIn_45_0;
+        GraphicsToolkit stackIn_45_0;
         int stackIn_45_1;
         int stackIn_45_2;
         int stackIn_45_3;
@@ -846,7 +846,7 @@ class ah {
                   if (this.field_Q != 3) {
                     if (this.field_Q != 4) {
                       if (5 != this.field_Q) {
-                        stackIn_45_0 = (ha) (param0);
+                        stackIn_45_0 = (GraphicsToolkit) (param0);
                         stackIn_45_1 = this.field_C >> 8;
                         stackIn_45_2 = this.field_z >> 8;
                         stackIn_45_3 = var5;
@@ -856,7 +856,7 @@ class ah {
                         } else {
                           stackIn_46_5 = 0;
                         }
-                        ((ha) (Object) stackIn_45_0).s(stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5);
+                        ((GraphicsToolkit) (Object) stackIn_45_0).s(stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5);
                       } else {
                         stackIn_41_0 = mr.field_e[0];
                         stackIn_41_1 = (float)(this.field_C >> 8);
@@ -1043,7 +1043,7 @@ class ah {
           if (this.g(101)) {
           }
           if (2 == this.field_M) {
-            stackIn_122_0 = jn.field_d;
+            stackIn_122_0 = IntrusiveDeque.field_d;
             stackIn_122_1 = (float)(this.field_C >> 8);
             stackIn_122_2 = (float)(this.field_z >> 8);
             stackIn_122_3 = 4096.0;
@@ -1081,7 +1081,7 @@ class ah {
             this.field_G = 4;
           }
           this.field_c = 12;
-          this.field_q = new jn();
+          this.field_q = new IntrusiveDeque();
           ts.a(this.field_C, this.field_q, -16240, 50, lr.field_a[this.field_Q], this.field_z);
           this.m(-82);
           return;
@@ -1151,7 +1151,7 @@ class ah {
         this.field_N = param1;
         this.field_Q = param0;
         this.l(125);
-        this.field_q = new jn();
+        this.field_q = new IntrusiveDeque();
     }
 
     static {

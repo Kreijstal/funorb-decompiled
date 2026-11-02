@@ -5,7 +5,7 @@ abstract class bp implements ed {
     private ji field_a;
     private boolean field_d;
     int field_h;
-    on field_e;
+    OpenGlGraphicsToolkit field_e;
     private int field_f;
     io field_g;
     iw field_c;
@@ -534,7 +534,7 @@ abstract class bp implements ed {
         }
     }
 
-    bp(on param0, int param1, iw param2, io param3, int param4, boolean param5) {
+    bp(OpenGlGraphicsToolkit param0, int param1, iw param2, io param3, int param4, boolean param5) {
         this.field_a = ao.field_y;
         try {
           this.field_g = param3;

@@ -4,18 +4,18 @@
 import java.util.*;
 
 final class li extends ce implements java.awt.image.ImageProducer {
-    static wb[] field_v;
+    static Sprite[] field_v;
     static int field_r;
     private java.awt.image.ColorModel field_s;
     static int field_u;
     private java.awt.Image field_x;
     private java.awt.image.ImageConsumer field_t;
-    static String field_y;
+    static String loadingText;
     private java.awt.Canvas field_w;
 
     final static Boolean c(int param0) {
-        Boolean var1 = aw.field_j;
-        aw.field_j = null;
+        Boolean var1 = HardwareGraphicsToolkit.field_j;
+        HardwareGraphicsToolkit.field_j = null;
         int var2 = -13 % ((8 - param0) / 32);
         return var1;
     }
@@ -29,7 +29,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
           this.field_t.imageComplete(2);
           return;
         }
-        field_v = (wb[]) null;
+        field_v = (Sprite[]) null;
         this.field_t.imageComplete(2);
     }
 
@@ -42,7 +42,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
           this.field_t.imageComplete(2);
           return;
         }
-        field_v = (wb[]) null;
+        field_v = (Sprite[]) null;
         this.field_t.setPixels(0, 0, this.field_n, this.field_k, this.field_s, this.field_m, 0, this.field_n);
         this.field_t.imageComplete(2);
     }
@@ -65,7 +65,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
           return;
         }
         field_v = null;
-        field_y = null;
+        loadingText = null;
     }
 
     final void a(java.awt.Canvas param0, int param1, int param2, int param3) {
@@ -134,6 +134,6 @@ final class li extends ce implements java.awt.image.ImageProducer {
 
     static {
         field_r = -1;
-        field_y = "Loading...";
+        loadingText = "Loading...";
     }
 }

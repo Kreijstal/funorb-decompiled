@@ -8,7 +8,7 @@ final class ng extends rq {
     static hr[] field_f;
     private boolean field_h;
     private boolean field_g;
-    static String field_e;
+    static String noHighscoresText;
 
     final void a(boolean param0, byte param1) {
         this.field_b.a((byte) -83, lf.field_e, vi.field_v);
@@ -22,7 +22,7 @@ final class ng extends rq {
         if (param0 != 0) {
           return;
         }
-        field_e = null;
+        noHighscoresText = null;
     }
 
     final boolean b(byte param0) {
@@ -141,7 +141,7 @@ final class ng extends rq {
         }
     }
 
-    ng(aw param0) {
+    ng(HardwareGraphicsToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
@@ -283,6 +283,6 @@ final class ng extends rq {
     }
 
     static {
-        field_e = "No highscores";
+        noHighscoresText = "No highscores";
     }
 }

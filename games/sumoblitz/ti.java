@@ -30,7 +30,7 @@ final class ti implements Runnable {
           synchronized (var6) {
             var7 = (ql) (this.field_d.a(110));
             while (var7 != null) {
-              if (~(long)param2 == ~var7.field_l &&
+              if (~(long)param2 == ~var7.secondaryKey &&
                 var7.field_w == param0 &&
                 var7.field_y == 2) {
                 var4.field_u = false;
@@ -158,7 +158,7 @@ final class ti implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new ql();
-          var5.field_l = (long)param0;
+          var5.secondaryKey = (long)param0;
           var5.field_w = param3;
           var5.field_x = param1;
           var5.field_t = false;
@@ -198,7 +198,7 @@ final class ti implements Runnable {
         try {
           var4 = new ql();
           var4.field_y = 3;
-          var4.field_l = (long)param0;
+          var4.secondaryKey = (long)param0;
           var5 = 119 % ((56 - param1) / 55);
           var4.field_t = false;
           var4.field_w = param2;
@@ -271,11 +271,11 @@ final class ti implements Runnable {
             }
             try {
               if (var7.field_y == 2) {
-                var7.field_w.a(var7.field_x, (int)var7.field_l, var7.field_x.length, 0);
+                var7.field_w.a(var7.field_x, (int)var7.secondaryKey, var7.field_x.length, 0);
                 var7.field_u = false;
               } else {
                 if (var7.field_y == 3) {
-                  var7.field_x = var7.field_w.a(85, (int)var7.field_l);
+                  var7.field_x = var7.field_w.a(85, (int)var7.secondaryKey);
                   var7.field_u = false;
                 } else {
                   var7.field_u = false;

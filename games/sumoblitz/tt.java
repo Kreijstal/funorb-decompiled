@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class tt extends IntrusiveNode {
-    static String field_k;
+    static String defeatText;
     static int field_l;
 
-    final static wb[] a(byte param0, int param1, ki param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, ki param2, int param3) {
         RuntimeException var4 = null;
-        wb[] stackIn_5_0 = null;
-        wb[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -21,7 +21,7 @@ abstract class tt extends IntrusiveNode {
             stackIn_7_0 = ul.a(255);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (wb[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,16 +44,16 @@ abstract class tt extends IntrusiveNode {
           hc.field_f = c.field_u[2];
           return;
         }
-        field_k = (String) null;
+        defeatText = (String) null;
         ki.field_f = c.field_u[0];
         iv.field_i = c.field_u[1];
         hc.field_f = c.field_u[2];
     }
 
     public static void c(boolean param0) {
-        field_k = null;
+        defeatText = null;
         if (!param0) {
-          field_k = (String) null;
+          defeatText = (String) null;
         }
     }
 
@@ -96,7 +96,7 @@ abstract class tt extends IntrusiveNode {
     }
 
     static {
-        field_k = "DEFEAT.";
+        defeatText = "DEFEAT.";
         field_l = 256;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ha {
+abstract class GraphicsToolkit {
     d field_h;
     static ki field_e;
     static int field_b;
@@ -13,13 +13,13 @@ abstract class ha {
 
     abstract void f(int param0, int param1);
 
-    final synchronized static ha a(int param0, java.awt.Canvas param1, int param2, int param3, d param4, int param5, int param6, ki param7) {
+    final synchronized static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, int param3, d param4, int param5, int param6, ki param7) {
         RuntimeException var8 = null;
-        ha stackIn_3_0 = null;
-        ha stackIn_6_0 = null;
-        ha stackIn_9_0 = null;
-        ha stackIn_12_0 = null;
-        ha stackIn_16_0 = null;
+        GraphicsToolkit stackIn_3_0 = null;
+        GraphicsToolkit stackIn_6_0 = null;
+        GraphicsToolkit stackIn_9_0 = null;
+        GraphicsToolkit stackIn_12_0 = null;
+        GraphicsToolkit stackIn_16_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -38,7 +38,7 @@ abstract class ha {
             return stackIn_6_0;
           }
           if (param0 == 1) {
-            stackIn_9_0 = aw.a(param4, param1, param3, 27541);
+            stackIn_9_0 = HardwareGraphicsToolkit.a(param4, param1, param3, 27541);
             return stackIn_9_0;
           }
           if (5 == param0) {
@@ -203,7 +203,7 @@ abstract class ha {
         this.d();
         if (param0 >= -11) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          ha.a(-61, (IntrusiveNode) null, (IntrusiveNode) null);
+          GraphicsToolkit.a(-61, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
@@ -235,7 +235,7 @@ abstract class ha {
         try {
           if (param0 < 106) {
             ki var3 = (ki) null;
-            ha.a(-117, (java.awt.Canvas) null, -59, 3, (d) null, -128, -20, (ki) null);
+            GraphicsToolkit.a(-117, (java.awt.Canvas) null, -59, 3, (d) null, -128, -20, (ki) null);
           }
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ha.EG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -248,7 +248,7 @@ abstract class ha {
 
     abstract hr a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
-    ha(d param0) {
+    GraphicsToolkit(d param0) {
         int var2_int = 0;
         int var3 = 0;
         try {

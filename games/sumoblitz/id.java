@@ -9,14 +9,14 @@ final class id extends IntrusiveNode {
     int field_p;
     int field_o;
     int field_l;
-    static String field_m;
+    static String returnToGameText;
     int field_t;
     int field_r;
 
     public static void c(boolean param0) {
-        field_m = null;
+        returnToGameText = null;
         if (param0) {
-          field_m = (String) null;
+          returnToGameText = (String) null;
         }
     }
 
@@ -37,7 +37,7 @@ final class id extends IntrusiveNode {
             try {
               var4 = Class.forName("jw");
               if (param3 > -83) {
-                field_m = (String) null;
+                returnToGameText = (String) null;
               }
               var5 = (ce) (var4.newInstance());
               var5.a(param2, param1, param0, 122);
@@ -89,6 +89,6 @@ final class id extends IntrusiveNode {
     }
 
     static {
-        field_m = "Return to game";
+        returnToGameText = "Return to game";
     }
 }

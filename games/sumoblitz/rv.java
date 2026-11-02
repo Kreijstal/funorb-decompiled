@@ -3,7 +3,7 @@
  */
 final class rv {
     static ck field_b;
-    static String field_a;
+    static String warningIfYouQuitText;
 
     final static void a(byte param0) {
         ce.field_o = new js();
@@ -11,12 +11,12 @@ final class rv {
           vi.field_y.b((byte) -119, ce.field_o);
           return;
         }
-        field_a = (String) null;
+        warningIfYouQuitText = (String) null;
         vi.field_y.b((byte) -119, ce.field_o);
     }
 
     public static void a(boolean param0) {
-        field_a = null;
+        warningIfYouQuitText = null;
         if (!param0) {
           return;
         }
@@ -25,6 +25,6 @@ final class rv {
 
     static {
         field_b = new ck();
-        field_a = "Warning: if you quit, you will lose any game you are in the middle of!";
+        warningIfYouQuitText = "Warning: if you quit, you will lose any game you are in the middle of!";
     }
 }

@@ -6,7 +6,7 @@ import java.io.*;
 final class fu extends wp {
     int field_J;
     private rs field_H;
-    static String field_F;
+    static String namesCanOnlyContainText;
     static String field_E;
     int field_I;
     private int field_G;
@@ -36,7 +36,7 @@ final class fu extends wp {
               }
             }
             if (param0 != -1) {
-              field_F = (String) null;
+              namesCanOnlyContainText = (String) null;
             }
             if (m.field_O != null) {
               for (var1_int = 0; m.field_O.length > var1_int; var1_int++) {
@@ -69,7 +69,7 @@ final class fu extends wp {
         if (param0) {
           fu.a(78);
         }
-        field_F = null;
+        namesCanOnlyContainText = null;
     }
 
     final int a(int param0, int param1) {
@@ -97,7 +97,7 @@ final class fu extends wp {
         return this.field_H.a((byte) 70);
     }
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -189,6 +189,6 @@ final class fu extends wp {
     }
 
     static {
-        field_F = "Names can only contain letters, numbers, spaces and underscores";
+        namesCanOnlyContainText = "Names can only contain letters, numbers, spaces and underscores";
     }
 }

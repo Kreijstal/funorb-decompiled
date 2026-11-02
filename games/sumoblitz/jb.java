@@ -172,7 +172,7 @@ class jb extends se {
               if (var6_int != 0) {
                 iw.field_a = var6_int;
                 gu.field_d = -1;
-                kw.field_c = sp.field_z;
+                kw.field_c = WidgetContainer.field_z;
               } else {
                 kw.field_c = sc.field_q;
               }
@@ -195,7 +195,7 @@ class jb extends se {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  kw.field_c = sp.field_z;
+                  kw.field_c = WidgetContainer.field_z;
                   gu.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -226,8 +226,8 @@ class jb extends se {
                 stackIn_43_0 = ((4 & var7) != 0);
                 wo.field_c = stackIn_43_0;
                 stackIn_46_0 = ((var7 & 8) != 0);
-                cb.field_b = stackIn_46_0;
-                if (cb.field_b) {
+                IntrusiveDequeCursor.field_b = stackIn_46_0;
+                if (IntrusiveDequeCursor.field_b) {
                 }
               }
               if (gn.field_d) {
@@ -283,7 +283,7 @@ class jb extends se {
               stackIn_73_0 = iw.field_a;
               return stackIn_73_0;
             }
-            if (kw.field_c == sp.field_z &&
+            if (kw.field_c == WidgetContainer.field_z &&
               lt.a((byte) 119)) {
               kk.a((byte) -115);
               if (iw.field_a == 7 &&
@@ -303,9 +303,9 @@ class jb extends se {
             if (qk.field_O == null) {
               if (sr.field_g) {
                 if (uc.b(26560) <= 30000L) {
-                  MouseWheelInput.field_c = nd.field_G;
+                  MouseWheelInput.field_c = nd.errorConnectingToServerText;
                 } else {
-                  MouseWheelInput.field_c = ar.field_F;
+                  MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
                 }
                 sr.field_g = false;
                 stackIn_94_0 = 3;
@@ -351,12 +351,12 @@ class jb extends se {
         return hh.field_c;
     }
 
-    final static wb a(String param0, String param1, int param2, ki param3) {
+    final static Sprite a(String param0, String param1, int param2, ki param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        wb stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

@@ -8,7 +8,7 @@ final class go extends bp implements nh {
     static ts field_n;
     static int[] field_j;
     static jj field_m;
-    static String field_o;
+    static String logInCreateAccountText;
     static hr[] field_p;
 
     public final void a(ji param0, int param1) {
@@ -26,14 +26,14 @@ final class go extends bp implements nh {
         field_p = null;
         field_m = null;
         field_j = null;
-        field_o = null;
+        logInCreateAccountText = null;
         field_n = null;
         if (param0 != -17) {
           go.a((byte) 112);
         }
     }
 
-    go(on param0, iw param1, int param2, int param3, int param4, byte[] param5) {
+    go(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, 32879, param1, io.field_g, param2 * (param3 * param4), false);
         try {
           this.field_i = param2;
@@ -55,7 +55,7 @@ final class go extends bp implements nh {
     static {
         field_n = new ts(0, 2, 2, 1);
         field_j = new int[25];
-        field_o = "Log in / Create account";
+        logInCreateAccountText = "Log in / Create account";
         field_m = new jj("email");
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn {
+final class IntrusiveDeque {
     static int field_b;
     static hr field_d;
     static hr[] field_c;
@@ -183,7 +183,7 @@ final class jn {
         this.field_a = null;
     }
 
-    public jn() {
+    public IntrusiveDeque() {
         this.field_e = new IntrusiveNode();
         this.field_e.previous = this.field_e;
         this.field_e.next = this.field_e;

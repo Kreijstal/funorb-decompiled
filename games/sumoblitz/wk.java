@@ -39,10 +39,10 @@ final class wk extends na {
             return stackIn_4_0;
           }
           if (this.a((byte) 26, param1) != qr.field_e) {
-            stackIn_9_0 = ProxySocketConnector.field_h;
+            stackIn_9_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_9_0;
           }
-          stackIn_7_0 = oj.field_b;
+          stackIn_7_0 = oj.emailAddressIsUnavailableText;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

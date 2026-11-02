@@ -7,7 +7,7 @@ abstract class ko extends IntrusiveNode {
     private float field_l;
     private int field_n;
     private int field_r;
-    static jn field_m;
+    static IntrusiveDeque field_m;
     private int field_q;
     static int field_p;
 
@@ -25,7 +25,7 @@ abstract class ko extends IntrusiveNode {
             var4 = (hg) (hi.field_f.d((byte) 18));
           }
           if (param0 != 0) {
-            field_m = (jn) null;
+            field_m = (IntrusiveDeque) null;
           }
           var2 = wr.field_E.b(-105);
           while (var2 != null) {
@@ -100,7 +100,7 @@ abstract class ko extends IntrusiveNode {
     }
 
     static {
-        field_m = new jn();
+        field_m = new IntrusiveDeque();
         field_p = 0;
     }
 }
