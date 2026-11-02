@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc extends IntrusiveNode {
-    em field_v;
+    PcmSampleStream field_v;
     IntrusiveNode field_u;
     static String field_r;
     static fm field_p;
@@ -25,8 +25,8 @@ final class pc extends IntrusiveNode {
         var3 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 0;
-          for (var2 = 0; var2 < fe.field_D.length; var2++) {
-            var1_int = var1_int + mm.a((byte) 101, fe.field_D[var2]);
+          for (var2 = 0; var2 < ArchiveRequest.field_D.length; var2++) {
+            var1_int = var1_int + mm.a((byte) 101, ArchiveRequest.field_D[var2]);
           }
           if (param0 < 115) {
             stackIn_6_0 = -66;
@@ -62,7 +62,7 @@ final class pc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          vk.a(param14, param13, param5, param6, param10, param7, new ak(param18), (byte) -115, param16, param11, new ak(param9), param19, param15, param2, param0, param12, param4, param17, param3, new ak(param1), param8);
+          Js5Transport.a(param14, param13, param5, param6, param10, param7, new ak(param18), (byte) -115, param16, param11, new ak(param9), param19, param15, param2, param0, param12, param4, param17, param3, new ak(param1), param8);
           if (param20 < 2) {
             field_p = (fm) null;
           }
@@ -115,27 +115,27 @@ final class pc extends IntrusiveNode {
     }
 
     final static void d(int param0) {
-        if (sb.field_bb.field_i != jn.field_c) {
-          va.field_b = va.field_b + (-jn.field_c + sb.field_bb.field_i);
-          jn.field_c = sb.field_bb.field_i;
+        if (Checkbox.field_bb.field_i != jn.field_c) {
+          va.field_b = va.field_b + (-jn.field_c + Checkbox.field_bb.field_i);
+          jn.field_c = Checkbox.field_bb.field_i;
         }
-        if (!(wa.field_p <= 0)) {
-          wa.field_p = wa.field_p - 1;
+        if (!(StatefulTextPainter.field_p <= 0)) {
+          StatefulTextPainter.field_p = StatefulTextPainter.field_p - 1;
         }
         if (param0 >= -17) {
           return;
         }
-        if (!(0 >= wa.field_p)) {
-          nn.a(false);
+        if (!(0 >= StatefulTextPainter.field_p)) {
+          FullscreenFocusCanvas.a(false);
         }
     }
 
-    pc(em param0, IntrusiveNode param1) {
+    pc(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_v = param0;
-          this.field_t = param0.f();
+          this.field_t = param0.getTargetVolume();
           this.field_u = param1;
-          this.field_v.e(this.field_t * lb.field_ac + 128 >> 8);
+          this.field_v.setVolumeQ6(this.field_t * VerticalScrollbar.field_ac + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

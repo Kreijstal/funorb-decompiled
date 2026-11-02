@@ -5,7 +5,7 @@ abstract class FunOrbClient extends GameApplet {
     private int field_D;
     private boolean field_C;
     private boolean field_E;
-    static td field_x;
+    static ReportAbuseDialog field_x;
     static int field_u;
     static String field_o;
     static int[] field_z;
@@ -13,7 +13,7 @@ abstract class FunOrbClient extends GameApplet {
     private int field_v;
     private int field_q;
     private int field_n;
-    static u field_w;
+    static CoverageBitmapFont field_w;
     private int field_F;
     static int[] field_p;
     private int field_B;
@@ -37,26 +37,26 @@ abstract class FunOrbClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SteelSentinels.obfuscationControl;
-          var4 = hh.a(dh.field_D, param1, (byte) -66, jj.field_d);
+          var4 = hh.a(SceneWidgetNode.field_D, param1, (byte) -66, jj.field_d);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = GameApplet.a(ln.a((byte) -89), si.b(64), -121);
+            var5_int = GameApplet.a(ln.a((byte) -89), CachedTextLayout.b(64), -121);
             if (var5_int != -1) {
-              a.a(di.field_e, (byte) 118, var5_int, vh.field_d);
+              MouseWheelInput.a(di.field_e, (byte) 118, var5_int, vh.field_d);
               vh.field_d = null;
               di.field_e = null;
             }
-            var11 = aj.a(true);
+            var11 = RasterSnapshot.a(true);
             if (var11 != null) {
               fl.a((byte) 97, var11.booleanValue());
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = id.a(ma.a(false), 0, jj.a(true), this.field_q, hl.d(91), vl.e(37), df.h(82));
+            var5_intLifetime1 = IconLabelControl.a(TextHotspotWidget.a(false), 0, jj.a(true), this.field_q, hl.d(91), TextHotspotRegion.e(37), DiskCacheRequest.h(82));
             if (var5_intLifetime1 != -1) {
-              nn.a(vh.field_d, var5_intLifetime1, di.field_e, (byte) -128);
+              FullscreenFocusCanvas.a(vh.field_d, var5_intLifetime1, di.field_e, (byte) -128);
               di.field_e = null;
               vh.field_d = null;
             }
@@ -68,15 +68,15 @@ abstract class FunOrbClient extends GameApplet {
               bi.b(param2 ^ 7004);
             }
             if (!param0) {
-              var5_intLifetime2 = jj.a(-108, this.field_q, jj.a(true), this.field_A, false, ma.a(false));
+              var5_intLifetime2 = jj.a(-108, this.field_q, jj.a(true), this.field_A, false, TextHotspotWidget.a(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   cl.a(di.field_e, var5_intLifetime2, 1);
                   di.field_e = null;
                 } else {
-                  oa.field_P = li.field_w;
+                  TextButton.field_P = PasswordFieldPainter.field_w;
                   CombatWorld.c(11828);
-                  mg.field_ac = false;
+                  QuickChatMenu.field_ac = false;
                   uj.field_d = 10;
                 }
               }
@@ -85,11 +85,11 @@ abstract class FunOrbClient extends GameApplet {
             }
           }
           if (4 == var4) {
-            if (!ki.field_ib) {
-              mg.field_ac = true;
+            if (!LoadingProgressDialog.field_ib) {
+              QuickChatMenu.field_ac = true;
               uj.field_d = 10;
             } else {
-              ei.a(param2 + 7014, Projectile.d((byte) -21));
+              NameAvailabilityValidator.a(param2 + 7014, Projectile.d((byte) -21));
             }
           }
           if (5 == var4) {
@@ -103,46 +103,46 @@ abstract class FunOrbClient extends GameApplet {
             return 20;
           }
           if (7 == var4) {
-            nc.a((byte) -81, Projectile.d((byte) -21));
+            WeightedLruCache.a((byte) -81, Projectile.d((byte) -21));
           }
           if (var4 == 8) {
-            ei.a(0, Projectile.d((byte) -21));
+            NameAvailabilityValidator.a(0, Projectile.d((byte) -21));
           }
           if (9 == var4) {
-            mj.a((byte) 49, Projectile.d((byte) -21));
+            TabbedPanel.a((byte) 49, Projectile.d((byte) -21));
           }
           if (var4 == 10) {
             mm.field_g.writeCipheredOpcode(17, (byte) -117);
           }
           if (var4 == 11) {
-            pf.a(Projectile.d((byte) -21), 63);
+            CheckboxPainter.a(Projectile.d((byte) -21), 63);
           }
           if (12 == var4) {
-            rj.a(db.b(param2 + 7014), Projectile.d((byte) -21), (byte) -47);
+            BufferedRandomAccessFile.a(SocketConnector.b(param2 + 7014), Projectile.d((byte) -21), (byte) -47);
           }
           if (var4 == 13) {
             try {
-              if (kc.field_s == null) {
-                kc.field_s = new fk(hb.field_i, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (DelayedServerPacket.field_s == null) {
+                DelayedServerPacket.field_s = new BoundedUrlRequest(IterableDualNodeDeque.field_i, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (kc.field_s.c(-2)) {
-                var12 = kc.field_s.b(param2 + 7017);
+              if (DelayedServerPacket.field_s.c(-2)) {
+                var12 = DelayedServerPacket.field_s.b(param2 + 7017);
                 if (var12 == null) {
                   var9 = (String) null;
                   na.a((String) null, (byte) -126);
                 } else {
-                  var7 = ub.a((byte) 37, 0, var12.payload, var12.position);
+                  var7 = SoundCache.a((byte) 37, 0, var12.payload, var12.position);
                   na.a(var7, (byte) -105);
                 }
-                kc.field_s = null;
+                DelayedServerPacket.field_s = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              sj.a("S1", -100, (Throwable) ((Object) var5));
+              MusicCrossfadeStream.a("S1", -100, (Throwable) ((Object) var5));
               var10 = (String) null;
               na.a((String) null, (byte) -104);
-              kc.field_s = null;
+              DelayedServerPacket.field_s = null;
             }
           }
           if (var4 == 15) {
@@ -215,7 +215,7 @@ abstract class FunOrbClient extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            sj.a((String) null, -41, (Throwable) ((Object) var6_ref));
+            MusicCrossfadeStream.a((String) null, -41, (Throwable) ((Object) var6_ref));
             this.a("crash", param2 ^ 16948);
           }
           return;
@@ -245,7 +245,7 @@ abstract class FunOrbClient extends GameApplet {
         if (tf.field_b) {
           return -1;
         }
-        var2 = jj.a(-119, this.field_q, jj.a(true), this.field_A, true, ma.a(false));
+        var2 = jj.a(-119, this.field_q, jj.a(true), this.field_A, true, TextHotspotWidget.a(false));
         if (var2 == -1) {
           return -1;
         }
@@ -258,7 +258,7 @@ abstract class FunOrbClient extends GameApplet {
           var3 = 102 / ((param0 + 32) / 54);
           cl.a(di.field_e, var2, 1);
           tf.field_b = true;
-          r.field_l = 15000L + mm.a(42);
+          ProxySocketConnector.field_l = 15000L + mm.a(42);
           return var2;
         }
         if (uj.field_d == 11 &&
@@ -273,12 +273,12 @@ abstract class FunOrbClient extends GameApplet {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        dh.field_D = this.field_n;
-        jg.a(dh.field_D, param2 ^ 4192);
-        lk.a(hb.field_i, this.field_t, param1, this.field_v, param3, this.field_C, this.field_B, dh.field_D, 5000, this.field_r, (byte) 120, param2, this.field_F, this.field_D);
-        g.a(this.field_F, this.field_D, param3, this.field_B, hb.field_i, (byte) -95, dh.field_D, this.field_v, this.field_t);
+        SceneWidgetNode.field_D = this.field_n;
+        ViewportController.a(SceneWidgetNode.field_D, param2 ^ 4192);
+        ValidationIndicator.a(IterableDualNodeDeque.field_i, this.field_t, param1, this.field_v, param3, this.field_C, this.field_B, SceneWidgetNode.field_D, 5000, this.field_r, (byte) 120, param2, this.field_F, this.field_D);
+        GrowableIntList.a(this.field_F, this.field_D, param3, this.field_B, IterableDualNodeDeque.field_i, (byte) -95, SceneWidgetNode.field_D, this.field_v, this.field_t);
         ArchiveProvider.a((byte) 127);
-        nc.field_j = pi.a((byte) 68);
+        WeightedLruCache.field_j = DelegatingCanvas.a((byte) 68);
         hg.a((byte) -93, sl.field_n);
         Sprite.field_h = param5;
         ArchiveIndex.field_r = param7;
@@ -375,14 +375,14 @@ abstract class FunOrbClient extends GameApplet {
         if (ri.c(6995)) {
           discarded$1 = this.a(false, wb.field_c != null ? true : false, -7014);
         } else {
-          if (nj.field_Q >= 10) {
+          if (AccountTermsPanel.field_Q >= 10) {
             if (!km.a(-104)) {
               uj.b(29);
             } else {
               if (uj.field_d == 0) {
                 discarded$3 = this.a(false, false, -7014);
               } else {
-                r.a(jj.field_d, (byte) 104);
+                ProxySocketConnector.a(jj.field_d, (byte) 104);
               }
             }
           }
@@ -400,7 +400,7 @@ abstract class FunOrbClient extends GameApplet {
     private final void l(int param0) {
         int var2 = rf.field_d.readUnsignedByte((byte) -86);
         int var3 = (1 & var2) != 0 ? 1 : 0;
-        int var4 = -1 + jg.field_f;
+        int var4 = -1 + ViewportController.field_f;
         byte[] var5 = new byte[var4];
         rf.field_d.readCipheredBytes(0, var4, var5, 103);
         be.a(var3 != 0, (byte) 99, IntKeyLookup.a(13, var5), Projectile.d((byte) -21));
@@ -426,31 +426,31 @@ abstract class FunOrbClient extends GameApplet {
           if (null == wb.field_c) {
             var6 = pl.g(param0 - 45);
             var4 = var6.getSize();
-            ve.field_a.b(var4.height, (byte) -114, var4.width);
+            ve.field_a.setDesiredSize(var4.height, (byte) -114, var4.width);
           }
           ve.field_a.b(false);
         }
         GameApplet.g(-27983);
         rl.b(param0 ^ param0);
-        if (!ol.j(0) &&
+        if (!QuickChatHelpDialog.j(0) &&
           uj.field_d != 11) {
-          sn.c(-51);
+          BoundedRandomAccessFile.c(-51);
         }
-        if (nc.field_j != null) {
-          jj.field_d = nc.field_j.b(-1);
+        if (WeightedLruCache.field_j != null) {
+          jj.field_d = WeightedLruCache.field_j.b(-1);
         }
         if (ud.e(-116)) {
-          var3 = sj.a((byte) -123) * 1200;
+          var3 = MusicCrossfadeStream.a((byte) -123) * 1200;
           if (this.field_E ||
-            !(var3 >= ub.b(-102)) &&
-            !(ha.a((byte) -64) <= var3)) {
+            !(var3 >= SoundCache.b(-102)) &&
+            !(DateInputWidget.a((byte) -64) <= var3)) {
             this.field_E = false;
-            pm.m(127);
+            LoginForm.m(127);
             of.a(10);
             cl.a(un.field_g, 2, param0 ^ 4);
-            tk.e((byte) 82);
+            MatchingTextValidator.e((byte) 82);
             tf.field_b = true;
-            r.field_l = mm.a(-94) + 15000L;
+            ProxySocketConnector.field_l = mm.a(-94) + 15000L;
           }
         }
         if (-1 == fl.field_d ||
@@ -465,47 +465,47 @@ abstract class FunOrbClient extends GameApplet {
                   CombatWorld.c(11828);
                   if (fl.field_d != -1 &&
                     fl.field_d != 0) {
-                    r.field_l = mm.a(127) + 15000L;
+                    ProxySocketConnector.field_l = mm.a(127) + 15000L;
                   }
                 } else {
                   if (fl.field_d != -1 &&
                     fl.field_d != 0) {
-                    r.field_l = mm.a(127) + 15000L;
+                    ProxySocketConnector.field_l = mm.a(127) + 15000L;
                   }
                 }
               } else {
                 if (fl.field_d != -1 &&
                   fl.field_d != 0) {
-                  r.field_l = mm.a(127) + 15000L;
+                  ProxySocketConnector.field_l = mm.a(127) + 15000L;
                 }
               }
             } else {
               if (fl.field_d != -1 &&
                 fl.field_d != 0) {
-                r.field_l = mm.a(127) + 15000L;
+                ProxySocketConnector.field_l = mm.a(127) + 15000L;
               }
             }
           } else {
             if (fl.field_d != -1 &&
               fl.field_d != 0) {
-              r.field_l = mm.a(127) + 15000L;
+              ProxySocketConnector.field_l = mm.a(127) + 15000L;
             }
           }
         }
         if (fl.field_d != -1 &&
           fl.field_d != 0) {
-          if (10 <= nj.field_Q) {
+          if (10 <= AccountTermsPanel.field_Q) {
             if (uj.field_d >= 10) {
               of.a(10);
               if (fl.field_d == 3) {
-                cl.a(nh.field_F, 256, 1);
+                cl.a(Bzip2State.field_F, 256, 1);
               } else {
                 if (fl.field_d == 4) {
                   cl.a(un.field_c, 256, 1);
                 } else {
                   if (2 != fl.field_d) {
                     if (fl.field_d != 5) {
-                      cl.a(pg.field_s, 256, 1);
+                      cl.a(AlternateUsernameCredentials.field_s, 256, 1);
                     } else {
                       cl.a(Projectile.field_R, 5, 1);
                     }
@@ -539,7 +539,7 @@ abstract class FunOrbClient extends GameApplet {
         if ((fl.field_d != -1 &&
           fl.field_d != 0 ||
           ri.a(16731221)) &&
-          r.field_l <= mm.a(-111)) {
+          ProxySocketConnector.field_l <= mm.a(-111)) {
           tf.field_b = false;
           if (fl.field_d != -1 &&
             fl.field_d != 0) {
@@ -551,25 +551,25 @@ abstract class FunOrbClient extends GameApplet {
           !ri.a(param0 ^ 16731216)) {
           rg.field_h = false;
         }
-        if (nj.field_Q == 0 &&
+        if (AccountTermsPanel.field_Q == 0 &&
           jj.a(-1)) {
-          nj.field_Q = 1;
+          AccountTermsPanel.field_Q = 1;
         }
-        if (nj.field_Q == 1) {
-          if (dh.field_D != 0) {
-            ok.field_f = dh.a(73, Sprite.field_h);
+        if (AccountTermsPanel.field_Q == 1) {
+          if (SceneWidgetNode.field_D != 0) {
+            ok.field_f = SceneWidgetNode.a(73, Sprite.field_h);
           }
-          ke.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
-          oe.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
-          id.field_bc = GameplayController.a(true, rf.field_c, 256, 1, false);
-          nj.field_Q = 2;
-          tm.field_d = ke.field_k;
-          ej.field_t = oe.field_d;
+          WidgetStyleLayer.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
+          QuickChatPhraseCache.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
+          IconLabelControl.field_bc = GameplayController.a(true, rf.field_c, 256, 1, false);
+          AccountTermsPanel.field_Q = 2;
+          tm.field_d = WidgetStyleLayer.field_k;
+          MusicPatchPcmStream.field_t = QuickChatPhraseCache.field_d;
         }
-        if (nj.field_Q == 2) {
+        if (AccountTermsPanel.field_Q == 2) {
           if (null != ok.field_f &&
             ok.field_f.ensureIndex(true)) {
-            if (!ok.field_f.a(12145, "")) {
+            if (!ok.field_f.ensureGroupAvailableByName(12145, "")) {
               ok.field_f = null;
             } else {
               if (ok.field_f.a("", (byte) 90)) {
@@ -580,62 +580,62 @@ abstract class FunOrbClient extends GameApplet {
             }
           }
           if (ok.field_f == null) {
-            nj.field_Q = 3;
+            AccountTermsPanel.field_Q = 3;
           }
         }
-        if (nj.field_Q == 3 &&
-          da.a(ke.field_k, id.field_bc, param0 ^ -6, oe.field_d) &&
-          fc.a(id.field_bc, param0 - 58)) {
+        if (AccountTermsPanel.field_Q == 3 &&
+          TextLayout.a(WidgetStyleLayer.field_k, IconLabelControl.field_bc, param0 ^ -6, QuickChatPhraseCache.field_d) &&
+          fc.a(IconLabelControl.field_bc, param0 - 58)) {
           km.a(false);
-          fg.n(-6);
-          od.field_i = eb.field_q;
+          RegistrationRequestDialog.n(-6);
+          ClientException.field_i = eb.field_q;
           IntrusiveNode.field_a = false;
-          vi.a((byte) -127, ki.field_ib, id.field_bc, ke.field_k, oe.field_d);
-          if (ub.field_j ||
+          AccountRegistrationPanel.a((byte) -127, LoadingProgressDialog.field_ib, IconLabelControl.field_bc, WidgetStyleLayer.field_k, QuickChatPhraseCache.field_d);
+          if (SoundCache.field_j ||
             null != uj.field_k) {
             stackIn_113_0 = uj.field_k;
-            stackIn_114_1 = !(ub.field_j);
-            stackIn_117_2 = !(ub.field_j);
-            nm.a(stackIn_113_0, stackIn_114_1, stackIn_117_2, param0 + 7);
+            stackIn_114_1 = !(SoundCache.field_j);
+            stackIn_117_2 = !(SoundCache.field_j);
+            EmailAvailabilityValidator.a(stackIn_113_0, stackIn_114_1, stackIn_117_2, param0 + 7);
           }
           if (ud.field_q) {
-            qg.a((byte) 120);
+            MarkerSliderPainter.a((byte) 120);
           }
-          if (null == lk.field_cb) {
-            lk.field_cb = vn.c((byte) 83);
+          if (null == ValidationIndicator.field_cb) {
+            ValidationIndicator.field_cb = DateOfBirthValidator.c((byte) 83);
             SentinelDesigner.field_e = ue.a((byte) 62);
           }
-          da.a(id.field_bc, 73, SentinelDesigner.field_e, lk.field_cb);
-          oe.field_d = null;
-          ke.field_k = null;
-          id.field_bc = null;
+          TextLayout.a(IconLabelControl.field_bc, 73, SentinelDesigner.field_e, ValidationIndicator.field_cb);
+          QuickChatPhraseCache.field_d = null;
+          WidgetStyleLayer.field_k = null;
+          IconLabelControl.field_bc = null;
           e.a((java.applet.Applet) (this), false);
           cc.j(param0 - 5);
-          nj.field_Q = 10;
+          AccountTermsPanel.field_Q = 10;
         }
-        if (nj.field_Q == 10) {
-          if (dh.field_D != 0) {
-            pl.field_S = dh.a(param0 - 99, DualNode.field_p);
+        if (AccountTermsPanel.field_Q == 10) {
+          if (SceneWidgetNode.field_D != 0) {
+            pl.field_S = SceneWidgetNode.a(param0 - 99, DualNode.field_p);
           }
-          nj.field_Q = 11;
+          AccountTermsPanel.field_Q = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (nj.field_Q == 11) {
+        if (AccountTermsPanel.field_Q == 11) {
           if (pl.field_S != null && (!pl.field_S.ensureIndex(true) ||
-            !pl.field_S.a(25))) {
-            mc.a(ka.a((byte) -119, nm.field_t, IntKeyLookup.field_g, pl.field_S), 0.0f, -21801);
+            !pl.field_S.ensureAllGroupsAvailable(25))) {
+            mc.a(ModalStack.a((byte) -119, EmailAvailabilityValidator.field_t, IntKeyLookup.field_g, pl.field_S), 0.0f, -21801);
             decompiledFrameRemainder0 = false;
           }
           else {
-            nj.field_Q = 12;
-            rm.field_f = true;
+            AccountTermsPanel.field_Q = 12;
+            MenuInputState.field_f = true;
           }
         }
-        if (nj.field_Q == 12 &&
-          !rm.field_f) {
-          nj.field_Q = 13;
+        if (AccountTermsPanel.field_Q == 12 &&
+          !MenuInputState.field_f) {
+          AccountTermsPanel.field_Q = 13;
         }
-        if (nj.field_Q == 13) {
+        if (AccountTermsPanel.field_Q == 13) {
           var3Lifetime2 = 1;
           if (rh.field_q != null) {
             stackIn_147_0 = (!rh.field_q.b(-2)) ? 0 : 1;
@@ -643,11 +643,11 @@ abstract class FunOrbClient extends GameApplet {
             mc.a(rh.field_q.field_i, rh.field_q.field_g, -21801);
           }
           if (var3Lifetime2 != 0) {
-            nj.field_Q = 20;
+            AccountTermsPanel.field_Q = 20;
           }
         }
         if (!param1 &&
-          ti.field_x) {
+          ImageProducerRasterBuffer.field_x) {
           pa.a(sl.field_n, 9174);
           this.a(false);
           hg.a((byte) -93, sl.field_n);
@@ -661,8 +661,8 @@ abstract class FunOrbClient extends GameApplet {
         if (param0 != -112) {
           this.i(67);
         }
-        String var2 = qh.k(8347);
-        ic.a(param0 - 14, var2, Projectile.d((byte) -21));
+        String var2 = IconTextComponent.k(8347);
+        MidiPcmStream.a(param0 - 14, var2, Projectile.d((byte) -21));
     }
 
     final void h(int param0) {
@@ -683,7 +683,7 @@ abstract class FunOrbClient extends GameApplet {
           }
           if (1 != var2) {
             if (2 == var2) {
-              g.b(-116);
+              GrowableIntList.b(-116);
             } else {
               if (var2 != 3) {
                 if (var2 == 4) {
@@ -693,14 +693,14 @@ abstract class FunOrbClient extends GameApplet {
                     be.a(-16786);
                   } else {
                     if (var2 == 6) {
-                      pm.k(113);
+                      LoginForm.k(113);
                     } else {
                       if (var2 != 7) {
                         if (var2 == 8) {
-                          al.a(hb.field_i, false, rf.field_d, jg.field_f);
+                          TickClock.a(IterableDualNodeDeque.field_i, false, rf.field_d, ViewportController.field_f);
                         } else {
                           if (var2 == 16) {
-                            wa.b(-76);
+                            StatefulTextPainter.b(-76);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -716,14 +716,14 @@ abstract class FunOrbClient extends GameApplet {
                                 oc.a(false);
                                 return;
                               }
-                              sj.a("MGS1: " + ci.a((byte) 94), -27, (Throwable) null);
-                              pm.m(-93);
+                              MusicCrossfadeStream.a("MGS1: " + ci.a((byte) 94), -27, (Throwable) null);
+                              LoginForm.m(-93);
                               return;
                             }
                             stackIn_31_0 = -98;
                             stackIn_32_1 = (12 == var2);
                             var3 = eb.$cfr$intArgs$a$9d0e4b5217c4(stackIn_31_0, stackIn_32_1);
-                            bg.a(var3, -69);
+                            WeightedCacheEntry.a(var3, -69);
                           }
                         }
                       } else {
@@ -741,8 +741,8 @@ abstract class FunOrbClient extends GameApplet {
           }
           return;
         }
-        sj.a("MGS2: " + ci.a((byte) 94), -85, (Throwable) null);
-        pm.m(-94);
+        MusicCrossfadeStream.a("MGS2: " + ci.a((byte) 94), -85, (Throwable) null);
+        LoginForm.m(-94);
     }
 
     private final void i(int param0) {
@@ -767,25 +767,25 @@ abstract class FunOrbClient extends GameApplet {
     }
 
     private final void c(boolean param0) {
-        f.field_B[18] = 1;
-        f.field_B[3] = -1;
-        f.field_B[2] = -2;
-        f.field_B[11] = -1;
-        f.field_B[6] = -2;
+        SocketJs5Transport.field_B[18] = 1;
+        SocketJs5Transport.field_B[3] = -1;
+        SocketJs5Transport.field_B[2] = -2;
+        SocketJs5Transport.field_B[11] = -1;
+        SocketJs5Transport.field_B[6] = -2;
         if (!param0) {
           return;
         }
-        f.field_B[12] = -1;
-        f.field_B[13] = -1;
-        f.field_B[7] = -1;
-        f.field_B[17] = -1;
-        f.field_B[1] = 16;
-        f.field_B[16] = -1;
-        f.field_B[4] = -1;
-        f.field_B[5] = -1;
-        f.field_B[10] = -1;
-        f.field_B[8] = -2;
-        f.field_B[9] = -1;
+        SocketJs5Transport.field_B[12] = -1;
+        SocketJs5Transport.field_B[13] = -1;
+        SocketJs5Transport.field_B[7] = -1;
+        SocketJs5Transport.field_B[17] = -1;
+        SocketJs5Transport.field_B[1] = 16;
+        SocketJs5Transport.field_B[16] = -1;
+        SocketJs5Transport.field_B[4] = -1;
+        SocketJs5Transport.field_B[5] = -1;
+        SocketJs5Transport.field_B[10] = -1;
+        SocketJs5Transport.field_B[8] = -2;
+        SocketJs5Transport.field_B[9] = -1;
     }
 
     static {

@@ -41,23 +41,23 @@ final class dd {
             stackIn_6_0 = o.field_f;
             return stackIn_6_0;
           }
-          if (qc.field_P != 2) {
-            stackIn_10_0 = nc.field_p;
+          if (DisplayNameForm.field_P != 2) {
+            stackIn_10_0 = WeightedLruCache.field_p;
             return stackIn_10_0;
           }
           if (param1 != 55) {
             field_l = (String) null;
           }
           if (o.a(-42, param2)) {
-            stackIn_16_0 = db.a(sn.field_s, param1 - 78, new String[]{param2});
+            stackIn_16_0 = SocketConnector.a(BoundedRandomAccessFile.field_s, param1 - 78, new String[]{param2});
             return stackIn_16_0;
           }
           if (cc.field_gc >= 100) {
             stackIn_19_0 = NodeIterator.field_g;
             return stackIn_19_0;
           }
-          if (pf.a(param2, -112)) {
-            stackIn_23_0 = db.a(mg.field_ic, -12, new String[]{param2});
+          if (CheckboxPainter.a(param2, -112)) {
+            stackIn_23_0 = SocketConnector.a(QuickChatMenu.field_ic, -12, new String[]{param2});
             return stackIn_23_0;
           }
           var5 = mm.field_g;
@@ -66,7 +66,7 @@ final class dd {
           var4 = var5.position;
           var5.writeByte((byte) 111, 2);
           var5.a(param2, -93);
-          var5.b((byte) -28, var5.position - var4);
+          var5.backpatchByteLength((byte) -28, var5.position - var4);
           stackIn_25_0 = null;
           return (String) (stackIn_25_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,7 +94,7 @@ final class dd {
 
     private final boolean a(int param0, int param1, int param2) {
         if (17 == param0) {
-          FunOrbClient.field_x = new td(this.field_c.field_Rb, this.field_c.field_cb, this.field_c.field_zb, this.field_c.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, ParticleEffect.field_K, this.field_k, this.field_h);
+          FunOrbClient.field_x = new ReportAbuseDialog(this.field_c.field_Rb, this.field_c.field_cb, this.field_c.field_zb, this.field_c.field_Lb, param2, AudioService.field_a, ClientException.field_g, hg.field_e, bd.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K, this.field_k, this.field_h);
           return true;
         }
         if (param1 > 115) {
@@ -112,7 +112,7 @@ final class dd {
             this.field_h != GameplayController.field_G) {
             var3 = this.b(2);
             var2 = var3;
-            this.field_j.a(2, 17, db.a(gd.field_ob, -40, new String[]{var3}));
+            this.field_j.a(2, 17, SocketConnector.a(ContentTransitionDialog.field_ob, -40, new String[]{var3}));
           }
           return;
         }
@@ -121,7 +121,7 @@ final class dd {
           this.field_h != GameplayController.field_G) {
           var3 = this.b(2);
           var2Lifetime1 = var3;
-          this.field_j.a(2, 17, db.a(gd.field_ob, -40, new String[]{var3}));
+          this.field_j.a(2, 17, SocketConnector.a(ContentTransitionDialog.field_ob, -40, new String[]{var3}));
         }
     }
 
@@ -145,7 +145,7 @@ final class dd {
           return true;
         }
         if (param1 == 2) {
-          jg.a(this.field_g, (byte) 112, param0);
+          ViewportController.a(this.field_g, (byte) 112, param0);
         } else {
           if (3 == param1) {
             na.a((byte) -40, param0, this.field_g);
@@ -153,19 +153,19 @@ final class dd {
             return true;
           }
           if (param1 == 10) {
-            ei.a(this.field_g, (byte) -23, param0);
+            NameAvailabilityValidator.a(this.field_g, (byte) -23, param0);
             var4Lifetime2Lifetime1 = -14 / ((35 - param2) / 45);
             return true;
           }
           if (param1 == 15) {
-            nl.a(this.field_g, param0, 5);
+            DialWidget.a(this.field_g, param0, 5);
             var4Lifetime2Lifetime2 = -14 / ((35 - param2) / 45);
             return true;
           }
           if (param1 != 16) {
             return false;
           }
-          nl.a(0, param0, 5);
+          DialWidget.a(0, param0, 5);
           var4Lifetime2Lifetime3 = -14 / ((35 - param2) / 45);
           return true;
         }
@@ -205,13 +205,13 @@ final class dd {
           }
           this.field_f = param1.field_k;
           if (0 == param1.field_k) {
-            if (0 == sg.field_c) {
+            if (0 == BufferedSocket.field_c) {
               this.field_j.a(param0 + 2, 12, jh.field_f);
             }
-            this.field_j.a(param0 ^ 2, 13, lk.field_V);
+            this.field_j.a(param0 ^ 2, 13, ValidationIndicator.field_V);
           }
           if (param1.field_k == 1) {
-            if (0 == pm.field_Z) {
+            if (0 == LoginForm.field_Z) {
               this.field_j.a(2, 12, ne.field_H);
             }
             this.field_j.a(2, 13, og.field_a);
@@ -220,7 +220,7 @@ final class dd {
             if (CachedArchiveProvider.field_y == 0) {
               this.field_j.a(2, 12, fj.field_c);
             }
-            this.field_j.a(2, 13, he.field_f);
+            this.field_j.a(2, 13, RasterBuffer.field_f);
           }
           if (param0 == 0) {
             return;
@@ -290,43 +290,43 @@ final class dd {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        ah var5 = null;
+        SocialListEntry var5 = null;
         int var6 = 0;
         String var7 = null;
         try {
           if (null != this.field_k && (~GameplayController.field_G != ~this.field_h ||
-            2 == param2) && qc.field_P == 2) {
+            2 == param2) && DisplayNameForm.field_P == 2) {
             var7 = this.b(param1 + 4);
             var4 = var7;
             var5 = wi.a(this.field_k, (byte) 114);
             var6 = o.a(-128, this.field_k) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_j.a(param1 ^ -4, 4, db.a(ti.field_r, param1 - 121, new String[]{var7}));
-              this.field_j.a(2, 6, db.a(g.field_g, param1 - 30, new String[]{var7}));
+              this.field_j.a(param1 ^ -4, 4, SocketConnector.a(ImageProducerRasterBuffer.field_r, param1 - 121, new String[]{var7}));
+              this.field_j.a(2, 6, SocketConnector.a(GrowableIntList.field_g, param1 - 30, new String[]{var7}));
               if (param0 != null &&
                 param2 != 2 &&
                 !fj.field_e) {
                 this.field_i = param0;
-                this.field_j.a(2, 19, db.a(lj.field_f, -75, new String[]{var7}));
+                this.field_j.a(2, 19, SocketConnector.a(lj.field_f, -75, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!ob.a((byte) -38, this.field_k) &&
                 !fj.field_e) {
                 if (!uc.field_g) {
-                  this.field_j.a(2, 8, db.a(rj.field_c, -108, new String[]{var7}));
+                  this.field_j.a(2, 8, SocketConnector.a(BufferedRandomAccessFile.field_c, -108, new String[]{var7}));
                 }
-                this.field_j.a(param1 + 4, 18, db.a(dg.field_b, param1 ^ 61, new String[]{var7}));
+                this.field_j.a(param1 + 4, 18, SocketConnector.a(dg.field_b, param1 ^ 61, new String[]{var7}));
                 if (param0 != null) {
                   this.field_i = param0;
-                  this.field_j.a(param1 ^ -4, 19, db.a(lj.field_f, param1 - 77, new String[]{var7}));
+                  this.field_j.a(param1 ^ -4, 19, SocketConnector.a(lj.field_f, param1 - 77, new String[]{var7}));
                 }
               }
-              this.field_j.a(2, 5, db.a(ei.field_r, -76, new String[]{var7}));
+              this.field_j.a(2, 5, SocketConnector.a(NameAvailabilityValidator.field_r, -76, new String[]{var7}));
             }
             if (var6 != 0) {
-              this.field_j.a(2, 7, db.a(fk.field_n, -52, new String[]{var7}));
+              this.field_j.a(2, 7, SocketConnector.a(BoundedUrlRequest.field_n, -52, new String[]{var7}));
             }
           }
           if (param1 == -2) {
@@ -395,11 +395,11 @@ final class dd {
           return;
         }
         var7 = ri.a(this.field_h, false);
-        var4 = kh.a(false, this.field_h);
+        var4 = ThreeSliceButtonPainter.a(false, this.field_h);
         var5 = this.b(2);
         if (var4 != null) {
           if (!nf.field_b.field_rc) {
-            this.field_j.a(2, 1, db.a(bg.field_E, -88, new String[]{var5}));
+            this.field_j.a(2, 1, SocketConnector.a(WeightedCacheEntry.field_E, -88, new String[]{var5}));
             if (param1 < -73) {
               return;
             }
@@ -413,7 +413,7 @@ final class dd {
             discarded$7 = this.b(96);
             return;
           }
-          this.field_j.a(2, 1, db.a(bg.field_E, -88, new String[]{var5}));
+          this.field_j.a(2, 1, SocketConnector.a(WeightedCacheEntry.field_E, -88, new String[]{var5}));
           if (param1 < -73) {
             return;
           }
@@ -430,7 +430,7 @@ final class dd {
             return;
           }
           if (var7.field_Zb) {
-            this.field_j.a(2, 1, db.a(va.field_a, -118, new String[]{var5}));
+            this.field_j.a(2, 1, SocketConnector.a(va.field_a, -118, new String[]{var5}));
             if (param1 < -73) {
               return;
             }
@@ -439,15 +439,15 @@ final class dd {
           }
           if (param0 &&
             var7.field_kc) {
-            this.field_j.a(2, 0, db.a(ArticulatedPart.field_P, -104, new String[]{var5}));
-            this.field_j.a(2, 1, db.a(bh.field_o, -54, new String[]{var5}));
+            this.field_j.a(2, 0, SocketConnector.a(ArticulatedPart.field_P, -104, new String[]{var5}));
+            this.field_j.a(2, 1, SocketConnector.a(SentinelCommandSimulator.field_o, -54, new String[]{var5}));
             if (param1 < -73) {
               return;
             }
             discarded$1 = this.b(96);
             return;
           }
-          this.field_j.a(2, 0, db.a(t.field_j, -18, new String[]{var5}));
+          this.field_j.a(2, 0, SocketConnector.a(t.field_j, -18, new String[]{var5}));
           if (param1 < -73) {
             return;
           }
@@ -483,25 +483,25 @@ final class dd {
         }
         var3 = var5.field_Xb;
         if (var5.field_vc) {
-          this.field_j.a(2, 2, db.a(ah.field_Xb, -31, new String[]{var3}));
-          this.field_j.a(param0 ^ 66, 3, db.a(vi.field_Z, -38, new String[]{var3}));
+          this.field_j.a(2, 2, SocketConnector.a(SocialListEntry.field_Xb, -31, new String[]{var3}));
+          this.field_j.a(param0 ^ 66, 3, SocketConnector.a(AccountRegistrationPanel.field_Z, -38, new String[]{var3}));
         } else {
           if (var5.field_cc) {
-            this.field_j.a(param0 ^ 66, 2, db.a(cl.field_a, -126, new String[]{var3}));
+            this.field_j.a(param0 ^ 66, 2, SocketConnector.a(cl.field_a, -126, new String[]{var3}));
           } else {
             if (!var5.field_bc &&
               var5.field_dc) {
               if (!var5.field_rc) {
-                this.field_j.a(2, 2, db.a(cd.field_f, -70, new String[]{var3}));
+                this.field_j.a(2, 2, SocketConnector.a(cd.field_f, -70, new String[]{var3}));
               } else {
                 if (var5.field_cc) {
-                  this.field_j.a(2, 2, db.a(cd.field_f, -70, new String[]{var3}));
+                  this.field_j.a(2, 2, SocketConnector.a(cd.field_f, -70, new String[]{var3}));
                 }
               }
             }
           }
           if (var5.field_bc) {
-            this.field_j.a(2, 3, db.a(km.field_d, param0 - 109, new String[]{var3}));
+            this.field_j.a(2, 3, SocketConnector.a(km.field_d, param0 - 109, new String[]{var3}));
           }
         }
         if (param0 == 64) {
@@ -520,11 +520,11 @@ final class dd {
         return lf.field_e[2047 & param1];
     }
 
-    final static ld a(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
+    final static PaletteBitmapFont a(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ld stackIn_3_0 = null;
+        PaletteBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -582,37 +582,37 @@ final class dd {
           dd.a(-11);
         }
         if (param2 == 8) {
-          bc.a(this.field_h, this.field_k, 2);
+          ValidatedTextWidget.a(this.field_h, this.field_k, 2);
           return true;
         }
         if (param2 == 18) {
-          ic.a(-23543, this.field_h, this.field_k);
+          MidiPcmStream.a(-23543, this.field_h, this.field_k);
           return true;
         }
         if (param2 == 11) {
-          il.a(0, this.field_f, param1, -18853);
+          TextLayoutLine.a(0, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 12) {
-          il.a(1, this.field_f, param1, -18853);
+          TextLayoutLine.a(1, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 13) {
-          il.a(2, this.field_f, param1, -18853);
+          TextLayoutLine.a(2, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 14) {
-          lk.g(0);
+          ValidationIndicator.g(0);
           return true;
         }
         if (param2 == 20) {
-          pd.j(13171);
+          AccountChoicePanel.j(13171);
           return true;
         }
         if (param2 != 19) {
           return false;
         }
-        dl.a(this.field_h, this.field_i, -116, this.field_f, this.field_k);
+        UiContainer.a(this.field_h, this.field_i, -116, this.field_f, this.field_k);
         return true;
     }
 
@@ -626,9 +626,9 @@ final class dd {
         Object var4 = null;
         if (4 != param0) {
           if (param0 == 5) {
-            var5 = nl.a(this.field_k, param2, true);
+            var5 = DialWidget.a(this.field_k, param2, true);
             if (var5 != null) {
-              sj.a((String) null, var5, 0, (byte) 21, this.field_k, 2);
+              MusicCrossfadeStream.a((String) null, var5, 0, (byte) 21, this.field_k, 2);
               return true;
             }
             return true;
@@ -639,7 +639,7 @@ final class dd {
             }
             var6 = rn.a(this.field_a, param2, this.field_k, true);
             if (var6 != null) {
-              sj.a((String) null, var6, 0, (byte) 21, this.field_k, 2);
+              MusicCrossfadeStream.a((String) null, var6, 0, (byte) 21, this.field_k, 2);
               return true;
             }
             return true;
@@ -648,14 +648,14 @@ final class dd {
           if (var7 == null) {
             return true;
           }
-          sj.a((String) null, var7, 0, (byte) 21, this.field_k, 2);
+          MusicCrossfadeStream.a((String) null, var7, 0, (byte) 21, this.field_k, 2);
           return true;
         }
         String var8 = lj.a(this.field_k, (byte) -79, param2);
         if (var8 == null) {
           return true;
         }
-        sj.a((String) null, var8, 0, (byte) 21, this.field_k, 2);
+        MusicCrossfadeStream.a((String) null, var8, 0, (byte) 21, this.field_k, 2);
         return true;
     }
 

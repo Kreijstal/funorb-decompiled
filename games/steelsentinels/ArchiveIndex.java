@@ -19,7 +19,7 @@ final class ArchiveIndex {
     static SceneWidget field_s;
     private byte[] indexDigest;
     int groupCapacity;
-    static oe field_w;
+    static QuickChatPhraseCache field_w;
     static String field_f;
     private int[] groupNameHashes;
     int[] groupCrcs;
@@ -27,12 +27,12 @@ final class ArchiveIndex {
     int[][] fileIds;
 
     final static void a(boolean param0) {
-        aj var1 = (aj) (sl.field_b.c(-6533));
+        RasterSnapshot var1 = (RasterSnapshot) (sl.field_b.c(-6533));
         if (var1 == null) {
-          var1 = new aj();
+          var1 = new RasterSnapshot();
         }
-        var1.a(SoftwareRaster.field_b, SoftwareRaster.field_i, SoftwareRaster.field_c, SoftwareRaster.field_l, SoftwareRaster.field_g, SoftwareRaster.field_d, SoftwareRaster.field_j, (byte) -62);
-        ff.field_qb.addLast(3, var1);
+        var1.setRasterState(SoftwareRaster.field_b, SoftwareRaster.field_i, SoftwareRaster.field_c, SoftwareRaster.field_l, SoftwareRaster.field_g, SoftwareRaster.field_d, SoftwareRaster.field_j, (byte) -62);
+        ValidationHelpWidget.field_qb.addLast(3, var1);
         if (param0) {
           ArchiveIndex.a(true);
         }
@@ -275,7 +275,7 @@ final class ArchiveIndex {
             if (64 != expectedDigest.length) {
               throw new RuntimeException();
             }
-            this.indexDigest = co.a((byte) -37, encodedIndex.length, 0, encodedIndex);
+            this.indexDigest = QuickChatCategoryCache.a((byte) -37, encodedIndex.length, 0, encodedIndex);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (expectedDigest[var4_int] != this.indexDigest[var4_int]) {
                 throw new RuntimeException();

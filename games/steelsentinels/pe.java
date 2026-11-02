@@ -130,7 +130,7 @@ final class pe {
         int var6;
         var6 = SteelSentinels.obfuscationControl;
         var2 = 0;
-        var3 = vn.field_h;
+        var3 = DateOfBirthValidator.field_h;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
         } else {
@@ -190,7 +190,7 @@ final class pe {
           var4 = 1;
           var5 = 1;
         }
-        bl.field_e = dn.a(var5 * var2, var4 * var2, (byte) 71);
+        LinkButtonPainter.field_e = dn.a(var5 * var2, var4 * var2, (byte) 71);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

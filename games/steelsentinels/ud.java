@@ -22,10 +22,10 @@ final class ud extends IntrusiveNode {
     final static void a(boolean param0) {
         if (!param0) {
           field_C = -27;
-          bj.a(-128, Projectile.d((byte) -21));
+          MusicPatchEnvelope.a(-128, Projectile.d((byte) -21));
           return;
         }
-        bj.a(-128, Projectile.d((byte) -21));
+        MusicPatchEnvelope.a(-128, Projectile.d((byte) -21));
     }
 
     final static boolean e(int param0) {
@@ -33,7 +33,7 @@ final class ud extends IntrusiveNode {
         if (null == rb.field_h) {
           return false;
         }
-        if (jd.field_sb == rn.field_v) {
+        if (AccountNoticeDialog.field_sb == rn.field_v) {
           return true;
         }
         return false;

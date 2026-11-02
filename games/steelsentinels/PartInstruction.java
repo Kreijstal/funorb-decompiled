@@ -4,7 +4,7 @@
 final class PartInstruction {
     int field_w;
     int field_s;
-    static de field_o;
+    static LoginMethod field_o;
     int field_k;
     String partName;
     boolean field_u;
@@ -365,14 +365,14 @@ final class PartInstruction {
 
     final static boolean a(boolean param0) {
         int var2 = 0;
-        ua var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        ua var4 = null;
+        ReflectionCheck var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (ua) (rg.field_d.first(13058));
+          var4 = (ReflectionCheck) (rg.field_d.first(13058));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -453,16 +453,16 @@ final class PartInstruction {
         int var6 = 0;
         int var7 = 0;
         int var4 = 59 / ((param1 - 1) / 57);
-        ah var3 = ic.a(param0, 18, param2);
+        SocialListEntry var3 = MidiPcmStream.a(param0, 18, param2);
         dd var5Lifetime1;
         if (var3 != null) {
-          an.field_i.a(false, (byte) -87);
-          var5 = an.field_i;
-          var6_ref_String = cb.field_d;
+          AudioService.field_i.a(false, (byte) -87);
+          var5 = AudioService.field_i;
+          var6_ref_String = DiskCacheWorker.field_d;
           var5.field_j.a(2, 5, var6_ref_String);
-          var5Lifetime1 = an.field_i;
-          var6 = oa.field_S;
-          var7 = rj.field_j;
+          var5Lifetime1 = AudioService.field_i;
+          var6 = TextButton.field_S;
+          var7 = BufferedRandomAccessFile.field_j;
           var5Lifetime1.field_j.a(0, 0, var7, (byte) -101, var6);
         }
         eh.a(param2, -1, param0);
@@ -522,7 +522,7 @@ final class PartInstruction {
 
     static {
         field_t = new int[]{6559605, 16752640, 65280};
-        field_o = new de("email");
+        field_o = new LoginMethod("email");
         field_h = new dj(0);
         field_g = 0;
         field_c = ", and plummeted like a stalled brick";

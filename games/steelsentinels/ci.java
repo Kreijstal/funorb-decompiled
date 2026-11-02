@@ -4,7 +4,7 @@
 final class ci {
     static String field_d;
     static int field_g;
-    static bf field_a;
+    static LoginDialog field_a;
     static int[] field_c;
     static String field_h;
     static NodeDeque field_e;
@@ -21,14 +21,14 @@ final class ci {
         String var7;
         String var8;
         var5 = SteelSentinels.obfuscationControl;
-        var6 = "(" + di.field_d + " " + ma.field_W + " " + aj.field_u + ") " + ch.field_N;
+        var6 = "(" + di.field_d + " " + TextHotspotWidget.field_W + " " + RasterSnapshot.field_u + ") " + ch.field_N;
         var1 = var6;
         if (param0 != 94) {
           return (String) null;
         }
-        if (jg.field_f > 0) {
+        if (ViewportController.field_f > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < jg.field_f; var2++) {
+          for (var2 = 0; var2 < ViewportController.field_f; var2++) {
             var7 = var1 + ' ';
             var3 = rf.field_d.payload[var2] & 255;
             var4 = var3 >> 4;
@@ -87,19 +87,19 @@ final class ci {
           Explosion.field_L = rl.a(param0, "commonui", "jagex_logo_grey", false);
           un.field_m = cf.a("button", "commonui", (byte) -54, param0);
           t.field_i = ec.a((byte) -62, "validation", param0, "commonui");
-          rc.field_m = (BitmapFont) ((Object) be.a(param0, param2, (byte) -48, "arezzo12", "commonui"));
+          SectorCacheStore.field_m = (BitmapFont) ((Object) be.a(param0, param2, (byte) -48, "arezzo12", "commonui"));
           tj.field_e = (BitmapFont) ((Object) be.a(param0, param2, (byte) -62, "arezzo14", "commonui"));
           gf.field_d = (BitmapFont) ((Object) be.a(param0, param2, (byte) -57, "arezzo14bold", "commonui"));
           var17 = new RgbSprite(param3.a("", -742, "button.gif"), (java.awt.Component) ((Object) sl.field_n));
           if (param1 < 63) {
             ci.a(true);
           }
-          gl.a(param0, (byte) 85, "commonui", "dropdown");
+          NanoTickClock.a(param0, (byte) 85, "commonui", "dropdown");
           var5 = cj.a(45, "commonui", param0, "screen_options");
-          lh.field_q = new IndexedSprite[4];
+          UiComponent.field_q = new IndexedSprite[4];
           ce.field_q = new IndexedSprite[4];
-          vm.field_r = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{lh.field_q, ce.field_q, vm.field_r};
+          PasswordValidator.field_r = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{UiComponent.field_q, ce.field_q, PasswordValidator.field_r};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -120,19 +120,19 @@ final class ci {
           }
           var9Lifetime1 = var17.field_F;
           ArchiveIndex.a(false);
-          var17.d();
+          var17.bindRasterTarget();
           SoftwareRaster.b(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.d();
+          var18.bindRasterTarget();
           var17.f(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.d();
+          var11.bindRasterTarget();
           var17.f(var9Lifetime1 - var17.field_A, 0);
           var12 = new RgbSprite(var17.field_A - var9Lifetime1 * 2, var9Lifetime1);
-          var12.d();
+          var12.bindRasterTarget();
           var17.f(-var9Lifetime1, 0);
-          tk.$cfr$intArgs$f$20d51497949f(122);
+          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(122);
           un.field_m = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ci.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -161,7 +161,7 @@ final class ci {
           if (param1 < 86) {
             field_g = -116;
           }
-          stackIn_6_0 = param3 + " - " + param0.a((byte) 94, param2) + "%";
+          stackIn_6_0 = param3 + " - " + param0.getGroupProgressByName((byte) 94, param2) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,25 +195,25 @@ final class ci {
         }
     }
 
-    final static od a(Throwable param0, String param1) {
-        od var2 = null;
-        if (param0 instanceof od) {
-          var2 = (od) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         } else {
-          var2 = new od(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
 
     final static void a(boolean param0, byte param1) {
-        if (null != ll.field_i) {
-          jg.a(ll.field_i, 1);
+        if (null != UiTheme.field_i) {
+          ViewportController.a(UiTheme.field_i, 1);
         }
-        if (null != an.field_i) {
-          an.field_i.b(param0, (byte) -114);
+        if (null != AudioService.field_i) {
+          AudioService.field_i.b(param0, (byte) -114);
         }
-        bh.a((byte) -115, param0);
+        SentinelCommandSimulator.a((byte) -115, param0);
         int var2 = 40 % ((param1 - 49) / 45);
         if (FunOrbClient.field_x != null) {
           FunOrbClient.field_x.a(param0, (byte) 127);

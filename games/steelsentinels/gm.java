@@ -43,9 +43,9 @@ final class gm {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
-            var5 = bk.a(110, var3);
+            var5 = StripedProgressBar.a(110, var3);
             if (var5 == null) {
-              stackIn_14_0 = d.a(var4, false);
+              stackIn_14_0 = DropTargetWidget.a(var4, false);
               return stackIn_14_0;
             }
             stackIn_12_0 = var5;

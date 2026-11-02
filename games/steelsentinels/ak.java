@@ -63,31 +63,31 @@ final class ak {
             param0.field_M.clear(6);
           }
           var2_int = 4;
-          if (!kc.field_r) {
-            stackIn_6_0 = 106 - pf.field_n;
+          if (!DelayedServerPacket.field_r) {
+            stackIn_6_0 = 106 - CheckboxPainter.field_n;
           } else {
-            stackIn_6_0 = -8 - pf.field_n + 110 - bi.field_d;
+            stackIn_6_0 = -8 - CheckboxPainter.field_n + 110 - bi.field_d;
           }
           var3 = stackIn_6_0;
           var22 = new PartInstruction[]{};
-          var21 = hl.field_v.a(var22, -21636, fg.field_Ob);
+          var21 = hl.field_v.a(var22, -21636, RegistrationRequestDialog.field_Ob);
           if (param1 <= 82) {
             var20 = (String[]) null;
             ak.a((RgbSprite) null, -101, (String) null, 108, -59, -84, 124, -128, (String[]) null, true);
           }
           for (var6 = 0; var6 < var21.length; var6++) {
             var5 = var21[var6];
-            var7 = new SceneWidget("", ei.field_n);
-            if (null != ti.field_B &&
-              (var5.field_q & ti.field_B.field_Q) > 0) {
-              var7.b(sb.field_Y, 6402);
+            var7 = new SceneWidget("", NameAvailabilityValidator.field_n);
+            if (null != ImageProducerRasterBuffer.field_B &&
+              (var5.field_q & ImageProducerRasterBuffer.field_B.field_Q) > 0) {
+              var7.b(Checkbox.field_Y, 6402);
             }
-            if (null == ti.field_B &&
+            if (null == ImageProducerRasterBuffer.field_B &&
               t.field_h >= 0) {
               var23 = NodeDeque.a(t.field_h, (byte) 67);
               if (var23 != null &&
                 (var23.field_Q & var5.field_q) != 0) {
-                var7.b(sb.field_Y, 6402);
+                var7.b(Checkbox.field_Y, 6402);
               }
             }
             var7.a(0, var2_int, 32, 4, var3);
@@ -98,14 +98,14 @@ final class ak {
             var24.field_nb = 9211020;
             var24.field_Fb = 2;
             var24.field_Kb = 1;
-            var24.field_L = (BitmapFont) ((Object) fk.field_d);
+            var24.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
             var24.field_I = lj.field_b;
             var24.a(0, 18, 12, 2, var3 - 4);
             var7.a(var24, 122);
             var9 = var5.field_q;
             var10 = 0;
             var11 = 1;
-            var12 = kh.field_v.a((byte) 2, var5);
+            var12 = ThreeSliceButtonPainter.field_v.a((byte) 2, var5);
             if (null == var5.attachedPart &&
               (var5.field_q & 256) == 0) {
             }
@@ -114,16 +114,16 @@ final class ak {
                 var12 = -1;
               }
               var10 = var5.attachedPart.field_Q;
-              var24.field_S = bg.a(var5.attachedPart.getPartName(-24719), var24.field_zb - 2 * var24.field_ub, (byte) -45, var24.field_L);
+              var24.field_S = WeightedCacheEntry.a(var5.attachedPart.getPartName(-24719), var24.field_zb - 2 * var24.field_ub, (byte) -45, var24.field_L);
               var13 = var5.attachedPart.componentId;
               if (var13 != 83 &&
                 0 != (1008 & var10)) {
-                qh.field_Wb = true;
+                IconTextComponent.field_Wb = true;
               }
               if (var13 == 76 ||
                 var13 == 89 ||
                 var13 == 66) {
-                qh.field_Wb = true;
+                IconTextComponent.field_Wb = true;
               }
             }
             if (var11 != 0) {
@@ -178,7 +178,7 @@ final class ak {
                 stackIn_60_0.field_S = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).toString();
               }
               if ((var9 & 512) > 0 && (t.a(rn.field_D, 49, -20370) ||
-                aj.a(ge.field_m, (byte) 124, rn.field_D, 49, ArticulatedPart.f((byte) -95)))) {
+                RasterSnapshot.a(DirectByteStorage.field_m, (byte) 124, rn.field_D, 49, ArticulatedPart.f((byte) -95)))) {
                 stackIn_68_0 = var7;
                 stackIn_68_1 = new StringBuilder().append(var7.field_S);
                 if ((var10 & 512) == 0) {
@@ -193,20 +193,20 @@ final class ak {
             if (param0.field_kb &&
               oh.field_f >= param0.field_Rb &&
               param0.field_zb + param0.field_Rb > oh.field_f &&
-              var2_int + param0.field_cb <= pi.field_c &&
-              32 + (var2_int + param0.field_cb) > pi.field_c) {
-              if (null == ti.field_B) {
+              var2_int + param0.field_cb <= DelegatingCanvas.field_c &&
+              32 + (var2_int + param0.field_cb) > DelegatingCanvas.field_c) {
+              if (null == ImageProducerRasterBuffer.field_B) {
                 var7.field_I = be.field_f;
               }
               lj.field_h = var5;
             }
             if (0 <= var12) {
-              var13_ref_gh = new SceneWidget("", ei.field_n);
+              var13_ref_gh = new SceneWidget("", NameAvailabilityValidator.field_n);
               var13_ref_gh.field_S = NodeHashTable.field_h;
               var13_ref_gh.a(0, 2, 10, 2, 10);
               var13_ref_gh.field_nb = 65535;
               var13_ref_gh.field_I = null;
-              var13_ref_gh.field_L = (BitmapFont) ((Object) fk.field_d);
+              var13_ref_gh.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
               var7.a(var13_ref_gh, 124);
             }
             var13Lifetime1 = param0.field_Rb;
@@ -240,7 +240,7 @@ final class ak {
 
     final static int a(RgbSprite param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, String[] param8, boolean param9) {
         int var16 = 0;
-        fh stackIn_7_0;
+        BinaryBitmapFont stackIn_7_0;
         String stackIn_7_1;
         int stackIn_7_2;
         int stackIn_7_3;
@@ -259,7 +259,7 @@ final class ak {
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fh var10 = null;
+        BinaryBitmapFont var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
@@ -271,9 +271,9 @@ final class ak {
         int var12Lifetime1;
         var17 = SteelSentinels.obfuscationControl;
         try {
-          var10 = ff.field_lb;
+          var10 = ValidationHelpWidget.field_lb;
           SoftwareRaster.c(-8 + (param4 - param5), param1 - 8 + 2, 16 + (param3 - 4), param6 + 12, 0, 210);
-          jm.a(-8 + param1, param6 + 16, oa.field_Q, 1, param4 - 8, param3 + 16);
+          jm.a(-8 + param1, param6 + 16, TextButton.field_Q, 1, param4 - 8, param3 + 16);
           var11 = 4 + param1;
           if (param0 != null) {
             param0.a((-param0.field_A + param3) / 2 + param4, var11);
@@ -308,7 +308,7 @@ final class ak {
             var11Lifetime1 = -5 + param1 - (-param6 + var13);
             var15 = -1;
             for (var16 = 0; param8.length > var16; var16++) {
-              if (nm.a(var11Lifetime1, var14, 116, param8[var16], var13, var12Lifetime1)) {
+              if (EmailAvailabilityValidator.a(var11Lifetime1, var14, 116, param8[var16], var13, var12Lifetime1)) {
                 var15 = var16;
               }
               var14 = var14 + (5 + var12Lifetime1);
@@ -349,7 +349,7 @@ final class ak {
           SceneWidget var7 = (SceneWidget) null;
           ak.a((SceneWidget) null, 87);
         }
-        hb.a((byte) -77, this.field_d, param0, param4, param2, param3);
+        IterableDualNodeDeque.a((byte) -77, this.field_d, param0, param4, param2, param3);
     }
 
     public static void a(int param0) {
@@ -378,7 +378,7 @@ final class ak {
             return true;
           }
           if (param1 != 0) {
-            var6 = gl.field_w;
+            var6 = NanoTickClock.field_w;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
@@ -409,12 +409,12 @@ final class ak {
         }
     }
 
-    final static me a(String param0, String param1, int param2, boolean param3) {
+    final static LoginCredentials a(String param0, String param1, int param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        me stackIn_6_0 = null;
+        LoginCredentials stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

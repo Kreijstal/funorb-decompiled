@@ -11,7 +11,7 @@ final class IntKeyLookup {
     static String field_k;
     private int[] keyIndexSlots;
     static int[] field_j;
-    static mg field_i;
+    static QuickChatMenu field_i;
     static String field_g;
     static SceneWidget field_h;
     static int field_d;
@@ -54,7 +54,7 @@ final class IntKeyLookup {
           if (param0 != 13) {
             field_g = (String) null;
           }
-          stackIn_3_0 = ub.a((byte) 37, 0, param1, param1.length);
+          stackIn_3_0 = SoundCache.a((byte) 37, 0, param1, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -210,38 +210,38 @@ final class IntKeyLookup {
     final static void a(byte param0) {
         RgbSprite var3 = new RgbSprite(120, 30);
         RgbSprite var4 = var3;
-        ub.field_a[0] = qe.a(var4, (byte) -93, jf.field_eb);
-        ub.field_a[1] = qe.a(var4, (byte) -93, gf.field_e);
-        ub.field_a[2] = qe.a(var4, (byte) -93, ob.field_w);
-        ub.field_a[3] = qe.a(var4, (byte) -93, fm.field_i);
-        ub.field_a[4] = qe.a(var4, (byte) -93, sn.field_o);
-        ub.field_a[5] = qe.a(var4, (byte) -93, gm.field_a);
-        ub.field_a[9] = qe.a(var4, (byte) -93, fc.field_c);
-        ub.field_a[10] = qe.a(var4, (byte) -93, hm.field_e);
-        ub.field_a[11] = qe.a(var4, (byte) -93, sn.field_a);
-        ub.field_a[12] = qe.a(var4, (byte) -93, jm.field_t);
-        ub.field_a[13] = qe.a(var4, (byte) -93, cl.field_g);
-        ub.field_a[14] = qe.a(var4, (byte) -93, b.field_p);
-        ub.field_a[15] = qe.a(var4, (byte) -93, lk.field_X);
-        ub.field_a[16] = qe.a(var4, (byte) -93, pl.field_V);
-        lc.field_a = new IndexedSprite[ub.field_a.length];
-        ii.a(ub.field_a, 0, lc.field_a, 0, ub.field_a.length);
-        lc.field_a[5] = ub.field_a[15];
-        lc.field_a[4] = ub.field_a[14];
-        lc.field_a[3] = ub.field_a[13];
-        lc.field_a[8] = ub.field_a[7];
-        lc.field_a[7] = ub.field_a[12];
+        SoundCache.field_a[0] = qe.a(var4, (byte) -93, EditableTextWidget.field_eb);
+        SoundCache.field_a[1] = qe.a(var4, (byte) -93, gf.field_e);
+        SoundCache.field_a[2] = qe.a(var4, (byte) -93, ob.field_w);
+        SoundCache.field_a[3] = qe.a(var4, (byte) -93, fm.field_i);
+        SoundCache.field_a[4] = qe.a(var4, (byte) -93, BoundedRandomAccessFile.field_o);
+        SoundCache.field_a[5] = qe.a(var4, (byte) -93, gm.field_a);
+        SoundCache.field_a[9] = qe.a(var4, (byte) -93, fc.field_c);
+        SoundCache.field_a[10] = qe.a(var4, (byte) -93, hm.field_e);
+        SoundCache.field_a[11] = qe.a(var4, (byte) -93, BoundedRandomAccessFile.field_a);
+        SoundCache.field_a[12] = qe.a(var4, (byte) -93, jm.field_t);
+        SoundCache.field_a[13] = qe.a(var4, (byte) -93, cl.field_g);
+        SoundCache.field_a[14] = qe.a(var4, (byte) -93, DialWidgetPainter.field_p);
+        SoundCache.field_a[15] = qe.a(var4, (byte) -93, ValidationIndicator.field_X);
+        SoundCache.field_a[16] = qe.a(var4, (byte) -93, pl.field_V);
+        lc.field_a = new IndexedSprite[SoundCache.field_a.length];
+        ArraySupport.copy(SoundCache.field_a, 0, lc.field_a, 0, SoundCache.field_a.length);
+        lc.field_a[5] = SoundCache.field_a[15];
+        lc.field_a[4] = SoundCache.field_a[14];
+        lc.field_a[3] = SoundCache.field_a[13];
+        lc.field_a[8] = SoundCache.field_a[7];
+        lc.field_a[7] = SoundCache.field_a[12];
         lc.field_a[15] = null;
         lc.field_a[14] = null;
         lc.field_a[13] = null;
-        lc.field_a[12] = ub.field_a[7];
-        rh.field_v[6].d();
+        lc.field_a[12] = SoundCache.field_a[7];
+        rh.field_v[6].bindRasterTarget();
         if (param0 != 6) {
           return;
         }
-        fk.field_d.a(gf.field_e, 78, 26, 0, -1);
-        fk.field_d.a(ob.field_w, 130, 26, 0, -1);
-        sb.field_bb.b((byte) 121);
+        BoundedUrlRequest.field_d.drawCentered(gf.field_e, 78, 26, 0, -1);
+        BoundedUrlRequest.field_d.drawCentered(ob.field_w, 130, 26, 0, -1);
+        Checkbox.field_bb.b((byte) 121);
     }
 
     static {

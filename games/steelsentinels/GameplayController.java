@@ -68,7 +68,7 @@ final class GameplayController {
         try {
           if (!this.world.field_j) {
             if (oh.field_f < 0 &&
-              0 > pi.field_c) {
+              0 > DelegatingCanvas.field_c) {
               return;
             }
             var8_int = 0;
@@ -153,7 +153,7 @@ final class GameplayController {
                 var4++;
                 var3[incrementValue$1] = var6_ref_mb;
               }
-              var6_ref_mb = (Sentinel) (var5.d(2));
+              var6_ref_mb = (Sentinel) (var5.next(2));
               continue;
             }
             break;
@@ -257,7 +257,7 @@ final class GameplayController {
               if (!BattleTerrain.c(-104)) {
                 return;
               }
-              var6 = new int[vg.field_h[this.field_q].field_E.length];
+              var6 = new int[ProxyAuthenticationException.field_h[this.field_q].field_E.length];
               var7_int = 0;
               while (var7_int < var6.length) {
                 stackIn_32_0 = -1;
@@ -265,8 +265,8 @@ final class GameplayController {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
-                if (stackIn_32_0 != ~vg.field_h[this.field_q].field_E[var7_int]) {
-                  var6[var7_int] = vn.a(vg.field_h[this.field_q].field_E[var7_int], -16777216);
+                if (stackIn_32_0 != ~ProxyAuthenticationException.field_h[this.field_q].field_E[var7_int]) {
+                  var6[var7_int] = DateOfBirthValidator.a(ProxyAuthenticationException.field_h[this.field_q].field_E[var7_int], -16777216);
                 } else {
                   var6[var7_int] = 0;
                 }
@@ -275,13 +275,13 @@ final class GameplayController {
               if (decompiledFrameCompleted0) {
                 var7 = null;
                 try {
-                  var8 = hl.field_u.newInstance(new Object[]{new Integer(vg.field_h[this.field_q].field_A), new Integer(vg.field_h[this.field_q].field_F), new Integer(lc.field_h)});
-                  nh.field_u.invoke(var8, new Object[]{new Integer(0), new Integer(0), new Integer(vg.field_h[this.field_q].field_A), new Integer(vg.field_h[this.field_q].field_F), var6, new Integer(0), new Integer(vg.field_h[this.field_q].field_A)});
-                  var7_ref = (java.awt.Cursor) (jd.field_rb.invoke((Object) (((java.awt.Canvas) (var5)).getToolkit()), new Object[]{var8, new java.awt.Point(param0, param3), "FunOrb Custom Cursor"}));
+                  var8 = hl.field_u.newInstance(new Object[]{new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_F), new Integer(lc.field_h)});
+                  Bzip2State.field_u.invoke(var8, new Object[]{new Integer(0), new Integer(0), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_F), var6, new Integer(0), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A)});
+                  var7_ref = (java.awt.Cursor) (AccountNoticeDialog.field_rb.invoke((Object) (((java.awt.Canvas) (var5)).getToolkit()), new Object[]{var8, new java.awt.Point(param0, param3), "FunOrb Custom Cursor"}));
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref = (IllegalAccessException) (Object) decompiledCaughtException;
-                  jd.field_rb = null;
+                  AccountNoticeDialog.field_rb = null;
                 } catch (java.lang.InstantiationException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref2 = (InstantiationException) (Object) decompiledCaughtException;
@@ -401,7 +401,7 @@ final class GameplayController {
           if (stackIn_38_0 > stackIn_38_1) {
             var5_ref_mb__ = this.field_W;
             this.field_W = new Sentinel[var4];
-            ii.a(var5_ref_mb__, 0, this.field_W, 0, var4);
+            ArraySupport.copy(var5_ref_mb__, 0, this.field_W, 0, var4);
             var3 = var4;
           }
           boolean decompiledFrameCompleted3 = true;
@@ -505,8 +505,8 @@ final class GameplayController {
             this.field_c[0] = this.world.simulationTick / 50;
           }
           if (var5Lifetime1 != 0 &&
-            0 <= nc.field_a) {
-            this.field_c[0] = nc.field_a;
+            0 <= WeightedLruCache.field_a) {
+            this.field_c[0] = WeightedLruCache.field_a;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -542,7 +542,7 @@ final class GameplayController {
           var11 = -var10_int + (param3 - 4);
           var12 = 4 + var10_int + param8;
           var13 = param5;
-          var14 = hj.field_w;
+          var14 = MusicPatchNode.field_w;
           var15 = 0;
           var16 = null;
           var17_int = NodeDeque.a((byte) 105, param7.chassis.componentId);
@@ -553,25 +553,25 @@ final class GameplayController {
               var15 += 10;
             }
           }
-          SoftwareRaster.a(param8, param5, var10_int + param8, param5 + param0);
+          SoftwareRaster.setClip(param8, param5, var10_int + param8, param5 + param0);
           if (param4) {
-            oa.field_N.a(param8 + (-oa.field_N.field_z + var10_int) / 2, param5 + (-oa.field_N.field_B + param0) / 2);
+            TextButton.field_N.a(param8 + (-TextButton.field_N.field_z + var10_int) / 2, param5 + (-TextButton.field_N.field_B + param0) / 2);
           }
-          hj.field_w = var10_int * 6400 / param6;
+          MusicPatchNode.field_w = var10_int * 6400 / param6;
           var17 = null;
           if (!param4) {
             param7.chassis.a(0, true, var10_int / 2 + param8, param0 + param5 - (6 - var15), (byte) 49, 0);
             fl.a(var10_int, param7, (byte) -125, param0, param8, param5);
           } else {
             var17_ref = new RgbSprite(var10_int, param0);
-            var17_ref.d();
+            var17_ref.bindRasterTarget();
             param7.chassis.a(0, true, var10_int / 2, var15 - 6 + param0, (byte) 49, 0);
-            bg.a(var17_ref, param7, 14590);
-            sb.field_bb.b((byte) 121);
+            WeightedCacheEntry.a(var17_ref, param7, 14590);
+            Checkbox.field_bb.b((byte) 121);
             var17_ref.a(param8, param5);
           }
           SoftwareRaster.c();
-          hj.field_w = var14;
+          MusicPatchNode.field_w = var14;
           SoftwareRaster.c(var12, var13, var11, 21, 0, 160);
           var13 += 16;
           var18 = this.world.d(-1661904765, param7.playerId);
@@ -587,12 +587,12 @@ final class GameplayController {
             decompiledSharedTail0 = (SteelSentinels.obfuscationControl != 0);
           }
           if (decompiledSharedTail0) {
-            pl.field_U.b(var18.toUpperCase(), var12 + 4, var13, param2, -1);
+            pl.field_U.drawLeft(var18.toUpperCase(), var12 + 4, var13, param2, -1);
             var12 += 150;
           }
           if (var18 == null &&
             var16 != null) {
-            pl.field_U.b(((String) (var16)).toUpperCase(), var12, var13, param2, -1);
+            pl.field_U.drawLeft(((String) (var16)).toUpperCase(), var12, var13, param2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -631,7 +631,7 @@ final class GameplayController {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        bh var5_ref_bh = null;
+        SentinelCommandSimulator var5_ref_bh = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -706,10 +706,10 @@ final class GameplayController {
         var29 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
-          if (qg.field_n == null) {
+          if (MarkerSliderPainter.field_n == null) {
             km.field_c = this.controlledSentinel.worldX;
-            dl.field_G = this.controlledSentinel.worldY;
-            var5_ref_bh = new bh(this.controlledSentinel);
+            UiContainer.field_G = this.controlledSentinel.worldY;
+            var5_ref_bh = new SentinelCommandSimulator(this.controlledSentinel);
             var6 = -this.field_P >> 4;
             var7 = 400 - (this.field_E >> 4);
             var5_ref_bh.field_k = 16;
@@ -720,7 +720,7 @@ final class GameplayController {
           }
           var4 = 0;
           var5 = (km.field_c >> 8) - (this.field_P >> 4);
-          var6 = 400 + (-(this.field_E >> 4) + (-(this.controlledSentinel.field_Db * 8) + dl.field_G >> 8));
+          var6 = 400 + (-(this.field_E >> 4) + (-(this.controlledSentinel.field_Db * 8) + UiContainer.field_G >> 8));
           if (Math.abs(320 - var5) <= 320 &&
             190 >= Math.abs(-var6 + 190)) {
             stackIn_14_0 = 0;
@@ -732,10 +732,10 @@ final class GameplayController {
           var6 = Math.max(48, Math.min(332, var6));
           var3_int = var4;
           if (Math.abs(this.controlledSentinel.field_F) > 100 &&
-            null == qg.field_n) {
+            null == MarkerSliderPainter.field_n) {
             var3_int = 1;
           }
-          nc.field_b = false;
+          WeightedLruCache.field_b = false;
           if (this.controlledSentinel != null &&
             this.controlledSentinel.field_ub < 0 &&
             this.field_F >= 0 &&
@@ -787,13 +787,13 @@ final class GameplayController {
             var8 = 48;
             if (this.controlledSentinel.field_Xb.length > 0 &&
               var3_int != 0 &&
-              ((-var6 + pi.field_c) * (pi.field_c - var6) + (oh.field_f - var5) * (oh.field_f - var5)) < (var8 * var8)) {
+              ((-var6 + DelegatingCanvas.field_c) * (DelegatingCanvas.field_c - var6) + (oh.field_f - var5) * (oh.field_f - var5)) < (var8 * var8)) {
               stackIn_88_0 = 1;
             } else {
               stackIn_88_0 = 0;
             }
             var9 = stackIn_88_0;
-            nc.field_b = var9 != 0;
+            WeightedLruCache.field_b = var9 != 0;
             if (var9 != 0) {
               SoftwareRaster.b(var5, var6, var8, 8421631, 50);
             }
@@ -880,16 +880,16 @@ final class GameplayController {
             }
             var13 = new int[stackIn_170_0];
             SoftwareRaster.b(var13);
-            var14Lifetime1 = this.d(true, km.field_c + l.field_g);
-            var15Lifetime1 = this.b(1, cf.field_q + dl.field_G);
-            if (!nc.field_b &&
+            var14Lifetime1 = this.d(true, km.field_c + NodeHashTableIterator.field_g);
+            var15Lifetime1 = this.b(1, cf.field_q + UiContainer.field_G);
+            if (!WeightedLruCache.field_b &&
               var7 == 0 &&
               0 <= oh.field_f &&
               this.field_n == -1) {
               stackIn_186_0 = (var14Lifetime1 >= oh.field_f) ? 0 : 1;
               var16 = stackIn_186_0;
-              if (qg.field_n != null) {
-                stackIn_193_0 = (0 >= qg.field_n.aimAngle) ? 0 : 1;
+              if (MarkerSliderPainter.field_n != null) {
+                stackIn_193_0 = (0 >= MarkerSliderPainter.field_n.aimAngle) ? 0 : 1;
                 var16 = stackIn_193_0;
               }
               if (var16 == 0) {
@@ -902,11 +902,11 @@ final class GameplayController {
               fm.field_j.c(-48 + var14Lifetime1, var15Lifetime1 - 48);
             }
             SoftwareRaster.a(var13);
-            if (!nc.field_b &&
+            if (!WeightedLruCache.field_b &&
               oh.field_f >= 0 &&
               this.field_n == -1) {
               var16Lifetime1 = -var14Lifetime1 + oh.field_f;
-              var17 = -var15Lifetime1 + pi.field_c;
+              var17 = -var15Lifetime1 + DelegatingCanvas.field_c;
               var18_double = Math.sqrt((double)(var17 * var17 + var16Lifetime1 * var16Lifetime1));
               if (var18_double != 0.0) {
                 var20_int = (int)((double)(var16Lifetime1 * 53) / var18_double) + var14Lifetime1;
@@ -917,22 +917,22 @@ final class GameplayController {
                 var25_int = var23 + (var22 - var20_int);
                 var26 = var23 + (-var21 + var22);
                 var27 = var23 - (-var20_int + var22);
-                dl.a(var25_int, var20_int, var24, true, this.field_M[0], var21, var27, var26);
+                UiContainer.a(var25_int, var20_int, var24, true, this.field_M[0], var21, var27, var26);
               }
             }
             if (var4 != 0 &&
               oh.field_f >= 0 &&
               -1 == this.field_n) {
               var16Lifetime2 = var14Lifetime1;
-              var14Lifetime1 = var5 + (l.field_g >> 8);
+              var14Lifetime1 = var5 + (NodeHashTableIterator.field_g >> 8);
               var15Lifetime2 = (this.controlledSentinel.field_Db >>> 5) + (var6 + (cf.field_q >> 8));
-              if (nc.field_b) {
+              if (WeightedLruCache.field_b) {
                 var16Lifetime2 = var14Lifetime1;
               }
               stackIn_223_0 = (var16Lifetime2 >= oh.field_f) ? 0 : 1;
               var17Lifetime1 = stackIn_223_0;
-              if (qg.field_n != null) {
-                stackIn_230_0 = (qg.field_n.aimAngle <= 0) ? 0 : 1;
+              if (MarkerSliderPainter.field_n != null) {
+                stackIn_230_0 = (MarkerSliderPainter.field_n.aimAngle <= 0) ? 0 : 1;
                 var17Lifetime1 = stackIn_230_0;
               }
               if (var17Lifetime1 != 0) {
@@ -946,10 +946,10 @@ final class GameplayController {
                 fm.field_j.c(-48 + var14Lifetime1, var15Lifetime2 - 48);
               }
               SoftwareRaster.a(var13);
-              if (nc.field_b &&
+              if (WeightedLruCache.field_b &&
                 var7 == 0) {
                 var17Lifetime1Lifetime1 = oh.field_f - var14Lifetime1;
-                var18 = pi.field_c - var15Lifetime2;
+                var18 = DelegatingCanvas.field_c - var15Lifetime2;
                 var19_double = Math.sqrt((double)(var18 * var18 + var17Lifetime1Lifetime1 * var17Lifetime1Lifetime1));
                 if (0.0 != var19_double) {
                   var21Lifetime1 = var14Lifetime1 + (int)((double)(55 * var17Lifetime1Lifetime1) / var19_double);
@@ -960,7 +960,7 @@ final class GameplayController {
                   var26Lifetime1 = var24Lifetime1 - var21Lifetime1 + var23Lifetime1;
                   var27Lifetime1 = var23Lifetime1 - var22Lifetime1 + var24Lifetime1;
                   var28 = var21Lifetime1 - var23Lifetime1 + var24Lifetime1;
-                  dl.a(var26Lifetime1, var21Lifetime1, var25_intLifetime1, true, this.field_M[0], var22Lifetime1, var28, var27Lifetime1);
+                  UiContainer.a(var26Lifetime1, var21Lifetime1, var25_intLifetime1, true, this.field_M[0], var22Lifetime1, var28, var27Lifetime1);
                 }
               }
             }
@@ -969,7 +969,7 @@ final class GameplayController {
             }
             regionExit2: {
               if (var4 != 0) {
-                rl.field_b.d();
+                rl.field_b.bindRasterTarget();
                 SoftwareRaster.b();
                 var16Lifetime3 = this.controlledSentinel.field_S;
                 var17Lifetime2 = this.controlledSentinel.field_Cb ? 1 : 0;
@@ -1017,8 +1017,8 @@ final class GameplayController {
                       continue;
                     }
                   } else {
-                    sb.field_bb.b((byte) 125);
-                    SoftwareRaster.a(var5 - 48, var6 - 48, 48 + var5, 48 + var6);
+                    Checkbox.field_bb.b((byte) 125);
+                    SoftwareRaster.setClip(var5 - 48, var6 - 48, 48 + var5, 48 + var6);
                     var19 = -80 + (this.controlledSentinel.field_Db >>> 5);
                     rl.field_b.e(-40 + var5, var19 + var6, 128, 128);
                     stackIn_294_0 = this.d(true, this.controlledSentinel.worldX);
@@ -1038,8 +1038,8 @@ final class GameplayController {
                       stackIn_310_1 = -1601;
                       if (var29 != 0) {
                         if (stackIn_310_0 > stackIn_310_1) {
-                          var23Lifetime2 = -var20_intLifetime1Lifetime1 + f.field_w[var22Lifetime2] + var5;
-                          var24Lifetime2 = 80 + (var6 + (nj.field_U[var22Lifetime2] + var19)) - var21Lifetime2;
+                          var23Lifetime2 = -var20_intLifetime1Lifetime1 + SocketJs5Transport.field_w[var22Lifetime2] + var5;
+                          var24Lifetime2 = 80 + (var6 + (AccountTermsPanel.field_U[var22Lifetime2] + var19)) - var21Lifetime2;
                           var25 = pe.field_o;
                           var26Lifetime2 = var5 - var23Lifetime2;
                           var27Lifetime2 = -var24Lifetime2 + var6;
@@ -1073,8 +1073,8 @@ final class GameplayController {
                       if (stackIn_310_0Lifetime1 <= stackIn_310_1Lifetime1) {
                         break;
                       }
-                      var23Lifetime2Lifetime1 = -var20_intLifetime1Lifetime1 + f.field_w[var22Lifetime2] + var5;
-                      var24Lifetime2Lifetime1 = 80 + (var6 + (nj.field_U[var22Lifetime2] + var19)) - var21Lifetime2;
+                      var23Lifetime2Lifetime1 = -var20_intLifetime1Lifetime1 + SocketJs5Transport.field_w[var22Lifetime2] + var5;
+                      var24Lifetime2Lifetime1 = 80 + (var6 + (AccountTermsPanel.field_U[var22Lifetime2] + var19)) - var21Lifetime2;
                       var25Lifetime1 = pe.field_o;
                       var26Lifetime2Lifetime1 = var5 - var23Lifetime2Lifetime1;
                       var27Lifetime2Lifetime1 = -var24Lifetime2Lifetime1 + var6;
@@ -1095,7 +1095,7 @@ final class GameplayController {
                 }
               }
               stackIn_320_0 = 0;
-              stackIn_320_1 = rc.field_l;
+              stackIn_320_1 = SectorCacheStore.field_l;
             }
             if (stackIn_320_0 >= stackIn_320_1) {
               return;
@@ -1104,17 +1104,17 @@ final class GameplayController {
               return;
             }
             if (3 == di.field_g &&
-              qh.field_Yb < 5) {
+              IconTextComponent.field_Yb < 5) {
               return;
             }
             var16Lifetime4 = var5;
             var17Lifetime3 = -26 + var6;
-            var18Lifetime2 = 100 - rc.field_l;
-            SoftwareRaster.a(0, -50 + var17Lifetime3, 640, var17Lifetime3);
+            var18Lifetime2 = 100 - SectorCacheStore.field_l;
+            SoftwareRaster.setClip(0, -50 + var17Lifetime3, 640, var17Lifetime3);
             var17Lifetime3 = var17Lifetime3 + (-(10 * var18Lifetime2 / 20) + 5);
             var19Lifetime1 = -(256 * var18Lifetime2 / 100) + 256;
-            var20 = li.field_B[this.controlledSentinel.field_Xb[this.field_F]];
-            fk.field_d.c(var20, var16Lifetime4, var17Lifetime3, 16777215, 0, var19Lifetime1);
+            var20 = PasswordFieldPainter.field_B[this.controlledSentinel.field_Xb[this.field_F]];
+            BoundedUrlRequest.field_d.c(var20, var16Lifetime4, var17Lifetime3, 16777215, 0, var19Lifetime1);
             SoftwareRaster.c();
             return;
           }
@@ -1134,7 +1134,7 @@ final class GameplayController {
         try {
           if (im.field_g != null) {
             var1 = im.field_g;
-            vf.a(320, db.a(jj.field_b, -94, new String[]{var1}));
+            vf.a(320, SocketConnector.a(jj.field_b, -94, new String[]{var1}));
             im.field_g = null;
           }
         } catch (RuntimeException runtimeException) {
@@ -1204,18 +1204,18 @@ final class GameplayController {
           }
           if (!this.world.field_j) {
             if (oh.field_f < 0 &&
-              0 > pi.field_c) {
+              0 > DelegatingCanvas.field_c) {
               return;
             }
             if (di.field_g == 0 &&
-              qh.field_Yb < 8) {
+              IconTextComponent.field_Yb < 8) {
               return;
             }
             if (di.field_g == 3 &&
-              qh.field_Yb < 5) {
+              IconTextComponent.field_Yb < 5) {
               return;
             }
-            var2 = (Projectile) (pm.field_db.first(13058));
+            var2 = (Projectile) (LoginForm.field_db.first(13058));
             var2.field_I = true;
             var3 = this.d(true, var2.worldX);
             if (param0 >= -75) {
@@ -1324,7 +1324,7 @@ final class GameplayController {
               }
               break;
             }
-            pm.field_db.clear(6);
+            LoginForm.field_db.clear(6);
             return;
           }
           return;
@@ -1337,7 +1337,7 @@ final class GameplayController {
 
     private final void a(int param0, boolean param1, boolean param2, boolean param3) {
         boolean stackIn_118_0 = false;
-        bh stackIn_179_0 = null;
+        SentinelCommandSimulator stackIn_179_0 = null;
         int stackIn_179_1 = 0;
         int stackIn_180_2 = 0;
         int stackIn_190_0 = 0;
@@ -1349,16 +1349,16 @@ final class GameplayController {
         RuntimeException var5 = null;
         Sentinel var6_ref_mb = null;
         int var6 = 0;
-        bh var7_ref_bh = null;
+        SentinelCommandSimulator var7_ref_bh = null;
         int var7 = 0;
-        bh var8 = null;
+        SentinelCommandSimulator var8 = null;
         Sentinel var8_ref = null;
         ne var8_ref2 = null;
         ParticleEffect var8_ref3 = null;
         Explosion var8_ref4 = null;
         Projectile var8_ref5 = null;
         int var9_int = 0;
-        bh var9 = null;
+        SentinelCommandSimulator var9 = null;
         SentinelCommand var9_ref = null;
         int var10 = 0;
         int var11 = 0;
@@ -1380,8 +1380,8 @@ final class GameplayController {
             this.controlledSentinel.field_pc));
           if (!decompiledSharedTail0) {
             var6_ref_mb = this.controlledSentinel;
-            var7_ref_bh = new bh(var6_ref_mb);
-            var8 = new bh(var6_ref_mb);
+            var7_ref_bh = new SentinelCommandSimulator(var6_ref_mb);
+            var8 = new SentinelCommandSimulator(var6_ref_mb);
             BattleTerrain.field_a = 0;
             var7_ref_bh.field_k = 0;
             var9_int = 100;
@@ -1389,13 +1389,13 @@ final class GameplayController {
             var11 = this.world.simulationTick + 1;
             scanLoop1: while (true) {
               if (var11 < (500 + this.world.simulationTick)) {
-                var12 = var7_ref_bh.a(qg.field_n, true, var11);
+                var12 = var7_ref_bh.a(MarkerSliderPainter.field_n, true, var11);
                 var8.a((SentinelCommand) null, true, var11);
                 if (var16 == 0) {
                   boolean decompiledFrameRemainder1 = true;
                   if (null != var12 &&
                     var12.actionType == 0 &&
-                    !pm.field_db.f(7) && ((!(this.controlledSentinel.field_ub < 0) ||
+                    !LoginForm.field_db.f(7) && ((!(this.controlledSentinel.field_ub < 0) ||
                     !c.a((byte) -95, this.controlledSentinel.field_Xb[this.field_F])) &&
                     (!(this.controlledSentinel.charge < 1) ||
                     this.controlledSentinel.field_Xb[this.field_F] != 8))) {
@@ -1414,30 +1414,30 @@ final class GameplayController {
                   if ((var11 % var9_int != 0 &&
                     0 > var7_ref_bh.field_k) &&
                     (decompiledFrameRemainder2 = (var12 != null)) &&
-                    (decompiledFrameRemainder2 = (qg.field_n == var12))) {
+                    (decompiledFrameRemainder2 = (MarkerSliderPainter.field_n == var12))) {
                     decompiledFrameRemainder2 = (var11 == var12.startTick);
                   }
                   if (decompiledFrameRemainder2) {
                     var15 = 0;
-                    if (null != qg.field_n &&
-                      qg.field_n.startTick <= var11) {
+                    if (null != MarkerSliderPainter.field_n &&
+                      MarkerSliderPainter.field_n.startTick <= var11) {
                       var15 = 1;
                     }
                     if (var15 != 1) {
-                      if ((null != qg.field_n)) {
+                      if ((null != MarkerSliderPainter.field_n)) {
                         var7_ref_bh.a((byte) -106, 35, var13, var15, true, var14);
                       }
                       decompiledFrameRemainder2 = false;
                     }
                     else {
                       if (0 <= this.controlledSentinel.field_ub &&
-                        var7_ref_bh.field_j && (qg.field_n.actionType == 3 ||
-                        4 == qg.field_n.actionType)) {
+                        var7_ref_bh.field_j && (MarkerSliderPainter.field_n.actionType == 3 ||
+                        4 == MarkerSliderPainter.field_n.actionType)) {
                         var7_ref_bh.a((byte) -69, 35, var13, 0, true, var14);
                         var5_int = 1;
                       }
-                      if (qg.field_n == var12 &&
-                        var11 == qg.field_n.startTick) {
+                      if (MarkerSliderPainter.field_n == var12 &&
+                        var11 == MarkerSliderPainter.field_n.startTick) {
                         var8.a((byte) -61, 35, var13, 0, true, var14);
                       }
                     }
@@ -1445,12 +1445,12 @@ final class GameplayController {
                   if (null != var12) {
                     var8.a(var14, var12, 256, -1, var13);
                   }
-                  if (var12 == qg.field_n &&
-                    null != qg.field_n) {
-                    bj.field_h = var7_ref_bh.field_b;
+                  if (var12 == MarkerSliderPainter.field_n &&
+                    null != MarkerSliderPainter.field_n) {
+                    MusicPatchEnvelope.field_h = var7_ref_bh.field_b;
                     km.field_c = var7_ref_bh.field_g;
                     PacketBuffer.field_r = var7_ref_bh.field_r;
-                    dl.field_G = var7_ref_bh.field_q;
+                    UiContainer.field_G = var7_ref_bh.field_q;
                   }
                   var11++;
                   continue;
@@ -1467,9 +1467,9 @@ final class GameplayController {
           }
           if ((decompiledSharedTail0) &&
             (this.controlledSentinel != null)) {
-            dl.field_G = this.controlledSentinel.worldY;
+            UiContainer.field_G = this.controlledSentinel.worldY;
             PacketBuffer.field_r = this.controlledSentinel.field_pc;
-            bj.field_h = this.controlledSentinel.field_E;
+            MusicPatchEnvelope.field_h = this.controlledSentinel.field_E;
             km.field_c = this.controlledSentinel.worldX;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -1482,7 +1482,7 @@ final class GameplayController {
             if (param1) {
               var8_ref = (Sentinel) (this.world.sentinels.first(13058));
               while (var8_ref != null) {
-                stackOut_117_0 = var8_ref.a((byte) -22, var6, oh.field_f, pi.field_c, var7);
+                stackOut_117_0 = var8_ref.a((byte) -22, var6, oh.field_f, DelegatingCanvas.field_c, var7);
                 stackIn_190_0 = stackOut_117_0 ? 1 : 0;
                 stackIn_118_0 = stackOut_117_0;
                 if (var16 != 0) {
@@ -1504,7 +1504,7 @@ final class GameplayController {
                   var5_int == 0) && (var8_ref.chassis.componentId != 109 &&
                   !var8_ref.field_pc &&
                   !var8_ref.field_Hb)) {
-                  var9 = new bh(var8_ref);
+                  var9 = new SentinelCommandSimulator(var8_ref);
                   if (var8_ref != this.controlledSentinel) {
                     var9.field_n = var8_ref.getTeamColour((byte) 110);
                   }
@@ -1523,7 +1523,7 @@ final class GameplayController {
                       } else {
                         stackIn_180_2 = 35;
                       }
-                      ((bh) (Object) stackIn_179_0).a((byte) stackIn_179_1, stackIn_180_2, var6, 2, true, var7);
+                      ((SentinelCommandSimulator) (Object) stackIn_179_0).a((byte) stackIn_179_1, stackIn_180_2, var6, 2, true, var7);
                     }
                     var11Lifetime1++;
                   }
@@ -1605,9 +1605,9 @@ final class GameplayController {
             this.field_P = Math.min(this.field_P, this.world.terrain.getProfileLength(99) - 10240);
             this.field_P = Math.max(this.field_P, 0);
             if (!fc.field_e[81] &&
-              null != qg.field_n &&
+              null != MarkerSliderPainter.field_n &&
               this.controlledSentinel.field_Xb.length > 0) {
-              var8_refLifetime1.chassis.a(qg.field_n.aimAngle * bj.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
+              var8_refLifetime1.chassis.a(MarkerSliderPainter.field_n.aimAngle * MusicPatchEnvelope.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
             }
             var9_ref = (SentinelCommand) (var8_refLifetime1.pendingCommands.b(1063677678));
             while (var9_ref != null) {
@@ -1649,12 +1649,12 @@ final class GameplayController {
         try {
           this.c(false);
           PartInstruction.field_g = 500;
-          var2_int = ol.field_Ub + 10 * ge.field_j;
-          this.controlledSentinel.configureDesign(ua.field_C[var2_int], true, false, 0, 0);
+          var2_int = QuickChatHelpDialog.field_Ub + 10 * DirectByteStorage.field_j;
+          this.controlledSentinel.configureDesign(ReflectionCheck.field_C[var2_int], true, false, 0, 0);
           this.world.field_N = this.world.field_N + 100000 * this.controlledSentinel.maximumCharge;
           this.world.field_q = this.world.field_q + this.controlledSentinel.maximumArmour * 60000;
-          this.world.field_M = ua.field_t[var2_int][3];
-          var3 = ua.field_t[var2_int][2];
+          this.world.field_M = ReflectionCheck.field_t[var2_int][3];
+          var3 = ReflectionCheck.field_t[var2_int][2];
           this.controlledSentinel.field_Qb = 170;
           this.controlledSentinel.worldX = var3 << 4;
           this.controlledSentinel.velocityY = 1000;
@@ -1662,7 +1662,7 @@ final class GameplayController {
           this.controlledSentinel.worldY = -120000;
           var4 = -93 % ((-52 - param0) / 35);
           this.controlledSentinel.field_U = 0;
-          if (ge.field_j == 0) {
+          if (DirectByteStorage.field_j == 0) {
             var5 = vc.a((byte) 32);
             if (var5 >= 0) {
               this.controlledSentinel.worldX = var5;
@@ -1688,24 +1688,24 @@ final class GameplayController {
             if (!ni.b(112)) {
               if (null != lc.field_c) {
                 var3_int = param1 ? 1 : 0;
-                q.a(5, var3_int != 0, -1, 0);
+                IterableNodeHashTable.a(5, var3_int != 0, -1, 0);
                 if (var4 != 0) {
                   var3_int = param1 ? 1 : 0;
-                  q.a(0, var3_int != 0, -1, 0);
+                  IterableNodeHashTable.a(0, var3_int != 0, -1, 0);
                   var3_int = param1 ? 1 : 0;
-                  q.a(0, var3_int != 0, -1, 0);
+                  IterableNodeHashTable.a(0, var3_int != 0, -1, 0);
                 }
               } else {
                 var3_int = param1 ? 1 : 0;
-                q.a(0, var3_int != 0, -1, 0);
+                IterableNodeHashTable.a(0, var3_int != 0, -1, 0);
                 if (var4 != 0) {
                   var3_int = param1 ? 1 : 0;
-                  q.a(0, var3_int != 0, -1, 0);
+                  IterableNodeHashTable.a(0, var3_int != 0, -1, 0);
                 }
               }
             } else {
               var3_int = param1 ? 1 : 0;
-              q.a(0, var3_int != 0, -1, 0);
+              IterableNodeHashTable.a(0, var3_int != 0, -1, 0);
             }
           }
           var3_intLifetime1 = -98 % ((param0 + 53) / 49);
@@ -1745,9 +1745,9 @@ final class GameplayController {
         int stackIn_23_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_31_1 = 0;
-        u stackIn_80_0 = null;
+        CoverageBitmapFont stackIn_80_0 = null;
         String stackIn_81_1 = null;
-        u stackIn_100_0 = null;
+        CoverageBitmapFont stackIn_100_0 = null;
         String stackIn_101_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1785,30 +1785,30 @@ final class GameplayController {
         int var23Lifetime1;
         var24 = SteelSentinels.obfuscationControl;
         try {
-          stackIn_5_0 = (nc.field_a < 0) ? 0 : 1;
+          stackIn_5_0 = (WeightedLruCache.field_a < 0) ? 0 : 1;
           var2_int = stackIn_5_0;
-          stackIn_9_0 = (ge.field_j != 0) ? 0 : 1;
+          stackIn_9_0 = (DirectByteStorage.field_j != 0) ? 0 : 1;
           var3 = stackIn_9_0;
           stackIn_13_0 = (ni.b(117)) ? 0 : 1;
           var4 = stackIn_13_0;
           if (var4 == 0 &&
-            0 == ge.field_j &&
-            ol.field_Ub == 9) {
+            0 == DirectByteStorage.field_j &&
+            QuickChatHelpDialog.field_Ub == 9) {
             stackIn_23_0 = 1;
           } else {
             stackIn_23_0 = 0;
           }
           var5 = stackIn_23_0;
-          var6 = ql.a(ce.field_t, 18286) ? 1 : 0;
+          var6 = SocialListPanel.a(ce.field_t, 18286) ? 1 : 0;
           if (null != ad.field_i) {
             stackIn_27_0 = ad.field_i.length;
           } else {
             stackIn_27_0 = 0;
           }
-          if (null == vk.field_g) {
+          if (null == Js5Transport.field_g) {
             stackIn_31_1 = 0;
           } else {
-            stackIn_31_1 = vk.field_g.length;
+            stackIn_31_1 = Js5Transport.field_g.length;
           }
           var7 = Math.max(stackIn_27_0, stackIn_31_1);
           var8 = 14;
@@ -1819,14 +1819,14 @@ final class GameplayController {
           var13 = 0;
           var14 = 1;
           if (var5 != 0) {
-            var13 = pl.field_U.a(mg.field_Zb, 560, var12);
+            var13 = pl.field_U.paragraphHeight(QuickChatMenu.field_Zb, 560, var12);
             var14 += 2;
             var8 = var8 + (var10 + var13);
           }
           if ((var5 == 0 ||
             var24 != 0) &&
             var4 == 0) {
-            var13 = pl.field_U.a(id.field_Tb, 560, var12);
+            var13 = pl.field_U.paragraphHeight(IconLabelControl.field_Tb, 560, var12);
             var14 += 2;
             var8 = var8 + (var13 + var10);
           }
@@ -1855,16 +1855,16 @@ final class GameplayController {
           if (var5 != 0) {
             var16 = var16 - var10;
             var17Lifetime1 = (-20 + (640 - 2 * var11)) / 2;
-            if (nm.a(var16, var17Lifetime1, 122, rn.field_B, var10, var11)) {
+            if (EmailAvailabilityValidator.a(var16, var17Lifetime1, 122, rn.field_B, var10, var11)) {
               this.field_r = 32;
             }
             var17Lifetime1 = var17Lifetime1 + (20 + var11);
-            if (nm.a(var16, var17Lifetime1, 125, cf.field_v, var10, var11)) {
+            if (EmailAvailabilityValidator.a(var16, var17Lifetime1, 125, cf.field_v, var10, var11)) {
               this.field_r = 31;
             }
             var16 = var16 - var9;
             var16 = var16 - var13;
-            pl.field_U.a(mg.field_Zb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
+            pl.field_U.a(QuickChatMenu.field_Zb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
             var16 = var16 - var9;
           }
           if ((var5 == 0 ||
@@ -1872,12 +1872,12 @@ final class GameplayController {
             var4 == 0) {
             var16 = var16 - var10;
             var17Lifetime2 = (640 - var11) / 2;
-            if (nm.a(var16, var17Lifetime2, 123, cf.field_v, var10, var11)) {
+            if (EmailAvailabilityValidator.a(var16, var17Lifetime2, 123, cf.field_v, var10, var11)) {
               this.field_r = 31;
             }
             var16 = var16 - var9;
             var16 = var16 - var13;
-            pl.field_U.a(id.field_Tb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
+            pl.field_U.a(IconLabelControl.field_Tb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
             var16 = var16 - var9;
           }
           var18 = -1;
@@ -1890,18 +1890,18 @@ final class GameplayController {
           if (var7 > 0) {
             var16 = var16 - (var9 + (var12 + var9 + var7 * var12));
             stackIn_80_0 = pl.field_U;
-            if (ge.field_j == 0) {
+            if (DirectByteStorage.field_j == 0) {
               stackIn_81_1 = na.field_c;
             } else {
-              stackIn_81_1 = ej.field_s;
+              stackIn_81_1 = MusicPatchPcmStream.field_s;
             }
             boolean decompiledFrameCompleted1 = true;
-            ((u) (Object) stackIn_80_0).b(stackIn_81_1, 20, var16, 16777215, -1);
+            ((CoverageBitmapFont) (Object) stackIn_80_0).drawLeft(stackIn_81_1, 20, var16, 16777215, -1);
             var19 = var9 + (var12 + var16);
             var17Lifetime3 = 20;
             if (ad.field_i.length > 0) {
               var20 = var19;
-              pl.field_U.b(qg.field_l, var17Lifetime3, var20, 10526880, 0);
+              pl.field_U.drawLeft(MarkerSliderPainter.field_l, var17Lifetime3, var20, 10526880, 0);
               var20 += 4;
               var17Lifetime3 += 8;
               var21 = ad.field_i;
@@ -1909,7 +1909,7 @@ final class GameplayController {
               while (var21.length > var22) {
                 var23 = var21[var22];
                 var20 = var20 + var12;
-                pl.field_U.b(t.field_e[var23], var17Lifetime3, var20, 1021128, 0);
+                pl.field_U.drawLeft(t.field_e[var23], var17Lifetime3, var20, 1021128, 0);
                 var22++;
                 if (var24 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -1920,12 +1920,12 @@ final class GameplayController {
                 var17Lifetime3 += 180;
               }
             }
-            if (0 < vk.field_g.length) {
+            if (0 < Js5Transport.field_g.length) {
               var20Lifetime1 = var19;
-              pl.field_U.b(wa.field_o, var17Lifetime3, var20Lifetime1, 10526880, 0);
+              pl.field_U.drawLeft(StatefulTextPainter.field_o, var17Lifetime3, var20Lifetime1, 10526880, 0);
               var20Lifetime1 += 4;
               var17Lifetime3 += 8;
-              var21Lifetime1 = vk.field_g;
+              var21Lifetime1 = Js5Transport.field_g;
               var22Lifetime1 = 0;
               while (var22Lifetime1 < var21Lifetime1.length) {
                 var23Lifetime1 = var21Lifetime1[var22Lifetime1];
@@ -1936,11 +1936,11 @@ final class GameplayController {
                 }
                 stackIn_100_0 = pl.field_U;
                 if (var23Lifetime1 != 34) {
-                  stackIn_101_1 = rj.field_m[var23Lifetime1];
+                  stackIn_101_1 = BufferedRandomAccessFile.field_m[var23Lifetime1];
                 } else {
                   stackIn_101_1 = "GODULE";
                 }
-                ((u) (Object) stackIn_100_0).b(stackIn_101_1, var17Lifetime3, var20Lifetime1, 1021128, 0);
+                ((CoverageBitmapFont) (Object) stackIn_100_0).drawLeft(stackIn_101_1, var17Lifetime3, var20Lifetime1, 1021128, 0);
                 var22Lifetime1++;
               }
             }
@@ -1955,7 +1955,7 @@ final class GameplayController {
           if (var5 == 0) {
             if (var2_int != 0) {
               var17Lifetime4 = (-var11 + 640) / 2;
-              if (nm.a(var16, var17Lifetime4, 120, bf.field_Db, var10, var11)) {
+              if (EmailAvailabilityValidator.a(var16, var17Lifetime4, 120, LoginDialog.field_Db, var10, var11)) {
                 this.field_r = 5;
               }
               var16 = var16 - var9;
@@ -1964,11 +1964,11 @@ final class GameplayController {
               var24 != 0) {
               if (var3 != 0) {
                 var17Lifetime4 = (620 - var11 - var11) / 2;
-                if (nm.a(var16, var17Lifetime4, 123, r.field_o, var10, var11)) {
+                if (EmailAvailabilityValidator.a(var16, var17Lifetime4, 123, ProxySocketConnector.field_o, var10, var11)) {
                   this.field_r = 40;
                 }
                 var17Lifetime4 = var17Lifetime4 + (var11 + 20);
-                if (nm.a(var16, var17Lifetime4, 124, f.field_z, var10, var11)) {
+                if (EmailAvailabilityValidator.a(var16, var17Lifetime4, 124, SocketJs5Transport.field_z, var10, var11)) {
                   this.field_r = 39;
                 }
                 var16 = var16 - var9;
@@ -1976,14 +1976,14 @@ final class GameplayController {
               if (var3 == 0 ||
                 var24 != 0) {
                 var17Lifetime4 = (-var11 + 640) / 2;
-                if (nm.a(var16, var17Lifetime4, 120, bf.field_Db, var10, var11)) {
+                if (EmailAvailabilityValidator.a(var16, var17Lifetime4, 120, LoginDialog.field_Db, var10, var11)) {
                   this.field_r = 5;
                 }
                 var16 = var16 - var9;
                 if (var24 != 0) {
                   if (var2_int == 0) {
                     var17Lifetime4 = (640 - var11) / 2;
-                    if (nm.a(var16, var17Lifetime4, 119, r.field_o, var10, var11)) {
+                    if (EmailAvailabilityValidator.a(var16, var17Lifetime4, 119, ProxySocketConnector.field_o, var10, var11)) {
                       this.field_r = 40;
                     }
                   }
@@ -1992,7 +1992,7 @@ final class GameplayController {
               }}} else {
             if (var2_int == 0) {
               var17Lifetime4 = (640 - var11) / 2;
-              if (nm.a(var16, var17Lifetime4, 119, r.field_o, var10, var11)) {
+              if (EmailAvailabilityValidator.a(var16, var17Lifetime4, 119, ProxySocketConnector.field_o, var10, var11)) {
                 this.field_r = 40;
               }
             }
@@ -2090,10 +2090,10 @@ final class GameplayController {
         var18 = SteelSentinels.obfuscationControl;
         try {
           if (!this.world.field_p &&
-            wc.field_a &&
+            MouseInputHandler.field_a &&
             0 <= this.world.field_A &&
             -2 != ed.field_j) {
-            wc.field_a = false;
+            MouseInputHandler.field_a = false;
             var3_int = Math.min(2, Math.max(0, this.world.computerPlayerCount));
             var4_ref = null;
             if (1 == var3_int) {
@@ -2107,17 +2107,17 @@ final class GameplayController {
             }
             var4_ref_String = var4_ref_String + ": " + rh.field_t[var3_int];
             stackIn_22_0 = (0 < var3_int) ? 48127 : 16776960;
-            bl.a(stackIn_22_0, var4_ref_String, (byte) 34);
-            bc.a(var4_ref_String, this.world, (byte) 100);
+            LinkButtonPainter.a(stackIn_22_0, var4_ref_String, (byte) 34);
+            ValidatedTextWidget.a(var4_ref_String, this.world, (byte) 100);
           }
           if (this.world.field_p &&
-            !wc.field_a &&
+            !MouseInputHandler.field_a &&
             ed.field_j != -2) {
-            wc.field_a = true;
-            var3 = si.field_H[this.world.simulationTick % si.field_H.length];
+            MouseInputHandler.field_a = true;
+            var3 = CachedTextLayout.field_H[this.world.simulationTick % CachedTextLayout.field_H.length];
             var3 = dc.field_a + ": " + var3;
-            bl.a(16776960, var3, (byte) -50);
-            bc.a(var3, this.world, (byte) 100);
+            LinkButtonPainter.a(16776960, var3, (byte) -50);
+            ValidatedTextWidget.a(var3, this.world, (byte) 100);
           }
           boolean decompiledFrameRemainder12 = true;
           if (di.field_g == -1) {
@@ -2149,12 +2149,12 @@ final class GameplayController {
             }
           }
           if (sh.field_d >= 0 &&
-            bh.a(true)) {
+            SentinelCommandSimulator.a(true)) {
             sh.field_d = sh.field_d + 1;
           }
           if (this.world.field_j &&
-            q.field_h > 0) {
-            q.field_h = q.field_h - 1;
+            IterableNodeHashTable.field_h > 0) {
+            IterableNodeHashTable.field_h = IterableNodeHashTable.field_h - 1;
           }
           if (PartInstruction.field_g > 0) {
             PartInstruction.field_g = PartInstruction.field_g - 1;
@@ -2164,41 +2164,41 @@ final class GameplayController {
             this.h((byte) -69);
           }
           if (-1 != this.field_t &&
-            lb.field_gc == 1 &&
+            VerticalScrollbar.field_gc == 1 &&
             !this.world.field_j) {
             this.field_F = this.field_t;
             this.field_t = -1;
-            rc.field_l = 100;
+            SectorCacheStore.field_l = 100;
           }
-          if (0 < rc.field_l) {
-            rc.field_l = rc.field_l - 1;
+          if (0 < SectorCacheStore.field_l) {
+            SectorCacheStore.field_l = SectorCacheStore.field_l - 1;
           }
-          boolean decompiledSharedTail4 = (!(hb.field_f) ||
+          boolean decompiledSharedTail4 = (!(IterableDualNodeDeque.field_f) ||
             !(150 > SentinelCommand.field_o));
           if (!decompiledSharedTail4) {
             SentinelCommand.field_o = SentinelCommand.field_o + 2;
             decompiledSharedTail4 = (var18 != 0);
           }
-          if ((decompiledSharedTail4) && (!hb.field_f &&
+          if ((decompiledSharedTail4) && (!IterableDualNodeDeque.field_f &&
             SentinelCommand.field_o > 0)) {
             SentinelCommand.field_o = SentinelCommand.field_o - 1;
           }
-          if (-1 != g.field_h) {
-            pd.field_X = pd.field_X + 1;
-            if (250 < pd.field_X) {
-              g.field_h = -1;
+          if (-1 != GrowableIntList.field_h) {
+            AccountChoicePanel.field_X = AccountChoicePanel.field_X + 1;
+            if (250 < AccountChoicePanel.field_X) {
+              GrowableIntList.field_h = -1;
             }
           }
-          if (!pm.field_db.f(7) &&
-            ~rc.field_g != ~this.field_F) {
-            pm.field_db.clear(6);
+          if (!LoginForm.field_db.f(7) &&
+            ~SectorCacheStore.field_g != ~this.field_F) {
+            LoginForm.field_db.clear(6);
           }
-          rc.field_g = this.field_F;
-          if (null != pm.field_db &&
-            pm.field_db.f(7) &&
+          SectorCacheStore.field_g = this.field_F;
+          if (null != LoginForm.field_db &&
+            LoginForm.field_db.f(7) &&
             null != this.controlledSentinel &&
             !this.controlledSentinel.field_pc) {
-            sn.field_n = true;
+            BoundedRandomAccessFile.field_n = true;
           }
           if (this.field_r != -1 &&
             26 != this.field_r &&
@@ -2256,7 +2256,7 @@ final class GameplayController {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3_int >= 6))) {
             if (var18 == 0) {
-              if (ke.field_b[var3_int] != null) {
+              if (WidgetStyleLayer.field_b[var3_int] != null) {
                 if (var3_int > 2 &&
                   hh.field_c[var3_int] > 0) {
                   hh.field_c[var3_int] = 0;
@@ -2264,7 +2264,7 @@ final class GameplayController {
                 dupTemp$0 = hh.field_c[var3_int] - 1;
                 hh.field_c[var3_int] = dupTemp$0;
                 if (dupTemp$0 < -50) {
-                  ke.field_b[var3_int] = null;
+                  WidgetStyleLayer.field_b[var3_int] = null;
                 }
               }
               var3_int++;
@@ -2275,11 +2275,11 @@ final class GameplayController {
           if (decompiledNaturalLoopExit0) {
             var3_int = 1;
           }
-          if (bb.field_T) {
+          if (ModalPanel.field_T) {
             var3_int = 0;
           }
-          if (vl.field_v &&
-            qc.field_V.field_cb <= pi.field_c) {
+          if (TextHotspotRegion.field_v &&
+            DisplayNameForm.field_V.field_cb <= DelegatingCanvas.field_c) {
             var3_int = 0;
           }
           if (this.field_r == 0) {
@@ -2291,7 +2291,7 @@ final class GameplayController {
           if (di.field_g != -1 &&
             4 != di.field_g &&
             di.field_g != 10 &&
-            ~qh.field_Yb != ~dl.field_M) {
+            ~IconTextComponent.field_Yb != ~UiContainer.field_M) {
             param1 = false;
           }
           if (null != this.controlledSentinel &&
@@ -2338,14 +2338,14 @@ final class GameplayController {
                 (!(this.controlledSentinel.armour < this.controlledSentinel.maximumArmour / 2))) {
                 this.field_y = false;
                 if (var18 != 0) {
-                  sn.field_n = false;
+                  BoundedRandomAccessFile.field_n = false;
                   this.field_y = false;
                   this.field_A = false;
                   this.field_f = false;
                 }
               }
             } else {
-              sn.field_n = false;
+              BoundedRandomAccessFile.field_n = false;
               this.field_y = false;
               this.field_A = false;
               this.field_f = false;
@@ -2354,15 +2354,15 @@ final class GameplayController {
           boolean decompiledFrameCompleted1 = true;
           var4 = this.field_P + (oh.field_f << 4) << 4;
           var6 = -32 % ((param0 - 1) / 59);
-          var5 = pi.field_c - 400 + (this.field_E >> 4) << 8;
+          var5 = DelegatingCanvas.field_c - 400 + (this.field_E >> 4) << 8;
           if (di.field_g != -1 &&
             4 != di.field_g &&
             di.field_g != 10 &&
-            qh.field_Yb == dl.field_M) {
+            IconTextComponent.field_Yb == UiContainer.field_M) {
             regionExit1: {
               this.controlledSentinel.field_vb = 0;
               if (di.field_g == 0) {
-                var7 = qh.field_Yb;
+                var7 = IconTextComponent.field_Yb;
                 switch ((var18 == 0
                   || var7 == 1
                   || var7 == 2
@@ -2448,7 +2448,7 @@ final class GameplayController {
                     regionExit5: {
                       regionExit6: {
                         regionExit7: {
-                          var7 = qh.field_Yb;
+                          var7 = IconTextComponent.field_Yb;
                           if (1 != var7) {
                             if (2 == var7) {
                               break regionExit6;
@@ -2523,7 +2523,7 @@ final class GameplayController {
                                       var7 = 0;
                                       while (var7 < 16) {
                                         var8_ref_mb = new Sentinel(-1, 1, this.world);
-                                        var8_ref_mb.configureDesign(nn.field_c, true, false, -1, 1);
+                                        var8_ref_mb.configureDesign(FullscreenFocusCanvas.field_c, true, false, -1, 1);
                                         var8_ref_mb.field_Nb = 9;
                                         var8_ref_mb.j(-5);
                                         var8_ref_mb.worldY = -120000 - var7 * 10000;
@@ -2677,7 +2677,7 @@ final class GameplayController {
               }
               if ((decompiledFrameCompleted4) &&
                 (decompiledFrameRemainder15 = (di.field_g == 7))) {
-                var7 = qh.field_Yb;
+                var7 = IconTextComponent.field_Yb;
               }
               if (decompiledFrameRemainder15) {
                 boolean decompiledFrameRemainder11 = true;
@@ -2708,7 +2708,7 @@ final class GameplayController {
                   (decompiledFrameRemainder8)) {
                   if (!this.world.f(-46)) {
                     this.controlledSentinel.chassis.d(65536, 17);
-                    decompiledFrameRemainder15 = (si.field_t == 0);
+                    decompiledFrameRemainder15 = (CachedTextLayout.field_t == 0);
                     if (decompiledFrameRemainder15) {
                       var7_ref_jc = new NodeIterator(this.world.field_db);
                       var8 = 0;
@@ -2723,7 +2723,7 @@ final class GameplayController {
                         if (stackIn_661_0 == stackIn_661_1) {
                           var8 = 1;
                         }
-                        var9_ref_wl = (Projectile) (var7_ref_jc.d(2));
+                        var9_ref_wl = (Projectile) (var7_ref_jc.next(2));
                       }
                       if (decompiledFrameCompleted2) {
                         if (var8 == 0) {
@@ -2793,7 +2793,7 @@ final class GameplayController {
               }
               regionExit12: {
                 if (stackIn_661_0 == stackIn_661_1) {
-                  var7 = qh.field_Yb;
+                  var7 = IconTextComponent.field_Yb;
                   switch ((var18 == 0
                     || var7 == 2
                     || var7 == 5
@@ -2836,7 +2836,7 @@ final class GameplayController {
               if (di.field_g == 5) {
                 boolean decompiledFrameRemainder5 = true;
                 boolean decompiledFrameRemainder4 = true;
-                var7 = qh.field_Yb;
+                var7 = IconTextComponent.field_Yb;
                 if ((var7 != 0 ||
                   var18 != 0) &&
                   (decompiledFrameRemainder4 = (1 != var7 ||
@@ -2861,7 +2861,7 @@ final class GameplayController {
               }
               regionExit13: {
                 if (9 == di.field_g) {
-                  var7 = qh.field_Yb;
+                  var7 = IconTextComponent.field_Yb;
                   switch ((var18 == 0
                     || var7 == 3
                     || var7 == 4
@@ -2935,14 +2935,14 @@ final class GameplayController {
                 var9 = Math.abs(var7_ref_mb.worldY - this.controlledSentinel.worldY);
                 if (8192 > var8 &&
                   var9 < 1024 && (di.field_g != 0 ||
-                  !(6 >= qh.field_Yb) ||
+                  !(6 >= IconTextComponent.field_Yb) ||
                   this.controlledSentinel.field_U == 0)) {
                   var7_ref_mb.clearArmour(128);
                 }
               }
               if (var7_ref_mb.field_Nb == 2 &&
                 di.field_g == 3 &&
-                5 > qh.field_Yb) {
+                5 > IconTextComponent.field_Yb) {
                 var8 = -this.controlledSentinel.worldX + var7_ref_mb.worldX;
                 var8 = var8 / 1000;
                 var9 = -this.controlledSentinel.worldY + var7_ref_mb.worldY;
@@ -2953,7 +2953,7 @@ final class GameplayController {
               }
               if (var7_ref_mb.field_Nb == 9 &&
                 1 == di.field_g &&
-                qh.field_Yb == 13) {
+                IconTextComponent.field_Yb == 13) {
                 if (tj.field_c > 1) {
                   var7_ref_mb.field_Nb = 7;
                 } else {
@@ -3028,14 +3028,14 @@ final class GameplayController {
                   }
                   if (var10 != 0) {
                     if (var11 >= 0) {
-                      bj.field_h = 1;
+                      MusicPatchEnvelope.field_h = 1;
                     } else {
-                      bj.field_h = -1;
+                      MusicPatchEnvelope.field_h = -1;
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
                     var9_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var9_ref_je.aimAngle * bj.field_h, var7_ref_mb.field_Xb[0]);
-                    var7_ref_mb.chassis.b((byte) -128, 0, bj.field_h, 0);
+                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var9_ref_je.aimAngle * MusicPatchEnvelope.field_h, var7_ref_mb.field_Xb[0]);
+                    var7_ref_mb.chassis.b((byte) -128, 0, MusicPatchEnvelope.field_h, 0);
                     var16 = 0;
                     var17 = 0;
                     while (true) {
@@ -3053,7 +3053,7 @@ final class GameplayController {
                     var9_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
                     var9_ref_je.targetWorldY = this.controlledSentinel.worldY;
                     var9_ref_je.targetWorldX = this.controlledSentinel.worldX;
-                    if (bj.field_h < 0) {
+                    if (MusicPatchEnvelope.field_h < 0) {
                       if (!(16384 >= var9_ref_je.aimAngle)) {
                         var9_ref_je.aimAngle = var9_ref_je.aimAngle - 65536;
                       }
@@ -3074,7 +3074,7 @@ final class GameplayController {
                 if (var7_ref_mb.pendingCommands.f(7)) {
                   var8 = 1;
                   if (di.field_g == 1 &&
-                    qh.field_Yb <= 12) {
+                    IconTextComponent.field_Yb <= 12) {
                     if (var7_ref_mb.field_Lb) {
                       var8 = 0;
                     }
@@ -3141,14 +3141,14 @@ final class GameplayController {
                   }
                   if (var8 != 0) {
                     if (0 <= var11) {
-                      bj.field_h = 1;
+                      MusicPatchEnvelope.field_h = 1;
                     } else {
-                      bj.field_h = -1;
+                      MusicPatchEnvelope.field_h = -1;
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
                     var10_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var10_ref_je.aimAngle * bj.field_h, var7_ref_mb.field_Xb[0]);
-                    var7_ref_mb.chassis.b((byte) -128, 0, bj.field_h, 0);
+                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var10_ref_je.aimAngle * MusicPatchEnvelope.field_h, var7_ref_mb.field_Xb[0]);
+                    var7_ref_mb.chassis.b((byte) -128, 0, MusicPatchEnvelope.field_h, 0);
                     var16 = 0;
                     var17 = 0;
                     while (true) {
@@ -3163,7 +3163,7 @@ final class GameplayController {
                       var13_double = Math.atan2((double)var11, (double)(-var12_int));
                       var10_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
                       var10_ref_je.targetWorldX = this.controlledSentinel.worldX;
-                      if (0 <= bj.field_h) {
+                      if (0 <= MusicPatchEnvelope.field_h) {
                         if (!(-16384 <= var10_ref_je.aimAngle)) {
                           var10_ref_je.aimAngle = var10_ref_je.aimAngle + 65536;
                         }
@@ -3197,12 +3197,12 @@ final class GameplayController {
             this.controlledSentinel.field_Xb != null &&
             !this.world.field_j) {
             this.field_F = Math.max(0, Math.min(this.controlledSentinel.field_Xb.length - 1, -jj.field_d + this.field_F));
-            rc.field_l = 100;
+            SectorCacheStore.field_l = 100;
           }
           if (di.field_g == 1 &&
-            qh.field_Yb == 6) {
+            IconTextComponent.field_Yb == 6) {
             if (fc.field_e[97] ||
-              fc.field_e[on.field_h]) {
+              fc.field_e[EmailCredentials.field_h]) {
               tj.field_c = tj.field_c | 1;
             }
             if (fc.field_e[98] ||
@@ -3210,20 +3210,20 @@ final class GameplayController {
               tj.field_c = tj.field_c | 2;
             }
             if (fc.field_e[99] ||
-              fc.field_e[pd.field_V]) {
+              fc.field_e[AccountChoicePanel.field_V]) {
               tj.field_c = tj.field_c | 4;
             }
           }
-          if (!fc.field_e[b.field_b] ||
+          if (!fc.field_e[DialWidgetPainter.field_b] ||
             this.controlledSentinel == null) {
-            if (!(0 >= lk.field_eb)) {
-              lk.field_eb = lk.field_eb - 1;
+            if (!(0 >= ValidationIndicator.field_eb)) {
+              ValidationIndicator.field_eb = ValidationIndicator.field_eb - 1;
               if (var18 != 0) {
-                lk.field_eb = 16;
+                ValidationIndicator.field_eb = 16;
               }
             }
           } else {
-            lk.field_eb = 16;
+            ValidationIndicator.field_eb = 16;
           }
           boolean decompiledFrameRemainder14 = true;
           if (this.controlledSentinel != null &&
@@ -3238,7 +3238,7 @@ final class GameplayController {
           }
           var8 = stackIn_1149_0;
           if (null != this.controlledSentinel &&
-            si.field_p &&
+            CachedTextLayout.field_p &&
             this.controlledSentinel.field_pc &&
             this.controlledSentinel.field_Qb == 0) {
             this.field_V = this.field_E + (-(this.controlledSentinel.worldY >> 4) - 3200);
@@ -3275,11 +3275,11 @@ final class GameplayController {
               var11 = -3000;
               var12_int = 1024;
               var13 = 0;
-              if (lb.field_gc != 2) {
+              if (VerticalScrollbar.field_gc != 2) {
                 if ((0 == (4 & sf.field_d)) &&
                   (decompiledFrameRemainder2 = (this.controlledSentinel != null)) &&
                   (decompiledFrameRemainder2 = (var8 == 0)) &&
-                  (decompiledFrameRemainder2 = !(!si.field_p))) {
+                  (decompiledFrameRemainder2 = !(!CachedTextLayout.field_p))) {
                   if (this.field_P < var9) {
                     this.field_P = var9;
                   }
@@ -3299,26 +3299,26 @@ final class GameplayController {
                 if (decompiledFrameRemainder2) {
                   var13 = 1;
                   var14 = pa.field_c - oh.field_f;
-                  var15 = -pi.field_c + la.field_a;
-                  if (ui.field_G) {
+                  var15 = -DelegatingCanvas.field_c + la.field_a;
+                  if (AlphaContainer.field_G) {
                     var14 = -var14;
                   }
                   pa.field_c = oh.field_f;
                   if (ik.field_h) {
                     var15 = -var15;
                   }
-                  la.field_a = pi.field_c;
+                  la.field_a = DelegatingCanvas.field_c;
                   this.field_P = this.field_P - 16 * var14;
                   this.field_E = this.field_E - var15 * 16;
                   var8 = 0;
                   if (var18 != 0) {
-                    la.field_a = pi.field_c;
+                    la.field_a = DelegatingCanvas.field_c;
                     pa.field_c = oh.field_f;
                     var8 = 0;
                   }
                 }
               } else {
-                la.field_a = pi.field_c;
+                la.field_a = DelegatingCanvas.field_c;
                 pa.field_c = oh.field_f;
                 var8 = 0;
               }
@@ -3344,7 +3344,7 @@ final class GameplayController {
             }
             if (decompiledFrameRemainder3) {
               if ((null == this.controlledSentinel ||
-                !si.field_p ||
+                !CachedTextLayout.field_p ||
                 this.world.field_j) &&
                 (decompiledFrameRemainder3 = !(jn.field_g))) {
                 if (fc.field_e[96] ||
@@ -3353,12 +3353,12 @@ final class GameplayController {
                   this.field_P = Math.max(0, this.field_P - var7);
                 }
                 if (fc.field_e[97] ||
-                  fc.field_e[on.field_h]) {
+                  fc.field_e[EmailCredentials.field_h]) {
                   var8 = 0;
                   this.field_P = Math.min(-10240 + this.world.terrain.getProfileLength(-117), var7 + this.field_P);
                 }
                 if (fc.field_e[99] ||
-                  fc.field_e[pd.field_V]) {
+                  fc.field_e[AccountChoicePanel.field_V]) {
                   var8 = 0;
                   this.field_E = this.field_E + var7;
                 }
@@ -3371,7 +3371,7 @@ final class GameplayController {
                 }
               }
               if ((decompiledFrameRemainder3) && (null != this.controlledSentinel &&
-                si.field_p)) {
+                CachedTextLayout.field_p)) {
                 if (!jn.field_g) {
                   if (fc.field_e[96] ||
                     fc.field_e[sa.field_c]) {
@@ -3379,7 +3379,7 @@ final class GameplayController {
                     var8 = 0;
                   }
                   if (fc.field_e[97] ||
-                    fc.field_e[on.field_h]) {
+                    fc.field_e[EmailCredentials.field_h]) {
                     this.field_p = this.field_p + var7;
                     var8 = 0;
                   }
@@ -3389,7 +3389,7 @@ final class GameplayController {
                     this.field_V = this.field_V - var7;
                   }
                   if (fc.field_e[99] ||
-                    fc.field_e[pd.field_V]) {
+                    fc.field_e[AccountChoicePanel.field_V]) {
                     var8 = 0;
                     this.field_V = this.field_V + var7;
                   }
@@ -3399,7 +3399,7 @@ final class GameplayController {
                 if (this.field_P < 0) {
                   if (jn.field_g ||
                     !fc.field_e[97] &&
-                    !fc.field_e[on.field_h]) {
+                    !fc.field_e[EmailCredentials.field_h]) {
                     if (this.field_P < -2000) {
                       this.field_p = this.field_p - (2000 + this.field_P);
                       if (var18 != 0) {
@@ -3431,7 +3431,7 @@ final class GameplayController {
                 if (this.field_E < var10 &&
                   var8 == 0) {
                   boolean decompiledSharedTail2 = (jn.field_g || (!(fc.field_e[99]) &&
-                    !(fc.field_e[pd.field_V])));
+                    !(fc.field_e[AccountChoicePanel.field_V])));
                   if (!decompiledSharedTail2) {
                     this.field_V = this.field_V - (this.field_E - var10);
                     decompiledSharedTail2 = (var18 != 0);
@@ -3460,12 +3460,12 @@ final class GameplayController {
               }
             }
           }
-          if (!(lk.field_eb <= 0) ||
+          if (!(ValidationIndicator.field_eb <= 0) ||
             var8 != 0) {
             var9 = Math.max(0, Math.min(-10240 + this.world.terrain.getProfileLength(54), (this.controlledSentinel.worldX >> 4) - 5120));
             var10 = 3200 + (this.controlledSentinel.worldY >> 4);
             var11 = Math.max(Math.abs(var9 - this.field_P), Math.abs(-this.field_E + var10)) / 5;
-            if (0 < lk.field_eb) {
+            if (0 < ValidationIndicator.field_eb) {
               var11 = Math.max(var11, 400);
               if (var18 != 0) {
                 var11 = Math.min(var11, 150);
@@ -3489,13 +3489,13 @@ final class GameplayController {
             } else {
               this.field_E = Math.max(var10, this.field_E - var11);
             }
-            if (si.field_p) {
+            if (CachedTextLayout.field_p) {
               this.field_V = -3200 - (this.controlledSentinel.worldY >> 4) + this.field_E;
               this.field_p = -(this.controlledSentinel.worldX >> 4) + (5120 + this.field_P);
             }
           }
           if (!this.field_d &&
-            ~qh.field_Yb == ~dl.field_M) {
+            ~IconTextComponent.field_Yb == ~UiContainer.field_M) {
             this.field_i = 1 + this.world.simulationTick;
           }
           boolean decompiledSharedTail1 = !(this.world.field_j);
@@ -3518,53 +3518,53 @@ final class GameplayController {
               this.field_k = stackIn_1459_1;
             }
             this.world.advanceSimulation((byte) 27);
-            if (um.field_X > 0) {
-              um.field_X = um.field_X - 1;
+            if (MarkerSlider.field_X > 0) {
+              MarkerSlider.field_X = MarkerSlider.field_X - 1;
             }
             if (this.field_d) {
-              hj.field_s = sg.field_b;
-              if (!vl.field_v) {
+              MusicPatchNode.field_s = BufferedSocket.field_b;
+              if (!TextHotspotRegion.field_v) {
                 if (ln.field_e > 1) {
-                  hj.field_s = db.a(cj.field_b, -61, new String[]{Integer.toString(ln.field_e)});
+                  MusicPatchNode.field_s = SocketConnector.a(cj.field_b, -61, new String[]{Integer.toString(ln.field_e)});
                   if (var18 != 0) {
                     if (ln.field_e != 1) {
-                      hj.field_s = ci.field_d;
-                      hj.field_s = gb.field_b;
+                      MusicPatchNode.field_s = ci.field_d;
+                      MusicPatchNode.field_s = ByteStorage.field_b;
                     } else {
-                      hj.field_s = gb.field_b;
+                      MusicPatchNode.field_s = ByteStorage.field_b;
                     }
                   }
                 } else {
                   if (ln.field_e != 1) {
-                    hj.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ci.field_d;
                     if (var18 != 0) {
-                      hj.field_s = gb.field_b;
+                      MusicPatchNode.field_s = ByteStorage.field_b;
                     }
                   } else {
-                    hj.field_s = gb.field_b;
+                    MusicPatchNode.field_s = ByteStorage.field_b;
                   }
                 }
               }
-              var9 = fk.field_d.c(hj.field_s.toUpperCase());
+              var9 = BoundedUrlRequest.field_d.textWidth(MusicPatchNode.field_s.toUpperCase());
               ArchiveIndex.field_c = ArchiveIndex.field_c + 0.05000000074505806f * ((float)var9 - ArchiveIndex.field_c);
             }
             if (!this.field_d ||
               !param1 ||
               jn.field_g) {
-              bb.field_T = false;
+              ModalPanel.field_T = false;
               decompiledFrameRemainder1 = (var18 != 0);
             }
             if (decompiledFrameRemainder1) {
               var9 = 24;
               var10 = 356;
-              bb.field_T = false;
-              if (vl.field_v) {
+              ModalPanel.field_T = false;
+              if (TextHotspotRegion.field_v) {
                 var10 = 336;
               }
-              if ((!bb.field_T ||
+              if ((!ModalPanel.field_T ||
                 !param1) &&
                 (!(ln.field_e > 0) ||
-                !(a.field_c % 40 < 20))) {
+                !(MouseWheelInput.field_c % 40 < 20))) {
                 stackIn_1508_0 = 0;
               } else {
                 stackIn_1508_0 = 1;
@@ -3573,22 +3573,22 @@ final class GameplayController {
               if (var11 != 0) {
                 stackIn_1512_0 = be.field_f;
               } else {
-                stackIn_1512_0 = co.field_d;
+                stackIn_1512_0 = QuickChatCategoryCache.field_d;
               }
               var12 = stackIn_1512_0;
               var13 = var12[2].field_A + var12[0].field_A + (int)ArchiveIndex.field_c;
               if (oh.field_f >= 0 &&
                 oh.field_f < var13 &&
-                var10 <= pi.field_c &&
-                pi.field_c < var10 + var9) {
+                var10 <= DelegatingCanvas.field_c &&
+                DelegatingCanvas.field_c < var10 + var9) {
                 this.field_r = 0;
-                bb.field_T = true;
+                ModalPanel.field_T = true;
               }
-              if (lb.field_gc == 1 &&
-                bb.field_T) {
-                stackIn_1535_0 = !(vl.field_v);
-                vl.field_v = stackIn_1535_0;
-                if (vl.field_v) {
+              if (VerticalScrollbar.field_gc == 1 &&
+                ModalPanel.field_T) {
+                stackIn_1535_0 = !(TextHotspotRegion.field_v);
+                TextHotspotRegion.field_v = stackIn_1535_0;
+                if (TextHotspotRegion.field_v) {
                   ln.field_e = 0;
                 }
               }
@@ -3604,10 +3604,10 @@ final class GameplayController {
                 this.field_k = stackIn_1554_1;
               }
               this.world.advanceSimulation((byte) 27);
-              if (0 >= um.field_X) {
+              if (0 >= MarkerSlider.field_X) {
                 continue;
               }
-              um.field_X = um.field_X - 1;
+              MarkerSlider.field_X = MarkerSlider.field_X - 1;
               if (var18 == 0) {
                 continue;
               }
@@ -3638,13 +3638,13 @@ final class GameplayController {
               NodeDeque.field_d >= 2) {
               this.world.terrain.a(1200, this.world.playerCount, this.world.mapSeed);
             }
-            if (1 == lb.field_gc) {
+            if (1 == VerticalScrollbar.field_gc) {
             }
-            if (lb.field_gc == 1 &&
+            if (VerticalScrollbar.field_gc == 1 &&
               this.controlledSentinel != null &&
               null != this.controlledSentinel.field_Vb &&
               NodeIterator.field_k) {
-              var9 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var9 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var10_ref_je = new SentinelCommand(12, 0, var9);
               var11_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var11_ref_je &&
@@ -3753,7 +3753,7 @@ final class GameplayController {
               }
               if (decompiledSharedTail0) {
                 this.b(0, 0, 0, 0);
-                dl.field_G = this.controlledSentinel.worldY;
+                UiContainer.field_G = this.controlledSentinel.worldY;
                 km.field_c = this.controlledSentinel.worldX;
               }
               if (var18 != 0) {
@@ -3768,7 +3768,7 @@ final class GameplayController {
           }
           boolean decompiledFrameCompleted0 = true;
           if (41 == this.field_r &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             stackIn_1734_0 = !(uj.field_f);
             uj.field_f = stackIn_1734_0;
             vd.field_b = true;
@@ -3785,53 +3785,53 @@ final class GameplayController {
             }
           }
           if ((decompiledFrameCompleted0) && (this.field_r == 1 &&
-            lb.field_gc == 1)) {
+            VerticalScrollbar.field_gc == 1)) {
             vd.field_b = true;
-            if (dl.field_M > 0) {
-              dl.field_M = dl.field_M - 1;
+            if (UiContainer.field_M > 0) {
+              UiContainer.field_M = UiContainer.field_M - 1;
             }
           }
           if (36 == this.field_r &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             stackIn_1761_0 = !(dm.field_c);
             dm.field_c = stackIn_1761_0;
             vd.field_b = true;
-            gd.field_sb = null;
-            stackIn_1764_0 = ti.field_A;
+            ContentTransitionDialog.field_sb = null;
+            stackIn_1764_0 = ImageProducerRasterBuffer.field_A;
             stackIn_1764_1 = 42;
             if (dm.field_c) {
               stackIn_1765_2 = qm.field_c;
             } else {
-              stackIn_1765_2 = od.field_j;
+              stackIn_1765_2 = ClientException.field_j;
             }
             stackIn_1764_0[stackIn_1764_1] = stackIn_1765_2;
             if (!ni.b(88)) {
-              um.f((byte) 3);
+              MarkerSlider.f((byte) 3);
             }
           }
           if (this.field_r == 37 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
-            stackIn_1778_0 = !(ui.field_G);
-            ui.field_G = stackIn_1778_0;
-            stackIn_1781_0 = ti.field_A;
+            stackIn_1778_0 = !(AlphaContainer.field_G);
+            AlphaContainer.field_G = stackIn_1778_0;
+            stackIn_1781_0 = ImageProducerRasterBuffer.field_A;
             stackIn_1781_1 = 43;
-            if (ui.field_G) {
+            if (AlphaContainer.field_G) {
               stackIn_1782_2 = tm.field_f;
             } else {
               stackIn_1782_2 = fj.field_i;
             }
             stackIn_1781_0[stackIn_1781_1] = stackIn_1782_2;
             if (!ni.b(109)) {
-              um.f((byte) 3);
+              MarkerSlider.f((byte) 3);
             }
           }
           if (this.field_r == 38 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
             stackIn_1796_0 = !(ik.field_h);
             ik.field_h = stackIn_1796_0;
-            stackIn_1799_0 = ti.field_A;
+            stackIn_1799_0 = ImageProducerRasterBuffer.field_A;
             stackIn_1799_1 = 44;
             if (!ik.field_h) {
               stackIn_1800_2 = sa.field_b;
@@ -3840,12 +3840,12 @@ final class GameplayController {
             }
             stackIn_1799_0[stackIn_1799_1] = stackIn_1800_2;
             if (!ni.b(20)) {
-              um.f((byte) 3);
+              MarkerSlider.f((byte) 3);
             }
           }
           if (this.field_r == 33 &&
-            lb.field_gc == 1) {
-            var9 = this.world.simulationTick + vk.field_h[this.world.field_c];
+            VerticalScrollbar.field_gc == 1) {
+            var9 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
             var10_ref_je = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (var10_ref_je != null &&
               var10_ref_je.endTick > var9) {
@@ -3874,8 +3874,8 @@ final class GameplayController {
             }
           }
           if (this.field_r == 34 &&
-            lb.field_gc == 1) {
-            var9 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+            VerticalScrollbar.field_gc == 1) {
+            var9 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
             var10_ref_je = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (null != var10_ref_je &&
               var9 < var10_ref_je.endTick) {
@@ -3904,8 +3904,8 @@ final class GameplayController {
             }
           }
           if (this.field_r == 35 &&
-            lb.field_gc == 1) {
-            var9 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+            VerticalScrollbar.field_gc == 1) {
+            var9 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
             var10_ref_je = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (var10_ref_je != null &&
               var9 < var10_ref_je.endTick) {
@@ -3935,85 +3935,85 @@ final class GameplayController {
           }
           if ((5 == this.field_r ||
             this.field_r == 39) &&
-            1 == lb.field_gc) {
+            1 == VerticalScrollbar.field_gc) {
             vd.field_b = true;
             if (this.field_r == 39) {
-              lh.field_D = true;
+              UiComponent.field_D = true;
             }
             this.i(106);
           }
           if ((this.field_r == 2 ||
-            42 == this.field_r) && lb.field_gc == 1) {
+            42 == this.field_r) && VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
             if (10 != di.field_g ||
-              qh.field_Yb != 0) {
+              IconTextComponent.field_Yb != 0) {
               this.k(-1589);
               if (var18 != 0) {
-                dl.field_M = 1;
-                qh.field_Yb = 1;
+                UiContainer.field_M = 1;
+                IconTextComponent.field_Yb = 1;
               }
             } else {
-              dl.field_M = 1;
-              qh.field_Yb = 1;
+              UiContainer.field_M = 1;
+              IconTextComponent.field_Yb = 1;
             }
           }
           if (this.field_r == 3 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
           }
           if (this.field_r == 4 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
-            g.field_c.g(100);
-            g.field_c = null;
-            var9 = 2 * ll.field_q;
+            GrowableIntList.field_c.fadeOutAndUnlink(100);
+            GrowableIntList.field_c = null;
+            var9 = 2 * UiTheme.field_q;
             if (256 < var9) {
               var9 = 256;
             }
             ef.a(1, var9);
           }
           if (di.field_g == 4 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             this.d(91);
           }
           if (27 == this.field_r &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
             CombatWorld.c(-2483, 95);
             this.field_h = false;
           }
           if (this.field_r == 30 &&
-            1 == lb.field_gc) {
+            1 == VerticalScrollbar.field_gc) {
             vd.field_b = true;
             CombatWorld.c(-2483, 95);
             if (ob.field_y) {
-              var9 = vb.field_g;
+              var9 = GzipDecoder.field_g;
               if (5 == var9 ||
                 var9 == 6 ||
                 var9 == 8) {
                 var9 = SceneWidget.field_Jb;
               }
-              q.a(-5, true, -1, var9);
+              IterableNodeHashTable.a(-5, true, -1, var9);
             }
             if (CombatWorld.field_G) {
-              ei.a(0, (byte) -23, 11);
+              NameAvailabilityValidator.a(0, (byte) -23, 11);
             }
           }
           if (this.field_r == 29 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
             CombatWorld.c(-2483, 95);
-            fk.field_i.a(false);
-            q.a(-1, true, -1, 0);
+            BoundedUrlRequest.field_i.a(false);
+            IterableNodeHashTable.a(-1, true, -1, 0);
           }
           if (31 == this.field_r &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
             CombatWorld.c(-2483, 95);
-            v.a(-1, (String) null, 10);
+            DebouncedValidator.a(-1, (String) null, 10);
           }
           if (this.field_r == 32 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
             fm.field_f[0] = 0;
             var9 = 0;
@@ -4026,14 +4026,14 @@ final class GameplayController {
               var9++;
             } while (var18 == 0);
             do {
-              if (!(var9 < fe.field_D.length)) {
+              if (!(var9 < ArchiveRequest.field_D.length)) {
                 Sprite.field_k = false;
-                ol.field_Ub = 0;
+                QuickChatHelpDialog.field_Ub = 0;
                 lc.field_e = true;
-                var9 = vb.field_g;
+                var9 = GzipDecoder.field_g;
                 break;
               }
-              fe.field_D[var9] = 0;
+              ArchiveRequest.field_D[var9] = 0;
               var9++;
             } while (var18 == 0);
             if (var9 == 5 ||
@@ -4041,57 +4041,57 @@ final class GameplayController {
               var9 == 8) {
               var9 = SceneWidget.field_Jb;
             }
-            q.a(0, false, -1, var9);
+            IterableNodeHashTable.a(0, false, -1, var9);
           }
           if (this.field_r == 40 &&
-            lb.field_gc == 1) {
+            VerticalScrollbar.field_gc == 1) {
             sh.a(-3, true, true);
           }
           if (this.field_d) {
-            hj.field_s = sg.field_b;
-            if (!vl.field_v) {
+            MusicPatchNode.field_s = BufferedSocket.field_b;
+            if (!TextHotspotRegion.field_v) {
               if (ln.field_e > 1) {
-                hj.field_s = db.a(cj.field_b, -80, new String[]{Integer.toString(ln.field_e)});
+                MusicPatchNode.field_s = SocketConnector.a(cj.field_b, -80, new String[]{Integer.toString(ln.field_e)});
                 if (var18 != 0) {
                   if (1 == ln.field_e) {
-                    hj.field_s = gb.field_b;
-                    hj.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ByteStorage.field_b;
+                    MusicPatchNode.field_s = ci.field_d;
                   } else {
-                    hj.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ci.field_d;
                   }
                 }
               } else {
                 if (1 == ln.field_e) {
-                  hj.field_s = gb.field_b;
+                  MusicPatchNode.field_s = ByteStorage.field_b;
                   if (var18 != 0) {
-                    hj.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ci.field_d;
                   }
                 } else {
-                  hj.field_s = ci.field_d;
+                  MusicPatchNode.field_s = ci.field_d;
                 }
               }
             }
-            var9 = fk.field_d.c(hj.field_s.toUpperCase());
+            var9 = BoundedUrlRequest.field_d.textWidth(MusicPatchNode.field_s.toUpperCase());
             ArchiveIndex.field_c = ArchiveIndex.field_c + 0.05000000074505806f * ((float)var9 - ArchiveIndex.field_c);
           }
           if (!this.field_d ||
             !param1 ||
             jn.field_g) {
-            bb.field_T = false;
+            ModalPanel.field_T = false;
             if (var18 == 0) {
               return;
             }
           }
           var9 = 24;
           var10 = 356;
-          if (vl.field_v) {
+          if (TextHotspotRegion.field_v) {
             var10 = 336;
           }
           boolean decompiledFrameRemainder13 = true;
-          bb.field_T = false;
-          if ((!bb.field_T ||
+          ModalPanel.field_T = false;
+          if ((!ModalPanel.field_T ||
             !param1) && (!(ln.field_e > 0) ||
-            !(a.field_c % 40 < 20))) {
+            !(MouseWheelInput.field_c % 40 < 20))) {
             stackIn_2059_0 = 0;
             decompiledFrameRemainder13 = false;
           }
@@ -4100,7 +4100,7 @@ final class GameplayController {
           }
           var11 = stackIn_2059_0;
           if (var11 == 0) {
-            stackIn_2063_0 = co.field_d;
+            stackIn_2063_0 = QuickChatCategoryCache.field_d;
           } else {
             stackIn_2063_0 = be.field_f;
           }
@@ -4108,16 +4108,16 @@ final class GameplayController {
           var13 = var12[0].field_A + ((int)ArchiveIndex.field_c + var12[2].field_A);
           if (oh.field_f >= 0 &&
             var13 > oh.field_f &&
-            pi.field_c >= var10 &&
-            pi.field_c < (var9 + var10)) {
-            bb.field_T = true;
+            DelegatingCanvas.field_c >= var10 &&
+            DelegatingCanvas.field_c < (var9 + var10)) {
+            ModalPanel.field_T = true;
             this.field_r = 0;
           }
-          if (lb.field_gc == 1 &&
-            bb.field_T) {
-            stackIn_2086_0 = !(vl.field_v);
-            vl.field_v = stackIn_2086_0;
-            if (vl.field_v) {
+          if (VerticalScrollbar.field_gc == 1 &&
+            ModalPanel.field_T) {
+            stackIn_2086_0 = !(TextHotspotRegion.field_v);
+            TextHotspotRegion.field_v = stackIn_2086_0;
+            if (TextHotspotRegion.field_v) {
               ln.field_e = 0;
             }
           }
@@ -4136,7 +4136,7 @@ final class GameplayController {
         int stackIn_254_0 = 0;
         int stackIn_254_1 = 0;
         int stackIn_276_0 = 0;
-        fh stackIn_279_0;
+        BinaryBitmapFont stackIn_279_0;
         String stackIn_279_1;
         int stackIn_279_2;
         int stackIn_279_3;
@@ -4146,7 +4146,7 @@ final class GameplayController {
         int stackIn_291_2 = 0;
         int stackIn_292_3;
         int stackIn_303_0 = 0;
-        fh stackIn_306_0;
+        BinaryBitmapFont stackIn_306_0;
         String stackIn_306_1;
         int stackIn_306_2;
         int stackIn_306_3;
@@ -4156,7 +4156,7 @@ final class GameplayController {
         int stackIn_318_2 = 0;
         int stackIn_319_3;
         int stackIn_342_0 = 0;
-        fh stackIn_347_0;
+        BinaryBitmapFont stackIn_347_0;
         String stackIn_347_1;
         int stackIn_347_2;
         int stackIn_347_3;
@@ -4166,7 +4166,7 @@ final class GameplayController {
         int stackIn_359_2 = 0;
         int stackIn_360_3;
         int stackIn_374_0 = 0;
-        fh stackIn_377_0;
+        BinaryBitmapFont stackIn_377_0;
         String stackIn_377_1;
         int stackIn_377_2;
         int stackIn_377_3;
@@ -4185,12 +4185,12 @@ final class GameplayController {
         int stackIn_459_1 = 0;
         int stackIn_481_0 = 0;
         int stackIn_481_1 = 0;
-        fh stackIn_500_0;
+        BinaryBitmapFont stackIn_500_0;
         String stackIn_500_1;
         int stackIn_500_2;
         int stackIn_500_3;
         int stackIn_501_4 = 0;
-        fh stackIn_505_0;
+        BinaryBitmapFont stackIn_505_0;
         String stackIn_505_1;
         int stackIn_505_2;
         int stackIn_505_3;
@@ -4292,7 +4292,7 @@ final class GameplayController {
           var6 = di.field_g;
           if (var6 == 0) {
             var4 = 0;
-            stackIn_14_0 = (qh.field_Yb < 8) ? 0 : 1;
+            stackIn_14_0 = (IconTextComponent.field_Yb < 8) ? 0 : 1;
             var5 = stackIn_14_0;
             var3_int = 0;
             decompiledFrameRemainder4 = (var40 != 0);
@@ -4303,15 +4303,15 @@ final class GameplayController {
             }
           }
           if (decompiledFrameRemainder4) {
-            stackIn_21_0 = (qh.field_Yb < 5) ? 0 : 1;
+            stackIn_21_0 = (IconTextComponent.field_Yb < 5) ? 0 : 1;
             var5 = stackIn_21_0;
-            if (qh.field_Yb == 3 &&
-              (31 & a.field_c) > 24 &&
+            if (IconTextComponent.field_Yb == 3 &&
+              (31 & MouseWheelInput.field_c) > 24 &&
               this.controlledSentinel.field_ub >= 0) {
               var4 = 0;
             }
           }
-          if (!sj.a(true) &&
+          if (!MusicCrossfadeStream.a(true) &&
             CipherPacketBuffer.field_w <= 0) {
             stackIn_36_0 = 0;
           } else {
@@ -4353,21 +4353,21 @@ final class GameplayController {
             var16_ref_String = ri.field_d;
             if (0 < this.world.playerNames.length &&
               null != this.world.playerNames[0]) {
-              var16_ref_String = db.a(FunOrbClient.field_o, -30, new String[]{this.world.playerNames[0]});
+              var16_ref_String = SocketConnector.a(FunOrbClient.field_o, -30, new String[]{this.world.playerNames[0]});
             }
             var17 = this.field_M[0];
             if (var17 == 7196927) {
               var17 = 26248;
             }
-            pl.field_U.a(var16_ref_String, 320, 405, var17, -1);
+            pl.field_U.drawCentered(var16_ref_String, 320, 405, var17, -1);
           }
           var15 = var10 - var9 - var11;
           if (this.controlledSentinel != null) {
             var16 = 6;
             var17 = 427;
-            fk.field_d.b(Sentinel.field_I, var16, var17 + 9, 1021128, -1);
-            var16 = var16 + (2 + fk.field_d.c(Sentinel.field_I));
-            qg.field_f[3].a(var16, var17);
+            BoundedUrlRequest.field_d.drawLeft(Sentinel.field_I, var16, var17 + 9, 1021128, -1);
+            var16 = var16 + (2 + BoundedUrlRequest.field_d.textWidth(Sentinel.field_I));
+            MarkerSliderPainter.field_f[3].a(var16, var17);
             var17 += 22;
             var16 = 6;
             var18 = 1021128;
@@ -4375,26 +4375,26 @@ final class GameplayController {
               this.controlledSentinel.field_Dc > 0) {
               var18 = 8421504;
             }
-            fk.field_d.b(l.field_f, var16, 9 + var17, var18, -1);
+            BoundedUrlRequest.field_d.drawLeft(NodeHashTableIterator.field_f, var16, 9 + var17, var18, -1);
             var17 += 13;
             if (dm.field_c) {
-              qg.field_f[5].a(var16, var17);
+              MarkerSliderPainter.field_f[5].a(var16, var17);
               var16 += 14;
               if (var40 != 0) {
-                qg.field_f[4].a(var16, var17);
+                MarkerSliderPainter.field_f[4].a(var16, var17);
                 var16 += 13;
               }
             } else {
-              qg.field_f[4].a(var16, var17);
+              MarkerSliderPainter.field_f[4].a(var16, var17);
               var16 += 13;
             }
-            fk.field_d.b(fg.field_Pb, var16, 9 + var17, 10526880, -1);
-            var16 = var16 + (fk.field_d.c(fg.field_Pb) + 2);
-            bc.field_wb.f(var16, var17);
-            var16 = var16 + (2 + bc.field_wb.field_A);
-            fk.field_d.b("+", var16, 9 + var17, 10526880, -1);
-            var16 = var16 + fk.field_d.c("+");
-            qg.field_f[3].a(var16, var17);
+            BoundedUrlRequest.field_d.drawLeft(RegistrationRequestDialog.field_Pb, var16, 9 + var17, 10526880, -1);
+            var16 = var16 + (BoundedUrlRequest.field_d.textWidth(RegistrationRequestDialog.field_Pb) + 2);
+            ValidatedTextWidget.field_wb.f(var16, var17);
+            var16 = var16 + (2 + ValidatedTextWidget.field_wb.field_A);
+            BoundedUrlRequest.field_d.drawLeft("+", var16, 9 + var17, 10526880, -1);
+            var16 = var16 + BoundedUrlRequest.field_d.textWidth("+");
+            MarkerSliderPainter.field_f[3].a(var16, var17);
           }
           if (this.controlledSentinel != null) {
             var14 = -var8 + (640 - var7);
@@ -4419,9 +4419,9 @@ final class GameplayController {
             var13 = 383;
             var18 = 190;
             var19 = -var18 + 640;
-            if (!vl.field_v &&
+            if (!TextHotspotRegion.field_v &&
               var5 != 0) {
-              SoftwareRaster.a(var18, 0, var19, 480);
+              SoftwareRaster.setClip(var18, 0, var19, 480);
               var20 = -5;
               var21 = 6;
               var22 = 30;
@@ -4462,17 +4462,17 @@ final class GameplayController {
                     } else {
                       if (var27 == 0) {
                         if (eh.field_b[ed.field_f] > 0) {
-                          hb.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096);
-                          if (gl.field_p > 0) {
-                            var30 = 40 * gl.field_p / (50 * eh.field_b[ed.field_f]);
+                          IterableDualNodeDeque.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096);
+                          if (NanoTickClock.field_p > 0) {
+                            var30 = 40 * NanoTickClock.field_p / (50 * eh.field_b[ed.field_f]);
                             SoftwareRaster.c(var16 - 20, -20 + var17, 40, var30, 0, 192);
-                            if (si.field_t == 0) {
+                            if (CachedTextLayout.field_t == 0) {
                               SoftwareRaster.c(-20 + var16, var17 - 20 + var30, 40, 40 - var30, 0, 128);
                             }
                           }
-                          fk.field_d.c(Integer.toString(si.field_t), 20 + var16, 17 + var17, 16777215, 0);
+                          BoundedUrlRequest.field_d.c(Integer.toString(CachedTextLayout.field_t), 20 + var16, 17 + var17, 16777215, 0);
                         } else {
-                          hb.field_j[var29 + this.field_M[3]].d(var16, var17, 0, 4096);
+                          IterableDualNodeDeque.field_j[var29 + this.field_M[3]].d(var16, var17, 0, 4096);
                           if (this.controlledSentinel.field_ub < 0 &&
                             c.a((byte) -90, var29)) {
                             SoftwareRaster.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
@@ -4486,24 +4486,24 @@ final class GameplayController {
                           var18 < oh.field_f &&
                           var19 > oh.field_f &&
                           oh.field_f >= -15 + var16 &&
-                          (var17 - 15) <= pi.field_c &&
+                          (var17 - 15) <= DelegatingCanvas.field_c &&
                           oh.field_f <= (var16 + 15) &&
-                          var17 + 15 >= pi.field_c) {
+                          var17 + 15 >= DelegatingCanvas.field_c) {
                           this.field_t = var28;
                           SoftwareRaster.a(var16 << 4, var17 << 4, 320, pe.field_o.length - 1, pe.field_o);
                         }
                         if (eh.field_b[ed.field_f] > 0) {
-                          hb.field_j[var29 + this.field_M[3]].d(var16, var17, 0, var22 * 4096 / 40);
-                          if (gl.field_p > 0) {
-                            var30 = var22 * gl.field_p / (50 * eh.field_b[ed.field_f]);
+                          IterableDualNodeDeque.field_j[var29 + this.field_M[3]].d(var16, var17, 0, var22 * 4096 / 40);
+                          if (NanoTickClock.field_p > 0) {
+                            var30 = var22 * NanoTickClock.field_p / (50 * eh.field_b[ed.field_f]);
                             SoftwareRaster.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var30, 0, 192);
-                            if (0 == si.field_t) {
+                            if (0 == CachedTextLayout.field_t) {
                               SoftwareRaster.c(-(var22 / 2) + var16, var30 + var17 - var22 / 2, var22, -var30 + var22, 0, 128);
                             }
                           }
-                          fk.field_d.c(Integer.toString(si.field_t), 15 + var16, 14 + var17, 16777215, 0);
+                          BoundedUrlRequest.field_d.c(Integer.toString(CachedTextLayout.field_t), 15 + var16, 14 + var17, 16777215, 0);
                         } else {
-                          hb.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096 * var22 / 40);
+                          IterableDualNodeDeque.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096 * var22 / 40);
                           if (!(this.controlledSentinel.field_ub < 0) ||
                             !c.a((byte) -101, var29)) {
                             if (!(this.controlledSentinel.charge >= 1) &&
@@ -4522,7 +4522,7 @@ final class GameplayController {
                             SoftwareRaster.d(var16 + (-var30 - 21), var17 - var30, var30 * 2 + 1, 10066329);
                             var30++;
                           }
-                          fk.field_d.a(ob.field_w, -12 + var16 - var22 / 2, 4 + var17, 0, -1);
+                          BoundedUrlRequest.field_d.drawCentered(ob.field_w, -12 + var16 - var22 / 2, 4 + var17, 0, -1);
                         }
                         decompiledFrameRemainder11 = false;
                       }
@@ -4532,7 +4532,7 @@ final class GameplayController {
                           SoftwareRaster.d(var16 + (var30 + 20), var17 - var30, 2 * var30 + 1, 10066329);
                           var30++;
                         }
-                        fk.field_d.a(gf.field_e, var22 / 2 + (var16 + 12), var17 + 4, 0, -1);
+                        BoundedUrlRequest.field_d.drawCentered(gf.field_e, var22 / 2 + (var16 + 12), var17 + 4, 0, -1);
                       }
                     }
                   }
@@ -4615,8 +4615,8 @@ final class GameplayController {
                     stackIn_276_0 = 0;
                   }
                   var29 = stackIn_276_0;
-                  stackIn_279_0 = fk.field_d;
-                  stackIn_279_1 = bl.field_o;
+                  stackIn_279_0 = BoundedUrlRequest.field_d;
+                  stackIn_279_1 = LinkButtonPainter.field_o;
                   stackIn_279_2 = var16;
                   stackIn_279_3 = -15 + var17;
                   if (var29 == 0) {
@@ -4624,7 +4624,7 @@ final class GameplayController {
                   } else {
                     stackIn_280_4 = 13158;
                   }
-                  ((fh) (Object) stackIn_279_0).a(stackIn_279_1, stackIn_279_2, stackIn_279_3, stackIn_280_4, 0);
+                  ((BinaryBitmapFont) (Object) stackIn_279_0).drawCentered(stackIn_279_1, stackIn_279_2, stackIn_279_3, stackIn_280_4, 0);
                   stackIn_284_0 = (var29 != 0) ? 6710886 : 10724259;
                   if (var29 == 0) {
                     stackIn_288_1 = 0;
@@ -4637,7 +4637,7 @@ final class GameplayController {
                   } else {
                     stackIn_292_3 = 4473924;
                   }
-                  kb.a(stackIn_284_0, stackIn_288_1, stackIn_291_2, stackIn_292_3, true, IntrusiveNode.field_n, fk.field_d, var16);
+                  kb.a(stackIn_284_0, stackIn_288_1, stackIn_291_2, stackIn_292_3, true, IntrusiveNode.field_n, BoundedUrlRequest.field_d, var16);
                   var16 = var16 - var28;
                 }
                 if (this.controlledSentinel.hasModuleType(15, -27)) {
@@ -4649,7 +4649,7 @@ final class GameplayController {
                     stackIn_303_0 = 1;
                   }
                   var29 = stackIn_303_0;
-                  stackIn_306_0 = fk.field_d;
+                  stackIn_306_0 = BoundedUrlRequest.field_d;
                   stackIn_306_1 = sf.field_v;
                   stackIn_306_2 = var16;
                   stackIn_306_3 = -15 + var17;
@@ -4658,7 +4658,7 @@ final class GameplayController {
                   } else {
                     stackIn_307_4 = 13158;
                   }
-                  ((fh) (Object) stackIn_306_0).a(stackIn_306_1, stackIn_306_2, stackIn_306_3, stackIn_307_4, 0);
+                  ((BinaryBitmapFont) (Object) stackIn_306_0).drawCentered(stackIn_306_1, stackIn_306_2, stackIn_306_3, stackIn_307_4, 0);
                   stackIn_311_0 = (var29 == 0) ? 10724259 : 6710886;
                   if (var29 != 0) {
                     stackIn_315_1 = 2236962;
@@ -4671,12 +4671,12 @@ final class GameplayController {
                   } else {
                     stackIn_319_3 = 8158332;
                   }
-                  kb.a(stackIn_311_0, stackIn_315_1, stackIn_318_2, stackIn_319_3, true, dc.field_d, fk.field_d, var16);
+                  kb.a(stackIn_311_0, stackIn_315_1, stackIn_318_2, stackIn_319_3, true, dc.field_d, BoundedUrlRequest.field_d, var16);
                   var16 = var16 - var28;
                 }
                 if (this.controlledSentinel.hasModuleType(16, -27)) {
                   if (Math.abs(oh.field_f - var16) < 16 &&
-                    Math.abs(-var17 + pi.field_c + 1) < 17 &&
+                    Math.abs(-var17 + DelegatingCanvas.field_c + 1) < 17 &&
                     this.controlledSentinel.field_Vb != null) {
                     NodeIterator.field_k = true;
                     if (var40 != 0) {
@@ -4693,11 +4693,11 @@ final class GameplayController {
                     stackIn_342_0 = 0;
                   }
                   var29 = stackIn_342_0;
-                  var30_ref_String = sn.field_a;
+                  var30_ref_String = BoundedRandomAccessFile.field_a;
                   if (NodeIterator.field_k) {
-                    var30_ref_String = id.field_Zb;
+                    var30_ref_String = IconLabelControl.field_Zb;
                   }
-                  stackIn_347_0 = fk.field_d;
+                  stackIn_347_0 = BoundedUrlRequest.field_d;
                   stackIn_347_1 = se.field_d;
                   stackIn_347_2 = var16;
                   stackIn_347_3 = -15 + var17;
@@ -4706,7 +4706,7 @@ final class GameplayController {
                   } else {
                     stackIn_348_4 = 30651;
                   }
-                  ((fh) (Object) stackIn_347_0).a(stackIn_347_1, stackIn_347_2, stackIn_347_3, stackIn_348_4, 0);
+                  ((BinaryBitmapFont) (Object) stackIn_347_0).drawCentered(stackIn_347_1, stackIn_347_2, stackIn_347_3, stackIn_348_4, 0);
                   stackIn_352_0 = (var29 == 0) ? 10724259 : 6710886;
                   if (var29 != 0) {
                     stackIn_356_1 = 2236962;
@@ -4719,7 +4719,7 @@ final class GameplayController {
                   } else {
                     stackIn_360_3 = 8158332;
                   }
-                  kb.a(stackIn_352_0, stackIn_356_1, stackIn_359_2, stackIn_360_3, true, var30_ref_String, fk.field_d, var16);
+                  kb.a(stackIn_352_0, stackIn_356_1, stackIn_359_2, stackIn_360_3, true, var30_ref_String, BoundedUrlRequest.field_d, var16);
                   var16 = var16 - var28;
                 }
                 if (this.controlledSentinel.field_fb != 0) {
@@ -4733,9 +4733,9 @@ final class GameplayController {
                     stackIn_374_0 = 1;
                   }
                   var29 = stackIn_374_0;
-                  hb.field_j[this.controlledSentinel.field_fb + 19].b(var16 - 10, var17 - 14);
-                  stackIn_377_0 = fk.field_d;
-                  stackIn_377_1 = fk.field_l;
+                  IterableDualNodeDeque.field_j[this.controlledSentinel.field_fb + 19].drawHalfSize(var16 - 10, var17 - 14);
+                  stackIn_377_0 = BoundedUrlRequest.field_d;
+                  stackIn_377_1 = BoundedUrlRequest.field_l;
                   stackIn_377_2 = var16;
                   stackIn_377_3 = -15 + var17;
                   if (var29 != 0) {
@@ -4743,7 +4743,7 @@ final class GameplayController {
                   } else {
                     stackIn_378_4 = 30651;
                   }
-                  ((fh) (Object) stackIn_377_0).a(stackIn_377_1, stackIn_377_2, stackIn_377_3, stackIn_378_4, 0);
+                  ((BinaryBitmapFont) (Object) stackIn_377_0).drawCentered(stackIn_377_1, stackIn_377_2, stackIn_377_3, stackIn_378_4, 0);
                   stackIn_382_0 = (var29 == 0) ? 10724259 : 6710886;
                   if (var29 != 0) {
                     stackIn_386_1 = 2236962;
@@ -4756,7 +4756,7 @@ final class GameplayController {
                   } else {
                     stackIn_390_3 = 4473924;
                   }
-                  kb.a(stackIn_382_0, stackIn_386_1, stackIn_389_2, stackIn_390_3, true, jf.field_eb, fk.field_d, var16);
+                  kb.a(stackIn_382_0, stackIn_386_1, stackIn_389_2, stackIn_390_3, true, EditableTextWidget.field_eb, BoundedUrlRequest.field_d, var16);
                 }
               }
             }
@@ -4769,7 +4769,7 @@ final class GameplayController {
               var13 = 395;
               var20 = 10;
               var21 = 120;
-              var22 = Math.max(fk.field_d.c(tj.field_d), fk.field_d.c(vg.field_e));
+              var22 = Math.max(BoundedUrlRequest.field_d.textWidth(tj.field_d), BoundedUrlRequest.field_d.textWidth(ProxyAuthenticationException.field_e));
               var23 = var22 + (var20 + 10);
             }
             boolean decompiledFrameRemainder2 = true;
@@ -4778,7 +4778,7 @@ final class GameplayController {
             regionExit1: {
               boolean decompiledFrameCompleted3 = true;
               if (var3_int != 0) {
-                fk.field_d.b(tj.field_d, var9 + var20, var13 + 18, 52224, -1);
+                BoundedUrlRequest.field_d.drawLeft(tj.field_d, var9 + var20, var13 + 18, 52224, -1);
                 var24 = Math.max(this.controlledSentinel.field_Q, this.controlledSentinel.maximumArmour) + 100;
                 var25 = 12;
                 var26 = var24 / 100;
@@ -4790,9 +4790,9 @@ final class GameplayController {
                 if (var25 == 0) {
                   var25 = 1;
                 }
-                SoftwareRaster.a(var23, var27, var25 * this.controlledSentinel.maximumArmour / 100 + var23, var27 + var28);
+                SoftwareRaster.setClip(var23, var27, var25 * this.controlledSentinel.maximumArmour / 100 + var23, var27 + var28);
                 SoftwareRaster.a(var23, var27, var25 * var26, var28, 0);
-                SoftwareRaster.a(var23, var27, var25 * this.controlledSentinel.armour / 100 + var23, var28 + var27);
+                SoftwareRaster.setClip(var23, var27, var25 * this.controlledSentinel.armour / 100 + var23, var28 + var27);
                 var29 = 8;
                 var30 = 0;
                 scanLoop2: while (true) {
@@ -4854,10 +4854,10 @@ final class GameplayController {
                 }
                 var30 = 8 + var27;
                 var31 = var28 - 8;
-                SoftwareRaster.a(var23, var30, var25 * this.controlledSentinel.field_Q / 100 + var23, var30 + var31);
+                SoftwareRaster.setClip(var23, var30, var25 * this.controlledSentinel.field_Q / 100 + var23, var30 + var31);
                 SoftwareRaster.c(var23, var30, this.controlledSentinel.field_Q * var25 / 100, 0, 192);
                 SoftwareRaster.a(var23, var30, var26 * var25, var31, 0);
-                SoftwareRaster.a(var23, var30, var25 * this.controlledSentinel.field_S / 100 + var23, var31 + var30);
+                SoftwareRaster.setClip(var23, var30, var25 * this.controlledSentinel.field_S / 100 + var23, var31 + var30);
                 var32 = 0;
                 while (var26 >= var32) {
                   var33 = var25 * var32 + var23;
@@ -4909,7 +4909,7 @@ final class GameplayController {
             }
             if (((decompiledFrameCompleted4) && (decompiledFrameCompleted2)) &&
               (decompiledFrameRemainder2 = (var4 != 0))) {
-              fk.field_d.c(vg.field_e, 630 - var9, 18 + var13, 16736304, -1);
+              BoundedUrlRequest.field_d.c(ProxyAuthenticationException.field_e, 630 - var9, 18 + var13, 16736304, -1);
               var24 = -var22 + 620;
               var25 = 100 * this.controlledSentinel.maximumCharge;
               var26 = this.controlledSentinel.field_ub / 30 + this.controlledSentinel.charge * 100;
@@ -4926,9 +4926,9 @@ final class GameplayController {
               if (stackIn_459_0 > stackIn_459_1) {
                 var28 = var21 / var29;
               }
-              SoftwareRaster.a(-(var25 * var28 / 100) + var24, var30, var24, var30 + var31);
+              SoftwareRaster.setClip(-(var25 * var28 / 100) + var24, var30, var24, var30 + var31);
               SoftwareRaster.a(-(var28 * var29) + var24, var30, var29 * var28, var31, 0);
-              SoftwareRaster.a(var24 - var26 * var28 / 100, var30, var24, var30 + var31);
+              SoftwareRaster.setClip(var24 - var26 * var28 / 100, var30, var24, var30 + var31);
               var33Lifetime2 = 0;
               var34Lifetime2 = 0;
               var35 = 0;
@@ -5012,33 +5012,33 @@ final class GameplayController {
                   }
                   var36 = -(var28 * this.controlledSentinel.maximumCharge / 2) + var24;
                   var37 = -this.controlledSentinel.field_ub / (100 + 50 * this.controlledSentinel.field_wb);
-                  stackIn_500_0 = fk.field_d;
+                  stackIn_500_0 = BoundedUrlRequest.field_d;
                   stackIn_500_1 = hk.field_pc;
                   stackIn_500_2 = var36;
                   stackIn_500_3 = var30 + 6;
-                  if (a.field_c % 50 < 25) {
+                  if (MouseWheelInput.field_c % 50 < 25) {
                     stackIn_501_4 = 16777215;
                   } else {
                     stackIn_501_4 = 6316128;
                   }
-                  ((fh) (Object) stackIn_500_0).a(stackIn_500_1, stackIn_500_2, stackIn_500_3, stackIn_501_4, 0);
-                  fk.field_d.a(db.a(f.field_E, -62, new String[]{Integer.toString(var37)}), var36, 10 + var30 + 6, 16777215, 0);
+                  ((BinaryBitmapFont) (Object) stackIn_500_0).drawCentered(stackIn_500_1, stackIn_500_2, stackIn_500_3, stackIn_501_4, 0);
+                  BoundedUrlRequest.field_d.drawCentered(SocketConnector.a(SocketJs5Transport.field_E, -62, new String[]{Integer.toString(var37)}), var36, 10 + var30 + 6, 16777215, 0);
                   if (var40 == 0) {
                     break;
                   }
                 }
                 var36 = var24 - var28 * this.controlledSentinel.maximumCharge / 2;
-                stackIn_505_0 = fk.field_d;
-                stackIn_505_1 = r.field_i;
+                stackIn_505_0 = BoundedUrlRequest.field_d;
+                stackIn_505_1 = ProxySocketConnector.field_i;
                 stackIn_505_2 = var36;
                 stackIn_505_3 = 6 + var30;
-                if (25 > a.field_c % 50) {
+                if (25 > MouseWheelInput.field_c % 50) {
                   stackIn_506_4 = 16777215;
                 } else {
                   stackIn_506_4 = 6316128;
                 }
-                ((fh) (Object) stackIn_505_0).a(stackIn_505_1, stackIn_505_2, stackIn_505_3, stackIn_506_4, 0);
-                fk.field_d.a(db.a(f.field_E, -61, new String[]{Integer.toString(this.controlledSentinel.field_mc / 50)}), var36, 6 + (var30 + 10), 16777215, 0);
+                ((BinaryBitmapFont) (Object) stackIn_505_0).drawCentered(stackIn_505_1, stackIn_505_2, stackIn_505_3, stackIn_506_4, 0);
+                BoundedUrlRequest.field_d.drawCentered(SocketConnector.a(SocketJs5Transport.field_E, -61, new String[]{Integer.toString(this.controlledSentinel.field_mc / 50)}), var36, 6 + (var30 + 10), 16777215, 0);
                 break;
               }
             }
@@ -5065,27 +5065,27 @@ final class GameplayController {
             this.controlledSentinel.a(var24, false, var23, (byte) 45);
             if ((-10 + var23) <= oh.field_f &&
               10 + var23 > oh.field_f &&
-              pi.field_c >= -30 + var24 &&
-              pi.field_c < var24) {
+              DelegatingCanvas.field_c >= -30 + var24 &&
+              DelegatingCanvas.field_c < var24) {
               if (this.controlledSentinel.activeModuleType < 35) {
-                stackIn_536_0 = rj.field_m[this.controlledSentinel.activeModuleType];
+                stackIn_536_0 = BufferedRandomAccessFile.field_m[this.controlledSentinel.activeModuleType];
               } else {
-                stackIn_536_0 = qj.field_v[this.controlledSentinel.activeModuleType - 35];
+                stackIn_536_0 = SentinelAnimationEditor.field_v[this.controlledSentinel.activeModuleType - 35];
               }
               var25_ref_String = stackIn_536_0;
-              var26 = 4 + fk.field_d.c(var25_ref_String);
-              var27 = fk.field_d.field_F + fk.field_d.field_G;
+              var26 = 4 + BoundedUrlRequest.field_d.textWidth(var25_ref_String);
+              var27 = BoundedUrlRequest.field_d.field_F + BoundedUrlRequest.field_d.field_G;
               var28 = Math.max(0, var23 - var26 / 2);
               var29 = -var27 + (var24 - 30);
               SoftwareRaster.c(var28, var29, var26, var27, 0, 128);
-              fk.field_d.b(var25_ref_String, var28 + 2, var29 + 10, 16777215, 0);
+              BoundedUrlRequest.field_d.drawLeft(var25_ref_String, var28 + 2, var29 + 10, 16777215, 0);
             }
           }
           boolean decompiledFrameCompleted10 = true;
           boolean decompiledFrameCompleted9 = true;
           boolean decompiledFrameRemainder0 = true;
           var23 = 4;
-          SoftwareRaster.a(var16 + var23, var21, var17 + var16 - var23 + 3, var20 + var21);
+          SoftwareRaster.setClip(var16 + var23, var21, var17 + var16 - var23 + 3, var20 + var21);
           var24 = this.world.terrain.getProfileLength(-121);
           var25_ref_hd = this.world.terrain;
           if (this.world.terrain.getTerrainType(param1 - 1956917895) != 4) {
@@ -5127,9 +5127,9 @@ final class GameplayController {
             var26 = 0;
             while (!(var26 >= var25_ref_hd.field_c)) {
               var27 = var17 * var25_ref_hd.spawnPositions[var26] / var24 + var16;
-              var15 = sb.field_W.field_B >> 4;
+              var15 = Checkbox.field_W.field_B >> 4;
               var28 = -(var25_ref_hd.field_h[var26] / var18) + var22;
-              var14 = var24 * sb.field_W.field_z / var17 >> 11;
+              var14 = var24 * Checkbox.field_W.field_z / var17 >> 11;
               stackIn_702_0 = ~var26;
               stackIn_702_1 = -1;
               if (var40 != 0) {
@@ -5137,15 +5137,15 @@ final class GameplayController {
                 break;
               }
               if (stackIn_702_0 == stackIn_702_1) {
-                sb.field_W.c(-(var14 / 2) + var27, var28, var14, var15);
+                Checkbox.field_W.drawScaled(-(var14 / 2) + var27, var28, var14, var15);
               } else if (var26 == 1) {
-                hb.field_e.c(var27 - var14 / 2, var28, var14, var15);
+                IterableDualNodeDeque.field_e.drawScaled(var27 - var14 / 2, var28, var14, var15);
               } else {
                 if (var25_ref_hd.field_j[var26] != -1) {
-                  var29_ref_wk = kc.field_x[1][var25_ref_hd.field_j[var26]];
+                  var29_ref_wk = DelayedServerPacket.field_x[1][var25_ref_hd.field_j[var26]];
                   var15 = var29_ref_wk.field_B >> 5;
                   var14 = var24 * var29_ref_wk.field_z / var17 >> 13;
-                  var29_ref_wk.c(-(var14 / 2) + var27, var28, var14, var15);
+                  var29_ref_wk.drawScaled(-(var14 / 2) + var27, var28, var14, var15);
                 }
               }
               var26++;
@@ -5163,10 +5163,10 @@ final class GameplayController {
                 boolean decompiledFrameRemainder10 = true;
                 if (stackIn_649_0 != var26_ref_mb &&
                   !var26_ref_mb.field_Hb && (di.field_g != 0 ||
-                  qh.field_Yb != 4 ||
-                  !((16 & a.field_c) > 0)) && (1 != di.field_g ||
-                  11 != qh.field_Yb ||
-                  !((a.field_c & 16) > 0)) && 250 > var26_ref_mb.field_F && (!var26_ref_mb.field_pc ||
+                  IconTextComponent.field_Yb != 4 ||
+                  !((16 & MouseWheelInput.field_c) > 0)) && (1 != di.field_g ||
+                  11 != IconTextComponent.field_Yb ||
+                  !((MouseWheelInput.field_c & 16) > 0)) && 250 > var26_ref_mb.field_F && (!var26_ref_mb.field_pc ||
                   var26_ref_mb.field_Nb == 7)) {
                   var27 = var26_ref_mb.getTeamColour((byte) -125);
                   if (var27 == PartInstruction.field_t[0]) {
@@ -5342,16 +5342,16 @@ final class GameplayController {
           var30 = Math.max(var21 + 12, var28 + 10);
           boolean decompiledSharedTail0 = !(!dm.field_c);
           if (!decompiledSharedTail0) {
-            fk.field_d.a(qe.field_f, var26 + 10 - 1, var30, 0, 0);
-            fk.field_d.a(ai.field_r, 9 + var26, 6 + var30, 0, 0);
-            fk.field_d.a(qe.field_f, var26 + 10, var30 - 1, 0, 0);
-            fk.field_d.a(ai.field_r, 10 + var26, 5 + var30, 0, 0);
-            fk.field_d.a(qe.field_f, 10 + var26, var30, this.field_M[0], -1);
-            fk.field_d.a(ai.field_r, var26 + 10, var30 + 6, this.field_M[0], -1);
+            BoundedUrlRequest.field_d.drawCentered(qe.field_f, var26 + 10 - 1, var30, 0, 0);
+            BoundedUrlRequest.field_d.drawCentered(ai.field_r, 9 + var26, 6 + var30, 0, 0);
+            BoundedUrlRequest.field_d.drawCentered(qe.field_f, var26 + 10, var30 - 1, 0, 0);
+            BoundedUrlRequest.field_d.drawCentered(ai.field_r, 10 + var26, 5 + var30, 0, 0);
+            BoundedUrlRequest.field_d.drawCentered(qe.field_f, 10 + var26, var30, this.field_M[0], -1);
+            BoundedUrlRequest.field_d.drawCentered(ai.field_r, var26 + 10, var30 + 6, this.field_M[0], -1);
             decompiledSharedTail0 = (var40 != 0);
           }
           if (decompiledSharedTail0) {
-            fk.field_d.a("<img=26>", 10 + var26, var30, this.field_M[0], -1);
+            BoundedUrlRequest.field_d.drawCentered("<img=26>", 10 + var26, var30, this.field_M[0], -1);
           }
           if (di.field_g == 4) {
             this.d((byte) -86);
@@ -5379,7 +5379,7 @@ final class GameplayController {
             var25Lifetime1 = var24 - var23;
             var26 = 360;
             if (this.world.field_c != 1) {
-              var27 = vk.field_h[this.world.field_c] * (var24 - var23) / 500;
+              var27 = Js5Transport.field_h[this.world.field_c] * (var24 - var23) / 500;
               SoftwareRaster.e(var23, var26 + 2, -var27 + var24 - var23, 8, 2236962, 8772);
               SoftwareRaster.e(var23, 8 + var26 + 2, var24 - var23 - var27, 8, 68, 0);
               SoftwareRaster.e(var24 - var27, var26 + 2, var27, 8, 2236962, 16729156);
@@ -5425,14 +5425,14 @@ final class GameplayController {
                   if (var38Lifetime1 >= 0 &&
                     var38Lifetime1 < 30) {
                     if (var28 == 0) {
-                      hb.field_j[var38Lifetime1 + this.field_M[3]].b(var23 + var32Lifetime1, var34Lifetime1);
+                      IterableDualNodeDeque.field_j[var38Lifetime1 + this.field_M[3]].drawHalfSize(var23 + var32Lifetime1, var34Lifetime1);
                     } else {
                       var28 = 0;
                       var39 = var32Lifetime1 - (-var23 + 20);
                       if (var39 < var23) {
-                        hb.field_j[var38Lifetime1 + this.field_M[3]].a(var23, var34Lifetime1 - 20);
+                        IterableDualNodeDeque.field_j[var38Lifetime1 + this.field_M[3]].a(var23, var34Lifetime1 - 20);
                       } else {
-                        hb.field_j[this.field_M[3] + var38Lifetime1].b(var23 + var32Lifetime1, var34Lifetime1);
+                        IterableDualNodeDeque.field_j[this.field_M[3] + var38Lifetime1].drawHalfSize(var23 + var32Lifetime1, var34Lifetime1);
                       }
                     }
                   }
@@ -5442,14 +5442,14 @@ final class GameplayController {
             }
           }
           if (decompiledFrameCompleted0) {
-            if (vl.field_v) {
+            if (TextHotspotRegion.field_v) {
               return;
             }
             var23 = 352;
             var24 = 6;
             var25Lifetime1Lifetime1 = 10;
             var26 = 0;
-            fk.field_d.a(bf.field_Cb, (int[]) null);
+            BoundedUrlRequest.field_d.a(LoginDialog.field_Cb, (int[]) null);
             var27 = 0;
             while (true) {
               stackIn_780_0Lifetime1 = ~var27;
@@ -5460,7 +5460,7 @@ final class GameplayController {
               if (var40 != 0) {
                 return;
               }
-              if (null == ke.field_b[var27] &&
+              if (null == WidgetStyleLayer.field_b[var27] &&
                 var40 == 0) {
                 break;
               }
@@ -5471,18 +5471,18 @@ final class GameplayController {
               }
               var28 = var28 * (-var27 + 6) / 6;
               var29 = CachedArchiveProvider.field_g[var27];
-              var30 = 6 + fk.field_d.c(ke.field_b[var27]);
-              SoftwareRaster.c(-3 + var24, var23 - fk.field_d.field_G, var30, fk.field_d.field_G, 0, var28 * 2 / 3);
+              var30 = 6 + BoundedUrlRequest.field_d.textWidth(WidgetStyleLayer.field_b[var27]);
+              SoftwareRaster.c(-3 + var24, var23 - BoundedUrlRequest.field_d.field_G, var30, BoundedUrlRequest.field_d.field_G, 0, var28 * 2 / 3);
               if (var30 > var26) {
                 SoftwareRaster.c(var24 - (3 - var26), var23, var30 - var26, 5, 0, 2 * var28 / 3);
               }
               var26 = var30;
-              fk.field_d.a(ke.field_b[var27], var24, var23, var29, 0, var28);
+              BoundedUrlRequest.field_d.drawLeftAlpha(WidgetStyleLayer.field_b[var27], var24, var23, var29, 0, var28);
               var23 = var23 - var25Lifetime1Lifetime1;
               var27++;
             }
           }
-          fk.field_d.a(NodeIterator.field_c, bb.field_X);
+          BoundedUrlRequest.field_d.a(NodeIterator.field_c, ModalPanel.field_X);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5556,7 +5556,7 @@ final class GameplayController {
           }
           var6 = this.field_P;
           var7 = this.field_E;
-          SoftwareRaster.a(0, 0, 640, 400);
+          SoftwareRaster.setClip(0, 0, 640, 400);
           if (param3 >= -87) {
             stackIn_7_0 = 92;
             return stackIn_7_0;
@@ -5571,7 +5571,7 @@ final class GameplayController {
           var10 = stackIn_14_0;
           if (param0 &&
             var10 != 0) {
-            var11_ref_wk = bc.field_rb[this.world.terrain.getTerrainType(107)];
+            var11_ref_wk = ValidatedTextWidget.field_rb[this.world.terrain.getTerrainType(107)];
             var12 = 128;
             var13 = 1 + var8;
             if (var13 > 400) {
@@ -5594,23 +5594,23 @@ final class GameplayController {
                 var17 = 1125 + var7;
               }
               if (var16 < var17) {
-                SoftwareRaster.a(var14, -(var18 >> 4) + 400, 1 + var14, -(var16 >> 4) + 400);
+                SoftwareRaster.setClip(var14, -(var18 >> 4) + 400, 1 + var14, -(var16 >> 4) + 400);
                 SoftwareRaster.f(var14, 400 - (var18 >> 4), 400 - (-var18 + var16 >> 4) + 1, 0, 64);
-                SoftwareRaster.a(var14, 401 - (var17 >> 4), 1 + var14, 400 - (var18 >> 4));
+                SoftwareRaster.setClip(var14, 401 - (var17 >> 4), 1 + var14, 400 - (var18 >> 4));
                 var11_ref_wk.f(-(255 & var15 >> 4) + var14, var8 - 3 * var12);
                 var11_ref_wk.f(-((var15 & 4095) >> 4) + var14, var8 - var12);
-                SoftwareRaster.a(var14, 400 - (var17 >> 4) + 1, 1 + var14, 400 - (var16 >> 4));
-                vi.field_R.d(-(1023 & var15 >> 2) + var14, -(var17 >> 4) + 400, 1024, 16, 128);
+                SoftwareRaster.setClip(var14, 400 - (var17 >> 4) + 1, 1 + var14, 400 - (var16 >> 4));
+                AccountRegistrationPanel.field_R.d(-(1023 & var15 >> 2) + var14, -(var17 >> 4) + 400, 1024, 16, 128);
               }
-              SoftwareRaster.a(var14, 1 - (var16 >> 4) + 400, 1 + var14, var9 + var13);
+              SoftwareRaster.setClip(var14, 1 - (var16 >> 4) + 400, 1 + var14, var9 + var13);
               var11_ref_wk.f(-(255 & var15 >> 4) + var14, var8 - var12 * 3);
               var11_ref_wk.f(var14 - (var15 >> 4 & 255), var8 - var12);
-              vi.field_R.d(var14 - ((var15 & 4095) >> 2), 400 - (var16 >> 4), 1024, 16, 128);
-              SoftwareRaster.a(var14, 400 - (var16 >> 4), var14 + 1, 1 + (400 - (var16 >> 4)));
+              AccountRegistrationPanel.field_R.d(var14 - ((var15 & 4095) >> 2), 400 - (var16 >> 4), 1024, 16, 128);
+              SoftwareRaster.setClip(var14, 400 - (var16 >> 4), var14 + 1, 1 + (400 - (var16 >> 4)));
               var19 = (var16 << 8) % 4096 * 256 / 4096;
-              var11_ref_wk.b(-(255 & var15 >> 4) + var14, -(3 * var12) + var8, var19);
-              var11_ref_wk.b(var14 - ((4095 & var15) >> 4), var8 - var12, var19);
-              vi.field_R.d(-(1023 & var15 >> 2) + var14, -(var16 >> 4) + 400, 1024, 16, var19 * 128 / 256);
+              var11_ref_wk.drawShadedGrayscale(-(255 & var15 >> 4) + var14, -(3 * var12) + var8, var19);
+              var11_ref_wk.drawShadedGrayscale(var14 - ((4095 & var15) >> 4), var8 - var12, var19);
+              AccountRegistrationPanel.field_R.d(-(1023 & var15 >> 2) + var14, -(var16 >> 4) + 400, 1024, 16, var19 * 128 / 256);
               var14++;
             }
             if (decompiledFrameCompleted1) {
@@ -5639,15 +5639,15 @@ final class GameplayController {
               }
             } else {
               if (SentinelCommand.field_o > 0 &&
-                0 != he.field_k) {
+                0 != RasterBuffer.field_k) {
                 var11 = 33023;
                 var12Lifetime1 = Math.min(SentinelCommand.field_o, 256);
-                var13Lifetime1 = (he.field_k >> 8) - (this.field_P >> 4);
+                var13Lifetime1 = (RasterBuffer.field_k >> 8) - (this.field_P >> 4);
                 var14Lifetime1 = 400;
-                if (fk.field_c) {
+                if (BoundedUrlRequest.field_c) {
                   var14Lifetime1 = var14Lifetime1 * var12Lifetime1 / 150;
                   if (SentinelCommand.field_o == 0) {
-                    he.field_k = 0;
+                    RasterBuffer.field_k = 0;
                   }
                   var12Lifetime1 = 150;
                 }
@@ -5671,18 +5671,18 @@ final class GameplayController {
             if ((decompiledFrameCompleted0) &&
               (decompiledFrameRemainder0 = !(SentinelCommand.field_o <= 0))) {
               stackIn_78_0 = -1;
-              stackIn_78_1 = ~ge.field_l;
+              stackIn_78_1 = ~DirectByteStorage.field_l;
             }
             if ((decompiledFrameRemainder0) &&
               (stackIn_78_0 != stackIn_78_1)) {
               var11 = 33023;
               var12Lifetime1 = Math.min(SentinelCommand.field_o, 256);
-              var13Lifetime1Lifetime1 = -(this.field_P >> 4) + (ge.field_l >> 8);
+              var13Lifetime1Lifetime1 = -(this.field_P >> 4) + (DirectByteStorage.field_l >> 8);
               var14Lifetime1Lifetime1 = 400;
-              if (fk.field_c) {
+              if (BoundedUrlRequest.field_c) {
                 var14Lifetime1Lifetime1 = var14Lifetime1Lifetime1 * var12Lifetime1 / 150;
                 if (SentinelCommand.field_o == 0) {
-                  ge.field_l = 0;
+                  DirectByteStorage.field_l = 0;
                 }
                 var12Lifetime1 = 150;
               }
@@ -5808,7 +5808,7 @@ final class GameplayController {
         boolean stackOut_414_0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ld var3 = null;
+        PaletteBitmapFont var3 = null;
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
@@ -5817,7 +5817,7 @@ final class GameplayController {
         String var9_ref_String = null;
         int var9 = 0;
         int var10_int = 0;
-        u var10 = null;
+        CoverageBitmapFont var10 = null;
         int var11 = 0;
         Sentinel[] var12_ref_mb__ = null;
         int var12 = 0;
@@ -5839,7 +5839,7 @@ final class GameplayController {
         int var27 = 0;
         String var28_ref_String = null;
         int var28 = 0;
-        fh var28_ref_fh = null;
+        BinaryBitmapFont var28_ref_fh = null;
         int var29 = 0;
         Sentinel var29_ref_mb = null;
         String var29_ref_String = null;
@@ -5905,41 +5905,41 @@ final class GameplayController {
         try {
           stackIn_5_0 = (di.field_g == -1) ? 0 : 1;
           var2_int = stackIn_5_0;
-          var3 = ql.field_Tb;
+          var3 = SocialListPanel.field_Tb;
           if (null == this.field_W) {
             this.h((byte) -50);
           }
           var4 = 0;
           var5 = CipherPacketBuffer.field_x;
           if (var2_int != 0 &&
-            0 <= nc.field_a &&
+            0 <= WeightedLruCache.field_a &&
             ni.b(122) &&
-            ge.field_j == 0 &&
-            ol.field_Ub == 9) {
+            DirectByteStorage.field_j == 0 &&
+            QuickChatHelpDialog.field_Ub == 9) {
             stackIn_24_0 = 1;
           } else {
             stackIn_24_0 = 0;
           }
           var6 = stackIn_24_0;
           if (var6 != 0) {
-            var5 = ij.field_T;
+            var5 = NameSuggestionsPanel.field_T;
           }
           if ((var6 == 0 || var51 != 0) && (var2_int != 0 &&
-            nc.field_a >= 0)) {
-            var5 = fg.field_Wb;
+            WeightedLruCache.field_a >= 0)) {
+            var5 = RegistrationRequestDialog.field_Wb;
           }
           if (var2_int != 0 &&
-            nc.field_a < 0) {
-            var5 = bf.field_Eb;
+            WeightedLruCache.field_a < 0) {
+            var5 = LoginDialog.field_Eb;
           }
-          var5 = ke.a(42, var5);
-          ic.field_db.f(0, -10);
+          var5 = WidgetStyleLayer.a(42, var5);
+          MidiPcmStream.field_db.f(0, -10);
           if (var5 != null) {
-            ((BitmapFont) ((Object) var3)).a(var5, 320, ((BitmapFont) ((Object) var3)).field_G / 2 + 22, 0, -1);
+            ((BitmapFont) ((Object) var3)).drawCentered(var5, 320, ((BitmapFont) ((Object) var3)).field_G / 2 + 22, 0, -1);
           }
           var7 = 375;
           if (var2_int != 0 &&
-            0 <= nc.field_a &&
+            0 <= WeightedLruCache.field_a &&
             ni.b(53)) {
             var7 = 310;
           }
@@ -5961,14 +5961,14 @@ final class GameplayController {
           var8 = 640;
           if (ed.field_j >= 0 &&
             var2_int == 0) {
-            h.i(-1);
+            DraggableWidget.i(-1);
             var8Lifetime1 = 330;
-            var9_ref_String = ti.field_A[12];
-            var10_int = 10 + pl.field_U.c(var9_ref_String);
+            var9_ref_String = ImageProducerRasterBuffer.field_A[12];
+            var10_int = 10 + pl.field_U.textWidth(var9_ref_String);
             if (var10_int < 140) {
               var10_int = 140;
             }
-            if (nm.a(440, var8Lifetime1, 122, var9_ref_String, 28, var10_int)) {
+            if (EmailAvailabilityValidator.a(440, var8Lifetime1, 122, var9_ref_String, 28, var10_int)) {
               this.field_r = 29;
             }
           }
@@ -5979,7 +5979,7 @@ final class GameplayController {
             } else {
               stackIn_85_1 = 150;
             }
-            if (nm.a(stackIn_81_0, stackIn_85_1, 120, bi.field_c, 28, 160)) {
+            if (EmailAvailabilityValidator.a(stackIn_81_0, stackIn_85_1, 120, bi.field_c, 28, 160)) {
               this.field_r = 30;
             }
           }
@@ -6109,12 +6109,12 @@ final class GameplayController {
             var26 = 0;
             while (2 > var26) {
               var27 = 3;
-              var28_ref_String = db.a(kk.field_f, -85, new String[]{mm.field_d[var26], Integer.toString(this.field_O[var26])});
-              var28_ref_String = ke.a(42, var28_ref_String);
-              var29 = ui.field_U.c(var28_ref_String) + 2 * var27;
+              var28_ref_String = SocketConnector.a(kk.field_f, -85, new String[]{mm.field_d[var26], Integer.toString(this.field_O[var26])});
+              var28_ref_String = WidgetStyleLayer.a(42, var28_ref_String);
+              var29 = AlphaContainer.field_U.textWidth(var28_ref_String) + 2 * var27;
               var30 = -(var29 / 2) + (640 + var26 * 1280) / 4;
               var31 = 60;
-              var32 = ui.field_U.field_U + 2 * var27;
+              var32 = AlphaContainer.field_U.field_U + 2 * var27;
               SoftwareRaster.c(var30, var31, var29, var32, 0, 160);
               var33_int = fj.field_h[var26];
               stackIn_188_0 = ~PartInstruction.field_t[0];
@@ -6126,13 +6126,13 @@ final class GameplayController {
               if (stackIn_188_0 == stackIn_188_1) {
                 var33_int = uj.a(var33_int, 100);
               }
-              ui.field_U.b(var28_ref_String, var27 + var30, -var27 + (var31 + var32), var33_int, 0);
+              AlphaContainer.field_U.drawLeft(var28_ref_String, var27 + var30, -var27 + (var31 + var32), var33_int, 0);
               if (~var24Lifetime2 == ~var26) {
                 var34 = 250;
                 var35 = 100;
                 stackIn_185_0 = (var26 == 1) ? 320 : 0;
                 var36 = stackIn_185_0 + (320 - var34) / 2;
-                td.field_ec.a(var36, var35);
+                ReportAbuseDialog.field_ec.a(var36, var35);
               }
               var26++;
             }
@@ -6166,13 +6166,13 @@ final class GameplayController {
           while (true) {
             if (var28 >= var9) {
               if (null != var14Lifetime1) {
-                var28_ref_fh = ff.field_lb;
-                var29Lifetime1 = ((BitmapFont) ((Object) var28_ref_fh)).c((String) (var14Lifetime1));
+                var28_ref_fh = ValidationHelpWidget.field_lb;
+                var29Lifetime1 = ((BitmapFont) ((Object) var28_ref_fh)).textWidth((String) (var14Lifetime1));
                 var15 = var15 - var29Lifetime1 / 2;
                 var15 = Math.min(var15, 638 - var29Lifetime1);
                 var15 = Math.max(var15, 2);
                 SoftwareRaster.c(-2 + var15, var16 - 2, var29Lifetime1 + 4, 4 + (((BitmapFont) ((Object) var28_ref_fh)).field_F + ((BitmapFont) ((Object) var28_ref_fh)).field_G), 0, 192);
-                ((BitmapFont) ((Object) var28_ref_fh)).b((String) (var14Lifetime1), var15, var16 + ((BitmapFont) ((Object) var28_ref_fh)).field_G, 16777215, 0);
+                ((BitmapFont) ((Object) var28_ref_fh)).drawLeft((String) (var14Lifetime1), var15, var16 + ((BitmapFont) ((Object) var28_ref_fh)).field_G, 16777215, 0);
               }
               stackIn_370_0 = 0;
               stackIn_370_1 = ed.field_j;
@@ -6214,19 +6214,19 @@ final class GameplayController {
               stackIn_242_0 = (stackIn_237_0 != ~stackIn_237_1[stackIn_238_2]) ? 0 : 1;
               var31Lifetime1 = stackIn_242_0;
               if (var2_int == 0 ||
-                !(ge.field_j <= 0)) {
+                !(DirectByteStorage.field_j <= 0)) {
                 this.a(var21, false, var29_ref_mb.getTeamColour((byte) 28), var20, var30Lifetime1 != 0, var27Lifetime1, var11, var29_ref_mb, var26);
               }
               var32_ref_String = Integer.toString(this.field_H[var28] / 100);
               stackIn_253_0 = (var31Lifetime1 == 0) ? 16777215 : 11579568;
               var33_intLifetime1 = stackIn_253_0;
               if (var2_int != 0) {
-                if (0 != ge.field_j) {
-                  var32_ref_String = db.a(ak.field_a, -37, new String[]{qa.a(-1, this.field_c[0])});
+                if (0 != DirectByteStorage.field_j) {
+                  var32_ref_String = SocketConnector.a(ak.field_a, -37, new String[]{Js5NetworkRequest.a(-1, this.field_c[0])});
                 } else {
                   var32_ref_String = "";
                 }
-                stackIn_263_0 = (nc.field_a >= 0) ? 65280 : 6316128;
+                stackIn_263_0 = (WeightedLruCache.field_a >= 0) ? 65280 : 6316128;
                 var33_intLifetime1 = stackIn_263_0;
               }
               ((BitmapFont) ((Object) var10)).c(var32_ref_String, -5 + (var26 + var20), var27Lifetime1 + 16, var33_intLifetime1, -1);
@@ -6245,8 +6245,8 @@ final class GameplayController {
                   } else {
                     var39_ref_String = "40+";
                   }
-                  var39_ref_String = db.a(jf.field_W, -100, new String[]{var39_ref_String});
-                  ((BitmapFont) ((Object) var10)).a(var39_ref_String, var36Lifetime1 / 2 + var35Lifetime1, (var37 + ((BitmapFont) ((Object) var10)).field_U) / 2 + var34Lifetime1, 16777215, 0);
+                  var39_ref_String = SocketConnector.a(EditableTextWidget.field_W, -100, new String[]{var39_ref_String});
+                  ((BitmapFont) ((Object) var10)).drawCentered(var39_ref_String, var36Lifetime1 / 2 + var35Lifetime1, (var37 + ((BitmapFont) ((Object) var10)).field_U) / 2 + var34Lifetime1, 16777215, 0);
                 } else {
                   var39 = var35Lifetime1;
                   var40 = var37 / 2 + var34Lifetime1;
@@ -6255,7 +6255,7 @@ final class GameplayController {
                   var43 = var39;
                   if (var31Lifetime1 != 0) {
                     SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
-                    ((BitmapFont) ((Object) var10)).b(NodeIterator.field_e, 4 + var39, ((BitmapFont) ((Object) var10)).field_U / 2 + var40, 11579568, 0);
+                    ((BitmapFont) ((Object) var10)).drawLeft(NodeIterator.field_e, 4 + var39, ((BitmapFont) ((Object) var10)).field_U / 2 + var40, 11579568, 0);
                   } else {
                     var25Lifetime1 = 1;
                     var44 = 1;
@@ -6288,11 +6288,11 @@ final class GameplayController {
                         var28 % 2 == 0 ||
                         var4 == 0 &&
                         (var44 & this.field_e[var28]) != 0) {
-                        pd.field_Z[var47].a(var43, var40);
+                        AccountChoicePanel.field_Z[var47].a(var43, var40);
                         if (var43 <= oh.field_f &&
-                          oh.field_f < (var43 + pd.field_Z[var47].field_z) &&
-                          var40 <= pi.field_c &&
-                          pi.field_c < pd.field_Z[var47].field_B + var40) {
+                          oh.field_f < (var43 + AccountChoicePanel.field_Z[var47].field_z) &&
+                          var40 <= DelegatingCanvas.field_c &&
+                          DelegatingCanvas.field_c < AccountChoicePanel.field_Z[var47].field_B + var40) {
                           var48 = Integer.toString(this.field_c[var47]);
                           var49 = Integer.toString(this.field_a[var47]);
                           if (7 != var47 &&
@@ -6300,8 +6300,8 @@ final class GameplayController {
                             var47 != 24) {
                             if (var47 == 4 ||
                               var47 == 5) {
-                              var50 = Math.min(this.field_a[var47], -1 + dl.field_I.length);
-                              var49 = db.a(dl.field_I[var50], -55, new String[]{Integer.toString(this.field_a[var47])});
+                              var50 = Math.min(this.field_a[var47], -1 + UiContainer.field_I.length);
+                              var49 = SocketConnector.a(UiContainer.field_I[var50], -55, new String[]{Integer.toString(this.field_a[var47])});
                             } else if (27 == var47) {
                               var49 = var49 + '%';
                               var48 = var48 + '%';
@@ -6318,12 +6318,12 @@ final class GameplayController {
                               var49 = var49 + tc.field_s;
                             }
                           }
-                          var14Lifetime1 = db.a(bj.field_l[var47 * 2], -78, new String[]{": " + var48});
+                          var14Lifetime1 = SocketConnector.a(MusicPatchEnvelope.field_l[var47 * 2], -78, new String[]{": " + var48});
                           var50Lifetime1 = 1;
                           if (ed.field_j <= -1) {
                             var50Lifetime1 = 0;
                           }
-                          if (null == bj.field_l[var47 * 2 + 1]) {
+                          if (null == MusicPatchEnvelope.field_l[var47 * 2 + 1]) {
                             var50Lifetime1 = 0;
                           } else {
                             if (this.field_c[var47] == this.field_a[var47]) {
@@ -6333,7 +6333,7 @@ final class GameplayController {
                           var16 = var40 - 25;
                           var15 = var43 + 8;
                           if (var50Lifetime1 != 0) {
-                            var14Lifetime1 = (String) (var14Lifetime1) + db.a(bj.field_l[1 + 2 * var47], -127, new String[]{var49});
+                            var14Lifetime1 = (String) (var14Lifetime1) + SocketConnector.a(MusicPatchEnvelope.field_l[1 + 2 * var47], -127, new String[]{var49});
                           }
                         }
                         var45Lifetime1++;
@@ -6367,37 +6367,37 @@ final class GameplayController {
             !this.field_J &&
             var25Lifetime1 != 0 &&
             !this.world.field_lb) {
-            pl.field_U.a(oa.field_O, 320, 436, 1021128, -1);
+            pl.field_U.drawCentered(TextButton.field_O, 320, 436, 1021128, -1);
           }
           if (ed.field_j >= 0 &&
-            var2_int == 0 && (!(hj.field_F <= 0) ||
-            !(li.field_v <= 0))) {
+            var2_int == 0 && (!(MusicPatchNode.field_F <= 0) ||
+            !(PasswordFieldPainter.field_v <= 0))) {
             var28Lifetime1 = 32 + var7;
-            if (ql.a(ce.field_t, 18286)) {
+            if (SocialListPanel.a(ce.field_t, 18286)) {
               var28Lifetime1 -= 15;
             }
             var29_ref_String = "00a2ff";
-            var30_ref_String = db.a(de.field_g, -128, new String[]{Integer.toString(hj.field_F), var29_ref_String});
+            var30_ref_String = SocketConnector.a(LoginMethod.field_g, -128, new String[]{Integer.toString(MusicPatchNode.field_F), var29_ref_String});
             array$0 = new String[2];
             stackIn_401_0 = ph.field_d;
             stackIn_401_1 = -123;
             stackIn_401_2 = array$0;
             stackIn_401_3 = array$0;
             stackIn_401_4 = 0;
-            if (1000 != li.field_v) {
-              stackIn_402_5 = Integer.toString(li.field_v);
+            if (1000 != PasswordFieldPainter.field_v) {
+              stackIn_402_5 = Integer.toString(PasswordFieldPainter.field_v);
             } else {
               stackIn_402_5 = tm.field_g;
             }
             stackIn_401_3[stackIn_401_4] = stackIn_402_5;
             stackIn_401_2[1] = var29_ref_String;
-            var31_ref_String = db.a(stackIn_401_0, stackIn_401_1, stackIn_401_2);
-            pl.field_U.b(var30_ref_String, 100, var28Lifetime1, 16777215, -1);
-            pl.field_U.b(var31_ref_String, 400, var28Lifetime1, 16777215, -1);
+            var31_ref_String = SocketConnector.a(stackIn_401_0, stackIn_401_1, stackIn_401_2);
+            pl.field_U.drawLeft(var30_ref_String, 100, var28Lifetime1, 16777215, -1);
+            pl.field_U.drawLeft(var31_ref_String, 400, var28Lifetime1, 16777215, -1);
           }
           if (ed.field_j >= 0 &&
             var2_int == 0 &&
-            ql.a(ce.field_t, 18286)) {
+            SocialListPanel.a(ce.field_t, 18286)) {
             var28Lifetime2 = uf.a(120, ce.field_t);
             var29Lifetime2 = -10 + var28Lifetime2 * 40;
             var30Lifetime2 = (640 - var29Lifetime2) / 2;
@@ -6411,12 +6411,12 @@ final class GameplayController {
               stackIn_415_0 = stackOut_414_0;
               if (var51 == 0) {
                 if (stackIn_415_0) {
-                  var34_ref_wk = od.field_c[var33_intLifetime2];
-                  var34_ref_wk.d(var30Lifetime2, 400);
+                  var34_ref_wk = ClientException.field_c[var33_intLifetime2];
+                  var34_ref_wk.drawQuarterSize(var30Lifetime2, 400);
                   if (var30Lifetime2 <= oh.field_f &&
                     oh.field_f < (30 + var30Lifetime2) &&
-                    400 <= pi.field_c &&
-                    pi.field_c < 430) {
+                    400 <= DelegatingCanvas.field_c &&
+                    DelegatingCanvas.field_c < 430) {
                     var31Lifetime2 = 15 + var30Lifetime2;
                     var32Lifetime1 = var33_intLifetime2;
                   }
@@ -6433,8 +6433,8 @@ final class GameplayController {
             if (stackIn_433_0 > var32Lifetime1) {
               return;
             }
-            var33 = jg.field_t[var32Lifetime1];
-            var34Lifetime2 = 4 + ff.field_lb.c(var33);
+            var33 = ViewportController.field_t[var32Lifetime1];
+            var34Lifetime2 = 4 + ValidationHelpWidget.field_lb.textWidth(var33);
             var31Lifetime2 = var31Lifetime2 - var34Lifetime2 / 2;
             var35Lifetime2 = 14;
             if (10 > var31Lifetime2) {
@@ -6445,7 +6445,7 @@ final class GameplayController {
             }
             var36Lifetime2 = -var35Lifetime2 + 400 - 4;
             SoftwareRaster.c(var31Lifetime2, var36Lifetime2, var34Lifetime2, var35Lifetime2, 0, 192);
-            ff.field_lb.b(var33, 2 + var31Lifetime2, -2 + (var35Lifetime2 + var36Lifetime2), 16777215, -1);
+            ValidationHelpWidget.field_lb.drawLeft(var33, 2 + var31Lifetime2, -2 + (var35Lifetime2 + var36Lifetime2), 16777215, -1);
             return;
           }
           return;
@@ -6465,8 +6465,8 @@ final class GameplayController {
             0 >= this.controlledSentinel.field_cb) {
             return true;
           }
-          if (param2 > dl.field_G &&
-            this.world.a(4 + (dl.field_G >> 4), 4, 0, dl.field_G >> 4, km.field_c >> 4, (byte) 98, km.field_c >> 4)) {
+          if (param2 > UiContainer.field_G &&
+            this.world.a(4 + (UiContainer.field_G >> 4), 4, 0, UiContainer.field_G >> 4, km.field_c >> 4, (byte) 98, km.field_c >> 4)) {
             return true;
           }
           if (param0 != -5821) {
@@ -6489,7 +6489,7 @@ final class GameplayController {
         int var2_intLifetime1;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          if (dl.field_M < qh.field_Yb) {
+          if (UiContainer.field_M < IconTextComponent.field_Yb) {
             return true;
           }
           if (param0 != -100) {
@@ -6497,7 +6497,7 @@ final class GameplayController {
           }
           var2_int = di.field_g;
           if (0 == var2_int) {
-            var2_int = qh.field_Yb;
+            var2_int = IconTextComponent.field_Yb;
             if (0 != var2_int ||
               var3 != 0) {
               if (var2_int == 5) {
@@ -6514,7 +6514,7 @@ final class GameplayController {
           }
           if (var2_int == 1 &&
             var3 == 0) {
-            var2_int = qh.field_Yb;
+            var2_int = IconTextComponent.field_Yb;
             if (0 != var2_int) {
               if (var2_int != 10) {
                 return false;
@@ -6534,13 +6534,13 @@ final class GameplayController {
             if (var2_int != 9) {
               return false;
             }
-            var2_int = qh.field_Yb;
+            var2_int = IconTextComponent.field_Yb;
             if (var2_int == 2) {
               return true;
             }
             return false;
           }
-          var2_intLifetime1 = qh.field_Yb;
+          var2_intLifetime1 = IconTextComponent.field_Yb;
           if (0 != var2_intLifetime1 ||
             var3 != 0) {
             if (var2_intLifetime1 != 3) {
@@ -6577,7 +6577,7 @@ final class GameplayController {
             }
             if (var3.field_Nb != 0) {
               var3.clearArmour(128);
-              b.field_f = true;
+              DialWidgetPainter.field_f = true;
             }
             var3 = (Sentinel) (var2.next((byte) -49));
           }
@@ -6621,7 +6621,7 @@ final class GameplayController {
         RuntimeException var3 = null;
         BattleTerrain var4 = null;
         int var5 = 0;
-        u var5_ref_u = null;
+        CoverageBitmapFont var5_ref_u = null;
         String var5_ref_String = null;
         int var6 = 0;
         String var6_ref_String = null;
@@ -6653,7 +6653,7 @@ final class GameplayController {
           }
           this.field_n = this.field_r;
           this.field_r = -1;
-          sb.field_bb.b((byte) 126);
+          Checkbox.field_bb.b((byte) 126);
           if (!NodeIterator.a(param1 ^ 21517) &&
             param0 &&
             !jn.field_g) {
@@ -6668,7 +6668,7 @@ final class GameplayController {
           discarded$0 = this.a(true, var4, true, (byte) -95);
           if (di.field_g != -1 &&
             di.field_g != 4 &&
-            dl.field_M != qh.field_Yb) {
+            UiContainer.field_M != IconTextComponent.field_Yb) {
             SoftwareRaster.c(0, 0, 640, 480, 0, 128);
           }
           if (null != this.controlledSentinel) {
@@ -6720,26 +6720,26 @@ final class GameplayController {
             }
           }
           if ((decompiledFrameCompleted0) && (di.field_g == -1 && (!this.world.field_j ||
-            !(q.field_h <= 0)))) {
+            !(IterableNodeHashTable.field_h <= 0)))) {
             this.f(var3_int != 0, 8209);
           }
-          if (g.field_h >= 0) {
+          if (GrowableIntList.field_h >= 0) {
             var5_ref_u = dm.field_f;
-            if (35 > g.field_h) {
-              stackIn_66_0 = rj.field_m[g.field_h];
+            if (35 > GrowableIntList.field_h) {
+              stackIn_66_0 = BufferedRandomAccessFile.field_m[GrowableIntList.field_h];
             } else {
-              stackIn_66_0 = qj.field_v[g.field_h - 35];
+              stackIn_66_0 = SentinelAnimationEditor.field_v[GrowableIntList.field_h - 35];
             }
             var6_ref_String = stackIn_66_0;
-            if (24 == g.field_h) {
-              var6_ref_String = bk.field_O;
+            if (24 == GrowableIntList.field_h) {
+              var6_ref_String = StripedProgressBar.field_O;
             }
-            var7_ref_String = ll.field_p[g.field_h];
+            var7_ref_String = UiTheme.field_p[GrowableIntList.field_h];
             if (di.field_g == 1 &&
-              22 == g.field_h) {
+              22 == GrowableIntList.field_h) {
               var7_ref_String = hm.field_b;
             }
-            var8 = pd.field_X;
+            var8 = AccountChoicePanel.field_X;
             var9Lifetime1 = 320;
             var10Lifetime1 = 240;
             var11_intLifetime1 = var10Lifetime1 + ((BitmapFont) ((Object) var5_ref_u)).field_U / 2;
@@ -6759,21 +6759,21 @@ final class GameplayController {
             } else {
               var11_intLifetime1 = var11_intLifetime1 - 3 * var8;
             }
-            SoftwareRaster.a(0, 0, 640, var10Lifetime1);
-            ((BitmapFont) ((Object) var5_ref_u)).a(ke.a(42, var6_ref_String), var9Lifetime1, var11_intLifetime1, 16777215, 0);
-            SoftwareRaster.a(0, 10 + var11_intLifetime1, 640, 480);
+            SoftwareRaster.setClip(0, 0, 640, var10Lifetime1);
+            ((BitmapFont) ((Object) var5_ref_u)).drawCentered(WidgetStyleLayer.a(42, var6_ref_String), var9Lifetime1, var11_intLifetime1, 16777215, 0);
+            SoftwareRaster.setClip(0, 10 + var11_intLifetime1, 640, 480);
             pl.field_U.a(var7_ref_String, 100, 200, 440, 200, 1044724, 0, 1, 0, pl.field_U.field_G);
             SoftwareRaster.c();
           }
           if (this.world.field_j) {
-            SoftwareRaster.c(0, 0, 640, 480, 0, Math.max(0, -q.field_h + 100));
+            SoftwareRaster.c(0, 0, 640, 480, 0, Math.max(0, -IterableNodeHashTable.field_h + 100));
           }
           if (param1 != 21519) {
             return;
           }
           boolean decompiledFrameRemainder1 = true;
           if (!this.world.field_j ||
-            !(q.field_h <= 0)) {
+            !(IterableNodeHashTable.field_h <= 0)) {
             if ((!(this.world.field_R > 150) ||
               this.world.terrain.getTerrainType(56) == 4) &&
               (decompiledFrameRemainder1 = !(this.world.field_R <= 0)) &&
@@ -6784,12 +6784,12 @@ final class GameplayController {
                 stackIn_112_0 = wb.field_f;
               }
               var5_ref_String = stackIn_112_0;
-              ui.field_U.a(db.a(var5_ref_String, -126, new String[]{Integer.toString((-this.world.field_R + 150) / 50)}).toUpperCase(), 320, 80, 16777215, 8421504);
+              AlphaContainer.field_U.drawCentered(SocketConnector.a(var5_ref_String, -126, new String[]{Integer.toString((-this.world.field_R + 150) / 50)}).toUpperCase(), 320, 80, 16777215, 8421504);
               decompiledFrameRemainder1 = (var12 != 0);
             }
             if ((decompiledFrameRemainder1) &&
               (this.world.terrain.getTerrainType(param1 ^ 21572) != 1)) {
-              ui.field_U.a(nh.field_A.toUpperCase(), 320, 80, 16777215, 8421504);
+              AlphaContainer.field_U.drawCentered(Bzip2State.field_A.toUpperCase(), 320, 80, 16777215, 8421504);
               if (var12 != 0) {
                 this.i((byte) -23);
               }
@@ -6815,7 +6815,7 @@ final class GameplayController {
             this.a(-5669);
           }
           if (this.field_d) {
-            if (bb.field_T &&
+            if (ModalPanel.field_T &&
               param0) {
               stackIn_157_0 = 1;
             } else {
@@ -6823,44 +6823,44 @@ final class GameplayController {
             }
             var6Lifetime1 = stackIn_157_0;
             if (var6Lifetime1 != 0) {
-              stackIn_161_0 = tk.field_t;
+              stackIn_161_0 = MatchingTextValidator.field_t;
             } else {
-              stackIn_161_0 = co.field_d;
+              stackIn_161_0 = QuickChatCategoryCache.field_d;
             }
             var7_ref_wk__ = stackIn_161_0;
             var8 = var7_ref_wk__[2].field_A + ((int)ArchiveIndex.field_c + var7_ref_wk__[0].field_A);
             var9Lifetime2 = 24;
             var10Lifetime2 = 356;
-            if (vl.field_v) {
-              var10Lifetime2 = -var9Lifetime2 + qc.field_V.field_cb;
+            if (TextHotspotRegion.field_v) {
+              var10Lifetime2 = -var9Lifetime2 + DisplayNameForm.field_V.field_cb;
               if (var10Lifetime2 < 336) {
                 var10Lifetime2 = 336;
               }
               if (!(var10Lifetime2 <= 356)) {
                 var10Lifetime2 = 356;
                 if ((var12 != 0) &&
-                  ((qc.field_V.field_cb - var9Lifetime2) < var10Lifetime2)) {
-                  var10Lifetime2 = -var9Lifetime2 + qc.field_V.field_cb;
+                  ((DisplayNameForm.field_V.field_cb - var9Lifetime2) < var10Lifetime2)) {
+                  var10Lifetime2 = -var9Lifetime2 + DisplayNameForm.field_V.field_cb;
                 }
               }
             } else {
-              if ((qc.field_V.field_cb - var9Lifetime2) < var10Lifetime2) {
-                var10Lifetime2 = -var9Lifetime2 + qc.field_V.field_cb;
+              if ((DisplayNameForm.field_V.field_cb - var9Lifetime2) < var10Lifetime2) {
+                var10Lifetime2 = -var9Lifetime2 + DisplayNameForm.field_V.field_cb;
               }
             }
             SoftwareRaster.c(0, var10Lifetime2, var8, var9Lifetime2, 0, 192);
-            hb.a((byte) 44, var7_ref_wk__, var8, var10Lifetime2, 0, var9Lifetime2);
+            IterableDualNodeDeque.a((byte) 44, var7_ref_wk__, var8, var10Lifetime2, 0, var9Lifetime2);
             if (0 <= oh.field_f &&
               var8 + 0 > oh.field_f &&
-              pi.field_c >= var10Lifetime2 &&
-              var9Lifetime2 + var10Lifetime2 > pi.field_c) {
+              DelegatingCanvas.field_c >= var10Lifetime2 &&
+              var9Lifetime2 + var10Lifetime2 > DelegatingCanvas.field_c) {
               this.field_r = 0;
               vd.field_b = true;
             }
             var11 = new int[4];
             SoftwareRaster.b(var11);
-            if (hj.field_s != null) {
-              fk.field_d.c(hj.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)ArchiveIndex.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
+            if (MusicPatchNode.field_s != null) {
+              BoundedUrlRequest.field_d.c(MusicPatchNode.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)ArchiveIndex.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
             }
             SoftwareRaster.a(var11);
           }
@@ -6905,16 +6905,16 @@ final class GameplayController {
               break;
             }
             var8 = var7;
-            sb.field_bb.field_a[var8] = ri.a(48, sb.field_bb.field_a[var8], 16913);
+            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], 16913);
             var8 = var8 + 306560;
-            sb.field_bb.field_a[var8] = ri.a(48, sb.field_bb.field_a[var8], 16913);
+            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], 16913);
             var7++;
           } while (var12 == 0);
           while (var7 < 480) {
-            var8 = sb.field_bb.field_c * var7;
-            sb.field_bb.field_a[var8] = ri.a(48, sb.field_bb.field_a[var8], bi.a(param1, 5662));
+            var8 = Checkbox.field_bb.field_c * var7;
+            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], bi.a(param1, 5662));
             var8 += 639;
-            sb.field_bb.field_a[var8] = ri.a(48, sb.field_bb.field_a[var8], 16913);
+            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], 16913);
             var7++;
             if (var12 != 0) {
               return;
@@ -6965,7 +6965,7 @@ final class GameplayController {
                 var4[incrementValue$0] = var7_ref_mb;
               }
               var2[var7_ref_mb.teamId] = var2[var7_ref_mb.teamId] + (var7_ref_mb.field_vb - var7_ref_mb.field_Ab);
-              var7_ref_mb = (Sentinel) (var6.d(2));
+              var7_ref_mb = (Sentinel) (var6.next(2));
               continue;
             }
             break;
@@ -7064,23 +7064,23 @@ final class GameplayController {
           if (this.world.field_j) {
             return;
           }
-          dl.field_M = qh.field_Yb;
+          UiContainer.field_M = IconTextComponent.field_Yb;
           if (param0 != -5669) {
             this.d(-18);
           }
-          var2_int = ge.field_j * 10 + ol.field_Ub;
+          var2_int = DirectByteStorage.field_j * 10 + QuickChatHelpDialog.field_Ub;
           var3 = 0;
           if (var3 != 0 &&
             !this.world.field_j) {
             var4_ref = null;
             var5_ref = null;
-            if (ol.field_Ub < dl.field_N.length &&
-              dl.field_M < dl.field_N[ol.field_Ub].length) {
-              var4_ref = dl.field_N[ol.field_Ub][dl.field_M];
+            if (QuickChatHelpDialog.field_Ub < UiContainer.field_N.length &&
+              UiContainer.field_M < UiContainer.field_N[QuickChatHelpDialog.field_Ub].length) {
+              var4_ref = UiContainer.field_N[QuickChatHelpDialog.field_Ub][UiContainer.field_M];
             } else {
-              if (ol.field_Ub < dl.field_N.length &&
-                dl.field_N[ol.field_Ub].length == 1) {
-                var4_ref = dl.field_N[ol.field_Ub][0];
+              if (QuickChatHelpDialog.field_Ub < UiContainer.field_N.length &&
+                UiContainer.field_N[QuickChatHelpDialog.field_Ub].length == 1) {
+                var4_ref = UiContainer.field_N[QuickChatHelpDialog.field_Ub][0];
               }
             }
             var6 = null;
@@ -7089,14 +7089,14 @@ final class GameplayController {
             if (dm.field_c) {
               var8_ref_String__ = null;
             }
-            var9 = dl.field_H[var2_int];
+            var9 = UiContainer.field_H[var2_int];
             if (null != var8_ref_String__) {
               var5_ref = var8_ref_String__[var7];
             }
             if (var5_ref == null) {
               var5_ref = var9[var7];
             }
-            if (0 == qh.field_Yb) {
+            if (0 == IconTextComponent.field_Yb) {
               if (var8_ref_String__ != null) {
                 var6 = var8_ref_String__[var7 + 1];
               }
@@ -7108,7 +7108,7 @@ final class GameplayController {
             stackIn_43_1 = 0;
             stackIn_43_2 = var4_ref;
             stackIn_43_3 = var5_ref;
-            if (0 != qh.field_Yb) {
+            if (0 != IconTextComponent.field_Yb) {
               stackIn_44_0 = this;
               stackIn_44_4 = false;
             } else {
@@ -7120,13 +7120,13 @@ final class GameplayController {
           if (var3 == 0) {
             var4 = this.field_M[1];
             var5 = 16777215;
-            var6Lifetime1 = fk.field_d;
+            var6Lifetime1 = BoundedUrlRequest.field_d;
             SoftwareRaster.c(0, 0, 192, 47, 0, 192);
             SoftwareRaster.h(0, 0, 192, 47, var4, 192);
             SoftwareRaster.a(2, 2, 188, 14, 2565927);
             var7 = 0;
             var8 = 0;
-            var9_array = ua.field_I[ge.field_j * 10 + ol.field_Ub];
+            var9_array = ReflectionCheck.field_I[DirectByteStorage.field_j * 10 + QuickChatHelpDialog.field_Ub];
             var10_int = 0;
             while (var9_array.length > var10_int) {
               var8 = var8 + var9_array[var10_int].length * 9;
@@ -7146,13 +7146,13 @@ final class GameplayController {
               stackIn_70_1 = var11_ref_mb.field_Nb;
               if (var16 == 0) {
                 if (stackIn_70_0 != stackIn_70_1) {
-                  if (~nn.field_c[0] == ~var11_ref_mb.chassis.componentId) {
+                  if (~FullscreenFocusCanvas.field_c[0] == ~var11_ref_mb.chassis.componentId) {
                     var7--;
                   } else {
                     var7 -= 9;
                   }
                 }
-                var11_ref_mb = (Sentinel) (var10.d(2));
+                var11_ref_mb = (Sentinel) (var10.next(2));
                 continue;
               }
               break;
@@ -7163,16 +7163,16 @@ final class GameplayController {
             }
             var7 = stackIn_70_0 / stackIn_70_1;
             var8Lifetime1 = 13;
-            var9_ref = db.a(dc.field_f, -77, new String[]{Integer.toString(ol.field_Ub + 1)});
-            var10_ref = db.a(ne.field_J, -112, new String[]{Integer.toString(var7)});
+            var9_ref = SocketConnector.a(dc.field_f, -77, new String[]{Integer.toString(QuickChatHelpDialog.field_Ub + 1)});
+            var10_ref = SocketConnector.a(ne.field_J, -112, new String[]{Integer.toString(var7)});
             var11 = this.world.simulationTick / 50;
-            if (b.field_f) {
+            if (DialWidgetPainter.field_f) {
               var11 += 600;
             }
-            var12 = hc.field_V + var11;
-            var13 = db.a(il.field_g, -44, new String[]{qa.a(-1, var11)});
+            var12 = LabeledField.field_V + var11;
+            var13 = SocketConnector.a(TextLayoutLine.field_g, -44, new String[]{Js5NetworkRequest.a(-1, var11)});
             array$0 = new String[1];
-            stackIn_77_0 = sn.field_k;
+            stackIn_77_0 = BoundedRandomAccessFile.field_k;
             stackIn_77_1 = -13;
             stackIn_77_2 = array$0;
             stackIn_77_3 = array$0;
@@ -7183,24 +7183,24 @@ final class GameplayController {
               stackIn_78_5 = Integer.toString(this.world.field_M);
             }
             stackIn_77_3[stackIn_77_4] = stackIn_78_5;
-            var14 = db.a(stackIn_77_0, stackIn_77_1, stackIn_77_2);
-            var15 = db.a(ub.field_k, -82, new String[]{qa.a(-1, var12)});
-            ((BitmapFont) (var6Lifetime1)).b(cc.field_ic[ge.field_j], 6, var8Lifetime1, var5, 0);
-            ((BitmapFont) (var6Lifetime1)).b(var9_ref, 99, var8Lifetime1, 1021128, 0);
+            var14 = SocketConnector.a(stackIn_77_0, stackIn_77_1, stackIn_77_2);
+            var15 = SocketConnector.a(SoundCache.field_k, -82, new String[]{Js5NetworkRequest.a(-1, var12)});
+            ((BitmapFont) (var6Lifetime1)).drawLeft(cc.field_ic[DirectByteStorage.field_j], 6, var8Lifetime1, var5, 0);
+            ((BitmapFont) (var6Lifetime1)).drawLeft(var9_ref, 99, var8Lifetime1, 1021128, 0);
             var8Lifetime1 += 17;
             var5Lifetime1 = 1021128;
-            ((BitmapFont) (var6Lifetime1)).b(var10_ref, 6, var8Lifetime1, var5Lifetime1, 0);
-            ((BitmapFont) (var6Lifetime1)).b(var13, 99, var8Lifetime1, var5Lifetime1, 0);
+            ((BitmapFont) (var6Lifetime1)).drawLeft(var10_ref, 6, var8Lifetime1, var5Lifetime1, 0);
+            ((BitmapFont) (var6Lifetime1)).drawLeft(var13, 99, var8Lifetime1, var5Lifetime1, 0);
             var8Lifetime1 += 11;
-            ((BitmapFont) (var6Lifetime1)).b(var14, 6, var8Lifetime1, var5Lifetime1, 0);
-            if (ge.field_j > 0) {
-              ((BitmapFont) (var6Lifetime1)).b(var15, 99, var8Lifetime1, var5Lifetime1, 0);
+            ((BitmapFont) (var6Lifetime1)).drawLeft(var14, 6, var8Lifetime1, var5Lifetime1, 0);
+            if (DirectByteStorage.field_j > 0) {
+              ((BitmapFont) (var6Lifetime1)).drawLeft(var15, 99, var8Lifetime1, var5Lifetime1, 0);
             }
-            if (0 != qh.field_Yb) {
+            if (0 != IconTextComponent.field_Yb) {
               return;
             }
-            qh.field_Yb = 1;
-            dl.field_M = 1;
+            IconTextComponent.field_Yb = 1;
+            UiContainer.field_M = 1;
             return;
           }
           return;
@@ -7258,7 +7258,7 @@ final class GameplayController {
         StringBuilder stackIn_149_1 = null;
         String stackIn_150_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fh var7 = null;
+        BinaryBitmapFont var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
         int var9 = 0;
@@ -7301,12 +7301,12 @@ final class GameplayController {
             return;
           }
           param4 = false;
-          var7 = ff.field_lb;
+          var7 = ValidationHelpWidget.field_lb;
           var8 = 10;
           var9 = 636;
-          if (ge.field_j == 0 &&
-            ol.field_Ub == 0 &&
-            dl.field_M == 5) {
+          if (DirectByteStorage.field_j == 0 &&
+            QuickChatHelpDialog.field_Ub == 0 &&
+            UiContainer.field_M == 5) {
             var9 = 400;
           }
           var10 = 4;
@@ -7316,13 +7316,13 @@ final class GameplayController {
           ParticleEffect.a(var11, var10, (byte) 50, var13, var12, var11);
           var8Lifetime1 = var12 - (-var11 - 8);
           var14 = 0;
-          var15 = ff.field_lb.field_U + 3;
+          var15 = ValidationHelpWidget.field_lb.field_U + 3;
           var16 = 14;
           var17 = -10 - var8Lifetime1 + var9;
           var18 = new String[16];
           var19 = 0;
           if (null != param5) {
-            var14 = ff.field_lb.a(param5, var17, var15);
+            var14 = ValidationHelpWidget.field_lb.paragraphHeight(param5, var17, var15);
           }
           var13 -= 2;
           var20 = 2;
@@ -7331,27 +7331,27 @@ final class GameplayController {
           }
           var20 = var20 + var14;
           if (param2 != null) {
-            var19 = ((BitmapFont) ((Object) var7)).a(param2, new int[]{var17}, var18);
+            var19 = ((BitmapFont) ((Object) var7)).wrapText(param2, new int[]{var17}, var18);
             var20 = var20 + var16 * var19;
           }
-          ta.a(var9 - var8Lifetime1, 0, param0 + 0, 255, 0, 128, var8Lifetime1, var13, var20);
+          Js5ArchiveManager.a(var9 - var8Lifetime1, 0, param0 + 0, 255, 0, 128, var8Lifetime1, var13, var20);
           SoftwareRaster.c(var8Lifetime1, var13 + var20, -var8Lifetime1 + var9, param0, 64);
           var13Lifetime1 = 20;
           if (param1 != null) {
-            pl.field_U.b(param1, var8Lifetime1 + 5, var13Lifetime1, 16777215, 0);
+            pl.field_U.drawLeft(param1, var8Lifetime1 + 5, var13Lifetime1, 16777215, 0);
           }
           var13Lifetime1 += 5;
           if (param5 != null) {
             var21 = 1021128;
             if (this.e(-100) &&
               (5 + var8Lifetime1) <= oh.field_f &&
-              oh.field_f < (ff.field_lb.a(param5, var17) + (5 + var8Lifetime1)) &&
-              pi.field_c >= var13Lifetime1 &&
-              pi.field_c < (var13Lifetime1 + ff.field_lb.a(param5, var17, var15))) {
+              oh.field_f < (ValidationHelpWidget.field_lb.a(param5, var17) + (5 + var8Lifetime1)) &&
+              DelegatingCanvas.field_c >= var13Lifetime1 &&
+              DelegatingCanvas.field_c < (var13Lifetime1 + ValidationHelpWidget.field_lb.paragraphHeight(param5, var17, var15))) {
               var21 = 1044724;
               this.field_r = 42;
             }
-            ff.field_lb.a(param5, 5 + var8Lifetime1, var13Lifetime1, var17, 100, var21, -1, 0, 0, var15);
+            ValidationHelpWidget.field_lb.a(param5, 5 + var8Lifetime1, var13Lifetime1, var17, 100, var21, -1, 0, 0, var15);
             var13Lifetime1 = var13Lifetime1 + var14;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -7406,7 +7406,7 @@ final class GameplayController {
             var13Lifetime1 = var13Lifetime1 + (var21Lifetime1 + var10);
             var23Lifetime2 = 0;
             while (var23Lifetime2 < var19) {
-              ((BitmapFont) ((Object) var7)).b(var18[var23Lifetime2], var12, var13Lifetime1, var22_int, 5263440);
+              ((BitmapFont) ((Object) var7)).drawLeft(var18[var23Lifetime2], var12, var13Lifetime1, var22_int, 5263440);
               var13Lifetime1 = var13Lifetime1 + var21Lifetime1;
               var23Lifetime2++;
               if (var29 != 0) {
@@ -7422,29 +7422,29 @@ final class GameplayController {
           if (param4) {
             var21_ref_wk = am.field_f[0];
             var22_intLifetime1 = 1021128;
-            if (dl.field_M <= 0) {
+            if (UiContainer.field_M <= 0) {
               var22_intLifetime1 = 8421504;
               if (var29 != 0 && (oh.field_f >= var12 &&
                 (var21_ref_wk.field_z + var12) > oh.field_f &&
-                pi.field_c >= var13Lifetime1 &&
-                pi.field_c < (var13Lifetime1 + var21_ref_wk.field_B))) {
+                DelegatingCanvas.field_c >= var13Lifetime1 &&
+                DelegatingCanvas.field_c < (var13Lifetime1 + var21_ref_wk.field_B))) {
                 this.field_r = 1;
               }
             } else {
               if (oh.field_f >= var12 &&
                 (var21_ref_wk.field_z + var12) > oh.field_f &&
-                pi.field_c >= var13Lifetime1 &&
-                pi.field_c < (var13Lifetime1 + var21_ref_wk.field_B)) {
+                DelegatingCanvas.field_c >= var13Lifetime1 &&
+                DelegatingCanvas.field_c < (var13Lifetime1 + var21_ref_wk.field_B)) {
                 this.field_r = 1;
               }
             }
             if (this.field_r == 1) {
-              am.field_f[0].b(-3 + var12, -3 + var13Lifetime1, 6 + var21_ref_wk.field_z, 6 + var21_ref_wk.field_B, var22_intLifetime1);
+              am.field_f[0].drawScaledWithBrightness(-3 + var12, -3 + var13Lifetime1, 6 + var21_ref_wk.field_z, 6 + var21_ref_wk.field_B, var22_intLifetime1);
               if (var29 != 0) {
-                am.field_f[0].c(var12, var13Lifetime1, var22_intLifetime1);
+                am.field_f[0].drawTintedGrayscale(var12, var13Lifetime1, var22_intLifetime1);
               }
             } else {
-              am.field_f[0].c(var12, var13Lifetime1, var22_intLifetime1);
+              am.field_f[0].drawTintedGrayscale(var12, var13Lifetime1, var22_intLifetime1);
             }
           }
           if (param3) {
@@ -7466,9 +7466,9 @@ final class GameplayController {
             if (var23Lifetime1 != 0) {
               if (!(-1 + var12Lifetime1 <= oh.field_f) ||
                 !((15 + var12Lifetime1) > oh.field_f) ||
-                !(pi.field_c >= var13Lifetime1 - 1) ||
-                !(var13Lifetime1 + 15 > pi.field_c)) {
-                var24 = (Math.sin((double)(a.field_c / 8)) + 1.0) * 0.5;
+                !(DelegatingCanvas.field_c >= var13Lifetime1 - 1) ||
+                !(var13Lifetime1 + 15 > DelegatingCanvas.field_c)) {
+                var24 = (Math.sin((double)(MouseWheelInput.field_c / 8)) + 1.0) * 0.5;
                 var26Lifetime1 = (var21Lifetime2 & 16765495) >> 16;
                 var27Lifetime1 = (var21Lifetime2 & 65425) >> 8;
                 var27Lifetime1 = var27Lifetime1 + (int)((double)(-var27Lifetime1 + 255) * var24);
@@ -7490,12 +7490,12 @@ final class GameplayController {
               var21Lifetime2 = 8421504;
             }
             if (this.field_r != 2) {
-              var22.c(var12Lifetime1, var13Lifetime1, var21Lifetime2);
+              var22.drawTintedGrayscale(var12Lifetime1, var13Lifetime1, var21Lifetime2);
               if (var29 == 0) {
                 return;
               }
             }
-            var22.b(-2 + var12Lifetime1, var13Lifetime1 - 2, 20, 20, var21Lifetime2);
+            var22.drawScaledWithBrightness(-2 + var12Lifetime1, var13Lifetime1 - 2, 20, 20, var21Lifetime2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7791,8 +7791,8 @@ final class GameplayController {
             SoftwareRaster.a(var12, var14, var13, var15, 0);
             if (oh.field_f >= var12 &&
               var12 + var13 > oh.field_f &&
-              pi.field_c >= var14 &&
-              pi.field_c < (var14 + var15)) {
+              DelegatingCanvas.field_c >= var14 &&
+              DelegatingCanvas.field_c < (var14 + var15)) {
               stackIn_168_0 = 1;
             } else {
               stackIn_168_0 = 0;
@@ -7853,7 +7853,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder0 = true;
           if (null != var10) {
             var16_ref_jc = new NodeIterator(this.world.sentinels);
-            SoftwareRaster.a(0, 0, var8, -1 + var7);
+            SoftwareRaster.setClip(0, 0, var8, -1 + var7);
             var17_ref_mb = (Sentinel) (var16_ref_jc.b(param1 - 8207));
             while (null != var17_ref_mb) {
               var18 = var17_ref_mb.playerId;
@@ -7906,24 +7906,24 @@ final class GameplayController {
                       this.world.terrain.getTerrainType(param1 ^ 8298) == 2) {
                       var19 = 16776960;
                     }
-                    fk.field_d.b(var21_ref_String, 6, var12, var19, -1);
-                    fk.field_d.c(var22, 132, var12, var20, -1);
+                    BoundedUrlRequest.field_d.drawLeft(var21_ref_String, 6, var12, var19, -1);
+                    BoundedUrlRequest.field_d.c(var22, 132, var12, var20, -1);
                     if (var23_int != 0) {
-                      SoftwareRaster.g(6, -1 + var12 - fk.field_d.field_U / 2, 126, 10526880);
+                      SoftwareRaster.g(6, -1 + var12 - BoundedUrlRequest.field_d.field_U / 2, 126, 10526880);
                     }
                   } else {
                     if (var17_ref_mb.field_Nb == 11) {
                       var21_ref_String = this.world.d(-1661904765, var17_ref_mb.playerId);
                       var19 = var17_ref_mb.getTeamColour((byte) -124);
                       var22 = Integer.toString(var17_ref_mb.field_vb / 100);
-                      fk.field_d.b(var21_ref_String, 6, var12, var19, -1);
-                      fk.field_d.c(var22, 132, var12, 13421772, -1);
+                      BoundedUrlRequest.field_d.drawLeft(var21_ref_String, 6, var12, var19, -1);
+                      BoundedUrlRequest.field_d.c(var22, 132, var12, 13421772, -1);
                       var12 += 9;
                     }
                   }
                 }
               }
-              var17_ref_mb = (Sentinel) (var16_ref_jc.d(2));
+              var17_ref_mb = (Sentinel) (var16_ref_jc.next(2));
             }
             if (decompiledFrameCompleted1) {
               SoftwareRaster.c();
@@ -7951,8 +7951,8 @@ final class GameplayController {
                 }
                 var21_ref_StringLifetime1 = Integer.toString(((int[]) (var11))[var17] / 100);
                 var12 = this.field_B[var16] + 12;
-                fk.field_d.b(var18_ref_String, 6, var12, var19Lifetime1, -1);
-                fk.field_d.c(var21_ref_StringLifetime1, 132, var12, var20Lifetime1, -1);
+                BoundedUrlRequest.field_d.drawLeft(var18_ref_String, 6, var12, var19Lifetime1, -1);
+                BoundedUrlRequest.field_d.c(var21_ref_StringLifetime1, 132, var12, var20Lifetime1, -1);
                 var16++;
               }
               if (decompiledFrameCompleted0) {
@@ -8006,10 +8006,10 @@ final class GameplayController {
                           SoftwareRaster.d(3 + var15, var16_ref_int__[var13], 1 + (var17_ref_int__[var13] - var16_ref_int__[var13]), var22_int);
                           var14 = var14 / 100;
                           var23_intLifetime1 = (var16_ref_int__[var13] + var17_ref_int__[var13]) / 2;
-                          var24_int = ff.field_lb.c(Integer.toString(var14));
+                          var24_int = ValidationHelpWidget.field_lb.textWidth(Integer.toString(var14));
                           var24_int = -3 - var15 + (-6 + (var8 - var24_int));
                           SoftwareRaster.g(3 + var15, var23_intLifetime1, -5 + var24_int, var22_int);
-                          ff.field_lb.b(Integer.toString(var14), var24_int + (3 + var15), 4 + var23_intLifetime1, var22_int, -1);
+                          ValidationHelpWidget.field_lb.drawLeft(Integer.toString(var14), var24_int + (3 + var15), 4 + var23_intLifetime1, var22_int, -1);
                         }
                         var13 = var18_ref_mb.teamId;
                         var14 = 0;
@@ -8034,21 +8034,21 @@ final class GameplayController {
                         this.world.terrain.getTerrainType(param1 ^ 8259) == 2) {
                         var19Lifetime1Lifetime1 = 16776960;
                       }
-                      fk.field_d.b(var21_ref_StringLifetime1Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
-                      fk.field_d.c(var22Lifetime1, 132, var12, var20Lifetime1Lifetime1, -1);
+                      BoundedUrlRequest.field_d.drawLeft(var21_ref_StringLifetime1Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
+                      BoundedUrlRequest.field_d.c(var22Lifetime1, 132, var12, var20Lifetime1Lifetime1, -1);
                       if (this.world.field_fb &&
                         var18_ref_mb.field_kc > 0) {
                         var24 = "<times>" + var18_ref_mb.field_kc;
-                        var25 = fk.field_d.c(var24);
-                        var26 = pd.field_Z[31];
-                        var26.b(-1 + (-(var26.field_z / 2) + (-var25 + 172)), var12 - 8);
-                        fk.field_d.b("<times>" + var18_ref_mb.field_kc, -var25 + 172, var12, 13421772, -1);
+                        var25 = BoundedUrlRequest.field_d.textWidth(var24);
+                        var26 = AccountChoicePanel.field_Z[31];
+                        var26.drawHalfSize(-1 + (-(var26.field_z / 2) + (-var25 + 172)), var12 - 8);
+                        BoundedUrlRequest.field_d.drawLeft("<times>" + var18_ref_mb.field_kc, -var25 + 172, var12, 13421772, -1);
                       }
                       if (var23_intLifetime1Lifetime1 != 0) {
                         if (1 < var6) {
-                          SoftwareRaster.g(6, -(fk.field_d.field_U / 2) + var12 - 1, fk.field_d.c(var21_ref_StringLifetime1Lifetime1), 10526880);
+                          SoftwareRaster.g(6, -(BoundedUrlRequest.field_d.field_U / 2) + var12 - 1, BoundedUrlRequest.field_d.textWidth(var21_ref_StringLifetime1Lifetime1), 10526880);
                         } else {
-                          SoftwareRaster.g(6, var12 - fk.field_d.field_U / 2 - 1, 126, 10526880);
+                          SoftwareRaster.g(6, var12 - BoundedUrlRequest.field_d.field_U / 2 - 1, 126, 10526880);
                         }
                       }
                       var12 += 9;
@@ -8066,15 +8066,15 @@ final class GameplayController {
                         var19Lifetime1Lifetime1 = var18_ref_mb.getTeamColour((byte) -98);
                         var22Lifetime1 = this.world.d(-1661904765, var18_ref_mb.playerId);
                         var23 = Integer.toString(var18_ref_mb.field_vb / 100);
-                        fk.field_d.b(var22Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
-                        fk.field_d.c(var23, 132, var12, var20Lifetime1Lifetime1, -1);
+                        BoundedUrlRequest.field_d.drawLeft(var22Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
+                        BoundedUrlRequest.field_d.c(var23, 132, var12, var20Lifetime1Lifetime1, -1);
                         if (this.world.field_fb &&
                           var18_ref_mb.field_kc > 0) {
                           var24 = "<times>" + var18_ref_mb.field_kc;
-                          var25 = fk.field_d.c(var24);
-                          var26 = pd.field_Z[31];
-                          var26.b(-1 - var25 + (172 - var26.field_z / 2), var12 - 8);
-                          fk.field_d.b("<times>" + var18_ref_mb.field_kc, 172 - var25, var12, 13421772, -1);
+                          var25 = BoundedUrlRequest.field_d.textWidth(var24);
+                          var26 = AccountChoicePanel.field_Z[31];
+                          var26.drawHalfSize(-1 - var25 + (172 - var26.field_z / 2), var12 - 8);
+                          BoundedUrlRequest.field_d.drawLeft("<times>" + var18_ref_mb.field_kc, 172 - var25, var12, 13421772, -1);
                         }
                         var12 += 9;
                       }
@@ -8095,10 +8095,10 @@ final class GameplayController {
                 SoftwareRaster.d(3 + var15, var16_ref_int__[var13], -var16_ref_int__[var13] + (var17_ref_int__[var13] + 1), fj.field_h[var13]);
                 var14 = var14 / 100;
                 var18Lifetime2 = (var16_ref_int__[var13] + var17_ref_int__[var13]) / 2;
-                var19Lifetime1Lifetime1 = ff.field_lb.c(Integer.toString(var14));
+                var19Lifetime1Lifetime1 = ValidationHelpWidget.field_lb.textWidth(Integer.toString(var14));
                 var19Lifetime1Lifetime1 = -var19Lifetime1Lifetime1 - 6 + (var8 - 3 - var15);
                 SoftwareRaster.g(3 + var15, var18Lifetime2, -5 + var19Lifetime1Lifetime1, fj.field_h[var13]);
-                ff.field_lb.b(Integer.toString(var14), var19Lifetime1Lifetime1 + var15 + 3, var18Lifetime2 + 4, fj.field_h[var13], -1);
+                ValidationHelpWidget.field_lb.drawLeft(Integer.toString(var14), var19Lifetime1Lifetime1 + var15 + 3, var18Lifetime2 + 4, fj.field_h[var13], -1);
                 break;
               }
             }
@@ -8114,11 +8114,11 @@ final class GameplayController {
           if (decompiledFrameCompleted0) {
             var12 = stackIn_388_0 + stackIn_388_1;
             var12 += 9;
-            fk.field_d.b(ci.field_f, 6, var12, var4, -1);
-            fk.field_d.c(Integer.toString(this.world.field_cb), 132, var12, 13421772, -1);
+            BoundedUrlRequest.field_d.drawLeft(ci.field_f, 6, var12, var4, -1);
+            BoundedUrlRequest.field_d.c(Integer.toString(this.world.field_cb), 132, var12, 13421772, -1);
             var12 += 9;
-            fk.field_d.b(mc.field_e, 6, var12, var4, -1);
-            fk.field_d.c(Integer.toString(this.world.field_M), 132, var12, 13421772, -1);
+            BoundedUrlRequest.field_d.drawLeft(mc.field_e, 6, var12, var4, -1);
+            BoundedUrlRequest.field_d.c(Integer.toString(this.world.field_M), 132, var12, 13421772, -1);
             var12 += 4;
             var16 = 6;
             var17 = 126;
@@ -8268,26 +8268,26 @@ final class GameplayController {
           if (this.world.field_j) {
             return;
           }
-          var2 = dl.field_H[di.field_g];
+          var2 = UiContainer.field_H[di.field_g];
           var3 = dj.field_g[di.field_g];
           if (dm.field_c) {
             var3 = null;
           }
           var5 = 126 % ((-10 - param0) / 38);
-          var4 = 2 * dl.field_M;
+          var4 = 2 * UiContainer.field_M;
           if (0 <= var4 &&
             var4 < var2.length) {
             var6_ref = null;
             var7_ref = null;
             var8_ref = null;
-            if (dl.field_N.length > ol.field_Ub &&
-              dl.field_N[ol.field_Ub].length > dl.field_M) {
-              var6_ref = dl.field_N[ol.field_Ub][dl.field_M];
+            if (UiContainer.field_N.length > QuickChatHelpDialog.field_Ub &&
+              UiContainer.field_N[QuickChatHelpDialog.field_Ub].length > UiContainer.field_M) {
+              var6_ref = UiContainer.field_N[QuickChatHelpDialog.field_Ub][UiContainer.field_M];
             }
             if (null != var3) {
               var7_ref = var3[var4];
             }
-            if (qh.field_Yb <= dl.field_M) {
+            if (IconTextComponent.field_Yb <= UiContainer.field_M) {
               if (var3 != null) {
                 var8_ref = var3[var4 + 1];
               }
@@ -8302,11 +8302,11 @@ final class GameplayController {
             }
             this.a(0, (String) (var6_ref), (String) (var7_ref), true, true, (String) (var8_ref));
           }
-          if (ge.field_j == 0 &&
-            ol.field_Ub == 0 &&
-            pm.field_T == -1 &&
-            vb.field_g == -1 &&
-            5 == dl.field_M) {
+          if (DirectByteStorage.field_j == 0 &&
+            QuickChatHelpDialog.field_Ub == 0 &&
+            LoginForm.field_T == -1 &&
+            GzipDecoder.field_g == -1 &&
+            5 == UiContainer.field_M) {
             var6 = 404;
             var7 = 30;
             var8 = 30;
@@ -8316,11 +8316,11 @@ final class GameplayController {
             stackIn_54_1 = var6;
             stackIn_54_2 = 127;
             if (!dm.field_c) {
-              stackIn_55_3 = od.field_j;
+              stackIn_55_3 = ClientException.field_j;
             } else {
               stackIn_55_3 = qm.field_c;
             }
-            if (nm.a(stackIn_54_0, stackIn_54_1, stackIn_54_2, stackIn_55_3, var8, var9)) {
+            if (EmailAvailabilityValidator.a(stackIn_54_0, stackIn_54_1, stackIn_54_2, stackIn_55_3, var8, var9)) {
               this.field_r = 36;
             }
             if (dm.field_c) {
@@ -8328,12 +8328,12 @@ final class GameplayController {
               stackIn_63_0 = var7;
               stackIn_63_1 = var6;
               stackIn_63_2 = 127;
-              if (ui.field_G) {
+              if (AlphaContainer.field_G) {
                 stackIn_64_3 = tm.field_f;
               } else {
                 stackIn_64_3 = fj.field_i;
               }
-              if (nm.a(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_64_3, var8, var9)) {
+              if (EmailAvailabilityValidator.a(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_64_3, var8, var9)) {
                 this.field_r = 37;
               }
               var7 += 35;
@@ -8345,21 +8345,21 @@ final class GameplayController {
               } else {
                 stackIn_71_3 = o.field_a;
               }
-              if (nm.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_71_3, var8, var9)) {
+              if (EmailAvailabilityValidator.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_71_3, var8, var9)) {
                 this.field_r = 38;
               }
-              var10_ref = hb.field_g[0];
+              var10_ref = IterableDualNodeDeque.field_g[0];
               var7 += 35;
             } else {
               var7 += 105;
-              var10_ref = hb.field_g[1];
+              var10_ref = IterableDualNodeDeque.field_g[1];
             }
             var9 -= 5;
             var6 += 3;
             var7 += 3;
-            var8Lifetime1 = ff.field_lb.a(var10_ref, var9, 18);
+            var8Lifetime1 = ValidationHelpWidget.field_lb.paragraphHeight(var10_ref, var9, 18);
             SoftwareRaster.c(-3 + var6, -3 + var7, var9 + 5, var8Lifetime1 + 5, 0, 128);
-            ff.field_lb.a(var10_ref, var6, var7, var9, 100, 1021128, -1, 0, 0, 18);
+            ValidationHelpWidget.field_lb.a(var10_ref, var6, var7, var9, 100, 1021128, -1, 0, 0, 18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8384,44 +8384,44 @@ final class GameplayController {
           }
           Sprite.field_k = false;
           lc.field_e = true;
-          if ((ge.field_j != 0 ||
+          if ((DirectByteStorage.field_j != 0 ||
             !(3 > fm.field_f[0]) ||
-            !(nc.field_a >= 0) &&
-            !lh.field_D) &&
-            (!lh.field_D ||
+            !(WeightedLruCache.field_a >= 0) &&
+            !UiComponent.field_D) &&
+            (!UiComponent.field_D ||
             !ni.b(34))) {
-            if (!(nc.field_a >= 0) ||
+            if (!(WeightedLruCache.field_a >= 0) ||
               ni.b(11)) {
-              var2_int = vb.field_g;
+              var2_int = GzipDecoder.field_g;
               if (var2_int == 5 ||
                 var2_int == 6 ||
                 var2_int == 8) {
                 var2_int = SceneWidget.field_Jb;
               }
-              q.a(20, false, -1, var2_int);
+              IterableNodeHashTable.a(20, false, -1, var2_int);
               if (var3 == 0) {
                 return;
               }
             }
-            var2_intLifetime2 = vb.field_g;
+            var2_intLifetime2 = GzipDecoder.field_g;
             if (var2_intLifetime2 == 5 ||
               var2_intLifetime2 == 6 ||
               var2_intLifetime2 == 8) {
               var2_intLifetime2 = SceneWidget.field_Jb;
             }
-            q.a(19, false, -1, var2_intLifetime2);
+            IterableNodeHashTable.a(19, false, -1, var2_intLifetime2);
             if (var3 == 0) {
               return;
             }
           }
-          ol.field_Ub = ol.field_Ub + 1;
-          var2_intLifetime1 = vb.field_g;
+          QuickChatHelpDialog.field_Ub = QuickChatHelpDialog.field_Ub + 1;
+          var2_intLifetime1 = GzipDecoder.field_g;
           if (var2_intLifetime1 == 5 ||
             var2_intLifetime1 == 6 ||
             var2_intLifetime1 == 8) {
             var2_intLifetime1 = SceneWidget.field_Jb;
           }
-          q.a(20, false, -1, var2_intLifetime1);
+          IterableNodeHashTable.a(20, false, -1, var2_intLifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8478,7 +8478,7 @@ final class GameplayController {
                 var4[incrementValue$0] = var7_ref_mb;
               }
               var2[var7_ref_mb.teamId] = var2[var7_ref_mb.teamId] + (var7_ref_mb.field_vb - var7_ref_mb.field_Ab);
-              var7_ref_mb = (Sentinel) (var6.d(2));
+              var7_ref_mb = (Sentinel) (var6.next(2));
               continue;
             }
             break;
@@ -8649,7 +8649,7 @@ final class GameplayController {
           }
           var5_int = this.field_P;
           var6 = this.field_E;
-          SoftwareRaster.a(0, 0, 640, 400);
+          SoftwareRaster.setClip(0, 0, 640, 400);
           var7 = -(var6 >> 4) + 400;
           var8 = -var7 + 400;
           if (var8 < 30) {
@@ -8669,16 +8669,16 @@ final class GameplayController {
               var13 = 31 - (this.field_E >> 4);
               var13 = -180 + ((var13 * 3 - 720) / 10 + 240);
               if (null == un.field_o ||
-                h.field_T == null) {
+                DraggableWidget.field_T == null) {
                 im.field_h.fileRetentionMode = 0;
-                un.field_o = (RgbSprite) ((Object) new ek(im.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
-                h.field_T = (RgbSprite) ((Object) new ek(im.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+                un.field_o = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+                DraggableWidget.field_T = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               }
               if (null != un.field_o &&
-                h.field_T != null) {
+                DraggableWidget.field_T != null) {
                 un.field_o.f(var11, var13);
                 var11 = -(this.field_P >> 4) / 2;
-                h.field_T.f(var11, var13);
+                DraggableWidget.field_T.f(var11, var13);
               }
             }
             if (var9 != 0) {
@@ -8702,23 +8702,23 @@ final class GameplayController {
                 if (null == jh.field_h) {
                   im.field_h.fileRetentionMode = 0;
                   if (this.world.terrain.getTerrainType(55) == 0) {
-                    jh.field_h = new RgbSprite(im.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false)));
+                    jh.field_h = new RgbSprite(im.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                   if (1 == this.world.terrain.getTerrainType(79)) {
-                    jh.field_h = new RgbSprite(im.field_h.a("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) gl.a(false)));
+                    jh.field_h = new RgbSprite(im.field_h.a("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                   if (this.world.terrain.getTerrainType(63) == 2) {
-                    jh.field_h = new RgbSprite(im.field_h.a("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) gl.a(false)));
+                    jh.field_h = new RgbSprite(im.field_h.a("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                   if (this.world.terrain.getTerrainType(90) == 3) {
-                    jh.field_h = new RgbSprite(im.field_h.a("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) gl.a(false)));
+                    jh.field_h = new RgbSprite(im.field_h.a("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                 }
                 if (jh.field_h != null) {
-                  jh.field_h.c(var15, var16, 2 * var13Lifetime2, var13Lifetime2);
+                  jh.field_h.drawScaled(var15, var16, 2 * var13Lifetime2, var13Lifetime2);
                 }
                 if (this.world.terrain.getTerrainType(113) != 3 &&
-                  ka.field_V) {
+                  ModalStack.field_V) {
                   var12_ref_ie = new IsaacRandom(new int[]{this.world.mapSeed, this.world.mapSeed});
                   var13_ref_int__ = new int[]{24000, 24000, 10000, 26000};
                   var14Lifetime2 = var12_ref_ie.nextIntBounded(-95, var13_ref_int__.length);
@@ -8740,8 +8740,8 @@ final class GameplayController {
                     stackIn_78_1 = 2;
                     if (var27 == 0) {
                       if (stackIn_78_0 == stackIn_78_1 &&
-                        ig.field_o[this.world.terrain.getTerrainType(param0 - 38)][var14Lifetime2].field_F >= 300) {
-                        ig.field_o[this.world.terrain.getTerrainType(81)][var14Lifetime2].c(var18 - var16Lifetime2 / 2, var19, var16Lifetime2, var16Lifetime2);
+                        WhirlpoolHasher.field_o[this.world.terrain.getTerrainType(param0 - 38)][var14Lifetime2].field_F >= 300) {
+                        WhirlpoolHasher.field_o[this.world.terrain.getTerrainType(81)][var14Lifetime2].drawScaled(var18 - var16Lifetime2 / 2, var19, var16Lifetime2, var16Lifetime2);
                       }
                       var17 = var17 + var13_ref_int__[var14Lifetime2];
                       var14Lifetime2 = var14Lifetime2 + (var12_ref_ie.nextIntBounded(-107, var13_ref_int__.length - 1) + 1);
@@ -8759,7 +8759,7 @@ final class GameplayController {
                     var19Lifetime2 = var8 + var10Lifetime2 - var16Lifetime2;
                     var18Lifetime2 = 320 + (-320 + var18Lifetime2) * 5 / 20;
                     var19Lifetime2 = (var19Lifetime2 * 5 - 1200) / 20 + 80;
-                    ig.field_o[this.world.terrain.getTerrainType(101)][var14Lifetime2].c(var18Lifetime2 - var16Lifetime2 / 2, var19Lifetime2, var16Lifetime2, var16Lifetime2);
+                    WhirlpoolHasher.field_o[this.world.terrain.getTerrainType(101)][var14Lifetime2].drawScaled(var18Lifetime2 - var16Lifetime2 / 2, var19Lifetime2, var16Lifetime2, var16Lifetime2);
                     var17Lifetime2 = var17Lifetime2 + var13_ref_int__[var14Lifetime2];
                     var14Lifetime2 = var14Lifetime2 + (1 + var12_ref_ie.nextIntBounded(-122, -1 + var13_ref_int__.length));
                     stackIn_88_0 = ~var13_ref_int__.length;
@@ -8799,25 +8799,25 @@ final class GameplayController {
                   break;
                 }
                 if (stackIn_199_0 < stackIn_199_1) {
-                  var15Lifetime1 = sb.field_W.field_z;
+                  var15Lifetime1 = Checkbox.field_W.field_z;
                   if (var12Lifetime1 == 0) {
-                    sb.field_W.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
+                    Checkbox.field_W.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
                     var16Lifetime1 = this.world.simulationTick / 5 % 6;
                     if ((1 & this.world.field_v) == 0) {
-                      b.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
+                      DialWidgetPainter.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
                     }
                   }
                   if (1 == var12Lifetime1) {
-                    hb.field_e.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
+                    IterableDualNodeDeque.field_e.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
                     var16Lifetime1 = 6 + this.world.simulationTick / 5 % 6;
                     if ((2 & this.world.field_v) == 0) {
-                      b.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
+                      DialWidgetPainter.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
                     }
                   }
                 } else {
                   if (param3.field_j[var12Lifetime1] != -1) {
-                    var15Lifetime1 = kc.field_x[1][param3.field_j[var12Lifetime1]].field_z >> 2;
-                    kc.field_x[1][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                    var15Lifetime1 = DelayedServerPacket.field_x[1][param3.field_j[var12Lifetime1]].field_z >> 2;
+                    DelayedServerPacket.field_x[1][param3.field_j[var12Lifetime1]].drawScaled(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                   }
                 }
                 var12Lifetime1++;
@@ -8834,7 +8834,7 @@ final class GameplayController {
                   var11Lifetime1 = 400 - (this.field_E >> 4);
                   if (2 == param3.getTerrainType(54)) {
                     boolean decompiledFrameCompleted4 = true;
-                    if (ka.field_V) {
+                    if (ModalStack.field_V) {
                       var12Lifetime1 = 0;
                       while (!(var12Lifetime1 >= param3.field_c)) {
                         stackIn_135_0 = 1;
@@ -8843,8 +8843,8 @@ final class GameplayController {
                           if (stackIn_135_0 < stackIn_135_1) {
                             var13Lifetime1 = (param3.spawnPositions[var12Lifetime1] >> 4) + var10Lifetime1;
                             var14Lifetime1 = -(param3.field_h[var12Lifetime1] >> 4) + var11Lifetime1;
-                            var15Lifetime1 = kc.field_x[this.world.terrain.getTerrainType(param0 ^ 63)][param3.field_j[var12Lifetime1]].field_z >> 1;
-                            kc.field_x[this.world.terrain.getTerrainType(70)][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                            var15Lifetime1 = DelayedServerPacket.field_x[this.world.terrain.getTerrainType(param0 ^ 63)][param3.field_j[var12Lifetime1]].field_z >> 1;
+                            DelayedServerPacket.field_x[this.world.terrain.getTerrainType(70)][param3.field_j[var12Lifetime1]].drawScaled(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                           }
                           var12Lifetime1++;
                           continue;
@@ -8877,8 +8877,8 @@ final class GameplayController {
                         if (stackIn_157_0 >= stackIn_157_1) {
                           var13Lifetime1 = var10Lifetime1 + (param3.spawnPositions[var12Lifetime1] >> 4);
                           var14Lifetime1 = var11Lifetime1 - (param3.field_h[var12Lifetime1] >> 4);
-                          var15Lifetime1 = kc.field_x[this.world.terrain.getTerrainType(46)][param3.field_j[var12Lifetime1]].field_z >> 1;
-                          kc.field_x[this.world.terrain.getTerrainType(72)][param3.field_j[var12Lifetime1]].c(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                          var15Lifetime1 = DelayedServerPacket.field_x[this.world.terrain.getTerrainType(46)][param3.field_j[var12Lifetime1]].field_z >> 1;
+                          DelayedServerPacket.field_x[this.world.terrain.getTerrainType(72)][param3.field_j[var12Lifetime1]].drawScaled(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                         }
                         var12Lifetime1++;
                       }
@@ -8891,13 +8891,13 @@ final class GameplayController {
                   }
                   if ((decompiledFrameCompleted5) &&
                     (decompiledFrameCompleted3) &&
-                    (ka.field_V)) {
+                    (ModalStack.field_V)) {
                     var12Lifetime1 = 0;
                     while (!(param3.field_c <= var12Lifetime1)) {
                       var13Lifetime1 = (param3.spawnPositions[var12Lifetime1] >> 4) + var10Lifetime1;
                       var14Lifetime1 = var11Lifetime1 - (param3.field_h[var12Lifetime1] >> 4);
-                      var15Lifetime1 = kc.field_x[this.world.terrain.getTerrainType(param0 - 68)][param3.field_j[var12Lifetime1]].field_z >> 2;
-                      kc.field_x[this.world.terrain.getTerrainType(param0 ^ 65)][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                      var15Lifetime1 = DelayedServerPacket.field_x[this.world.terrain.getTerrainType(param0 - 68)][param3.field_j[var12Lifetime1]].field_z >> 2;
+                      DelayedServerPacket.field_x[this.world.terrain.getTerrainType(param0 ^ 65)][param3.field_j[var12Lifetime1]].drawScaled(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                       var12Lifetime1++;
                       if (var27 != 0) {
                         decompiledFrameCompleted2 = false;
@@ -8922,11 +8922,11 @@ final class GameplayController {
                 boolean decompiledFrameCompleted1 = true;
                 boolean decompiledFrameCompleted0 = true;
                 boolean decompiledFrameRemainder0 = true;
-                SoftwareRaster.a(0, 0, 640, 400);
-                var12_ref_wk = bc.field_rb[this.world.terrain.getTerrainType(109)];
+                SoftwareRaster.setClip(0, 0, 640, 400);
+                var12_ref_wk = ValidatedTextWidget.field_rb[this.world.terrain.getTerrainType(109)];
                 var13Lifetime1 = 128;
                 var14Lifetime1 = var7 + 1;
-                if (!ka.field_V) {
+                if (!ModalStack.field_V) {
                   var15Lifetime1 = 0;
                   while (var15Lifetime1 < 640) {
                     var16Lifetime1 = var5_int + (var15Lifetime1 << 4);
@@ -8974,11 +8974,11 @@ final class GameplayController {
                       stackIn_190_0 = -1;
                       stackIn_190_1 = ~var21;
                       if (stackIn_190_0 >= stackIn_190_1) {
-                        var23 = sb.field_bb.field_a[var21];
+                        var23 = Checkbox.field_bb.field_a[var21];
                         var24 = var22 * (16711680 & var23) >> 8 & 16711680;
                         var25 = var22 * (65280 & var23) >> 8 & 65280;
                         var26 = var22 * (var23 & 255) >> 8 & 255;
-                        sb.field_bb.field_a[var21] = var24 + var25 + var26;
+                        Checkbox.field_bb.field_a[var21] = var24 + var25 + var26;
                         var21 -= 640;
                         var22 += 4;
                         continue;
@@ -8988,10 +8988,10 @@ final class GameplayController {
                     stackIn_190_0Lifetime1 = var18Lifetime1Lifetime1;
                     stackIn_190_1Lifetime1 = var17Lifetime1;
                     if (stackIn_190_0Lifetime1 > stackIn_190_1Lifetime1) {
-                      SoftwareRaster.a(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), 1 + var15Lifetime1, 400 - (var17Lifetime1 >> 4));
-                      var12_ref_wk.c(-((4095 & var16Lifetime1) >> 1) + var15Lifetime1, var7 - var13Lifetime1, 2048, var13Lifetime1);
-                      var12_ref_wk.c(var15Lifetime1 - ((4095 & var16Lifetime1) >> 1), var7 - var13Lifetime1 * 2, 2048, var13Lifetime1);
-                      var12_ref_wk.c(-((4095 & var16Lifetime1) >> 1) + var15Lifetime1, var7, 2048, var13Lifetime1);
+                      SoftwareRaster.setClip(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), 1 + var15Lifetime1, 400 - (var17Lifetime1 >> 4));
+                      var12_ref_wk.drawScaled(-((4095 & var16Lifetime1) >> 1) + var15Lifetime1, var7 - var13Lifetime1, 2048, var13Lifetime1);
+                      var12_ref_wk.drawScaled(var15Lifetime1 - ((4095 & var16Lifetime1) >> 1), var7 - var13Lifetime1 * 2, 2048, var13Lifetime1);
+                      var12_ref_wk.drawScaled(-((4095 & var16Lifetime1) >> 1) + var15Lifetime1, var7, 2048, var13Lifetime1);
                       SoftwareRaster.f(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), -(var17Lifetime1 - var19Lifetime1Lifetime1 >> 4) + 400 + 1, 0, 192);
                     }
                     var15Lifetime1++;
@@ -9017,11 +9017,11 @@ final class GameplayController {
               var13Lifetime1Lifetime1 = (var12Lifetime1Lifetime1 >> 5) + var10Lifetime1Lifetime1;
               var14Lifetime1Lifetime1 = var11Lifetime1Lifetime1;
               var14Lifetime1Lifetime1 += 384;
-              var15Lifetime1Lifetime1 = sb.field_W.field_z;
-              var16Lifetime1Lifetime1 = sb.field_W.field_B;
-              sb.field_W.a(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(3 * var16Lifetime1Lifetime1 / 2) + var14Lifetime1Lifetime1);
+              var15Lifetime1Lifetime1 = Checkbox.field_W.field_z;
+              var16Lifetime1Lifetime1 = Checkbox.field_W.field_B;
+              Checkbox.field_W.a(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(3 * var16Lifetime1Lifetime1 / 2) + var14Lifetime1Lifetime1);
               var17Lifetime1Lifetime1 = this.world.simulationTick / 5 % 6;
-              b.field_n[var17Lifetime1Lifetime1].d(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(var15Lifetime1Lifetime1 / 2) + (var14Lifetime1Lifetime1 - 3 * var16Lifetime1Lifetime1 / 4), var15Lifetime1Lifetime1, var15Lifetime1Lifetime1, 64);
+              DialWidgetPainter.field_n[var17Lifetime1Lifetime1].d(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(var15Lifetime1Lifetime1 / 2) + (var14Lifetime1Lifetime1 - 3 * var16Lifetime1Lifetime1 / 4), var15Lifetime1Lifetime1, var15Lifetime1Lifetime1, 64);
             }
           }
           if (this.world.field_fb) {
@@ -9065,7 +9065,7 @@ final class GameplayController {
         try {
           if (!this.world.field_j) {
             if (oh.field_f < 0 &&
-              pi.field_c < 0) {
+              DelegatingCanvas.field_c < 0) {
               return;
             }
             if (param2 > -19) {
@@ -9246,22 +9246,22 @@ final class GameplayController {
         try {
           var2_int = 41;
           var3 = 1021128;
-          ic.field_db.f(0, -ic.field_db.field_B + var2_int);
+          MidiPcmStream.field_db.f(0, -MidiPcmStream.field_db.field_B + var2_int);
           if (this.field_r == -1 &&
             oh.field_f >= 479 &&
             635 > oh.field_f &&
-            pi.field_c >= 2 &&
-            pi.field_c < 30) {
+            DelegatingCanvas.field_c >= 2 &&
+            DelegatingCanvas.field_c < 30) {
             var3 = 1044724;
             this.field_r = 6;
           }
-          DualNodeDeque.a(var3, 2, pl.field_U, 479, 156, (byte) 68, ha.field_S, 28);
+          DualNodeDeque.a(var3, 2, pl.field_U, 479, 156, (byte) 68, DateInputWidget.field_S, 28);
           var3 = 1021128;
           if (this.field_r == -1 &&
             oh.field_f >= 173 &&
             oh.field_f < 321 &&
-            pi.field_c >= 2 &&
-            pi.field_c < 30) {
+            DelegatingCanvas.field_c >= 2 &&
+            DelegatingCanvas.field_c < 30) {
             this.field_r = 12;
             var3 = 1044724;
           }
@@ -9271,8 +9271,8 @@ final class GameplayController {
           if (this.field_r == -1 &&
             oh.field_f >= 5 &&
             oh.field_f < 171 &&
-            pi.field_c >= 2 &&
-            pi.field_c < 30) {
+            DelegatingCanvas.field_c >= 2 &&
+            DelegatingCanvas.field_c < 30) {
             var3 = 1044724;
             this.field_r = 13;
           }
@@ -9307,7 +9307,7 @@ final class GameplayController {
             if (decompiledNaturalLoopExit0) {
               var7 = var7 + (-this.field_s + (32 + this.field_v));
               SoftwareRaster.a(5, var2_int, 166, var7 - var2_int, 0);
-              ei.a(5, var7, 166, 8, -96);
+              NameAvailabilityValidator.a(5, var7, 166, 8, -96);
               var8 = 50;
               stackIn_62_0 = 2;
               stackIn_62_1 = var7;
@@ -9319,21 +9319,21 @@ final class GameplayController {
                 var7 += 8;
                 break;
               }
-              ao.field_y.a(var8, var9);
+              QuickChatPhraseDefinition.field_y.a(var8, var9);
               var8 += 10;
               var10++;
             } while (var20 == 0);
             if (-1 == this.field_r &&
               oh.field_f >= 5 &&
               oh.field_f < 171 &&
-              pi.field_c >= var2_int &&
-              pi.field_c < var7) {
+              DelegatingCanvas.field_c >= var2_int &&
+              DelegatingCanvas.field_c < var7) {
               this.field_r = 26;
             }
             stackIn_89_0 = (12 > this.world.sentinels.size((byte) -128)) ? 0 : 1;
             var8 = stackIn_89_0;
-            var9 = oe.field_i;
-            oe.field_i = -1;
+            var9 = QuickChatPhraseCache.field_i;
+            QuickChatPhraseCache.field_i = -1;
             var10 = 0;
             while (var10 < var6.length) {
               var11 = this.field_o[var10];
@@ -9351,37 +9351,37 @@ final class GameplayController {
                   ~this.field_s == ~this.field_v &&
                   var11 <= oh.field_f &&
                   oh.field_f < var11 + 80 &&
-                  pi.field_c >= var12 &&
-                  30 + var12 > pi.field_c) {
+                  DelegatingCanvas.field_c >= var12 &&
+                  30 + var12 > DelegatingCanvas.field_c) {
                   var3 = 1044724;
                   this.field_r = 14 + var10;
-                  oe.field_i = var10;
-                  if (var9 != oe.field_i) {
-                    nc.field_f = a.field_c;
+                  QuickChatPhraseCache.field_i = var10;
+                  if (var9 != QuickChatPhraseCache.field_i) {
+                    WeightedLruCache.field_f = MouseWheelInput.field_c;
                   }
-                  var13 = (-nc.field_f + a.field_c) / 7 % 15;
+                  var13 = (-WeightedLruCache.field_f + MouseWheelInput.field_c) / 7 % 15;
                 }
                 if (var8 != 0) {
                   var3 = 7829367;
                 }
-                a.a(var12, var11, 30, 90, 80);
+                MouseWheelInput.a(var12, var11, 30, 90, 80);
                 var14 = 28;
                 var15 = var11 + 2;
                 var16 = 1 + var12;
                 SoftwareRaster.g(var15, var16, var14, var14, 4, 0);
                 SoftwareRaster.h(var15, 1 + var16, var15 + var14, var14 + var16);
-                var17_ref_wk = si.field_E[var10];
+                var17_ref_wk = CachedTextLayout.field_E[var10];
                 var18_int = var13 % 4 * var14;
                 var19 = var14 * (var13 / 4);
-                var17_ref_wk.c(var15 - var18_int, -var19 + var16, 4 * var14, 4 * var14);
+                var17_ref_wk.drawScaled(var15 - var18_int, -var19 + var16, 4 * var14, 4 * var14);
                 SoftwareRaster.a(var5);
-                var17 = var12 + (30 + fk.field_d.field_G) / 2 - 3;
+                var17 = var12 + (30 + BoundedUrlRequest.field_d.field_G) / 2 - 3;
                 var18 = cd.field_c[var10];
-                var19Lifetime1 = fk.field_d.c(var18);
+                var19Lifetime1 = BoundedUrlRequest.field_d.textWidth(var18);
                 if ((80 - var14 - 6) >= var19Lifetime1) {
-                  fk.field_d.a(var18, var11 + (80 + var14) / 2, var17, var3, -1);
+                  BoundedUrlRequest.field_d.drawCentered(var18, var11 + (80 + var14) / 2, var17, var3, -1);
                 } else {
-                  fk.field_d.c(var18, -1 + (var11 + 80), var17, var3, -1);
+                  BoundedUrlRequest.field_d.c(var18, -1 + (var11 + 80), var17, var3, -1);
                 }
               }
               var10++;
@@ -9394,7 +9394,7 @@ final class GameplayController {
             stackIn_131_0 = -1;
           }
           if (stackIn_131_0 == this.field_r &&
-            var2_int > pi.field_c) {
+            var2_int > DelegatingCanvas.field_c) {
             this.field_r = 26;
           }
           return;
@@ -9426,7 +9426,7 @@ final class GameplayController {
         Object var4 = null;
         Object var5 = null;
         int var6_int = 0;
-        ld var6 = null;
+        PaletteBitmapFont var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -9476,16 +9476,16 @@ final class GameplayController {
               (decompiledFrameRemainder3 = (var21 == 0))) {
               if (1 == this.world.playerCount) {
                 var5 = vd.field_e[2];
-                var4 = a.field_b;
+                var4 = MouseWheelInput.field_b;
               } else {
-                var4 = de.field_b;
+                var4 = LoginMethod.field_b;
                 var5 = vd.field_e[3];
               }
               decompiledFrameRemainder4 = false;
             }
             if ((decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3)) {
-              var4 = ag.field_t;
+              var4 = GradientOutlineTextPainter.field_t;
               var5 = vd.field_e[1];
               decompiledFrameRemainder4 = false;
             }
@@ -9493,7 +9493,7 @@ final class GameplayController {
           if (decompiledFrameRemainder4) {
             var5 = vd.field_e[0];
             if (di.field_g != 4) {
-              var4 = vn.field_k;
+              var4 = DateOfBirthValidator.field_k;
             } else {
               var4 = na.field_u;
             }
@@ -9519,45 +9519,45 @@ final class GameplayController {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            var5 = (String) (var5) + nh.field_o[0];
+            var5 = (String) (var5) + Bzip2State.field_o[0];
             decompiledFrameRemainder2 = (var21 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            var5 = (String) (var5) + nh.field_o[1];
+            var5 = (String) (var5) + Bzip2State.field_o[1];
             decompiledFrameRemainder2 = (var21 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            var5 = (String) (var5) + nh.field_o[2];
+            var5 = (String) (var5) + Bzip2State.field_o[2];
             decompiledFrameRemainder2 = (var21 != 0);
           }
           if ((decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            var5 = (String) (var5) + nh.field_o[3];
+            var5 = (String) (var5) + Bzip2State.field_o[3];
             decompiledFrameRemainder2 = (var21 != 0);
           }
           if (decompiledFrameRemainder2) {
-            var5 = (String) (var5) + nh.field_o[4];
+            var5 = (String) (var5) + Bzip2State.field_o[4];
           }
           if (di.field_g == 4) {
             var5 = null;
           }
-          ic.field_db.f(0, -115 + CipherPacketBuffer.field_w);
+          MidiPcmStream.field_db.f(0, -115 + CipherPacketBuffer.field_w);
           if (this.world.field_W ||
             !(0 > this.world.field_A)) {
             SoftwareRaster.b(639, -58 + CipherPacketBuffer.field_w, 16776960);
           }
-          var4 = ke.a(42, (String) (var4));
-          var6 = ql.field_Tb;
+          var4 = WidgetStyleLayer.a(42, (String) (var4));
+          var6 = SocialListPanel.field_Tb;
           if (param0 != -4294) {
             GameplayController.b((byte) 5);
           }
           if (var4 != null) {
-            ((BitmapFont) ((Object) var6)).a((String) (var4), 320, CipherPacketBuffer.field_w - 83 + ((BitmapFont) ((Object) var6)).field_G / 2, 0, -1);
+            ((BitmapFont) ((Object) var6)).drawCentered((String) (var4), 320, CipherPacketBuffer.field_w - 83 + ((BitmapFont) ((Object) var6)).field_G / 2, 0, -1);
           }
           if (0 >= var3) {
             stackIn_74_0 = this.world.computerPlayerCount + this.world.playerCount;
@@ -9828,7 +9828,7 @@ final class GameplayController {
             pl.field_U.a((String) (var5), 100, -CipherPacketBuffer.field_w + 500, 440, 100, 1021128, -1, 1, 0, pl.field_U.field_U + 6);
           }
           if (this.field_h &&
-            nm.a(-CipherPacketBuffer.field_w + 541, 280, param0 + 4418, ja.field_c, 30, 80)) {
+            EmailAvailabilityValidator.a(-CipherPacketBuffer.field_w + 541, 280, param0 + 4418, ja.field_c, 30, 80)) {
             this.field_r = 27;
           }
           return;
@@ -9855,7 +9855,7 @@ final class GameplayController {
         try {
           if (0 <= this.field_r &&
             this.field_r != 26) {
-            var2 = new int[][]{ua.field_v, ua.field_x, ua.field_P, ua.field_z, ua.field_N, ua.field_O, ua.field_D, ua.field_J, ua.field_E, vk.field_s, jm.field_p, si.field_k};
+            var2 = new int[][]{ReflectionCheck.field_v, ReflectionCheck.field_x, ReflectionCheck.field_P, ReflectionCheck.field_z, ReflectionCheck.field_N, ReflectionCheck.field_O, ReflectionCheck.field_D, ReflectionCheck.field_J, ReflectionCheck.field_E, Js5Transport.field_s, jm.field_p, CachedTextLayout.field_k};
             var3 = 0;
             if (this.field_r >= 14 &&
               this.field_r < (14 + var2.length)) {
@@ -9887,13 +9887,13 @@ final class GameplayController {
                 hl.field_v = SentinelDesigner.a(uc.field_b, (byte) 0, di.field_c);
                 lc.field_e = true;
                 Sprite.field_k = false;
-                var5 = vb.field_g;
+                var5 = GzipDecoder.field_g;
                 if (var5 == 5 ||
                   var5 == 6 ||
                   var5 == 8) {
                   var5 = SceneWidget.field_Jb;
                 }
-                q.a(14, false, -1, var5);
+                IterableNodeHashTable.a(14, false, -1, var5);
                 if (var9 == 0) {
                   return;
                 }
@@ -9901,26 +9901,26 @@ final class GameplayController {
                 lc.field_e = true;
                 Sprite.field_k = false;
                 if (fm.field_f[0] < 10) {
-                  ol.field_Ub = fm.field_f[0];
-                  ge.field_j = 0;
-                  var5 = vb.field_g;
+                  QuickChatHelpDialog.field_Ub = fm.field_f[0];
+                  DirectByteStorage.field_j = 0;
+                  var5 = GzipDecoder.field_g;
                   if (var5 == 5 ||
                     var5 == 6 ||
                     8 == var5) {
                     var5 = SceneWidget.field_Jb;
                   }
-                  q.a(20, false, -1, var5);
+                  IterableNodeHashTable.a(20, false, -1, var5);
                   if (var9 == 0) {
                     return;
                   }
                 }
-                var5 = vb.field_g;
+                var5 = GzipDecoder.field_g;
                 if (5 == var5 ||
                   var5 == 6 ||
                   var5 == 8) {
                   var5 = SceneWidget.field_Jb;
                 }
-                q.a(19, false, -1, var5);
+                IterableNodeHashTable.a(19, false, -1, var5);
                 if (var9 == 0) {
                   return;
                 }
@@ -9932,9 +9932,9 @@ final class GameplayController {
                 var6 = -100000;
                 var7 = new Sentinel(var5, var6, this.world);
                 var8 = var2[var3];
-                if (var8 == ua.field_v &&
+                if (var8 == ReflectionCheck.field_v &&
                   t.a(rn.field_D, 49, -20370)) {
-                  var8 = pg.field_z;
+                  var8 = AlternateUsernameCredentials.field_z;
                 }
                 var7.configureDesign(var8, true, false, -1, 1);
                 var7.field_Nb = 7;
@@ -9947,7 +9947,7 @@ final class GameplayController {
                 }
               case 8:
                 di.field_g = 0 + var3;
-                qh.field_Yb = 0;
+                IconTextComponent.field_Yb = 0;
                 this.j((byte) -123);
                 if (var9 == 0) {
                   return;
@@ -9999,18 +9999,18 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          pm.field_db.clear(6);
+          LoginForm.field_db.clear(6);
           ri.field_b = null;
           hf.field_c = 0;
           this.world.pendingParticles.clear(6);
           this.world.particles.clear(6);
-          db.c(10000);
+          SocketConnector.c(10000);
           jh.field_h = null;
           if (param0 >= -60) {
             this.g(109);
           }
           un.field_o = null;
-          h.field_T = null;
+          DraggableWidget.field_T = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10054,11 +10054,11 @@ final class GameplayController {
             stackIn_7_0 = stackOut_6_0;
             if (var11 == 0) {
               if (stackIn_7_0) {
-                od.field_c[var5].d(var6, param1);
+                ClientException.field_c[var5].drawQuarterSize(var6, param1);
                 if (var6 <= oh.field_f &&
                   (var6 + 32) > oh.field_f &&
-                  pi.field_c >= param1 &&
-                  pi.field_c < (param1 + 32)) {
+                  DelegatingCanvas.field_c >= param1 &&
+                  DelegatingCanvas.field_c < (param1 + 32)) {
                   var7 = var5;
                   var8 = var6 + 16;
                 }
@@ -10074,8 +10074,8 @@ final class GameplayController {
             stackIn_28_0 = -1;
           }
           if (stackIn_28_0 >= ~var7) {
-            var9 = jg.field_t[var7];
-            var10 = ff.field_lb.c(var9) + 4;
+            var9 = ViewportController.field_t[var7];
+            var10 = ValidationHelpWidget.field_lb.textWidth(var9) + 4;
             var6Lifetime1 = var8 - var10 / 2;
             if (var6Lifetime1 < 10) {
               var6Lifetime1 = 10;
@@ -10084,8 +10084,8 @@ final class GameplayController {
             if (630 < var6Lifetime1 + var10) {
               var6Lifetime1 = 630 - var10;
             }
-            SoftwareRaster.c(var6Lifetime1 - 3, -ff.field_lb.field_U + (param1 - 3), var10, ff.field_lb.field_U + (ff.field_lb.field_F + 3), 0, 128);
-            ff.field_lb.b(var9, var6Lifetime1, param1, 16777215, -1);
+            SoftwareRaster.c(var6Lifetime1 - 3, -ValidationHelpWidget.field_lb.field_U + (param1 - 3), var10, ValidationHelpWidget.field_lb.field_U + (ValidationHelpWidget.field_lb.field_F + 3), 0, 128);
+            ValidationHelpWidget.field_lb.drawLeft(var9, var6Lifetime1, param1, 16777215, -1);
           }
           stackIn_39_0 = var7;
           return stackIn_39_0;
@@ -10098,9 +10098,9 @@ final class GameplayController {
 
     private final void a(int param0, int param1, int param2) {
         String stackIn_52_0 = null;
-        fh stackIn_88_0 = null;
+        BinaryBitmapFont stackIn_88_0 = null;
         String stackIn_89_1 = null;
-        fh stackIn_92_0 = null;
+        BinaryBitmapFont stackIn_92_0 = null;
         String stackIn_93_1 = null;
         Sentinel stackIn_96_0 = null;
         int stackIn_96_1 = 0;
@@ -10135,8 +10135,8 @@ final class GameplayController {
           boolean decompiledFrameRemainder0 = true;
           var4_int = 0;
           var5 = -1;
-          if (pi.field_c >= (-2 + param0) &&
-            pi.field_c < (12 + param0) &&
+          if (DelegatingCanvas.field_c >= (-2 + param0) &&
+            DelegatingCanvas.field_c < (12 + param0) &&
             this.controlledSentinel.field_ub >= 0 &&
             oh.field_f >= (-40 + param1)) {
             if ((param1 - 13) <= oh.field_f) {
@@ -10186,7 +10186,7 @@ final class GameplayController {
               var5Lifetime1 = -1;
             }
           }
-          s.a(var4_intLifetime1, true, true, param0 + 6, param1 - 19, var5Lifetime1);
+          SpriteCheckboxPainter.a(var4_intLifetime1, true, true, param0 + 6, param1 - 19, var5Lifetime1);
           if (0 <= this.controlledSentinel.field_ub) {
             if (this.controlledSentinel.field_U == 0) {
               var5Lifetime2 = -1;
@@ -10211,21 +10211,21 @@ final class GameplayController {
           }
           regionExit1: {
             boolean decompiledFrameCompleted0 = true;
-            if (!sn.field_o.equals("X") ||
+            if (!BoundedRandomAccessFile.field_o.equals("X") ||
               dm.field_c) {
               if (dm.field_c) {
-                stackIn_52_0 = b.field_p;
+                stackIn_52_0 = DialWidgetPainter.field_p;
               } else {
-                stackIn_52_0 = sn.field_o;
+                stackIn_52_0 = BoundedRandomAccessFile.field_o;
               }
               var6_ref_String = stackIn_52_0;
               if (var4_intLifetime2 != -1) {
                 SoftwareRaster.a(param1 - 8, param0 + 1, 15, 11, var4_intLifetime2);
-                fk.field_d.a(var6_ref_String, param1, 10 + param0, 0, -1);
+                BoundedUrlRequest.field_d.drawCentered(var6_ref_String, param1, 10 + param0, 0, -1);
               }
               if (var4_intLifetime2 == -1 ||
                 0 == var4_intLifetime2) {
-                fk.field_d.a(var6_ref_String, param1, param0 + 10, 1021128, -1);
+                BoundedUrlRequest.field_d.drawCentered(var6_ref_String, param1, param0 + 10, 1021128, -1);
               }
               if (-1 != var5Lifetime2) {
                 SoftwareRaster.h(param1 - 8, param0 + 1, 15, 11, var5Lifetime2);
@@ -10300,22 +10300,22 @@ final class GameplayController {
               var5Lifetime3 = -1;
             }
           }
-          s.a(var4_intLifetime3, true, false, 6 + param0, param1 + 17, var5Lifetime3);
-          stackIn_88_0 = fk.field_d;
+          SpriteCheckboxPainter.a(var4_intLifetime3, true, false, 6 + param0, param1 + 17, var5Lifetime3);
+          stackIn_88_0 = BoundedUrlRequest.field_d;
           if (!dm.field_c) {
             stackIn_89_1 = gm.field_a;
           } else {
-            stackIn_89_1 = lk.field_X;
+            stackIn_89_1 = ValidationIndicator.field_X;
           }
-          ((fh) (Object) stackIn_88_0).b(stackIn_89_1, param1 + 29, 10 + param0, 1021128, -1);
-          stackIn_92_0 = fk.field_d;
+          ((BinaryBitmapFont) (Object) stackIn_88_0).drawLeft(stackIn_89_1, param1 + 29, 10 + param0, 1021128, -1);
+          stackIn_92_0 = BoundedUrlRequest.field_d;
           if (!dm.field_c) {
             stackIn_93_1 = fm.field_i;
           } else {
             stackIn_93_1 = cl.field_g;
           }
-          ((fh) (Object) stackIn_92_0).c(stackIn_93_1, param1 - 29, 10 + param0, 1021128, -1);
-          SoftwareRaster.a(0, 423, 640, 480);
+          ((BinaryBitmapFont) (Object) stackIn_92_0).c(stackIn_93_1, param1 - 29, 10 + param0, 1021128, -1);
+          SoftwareRaster.setClip(0, 423, 640, 480);
           stackIn_96_0 = this.controlledSentinel;
           stackIn_96_1 = param1;
           stackIn_96_2 = 256;
@@ -10348,36 +10348,36 @@ final class GameplayController {
         var6 = SteelSentinels.obfuscationControl;
         try {
           if (di.field_g == 7 &&
-            dl.field_M == 1 &&
+            UiContainer.field_M == 1 &&
             this.world.f(param0 ^ 1613)) {
-            dl.field_M = dl.field_M + 1;
+            UiContainer.field_M = UiContainer.field_M + 1;
           }
           tj.field_c = 0;
           var2_int = ec.field_c[di.field_g + 0];
-          if (dl.field_M >= var2_int) {
+          if (UiContainer.field_M >= var2_int) {
             return;
           }
-          dl.field_M = dl.field_M + 1;
+          UiContainer.field_M = UiContainer.field_M + 1;
           sh.field_d = 0;
           if (di.field_g == 1 &&
-            6 == dl.field_M) {
-            dl.field_M = dl.field_M + 1;
+            6 == UiContainer.field_M) {
+            UiContainer.field_M = UiContainer.field_M + 1;
           }
           if (param0 != -1589) {
             this.a((byte) -52, true);
           }
-          if (var2_int <= dl.field_M) {
+          if (var2_int <= UiContainer.field_M) {
             this.world.field_j = true;
-            if (nc.field_a < 0) {
-              nc.field_a = 1;
+            if (WeightedLruCache.field_a < 0) {
+              WeightedLruCache.field_a = 1;
             }
           }
-          if (dl.field_M > qh.field_Yb) {
+          if (UiContainer.field_M > IconTextComponent.field_Yb) {
             boolean decompiledFrameRemainder6 = true;
             boolean decompiledFrameRemainder5 = true;
             boolean decompiledFrameRemainder4 = true;
             boolean decompiledFrameRemainder3 = true;
-            qh.field_Yb = dl.field_M;
+            IconTextComponent.field_Yb = UiContainer.field_M;
             PartInstruction.field_g = 500;
             var3 = di.field_g;
             if (0 == var3) {
@@ -10385,7 +10385,7 @@ final class GameplayController {
                 regionExit2: {
                   regionExit3: {
                     regionExit4: {
-                      var3 = qh.field_Yb;
+                      var3 = IconTextComponent.field_Yb;
                       if (var3 != 4) {
                         switch (var3) {
                           case 7:
@@ -10482,11 +10482,11 @@ final class GameplayController {
                   return;
                 }
               }
-              mj.a(0, 0, 1200, 0, 0, 0, 0, (byte) -65);
-              if (0 != vn.field_o) {
+              TabbedPanel.a(0, 0, 1200, 0, 0, 0, 0, (byte) -65);
+              if (0 != DateOfBirthValidator.field_o) {
                 return;
               }
-              vn.field_o = 1;
+              DateOfBirthValidator.field_o = 1;
               if (var6 == 0) {
                 return;
               }
@@ -10506,7 +10506,7 @@ final class GameplayController {
               (decompiledFrameRemainder3)) {
               boolean decompiledFrameRemainder2 = true;
               regionExit5: {
-                var3 = qh.field_Yb;
+                var3 = IconTextComponent.field_Yb;
                 if ((var3 != 2 ||
                   var6 != 0) &&
                   (decompiledFrameRemainder2 = (var3 != 3))) {
@@ -10555,7 +10555,7 @@ final class GameplayController {
                                   if (var6 != 0) {
                                     break regionExit5;
                                   }
-                                  mj.a(0, 0, 1200, 1, 0, 0, 0, (byte) -65);
+                                  TabbedPanel.a(0, 0, 1200, 1, 0, 0, 0, (byte) -65);
                                   return;
                               }
                             }
@@ -10629,8 +10629,8 @@ final class GameplayController {
                     }
                     this.j((byte) -123);
                     SentinelCommand.field_o = 150;
-                    hb.field_f = false;
-                    fk.field_c = true;
+                    IterableDualNodeDeque.field_f = false;
+                    BoundedUrlRequest.field_c = true;
                     var3 = 147000;
                     var4 = -150000;
                     var5 = new Sentinel(var3, var4, this.world);
@@ -10650,7 +10650,7 @@ final class GameplayController {
                   var4_ref_mb = (Sentinel) (var3_ref_jc.b(2));
                   while (var4_ref_mb != null) {
                     var4_ref_mb.field_o = -1;
-                    var4_ref_mb = (Sentinel) (var3_ref_jc.d(param0 + 1591));
+                    var4_ref_mb = (Sentinel) (var3_ref_jc.next(param0 + 1591));
                     if (var6 != 0) {
                       return;
                     }
@@ -10693,7 +10693,7 @@ final class GameplayController {
               (decompiledFrameRemainder4)) {
               regionExit10: {
                 regionExit11: {
-                  var3 = qh.field_Yb;
+                  var3 = IconTextComponent.field_Yb;
                   if (var3 == 1) {
                     var4 = -100000;
                     var3 = 20000;
@@ -10755,8 +10755,8 @@ final class GameplayController {
                   }
                 }
                 SentinelCommand.field_o = 150;
-                hb.field_f = false;
-                fk.field_c = true;
+                IterableDualNodeDeque.field_f = false;
+                BoundedUrlRequest.field_c = true;
                 var4 = -100000;
                 var3 = 142000;
                 var5 = new Sentinel(var3, var4, this.world);
@@ -10786,7 +10786,7 @@ final class GameplayController {
                   return;
                 }
               }
-              mj.a(0, 0, 1200, 7, 0, 0, 0, (byte) -65);
+              TabbedPanel.a(0, 0, 1200, 7, 0, 0, 0, (byte) -65);
               if (var6 == 0) {
                 return;
               }
@@ -10794,7 +10794,7 @@ final class GameplayController {
             if ((decompiledFrameRemainder6) &&
               (decompiledFrameRemainder5)) {
               boolean decompiledFrameRemainder0 = true;
-              var3 = qh.field_Yb;
+              var3 = IconTextComponent.field_Yb;
               if (var3 == 4) {
                 var4 = -100000;
                 var3 = 25000;
@@ -10892,19 +10892,19 @@ final class GameplayController {
                   return;
                 }
               }
-              mj.a(0, 0, 1200, 3, 0, 0, 0, (byte) -65);
+              TabbedPanel.a(0, 0, 1200, 3, 0, 0, 0, (byte) -65);
               if (var6 == 0) {
                 return;
               }
             }
             if (decompiledFrameRemainder6) {
-              var3 = qh.field_Yb;
+              var3 = IconTextComponent.field_Yb;
               if (var3 == 1) {
                 var3_ref_jc = new NodeIterator(this.world.sentinels);
                 var4_ref_mb = (Sentinel) (var3_ref_jc.b(2));
                 while (var4_ref_mb != null) {
                   var4_ref_mb.field_o = -1;
-                  var4_ref_mb = (Sentinel) (var3_ref_jc.d(param0 + 1591));
+                  var4_ref_mb = (Sentinel) (var3_ref_jc.next(param0 + 1591));
                   if (var6 != 0) {
                     return;
                   }
@@ -10912,8 +10912,8 @@ final class GameplayController {
                 return;
               }
               if (2 == var3) {
-                fk.field_c = true;
-                hb.field_f = false;
+                BoundedUrlRequest.field_c = true;
+                IterableDualNodeDeque.field_f = false;
                 SentinelCommand.field_o = 150;
                 var4 = -100000;
                 var3 = 25000;
@@ -10948,7 +10948,7 @@ final class GameplayController {
                   return;
                 }
               }
-              mj.a(0, 0, 1200, 5, 0, 0, 0, (byte) -65);
+              TabbedPanel.a(0, 0, 1200, 5, 0, 0, 0, (byte) -65);
               if (var6 == 0) {
                 return;
               }
@@ -10956,7 +10956,7 @@ final class GameplayController {
             regionExit12: {
               regionExit13: {
                 regionExit14: {
-                  var3 = qh.field_Yb;
+                  var3 = IconTextComponent.field_Yb;
                   if (var3 != 1) {
                     switch (var3) {
                       case 3:
@@ -11002,21 +11002,21 @@ final class GameplayController {
               var4 = -100000;
               var5 = new Sentinel(var3, var4, this.world);
               var5.velocityY = -100;
-              var5.configureDesign(bb.field_S, true, false, -1, 1);
+              var5.configureDesign(ModalPanel.field_S, true, false, -1, 1);
               var5.field_Nb = 2;
               var5.field_pc = false;
               var3 = 105000;
               this.world.sentinels.addLast(3, var5);
               var5 = new Sentinel(var3, var4, this.world);
               var5.velocityY = -100;
-              var5.configureDesign(bb.field_S, true, false, -1, 1);
+              var5.configureDesign(ModalPanel.field_S, true, false, -1, 1);
               var5.field_Nb = 2;
               var5.field_pc = false;
               var3 = 205000;
               this.world.sentinels.addLast(3, var5);
               var5 = new Sentinel(var3, var4, this.world);
               var5.velocityY = -100;
-              var5.configureDesign(bb.field_S, true, false, -1, 1);
+              var5.configureDesign(ModalPanel.field_S, true, false, -1, 1);
               var5.field_Nb = 2;
               var5.field_pc = false;
               this.world.sentinels.addLast(3, var5);
@@ -11024,7 +11024,7 @@ final class GameplayController {
                 return;
               }
             }
-            mj.a(0, 0, 1200, 9, 0, 0, 0, (byte) -65);
+            TabbedPanel.a(0, 0, 1200, 9, 0, 0, 0, (byte) -65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11093,7 +11093,7 @@ final class GameplayController {
                 var4++;
                 var3[incrementValue$1] = var6_ref_mb;
               }
-              var6_ref_mb = (Sentinel) (var5.d(2));
+              var6_ref_mb = (Sentinel) (var5.next(2));
               continue;
             }
             break;
@@ -11211,33 +11211,33 @@ final class GameplayController {
           if (null != var10) {
             SoftwareRaster.c(param5, 8 + (param6 - (-var9_int - 20)), param1, 20, 0, 150);
           }
-          var11 = hj.field_w;
+          var11 = MusicPatchNode.field_w;
           var12 = -4 + Math.min(param1, var9_int);
-          hj.field_w = 6400 * var12 / param0;
-          SoftwareRaster.a(param5, param6, param1 + param5, var9_int + param6);
+          MusicPatchNode.field_w = 6400 * var12 / param0;
+          SoftwareRaster.setClip(param5, param6, param1 + param5, var9_int + param6);
           param3.chassis.a(0, true, param1 / 2 + param5, -6 + var9_int + param6, (byte) 49, 0);
           fl.a(param1, param3, (byte) -98, var9_int, param5, param6);
           SoftwareRaster.c();
-          hj.field_w = var11;
+          MusicPatchNode.field_w = var11;
           if (param4 == PartInstruction.field_t[0]) {
             param4 = uj.a(param4, 93);
           }
           var13 = var9_int + param6 + (4 + (20 + pl.field_U.field_U) / 2);
           if (var10 != null) {
             var14 = pl.field_U;
-            var15 = ((BitmapFont) (var14)).c(var10);
+            var15 = ((BitmapFont) (var14)).textWidth(var10);
             if (var15 > param1) {
-              var14 = ff.field_lb;
-              var15 = ((BitmapFont) (var14)).c(var10);
+              var14 = ValidationHelpWidget.field_lb;
+              var15 = ((BitmapFont) (var14)).textWidth(var10);
               if (var15 > param1) {
-                var14 = fk.field_d;
-                var15 = ((BitmapFont) (var14)).c(var10);
+                var14 = BoundedUrlRequest.field_d;
+                var15 = ((BitmapFont) (var14)).textWidth(var10);
               }
               if (var15 > param1) {
-                var10 = bg.a(var10, param1, (byte) -45, (BitmapFont) (var14));
+                var10 = WeightedCacheEntry.a(var10, param1, (byte) -45, (BitmapFont) (var14));
               }
             }
-            ((BitmapFont) (var14)).a(var10, param5 + param1 / 2, var13, param4, 0);
+            ((BitmapFont) (var14)).drawCentered(var10, param5 + param1 / 2, var13, param4, 0);
             var13 += 24;
           }
           if (param2 != 5) {
@@ -11250,7 +11250,7 @@ final class GameplayController {
             var14Lifetime1 = cd.field_c[var15Lifetime1];
           }
           if (null != var14Lifetime1) {
-            pl.field_U.a((String) (var14Lifetime1), param5 + param1 / 2, var13, param4, 0);
+            pl.field_U.drawCentered((String) (var14Lifetime1), param5 + param1 / 2, var13, param4, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11285,9 +11285,9 @@ final class GameplayController {
           PartInstruction.field_g = 500;
           this.controlledSentinel.field_U = 0;
           if (di.field_g == 1 &&
-            qh.field_Yb == 11) {
+            IconTextComponent.field_Yb == 11) {
             this.world.terrain.a(param0 + 1323, this.world.playerCount, 16);
-            this.controlledSentinel.configureDesign(ua.field_x, true, false, 0, 0);
+            this.controlledSentinel.configureDesign(ReflectionCheck.field_x, true, false, 0, 0);
             this.controlledSentinel.worldY = -100000;
             this.controlledSentinel.worldX = 31000;
             this.controlledSentinel.velocityY = 3000;
@@ -11297,7 +11297,7 @@ final class GameplayController {
             this.controlledSentinel.field_pc = false;
             this.controlledSentinel.field_Qb = -1;
             this.controlledSentinel.velocityX = 0;
-            nh.a(true, this.controlledSentinel);
+            Bzip2State.a(true, this.controlledSentinel);
             this.field_E = 1024;
             this.field_P = 0;
             this.controlledSentinel.field_J = 0;
@@ -11309,8 +11309,8 @@ final class GameplayController {
             regionExit2: {
               regionExit3: {
                 regionExit4: {
-                  qh.field_Yb = 0;
-                  dl.field_M = 0;
+                  IconTextComponent.field_Yb = 0;
+                  UiContainer.field_M = 0;
                   var2_int = di.field_g;
                   switch (var2_int) {
                     case 1:
@@ -11325,7 +11325,7 @@ final class GameplayController {
                       break regionExit1;
                     case 9:
                       if (var5 == 0) {
-                        this.controlledSentinel.configureDesign(ua.field_C[9], true, false, 0, 0);
+                        this.controlledSentinel.configureDesign(ReflectionCheck.field_C[9], true, false, 0, 0);
                         this.controlledSentinel.worldX = 218000;
                         this.controlledSentinel.worldY = -40000;
                         this.field_E = 1024;
@@ -11335,7 +11335,7 @@ final class GameplayController {
                         break regionExit1;
                       }
                     case 0:
-                      this.controlledSentinel.configureDesign(ua.field_C[0], true, false, 0, 0);
+                      this.controlledSentinel.configureDesign(ReflectionCheck.field_C[0], true, false, 0, 0);
                       this.controlledSentinel.worldY = -100000;
                       this.controlledSentinel.worldX = 92000;
                       this.field_P = 1024;
@@ -11347,7 +11347,7 @@ final class GameplayController {
                       }
                       break;
                   }
-                  this.controlledSentinel.configureDesign(ua.field_C[1], true, false, 0, 0);
+                  this.controlledSentinel.configureDesign(ReflectionCheck.field_C[1], true, false, 0, 0);
                   this.controlledSentinel.worldX = 218000;
                   this.controlledSentinel.worldY = -40000;
                   this.field_P = 4000;
@@ -11357,7 +11357,7 @@ final class GameplayController {
                     break regionExit1;
                   }
                 }
-                this.controlledSentinel.configureDesign(ua.field_C[7], true, false, 0, 0);
+                this.controlledSentinel.configureDesign(ReflectionCheck.field_C[7], true, false, 0, 0);
                 this.controlledSentinel.worldY = -40000;
                 this.controlledSentinel.worldX = 218000;
                 this.field_E = 1024;
@@ -11368,7 +11368,7 @@ final class GameplayController {
                   break regionExit1;
                 }
               }
-              this.controlledSentinel.configureDesign(ua.field_C[3], true, false, 0, 0);
+              this.controlledSentinel.configureDesign(ReflectionCheck.field_C[3], true, false, 0, 0);
               this.controlledSentinel.worldX = 108000;
               this.controlledSentinel.worldY = -40000;
               this.field_P = 1000;
@@ -11378,7 +11378,7 @@ final class GameplayController {
                 break regionExit1;
               }
             }
-            this.controlledSentinel.configureDesign(ua.field_C[5], true, false, 0, 0);
+            this.controlledSentinel.configureDesign(ReflectionCheck.field_C[5], true, false, 0, 0);
             this.controlledSentinel.worldY = -40000;
             this.controlledSentinel.worldX = 200000;
             this.field_P = 4000;
@@ -11445,7 +11445,7 @@ final class GameplayController {
         int var9 = 0;
         int[] var10 = null;
         try {
-          sb.field_bb.b((byte) 121);
+          Checkbox.field_bb.b((byte) 121);
           if (!NodeIterator.a(param1 + 23) &&
             param0 &&
             !jn.field_g) {
@@ -11464,11 +11464,11 @@ final class GameplayController {
           SoftwareRaster.c(0, 0, 640, 480, 0, 128);
           SoftwareRaster.h(218, 198, 204, 44, 16777215);
           SoftwareRaster.c(220, 200, this.world.simulationTick * 200 / this.field_w, 40, 4473924, 128);
-          pl.field_U.a(eb.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, pl.field_U.field_U / 2 + 220, 16777215, 0);
-          pl.field_U.a(rb.field_b, 320, 220 + pl.field_U.field_U / 2 + 40, 16777215, 0);
+          pl.field_U.drawCentered(eb.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, pl.field_U.field_U / 2 + 220, 16777215, 0);
+          pl.field_U.drawCentered(rb.field_b, 320, 220 + pl.field_U.field_U / 2 + 40, 16777215, 0);
           this.b(true, 1956917985);
           if (this.field_d) {
-            if (bb.field_T &&
+            if (ModalPanel.field_T &&
               param0) {
               stackIn_23_0 = 1;
             } else {
@@ -11476,44 +11476,44 @@ final class GameplayController {
             }
             var5 = stackIn_23_0;
             if (var5 != 0) {
-              stackIn_27_0 = tk.field_t;
+              stackIn_27_0 = MatchingTextValidator.field_t;
             } else {
-              stackIn_27_0 = co.field_d;
+              stackIn_27_0 = QuickChatCategoryCache.field_d;
             }
             var6 = stackIn_27_0;
             var7 = var6[2].field_A + (var6[0].field_A + (int)ArchiveIndex.field_c);
             var8 = 24;
             var9 = 356;
-            if (vl.field_v) {
-              var9 = qc.field_V.field_cb - var8;
+            if (TextHotspotRegion.field_v) {
+              var9 = DisplayNameForm.field_V.field_cb - var8;
               if (var9 < 336) {
                 var9 = 336;
               }
               if (!(var9 <= 356)) {
                 var9 = 356;
                 if ((SteelSentinels.obfuscationControl != 0) &&
-                  (-var8 + qc.field_V.field_cb < var9)) {
-                  var9 = qc.field_V.field_cb - var8;
+                  (-var8 + DisplayNameForm.field_V.field_cb < var9)) {
+                  var9 = DisplayNameForm.field_V.field_cb - var8;
                 }
               }
             } else {
-              if (-var8 + qc.field_V.field_cb < var9) {
-                var9 = qc.field_V.field_cb - var8;
+              if (-var8 + DisplayNameForm.field_V.field_cb < var9) {
+                var9 = DisplayNameForm.field_V.field_cb - var8;
               }
             }
             SoftwareRaster.c(0, var9, var7, var8, 0, 192);
-            hb.a((byte) 115, var6, var7, var9, 0, var8);
+            IterableDualNodeDeque.a((byte) 115, var6, var7, var9, 0, var8);
             if (oh.field_f >= 0 &&
               var7 + 0 > oh.field_f &&
-              pi.field_c >= var9 &&
-              pi.field_c < (var8 + var9)) {
+              DelegatingCanvas.field_c >= var9 &&
+              DelegatingCanvas.field_c < (var8 + var9)) {
               vd.field_b = true;
               this.field_r = 0;
             }
             var10 = new int[4];
             SoftwareRaster.b(var10);
-            if (null != hj.field_s) {
-              fk.field_d.c(hj.field_s.toUpperCase(), (int)ArchiveIndex.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
+            if (null != MusicPatchNode.field_s) {
+              BoundedUrlRequest.field_d.c(MusicPatchNode.field_s.toUpperCase(), (int)ArchiveIndex.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
             }
             SoftwareRaster.a(var10);
           }
@@ -11535,13 +11535,13 @@ final class GameplayController {
           if (param1) {
             GameplayController.b((byte) -121);
           }
-          if (~wa.field_p != ~an.field_h) {
-            var2_int = an.field_h * an.field_h;
-            var3 = var2_int - wa.field_p * wa.field_p;
+          if (~StatefulTextPainter.field_p != ~AudioService.field_h) {
+            var2_int = AudioService.field_h * AudioService.field_h;
+            var3 = var2_int - StatefulTextPainter.field_p * StatefulTextPainter.field_p;
             param0 = param0 + var3 * (-param0 + jn.field_c) / var2_int;
           }
-          qc.field_V.a(0, param0, 120, me.field_e, 640);
-          nm.a(da.field_g, 0, va.field_e, 5, jn.field_c - 24, 640, 115);
+          DisplayNameForm.field_V.a(0, param0, 120, LoginCredentials.field_e, 640);
+          EmailAvailabilityValidator.a(TextLayout.field_g, 0, va.field_e, 5, jn.field_c - 24, 640, 115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11611,13 +11611,13 @@ final class GameplayController {
         try {
           if (param2 != 0) {
             cf.field_q = -1;
-            l.field_g = -1;
+            NodeHashTableIterator.field_g = -1;
           }
           boolean decompiledFrameRemainder6 = true;
-          if (lb.field_gc == 1 &&
+          if (VerticalScrollbar.field_gc == 1 &&
             param2 == 2 &&
             null != this.field_u) {
-            var5_int = this.world.simulationTick + vk.field_h[this.world.field_c];
+            var5_int = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
             var6_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
             if (null != var6_ref_je &&
               var6_ref_je.endTick > var5_int) {
@@ -11654,9 +11654,9 @@ final class GameplayController {
           }
           if (decompiledFrameRemainder6) {
             if (param2 == 2 &&
-              lb.field_gc == 2 &&
+              VerticalScrollbar.field_gc == 2 &&
               tj.field_a) {
-              var5_intLifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var5_intLifetime3 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var6_ref_jeLifetime2 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var6_ref_jeLifetime2 &&
                 var6_ref_jeLifetime2.endTick > var5_intLifetime3) {
@@ -11689,27 +11689,27 @@ final class GameplayController {
               }
               if ((var20 != 0) && (param2 == 2 &&
                 null != this.field_u)) {
-                var5_intLifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+                var5_intLifetime3 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
                 var6_ref_jeLifetime2 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
                 if (var6_ref_jeLifetime2 != null &&
                   var6_ref_jeLifetime2.endTick > var5_intLifetime3) {
                   var5_intLifetime3 = var6_ref_jeLifetime2.endTick;
                 }
-                if (var5_intLifetime3 < kh.field_x + this.world.simulationTick) {
-                  qg.field_n = new SentinelCommand(5, this.field_u.playerId, var5_intLifetime3);
+                if (var5_intLifetime3 < ThreeSliceButtonPainter.field_x + this.world.simulationTick) {
+                  MarkerSliderPainter.field_n = new SentinelCommand(5, this.field_u.playerId, var5_intLifetime3);
                 }
               }
             } else {
               if (param2 == 2 &&
                 null != this.field_u) {
-                var5_intLifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+                var5_intLifetime3 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
                 var6_ref_jeLifetime2 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
                 if (var6_ref_jeLifetime2 != null &&
                   var6_ref_jeLifetime2.endTick > var5_intLifetime3) {
                   var5_intLifetime3 = var6_ref_jeLifetime2.endTick;
                 }
-                if (var5_intLifetime3 < kh.field_x + this.world.simulationTick) {
-                  qg.field_n = new SentinelCommand(5, this.field_u.playerId, var5_intLifetime3);
+                if (var5_intLifetime3 < ThreeSliceButtonPainter.field_x + this.world.simulationTick) {
+                  MarkerSliderPainter.field_n = new SentinelCommand(5, this.field_u.playerId, var5_intLifetime3);
                 }
               }
             }
@@ -11718,23 +11718,23 @@ final class GameplayController {
           boolean decompiledFrameRemainder5 = true;
           boolean decompiledFrameRemainder4 = true;
           if (null != this.controlledSentinel) {
-            if ((1 != lb.field_gc) &&
+            if ((1 != VerticalScrollbar.field_gc) &&
               (decompiledFrameRemainder4 = (0 != (1 & sf.field_d))) &&
               (decompiledFrameRemainder4 = !(vd.field_b))) {
-              decompiledFrameRemainder4 = !(0 < um.field_X);
+              decompiledFrameRemainder4 = !(0 < MarkerSlider.field_X);
             }
             if ((decompiledFrameRemainder4) && (this.field_F >= 0 &&
               this.controlledSentinel.field_Xb.length > this.field_F && (ad.field_e ||
               !(this.controlledSentinel.field_Mb[this.field_F] > 0)) && 0 == param2 && (di.field_g != 0 ||
-              !(qh.field_Yb < 8)) && (3 != di.field_g ||
-              !(5 > qh.field_Yb)))) {
-              var5_intLifetime1 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              !(IconTextComponent.field_Yb < 8)) && (3 != di.field_g ||
+              !(5 > IconTextComponent.field_Yb)))) {
+              var5_intLifetime1 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var6_ref_jeLifetime1 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(param0 ^ -1063678615));
               if (null != var6_ref_jeLifetime1 &&
                 var5_intLifetime1 < var6_ref_jeLifetime1.endTick) {
                 var5_intLifetime1 = var6_ref_jeLifetime1.endTick;
               }
-              if (this.world.simulationTick + kh.field_x > var5_intLifetime1 &&
+              if (this.world.simulationTick + ThreeSliceButtonPainter.field_x > var5_intLifetime1 &&
                 this.controlledSentinel.field_Xb.length > 0 && ((0 <= this.controlledSentinel.field_ub &&
                 (this.controlledSentinel.charge > 0 ||
                 this.controlledSentinel.field_ub != 0) ||
@@ -11745,7 +11745,7 @@ final class GameplayController {
                 var7Lifetime1.targetWorldX = param3;
                 var7Lifetime1.targetWorldY = param1;
                 var8_int = (km.field_c >> 8) - (this.field_P >> 4);
-                var9 = 400 + (-(this.field_E >> 4) + (dl.field_G - this.controlledSentinel.field_Db * 8 >> 8));
+                var9 = 400 + (-(this.field_E >> 4) + (UiContainer.field_G - this.controlledSentinel.field_Db * 8 >> 8));
                 if (var8_int < 0) {
                   var8_int = 48;
                 }
@@ -11758,18 +11758,18 @@ final class GameplayController {
                 if (var9 > 380) {
                   var9 = 332;
                 }
-                if (nc.field_b) {
-                  var7Lifetime1.targetWorldY = dl.field_G + 10000 * (pi.field_c - var9);
+                if (WeightedLruCache.field_b) {
+                  var7Lifetime1.targetWorldY = UiContainer.field_G + 10000 * (DelegatingCanvas.field_c - var9);
                   var7Lifetime1.targetWorldX = (oh.field_f - var8_int) * 10000 + km.field_c;
                 }
                 var10 = -km.field_c + var7Lifetime1.targetWorldX;
-                var11 = var7Lifetime1.targetWorldY - dl.field_G;
+                var11 = var7Lifetime1.targetWorldY - UiContainer.field_G;
                 if (var10 < 0) {
-                  bj.field_h = -1;
+                  MusicPatchEnvelope.field_h = -1;
                 }
                 if (var10 >= 0 ||
                   var20 != 0) {
-                  bj.field_h = 1;
+                  MusicPatchEnvelope.field_h = 1;
                 }
                 var12 = 0L;
                 if (this.controlledSentinel.field_Lb &&
@@ -11794,13 +11794,13 @@ final class GameplayController {
                       continue;
                     }
                   } else {
-                    this.controlledSentinel.chassis.b((byte) -128, 0, bj.field_h, 0);
+                    this.controlledSentinel.chassis.b((byte) -128, 0, MusicPatchEnvelope.field_h, 0);
                     if (var12 != 0L) {
                       var15 = 0;
                       var16_int = 0;
                       while (true) {
                         if (this.controlledSentinel.weaponParts.length > var16_int) {
-                          stackIn_212_0 = $cfr$lcmp(~(1L << var16_int & var12), -1L);
+                          stackIn_212_0 = compareLongs(~(1L << var16_int & var12), -1L);
                           if (var20 == 0) {
                             if (stackIn_212_0 != 0) {
                               var15 = var15 + this.controlledSentinel.weaponParts[var16_int].field_V;
@@ -11809,7 +11809,7 @@ final class GameplayController {
                             continue;
                           }
                         } else {
-                          stackIn_212_0 = var11 - var15 / ff.a(false, var12);
+                          stackIn_212_0 = var11 - var15 / ValidationHelpWidget.a(false, var12);
                         }
                         break;
                       }
@@ -11824,34 +11824,34 @@ final class GameplayController {
                   }
                   var15_double = Math.atan2((double)var10, (double)(-var11));
                   var7Lifetime1.aimAngle = (int)(var15_double * 65536.0 / 6.283185307179586);
-                  if ((var7Lifetime1.aimAngle * bj.field_h) >= (this.field_Q + 1 << 8)) {
-                    if (bj.field_h * var7Lifetime1.aimAngle <= this.field_Z - 1 << 8) {
-                      var10 = (int)(256.0 * Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0)) * bj.field_h;
+                  if ((var7Lifetime1.aimAngle * MusicPatchEnvelope.field_h) >= (this.field_Q + 1 << 8)) {
+                    if (MusicPatchEnvelope.field_h * var7Lifetime1.aimAngle <= this.field_Z - 1 << 8) {
+                      var10 = (int)(256.0 * Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0)) * MusicPatchEnvelope.field_h;
                       var11 = -(int)(Math.cos(2.0 * (3.141592653589793 * (double)var7Lifetime1.aimAngle) / 65536.0) * 256.0);
                       if (var20 != 0) {
-                        var7Lifetime1.aimAngle = (-1 + this.field_Z << 8) * bj.field_h;
-                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                        var7Lifetime1.aimAngle = (-1 + this.field_Z << 8) * MusicPatchEnvelope.field_h;
+                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * MusicPatchEnvelope.field_h;
                         var11 = -(int)(256.0 * Math.cos((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
-                        var7Lifetime1.aimAngle = bj.field_h * (1 + this.field_Q << 8);
-                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                        var7Lifetime1.aimAngle = MusicPatchEnvelope.field_h * (1 + this.field_Q << 8);
+                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * MusicPatchEnvelope.field_h;
                         var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.aimAngle * 2.0 / 65536.0) * 256.0);
                       }
                     } else {
-                      var7Lifetime1.aimAngle = (-1 + this.field_Z << 8) * bj.field_h;
-                      var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                      var7Lifetime1.aimAngle = (-1 + this.field_Z << 8) * MusicPatchEnvelope.field_h;
+                      var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * MusicPatchEnvelope.field_h;
                       var11 = -(int)(256.0 * Math.cos((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                       if (var20 != 0) {
-                        var7Lifetime1.aimAngle = bj.field_h * (1 + this.field_Q << 8);
-                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                        var7Lifetime1.aimAngle = MusicPatchEnvelope.field_h * (1 + this.field_Q << 8);
+                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * MusicPatchEnvelope.field_h;
                         var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.aimAngle * 2.0 / 65536.0) * 256.0);
                       }
                     }
                   } else {
-                    var7Lifetime1.aimAngle = bj.field_h * (1 + this.field_Q << 8);
-                    var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                    var7Lifetime1.aimAngle = MusicPatchEnvelope.field_h * (1 + this.field_Q << 8);
+                    var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * MusicPatchEnvelope.field_h;
                     var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.aimAngle * 2.0 / 65536.0) * 256.0);
                   }
-                  if (bj.field_h < 0) {
+                  if (MusicPatchEnvelope.field_h < 0) {
                     if (!(16384 >= var7Lifetime1.aimAngle)) {
                       var7Lifetime1.aimAngle = var7Lifetime1.aimAngle - 65536;
                       if ((var20 != 0) &&
@@ -11864,9 +11864,9 @@ final class GameplayController {
                       var7Lifetime1.aimAngle = var7Lifetime1.aimAngle + 65536;
                     }
                   }
-                  if ((bj.field_h * var7Lifetime1.aimAngle) >= sl.field_i) {
-                    if (!(ic.field_P >= bj.field_h * var7Lifetime1.aimAngle)) {
-                      var7Lifetime1.aimAngle = ic.field_P;
+                  if ((MusicPatchEnvelope.field_h * var7Lifetime1.aimAngle) >= sl.field_i) {
+                    if (!(MidiPcmStream.field_P >= MusicPatchEnvelope.field_h * var7Lifetime1.aimAngle)) {
+                      var7Lifetime1.aimAngle = MidiPcmStream.field_P;
                       if (var20 != 0) {
                         var7Lifetime1.aimAngle = sl.field_i;
                       }
@@ -11898,7 +11898,7 @@ final class GameplayController {
                   }
                   var17 = -var7Lifetime1.startTick + var7Lifetime1.endTick;
                   this.controlledSentinel.field_Mb[this.field_F] = this.controlledSentinel.field_Mb[this.field_F] + var17;
-                  um.field_X = um.field_X + var17;
+                  MarkerSlider.field_X = MarkerSlider.field_X + var17;
                   break;
                 }
               }
@@ -11907,7 +11907,7 @@ final class GameplayController {
           }
           if ((decompiledFrameRemainder5) &&
             (param2 == 0)) {
-            var5_intLifetime1Lifetime1 = this.world.simulationTick + vk.field_h[this.world.field_c];
+            var5_intLifetime1Lifetime1 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
             var6_ref_jeLifetime1Lifetime1 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
             if (null != var6_ref_jeLifetime1Lifetime1 &&
               var5_intLifetime1Lifetime1 < var6_ref_jeLifetime1Lifetime1.endTick) {
@@ -11954,21 +11954,21 @@ final class GameplayController {
               if (this.field_F >= this.controlledSentinel.field_Xb.length) {
                 this.field_F = 0;
               }
-              if (null != qg.field_n &&
-                qg.field_n.actionType == 0 &&
-                ~qg.field_n.actionVariant == ~this.controlledSentinel.field_Xb[this.field_F]) {
-                qg.field_n.endTick = var5_intLifetime1Lifetime1 - (-qg.field_n.endTick + qg.field_n.startTick);
-                qg.field_n.startTick = var5_intLifetime1Lifetime1;
+              if (null != MarkerSliderPainter.field_n &&
+                MarkerSliderPainter.field_n.actionType == 0 &&
+                ~MarkerSliderPainter.field_n.actionVariant == ~this.controlledSentinel.field_Xb[this.field_F]) {
+                MarkerSliderPainter.field_n.endTick = var5_intLifetime1Lifetime1 - (-MarkerSliderPainter.field_n.endTick + MarkerSliderPainter.field_n.startTick);
+                MarkerSliderPainter.field_n.startTick = var5_intLifetime1Lifetime1;
                 if (var20 != 0) {
-                  qg.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
+                  MarkerSliderPainter.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
                 }
               } else {
-                qg.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
+                MarkerSliderPainter.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
               }
-              qg.field_n.targetWorldX = param3;
-              qg.field_n.targetWorldY = param1;
+              MarkerSliderPainter.field_n.targetWorldX = param3;
+              MarkerSliderPainter.field_n.targetWorldY = param1;
               var8_intLifetime1Lifetime1 = (km.field_c >> 8) - (this.field_P >> 4);
-              var9Lifetime1 = -(this.field_E >> 4) + (400 + (dl.field_G - this.controlledSentinel.field_Db * 8 >> 8));
+              var9Lifetime1 = -(this.field_E >> 4) + (400 + (UiContainer.field_G - this.controlledSentinel.field_Db * 8 >> 8));
               if (var8_intLifetime1Lifetime1 < 0) {
                 var8_intLifetime1Lifetime1 = 48;
               }
@@ -11981,18 +11981,18 @@ final class GameplayController {
               if (var9Lifetime1 > 380) {
                 var9Lifetime1 = 332;
               }
-              if (nc.field_b) {
-                qg.field_n.targetWorldY = dl.field_G + (-var9Lifetime1 + pi.field_c) * 10000;
-                qg.field_n.targetWorldX = km.field_c + 10000 * (oh.field_f - var8_intLifetime1Lifetime1);
+              if (WeightedLruCache.field_b) {
+                MarkerSliderPainter.field_n.targetWorldY = UiContainer.field_G + (-var9Lifetime1 + DelegatingCanvas.field_c) * 10000;
+                MarkerSliderPainter.field_n.targetWorldX = km.field_c + 10000 * (oh.field_f - var8_intLifetime1Lifetime1);
               }
-              var10Lifetime1 = qg.field_n.targetWorldX - km.field_c;
-              var11Lifetime1 = -dl.field_G + qg.field_n.targetWorldY;
+              var10Lifetime1 = MarkerSliderPainter.field_n.targetWorldX - km.field_c;
+              var11Lifetime1 = -UiContainer.field_G + MarkerSliderPainter.field_n.targetWorldY;
               if (0 > var10Lifetime1) {
-                bj.field_h = -1;
+                MusicPatchEnvelope.field_h = -1;
               }
               if (0 <= var10Lifetime1 ||
                 var20 != 0) {
-                bj.field_h = 1;
+                MusicPatchEnvelope.field_h = 1;
               }
               var12Lifetime1 = 0L;
               if (this.controlledSentinel.field_Lb &&
@@ -12006,7 +12006,7 @@ final class GameplayController {
               while (this.controlledSentinel.weaponParts.length > var15Lifetime1) {
                 var16_ref_nkLifetime1 = this.controlledSentinel.weaponParts[var15Lifetime1];
                 stackIn_471_0 = ja.a(var16_ref_nkLifetime1.componentId, false);
-                stackIn_471_1 = qg.field_n.actionVariant;
+                stackIn_471_1 = MarkerSliderPainter.field_n.actionVariant;
                 if (var20 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -12019,12 +12019,12 @@ final class GameplayController {
                 var15Lifetime1++;
               }
               if (decompiledFrameCompleted0) {
-                this.controlledSentinel.chassis.b((byte) -128, 0, bj.field_h, 0);
+                this.controlledSentinel.chassis.b((byte) -128, 0, MusicPatchEnvelope.field_h, 0);
                 var15Lifetime1Lifetime1 = 0;
                 var16_intLifetime1 = 0;
                 while (true) {
                   if (this.controlledSentinel.weaponParts.length > var16_intLifetime1) {
-                    stackIn_394_0 = $cfr$lcmp(-1L, ~(1L << var16_intLifetime1 & var12Lifetime1));
+                    stackIn_394_0 = compareLongs(-1L, ~(1L << var16_intLifetime1 & var12Lifetime1));
                     if (var20 == 0) {
                       if (stackIn_394_0 != 0) {
                         var15Lifetime1Lifetime1 = var15Lifetime1Lifetime1 + this.controlledSentinel.weaponParts[var16_intLifetime1].field_V;
@@ -12033,12 +12033,12 @@ final class GameplayController {
                       continue;
                     }
                   } else {
-                    stackIn_394_0 = $cfr$lcmp(0L, var12Lifetime1);
+                    stackIn_394_0 = compareLongs(0L, var12Lifetime1);
                   }
                   break;
                 }
                 if (stackIn_394_0 != 0) {
-                  var11Lifetime1 = var11Lifetime1 - var15Lifetime1Lifetime1 / ff.a(false, var12Lifetime1);
+                  var11Lifetime1 = var11Lifetime1 - var15Lifetime1Lifetime1 / ValidationHelpWidget.a(false, var12Lifetime1);
                 }
                 if (Math.abs(var10Lifetime1) < 1600 &&
                   1600 > Math.abs(var11Lifetime1)) {
@@ -12046,50 +12046,50 @@ final class GameplayController {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 var16 = Math.atan2((double)var10Lifetime1, (double)(-var11Lifetime1));
-                qg.field_n.aimAngle = (int)(65536.0 * var16 / 6.283185307179586);
-                if ((bj.field_h * qg.field_n.aimAngle) < (1 + this.field_Q << 8)) {
-                  qg.field_n.aimAngle = bj.field_h * (this.field_Q + 1 << 8);
-                  var10Lifetime1 = (int)(Math.sin(2.0 * ((double)qg.field_n.aimAngle * 3.141592653589793) / 65536.0) * 256.0) * bj.field_h;
-                  var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
+                MarkerSliderPainter.field_n.aimAngle = (int)(65536.0 * var16 / 6.283185307179586);
+                if ((MusicPatchEnvelope.field_h * MarkerSliderPainter.field_n.aimAngle) < (1 + this.field_Q << 8)) {
+                  MarkerSliderPainter.field_n.aimAngle = MusicPatchEnvelope.field_h * (this.field_Q + 1 << 8);
+                  var10Lifetime1 = (int)(Math.sin(2.0 * ((double)MarkerSliderPainter.field_n.aimAngle * 3.141592653589793) / 65536.0) * 256.0) * MusicPatchEnvelope.field_h;
+                  var11Lifetime1 = -(int)(256.0 * Math.cos((double)MarkerSliderPainter.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                   decompiledFrameRemainder0 = (var20 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (-1 + this.field_Z << 8 >= qg.field_n.aimAngle * bj.field_h) {
-                    var10Lifetime1 = (int)(256.0 * Math.sin((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0)) * bj.field_h;
-                    var11Lifetime1 = -(int)(256.0 * Math.cos(3.141592653589793 * (double)qg.field_n.aimAngle * 2.0 / 65536.0));
+                  if (-1 + this.field_Z << 8 >= MarkerSliderPainter.field_n.aimAngle * MusicPatchEnvelope.field_h) {
+                    var10Lifetime1 = (int)(256.0 * Math.sin((double)MarkerSliderPainter.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0)) * MusicPatchEnvelope.field_h;
+                    var11Lifetime1 = -(int)(256.0 * Math.cos(3.141592653589793 * (double)MarkerSliderPainter.field_n.aimAngle * 2.0 / 65536.0));
                     if (var20 != 0) {
-                      qg.field_n.aimAngle = bj.field_h * (this.field_Z - 1 << 8);
-                      var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)qg.field_n.aimAngle * 2.0 / 65536.0)) * bj.field_h;
-                      var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
+                      MarkerSliderPainter.field_n.aimAngle = MusicPatchEnvelope.field_h * (this.field_Z - 1 << 8);
+                      var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)MarkerSliderPainter.field_n.aimAngle * 2.0 / 65536.0)) * MusicPatchEnvelope.field_h;
+                      var11Lifetime1 = -(int)(256.0 * Math.cos((double)MarkerSliderPainter.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                     }
                   } else {
-                    qg.field_n.aimAngle = bj.field_h * (this.field_Z - 1 << 8);
-                    var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)qg.field_n.aimAngle * 2.0 / 65536.0)) * bj.field_h;
-                    var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
+                    MarkerSliderPainter.field_n.aimAngle = MusicPatchEnvelope.field_h * (this.field_Z - 1 << 8);
+                    var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)MarkerSliderPainter.field_n.aimAngle * 2.0 / 65536.0)) * MusicPatchEnvelope.field_h;
+                    var11Lifetime1 = -(int)(256.0 * Math.cos((double)MarkerSliderPainter.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                   }
                 }
-                qg.field_n.scheduled = true;
-                if (bj.field_h < 0) {
-                  if (!(qg.field_n.aimAngle <= 16384)) {
-                    qg.field_n.aimAngle = qg.field_n.aimAngle - 65536;
+                MarkerSliderPainter.field_n.scheduled = true;
+                if (MusicPatchEnvelope.field_h < 0) {
+                  if (!(MarkerSliderPainter.field_n.aimAngle <= 16384)) {
+                    MarkerSliderPainter.field_n.aimAngle = MarkerSliderPainter.field_n.aimAngle - 65536;
                     if ((var20 != 0) &&
-                      (-16384 > qg.field_n.aimAngle)) {
-                      qg.field_n.aimAngle = qg.field_n.aimAngle + 65536;
+                      (-16384 > MarkerSliderPainter.field_n.aimAngle)) {
+                      MarkerSliderPainter.field_n.aimAngle = MarkerSliderPainter.field_n.aimAngle + 65536;
                     }
                   }
                 } else {
-                  if (-16384 > qg.field_n.aimAngle) {
-                    qg.field_n.aimAngle = qg.field_n.aimAngle + 65536;
+                  if (-16384 > MarkerSliderPainter.field_n.aimAngle) {
+                    MarkerSliderPainter.field_n.aimAngle = MarkerSliderPainter.field_n.aimAngle + 65536;
                   }
                 }
                 var18 = 0;
-                if (this.world.simulationTick + kh.field_x <= var5_intLifetime1Lifetime1) {
+                if (this.world.simulationTick + ThreeSliceButtonPainter.field_x <= var5_intLifetime1Lifetime1) {
                   var18 = 1;
                 }
                 if (0L == var12Lifetime1) {
-                  qg.field_n.scheduled = false;
+                  MarkerSliderPainter.field_n.scheduled = false;
                   var18 = 1;
-                  qg.field_n = null;
+                  MarkerSliderPainter.field_n = null;
                 }
                 if (0L != var12Lifetime1 ||
                   var20 != 0) {
@@ -12097,7 +12097,7 @@ final class GameplayController {
                     this.controlledSentinel.field_ub != 0)) {
                     if (this.controlledSentinel.field_Xb[this.field_F] != 8 ||
                       !(this.controlledSentinel.charge < 1)) {
-                      if ((ml.field_f[Math.max(0, qg.field_n.aimAngle * bj.field_h >> 8)] == 0) &&
+                      if ((ml.field_f[Math.max(0, MarkerSliderPainter.field_n.aimAngle * MusicPatchEnvelope.field_h >> 8)] == 0) &&
                         (0 == hf.field_c)) {
                         var18 = 1;
                         if (var20 != 0) {
@@ -12133,7 +12133,7 @@ final class GameplayController {
                     this.b(0, var7_int, 0, 0);
                   }
                   this.b(15, var7_int + 1, 0, 15);
-                  qg.field_n = null;
+                  MarkerSliderPainter.field_n = null;
                 }
               }
             } else {
@@ -12144,7 +12144,7 @@ final class GameplayController {
                 var20 != 0) {
                 this.b(15, var7_int + 1, 0, 15);
               }
-              qg.field_n = null;
+              MarkerSliderPainter.field_n = null;
             }
           }
           if (decompiledFrameCompleted0) {
@@ -12175,13 +12175,13 @@ final class GameplayController {
             }
             var5_intLifetime2 = stackIn_489_0;
           }
-          if (lb.field_gc == 1 &&
+          if (VerticalScrollbar.field_gc == 1 &&
             param2 == 1 &&
             var5_intLifetime2 == 0 ||
             IsaacRandom.field_c &&
             var5_intLifetime2 == 0 &&
             param2 != -1) {
-            var6 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+            var6 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
             var7Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (null != var7Lifetime2 &&
               var6 < var7Lifetime2.endTick) {
@@ -12215,7 +12215,7 @@ final class GameplayController {
             }
             if ((var20 != 0) &&
               (param2 == 1)) {
-              var6 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var6 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var7Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               if (var7Lifetime2 != null &&
                 var7Lifetime2.endTick > var6) {
@@ -12223,14 +12223,14 @@ final class GameplayController {
               }
               if ((500 + this.world.simulationTick) > var6 &&
                 !this.b(-5821, param3, param1)) {
-                qg.field_n = new SentinelCommand(3, 0, var6);
-                qg.field_n.targetWorldY = param1;
-                qg.field_n.targetWorldX = param3;
+                MarkerSliderPainter.field_n = new SentinelCommand(3, 0, var6);
+                MarkerSliderPainter.field_n.targetWorldY = param1;
+                MarkerSliderPainter.field_n.targetWorldX = param3;
               }
             }
           } else {
             if (param2 == 1) {
-              var6 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var6 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var7Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               if (var7Lifetime2 != null &&
                 var7Lifetime2.endTick > var6) {
@@ -12238,9 +12238,9 @@ final class GameplayController {
               }
               if ((500 + this.world.simulationTick) > var6 &&
                 !this.b(-5821, param3, param1)) {
-                qg.field_n = new SentinelCommand(3, 0, var6);
-                qg.field_n.targetWorldY = param1;
-                qg.field_n.targetWorldX = param3;
+                MarkerSliderPainter.field_n = new SentinelCommand(3, 0, var6);
+                MarkerSliderPainter.field_n.targetWorldY = param1;
+                MarkerSliderPainter.field_n.targetWorldX = param3;
               }
             }
           }
@@ -12311,10 +12311,10 @@ final class GameplayController {
         int var6Lifetime4;
         var9 = SteelSentinels.obfuscationControl;
         try {
-          if (ei.field_q == 13 && (di.field_g != 10 ||
-            !(nc.field_a >= 0) ||
-            ge.field_j != 0 ||
-            ol.field_Ub != 9 ||
+          if (NameAvailabilityValidator.field_q == 13 && (di.field_g != 10 ||
+            !(WeightedLruCache.field_a >= 0) ||
+            DirectByteStorage.field_j != 0 ||
+            QuickChatHelpDialog.field_Ub != 9 ||
             !ni.b(55))) {
             CombatWorld.c(-2483, 84);
             var2_int = 1;
@@ -12341,22 +12341,22 @@ final class GameplayController {
               }
             }
             var3 = var2_int;
-            q.a(var3, false, -1, 0);
+            IterableNodeHashTable.a(var3, false, -1, 0);
             Sprite.field_k = true;
             return;
           }
           if (fc.field_e[86] &&
-            ei.field_q == 84 &&
+            NameAvailabilityValidator.field_q == 84 &&
             ArticulatedPart.f((byte) -76)) {
             if (wb.field_c != null) {
-              ub.c(0);
+              SoundCache.c(0);
               if (var9 != 0) {
-                si.field_y = false;
-                ag.a(-4, false);
+                CachedTextLayout.field_y = false;
+                GradientOutlineTextPainter.a(-4, false);
               }
             } else {
-              si.field_y = false;
-              ag.a(-4, false);
+              CachedTextLayout.field_y = false;
+              GradientOutlineTextPainter.a(-4, false);
             }
           }
           if (this.world.simulationTick < this.field_w) {
@@ -12366,7 +12366,7 @@ final class GameplayController {
           if (this.controlledSentinel != null &&
             !this.world.field_j) {
             var3Lifetime1 = 0;
-            if (ln.field_d == ei.field_q &&
+            if (ln.field_d == NameAvailabilityValidator.field_q &&
               0 != di.field_g) {
               this.field_F = this.field_F - 1;
               var3Lifetime1 = 1;
@@ -12374,44 +12374,44 @@ final class GameplayController {
                 this.field_F = 0;
               }
             }
-            if (vh.field_c == ei.field_q &&
+            if (vh.field_c == NameAvailabilityValidator.field_q &&
               di.field_g != 0) {
               var3Lifetime1 = 1;
               this.field_F = this.field_F + 1;
             }
-            if (16 <= ei.field_q &&
-              ei.field_q <= 24 &&
+            if (16 <= NameAvailabilityValidator.field_q &&
+              NameAvailabilityValidator.field_q <= 24 &&
               di.field_g != 0) {
-              this.field_F = -16 + ei.field_q;
+              this.field_F = -16 + NameAvailabilityValidator.field_q;
               var3Lifetime1 = 1;
             }
             if (this.field_F >= this.controlledSentinel.field_Xb.length) {
               this.field_F = -1 + this.controlledSentinel.field_Xb.length;
             }
-            if (ei.field_q != 85 &&
-              ei.field_q == 101) {
+            if (NameAvailabilityValidator.field_q != 85 &&
+              NameAvailabilityValidator.field_q == 101) {
             }
             if (var3Lifetime1 != 0 && (3 != di.field_g ||
-              !(qh.field_Yb < 5))) {
-              rc.field_l = 100;
+              !(IconTextComponent.field_Yb < 5))) {
+              SectorCacheStore.field_l = 100;
             }
-            if (0 < NodeDeque.field_d && (ei.field_q == 41 ||
-              ei.field_q == 40 ||
-              ei.field_q == 56 ||
-              ei.field_q == 55) && di.field_g == 4) {
+            if (0 < NodeDeque.field_d && (NameAvailabilityValidator.field_q == 41 ||
+              NameAvailabilityValidator.field_q == 40 ||
+              NameAvailabilityValidator.field_q == 56 ||
+              NameAvailabilityValidator.field_q == 55) && di.field_g == 4) {
               var4 = this.field_P + (oh.field_f << 4) << 4;
-              var5_int = pi.field_c - 400 + (this.field_E >> 4) << 8;
+              var5_int = DelegatingCanvas.field_c - 400 + (this.field_E >> 4) << 8;
               var6 = 0;
-              if (ei.field_q == 41) {
+              if (NameAvailabilityValidator.field_q == 41) {
                 var6 = 0;
               }
-              if (ei.field_q == 40) {
+              if (NameAvailabilityValidator.field_q == 40) {
                 var6 = 10;
               }
-              if (ei.field_q == 56) {
+              if (NameAvailabilityValidator.field_q == 56) {
                 var6 = 20;
               }
-              if (ei.field_q == 55) {
+              if (NameAvailabilityValidator.field_q == 55) {
                 var6 = 30;
               }
               if (fc.field_e[16]) {
@@ -12441,8 +12441,8 @@ final class GameplayController {
               if (fc.field_e[24]) {
                 var6 += 9;
               }
-              if (var6 <= fg.field_Xb.length) {
-                var7_int = fg.field_Xb[var6];
+              if (var6 <= RegistrationRequestDialog.field_Xb.length) {
+                var7_int = RegistrationRequestDialog.field_Xb[var6];
                 var8 = new ne(this.world, var7_int);
                 var8.field_I = var5_int;
                 var8.field_z = var4;
@@ -12450,13 +12450,13 @@ final class GameplayController {
               }
             }
             boolean decompiledFrameRemainder2 = true;
-            if ((71 != ei.field_q &&
-              ei.field_q != jf.field_hb) &&
+            if ((71 != NameAvailabilityValidator.field_q &&
+              NameAvailabilityValidator.field_q != EditableTextWidget.field_hb) &&
               (decompiledFrameRemainder2 = !(!dm.field_c))) {
-              decompiledFrameRemainder2 = (ei.field_q == sa.field_c);
+              decompiledFrameRemainder2 = (NameAvailabilityValidator.field_q == sa.field_c);
             }
             if (decompiledFrameRemainder2) {
-              var4Lifetime1 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var4Lifetime1 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var5 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               var6Lifetime1 = 0;
               if (var5 != null) {
@@ -12502,13 +12502,13 @@ final class GameplayController {
               }
             }
             boolean decompiledFrameRemainder1 = true;
-            if ((ei.field_q != 72 &&
-              ~ei.field_q != ~rj.field_b) &&
+            if ((NameAvailabilityValidator.field_q != 72 &&
+              ~NameAvailabilityValidator.field_q != ~BufferedRandomAccessFile.field_b) &&
               (decompiledFrameRemainder1 = !(!dm.field_c))) {
-              decompiledFrameRemainder1 = (~on.field_h == ~ei.field_q);
+              decompiledFrameRemainder1 = (~EmailCredentials.field_h == ~NameAvailabilityValidator.field_q);
             }
             if (decompiledFrameRemainder1) {
-              var4Lifetime2 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var4Lifetime2 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var5Lifetime1 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               var6Lifetime2 = 0;
               if (var5Lifetime1 != null) {
@@ -12548,12 +12548,12 @@ final class GameplayController {
               }
             }
             boolean decompiledFrameRemainder0 = true;
-            if ((fe.field_y != ei.field_q) &&
+            if ((ArchiveRequest.field_y != NameAvailabilityValidator.field_q) &&
               (decompiledFrameRemainder0 = !(!dm.field_c))) {
-              decompiledFrameRemainder0 = (~pd.field_V == ~ei.field_q);
+              decompiledFrameRemainder0 = (~AccountChoicePanel.field_V == ~NameAvailabilityValidator.field_q);
             }
             if (decompiledFrameRemainder0) {
-              var4Lifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var4Lifetime3 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var5Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               var6Lifetime3 = 0;
               if (null != var5Lifetime2) {
@@ -12588,9 +12588,9 @@ final class GameplayController {
                 }
               }
             }
-            if (na.field_b == ei.field_q &&
+            if (na.field_b == NameAvailabilityValidator.field_q &&
               this.controlledSentinel.field_fb != 0) {
-              var4Lifetime4 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+              var4Lifetime4 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
               var5Lifetime3 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (var5Lifetime3 != null &&
                 var4Lifetime4 < var5Lifetime3.endTick) {
@@ -12624,9 +12624,9 @@ final class GameplayController {
                 }
               }
             }
-            if (ff.field_nb == ei.field_q &&
+            if (ValidationHelpWidget.field_nb == NameAvailabilityValidator.field_q &&
               this.controlledSentinel.hasModuleType(15, -27)) {
-              var4Lifetime5 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var4Lifetime5 = this.world.simulationTick + Js5Transport.field_h[this.world.field_c];
               var5Lifetime4 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var5Lifetime4 &&
                 var4Lifetime5 < var5Lifetime4.endTick) {
@@ -12660,9 +12660,9 @@ final class GameplayController {
                 }
               }
             }
-            if (~ei.field_q == ~dg.field_d &&
+            if (~NameAvailabilityValidator.field_q == ~dg.field_d &&
               this.controlledSentinel.hasModuleType(24, -27)) {
-              var4Lifetime6 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+              var4Lifetime6 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
               var5Lifetime5 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var5Lifetime5 &&
                 var5Lifetime5.endTick > var4Lifetime6) {
@@ -12740,32 +12740,32 @@ final class GameplayController {
         this.field_E = 0;
         this.field_t = -1;
         try {
-          lh.field_D = false;
-          b.field_f = false;
+          UiComponent.field_D = false;
+          DialWidgetPainter.field_f = false;
           uj.field_f = false;
-          q.field_h = 100;
+          IterableNodeHashTable.field_h = 100;
           sh.field_d = 0;
-          hj.field_F = 0;
+          MusicPatchNode.field_F = 0;
           stackIn_4_0 = (1 != param2) ? 500 : 100;
-          kh.field_x = stackIn_4_0;
-          g.field_h = -1;
+          ThreeSliceButtonPainter.field_x = stackIn_4_0;
+          GrowableIntList.field_h = -1;
           ri.field_b = null;
-          nc.field_a = -1;
-          rc.field_l = 0;
-          pm.field_db = new NodeDeque();
+          WeightedLruCache.field_a = -1;
+          SectorCacheStore.field_l = 0;
+          LoginForm.field_db = new NodeDeque();
           hh.field_c = new int[6];
           this.field_D = new int[this.field_S];
           CachedArchiveProvider.field_g = new int[6];
           this.field_K = new int[this.field_S];
-          ke.field_b = new String[6];
+          WidgetStyleLayer.field_b = new String[6];
           ed.field_j = param4;
           this.field_J = param5;
           BattleTerrain.field_a = 0;
           this.field_d = param0;
-          dl.field_M = qh.field_Yb;
-          f.field_w = new int[10];
-          nj.field_U = new int[10];
-          ce.field_t = jg.a(true);
+          UiContainer.field_M = IconTextComponent.field_Yb;
+          SocketJs5Transport.field_w = new int[10];
+          AccountTermsPanel.field_U = new int[10];
+          ce.field_t = ViewportController.a(true);
           var12_int = 0;
           if (this.field_J) {
             var13 = param3.length;
@@ -12789,8 +12789,8 @@ final class GameplayController {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
           this.world = new CombatWorld(param1, param2, param3, param6, false, param7, var12_int, param8, param9, param10);
-          wc.field_a = this.world.field_W;
-          vi.field_db = this.world.field_fb;
+          MouseInputHandler.field_a = this.world.field_W;
+          AccountRegistrationPanel.field_db = this.world.field_fb;
           fj.field_h = fj.field_a;
           if (this.world.field_P == 0) {
             fj.field_h = new int[12];
@@ -12828,10 +12828,10 @@ final class GameplayController {
             fj.field_h = PartInstruction.field_t;
           }
           if (this.world.terrain.getTerrainType(72) == 0) {
-            jn.a(true, (byte) 104, 200, l.field_i);
+            jn.a(true, (byte) 104, 200, NodeHashTableIterator.field_i);
           }
           if (1 == this.world.terrain.getTerrainType(68)) {
-            jn.a(true, (byte) 86, 200, gb.field_e);
+            jn.a(true, (byte) 86, 200, ByteStorage.field_e);
           }
           if (this.world.terrain.getTerrainType(119) == 2) {
             jn.a(true, (byte) 82, 200, CipherPacketBuffer.field_z);
@@ -12840,7 +12840,7 @@ final class GameplayController {
             jn.a(true, (byte) 111, 200, ue.field_e);
           }
           if (this.world.terrain.getTerrainType(61) == 4) {
-            jn.a(true, (byte) 70, 200, db.field_a);
+            jn.a(true, (byte) 70, 200, SocketConnector.field_a);
           }
           boolean decompiledFrameRemainder0 = true;
           this.controlledSentinel = this.world.findSentinelForPlayer(param4, -127);
@@ -12913,7 +12913,7 @@ final class GameplayController {
           }
           stackIn_123_1 = !(1 >= this.world.playerCount);
           this.field_h = stackIn_123_1;
-          vk.field_g = null;
+          Js5Transport.field_g = null;
           ad.field_i = null;
           if (this.world.terrain.getTerrainType(118) == 4 &&
             null != this.controlledSentinel &&
@@ -12948,7 +12948,7 @@ final class GameplayController {
         field_x = "Tips";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

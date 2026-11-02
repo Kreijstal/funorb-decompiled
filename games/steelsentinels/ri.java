@@ -11,7 +11,7 @@ final class ri {
         if (param0 > -111) {
           return false;
         }
-        return nc.field_q;
+        return WeightedLruCache.field_q;
     }
 
     public static void d(int param0) {
@@ -62,7 +62,7 @@ final class ri {
         if (param0 != 6995) {
           field_b = (Projectile) null;
         }
-        stackIn_6_0 = (uj.field_d >= 10) && (13 <= nj.field_Q);
+        stackIn_6_0 = (uj.field_d >= 10) && (13 <= AccountTermsPanel.field_Q);
         return stackIn_6_0;
     }
 
@@ -104,11 +104,11 @@ final class ri {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param0.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + mj.b(94608000000L + mm.a(-102), 0) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + TabbedPanel.b(94608000000L + mm.a(-102), 0) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              hn.a(param1, 27781, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.a(param1, 27781, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -193,7 +193,7 @@ final class ri {
         if (param0 != 16731221) {
           return false;
         }
-        stackIn_7_0 = (10 <= uj.field_d) && (!mg.field_ac) && (!ud.e(-111));
+        stackIn_7_0 = (10 <= uj.field_d) && (!QuickChatMenu.field_ac) && (!ud.e(-111));
         return stackIn_7_0;
     }
 

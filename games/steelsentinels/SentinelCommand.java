@@ -25,11 +25,11 @@ final class SentinelCommand extends IntrusiveNode {
         }
     }
 
-    final static u a(int param0, byte[] param1) {
-        u var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        u stackIn_5_0 = null;
-        u stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -39,10 +39,10 @@ final class SentinelCommand extends IntrusiveNode {
             return null;
           }
           if (param0 < 57) {
-            stackIn_5_0 = (u) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new u(param1, rl.field_a, oa.field_M, le.field_L, ca.field_r, ba.field_d, dl.field_L);
+          var2 = new CoverageBitmapFont(param1, rl.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, ba.field_d, UiContainer.field_L);
           NodeHashTable.a(9324);
           stackIn_7_0 = var2;
           return stackIn_7_0;

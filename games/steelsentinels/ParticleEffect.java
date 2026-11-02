@@ -46,12 +46,12 @@ final class ParticleEffect extends DualNode {
         RuntimeException var6_ref = null;
         var11 = SteelSentinels.obfuscationControl;
         try {
-          var6 = pd.field_Q;
+          var6 = AccountChoicePanel.field_Q;
           if (PartInstruction.field_g > 0) {
-            var6 = bg.field_C;
+            var6 = WeightedCacheEntry.field_C;
           }
-          var7 = 8 * a.field_c / 50 % var6.length;
-          de.a(-param1 + param4, param3 - param1, vh.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
+          var7 = 8 * MouseWheelInput.field_c / 50 % var6.length;
+          LoginMethod.a(-param1 + param4, param3 - param1, vh.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
           var6[var7].e(param4, param3, 2254472);
           SoftwareRaster.d(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           if (param2 < 26) {
@@ -60,10 +60,10 @@ final class ParticleEffect extends DualNode {
           }
           var6[var7].e(param4, param3, 17561);
           SoftwareRaster.d(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
-          var6[var7].a(param4, param3, 255);
+          var6[var7].drawAdditive(param4, param3, 255);
           var8 = param0 + 2 * param1;
           var9 = 2 * param1 + param5;
-          var10 = a.field_c / 10 % 2;
+          var10 = MouseWheelInput.field_c / 10 % 2;
           while (var10 < var8) {
             SoftwareRaster.f(param4 + (-param1 + var10), param3 - param1, var9, 0, 100);
             var10 += 2;
@@ -81,7 +81,7 @@ final class ParticleEffect extends DualNode {
     }
 
     final void drawParticle(int screenOffsetX, int screenOffsetY, boolean alternateRenderPass, byte obfuscationGuard) {
-        ek stackIn_56_0;
+        ArgbSprite stackIn_56_0;
         int stackIn_56_1;
         int stackIn_56_2;
         int stackIn_56_3;
@@ -121,7 +121,7 @@ final class ParticleEffect extends DualNode {
                   }
                   var8 = Math.max(0, Math.min(15, 16 * this.ageTicks / this.durationTicks));
                   var9 = 2;
-                  cc.field_pc[var8].c(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9);
+                  cc.field_pc[var8].drawScaled(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9);
                   if (var10 == 0) {
                     return;
                   }
@@ -131,7 +131,7 @@ final class ParticleEffect extends DualNode {
                     return;
                   }
                   var9 = 16;
-                  bm.field_S[var8].d(-var9 + var5, -var9 + var7, var9 * 2, 2 * var9, 128);
+                  AccountMessagePanel.field_S[var8].d(-var9 + var5, -var9 + var7, var9 * 2, 2 * var9, 128);
                   if (var10 == 0) {
                     return;
                   }
@@ -142,7 +142,7 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                     var9 = 2;
-                    bm.field_S[var8].d(-var9 + var5, var7 - var9, var9 * 2, 2 * var9, 128);
+                    AccountMessagePanel.field_S[var8].d(-var9 + var5, var7 - var9, var9 * 2, 2 * var9, 128);
                     if (var10 == 0) {
                       return;
                     }
@@ -152,7 +152,7 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                     var9 = 1;
-                    vi.field_gb[var8].d(-var9 + var5, var7 - var9, 2 * var9, var9 * 2, 128);
+                    AccountRegistrationPanel.field_gb[var8].d(-var9 + var5, var7 - var9, 2 * var9, var9 * 2, 128);
                     if (var10 == 0) {
                       return;
                     }
@@ -163,7 +163,7 @@ final class ParticleEffect extends DualNode {
                         return;
                       }
                       var9 = 4;
-                      vi.field_gb[7 - var8].a(-var9 + var5, -var9 + var7, var9 * 2, var9 * 2, 200 - this.ageTicks * 200 / this.durationTicks);
+                      AccountRegistrationPanel.field_gb[7 - var8].drawScaledWithOpacity(-var9 + var5, -var9 + var7, var9 * 2, var9 * 2, 200 - this.ageTicks * 200 / this.durationTicks);
                       if (var10 == 0) {
                         return;
                       }
@@ -173,7 +173,7 @@ final class ParticleEffect extends DualNode {
                         return;
                       }
                       var9 = 2;
-                      bm.field_S[2 & var8].d(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.ageTicks * 250 / this.durationTicks) + 250);
+                      AccountMessagePanel.field_S[2 & var8].d(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.ageTicks * 250 / this.durationTicks) + 250);
                       if (var10 == 0) {
                         return;
                       }
@@ -186,7 +186,7 @@ final class ParticleEffect extends DualNode {
                         return;
                       }
                       var9 = (500 - 2 * this.ageTicks) / 125;
-                      SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 31, hc.field_W);
+                      SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 31, LabeledField.field_W);
                       if (var10 == 0) {
                         return;
                       }
@@ -195,7 +195,7 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                     var9 = 16;
-                    SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 249, hc.field_X);
+                    SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 249, LabeledField.field_X);
                     if (var10 == 0) {
                       return;
                     }
@@ -205,7 +205,7 @@ final class ParticleEffect extends DualNode {
                   }
                   var8 = Math.max(0, Math.min(15, 16 * this.ageTicks / this.durationTicks));
                   var9 = 4;
-                  cc.field_pc[var8].c(var5 - var9, var7 - var9, var9 * 2, 2 * var9);
+                  cc.field_pc[var8].drawScaled(var5 - var9, var7 - var9, var9 * 2, 2 * var9);
                   if (var10 == 0) {
                     return;
                   }
@@ -214,7 +214,7 @@ final class ParticleEffect extends DualNode {
                   return;
                 }
                 var9 = 4;
-                bm.field_S[var8].d(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9, 128);
+                AccountMessagePanel.field_S[var8].d(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9, 128);
                 if (var10 == 0) {
                   return;
                 }
@@ -223,7 +223,7 @@ final class ParticleEffect extends DualNode {
                 return;
               }
               var9Lifetime3 = 2;
-              vi.field_gb[var8].d(var5 - var9Lifetime3, var7 - var9Lifetime3, var9Lifetime3 * 2, 2 * var9Lifetime3, 128);
+              AccountRegistrationPanel.field_gb[var8].d(var5 - var9Lifetime3, var7 - var9Lifetime3, var9Lifetime3 * 2, 2 * var9Lifetime3, 128);
               if (var10 == 0) {
                 return;
               }
@@ -232,7 +232,7 @@ final class ParticleEffect extends DualNode {
               return;
             }
             var9Lifetime2 = 16;
-            vi.field_gb[var8].d(var5 - var9Lifetime2, var7 - var9Lifetime2, var9Lifetime2 * 2, 2 * var9Lifetime2, 128);
+            AccountRegistrationPanel.field_gb[var8].d(var5 - var9Lifetime2, var7 - var9Lifetime2, var9Lifetime2 * 2, 2 * var9Lifetime2, 128);
             if (var10 == 0) {
               return;
             }
@@ -250,7 +250,7 @@ final class ParticleEffect extends DualNode {
             } else {
               stackIn_57_5 = 505 - this.ageTicks * 500 / this.durationTicks;
             }
-            ((ek) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, stackIn_57_5);
+            ((ArgbSprite) (Object) stackIn_56_0).drawScaledWithOpacity(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, stackIn_57_5);
           }
           return;
         }
@@ -267,7 +267,7 @@ final class ParticleEffect extends DualNode {
         if (param0 != 2) {
           ParticleEffect.a(-13, 21, (byte) 84, -39, 29, 95);
         }
-        return wb.field_c == null ? kc.field_q : true;
+        return wb.field_c == null ? DelayedServerPacket.field_q : true;
     }
 
     final void advanceParticle(byte obfuscationGuard) {
@@ -361,15 +361,15 @@ final class ParticleEffect extends DualNode {
 
     final static void a(int param0, int param1, String param2, int param3, String param4) {
         try {
-          vd.field_d.field_zb = vd.field_d.field_zb + wh.field_e.field_zb;
+          vd.field_d.field_zb = vd.field_d.field_zb + DualNodeDequeIterator.field_e.field_zb;
           vd.field_d.field_Db = param4;
           vd.field_d.field_S = param2;
           vd.field_d.field_nb = param1;
           int var5_int = -48 % ((-12 - param0) / 61);
-          wh.field_e.field_Y = wh.field_e.field_Y + wh.field_e.field_zb;
-          wh.field_e.field_zb = param3;
-          vd.field_d.field_zb = vd.field_d.field_zb - wh.field_e.field_zb;
-          wh.field_e.field_Y = wh.field_e.field_Y - wh.field_e.field_zb;
+          DualNodeDequeIterator.field_e.field_Y = DualNodeDequeIterator.field_e.field_Y + DualNodeDequeIterator.field_e.field_zb;
+          DualNodeDequeIterator.field_e.field_zb = param3;
+          vd.field_d.field_zb = vd.field_d.field_zb - DualNodeDequeIterator.field_e.field_zb;
+          DualNodeDequeIterator.field_e.field_Y = DualNodeDequeIterator.field_e.field_Y - DualNodeDequeIterator.field_e.field_zb;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -419,21 +419,21 @@ final class ParticleEffect extends DualNode {
           if (param2 != -93) {
             field_C = (String) null;
           }
-          param1.field_Pb.d();
+          param1.field_Pb.bindRasterTarget();
           if (param0.field_Q != 1) {
             var8 = param4 / 2;
             var9 = param5 / 2;
             if (param0.field_Q == 16) {
               var8 -= 10;
             }
-            var10 = hj.field_w;
+            var10 = MusicPatchNode.field_w;
             if (param0.componentId == 31) {
               var8 -= 20;
             }
             if (64 == param0.field_Q) {
               var8 -= 20;
               var9 += 7;
-              hj.field_w = 2048;
+              MusicPatchNode.field_w = 2048;
             }
             if (param0.field_Q == 128) {
               var8 += 5;
@@ -450,7 +450,7 @@ final class ParticleEffect extends DualNode {
             }
             if (4 == param0.field_Q) {
               var9 -= 20;
-              hj.field_w = 3072;
+              MusicPatchNode.field_w = 3072;
             }
             if (param0.componentId == 76) {
               var8 -= 20;
@@ -462,7 +462,7 @@ final class ParticleEffect extends DualNode {
             }
             if (param0.field_Q == 2048) {
               var9 -= 20;
-              hj.field_w = 2048;
+              MusicPatchNode.field_w = 2048;
             }
             if (param0.componentId == 80) {
               var8 -= 10;
@@ -988,7 +988,7 @@ final class ParticleEffect extends DualNode {
                                                                                                   if (decompiledFrameRemainder12) {
                                                                                                     if (decompiledFrameRemainder11) {
                                                                                                       if (decompiledFrameRemainder10) {
-                                                                                                        hj.field_w = 3000;
+                                                                                                        MusicPatchNode.field_w = 3000;
                                                                                                         var8 += 8;
                                                                                                         if (var12 == 0) {
                                                                                                           break regionExit1;
@@ -1002,7 +1002,7 @@ final class ParticleEffect extends DualNode {
                                                                                                 if (decompiledFrameRemainder12) {
                                                                                                   if (decompiledFrameRemainder11) {
                                                                                                     var9 += 10;
-                                                                                                    hj.field_w = 3300;
+                                                                                                    MusicPatchNode.field_w = 3300;
                                                                                                     var8 += 4;
                                                                                                     if (var12 == 0) {
                                                                                                       break regionExit1;
@@ -1023,14 +1023,14 @@ final class ParticleEffect extends DualNode {
                                                                                           }
                                                                                           if (decompiledFrameRemainder13) {
                                                                                             var9--;
-                                                                                            hj.field_w = 2500;
+                                                                                            MusicPatchNode.field_w = 2500;
                                                                                             if (var12 == 0) {
                                                                                               break regionExit1;
                                                                                             }
                                                                                           }
                                                                                         }
                                                                                         var9 += 4;
-                                                                                        hj.field_w = 2500;
+                                                                                        MusicPatchNode.field_w = 2500;
                                                                                         if (var12 == 0) {
                                                                                           break regionExit1;
                                                                                         }
@@ -1041,7 +1041,7 @@ final class ParticleEffect extends DualNode {
                                                                                         break regionExit1;
                                                                                       }
                                                                                     }
-                                                                                    hj.field_w = 2700;
+                                                                                    MusicPatchNode.field_w = 2700;
                                                                                     if (var12 == 0) {
                                                                                       break regionExit1;
                                                                                     }
@@ -1059,13 +1059,13 @@ final class ParticleEffect extends DualNode {
                                                                               }
                                                                               var9 += 8;
                                                                               var8 += 6;
-                                                                              hj.field_w = 1600;
+                                                                              MusicPatchNode.field_w = 1600;
                                                                               if (var12 == 0) {
                                                                                 break regionExit1;
                                                                               }
                                                                             }
                                                                             var9 += 2;
-                                                                            hj.field_w = 1024;
+                                                                            MusicPatchNode.field_w = 1024;
                                                                             var8 -= 2;
                                                                             if (var12 == 0) {
                                                                               break regionExit1;
@@ -1094,7 +1094,7 @@ final class ParticleEffect extends DualNode {
                                                                       break regionExit1;
                                                                     }
                                                                   }
-                                                                  hj.field_w = 2900;
+                                                                  MusicPatchNode.field_w = 2900;
                                                                   if (var12 == 0) {
                                                                     break regionExit1;
                                                                   }
@@ -1105,13 +1105,13 @@ final class ParticleEffect extends DualNode {
                                                                   break regionExit1;
                                                                 }
                                                               }
-                                                              hj.field_w = 3000;
+                                                              MusicPatchNode.field_w = 3000;
                                                               var9 -= 2;
                                                               if (var12 == 0) {
                                                                 break regionExit1;
                                                               }
                                                             }
-                                                            hj.field_w = 2300;
+                                                            MusicPatchNode.field_w = 2300;
                                                             var8 += 25;
                                                             if (var12 == 0) {
                                                               break regionExit1;
@@ -1144,36 +1144,36 @@ final class ParticleEffect extends DualNode {
                                                   }
                                                 }
                                                 var8 -= 3;
-                                                hj.field_w = 2800;
+                                                MusicPatchNode.field_w = 2800;
                                                 if (var12 == 0) {
                                                   break regionExit1;
                                                 }
                                               }
-                                              hj.field_w = 3500;
+                                              MusicPatchNode.field_w = 3500;
                                               var8 -= 2;
                                               if (var12 == 0) {
                                                 break regionExit1;
                                               }
                                             }
-                                            hj.field_w = 2800;
+                                            MusicPatchNode.field_w = 2800;
                                             var8 -= 10;
                                             if (var12 == 0) {
                                               break regionExit1;
                                             }
                                           }
                                           var8 -= 3;
-                                          hj.field_w = 3800;
+                                          MusicPatchNode.field_w = 3800;
                                           if (var12 == 0) {
                                             break regionExit1;
                                           }
                                         }
                                         var8 -= 4;
-                                        hj.field_w = 3800;
+                                        MusicPatchNode.field_w = 3800;
                                         if (var12 == 0) {
                                           break regionExit1;
                                         }
                                       }
-                                      hj.field_w = 3900;
+                                      MusicPatchNode.field_w = 3900;
                                       var8 -= 2;
                                       if (var12 == 0) {
                                         break regionExit1;
@@ -1191,19 +1191,19 @@ final class ParticleEffect extends DualNode {
                                   }
                                 }
                                 var8 += 3;
-                                hj.field_w = 1800;
+                                MusicPatchNode.field_w = 1800;
                                 if (var12 == 0) {
                                   break regionExit1;
                                 }
                               }
                               var8 += 4;
-                              hj.field_w = 1800;
+                              MusicPatchNode.field_w = 1800;
                               if (var12 == 0) {
                                 break regionExit1;
                               }
                             }
                             var8 += 2;
-                            hj.field_w = 1550;
+                            MusicPatchNode.field_w = 1550;
                             if (var12 == 0) {
                               break regionExit1;
                             }
@@ -1219,80 +1219,80 @@ final class ParticleEffect extends DualNode {
                           break regionExit1;
                         }
                       }
-                      hj.field_w = 3600;
+                      MusicPatchNode.field_w = 3600;
                       if (var12 == 0) {
                         break regionExit1;
                       }
                     }
-                    hj.field_w = 3600;
+                    MusicPatchNode.field_w = 3600;
                     if (var12 == 0) {
                       break regionExit1;
                     }
                   }
-                  hj.field_w = 3600;
+                  MusicPatchNode.field_w = 3600;
                   if (var12 == 0) {
                     break regionExit1;
                   }
                 }
-                hj.field_w = 3600;
+                MusicPatchNode.field_w = 3600;
                 if (var12 == 0) {
                   break regionExit1;
                 }
               }
               var8 += 3;
-              hj.field_w = 2200;
+              MusicPatchNode.field_w = 2200;
             }
             if ((3086 & param0.field_Q) != 0 &&
               param4 > 100) {
               var8 -= 5;
             }
             param0.a(0, false, var8, var9, (byte) 49, 16384);
-            hj.field_w = var10;
+            MusicPatchNode.field_w = var10;
             if (var12 == 0) {
-              sb.field_bb.b((byte) 123);
+              Checkbox.field_bb.b((byte) 123);
               return;
             }
           }
-          var8Lifetime1 = hj.field_w;
+          var8Lifetime1 = MusicPatchNode.field_w;
           if (param0.componentId == 0) {
-            hj.field_w = 1200;
+            MusicPatchNode.field_w = 1200;
           }
           if (55 == param0.componentId) {
-            hj.field_w = 1200;
+            MusicPatchNode.field_w = 1200;
           }
           if (57 == param0.componentId) {
-            hj.field_w = 1300;
+            MusicPatchNode.field_w = 1300;
           }
           if (param0.componentId == 62) {
-            hj.field_w = 1400;
+            MusicPatchNode.field_w = 1400;
           }
           if (65 == param0.componentId) {
-            hj.field_w = 1000;
+            MusicPatchNode.field_w = 1000;
           }
           if (param0.componentId == 69) {
-            hj.field_w = 1400;
+            MusicPatchNode.field_w = 1400;
           }
           if (72 == param0.componentId) {
-            hj.field_w = 1000;
+            MusicPatchNode.field_w = 1000;
           }
           if (param0.componentId == 75) {
-            hj.field_w = 1000;
+            MusicPatchNode.field_w = 1000;
           }
           if (param0.componentId == 79) {
-            hj.field_w = 1000;
+            MusicPatchNode.field_w = 1000;
           }
           if (param0.componentId == 84) {
-            hj.field_w = 1000;
+            MusicPatchNode.field_w = 1000;
           }
           if (param0.componentId == 88) {
-            hj.field_w = 1000;
+            MusicPatchNode.field_w = 1000;
           }
           if (param0.componentId == 92) {
-            hj.field_w = 700;
+            MusicPatchNode.field_w = 700;
           }
           param0.a(0, false, param4 / 2, param5, (byte) 49, 0);
-          hj.field_w = var8Lifetime1;
-          sb.field_bb.b((byte) 123);
+          MusicPatchNode.field_w = var8Lifetime1;
+          Checkbox.field_bb.b((byte) 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

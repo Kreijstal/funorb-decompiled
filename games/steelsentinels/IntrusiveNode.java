@@ -17,22 +17,22 @@ class IntrusiveNode {
     static int field_h;
     static SceneWidget[] field_f;
 
-    final static ll a(int param0) {
+    final static UiTheme a(int param0) {
         int var1 = -105 / ((param0 - 83) / 42);
-        if (kh.field_w != null) {
-          return kh.field_w;
+        if (ThreeSliceButtonPainter.field_w != null) {
+          return ThreeSliceButtonPainter.field_w;
         }
-        kh.field_w = new ll();
-        kh.field_w.a(111, tj.field_e);
-        kh.field_w.field_t = 7697781;
-        kh.field_w.field_d = 5;
-        kh.field_w.field_b = 14;
-        kh.field_w.field_a = 0;
-        kh.field_w.field_g = 6;
-        kh.field_w.field_v = rc.field_m;
-        kh.field_w.field_n = 2763306;
-        kh.field_w.field_w = 4;
-        return kh.field_w;
+        ThreeSliceButtonPainter.field_w = new UiTheme();
+        ThreeSliceButtonPainter.field_w.initializePainters(111, tj.field_e);
+        ThreeSliceButtonPainter.field_w.field_t = 7697781;
+        ThreeSliceButtonPainter.field_w.field_d = 5;
+        ThreeSliceButtonPainter.field_w.field_b = 14;
+        ThreeSliceButtonPainter.field_w.field_a = 0;
+        ThreeSliceButtonPainter.field_w.field_g = 6;
+        ThreeSliceButtonPainter.field_w.field_v = SectorCacheStore.field_m;
+        ThreeSliceButtonPainter.field_w.field_n = 2763306;
+        ThreeSliceButtonPainter.field_w.field_w = 4;
+        return ThreeSliceButtonPainter.field_w;
     }
 
     final void unlink(int obfuscationGuard) {
@@ -75,7 +75,7 @@ class IntrusiveNode {
         field_n = null;
     }
 
-    final boolean b(byte param0) {
+    final boolean isLinked(byte param0) {
         if (param0 != -12) {
           return true;
         }

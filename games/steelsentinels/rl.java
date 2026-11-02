@@ -89,10 +89,10 @@ final class rl {
         Throwable caughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        kc var4_ref_kc = null;
+        DelayedServerPacket var4_ref_kc = null;
         int var4 = 0;
         int var5_int = 0;
-        kc var5 = null;
+        DelayedServerPacket var5 = null;
         int var6 = 0;
         int var7 = 0;
         scanLoop1: while (true) {
@@ -104,14 +104,14 @@ final class rl {
                 }
                 case 1: {
                     try {
-                        if (rn.field_v == jd.field_sb) {
+                        if (rn.field_v == AccountNoticeDialog.field_sb) {
                             /* Inlined CFG state: 4. */
                             {
                                 if (param0 > 10) {
                                     /* Inlined CFG state: 7. */
                                     {
                                         var2_long = mm.a(112);
-                                        if (ej.field_H == 0) {
+                                        if (MusicPatchPcmStream.field_H == 0) {
                                             statePc = 18;
                                         } else {
                                             statePc = 8;
@@ -138,7 +138,7 @@ final class rl {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -152,10 +152,10 @@ final class rl {
                 }
                 case 8: {
                     try {
-                        if (ub.field_g < 0) {
+                        if (SoundCache.field_g < 0) {
                             /* Inlined CFG state: 10. */
                             {
-                                var4_ref_kc = (kc) (ll.field_r.first(13058));
+                                var4_ref_kc = (DelayedServerPacket) (UiTheme.field_r.first(13058));
                                 if (var4_ref_kc == null) {
                                     statePc = 19;
                                 } else {
@@ -173,7 +173,7 @@ final class rl {
                     } catch (Throwable stateCaught_8) {
                         statePc = ((Object) stateCaught_8 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_8);
                         }
                         caughtException = stateCaught_8;
                         continue scanLoop1;
@@ -185,7 +185,7 @@ final class rl {
                             /* Inlined CFG state: 13. */
                             {
                                 var4_ref_kc.unlink(4);
-                                jg.field_f = var4_ref_kc.field_B.length;
+                                ViewportController.field_f = var4_ref_kc.field_B.length;
                                 rf.field_d.position = 0;
                                 var5_int = 0;
                                 statePc = 14;
@@ -201,7 +201,7 @@ final class rl {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -209,12 +209,12 @@ final class rl {
                 }
                 case 14: {
                     try {
-                        if (jg.field_f <= var5_int) {
+                        if (ViewportController.field_f <= var5_int) {
                             /* Inlined CFG state: 16. */
                             {
-                                di.field_d = ma.field_W;
-                                ma.field_W = aj.field_u;
-                                aj.field_u = ch.field_N;
+                                di.field_d = TextHotspotWidget.field_W;
+                                TextHotspotWidget.field_W = RasterSnapshot.field_u;
+                                RasterSnapshot.field_u = ch.field_N;
                                 ch.field_N = var4_ref_kc.field_p;
                                 stackIn_17_0 = 1;
                                 statePc = 17;
@@ -232,7 +232,7 @@ final class rl {
                     } catch (Throwable stateCaught_14) {
                         statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
                         continue scanLoop1;
@@ -242,24 +242,24 @@ final class rl {
                     return stackIn_17_0 != 0;
                 }
                 case 18: {
-                    stackIn_21_0 = ub.field_g;
+                    stackIn_21_0 = SoundCache.field_g;
                     statePc = 21;
                     continue scanLoop1;
                 }
                 case 19: {
-                    stackIn_21_0 = ub.field_g;
+                    stackIn_21_0 = SoundCache.field_g;
                     statePc = 21;
                     continue scanLoop1;
                 }
                 case 20: {
                     try {
-                        stackIn_21_0 = ub.field_g;
+                        stackIn_21_0 = SoundCache.field_g;
                         statePc = 21;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_20) {
                         statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_20);
                         }
                         caughtException = stateCaught_20;
                         continue scanLoop1;
@@ -277,9 +277,9 @@ final class rl {
                                 if (ve.a((byte) -127, 1)) {
                                     /* Inlined CFG state: 25. */
                                     {
-                                        ub.field_g = rf.field_d.readCipheredOpcode(false);
+                                        SoundCache.field_g = rf.field_d.readCipheredOpcode(false);
                                         rf.field_d.position = 0;
-                                        jg.field_f = param1[ub.field_g];
+                                        ViewportController.field_f = param1[SoundCache.field_g];
                                         statePc = 26;
                                         continue scanLoop1;
                                     }
@@ -296,7 +296,7 @@ final class rl {
                     } catch (Throwable stateCaught_21) {
                         statePc = ((Object) stateCaught_21 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_21);
                         }
                         caughtException = stateCaught_21;
                         continue scanLoop1;
@@ -307,14 +307,14 @@ final class rl {
                 }
                 case 26: {
                     try {
-                        if (pm.n(24)) {
+                        if (LoginForm.n(24)) {
                             /* Inlined CFG state: 29. */
                             {
-                                if (ej.field_H != 0) {
+                                if (MusicPatchPcmStream.field_H != 0) {
                                     /* Inlined CFG state: 32. */
                                     {
-                                        var4 = ej.field_H;
-                                        if (nh.field_f == 0.0) {
+                                        var4 = MusicPatchPcmStream.field_H;
+                                        if (Bzip2State.field_f == 0.0) {
                                             statePc = 36;
                                         } else {
                                             statePc = 33;
@@ -324,11 +324,11 @@ final class rl {
                                 } else {
                                     /* Inlined CFG state: 30. */
                                     {
-                                        di.field_d = ma.field_W;
-                                        ma.field_W = aj.field_u;
-                                        aj.field_u = ch.field_N;
-                                        ch.field_N = ub.field_g;
-                                        ub.field_g = -1;
+                                        di.field_d = TextHotspotWidget.field_W;
+                                        TextHotspotWidget.field_W = RasterSnapshot.field_u;
+                                        RasterSnapshot.field_u = ch.field_N;
+                                        ch.field_N = SoundCache.field_g;
+                                        SoundCache.field_g = -1;
                                         stackIn_31_0 = 1;
                                         statePc = 31;
                                         continue scanLoop1;
@@ -346,7 +346,7 @@ final class rl {
                     } catch (Throwable stateCaught_26) {
                         statePc = ((Object) stateCaught_26 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
                         continue scanLoop1;
@@ -360,7 +360,7 @@ final class rl {
                 }
                 case 33: {
                     try {
-                        var4 = (int)((double)var4 + rb.field_g.nextGaussian() * nh.field_f);
+                        var4 = (int)((double)var4 + rb.field_g.nextGaussian() * Bzip2State.field_f);
                         if (0 > var4) {
                             /* Inlined CFG state: 35. */
                             {
@@ -378,7 +378,7 @@ final class rl {
                     } catch (Throwable stateCaught_33) {
                         statePc = ((Object) stateCaught_33 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
                         continue scanLoop1;
@@ -386,14 +386,14 @@ final class rl {
                 }
                 case 36: {
                     try {
-                        var5 = new kc(var2_long + (long)var4, ub.field_g, new byte[jg.field_f]);
+                        var5 = new DelayedServerPacket(var2_long + (long)var4, SoundCache.field_g, new byte[ViewportController.field_f]);
                         var6 = 0;
                         statePc = 37;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_36) {
                         statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
                         continue scanLoop1;
@@ -401,11 +401,11 @@ final class rl {
                 }
                 case 37: {
                     try {
-                        if (jg.field_f <= var6) {
+                        if (ViewportController.field_f <= var6) {
                             /* Inlined CFG state: 39. */
                             {
-                                ll.field_r.addLast(3, var5);
-                                ub.field_g = -1;
+                                UiTheme.field_r.addLast(3, var5);
+                                SoundCache.field_g = -1;
                                 statePc = 20;
                                 continue scanLoop1;
                             }
@@ -421,7 +421,7 @@ final class rl {
                     } catch (Throwable stateCaught_37) {
                         statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 40 : -1);
                         if (statePc == -1) {
-                            throw rl.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
+                            throw rl.<RuntimeException>rethrowUnchecked(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
                         continue scanLoop1;
@@ -462,9 +462,9 @@ final class rl {
         }
     }
 
-    final static boolean a(String param0, vi param1, String param2, int param3, String param4, boolean param5, boolean param6) {
+    final static boolean a(String param0, AccountRegistrationPanel param1, String param2, int param3, String param4, boolean param5, boolean param6) {
         RuntimeException var7 = null;
-        fg var8 = null;
+        RegistrationRequestDialog var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -476,11 +476,11 @@ final class rl {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (cb.field_j != mm.field_e) {
+          if (DiskCacheWorker.field_j != mm.field_e) {
             return false;
           }
-          var8 = new fg(ag.field_p, param1);
-          ag.field_p.a(var8, 20);
+          var8 = new RegistrationRequestDialog(GradientOutlineTextPainter.field_p, param1);
+          GradientOutlineTextPainter.field_p.pushPanel(var8, 20);
           if (!param6) {
             rl.a(121);
           }
@@ -488,10 +488,10 @@ final class rl {
             var8.o(126);
             return true;
           }
-          bk.field_ab = param0;
-          bl.field_a = param5;
-          cb.field_j = nj.field_ab;
-          bl.field_f = param2;
+          StripedProgressBar.field_ab = param0;
+          LinkButtonPainter.field_a = param5;
+          DiskCacheWorker.field_j = AccountTermsPanel.field_ab;
+          LinkButtonPainter.field_f = param2;
           qf.field_d = null;
           wi.field_y = param3;
           kf.field_o = param4;
@@ -531,17 +531,17 @@ final class rl {
     final static void b(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = ub.field_e;
+        var1 = SoundCache.field_e;
         synchronized (var1) {
-          nc.field_d = wn.field_d;
+          WeightedLruCache.field_d = wn.field_d;
           ob.field_q = ob.field_q + 1;
           oh.field_f = SentinelDesigner.field_j;
-          pi.field_c = hc.field_G;
+          DelegatingCanvas.field_c = LabeledField.field_G;
           ik.field_a = ce.field_w;
           ce.field_w = false;
-          lb.field_gc = ad.field_c;
-          oa.field_S = fg.field_Rb;
-          rj.field_j = me.field_d;
+          VerticalScrollbar.field_gc = ad.field_c;
+          TextButton.field_S = RegistrationRequestDialog.field_Rb;
+          BufferedRandomAccessFile.field_j = LoginCredentials.field_d;
           ad.field_c = param0;
           sf.field_d = rb.field_a;
         }
@@ -554,7 +554,7 @@ final class rl {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

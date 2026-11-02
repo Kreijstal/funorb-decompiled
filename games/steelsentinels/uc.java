@@ -7,7 +7,7 @@ final class uc {
     static int[][] field_e;
     static int[] field_k;
     static int[] field_f;
-    static cn field_i;
+    static TextWidgetPainter field_i;
     static int field_l;
     static int field_a;
     static int[] field_d;
@@ -41,14 +41,14 @@ final class uc {
           if (!param0) {
             uc.a(-115, 79);
           }
-          var4 = (tc) (ic.field_B.first(13058));
+          var4 = (tc) (MidiPcmStream.field_B.first(13058));
           while (var4 != null) {
             vh.a(param1, var4, (byte) 107);
-            var4 = (tc) (ic.field_B.next((byte) -53));
+            var4 = (tc) (MidiPcmStream.field_B.next((byte) -53));
           }
           var5 = (kf) (SentinelCommand.field_w.first(13058));
           while (var5 != null) {
-            ma.a(param1, var5, -2864);
+            TextHotspotWidget.a(param1, var5, -2864);
             var5 = (kf) (SentinelCommand.field_w.next((byte) -40));
           }
           return;
@@ -80,7 +80,7 @@ final class uc {
             var7 = param0[1].field_z;
             param0[0].a(param4, param2);
             param0[2].a(param1 + (param4 - var6), param2);
-            SoftwareRaster.b(aj.field_v);
+            SoftwareRaster.b(RasterSnapshot.field_v);
             SoftwareRaster.h(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
             var8 = var5_int + param4;
             var9 = param4 + param1 - var6;
@@ -92,7 +92,7 @@ final class uc {
               param0[1].a(param4, param2);
               param4 = param4 + var7;
             }
-            SoftwareRaster.a(aj.field_v);
+            SoftwareRaster.a(RasterSnapshot.field_v);
             return;
           }
           return;
@@ -125,7 +125,7 @@ final class uc {
             oc.a(param0, -105, true)) {
             return false;
           }
-          if (t.a(fe.field_D, param0, -20370)) {
+          if (t.a(ArchiveRequest.field_D, param0, -20370)) {
             return true;
           }
           var7 = dn.field_bc;

@@ -74,7 +74,7 @@ final class fj {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qh.a((byte) -30, param0)) {
+          if (!IconTextComponent.a((byte) -30, param0)) {
             return false;
           }
           if (param2 > -93) {
@@ -87,7 +87,7 @@ final class fj {
           if (12 <= var3_int) {
             return false;
           }
-          if (!jd.a(param0, -33)) {
+          if (!AccountNoticeDialog.a(param0, -33)) {
             return true;
           }
           return (0 != var3_int);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class SceneWidget extends dh {
+class SceneWidget extends SceneWidgetNode {
     int field_Kb;
     static boolean field_J;
     static java.awt.Frame field_N;
@@ -251,9 +251,9 @@ class SceneWidget extends dh {
     }
 
     final void a(byte param0, boolean param1) {
-        db.field_d = !param1 ? true : false;
+        SocketConnector.field_d = !param1 ? true : false;
         int var3 = -36 % ((65 - param0) / 41);
-        bh.field_f = !param1 ? true : false;
+        SentinelCommandSimulator.field_f = !param1 ? true : false;
         this.a(true, SoftwareRaster.field_c, 0, SoftwareRaster.field_j, (byte) -123, 0);
     }
 
@@ -270,22 +270,22 @@ class SceneWidget extends dh {
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          ag.field_p.a((byte) 86, true, FunOrbClient.field_u, bd.field_d);
-          ag.field_p.h((byte) -4);
-          while (dl.f(22759)) {
-            ag.field_p.a(true, ei.field_q, de.field_c);
+          GradientOutlineTextPainter.field_p.a((byte) 86, true, FunOrbClient.field_u, bd.field_d);
+          GradientOutlineTextPainter.field_p.h((byte) -4);
+          while (UiContainer.f(22759)) {
+            GradientOutlineTextPainter.field_p.a(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
           }
-          if (-1 != ma.field_V) {
-            var1_int = ma.field_V;
-            hc.a(-1, 0);
+          if (-1 != TextHotspotWidget.field_V) {
+            var1_int = TextHotspotWidget.field_V;
+            LabeledField.a(-1, 0);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
-          if (kc.field_A) {
+          if (DelayedServerPacket.field_A) {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (nj.field_ab == jn.field_b) {
+          if (AccountTermsPanel.field_ab == jn.field_b) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -296,7 +296,7 @@ class SceneWidget extends dh {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (cb.field_j != nj.field_ab) {
+          if (DiskCacheWorker.field_j != AccountTermsPanel.field_ab) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }
@@ -487,9 +487,9 @@ class SceneWidget extends dh {
         var21 = this.field_qb + var19;
         var22 = this.field_sb + var20;
         if (!this.field_P) {
-          hb.a((byte) -64, var16, this.field_zb, this.field_cb, this.field_Rb, this.field_Lb);
+          IterableDualNodeDeque.a((byte) -64, var16, this.field_zb, this.field_cb, this.field_Rb, this.field_Lb);
         } else {
-          hb.a((byte) -120, var16, param6, param9, param1, param7);
+          IterableDualNodeDeque.a((byte) -120, var16, param6, param9, param1, param7);
         }
         if (var17 != null) {
           var23_int = var21 + this.field_Rb;
@@ -509,7 +509,7 @@ class SceneWidget extends dh {
           if (this.field_X >= 256) {
             var17.a(var23_int, var24);
           } else {
-            var17.b(var23_int, var24, this.field_X);
+            var17.drawShadedGrayscale(var23_int, var24, this.field_X);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -523,7 +523,7 @@ class SceneWidget extends dh {
             this.field_Db != null) {
             var23Lifetime2 = var26 + this.field_Db;
           }
-          if (this.field_L.c(var23Lifetime2) <= this.field_zb - 2 * this.field_ub &&
+          if (this.field_L.textWidth(var23Lifetime2) <= this.field_zb - 2 * this.field_ub &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_Fb != 1) {
               if (2 == this.field_Fb) {
@@ -533,7 +533,7 @@ class SceneWidget extends dh {
               var22 = var22 + (-this.field_L.field_F + this.field_Lb - this.field_L.field_G) / 2;
             }
             if (this.field_Kb == 0) {
-              this.field_L.a(var23Lifetime2, var21 + this.field_Rb + this.field_ub, this.field_L.field_G + var22 + this.field_cb, var18, -1, this.field_V);
+              this.field_L.drawLeftAlpha(var23Lifetime2, var21 + this.field_Rb + this.field_ub, this.field_L.field_G + var22 + this.field_cb, var18, -1, this.field_V);
             } else {
               if (this.field_Kb == 1) {
                 this.field_L.c(var23Lifetime2, (this.field_zb - this.field_ub * 2) / 2 + this.field_Rb + (this.field_ub + var21), this.field_L.field_G + var22 + this.field_cb, var18, -1, this.field_V);
@@ -558,7 +558,7 @@ class SceneWidget extends dh {
             var23_ref = (SceneWidget) (this.field_M.next((byte) -78));
           }
         }
-        SoftwareRaster.a(var12, var13, var14, var15);
+        SoftwareRaster.setClip(var12, var13, var14, var15);
     }
 
     final SceneWidget a(String param0, boolean param1) {
@@ -576,7 +576,7 @@ class SceneWidget extends dh {
             SceneWidget.a(25, (java.applet.Applet) null);
           }
           var5 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = this.a(ke.a(var5, (byte) -48), 3318);
+          stackIn_3_0 = this.a(WidgetStyleLayer.a(var5, (byte) -48), 3318);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -593,7 +593,7 @@ class SceneWidget extends dh {
     }
 
     SceneWidget(String param0, SceneWidget param1) {
-        this(ke.a((CharSequence) ((Object) param0), (byte) -48), param1, 0, 0, 0, 0, (String) null);
+        this(WidgetStyleLayer.a((CharSequence) ((Object) param0), (byte) -48), param1, 0, 0, 0, 0, (String) null);
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, byte param4, int param5) {
@@ -650,30 +650,30 @@ class SceneWidget extends dh {
         var12 = SoftwareRaster.field_d;
         SoftwareRaster.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_Lb + this.field_cb);
         var13 = 0;
-        if (!db.field_d &&
+        if (!SocketConnector.field_d &&
           param0 &&
-          lb.field_gc != 0 &&
-          SoftwareRaster.field_i <= oa.field_S &&
-          oa.field_S < SoftwareRaster.field_b &&
-          rj.field_j >= SoftwareRaster.field_l &&
-          SoftwareRaster.field_d > rj.field_j) {
-          this.field_Eb = lb.field_gc;
-          this.field_Nb = -this.field_cb + rj.field_j;
-          this.field_Cb = -this.field_Rb + oa.field_S;
+          VerticalScrollbar.field_gc != 0 &&
+          SoftwareRaster.field_i <= TextButton.field_S &&
+          TextButton.field_S < SoftwareRaster.field_b &&
+          BufferedRandomAccessFile.field_j >= SoftwareRaster.field_l &&
+          SoftwareRaster.field_d > BufferedRandomAccessFile.field_j) {
+          this.field_Eb = VerticalScrollbar.field_gc;
+          this.field_Nb = -this.field_cb + BufferedRandomAccessFile.field_j;
+          this.field_Cb = -this.field_Rb + TextButton.field_S;
           var13 = 1;
-          this.field_W = lb.field_gc;
+          this.field_W = VerticalScrollbar.field_gc;
         } else {
-          if (lb.field_gc != 0) {
+          if (VerticalScrollbar.field_gc != 0) {
             this.field_W = 0;
           }
           this.field_Eb = 0;
         }
-        if (0 == nc.field_d) {
+        if (0 == WeightedLruCache.field_d) {
           this.field_W = 0;
         }
-        stackIn_33_1 = (!bh.field_f) && (SoftwareRaster.field_i <= oh.field_f) && (oh.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= pi.field_c) && (pi.field_c < SoftwareRaster.field_d);
+        stackIn_33_1 = (!SentinelCommandSimulator.field_f) && (SoftwareRaster.field_i <= oh.field_f) && (oh.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= DelegatingCanvas.field_c) && (DelegatingCanvas.field_c < SoftwareRaster.field_d);
         this.field_K = stackIn_33_1;
-        stackIn_38_1 = (this.field_K) && (this.field_W == nc.field_d) && (param0);
+        stackIn_38_1 = (this.field_K) && (this.field_W == WeightedLruCache.field_d) && (param0);
         this.field_kb = stackIn_38_1;
         if (this.field_M != null) {
           var14 = (SceneWidget) (this.field_M.b(1063677678));
@@ -683,16 +683,16 @@ class SceneWidget extends dh {
           }
         }
         if (this.field_K) {
-          bh.field_f = true;
+          SentinelCommandSimulator.field_f = true;
         }
         if (var13 != 0) {
-          db.field_d = true;
+          SocketConnector.field_d = true;
         }
-        SoftwareRaster.a(var9, var10, var11, var12);
+        SoftwareRaster.setClip(var9, var10, var11, var12);
         if (this.field_W != 0 &&
           this.field_U) {
           this.field_Y = -this.field_Cb + oh.field_f - param5;
-          this.field_eb = -param2 - this.field_Nb + pi.field_c;
+          this.field_eb = -param2 - this.field_Nb + DelegatingCanvas.field_c;
           if (this.field_Y < 0) {
             this.field_Y = 0;
           }
@@ -739,8 +739,8 @@ class SceneWidget extends dh {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (hn.a(param1, (byte) -96, "getcookies"));
-              var5 = ka.a(';', false, var4);
+              var4 = (String) (JavaScriptBridge.callWindowFunction(param1, (byte) -96, "getcookies"));
+              var5 = ModalStack.a(';', false, var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

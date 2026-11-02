@@ -7,7 +7,7 @@ final class DualNodeDeque {
     static int[] field_c;
     static hm field_a;
     private DualNode traversalCursor;
-    static rm field_f;
+    static MenuInputState field_f;
 
     final DualNode next(boolean obfuscationGuard) {
         DualNode var2 = this.traversalCursor;
@@ -130,7 +130,7 @@ final class DualNodeDeque {
           var8 = pl.field_T;
           jm.a(param1, param7, var8, 1, param3, param4);
           if (param6 != null) {
-            param2.a(param6, param4 / 2 + param3, param2.field_U / 2 + param7 / 2 + param1, param0, -1);
+            param2.drawCentered(param6, param4 / 2 + param3, param2.field_U / 2 + param7 / 2 + param1, param0, -1);
           }
           if (param5 == 68) {
             return;
@@ -219,6 +219,6 @@ final class DualNodeDeque {
         field_b = "You have completed the training missions. Log in or create a free account to play multiplayer games or to begin the single player campaign.";
         field_c = new int[]{0, 1, 28, 5, 35, 4, 3, 22, 19};
         field_a = new hm();
-        field_f = new rm(1);
+        field_f = new MenuInputState(1);
     }
 }

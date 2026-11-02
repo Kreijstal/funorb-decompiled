@@ -64,8 +64,8 @@ final class lc {
         if (param0 != 0) {
           field_d = (String) null;
         }
-        ma.a(true, (byte) -99, kf.field_o, bl.field_f);
-        nm.field_p = true;
+        TextHotspotWidget.a(true, (byte) -99, kf.field_o, LinkButtonPainter.field_f);
+        EmailAvailabilityValidator.field_p = true;
     }
 
     public static void b(int param0) {
@@ -80,7 +80,7 @@ final class lc {
     }
 
     final static void a(int param0, int param1, hk param2, int param3, int param4, int param5, int param6, boolean param7) {
-        qh[][] stackIn_38_0 = null;
+        IconTextComponent[][] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
         int stackIn_57_0 = 0;
         int stackIn_73_0 = 0;
@@ -89,7 +89,7 @@ final class lc {
         StringBuilder stackIn_103_1 = null;
         String stackIn_104_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qh[] var8 = null;
+        IconTextComponent[] var8 = null;
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9 = 0;
@@ -97,14 +97,14 @@ final class lc {
         int[] var10_ref_int__ = null;
         int var11 = 0;
         int var12 = 0;
-        qh var13 = null;
+        IconTextComponent var13 = null;
         int var13_int = 0;
         int var14 = 0;
         int var15 = 0;
         hk var16 = null;
-        qh[] var17 = null;
+        IconTextComponent[] var17 = null;
         int[] var18 = null;
-        qh[] var19 = null;
+        IconTextComponent[] var19 = null;
         int[] var20 = null;
         int var10Lifetime1;
         int var13_intLifetime1;
@@ -116,16 +116,16 @@ final class lc {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (m.field_b.length <= var9) {
+              if (HuffmanDecoder.field_b.length <= var9) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
-                ng.field_k = true;
+                MembershipPromotionScreen.field_k = true;
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var20 = m.field_b[var9];
+              var20 = HuffmanDecoder.field_b[var9];
               var18 = var20;
               var10_ref_int__ = var18;
               var11 = 0;
@@ -140,7 +140,7 @@ final class lc {
                     var13_int = var20[var12];
                     if (var13_int != -1) {
                       if (var13_int < param4) {
-                        m.field_h[var13_int] = true;
+                        HuffmanDecoder.field_h[var13_int] = true;
                       }
                     } else {
                       PacketBuffer.field_u = true;
@@ -152,7 +152,7 @@ final class lc {
                 var13_intLifetime1 = var20[var12];
                 var14 = var10_ref_int__[var12 + 1];
                 if (var13_intLifetime1 == -1) {
-                  if (var14 != jg.field_l[param1]) {
+                  if (var14 != ViewportController.field_l[param1]) {
                     break scanLoop1;
                   }
                 } else {
@@ -163,7 +163,7 @@ final class lc {
                     if (var13_intLifetime1 >= param4) {
                       break scanLoop1;
                     }
-                    if ((255 & dl.field_O[var13_intLifetime1]) != var14) {
+                    if ((255 & UiContainer.field_O[var13_intLifetime1]) != var14) {
                       break scanLoop1;
                     }
                   }
@@ -190,7 +190,7 @@ final class lc {
             if (param7) {
               if (param4 != -1) {
                 for (var10 = 0; var17.length - 1 > var10; var10++) {
-                  if (0 == (ti.field_s[(var10 + param6) / 8] & 1 << (var10 + param6 & 7))) {
+                  if (0 == (ImageProducerRasterBuffer.field_s[(var10 + param6) / 8] & 1 << (var10 + param6 & 7))) {
                     continue;
                   }
                   var9 = 0;
@@ -199,7 +199,7 @@ final class lc {
                 param6 = param6 + (wb.field_j[param4] & 255);
               } else {
                 var10 = 0;
-                while (!(var10 >= jg.field_l.length)) {
+                while (!(var10 >= ViewportController.field_l.length)) {
                   if ((rb.field_i[var10 / 8] & 1 << (7 & var10)) == 0) {
                     var10++;
                     continue;
@@ -213,7 +213,7 @@ final class lc {
             var11 = 0;
             while (true) {
               if (param4 == -1) {
-                stackIn_57_0 = jg.field_l.length;
+                stackIn_57_0 = ViewportController.field_l.length;
               } else {
                 stackIn_57_0 = var19.length - 1;
               }
@@ -223,12 +223,12 @@ final class lc {
                 }
                 for (var11 = 0; var11 < -1 + var19.length; var11++) {
                   if (param4 != -1) {
-                    dl.field_O[param4] = (byte)var11;
+                    UiContainer.field_O[param4] = (byte)var11;
                   } else {
                     param1 = var11;
                   }
                   lc.a(param0, param1, param2, param3, 1 + param4, -120, param6, param7);
-                  if (ng.field_k) {
+                  if (MembershipPromotionScreen.field_k) {
                     return;
                   }
                 }
@@ -237,10 +237,10 @@ final class lc {
               if (param4 == -1) {
                 param1 = var11;
               } else {
-                dl.field_O[param4] = (byte)var11;
+                UiContainer.field_O[param4] = (byte)var11;
               }
               if (-1 == param4 &&
-                jg.field_l.length == 1) {
+                ViewportController.field_l.length == 1) {
                 var12 = 1;
               } else {
                 var13 = var8[var11 + 1];
@@ -248,7 +248,7 @@ final class lc {
                   if (param4 != -1) {
                     stackIn_81_0 = ((255 & nf.field_b.field_Sb[param4]) != var11) ? 0 : 1;
                   } else {
-                    stackIn_81_0 = (jg.field_l[var11] != nf.field_b.field_Ub) ? 0 : 1;
+                    stackIn_81_0 = (ViewportController.field_l[var11] != nf.field_b.field_Ub) ? 0 : 1;
                   }
                   var12 = stackIn_81_0;
                 } else {
@@ -268,7 +268,7 @@ final class lc {
                 var10Lifetime1 = 1;
                 lc.a(param0, param1, param2, param3, 1 + param4, -120, param6, param7);
               }
-              if (ng.field_k) {
+              if (MembershipPromotionScreen.field_k) {
                 return;
               }
               var11++;

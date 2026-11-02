@@ -1,0 +1,63 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ClientException extends RuntimeException {
+    static int field_h;
+    Throwable field_l;
+    static String field_f;
+    static int field_m;
+    String field_a;
+    static int[] field_k;
+    static SceneWidget field_g;
+    static rf field_d;
+    static String field_i;
+    static String field_j;
+    static String field_b;
+    static RgbSprite[] field_c;
+    static boolean field_e;
+    private static String field_z;
+
+    public static void a(boolean param0) {
+        field_i = null;
+        field_k = null;
+        field_c = null;
+        field_b = null;
+        field_j = null;
+        field_d = null;
+        if (!param0) {
+          field_f = null;
+          field_g = null;
+          return;
+        }
+    }
+
+    final static c a(int param0, boolean param1) {
+        c var2 = null;
+        c var2Lifetime1;
+        if (param1) {
+          var2 = new c();
+          RegistrationRequestDialog.field_Ub.addLast(3, var2);
+          tc.a(87, param0);
+          return var2;
+        }
+        field_m = 46;
+        var2Lifetime1 = new c();
+        RegistrationRequestDialog.field_Ub.addLast(3, var2Lifetime1);
+        tc.a(87, param0);
+        return var2Lifetime1;
+    }
+
+    ClientException(Throwable param0, String param1) {
+        this.field_a = param1;
+        this.field_l = param0;
+    }
+
+    static {
+        field_z = "od.A(";
+        field_f = "Shortcut Reference";
+        field_k = new int[]{17, 18, 22, -1, -1, 8};
+        field_d = new rf();
+        field_j = "WASD: Scroll / RMB <img=26>: jump";
+        field_b = "Quick Chat Help";
+    }
+}

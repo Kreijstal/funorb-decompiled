@@ -5,7 +5,7 @@ final class uf {
     static NodeDeque field_f;
     static int[] field_b;
     static int[] field_a;
-    mj field_d;
+    TabbedPanel field_d;
     static int field_h;
     static String field_e;
     static int field_c;
@@ -62,8 +62,8 @@ final class uf {
         SceneWidget[] var4 = null;
         try {
           var3 = new String[]{param0, ad.field_a, cf.field_A};
-          var4 = new SceneWidget[]{param1, ig.field_m, (SceneWidget) ((Object) vi.field_W)};
-          this.field_d = new mj(0L, ka.field_U, var3, be.field_c, var4, 0);
+          var4 = new SceneWidget[]{param1, WhirlpoolHasher.field_m, (SceneWidget) ((Object) AccountRegistrationPanel.field_W)};
+          this.field_d = new TabbedPanel(0L, ModalStack.field_U, var3, be.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -73,11 +73,11 @@ final class uf {
         int var6 = 24;
         int var7 = 5;
         this.field_d.a(10, param0, var7, param2, param4, var6, param1);
-        vc.field_h.a(0, 0, db.field_b, 0, ig.field_m.field_zb);
-        mm.field_a.a(0, 2 + db.field_b, 18, 0, -2 + (-80 + ig.field_m.field_zb + (-ua.field_G - 2)));
-        dh.field_E.a(0, db.field_b + 2, 18, -ua.field_G + (ig.field_m.field_zb - 82), 82 + ua.field_G);
-        km.field_j.a(ig.field_m.field_zb, -20 + ig.field_m.field_Lb + (-db.field_b - 2), 2, 0, 20, 122, ua.field_G, param3 + (db.field_b + 20));
-        vi.field_W.a(2, 20, param3 ^ 46, ua.field_G);
+        vc.field_h.a(0, 0, SocketConnector.field_b, 0, WhirlpoolHasher.field_m.field_zb);
+        mm.field_a.a(0, 2 + SocketConnector.field_b, 18, 0, -2 + (-80 + WhirlpoolHasher.field_m.field_zb + (-ReflectionCheck.field_G - 2)));
+        SceneWidgetNode.field_E.a(0, SocketConnector.field_b + 2, 18, -ReflectionCheck.field_G + (WhirlpoolHasher.field_m.field_zb - 82), 82 + ReflectionCheck.field_G);
+        km.field_j.a(WhirlpoolHasher.field_m.field_zb, -20 + WhirlpoolHasher.field_m.field_Lb + (-SocketConnector.field_b - 2), 2, 0, 20, 122, ReflectionCheck.field_G, param3 + (SocketConnector.field_b + 20));
+        AccountRegistrationPanel.field_W.a(2, 20, param3 ^ 46, ReflectionCheck.field_G);
     }
 
     static {

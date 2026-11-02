@@ -28,10 +28,10 @@ final class rg {
             return stackIn_2_0;
           }
           if (param1) {
-            stackIn_7_0 = a.field_a.c(param0);
+            stackIn_7_0 = MouseWheelInput.field_a.textWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = re.field_ib.c(param0);
+          stackIn_5_0 = NumericDateInputWidget.field_ib.textWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -147,46 +147,46 @@ final class rg {
         int var11 = 0;
         var11 = SteelSentinels.obfuscationControl;
         try {
-          var1_int = hb.field_b - hl.field_q;
-          hl.field_q = vg.field_f - (var1_int >> 1);
-          lk.field_W = qg.field_a - (SceneWidget.field_hb >> 1);
-          hb.field_b = var1_int + hl.field_q;
+          var1_int = IterableDualNodeDeque.field_b - hl.field_q;
+          hl.field_q = ProxyAuthenticationException.field_f - (var1_int >> 1);
+          ValidationIndicator.field_W = MarkerSliderPainter.field_a - (SceneWidget.field_hb >> 1);
+          IterableDualNodeDeque.field_b = var1_int + hl.field_q;
           var3 = -104 % ((26 - param0) / 62);
-          var2 = lk.field_W;
-          for (var4 = 0; var4 < an.field_g.length; var4++) {
+          var2 = ValidationIndicator.field_W;
+          for (var4 = 0; var4 < AudioService.field_g.length; var4++) {
             var5 = kk.field_g[var4];
             if (var5 >= 0) {
               if (var5 != se.field_c.field_e) {
-                var6 = bf.field_Fb;
+                var6 = LoginDialog.field_Fb;
               } else {
                 var6 = o.field_b;
               }
             } else {
-              var6 = vg.field_c;
+              var6 = ProxyAuthenticationException.field_c;
             }
-            var7 = an.field_g[var4];
+            var7 = AudioService.field_g[var4];
             stackIn_10_0 = var7;
             stackIn_11_1 = !(var5 < 0);
             var8 = rg.a(stackIn_10_0, stackIn_11_1, (byte) -94);
-            var9 = vg.field_f - (var8 >> 1);
+            var9 = ProxyAuthenticationException.field_f - (var8 >> 1);
             if (var5 >= 0) {
               var2 = var2 + tf.field_c;
               if (var5 == se.field_c.field_e) {
                 stackIn_16_0 = (ak) (field_b);
               } else {
-                stackIn_16_0 = qh.field_Xb;
+                stackIn_16_0 = IconTextComponent.field_Xb;
               }
               var10 = stackIn_16_0;
               if (var10 != null) {
-                var10.a(var8 + (h.field_U << 1), -15203, var9 - h.field_U, (id.field_ac << 1) + ig.field_e, var2);
+                var10.a(var8 + (DraggableWidget.field_U << 1), -15203, var9 - DraggableWidget.field_U, (IconLabelControl.field_ac << 1) + WhirlpoolHasher.field_e, var2);
               }
-              var2 = var2 + id.field_ac;
+              var2 = var2 + IconLabelControl.field_ac;
             }
             if (var5 >= 0) {
-              a.field_a.b(var7, var9, var2 + rm.field_g, var6, -1);
-              var2 = var2 + (ig.field_e + (tf.field_c + id.field_ac));
+              MouseWheelInput.field_a.drawLeft(var7, var9, var2 + MenuInputState.field_g, var6, -1);
+              var2 = var2 + (WhirlpoolHasher.field_e + (tf.field_c + IconLabelControl.field_ac));
             } else {
-              re.field_ib.b(var7, var9, var2 + IntKeyLookup.field_d, var6, -1);
+              NumericDateInputWidget.field_ib.drawLeft(var7, var9, var2 + IntKeyLookup.field_d, var6, -1);
               var2 = var2 + IntrusiveNode.field_e;
             }
           }
@@ -225,7 +225,7 @@ final class rg {
             }
             return;
           }
-          var6 = Explosion.field_S[lh.field_r];
+          var6 = Explosion.field_S[UiComponent.field_r];
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
@@ -236,14 +236,14 @@ final class rg {
             var6.a(245, 199);
           }
           if (NodeDeque.field_g < hh.field_i) {
-            var7Lifetime2 = Explosion.field_S[oe.field_e];
+            var7Lifetime2 = Explosion.field_S[QuickChatPhraseCache.field_e];
             if (var7Lifetime2 != null) {
               var2_int = (var7Lifetime2.field_z + 60) * NodeDeque.field_g / hh.field_i;
               var3 = var2_int - 30;
               if (rf.field_b) {
-                nn.a(245, -256 * var3 / 30, (var7Lifetime2.field_z - var3) * 256 / 30, 199, var7Lifetime2, -1);
+                FullscreenFocusCanvas.a(245, -256 * var3 / 30, (var7Lifetime2.field_z - var3) * 256 / 30, 199, var7Lifetime2, -1);
               } else {
-                nn.a(245, (var7Lifetime2.field_z - var3) * 256 / 30, var3 * -256 / 30, 199, var7Lifetime2, -1);
+                FullscreenFocusCanvas.a(245, (var7Lifetime2.field_z - var3) * 256 / 30, var3 * -256 / 30, 199, var7Lifetime2, -1);
               }
             }
           }

@@ -21,7 +21,7 @@ final class ArticulatedPart extends DualNode {
     private PartInstruction[] instructions;
     static dj field_F;
     private static int[] field_M;
-    static pn field_A;
+    static SystemTaskService field_A;
     static fm field_O;
     IndexedSprite field_H;
     static String field_P;
@@ -41,7 +41,7 @@ final class ArticulatedPart extends DualNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          particle = ol.acquireCyclicParticle((byte) -105);
+          particle = QuickChatHelpDialog.acquireCyclicParticle((byte) -105);
           particle.velocityY = velocityY;
           particle.worldY = worldY;
           if (obfuscationGuard <= 86) {
@@ -111,9 +111,9 @@ final class ArticulatedPart extends DualNode {
             if (stackIn_5_0 != null &&
               this.instructions[var8].field_u) {
               var9 = 16 * jh.sine16(8192 * -var7 / 65536, 4096) / 65536;
-              var10 = 16 * kg.cosine16(8192 * -var7 / 65536, (byte) -74) / 65536;
-              var11 = (hj.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 16) + param2;
-              var12 = param3 + ((-(var9 * (this.instructions[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.instructions[var8].field_r)) * hj.field_w >> 16);
+              var10 = 16 * ScrollContainer.cosine16(8192 * -var7 / 65536, (byte) -74) / 65536;
+              var11 = (MusicPatchNode.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 16) + param2;
+              var12 = param3 + ((-(var9 * (this.instructions[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.instructions[var8].field_r)) * MusicPatchNode.field_w >> 16);
               var13 = var7 + this.instructions[var8].field_n;
               this.a((byte) -101, param1, var13, var8, var11, param0, var12);
             }
@@ -126,21 +126,21 @@ final class ArticulatedPart extends DualNode {
           stackIn_11_0 = this;
         }
         if (this.sprite != null) {
-          this.sprite.a(this.field_G << 4, this.field_E << 4, param2 << 4, param3 << 4, -var7, hj.field_w);
+          this.sprite.a(this.field_G << 4, this.field_E << 4, param2 << 4, param3 << 4, -var7, MusicPatchNode.field_w);
         }
         if (param1) {
           this.field_K = var7 - param0 - this.field_D;
           this.field_W = this.field_D + var7 + param0;
         }
-        var8Lifetime1 = 8 * hj.field_w / 4096;
-        if (param2 - var8Lifetime1 < nj.field_V) {
-          nj.field_V = param2 - var8Lifetime1;
+        var8Lifetime1 = 8 * MusicPatchNode.field_w / 4096;
+        if (param2 - var8Lifetime1 < AccountTermsPanel.field_V) {
+          AccountTermsPanel.field_V = param2 - var8Lifetime1;
         }
-        if (param3 - var8Lifetime1 < ti.field_y) {
-          ti.field_y = -var8Lifetime1 + param3;
+        if (param3 - var8Lifetime1 < ImageProducerRasterBuffer.field_y) {
+          ImageProducerRasterBuffer.field_y = -var8Lifetime1 + param3;
         }
-        if (lh.field_t < var8Lifetime1 + param3) {
-          lh.field_t = var8Lifetime1 + param3;
+        if (UiComponent.field_t < var8Lifetime1 + param3) {
+          UiComponent.field_t = var8Lifetime1 + param3;
         }
         if (en.field_d < var8Lifetime1 + param2) {
           en.field_d = var8Lifetime1 + param2;
@@ -152,9 +152,9 @@ final class ArticulatedPart extends DualNode {
             if (this.instructions[var15].field_q != -1 ||
               null != this.instructions[var15].attachedPart) {
               var10Lifetime1 = jh.sine16(8192 * -var7 / 65536, param4 + 4047) * 16 / 65536;
-              var11Lifetime1 = 16 * kg.cosine16(-var7 * 8192 / 65536, (byte) -82) / 65536;
-              this.instructions[var15].field_k = (((-this.field_G + this.instructions[var15].field_s) * var11Lifetime1 + var10Lifetime1 * (-this.field_E + this.instructions[var15].field_r)) * hj.field_w >> 16) + param2;
-              this.instructions[var15].field_l = ((var11Lifetime1 * (this.instructions[var15].field_r - this.field_E) - var10Lifetime1 * (-this.field_G + this.instructions[var15].field_s)) * hj.field_w >> 16) + param3;
+              var11Lifetime1 = 16 * ScrollContainer.cosine16(-var7 * 8192 / 65536, (byte) -82) / 65536;
+              this.instructions[var15].field_k = (((-this.field_G + this.instructions[var15].field_s) * var11Lifetime1 + var10Lifetime1 * (-this.field_E + this.instructions[var15].field_r)) * MusicPatchNode.field_w >> 16) + param2;
+              this.instructions[var15].field_l = ((var11Lifetime1 * (this.instructions[var15].field_r - this.field_E) - var10Lifetime1 * (-this.field_G + this.instructions[var15].field_s)) * MusicPatchNode.field_w >> 16) + param3;
               this.instructions[var15].field_f = var7 + this.instructions[var15].field_n;
               if (this.instructions[var15].attachedPart == null ||
                 this.instructions[var15].field_u) {
@@ -162,20 +162,20 @@ final class ArticulatedPart extends DualNode {
                   this.instructions[var15].field_q != -1 &&
                   param1 &&
                   1024 != this.instructions[var15].field_q) {
-                  if (nj.field_V > -var8Lifetime1 + this.instructions[var15].field_k) {
-                    nj.field_V = this.instructions[var15].field_k - var8Lifetime1;
+                  if (AccountTermsPanel.field_V > -var8Lifetime1 + this.instructions[var15].field_k) {
+                    AccountTermsPanel.field_V = this.instructions[var15].field_k - var8Lifetime1;
                   }
                   if (this.instructions[var15].field_k + var8Lifetime1 > en.field_d) {
                     en.field_d = this.instructions[var15].field_k + var8Lifetime1;
                   }
-                  if (-var8Lifetime1 + this.instructions[var15].field_l < ti.field_y) {
-                    ti.field_y = this.instructions[var15].field_l - var8Lifetime1;
+                  if (-var8Lifetime1 + this.instructions[var15].field_l < ImageProducerRasterBuffer.field_y) {
+                    ImageProducerRasterBuffer.field_y = this.instructions[var15].field_l - var8Lifetime1;
                   }
-                  if (lh.field_t < this.instructions[var15].field_l + var8Lifetime1) {
-                    lh.field_t = this.instructions[var15].field_l + var8Lifetime1;
+                  if (UiComponent.field_t < this.instructions[var15].field_l + var8Lifetime1) {
+                    UiComponent.field_t = this.instructions[var15].field_l + var8Lifetime1;
                   }
                   var10Lifetime1Lifetime1 = jh.sine16(this.instructions[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
-                  var11Lifetime1Lifetime1 = kg.cosine16(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
+                  var11Lifetime1Lifetime1 = ScrollContainer.cosine16(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
                 }
               } else {
                 this.a((byte) -69, param1, this.instructions[var15].field_f, var15, this.instructions[var15].field_k, param0, this.instructions[var15].field_l);
@@ -461,9 +461,9 @@ final class ArticulatedPart extends DualNode {
         int var12Lifetime1;
         var13 = SteelSentinels.obfuscationControl;
         if (!this.field_L) {
-          stackIn_3_0 = hj.field_w << 2;
+          stackIn_3_0 = MusicPatchNode.field_w << 2;
         } else {
-          stackIn_3_0 = hj.field_w;
+          stackIn_3_0 = MusicPatchNode.field_w;
         }
         var5 = stackIn_3_0;
         stackIn_6_0 = (!this.field_L) ? 2 : 4;
@@ -481,9 +481,9 @@ final class ArticulatedPart extends DualNode {
               if (stackIn_27_0 != stackIn_9_1 &&
                 this.instructions[var8].field_u) {
                 var9 = jh.sine16(-var7 / 8, 4096) / 256;
-                var10 = kg.cosine16(-var7 / 8, (byte) -103) / 256;
-                var11 = param3 * (hj.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 20) + param1;
-                var12 = ((-((this.instructions[var8].field_s - this.field_G) * var9) + (-this.field_E + this.instructions[var8].field_r) * var10) * hj.field_w >> 20) + param2;
+                var10 = ScrollContainer.cosine16(-var7 / 8, (byte) -103) / 256;
+                var11 = param3 * (MusicPatchNode.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 20) + param1;
+                var12 = ((-((this.instructions[var8].field_s - this.field_G) * var9) + (-this.field_E + this.instructions[var8].field_r) * var10) * MusicPatchNode.field_w >> 20) + param2;
                 this.instructions[var8].attachedPart.a((byte) 122, var11, var12, param3);
               }
               var8++;
@@ -494,7 +494,7 @@ final class ArticulatedPart extends DualNode {
               this.field_H = (IndexedSprite) null;
             }
             decompiledFrameRemainder0 = (this.componentId != 108 ||
-              !(vi.field_db));
+              !(AccountRegistrationPanel.field_db));
             if (decompiledFrameRemainder0) {
               if (param3 == 1 &&
                 null != this.field_U) {
@@ -552,9 +552,9 @@ final class ArticulatedPart extends DualNode {
             if (null != this.instructions[var14].attachedPart &&
               !this.instructions[var14].field_u) {
               var9Lifetime1 = jh.sine16(-var7 / 8, 4096) / 256;
-              var10Lifetime1 = kg.cosine16(-var7 / 8, (byte) -71) / 256;
-              var11Lifetime1 = param3 * (hj.field_w * ((this.instructions[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20) + param1;
-              var12Lifetime1 = param2 + (hj.field_w * ((this.instructions[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20);
+              var10Lifetime1 = ScrollContainer.cosine16(-var7 / 8, (byte) -71) / 256;
+              var11Lifetime1 = param3 * (MusicPatchNode.field_w * ((this.instructions[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20) + param1;
+              var12Lifetime1 = param2 + (MusicPatchNode.field_w * ((this.instructions[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20);
               this.instructions[var14].attachedPart.a((byte) 101, var11Lifetime1, var12Lifetime1, param3);
             }
             var14++;
@@ -588,12 +588,12 @@ final class ArticulatedPart extends DualNode {
                 if (var6 != -1) {
                   var7 = NodeDeque.a(var6, (byte) 67);
                   if (var7 == null) {
-                    dh.a(db.a("Component Id not valid ID=<%0> data_pos=<%1>", -61, new String[]{Integer.toString(var6), Integer.toString(-1 + param0)}), (byte) 118);
+                    SceneWidgetNode.a(SocketConnector.a("Component Id not valid ID=<%0> data_pos=<%1>", -61, new String[]{Integer.toString(var6), Integer.toString(-1 + param0)}), (byte) 118);
                     stackIn_10_0 = param0;
                     return stackIn_10_0;
                   }
                   if ((var7.field_Q & this.instructions[var5_int].field_q) == 0) {
-                    dh.a(db.a("Component not correct id=<%0> type=<%0> desired=<%1>", -71, new String[]{Integer.toString(var6), Integer.toString(var7.field_Q), Integer.toString(this.instructions[var5_int].field_q)}), (byte) 124);
+                    SceneWidgetNode.a(SocketConnector.a("Component not correct id=<%0> type=<%0> desired=<%1>", -71, new String[]{Integer.toString(var6), Integer.toString(var7.field_Q), Integer.toString(this.instructions[var5_int].field_q)}), (byte) 124);
                     stackIn_13_0 = param0;
                     return stackIn_13_0;
                   }
@@ -678,7 +678,7 @@ final class ArticulatedPart extends DualNode {
           if (var10 == 0) {
             if (null != this.instructions[var5].attachedPart) {
               var6 = 32 * jh.sine16(-this.rotation * 8192 / 65536, 4096) / 65536;
-              var7 = kg.cosine16(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
+              var7 = ScrollContainer.cosine16(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
               var8 = param1 + ((-this.field_E + this.instructions[var5].field_r) * var6 + var7 * (this.instructions[var5].field_s - this.field_G)) * param2;
               var9 = param3 + (-this.field_E + this.instructions[var5].field_r) * var7 - var6 * (this.instructions[var5].field_s - this.field_G);
               this.instructions[var5].attachedPart.b((byte) -128, var8, param2, var9);
@@ -720,9 +720,9 @@ final class ArticulatedPart extends DualNode {
               var9 = new RgbSprite(param2.sprite.field_g >> 2, param2.sprite.field_d >> 2);
               var10 = var9;
               var12 = SoftwareRaster.field_g;
-              var10.d();
-              param2.sprite.b(0, 0);
-              SoftwareRaster.a(var12, 640, 480);
+              var10.bindRasterTarget();
+              param2.sprite.drawQuarter(0, 0);
+              SoftwareRaster.setTarget(var12, 640, 480);
               param2.field_U = new IndexedSprite(var10.field_z, var10.field_B, 129);
               var6 = var10.field_E.length - 1;
               while (var6 >= 0) {
@@ -742,7 +742,7 @@ final class ArticulatedPart extends DualNode {
                 var6--;
               }
               if (decompiledFrameCompleted0) {
-                param2.field_U.field_o = rm.field_h;
+                param2.field_U.field_o = MenuInputState.field_h;
                 param2.field_H = param2.field_U.b();
                 param2.field_H.field_o = param2.field_U.field_o;
               }
@@ -801,8 +801,8 @@ final class ArticulatedPart extends DualNode {
 
     final void d(int param0, int param1) {
         ed.field_f = 0;
-        gl.field_p = -1;
-        si.field_t = 0;
+        NanoTickClock.field_p = -1;
+        CachedTextLayout.field_t = 0;
         if (param0 != 65536) {
           this.rotation = 13;
         }
@@ -1191,19 +1191,19 @@ final class ArticulatedPart extends DualNode {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          um.field_W = param1.readUnsignedShort((byte) -60) << 5;
+          MarkerSlider.field_W = param1.readUnsignedShort((byte) -60) << 5;
           var2_int = param1.readUnsignedByte((byte) -93);
-          um.field_W = um.field_W + (var2_int >> 3);
-          pm.field_S = var2_int << 18 & 1835008;
-          pm.field_S = pm.field_S + (param1.readUnsignedShort((byte) -60) << 2);
+          MarkerSlider.field_W = MarkerSlider.field_W + (var2_int >> 3);
+          LoginForm.field_S = var2_int << 18 & 1835008;
+          LoginForm.field_S = LoginForm.field_S + (param1.readUnsignedShort((byte) -60) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -59);
-          pm.field_S = pm.field_S + (var2_intLifetime1 >> 6);
+          LoginForm.field_S = LoginForm.field_S + (var2_intLifetime1 >> 6);
           uf.field_h = (63 & var2_intLifetime1) << 15;
           uf.field_h = uf.field_h + (param1.readUnsignedByte((byte) -65) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) -77);
-          lb.field_Tb = (1 & var2_intLifetime2) << 16;
+          VerticalScrollbar.field_Tb = (1 & var2_intLifetime2) << 16;
           uf.field_h = uf.field_h + (var2_intLifetime2 >> 1);
-          lb.field_Tb = lb.field_Tb + param1.readUnsignedShort((byte) -60);
+          VerticalScrollbar.field_Tb = VerticalScrollbar.field_Tb + param1.readUnsignedShort((byte) -60);
           if (param0 > -70) {
             field_M = (int[]) null;
           }
@@ -1329,21 +1329,21 @@ final class ArticulatedPart extends DualNode {
             (decompiledFrameRemainder0 = !(param1.field_g))) {
             if (0 != param1.field_w ||
               param1.field_n != 0) {
-              var4 = db.a(ak.field_e, -99, new String[]{(String) (var2)});
+              var4 = SocketConnector.a(ak.field_e, -99, new String[]{(String) (var2)});
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var4 = db.a(hh.field_d, -93, new String[]{(String) (var2)});
+              var4 = SocketConnector.a(hh.field_d, -93, new String[]{(String) (var2)});
               decompiledFrameRemainder0 = (var5 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
             if (param1.field_k == 0 &&
               cd.field_g) {
-              var4 = "[" + kh.field_p + "] ";
+              var4 = "[" + ThreeSliceButtonPainter.field_p + "] ";
             }
             if (param1.field_k == 1) {
-              var4 = "[" + db.a(pd.field_ab, -102, new String[]{param1.field_s}) + "] ";
+              var4 = "[" + SocketConnector.a(AccountChoicePanel.field_ab, -102, new String[]{param1.field_s}) + "] ";
             }
             if (4 == param1.field_k &&
               PartInstruction.field_a != null) {
@@ -1457,20 +1457,20 @@ final class ArticulatedPart extends DualNode {
           if (param0 >= this.field_K &&
             this.field_W >= param0) {
             qi.field_k = true;
-            if (sl.field_i != ic.field_P) {
-              if (ic.field_P < this.field_W) {
-                ic.field_P = this.field_W;
+            if (sl.field_i != MidiPcmStream.field_P) {
+              if (MidiPcmStream.field_P < this.field_W) {
+                MidiPcmStream.field_P = this.field_W;
               }
               if (!(this.field_K >= sl.field_i)) {
                 sl.field_i = this.field_K;
                 if (var5 != 0) {
                   sl.field_i = this.field_K;
-                  ic.field_P = this.field_W;
+                  MidiPcmStream.field_P = this.field_W;
                 }
               }
             } else {
               sl.field_i = this.field_K;
-              ic.field_P = this.field_W;
+              MidiPcmStream.field_P = this.field_W;
             }
             this.rotation = param0;
             var4_ref_nk = this.field_S;
@@ -1491,19 +1491,19 @@ final class ArticulatedPart extends DualNode {
           if ((decompiledFrameCompleted0) &&
             (decompiledFrameRemainder0)) {
             if (!qi.field_k) {
-              if (sl.field_i != ic.field_P) {
+              if (sl.field_i != MidiPcmStream.field_P) {
                 if (sl.field_i > this.field_K) {
                   sl.field_i = this.field_K;
                 }
-                if (!(this.field_W <= ic.field_P)) {
-                  ic.field_P = this.field_W;
+                if (!(this.field_W <= MidiPcmStream.field_P)) {
+                  MidiPcmStream.field_P = this.field_W;
                   if (var5 != 0) {
-                    ic.field_P = this.field_W;
+                    MidiPcmStream.field_P = this.field_W;
                     sl.field_i = this.field_K;
                   }
                 }
               } else {
-                ic.field_P = this.field_W;
+                MidiPcmStream.field_P = this.field_W;
                 sl.field_i = this.field_K;
               }
             }
@@ -1592,15 +1592,15 @@ final class ArticulatedPart extends DualNode {
         }
         if (param0 == ja.a(this.componentId, false)) {
           if (0 >= this.field_C) {
-            si.field_t = si.field_t + 1;
-            if ((var4 != 0) && (gl.field_p == -1 ||
-              !(this.field_C >= gl.field_p))) {
-              gl.field_p = this.field_C;
+            CachedTextLayout.field_t = CachedTextLayout.field_t + 1;
+            if ((var4 != 0) && (NanoTickClock.field_p == -1 ||
+              !(this.field_C >= NanoTickClock.field_p))) {
+              NanoTickClock.field_p = this.field_C;
             }
           } else {
-            if (gl.field_p == -1 ||
-              !(this.field_C >= gl.field_p)) {
-              gl.field_p = this.field_C;
+            if (NanoTickClock.field_p == -1 ||
+              !(this.field_C >= NanoTickClock.field_p)) {
+              NanoTickClock.field_p = this.field_C;
             }
           }
           ed.field_f = -17 + this.componentId;

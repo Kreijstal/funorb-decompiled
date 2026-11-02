@@ -17,11 +17,11 @@ final class vc {
 
     final static void a(String param0, RgbSprite param1, boolean param2) {
         try {
-          ij.field_P = param0;
+          NameSuggestionsPanel.field_P = param0;
           if (param2) {
             field_d = true;
           }
-          jf.field_kb = param1;
+          EditableTextWidget.field_kb = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -43,7 +43,7 @@ final class vc {
     }
 
     final static void a(int param0) {
-        wc.a(23825);
+        MouseInputHandler.a(23825);
         if (param0 != -1) {
           vc.a(79);
         }
@@ -65,10 +65,10 @@ final class vc {
             return 216000;
           }
         } else {
-          if (10 >= qh.field_Yb) {
+          if (10 >= IconTextComponent.field_Yb) {
             return 218000;
           }
-          if (qh.field_Yb <= 12) {
+          if (IconTextComponent.field_Yb <= 12) {
             return 30000;
           }
         }

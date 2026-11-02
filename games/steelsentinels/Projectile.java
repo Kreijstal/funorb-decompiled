@@ -143,9 +143,9 @@ final class Projectile extends DualNode {
         if (this.effectType >= 12 &&
           16 >= this.effectType) {
           if (this.velocityX != 1) {
-            sb.field_W.a(-(sb.field_W.field_z / 2) + var4, -(sb.field_W.field_B / 2) + var5);
+            Checkbox.field_W.a(-(Checkbox.field_W.field_z / 2) + var4, -(Checkbox.field_W.field_B / 2) + var5);
           } else {
-            hb.field_e.a(var4 - sb.field_W.field_z / 2, var5 - sb.field_W.field_B / 2);
+            IterableDualNodeDeque.field_e.a(var4 - Checkbox.field_W.field_z / 2, var5 - Checkbox.field_W.field_B / 2);
           }
         }
         if (var4 < -32) {
@@ -188,7 +188,7 @@ final class Projectile extends DualNode {
                     var11++;
                     continue;
                   }
-                  qh.b(10000, var5 << 4, 15, var4 << 4, var9 << 4);
+                  IconTextComponent.b(10000, var5 << 4, 15, var4 << 4, var9 << 4);
                   SoftwareRaster.a(var4 << 4, var5 << 4, var9 << 4, 500, var26);
                   stackIn_94_0Lifetime1 = ~this.sourceWeaponType;
                   stackIn_94_1Lifetime1 = -19;
@@ -258,7 +258,7 @@ final class Projectile extends DualNode {
                   var14 = var14 / 2;
                   var13 = var13 / 2;
                 }
-                if (ka.field_V &&
+                if (ModalStack.field_V &&
                   3 > var12) {
                   var12 = 3;
                 }
@@ -275,7 +275,7 @@ final class Projectile extends DualNode {
                     var13 = var13 >> 2;
                     var14 = var14 >> 2;
                     for (var16_intLifetime1 = 15; var16_intLifetime1 > 0; var16_intLifetime1--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1 * 3, 2 * var16_intLifetime1 + 1, hc.field_W);
+                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1 * 3, 2 * var16_intLifetime1 + 1, LabeledField.field_W);
                       var5 = var5 + var14;
                       var4 = var4 + var13;
                     }
@@ -287,7 +287,7 @@ final class Projectile extends DualNode {
                     var4 = var4 << 4;
                     var13 = var13 >> 3;
                     for (var16_intLifetime1Lifetime1 = 15; var16_intLifetime1Lifetime1 > 0; var16_intLifetime1Lifetime1--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime1 * 3, 1 + var16_intLifetime1Lifetime1 * 2, hc.field_eb);
+                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime1 * 3, 1 + var16_intLifetime1Lifetime1 * 2, LabeledField.field_eb);
                       var5 = var5 + var14;
                       var4 = var4 + var13;
                     }
@@ -300,7 +300,7 @@ final class Projectile extends DualNode {
                     var4 = var4 << 4;
                     var13 = var13 >> 3;
                     for (var16_intLifetime1Lifetime2 = 15; var16_intLifetime1Lifetime2 > 0; var16_intLifetime1Lifetime2--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime2 * 3, var16_intLifetime1Lifetime2 * 2 + 1, hc.field_eb);
+                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime2 * 3, var16_intLifetime1Lifetime2 * 2 + 1, LabeledField.field_eb);
                       var4 = var4 + var13;
                       var5 = var5 + var14;
                     }
@@ -313,7 +313,7 @@ final class Projectile extends DualNode {
                     var4 = var4 << 4;
                     var5 = var5 << 4;
                     for (var16_intLifetime1Lifetime3 = 15; 0 < var16_intLifetime1Lifetime3; var16_intLifetime1Lifetime3--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime3 * 3, 1 + 2 * var16_intLifetime1Lifetime3, hc.field_W);
+                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime3 * 3, 1 + 2 * var16_intLifetime1Lifetime3, LabeledField.field_W);
                       var4 = var4 + var13;
                       var5 = var5 + var14;
                     }
@@ -342,7 +342,7 @@ final class Projectile extends DualNode {
               var8_ref_nk.sprite.a(var8_ref_nk.sprite.field_g << 3, var8_ref_nk.sprite.field_d << 3, var4 << 4, var5 << 4, var7, 1024);
               if (this.sourceWeaponType == 32) {
                 var9 = 3 * var6 / 2;
-                b.field_n[0 + this.world.simulationTick / 10 % 6].d(-(this.velocityX >> 6) - var9 + var4, -(this.velocityY >> 6) + var5 - var9, var9 * 2, var9 * 2, 192);
+                DialWidgetPainter.field_n[0 + this.world.simulationTick / 10 % 6].d(-(this.velocityX >> 6) - var9 + var4, -(this.velocityY >> 6) + var5 - var9, var9 * 2, var9 * 2, 192);
               }
             }
           }
@@ -802,8 +802,8 @@ final class Projectile extends DualNode {
     }
 
     final static java.applet.Applet d(byte param0) {
-        if (fb.field_o != null) {
-          return fb.field_o;
+        if (UsernameCredentials.field_o != null) {
+          return UsernameCredentials.field_o;
         }
         if (param0 != -21) {
           field_J = (SceneWidget) null;
@@ -823,7 +823,7 @@ final class Projectile extends DualNode {
         try {
           var2_int = -57 % ((-11 - param0) / 36);
           var3 = (CharSequence) ((Object) param1);
-          stackIn_1_0 = ng.field_r.equals(ui.a(1, var3));
+          stackIn_1_0 = MembershipPromotionScreen.field_r.equals(AlphaContainer.a(1, var3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1025,8 +1025,8 @@ final class Projectile extends DualNode {
                   if (stackIn_34_0) {
                     var10.affectedSentinels = null;
                   }
-                  var10.velocityX = var10.velocityX + (jh.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * wc.a((byte) -61, var9, 16) >> 15);
-                  var10.velocityY = var10.velocityY + (kg.cosine16(var5 * 8192 / 7 + this.world.simulationTick, (byte) -98) * wc.a((byte) -61, var9, 16) >> 15);
+                  var10.velocityX = var10.velocityX + (jh.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * MouseInputHandler.a((byte) -61, var9, 16) >> 15);
+                  var10.velocityY = var10.velocityY + (ScrollContainer.cosine16(var5 * 8192 / 7 + this.world.simulationTick, (byte) -98) * MouseInputHandler.a((byte) -61, var9, 16) >> 15);
                   this.world.field_db.addLast(3, var10);
                 }
               } else {
@@ -1043,9 +1043,9 @@ final class Projectile extends DualNode {
                       var8.affectedSentinels = null;
                     }
                     var8.field_kb = this.field_kb;
-                    var8.velocityX = var8.velocityX + (jh.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * wc.a((byte) -61, var9, 16) >> 15);
-                    var8.velocityY = var8.velocityY + (kg.cosine16(8192 * var5 / 7 + this.world.simulationTick, (byte) -94) * wc.a((byte) -61, var9, 16) >> 15);
-                    pm.field_db.addLast(3, var8);
+                    var8.velocityX = var8.velocityX + (jh.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * MouseInputHandler.a((byte) -61, var9, 16) >> 15);
+                    var8.velocityY = var8.velocityY + (ScrollContainer.cosine16(8192 * var5 / 7 + this.world.simulationTick, (byte) -94) * MouseInputHandler.a((byte) -61, var9, 16) >> 15);
+                    LoginForm.field_db.addLast(3, var8);
                   }
                 }
               }
@@ -1177,8 +1177,8 @@ final class Projectile extends DualNode {
               if (stackIn_68_0) {
                 var9.affectedSentinels = null;
               }
-              var9.velocityX = var9.velocityX + (jh.sine16(8192 * var4 / 10 + this.world.simulationTick, 4096) * wc.a((byte) -61, var10, 64) >> 16);
-              var9.velocityY = var9.velocityY + (kg.cosine16(this.world.simulationTick + var4 * 8192 / 10, (byte) -98) * wc.a((byte) -61, var10, 48) >> 16);
+              var9.velocityX = var9.velocityX + (jh.sine16(8192 * var4 / 10 + this.world.simulationTick, 4096) * MouseInputHandler.a((byte) -61, var10, 64) >> 16);
+              var9.velocityY = var9.velocityY + (ScrollContainer.cosine16(this.world.simulationTick + var4 * 8192 / 10, (byte) -98) * MouseInputHandler.a((byte) -61, var10, 48) >> 16);
               this.world.field_db.addLast(3, var9);
             }
           } else {
@@ -1193,9 +1193,9 @@ final class Projectile extends DualNode {
                   var7.affectedSentinels = null;
                 }
                 var7.field_kb = this.field_kb;
-                var7.velocityX = var7.velocityX + (jh.sine16(this.world.simulationTick + 8192 * var4 / 10, 4096) * wc.a((byte) -61, var8, 64) >> 16);
-                var7.velocityY = var7.velocityY + (kg.cosine16(this.world.simulationTick + 8192 * var4 / 10, (byte) -108) * wc.a((byte) -61, var8, 48) >> 16);
-                pm.field_db.addLast(param1 + 32, var7);
+                var7.velocityX = var7.velocityX + (jh.sine16(this.world.simulationTick + 8192 * var4 / 10, 4096) * MouseInputHandler.a((byte) -61, var8, 64) >> 16);
+                var7.velocityY = var7.velocityY + (ScrollContainer.cosine16(this.world.simulationTick + 8192 * var4 / 10, (byte) -108) * MouseInputHandler.a((byte) -61, var8, 48) >> 16);
+                LoginForm.field_db.addLast(param1 + 32, var7);
               }
             }
           }
@@ -1300,20 +1300,20 @@ final class Projectile extends DualNode {
         int[] var5 = null;
         int[] var2 = null;
         int[] var1 = null;
-        if (oa.a(0, true)) {
-          var2 = ao.field_B;
+        if (TextButton.a(0, true)) {
+          var2 = QuickChatPhraseDefinition.field_B;
           var1 = var2;
-          var2[1] = vn.a(var2[1], 64);
-          var3 = ao.field_A;
+          var2[1] = DateOfBirthValidator.a(var2[1], 64);
+          var3 = QuickChatPhraseDefinition.field_A;
           var1 = var3;
           var3[1] = ec.a(var3[1], -65);
         } else {
-          var4 = ao.field_B;
+          var4 = QuickChatPhraseDefinition.field_B;
           var1 = var4;
           var4[1] = ec.a(var4[1], -65);
-          var5 = ao.field_A;
+          var5 = QuickChatPhraseDefinition.field_A;
           var1 = var5;
-          var5[1] = vn.a(var5[1], 64);
+          var5[1] = DateOfBirthValidator.a(var5[1], 64);
         }
         if (param0 < 7) {
           field_N = (rf) null;
@@ -1398,7 +1398,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (param6 & 16711935) + (var15 & 16711935);
                   var15 = (65536 & -var21 + var16) + (16777472 & var21);
-                  var17[var14] = vn.a(-var15 + var16, var15 - (var15 >>> 8));
+                  var17[var14] = DateOfBirthValidator.a(-var15 + var16, var15 - (var15 >>> 8));
                 }
                 var14 = var14 + param3;
                 for (var20 = 1; var20 < param3; var20++) {
@@ -1408,7 +1408,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (16711935 & var15) + (16711935 & param6);
                   var15 = (-var21 + var16 & 65536) + (var21 & 16777472);
-                  var17[var14] = vn.a(var15 - (var15 >>> 8), -var15 + var16);
+                  var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), -var15 + var16);
                 }
               }
               param1++;
@@ -1442,7 +1442,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (16711935 & param6) + (var15 & 16711935);
                   var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                  var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                  var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
                 }
                 var14 = var14 + param3 * var13;
                 for (var20 = 1; param3 > var20; var20++) {
@@ -1452,7 +1452,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (var15 & 16711935) + (16711935 & param6);
                   var15 = (65536 & -var21 + var16) + (var21 & 16777472);
-                  var17[var14] = vn.a(var16 - var15, var15 - (var15 >>> 8));
+                  var17[var14] = DateOfBirthValidator.a(var16 - var15, var15 - (var15 >>> 8));
                 }
               }
               param5++;
@@ -1472,7 +1472,7 @@ final class Projectile extends DualNode {
                 var16 = param6 + var15;
                 var21 = (16711935 & param6) + (var15 & 16711935);
                 var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
               }
               while (true) {
                 var14 = var14 + param3 * var13;
@@ -1483,7 +1483,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (var15 & 16711935) + (16711935 & param6);
                   var15 = (65536 & -var21 + var16) + (var21 & 16777472);
-                  var17[var14] = vn.a(var16 - var15, var15 - (var15 >>> 8));
+                  var17[var14] = DateOfBirthValidator.a(var16 - var15, var15 - (var15 >>> 8));
                 }
                 do {
                   param5++;
@@ -1502,7 +1502,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (16711935 & param6) + (var15 & 16711935);
                   var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                  var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                  var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
                 }
               }
             }
@@ -1527,7 +1527,7 @@ final class Projectile extends DualNode {
                 var16 = param6 + var15;
                 var21 = (16711935 & param6) + (var15 & 16711935);
                 var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
               }
               var14 = var14 + param3 * var13;
               for (var20 = 1; param3 > var20; var20++) {
@@ -1537,7 +1537,7 @@ final class Projectile extends DualNode {
                 var16 = param6 + var15;
                 var21 = (var15 & 16711935) + (16711935 & param6);
                 var15 = (65536 & -var21 + var16) + (var21 & 16777472);
-                var17[var14] = vn.a(var16 - var15, var15 - (var15 >>> 8));
+                var17[var14] = DateOfBirthValidator.a(var16 - var15, var15 - (var15 >>> 8));
               }
             }
           }
@@ -1560,7 +1560,7 @@ final class Projectile extends DualNode {
         if (param0 != 16777215) {
           return true;
         }
-        return jn.field_b == nj.field_ab ? true : false;
+        return jn.field_b == AccountTermsPanel.field_ab ? true : false;
     }
 
     private final boolean advanceGuidedMotion(byte obfuscationGuard, int substepIndex) {
@@ -1643,7 +1643,7 @@ final class Projectile extends DualNode {
               headingDelta = -headingDelta;
             }
             heading = heading + headingDelta;
-            this.velocityX = kg.cosine16(heading, (byte) -127) * speed >> 16;
+            this.velocityX = ScrollContainer.cosine16(heading, (byte) -127) * speed >> 16;
             this.velocityY = jh.sine16(heading, 4096) * speed >> 16;
             this.applyGravity = false;
             if (!this.world.field_h &&
@@ -2008,9 +2008,9 @@ final class Projectile extends DualNode {
                       var5_ref_wl.affectedSentinels = null;
                     }
                     var5_ref_wl.field_kb = this.field_kb;
-                    var5_ref_wl.velocityX = var5_ref_wl.velocityX + (jh.sine16(8192 * var4Lifetime1Lifetime4 / 7 + this.world.simulationTick, obfuscationGuard ^ -4097) * wc.a((byte) -61, var11, 16) >> 13);
+                    var5_ref_wl.velocityX = var5_ref_wl.velocityX + (jh.sine16(8192 * var4Lifetime1Lifetime4 / 7 + this.world.simulationTick, obfuscationGuard ^ -4097) * MouseInputHandler.a((byte) -61, var11, 16) >> 13);
                     var5_ref_wl.velocityX = Math.abs(var5_ref_wl.velocityX) * -this.velocityX;
-                    var5_ref_wl.velocityY = var5_ref_wl.velocityY + (kg.cosine16(var4Lifetime1Lifetime4 * 8192 / 7 + this.world.simulationTick, (byte) -95) * wc.a((byte) -61, var11, 16) >> 13);
+                    var5_ref_wl.velocityY = var5_ref_wl.velocityY + (ScrollContainer.cosine16(var4Lifetime1Lifetime4 * 8192 / 7 + this.world.simulationTick, (byte) -95) * MouseInputHandler.a((byte) -61, var11, 16) >> 13);
                     this.world.field_db.addLast(3, var5_ref_wl);
                     var4Lifetime1Lifetime4++;
                   }
@@ -2485,7 +2485,7 @@ final class Projectile extends DualNode {
                   }
                   var3_ref3Lifetime1.field_bb = true;
                 }
-                var3_ref3Lifetime1 = (Projectile) (var12.d(obfuscationGuard ^ -3));
+                var3_ref3Lifetime1 = (Projectile) (var12.next(obfuscationGuard ^ -3));
               }
             }
             stackIn_456_0Lifetime2 = obfuscationGuard;
@@ -2664,7 +2664,7 @@ final class Projectile extends DualNode {
           if (var16 < param5) {
             var19 = (var18 << 4) - param12;
             var20 = (var16 << param4) / param6;
-            var21 = ff.field_kb[var20] * param10 >> 15;
+            var21 = ValidationHelpWidget.field_kb[var20] * param10 >> 15;
             var22 = var18 + (var19 * var21 + 131072 >> 18);
             if (var22 > 639) {
               var22 = 639;
@@ -2674,7 +2674,7 @@ final class Projectile extends DualNode {
               var23 = 0;
             }
             var24 = SoftwareRaster.field_g[var23 * 640 + var22];
-            var25 = 64 + (ff.field_ib[var20] * param10 >> 17);
+            var25 = 64 + (ValidationHelpWidget.field_ib[var20] * param10 >> 17);
             if (var25 < 0) {
               var25 = -var25;
             }
@@ -2703,7 +2703,7 @@ final class Projectile extends DualNode {
           }
           var19Lifetime1 = (var18Lifetime1 << 4) - param12;
           var20Lifetime1 = (var16Lifetime1 << param4) / param6;
-          var21Lifetime1 = ff.field_kb[var20Lifetime1] * param10 >> 15;
+          var21Lifetime1 = ValidationHelpWidget.field_kb[var20Lifetime1] * param10 >> 15;
           var22Lifetime1 = var18Lifetime1 + (var19Lifetime1 * var21Lifetime1 + 131072 >> 18);
           if (var22Lifetime1 < 0) {
             var22Lifetime1 = 0;
@@ -2713,7 +2713,7 @@ final class Projectile extends DualNode {
             var23Lifetime1 = 0;
           }
           var24Lifetime1 = SoftwareRaster.field_g[var23Lifetime1 * 640 + var22Lifetime1];
-          var25Lifetime1 = 64 + (ff.field_ib[var20Lifetime1] * param10 >> 17);
+          var25Lifetime1 = 64 + (ValidationHelpWidget.field_ib[var20Lifetime1] * param10 >> 17);
           if (var25Lifetime1 < 0) {
             var25Lifetime1 = -var25Lifetime1;
           }
@@ -2886,14 +2886,14 @@ final class Projectile extends DualNode {
           var14 = new NodeIterator(this.world.sentinels);
           var15 = (Sentinel) (var14.b(2));
           while (var15 != null) {
-            if (var15.chassis.componentId != nn.field_c[0] ||
+            if (var15.chassis.componentId != FullscreenFocusCanvas.field_c[0] ||
               null == this.sourceSentinel ||
-              nn.field_c[0] != this.sourceSentinel.chassis.componentId) {
+              FullscreenFocusCanvas.field_c[0] != this.sourceSentinel.chassis.componentId) {
               incrementValue$0 = var13_int;
               var13_int++;
               this.affectedSentinels[incrementValue$0] = var15;
             }
-            var15 = (Sentinel) (var14.d(2));
+            var15 = (Sentinel) (var14.next(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends ia {
+final class ih extends TextFieldValidator {
     static CombatWorld field_s;
     static int field_t;
     static String field_p;
@@ -60,7 +60,7 @@ final class ih extends ia {
         }
     }
 
-    ih(jf param0) {
+    ih(EditableTextWidget param0) {
         super(param0);
     }
 
@@ -82,7 +82,7 @@ final class ih extends ia {
             var4 = (String) null;
             this.a(5, (String) null);
           }
-          stackIn_6_0 = mg.field_lc;
+          stackIn_6_0 = QuickChatMenu.field_lc;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

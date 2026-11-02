@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ml {
-    static tg field_g;
+    static MusicTrack field_g;
     static IndexedSprite[] field_c;
     static fm field_b;
     static int field_e;
@@ -22,7 +22,7 @@ final class ml {
           }
           var4 = (ud) (uf.field_f.first(13058));
           while (var4 != null) {
-            r.a(27153, var4, param1);
+            ProxySocketConnector.a(27153, var4, param1);
             var4 = (ud) (uf.field_f.next((byte) -36));
           }
           return;
@@ -48,8 +48,8 @@ final class ml {
           var3.writeInt(true, param1.field_E);
           var3.writeInt(true, param1.field_z);
           var3.writeInt(true, param1.field_y);
-          var3.f(-72, var4);
-          var3.b((byte) -115, var3.position - var4);
+          var3.appendCrc32(-72, var4);
+          var3.backpatchByteLength((byte) -115, var3.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

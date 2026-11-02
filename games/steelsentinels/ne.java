@@ -15,7 +15,7 @@ final class ne extends DualNode {
     private boolean field_U;
     int field_K;
     boolean field_E;
-    static vk field_N;
+    static Js5Transport field_N;
     int field_F;
     private CombatWorld field_B;
     Sentinel field_T;
@@ -46,11 +46,11 @@ final class ne extends DualNode {
         int var6Lifetime1;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          var2 = nl.a(param0, (byte) 124);
+          var2 = DialWidget.a(param0, (byte) 124);
           if (null != var2 &&
             var2.length != 0) {
             var3 = new int[-9 + var2.length];
-            ii.a(var2, 1, var3, 0, var3.length);
+            ArraySupport.copy(var2, 1, var3, 0, var3.length);
             var4 = 0;
             var5_int = 0;
             while (true) {
@@ -58,7 +58,7 @@ final class ne extends DualNode {
               stackIn_9_1 = var5_int;
               if (stackIn_9_0 > stackIn_9_1) {
                 stackIn_28_0 = 0;
-                stackIn_28_1 = qg.a((byte) -60, var3[var5_int]);
+                stackIn_28_1 = MarkerSliderPainter.a((byte) -60, var3[var5_int]);
                 if (var7 == 0) {
                   if (stackIn_28_0 <= stackIn_28_1) {
                     var3[var5_int] = -1;
@@ -132,7 +132,7 @@ final class ne extends DualNode {
           this.field_T = param0;
           if (!this.field_Q &&
             this.field_T.activeModuleType != -1) {
-            nh.a(true, this.field_T);
+            Bzip2State.a(true, this.field_T);
           }
           if (43 != this.field_O) {
             this.field_T.field_tb = this.field_T.field_tb + 1;
@@ -403,7 +403,7 @@ final class ne extends DualNode {
             (decompiledFrameRemainder13) &&
             (decompiledFrameRemainder12) &&
             (decompiledFrameRemainder11)) {
-            param0.maximumCharge = param0.maximumCharge + ag.a(111, this.field_O);
+            param0.maximumCharge = param0.maximumCharge + GradientOutlineTextPainter.a(111, this.field_O);
             param0.refillCharge(5);
             decompiledFrameRemainder18 = (var4 != 0);
           }
@@ -464,8 +464,8 @@ final class ne extends DualNode {
           }
           var3_intLifetime1 = 13 / ((param1 - 5) / 63);
           if (param0.playerId == ed.field_j) {
-            g.field_h = this.field_O;
-            pd.field_X = 0;
+            GrowableIntList.field_h = this.field_O;
+            AccountChoicePanel.field_X = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -588,7 +588,7 @@ final class ne extends DualNode {
               if (stackIn_72_0 >= stackIn_72_1) {
                 this.field_C = 0;
               }
-              this.field_P.field_E[this.field_C] = nc.a(this.field_O, (byte) -114).field_o[nc.a(this.field_O, (byte) -113).field_p[this.field_C]];
+              this.field_P.field_E[this.field_C] = WeightedLruCache.a(this.field_O, (byte) -114).field_o[WeightedLruCache.a(this.field_O, (byte) -113).field_p[this.field_C]];
               if (this.field_P.field_E[this.field_C] == 0) {
                 var6Lifetime2--;
               }
@@ -727,7 +727,7 @@ final class ne extends DualNode {
         RuntimeException var3 = null;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          if (!f.a(param1, 4, param2)) {
+          if (!SocketJs5Transport.a(param1, 4, param2)) {
             return false;
           }
           var3_int = 113 / ((5 - param0) / 50);
@@ -801,7 +801,7 @@ final class ne extends DualNode {
           if (null == sl.field_p) {
             sl.field_p = new RgbSprite(var9, var8 + (var10 + 5));
           }
-          sl.field_p.d();
+          sl.field_p.bindRasterTarget();
           SoftwareRaster.a(0, 0, sl.field_p.field_z, sl.field_p.field_B, 0);
           var6 = var6 - (var10 - 5);
           var12 = this.field_K / 5 % 3;
@@ -815,7 +815,7 @@ final class ne extends DualNode {
             !(Math.random() < 0.1)) {
             var15 = (var9 - var7) / 2 - (-(this.field_C % this.field_P.field_A / 2) - (this.field_P.field_D / 2 + (int)(2.0 * Math.sin((double)this.field_K * 0.2))));
             var16 = 2 + (this.field_P.field_H / 2 + this.field_C / (this.field_P.field_F * 2) + (int)(Math.cos((double)this.field_K * 0.3) * 2.0));
-            this.field_P.b((var9 - var7) / 2 + (int)(2.0 * Math.sin(0.2 * (double)this.field_K)), 2 + (int)(Math.cos((double)this.field_K * 0.3) * 2.0));
+            this.field_P.drawHalfSize((var9 - var7) / 2 + (int)(2.0 * Math.sin(0.2 * (double)this.field_K)), 2 + (int)(Math.cos((double)this.field_K * 0.3) * 2.0));
             stackIn_16_0 = var9 / 2 + (int)(Math.sin((double)this.field_K * 0.1) * 5.0);
             stackIn_16_1 = var14;
             stackIn_16_2 = var15;
@@ -839,18 +839,18 @@ final class ne extends DualNode {
             }
             SoftwareRaster.a(stackIn_20_0, stackIn_20_1, stackIn_21_2);
           }
-          ml.field_c[var12].b(0, var14, var9, var10);
+          ml.field_c[var12].drawScaled(0, var14, var9, var10);
           if (this.field_L) {
           }
           var6 = var6 - var10;
-          sb.field_bb.b((byte) 123);
+          Checkbox.field_bb.b((byte) 123);
           if (var11 >= 256) {
             sl.field_p.a(var5_int, var6);
             if (SteelSentinels.obfuscationControl == 0) {
               return;
             }
           }
-          sl.field_p.b(var5_int, var6, var11);
+          sl.field_p.drawShadedGrayscale(var5_int, var6, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -902,7 +902,7 @@ final class ne extends DualNode {
                 var4_int++;
                 this.field_A[incrementValue$0] = var6;
               }
-              var6 = (Sentinel) (var5.d(2));
+              var6 = (Sentinel) (var5.next(2));
               continue;
             }
             break;
@@ -940,7 +940,7 @@ final class ne extends DualNode {
             this.field_E = false;
           }
           if (!this.field_B.field_h) {
-            var4 = nc.a(this.field_O, (byte) -97);
+            var4 = WeightedLruCache.a(this.field_O, (byte) -97);
             this.field_P = new RgbSprite(var4.field_a, var4.field_i);
             this.field_P.field_H = var4.field_n / 2;
             this.field_P.field_D = var4.field_j / 2;

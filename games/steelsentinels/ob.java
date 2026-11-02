@@ -6,12 +6,12 @@ final class ob extends IntrusiveNode {
     static String field_x;
     static String field_w;
     static int field_o;
-    static m field_r;
+    static HuffmanDecoder field_r;
     static boolean field_u;
     int[] field_p;
     static String field_s;
     static volatile int field_q;
-    static ek field_z;
+    static ArgbSprite field_z;
     static boolean field_y;
     static boolean field_v;
 
@@ -30,9 +30,9 @@ final class ob extends IntrusiveNode {
             return false;
           }
           if (ib.field_b == 2 &&
-            bk.field_U != null) {
+            StripedProgressBar.field_U != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (bk.field_U.equals(ui.a(1, var3))) {
+            if (StripedProgressBar.field_U.equals(AlphaContainer.a(1, var3))) {
               return true;
             }
           }

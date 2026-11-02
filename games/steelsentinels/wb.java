@@ -3,7 +3,7 @@
  */
 final class wb {
     static String field_b;
-    static nn field_c;
+    static FullscreenFocusCanvas field_c;
     static String field_f;
     static String field_e;
     static byte[] field_j;

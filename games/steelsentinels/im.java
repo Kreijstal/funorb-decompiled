@@ -21,14 +21,14 @@ final class im {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!wa.a((byte) 30, param1, param2, param0)) {
+          if (!StatefulTextPainter.a((byte) 30, param1, param2, param0)) {
             stackIn_2_0 = null;
             return (RgbSprite) (stackIn_2_0);
           }
           if (param3 != 1048576) {
             im.b((byte) 103);
           }
-          stackIn_6_0 = ij.j(-100);
+          stackIn_6_0 = NameSuggestionsPanel.j(-100);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,9 +55,9 @@ final class im {
           ad.field_f = false;
           nf.field_b = null;
           ni.field_a = null;
-          if (q.field_m != null) {
-            q.field_m.clear(6);
-            q.field_m = null;
+          if (IterableNodeHashTable.field_m != null) {
+            IterableNodeHashTable.field_m.clear(6);
+            IterableNodeHashTable.field_m = null;
           }
           t.field_c = null;
           if (ci.field_e != null) {
@@ -69,7 +69,7 @@ final class im {
             o.field_d.clear(6);
             o.field_d = null;
           }
-          me.field_b = null;
+          LoginCredentials.field_b = null;
           if (null != t.field_c) {
             var4 = (cc) (t.field_c.a(90));
             while (var4 != null) {

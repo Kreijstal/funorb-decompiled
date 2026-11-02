@@ -47,41 +47,41 @@ final class ph {
           } else {
             stackIn_3_1 = param0.field_e;
           }
-          kk.a(stackIn_2_0, stackIn_3_1, param0.field_k, (int[]) null, param0.field_p, param0.field_d, 1073741824, param0.field_j, (kg) null);
+          kk.a(stackIn_2_0, stackIn_3_1, param0.field_k, (int[]) null, param0.field_p, param0.field_d, 1073741824, param0.field_j, (ScrollContainer) null);
           if (~param0.field_k == param1 &&
-            !kg.d((byte) 120) &&
+            !ScrollContainer.d((byte) 120) &&
             nf.field_b == null &&
             null == ni.field_a) {
             if (!uc.field_g) {
-              var6 = an.field_i;
+              var6 = AudioService.field_i;
               var7 = ml.field_d;
               var6.field_j.a(2, 14, var7);
             }
-            var8 = an.field_i;
-            var9 = ei.field_u;
+            var8 = AudioService.field_i;
+            var9 = NameAvailabilityValidator.field_u;
             var8.field_j.a(2, 20, var9);
           }
           if (param0.field_k == 1 &&
-            !kg.d((byte) 37) &&
+            !ScrollContainer.d((byte) 37) &&
             nf.field_b != null &&
             param0.field_e == nf.field_b.j(-120)) {
             if (!uc.field_g) {
-              var10 = an.field_i;
+              var10 = AudioService.field_i;
               var11 = qi.field_g;
               var10.field_j.a(param1 + 3, 14, var11);
             }
-            var12 = an.field_i;
-            var13 = bl.field_g;
+            var12 = AudioService.field_i;
+            var13 = LinkButtonPainter.field_g;
             var12.field_j.a(2, 20, var13);
           }
-          an.field_i.a((byte) 64);
-          an.field_i.a(false, (byte) -79);
-          an.field_i.a(param0.field_l, -2, param0.field_k);
-          an.field_i.c(-99);
-          an.field_i.a(0, param0);
-          var14 = an.field_i;
-          var3 = oa.field_S;
-          var4 = rj.field_j;
+          AudioService.field_i.a((byte) 64);
+          AudioService.field_i.a(false, (byte) -79);
+          AudioService.field_i.a(param0.field_l, -2, param0.field_k);
+          AudioService.field_i.c(-99);
+          AudioService.field_i.a(0, param0);
+          var14 = AudioService.field_i;
+          var3 = TextButton.field_S;
+          var4 = BufferedRandomAccessFile.field_j;
           var14.field_j.a(0, 0, var4, (byte) -97, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

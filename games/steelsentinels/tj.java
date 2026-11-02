@@ -10,7 +10,7 @@ final class tj {
     static String field_d;
 
     final static void a(int param0) {
-        hc.a(17, 0);
+        LabeledField.a(17, 0);
         if (param0 < 111) {
           tj.a(false);
         }
@@ -26,7 +26,7 @@ final class tj {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new tc(param6, param3, param1, param2, param0, param4, param7);
-          ic.field_B.addLast(param5 ^ 18, var9);
+          MidiPcmStream.field_B.addLast(param5 ^ 18, var9);
           if (param5 != 17) {
             field_d = (String) null;
           }

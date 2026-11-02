@@ -24,7 +24,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -108) {
-            stackIn_4_0 = bg.a((byte) 100, true, 10, param0);
+            stackIn_4_0 = WeightedCacheEntry.a((byte) 100, true, 10, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -59;

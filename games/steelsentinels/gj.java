@@ -141,17 +141,17 @@ final class gj {
         var8 = SteelSentinels.obfuscationControl;
         var1 = new RgbSprite[rl.field_d];
         for (var2 = param0; var2 < rl.field_d; var2++) {
-          var3 = le.field_L[var2] * ca.field_r[var2];
-          var21 = dl.field_L[var2];
-          if (!pd.field_U[var2]) {
+          var3 = StrongCacheEntry.field_L[var2] * MusicPatch.field_r[var2];
+          var21 = UiContainer.field_L[var2];
+          if (!AccountChoicePanel.field_U[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = ba.field_d[ec.a(255, (int) var21[var6])];
             }
-            var1[var2] = new RgbSprite(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], var22);
+            var1[var2] = new RgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var22);
           } else {
-            var16 = sn.field_g[var2];
+            var16 = BoundedRandomAccessFile.field_g[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;
@@ -159,9 +159,9 @@ final class gj {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = vn.a(ba.field_d[ec.a(255, (int) var21[var7])], ec.a(var16[var7] << 24, -16777216));
+              var6_ref_int__[var7] = DateOfBirthValidator.a(ba.field_d[ec.a(255, (int) var21[var7])], ec.a(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (RgbSprite) ((Object) new ek(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var17));
           }
         }
         NodeHashTable.a(9324);
@@ -175,7 +175,7 @@ final class gj {
           boolean decompiledFrameRemainder0 = true;
           if (null != rb.field_h) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (rn.field_v == jd.field_sb);
+              decompiledFrameRemainder0 = (rn.field_v == AccountNoticeDialog.field_sb);
               if ((decompiledFrameRemainder0) && (mm.field_g.position == 0 &&
                 10000L + vf.field_d < mm.a(param0 + 49))) {
                 mm.field_g.writeCipheredOpcode(param1, (byte) -117);
@@ -197,7 +197,7 @@ final class gj {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  pm.m(-41);
+                  LoginForm.m(-41);
                 }
                 mm.field_g.position = 0;
               }

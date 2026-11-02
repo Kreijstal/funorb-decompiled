@@ -43,25 +43,25 @@ final class te {
         int stackIn_81_1Lifetime1;
         var16 = SteelSentinels.obfuscationControl;
         try {
-          if (fg.field_Ob != 1 &&
-            !he.a((byte) 124)) {
+          if (RegistrationRequestDialog.field_Ob != 1 &&
+            !RasterBuffer.a((byte) 124)) {
             stackIn_6_0 = param1;
             return stackIn_6_0;
           }
-          stackIn_11_0 = (fg.field_Ob == 1) ? 78 : 64;
+          stackIn_11_0 = (RegistrationRequestDialog.field_Ob == 1) ? 78 : 64;
           var4_int = stackIn_11_0;
-          if (~(1008 & fg.field_Ob) != param3) {
+          if (~(1008 & RegistrationRequestDialog.field_Ob) != param3) {
             var4_int = 36;
           }
-          var5 = qa.field_O;
+          var5 = Js5NetworkRequest.field_O;
           var7 = 1;
           var8 = 1;
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(fg.field_Ob >= var8)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(RegistrationRequestDialog.field_Ob >= var8)))) {
             stackIn_83_0 = -1;
             if (var16 == 0) {
-              if (stackIn_83_0 != ~(fg.field_Ob & var8)) {
+              if (stackIn_83_0 != ~(RegistrationRequestDialog.field_Ob & var8)) {
                 var10 = 1;
                 if (var8 != 1) {
                   var10 = hl.field_v.f(var8, -1) ? 1 : 0;
@@ -70,7 +70,7 @@ final class te {
                 if (var8 == 1) {
                   var11 = 1;
                 }
-                var12 = (ArticulatedPart) (ao.field_H.first(13058));
+                var12 = (ArticulatedPart) (QuickChatPhraseDefinition.field_H.first(13058));
                 while (var12 != null) {
                   stackIn_81_0 = ~(var8 & var12.field_Q);
                   stackIn_81_1 = -1;
@@ -87,18 +87,18 @@ final class te {
                       decompiledFrameRemainder1 = (var6 != 0);
                       if (decompiledFrameRemainder1) {
                         if (var12.field_Q == 1) {
-                          decompiledFrameRemainder0 = !(bj.a(rn.field_D, var12.componentId, ArticulatedPart.f((byte) -50), (byte) 86));
+                          decompiledFrameRemainder0 = !(MusicPatchEnvelope.a(rn.field_D, var12.componentId, ArticulatedPart.f((byte) -50), (byte) 86));
                           decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
                         }
                         if ((decompiledFrameRemainder1) &&
                           (decompiledFrameRemainder0)) {
-                          decompiledFrameRemainder1 = !(!aj.a(ge.field_m, (byte) -120, rn.field_D, var12.componentId, ArticulatedPart.f((byte) -92)));
+                          decompiledFrameRemainder1 = !(!RasterSnapshot.a(DirectByteStorage.field_m, (byte) -120, rn.field_D, var12.componentId, ArticulatedPart.f((byte) -92)));
                         }
                       }
                     }
                     if (decompiledFrameRemainder1) {
                       if (var6 == 2 &&
-                        sj.field_v[var12.componentId] <= li.field_v) {
+                        MusicCrossfadeStream.field_v[var12.componentId] <= PasswordFieldPainter.field_v) {
                         var6 = 1;
                       }
                       if (var7 != 0) {
@@ -109,12 +109,12 @@ final class te {
                         var13.a(0, param1, 18, 0, var5);
                         param0.a(var13, 125);
                         if (param2) {
-                          stackIn_71_0 = qj.field_c;
+                          stackIn_71_0 = SentinelAnimationEditor.field_c;
                         } else {
-                          stackIn_71_0 = he.field_h;
+                          stackIn_71_0 = RasterBuffer.field_h;
                         }
                         var14 = stackIn_71_0;
-                        var15 = new SceneWidget(-1L, kh.field_s, var14);
+                        var15 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var14);
                         var15.field_nb = 0;
                         var15.field_L = (BitmapFont) ((Object) pl.field_U);
                         var15.a(~param3, param1, 18, 0, var5);
@@ -127,8 +127,8 @@ final class te {
                       }
                       if (var11 == 0) {
                         var11 = 1;
-                        var13_ref = sn.field_i[var9];
-                        var14_ref = new SceneWidget(-1L, kh.field_s, var13_ref);
+                        var13_ref = BoundedRandomAccessFile.field_i[var9];
+                        var14_ref = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var13_ref);
                         var14_ref.field_Kb = 1;
                         var14_ref.field_nb = 11119017;
                         param1 += 2;
@@ -146,7 +146,7 @@ final class te {
                       param1 = param1 + var4_int;
                     }
                   }
-                  var12 = (ArticulatedPart) (ao.field_H.next((byte) -48));
+                  var12 = (ArticulatedPart) (QuickChatPhraseDefinition.field_H.next((byte) -48));
                 }
               }
               stackIn_81_0Lifetime1 = var8;
@@ -179,9 +179,9 @@ final class te {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_14_0 = 0;
-        ah stackIn_65_0 = null;
+        SocialListEntry stackIn_65_0 = null;
         int stackIn_65_1 = 0;
-        ah stackIn_65_2 = null;
+        SocialListEntry stackIn_65_2 = null;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
@@ -191,15 +191,15 @@ final class te {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        ah var6 = null;
+        SocialListEntry var6 = null;
         String var7 = null;
-        ah var7_ref = null;
+        SocialListEntry var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        ah var6Lifetime1;
+        SocialListEntry var6Lifetime1;
         var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 2) {
@@ -208,8 +208,8 @@ final class te {
           var1 = rf.field_d;
           var2 = var1.readUnsignedByte((byte) -109);
           if (var2 == 0) {
-            if (db.field_h == null) {
-              db.field_h = new dk(128);
+            if (SocketConnector.field_h == null) {
+              SocketConnector.field_h = new dk(128);
               cc.field_gc = 0;
             }
             stackIn_14_0 = (1 != var1.readUnsignedByte((byte) -111)) ? 0 : 1;
@@ -222,21 +222,21 @@ final class te {
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = da.a(var4_ref_String, (byte) -41);
+            var6 = TextLayout.a(var4_ref_String, (byte) -41);
             var7 = var1.h(1);
-            var8 = ui.a(1, (CharSequence) ((Object) var4_ref_String));
+            var8 = AlphaContainer.a(1, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = da.a(var7, (byte) -41);
+              var6 = TextLayout.a(var7, (byte) -41);
               if (null != var6) {
-                db.field_h.a(var6, 1, (long)var8.hashCode());
+                SocketConnector.field_h.a(var6, 1, (long)var8.hashCode());
               }
             }
             if (null == var6) {
-              var6 = new ah();
-              db.field_h.a(var6, param0 ^ 3, (long)var8.hashCode());
+              var6 = new SocialListEntry();
+              SocketConnector.field_h.a(var6, param0 ^ 3, (long)var8.hashCode());
               fieldTemp$0 = cc.field_gc;
               cc.field_gc = cc.field_gc + 1;
               var6.field_bc = fieldTemp$0;
@@ -249,31 +249,31 @@ final class te {
           }
           if (1 != var2) {
             if (var2 == 2) {
-              if (qc.field_P == 1) {
-                qc.field_P = 2;
+              if (DisplayNameForm.field_P == 1) {
+                DisplayNameForm.field_P = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (qc.field_P == 2) {
-                qc.field_P = 1;
+              if (DisplayNameForm.field_P == 2) {
+                DisplayNameForm.field_P = 1;
               }
               return;
             }
             if (4 != var2) {
-              sj.a("F1: " + ci.a((byte) 94), param0 ^ -93, (Throwable) null);
-              pm.m(75);
+              MusicCrossfadeStream.a("F1: " + ci.a((byte) 94), param0 ^ -93, (Throwable) null);
+              LoginForm.m(75);
               return;
             }
-            qc.field_P = 1;
+            DisplayNameForm.field_P = 1;
             var3 = var1.h(1);
-            nn.field_f = ((String) (var3)).intern();
+            FullscreenFocusCanvas.field_f = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -90);
             in.a((byte) 46, var4);
             return;
           }
-          if (pi.field_a == null) {
-            pi.field_a = new dk(128);
+          if (DelegatingCanvas.field_a == null) {
+            DelegatingCanvas.field_a = new dk(128);
             vd.field_h = 0;
           }
           var3Lifetime1 = var1.h(1);
@@ -286,12 +286,12 @@ final class te {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = wi.a(var5Lifetime1, (byte) 114);
             if (null != var6Lifetime1) {
-              pi.field_a.a(var6Lifetime1, 1, (long)ui.a(param0 ^ 3, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              DelegatingCanvas.field_a.a(var6Lifetime1, 1, (long)AlphaContainer.a(param0 ^ 3, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new ah();
-            pi.field_a.a(var6Lifetime1, 1, (long)ui.a(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            var6Lifetime1 = new SocialListEntry();
+            DelegatingCanvas.field_a.a(var6Lifetime1, 1, (long)AlphaContainer.a(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = vd.field_h;
             vd.field_h = vd.field_h + 1;
             var6Lifetime1.field_bc = fieldTemp$1;
@@ -304,7 +304,7 @@ final class te {
           var6Lifetime1.field_ac = (String) (var3Lifetime1);
           var6Lifetime1.field_Vb = var5Lifetime1;
           var6Lifetime1.unlink(param0 ^ 6);
-          var7_ref = (ah) (Sprite.field_c.first(13058));
+          var7_ref = (SocialListEntry) (Sprite.field_c.first(13058));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackIn_65_0 = var7_ref;
@@ -314,7 +314,7 @@ final class te {
                 break scanLoop1;
               }
               if (dm.a(stackIn_65_0, stackIn_65_1, stackIn_65_2)) {
-                var7_ref = (ah) (Sprite.field_c.next((byte) -17));
+                var7_ref = (SocialListEntry) (Sprite.field_c.next((byte) -17));
                 continue;
               }
             }

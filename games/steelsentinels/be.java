@@ -35,15 +35,15 @@ final class be {
           }
           if (var2 != 0) {
             if (var2 != 1) {
-              sj.a("A1: " + ci.a((byte) 94), -126, (Throwable) null);
-              pm.m(param0 ^ -16880);
+              MusicCrossfadeStream.a("A1: " + ci.a((byte) 94), -126, (Throwable) null);
+              LoginForm.m(param0 ^ -16880);
               return;
             }
             var3 = var9.readInt(0);
-            var4 = (rh) (ol.field_Vb.first(13058));
+            var4 = (rh) (QuickChatHelpDialog.field_Vb.first(13058));
             while (var4 != null) {
               if (~var4.field_x != ~var3) {
-                var4 = (rh) (ol.field_Vb.next((byte) -59));
+                var4 = (rh) (QuickChatHelpDialog.field_Vb.next((byte) -59));
                 continue;
               }
               break;
@@ -54,12 +54,12 @@ final class be {
             }
             stackIn_24_0 = param0;
             stackIn_24_1 = 16882;
-            pm.m(stackIn_24_0 + stackIn_24_1);
+            LoginForm.m(stackIn_24_0 + stackIn_24_1);
             return;
           }
-          var3_ref_c = (c) (fg.field_Ub.first(13058));
+          var3_ref_c = (c) (RegistrationRequestDialog.field_Ub.first(13058));
           if (var3_ref_c == null) {
-            pm.m(111);
+            LoginForm.m(111);
             return;
           }
           var4_int = var9.readUnsignedByte((byte) -106);
@@ -74,7 +74,7 @@ final class be {
           }
           var9.position = var9.position + 4;
           if (!var9.a((byte) -32)) {
-            pm.m(param0 ^ 16871);
+            LoginForm.m(param0 ^ 16871);
             return;
           }
           var3_ref_c.field_q = true;
@@ -88,12 +88,12 @@ final class be {
         }
     }
 
-    final static u a(ResourceArchive param0, ResourceArchive param1, byte param2, String param3, String param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, ResourceArchive param1, byte param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        u stackIn_2_0 = null;
-        u stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -107,7 +107,7 @@ final class be {
         try {
           var5_int = param0.getGroupId(param4, 34);
           if (param2 >= -44) {
-            stackIn_2_0 = (u) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param0.getFileId(var5_int, -32759, param3);
@@ -165,8 +165,8 @@ final class be {
           Throwable decompiledCaughtException = null;
           java.net.MalformedURLException var4_ref = null;
           try {
-            if (pn.field_w.startsWith("win") &&
-              hj.a(-9062, param2)) {
+            if (SystemTaskService.field_w.startsWith("win") &&
+              MusicPatchNode.a(-9062, param2)) {
               return;
             }
             try {
@@ -174,7 +174,7 @@ final class be {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              sj.a("MGR1: " + param2, -85, (Throwable) null);
+              MusicCrossfadeStream.a("MGR1: " + param2, -85, (Throwable) null);
             }
             if (param1 > 0) {
               return;

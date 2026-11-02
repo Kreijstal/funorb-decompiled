@@ -128,7 +128,7 @@ final class in {
                   ja.field_a = ja.field_a - 1;
                 }
                 if (var5 != 0) {
-                  var28.field_Ub = ta.field_l;
+                  var28.field_Ub = Js5ArchiveManager.field_l;
                   var28.field_Wb = var5;
                 } else {
                   var28.unlink(4);
@@ -138,11 +138,11 @@ final class in {
               return;
             }
             if (var2 == 7) {
-              var34 = (cc) (q.field_m.first(13058));
+              var34 = (cc) (IterableNodeHashTable.field_m.first(13058));
               while (var34 != null) {
                 var34.unlink(4);
                 var34.unlinkDual(480);
-                var34 = (cc) (q.field_m.next((byte) -16));
+                var34 = (cc) (IterableNodeHashTable.field_m.next((byte) -16));
               }
               ja.field_a = 0;
               return;
@@ -155,7 +155,7 @@ final class in {
                 fm.field_a.a(var4, param0 - 11246, (long)var3);
               }
               wd.a(var1, true, var4, (byte) -113);
-              nm.a(true, var4);
+              EmailAvailabilityValidator.a(true, var4);
               return;
             }
             if (var2 == 9) {
@@ -169,7 +169,7 @@ final class in {
               if (0 == var4_int) {
                 var21.unlink(param0 - 11243);
               } else {
-                var13.field_mc = ta.field_l;
+                var13.field_mc = Js5ArchiveManager.field_l;
                 var13.field_Ac = var4_int;
               }
               var21.unlinkDual(param0 ^ 10767);
@@ -198,10 +198,10 @@ final class in {
                 var18_ref.field_bc = false;
                 if (0 != var4_intLifetime1) {
                   var18_ref.field_Ac = var4_intLifetime1;
-                  var18_ref.field_mc = ta.field_l;
+                  var18_ref.field_mc = Js5ArchiveManager.field_l;
                 }
                 var15.field_vc = false;
-                nm.a(true, var18_ref);
+                EmailAvailabilityValidator.a(true, var18_ref);
                 return;
               }
               if (14 != var2 &&
@@ -212,10 +212,10 @@ final class in {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).g((byte) -83);
                     var23 = ((PacketBuffer) ((Object) var1)).h(1);
                     var24 = ((PacketBuffer) ((Object) var1)).h(1);
-                    var7 = kh.a(false, var3_longLifetime2);
+                    var7 = ThreeSliceButtonPainter.a(false, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new cc(var23, var24, var3_longLifetime2);
-                      me.field_b.a(var7, 1, var3_longLifetime2);
+                      LoginCredentials.field_b.a(var7, 1, var3_longLifetime2);
                       nf.field_b.field_wc = nf.field_b.field_wc + 1;
                     }
                     var7.field_ac = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
@@ -232,14 +232,14 @@ final class in {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).g((byte) -128);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -55);
-                    var16 = kh.a(false, var3_longLifetime2);
+                    var16 = ThreeSliceButtonPainter.a(false, var3_longLifetime2);
                     var25 = var16;
                     if (var16 != null) {
                       if (var5Lifetime1 == 0) {
                         var25.unlink(4);
                       } else {
                         var16.field_Wb = var5Lifetime1;
-                        var16.field_Ub = ta.field_l;
+                        var16.field_Ub = Js5ArchiveManager.field_l;
                       }
                       var25.unlinkDual(param0 ^ 10767);
                       nf.field_b.field_wc = nf.field_b.field_wc - 1;
@@ -253,10 +253,10 @@ final class in {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
                     if (var3Lifetime5 == 0) {
-                      ka.field_R = 0L;
+                      ModalStack.field_R = 0L;
                       return;
                     }
-                    ka.field_R = (long)var3Lifetime5 + mm.a(-124);
+                    ModalStack.field_R = (long)var3Lifetime5 + mm.a(-124);
                     return;
                   }
                   if (22 == var2) {
@@ -268,8 +268,8 @@ final class in {
                     GameplayController.field_G = ((PacketBuffer) ((Object) var1)).g((byte) -124);
                     return;
                   }
-                  sj.a("L1: " + ci.a((byte) 94), -106, (Throwable) null);
-                  pm.m(-82);
+                  MusicCrossfadeStream.a("L1: " + ci.a((byte) 94), -106, (Throwable) null);
+                  LoginForm.m(-82);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).g((byte) -119);
@@ -288,7 +288,7 @@ final class in {
                 }
                 if (var5Lifetime1Lifetime1 != 0) {
                   var26.field_Wb = var5Lifetime1Lifetime1;
-                  var26.field_Ub = ta.field_l;
+                  var26.field_Ub = Js5ArchiveManager.field_l;
                 }
                 la.a(param0 ^ 11154, var26);
                 return;
@@ -319,7 +319,7 @@ final class in {
             } else {
               var22.field_bc = true;
             }
-            nm.a(true, var22);
+            EmailAvailabilityValidator.a(true, var22);
             return;
           }
           var3_ref_cc = (cc) (o.field_d.first(param0 ^ 6381));
@@ -350,7 +350,7 @@ final class in {
             nf.field_b = new hk(be.field_a);
             nf.field_b.a((byte) 73, (long)var3Lifetime1);
             wd.a(var1, false, nf.field_b, (byte) 114);
-            ka.field_R = 0L;
+            ModalStack.field_R = 0L;
           } else {
             nf.field_b = null;
           }
@@ -372,8 +372,8 @@ final class in {
           }
           CachedArchiveProvider.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -93);
           GameplayController.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -59);
-          for (var3Lifetime3 = 0; var3Lifetime3 < ti.field_s.length; var3Lifetime3++) {
-            ti.field_s[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
+          for (var3Lifetime3 = 0; var3Lifetime3 < ImageProducerRasterBuffer.field_s.length; var3Lifetime3++) {
+            ImageProducerRasterBuffer.field_s[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,10 +383,10 @@ final class in {
         }
     }
 
-    final static ld a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static PaletteBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        ld stackIn_5_0 = null;
-        ld stackIn_7_0 = null;
+        PaletteBitmapFont stackIn_5_0 = null;
+        PaletteBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -394,14 +394,14 @@ final class in {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!wa.a((byte) 30, param2, param4, param3)) {
+          if (!StatefulTextPainter.a((byte) 30, param2, param4, param3)) {
             return null;
           }
           if (param1 >= 97) {
-            stackIn_7_0 = nc.a(param0.getFile(param4, (byte) 38, param2), 7045);
+            stackIn_7_0 = WeightedLruCache.a(param0.getFile(param4, (byte) 38, param2), 7045);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ld) null;
+          stackIn_5_0 = (PaletteBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -425,13 +425,13 @@ final class in {
 
     final static void c(int param0) {
         int var2 = SteelSentinels.obfuscationControl;
-        if ((fk.field_i.world.field_V & 1 << ed.field_j) != 0) {
-          ti.field_A[10] = GameplayController.field_m;
+        if ((BoundedUrlRequest.field_i.world.field_V & 1 << ed.field_j) != 0) {
+          ImageProducerRasterBuffer.field_A[10] = GameplayController.field_m;
         } else {
-          if (fk.field_i.world.field_V == 0) {
-            ti.field_A[10] = ai.field_s;
+          if (BoundedUrlRequest.field_i.world.field_V == 0) {
+            ImageProducerRasterBuffer.field_A[10] = ai.field_s;
           } else {
-            ti.field_A[10] = wn.field_e;
+            ImageProducerRasterBuffer.field_A[10] = wn.field_e;
           }
         }
         if (param0 != 2) {
@@ -440,14 +440,14 @@ final class in {
     }
 
     final static void a(byte param0, int param1) {
-        sg.field_c = (param1 & 63) >> 4;
-        pm.field_Z = 3 & param1 >> 2;
-        if (sg.field_c > 2) {
-          sg.field_c = 2;
+        BufferedSocket.field_c = (param1 & 63) >> 4;
+        LoginForm.field_Z = 3 & param1 >> 2;
+        if (BufferedSocket.field_c > 2) {
+          BufferedSocket.field_c = 2;
         }
         CachedArchiveProvider.field_y = 3 & param1;
-        if (!(pm.field_Z <= 2)) {
-          pm.field_Z = 2;
+        if (!(LoginForm.field_Z <= 2)) {
+          LoginForm.field_Z = 2;
         }
         if (!(CachedArchiveProvider.field_y <= 2)) {
           CachedArchiveProvider.field_y = 2;

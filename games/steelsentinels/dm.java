@@ -4,7 +4,7 @@
 final class dm {
     static String field_h;
     private boolean field_b;
-    static u field_f;
+    static CoverageBitmapFont field_f;
     static boolean field_c;
     static int field_a;
     private String field_i;
@@ -30,7 +30,7 @@ final class dm {
         return this.field_b;
     }
 
-    final static boolean a(ah param0, int param1, ah param2) {
+    final static boolean a(SocialListEntry param0, int param1, SocialListEntry param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -48,14 +48,14 @@ final class dm {
             dm.a('\037', -119, (StringBuilder) null, -20);
           }
           var3_int = -param0.field_bc + param2.field_bc;
-          if (param2.field_ac != nn.field_f) {
+          if (param2.field_ac != FullscreenFocusCanvas.field_f) {
             if (param2.field_ac == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (nn.field_f != param0.field_ac) {
+          if (FullscreenFocusCanvas.field_f != param0.field_ac) {
             if (param0.field_ac == null) {
               var3_int -= 200;
             }

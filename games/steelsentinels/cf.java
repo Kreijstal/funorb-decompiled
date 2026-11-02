@@ -39,7 +39,7 @@ final class cf extends IntrusiveNode {
             cf.c((byte) 29);
           }
           var5 = param3.getFileId(var4_int, -32759, param0);
-          stackIn_3_0 = il.a(var5, 20178, var4_int, param3);
+          stackIn_3_0 = TextLayoutLine.a(var5, 20178, var4_int, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class cf extends IntrusiveNode {
     final static boolean c(byte param0) {
         am.field_b = true;
         if (param0 >= 85) {
-          r.field_l = mm.a(-101) + 15000L;
+          ProxySocketConnector.field_l = mm.a(-101) + 15000L;
           return uj.field_d == 11 ? true : false;
         }
         return true;
@@ -97,7 +97,7 @@ final class cf extends IntrusiveNode {
         field_v = "Log in / Create account";
         field_s = "Player names can be up to 12 letters, numbers and underscores";
         field_p = "Status";
-        ua.a(-10931, 50);
+        ReflectionCheck.a(-10931, 50);
         field_A = "Ignore";
     }
 }

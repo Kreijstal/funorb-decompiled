@@ -19,7 +19,7 @@ final class cc extends SceneWidget {
     SceneWidget field_hc;
     boolean field_nc;
     static String field_Tb;
-    static ek[] field_pc;
+    static ArgbSprite[] field_pc;
     SceneWidget field_cc;
     SceneWidget field_oc;
     long field_fc;
@@ -37,7 +37,7 @@ final class cc extends SceneWidget {
           if (var4 != -2) {
             if (var4 != -1) {
               var5 = FunOrbClient.field_x.d((byte) 63) ? 1 : 0;
-              wc.a(0, var5 != 0, FunOrbClient.field_x.field_hc, var4, FunOrbClient.field_x.b(true), param0);
+              MouseInputHandler.a(0, var5 != 0, FunOrbClient.field_x.field_hc, var4, FunOrbClient.field_x.b(true), param0);
             }
             FunOrbClient.field_x = null;
             rh.a(false);
@@ -53,7 +53,7 @@ final class cc extends SceneWidget {
         }
         if (param0 ||
           null == nf.field_b) {
-          vb.field_c = false;
+          GzipDecoder.field_c = false;
         }
         if (!param0) {
           if (null != nf.field_b) {
@@ -63,9 +63,9 @@ final class cc extends SceneWidget {
               if (bd.field_c > 0) {
                 bd.field_c = bd.field_c - 1;
               } else {
-                if (fj.field_f < an.field_h) {
+                if (fj.field_f < AudioService.field_h) {
                   if (fj.field_f == 0) {
-                    nj.a(false, true);
+                    AccountTermsPanel.a(false, true);
                   }
                   fj.field_f = fj.field_f + 1;
                 }
@@ -75,9 +75,9 @@ final class cc extends SceneWidget {
             if (ni.field_a != null) {
               if (SentinelCommand.field_t <= 0) {
                 if (0 >= fj.field_f) {
-                  if (an.field_h > bd.field_c) {
+                  if (AudioService.field_h > bd.field_c) {
                     if (0 == bd.field_c) {
-                      nj.a(true, true);
+                      AccountTermsPanel.a(true, true);
                     }
                     bd.field_c = bd.field_c + 1;
                   }
@@ -88,14 +88,14 @@ final class cc extends SceneWidget {
                 SentinelCommand.field_t = SentinelCommand.field_t - 1;
               }
             } else {
-              vb.field_c = false;
+              GzipDecoder.field_c = false;
               if (0 >= bd.field_c) {
                 if (fj.field_f > 0) {
                   fj.field_f = fj.field_f - 1;
                 } else {
-                  if (SentinelCommand.field_t < an.field_h) {
+                  if (SentinelCommand.field_t < AudioService.field_h) {
                     if (SentinelCommand.field_t == 0) {
-                      bf.m(854);
+                      LoginDialog.m(854);
                     }
                     SentinelCommand.field_t = SentinelCommand.field_t + 1;
                   }
@@ -146,7 +146,7 @@ final class cc extends SceneWidget {
           this.field_ec = param2;
           this.field_Vb = param1;
           var6 = (CharSequence) ((Object) this.field_mc);
-          ui.a(1, var6);
+          AlphaContainer.a(1, var6);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -198,9 +198,9 @@ final class cc extends SceneWidget {
         int var2 = SteelSentinels.obfuscationControl;
         int var1_intLifetime1;
         try {
-          gd.field_qb.c((byte) -118);
+          ContentTransitionDialog.field_qb.c((byte) -118);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            bm.field_T[var1_int] = 0L;
+            AccountMessagePanel.field_T[var1_int] = 0L;
           }
           for (var1_intLifetime1 = param0; 32 > var1_intLifetime1; var1_intLifetime1++) {
             hg.field_c[var1_intLifetime1] = 0L;
@@ -217,7 +217,7 @@ final class cc extends SceneWidget {
           this.field_mc = param1;
           this.field_Vb = param2;
           var5 = (CharSequence) ((Object) this.field_mc);
-          ui.a(1, var5);
+          AlphaContainer.a(1, var5);
           int var4_int = -54 / ((54 - param0) / 38);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "cc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

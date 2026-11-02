@@ -21,7 +21,7 @@ abstract class ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          if (!f.a(param1, 4, param0)) {
+          if (!SocketJs5Transport.a(param1, 4, param0)) {
             return false;
           }
           var2_int = 0;
@@ -29,7 +29,7 @@ abstract class ArchiveProvider {
             if (param1.length() <= var2_int) {
               return true;
             }
-            if (qh.a((byte) -30, param1.charAt(var2_int))) {
+            if (IconTextComponent.a((byte) -30, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -70,29 +70,29 @@ abstract class ArchiveProvider {
     }
 
     final static void a(byte param0) {
-        qj.field_a[44] = 71;
-        qj.field_a[93] = 43;
-        qj.field_a[59] = 57;
-        qj.field_a[46] = 72;
-        qj.field_a[91] = 42;
+        SentinelAnimationEditor.field_a[44] = 71;
+        SentinelAnimationEditor.field_a[93] = 43;
+        SentinelAnimationEditor.field_a[59] = 57;
+        SentinelAnimationEditor.field_a[46] = 72;
+        SentinelAnimationEditor.field_a[91] = 42;
         if (param0 >= 106) {
-          qj.field_a[222] = 58;
-          qj.field_a[192] = 28;
-          qj.field_a[520] = 59;
-          qj.field_a[47] = 73;
-          qj.field_a[45] = 26;
-          qj.field_a[92] = 74;
-          qj.field_a[61] = 27;
+          SentinelAnimationEditor.field_a[222] = 58;
+          SentinelAnimationEditor.field_a[192] = 28;
+          SentinelAnimationEditor.field_a[520] = 59;
+          SentinelAnimationEditor.field_a[47] = 73;
+          SentinelAnimationEditor.field_a[45] = 26;
+          SentinelAnimationEditor.field_a[92] = 74;
+          SentinelAnimationEditor.field_a[61] = 27;
           return;
         }
         ArchiveProvider.a(-119);
-        qj.field_a[222] = 58;
-        qj.field_a[192] = 28;
-        qj.field_a[520] = 59;
-        qj.field_a[47] = 73;
-        qj.field_a[45] = 26;
-        qj.field_a[92] = 74;
-        qj.field_a[61] = 27;
+        SentinelAnimationEditor.field_a[222] = 58;
+        SentinelAnimationEditor.field_a[192] = 28;
+        SentinelAnimationEditor.field_a[520] = 59;
+        SentinelAnimationEditor.field_a[47] = 73;
+        SentinelAnimationEditor.field_a[45] = 26;
+        SentinelAnimationEditor.field_a[92] = 74;
+        SentinelAnimationEditor.field_a[61] = 27;
     }
 
     abstract byte[] getEncodedGroup(int groupId, int obfuscationGuard);

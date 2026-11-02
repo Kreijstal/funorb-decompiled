@@ -39,9 +39,9 @@ final class sl {
             var6_int = param0[0].field_z;
             var7 = param0[2].field_z;
             var8 = param0[1].field_z;
-            param0[0].d(param3, param2, param4);
-            param0[2].d(param1 + param3 - var7, param2, param4);
-            SoftwareRaster.b(aj.field_v);
+            param0[0].drawWithOpacity(param3, param2, param4);
+            param0[2].drawWithOpacity(param1 + param3 - var7, param2, param4);
+            SoftwareRaster.b(RasterSnapshot.field_v);
             SoftwareRaster.h(var6_int + param3, param2, -var7 + param3 + param1, param2 + param0[1].field_B);
             var9 = param3 + var6_int;
             var10 = -var7 + (param3 + param1);
@@ -49,9 +49,9 @@ final class sl {
               field_j = (String[]) null;
             }
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
-              param0[1].d(param3, param2, param4);
+              param0[1].drawWithOpacity(param3, param2, param4);
             }
-            SoftwareRaster.a(aj.field_v);
+            SoftwareRaster.a(RasterSnapshot.field_v);
             return;
           }
           return;

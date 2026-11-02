@@ -34,7 +34,7 @@ final class lj {
             stackIn_4_0 = en.field_a;
             return stackIn_4_0;
           }
-          if (2 != qc.field_P) {
+          if (2 != DisplayNameForm.field_P) {
             stackIn_7_0 = ed.field_d;
             return stackIn_7_0;
           }
@@ -42,21 +42,21 @@ final class lj {
             stackIn_12_0 = o.field_f;
             return stackIn_12_0;
           }
-          if (pf.a(param0, -53)) {
-            stackIn_17_0 = db.a(f.field_u, -107, new String[]{param0});
+          if (CheckboxPainter.a(param0, -53)) {
+            stackIn_17_0 = SocketConnector.a(SocketJs5Transport.field_u, -107, new String[]{param0});
             return stackIn_17_0;
           }
           if (vd.field_h >= 100 &&
             rd.field_b <= 0) {
-            stackIn_23_0 = pf.field_m;
+            stackIn_23_0 = CheckboxPainter.field_m;
             return stackIn_23_0;
           }
           if (vd.field_h >= 200) {
-            stackIn_28_0 = pf.field_m;
+            stackIn_28_0 = CheckboxPainter.field_m;
             return stackIn_28_0;
           }
           if (o.a(-32, param0)) {
-            stackIn_31_0 = db.a(qj.field_m, -68, new String[]{param0});
+            stackIn_31_0 = SocketConnector.a(SentinelAnimationEditor.field_m, -68, new String[]{param0});
             return stackIn_31_0;
           }
           if (param1 != -79) {
@@ -69,7 +69,7 @@ final class lj {
           var4 = var3.position;
           var3.writeByte((byte) 114, 0);
           var3.a(param0, param1 ^ 43);
-          var3.b((byte) -46, -var4 + var3.position);
+          var3.backpatchByteLength((byte) -46, -var4 + var3.position);
           stackIn_36_0 = null;
           return (String) (stackIn_36_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,21 +134,21 @@ final class lj {
           var2 = null;
           if (ib.field_b == 0 &&
             ni.field_a != null) {
-            var2 = ki.field_ob;
+            var2 = LoadingProgressDialog.field_ob;
           }
           if (2 == ib.field_b &&
-            !wa.b((byte) -76)) {
-            boolean decompiledSharedTail2 = !(pf.a(bk.field_U, -59));
+            !StatefulTextPainter.b((byte) -76)) {
+            boolean decompiledSharedTail2 = !(CheckboxPainter.a(StripedProgressBar.field_U, -59));
             if (!decompiledSharedTail2) {
-              var2 = db.a(wh.field_a, -110, new String[]{en.field_e});
+              var2 = SocketConnector.a(DualNodeDequeIterator.field_a, -110, new String[]{en.field_e});
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = db.a(oh.field_b, param0 ^ -11, new String[]{en.field_e});
+              var2 = SocketConnector.a(oh.field_b, param0 ^ -11, new String[]{en.field_e});
             }
-            if (vb.field_e) {
-              sj.a((String) null, (String) (var2), 0, (byte) 21, (String) null, 2);
-              pm.a((byte) -110);
+            if (GzipDecoder.field_e) {
+              MusicCrossfadeStream.a((String) null, (String) (var2), 0, (byte) 21, (String) null, 2);
+              LoginForm.a((byte) -110);
             }
           }
           if (var2 == null &&
@@ -158,20 +158,20 @@ final class lj {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            ParticleEffect.a(56, v.field_e, (String) (var2), 0, (String) null);
+            ParticleEffect.a(56, DebouncedValidator.field_e, (String) (var2), 0, (String) null);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var3 = g.field_l;
-            var3 = dh.a(-27905, var3);
+            var3 = GrowableIntList.field_l;
+            var3 = SceneWidgetNode.a(-27905, var3);
             var4 = "";
             var5 = "|";
             var6 = ib.field_b;
             var7 = 0;
             if (var6 == 2) {
-              var4 = db.a(hh.field_d, param0 - 44, new String[]{en.field_e});
-              var8 = db.a(ak.field_e, -67, new String[]{var3});
-              var7 = -485 + (vd.field_d.field_zb + (wh.field_e.field_zb + pl.field_X.c(var8) - pl.field_X.c(var4)));
+              var4 = SocketConnector.a(hh.field_d, param0 - 44, new String[]{en.field_e});
+              var8 = SocketConnector.a(ak.field_e, -67, new String[]{var3});
+              var7 = -485 + (vd.field_d.field_zb + (DualNodeDequeIterator.field_e.field_zb + pl.field_X.textWidth(var8) - pl.field_X.textWidth(var4)));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -181,7 +181,7 @@ final class lj {
               if (var6 == 0) {
                 if (null == nf.field_b &&
                   cd.field_g) {
-                  var4 = "[" + kh.field_p + "] ";
+                  var4 = "[" + ThreeSliceButtonPainter.field_p + "] ";
                 }
                 if (null != nf.field_b) {
                   boolean decompiledSharedTail1 = (!(cc.field_lc) ||
@@ -191,12 +191,12 @@ final class lj {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + db.a(pd.field_ab, -93, new String[]{nf.field_b.field_Xb}) + "] ";
+                    var4 = "[" + SocketConnector.a(AccountChoicePanel.field_ab, -93, new String[]{nf.field_b.field_Xb}) + "] ";
                   }
                   var6 = 1;
                 }
               }
-              if (fg.p((byte) 84)) {
+              if (RegistrationRequestDialog.p((byte) 84)) {
                 stackIn_67_0 = ": ";
               } else {
                 stackIn_67_0 = "<img=3>: ";
@@ -214,8 +214,8 @@ final class lj {
                 var4 = "<col=999999>" + var4 + ArchiveIndex.field_f + "</col>";
                 var5 = "";
               }
-              var9 = pl.field_X.c(var4);
-              if (!fg.p((byte) -102)) {
+              var9 = pl.field_X.textWidth(var4);
+              if (!RegistrationRequestDialog.p((byte) -102)) {
                 if (vd.field_d.field_kb &&
                   var9 > -vd.field_d.field_Rb + oh.field_f) {
                   if (fj.field_e) {
@@ -227,16 +227,16 @@ final class lj {
                 if (vd.field_d.field_Eb != 0 &&
                   vd.field_d.field_Cb < var9 &&
                   !fj.field_e) {
-                  pd.j(param0 + 13170);
+                  AccountChoicePanel.j(param0 + 13170);
                 }
               }
             }
-            ParticleEffect.a(71, ag.field_r[var6], var4 + BitmapFont.a(tf.field_g.toString()), var7, var5);
+            ParticleEffect.a(71, GradientOutlineTextPainter.field_r[var6], var4 + BitmapFont.escapeMarkup(tf.field_g.toString()), var7, var5);
             if (!jn.field_g) {
-              wh.field_e.field_kb = false;
+              DualNodeDequeIterator.field_e.field_kb = false;
             }
-            if (wh.field_e.field_kb) {
-              var1 = db.a(Projectile.field_Y, -120, new String[]{var3, en.field_e});
+            if (DualNodeDequeIterator.field_e.field_kb) {
+              var1 = SocketConnector.a(Projectile.field_Y, -120, new String[]{var3, en.field_e});
             }
           }
           stackIn_102_0 = var1;
@@ -248,10 +248,10 @@ final class lj {
         }
     }
 
-    final static u a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_7_0 = null;
-        u stackIn_9_0 = null;
+        CoverageBitmapFont stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -262,9 +262,9 @@ final class lj {
           if (param2 >= -20) {
             field_f = (String) null;
           }
-          if (!wa.a((byte) 30, param1, param4, param3)) {
+          if (!StatefulTextPainter.a((byte) 30, param1, param4, param3)) {
             stackIn_7_0 = null;
-            return (u) (stackIn_7_0);
+            return (CoverageBitmapFont) (stackIn_7_0);
           }
           stackIn_9_0 = SentinelCommand.a(96, param0.getFile(param4, (byte) 75, param1));
           return stackIn_9_0;
@@ -329,7 +329,7 @@ final class lj {
         var23 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var6_int = qa.field_O;
+          var6_int = Js5NetworkRequest.field_O;
           if ((ni.b(103) ||
             !(rd.field_b > 0)) && oc.a(param1, -87, true)) {
             stackIn_11_0 = 1;
@@ -342,7 +342,7 @@ final class lj {
           var8 = null;
           var9 = null;
           if (param1 != 34) {
-            var9_ref = rj.field_m[param1];
+            var9_ref = BufferedRandomAccessFile.field_m[param1];
           } else {
             var9_ref = "GODULE";
           }
@@ -443,42 +443,42 @@ final class lj {
           }
           stackIn_103_0 = (null != var10) ? 1 : 2;
           var13Lifetime1 = stackIn_103_0;
-          var8_ref = new SceneWidget((long)param1, sb.field_Y);
+          var8_ref = new SceneWidget((long)param1, Checkbox.field_Y);
           cj.field_a[param1] = var8_ref;
           stackIn_106_0 = var8_ref;
           if (0 != param4) {
-            stackIn_107_1 = co.field_d;
+            stackIn_107_1 = QuickChatCategoryCache.field_d;
           } else {
-            stackIn_107_1 = tk.field_t;
+            stackIn_107_1 = MatchingTextValidator.field_t;
           }
           stackIn_106_0.field_I = stackIn_107_1;
           stackIn_110_0 = var8_ref;
           if (param4 == 0) {
             stackIn_111_1 = be.field_f;
           } else {
-            stackIn_111_1 = tk.field_t;
+            stackIn_111_1 = MatchingTextValidator.field_t;
           }
           stackIn_110_0.field_Ab = stackIn_111_1;
           var14 = 46;
-          var15 = new SceneWidget(-1L, kh.field_s, var9_ref);
+          var15 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var9_ref);
           var15.field_Ib = 10;
           var15.a(0, 2, -4 + (-15 + param5), var14, param0 - (var14 + 10));
           if (1 == var13Lifetime1) {
-            var9_ref = bg.a(var9_ref, -(var15.field_ub * 2) + var15.field_zb, (byte) -45, var15.field_L);
+            var9_ref = WeightedCacheEntry.a(var9_ref, -(var15.field_ub * 2) + var15.field_zb, (byte) -45, var15.field_L);
           }
-          var9_ref = db.a("<col=1e73a1><%0></col>", -21, new String[]{var9_ref});
+          var9_ref = SocketConnector.a("<col=1e73a1><%0></col>", -21, new String[]{var9_ref});
           var15.field_S = var9_ref;
           var8_ref.a(var15, 125);
-          var16 = var15.field_L.a(var15.field_S, var15.field_zb - var15.field_ub * 2, var15.field_Ib) + 6;
-          kh.a(var8_ref, "<img=1>", dn.field_Sb[param1], param1, var16, var6_int, 1000, var14, param2);
+          var16 = var15.field_L.paragraphHeight(var15.field_S, var15.field_zb - var15.field_ub * 2, var15.field_Ib) + 6;
+          ThreeSliceButtonPainter.a(var8_ref, "<img=1>", dn.field_Sb[param1], param1, var16, var6_int, 1000, var14, param2);
           var16 += 14;
           if (var10 != null) {
-            kh.a(var8_ref, (String) (var10), var11, param1, var16, var6_int, var12, var14, true);
+            ThreeSliceButtonPainter.a(var8_ref, (String) (var10), var11, param1, var16, var6_int, var12, var14, true);
           }
           boolean decompiledFrameCompleted0 = true;
           var17 = new SceneWidget((long)param1, (SceneWidget) null);
           var17.a(0, 2, param5 - 4, 2, -4 + var14);
-          var17.field_I = co.field_d;
+          var17.field_I = QuickChatCategoryCache.field_d;
           var18 = IsaacRandom.field_d[param1];
           var17.field_Pb = var18.toRgbSprite();
           if (!param3 ||
@@ -506,11 +506,11 @@ final class lj {
           if (stackIn_131_0 == stackIn_131_1) {
           }
           if (var7 != 0) {
-            var19 = sj.field_F.field_A;
-            var20Lifetime1 = sj.field_F.field_F;
+            var19 = MusicCrossfadeStream.field_F.field_A;
+            var20Lifetime1 = MusicCrossfadeStream.field_F.field_F;
             var21 = new SceneWidget(-1L, (SceneWidget) null);
             var21.a(0, var17.field_eb + (-var19 + var17.field_Lb) / 2, var20Lifetime1, var17.field_Y + (var17.field_zb - var19) / 2, var19);
-            var21.field_Pb = sj.field_F;
+            var21.field_Pb = MusicCrossfadeStream.field_F;
             var8_ref.a(var21, 124);
           }
           if ((var7 == 0 ||
@@ -524,10 +524,10 @@ final class lj {
             var21Lifetime1.field_I = field_b;
             var21Lifetime1.field_Ab = ResourceArchive.field_b;
             var21Lifetime1.field_sb = 2;
-            var21Lifetime1.field_Pb = aj.field_r[param4];
+            var21Lifetime1.field_Pb = RasterSnapshot.field_r[param4];
             var22 = new SceneWidget(-1L, (SceneWidget) null);
             var22.a(0, 0, 28, 0, 28);
-            var22.field_Pb = b.field_q[param4];
+            var22.field_Pb = DialWidgetPainter.field_q[param4];
             var22.field_sb = 2;
             var22.field_qb = 2;
             var21Lifetime1.a(var22, 119);

@@ -77,11 +77,11 @@ final class ib {
         String var8 = null;
         int var7 = -28 % ((-18 - param4) / 48);
         if (field_b == 2) {
-          var8 = ug.field_L;
+          var8 = SingleChildContainer.field_L;
         } else {
           var8 = qi.field_g;
         }
-        ka.a(param2, param1, param6, param0, var8, param5, 127, param3);
+        ModalStack.a(param2, param1, param6, param0, var8, param5, 127, param3);
     }
 
     public static void a(byte param0) {
@@ -91,7 +91,7 @@ final class ib {
 
     final static boolean a(int param0) {
         int var1 = 76 / ((0 - param0) / 33);
-        return 2 <= cb.field_l ? true : false;
+        return 2 <= DiskCacheWorker.field_l ? true : false;
     }
 
     static {

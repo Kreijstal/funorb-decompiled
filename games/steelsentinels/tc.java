@@ -41,10 +41,10 @@ final class tc extends IntrusiveNode {
         return eh.a(false);
     }
 
-    final static db a(String param0, int param1, int param2) {
-        r var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        r stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -53,11 +53,11 @@ final class tc extends IntrusiveNode {
           if (param2 != 22137) {
             field_v = (String) null;
           }
-          var3 = new r();
-          ((db) ((Object) var3)).field_e = param0;
-          ((db) ((Object) var3)).field_c = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_e = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_3_0 = var3;
-          return (db) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -116,7 +116,7 @@ final class tc extends IntrusiveNode {
         int var6Lifetime1;
         var13 = SteelSentinels.obfuscationControl;
         try {
-          var5_int = param1.c(param3);
+          var5_int = param1.textWidth(param3);
           if (param0 >= var5_int &&
             param3.indexOf("<br>") == -1) {
             param4[0] = param3;
@@ -136,7 +136,7 @@ final class tc extends IntrusiveNode {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param3.substring(var7, var9 + 1).trim();
-              var12 = param1.c(var11);
+              var12 = param1.textWidth(var11);
               if (param0 <= var12) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;
@@ -188,14 +188,14 @@ final class tc extends IntrusiveNode {
     final static void a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        ag.field_p.h(126);
-        if (null != r.field_r) {
-          ag.field_p.a(r.field_r, 62);
+        GradientOutlineTextPainter.field_p.refreshPanelVisibility(126);
+        if (null != ProxySocketConnector.field_r) {
+          GradientOutlineTextPainter.field_p.pushPanel(ProxySocketConnector.field_r, 62);
           var1 = -37 % ((param0 - 8) / 39);
           return;
         }
-        r.field_r = new ki(ag.field_p, ba.field_f);
-        ag.field_p.a(r.field_r, 62);
+        ProxySocketConnector.field_r = new LoadingProgressDialog(GradientOutlineTextPainter.field_p, ba.field_f);
+        GradientOutlineTextPainter.field_p.pushPanel(ProxySocketConnector.field_r, 62);
         var1Lifetime1 = -37 % ((param0 - 8) / 39);
     }
 
@@ -225,8 +225,8 @@ final class tc extends IntrusiveNode {
           this.field_w = param5;
           this.field_q = param6;
           this.field_t = param4;
-          fieldTemp$0 = od.field_h;
-          od.field_h = od.field_h + 1;
+          fieldTemp$0 = ClientException.field_h;
+          ClientException.field_h = ClientException.field_h + 1;
           this.field_p = fieldTemp$0 & 65535;
           this.field_o = param1;
           this.field_C = param2;

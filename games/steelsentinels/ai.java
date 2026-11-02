@@ -42,17 +42,17 @@ final class ai extends IntrusiveNode {
         try {
           var1_int = 60 % ((3 - param0) / 43);
           if (!ln.field_h) {
-            if (null == al.field_i) {
-              al.field_i = fg.a(4, 19999);
+            if (null == TickClock.field_i) {
+              TickClock.field_i = RegistrationRequestDialog.a(4, 19999);
             }
-            if (al.field_i.field_t) {
-              var6 = ge.field_m;
-              var13 = al.field_i.field_s;
+            if (TickClock.field_i.field_t) {
+              var6 = DirectByteStorage.field_m;
+              var13 = TickClock.field_i.field_s;
               for (var4 = 0; var4 < 8; var4++) {
-                var6[var4] = vn.a(var6[var4], var13[var4]);
+                var6[var4] = DateOfBirthValidator.a(var6[var4], var13[var4]);
               }
               var8 = ce.field_t;
-              var14 = al.field_i.field_s;
+              var14 = TickClock.field_i.field_s;
               var10 = 0;
               var4Lifetime1 = var10;
               while (8 > var10) {
@@ -60,7 +60,7 @@ final class ai extends IntrusiveNode {
                 var10++;
               }
               ln.field_h = true;
-              al.field_i = null;
+              TickClock.field_i = null;
               Projectile.c((byte) 8);
             }
             if (ln.field_h) {
@@ -68,14 +68,14 @@ final class ai extends IntrusiveNode {
               am.b(-104);
             }
           }
-          if (!df.field_I) {
-            if (null == ol.field_ac) {
-              ol.field_ac = od.a(6, true);
+          if (!DiskCacheRequest.field_I) {
+            if (null == QuickChatHelpDialog.field_ac) {
+              QuickChatHelpDialog.field_ac = ClientException.a(6, true);
             }
-            if (ol.field_ac.field_q) {
-              se.a(-1, ol.field_ac.field_t);
-              ol.field_ac = null;
-              df.field_I = true;
+            if (QuickChatHelpDialog.field_ac.field_q) {
+              se.a(-1, QuickChatHelpDialog.field_ac.field_t);
+              QuickChatHelpDialog.field_ac = null;
+              DiskCacheRequest.field_I = true;
               mm.field_g.writeCipheredOpcode(65, (byte) -117);
               mm.field_g.writeCipheredOpcode(68, (byte) -117);
               mm.field_g.writeCipheredOpcode(70, (byte) -117);

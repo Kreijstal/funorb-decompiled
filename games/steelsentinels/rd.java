@@ -15,14 +15,14 @@ final class rd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!wa.a((byte) 30, param3, param2, param1)) {
+          if (!StatefulTextPainter.a((byte) 30, param3, param2, param1)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
           if (!param0) {
             field_a = (int[]) null;
           }
-          stackIn_6_0 = ij.i(-71);
+          stackIn_6_0 = NameSuggestionsPanel.i(-71);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ final class rd {
         if (param0 > -68) {
           return -121;
         }
-        return hb.field_b - hl.field_q;
+        return IterableDualNodeDeque.field_b - hl.field_q;
     }
 
     static {

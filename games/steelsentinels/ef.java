@@ -19,9 +19,9 @@ final class ef {
         if (param0 != 1) {
           ef.a((byte) -118);
         }
-        ll.field_q = param1;
-        if (null != q.field_f) {
-          q.field_f.a(param1, 1000000);
+        UiTheme.field_q = param1;
+        if (null != IterableNodeHashTable.field_f) {
+          IterableNodeHashTable.field_f.a(param1, 1000000);
         }
         if (ja.field_g != null) {
           ja.field_g.a(param1, param0 - 2);
@@ -152,63 +152,63 @@ final class ef {
         int var7_int = 0;
         int var8 = 0;
         SceneWidget var8_ref_gh = null;
-        qh var9 = null;
+        IconTextComponent var9 = null;
         int var9_int = 0;
         int var10 = 0;
-        qh var10_ref_qh = null;
+        IconTextComponent var10_ref_qh = null;
         int var12 = 0;
         int var13 = 0;
         SceneWidget var14 = null;
         var13 = SteelSentinels.obfuscationControl;
         try {
           sf.field_t = SoftwareRaster.field_j;
-          re.field_Z = SoftwareRaster.field_c;
+          NumericDateInputWidget.field_Z = SoftwareRaster.field_c;
           stackIn_3_0 = 61;
           if (param1) {
             stackIn_4_1 = bd.field_c;
           } else {
             stackIn_4_1 = fj.field_f;
           }
-          vb.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
-          fg.field_Tb.a(-2 + (ql.field_ec.field_Lb - 40), 0, ql.field_ec.field_zb, param0 ^ 3, 0);
-          uj.field_e.a(0, 0, db.field_b, 0, m.field_i.field_zb);
-          stackIn_6_0 = gl.field_u;
+          GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
+          RegistrationRequestDialog.field_Tb.a(-2 + (SocialListPanel.field_ec.field_Lb - 40), 0, SocialListPanel.field_ec.field_zb, param0 ^ 3, 0);
+          uj.field_e.a(0, 0, SocketConnector.field_b, 0, HuffmanDecoder.field_i.field_zb);
+          stackIn_6_0 = NanoTickClock.field_u;
           stackIn_6_1 = 0;
-          stackIn_6_2 = db.field_b + 2;
+          stackIn_6_2 = SocketConnector.field_b + 2;
           stackIn_6_3 = 18;
           stackIn_6_4 = 0;
-          stackIn_6_5 = m.field_i.field_zb;
-          if (!rm.field_p) {
+          stackIn_6_5 = HuffmanDecoder.field_i.field_zb;
+          if (!MenuInputState.field_p) {
             stackIn_7_6 = 0;
           } else {
-            stackIn_7_6 = 40 + (ua.field_G + 2) + 2;
+            stackIn_7_6 = 40 + (ReflectionCheck.field_G + 2) + 2;
           }
           ((SceneWidget) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_6_5 - stackIn_7_6);
-          ei.field_p.a(0, db.field_b + 2, 18, -2 + (m.field_i.field_zb - (ua.field_G + 40)), 42 + ua.field_G);
-          gl.field_t.a(m.field_i.field_zb, -2048, ua.field_G, -2 + (-db.field_b + m.field_i.field_Lb) - 20, 2, 0, db.field_b + 22);
-          mn.field_E.a(0, -40 + ql.field_ec.field_Lb, 40, 0, ql.field_ec.field_zb);
-          nm.field_q.a(0, 0, 30, 0, gl.field_y.field_zb);
-          qa.field_L.a(0, 30, -30 + gl.field_y.field_Lb - 42, 0, gl.field_y.field_zb);
+          NameAvailabilityValidator.field_p.a(0, SocketConnector.field_b + 2, 18, -2 + (HuffmanDecoder.field_i.field_zb - (ReflectionCheck.field_G + 40)), 42 + ReflectionCheck.field_G);
+          NanoTickClock.field_t.a(HuffmanDecoder.field_i.field_zb, -2048, ReflectionCheck.field_G, -2 + (-SocketConnector.field_b + HuffmanDecoder.field_i.field_Lb) - 20, 2, 0, SocketConnector.field_b + 22);
+          QuickChatCategory.field_E.a(0, -40 + SocialListPanel.field_ec.field_Lb, 40, 0, SocialListPanel.field_ec.field_zb);
+          EmailAvailabilityValidator.field_q.a(0, 0, 30, 0, NanoTickClock.field_y.field_zb);
+          Js5NetworkRequest.field_L.a(0, 30, -30 + NanoTickClock.field_y.field_Lb - 42, 0, NanoTickClock.field_y.field_zb);
           var2_int = 3 + be.field_a;
-          if (jg.field_l.length < 2) {
+          if (ViewportController.field_l.length < 2) {
             var2_int--;
           }
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + ((var2_int + 1) / 2 - 8 + (-5 + (qa.field_L.field_Lb - 5))) / (var2_int + 1);
+          var3 = -2 + ((var2_int + 1) / 2 - 8 + (-5 + (Js5NetworkRequest.field_L.field_Lb - 5))) / (var2_int + 1);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -(var2_int * (2 + var3)) + (qa.field_L.field_Lb - 5 - 5);
+          var4 = -(var2_int * (2 + var3)) + (Js5NetworkRequest.field_L.field_Lb - 5 - 5);
           if (var4 > 40) {
             var4 = 40;
           }
-          bj.field_d.a(param0 - 1, 5, var4, 5, -10 + qa.field_L.field_zb);
+          MusicPatchEnvelope.field_d.a(param0 - 1, 5, var4, 5, -10 + Js5NetworkRequest.field_L.field_zb);
           var5 = 2 + (5 + var4);
           for (var6 = 0; var6 < 4 + be.field_a; var6++) {
             if ((var6 != 1 ||
-              !(2 > jg.field_l.length)) && (var6 != 3 ||
+              !(2 > ViewportController.field_l.length)) && (var6 != 3 ||
               !(tc.field_z <= 1))) {
               if (!param1 &&
                 var6 == 3) {
@@ -274,7 +274,7 @@ final class ef {
                       var9.field_zb = 0;
                     }
                   }
-                  var9_int = 2 + gl.field_y.field_zb - (5 + var8);
+                  var9_int = 2 + NanoTickClock.field_y.field_zb - (5 + var8);
                   var10 = un.field_h[var6].length - 1;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var9_int * var11 / var10;
@@ -285,13 +285,13 @@ final class ef {
               }
             }
           }
-          fb.field_r.a(0, 10, -134 + (SoftwareRaster.field_j - 10), SoftwareRaster.field_c - 360 >> 1, 360);
-          tf.field_a.a(0, 0, 24, 0, fb.field_r.field_zb);
-          nd.field_a.a(0, 24, fb.field_r.field_Lb - 24, 0, fb.field_r.field_zb);
+          UsernameCredentials.field_r.a(0, 10, -134 + (SoftwareRaster.field_j - 10), SoftwareRaster.field_c - 360 >> 1, 360);
+          tf.field_a.a(0, 0, 24, 0, UsernameCredentials.field_r.field_zb);
+          nd.field_a.a(0, 24, UsernameCredentials.field_r.field_Lb - 24, 0, UsernameCredentials.field_r.field_zb);
           nd.field_a.field_I = se.a(3, param0, 11579568, nd.field_a.field_Lb, 8421504, 13574);
           fl.field_c.a(0, 5, -26 + (-10 + nd.field_a.field_Lb), 5, -10 + nd.field_a.field_zb);
-          ta.field_i.a(0, -29 + nd.field_a.field_Lb, 24, (-80 + nd.field_a.field_zb) / 2, 80);
-          ql.b(true);
+          Js5ArchiveManager.field_i.a(0, -29 + nd.field_a.field_Lb, 24, (-80 + nd.field_a.field_zb) / 2, 80);
+          SocialListPanel.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -301,14 +301,14 @@ final class ef {
     }
 
     final static void a(int param0) {
-        if (!mg.field_ac) {
+        if (!QuickChatMenu.field_ac) {
           throw new IllegalStateException();
         }
         IntrusiveNode.field_a = true;
         if (param0 != 12) {
           field_b = true;
         }
-        nj.a(false, 40);
+        AccountTermsPanel.a(false, 40);
         uj.field_d = 0;
     }
 

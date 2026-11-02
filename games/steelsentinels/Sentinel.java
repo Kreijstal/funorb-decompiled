@@ -228,8 +228,8 @@ final class Sentinel extends IntrusiveNode {
         fc.a((byte) -85, 9, this.worldX);
         if (!this.world.field_lb) {
           if (di.field_g == 10) {
-            if (ol.field_Ub == 3) {
-              stackIn_42_0 = (ge.field_j > 0) ? 1 : 0;
+            if (QuickChatHelpDialog.field_Ub == 3) {
+              stackIn_42_0 = (DirectByteStorage.field_j > 0) ? 1 : 0;
             } else {
               stackIn_42_0 = 1;
             }
@@ -332,12 +332,12 @@ final class Sentinel extends IntrusiveNode {
                       if (this.field_yc != 6 &&
                         this.field_yc != 34) {
                         if (this.field_yc != 2) {
-                          var8 = ki.field_pb;
+                          var8 = LoadingProgressDialog.field_pb;
                         } else {
-                          var8 = gl.field_r;
+                          var8 = NanoTickClock.field_r;
                         }
                       } else {
-                        var8 = vm.field_o;
+                        var8 = PasswordValidator.field_o;
                       }
                     }
                     decompiledFrameRemainder0 = false;
@@ -346,7 +346,7 @@ final class Sentinel extends IntrusiveNode {
                     if (-1 == this.field_yc) {
                       if (this.field_Ib == this.field_L &&
                         !this.field_M) {
-                        var8 = pf.field_r;
+                        var8 = CheckboxPainter.field_r;
                       } else {
                         var8 = IntKeyLookup.field_k;
                       }
@@ -381,31 +381,31 @@ final class Sentinel extends IntrusiveNode {
                       } else {
                         if (this.field_Ib == this.field_L &&
                           !this.field_M) {
-                          var8 = lb.field_Vb;
+                          var8 = VerticalScrollbar.field_Vb;
                         } else {
-                          var8 = re.field_ab;
+                          var8 = NumericDateInputWidget.field_ab;
                         }
                       }
                     }
                   }
                 } else {
-                  var8 = l.field_a;
+                  var8 = NodeHashTableIterator.field_a;
                 }
               } else {
                 if (this.world.terrain.getTerrainType(118) != 4) {
-                  var8 = vb.field_h;
+                  var8 = GzipDecoder.field_h;
                 } else {
                   var8 = gm.field_d;
                 }
               }
             } else {
-              var8 = ac.field_Z;
+              var8 = ResizableModalPanel.field_Z;
             }
             if (var8.length() > 0 &&
               this.field_Ib != this.field_L &&
               !this.field_sc) {
               if (4 == this.world.terrain.getTerrainType(126)) {
-                var8 = var8 + da.field_i;
+                var8 = var8 + TextLayout.field_i;
               } else {
                 var8 = var8 + vc.field_k;
               }
@@ -427,15 +427,15 @@ final class Sentinel extends IntrusiveNode {
             stackIn_153_3 = array$0;
             stackIn_153_4 = 0;
             if (null == this.field_L) {
-              stackIn_154_5 = il.field_d;
+              stackIn_154_5 = TextLayoutLine.field_d;
             } else {
               stackIn_154_5 = this.world.d(-1661904765, this.field_L.playerId);
             }
             stackIn_153_3[stackIn_153_4] = stackIn_154_5;
             stackIn_153_2[1] = this.world.d(-1661904765, this.playerId);
-            var14 = db.a(stackIn_153_0, stackIn_153_1, stackIn_153_2);
-            bl.a(35020, var14, (byte) 121);
-            bc.a(var14, this.world, (byte) 100);
+            var14 = SocketConnector.a(stackIn_153_0, stackIn_153_1, stackIn_153_2);
+            LinkButtonPainter.a(35020, var14, (byte) 121);
+            ValidatedTextWidget.a(var14, this.world, (byte) 100);
           }
           this.field_R = 0;
           this.field_yb = 0;
@@ -519,10 +519,10 @@ final class Sentinel extends IntrusiveNode {
         if (!this.world.field_h &&
           this == this.world.spawnedSpecialSentinel &&
           -2 != ed.field_j) {
-          var15 = jd.field_mb[this.world.simulationTick % jd.field_mb.length];
+          var15 = AccountNoticeDialog.field_mb[this.world.simulationTick % AccountNoticeDialog.field_mb.length];
           var9 = dc.field_a + ": " + var15;
-          bl.a(16776960, var9, (byte) -102);
-          bc.a(var9, this.world, (byte) 100);
+          LinkButtonPainter.a(16776960, var9, (byte) -102);
+          ValidatedTextWidget.a(var9, this.world, (byte) 100);
         }
         this.field_sc = false;
         this.field_dc = false;
@@ -531,9 +531,9 @@ final class Sentinel extends IntrusiveNode {
           this.world.field_j = true;
           if (!this.world.field_h &&
             10 == di.field_g &&
-            0 == ge.field_j &&
+            0 == DirectByteStorage.field_j &&
             this.world.field_M == 0) {
-            mj.a(0, 0, 1200, ol.field_Ub, 0, 0, 0, (byte) -65);
+            TabbedPanel.a(0, 0, 1200, QuickChatHelpDialog.field_Ub, 0, 0, 0, (byte) -65);
           }
         }
         if (this.world.terrain.getTerrainType(param1 ^ 2763) == 2) {
@@ -560,7 +560,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_hb = -1;
         }
         if (this.activeModuleType == 20) {
-          nh.a(true, this);
+          Bzip2State.a(true, this);
         }
         this.field_yc = -1;
         this.field_Ib = null;
@@ -595,7 +595,7 @@ final class Sentinel extends IntrusiveNode {
             return;
           }
           if (var3_int != 0) {
-            nh.a(true, this);
+            Bzip2State.a(true, this);
           }
           if (!param0.activated &&
             var3_int == 0) {
@@ -691,7 +691,7 @@ final class Sentinel extends IntrusiveNode {
               var5 = 1;
               break;
             }
-            var6 = (Sentinel) (var8.d(2));
+            var6 = (Sentinel) (var8.next(2));
           }
           if (var5 == 0) {
             var6_ref = new Projectile(var4, -160000, 0, -200 - (var4 >> 1), 5000, 0, 2, this.world, this, 300, 250, 20);
@@ -865,7 +865,7 @@ final class Sentinel extends IntrusiveNode {
                 }
                 this.a(command, (byte) -106);
                 if (3 == di.field_g &&
-                  1 == qh.field_Yb &&
+                  1 == IconTextComponent.field_Yb &&
                   this.field_Lb) {
                   tj.field_c = 1;
                 }
@@ -961,7 +961,7 @@ final class Sentinel extends IntrusiveNode {
                     }
                   }
                   if (var4_int == 0 &&
-                    command.startTick != command.endTick - 100 + ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][2] &&
+                    command.startTick != command.endTick - 100 + ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][2] &&
                     39 != this.activeModuleType) {
                     this.field_U = 0;
                     if (command.startTick == -100 + command.endTick) {
@@ -972,7 +972,7 @@ final class Sentinel extends IntrusiveNode {
                     this.a(command, (byte) -96);
                   }
                   if (di.field_g == 3 &&
-                    qh.field_Yb == 1 &&
+                    IconTextComponent.field_Yb == 1 &&
                     var4_int != 0) {
                     tj.field_c = 1;
                   }
@@ -990,15 +990,15 @@ final class Sentinel extends IntrusiveNode {
                         this.field_U = -1;
                       }
                       if (0 == di.field_g) {
-                        if (1 == qh.field_Yb &&
+                        if (1 == IconTextComponent.field_Yb &&
                           this.field_U < 0) {
                           tj.field_c = 1;
                         }
-                        if (qh.field_Yb == 2 &&
+                        if (IconTextComponent.field_Yb == 2 &&
                           this.field_U > 0) {
                           tj.field_c = 1;
                         }
-                        if (3 == qh.field_Yb &&
+                        if (3 == IconTextComponent.field_Yb &&
                           this.field_U == 0) {
                           tj.field_c = 1;
                         }
@@ -1411,7 +1411,7 @@ final class Sentinel extends IntrusiveNode {
             this.field_v = this.field_v - 1;
           }
           if (this.field_v <= 0) {
-            nh.a(true, this);
+            Bzip2State.a(true, this);
           }
         }
         if (this.field_Yb > 0) {
@@ -1507,7 +1507,7 @@ final class Sentinel extends IntrusiveNode {
           var11 = this.chassis.a(0, "Energy Blade");
           this.chassis.b((byte) -128, this.worldX, this.field_E, this.worldY);
           var4Lifetime2 = this.field_E * (jh.sine16(var11.rotation - 5000 >> 3, 4096) * 100 >> 16);
-          var5Lifetime2 = 100 * -kg.cosine16(var11.rotation - 5000 >> 3, (byte) -119) >> 16;
+          var5Lifetime2 = 100 * -ScrollContainer.cosine16(var11.rotation - 5000 >> 3, (byte) -119) >> 16;
           var6Lifetime2 = 100;
           var7_ref_qb = ArticulatedPart.createParticle(12, var4Lifetime2 * -500 / var6Lifetime2 + this.velocityX, this.world, 99, var11.field_V + var5Lifetime2 * -700 / var6Lifetime2 - 500 * (this.field_E * var4Lifetime2) / var6Lifetime2, this.field_u, 50, this.velocityY + var5Lifetime2 * -500 / var6Lifetime2, var11.field_T + var4Lifetime2 * -700 / var6Lifetime2 + var5Lifetime2 * (this.field_E * 500) / var6Lifetime2, var11.field_T);
           this.world.particles.addLast(3, var7_ref_qb);
@@ -1539,7 +1539,7 @@ final class Sentinel extends IntrusiveNode {
         }
         if (this.field_oc > 0) {
           this.field_oc = this.field_oc + 1;
-          if (this.field_oc >= ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][2]) {
+          if (this.field_oc >= ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][2]) {
             this.field_oc = 0;
           }
         }
@@ -1677,7 +1677,7 @@ final class Sentinel extends IntrusiveNode {
           this.world.pendingParticles.addLast(3, var9);
         }
         boolean decompiledFrameRemainder1 = true;
-        if (nn.field_c[0] != this.chassis.componentId) {
+        if (FullscreenFocusCanvas.field_c[0] != this.chassis.componentId) {
           if (this.field_pc) {
             if (this.world.terrain.getTerrainType(102) != 4) {
               var5Lifetime4 = (-this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) << 4) - 50000;
@@ -1806,7 +1806,7 @@ final class Sentinel extends IntrusiveNode {
           this.restoreArmour(-20039);
         }
         if (obfuscationGuard == di.field_g &&
-          qh.field_Yb == 13 &&
+          IconTextComponent.field_Yb == 13 &&
           this.field_Nb == 9 &&
           tj.field_c < 2 &&
           this.maximumArmour > this.armour) {
@@ -1828,17 +1828,17 @@ final class Sentinel extends IntrusiveNode {
         int var7 = (this.field_Vb.field_Db + 128) * param1 >> 13;
         double var8 = Math.sin(3.141592653589793 * (double)(2 * this.world.simulationTick) / 50.0) * 4.0;
         String var10 = Integer.toString((this.field_ec + 49) / 50);
-        int var11 = fk.field_d.c(var10);
+        int var11 = BoundedUrlRequest.field_d.textWidth(var10);
         SoftwareRaster.c(-1 + (var5 - var11 / 2), -4 + var6, 2 + var11, 8, 0, 100);
         if (param2 != 23859) {
           return false;
         }
-        fk.field_d.a(var10, var5, var6 + 4, 16711680, -1);
+        BoundedUrlRequest.field_d.drawCentered(var10, var5, var6 + 4, 16711680, -1);
         var7 = var7 + (int)var8;
-        dl.a(-var7 + var6, var5 - 5, 5 + var5, true, 16711680, -var7 + var6, var6 - var7 + 5, var5);
-        dl.a(5 + var6, var5 - var7, var5 - var7, true, 16711680, -5 + var6, var6, var5 - var7 + 5);
-        dl.a(var7 + var6, -5 + var5, var5 + 5, true, 16711680, var6 + var7, -5 + (var7 + var6), var5);
-        dl.a(var6 + 5, var5 + var7, var5 + var7, true, 16711680, -5 + var6, var6, -5 + (var5 + var7));
+        UiContainer.a(-var7 + var6, var5 - 5, 5 + var5, true, 16711680, -var7 + var6, var6 - var7 + 5, var5);
+        UiContainer.a(5 + var6, var5 - var7, var5 - var7, true, 16711680, -5 + var6, var6, var5 - var7 + 5);
+        UiContainer.a(var7 + var6, -5 + var5, var5 + 5, true, 16711680, var6 + var7, -5 + (var7 + var6), var5);
+        UiContainer.a(var6 + 5, var5 + var7, var5 + var7, true, 16711680, -5 + var6, var6, -5 + (var5 + var7));
         return false;
     }
 
@@ -1862,9 +1862,9 @@ final class Sentinel extends IntrusiveNode {
           this.moduleTypes = new int[8];
           this.field_uc = design;
           this.teamId = teamId;
-          ii.a(this.field_uc, this.field_uc.length - 8, this.moduleTypes, 0, 8);
-          this.chassis = hj.a(-24809, alternateConfiguration, this.moduleTypes, this.field_uc);
-          kc.a(this.field_uc, this.moduleTypes, 2);
+          ArraySupport.copy(this.field_uc, this.field_uc.length - 8, this.moduleTypes, 0, 8);
+          this.chassis = MusicPatchNode.a(-24809, alternateConfiguration, this.moduleTypes, this.field_uc);
+          DelayedServerPacket.a(this.field_uc, this.moduleTypes, 2);
           if (null == this.chassis) {
             this.weaponParts = new ArticulatedPart[]{};
             this.field_Db = 64;
@@ -1875,7 +1875,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             this.maximumCharge = sl.a(this.chassis, this.moduleTypes, -7);
             this.field_wb = ef.a(this.chassis, 12258, this.moduleTypes);
-            this.field_Q = bh.a(this.moduleTypes, 10, this.chassis);
+            this.field_Q = SentinelCommandSimulator.a(this.moduleTypes, 10, this.chassis);
             this.maximumArmour = this.chassis.getTotalArmour(8192);
             this.moduleCount = this.chassis.i(-128);
             var6_int = this.hasModuleType(34, -27) ? 1 : 0;
@@ -1924,15 +1924,15 @@ final class Sentinel extends IntrusiveNode {
             this.field_Xb = this.chassis.c((byte) 125);
             this.field_Mb = new int[this.field_Xb.length];
             this.weaponParts = this.chassis.k(-123);
-            hj.field_w = 4096;
-            nj.field_V = 0;
-            ti.field_y = 0;
+            MusicPatchNode.field_w = 4096;
+            AccountTermsPanel.field_V = 0;
+            ImageProducerRasterBuffer.field_y = 0;
             en.field_d = 0;
-            lh.field_t = 0;
+            UiComponent.field_t = 0;
             this.chassis.a(0, false, 0, 0, (byte) 49, 0);
             this.field_fb = 0;
-            this.field_Db = (-ti.field_y + lh.field_t) * 2;
-            this.field_Ub = (en.field_d - nj.field_V) * 2;
+            this.field_Db = (-ImageProducerRasterBuffer.field_y + UiComponent.field_t) * 2;
+            this.field_Ub = (en.field_d - AccountTermsPanel.field_V) * 2;
             if (null != this.chassis.a(66, (byte) -47)) {
               this.field_fb = 1;
             }
@@ -2178,7 +2178,7 @@ final class Sentinel extends IntrusiveNode {
         var27 = SteelSentinels.obfuscationControl;
         try {
           if (di.field_g == 1 &&
-            qh.field_Yb == 11) {
+            IconTextComponent.field_Yb == 11) {
             tj.field_c = tj.field_c + 1;
           }
           var4_int = 1;
@@ -2512,7 +2512,7 @@ final class Sentinel extends IntrusiveNode {
             param0.aimAngle = param0.aimAngle + (-64 + (this.world.simulationTick & 127));
           }
           var18 = 100 * jh.sine16(param0.aimAngle >> 3, 4096) >> 16;
-          var19 = -kg.cosine16(param0.aimAngle >> 3, (byte) -92) * 100 >> 16;
+          var19 = -ScrollContainer.cosine16(param0.aimAngle >> 3, (byte) -92) * 100 >> 16;
           if (var18 < 0) {
             this.field_E = -1;
           } else {
@@ -2533,7 +2533,7 @@ final class Sentinel extends IntrusiveNode {
           if (!this.world.field_h) {
             var21_intLifetime1 = var18 * var13 / var20;
             var22Lifetime1 = var13 * var19 / var20;
-            var23 = this.velocityX + 3 * (this.field_U * ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][0]);
+            var23 = this.velocityX + 3 * (this.field_U * ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][0]);
             if (var5 == 0) {
               var24 = ArticulatedPart.createParticle(3, var22Lifetime1 + var21_intLifetime1 + var23, this.world, 114, var8Lifetime1, this.field_u, 50, this.velocityY + (var22Lifetime1 - var21_intLifetime1), var7Lifetime2, var7Lifetime2);
               this.world.particles.addLast(3, var24);
@@ -2842,7 +2842,7 @@ final class Sentinel extends IntrusiveNode {
                 stackIn_95_0 = this;
                 stackIn_95_1 = this.worldX;
                 stackIn_95_2 = this.field_E;
-                stackIn_95_3 = ka.field_G[o.a((byte) 84, this.chassis.componentId)][25];
+                stackIn_95_3 = ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25];
                 if (0 != this.field_Pb) {
                   stackIn_96_0 = this;
                   stackIn_96_4 = 5;
@@ -2883,7 +2883,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_u = stackIn_114_1;
           if (var8 == 0) {
             this.velocityY = this.velocityY + this.world.gravityAcceleration;
-            this.velocityX = this.field_E * ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][0];
+            this.velocityX = this.field_E * ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][0];
           } else {
             this.velocityY = 0;
           }
@@ -2903,7 +2903,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_Lb = false;
           if (this.field_pc) {
             if (4 != this.world.terrain.getTerrainType(123) &&
-              nn.field_c[0] != this.chassis.componentId) {
+              FullscreenFocusCanvas.field_c[0] != this.chassis.componentId) {
               var17 = new Projectile(this.worldX, this.worldY, 0, 0, 0, 0, 0, this.world, (Sentinel) null, 0, 0, -1);
               var15 = new Explosion(this.worldX, this.worldY - (this.field_Db << 3), 0, 0, 20, this.world, var17.affectedSentinels, var17);
               var15.field_U = 1500;
@@ -2991,23 +2991,23 @@ final class Sentinel extends IntrusiveNode {
           this.field_E = -1;
         }
         if (0 == this.field_Nb &&
-          !fk.field_c) {
-          hb.field_f = false;
-          if (0 != he.field_k &&
-            -he.field_k + this.worldX <= 10000) {
-            hb.field_f = true;
-            if (128 + he.field_k > this.worldX) {
-              this.worldX = 128 + he.field_k;
+          !BoundedUrlRequest.field_c) {
+          IterableDualNodeDeque.field_f = false;
+          if (0 != RasterBuffer.field_k &&
+            -RasterBuffer.field_k + this.worldX <= 10000) {
+            IterableDualNodeDeque.field_f = true;
+            if (128 + RasterBuffer.field_k > this.worldX) {
+              this.worldX = 128 + RasterBuffer.field_k;
               this.velocityX = Math.abs(this.velocityX);
               this.field_U = 0;
               this.field_E = 1;
             }
           }
-          if (ge.field_l != 0 &&
-            -this.worldX + ge.field_l <= 10000) {
-            hb.field_f = true;
-            if (ge.field_l + 128 < this.worldX) {
-              this.worldX = ge.field_l;
+          if (DirectByteStorage.field_l != 0 &&
+            -this.worldX + DirectByteStorage.field_l <= 10000) {
+            IterableDualNodeDeque.field_f = true;
+            if (DirectByteStorage.field_l + 128 < this.worldX) {
+              this.worldX = DirectByteStorage.field_l;
               this.velocityX = -Math.abs(this.velocityX);
               this.field_E = -1;
               this.field_U = 0;
@@ -3080,7 +3080,7 @@ final class Sentinel extends IntrusiveNode {
           while (var9 != null) {
             var10 = (Math.abs(-var4Lifetime1 + (var9.worldX >> 6)) >> 2) + 1;
             var3 = var3 + 1000 / var10;
-            var9 = (Sentinel) (var6.d(2));
+            var9 = (Sentinel) (var6.next(2));
           }
           if (var2 == -1 ||
             var3 < var2) {
@@ -3093,7 +3093,7 @@ final class Sentinel extends IntrusiveNode {
           -1 != di.field_g &&
           4 != di.field_g) {
           if (di.field_g == 10 &&
-            ge.field_j != 0) {
+            DirectByteStorage.field_j != 0) {
             return;
           }
           var8Lifetime1 = vc.a((byte) 32);
@@ -3145,7 +3145,7 @@ final class Sentinel extends IntrusiveNode {
             while (var7_ref_mb != null) {
               if (var7_ref_mb != this) {
                 if (this.teamId != var7_ref_mb.teamId) {
-                  var7_ref_mb = (Sentinel) (var4.d(2));
+                  var7_ref_mb = (Sentinel) (var4.next(2));
                   continue;
                 }
                 if (!var7_ref_mb.field_V) {
@@ -3154,7 +3154,7 @@ final class Sentinel extends IntrusiveNode {
                   var5++;
                 }
               }
-              var7_ref_mb = (Sentinel) (var4.d(2));
+              var7_ref_mb = (Sentinel) (var4.next(2));
             }
             var7 = var3 / 2;
             if (0 < var5) {
@@ -3174,7 +3174,7 @@ final class Sentinel extends IntrusiveNode {
                 var8.field_Ab = var8.field_Ab + var7;
                 var8.field_vb = var8.field_vb + var7;
               }
-              var8 = (Sentinel) (var4.d(2));
+              var8 = (Sentinel) (var4.next(2));
             }
           }
           if (this.world.field_lb &&
@@ -3214,17 +3214,17 @@ final class Sentinel extends IntrusiveNode {
           this.field_fc = this.worldY;
           return;
         }
-        var3 = ka.field_G[o.a((byte) 84, param1)][25][1];
-        var4 = ka.field_G[o.a((byte) 84, param1)][25][3];
+        var3 = ModalStack.field_G[o.a((byte) 84, param1)][25][1];
+        var4 = ModalStack.field_G[o.a((byte) 84, param1)][25][3];
         if (this.field_Pb > 0) {
-          var3 = ka.field_G[o.a((byte) 84, param1)][25][6];
-          var4 = ka.field_G[o.a((byte) 84, param1)][25][7];
+          var3 = ModalStack.field_G[o.a((byte) 84, param1)][25][6];
+          var4 = ModalStack.field_G[o.a((byte) 84, param1)][25][7];
         }
         if (param0 != -18) {
           this.field_Q = 125;
         }
-        var5 = ka.field_G[o.a((byte) 84, param1)][25][4];
-        var6 = ka.field_G[o.a((byte) 84, param1)][25][2];
+        var5 = ModalStack.field_G[o.a((byte) 84, param1)][25][4];
+        var6 = ModalStack.field_G[o.a((byte) 84, param1)][25][2];
         if (0 < this.field_oc &&
           var6 > this.field_oc) {
           this.field_mb = this.field_oc * 50 * var5 / var6 % 50;
@@ -3858,7 +3858,7 @@ final class Sentinel extends IntrusiveNode {
           discarded$0 = this.a(-81, -111, true, -69, (byte) -49, true, 14, 52);
         }
         var4 = 50;
-        var5 = ka.field_G[o.a((byte) 84, param0)];
+        var5 = ModalStack.field_G[o.a((byte) 84, param0)];
         if (this.animatedParts != null &&
           var5[this.field_J] != null &&
           null != var5[this.field_r] &&
@@ -4033,7 +4033,7 @@ final class Sentinel extends IntrusiveNode {
           if (!((Projectile) (var3)).field_T) {
             return;
           }
-          this.pendingCommands.a(var5_ref, -21459);
+          this.pendingCommands.addLast(var5_ref, -21459);
           return;
         }
         return;
@@ -4056,7 +4056,7 @@ final class Sentinel extends IntrusiveNode {
         var5 = 20;
         var6 = var5;
         if (this.field_xb) {
-          var6 = var6 + (4 + fk.field_d.field_U);
+          var6 = var6 + (4 + BoundedUrlRequest.field_d.field_U);
         }
         var7 = var5;
         var8 = var6;
@@ -4065,7 +4065,7 @@ final class Sentinel extends IntrusiveNode {
           var8 = var8 * (-Math.abs(this.field_F) + 250) / 250;
         }
         SoftwareRaster.c(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
-        var9 = nc.a(this.activeModuleType, (byte) -102);
+        var9 = WeightedLruCache.a(this.activeModuleType, (byte) -102);
         SoftwareRaster.h(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
         if (param3 != 45) {
           var11 = (int[]) null;
@@ -4082,7 +4082,7 @@ final class Sentinel extends IntrusiveNode {
         }
         var9.c(-(var5 / 2) + param2, -var5 + param0);
         if (this.field_xb) {
-          fk.field_d.a(Integer.toString((49 + this.field_v) / 50), param2, -2 + (param0 - var5), 16777215, 0);
+          BoundedUrlRequest.field_d.drawCentered(Integer.toString((49 + this.field_v) / 50), param2, -2 + (param0 - var5), 16777215, 0);
         }
         if (var10 != null) {
           SoftwareRaster.a((int[]) (var10));
@@ -4274,8 +4274,8 @@ final class Sentinel extends IntrusiveNode {
             var13 != 5 &&
             var13 != 7) {
             if (var13 == 10 &&
-              ge.field_j == 0 &&
-              ol.field_Ub != 2) {
+              DirectByteStorage.field_j == 0 &&
+              QuickChatHelpDialog.field_Ub != 2) {
               var12Lifetime1 = 1;
             }
           } else {
@@ -4289,24 +4289,24 @@ final class Sentinel extends IntrusiveNode {
               if (var14Lifetime1 == PartInstruction.field_t[0]) {
                 var14Lifetime1 = 12583104;
               }
-              fk.field_d.c(var20, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
-              fk.field_d.c(var20, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
-              fk.field_d.c(var20, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
+              BoundedUrlRequest.field_d.c(var20, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
+              BoundedUrlRequest.field_d.c(var20, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
+              BoundedUrlRequest.field_d.c(var20, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
             } else {
               if (this.field_Nb == 11) {
                 var23 = this.world.d(param2 ^ -1676781437, this.playerId);
                 var14Lifetime1 = this.getTeamColour((byte) -123);
-                fk.field_d.c(var23, var9, 1 + var11Lifetime1, 0, -1, var7 * 3);
-                fk.field_d.c(var23, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
-                fk.field_d.c(var23, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
+                BoundedUrlRequest.field_d.c(var23, var9, 1 + var11Lifetime1, 0, -1, var7 * 3);
+                BoundedUrlRequest.field_d.c(var23, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
+                BoundedUrlRequest.field_d.c(var23, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
               } else {
                 if (var12Lifetime1 != 0 &&
-                  ol.field_Ub == 0 &&
-                  9 >= qh.field_Yb) {
-                  var22 = db.field_f;
-                  fk.field_d.c(var22, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
-                  fk.field_d.c(var22, var9 + 1, var11Lifetime1, 0, -1, var7 * 3);
-                  fk.field_d.c(var22, var9, var11Lifetime1, 10085888, -1, 4 * var7);
+                  QuickChatHelpDialog.field_Ub == 0 &&
+                  9 >= IconTextComponent.field_Yb) {
+                  var22 = SocketConnector.field_f;
+                  BoundedUrlRequest.field_d.c(var22, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
+                  BoundedUrlRequest.field_d.c(var22, var9 + 1, var11Lifetime1, 0, -1, var7 * 3);
+                  BoundedUrlRequest.field_d.c(var22, var9, var11Lifetime1, 10085888, -1, 4 * var7);
                 } else {
                   var21 = "^";
                   stackIn_63_0 = (var12Lifetime1 != 0) ? 10085888 : 16711680;
@@ -4322,23 +4322,23 @@ final class Sentinel extends IntrusiveNode {
             var11Lifetime1 -= 10;
             if (this.field_Vb == param3 &&
               (16 & this.world.simulationTick) != 0) {
-              fk.field_d.c(ac.field_gb, var9, var11Lifetime1, 16711680, 0, 128);
+              BoundedUrlRequest.field_d.c(ResizableModalPanel.field_gb, var9, var11Lifetime1, 16711680, 0, 128);
               var11Lifetime1 -= 10;
             }
             if (this.chassis.componentId != 109) {
               if (this.field_ub >= 0) {
                 if (this.field_mc > 0) {
                   var13 = this.field_mc / 50;
-                  var19 = db.a(f.field_E, -47, new String[]{Integer.toString(var13)});
-                  var15 = db.a("<%0> - <%1>", -82, new String[]{r.field_i, var19});
-                  fk.field_d.c(var15, var9, var11Lifetime1, 16777215, 0, 128);
+                  var19 = SocketConnector.a(SocketJs5Transport.field_E, -47, new String[]{Integer.toString(var13)});
+                  var15 = SocketConnector.a("<%0> - <%1>", -82, new String[]{ProxySocketConnector.field_i, var19});
+                  BoundedUrlRequest.field_d.c(var15, var9, var11Lifetime1, 16777215, 0, 128);
                   var11Lifetime1 -= 10;
                 }
               } else {
                 var13 = -this.field_ub / (50 * (this.field_wb + 2));
-                var18 = db.a(f.field_E, -56, new String[]{Integer.toString(var13)});
-                var15 = db.a("<%0> - <%1>", -73, new String[]{hk.field_pc, var18});
-                fk.field_d.c(var15, var9, var11Lifetime1, 16777215, 0, 128);
+                var18 = SocketConnector.a(SocketJs5Transport.field_E, -56, new String[]{Integer.toString(var13)});
+                var15 = SocketConnector.a("<%0> - <%1>", -73, new String[]{hk.field_pc, var18});
+                BoundedUrlRequest.field_d.c(var15, var9, var11Lifetime1, 16777215, 0, 128);
                 var11Lifetime1 -= 10;
               }
             }
@@ -4393,7 +4393,7 @@ final class Sentinel extends IntrusiveNode {
         int var6 = 0;
         try {
           if (di.field_g == 0 &&
-            qh.field_Yb == 6) {
+            IconTextComponent.field_Yb == 6) {
             tj.field_c = 1;
           }
           var3_int = -this.worldX + param0.targetWorldX >> 4;
@@ -4613,9 +4613,9 @@ final class Sentinel extends IntrusiveNode {
           }
           var13_int = stackIn_16_0 + param7 - 11;
           if (0 < this.field_E) {
-            ArchiveProvider.field_a[var11Lifetime1].b(var12, var13_int);
+            ArchiveProvider.field_a[var11Lifetime1].drawQuarter(var12, var13_int);
           } else {
-            ArchiveProvider.field_a[var11Lifetime1].b().b(var12, var13_int);
+            ArchiveProvider.field_a[var11Lifetime1].b().drawQuarter(var12, var13_int);
           }
           return false;
         }
@@ -4633,8 +4633,8 @@ final class Sentinel extends IntrusiveNode {
               var16 = 16711935 & fj.field_a[this.teamId];
               var17 = 255 & fj.field_a[this.teamId] >> 8;
               var18 = 255 * var15 / 64;
-              rm.field_h[var15 + 1] = ec.a(16711935, var16 * var18 >> 8) + ec.a(65280, var18 * var17);
-              rm.field_h[64 + var15] = this.field_ic * (var18 >> 1);
+              MenuInputState.field_h[var15 + 1] = ec.a(16711935, var16 * var18 >> 8) + ec.a(65280, var18 * var17);
+              MenuInputState.field_h[64 + var15] = this.field_ic * (var18 >> 1);
             }
           } else {
             if (this.teamId == 12) {
@@ -4642,8 +4642,8 @@ final class Sentinel extends IntrusiveNode {
                 var16 = fj.field_a[0] & 16711935;
                 var17 = fj.field_a[0] >> 8 & 255;
                 var18 = 255 * var15 / 64;
-                rm.field_h[1 + var15] = ec.a(16711935, var18 * var16 >> 8) + ec.a(var18 * var17, 65280);
-                rm.field_h[var15 + 64] = 65793 * (var18 >> 1);
+                MenuInputState.field_h[1 + var15] = ec.a(16711935, var18 * var16 >> 8) + ec.a(var18 * var17, 65280);
+                MenuInputState.field_h[var15 + 64] = 65793 * (var18 >> 1);
               }
             }
           }
@@ -4668,21 +4668,21 @@ final class Sentinel extends IntrusiveNode {
         if ((!this.field_pc ||
           4 == this.world.terrain.getTerrainType(48) &&
           this.field_Qb >= 225) && null != this.chassis) {
-          hj.field_w = 2 * param1;
+          MusicPatchNode.field_w = 2 * param1;
           if (var17Lifetime1 >= 250) {
-            qh.b(1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
+            IconTextComponent.b(1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
           } else {
             if (var17Lifetime1 <= 100) {
               if (var17Lifetime1 > 50) {
                 this.chassis.a((byte) 112, var15Lifetime1, var16Lifetime1, this.field_E);
-                qh.b(var17Lifetime1 * 400 - 20000, -var11Lifetime2 + var16Lifetime1 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
+                IconTextComponent.b(var17Lifetime1 * 400 - 20000, -var11Lifetime2 + var16Lifetime1 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
               } else {
                 this.chassis.a((byte) 125, var15Lifetime1, var16Lifetime1, this.field_E);
               }
             } else {
-              hj.field_w = hj.field_w * (-var17Lifetime1 + 250) / 150;
+              MusicPatchNode.field_w = MusicPatchNode.field_w * (-var17Lifetime1 + 250) / 150;
               this.chassis.a((byte) 118, var15Lifetime1, var16Lifetime1 - var11Lifetime2 * (var17Lifetime1 - 100) / 150, this.field_E);
-              qh.b(19000 * (-var17Lifetime1 + 250) / 150 + 1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
+              IconTextComponent.b(19000 * (-var17Lifetime1 + 250) / 150 + 1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
             }
           }
         }
@@ -4739,7 +4739,7 @@ final class Sentinel extends IntrusiveNode {
           }
           if (this.world.terrain.getTerrainType(50) != 4) {
             if (var27 == 16777215) {
-              ml.field_c[var18Lifetime1].b(var25, var26, var23, var24_int);
+              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
             } else {
               ml.field_c[var18Lifetime1].a(var25, var26, var23, var24_int, var27);
             }
@@ -4758,9 +4758,9 @@ final class Sentinel extends IntrusiveNode {
             if (var27 != 16777215) {
               ml.field_c[var18Lifetime1].a(var25, var26, var23, var24_int, var27);
             } else {
-              ml.field_c[var18Lifetime1].b(var25, var26, var23, var24_int);
+              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
             }
-            SoftwareRaster.a(var28, var30, var29, var31);
+            SoftwareRaster.setClip(var28, var30, var29, var31);
           }
         }
         if (this.field_S > 0 &&
@@ -4823,9 +4823,9 @@ final class Sentinel extends IntrusiveNode {
           var28Lifetime1 = var15Lifetime1 - var26Lifetime1 / 2;
           var29Lifetime1 = var16Lifetime1 - (int)((double)var27Lifetime1 / var22 * ((-1.0 + var22) / 2.0 + 1.0));
           if (var20 < 256) {
-            b.field_n[var21].d(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, var20);
+            DialWidgetPainter.field_n[var21].d(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, var20);
           } else {
-            b.field_n[var21].d(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, 256);
+            DialWidgetPainter.field_n[var21].d(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, 256);
           }
         }
         if (this.field_Cb) {

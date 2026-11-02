@@ -8,7 +8,7 @@ final class rb {
     static String field_d;
     static int field_j;
     static volatile int field_a;
-    static sg field_h;
+    static BufferedSocket field_h;
     static long field_c;
     static byte[] field_i;
     static String field_e;
@@ -19,14 +19,14 @@ final class rb {
         if (obfuscationGuard != 2048) {
           rb.firstQuadrantAngle8192(-3, -22, 110);
           if (deltaX < deltaY) {
-            return 2048 - df.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
+            return 2048 - DiskCacheRequest.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
           }
-          return df.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
+          return DiskCacheRequest.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
         }
         if (deltaX < deltaY) {
-          return 2048 - df.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
+          return 2048 - DiskCacheRequest.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
         }
-        return df.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
+        return DiskCacheRequest.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
     }
 
     public static void a(byte param0) {

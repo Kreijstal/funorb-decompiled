@@ -8,7 +8,7 @@ final class ja {
     static int field_f;
     static int[][] field_b;
     static RgbSprite[] field_e;
-    static sj field_g;
+    static MusicCrossfadeStream field_g;
     static int field_i;
     static IndexedSprite[] field_d;
 
@@ -40,70 +40,70 @@ final class ja {
         var3 = SteelSentinels.obfuscationControl;
         var2 = param0;
         if (var2 == 104) {
-          return hb.field_j[0];
+          return IterableDualNodeDeque.field_j[0];
         }
         if (var2 == 105) {
-          return hb.field_j[1];
+          return IterableDualNodeDeque.field_j[1];
         }
         if (var2 == 106) {
-          return hb.field_j[2];
+          return IterableDualNodeDeque.field_j[2];
         }
         if (var2 == 107) {
-          return hb.field_j[3];
+          return IterableDualNodeDeque.field_j[3];
         }
         if (108 == var2) {
-          return hb.field_j[4];
+          return IterableDualNodeDeque.field_j[4];
         }
         if (var2 == 109) {
-          return hb.field_j[6];
+          return IterableDualNodeDeque.field_j[6];
         }
         if (var2 == 110) {
-          return hb.field_j[7];
+          return IterableDualNodeDeque.field_j[7];
         }
         if (var2 == 111) {
-          return hb.field_j[8];
+          return IterableDualNodeDeque.field_j[8];
         }
         if (var2 == 112) {
-          return hb.field_j[9];
+          return IterableDualNodeDeque.field_j[9];
         }
         if (var2 == 113) {
-          return hb.field_j[10];
+          return IterableDualNodeDeque.field_j[10];
         }
         if (114 == var2) {
-          return hb.field_j[11];
+          return IterableDualNodeDeque.field_j[11];
         }
         if (var2 == 115) {
-          return hb.field_j[12];
+          return IterableDualNodeDeque.field_j[12];
         }
         if (var2 == 116) {
-          return hb.field_j[13];
+          return IterableDualNodeDeque.field_j[13];
         }
         if (var2 == 117) {
-          return hb.field_j[14];
+          return IterableDualNodeDeque.field_j[14];
         }
         if (var2 == 118) {
-          return hb.field_j[15];
+          return IterableDualNodeDeque.field_j[15];
         }
         if (var2 == 119) {
-          return hb.field_j[16];
+          return IterableDualNodeDeque.field_j[16];
         }
         if (var2 == 120) {
-          return hb.field_j[17];
+          return IterableDualNodeDeque.field_j[17];
         }
         if (var2 == 121) {
-          return hb.field_j[18];
+          return IterableDualNodeDeque.field_j[18];
         }
         if (var2 == 122) {
-          return hb.field_j[19];
+          return IterableDualNodeDeque.field_j[19];
         }
         if (var2 == 123) {
-          return hb.field_j[5];
+          return IterableDualNodeDeque.field_j[5];
         }
         if (!param1) {
           ja.b(-72, true);
         }
         if (param0 >= 200) {
-          return nc.a(param0 - 199, (byte) -114).toRgbSprite();
+          return WeightedLruCache.a(param0 - 199, (byte) -114).toRgbSprite();
         }
         if (param0 < rh.field_v.length) {
           return rh.field_v[param0];

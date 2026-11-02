@@ -21,8 +21,8 @@ final class hf {
 
     final static void a(ak param0, int param1, int param2, ak param3, int param4, int param5) {
         try {
-          rc.field_j = param1;
-          ng.field_m = param2;
+          SectorCacheStore.field_j = param1;
+          MembershipPromotionScreen.field_m = param2;
           if (param4 >= -122) {
             ak var7 = (ak) null;
             hf.a((ak) null, -18, -91, (ak) null, 27, -75);

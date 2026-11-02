@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eh {
-    static ng field_c;
+    static MembershipPromotionScreen field_c;
     static int[] field_d;
     static int field_a;
     static byte[] field_e;
@@ -29,7 +29,7 @@ final class eh {
         }
         if (var2 >= 128 &&
           160 > var2) {
-          var3 = gl.field_w[-128 + var2];
+          var3 = NanoTickClock.field_w[-128 + var2];
           if (0 == var3) {
             var3 = 63;
           }
@@ -40,7 +40,7 @@ final class eh {
 
     final static SceneWidget a(boolean param0) {
         if (param0) {
-          field_c = (ng) null;
+          field_c = (MembershipPromotionScreen) null;
         }
         return km.field_j.field_Wb;
     }
@@ -59,18 +59,18 @@ final class eh {
         try {
           var1_int = 0;
           var2 = 0;
-          while (dl.f(22759)) {
+          while (UiContainer.f(22759)) {
             DualNodeDeque.field_f.a(true);
-            if (DualNodeDeque.field_f.c(0)) {
+            if (DualNodeDeque.field_f.isForwardAction(0)) {
               var1_int = 1;
             }
-            if (ei.field_q != 13) {
+            if (NameAvailabilityValidator.field_q != 13) {
               continue;
             }
             var2 = 1;
           }
-          DualNodeDeque.field_f.a(param0 + 125, GameApplet.a(param0 + 5, pi.field_c, oh.field_f), GameApplet.a(param0 + 5, rj.field_j, oa.field_S));
-          if (DualNodeDeque.field_f.c(0)) {
+          DualNodeDeque.field_f.updatePointer(param0 + 125, GameApplet.a(param0 + 5, DelegatingCanvas.field_c, oh.field_f), GameApplet.a(param0 + 5, BufferedRandomAccessFile.field_j, TextButton.field_S));
+          if (DualNodeDeque.field_f.isForwardAction(0)) {
             var1_int = 1;
           }
           var3 = param0;
@@ -105,12 +105,12 @@ final class eh {
         }
     }
 
-    final static cn b(boolean param0) {
+    final static TextWidgetPainter b(boolean param0) {
         if (param0) {
-          return (cn) null;
+          return (TextWidgetPainter) null;
         }
         if (uc.field_i == null) {
-          uc.field_i = new cn(rc.field_m, 20, 0, 0, 0, 11579568, -1, 0, 0, rc.field_m.field_G, -1, 2147483647, true);
+          uc.field_i = new TextWidgetPainter(SectorCacheStore.field_m, 20, 0, 0, 0, 11579568, -1, 0, 0, SectorCacheStore.field_m.field_G, -1, 2147483647, true);
         }
         return uc.field_i;
     }
@@ -126,7 +126,7 @@ final class eh {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        kg stackIn_5_0;
+        ScrollContainer stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;
         int stackIn_5_3;
@@ -139,7 +139,7 @@ final class eh {
         RuntimeException var3 = null;
         NodeDeque var4 = null;
         Object var5 = null;
-        ah var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -156,42 +156,42 @@ final class eh {
           if (param1 != -1) {
             field_a = 45;
           }
-          stackIn_5_0 = vi.field_W.field_Xb;
+          stackIn_5_0 = AccountRegistrationPanel.field_W.field_Xb;
           stackIn_5_1 = 2;
-          stackIn_5_2 = 2 + db.field_b;
-          stackIn_5_3 = 3 * ((db.field_b + 2) * param2);
-          stackIn_6_4 = (vi.field_W.field_Xb == la.field_c);
-          var3_int = ((kg) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0, (byte) -41) ? 1 : 0;
-          var4 = vi.field_W.field_Wb.field_M;
-          if (qc.field_P != 2 &&
-            1 != qc.field_P) {
-            vi.field_W.field_T = false;
-            vi.field_W.field_Xb.field_Tb.field_S = eb.field_q;
-            ue.a(0, vi.field_W.field_Wb);
+          stackIn_5_2 = 2 + SocketConnector.field_b;
+          stackIn_5_3 = 3 * ((SocketConnector.field_b + 2) * param2);
+          stackIn_6_4 = (AccountRegistrationPanel.field_W.field_Xb == la.field_c);
+          var3_int = ((ScrollContainer) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0, (byte) -41) ? 1 : 0;
+          var4 = AccountRegistrationPanel.field_W.field_Wb.field_M;
+          if (DisplayNameForm.field_P != 2 &&
+            1 != DisplayNameForm.field_P) {
+            AccountRegistrationPanel.field_W.field_T = false;
+            AccountRegistrationPanel.field_W.field_Xb.field_Tb.field_S = eb.field_q;
+            ue.a(0, AccountRegistrationPanel.field_W.field_Wb);
             return;
           }
-          vi.field_W.field_Xb.field_Tb.field_S = null;
-          vi.field_W.field_T = true;
+          AccountRegistrationPanel.field_W.field_Xb.field_Tb.field_S = null;
+          AccountRegistrationPanel.field_W.field_T = true;
           var5 = null;
-          var6 = (ah) (var4.first(13058));
+          var6 = (SocialListEntry) (var4.first(13058));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_M == null) {
-              var6.field_Ub = new SceneWidget(0L, bb.field_W);
+              var6.field_Ub = new SceneWidget(0L, ModalPanel.field_W);
               var6.a(var6.field_Ub, 121);
-              var6.field_cc = new SceneWidget(0L, bb.field_W);
+              var6.field_cc = new SceneWidget(0L, ModalPanel.field_W);
               var6.a(var6.field_cc, param1 ^ -123);
               var7 = 1;
               var6.h(-100);
             }
-            var6.field_zb = vi.field_W.field_Wb.field_zb;
-            var6.field_Ub.a(0, 0, db.field_b, 0, var6.field_zb);
+            var6.field_zb = AccountRegistrationPanel.field_W.field_Wb.field_zb;
+            var6.field_Ub.a(0, 0, SocketConnector.field_b, 0, var6.field_zb);
             var8 = 0;
             if (null != var6.field_Vb &&
               !var6.field_Vb.equals("")) {
               var6.field_cc.field_rb = 16737894;
               var6.field_cc.field_Pb = ce.field_p;
-              var6.field_cc.a(0, 0, db.field_b, 0, 3 + ce.field_p.field_z);
+              var6.field_cc.a(0, 0, SocketConnector.field_b, 0, 3 + ce.field_p.field_z);
               var8 = 1;
             }
             var9 = 0;
@@ -209,44 +209,44 @@ final class eh {
             stackIn_22_0.field_S = stackIn_23_1;
             stackIn_26_0 = (var6.field_Ub.field_S.equals(var6.field_dc)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_Ub.a(~param1, 0, db.field_b, var9, var10);
+            var6.field_Ub.a(~param1, 0, SocketConnector.field_b, var9, var10);
             if (var3_int == 0) {
-              var6.field_lb = -var6.field_Lb + db.field_b;
+              var6.field_lb = -var6.field_Lb + SocketConnector.field_b;
             }
             if (var7 != 0) {
-              vi.field_W.field_Wb.a(2, (byte) 70, (SceneWidget) (var5), var6);
+              AccountRegistrationPanel.field_W.field_Wb.a(2, (byte) 70, (SceneWidget) (var5), var6);
             }
             if (null != var6.field_cc &&
               var6.field_cc.field_kb) {
-              ll.field_i = var6.field_Vb;
+              UiTheme.field_i = var6.field_Vb;
             } else {
               if (var6.field_Ub.field_kb &&
                 var11 != 0) {
-                ll.field_i = var6.field_dc;
+                UiTheme.field_i = var6.field_dc;
               }
             }
             var5 = var6;
             if (0 != var6.field_Eb) {
-              kk.a(var6, -1, -1, (int[]) null, var6.field_Tb, var6.field_dc, 1073741824, 0L, vi.field_W.field_Xb);
-              var16 = an.field_i;
+              kk.a(var6, -1, -1, (int[]) null, var6.field_Tb, var6.field_dc, 1073741824, 0L, AccountRegistrationPanel.field_W.field_Xb);
+              var16 = AudioService.field_i;
               var13_ref_String = sa.field_a;
               var16.field_j.a(param1 ^ -3, 7, var13_ref_String);
-              var17 = an.field_i;
-              var13 = oa.field_S;
-              var14 = rj.field_j;
+              var17 = AudioService.field_i;
+              var13 = TextButton.field_S;
+              var14 = BufferedRandomAccessFile.field_j;
               var17.field_j.a(0, 0, var14, (byte) -115, var13);
             }
-            var6 = (ah) (var4.next((byte) -11));
+            var6 = (SocialListEntry) (var4.next((byte) -11));
           }
-          if (vi.field_W.field_bc.field_Eb != 0) {
-            kc.field_y = new el(vi.field_W.field_bc.field_Rb, vi.field_W.field_bc.field_cb, vi.field_W.field_bc.field_zb, vi.field_W.field_bc.field_Lb, bm.field_W, kf.field_y, bd.field_f, bd.field_f);
-            ol.field_bc = 2;
+          if (AccountRegistrationPanel.field_W.field_bc.field_Eb != 0) {
+            DelayedServerPacket.field_y = new AccountNamePrompt(AccountRegistrationPanel.field_W.field_bc.field_Rb, AccountRegistrationPanel.field_W.field_bc.field_cb, AccountRegistrationPanel.field_W.field_bc.field_zb, AccountRegistrationPanel.field_W.field_bc.field_Lb, AccountMessagePanel.field_W, kf.field_y, bd.field_f, bd.field_f);
+            QuickChatHelpDialog.field_bc = 2;
           }
-          if (vi.field_W.field_Sb.field_Eb == 0) {
+          if (AccountRegistrationPanel.field_W.field_Sb.field_Eb == 0) {
             return;
           }
-          kc.field_y = new el(vi.field_W.field_Sb.field_Rb, vi.field_W.field_Sb.field_cb, vi.field_W.field_Sb.field_zb, vi.field_W.field_Sb.field_Lb, va.field_g, kf.field_y, bd.field_f, bd.field_f);
-          ol.field_bc = 3;
+          DelayedServerPacket.field_y = new AccountNamePrompt(AccountRegistrationPanel.field_W.field_Sb.field_Rb, AccountRegistrationPanel.field_W.field_Sb.field_cb, AccountRegistrationPanel.field_W.field_Sb.field_zb, AccountRegistrationPanel.field_W.field_Sb.field_Lb, va.field_g, kf.field_y, bd.field_f, bd.field_f);
+          QuickChatHelpDialog.field_bc = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

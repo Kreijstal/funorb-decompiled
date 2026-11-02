@@ -28,7 +28,7 @@ final class ik {
 
     final static void a(boolean param0) {
         ad.field_j = IntrusiveNode.a(125);
-        ag.field_p = new ka();
+        GradientOutlineTextPainter.field_p = new ModalStack();
         ok.a(true, param0, -73);
     }
 
@@ -45,16 +45,16 @@ final class ik {
           var4.position = var4.position + 1;
           var5 = var4.position;
           var4.writeByte((byte) 115, 6);
-          var4.b(-28875, param0);
-          var4.b((byte) -92, -var5 + var4.position);
+          var4.writeLong(-28875, param0);
+          var4.backpatchByteLength((byte) -92, -var5 + var4.position);
           return;
         }
         ik.b(-47);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
         var4.writeByte((byte) 115, 6);
-        var4.b(-28875, param0);
-        var4.b((byte) -92, -var5Lifetime1 + var4.position);
+        var4.writeLong(-28875, param0);
+        var4.backpatchByteLength((byte) -92, -var5Lifetime1 + var4.position);
     }
 
     final static int a(int param0, int param1) {
@@ -64,41 +64,41 @@ final class ik {
             if (param0 < 0) {
               return -1;
             }
-            return td.field_Xb[param0] >> 12;
+            return ReportAbuseDialog.field_Xb[param0] >> 12;
           }
           if (4096L > (long)param0) {
             if ((long)param0 >= 1024L) {
-              return td.field_Xb[param0 >> 4] >> 10;
+              return ReportAbuseDialog.field_Xb[param0 >> 4] >> 10;
             }
-            return td.field_Xb[param0 >> 2] >> 11;
+            return ReportAbuseDialog.field_Xb[param0 >> 2] >> 11;
           }
           if ((long)param0 < 16384L) {
-            return td.field_Xb[param0 >> 6] >> 9;
+            return ReportAbuseDialog.field_Xb[param0 >> 6] >> 9;
           }
-          return td.field_Xb[param0 >> 8] >> 8;
+          return ReportAbuseDialog.field_Xb[param0 >> 8] >> 8;
         }
         if (16777216L > (long)param0) {
           if ((long)param0 < 1048576L) {
             if ((long)param0 >= 262144L) {
-              return td.field_Xb[param0 >> 12] >> 6;
+              return ReportAbuseDialog.field_Xb[param0 >> 12] >> 6;
             }
-            return td.field_Xb[param0 >> 10] >> 7;
+            return ReportAbuseDialog.field_Xb[param0 >> 10] >> 7;
           }
           if ((long)param0 >= 4194304L) {
-            return td.field_Xb[param0 >> 16] >> 4;
+            return ReportAbuseDialog.field_Xb[param0 >> 16] >> 4;
           }
-          return td.field_Xb[param0 >> 14] >> 5;
+          return ReportAbuseDialog.field_Xb[param0 >> 14] >> 5;
         }
         if ((long)param0 < 268435456L) {
           if ((long)param0 >= 67108864L) {
-            return td.field_Xb[param0 >> 20] >> 2;
+            return ReportAbuseDialog.field_Xb[param0 >> 20] >> 2;
           }
-          return td.field_Xb[param0 >> 18] >> 3;
+          return ReportAbuseDialog.field_Xb[param0 >> 18] >> 3;
         }
         if ((long)param0 >= 1073741824L) {
-          return td.field_Xb[param0 >> 24];
+          return ReportAbuseDialog.field_Xb[param0 >> 24];
         }
-        return td.field_Xb[param0 >> 22] >> 1;
+        return ReportAbuseDialog.field_Xb[param0 >> 22] >> 1;
     }
 
     ik(String param0, boolean param1) {

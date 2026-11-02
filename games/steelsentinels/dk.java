@@ -7,7 +7,7 @@ final class dk {
     private DualNode[] field_b;
     private long field_g;
     static String field_i;
-    static fh field_h;
+    static BinaryBitmapFont field_h;
     private int field_f;
     static int field_a;
     private DualNode field_d;
@@ -102,7 +102,7 @@ final class dk {
         int var8Lifetime1;
         var10 = SteelSentinels.obfuscationControl;
         try {
-          var1_int = ug.field_Q;
+          var1_int = SingleChildContainer.field_Q;
           var2 = 0;
           if (in.field_a == 2) {
             var3_long = -rb.field_c + mm.a(117);
@@ -111,8 +111,8 @@ final class dk {
               var2 = 0;
             }
           }
-          for (var3 = 0; var3 < r.field_j.length; var3++) {
-            var4 = bl.field_m[var3];
+          for (var3 = 0; var3 < ProxySocketConnector.field_j.length; var3++) {
+            var4 = LinkButtonPainter.field_m[var3];
             if (var4 < 0) {
               var5 = se.field_e;
             } else {
@@ -122,25 +122,25 @@ final class dk {
                 var5 = CipherPacketBuffer.field_I;
               }
             }
-            var6 = r.field_j[var3];
+            var6 = ProxySocketConnector.field_j[var3];
             if (2 == in.field_a &&
               var2 == 1) {
-              if (oc.field_d.length > nm.field_n.length) {
+              if (oc.field_d.length > EmailAvailabilityValidator.field_n.length) {
                 stackIn_18_0 = oc.field_d.length;
               } else {
-                stackIn_18_0 = nm.field_n.length;
+                stackIn_18_0 = EmailAvailabilityValidator.field_n.length;
               }
               var7 = stackIn_18_0;
-              if (a.field_g.length <= dj.field_j.length) {
+              if (MouseWheelInput.field_g.length <= dj.field_j.length) {
                 stackIn_21_0 = dj.field_j.length;
               } else {
-                stackIn_21_0 = a.field_g.length;
+                stackIn_21_0 = MouseWheelInput.field_g.length;
               }
               var8 = stackIn_21_0;
               if (var3 >= 6 &&
                 var3 < var7 + 6) {
-                if (-var7 + (-6 + var3 + nm.field_n.length) >= 0) {
-                  stackIn_26_0 = nm.field_n[-var7 + (var3 - 6 + nm.field_n.length)];
+                if (-var7 + (-6 + var3 + EmailAvailabilityValidator.field_n.length) >= 0) {
+                  stackIn_26_0 = EmailAvailabilityValidator.field_n[-var7 + (var3 - 6 + EmailAvailabilityValidator.field_n.length)];
                 } else {
                   stackIn_26_0 = "";
                 }
@@ -163,7 +163,7 @@ final class dk {
             stackIn_38_1 = 52;
             stackIn_39_2 = !(0 > var4);
             var7Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(stackIn_38_0, stackIn_38_1, stackIn_39_2);
-            var8Lifetime1 = mg.field_kc - (var7Lifetime1 >> 1);
+            var8Lifetime1 = QuickChatMenu.field_kc - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (DualNodeDeque.field_f.field_e != var4) {
                 stackIn_44_0 = vd.field_f;
@@ -171,22 +171,22 @@ final class dk {
                 stackIn_44_0 = kk.field_c;
               }
               var9 = stackIn_44_0;
-              var1_int = var1_int + ng.field_m;
+              var1_int = var1_int + MembershipPromotionScreen.field_m;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (ud.field_y << 1), -15203, var8Lifetime1 - ud.field_y, (rc.field_j << 1) + rn.field_q, var1_int);
+                var9.a(var7Lifetime1 + (ud.field_y << 1), -15203, var8Lifetime1 - ud.field_y, (SectorCacheStore.field_j << 1) + rn.field_q, var1_int);
               }
-              var1_int = var1_int + rc.field_j;
+              var1_int = var1_int + SectorCacheStore.field_j;
             }
             if (var4 < 0) {
-              pa.field_k.b(var6, var8Lifetime1, var1_int + ag.field_s, var5, -1);
+              pa.field_k.drawLeft(var6, var8Lifetime1, var1_int + GradientOutlineTextPainter.field_s, var5, -1);
               var1_int = var1_int + ih.field_r;
             } else {
-              wb.field_a.b(var6, var8Lifetime1, var1_int + ia.field_l, var5, -1);
-              var1_int = var1_int + (rc.field_j + (ng.field_m + rn.field_q));
+              wb.field_a.drawLeft(var6, var8Lifetime1, var1_int + TextFieldValidator.field_l, var5, -1);
+              var1_int = var1_int + (SectorCacheStore.field_j + (MembershipPromotionScreen.field_m + rn.field_q));
             }
           }
           if (param0 != -6561) {
-            field_h = (fh) null;
+            field_h = (BinaryBitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class dk {
     final static byte[] a(boolean param0, Object param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        gb var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         byte[] stackIn_10_0 = null;
@@ -219,11 +219,11 @@ final class dk {
             return (byte[]) (stackIn_5_0);
           }
           if (!(param1 instanceof byte[])) {
-            if (!(param1 instanceof gb)) {
+            if (!(param1 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (gb) (param1);
-            stackIn_15_0 = var4.a(param2 - 21109);
+            var4 = (ByteStorage) (param1);
+            stackIn_15_0 = var4.toByteArray(param2 - 21109);
             return stackIn_15_0;
           }
           var3 = (byte[]) (param1);
@@ -231,7 +231,7 @@ final class dk {
             stackIn_12_0 = var3;
             return stackIn_12_0;
           }
-          stackIn_10_0 = ff.a((byte) 89, var3);
+          stackIn_10_0 = ValidationHelpWidget.a((byte) 89, var3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,12 +284,12 @@ final class dk {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        bf.field_Fb = param3;
+        LoginDialog.field_Fb = param3;
         o.field_b = param1;
         if (param0 > 0) {
-          field_h = (fh) null;
+          field_h = (BinaryBitmapFont) null;
         }
-        vg.field_c = param2;
+        ProxyAuthenticationException.field_c = param2;
     }
 
     dk(int param0) {

@@ -15,7 +15,7 @@ final class rn extends IntrusiveNode {
     int field_x;
     static int[] field_w;
     static SceneWidget field_C;
-    static kg field_y;
+    static ScrollContainer field_y;
     static int[] field_o;
     static String field_z;
 
@@ -23,7 +23,7 @@ final class rn extends IntrusiveNode {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
-        ah var7 = null;
+        SocialListEntry var7 = null;
         CharSequence var8 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -41,13 +41,13 @@ final class rn extends IntrusiveNode {
             stackIn_3_0 = en.field_a;
             return stackIn_3_0;
           }
-          if (2 != qc.field_P) {
-            stackIn_6_0 = ql.field_Zb;
+          if (2 != DisplayNameForm.field_P) {
+            stackIn_6_0 = SocialListPanel.field_Zb;
             return stackIn_6_0;
           }
-          var7 = da.a(param0, (byte) -41);
+          var7 = TextLayout.a(param0, (byte) -41);
           if (var7 == null) {
-            stackIn_10_0 = db.a(ui.field_W, -42, new String[]{param0});
+            stackIn_10_0 = SocketConnector.a(AlphaContainer.field_W, -42, new String[]{param0});
             return stackIn_10_0;
           }
           var7.unlink(4);
@@ -59,7 +59,7 @@ final class rn extends IntrusiveNode {
           var6 = var5.position;
           var5.writeByte((byte) 124, 3);
           var5.a(param2, -121);
-          var5.b((byte) 116, var5.position - var6);
+          var5.backpatchByteLength((byte) 116, var5.position - var6);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,25 +133,25 @@ final class rn extends IntrusiveNode {
         var3 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 0;
-          while (dl.f(22759)) {
+          while (UiContainer.f(22759)) {
             se.field_c.a(true);
-            if (!se.field_c.c(0)) {
+            if (!se.field_c.isForwardAction(0)) {
               continue;
             }
             var1_int = 1;
           }
-          se.field_c.a(127, se.a((byte) 32, oh.field_f, pi.field_c), se.a((byte) 32, oa.field_S, rj.field_j));
+          se.field_c.updatePointer(127, se.a((byte) 32, oh.field_f, DelegatingCanvas.field_c), se.a((byte) 32, TextButton.field_S, BufferedRandomAccessFile.field_j));
           if (param0 != 90) {
             stackIn_8_0 = -55;
             return stackIn_8_0;
           }
-          if (se.field_c.c(0)) {
+          if (se.field_c.isForwardAction(0)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
             se.field_c.field_e >= 0) {
-            var2 = cb.field_c[se.field_c.field_e];
+            var2 = DiskCacheWorker.field_c[se.field_c.field_e];
             if (2 == var2) {
               gf.c(-95);
             }

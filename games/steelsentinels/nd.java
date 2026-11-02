@@ -8,23 +8,23 @@ final class nd {
         if (param0 != 56) {
           return 7;
         }
-        return (pm.field_Z << 2) + (sg.field_c << 4) + CachedArchiveProvider.field_y;
+        return (LoginForm.field_Z << 2) + (BufferedSocket.field_c << 4) + CachedArchiveProvider.field_y;
     }
 
     final static void a(boolean param0, int param1) {
         hf.a(param0, 1);
         if (param1 != 230827172) {
           field_a = (SceneWidget) null;
-          if (null != ll.field_i) {
-            jg.a(ll.field_i, 1);
+          if (null != UiTheme.field_i) {
+            ViewportController.a(UiTheme.field_i, 1);
             return;
           }
           return;
         }
-        if (null == ll.field_i) {
+        if (null == UiTheme.field_i) {
           return;
         }
-        jg.a(ll.field_i, 1);
+        ViewportController.a(UiTheme.field_i, 1);
     }
 
     public static void a(int param0) {

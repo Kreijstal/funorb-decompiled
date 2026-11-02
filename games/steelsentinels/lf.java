@@ -27,7 +27,7 @@ final class lf {
         field_h = param3 - param1;
         lf.c();
         if (field_c.length < field_h) {
-          field_c = new int[ge.a(field_h, (byte) -32)];
+          field_c = new int[DirectByteStorage.a(field_h, (byte) -32)];
         }
         int var4 = param1 * SoftwareRaster.field_c + param0;
         for (var5 = 0; var5 < field_h; var5++) {

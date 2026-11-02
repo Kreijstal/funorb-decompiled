@@ -142,20 +142,20 @@ final class jm extends IntrusiveNode {
             if (param2[3] != null &&
               param2[3].field_B != 0) {
               SoftwareRaster.h(param4, var19, var17, var20);
-              param2[3].c(param4, var15, var7, var16 - var15);
+              param2[3].drawScaled(param4, var15, var7, var16 - var15);
               SoftwareRaster.a(var29);
             }
             if (null != param2[5] &&
               0 != param2[5].field_B) {
               SoftwareRaster.h(var18, var19, var11, var20);
-              param2[5].c(var14, var15, var8, var16 - var15);
+              param2[5].drawScaled(var14, var15, var8, var16 - var15);
               SoftwareRaster.a(var29);
             }
             if (param2[4] != null &&
               0 != param2[4].field_z &&
               0 != param2[4].field_B) {
               SoftwareRaster.h(var17, var19, var18, var20);
-              param2[4].c(var13, var15, -var13 + var14, -var15 + var16);
+              param2[4].drawScaled(var13, var15, -var13 + var14, -var15 + var16);
               SoftwareRaster.a(var29);
               return;
             }

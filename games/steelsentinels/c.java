@@ -26,15 +26,15 @@ final class c extends IntrusiveNode {
         int var5 = 0;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          ag.field_u = ag.field_u + 65536;
-          while (wa.a(ag.field_u, hh.field_j, (byte) -27) >= 65536) {
-            ag.field_u = ag.field_u - hh.field_j;
+          GradientOutlineTextPainter.field_u = GradientOutlineTextPainter.field_u + 65536;
+          while (StatefulTextPainter.a(GradientOutlineTextPainter.field_u, hh.field_j, (byte) -27) >= 65536) {
+            GradientOutlineTextPainter.field_u = GradientOutlineTextPainter.field_u - hh.field_j;
             ik.field_e = ik.field_e + 1;
           }
           var2_int = -1;
           if (null == Explosion.field_S) {
-            if (null != bm.field_R) {
-              var2_int = bm.field_R.length;
+            if (null != AccountMessagePanel.field_R) {
+              var2_int = AccountMessagePanel.field_R.length;
             }
           } else {
             var2_int = Explosion.field_S.length;
@@ -44,29 +44,29 @@ final class c extends IntrusiveNode {
             if (NodeDeque.field_g < hh.field_f) {
               NodeDeque.field_g = NodeDeque.field_g + 1;
               if (NodeDeque.field_g > hh.field_i && (Explosion.field_S == null ||
-                null == Explosion.field_S[lh.field_r])) {
+                null == Explosion.field_S[UiComponent.field_r])) {
                 NodeDeque.field_g = NodeDeque.field_g - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (NodeDeque.field_g >= hh.field_f &&
-                  null == Explosion.field_S[(1 + lh.field_r) % var2_int]) {
+                  null == Explosion.field_S[(1 + UiComponent.field_r) % var2_int]) {
                   NodeDeque.field_g = NodeDeque.field_g - 1;
                 }
               }
             }
             if (hh.field_f <= NodeDeque.field_g) {
-              oe.field_e = lh.field_r;
+              QuickChatPhraseCache.field_e = UiComponent.field_r;
               NodeDeque.field_g = NodeDeque.field_g - hh.field_f;
               if (!rf.field_b) {
-                lh.field_r = lh.field_r - 1;
-                if (lh.field_r < 0) {
-                  lh.field_r = lh.field_r + var2_int;
+                UiComponent.field_r = UiComponent.field_r - 1;
+                if (UiComponent.field_r < 0) {
+                  UiComponent.field_r = UiComponent.field_r + var2_int;
                 }
               } else {
-                lh.field_r = lh.field_r + 1;
-                if (var2_int <= lh.field_r) {
-                  lh.field_r = lh.field_r - var2_int;
+                UiComponent.field_r = UiComponent.field_r + 1;
+                if (var2_int <= UiComponent.field_r) {
+                  UiComponent.field_r = UiComponent.field_r - var2_int;
                 }
               }
             }
@@ -81,17 +81,17 @@ final class c extends IntrusiveNode {
           if (null != NodeIterator.field_b) {
             var3 = 357 - NodeIterator.field_b.field_B / 2;
             var4 = 0;
-            if (lb.field_gc != 0 &&
-              var3 < rj.field_j &&
-              NodeIterator.field_b.field_F + var3 > rj.field_j) {
-              if (269 - NodeIterator.field_b.field_A < oa.field_S &&
-                oa.field_S < 269) {
+            if (VerticalScrollbar.field_gc != 0 &&
+              var3 < BufferedRandomAccessFile.field_j &&
+              NodeIterator.field_b.field_F + var3 > BufferedRandomAccessFile.field_j) {
+              if (269 - NodeIterator.field_b.field_A < TextButton.field_S &&
+                TextButton.field_S < 269) {
                 rf.field_b = false;
                 NodeDeque.field_g = hh.field_f;
                 var4 = 1;
               }
-              if (oa.field_S > 586 &&
-                oa.field_S < NodeIterator.field_b.field_A + 586) {
+              if (TextButton.field_S > 586 &&
+                TextButton.field_S < NodeIterator.field_b.field_A + 586) {
                 var4 = 1;
                 rf.field_b = true;
                 NodeDeque.field_g = hh.field_f;
@@ -99,8 +99,8 @@ final class c extends IntrusiveNode {
             }
             if (var4 == 0 &&
               hh.field_i < NodeDeque.field_g &&
-              var3 < pi.field_c &&
-              NodeIterator.field_b.field_F + var3 > pi.field_c) {
+              var3 < DelegatingCanvas.field_c &&
+              NodeIterator.field_b.field_F + var3 > DelegatingCanvas.field_c) {
               if (oh.field_f > -NodeIterator.field_b.field_A + 269 &&
                 269 > oh.field_f) {
                 NodeDeque.field_g = hh.field_i;
@@ -112,8 +112,8 @@ final class c extends IntrusiveNode {
             }
           }
           if (param0) {
-            jh.field_i.a(param1 - 145, ei.a(pi.field_c, oh.field_f, true), ei.a(rj.field_j, oa.field_S, true));
-            if (jh.field_i.c(param1 ^ 269)) {
+            jh.field_i.updatePointer(param1 - 145, NameAvailabilityValidator.a(DelegatingCanvas.field_c, oh.field_f, true), NameAvailabilityValidator.a(BufferedRandomAccessFile.field_j, TextButton.field_S, true));
+            if (jh.field_i.isForwardAction(param1 ^ 269)) {
               if (0 == jh.field_i.field_e) {
                 stackIn_59_0 = 3;
                 return stackIn_59_0;
@@ -123,9 +123,9 @@ final class c extends IntrusiveNode {
                 return stackIn_62_0;
               }
             }
-            while (dl.f(22759)) {
+            while (UiContainer.f(22759)) {
               jh.field_i.a(true, 0);
-              if (jh.field_i.c(0)) {
+              if (jh.field_i.isForwardAction(0)) {
                 if (0 == jh.field_i.field_e) {
                   stackIn_68_0 = 3;
                   return stackIn_68_0;
@@ -135,7 +135,7 @@ final class c extends IntrusiveNode {
                   return stackIn_71_0;
                 }
               }
-              if (ei.field_q != 13) {
+              if (NameAvailabilityValidator.field_q != 13) {
                 continue;
               }
               stackIn_75_0 = 1;

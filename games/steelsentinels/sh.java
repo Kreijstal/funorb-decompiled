@@ -9,7 +9,7 @@ final class sh {
 
     final static int c(int param0) {
         int var1 = 124 % ((param0 - 17) / 56);
-        return ce.field_r - ej.field_D;
+        return ce.field_r - MusicPatchPcmStream.field_D;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -18,8 +18,8 @@ final class sh {
         }
         param3--;
         param2++;
-        SoftwareRaster.a(param4, param3, param4 + param1, param3 + param2);
-        ic.field_db.f(param4, param3 - 17);
+        SoftwareRaster.setClip(param4, param3, param4 + param1, param3 + param2);
+        MidiPcmStream.field_db.f(param4, param3 - 17);
         SoftwareRaster.c();
         SoftwareRaster.c(param4, param3, param1, 0, 128);
         SoftwareRaster.c(param4, param3 + 1, param1, 0, 96);
@@ -39,19 +39,19 @@ final class sh {
         var7 = SteelSentinels.obfuscationControl;
         try {
           di.field_g = 10;
-          qh.field_Yb = 0;
+          IconTextComponent.field_Yb = 0;
           var3_int = -13 % ((param0 + 87) / 35);
-          if (ge.field_j != 0) {
+          if (DirectByteStorage.field_j != 0) {
             var4 = 0;
-            var5 = (ge.field_j - 1) * 10;
-            for (var6 = 0; var6 < fm.field_f[ge.field_j]; var6++) {
-              if (~ol.field_Ub != ~var6) {
+            var5 = (DirectByteStorage.field_j - 1) * 10;
+            for (var6 = 0; var6 < fm.field_f[DirectByteStorage.field_j]; var6++) {
+              if (~QuickChatHelpDialog.field_Ub != ~var6) {
                 var4 = var4 + jh.field_a[var6 + var5];
               }
             }
-            hc.field_V = var4;
+            LabeledField.field_V = var4;
           } else {
-            var4 = ol.field_Ub;
+            var4 = QuickChatHelpDialog.field_Ub;
             if (var4 == 0) {
               di.field_g = 0;
             } else {
@@ -81,7 +81,7 @@ final class sh {
               km.field_a = dg.field_e;
             } else {
               var4Lifetime1 = param1 ? 1 : 0;
-              q.a(-3, var4Lifetime1 != 0, -1, 0);
+              IterableNodeHashTable.a(-3, var4Lifetime1 != 0, -1, 0);
             }
           }
           return;
@@ -92,11 +92,11 @@ final class sh {
         }
     }
 
-    final static de[] b(int param0) {
+    final static LoginMethod[] b(int param0) {
         if (param0 > -9) {
           field_c = (String) null;
         }
-        return new de[]{PartInstruction.field_o, mj.field_Vb, h.field_Y};
+        return new LoginMethod[]{PartInstruction.field_o, TabbedPanel.field_Vb, DraggableWidget.field_Y};
     }
 
     public static void a(int param0) {

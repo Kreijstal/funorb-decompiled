@@ -1739,9 +1739,9 @@ final class SoftwareRaster {
         var29 = field_f;
         var26 = var29;
         var11 = var26;
-        ii.a(var27, 0, param8);
-        ii.a(var28, 0, param8);
-        ii.a(var29, 0, param8);
+        ArraySupport.clear(var27, 0, param8);
+        ArraySupport.clear(var28, 0, param8);
+        ArraySupport.clear(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {
@@ -1956,11 +1956,11 @@ final class SoftwareRaster {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void setTarget(int[] param0, int param1, int param2) {
         field_g = param0;
         field_c = param1;
         field_j = param2;
-        SoftwareRaster.a(0, 0, param1, param2);
+        SoftwareRaster.setClip(0, 0, param1, param2);
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4) {
@@ -2001,7 +2001,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }

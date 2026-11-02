@@ -5,7 +5,7 @@ final class fc {
     static int field_d;
     static boolean[] field_e;
     static String field_f;
-    static tb field_a;
+    static AudioOutput field_a;
     static String field_c;
     static int[][] field_b;
 
@@ -31,7 +31,7 @@ final class fc {
           if (param1 >= -48) {
             field_c = (String) null;
           }
-          stackIn_3_0 = param0.a(25);
+          stackIn_3_0 = param0.ensureAllGroupsAvailable(25);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class fc {
         }
     }
 
-    final static void a(mn param0, int param1) {
+    final static void a(QuickChatCategory param0, int param1) {
         try {
           param0.field_F = new char[]{(char)63};
           param0.field_A = new int[]{-1};
@@ -67,36 +67,36 @@ final class fc {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        if (qj.field_q == null) {
+        if (SentinelAnimationEditor.field_q == null) {
           var3 = -3 % ((param0 + 20) / 47);
           return null;
         }
-        if (qj.field_q[param1] == null) {
+        if (SentinelAnimationEditor.field_q[param1] == null) {
           var3Lifetime1 = -3 % ((param0 + 20) / 47);
           return null;
         }
         if (param2 == -1) {
-          return fl.a((byte) 41, qj.field_q[param1], ResourceArchive.field_e[param1]);
+          return fl.a((byte) 41, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
         }
         var3Lifetime2 = 0;
-        if (fk.field_i != null) {
-          var3Lifetime2 = fk.field_i.d(true, param2) - 320;
+        if (BoundedUrlRequest.field_i != null) {
+          var3Lifetime2 = BoundedUrlRequest.field_i.d(true, param2) - 320;
           var4 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
           var4 = ResourceArchive.field_e[param1] * var4 / 256;
           var5 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-          return fg.a(var4, var5, 248, qj.field_q[param1]);
+          return RegistrationRequestDialog.a(var4, var5, 248, SentinelAnimationEditor.field_q[param1]);
         }
-        if (null != si.field_A) {
-          var3Lifetime2 = -320 + si.field_A.d(true, param2);
+        if (null != CachedTextLayout.field_A) {
+          var3Lifetime2 = -320 + CachedTextLayout.field_A.d(true, param2);
           var4Lifetime1 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
           var4Lifetime1 = ResourceArchive.field_e[param1] * var4Lifetime1 / 256;
           var5Lifetime1 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-          return fg.a(var4Lifetime1, var5Lifetime1, 248, qj.field_q[param1]);
+          return RegistrationRequestDialog.a(var4Lifetime1, var5Lifetime1, 248, SentinelAnimationEditor.field_q[param1]);
         }
         var4Lifetime2 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
         var4Lifetime2 = ResourceArchive.field_e[param1] * var4Lifetime2 / 256;
         var5Lifetime2 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-        return fg.a(var4Lifetime2, var5Lifetime2, 248, qj.field_q[param1]);
+        return RegistrationRequestDialog.a(var4Lifetime2, var5Lifetime2, 248, SentinelAnimationEditor.field_q[param1]);
     }
 
     final static java.net.URL a(int param0, java.net.URL param1, String param2, String param3, int param4) {
@@ -242,7 +242,7 @@ final class fc {
     final static e a(byte param0, String[] param1) {
         e var2 = null;
         RuntimeException var2_ref = null;
-        mn var3 = null;
+        QuickChatCategory var3 = null;
         e stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -250,8 +250,8 @@ final class fc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -76) {
-            var3 = (mn) null;
-            fc.a((mn) null, 110);
+            var3 = (QuickChatCategory) null;
+            fc.a((QuickChatCategory) null, 110);
           }
           var2 = new e(false);
           var2.field_c = param1;

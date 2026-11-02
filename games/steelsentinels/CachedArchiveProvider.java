@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CachedArchiveProvider extends ArchiveProvider {
-    private vk field_B;
+    private Js5Transport field_B;
     static String field_s;
     static String field_z;
     static String field_t;
     private byte[] field_o;
     private int field_r;
-    private fe field_w;
+    private ArchiveRequest field_w;
     private int field_F;
     static int field_l;
     private ArchiveIndex index;
     private byte[] field_h;
     static RgbSprite field_j;
-    private cb field_k;
-    private rc field_x;
+    private DiskCacheWorker field_k;
+    private SectorCacheStore field_x;
     static int[] field_g;
     private NodeHashTable field_m;
     private int field_q;
     static int field_y;
-    private rc field_E;
+    private SectorCacheStore field_E;
     private boolean field_D;
     private NodeDeque field_C;
     private boolean field_v;
@@ -29,7 +29,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     private long field_n;
     private boolean field_u;
 
-    private final fe a(byte param0, int param1, int param2) {
+    private final ArchiveRequest a(byte param0, int param1, int param2) {
         int stackIn_63_0 = 0;
         int stackIn_63_1 = 0;
         Object stackIn_95_0 = null;
@@ -43,7 +43,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        fe var12 = null;
+        ArchiveRequest var12 = null;
         byte[] var13 = null;
         byte[] var18 = null;
         byte[] var27 = null;
@@ -51,7 +51,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = SteelSentinels.obfuscationControl;
-        var12 = (fe) (this.field_m.get((long)param1, param0 + 232));
+        var12 = (ArchiveRequest) (this.field_m.get((long)param1, param0 + 232));
         var4 = var12;
         if (param0 != -109) {
           this.field_v = true;
@@ -98,26 +98,26 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
         }
-        if (((fe) (var4)).field_z) {
+        if (((ArchiveRequest) (var4)).field_z) {
           return null;
         }
-        var18 = ((fe) (var4)).d((byte) -82);
+        var18 = ((ArchiveRequest) (var4)).d((byte) -82);
         var13 = var18;
         var5 = var13;
-        if (var4 instanceof df) {
+        if (var4 instanceof DiskCacheRequest) {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              f.field_G.reset();
-              f.field_G.update(var5, 0, var18.length - 2);
-              var6_int = (int)f.field_G.getValue();
+              SocketJs5Transport.field_G.reset();
+              SocketJs5Transport.field_G.update(var5, 0, var18.length - 2);
+              var6_int = (int)SocketJs5Transport.field_G.getValue();
               if (this.index.groupCrcs[param1] != var6_int) {
                 throw new RuntimeException();
               }
               if (null != this.index.groupDigests &&
                 null != this.index.groupDigests[param1]) {
                 var30 = this.index.groupDigests[param1];
-                var29 = co.a((byte) -37, -2 + var18.length, 0, var18);
+                var29 = QuickChatCategoryCache.a((byte) -37, -2 + var18.length, 0, var18);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -136,19 +136,19 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
                 this.field_h[param1] = (byte) 1;
               }
-              if (!((fe) (var4)).field_B) {
-                ((fe) (var4)).unlink(4);
+              if (!((ArchiveRequest) (var4)).field_B) {
+                ((ArchiveRequest) (var4)).unlink(4);
               }
               stackIn_95_0 = var4;
-              return (fe) (stackIn_95_0);
+              return (ArchiveRequest) (stackIn_95_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_h[param1] = (byte)-1;
-            ((fe) (var4)).unlink(param0 ^ -105);
-            if (!((fe) (var4)).field_B) {
+            ((ArchiveRequest) (var4)).unlink(param0 ^ -105);
+            if (!((ArchiveRequest) (var4)).field_B) {
               return null;
             }
             if (!this.field_B.c(62)) {
@@ -161,16 +161,16 @@ final class CachedArchiveProvider extends ArchiveProvider {
         try {
           if (var5 != null &&
             2 < var18.length) {
-            f.field_G.reset();
-            f.field_G.update(var5, 0, var18.length - 2);
-            var6_int = (int)f.field_G.getValue();
+            SocketJs5Transport.field_G.reset();
+            SocketJs5Transport.field_G.update(var5, 0, var18.length - 2);
+            var6_int = (int)SocketJs5Transport.field_G.getValue();
             if (var6_int != this.index.groupCrcs[param1]) {
               throw new RuntimeException();
             }
             if (null != this.index.groupDigests &&
               null != this.index.groupDigests[param1]) {
               var27 = this.index.groupDigests[param1];
-              var28 = co.a((byte) -37, var18.length - 2, 0, var18);
+              var28 = QuickChatCategoryCache.a((byte) -37, var18.length - 2, 0, var18);
               for (var9 = 0; var9 < 64; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();
@@ -186,8 +186,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_B.a(14900);
-          ((fe) (var4)).unlink(4);
-          if (((fe) (var4)).field_B) {
+          ((ArchiveRequest) (var4)).unlink(4);
+          if (((ArchiveRequest) (var4)).field_B) {
             if (this.field_B.c(-93)) {
               return null;
             }
@@ -206,16 +206,16 @@ final class CachedArchiveProvider extends ArchiveProvider {
             this.field_h[param1] = (byte) 1;
           }
         }
-        if (!((fe) (var4)).field_B) {
-          ((fe) (var4)).unlink(4);
+        if (!((ArchiveRequest) (var4)).field_B) {
+          ((ArchiveRequest) (var4)).unlink(4);
         }
-        return (fe) (var4);
+        return (ArchiveRequest) (var4);
     }
 
     final void d(int param0) {
         int var4 = 0;
-        fe discarded$0 = null;
-        fe discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         int var5 = SteelSentinels.obfuscationControl;
         if (null == this.field_C) {
           return;
@@ -317,7 +317,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (this.field_B.c(obfuscationGuard ^ -8)) {
             return null;
           }
-          this.field_w = (fe) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -114));
+          this.field_w = (ArchiveRequest) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -114));
         }
         if (this.field_w.field_z) {
           return null;
@@ -328,7 +328,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         var9 = var5;
         var7 = var9;
         var2 = var7;
-        if (this.field_w instanceof df) {
+        if (this.field_w instanceof DiskCacheRequest) {
           try {
             if (var2 == null) {
               throw new RuntimeException();
@@ -344,7 +344,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (this.field_B.c(62)) {
               this.field_w = null;
             } else {
-              this.field_w = (fe) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) 33));
+              this.field_w = (ArchiveRequest) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) 33));
             }
             return null;
           }
@@ -360,7 +360,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             this.field_B.a(14900);
             this.index = null;
             if (!this.field_B.c(89)) {
-              this.field_w = (fe) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -127));
+              this.field_w = (ArchiveRequest) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -127));
             } else {
               this.field_w = null;
             }
@@ -378,13 +378,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final void c(byte param0) {
-        fe discarded$0 = null;
-        fe discarded$2 = null;
-        fe discarded$1 = null;
-        fe discarded$4 = null;
-        fe discarded$3 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$4 = null;
+        ArchiveRequest discarded$3 = null;
         int var2_int;
-        fe var2;
+        ArchiveRequest var2;
         IntrusiveNode var3;
         int var4;
         int var5;
@@ -495,7 +495,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
         if (this.field_u &&
           mm.a(-109) >= this.field_n) {
-          var2 = (fe) (this.field_m.first(0));
+          var2 = (ArchiveRequest) (this.field_m.first(0));
           while (var2 != null) {
             if (!var2.field_z) {
               if (var2.field_C) {
@@ -507,14 +507,14 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var2.field_C = true;
               }
             }
-            var2 = (fe) (this.field_m.next((byte) 127));
+            var2 = (ArchiveRequest) (this.field_m.next((byte) 127));
           }
           this.field_n = 1000L + mm.a(-89);
         }
     }
 
     final byte[] getEncodedGroup(int groupId, int obfuscationGuard) {
-        fe var3 = this.a((byte) -109, groupId, 0);
+        ArchiveRequest var3 = this.a((byte) -109, groupId, 0);
         if (var3 == null) {
           return null;
         }
@@ -525,7 +525,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final int getGroupProgress(boolean obfuscationGuard, int groupId) {
-        fe var3 = (fe) (this.field_m.get((long)groupId, 127));
+        ArchiveRequest var3 = (ArchiveRequest) (this.field_m.get((long)groupId, 127));
         if (var3 != null) {
           return var3.g(16);
         }
@@ -536,7 +536,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         return 0;
     }
 
-    final void d(byte param0) {
+    final void startPrefetch(byte param0) {
         if (null == this.field_E) {
           return;
         }
@@ -552,11 +552,11 @@ final class CachedArchiveProvider extends ArchiveProvider {
     final static String e(int param0) {
         int var1 = -29 % ((-61 - param0) / 57);
         String var2 = "";
-        if (jd.field_kb != null) {
-          var2 = jd.field_kb.h((byte) -70);
+        if (AccountNoticeDialog.field_kb != null) {
+          var2 = AccountNoticeDialog.field_kb.h((byte) -70);
         }
         if (0 == var2.length()) {
-          var2 = wa.a((byte) -43);
+          var2 = StatefulTextPainter.a((byte) -43);
         }
         if (var2.length() == 0) {
           var2 = un.field_a;
@@ -565,56 +565,56 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final static int a(boolean param0) {
-        if (2 > nj.field_Q) {
+        if (2 > AccountTermsPanel.field_Q) {
           return 0;
         }
-        if (dh.field_D != 0) {
+        if (SceneWidgetNode.field_D != 0) {
           if (ok.field_f != null) {
             if (!ok.field_f.ensureIndex(param0)) {
               return 14;
             }
-            if (!ok.field_f.a(12145, "")) {
+            if (!ok.field_f.ensureGroupAvailableByName(12145, "")) {
               return 29;
             }
             if (!ok.field_f.a("", (byte) 90)) {
               return 29;
             }
           }
-          if (!ke.field_k.ensureIndex(true)) {
+          if (!WidgetStyleLayer.field_k.ensureIndex(true)) {
             return 43;
           }
-          if (!ke.field_k.a("commonui", (byte) 90)) {
+          if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
             return 57;
           }
-          if (!oe.field_d.ensureIndex(true)) {
+          if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
             return 71;
           }
-          if (!oe.field_d.a("commonui", (byte) 90)) {
+          if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
             return 80;
           }
-          if (!id.field_bc.ensureIndex(true)) {
+          if (!IconLabelControl.field_bc.ensureIndex(true)) {
             return 82;
           }
-          if (!id.field_bc.a(25)) {
+          if (!IconLabelControl.field_bc.ensureAllGroupsAvailable(25)) {
             return 86;
           }
         } else {
-          if (!ke.field_k.ensureIndex(true)) {
+          if (!WidgetStyleLayer.field_k.ensureIndex(true)) {
             return 20;
           }
-          if (!ke.field_k.a("commonui", (byte) 90)) {
+          if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
             return 40;
           }
-          if (!oe.field_d.ensureIndex(true)) {
+          if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
             return 50;
           }
-          if (!oe.field_d.a("commonui", (byte) 90)) {
+          if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
             return 60;
           }
-          if (!id.field_bc.ensureIndex(true)) {
+          if (!IconLabelControl.field_bc.ensureIndex(true)) {
             return 70;
           }
-          if (!id.field_bc.a(25)) {
+          if (!IconLabelControl.field_bc.ensureAllGroupsAvailable(25)) {
             return 80;
           }
         }
@@ -624,7 +624,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         return 100;
     }
 
-    CachedArchiveProvider(int param0, rc param1, rc param2, vk param3, cb param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveProvider(int param0, SectorCacheStore param1, SectorCacheStore param2, Js5Transport param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -661,7 +661,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           stackIn_7_1 = (param8);
           this.field_u = stackIn_7_1;
           if (this.field_x != null) {
-            this.field_w = (fe) ((Object) this.field_k.a(21598, this.field_r, this.field_x));
+            this.field_w = (ArchiveRequest) ((Object) this.field_k.a(21598, this.field_r, this.field_x));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

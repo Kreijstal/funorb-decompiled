@@ -4,7 +4,7 @@
 class RgbSprite extends wi {
     int[] field_E;
 
-    void c(int param0, int param1, int param2, int param3) {
+    void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -76,14 +76,14 @@ class RgbSprite extends wi {
         }
     }
 
-    void b(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.field_D >> 1);
         param1 = param1 + (this.field_H >> 1);
         int var3 = param0 < SoftwareRaster.field_i ? SoftwareRaster.field_i - param0 << 1 : 0;
         int var4 = param0 + (this.field_A >> 1) > SoftwareRaster.field_b ? SoftwareRaster.field_b - param0 << 1 : this.field_A;
         int var5 = param1 < SoftwareRaster.field_l ? SoftwareRaster.field_l - param1 << 1 : 0;
         int var6 = param1 + (this.field_F >> 1) > SoftwareRaster.field_d ? SoftwareRaster.field_d - param1 << 1 : this.field_F;
-        RgbSprite.a(this.field_E, var5 * this.field_A + var3, (param1 + (var5 >> 1)) * SoftwareRaster.field_c + (param0 + (var3 >> 1)), (this.field_A << 1) - (var4 - var3) + (this.field_A & 1), SoftwareRaster.field_c - (var4 - var3 >> 1), this.field_A, var4 - var3 >> 1, var6 - var5 >> 1);
+        RgbSprite.drawHalfSizePixels(this.field_E, var5 * this.field_A + var3, (param1 + (var5 >> 1)) * SoftwareRaster.field_c + (param0 + (var3 >> 1)), (this.field_A << 1) - (var4 - var3) + (this.field_A & 1), SoftwareRaster.field_c - (var4 - var3 >> 1), this.field_A, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -113,7 +113,7 @@ class RgbSprite extends wi {
         }
     }
 
-    void c(int param0, int param1, int param2) {
+    void drawTintedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -343,7 +343,7 @@ class RgbSprite extends wi {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -440,7 +440,7 @@ class RgbSprite extends wi {
         }
     }
 
-    final void c() {
+    final void rotateCounterClockwise() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
@@ -468,7 +468,7 @@ class RgbSprite extends wi {
         this.field_z = var3Lifetime3;
     }
 
-    void d(int param0, int param1) {
+    void drawQuarterSize(int param0, int param1) {
         int var9 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -724,7 +724,7 @@ class RgbSprite extends wi {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledWithBrightness(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1394,7 +1394,7 @@ class RgbSprite extends wi {
         throw new IllegalArgumentException();
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void drawHalfSizePixels(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -1495,7 +1495,7 @@ class RgbSprite extends wi {
         }
     }
 
-    void g(int param0, int param1) {
+    void drawHorizontalFlip(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1541,7 +1541,7 @@ class RgbSprite extends wi {
         }
     }
 
-    final void f() {
+    final void trimTransparentBorders() {
         int var8 = 0;
         int var9 = 0;
         int var1;
@@ -1633,7 +1633,7 @@ class RgbSprite extends wi {
         return;
     }
 
-    final void e() {
+    final void normalizeCanvas() {
         int var2 = 0;
         int var3 = 0;
         if (this.field_A == this.field_z &&
@@ -1653,7 +1653,7 @@ class RgbSprite extends wi {
         this.field_H = 0;
     }
 
-    void e(int param0, int param1) {
+    void drawVerticalFlip(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1707,7 +1707,7 @@ class RgbSprite extends wi {
         this.a(var5, var6, param0, param1, param2, param3);
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void drawScaledWithOpacity(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1935,7 +1935,7 @@ class RgbSprite extends wi {
         }
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1981,7 +1981,7 @@ class RgbSprite extends wi {
         }
     }
 
-    final void b() {
+    final void flipHorizontal() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2053,7 +2053,7 @@ class RgbSprite extends wi {
         }
     }
 
-    final RgbSprite g() {
+    final RgbSprite copySprite() {
         int var3 = 0;
         RgbSprite var1 = new RgbSprite(this.field_A, this.field_F);
         var1.field_z = this.field_z;
@@ -2143,11 +2143,11 @@ class RgbSprite extends wi {
         }
     }
 
-    final void d() {
-        SoftwareRaster.a(this.field_E, this.field_A, this.field_F);
+    final void bindRasterTarget() {
+        SoftwareRaster.setTarget(this.field_E, this.field_A, this.field_F);
     }
 
-    final RgbSprite a() {
+    final RgbSprite copyFlippedHorizontal() {
         int var2 = 0;
         int var3 = 0;
         RgbSprite var1 = new RgbSprite(this.field_A, this.field_F);
@@ -2163,7 +2163,7 @@ class RgbSprite extends wi {
         return var1;
     }
 
-    void b(int param0, int param1, int param2) {
+    void drawShadedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
