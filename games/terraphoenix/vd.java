@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd extends lj {
+final class vd extends PcmStream {
     static String field_p;
     static String field_o;
     private wl field_q;
-    static jj field_l;
-    jj field_n;
+    static IntrusiveDeque field_l;
+    IntrusiveDeque field_n;
     vg field_m;
 
-    final lj c() {
-        sh var1 = (sh) (this.field_n.d(9272));
+    final PcmStream c() {
+        sh var1 = (sh) (this.field_n.beginBackward(9272));
         if (var1 == null) {
           return null;
         }
         if (var1.field_k == null) {
           return this.a();
         }
-        return (lj) ((Object) var1.field_k);
+        return (PcmStream) ((Object) var1.field_k);
     }
 
     final static int b(int param0, int param1) {
@@ -43,15 +43,15 @@ final class vd extends lj {
         field_p = (String) null;
     }
 
-    final lj a() {
+    final PcmStream a() {
         sh var1;
         while (true) {
-          var1 = (sh) (this.field_n.e((byte) -119));
+          var1 = (sh) (this.field_n.nextBackward((byte) -119));
           if (var1 == null) {
             return null;
           }
           if (var1.field_k != null) {
-            return (lj) ((Object) var1.field_k);
+            return (PcmStream) ((Object) var1.field_k);
           }
         }
     }
@@ -70,7 +70,7 @@ final class vd extends lj {
         var7 = Terraphoenix.field_V;
         try {
           this.field_m.a(param0, param1, param2);
-          var6 = (sh) (this.field_n.d(9272));
+          var6 = (sh) (this.field_n.beginBackward(9272));
           while (var6 != null) {
             stackIn_4_0 = this.field_q.a(var6, 16384);
             boolean decompiledFrameCompleted0 = true;
@@ -91,7 +91,7 @@ final class vd extends lj {
                 var6.field_y = var6.field_y - var5;
               }
             }
-            var6 = (sh) (this.field_n.e((byte) -119));
+            var6 = (sh) (this.field_n.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class vd extends lj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class vd extends lj {
         int var4;
         var4 = Terraphoenix.field_V;
         this.field_m.a(param0);
-        var3 = (sh) (this.field_n.d(9272));
+        var3 = (sh) (this.field_n.beginBackward(9272));
         while (var3 != null) {
           if (!this.field_q.a(var3, 16384)) {
             var2 = param0;
@@ -128,7 +128,7 @@ final class vd extends lj {
               var2 = var2 - var3.field_y;
             } while (!this.field_q.a((byte) 77, (int[]) null, var2, var3, 0));
           }
-          var3 = (sh) (this.field_n.e((byte) -119));
+          var3 = (sh) (this.field_n.nextBackward((byte) -119));
         }
     }
 
@@ -150,14 +150,14 @@ final class vd extends lj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        lh var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         int var7_intLifetime1;
         var12 = Terraphoenix.field_V;
         try {
           if ((this.field_q.field_q[param0.field_v] & 4) != 0 &&
             param0.field_h < 0) {
-            var7_int = this.field_q.field_D[param0.field_v] / nk.field_u;
+            var7_int = this.field_q.field_D[param0.field_v] / PcmPlayerService.field_u;
             while (true) {
               var8 = (1048575 + var7_int - param0.field_A) / var7_int;
               if (var8 > param3) {
@@ -168,20 +168,20 @@ final class vd extends lj {
               param3 = param3 - var8;
               param0.field_A = param0.field_A + (var7_int * var8 - 1048576);
               param4 = param4 + var8;
-              var9 = nk.field_u / 100;
+              var9 = PcmPlayerService.field_u / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
               }
               var11 = param0.field_k;
               if (this.field_q.field_S[param0.field_v] != 0) {
-                param0.field_k = lh.a(param0.field_F, var11.l(), 0, var11.g());
+                param0.field_k = PcmSampleStream.a(param0.field_F, var11.l(), 0, var11.g());
                 stackIn_13_0 = this.field_q;
                 stackIn_14_1 = !(param0.field_B.field_p[param0.field_w] >= 0);
                 ((wl) (Object) stackIn_13_0).a(stackIn_14_1, param0, 109);
                 param0.field_k.e(var9, var11.h());
               } else {
-                param0.field_k = lh.a(param0.field_F, var11.l(), var11.h(), var11.g());
+                param0.field_k = PcmSampleStream.a(param0.field_F, var11.l(), var11.h(), var11.g());
               }
               if (0 > param0.field_B.field_p[param0.field_w]) {
                 param0.field_k.g(-1);
@@ -213,7 +213,7 @@ final class vd extends lj {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -236,14 +236,14 @@ final class vd extends lj {
               param2.field_k.a(param0);
               return;
             }
-            var4_int = this.field_q.field_D[param2.field_v] / nk.field_u;
+            var4_int = this.field_q.field_D[param2.field_v] / PcmPlayerService.field_u;
             var5 = (1048575 + (var4_int - param2.field_A)) / var4_int;
             param2.field_A = 1048575 & var4_int * param0 + param2.field_A;
             if (var5 <= param0) {
               if (this.field_q.field_S[param2.field_v] == 0) {
-                param2.field_k = lh.a(param2.field_F, param2.field_k.l(), param2.field_k.h(), param2.field_k.g());
+                param2.field_k = PcmSampleStream.a(param2.field_F, param2.field_k.l(), param2.field_k.h(), param2.field_k.g());
               } else {
-                param2.field_k = lh.a(param2.field_F, param2.field_k.l(), 0, param2.field_k.g());
+                param2.field_k = PcmSampleStream.a(param2.field_F, param2.field_k.l(), 0, param2.field_k.g());
                 stackIn_9_0 = this.field_q;
                 stackIn_10_1 = !(param2.field_B.field_p[param2.field_w] >= 0);
                 ((wl) (Object) stackIn_9_0).a(stackIn_10_1, param2, 100);
@@ -266,23 +266,23 @@ final class vd extends lj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     vd(wl param0) {
-        this.field_n = new jj();
+        this.field_n = new IntrusiveDeque();
         this.field_m = new vg();
         try {
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_p = "Email is valid";
         field_o = "Please wait...";
-        field_l = new jj();
+        field_l = new IntrusiveDeque();
     }
 }

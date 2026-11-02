@@ -3,7 +3,7 @@
  */
 final class pd {
     static int field_h;
-    static jj field_g;
+    static IntrusiveDeque field_g;
     String field_b;
     boolean field_i;
     String[] field_d;
@@ -23,14 +23,14 @@ final class pd {
     }
 
     final static pd a(int param0) {
-        if (og.field_a == qe.field_f) {
+        if (og.field_a == IsaacCipher.field_f) {
           throw new IllegalStateException();
         }
         if (param0 != -352) {
           return (pd) null;
         }
-        if (k.field_b == qe.field_f) {
-          qe.field_f = og.field_a;
+        if (k.field_b == IsaacCipher.field_f) {
+          IsaacCipher.field_f = og.field_a;
           return wl.field_Q;
         }
         return null;
@@ -41,7 +41,7 @@ final class pd {
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (param0 <= 11) {
-          field_g = (jj) null;
+          field_g = (IntrusiveDeque) null;
           if (48 > param1) {
             if (param1 >= 65 &&
               param1 <= 90) {
@@ -134,7 +134,7 @@ final class pd {
             }
             var2 = 1;
           }
-          ai.field_i.a(bb.a(-88, jb.field_b, ef.field_j), 127, bb.a(-110, lm.field_c, mm.field_c));
+          ai.field_i.a(bb.a(-88, MouseWheelInput.field_b, ef.field_j), 127, bb.a(-110, lm.field_c, mm.field_c));
           if (ai.field_i.c((byte) -118)) {
             var1_int = 1;
           }
@@ -184,7 +184,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "pd.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "pd.C(" + param0 + ')');
         }
     }
 
@@ -193,22 +193,22 @@ final class pd {
     }
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.removeMouseListener(a.field_d);
+        param1.removeMouseListener(a.mouseHandler);
         if (param0 > -2) {
           return;
         }
         try {
-          param1.removeMouseMotionListener(a.field_d);
-          param1.removeFocusListener(a.field_d);
+          param1.removeMouseMotionListener(a.mouseHandler);
+          param1.removeFocusListener(a.mouseHandler);
           wa.field_p = 0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_e = "REC";
         field_f = "HARD MODE UNLOCKED";
-        field_g = new jj();
+        field_g = new IntrusiveDeque();
     }
 }

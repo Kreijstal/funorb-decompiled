@@ -3,7 +3,7 @@
  */
 final class ib extends ej implements v {
     static String field_ab;
-    static ci field_Y;
+    static Sprite field_Y;
     private rc field_db;
     private int field_Z;
     static String field_X;
@@ -32,7 +32,7 @@ final class ib extends ej implements v {
           return null;
         }
         if (param0 > 70) {
-          sh.a((byte) -122, jb.field_b, -this.field_Z + this.field_p + ef.field_j);
+          sh.a((byte) -122, MouseWheelInput.field_b, -this.field_Z + this.width + ef.field_j);
           return this.field_x;
         }
         return (String) null;
@@ -45,7 +45,7 @@ final class ib extends ej implements v {
           }
           this.field_db = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ib.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ib.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -53,15 +53,15 @@ final class ib extends ej implements v {
         super(param0, param1, param2);
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           if (param3 < 25) {
             this.f(-56);
           }
           super.a(param0, param1, param2, 77);
-          this.field_Z = -param2 - this.field_w + ef.field_j;
+          this.field_Z = -param2 - this.x + ef.field_j;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ib.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ib.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class ib extends ej implements v {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

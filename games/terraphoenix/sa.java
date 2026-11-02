@@ -44,7 +44,7 @@ final class sa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -55,10 +55,10 @@ final class sa {
         RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (ja) (vd.field_l.d(9272));
+          var4 = (ja) (vd.field_l.beginBackward(9272));
           while (var4 != null) {
             eb.a(var4, 0, param1);
-            var4 = (ja) (vd.field_l.e((byte) -119));
+            var4 = (ja) (vd.field_l.nextBackward((byte) -119));
           }
           if (param0 == -336) {
             return;
@@ -68,7 +68,7 @@ final class sa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "sa.E(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "sa.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class sa {
           }
           param1 = param1 + param2;
           var8 = param3;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param5[var8];
             if (var9 < 0) {
               var7_int = this.field_e[var7_int];
@@ -138,7 +138,7 @@ final class sa {
               param2++;
               param4[incrementValue$1] = (byte)(~var10);
               if (param2 >= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -154,7 +154,7 @@ final class sa {
               param2++;
               param4[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param2 >= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -170,7 +170,7 @@ final class sa {
               param2++;
               param4[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param1 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -186,7 +186,7 @@ final class sa {
               param2++;
               param4[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param2 >= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -218,7 +218,7 @@ final class sa {
               param2++;
               param4[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param1 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -234,7 +234,7 @@ final class sa {
               param2++;
               param4[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param1 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -250,7 +250,7 @@ final class sa {
               param2++;
               param4[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param1 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -276,7 +276,7 @@ final class sa {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -344,12 +344,12 @@ final class sa {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param1, var7 + (-(6 * param1.length()) + 304) / 2, 22 + var8);
             }
-            if (e.field_o == null) {
+            if (BattleState.field_o == null) {
               return;
             }
             var9.setFont(t.field_e);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(e.field_o, ja.field_j / 2 - 6 * e.field_o.length() / 2, -26 + wc.field_p / 2);
+            var9.drawString(BattleState.field_o, ja.field_j / 2 - 6 * BattleState.field_o.length() / 2, -26 + wc.field_p / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -373,7 +373,7 @@ final class sa {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 

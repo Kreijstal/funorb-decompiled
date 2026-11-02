@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh extends uf {
+final class hh extends IntrusiveNode {
     static String field_l;
     static String field_p;
     int field_h;
@@ -10,7 +10,7 @@ final class hh extends uf {
     int field_n;
     int field_o;
     int field_i;
-    static ci field_m;
+    static Sprite field_m;
     static String field_k;
 
     public static void a(int param0) {
@@ -44,28 +44,28 @@ final class hh extends uf {
         int var13 = 0;
         var13 = Terraphoenix.field_V;
         try {
-          if (l.field_b > param3) {
-            param0 = param0 - (l.field_b - param3);
-            param3 = l.field_b;
+          if (SoftwareRasterizer.field_b > param3) {
+            param0 = param0 - (SoftwareRasterizer.field_b - param3);
+            param3 = SoftwareRasterizer.field_b;
           }
-          if (param5 < l.field_d) {
-            param2 = param2 - (-param5 + l.field_d);
-            param5 = l.field_d;
+          if (param5 < SoftwareRasterizer.field_d) {
+            param2 = param2 - (-param5 + SoftwareRasterizer.field_d);
+            param5 = SoftwareRasterizer.field_d;
           }
           var6_int = -100 / ((72 - param1) / 38);
-          if (param0 + param3 > l.field_f) {
-            param0 = -param3 + l.field_f;
+          if (param0 + param3 > SoftwareRasterizer.field_f) {
+            param0 = -param3 + SoftwareRasterizer.field_f;
           }
-          if (param2 + param5 > l.field_c) {
-            param2 = -param5 + l.field_c;
+          if (param2 + param5 > SoftwareRasterizer.field_c) {
+            param2 = -param5 + SoftwareRasterizer.field_c;
           }
           if (param0 > 0 &&
             param2 > 0) {
-            var7 = param3 + param5 * l.field_k;
-            var8 = -param0 + l.field_k;
+            var7 = param3 + param5 * SoftwareRasterizer.field_k;
+            var8 = -param0 + SoftwareRasterizer.field_k;
             for (param5 = -param2; param5 < 0; param5++) {
               for (param3 = -param0; param3 < 0; param3++) {
-                var9 = l.field_i[var7];
+                var9 = SoftwareRasterizer.field_i[var7];
                 if (param4 < (255 & var9 >> 8) &&
                   (65280 & var9) >> 8 >= (var9 >> 16 & 255)) {
                   var10 = (var9 >> 15 & 510) - 60;
@@ -75,7 +75,7 @@ final class hh extends uf {
                   var11 = 65280 & var9;
                   var11 = -(var11 >> 5) + (var11 >> 1) & 65280;
                   var12 = 31 & var9 >> 3;
-                  l.field_i[var7] = ei.b(var12, ei.b(var10 << 16, var11));
+                  SoftwareRasterizer.field_i[var7] = ei.b(var12, ei.b(var10 << 16, var11));
                 }
                 var7++;
               }
@@ -87,7 +87,7 @@ final class hh extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var6), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qk.wrapException((Throwable) ((Object) var6), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

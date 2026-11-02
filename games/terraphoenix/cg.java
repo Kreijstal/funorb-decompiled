@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends gb implements n {
+final class cg extends WidgetContainer implements n {
     private eb field_J;
     static ok field_K;
     private eb field_G;
@@ -13,9 +13,9 @@ final class cg extends gb implements n {
         if (param1 > -106) {
           return;
         }
-        int var5 = param0 + this.field_w;
-        int var6 = this.field_u + param3;
-        qk.field_e.a(gb.field_A, 20 + var5, 20 + var6, -40 + this.field_p, this.field_n - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
+        int var5 = param0 + this.x;
+        int var6 = this.y + param3;
+        qk.field_e.a(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.width, this.height - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
         super.a(param0, -125, param2, param3);
     }
 
@@ -49,7 +49,7 @@ final class cg extends gb implements n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "cg.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "cg.D(" + param0 + ')');
         }
     }
 
@@ -95,11 +95,11 @@ final class cg extends gb implements n {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -130,25 +130,25 @@ final class cg extends gb implements n {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public cg() {
-        super(0, 0, 476, 225, (cj) null);
-        this.field_F = new eb(td.field_j, (sc) null);
+        super(0, 0, 476, 225, (WidgetActionListener) null);
+        this.field_F = new eb(IndexedSpriteState.field_j, (sc) null);
         this.field_G = new eb(sl.field_f, (sc) null);
         this.field_J = new eb(aj.field_c, (sc) null);
         ic var1 = new ic();
-        this.field_F.field_l = (cj) ((Object) var1);
-        this.field_G.field_l = (cj) ((Object) var1);
-        this.field_J.field_l = (cj) ((Object) var1);
+        this.field_F.listener = (WidgetActionListener) ((Object) var1);
+        this.field_G.listener = (WidgetActionListener) ((Object) var1);
+        this.field_J.listener = (WidgetActionListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_G.a(-var2 + (this.field_n - 48), (byte) 48, var4, this.field_p - var3 >> 1, 30);
-        this.field_J.a(this.field_n - 48 - var2, (byte) 51, var4, var4 + (-var3 + this.field_p >> 1) + var2, 30);
-        this.field_F.a(-(2 * var2) - 78 + this.field_n, (byte) 111, var3, this.field_p - var3 >> 1, 30);
+        this.field_G.a(-var2 + (this.height - 48), (byte) 48, var4, this.width - var3 >> 1, 30);
+        this.field_J.a(this.height - 48 - var2, (byte) 51, var4, var4 + (-var3 + this.width >> 1) + var2, 30);
+        this.field_F.a(-(2 * var2) - 78 + this.height, (byte) 111, var3, this.width - var3 >> 1, 30);
         this.field_G.field_r = (sc) (this);
         this.field_F.field_r = (sc) (this);
         this.field_J.field_r = (sc) (this);

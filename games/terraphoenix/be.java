@@ -4,8 +4,8 @@
 final class be extends wc {
     static String field_y;
     static int field_v;
-    static ci field_u;
-    static pk field_x;
+    static Sprite field_u;
+    static BitmapFont field_x;
     static String field_w;
     private Object field_t;
 
@@ -32,7 +32,7 @@ final class be extends wc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class be extends wc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -95,16 +95,16 @@ final class be extends wc {
         }
     }
 
-    final static ci[] a(int param0, int param1, int param2, int param3, int param4) {
-        ci[] var6 = new ci[9];
-        ci[] var5 = var6;
-        ci dupTemp$0 = nb.a(param3, param1, 126);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = nb.a(param3, param1, 126);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ci dupTemp$1 = nb.a(param3, param4, 123);
+        Sprite dupTemp$1 = nb.a(param3, param4, 123);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -136,7 +136,7 @@ final class be extends wc {
         try {
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

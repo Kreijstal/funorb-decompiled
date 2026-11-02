@@ -4,19 +4,19 @@
 import java.io.*;
 
 final class lf {
-    static bg[] field_e;
+    static IndexedSprite[] field_e;
     static rh field_f;
     static String field_b;
     static int[] field_a;
     static String field_d;
     static int field_c;
 
-    final static bg[] a(boolean param0, String param1, String param2, fa param3) {
+    final static IndexedSprite[] a(boolean param0, String param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bg[] stackIn_2_0 = null;
-        bg[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -27,7 +27,7 @@ final class lf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_2_0 = (bg[]) null;
+            stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param3.c(-1, param1);
@@ -56,7 +56,7 @@ final class lf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -74,9 +74,9 @@ final class lf {
             if (!param0) {
               lf.a(true);
             }
-            if (null != ad.field_x) {
+            if (null != TutorialController.field_x) {
               try {
-                ad.field_x.b((byte) -28);
+                TutorialController.field_x.b((byte) -28);
               } catch (IOException iOException) {
               }
             }
@@ -91,7 +91,7 @@ final class lf {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "lf.D(" + param0 + ')');
+            throw qk.wrapException((Throwable) ((Object) runtimeException), "lf.D(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -100,10 +100,10 @@ final class lf {
         }
     }
 
-    final static bg a(int[] param0, bg param1, int param2) {
-        bg var3 = null;
+    final static IndexedSprite a(int[] param0, IndexedSprite param1, int param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        bg stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -111,7 +111,7 @@ final class lf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new bg(param2, 0, 0);
+          var3 = new IndexedSprite(param2, 0, 0);
           var3.field_c = param1.field_c;
           var3.field_d = param1.field_d;
           var3.field_f = param1.field_f;
@@ -138,15 +138,15 @@ final class lf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void b(boolean param0) {
         field_b = null;
         if (!param0) {
-          bg var2 = (bg) null;
-          lf.a((int[]) null, (bg) null, 106);
+          IndexedSprite var2 = (IndexedSprite) null;
+          lf.a((int[]) null, (IndexedSprite) null, 106);
         }
         field_e = null;
         field_d = null;

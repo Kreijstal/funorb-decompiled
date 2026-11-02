@@ -25,10 +25,10 @@ final class kb {
     byte[] field_y;
     int field_l;
     int field_x;
-    static ci field_s;
+    static Sprite field_s;
     int field_b;
     int field_q;
-    static ci[] field_a;
+    static Sprite[] field_a;
     int field_o;
     int field_C;
     int field_H;
@@ -52,7 +52,7 @@ final class kb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 40) {
-            field_s = (ci) null;
+            field_s = (Sprite) null;
           }
           stackIn_3_0 = vc.field_f.a(param3, param4, param5 - 24, param2 - param4, 480, param6, -1, 0, 0, param1);
           return stackIn_3_0;
@@ -66,14 +66,14 @@ final class kb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
         pl.field_P = param2;
         if (param3 != -83) {
-          field_a = (ci[]) null;
+          field_a = (Sprite[]) null;
         }
         eb.field_I = param0;
         ib.field_cb = param1;
@@ -139,7 +139,7 @@ final class kb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -163,6 +163,6 @@ final class kb {
     }
 
     static {
-        field_a = new ci[4];
+        field_a = new Sprite[4];
     }
 }

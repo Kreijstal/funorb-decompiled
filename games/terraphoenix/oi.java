@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends gb implements n {
-    static ci field_J;
+final class oi extends WidgetContainer implements n {
+    static Sprite field_J;
     private eb[] field_K;
     private int[] field_L;
-    private pk field_I;
+    private BitmapFont field_I;
     static java.awt.Color field_H;
     private int field_F;
     private String field_N;
@@ -15,12 +15,12 @@ final class oi extends gb implements n {
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, -126, param2, param3);
         if (param1 < -106) {
-          this.field_I.a(this.field_N, param0 - (-this.field_w - 14), 10 + (param3 + this.field_u), -28 + this.field_p, this.field_n, 16777215, -1, 0, 0, this.field_I.field_s);
+          this.field_I.a(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
           return;
         }
         String var6 = (String) null;
         this.a((byte) 29, (sc) null, (String) null);
-        this.field_I.a(this.field_N, param0 - (-this.field_w - 14), 10 + (param3 + this.field_u), -28 + this.field_p, this.field_n, 16777215, -1, 0, 0, this.field_I.field_s);
+        this.field_I.a(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
     }
 
     private final void b(int param0, int param1) {
@@ -44,8 +44,8 @@ final class oi extends gb implements n {
         }
     }
 
-    oi(si param0, pk param1, String param2) {
-        super(0, 0, 288, 0, (cj) null);
+    oi(si param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         int var4_int = 0;
         this.field_F = 0;
         try {
@@ -55,7 +55,7 @@ final class oi extends gb implements n {
           var4_int = null == this.field_N ? 0 : this.field_I.a(this.field_N, 260, this.field_I.field_s);
           this.a(0, (byte) 126, 288, 0, var4_int + 22);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "oi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "oi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class oi extends gb implements n {
           }
           var6_intLifetime1 = -43 / ((param4 + 5) / 57);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "oi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "oi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class oi extends gb implements n {
           this.field_K[var4_int] = this.a((byte) 23, (sc) (this), param1);
           this.field_L[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "oi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "oi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -120,10 +120,10 @@ final class oi extends gb implements n {
             this.a(-103, (String) null, (byte) -64);
           }
           var4 = new eb(param2, param1);
-          var4.field_l = (cj) ((Object) new ic());
-          var5 = -2 + this.field_n;
-          this.a(0, (byte) 107, this.field_p, 0, 34 + this.field_n);
-          var4.a(var5, (byte) 85, this.field_p - 14, 7, 30);
+          var4.listener = (WidgetActionListener) ((Object) new ic());
+          var5 = -2 + this.height;
+          this.a(0, (byte) 107, this.width, 0, 34 + this.height);
+          var4.a(var5, (byte) 85, this.width - 14, 7, 30);
           this.b((byte) 95, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -143,7 +143,7 @@ final class oi extends gb implements n {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class oi extends gb implements n {
     }
 
     static {
-        field_J = new ci(128, 160);
+        field_J = new Sprite(128, 160);
         field_H = new java.awt.Color(10040319);
         field_M = new String[]{"Capture objective", "The alien with this icon is holding the data you need. Kill it at all costs.", "Once dead, the alien will drop the equipment on the floor. Send a soldier to pick it up by clicking on it's square.", "After the equipment is in your possession, get your whole remaining squad to the flashing areas of the map to complete your objective."};
     }

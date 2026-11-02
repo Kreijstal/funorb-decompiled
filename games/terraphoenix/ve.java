@@ -3,13 +3,13 @@
  */
 final class ve {
     static boolean field_c;
-    static ci field_a;
+    static Sprite field_a;
     static int field_b;
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-          field_a = (ci) null;
+          field_a = (Sprite) null;
         }
     }
 
@@ -85,7 +85,7 @@ final class ve {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class ve {
         }
     }
 
-    final static void a(ci param0, int param1, int param2, int param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
         int var16 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -152,40 +152,40 @@ final class ve {
           param4 = param4 + param0.field_p;
           param3 = param3 - (param0.field_u - 15);
           param3 = param3 + param0.field_v;
-          var5_int = l.field_k * param3 + param4;
+          var5_int = SoftwareRasterizer.field_k * param3 + param4;
           var6 = 0;
           var7 = param4;
           var8 = param3;
           var9 = param0.field_t;
           var10 = param0.field_r;
-          var11 = l.field_k - var10;
-          if (l.field_d > param3) {
-            var13 = l.field_d - param3;
-            var5_int = var5_int + l.field_k * var13;
+          var11 = SoftwareRasterizer.field_k - var10;
+          if (SoftwareRasterizer.field_d > param3) {
+            var13 = SoftwareRasterizer.field_d - param3;
+            var5_int = var5_int + SoftwareRasterizer.field_k * var13;
             var9 = var9 - var13;
             var8 = var8 + var13;
-            param3 = l.field_d;
+            param3 = SoftwareRasterizer.field_d;
             var6 = var6 + var10 * var13;
           }
           if (param1 != -5353) {
             return;
           }
           var12 = 0;
-          if (param4 < l.field_b) {
-            var13Lifetime1 = l.field_b - param4;
+          if (param4 < SoftwareRasterizer.field_b) {
+            var13Lifetime1 = SoftwareRasterizer.field_b - param4;
             var7 = var7 + var13Lifetime1;
             var6 = var6 + var13Lifetime1;
-            param4 = l.field_b;
+            param4 = SoftwareRasterizer.field_b;
             var12 = var12 + var13Lifetime1;
             var5_int = var5_int + var13Lifetime1;
             var11 = var11 + var13Lifetime1;
             var10 = var10 - var13Lifetime1;
           }
-          if (param3 + var9 > l.field_c) {
-            var9 = var9 - (var9 + (param3 - l.field_c));
+          if (param3 + var9 > SoftwareRasterizer.field_c) {
+            var9 = var9 - (var9 + (param3 - SoftwareRasterizer.field_c));
           }
-          if (l.field_f < param4 + var10) {
-            var13Lifetime2 = var10 + (param4 - l.field_f);
+          if (SoftwareRasterizer.field_f < param4 + var10) {
+            var13Lifetime2 = var10 + (param4 - SoftwareRasterizer.field_f);
             var10 = var10 - var13Lifetime2;
             var11 = var11 + var13Lifetime2;
             var12 = var12 + var13Lifetime2;
@@ -199,7 +199,7 @@ final class ve {
               for (var17 = var15; 0 > var17; var17++) {
                 incrementValue$2 = var6;
                 var6++;
-                var14 = param0.field_z[incrementValue$2];
+                var14 = param0.pixels[incrementValue$2];
                 if (var14 != 0 &&
                   gd.field_a[var7][var8] <= param2) {
                   incrementValue$3 = var7;
@@ -207,14 +207,14 @@ final class ve {
                   gd.field_a[incrementValue$3][var8] = param2;
                   incrementValue$4 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$4] = var14;
+                  SoftwareRasterizer.field_i[incrementValue$4] = var14;
                 } else {
                   var7++;
                   var5_int++;
                 }
                 incrementValue$5 = var6;
                 var6++;
-                var14Lifetime2 = param0.field_z[incrementValue$5];
+                var14Lifetime2 = param0.pixels[incrementValue$5];
                 if (0 != var14Lifetime2 &&
                   param2 >= gd.field_a[var7][var8]) {
                   incrementValue$6 = var7;
@@ -222,14 +222,14 @@ final class ve {
                   gd.field_a[incrementValue$6][var8] = param2;
                   incrementValue$7 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$7] = var14Lifetime2;
+                  SoftwareRasterizer.field_i[incrementValue$7] = var14Lifetime2;
                 } else {
                   var7++;
                   var5_int++;
                 }
                 incrementValue$8 = var6;
                 var6++;
-                var14Lifetime3 = param0.field_z[incrementValue$8];
+                var14Lifetime3 = param0.pixels[incrementValue$8];
                 if (0 != var14Lifetime3 &&
                   param2 >= gd.field_a[var7][var8]) {
                   incrementValue$9 = var7;
@@ -237,14 +237,14 @@ final class ve {
                   gd.field_a[incrementValue$9][var8] = param2;
                   incrementValue$10 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$10] = var14Lifetime3;
+                  SoftwareRasterizer.field_i[incrementValue$10] = var14Lifetime3;
                 } else {
                   var5_int++;
                   var7++;
                 }
                 incrementValue$11 = var6;
                 var6++;
-                var14Lifetime4 = param0.field_z[incrementValue$11];
+                var14Lifetime4 = param0.pixels[incrementValue$11];
                 if (0 != var14Lifetime4 &&
                   param2 >= gd.field_a[var7][var8]) {
                   incrementValue$12 = var7;
@@ -252,7 +252,7 @@ final class ve {
                   gd.field_a[incrementValue$12][var8] = param2;
                   incrementValue$13 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$13] = var14Lifetime4;
+                  SoftwareRasterizer.field_i[incrementValue$13] = var14Lifetime4;
                 } else {
                   var7++;
                   var5_int++;
@@ -262,13 +262,13 @@ final class ve {
               for (var17Lifetime1 = var10; var17Lifetime1 < 0; var17Lifetime1++) {
                 incrementValue$0 = var6;
                 var6++;
-                var14Lifetime1 = param0.field_z[incrementValue$0];
+                var14Lifetime1 = param0.pixels[incrementValue$0];
                 if (var14Lifetime1 == 0) {
                   var5_int++;
                 } else {
                   incrementValue$1 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$1] = var14Lifetime1;
+                  SoftwareRasterizer.field_i[incrementValue$1] = var14Lifetime1;
                 }
               }
               var8++;
@@ -291,7 +291,7 @@ final class ve {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

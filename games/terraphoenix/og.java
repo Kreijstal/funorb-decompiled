@@ -8,7 +8,7 @@ final class og {
     static og field_a;
     static String field_b;
     static ud field_f;
-    static ci[] field_c;
+    static Sprite[] field_c;
     static String field_g;
     static String field_e;
 
@@ -52,7 +52,7 @@ final class og {
             try {
               var5 = new byte[param2];
               var3 = var5;
-              jm.a(param1, param2, 0, var5);
+              DelegatingCanvas.a(param1, param2, 0, var5);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -71,7 +71,7 @@ final class og {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

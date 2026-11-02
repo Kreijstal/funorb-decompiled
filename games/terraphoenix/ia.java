@@ -61,7 +61,7 @@ final class ia extends di {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ia extends di {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class ia extends di {
             k.field_f.a(param2, param0, var4, 101);
             if (param3 <= 103) {
               var5 = (byte[]) null;
-              ia.a(95, (dh) null, (byte) 67, (java.math.BigInteger) null, (java.math.BigInteger) null, 39, (byte[]) null);
+              ia.a(95, (PacketBuffer) null, (byte) 67, (java.math.BigInteger) null, (java.math.BigInteger) null, 39, (byte[]) null);
             }
             var4.dispose();
             return;
@@ -152,7 +152,7 @@ final class ia extends di {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class ia extends di {
         }
     }
 
-    final static void a(int param0, dh param1, byte param2, java.math.BigInteger param3, java.math.BigInteger param4, int param5, byte[] param6) {
+    final static void a(int param0, PacketBuffer param1, byte param2, java.math.BigInteger param3, java.math.BigInteger param4, int param5, byte[] param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -236,27 +236,27 @@ final class ia extends di {
             var8[var9] = vk.field_b.nextInt();
           }
           if (ie.field_b == null ||
-            !(ie.field_b.field_i.length >= var7_int)) {
-            ie.field_b = new dh(var7_int);
+            !(ie.field_b.payload.length >= var7_int)) {
+            ie.field_b = new PacketBuffer(var7_int);
           }
-          ie.field_b.field_k = 0;
+          ie.field_b.position = 0;
           ie.field_b.a(-222449912, param6, param5, param0);
           ie.field_b.f(var7_int, -2108648176);
-          ie.field_b.a(-6716, var12);
+          ie.field_b.xteaEncrypt(-6716, var12);
           if (null == jc.field_z ||
-            !(100 <= jc.field_z.field_i.length)) {
-            jc.field_z = new dh(100);
+            !(100 <= jc.field_z.payload.length)) {
+            jc.field_z = new PacketBuffer(100);
           }
-          jc.field_z.field_k = 0;
-          jc.field_z.i(10, 92);
+          jc.field_z.position = 0;
+          jc.field_z.writeByte(10, 92);
           for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
-            jc.field_z.e(var12[var9Lifetime1], 8959);
+            jc.field_z.writeInt(var12[var9Lifetime1], 8959);
           }
-          jc.field_z.h(-1564407352, param5);
-          jc.field_z.a(param4, (byte) -52, param3);
-          param1.a(-222449912, jc.field_z.field_i, jc.field_z.field_k, 0);
+          jc.field_z.writeShort(-1564407352, param5);
+          jc.field_z.rsaEncrypt(param4, (byte) -52, param3);
+          param1.a(-222449912, jc.field_z.payload, jc.field_z.position, 0);
           var9Lifetime2 = 39 % ((param2 - 0) / 61);
-          param1.a(-222449912, ie.field_b.field_i, ie.field_b.field_k, 0);
+          param1.a(-222449912, ie.field_b.payload, ie.field_b.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -286,7 +286,7 @@ final class ia extends di {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -309,25 +309,25 @@ final class ia extends di {
         uc var5 = di.field_l;
         uc var3 = var5;
         var5.k(-17410, param0);
-        var5.field_k = var5.field_k + 1;
+        var5.position = var5.position + 1;
         if (param2 > -51) {
           return;
         }
         try {
-          var4 = var5.field_k;
-          var5.i(1, -114);
+          var4 = var5.position;
+          var5.writeByte(1, -114);
           if (param1.field_h != null) {
-            var5.i(param1.field_h.length, -108);
+            var5.writeByte(param1.field_h.length, -108);
             var5.a(-222449912, param1.field_h, param1.field_h.length, 0);
           } else {
-            var5.i(0, -119);
+            var5.writeByte(0, -119);
           }
           var5.d(var4, 8600);
-          var5.field_k = var5.field_k - 4;
-          param1.field_k = var5.f((byte) -107);
-          var5.j(var5.field_k - var4, -119);
+          var5.position = var5.position - 4;
+          param1.field_k = var5.readInt((byte) -107);
+          var5.j(var5.position - var4, -119);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ia.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ia.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class ia extends di {
           return;
         }
         byte[] var2 = (byte[]) null;
-        ia.a(-110, (dh) null, (byte) 46, (java.math.BigInteger) null, (java.math.BigInteger) null, -122, (byte[]) null);
+        ia.a(-110, (PacketBuffer) null, (byte) 46, (java.math.BigInteger) null, (java.math.BigInteger) null, -122, (byte[]) null);
         field_n = null;
         field_r = null;
     }

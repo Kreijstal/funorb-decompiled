@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gi {
-    private dk field_u;
-    static bg[] field_j;
+    private LevelMap field_u;
+    static IndexedSprite[] field_j;
     int field_o;
     double field_t;
     static qf field_r;
     double field_b;
-    e field_g;
+    BattleState field_g;
     int field_m;
     double field_k;
     double field_p;
@@ -23,7 +23,7 @@ final class gi {
     int field_s;
     int field_d;
     static String field_q;
-    static tf field_l;
+    static BufferedSocket field_l;
     static boolean field_w;
     static int field_h;
     private boolean field_n;
@@ -69,31 +69,31 @@ final class gi {
           var2 = (int)((double)(-sj.field_b) + ((this.field_y / 100.0 + (double)this.field_c) * 32.0 - ((double)this.field_m + this.field_p / 100.0) * 32.0)) + 320;
           if (this.field_s == 0 &&
             this.field_f < 4) {
-            te.a((byte) 99, 12 - this.field_f * 3, var2, var3, var4, 16777215, false);
+            RasterBuffer.a((byte) 99, 12 - this.field_f * 3, var2, var3, var4, 16777215, false);
           }
           if (2 == this.field_s &&
             this.field_f < 16) {
-            te.a((byte) 99, 8 - this.field_f / 2, var2, var3, var4, 16777215, false);
+            RasterBuffer.a((byte) 99, 8 - this.field_f / 2, var2, var3, var4, 16777215, false);
           }
           if (this.field_s == 3) {
             if (this.field_f < 6) {
-              te.a((byte) 99, 4 * this.field_f, var2, var3, var4, 65535, false);
+              RasterBuffer.a((byte) 99, 4 * this.field_f, var2, var3, var4, 65535, false);
             }
             if (32 > this.field_f) {
-              te.a((byte) 99, 8 - this.field_f / 4, var2, var3, var4, 65535, false);
+              RasterBuffer.a((byte) 99, 8 - this.field_f / 4, var2, var3, var4, 65535, false);
             }
           }
           if (this.field_s == 4) {
             if (this.field_f < 6) {
-              te.a((byte) 99, this.field_f * 4, var2, var3, var4, 16711680, false);
+              RasterBuffer.a((byte) 99, this.field_f * 4, var2, var3, var4, 16711680, false);
             }
             if (this.field_f < 32) {
-              te.a((byte) 99, 16 - this.field_f / 2, var2, var3, var4, 16711680, false);
+              RasterBuffer.a((byte) 99, 16 - this.field_f / 2, var2, var3, var4, 16711680, false);
             }
             if (this.field_f >= 8) {
               return;
             }
-            te.a((byte) 99, 16 - this.field_f * 2, var2, var3, var4, 16777215, false);
+            RasterBuffer.a((byte) 99, 16 - this.field_f * 2, var2, var3, var4, 16777215, false);
           }
           return;
         }
@@ -106,21 +106,21 @@ final class gi {
           var9 = -this.field_k * 48.0 * (double)this.field_o / 1600.0;
           if (this.field_d < 5) {
             for (var11 = 0; var11 < 16; var11++) {
-              te.a((byte) 99, -(var11 / 2) + 8, (int)((double)var2Lifetime1 - var5 * (double)var11 / 10.0), var3Lifetime1, (int)((double)var4Lifetime1 + (double)var11 * var7 / 10.0 - var9 * (double)var11 / 10.0), 16776960, false);
+              RasterBuffer.a((byte) 99, -(var11 / 2) + 8, (int)((double)var2Lifetime1 - var5 * (double)var11 / 10.0), var3Lifetime1, (int)((double)var4Lifetime1 + (double)var11 * var7 / 10.0 - var9 * (double)var11 / 10.0), 16776960, false);
             }
             for (var11 = 0; var11 < 12; var11++) {
-              te.a((byte) 99, -(var11 / 2) + 6, (int)((double)var2Lifetime1 - var5 * (double)var11 / 10.0), var3Lifetime1, (int)((double)var11 * var7 / 10.0 + (double)var4Lifetime1 - (double)var11 * var9 / 10.0), 16777215, true);
+              RasterBuffer.a((byte) 99, -(var11 / 2) + 6, (int)((double)var2Lifetime1 - var5 * (double)var11 / 10.0), var3Lifetime1, (int)((double)var11 * var7 / 10.0 + (double)var4Lifetime1 - (double)var11 * var9 / 10.0), 16777215, true);
             }
           } else {
             for (var11 = 0; var11 < 10; var11++) {
               if (var11 < 8) {
-                te.a((byte) 99, 3, (int)((double)var2Lifetime1 + (double)var11 * var5 / 10.0), (int)(var7 * (double)var11 / 10.0 + (double)var3Lifetime1), (int)((double)var4Lifetime1 + (double)var11 * var9 / 10.0), 16776960, false);
+                RasterBuffer.a((byte) 99, 3, (int)((double)var2Lifetime1 + (double)var11 * var5 / 10.0), (int)(var7 * (double)var11 / 10.0 + (double)var3Lifetime1), (int)((double)var4Lifetime1 + (double)var11 * var9 / 10.0), 16776960, false);
               } else {
-                te.a((byte) 99, 3, (int)((double)var11 * var5 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7 * (double)var11 / 10.0), (int)((double)var4Lifetime1 + (double)var11 * var9 / 10.0), 16744448, false);
+                RasterBuffer.a((byte) 99, 3, (int)((double)var11 * var5 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7 * (double)var11 / 10.0), (int)((double)var4Lifetime1 + (double)var11 * var9 / 10.0), 16744448, false);
               }
             }
             for (var11 = 0; 8 > var11; var11++) {
-              te.a((byte) 99, 2, (int)((double)var2Lifetime1 + var5 * (double)var11 / 10.0), (int)((double)var3Lifetime1 + var7 * (double)var11 / 10.0), (int)((double)var4Lifetime1 + var9 * (double)var11 / 10.0), 16777215, true);
+              RasterBuffer.a((byte) 99, 2, (int)((double)var2Lifetime1 + var5 * (double)var11 / 10.0), (int)((double)var3Lifetime1 + var7 * (double)var11 / 10.0), (int)((double)var4Lifetime1 + var9 * (double)var11 / 10.0), 16777215, true);
             }
           }
         }
@@ -128,9 +128,9 @@ final class gi {
           var5Lifetime1 = (this.field_b + -this.field_i) * 32.0 / 100.0;
           var7Lifetime1 = (-this.field_b + -this.field_i) * 16.0 / 100.0;
           var9Lifetime1 = -this.field_k * 48.0 / 100.0;
-          te.a((byte) 99, 6, (int)((double)var2Lifetime1 + var5Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime1), (int)(var9Lifetime1 + (double)var4Lifetime1), 16777215, true);
-          te.a((byte) 99, 6, (int)(var5Lifetime1 / 2.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime1 / 2.0), (int)(var9Lifetime1 / 2.0 + (double)var4Lifetime1), 16777215, true);
-          te.a((byte) 99, 3, var2Lifetime1, var3Lifetime1, var4Lifetime1, 0, true);
+          RasterBuffer.a((byte) 99, 6, (int)((double)var2Lifetime1 + var5Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime1), (int)(var9Lifetime1 + (double)var4Lifetime1), 16777215, true);
+          RasterBuffer.a((byte) 99, 6, (int)(var5Lifetime1 / 2.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime1 / 2.0), (int)(var9Lifetime1 / 2.0 + (double)var4Lifetime1), 16777215, true);
+          RasterBuffer.a((byte) 99, 3, var2Lifetime1, var3Lifetime1, var4Lifetime1, 0, true);
         }
         if (2 == this.field_s) {
           var5Lifetime2 = (-this.field_i + this.field_b) * 32.0 / 100.0;
@@ -138,18 +138,18 @@ final class gi {
           var9Lifetime2 = 48.0 * -this.field_k / 100.0;
           if (this.field_d >= 5) {
             for (var11Lifetime1 = 0; var11Lifetime1 < 25; var11Lifetime1++) {
-              te.a((byte) 99, 3, (int)(-(var5Lifetime2 * (double)var11Lifetime1 / 5.0) + (double)var2Lifetime1), (int)(-(var7Lifetime2 * (double)var11Lifetime1 / 5.0) + (double)var3Lifetime1), (int)(-((double)var11Lifetime1 * var9Lifetime2 / 5.0) + (double)var4Lifetime1), 255, false);
+              RasterBuffer.a((byte) 99, 3, (int)(-(var5Lifetime2 * (double)var11Lifetime1 / 5.0) + (double)var2Lifetime1), (int)(-(var7Lifetime2 * (double)var11Lifetime1 / 5.0) + (double)var3Lifetime1), (int)(-((double)var11Lifetime1 * var9Lifetime2 / 5.0) + (double)var4Lifetime1), 255, false);
             }
             for (var11Lifetime1Lifetime1 = 0; var11Lifetime1Lifetime1 < 25; var11Lifetime1Lifetime1++) {
-              te.a((byte) 99, 2, (int)(-(var5Lifetime2 * (double)var11Lifetime1Lifetime1 / 5.0) + (double)var2Lifetime1), (int)(-(var7Lifetime2 * (double)var11Lifetime1Lifetime1 / 5.0) + (double)var3Lifetime1), (int)(-(var9Lifetime2 * (double)var11Lifetime1Lifetime1 / 5.0) + (double)var4Lifetime1), 65280, false);
+              RasterBuffer.a((byte) 99, 2, (int)(-(var5Lifetime2 * (double)var11Lifetime1Lifetime1 / 5.0) + (double)var2Lifetime1), (int)(-(var7Lifetime2 * (double)var11Lifetime1Lifetime1 / 5.0) + (double)var3Lifetime1), (int)(-(var9Lifetime2 * (double)var11Lifetime1Lifetime1 / 5.0) + (double)var4Lifetime1), 65280, false);
             }
             for (var11Lifetime1Lifetime2 = 0; var11Lifetime1Lifetime2 < 25; var11Lifetime1Lifetime2++) {
-              te.a((byte) 99, 1, (int)((double)var2Lifetime1 - (double)var11Lifetime1Lifetime2 * var5Lifetime2 / 5.0), (int)((double)var3Lifetime1 - var7Lifetime2 * (double)var11Lifetime1Lifetime2 / 5.0), (int)((double)var4Lifetime1 - (double)var11Lifetime1Lifetime2 * var9Lifetime2 / 5.0), 16777215, true);
+              RasterBuffer.a((byte) 99, 1, (int)((double)var2Lifetime1 - (double)var11Lifetime1Lifetime2 * var5Lifetime2 / 5.0), (int)((double)var3Lifetime1 - var7Lifetime2 * (double)var11Lifetime1Lifetime2 / 5.0), (int)((double)var4Lifetime1 - (double)var11Lifetime1Lifetime2 * var9Lifetime2 / 5.0), 16777215, true);
             }
           } else {
-            te.a((byte) 99, 10, (int)(-(var5Lifetime2 / 2.0) + (double)var2Lifetime1), var3Lifetime1, (int)((double)var4Lifetime1 + var7Lifetime2 / 2.0 - var9Lifetime2 / 2.0), 255, false);
-            te.a((byte) 99, 8, (int)((double)var2Lifetime1 - var5Lifetime2 / 5.0), var3Lifetime1, (int)(-(var9Lifetime2 / 5.0) + ((double)var4Lifetime1 + var7Lifetime2 / 5.0)), 65535, false);
-            te.a((byte) 99, 6, var2Lifetime1, var3Lifetime1, var4Lifetime1, 16777215, true);
+            RasterBuffer.a((byte) 99, 10, (int)(-(var5Lifetime2 / 2.0) + (double)var2Lifetime1), var3Lifetime1, (int)((double)var4Lifetime1 + var7Lifetime2 / 2.0 - var9Lifetime2 / 2.0), 255, false);
+            RasterBuffer.a((byte) 99, 8, (int)((double)var2Lifetime1 - var5Lifetime2 / 5.0), var3Lifetime1, (int)(-(var9Lifetime2 / 5.0) + ((double)var4Lifetime1 + var7Lifetime2 / 5.0)), 65535, false);
+            RasterBuffer.a((byte) 99, 6, var2Lifetime1, var3Lifetime1, var4Lifetime1, 16777215, true);
           }
         }
         if (this.field_s == 3) {
@@ -157,10 +157,10 @@ final class gi {
           var7Lifetime3 = 16.0 * (-this.field_b + -this.field_i) / 100.0;
           var9Lifetime3 = 48.0 * -this.field_k / 100.0;
           for (var11Lifetime2 = 0; var11Lifetime2 < 8; var11Lifetime2++) {
-            te.a((byte) 99, -var11Lifetime2 + 8, (int)(var5Lifetime3 * (double)var11Lifetime2 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime3 * (double)var11Lifetime2 / 10.0), (int)((double)var4Lifetime1 + var9Lifetime3 * (double)var11Lifetime2 / 10.0), 33023, false);
+            RasterBuffer.a((byte) 99, -var11Lifetime2 + 8, (int)(var5Lifetime3 * (double)var11Lifetime2 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime3 * (double)var11Lifetime2 / 10.0), (int)((double)var4Lifetime1 + var9Lifetime3 * (double)var11Lifetime2 / 10.0), 33023, false);
           }
           for (var11Lifetime2Lifetime1 = 0; var11Lifetime2Lifetime1 < 6; var11Lifetime2Lifetime1++) {
-            te.a((byte) 99, -var11Lifetime2Lifetime1 + 6, (int)((double)var11Lifetime2Lifetime1 * var5Lifetime3 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime3 * (double)var11Lifetime2Lifetime1 / 10.0), (int)((double)var11Lifetime2Lifetime1 * var9Lifetime3 / 10.0 + (double)var4Lifetime1), 65535, true);
+            RasterBuffer.a((byte) 99, -var11Lifetime2Lifetime1 + 6, (int)((double)var11Lifetime2Lifetime1 * var5Lifetime3 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime3 * (double)var11Lifetime2Lifetime1 / 10.0), (int)((double)var11Lifetime2Lifetime1 * var9Lifetime3 / 10.0 + (double)var4Lifetime1), 65535, true);
           }
         }
         if (4 == this.field_s) {
@@ -169,44 +169,44 @@ final class gi {
           var9Lifetime4 = 48.0 * -this.field_k * (double)this.field_o / 5200.0;
           if (5 > this.field_d) {
             for (var11Lifetime3 = 0; var11Lifetime3 < 16; var11Lifetime3++) {
-              te.a((byte) 99, 10 - var11Lifetime3 * 2 / 3, (int)((double)var2Lifetime1 - var5Lifetime4 * (double)var11Lifetime3 / 10.0), var3Lifetime1, (int)((double)var4Lifetime1 + var7Lifetime4 * (double)var11Lifetime3 / 10.0 - var9Lifetime4 * (double)var11Lifetime3 / 10.0), 16711680, false);
+              RasterBuffer.a((byte) 99, 10 - var11Lifetime3 * 2 / 3, (int)((double)var2Lifetime1 - var5Lifetime4 * (double)var11Lifetime3 / 10.0), var3Lifetime1, (int)((double)var4Lifetime1 + var7Lifetime4 * (double)var11Lifetime3 / 10.0 - var9Lifetime4 * (double)var11Lifetime3 / 10.0), 16711680, false);
             }
             for (var11Lifetime3 = 0; 12 > var11Lifetime3; var11Lifetime3++) {
-              te.a((byte) 99, 8 - var11Lifetime3 * 2 / 3, (int)(-((double)var11Lifetime3 * var5Lifetime4 / 10.0) + (double)var2Lifetime1), var3Lifetime1, (int)(-(var9Lifetime4 * (double)var11Lifetime3 / 10.0) + ((double)var11Lifetime3 * var7Lifetime4 / 10.0 + (double)var4Lifetime1)), 16777215, true);
+              RasterBuffer.a((byte) 99, 8 - var11Lifetime3 * 2 / 3, (int)(-((double)var11Lifetime3 * var5Lifetime4 / 10.0) + (double)var2Lifetime1), var3Lifetime1, (int)(-(var9Lifetime4 * (double)var11Lifetime3 / 10.0) + ((double)var11Lifetime3 * var7Lifetime4 / 10.0 + (double)var4Lifetime1)), 16777215, true);
             }
           } else {
             for (var11Lifetime3 = 0; var11Lifetime3 < 10; var11Lifetime3++) {
               if (8 <= var11Lifetime3) {
-                te.a((byte) 99, 4, (int)((double)var11Lifetime3 * var5Lifetime4 / 10.0 + (double)var2Lifetime1), (int)((double)var11Lifetime3 * var7Lifetime4 / 10.0 + (double)var3Lifetime1), (int)((double)var4Lifetime1 + (double)var11Lifetime3 * var9Lifetime4 / 10.0), 16711680, false);
+                RasterBuffer.a((byte) 99, 4, (int)((double)var11Lifetime3 * var5Lifetime4 / 10.0 + (double)var2Lifetime1), (int)((double)var11Lifetime3 * var7Lifetime4 / 10.0 + (double)var3Lifetime1), (int)((double)var4Lifetime1 + (double)var11Lifetime3 * var9Lifetime4 / 10.0), 16711680, false);
               } else {
-                te.a((byte) 99, 4, (int)(var5Lifetime4 * (double)var11Lifetime3 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime4 * (double)var11Lifetime3 / 10.0), (int)((double)var4Lifetime1 + var9Lifetime4 * (double)var11Lifetime3 / 10.0), 16744576, false);
+                RasterBuffer.a((byte) 99, 4, (int)(var5Lifetime4 * (double)var11Lifetime3 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime4 * (double)var11Lifetime3 / 10.0), (int)((double)var4Lifetime1 + var9Lifetime4 * (double)var11Lifetime3 / 10.0), 16744576, false);
               }
             }
             for (var11Lifetime3 = 0; 8 > var11Lifetime3; var11Lifetime3++) {
-              te.a((byte) 99, 3, (int)(var5Lifetime4 * (double)var11Lifetime3 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime4 * (double)var11Lifetime3 / 10.0), (int)((double)var11Lifetime3 * var9Lifetime4 / 10.0 + (double)var4Lifetime1), 16777215, true);
+              RasterBuffer.a((byte) 99, 3, (int)(var5Lifetime4 * (double)var11Lifetime3 / 10.0 + (double)var2Lifetime1), (int)((double)var3Lifetime1 + var7Lifetime4 * (double)var11Lifetime3 / 10.0), (int)((double)var11Lifetime3 * var9Lifetime4 / 10.0 + (double)var4Lifetime1), 16777215, true);
             }
           }
         }
         if (this.field_s == 5) {
-          te.a((byte) 99, 8, var2Lifetime1, var3Lifetime1, var4Lifetime1, 255, false);
-          te.a((byte) 99, 7, var2Lifetime1, var3Lifetime1, var4Lifetime1, 65535, false);
-          te.a((byte) 99, 6, var2Lifetime1, var3Lifetime1, var4Lifetime1, 16777215, false);
+          RasterBuffer.a((byte) 99, 8, var2Lifetime1, var3Lifetime1, var4Lifetime1, 255, false);
+          RasterBuffer.a((byte) 99, 7, var2Lifetime1, var3Lifetime1, var4Lifetime1, 65535, false);
+          RasterBuffer.a((byte) 99, 6, var2Lifetime1, var3Lifetime1, var4Lifetime1, 16777215, false);
         }
         if (this.field_s == 6) {
           var3Lifetime2 = (int)((double)(-lg.field_c) + (-(((double)(this.field_x * 100) + this.field_t) / 100.0 * 48.0) + (16.0 * ((double)this.field_m + this.field_p / 100.0) + 16.0 * ((double)this.field_c + this.field_y / 100.0)))) + 240;
           var2Lifetime2 = (int)(32.0 * ((double)this.field_c + this.field_y / 100.0) - 32.0 * ((double)this.field_m + this.field_p / 100.0) - (double)sj.field_b) + 320;
-          l.e(var2Lifetime2, var3Lifetime2, 3, 8421504);
+          SoftwareRasterizer.e(var2Lifetime2, var3Lifetime2, 3, 8421504);
         }
         if (7 == this.field_s) {
           var2Lifetime3 = (int)((double)(-sj.field_b) + (((double)this.field_c + this.field_y / 100.0) * 32.0 - 32.0 * ((double)this.field_m + this.field_p / 100.0))) + 320;
           var3Lifetime3 = 240 + (int)(-(48.0 * (((double)(this.field_x * 100) + this.field_t) / 100.0)) + ((this.field_y / 100.0 + (double)this.field_c) * 16.0 + (this.field_p / 100.0 + (double)this.field_m) * 16.0) - (double)lg.field_c);
-          l.e(var2Lifetime3, var3Lifetime3, 3, 65535);
+          SoftwareRasterizer.e(var2Lifetime3, var3Lifetime3, 3, 65535);
         }
     }
 
     private final gi a(int param0, int param1, int param2, byte param3) {
         int var5;
-        dl var6;
+        MapTile var6;
         int var7;
         var7 = Terraphoenix.field_V;
         this.field_n = true;
@@ -235,26 +235,26 @@ final class gi {
           } else {
             if (var6.field_b != -1 && (var6.field_b != 5 ||
               100.0 * Math.random() < (double)(this.field_o - 60))) {
-              var6.field_b = ck.field_f[var6.field_b];
+              var6.field_b = FullscreenFocusCanvas.field_f[var6.field_b];
               if (var6.field_b == -1) {
                 var6.field_v = -1;
                 if (var6.field_r > 0) {
-                  if (var6.field_h != null) {
-                    var6.field_h.field_E = var6.field_h.field_E - 1;
-                    var6.field_h.field_P = 0;
-                    var6.field_h.field_c = var6.field_c;
-                    if (null == var6.field_c.field_h) {
-                      var6.field_c.field_h = var6.field_h;
-                      var6.field_h = null;
+                  if (var6.unit != null) {
+                    var6.unit.field_E = var6.unit.field_E - 1;
+                    var6.unit.field_P = 0;
+                    var6.unit.tile = var6.field_c;
+                    if (null == var6.field_c.unit) {
+                      var6.field_c.unit = var6.unit;
+                      var6.unit = null;
                       if (-1 == var6.field_c.field_v &&
-                        null == var6.field_c.field_c.field_h) {
-                        var6.field_c.field_c.field_h = var6.field_c.field_h;
-                        var6.field_c.field_h = null;
-                        var6.field_c.field_c.field_h.field_A = 0;
-                        var6.field_c.field_c.field_h.field_d = 5;
-                        var6.field_c.field_c.field_h.field_S = true;
-                        var6.field_c.field_c.field_h.field_P = 0;
-                        var6.field_c.field_c.field_h.field_c = var6.field_c.field_c;
+                        null == var6.field_c.field_c.unit) {
+                        var6.field_c.field_c.unit = var6.field_c.unit;
+                        var6.field_c.unit = null;
+                        var6.field_c.field_c.unit.field_A = 0;
+                        var6.field_c.field_c.unit.field_d = 5;
+                        var6.field_c.field_c.unit.field_S = true;
+                        var6.field_c.field_c.unit.field_P = 0;
+                        var6.field_c.field_c.unit.tile = var6.field_c.field_c;
                       }
                     }
                   }
@@ -278,7 +278,7 @@ final class gi {
         gi discarded$5 = null;
         gi discarded$6 = null;
         gi discarded$0 = null;
-        dl stackIn_45_0 = null;
+        MapTile stackIn_45_0 = null;
         int stackIn_46_1 = 0;
         int var3;
         int var4;
@@ -287,9 +287,9 @@ final class gi {
         int var8;
         int var9;
         int var10;
-        dl var11;
+        MapTile var11;
         int var12;
-        dl var13;
+        MapTile var13;
         int var5Lifetime1;
         int var6Lifetime1;
         var12 = Terraphoenix.field_V;
@@ -359,12 +359,12 @@ final class gi {
                 discarded$5 = this.a(var7, var6Lifetime1, this.field_x, (byte) -20);
                 discarded$6 = this.a(var7, var6Lifetime1, 1 + this.field_x, (byte) -124);
                 if (var11 != null &&
-                  var11.field_h != null &&
-                  0 < var11.field_h.field_P) {
-                  var11.field_h.a((byte) -51, this.field_o);
-                  if (var11.field_h.field_P <= 0 &&
-                    var11.field_h.field_Z == null &&
-                    var11.field_h.field_t != 7 &&
+                  var11.unit != null &&
+                  0 < var11.unit.field_P) {
+                  var11.unit.a((byte) -51, this.field_o);
+                  if (var11.unit.field_P <= 0 &&
+                    var11.unit.field_Z == null &&
+                    var11.unit.field_t != 7 &&
                     null != this.field_e) {
                     if (null != this.field_e) {
                       this.field_e.field_e = this.field_e.field_e + 1;
@@ -389,20 +389,20 @@ final class gi {
           }
         }
         if (param0 != -6) {
-          var13 = (dl) null;
-          discarded$0 = this.a((dl) null, false, 122);
+          var13 = (MapTile) null;
+          discarded$0 = this.a((MapTile) null, false, 122);
         }
     }
 
     final gi a(byte param0) {
         int var2;
         int var3;
-        dl var4;
+        MapTile var4;
         gi var5;
         int var6;
         int var7;
         int var8;
-        dl var9;
+        MapTile var9;
         gi var5Lifetime1;
         gi var5Lifetime2;
         var8 = Terraphoenix.field_V;
@@ -655,7 +655,7 @@ final class gi {
             }
             break;
           }
-          if (var4.field_h == null) {
+          if (var4.unit == null) {
             continue;
           }
           if (this.field_s == 6) {
@@ -664,8 +664,8 @@ final class gi {
           if (this.field_s == 7) {
             continue;
           }
-          var6 = var4.field_h.c(param0 ^ -117);
-          var7 = var4.field_h.h(13);
+          var6 = var4.unit.c(param0 ^ -117);
+          var7 = var4.unit.h(13);
           if (!((double)var7 > this.field_p)) {
             continue;
           }
@@ -683,7 +683,7 @@ final class gi {
           }
           break;
         }
-        if (var4.field_h.field_P <= 0) {
+        if (var4.unit.field_P <= 0) {
           this.a((byte) -6, false);
           return this;
         }
@@ -695,19 +695,19 @@ final class gi {
             this.field_s != 6 &&
             this.field_s != 5 &&
             this.field_s != 7) {
-            var4.field_h.a((byte) 114, this.field_o, this.field_s);
+            var4.unit.a((byte) 114, this.field_o, this.field_s);
           }
         } else {
           if (this.field_s != 1 &&
             this.field_s != 6 &&
             this.field_s != 5 &&
             this.field_s != 7) {
-            var4.field_h.a((byte) 114, this.field_o, this.field_s);
+            var4.unit.a((byte) 114, this.field_o, this.field_s);
           }
         }
-        if (var4.field_h.field_P <= 0 &&
-          var4.field_h.field_Z == null &&
-          7 != var4.field_h.field_t &&
+        if (var4.unit.field_P <= 0 &&
+          var4.unit.field_Z == null &&
+          7 != var4.unit.field_t &&
           this.field_e != null) {
           this.field_e.field_e = this.field_e.field_e + 1;
         }
@@ -769,7 +769,7 @@ final class gi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -778,10 +778,10 @@ final class gi {
           return;
         }
         if (0L != param1 % 10L) {
-          te.a(param1, 0);
+          RasterBuffer.a(param1, 0);
         } else {
-          te.a(-1L + param1, 0);
-          te.a(1L, 0);
+          RasterBuffer.a(-1L + param1, 0);
+          RasterBuffer.a(1L, 0);
         }
         if (param0 >= -25) {
           field_r = (qf) null;
@@ -790,8 +790,8 @@ final class gi {
 
     private final gi a(int param0, int param1, int param2, int param3) {
         int var6;
-        dl var7;
-        dl var8;
+        MapTile var7;
+        MapTile var8;
         var6 = Terraphoenix.field_V;
         this.field_n = true;
         var7 = this.field_u.a(param1 ^ -3426, param0, param3, param2);
@@ -893,24 +893,24 @@ final class gi {
         int var26Lifetime2;
         var27 = Terraphoenix.field_V;
         try {
-          var28 = mk.field_j;
+          var28 = LevelEditor.field_j;
           var3 = 83 % ((56 - param0) / 50);
-          var2 = var28.a(-16384);
+          var2 = var28.readUnsignedByte(-16384);
           if (var2 == 0) {
-            var4 = var28.i(-25578);
-            var5 = (nd) (r.field_Q.d(9272));
+            var4 = var28.readUnsignedShort(-25578);
+            var5 = (nd) (BattleUnit.field_Q.beginBackward(9272));
             while (var5 != null) {
               if (var5.field_s != var4) {
-                var5 = (nd) (r.field_Q.e((byte) -119));
+                var5 = (nd) (BattleUnit.field_Q.nextBackward((byte) -119));
                 continue;
               }
               break;
             }
             if (var5 == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
-            var6 = var28.a(-16384);
+            var6 = var28.readUnsignedByte(-16384);
             if (var6 != 0) {
               var7 = var5.field_n;
               od.field_h[0].field_d = null;
@@ -918,10 +918,10 @@ final class gi {
               od.field_h[0].field_f = kj.field_f;
               od.field_h[0].field_a = false;
               for (var9_int = 1; var6 > var9_int; var9_int++) {
-                od.field_h[var9_int].field_f = var28.e(-1);
+                od.field_h[var9_int].field_f = var28.readString(-1);
                 od.field_h[var9_int].field_a = false;
-                if (1 == var28.a(-16384)) {
-                  od.field_h[var9_int].field_d = var28.e(-1);
+                if (1 == var28.readUnsignedByte(-16384)) {
+                  od.field_h[var9_int].field_d = var28.readString(-1);
                 } else {
                   od.field_h[var9_int].field_d = null;
                 }
@@ -942,13 +942,13 @@ final class gi {
               var16 = 0;
               var17 = 0;
               var18 = 0;
-              var19 = var28.a(-16384);
+              var19 = var28.readUnsignedByte(-16384);
               if (0 < var19) {
                 for (var20 = 0; var19 > var20; var20++) {
-                  var21 = var28.a(-16384);
+                  var21 = var28.readUnsignedByte(-16384);
                   var22 = od.field_h[var21].field_f;
                   var23 = var28.h((byte) 78);
-                  var25 = var28.field_k;
+                  var25 = var28.position;
                   if (var7 > var20) {
                     var9[0][var13] = var22;
                     var10[0][var13] = od.field_h[var21].field_d;
@@ -957,7 +957,7 @@ final class gi {
                     for (var26 = 0; var26 < var8; var26++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var12[0][incrementValue$3] = var28.f((byte) -107);
+                      var12[0][incrementValue$3] = var28.readInt((byte) -107);
                     }
                   }
                   if (var22 != null &&
@@ -965,12 +965,12 @@ final class gi {
                     var9[1][var14] = kj.field_f;
                     var10[1][var14] = null;
                     var11[1][var14] = var23;
-                    var28.field_k = var25;
+                    var28.position = var25;
                     var14++;
                     for (var26Lifetime1 = 0; var8 > var26Lifetime1; var26Lifetime1++) {
                       incrementValue$4 = var17;
                       var17++;
-                      var12[1][incrementValue$4] = var28.f((byte) -107);
+                      var12[1][incrementValue$4] = var28.readInt((byte) -107);
                     }
                   }
                   if (var7 > var15 &&
@@ -979,51 +979,51 @@ final class gi {
                     var9[2][var15] = var22;
                     var10[2][var15] = od.field_h[var21].field_d;
                     var11[2][var15] = var23;
-                    var28.field_k = var25;
+                    var28.position = var25;
                     var15++;
                     for (var26Lifetime2 = 0; var8 > var26Lifetime2; var26Lifetime2++) {
                       incrementValue$5 = var18;
                       var18++;
-                      var12[2][incrementValue$5] = var28.f((byte) -107);
+                      var12[2][incrementValue$5] = var28.readInt((byte) -107);
                     }
                   }
                 }
               }
             }
             var5.field_m = true;
-            var5.b((byte) 12);
+            var5.unlink((byte) 12);
             return;
           }
           if (var2 == 1) {
-            var4Lifetime1 = var28.i(-25578);
+            var4Lifetime1 = var28.readUnsignedShort(-25578);
             var5_long = var28.h((byte) 78);
-            var7_ref_fb = (fb) (hd.field_p.d(9272));
+            var7_ref_fb = (fb) (hd.field_p.beginBackward(9272));
             while (var7_ref_fb != null) {
               if (var7_ref_fb.field_s != var4Lifetime1) {
-                var7_ref_fb = (fb) (hd.field_p.e((byte) -119));
+                var7_ref_fb = (fb) (hd.field_p.nextBackward((byte) -119));
                 continue;
               }
               break;
             }
             if (var7_ref_fb == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var7_ref_fb.field_p = var5_long;
-            var7_ref_fb.b((byte) 12);
+            var7_ref_fb.unlink((byte) 12);
             return;
           }
-          bd.a((Throwable) null, "HS1: " + r.i(-15465), -60);
-          gb.g(-17464);
+          bd.reportClientError((Throwable) null, "HS1: " + BattleUnit.i(-15465), -60);
+          WidgetContainer.g(-17464);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "gi.I(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "gi.I(" + param0 + ')');
         }
     }
 
-    private final gi a(dl param0, boolean param1, int param2) {
+    private final gi a(MapTile param0, boolean param1, int param2) {
         gi stackIn_2_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -1048,7 +1048,7 @@ final class gi {
               decompiledFrameRemainder0 = (param0.field_g != 32);
             }
             if ((decompiledFrameRemainder0) && ((28 != param0.field_g ||
-              13 != param0.field_s.field_i.field_G.field_Bb) && 0 <= param0.field_g)) {
+              13 != param0.map.state.client.field_Bb) && 0 <= param0.field_g)) {
               if (nh.field_E[param0.field_g] == 1) {
                 param0.a(1, true, 111);
               }
@@ -1090,11 +1090,11 @@ final class gi {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final gi a(byte param0, boolean param1, dl param2) {
+    private final gi a(byte param0, boolean param1, MapTile param2) {
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
@@ -1117,7 +1117,7 @@ final class gi {
               decompiledFrameRemainder0 = (32 != param2.field_k);
             }
             if ((decompiledFrameRemainder0) && ((28 != param2.field_k ||
-              param2.field_s.field_i.field_G.field_Bb != 13) && param2.field_k >= 0)) {
+              param2.map.state.client.field_Bb != 13) && param2.field_k >= 0)) {
               if (1 == nh.field_E[param2.field_k]) {
                 param2.a(2, true, -95);
               }
@@ -1159,7 +1159,7 @@ final class gi {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -1168,40 +1168,40 @@ final class gi {
         this.a((byte) -6, true);
     }
 
-    final static void a(fa param0, fa param1, fa param2, int param3) {
-        ci var18 = null;
-        bg[] var5 = null;
-        bg[][] var6 = null;
+    final static void a(Archive param0, Archive param1, Archive param2, int param3) {
+        Sprite var18 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var20 = null;
         int[][] var17 = null;
         int[][] var7 = null;
-        bg[] var15 = null;
+        IndexedSprite[] var15 = null;
         int var11_int = 0;
-        ci var16 = null;
-        ci var19 = null;
-        ci var11 = null;
-        ci var12 = null;
+        Sprite var16 = null;
+        Sprite var19 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Terraphoenix.field_V;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          e.field_p = ig.a(param0, 0, "frame_top", "commonui");
+          BattleState.field_p = ig.a(param0, 0, "frame_top", "commonui");
           qb.field_f = ig.a(param0, 0, "frame_bottom", "commonui");
           hd.field_o = il.a("jagex_logo_grey", "commonui", param0, param3 + 2039);
           i.field_c = ig.a(param0, 0, "button", "commonui");
-          og.field_c = ce.a("validation", (byte) -90, "commonui", param0);
-          ra.field_l = (pk) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
-          qk.field_e = (pk) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
-          be.field_x = (pk) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));
-          var18 = new ci(param2.a("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
+          og.field_c = IterableNodeHashTable.a("validation", (byte) -90, "commonui", param0);
+          ra.field_l = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
+          qk.field_e = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
+          be.field_x = (BitmapFont) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));
+          var18 = new Sprite(param2.a("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
           qb.a("dropdown", (byte) -36, "commonui", param0);
           var5 = lf.a(true, "commonui", "screen_options", param0);
-          hk.field_d = new bg[4];
-          ng.field_u = new bg[4];
-          o.field_c = new bg[4];
-          var6 = new bg[][]{o.field_c, ng.field_u, hk.field_d};
+          hk.field_d = new IndexedSprite[4];
+          ng.field_u = new IndexedSprite[4];
+          o.field_c = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{o.field_c, ng.field_u, hk.field_d};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -1219,7 +1219,7 @@ final class gi {
           var20[3][var8Lifetime1] = 4767999;
           for (var9 = 0; 3 > var9; var9++) {
             var15 = var6[var9];
-            bg[] var10 = var15;
+            IndexedSprite[] var10 = var15;
             for (var11_int = 0; var11_int < var15.length; var11_int++) {
               var15[var11_int] = lf.a(var20[var11_int], var5[var9], param3 + 2040);
             }
@@ -1227,34 +1227,34 @@ final class gi {
           var9Lifetime1 = var18.field_t;
           ja.c((byte) 109);
           var18.a();
-          l.h(0, 0, l.field_k, l.field_j);
-          var16 = new ci(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.h(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j);
+          var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();
           var18.d(0, 0);
-          var11 = new ci(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.a();
           var18.d(var9Lifetime1 - var18.field_r, 0);
-          var12 = new ci(-(var9Lifetime1 * 2) + var18.field_r, var9Lifetime1);
+          var12 = new Sprite(-(var9Lifetime1 * 2) + var18.field_r, var9Lifetime1);
           var12.a();
           var18.d(-var9Lifetime1, 0);
-          ij.a(false);
-          i.field_c = new ci[]{var16, var12, var11};
+          MessageKeys.a(false);
+          i.field_c = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    gi(e param0) {
+    gi(BattleState param0) {
         try {
           this.field_g = param0;
           this.field_n = false;
           this.field_f = 0;
           this.field_e = null;
-          this.field_u = this.field_g.field_h;
+          this.field_u = this.field_g.map;
           this.field_d = 0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

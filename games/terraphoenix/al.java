@@ -6,7 +6,7 @@ abstract class al extends ei {
     private int field_X;
     private jl field_Z;
     private int field_ab;
-    private gl field_Y;
+    private UiWidget field_Y;
     private int field_eb;
     private int field_db;
     private rj field_fb;
@@ -19,7 +19,7 @@ abstract class al extends ei {
         return super.i(61);
     }
 
-    final static ci[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == -123) {
           return oh.a(param2, 1, 1, 3, param1, 1, 1, param0, param3);
         }
@@ -27,28 +27,28 @@ abstract class al extends ei {
         return oh.a(param2, 1, 1, 3, param1, 1, 1, param0, param3);
     }
 
-    private final void b(gl param0, byte param1) {
+    private final void b(UiWidget param0, byte param1) {
         if (param1 != -68) {
           return;
         }
         try {
           if (this.field_Z != null) {
-            this.field_Z.b((byte) 12);
+            this.field_Z.unlink((byte) 12);
           }
           if (param0 == null) {
             this.field_Z = new jl();
           } else {
-            param0.a(6 + this.field_cb, (byte) 53, param0.field_p, 6, param0.field_n);
+            param0.a(6 + this.field_cb, (byte) 53, param0.width, 6, param0.height);
             this.field_Z = new jl(param0);
           }
           this.b((byte) 95, this.field_Z);
           this.field_Y = null;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "al.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "al.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(gl param0, int param1) {
+    void a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -60,7 +60,7 @@ abstract class al extends ei {
             field_bb = (int[]) null;
           }
           if (qb.field_h == this.field_fb) {
-            this.a(this.field_eb, this.field_Y.field_p + 12, 12 + this.field_cb + this.field_Y.field_n, (byte) -80);
+            this.a(this.field_eb, this.field_Y.width + 12, 12 + this.field_cb + this.field_Y.height, (byte) -80);
             this.field_ab = 0;
             return;
           }
@@ -80,7 +80,7 @@ abstract class al extends ei {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,8 +103,8 @@ abstract class al extends ei {
         this.field_Z.field_J = 0;
     }
 
-    al(d param0, gl param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_p, param1.field_n + (param2 + 12));
+    al(d param0, UiWidget param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.width, param1.height + (param2 + 12));
         try {
           this.field_cb = param2;
           this.field_db = param3;
@@ -112,14 +112,14 @@ abstract class al extends ei {
           this.field_eb = param4;
           this.b(param1, (byte) -68);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void j(int param0) {
         if (null != this.field_fb) {
           if (this.field_fb != dc.field_n) {
-            this.b(98, this.field_cb + 12 + this.field_Y.field_n, 12 + this.field_Y.field_p);
+            this.b(98, this.field_cb + 12 + this.field_Y.height, 12 + this.field_Y.width);
             this.b(this.field_Y, (byte) -68);
           }
           this.field_fb = null;
@@ -162,7 +162,7 @@ abstract class al extends ei {
             return super.f((byte) -121);
           }
           this.field_fb = qb.field_h;
-          this.a(this.field_eb, 12 + this.field_Y.field_p, 12 - (-this.field_cb - this.field_Y.field_n), (byte) -80);
+          this.a(this.field_eb, 12 + this.field_Y.width, 12 - (-this.field_cb - this.field_Y.height), (byte) -80);
           this.field_Z.field_J = 0;
           this.field_ab = 0;
           if (param0 == -121) {
@@ -197,7 +197,7 @@ abstract class al extends ei {
         return super.f((byte) -121);
     }
 
-    boolean a(char param0, gl param1, int param2, int param3) {
+    boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -229,7 +229,7 @@ abstract class al extends ei {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

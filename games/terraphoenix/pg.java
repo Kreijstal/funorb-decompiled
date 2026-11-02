@@ -13,17 +13,17 @@ final class pg {
     final static void a(float param0, boolean param1, String param2, int param3) {
         if (vi.field_n == null) {
           vi.field_n = new na(jl.field_I, m.field_e);
-          jl.field_I.a((gl) (vi.field_n), (byte) -1);
+          jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
         }
         vi.field_n.a((byte) 60, param1, param2, param0);
-        l.a();
+        SoftwareRasterizer.a();
         if (param3 <= 53) {
           return;
         }
         try {
           oi.a(-22417, true);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class pg {
           }
           if (var2 == 4) {
             this.field_c[0] = 80;
-            this.field_d = qe.field_g;
+            this.field_d = IsaacCipher.field_g;
             this.field_g[0] = 35;
             this.field_c[1] = 90;
             this.field_a[0] = 60;
@@ -120,7 +120,7 @@ final class pg {
             return;
           }
           if (var2 == 5) {
-            this.field_d = fa.field_c;
+            this.field_d = Archive.field_c;
             this.field_c[0] = 55;
             this.field_g[0] = 35;
             this.field_a[0] = 55;
@@ -159,7 +159,7 @@ final class pg {
           }
           if (var2 == 7) {
             this.field_c[2] = 20;
-            this.field_d = vh.field_n;
+            this.field_d = DualLinkNode.field_n;
             this.field_g[2] = 0;
             this.field_c[1] = 20;
             this.field_a[2] = 40;

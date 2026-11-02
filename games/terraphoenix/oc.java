@@ -6,17 +6,17 @@ final class oc {
     private pi[] field_b;
     private int field_c;
 
-    final gg a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new gg(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
-    final static oc a(fa param0, int param1, int param2) {
+    final static oc a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.b(param1, 119, param2);
         if (var3 == null) {
           return null;
         }
-        return new oc(new dh(var3));
+        return new oc(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,19 +59,19 @@ final class oc {
         return var3;
     }
 
-    private oc(dh param0) {
+    private oc(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new pi[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.a(-16384);
+          var3 = param0.readUnsignedByte(-16384);
           if (var3 != 0) {
-            param0.field_k = param0.field_k - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new pi();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_c = param0.i(-25578);
-        this.field_a = param0.i(-25578);
+        this.field_c = param0.readUnsignedShort(-25578);
+        this.field_a = param0.readUnsignedShort(-25578);
     }
 }

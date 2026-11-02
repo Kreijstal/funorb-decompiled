@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class ji extends uf {
+final class ji extends IntrusiveNode {
     static int field_k;
-    static ci[] field_j;
+    static Sprite[] field_j;
     int field_i;
     int field_h;
 
@@ -34,7 +34,7 @@ final class ji extends uf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -89,11 +89,11 @@ final class ji extends uf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, String param5, long param6, he param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, String param5, long param6, PlatformTaskDispatcher param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -105,17 +105,17 @@ final class ji extends uf {
           RuntimeException var15 = null;
           IOException var16 = null;
           try {
-            mk.field_j = new uc(param9);
+            LevelEditor.field_j = new uc(param9);
             di.field_l = new uc(param8);
             nd.field_i = param13;
-            jm.field_c = param1;
+            DelegatingCanvas.field_c = param1;
             sb.field_i = param2;
             hf.field_x = param3;
             gi.field_v = param11;
             pc.field_a = param6;
             pg.field_f = param0;
             var15_int = 61 % ((-9 - param4) / 59);
-            ij.field_d = param12;
+            MessageKeys.field_d = param12;
             wa.field_t = param5;
             da.field_g = param7;
             hb.field_i = param10;
@@ -146,7 +146,7 @@ final class ji extends uf {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -173,7 +173,7 @@ final class ji extends uf {
             param1.setCharAt(var5, param0);
           }
           if (param2 != 110) {
-            field_j = (ci[]) null;
+            field_j = (Sprite[]) null;
           }
           stackIn_7_0 = (StringBuilder) (param1);
           return stackIn_7_0;
@@ -187,7 +187,7 @@ final class ji extends uf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class ji extends uf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

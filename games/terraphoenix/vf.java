@@ -21,12 +21,12 @@ final class vf {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (og.field_a != qe.field_f) {
+          if (og.field_a != IsaacCipher.field_f) {
             return false;
           }
           var8 = new tj(jl.field_I, param0);
           var7 = var8;
-          jl.field_I.a((gl) (var8), (byte) -1);
+          jl.field_I.a((UiWidget) (var8), (byte) -1);
           if (param4) {
             return true;
           }
@@ -38,8 +38,8 @@ final class vf {
           oe.field_a = param1;
           ra.field_m = param5;
           cg.field_H = param6;
-          nf.field_c = param2;
-          qe.field_f = ua.field_d;
+          PcmPlayerPump.field_c = param2;
+          IsaacCipher.field_f = ua.field_d;
           wf.field_q = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class vf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class vf {
           return;
         }
         String var2 = (String) null;
-        vf.a((String) null, (String) null, (fa) null, (String) null, 121);
+        vf.a((String) null, (String) null, (Archive) null, (String) null, 121);
         field_b = null;
     }
 
@@ -93,11 +93,11 @@ final class vf {
             field_a = 60;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static String a(String param0, String param1, fa param2, String param3, int param4) {
+    final static String a(String param0, String param1, Archive param2, String param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -146,7 +146,7 @@ final class vf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 

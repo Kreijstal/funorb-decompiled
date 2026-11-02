@@ -3,7 +3,7 @@
  */
 final class hk {
     int field_m;
-    static bg[] field_d;
+    static IndexedSprite[] field_d;
     int field_i;
     rk field_l;
     int field_k;
@@ -67,7 +67,7 @@ final class hk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
         stackIn_5_0 = fc.field_e;
         try {
@@ -110,7 +110,7 @@ final class hk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class hk {
           param0.addKeyListener(th.field_g);
           param0.addFocusListener(th.field_g);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class hk {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            dh.a(param2, true);
+            PacketBuffer.a(param2, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -190,7 +190,7 @@ final class hk {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -213,7 +213,7 @@ final class hk {
           if (lk.field_d == null) {
             return;
           }
-          lk.field_d.a((java.awt.Component) ((Object) param0), (byte) -105);
+          lk.field_d.unregister((java.awt.Component) ((Object) param0), (byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ final class hk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

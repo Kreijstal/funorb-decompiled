@@ -23,39 +23,39 @@ final class uk {
         var6 = Terraphoenix.field_V;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var8 = mk.field_j;
-          var2 = var8.a(-16384);
+          var8 = LevelEditor.field_j;
+          var2 = var8.readUnsignedByte(-16384);
           if (0 != var2) {
             if (var2 == 1) {
-              var3 = var8.f((byte) -107);
-              var4 = (cc) (qb.field_a.d(9272));
+              var3 = var8.readInt((byte) -107);
+              var4 = (cc) (qb.field_a.beginBackward(9272));
               while (var4 != null) {
                 if (var3 != var4.field_k) {
-                  var4 = (cc) (qb.field_a.e((byte) -119));
+                  var4 = (cc) (qb.field_a.nextBackward((byte) -119));
                   continue;
                 }
                 break;
               }
               if (var4 != null) {
-                var4.b((byte) 12);
+                var4.unlink((byte) 12);
                 decompiledFrameRemainder0 = false;
               }
               else {
-                gb.g(-17464);
+                WidgetContainer.g(-17464);
                 return;
               }
             }
             if (decompiledFrameRemainder0) {
-              bd.a((Throwable) null, "A1: " + r.i(-15465), 117);
-              gb.g(-17464);
+              bd.reportClientError((Throwable) null, "A1: " + BattleUnit.i(-15465), 117);
+              WidgetContainer.g(-17464);
             }
           } else {
-            var3_ref_jh = (jh) (qc.field_a.d(9272));
+            var3_ref_jh = (jh) (qc.field_a.beginBackward(9272));
             if (var3_ref_jh == null) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
-            var4_int = var8.a(-16384);
+            var4_int = var8.readUnsignedByte(-16384);
             if (var4_int == 0) {
               var5 = null;
             } else {
@@ -65,14 +65,14 @@ final class uk {
               var5 = var7;
               var8.a(var4_int, 0, 90, var10);
             }
-            var8.field_k = var8.field_k + 4;
+            var8.position = var8.position + 4;
             if (!var8.c(0)) {
-              gb.g(-17464);
+              WidgetContainer.g(-17464);
               return;
             }
             var3_ref_jh.field_i = true;
             var3_ref_jh.field_j = (byte[]) (var5);
-            var3_ref_jh.b((byte) 12);
+            var3_ref_jh.unlink((byte) 12);
           }
           if (param0) {
             return;
@@ -82,7 +82,7 @@ final class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
         }
     }
 

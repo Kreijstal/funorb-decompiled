@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me extends uf {
-    static bg[] field_l;
+final class me extends IntrusiveNode {
+    static IndexedSprite[] field_l;
     int[] field_i;
     static int field_o;
     static int field_k;
@@ -21,7 +21,7 @@ final class me extends uf {
             me.a(54, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "me.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "me.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class me extends uf {
         try {
           var2_int = 70 % ((param0 - 34) / 55);
           var3 = (CharSequence) ((Object) param1);
-          stackIn_1_0 = jj.field_e.equals(hm.a((byte) 6, var3));
+          stackIn_1_0 = IntrusiveDeque.field_e.equals(hm.a((byte) 6, var3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class me extends uf {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

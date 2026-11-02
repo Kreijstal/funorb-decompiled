@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wa extends vh {
+class wa extends DualLinkNode {
     static String field_q;
     static int field_s;
     static volatile int field_p;
     static String field_t;
-    static bg[] field_r;
+    static IndexedSprite[] field_r;
 
     public static void c(int param0) {
         field_t = null;
@@ -17,19 +17,19 @@ class wa extends vh {
         }
     }
 
-    final static void a(ci param0, byte param1, String param2) {
+    final static void a(Sprite param0, byte param1, String param2) {
         try {
-          fa.field_d = param0;
+          Archive.field_d = param0;
           if (param1 < 19) {
             wa.c(-64);
           }
           jh.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "wa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "wa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(ci param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var17 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -44,7 +44,7 @@ class wa extends vh {
         int var16 = 0;
         int var18 = 0;
         int var19 = 0;
-        ci var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -52,33 +52,33 @@ class wa extends vh {
         int var16Lifetime1;
         var19 = Terraphoenix.field_V;
         try {
-          if (l.field_b > param1) {
-            param7 = param7 - (l.field_b - param1);
-            param1 = l.field_b;
+          if (SoftwareRasterizer.field_b > param1) {
+            param7 = param7 - (SoftwareRasterizer.field_b - param1);
+            param1 = SoftwareRasterizer.field_b;
           }
-          if (l.field_d > param5) {
-            param2 = param2 - (l.field_d - param5);
-            param5 = l.field_d;
+          if (SoftwareRasterizer.field_d > param5) {
+            param2 = param2 - (SoftwareRasterizer.field_d - param5);
+            param5 = SoftwareRasterizer.field_d;
           }
-          if (param1 + param7 > l.field_f) {
-            param7 = -param1 + l.field_f;
+          if (param1 + param7 > SoftwareRasterizer.field_f) {
+            param7 = -param1 + SoftwareRasterizer.field_f;
           }
-          if (param5 + param2 > l.field_c) {
-            param2 = -param5 + l.field_c;
+          if (param5 + param2 > SoftwareRasterizer.field_c) {
+            param2 = -param5 + SoftwareRasterizer.field_c;
           }
           if (param7 > 0 &&
             param2 > 0) {
             var21 = param0.d();
-            var30 = l.field_i;
-            var10 = l.field_k;
-            var11 = l.field_j;
+            var30 = SoftwareRasterizer.field_i;
+            var10 = SoftwareRasterizer.field_k;
+            var11 = SoftwareRasterizer.field_j;
             var29 = new int[4];
-            l.b(var29);
+            SoftwareRasterizer.b(var29);
             param0.a();
-            l.i(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.i(var29[0], var29[1], var29[2], var29[3]);
             var13 = param1 + param0.field_r * param5;
             var14 = -param7 + param0.field_r;
-            var25 = var21.field_z;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param5; param5 + param2 > var16; var16++) {
@@ -92,7 +92,7 @@ class wa extends vh {
                   var15[1 + var13] == 0 ||
                   !(param0.field_t - 1 <= var16) &&
                   0 == var15[var13 + param0.field_r])) {
-                  l.e(var17, var16, param6, param4);
+                  SoftwareRasterizer.e(var17, var16, param6, param4);
                 }
                 var13++;
               }
@@ -100,8 +100,8 @@ class wa extends vh {
             }
             var16Lifetime1 = 60 / ((param3 - 1) / 51);
             var21.b(-param0.field_p, -param0.field_v);
-            l.a(var30, var10, var11);
-            l.a(var29);
+            SoftwareRasterizer.a(var30, var10, var11);
+            SoftwareRasterizer.a(var29);
             return;
           }
           return;
@@ -115,7 +115,7 @@ class wa extends vh {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ class wa extends vh {
           var3 = new char[var2_int];
           if (param0 != -117) {
             var6 = (String) null;
-            wa.a((ci) null, (byte) 117, (String) null);
+            wa.a((Sprite) null, (byte) 117, (String) null);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var3[-1 + (var2_int - var4)] = param1.charAt(var4);
@@ -154,7 +154,7 @@ class wa extends vh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

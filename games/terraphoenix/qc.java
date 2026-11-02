@@ -6,9 +6,9 @@ import java.util.*;
 final class qc {
     static byte[][] field_b;
     static int field_c;
-    static jj field_a;
+    static IntrusiveDeque field_a;
     static java.util.zip.CRC32 field_d;
-    static ci[] field_f;
+    static Sprite[] field_f;
     static String field_e;
 
     final static boolean a(byte param0) {
@@ -70,7 +70,7 @@ final class qc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class qc {
           }
           if (param0 != 80) {
             var4 = (String) null;
-            qc.a((String) null, (fa) null, (String) null, (byte) -43);
+            qc.a((String) null, (Archive) null, (String) null, (byte) -43);
           }
           if (ak.a(param1, param2, false)) {
             return false;
@@ -126,7 +126,7 @@ final class qc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -151,20 +151,20 @@ final class qc {
         try {
           var6 = di.field_l;
           var6.k(-17410, param0);
-          var6.field_k = var6.field_k + 1;
-          var4 = var6.field_k;
-          var6.i(1, -125);
-          var6.i(param1.field_o, -18);
-          var6.i(param1.field_l, -99);
-          var6.e(param1.field_q, 8959);
-          var6.e(param1.field_m, 8959);
-          var6.e(param1.field_i, 8959);
-          var6.e(param1.field_j, 8959);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, -125);
+          var6.writeByte(param1.field_o, -18);
+          var6.writeByte(param1.field_l, -99);
+          var6.writeInt(param1.field_q, 8959);
+          var6.writeInt(param1.field_m, 8959);
+          var6.writeInt(param1.field_i, 8959);
+          var6.writeInt(param1.field_j, 8959);
           int var5 = 5 / ((param2 - 34) / 34);
           var6.d(var4, 8600);
-          var6.j(var6.field_k - var4, -119);
+          var6.j(var6.position - var4, -119);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "qc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "qc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class qc {
         }
     }
 
-    final static String a(String param0, fa param1, String param2, byte param3) {
+    final static String a(String param0, Archive param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -229,13 +229,13 @@ final class qc {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
         field_c = 0;
-        field_a = new jj();
+        field_a = new IntrusiveDeque();
         field_d = new java.util.zip.CRC32();
         field_e = "Continue saved game";
     }

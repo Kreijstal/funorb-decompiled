@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hl {
-    private vh field_f;
+    private DualLinkNode field_f;
     static boolean field_a;
-    private vh field_d;
+    private DualLinkNode field_d;
     static rj field_b;
     static String field_e;
     static int[] field_c;
@@ -20,28 +20,28 @@ final class hl {
           }
           bj.field_f.a(mb.field_s, param0 + 12);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int a(boolean param0) {
-        vh var3 = null;
+        DualLinkNode var3 = null;
         int var4 = Terraphoenix.field_V;
         int var2 = 0;
-        vh var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (!param0) {
-          var3 = this.field_f.field_o;
+          var3 = this.field_f.secondaryNext;
           while (this.field_f != var3) {
             var2++;
-            var3 = var3.field_o;
+            var3 = var3.secondaryNext;
           }
           return var2;
         }
         field_b = (rj) null;
-        var3Lifetime1 = this.field_f.field_o;
+        var3Lifetime1 = this.field_f.secondaryNext;
         while (this.field_f != var3Lifetime1) {
           var2++;
-          var3Lifetime1 = var3Lifetime1.field_o;
+          var3Lifetime1 = var3Lifetime1.secondaryNext;
         }
         return var2;
     }
@@ -58,41 +58,41 @@ final class hl {
         field_c = null;
     }
 
-    final vh a(byte param0) {
+    final DualLinkNode a(byte param0) {
         if (param0 > -28) {
-          return (vh) null;
+          return (DualLinkNode) null;
         }
-        vh var2 = this.field_f.field_o;
+        DualLinkNode var2 = this.field_f.secondaryNext;
         if (this.field_f != var2) {
-          var2.c((byte) 13);
+          var2.unlinkSecondary((byte) 13);
           return var2;
         }
         return null;
     }
 
-    final static ci[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
         int var4 = -125 / ((param0 + 29) / 46);
         return be.a(80, param3, param1, 1, param2);
     }
 
-    final void a(int param0, vh param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
-          if (param1.field_i != null) {
-            param1.c((byte) 13);
+          if (param1.secondaryPrevious != null) {
+            param1.unlinkSecondary((byte) 13);
           }
           if (param0 != 11152) {
-            this.field_d = (vh) null;
+            this.field_d = (DualLinkNode) null;
           }
-          param1.field_o = this.field_f;
-          param1.field_i = this.field_f.field_i;
-          param1.field_i.field_o = param1;
-          param1.field_o.field_i = param1;
+          param1.secondaryNext = this.field_f;
+          param1.secondaryPrevious = this.field_f.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ci a(fa param0, int param1, byte param2, int param3) {
+    final static Sprite a(Archive param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -101,7 +101,7 @@ final class hl {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -49 % ((param2 - 44) / 37);
-          if (vh.a(param3, param1, param0, true)) {
+          if (DualLinkNode.a(param3, param1, param0, true)) {
             return mc.a((byte) 113);
           }
           return null;
@@ -115,23 +115,23 @@ final class hl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public hl() {
-        this.field_f = new vh();
-        this.field_f.field_o = this.field_f;
-        this.field_f.field_i = this.field_f;
+        this.field_f = new DualLinkNode();
+        this.field_f.secondaryNext = this.field_f;
+        this.field_f.secondaryPrevious = this.field_f;
     }
 
-    final vh a(int param0) {
-        vh var2 = this.field_d;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_d;
         if (var2 == this.field_f) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_o;
+        this.field_d = var2.secondaryNext;
         if (param0 == 6273) {
           return var2;
         }
@@ -139,19 +139,19 @@ final class hl {
         return var2;
     }
 
-    final vh c(int param0) {
-        vh var2 = this.field_f.field_o;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = this.field_f.secondaryNext;
         if (param0 != 8192) {
           field_a = false;
           if (this.field_f != var2) {
-            this.field_d = var2.field_o;
+            this.field_d = var2.secondaryNext;
             return var2;
           }
           this.field_d = null;
           return null;
         }
         if (this.field_f != var2) {
-          this.field_d = var2.field_o;
+          this.field_d = var2.secondaryNext;
           return var2;
         }
         this.field_d = null;

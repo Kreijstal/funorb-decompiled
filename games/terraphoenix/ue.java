@@ -78,7 +78,7 @@ final class ue {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class ue {
         var4 = Terraphoenix.field_V;
         try {
           try {
-            if (!he.field_o.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_o.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -131,7 +131,7 @@ final class ue {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends uf {
+final class fb extends IntrusiveNode {
     static long field_i;
     int field_q;
     int field_l;
@@ -73,26 +73,26 @@ final class fb extends uf {
         return var2Lifetime1;
     }
 
-    final static void a(int param0, dh param1) {
-        hb.field_j = param1.i(-25578) << 5;
-        int var2_int = param1.a(-16384);
+    final static void a(int param0, PacketBuffer param1) {
+        hb.field_j = param1.readUnsignedShort(-25578) << 5;
+        int var2_int = param1.readUnsignedByte(-16384);
         lb.field_d = var2_int << 18 & 1835008;
         hb.field_j = hb.field_j + (var2_int >> 3);
-        lb.field_d = lb.field_d + (param1.i(param0 - 4642) << 2);
-        var2_int = param1.a(param0 + 4552);
+        lb.field_d = lb.field_d + (param1.readUnsignedShort(param0 - 4642) << 2);
+        var2_int = param1.readUnsignedByte(param0 + 4552);
         jc.field_D = (63 & var2_int) << 15;
         lb.field_d = lb.field_d + (var2_int >> 6);
-        jc.field_D = jc.field_D + (param1.a(-16384) << 7);
-        var2_int = param1.a(-16384);
+        jc.field_D = jc.field_D + (param1.readUnsignedByte(-16384) << 7);
+        var2_int = param1.readUnsignedByte(-16384);
         jc.field_D = jc.field_D + (var2_int >> 1);
         if (param0 != -20936) {
           return;
         }
         try {
           dc.field_a = (var2_int & 1) << 16;
-          dc.field_a = dc.field_a + param1.i(-25578);
+          dc.field_a = dc.field_a + param1.readUnsignedShort(-25578);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "fb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "fb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class fb extends uf {
           this.field_h = param0;
           this.field_l = param3;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -151,9 +151,9 @@ final class fb extends uf {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_n[0][var0] = ad.a(ad.a(ad.a(var8 << 16, ad.a(var10 << 24, ad.a(ad.a(ad.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32))), var4 << 8), var12);
+            field_n[0][var0] = TutorialController.a(TutorialController.a(TutorialController.a(var8 << 16, TutorialController.a(var10 << 24, TutorialController.a(TutorialController.a(TutorialController.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32))), var4 << 8), var12);
             for (var14 = 1; 8 > var14; var14++) {
-                field_n[var14][var0] = ad.a(field_n[-1 + var14][var0] >>> 8, field_n[var14 - 1][var0] << 56);
+                field_n[var14][var0] = TutorialController.a(field_n[-1 + var14][var0] >>> 8, field_n[var14 - 1][var0] << 56);
             }
             var0++;
         }

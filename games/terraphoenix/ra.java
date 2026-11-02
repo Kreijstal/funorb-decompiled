@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends uf {
-    static pk field_l;
+final class ra extends IntrusiveNode {
+    static BitmapFont field_l;
     int field_n;
     static String field_m;
     static String field_j;
@@ -48,7 +48,7 @@ final class ra extends uf {
           this.field_k = param2;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

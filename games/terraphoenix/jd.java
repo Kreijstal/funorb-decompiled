@@ -10,15 +10,15 @@ final class jd extends vc {
     private long field_n;
     private long field_h;
 
-    final static void a(int param0, fa param1, fa param2) {
+    final static void a(int param0, Archive param1, Archive param2) {
         try {
           if (param0 < 106) {
-            jd.a(-74, (fa) null, (fa) null);
+            jd.a(-74, (Archive) null, (Archive) null);
           }
           sj.field_f = param1;
           dm.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,14 +48,14 @@ final class jd extends vc {
           return 1;
         }
         var4 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           this.field_k = this.field_k + param1;
           var4++;
           stackIn_6_0 = 10;
           do {
             if (stackIn_6_0 > var4 &&
               this.field_n > this.field_k) {
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_6_0 = $cfr$lcmp(this.field_k, this.field_n);
           } while (var5 != 0);
@@ -69,14 +69,14 @@ final class jd extends vc {
     }
 
     final static void a(boolean param0, int param1) {
-        uf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         cc var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (cc) (qb.field_a.d(9272));
+          var4 = (cc) (qb.field_a.beginBackward(9272));
           do {
             if (var4 == null) {
               if (param0) {
@@ -85,12 +85,12 @@ final class jd extends vc {
               break;
             }
             ia.a(param1, var4, -118);
-            var4 = (cc) (qb.field_a.e((byte) -119));
+            var4 = (cc) (qb.field_a.nextBackward((byte) -119));
           } while (var3 == 0);
-          var2 = qc.field_a.d(9272);
+          var2 = qc.field_a.beginBackward(9272);
           while (var2 != null) {
             da.a(0, param1);
-            var2 = qc.field_a.e((byte) -119);
+            var2 = qc.field_a.nextBackward((byte) -119);
             if (var3 != 0) {
               return;
             }
@@ -99,7 +99,7 @@ final class jd extends vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "jd.D(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "jd.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class jd extends vc {
             while (true) {
               if (this.field_m < var8) {
                 if (param0 >= -29) {
-                  jd.a(69, (fa) null, (fa) null);
+                  jd.a(69, (Archive) null, (Archive) null);
                 }
                 return var6 / (long)this.field_m;
               }
@@ -151,7 +151,7 @@ final class jd extends vc {
             break;
           }
           if (param0 >= -29) {
-            jd.a(69, (fa) null, (fa) null);
+            jd.a(69, (Archive) null, (Archive) null);
             return var6Lifetime1 / (long)this.field_m;
           }
           break;
@@ -163,49 +163,49 @@ final class jd extends vc {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
-          uf.field_f.b(param3, param0);
+          IntrusiveNode.field_f.b(param3, param0);
           if (!param2) {
             return;
           }
-          var4 = 2 * (el.field_e % uf.field_f.field_r);
-          if (var4 >= uf.field_f.field_r) {
-            var4 = uf.field_f.field_r - var4 + uf.field_f.field_r;
+          var4 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+          if (var4 >= IntrusiveNode.field_f.field_r) {
+            var4 = IntrusiveNode.field_f.field_r - var4 + IntrusiveNode.field_f.field_r;
           }
           if (var4 < 10) {
             var4 = 10;
             if ((Terraphoenix.field_V != 0) &&
-              (var4 > -40 + uf.field_f.field_r)) {
-              var4 = -40 + uf.field_f.field_r;
+              (var4 > -40 + IntrusiveNode.field_f.field_r)) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           } else {
-            if (var4 > -40 + uf.field_f.field_r) {
-              var4 = -40 + uf.field_f.field_r;
+            if (var4 > -40 + IntrusiveNode.field_f.field_r) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           }
-          lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4, 0, 80);
+          lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4, 0, 80);
           return;
         }
         jd.a(false, -74);
-        uf.field_f.b(param3, param0);
+        IntrusiveNode.field_f.b(param3, param0);
         if (!param2) {
           return;
         }
-        var4Lifetime1 = 2 * (el.field_e % uf.field_f.field_r);
-        if (var4Lifetime1 >= uf.field_f.field_r) {
-          var4Lifetime1 = uf.field_f.field_r - var4Lifetime1 + uf.field_f.field_r;
+        var4Lifetime1 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+        if (var4Lifetime1 >= IntrusiveNode.field_f.field_r) {
+          var4Lifetime1 = IntrusiveNode.field_f.field_r - var4Lifetime1 + IntrusiveNode.field_f.field_r;
         }
         if (var4Lifetime1 < 10) {
           var4Lifetime1 = 10;
           if ((Terraphoenix.field_V != 0) &&
-            (var4Lifetime1 > -40 + uf.field_f.field_r)) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+            (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r)) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         } else {
-          if (var4Lifetime1 > -40 + uf.field_f.field_r) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+          if (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         }
-        lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
+        lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
     }
 
     final void b(int param0) {
@@ -253,14 +253,14 @@ final class jd extends vc {
             je.field_a[var2_int] = 0;
             var2_int++;
           } while (var5 == 0);
-          L4: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             if (var2_int < am.field_J) {
               stackIn_11_0 = ra.field_i[var2_int].field_l;
               stackIn_11_1 = param0.field_l;
               if (var5 != 0) {
                 if (stackIn_11_0 <= stackIn_11_1) {
-                  break L4;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder1 = false;
               }
@@ -275,7 +275,7 @@ final class jd extends vc {
             }
             if ((decompiledFrameRemainder1) &&
               (param1 <= -93)) {
-              break L4;
+              break scanLoop1;
             }
             field_i = (String) null;
             break;
@@ -324,7 +324,7 @@ final class jd extends vc {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -348,49 +348,49 @@ final class jd extends vc {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
-          uf.field_f.b(param3, param0);
+          IntrusiveNode.field_f.b(param3, param0);
           if (!param2) {
             return;
           }
-          var4 = 2 * (el.field_e % uf.field_f.field_r);
-          if (var4 >= uf.field_f.field_r) {
-            var4 = uf.field_f.field_r - var4 + uf.field_f.field_r;
+          var4 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+          if (var4 >= IntrusiveNode.field_f.field_r) {
+            var4 = IntrusiveNode.field_f.field_r - var4 + IntrusiveNode.field_f.field_r;
           }
           if (var4 < 10) {
             var4 = 10;
             if ((Terraphoenix.field_V != 0) &&
-              (var4 > -40 + uf.field_f.field_r)) {
-              var4 = -40 + uf.field_f.field_r;
+              (var4 > -40 + IntrusiveNode.field_f.field_r)) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           } else {
-            if (var4 > -40 + uf.field_f.field_r) {
-              var4 = -40 + uf.field_f.field_r;
+            if (var4 > -40 + IntrusiveNode.field_f.field_r) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           }
-          lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4, 0, 80);
+          lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4, 0, 80);
           return;
         }
         jd.a(false, -74);
-        uf.field_f.b(param3, param0);
+        IntrusiveNode.field_f.b(param3, param0);
         if (!param2) {
           return;
         }
-        var4Lifetime1 = 2 * (el.field_e % uf.field_f.field_r);
-        if (var4Lifetime1 >= uf.field_f.field_r) {
-          var4Lifetime1 = uf.field_f.field_r - var4Lifetime1 + uf.field_f.field_r;
+        var4Lifetime1 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+        if (var4Lifetime1 >= IntrusiveNode.field_f.field_r) {
+          var4Lifetime1 = IntrusiveNode.field_f.field_r - var4Lifetime1 + IntrusiveNode.field_f.field_r;
         }
         if (var4Lifetime1 < 10) {
           var4Lifetime1 = 10;
           if ((Terraphoenix.field_V != 0) &&
-            (var4Lifetime1 > -40 + uf.field_f.field_r)) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+            (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r)) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         } else {
-          if (var4Lifetime1 > -40 + uf.field_f.field_r) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+          if (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         }
-        lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
+        lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
     }
 
     private static int $cfr$lcmp(long left, long right) {

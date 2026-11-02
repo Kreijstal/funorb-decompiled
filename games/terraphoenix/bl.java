@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bl {
-    static ci[] field_b;
+    static Sprite[] field_b;
     static boolean field_e;
     static int field_f;
-    static fa field_a;
+    static Archive field_a;
     static String field_c;
     static String field_g;
     static long field_h;
     static String field_d;
 
-    final static void a(byte param0, fa param1) {
+    final static void a(byte param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2491_0;
             StringBuilder stackIn_2491_1;
@@ -22,9 +22,9 @@ final class bl {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            fa param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, fa initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2491_0 = null;
@@ -40,71 +40,71 @@ final class bl {
                 nj.field_i = param1;
                 var2 = il.a((byte) 85, "achievement_names,0");
                 if (var2 != null) {
-                  b.field_g[0] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 107, "achievement_names,1");
                 if (null != var2) {
-                  b.field_g[1] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "achievement_names,2");
                 if (null != var2) {
-                  b.field_g[2] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 93, "achievement_names,3");
                 if (null != var2) {
-                  b.field_g[3] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 97, "achievement_names,4");
                 if (var2 != null) {
-                  b.field_g[4] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 73, "achievement_names,5");
                 if (null != var2) {
-                  b.field_g[5] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "achievement_names,6");
                 if (var2 != null) {
-                  b.field_g[6] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "achievement_names,7");
                 if (null != var2) {
-                  b.field_g[7] = ll.a(sl.a((int) param0, 96), var2);
+                  RandomAccessCacheFile.field_g[7] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 71, "achievement_names,8");
                 if (null != var2) {
-                  b.field_g[8] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[8] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 127, "achievement_names,9");
                 if (var2 != null) {
-                  b.field_g[9] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[9] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 72, "achievement_names,10");
                 if (var2 != null) {
-                  b.field_g[10] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[10] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 100, "achievement_names,11");
                 if (var2 != null) {
-                  b.field_g[11] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[11] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 92, "achievement_names,12");
                 if (null != var2) {
-                  b.field_g[12] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 85, "achievement_names,13");
                 if (null != var2) {
-                  b.field_g[13] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[13] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "achievement_names,14");
                 if (null != var2) {
-                  b.field_g[14] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "achievement_names,15");
                 if (null != var2) {
-                  b.field_g[15] = ll.a(param0 - 96, var2);
+                  RandomAccessCacheFile.field_g[15] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 115, "achievement_names,16");
                 if (null != var2) {
-                  b.field_g[16] = ll.a(0, var2);
+                  RandomAccessCacheFile.field_g[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 79, "points");
                 if (var2 != null) {
@@ -128,7 +128,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 124, "lowwalls");
                 if (var2 != null) {
-                  vh.field_h = ll.a(0, var2);
+                  DualLinkNode.field_h = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 99, "coverterr");
                 if (var2 != null) {
@@ -244,7 +244,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 100, "canpressundo");
                 if (var2 != null) {
-                  mj.field_c = ll.a(0, var2);
+                  SocketConnector.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 115, "efficency");
                 if (null != var2) {
@@ -252,7 +252,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 126, "basescore");
                 if (null != var2) {
-                  dl.field_o = ll.a(0, var2);
+                  MapTile.field_o = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "makeanaccounttosave");
                 if (null != var2) {
@@ -276,7 +276,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 122, "yes");
                 if (null != var2) {
-                  el.field_c = ll.a(0, var2);
+                  ClientException.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "no");
                 if (null != var2) {
@@ -288,7 +288,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 123, "savingwilloverwrite");
                 if (null != var2) {
-                  gl.field_t = ll.a(0, var2);
+                  UiWidget.field_t = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 77, "backtoms");
                 if (var2 != null) {
@@ -344,7 +344,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "launching");
                 if (null != var2) {
-                  jm.field_a = ll.a(0, var2);
+                  DelegatingCanvas.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "hasdied");
                 if (var2 != null) {
@@ -412,7 +412,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 109, "pressltoreload");
                 if (var2 != null) {
-                  ql.field_f = ll.a(0, var2);
+                  ProxySocketConnector.field_f = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 84, "closemap");
                 if (var2 != null) {
@@ -424,15 +424,15 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "selectready");
                 if (var2 != null) {
-                  fa.field_e = ll.a(0, var2);
+                  Archive.field_e = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "selectsprint");
                 if (null != var2) {
-                  db.field_a = ll.a(0, var2);
+                  MouseInputHandler.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "togglescematic");
                 if (var2 != null) {
-                  of.field_i = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_i = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 120, "movetolevel");
                 if (var2 != null) {
@@ -444,7 +444,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 105, "selectnextfriend");
                 if (var2 != null) {
-                  sd.field_f = ll.a(0, var2);
+                  QuickChatMenu.field_f = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "centreonunit");
                 if (var2 != null) {
@@ -452,7 +452,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 99, "select");
                 if (var2 != null) {
-                  ne.field_b = ll.a(param0 - 96, var2);
+                  SecondaryNodeDequeIterator.field_b = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 125, "recruitnew");
                 if (null != var2) {
@@ -464,7 +464,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 97, "build");
                 if (null != var2) {
-                  c.field_b = ll.a(0, var2);
+                  NodeHashTableIterator.field_b = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "remove");
                 if (var2 != null) {
@@ -472,11 +472,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 95, "andactivateauto");
                 if (null != var2) {
-                  gl.field_h = ll.a(0, var2);
+                  UiWidget.field_h = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "andreturntomove");
                 if (var2 != null) {
-                  td.field_a = ll.a(0, var2);
+                  IndexedSpriteState.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 117, "reload");
                 if (null != var2) {
@@ -508,7 +508,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "enemyturn");
                 if (null != var2) {
-                  mk.field_f = ll.a(0, var2);
+                  LevelEditor.field_f = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "clicktocontinue");
                 if (null != var2) {
@@ -552,7 +552,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 117, "armourcolon");
                 if (null != var2) {
-                  of.field_n = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_n = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "damagecolon");
                 if (var2 != null) {
@@ -784,87 +784,87 @@ final class bl {
                 }
                 var2 = il.a((byte) 104, "weaponresearchnames,0");
                 if (var2 != null) {
-                  of.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 119, "weaponresearchnames,1");
                 if (var2 != null) {
-                  of.field_h[1] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "weaponresearchnames,2");
                 if (var2 != null) {
-                  of.field_h[2] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "weaponresearchnames,3");
                 if (null != var2) {
-                  of.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 92, "weaponresearchnames,4");
                 if (var2 != null) {
-                  of.field_h[4] = ll.a(param0 - 96, var2);
+                  ImageProducerRasterBuffer.field_h[4] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 80, "weaponresearchnames,5");
                 if (null != var2) {
-                  of.field_h[5] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[5] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 127, "weaponresearchnames,6");
                 if (var2 != null) {
-                  of.field_h[6] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 91, "weaponresearchnames,7");
                 if (null != var2) {
-                  of.field_h[7] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 100, "weaponresearchnames,8");
                 if (null != var2) {
-                  of.field_h[8] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[8] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "weaponresearchnames,9");
                 if (var2 != null) {
-                  of.field_h[9] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[9] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "weaponresearchnames,10");
                 if (var2 != null) {
-                  of.field_h[10] = ll.a(param0 - 96, var2);
+                  ImageProducerRasterBuffer.field_h[10] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 81, "weaponresearchnames,11");
                 if (null != var2) {
-                  of.field_h[11] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[11] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "weaponresearchnames,12");
                 if (null != var2) {
-                  of.field_h[12] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "weaponresearchnames,13");
                 if (var2 != null) {
-                  of.field_h[13] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[13] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 75, "weaponresearchnames,14");
                 if (var2 != null) {
-                  of.field_h[14] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 105, "weaponresearchnames,15");
                 if (null != var2) {
-                  of.field_h[15] = ll.a(param0 - 96, var2);
+                  ImageProducerRasterBuffer.field_h[15] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 99, "weaponresearchnames,16");
                 if (var2 != null) {
-                  of.field_h[16] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "weaponresearchnames,17");
                 if (var2 != null) {
-                  of.field_h[17] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[17] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "weaponresearchnames,18");
                 if (var2 != null) {
-                  of.field_h[18] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[18] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "weaponresearchnames,19");
                 if (null != var2) {
-                  of.field_h[19] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[19] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 94, "weaponresearchnames,20");
                 if (null != var2) {
-                  of.field_h[20] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[20] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,0");
                 if (var2 != null) {
@@ -1230,31 +1230,31 @@ final class bl {
                 }
                 var2 = il.a((byte) 119, "instructions4,0");
                 if (null != var2) {
-                  ij.field_a[0] = ll.a(sl.a((int) param0, 96), var2);
+                  MessageKeys.field_a[0] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 105, "instructions4,1");
                 if (null != var2) {
-                  ij.field_a[1] = ll.a(0, var2);
+                  MessageKeys.field_a[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 118, "instructions4,2");
                 if (var2 != null) {
-                  ij.field_a[2] = ll.a(sl.a((int) param0, 96), var2);
+                  MessageKeys.field_a[2] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 100, "instructions4,3");
                 if (null != var2) {
-                  ij.field_a[3] = ll.a(0, var2);
+                  MessageKeys.field_a[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "instructions4,4");
                 if (null != var2) {
-                  ij.field_a[4] = ll.a(0, var2);
+                  MessageKeys.field_a[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "instructions4,5");
                 if (null != var2) {
-                  ij.field_a[5] = ll.a(0, var2);
+                  MessageKeys.field_a[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 104, "instructions4,6");
                 if (null != var2) {
-                  ij.field_a[6] = ll.a(0, var2);
+                  MessageKeys.field_a[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "instructions5,0");
                 if (var2 != null) {
@@ -1398,7 +1398,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 125, "noresearchfac");
                 if (var2 != null) {
-                  r.field_kb = ll.a(param0 - 96, var2);
+                  BattleUnit.field_kb = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 84, "noresearchres");
                 if (null != var2) {
@@ -1414,7 +1414,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 86, "captain");
                 if (null != var2) {
-                  cf.field_c = ll.a(param0 ^ 96, var2);
+                  GameKeyHandler.field_c = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 82, "benefits_in,0");
                 if (null != var2) {
@@ -1442,7 +1442,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 91, "GameName");
                 if (var2 != null) {
-                  b.field_c = ll.a(0, var2);
+                  RandomAccessCacheFile.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "down_a_mission");
                 if (var2 != null) {
@@ -1458,7 +1458,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 78, "_1000pts");
                 if (null != var2) {
-                  jm.field_e = ll.a(0, var2);
+                  DelegatingCanvas.field_e = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "_2500pts");
                 if (null != var2) {
@@ -1474,7 +1474,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 94, "_6000pts");
                 if (null != var2) {
-                  c.field_c = ll.a(0, var2);
+                  NodeHashTableIterator.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 106, "_10000pts");
                 if (var2 != null) {
@@ -1502,11 +1502,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 89, "Grunt_with_shielded_armour");
                 if (var2 != null) {
-                  qe.field_g = ll.a(0, var2);
+                  IsaacCipher.field_g = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 104, "Squiddy_with_shielded_armour");
                 if (null != var2) {
-                  fa.field_c = ll.a(0, var2);
+                  Archive.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "Squiddy_Commander");
                 if (var2 != null) {
@@ -1514,7 +1514,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 120, "Soldier");
                 if (null != var2) {
-                  vh.field_n = ll.a(0, var2);
+                  DualLinkNode.field_n = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "Turret");
                 if (var2 != null) {
@@ -1530,7 +1530,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 80, "Kenetic_projection_armour");
                 if (var2 != null) {
-                  qe.field_j = ll.a(param0 - 96, var2);
+                  IsaacCipher.field_j = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 71, "Alien_scale_mail");
                 if (var2 != null) {
@@ -1554,7 +1554,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 89, "MODELNAME_SMG");
                 if (var2 != null) {
-                  sd.field_a = ll.a(0, var2);
+                  QuickChatMenu.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 96, "MODELNAME_LMG");
                 if (null != var2) {
@@ -1582,7 +1582,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 92, "MODELNAME_PULGUN");
                 if (null != var2) {
-                  ij.field_c = ll.a(param0 - 96, var2);
+                  MessageKeys.field_c = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 95, "MODELNAME_PULGREN");
                 if (null != var2) {
@@ -2144,7 +2144,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 79, "diffeasy");
                 if (var2 != null) {
-                  gl.field_i = ll.a(0, var2);
+                  UiWidget.field_i = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "diffnorm");
                 if (var2 != null) {
@@ -2172,7 +2172,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 102, "startnewgame");
                 if (var2 != null) {
-                  ij.field_e = ll.a(0, var2);
+                  MessageKeys.field_e = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 73, "continuesavedgame");
                 if (var2 != null) {
@@ -2196,7 +2196,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 102, "finalscore");
                 if (var2 != null) {
-                  jb.field_c = ll.a(param0 ^ 96, var2);
+                  MouseWheelInput.field_c = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 115, "hardmodeunlocked");
                 if (var2 != null) {
@@ -2232,7 +2232,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 122, "act4");
                 if (var2 != null) {
-                  ce.field_d = ll.a(0, var2);
+                  IterableNodeHashTable.field_d = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 98, "act3");
                 if (null != var2) {
@@ -2440,7 +2440,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 111, "enterresearch");
                 if (null != var2) {
-                  td.field_h = ll.a(0, var2);
+                  IndexedSpriteState.field_h = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 111, "equipsoldiers");
                 if (var2 != null) {
@@ -2480,353 +2480,353 @@ final class bl {
                 }
                 var2 = il.a((byte) 76, "tutorialtext,0");
                 if (null != var2) {
-                  kl.field_d[0] = ll.a(0, var2);
+                  TutorialText.field_d[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "tutorialtext,1");
                 if (null != var2) {
-                  kl.field_d[1] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[1] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 115, "tutorialtext,2");
                 if (null != var2) {
-                  kl.field_d[2] = ll.a(0, var2);
+                  TutorialText.field_d[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "tutorialtext,3");
                 if (var2 != null) {
-                  kl.field_d[3] = ll.a(0, var2);
+                  TutorialText.field_d[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 105, "tutorialtext,4");
                 if (null != var2) {
-                  kl.field_d[4] = ll.a(0, var2);
+                  TutorialText.field_d[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 115, "tutorialtext,5");
                 if (var2 != null) {
-                  kl.field_d[5] = ll.a(0, var2);
+                  TutorialText.field_d[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 94, "tutorialtext,6");
                 if (null != var2) {
-                  kl.field_d[6] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[6] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 126, "tutorialtext,7");
                 if (var2 != null) {
-                  kl.field_d[7] = ll.a(0, var2);
+                  TutorialText.field_d[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 100, "tutorialtext,8");
                 if (var2 != null) {
-                  kl.field_d[8] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[8] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 85, "tutorialtext,9");
                 if (null != var2) {
-                  kl.field_d[9] = ll.a(0, var2);
+                  TutorialText.field_d[9] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 104, "tutorialtext,10");
                 if (null != var2) {
-                  kl.field_d[10] = ll.a(0, var2);
+                  TutorialText.field_d[10] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 76, "tutorialtext,11");
                 if (null != var2) {
-                  kl.field_d[11] = ll.a(0, var2);
+                  TutorialText.field_d[11] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "tutorialtext,12");
                 if (var2 != null) {
-                  kl.field_d[12] = ll.a(0, var2);
+                  TutorialText.field_d[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 72, "tutorialtext,13");
                 if (null != var2) {
-                  kl.field_d[13] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[13] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 77, "tutorialtext,14");
                 if (var2 != null) {
-                  kl.field_d[14] = ll.a(0, var2);
+                  TutorialText.field_d[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "tutorialtext,15");
                 if (null != var2) {
-                  kl.field_d[15] = ll.a(0, var2);
+                  TutorialText.field_d[15] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 100, "tutorialtext,16");
                 if (var2 != null) {
-                  kl.field_d[16] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[16] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 124, "tutorialtext,17");
                 if (var2 != null) {
-                  kl.field_d[17] = ll.a(0, var2);
+                  TutorialText.field_d[17] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 96, "tutorialtext,18");
                 if (null != var2) {
-                  kl.field_d[18] = ll.a(0, var2);
+                  TutorialText.field_d[18] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 120, "tutorialtext,19");
                 if (null != var2) {
-                  kl.field_d[19] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[19] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 80, "tutorialtext,20");
                 if (var2 != null) {
-                  kl.field_d[20] = ll.a(0, var2);
+                  TutorialText.field_d[20] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 104, "tutorialtext,21");
                 if (null != var2) {
-                  kl.field_d[21] = ll.a(0, var2);
+                  TutorialText.field_d[21] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "tutorialtext,22");
                 if (var2 != null) {
-                  kl.field_d[22] = ll.a(0, var2);
+                  TutorialText.field_d[22] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 84, "tutorialtext,23");
                 if (null != var2) {
-                  kl.field_d[23] = ll.a(0, var2);
+                  TutorialText.field_d[23] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 91, "tutorialtext,24");
                 if (null != var2) {
-                  kl.field_d[24] = ll.a(0, var2);
+                  TutorialText.field_d[24] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "tutorialtext,25");
                 if (var2 != null) {
-                  kl.field_d[25] = ll.a(0, var2);
+                  TutorialText.field_d[25] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "tutorialtext,26");
                 if (null != var2) {
-                  kl.field_d[26] = ll.a(0, var2);
+                  TutorialText.field_d[26] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "tutorialtext,27");
                 if (var2 != null) {
-                  kl.field_d[27] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[27] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 96, "tutorialtext,28");
                 if (null != var2) {
-                  kl.field_d[28] = ll.a(0, var2);
+                  TutorialText.field_d[28] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 80, "tutorialtext,29");
                 if (null != var2) {
-                  kl.field_d[29] = ll.a(0, var2);
+                  TutorialText.field_d[29] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 74, "tutorialtext,30");
                 if (var2 != null) {
-                  kl.field_d[30] = ll.a(0, var2);
+                  TutorialText.field_d[30] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 76, "tutorialtext,31");
                 if (null != var2) {
-                  kl.field_d[31] = ll.a(0, var2);
+                  TutorialText.field_d[31] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 111, "tutorialtext,32");
                 if (null != var2) {
-                  kl.field_d[32] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[32] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 93, "tutorialtext,33");
                 if (null != var2) {
-                  kl.field_d[33] = ll.a(0, var2);
+                  TutorialText.field_d[33] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "tutorialtext,34");
                 if (null != var2) {
-                  kl.field_d[34] = ll.a(0, var2);
+                  TutorialText.field_d[34] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "tutorialtext,35");
                 if (var2 != null) {
-                  kl.field_d[35] = ll.a(0, var2);
+                  TutorialText.field_d[35] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 77, "tutorialtext,36");
                 if (var2 != null) {
-                  kl.field_d[36] = ll.a(0, var2);
+                  TutorialText.field_d[36] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 79, "tutorialtext,37");
                 if (null != var2) {
-                  kl.field_d[37] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[37] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 105, "tutorialtext,38");
                 if (null != var2) {
-                  kl.field_d[38] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[38] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 90, "tutorialtext,39");
                 if (var2 != null) {
-                  kl.field_d[39] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[39] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 109, "tutorialtext,40");
                 if (var2 != null) {
-                  kl.field_d[40] = ll.a(0, var2);
+                  TutorialText.field_d[40] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 85, "tutorialtext,41");
                 if (null != var2) {
-                  kl.field_d[41] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[41] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 87, "tutorialtext,42");
                 if (null != var2) {
-                  kl.field_d[42] = ll.a(0, var2);
+                  TutorialText.field_d[42] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "tutorialtext,43");
                 if (var2 != null) {
-                  kl.field_d[43] = ll.a(0, var2);
+                  TutorialText.field_d[43] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 123, "tutorialtext,44");
                 if (null != var2) {
-                  kl.field_d[44] = ll.a(0, var2);
+                  TutorialText.field_d[44] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 90, "tutorialtext,45");
                 if (var2 != null) {
-                  kl.field_d[45] = ll.a(0, var2);
+                  TutorialText.field_d[45] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 117, "tutorialtext,46");
                 if (null != var2) {
-                  kl.field_d[46] = ll.a(0, var2);
+                  TutorialText.field_d[46] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "tutorialtext,47");
                 if (null != var2) {
-                  kl.field_d[47] = ll.a(0, var2);
+                  TutorialText.field_d[47] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 106, "tutorialtext,48");
                 if (var2 != null) {
-                  kl.field_d[48] = ll.a(0, var2);
+                  TutorialText.field_d[48] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 84, "tutorialtext,49");
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  kl.field_d[49] = ll.a(0, var2);
+                  TutorialText.field_d[49] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 106, "tutorialtext,50");
                 if (null != var2) {
-                  kl.field_d[50] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[50] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 72, "tutorialtext,51");
                 if (var2 != null) {
-                  kl.field_d[51] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[51] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 126, "tutorialtext,52");
                 if (null != var2) {
-                  kl.field_d[52] = ll.a(0, var2);
+                  TutorialText.field_d[52] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "tutorialtext,53");
                 if (null != var2) {
-                  kl.field_d[53] = ll.a(0, var2);
+                  TutorialText.field_d[53] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 127, "tutorialtext,54");
                 if (null != var2) {
-                  kl.field_d[54] = ll.a(0, var2);
+                  TutorialText.field_d[54] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 103, "tutorialtext,55");
                 if (var2 != null) {
-                  kl.field_d[55] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[55] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 104, "tutorialtext,56");
                 if (null != var2) {
-                  kl.field_d[56] = ll.a(0, var2);
+                  TutorialText.field_d[56] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "tutorialtext,57");
                 if (null != var2) {
-                  kl.field_d[57] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[57] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 90, "tutorialtext,58");
                 if (var2 != null) {
-                  kl.field_d[58] = ll.a(0, var2);
+                  TutorialText.field_d[58] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 127, "tutorialtext,59");
                 if (null != var2) {
-                  kl.field_d[59] = ll.a(0, var2);
+                  TutorialText.field_d[59] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "tutorialtext,60");
                 if (null != var2) {
-                  kl.field_d[60] = ll.a(0, var2);
+                  TutorialText.field_d[60] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "tutorialtext,61");
                 if (null != var2) {
-                  kl.field_d[61] = ll.a(0, var2);
+                  TutorialText.field_d[61] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 121, "tutorialtext,62");
                 if (null != var2) {
-                  kl.field_d[62] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[62] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 113, "tutorialtext,63");
                 if (var2 != null) {
-                  kl.field_d[63] = ll.a(0, var2);
+                  TutorialText.field_d[63] = ll.a(0, var2);
                 }
                 var2 = il.a(param0, "tutorialtext,64");
                 if (var2 != null) {
-                  kl.field_d[64] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[64] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 71, "tutorialtext,65");
                 if (null != var2) {
-                  kl.field_d[65] = ll.a(0, var2);
+                  TutorialText.field_d[65] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "tutorialtext,66");
                 if (null != var2) {
-                  kl.field_d[66] = ll.a(0, var2);
+                  TutorialText.field_d[66] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "tutorialtext,67");
                 if (var2 != null) {
-                  kl.field_d[67] = ll.a(0, var2);
+                  TutorialText.field_d[67] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "tutorialtext,68");
                 if (null != var2) {
-                  kl.field_d[68] = ll.a(0, var2);
+                  TutorialText.field_d[68] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "tutorialtext,69");
                 if (null != var2) {
-                  kl.field_d[69] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[69] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 99, "tutorialtext,70");
                 if (null != var2) {
-                  kl.field_d[70] = ll.a(0, var2);
+                  TutorialText.field_d[70] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "tutorialtext,71");
                 if (var2 != null) {
-                  kl.field_d[71] = ll.a(0, var2);
+                  TutorialText.field_d[71] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 113, "tutorialtext,72");
                 if (var2 != null) {
-                  kl.field_d[72] = ll.a(param0 - 96, var2);
+                  TutorialText.field_d[72] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 126, "tutorialtext,73");
                 if (var2 != null) {
-                  kl.field_d[73] = ll.a(0, var2);
+                  TutorialText.field_d[73] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 118, "tutorialtext,74");
                 if (null != var2) {
-                  kl.field_d[74] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[74] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 82, "tutorialtext,75");
                 if (var2 != null) {
-                  kl.field_d[75] = ll.a(0, var2);
+                  TutorialText.field_d[75] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 72, "tutorialtext,76");
                 if (var2 != null) {
-                  kl.field_d[76] = ll.a(0, var2);
+                  TutorialText.field_d[76] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 108, "tutorialtext,77");
                 if (null != var2) {
-                  kl.field_d[77] = ll.a(0, var2);
+                  TutorialText.field_d[77] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "tutorialtext,78");
                 if (var2 != null) {
-                  kl.field_d[78] = ll.a(0, var2);
+                  TutorialText.field_d[78] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "tutorialtext,79");
                 if (null != var2) {
-                  kl.field_d[79] = ll.a(0, var2);
+                  TutorialText.field_d[79] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "tutorialtext,80");
                 if (var2 != null) {
-                  kl.field_d[80] = ll.a(0, var2);
+                  TutorialText.field_d[80] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "tutorialtext,81");
                 if (null != var2) {
-                  kl.field_d[81] = ll.a(0, var2);
+                  TutorialText.field_d[81] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 76, "tutorialtext,82");
                 if (null != var2) {
-                  kl.field_d[82] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[82] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "tutorialtext,83");
                 if (null != var2) {
-                  kl.field_d[83] = ll.a(0, var2);
+                  TutorialText.field_d[83] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 84, "tutorialtext,84");
                 if (null != var2) {
-                  kl.field_d[84] = ll.a(0, var2);
+                  TutorialText.field_d[84] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 127, "tutorialtext,85");
                 if (null != var2) {
-                  kl.field_d[85] = ll.a(sl.a((int) param0, 96), var2);
+                  TutorialText.field_d[85] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 102, "tutorialtext,86");
                 if (null != var2) {
-                  kl.field_d[86] = ll.a(0, var2);
+                  TutorialText.field_d[86] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "instructions_pages,0");
                 if (null != var2) {
@@ -2874,11 +2874,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 104, "keycode_COMMA");
                 if (null != var2) {
-                  uf.field_b = var2[0] & 255;
+                  IntrusiveNode.field_b = var2[0] & 255;
                 }
                 var2 = il.a((byte) 91, "keycode_FULLSTOP");
                 if (null != var2) {
-                  ne.field_e = 255 & var2[0];
+                  SecondaryNodeDequeIterator.field_e = 255 & var2[0];
                 }
                 nj.field_i = null;
             }
@@ -2903,11 +2903,11 @@ final class bl {
                   } else {
                     stackIn_2492_2 = "{...}";
                   }
-                  throw qk.a((Throwable) ((Object) stackIn_2491_0), ((StringBuilder) (Object) stackIn_2491_1).append(stackIn_2492_2).append(')').toString());
+                  throw qk.wrapException((Throwable) ((Object) stackIn_2491_0), ((StringBuilder) (Object) stackIn_2491_1).append(stackIn_2492_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2500_0 = (!eh.field_j);
-                  eh.field_j = stackIn_2500_0;
+                  stackIn_2500_0 = (!GameApplet.field_j);
+                  GameApplet.field_j = stackIn_2500_0;
                 }
             }
         }
@@ -2923,10 +2923,10 @@ final class bl {
           field_b = null;
           field_a = null;
           if (param0) {
-            field_a = (fa) null;
+            field_a = (Archive) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ')');
         }
     }
 

@@ -5,7 +5,7 @@ final class vk {
     static String field_a;
     static int field_c;
     static java.security.SecureRandom field_b;
-    static ci field_d;
+    static Sprite field_d;
 
     final static void a(int param0) {
         int var2 = 0;
@@ -17,7 +17,7 @@ final class vk {
             if (null != a.field_b &&
               a.field_b.field_d) {
               ga.b((byte) 82);
-              cl.field_J.a((gl) (new hi(cl.field_J, ql.field_e)), (byte) -1);
+              cl.field_J.a((UiWidget) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
             }
             return;
           }
@@ -33,7 +33,7 @@ final class vk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "vk.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "vk.C(" + param0 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class vk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

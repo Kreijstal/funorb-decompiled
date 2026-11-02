@@ -5,19 +5,19 @@ final class d extends jc {
     static boolean field_H;
     static int field_M;
     static String field_O;
-    private jj field_A;
-    static bg[] field_N;
+    private IntrusiveDeque field_A;
+    static IndexedSprite[] field_N;
     static int[] field_L;
-    static he field_K;
+    static PlatformTaskDispatcher field_K;
     static String field_J;
-    static nk field_I;
+    static PcmPlayerService field_I;
 
     final void b(boolean param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_A);
         kh var3 = (kh) (var2.a((byte) -13));
         if (param0) {
-          field_N = (bg[]) null;
+          field_N = (IndexedSprite[]) null;
         }
         while (var3 != null) {
           var3.field_J = false;
@@ -28,14 +28,14 @@ final class d extends jc {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = Terraphoenix.field_V;
-        if (null != this.field_l) {
-          this.field_l.a(param3, (gl) (this), param0, -24381, true);
+        if (null != this.listener) {
+          this.listener.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         k var5 = new k(this.field_A);
-        gl var6 = (gl) (var5.b(94));
+        UiWidget var6 = (UiWidget) (var5.b(94));
         while (var6 != null) {
-          var6.a(param0 + this.field_w, -122, param2, param3 + this.field_u);
-          var6 = (gl) (var5.d(-96));
+          var6.a(param0 + this.x, -122, param2, param3 + this.y);
+          var6 = (UiWidget) (var5.d(-96));
         }
         if (param1 > -106) {
           field_H = false;
@@ -47,28 +47,28 @@ final class d extends jc {
         k var2 = new k(this.field_A);
         kh var3 = (kh) (var2.a((byte) -13));
         if (param0 < 122) {
-          field_I = (nk) null;
+          field_I = (PcmPlayerService) null;
         }
         while (var3 != null) {
           if (var3.f((byte) -121)) {
-            var3.b((byte) 12);
+            var3.unlink((byte) 12);
           }
           var3 = (kh) (var2.c(101));
         }
-        this.field_F = (gl) ((Object) this.c(true));
+        this.field_F = (UiWidget) ((Object) this.c(true));
     }
 
     final kh c(boolean param0) {
         k var2;
         kh var3;
         int var4;
-        gl var5;
+        UiWidget var5;
         var4 = Terraphoenix.field_V;
         var2 = new k(this.field_A);
         var3 = (kh) (var2.a((byte) -13));
         if (!param0) {
-          var5 = (gl) null;
-          this.a((gl) null, (byte) -108);
+          var5 = (UiWidget) null;
+          this.a((UiWidget) null, (byte) -108);
         }
         while (var3 != null) {
           if (var3.field_J) {
@@ -80,8 +80,8 @@ final class d extends jc {
     }
 
     public d() {
-        super(0, 0, vk.field_c, be.field_v, (cj) null, (sc) null);
-        this.field_A = new jj();
+        super(0, 0, vk.field_c, be.field_v, (WidgetActionListener) null, (sc) null);
+        this.field_A = new IntrusiveDeque();
     }
 
     final void h(byte param0) {
@@ -91,13 +91,13 @@ final class d extends jc {
         kh var3 = (kh) (var2.a((byte) -13));
         while (var3 != null) {
           if (var3.i(113)) {
-            var3.b((byte) 12);
+            var3.unlink((byte) 12);
           }
           var3 = (kh) (var2.c(8));
         }
     }
 
-    final gl e(byte param0) {
+    final UiWidget e(byte param0) {
         k var2;
         kh var3;
         int var4;
@@ -126,7 +126,7 @@ final class d extends jc {
         int var1 = 17 / ((54 - param0) / 56);
     }
 
-    final void a(gl param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         kh var3 = null;
         if (!(param0 instanceof kh)) {
           throw new IllegalArgumentException();
@@ -136,11 +136,11 @@ final class d extends jc {
         }
         try {
           var3 = (kh) (param0);
-          this.field_A.a((uf) (var3), (byte) 0);
+          this.field_A.a((IntrusiveNode) (var3), (byte) 0);
           var3.field_J = true;
-          var3.a((byte) 14, (gl) (this));
+          var3.a((byte) 14, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

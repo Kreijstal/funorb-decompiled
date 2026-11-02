@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bi {
-    static fa field_b;
+    static Archive field_b;
     static String field_c;
     static String field_a;
-    static fa field_d;
+    static Archive field_d;
 
     final static oa a(int param0, String param1) {
         int var2_int = 0;
@@ -26,7 +26,7 @@ final class bi {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_8_0 = b.field_f;
+              stackIn_8_0 = RandomAccessCacheFile.field_f;
               return stackIn_8_0;
             }
             if (param0 != -29456) {
@@ -54,7 +54,7 @@ final class bi {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class bi {
             var6 = (java.awt.Component) null;
             bi.a(-13, 13, 17, (java.awt.Component) null);
           }
-          qe.field_f = k.field_b;
+          IsaacCipher.field_f = k.field_b;
           if (param0 != 255) {
             if (param0 < 100) {
               wl.field_Q = aj.a(param0, (byte) 113, param1);
@@ -109,7 +109,7 @@ final class bi {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -121,22 +121,22 @@ final class bi {
           field_a = null;
           return;
         }
-        field_d = (fa) null;
+        field_d = (Archive) null;
         field_d = null;
         field_c = null;
         field_a = null;
     }
 
-    final static te a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer a(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          te var5 = null;
-          of var5_ref = null;
-          te stackIn_2_0 = null;
-          te stackIn_4_0 = null;
-          of stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -145,20 +145,20 @@ final class bi {
             try {
               var4 = Class.forName("ri");
               if (param1 >= -70) {
-                stackIn_2_0 = (te) null;
+                stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5 = (te) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param0, param2, (byte) -36, param3);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new of();
-              ((te) ((Object) var5_ref)).a(param0, param2, (byte) -36, param3);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param0, param2, (byte) -36, param3);
               stackIn_6_0 = var5_ref;
-              return (te) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -170,7 +170,7 @@ final class bi {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

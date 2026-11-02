@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk implements cj {
+final class sk implements WidgetActionListener {
     private int field_e;
     private int field_i;
     private int field_j;
@@ -11,11 +11,11 @@ final class sk implements cj {
     static String field_a;
     private int field_c;
     static String field_d;
-    private pk field_g;
+    private BitmapFont field_g;
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
-        gl stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -29,28 +29,28 @@ final class sk implements cj {
         var11 = Terraphoenix.field_V;
         try {
           if (param1 instanceof wi) {
-            stackIn_4_0 = (gl) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (wi) (stackIn_4_0);
           if (var12 == null) {
           }
-          l.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_c);
-          var7 = -(2 * var12.field_M) + param1.field_p;
-          var8 = var12.field_M + param2 + param1.field_w;
-          var9 = var12.field_K + (param0 + param1.field_u);
-          l.c(var8, var9, var8 + var7, var9, this.field_j);
+          SoftwareRasterizer.f(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_c);
+          var7 = -(2 * var12.field_M) + param1.width;
+          var8 = var12.field_M + param2 + param1.x;
+          var9 = var12.field_K + (param0 + param1.y);
+          SoftwareRasterizer.c(var8, var9, var8 + var7, var9, this.field_j);
           if (param3 != -24381) {
             sk.a(false);
           }
           for (var10 = -1 + var12.g(1); var10 >= 0; var10--) {
-            l.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
+            SoftwareRasterizer.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
           }
           if (null == this.field_g) {
             return;
           }
-          this.field_g.c(var12.field_o, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
+          this.field_g.c(var12.text, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class sk implements cj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class sk implements cj {
         }
     }
 
-    sk(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    sk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param4;
           this.field_f = param2;
@@ -85,7 +85,7 @@ final class sk implements cj {
           this.field_e = param5;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

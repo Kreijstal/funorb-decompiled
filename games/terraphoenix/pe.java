@@ -9,7 +9,7 @@ final class pe {
     static og field_a;
     static int field_e;
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, he param7, int param8) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
         try {
           rf.field_v = param0;
           mc.field_b = param7;
@@ -26,7 +26,7 @@ final class pe {
           t.field_c = new wh(param7);
           i.field_a = new qi(jg.field_kb, t.field_c);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class pe {
         }
     }
 
-    final static void a(int param0, pk param1, int param2, pk param3) {
+    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3) {
         if (param2 != 48) {
           return;
         }
@@ -49,10 +49,10 @@ final class pe {
           da.field_h = param1;
           qk.field_a = param3;
           ch.field_c = param0;
-          tb.a(l.field_k / 2, 21361, l.field_j / 2);
+          tb.a(SoftwareRasterizer.field_k / 2, 21361, SoftwareRasterizer.field_j / 2);
           aj.a(param3.field_p + param3.field_u, param2 - 19653, param1.field_p + param1.field_u, param3.field_u, param1.field_u);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class wb extends IOException {
     static int field_g;
     static volatile boolean field_d;
     static int field_f;
-    static bg[] field_h;
+    static IndexedSprite[] field_h;
     static int field_e;
     static int field_c;
     static ak[] field_b;

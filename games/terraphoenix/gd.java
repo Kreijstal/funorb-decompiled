@@ -66,11 +66,11 @@ final class gd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, ci[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -94,14 +94,14 @@ final class gd {
             var7 = param1[1].field_q;
             param1[0].b(param2, param0);
             param1[2].b(param2 + param4 - var6, param0);
-            l.b(vl.field_e);
-            l.i(param2 + var5_int, param0, param2 - (-param4 + var6), param0 + param1[1].field_u);
+            SoftwareRasterizer.b(vl.field_e);
+            SoftwareRasterizer.i(param2 + var5_int, param0, param2 - (-param4 + var6), param0 + param1[1].field_u);
             var8 = param2 + var5_int;
             var9 = -var6 + (param2 + param4);
             for (param2 = var8; var9 > param2; param2 = param2 + var7) {
               param1[1].b(param2, param0);
             }
-            l.a(vl.field_e);
+            SoftwareRasterizer.a(vl.field_e);
             return;
           }
           return;
@@ -115,7 +115,7 @@ final class gd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

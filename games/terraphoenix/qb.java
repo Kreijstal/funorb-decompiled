@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qb {
-    static bg field_c;
-    static jj field_a;
-    static ci[] field_f;
+    static IndexedSprite field_c;
+    static IntrusiveDeque field_a;
+    static Sprite[] field_f;
     static String field_d;
     static fd field_b;
     static rj field_h;
     static String field_e;
     static int field_g;
 
-    final static bg a(String param0, byte param1, String param2, fa param3) {
+    final static IndexedSprite a(String param0, byte param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bg stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -30,7 +30,7 @@ final class qb {
           }
           var4_int = param3.c(-1, param2);
           var5 = param3.a(param1 - 90, var4_int, param0);
-          stackIn_3_0 = jj.a(param3, var5, (byte) 18, var4_int);
+          stackIn_3_0 = IntrusiveDeque.a(param3, var5, (byte) 18, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class qb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -115,27 +115,27 @@ final class qb {
           if (param0 != 0) {
             return;
           }
-          var13 = mk.field_j;
+          var13 = LevelEditor.field_j;
           var15 = var13;
-          var2 = var15.a(param0 ^ -16384);
-          var3 = (ja) (vd.field_l.d(9272));
+          var2 = var15.readUnsignedByte(param0 ^ -16384);
+          var3 = (ja) (vd.field_l.beginBackward(9272));
           while (var3 != null) {
             if (var3.field_o != var2) {
-              var3 = (ja) (vd.field_l.e((byte) -119));
+              var3 = (ja) (vd.field_l.nextBackward((byte) -119));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            gb.g(-17464);
+            WidgetContainer.g(-17464);
             return;
           }
-          var4 = var15.a(-16384);
+          var4 = var15.readUnsignedByte(-16384);
           if (var4 != 0) {
-            eh.field_k[0] = kj.field_f;
+            GameApplet.field_k[0] = kj.field_f;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              eh.field_k[var6_int] = var13.e(param0 - 1);
+              GameApplet.field_k[var6_int] = var13.readString(param0 - 1);
             }
             le.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -154,12 +154,12 @@ final class qb {
             var10 = 0;
             while (var8 > var9) {
               var11 = pf.field_b[var9];
-              var6[0][var10] = eh.field_k[var11];
+              var6[0][var10] = GameApplet.field_k[var11];
               var19[0][4 * var10] = a.field_c[var11];
               var19[0][var10 * 4 + 1] = oa.field_a[var11];
               var19[0][2 + var10 * 4] = oa.field_c[var11];
               var19[0][3 + 4 * var10] = dd.field_L[var11];
-              if (me.a(122, eh.field_k[var11]) &&
+              if (me.a(122, GameApplet.field_k[var11]) &&
                 dd.field_L[var11] + oa.field_a[var11] + oa.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -172,12 +172,12 @@ final class qb {
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = pf.field_b[var9Lifetime1 + var5];
-              var6[1][var14] = eh.field_k[var11Lifetime1];
+              var6[1][var14] = GameApplet.field_k[var11Lifetime1];
               var19[1][4 * var14] = a.field_c[var11Lifetime1];
               var19[1][1 + var14 * 4] = oa.field_a[var11Lifetime1];
               var19[1][2 + var14 * 4] = oa.field_c[var11Lifetime1];
               var19[1][3 + var14 * 4] = dd.field_L[var11Lifetime1];
-              if (me.a(-88, eh.field_k[var11Lifetime1]) &&
+              if (me.a(-88, GameApplet.field_k[var11Lifetime1]) &&
                 0 == oa.field_c[var11Lifetime1] + (oa.field_a[var11Lifetime1] + dd.field_L[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;
@@ -185,21 +185,21 @@ final class qb {
               var14++;
               var9Lifetime1++;
             }
-            var3.b((byte) 12);
+            var3.unlink((byte) 12);
             return;
           }
-          var3.b((byte) 12);
+          var3.unlink((byte) 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "qb.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "qb.A(" + param0 + ')');
         }
     }
 
     static {
         field_d = "Music: ";
-        field_a = new jj();
+        field_a = new IntrusiveDeque();
         field_h = new rj();
         field_g = 64;
     }

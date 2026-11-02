@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea implements cj {
+final class ea implements WidgetActionListener {
     private int field_a;
     private int field_e;
     private int field_l;
     static boolean field_j;
-    private pk field_h;
+    private BitmapFont field_h;
     private int field_b;
     private int field_p;
     private int field_i;
@@ -20,8 +20,8 @@ final class ea implements cj {
     private int field_q;
     static String field_n;
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
-        gl stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -36,7 +36,7 @@ final class ea implements cj {
           if (!(param1 instanceof df)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (gl) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var11 = (df) (stackIn_3_0);
           if (var11 != null) {
@@ -49,18 +49,18 @@ final class ea implements cj {
           if (param4) {
             var7 = 16777215;
           }
-          l.f(param1.field_w + param2, param1.field_u + param0, param1.field_p, param1.field_n, this.field_q);
-          var8 = param1.field_w + (param2 + this.field_g);
-          var9 = this.field_l + (param1.field_u + param0);
-          l.d(var8, var9, this.field_i, this.field_e, 5592405);
-          l.f(var8, var9, this.field_i, this.field_e, var7);
+          SoftwareRasterizer.f(param1.x + param2, param1.y + param0, param1.width, param1.height, this.field_q);
+          var8 = param1.x + (param2 + this.field_g);
+          var9 = this.field_l + (param1.y + param0);
+          SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, 5592405);
+          SoftwareRasterizer.f(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_C) {
-            l.c(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
-            l.c(this.field_i + var8, var9, var8, var9 + this.field_e, 1);
+            SoftwareRasterizer.c(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
+            SoftwareRasterizer.c(this.field_i + var8, var9, var8, var9 + this.field_e, 1);
           }
           if (this.field_h != null) {
             var10 = this.field_i + this.field_g + this.field_a;
-            this.field_h.a(param1.field_o, param1.field_w + param2 + var10, this.field_b + (param0 + param1.field_u), param1.field_p - this.field_a - var10, param1.field_n - (this.field_a << 1), this.field_p, this.field_f, this.field_c, this.field_d, 0);
+            this.field_h.a(param1.text, param1.x + param2 + var10, this.field_b + (param0 + param1.y), param1.width - this.field_a - var10, param1.height - (this.field_a << 1), this.field_p, this.field_f, this.field_c, this.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class ea implements cj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -90,11 +90,11 @@ final class ea implements cj {
         return true;
     }
 
-    final static void a(java.math.BigInteger param0, dh param1, int param2, java.math.BigInteger param3, dh param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, int param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          ia.a(param2, param4, (byte) -75, param3, param0, param1.field_k, param1.field_i);
+          ia.a(param2, param4, (byte) -75, param3, param0, param1.position, param1.payload);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,11 +111,11 @@ final class ea implements cj {
             field_j = true;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            jb.field_d[var1_intLifetime1] = 0L;
+            MouseWheelInput.field_d[var1_intLifetime1] = 0L;
           }
           bb.field_d = 0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ea.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ea.D(" + param0 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class ea implements cj {
         }
     }
 
-    ea(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ea(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_c = 1;
         this.field_d = 1;
         try {
@@ -142,7 +142,7 @@ final class ea implements cj {
           this.field_p = param3;
           this.field_g = param5;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

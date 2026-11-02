@@ -5,10 +5,10 @@ abstract class ke {
     static int field_f;
     static int field_e;
     static int field_c;
-    static ci field_b;
-    static fa field_d;
+    static Sprite field_b;
+    static Archive field_d;
     static String field_g;
-    static bg[] field_a;
+    static IndexedSprite[] field_a;
 
     final static void a(byte param0) {
         if (param0 > -100) {
@@ -33,7 +33,7 @@ abstract class ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "ke.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "ke.E(" + param0 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ abstract class ke {
           ll.a(var3, var4, (byte) 116, param0, var2);
           int var6 = -64 / ((param1 + 40) / 38);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-abstract class jc extends gl implements sf {
+abstract class jc extends UiWidget implements sf {
     static String field_E;
-    gl field_F;
-    static ci[] field_G;
+    UiWidget field_F;
+    static Sprite[] field_G;
     static String field_B;
     static int field_D;
-    static dh field_z;
+    static PacketBuffer field_z;
     static String[] field_C;
 
     String f(int param0) {
@@ -36,24 +36,24 @@ abstract class jc extends gl implements sf {
         }
     }
 
-    jc(int param0, int param1, int param2, int param3, cj param4, sc param5) {
+    jc(int param0, int param1, int param2, int param3, WidgetActionListener param4, sc param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < 45) {
-          gl var7 = (gl) null;
-          this.a((byte) -18, (gl) null);
+          UiWidget var7 = (UiWidget) null;
+          this.a((byte) -18, (UiWidget) null);
         }
         super.a(param0, (byte) 72, param2, param3, param4);
         this.a(0);
     }
 
-    gl e(byte param0) {
+    UiWidget e(byte param0) {
         if (param0 != 82) {
-          return (gl) null;
+          return (UiWidget) null;
         }
-        gl var2 = this.field_F;
+        UiWidget var2 = this.field_F;
         if (var2 == null) {
           return null;
         }
@@ -65,11 +65,11 @@ abstract class jc extends gl implements sf {
 
     void a(int param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
-          null != this.field_l) {
-          this.field_l.a(param3, (gl) (this), param0, -24381, true);
+          null != this.listener) {
+          this.listener.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         if (null != this.field_F) {
-          this.field_F.a(this.field_w + param0, -124, param2, this.field_u + param3);
+          this.field_F.a(this.x + param0, -124, param2, this.y + param3);
         }
         if (param1 >= -106) {
           this.a(25, (byte) -75, -102, -86, -98);
@@ -89,13 +89,13 @@ abstract class jc extends gl implements sf {
 
     final boolean d(int param0) {
         if (param0 > -103) {
-          gl var3 = (gl) null;
-          this.a((byte) -109, (gl) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a((byte) -109, (UiWidget) null);
         }
         return null != this.e((byte) 82) ? true : false;
     }
 
-    private final boolean a(int param0, gl param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -118,25 +118,25 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, 75);
         if (param3 <= 25) {
           return;
         }
         try {
           if (null != this.field_F) {
-            this.field_F.a(param0, param1 + this.field_u, this.field_w + param2, 57);
+            this.field_F.a(param0, param1 + this.y, this.x + param2, 57);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -147,7 +147,7 @@ abstract class jc extends gl implements sf {
             field_E = (String) null;
           }
           if (null != this.field_F) {
-            this.field_F.a(47, param1, this.field_u + param2, param3 + this.field_w, param4, param5);
+            this.field_F.a(47, param1, this.y + param2, param3 + this.x, param4, param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +160,7 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ abstract class jc extends gl implements sf {
         return this.field_F == null ? 0 : this.field_F.d((byte) 93);
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_13_0 = false;
@@ -208,11 +208,11 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final boolean a(gl param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -235,13 +235,13 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void e(int param0) {
         if (param0 >= 0) {
-          field_G = (ci[]) null;
+          field_G = (Sprite[]) null;
         }
         if (this.field_F != null) {
           this.field_F.e(-87);
@@ -289,11 +289,11 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -304,7 +304,7 @@ abstract class jc extends gl implements sf {
           if (param0) {
             return false;
           }
-          stackIn_7_0 = (null != this.field_F) && (this.field_F.a(false, param1, this.field_u + param2, param3 + this.field_w, param4, param5, param6));
+          stackIn_7_0 = (null != this.field_F) && (this.field_F.a(false, param1, this.y + param2, param3 + this.x, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,11 +316,11 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, gl param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -343,11 +343,11 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final boolean a(gl param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -370,7 +370,7 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ abstract class jc extends gl implements sf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

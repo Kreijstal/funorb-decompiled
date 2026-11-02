@@ -19,7 +19,7 @@ final class na extends ei {
           int var4_int = -26 / ((32 - param2) / 55);
           ta.a(fh.field_x, param0, 10);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "na.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "na.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,15 +70,15 @@ final class na extends ei {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, byte param2) {
         super.a(param0, param1, param2);
-        be.field_x.c(this.field_eb, param0 + (this.field_p >> 1), param1 + 103, 16777215, -1);
+        be.field_x.c(this.field_eb, param0 + (this.width >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_bb) {
-          l.d(20 + param0, -7 + (120 + param1), 260, 8421504);
+          SoftwareRasterizer.d(20 + param0, -7 + (120 + param1), 260, 8421504);
           be.field_x.a(this.field_bb, 20 + param0, param1 + 128, 260, 100, 16777215, -1, 1, 0, be.field_x.field_s);
         }
     }
@@ -109,7 +109,7 @@ final class na extends ei {
           this.field_cb.field_P = true;
           this.b((byte) 95, this.field_cb);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

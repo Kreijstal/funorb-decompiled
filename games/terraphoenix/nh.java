@@ -4,7 +4,7 @@
 final class nh extends rf {
     static String field_D;
     byte field_G;
-    dh field_H;
+    PacketBuffer field_H;
     static int[] field_E;
     int field_F;
 
@@ -52,7 +52,7 @@ final class nh extends rf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -122,11 +122,11 @@ final class nh extends rf {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
-    final static boolean a(fa param0, fa param1, boolean param2, fa param3) {
+    final static boolean a(Archive param0, Archive param1, boolean param2, Archive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -177,7 +177,7 @@ final class nh extends rf {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -188,8 +188,8 @@ final class nh extends rf {
         if (this.field_A) {
           throw new RuntimeException();
         }
-        if (-this.field_G + this.field_H.field_i.length <= this.field_H.field_k) {
-          return this.field_H.field_i;
+        if (-this.field_G + this.field_H.payload.length <= this.field_H.position) {
+          return this.field_H.payload;
         }
         throw new RuntimeException();
     }
@@ -202,7 +202,7 @@ final class nh extends rf {
           return 0;
         }
         if (param0 == 0) {
-          return 100 * this.field_H.field_k / (this.field_H.field_i.length - this.field_G);
+          return 100 * this.field_H.position / (this.field_H.payload.length - this.field_G);
         }
         return -30;
     }

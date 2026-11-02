@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends uf {
+final class nd extends IntrusiveNode {
     String[][] field_p;
     static int field_k;
     boolean field_m;
@@ -23,7 +23,7 @@ final class nd extends uf {
             field_r = 88;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class nd extends uf {
           var21Lifetime2 = ob.field_b;
           var22Lifetime2 = ob.field_c;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param0.field_m) {
               var24Lifetime1 = param0.field_D[var23Lifetime2];
@@ -131,7 +131,7 @@ final class nd extends uf {
                 if (stackIn_62_0 < stackIn_62_1) {
                   stackIn_71_0 = ~ph.field_m.length;
                   stackIn_71_1 = ~var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -175,13 +175,13 @@ final class nd extends uf {
                   var25Lifetime1Lifetime1 = param0.field_i[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_w[var23Lifetime2];
                   ec.field_a[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16);
-                  dl.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
+                  MapTile.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
                   lm.field_a[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + (var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_c[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_q[var23Lifetime2];
-                  ad.field_u[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
-                  nf.field_f[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
+                  TutorialController.field_u[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
+                  PcmPlayerPump.field_f[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
                   hj.field_J[var23Lifetime2] = (var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_O[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
@@ -219,7 +219,7 @@ final class nd extends uf {
                   stackIn_71_0 = ~ph.field_m.length;
                   stackIn_71_1 = ~var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_71_0 >= stackIn_71_1) {
                     break;
@@ -262,7 +262,7 @@ final class nd extends uf {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class nd extends uf {
         try {
           qc.a(true, true, 106);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "nd.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "nd.E(" + param0 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class nd extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "nd.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "nd.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -314,14 +314,14 @@ final class nd extends uf {
           var1 = lk.c(-62);
           mb.field_s = new uh(var1, (String) null, true, false, false);
           var2 = -47 % ((-58 - param0) / 40);
-          jl.field_I.a((gl) (bj.field_f), (byte) -1);
+          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           bj.field_f.a(mb.field_s, -67);
           bj.field_f.j(-2065096856);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "nd.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "nd.D(" + param0 + ')');
         }
     }
 

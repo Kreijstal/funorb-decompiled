@@ -53,7 +53,7 @@ abstract class af implements rc {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_ee = cm.field_b[var3];
             var4_ref_ee.c((byte) 41);
-            ad.a(var3, -6);
+            TutorialController.a(var3, -6);
             var5 = var4_ref_ee.field_r + var4_ref_ee.field_K >> 1;
             var6 = var4_ref_ee.field_M + var4_ref_ee.field_a >> 1;
             var7 = var4_ref_ee.field_t + var4_ref_ee.field_v >> 1;
@@ -73,9 +73,9 @@ abstract class af implements rc {
           var8Lifetime1 = bk.a((byte) 92, var6Lifetime1) >> 8;
           var9Lifetime1 = im.a(var6Lifetime1, true) >> 8;
           if (-1 != ef.field_j &&
-            jb.field_b != -1) {
+            MouseWheelInput.field_b != -1) {
             var9Lifetime1 = -128;
-            var8Lifetime1 = 240 - jb.field_b;
+            var8Lifetime1 = 240 - MouseWheelInput.field_b;
             var7Lifetime1 = -320 + ef.field_j;
           }
           if (param0 != -2766) {
@@ -101,9 +101,9 @@ abstract class af implements rc {
             }
             var21[var16] = -2147483648;
             var17 = cm.field_b[var16];
-            ad.a(var16, -6);
+            TutorialController.a(var16, -6);
             for (var18 = 0; 3 > var18; var18++) {
-              ld.field_a[var18] = ld.field_a[var18] + vh.field_j[var15][var18];
+              ld.field_a[var18] = ld.field_a[var18] + DualLinkNode.field_j[var15][var18];
             }
             nd.a(var17, true, ik.field_c, 37, false, ld.field_a, false);
             lm.a(var17, var13Lifetime1, var7Lifetime1, var12Lifetime1, var9Lifetime1, 0, var8Lifetime1, var14);
@@ -112,7 +112,7 @@ abstract class af implements rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "af.S(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "af.S(" + param0 + ')');
         }
     }
 
@@ -149,7 +149,7 @@ abstract class af implements rc {
         return this.e(0);
     }
 
-    final static int a(String param0, pk param1, int param2, String[] param3, int param4) {
+    final static int a(String param0, BitmapFont param1, int param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -186,7 +186,7 @@ abstract class af implements rc {
           }
           if (param2 != -3) {
             var14 = (String[]) null;
-            af.a((String) null, (pk) null, 80, (String[]) null, 47);
+            af.a((String) null, (BitmapFont) null, 80, (String[]) null, 47);
           }
           var6 = (-1 + var5_int + param4) / param4;
           param4 = var5_int / var6;
@@ -243,7 +243,7 @@ abstract class af implements rc {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
         }
     }
 

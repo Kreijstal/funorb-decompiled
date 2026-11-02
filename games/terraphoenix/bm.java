@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bm {
-    private ci[] field_a;
+    private Sprite[] field_a;
     static String field_b;
     static String field_c;
 
@@ -29,10 +29,10 @@ final class bm {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        l.e(param1, param0, 16, 0);
+        SoftwareRasterizer.e(param1, param0, 16, 0);
         if (param2 >= 126) {
-          l.e(param1, param0, 12, 16777215);
-          l.e(param1, param0, 8, 0);
+          SoftwareRasterizer.e(param1, param0, 12, 16777215);
+          SoftwareRasterizer.e(param1, param0, 8, 0);
           return;
         }
     }
@@ -51,47 +51,47 @@ final class bm {
         uc var8 = null;
         mb var9 = null;
         var7 = Terraphoenix.field_V;
-        var8 = mk.field_j;
+        var8 = LevelEditor.field_j;
         var2 = var8;
-        var3 = var8.a(-16384);
+        var3 = var8.readUnsignedByte(-16384);
         if (param1 != 0) {
           field_c = (String) null;
         }
         im.field_c = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         ng.field_s = stackIn_5_0;
-        da.field_d = var8.a(-16384);
+        da.field_d = var8.readUnsignedByte(-16384);
         pl.field_Q = var8.h((byte) 78);
         if (im.field_c != 2) {
           ji.field_k = 0;
           wb.field_c = 0;
         } else {
-          wb.field_c = var8.i(-25578);
+          wb.field_c = var8.readUnsignedShort(-25578);
           ji.field_k = var8.d((byte) -114);
         }
-        stackIn_11_0 = (var8.a(-16384) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(-16384) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        ge.field_c = var8.e(-1);
+        ge.field_c = var8.readString(-1);
         if (var4 != 0) {
-          wh.field_a = var8.e(-1);
+          wh.field_a = var8.readString(-1);
         } else {
           wh.field_a = ge.field_c;
         }
         if (im.field_c == 1) {
-          var8.i(-25578);
-          var8.e(-1);
+          var8.readUnsignedShort(-25578);
+          var8.readString(-1);
         } else {
           if (im.field_c == 4) {
-            var8.i(-25578);
-            var8.e(-1);
+            var8.readUnsignedShort(-25578);
+            var8.readString(-1);
           }
         }
         if (!param0) {
-          ea.field_n = ui.a(80, var8, param1 ^ -48);
-          ui.field_e = null;
+          ea.field_n = AdminCheatOverlay.a(80, var8, param1 ^ -48);
+          AdminCheatOverlay.field_e = null;
           return new dc(param0);
         }
-        var5 = var8.i(-25578);
+        var5 = var8.readUnsignedShort(-25578);
         try {
           var9 = fl.field_c.a(true, var5);
           ea.field_n = var9.a(false);
@@ -100,23 +100,23 @@ final class bm {
           } else {
             stackIn_24_0 = null;
           }
-          ui.field_e = stackIn_24_0;
+          AdminCheatOverlay.field_e = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          bd.a((Throwable) ((Object) var6), "CC1", -77);
-          ui.field_e = null;
+          bd.reportClientError((Throwable) ((Object) var6), "CC1", -77);
+          AdminCheatOverlay.field_e = null;
           ea.field_n = null;
           return new dc(param0);
         }
         return new dc(param0);
     }
 
-    bm(ci[] param0) {
+    bm(Sprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class bm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

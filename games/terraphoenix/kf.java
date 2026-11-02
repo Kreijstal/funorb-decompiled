@@ -32,7 +32,7 @@ final class kf {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class kf {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -107,7 +107,7 @@ final class kf {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,11 +126,11 @@ final class kf {
           }
           ll.a(this.field_d, 31536000L, (byte) -126, param0, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "kf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "kf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static qd a(int param0, byte param1, fa param2) {
+    final static qd a(int param0, byte param1, Archive param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -157,7 +157,7 @@ final class kf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -16,7 +16,7 @@ final class ab {
     static int field_k;
     static Calendar field_l;
     static String field_m;
-    static fa field_a;
+    static Archive field_a;
 
     final static int b(int param0) {
         if (param0 != -27737) {
@@ -28,9 +28,9 @@ final class ab {
     final static String c(int param0) {
         if (param0 != -14700) {
           ab.c(23);
-          return mk.field_j.e(-1);
+          return LevelEditor.field_j.readString(-1);
         }
-        return mk.field_j.e(-1);
+        return LevelEditor.field_j.readString(-1);
     }
 
     final static void a(byte param0) {

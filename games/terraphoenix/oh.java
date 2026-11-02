@@ -44,7 +44,7 @@ final class oh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class oh {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class oh {
         field_b = null;
     }
 
-    final static ci[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_13_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_26_0 = 0;
@@ -207,11 +207,11 @@ final class oh {
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
         int var9 = 0;
-        ci[] var10 = null;
-        ci[] var11_ref_ci__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_ci__ = null;
         int var11 = 0;
         int var12 = 0;
-        ci var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -222,46 +222,46 @@ final class oh {
         var15 = Terraphoenix.field_V;
         var9 = param1 + (param6 + param5);
         if (param2 != 1) {
-          return (ci[]) null;
+          return (Sprite[]) null;
         }
-        var10 = new ci[]{new ci(var9, var9), new ci(param3, var9), new ci(var9, var9), new ci(var9, param3), new ci(64, 64), new ci(var9, param3), new ci(var9, var9), new ci(param3, var9), new ci(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
         var11_ref_ci__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var12 < var11_ref_ci__.length) {
             var13 = var11_ref_ci__[var12];
             stackIn_13_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_13_0;
-            while (var13.field_z.length > var14) {
-              var13.field_z[var14] = param7;
+            while (var13.pixels.length > var14) {
+              var13.pixels[var14] = param7;
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_13_0 = 0;
           break;
         }
         var11 = stackIn_13_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (param6 > var11) {
             stackIn_24_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_24_0;
             while (var9 > var12Lifetime1) {
-              var10[6].field_z[(var9 - var11 - 1) * var9 + var12Lifetime1] = param4;
-              var10[8].field_z[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param4;
-              var10[2].field_z[var12Lifetime1 * var9 - 1 + (var9 - var11)] = param4;
-              var10[8].field_z[var12Lifetime1 * var9 - (var11 + (1 - var9))] = param4;
+              var10[6].pixels[(var9 - var11 - 1) * var9 + var12Lifetime1] = param4;
+              var10[8].pixels[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param4;
+              var10[2].pixels[var12Lifetime1 * var9 - 1 + (var9 - var11)] = param4;
+              var10[8].pixels[var12Lifetime1 * var9 - (var11 + (1 - var9))] = param4;
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_24_0 = 0;
           break;
@@ -275,13 +275,13 @@ final class oh {
             if (var15 == 0) {
               var12Lifetime2 = stackIn_36_0;
               while (var12Lifetime2 < var9) {
-                var10[0].field_z[var12Lifetime2 + var11Lifetime1 * var9] = param0;
-                var10[0].field_z[var12Lifetime2 * var9 + var11Lifetime1] = param0;
+                var10[0].pixels[var12Lifetime2 + var11Lifetime1 * var9] = param0;
+                var10[0].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param0;
                 stackIn_26_0 = var12Lifetime2;
                 stackIn_26_1 = -var11Lifetime1 + var9;
                 if (stackIn_26_0 < stackIn_26_1) {
-                  var10[2].field_z[var9 * var11Lifetime1 + var12Lifetime2] = param0;
-                  var10[6].field_z[var9 * var12Lifetime2 + var11Lifetime1] = param0;
+                  var10[2].pixels[var9 * var11Lifetime1 + var12Lifetime2] = param0;
+                  var10[6].pixels[var9 * var12Lifetime2 + var11Lifetime1] = param0;
                 }
                 var12Lifetime2++;
               }
@@ -292,35 +292,35 @@ final class oh {
             stackIn_36_0 = 0;
           }
           var11Lifetime1 = stackIn_36_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (param3 > var11Lifetime1) {
               stackIn_47_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_47_0;
               while (var12Lifetime2Lifetime1 < param6) {
-                var10[7].field_z[var11Lifetime1 + param3 * (var9 + (-var12Lifetime2Lifetime1 - 1))] = param4;
-                var10[5].field_z[var9 * var11Lifetime1 - var12Lifetime2Lifetime1 + var9 - 1] = param4;
-                var10[1].field_z[param3 * var12Lifetime2Lifetime1 + var11Lifetime1] = param0;
-                var10[3].field_z[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param0;
+                var10[7].pixels[var11Lifetime1 + param3 * (var9 + (-var12Lifetime2Lifetime1 - 1))] = param4;
+                var10[5].pixels[var9 * var11Lifetime1 - var12Lifetime2Lifetime1 + var9 - 1] = param4;
+                var10[1].pixels[param3 * var12Lifetime2Lifetime1 + var11Lifetime1] = param0;
+                var10[3].pixels[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param0;
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_47_0 = 0;
             break;
           }
           var11Lifetime1 = stackIn_47_0;
-          L25: while (var11Lifetime1 < param3 >> 1) {
+          scanLoop4: while (var11Lifetime1 < param3 >> 1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
-                var10[1].field_z[param3 * (-1 + (-var12Lifetime2Lifetime2 + var9)) + var11Lifetime1] = param8;
-                var10[3].field_z[-var12Lifetime2Lifetime2 + (-1 + (var9 + var11Lifetime1 * var9))] = param8;
-                var10[7].field_z[var12Lifetime2Lifetime2 * param3 + var11Lifetime1] = param8;
-                var10[5].field_z[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param8;
+                var10[1].pixels[param3 * (-1 + (-var12Lifetime2Lifetime2 + var9)) + var11Lifetime1] = param8;
+                var10[3].pixels[-var12Lifetime2Lifetime2 + (-1 + (var9 + var11Lifetime1 * var9))] = param8;
+                var10[7].pixels[var12Lifetime2Lifetime2 * param3 + var11Lifetime1] = param8;
+                var10[5].pixels[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param8;
                 var12Lifetime2Lifetime2++;
                 if (var15 == 0) {
                   continue;
@@ -331,7 +331,7 @@ final class oh {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }

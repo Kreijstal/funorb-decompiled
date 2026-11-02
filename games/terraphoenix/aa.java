@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends uf {
+final class aa extends IntrusiveNode {
     int field_o;
-    static ci field_j;
+    static Sprite field_j;
     int field_h;
     int field_n;
     int[] field_p;
@@ -18,7 +18,7 @@ final class aa extends uf {
         field_j = null;
         field_r = null;
         if (!param0) {
-          field_j = (ci) null;
+          field_j = (Sprite) null;
           field_k = null;
           return;
         }
@@ -36,30 +36,30 @@ final class aa extends uf {
           this.field_q = param7;
           int var9_int = 22 % ((5 - param6) / 38);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static nd a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Terraphoenix.field_V;
-        nd var5 = (nd) (r.field_Q.d(9272));
+        nd var5 = (nd) (BattleUnit.field_Q.beginBackward(9272));
         while (var5 != null) {
           if (~param2 == ~var5.field_s) {
             return var5;
           }
-          var5 = (nd) (r.field_Q.e((byte) -119));
+          var5 = (nd) (BattleUnit.field_Q.nextBackward((byte) -119));
         }
         var5 = new nd();
         var5.field_j = param1;
         var5.field_s = param2;
         var5.field_n = param4;
-        r.field_Q.a(var5, -16611);
+        BattleUnit.field_Q.a(var5, -16611);
         if (param0 == 8166) {
-          gb.a((byte) 15, var5, param3);
+          WidgetContainer.a((byte) 15, var5, param3);
           return var5;
         }
         aa.a(2, 40, -127, -46, 80);
-        gb.a((byte) 15, var5, param3);
+        WidgetContainer.a((byte) 15, var5, param3);
         return var5;
     }
 

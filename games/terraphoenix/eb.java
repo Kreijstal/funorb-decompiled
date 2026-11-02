@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class eb extends gl {
+class eb extends UiWidget {
     static volatile int field_F;
     static String[] field_J;
     static String field_E;
@@ -16,7 +16,7 @@ class eb extends gl {
     boolean field_A;
     boolean field_C;
 
-    boolean a(char param0, gl param1, int param2, int param3) {
+    boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -42,7 +42,7 @@ class eb extends gl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -57,27 +57,27 @@ class eb extends gl {
         int var3 = 79 % ((param1 - 80) / 44);
         uc var2 = di.field_l;
         var2.k(-17410, param0);
-        var2.i(1, -106);
-        var2.i(2, 73);
+        var2.writeByte(1, -106);
+        var2.writeByte(2, 73);
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, 108);
           if (param3 < 25) {
-            gl var6 = (gl) null;
-            this.a((byte) -51, (gl) null);
+            UiWidget var6 = (UiWidget) null;
+            this.a((byte) -51, (UiWidget) null);
           }
           if (this.field_j != 0 &&
             this.field_j != oh.field_f) {
-            if (this.a(param2, param1, false, jb.field_b, ef.field_j) &&
+            if (this.a(param2, param1, false, MouseWheelInput.field_b, ef.field_j) &&
               oh.field_f == 0) {
-              this.a(jb.field_b - param1, this.field_j, (byte) -2, ef.field_j - param2);
+              this.a(MouseWheelInput.field_b - param1, this.field_j, (byte) -2, ef.field_j - param2);
             }
-            this.a(110, ef.field_j, param1, param2, jb.field_b, param0);
+            this.a(110, ef.field_j, param1, param2, MouseWheelInput.field_b, param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ class eb extends gl {
         field_J = null;
     }
 
-    boolean a(byte param0, gl param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -109,7 +109,7 @@ class eb extends gl {
               if (!(this.field_r instanceof kc)) {
                 return true;
               }
-              ((kc) (this.field_r)).a(true, (gl) (this), this.field_H);
+              ((kc) (this.field_r)).a(true, (UiWidget) (this), this.field_H);
             }
             return true;
           }
@@ -124,14 +124,14 @@ class eb extends gl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final void e(int param0) {
         if (param0 >= 0) {
-          gl var3 = (gl) null;
-          this.a((gl) null, 7, -73, -28);
+          UiWidget var3 = (UiWidget) null;
+          this.a((UiWidget) null, 7, -73, -28);
           if (!this.field_H) {
             return;
           }
@@ -142,7 +142,7 @@ class eb extends gl {
           if (!(this.field_r instanceof kc)) {
             return;
           }
-          ((kc) (this.field_r)).a(true, (gl) (this), this.field_H);
+          ((kc) (this.field_r)).a(true, (UiWidget) (this), this.field_H);
           return;
         }
         if (!this.field_H) {
@@ -155,10 +155,10 @@ class eb extends gl {
         if (!(this.field_r instanceof kc)) {
           return;
         }
-        ((kc) (this.field_r)).a(true, (gl) (this), this.field_H);
+        ((kc) (this.field_r)).a(true, (UiWidget) (this), this.field_H);
     }
 
-    boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -189,7 +189,7 @@ class eb extends gl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -200,14 +200,14 @@ class eb extends gl {
         }
         try {
           var3.k(-17410, param2);
-          var3.i(param0.field_o, -90);
-          var3.i(param0.field_k, 38);
+          var3.writeByte(param0.field_o, -90);
+          var3.writeByte(param0.field_k, 38);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "eb.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "eb.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    eb(String param0, cj param1, sc param2) {
+    eb(String param0, WidgetActionListener param1, sc param2) {
         super(param0, param1, param2);
         this.field_H = false;
         this.field_z = true;
@@ -222,7 +222,7 @@ class eb extends gl {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
-        gl var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -232,8 +232,8 @@ class eb extends gl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 34) {
-            var6 = (gl) null;
-            this.a((byte) 48, (gl) null);
+            var6 = (UiWidget) null;
+            this.a((byte) 48, (UiWidget) null);
           }
           if (this.a(param1, param3, -110, param2)) {
             this.a(param3, param2, (byte) 27, param1);
@@ -262,23 +262,23 @@ class eb extends gl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (null != this.field_r &&
             this.field_r instanceof ac) {
             ((ac) (this.field_r)).a(param3, param1, -110, param4, param2, this);
           }
           if (param0 < 36) {
-            gl var8 = (gl) null;
-            this.a('￐', (gl) null, 48, -89);
+            UiWidget var8 = (UiWidget) null;
+            this.a('￐', (UiWidget) null, 48, -89);
           }
           this.field_j = 0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "eb.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "eb.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -286,7 +286,7 @@ class eb extends gl {
         this.field_H = false;
         this.field_z = true;
         this.field_A = true;
-        this.field_l = vc.field_c.field_e;
+        this.listener = vc.field_c.field_e;
     }
 
     void a(int param0, int param1, byte param2, int param3) {

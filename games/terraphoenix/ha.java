@@ -52,7 +52,7 @@ final class ha extends di {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class ha extends di {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -100,24 +100,24 @@ final class ha extends di {
           ic.field_s.a(param0, -16611);
           qc.a(param1, param0, (byte) 118);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(int param0, uf param1, uf param2) {
+    final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (null != param2.field_a) {
-            param2.b((byte) 12);
+          if (null != param2.next) {
+            param2.unlink((byte) 12);
           }
           if (param0 <= 63) {
             field_p = 107;
           }
-          param2.field_a = param1.field_a;
-          param2.field_d = param1;
-          param2.field_a.field_d = param2;
-          param2.field_d.field_a = param2;
+          param2.next = param1.next;
+          param2.previous = param1;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ha.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ha.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class ha extends di {
         try {
           this.field_r = new mg(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

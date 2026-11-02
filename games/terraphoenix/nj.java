@@ -4,20 +4,20 @@
 final class nj extends ke {
     static int field_j;
     private java.nio.ByteBuffer field_h;
-    static fa field_i;
+    static Archive field_i;
     static String field_k;
-    static he field_l;
+    static PlatformTaskDispatcher field_l;
 
     final void a(byte[] param0, boolean param1) {
         try {
           this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
           if (param1) {
-            field_i = (fa) null;
+            field_i = (Archive) null;
           }
           this.field_h.position(0);
           this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "nj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "nj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

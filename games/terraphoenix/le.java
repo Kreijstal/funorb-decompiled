@@ -4,16 +4,16 @@
 import java.io.*;
 
 final class le extends di {
-    static ad field_q;
+    static TutorialController field_q;
     static rh field_n;
     static String field_m;
     static java.applet.Applet field_r;
     static String[] field_o;
     static int[] field_s;
-    static bg field_p;
+    static IndexedSprite field_p;
 
     final static String a(boolean param0) {
-        if (qe.field_f == ua.field_d) {
+        if (IsaacCipher.field_f == ua.field_d) {
           return cg.field_H;
         }
         if (param0) {
@@ -36,7 +36,7 @@ final class le extends di {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!te.a(var4, true)) {
+          if (!RasterBuffer.a(var4, true)) {
             stackIn_3_0 = qf.field_d;
             return stackIn_3_0;
           }
@@ -58,7 +58,7 @@ final class le extends di {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,9 +88,9 @@ final class le extends di {
                 !(param1 + param0 <= pf.field_b.length)) {
                 pf.field_b = new int[2 * (param1 + param0)];
               }
-              if (dl.field_y == null ||
-                !(dl.field_y.length >= param0)) {
-                dl.field_y = new boolean[param0 * 2];
+              if (MapTile.field_y == null ||
+                !(MapTile.field_y.length >= param0)) {
+                MapTile.field_y = new boolean[param0 * 2];
               }
             } else {
               if (al.field_bb.length < param0) {
@@ -99,20 +99,20 @@ final class le extends di {
                   !(param1 + param0 <= pf.field_b.length)) {
                   pf.field_b = new int[2 * (param1 + param0)];
                 }
-                if (dl.field_y == null ||
-                  !(dl.field_y.length >= param0)) {
-                  dl.field_y = new boolean[param0 * 2];
+                if (MapTile.field_y == null ||
+                  !(MapTile.field_y.length >= param0)) {
+                  MapTile.field_y = new boolean[param0 * 2];
                 }
               } else {
                 if (null == pf.field_b ||
                   !(param1 + param0 <= pf.field_b.length)) {
                   pf.field_b = new int[2 * (param1 + param0)];
                 }
-                if (dl.field_y == null) {
-                  dl.field_y = new boolean[param0 * 2];
+                if (MapTile.field_y == null) {
+                  MapTile.field_y = new boolean[param0 * 2];
                 } else {
-                  if (dl.field_y.length < param0) {
-                    dl.field_y = new boolean[param0 * 2];
+                  if (MapTile.field_y.length < param0) {
+                    MapTile.field_y = new boolean[param0 * 2];
                   }
                 }
               }
@@ -158,17 +158,17 @@ final class le extends di {
                 }
               }
             }
-            if (dl.field_y == null) {
-              dl.field_y = new boolean[param0 * 2];
+            if (MapTile.field_y == null) {
+              MapTile.field_y = new boolean[param0 * 2];
             } else {
-              if (dl.field_y.length < param0) {
-                dl.field_y = new boolean[param0 * 2];
+              if (MapTile.field_y.length < param0) {
+                MapTile.field_y = new boolean[param0 * 2];
               }
             }
           }
           bd.field_a = 2147483647;
           hm.field_L = 2147483647;
-          el.field_d = -2147483648;
+          ClientException.field_d = -2147483648;
           pb.field_b = 0;
           ok.field_j = -2147483648;
           return;
@@ -192,13 +192,13 @@ final class le extends di {
             !(param1 + param0 <= pf.field_b.length)) {
             pf.field_b = new int[2 * (param1 + param0)];
           }
-          if (dl.field_y == null ||
-            !(dl.field_y.length >= param0)) {
-            dl.field_y = new boolean[param0 * 2];
+          if (MapTile.field_y == null ||
+            !(MapTile.field_y.length >= param0)) {
+            MapTile.field_y = new boolean[param0 * 2];
           }
           bd.field_a = 2147483647;
           hm.field_L = 2147483647;
-          el.field_d = -2147483648;
+          ClientException.field_d = -2147483648;
           pb.field_b = 0;
           ok.field_j = -2147483648;
           return;
@@ -214,9 +214,9 @@ final class le extends di {
             !(param1 + param0 <= pf.field_b.length)) {
             pf.field_b = new int[2 * (param1 + param0)];
           }
-          if (dl.field_y == null ||
-            !(dl.field_y.length >= param0)) {
-            dl.field_y = new boolean[param0 * 2];
+          if (MapTile.field_y == null ||
+            !(MapTile.field_y.length >= param0)) {
+            MapTile.field_y = new boolean[param0 * 2];
           }
         } else {
           if (param0 > dd.field_L.length) {
@@ -230,14 +230,14 @@ final class le extends di {
             !(param1 + param0 <= pf.field_b.length)) {
             pf.field_b = new int[2 * (param1 + param0)];
           }
-          if (dl.field_y == null ||
-            !(dl.field_y.length >= param0)) {
-            dl.field_y = new boolean[param0 * 2];
+          if (MapTile.field_y == null ||
+            !(MapTile.field_y.length >= param0)) {
+            MapTile.field_y = new boolean[param0 * 2];
           }
         }
         bd.field_a = 2147483647;
         hm.field_L = 2147483647;
-        el.field_d = -2147483648;
+        ClientException.field_d = -2147483648;
         pb.field_b = 0;
         ok.field_j = -2147483648;
     }
@@ -286,7 +286,7 @@ final class le extends di {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -303,10 +303,10 @@ final class le extends di {
           if (od.b(255)) {
             di.field_l.k(-17410, 1);
             bc.a(0, 0);
-            gb.g(-17464);
+            WidgetContainer.g(-17464);
             return;
           }
-          gb.g(-17464);
+          WidgetContainer.g(-17464);
           return;
         }
         ga.b((byte) 111);
@@ -317,12 +317,12 @@ final class le extends di {
         rf.d((byte) 93);
         lf.a(param0);
         if (!od.b(255)) {
-          gb.g(-17464);
+          WidgetContainer.g(-17464);
           return;
         }
         di.field_l.k(-17410, 1);
         bc.a(0, 0);
-        gb.g(-17464);
+        WidgetContainer.g(-17464);
     }
 
     final static boolean a(boolean param0, byte param1) {
@@ -339,27 +339,27 @@ final class le extends di {
           if (param1 <= 82) {
             le.a(false);
           }
-          if (bd.field_k.field_d == 0) {
+          if (bd.field_k.status == 0) {
             return false;
           }
           dupTemp$1 = ll.a(1000);
           bl.field_h = dupTemp$1;
           dm.field_c = dupTemp$1;
-          if (1 != bd.field_k.field_d) {
+          if (1 != bd.field_k.status) {
             mh.field_a = ba.field_b;
           } else {
             try {
-              ig.field_e = new tf((java.net.Socket) (bd.field_k.field_e), da.field_g);
-              di.field_l.field_k = 0;
-              var4 = mk.field_j;
+              ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.result), da.field_g);
+              di.field_l.position = 0;
+              var4 = LevelEditor.field_j;
               var5 = var4;
               mh.field_a = va.field_e;
               stackIn_12_0 = (!param0) ? -1 : -2;
               wc.field_r = stackIn_12_0;
               wf.field_n = stackIn_12_0;
               uc.field_r = stackIn_12_0;
-              var5.field_k = 0;
-              ej.a(gi.field_v, -25563, di.field_l, ij.field_d, hb.field_i);
+              var5.position = 0;
+              ej.a(gi.field_v, -25563, di.field_l, MessageKeys.field_d, hb.field_i);
               bc.a(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

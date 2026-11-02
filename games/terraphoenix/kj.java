@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj implements cj {
+final class kj implements WidgetActionListener {
     static String[] field_c;
     static im field_d;
     static vg field_b;
@@ -9,7 +9,7 @@ final class kj implements cj {
     static String field_f;
     static String field_e;
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -17,23 +17,23 @@ final class kj implements cj {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ci var8 = null;
+        Sprite var8 = null;
         try {
-          var6_int = param2 + param1.field_w;
-          var7 = param1.field_u + param0;
-          ah.a(param1.field_n, 128, param1.field_p, var6_int, var7);
+          var6_int = param2 + param1.x;
+          var7 = param1.y + param0;
+          ah.a(param1.height, 128, param1.width, var6_int, var7);
           if (param3 != -24381) {
             return;
           }
           var8 = og.field_c[1];
           if (param1 instanceof eb &&
             ((eb) (param1)).field_C) {
-            var8.d((-var8.field_q + param1.field_p >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.field_n >> 1), 256);
+            var8.d((-var8.field_q + param1.width >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.height >> 1), 256);
           }
           if (!param1.d(-118)) {
             return;
           }
-          ed.a(-4 + param1.field_p, -4 + param1.field_n, 2 + var7, 52, var6_int + 2);
+          ed.a(-4 + param1.width, -4 + param1.height, 2 + var7, 52, var6_int + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ final class kj implements cj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -60,10 +60,10 @@ final class kj implements cj {
             nb.field_b.l(54);
             return;
           }
-          var1 = db.field_b;
+          var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              m.field_e = ij.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              m.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
             } else {
               m.field_e = ol.field_Lb;
             }
@@ -79,10 +79,10 @@ final class kj implements cj {
         if (qi.field_b) {
           nb.field_b.l(54);
         } else {
-          var1 = db.field_b;
+          var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              m.field_e = ij.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              m.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
             } else {
               m.field_e = ol.field_Lb;
             }

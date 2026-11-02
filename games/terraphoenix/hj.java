@@ -8,12 +8,12 @@ final class hj extends jc {
     static long field_I;
     static int[] field_K;
 
-    private hj(int param0, int param1, int param2, int param3, cj param4, sc param5, gl param6) {
+    private hj(int param0, int param1, int param2, int param3, WidgetActionListener param4, sc param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_F = param6;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,9 +51,9 @@ final class hj extends jc {
         field_A = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         super.a(59, param1, param2, param3, param4, param5);
-        cb var7 = oj.field_w;
+        cb var7 = SpriteState.field_w;
         if (param0 <= 36) {
           return;
         }
@@ -64,17 +64,17 @@ final class hj extends jc {
             }
             if (this.field_r instanceof fe) {
               ((fe) (this.field_r)).a(this, var7, 121);
-              oj.field_w = null;
+              SpriteState.field_w = null;
               return;
             }
             if (var7.field_r instanceof fe) {
               ((fe) (var7.field_r)).a(this, var7, 118);
-              oj.field_w = null;
+              SpriteState.field_w = null;
               return;
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

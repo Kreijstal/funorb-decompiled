@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends vh {
+final class mb extends DualLinkNode {
     private int[] field_v;
     int[] field_r;
     private String[] field_t;
@@ -47,7 +47,7 @@ final class mb extends vh {
         return (Terraphoenix.field_O & 1 << param0) != 0 ? true : false;
     }
 
-    final static void a(int param0, pk param1, int param2, int param3, ci[] param4, int param5, ci[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, ci[] param13, int param14, int param15, pk param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, BitmapFont param1, int param2, int param3, Sprite[] param4, int param5, Sprite[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, int param15, BitmapFont param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -101,11 +101,11 @@ final class mb extends vh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
-    final void a(dh param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -116,7 +116,7 @@ final class mb extends vh {
         var4 = Terraphoenix.field_V;
         try {
           while (true) {
-            var3_int = param0.a(-16384);
+            var3_int = param0.readUnsignedByte(-16384);
             if (var3_int != 0) {
               this.a(param0, (byte) 126, var3_int);
               continue;
@@ -137,7 +137,7 @@ final class mb extends vh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class mb extends vh {
         return var2.toString();
     }
 
-    private final void a(dh param0, byte param1, int param2) {
+    private final void a(PacketBuffer param0, byte param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -179,25 +179,25 @@ final class mb extends vh {
         try {
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param0.a(-16384);
+              var4_int = param0.readUnsignedByte(-16384);
               this.field_r = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_r[var5] = param0.i(-25578);
+                this.field_r[var5] = param0.readUnsignedShort(-25578);
               }
             } else {
               if (3 == param2) {
-                var4_int = param0.a(-16384);
+                var4_int = param0.readUnsignedByte(-16384);
                 this.field_q = new int[var4_int][];
                 this.field_v = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param0.i(-25578);
+                  var6 = param0.readUnsignedShort(-25578);
                   var7 = di.a((byte) 33, var6);
                   if (var7 != null) {
                     this.field_v[var5] = var6;
                     array$0 = new int[var7.field_a];
                     this.field_q[var5] = array$0;
                     for (var8 = 0; var7.field_a > var8; var8++) {
-                      this.field_q[var5][var8] = param0.i(-25578);
+                      this.field_q[var5][var8] = param0.readUnsignedShort(-25578);
                     }
                   }
                 }
@@ -207,7 +207,7 @@ final class mb extends vh {
               }
             }
           } else {
-            this.field_t = nc.a(14352, param0.e(-1), '<');
+            this.field_t = nc.a(14352, param0.readString(-1), '<');
           }
           if (param1 <= 111) {
             mb.b(13, 47);
@@ -223,7 +223,7 @@ final class mb extends vh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

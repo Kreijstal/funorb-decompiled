@@ -16,14 +16,14 @@ final class dj {
         rf.field_B[bk.d(23196)].a(0, 0, 102);
     }
 
-    final static ci[] c(int param0) {
+    final static Sprite[] c(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Terraphoenix.field_V;
-        ci[] var1 = new ci[kf.field_b];
+        Sprite[] var1 = new Sprite[kf.field_b];
         for (var2 = 0; kf.field_b > var2; var2++) {
           var3 = sb.field_m[var2] * rf.field_p[var2];
           var4 = qc.field_b[var2];
@@ -31,12 +31,12 @@ final class dj {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = wb.field_a[dg.a((int) var4[var6], 255)];
           }
-          var1[var2] = new ci(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var5);
+          var1[var2] = new Sprite(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var5);
         }
         if (param0 > -7) {
           field_a = 7;
         }
-        mj.a((byte) 82);
+        SocketConnector.a((byte) 82);
         return var1;
     }
 

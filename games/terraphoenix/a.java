@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static db field_d;
-    static ck field_b;
+    static MouseInputHandler mouseHandler;
+    static FullscreenFocusCanvas field_b;
     static String field_a;
     static int[] field_c;
     static String field_e;
@@ -16,9 +16,9 @@ final class a {
     }
 
     final static void a(int param0, int param1) {
-        c.field_i = th.field_c[param0];
+        NodeHashTableIterator.field_i = th.field_c[param0];
         si.field_hb = jc.field_C[param0];
-        qb.field_e = dk.field_h[param0];
+        qb.field_e = LevelMap.field_h[param0];
         int var2 = 48 % ((-54 - param1) / 46);
     }
 
@@ -62,13 +62,13 @@ final class a {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_b = null;
-        field_d = null;
+        mouseHandler = null;
         field_e = null;
         field_a = null;
         if (param0 > 8) {
@@ -80,7 +80,7 @@ final class a {
     }
 
     static {
-        field_d = new db();
+        mouseHandler = new MouseInputHandler();
         field_a = "Passwords can only contain letters and numbers";
         field_e = "Instructions";
     }

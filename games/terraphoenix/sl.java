@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sl {
-    static ci[] field_b;
+    static Sprite[] field_b;
     static int field_d;
     static String field_c;
     static int field_e;
@@ -28,14 +28,14 @@ final class sl {
             sa.a(-26, vb.b((byte) -27), fc.a(-1), oi.field_H, var3_int != 0);
           } else {
             if (!sl.a((byte) -40)) {
-              l.a();
+              SoftwareRasterizer.a();
               ch.a((byte) -79, 240, 320);
               ia.a(0, param0, 0, (byte) 113);
             } else {
               if (q.field_Jb != 0) {
                 ej.a(-12966, param0);
               } else {
-                ad.a(param1, 0, false);
+                TutorialController.a(param1, 0, false);
                 ia.a(0, param0, 0, (byte) 126);
               }
             }
@@ -55,7 +55,7 @@ final class sl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

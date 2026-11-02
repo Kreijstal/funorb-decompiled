@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends gb implements n {
+final class am extends WidgetContainer implements n {
     private eb[] field_L;
     private rg field_G;
     static String field_H;
-    static jj field_F;
+    static IntrusiveDeque field_F;
     static int field_J;
     static nb field_K;
     private String[] field_I;
 
     am(rg param0) {
-        super(0, 0, 0, 0, (cj) null);
+        super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,9 +26,9 @@ final class am extends gb implements n {
         field_K = null;
     }
 
-    final static void a(fa param0, boolean param1, fa param2, fa param3, byte param4) {
+    final static void a(Archive param0, boolean param1, Archive param2, Archive param3, byte param4) {
         try {
-          vc.field_a = gl.b("", 20);
+          vc.field_a = UiWidget.b("", 20);
           vc.field_a.a(false, param4 + 87);
           if (param4 != -22) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
@@ -36,10 +36,10 @@ final class am extends gb implements n {
           }
           gi.a(param3, param2, param0, param4 - 2018);
           nd.c((byte) -11);
-          qe.field_f = og.field_a;
+          IsaacCipher.field_f = og.field_a;
           pe.field_a = og.field_a;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "am.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "am.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class am extends gb implements n {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class am extends gb implements n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "am.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "am.A(" + param0 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class am extends gb implements n {
           ei.a((java.awt.Component) ((Object) param1), -24289);
           var2_int = -55 / ((param0 + 23) / 48);
           if (null != lk.field_d) {
-            lk.field_d.a(0, (java.awt.Component) ((Object) param1));
+            lk.field_d.register(0, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,7 +138,7 @@ final class am extends gb implements n {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class am extends gb implements n {
         int var6 = 0;
         var6 = Terraphoenix.field_V;
         try {
-          this.field_C.c(21480);
+          this.field_C.clear(21480);
           if (param1 != null &&
             0 != param1.length) {
             var3_int = param1.length;
@@ -164,19 +164,19 @@ final class am extends gb implements n {
               this.field_I[var4_int] = tj.a((CharSequence) ((Object) param1[var4_int]), sl.a(param0, -11664)).replace(' ', ' ');
             }
             if (param0 != -11678) {
-              field_F = (jj) null;
+              field_F = (IntrusiveDeque) null;
             }
             var4 = new qh(qk.field_e, 0, 1);
             this.field_L = new eb[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_L[var5] = new eb(this.field_I[var5], (sc) (this));
-              this.field_L[var5].field_l = (cj) ((Object) var4);
+              this.field_L[var5].listener = (WidgetActionListener) ((Object) var4);
               this.field_L[var5].field_x = g.field_ab;
               this.field_L[var5].a(16 * var5 + 20, (byte) 117, 80, 0, 15);
               this.b((byte) 95, this.field_L[var5]);
             }
             this.field_L[var3_int] = new eb(re.field_d, (sc) (this));
-            this.field_L[var3_int].field_l = (cj) ((Object) var4);
+            this.field_L[var3_int].listener = (WidgetActionListener) ((Object) var4);
             this.field_L[var3_int].a(var3_int * 16 + 16 + 20, (byte) 127, 100, 0, 15);
             this.b((byte) 95, this.field_L[var3_int]);
             return;
@@ -193,11 +193,11 @@ final class am extends gb implements n {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -232,7 +232,7 @@ final class am extends gb implements n {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -244,9 +244,9 @@ final class am extends gb implements n {
         if (param2 != 0) {
           return;
         }
-        pk var5 = qk.field_e;
+        BitmapFont var5 = qk.field_e;
         if (null != this.field_I) {
-          var5.a(tb.field_l, this.field_w + param0, this.field_u + param3, this.field_p, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
+          var5.a(tb.field_l, this.x + param0, this.y + param3, this.width, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
         }
     }
 
@@ -255,7 +255,7 @@ final class am extends gb implements n {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        fa var5 = null;
+        Archive var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -263,13 +263,13 @@ final class am extends gb implements n {
         var4 = Terraphoenix.field_V;
         try {
           if (!param1) {
-            var5 = (fa) null;
-            am.a((fa) null, false, (fa) null, (fa) null, (byte) 59);
+            var5 = (Archive) null;
+            am.a((Archive) null, false, (Archive) null, (Archive) null, (byte) 59);
           }
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!nd.a((char) var3, 127) &&
-              !gb.a((byte) 41, (char) var3)) {
+              !WidgetContainer.a((byte) 41, (char) var3)) {
               return true;
             }
           }
@@ -284,7 +284,7 @@ final class am extends gb implements n {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

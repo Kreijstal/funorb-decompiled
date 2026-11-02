@@ -7,7 +7,7 @@ final class j extends jc {
     private boolean field_M;
     static Random field_H;
     private int field_O;
-    private pk field_A;
+    private BitmapFont field_A;
     private int field_S;
     private String field_L;
     static String field_K;
@@ -53,7 +53,7 @@ final class j extends jc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -69,8 +69,8 @@ final class j extends jc {
         field_I = null;
     }
 
-    j(int param0, int param1, int param2, int param3, gl param4, boolean param5, int param6, int param7, pk param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (cj) null, (sc) null);
+    j(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetActionListener) null, (sc) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -131,32 +131,32 @@ final class j extends jc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
-        int var5 = this.field_w + param0;
+        int var5 = this.x + param0;
         int var6Lifetime1;
         int var7Lifetime1;
         if (param1 >= -106) {
           this.field_Q = 38;
-          var6 = param3 + this.field_u;
+          var6 = param3 + this.y;
           super.a(param0, -113, param2, param3);
           if (param2 == 0) {
-            var7 = this.field_M ? -(this.field_O * 2) + this.field_p - this.field_Q : 0;
-            this.field_A.a(this.field_L, this.field_O + var7 + var5, var6 + this.field_O, -this.field_O + this.field_Q, this.field_n - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
+            var7 = this.field_M ? -(this.field_O * 2) + this.width - this.field_Q : 0;
+            this.field_A.a(this.field_L, this.field_O + var7 + var5, var6 + this.field_O, -this.field_O + this.field_Q, this.height - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
             return;
           }
           return;
         }
-        var6Lifetime1 = param3 + this.field_u;
+        var6Lifetime1 = param3 + this.y;
         super.a(param0, -113, param2, param3);
         if (param2 == 0) {
-          var7Lifetime1 = this.field_M ? -(this.field_O * 2) + this.field_p - this.field_Q : 0;
-          this.field_A.a(this.field_L, this.field_O + var7Lifetime1 + var5, var6Lifetime1 + this.field_O, -this.field_O + this.field_Q, this.field_n - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
+          var7Lifetime1 = this.field_M ? -(this.field_O * 2) + this.width - this.field_Q : 0;
+          this.field_A.a(this.field_L, this.field_O + var7Lifetime1 + var5, var6Lifetime1 + this.field_O, -this.field_O + this.field_Q, this.height - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
           return;
         }
     }

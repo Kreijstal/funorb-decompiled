@@ -7,11 +7,11 @@ class vj extends eb {
     static int field_P;
     private hh field_N;
     static boolean field_Q;
-    private jj field_R;
+    private IntrusiveDeque field_R;
     private String[] field_M;
     static String[] field_O;
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -26,8 +26,8 @@ class vj extends eb {
           super.a(param0, param1, param2, 104);
           this.field_N = null;
           if (this.field_s) {
-            var5_int = -this.field_w - param2 + ef.field_j;
-            var6 = jb.field_b - param1 - this.field_u;
+            var5_int = -this.x - param2 + ef.field_j;
+            var6 = MouseWheelInput.field_b - param1 - this.y;
             this.field_N = this.a(2, var5_int, var6);
           }
           return;
@@ -41,7 +41,7 @@ class vj extends eb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ class vj extends eb {
         hh var5;
         int var6;
         var6 = Terraphoenix.field_V;
-        var4 = (hh) (this.field_R.d(9272));
+        var4 = (hh) (this.field_R.beginBackward(9272));
         if (param0 != 2) {
           field_K = (rh) null;
         }
@@ -65,7 +65,7 @@ class vj extends eb {
             }
             var5 = var5.field_j;
           }
-          var4 = (hh) (this.field_R.e((byte) -119));
+          var4 = (hh) (this.field_R.nextBackward((byte) -119));
         }
         return null;
     }
@@ -84,7 +84,7 @@ class vj extends eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "vj.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "vj.G(" + param0 + ')');
         }
     }
 
@@ -106,11 +106,11 @@ class vj extends eb {
           }
           this.field_M[param0] = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    boolean a(byte param0, gl param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -131,7 +131,7 @@ class vj extends eb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ class vj extends eb {
         if (null == vi.field_n) {
           vi.field_n = new na(jl.field_I, m.field_e);
         }
-        jl.field_I.a((gl) (vi.field_n), (byte) -1);
+        jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
     }
 
     final void b(boolean param0) {
@@ -167,23 +167,23 @@ class vj extends eb {
         String var17;
         int var7Lifetime1;
         var16 = Terraphoenix.field_V;
-        this.field_R = new jj();
+        this.field_R = new IntrusiveDeque();
         if (!param0) {
           var17 = (String) null;
           this.a(-95, (String) null, (byte) -110);
         }
         var2 = 0;
-        var3 = (w) ((Object) this.field_l);
-        var4 = var3.a((gl) (this), -19302);
+        var3 = (w) ((Object) this.listener);
+        var4 = var3.a((UiWidget) (this), -19302);
         while (true) {
-          var5 = this.field_o.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           }
-          var7 = this.field_o.indexOf(">", var5);
-          var6 = this.field_o.substring(var5 + 9, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_o.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.b(var5, 0);
           var9 = var4.b(var2, 0);
           var10 = null;
@@ -239,13 +239,13 @@ class vj extends eb {
         return this.field_M[this.field_N.field_i];
     }
 
-    vj(String param0, cj param1) {
+    vj(String param0, WidgetActionListener param1) {
         super(param0, (sc) null);
         this.field_N = null;
         try {
-          this.field_l = param1;
+          this.listener = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -259,12 +259,12 @@ class vj extends eb {
         if (param1 > -106) {
           this.field_N = (hh) null;
         }
-        w var9 = (w) ((Object) this.field_l);
+        w var9 = (w) ((Object) this.listener);
         hh var6 = this.field_N;
         if (var6 == null) {
         } else {
-          var7 = var9.a((gl) (this), -37, param0);
-          var8 = var9.a((gl) (this), param3, (byte) -72);
+          var7 = var9.a((UiWidget) (this), -37, param0);
+          var8 = var9.a((UiWidget) (this), param3, (byte) -72);
           do {
             ed.a(var6.field_q + 2, var6.field_h + 2, var8 + (var6.field_o - 2), 52, var7 - (-var6.field_n + 2));
             var6 = var6.field_j;
@@ -273,7 +273,7 @@ class vj extends eb {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(param0, (byte) 88, param3, param2, ((w) ((Object) this.field_l)).b((gl) (this), (byte) 112));
+        this.a(param0, (byte) 88, param3, param2, ((w) ((Object) this.listener)).b((UiWidget) (this), (byte) 112));
         if (param1 >= -4) {
           field_L = (String) null;
         }
@@ -288,7 +288,7 @@ class vj extends eb {
         field_K = null;
     }
 
-    final static fa a(boolean param0, boolean param1, int param2, byte param3, int param4) {
+    final static Archive a(boolean param0, boolean param1, int param2, byte param3, int param4) {
         if (param3 != 62) {
           field_L = (String) null;
         }
@@ -297,8 +297,8 @@ class vj extends eb {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, param2, param3);
-        int var5 = param3 - this.field_w;
-        int var6 = -this.field_u + param0;
+        int var5 = param3 - this.x;
+        int var6 = -this.y + param0;
         hh var7 = this.a(param2 + 4, var5, var6);
         if (var7 != null &&
           this.field_r != null) {

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends uf {
-    static ci field_p;
+final class sb extends IntrusiveNode {
+    static Sprite field_p;
     static int field_j;
     static String field_k;
     static String field_n;
     static int[] field_m;
-    static jj field_h;
+    static IntrusiveDeque field_h;
     static String field_l;
     static int field_i;
     byte[] field_o;
@@ -20,7 +20,7 @@ final class sb extends uf {
         field_h = null;
         field_l = null;
         if (param0 != 29) {
-          field_h = (jj) null;
+          field_h = (IntrusiveDeque) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class sb extends uf {
             return null;
           }
           var2 = new qj(param1, ha.field_s, hj.field_K, field_m, rf.field_p, wb.field_a, qc.field_b);
-          mj.a((byte) 95);
+          SocketConnector.a((byte) 95);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ final class sb extends uf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class sb extends uf {
         try {
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

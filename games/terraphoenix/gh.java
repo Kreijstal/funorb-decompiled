@@ -11,7 +11,7 @@ final class gh extends eb {
     int field_M;
     int field_N;
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -26,8 +26,8 @@ final class gh extends eb {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          var8_int = param1 + (-this.field_R + (-this.field_w - param3));
-          var9 = param6 - (this.field_M + this.field_u + param2);
+          var8_int = param1 + (-this.field_R + (-this.x - param3));
+          var9 = param6 - (this.field_M + this.y + param2);
           if (var9 * var9 + var8_int * var8_int < this.field_Q * this.field_Q) {
             var10 = Math.atan2((double)var9, (double)var8_int) - kd.field_b;
             if (!(var10 < 0.0)) {
@@ -56,7 +56,7 @@ final class gh extends eb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class gh extends eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "gh.V(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "gh.V(" + param0 + ')');
         }
     }
 

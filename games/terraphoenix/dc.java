@@ -84,7 +84,7 @@ final class dc {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class dc {
             return 57;
           }
           if (jg.field_gb == 2 &&
-            b.a(true, this.field_d)) {
+            RandomAccessCacheFile.a(true, this.field_d)) {
             return 1;
           }
           return 0;
@@ -123,7 +123,7 @@ final class dc {
         if (!param0) {
           this.field_i = null;
         } else {
-          this.field_i = ui.field_e;
+          this.field_i = AdminCheatOverlay.field_e;
         }
         this.field_g = ng.field_s;
         this.field_m = da.field_d;

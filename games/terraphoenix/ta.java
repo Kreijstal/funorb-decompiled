@@ -14,9 +14,9 @@ final class ta {
             CharSequence var4 = (CharSequence) null;
             ta.a((CharSequence) null, 126);
           }
-          jl.field_I.a((gl) (nb.field_b), (byte) -1);
+          jl.field_I.a((UiWidget) (nb.field_b), (byte) -1);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -46,13 +46,13 @@ final class ta {
             return stackIn_5_0;
           }
           if (pe.field_a == k.field_b &&
-            param1.equals(vh.field_l)) {
+            param1.equals(DualLinkNode.field_l)) {
             pe.field_a = og.field_a;
             stackIn_9_0 = h.field_c;
             return stackIn_9_0;
           }
           h.field_c = null;
-          vh.field_l = param1;
+          DualLinkNode.field_l = param1;
           pe.field_a = ua.field_d;
           stackIn_11_0 = null;
           return (pd) (stackIn_11_0);
@@ -66,7 +66,7 @@ final class ta {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class ta {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rf extends vh {
+abstract class rf extends DualLinkNode {
     volatile boolean field_A;
     boolean field_x;
     static oa field_w;
@@ -13,7 +13,7 @@ abstract class rf extends vh {
     static int[] field_p;
     static boolean field_r;
     static String field_t;
-    static ui[] field_B;
+    static AdminCheatOverlay[] field_B;
     static rh field_z;
     static String field_q;
 
@@ -47,16 +47,16 @@ abstract class rf extends vh {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == a.field_d) {
+        if (null == a.mouseHandler) {
           if (param0 >= 81) {
             return;
           }
           field_y = (String) null;
           return;
         }
-        var1 = a.field_d;
+        var1 = a.mouseHandler;
         synchronized (var1) {
-          a.field_d = null;
+          a.mouseHandler = null;
         }
         if (param0 < 81) {
           field_y = (String) null;
@@ -73,7 +73,7 @@ abstract class rf extends vh {
         field_s = "OBJECTIVE FAILED";
         field_t = "Undo troop placement";
         field_u = new rh(4, 1, 1, 1);
-        field_B = new ui[]{new ui(0), new ui(1), new ui(2), new ui(3), new ui(4), new ui(5), new ui(6), new ui(7), new ui(8)};
+        field_B = new AdminCheatOverlay[]{new AdminCheatOverlay(0), new AdminCheatOverlay(1), new AdminCheatOverlay(2), new AdminCheatOverlay(3), new AdminCheatOverlay(4), new AdminCheatOverlay(5), new AdminCheatOverlay(6), new AdminCheatOverlay(7), new AdminCheatOverlay(8)};
         field_z = new rh(1, 2, 2, 0);
         field_q = "Reload ";
     }

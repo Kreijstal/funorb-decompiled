@@ -23,24 +23,24 @@ final class mh {
           var7 = di.field_l;
           var8 = var7;
           var8.k(-17410, param1);
-          var8.field_k = var8.field_k + 1;
-          var4 = var8.field_k;
-          var8.i(1, -22);
-          var8.h(-1564407352, param0.field_s);
-          var8.h(-1564407352, param0.field_h);
-          var8.h(-1564407352, param0.field_q);
-          var8.e(param0.field_k, 8959);
-          var8.e(param0.field_l, 8959);
-          var8.e(param0.field_j, 8959);
-          var8.e(param0.field_o, 8959);
-          var8.i(param0.field_r.length, -99);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(1, -22);
+          var8.writeShort(-1564407352, param0.field_s);
+          var8.writeShort(-1564407352, param0.field_h);
+          var8.writeShort(-1564407352, param0.field_q);
+          var8.writeInt(param0.field_k, 8959);
+          var8.writeInt(param0.field_l, 8959);
+          var8.writeInt(param0.field_j, 8959);
+          var8.writeInt(param0.field_o, 8959);
+          var8.writeByte(param0.field_r.length, -99);
           for (var5 = param2; var5 < param0.field_r.length; var5++) {
-            var7.e(param0.field_r[var5], 8959);
+            var7.writeInt(param0.field_r[var5], 8959);
           }
           var8.d(var4, 8600);
-          var8.j(-var4 + var8.field_k, -119);
+          var8.j(-var4 + var8.position, -119);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -53,13 +53,13 @@ final class mh {
           return;
         }
         ef.field_i = ef.field_i | var3;
-        kl.field_a = kl.field_a | var3;
+        TutorialText.field_a = TutorialText.field_a | var3;
         ga.field_k.a(new hd(param1), -16611);
         if (!kg.field_q) {
           if (!bk.c(-25704)) {
-            cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
+            cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, ArchiveIndex.field_e, bh.field_a, param2, (byte) 43);
           } else {
-            u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, km.field_e, oh.field_e, bh.field_a), -16611);
+            u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, ArchiveIndex.field_e, oh.field_e, bh.field_a), -16611);
           }
         }
     }
@@ -72,14 +72,14 @@ final class mh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ci var6 = null;
-        ci var7 = null;
-        ci var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = Terraphoenix.field_V;
         try {
-          l.e(243, 197, 369, 143, 16777215);
-          l.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.e(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.f(244, 198, 367, 141, 0);
           if (rk.field_f == null) {
             if (null != ja.field_m) {
               ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -133,7 +133,7 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "mh.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "mh.C(" + param0 + ')');
         }
     }
 

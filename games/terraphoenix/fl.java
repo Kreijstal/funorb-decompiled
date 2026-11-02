@@ -69,7 +69,7 @@ final class fl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -94,14 +94,14 @@ final class fl {
             stackIn_11_1 = !(wf.field_q >= 13);
             h.field_c = ia.a(stackIn_10_0, stackIn_11_1);
             var6 = (String[]) null;
-            eh.a(-32202, (String[]) null);
+            GameApplet.a(-32202, (String[]) null);
           } else {
             if (param3 < 100) {
               h.field_c = aj.a(param3, (byte) -21, param0);
             } else {
               if (param3 <= 105) {
                 var7 = param2;
-                eh.a(-32202, var7);
+                GameApplet.a(-32202, var7);
                 h.field_c = ib.a(true, param2);
               } else {
                 h.field_c = aj.a(param3, (byte) -21, param0);
@@ -129,7 +129,7 @@ final class fl {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 

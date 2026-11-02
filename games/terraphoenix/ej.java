@@ -73,16 +73,16 @@ class ej extends eb {
             return;
           }
           if (this.field_U != -1) {
-            var3_int = this.field_U - this.field_o.length();
+            var3_int = this.field_U - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          if (this.field_K != this.field_o.length()) {
-            this.field_o = this.field_o.substring(0, this.field_K) + param0 + this.field_o.substring(this.field_K, this.field_o.length());
+          if (this.field_K != this.text.length()) {
+            this.text = this.text.substring(0, this.field_K) + param0 + this.text.substring(this.field_K, this.text.length());
           } else {
-            this.field_o = this.field_o + param0;
+            this.text = this.text + param0;
           }
           this.field_K = this.field_K + param0.length();
           this.field_T = this.field_K;
@@ -98,7 +98,7 @@ class ej extends eb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ class ej extends eb {
         ((pa) (this.field_r)).a(this, false);
     }
 
-    final static void a(int param0, int param1, dh param2, int param3, int param4) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         java.awt.Canvas var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -135,16 +135,16 @@ class ej extends eb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          param2.i(12, param1 + 25544);
-          param2.h(-1564407352, 17);
-          param2.h(-1564407352, param0);
-          param2.h(param1 ^ 1564382701, param4);
+          param2.writeByte(12, param1 + 25544);
+          param2.writeShort(-1564407352, 17);
+          param2.writeShort(-1564407352, param0);
+          param2.writeShort(param1 ^ 1564382701, param4);
           if (param1 != -25563) {
             var6 = (java.awt.Canvas) null;
             ej.a(-21, (java.awt.Canvas) null);
-            param2.i(param3, 24);
+            param2.writeByte(param3, 24);
           } else {
-            param2.i(param3, 24);
+            param2.writeByte(param3, 24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ class ej extends eb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -177,13 +177,13 @@ class ej extends eb {
           this.field_y = 0;
           return;
         }
-        if (!(this.field_l instanceof w)) {
+        if (!(this.listener instanceof w)) {
           return;
         }
-        var10 = (w) ((Object) this.field_l);
-        var3 = var10.a((gl) (this), -19302);
+        var10 = (w) ((Object) this.listener);
+        var3 = var10.a((UiWidget) (this), -19302);
         var4 = var3.b(0);
-        var5 = var10.a(28889, (gl) (this));
+        var5 = var10.a(28889, (UiWidget) (this));
         var6 = var10.a(8233) >> 1;
         if (var5 - var6 > var4) {
           this.field_y = 0;
@@ -239,7 +239,7 @@ class ej extends eb {
           var4 = this.field_K > this.field_T ? this.field_K : this.field_T;
           this.field_K = var3;
           this.field_T = var3;
-          this.field_o = this.field_o.substring(0, var3) + this.field_o.substring(var4, this.field_o.length());
+          this.text = this.text.substring(0, var3) + this.text.substring(var4, this.text.length());
           this.i(126);
         }
     }
@@ -250,12 +250,12 @@ class ej extends eb {
         int var3Lifetime1;
         if (param0 == -18031) {
           var3 = this.field_T < this.field_K ? this.field_K : this.field_T;
-          return this.field_o.substring(var2, var3);
+          return this.text.substring(var2, var3);
         }
-        dh var4 = (dh) null;
-        ej.a(-116, -28, (dh) null, 31, 71);
+        PacketBuffer var4 = (PacketBuffer) null;
+        ej.a(-116, -28, (PacketBuffer) null, 31, 71);
         var3Lifetime1 = this.field_T < this.field_K ? this.field_K : this.field_T;
-        return this.field_o.substring(var2, var3Lifetime1);
+        return this.text.substring(var2, var3Lifetime1);
     }
 
     private final int o(int param0) {
@@ -263,12 +263,12 @@ class ej extends eb {
         int var3;
         int var4;
         var4 = Terraphoenix.field_V;
-        var2 = this.field_o.length();
+        var2 = this.text.length();
         if (var2 == this.field_K) {
           return this.field_K;
         }
         for (var3 = this.field_K + param0; var2 > var3; var3++) {
-          if (this.field_o.charAt(var3 - 1) == 32) {
+          if (this.text.charAt(var3 - 1) == 32) {
             return var3;
           }
         }
@@ -287,16 +287,16 @@ class ej extends eb {
           if (param2 == null) {
             param2 = "";
           }
-          this.field_o = param2;
+          this.text = param2;
           var4_int = param2.length();
           if (-1 != this.field_U &&
             this.field_U < var4_int) {
-            this.field_o = this.field_o.substring(0, this.field_U);
+            this.text = this.text.substring(0, this.field_U);
           }
           if (param1 >= -117) {
             field_S = -91;
           }
-          dupTemp$1 = this.field_o.length();
+          dupTemp$1 = this.text.length();
           this.field_T = dupTemp$1;
           this.field_K = dupTemp$1;
           if (param0) {
@@ -314,7 +314,7 @@ class ej extends eb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ class ej extends eb {
         }
     }
 
-    void a(gl param0, int param1, int param2, int param3) {
+    void a(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         w var7 = null;
@@ -342,9 +342,9 @@ class ej extends eb {
           if (this.field_j != 1) {
             return;
           }
-          if (this.field_l instanceof w) {
-            var7 = (w) ((Object) this.field_l);
-            var6 = var7.a(ef.field_j, -3477, jb.field_b, (gl) (this), param1, param2);
+          if (this.listener instanceof w) {
+            var7 = (w) ((Object) this.listener);
+            var6 = var7.a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param1, param2);
             if (var6 != -1) {
               if (this.field_O &&
                 var6 < this.field_L &&
@@ -366,14 +366,14 @@ class ej extends eb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         long var6;
         w var8;
-        if (this.field_l == null) {
+        if (this.listener == null) {
           if (param1 < -106) {
             return;
           }
@@ -387,21 +387,21 @@ class ej extends eb {
           this.field_T = -91;
           return;
         }
-        this.field_l.a(param3, (gl) (this), param0, -24381, this.field_A);
-        if (!(this.field_l instanceof w)) {
+        this.listener.a(param3, (UiWidget) (this), param0, -24381, this.field_A);
+        if (!(this.listener instanceof w)) {
           if (param1 < -106) {
             return;
           }
           this.field_T = -91;
           return;
         }
-        var8 = (w) ((Object) this.field_l);
+        var8 = (w) ((Object) this.listener);
         if (this.field_K != this.field_T) {
-          var8.b(0, param3, param0, (gl) (this), this.field_K, this.field_T);
+          var8.b(0, param3, param0, (UiWidget) (this), this.field_K, this.field_T);
         }
         var6 = ll.a(1000);
         if ((var6 - this.field_P) % 1000L < 500L) {
-          var8.a(this.field_K, param3, (gl) (this), param0, -32135);
+          var8.a(this.field_K, param3, (UiWidget) (this), param0, -32135);
         }
         if (param1 < -106) {
           return;
@@ -438,26 +438,26 @@ class ej extends eb {
         this.field_O = false;
         this.field_Q = 0L;
         try {
-          this.field_l = vc.field_c.field_i;
+          this.listener = vc.field_c.field_i;
           this.field_U = param2;
           this.a(true, (byte) -120, param0);
           this.field_W = true;
           this.field_P = ll.a(1000);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void k(int param0) {
-        this.field_o = "";
+        this.text = "";
         this.field_K = 0;
         this.field_T = 0;
         if (param0 == -1) {
           this.i(122);
           return;
         }
-        gl var3 = (gl) null;
-        this.a(false, 4, -51, -52, -78, (gl) null, 121);
+        UiWidget var3 = (UiWidget) null;
+        this.a(false, 4, -51, -52, -78, (UiWidget) null, 121);
         this.i(122);
     }
 
@@ -469,14 +469,14 @@ class ej extends eb {
           if (11 == q.field_Jb) {
             ta.a(54);
           }
-          pg.a(ed.field_d, da.field_f, ad.field_e, 101);
+          pg.a(ed.field_d, da.field_f, TutorialController.field_e, 101);
           ia.a(0, param1, 0, (byte) 116);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ej.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ej.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -489,8 +489,8 @@ class ej extends eb {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
-            this.field_l instanceof w) {
-            var8_int = ((w) ((Object) this.field_l)).a(ef.field_j, -3477, jb.field_b, (gl) (this), param2, param3);
+            this.listener instanceof w) {
+            var8_int = ((w) ((Object) this.listener)).a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param2, param3);
             stackIn_5_1 = 19;
             if (var8_int != -1) {
               stackIn_6_2 = var8_int;
@@ -505,7 +505,7 @@ class ej extends eb {
               this.field_T = this.l(-1);
               this.field_K = this.o(1);
               if (this.field_K > 0 &&
-                32 == this.field_o.charAt(this.field_K - 1)) {
+                32 == this.text.charAt(this.field_K - 1)) {
                 this.field_K = this.field_K - 1;
               }
               this.field_L = this.field_K;
@@ -527,7 +527,7 @@ class ej extends eb {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -539,7 +539,7 @@ class ej extends eb {
           return this.field_K;
         }
         for (var2 = this.field_K - 1; 0 < var2; var2--) {
-          if (this.field_o.charAt(var2 - 1) == 32) {
+          if (this.text.charAt(var2 - 1) == 32) {
             return var2;
           }
         }
@@ -554,7 +554,7 @@ class ej extends eb {
         return kj.field_f;
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_37_1 = 0;
         int stackIn_38_2 = 0;
@@ -582,14 +582,14 @@ class ej extends eb {
               this.i((byte) 62);
             }
             if (this.field_U == -1 ||
-              !(this.field_o.length() >= this.field_U)) {
-              if (this.field_K < this.field_o.length()) {
-                this.field_o = this.field_o.substring(0, this.field_K) + param0 + this.field_o.substring(this.field_K, this.field_o.length());
+              !(this.text.length() >= this.field_U)) {
+              if (this.field_K < this.text.length()) {
+                this.text = this.text.substring(0, this.field_K) + param0 + this.text.substring(this.field_K, this.text.length());
                 this.field_K = this.field_K + 1;
                 this.field_T = this.field_K;
               } else {
-                this.field_o = this.field_o + param0;
-                dupTemp$0 = this.field_o.length();
+                this.text = this.text + param0;
+                dupTemp$0 = this.text.length();
                 this.field_K = dupTemp$0;
                 this.field_T = dupTemp$0;
               }
@@ -615,7 +615,7 @@ class ej extends eb {
               }
               if (param3 != 96) {
                 if (param3 == 97) {
-                  if (this.field_K < this.field_o.length()) {
+                  if (this.field_K < this.text.length()) {
                     stackIn_66_1 = 19;
                     if (bh.field_e[82]) {
                       stackIn_67_2 = this.o(1);
@@ -631,7 +631,7 @@ class ej extends eb {
                     return true;
                   }
                   if (param3 == 103) {
-                    this.a((byte) 19, this.field_o.length());
+                    this.a((byte) 19, this.text.length());
                     return true;
                   }
                   if (param3 == 84) {
@@ -671,7 +671,7 @@ class ej extends eb {
                 this.i((byte) -102);
                 return true;
               }
-              if (this.field_K < this.field_o.length()) {
+              if (this.field_K < this.text.length()) {
                 this.field_T = this.field_K + 1;
                 this.i((byte) -102);
                 return true;
@@ -689,7 +689,7 @@ class ej extends eb {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

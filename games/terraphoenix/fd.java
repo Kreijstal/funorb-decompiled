@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fd implements cj, w {
+class fd implements WidgetActionListener, w {
     int field_m;
     static String field_q;
-    pk field_j;
+    BitmapFont field_j;
     int field_l;
     static boolean field_o;
     static String field_p;
@@ -29,18 +29,18 @@ class fd implements cj, w {
         Throwable decompiledCaughtException = null;
         var1_ref = th.field_g;
         synchronized (var1_ref) {
-          if (d.field_M == r.field_V) {
+          if (d.field_M == BattleUnit.field_V) {
             return false;
           }
-          lf.field_c = ll.field_b[r.field_V];
-          ua.field_g = ah.field_E[r.field_V];
-          r.field_V = param0 + r.field_V & 127;
+          lf.field_c = ll.field_b[BattleUnit.field_V];
+          ua.field_g = ah.field_E[BattleUnit.field_V];
+          BattleUnit.field_V = param0 + BattleUnit.field_V & 127;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;
     }
 
-    public final int a(int param0, int param1, int param2, gl param3, int param4, int param5) {
+    public final int a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -64,11 +64,11 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final void c(int param0, gl param1) {
+    private final void c(int param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -79,13 +79,13 @@ class fd implements cj, w {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        gl var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = Terraphoenix.field_V;
         try {
           if (param0 <= 105) {
-            var8 = (gl) null;
-            this.a((gl) null, 98, 4);
+            var8 = (UiWidget) null;
+            this.a((UiWidget) null, 98, 4);
           }
           if (null == param1.field_q) {
             param1.field_q = (ld) ((Object) new rd());
@@ -138,11 +138,11 @@ class fd implements cj, w {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public final void b(int param0, int param1, int param2, gl param3, int param4, int param5) {
+    public final void b(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -183,7 +183,7 @@ class fd implements cj, w {
           }
           var10 = var18.b(var8, 0);
           var11 = var18.b(var9, 0);
-          di.a(param2 + param3.field_w + param3.field_p, param3.field_u + param1, 16105, param3.field_u + param1 + param3.field_n, param2 + param3.field_w);
+          di.a(param2 + param3.x + param3.width, param3.y + param1, 16105, param3.y + param1 + param3.height, param2 + param3.x);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_f[var12];
             if (var10 != var12) {
@@ -202,9 +202,9 @@ class fd implements cj, w {
               stackIn_20_0 = var18.a(var9, 0);
             }
             var15 = stackIn_20_0;
-            vc.field_c.a(this.field_r, this.a(var14, param3, param2, (byte) 126), var13.field_e + param3.field_v + (this.field_b + param1) + param3.field_u, this.field_r >>> 24, param0 ^ 2, var13.field_a, var15 - var14);
+            vc.field_c.a(this.field_r, this.a(var14, param3, param2, (byte) 126), var13.field_e + param3.field_v + (this.field_b + param1) + param3.y, this.field_r >>> 24, param0 ^ 2, var13.field_a, var15 - var14);
           }
-          ij.a(false);
+          MessageKeys.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ class fd implements cj, w {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -224,12 +224,12 @@ class fd implements cj, w {
         if (param0 == 8233) {
           return this.field_j.field_s + this.field_j.field_p;
         }
-        gl var3 = (gl) null;
-        this.a(22, 56, (gl) null, -76, -64);
+        UiWidget var3 = (UiWidget) null;
+        this.a(22, 56, (UiWidget) null, -76, -64);
         return this.field_j.field_s + this.field_j.field_p;
     }
 
-    public final int a(gl param0, int param1, byte param2) {
+    public final int a(UiWidget param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -252,11 +252,11 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, gl param2, int param3, int param4) {
+    public final void a(int param0, int param1, UiWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         em var8 = null;
@@ -292,9 +292,9 @@ class fd implements cj, w {
               stackIn_5_3 = var13.field_f[1 + var7].field_e;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            di.a(param2.field_w + (param3 + param2.field_p), param1 + param2.field_u, param4 ^ -17264, param2.field_n + (param2.field_u + param1), param3 + param2.field_w);
+            di.a(param2.x + (param3 + param2.width), param1 + param2.y, param4 ^ -17264, param2.height + (param2.y + param1), param3 + param2.x);
             vc.field_c.a(this.field_g, var10, var10, var12, var11, true);
-            ij.a(false);
+            MessageKeys.a(false);
           }
           if (param4 == -32135) {
             return;
@@ -311,11 +311,11 @@ class fd implements cj, w {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    String b(gl param0, int param1) {
+    String b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -326,7 +326,7 @@ class fd implements cj, w {
           if (param1 != 32032) {
             this.a(61);
           }
-          stackIn_3_0 = param0.field_o;
+          stackIn_3_0 = param0.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -338,7 +338,7 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ class fd implements cj, w {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, gl param5, byte param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6, int param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -363,7 +363,7 @@ class fd implements cj, w {
         int var12Lifetime1;
         var13 = Terraphoenix.field_V;
         try {
-          di.a(param5.field_p + (param3 + param5.field_w), param4 + param5.field_u, param6 + 16035, param5.field_u + (param4 + param5.field_n), param5.field_w + param3);
+          di.a(param5.width + (param3 + param5.x), param4 + param5.y, param6 + 16035, param5.y + (param4 + param5.height), param5.x + param3);
           if (param6 != 70) {
             return;
           }
@@ -402,7 +402,7 @@ class fd implements cj, w {
               this.field_j.b(this.b(param5, 32032), this.a(param2, param5, param3, (byte) 126), this.a(param5, (byte) -33, param1, param4) + var11, param0, param7);
             }
           }
-          ij.a(false);
+          MessageKeys.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -414,11 +414,11 @@ class fd implements cj, w {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    private final int b(int param0, gl param1) {
+    private final int b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         fd var4 = null;
         int stackIn_3_0 = 0;
@@ -431,7 +431,7 @@ class fd implements cj, w {
             var4 = (fd) null;
             this.a((fd) null, -10);
           }
-          stackIn_3_0 = param1.field_n - this.field_b - this.field_f;
+          stackIn_3_0 = param1.height - this.field_b - this.field_f;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -443,15 +443,15 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    fd(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    fd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final ld a(gl param0, int param1) {
+    public final ld a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         ld stackIn_4_0 = null;
         ld stackIn_9_0 = null;
@@ -484,7 +484,7 @@ class fd implements cj, w {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -499,9 +499,9 @@ class fd implements cj, w {
         field_p = null;
     }
 
-    public final int a(int param0, gl param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -509,10 +509,10 @@ class fd implements cj, w {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 28889) {
-            var4 = (gl) null;
-            this.c(-45, (gl) null);
+            var4 = (UiWidget) null;
+            this.c(-45, (UiWidget) null);
           }
-          stackIn_3_0 = param1.field_p - this.field_d - this.field_l;
+          stackIn_3_0 = param1.width - this.field_d - this.field_l;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -524,11 +524,11 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int b(gl param0, byte param1) {
+    public final int b(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -552,7 +552,7 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -575,11 +575,11 @@ class fd implements cj, w {
           param0.field_j = this.field_j;
           param0.field_c = this.field_c;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "fd.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "fd.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final int a(gl param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -601,11 +601,11 @@ class fd implements cj, w {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final int a(gl param0, byte param1, int param2, int param3) {
+    private final int a(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -615,7 +615,7 @@ class fd implements cj, w {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -33) {
-            stackIn_4_0 = param2 + param0.field_v + param0.field_u + (param3 + this.field_b);
+            stackIn_4_0 = param2 + param0.field_v + param0.y + (param3 + this.field_b);
             return stackIn_4_0;
           }
           stackIn_2_0 = 78;
@@ -630,22 +630,22 @@ class fd implements cj, w {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2, gl param3) {
+    private final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.a(this.field_e, 0, 0, param2, param0, param3, (byte) 70, this.field_n);
           if (param1 != -6087) {
             this.field_f = 105;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "fd.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "fd.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int param0, gl param1, int param2, byte param3) {
+    private final int a(int param0, UiWidget param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -656,7 +656,7 @@ class fd implements cj, w {
           if (param3 <= 123) {
             this.field_a = -33;
           }
-          stackIn_3_0 = param1.field_w + (param2 + (this.field_d + param1.field_y)) + param0;
+          stackIn_3_0 = param1.x + (param2 + (this.field_d + param1.field_y)) + param0;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -668,11 +668,11 @@ class fd implements cj, w {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final int a(gl param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -698,11 +698,11 @@ class fd implements cj, w {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         if (param3 != -24381) {
           return;
         }
@@ -712,14 +712,14 @@ class fd implements cj, w {
         try {
           this.a(param0, -6087, param2, param1);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "fd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "fd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     protected fd() {
     }
 
-    fd(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    fd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_b = param3;
           this.field_r = param11;
@@ -735,7 +735,7 @@ class fd implements cj, w {
           this.field_d = param1;
           this.field_m = param9;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

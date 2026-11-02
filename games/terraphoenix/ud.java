@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends pk {
+final class ud extends BitmapFont {
     private byte[][] field_N;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * l.field_k;
-        int var10 = l.field_k - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer.field_k;
+        int var10 = SoftwareRasterizer.field_k - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < l.field_d) {
-          var13 = l.field_d - param2;
+        if (param2 < SoftwareRasterizer.field_d) {
+          var13 = SoftwareRasterizer.field_d - param2;
           param4 = param4 - var13;
-          param2 = l.field_d;
+          param2 = SoftwareRasterizer.field_d;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * l.field_k;
+          var9 = var9 + var13 * SoftwareRasterizer.field_k;
         }
-        if (param2 + param4 > l.field_c) {
-          param4 = param4 - (param2 + param4 - l.field_c);
+        if (param2 + param4 > SoftwareRasterizer.field_c) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_c);
         }
-        if (param1 < l.field_b) {
-          var13Lifetime1 = l.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var13Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = l.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > l.field_f) {
-          var13Lifetime2 = param1 + param3 - l.field_f;
+        if (param1 + param3 > SoftwareRasterizer.field_f) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_f;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -41,7 +41,7 @@ final class ud extends pk {
           param4 <= 0) {
           return;
         }
-        ud.a(l.field_i, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        ud.a(SoftwareRasterizer.field_i, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -97,8 +97,8 @@ final class ud extends pk {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - l.field_b;
-        var14 = param3 - l.field_d;
+        var13 = param2 - SoftwareRasterizer.field_b;
+        var14 = param3 - SoftwareRasterizer.field_d;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -140,7 +140,7 @@ final class ud extends pk {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                l.field_i[incrementValue$1] = param6;
+                SoftwareRasterizer.field_i[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -186,41 +186,41 @@ final class ud extends pk {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * l.field_k;
-        var9 = l.field_k - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_k;
+        var9 = SoftwareRasterizer.field_k - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < l.field_d) {
-          var12 = l.field_d - param2;
+        if (param2 < SoftwareRasterizer.field_d) {
+          var12 = SoftwareRasterizer.field_d - param2;
           param4 = param4 - var12;
-          param2 = l.field_d;
+          param2 = SoftwareRasterizer.field_d;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * l.field_k;
+          var8 = var8 + var12 * SoftwareRasterizer.field_k;
         }
-        if (param2 + param4 > l.field_c) {
-          param4 = param4 - (param2 + param4 - l.field_c);
+        if (param2 + param4 > SoftwareRasterizer.field_c) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_c);
         }
-        if (param1 < l.field_b) {
-          var12Lifetime1 = l.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var12Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = l.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > l.field_f) {
-          var12Lifetime2 = param1 + param3 - l.field_f;
+        if (param1 + param3 > SoftwareRasterizer.field_f) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_f;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (l.field_l == null) {
-            ud.a(l.field_i, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer.field_l == null) {
+            ud.a(SoftwareRasterizer.field_i, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            ud.a(l.field_i, this.field_N[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, l.field_l, l.field_a);
+            ud.a(SoftwareRasterizer.field_i, this.field_N[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_l, SoftwareRasterizer.field_a);
           }
           return;
         }

@@ -123,7 +123,7 @@ final class hg {
     final int a() {
         int var1 = 0;
         while (this.field_e[var1] >= 0) {
-          var1 = tl.c() != 0 ? this.field_e[var1] : var1 + 1;
+          var1 = VorbisDecoder.c() != 0 ? this.field_e[var1] : var1 + 1;
         }
         return ~this.field_e[var1];
     }
@@ -153,17 +153,17 @@ final class hg {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        tl.d(24);
-        this.field_b = tl.d(16);
-        this.field_c = tl.d(24);
+        VorbisDecoder.d(24);
+        this.field_b = VorbisDecoder.d(16);
+        this.field_c = VorbisDecoder.d(24);
         this.field_f = new int[this.field_c];
-        stackIn_3_0 = (tl.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisDecoder.c() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = tl.d(5) + 1;
+          var3_int = VorbisDecoder.d(5) + 1;
           while (var2 < this.field_c) {
-            var4_int = tl.d(je.a(-121, this.field_c - var2));
+            var4_int = VorbisDecoder.d(je.a(-121, this.field_c - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,27 +172,27 @@ final class hg {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (tl.c() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisDecoder.c() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_c) {
             if (var2 != 0 &&
-              tl.c() == 0) {
+              VorbisDecoder.c() == 0) {
               this.field_f[var14] = 0;
             } else {
-              this.field_f[var14] = tl.d(5) + 1;
+              this.field_f[var14] = VorbisDecoder.d(5) + 1;
             }
             var14++;
           }
         }
         this.b();
-        var2Lifetime1 = tl.d(4);
+        var2Lifetime1 = VorbisDecoder.d(4);
         if (var2Lifetime1 > 0) {
-          var3 = tl.a(tl.d(32));
-          var4 = tl.a(tl.d(32));
-          var5Lifetime1 = tl.d(4) + 1;
-          stackIn_25_0 = (tl.c() == 0) ? 0 : 1;
+          var3 = VorbisDecoder.a(VorbisDecoder.d(32));
+          var4 = VorbisDecoder.a(VorbisDecoder.d(32));
+          var5Lifetime1 = VorbisDecoder.d(4) + 1;
+          stackIn_25_0 = (VorbisDecoder.c() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_c * this.field_b;
@@ -201,7 +201,7 @@ final class hg {
           }
           this.field_a = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_a[var8] = tl.d(var5Lifetime1);
+            this.field_a[var8] = VorbisDecoder.d(var5Lifetime1);
           }
           this.field_d = new float[this.field_c][this.field_b];
           if (var2Lifetime1 != 1) {

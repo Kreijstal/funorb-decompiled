@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fg {
-    static bg field_f;
+    static IndexedSprite field_f;
     static String field_e;
     static int field_b;
     static int field_a;
@@ -13,7 +13,7 @@ final class fg {
         field_e = null;
         field_f = null;
         if (param0 >= -51) {
-          field_f = (bg) null;
+          field_f = (IndexedSprite) null;
           field_c = null;
           return;
         }
@@ -52,7 +52,7 @@ final class fg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -26,18 +26,18 @@ final class t {
     private t(int param0, int param1, int param2) {
     }
 
-    final void a(dh param0, int param1, byte[] param2) {
+    final void a(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
-            if (param0.field_i[param0.field_k] != 31 ||
-              param0.field_i[1 + param0.field_k] != -117) {
+            if (param0.payload[param0.position] != 31 ||
+              param0.payload[1 + param0.position] != -117) {
               throw new RuntimeException("");
             }
             if (null == this.field_d) {
               this.field_d = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_d.setInput(param0.field_i, param0.field_k + param1, -param0.field_k + (-18 + param0.field_i.length));
+              this.field_d.setInput(param0.payload, param0.position + param1, -param0.position + (-18 + param0.payload.length));
               this.field_d.inflate(param2);
             } catch (Exception exception) {
               this.field_d.reset();
@@ -45,7 +45,7 @@ final class t {
             }
             this.field_d.reset();
           } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "t.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qk.wrapException((Throwable) ((Object) runtimeException), "t.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

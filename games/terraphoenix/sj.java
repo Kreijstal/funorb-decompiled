@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static fa field_f;
+    static Archive field_f;
     static int field_b;
-    static ci[] field_e;
+    static Sprite[] field_e;
     static lg[] field_a;
     static volatile boolean field_c;
     static int[] field_g;
@@ -27,16 +27,16 @@ final class sj {
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
         try {
-          dh.g((byte) -124);
+          PacketBuffer.g((byte) -124);
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, mb.field_s);
-          jl.field_I.a((gl) (bj.field_f), (byte) -1);
+          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
             field_a = (lg[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class sj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param7).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -79,16 +79,16 @@ final class sj {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
         try {
-          dh.g((byte) -124);
+          PacketBuffer.g((byte) -124);
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, mb.field_s);
-          jl.field_I.a((gl) (bj.field_f), (byte) -1);
+          jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           if (param1 != 68) {
             field_a = (lg[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 }

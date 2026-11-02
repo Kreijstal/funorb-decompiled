@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends gb implements jf, n {
+final class cl extends WidgetContainer implements jf, n {
     private eb field_G;
     static d field_J;
     static String field_I;
@@ -9,7 +9,7 @@ final class cl extends gb implements jf, n {
     private vj field_F;
 
     cl(tj param0) {
-        super(0, 0, 288, 0, (cj) null);
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         String var7 = null;
         int var3 = 0;
         fd var4 = null;
@@ -18,8 +18,8 @@ final class cl extends gb implements jf, n {
         try {
           this.field_H = param0;
           this.field_G = new eb(rj.field_e, (sc) null);
-          this.field_G.field_l = (cj) ((Object) new ic());
-          var7 = ij.a(new String[]{this.f((byte) -69), this.d(false)}, -1, rf.field_y);
+          this.field_G.listener = (WidgetActionListener) ((Object) new ic());
+          var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, rf.field_y);
           var3 = 20;
           var4 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
           this.field_F = new vj(var7, var4);
@@ -27,9 +27,9 @@ final class cl extends gb implements jf, n {
           this.field_F.a(0, ig.field_b, (byte) 126);
           this.field_F.a(1, ig.field_b, (byte) 25);
           this.field_F.field_r = (sc) (this);
-          this.field_F.field_p = -40 + this.field_p;
-          this.field_F.b(var3, -96, 26, -40 + this.field_p);
-          var3 = var3 + (15 + this.field_F.field_n);
+          this.field_F.width = -40 + this.width;
+          this.field_F.b(var3, -96, 26, -40 + this.width);
+          var3 = var3 + (15 + this.field_F.height);
           this.b((byte) 95, this.field_F);
           var5 = 4;
           var6 = 200;
@@ -38,7 +38,7 @@ final class cl extends gb implements jf, n {
           this.b((byte) 95, this.field_G);
           this.a(0, (byte) 64, 300, 0, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,8 +51,8 @@ final class cl extends gb implements jf, n {
         field_I = null;
         field_J = null;
         if (param0 <= 110) {
-          ci var2 = (ci) null;
-          cl.a(-65, 31, (byte) -36, (ci) null, -121, -18);
+          Sprite var2 = (Sprite) null;
+          cl.a(-65, 31, (byte) -36, (Sprite) null, -121, -18);
         }
     }
 
@@ -89,14 +89,14 @@ final class cl extends gb implements jf, n {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static eg a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         if (param7 != 43) {
-          ci var9 = (ci) null;
-          cl.a(-72, 87, (byte) 30, (ci) null, -31, 97);
+          Sprite var9 = (Sprite) null;
+          cl.a(-72, 87, (byte) 30, (Sprite) null, -31, 97);
         }
         eg var8 = new eg(param3, param6, param1, param4, param2, param5);
         ic.field_s.a(var8, -16611);
@@ -111,7 +111,7 @@ final class cl extends gb implements jf, n {
         return "</col></u>";
     }
 
-    final boolean a(char param0, gl param1, int param2, int param3) {
+    final boolean a(char param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -142,11 +142,11 @@ final class cl extends gb implements jf, n {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, byte param2, ci param3, int param4, int param5) {
+    final static void a(int param0, int param1, byte param2, Sprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -178,35 +178,35 @@ final class cl extends gb implements jf, n {
           var7 = (param0 << 8) + var6_int * param3.field_p;
           param4 = param4 + param3.field_v;
           param1 = param1 + param3.field_p;
-          var8 = param4 * l.field_k + param1;
+          var8 = param4 * SoftwareRasterizer.field_k + param1;
           var9 = 0;
           var10 = param3.field_t;
           var11 = param3.field_r;
-          var12 = -var11 + l.field_k;
+          var12 = -var11 + SoftwareRasterizer.field_k;
           var13 = 9 / ((param2 - 24) / 56);
-          if (l.field_d > param4) {
-            var15 = l.field_d - param4;
+          if (SoftwareRasterizer.field_d > param4) {
+            var15 = SoftwareRasterizer.field_d - param4;
             var9 = var9 + var15 * var11;
-            var8 = var8 + l.field_k * var15;
+            var8 = var8 + SoftwareRasterizer.field_k * var15;
             var10 = var10 - var15;
-            param4 = l.field_d;
+            param4 = SoftwareRasterizer.field_d;
           }
           var14 = 0;
-          if (l.field_b > param1) {
-            var15Lifetime1 = -param1 + l.field_b;
+          if (SoftwareRasterizer.field_b > param1) {
+            var15Lifetime1 = -param1 + SoftwareRasterizer.field_b;
             var9 = var9 + var15Lifetime1;
             var12 = var12 + var15Lifetime1;
-            param1 = l.field_b;
+            param1 = SoftwareRasterizer.field_b;
             var7 = var7 + var15Lifetime1 * var6_int;
             var8 = var8 + var15Lifetime1;
             var11 = var11 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param4 + var10 > l.field_c) {
-            var10 = var10 - (-l.field_c + (param4 + var10));
+          if (param4 + var10 > SoftwareRasterizer.field_c) {
+            var10 = var10 - (-SoftwareRasterizer.field_c + (param4 + var10));
           }
-          if (l.field_f < var11 + param1) {
-            var15Lifetime2 = -l.field_f + param1 + var11;
+          if (SoftwareRasterizer.field_f < var11 + param1) {
+            var15Lifetime2 = -SoftwareRasterizer.field_f + param1 + var11;
             var11 = var11 - var15Lifetime2;
             var12 = var12 + var15Lifetime2;
             var14 = var14 + var15Lifetime2;
@@ -222,14 +222,14 @@ final class cl extends gb implements jf, n {
                 if (var16 >= 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var18 = param3.field_z[incrementValue$0];
+                  var18 = param3.pixels[incrementValue$0];
                   if (var18 != 0) {
                     if (var16 > 255) {
-                      l.field_i[var8] = var18;
+                      SoftwareRasterizer.field_i[var8] = var18;
                     } else {
-                      var19 = l.field_i[var8];
+                      var19 = SoftwareRasterizer.field_i[var8];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (var18 & 16711935) * var16 >> 8;
-                      l.field_i[var8] = var20 + dg.a(dg.a(65280, var19) * var17 + dg.a(65280, var18) * var16 >> 8, 65280);
+                      SoftwareRasterizer.field_i[var8] = var20 + dg.a(dg.a(65280, var19) * var17 + dg.a(65280, var18) * var16 >> 8, 65280);
                     }
                   }
                   var8++;
@@ -254,7 +254,7 @@ final class cl extends gb implements jf, n {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class cl extends gb implements jf, n {
           }
           int var6_int = 15 / ((param4 + 5) / 57);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "cl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "cl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

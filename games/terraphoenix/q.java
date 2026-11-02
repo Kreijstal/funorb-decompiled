@@ -82,7 +82,7 @@ final class q extends g {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

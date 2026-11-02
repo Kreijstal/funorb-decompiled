@@ -8,7 +8,7 @@ final class ah extends ng {
     static char[] field_E;
     static String field_C;
 
-    private ah(pk param0, int param1) {
+    private ah(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -27,15 +27,15 @@ final class ah extends ng {
         RuntimeException var5 = null;
         var10 = Terraphoenix.field_V;
         try {
-          l.d(param3, param4, 1 + param2, 10000536);
-          l.d(param3, param4 + param0, 1 + param2, 12105912);
+          SoftwareRasterizer.d(param3, param4, 1 + param2, 10000536);
+          SoftwareRasterizer.d(param3, param4 + param0, 1 + param2, 12105912);
           var5_int = 1;
-          if (var5_int + param4 < l.field_d) {
-            var5_int = -param4 + l.field_d;
+          if (var5_int + param4 < SoftwareRasterizer.field_d) {
+            var5_int = -param4 + SoftwareRasterizer.field_d;
           }
           var6 = param0;
-          if (var6 + param4 > l.field_c) {
-            var6 = l.field_c - param4;
+          if (var6 + param4 > SoftwareRasterizer.field_c) {
+            var6 = SoftwareRasterizer.field_c - param4;
           }
           if (param1 != 128) {
             return;
@@ -43,14 +43,14 @@ final class ah extends ng {
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 48 * var7 / param0 + 152;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            l.field_i[param3 + (param4 + var7) * l.field_k] = var9;
-            l.field_i[param3 + (l.field_k * (param4 + var7) + param2)] = var9;
+            SoftwareRasterizer.field_i[param3 + (param4 + var7) * SoftwareRasterizer.field_k] = var9;
+            SoftwareRasterizer.field_i[param3 + (SoftwareRasterizer.field_k * (param4 + var7) + param2)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var5), "ah.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) var5), "ah.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -64,20 +64,20 @@ final class ah extends ng {
           if (param0 != 48) {
             field_E = (char[]) null;
           }
-          var4 = (ji) (vc.field_d.d(9272));
+          var4 = (ji) (vc.field_d.beginBackward(9272));
           while (var4 != null) {
             nc.a(var4, 75, param1);
-            var4 = (ji) (vc.field_d.e((byte) -119));
+            var4 = (ji) (vc.field_d.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ah.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ah.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final String b(gl param0, int param1) {
+    final String b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -88,7 +88,7 @@ final class ah extends ng {
           if (param1 != 32032) {
             field_D = (String) null;
           }
-          stackIn_3_0 = uh.a(0, param0.field_o.length(), '*');
+          stackIn_3_0 = uh.a(0, param0.text.length(), '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,14 +100,14 @@ final class ah extends ng {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static mj a(String param0, int param1, int param2) {
-        ql var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        ql stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -116,11 +116,11 @@ final class ah extends ng {
           if (param2 != -23891) {
             field_D = (String) null;
           }
-          var3 = new ql();
-          ((mj) ((Object) var3)).field_d = param0;
-          ((mj) ((Object) var3)).field_b = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).host = param0;
+          ((SocketConnector) ((Object) var3)).port = param1;
           stackIn_3_0 = var3;
-          return (mj) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -131,7 +131,7 @@ final class ah extends ng {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

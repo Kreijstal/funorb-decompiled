@@ -1,0 +1,95 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class DualLinkNode extends IntrusiveNode {
+    static String field_n;
+    static IndexedSprite[] field_k;
+    static int[][] field_j;
+    long secondaryKey;
+    DualLinkNode secondaryPrevious;
+    static String field_l;
+    DualLinkNode secondaryNext;
+    static String field_h;
+
+    final static boolean a(int param0, int param1, Archive param2, boolean param3) {
+        byte[] var4 = null;
+        RuntimeException var4_ref = null;
+        byte[] var5 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5 = param2.b(param0, -106, param1);
+          var4 = var5;
+          if (!param3) {
+            field_n = (String) null;
+          }
+          if (var5 == null) {
+            return false;
+          }
+          RandomAccessCacheFile.a(var5, (byte) -110);
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_10_0 = var4_ref;
+          stackIn_10_1 = new StringBuilder().append("vh.VA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final static void a(String param0, byte param1, float param2) {
+        try {
+          TutorialController.field_e = param0;
+          int var3_int = -44 % ((-15 - param1) / 53);
+          ed.field_d = param2;
+        } catch (RuntimeException runtimeException) {
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vh.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final void unlinkSecondary(byte obfuscationGuard) {
+        if (this.secondaryPrevious == null) {
+          return;
+        }
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious = null;
+        if (obfuscationGuard == 13) {
+          this.secondaryNext = null;
+          return;
+        }
+        this.secondaryKey = 69L;
+        this.secondaryNext = null;
+    }
+
+    public static void a(int param0) {
+        field_n = null;
+        if (param0 == 7229) {
+          field_j = (int[][]) null;
+          field_k = null;
+          field_l = null;
+          field_h = null;
+          return;
+        }
+        field_h = (String) null;
+        field_j = (int[][]) null;
+        field_k = null;
+        field_l = null;
+        field_h = null;
+    }
+
+    protected DualLinkNode() {
+    }
+
+    static {
+        field_n = "Soldier";
+        field_h = "    Low Walls";
+    }
+}

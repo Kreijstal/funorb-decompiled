@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class h {
-    static fa field_j;
+    static Archive field_j;
     static pd field_c;
     static String field_d;
     hl field_b;
     hl field_m;
     hl field_a;
     hl field_g;
-    dh field_e;
+    PacketBuffer field_e;
     int field_h;
     long field_f;
     byte field_n;
-    dh field_o;
+    PacketBuffer field_o;
     volatile int field_i;
     volatile int field_l;
     nh field_k;
@@ -40,7 +40,7 @@ abstract class h {
         long var6 = (long)param0 + ((long)param2 << 32);
         nh var8 = new nh();
         var8.field_G = param4;
-        var8.field_m = var6;
+        var8.secondaryKey = var6;
         if (param3 < 55) {
           h.a(false);
           var8.field_x = param1 ? true : false;
@@ -105,11 +105,11 @@ abstract class h {
         this.field_m = new hl();
         this.field_a = new hl();
         this.field_g = new hl();
-        this.field_e = new dh(6);
+        this.field_e = new PacketBuffer(6);
         this.field_n = (byte) 0;
         this.field_i = 0;
         this.field_l = 0;
-        this.field_o = new dh(10);
+        this.field_o = new PacketBuffer(10);
     }
 
     static {

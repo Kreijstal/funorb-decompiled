@@ -6,22 +6,22 @@ class ng extends fd {
     static int field_x;
     static int field_v;
     static String field_w;
-    static bg[] field_u;
+    static IndexedSprite[] field_u;
     static int field_y;
     static volatile int field_t;
 
-    ng(pk param0, int param1) {
+    ng(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
-            ah.a(param1.field_n, 128, param1.field_p, param2 + param1.field_w, param1.field_u + param0);
+            ah.a(param1.height, 128, param1.width, param2 + param1.x, param1.y + param0);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

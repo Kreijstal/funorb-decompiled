@@ -30,7 +30,7 @@ final class li {
           if (var6 == null) {
             ej.field_S = 2;
           } else {
-            if (te.a((CharSequence) ((Object) var6), true)) {
+            if (RasterBuffer.a((CharSequence) ((Object) var6), true)) {
               ej.field_S = ta.a((CharSequence) ((Object) var6), -121);
             } else {
               ej.field_S = 2;
@@ -38,13 +38,13 @@ final class li {
           }
           me.field_k = param4;
           da.field_b = param2;
-          dh.field_h = param3;
+          PacketBuffer.field_h = param3;
           if (param0 != 22957) {
             field_a = true;
           }
-          wg.field_l = new ci[param1.length];
+          wg.field_l = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
-            wg.field_l[var7] = new ci(317, 34);
+            wg.field_l[var7] = new Sprite(317, 34);
           }
           vi.field_j = param1;
           return;
@@ -64,7 +64,7 @@ final class li {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class li {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -129,12 +129,12 @@ final class li {
           var4 = hm.a((byte) 6, param1);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ad.a((byte) 120, var4.charAt(0)) &&
-              !ad.a((byte) 117, var4.charAt(var4.length() - 1))) {
+            if (!TutorialController.a((byte) 120, var4.charAt(0)) &&
+              !TutorialController.a((byte) 117, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               for (var6 = 0; param1.length() > var6; var6++) {
                 var7 = param1.charAt(var6);
-                if (ad.a((byte) 88, (char) var7)) {
+                if (TutorialController.a((byte) 88, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -162,7 +162,7 @@ final class li {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
     }
 

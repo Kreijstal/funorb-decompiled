@@ -7,7 +7,7 @@ final class ph extends di {
     private ej field_p;
     static String[] field_n;
     static int field_o;
-    static fa field_q;
+    static Archive field_q;
     static wg field_v;
     static String[] field_r;
     static String field_u;
@@ -134,7 +134,7 @@ final class ph extends di {
                   if (ob.field_h <= param0) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + l.field_k;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_k;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -188,7 +188,7 @@ final class ph extends di {
               if (ob.field_h <= param0) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + l.field_k;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_k;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }
@@ -205,7 +205,7 @@ final class ph extends di {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -215,11 +215,11 @@ final class ph extends di {
           this.field_s = param2;
           this.field_p = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static java.awt.Frame a(he param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_26_0 = null;
         Object stackIn_37_0 = null;
@@ -234,14 +234,14 @@ final class ph extends di {
         java.awt.Frame var7 = null;
         int var9 = 0;
         ef[] var10 = null;
-        mf var11 = null;
+        AsyncRequest var11 = null;
         var9 = Terraphoenix.field_V;
         try {
           if (!param0.b(2)) {
             return null;
           }
           if (0 == param5) {
-            var10 = of.a(param0, param4 - 5);
+            var10 = ImageProducerRasterBuffer.a(param0, param4 - 5);
             var6 = var10;
             if (var6 == null) {
               return null;
@@ -263,21 +263,21 @@ final class ph extends di {
             }
           }
           var11 = param0.a(param5, param2, true, param1, param3);
-          while (var11.field_d == 0) {
+          while (var11.status == 0) {
             gi.a((byte) -63, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
           if (param4 != 10) {
             field_m = (int[]) null;
           }
-          if (var11.field_d != 2) {
+          if (var11.status != 2) {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
-          ck.a(param0, 112, var7);
+          FullscreenFocusCanvas.a(param0, 112, var7);
           stackIn_37_0 = null;
           return (java.awt.Frame) (stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,7 +290,7 @@ final class ph extends di {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class ph extends di {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_p.field_o.toLowerCase();
+          var3 = this.field_p.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == param1) {
             stackIn_3_0 = qf.field_d;
@@ -333,20 +333,20 @@ final class ph extends di {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, bm param1, int param2, int param3) {
         try {
-          ck.field_a = param1;
+          FullscreenFocusCanvas.field_a = param1;
           nb.field_e = param0;
           if (param3 != -1) {
             field_t = (int[]) null;
           }
           eb.field_D = param2;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ph.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ph.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -370,7 +370,7 @@ final class ph extends di {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_p.field_o.toLowerCase();
+          var7 = this.field_p.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = null;
@@ -391,7 +391,7 @@ final class ph extends di {
           }
           var6 = -107 / ((param1 - 26) / 56);
           if (this.c(param0, -1)) {
-            stackIn_16_0 = mj.field_a;
+            stackIn_16_0 = SocketConnector.field_a;
             return stackIn_16_0;
           }
           if (var7.length() <= 0) {
@@ -403,7 +403,7 @@ final class ph extends di {
             return stackIn_21_0;
           }
           if (a.a(var5, -19, var7)) {
-            stackIn_25_0 = tc.field_b;
+            stackIn_25_0 = SecondaryNodeDeque.field_b;
             return stackIn_25_0;
           }
           if (!oh.a((byte) -85, var7, var5)) {
@@ -421,7 +421,7 @@ final class ph extends di {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ final class ph extends di {
             var8 = (bm) null;
             ph.a(-49, (bm) null, -94, 122);
           }
-          var9 = this.field_s.field_o.toLowerCase();
+          var9 = this.field_s.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (0 < var9.length()) {
             if (var4.length() <= 0) {
@@ -472,7 +472,7 @@ final class ph extends di {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

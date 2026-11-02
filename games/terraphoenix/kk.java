@@ -10,53 +10,53 @@ final class kk {
         if (param0 != 10472) {
           return 47;
         }
-        if (uf.field_f == null) {
+        if (IntrusiveNode.field_f == null) {
           return -1;
         }
         if (param1 < qk.field_i) {
           if (param1 < nj.field_j) {
             return -1;
           }
-          if (param1 >= uf.field_f.field_r + nj.field_j) {
+          if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
             return -1;
           }
-          if (param2 < gf.field_C) {
+          if (param2 < GameShell.field_C) {
             return -1;
           }
-          if (param2 < uf.field_f.field_t + gf.field_C) {
+          if (param2 < IntrusiveNode.field_f.field_t + GameShell.field_C) {
             return 1;
           }
           return -1;
         }
-        if (qk.field_i + uf.field_f.field_r <= param1) {
+        if (qk.field_i + IntrusiveNode.field_f.field_r <= param1) {
           if (param1 < nj.field_j) {
             return -1;
           }
-          if (param1 >= uf.field_f.field_r + nj.field_j) {
+          if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
             return -1;
           }
-          if (param2 < gf.field_C) {
+          if (param2 < GameShell.field_C) {
             return -1;
           }
-          if (param2 < uf.field_f.field_t + gf.field_C) {
+          if (param2 < IntrusiveNode.field_f.field_t + GameShell.field_C) {
             return 1;
           }
           return -1;
         }
         if (sl.field_d <= param2 &&
-          uf.field_f.field_t + sl.field_d > param2) {
+          IntrusiveNode.field_f.field_t + sl.field_d > param2) {
           return 0;
         }
         if (param1 < nj.field_j) {
           return -1;
         }
-        if (param1 >= uf.field_f.field_r + nj.field_j) {
+        if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
           return -1;
         }
-        if (param2 < gf.field_C) {
+        if (param2 < GameShell.field_C) {
           return -1;
         }
-        if (param2 >= uf.field_f.field_t + gf.field_C) {
+        if (param2 >= IntrusiveNode.field_f.field_t + GameShell.field_C) {
           return -1;
         }
         return 1;

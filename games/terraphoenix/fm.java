@@ -23,7 +23,7 @@ final class fm {
             fm.b(-84);
           }
           var2 = new ud(param0, ha.field_s, hj.field_K, sb.field_m, rf.field_p, qc.field_b);
-          mj.a((byte) 101);
+          SocketConnector.a((byte) 101);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -36,16 +36,16 @@ final class fm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static kf[] a(boolean param0) {
         if (!param0) {
-          return new kf[]{te.field_g, gf.field_u, gm.field_j};
+          return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
         }
         fm.a(47);
-        return new kf[]{te.field_g, gf.field_u, gm.field_j};
+        return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
     }
 
     public static void b(int param0) {

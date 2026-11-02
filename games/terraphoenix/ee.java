@@ -25,7 +25,7 @@ final class ee {
     int[] field_Q;
     short[] field_D;
     short[] field_j;
-    static fa field_G;
+    static Archive field_G;
     short[] field_y;
     short[] field_g;
     int[] field_w;
@@ -113,7 +113,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ee.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ee.C(" + param0 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ee.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ee.B(" + param0 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var6), "ee.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) var6), "ee.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -187,20 +187,20 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "ee.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ee.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(byte param0, fa param1) {
+    final static void a(byte param0, Archive param1) {
         RuntimeException runtimeException = null;
-        tl var2 = null;
+        VorbisDecoder var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          tl.a(param1.a("headers.packvorbis", "", -21653));
-          var2 = tl.a(param1, "jagex logo2.packvorbis", "");
+          VorbisDecoder.a(param1.a("headers.packvorbis", "", -21653));
+          var2 = VorbisDecoder.a(param1, "jagex logo2.packvorbis", "");
           if (param0 != 51) {
             return;
           }
@@ -216,7 +216,7 @@ final class ee {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class ee {
             field_h = -43;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
         }
     }
 
@@ -259,21 +259,21 @@ final class ee {
         String var4_ref_StringLifetime1;
         var8 = Terraphoenix.field_V;
         try {
-          var1 = mk.field_j;
-          var2 = var1.a(-16384);
+          var1 = LevelEditor.field_j;
+          var2 = var1.readUnsignedByte(-16384);
           if (0 == var2) {
             if (null == ai.field_f) {
               ai.field_f = new vb(128);
               cb.field_I = 0;
             }
-            stackIn_12_0 = (var1.a(-16384) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte(-16384) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.e(-1);
+            var4_ref_String = var1.readString(-1);
             if (var3_int != 0) {
-              var1.e(-1);
+              var1.readString(-1);
             }
             var5_ref = dm.a((byte) -85, var4_ref_String);
-            var6_ref = var1.e(-1);
+            var6_ref = var1.readString(-1);
             var7_ref = hm.a((byte) 106, (CharSequence) ((Object) var4_ref_String));
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
@@ -290,7 +290,7 @@ final class ee {
               fieldTemp$1 = cb.field_I;
               cb.field_I = cb.field_I + 1;
               var5_ref.field_Mb = fieldTemp$1;
-              r.field_j.a(var5_ref, -16611);
+              BattleUnit.field_j.a(var5_ref, -16611);
             }
             var5_ref.field_Lb = var4_ref_String;
             return;
@@ -312,37 +312,37 @@ final class ee {
               return;
             }
             if (var2 != 4) {
-              bd.a((Throwable) null, "F1: " + r.i(-15465), 111);
-              gb.g(-17464);
+              bd.reportClientError((Throwable) null, "F1: " + BattleUnit.i(-15465), 111);
+              WidgetContainer.g(-17464);
               return;
             }
             jg.field_gb = 1;
-            var3 = var1.e(-1);
+            var3 = var1.readString(-1);
             ml.field_t = ((String) (var3)).intern();
-            var4 = var1.a(-16384);
+            var4 = var1.readUnsignedByte(-16384);
             ve.a(2, var4);
             return;
           }
-          if (gb.field_z == null) {
-            gb.field_z = new vb(128);
+          if (WidgetContainer.field_z == null) {
+            WidgetContainer.field_z = new vb(128);
             gj.field_a = 0;
           }
-          var3Lifetime1 = var1.e(-1);
+          var3Lifetime1 = var1.readString(-1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.e(-1);
-          var5 = var1.e(-1);
+          var4_ref_StringLifetime1 = var1.readString(-1);
+          var5 = var1.readString(-1);
           var6 = dd.a((byte) 104, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = dd.a((byte) 104, var5);
             if (null != var6) {
-              gb.field_z.a(false, var6, (long)hm.a((byte) 92, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              WidgetContainer.field_z.a(false, var6, (long)hm.a((byte) 92, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6 == null) {
             var6 = new q();
-            gb.field_z.a(false, var6, (long)hm.a((byte) -121, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            WidgetContainer.field_z.a(false, var6, (long)hm.a((byte) -121, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$0 = gj.field_a;
             gj.field_a = gj.field_a + 1;
             var6.field_Mb = fieldTemp$0;
@@ -353,9 +353,9 @@ final class ee {
           }
           var6.field_Eb = (String) (var3Lifetime1);
           var6.field_Lb = var4_ref_StringLifetime1;
-          var6.b((byte) 12);
-          var7 = (q) (sb.field_h.d(9272));
-          L9: while (true) {
+          var6.unlink((byte) 12);
+          var7 = (q) (sb.field_h.beginBackward(9272));
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
               stackOut_48_0 = ji.a((byte) -19, var6, var7);
@@ -364,13 +364,13 @@ final class ee {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_49_0)) {
-                var7 = (q) (sb.field_h.e((byte) -119));
+                var7 = (q) (sb.field_h.nextBackward((byte) -119));
                 continue;
               }
             }
             if (decompiledFrameRemainder0) {
               if (null == var7) {
-                break L9;
+                break scanLoop1;
               }
               stackIn_56_0 = 119;
             }
@@ -385,7 +385,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "ee.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "ee.E(" + param0 + ')');
         }
     }
 

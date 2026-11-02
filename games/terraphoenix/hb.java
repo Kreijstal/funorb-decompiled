@@ -4,16 +4,16 @@
 class hb extends nb {
     static int[] field_h;
     static int field_j;
-    static ci field_m;
+    static Sprite field_m;
     static String field_o;
     static int field_l;
     private String field_q;
     private long field_k;
-    static ci[] field_p;
+    static Sprite[] field_p;
     static int field_i;
     static int field_n;
 
-    final static int a(gf param0, int param1, boolean param2) {
+    final static int a(GameShell param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -36,11 +36,11 @@ class hb extends nb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(pk param0, int param1, int param2, String param3, em param4) {
+    final static void a(BitmapFont param0, int param1, int param2, String param3, em param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -102,28 +102,28 @@ class hb extends nb {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     cm c(int param0) {
         if (param0 != 0) {
-          gf var3 = (gf) null;
-          hb.a((gf) null, 1, true);
+          GameShell var3 = (GameShell) null;
+          hb.a((GameShell) null, 1, true);
         }
         return hf.field_s;
     }
 
-    final void a(byte param0, dh param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
-          param1.a(this.field_k, 76);
+          param1.writeLong(this.field_k, 76);
           param1.a(-97, this.field_q);
           if (param0 != -2) {
-            dh var4 = (dh) null;
-            this.a((byte) -36, (dh) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((byte) -36, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -142,7 +142,7 @@ class hb extends nb {
           this.field_q = param1;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

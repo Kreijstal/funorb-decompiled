@@ -11,7 +11,7 @@ abstract class uj {
 
     abstract byte[] a(int param0, int param1);
 
-    abstract km a(byte param0);
+    abstract ArchiveIndex a(byte param0);
 
     abstract int b(int param0, int param1);
 

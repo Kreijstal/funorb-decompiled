@@ -96,7 +96,7 @@ final class ol extends g {
             this.field_Db = this.field_Db - 1;
           }
           if (this.field_Db == 0 &&
-            this.field_Ib.field_W + (this.field_Ib.field_lb + this.field_Ib.field_gb + this.field_Ib.field_Bb) <= jb.field_b) {
+            this.field_Ib.field_W + (this.field_Ib.field_lb + this.field_Ib.field_gb + this.field_Ib.field_Bb) <= MouseWheelInput.field_b) {
             this.field_Db = 3;
             return true;
           }
@@ -108,13 +108,13 @@ final class ol extends g {
         return false;
     }
 
-    ol(long param0, g param1, ci param2, ci param3, g param4, g param5) {
+    ol(long param0, g param1, Sprite param2, Sprite param3, g param4, g param5) {
         this(param0, param1, param1, param4, param5);
         try {
           this.field_Gb.field_ob = param2;
           this.field_Jb.field_ob = param3;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ol.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ol.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class ol extends g {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class ol extends g {
         if (this.field_Db != 0) {
           return false;
         }
-        if (this.field_Ib.field_Bb + this.field_Ib.field_gb > jb.field_b) {
+        if (this.field_Ib.field_Bb + this.field_Ib.field_gb > MouseWheelInput.field_b) {
           this.field_Db = 3;
           return true;
         }

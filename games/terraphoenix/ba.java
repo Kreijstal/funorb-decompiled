@@ -8,7 +8,7 @@ final class ba {
     static boolean field_h;
     String field_d;
     boolean field_a;
-    static bg[] field_e;
+    static IndexedSprite[] field_e;
     static long field_i;
     static int[] field_g;
     private static String field_z;

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bj {
-    static mf field_c;
+    static AsyncRequest field_c;
     static jg field_f;
     static String field_b;
     static int[] field_d;
-    static ci field_g;
+    static Sprite field_g;
     static String field_a;
     static String field_h;
-    static ci field_e;
+    static Sprite field_e;
 
     final static String a(CharSequence[] param0, byte param1) {
         int var2_int = 0;
@@ -33,7 +33,7 @@ final class bj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

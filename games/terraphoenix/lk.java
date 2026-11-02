@@ -6,7 +6,7 @@ final class lk {
     static String field_c;
     static String field_e;
     static int[] field_a;
-    static jb field_d;
+    static MouseWheelInput field_d;
 
     public static void a(int param0) {
         field_c = null;

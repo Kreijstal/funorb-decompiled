@@ -6,8 +6,8 @@ final class ch {
     boolean field_a;
     private int field_e;
     static String field_h;
-    static fa field_g;
-    static volatile int field_d;
+    static Archive field_g;
+    static volatile int mouseY;
     private int field_f;
     int field_i;
     static int field_c;
@@ -27,16 +27,16 @@ final class ch {
         try {
           if (57 + this.field_i <= ef.field_j &&
             ef.field_j < 57 + this.field_i + 266 &&
-            jb.field_b >= param5 &&
-            param5 + 92 > jb.field_b) {
+            MouseWheelInput.field_b >= param5 &&
+            param5 + 92 > MouseWheelInput.field_b) {
             param3.field_gb = param0 + 1;
             if (this.field_e != param3.field_gb) {
               this.field_e = param3.field_gb;
               qd.$cfr$intArgs$a$e9dea5688aa5(43, 29);
             }
-            l.e(this.field_i + 57, param5, 266, 92, 16777215);
+            SoftwareRasterizer.e(this.field_i + 57, param5, 266, 92, 16777215);
           }
-          l.i(57 + (this.field_i + 2), param5 + 2, 321 + this.field_i, 66 + param5);
+          SoftwareRasterizer.i(57 + (this.field_i + 2), param5 + 2, 321 + this.field_i, 66 + param5);
           if (param0 != 5 &&
             param0 != 11) {
             cc.field_i[param0].a(192, 128, this.field_i + 164, 2 + param5 + 50, (byte) 21);
@@ -48,11 +48,11 @@ final class ch {
             }
             cc.field_i[param0].a(192, 128, 164 + this.field_i + (-64 + var7_int), var8 + (2 + param5 + 50), (byte) 21);
           }
-          l.c(this.field_i + 57, 62, 323 + this.field_i, 415);
+          SoftwareRasterizer.c(this.field_i + 57, 62, 323 + this.field_i, 415);
           og.field_f.b(od.field_c[param0].field_j, 65 + this.field_i, 82 + param5, param1, -1);
           if (param4) {
             if (param0 == 17) {
-              og.field_f.a(of.field_n + "50", 319 + this.field_i, param5 + 16, 0, -1);
+              og.field_f.a(ImageProducerRasterBuffer.field_n + "50", 319 + this.field_i, param5 + 16, 0, -1);
             } else {
               if (5 != param0 &&
                 param0 != 11 &&
@@ -126,7 +126,7 @@ final class ch {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class ch {
             param1--;
             if (param1 < 0) {
               if (param2 != 15169) {
-                field_d = -12;
+                mouseY = -12;
               }
               return;
             }
@@ -191,7 +191,7 @@ final class ch {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class ch {
         if (param0 > -35) {
           return (rh[]) null;
         }
-        return new rh[]{vj.field_K, rf.field_z, lf.field_f, rf.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, eh.field_f, fi.field_p, ai.field_b, e.field_l, le.field_n, wg.field_b};
+        return new rh[]{vj.field_K, rf.field_z, lf.field_f, rf.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
     }
 
     final void a(int param0, Terraphoenix param1) {
@@ -214,35 +214,35 @@ final class ch {
         int var6_int = 0;
         String var6 = null;
         int var7 = 0;
-        ci var7_ref_ci = null;
+        Sprite var7_ref_ci = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         var10 = Terraphoenix.field_V;
         try {
           this.field_b = false;
-          l.c(0, 0, 640, this.field_i / 4 + 56);
+          SoftwareRasterizer.c(0, 0, 640, this.field_i / 4 + 56);
           em.field_c.d(0, this.field_i / 4 + 0);
-          l.c(0, 56, 356 + this.field_i, 422);
+          SoftwareRasterizer.c(0, 56, 356 + this.field_i, 422);
           em.field_c.d(0 + this.field_i, 0);
-          l.c(356 - this.field_i, 56, 640, 422);
+          SoftwareRasterizer.c(356 - this.field_i, 56, 640, 422);
           em.field_c.d(0 - this.field_i, 0);
-          l.c(0, -this.field_i + 422, 640, 480);
+          SoftwareRasterizer.c(0, -this.field_i + 422, 640, 480);
           em.field_c.d(0, -this.field_i + 0);
-          l.c();
+          SoftwareRasterizer.c();
           qh.field_b.b(-qh.field_b.field_r + 624, -qh.field_b.field_t + (464 - this.field_i));
           if (param1.field_jb > 0) {
-            l.d(624 - qh.field_b.field_r, -qh.field_b.field_t + (464 - this.field_i), qh.field_b.field_r, qh.field_b.field_t, 16777215, 0);
+            SoftwareRasterizer.d(624 - qh.field_b.field_r, -qh.field_b.field_t + (464 - this.field_i), qh.field_b.field_r, qh.field_b.field_t, 16777215, 0);
           }
           if (ef.field_j >= -qh.field_b.field_r + 624 &&
             ef.field_j <= 624 &&
-            -qh.field_b.field_t + (464 - this.field_i) <= jb.field_b &&
-            jb.field_b <= -this.field_i + 464 &&
+            -qh.field_b.field_t + (464 - this.field_i) <= MouseWheelInput.field_b &&
+            MouseWheelInput.field_b <= -this.field_i + 464 &&
             0 >= param1.field_jb) {
-            l.d(624 - qh.field_b.field_r, -qh.field_b.field_t + (464 - this.field_i), qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
+            SoftwareRasterizer.d(624 - qh.field_b.field_r, -qh.field_b.field_t + (464 - this.field_i), qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
           }
           if (0 < param1.field_jb) {
-            l.d(-qh.field_b.field_r + 624, -this.field_i + 464 - qh.field_b.field_t, qh.field_b.field_r, qh.field_b.field_t, 0, 128);
+            SoftwareRasterizer.d(-qh.field_b.field_r + 624, -this.field_i + 464 - qh.field_b.field_t, qh.field_b.field_r, qh.field_b.field_t, 0, 128);
           }
           param1.field_gb = 0;
           var3_int = 58;
@@ -264,9 +264,9 @@ final class ch {
             }
             if (ef.field_j >= this.field_i + 5 &&
               ef.field_j < qc.field_f[0].field_r + 5 + this.field_i &&
-              var3_int <= jb.field_b &&
-              qc.field_f[0].field_t + var3_int > jb.field_b) {
-              l.e(this.field_i + 5, var3_int, qc.field_f[0].field_r, qc.field_f[0].field_t, 16777215);
+              var3_int <= MouseWheelInput.field_b &&
+              qc.field_f[0].field_t + var3_int > MouseWheelInput.field_b) {
+              SoftwareRasterizer.e(this.field_i + 5, var3_int, qc.field_f[0].field_r, qc.field_f[0].field_t, 16777215);
               if (var5 != this.field_f) {
                 this.field_f = var5;
                 qd.$cfr$intArgs$a$e9dea5688aa5(42, 28);
@@ -376,7 +376,7 @@ final class ch {
             }
             if (var6_int != 0) {
               var7 = (120 + (int)(Math.sin(mm.field_f) * 120.0)) * 65793;
-              l.e(4 + this.field_i, -1 + var3_int, 2 + qc.field_f[0].field_r, 2 + qc.field_f[0].field_t, var7);
+              SoftwareRasterizer.e(4 + this.field_i, -1 + var3_int, 2 + qc.field_f[0].field_r, 2 + qc.field_f[0].field_t, var7);
             }
             var3_int += 52;
           }
@@ -384,7 +384,7 @@ final class ch {
           if (param1.field_jb <= 0) {
             var5 = 128;
           }
-          l.c(57 + this.field_i, 62, 323 + this.field_i, 415);
+          SoftwareRasterizer.c(57 + this.field_i, 62, 323 + this.field_i, 415);
           var3_int = -param1.field_G + 62;
           if (param1.field_hb == 2) {
             if (!od.field_c[17].field_t &&
@@ -489,25 +489,25 @@ final class ch {
           for (var6_int = -1 + od.field_c.length; var6_int >= 0; var6_int--) {
             boolean decompiledFrameRemainder0 = true;
             if (od.field_c[var6_int].field_t) {
-              L56: {
+              regionExit1: {
                 if (param1.field_hb == 0) {
                   if (var6_int == 0) {
-                    break L56;
+                    break regionExit1;
                   }
                   if (var6_int == 3) {
-                    break L56;
+                    break regionExit1;
                   }
                 }
                 if (param1.field_hb == 1) {
                   switch (var6_int) {
                     case 1:
-                      break L56;
+                      break regionExit1;
                     case 2:
-                      break L56;
+                      break regionExit1;
                     case 4:
-                      break L56;
+                      break regionExit1;
                     case 18:
-                      break L56;
+                      break regionExit1;
                     default:
                       break;
                   }
@@ -516,22 +516,22 @@ final class ch {
                   17 != var6_int) {
                   if (param1.field_hb == 3) {
                     if (var6_int == 5) {
-                      break L56;
+                      break regionExit1;
                     }
                     if (var6_int == 11) {
-                      break L56;
+                      break regionExit1;
                     }
                   }
                   if (4 == param1.field_hb) {
                     switch (var6_int) {
                       case 6:
-                        break L56;
+                        break regionExit1;
                       case 7:
-                        break L56;
+                        break regionExit1;
                       case 10:
-                        break L56;
+                        break regionExit1;
                       case 16:
-                        break L56;
+                        break regionExit1;
                       default:
                         break;
                     }
@@ -549,7 +549,7 @@ final class ch {
                 }
               }
               if (decompiledFrameRemainder0) {
-                e.field_g.c(this.field_i + 57, var3_int, 384);
+                BattleState.field_g.c(this.field_i + 57, var3_int, 384);
                 this.a(var6_int, 16777215, param0 + 3569, param1, true, var3_int);
                 var3_int += 92;
               }
@@ -558,12 +558,12 @@ final class ch {
           for (var6_int = sj.field_a.length - 1; var6_int >= 0; var6_int--) {
             if (sj.field_a[var6_int].field_l &&
               2 == param1.field_hb) {
-              e.field_g.c(57 + this.field_i, var3_int, 384);
+              BattleState.field_g.c(57 + this.field_i, var3_int, 384);
               this.a(true, (byte) -128, var6_int, var3_int, param1, 0);
               var3_int += 92;
             }
           }
-          l.c();
+          SoftwareRasterizer.c();
           var3_int = var3_int + param1.field_G;
           if (1 != oh.field_f) {
             param1.field_J = false;
@@ -575,22 +575,22 @@ final class ch {
             jg.field_hb.b(this.field_i + 337, var7 + 74, jg.field_hb.field_r, var6_int, 7381200);
             if (1 == oh.field_f && (param1.field_J ||
               !(337 + this.field_i > ef.field_j) &&
-              !(jg.field_hb.field_r + 337 + this.field_i <= ef.field_j)) && (jb.field_b >= 64 &&
-              414 > jb.field_b)) {
+              !(jg.field_hb.field_r + 337 + this.field_i <= ef.field_j)) && (MouseWheelInput.field_b >= 64 &&
+              414 > MouseWheelInput.field_b)) {
               var8 = var6_int / 2 + 74;
               var9 = -(var6_int / 2) + 403;
               if (!param1.field_J) {
-                if (var7 + 74 < jb.field_b &&
-                  var6_int + (74 + var7) > jb.field_b) {
+                if (var7 + 74 < MouseWheelInput.field_b &&
+                  var6_int + (74 + var7) > MouseWheelInput.field_b) {
                   param1.field_J = true;
-                  param1.field_rb = var9 - var6_int / 2 + jb.field_b + (-var7 - 74);
-                  param1.field_eb = jb.field_b + (var8 - var6_int / 2) - (var7 + 74);
+                  param1.field_rb = var9 - var6_int / 2 + MouseWheelInput.field_b + (-var7 - 74);
+                  param1.field_eb = MouseWheelInput.field_b + (var8 - var6_int / 2) - (var7 + 74);
                 } else {
-                  if (var8 > jb.field_b) {
+                  if (var8 > MouseWheelInput.field_b) {
                     param1.field_G = 0;
                   } else {
-                    if (jb.field_b <= var9) {
-                      param1.field_G = (-var8 + jb.field_b) * (-353 + var3_int) / (var9 - var8);
+                    if (MouseWheelInput.field_b <= var9) {
+                      param1.field_G = (-var8 + MouseWheelInput.field_b) * (-353 + var3_int) / (var9 - var8);
                     } else {
                       param1.field_G = -353 + var3_int;
                     }
@@ -602,11 +602,11 @@ final class ch {
               } else {
                 var9 = param1.field_rb;
                 var8 = param1.field_eb;
-                if (var8 > jb.field_b) {
+                if (var8 > MouseWheelInput.field_b) {
                   param1.field_G = 0;
                 } else {
-                  if (var9 >= jb.field_b) {
-                    param1.field_G = (-var8 + jb.field_b) * (var3_int - 353) / (-var8 + var9);
+                  if (var9 >= MouseWheelInput.field_b) {
+                    param1.field_G = (-var8 + MouseWheelInput.field_b) * (var3_int - 353) / (-var8 + var9);
                   } else {
                     param1.field_G = var3_int - 353;
                   }
@@ -614,18 +614,18 @@ final class ch {
               }
             }
           } else {
-            l.f(333 + this.field_i, 58, 19, 360, 0);
+            SoftwareRasterizer.f(333 + this.field_i, 58, 19, 360, 0);
           }
           if (param1.field_D == 0) {
             if (ha.field_q >= 1) {
               var6 = jc.field_E;
             } else {
-              var6 = r.field_kb;
+              var6 = BattleUnit.field_kb;
             }
             var7 = og.field_f.c(var6, 263);
-            l.d(-this.field_i + 360, -(14 * var7) + 307 + 8, 268, 14 * var7 + 14 - 10, 0, 96);
-            l.g(-this.field_i + 360, 307 - 14 * var7 + 8, 268, 16777215, 192);
-            l.g(360 - this.field_i, 318, 268, 16777215, 192);
+            SoftwareRasterizer.d(-this.field_i + 360, -(14 * var7) + 307 + 8, 268, 14 * var7 + 14 - 10, 0, 96);
+            SoftwareRasterizer.g(-this.field_i + 360, 307 - 14 * var7 + 8, 268, 16777215, 192);
+            SoftwareRasterizer.g(360 - this.field_i, 318, 268, 16777215, 192);
             ji.a(-this.field_i + 362, 14, 16777215, -60 + (397 - 14 * var7), var6, (byte) 88, -this.field_i + 625);
           } else {
             if (param1.field_D > 0) {
@@ -635,18 +635,18 @@ final class ch {
                   bl.field_b[0].b(-this.field_i + 357, 386);
                   if (ef.field_j >= -this.field_i + 357 &&
                     ef.field_j <= -this.field_i + 631 &&
-                    jb.field_b >= 386 &&
-                    420 >= jb.field_b) {
-                    l.e(-this.field_i + 357, 386, 274, 34, 16777215);
+                    MouseWheelInput.field_b >= 386 &&
+                    420 >= MouseWheelInput.field_b) {
+                    SoftwareRasterizer.e(-this.field_i + 357, 386, 274, 34, 16777215);
                     this.field_b = true;
                   }
                 }
                 cc.field_i[var6_int].b(-cc.field_i[var6_int].field_p + (362 - this.field_i), 100 - cc.field_i[var6_int].field_v);
                 param1.a(vc.field_f, 124, 0, 16777215, -this.field_i + 493, param0 - 28085, od.field_c[var6_int].field_k);
                 var7 = og.field_f.c(od.field_c[var6_int].field_i, 263);
-                l.d(360 - this.field_i, -90 + (397 - 14 * var7 + 8), 268, 14 * var7 + 4, 0, 96);
-                l.g(360 - this.field_i, 397 + (-(var7 * 14) - 90) + 8, 268, 16777215, 192);
-                l.g(360 - this.field_i, 318, 268, 16777215, 192);
+                SoftwareRasterizer.d(360 - this.field_i, -90 + (397 - 14 * var7 + 8), 268, 14 * var7 + 4, 0, 96);
+                SoftwareRasterizer.g(360 - this.field_i, 397 + (-(var7 * 14) - 90) + 8, 268, 16777215, 192);
+                SoftwareRasterizer.g(360 - this.field_i, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, 397 - (var7 * 14 + 60), od.field_c[var6_int].field_i, (byte) 89, -this.field_i + 625);
               } else {
                 bl.field_b[1].b(357 - this.field_i, 386);
@@ -661,9 +661,9 @@ final class ch {
                 param1.a(vc.field_f, 124, 0, 16777215, -this.field_i + 493, -31335, od.field_c[var6_int].field_j);
                 param1.a(vc.field_f, 154, 0, 16777215, 493 - this.field_i + 64, -31335, od.field_c[var6_int].field_r);
                 var7 = og.field_f.c(od.field_c[var6_int].field_e, 263);
-                l.d(-this.field_i + 360, -(var7 * 14) + 397 - 82, 268, 14 + (var7 * 14 - 10), 0, 96);
-                l.g(-this.field_i + 360, 307 - (var7 * 14 - 8), 268, 16777215, 192);
-                l.g(360 - this.field_i, 318, 268, 16777215, 192);
+                SoftwareRasterizer.d(-this.field_i + 360, -(var7 * 14) + 397 - 82, 268, 14 + (var7 * 14 - 10), 0, 96);
+                SoftwareRasterizer.g(-this.field_i + 360, 307 - (var7 * 14 - 8), 268, 16777215, 192);
+                SoftwareRasterizer.g(360 - this.field_i, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, -60 + (397 - 14 * var7), od.field_c[var6_int].field_e, (byte) 98, 625 - this.field_i);
                 if (var6_int != 5 &&
                   var6_int != 11) {
@@ -748,30 +748,30 @@ final class ch {
                 kb.field_a[var6_int].b(-kb.field_a[var6_int].field_p + 362 - this.field_i, 100 - kb.field_a[var6_int].field_v);
                 param1.a(vc.field_f, 124, 0, 16777215, -this.field_i + 493, -31335, sj.field_a[var6_int].field_m);
                 param1.a(vc.field_f, 154, 0, 16777215, 493 - (this.field_i - 64), -31335, sj.field_a[var6_int].field_i);
-                og.field_f.b(of.field_n + sj.field_a[var6_int].field_g, -this.field_i + 362, 362, 0, -1);
+                og.field_f.b(ImageProducerRasterBuffer.field_n + sj.field_a[var6_int].field_g, -this.field_i + 362, 362, 0, -1);
                 og.field_f.b(ai.field_e + sj.field_a[var6_int].field_f, 362 - this.field_i, 377, 0, -1);
                 var7 = og.field_f.c(sj.field_a[var6_int].field_k, 263);
-                l.d(360 - this.field_i, -82 + (397 - 14 * var7), 268, 4 + var7 * 14, 0, 96);
-                l.g(360 - this.field_i, -90 + (397 - var7 * 14) + 8, 268, 16777215, 192);
-                l.g(-this.field_i + 360, 318, 268, 16777215, 192);
+                SoftwareRasterizer.d(360 - this.field_i, -82 + (397 - 14 * var7), 268, 4 + var7 * 14, 0, 96);
+                SoftwareRasterizer.g(360 - this.field_i, -90 + (397 - var7 * 14) + 8, 268, 16777215, 192);
+                SoftwareRasterizer.g(-this.field_i + 360, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, -60 - var7 * 14 + 397, sj.field_a[var6_int].field_k, (byte) 103, -this.field_i + 625);
               } else {
                 if (0 < param1.field_jb) {
                   bl.field_b[0].b(-this.field_i + 357, 386);
                   if (-this.field_i + 357 <= ef.field_j &&
                     -this.field_i + 357 + 274 >= ef.field_j &&
-                    386 <= jb.field_b &&
-                    jb.field_b <= 420) {
-                    l.e(-this.field_i + 357, 386, 274, 34, 16777215);
+                    386 <= MouseWheelInput.field_b &&
+                    MouseWheelInput.field_b <= 420) {
+                    SoftwareRasterizer.e(-this.field_i + 357, 386, 274, 34, 16777215);
                     this.field_b = true;
                   }
                 }
                 kb.field_a[var6_int].b(362 - kb.field_a[var6_int].field_p - this.field_i, 100 - kb.field_a[var6_int].field_v);
                 param1.a(vc.field_f, 124, 0, 16777215, -this.field_i + 493, -31335, sj.field_a[var6_int].field_b);
                 var7 = og.field_f.c(sj.field_a[var6_int].field_k, 263);
-                l.d(360 - this.field_i, -90 + (397 + (-(14 * var7) + 8)), 268, -10 + (14 * var7 + 14), 0, 96);
-                l.g(-this.field_i + 360, -90 + (397 - (14 * var7 - 8)), 268, 16777215, 192);
-                l.g(-this.field_i + 360, 318, 268, 16777215, 192);
+                SoftwareRasterizer.d(360 - this.field_i, -90 + (397 + (-(14 * var7) + 8)), 268, -10 + (14 * var7 + 14), 0, 96);
+                SoftwareRasterizer.g(-this.field_i + 360, -90 + (397 - (14 * var7 - 8)), 268, 16777215, 192);
+                SoftwareRasterizer.g(-this.field_i + 360, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, 337 - 14 * var7, sj.field_a[var6_int].field_a, (byte) 122, 625 - this.field_i);
               }
             }
@@ -787,7 +787,7 @@ final class ch {
           } else {
             stackIn_351_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_350_0), ((StringBuilder) (Object) stackIn_350_1).append(stackIn_351_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_350_0), ((StringBuilder) (Object) stackIn_350_1).append(stackIn_351_2).append(')').toString());
         }
     }
 
@@ -820,12 +820,12 @@ final class ch {
         }
         il.a(1, jg.field_ib);
         ob.b();
-        l.a();
+        SoftwareRasterizer.a();
         af.d(-2766);
         if (256 > var5) {
-          l.d(0, 0, l.field_k, l.field_j, 0, 256 - var5);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, 0, 256 - var5);
         }
-        ij.a(false);
+        MessageKeys.a(false);
         if (kf.field_f >= 150) {
           hd.field_l.a(var3 + 15, 10 + var4, var5);
         } else {
@@ -903,7 +903,7 @@ final class ch {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -917,21 +917,21 @@ final class ch {
         try {
           if (ef.field_j >= this.field_i + 57 &&
             ef.field_j < this.field_i + 323 &&
-            jb.field_b >= param3 &&
-            92 + param3 > jb.field_b) {
+            MouseWheelInput.field_b >= param3 &&
+            92 + param3 > MouseWheelInput.field_b) {
             param4.field_gb = -param2 - 1;
             if (-param4.field_gb != this.field_e) {
               this.field_e = -param4.field_gb;
               qd.$cfr$intArgs$a$e9dea5688aa5(54, 29);
             }
-            l.e(this.field_i + 57, param3, 266, 92, 16777215);
+            SoftwareRasterizer.e(this.field_i + 57, param3, 266, 92, 16777215);
           }
-          l.i(59 + this.field_i, param3 + 2, this.field_i + 321, 66 + param3);
+          SoftwareRasterizer.i(59 + this.field_i, param3 + 2, this.field_i + 321, 66 + param3);
           kb.field_a[param2].a(0, 128, 190 + this.field_i, param3 + 2 + 32, (byte) 21);
-          l.c(this.field_i + 57, 62, this.field_i + 323, 415);
+          SoftwareRasterizer.c(this.field_i + 57, 62, this.field_i + 323, 415);
           og.field_f.b(sj.field_a[param2].field_m, 65 + this.field_i, 82 + param3, 0, -1);
           if (param0) {
-            og.field_f.a(of.field_n + (sj.field_a[param2].field_g + sj.field_a[param2].field_d), this.field_i + 319, 16 + param3, 0, -1);
+            og.field_f.a(ImageProducerRasterBuffer.field_n + (sj.field_a[param2].field_g + sj.field_a[param2].field_d), this.field_i + 319, 16 + param3, 0, -1);
           }
           var7_int = -117 / ((-72 - param1) / 54);
           return;
@@ -945,12 +945,12 @@ final class ch {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(')').toString());
         }
     }
 
     static {
         field_h = "Evacuate with data";
-        field_d = -1;
+        mouseY = -1;
     }
 }

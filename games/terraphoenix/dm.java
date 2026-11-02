@@ -3,10 +3,10 @@
  */
 final class dm {
     static int[] field_b;
-    static ci[] field_a;
+    static Sprite[] field_a;
     static int field_g;
     static long field_f;
-    static fa field_d;
+    static Archive field_d;
     static long field_c;
     static String field_e;
 
@@ -78,7 +78,7 @@ final class dm {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

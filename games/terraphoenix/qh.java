@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh implements cj {
-    static ci field_b;
+final class qh implements WidgetActionListener {
+    static Sprite field_b;
     static int[] field_c;
     private int field_f;
     static int field_d;
     private int field_a;
-    private pk field_e;
+    private BitmapFont field_e;
 
     final static gd a(boolean param0) {
         String var1 = pb.a((byte) -47);
@@ -31,7 +31,7 @@ final class qh implements cj {
         return new gd(pb.a((byte) -47), dd.f((byte) 105));
     }
 
-    public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -56,26 +56,26 @@ final class qh implements cj {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_o + "</u>", param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
+          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param1.y + param0, param1.width, param1.height, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
           if (!param1.d(param3 ^ 24395)) {
             return;
           }
-          var7 = this.field_e.b(param1.field_o);
+          var7 = this.field_e.b(param1.text);
           var8 = this.field_e.field_p + this.field_e.field_s;
-          var9 = param2 + param1.field_w;
+          var9 = param2 + param1.x;
           if (2 == this.field_a) {
-            var9 = var9 + (param1.field_p - var7);
+            var9 = var9 + (param1.width - var7);
           } else {
             if (this.field_a == 1) {
-              var9 = var9 + (param1.field_p - var7 >> 1);
+              var9 = var9 + (param1.width - var7 >> 1);
             }
           }
-          var10 = param0 + param1.field_u;
+          var10 = param0 + param1.y;
           if (this.field_f == 2) {
-            var10 = var10 + (param1.field_n - var8);
+            var10 = var10 + (param1.height - var8);
           } else {
             if (1 == this.field_f) {
-              var10 = var10 + (param1.field_n - var8 >> 1);
+              var10 = var10 + (param1.height - var8 >> 1);
             }
           }
           ed.a(4 + var7, var8, 2 + var10, 52, -2 + var9);
@@ -90,7 +90,7 @@ final class qh implements cj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -108,13 +108,13 @@ final class qh implements cj {
         }
     }
 
-    qh(pk param0, int param1, int param2) {
+    qh(BitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param1;
           this.field_f = param2;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

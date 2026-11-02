@@ -11,7 +11,7 @@ final class qg {
         int var5_int = 0;
         byte[] var5 = null;
         byte[] var6 = null;
-        dh var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -24,9 +24,9 @@ final class qg {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new dh(param1);
-          var3 = var9.a(-16384);
-          var4 = var9.f((byte) -107);
+          var9 = new PacketBuffer(param1);
+          var3 = var9.readUnsignedByte(-16384);
+          var4 = var9.readInt((byte) -107);
           if (0 <= var4 && (eg.field_h == 0 ||
             !(var4 > eg.field_h))) {
             if (~var3 == param0) {
@@ -37,7 +37,7 @@ final class qg {
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
-            var5_int = var9.f((byte) -107);
+            var5_int = var9.readInt((byte) -107);
             if (var5_int >= 0 && (eg.field_h == 0 ||
               !(eg.field_h < var5_int))) {
               var12 = new byte[var5_int];
@@ -67,7 +67,7 @@ final class qg {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -109,8 +109,8 @@ final class qg {
           return var2_ref_byte__Lifetime2;
         }
         if (null != ol.field_Kb) {
-          for (var2 = 0; tc.field_c.length > var2; var2++) {
-            if (param1 == tc.field_c[var2] &&
+          for (var2 = 0; SecondaryNodeDeque.field_c.length > var2; var2++) {
+            if (param1 == SecondaryNodeDeque.field_c[var2] &&
               ba.field_g[var2] > 0) {
               dupTemp$8 = ba.field_g[var2] - 1;
               arrayValue$9 = ol.field_Kb[var2];
@@ -127,7 +127,7 @@ final class qg {
         return new byte[param1];
     }
 
-    final static ud a(byte param0, fa param1, String param2, fa param3, String param4) {
+    final static ud a(byte param0, Archive param1, String param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -178,11 +178,11 @@ final class qg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static void a(ci param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void a(Sprite param0, int param1, byte param2, int param3, int param4, int param5) {
         int var17 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -230,37 +230,37 @@ final class qg {
           param1 = param1 + param0.field_p;
           param4 = param4 - (-15 + param0.field_u);
           param4 = param4 + param0.field_v;
-          var6_int = param1 + l.field_k * param4;
+          var6_int = param1 + SoftwareRasterizer.field_k * param4;
           var7 = 0;
           var8 = param1;
           var9 = param4;
           var10 = param0.field_t;
           var11 = param0.field_r;
-          var12 = -var11 + l.field_k;
-          if (param4 < l.field_d) {
-            var14 = l.field_d - param4;
+          var12 = -var11 + SoftwareRasterizer.field_k;
+          if (param4 < SoftwareRasterizer.field_d) {
+            var14 = SoftwareRasterizer.field_d - param4;
             var10 = var10 - var14;
             var7 = var7 + var14 * var11;
-            var6_int = var6_int + l.field_k * var14;
-            param4 = l.field_d;
+            var6_int = var6_int + SoftwareRasterizer.field_k * var14;
+            param4 = SoftwareRasterizer.field_d;
             var9 = var9 + var14;
           }
           var13 = 0;
-          if (param1 < l.field_b) {
-            var14Lifetime1 = -param1 + l.field_b;
+          if (param1 < SoftwareRasterizer.field_b) {
+            var14Lifetime1 = -param1 + SoftwareRasterizer.field_b;
             var6_int = var6_int + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
-            param1 = l.field_b;
+            param1 = SoftwareRasterizer.field_b;
             var13 = var13 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var7 = var7 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
           }
-          if (param4 + var10 > l.field_c) {
-            var10 = var10 - (-l.field_c + (param4 + var10));
+          if (param4 + var10 > SoftwareRasterizer.field_c) {
+            var10 = var10 - (-SoftwareRasterizer.field_c + (param4 + var10));
           }
-          if (var11 + param1 > l.field_f) {
-            var14Lifetime2 = -l.field_f + var11 + param1;
+          if (var11 + param1 > SoftwareRasterizer.field_f) {
+            var14Lifetime2 = -SoftwareRasterizer.field_f + var11 + param1;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
@@ -277,7 +277,7 @@ final class qg {
               for (var18 = var16; 0 > var18; var18++) {
                 incrementValue$2 = var7;
                 var7++;
-                var15 = param0.field_z[incrementValue$2];
+                var15 = param0.pixels[incrementValue$2];
                 if (var15 != 0 &&
                   gd.field_a[var8][var9] <= param5) {
                   incrementValue$3 = var8;
@@ -292,7 +292,7 @@ final class qg {
                 }
                 incrementValue$5 = var7;
                 var7++;
-                var15Lifetime2 = param0.field_z[incrementValue$5];
+                var15Lifetime2 = param0.pixels[incrementValue$5];
                 if (var15Lifetime2 != 0 &&
                   param5 >= gd.field_a[var8][var9]) {
                   incrementValue$6 = var8;
@@ -307,7 +307,7 @@ final class qg {
                 }
                 incrementValue$8 = var7;
                 var7++;
-                var15Lifetime3 = param0.field_z[incrementValue$8];
+                var15Lifetime3 = param0.pixels[incrementValue$8];
                 if (var15Lifetime3 != 0 &&
                   param5 >= gd.field_a[var8][var9]) {
                   incrementValue$9 = var8;
@@ -322,7 +322,7 @@ final class qg {
                 }
                 incrementValue$11 = var7;
                 var7++;
-                var15Lifetime4 = param0.field_z[incrementValue$11];
+                var15Lifetime4 = param0.pixels[incrementValue$11];
                 if (0 != var15Lifetime4 &&
                   param5 >= gd.field_a[var8][var9]) {
                   incrementValue$12 = var8;
@@ -340,7 +340,7 @@ final class qg {
               for (var18Lifetime1 = var11; var18Lifetime1 < 0; var18Lifetime1++) {
                 incrementValue$0 = var7;
                 var7++;
-                var15Lifetime1 = param0.field_z[incrementValue$0];
+                var15Lifetime1 = param0.pixels[incrementValue$0];
                 if (0 == var15Lifetime1) {
                   var6_int++;
                 } else {
@@ -369,7 +369,7 @@ final class qg {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

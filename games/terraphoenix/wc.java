@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class wc extends vh {
+abstract class wc extends DualLinkNode {
     static int field_r;
     int field_q;
     static int field_s;
@@ -11,14 +11,14 @@ abstract class wc extends vh {
 
     abstract boolean d(int param0);
 
-    final static void a(e param0, int param1, int param2, int param3) {
+    final static void a(BattleState param0, int param1, int param2, int param3) {
         se dupTemp$0 = null;
         int stackIn_61_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_70_0 = 0;
         Object stackIn_98_0 = null;
-        r stackIn_98_1 = null;
+        BattleUnit stackIn_98_1 = null;
         int stackIn_119_0 = 0;
         RuntimeException stackIn_195_0 = null;
         StringBuilder stackIn_195_1 = null;
@@ -192,7 +192,7 @@ abstract class wc extends vh {
                 p.field_a[var4_intLifetime1].field_e = p.field_a[var4_intLifetime1].field_a;
               }
             }
-            L24: {
+            regionExit1: {
               var8Lifetime1 = 0;
               if (p.field_a[var4_intLifetime1].field_b != 1 &&
                 p.field_a[var4_intLifetime1].field_b != 2 &&
@@ -210,22 +210,22 @@ abstract class wc extends vh {
                 if (var9Lifetime1 == 4) {
                   var9Lifetime1 = dd.field_M;
                 }
-                L29: {
+                regionExit2: {
                   if (fd.field_o) {
-                    L30: {
+                    regionExit3: {
                       if (var5Lifetime1 != 0) {
                         if (p.field_a[var4_intLifetime1].field_d == param0.field_q) {
                           stackIn_98_0 = null;
                           stackIn_98_1 = param0.field_q;
                           if (stackIn_98_0 != stackIn_98_1) {
-                            break L30;
+                            break regionExit3;
                           }
                         }
                         if (var9Lifetime1 != 4 &&
                           7 != var9Lifetime1 &&
                           var9Lifetime1 != 8) {
                           rh.field_b[var9Lifetime1].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
-                          break L29;
+                          break regionExit2;
                         }
                       }
                     }
@@ -234,18 +234,18 @@ abstract class wc extends vh {
                 }
                 if (((p.field_a[var4_intLifetime1].field_d == param0.field_q)) &&
                   (!(!fd.field_o))) {
-                  l.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 16, 16777215);
-                  l.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 17, 255);
+                  SoftwareRasterizer.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 16, 16777215);
+                  SoftwareRasterizer.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 17, 255);
                 }
-                break L24;
+                break regionExit1;
               }
               for (var9Lifetime1Lifetime1 = 0; var9Lifetime1Lifetime1 < 12; var9Lifetime1Lifetime1++) {
-                if (null != param0.field_C[var9Lifetime1Lifetime1] &&
-                  param0.field_C[var9Lifetime1Lifetime1].field_Z != null) {
-                  stackIn_119_0 = (param0.field_C[var9Lifetime1Lifetime1].field_ob) ? 0 : 1;
+                if (null != param0.units[var9Lifetime1Lifetime1] &&
+                  param0.units[var9Lifetime1Lifetime1].field_Z != null) {
+                  stackIn_119_0 = (param0.units[var9Lifetime1Lifetime1].field_ob) ? 0 : 1;
                   if (stackIn_119_0 == 1 &&
-                    param0.field_h.a((byte) -93, param0.field_C[var9Lifetime1Lifetime1], p.field_a[var4_intLifetime1].field_d)) {
-                    param0.field_C[var9Lifetime1Lifetime1].field_ob = true;
+                    param0.map.a((byte) -93, param0.units[var9Lifetime1Lifetime1], p.field_a[var4_intLifetime1].field_d)) {
+                    param0.units[var9Lifetime1Lifetime1].field_ob = true;
                   }
                 }
               }
@@ -259,15 +259,15 @@ abstract class wc extends vh {
               }
               if (fd.field_o) {
                 if (var5Lifetime1 != 0 && (param0.field_q == null ||
-                  !param0.field_h.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
+                  !param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
                   rh.field_b[p.field_a[var4_intLifetime1].field_b].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
-                  break L24;
+                  break regionExit1;
                 }
                 rh.field_b[p.field_a[var4_intLifetime1].field_b].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
                 if (param0.field_q != null &&
-                  param0.field_h.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d)) {
-                  l.a(16 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e, 16, 16711680);
-                  l.a(p.field_a[var4_intLifetime1].field_f + 16, 16 + p.field_a[var4_intLifetime1].field_e, 17, 8388608);
+                  param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d)) {
+                  SoftwareRasterizer.a(16 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e, 16, 16711680);
+                  SoftwareRasterizer.a(p.field_a[var4_intLifetime1].field_f + 16, 16 + p.field_a[var4_intLifetime1].field_e, 17, 8388608);
                 }
               }
             }
@@ -301,23 +301,23 @@ abstract class wc extends vh {
                 var17Lifetime1 = (int)(20.0 * Math.cos((double)(-(var14Lifetime1 / 2) + var16Lifetime1) * 0.07));
                 var18 = -(int)(20.0 * Math.sin(0.07 * (double)(-(var14Lifetime1 / 2) + var16Lifetime1)));
                 if (var16Lifetime1 < var11Lifetime1) {
-                  l.e(16 - var17Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e + var18, 1, 16711680);
+                  SoftwareRasterizer.e(16 - var17Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e + var18, 1, 16711680);
                 } else {
                   if (var14Lifetime1 > var16Lifetime1) {
-                    l.e(p.field_a[var4_intLifetime1].field_f + (-var17Lifetime1 + 16), 16 + var18 + p.field_a[var4_intLifetime1].field_e, 1, 8388608);
+                    SoftwareRasterizer.e(p.field_a[var4_intLifetime1].field_f + (-var17Lifetime1 + 16), 16 + var18 + p.field_a[var4_intLifetime1].field_e, 1, 8388608);
                   }
                 }
                 var17Lifetime1Lifetime1 = (int)(Math.cos((double)(-(var15Lifetime1 / 2) + var16Lifetime1) * 0.07) * 20.0);
                 var18Lifetime1 = -(int)(Math.sin((double)(-(var15Lifetime1 / 2) + var16Lifetime1) * 0.07) * 20.0);
                 if (var12Lifetime1 > var16Lifetime1) {
-                  l.e(var17Lifetime1Lifetime1 + (p.field_a[var4_intLifetime1].field_f + 16), 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 65280);
+                  SoftwareRasterizer.e(var17Lifetime1Lifetime1 + (p.field_a[var4_intLifetime1].field_f + 16), 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 65280);
                 } else {
                   if (var13Lifetime1 <= var16Lifetime1) {
                     if (var16Lifetime1 < var15Lifetime1) {
-                      l.e(16 + var17Lifetime1Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 32768);
+                      SoftwareRasterizer.e(16 + var17Lifetime1Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 32768);
                     }
                   } else {
-                    l.e(16 + (p.field_a[var4_intLifetime1].field_f + var17Lifetime1Lifetime1), var18Lifetime1 + p.field_a[var4_intLifetime1].field_e + 16, 1, 255);
+                    SoftwareRasterizer.e(16 + (p.field_a[var4_intLifetime1].field_f + var17Lifetime1Lifetime1), var18Lifetime1 + p.field_a[var4_intLifetime1].field_e + 16, 1, 255);
                   }
                 }
               }
@@ -325,7 +325,7 @@ abstract class wc extends vh {
             if (p.field_a[var4_intLifetime1].field_b == 0 &&
               p.field_a[var4_intLifetime1].field_d != null &&
               p.field_a[var4_intLifetime1].field_d.field_Z != null &&
-              ce.field_e) {
+              IterableNodeHashTable.field_e) {
               var9Lifetime3 = 16777215;
               if (!fd.field_o &&
                 p.field_a[var4_intLifetime1].field_d != param0.field_q) {
@@ -339,7 +339,7 @@ abstract class wc extends vh {
             }
             if (6 == p.field_a[var4_intLifetime1].field_b &&
               p.field_a[var4_intLifetime1].field_d != null &&
-              ce.field_e) {
+              IterableNodeHashTable.field_e) {
               var9Lifetime4 = 255;
               og.field_f.c(ig.field_c, 16 + p.field_a[var4_intLifetime1].field_f, 16 + (p.field_a[var4_intLifetime1].field_e + 6 - 1), 0, -1);
               og.field_f.c(ig.field_c, p.field_a[var4_intLifetime1].field_f + 16, 6 + p.field_a[var4_intLifetime1].field_e + 17, 0, -1);
@@ -362,7 +362,7 @@ abstract class wc extends vh {
           } else {
             stackIn_196_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_195_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_195_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

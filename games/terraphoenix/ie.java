@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ie {
-    static dh field_b;
+    static PacketBuffer field_b;
     static String field_c;
-    static volatile int field_d;
+    static volatile int mouseX;
     static String field_a;
 
     final static int a(byte param0, int param1, CharSequence param2) {
@@ -29,7 +29,7 @@ final class ie {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -52,7 +52,7 @@ final class ie {
     }
 
     static {
-        field_d = -1;
+        mouseX = -1;
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_a = "No Highscores";
     }

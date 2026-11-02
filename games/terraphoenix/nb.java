@@ -3,25 +3,25 @@
  */
 abstract class nb {
     static int field_e;
-    static bg[] field_f;
-    static ci[] field_d;
+    static IndexedSprite[] field_f;
+    static Sprite[] field_d;
     static int[] field_c;
     static int field_g;
     static si field_b;
     static String field_a;
 
-    final static ci a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Terraphoenix.field_V;
-        ci var6 = new ci(param0, param0);
-        ci var3 = var6;
+        Sprite var6 = new Sprite(param0, param0);
+        Sprite var3 = var6;
         if (param2 >= 117) {
-          for (var4 = 0; var3.field_z.length > var4; var4++) {
-            var6.field_z[var4] = param1;
+          for (var4 = 0; var3.pixels.length > var4; var4++) {
+            var6.pixels[var4] = param1;
           }
           return var3;
         }
-        return (ci) null;
+        return (Sprite) null;
     }
 
     final static void a(boolean param0, byte param1) {
@@ -42,7 +42,7 @@ abstract class nb {
         q.field_Jb = param0;
     }
 
-    abstract void a(byte param0, dh param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     abstract cm c(int param0);
 

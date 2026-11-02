@@ -5,7 +5,7 @@ final class wh implements Runnable {
     static String field_a;
     static String field_g;
     private hl field_c;
-    static ci field_e;
+    static Sprite field_e;
     private boolean field_f;
     int field_b;
     private Thread field_d;
@@ -50,7 +50,7 @@ final class wh implements Runnable {
           synchronized (var5) {
             var6 = (ma) (this.field_c.c(param2 ^ 8194));
             while (var6 != null) {
-              if (var6.field_m == (long)param1 &&
+              if (var6.secondaryKey == (long)param1 &&
                 param0 == var6.field_F &&
                 2 == var6.field_H) {
                 var4.field_G = var6.field_G;
@@ -62,7 +62,7 @@ final class wh implements Runnable {
             }
           }
           if (param2 != 2) {
-            field_e = (ci) null;
+            field_e = (Sprite) null;
           }
           var4.field_G = param0.a(-18342, param1);
           var4.field_A = false;
@@ -79,7 +79,7 @@ final class wh implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class wh implements Runnable {
           var4 = new ma();
           var4.field_x = false;
           var4.field_F = param2;
-          var4.field_m = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_H = 3;
           var5 = 97 / ((param0 + 11) / 47);
           this.a(28366, var4);
@@ -112,7 +112,7 @@ final class wh implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class wh implements Runnable {
             try {
               boolean decompiledFrameRemainder0 = true;
               if (2 == var7.field_H) {
-                var7.field_F.a((int)var7.field_m, var7.field_G, 0, var7.field_G.length);
+                var7.field_F.a((int)var7.secondaryKey, var7.field_G, 0, var7.field_G.length);
                 var7.field_A = false;
               } else {
                 if (var7.field_H != 3) {
@@ -159,7 +159,7 @@ final class wh implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_G = var7.field_F.a(-18342, (int)var7.field_m);
+                  var7.field_G = var7.field_F.a(-18342, (int)var7.secondaryKey);
                   var7.field_A = false;
                 }
               }
@@ -170,7 +170,7 @@ final class wh implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              bd.a((Throwable) ((Object) var2_ref), (String) null, 96);
+              bd.reportClientError((Throwable) ((Object) var2_ref), (String) null, 96);
               decompiledRegionSelector1 = 0;
             }
             if (decompiledRegionSelector1 != 0) {
@@ -214,14 +214,14 @@ final class wh implements Runnable {
           if (mh.field_b != null) {
             try {
               mh.field_b.a(false, 0L);
-              mh.field_b.a(-1, 24, mk.field_j.field_i, mk.field_j.field_k);
+              mh.field_b.a(-1, 24, LevelEditor.field_j.payload, LevelEditor.field_j.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
             }
           }
           var1 = -15 % ((param0 - 58) / 35);
-          mk.field_j.field_k = mk.field_j.field_k + 24;
+          LevelEditor.field_j.position = LevelEditor.field_j.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -241,7 +241,7 @@ final class wh implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new ma();
-          var5.field_m = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_H = 2;
           var5.field_x = false;
           var5.field_G = param0;
@@ -268,26 +268,26 @@ final class wh implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    wh(he param0) {
-        mf var2 = null;
+    wh(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
         this.field_c = new hl();
         this.field_f = false;
         this.field_b = 0;
         try {
-          var2 = param0.a((Runnable) (this), (byte) -21, 5);
-          while (0 == var2.field_d) {
+          var2 = param0.requestThread((Runnable) (this), (byte) -21, 5);
+          while (0 == var2.status) {
             gi.a((byte) -37, 10L);
           }
-          if (var2.field_d == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_d = (Thread) (var2.field_e);
+          this.field_d = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

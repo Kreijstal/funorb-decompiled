@@ -2,47 +2,47 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb {
-    private vh field_d;
+    private DualLinkNode field_d;
     static int field_i;
     static String field_c;
     static String field_e;
     private long field_b;
-    private vh[] field_h;
+    private DualLinkNode[] field_h;
     static String[] field_f;
     private int field_g;
     static String field_a;
 
-    final vh c(byte param0) {
-        vh var2 = null;
-        vh var3 = null;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var3 = null;
         int var4 = Terraphoenix.field_V;
-        vh var2Lifetime1;
-        vh var3Lifetime1;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (this.field_d == null) {
           return null;
         }
         if (param0 >= -9) {
-          this.a(true, (vh) null, -18L);
+          this.a(true, (DualLinkNode) null, -18L);
           var2 = this.field_h[(int)(this.field_b & (long)(-1 + this.field_g))];
           while (var2 != this.field_d) {
-            if (~this.field_d.field_m == ~this.field_b) {
+            if (~this.field_d.secondaryKey == ~this.field_b) {
               var3 = this.field_d;
-              this.field_d = this.field_d.field_o;
+              this.field_d = this.field_d.secondaryNext;
               return var3;
             }
-            this.field_d = this.field_d.field_o;
+            this.field_d = this.field_d.secondaryNext;
           }
           this.field_d = null;
           return null;
         }
         var2Lifetime1 = this.field_h[(int)(this.field_b & (long)(-1 + this.field_g))];
         while (var2Lifetime1 != this.field_d) {
-          if (~this.field_d.field_m == ~this.field_b) {
+          if (~this.field_d.secondaryKey == ~this.field_b) {
             var3Lifetime1 = this.field_d;
-            this.field_d = this.field_d.field_o;
+            this.field_d = this.field_d.secondaryNext;
             return var3Lifetime1;
           }
-          this.field_d = this.field_d.field_o;
+          this.field_d = this.field_d.secondaryNext;
         }
         this.field_d = null;
         return null;
@@ -50,7 +50,7 @@ final class vb {
 
     final static String b(byte param0) {
         if (uh.field_H < 2) {
-          return c.field_i;
+          return NodeHashTableIterator.field_i;
         }
         if (param0 != -27) {
           vb.a(-69);
@@ -74,7 +74,7 @@ final class vb {
           return ki.field_S + " - " + ph.field_q.b(param0 ^ 120, "commonui") + "%";
         }
         if (!ch.field_g.a(param0 ^ -27)) {
-          return jj.field_d;
+          return IntrusiveDeque.field_d;
         }
         if (ch.field_g.b((byte) -128)) {
           return vd.field_o;
@@ -89,19 +89,19 @@ final class vb {
         return i.field_a.a(true);
     }
 
-    final vh a(int param0, long param1) {
-        vh var5 = null;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var5 = null;
         int var6 = Terraphoenix.field_V;
         this.field_b = param1;
-        vh var4 = this.field_h[(int)((long)(this.field_g - 1) & param1)];
-        this.field_d = var4.field_o;
+        DualLinkNode var4 = this.field_h[(int)((long)(this.field_g - 1) & param1)];
+        this.field_d = var4.secondaryNext;
         while (var4 != this.field_d) {
-          if (~param1 == ~this.field_d.field_m) {
+          if (~param1 == ~this.field_d.secondaryKey) {
             var5 = this.field_d;
-            this.field_d = this.field_d.field_o;
+            this.field_d = this.field_d.secondaryNext;
             return var5;
           }
-          this.field_d = this.field_d.field_o;
+          this.field_d = this.field_d.secondaryNext;
         }
         if (param0 < 25) {
           this.field_g = 79;
@@ -112,23 +112,23 @@ final class vb {
         return null;
     }
 
-    final void a(boolean param0, vh param1, long param2) {
-        vh var5 = null;
+    final void a(boolean param0, DualLinkNode param1, long param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (null != param1.field_i) {
-            param1.c((byte) 13);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary((byte) 13);
           }
           var5 = this.field_h[(int)((long)(-1 + this.field_g) & param2)];
-          param1.field_i = var5.field_i;
-          param1.field_o = var5;
-          param1.field_i.field_o = param1;
-          param1.field_o.field_i = param1;
-          param1.field_m = param2;
+          param1.secondaryPrevious = var5.secondaryPrevious;
+          param1.secondaryNext = var5;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
+          param1.secondaryKey = param2;
           if (param0) {
             field_i = -113;
           }
@@ -143,7 +143,7 @@ final class vb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -407,16 +407,16 @@ final class vb {
 
     vb(int param0) {
         int var2 = 0;
-        vh dupTemp$0 = null;
-        vh var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_g = param0;
-        this.field_h = new vh[param0];
+        this.field_h = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new vh();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_h[var2] = dupTemp$0;
-          var3.field_i = var3;
-          var3.field_o = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

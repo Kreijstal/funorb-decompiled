@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nc {
-    static dh field_c;
+    static PacketBuffer field_c;
     static int[] field_a;
     static String field_b;
 
@@ -55,7 +55,7 @@ final class nc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,8 +85,8 @@ final class nc {
         try {
           var3 = di.field_l;
           var3.k(-17410, param2);
-          var3.i(param0.field_i, 0);
-          var3.h(-1564407352, param0.field_h);
+          var3.writeByte(param0.field_i, 0);
+          var3.writeShort(-1564407352, param0.field_h);
           if (param1 >= 36) {
             return;
           }
@@ -102,7 +102,7 @@ final class nc {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class nc {
     }
 
     static {
-        field_c = new dh(256);
+        field_c = new PacketBuffer(256);
         field_b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
         field_a = new int[]{1, 3, 0, 2, 1, 0, 0, 3, 2, 2, 2, 2, 2, 3, 3, 3, 5, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 5, 4, 3, 2, 2, 3, 3, 3, 3, 3, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3};
     }

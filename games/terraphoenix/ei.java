@@ -15,12 +15,12 @@ abstract class ei extends kh {
           this.b(98, param2, param1);
           return;
         }
-        this.field_S = this.field_p;
+        this.field_S = this.width;
         if (param3 != -80) {
           return;
         }
         this.field_P = param1;
-        this.field_Q = this.field_n;
+        this.field_Q = this.height;
         this.field_U = param2;
         this.field_T = param0;
         this.field_V = 0;
@@ -60,7 +60,7 @@ abstract class ei extends kh {
         try {
           uj.field_d = uj.field_d + 65536;
           while (65536 <= li.a(uj.field_d, -117, ke.field_e)) {
-            el.field_e = el.field_e + 1;
+            ClientException.field_e = ClientException.field_e + 1;
             uj.field_d = uj.field_d - ke.field_e;
           }
           if (param0 > -100) {
@@ -130,8 +130,8 @@ abstract class ei extends kh {
             }
             if (var4 == 0 &&
               ke.field_c < vi.field_p &&
-              jb.field_b > var3 &&
-              ig.field_a.field_t + var3 > jb.field_b) {
+              MouseWheelInput.field_b > var3 &&
+              ig.field_a.field_t + var3 > MouseWheelInput.field_b) {
               if (ef.field_j > 269 - ig.field_a.field_r &&
                 269 > ef.field_j) {
                 vi.field_p = ke.field_c;
@@ -145,7 +145,7 @@ abstract class ei extends kh {
           if (!param1) {
             return 0;
           }
-          si.field_ob.a(kk.a(10472, ef.field_j, jb.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
+          si.field_ob.a(kk.a(10472, ef.field_j, MouseWheelInput.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
           if (si.field_ob.c((byte) -121)) {
             if (0 == si.field_ob.field_h) {
               stackIn_61_0 = 3;
@@ -184,7 +184,7 @@ abstract class ei extends kh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ei.GB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ei.GB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -226,27 +226,27 @@ abstract class ei extends kh {
         int var15Lifetime1;
         int var13Lifetime2;
         var16 = Terraphoenix.field_V;
-        l.b(6 + param0, param1 + 35, this.field_p - 12, this.field_n - 40, 2105376, 0);
+        SoftwareRasterizer.b(6 + param0, param1 + 35, this.width - 12, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var7 < var4) {
-          if (var8 >= l.field_d &&
-            var8 < l.field_c) {
-            L5: {
-              L6: {
+          if (var8 >= SoftwareRasterizer.field_d &&
+            var8 < SoftwareRasterizer.field_c) {
+            regionExit1: {
+              regionExit2: {
                 var9 = (var6 - var5) * var7 / var4 + var5;
                 var10 = 0;
-                var11 = this.field_p;
+                var11 = this.width;
                 if (var7 <= 20) {
                   while (var10 <= 20) {
                     var12 = (-var7 + 20) * (20 - var7) + (20 - var10) * (20 - var10);
                     if (var12 <= 462) {
                       if (var12 < 420) {
                         if (var7 > 20) {
-                          break L5;
+                          break regionExit1;
                         }
                         var12 = var11;
                         var11 -= 21;
@@ -259,24 +259,24 @@ abstract class ei extends kh {
                           if (var14 >= 420) {
                             var15 = (462 - var14) * var9 / 42;
                             var15 = var15 | (var15 << 8 | var15 << 16);
-                            l.field_i[l.field_k * var8 + param0 + var11] = var15;
+                            SoftwareRasterizer.field_i[SoftwareRasterizer.field_k * var8 + param0 + var11] = var15;
                           } else {
                             var12 = 1 + var11;
                           }
                           var13++;
                           var11++;
                         }
-                        break L6;
+                        break regionExit2;
                       }
                       var13Lifetime2 = (-var12 + 462) * var9 / 42;
                       var13Lifetime2 = var13Lifetime2 | (var13Lifetime2 << 16 | var13Lifetime2 << 8);
-                      l.field_i[param0 + (var8 * l.field_k + var10)] = var13Lifetime2;
+                      SoftwareRasterizer.field_i[param0 + (var8 * SoftwareRasterizer.field_k + var10)] = var13Lifetime2;
                     }
                     var10++;
                   }
                 }
                 if (var7 > 20) {
-                  break L5;
+                  break regionExit1;
                 }
                 var12 = var11;
                 var11 -= 21;
@@ -289,7 +289,7 @@ abstract class ei extends kh {
                   if (var14Lifetime1 >= 420) {
                     var15Lifetime1 = (462 - var14Lifetime1) * var9 / 42;
                     var15Lifetime1 = var15Lifetime1 | (var15Lifetime1 << 8 | var15Lifetime1 << 16);
-                    l.field_i[l.field_k * var8 + param0 + var11] = var15Lifetime1;
+                    SoftwareRasterizer.field_i[SoftwareRasterizer.field_k * var8 + param0 + var11] = var15Lifetime1;
                   } else {
                     var12 = 1 + var11;
                   }
@@ -300,7 +300,7 @@ abstract class ei extends kh {
               var11 = var12;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            l.d(param0 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.d(param0 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -317,15 +317,15 @@ abstract class ei extends kh {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          l.d(param0, var8Lifetime1, 6, var9Lifetime1);
-          l.d(this.field_p + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.d(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.d(this.width + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        hd.field_o.b(this.field_p + param0 - 90, 10 + param1);
-        gd.a(param1 + 35, e.field_p, 5 + param0, 121, this.field_p - 10);
-        gd.a(-22 + (this.field_n + param1), qb.field_f, param0, 126, this.field_p);
-        var4Lifetime2 = this.field_n - 79;
+        hd.field_o.b(this.width + param0 - 90, 10 + param1);
+        gd.a(param1 + 35, BattleState.field_p, 5 + param0, 121, this.width - 10);
+        gd.a(-22 + (this.height + param1), qb.field_f, param0, 126, this.width);
+        var4Lifetime2 = this.height - 79;
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
@@ -333,8 +333,8 @@ abstract class ei extends kh {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          l.d(param0, var8Lifetime2, 6, var9Lifetime2);
-          l.d(-6 + (param0 + this.field_p), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.d(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.d(-6 + (param0 + this.width), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -342,15 +342,15 @@ abstract class ei extends kh {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.addMouseListener(a.field_d);
+          param0.addMouseListener(a.mouseHandler);
           if (param1 != -24289) {
             String var3 = (String) null;
             ei.a(-4, (String) null);
           }
-          param0.addMouseMotionListener(a.field_d);
-          param0.addFocusListener(a.field_d);
+          param0.addMouseMotionListener(a.mouseHandler);
+          param0.addFocusListener(a.mouseHandler);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ei.HB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ei.HB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -408,7 +408,7 @@ abstract class ei extends kh {
           var2_int = -124 % ((param0 - 26) / 49);
           if (vc.field_a.a(-71) &&
             !param1.equals(vc.field_a.b(-110))) {
-            vc.field_a = gl.b(param1, 20);
+            vc.field_a = UiWidget.b(param1, 20);
           }
           stackIn_5_0 = vc.field_a;
           return stackIn_5_0;
@@ -422,7 +422,7 @@ abstract class ei extends kh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -471,7 +471,7 @@ abstract class ei extends kh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ abstract class ei extends kh {
         try {
           uj.field_d = uj.field_d + 65536;
           while (65536 <= li.a(uj.field_d, -117, ke.field_e)) {
-            el.field_e = el.field_e + 1;
+            ClientException.field_e = ClientException.field_e + 1;
             uj.field_d = uj.field_d - ke.field_e;
           }
           if (param0 > -100) {
@@ -568,8 +568,8 @@ abstract class ei extends kh {
             }
             if (var4 == 0 &&
               ke.field_c < vi.field_p &&
-              jb.field_b > var3 &&
-              ig.field_a.field_t + var3 > jb.field_b) {
+              MouseWheelInput.field_b > var3 &&
+              ig.field_a.field_t + var3 > MouseWheelInput.field_b) {
               if (ef.field_j > 269 - ig.field_a.field_r &&
                 269 > ef.field_j) {
                 vi.field_p = ke.field_c;
@@ -583,7 +583,7 @@ abstract class ei extends kh {
           if (!param1) {
             return 0;
           }
-          si.field_ob.a(kk.a(10472, ef.field_j, jb.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
+          si.field_ob.a(kk.a(10472, ef.field_j, MouseWheelInput.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
           if (si.field_ob.c((byte) -121)) {
             if (0 == si.field_ob.field_h) {
               stackIn_61_0 = 3;
@@ -622,7 +622,7 @@ abstract class ei extends kh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ei.GB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ei.GB(" + param0 + ',' + param1 + ')');
         }
     }
 }

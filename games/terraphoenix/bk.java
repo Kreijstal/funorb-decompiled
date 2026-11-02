@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static ci[] field_a;
+    static Sprite[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, ci[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -25,14 +25,14 @@ final class bk {
             var8 = param4[1].field_q;
             param4[0].e(param2, param0, param1);
             param4[2].e(-var7 + param2 + param3, param0, param1);
-            l.b(vl.field_e);
-            l.i(param2 + var6_int, param0, param3 + (param2 - var7), param0 + param4[1].field_u);
+            SoftwareRasterizer.b(vl.field_e);
+            SoftwareRasterizer.i(param2 + var6_int, param0, param3 + (param2 - var7), param0 + param4[1].field_u);
             var9 = var6_int + param2;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param4[1].e(param2, param0, param1);
             }
-            l.a(vl.field_e);
+            SoftwareRasterizer.a(vl.field_e);
             return;
           }
           return;
@@ -46,7 +46,7 @@ final class bk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class bk {
         var3 = Terraphoenix.field_V;
         try {
           if (param0 != 23196) {
-            field_a = (ci[]) null;
+            field_a = (Sprite[]) null;
           }
           var1_int = 0;
           for (var2 = 0; 9 > var2; var2++) {
@@ -78,14 +78,14 @@ final class bk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "bk.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "bk.G(" + param0 + ')');
         }
     }
 
     final static void b(int param0) {
         Terraphoenix.field_O = 0;
         if (param0 <= 9) {
-          field_a = (ci[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 
@@ -174,14 +174,14 @@ final class bk {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 6144) {
-          field_a = (ci[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends uf {
+final class vi extends IntrusiveNode {
     int field_m;
     static na field_n;
     int field_i;
@@ -9,7 +9,7 @@ final class vi extends uf {
     int field_l;
     int field_s;
     static int field_q;
-    static ci field_h;
+    static Sprite field_h;
     int field_k;
     static String field_t;
     static String[] field_j;

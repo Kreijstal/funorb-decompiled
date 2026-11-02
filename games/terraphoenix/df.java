@@ -17,7 +17,7 @@ final class df extends eb {
           for (var2_int = param0; var2_int < pb.field_b; var2_int++) {
             pf.field_b[var2_int + param1] = var2_int;
           }
-          re.a(pb.field_b + param1, (byte) -117, el.field_d, bd.field_a, false, param1, param1 + param1);
+          re.a(pb.field_b + param1, (byte) -117, ClientException.field_d, bd.field_a, false, param1, param1 + param1);
           if (pb.field_b > param1) {
             pb.field_b = param1;
           }
@@ -25,7 +25,7 @@ final class df extends eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "df.D(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "df.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -38,12 +38,12 @@ final class df extends eb {
         }
     }
 
-    private df(String param0, cj param1, sc param2) {
+    private df(String param0, WidgetActionListener param1, sc param2) {
         super(param0, param1, param2);
         try {
-          this.field_l = vc.field_c.field_q;
+          this.listener = vc.field_c.field_q;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,16 +52,16 @@ final class df extends eb {
         try {
           this.field_C = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private df(String param0, sc param1) {
         this(param0, vc.field_c.field_n, param1);
         try {
-          this.field_l = vc.field_c.field_q;
+          this.listener = vc.field_c.field_q;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

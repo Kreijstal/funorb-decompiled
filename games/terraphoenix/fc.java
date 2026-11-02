@@ -4,9 +4,9 @@
 final class fc {
     private boolean field_c;
     private int field_f;
-    static fa field_a;
+    static Archive field_a;
     static int[] field_e;
-    static bg[] field_i;
+    static IndexedSprite[] field_i;
     private int field_d;
     static String[] field_k;
     static String field_g;
@@ -59,7 +59,7 @@ final class fc {
 
     final void b(int param0, int param1) {
         if (param1 <= 119) {
-          field_i = (bg[]) null;
+          field_i = (IndexedSprite[]) null;
         }
         if (param0 >= 0 &&
           this.field_d >= param0) {
@@ -92,7 +92,7 @@ final class fc {
     final static void a(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
-          ci var3 = null;
+          Sprite var3 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -102,8 +102,8 @@ final class fc {
           try {
             try {
               if (param1 != 100) {
-                var3 = (ci) null;
-                fc.a(-76, (ci) null, -49, -91, 0);
+                var3 = (Sprite) null;
+                fc.a(-76, (Sprite) null, -49, -91, 0);
               }
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
               param0.getAppletContext().showDocument(bb.a((byte) 112, var2, param0), "_top");
@@ -123,7 +123,7 @@ final class fc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -132,7 +132,7 @@ final class fc {
         }
     }
 
-    final static void a(int param0, ci param1, int param2, int param3, int param4) {
+    final static void a(int param0, Sprite param1, int param2, int param3, int param4) {
         int var16 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -180,37 +180,37 @@ final class fc {
           param3 = param3 - (-15 + param1.field_u);
           param2 = param2 + param1.field_p;
           param3 = param3 + param1.field_v;
-          var5_int = param3 * l.field_k + param2;
+          var5_int = param3 * SoftwareRasterizer.field_k + param2;
           var6 = param4;
           var7 = param2;
           var8 = param3;
           var9 = param1.field_t;
           var10 = param1.field_r;
-          var11 = -var10 + l.field_k;
+          var11 = -var10 + SoftwareRasterizer.field_k;
           var12 = 0;
-          if (param3 < l.field_d) {
-            var13 = -param3 + l.field_d;
+          if (param3 < SoftwareRasterizer.field_d) {
+            var13 = -param3 + SoftwareRasterizer.field_d;
             var9 = var9 - var13;
-            param3 = l.field_d;
-            var5_int = var5_int + var13 * l.field_k;
+            param3 = SoftwareRasterizer.field_d;
+            var5_int = var5_int + var13 * SoftwareRasterizer.field_k;
             var6 = var6 + var13 * var10;
             var8 = var8 + var13;
           }
-          if (l.field_b > param2) {
-            var13Lifetime1 = -param2 + l.field_b;
+          if (SoftwareRasterizer.field_b > param2) {
+            var13Lifetime1 = -param2 + SoftwareRasterizer.field_b;
             var12 = var12 + var13Lifetime1;
             var7 = var7 + var13Lifetime1;
             var11 = var11 + var13Lifetime1;
             var10 = var10 - var13Lifetime1;
             var6 = var6 + var13Lifetime1;
-            param2 = l.field_b;
+            param2 = SoftwareRasterizer.field_b;
             var5_int = var5_int + var13Lifetime1;
           }
-          if (param3 + var9 > l.field_c) {
-            var9 = var9 - (param3 + var9 - l.field_c);
+          if (param3 + var9 > SoftwareRasterizer.field_c) {
+            var9 = var9 - (param3 + var9 - SoftwareRasterizer.field_c);
           }
-          if (l.field_f < param2 + var10) {
-            var13Lifetime2 = var10 + (param2 - l.field_f);
+          if (SoftwareRasterizer.field_f < param2 + var10) {
+            var13Lifetime2 = var10 + (param2 - SoftwareRasterizer.field_f);
             var10 = var10 - var13Lifetime2;
             var12 = var12 + var13Lifetime2;
             var11 = var11 + var13Lifetime2;
@@ -224,7 +224,7 @@ final class fc {
               for (var17 = var15; var17 < 0; var17++) {
                 incrementValue$2 = var6;
                 var6++;
-                var14 = param1.field_z[incrementValue$2];
+                var14 = param1.pixels[incrementValue$2];
                 if (var14 != 0 &&
                   gd.field_a[var7][var8] <= param0) {
                   incrementValue$3 = var7;
@@ -232,14 +232,14 @@ final class fc {
                   gd.field_a[incrementValue$3][var8] = param0;
                   incrementValue$4 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$4] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$4] = 0;
                 } else {
                   var5_int++;
                   var7++;
                 }
                 incrementValue$5 = var6;
                 var6++;
-                var14Lifetime2 = param1.field_z[incrementValue$5];
+                var14Lifetime2 = param1.pixels[incrementValue$5];
                 if (var14Lifetime2 != 0 &&
                   gd.field_a[var7][var8] <= param0) {
                   incrementValue$6 = var7;
@@ -247,14 +247,14 @@ final class fc {
                   gd.field_a[incrementValue$6][var8] = param0;
                   incrementValue$7 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$7] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$7] = 0;
                 } else {
                   var5_int++;
                   var7++;
                 }
                 incrementValue$8 = var6;
                 var6++;
-                var14Lifetime3 = param1.field_z[incrementValue$8];
+                var14Lifetime3 = param1.pixels[incrementValue$8];
                 if (var14Lifetime3 != 0 &&
                   param0 >= gd.field_a[var7][var8]) {
                   incrementValue$9 = var7;
@@ -262,14 +262,14 @@ final class fc {
                   gd.field_a[incrementValue$9][var8] = param0;
                   incrementValue$10 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$10] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$10] = 0;
                 } else {
                   var7++;
                   var5_int++;
                 }
                 incrementValue$11 = var6;
                 var6++;
-                var14Lifetime4 = param1.field_z[incrementValue$11];
+                var14Lifetime4 = param1.pixels[incrementValue$11];
                 if (0 != var14Lifetime4 &&
                   param0 >= gd.field_a[var7][var8]) {
                   incrementValue$12 = var7;
@@ -277,7 +277,7 @@ final class fc {
                   gd.field_a[incrementValue$12][var8] = param0;
                   incrementValue$13 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$13] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$13] = 0;
                 } else {
                   var5_int++;
                   var7++;
@@ -286,11 +286,11 @@ final class fc {
               for (var17Lifetime1 = var10; 0 > var17Lifetime1; var17Lifetime1++) {
                 incrementValue$0 = var6;
                 var6++;
-                var14Lifetime1 = param1.field_z[incrementValue$0];
+                var14Lifetime1 = param1.pixels[incrementValue$0];
                 if (var14Lifetime1 != 0) {
                   incrementValue$1 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$1] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$1] = 0;
                 } else {
                   var5_int++;
                 }
@@ -316,26 +316,26 @@ final class fc {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = a.field_d;
+        var1 = a.mouseHandler;
         synchronized (var1) {
           oh.field_f = wa.field_p;
           ng.field_t = ng.field_t + 1;
-          ef.field_j = ie.field_d;
+          ef.field_j = ie.mouseX;
           if (param0 != 43) {
             field_h = (String) null;
           }
-          jb.field_b = ch.field_d;
+          MouseWheelInput.field_b = ch.mouseY;
           ja.field_l = sj.field_c;
           sj.field_c = false;
           ma.field_I = sh.field_z;
-          mm.field_c = qe.field_l;
+          mm.field_c = IsaacCipher.field_l;
           lm.field_c = qd.field_i;
           sh.field_z = 0;
         }
@@ -500,7 +500,7 @@ final class fc {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

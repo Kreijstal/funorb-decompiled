@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends uf {
+final class jh extends IntrusiveNode {
     static int field_m;
     byte[] field_j;
-    static bg[] field_q;
+    static IndexedSprite[] field_q;
     static String[] field_l;
     static String field_p;
     static int field_n;
@@ -45,24 +45,24 @@ final class jh extends uf {
         RuntimeException var2 = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (vi) (pd.field_g.d(9272));
+          var4 = (vi) (pd.field_g.beginBackward(9272));
           while (var4 != null) {
             qd.a(param0, param1 ^ 24621, var4);
-            var4 = (vi) (pd.field_g.e((byte) -119));
+            var4 = (vi) (pd.field_g.nextBackward((byte) -119));
           }
           if (param1 != -31890) {
             field_l = (String[]) null;
           }
-          var5 = (me) (ga.field_r.d(9272));
+          var5 = (me) (ga.field_r.beginBackward(9272));
           while (var5 != null) {
             rj.a(param0, -119, var5);
-            var5 = (me) (ga.field_r.e((byte) -119));
+            var5 = (me) (ga.field_r.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "jh.B(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "jh.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class jh extends uf {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = b.field_f;
+            stackIn_3_0 = RandomAccessCacheFile.field_f;
             return stackIn_3_0;
           }
           if (64 < var2_int) {
@@ -160,7 +160,7 @@ final class jh extends uf {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 

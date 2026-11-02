@@ -36,7 +36,7 @@ final class gj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -53,27 +53,27 @@ final class gj {
           ab.field_g[0] = j.field_H.nextInt();
           ab.field_g[param2] = j.field_H.nextInt();
           ab.field_g[3] = (int)kd.field_c;
-          nc.field_c.field_k = 0;
+          nc.field_c.position = 0;
           ab.field_g[2] = (int)(kd.field_c >> 32);
-          nc.field_c.e(ab.field_g[0], param2 ^ 8958);
-          nc.field_c.e(ab.field_g[1], 8959);
-          nc.field_c.e(ab.field_g[2], 8959);
-          nc.field_c.e(ab.field_g[3], 8959);
-          eh.a(9371, nc.field_c);
-          nc.field_c.h(-1564407352, param1);
+          nc.field_c.writeInt(ab.field_g[0], param2 ^ 8958);
+          nc.field_c.writeInt(ab.field_g[1], 8959);
+          nc.field_c.writeInt(ab.field_g[2], 8959);
+          nc.field_c.writeInt(ab.field_g[3], 8959);
+          GameApplet.a(9371, nc.field_c);
+          nc.field_c.writeShort(-1564407352, param1);
           param3.a((byte) -2, nc.field_c);
-          di.field_l.field_k = 0;
+          di.field_l.position = 0;
           if (!param0) {
-            di.field_l.i(16, 18);
+            di.field_l.writeByte(16, 18);
           } else {
-            di.field_l.i(18, param2 ^ 16);
+            di.field_l.writeByte(18, param2 ^ 16);
           }
-          di.field_l.field_k = di.field_l.field_k + 2;
-          var5_int = di.field_l.field_k;
-          di.field_l.e(nd.field_i, 8959);
-          di.field_l.a(pc.field_a, 21);
+          di.field_l.position = di.field_l.position + 2;
+          var5_int = di.field_l.position;
+          di.field_l.writeInt(nd.field_i, 8959);
+          di.field_l.writeLong(pc.field_a, 21);
           var6 = 0;
-          if (jm.field_c) {
+          if (DelegatingCanvas.field_c) {
             var6 = var6 | 1;
           }
           if (hf.field_x) {
@@ -85,17 +85,17 @@ final class gj {
           if (og.field_e != null) {
             var6 = var6 | 16;
           }
-          di.field_l.i(var6, -112);
+          di.field_l.writeByte(var6, -112);
           var7 = kf.a(-95, dg.a(false));
           if (var7 == null) {
             var7 = "";
           }
-          di.field_l.a(var7, 2295);
+          di.field_l.writeString(var7, 2295);
           if (og.field_e != null) {
             di.field_l.b(og.field_e, -108);
           }
           ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-          di.field_l.g(-var5_int + di.field_l.field_k, -20125);
+          di.field_l.g(-var5_int + di.field_l.position, -20125);
           bc.a(-1, param2 - 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,11 +108,11 @@ final class gj {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static boolean a(e param0, int param1, byte param2, int param3) {
+    final static boolean a(BattleState param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -156,11 +156,11 @@ final class gj {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(bm param0, bm param1, int param2, int param3, pk param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, bm param14, int param15, int param16, pk param17, int param18, int param19, int param20) {
+    final static void a(bm param0, bm param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, bm param14, int param15, int param16, BitmapFont param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -219,7 +219,7 @@ final class gj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 

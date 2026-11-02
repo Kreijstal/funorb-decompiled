@@ -24,7 +24,7 @@ final class mg extends di {
             var4 = ((v) ((Object) this.field_n)).a(29730);
             if (var4 != null) {
               if (var4.a(-16323) == dg.field_c &&
-                !param0.equals(this.field_n.field_o)) {
+                !param0.equals(this.field_n.text)) {
                 stackIn_7_0 = hl.field_e;
                 return stackIn_7_0;
               }
@@ -32,7 +32,7 @@ final class mg extends di {
               return stackIn_9_0;
             }
           }
-          if (param0.equals(this.field_n.field_o)) {
+          if (param0.equals(this.field_n.text)) {
             return null;
           }
           stackIn_13_0 = hl.field_e;
@@ -47,7 +47,7 @@ final class mg extends di {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -55,8 +55,8 @@ final class mg extends di {
         field_m = null;
         field_p = null;
         if (param0 != -27) {
-          ci[] var2 = (ci[]) null;
-          mg.a(33, -128, (ci[]) null, -11, 74, -27, 87, 16, 114, (ci[]) null, 20, 25, (pk) null, 41, (ci[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          mg.a(33, -128, (Sprite[]) null, -11, 74, -27, 87, 16, 114, (Sprite[]) null, 20, 25, (BitmapFont) null, 41, (Sprite[]) null);
         }
     }
 
@@ -81,7 +81,7 @@ final class mg extends di {
           if (param1 != 0) {
             field_p = (int[]) null;
           }
-          if (param0.equals(this.field_n.field_o)) {
+          if (param0.equals(this.field_n.text)) {
             stackIn_11_0 = dg.field_c;
           } else {
             stackIn_11_0 = qf.field_d;
@@ -97,7 +97,7 @@ final class mg extends di {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -106,11 +106,11 @@ final class mg extends di {
         try {
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, ci[] param2, int param3, int param4, int param5, int param6, int param7, int param8, ci[] param9, int param10, int param11, pk param12, int param13, ci[] param14) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5, int param6, int param7, int param8, Sprite[] param9, int param10, int param11, BitmapFont param12, int param13, Sprite[] param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -159,7 +159,7 @@ final class mg extends di {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

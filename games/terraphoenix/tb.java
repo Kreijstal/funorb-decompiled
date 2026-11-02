@@ -8,7 +8,7 @@ final class tb extends uj {
     private int field_f;
     private rf field_h;
     private int field_A;
-    private km field_j;
+    private ArchiveIndex field_j;
     private byte[] field_y;
     static String field_l;
     private int field_p;
@@ -21,8 +21,8 @@ final class tb extends uj {
     private boolean field_o;
     private int field_z;
     private boolean field_w;
-    private jj field_v;
-    private jj field_k;
+    private IntrusiveDeque field_v;
+    private IntrusiveDeque field_k;
     private boolean field_B;
     private long field_g;
 
@@ -35,7 +35,7 @@ final class tb extends uj {
           return null;
         }
         byte[] var4 = var3.b(true);
-        var3.b((byte) 12);
+        var3.unlink((byte) 12);
         return var4;
     }
 
@@ -101,7 +101,7 @@ final class tb extends uj {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -113,9 +113,9 @@ final class tb extends uj {
     final static int a(String param0, gd param1, gd param2, boolean param3, int param4, byte param5, int param6) {
         int var12 = 0;
         int stackIn_8_0 = 0;
-        dh stackIn_21_0 = null;
+        PacketBuffer stackIn_21_0 = null;
         String stackIn_22_1 = null;
-        dh stackIn_24_0 = null;
+        PacketBuffer stackIn_24_0 = null;
         String stackIn_25_1 = null;
         int stackIn_36_0 = 0;
         int stackIn_51_0 = 0;
@@ -158,122 +158,122 @@ final class tb extends uj {
           }
           if (va.field_e == mh.field_a) {
             ge.field_d = null;
-            di.field_l.field_k = 0;
+            di.field_l.position = 0;
             if (param0 == null) {
-              nc.field_c.field_k = 0;
-              nc.field_c.e(j.field_H.nextInt(), param5 + 8863);
-              nc.field_c.e(j.field_H.nextInt(), 8959);
+              nc.field_c.position = 0;
+              nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
+              nc.field_c.writeInt(j.field_H.nextInt(), 8959);
               stackIn_21_0 = nc.field_c;
               if (!param2.c(1)) {
                 stackIn_22_1 = "";
               } else {
                 stackIn_22_1 = var14;
               }
-              ((dh) (Object) stackIn_21_0).b(stackIn_22_1, -86);
+              ((PacketBuffer) (Object) stackIn_21_0).b(stackIn_22_1, -86);
               stackIn_24_0 = nc.field_c;
               if (param1.c(param5 ^ 97)) {
                 stackIn_25_1 = var8;
               } else {
                 stackIn_25_1 = "";
               }
-              ((dh) (Object) stackIn_24_0).b(stackIn_25_1, -105);
-              di.field_l.i(16, 59);
-              di.field_l.field_k = di.field_l.field_k + 1;
-              var9 = di.field_l.field_k;
+              ((PacketBuffer) (Object) stackIn_24_0).b(stackIn_25_1, -105);
+              di.field_l.writeByte(16, 59);
+              di.field_l.position = di.field_l.position + 1;
+              var9 = di.field_l.position;
               ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-              di.field_l.j(di.field_l.field_k - var9, param5 - 215);
+              di.field_l.j(di.field_l.position - var9, param5 - 215);
             } else {
               var9 = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              nc.field_c.field_k = 0;
-              nc.field_c.e(j.field_H.nextInt(), 8959);
-              nc.field_c.e(j.field_H.nextInt(), param5 + 8863);
+              nc.field_c.position = 0;
+              nc.field_c.writeInt(j.field_H.nextInt(), 8959);
+              nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
               nc.field_c.b(var14, -33);
               nc.field_c.b(var8, -101);
               var15 = (CharSequence) ((Object) param0);
               nc.field_c.b(nh.a(-31621, var15), -34);
-              nc.field_c.h(-1564407352, param4);
-              nc.field_c.i(param6, -115);
-              nc.field_c.i(var9, -90);
-              di.field_l.i(18, param5 ^ 21);
-              di.field_l.field_k = di.field_l.field_k + 2;
-              var10 = di.field_l.field_k;
+              nc.field_c.writeShort(-1564407352, param4);
+              nc.field_c.writeByte(param6, -115);
+              nc.field_c.writeByte(var9, -90);
+              di.field_l.writeByte(18, param5 ^ 21);
+              di.field_l.position = di.field_l.position + 2;
+              var10 = di.field_l.position;
               var11_ref_String = kf.a(param5 ^ -120, dg.a(false));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              di.field_l.a(var11_ref_String, 2295);
+              di.field_l.writeString(var11_ref_String, 2295);
               ea.a(ga.field_o, nc.field_c, param5 - 96, dj.field_c, di.field_l);
-              di.field_l.g(-var10 + di.field_l.field_k, -20125);
+              di.field_l.g(-var10 + di.field_l.position, -20125);
             }
             bc.a(-1, param5 - 96);
             mh.field_a = ha.field_n;
           }
           if (mh.field_a == ha.field_n &&
             vc.a(param5 - 213, 1)) {
-            var9Lifetime1 = mk.field_j.a(-16384);
-            mk.field_j.field_k = 0;
+            var9Lifetime1 = LevelEditor.field_j.readUnsignedByte(-16384);
+            LevelEditor.field_j.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              te.field_a = new String[-100 + var9Lifetime1];
-              mh.field_a = tc.field_f;
+              RasterBuffer.field_a = new String[-100 + var9Lifetime1];
+              mh.field_a = SecondaryNodeDeque.field_f;
             } else {
               if (var9Lifetime1 == 248) {
                 ke.a(dg.a(false), (byte) 95);
                 bh.field_d = kj.field_e;
-                gb.g(-17464);
+                WidgetContainer.g(-17464);
                 vj.field_Q = false;
                 stackIn_36_0 = var9Lifetime1;
                 return stackIn_36_0;
               }
               if (var9Lifetime1 != 99) {
-                mh.field_a = tf.field_d;
+                mh.field_a = BufferedSocket.field_d;
                 qh.field_d = -1;
                 qk.field_b = var9Lifetime1;
               } else {
                 vc.a(-111, dc.b((byte) 30));
-                ge.field_d = new Boolean(cb.a(mk.field_j, 102));
-                mk.field_j.field_k = 0;
+                ge.field_d = new Boolean(cb.a(LevelEditor.field_j, 102));
+                LevelEditor.field_j.position = 0;
               }
             }
           }
-          if (mh.field_a == tc.field_f) {
+          if (mh.field_a == SecondaryNodeDeque.field_f) {
             var9Lifetime2 = 2;
             if (vc.a(-99, var9Lifetime2)) {
-              var10Lifetime1 = mk.field_j.i(-25578);
-              mk.field_j.field_k = 0;
+              var10Lifetime1 = LevelEditor.field_j.readUnsignedShort(-25578);
+              LevelEditor.field_j.position = 0;
               if (vc.a(param5 ^ -32, var10Lifetime1)) {
-                var11 = te.field_a.length;
+                var11 = RasterBuffer.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  te.field_a[var12] = mk.field_j.c((byte) 46);
+                  RasterBuffer.field_a[var12] = LevelEditor.field_j.c((byte) 46);
                 }
-                gb.g(-17464);
+                WidgetContainer.g(-17464);
                 vj.field_Q = false;
                 stackIn_51_0 = 100 + var11;
                 return stackIn_51_0;
               }
             }
           }
-          if (tf.field_d == mh.field_a &&
+          if (BufferedSocket.field_d == mh.field_a &&
             cm.b((byte) -98)) {
             if (qk.field_b != 255) {
-              bh.field_d = mk.field_j.e(-1);
+              bh.field_d = LevelEditor.field_j.readString(-1);
             } else {
-              var9_ref_String = mk.field_j.j(-1915115064);
+              var9_ref_String = LevelEditor.field_j.j(-1915115064);
               if (var9_ref_String != null) {
                 hk.a(var9_ref_String, (byte) 3, dg.a(false));
               }
             }
-            gb.g(param5 ^ -17496);
+            WidgetContainer.g(param5 ^ -17496);
             vj.field_Q = false;
             stackIn_60_0 = qk.field_b;
             return stackIn_60_0;
           }
           if (ig.field_e == null) {
             if (vj.field_Q) {
-              if (30000L < ce.b(1)) {
+              if (30000L < IterableNodeHashTable.b(1)) {
                 bh.field_d = qk.field_f;
               } else {
                 bh.field_d = cl.field_I;
@@ -311,7 +311,7 @@ final class tb extends uj {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -331,14 +331,14 @@ final class tb extends uj {
         rf discarded$0 = null;
         int var2_int;
         rf var2;
-        uf var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        uf var6;
-        uf var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        uf var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = Terraphoenix.field_V;
         if (param0 != -51) {
           return;
@@ -350,18 +350,18 @@ final class tb extends uj {
           }
           if (this.field_w) {
             var2_int = 1;
-            var3 = this.field_k.d(9272);
+            var3 = this.field_k.beginBackward(9272);
             while (var3 != null) {
-              var4 = (int)var3.field_g;
+              var4 = (int)var3.key;
               if (0 == this.field_n[var4]) {
                 discarded$3 = this.a(1, var4, (byte) -97);
               }
               if (this.field_n[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b((byte) 12);
+                var3.unlink((byte) 12);
               }
-              var3 = this.field_k.e((byte) -119);
+              var3 = this.field_k.nextBackward((byte) -119);
             }
             while (this.field_z < this.field_j.field_d.length) {
               if (0 == this.field_j.field_d[this.field_z]) {
@@ -373,8 +373,8 @@ final class tb extends uj {
                   discarded$2 = this.a(1, this.field_z, (byte) -97);
                 }
                 if (0 == this.field_n[this.field_z]) {
-                  var6 = new uf();
-                  var6.field_g = (long)this.field_z;
+                  var6 = new IntrusiveNode();
+                  var6.key = (long)this.field_z;
                   var2_int = 0;
                   this.field_k.a(var6, -16611);
                 }
@@ -393,32 +393,32 @@ final class tb extends uj {
           else {
             if (this.field_o) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_k.d(9272);
+              var3Lifetime1 = this.field_k.beginBackward(9272);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_g;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_n[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, var4Lifetime1, (byte) -97);
                 }
                 if (this.field_n[var4Lifetime1] == 1) {
-                  var3Lifetime1.b((byte) 12);
+                  var3Lifetime1.unlink((byte) 12);
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_k.e((byte) -119);
+                var3Lifetime1 = this.field_k.nextBackward((byte) -119);
               }
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_z < this.field_j.field_d.length) {
                   if (this.field_j.field_d[this.field_z] != 0) {
                     if (this.field_r.b(true)) {
                       var2_intLifetime1 = 0;
-                      break L3;
+                      break scanLoop1;
                     }
                     if (this.field_n[this.field_z] != 1) {
                       discarded$0 = this.a(2, this.field_z, (byte) -97);
                     }
                     if (1 != this.field_n[this.field_z]) {
-                      var7 = new uf();
-                      var7.field_g = (long)this.field_z;
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_z;
                       this.field_k.a(var7, -16611);
                       var2_intLifetime1 = 0;
                     }
@@ -448,7 +448,7 @@ final class tb extends uj {
                 if (!var2.field_x) {
                   throw new RuntimeException();
                 }
-                var2.b((byte) 12);
+                var2.unlink((byte) 12);
               } else {
                 var2.field_C = true;
               }
@@ -468,7 +468,7 @@ final class tb extends uj {
         }
         this.field_o = true;
         if (null == this.field_k) {
-          this.field_k = new jj();
+          this.field_k = new IntrusiveDeque();
         }
     }
 
@@ -498,7 +498,7 @@ final class tb extends uj {
           0 == param0 &&
           !var12.field_x &&
           var12.field_A) {
-          var12.b((byte) 12);
+          var12.unlink((byte) 12);
           var4 = null;
         }
         if (param2 != -97) {
@@ -537,7 +537,7 @@ final class tb extends uj {
               var4 = this.field_r.a(param1, false, this.field_f, (byte) 115, (byte) 2);
             }
           }
-          this.field_q.a((uf) (var4), (long)param1, (byte) -71);
+          this.field_q.a((IntrusiveNode) (var4), (long)param1, (byte) -71);
         }
         if (((rf) (var4)).field_A) {
           return null;
@@ -575,7 +575,7 @@ final class tb extends uj {
                 this.field_n[param1] = (byte) 1;
               }
               if (!((rf) (var4)).field_x) {
-                ((rf) (var4)).b((byte) 12);
+                ((rf) (var4)).unlink((byte) 12);
               }
               stackIn_60_0 = var4;
               return (rf) (stackIn_60_0);
@@ -585,11 +585,11 @@ final class tb extends uj {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_n[param1] = (byte)-1;
-            ((rf) (var4)).b((byte) 12);
+            ((rf) (var4)).unlink((byte) 12);
             if (((rf) (var4)).field_x &&
               !this.field_r.d(-21)) {
               var4 = this.field_r.a(param1, true, this.field_f, (byte) 91, (byte) 2);
-              this.field_q.a((uf) (var4), (long)param1, (byte) -101);
+              this.field_q.a((IntrusiveNode) (var4), (long)param1, (byte) -101);
             }
             return null;
           }
@@ -625,7 +625,7 @@ final class tb extends uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_r.b(-12948);
-          ((rf) (var4)).b((byte) 12);
+          ((rf) (var4)).unlink((byte) 12);
           if (!((rf) (var4)).field_x) {
             return null;
           }
@@ -633,7 +633,7 @@ final class tb extends uj {
             return null;
           }
           var4 = this.field_r.a(param1, true, this.field_f, (byte) 77, (byte) 2);
-          this.field_q.a((uf) (var4), (long)param1, (byte) -100);
+          this.field_q.a((IntrusiveNode) (var4), (long)param1, (byte) -100);
           return null;
         }
         var5[var18.length - 2] = (byte)(this.field_j.field_o[param1] >>> 8);
@@ -645,7 +645,7 @@ final class tb extends uj {
           }
         }
         if (!((rf) (var4)).field_x) {
-          ((rf) (var4)).b((byte) 12);
+          ((rf) (var4)).unlink((byte) 12);
         }
         return (rf) (var4);
     }
@@ -661,7 +661,7 @@ final class tb extends uj {
         return var3.c(0);
     }
 
-    final km a(byte param0) {
+    final ArchiveIndex a(byte param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -691,7 +691,7 @@ final class tb extends uj {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_j = new km(var7, this.field_A, this.field_y);
+            this.field_j = new ArchiveIndex(var7, this.field_A, this.field_y);
             if (this.field_j.field_t != this.field_p) {
               throw new RuntimeException();
             }
@@ -711,7 +711,7 @@ final class tb extends uj {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_j = new km(var7, this.field_A, this.field_y);
+            this.field_j = new ArchiveIndex(var7, this.field_A, this.field_y);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
@@ -741,7 +741,7 @@ final class tb extends uj {
     final void d(byte param0) {
         rf discarded$0 = null;
         rf discarded$1 = null;
-        uf var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         java.applet.Applet var5;
@@ -756,9 +756,9 @@ final class tb extends uj {
           var5 = (java.applet.Applet) null;
           tb.a(-41, (String) null, (java.applet.Applet) null);
         }
-        var2 = this.field_v.d(9272);
+        var2 = this.field_v.beginBackward(9272);
         while (var2 != null) {
-          var3 = (int)var2.field_g;
+          var3 = (int)var2.key;
           if (var3 >= 0 &&
             var3 < this.field_j.field_j &&
             this.field_j.field_d[var3] != 0) {
@@ -769,13 +769,13 @@ final class tb extends uj {
               discarded$1 = this.a(2, var3, (byte) -97);
             }
             if (this.field_n[var3] == 1) {
-              var2.b((byte) 12);
+              var2.unlink((byte) 12);
             }
-            var2 = this.field_v.e((byte) -119);
+            var2 = this.field_v.nextBackward((byte) -119);
             continue;
           }
-          var2.b((byte) 12);
-          var2 = this.field_v.e((byte) -119);
+          var2.unlink((byte) 12);
+          var2 = this.field_v.nextBackward((byte) -119);
         }
     }
 
@@ -796,14 +796,14 @@ final class tb extends uj {
         RuntimeException var10 = null;
         this.field_q = new il(16);
         this.field_z = 0;
-        this.field_v = new jj();
+        this.field_v = new IntrusiveDeque();
         this.field_g = 0L;
         try {
           this.field_m = param1;
           this.field_f = param0;
           if (this.field_m != null) {
             this.field_w = true;
-            this.field_k = new jj();
+            this.field_k = new IntrusiveDeque();
           } else {
             this.field_w = false;
           }
@@ -853,7 +853,7 @@ final class tb extends uj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

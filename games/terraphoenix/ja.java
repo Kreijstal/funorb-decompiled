@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends uf {
+final class ja extends IntrusiveNode {
     int field_o;
     static String field_h;
     static int field_j;
@@ -9,7 +9,7 @@ final class ja extends uf {
     int field_k;
     static boolean field_l;
     static int field_i;
-    static pk field_m;
+    static BitmapFont field_m;
 
     final static boolean a(boolean param0) {
         if (!param0) {
@@ -39,7 +39,7 @@ final class ja extends uf {
             return true;
           }
           var2_int = -42 % ((param1 - 27) / 40);
-          var7 = c.field_a;
+          var7 = NodeHashTableIterator.field_a;
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
@@ -58,7 +58,7 @@ final class ja extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ja.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ja.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ja extends uf {
         if (var1 == null) {
           var1 = new aa();
         }
-        var1.a(l.field_b, l.field_i, l.field_f, l.field_k, l.field_d, l.field_c, 83, l.field_j);
+        var1.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_k, SoftwareRasterizer.field_d, SoftwareRasterizer.field_c, 83, SoftwareRasterizer.field_j);
         vl.field_i.a(var1, -16611);
     }
 
@@ -123,7 +123,7 @@ final class ja extends uf {
           var3_int = -105 % ((72 - param0) / 48);
           pe.field_e = param2;
           if (0 == pe.field_e) {
-            var4 = af.a(jm.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = af.a(DelegatingCanvas.field_d, da.field_h, -3, kh.field_F, ch.field_c);
             var5 = var4 + 3;
             rb.field_d = new String[var5];
             f.field_a = new int[var5];
@@ -138,11 +138,11 @@ final class ja extends uf {
             rb.field_d[var5 - 2] = ak.field_g;
             f.field_a[-2 + var5] = 0;
             pj.field_l[0] = 4;
-            rb.field_d[var5 - 1] = te.field_e;
+            rb.field_d[var5 - 1] = RasterBuffer.field_e;
             f.field_a[var5 - 1] = 1;
             pj.field_l[1] = 5;
           } else if (pe.field_e == 1) {
-            var4 = af.a(jm.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = af.a(DelegatingCanvas.field_d, da.field_h, -3, kh.field_F, ch.field_c);
             var5 = 2 + var4;
             f.field_a = new int[var5];
             rb.field_d = new String[var5];
@@ -154,13 +154,13 @@ final class ja extends uf {
               rb.field_d[var6] = kh.field_F[var6];
             }
             rb.field_d[-2 + var5] = "";
-            rb.field_d[var5 - 1] = te.field_e;
+            rb.field_d[var5 - 1] = RasterBuffer.field_e;
             f.field_a[-1 + var5] = 0;
             pj.field_l[0] = 5;
           } else if (2 != pe.field_e) {
             if (3 == pe.field_e) {
               if (nj.field_l.field_v) {
-                var4 = af.a(tc.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+                var4 = af.a(SecondaryNodeDeque.field_d, da.field_h, -3, kh.field_F, ch.field_c);
               } else {
                 var4 = af.a(ra.field_h, da.field_h, -3, kh.field_F, ch.field_c);
               }
@@ -175,7 +175,7 @@ final class ja extends uf {
                 rb.field_d[var6] = kh.field_F[var6];
               }
               rb.field_d[var5 - 2] = "";
-              rb.field_d[-1 + var5] = te.field_e;
+              rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[var5 - 1] = 0;
               pj.field_l[0] = 5;
             } else if (pe.field_e == 4) {
@@ -191,7 +191,7 @@ final class ja extends uf {
                 rb.field_d[var6] = kh.field_F[var6];
               }
               rb.field_d[var5 - 2] = "";
-              rb.field_d[-1 + var5] = te.field_e;
+              rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[-1 + var5] = 0;
               pj.field_l[0] = 5;
             } else {
@@ -210,15 +210,15 @@ final class ja extends uf {
                 rb.field_d[var6] = kh.field_F[var6];
               }
               rb.field_d[var5 - 3] = "";
-              rb.field_d[-2 + var5] = mk.field_h;
+              rb.field_d[-2 + var5] = LevelEditor.field_h;
               f.field_a[var5 - 2] = 0;
               pj.field_l[0] = 3;
-              rb.field_d[-1 + var5] = te.field_e;
+              rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[var5 - 1] = 1;
               pj.field_l[1] = 5;
             }
           } else {
-            var4 = af.a(ij.a(new String[]{"<br><%0><br>"}, -1, hj.field_H), da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = af.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, hj.field_H), da.field_h, -3, kh.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
               if (!"<%0>".equals(kh.field_F[var6])) {
@@ -234,7 +234,7 @@ final class ja extends uf {
             ka.a(kh.field_F, 0, ia.field_r, 0, var5);
             kj.field_c = new String[-1 + (var4 - var5)];
             ka.a(kh.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
-            var4 = af.a(ij.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = af.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, kh.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
               if (!"<%0>".equals(kh.field_F[var6])) {
@@ -246,14 +246,14 @@ final class ja extends uf {
             if (var5 == -1) {
               throw new IllegalStateException();
             }
-            km.field_c = new String[var5];
-            ka.a(kh.field_F, 0, km.field_c, 0, var5);
+            ArchiveIndex.field_c = new String[var5];
+            ka.a(kh.field_F, 0, ArchiveIndex.field_c, 0, var5);
             ec.field_d = new String[-1 + var4 - var5];
             ka.a(kh.field_F, var5 + 1, ec.field_d, 0, -var5 + (var4 - 1));
-            if (ia.field_r.length >= km.field_c.length) {
+            if (ia.field_r.length >= ArchiveIndex.field_c.length) {
               stackIn_58_0 = ia.field_r.length;
             } else {
-              stackIn_58_0 = km.field_c.length;
+              stackIn_58_0 = ArchiveIndex.field_c.length;
             }
             var6 = stackIn_58_0;
             if (ec.field_d.length > kj.field_c.length) {
@@ -270,20 +270,20 @@ final class ja extends uf {
             }
             rb.field_d[0] = p.field_c;
             pj.field_l = new int[2];
-            rb.field_d[1] = r.field_o;
+            rb.field_d[1] = BattleUnit.field_o;
             f.field_a[1] = 0;
             f.field_a[3] = 1;
             rb.field_d[5] = "";
             pj.field_l[1] = 2;
-            rb.field_d[4] = ql.field_h;
+            rb.field_d[4] = ProxySocketConnector.field_h;
             rb.field_d[3] = q.field_Ob;
             rb.field_d[2] = ga.field_l;
             pj.field_l[0] = 5;
             for (var9Lifetime2 = 0; var9Lifetime2 < var6; var9Lifetime2++) {
               stackIn_68_0 = rb.field_d;
               stackIn_68_1 = 6 + var9Lifetime2;
-              if (0 <= km.field_c.length + var9Lifetime2 - var6) {
-                stackIn_69_2 = km.field_c[km.field_c.length + var9Lifetime2 - var6];
+              if (0 <= ArchiveIndex.field_c.length + var9Lifetime2 - var6) {
+                stackIn_69_2 = ArchiveIndex.field_c[ArchiveIndex.field_c.length + var9Lifetime2 - var6];
               } else {
                 stackIn_69_2 = "";
               }
@@ -335,12 +335,12 @@ final class ja extends uf {
             }
           }
           vi.field_o = nd.field_r - (var4Lifetime1 >> 1);
-          ql.field_g = -(var4Lifetime1 >> 1) + (var4Lifetime1 + nd.field_r);
+          ProxySocketConnector.field_g = -(var4Lifetime1 >> 1) + (var4Lifetime1 + nd.field_r);
           ak.field_e = (dc.field_b + hi.field_ab << 1) * ai.field_i.field_g;
           for (var5Lifetime2 = 0; var5Lifetime2 < rb.field_d.length; var5Lifetime2++) {
             stackIn_112_0 = ak.field_e;
             if (0 > f.field_a[var5Lifetime2]) {
-              stackIn_113_1 = jm.field_b;
+              stackIn_113_1 = DelegatingCanvas.field_b;
             } else {
               stackIn_113_1 = lm.field_d;
             }
@@ -363,20 +363,20 @@ final class ja extends uf {
               var6Lifetime3 = var6Lifetime3 + (lm.field_d + ((dc.field_b << 1) + hi.field_ab));
               ll.field_d[var5Lifetime3][3] = (dc.field_b << 1) + lm.field_d;
             } else {
-              var6Lifetime3 = var6Lifetime3 + jm.field_b;
+              var6Lifetime3 = var6Lifetime3 + DelegatingCanvas.field_b;
             }
             var5Lifetime3++;
           }
           if (pe.field_e == 2) {
             ai.field_i.a(-1, param1, -1, -85);
           } else {
-            ai.field_i.a(0, param1, bb.a(-93, jb.field_b, ef.field_j), -85);
+            ai.field_i.a(0, param1, bb.a(-93, MouseWheelInput.field_b, ef.field_j), -85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "ja.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "ja.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

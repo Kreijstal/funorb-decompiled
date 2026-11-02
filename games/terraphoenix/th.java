@@ -8,9 +8,9 @@ final class th {
     th field_f;
     static String[] field_c;
     boolean field_h;
-    static cf field_g;
+    static GameKeyHandler field_g;
     int field_d;
-    static ci field_i;
+    static Sprite field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         lk.field_a[pb.field_b] = param0;
@@ -20,7 +20,7 @@ final class th {
           bd.field_a = param4;
         }
         if (!(param4 <= ok.field_j)) {
-          el.field_d = param4;
+          ClientException.field_d = param4;
         }
         oa.field_a[pb.field_b] = param3;
         oa.field_c[pb.field_b] = param5;
@@ -31,17 +31,17 @@ final class th {
         if (var7 < bd.field_a) {
           bd.field_a = var7;
           pb.field_b = pb.field_b + 1;
-          if (var7 > el.field_d) {
-            el.field_d = var7;
+          if (var7 > ClientException.field_d) {
+            ClientException.field_d = var7;
             return;
           }
           return;
         }
         pb.field_b = pb.field_b + 1;
-        if (var7 <= el.field_d) {
+        if (var7 <= ClientException.field_d) {
           return;
         }
-        el.field_d = var7;
+        ClientException.field_d = var7;
     }
 
     final static void a(boolean param0) {
@@ -67,7 +67,7 @@ final class th {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "th.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "th.A(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class th {
         field_g = null;
         field_e = null;
         if (param0 <= 74) {
-          field_g = (cf) null;
+          field_g = (GameKeyHandler) null;
           field_i = null;
           return;
         }
@@ -94,13 +94,13 @@ final class th {
             this.field_d = 250;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "th.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "th.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_e = "ASM-C";
         field_c = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
-        field_g = new cf();
+        field_g = new GameKeyHandler();
     }
 }

@@ -6,7 +6,7 @@ final class hi extends ei implements n {
     static int field_ab;
     static String field_Y;
     static String field_Z;
-    static bg[] field_W;
+    static IndexedSprite[] field_W;
 
     private final void k(int param0) {
         int var2 = 93 % ((68 - param0) / 58);
@@ -68,7 +68,7 @@ final class hi extends ei implements n {
           }
           int var6_int = 102 % ((-5 - param4) / 57);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -86,12 +86,12 @@ final class hi extends ei implements n {
         try {
           var4 = new eb(param1, param2);
           if (param0) {
-            field_W = (bg[]) null;
+            field_W = (IndexedSprite[]) null;
           }
-          var4.field_l = (cj) ((Object) new ic());
-          var5 = -6 + this.field_n;
-          this.field_n = this.field_n + 38;
-          var4.a(var5, (byte) 80, -16 + (-14 + this.field_p), 15, 30);
+          var4.listener = (WidgetActionListener) ((Object) new ic());
+          var5 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.a(var5, (byte) 80, -16 + (-14 + this.width), 15, 30);
           this.b((byte) 95, var4);
           this.c(0);
           stackIn_3_0 = var4;
@@ -112,7 +112,7 @@ final class hi extends ei implements n {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -125,34 +125,34 @@ final class hi extends ei implements n {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gl var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (u.field_d == param1) {
             var3 = ra.field_h;
           } else {
-            if (ql.field_e != param1) {
+            if (ProxySocketConnector.field_e != param1) {
               if (param1 == gi.field_r) {
-                this.field_n = this.field_n + 30;
+                this.height = this.height + 30;
                 var3 = va.field_a;
               }
             } else {
               var3 = tb.field_i;
-              this.field_n = this.field_n + 10;
+              this.height = this.height + 10;
               if (ea.a(-20512)) {
-                var3 = nf.field_a;
-                this.field_n = this.field_n + 20;
+                var3 = PcmPlayerPump.field_a;
+                this.height = this.height + 20;
               }
             }
           }
-          var4 = new gl((String) (var3), (sc) null);
-          var4.field_n = 80;
-          var4.field_u = 50;
-          var4.field_p = this.field_p;
-          var4.field_w = 0;
-          var4.field_l = (cj) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4 = new UiWidget((String) (var3), (sc) null);
+          var4.height = 80;
+          var4.y = 50;
+          var4.width = this.width;
+          var4.x = 0;
+          var4.listener = (WidgetActionListener) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 95, var4);
-          this.field_X = this.a(false, te.field_e, (sc) (this));
+          this.field_X = this.a(false, RasterBuffer.field_e, (sc) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class hi extends ei implements n {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qk.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -3,17 +3,17 @@
  */
 class g extends wa {
     private int field_U;
-    ci[] field_eb;
-    ci[] field_V;
+    Sprite[] field_eb;
+    Sprite[] field_V;
     int field_pb;
-    private ci[] field_sb;
+    private Sprite[] field_sb;
     private int field_J;
     static int field_cb;
     private int field_db;
     private int field_jb;
     private int field_F;
     int field_ib;
-    private ci field_fb;
+    private Sprite field_fb;
     private boolean field_Z;
     private int field_Cb;
     private String field_K;
@@ -23,17 +23,17 @@ class g extends wa {
     private int field_Q;
     private int field_A;
     int field_R;
-    private ci field_y;
-    private jj field_L;
+    private Sprite field_y;
+    private IntrusiveDeque field_L;
     private int field_v;
     int field_x;
-    private ci field_xb;
+    private Sprite field_xb;
     private int field_O;
     int field_W;
     static String field_qb;
     private int field_P;
     boolean field_z;
-    ci[] field_X;
+    Sprite[] field_X;
     private boolean field_Ab;
     boolean field_zb;
     private int field_wb;
@@ -45,13 +45,13 @@ class g extends wa {
     private int field_vb;
     private int field_ub;
     private int field_M;
-    private pk field_S;
+    private BitmapFont field_S;
     private boolean field_T;
-    ci field_ob;
-    private ci field_w;
+    Sprite field_ob;
+    private Sprite field_w;
     boolean field_kb;
     private int field_H;
-    private ci[] field_yb;
+    private Sprite[] field_yb;
     static boolean field_tb;
     private int field_bb;
     private int field_Y;
@@ -68,7 +68,7 @@ class g extends wa {
         if (param0 != -36) {
           this.field_Bb = -103;
         }
-        this.a(l.field_k, 0, false, true, l.field_j, true, param1, false, 0, false, false);
+        this.a(SoftwareRasterizer.field_k, 0, false, true, SoftwareRasterizer.field_j, true, param1, false, 0, false, false);
     }
 
     public static void d(int param0) {
@@ -129,19 +129,19 @@ class g extends wa {
         this.field_vb = param5 + this.field_R;
         this.field_W = this.field_W - var7Lifetime3;
         this.field_lb = this.field_lb + var7Lifetime3;
-        var8 = l.field_b;
-        var9 = l.field_d;
-        var10 = l.field_f;
-        var11 = l.field_c;
-        l.i(this.field_vb, this.field_Bb, this.field_x + this.field_vb, this.field_Bb + this.field_lb);
+        var8 = SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_d;
+        var10 = SoftwareRasterizer.field_f;
+        var11 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.i(this.field_vb, this.field_Bb, this.field_x + this.field_vb, this.field_Bb + this.field_lb);
         var12 = 0;
         if (!mm.field_b &&
           param4 &&
           ma.field_I != 0 &&
-          mm.field_c >= l.field_b &&
-          mm.field_c < l.field_f &&
-          l.field_d <= lm.field_c &&
-          l.field_c > lm.field_c) {
+          mm.field_c >= SoftwareRasterizer.field_b &&
+          mm.field_c < SoftwareRasterizer.field_f &&
+          SoftwareRasterizer.field_d <= lm.field_c &&
+          SoftwareRasterizer.field_c > lm.field_c) {
           this.field_pb = ma.field_I;
           var12 = 1;
           this.field_Y = -this.field_Bb + lm.field_c;
@@ -156,7 +156,7 @@ class g extends wa {
         if (oh.field_f == 0) {
           this.field_N = 0;
         }
-        stackIn_35_1 = (!gi.field_w) && (ef.field_j >= l.field_b) && (l.field_f > ef.field_j) && (jb.field_b >= l.field_d) && (l.field_c > jb.field_b);
+        stackIn_35_1 = (!gi.field_w) && (ef.field_j >= SoftwareRasterizer.field_b) && (SoftwareRasterizer.field_f > ef.field_j) && (MouseWheelInput.field_b >= SoftwareRasterizer.field_d) && (SoftwareRasterizer.field_c > MouseWheelInput.field_b);
         this.field_D = stackIn_35_1;
         stackIn_40_1 = (this.field_D) && (this.field_N == oh.field_f) && (param4);
         this.field_Z = stackIn_40_1;
@@ -164,7 +164,7 @@ class g extends wa {
           var13 = (g) (this.field_L.c((byte) 127));
           while (var13 != null) {
             var13.a(this.field_Bb, this.field_lb, (byte) -8, this.field_x, param4, this.field_vb);
-            var13 = (g) (this.field_L.b(-115));
+            var13 = (g) (this.field_L.nextForward(-115));
           }
         }
         if (var12 != 0) {
@@ -173,10 +173,10 @@ class g extends wa {
         if (this.field_D) {
           gi.field_w = true;
         }
-        l.c(var8, var9, var10, var11);
+        SoftwareRasterizer.c(var8, var9, var10, var11);
         if (this.field_N != 0 &&
           this.field_kb) {
-          this.field_ib = jb.field_b - (this.field_Y + param0);
+          this.field_ib = MouseWheelInput.field_b - (this.field_Y + param0);
           this.field_R = -this.field_Q + (ef.field_j - param5);
           if (this.field_R < 0) {
             this.field_R = 0;
@@ -200,23 +200,23 @@ class g extends wa {
     final void a(g param0, int param1) {
         try {
           if (this.field_L == null) {
-            this.field_L = new jj();
+            this.field_L = new IntrusiveDeque();
           }
           if (param1 != -14951) {
-            this.field_w = (ci) null;
+            this.field_w = (Sprite) null;
           }
           this.field_L.a(param0, -16611);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "g.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "g.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, boolean param1) {
         gi.field_w = !param1 ? true : false;
         mm.field_b = !param1 ? true : false;
-        this.a(0, l.field_j, (byte) -8, l.field_k, true, 0);
+        this.a(0, SoftwareRasterizer.field_j, (byte) -8, SoftwareRasterizer.field_k, true, 0);
         if (param0 >= -7) {
-          this.field_ob = (ci) null;
+          this.field_ob = (Sprite) null;
         }
     }
 
@@ -361,7 +361,7 @@ class g extends wa {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
         }
     }
 
@@ -371,8 +371,8 @@ class g extends wa {
         int var13;
         int var14;
         int var15;
-        ci[] var16;
-        ci var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -389,11 +389,11 @@ class g extends wa {
         var25 = Terraphoenix.field_V;
         this.field_vb = this.field_R + param1;
         this.field_Bb = param8 + this.field_ib;
-        var12 = l.field_b;
-        var13 = l.field_d;
-        var14 = l.field_f;
-        var15 = l.field_c;
-        l.i(this.field_vb, this.field_Bb, this.field_vb + this.field_x, this.field_Bb + this.field_lb);
+        var12 = SoftwareRasterizer.field_b;
+        var13 = SoftwareRasterizer.field_d;
+        var14 = SoftwareRasterizer.field_f;
+        var15 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.i(this.field_vb, this.field_Bb, this.field_vb + this.field_x, this.field_Bb + this.field_lb);
         param5 = param5 & this.field_zb;
         if (!this.field_Ab) {
           param10 = this.field_Z;
@@ -539,13 +539,13 @@ class g extends wa {
           }
         }
         if (null != this.field_L) {
-          var23_ref = (g) (this.field_L.d(9272));
+          var23_ref = (g) (this.field_L.beginBackward(9272));
           while (var23_ref != null) {
             var23_ref.a(this.field_x, this.field_vb + var19, this.field_T, true, this.field_lb, param5, param6, param7, var20 + this.field_Bb, param9, param10);
-            var23_ref = (g) (this.field_L.e((byte) -119));
+            var23_ref = (g) (this.field_L.nextBackward((byte) -119));
           }
         }
-        l.c(var12, var13, var14, var15);
+        SoftwareRasterizer.c(var12, var13, var14, var15);
     }
 
     private g(long param0, g param1, int param2, int param3, int param4, int param5, String param6) {
@@ -565,7 +565,7 @@ class g extends wa {
         this.field_M = -1;
         this.field_E = 256;
         try {
-          this.field_g = param0;
+          this.key = param0;
           this.field_lb = param5;
           this.field_ib = param3;
           this.field_R = param2;
@@ -575,7 +575,7 @@ class g extends wa {
             this.field_B = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "g.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "g.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

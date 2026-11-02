@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ua {
-    static ci field_b;
+    static Sprite field_b;
     private int field_a;
     private ak field_i;
     private int field_h;
@@ -44,8 +44,8 @@ final class ua {
                     return false;
                   }
                   this.field_i.a(false, (long)(param1 * 6));
-                  this.field_i.a(ad.field_m, (byte) -127, 0, 6);
-                  var7_int = ((ad.field_m[3] & 255) << 16) + (((255 & ad.field_m[4]) << 8) + (ad.field_m[5] & 255));
+                  this.field_i.a(TutorialController.field_m, (byte) -127, 0, 6);
+                  var7_int = ((TutorialController.field_m[3] & 255) << 16) + (((255 & TutorialController.field_m[4]) << 8) + (TutorialController.field_m[5] & 255));
                   if (var7_int <= 0 ||
                     !((this.field_f.a((byte) 127) / 520L) >= (long)var7_int)) {
                     return false;
@@ -56,17 +56,17 @@ final class ua {
                     var7_int = 1;
                   }
                 }
-                ad.field_m[1] = (byte)(param4 >> 8);
-                ad.field_m[3] = (byte)(var7_int >> 16);
-                ad.field_m[4] = (byte)(var7_int >> 8);
-                ad.field_m[2] = (byte)param4;
-                ad.field_m[5] = (byte)var7_int;
-                ad.field_m[0] = (byte)(param4 >> 16);
+                TutorialController.field_m[1] = (byte)(param4 >> 8);
+                TutorialController.field_m[3] = (byte)(var7_int >> 16);
+                TutorialController.field_m[4] = (byte)(var7_int >> 8);
+                TutorialController.field_m[2] = (byte)param4;
+                TutorialController.field_m[5] = (byte)var7_int;
+                TutorialController.field_m[0] = (byte)(param4 >> 16);
                 this.field_i.a(false, (long)(param1 * 6));
-                this.field_i.a(-1, 6, ad.field_m, 0);
+                this.field_i.a(-1, 6, TutorialController.field_m, 0);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param4 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -74,7 +74,7 @@ final class ua {
                       this.field_f.a(false, (long)(var7_int * 520));
                       if (param1 > 65535) {
                         try {
-                          this.field_f.a(ad.field_m, (byte) -127, 0, 10);
+                          this.field_f.a(TutorialController.field_m, (byte) -127, 0, 10);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,15 +82,15 @@ final class ua {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
-                        var11 = (ad.field_m[3] & 255) + ((-16777216 & ad.field_m[0] << 24) + ((255 & ad.field_m[1]) << 16)) + (65280 & ad.field_m[2] << 8);
-                        var13 = ad.field_m[9] & 255;
-                        var10 = (255 & ad.field_m[8]) + (ad.field_m[6] << 16 & 16711680) + (ad.field_m[7] << 8 & 65280);
-                        var12 = (255 & ad.field_m[5]) + ((ad.field_m[4] & 255) << 8);
+                        var11 = (TutorialController.field_m[3] & 255) + ((-16777216 & TutorialController.field_m[0] << 24) + ((255 & TutorialController.field_m[1]) << 16)) + (65280 & TutorialController.field_m[2] << 8);
+                        var13 = TutorialController.field_m[9] & 255;
+                        var10 = (255 & TutorialController.field_m[8]) + (TutorialController.field_m[6] << 16 & 16711680) + (TutorialController.field_m[7] << 8 & 65280);
+                        var12 = (255 & TutorialController.field_m[5]) + ((TutorialController.field_m[4] & 255) << 8);
                       } else {
                         try {
-                          this.field_f.a(ad.field_m, (byte) -126, 0, 8);
+                          this.field_f.a(TutorialController.field_m, (byte) -126, 0, 8);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -98,12 +98,12 @@ final class ua {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
-                        var12 = (255 & ad.field_m[3]) + (ad.field_m[2] << 8 & 65280);
-                        var11 = ((255 & ad.field_m[0]) << 8) + (255 & ad.field_m[1]);
-                        var13 = 255 & ad.field_m[7];
-                        var10 = (255 & ad.field_m[6]) + (((ad.field_m[5] & 255) << 8) + (16711680 & ad.field_m[4] << 16));
+                        var12 = (255 & TutorialController.field_m[3]) + (TutorialController.field_m[2] << 8 & 65280);
+                        var11 = ((255 & TutorialController.field_m[0]) << 8) + (255 & TutorialController.field_m[1]);
+                        var13 = 255 & TutorialController.field_m[7];
+                        var10 = (255 & TutorialController.field_m[6]) + (((TutorialController.field_m[5] & 255) << 8) + (16711680 & TutorialController.field_m[4] << 16));
                       }
                       if ((var11 == param1 &&
                         var9 == var12 &&
@@ -130,16 +130,16 @@ final class ua {
                       var10 = 0;
                     }
                     if (param1 <= 65535) {
-                      ad.field_m[5] = (byte)(var10 >> 8);
-                      ad.field_m[0] = (byte)(param1 >> 8);
-                      ad.field_m[1] = (byte)param1;
-                      ad.field_m[2] = (byte)(var9 >> 8);
-                      ad.field_m[3] = (byte)var9;
-                      ad.field_m[6] = (byte)var10;
-                      ad.field_m[4] = (byte)(var10 >> 16);
-                      ad.field_m[7] = (byte)this.field_a;
+                      TutorialController.field_m[5] = (byte)(var10 >> 8);
+                      TutorialController.field_m[0] = (byte)(param1 >> 8);
+                      TutorialController.field_m[1] = (byte)param1;
+                      TutorialController.field_m[2] = (byte)(var9 >> 8);
+                      TutorialController.field_m[3] = (byte)var9;
+                      TutorialController.field_m[6] = (byte)var10;
+                      TutorialController.field_m[4] = (byte)(var10 >> 16);
+                      TutorialController.field_m[7] = (byte)this.field_a;
                       this.field_f.a(false, (long)(520 * var7_int));
-                      this.field_f.a(-1, 8, ad.field_m, 0);
+                      this.field_f.a(-1, 8, TutorialController.field_m, 0);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
                         var11 = 512;
@@ -147,18 +147,18 @@ final class ua {
                       this.field_f.a(-1, var11, param3, var8);
                       var8 = var8 + var11;
                     } else {
-                      ad.field_m[6] = (byte)(var10 >> 16);
-                      ad.field_m[2] = (byte)(param1 >> 8);
-                      ad.field_m[0] = (byte)(param1 >> 24);
-                      ad.field_m[7] = (byte)(var10 >> 8);
-                      ad.field_m[1] = (byte)(param1 >> 16);
-                      ad.field_m[4] = (byte)(var9 >> 8);
-                      ad.field_m[8] = (byte)var10;
-                      ad.field_m[3] = (byte)param1;
-                      ad.field_m[9] = (byte)this.field_a;
-                      ad.field_m[5] = (byte)var9;
+                      TutorialController.field_m[6] = (byte)(var10 >> 16);
+                      TutorialController.field_m[2] = (byte)(param1 >> 8);
+                      TutorialController.field_m[0] = (byte)(param1 >> 24);
+                      TutorialController.field_m[7] = (byte)(var10 >> 8);
+                      TutorialController.field_m[1] = (byte)(param1 >> 16);
+                      TutorialController.field_m[4] = (byte)(var9 >> 8);
+                      TutorialController.field_m[8] = (byte)var10;
+                      TutorialController.field_m[3] = (byte)param1;
+                      TutorialController.field_m[9] = (byte)this.field_a;
+                      TutorialController.field_m[5] = (byte)var9;
                       this.field_f.a(false, (long)(520 * var7_int));
-                      this.field_f.a(-1, 10, ad.field_m, 0);
+                      this.field_f.a(-1, 10, TutorialController.field_m, 0);
                       var11 = param4 - var8;
                       if (var11 > 510) {
                         var11 = 510;
@@ -192,7 +192,7 @@ final class ua {
             } else {
               stackIn_73_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -249,7 +249,7 @@ final class ua {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class ua {
           this.field_i = param2;
           this.field_h = param3;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ua.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ua.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -301,9 +301,9 @@ final class ua {
                 return null;
               }
               this.field_i.a(false, (long)(6 * param1));
-              this.field_i.a(ad.field_m, (byte) 71, 0, 6);
-              var4_int = (ad.field_m[1] << 8 & 65280) + (((ad.field_m[0] & 255) << 16) + (255 & ad.field_m[2]));
-              var5 = (ad.field_m[5] & 255) + ((ad.field_m[3] << 16 & 16711680) + ((255 & ad.field_m[4]) << 8));
+              this.field_i.a(TutorialController.field_m, (byte) 71, 0, 6);
+              var4_int = (TutorialController.field_m[1] << 8 & 65280) + (((TutorialController.field_m[0] & 255) << 16) + (255 & TutorialController.field_m[2]));
+              var5 = (TutorialController.field_m[5] & 255) + ((TutorialController.field_m[3] << 16 & 16711680) + ((255 & TutorialController.field_m[4]) << 8));
               if (var4_int < 0) {
                 return null;
               }
@@ -335,21 +335,21 @@ final class ua {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_f.a(ad.field_m, (byte) -127, 0, var9 + var14);
-                  var10 = ((255 & ad.field_m[0]) << 24) - (-(16711680 & ad.field_m[1] << 16) - ((ad.field_m[2] & 255) << 8) - (ad.field_m[3] & 255));
-                  var11 = (ad.field_m[5] & 255) + ((255 & ad.field_m[4]) << 8);
-                  var12 = (ad.field_m[7] << 8 & 65280) + ((255 & ad.field_m[6]) << 16) + (ad.field_m[8] & 255);
-                  var13 = 255 & ad.field_m[9];
+                  this.field_f.a(TutorialController.field_m, (byte) -127, 0, var9 + var14);
+                  var10 = ((255 & TutorialController.field_m[0]) << 24) - (-(16711680 & TutorialController.field_m[1] << 16) - ((TutorialController.field_m[2] & 255) << 8) - (TutorialController.field_m[3] & 255));
+                  var11 = (TutorialController.field_m[5] & 255) + ((255 & TutorialController.field_m[4]) << 8);
+                  var12 = (TutorialController.field_m[7] << 8 & 65280) + ((255 & TutorialController.field_m[6]) << 16) + (TutorialController.field_m[8] & 255);
+                  var13 = 255 & TutorialController.field_m[9];
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_f.a(ad.field_m, (byte) -125, 0, var9 + var14);
-                  var12 = (255 & ad.field_m[6]) + (16711680 & ad.field_m[4] << 16) + ((255 & ad.field_m[5]) << 8);
-                  var11 = ((ad.field_m[2] & 255) << 8) + (ad.field_m[3] & 255);
-                  var10 = ((ad.field_m[0] & 255) << 8) + (255 & ad.field_m[1]);
-                  var13 = ad.field_m[7] & 255;
+                  this.field_f.a(TutorialController.field_m, (byte) -125, 0, var9 + var14);
+                  var12 = (255 & TutorialController.field_m[6]) + (16711680 & TutorialController.field_m[4] << 16) + ((255 & TutorialController.field_m[5]) << 8);
+                  var11 = ((TutorialController.field_m[2] & 255) << 8) + (TutorialController.field_m[3] & 255);
+                  var10 = ((TutorialController.field_m[0] & 255) << 8) + (255 & TutorialController.field_m[1]);
+                  var13 = TutorialController.field_m[7] & 255;
                 }
                 if (param1 != var10) {
                   return null;
@@ -373,7 +373,7 @@ final class ua {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = ad.field_m[var16];
+                  var6[incrementValue$2] = TutorialController.field_m[var16];
                 }
               }
               stackIn_50_0 = var6;

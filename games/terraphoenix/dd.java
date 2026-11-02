@@ -9,7 +9,7 @@ final class dd extends eb {
     private rc field_K;
     static String field_N;
 
-    final boolean a(byte param0, gl param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -30,7 +30,7 @@ final class dd extends eb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class dd extends eb {
         RuntimeException var2_ref = null;
         var5 = Terraphoenix.field_V;
         try {
-          if (gb.field_z == null) {
+          if (WidgetContainer.field_z == null) {
             return null;
           }
           if (param1 == null) {
@@ -86,7 +86,7 @@ final class dd extends eb {
             stackIn_10_0 = null;
             return (q) (stackIn_10_0);
           }
-          var3 = (q) (gb.field_z.a(71, (long)var2.hashCode()));
+          var3 = (q) (WidgetContainer.field_z.a(71, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Lb);
             var4 = hm.a((byte) 124, var7);
@@ -94,7 +94,7 @@ final class dd extends eb {
               stackIn_17_0 = var3;
               return stackIn_17_0;
             }
-            var3 = (q) (gb.field_z.c((byte) -66));
+            var3 = (q) (WidgetContainer.field_z.c((byte) -66));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,11 +107,11 @@ final class dd extends eb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
-    final void a(gl param0, int param1, int param2, int param3) {
+    final void a(UiWidget param0, int param1, int param2, int param3) {
         this.field_P = this.field_P + 1;
         if (param3 < 25) {
           return;
@@ -119,7 +119,7 @@ final class dd extends eb {
         try {
           super.a(param0, param1, param2, 26);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class dd extends eb {
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,14 +147,14 @@ final class dd extends eb {
         int var9;
         int var10;
         int var11;
-        ci var15;
-        ci var16;
-        ci var17;
-        ci var18;
-        ci var19;
-        ci var20;
-        ci var21;
-        ci var22;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
+        Sprite var18;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
+        Sprite var22;
         int var6Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -168,33 +168,33 @@ final class dd extends eb {
         if (param2 != 0) {
           return;
         }
-        var5 = (this.field_p >> 1) + param0 + this.field_w;
+        var5 = (this.width >> 1) + param0 + this.x;
         if (param1 <= -106) {
-          var6 = (this.field_n >> 1) + (param3 + this.field_u);
+          var6 = (this.height >> 1) + (param3 + this.y);
           var8 = this.field_K.a(-16323);
           if (kj.field_d == var8) {
             var16 = og.field_c[0];
             var9 = var16.field_q << 1;
             var10 = var16.field_u << 1;
             if (ld.field_c == null) {
-              ld.field_c = new ci(var9, var10);
+              ld.field_c = new Sprite(var9, var10);
               il.a(1, ld.field_c);
             } else {
               if (var9 > ld.field_c.field_r) {
-                ld.field_c = new ci(var9, var10);
+                ld.field_c = new Sprite(var9, var10);
                 il.a(1, ld.field_c);
               } else {
                 if (var10 <= ld.field_c.field_t) {
                   il.a(1, ld.field_c);
-                  l.a();
+                  SoftwareRasterizer.a();
                 } else {
-                  ld.field_c = new ci(var9, var10);
+                  ld.field_c = new Sprite(var9, var10);
                   il.a(1, ld.field_c);
                 }
               }
             }
             var16.b(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_P << 10, 4096);
-            ij.a(false);
+            MessageKeys.a(false);
             ld.field_c.d(var5 - var16.field_q, -var16.field_u + var6, 256);
             return;
           }
@@ -218,42 +218,42 @@ final class dd extends eb {
             var9Lifetime3 <= ld.field_c.field_r &&
             var10Lifetime3 <= ld.field_c.field_t) {
             il.a(1, ld.field_c);
-            l.a();
+            SoftwareRasterizer.a();
           } else {
-            ld.field_c = new ci(var9Lifetime3, var10Lifetime3);
+            ld.field_c = new Sprite(var9Lifetime3, var10Lifetime3);
             il.a(1, ld.field_c);
           }
           var15.b(112, 144, var15.field_q << 4, var15.field_u << 4, -this.field_P << 10, 4096);
-          ij.a(false);
+          MessageKeys.a(false);
           ld.field_c.d(var5 - var15.field_q, -var15.field_u + var6, 256);
           return;
         }
         field_O = (String[]) null;
-        var6Lifetime1 = (this.field_n >> 1) + (param3 + this.field_u);
+        var6Lifetime1 = (this.height >> 1) + (param3 + this.y);
         var8Lifetime1 = this.field_K.a(-16323);
         if (kj.field_d == var8Lifetime1) {
           var20 = og.field_c[0];
           var9Lifetime1 = var20.field_q << 1;
           var10Lifetime1 = var20.field_u << 1;
           if (ld.field_c == null) {
-            ld.field_c = new ci(var9Lifetime1, var10Lifetime1);
+            ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
             il.a(1, ld.field_c);
           } else {
             if (var9Lifetime1 > ld.field_c.field_r) {
-              ld.field_c = new ci(var9Lifetime1, var10Lifetime1);
+              ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
               il.a(1, ld.field_c);
             } else {
               if (var10Lifetime1 <= ld.field_c.field_t) {
                 il.a(1, ld.field_c);
-                l.a();
+                SoftwareRasterizer.a();
               } else {
-                ld.field_c = new ci(var9Lifetime1, var10Lifetime1);
+                ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
                 il.a(1, ld.field_c);
               }
             }
           }
           var20.b(112, 144, var20.field_q << 4, var20.field_u << 4, -this.field_P << 10, 4096);
-          ij.a(false);
+          MessageKeys.a(false);
           ld.field_c.d(var5 - var20.field_q, -var20.field_u + var6Lifetime1, 256);
           return;
         }
@@ -274,20 +274,20 @@ final class dd extends eb {
         var9Lifetime2 = var19.field_q << 1;
         var10Lifetime2 = var19.field_u << 1;
         if (ld.field_c == null) {
-          ld.field_c = new ci(var9Lifetime2, var10Lifetime2);
+          ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
           il.a(1, ld.field_c);
         } else {
           if (var9Lifetime2 <= ld.field_c.field_r &&
             var10Lifetime2 <= ld.field_c.field_t) {
             il.a(1, ld.field_c);
-            l.a();
+            SoftwareRasterizer.a();
           } else {
-            ld.field_c = new ci(var9Lifetime2, var10Lifetime2);
+            ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
             il.a(1, ld.field_c);
           }
         }
         var19.b(112, 144, var19.field_q << 4, var19.field_u << 4, -this.field_P << 10, 4096);
-        ij.a(false);
+        MessageKeys.a(false);
         ld.field_c.d(var5 - var19.field_q, -var19.field_u + var6Lifetime1, 256);
     }
 

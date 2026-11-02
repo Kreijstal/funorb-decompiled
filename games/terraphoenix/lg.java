@@ -47,7 +47,7 @@ final class lg {
             this.field_l = true;
             this.field_g = 50;
             this.field_e = true;
-            this.field_i = qe.field_j;
+            this.field_i = IsaacCipher.field_j;
             this.field_f = 15;
           } else {
             if (var2 == 2) {

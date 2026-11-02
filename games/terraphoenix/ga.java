@@ -11,7 +11,7 @@ final class ga {
     int field_u;
     int field_d;
     int field_q;
-    static jj field_k;
+    static IntrusiveDeque field_k;
     int field_e;
     int field_t;
     int field_B;
@@ -27,7 +27,7 @@ final class ga {
     String field_z;
     static String field_p;
     int field_f;
-    static jj field_r;
+    static IntrusiveDeque field_r;
     static String field_l;
     int field_x;
     static String field_a;
@@ -43,7 +43,7 @@ final class ga {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          dh var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= jg.field_kb.field_i) {
             if (jg.field_kb.field_l == -1) {
               return 3;
@@ -59,26 +59,26 @@ final class ga {
               hm.field_N = hm.field_N + 1;
             }
             if (1 == hm.field_N) {
-              if (bj.field_c.field_d == 2) {
+              if (bj.field_c.status == 2) {
                 stackIn_14_0 = o.a(-1, (byte) -112);
                 return stackIn_14_0;
               }
-              if (bj.field_c.field_d == 1) {
+              if (bj.field_c.status == 1) {
                 hm.field_N = hm.field_N + 1;
               }
             }
             if (hm.field_N == 2) {
-              gi.field_l = new tf((java.net.Socket) (bj.field_c.field_e), mc.field_b);
-              var2 = new dh(13);
+              gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.result), mc.field_b);
+              var2 = new PacketBuffer(13);
               ej.a(ng.field_y, -25563, var2, tj.field_wb, ai.field_c);
-              var2.i(15, -121);
-              var2.e(rf.field_v, 8959);
-              gi.field_l.a(13, 0, (byte) -97, var2.field_i);
+              var2.writeByte(15, -121);
+              var2.writeInt(rf.field_v, 8959);
+              gi.field_l.a(13, 0, (byte) -97, var2.payload);
               hm.field_N = hm.field_N + 1;
               t.field_b = 30000L + ll.a(1000);
             }
             if (hm.field_N == 3) {
-              if (gi.field_l.a(0) > 0) {
+              if (gi.field_l.available(0) > 0) {
                 var1_int = gi.field_l.b(0);
                 if (var1_int != 0) {
                   stackIn_30_0 = o.a(var1_int, (byte) -112);
@@ -181,7 +181,7 @@ final class ga {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -244,9 +244,9 @@ final class ga {
     }
 
     final static void d(int param0) {
-        int var1 = mk.a(-1);
+        int var1 = LevelEditor.a(-1);
         int var2 = mc.a(55);
-        ck.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
+        FullscreenFocusCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
         if (param0 != -6513) {
           field_p = (String) null;
         }
@@ -306,19 +306,19 @@ final class ga {
         }
     }
 
-    final static bg[] a(byte param0, int param1, fa param2, int param3) {
+    final static IndexedSprite[] a(byte param0, int param1, Archive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        bg[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vh.a(param3, param1, param2, true)) {
+          if (!DualLinkNode.a(param3, param1, param2, true)) {
             stackIn_2_0 = null;
-            return (bg[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           var4_int = 35 / ((-65 - param0) / 58);
           stackIn_4_0 = uc.o(-28336);
@@ -333,7 +333,7 @@ final class ga {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class ga {
           }
           ia.a(param1, param2, -74);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -403,7 +403,7 @@ final class ga {
         if (param0 != -1426) {
           this.field_h = 55;
         }
-        L4: while (param1 < og.field_f.b(var3Lifetime2)) {
+        scanLoop1: while (param1 < og.field_f.b(var3Lifetime2)) {
           if (var4 > 1) {
             var3Lifetime2 = mm.a(this.field_n.charAt(0), 0);
             var5 = 1;
@@ -426,12 +426,12 @@ final class ga {
               var3Lifetime2 = "@ " + var3Lifetime2;
             }
             var4--;
-            continue L4;
+            continue scanLoop1;
           }
           break;
         }
         var4Lifetime1 = 20;
-        L12: while (param1 < og.field_f.b(var3Lifetime2)) {
+        scanLoop2: while (param1 < og.field_f.b(var3Lifetime2)) {
           if (var4Lifetime1 > 0) {
             var3Lifetime2 = this.field_n.charAt(0) + ".";
             var5Lifetime1 = 0;
@@ -451,10 +451,10 @@ final class ga {
             }
             var4Lifetime1--;
             if (this.field_h != 3) {
-              continue L12;
+              continue scanLoop2;
             }
             var3Lifetime2 = "@ " + var3Lifetime2;
-            continue L12;
+            continue scanLoop2;
           }
           break;
         }
@@ -484,7 +484,7 @@ final class ga {
           return wj.field_d + this.field_n + " " + this.field_z;
         }
         if (this.field_h == 3) {
-          return cf.field_c + this.field_n + " " + this.field_z;
+          return GameKeyHandler.field_c + this.field_n + " " + this.field_z;
         }
         return this.field_n + " " + this.field_z;
     }
@@ -521,11 +521,11 @@ final class ga {
     }
 
     static {
-        field_k = new jj();
+        field_k = new IntrusiveDeque();
         field_j = 0;
         field_p = "Type your email address again to make sure it's correct";
         field_o = new java.math.BigInteger("65537");
-        field_r = new jj();
+        field_r = new IntrusiveDeque();
         field_c = -1;
         field_l = "to keep fullscreen or";
         field_a = "to over <%0> great games";

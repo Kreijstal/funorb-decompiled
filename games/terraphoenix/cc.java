@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc extends uf {
+final class cc extends IntrusiveNode {
     static String field_l;
     byte[] field_h;
-    static ci[] field_i;
+    static Sprite[] field_i;
     int field_k;
     static String field_j;
 
@@ -25,7 +25,7 @@ final class cc extends uf {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

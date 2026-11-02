@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Terraphoenix extends gf {
+public final class Terraphoenix extends GameShell {
     boolean field_J;
     private int field_pb;
     static int field_O;
@@ -9,19 +9,19 @@ public final class Terraphoenix extends gf {
     int field_Fb;
     int field_jb;
     boolean field_Y;
-    private bg field_U;
+    private IndexedSprite field_U;
     int field_D;
     boolean field_fb;
     private int field_P;
-    private bg field_T;
+    private IndexedSprite field_T;
     private int field_xb;
-    private e field_X;
-    private ci[] field_ab;
+    private BattleState field_X;
+    private Sprite[] field_ab;
     private int field_cb;
     int field_Bb;
     private boolean field_Gb;
     private ol field_S;
-    private bg field_sb;
+    private IndexedSprite field_sb;
     private String field_bb;
     String[] field_Eb;
     boolean field_yb;
@@ -33,12 +33,12 @@ public final class Terraphoenix extends gf {
     private int field_R;
     private ol field_F;
     int field_eb;
-    private mk field_Cb;
+    private LevelEditor field_Cb;
     private int field_mb;
     private vl field_N;
     rk field_I;
-    ad field_wb;
-    private ci field_Q;
+    TutorialController field_wb;
+    private Sprite field_Q;
     boolean field_H;
     boolean field_E;
     int field_rb;
@@ -55,17 +55,17 @@ public final class Terraphoenix extends gf {
     int field_hb;
     int field_G;
     ga[] field_nb;
-    private ci field_lb;
+    private Sprite field_lb;
     public static int field_V;
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
         try {
-          l.e(param1 - 3, -3 + param3, param4 + 6, 6 + param2, 10066329);
-          l.e(param1 - 2, param3 - 2, 4 + param4, 4 + param2, param0);
-          l.e(-1 + param1, -1 + param3, 2 + param4, param2 + 2, 6645093);
-          l.f(param1, param3, param4, param2, 0);
+          SoftwareRasterizer.e(param1 - 3, -3 + param3, param4 + 6, 6 + param2, 10066329);
+          SoftwareRasterizer.e(param1 - 2, param3 - 2, 4 + param4, 4 + param2, param0);
+          SoftwareRasterizer.e(-1 + param1, -1 + param3, 2 + param4, param2 + 2, 6645093);
+          SoftwareRasterizer.f(param1, param3, param4, param2, 0);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -91,9 +91,9 @@ public final class Terraphoenix extends gf {
         g var4_ref_g = null;
         g var5 = null;
         int var5_int = 0;
-        ci var6 = null;
+        Sprite var6 = null;
         int var6_int = 0;
-        ci var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
@@ -115,9 +115,9 @@ public final class Terraphoenix extends gf {
           if (50 < nd.field_k) {
             nd.field_k = 0;
           }
-          km.field_e = km.field_e + bh.field_a;
+          ArchiveIndex.field_e = ArchiveIndex.field_e + bh.field_a;
           if (oh.field_f != 0) {
-            km.field_e = km.field_e + (oh.field_e + ef.field_j);
+            ArchiveIndex.field_e = ArchiveIndex.field_e + (oh.field_e + ef.field_j);
             bh.field_a = bh.field_a + 1;
             oe.field_c = oe.field_c + ef.field_j;
           }
@@ -125,7 +125,7 @@ public final class Terraphoenix extends gf {
             a.field_b.field_d) {
             ga.b((byte) 20);
           }
-          if (null != ga.field_k.d(9272)) {
+          if (null != ga.field_k.beginBackward(9272)) {
             fieldTemp$0 = this.field_R + 1;
             this.field_R = this.field_R + 1;
             if (fieldTemp$0 == 335) {
@@ -193,9 +193,9 @@ public final class Terraphoenix extends gf {
             var3 = 484;
             var6_int = 29;
             if (var3 <= ef.field_j &&
-              var4 <= jb.field_b &&
+              var4 <= MouseWheelInput.field_b &&
               (var3 + var5_int) >= ef.field_j &&
-              jb.field_b <= var4 + var6_int &&
+              MouseWheelInput.field_b <= var4 + var6_int &&
               1 == ma.field_I &&
               wb.field_g < 10) {
               qd.$cfr$intArgs$a$e9dea5688aa5(48, 24);
@@ -211,9 +211,9 @@ public final class Terraphoenix extends gf {
               var5_intLifetime1 = 29;
               var6_intLifetime1 = 29;
               if (var3Lifetime4 <= ef.field_j &&
-                var4Lifetime3 <= jb.field_b &&
+                var4Lifetime3 <= MouseWheelInput.field_b &&
                 ef.field_j <= (var5_intLifetime1 + var3Lifetime4) &&
-                (var6_intLifetime1 + var4Lifetime3) >= jb.field_b &&
+                (var6_intLifetime1 + var4Lifetime3) >= MouseWheelInput.field_b &&
                 1 == ma.field_I &&
                 wb.field_g < 10) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(94, 25);
@@ -228,9 +228,9 @@ public final class Terraphoenix extends gf {
               var3Lifetime4 = 531;
               var4Lifetime3 = 446;
               if (ef.field_j >= var3Lifetime4 &&
-                jb.field_b >= var4Lifetime3 &&
+                MouseWheelInput.field_b >= var4Lifetime3 &&
                 (var3Lifetime4 + var5_intLifetime1Lifetime1) >= ef.field_j &&
-                jb.field_b <= var6_intLifetime1Lifetime1 + var4Lifetime3 &&
+                MouseWheelInput.field_b <= var6_intLifetime1Lifetime1 + var4Lifetime3 &&
                 ma.field_I == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(26, 34);
                 wb.field_g = 20;
@@ -256,7 +256,7 @@ public final class Terraphoenix extends gf {
             this.field_W = this.field_W + 8;
           }
           if (this.field_wb != null) {
-            this.field_wb.field_c = jb.field_b;
+            this.field_wb.field_c = MouseWheelInput.field_b;
             this.field_wb.field_g = ef.field_j;
             this.field_wb.field_z = ma.field_I;
           }
@@ -306,7 +306,7 @@ public final class Terraphoenix extends gf {
                 if (0 == ge.field_e) {
                   ja.field_i = 0;
                 }
-                if (kl.field_a > 0) {
+                if (TutorialText.field_a > 0) {
                   ja.field_i = 11;
                 }
                 this.b(false, ge.field_e);
@@ -323,12 +323,12 @@ public final class Terraphoenix extends gf {
           boolean decompiledFrameRemainder5 = true;
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameRemainder3 = true;
-          L29: {
+          regionExit1: {
             boolean decompiledFrameRemainder1 = true;
             var3Lifetime1 = ja.field_i;
             if (var3Lifetime1 != 14) {
               if (var3Lifetime1 == 13) {
-                break L29;
+                break regionExit1;
               }
               decompiledFrameRemainder3 = (9 != var3Lifetime1 ||
                 var8 != 0);
@@ -357,30 +357,30 @@ public final class Terraphoenix extends gf {
                       if (!se.field_h) {
                         this.n(16777215);
                       }
-                      gf.field_y = null;
+                      GameShell.field_y = null;
                     }
                     if (ma.field_I == 1 &&
                       bk.c(-25704)) {
-                      var3Lifetime1 = vc.field_f.b(ck.field_c);
+                      var3Lifetime1 = vc.field_f.b(FullscreenFocusCanvas.field_c);
                       if ((320 - var3Lifetime1 / 2) <= ef.field_j &&
                         ef.field_j <= var3Lifetime1 / 2 + 320 &&
-                        jb.field_b >= 280 &&
-                        (280 + vc.field_f.field_s) >= jb.field_b) {
+                        MouseWheelInput.field_b >= 280 &&
+                        (280 + vc.field_f.field_s) >= MouseWheelInput.field_b) {
                         qd.$cfr$intArgs$a$e9dea5688aa5(86, 33);
-                        gb.a(10, -25786, 10);
+                        WidgetContainer.a(10, -25786, 10);
                       }
                     }
                     if (1 == ma.field_I) {
                       var3Lifetime1 = 320;
                       if (var3Lifetime1 - qh.field_b.field_r / 2 <= ef.field_j &&
                         ef.field_j <= (var3Lifetime1 + qh.field_b.field_r / 2) &&
-                        (476 - qh.field_b.field_t) <= jb.field_b &&
-                        jb.field_b <= 476 &&
+                        (476 - qh.field_b.field_t) <= MouseWheelInput.field_b &&
+                        MouseWheelInput.field_b <= 476 &&
                         1 == oh.field_f) {
                         qd.$cfr$intArgs$a$e9dea5688aa5(102, 34);
                         wb.field_g = 20;
                         ja.field_i = 0;
-                        gf.field_y = null;
+                        GameShell.field_y = null;
                       }
                     }
                     if (wb.field_g != 0) {
@@ -393,7 +393,7 @@ public final class Terraphoenix extends gf {
                       if (!se.field_h) {
                         this.n(16777215);
                       }
-                      gf.field_y = null;
+                      GameShell.field_y = null;
                     }
                     if (bh.field_e[96] &&
                       ma.field_J > 0) {
@@ -428,29 +428,29 @@ public final class Terraphoenix extends gf {
                       }
                       if (-1 == wf.field_t &&
                         bk.c(-25704)) {
-                        var3Lifetime1 = vc.field_f.b(ck.field_c);
+                        var3Lifetime1 = vc.field_f.b(FullscreenFocusCanvas.field_c);
                         if (ef.field_j >= (-(var3Lifetime1 / 2) + 320) &&
                           (var3Lifetime1 / 2 + 320) >= ef.field_j &&
-                          jb.field_b >= 240 &&
-                          jb.field_b <= 240 + vc.field_f.field_s) {
+                          MouseWheelInput.field_b >= 240 &&
+                          MouseWheelInput.field_b <= 240 + vc.field_f.field_s) {
                           qd.$cfr$intArgs$a$e9dea5688aa5(98, 33);
-                          gb.a(11, -25786, 11);
+                          WidgetContainer.a(11, -25786, 11);
                         }
                       }
                       var3Lifetime1 = 320;
                       if ((var3Lifetime1 - qh.field_b.field_r / 2) <= ef.field_j &&
                         ef.field_j <= (var3Lifetime1 + qh.field_b.field_r / 2) &&
-                        jb.field_b >= (-qh.field_b.field_t + 476) &&
-                        jb.field_b <= 476) {
+                        MouseWheelInput.field_b >= (-qh.field_b.field_t + 476) &&
+                        MouseWheelInput.field_b <= 476) {
                         qd.$cfr$intArgs$a$e9dea5688aa5(87, 34);
                         wb.field_g = 20;
                         ja.field_i = 0;
-                        gf.field_y = null;
+                        GameShell.field_y = null;
                         if (!se.field_h) {
                           this.n(16777215);
                         }
-                        if (0 < kl.field_a) {
-                          kl.field_a = 0;
+                        if (0 < TutorialText.field_a) {
+                          TutorialText.field_a = 0;
                           ja.field_i = 10;
                         }
                       }
@@ -469,10 +469,10 @@ public final class Terraphoenix extends gf {
                     if (!se.field_h) {
                       this.n(16777215);
                     }
-                    if (0 >= kl.field_a) {
+                    if (0 >= TutorialText.field_a) {
                       return;
                     }
-                    kl.field_a = 0;
+                    TutorialText.field_a = 0;
                     ja.field_i = 10;
                     return;
                   }
@@ -495,19 +495,19 @@ public final class Terraphoenix extends gf {
               stackIn_272_2 = new StringBuilder().append(qf.field_a).append("<br><br>");
               stackIn_273_3 = (ge.field_e != 0);
               stackIn_276_4 = 98;
-              stackIn_277_5 = (kl.field_a != 0);
+              stackIn_277_5 = (TutorialText.field_a != 0);
               var3Lifetime1 = stackIn_272_0 + ((ud) (Object) stackIn_272_1).c(((StringBuilder) (Object) stackIn_272_2).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
               var3Lifetime1 += 24;
-              if (this.a(false, 224, (byte) -44, var3Lifetime1, ck.field_c) &&
+              if (this.a(false, 224, (byte) -44, var3Lifetime1, FullscreenFocusCanvas.field_c) &&
                 1 == ma.field_I) {
-                gb.a(14, -25786, 16);
+                WidgetContainer.a(14, -25786, 16);
               }
               var3Lifetime1 += 80;
               var3Lifetime1 += 24;
               if (this.a(false, 224, (byte) -44, var3Lifetime1, vf.field_b) &&
                 ma.field_I == 1) {
                 oe.field_c = oe.field_c - ge.field_e;
-                kl.field_a = 0;
+                TutorialText.field_a = 0;
                 ge.field_e = 0;
                 ae.field_H = 0;
                 ja.field_i = 13;
@@ -532,7 +532,7 @@ public final class Terraphoenix extends gf {
             stackIn_297_1 = !(qf.a(true));
             var3Lifetime1 = ei.$cfr$intArgs$a$b925f3f4834c(stackIn_296_0, stackIn_297_1);
             if (var3Lifetime1 == 3) {
-              c.a((byte) -110, dg.a(false));
+              NodeHashTableIterator.a((byte) -110, dg.a(false));
             }
             if (var3Lifetime1 == 1) {
               this.field_xb = 0;
@@ -597,7 +597,7 @@ public final class Terraphoenix extends gf {
             (decompiledFrameRemainder7)) {
             if (this.field_X == null) {
               this.field_pb = this.field_pb + 1;
-              this.field_X = new e(this);
+              this.field_X = new BattleState(this);
             }
             while (true) {
               if (fd.d(1)) {
@@ -664,12 +664,12 @@ public final class Terraphoenix extends gf {
               break;
             }
             if ((this.field_Bb != 0 ||
-              fa.field_a == 1 &&
+              Archive.field_a == 1 &&
               !(0 < (ef.field_i & 512))) && 13 != this.field_Bb) {
               if (ef.field_j >= 64 &&
                 256 >= ef.field_j &&
-                jb.field_b >= 340 &&
-                jb.field_b <= 390) {
+                MouseWheelInput.field_b >= 340 &&
+                MouseWheelInput.field_b <= 390) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = va.field_f;
                 if (0 == this.field_Bb) {
@@ -694,10 +694,10 @@ public final class Terraphoenix extends gf {
               if (ef.field_j > 576) {
                 return;
               }
-              if (jb.field_b < 340) {
+              if (MouseWheelInput.field_b < 340) {
                 return;
               }
-              if (jb.field_b > 390) {
+              if (MouseWheelInput.field_b > 390) {
                 return;
               }
               this.field_Eb = new String[1];
@@ -746,10 +746,10 @@ public final class Terraphoenix extends gf {
             if (ef.field_j > 416) {
               return;
             }
-            if (jb.field_b < 340) {
+            if (MouseWheelInput.field_b < 340) {
               return;
             }
-            if (jb.field_b > 390) {
+            if (MouseWheelInput.field_b > 390) {
               return;
             }
             this.field_Eb = new String[1];
@@ -901,16 +901,16 @@ public final class Terraphoenix extends gf {
           if (-4 == ha.field_q) {
             this.field_bb = jh.field_l[19];
           }
-          nf.field_h = 8 + 16 * og.field_f.c(this.field_bb, 484);
-          if (wb.field_f < nf.field_h) {
-            nf.field_h = 8 + 16 * og.field_f.c(this.field_bb, 475);
+          PcmPlayerPump.field_h = 8 + 16 * og.field_f.c(this.field_bb, 484);
+          if (wb.field_f < PcmPlayerPump.field_h) {
+            PcmPlayerPump.field_h = 8 + 16 * og.field_f.c(this.field_bb, 475);
           }
           if (this.field_S != null &&
-            wb.field_f >= nf.field_h) {
+            wb.field_f >= PcmPlayerPump.field_h) {
             this.field_S = null;
           }
           if (null == this.field_S &&
-            wb.field_f < nf.field_h) {
+            wb.field_f < PcmPlayerPump.field_h) {
             qg.field_a = 0;
             var3_ref_g = new g(0L, (g) null);
             var3_ref_g.field_X = jc.field_G;
@@ -923,10 +923,10 @@ public final class Terraphoenix extends gf {
             var6 = sl.field_b[4];
             var7 = sj.field_e[4];
             this.field_S = new ol(0L, var3_ref_g, var6, var7, var4_ref_g, var5);
-            this.field_S.a(416, qg.field_a, 11, nf.field_h, -689, 511, wb.field_f, wb.field_f);
+            this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, wb.field_f, wb.field_f);
           }
           if (this.field_S != null) {
-            nf.field_h = 16 * og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
+            PcmPlayerPump.field_h = 16 * og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
             this.field_S.a(-92, true);
             var3Lifetime2 = 12;
             if (this.field_S.e((byte) -96) ||
@@ -951,16 +951,16 @@ public final class Terraphoenix extends gf {
               bh.field_e[105]) {
               qg.field_a = qg.field_a + var4Lifetime2;
             }
-            if (qg.field_a > -wb.field_f + nf.field_h) {
-              qg.field_a = nf.field_h - wb.field_f;
+            if (qg.field_a > -wb.field_f + PcmPlayerPump.field_h) {
+              qg.field_a = PcmPlayerPump.field_h - wb.field_f;
             }
             if (qg.field_a < 0) {
               qg.field_a = 0;
             }
             if (this.field_S.f(-1)) {
-              qg.field_a = this.field_S.a(74, nf.field_h, wb.field_f);
+              qg.field_a = this.field_S.a(74, PcmPlayerPump.field_h, wb.field_f);
             }
-            this.field_S.a((byte) 79, wb.field_f, qg.field_a, nf.field_h);
+            this.field_S.a((byte) 79, wb.field_f, qg.field_a, PcmPlayerPump.field_h);
           }
           if (this.field_ib < 256) {
             this.field_ib = this.field_ib + 1;
@@ -990,9 +990,9 @@ public final class Terraphoenix extends gf {
             if (var3Lifetime3 < this.field_mb) {
               this.field_cb = this.field_cb + 1;
               this.field_mb = 0;
-              if (nf.field_h - wb.field_f <= qg.field_a) {
-                nf.field_h = og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
-                qg.field_a = -wb.field_f + nf.field_h;
+              if (PcmPlayerPump.field_h - wb.field_f <= qg.field_a) {
+                PcmPlayerPump.field_h = og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
+                qg.field_a = -wb.field_f + PcmPlayerPump.field_h;
                 if (0 > qg.field_a) {
                   qg.field_a = 0;
                 }
@@ -1004,9 +1004,9 @@ public final class Terraphoenix extends gf {
           }
           if (ma.field_I != 0) {
             if (532 <= ef.field_j &&
-              (488 - m.field_g.field_t) <= jb.field_b &&
+              (488 - m.field_g.field_t) <= MouseWheelInput.field_b &&
               632 > ef.field_j &&
-              jb.field_b < (516 - m.field_g.field_t)) {
+              MouseWheelInput.field_b < (516 - m.field_g.field_t)) {
               boolean decompiledSharedTail1 = !(this.field_cb < this.field_bb.length());
               if (!decompiledSharedTail1) {
                 this.field_mb = this.field_mb - (this.field_bb.length() - this.field_cb) * 5;
@@ -1022,9 +1022,9 @@ public final class Terraphoenix extends gf {
               }
             }
             if (ef.field_j >= 532 &&
-              jb.field_b >= (520 - m.field_g.field_t) &&
+              MouseWheelInput.field_b >= (520 - m.field_g.field_t) &&
               ef.field_j < 632 &&
-              (548 - m.field_g.field_t) > jb.field_b) {
+              (548 - m.field_g.field_t) > MouseWheelInput.field_b) {
               this.field_mb = 500;
               gd.field_c = 10;
               qd.$cfr$intArgs$a$e9dea5688aa5(64, 33);
@@ -1053,7 +1053,7 @@ public final class Terraphoenix extends gf {
             gd.field_c = gd.field_c + 1;
             if (null != hh.field_m) {
               hh.field_m.a();
-              l.a();
+              SoftwareRasterizer.a();
               k.field_f.a(0);
             }
             rk.field_c = 32;
@@ -1072,7 +1072,7 @@ public final class Terraphoenix extends gf {
                     ja.field_i = 0;
                   }
                   wb.field_g = 20;
-                  if (kl.field_a > 0) {
+                  if (TutorialText.field_a > 0) {
                     ja.field_i = 11;
                   }
                   this.b(false, ge.field_e);
@@ -1086,8 +1086,8 @@ public final class Terraphoenix extends gf {
                   this.field_zb = new ch();
                   this.field_D = 0;
                   this.field_hb = 1;
-                  if (fa.field_a == 0) {
-                    this.field_wb = new ad(2);
+                  if (Archive.field_a == 0) {
+                    this.field_wb = new TutorialController(2);
                     this.field_wb.field_i = this;
                   }
                 }
@@ -1118,7 +1118,7 @@ public final class Terraphoenix extends gf {
               if (ge.field_e == 0) {
                 ja.field_i = 0;
               }
-              if (kl.field_a > 0) {
+              if (TutorialText.field_a > 0) {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
@@ -1130,7 +1130,7 @@ public final class Terraphoenix extends gf {
                 ja.field_i = 0;
               }
               wb.field_g = 20;
-              if (0 < kl.field_a) {
+              if (0 < TutorialText.field_a) {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
@@ -1140,7 +1140,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.GC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.GC(" + param0 + ')');
         }
     }
 
@@ -1167,7 +1167,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1197,7 +1197,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.W(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.W(" + param0 + ')');
         }
     }
 
@@ -1217,14 +1217,14 @@ public final class Terraphoenix extends gf {
           ee.field_G = va.a(3, -128);
           mi.field_h = va.a(4, -118);
           h.field_j = va.a(5, -125);
-          jj.field_c = va.a(6, -119);
+          IntrusiveDeque.field_c = va.a(6, -119);
           aj.field_b = va.a(7, -128);
           jd.a(109, ke.field_d, di.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.LA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.LA(" + param0 + ')');
         }
     }
 
@@ -1256,7 +1256,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.U(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1277,7 +1277,7 @@ public final class Terraphoenix extends gf {
         int var6 = 0;
         var6 = field_V;
         try {
-          kl.field_a = 0;
+          TutorialText.field_a = 0;
           if (0 != (512 & ef.field_i)) {
             this.field_kb = 2;
           }
@@ -1307,7 +1307,7 @@ public final class Terraphoenix extends gf {
           while (!(decompiledNaturalLoopExit0 = (!fd.d(1)))) {
             if (34 == lf.field_c &&
               mm.field_e >= 2) {
-              this.field_Cb = new mk();
+              this.field_Cb = new LevelEditor();
             }
             if (lf.field_c == 84) {
               var2_int = this.field_xb;
@@ -1402,13 +1402,13 @@ public final class Terraphoenix extends gf {
               var3 = stackIn_139_0;
             }
             if (var3 == 1 &&
-              fa.field_a < this.field_K - 1) {
-              fa.field_a = fa.field_a + 1;
+              Archive.field_a < this.field_K - 1) {
+              Archive.field_a = Archive.field_a + 1;
               qd.$cfr$intArgs$a$e9dea5688aa5(113, 24);
             }
             if (var3 == -1 &&
-              0 < fa.field_a) {
-              fa.field_a = fa.field_a - 1;
+              0 < Archive.field_a) {
+              Archive.field_a = Archive.field_a - 1;
               qd.$cfr$intArgs$a$e9dea5688aa5(33, 25);
             }
           }
@@ -1523,7 +1523,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.QB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.QB(" + param0 + ')');
         }
     }
 
@@ -1549,7 +1549,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1562,7 +1562,7 @@ public final class Terraphoenix extends gf {
         int var5 = 0;
         var5 = field_V;
         try {
-          var2 = (hd) (ga.field_k.d(9272));
+          var2 = (hd) (ga.field_k.beginBackward(9272));
           if (param0) {
             return;
           }
@@ -1589,16 +1589,16 @@ public final class Terraphoenix extends gf {
               }
             }
             var3 += 16;
-            l.d(592 + (-vc.field_f.b(b.field_g[var2.field_n]) - 2), var3 - 2, 44 + vc.field_f.b(b.field_g[var2.field_n]), 40, 0, 64);
+            SoftwareRasterizer.d(592 + (-vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 2), var3 - 2, 44 + vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]), 40, 0, 64);
             hf.field_w[var2.field_n].a(600, var3, 32, 32);
-            vc.field_f.a(b.field_g[var2.field_n], 592, vc.field_f.field_s + var3, 16776960, -1);
-            jl.a(jc.field_G, 43, -5 + var3, 40 + vc.field_f.b(b.field_g[var2.field_n]) + 7, (byte) -101, 592 - vc.field_f.b(b.field_g[var2.field_n]) - 5);
+            vc.field_f.a(RandomAccessCacheFile.field_g[var2.field_n], 592, vc.field_f.field_s + var3, 16776960, -1);
+            jl.a(jc.field_G, 43, -5 + var3, 40 + vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.LB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.LB(" + param0 + ')');
         }
     }
 
@@ -1625,8 +1625,8 @@ public final class Terraphoenix extends gf {
                 mi.field_h.b((byte) -128)) {
                 if (h.field_j.a(0) &&
                   h.field_j.b((byte) -128)) {
-                  if (jj.field_c.a(0) &&
-                    jj.field_c.b((byte) -128)) {
+                  if (IntrusiveDeque.field_c.a(0) &&
+                    IntrusiveDeque.field_c.b((byte) -128)) {
                     if (ab.field_a.a(0) &&
                       ab.field_a.b((byte) -128)) {
                       if (fc.field_a.a(0) &&
@@ -1635,12 +1635,12 @@ public final class Terraphoenix extends gf {
                           ke.field_d.a(-3, "basic")) {
                           if (me.field_o <= 0 && (!ke.field_d.a(param1 + 107) ||
                             !ke.field_d.a(-3, "benefits"))) {
-                            vh.a(vf.a("benefits", bl.field_d, ke.field_d, be.field_w, 4650), (byte) 88, 40.0f);
+                            DualLinkNode.a(vf.a("benefits", bl.field_d, ke.field_d, be.field_w, 4650), (byte) 88, 40.0f);
                             return;
                           }
                           if (aj.field_b.a(param1 + 107) &&
                             aj.field_b.b((byte) -128)) {
-                            vh.a(qe.field_h, (byte) 58, 50.0f);
+                            DualLinkNode.a(IsaacCipher.field_h, (byte) 58, 50.0f);
                             this.a((byte) -89);
                             if (!param0) {
                               return;
@@ -1650,40 +1650,40 @@ public final class Terraphoenix extends gf {
                             ea.a((byte) 47);
                             return;
                           }
-                          vh.a(vf.a("", ki.field_S, aj.field_b, vb.field_a, param1 + 4757), (byte) -84, 45.0f);
+                          DualLinkNode.a(vf.a("", ki.field_S, aj.field_b, vb.field_a, param1 + 4757), (byte) -84, 45.0f);
                           return;
                         }
-                        vh.a(vf.a("basic", bl.field_d, ke.field_d, be.field_w, 4650), (byte) -88, 35.0f);
+                        DualLinkNode.a(vf.a("basic", bl.field_d, ke.field_d, be.field_w, 4650), (byte) -88, 35.0f);
                         return;
                       }
-                      vh.a(vf.a("", kl.field_b, fc.field_a, ej.field_R, 4650), (byte) -124, 30.0f);
+                      DualLinkNode.a(vf.a("", TutorialText.field_b, fc.field_a, ej.field_R, 4650), (byte) -124, 30.0f);
                       return;
                     }
-                    vh.a(vf.a("", q.field_Nb, ab.field_a, be.field_w, 4650), (byte) 110, 25.0f);
+                    DualLinkNode.a(vf.a("", q.field_Nb, ab.field_a, be.field_w, 4650), (byte) 110, 25.0f);
                     return;
                   }
-                  vh.a("", (byte) -82, 20.0f);
+                  DualLinkNode.a("", (byte) -82, 20.0f);
                   return;
                 }
-                vh.a(vf.a("", q.field_Nb, h.field_j, od.field_b, 4650), (byte) 64, 15.0f);
+                DualLinkNode.a(vf.a("", q.field_Nb, h.field_j, od.field_b, 4650), (byte) 64, 15.0f);
                 return;
               }
-              vh.a(vf.a("", rk.field_b, mi.field_h, me.field_h, 4650), (byte) -95, 10.0f);
+              DualLinkNode.a(vf.a("", rk.field_b, mi.field_h, me.field_h, 4650), (byte) -95, 10.0f);
               return;
             }
-            vh.a(vf.a("", rk.field_b, ee.field_G, me.field_h, 4650), (byte) -121, 5.0f);
+            DualLinkNode.a(vf.a("", rk.field_b, ee.field_G, me.field_h, 4650), (byte) -121, 5.0f);
             return;
           }
           if (param1 != -107) {
             this.a((String) null, -98, 101, 14, 104);
           }
           if (fc.field_a != null) {
-            vh.a(u.field_f, (byte) -122, 60.0f);
+            DualLinkNode.a(u.field_f, (byte) -122, 60.0f);
             this.a((byte) -89);
-            of.field_k = new byte[ph.field_n.length][];
+            ImageProducerRasterBuffer.field_k = new byte[ph.field_n.length][];
             var3_int = 0;
             while (ph.field_n.length > var3_int) {
-              of.field_k[var3_int] = fc.field_a.a("", ph.field_n[var3_int] + ".lev", -21653);
+              ImageProducerRasterBuffer.field_k[var3_int] = fc.field_a.a("", ph.field_n[var3_int] + ".lev", -21653);
               var3_int++;
               if (var6 != 0) {
                 return;
@@ -1694,7 +1694,7 @@ public final class Terraphoenix extends gf {
             return;
           }
           if (h.field_j != null) {
-            vh.a(td.field_e, (byte) -119, 70.0f);
+            DualLinkNode.a(IndexedSpriteState.field_e, (byte) -119, 70.0f);
             this.a((byte) -89);
             ca.field_a = new tk[8];
             ca.field_a[7] = tk.a(h.field_j, "", "terraphoenix_music_title");
@@ -1709,19 +1709,19 @@ public final class Terraphoenix extends gf {
             ea.a((byte) 47);
             return;
           }
-          if (null == jj.field_c) {
-            vh.a(ia.field_q, (byte) -88, 90.0f);
+          if (null == IntrusiveDeque.field_c) {
+            DualLinkNode.a(ia.field_q, (byte) -88, 90.0f);
             this.a((byte) -89);
-            be.field_u = new ci(64, 32);
+            be.field_u = new Sprite(64, 32);
             be.field_u.a();
             var3_int = 0;
             do {
               if (32 <= var3_int) {
-                ij.field_b = new ci(64, 80);
-                ij.field_b.a();
+                MessageKeys.field_b = new Sprite(64, 80);
+                MessageKeys.field_b.a();
                 break;
               }
-              l.d(0, var3_int, 64, var3_int);
+              SoftwareRasterizer.d(0, var3_int, 64, var3_int);
               var3_int++;
             } while (var6 == 0);
             var3_int = 0;
@@ -1733,7 +1733,7 @@ public final class Terraphoenix extends gf {
                 cb.a(false, 7);
                 break;
               }
-              l.d(0, var3_int, 64, 16 - var3_int / 2);
+              SoftwareRasterizer.d(0, var3_int, 64, 16 - var3_int / 2);
               var3_int++;
             } while (var6 == 0);
             if (!bk.c(-25704)) {
@@ -1744,21 +1744,21 @@ public final class Terraphoenix extends gf {
             ea.a((byte) 47);
             return;
           }
-          vh.a(ia.field_q, (byte) -74, 80.0f);
+          DualLinkNode.a(ia.field_q, (byte) -74, 80.0f);
           this.a((byte) -89);
           var3 = new da(ee.field_G, mi.field_h);
-          var4 = new m(22050, nk.field_u);
+          var4 = new m(22050, PcmPlayerService.field_u);
           mi.field_h = null;
           ee.field_G = null;
           var5 = 0;
           do {
             if (!(ca.field_a.length > var5)) {
               uk.field_b.d(-32499);
-              jj.field_c = null;
-              eh.field_g = new gg[92];
+              IntrusiveDeque.field_c = null;
+              GameApplet.field_g = new PcmSample[92];
               break;
             }
-            uk.field_b.a(jj.field_c, var3, ca.field_a[var5], 128, 0);
+            uk.field_b.a(IntrusiveDeque.field_c, var3, ca.field_a[var5], 128, 0);
             var5++;
           } while (var6 == 0);
           var5 = 0;
@@ -1767,13 +1767,13 @@ public final class Terraphoenix extends gf {
               var5 > 21) &&
               (var5 != 82 &&
               83 != var5)) {
-              eh.field_g[var5] = var3.a(sk.field_b[var5], param1 + 107).a(var4);
+              GameApplet.field_g[var5] = var3.a(sk.field_b[var5], param1 + 107).a(var4);
             }
             if (var5 >= 1 &&
               var5 <= 21 ||
               (var5 == 82 ||
               83 == var5) || var6 != 0) {
-              eh.field_g[var5] = var3.a(-1, sk.field_b[var5]).a(var4);
+              GameApplet.field_g[var5] = var3.a(-1, sk.field_b[var5]).a(var4);
             }
             var5++;
             if (var6 == 0) {
@@ -1788,7 +1788,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3_ref2), "Terraphoenix.FC(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3_ref2), "Terraphoenix.FC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1842,7 +1842,7 @@ public final class Terraphoenix extends gf {
         try {
           pj.field_t = 0;
           this.field_Db = false;
-          b.field_b = 0;
+          RandomAccessCacheFile.field_b = 0;
           this.field_pb = this.a(param0, 126);
           this.field_Bb = this.a(param0, -26);
           sj.field_a[2].field_e = param2;
@@ -2062,10 +2062,10 @@ public final class Terraphoenix extends gf {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            fa.field_a = this.a(false, param0);
+            Archive.field_a = this.a(false, param0);
             oe.field_c = oe.field_c - ge.field_e;
             ge.field_e = this.b(param0, 20, -1);
-            km.field_e = km.field_e - ge.field_e;
+            ArchiveIndex.field_e = ArchiveIndex.field_e - ge.field_e;
             qc.field_c = this.a(param0, 127);
             this.field_Fb = this.a(param0, 121);
             this.field_ub = this.a(false, param0);
@@ -2103,7 +2103,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_188_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2163,19 +2163,19 @@ public final class Terraphoenix extends gf {
             stackIn_17_0[stackIn_17_1] = stackIn_18_2 + var3 * 1;
             var3++;
           }
-          nk.a(22050, true, 10);
-          d.field_I = nk.a(nj.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
-          gb.field_E = new vg();
-          d.field_I.b(gb.field_E);
+          PcmPlayerService.a(22050, true, 10);
+          d.field_I = PcmPlayerService.a(nj.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
+          WidgetContainer.field_E = new vg();
+          d.field_I.b(WidgetContainer.field_E);
           uk.field_b = new wl();
           uk.field_b.a(9, 128, -51);
-          gb.field_E.a(uk.field_b);
+          WidgetContainer.field_E.a(uk.field_b);
           this.a(true, false, 13, true, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.I(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.I(" + param0 + ')');
         }
     }
 
@@ -2226,15 +2226,15 @@ public final class Terraphoenix extends gf {
           this.a(true, var2_int);
           if (wb.field_g < 10) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var3 = 320;
             var4 = 240;
             this.a(-3407, var4, var3);
-            l.c(320 - (rk.field_c >> 1), 0, (rk.field_c >> 1) + 320, 480);
+            SoftwareRasterizer.c(320 - (rk.field_c >> 1), 0, (rk.field_c >> 1) + 320, 480);
             var5 = this.field_xb;
             if (1 != oh.field_f &&
               this.field_Z == ef.field_j &&
-              this.field_tb == jb.field_b) {
+              this.field_tb == MouseWheelInput.field_b) {
               stackIn_12_0 = 0;
             } else {
               stackIn_12_0 = 1;
@@ -2244,7 +2244,7 @@ public final class Terraphoenix extends gf {
             if (var6 != 0) {
               this.field_xb = -1;
             }
-            this.field_tb = jb.field_b;
+            this.field_tb = MouseWheelInput.field_b;
             if ((320 - rk.field_c / 2) <= ef.field_j &&
               ef.field_j < (320 + rk.field_c / 2)) {
               stackIn_22_0 = 1;
@@ -2261,8 +2261,8 @@ public final class Terraphoenix extends gf {
             var12 = -wa.field_s + 16776960;
             if (si.field_ib != null) {
               boolean decompiledFrameRemainder8 = true;
-              if (this.field_xb != var11 && (!(jb.field_b >= (4 + var9 - var10)) ||
-                !(jb.field_b < (var9 + 4)) ||
+              if (this.field_xb != var11 && (!(MouseWheelInput.field_b >= (4 + var9 - var10)) ||
+                !(MouseWheelInput.field_b < (var9 + 4)) ||
                 var6 == 0)) {
                 stackIn_40_0 = 16777215;
                 decompiledFrameRemainder8 = false;
@@ -2275,7 +2275,7 @@ public final class Terraphoenix extends gf {
                 this.field_xb = var11;
               }
               pj.field_t = 0;
-              b.field_b = 0;
+              RandomAccessCacheFile.field_b = 0;
               discarded$0 = this.a(si.field_ib, -23);
               var13 = this.a(si.field_ib, -26);
               if (var13 > 0) {
@@ -2287,7 +2287,7 @@ public final class Terraphoenix extends gf {
                     var14_ref = bh.field_b + wj.field_e + (-2 + var13);
                   } else {
                     if (var13 >= 11) {
-                      var14_ref = ce.field_d + wj.field_e + (-10 + var13);
+                      var14_ref = IterableNodeHashTable.field_d + wj.field_e + (-10 + var13);
                     } else {
                       var14_ref = jh.field_h + wj.field_e + (-7 + var13);
                     }
@@ -2309,8 +2309,8 @@ public final class Terraphoenix extends gf {
               var9 = var9 + var10 / 2;
             }
             boolean decompiledFrameRemainder7 = true;
-            if (~var11 != ~this.field_xb && (!((4 - var10 + var9) <= jb.field_b) ||
-              !((var9 + 4) > jb.field_b) ||
+            if (~var11 != ~this.field_xb && (!((4 - var10 + var9) <= MouseWheelInput.field_b) ||
+              !((var9 + 4) > MouseWheelInput.field_b) ||
               var6 == 0)) {
               stackIn_74_0 = 16777215;
               decompiledFrameRemainder7 = false;
@@ -2322,13 +2322,13 @@ public final class Terraphoenix extends gf {
             if (var12 == var8Lifetime1) {
               this.field_xb = var11;
             }
-            this.a(ij.field_e, 320, var8Lifetime1, var9, 124);
+            this.a(MessageKeys.field_e, 320, var8Lifetime1, var9, 124);
             var9 = var9 + var10;
             var11++;
             if (this.field_kb > 1) {
               boolean decompiledFrameRemainder6 = true;
-              if (var11 != this.field_xb && (!(jb.field_b >= -var10 + (var9 + 4)) ||
-                !(4 + var9 > jb.field_b) ||
+              if (var11 != this.field_xb && (!(MouseWheelInput.field_b >= -var10 + (var9 + 4)) ||
+                !(4 + var9 > MouseWheelInput.field_b) ||
                 var6 == 0)) {
                 stackIn_93_0 = 16777215;
                 decompiledFrameRemainder6 = false;
@@ -2366,8 +2366,8 @@ public final class Terraphoenix extends gf {
               var11++;
             }
             boolean decompiledFrameRemainder5 = true;
-            if (~var11 != ~this.field_xb && (!(jb.field_b >= 4 + var9 - var10) ||
-              !(4 + var9 > jb.field_b) ||
+            if (~var11 != ~this.field_xb && (!(MouseWheelInput.field_b >= 4 + var9 - var10) ||
+              !(4 + var9 > MouseWheelInput.field_b) ||
               var6 == 0)) {
               stackIn_137_0 = 16777215;
               decompiledFrameRemainder5 = false;
@@ -2379,26 +2379,26 @@ public final class Terraphoenix extends gf {
             if (var8Lifetime3 == var12) {
               this.field_xb = var11;
             }
-            if (fa.field_a == 0) {
-              this.a(gl.field_i, 320, var8Lifetime3, var9, param0 ^ 122);
+            if (Archive.field_a == 0) {
+              this.a(UiWidget.field_i, 320, var8Lifetime3, var9, param0 ^ 122);
             }
-            if (1 == fa.field_a) {
+            if (1 == Archive.field_a) {
               this.a(ta.field_b, 320, var8Lifetime3, var9, 103);
             }
-            if (2 == fa.field_a) {
+            if (2 == Archive.field_a) {
               this.a(bi.field_a, 320, var8Lifetime3, var9, 104);
             }
-            if (0 < fa.field_a) {
+            if (0 < Archive.field_a) {
               this.a("<lt>", 195, var8Lifetime3, var9, 120);
             }
-            if (fa.field_a < this.field_K - 1) {
+            if (Archive.field_a < this.field_K - 1) {
               this.a(">", 445, var8Lifetime3, var9, 105);
             }
             boolean decompiledFrameRemainder4 = true;
             var9 = var9 + var10;
             var11++;
-            if (~var11 != ~this.field_xb && (!((var9 - var10) <= jb.field_b) ||
-              !(var9 + 4 > jb.field_b) ||
+            if (~var11 != ~this.field_xb && (!((var9 - var10) <= MouseWheelInput.field_b) ||
+              !(var9 + 4 > MouseWheelInput.field_b) ||
               var6 == 0)) {
               stackIn_171_0 = 16777215;
               decompiledFrameRemainder4 = false;
@@ -2416,8 +2416,8 @@ public final class Terraphoenix extends gf {
             this.a("|", 100 * ua.field_e / 128 + 320, var8Lifetime4, var9, 118);
             var9 = var9 + var10;
             var11++;
-            if (~this.field_xb != ~var11 && (!(jb.field_b >= var9 - var10 + 4) ||
-              !(jb.field_b < (var9 + 4)) ||
+            if (~this.field_xb != ~var11 && (!(MouseWheelInput.field_b >= var9 - var10 + 4) ||
+              !(MouseWheelInput.field_b < (var9 + 4)) ||
               var6 == 0)) {
               stackIn_188_0 = 16777215;
               decompiledFrameRemainder3 = false;
@@ -2435,8 +2435,8 @@ public final class Terraphoenix extends gf {
             this.a("|", 320 + tj.field_sb * 100 / 128, var8Lifetime5, var9, 106);
             var11++;
             var9 = var9 + var10;
-            if (var11 != this.field_xb && (!(4 - var10 + var9 <= jb.field_b) ||
-              !(jb.field_b < (4 + var9)) ||
+            if (var11 != this.field_xb && (!(4 - var10 + var9 <= MouseWheelInput.field_b) ||
+              !(MouseWheelInput.field_b < (4 + var9)) ||
               var6 == 0)) {
               stackIn_204_0 = 16777215;
               decompiledFrameRemainder2 = false;
@@ -2452,8 +2452,8 @@ public final class Terraphoenix extends gf {
             this.a(uj.field_a, 320, var8Lifetime6, var9, 103);
             var11++;
             var9 = var9 + var10;
-            if (~var11 != ~this.field_xb && (!(jb.field_b >= -var10 + (var9 + 4)) ||
-              !((4 + var9) > jb.field_b) ||
+            if (~var11 != ~this.field_xb && (!(MouseWheelInput.field_b >= -var10 + (var9 + 4)) ||
+              !((4 + var9) > MouseWheelInput.field_b) ||
               var6 == 0)) {
               stackIn_221_0 = 16777215;
               decompiledFrameRemainder1 = false;
@@ -2469,8 +2469,8 @@ public final class Terraphoenix extends gf {
             this.a(a.field_e, 320, var8Lifetime7, var9, 125);
             var11++;
             var9 = var9 + var10;
-            if (~this.field_xb != ~var11 && (!((var9 + (-var10 + 4)) <= jb.field_b) ||
-              !(jb.field_b < 4 + var9) ||
+            if (~this.field_xb != ~var11 && (!((var9 + (-var10 + 4)) <= MouseWheelInput.field_b) ||
+              !(MouseWheelInput.field_b < 4 + var9) ||
               var6 == 0)) {
               stackIn_238_0 = 16777215;
               decompiledFrameRemainder0 = false;
@@ -2487,8 +2487,8 @@ public final class Terraphoenix extends gf {
               this.a(bj.field_h, 320, var8Lifetime8, var9, 107);
               var11++;
               var9 = var9 + var10;
-              if (var11 != this.field_xb && (!(jb.field_b >= 4 + (-var10 + var9)) ||
-                !((var9 + 4) > jb.field_b) ||
+              if (var11 != this.field_xb && (!(MouseWheelInput.field_b >= 4 + (-var10 + var9)) ||
+                !((var9 + 4) > MouseWheelInput.field_b) ||
                 var6 == 0)) {
                 stackIn_258_0 = 16777215;
                 decompiledFrameRemainder10 = false;
@@ -2504,8 +2504,8 @@ public final class Terraphoenix extends gf {
               this.a(ra.field_j, 320, var8Lifetime8, var9, param0 + 117);
               var9 = var9 + var10;
               var11++;
-              if (var11 != this.field_xb && (!(jb.field_b >= (4 + (-var10 + var9))) ||
-                !(jb.field_b < var9 + 4) ||
+              if (var11 != this.field_xb && (!(MouseWheelInput.field_b >= (4 + (-var10 + var9))) ||
+                !(MouseWheelInput.field_b < var9 + 4) ||
                 var6 == 0)) {
                 stackIn_275_0 = 16777215;
                 decompiledFrameRemainder9 = false;
@@ -2524,18 +2524,18 @@ public final class Terraphoenix extends gf {
             if (~this.field_xb != ~var5) {
               qd.$cfr$intArgs$a$e9dea5688aa5(24, 22);
             }
-            l.c();
+            SoftwareRasterizer.c();
             k.field_f.a(0);
           }
           this.v(param0 ^ param0);
           this.i((byte) 108);
-          kl.field_e.d(0, 0);
+          TutorialText.field_e.d(0, 0);
           vc.field_e.d(0, 439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.GB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.GB(" + param0 + ')');
         }
     }
 
@@ -2554,11 +2554,11 @@ public final class Terraphoenix extends gf {
         int var10 = 0;
         Object var11 = null;
         int var12_int = 0;
-        ci var12 = null;
+        Sprite var12 = null;
         int var13 = 0;
-        ci var12Lifetime1;
-        ci var12Lifetime2;
-        ci var12Lifetime3;
+        Sprite var12Lifetime1;
+        Sprite var12Lifetime2;
+        Sprite var12Lifetime3;
         var13 = field_V;
         try {
           var2_int = 611;
@@ -2566,7 +2566,7 @@ public final class Terraphoenix extends gf {
           this.f(true);
           if (wb.field_g < 10) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var3 = 320;
             var4 = 240;
             this.a(-3407, var4, var3);
@@ -2583,17 +2583,17 @@ public final class Terraphoenix extends gf {
                 if (var5 < 12) {
                   stackIn_77_0 = null;
                   if (var13 == 0) {
-                    if (stackIn_77_0 != this.field_X.field_C[var5] &&
-                      this.field_X.field_C[var5].field_Z != null) {
-                      var7 = this.field_X.field_C[var5].field_Z.a(-1426, 87);
+                    if (stackIn_77_0 != this.field_X.units[var5] &&
+                      this.field_X.units[var5].field_Z != null) {
+                      var7 = this.field_X.units[var5].field_Z.a(-1426, 87);
                       var12_int = 8421504;
                       if (var8 > 0) {
                         var12_int = wa.field_s;
                         var8--;
                       }
-                      if (null == this.field_X.field_C[var5].field_c) {
+                      if (null == this.field_X.units[var5].tile) {
                         if (null == var11) {
-                          var11 = this.field_X.field_C[var5].field_Z;
+                          var11 = this.field_X.units[var5].field_Z;
                         }
                         var9 = 0;
                       } else {
@@ -2613,20 +2613,20 @@ public final class Terraphoenix extends gf {
                     this.field_lb.b(351, 386);
                     if (ef.field_j >= 351 &&
                       ef.field_j < this.field_lb.field_r + 351 &&
-                      386 <= jb.field_b &&
-                      jb.field_b < (386 + this.field_lb.field_t)) {
-                      l.d(351, 386, this.field_lb.field_r, this.field_lb.field_t, 16777215, 64);
+                      386 <= MouseWheelInput.field_b &&
+                      MouseWheelInput.field_b < (386 + this.field_lb.field_t)) {
+                      SoftwareRasterizer.d(351, 386, this.field_lb.field_r, this.field_lb.field_t, 16777215, 64);
                     }
                   }
                   if (var10 != 0) {
                     if (var9 == 0) {
-                      og.field_f.a(bl.field_g + "<br><br>" + mj.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                      og.field_f.a(bl.field_g + "<br><br>" + SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       if (var13 != 0) {
-                        og.field_f.a(mj.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        og.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                         og.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       }
                     } else {
-                      og.field_f.a(mj.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                      og.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       if (var13 != 0) {
                         og.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       }
@@ -2642,13 +2642,13 @@ public final class Terraphoenix extends gf {
                     if (ef.field_j >= 624) {
                       break;
                     }
-                    if (jb.field_b < 329) {
+                    if (MouseWheelInput.field_b < 329) {
                       break;
                     }
-                    if (jb.field_b >= 413) {
+                    if (MouseWheelInput.field_b >= 413) {
                       break;
                     }
-                    l.d(456, 329, 168, 84, 16777215, 128);
+                    SoftwareRasterizer.d(456, 329, 168, 84, 16777215, 128);
                     if (var13 == 0) {
                       break;
                     }
@@ -2681,7 +2681,7 @@ public final class Terraphoenix extends gf {
           }
           this.v(0);
           this.i((byte) 58);
-          kl.field_e.d(0, 0);
+          TutorialText.field_e.d(0, 0);
           vc.field_e.d(0, 439);
           if (param0 > -95) {
             this.field_Db = false;
@@ -2690,7 +2690,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.CB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.CB(" + param0 + ')');
         }
     }
 
@@ -2711,16 +2711,16 @@ public final class Terraphoenix extends gf {
             stackIn_13_1 = 1 & param0;
             if (var6 == 0) {
               if (stackIn_13_0 < stackIn_13_1) {
-                param1[pj.field_t] = (byte)ei.b((int) param1[pj.field_t], 1 << b.field_b);
+                param1[pj.field_t] = (byte)ei.b((int) param1[pj.field_t], 1 << RandomAccessCacheFile.field_b);
               }
               param2--;
-              b.field_b = b.field_b + 1;
+              RandomAccessCacheFile.field_b = RandomAccessCacheFile.field_b + 1;
               param0 = param0 >> 1;
-              if (b.field_b < 8) {
+              if (RandomAccessCacheFile.field_b < 8) {
                 continue;
               }
               pj.field_t = pj.field_t + 1;
-              b.field_b = 0;
+              RandomAccessCacheFile.field_b = 0;
               continue;
             }
             break;
@@ -2743,7 +2743,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2764,7 +2764,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.C(" + param0 + ')');
         }
     }
 
@@ -2788,7 +2788,7 @@ public final class Terraphoenix extends gf {
           if (rk.field_c > 449) {
             var4_int = 640 - rk.field_c;
           }
-          l.a(param2 << 4, param1 << 4, 2900, var4_int, sh.field_E);
+          SoftwareRasterizer.a(param2 << 4, param1 << 4, 2900, var4_int, sh.field_E);
           og.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, -600 - (-(24 * ((0 + nd.field_k) % 50)) - 120), 12, 240, wa.field_s, 0, 64, 1, 1, 24);
           og.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, 120 + (-25 + (nd.field_k + 25) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
           og.field_f.a(cc.field_l, 320 - (-(rk.field_c / 2) + 12), 120 + (nd.field_k + 12) % 50 * 24 - 600, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
@@ -2799,14 +2799,14 @@ public final class Terraphoenix extends gf {
               var5 = 0;
               break;
             }
-            l.a(var5, 0, 480, wa.field_s, 64);
+            SoftwareRasterizer.a(var5, 0, 480, wa.field_s, 64);
             var5 += 4;
           } while (var6 == 0);
           if (param0 != -3407) {
             return;
           }
           while (480 > var5) {
-            l.g(0, var5, 640, wa.field_s, 64);
+            SoftwareRasterizer.g(0, var5, 640, wa.field_s, 64);
             var5 += 4;
             if (var6 != 0) {
               return;
@@ -2816,7 +2816,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var4), "Terraphoenix.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var4), "Terraphoenix.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2843,7 +2843,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -2860,10 +2860,10 @@ public final class Terraphoenix extends gf {
           if (Math.random() * 10.0 < (double)(10 - Math.abs(-10 + wb.field_g))) {
             var2_int = 0;
             while (var2_int < 480) {
-              l.c(-(rk.field_c >> 1) + 320, var2_int, (rk.field_c >> 1) + 320, 1 + var2_int);
+              SoftwareRasterizer.c(-(rk.field_c >> 1) + 320, var2_int, (rk.field_c >> 1) + 320, 1 + var2_int);
               var3 = (int)(Math.sin((double)(ng.field_x + var2_int) * 0.02) * (double)(640 - rk.field_c >> 2));
               hh.field_m.d(var3, 0, 256);
-              l.c();
+              SoftwareRasterizer.c();
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -2872,25 +2872,25 @@ public final class Terraphoenix extends gf {
             }
             if ((decompiledFrameCompleted0) &&
               (var4 != 0)) {
-              l.c(-(rk.field_c >> 1) + 320, 0, 320 + (rk.field_c >> 1), 480);
-              l.d(0, 0, 640, 480, 0, 192);
+              SoftwareRasterizer.c(-(rk.field_c >> 1) + 320, 0, 320 + (rk.field_c >> 1), 480);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, 192);
               hh.field_m.d(0, 0, 256);
-              l.c();
+              SoftwareRasterizer.c();
             }
           } else {
-            l.c(-(rk.field_c >> 1) + 320, 0, 320 + (rk.field_c >> 1), 480);
-            l.d(0, 0, 640, 480, 0, 192);
+            SoftwareRasterizer.c(-(rk.field_c >> 1) + 320, 0, 320 + (rk.field_c >> 1), 480);
+            SoftwareRasterizer.d(0, 0, 640, 480, 0, 192);
             hh.field_m.d(0, 0, 256);
-            l.c();
+            SoftwareRasterizer.c();
           }
           if (param0 < 54) {
-            this.field_Q = (ci) null;
+            this.field_Q = (Sprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.AC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.AC(" + param0 + ')');
         }
     }
 
@@ -2916,7 +2916,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2933,7 +2933,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.VB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.VB(" + param0 + ')');
         }
     }
 
@@ -2959,7 +2959,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3125,7 +3125,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "Terraphoenix.FB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "Terraphoenix.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3176,8 +3176,8 @@ public final class Terraphoenix extends gf {
         try {
           if (ef.field_j >= (-qh.field_b.field_r + 624) &&
             ef.field_j <= 624 &&
-            (-qh.field_b.field_t + (464 - this.field_N.field_f)) <= jb.field_b &&
-            jb.field_b <= 464 - this.field_N.field_f) {
+            (-qh.field_b.field_t + (464 - this.field_N.field_f)) <= MouseWheelInput.field_b &&
+            MouseWheelInput.field_b <= 464 - this.field_N.field_f) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = nd.field_h;
             if (ma.field_I == 1) {
@@ -3303,15 +3303,15 @@ public final class Terraphoenix extends gf {
                 var4Lifetime1 = var4Lifetime1 + (-var6 + 90);
               }
               if (ef.field_j >= var4Lifetime1 &&
-                jb.field_b >= 371 &&
-                394 >= jb.field_b &&
+                MouseWheelInput.field_b >= 371 &&
+                394 >= MouseWheelInput.field_b &&
                 var4Lifetime1 + var8 >= ef.field_j) {
                 var2_int = this.field_D - 1;
                 this.field_Eb = new String[1];
                 if (null == this.field_nb[var7_int]) {
                   this.field_Eb[0] = kf.field_c;
                 } else {
-                  this.field_Eb[0] = ne.field_b + this.field_nb[var7_int].b(1);
+                  this.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.field_nb[var7_int].b(1);
                 }
                 if (1 == ma.field_I) {
                   qd.$cfr$intArgs$a$e9dea5688aa5(80, 33);
@@ -3426,7 +3426,7 @@ public final class Terraphoenix extends gf {
             }
             if (decompiledFrameRemainder1) {
               this.field_Eb = new String[1];
-              this.field_Eb[0] = c.field_b + od.field_c[var2_intLifetime3].field_j;
+              this.field_Eb[0] = NodeHashTableIterator.field_b + od.field_c[var2_intLifetime3].field_j;
               if (ma.field_I != 0 &&
                 this.field_Fb > 0 &&
                 this.field_I.field_a[var2_intLifetime3] <= 50) {
@@ -3477,7 +3477,7 @@ public final class Terraphoenix extends gf {
             var7Lifetime1 = this.field_I;
             if (this.field_yb) {
               this.field_Eb = new String[1];
-              this.field_Eb[0] = c.field_b + sj.field_a[var2_intLifetime4].field_m;
+              this.field_Eb[0] = NodeHashTableIterator.field_b + sj.field_a[var2_intLifetime4].field_m;
               decompiledFrameRemainder0 = (ma.field_I != 0);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = !(0 >= this.field_Fb))) {
@@ -3526,9 +3526,9 @@ public final class Terraphoenix extends gf {
             }
           }
           if (ef.field_j >= 361 &&
-            138 <= jb.field_b &&
+            138 <= MouseWheelInput.field_b &&
             ef.field_j <= 436 &&
-            288 >= jb.field_b &&
+            288 >= MouseWheelInput.field_b &&
             null != this.field_nb[this.field_qb].field_b) {
             if (this.field_nb[this.field_qb].field_b != null) {
               this.field_Eb = new String[1];
@@ -3542,9 +3542,9 @@ public final class Terraphoenix extends gf {
             }
           }
           if (ef.field_j >= 556 &&
-            jb.field_b >= 138 &&
+            MouseWheelInput.field_b >= 138 &&
             631 >= ef.field_j &&
-            250 >= jb.field_b &&
+            250 >= MouseWheelInput.field_b &&
             this.field_nb[this.field_qb].field_A != null) {
             if (this.field_nb[this.field_qb].field_A.field_g != 0) {
               this.field_Eb = new String[1];
@@ -3563,9 +3563,9 @@ public final class Terraphoenix extends gf {
             }
           }
           if (ef.field_j >= 453 &&
-            jb.field_b >= 138 &&
+            MouseWheelInput.field_b >= 138 &&
             ef.field_j <= 540 &&
-            jb.field_b <= 225 &&
+            MouseWheelInput.field_b <= 225 &&
             null != this.field_nb[this.field_qb].field_m) {
             if (0 != this.field_nb[this.field_qb].field_m.field_f) {
               this.field_Eb = new String[1];
@@ -3582,9 +3582,9 @@ public final class Terraphoenix extends gf {
             }
           }
           if (ef.field_j >= 578 &&
-            jb.field_b >= 272 &&
+            MouseWheelInput.field_b >= 272 &&
             ef.field_j <= 628 &&
-            jb.field_b <= 322 &&
+            MouseWheelInput.field_b <= 322 &&
             null != this.field_nb[this.field_qb].field_i) {
             if (this.field_nb[this.field_qb].field_i != null) {
               this.field_Eb = new String[1];
@@ -3598,9 +3598,9 @@ public final class Terraphoenix extends gf {
             }
           }
           if (578 <= ef.field_j &&
-            jb.field_b >= 312 &&
+            MouseWheelInput.field_b >= 312 &&
             ef.field_j <= 590 &&
-            jb.field_b <= 334 &&
+            MouseWheelInput.field_b <= 334 &&
             this.field_nb[this.field_qb].field_i != null) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = lf.field_b;
@@ -3617,9 +3617,9 @@ public final class Terraphoenix extends gf {
             }
           }
           if (ef.field_j >= 616 &&
-            312 <= jb.field_b &&
+            312 <= MouseWheelInput.field_b &&
             ef.field_j <= 628 &&
-            jb.field_b <= 334 &&
+            MouseWheelInput.field_b <= 334 &&
             null != this.field_nb[this.field_qb].field_i &&
             this.field_I.field_a[this.field_nb[this.field_qb].field_i.field_g] > 0 &&
             8 > this.field_nb[this.field_qb].field_i.field_d) {
@@ -3680,7 +3680,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.NA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.NA(" + param0 + ')');
         }
     }
 
@@ -3709,7 +3709,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3756,21 +3756,21 @@ public final class Terraphoenix extends gf {
           ab.field_i = -1;
           if (wb.field_g < 10) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var3 = 320;
             var4 = 240;
             this.a(-3407, var4, var3);
-            l.d(0, 0, 640, 480, 0, 192);
+            SoftwareRasterizer.d(0, 0, 640, 480, 0, 192);
             var5 = this.field_xb;
             if (oh.field_f != 1 &&
               this.field_Z == ef.field_j &&
-              this.field_tb == jb.field_b) {
+              this.field_tb == MouseWheelInput.field_b) {
               stackIn_20_0 = 0;
             } else {
               stackIn_20_0 = 1;
             }
             var6 = stackIn_20_0;
-            this.field_tb = jb.field_b;
+            this.field_tb = MouseWheelInput.field_b;
             if (var6 != 0) {
               this.field_xb = -1;
             }
@@ -3782,7 +3782,7 @@ public final class Terraphoenix extends gf {
               stackIn_30_0 = 0;
             }
             var7 = stackIn_30_0;
-            this.a("<u=ffffff>" + c.field_d, 320, 16777215, 120, 119);
+            this.a("<u=ffffff>" + NodeHashTableIterator.field_d, 320, 16777215, 120, 119);
             if (var7 == 0) {
               var6 = 0;
             }
@@ -3791,8 +3791,8 @@ public final class Terraphoenix extends gf {
             var10 = 34;
             var11 = 0;
             var12 = 16776960 - wa.field_s;
-            if (var11 != this.field_xb && (!(var9 - var10 + 4 <= jb.field_b) ||
-              !(jb.field_b < (var9 + 4)) ||
+            if (var11 != this.field_xb && (!(var9 - var10 + 4 <= MouseWheelInput.field_b) ||
+              !(MouseWheelInput.field_b < (var9 + 4)) ||
               var6 == 0)) {
               stackIn_47_0 = 16777215;
               decompiledFrameRemainder5 = false;
@@ -3808,8 +3808,8 @@ public final class Terraphoenix extends gf {
             this.a(va.field_c, 320, var8, var9, 116);
             var9 = var9 + var10;
             var11++;
-            if (~var11 != ~this.field_xb && (!(jb.field_b >= (4 + (-var10 + var9))) ||
-              !(jb.field_b < var9 + 4) ||
+            if (~var11 != ~this.field_xb && (!(MouseWheelInput.field_b >= (4 + (-var10 + var9))) ||
+              !(MouseWheelInput.field_b < var9 + 4) ||
               var6 == 0)) {
               stackIn_63_0 = 16777215;
               decompiledFrameRemainder4 = false;
@@ -3827,8 +3827,8 @@ public final class Terraphoenix extends gf {
             this.a("|", 320 + 100 * ua.field_e / 128, var8Lifetime1, var9, 120);
             var11++;
             var9 = var9 + var10;
-            if (var11 != this.field_xb && (!(4 + (var9 - var10) <= jb.field_b) ||
-              !(jb.field_b < 4 + var9) ||
+            if (var11 != this.field_xb && (!(4 + (var9 - var10) <= MouseWheelInput.field_b) ||
+              !(MouseWheelInput.field_b < 4 + var9) ||
               var6 == 0)) {
               stackIn_79_0 = 16777215;
               decompiledFrameRemainder3 = false;
@@ -3847,8 +3847,8 @@ public final class Terraphoenix extends gf {
             if (me.field_o > 0) {
               boolean decompiledFrameRemainder2 = true;
               var11++;
-              if (~var11 != ~this.field_xb && (!(jb.field_b >= (var9 + (-var10 + 4))) ||
-                !(jb.field_b < 4 + var9) ||
+              if (~var11 != ~this.field_xb && (!(MouseWheelInput.field_b >= (var9 + (-var10 + 4))) ||
+                !(MouseWheelInput.field_b < 4 + var9) ||
                 var6 == 0)) {
                 stackIn_98_0 = 16777215;
                 decompiledFrameRemainder2 = false;
@@ -3865,8 +3865,8 @@ public final class Terraphoenix extends gf {
             }
             boolean decompiledFrameRemainder1 = true;
             var11++;
-            if (var11 != this.field_xb && (!(jb.field_b >= var9 - var10 + 4) ||
-              !((var9 + 4) > jb.field_b) ||
+            if (var11 != this.field_xb && (!(MouseWheelInput.field_b >= var9 - var10 + 4) ||
+              !((var9 + 4) > MouseWheelInput.field_b) ||
               var6 == 0)) {
               stackIn_115_0 = 16777215;
               decompiledFrameRemainder1 = false;
@@ -3882,8 +3882,8 @@ public final class Terraphoenix extends gf {
             this.a(a.field_e, 320, var8Lifetime4, var9, 113);
             var9 = var9 + var10;
             var11++;
-            if (var11 != this.field_xb && (!(4 + (var9 - var10) <= jb.field_b) ||
-              !(jb.field_b < (var9 + 4)) ||
+            if (var11 != this.field_xb && (!(4 + (var9 - var10) <= MouseWheelInput.field_b) ||
+              !(MouseWheelInput.field_b < (var9 + 4)) ||
               var6 == 0)) {
               stackIn_131_0 = 16777215;
               decompiledFrameRemainder0 = false;
@@ -3895,7 +3895,7 @@ public final class Terraphoenix extends gf {
             if (~var12 == ~var8Lifetime5) {
               this.field_xb = var11;
             }
-            if (kl.field_c != 6) {
+            if (TutorialText.field_c != 6) {
               this.a(fc.field_g, 320, var8Lifetime5, var9, 113);
               if (var13 != 0) {
                 this.a(je.field_b, 320, var8Lifetime5, var9, 111);
@@ -3915,13 +3915,13 @@ public final class Terraphoenix extends gf {
             this.b(true, -113);
           }
           this.i((byte) 95);
-          kl.field_e.d(0, 0);
+          TutorialText.field_e.d(0, 0);
           vc.field_e.d(0, 439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.JB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.JB(" + param0 + ')');
         }
     }
 
@@ -3933,10 +3933,10 @@ public final class Terraphoenix extends gf {
         int var6_int = 0;
         RuntimeException var6 = null;
         try {
-          l.d(param1, param3, 192, 50, 0, 128);
+          SoftwareRasterizer.d(param1, param3, 192, 50, 0, 128);
           var6_int = 16776960 - wa.field_s;
           if (param2 != -44) {
-            this.field_sb = (bg) null;
+            this.field_sb = (IndexedSprite) null;
           }
           if (param0 &&
             nd.field_k < 25) {
@@ -3944,14 +3944,14 @@ public final class Terraphoenix extends gf {
           }
           if (param1 <= ef.field_j &&
             (param1 + 192) >= ef.field_j &&
-            jb.field_b >= param3 &&
-            jb.field_b <= (50 + param3)) {
+            MouseWheelInput.field_b >= param3 &&
+            MouseWheelInput.field_b <= (50 + param3)) {
             var6_int = 16777215;
           }
           vc.field_f.a(param4, param1, param3, 192, 50, var6_int, 0, 1, 1, vc.field_f.field_s);
-          l.e(param1 - 1, -1 + param3, 194, 52, 0);
-          l.e(1 + param1, param3 + 1, 190, 48, 0);
-          l.e(param1, param3, 192, 50, var6_int);
+          SoftwareRasterizer.e(param1 - 1, -1 + param3, 194, 52, 0);
+          SoftwareRasterizer.e(1 + param1, param3 + 1, 190, 48, 0);
+          SoftwareRasterizer.e(param1, param3, 192, 50, var6_int);
           if (var6_int == 16777215) {
             return true;
           }
@@ -3966,7 +3966,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -3993,7 +3993,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4004,13 +4004,13 @@ public final class Terraphoenix extends gf {
           if (param0 != 320) {
             field_O = 14;
           }
-          kj.field_f = mk.field_j.e(-1);
-          jj.field_e = hm.a((byte) 125, (CharSequence) ((Object) kj.field_f));
+          kj.field_f = LevelEditor.field_j.readString(-1);
+          IntrusiveDeque.field_e = hm.a((byte) 125, (CharSequence) ((Object) kj.field_f));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "Terraphoenix.MA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "Terraphoenix.MA(" + param0 + ')');
         }
     }
 
@@ -4047,49 +4047,49 @@ public final class Terraphoenix extends gf {
           ab.field_i = -1;
           if (10 > wb.field_g) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var3 = 320;
             var4 = 240;
             this.a(-3407, var4, var3);
             qb.field_c.c(0, 0);
             var5 = 120 + 4 * vc.field_f.field_s / 2;
-            l.e(139, 345, 362, 82, 0);
-            l.a(140, 346, 360, 80, wa.field_s, 128);
-            l.e(111, 6 + (111 - vc.field_f.field_s), 418, -6 + (8 + var5) + (18 + vc.field_f.field_s), 0);
-            l.a(112, -vc.field_f.field_s + 112 + 6, 416, -6 + (vc.field_f.field_s + (-120 + (var5 + 128 + 16))), wa.field_s, 128);
+            SoftwareRasterizer.e(139, 345, 362, 82, 0);
+            SoftwareRasterizer.a(140, 346, 360, 80, wa.field_s, 128);
+            SoftwareRasterizer.e(111, 6 + (111 - vc.field_f.field_s), 418, -6 + (8 + var5) + (18 + vc.field_f.field_s), 0);
+            SoftwareRasterizer.a(112, -vc.field_f.field_s + 112 + 6, 416, -6 + (vc.field_f.field_s + (-120 + (var5 + 128 + 16))), wa.field_s, 128);
             var6 = 40;
             var6Lifetime1 = 144;
             var7 = 350;
-            if (kl.field_a <= 0) {
+            if (TutorialText.field_a <= 0) {
               if (bk.c(-25704)) {
                 stackIn_11_0 = 0;
               } else {
                 stackIn_11_0 = ef.field_i;
               }
             } else {
-              stackIn_11_0 = kl.field_a;
+              stackIn_11_0 = TutorialText.field_a;
             }
             var8 = stackIn_11_0;
             var9 = 0;
             var10 = 1;
             var11 = mb.b(0, -42) ? 1 : 0;
             var12 = 0;
-            L3: while (true) {
-              if (b.field_g.length > var12) {
+            scanLoop1: while (true) {
+              if (RandomAccessCacheFile.field_g.length > var12) {
                 stackIn_160_0 = 0;
                 stackIn_160_1 = var8 & 1 << var12;
                 if (var14 == 0) {
-                  L6: {
+                  regionExit2: {
                     if (stackIn_160_0 == stackIn_160_1) {
-                      if (0 < kl.field_a) {
-                        break L6;
+                      if (0 < TutorialText.field_a) {
+                        break regionExit2;
                       }
                       if (var12 == 15) {
-                        break L6;
+                        break regionExit2;
                       }
                       if (16 == var12 &&
                         var11 == 0) {
-                        break L6;
+                        break regionExit2;
                       }
                       if (!(me.field_o <= 0) ||
                         var12 == 0 ||
@@ -4106,37 +4106,37 @@ public final class Terraphoenix extends gf {
                     }
                     if (var6Lifetime1 <= ef.field_j &&
                       ef.field_j <= (32 + var6Lifetime1) &&
-                      jb.field_b >= var7 &&
-                      jb.field_b <= (32 + var7)) {
+                      MouseWheelInput.field_b >= var7 &&
+                      MouseWheelInput.field_b <= (32 + var7)) {
                       ab.field_i = var12;
                     }
                     if (~ab.field_i == ~var12) {
-                      l.a(15 + var6Lifetime1, var7 + 15, 17, 0);
-                      l.a(var6Lifetime1 + 15, 15 + var7, 15, 0);
-                      l.a(var6Lifetime1 + 15, 15 + var7, 16, 8355711 & wa.field_s >> 1);
+                      SoftwareRasterizer.a(15 + var6Lifetime1, var7 + 15, 17, 0);
+                      SoftwareRasterizer.a(var6Lifetime1 + 15, 15 + var7, 15, 0);
+                      SoftwareRasterizer.a(var6Lifetime1 + 15, 15 + var7, 16, 8355711 & wa.field_s >> 1);
                     }
                     if (~wf.field_t == ~var12) {
-                      l.a(var6Lifetime1 + 15, 15 + var7, 18, 0);
-                      l.a(var6Lifetime1 + 15, 15 + var7, 17, wa.field_s);
+                      SoftwareRasterizer.a(var6Lifetime1 + 15, 15 + var7, 18, 0);
+                      SoftwareRasterizer.a(var6Lifetime1 + 15, 15 + var7, 17, wa.field_s);
                     }
                     if (var6Lifetime1 <= ef.field_j &&
                       (32 + var6Lifetime1) >= ef.field_j &&
-                      var7 <= jb.field_b &&
-                      jb.field_b <= var7 + 32) {
+                      var7 <= MouseWheelInput.field_b &&
+                      MouseWheelInput.field_b <= var7 + 32) {
                       ab.field_i = var12;
                     }
                     if (wf.field_t == -1 &&
                       var6Lifetime1 <= ef.field_j &&
                       (32 + var6Lifetime1) >= ef.field_j &&
-                      jb.field_b >= var7 &&
-                      var7 + 32 >= jb.field_b ||
+                      MouseWheelInput.field_b >= var7 &&
+                      var7 + 32 >= MouseWheelInput.field_b ||
                       wf.field_t == var12) {
-                      vc.field_f.c(b.field_g[var12], 320, 120, 16777215, 0);
+                      vc.field_f.c(RandomAccessCacheFile.field_g[var12], 320, 120, 16777215, 0);
                       var10 = 0;
                       if ((var8 & 1 << var12) == 0) {
                         vc.field_f.c(hf.field_z, 320, vc.field_f.field_s + 120, -wa.field_s + 16776960, 0);
                       } else {
-                        vc.field_f.c(cf.field_b, 320, 120 + vc.field_f.field_s, 16777215, 0);
+                        vc.field_f.c(GameKeyHandler.field_b, 320, 120 + vc.field_f.field_s, 16777215, 0);
                       }
                       var5Lifetime1 = vc.field_f.field_s * 4 / 2 + 120;
                       if ((1 << var12 & var8) == 0) {
@@ -4153,10 +4153,10 @@ public final class Terraphoenix extends gf {
                       } else {
                         hf.field_w[var12].b(120, var5Lifetime1);
                       }
-                      var5Lifetime1 = var5Lifetime1 + (og.field_f.field_w + og.field_f.field_w * og.field_f.a(eb.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + of.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, og.field_f.field_w));
+                      var5Lifetime1 = var5Lifetime1 + (og.field_f.field_w + og.field_f.field_w * og.field_f.a(eb.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, og.field_f.field_w));
                       var13 = 0;
-                      while (!(of.field_m[var12] <= var13)) {
-                        qe.field_k.c(460 + var13 * -8, 250);
+                      while (!(ImageProducerRasterBuffer.field_m[var12] <= var13)) {
+                        IsaacCipher.field_k.c(460 + var13 * -8, 250);
                         var13++;
                       }
                     }
@@ -4181,7 +4181,7 @@ public final class Terraphoenix extends gf {
                 }
               } else {
                 if (var10 == 0) {
-                  break L3;
+                  break scanLoop1;
                 }
                 var5Lifetime1 = 120 + 5 * vc.field_f.field_s / 2;
                 stackIn_160_0 = var5Lifetime1;
@@ -4190,34 +4190,34 @@ public final class Terraphoenix extends gf {
               var5Lifetime1Lifetime1 = stackIn_160_0 + stackIn_160_1;
               vc.field_f.a(kk.field_a, 120, 140, 400, 128, 16777215, 0, 1, 0, vc.field_f.field_s);
               if (bk.c(-25704)) {
-                var12 = vc.field_f.b(ck.field_c);
+                var12 = vc.field_f.b(FullscreenFocusCanvas.field_c);
                 var13Lifetime1 = -wa.field_s + 16776960;
                 if (ef.field_j >= 320 - var12 / 2 &&
                   ef.field_j <= (320 + var12 / 2) &&
-                  240 <= jb.field_b &&
-                  (vc.field_f.field_s + 240) >= jb.field_b) {
+                  240 <= MouseWheelInput.field_b &&
+                  (vc.field_f.field_s + 240) >= MouseWheelInput.field_b) {
                   nd.field_k = nd.field_k + 25;
                   var13Lifetime1 = 16777215;
                   if (nd.field_k > 50) {
                     nd.field_k = nd.field_k - 50;
                   }
-                  l.a(320 - (var12 / 2 + 50) + nd.field_k, 240, vc.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
-                  l.a(50 + var12 / 2 + 320 - nd.field_k, 240, vc.field_f.field_s, var13Lifetime1, 255 - nd.field_k * 5);
+                  SoftwareRasterizer.a(320 - (var12 / 2 + 50) + nd.field_k, 240, vc.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.a(50 + var12 / 2 + 320 - nd.field_k, 240, vc.field_f.field_s, var13Lifetime1, 255 - nd.field_k * 5);
                   nd.field_k = nd.field_k - 25;
                   if (!(nd.field_k >= 0)) {
                     nd.field_k = nd.field_k + 50;
                     if (var14 != 0) {
-                      l.g(-(var12 / 2) + 320, 240 - (-vc.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
-                      l.g(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
+                      SoftwareRasterizer.g(-(var12 / 2) + 320, 240 - (-vc.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
+                      SoftwareRasterizer.g(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
                     }
                   }
                 } else {
-                  l.g(-(var12 / 2) + 320, 240 - (-vc.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
-                  l.g(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
+                  SoftwareRasterizer.g(-(var12 / 2) + 320, 240 - (-vc.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.g(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
                 }
-                vc.field_f.c(ck.field_c, 320, 260, var13Lifetime1, 0);
-                l.a(-(var12 / 2) + 320 - (50 - nd.field_k), 240, vc.field_f.field_s, var13Lifetime1, -(nd.field_k * 5) + 255);
-                l.a(-nd.field_k + 50 + (320 + var12 / 2), 240, vc.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
+                vc.field_f.c(FullscreenFocusCanvas.field_c, 320, 260, var13Lifetime1, 0);
+                SoftwareRasterizer.a(-(var12 / 2) + 320 - (50 - nd.field_k), 240, vc.field_f.field_s, var13Lifetime1, -(nd.field_k * 5) + 255);
+                SoftwareRasterizer.a(-nd.field_k + 50 + (320 + var12 / 2), 240, vc.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
               }
               break;
             }
@@ -4234,15 +4234,15 @@ public final class Terraphoenix extends gf {
           qh.field_b.b(-(qh.field_b.field_r / 2) + var3Lifetime1, -qh.field_b.field_t + 476);
           if ((-(qh.field_b.field_r / 2) + var3Lifetime1) <= ef.field_j &&
             ef.field_j <= (var3Lifetime1 + qh.field_b.field_r / 2) &&
-            jb.field_b >= 476 - qh.field_b.field_t &&
-            jb.field_b <= 476) {
-            l.d(-(qh.field_b.field_r / 2) + var3Lifetime1, -qh.field_b.field_t + 476, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
+            MouseWheelInput.field_b >= 476 - qh.field_b.field_t &&
+            MouseWheelInput.field_b <= 476) {
+            SoftwareRasterizer.d(-(qh.field_b.field_r / 2) + var3Lifetime1, -qh.field_b.field_t + 476, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.EC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.EC(" + param0 + ')');
         }
     }
 
@@ -4250,17 +4250,17 @@ public final class Terraphoenix extends gf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          cf.a(true);
+          GameKeyHandler.a(true);
           if (param0 <= 64) {
             this.j((byte) 120);
           }
           re.a(52);
           lg.a(-2);
           hd.c((byte) 107);
-          jj.a(-22208);
+          IntrusiveDeque.a(-22208);
           wl.c((byte) 107);
           m.a((byte) 89);
-          nk.e();
+          PcmPlayerService.e();
           da.a(18210);
           qa.a(-79);
           ta.a(false);
@@ -4271,15 +4271,15 @@ public final class Terraphoenix extends gf {
           h.a(true);
           wh.a((byte) 110);
           ak.a(false);
-          tf.b((byte) 102);
-          fa.b(127);
-          gf.g(-119);
-          el.a(0);
-          eh.c(-25);
+          BufferedSocket.b((byte) 102);
+          Archive.b(127);
+          GameShell.g(-119);
+          ClientException.a(0);
+          GameApplet.c(-25);
           bh.b((byte) 67);
-          db.a((byte) 110);
-          jb.a(false);
-          l.b();
+          MouseInputHandler.a((byte) 110);
+          MouseWheelInput.a(false);
+          SoftwareRasterizer.b();
           dg.b(true);
           ll.b(1000);
           i.a(-21307);
@@ -4294,9 +4294,9 @@ public final class Terraphoenix extends gf {
           a.a(40);
           pe.a((byte) -107);
           vc.c(0);
-          te.b((byte) -116);
+          RasterBuffer.b((byte) -116);
           wg.a((byte) 113);
-          ck.a(-8917);
+          FullscreenFocusCanvas.a(-8917);
           pj.d(126);
           wj.a((byte) 24);
           nc.a(1);
@@ -4304,32 +4304,32 @@ public final class Terraphoenix extends gf {
           ch.b(6195);
           ga.a(false);
           rk.a(0);
-          e.b(20);
-          mk.d((byte) 19);
-          ad.b((byte) -108);
+          BattleState.b(20);
+          LevelEditor.d((byte) 19);
+          TutorialController.b((byte) -108);
           ol.g(20);
-          uf.b(71);
-          oj.d((byte) -55);
-          vh.a(7229);
+          IntrusiveNode.b(71);
+          SpriteState.d((byte) -55);
+          DualLinkNode.a(7229);
           uc.m(-113);
           kk.a((byte) 121);
           oh.b(6);
           pc.a(12653);
-          r.k(1);
+          BattleUnit.k(1);
           se.a(-1);
-          dl.b(-32);
+          MapTile.b(-32);
           rl.a(-19959);
-          nf.a((byte) -120);
+          PcmPlayerPump.a((byte) -120);
           il.b((byte) 113);
           sh.c(-96);
           fk.a();
           vd.c((byte) 41);
           p.a(-24869);
           mh.a(1);
-          pk.a();
+          BitmapFont.a();
           fl.a(827399017);
           ca.a(109);
-          sd.a(-3864);
+          QuickChatMenu.a(-3864);
           li.a(-394132240);
           sj.a(0);
           rb.a(-61);
@@ -4344,7 +4344,7 @@ public final class Terraphoenix extends gf {
           ae.h(-13271);
           gd.b(25284);
           fh.a((byte) 81);
-          km.a((byte) 13);
+          ArchiveIndex.a((byte) 13);
           t.a(126);
           uj.b((byte) -92);
           pf.a(6650);
@@ -4352,12 +4352,12 @@ public final class Terraphoenix extends gf {
           u.a(-78);
           cm.c((byte) -121);
           nb.b(0);
-          dk.b(22120);
+          LevelMap.b(22120);
           bk.a(6144);
           gi.b(-50);
           ug.a(-11978);
-          td.a(-21697);
-          ui.a((byte) -121);
+          IndexedSpriteState.a(-21697);
+          AdminCheatOverlay.a((byte) -121);
           hk.a(true);
           ab.a(0);
           wa.c(21834);
@@ -4368,10 +4368,10 @@ public final class Terraphoenix extends gf {
           sb.c((byte) 29);
           qd.c((byte) 103);
           gm.a(8192);
-          kl.a(true);
-          b.b(1);
+          TutorialText.a(true);
+          RandomAccessCacheFile.b(1);
           pi.a();
-          tl.b();
+          VorbisDecoder.b();
           jk.a();
           kg.e(7087);
           hl.b(54);
@@ -4380,15 +4380,15 @@ public final class Terraphoenix extends gf {
           tb.a(-18440);
           mc.b((byte) 53);
           rf.a(true);
-          qe.a(true);
-          mj.a(11147);
+          IsaacCipher.a(true);
+          SocketConnector.a(11147);
           wb.a(-122);
           tg.b(23);
           bc.a(false);
           ke.a(false);
           ih.a();
           kb.a((byte) -105);
-          ij.a(77);
+          MessageKeys.a(77);
           hi.l(0);
           kd.a(true);
           fd.b(69);
@@ -4403,18 +4403,18 @@ public final class Terraphoenix extends gf {
           vk.b(10417);
           dm.a(false);
           vb.a((byte) 79);
-          jm.a(6453);
+          DelegatingCanvas.a(6453);
           lk.a(5540);
           ea.a(true);
           hf.a((byte) 54);
           f.a(-108911807);
           sk.a(true);
           ld.a((byte) -115);
-          gl.a(true);
+          UiWidget.a(true);
           eb.e((byte) -82);
           jc.f((byte) 47);
           kh.a(-195);
-          gb.b(false);
+          WidgetContainer.b(false);
           k.a(false);
           va.a(-65);
           od.a(21);
@@ -4427,7 +4427,7 @@ public final class Terraphoenix extends gf {
           ge.a(-114);
           pb.a(-22970);
           jd.d(1);
-          of.b(77);
+          ImageProducerRasterBuffer.b(77);
           ve.a(0);
           ef.a(31955);
           j.g(-5981);
@@ -4446,19 +4446,19 @@ public final class Terraphoenix extends gf {
           gh.a(-58);
           ig.a(123);
           ek.a();
-          ql.b(-5);
+          ProxySocketConnector.b(-5);
           nj.a(0);
           rd.d(125);
           fc.a((byte) -114);
           cb.b(true);
           hj.g((byte) -120);
           rh.a(33);
-          ce.a(-1);
-          tc.a(-112);
+          IterableNodeHashTable.a(-1);
+          SecondaryNodeDeque.a(-112);
           be.e((byte) 100);
           bl.a(false);
-          c.a(1);
-          ne.a(55);
+          NodeHashTableIterator.a(1);
+          SecondaryNodeDequeIterator.a(55);
           ji.a(19061);
           nd.c(105);
           fb.a(6);
@@ -4525,7 +4525,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.A(" + param0 + ')');
         }
     }
 
@@ -4558,8 +4558,8 @@ public final class Terraphoenix extends gf {
             this.field_X.field_e.field_e == this.field_X.field_e.field_f + this.field_X.field_e.field_h + this.field_X.field_e.field_k)) &&
             (decompiledFrameRemainder1 = !(ef.field_j < 384)) &&
             (decompiledFrameRemainder1 = !(ef.field_j > 576)) &&
-            (decompiledFrameRemainder1 = !(jb.field_b < 340)) &&
-            (decompiledFrameRemainder1 = !(jb.field_b > 390))) {
+            (decompiledFrameRemainder1 = !(MouseWheelInput.field_b < 340)) &&
+            (decompiledFrameRemainder1 = !(MouseWheelInput.field_b > 390))) {
             this.field_Eb = new String[1];
             if (ma.field_I == 1) {
               var3 = 1;
@@ -4572,8 +4572,8 @@ public final class Terraphoenix extends gf {
               if ((12 <= this.field_Bb) &&
                 (decompiledFrameRemainder1 = !(ef.field_j < 384)) &&
                 (decompiledFrameRemainder1 = !(ef.field_j > 576)) &&
-                (decompiledFrameRemainder1 = !(340 > jb.field_b)) &&
-                (decompiledFrameRemainder1 = !(jb.field_b > 390))) {
+                (decompiledFrameRemainder1 = !(340 > MouseWheelInput.field_b)) &&
+                (decompiledFrameRemainder1 = !(MouseWheelInput.field_b > 390))) {
                 this.field_Eb = new String[1];
                 if (ma.field_I == 1) {
                   var3 = 1;
@@ -4585,8 +4585,8 @@ public final class Terraphoenix extends gf {
                 (!(12 <= this.field_Bb))) {
                 if (ef.field_j >= 384 &&
                   ef.field_j <= 464 &&
-                  364 <= jb.field_b &&
-                  jb.field_b <= 414) {
+                  364 <= MouseWheelInput.field_b &&
+                  MouseWheelInput.field_b <= 414) {
                   this.field_Eb = new String[1];
                   if (ma.field_I == 1) {
                     var3 = 1;
@@ -4596,8 +4596,8 @@ public final class Terraphoenix extends gf {
                 }
                 if ((!(ef.field_j < 496)) &&
                   (!(ef.field_j > 576)) &&
-                  (!(364 > jb.field_b)) &&
-                  (!(jb.field_b > 414))) {
+                  (!(364 > MouseWheelInput.field_b)) &&
+                  (!(MouseWheelInput.field_b > 414))) {
                   this.field_Eb = new String[1];
                   if (ma.field_I == 1) {
                     var3 = 1;
@@ -4606,15 +4606,15 @@ public final class Terraphoenix extends gf {
                   if (var7 != 0) {
                     if (64 <= ef.field_j &&
                       ef.field_j <= 256 &&
-                      370 <= jb.field_b &&
-                      jb.field_b <= 420 &&
+                      370 <= MouseWheelInput.field_b &&
+                      MouseWheelInput.field_b <= 420 &&
                       ma.field_I == 1) {
-                      gb.a(7, -25786, 7);
+                      WidgetContainer.a(7, -25786, 7);
                     }
                     if (ef.field_j >= 384 &&
                       ef.field_j <= 576 &&
-                      jb.field_b >= 370 &&
-                      jb.field_b <= 420) {
+                      MouseWheelInput.field_b >= 370 &&
+                      MouseWheelInput.field_b <= 420) {
                       this.field_Eb = new String[1];
                       this.field_Eb[0] = rj.field_c;
                       if (ma.field_I == 1) {
@@ -4627,15 +4627,15 @@ public final class Terraphoenix extends gf {
             } else {
               if (64 <= ef.field_j &&
                 ef.field_j <= 256 &&
-                370 <= jb.field_b &&
-                jb.field_b <= 420 &&
+                370 <= MouseWheelInput.field_b &&
+                MouseWheelInput.field_b <= 420 &&
                 ma.field_I == 1) {
-                gb.a(7, -25786, 7);
+                WidgetContainer.a(7, -25786, 7);
               }
               if (ef.field_j >= 384 &&
                 ef.field_j <= 576 &&
-                jb.field_b >= 370 &&
-                jb.field_b <= 420) {
+                MouseWheelInput.field_b >= 370 &&
+                MouseWheelInput.field_b <= 420) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = rj.field_c;
                 if (ma.field_I == 1) {
@@ -4649,7 +4649,7 @@ public final class Terraphoenix extends gf {
             qd.$cfr$intArgs$a$e9dea5688aa5(89, 33);
             ge.field_e = ge.field_e + this.field_X.field_H;
             if (0 != (1 & ef.field_j)) {
-              km.field_e = km.field_e - this.field_X.field_H;
+              ArchiveIndex.field_e = ArchiveIndex.field_e - this.field_X.field_H;
               if (var7 != 0) {
                 oe.field_c = oe.field_c + this.field_X.field_H;
               }
@@ -4658,7 +4658,7 @@ public final class Terraphoenix extends gf {
             }
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameCompleted0 = true;
-            L16: {
+            regionExit1: {
               boolean decompiledFrameCompleted1 = true;
               if (this.field_X.field_f == 2) {
                 var5_int = 1;
@@ -4670,7 +4670,7 @@ public final class Terraphoenix extends gf {
                       ((ga) (Object) stackIn_215_0).a(this.field_I, -1);
                       while (true) {
                         var2_int++;
-                        break L16;
+                        break regionExit1;
                       }
                     }
                   }
@@ -4704,13 +4704,13 @@ public final class Terraphoenix extends gf {
                   var2_int = 0;
                   ja.field_i = 1;
                   var6 = 0;
-                  L30: while (true) {
+                  scanLoop2: while (true) {
                     if (var2_int < 12) {
                       while (true) {
                         stackIn_180_0 = ~var2_int;
                         stackIn_180_1 = -13;
                         if (var7 != 0) {
-                          break L30;
+                          break scanLoop2;
                         }
                         if (stackIn_180_0 > stackIn_180_1) {
                           stackIn_212_0 = null;
@@ -4756,8 +4756,8 @@ public final class Terraphoenix extends gf {
               decompiledFrameRemainder2 = (ja.field_i == 1);
               if (decompiledFrameRemainder2) {
                 if (this.field_Bb == 0 &&
-                  fa.field_a == 0) {
-                  this.field_wb = new ad(1);
+                  Archive.field_a == 0) {
+                  this.field_wb = new TutorialController(1);
                   this.field_wb.field_i = this;
                 }
                 var2_int = 0;
@@ -4862,7 +4862,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.CC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.CC(" + param0 + ')');
         }
     }
 
@@ -4889,7 +4889,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -4915,58 +4915,58 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     private final void A(int param0) {
-        r stackIn_49_0 = null;
+        BattleUnit stackIn_49_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        r stackIn_49_0Lifetime1;
+        BattleUnit stackIn_49_0Lifetime1;
         var5 = field_V;
         try {
           if (param0 != 255) {
             return;
           }
           if (this.field_X == null) {
-            this.field_X = new e(this);
+            this.field_X = new BattleState(this);
           }
           if (!this.field_X.field_u) {
-            this.field_X.field_j = jb.field_b;
+            this.field_X.field_j = MouseWheelInput.field_b;
             this.field_X.field_N = ma.field_I;
             this.field_X.field_y = ef.field_j;
             var2_int = 1;
             var3 = 0;
             var4 = 0;
-            L5: while (true) {
+            scanLoop1: while (true) {
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder0 = true;
-              L8: {
+              regionExit2: {
                 if (var4 < 12) {
-                  stackIn_49_0 = this.field_X.field_C[var4];
+                  stackIn_49_0 = this.field_X.units[var4];
                   if (var5 != 0) {
                     while (true) {
                       if (stackIn_49_0.field_Z != null &&
-                        null != this.field_X.field_C[var4].field_c) {
-                        this.field_X.field_C[var4].field_c.field_h = null;
-                        this.field_X.field_C[var4].field_c = null;
+                        null != this.field_X.units[var4].tile) {
+                        this.field_X.units[var4].tile.unit = null;
+                        this.field_X.units[var4].tile = null;
                       }
                       while (true) {
                         var4--;
-                        break L8;
+                        break regionExit2;
                       }
                     }
                   }
                   if (stackIn_49_0 != null &&
-                    this.field_X.field_C[var4].field_Z != null) {
-                    sj.field_b = this.field_X.field_C[var4].field_F;
-                    lg.field_c = this.field_X.field_C[var4].field_H;
-                    if (this.field_X.field_C[var4].field_c == null) {
+                    this.field_X.units[var4].field_Z != null) {
+                    sj.field_b = this.field_X.units[var4].field_F;
+                    lg.field_c = this.field_X.units[var4].field_H;
+                    if (this.field_X.units[var4].tile == null) {
                       var2_int = 0;
                       if (var5 != 0) {
                         var3 = 1;
@@ -4984,8 +4984,8 @@ public final class Terraphoenix extends gf {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(ef.field_j < 351)) &&
                   (decompiledFrameRemainder0 = !(ef.field_j >= (351 + this.field_lb.field_r))) &&
-                  (decompiledFrameRemainder0 = !(jb.field_b < 386)) &&
-                  (decompiledFrameRemainder0 = !((this.field_lb.field_t + 386) <= jb.field_b))) {
+                  (decompiledFrameRemainder0 = !(MouseWheelInput.field_b < 386)) &&
+                  (decompiledFrameRemainder0 = !((this.field_lb.field_t + 386) <= MouseWheelInput.field_b))) {
                   this.field_Eb = new String[1];
                   this.field_X.field_N = 0;
                   this.field_Eb[0] = rf.field_t;
@@ -4998,12 +4998,12 @@ public final class Terraphoenix extends gf {
                         decompiledFrameCompleted0 = false;
                         break;
                       }
-                      if (null != this.field_X.field_C[var4]) {
-                        stackIn_49_0Lifetime1 = this.field_X.field_C[var4];
+                      if (null != this.field_X.units[var4]) {
+                        stackIn_49_0Lifetime1 = this.field_X.units[var4];
                         if (stackIn_49_0Lifetime1.field_Z != null &&
-                          null != this.field_X.field_C[var4].field_c) {
-                          this.field_X.field_C[var4].field_c.field_h = null;
-                          this.field_X.field_C[var4].field_c = null;
+                          null != this.field_X.units[var4].tile) {
+                          this.field_X.units[var4].tile.unit = null;
+                          this.field_X.units[var4].tile = null;
                           break;
                         }
                       }
@@ -5014,12 +5014,12 @@ public final class Terraphoenix extends gf {
               }
               if ((decompiledFrameCompleted0) &&
                 (var2_int == 0)) {
-                break L5;
+                break scanLoop1;
               }
               if (ef.field_j >= 456 &&
                 ef.field_j < 624 &&
-                jb.field_b >= 329 &&
-                jb.field_b < 413) {
+                MouseWheelInput.field_b >= 329 &&
+                MouseWheelInput.field_b < 413) {
                 this.field_X.field_N = 0;
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = j.field_K;
@@ -5032,7 +5032,7 @@ public final class Terraphoenix extends gf {
               }
               break;
             }
-            if (uf.field_c == -1) {
+            if (IntrusiveNode.field_c == -1) {
               this.field_X.field_N = 0;
             }
             this.field_X.b(param0 - 256, this);
@@ -5049,7 +5049,7 @@ public final class Terraphoenix extends gf {
             }
           }
           ja.field_i = 6;
-          this.field_X.field_q = this.field_X.field_C[0];
+          this.field_X.field_q = this.field_X.units[0];
           sj.field_b = 32 * (this.field_X.field_q.field_F - this.field_X.field_q.field_H);
           lg.field_c = (this.field_X.field_q.field_F + this.field_X.field_q.field_H) * 16;
           eg.field_p = this.field_X.field_q.field_E;
@@ -5060,7 +5060,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.SA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.SA(" + param0 + ')');
         }
     }
 
@@ -5087,7 +5087,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -5106,7 +5106,7 @@ public final class Terraphoenix extends gf {
           if (param0 != 0) {
             return;
           }
-          this.field_Cb.field_d = jb.field_b;
+          this.field_Cb.field_d = MouseWheelInput.field_b;
           this.field_Cb.b(76);
           while (fd.d(param0 + 1)) {
             if (bh.field_e[96]) {
@@ -5125,7 +5125,7 @@ public final class Terraphoenix extends gf {
               }
               if (tg.field_l == -1) {
                 ll.field_c = true;
-                dh.field_j = true;
+                PacketBuffer.field_j = true;
               }
             }
             if (bh.field_e[99]) {
@@ -5141,16 +5141,16 @@ public final class Terraphoenix extends gf {
               this.field_Cb.b((byte) 124);
             }
             if (lf.field_c == 32) {
-              stackIn_45_0 = !(dh.field_j);
-              dh.field_j = stackIn_45_0;
+              stackIn_45_0 = !(PacketBuffer.field_j);
+              PacketBuffer.field_j = stackIn_45_0;
             }
             if (lf.field_c == rh.field_c) {
               stackIn_53_0 = !(ll.field_c);
               ll.field_c = stackIn_53_0;
             }
             if (lf.field_c == 34) {
-              stackIn_61_0 = !(jb.field_a);
-              jb.field_a = stackIn_61_0;
+              stackIn_61_0 = !(MouseWheelInput.field_a);
+              MouseWheelInput.field_a = stackIn_61_0;
             }
             if (lf.field_c == 24) {
               this.field_Cb.b(-1, 124);
@@ -5192,7 +5192,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.SB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.SB(" + param0 + ')');
         }
     }
 
@@ -5216,10 +5216,10 @@ public final class Terraphoenix extends gf {
           var6 = 26;
           if (var2_int <= ef.field_j &&
             ef.field_j < var2_int + var5 &&
-            jb.field_b >= var3 &&
-            jb.field_b < var6 + var3) {
+            MouseWheelInput.field_b >= var3 &&
+            MouseWheelInput.field_b < var6 + var3) {
             this.field_Eb = new String[1];
-            this.field_Eb[0] = td.field_h;
+            this.field_Eb[0] = IndexedSpriteState.field_h;
             if (ma.field_I == 1) {
               this.field_zb = new ch();
               this.field_D = 0;
@@ -5229,8 +5229,8 @@ public final class Terraphoenix extends gf {
           var2_intLifetime1 = 221;
           if (ef.field_j >= var2_intLifetime1 &&
             ef.field_j < (var2_intLifetime1 + var5) &&
-            jb.field_b >= var3 &&
-            var3 + var6 > jb.field_b) {
+            MouseWheelInput.field_b >= var3 &&
+            var3 + var6 > MouseWheelInput.field_b) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = j.field_I;
             if (1 == ma.field_I) {
@@ -5241,8 +5241,8 @@ public final class Terraphoenix extends gf {
           var2_intLifetime2 = 429;
           if (ef.field_j >= var2_intLifetime2 &&
             ef.field_j < (var2_intLifetime2 + var5) &&
-            jb.field_b >= var3 &&
-            jb.field_b < (var3 + var6)) {
+            MouseWheelInput.field_b >= var3 &&
+            MouseWheelInput.field_b < (var3 + var6)) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = va.field_i;
             if (!this.field_Db) {
@@ -5263,7 +5263,7 @@ public final class Terraphoenix extends gf {
             if (wb.field_g >= 10) {
               continue;
             }
-            kl.field_c = ja.field_i;
+            TutorialText.field_c = ja.field_i;
             wb.field_g = 20;
             di.field_k = null;
             ja.field_i = 12;
@@ -5277,7 +5277,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.BA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.BA(" + param0 + ')');
         }
     }
 
@@ -5326,7 +5326,7 @@ public final class Terraphoenix extends gf {
           if (wb.field_g < 10) {
             boolean decompiledFrameRemainder0 = true;
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var3 = 320;
             var4 = 240;
             this.a(-3407, var4, var3);
@@ -5337,15 +5337,15 @@ public final class Terraphoenix extends gf {
               var8_int = 90 + var6.field_s + 126;
               var6.c(var7_ref_String, 320, var8_int, 16777215, 0);
               if (bk.c(param0 - 16802664)) {
-                var9 = vc.field_f.b(ck.field_c);
+                var9 = vc.field_f.b(FullscreenFocusCanvas.field_c);
                 var10 = 16776960 - wa.field_s;
                 boolean decompiledSharedTail0 = (((-(var9 / 2) + 320) <= ef.field_j) &&
                   (ef.field_j <= var9 / 2 + 320) &&
-                  (jb.field_b >= 280) &&
-                  (jb.field_b <= 280 + vc.field_f.field_s));
+                  (MouseWheelInput.field_b >= 280) &&
+                  (MouseWheelInput.field_b <= 280 + vc.field_f.field_s));
                 if (!decompiledSharedTail0) {
-                  l.g(320 - var9 / 2, vc.field_f.field_s + 280 + (50 - nd.field_k) / 2, var9, 16776960 - wa.field_s, -(nd.field_k * 5) + 255);
-                  l.g(320 - var9 / 2, -((-nd.field_k + 50) / 2) + 280, var9, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.g(320 - var9 / 2, vc.field_f.field_s + 280 + (50 - nd.field_k) / 2, var9, 16776960 - wa.field_s, -(nd.field_k * 5) + 255);
+                  SoftwareRasterizer.g(320 - var9 / 2, -((-nd.field_k + 50) / 2) + 280, var9, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
                   decompiledSharedTail0 = (var17 != 0);
                 }
                 if (decompiledSharedTail0) {
@@ -5354,30 +5354,30 @@ public final class Terraphoenix extends gf {
                   if (50 < nd.field_k) {
                     nd.field_k = nd.field_k - 50;
                   }
-                  l.a(270 + (-(var9 / 2) + nd.field_k), 280, vc.field_f.field_s, var10, 255 - 5 * nd.field_k);
-                  l.a(-nd.field_k + (320 + (var9 / 2 + 50)), 280, vc.field_f.field_s, var10, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.a(270 + (-(var9 / 2) + nd.field_k), 280, vc.field_f.field_s, var10, 255 - 5 * nd.field_k);
+                  SoftwareRasterizer.a(-nd.field_k + (320 + (var9 / 2 + 50)), 280, vc.field_f.field_s, var10, -(5 * nd.field_k) + 255);
                   nd.field_k = nd.field_k - 25;
                   if (nd.field_k < 0) {
                     nd.field_k = nd.field_k + 50;
                   }
                 }
-                vc.field_f.c(ck.field_c, 320, 300, var10, 0);
-                l.a(320 - var9 / 2 + (-50 + nd.field_k), 280, vc.field_f.field_s, var10, -(nd.field_k * 5) + 255);
-                l.a(320 + (var9 / 2 + 50 - nd.field_k), 280, vc.field_f.field_s, var10, 255 - 5 * nd.field_k);
+                vc.field_f.c(FullscreenFocusCanvas.field_c, 320, 300, var10, 0);
+                SoftwareRasterizer.a(320 - var9 / 2 + (-50 + nd.field_k), 280, vc.field_f.field_s, var10, -(nd.field_k * 5) + 255);
+                SoftwareRasterizer.a(320 + (var9 / 2 + 50 - nd.field_k), 280, vc.field_f.field_s, var10, 255 - 5 * nd.field_k);
               }
               decompiledFrameRemainder0 = (var17 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (gf.field_y == null) {
-                gf.field_y = aa.a(8166, 1, 23, 3, 10);
+              if (GameShell.field_y == null) {
+                GameShell.field_y = aa.a(8166, 1, 23, 3, 10);
               }
               var6Lifetime1 = vc.field_f;
               var7 = 0;
-              if (gf.field_y.field_m &&
-                null != gf.field_y.field_p) {
-                var8 = gf.field_y.field_p[ma.field_J];
-                var9_ref_long__ = gf.field_y.field_l[ma.field_J];
-                var10_ref_int__ = gf.field_y.field_q[ma.field_J];
+              if (GameShell.field_y.field_m &&
+                null != GameShell.field_y.field_p) {
+                var8 = GameShell.field_y.field_p[ma.field_J];
+                var9_ref_long__ = GameShell.field_y.field_l[ma.field_J];
+                var10_ref_int__ = GameShell.field_y.field_q[ma.field_J];
                 var11 = 0;
                 var12_ref_fb = hd.field_q;
                 var13 = 90 + var6Lifetime1.field_s;
@@ -5454,8 +5454,8 @@ public final class Terraphoenix extends gf {
                     }
                     if (ef.field_j > (var10Lifetime1 - 80) &&
                       (var10Lifetime1 + 80) > ef.field_j &&
-                      jb.field_b > (-vc.field_f.field_s + var11Lifetime1) &&
-                      (var11Lifetime1 + vc.field_f.field_p) > jb.field_b) {
+                      MouseWheelInput.field_b > (-vc.field_f.field_s + var11Lifetime1) &&
+                      (var11Lifetime1 + vc.field_f.field_p) > MouseWheelInput.field_b) {
                       var12 = 16777215;
                       if (oh.field_f == 1 &&
                         ~var8_intLifetime1 != ~ma.field_J) {
@@ -5470,21 +5470,21 @@ public final class Terraphoenix extends gf {
                 if ((decompiledFrameCompleted0) &&
                   (var7 == 0 ||
                   var17 != 0)) {
-                  if (gf.field_y.field_m) {
-                    if (gf.field_y.field_p != null) {
+                  if (GameShell.field_y.field_m) {
+                    if (GameShell.field_y.field_p != null) {
                       var8_ref = ie.field_a;
                       if (var17 != 0) {
-                        var8_ref = r.field_bb;
-                        var8_ref = jj.field_d;
+                        var8_ref = BattleUnit.field_bb;
+                        var8_ref = IntrusiveDeque.field_d;
                       }
                     } else {
-                      var8_ref = r.field_bb;
+                      var8_ref = BattleUnit.field_bb;
                       if (var17 != 0) {
-                        var8_ref = jj.field_d;
+                        var8_ref = IntrusiveDeque.field_d;
                       }
                     }
                   } else {
-                    var8_ref = jj.field_d;
+                    var8_ref = IntrusiveDeque.field_d;
                   }
                   var9Lifetime1 = var6Lifetime1.field_s + 216;
                   var6Lifetime1.c(var8_ref, 320, var9Lifetime1, -wa.field_s + 16776960, -1);
@@ -5512,15 +5512,15 @@ public final class Terraphoenix extends gf {
           qh.field_b.b(-(qh.field_b.field_r / 2) + var3Lifetime1, 476 - qh.field_b.field_t);
           if ((var3Lifetime1 - qh.field_b.field_r / 2) <= ef.field_j &&
             (qh.field_b.field_r / 2 + var3Lifetime1) >= ef.field_j &&
-            -qh.field_b.field_t + 476 <= jb.field_b &&
-            jb.field_b <= 476) {
-            l.d(var3Lifetime1 - qh.field_b.field_r / 2, -qh.field_b.field_t + 476, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
+            -qh.field_b.field_t + 476 <= MouseWheelInput.field_b &&
+            MouseWheelInput.field_b <= 476) {
+            SoftwareRasterizer.d(var3Lifetime1 - qh.field_b.field_r / 2, -qh.field_b.field_t + 476, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.T(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.T(" + param0 + ')');
         }
     }
 
@@ -5570,12 +5570,12 @@ public final class Terraphoenix extends gf {
           this.field_pb = 0;
           this.field_M = 2;
           ge.field_e = 0;
-          if (fa.field_a == 0) {
+          if (Archive.field_a == 0) {
             this.field_M = 3;
           }
           od.field_c[2].field_q = true;
           sj.field_a[1].field_e = true;
-          if (fa.field_a == 2) {
+          if (Archive.field_a == 2) {
             this.field_M = 1;
           }
           this.field_nb[0] = new ga();
@@ -5639,7 +5639,7 @@ public final class Terraphoenix extends gf {
           var3 = 4;
           do {
             if (var3 >= 12) {
-              this.field_I = new rk(fa.field_a);
+              this.field_I = new rk(Archive.field_a);
               qc.field_c = 0;
               this.field_Fb = 0;
               this.field_Bb = 0;
@@ -5651,7 +5651,7 @@ public final class Terraphoenix extends gf {
             this.field_nb[var3] = null;
             var3++;
           } while (var4 == 0);
-          if (fa.field_a == 0) {
+          if (Archive.field_a == 0) {
             rf.field_B[0].field_d = false;
             rf.field_B[1].field_d = false;
             rf.field_B[2].field_d = false;
@@ -5725,13 +5725,13 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.UA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.UA(" + param0 + ')');
         }
     }
 
     private final void r(byte param0) {
         boolean stackIn_22_0 = false;
-        e stackIn_141_0 = null;
+        BattleState stackIn_141_0 = null;
         boolean stackIn_142_1 = false;
         int stackIn_163_0 = 0;
         int stackIn_163_1 = 0;
@@ -5761,7 +5761,7 @@ public final class Terraphoenix extends gf {
             sj.field_b = (var2_int + 9 * sj.field_b) / 10;
             if (null != le.field_q) {
               le.field_q.field_g = ef.field_j;
-              le.field_q.field_c = jb.field_b;
+              le.field_q.field_c = MouseWheelInput.field_b;
               le.field_q.field_z = ma.field_I;
             }
             if (0 != ma.field_I) {
@@ -5774,7 +5774,7 @@ public final class Terraphoenix extends gf {
                 this.field_X.field_M = false;
                 eg.field_p = this.field_X.field_E;
                 lg.field_c = this.field_X.field_k;
-                jm.field_h = 0;
+                DelegatingCanvas.field_h = 0;
                 this.field_X.field_K = null;
                 sj.field_b = this.field_X.field_c;
               }
@@ -5795,7 +5795,7 @@ public final class Terraphoenix extends gf {
               sj.field_b = this.field_X.field_c;
               this.field_X.field_M = false;
               lg.field_c = this.field_X.field_k;
-              jm.field_h = 0;
+              DelegatingCanvas.field_h = 0;
             }
             if (decompiledFrameCompleted1) {
               decompiledFrameRemainder0 = (var6 != 0);
@@ -5844,10 +5844,10 @@ public final class Terraphoenix extends gf {
                   sj.field_b = sj.field_b - 8;
                 }
               }
-              var2_intLifetime1 = 2 * -(16 * this.field_X.field_h.field_b - Math.abs(-(this.field_X.field_h.field_b * 16) + lg.field_c));
-              var3Lifetime1 = 2 * (this.field_X.field_h.field_b * 16 - Math.abs(-(16 * this.field_X.field_h.field_b) + lg.field_c));
+              var2_intLifetime1 = 2 * -(16 * this.field_X.map.field_b - Math.abs(-(this.field_X.map.field_b * 16) + lg.field_c));
+              var3Lifetime1 = 2 * (this.field_X.map.field_b * 16 - Math.abs(-(16 * this.field_X.map.field_b) + lg.field_c));
               var4 = 0;
-              var5 = 32 * this.field_X.field_h.field_b;
+              var5 = 32 * this.field_X.map.field_b;
               if (sj.field_b < var2_intLifetime1) {
                 sj.field_b = var2_intLifetime1;
               }
@@ -5862,7 +5862,7 @@ public final class Terraphoenix extends gf {
               }
             }
             this.field_X.field_y = ef.field_j;
-            this.field_X.field_j = jb.field_b;
+            this.field_X.field_j = MouseWheelInput.field_b;
             this.field_X.field_N = ma.field_I;
             this.field_X.b(param0 - 127, this);
             while (fd.d(param0 ^ 127)) {
@@ -5873,15 +5873,15 @@ public final class Terraphoenix extends gf {
                 break;
               }
               if (stackIn_163_0 == stackIn_163_1) {
-                kl.field_c = ja.field_i;
+                TutorialText.field_c = ja.field_i;
                 ja.field_i = 12;
                 hh.field_m.a();
-                l.a();
+                SoftwareRasterizer.a();
                 rk.field_c = 32;
-                di.field_k = new ci(640, 480);
+                di.field_k = new Sprite(640, 480);
                 var2_intLifetime1Lifetime1 = 0;
-                while (var2_intLifetime1Lifetime1 < di.field_k.field_z.length) {
-                  di.field_k.field_z[var2_intLifetime1Lifetime1] = k.field_f.field_c[var2_intLifetime1Lifetime1];
+                while (var2_intLifetime1Lifetime1 < di.field_k.pixels.length) {
+                  di.field_k.pixels[var2_intLifetime1Lifetime1] = k.field_f.pixels[var2_intLifetime1Lifetime1];
                   var2_intLifetime1Lifetime1++;
                 }
                 k.field_f.a(0);
@@ -5892,20 +5892,20 @@ public final class Terraphoenix extends gf {
             }
             if ((decompiledFrameCompleted0) &&
               (this.field_X.field_J)) {
-              if (tf.a(70, (byte) -110, 7, 7, false, 28)) {
+              if (BufferedSocket.a(70, (byte) -110, 7, 7, false, 28)) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = ee.field_z;
                 if (ma.field_I == 1) {
                   wb.field_g = 20;
                   ld.field_b = true;
                   hh.field_m.a();
-                  l.a();
+                  SoftwareRasterizer.a();
                   k.field_f.a(0);
                   rk.field_c = 32;
                   qd.$cfr$intArgs$a$e9dea5688aa5(22, 33);
                 }
               }
-              if (tf.a(70, (byte) 110, 7, 85, false, 28)) {
+              if (BufferedSocket.a(70, (byte) 110, 7, 85, false, 28)) {
                 this.field_Eb = new String[1];
                 if (this.field_X.field_w) {
                   this.field_Eb[0] = od.field_d;
@@ -5929,19 +5929,19 @@ public final class Terraphoenix extends gf {
                   }
                 }
               }
-              if (tf.a(100, (byte) -123, 7, 533, false, 28)) {
+              if (BufferedSocket.a(100, (byte) -123, 7, 533, false, 28)) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = ja.field_h;
                 if (ma.field_I == 1) {
-                  kl.field_c = ja.field_i;
+                  TutorialText.field_c = ja.field_i;
                   ja.field_i = 12;
                   hh.field_m.a();
-                  l.a();
-                  di.field_k = new ci(640, 480);
+                  SoftwareRasterizer.a();
+                  di.field_k = new Sprite(640, 480);
                   var2_intLifetime1Lifetime2 = 0;
                   while (true) {
-                    if (di.field_k.field_z.length > var2_intLifetime1Lifetime2) {
-                      di.field_k.field_z[var2_intLifetime1Lifetime2] = k.field_f.field_c[var2_intLifetime1Lifetime2];
+                    if (di.field_k.pixels.length > var2_intLifetime1Lifetime2) {
+                      di.field_k.pixels[var2_intLifetime1Lifetime2] = k.field_f.pixels[var2_intLifetime1Lifetime2];
                       var2_intLifetime1Lifetime2++;
                       if (var6 == 0) {
                         continue;
@@ -5969,7 +5969,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.RA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.RA(" + param0 + ')');
         }
     }
 
@@ -5977,7 +5977,7 @@ public final class Terraphoenix extends gf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          gf.field_y = null;
+          GameShell.field_y = null;
           if (bk.c(-25704)) {
             this.field_Gb = false;
             ja.field_i = 14;
@@ -5991,13 +5991,13 @@ public final class Terraphoenix extends gf {
           if (param1 > 0 &&
             !bk.c(-25704) &&
             !kg.field_q) {
-            hd.field_q = bm.a(oe.field_c, 23, new int[]{param1}, 3, (byte) 93, 65512, km.field_e, bh.field_a, oh.field_e);
+            hd.field_q = bm.a(oe.field_c, 23, new int[]{param1}, 3, (byte) 93, 65512, ArchiveIndex.field_e, bh.field_a, oh.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "Terraphoenix.HA(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "Terraphoenix.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6035,7 +6035,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -6061,7 +6061,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -6082,7 +6082,7 @@ public final class Terraphoenix extends gf {
             }
           }
           if (hh.field_m == null) {
-            hh.field_m = new ci(640, 480);
+            hh.field_m = new Sprite(640, 480);
           }
           if (wb.field_g > 0) {
             wb.field_g = wb.field_g - 1;
@@ -6094,7 +6094,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "Terraphoenix.HB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "Terraphoenix.HB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6117,7 +6117,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -6153,14 +6153,14 @@ public final class Terraphoenix extends gf {
           var3 = ic.field_x[0];
           if (wb.field_g < 10) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var4 = 320;
             var5 = 240;
             this.a(-3407, var5, var4);
-            l.c(25, 89, 448, 412);
+            SoftwareRasterizer.c(25, 89, 448, 412);
             od.field_e.c(0, 0);
-            l.c();
-            l.e(24, 88, 425, 325, 16776960 - wa.field_s);
+            SoftwareRasterizer.c();
+            SoftwareRasterizer.e(24, 88, 425, 325, 16776960 - wa.field_s);
             if (0 == ha.field_q) {
               vc.field_f.b(ef.field_b + " " + var3 + " " + (this.field_Bb + 1), 32, 112, wa.field_s, 0);
             }
@@ -6171,11 +6171,11 @@ public final class Terraphoenix extends gf {
               vc.field_f.b(jh.field_h + " " + var3 + " " + (-7 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (ha.field_q == 3) {
-              vc.field_f.b(ce.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
+              vc.field_f.b(IterableNodeHashTable.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (this.field_P != -1) {
               this.field_ab[this.field_P].b(453, 89);
-              l.e(452, 88, 169, 169, -wa.field_s + 16776960);
+              SoftwareRasterizer.e(452, 88, 169, 169, -wa.field_s + 16776960);
             }
             var8 = (int[][]) null;
             if (1 == this.field_Bb) {
@@ -6189,11 +6189,11 @@ public final class Terraphoenix extends gf {
               this.field_Bb == 7) {
               var7 = 223;
               var6 = 165;
-              l.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
               if (ef.field_j >= -10 + var6 &&
                 (var6 + 10) > ef.field_j &&
-                (var7 - 10) <= jb.field_b &&
-                jb.field_b < (var7 + 10)) {
+                (var7 - 10) <= MouseWheelInput.field_b &&
+                MouseWheelInput.field_b < (var7 + 10)) {
                 if (this.field_Bb == 2) {
                   this.a(7, 2);
                 }
@@ -6208,11 +6208,11 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 2;
                 }
-                l.a(var6, var7, (int)(Math.sin(mm.field_f) * -5.0 + 15.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(Math.sin(mm.field_f) * -5.0 + 15.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db) {
-                l.a(var6, var7, (int)(15.0 + Math.cos(mm.field_f) * 5.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.cos(mm.field_f) * 5.0), 16777215);
                 if (this.field_Bb == 2) {
                   var9 = kk.field_b[1];
                 }
@@ -6230,11 +6230,11 @@ public final class Terraphoenix extends gf {
             if (decompiledFrameRemainder4) {
               var7 = 297;
               var6 = 214;
-              l.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
               if (ef.field_j >= var6 - 10 &&
                 ef.field_j < (var6 + 10) &&
-                jb.field_b >= var7 - 10 &&
-                jb.field_b < (var7 + 10)) {
+                MouseWheelInput.field_b >= var7 - 10 &&
+                MouseWheelInput.field_b < (var7 + 10)) {
                 if (this.field_Bb == 3) {
                   this.a("B", 3, (byte) 82);
                   if (var15 != 0) {
@@ -6266,12 +6266,12 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 3;
                 }
-                l.a(var6, var7, (int)(-5.0 * Math.sin(mm.field_f) + 15.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(-5.0 * Math.sin(mm.field_f) + 15.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db && (this.field_ub == 2 ||
                 this.field_Bb != 3)) {
-                l.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
                 if (this.field_Bb == 3) {
                   var9 = kk.field_b[3];
                 }
@@ -6292,11 +6292,11 @@ public final class Terraphoenix extends gf {
             if (decompiledFrameRemainder3) {
               var6 = 126;
               var7 = 197;
-              l.a(var6, var7, (int)(Math.sin(mm.field_f) * 5.0 + 15.0), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(Math.sin(mm.field_f) * 5.0 + 15.0), 65280);
               if ((var6 - 10) <= ef.field_j &&
                 ef.field_j < (var6 + 10) &&
-                jb.field_b >= (var7 - 10) &&
-                10 + var7 > jb.field_b) {
+                MouseWheelInput.field_b >= (var7 - 10) &&
+                10 + var7 > MouseWheelInput.field_b) {
                 if (this.field_Bb != 3) {
                   if (this.field_Bb != 5) {
                     this.a(7, 10);
@@ -6324,12 +6324,12 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 4;
                 }
-                l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db && (this.field_ub == 1 ||
                 this.field_Bb != 3)) {
-                l.a(var6, var7, (int)(Math.cos(mm.field_f) * 5.0 + 15.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(Math.cos(mm.field_f) * 5.0 + 15.0), 16777215);
                 if (this.field_Bb == 3) {
                   var9 = kk.field_b[6];
                 }
@@ -6344,11 +6344,11 @@ public final class Terraphoenix extends gf {
             if (this.field_Bb == 4) {
               var6 = 295;
               var7 = 204;
-              l.a(var6, var7, (int)(5.0 * Math.sin(mm.field_f) + 15.0), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.sin(mm.field_f) + 15.0), 65280);
               if ((-10 + var6) <= ef.field_j &&
                 ef.field_j < 10 + var6 &&
-                jb.field_b >= -10 + var7 &&
-                jb.field_b < (var7 + 10)) {
+                MouseWheelInput.field_b >= -10 + var7 &&
+                MouseWheelInput.field_b < (var7 + 10)) {
                 this.a(7, 4);
                 if (0 != oh.field_f) {
                   this.field_Db = true;
@@ -6358,22 +6358,22 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 5;
                 }
-                l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db) {
-                l.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
                 var9 = kk.field_b[9];
               }
             }
             if (6 == this.field_Bb) {
               var7 = 282;
               var6 = 383;
-              l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * 5.0), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * 5.0), 65280);
               if (ef.field_j >= var6 - 10 &&
                 ef.field_j < (var6 + 10) &&
-                var7 - 10 <= jb.field_b &&
-                10 + var7 > jb.field_b) {
+                var7 - 10 <= MouseWheelInput.field_b &&
+                10 + var7 > MouseWheelInput.field_b) {
                 this.a(7, 6);
                 if (oh.field_f != 0) {
                   this.field_Db = true;
@@ -6383,11 +6383,11 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 6;
                 }
-                l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db) {
-                l.a(var6, var7, (int)(15.0 + 5.0 * Math.cos(mm.field_f)), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.cos(mm.field_f)), 16777215);
                 var9 = kk.field_b[10];
               }
             }
@@ -6399,11 +6399,11 @@ public final class Terraphoenix extends gf {
             if (decompiledFrameRemainder2) {
               var6 = 85;
               var7 = 308;
-              l.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
               if (var6 - 10 <= ef.field_j &&
                 10 + var6 > ef.field_j &&
-                jb.field_b >= -10 + var7 &&
-                jb.field_b < 10 + var7) {
+                MouseWheelInput.field_b >= -10 + var7 &&
+                MouseWheelInput.field_b < 10 + var7) {
                 if (8 != this.field_Bb) {
                   this.a(7, 9);
                   if (var15 != 0) {
@@ -6423,12 +6423,12 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 7;
                 }
-                l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db && (this.field_vb == 2 ||
                 this.field_Bb == 10)) {
-                l.a(var6, var7, (int)(15.0 + 5.0 * Math.cos(mm.field_f)), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.cos(mm.field_f)), 16777215);
                 var9 = kk.field_b[11];
               }
             }
@@ -6440,11 +6440,11 @@ public final class Terraphoenix extends gf {
             if (decompiledFrameRemainder1) {
               var6 = 300;
               var7 = 134;
-              l.a(var6, var7, (int)(5.0 * Math.sin(mm.field_f) + 15.0), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.sin(mm.field_f) + 15.0), 65280);
               if (ef.field_j >= (-10 + var6) &&
                 (10 + var6) > ef.field_j &&
-                (-10 + var7) <= jb.field_b &&
-                (var7 + 10) > jb.field_b) {
+                (-10 + var7) <= MouseWheelInput.field_b &&
+                (var7 + 10) > MouseWheelInput.field_b) {
                 if (this.field_Bb != 8) {
                   this.a(param0 + 7850, 8);
                   if (var15 != 0) {
@@ -6464,23 +6464,23 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 9;
                 }
-                l.a(var6, var7, (int)(-5.0 * Math.sin(mm.field_f) + 15.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(-5.0 * Math.sin(mm.field_f) + 15.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db && (this.field_vb == 1 ||
                 10 == this.field_Bb)) {
-                l.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
                 var9 = kk.field_b[12];
               }
             }
             if (this.field_Bb == 11) {
               var6 = 277;
               var7 = 99;
-              l.a(var6, var7, (int)(Math.sin(mm.field_f) * 5.0 + 15.0), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(Math.sin(mm.field_f) * 5.0 + 15.0), 65280);
               if (ef.field_j >= (var6 - 10) &&
                 ef.field_j < (var6 + 10) &&
-                (-10 + var7) <= jb.field_b &&
-                (10 + var7) > jb.field_b) {
+                (-10 + var7) <= MouseWheelInput.field_b &&
+                (10 + var7) > MouseWheelInput.field_b) {
                 this.a(7, 11);
                 if (oh.field_f != 0) {
                   this.field_db = false;
@@ -6490,22 +6490,22 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 8;
                 }
-                l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db) {
-                l.a(var6, var7, (int)(15.0 + Math.cos(mm.field_f) * 5.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.cos(mm.field_f) * 5.0), 16777215);
                 var9 = kk.field_b[13];
               }
             }
             if (this.field_Bb == 12) {
               var6 = 427;
               var7 = 199;
-              l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * 5.0), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * 5.0), 65280);
               if (var6 - 10 <= ef.field_j &&
                 var6 + 10 > ef.field_j &&
-                -10 + var7 <= jb.field_b &&
-                jb.field_b < 10 + var7) {
+                -10 + var7 <= MouseWheelInput.field_b &&
+                MouseWheelInput.field_b < 10 + var7) {
                 this.a(7, 12);
                 if (oh.field_f != 0) {
                   this.field_db = false;
@@ -6515,11 +6515,11 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 9;
                 }
-                l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
               }
               if (this.field_Db &&
                 !this.field_db) {
-                l.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.cos(mm.field_f) + 15.0), 16777215);
                 var9 = kk.field_b[14];
               }
             }
@@ -6545,11 +6545,11 @@ public final class Terraphoenix extends gf {
                 var6 = 407;
                 var7 = 152;
               }
-              l.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
+              SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.sin(mm.field_f)), 65280);
               if (ef.field_j >= -10 + var6 &&
                 var6 + 10 > ef.field_j &&
-                jb.field_b >= -10 + var7 &&
-                10 + var7 > jb.field_b) {
+                MouseWheelInput.field_b >= -10 + var7 &&
+                10 + var7 > MouseWheelInput.field_b) {
                 var10 = this.field_Bb;
                 if (ha.field_q == 1) {
                   var10 -= 2;
@@ -6571,11 +6571,11 @@ public final class Terraphoenix extends gf {
                   }
                   this.field_P = 11;
                 }
-                l.a(var6, var7, (int)(Math.sin(mm.field_f) * -5.0 + 15.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(Math.sin(mm.field_f) * -5.0 + 15.0), 65280);
               }
               if (this.field_Db &&
                 this.field_db) {
-                l.a(var6, var7, (int)(15.0 + Math.cos(mm.field_f) * 5.0), 16777215);
+                SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.cos(mm.field_f) * 5.0), 16777215);
                 var9 = kk.field_b[15];
               }
             }
@@ -6645,7 +6645,7 @@ public final class Terraphoenix extends gf {
               while (var8.length > var10) {
                 var7 = var8[var10][1];
                 var6 = var8[var10][0];
-                l.a(var6, var7, (int)(5.0 * Math.sin(mm.field_f) + 15.0), 65280);
+                SoftwareRasterizer.a(var6, var7, (int)(5.0 * Math.sin(mm.field_f) + 15.0), 65280);
                 stackIn_591_0 = ~ef.field_j;
                 stackIn_591_1 = ~(var6 - 10);
                 if (var15 != 0) {
@@ -6654,15 +6654,15 @@ public final class Terraphoenix extends gf {
                 }
                 if (stackIn_591_0 <= stackIn_591_1 &&
                   ef.field_j < 10 + var6 &&
-                  jb.field_b >= -10 + var7 &&
-                  (10 + var7) > jb.field_b) {
+                  MouseWheelInput.field_b >= -10 + var7 &&
+                  (10 + var7) > MouseWheelInput.field_b) {
                   this.a(7, 1);
                   if (oh.field_f != 0 && (null == this.field_wb ||
                     this.field_wb.field_l == 12 &&
                     !(ef.field_j < this.field_wb.field_k) &&
                     !(this.field_wb.field_t < ef.field_j) &&
-                    !(this.field_wb.field_q > jb.field_b) &&
-                    !(jb.field_b > this.field_wb.field_y))) {
+                    !(this.field_wb.field_q > MouseWheelInput.field_b) &&
+                    !(MouseWheelInput.field_b > this.field_wb.field_y))) {
                     this.field_Db = true;
                     this.field_db = false;
                     this.field_P = 1;
@@ -6670,11 +6670,11 @@ public final class Terraphoenix extends gf {
                       qd.$cfr$intArgs$a$e9dea5688aa5(20, 31);
                     }
                   }
-                  l.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
+                  SoftwareRasterizer.a(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
                 }
                 if (this.field_Db &&
                   !this.field_db) {
-                  l.a(var6, var7, (int)(15.0 + 5.0 * Math.cos(mm.field_f)), 16777215);
+                  SoftwareRasterizer.a(var6, var7, (int)(15.0 + 5.0 * Math.cos(mm.field_f)), 16777215);
                   var9 = kk.field_b[var8[var10][2]];
                 }
                 var10++;
@@ -6688,7 +6688,7 @@ public final class Terraphoenix extends gf {
             if (decompiledFrameRemainder0) {
               sj.a(stackIn_591_0, stackIn_591_1, 284, 621, 13, 452, (String) (var9), 0);
             }
-            l.c(25, 89, 448, 412);
+            SoftwareRasterizer.c(25, 89, 448, 412);
             var10 = nd.field_k + 16;
             if (25 < nd.field_k) {
               var10 = 66 - nd.field_k;
@@ -6699,29 +6699,29 @@ public final class Terraphoenix extends gf {
                 var11 = 89;
                 break;
               }
-              l.a(var11, 0, 480, 65280, var10);
+              SoftwareRasterizer.a(var11, 0, 480, 65280, var10);
               var11 += 18;
             } while (var15 == 0);
             do {
               if (var11 >= 412) {
                 if (25 < ef.field_j &&
-                  jb.field_b > 89 &&
+                  MouseWheelInput.field_b > 89 &&
                   ef.field_j < 448 &&
-                  jb.field_b < 412) {
+                  MouseWheelInput.field_b < 412) {
                   var11 = (ef.field_j - 25) % 18;
-                  var12 = (jb.field_b - 89) % 18;
+                  var12 = (MouseWheelInput.field_b - 89) % 18;
                   var13 = (ef.field_j + (-25 - var11)) / 18;
-                  var14 = (-89 + (jb.field_b - var12)) / 18;
-                  l.c(25 + var13 * 18, 0, 25 + var13 * 18, 480, 65280, -(255 * var11 / 18) + 255);
-                  l.c((1 + var13) * 18 + 25, 0, 25 + 18 * var13 + 18, 480, 65280, 255 * var11 / 18);
-                  l.c(0, 18 * var14 + 89, 640, 18 * var14 + 89, 65280, 255 - 255 * var12 / 18);
-                  l.c(0, (var14 + 1) * 18 + 89, 640, 107 + 18 * var14, 65280, 255 * var12 / 18);
-                  l.c();
+                  var14 = (-89 + (MouseWheelInput.field_b - var12)) / 18;
+                  SoftwareRasterizer.c(25 + var13 * 18, 0, 25 + var13 * 18, 480, 65280, -(255 * var11 / 18) + 255);
+                  SoftwareRasterizer.c((1 + var13) * 18 + 25, 0, 25 + 18 * var13 + 18, 480, 65280, 255 * var11 / 18);
+                  SoftwareRasterizer.c(0, 18 * var14 + 89, 640, 18 * var14 + 89, 65280, 255 - 255 * var12 / 18);
+                  SoftwareRasterizer.c(0, (var14 + 1) * 18 + 89, 640, 107 + 18 * var14, 65280, 255 * var12 / 18);
+                  SoftwareRasterizer.c();
                 }
-                l.c();
+                SoftwareRasterizer.c();
                 break;
               }
-              l.g(0, var11, 640, 65280, var10);
+              SoftwareRasterizer.g(0, var11, 640, 65280, var10);
               var11 += 18;
             } while (var15 == 0);
             k.field_f.a(param0 ^ -7843);
@@ -6729,25 +6729,25 @@ public final class Terraphoenix extends gf {
           this.v(0);
           this.i((byte) 109);
           ki.field_ab.c(0, 0);
-          l.c(0, 425, 640, 480);
+          SoftwareRasterizer.c(0, 425, 640, 480);
           od.field_e.c(0, 0);
-          l.c();
+          SoftwareRasterizer.c();
           var4 = 13;
           var5 = 441;
           var6 = 198;
           var7 = 26;
           if (var4 <= ef.field_j &&
             ef.field_j < (var6 + var4) &&
-            var5 <= jb.field_b &&
-            var7 + var5 > jb.field_b) {
-            l.d(var4, var5, var6, var7, 16777215, 64);
+            var5 <= MouseWheelInput.field_b &&
+            var7 + var5 > MouseWheelInput.field_b) {
+            SoftwareRasterizer.d(var4, var5, var6, var7, 16777215, 64);
           }
           var4 = 221;
           if (var4 <= ef.field_j &&
             ef.field_j < var4 + var6 &&
-            jb.field_b >= var5 &&
-            (var7 + var5) > jb.field_b) {
-            l.d(var4, var5, var6, var7, 16777215, 64);
+            MouseWheelInput.field_b >= var5 &&
+            (var7 + var5) > MouseWheelInput.field_b) {
+            SoftwareRasterizer.d(var4, var5, var6, var7, 16777215, 64);
           }
           var4 = 429;
           if (this.field_Db) {
@@ -6757,24 +6757,24 @@ public final class Terraphoenix extends gf {
             if ((var6 + var4) <= ef.field_j) {
               return;
             }
-            if (jb.field_b < var5) {
+            if (MouseWheelInput.field_b < var5) {
               return;
             }
-            if (var7 + var5 <= jb.field_b) {
+            if (var7 + var5 <= MouseWheelInput.field_b) {
               return;
             }
-            l.d(var4, var5, var6, var7, 16777215, 64);
+            SoftwareRasterizer.d(var4, var5, var6, var7, 16777215, 64);
             if (var15 == 0) {
               return;
             }
           }
           this.field_P = -1;
-          l.d(var4, var5, var6, var7, 0, 128);
+          SoftwareRasterizer.d(var4, var5, var6, var7, 0, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.R(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.R(" + param0 + ')');
         }
     }
 
@@ -6797,18 +6797,18 @@ public final class Terraphoenix extends gf {
           var5 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (param1 <= 0))) {
-            stackIn_16_0 = ~(param0[pj.field_t] & 1 << b.field_b);
+            stackIn_16_0 = ~(param0[pj.field_t] & 1 << RandomAccessCacheFile.field_b);
             if (var6 == 0) {
               if (stackIn_16_0 < -1) {
                 var4_int = var4_int | 1 << var5;
               }
               param1--;
-              b.field_b = b.field_b + 1;
+              RandomAccessCacheFile.field_b = RandomAccessCacheFile.field_b + 1;
               var5++;
-              if (8 > b.field_b) {
+              if (8 > RandomAccessCacheFile.field_b) {
                 continue;
               }
-              b.field_b = 0;
+              RandomAccessCacheFile.field_b = 0;
               pj.field_t = pj.field_t + 1;
               continue;
             }
@@ -6828,7 +6828,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -6857,7 +6857,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6880,7 +6880,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.MB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.MB(" + param0 + ')');
         }
     }
 
@@ -6888,7 +6888,7 @@ public final class Terraphoenix extends gf {
         try {
           this.a(-68, "terraphoenix", 32);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.init()");
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.init()");
         }
     }
 
@@ -6914,7 +6914,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -6940,7 +6940,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6949,17 +6949,17 @@ public final class Terraphoenix extends gf {
           int var2_int = 18 % ((-17 - param0) / 47);
           this.field_Fb = this.field_Fb + this.field_M;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.OB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.OB(" + param0 + ')');
         }
     }
 
     private final void v(int param0) {
         try {
           ki.field_T.d(-(rk.field_c >> 1) + 305, 77);
-          l.d(-(rk.field_c >> 1) + 320, 77, rk.field_c, 362, param0, 192);
+          SoftwareRasterizer.d(-(rk.field_c >> 1) + 320, 77, rk.field_c, 362, param0, 192);
           ki.field_T.d(320 + (rk.field_c >> 1), 77);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.BB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.BB(" + param0 + ')');
         }
     }
 
@@ -6979,8 +6979,8 @@ public final class Terraphoenix extends gf {
         int var11_int = 0;
         g var11 = null;
         g var12 = null;
-        ci var13 = null;
-        ci var14 = null;
+        Sprite var13 = null;
+        Sprite var14 = null;
         int var15 = 0;
         var15 = field_V;
         try {
@@ -6991,20 +6991,20 @@ public final class Terraphoenix extends gf {
           var3 = ic.field_x[0];
           if (wb.field_g < 10) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var4 = 320;
             var5 = 240;
             this.field_U.a(0, 77, 640, 362);
-            l.d(0, 77, 640, 362, 0, 160);
+            SoftwareRasterizer.d(0, 77, 640, 362, 0, 160);
             this.a(-3407, var5, var4);
             var6 = 127;
             if (this.field_Bb == 13) {
               this.field_P = 10;
             }
             if (this.field_P != -1) {
-              l.e(444, 99, 170, 170, 0);
-              l.e(443, 98, 172, 172, 16777215);
-              l.e(442, 97, 174, 174, 0);
+              SoftwareRasterizer.e(444, 99, 170, 170, 0);
+              SoftwareRasterizer.e(443, 98, 172, 172, 16777215);
+              SoftwareRasterizer.e(442, 97, 174, 174, 0);
               this.field_ab[this.field_P].b(445, 100);
             }
             var7 = null;
@@ -7023,7 +7023,7 @@ public final class Terraphoenix extends gf {
               this.g(true);
               return;
             }
-            L6: {
+            regionExit1: {
               if (this.field_db) {
                 var8 = new int[]{4, 5};
                 var3 = kh.field_L + var9 + p.field_f[14];
@@ -7046,7 +7046,7 @@ public final class Terraphoenix extends gf {
                       this.field_X.a(2, ic.field_x[10], -97);
                     }
                     eg.field_p = 0;
-                    break L6;
+                    break regionExit1;
                   }
                   if (var10 == 2 &&
                     var15 == 0) {
@@ -7058,8 +7058,8 @@ public final class Terraphoenix extends gf {
                       this.field_X.a(2, ic.field_x[10], -48);
                     }
                     eg.field_p = 0;
-                    l.c();
-                    break L6;
+                    SoftwareRasterizer.c();
+                    break regionExit1;
                   }
                   if (var10 == 3) {
                     var3 = kh.field_L + var9 + p.field_f[3];
@@ -7071,7 +7071,7 @@ public final class Terraphoenix extends gf {
                       }
                       var8 = new int[]{20, 26, 9};
                       eg.field_p = 0;
-                      l.c();
+                      SoftwareRasterizer.c();
                     } else {
                       var7 = new int[]{23, 24, 25};
                       var8 = new int[]{20, 26, 9};
@@ -7080,9 +7080,9 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(2, ic.field_x[10], -13);
                       }
                       eg.field_p = 0;
-                      l.c();
+                      SoftwareRasterizer.c();
                     }
-                    break L6;
+                    break regionExit1;
                   }
                   if (var10 == 4) {
                     var7 = new int[]{32, 33, 34, 35};
@@ -7096,8 +7096,8 @@ public final class Terraphoenix extends gf {
                       this.field_X.a(8, ic.field_x[39], -97);
                     }
                     eg.field_p = 0;
-                    l.c();
-                    break L6;
+                    SoftwareRasterizer.c();
+                    break regionExit1;
                   }
                   if (var10 == 5 &&
                     var15 == 0) {
@@ -7111,8 +7111,8 @@ public final class Terraphoenix extends gf {
                       this.field_X.a(1, ic.field_x[44], -9);
                     }
                     eg.field_p = 0;
-                    l.c();
-                    break L6;
+                    SoftwareRasterizer.c();
+                    break regionExit1;
                   }
                   if (var10 == 6 &&
                     var15 == 0) {
@@ -7124,8 +7124,8 @@ public final class Terraphoenix extends gf {
                       this.field_X.a(8, ic.field_x[39], -114);
                     }
                     eg.field_p = 0;
-                    l.c();
-                    break L6;
+                    SoftwareRasterizer.c();
+                    break regionExit1;
                   }
                   switch (var10) {
                     case 7:
@@ -7136,8 +7136,8 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(1, ic.field_x[44], -93);
                       }
                       eg.field_p = 0;
-                      l.c();
-                      break L6;
+                      SoftwareRasterizer.c();
+                      break regionExit1;
                     case 8:
                       if (this.field_vb == 1) {
                         var8 = new int[]{53, 54};
@@ -7147,10 +7147,10 @@ public final class Terraphoenix extends gf {
                           this.field_X.a(3, ic.field_x[55], -77);
                         }
                         eg.field_p = 0;
-                        l.c();
+                        SoftwareRasterizer.c();
                       }
                       if (2 != this.field_vb) {
-                        break L6;
+                        break regionExit1;
                       }
                       var7 = new int[]{56, 57, 58};
                       var8 = new int[]{36, 59, 60, 61};
@@ -7160,8 +7160,8 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(8, ic.field_x[39], -23);
                       }
                       eg.field_p = 0;
-                      l.c();
-                      break L6;
+                      SoftwareRasterizer.c();
+                      break regionExit1;
                     case 9:
                       var7 = new int[]{63, 64};
                       var3 = kh.field_L + var9 + p.field_f[10];
@@ -7170,8 +7170,8 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(1, ic.field_x[44], -76);
                       }
                       eg.field_p = 0;
-                      l.c();
-                      break L6;
+                      SoftwareRasterizer.c();
+                      break regionExit1;
                     case 10:
                       if (this.field_vb == 2) {
                         var7 = new int[]{66, 51, 52};
@@ -7181,10 +7181,10 @@ public final class Terraphoenix extends gf {
                           this.field_X.a(3, ic.field_x[55], -105);
                         }
                         eg.field_p = 0;
-                        l.c();
+                        SoftwareRasterizer.c();
                       }
                       if (1 != this.field_vb) {
-                        break L6;
+                        break regionExit1;
                       }
                       var8 = new int[]{36, 59, 50};
                       var7 = new int[]{67, 57, 58};
@@ -7194,8 +7194,8 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(8, ic.field_x[39], -95);
                       }
                       eg.field_p = 0;
-                      l.c();
-                      break L6;
+                      SoftwareRasterizer.c();
+                      break regionExit1;
                     case 11:
                       var7 = new int[]{68, 69, 70};
                       var3 = kh.field_L + var9 + p.field_f[11];
@@ -7205,8 +7205,8 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(5, ic.field_x[74], -18);
                       }
                       eg.field_p = 0;
-                      l.c();
-                      break L6;
+                      SoftwareRasterizer.c();
+                      break regionExit1;
                     case 12:
                       var7 = new int[]{75};
                       var3 = kh.field_L + var9 + p.field_f[12];
@@ -7215,10 +7215,10 @@ public final class Terraphoenix extends gf {
                         this.field_X.a(6, ic.field_x[77], -125);
                       }
                       eg.field_p = 0;
-                      l.c();
-                      break L6;
+                      SoftwareRasterizer.c();
+                      break regionExit1;
                     default:
-                      break L6;
+                      break regionExit1;
                     case 13:
                       if (var15 == 0) {
                         var8 = new int[]{80, 81};
@@ -7228,8 +7228,8 @@ public final class Terraphoenix extends gf {
                           this.field_X.a(7, ic.field_x[79], -37);
                         }
                         eg.field_p = 0;
-                        l.c();
-                        break L6;
+                        SoftwareRasterizer.c();
+                        break regionExit1;
                       }
                       break;
                   }
@@ -7267,12 +7267,12 @@ public final class Terraphoenix extends gf {
               (var7 != null)) {
               var6 = 114;
               bc.field_a = var6;
-              l.c(0, 96, 640, ej.field_V + 96);
+              SoftwareRasterizer.c(0, 96, 640, ej.field_V + 96);
               var10 = 0;
               do {
                 if (!(var10 < java.lang.reflect.Array.getLength(var7))) {
                   var6 = bc.field_a;
-                  l.c(0, 94, 640, 96);
+                  SoftwareRasterizer.c(0, 94, 640, 96);
                   break;
                 }
                 var6 = var6 + ji.a(45, 13, 16777088, -gi.field_h + var6, "   " + ic.field_x[((int[]) (var7))[var10]], (byte) 83, 420) * 13;
@@ -7283,7 +7283,7 @@ public final class Terraphoenix extends gf {
               do {
                 if (!(var10 < java.lang.reflect.Array.getLength(var7))) {
                   var6 = bc.field_a;
-                  l.c(0, ej.field_V + 96, 640, 96 + ej.field_V + 2);
+                  SoftwareRasterizer.c(0, ej.field_V + 96, 640, 96 + ej.field_V + 2);
                   break;
                 }
                 var6 = var6 + ji.a(45, 13, 8355648, -gi.field_h + var6, "   " + ic.field_x[((int[]) (var7))[var10]], (byte) 86, 420) * 13;
@@ -7293,7 +7293,7 @@ public final class Terraphoenix extends gf {
               var10 = 0;
               do {
                 if (!(var10 < java.lang.reflect.Array.getLength(var7))) {
-                  l.c();
+                  SoftwareRasterizer.c();
                   break;
                 }
                 var6 = var6 + 13 * ji.a(45, 13, 8355648, -gi.field_h + var6, "   " + ic.field_x[((int[]) (var7))[var10]], (byte) 121, 420);
@@ -7330,41 +7330,41 @@ public final class Terraphoenix extends gf {
             }
             boolean decompiledFrameRemainder0 = true;
             if (this.field_Bb == 0 &&
-              (fa.field_a != 1 ||
+              (Archive.field_a != 1 ||
               (ef.field_i & 512) > 0) ||
               this.field_Bb == 13) {
-              l.d(224, 340, 192, 50, 0, 128);
+              SoftwareRasterizer.d(224, 340, 192, 50, 0, 128);
               var10 = -wa.field_s + 16776960;
               if (25 > nd.field_k) {
                 var10 = 16776960;
               }
               if (ef.field_j >= 224 &&
                 ef.field_j <= 416 &&
-                jb.field_b >= 340 &&
-                jb.field_b <= 390) {
+                MouseWheelInput.field_b >= 340 &&
+                MouseWheelInput.field_b <= 390) {
                 var10 = 16777215;
               }
               vc.field_f.a(lk.field_c, 224, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
-              l.e(223, 339, 194, 52, 0);
-              l.e(225, 341, 190, 48, 0);
-              l.e(224, 340, 192, 50, var10);
+              SoftwareRasterizer.e(223, 339, 194, 52, 0);
+              SoftwareRasterizer.e(225, 341, 190, 48, 0);
+              SoftwareRasterizer.e(224, 340, 192, 50, var10);
               decompiledFrameRemainder0 = (var15 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (this.field_Bb == 0) {
-                l.d(64, 340, 192, 50, 0, 128);
+                SoftwareRasterizer.d(64, 340, 192, 50, 0, 128);
                 var10 = -wa.field_s + 16776960;
                 if (64 <= ef.field_j &&
                   ef.field_j <= 256 &&
-                  jb.field_b >= 340 &&
-                  jb.field_b <= 390) {
+                  MouseWheelInput.field_b >= 340 &&
+                  MouseWheelInput.field_b <= 390) {
                   var10 = 16777215;
                 }
                 vc.field_f.a(g.field_qb, 64, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
-                l.e(63, 339, 194, 52, 0);
-                l.e(65, 341, 190, 48, 0);
-                l.e(64, 340, 192, 50, var10);
-                l.d(384, 340, 192, 50, 0, 128);
+                SoftwareRasterizer.e(63, 339, 194, 52, 0);
+                SoftwareRasterizer.e(65, 341, 190, 48, 0);
+                SoftwareRasterizer.e(64, 340, 192, 50, var10);
+                SoftwareRasterizer.d(384, 340, 192, 50, 0, 128);
                 if (16777215 != var10) {
                   var10 = -wa.field_s + 16776960;
                   if (!(nd.field_k >= 25)) {
@@ -7378,31 +7378,31 @@ public final class Terraphoenix extends gf {
                 }
                 if (ef.field_j >= 384 &&
                   576 >= ef.field_j &&
-                  jb.field_b >= 340 &&
-                  390 >= jb.field_b) {
+                  MouseWheelInput.field_b >= 340 &&
+                  390 >= MouseWheelInput.field_b) {
                   var10 = 16777215;
                 }
                 og.field_f.a(dj.field_f, 352, 280, 256, 50, 7829367 | var10, -1, 1, 1, og.field_f.field_s);
                 vc.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
-                l.e(383, 339, 194, 52, 0);
-                l.e(385, 341, 190, 48, 0);
-                l.e(384, 340, 192, 50, var10);
+                SoftwareRasterizer.e(383, 339, 194, 52, 0);
+                SoftwareRasterizer.e(385, 341, 190, 48, 0);
+                SoftwareRasterizer.e(384, 340, 192, 50, var10);
                 decompiledFrameRemainder0 = (var15 != 0);
               }
               if (decompiledFrameRemainder0) {
-                l.d(64, 340, 192, 50, 0, 128);
+                SoftwareRasterizer.d(64, 340, 192, 50, 0, 128);
                 var10 = -wa.field_s + 16776960;
                 if (64 <= ef.field_j &&
                   ef.field_j <= 256 &&
-                  jb.field_b >= 340 &&
-                  390 >= jb.field_b) {
+                  MouseWheelInput.field_b >= 340 &&
+                  390 >= MouseWheelInput.field_b) {
                   var10 = 16777215;
                 }
                 vc.field_f.a(hd.field_m, 64, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
-                l.e(63, 339, 194, 52, 0);
-                l.e(65, 341, 190, 48, 0);
-                l.e(64, 340, 192, 50, var10);
-                l.d(384, 340, 192, 50, 0, 128);
+                SoftwareRasterizer.e(63, 339, 194, 52, 0);
+                SoftwareRasterizer.e(65, 341, 190, 48, 0);
+                SoftwareRasterizer.e(64, 340, 192, 50, var10);
+                SoftwareRasterizer.d(384, 340, 192, 50, 0, 128);
                 if (var10 != 16777215) {
                   var10 = -wa.field_s + 16776960;
                   if (!(nd.field_k >= 25)) {
@@ -7416,14 +7416,14 @@ public final class Terraphoenix extends gf {
                 }
                 if (384 <= ef.field_j &&
                   576 >= ef.field_j &&
-                  jb.field_b >= 340 &&
-                  jb.field_b <= 390) {
+                  MouseWheelInput.field_b >= 340 &&
+                  MouseWheelInput.field_b <= 390) {
                   var10 = 16777215;
                 }
                 vc.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
-                l.e(383, 339, 194, 52, 0);
-                l.e(385, 341, 190, 48, 0);
-                l.e(384, 340, 192, 50, var10);
+                SoftwareRasterizer.e(383, 339, 194, 52, 0);
+                SoftwareRasterizer.e(385, 341, 190, 48, 0);
+                SoftwareRasterizer.e(384, 340, 192, 50, var10);
               }
             }
             vc.field_f.c(var3, 320, 468, 13881286, 0);
@@ -7433,18 +7433,18 @@ public final class Terraphoenix extends gf {
           bj.field_e.d(0, 439);
           this.i((byte) 96);
           pc.field_e.c(0, 0);
-          l.c(0, 0, 158, 480);
+          SoftwareRasterizer.c(0, 0, 158, 480);
           vc.field_e.d(0, 439);
-          l.c(158, 0, 482, 480);
+          SoftwareRasterizer.c(158, 0, 482, 480);
           bj.field_e.b(0, 439);
-          l.c(482, 0, 640, 480);
+          SoftwareRasterizer.c(482, 0, 640, 480);
           vc.field_e.d(0, 439);
-          l.c();
+          SoftwareRasterizer.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.WB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.WB(" + param0 + ')');
         }
     }
 
@@ -7482,7 +7482,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -7512,7 +7512,7 @@ public final class Terraphoenix extends gf {
         try {
           pj.field_t = 0;
           var2 = new byte[123];
-          b.field_b = 0;
+          RandomAccessCacheFile.field_b = 0;
           this.a(this.field_pb, -128, var2);
           this.a(this.field_Bb, -127, var2);
           sj.field_a[2].field_e = true;
@@ -7628,7 +7628,7 @@ public final class Terraphoenix extends gf {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.c(var2, 640, fa.field_a);
+            this.c(var2, 640, Archive.field_a);
             this.a(ge.field_e, var2, 20, 126);
             this.a(qc.field_c, -127, var2);
             this.a(this.field_Fb, -127, var2);
@@ -7661,7 +7661,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.AB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.AB(" + param0 + ')');
         }
     }
 
@@ -7669,7 +7669,7 @@ public final class Terraphoenix extends gf {
         int stackIn_31_0 = 0;
         int stackIn_52_0 = 0;
         int stackIn_95_0 = 0;
-        e stackIn_154_0 = null;
+        BattleState stackIn_154_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -7716,7 +7716,7 @@ public final class Terraphoenix extends gf {
                   continue;
                 }
                 wb.field_g = 20;
-                ja.field_i = kl.field_c;
+                ja.field_i = TutorialText.field_c;
                 return;
               }
               break;
@@ -7727,7 +7727,7 @@ public final class Terraphoenix extends gf {
           var5 = stackIn_31_0;
           var6 = -10 % ((74 - param0) / 43);
           if (~var2_int == ~var5) {
-            ja.field_i = kl.field_c;
+            ja.field_i = TutorialText.field_c;
             wb.field_g = 20;
             return;
           }
@@ -7809,11 +7809,11 @@ public final class Terraphoenix extends gf {
           boolean decompiledFrameRemainder0 = true;
           var5++;
           if (var5 == var2_int) {
-            if (kl.field_c != 6) {
+            if (TutorialText.field_c != 6) {
               this.field_xb = -1;
               if (7 == ja.field_i) {
                 oh.field_e = oh.field_e + 1;
-                km.field_e = km.field_e + (-ge.field_e + bh.field_a);
+                ArchiveIndex.field_e = ArchiveIndex.field_e + (-ge.field_e + bh.field_a);
                 oh.field_e = oh.field_e + this.field_X.field_H;
                 ge.field_e = ge.field_e + this.field_X.field_H;
               }
@@ -7822,7 +7822,7 @@ public final class Terraphoenix extends gf {
               if (ge.field_e == 0) {
                 ja.field_i = 0;
               }
-              if (kl.field_a > 0) {
+              if (TutorialText.field_a > 0) {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
@@ -7839,9 +7839,9 @@ public final class Terraphoenix extends gf {
                 if (var7 < 12) {
                   stackIn_154_0 = this.field_X;
                   if (var8 == 0) {
-                    if (stackIn_154_0.field_C[var7] != null &&
-                      null != this.field_X.field_C[var7].field_Z) {
-                      this.field_X.field_C[var7].field_P = 0;
+                    if (stackIn_154_0.units[var7] != null &&
+                      null != this.field_X.units[var7].field_Z) {
+                      this.field_X.units[var7].field_P = 0;
                     }
                     var7++;
                     continue;
@@ -7851,7 +7851,7 @@ public final class Terraphoenix extends gf {
                 }
                 break;
               }
-              ((e) (Object) stackIn_154_0).a(70, this);
+              ((BattleState) (Object) stackIn_154_0).a(70, this);
             }
           }
           var5++;
@@ -7871,7 +7871,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.RB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.RB(" + param0 + ')');
         }
     }
 
@@ -7935,7 +7935,7 @@ public final class Terraphoenix extends gf {
         var10 = field_V;
         try {
           var2 = mb.d(param0 + 160);
-          if (c.b(-127)) {
+          if (NodeHashTableIterator.b(-127)) {
             sl.a(var2, qc.a((byte) -128), (byte) 80);
             return;
           }
@@ -7951,15 +7951,15 @@ public final class Terraphoenix extends gf {
             ej.a(-12966, var2);
             return;
           }
-          l.a();
+          SoftwareRasterizer.a();
           if (this.field_Cb != null) {
-            l.f(0, 0, 640, 480, 16777215);
+            SoftwareRasterizer.f(0, 0, 640, 480, 16777215);
             this.field_Cb.c((byte) -107);
             this.c(false);
             ia.a(0, var2, 0, (byte) 116);
             return;
           }
-          if (fa.field_a == 2) {
+          if (Archive.field_a == 2) {
             if ((16711680 & wa.field_s) < 16711680) {
               wa.field_s = wa.field_s + 65536;
             }
@@ -8004,7 +8004,7 @@ public final class Terraphoenix extends gf {
               ab.field_i = -1;
               if (10 > wb.field_g) {
                 hh.field_m.a();
-                l.a();
+                SoftwareRasterizer.a();
                 var4 = 320;
                 var5 = 240;
                 this.a(-3407, var5, var4);
@@ -8020,10 +8020,10 @@ public final class Terraphoenix extends gf {
               var4Lifetime4 = 484;
               var7 = 29;
               if (var4Lifetime4 <= ef.field_j &&
-                var5Lifetime3 <= jb.field_b &&
+                var5Lifetime3 <= MouseWheelInput.field_b &&
                 (var4Lifetime4 + var6) >= ef.field_j &&
-                jb.field_b <= (var7 + var5Lifetime3)) {
-                l.d(var4Lifetime4, var5Lifetime3, var6, var7, 16777215, 128);
+                MouseWheelInput.field_b <= (var7 + var5Lifetime3)) {
+                SoftwareRasterizer.d(var4Lifetime4, var5Lifetime3, var6, var7, 16777215, 128);
               }
               if (rf.field_B[7].field_d) {
                 var6Lifetime3 = 29;
@@ -8031,27 +8031,27 @@ public final class Terraphoenix extends gf {
                 var7Lifetime2 = 29;
                 var4Lifetime5 = 127;
                 if (ef.field_j >= var4Lifetime5 &&
-                  jb.field_b >= var5Lifetime4 &&
+                  MouseWheelInput.field_b >= var5Lifetime4 &&
                   ef.field_j <= var4Lifetime5 + var6Lifetime3 &&
-                  (var7Lifetime2 + var5Lifetime4) >= jb.field_b) {
-                  l.d(var4Lifetime5, var5Lifetime4, var6Lifetime3, var7Lifetime2, 16777215, 128);
+                  (var7Lifetime2 + var5Lifetime4) >= MouseWheelInput.field_b) {
+                  SoftwareRasterizer.d(var4Lifetime5, var5Lifetime4, var6Lifetime3, var7Lifetime2, 16777215, 128);
                 }
                 var6Lifetime3 = 101;
                 var5Lifetime4 = 446;
                 var4Lifetime5 = 531;
                 var7Lifetime2 = 29;
                 if (var4Lifetime5 <= ef.field_j &&
-                  var5Lifetime4 <= jb.field_b &&
+                  var5Lifetime4 <= MouseWheelInput.field_b &&
                   ef.field_j <= var6Lifetime3 + var4Lifetime5 &&
-                  (var7Lifetime2 + var5Lifetime4) >= jb.field_b) {
-                  l.d(var4Lifetime5, var5Lifetime4, var6Lifetime3, var7Lifetime2, 16777215, 128);
+                  (var7Lifetime2 + var5Lifetime4) >= MouseWheelInput.field_b) {
+                  SoftwareRasterizer.d(var4Lifetime5, var5Lifetime4, var6Lifetime3, var7Lifetime2, 16777215, 128);
                 }
               }
               ia.a(0, var2, 0, (byte) 125);
               if (mm.field_e >= 2) {
                 var8_ref_Runtime = Runtime.getRuntime();
                 var9 = (int)(var8_ref_Runtime.totalMemory() - var8_ref_Runtime.freeMemory()) >> 20;
-                vc.field_f.b(gl.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
+                vc.field_f.b(UiWidget.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
                 if (this.field_ob) {
                   og.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
                 }
@@ -8120,7 +8120,7 @@ public final class Terraphoenix extends gf {
             ab.field_i = -1;
             if (wb.field_g < 10) {
               hh.field_m.a();
-              l.a();
+              SoftwareRasterizer.a();
               var5Lifetime1 = 320;
               var6Lifetime1 = 240;
               this.a(param0 ^ 3350, var6Lifetime1, var5Lifetime1);
@@ -8133,30 +8133,30 @@ public final class Terraphoenix extends gf {
               stackIn_184_3 = new StringBuilder().append(qf.field_a).append("<br><br>");
               stackIn_185_4 = (ge.field_e != 0);
               stackIn_188_5 = 119;
-              stackIn_189_6 = (0 != kl.field_a);
+              stackIn_189_6 = (0 != TutorialText.field_a);
               var8 = stackIn_184_0 + stackIn_184_1 * ((ud) (Object) stackIn_184_2).a(((StringBuilder) (Object) stackIn_184_3).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_185_4, stackIn_188_5, stackIn_189_6, false)).toString(), 330 - var3_intLifetime1 / 2, var8, var3_intLifetime1 - 10, 128, 16777215, 0, 1, 0, 14);
               var8 += 24;
-              if (!this.a(false, 224, (byte) -44, var8, ck.field_c)) {
+              if (!this.a(false, 224, (byte) -44, var8, FullscreenFocusCanvas.field_c)) {
               }
               var8 += 80;
               stackIn_193_0 = var7_ref_ud;
               stackIn_193_1 = false;
               stackIn_194_2 = (ge.field_e != 0);
-              stackIn_198_3 = (kl.field_a != 0);
-              ((ud) (Object) stackIn_193_0).c(ij.a(stackIn_193_1, stackIn_194_2, stackIn_198_3, 2), 320, var8, 16777215, 0);
+              stackIn_198_3 = (TutorialText.field_a != 0);
+              ((ud) (Object) stackIn_193_0).c(MessageKeys.a(stackIn_193_1, stackIn_194_2, stackIn_198_3, 2), 320, var8, 16777215, 0);
               var8 += 24;
               if (this.a(false, 224, (byte) -44, var8, vf.field_b)) {
               }
               var8 += 80;
               stackIn_202_0 = var7_ref_ud;
-              stackIn_203_1 = (0 != kl.field_a);
+              stackIn_203_1 = (0 != TutorialText.field_a);
               stackIn_207_2 = (0 != ge.field_e);
               ((ud) (Object) stackIn_202_0).c(dg.a(stackIn_203_1, stackIn_207_2, (byte) -76, false), 320, var8 - (-(var9Lifetime1 * 5) - 64), 65535, -1);
               k.field_f.a(param0 ^ -89);
             }
             this.v(0);
             this.i((byte) 111);
-            kl.field_e.d(0, 0);
+            TutorialText.field_e.d(0, 0);
             vc.field_e.d(0, 439);
             decompiledFrameRemainder12 = (var10 != 0);
           }
@@ -8237,9 +8237,9 @@ public final class Terraphoenix extends gf {
             (decompiledFrameRemainder2)) {
             this.field_X.a(true, false);
             if (this.field_X.field_J) {
-              tf.a(70, (byte) -108, 7, 7, true, 28);
-              tf.a(70, (byte) -103, 7, 85, true, 28);
-              tf.a(100, (byte) -70, 7, 533, true, 28);
+              BufferedSocket.a(70, (byte) -108, 7, 7, true, 28);
+              BufferedSocket.a(70, (byte) -103, 7, 85, true, 28);
+              BufferedSocket.a(100, (byte) -70, 7, 533, true, 28);
             }
             this.field_Eb = null;
             decompiledFrameRemainder12 = (var10 != 0);
@@ -8291,47 +8291,47 @@ public final class Terraphoenix extends gf {
             if (ha.field_q == 0 &&
               1 == gd.field_c &&
               this.field_mb > 468) {
-              l.d(0, 0, 640, 480, 0, -3744 + this.field_mb * 8);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, -3744 + this.field_mb * 8);
             }
             if (ha.field_q == 0 &&
               gd.field_c == 2 &&
               this.field_ib < 32) {
-              l.d(0, 0, 640, 480, 0, -(this.field_ib * 8) + 256);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, -(this.field_ib * 8) + 256);
             }
             if (ha.field_q == 0 &&
               gd.field_c == 2 &&
               468 < this.field_mb) {
-              l.d(0, 0, 640, 480, 0, (-468 + this.field_mb) * 8);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, (-468 + this.field_mb) * 8);
             }
             if (ha.field_q == 0 &&
               gd.field_c == 3 &&
               32 > this.field_ib) {
-              l.d(0, 0, 640, 480, 0, -(8 * this.field_ib) + 256);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, -(8 * this.field_ib) + 256);
             }
             if (ha.field_q == 0 &&
               gd.field_c == 3 &&
               372 < this.field_mb) {
-              l.d(0, 0, 640, 480, 16777215, -744 + 2 * this.field_mb);
+              SoftwareRasterizer.d(0, 0, 640, 480, 16777215, -744 + 2 * this.field_mb);
             }
             if (0 == ha.field_q &&
               gd.field_c == 4 &&
               32 > this.field_ib) {
-              l.d(0, 0, 640, 480, 16777215, 256 - this.field_ib * 8);
+              SoftwareRasterizer.d(0, 0, 640, 480, 16777215, 256 - this.field_ib * 8);
             }
             if (ha.field_q == 0 &&
               gd.field_c == 4 &&
               this.field_mb > 468) {
-              l.d(0, 0, 640, 480, 0, this.field_mb * 8 - 3744);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, this.field_mb * 8 - 3744);
             }
             if (ha.field_q >= 1 &&
               ha.field_q < 4 &&
               this.field_ib < 32) {
-              l.d(0, 0, 640, 480, 0, -(this.field_ib * 8) + 256);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, -(this.field_ib * 8) + 256);
             }
             if (ha.field_q >= 1 &&
               4 > ha.field_q &&
               this.field_mb > 468) {
-              l.d(0, 0, 640, 480, 0, this.field_mb * 8 - 3744);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, this.field_mb * 8 - 3744);
             }
             if (ha.field_q == 4 &&
               gd.field_c == 1 &&
@@ -8346,12 +8346,12 @@ public final class Terraphoenix extends gf {
             if (ha.field_q == 4 &&
               gd.field_c >= 3 &&
               this.field_ib < 32) {
-              l.d(0, 0, 640, 480, 0, -(8 * this.field_ib) + 256);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, -(8 * this.field_ib) + 256);
             }
             if (4 == ha.field_q &&
               gd.field_c >= 2 &&
               468 < this.field_mb) {
-              l.d(0, 0, 640, 480, 0, 8 * this.field_mb - 3744);
+              SoftwareRasterizer.d(0, 0, 640, 480, 0, 8 * this.field_mb - 3744);
             }
             m.field_g.d(0, 480 - m.field_g.field_t);
             if (this.field_bb != null) {
@@ -8362,17 +8362,17 @@ public final class Terraphoenix extends gf {
               if (this.field_S != null) {
                 var8Lifetime1 = 475;
               }
-              l.c(9, 415, 512, 472);
+              SoftwareRasterizer.c(9, 415, 512, 472);
               og.field_f.a(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -qg.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
-              l.c();
+              SoftwareRasterizer.c();
               if (this.field_S != null) {
-                l.g(9, 415, 512, 0, 192);
-                l.g(9, 416, 512, 0, 128);
-                l.g(9, 416, 512, 0, 64);
-                l.g(9, 470, 512, 0, 64);
-                l.g(9, 471, 512, 0, 128);
-                l.g(9, 472, 512, 0, 192);
-                this.field_S.a((byte) 74, wb.field_f, qg.field_a, nf.field_h);
+                SoftwareRasterizer.g(9, 415, 512, 0, 192);
+                SoftwareRasterizer.g(9, 416, 512, 0, 128);
+                SoftwareRasterizer.g(9, 416, 512, 0, 64);
+                SoftwareRasterizer.g(9, 470, 512, 0, 64);
+                SoftwareRasterizer.g(9, 471, 512, 0, 128);
+                SoftwareRasterizer.g(9, 472, 512, 0, 192);
+                this.field_S.a((byte) 74, wb.field_f, qg.field_a, PcmPlayerPump.field_h);
                 this.field_S.a((byte) -36, false);
               }
             }
@@ -8383,12 +8383,12 @@ public final class Terraphoenix extends gf {
               if ((!(this.field_cb < this.field_bb.length()) ||
                 this.field_cb % 4 >= 2) &&
                 this.field_cb <= 30) {
-                vc.field_f.c(jb.field_c, 320, 128, 0, -1);
+                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
                 vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
               if (decompiledFrameRemainder0) {
-                vc.field_f.c(jb.field_c, 320, 128, 16776960, -1);
+                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
                 vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
@@ -8399,39 +8399,39 @@ public final class Terraphoenix extends gf {
               if ((!(this.field_cb < this.field_bb.length()) ||
                 this.field_cb % 4 >= 2) &&
                 30 >= this.field_cb) {
-                vc.field_f.c(jb.field_c, 320, 128, 0, -1);
+                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
                 vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
-                if (!(fa.field_a >= 2)) {
+                if (!(Archive.field_a >= 2)) {
                   vc.field_f.c(pd.field_f, 320, 200, 0, -1);
                   if (var10 != 0) {
-                    vc.field_f.c(jb.field_c, 320, 128, 16776960, -1);
+                    vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
                     vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
-                    if (2 > fa.field_a) {
+                    if (2 > Archive.field_a) {
                       vc.field_f.c(pd.field_f, 320, 200, 16776960, -1);
                     }
                   }
                 }
               } else {
-                vc.field_f.c(jb.field_c, 320, 128, 16776960, -1);
+                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
                 vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
-                if (2 > fa.field_a) {
+                if (2 > Archive.field_a) {
                   vc.field_f.c(pd.field_f, 320, 200, 16776960, -1);
                 }
               }
             }
-            kl.field_e.d(0, 0);
+            TutorialText.field_e.d(0, 0);
             if (ef.field_j >= 532 &&
-              488 - m.field_g.field_t <= jb.field_b &&
+              488 - m.field_g.field_t <= MouseWheelInput.field_b &&
               632 > ef.field_j &&
-              jb.field_b < 516 - m.field_g.field_t) {
-              l.d(532, 488 - m.field_g.field_t, 100, 28, 16777215, 128);
+              MouseWheelInput.field_b < 516 - m.field_g.field_t) {
+              SoftwareRasterizer.d(532, 488 - m.field_g.field_t, 100, 28, 16777215, 128);
             }
             decompiledFrameRemainder12 = !(ef.field_j < 532);
             if ((decompiledFrameRemainder12) &&
-              (decompiledFrameRemainder12 = !(520 - m.field_g.field_t > jb.field_b)) &&
+              (decompiledFrameRemainder12 = !(520 - m.field_g.field_t > MouseWheelInput.field_b)) &&
               (decompiledFrameRemainder12 = !(632 <= ef.field_j)) &&
-              (decompiledFrameRemainder12 = !((548 - m.field_g.field_t) <= jb.field_b))) {
-              l.d(532, 520 - m.field_g.field_t, 100, 28, 16777215, 128);
+              (decompiledFrameRemainder12 = !((548 - m.field_g.field_t) <= MouseWheelInput.field_b))) {
+              SoftwareRasterizer.d(532, 520 - m.field_g.field_t, 100, 28, 16777215, 128);
               decompiledFrameRemainder12 = (var10 != 0);
             }
           }
@@ -8472,7 +8472,7 @@ public final class Terraphoenix extends gf {
               } else {
                 var3_intLifetime2 += 2;
                 var5Lifetime2 = ef.field_j;
-                stackIn_519_0 = jb.field_b;
+                stackIn_519_0 = MouseWheelInput.field_b;
                 stackIn_519_1 = var4Lifetime2;
               }
               break;
@@ -8480,7 +8480,7 @@ public final class Terraphoenix extends gf {
             var6Lifetime2 = stackIn_519_0 - stackIn_519_1;
             if (ja.field_i == 6) {
               if (this.field_Bb != 0 ||
-                !(jb.field_b >= 365)) {
+                !(MouseWheelInput.field_b >= 365)) {
                 var5Lifetime2 = 640;
               }
               var6Lifetime2 = 365 - var4Lifetime2 - 14;
@@ -8497,8 +8497,8 @@ public final class Terraphoenix extends gf {
             if ((639 - var3_intLifetime2 / 2) < var5Lifetime2) {
               var5Lifetime2 = 640 - var3_intLifetime2 / 2 - 1;
             }
-            l.d(-1 - var3_intLifetime2 / 2 + var5Lifetime2, var6Lifetime2, var3_intLifetime2 + 2, var4Lifetime2, 0, 128);
-            l.a(var5Lifetime2 - var3_intLifetime2 / 2 - 1, var6Lifetime2, 2 + var3_intLifetime2, var4Lifetime2, 16777215, 128);
+            SoftwareRasterizer.d(-1 - var3_intLifetime2 / 2 + var5Lifetime2, var6Lifetime2, var3_intLifetime2 + 2, var4Lifetime2, 0, 128);
+            SoftwareRasterizer.a(var5Lifetime2 - var3_intLifetime2 / 2 - 1, var6Lifetime2, 2 + var3_intLifetime2, var4Lifetime2, 16777215, 128);
             var6Lifetime2 += 2;
             var7Lifetime1 = 0;
             while (this.field_Eb.length > var7Lifetime1) {
@@ -8533,22 +8533,22 @@ public final class Terraphoenix extends gf {
           if (!ib.p(param0 ^ -44)) {
             if (rl.b(0)) {
               stackIn_571_0 = (null != a.field_b);
-              nf.a(stackIn_571_0, -1260);
+              PcmPlayerPump.a(stackIn_571_0, -1260);
               if (var10 != 0) {
-                l.d(0, 0, 640, 480, 0, 128);
-                l.f(320 - (mk.a(-1) / 2 + 12), 240 - mc.a(param0 ^ 45) / 2 - 12, mk.a(param0 ^ 88) + 24, mc.a(40) + 24, 0);
+                SoftwareRasterizer.d(0, 0, 640, 480, 0, 128);
+                SoftwareRasterizer.f(320 - (LevelEditor.a(-1) / 2 + 12), 240 - mc.a(param0 ^ 45) / 2 - 12, LevelEditor.a(param0 ^ 88) + 24, mc.a(40) + 24, 0);
                 ga.d(-6513);
               }
             }
           } else {
-            l.d(0, 0, 640, 480, 0, 128);
-            l.f(320 - (mk.a(-1) / 2 + 12), 240 - mc.a(param0 ^ 45) / 2 - 12, mk.a(param0 ^ 88) + 24, mc.a(40) + 24, 0);
+            SoftwareRasterizer.d(0, 0, 640, 480, 0, 128);
+            SoftwareRasterizer.f(320 - (LevelEditor.a(-1) / 2 + 12), 240 - mc.a(param0 ^ 45) / 2 - 12, LevelEditor.a(param0 ^ 88) + 24, mc.a(40) + 24, 0);
             ga.d(-6513);
           }
           if (mm.field_e >= 2) {
             var3 = Runtime.getRuntime();
             var4Lifetime3 = (int)(var3.totalMemory() - var3.freeMemory()) >> 20;
-            vc.field_f.b(gl.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
+            vc.field_f.b(UiWidget.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
             if (this.field_ob) {
               og.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
             }
@@ -8573,7 +8573,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.B(" + param0 + ')');
         }
     }
 
@@ -8600,7 +8600,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -8628,8 +8628,8 @@ public final class Terraphoenix extends gf {
         int incrementValue$42 = 0;
         int incrementValue$43 = 0;
         RuntimeException runtimeException = null;
-        ci[] var2 = null;
-        bg[] var3 = null;
+        Sprite[] var2 = null;
+        IndexedSprite[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -8641,22 +8641,22 @@ public final class Terraphoenix extends gf {
           var2 = ig.a(ab.field_a, 0, "screenshots", "member_benefits");
           if (me.field_o <= 0) {
             jd.a(112, ke.field_d, di.field_i);
-            wa.a(il.a("mbfg", "member_benefits", ab.field_a, -1), (byte) 27, b.field_c);
-            pc.a(kl.field_e, 40);
+            wa.a(il.a("mbfg", "member_benefits", ab.field_a, -1), (byte) 27, RandomAccessCacheFile.field_c);
+            pc.a(TutorialText.field_e, 40);
             va.a(0, 0, 16777215, il.a("mbpb", "member_benefits", ab.field_a, -1), vc.field_f, 135, 0, 0, false, 135, 1500);
-            sd.a(true, var2);
+            QuickChatMenu.a(true, var2);
             li.a(22957, dc.field_e, 0, -1, 16777215, (java.applet.Applet) (this));
           }
           di.field_i = null;
           kk.a(50, 100);
-          var3 = new bg[1];
+          var3 = new IndexedSprite[1];
           var3[0] = qb.a("sightingpic", (byte) -36, "", ab.field_a);
           og.field_f.a(var3, (int[]) null);
           wg.field_f = il.a("options", "", ab.field_a, -1);
           il.a("help", "", ab.field_a, -1);
           aa.field_j = il.a("next", "", ab.field_a, param0 + 2019);
           wh.field_e = il.a("prev", "", ab.field_a, -1);
-          jh.field_q = new bg[22];
+          jh.field_q = new IndexedSprite[22];
           var4 = 0;
           incrementValue$22 = var4;
           var4++;
@@ -8730,7 +8730,7 @@ public final class Terraphoenix extends gf {
           ua.field_b = il.a("ingametop", "", ab.field_a, -1);
           fh.field_c = il.a("unachieved", "basic", ke.field_d, param0 + 2019);
           ke.field_b = il.a("locked", "basic", ke.field_d, param0 + 2019);
-          qe.field_k = il.a("orbcoin", "basic", ke.field_d, param0 ^ 2019);
+          IsaacCipher.field_k = il.a("orbcoin", "basic", ke.field_d, param0 ^ 2019);
           ke.field_d = null;
           this.field_ab = ig.a(ab.field_a, 0, "icon_missions", "");
           this.field_U = qb.a("icon_briefing", (byte) -36, "", ab.field_a);
@@ -8738,7 +8738,7 @@ public final class Terraphoenix extends gf {
           this.field_sb = qb.a("icon_victory", (byte) -36, "", ab.field_a);
           this.field_lb = il.a("icon_undo", "", ab.field_a, -1);
           this.field_Q = il.a("icon_beginmission", "", ab.field_a, param0 ^ 2019);
-          pf.field_a = new ci[8];
+          pf.field_a = new Sprite[8];
           pf.field_a[0] = il.a("instr0", "", ab.field_a, -1);
           pf.field_a[1] = il.a("instr1", "", ab.field_a, sl.a(param0, 2019));
           pf.field_a[2] = il.a("instr2", "", ab.field_a, param0 + 2019);
@@ -8747,7 +8747,7 @@ public final class Terraphoenix extends gf {
           od.field_e = qb.a("map0", (byte) -36, "menu_graphics", ab.field_a);
           s.field_b = il.a("shield", "", ab.field_a, param0 ^ 2019);
           qh.field_b = il.a("exitgfx", "", ab.field_a, -1);
-          kl.field_e = il.a("titlebig", "menu_graphics", ab.field_a, -1);
+          TutorialText.field_e = il.a("titlebig", "menu_graphics", ab.field_a, -1);
           fg.field_f = qb.a("title_highscores", (byte) -36, "menu_graphics", ab.field_a);
           lm.field_g = qb.a("title_instructions", (byte) -36, "menu_graphics", ab.field_a);
           qb.field_c = qb.a("title_achievements", (byte) -36, "menu_graphics", ab.field_a);
@@ -8760,7 +8760,7 @@ public final class Terraphoenix extends gf {
           bl.field_b = ig.a(ab.field_a, 0, "researchbuttons", "menu_graphics");
           hf.field_w = ig.a(ab.field_a, 0, "achievements", "menu_graphics");
           vk.field_d = il.a("soldierscreen", "menu_graphics", ab.field_a, -1);
-          e.field_g = il.a("equipbox", "menu_graphics", ab.field_a, param0 ^ 2019);
+          BattleState.field_g = il.a("equipbox", "menu_graphics", ab.field_a, param0 ^ 2019);
           bj.field_g = il.a("researchbox", "menu_graphics", ab.field_a, -1);
           jg.field_hb = il.a("equipslider", "menu_graphics", ab.field_a, -1);
           qc.field_f = ig.a(ab.field_a, 0, "equipbuttons", "menu_graphics");
@@ -8772,7 +8772,7 @@ public final class Terraphoenix extends gf {
           wa.field_r = lf.a(true, "", "armour0", ab.field_a);
           f.field_i = lf.a(true, "", "armour1", ab.field_a);
           pc.field_c = lf.a(true, "", "armour2", ab.field_a);
-          vh.field_k = lf.a(true, "", "aimdir", ab.field_a);
+          DualLinkNode.field_k = lf.a(true, "", "aimdir", ab.field_a);
           d.field_N = lf.a(true, "", "menaimdir", ab.field_a);
           me.field_l = lf.a(true, "", "weaponsdir", ab.field_a);
           fc.field_i = lf.a(true, "", "weaponsdiralien", ab.field_a);
@@ -8785,10 +8785,10 @@ public final class Terraphoenix extends gf {
             rk.field_e = lf.a(true, "", "zombiewalk", ab.field_a);
             wb.field_h = lf.a(true, "", "zombie_deaths", ab.field_a);
           }
-          ui.field_a = lf.a(true, "", "aliens_deaths", ab.field_a);
+          AdminCheatOverlay.field_a = lf.a(true, "", "aliens_deaths", ab.field_a);
           lf.field_e = lf.a(true, "", "men_deaths", ab.field_a);
           gi.field_j = lf.a(true, "", "explosion", ab.field_a);
-          r.field_M = lf.a(true, "", "alienaimdir", ab.field_a);
+          BattleUnit.field_M = lf.a(true, "", "alienaimdir", ab.field_a);
           th.field_i = il.a("darktab", "", ab.field_a, -1);
           vl.field_c = il.a("lighttab", "", ab.field_a, -1);
           cc.field_i = ig.a(ab.field_a, 0, "weapons", "");
@@ -8798,7 +8798,7 @@ public final class Terraphoenix extends gf {
           dm.field_a = ig.a(ab.field_a, 0, "testwall", "");
           se.field_c = ig.a(ab.field_a, 0, "trees", "");
           ji.field_j = ig.a(ab.field_a, 0, "debris", "");
-          bk.field_a = new ci[dm.field_a.length];
+          bk.field_a = new Sprite[dm.field_a.length];
           var4Lifetime1 = 0;
           while (dm.field_a.length > var4Lifetime1) {
             bk.field_a[var4Lifetime1] = dm.field_a[var4Lifetime1].e();
@@ -8809,7 +8809,7 @@ public final class Terraphoenix extends gf {
           }
           kg.field_r = ig.a(ab.field_a, param0 + 2020, "objects", "");
           rh.field_b = ig.a(ab.field_a, param0 + 2020, "icons", "");
-          nf.field_g = ig.a(ab.field_a, param0 ^ param0, "faces", "");
+          PcmPlayerPump.field_g = ig.a(ab.field_a, param0 ^ param0, "faces", "");
           ic.field_t = il.a("combatview", "", ab.field_a, -1);
           ab.field_a = null;
           aj.field_b = null;
@@ -8818,7 +8818,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.OA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.OA(" + param0 + ')');
         }
     }
 
@@ -8844,10 +8844,10 @@ public final class Terraphoenix extends gf {
           }
           if (null != a.field_b &&
             a.field_b.field_d) {
-            e.a((byte) 115);
+            BattleState.a((byte) 115);
             ga.b((byte) 65);
           }
-          if (!c.b(-84)) {
+          if (!NodeHashTableIterator.b(-84)) {
             if (fh.field_f) {
               if (ib.p(101)) {
                 wj.a(2, false);
@@ -8858,17 +8858,17 @@ public final class Terraphoenix extends gf {
             boolean decompiledFrameCompleted0 = true;
             if (ba.field_h) {
               if (cg.field_K != null) {
-                vh.a(li.field_b, (byte) 44, 100.0f);
+                DualLinkNode.a(li.field_b, (byte) 44, 100.0f);
                 decompiledFrameRemainder0 = !(!cg.field_K.field_k);
                 if (decompiledFrameRemainder0) {
                   ef.field_i = ef.field_i | cg.field_K.field_m;
-                  kl.field_a = kl.field_a & ~cg.field_K.field_m;
+                  TutorialText.field_a = TutorialText.field_a & ~cg.field_K.field_m;
                   cg.field_K = null;
                   lk.b(9407);
-                  var2 = (eg) (u.field_c.d(9272));
+                  var2 = (eg) (u.field_c.beginBackward(9272));
                   while (var2 != null) {
                     ha.a(var2, 4, (byte) 80);
-                    var2 = (eg) (u.field_c.e((byte) -119));
+                    var2 = (eg) (u.field_c.nextBackward((byte) -119));
                     if (var3 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -8882,11 +8882,11 @@ public final class Terraphoenix extends gf {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
                 if (ej.field_M != null) {
-                  vh.a(li.field_b, (byte) 102, 100.0f);
+                  DualLinkNode.a(li.field_b, (byte) 102, 100.0f);
                   decompiledFrameRemainder0 = !(!ej.field_M.field_i);
                   if (decompiledFrameRemainder0) {
                     si.field_ib = ej.field_M.field_j;
-                    this.field_I = new rk(fa.field_a);
+                    this.field_I = new rk(Archive.field_a);
                     try {
                       if (null != si.field_ib) {
                         this.a(si.field_ib, false, true);
@@ -8894,7 +8894,7 @@ public final class Terraphoenix extends gf {
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var2_ref = decompiledCaughtException;
-                      bd.a((Throwable) ((Object) var2_ref), "TP Sgc", 88);
+                      bd.reportClientError((Throwable) ((Object) var2_ref), "TP Sgc", 88);
                       si.field_ib = null;
                     }
                     this.field_zb = null;
@@ -8912,7 +8912,7 @@ public final class Terraphoenix extends gf {
                     if (decompiledFrameRemainder0) {
                       stackIn_65_1 = 127;
                       stackIn_66_2 = (null != a.field_b);
-                      var2_int = hb.a((gf) (this), stackIn_65_1, stackIn_66_2);
+                      var2_int = hb.a((GameShell) (this), stackIn_65_1, stackIn_66_2);
                       switch (var2_int) {
                         default:
                           break;
@@ -8974,7 +8974,7 @@ public final class Terraphoenix extends gf {
               this.b(true, (byte) -107);
             }
             while (true) {
-              if (rj.a(-1491050718, dk.field_j)) {
+              if (rj.a(-1491050718, LevelMap.field_j)) {
                 this.h(43);
                 if (var3 == 0) {
                   continue;
@@ -9009,7 +9009,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.F(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.F(" + param0 + ')');
         }
     }
 
@@ -9052,7 +9052,7 @@ public final class Terraphoenix extends gf {
           var3 = ic.field_x[0];
           if (wb.field_g < 10) {
             hh.field_m.a();
-            l.a();
+            SoftwareRasterizer.a();
             var4 = 320;
             if (this.field_X.field_f == 1) {
               this.field_sb.a(0, 77, 640, 362);
@@ -9061,7 +9061,7 @@ public final class Terraphoenix extends gf {
             if (this.field_X.field_f == 2) {
               this.field_T.a(0, 77, 640, 362);
             }
-            l.d(0, 77, 640, 362, 0, 160);
+            SoftwareRasterizer.d(0, 77, 640, 362, 0, 160);
             this.a(-3407, var5, var4);
             var6 = 60;
             var7 = 430;
@@ -9079,9 +9079,9 @@ public final class Terraphoenix extends gf {
             }
             if (this.field_P != -1) {
               boolean decompiledFrameRemainder1 = true;
-              l.e(444, 99, 170, 170, 0);
-              l.e(443, 98, 172, 172, 16777215);
-              l.e(442, 97, 174, 174, 0);
+              SoftwareRasterizer.e(444, 99, 170, 170, 0);
+              SoftwareRasterizer.e(443, 98, 172, 172, 16777215);
+              SoftwareRasterizer.e(442, 97, 174, 174, 0);
               this.field_ab[this.field_P].b(445, 100);
               if (8 <= this.field_Bb &&
                 this.field_Bb <= 10) {
@@ -9165,7 +9165,7 @@ public final class Terraphoenix extends gf {
             if (1 == this.field_X.field_e.field_i) {
               og.field_f.b(pe.field_c[3], var6, var11, wa.field_s, 0);
               if (!bk.c(param0 - 25704)) {
-                og.field_f.a(jm.field_e, var7, var11, wa.field_s, 0);
+                og.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
               }
               var11 += 12;
               var12 += 1000;
@@ -9198,7 +9198,7 @@ public final class Terraphoenix extends gf {
             }
             if (this.field_X.field_e.field_i == 6) {
               og.field_f.b(pe.field_c[8], var6, var11, wa.field_s, 0);
-              og.field_f.a(c.field_c, var7, var11, wa.field_s, 0);
+              og.field_f.a(NodeHashTableIterator.field_c, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 6000;
             }
@@ -9234,7 +9234,7 @@ public final class Terraphoenix extends gf {
             }
             if (this.field_X.field_e.field_i == 12) {
               og.field_f.b(pe.field_c[14], var6, var11, wa.field_s, 0);
-              og.field_f.a(jm.field_e, var7, var11, wa.field_s, 0);
+              og.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
               var12 += 1000;
               var11 += 12;
             }
@@ -9280,7 +9280,7 @@ public final class Terraphoenix extends gf {
             var11 += 12;
             var13 = 1;
             var14 = 0;
-            L44: while (true) {
+            scanLoop1: while (true) {
               if (19 > var14) {
                 stackIn_180_0 = 0;
                 stackIn_180_1 = this.field_X.field_e.field_l.field_a[var14];
@@ -9306,7 +9306,7 @@ public final class Terraphoenix extends gf {
                 var11 += 12;
                 var11 = 300;
                 if (bk.c(-25704)) {
-                  break L44;
+                  break scanLoop1;
                 }
                 var14 = this.field_X.field_e.field_e * 4;
                 stackIn_180_0 = var14 - (this.field_X.field_e.field_h + this.field_X.field_e.field_k) * 2;
@@ -9319,12 +9319,12 @@ public final class Terraphoenix extends gf {
                 var12 = var12 * var15 / var14;
               }
               var11 += 12;
-              og.field_f.b(dl.field_o, var6, var11, 16777215, 0);
+              og.field_f.b(MapTile.field_o, var6, var11, 16777215, 0);
               og.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
               var11 += 12;
               break;
             }
-            if (fa.field_a == 1) {
+            if (Archive.field_a == 1) {
               if (!bk.c(param0 - 25704)) {
                 og.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
                 og.field_f.a(Integer.toString(var12 / 2), var8, var11, 16777215, 0);
@@ -9340,7 +9340,7 @@ public final class Terraphoenix extends gf {
                 var11 += 12;
               }
             }
-            if (2 == fa.field_a) {
+            if (2 == Archive.field_a) {
               og.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
               og.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
               var12 = var12 + var12;
@@ -9374,7 +9374,7 @@ public final class Terraphoenix extends gf {
                 og.field_f.a(ae.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, og.field_f.field_s);
                 stackIn_222_0 = (this.a(false, 384, (byte) -44, 370, ba.field_c)) ? 0 : 1;
                 var14Lifetime3 = stackIn_222_0;
-                discarded$0 = this.a(var14Lifetime3 != 0, 64, (byte) -44, 370, ck.field_c);
+                discarded$0 = this.a(var14Lifetime3 != 0, 64, (byte) -44, 370, FullscreenFocusCanvas.field_c);
                 decompiledFrameRemainder0 = (var16 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -9391,33 +9391,33 @@ public final class Terraphoenix extends gf {
                   var14Lifetime3Lifetime1 = -wa.field_s + 16776960;
                   var15Lifetime1 = 24;
                   vc.field_f.a(me.field_n, 384, 270, 192, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
-                  l.d(384, 340 + var15Lifetime1, 80, 50, 0, 128);
+                  SoftwareRasterizer.d(384, 340 + var15Lifetime1, 80, 50, 0, 128);
                   var14Lifetime3Lifetime1 = -wa.field_s + 16776960;
                   if (384 <= ef.field_j &&
                     464 >= ef.field_j &&
-                    jb.field_b >= 340 + var15Lifetime1 &&
-                    340 + var15Lifetime1 + 50 >= jb.field_b) {
+                    MouseWheelInput.field_b >= 340 + var15Lifetime1 &&
+                    340 + var15Lifetime1 + 50 >= MouseWheelInput.field_b) {
                     var14Lifetime3Lifetime1 = 16777215;
                   }
-                  vc.field_f.a(el.field_c, 384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
-                  l.e(383, 340 + var15Lifetime1 - 1, 82, 52, 0);
-                  l.e(385, 1 + var15Lifetime1 + 340, 78, 48, 0);
-                  l.e(384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1);
-                  l.d(496, var15Lifetime1 + 340, 80, 50, 0, 128);
+                  vc.field_f.a(ClientException.field_c, 384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
+                  SoftwareRasterizer.e(383, 340 + var15Lifetime1 - 1, 82, 52, 0);
+                  SoftwareRasterizer.e(385, 1 + var15Lifetime1 + 340, 78, 48, 0);
+                  SoftwareRasterizer.e(384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1);
+                  SoftwareRasterizer.d(496, var15Lifetime1 + 340, 80, 50, 0, 128);
                   var14Lifetime3Lifetime1 = 16776960 - wa.field_s;
                   if (ef.field_j >= 496 &&
                     ef.field_j <= 576 &&
-                    jb.field_b >= (var15Lifetime1 + 340) &&
-                    jb.field_b <= (50 + (var15Lifetime1 + 340))) {
+                    MouseWheelInput.field_b >= (var15Lifetime1 + 340) &&
+                    MouseWheelInput.field_b <= (50 + (var15Lifetime1 + 340))) {
                     var14Lifetime3Lifetime1 = 16777215;
                   }
                   vc.field_f.a(bc.field_b, 496, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
-                  l.e(495, -1 + var15Lifetime1 + 340, 82, 52, 0);
-                  l.e(497, 340 + (var15Lifetime1 + 1), 78, 48, 0);
-                  l.e(496, 340 + var15Lifetime1, 80, 50, var14Lifetime3Lifetime1);
+                  SoftwareRasterizer.e(495, -1 + var15Lifetime1 + 340, 82, 52, 0);
+                  SoftwareRasterizer.e(497, 340 + (var15Lifetime1 + 1), 78, 48, 0);
+                  SoftwareRasterizer.e(496, 340 + var15Lifetime1, 80, 50, var14Lifetime3Lifetime1);
                   boolean decompiledSharedTail0 = (null == si.field_ib);
                   if (!decompiledSharedTail0) {
-                    og.field_f.a(gl.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, og.field_f.field_s);
+                    og.field_f.a(UiWidget.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, og.field_f.field_s);
                     decompiledSharedTail0 = (var16 != 0);
                   }
                   if (decompiledSharedTail0) {
@@ -9438,18 +9438,18 @@ public final class Terraphoenix extends gf {
           bj.field_e.d(0, 439);
           this.i((byte) 86);
           le.field_p.c(0, 0);
-          l.c(0, param0, 158, 480);
+          SoftwareRasterizer.c(0, param0, 158, 480);
           vc.field_e.d(0, 439);
-          l.c(158, 0, 482, 480);
+          SoftwareRasterizer.c(158, 0, 482, 480);
           bj.field_e.b(0, 439);
-          l.c(482, 0, 640, 480);
+          SoftwareRasterizer.c(482, 0, 640, 480);
           vc.field_e.d(0, 439);
-          l.c();
+          SoftwareRasterizer.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.DC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.DC(" + param0 + ')');
         }
     }
 
@@ -9496,8 +9496,8 @@ public final class Terraphoenix extends gf {
           }
           if ((-qh.field_b.field_r + 624) <= ef.field_j &&
             ef.field_j <= 624 &&
-            jb.field_b >= -qh.field_b.field_t - this.field_zb.field_i + 464 &&
-            (464 - this.field_zb.field_i) >= jb.field_b &&
+            MouseWheelInput.field_b >= -qh.field_b.field_t - this.field_zb.field_i + 464 &&
+            (464 - this.field_zb.field_i) >= MouseWheelInput.field_b &&
             this.field_jb <= 0) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = ia.field_n;
@@ -9514,7 +9514,7 @@ public final class Terraphoenix extends gf {
               var2_intLifetime2 = this.field_gb - 1;
               stackIn_63_0 = this.field_Eb;
               stackIn_63_1 = 0;
-              stackIn_63_2 = new StringBuilder().append(ne.field_b);
+              stackIn_63_2 = new StringBuilder().append(SecondaryNodeDequeIterator.field_b);
               if (od.field_c[var2_intLifetime2].field_t) {
                 stackIn_64_3 = od.field_c[var2_intLifetime2].field_j;
               } else {
@@ -9526,7 +9526,7 @@ public final class Terraphoenix extends gf {
               var2_intLifetime3 = -1 - this.field_gb;
               stackIn_69_0 = this.field_Eb;
               stackIn_69_1 = 0;
-              stackIn_69_2 = new StringBuilder().append(ne.field_b);
+              stackIn_69_2 = new StringBuilder().append(SecondaryNodeDequeIterator.field_b);
               if (!sj.field_a[var2_intLifetime3].field_l) {
                 stackIn_70_3 = sj.field_a[var2_intLifetime3].field_b;
               } else {
@@ -9587,7 +9587,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.NB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.NB(" + param0 + ')');
         }
     }
 
@@ -9598,9 +9598,9 @@ public final class Terraphoenix extends gf {
         RuntimeException decompiledCaughtException = null;
         var3 = field_V;
         try {
-          l.c(6, 1 + this.field_W, 459, 419);
+          SoftwareRasterizer.c(6, 1 + this.field_W, 459, 419);
           if (null == fh.field_s) {
-            l.f(5, 58, 459, 419, 0);
+            SoftwareRasterizer.f(5, 58, 459, 419, 0);
             if (var3 != 0) {
               fh.field_s.d(6, 58);
             }
@@ -9610,21 +9610,21 @@ public final class Terraphoenix extends gf {
           if (!param0) {
             return;
           }
-          l.c(6, 58, 459, 419);
+          SoftwareRasterizer.c(6, 58, 459, 419);
           var2_int = 0;
           while (var2_int < 25) {
-            l.g(0, this.field_W - var2_int, 640, 65280, -(var2_int * 10) + 250);
+            SoftwareRasterizer.g(0, this.field_W - var2_int, 640, 65280, -(var2_int * 10) + 250);
             var2_int++;
             if (var3 != 0) {
               return;
             }
           }
-          l.c();
+          SoftwareRasterizer.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.KB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.KB(" + param0 + ')');
         }
     }
 
@@ -9640,16 +9640,16 @@ public final class Terraphoenix extends gf {
           }
           if (ma.field_I == 1 &&
             ef.field_j > 540 &&
-            jb.field_b <= 28) {
+            MouseWheelInput.field_b <= 28) {
             boolean decompiledFrameCompleted0 = true;
-            kl.field_c = ja.field_i;
+            TutorialText.field_c = ja.field_i;
             ja.field_i = 12;
             wb.field_g = 20;
-            if (kl.field_c != 1) {
-              di.field_k = new ci(640, 480);
+            if (TutorialText.field_c != 1) {
+              di.field_k = new Sprite(640, 480);
               var2_int = 0;
-              while (var2_int < di.field_k.field_z.length) {
-                di.field_k.field_z[var2_int] = k.field_f.field_c[var2_int];
+              while (var2_int < di.field_k.pixels.length) {
+                di.field_k.pixels[var2_int] = k.field_f.pixels[var2_int];
                 var2_int++;
                 if (var3 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -9672,7 +9672,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.PB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.PB(" + param0 + ')');
         }
     }
 
@@ -9686,10 +9686,10 @@ public final class Terraphoenix extends gf {
           if (!ld.field_b) {
             wg.field_f.b(533, 7);
             if (ef.field_j >= 533 &&
-              jb.field_b <= 35 &&
+              MouseWheelInput.field_b <= 35 &&
               ef.field_j <= 633 &&
-              jb.field_b >= 7) {
-              l.d(533, 8, 100, 26, 16777215, 128);
+              MouseWheelInput.field_b >= 7) {
+              SoftwareRasterizer.d(533, 8, 100, 26, 16777215, 128);
               this.field_Eb = new String[1];
               this.field_Eb[0] = ja.field_h;
             }
@@ -9698,7 +9698,7 @@ public final class Terraphoenix extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.TA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.TA(" + param0 + ')');
         }
     }
 
@@ -9721,7 +9721,7 @@ public final class Terraphoenix extends gf {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 

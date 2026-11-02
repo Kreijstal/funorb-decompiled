@@ -3,19 +3,19 @@
  */
 abstract class di extends af implements pa {
     static String[] field_h;
-    static ci field_k;
+    static Sprite field_k;
     private ej field_j;
-    static fa field_i;
+    static Archive field_i;
     static int field_e;
     static String field_g;
     static uc field_l;
-    static bg[] field_f;
+    static IndexedSprite[] field_f;
 
     final static vg f(int param0) {
         if (param0 != -25177) {
           return (vg) null;
         }
-        return cf.field_a;
+        return GameKeyHandler.field_a;
     }
 
     abstract String a(String param0, int param1);
@@ -25,7 +25,7 @@ abstract class di extends af implements pa {
         if (param0 != 117) {
           this.e(-90);
         }
-        stackIn_7_0 = (null == this.field_j.field_o) || (this.field_j.field_o.length() == 0);
+        stackIn_7_0 = (null == this.field_j.text) || (this.field_j.text.length() == 0);
         return stackIn_7_0;
     }
 
@@ -53,7 +53,7 @@ abstract class di extends af implements pa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ abstract class di extends af implements pa {
         if (param0 != 0) {
           field_e = 120;
         }
-        return this.b(this.field_j.field_o, 0);
+        return this.b(this.field_j.text, 0);
     }
 
     public static void d(byte param0) {
@@ -101,7 +101,7 @@ abstract class di extends af implements pa {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,15 +109,15 @@ abstract class di extends af implements pa {
         if (param0 != 0) {
           field_h = (String[]) null;
         }
-        return this.a(this.field_j.field_o, -81);
+        return this.a(this.field_j.text, -81);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ja.c((byte) -120);
         if (param2 != 16105) {
-          field_k = (ci) null;
+          field_k = (Sprite) null;
         }
-        l.i(param4, param1, param0, param3);
+        SoftwareRasterizer.i(param4, param1, param0, param3);
     }
 
     public final void a(ej param0, boolean param1) {
@@ -126,7 +126,7 @@ abstract class di extends af implements pa {
             field_h = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "di.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "di.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
