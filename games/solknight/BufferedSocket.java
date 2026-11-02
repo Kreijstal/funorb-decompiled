@@ -255,8 +255,8 @@ final class BufferedSocket implements Runnable {
         if (param2 == 0) {
           if (param1 >= sa.field_m &&
             sa.field_m + GameApplet.field_j.field_p > param1 &&
-            param0 >= da.field_f &&
-            GameApplet.field_j.field_t + da.field_f > param0) {
+            param0 >= Archive.field_f &&
+            GameApplet.field_j.field_t + Archive.field_f > param0) {
             return 0;
           }
         } else {
@@ -291,8 +291,8 @@ final class BufferedSocket implements Runnable {
             }
             return 1;
           }
-          if (param0 >= da.field_f &&
-            GameApplet.field_j.field_t + da.field_f > param0) {
+          if (param0 >= Archive.field_f &&
+            GameApplet.field_j.field_t + Archive.field_f > param0) {
             return 0;
           }
         }

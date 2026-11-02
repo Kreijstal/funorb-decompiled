@@ -74,17 +74,17 @@ final class pg {
             var5 = var27.readUnsignedByte(255);
             if (var5 != 0) {
               var6_int = var4_ref_sd.field_k;
-              da.field_a[0].field_c = false;
-              da.field_a[0].field_d = ne.field_g;
+              Archive.field_a[0].field_c = false;
+              Archive.field_a[0].field_d = ne.field_g;
               var7 = var4_ref_sd.field_l;
-              da.field_a[0].field_a = null;
+              Archive.field_a[0].field_a = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                da.field_a[var8_int].field_d = var27.readString(115);
-                da.field_a[var8_int].field_c = false;
+                Archive.field_a[var8_int].field_d = var27.readString(115);
+                Archive.field_a[var8_int].field_c = false;
                 if (var27.readUnsignedByte(255) != 1) {
-                  da.field_a[var8_int].field_a = null;
+                  Archive.field_a[var8_int].field_a = null;
                 } else {
-                  da.field_a[var8_int].field_a = var27.readString(105);
+                  Archive.field_a[var8_int].field_a = var27.readString(105);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -107,12 +107,12 @@ final class pg {
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte(255);
-                  var21 = da.field_a[var20].field_d;
+                  var21 = Archive.field_a[var20].field_d;
                   var22 = var27.readLong(10526);
                   var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = da.field_a[var20].field_a;
+                    var9[0][var12] = Archive.field_a[var20].field_a;
                     var10[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
@@ -135,10 +135,10 @@ final class pg {
                     }
                   }
                   if (var14 < var6_int &&
-                    !da.field_a[var20].field_c) {
-                    da.field_a[var20].field_c = true;
+                    !Archive.field_a[var20].field_c) {
+                    Archive.field_a[var20].field_c = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = da.field_a[var20].field_a;
+                    var9[2][var14] = Archive.field_a[var20].field_a;
                     var10[2][var14] = var22;
                     var27.position = var24;
                     var14++;

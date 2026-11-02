@@ -5,7 +5,7 @@ final class rl extends IntrusiveNode {
     byte[] field_i;
     qd field_h;
 
-    final static rl a(da param0, String param1, String param2) {
+    final static rl a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(4, param1, param2);
         if (var3 == null) {
           return null;

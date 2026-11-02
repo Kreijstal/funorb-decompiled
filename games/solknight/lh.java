@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends ej {
+final class lh extends PcmStream {
     static boolean field_l;
     static int field_p;
     private mf field_n;
     static int field_q;
     nc field_m;
-    static da field_o;
+    static Archive field_o;
     e field_r;
     static int field_s;
 
-    final ej a() {
+    final PcmStream a() {
         hg var1 = (hg) (this.field_m.a((byte) 51));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_w) {
-          return (ej) ((Object) var1.field_w);
+          return (PcmStream) ((Object) var1.field_w);
         }
         return this.b();
     }
@@ -133,7 +133,7 @@ final class lh extends ej {
         try {
           if (0 != (this.field_n.field_U[param1.field_z] & 4) &&
             param1.field_k < 0) {
-            var4_int = this.field_n.field_J[param1.field_z] / gj.field_s;
+            var4_int = this.field_n.field_J[param1.field_z] / PcmPlayerService.field_s;
             var5 = (-param1.field_C + var4_int + 1048575) / var4_int;
             param1.field_C = var4_int * param2 + param1.field_C & 1048575;
             if (param2 >= var5) {
@@ -193,7 +193,7 @@ final class lh extends ej {
         try {
           if ((4 & this.field_n.field_U[param2.field_z]) != 0 &&
             0 > param2.field_k) {
-            var7_int = this.field_n.field_J[param2.field_z] / gj.field_s;
+            var7_int = this.field_n.field_J[param2.field_z] / PcmPlayerService.field_s;
             while (true) {
               var8 = (1048575 + (var7_int - param2.field_C)) / var7_int;
               if (param4 < var8) {
@@ -204,7 +204,7 @@ final class lh extends ej {
               param3 = param3 + var8;
               param4 = param4 - var8;
               param2.field_C = param2.field_C + (var8 * var7_int - 1048576);
-              var9 = gj.field_s / 100;
+              var9 = PcmPlayerService.field_s / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
@@ -257,7 +257,7 @@ final class lh extends ej {
         }
     }
 
-    final ej b() {
+    final PcmStream b() {
         hg var1;
         int var2;
         var2 = SolKnight.field_L ? 1 : 0;
@@ -267,7 +267,7 @@ final class lh extends ej {
             return null;
           }
           if (var1.field_w != null) {
-            return (ej) ((Object) var1.field_w);
+            return (PcmStream) ((Object) var1.field_w);
           }
         }
     }

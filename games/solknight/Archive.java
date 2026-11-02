@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da {
+final class Archive {
     private int field_e;
-    private ha field_g;
+    private ArchiveIndex field_g;
     private Object[] field_c;
     static ff field_i;
     private boolean field_h;
     static ef field_d;
     static int field_f;
-    private wd field_j;
+    private ArchiveSource field_j;
     private Object[][] field_b;
     static fa[] field_a;
 
@@ -180,7 +180,7 @@ final class da {
           }
           param0 = param0.toLowerCase();
           if (!param2) {
-            da.a(((boolean[]) (((Object[]) (this.field_c[4]))[1]))[4]);
+            Archive.a(((boolean[]) (((Object[]) (this.field_c[4]))[1]))[4]);
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
@@ -316,7 +316,7 @@ final class da {
 
     public static void b(int param0) {
         if (param0 > -121) {
-          da.a(true);
+          Archive.a(true);
         }
         field_a = null;
         field_d = null;
@@ -545,7 +545,7 @@ final class da {
             param0--;
             if (param0 < 0) {
               if (param1 <= 14) {
-                da.b(-34);
+                Archive.b(-34);
               }
               return;
             }
@@ -581,7 +581,7 @@ final class da {
         sg.field_b[222] = 58;
         sg.field_b[520] = 59;
         if (param0 != 0) {
-          da.a(-106);
+          Archive.a(-106);
         }
         sg.field_b[92] = 74;
         sg.field_b[47] = 73;
@@ -950,7 +950,7 @@ final class da {
         }
     }
 
-    da(wd param0, boolean param1, int param2) {
+    Archive(ArchiveSource param0, boolean param1, int param2) {
         this.field_g = null;
         try {
           if (param2 < 0 ||

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb {
-    static da field_b;
+    static Archive field_b;
     static String[] field_d;
     static String field_a;
     static String field_c;

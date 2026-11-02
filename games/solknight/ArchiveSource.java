@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wd {
+abstract class ArchiveSource {
     static String field_b;
     static int field_a;
     static volatile int field_d;
@@ -36,7 +36,7 @@ abstract class wd {
         }
     }
 
-    abstract ha c(int param0);
+    abstract ArchiveIndex c(int param0);
 
     abstract byte[] a(int param0, int param1);
 

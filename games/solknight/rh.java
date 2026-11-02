@@ -9,7 +9,7 @@ final class rh {
     int field_c;
     static int field_e;
     String field_h;
-    da field_d;
+    Archive field_d;
     String field_b;
 
     public static void b(int param0) {

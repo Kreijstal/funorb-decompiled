@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg extends wd {
+final class CachedArchiveSource extends ArchiveSource {
     private sk field_x;
     private int field_n;
     private va field_h;
@@ -9,7 +9,7 @@ final class lg extends wd {
     private byte[] field_u;
     private int field_o;
     private byte[] field_t;
-    private ha field_j;
+    private ArchiveIndex field_j;
     private qd field_w;
     private int field_k;
     private bi field_f;
@@ -337,7 +337,7 @@ final class lg extends wd {
         }
     }
 
-    final ha c(int param0) {
+    final ArchiveIndex c(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -367,7 +367,7 @@ final class lg extends wd {
             if (var3 == null) {
               throw new RuntimeException();
             }
-            this.field_j = new ha(var7, this.field_k, this.field_t);
+            this.field_j = new ArchiveIndex(var7, this.field_k, this.field_t);
             if (this.field_n != this.field_j.field_m) {
               throw new RuntimeException();
             }
@@ -387,7 +387,7 @@ final class lg extends wd {
             if (var3 == null) {
               throw new RuntimeException();
             }
-            this.field_j = new ha(var7, this.field_k, this.field_t);
+            this.field_j = new ArchiveIndex(var7, this.field_k, this.field_t);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4 = decompiledCaughtException;
@@ -489,7 +489,7 @@ final class lg extends wd {
         }
     }
 
-    lg(int param0, bi param1, bi param2, va param3, ae param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, bi param1, bi param2, va param3, ae param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

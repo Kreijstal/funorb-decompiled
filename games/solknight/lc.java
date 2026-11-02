@@ -66,15 +66,15 @@ final class lc extends IntrusiveNode {
           field_m = null;
           return;
         }
-        da var2 = (da) null;
-        lc.a((da) null, 54, (String) null, (String) null, (da) null);
+        Archive var2 = (Archive) null;
+        lc.a((Archive) null, 54, (String) null, (String) null, (Archive) null);
         field_t = null;
         field_l = null;
         field_k = null;
         field_m = null;
     }
 
-    final static hd a(da param0, int param1, String param2, String param3, da param4) {
+    final static hd a(Archive param0, int param1, String param2, String param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

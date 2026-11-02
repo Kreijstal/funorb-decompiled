@@ -34,7 +34,7 @@ final class td implements j {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        da var13 = null;
+        Archive var13 = null;
         jd var14 = null;
         int var15 = 0;
         jd var16 = null;
@@ -117,8 +117,8 @@ final class td implements j {
             }
           }
           if (param0 > -125) {
-            var13 = (da) null;
-            td.a(25, (da) null);
+            var13 = (Archive) null;
+            td.a(25, (Archive) null);
             var3.unlink(10);
           } else {
             var3.unlink(10);
@@ -192,7 +192,7 @@ final class td implements j {
         }
     }
 
-    final static boolean a(int param0, da param1) {
+    final static boolean a(int param0, Archive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

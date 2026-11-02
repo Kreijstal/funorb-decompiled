@@ -568,7 +568,7 @@ final class hb {
           if (pg.field_e ||
             -1 != kd.currentScreenIndex) {
             si.field_E = (si.field_E * 9 + 240) / 10;
-            wd.field_c = 9 * wd.field_c / 10;
+            ArchiveSource.field_c = 9 * ArchiveSource.field_c / 10;
           }
           if (!pg.field_e &&
             kd.currentScreenIndex == -1 ||
@@ -590,7 +590,7 @@ final class hb {
             if (kd.currentScreenIndex == -1 && (!(PacketBuffer.field_j <= -1) ||
               0 != wb.field_c)) {
               si.field_E = (var3Lifetime1 / 2 + 9 * si.field_E) / 10;
-              wd.field_c = (9 * wd.field_c + (var2Lifetime3 - 320)) / 10;
+              ArchiveSource.field_c = (9 * ArchiveSource.field_c + (var2Lifetime3 - 320)) / 10;
             }
             be.c(false);
           }

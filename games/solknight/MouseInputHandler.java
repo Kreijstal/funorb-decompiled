@@ -45,7 +45,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (ee.field_j != null) {
             cf.field_e = 0;
             SocketConnector.field_a = param0.getX();
-            wd.field_d = param0.getY();
+            ArchiveSource.field_d = param0.getY();
             je.a(1);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               SolKnight.field_G = 1;

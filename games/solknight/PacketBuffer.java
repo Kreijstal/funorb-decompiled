@@ -50,7 +50,7 @@ class PacketBuffer extends IntrusiveNode {
             stackIn_4_0 = null;
             return (wg) (stackIn_4_0);
           }
-          if (field_i == da.field_d &&
+          if (field_i == Archive.field_d &&
             param0.equals(uh.field_r)) {
             field_i = el.field_p;
             stackIn_11_0 = a.field_h;

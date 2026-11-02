@@ -112,7 +112,7 @@ final class ke extends si {
         try {
           ua.field_L = ua.field_L + 65536;
           while (sb.a(ua.field_L, uc.field_b, 1513551664) >= 65536) {
-            wd.field_a = wd.field_a + 1;
+            ArchiveSource.field_a = ArchiveSource.field_a + 1;
             ua.field_L = ua.field_L - uc.field_b;
           }
           var2_int = -1;

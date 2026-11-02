@@ -6,7 +6,7 @@ final class fh {
     static int field_a;
     static boolean[] field_d;
     static boolean field_g;
-    static da field_c;
+    static Archive field_c;
     static rj field_e;
     static int field_b;
 

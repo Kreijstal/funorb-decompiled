@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends ej {
+final class qi extends PcmStream {
     private int field_s;
     private int field_w;
     private boolean field_n;
@@ -121,7 +121,7 @@ final class qi extends ej {
         }
     }
 
-    final ej a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -402,7 +402,7 @@ final class qi extends ej {
           return null;
         }
         if (param0.field_i.length != 0) {
-          return new qi(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * gj.field_s)), param2 << 6);
+          return new qi(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * PcmPlayerService.field_s)), param2 << 6);
         }
         return null;
     }
@@ -417,12 +417,12 @@ final class qi extends ej {
           if (this.field_p <= 0) {
             if (this.field_x == 256 &&
               (this.field_u & 255) == 0) {
-              if (gj.field_u) {
+              if (PcmPlayerService.field_u) {
                 return qi.a(0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, 0, param3, param2, this);
               }
               return qi.a(((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, 0, param3, param2, this);
             }
-            if (gj.field_u) {
+            if (PcmPlayerService.field_u) {
               return qi.b(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, 0, param3, param2, this, this.field_x, param4);
             }
             return qi.b(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, 0, param3, param2, this, this.field_x, param4);
@@ -434,13 +434,13 @@ final class qi extends ej {
           this.field_p = this.field_p + param1;
           if (this.field_x == 256 &&
             (this.field_u & 255) == 0) {
-            if (!gj.field_u) {
+            if (!PcmPlayerService.field_u) {
               param1 = qi.a(((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, this.field_m, 0, var6, param2, this);
             } else {
               param1 = qi.a(0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, this.field_w, this.field_r, 0, var6, param2, this);
             }
           } else {
-            if (!gj.field_u) {
+            if (!PcmPlayerService.field_u) {
               param1 = qi.a(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, this.field_m, 0, var6, param2, this, this.field_x, param4);
             } else {
               param1 = qi.b(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, this.field_w, this.field_r, 0, var6, param2, this, this.field_x, param4);
@@ -784,12 +784,12 @@ final class qi extends ej {
           if (this.field_p <= 0) {
             if (this.field_x == -256 &&
               (this.field_u & 255) == 0) {
-              if (gj.field_u) {
+              if (PcmPlayerService.field_u) {
                 return qi.b(0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, 0, param3, param2, this);
               }
               return qi.b(((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, 0, param3, param2, this);
             }
-            if (gj.field_u) {
+            if (PcmPlayerService.field_u) {
               return qi.d(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, 0, param3, param2, this, this.field_x, param4);
             }
             return qi.a(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, 0, param3, param2, this, this.field_x, param4);
@@ -801,13 +801,13 @@ final class qi extends ej {
           this.field_p = this.field_p + param1;
           if (this.field_x == -256 &&
             (this.field_u & 255) == 0) {
-            if (!gj.field_u) {
+            if (!PcmPlayerService.field_u) {
               param1 = qi.b(((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, this.field_m, 0, var6, param2, this);
             } else {
               param1 = qi.b(0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, this.field_w, this.field_r, 0, var6, param2, this);
             }
           } else {
-            if (!gj.field_u) {
+            if (!PcmPlayerService.field_u) {
               param1 = qi.c(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_v, this.field_m, 0, var6, param2, this, this.field_x, param4);
             } else {
               param1 = qi.a(0, 0, ((sh) (this.field_h)).field_i, param0, this.field_u, param1, this.field_t, this.field_o, this.field_w, this.field_r, 0, var6, param2, this, this.field_x, param4);
@@ -1612,7 +1612,7 @@ final class qi extends ej {
         this.field_x = -this.field_x;
     }
 
-    final ej b() {
+    final PcmStream b() {
         return null;
     }
 

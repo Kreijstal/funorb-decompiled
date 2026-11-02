@@ -66,7 +66,7 @@ final class mh {
         field_a = null;
     }
 
-    final static Sprite a(boolean param0, da param1, int param2, int param3) {
+    final static Sprite a(boolean param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite stackIn_6_0 = null;

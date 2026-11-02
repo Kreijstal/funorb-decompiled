@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ej extends IntrusiveNode {
-    ej field_i;
+abstract class PcmStream extends IntrusiveNode {
+    PcmStream field_i;
     int field_j;
     volatile boolean field_k;
     nl field_h;
 
-    abstract ej a();
+    abstract PcmStream a();
 
     final void b(int[] param0, int param1, int param2) {
         if (this.field_k) {
@@ -19,7 +19,7 @@ abstract class ej extends IntrusiveNode {
 
     abstract void a(int param0);
 
-    abstract ej b();
+    abstract PcmStream b();
 
     int c() {
         return 255;
@@ -27,7 +27,7 @@ abstract class ej extends IntrusiveNode {
 
     abstract void a(int[] param0, int param1, int param2);
 
-    protected ej() {
+    protected PcmStream() {
         this.field_k = true;
     }
 

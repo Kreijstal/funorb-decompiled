@@ -9,7 +9,7 @@ final class nh {
           mi.a();
           if (param0 >= -28) {
             var4 = (String) null;
-            nh.a((da) null, (String) null, 2, (String) null);
+            nh.a((Archive) null, (String) null, 2, (String) null);
             uf.a(false, param1);
             return;
           }
@@ -19,14 +19,14 @@ final class nh {
         mi.a(0, 0, mi.field_a, mi.field_d, 0, 192);
         if (param0 >= -28) {
           var4Lifetime1 = (String) null;
-          nh.a((da) null, (String) null, 2, (String) null);
+          nh.a((Archive) null, (String) null, 2, (String) null);
           uf.a(false, param1);
           return;
         }
         uf.a(false, param1);
     }
 
-    final static Sprite[] a(da param0, String param1, int param2, String param3) {
+    final static Sprite[] a(Archive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

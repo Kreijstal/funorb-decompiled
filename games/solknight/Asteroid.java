@@ -273,12 +273,12 @@ final class Asteroid {
                         if (6 == var4) {
                           this.field_e = this.field_e + 1;
                           this.field_g = 6;
-                          var4 = 320 + (-wd.field_c + (this.field_a >> 4));
+                          var4 = 320 + (-ArchiveSource.field_c + (this.field_a >> 4));
                           var5 = (this.field_b >> 4) - si.field_E;
                           var6 = -var4 + PacketBuffer.field_j;
                           var7 = BufferedSocket.field_m - var5;
                           if (ClientException.field_b >= 0) {
-                            var6 = -var4 + (sk.field_o >> 4) - wd.field_c + 320;
+                            var6 = -var4 + (sk.field_o >> 4) - ArchiveSource.field_c + 320;
                             var7 = -var5 + ((wg.field_e >> 4) - si.field_E);
                           }
                           var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));
@@ -781,13 +781,13 @@ final class Asteroid {
                   }
                 }
                 if (this.field_e < 100) {
-                  var4 = (this.field_a >> 4) - wd.field_c + 320;
+                  var4 = (this.field_a >> 4) - ArchiveSource.field_c + 320;
                   var5 = (this.field_b >> 4) - si.field_E;
                   var6 = -var4 + PacketBuffer.field_j;
                   var7 = -var5 + BufferedSocket.field_m;
                   if (ClientException.field_b >= 0) {
                     var7 = -si.field_E + (wg.field_e >> 4) - var5;
-                    var6 = -var4 + 320 + (-wd.field_c + (sk.field_o >> 4));
+                    var6 = -var4 + 320 + (-ArchiveSource.field_c + (sk.field_o >> 4));
                   }
                   var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));
                   if (var8 > 8) {
@@ -963,7 +963,7 @@ final class Asteroid {
         int var10;
         int var11;
         var11 = SolKnight.field_L ? 1 : 0;
-        var4 = (this.field_a >> 4) + (-wd.field_c + 320);
+        var4 = (this.field_a >> 4) + (-ArchiveSource.field_c + 320);
         var5 = -si.field_E + (this.field_b >> 4);
         if (param0 <= 69) {
           this.a((byte) 84);
@@ -1299,7 +1299,7 @@ final class Asteroid {
         }
     }
 
-    final static Sprite a(String param0, String param1, da param2, byte param3) {
+    final static Sprite a(String param0, String param1, Archive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

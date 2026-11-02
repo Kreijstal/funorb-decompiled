@@ -256,7 +256,7 @@ final class jh {
           pe.field_n = false;
           hg.field_F = SolKnight.field_G;
           SpriteState.field_o = SocketConnector.field_a;
-          s.field_gb = wd.field_d;
+          s.field_gb = ArchiveSource.field_d;
           SolKnight.field_G = 0;
         }
     }

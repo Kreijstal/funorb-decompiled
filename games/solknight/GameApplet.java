@@ -133,7 +133,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !fc.field_m) {
             lj.field_G = je.a(1);
             i.a((byte) 125, 5000L);
-            lg.field_l = null;
+            CachedArchiveSource.field_l = null;
             this.a(false, true);
             return;
           }
@@ -874,7 +874,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               SecondaryNodeDeque.field_c = ia.g(-33);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param1, param4, true);
               wh.field_c = dupTemp$0;
-              lg.field_l = dupTemp$0;
+              CachedArchiveSource.field_l = dupTemp$0;
               var8 = wh.field_c.a(1, -95, (Runnable) (this));
               while (true) {
                 if (var8.field_c == 0) {

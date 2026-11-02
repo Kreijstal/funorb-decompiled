@@ -129,12 +129,12 @@ abstract class ab extends GameApplet {
         }
     }
 
-    final static da a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static Archive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          lg var8 = null;
-          da stackIn_16_0 = null;
+          CachedArchiveSource var8 = null;
+          Archive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -161,7 +161,7 @@ abstract class ab extends GameApplet {
             if (param0 != 2097152) {
               field_A = (int[]) null;
             }
-            stackIn_16_0 = new da(var8, param4, param2);
+            stackIn_16_0 = new Archive(var8, param4, param2);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,7 +284,7 @@ abstract class ab extends GameApplet {
         je.a(!param0);
     }
 
-    final static String a(da param0, String param1, String param2, String param3, boolean param4) {
+    final static String a(Archive param0, String param1, String param2, String param3, boolean param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -501,7 +501,7 @@ abstract class ab extends GameApplet {
         aa.a((byte) 30, vd.field_b);
         ff.a(this.field_z, wh.field_c, param1, (byte) 110, this.field_C, this.field_m, this.field_y, 5000, this.field_x, this.field_n, param5, 5000, vd.field_b, this.field_w);
         sk.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
-        da.a(0);
+        Archive.a(0);
         ah.field_d = ld.j(0);
         th.a((byte) -63, dc.field_q);
         if (!param4) {
@@ -834,7 +834,7 @@ abstract class ab extends GameApplet {
           th.a((byte) -69, dc.field_q);
         }
         if (ef.field_c[8]) {
-          wd.b(param0 + 11);
+          ArchiveSource.b(param0 + 11);
         }
     }
 
@@ -969,7 +969,7 @@ abstract class ab extends GameApplet {
         int var4 = te.field_O - 1;
         byte[] var5 = new byte[var4];
         te.field_N.b(70, var4, 0, var5);
-        ke.a((byte) -122, ia.g(-107), da.a(true, var5), var3 != 0);
+        ke.a((byte) -122, ia.g(-107), Archive.a(true, var5), var3 != 0);
     }
 
     static {

@@ -4,7 +4,7 @@
 final class qb extends vg implements wj {
     private oe field_Y;
     static int[] field_ab;
-    static da field_cb;
+    static Archive field_cb;
     private int field_Z;
     static wb field_L;
     static String field_X;
@@ -156,16 +156,16 @@ final class qb extends vg implements wj {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < hk.field_i) {
-                        wd.a(0, var16Lifetime2 + var17, var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2 + var17, var18, param3, param7);
                       }
                     } else {
                       if (var18 + var17 >= hk.field_i) {
                         var18 = hk.field_i + (-var17 - 1);
                       }
                       if (var17 >= 0) {
-                        wd.a(0, var17 + var16Lifetime2, var18, param3, param7);
+                        ArchiveSource.a(0, var17 + var16Lifetime2, var18, param3, param7);
                       } else {
-                        wd.a(0, var16Lifetime2, var17 + var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2, var17 + var18, param3, param7);
                       }
                     }
                   }
@@ -190,16 +190,16 @@ final class qb extends vg implements wj {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < hk.field_i) {
-                        wd.a(0, var16Lifetime2 + var17, var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2 + var17, var18, param3, param7);
                       }
                     } else {
                       if (var18 + var17 >= hk.field_i) {
                         var18 = hk.field_i + (-var17 - 1);
                       }
                       if (var17 >= 0) {
-                        wd.a(0, var17 + var16Lifetime2, var18, param3, param7);
+                        ArchiveSource.a(0, var17 + var16Lifetime2, var18, param3, param7);
                       } else {
-                        wd.a(0, var16Lifetime2, var17 + var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2, var17 + var18, param3, param7);
                       }
                     }
                   }
@@ -278,14 +278,14 @@ final class qb extends vg implements wj {
                     var17Lifetime1 = -1 + hk.field_i - var16Lifetime1;
                   }
                   if (0 <= var16Lifetime1) {
-                    wd.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
+                    ArchiveSource.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
                   } else {
-                    wd.a(0, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param3, param7);
+                    ArchiveSource.a(0, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param3, param7);
                   }
                 } else {
                   if (0 <= var16Lifetime1 &&
                     hk.field_i > var16Lifetime1) {
-                    wd.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
+                    ArchiveSource.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
                   }
                 }
               }

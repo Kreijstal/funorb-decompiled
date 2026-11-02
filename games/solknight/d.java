@@ -15,7 +15,7 @@ final class d {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        da var8 = null;
+        Archive var8 = null;
         int var2_intLifetime1;
         int var3Lifetime1;
         int var6Lifetime1;
@@ -45,7 +45,7 @@ final class d {
             }
             dc.field_n.a();
             mi.a();
-            BufferedSocket.field_b.a(bb.a(ha.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
+            BufferedSocket.field_b.a(bb.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             hj.field_e.a(true);
             dc.field_n.a(ci.field_ib, 46, 109, 0, 475);
           }
@@ -93,8 +93,8 @@ final class d {
             var5 += 22;
           }
           if (param1 != -48) {
-            var8 = (da) null;
-            d.a((da) null, true, (byte) -71, (da) null, (da) null);
+            var8 = (Archive) null;
+            d.a((Archive) null, true, (byte) -71, (Archive) null, (Archive) null);
           }
           uj.a(var2_intLifetime1 + 15, 47, -15 + (640 - var2_intLifetime1), le.field_d, 433, 2);
           if (0 < uf.field_p) {
@@ -141,7 +141,7 @@ final class d {
         }
     }
 
-    final static void a(da param0, boolean param1, byte param2, da param3, da param4) {
+    final static void a(Archive param0, boolean param1, byte param2, Archive param3, Archive param4) {
         td.field_h = hh.a("", false);
         td.field_h.a(false, (byte) -75);
         ci.a(param0, false, param3, param4);

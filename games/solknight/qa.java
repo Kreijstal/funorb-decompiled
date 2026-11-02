@@ -47,7 +47,7 @@ final class qa extends a {
             return stackIn_3_0;
           }
           if (this.a(param0, (byte) -124) == rg.field_f) {
-            stackIn_7_0 = wd.field_b;
+            stackIn_7_0 = ArchiveSource.field_b;
             return stackIn_7_0;
           }
           if (param1) {

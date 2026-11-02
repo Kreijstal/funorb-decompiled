@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oc {
-    private da field_c;
+    private Archive field_c;
     static java.awt.Frame field_a;
-    private da field_b;
+    private Archive field_b;
     static String field_e;
     private v field_d;
 

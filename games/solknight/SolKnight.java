@@ -5,7 +5,7 @@ import java.util.*;
 
 public final class SolKnight extends ab {
     static fg field_D;
-    private static da field_I;
+    private static Archive field_I;
     static volatile int field_G;
     static int[] field_K;
     static int[] field_E;
@@ -209,7 +209,7 @@ public final class SolKnight extends ab {
           na.a(-13357);
           lf.b(18609);
           mi.c();
-          da.b(-127);
+          Archive.b(-127);
           BitmapFont.a();
           bk.a((byte) 84);
           vc.a(true);
@@ -237,7 +237,7 @@ public final class SolKnight extends ab {
           ne.b(30731);
           hb.b(true);
           BufferedSocket.a((byte) 84);
-          gj.e();
+          PcmPlayerService.e();
           mf.g(103);
           se.b(false);
           IntrusiveNode.b(12516);
@@ -253,9 +253,9 @@ public final class SolKnight extends ab {
           vd.a((byte) 57);
           kk.a(-1);
           ja.a((byte) -43);
-          ha.a(0);
+          ArchiveIndex.a(0);
           kg.a(false);
-          wd.a(8355711);
+          ArchiveSource.a(8355711);
           pg.b((byte) 127);
           he.a(false);
           jc.a(1731);
@@ -294,7 +294,7 @@ public final class SolKnight extends ab {
           ic.i(-74);
           bi.a((byte) 102);
           md.i(80);
-          lg.b((byte) 0);
+          CachedArchiveSource.b((byte) 0);
           sg.c(119);
           qj.a(-126);
           sk.h(-106);
@@ -778,7 +778,7 @@ public final class SolKnight extends ab {
             }
             if (ClientException.field_b >= 0) {
               si.field_E = 240 - ClientException.field_b;
-              wd.field_c = -160;
+              ArchiveSource.field_c = -160;
               if (si.field_E < 0) {
                 si.field_E = 0;
               }
@@ -843,7 +843,7 @@ public final class SolKnight extends ab {
               if (!sg.b((byte) -104)) {
                 nh.a((byte) 3);
               } else {
-                da.a(true);
+                Archive.a(true);
               }
               je.field_d = 2;
               return;
@@ -928,7 +928,7 @@ public final class SolKnight extends ab {
             ih.a(20753, (java.awt.Canvas) (var2));
             return;
           }
-          mi.e(-320 - wd.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
+          mi.e(-320 - ArchiveSource.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
           kc.field_O = kc.field_O + 1;
           var3 = 0;
           if (nf.field_W.length < kc.field_O) {
@@ -943,7 +943,7 @@ public final class SolKnight extends ab {
             if (var3 >= 5) {
               var3 = 0;
             }
-            var5 = 320 + (-wd.field_c + nf.field_W[var4_int]);
+            var5 = 320 + (-ArchiveSource.field_c + nf.field_W[var4_int]);
             var6 = -si.field_E + nf.field_W[1 + var4_int];
             var7 = var4_int - kc.field_O;
             if (-nf.field_W.length / 2 > var7) {

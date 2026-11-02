@@ -15,12 +15,12 @@ final class ub {
 
     final static void a(PlatformTaskDispatcher param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
         try {
-          gj.a(param7, param1, 10);
+          PcmPlayerService.a(param7, param1, 10);
           if (param6) {
             field_a = (String) null;
           }
-          kj.field_P = gj.a(param0, param4, 0, param2);
-          ql.field_r = gj.a(param0, param4, 1, param3);
+          kj.field_P = PcmPlayerService.a(param0, param4, 0, param2);
+          ql.field_r = PcmPlayerService.a(param0, param4, 1, param3);
           ti.field_f = new e();
           ak.field_a = 1000 * param3 / param7;
           ql.field_r.a(ti.field_f);

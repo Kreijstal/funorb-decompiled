@@ -250,8 +250,8 @@ final class aj {
           var6.field_g = 0;
           var7 = new ql(var4, true);
           var7.field_g = 0;
-          var7.a((byte) -94, ha.a(8947848, 118));
-          var7.a((byte) -80, 1).a(ha.a(11184810, -96), (byte) 119).d(-128, 2236962);
+          var7.a((byte) -94, ArchiveIndex.a(8947848, 118));
+          var7.a((byte) -80, 1).a(ArchiveIndex.a(11184810, -96), (byte) 119).d(-128, 2236962);
           this.field_r = (j) ((Object) new td(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new we(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);

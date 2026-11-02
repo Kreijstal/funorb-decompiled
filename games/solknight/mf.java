@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf extends ej {
+final class mf extends PcmStream {
     private int[] field_r;
     private int[] field_T;
     int[] field_z;
@@ -41,7 +41,7 @@ final class mf extends ej {
     private rl field_m;
     private boolean field_V;
 
-    final synchronized boolean a(int param0, rl param1, me param2, da param3, int param4) {
+    final synchronized boolean a(int param0, rl param1, me param2, Archive param3, int param4) {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -138,7 +138,7 @@ final class mf extends ej {
         int var11 = 0;
         var11 = SolKnight.field_L ? 1 : 0;
         try {
-          param4.field_t = gj.field_s / param3;
+          param4.field_t = PcmPlayerService.field_s / param3;
           if (param4.field_k >= 0 && (null == param4.field_w ||
             param4.field_w.i())) {
             param4.a((byte) 104);
@@ -266,7 +266,7 @@ final class mf extends ej {
           if (param0 < 0 ||
             param0 == var3.field_z) {
             if (null != var3.field_w) {
-              var3.field_w.e(gj.field_s / 100);
+              var3.field_w.e(PcmPlayerService.field_s / 100);
               if (var3.field_w.h()) {
                 this.field_Q.field_r.a(var3.field_w);
               }
@@ -405,7 +405,7 @@ final class mf extends ej {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           if (this.field_H.d()) {
-            var4_int = this.field_H.field_c * this.field_M / gj.field_s;
+            var4_int = this.field_H.field_c * this.field_M / PcmPlayerService.field_s;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_s;
               if (-var5 + this.field_E >= 0L) {
@@ -625,7 +625,7 @@ final class mf extends ej {
             var7 = Math.sin((double)(param0.field_q & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)((double)(param0.field_u.field_j * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)gj.field_s + 0.5);
+          var5Lifetime1 = (int)((double)(param0.field_u.field_j * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)PcmPlayerService.field_s + 0.5);
           stackIn_12_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1010,7 +1010,7 @@ final class mf extends ej {
         }
     }
 
-    final synchronized ej b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -1193,8 +1193,8 @@ final class mf extends ej {
         }
     }
 
-    final synchronized ej a() {
-        return (ej) ((Object) this.field_Q);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_Q);
     }
 
     private final int a(hg param0, byte param1) {
@@ -1279,7 +1279,7 @@ final class mf extends ej {
         boolean decompiledFrameRemainder0 = true;
         var6 = SolKnight.field_L ? 1 : 0;
         if (this.field_H.d()) {
-          var2 = this.field_H.field_c * this.field_M / gj.field_s;
+          var2 = this.field_H.field_c * this.field_M / PcmPlayerService.field_s;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_s;
             if (this.field_E - var3 >= 0L) {

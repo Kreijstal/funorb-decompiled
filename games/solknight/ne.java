@@ -13,7 +13,7 @@ final class ne {
     private ic field_m;
     static String field_g;
     static ng field_i;
-    private lg[] field_k;
+    private CachedArchiveSource[] field_k;
     static String field_a;
 
     public static void b(int param0) {
@@ -78,20 +78,20 @@ final class ne {
             throw new RuntimeException();
           }
         }
-        this.field_k = new lg[var3];
+        this.field_k = new CachedArchiveSource[var3];
         this.field_b = var11;
         return true;
     }
 
-    final lg a(int param0, bi param1, boolean param2, bi param3, int param4) {
+    final CachedArchiveSource a(int param0, bi param1, boolean param2, bi param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        lg var9 = null;
+        CachedArchiveSource var9 = null;
         byte[] var13 = null;
-        lg stackIn_8_0 = null;
-        lg stackIn_11_0 = null;
-        lg stackIn_13_0 = null;
+        CachedArchiveSource stackIn_8_0 = null;
+        CachedArchiveSource stackIn_11_0 = null;
+        CachedArchiveSource stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -105,7 +105,7 @@ final class ne {
           if (param4 >= 0 &&
             param4 < this.field_k.length) {
             if (param0 != -65) {
-              stackIn_8_0 = (lg) null;
+              stackIn_8_0 = (CachedArchiveSource) null;
               return stackIn_8_0;
             }
             if (null != this.field_k[param4]) {
@@ -117,7 +117,7 @@ final class ne {
             var7 = this.field_b.readInt(true);
             var13 = new byte[64];
             this.field_b.a(64, 0, -127, var13);
-            var9 = new lg(param4, param1, param3, this.field_h, this.field_l, var6_int, var13, var7, param2);
+            var9 = new CachedArchiveSource(param4, param1, param3, this.field_h, this.field_l, var6_int, var13, var7, param2);
             this.field_k[param4] = var9;
             stackIn_13_0 = var9;
             return stackIn_13_0;
@@ -147,7 +147,7 @@ final class ne {
         int var2;
         int var3;
         String var4;
-        lg stackIn_13_0 = null;
+        CachedArchiveSource stackIn_13_0 = null;
         int var2Lifetime1;
         var3 = SolKnight.field_L ? 1 : 0;
         if (null == this.field_k) {

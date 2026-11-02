@@ -88,7 +88,7 @@ final class ah {
         int var6;
         int var4Lifetime1;
         var6 = SolKnight.field_L ? 1 : 0;
-        var2 = -wd.field_c + 320;
+        var2 = -ArchiveSource.field_c + 320;
         var3 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
         if (param0) {
           var4 = kd.field_b[kb.field_b];
@@ -193,7 +193,7 @@ final class ah {
             if (var5 > 7) {
               var5 = 7;
             }
-            td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
+            td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + rj.field_b));
             if (param1 != 7) {
               ah.b(true);
             }
@@ -255,7 +255,7 @@ final class ah {
         if (var5 > 7) {
           var5 = 7;
         }
-        td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
+        td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + rj.field_b));
         if (param1 == 7) {
           return;
         }

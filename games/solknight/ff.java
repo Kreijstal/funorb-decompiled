@@ -39,7 +39,7 @@ final class ff {
             var6 = (String) null;
             ff.a(4, 59, (String[]) null, (String) null);
           }
-          ma.field_o = da.field_d;
+          ma.field_o = Archive.field_d;
           if (255 != param0) {
             if (param0 < 100) {
               vb.field_j = mh.a(param0, true, param3);

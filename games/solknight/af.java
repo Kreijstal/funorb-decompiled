@@ -16,7 +16,7 @@ class af implements j, eg {
     private int field_k;
     static int[] field_h;
     int field_d;
-    static da field_c;
+    static Archive field_c;
 
     private final int c(int param0, UiWidget param1) {
         RuntimeException var3 = null;

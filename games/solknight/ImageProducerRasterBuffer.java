@@ -108,7 +108,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static fc a(int param0, int param1, da param2) {
+    final static fc a(int param0, int param1, Archive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -188,8 +188,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     public static void b(int param0) {
         if (param0 != 768) {
-          da var2 = (da) null;
-          ImageProducerRasterBuffer.a(-87, 28, (da) null);
+          Archive var2 = (Archive) null;
+          ImageProducerRasterBuffer.a(-87, 28, (Archive) null);
         }
         field_i = null;
         field_j = null;

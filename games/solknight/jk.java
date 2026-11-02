@@ -5,7 +5,7 @@ final class jk extends ci implements ka {
     private boolean field_tb;
     private rf field_vb;
     private boolean field_wb;
-    static da field_ub;
+    static Archive field_ub;
 
     jk(i param0, rf param1) {
         super(param0, uc.field_g, UiWidget.field_p, false, false);
@@ -19,7 +19,7 @@ final class jk extends ci implements ka {
     public static void n(int param0) {
         field_ub = null;
         if (param0 != 6) {
-          field_ub = (da) null;
+          field_ub = (Archive) null;
         }
     }
 
@@ -154,7 +154,7 @@ final class jk extends ci implements ka {
 
     final static int i(byte param0) {
         if (param0 < 112) {
-          field_ub = (da) null;
+          field_ub = (Archive) null;
           return ak.field_a;
         }
         return ak.field_a;

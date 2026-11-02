@@ -8,7 +8,7 @@ final class df extends a {
     final static void a(int param0, boolean param1) {
         we.field_h = 0;
         ua.field_L = 0;
-        wd.field_a = 0;
+        ArchiveSource.field_a = 0;
         ti.field_e = uc.field_e;
         GameKeyHandler.field_b = new sf(2);
         GameKeyHandler.field_b.a(param1, -1, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, param0), param0 + 121);

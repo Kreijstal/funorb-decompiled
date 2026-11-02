@@ -19,7 +19,7 @@ final class dj extends IntrusiveNode {
         }
     }
 
-    final static od[] a(int param0, String param1, da param2, String param3) {
+    final static od[] a(int param0, String param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

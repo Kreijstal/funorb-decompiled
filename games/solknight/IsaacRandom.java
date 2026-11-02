@@ -18,7 +18,7 @@ final class IsaacRandom {
         if (ma.field_o == el.field_p) {
           throw new IllegalStateException();
         }
-        if (ma.field_o == da.field_d) {
+        if (ma.field_o == Archive.field_d) {
           ma.field_o = el.field_p;
           return vb.field_j;
         }
@@ -93,9 +93,9 @@ final class IsaacRandom {
         }
     }
 
-    final static da a(int param0, int param1) {
+    final static Archive a(int param0, int param1) {
         if (param1 <= 71) {
-          return (da) null;
+          return (Archive) null;
         }
         return ab.a(2097152, param0, 1, false, true, false);
     }
@@ -241,7 +241,7 @@ final class IsaacRandom {
         this.field_k = 256;
     }
 
-    final static void a(da param0, int param1, int param2, e param3) {
+    final static void a(Archive param0, int param1, int param2, e param3) {
         try {
           a.field_i = param1 * l.a((byte) 96) / 1000;
           ae.a(26197, param0);

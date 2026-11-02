@@ -4,14 +4,14 @@
 final class sb implements Runnable {
     static nc field_c;
     PlatformTaskDispatcher field_b;
-    volatile gj[] field_a;
+    volatile PcmPlayerService[] field_a;
     volatile boolean field_e;
     volatile boolean field_f;
     static int field_d;
 
     public final void run() {
         int var1_int = 0;
-        gj var2 = null;
+        PcmPlayerService var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -112,7 +112,7 @@ final class sb implements Runnable {
     }
 
     sb() {
-        this.field_a = new gj[2];
+        this.field_a = new PcmPlayerService[2];
         this.field_e = false;
         this.field_f = false;
     }

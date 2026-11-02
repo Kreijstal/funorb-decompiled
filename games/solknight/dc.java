@@ -45,7 +45,7 @@ final class dc extends a {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != wd.a(param0, -112)) ? 0 : 1;
+          stackIn_3_0 = (null != ArchiveSource.a(param0, -112)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param1 > -109) {
             field_m = (String) null;

@@ -6,7 +6,7 @@ final class pb implements j {
     static int field_b;
     static int[] field_a;
 
-    final static void a(da param0, int param1) {
+    final static void a(Archive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;

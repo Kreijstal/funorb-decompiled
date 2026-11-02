@@ -4,7 +4,7 @@
 import java.io.*;
 
 class kj extends pj {
-    static gj field_P;
+    static PcmPlayerService field_P;
     static ff field_J;
     static long field_I;
     private nc field_L;

@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gj {
+class PcmPlayerService {
     private boolean field_j;
     private static int field_d;
     private int field_q;
     private static sb field_p;
     private long field_e;
     static boolean field_u;
-    private ej field_f;
+    private PcmStream field_f;
     int[] field_a;
     static int field_s;
     private int field_t;
     private long field_k;
-    private ej[] field_b;
+    private PcmStream[] field_b;
     private long field_m;
     private boolean field_n;
     private int field_o;
-    private ej[] field_r;
+    private PcmStream[] field_r;
     private int field_l;
     private int field_g;
     private int field_h;
@@ -28,15 +28,15 @@ class gj {
         field_p = null;
     }
 
-    final static gj a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static PcmPlayerService a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          ca var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          ca var5 = null;
-          ca stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          ca stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_s == 0) {
             throw new IllegalStateException();
@@ -47,7 +47,7 @@ class gj {
               param3 = 256;
             }
             try {
-              var5 = new ca();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
@@ -56,14 +56,14 @@ class gj {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((gj) ((Object) stackIn_10_0)).field_a = new int[stackIn_10_1 * stackIn_11_2];
-              ((gj) ((Object) var4)).field_h = param3;
-              ((gj) ((Object) var4)).a(param1);
-              ((gj) ((Object) var4)).field_t = (param3 & -1024) + 1024;
-              if (((gj) ((Object) var4)).field_t > 16384) {
-                ((gj) ((Object) var4)).field_t = 16384;
+              ((PcmPlayerService) ((Object) stackIn_10_0)).field_a = new int[stackIn_10_1 * stackIn_11_2];
+              ((PcmPlayerService) ((Object) var4)).field_h = param3;
+              ((PcmPlayerService) ((Object) var4)).a(param1);
+              ((PcmPlayerService) ((Object) var4)).field_t = (param3 & -1024) + 1024;
+              if (((PcmPlayerService) ((Object) var4)).field_t > 16384) {
+                ((PcmPlayerService) ((Object) var4)).field_t = 16384;
               }
-              ((gj) ((Object) var4)).b(((gj) ((Object) var4)).field_t);
+              ((PcmPlayerService) ((Object) var4)).b(((PcmPlayerService) ((Object) var4)).field_t);
               if (field_d > 0 &&
                 field_p == null) {
                 field_p = new sb();
@@ -74,14 +74,14 @@ class gj {
                 if (field_p.field_a[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_p.field_a[param2] = (gj) ((Object) var5);
+                field_p.field_a[param2] = (PcmPlayerService) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (gj) ((Object) stackIn_21_0);
+              return (PcmPlayerService) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new gj();
+              return new PcmPlayerService();
             }
           }
           throw new IllegalArgumentException();
@@ -103,20 +103,20 @@ class gj {
         int var7_int;
         Object var7;
         int var8_int;
-        ej[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        ej var11;
+        PcmStream var11;
         nl var12;
         int var13;
-        ej var14;
+        PcmStream var14;
         int var15_int;
-        ej var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        ej var14Lifetime1;
-        ej var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_u) {
           var3 = var3 << 1;
@@ -126,7 +126,7 @@ class gj {
         if (this.field_f != null &&
           this.field_c <= 0) {
           this.field_c = this.field_c + (field_s >> 4);
-          gj.b(this.field_f);
+          PcmPlayerService.b(this.field_f);
           this.a(this.field_f, this.field_f.c());
           var4 = 0;
           var5 = 255;
@@ -177,12 +177,12 @@ class gj {
                     var15 = var11.field_i;
                     var11.field_i = null;
                     if (var10 != null) {
-                      ((ej) (var10)).field_i = var15;
+                      ((PcmStream) (var10)).field_i = var15;
                     } else {
                       this.field_r[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_b[var7_int] = (ej) (var10);
+                      this.field_b[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -203,8 +203,8 @@ class gj {
             this.field_b[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((ej) (var7)).field_i;
-              ((ej) (var7)).field_i = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_i;
+              ((PcmStream) (var7)).field_i = null;
               var7 = var10Lifetime1;
             }
           }
@@ -258,14 +258,14 @@ class gj {
     void c() {
     }
 
-    private final static void b(ej param0) {
+    private final static void b(PcmStream param0) {
         param0.field_k = false;
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
-        ej var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
-          gj.b(var1);
+          PcmPlayerService.b(var1);
           var1 = param0.b();
         }
     }
@@ -309,13 +309,13 @@ class gj {
         }
     }
 
-    final synchronized void a(ej param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_f = param0;
     }
 
-    private final void a(ej param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        ej var4 = this.field_b[var3];
+        PcmStream var4 = this.field_b[var3];
         if (var4 == null) {
           this.field_r[var3] = param0;
         } else {
@@ -420,18 +420,18 @@ class gj {
         }
     }
 
-    gj() {
+    PcmPlayerService() {
         this.field_j = false;
         this.field_q = 32;
         this.field_e = je.a(1);
         this.field_n = true;
         this.field_m = 0L;
         this.field_o = 0;
-        this.field_r = new ej[8];
+        this.field_r = new PcmStream[8];
         this.field_k = 0L;
         this.field_g = 0;
         this.field_i = 0;
-        this.field_b = new ej[8];
+        this.field_b = new PcmStream[8];
         this.field_c = 0;
     }
 }

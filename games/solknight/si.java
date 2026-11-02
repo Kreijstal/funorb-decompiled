@@ -150,8 +150,8 @@ abstract class si extends UiWidget implements oh {
 
     public static void i(int param0) {
         if (param0 < 122) {
-          da var2 = (da) null;
-          si.a((da) null, (String) null, true, (String) null, (da) null);
+          Archive var2 = (Archive) null;
+          si.a((Archive) null, (String) null, true, (String) null, (Archive) null);
         }
         field_F = null;
         field_D = null;
@@ -296,7 +296,7 @@ abstract class si extends UiWidget implements oh {
         }
     }
 
-    final static ol a(da param0, String param1, boolean param2, String param3, da param4) {
+    final static ol a(Archive param0, String param1, boolean param2, String param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

@@ -87,7 +87,7 @@ final class hi {
             if (SecondaryNodeDeque.field_c == null) {
               return;
             }
-            stackIn_13_0 = lg.field_l;
+            stackIn_13_0 = CachedArchiveSource.field_l;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = SecondaryNodeDeque.field_c.getCodeBase();

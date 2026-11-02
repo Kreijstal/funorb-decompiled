@@ -4,7 +4,7 @@
 final class ok {
     static jh field_a;
 
-    final static String a(int param0, int param1, String param2, da param3, String param4) {
+    final static String a(int param0, int param1, String param2, Archive param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;

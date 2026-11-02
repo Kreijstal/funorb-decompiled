@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e extends ej {
+final class e extends PcmStream {
     private nc field_l;
     private nc field_n;
     private int field_m;
@@ -46,19 +46,19 @@ final class e extends ej {
     }
 
     private final void d(int param0) {
-        ej var2 = (ej) (this.field_l.a((byte) 51));
+        PcmStream var2 = (PcmStream) (this.field_l.a((byte) 51));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (ej) (this.field_l.b(-79));
+          var2 = (PcmStream) (this.field_l.b(-79));
         }
     }
 
-    final synchronized void a(ej param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_l.a(-3024, param0);
     }
 
-    final ej a() {
-        return (ej) (this.field_l.a((byte) 51));
+    final PcmStream a() {
+        return (PcmStream) (this.field_l.a((byte) 51));
     }
 
     private final void a(ag param0) {
@@ -109,8 +109,8 @@ final class e extends ej {
         return;
     }
 
-    final ej b() {
-        return (ej) (this.field_l.b(-51));
+    final PcmStream b() {
+        return (PcmStream) (this.field_l.b(-51));
     }
 
     final int d() {
@@ -133,7 +133,7 @@ final class e extends ej {
     private final void a(IntrusiveNode param0, ag param1) {
         while (true) {
           if (param0 == this.field_n.field_e) {
-            ha.a(param1, (byte) 93, param0);
+            ArchiveIndex.a(param1, (byte) 93, param0);
             this.field_o = ((ag) (this.field_n.field_e.previous)).field_h;
             return;
           }
@@ -143,16 +143,16 @@ final class e extends ej {
           }
           break;
         }
-        ha.a(param1, (byte) 93, param0);
+        ArchiveIndex.a(param1, (byte) 93, param0);
         this.field_o = ((ag) (this.field_n.field_e.previous)).field_h;
         return;
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        ej var4 = (ej) (this.field_l.a((byte) 51));
+        PcmStream var4 = (PcmStream) (this.field_l.a((byte) 51));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (ej) (this.field_l.b(-27));
+          var4 = (PcmStream) (this.field_l.b(-27));
         }
     }
 

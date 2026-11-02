@@ -211,7 +211,7 @@ final class hf {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < hk.field_i) {
-                        da.a(var38, 26, param12, 0, 0, 0, var25, var36Lifetime2 + var37, var29, var21);
+                        Archive.a(var38, 26, param12, 0, 0, 0, var25, var36Lifetime2 + var37, var29, var21);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -221,9 +221,9 @@ final class hf {
                         var38 = -1 + (-var37 + hk.field_i);
                       }
                       if (var37 < 0) {
-                        da.a(var37 + var38, param6 ^ 1517200866, param12, var40, var41, var39, -(var37 * var40) + var25, var36Lifetime2, -(var41 * var37) + var29, -(var39 * var37) + var21);
+                        Archive.a(var37 + var38, param6 ^ 1517200866, param12, var40, var41, var39, -(var37 * var40) + var25, var36Lifetime2, -(var41 * var37) + var29, -(var39 * var37) + var21);
                       } else {
-                        da.a(var38, 88, param12, var40, var41, var39, var25, var37 + var36Lifetime2, var29, var21);
+                        Archive.a(var38, 88, param12, var40, var41, var39, var25, var37 + var36Lifetime2, var29, var21);
                       }
                     }
                   }
@@ -306,14 +306,14 @@ final class hf {
                     var37Lifetime1 = hk.field_i - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 >= 0) {
-                    da.a(var37Lifetime1, param6 ^ 1517200837, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
+                    Archive.a(var37Lifetime1, param6 ^ 1517200837, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
                   } else {
-                    da.a(var37Lifetime1 + var36Lifetime1, 112, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, var35Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, -(var38Lifetime1 * var36Lifetime1) + var21);
+                    Archive.a(var37Lifetime1 + var36Lifetime1, 112, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, var35Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, -(var38Lifetime1 * var36Lifetime1) + var21);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < hk.field_i) {
-                    da.a(var37Lifetime1, param6 - 1517200669, param12, 0, 0, 0, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
+                    Archive.a(var37Lifetime1, param6 - 1517200669, param12, 0, 0, 0, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
                   }
                 }
               }

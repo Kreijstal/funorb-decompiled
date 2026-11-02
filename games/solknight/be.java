@@ -22,10 +22,10 @@ final class be extends pj {
         int var7;
         int var8;
         var8 = SolKnight.field_L ? 1 : 0;
-        var1 = -wd.field_c + 320;
+        var1 = -ArchiveSource.field_c + 320;
         var2 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
         if (ClientException.field_b >= 0) {
-          var3 = -var1 - wd.field_c + ((sk.field_o >> 4) + 320);
+          var3 = -var1 - ArchiveSource.field_c + ((sk.field_o >> 4) + 320);
           var4 = -var2 - si.field_E + (wg.field_e >> 4);
         } else {
           var4 = -var2 + BufferedSocket.field_m;

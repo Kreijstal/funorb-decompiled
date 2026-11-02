@@ -6,7 +6,7 @@ final class ra {
     private fe[] field_a;
     private int field_b;
 
-    final static ra a(da param0, int param1, int param2) {
+    final static ra a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.b(param1, 12257, param2);
         if (var3 == null) {
           return null;
@@ -59,7 +59,7 @@ final class ra {
         return new sh(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static ra a(da param0, String param1, String param2) {
+    final static ra a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(4, param1, param2);
         if (var3 == null) {
           return null;

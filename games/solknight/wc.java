@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wc {
-    static da field_b;
+    static Archive field_b;
     static kb field_f;
     static int field_e;
     static int field_a;
@@ -14,7 +14,7 @@ final class wc {
         field_b = null;
         field_d = null;
         if (param0) {
-          field_b = (da) null;
+          field_b = (Archive) null;
         }
     }
 

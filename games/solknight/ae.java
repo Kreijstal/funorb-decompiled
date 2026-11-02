@@ -264,7 +264,7 @@ final class ae implements Runnable {
         }
     }
 
-    final static void a(int param0, da param1) {
+    final static void a(int param0, Archive param1) {
         sl var2 = null;
         try {
           if (param0 != 26197) {

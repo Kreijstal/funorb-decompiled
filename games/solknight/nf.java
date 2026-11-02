@@ -81,7 +81,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    final static void a(da param0, int param1, da param2) {
+    final static void a(Archive param0, int param1, Archive param2) {
         kc.field_Q = param2;
         if (param1 >= -57) {
           return;

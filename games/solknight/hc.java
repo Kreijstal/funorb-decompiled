@@ -232,8 +232,8 @@ final class hc {
             vc.field_d[1] = cj.field_b;
             fl.field_b[0] = 5;
             fl.field_b[1] = 2;
-            vc.field_d[4] = lg.field_r;
-            vc.field_d[2] = ha.field_n;
+            vc.field_d[4] = CachedArchiveSource.field_r;
+            vc.field_d[2] = ArchiveIndex.field_n;
             ImageProducerRasterBuffer.field_l[3] = 1;
             vc.field_d[5] = "";
             vc.field_d[3] = ProxySocketConnector.field_j;

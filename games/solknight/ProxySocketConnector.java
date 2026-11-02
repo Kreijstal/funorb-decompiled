@@ -8,7 +8,7 @@ final class ProxySocketConnector extends SocketConnector {
     static char[] field_k;
     static String field_j;
     static int field_m;
-    static da field_h;
+    static Archive field_h;
     static String field_o;
     static String field_n;
     private java.net.ProxySelector field_i;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha {
+final class ArchiveIndex {
     private int[] field_i;
     private int field_h;
     int field_l;
@@ -271,7 +271,7 @@ final class ha {
         return var2;
     }
 
-    ha(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_d = gl.a(param0.length, param0, 119);

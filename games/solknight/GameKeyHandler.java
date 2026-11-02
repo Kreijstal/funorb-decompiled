@@ -36,10 +36,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static ff[] a(int param0) {
         if (param0 <= -63) {
-          return new ff[]{u.field_a, ne.field_f, ng.field_f, ti.field_c, da.field_i, di.field_i, rg.field_b, me.field_f, kj.field_J, mb.field_b, wh.field_a, kg.field_f, ef.field_a, la.field_l};
+          return new ff[]{u.field_a, ne.field_f, ng.field_f, ti.field_c, Archive.field_i, di.field_i, rg.field_b, me.field_f, kj.field_J, mb.field_b, wh.field_a, kg.field_f, ef.field_a, la.field_l};
         }
         field_b = (sf) null;
-        return new ff[]{u.field_a, ne.field_f, ng.field_f, ti.field_c, da.field_i, di.field_i, rg.field_b, me.field_f, kj.field_J, mb.field_b, wh.field_a, kg.field_f, ef.field_a, la.field_l};
+        return new ff[]{u.field_a, ne.field_f, ng.field_f, ti.field_c, Archive.field_i, di.field_i, rg.field_b, me.field_f, kj.field_J, mb.field_b, wh.field_a, kg.field_f, ef.field_a, la.field_l};
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {

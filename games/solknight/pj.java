@@ -26,7 +26,7 @@ class pj extends UiWidget {
 
     boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
-        da var9 = null;
+        Archive var9 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -45,8 +45,8 @@ class pj extends UiWidget {
             return true;
           }
           if (param2) {
-            var9 = (da) null;
-            pj.a(-9, (da) null);
+            var9 = (Archive) null;
+            pj.a(-9, (Archive) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,9 +92,9 @@ class pj extends UiWidget {
         }
     }
 
-    final static boolean a(da param0, int param1, da param2, da param3) {
+    final static boolean a(Archive param0, int param1, Archive param2, Archive param3) {
         RuntimeException var4 = null;
-        da var5 = null;
+        Archive var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -105,8 +105,8 @@ class pj extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -16925) {
-            var5 = (da) null;
-            pj.a(-17, (da) null);
+            var5 = (Archive) null;
+            pj.a(-17, (Archive) null);
           }
           if (!param2.c((byte) -121)) {
             return false;
@@ -336,12 +336,12 @@ class pj extends UiWidget {
         }
     }
 
-    final static da a(int param0, byte param1, int param2, boolean param3, boolean param4) {
+    final static Archive a(int param0, byte param1, int param2, boolean param3, boolean param4) {
         int var5 = 10 / ((-74 - param1) / 37);
         return ab.a(2097152, param0, param2, false, param4, param3);
     }
 
-    final static void a(int param0, da param1) {
+    final static void a(int param0, Archive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;

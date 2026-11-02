@@ -4,9 +4,9 @@
 final class me {
     static ff field_f;
     private qd field_j;
-    private da field_a;
-    private da field_c;
-    static da field_e;
+    private Archive field_a;
+    private Archive field_c;
+    static Archive field_e;
     static boolean field_g;
     private qd field_i;
     static String field_h;
@@ -43,7 +43,7 @@ final class me {
             return (sh) (stackIn_6_0);
           }
           if (param1 != 1264444880) {
-            this.field_c = (da) null;
+            this.field_c = (Archive) null;
           }
           var9 = ra.a(this.field_a, param2, param3);
           if (var9 == null) {
@@ -231,7 +231,7 @@ final class me {
         }
     }
 
-    me(da param0, da param1) {
+    me(Archive param0, Archive param1) {
         this.field_j = new qd(256);
         this.field_i = new qd(256);
         try {

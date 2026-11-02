@@ -304,12 +304,12 @@ class ci extends gf implements ka {
         }
     }
 
-    final static void a(da param0, boolean param1, da param2, da param3) {
+    final static void a(Archive param0, boolean param1, Archive param2, Archive param3) {
         int var11_int = 0;
-        da stackIn_3_0 = null;
+        Archive stackIn_3_0 = null;
         String stackIn_3_1 = null;
         boolean stackIn_4_2 = false;
-        da stackIn_6_0 = null;
+        Archive stackIn_6_0 = null;
         String stackIn_6_1 = null;
         boolean stackIn_7_2 = false;
         RuntimeException stackIn_22_0 = null;
@@ -330,7 +330,7 @@ class ci extends gf implements ka {
         Sprite var11 = null;
         Sprite var12 = null;
         int var13 = 0;
-        da var14 = null;
+        Archive var14 = null;
         od[] var15 = null;
         Sprite var16 = null;
         int[][] var17 = null;
@@ -346,11 +346,11 @@ class ci extends gf implements ka {
           fa.field_b = Asteroid.a("jagex_logo_grey", "commonui", param3, (byte) -125);
           vk.field_i = SecondaryNodeDeque.a(param3, -18362, "button", "commonui");
           PacketBuffer.field_k = nh.a(param3, "validation", 0, "commonui");
-          stackIn_3_0 = (da) (param0);
+          stackIn_3_0 = (Archive) (param0);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param1);
           jh.field_g = (BitmapFont) ((Object) si.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
-          stackIn_6_0 = (da) (param0);
+          stackIn_6_0 = (Archive) (param0);
           stackIn_6_1 = "commonui";
           stackIn_7_2 = !(param1);
           ua.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
@@ -381,8 +381,8 @@ class ci extends gf implements ka {
             }
           }
           if (param1) {
-            var14 = (da) null;
-            ci.a((da) null, false, (da) null, (da) null);
+            var14 = (Archive) null;
+            ci.a((Archive) null, false, (Archive) null, (Archive) null);
           }
           var9Lifetime1 = var18.field_t;
           fl.b((byte) 91);

@@ -8,7 +8,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static String field_g;
     static int field_e;
     static long field_b;
-    static da field_c;
+    static Archive field_c;
 
     public static void a(int param0) {
         field_c = null;

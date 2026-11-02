@@ -7,7 +7,7 @@ final class ql extends af {
     static int[] field_q;
     static Sprite field_p;
     private bf[] field_t;
-    static gj field_r;
+    static PcmPlayerService field_r;
     static String field_u;
     static int field_v;
 

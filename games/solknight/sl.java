@@ -39,7 +39,7 @@ final class sl extends IntrusiveNode {
     private static float[] field_k;
     private int field_H;
 
-    final static sl a(da param0, int param1, int param2) {
+    final static sl a(Archive param0, int param1, int param2) {
         try {
           sl var4_ref = null;
           if (!sl.a(param0)) {
@@ -87,7 +87,7 @@ final class sl extends IntrusiveNode {
         return var1;
     }
 
-    private final static boolean a(da param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_s) {
           var1 = param0.b(0, 12257, 0);
@@ -377,7 +377,7 @@ final class sl extends IntrusiveNode {
         return var0;
     }
 
-    final static sl a(da param0, String param1, String param2) {
+    final static sl a(Archive param0, String param1, String param2) {
         try {
           sl var4_ref = null;
           if (!sl.a(param0)) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pl {
-    static da field_d;
+    static Archive field_d;
     static int field_a;
     static kb field_b;
     static int[] field_c;
@@ -51,7 +51,7 @@ final class pl {
     public static void a(int param0) {
         field_c = null;
         if (param0 != -5045) {
-          field_d = (da) null;
+          field_d = (Archive) null;
           field_b = null;
           field_d = null;
           return;

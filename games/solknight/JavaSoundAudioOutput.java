@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends gj {
+final class JavaSoundAudioOutput extends PcmPlayerService {
     private javax.sound.sampled.AudioFormat field_w;
     private javax.sound.sampled.SourceDataLine field_v;
     private boolean field_z;
@@ -38,7 +38,7 @@ final class ca extends gj {
         }
     }
 
-    ca() {
+    JavaSoundAudioOutput() {
         this.field_z = false;
     }
 

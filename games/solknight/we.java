@@ -255,7 +255,7 @@ final class we implements j {
             sa.field_m = 231 + (-GameApplet.field_j.field_p + IsaacRandom.field_d.field_p) / 2;
             kc.field_Q = null;
             lk.field_c = (IsaacRandom.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
-            da.field_f = 390 + (-GameApplet.field_j.field_t + IsaacRandom.field_d.field_t) / 2;
+            Archive.field_f = 390 + (-GameApplet.field_j.field_t + IsaacRandom.field_d.field_t) / 2;
             ke.field_I = 434 + (IsaacRandom.field_d.field_p - GameApplet.field_j.field_p) / 2;
           }
           if (!param0) {
@@ -388,7 +388,7 @@ final class we implements j {
             }
             var1.d(0, 0);
             stackIn_50_0 = 40;
-            stackIn_50_1 = wd.field_a;
+            stackIn_50_1 = ArchiveSource.field_a;
             if (0 != GameKeyHandler.field_b.field_f) {
               stackIn_51_2 = 3;
             } else {
@@ -408,7 +408,7 @@ final class we implements j {
             stackIn_55_0 = -50;
             stackIn_55_1 = sa.field_m;
             stackIn_56_2 = (GameKeyHandler.field_b.field_f == 0);
-            kb.a(stackIn_55_0, stackIn_55_1, stackIn_56_2, da.field_f);
+            kb.a(stackIn_55_0, stackIn_55_1, stackIn_56_2, Archive.field_f);
           }
           if (null != IsaacRandom.field_d &&
             GameApplet.field_j != null) {
@@ -429,7 +429,7 @@ final class we implements j {
             if (var1_int < BufferedSocket.field_m &&
               var1_int + kj.field_S.field_t > BufferedSocket.field_m) {
               stackIn_72_0 = 40;
-              stackIn_72_1 = wd.field_a << 4;
+              stackIn_72_1 = ArchiveSource.field_a << 4;
               stackIn_73_2 = !(param0);
               var2Lifetime5 = stackIn_72_0 + (kb.a(stackIn_72_1, stackIn_73_2) * 40 >> 16);
               if (var2Lifetime5 <= 0) {

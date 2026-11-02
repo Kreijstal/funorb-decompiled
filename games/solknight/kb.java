@@ -30,7 +30,7 @@ final class kb {
         if (!param2) {
           return;
         }
-        var4 = wd.field_a % GameApplet.field_j.field_p * 2;
+        var4 = ArchiveSource.field_a % GameApplet.field_j.field_p * 2;
         if (var4 >= GameApplet.field_j.field_p) {
           var4 = -var4 - (-GameApplet.field_j.field_p - GameApplet.field_j.field_p);
         }

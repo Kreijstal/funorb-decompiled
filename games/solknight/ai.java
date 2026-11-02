@@ -6,7 +6,7 @@ import java.io.*;
 final class ai {
     static String field_d;
     static hi field_a;
-    static da field_b;
+    static Archive field_b;
     static String field_c;
 
     final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite param8, int param9, int param10) {

@@ -4,8 +4,8 @@
 final class de {
     final static int a(int param0) {
         if (param0 >= -102) {
-          da var2 = (da) null;
-          de.a(92, -99, 46, (da) null);
+          Archive var2 = (Archive) null;
+          de.a(92, -99, 46, (Archive) null);
           return cf.field_e;
         }
         return cf.field_e;
@@ -96,7 +96,7 @@ final class de {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, da param3) {
+    final static Sprite[] a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_6_0 = null;

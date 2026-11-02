@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kc extends pj {
-    static da field_Q;
+    static Archive field_Q;
     static int field_O;
     private oe field_J;
     static wh field_I;

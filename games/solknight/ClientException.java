@@ -7,7 +7,7 @@ final class ClientException extends RuntimeException {
     static int field_b;
     Throwable field_c;
 
-    final static od a(da param0, int param1, String param2, String param3) {
+    final static od a(Archive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -54,7 +54,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static String a(String param0, String param1, da param2, byte param3) {
+    final static String a(String param0, String param1, Archive param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;

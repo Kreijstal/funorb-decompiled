@@ -4,7 +4,7 @@
 final class ic extends sk {
     byte field_y;
     int field_s;
-    static da field_u;
+    static Archive field_u;
     PacketBuffer field_v;
     static PacketBuffer field_z;
     static double field_w;

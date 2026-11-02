@@ -74,7 +74,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final static od[] a(int param0, da param1, int param2, int param3) {
+    final static od[] a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         java.applet.Applet var5 = null;
         od[] stackIn_6_0 = null;

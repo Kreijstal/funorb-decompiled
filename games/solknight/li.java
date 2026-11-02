@@ -163,7 +163,7 @@ final class li extends IntrusiveNode {
               return;
             }
           }
-          ha.a(var6, (byte) 51, var7);
+          ArchiveIndex.a(var6, (byte) 51, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
