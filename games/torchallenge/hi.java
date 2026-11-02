@@ -151,7 +151,7 @@ final class hi extends ic {
           if (var24Lifetime1 == 0) {
             return;
           }
-          var25 = kj.field_C[0].field_v;
+          var25 = kj.field_C[0].fullHeight;
           var26 = var23 + var20Lifetime1 + param2 - var25;
           if (param4 == var22Lifetime1) {
             var26 = var26 - var20Lifetime1;

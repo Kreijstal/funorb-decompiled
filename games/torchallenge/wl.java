@@ -506,10 +506,10 @@ final class wl {
         int var4 = 112 % ((param0 + 31) / 32);
         ul var20_ref = (ul) (db.field_D.first((byte) 106));
         ul var2 = var20_ref;
-        int var13 = tf.field_j[0].field_x >> 2;
+        int var13 = tf.field_j[0].storedHeight >> 2;
         Sprite[] var14 = ng.field_L;
-        int var15 = var14[0].field_u;
-        int var16 = var14[0].field_x;
+        int var15 = var14[0].storedWidth;
+        int var16 = var14[0].storedHeight;
         int var10Lifetime1;
         int var8Lifetime1;
         if (var2 != null) {

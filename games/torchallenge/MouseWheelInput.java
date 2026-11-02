@@ -175,8 +175,8 @@ abstract class MouseWheelInput {
           var10 = 0;
           var11 = 0;
           var12 = 0;
-          var17 = ResourceArchive.field_h[0].field_q;
-          var18 = ResourceArchive.field_h[0].field_v;
+          var17 = ResourceArchive.field_h[0].fullWidth;
+          var18 = ResourceArchive.field_h[0].fullHeight;
           var20 = 0;
           var21 = 480;
           var22 = 32;

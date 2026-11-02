@@ -68,8 +68,8 @@ final class sf {
         try {
           var7_int = param4 + (param5 - 1);
           var8 = -1 + (param3 + param2);
-          var9 = param1[0].field_q;
-          var10 = param1[0].field_v;
+          var9 = param1[0].fullWidth;
+          var10 = param1[0].fullHeight;
           param0.d();
           param1[0].g(param4, param2);
           param1[2].g(-var9 + var7_int, param2);
@@ -83,7 +83,7 @@ final class sf {
           }
           param1[5].d(var7_int - var9, param2 + var10, var9, param3 - var10 * 2);
           param1[4].d(param4 + var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);
-          SectorCacheStore.field_f.a(-47);
+          SectorCacheStore.field_f.bindAsTarget(-47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

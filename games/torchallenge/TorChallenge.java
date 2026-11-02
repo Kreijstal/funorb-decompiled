@@ -104,7 +104,7 @@ public final class TorChallenge extends GameClientBase {
               dl.field_j = qk.a("", "interface_sealscollected", ic.field_C, param0 ^ 1);
               mb.field_d = SpriteLoader.a(-128, "interface_health_icon", "", ic.field_C);
               rl.field_h = SpriteLoader.a(param0 - 129, "boss_heads", "", ic.field_C);
-              SectorCacheStore.field_f.a(-63);
+              SectorCacheStore.field_f.bindAsTarget(-63);
               ie.field_f = new Sprite[3][2];
               ie.field_f[0][0] = rc.field_p[0];
               ie.field_f[0][1] = rc.field_p[1];
@@ -443,7 +443,7 @@ public final class TorChallenge extends GameClientBase {
                       }
                       var7_int = stackIn_194_0;
                       while (var7_int < 2) {
-                        we.field_e[var6_int][var7_int] = new Sprite(ic.field_D[0].field_u, ic.field_D[0].field_x);
+                        we.field_e[var6_int][var7_int] = new Sprite(ic.field_D[0].storedWidth, ic.field_D[0].storedHeight);
                         var7_int++;
                       }
                       var6_int++;
@@ -461,7 +461,7 @@ public final class TorChallenge extends GameClientBase {
                       }
                       var7_int = stackIn_206_0;
                       while (var7_int < 2) {
-                        re.field_v[var6_int][var7_int] = new Sprite(af.field_a[0].field_u, af.field_a[0].field_x);
+                        re.field_v[var6_int][var7_int] = new Sprite(af.field_a[0].storedWidth, af.field_a[0].storedHeight);
                         var7_int++;
                       }
                       var6_int++;
@@ -483,7 +483,7 @@ public final class TorChallenge extends GameClientBase {
                           stackIn_208_0 = 0;
                           var8 = stackIn_208_0;
                           while (var8 < 2) {
-                            sf.field_d[var6_int][var7_int][var8] = new Sprite(be.field_f[ea.field_e * 6 + var8].field_u, be.field_f[var8 + 6 * ea.field_e].field_x);
+                            sf.field_d[var6_int][var7_int][var8] = new Sprite(be.field_f[ea.field_e * 6 + var8].storedWidth, be.field_f[var8 + 6 * ea.field_e].storedHeight);
                             var8++;
                           }
                           var7_int++;
@@ -500,19 +500,19 @@ public final class TorChallenge extends GameClientBase {
                     var6 = new int[stackIn_223_0];
                     var8 = 90;
                     var7 = new Sprite(var8, var8);
-                    je.field_g = new Sprite(kj.field_C[0].field_q, kj.field_C[0].field_v);
-                    cj.field_c = new Sprite(kj.field_C[0].field_q, kj.field_C[0].field_v);
+                    je.field_g = new Sprite(kj.field_C[0].fullWidth, kj.field_C[0].fullHeight);
+                    cj.field_c = new Sprite(kj.field_C[0].fullWidth, kj.field_C[0].fullHeight);
                     od.a(33, 30, 68, 90, 34, 45, je.field_g, var7, var6);
                     var6 = null;
                     var7_ref = null;
                     je.field_g.h();
                     c.field_b = qk.a("", "door_sign", ic.field_C, 0);
                     c.field_b.h();
-                    si.field_F = new Sprite(kj.field_C[0].field_q, kj.field_C[0].field_v);
+                    si.field_F = new Sprite(kj.field_C[0].fullWidth, kj.field_C[0].fullHeight);
                     si.field_F.d();
                     SoftwareRasterizer.f(33, 30, 68, 90, param0);
                     kj.field_C[1].g(0, 0);
-                    SectorCacheStore.field_f.a(101);
+                    SectorCacheStore.field_f.bindAsTarget(101);
                     dk.field_c = new Sprite[4][9];
                     var9 = 0;
                     scanLoop7: while (true) {
@@ -537,7 +537,7 @@ public final class TorChallenge extends GameClientBase {
                       hh.field_b.d();
                       bc.field_f.c(0, 0, var9, var9);
                       bc.field_f = null;
-                      SectorCacheStore.field_f.a(105);
+                      SectorCacheStore.field_f.bindAsTarget(105);
                       stackIn_235_0 = 12476;
                       break;
                     }
@@ -631,11 +631,11 @@ public final class TorChallenge extends GameClientBase {
                 ji.field_m.c(param0 ^ 7856);
               }
               var3_ref_ka = new Sprite(1, 1);
-              var3_ref_ka.field_y = SoftwareRasterizer.field_i;
-              var3_ref_ka.field_q = SoftwareRasterizer.field_g;
-              var3_ref_ka.field_u = SoftwareRasterizer.field_g;
-              var3_ref_ka.field_v = SoftwareRasterizer.field_f;
-              var3_ref_ka.field_x = SoftwareRasterizer.field_f;
+              var3_ref_ka.pixels = SoftwareRasterizer.pixels;
+              var3_ref_ka.fullWidth = SoftwareRasterizer.width;
+              var3_ref_ka.storedWidth = SoftwareRasterizer.width;
+              var3_ref_ka.fullHeight = SoftwareRasterizer.height;
+              var3_ref_ka.storedHeight = SoftwareRasterizer.height;
               var4 = 256 * (hk.field_e + 1 - 16) / 16;
               var3_ref_ka.e(0, 0, var4);
               decompiledFrameRemainder0 = (var5 != 0);
@@ -650,11 +650,11 @@ public final class TorChallenge extends GameClientBase {
                 ji.field_m.c(48);
               }
               var3_ref_kaLifetime1 = new Sprite(1, 1);
-              var3_ref_kaLifetime1.field_q = SoftwareRasterizer.field_g;
-              var3_ref_kaLifetime1.field_u = SoftwareRasterizer.field_g;
-              var3_ref_kaLifetime1.field_y = SoftwareRasterizer.field_i;
-              var3_ref_kaLifetime1.field_v = SoftwareRasterizer.field_f;
-              var3_ref_kaLifetime1.field_x = SoftwareRasterizer.field_f;
+              var3_ref_kaLifetime1.fullWidth = SoftwareRasterizer.width;
+              var3_ref_kaLifetime1.storedWidth = SoftwareRasterizer.width;
+              var3_ref_kaLifetime1.pixels = SoftwareRasterizer.pixels;
+              var3_ref_kaLifetime1.fullHeight = SoftwareRasterizer.height;
+              var3_ref_kaLifetime1.storedHeight = SoftwareRasterizer.height;
               var4Lifetime1 = (-(255 * hk.field_e) + 3825) / 15;
               var3_ref_kaLifetime1.e(0, 0, var4Lifetime1);
               decompiledFrameRemainder0 = (var5 != 0);
@@ -699,13 +699,13 @@ public final class TorChallenge extends GameClientBase {
             field_G = -107;
           }
           if (vc.a(0)) {
-            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
-            si.a(true, ui.field_i, ui.field_i[0].field_x + 16, 16 + ui.field_i[0].field_u);
+            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+            si.a(true, ui.field_i, ui.field_i[0].storedHeight + 16, 16 + ui.field_i[0].storedWidth);
           }
           if (rb.field_b != 0) {
             var3 = 256 * hk.field_e / 32;
             if (0 < var3) {
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, var3);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var3);
             }
           }
           if (lc.a(1)) {

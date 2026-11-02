@@ -15,7 +15,7 @@ final class ie {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_j, var1.field_p, var1.field_s);
+        SoftwareRasterizer.setTarget(var1.field_j, var1.field_p, var1.field_s);
         SoftwareRasterizer.f(var1.field_l, var1.field_i, var1.field_n, var1.field_q);
         if (param0 != -9) {
           field_c = (String) null;

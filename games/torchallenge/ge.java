@@ -73,18 +73,18 @@ final class ge extends jc {
         int var10Lifetime2;
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_g;
-        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.field_a;
         int var7 = this.field_b;
-        int var8 = SoftwareRasterizer.field_g - var7;
+        int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.field_k) {
           var10 = SoftwareRasterizer.field_k - param1;
           var6 = var6 - var10;
           param1 = SoftwareRasterizer.field_k;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRasterizer.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.width;
         }
         if (param1 + var6 > SoftwareRasterizer.field_l) {
           var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_l);
@@ -108,7 +108,7 @@ final class ge extends jc {
           var6 <= 0) {
           return;
         }
-        ge.a(SoftwareRasterizer.field_i, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        ge.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -181,18 +181,18 @@ final class ge extends jc {
         }
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_g;
-        int var5 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var5 = param0 + param1 * SoftwareRasterizer.width;
         int var6 = 0;
         int var7 = this.field_a;
         int var8 = this.field_b;
-        int var9 = SoftwareRasterizer.field_g - var8;
+        int var9 = SoftwareRasterizer.width - var8;
         int var10 = 0;
         if (param1 < SoftwareRasterizer.field_k) {
           var11 = SoftwareRasterizer.field_k - param1;
           var7 = var7 - var11;
           param1 = SoftwareRasterizer.field_k;
           var6 = var6 + var11 * var8;
-          var5 = var5 + var11 * SoftwareRasterizer.field_g;
+          var5 = var5 + var11 * SoftwareRasterizer.width;
         }
         if (param1 + var7 > SoftwareRasterizer.field_l) {
           var7 = var7 - (param1 + var7 - SoftwareRasterizer.field_l);
@@ -216,7 +216,7 @@ final class ge extends jc {
           var7 <= 0) {
           return;
         }
-        ge.a(SoftwareRasterizer.field_i, this.field_k, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+        ge.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
     }
 
     ge(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
@@ -247,18 +247,18 @@ final class ge extends jc {
         int var9Lifetime2;
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_g;
-        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
+        int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_a;
         int var6 = this.field_b;
-        int var7 = SoftwareRasterizer.field_g - var6;
+        int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.field_k) {
           var9 = SoftwareRasterizer.field_k - param1;
           var5 = var5 - var9;
           param1 = SoftwareRasterizer.field_k;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRasterizer.field_g;
+          var3 = var3 + var9 * SoftwareRasterizer.width;
         }
         if (param1 + var5 > SoftwareRasterizer.field_l) {
           var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_l);
@@ -282,7 +282,7 @@ final class ge extends jc {
           var5 <= 0) {
           return;
         }
-        ge.b(SoftwareRasterizer.field_i, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        ge.b(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final ge b() {

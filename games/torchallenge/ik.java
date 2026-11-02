@@ -129,19 +129,19 @@ final class ik {
             }
           }
           if (le.field_e != null) {
-            var3 = -(le.field_e.field_v / 2) + 357;
+            var3 = -(le.field_e.fullHeight / 2) + 357;
             var4 = 0;
             if (vb.field_n != 0 &&
               var3 < ci.field_m &&
-              le.field_e.field_x + var3 > ci.field_m) {
-              if (field_a > 269 - le.field_e.field_u &&
+              le.field_e.storedHeight + var3 > ci.field_m) {
+              if (field_a > 269 - le.field_e.storedWidth &&
                 field_a < 269) {
                 bh.field_r = false;
                 var4 = 1;
                 ll.field_d = eh.field_m;
               }
               if (586 < field_a &&
-                586 + le.field_e.field_u > field_a) {
+                586 + le.field_e.storedWidth > field_a) {
                 var4 = 1;
                 bh.field_r = true;
                 ll.field_d = eh.field_m;
@@ -150,13 +150,13 @@ final class ik {
             if (var4 == 0 &&
               ll.field_d > eh.field_k &&
               ph.field_d > var3 &&
-              ph.field_d < var3 + le.field_e.field_x) {
-              if (-le.field_e.field_u + 269 < LocalizedStrings.field_u &&
+              ph.field_d < var3 + le.field_e.storedHeight) {
+              if (-le.field_e.storedWidth + 269 < LocalizedStrings.field_u &&
                 269 > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
               if (LocalizedStrings.field_u > 586 &&
-                586 + le.field_e.field_u > LocalizedStrings.field_u) {
+                586 + le.field_e.storedWidth > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
             }
@@ -276,19 +276,19 @@ final class ik {
             }
           }
           if (le.field_e != null) {
-            var3 = -(le.field_e.field_v / 2) + 357;
+            var3 = -(le.field_e.fullHeight / 2) + 357;
             var4 = 0;
             if (vb.field_n != 0 &&
               var3 < ci.field_m &&
-              le.field_e.field_x + var3 > ci.field_m) {
-              if (field_a > 269 - le.field_e.field_u &&
+              le.field_e.storedHeight + var3 > ci.field_m) {
+              if (field_a > 269 - le.field_e.storedWidth &&
                 field_a < 269) {
                 bh.field_r = false;
                 var4 = 1;
                 ll.field_d = eh.field_m;
               }
               if (586 < field_a &&
-                586 + le.field_e.field_u > field_a) {
+                586 + le.field_e.storedWidth > field_a) {
                 var4 = 1;
                 bh.field_r = true;
                 ll.field_d = eh.field_m;
@@ -297,13 +297,13 @@ final class ik {
             if (var4 == 0 &&
               ll.field_d > eh.field_k &&
               ph.field_d > var3 &&
-              ph.field_d < var3 + le.field_e.field_x) {
-              if (-le.field_e.field_u + 269 < LocalizedStrings.field_u &&
+              ph.field_d < var3 + le.field_e.storedHeight) {
+              if (-le.field_e.storedWidth + 269 < LocalizedStrings.field_u &&
                 269 > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
               if (LocalizedStrings.field_u > 586 &&
-                586 + le.field_e.field_u > LocalizedStrings.field_u) {
+                586 + le.field_e.storedWidth > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
             }

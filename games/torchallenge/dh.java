@@ -155,32 +155,32 @@ final class dh extends df {
             jh.field_c != var6) {
             if (SpriteLoader.field_c == var6) {
               var19 = ub.field_f[2];
-              var19.b(var9, -(var19.field_x >> 1) + var10, 256);
+              var19.b(var9, -(var19.storedHeight >> 1) + var10, 256);
               return;
             }
             if (var6 != tf.field_w) {
               return;
             }
             var20 = ub.field_f[1];
-            var20.b(var9, var10 - (var20.field_x >> 1), 256);
+            var20.b(var9, var10 - (var20.storedHeight >> 1), 256);
             return;
           }
           var21 = ub.field_f[0];
           var16 = var21;
-          var11 = var21.field_q << 1;
-          var12 = var21.field_v << 1;
+          var11 = var21.fullWidth << 1;
+          var12 = var21.fullHeight << 1;
           if (this.field_Z != null &&
-            this.field_Z.field_u >= var11 &&
-            this.field_Z.field_x >= var12) {
+            this.field_Z.storedWidth >= var11 &&
+            this.field_Z.storedHeight >= var12) {
             FullscreenFocusCanvas.a(122, this.field_Z);
             SoftwareRasterizer.b();
           } else {
             this.field_Z = new Sprite(var11, var12);
             FullscreenFocusCanvas.a(-114, this.field_Z);
           }
-          var21.b(112, 144, var21.field_q << 4, var21.field_v << 4, -this.field_X << 10, 4096);
+          var21.b(112, 144, var21.fullWidth << 4, var21.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
-          this.field_Z.b(-(var21.field_q >> 1) + var9, var10 - var21.field_v, 256);
+          this.field_Z.b(-(var21.fullWidth >> 1) + var9, var10 - var21.fullHeight, 256);
           return;
         }
         if (var6 != jh.field_c) {
@@ -201,28 +201,28 @@ final class dh extends df {
             jh.field_c != var6) {
             if (SpriteLoader.field_c == var6) {
               var38 = ub.field_f[2];
-              var38.b(var9Lifetime1, -(var38.field_x >> 1) + var10Lifetime1, 256);
+              var38.b(var9Lifetime1, -(var38.storedHeight >> 1) + var10Lifetime1, 256);
               return;
             }
             if (var6 != tf.field_w) {
               return;
             }
             var39 = ub.field_f[1];
-            var39.b(var9Lifetime1, var10Lifetime1 - (var39.field_x >> 1), 256);
+            var39.b(var9Lifetime1, var10Lifetime1 - (var39.storedHeight >> 1), 256);
             return;
           }
           var40 = ub.field_f[0];
-          var11Lifetime1 = var40.field_q << 1;
-          var12Lifetime1 = var40.field_v << 1;
+          var11Lifetime1 = var40.fullWidth << 1;
+          var12Lifetime1 = var40.fullHeight << 1;
           if (this.field_Z == null) {
             this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
             FullscreenFocusCanvas.a(-114, this.field_Z);
           } else {
-            if (this.field_Z.field_u < var11Lifetime1) {
+            if (this.field_Z.storedWidth < var11Lifetime1) {
               this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
               FullscreenFocusCanvas.a(-114, this.field_Z);
             } else {
-              if (this.field_Z.field_x >= var12Lifetime1) {
+              if (this.field_Z.storedHeight >= var12Lifetime1) {
                 FullscreenFocusCanvas.a(122, this.field_Z);
                 SoftwareRasterizer.b();
               } else {
@@ -231,9 +231,9 @@ final class dh extends df {
               }
             }
           }
-          var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -this.field_X << 10, 4096);
+          var40.b(112, 144, var40.fullWidth << 4, var40.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
-          this.field_Z.b(-(var40.field_q >> 1) + var9Lifetime1, var10Lifetime1 - var40.field_v, 256);
+          this.field_Z.b(-(var40.fullWidth >> 1) + var9Lifetime1, var10Lifetime1 - var40.fullHeight, 256);
           return;
         }
         var23 = hb.field_h;
@@ -249,48 +249,48 @@ final class dh extends df {
         if (var6Lifetime1 == bl.field_S) {
           var25 = ub.field_f[0];
           var16Lifetime1 = var25;
-          var11Lifetime2 = var25.field_q << 1;
-          var12Lifetime2 = var25.field_v << 1;
+          var11Lifetime2 = var25.fullWidth << 1;
+          var12Lifetime2 = var25.fullHeight << 1;
           if (this.field_Z != null &&
-            this.field_Z.field_u >= var11Lifetime2 &&
-            this.field_Z.field_x >= var12Lifetime2) {
+            this.field_Z.storedWidth >= var11Lifetime2 &&
+            this.field_Z.storedHeight >= var12Lifetime2) {
             FullscreenFocusCanvas.a(122, this.field_Z);
             SoftwareRasterizer.b();
           } else {
             this.field_Z = new Sprite(var11Lifetime2, var12Lifetime2);
             FullscreenFocusCanvas.a(-114, this.field_Z);
           }
-          var25.b(112, 144, var25.field_q << 4, var25.field_v << 4, -this.field_X << 10, 4096);
+          var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
-          this.field_Z.b(-(var25.field_q >> 1) + var9Lifetime2, var10Lifetime2 - var25.field_v, 256);
+          this.field_Z.b(-(var25.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var25.fullHeight, 256);
           return;
         }
         if (jh.field_c != var6Lifetime1) {
           if (SpriteLoader.field_c == var6Lifetime1) {
             var27 = ub.field_f[2];
-            var27.b(var9Lifetime2, -(var27.field_x >> 1) + var10Lifetime2, 256);
+            var27.b(var9Lifetime2, -(var27.storedHeight >> 1) + var10Lifetime2, 256);
             return;
           }
           if (var6Lifetime1 != tf.field_w) {
             return;
           }
           var30 = ub.field_f[1];
-          var30.b(var9Lifetime2, var10Lifetime2 - (var30.field_x >> 1), 256);
+          var30.b(var9Lifetime2, var10Lifetime2 - (var30.storedHeight >> 1), 256);
           return;
         }
         var32 = ub.field_f[0];
         var16Lifetime2 = var32;
-        var11Lifetime3 = var32.field_q << 1;
-        var12Lifetime3 = var32.field_v << 1;
+        var11Lifetime3 = var32.fullWidth << 1;
+        var12Lifetime3 = var32.fullHeight << 1;
         if (this.field_Z == null) {
           this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
           FullscreenFocusCanvas.a(-114, this.field_Z);
         } else {
-          if (this.field_Z.field_u < var11Lifetime3) {
+          if (this.field_Z.storedWidth < var11Lifetime3) {
             this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
             FullscreenFocusCanvas.a(-114, this.field_Z);
           } else {
-            if (this.field_Z.field_x >= var12Lifetime3) {
+            if (this.field_Z.storedHeight >= var12Lifetime3) {
               FullscreenFocusCanvas.a(122, this.field_Z);
               SoftwareRasterizer.b();
             } else {
@@ -299,9 +299,9 @@ final class dh extends df {
             }
           }
         }
-        var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -this.field_X << 10, 4096);
+        var32.b(112, 144, var32.fullWidth << 4, var32.fullHeight << 4, -this.field_X << 10, 4096);
         ie.b((byte) -9);
-        this.field_Z.b(-(var32.field_q >> 1) + var9Lifetime2, var10Lifetime2 - var32.field_v, 256);
+        this.field_Z.b(-(var32.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var32.fullHeight, 256);
         return;
     }
 

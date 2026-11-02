@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SpriteState extends DualLinkNode {
-    int field_q;
+    int fullWidth;
     static nc[] field_r;
-    int field_s;
+    int offsetX;
     static int[][][][] field_w;
-    int field_u;
+    int storedWidth;
     static ej field_t;
-    int field_p;
-    int field_v;
-    int field_x;
+    int offsetY;
+    int fullHeight;
+    int storedHeight;
     private static String field_z;
 
     SpriteState() {

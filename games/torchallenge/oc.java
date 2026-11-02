@@ -29,10 +29,10 @@ final class oc {
         if (field_b.length < field_e) {
           field_b = new int[ll.a(true, field_e)];
         }
-        int var4 = param1 * SoftwareRasterizer.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_e; var5++) {
           field_b[var5] = var4;
-          var4 = var4 + SoftwareRasterizer.field_g;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 

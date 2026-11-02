@@ -35,7 +35,7 @@ abstract class b extends kj {
           nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
-        if (this.field_p > nb.field_a.field_u) {
+        if (this.field_p > nb.field_a.storedWidth) {
           nb.field_a = new Sprite(this.field_p, this.field_l);
           FullscreenFocusCanvas.a(-15, nb.field_a);
           SoftwareRasterizer.b();
@@ -45,7 +45,7 @@ abstract class b extends kj {
           nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
-        if (nb.field_a.field_x >= this.field_l) {
+        if (nb.field_a.storedHeight >= this.field_l) {
           FullscreenFocusCanvas.a(-15, nb.field_a);
           SoftwareRasterizer.b();
           this.c(103, 0, 0);

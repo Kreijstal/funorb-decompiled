@@ -194,7 +194,7 @@ final class hf implements j {
           var8 = ub.field_f[1];
           if (param0 instanceof ng &&
             ((ng) (param0)).field_D) {
-            var8.b(var6_int + 1 + (param0.field_p - var8.field_q >> 1), (-var8.field_v + param0.field_l >> 1) + (var7 + 1), 256);
+            var8.b(var6_int + 1 + (param0.field_p - var8.fullWidth >> 1), (-var8.fullHeight + param0.field_l >> 1) + (var7 + 1), 256);
           }
           if (param0.c(param3 - 11)) {
             jc.a((byte) -115, var6_int + 2, param0.field_l - 4, param0.field_p - 4, 2 + var7);

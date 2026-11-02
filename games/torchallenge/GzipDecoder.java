@@ -164,25 +164,25 @@ final class GzipDecoder {
             if (param0[3] == null) {
               stackIn_10_0 = 0;
             } else {
-              stackIn_10_0 = param0[3].field_q;
+              stackIn_10_0 = param0[3].fullWidth;
             }
             var7 = stackIn_10_0;
             if (param0[5] == null) {
               stackIn_13_0 = 0;
             } else {
-              stackIn_13_0 = param0[5].field_q;
+              stackIn_13_0 = param0[5].fullWidth;
             }
             var8 = stackIn_13_0;
             if (param0[1] == null) {
               stackIn_16_0 = 0;
             } else {
-              stackIn_16_0 = param0[1].field_v;
+              stackIn_16_0 = param0[1].fullHeight;
             }
             var9 = stackIn_16_0;
             if (null == param0[7]) {
               stackIn_19_0 = 0;
             } else {
-              stackIn_19_0 = param0[7].field_v;
+              stackIn_19_0 = param0[7].fullHeight;
             }
             var10 = stackIn_19_0;
             var11 = param5 + param2;
@@ -225,45 +225,45 @@ final class GzipDecoder {
               SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[1] &&
-              0 != param0[1].field_q) {
+              0 != param0[1].fullWidth) {
               SoftwareRasterizer.a(var17, param4, var18, var19);
-              for (var21 = var13; var14 > var21; var21 = var21 + param0[1].field_q) {
+              for (var21 = var13; var14 > var21; var21 = var21 + param0[1].fullWidth) {
                 param0[1].g(var21, param4);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
             if (param0[7] != null &&
-              param0[7].field_q != 0) {
+              param0[7].fullWidth != 0) {
               SoftwareRasterizer.a(var17, var20, var18, var12);
-              for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param0[7].field_q) {
+              for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param0[7].fullWidth) {
                 param0[7].g(var21Lifetime1, var16);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
             if (param0[3] != null &&
-              param0[3].field_v != 0) {
+              param0[3].fullHeight != 0) {
               SoftwareRasterizer.a(param5, var19, var17, var20);
-              for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param0[3].field_v) {
+              for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param0[3].fullHeight) {
                 param0[3].g(param5, var21Lifetime2);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[5] &&
-              0 != param0[5].field_v) {
+              0 != param0[5].fullHeight) {
               SoftwareRasterizer.a(var18, var19, var11, var20);
-              for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param0[5].field_v) {
+              for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param0[5].fullHeight) {
                 param0[5].g(var14, var21Lifetime3);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[4] &&
-              0 != param0[4].field_q) {
-              if (0 == param0[4].field_v) {
+              0 != param0[4].fullWidth) {
+              if (0 == param0[4].fullHeight) {
                 return;
               }
               SoftwareRasterizer.a(var17, var19, var18, var20);
-              for (var21Lifetime4 = var15; var21Lifetime4 < var16; var21Lifetime4 = var21Lifetime4 + param0[4].field_v) {
-                for (var22 = var13; var14 > var22; var22 = var22 + param0[4].field_q) {
+              for (var21Lifetime4 = var15; var21Lifetime4 < var16; var21Lifetime4 = var21Lifetime4 + param0[4].fullHeight) {
+                for (var22 = var13; var14 > var22; var22 = var22 + param0[4].fullWidth) {
                   param0[4].g(var22, var21Lifetime4);
                 }
               }

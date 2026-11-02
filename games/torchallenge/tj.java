@@ -18,35 +18,35 @@ final class tj {
           if (!param0) {
             return;
           }
-          var4 = 2 * (ub.field_h % ub.field_e.field_u);
-          if (var4 >= ub.field_e.field_u) {
-            var4 = ub.field_e.field_u - var4 + ub.field_e.field_u;
+          var4 = 2 * (ub.field_h % ub.field_e.storedWidth);
+          if (var4 >= ub.field_e.storedWidth) {
+            var4 = ub.field_e.storedWidth - var4 + ub.field_e.storedWidth;
           }
           if (var4 < 10) {
             var4 = 10;
           } else {
-            if (-40 + ub.field_e.field_u < var4) {
-              var4 = ub.field_e.field_u - 40;
+            if (-40 + ub.field_e.storedWidth < var4) {
+              var4 = ub.field_e.storedWidth - 40;
             }
           }
           vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
           return;
         }
         if (param0) {
-          var4Lifetime1 = 2 * (ub.field_h % ub.field_e.field_u);
-          if (var4Lifetime1 >= ub.field_e.field_u) {
-            var4Lifetime1 = ub.field_e.field_u - var4Lifetime1 + ub.field_e.field_u;
+          var4Lifetime1 = 2 * (ub.field_h % ub.field_e.storedWidth);
+          if (var4Lifetime1 >= ub.field_e.storedWidth) {
+            var4Lifetime1 = ub.field_e.storedWidth - var4Lifetime1 + ub.field_e.storedWidth;
           }
           if (var4Lifetime1 < 10) {
             var4Lifetime1 = 10;
             vg.a(80, var4Lifetime1, ub.field_e, param3, param2, 0, 30, 0, 65);
             return;
           }
-          if (-40 + ub.field_e.field_u >= var4Lifetime1) {
+          if (-40 + ub.field_e.storedWidth >= var4Lifetime1) {
             vg.a(80, var4Lifetime1, ub.field_e, param3, param2, 0, 30, 0, 65);
             return;
           }
-          var4Lifetime1Lifetime1 = ub.field_e.field_u - 40;
+          var4Lifetime1Lifetime1 = ub.field_e.storedWidth - 40;
           vg.a(80, var4Lifetime1Lifetime1, ub.field_e, param3, param2, 0, 30, 0, 65);
         }
     }

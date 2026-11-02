@@ -53,7 +53,7 @@ final class si extends ic {
           if (param0 != 125) {
             field_K = (int[]) null;
           }
-          var1_int = ba.field_b[1].field_q + ba.field_b[0].field_q + ba.field_b[2].field_q;
+          var1_int = ba.field_b[1].fullWidth + ba.field_b[0].fullWidth + ba.field_b[2].fullWidth;
           var2 = 3;
           var3 = lg.field_d[var2][8];
           var4 = ef.field_j[0];
@@ -76,26 +76,26 @@ final class si extends ic {
                 if (var16 != 3 &&
                   5 != var16) {
                   if (var16 == 4) {
-                    var13 = var12.field_q;
-                    var14 = var12.field_v;
-                    var1_intLifetime1 = -var7 + (var13 - var6) - ba.field_b[var15].field_q * 2;
-                    var3Lifetime1 = -(ba.field_b[var15].field_v * 2) + (-var8 + var14 - var9);
+                    var13 = var12.fullWidth;
+                    var14 = var12.fullHeight;
+                    var1_intLifetime1 = -var7 + (var13 - var6) - ba.field_b[var15].fullWidth * 2;
+                    var3Lifetime1 = -(ba.field_b[var15].fullHeight * 2) + (-var8 + var14 - var9);
                     ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
                     ji.field_p[var15].d();
-                    var3Lifetime1 = ba.field_b[var15].field_v;
-                    var1_intLifetime1 = ba.field_b[var15].field_q;
+                    var3Lifetime1 = ba.field_b[var15].fullHeight;
+                    var1_intLifetime1 = ba.field_b[var15].fullWidth;
                     var10 = -var6 - var1_intLifetime1;
                     var11 = -var3Lifetime1 - var8;
                     var12.g(var10, var11);
                   }
                 } else {
-                  var14 = var12.field_v;
-                  var1_intLifetime1 = ba.field_b[var15].field_q;
-                  var13 = var12.field_q;
-                  var3Lifetime1 = -var9 + (var14 - var8 - 2 * ba.field_b[var15].field_v);
+                  var14 = var12.fullHeight;
+                  var1_intLifetime1 = ba.field_b[var15].fullWidth;
+                  var13 = var12.fullWidth;
+                  var3Lifetime1 = -var9 + (var14 - var8 - 2 * ba.field_b[var15].fullHeight);
                   ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
                   ji.field_p[var15].d();
-                  var3Lifetime1 = ba.field_b[var15].field_v;
+                  var3Lifetime1 = ba.field_b[var15].fullHeight;
                   if (3 == var15) {
                     var10 = -var6;
                   } else {
@@ -105,13 +105,13 @@ final class si extends ic {
                   var12.g(var10, var11);
                 }
               } else {
-                var14 = var12.field_v;
-                var13 = var12.field_q;
-                var3Lifetime1 = ba.field_b[var15].field_v;
-                var1_intLifetime1 = -(ba.field_b[var15].field_q * 2) + (-var7 - var6) + var13;
+                var14 = var12.fullHeight;
+                var13 = var12.fullWidth;
+                var3Lifetime1 = ba.field_b[var15].fullHeight;
+                var1_intLifetime1 = -(ba.field_b[var15].fullWidth * 2) + (-var7 - var6) + var13;
                 ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
                 ji.field_p[var15].d();
-                var1_intLifetime1 = ba.field_b[var15].field_q;
+                var1_intLifetime1 = ba.field_b[var15].fullWidth;
                 var10 = -var6 - var1_intLifetime1;
                 if (1 == var15) {
                   var11 = -var8;
@@ -121,10 +121,10 @@ final class si extends ic {
                 var12.g(var10, var11);
               }
             } else {
-              var14 = var12.field_v;
-              var13 = var12.field_q;
-              var1_intLifetime1 = ba.field_b[var15].field_q;
-              var3Lifetime1 = ba.field_b[var15].field_v;
+              var14 = var12.fullHeight;
+              var13 = var12.fullWidth;
+              var1_intLifetime1 = ba.field_b[var15].fullWidth;
+              var3Lifetime1 = ba.field_b[var15].fullHeight;
               ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
               if (0 != var15 &&
                 var15 != 2) {
@@ -142,7 +142,7 @@ final class si extends ic {
               var12.g(var10, var11);
             }
           }
-          SectorCacheStore.field_f.a(param0 - 188);
+          SectorCacheStore.field_f.bindAsTarget(param0 - 188);
           ll.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -275,11 +275,11 @@ final class si extends ic {
                 var8 = param1[var10][param2];
                 od.a(nj.field_e[var9][var6_int - 1], var8);
                 SoftwareRasterizer.b(ae.field_y);
-                SectorCacheStore.field_f.a(-38);
+                SectorCacheStore.field_f.bindAsTarget(-38);
               }
             }
           }
-          SectorCacheStore.field_f.a(param5 + 104);
+          SectorCacheStore.field_f.bindAsTarget(param5 + 104);
           if (param5 != 1) {
             field_L = (int[]) null;
           }

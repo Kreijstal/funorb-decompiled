@@ -248,7 +248,7 @@ final class ni {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var13;
-                  var17Lifetime2 = var17Lifetime2 + SoftwareRasterizer.field_g;
+                  var17Lifetime2 = var17Lifetime2 + SoftwareRasterizer.width;
                 }
               }
               var17Lifetime3 = param2 - param5;
@@ -298,7 +298,7 @@ final class ni {
                 return;
               }
               var10 = var10 + var13;
-              var16Lifetime1 = var16Lifetime1 + SoftwareRasterizer.field_g;
+              var16Lifetime1 = var16Lifetime1 + SoftwareRasterizer.width;
               var9_int = var9_int + var11;
             }
             return;

@@ -70,18 +70,18 @@ final class vj {
               var14[var11_int] = qa.a(var19[var11_int], TorChallenge.a(param2, -23082), var5[var9]);
             }
           }
-          var9Lifetime1 = var17.field_x;
+          var9Lifetime1 = var17.storedHeight;
           BufferedSocket.b((byte) -128);
           var17.d();
-          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();
           var17.a(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.d();
-          var17.a(var9Lifetime1 - var17.field_u, 0);
-          var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_u, var9Lifetime1);
+          var17.a(var9Lifetime1 - var17.storedWidth, 0);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.storedWidth, var9Lifetime1);
           var12.d();
           var17.a(-var9Lifetime1, 0);
           ie.b((byte) -9);

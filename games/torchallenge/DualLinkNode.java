@@ -142,12 +142,12 @@ class DualLinkNode extends IntrusiveNode {
           if (eh.field_k > ll.field_d) {
             var7Lifetime2 = gi.field_f[p.field_b];
             if (var7Lifetime2 != null) {
-              var2 = (60 + var7Lifetime2.field_q) * ll.field_d / eh.field_k;
+              var2 = (60 + var7Lifetime2.fullWidth) * ll.field_d / eh.field_k;
               var3 = var2 - 30;
               if (!bh.field_r) {
-                c.a(-256 * var3 / 30, 199, 245, 256 * (var7Lifetime2.field_q - var3) / 30, var7Lifetime2, 107);
+                c.a(-256 * var3 / 30, 199, 245, 256 * (var7Lifetime2.fullWidth - var3) / 30, var7Lifetime2, 107);
               } else {
-                c.a((var7Lifetime2.field_q - var3) * 256 / 30, 199, 245, var3 * -256 / 30, var7Lifetime2, 121);
+                c.a((var7Lifetime2.fullWidth - var3) * 256 / 30, 199, 245, var3 * -256 / 30, var7Lifetime2, 121);
               }
             }
           }
@@ -157,8 +157,8 @@ class DualLinkNode extends IntrusiveNode {
             var3Lifetime1 = var5;
             while (var5 < gi.field_f.length) {
               var8 = gi.field_f[var5];
-              if (var8 != null && (365 != var8.field_q ||
-                var8.field_v != 139)) {
+              if (var8 != null && (365 != var8.fullWidth ||
+                var8.fullHeight != 139)) {
                 if (var2_ref != null) {
                   var2_ref = (String) (var2_ref) + ", " + var5;
                 } else {

@@ -77,9 +77,9 @@ final class vg {
     }
 
     final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9_int = param2.field_s + (param3 + (param1 - param7));
-        int var10 = param6 + param3 + (param2.field_s + param1);
-        int var11 = (param2.field_x >> 1) + param2.field_p + param4;
+        int var9_int = param2.offsetX + (param3 + (param1 - param7));
+        int var10 = param6 + param3 + (param2.offsetX + param1);
+        int var11 = (param2.storedHeight >> 1) + param2.offsetY + param4;
         SoftwareRasterizer.a(var9_int, 0, var10, param5 + var11);
         param2.b(param3 - 1, -1 + param4, param0);
         param2.b(param3 - 1, 1 + param4, param0);
@@ -88,8 +88,8 @@ final class vg {
         param2.b(param3 + 1, -1 + param4, param0);
         param2.b(param3 + 1, param4 + 1, param0);
         SoftwareRasterizer.b(ck.field_c);
-        var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s - param1);
-        var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u + param7);
+        var9_int = -param6 + (param3 + param2.storedWidth) + (param2.offsetX - param1);
+        var10 = -param1 + (param3 + param2.offsetX) - (-param2.storedWidth + param7);
         SoftwareRasterizer.a(var9_int, var11 - param5, var10, 480);
         if (param8 <= 56) {
           return;

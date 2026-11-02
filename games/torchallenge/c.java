@@ -34,19 +34,19 @@ final class c {
         int var14Lifetime3;
         var20 = TorChallenge.field_F ? 1 : 0;
         try {
-          var6_int = (-param0 + param3 << 8) / param4.field_q;
-          param1 = param1 + param4.field_p;
-          param2 = param2 + param4.field_s;
-          var7 = (param0 << 8) + param4.field_s * var6_int;
-          var8 = param1 * SoftwareRasterizer.field_g + param2;
+          var6_int = (-param0 + param3 << 8) / param4.fullWidth;
+          param1 = param1 + param4.offsetY;
+          param2 = param2 + param4.offsetX;
+          var7 = (param0 << 8) + param4.offsetX * var6_int;
+          var8 = param1 * SoftwareRasterizer.width + param2;
           var9 = 0;
-          var10 = param4.field_x;
-          var11 = param4.field_u;
-          var12 = -var11 + SoftwareRasterizer.field_g;
+          var10 = param4.storedHeight;
+          var11 = param4.storedWidth;
+          var12 = -var11 + SoftwareRasterizer.width;
           if (param1 < SoftwareRasterizer.field_k) {
             var14 = SoftwareRasterizer.field_k - param1;
             var9 = var9 + var11 * var14;
-            var8 = var8 + SoftwareRasterizer.field_g * var14;
+            var8 = var8 + SoftwareRasterizer.width * var14;
             param1 = SoftwareRasterizer.field_k;
             var10 = var10 - var14;
           }
@@ -84,14 +84,14 @@ final class c {
                 if (var15 >= 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param4.field_y[incrementValue$0];
+                  var17 = param4.pixels[incrementValue$0];
                   if (var17 != 0) {
                     if (255 >= var15) {
-                      var18 = SoftwareRasterizer.field_i[var8];
+                      var18 = SoftwareRasterizer.pixels[var8];
                       var19 = var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.field_i[var8] = var19 + jh.a(var16 * jh.a(65280, var18) + var15 * jh.a(65280, var17) >> 8, 65280);
+                      SoftwareRasterizer.pixels[var8] = var19 + jh.a(var16 * jh.a(65280, var18) + var15 * jh.a(65280, var17) >> 8, 65280);
                     } else {
-                      SoftwareRasterizer.field_i[var8] = var17;
+                      SoftwareRasterizer.pixels[var8] = var17;
                     }
                   }
                   var8++;

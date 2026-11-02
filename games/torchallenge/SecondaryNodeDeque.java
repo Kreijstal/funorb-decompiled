@@ -79,16 +79,16 @@ final class SecondaryNodeDeque implements Iterable {
         try {
           if (param4 != null &&
             0 < param1) {
-            var5_int = param4[0].field_q;
-            var6 = param4[2].field_q;
+            var5_int = param4[0].fullWidth;
+            var6 = param4[2].fullWidth;
             if (param3 > -115) {
               return;
             }
-            var7 = param4[1].field_q;
+            var7 = param4[1].fullWidth;
             param4[0].g(param0, param2);
             param4[2].g(param1 + (param0 - var6), param2);
             SoftwareRasterizer.a(bk.field_s);
-            SoftwareRasterizer.a(var5_int + param0, param2, -var6 + (param0 + param1), param4[1].field_v + param2);
+            SoftwareRasterizer.a(var5_int + param0, param2, -var6 + (param0 + param1), param4[1].fullHeight + param2);
             var8 = var5_int + param0;
             var9 = param1 + param0 - var6;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {

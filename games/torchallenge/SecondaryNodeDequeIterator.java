@@ -46,8 +46,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
-        int var3 = ii.field_h[0].field_q;
-        int var4 = ii.field_h[0].field_v;
+        int var3 = ii.field_h[0].fullWidth;
+        int var4 = ii.field_h[0].fullHeight;
         int var1Lifetime1;
         int var1Lifetime2;
         int var2Lifetime1;
@@ -63,12 +63,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var1Lifetime2 = 0;
           var2Lifetime1 = 0;
           ii.field_h[3].g(var1Lifetime2, var2Lifetime1);
-          var1Lifetime2 = 640 - ii.field_h[4].field_q;
+          var1Lifetime2 = 640 - ii.field_h[4].fullWidth;
           ii.field_h[4].g(var1Lifetime2, var2Lifetime1);
           var1Lifetime2 = 0;
           var2Lifetime1 = 0;
           ii.field_h[1].g(var1Lifetime2, var2Lifetime1);
-          var2Lifetime1 = 480 - ii.field_h[6].field_v;
+          var2Lifetime1 = 480 - ii.field_h[6].fullHeight;
           ii.field_h[6].g(var1Lifetime2, var2Lifetime1);
           return;
         }

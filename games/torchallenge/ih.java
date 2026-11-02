@@ -230,16 +230,16 @@ final class ih extends kj implements sg {
           if (param0 > 0 &&
             param3 > 0) {
             var21 = param5.c();
-            var30 = SoftwareRasterizer.field_i;
-            var10 = SoftwareRasterizer.field_g;
-            var11 = SoftwareRasterizer.field_f;
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[4];
             SoftwareRasterizer.a(var29);
             param5.d();
             SoftwareRasterizer.a(var29[0], var29[1], var29[2], var29[3]);
-            var13 = param6 * param5.field_u + param1;
-            var14 = -param0 + param5.field_u;
-            var25 = var21.field_y;
+            var13 = param6 * param5.storedWidth + param1;
+            var14 = -param0 + param5.storedWidth;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param6; var16 < param6 + param3; var16++) {
@@ -251,15 +251,15 @@ final class ih extends kj implements sg {
                     SoftwareRasterizer.e(var17, var16, param4, param7);
                   } else {
                     if (var16 > 0 &&
-                      var15[var13 - param5.field_u] == 0) {
+                      var15[var13 - param5.storedWidth] == 0) {
                       SoftwareRasterizer.e(var17, var16, param4, param7);
                     } else {
-                      if (var17 < param5.field_u - 1 &&
+                      if (var17 < param5.storedWidth - 1 &&
                         var15[var13 + 1] == 0) {
                         SoftwareRasterizer.e(var17, var16, param4, param7);
                       } else {
-                        if (var16 < -1 + param5.field_x &&
-                          var15[param5.field_u + var13] == 0) {
+                        if (var16 < -1 + param5.storedHeight &&
+                          var15[param5.storedWidth + var13] == 0) {
                           SoftwareRasterizer.e(var17, var16, param4, param7);
                         }
                       }
@@ -270,8 +270,8 @@ final class ih extends kj implements sg {
               }
               var13 = var13 + var14;
             }
-            var21.g(-param5.field_s, -param5.field_p);
-            SoftwareRasterizer.a(var30, var10, var11);
+            var21.g(-param5.offsetX, -param5.offsetY);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
             SoftwareRasterizer.b(var29);
             return;
           }

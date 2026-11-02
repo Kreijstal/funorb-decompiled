@@ -58,34 +58,34 @@ final class IterableNodeHashTable implements Iterable {
         int var9 = 0;
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
-          if ((3 & (param1.field_x | param1.field_u | param1.field_s | param1.field_p)) == 0) {
+          if ((3 & (param1.storedHeight | param1.storedWidth | param1.offsetX | param1.offsetY)) == 0) {
             return;
           }
-          var2_int = (3 & param1.field_s) + param1.field_u;
+          var2_int = (3 & param1.offsetX) + param1.storedWidth;
           var2_int = 4 - ((var2_int & 3) - var2_int);
-          var3 = param1.field_x + (param1.field_p & 3);
+          var3 = param1.storedHeight + (param1.offsetY & 3);
           var3 = 4 - (var3 & 3) + var3;
           var4 = new int[var2_int * var3];
           var5 = 0;
           if (param0 != -44) {
             field_h = (Sprite) null;
           }
-          var6 = (3 & param1.field_p) * var2_int + (param1.field_s & 3);
-          for (var7 = 0; param1.field_x > var7; var7++) {
-            for (var8 = 0; param1.field_u > var8; var8++) {
+          var6 = (3 & param1.offsetY) * var2_int + (param1.offsetX & 3);
+          for (var7 = 0; param1.storedHeight > var7; var7++) {
+            for (var8 = 0; param1.storedWidth > var8; var8++) {
               incrementValue$0 = var6;
               var6++;
               incrementValue$1 = var5;
               var5++;
-              var4[incrementValue$0] = param1.field_y[incrementValue$1];
+              var4[incrementValue$0] = param1.pixels[incrementValue$1];
             }
-            var6 = var6 + (var2_int - param1.field_u);
+            var6 = var6 + (var2_int - param1.storedWidth);
           }
-          param1.field_x = var3;
-          param1.field_u = var2_int;
-          param1.field_p = param1.field_p & -4;
-          param1.field_y = var4;
-          param1.field_s = param1.field_s & -4;
+          param1.storedHeight = var3;
+          param1.storedWidth = var2_int;
+          param1.offsetY = param1.offsetY & -4;
+          param1.pixels = var4;
+          param1.offsetX = param1.offsetX & -4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

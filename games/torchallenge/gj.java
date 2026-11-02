@@ -424,16 +424,16 @@ final class gj {
             var6_int = param2 + param1.field_m + this.field_f;
             var7 = param1.field_i + (param0 + this.field_h);
             if (param3.field_e == 1) {
-              var6_int = var6_int + (param1.field_p - this.field_e.field_q) / 2;
+              var6_int = var6_int + (param1.field_p - this.field_e.fullWidth) / 2;
             }
             if (param3.field_i == 1) {
-              var7 = var7 + (param1.field_l - this.field_e.field_v) / 2;
+              var7 = var7 + (param1.field_l - this.field_e.fullHeight) / 2;
             }
             if (param3.field_e == 2) {
-              var6_int = var6_int + (param1.field_p - this.field_e.field_q);
+              var6_int = var6_int + (param1.field_p - this.field_e.fullWidth);
             }
             if (param3.field_i == 2) {
-              var7 = var7 + (param1.field_l - this.field_e.field_v);
+              var7 = var7 + (param1.field_l - this.field_e.fullHeight);
             }
             this.field_e.g(var6_int, var7);
           }

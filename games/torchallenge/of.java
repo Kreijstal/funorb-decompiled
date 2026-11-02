@@ -213,7 +213,7 @@ abstract class of {
           if (var8 != 0) {
             SoftwareRasterizer.b(sh.field_w);
           }
-          od.a(param0, param1 + (479 - ResourceArchive.field_o[1].field_v), 1, 7, 6, ResourceArchive.field_o[1]);
+          od.a(param0, param1 + (479 - ResourceArchive.field_o[1].fullHeight), 1, 7, 6, ResourceArchive.field_o[1]);
           uk.field_N.g(param0, param1);
           if (param2 < 32) {
             return;
@@ -317,10 +317,10 @@ abstract class of {
                 }
                 stackIn_82_0 = FullscreenFocusCanvas.field_b[var24];
                 stackIn_82_1 = var11Lifetime1 + param1;
-                stackIn_82_2 = mb.field_d[0].field_v;
+                stackIn_82_2 = mb.field_d[0].fullHeight;
                 stackIn_82_3 = 4;
                 stackIn_83_4 = (0 == de.field_d % 8);
-                rd.a(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, 4, -1012815519, mb.field_d[0].field_q, param0 + var10Lifetime1, 2);
+                rd.a(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, 4, -1012815519, mb.field_d[0].fullWidth, param0 + var10Lifetime1, 2);
                 var10Lifetime1 = var10Lifetime1 + (1 + var12Lifetime1);
                 continue;
               }
@@ -335,30 +335,30 @@ abstract class of {
               break;
             }
             var24Lifetime3 = 5 - var22Lifetime3 % 5;
-            var13Lifetime4 = mb.field_d[0].field_v;
-            var12Lifetime1Lifetime1 = mb.field_d[0].field_q;
+            var13Lifetime4 = mb.field_d[0].fullHeight;
+            var12Lifetime1Lifetime1 = mb.field_d[0].fullWidth;
             if (var22Lifetime3 % 5 > 0) {
               mb.field_d[0].c(-var12Lifetime1Lifetime1 + (-10 + ob.field_b[2] + (ob.field_b[0] - (-param0 - var24Lifetime3))), var24Lifetime3 + (var11Lifetime1 + param1), -(2 * var24Lifetime3) + var12Lifetime1Lifetime1, -(var24Lifetime3 * 2) + var13Lifetime4);
             }
           }
           if (param4 == 2 &&
             o.field_l > 0) {
-            var11Lifetime2 = ed.field_i[1] + 4 - (ec.field_a[1].field_q >> 2);
+            var11Lifetime2 = ed.field_i[1] + 4 - (ec.field_a[1].fullWidth >> 2);
             var12Lifetime2 = ed.field_i[2];
-            var10Lifetime2 = -(ec.field_a[1].field_q >> 2) + ed.field_i[0] + 1;
+            var10Lifetime2 = -(ec.field_a[1].fullWidth >> 2) + ed.field_i[0] + 1;
             for (var20Lifetime3 = 0; 10 > var20Lifetime3; var20Lifetime3++) {
               if (db.field_B <= var20Lifetime3) {
                 ec.field_a[2].g(var10Lifetime2, var11Lifetime2);
               } else {
                 ec.field_a[1].g(var10Lifetime2, var11Lifetime2);
                 stackIn_101_0 = p.field_f[var20Lifetime3];
-                stackIn_101_1 = (ec.field_a[1].field_q >> 2) + var11Lifetime2;
-                stackIn_101_2 = ec.field_a[1].field_v >> 1;
+                stackIn_101_1 = (ec.field_a[1].fullWidth >> 2) + var11Lifetime2;
+                stackIn_101_2 = ec.field_a[1].fullHeight >> 1;
                 stackIn_101_3 = 4;
                 stackIn_102_4 = (0 == de.field_d % 8);
-                rd.a(stackIn_101_0, stackIn_101_1, stackIn_101_2, stackIn_101_3, stackIn_102_4, 4, -1012815519, ec.field_a[1].field_q >> 1, var10Lifetime2 + (ec.field_a[1].field_q >> 2), 2);
+                rd.a(stackIn_101_0, stackIn_101_1, stackIn_101_2, stackIn_101_3, stackIn_102_4, 4, -1012815519, ec.field_a[1].fullWidth >> 1, var10Lifetime2 + (ec.field_a[1].fullWidth >> 2), 2);
               }
-              var10Lifetime2 = var10Lifetime2 + (ec.field_a[1].field_u + 1);
+              var10Lifetime2 = var10Lifetime2 + (ec.field_a[1].storedWidth + 1);
             }
           }
           if (1 == param4) {
@@ -368,10 +368,10 @@ abstract class of {
             if (null != cj.field_f) {
               rl.field_h[fh.field_e].g(var10Lifetime3, var11Lifetime3);
             }
-            var11Lifetime3Lifetime1 = oa.field_a[1] + (oa.field_a[3] - mb.field_d[1].field_v >> 1);
-            var10Lifetime3Lifetime1 = oa.field_a[0] - (-10 - rl.field_h[fh.field_e].field_q);
+            var11Lifetime3Lifetime1 = oa.field_a[1] + (oa.field_a[3] - mb.field_d[1].fullHeight >> 1);
+            var10Lifetime3Lifetime1 = oa.field_a[0] - (-10 - rl.field_h[fh.field_e].fullWidth);
             var13Lifetime1 = oa.field_a[3];
-            var12Lifetime3 = -rl.field_h[fh.field_e].field_q + (oa.field_a[2] - 20 - var20Lifetime4 + 1);
+            var12Lifetime3 = -rl.field_h[fh.field_e].fullWidth + (oa.field_a[2] - 20 - var20Lifetime4 + 1);
             var21Lifetime1 = var12Lifetime3 / var20Lifetime4;
             var22Lifetime1 = (-(var21Lifetime1 * var20Lifetime4) + var12Lifetime3) / 2 + var10Lifetime3Lifetime1;
             var12Lifetime3Lifetime1 = var21Lifetime1 * var20Lifetime4;
@@ -392,10 +392,10 @@ abstract class of {
               mb.field_d[1].g(var22Lifetime1, var11Lifetime3Lifetime1);
               stackIn_118_0 = FullscreenFocusCanvas.field_b[var27];
               stackIn_118_1 = var11Lifetime3Lifetime1;
-              stackIn_118_2 = mb.field_d[1].field_v;
+              stackIn_118_2 = mb.field_d[1].fullHeight;
               stackIn_118_3 = 4;
               stackIn_119_4 = (de.field_d % 8 == 0);
-              rd.a(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_119_4, 4, -1012815519, mb.field_d[1].field_q, var22Lifetime1, 2);
+              rd.a(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_119_4, 4, -1012815519, mb.field_d[1].fullWidth, var22Lifetime1, 2);
               var22Lifetime1 = var22Lifetime1 + (1 + var21Lifetime1);
             }
             var25Lifetime1 = var26;

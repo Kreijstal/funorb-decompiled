@@ -60,7 +60,7 @@ final class dk {
           if (var7 == -1) {
             var7 = this.field_t.field_K + this.field_t.field_x;
           }
-          var8 = SoftwareRasterizer.field_g >> 2;
+          var8 = SoftwareRasterizer.width >> 2;
           var9 = this.field_t.a(param0);
           var10 = this.field_t.field_K + this.field_t.field_x;
           var11 = param3;
@@ -86,11 +86,11 @@ final class dk {
             }
           }
           var12 = param1;
-          if (var5_int + var12 + var9 > SoftwareRasterizer.field_g) {
-            var12 = -var5_int + (-var9 + SoftwareRasterizer.field_g);
+          if (var5_int + var12 + var9 > SoftwareRasterizer.width) {
+            var12 = -var5_int + (-var9 + SoftwareRasterizer.width);
           }
           var13Lifetime1 = 32 + (param2 - this.field_t.field_t);
-          if (var6 + (var13Lifetime1 + var10) > SoftwareRasterizer.field_f) {
+          if (var6 + (var13Lifetime1 + var10) > SoftwareRasterizer.height) {
             var13Lifetime1 = -var6 + (-var10 + param2);
           }
           SoftwareRasterizer.b(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
@@ -211,8 +211,8 @@ final class dk {
           var5 = new Sprite[9];
           var17 = new el(32, 32);
           var19 = var17;
-          for (var7_int = 0; var19.field_y.length > var7_int; var7_int++) {
-            var17.field_y[var7_int] = 1077952576;
+          for (var7_int = 0; var19.pixels.length > var7_int; var7_int++) {
+            var17.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var19);
           var4.a(4, -27140).a(true, -1).a((byte) -120, var5);
@@ -237,14 +237,14 @@ final class dk {
           var9[4] = new Sprite(2, 1);
           var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_y = new int[]{6710886, 7829367};
-          var10[4].field_y = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new ga();
           var12 = new ga();
           var11.a(var9, 0, 109);
           var12.a(var10, 0, 102);
           var13 = new Sprite(7, 4);
-          var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ga(var4, true);
           var14.a((byte) -42, var13.c());
           var13.f();
@@ -320,12 +320,12 @@ final class dk {
           var5_int = this.field_t.a(param1);
           var7 = this.field_t.field_t + this.field_t.field_K;
           var8 = param0;
-          if (6 + var8 + var5_int > SoftwareRasterizer.field_g) {
-            var8 = -6 - var5_int + SoftwareRasterizer.field_g;
+          if (6 + var8 + var5_int > SoftwareRasterizer.width) {
+            var8 = -6 - var5_int + SoftwareRasterizer.width;
           }
           var9 = -this.field_t.field_t + (param2 + 32);
-          if (!(6 + (var9 + var7) <= SoftwareRasterizer.field_f)) {
-            var9 = -6 + (SoftwareRasterizer.field_f - var7);
+          if (!(6 + (var9 + var7) <= SoftwareRasterizer.height)) {
+            var9 = -6 + (SoftwareRasterizer.height - var7);
           }
           SoftwareRasterizer.b(var8, var9, var5_int + 6, var7 + 6, this.field_b);
           SoftwareRasterizer.f(1 + var8, 1 + var9, var5_int + 4, 4 + var7, this.field_p);

@@ -433,43 +433,43 @@ final class LocalizedStrings extends ma {
           }
           var2Lifetime45 = MouseInputHandler.a(95, "instructions_titles,0");
           if (var2Lifetime45 != null) {
-            RasterBuffer.field_j[0] = re.a(18990, var2Lifetime45);
+            RasterBuffer.helpTopicTitles[0] = re.a(18990, var2Lifetime45);
           }
           var2Lifetime46 = MouseInputHandler.a(95, "instructions_titles,1");
           if (var2Lifetime46 != null) {
-            RasterBuffer.field_j[1] = re.a(18990, var2Lifetime46);
+            RasterBuffer.helpTopicTitles[1] = re.a(18990, var2Lifetime46);
           }
           var2Lifetime47 = MouseInputHandler.a(95, "instructions_titles,2");
           if (null != var2Lifetime47) {
-            RasterBuffer.field_j[2] = re.a(TorChallenge.a(param1, 18990), var2Lifetime47);
+            RasterBuffer.helpTopicTitles[2] = re.a(TorChallenge.a(param1, 18990), var2Lifetime47);
           }
           var2Lifetime48 = MouseInputHandler.a(95, "instructions_titles,3");
           if (var2Lifetime48 != null) {
-            RasterBuffer.field_j[3] = re.a(18990, var2Lifetime48);
+            RasterBuffer.helpTopicTitles[3] = re.a(18990, var2Lifetime48);
           }
           var2Lifetime49 = MouseInputHandler.a(95, "instructions_titles,4");
           if (var2Lifetime49 != null) {
-            RasterBuffer.field_j[4] = re.a(18990, var2Lifetime49);
+            RasterBuffer.helpTopicTitles[4] = re.a(18990, var2Lifetime49);
           }
           var2Lifetime50 = MouseInputHandler.a(95, "instructions_titles,5");
           if (null != var2Lifetime50) {
-            RasterBuffer.field_j[5] = re.a(param1 + 18990, var2Lifetime50);
+            RasterBuffer.helpTopicTitles[5] = re.a(param1 + 18990, var2Lifetime50);
           }
           var2Lifetime51 = MouseInputHandler.a(95, "instructions_titles,6");
           if (var2Lifetime51 != null) {
-            RasterBuffer.field_j[6] = re.a(18990, var2Lifetime51);
+            RasterBuffer.helpTopicTitles[6] = re.a(18990, var2Lifetime51);
           }
           var2Lifetime52 = MouseInputHandler.a(95, "instructions_titles,7");
           if (var2Lifetime52 != null) {
-            RasterBuffer.field_j[7] = re.a(18990, var2Lifetime52);
+            RasterBuffer.helpTopicTitles[7] = re.a(18990, var2Lifetime52);
           }
           var2Lifetime53 = MouseInputHandler.a(95, "instructions_titles,8");
           if (null != var2Lifetime53) {
-            RasterBuffer.field_j[8] = re.a(18990, var2Lifetime53);
+            RasterBuffer.helpTopicTitles[8] = re.a(18990, var2Lifetime53);
           }
           var2Lifetime54 = MouseInputHandler.a(95, "instructions_titles,9");
           if (var2Lifetime54 != null) {
-            RasterBuffer.field_j[9] = re.a(18990, var2Lifetime54);
+            RasterBuffer.helpTopicTitles[9] = re.a(18990, var2Lifetime54);
           }
           var2Lifetime55 = MouseInputHandler.a(95, "example_help_text");
           if (null != var2Lifetime55) {

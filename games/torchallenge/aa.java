@@ -51,49 +51,49 @@ final class aa {
         if (param5 == 0) {
           if (param7 > param6) {
             if (param7 < param4) {
-              ni.a(param6, (byte) -55, param4, param3, param0, param7, SoftwareRasterizer.field_i, param1, param2);
+              ni.a(param6, (byte) -55, param4, param3, param0, param7, SoftwareRasterizer.pixels, param1, param2);
               return;
             }
             if (param6 < param4) {
-              ni.a(param6, (byte) -75, param7, param3, param2, param4, SoftwareRasterizer.field_i, param1, param0);
+              ni.a(param6, (byte) -75, param7, param3, param2, param4, SoftwareRasterizer.pixels, param1, param0);
               return;
             }
-            ni.a(param4, (byte) -126, param7, param3, param1, param6, SoftwareRasterizer.field_i, param2, param0);
+            ni.a(param4, (byte) -126, param7, param3, param1, param6, SoftwareRasterizer.pixels, param2, param0);
             return;
           }
           if (param6 < param4) {
-            ni.a(param7, (byte) 111, param4, param3, param1, param6, SoftwareRasterizer.field_i, param0, param2);
+            ni.a(param7, (byte) 111, param4, param3, param1, param6, SoftwareRasterizer.pixels, param0, param2);
             return;
           }
           if (param4 > param7) {
-            ni.a(param7, (byte) 91, param6, param3, param2, param4, SoftwareRasterizer.field_i, param0, param1);
+            ni.a(param7, (byte) 91, param6, param3, param2, param4, SoftwareRasterizer.pixels, param0, param1);
             return;
           }
-          ni.a(param4, (byte) -83, param6, param3, param0, param7, SoftwareRasterizer.field_i, param2, param1);
+          ni.a(param4, (byte) -83, param6, param3, param0, param7, SoftwareRasterizer.pixels, param2, param1);
           return;
         }
         pressX = 117;
         if (param7 > param6) {
           if (param7 < param4) {
-            ni.a(param6, (byte) -55, param4, param3, param0, param7, SoftwareRasterizer.field_i, param1, param2);
+            ni.a(param6, (byte) -55, param4, param3, param0, param7, SoftwareRasterizer.pixels, param1, param2);
             return;
           }
           if (param6 < param4) {
-            ni.a(param6, (byte) -75, param7, param3, param2, param4, SoftwareRasterizer.field_i, param1, param0);
+            ni.a(param6, (byte) -75, param7, param3, param2, param4, SoftwareRasterizer.pixels, param1, param0);
             return;
           }
-          ni.a(param4, (byte) -126, param7, param3, param1, param6, SoftwareRasterizer.field_i, param2, param0);
+          ni.a(param4, (byte) -126, param7, param3, param1, param6, SoftwareRasterizer.pixels, param2, param0);
           return;
         }
         if (param6 < param4) {
-          ni.a(param7, (byte) 111, param4, param3, param1, param6, SoftwareRasterizer.field_i, param0, param2);
+          ni.a(param7, (byte) 111, param4, param3, param1, param6, SoftwareRasterizer.pixels, param0, param2);
           return;
         }
         if (param4 > param7) {
-          ni.a(param7, (byte) 91, param6, param3, param2, param4, SoftwareRasterizer.field_i, param0, param1);
+          ni.a(param7, (byte) 91, param6, param3, param2, param4, SoftwareRasterizer.pixels, param0, param1);
           return;
         }
-        ni.a(param4, (byte) -83, param6, param3, param0, param7, SoftwareRasterizer.field_i, param2, param1);
+        ni.a(param4, (byte) -83, param6, param3, param0, param7, SoftwareRasterizer.pixels, param2, param1);
     }
 
     final DualLinkNode a(byte param0) {

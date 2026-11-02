@@ -619,17 +619,17 @@ final class dg extends kj implements tl, sg, tb {
         if (null == fa.field_q) {
           fa.field_q = new Sprite(1, 1);
         }
-        fa.field_q.field_v = SoftwareRasterizer.field_f;
-        fa.field_q.field_x = SoftwareRasterizer.field_f;
+        fa.field_q.fullHeight = SoftwareRasterizer.height;
+        fa.field_q.storedHeight = SoftwareRasterizer.height;
         if (!param1) {
           field_M = (int[][][]) null;
         }
         Sprite fieldTemp$0 = fa.field_q;
-        fa.field_q.field_q = SoftwareRasterizer.field_g;
-        fieldTemp$0.field_u = SoftwareRasterizer.field_g;
-        fa.field_q.field_y = SoftwareRasterizer.field_i;
+        fa.field_q.fullWidth = SoftwareRasterizer.width;
+        fieldTemp$0.storedWidth = SoftwareRasterizer.width;
+        fa.field_q.pixels = SoftwareRasterizer.pixels;
         SoftwareRasterizer.a(pf.field_g);
-        SoftwareRasterizer.f(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+        SoftwareRasterizer.f(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         fa.field_q.e(0, 0, param0);
         SoftwareRasterizer.b(pf.field_g);
     }

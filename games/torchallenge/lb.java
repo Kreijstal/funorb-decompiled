@@ -69,8 +69,8 @@ abstract class lb extends DualLinkNode {
         int var17 = 0;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
-          var9 = SecondaryNodeDeque.field_a[0][0].field_q;
-          var10 = SecondaryNodeDeque.field_a[0][0].field_v;
+          var9 = SecondaryNodeDeque.field_a[0][0].fullWidth;
+          var10 = SecondaryNodeDeque.field_a[0][0].fullHeight;
           var13 = 4;
           for (var15 = 0; var15 < 8; var15++) {
             for (var16 = 0; var16 < 3; var16++) {

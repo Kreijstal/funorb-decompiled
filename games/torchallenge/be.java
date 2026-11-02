@@ -68,11 +68,11 @@ final class be {
           var15 = 1;
           ie.field_f[param2][1].d(param4, param3, 160);
           SoftwareRasterizer.a(sh.field_w);
-          var18 = ie.field_f[param2][1].field_q;
+          var18 = ie.field_f[param2][1].fullWidth;
           if (param5 != 25) {
             field_e = (TorChallenge) null;
           }
-          var19 = ie.field_f[param2][1].field_v;
+          var19 = ie.field_f[param2][1].fullHeight;
           if (!param0) {
             if (ResourceArchive.field_b > 0) {
               var17 = var18 / 4;
@@ -124,7 +124,7 @@ final class be {
             IterableNodeHashTable.field_h.g(0, 0);
             SoftwareRasterizer.d(2, 2, 0, 0, var18, var19);
             SoftwareRasterizer.b(sh.field_w);
-            SectorCacheStore.field_f.a(-123);
+            SectorCacheStore.field_f.bindAsTarget(-123);
             if (param1 == 4) {
               var19 += 2;
               param3--;

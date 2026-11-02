@@ -10,16 +10,16 @@ final class ke extends RasterBuffer {
         java.awt.image.DataBufferInt var5 = null;
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;
-        this.field_i = param0;
-        this.field_h = param2;
-        this.field_c = new int[param2 * param0 + 1];
+        this.width = param0;
+        this.height = param2;
+        this.pixels = new int[param2 * param0 + 1];
         if (param3 == -23435) {
-          var5 = new java.awt.image.DataBufferInt(this.field_c, this.field_c.length);
+          var5 = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_i, this.field_h), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_e = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_k = param1;
-          this.a(param3 + 23559);
+          this.bindAsTarget(param3 + 23559);
           return;
         }
     }

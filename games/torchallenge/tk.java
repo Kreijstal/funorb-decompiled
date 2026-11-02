@@ -71,7 +71,7 @@ final class tk extends ng {
         var14Lifetime1 = stackIn_15_0;
         if (null != kj.field_C &&
           null != kj.field_C[0]) {
-          var15 = kj.field_C[0].field_v;
+          var15 = kj.field_C[0].fullHeight;
           var16 = param1 + (64 - var15);
           var17 = var16;
           var18 = param1 + param4;
@@ -269,27 +269,27 @@ final class tk extends ng {
           jh.field_c != var8) {
           if (SpriteLoader.field_c == var8) {
             var14 = ub.field_f[2];
-            var14.b(var5 - (var14.field_u >> 1), var6 - (var14.field_x >> 1), 256);
+            var14.b(var5 - (var14.storedWidth >> 1), var6 - (var14.storedHeight >> 1), 256);
           } else if (var8 == tf.field_w) {
             var13 = ub.field_f[1];
-            var13.b(-(var13.field_u >> 1) + var5, var6 - (var13.field_x >> 1), 256);
+            var13.b(-(var13.storedWidth >> 1) + var5, var6 - (var13.storedHeight >> 1), 256);
           }
         } else {
           var12 = ub.field_f[0];
-          var9 = var12.field_q << 1;
-          var10 = var12.field_v << 1;
+          var9 = var12.fullWidth << 1;
+          var10 = var12.fullHeight << 1;
           if (lh.field_v != null &&
-            var9 <= lh.field_v.field_u &&
-            var10 <= lh.field_v.field_x) {
+            var9 <= lh.field_v.storedWidth &&
+            var10 <= lh.field_v.storedHeight) {
             FullscreenFocusCanvas.a(-50, lh.field_v);
             SoftwareRasterizer.b();
           } else {
             lh.field_v = new Sprite(var9, var10);
             FullscreenFocusCanvas.a(120, lh.field_v);
           }
-          var12.b(112, 144, var12.field_q << 4, var12.field_v << 4, -this.field_S << 10, 4096);
+          var12.b(112, 144, var12.fullWidth << 4, var12.fullHeight << 4, -this.field_S << 10, 4096);
           ie.b((byte) -9);
-          lh.field_v.b(var5 - var12.field_q, var6 - var12.field_v, 256);
+          lh.field_v.b(var5 - var12.fullWidth, var6 - var12.fullHeight, 256);
         }
     }
 

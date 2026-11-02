@@ -68,7 +68,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_k = param0;
-          param0.setDimensions(this.field_i, this.field_h);
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
           param0.setColorModel(this.field_s);
           param0.setHints(14);
@@ -169,9 +169,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_h = param2;
-          this.field_c = new int[param0 * param2 + 1];
-          this.field_i = param0;
+          this.height = param2;
+          this.pixels = new int[param0 * param2 + 1];
+          this.width = param0;
           this.field_s = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_e = param1.createImage((java.awt.image.ImageProducer) (this));
           this.e(91);
@@ -183,7 +183,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param3 != -23435) {
             return;
           }
-          this.a(127);
+          this.bindAsTarget(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -405,7 +405,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           return;
         }
         try {
-          this.field_k.setPixels(0, 0, this.field_i, this.field_h, this.field_s, this.field_c, 0, this.field_i);
+          this.field_k.setPixels(0, 0, this.width, this.height, this.field_s, this.pixels, 0, this.width);
           this.field_k.imageComplete(2);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "dd.E(" + param0 + ')');

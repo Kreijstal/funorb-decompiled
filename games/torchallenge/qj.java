@@ -41,8 +41,8 @@ final class qj extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * SoftwareRasterizer.field_g;
-        var9 = SoftwareRasterizer.field_g - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.width;
+        var9 = SoftwareRasterizer.width - param3;
         var10 = 0;
         var11 = 0;
         if (param2 < SoftwareRasterizer.field_k) {
@@ -50,7 +50,7 @@ final class qj extends BitmapFont {
           param4 = param4 - var12;
           param2 = SoftwareRasterizer.field_k;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRasterizer.field_g;
+          var8 = var8 + var12 * SoftwareRasterizer.width;
         }
         if (param2 + param4 > SoftwareRasterizer.field_l) {
           param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_l);
@@ -73,9 +73,9 @@ final class qj extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            qj.a(SoftwareRasterizer.field_i, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            qj.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            nf.a(SoftwareRasterizer.field_i, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            nf.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -95,8 +95,8 @@ final class qj extends BitmapFont {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * SoftwareRasterizer.field_g;
-        var10 = SoftwareRasterizer.field_g - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.width;
+        var10 = SoftwareRasterizer.width - param3;
         var11 = 0;
         var12 = 0;
         if (param2 < SoftwareRasterizer.field_k) {
@@ -104,7 +104,7 @@ final class qj extends BitmapFont {
           param4 = param4 - var13;
           param2 = SoftwareRasterizer.field_k;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRasterizer.field_g;
+          var9 = var9 + var13 * SoftwareRasterizer.width;
         }
         if (param2 + param4 > SoftwareRasterizer.field_l) {
           param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_l);
@@ -127,9 +127,9 @@ final class qj extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            qj.a(SoftwareRasterizer.field_i, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            qj.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            nf.a(SoftwareRasterizer.field_i, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            nf.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }

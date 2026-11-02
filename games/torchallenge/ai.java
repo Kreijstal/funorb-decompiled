@@ -60,7 +60,7 @@ final class ai {
               if (ef.field_h[var1_int] != null) {
                 for (var2 = 0; ef.field_h[var1_int].length > var2; var2++) {
                   if (ef.field_h[var1_int][var2] != null) {
-                    ef.field_h[var1_int][var2].field_y = null;
+                    ef.field_h[var1_int][var2].pixels = null;
                   }
                   ef.field_h[var1_int][var2] = null;
                 }

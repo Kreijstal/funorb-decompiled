@@ -17,7 +17,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           BufferedSocket.b((byte) -91);
           int var2_int = 53 % ((73 - param0) / 47);
-          SoftwareRasterizer.a(param1.field_y, param1.field_q, param1.field_v);
+          SoftwareRasterizer.setTarget(param1.pixels, param1.fullWidth, param1.fullHeight);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

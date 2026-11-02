@@ -93,7 +93,7 @@ final class BufferedSocket implements Runnable {
         if (var1 == null) {
           var1 = new kd();
         }
-        var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, (byte) -8, SoftwareRasterizer.field_l, SoftwareRasterizer.field_c, SoftwareRasterizer.field_k);
+        var1.a(SoftwareRasterizer.width, SoftwareRasterizer.field_a, SoftwareRasterizer.pixels, SoftwareRasterizer.height, (byte) -8, SoftwareRasterizer.field_l, SoftwareRasterizer.field_c, SoftwareRasterizer.field_k);
         rf.field_db.addLast(var1, -84);
         int var2 = 126 / ((param0 + 23) / 54);
     }

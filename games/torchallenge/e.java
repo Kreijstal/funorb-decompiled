@@ -27,8 +27,8 @@ final class e extends IntrusiveNode {
         if (param2 > -44) {
           e.b((byte) -104, 50);
         }
-        while (var4 < var3.field_y.length) {
-          var3.field_y[var4] = param0;
+        while (var4 < var3.pixels.length) {
+          var3.pixels[var4] = param0;
           var4++;
         }
         return var3;
@@ -50,24 +50,24 @@ final class e extends IntrusiveNode {
           var2_int = 0;
           var3 = 0;
           for (var4 = 0; var4 < 3; var4++) {
-            vj.field_d[var4] = new Sprite(we.field_m[1 + var4].field_q + param1 * 2, 2 * param1 + we.field_m[var4 + 1].field_v);
-            if (we.field_m[1 + var4].field_q > var2_int) {
-              var2_int = we.field_m[var4 + 1].field_q;
+            vj.field_d[var4] = new Sprite(we.field_m[1 + var4].fullWidth + param1 * 2, 2 * param1 + we.field_m[var4 + 1].fullHeight);
+            if (we.field_m[1 + var4].fullWidth > var2_int) {
+              var2_int = we.field_m[var4 + 1].fullWidth;
             }
-            if (var3 < we.field_m[var4 + 1].field_v) {
-              var3 = we.field_m[1 + var4].field_v;
+            if (var3 < we.field_m[var4 + 1].fullHeight) {
+              var3 = we.field_m[1 + var4].fullHeight;
             }
             vj.field_d[var4].d();
             if (0 == var4) {
               SoftwareRasterizer.a(ui.field_f);
-              SoftwareRasterizer.a(0, 0, -(2 * param1) + SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+              SoftwareRasterizer.a(0, 0, -(2 * param1) + SoftwareRasterizer.width, SoftwareRasterizer.height);
             }
             we.field_m[1 + var4].a(param1, param1, 16777215);
             if (var4 == 0) {
               SoftwareRasterizer.b(ui.field_f);
             }
-            SoftwareRasterizer.d(param1, param1, 0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
-            SectorCacheStore.field_f.a(-32);
+            SoftwareRasterizer.d(param1, param1, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+            SectorCacheStore.field_f.bindAsTarget(-32);
             vj.field_d[var4].h();
           }
           cg.field_g = new Sprite(var2_int, var3);
@@ -135,25 +135,25 @@ final class e extends IntrusiveNode {
         var11_ref_ka__ = var10;
         for (var12 = 0; var11_ref_ka__.length > var12; var12++) {
           var13 = var11_ref_ka__[var12];
-          for (var14 = 0; var13.field_y.length > var14; var14++) {
-            var13.field_y[var14] = param5;
+          for (var14 = 0; var13.pixels.length > var14; var14++) {
+            var13.pixels[var14] = param5;
           }
         }
         for (var11 = 0; var11 < param2; var11++) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {
-            var10[6].field_y[var12Lifetime1 + (-1 + var9 - var11) * var9] = param6;
-            var10[8].field_y[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param6;
-            var10[2].field_y[-var11 + (var9 + (-1 + var12Lifetime1 * var9))] = param6;
-            var10[8].field_y[var9 * var12Lifetime1 - (var11 + 1 - var9)] = param6;
+            var10[6].pixels[var12Lifetime1 + (-1 + var9 - var11) * var9] = param6;
+            var10[8].pixels[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param6;
+            var10[2].pixels[-var11 + (var9 + (-1 + var12Lifetime1 * var9))] = param6;
+            var10[8].pixels[var9 * var12Lifetime1 - (var11 + 1 - var9)] = param6;
           }
         }
         for (var11Lifetime1 = 0; param2 > var11Lifetime1; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
-            var10[0].field_y[var12Lifetime2 + var9 * var11Lifetime1] = param1;
-            var10[0].field_y[var11Lifetime1 + var9 * var12Lifetime2] = param1;
+            var10[0].pixels[var12Lifetime2 + var9 * var11Lifetime1] = param1;
+            var10[0].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param1;
             if (var9 - var11Lifetime1 > var12Lifetime2) {
-              var10[2].field_y[var12Lifetime2 + var9 * var11Lifetime1] = param1;
-              var10[6].field_y[var11Lifetime1 + var12Lifetime2 * var9] = param1;
+              var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = param1;
+              var10[6].pixels[var11Lifetime1 + var12Lifetime2 * var9] = param1;
             }
           }
         }
@@ -162,18 +162,18 @@ final class e extends IntrusiveNode {
         }
         for (var11Lifetime2 = 0; param0 > var11Lifetime2; var11Lifetime2++) {
           for (var12Lifetime3 = 0; var12Lifetime3 < param2; var12Lifetime3++) {
-            var10[7].field_y[var11Lifetime2 + param0 * (-1 + (-var12Lifetime3 + var9))] = param6;
-            var10[5].field_y[-1 + (var9 - (var12Lifetime3 - var11Lifetime2 * var9))] = param6;
-            var10[1].field_y[param0 * var12Lifetime3 + var11Lifetime2] = param1;
-            var10[3].field_y[var11Lifetime2 * var9 + var12Lifetime3] = param1;
+            var10[7].pixels[var11Lifetime2 + param0 * (-1 + (-var12Lifetime3 + var9))] = param6;
+            var10[5].pixels[-1 + (var9 - (var12Lifetime3 - var11Lifetime2 * var9))] = param6;
+            var10[1].pixels[param0 * var12Lifetime3 + var11Lifetime2] = param1;
+            var10[3].pixels[var11Lifetime2 * var9 + var12Lifetime3] = param1;
           }
         }
         for (var11Lifetime3 = 0; param0 >> 1 > var11Lifetime3; var11Lifetime3++) {
           for (var12Lifetime4 = 0; var12Lifetime4 < param8; var12Lifetime4++) {
-            var10[1].field_y[var11Lifetime3 + (-1 + var9 - var12Lifetime4) * param0] = param7;
-            var10[3].field_y[var9 * var11Lifetime3 + (-1 + (var9 - var12Lifetime4))] = param7;
-            var10[7].field_y[param0 * var12Lifetime4 + var11Lifetime3] = param7;
-            var10[5].field_y[var9 * var11Lifetime3 + var12Lifetime4] = param7;
+            var10[1].pixels[var11Lifetime3 + (-1 + var9 - var12Lifetime4) * param0] = param7;
+            var10[3].pixels[var9 * var11Lifetime3 + (-1 + (var9 - var12Lifetime4))] = param7;
+            var10[7].pixels[param0 * var12Lifetime4 + var11Lifetime3] = param7;
+            var10[5].pixels[var9 * var11Lifetime3 + var12Lifetime4] = param7;
           }
         }
         return var10;

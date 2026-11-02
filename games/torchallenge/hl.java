@@ -240,7 +240,7 @@ final class hl {
           ec.field_c = param1;
           pf.field_c = param0;
           aj.field_b = param3;
-          ok.a(SoftwareRasterizer.field_g / 2, SoftwareRasterizer.field_f / 2, (byte) -128);
+          ok.a(SoftwareRasterizer.width / 2, SoftwareRasterizer.height / 2, (byte) -128);
           qc.a((byte) -48, param0.field_t + param0.field_K, param0.field_t, param1.field_K + param1.field_t, param1.field_t);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

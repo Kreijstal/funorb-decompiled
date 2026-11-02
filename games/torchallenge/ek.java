@@ -78,15 +78,15 @@ final class ek extends UiComponent {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           var5_int = param0 + this.field_p;
-          bc.a(this.field_l + param3, this.field_O.field_u + param0, param3, -this.field_O.field_u + var5_int, param1 - 13469);
-          for (var6 = param0 - this.field_F; var6 < var5_int; var6 = var6 + param2.field_u) {
+          bc.a(this.field_l + param3, this.field_O.storedWidth + param0, param3, -this.field_O.storedWidth + var5_int, param1 - 13469);
+          for (var6 = param0 - this.field_F; var6 < var5_int; var6 = var6 + param2.storedWidth) {
             param2.g(var6, param3);
           }
           if (param1 != 13470) {
             this.field_F = -127;
           }
           ie.b((byte) -9);
-          if (SoftwareRasterizer.field_a <= this.field_O.field_u + param0) {
+          if (SoftwareRasterizer.field_a <= this.field_O.storedWidth + param0) {
             FullscreenFocusCanvas.a(-86, this.field_E);
             param2.g(-this.field_F, 0);
             param2.g(-this.field_F + this.field_Q * 2, 0);
@@ -94,15 +94,15 @@ final class ek extends UiComponent {
             ie.b((byte) -9);
             this.field_E.g(param0, param3);
           }
-          if (SoftwareRasterizer.field_c >= -this.field_O.field_u + var5_int) {
+          if (SoftwareRasterizer.field_c >= -this.field_O.storedWidth + var5_int) {
             FullscreenFocusCanvas.a(param1 - 13345, this.field_E);
-            for (var7 = this.field_F + (this.field_p - this.field_O.field_u); 2 * this.field_Q < var7; var7 = var7 - this.field_Q * 2) {
+            for (var7 = this.field_F + (this.field_p - this.field_O.storedWidth); 2 * this.field_Q < var7; var7 = var7 - this.field_Q * 2) {
             }
             param2.g(-var7, 0);
             param2.g(2 * this.field_Q - var7, 0);
             this.field_O.c(0, 0);
             ie.b((byte) -9);
-            this.field_E.g(-this.field_O.field_u + var5_int, param3);
+            this.field_E.g(-this.field_O.storedWidth + var5_int, param3);
             return;
           }
           return;

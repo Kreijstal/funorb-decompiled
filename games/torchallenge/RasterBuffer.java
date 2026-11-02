@@ -6,11 +6,11 @@ abstract class RasterBuffer {
     static BitmapFont field_g;
     static Sprite[] field_d;
     static int[] field_b;
-    int field_h;
-    int field_i;
-    static String[] field_j;
+    int height;
+    int width;
+    static String[] helpTopicTitles;
     static int field_f;
-    int[] field_c;
+    int[] pixels;
     java.awt.Image field_e;
 
     public static void b(int param0) {
@@ -18,7 +18,7 @@ abstract class RasterBuffer {
         field_d = null;
         field_a = null;
         field_b = null;
-        field_j = null;
+        helpTopicTitles = null;
         if (param0 != -15721) {
           RasterBuffer.b(-127);
         }
@@ -26,9 +26,9 @@ abstract class RasterBuffer {
 
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
 
-    final void a(int param0) {
+    final void bindAsTarget(int param0) {
         int var2 = 109 / ((37 - param0) / 63);
-        SoftwareRasterizer.a(this.field_c, this.field_i, this.field_h);
+        SoftwareRasterizer.setTarget(this.pixels, this.width, this.height);
     }
 
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
@@ -36,7 +36,7 @@ abstract class RasterBuffer {
     static {
         field_a = new int[]{0, 0, 0};
         field_b = new int[]{31, 992, 31744};
-        field_j = new String[]{"Welcome to Tor Challenge!", "Characters", "Basic controls", "Special attacks", "Combo attack", "Interface", "Coins", "Bonus crystals", "Health", "Help"};
+        helpTopicTitles = new String[]{"Welcome to Tor Challenge!", "Characters", "Basic controls", "Special attacks", "Combo attack", "Interface", "Coins", "Bonus crystals", "Health", "Help"};
         field_f = -1;
     }
 }

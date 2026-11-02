@@ -714,7 +714,7 @@ final class GameScreen {
           }
           SoftwareRasterizer.a(pf.field_g);
           SoftwareRasterizer.a(0, var19, 640, 480);
-          GzipDecoder.a(var22, var22[0].field_v + var21, var20 + 3, (byte) -74, var23 + (-var22[0].field_v + var19), var18);
+          GzipDecoder.a(var22, var22[0].fullHeight + var21, var20 + 3, (byte) -74, var23 + (-var22[0].fullHeight + var19), var18);
           SoftwareRasterizer.b(pf.field_g);
           if (!vc.field_e) {
             ba.a(this.screenId, kk.field_d, param1, -128, cj.field_g);
@@ -741,7 +741,7 @@ final class GameScreen {
                 hb.field_c.h(var5_int + var15, var16 + var6 + var23);
               } else if (pa.field_s[ok.field_b][var27]) {
                 ib.field_M[2].g(var5_int, var23 + var6);
-                tf.field_x.a(Integer.toString(1 + var27), var5_int + (ib.field_M[2].field_q >> 1), var23 - 2 + (9 + (ib.field_M[2].field_v >> 1)) + var6, var17, -1);
+                tf.field_x.a(Integer.toString(1 + var27), var5_int + (ib.field_M[2].fullWidth >> 1), var23 - 2 + (9 + (ib.field_M[2].fullHeight >> 1)) + var6, var17, -1);
               } else {
                 je.field_b.h(-1 + (var5_int + var15), var23 + (var6 + var16));
               }
@@ -762,9 +762,9 @@ final class GameScreen {
                 var25 = 0;
               }
               if (var25 != 0) {
-                ib.field_M[3].g(var7 + var5_int - ib.field_M[var10].field_q, var6 + var23);
+                ib.field_M[3].g(var7 + var5_int - ib.field_M[var10].fullWidth, var6 + var23);
               } else {
-                ib.field_M[var10].g(var7 + var5_int - ib.field_M[var10].field_q, var23 + var6);
+                ib.field_M[var10].g(var7 + var5_int - ib.field_M[var10].fullWidth, var23 + var6);
               }
               var6 = var6 + (var9 + var8);
               var27++;
@@ -789,8 +789,8 @@ final class GameScreen {
           var28 = we.field_m[ok.field_b + 1];
           SoftwareRasterizer.a(pf.field_g);
           SoftwareRasterizer.f(var24 + var5_intLifetime1, var24 + var6Lifetime2, -var24 + (var7Lifetime2 + var5_intLifetime1), -var24 + var8Lifetime2 + var6Lifetime2);
-          var5_intLifetime1 = var5_intLifetime1 + (var7Lifetime2 - var28.field_q >> 1);
-          var6Lifetime2 = (var8Lifetime2 - var28.field_v >> 1) + var6Lifetime2;
+          var5_intLifetime1 = var5_intLifetime1 + (var7Lifetime2 - var28.fullWidth >> 1);
+          var6Lifetime2 = (var8Lifetime2 - var28.fullHeight >> 1) + var6Lifetime2;
           if (ok.field_b == 0) {
             var5_intLifetime1 -= 32;
             var6Lifetime2 += 96;
@@ -800,9 +800,9 @@ final class GameScreen {
           var5_intLifetime2 = ue.field_j[0];
           var6Lifetime3 = ue.field_j[1];
           var22Lifetime1[0].g(var5_intLifetime2, var6Lifetime3);
-          var22Lifetime1[2].g(var5_intLifetime2 + var7Lifetime2 - var22Lifetime1[2].field_q, var6Lifetime3);
-          var22Lifetime1[6].g(var5_intLifetime2, var6Lifetime3 + (var8Lifetime2 - var22Lifetime1[6].field_v));
-          var22Lifetime1[8].g(-var22Lifetime1[2].field_q + var7Lifetime2 + var5_intLifetime2, -var22Lifetime1[6].field_v + var8Lifetime2 + var6Lifetime3);
+          var22Lifetime1[2].g(var5_intLifetime2 + var7Lifetime2 - var22Lifetime1[2].fullWidth, var6Lifetime3);
+          var22Lifetime1[6].g(var5_intLifetime2, var6Lifetime3 + (var8Lifetime2 - var22Lifetime1[6].fullHeight));
+          var22Lifetime1[8].g(-var22Lifetime1[2].fullWidth + var7Lifetime2 + var5_intLifetime2, -var22Lifetime1[6].fullHeight + var8Lifetime2 + var6Lifetime3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1499,9 +1499,9 @@ final class GameScreen {
             var3 = var8 + var3;
             SoftwareRasterizer.a(var2_int, var3, var2_int + var4 - 2 * var8, -var8 + (var5 >> 1) + var3);
             var2_intLifetime1 = bg.field_I[var9][0];
-            var2_intLifetime1 = (-(var6.field_q >> 1) + var4 >> 1) + var2_intLifetime1;
+            var2_intLifetime1 = (-(var6.fullWidth >> 1) + var4 >> 1) + var2_intLifetime1;
             var3Lifetime1 = bg.field_I[var9][1];
-            var3Lifetime1 = ((var5 >> 1) - (var6.field_v >> 1) >> 1) + var3Lifetime1 + 32;
+            var3Lifetime1 = ((var5 >> 1) - (var6.fullHeight >> 1) >> 1) + var3Lifetime1 + 32;
             if (var9 == 0) {
               var3Lifetime1 += 48;
               var2_intLifetime1 -= 16;
@@ -1511,7 +1511,7 @@ final class GameScreen {
             var3Lifetime2 = bg.field_I[var9][1];
             var2_intLifetime2 = bg.field_I[var9][0];
             var7[0].g(var2_intLifetime2, var3Lifetime2);
-            var2_intLifetime2 = -var7[0].field_q + var4 + var2_intLifetime2;
+            var2_intLifetime2 = -var7[0].fullWidth + var4 + var2_intLifetime2;
             var7[2].g(var2_intLifetime2, var3Lifetime2);
             var2_intLifetime3 = bg.field_I[var9][0];
             var3Lifetime3 = lg.field_d[this.screenId][3] + lg.field_d[this.screenId][8];
@@ -1542,7 +1542,7 @@ final class GameScreen {
             e.a((byte) -24, var2_int);
           }
           var3 = vj.field_d[ok.field_b];
-          var4 = 320 + (320 - var3.field_q) / 2;
+          var4 = 320 + (320 - var3.fullWidth) / 2;
           var5 = lg.field_d[1][param0];
           var3.b(var4 - 8, -8 + var5, 256);
           var3Lifetime1 = we.field_m[ok.field_b + 1];
@@ -1836,9 +1836,9 @@ final class GameScreen {
           if (var3_int == 0) {
             var4 = var4 - ci.g(25);
           }
-          var5 = ui.field_i[0].field_q;
+          var5 = ui.field_i[0].fullWidth;
           var6 = 32;
-          var7 = ui.field_i[0].field_v;
+          var7 = ui.field_i[0].fullHeight;
           var8 = 32;
           var9 = var4 / 2 + var4 % 2;
           var10 = 2;
@@ -2025,7 +2025,7 @@ final class GameScreen {
               var21 = var21 + (var20 + (var20 >> 1));
               SecondaryNodeDequeIterator.field_e.c(ca.field_c, var15, var21, 0, -1);
               var15 = var15 + SecondaryNodeDequeIterator.field_e.a(ca.field_c);
-              var16 = -(hh.field_b.field_v - SecondaryNodeDequeIterator.field_e.field_x >> 1) - SecondaryNodeDequeIterator.field_e.field_x + var21;
+              var16 = -(hh.field_b.fullHeight - SecondaryNodeDequeIterator.field_e.field_x >> 1) - SecondaryNodeDequeIterator.field_e.field_x + var21;
               break;
             }
             var21 = var21 + var20;
@@ -2037,7 +2037,7 @@ final class GameScreen {
               return;
             }
             hh.field_b.g(var15, var16);
-            var15 = var15 + hh.field_b.field_u / 3;
+            var15 = var15 + hh.field_b.storedWidth / 3;
             var27++;
             if (var28 != 0) {
               return;
@@ -2751,10 +2751,10 @@ final class GameScreen {
                                   ol.a((byte) -119, sh.field_u)) {
                                   var5 = var5 * 7 / 6;
                                 }
-                                var3_int = -GzipDecoder.field_a[0].field_v + var3_int;
-                                var2_int = var2_int - GzipDecoder.field_a[0].field_q;
-                                var5 = 2 * GzipDecoder.field_a[0].field_v + var5;
-                                var4_int = var4_int + GzipDecoder.field_a[0].field_q * 2;
+                                var3_int = -GzipDecoder.field_a[0].fullHeight + var3_int;
+                                var2_int = var2_int - GzipDecoder.field_a[0].fullWidth;
+                                var5 = 2 * GzipDecoder.field_a[0].fullHeight + var5;
+                                var4_int = var4_int + GzipDecoder.field_a[0].fullWidth * 2;
                                 this.a(var5, var2_int, 192, var4_int, var3_int, false, GzipDecoder.field_a);
                                 decompiledFrameRemainder1 = (var11 != 0);
                               }
@@ -2802,7 +2802,7 @@ final class GameScreen {
                       var5Lifetime1 = 148;
                       var6_int = 504;
                       if (var2_intLifetime2 > var6_int) {
-                        var6_int = 8 + var2_intLifetime2 + GzipDecoder.field_a[0].field_q * 2;
+                        var6_int = 8 + var2_intLifetime2 + GzipDecoder.field_a[0].fullWidth * 2;
                         var4_intLifetime1 = 640 - var6_int >> 1;
                       }
                       var7 = 259;
@@ -3332,7 +3332,7 @@ final class GameScreen {
           if (var16Lifetime1 >= 0) {
             var9Lifetime1 = m.field_g[1];
             var8Lifetime1 = m.field_g[0];
-            SectorCacheStore.field_f.a(-54);
+            SectorCacheStore.field_f.bindAsTarget(-54);
             LevelEntity.field_E.d(var8Lifetime1, var9Lifetime1, var16Lifetime1);
           }
           return;
@@ -4505,10 +4505,10 @@ final class GameScreen {
             var23Lifetime2 > 256) {
             var23Lifetime2 = 256;
           }
-          var20 = param8.field_v * var23Lifetime2 >> 8;
-          var19 = var23Lifetime2 * param8.field_q >> 8;
-          var18Lifetime2 = var18Lifetime2 + (-var20 + param8.field_v >> 1);
-          var17_intLifetime2 = var17_intLifetime2 + (-var19 + param8.field_q >> 1);
+          var20 = param8.fullHeight * var23Lifetime2 >> 8;
+          var19 = var23Lifetime2 * param8.fullWidth >> 8;
+          var18Lifetime2 = var18Lifetime2 + (-var20 + param8.fullHeight >> 1);
+          var17_intLifetime2 = var17_intLifetime2 + (-var19 + param8.fullWidth >> 1);
           if (var21Lifetime1 < 0) {
             param8.d(var17_intLifetime2, var18Lifetime2, var19, var20);
             if (var24 == 0) {
@@ -4696,10 +4696,10 @@ final class GameScreen {
             bd.field_l = var10Lifetime1 != 0;
             return;
           }
-          SectorCacheStore.field_f.a(-98);
+          SectorCacheStore.field_f.bindAsTarget(-98);
           SoftwareRasterizer.b(ui.field_f);
-          var11Lifetime1 = jj.field_a[param4].field_q;
-          var12Lifetime1 = jj.field_a[param4].field_v;
+          var11Lifetime1 = jj.field_a[param4].fullWidth;
+          var12Lifetime1 = jj.field_a[param4].fullHeight;
           if (param0 != 42) {
             field_h = (ef) null;
           }
@@ -4806,8 +4806,8 @@ final class GameScreen {
               var14 = ue.field_j[1];
               var13 = ue.field_j[0];
               var16_int = ue.field_j[3];
-              var13 = (var15 - var11.field_q >> 1) + var13;
-              var14 = (-var11.field_v + var16_int >> 1) + var14;
+              var13 = (var15 - var11.fullWidth >> 1) + var13;
+              var14 = (-var11.fullHeight + var16_int >> 1) + var14;
               if (ok.field_b == 0) {
                 var14 += 96;
                 var13 -= 32;
@@ -4815,9 +4815,9 @@ final class GameScreen {
               var11.g(var13, var14);
               SoftwareRasterizer.b(pf.field_g);
               var12[0].g(var2_int, var3);
-              var12[2].g(var4 + var2_int - var12[2].field_q, var3);
-              var12[6].g(var2_int, -var12[6].field_v + var5 + var3);
-              var12[8].g(var4 + var2_int - var12[2].field_q, -var12[6].field_v + var5 + var3);
+              var12[2].g(var4 + var2_int - var12[2].fullWidth, var3);
+              var12[6].g(var2_int, -var12[6].fullHeight + var5 + var3);
+              var12[8].g(var4 + var2_int - var12[2].fullWidth, -var12[6].fullHeight + var5 + var3);
               if (var37 == 0) {
                 return;
               }
@@ -4839,20 +4839,20 @@ final class GameScreen {
             var27 = var19;
             var28 = var20;
             var11 = we.field_m[ok.field_b + 1];
-            var14 = 32 + (var14 + ((var16_int >> 1) - (var11.field_v >> 1) >> 1));
-            var13 = (-(var11.field_q >> 1) + var15 >> 1) + var13;
-            var16_int = var11.field_v >> 1;
-            var17 = (-var11.field_q + var19 >> 1) + var17;
-            var18 = (-var11.field_v + var20 >> 1) + var18;
-            var15 = var11.field_q >> 1;
+            var14 = 32 + (var14 + ((var16_int >> 1) - (var11.fullHeight >> 1) >> 1));
+            var13 = (-(var11.fullWidth >> 1) + var15 >> 1) + var13;
+            var16_int = var11.fullHeight >> 1;
+            var17 = (-var11.fullWidth + var19 >> 1) + var17;
+            var18 = (-var11.fullHeight + var20 >> 1) + var18;
+            var15 = var11.fullWidth >> 1;
             if (ok.field_b == 0) {
               var14 += 48;
               var18 += 96;
               var17 -= 32;
               var13 -= 16;
             }
-            var20 = var11.field_v;
-            var19 = var11.field_q;
+            var20 = var11.fullHeight;
+            var19 = var11.fullWidth;
             var29 = (cd.field_b - (aa.field_f >> 2)) * (var17 - var13) / (aa.field_f >> 2) + var13;
             var30 = (-(aa.field_f >> 2) + cd.field_b) * (-var14 + var18) / (aa.field_f >> 2) + var14;
             var31 = (cd.field_b - (aa.field_f >> 2)) * (-var15 + var19) / (aa.field_f >> 2) + var15;
@@ -4868,9 +4868,9 @@ final class GameScreen {
             var11.d(var29, var30, var31, var32);
             SoftwareRasterizer.b(pf.field_g);
             var12[0].g(var33 - var8, var34 - var8);
-            var12[2].g(var8 + var33 + var35 - var12[2].field_q, -var8 + var34);
-            var12[6].g(var33 - var8, var36 + var34 + var8 - var12[6].field_v);
-            var12[8].g(-var12[2].field_q + var8 + (var33 + var35), -var12[6].field_v + var8 + (var36 + var34));
+            var12[2].g(var8 + var33 + var35 - var12[2].fullWidth, -var8 + var34);
+            var12[6].g(var33 - var8, var36 + var34 + var8 - var12[6].fullHeight);
+            var12[8].g(-var12[2].fullWidth + var8 + (var33 + var35), -var12[6].fullHeight + var8 + (var36 + var34));
             if (var37 == 0) {
               return;
             }
@@ -4908,8 +4908,8 @@ final class GameScreen {
               SoftwareRasterizer.a(var2_int, var3, -(2 * var8) + var4 + var2_int, (var5 >> 1) + (var3 - var8));
               var2_int = bg.field_I[var13][0];
               var3 = bg.field_I[var13][1];
-              var2_int = (var4 - (var11.field_q >> 1) >> 1) + var2_int;
-              var3 = (-(var11.field_v >> 1) + (var5 >> 1) >> 1) + (var3 + 32);
+              var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
+              var3 = (-(var11.fullHeight >> 1) + (var5 >> 1) >> 1) + (var3 + 32);
               var3 = var3 + var10;
               if (var13 == 0) {
                 var2_int -= 16;
@@ -4927,7 +4927,7 @@ final class GameScreen {
               var3 = var3 - (-var5 + var15 >> 1);
               SoftwareRasterizer.a(pf.field_g);
               var3 = var3 + var10;
-              SoftwareRasterizer.a(0, var3, 640, var9 - var12[7].field_v);
+              SoftwareRasterizer.a(0, var3, 640, var9 - var12[7].fullHeight);
               de.field_a.g(var2_int, var3);
               var17 = var13;
               switch ((var37 == 0
@@ -4956,12 +4956,12 @@ final class GameScreen {
               var3 = lg.field_d[8][3] + lg.field_d[8][8];
               var2_int = bg.field_I[var13][0];
               var4 = bg.field_I[var13][2];
-              var5 = jj.field_a[ok.field_b].field_v;
+              var5 = jj.field_a[ok.field_b].fullHeight;
               var3 = var3 + var10;
               this.a((byte) 42, var4, 0, var5, var13, false, 0);
               oj.field_d.d();
               jj.field_a[ok.field_b].g(var2_int, var3);
-              SectorCacheStore.field_f.a(113);
+              SectorCacheStore.field_f.bindAsTarget(113);
               oj.field_d.d(0, 0, var7);
             }
             var13++;
@@ -5001,7 +5001,7 @@ final class GameScreen {
               var3 = var3 - (var15 - var5 >> 1);
               SoftwareRasterizer.a(pf.field_g);
               var3 = var3 + var10;
-              SoftwareRasterizer.a(0, var3, 640, -var12[7].field_v + var9);
+              SoftwareRasterizer.a(0, var3, 640, -var12[7].fullHeight + var9);
               de.field_a.g(var2_int, var3);
               var17 = var13;
               switch (var17) {
@@ -5027,7 +5027,7 @@ final class GameScreen {
               tf.field_x.a(var16, var2_int + (var14 >> 1), var3 + ((var5 - var17 >> 1) + 18), 0, -1);
               var3 = lg.field_d[8][8] + lg.field_d[8][3];
               var2_int = bg.field_I[var13][0];
-              var5 = jj.field_a[ok.field_b].field_v;
+              var5 = jj.field_a[ok.field_b].fullHeight;
               var4 = bg.field_I[var13][2];
               var3 = var10 + var3;
               this.a((byte) 42, var4, var2_int, var5, var13, true, var3);
@@ -5043,15 +5043,15 @@ final class GameScreen {
               var3 = var8 + var3;
               SoftwareRasterizer.a(var2_int, var3, -(2 * var8) + (var2_int + var4), -lg.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
               var2_int = bg.field_I[var13][0];
-              var2_int = (var4 - (var11.field_q >> 1) >> 1) + var2_int;
+              var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
               var3 = bg.field_I[var13][1];
-              var3 = var3 + ((-(var11.field_v >> 1) + (var5 >> 1) >> 1) + 32);
+              var3 = var3 + ((-(var11.fullHeight >> 1) + (var5 >> 1) >> 1) + 32);
               if (var13 == 0) {
                 var2_int -= 16;
                 var3 += 48;
               }
               od.a(var11, var2_int, var3);
-              SectorCacheStore.field_f.a(122);
+              SectorCacheStore.field_f.bindAsTarget(122);
               oj.field_d.a(0, 0, var6, 16777215);
             }
             var13++;
@@ -5109,8 +5109,8 @@ final class GameScreen {
           var12 = var11 * var10;
           var13 = -var9 + 640 >> 1;
           var14 = 120;
-          var15 = ph.field_m[0].field_q;
-          var16 = ph.field_m[0].field_v;
+          var15 = ph.field_m[0].fullWidth;
+          var16 = ph.field_m[0].fullHeight;
           var18 = -1;
           var19 = -param1 + param4;
           if (param0 > param3) {
@@ -5268,8 +5268,8 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = SecondaryNodeDeque.field_b;
-          var6 = (param3.a("10. ") >> 1) + ui.field_i[0].field_q;
-          GzipDecoder.a(ui.field_i, ui.field_i[6].field_v + param0 * param1 + ui.field_i[0].field_v, var6 * 2 + 315, (byte) -81, 123 - ui.field_i[0].field_v, -var6 + 162);
+          var6 = (param3.a("10. ") >> 1) + ui.field_i[0].fullWidth;
+          GzipDecoder.a(ui.field_i, ui.field_i[6].fullHeight + param0 * param1 + ui.field_i[0].fullHeight, var6 * 2 + 315, (byte) -81, 123 - ui.field_i[0].fullHeight, -var6 + 162);
           if (param2 == 6) {
             stackIn_4_0 = var5;
             return stackIn_4_0;
@@ -5386,7 +5386,7 @@ final class GameScreen {
             this.field_j = -41;
           }
           if (lg.field_d[param1][17] == 3) {
-            SectorCacheStore.field_f.a(112);
+            SectorCacheStore.field_f.bindAsTarget(112);
             GzipDecoder.a(aa.field_k, nk.field_f[3], nk.field_f[2], (byte) 121, nk.field_f[1], nk.field_f[0]);
           }
           return;
@@ -5463,7 +5463,7 @@ final class GameScreen {
         var21 = TorChallenge.field_F ? 1 : 0;
         try {
           var8 = SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
-          var9 = (-(ui.field_i[0].field_q * 2) + 557) / 3;
+          var9 = (-(ui.field_i[0].fullWidth * 2) + 557) / 3;
           if (qf.field_e == null) {
             ui.c(-123);
           }
@@ -5471,13 +5471,13 @@ final class GameScreen {
           GzipDecoder.a(dg.field_J, 298, 640, (byte) -98, 112, 0);
           GzipDecoder.a(ui.field_i, 262, 557, (byte) -80, 129, 47);
           var5 = 26;
-          var10 = RasterBuffer.field_j[ma.field_j];
-          var2_int = ui.field_i[0].field_q + 63;
-          var3 = 129 - (-var5 + 6) + (ui.field_i[0].field_v + 8);
+          var10 = RasterBuffer.helpTopicTitles[ma.field_j];
+          var2_int = ui.field_i[0].fullWidth + 63;
+          var3 = 129 - (-var5 + 6) + (ui.field_i[0].fullHeight + 8);
           tf.field_x.c(var10, var2_int, var3, 0, -1);
           if (ol.field_b[ma.field_j] != null) {
             var11_ref_String__ = new String[16];
-            var12 = SecondaryNodeDequeIterator.field_e.a(ol.field_b[ma.field_j], new int[]{-32 - ui.field_i[2].field_q + (-ui.field_i[0].field_q + 557)}, var11_ref_String__);
+            var12 = SecondaryNodeDequeIterator.field_e.a(ol.field_b[ma.field_j], new int[]{-32 - ui.field_i[2].fullWidth + (-ui.field_i[0].fullWidth + 557)}, var11_ref_String__);
             var13 = 0;
             var14 = var3 + (var5 + 4);
             while (var13 < var12) {
@@ -5496,20 +5496,20 @@ final class GameScreen {
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
-          var4 = -ui.field_i[0].field_q + 557 + (-ui.field_i[2].field_q - 32);
-          var2_intLifetime1 = (525 + (-ui.field_i[0].field_q - ui.field_i[2].field_q)) / 2 + 47 + ui.field_i[0].field_q + 16;
+          var4 = -ui.field_i[0].fullWidth + 557 + (-ui.field_i[2].fullWidth - 32);
+          var2_intLifetime1 = (525 + (-ui.field_i[0].fullWidth - ui.field_i[2].fullWidth)) / 2 + 47 + ui.field_i[0].fullWidth + 16;
           if (0 == ma.field_j) {
-            var3 = -(2 * var5 / 3) + (-ec.field_a[3].field_v + (-ui.field_i[7].field_v + 391 - var3)) / 2 + var3;
-            var2_intLifetime1 = -(ec.field_a[3].field_q / 2) + var2_intLifetime1;
+            var3 = -(2 * var5 / 3) + (-ec.field_a[3].fullHeight + (-ui.field_i[7].fullHeight + 391 - var3)) / 2 + var3;
+            var2_intLifetime1 = -(ec.field_a[3].fullWidth / 2) + var2_intLifetime1;
             ec.field_a[3].g(var2_intLifetime1, var3);
-            var3 = var3 + (ec.field_a[3].field_v + 18 + 4);
-            var2_intLifetime1 = ec.field_a[3].field_q / 2 + var2_intLifetime1;
+            var3 = var3 + (ec.field_a[3].fullHeight + 18 + 4);
+            var2_intLifetime1 = ec.field_a[3].fullWidth / 2 + var2_intLifetime1;
             ProxySocketConnector.field_p.a(gh.field_y, var2_intLifetime1, var3, 8015912, -1);
             decompiledFrameRemainder0 = (var21 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (ma.field_j == 1) {
-              var2_intLifetime1 = ui.field_i[0].field_q + 47;
+              var2_intLifetime1 = ui.field_i[0].fullWidth + 47;
               var2_intLifetime1 = var2_intLifetime1 + (-64 + var9 >> 1);
               var3 = 4 + var3;
               var11 = 0;
@@ -5535,8 +5535,8 @@ final class GameScreen {
                 var16_int = 0;
                 while (true) {
                   if (jf.field_ob.length > var16_int) {
-                    var2_intLifetime1 = 16 + ui.field_i[0].field_q + 47;
-                    var3 = 38 * var16_int + (40 + ui.field_i[0].field_v) + (SecondaryNodeDequeIterator.field_e.field_x + 129) + 16;
+                    var2_intLifetime1 = 16 + ui.field_i[0].fullWidth + 47;
+                    var3 = 38 * var16_int + (40 + ui.field_i[0].fullHeight) + (SecondaryNodeDequeIterator.field_e.field_x + 129) + 16;
                     stackIn_48_0 = var16_int;
                     stackIn_48_1 = var12Lifetime1;
                     if (var21 == 0) {
@@ -5552,8 +5552,8 @@ final class GameScreen {
                       } else {
                         var15 = jf.field_ob[var16_int][1];
                       }
-                      var2_intLifetime1 = ui.field_i[0].field_q + (47 + var9);
-                      var3 = 129 + (SecondaryNodeDequeIterator.field_e.field_x + (ui.field_i[0].field_v + 40)) - (-(var16_int * 38) - 14);
+                      var2_intLifetime1 = ui.field_i[0].fullWidth + (47 + var9);
+                      var3 = 129 + (SecondaryNodeDequeIterator.field_e.field_x + (ui.field_i[0].fullHeight + 40)) - (-(var16_int * 38) - 14);
                       var11Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(var15, var9, 0);
                       SecondaryNodeDequeIterator.field_e.a(var15, var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var11Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       if (var16_int == var12Lifetime1) {
@@ -5564,9 +5564,9 @@ final class GameScreen {
                     }
                   } else {
                     var16_int = vj.field_c;
-                    var3 = ui.field_i[0].field_v + SecondaryNodeDequeIterator.field_e.field_x + 169;
+                    var3 = ui.field_i[0].fullHeight + SecondaryNodeDequeIterator.field_e.field_x + 169;
                     vj.field_c = var13Lifetime1;
-                    var2_intLifetime1 = -var9 + (-ui.field_i[0].field_q + 604) + (-64 + var9 >> 1);
+                    var2_intLifetime1 = -var9 + (-ui.field_i[0].fullWidth + 604) + (-64 + var9 >> 1);
                     stackIn_48_0 = ef.field_k;
                     stackIn_48_1 = 200;
                   }
@@ -5600,8 +5600,8 @@ final class GameScreen {
                   cl.field_z = true;
                 }
                 this.a(200, var3, var19, var18, var2_intLifetime1, 22158, 50, var13Lifetime1);
-                var3 = 10 + ui.field_i[0].field_v + 129;
-                var2_intLifetime1 = -16 - ui.field_i[0].field_q + 604 - 90;
+                var3 = 10 + ui.field_i[0].fullHeight + 129;
+                var2_intLifetime1 = -16 - ui.field_i[0].fullWidth + 604 - 90;
                 if (var12Lifetime1 == 3) {
                   cl.field_z = false;
                 }
@@ -5618,21 +5618,21 @@ final class GameScreen {
                     var13Lifetime1Lifetime1 = var13Lifetime1Lifetime1 + cj.field_j;
                     var13Lifetime1Lifetime1 = var13Lifetime1Lifetime1 % 3;
                     var14Lifetime1Lifetime1 = var13Lifetime1Lifetime1;
-                    var3 = 391 - (ui.field_i[0].field_v + 30);
-                    var2_intLifetime1 = (-(ui.field_i[0].field_q * 2) + 557 >> 1) + ui.field_i[0].field_q + 47;
+                    var3 = 391 - (ui.field_i[0].fullHeight + 30);
+                    var2_intLifetime1 = (-(ui.field_i[0].fullWidth * 2) + 557 >> 1) + ui.field_i[0].fullWidth + 47;
                     var15_int = 0;
                     var16_intLifetime1 = 0;
                     var17Lifetime1 = 0;
                     if (~var13Lifetime1Lifetime1 != ~uk.field_G ||
                       IterableNodeHashTable.field_h == null) {
-                      IterableNodeHashTable.field_h = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].field_q, ie.field_f[var13Lifetime1Lifetime1][1].field_v);
-                      ac.field_a = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].field_q, ie.field_f[var13Lifetime1Lifetime1][1].field_v);
+                      IterableNodeHashTable.field_h = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].fullWidth, ie.field_f[var13Lifetime1Lifetime1][1].fullHeight);
+                      ac.field_a = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].fullWidth, ie.field_f[var13Lifetime1Lifetime1][1].fullHeight);
                       IterableNodeHashTable.field_h.d();
                       ie.field_f[var13Lifetime1Lifetime1][1].a(0, 0, 0, 47211);
-                      SectorCacheStore.field_f.a(105);
+                      SectorCacheStore.field_f.bindAsTarget(105);
                       uk.field_G = var13Lifetime1Lifetime1;
                     }
-                    var3 = var3 - IterableNodeHashTable.field_h.field_v;
+                    var3 = var3 - IterableNodeHashTable.field_h.fullHeight;
                     if (var12Lifetime1Lifetime1 >= 100) {
                       var17Lifetime1 = 1;
                       var15_int = 4;
@@ -5643,22 +5643,22 @@ final class GameScreen {
                       kj.field_D = 0;
                       var15_int = 4 * var12Lifetime1Lifetime1 / 100;
                     }
-                    var2_intLifetime1 = -(IterableNodeHashTable.field_h.field_q >> 1) + var2_intLifetime1;
+                    var2_intLifetime1 = -(IterableNodeHashTable.field_h.fullWidth >> 1) + var2_intLifetime1;
                     kj.field_D = be.a(var17Lifetime1 != 0, var15_int, var13Lifetime1Lifetime1, var3, var2_intLifetime1, param0 ^ 19, kj.field_D, var16_intLifetime1);
                     ie.field_f[var13Lifetime1Lifetime1][0].g(var2_intLifetime1, var3);
-                    var3 = 10 + (129 + ui.field_i[0].field_v);
-                    var2_intLifetime1 = -16 + (604 - ui.field_i[0].field_q - 90);
+                    var3 = 10 + (129 + ui.field_i[0].fullHeight);
+                    var2_intLifetime1 = -16 + (604 - ui.field_i[0].fullWidth - 90);
                     this.a(var2_intLifetime1, 2, var14Lifetime1Lifetime1, (byte) 13, 50, 1, 0, var3);
                     df.field_O = true;
                     decompiledFrameRemainder0 = (var21 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (ma.field_j == 5) {
-                      var2_intLifetime1 = ui.field_i[0].field_q + 47;
+                      var2_intLifetime1 = ui.field_i[0].fullWidth + 47;
                       var3 += 8;
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
                       var12Lifetime1Lifetime1 = var3;
-                      var13Lifetime1Lifetime1 = -(2 * ui.field_i[0].field_q) + 557;
+                      var13Lifetime1Lifetime1 = -(2 * ui.field_i[0].fullWidth) + 557;
                       SoftwareRasterizer.a(pf.field_g);
                       SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 240 + var11Lifetime2Lifetime1, 64 + var12Lifetime1Lifetime1);
                       of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 107, false, 0);
@@ -5676,18 +5676,18 @@ final class GameScreen {
                       var11Lifetime2Lifetime1 = -50 - nh.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
                       var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(IntrusiveDeque.field_d[1], 220, 0);
                       SecondaryNodeDequeIterator.field_e.a(IntrusiveDeque.field_d[1], var11Lifetime2Lifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
-                      var12Lifetime1Lifetime1 = -16 + (-ob.field_b[3] + 391 - ui.field_i[0].field_v);
+                      var12Lifetime1Lifetime1 = -16 + (-ob.field_b[3] + 391 - ui.field_i[0].fullHeight);
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
                       SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
                       var12Lifetime1Lifetime1 = 16 + ob.field_b[3] + (-480 + var12Lifetime1Lifetime1);
                       of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 80, false, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + 16;
                       SoftwareRasterizer.b(pf.field_g);
-                      var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + (-(var8 * 3) + (-16 - ui.field_i[0].field_v)) + (391 - ob.field_b[3]);
+                      var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + (-(var8 * 3) + (-16 - ui.field_i[0].fullHeight)) + (391 - ob.field_b[3]);
                       var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(IntrusiveDeque.field_d[2], 240, 0);
                       SecondaryNodeDequeIterator.field_e.a(IntrusiveDeque.field_d[2], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1 - SecondaryNodeDequeIterator.field_e.field_x, 240, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + oj.field_e[0];
-                      var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x - var8 + (391 + (-ui.field_i[0].field_v - ob.field_b[3] - 16));
+                      var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x - var8 + (391 + (-ui.field_i[0].fullHeight - ob.field_b[3] - 16));
                       SecondaryNodeDequeIterator.field_e.c(IntrusiveDeque.field_d[3], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
                       df.field_O = true;
                       decompiledFrameRemainder0 = (var21 != 0);
@@ -5695,25 +5695,25 @@ final class GameScreen {
                     if (decompiledFrameRemainder0) {
                       if (ma.field_j == 6) {
                         var11Lifetime2Lifetime2 = var3;
-                        var12Lifetime1Lifetime1 = ui.field_i[0].field_q + 63;
-                        var2_intLifetime1 = (-dk.field_c[0][0].field_q + var4 / 4) / 2 + var12Lifetime1Lifetime1;
-                        var3 = 16 + (var3 + (-dk.field_c[0][0].field_v + dk.field_c[3][0].field_v) / 2);
+                        var12Lifetime1Lifetime1 = ui.field_i[0].fullWidth + 63;
+                        var2_intLifetime1 = (-dk.field_c[0][0].fullWidth + var4 / 4) / 2 + var12Lifetime1Lifetime1;
+                        var3 = 16 + (var3 + (-dk.field_c[0][0].fullHeight + dk.field_c[3][0].fullHeight) / 2);
                         dk.field_c[0][0].g(var2_intLifetime1, var3);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1;
-                        var7Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + dk.field_c[3][0].field_v + (var3 + (4 + var8));
+                        var7Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + dk.field_c[3][0].fullHeight + (var3 + (4 + var8));
                         ProxySocketConnector.field_p.a(k.field_a[0], var6Lifetime1, var7Lifetime1, 8015912, -1);
-                        var3 = 16 + var11Lifetime2Lifetime2 + (-dk.field_c[1][0].field_v + dk.field_c[3][0].field_v) / 2;
-                        var2_intLifetime1 = (var4 / 4 - dk.field_c[1][0].field_q) / 2 + (var4 / 4 + var12Lifetime1Lifetime1);
+                        var3 = 16 + var11Lifetime2Lifetime2 + (-dk.field_c[1][0].fullHeight + dk.field_c[3][0].fullHeight) / 2;
+                        var2_intLifetime1 = (var4 / 4 - dk.field_c[1][0].fullWidth) / 2 + (var4 / 4 + var12Lifetime1Lifetime1);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1 + var4 / 4;
                         dk.field_c[1][0].g(var2_intLifetime1, var3);
                         ProxySocketConnector.field_p.a(k.field_a[1], var6Lifetime1, var7Lifetime1, 8015912, -1);
-                        var3 = 16 + (var11Lifetime2Lifetime2 + (dk.field_c[3][0].field_v - dk.field_c[2][0].field_v) / 2);
-                        var2_intLifetime1 = (-dk.field_c[2][0].field_q + var4 / 4) / 2 + (var12Lifetime1Lifetime1 + var4 / 2);
+                        var3 = 16 + (var11Lifetime2Lifetime2 + (dk.field_c[3][0].fullHeight - dk.field_c[2][0].fullHeight) / 2);
+                        var2_intLifetime1 = (-dk.field_c[2][0].fullWidth + var4 / 4) / 2 + (var12Lifetime1Lifetime1 + var4 / 2);
                         var6Lifetime1 = var4 / 8 + (var12Lifetime1Lifetime1 + var4 / 2);
                         dk.field_c[2][0].g(var2_intLifetime1, var3);
                         ProxySocketConnector.field_p.a(k.field_a[2], var6Lifetime1, var7Lifetime1, 8015912, -1);
-                        var2_intLifetime1 = 3 * var4 / 4 + (var12Lifetime1Lifetime1 + (var4 / 4 - dk.field_c[3][0].field_q) / 2);
-                        var3 = var11Lifetime2Lifetime2 + (16 + (dk.field_c[3][0].field_v - dk.field_c[3][0].field_v) / 2);
+                        var2_intLifetime1 = 3 * var4 / 4 + (var12Lifetime1Lifetime1 + (var4 / 4 - dk.field_c[3][0].fullWidth) / 2);
+                        var3 = var11Lifetime2Lifetime2 + (16 + (dk.field_c[3][0].fullHeight - dk.field_c[3][0].fullHeight) / 2);
                         var6Lifetime1 = var12Lifetime1Lifetime1 + var4 * 3 / 4 + var4 / 8;
                         dk.field_c[3][0].g(var2_intLifetime1, var3);
                         ProxySocketConnector.field_p.a(k.field_a[3], var6Lifetime1, var7Lifetime1, 8015912, -1);
@@ -5721,14 +5721,14 @@ final class GameScreen {
                       }
                       if (decompiledFrameRemainder0) {
                         if (ma.field_j == 7) {
-                          var2_intLifetime1 = (-ec.field_a[0].field_q + var4 / 2) / 2 + (-(var4 / 2) + var2_intLifetime1 - ec.field_a[0].field_q / 2);
+                          var2_intLifetime1 = (-ec.field_a[0].fullWidth + var4 / 2) / 2 + (-(var4 / 2) + var2_intLifetime1 - ec.field_a[0].fullWidth / 2);
                           var3 = 16 + var3;
                           ec.field_a[0].g(var2_intLifetime1, var3);
-                          var6Lifetime1Lifetime1 = 8 + (var2_intLifetime1 + ec.field_a[0].field_q);
-                          var7Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + ((ec.field_a[0].field_x - var8) / 2 + var3);
+                          var6Lifetime1Lifetime1 = 8 + (var2_intLifetime1 + ec.field_a[0].fullWidth);
+                          var7Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + ((ec.field_a[0].storedHeight - var8) / 2 + var3);
                           ProxySocketConnector.field_p.c(kl.field_d[0], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 8015912, -1);
-                          var3 = -ec.field_a[1].field_v + (-ec.field_a[1].field_x + ec.field_a[1].field_v) / 2 - 2 + (var3 + ec.field_a[0].field_v / 2);
-                          var2_intLifetime1 = 32 + var4 / 2 + (16 + (ui.field_i[0].field_q + 47) - (-ec.field_a[1].field_u + ec.field_a[1].field_q) / 2);
+                          var3 = -ec.field_a[1].fullHeight + (-ec.field_a[1].storedHeight + ec.field_a[1].fullHeight) / 2 - 2 + (var3 + ec.field_a[0].fullHeight / 2);
+                          var2_intLifetime1 = 32 + var4 / 2 + (16 + (ui.field_i[0].fullWidth + 47) - (-ec.field_a[1].storedWidth + ec.field_a[1].fullWidth) / 2);
                           if (kf.field_b == 3) {
                             var2_intLifetime1 += 15;
                           }
@@ -5744,7 +5744,7 @@ final class GameScreen {
                               ec.field_a[1].g(var2_intLifetime1 + var12Lifetime1Lifetime1 * 30, var3);
                               var12Lifetime1Lifetime1++;
                             }
-                            var3 = var3 + (ec.field_a[1].field_x + 4);
+                            var3 = var3 + (ec.field_a[1].storedHeight + 4);
                             var11Lifetime2Lifetime3++;
                           }
                           if (decompiledFrameCompleted0) {
@@ -5754,36 +5754,36 @@ final class GameScreen {
                         if ((decompiledFrameRemainder0) &&
                           (decompiledFrameCompleted0)) {
                           if (ma.field_j == 8) {
-                            var2_intLifetime1 = 16 + (47 + ui.field_i[0].field_q);
+                            var2_intLifetime1 = 16 + (47 + ui.field_i[0].fullWidth);
                             var3 = 16 + var3;
-                            var6Lifetime1Lifetime2 = (var4 / 4 - ec.field_a[6].field_q) / 2 + (var4 / 4 + var2_intLifetime1 - 16);
+                            var6Lifetime1Lifetime2 = (var4 / 4 - ec.field_a[6].fullWidth) / 2 + (var4 / 4 + var2_intLifetime1 - 16);
                             ec.field_a[6].g(var6Lifetime1Lifetime2, var3);
-                            var7Lifetime1Lifetime2 = SecondaryNodeDequeIterator.field_e.field_x + 8 + (ec.field_a[6].field_v + var3);
-                            var6Lifetime1Lifetime2 = ec.field_a[6].field_v / 2 + var6Lifetime1Lifetime2;
+                            var7Lifetime1Lifetime2 = SecondaryNodeDequeIterator.field_e.field_x + 8 + (ec.field_a[6].fullHeight + var3);
+                            var6Lifetime1Lifetime2 = ec.field_a[6].fullHeight / 2 + var6Lifetime1Lifetime2;
                             ProxySocketConnector.field_p.a(kl.field_d[1], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
-                            var6Lifetime1Lifetime2 = (-ec.field_a[7 + ok.field_b].field_q + var4 / 4) / 2 + var4 / 2 + (var2_intLifetime1 + 16);
+                            var6Lifetime1Lifetime2 = (-ec.field_a[7 + ok.field_b].fullWidth + var4 / 4) / 2 + var4 / 2 + (var2_intLifetime1 + 16);
                             ec.field_a[7 + ok.field_b].g(var6Lifetime1Lifetime2, var3);
-                            var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[7 + ok.field_b].field_v / 2;
+                            var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[7 + ok.field_b].fullHeight / 2;
                             ProxySocketConnector.field_p.a(kl.field_d[2], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             decompiledFrameRemainder0 = (var21 != 0);
                           }
                           if ((decompiledFrameRemainder0) &&
                             (decompiledFrameRemainder0 = (9 == ma.field_j))) {
-                            var2_intLifetime1 = ui.field_i[0].field_q + 63;
-                            var6Lifetime1Lifetime2 = (-ec.field_a[5].field_q + var4) / 2 + var2_intLifetime1;
+                            var2_intLifetime1 = ui.field_i[0].fullWidth + 63;
+                            var6Lifetime1Lifetime2 = (-ec.field_a[5].fullWidth + var4) / 2 + var2_intLifetime1;
                             var3 = var3 + 16;
                             ec.field_a[5].g(var6Lifetime1Lifetime2, var3);
-                            var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[5].field_q / 2;
-                            var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].field_v + SecondaryNodeDequeIterator.field_e.field_x);
+                            var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[5].fullWidth / 2;
+                            var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].fullHeight + SecondaryNodeDequeIterator.field_e.field_x);
                             ProxySocketConnector.field_p.a(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             var11Lifetime2Lifetime4 = ef.field_k % 240;
                             if (119 <= var11Lifetime2Lifetime4) {
                               var6Lifetime1Lifetime2 = var4 / 2 + var2_intLifetime1;
-                              var7Lifetime1Lifetime2 = var3 + ph.field_m[1].field_v;
+                              var7Lifetime1Lifetime2 = var3 + ph.field_m[1].fullHeight;
                               if (cd.field_c != 30) {
                                 hf.$cfr$intArgs$a$759f676cf37b(-73, true, cd.field_c, ci.field_q, gf.field_v, false);
                               }
-                              ic.$cfr$intArgs$a$ceabca3815d0(ec.field_a[5].field_v / 2 + var7Lifetime1Lifetime2, cd.field_c, var6Lifetime1Lifetime2, var4, gf.field_v, gf.field_v, 127, true);
+                              ic.$cfr$intArgs$a$ceabca3815d0(ec.field_a[5].fullHeight / 2 + var7Lifetime1Lifetime2, cd.field_c, var6Lifetime1Lifetime2, var4, gf.field_v, gf.field_v, 127, true);
                             }
                             if (119 > var11Lifetime2Lifetime4 ||
                               var21 != 0) {
@@ -5808,8 +5808,8 @@ final class GameScreen {
                   var19Lifetime1 = 0;
                   while (true) {
                     if (p.field_c.length > var19Lifetime1) {
-                      var3 = 16 + (var19Lifetime1 * 38 + ui.field_i[0].field_v + 129 + (SecondaryNodeDequeIterator.field_e.field_x + 40));
-                      var2_intLifetime1 = 47 - (-ui.field_i[0].field_q - 16);
+                      var3 = 16 + (var19Lifetime1 * 38 + ui.field_i[0].fullHeight + 129 + (SecondaryNodeDequeIterator.field_e.field_x + 40));
+                      var2_intLifetime1 = 47 - (-ui.field_i[0].fullWidth - 16);
                       stackIn_155_0 = ~var14Lifetime1Lifetime2;
                       stackIn_155_1 = ~var19Lifetime1;
                       if (var21 == 0) {
@@ -5833,8 +5833,8 @@ final class GameScreen {
                           var17Lifetime2 = 16711680;
                           var16 = p.field_c[var19Lifetime1][0] + di.field_B;
                         }
-                        var3 = 14 + var19Lifetime1 * 38 + (40 + SecondaryNodeDequeIterator.field_e.field_x) + 129 + ui.field_i[0].field_v;
-                        var2_intLifetime1 = var9 + (ui.field_i[0].field_q + 47);
+                        var3 = 14 + var19Lifetime1 * 38 + (40 + SecondaryNodeDequeIterator.field_e.field_x) + 129 + ui.field_i[0].fullHeight;
+                        var2_intLifetime1 = var9 + (ui.field_i[0].fullWidth + 47);
                         var18Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(var16, var9, 0);
                         SecondaryNodeDequeIterator.field_e.a(var16, var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var18Lifetime1Lifetime1, var17Lifetime2, -1, 0, 0, 0);
                         if (~var14Lifetime1Lifetime2 == ~var19Lifetime1 ||
@@ -5847,8 +5847,8 @@ final class GameScreen {
                     } else {
                       var19Lifetime1 = vj.field_c;
                       vj.field_c = var13Lifetime1Lifetime2;
-                      var2_intLifetime1 = (-64 + var9 >> 1) + 604 - (ui.field_i[0].field_q + var9);
-                      stackIn_155_0 = 40 + ui.field_i[0].field_v + 129;
+                      var2_intLifetime1 = (-64 + var9 >> 1) + 604 - (ui.field_i[0].fullWidth + var9);
+                      stackIn_155_0 = 40 + ui.field_i[0].fullHeight + 129;
                       stackIn_155_1 = -SecondaryNodeDequeIterator.field_e.field_x;
                     }
                     break;
@@ -5868,8 +5868,8 @@ final class GameScreen {
                     var20 = 6;
                   }
                   this.a(200, var3, 0, var20, var2_intLifetime1, param0 + 22148, 50, var13Lifetime1Lifetime2);
-                  var2_intLifetime1 = -16 + (-ui.field_i[0].field_q + 514);
-                  var3 = 10 + (ui.field_i[0].field_v + 129);
+                  var2_intLifetime1 = -16 + (-ui.field_i[0].fullWidth + 514);
+                  var3 = 10 + (ui.field_i[0].fullHeight + 129);
                   this.a(var2_intLifetime1, 2, var13Lifetime1Lifetime2, (byte) 13, 50, 1, 0, var3);
                   vj.field_c = var19Lifetime1;
                 }
@@ -5877,8 +5877,8 @@ final class GameScreen {
             }
           }
           if (decompiledFrameCompleted0) {
-            var3 = -8 - ui.field_i[0].field_v + (391 + (-var8 + SecondaryNodeDequeIterator.field_e.field_x));
-            stackIn_169_0 = 588 - ui.field_i[0].field_q;
+            var3 = -8 - ui.field_i[0].fullHeight + (391 + (-var8 + SecondaryNodeDequeIterator.field_e.field_x));
+            stackIn_169_0 = 588 - ui.field_i[0].fullWidth;
           }
           var2_intLifetime2 = stackIn_169_0;
           SecondaryNodeDequeIterator.field_e.b(gj.a(param0, (byte) -123, 1 + ma.field_j), var2_intLifetime2, var3, 0, -1);
@@ -6006,12 +6006,12 @@ final class GameScreen {
           var19 = tf.field_x;
           var20 = var19.field_x;
           var20Lifetime1 = 18;
-          var21 = -var20Lifetime1 - ba.field_b[6].field_x + (-ba.field_b[0].field_x + var13) - var19.field_K;
+          var21 = -var20Lifetime1 - ba.field_b[6].storedHeight + (-ba.field_b[0].storedHeight + var13) - var19.field_K;
           if (12 == var10 ||
             var10 == 13) {
             var22 = UiComponent.field_s + 137;
             var23 = var6 + (-var22 + var12 >> 1);
-            var19.c(var11, var23, (var21 >> 1) + var20Lifetime1 + (var5_int + ba.field_b[0].field_x), var17, -1);
+            var19.c(var11, var23, (var21 >> 1) + var20Lifetime1 + (var5_int + ba.field_b[0].storedHeight), var17, -1);
             var23 = var23 + (8 + UiComponent.field_s);
             SoftwareRasterizer.b(var23, var5_int + (var13 / 2 - 1), 129, 2, var17);
             if (var10 != 12) {
@@ -6028,12 +6028,12 @@ final class GameScreen {
               var25 != 0) {
               var24 = var24 / 256;
             }
-            dh.field_Y.g(-1 + var23 + var24, -2 + (dh.field_Y.field_v >> 1) + var5_int);
+            dh.field_Y.g(-1 + var23 + var24, -2 + (dh.field_Y.fullHeight >> 1) + var5_int);
             if (var25 == 0) {
               return;
             }
           }
-          var19.a(var11, var6 + (var12 >> 1), (var21 >> 1) + (var20Lifetime1 + var5_int + ba.field_b[0].field_x), var17, -1);
+          var19.a(var11, var6 + (var12 >> 1), (var21 >> 1) + (var20Lifetime1 + var5_int + ba.field_b[0].storedHeight), var17, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6146,8 +6146,8 @@ final class GameScreen {
           var3 = 2 + SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var4 = 13;
           if (GameClientBase.p(-91)) {
-            var5 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
-            GzipDecoder.a(ui.field_i, var3 * var4 + (ui.field_i[0].field_v + ui.field_i[6].field_v), var5 * 2 + 315, (byte) 61, -ui.field_i[0].field_v + 123, -var5 + 162);
+            var5 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].fullWidth;
+            GzipDecoder.a(ui.field_i, var3 * var4 + (ui.field_i[0].fullHeight + ui.field_i[6].fullHeight), var5 * 2 + 315, (byte) 61, -ui.field_i[0].fullHeight + 123, -var5 + 162);
             var2 = MouseInputHandler.field_c;
             decompiledFrameRemainder1 = (var17 != 0);
           }
@@ -6158,8 +6158,8 @@ final class GameScreen {
             var5_ref_ae = rc.field_r;
             if (!var5_ref_ae.field_n) {
               var2 = lh.field_y;
-              var6 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
-              GzipDecoder.a(ui.field_i, ui.field_i[6].field_v + ui.field_i[0].field_v + var4 * var3, 2 * var6 + 315, (byte) -110, 123 - ui.field_i[0].field_v, -var6 + 162);
+              var6 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].fullWidth;
+              GzipDecoder.a(ui.field_i, ui.field_i[6].fullHeight + ui.field_i[0].fullHeight + var4 * var3, 2 * var6 + 315, (byte) -110, 123 - ui.field_i[0].fullHeight, -var6 + 162);
               decompiledFrameRemainder1 = (var17 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -6198,8 +6198,8 @@ final class GameScreen {
                     var2 = MouseInputHandler.field_c;
                     var9 = bg.a(var8, kf.field_a, 21179, var5_ref_ae);
                     var10 = SecondaryNodeDequeIterator.field_e.a("10. ") >> 1;
-                    var11 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
-                    GzipDecoder.a(ui.field_i, ui.field_i[6].field_v + ui.field_i[0].field_v + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - ui.field_i[0].field_v, -var11 + 162);
+                    var11 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].fullWidth;
+                    GzipDecoder.a(ui.field_i, ui.field_i[6].fullHeight + ui.field_i[0].fullHeight + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - ui.field_i[0].fullHeight, -var11 + 162);
                     var12 = SecondaryNodeDequeIterator.field_e.field_x + 123;
                     var13 = 0;
                     while (var13 < 10) {
@@ -6494,9 +6494,9 @@ final class GameScreen {
               var15 != 0) {
               ResourceArchive.field_n[param7].a(jj.field_a[param7], 32, 128, (int[]) null, 0, -20861, 64, 0);
             }
-            SectorCacheStore.field_f.a(-74);
+            SectorCacheStore.field_f.bindAsTarget(-74);
             param1 = -32 + param1;
-            param4 = param4 - (jj.field_a[param7].field_q - ResourceArchive.field_n[param7].field_I >> 1);
+            param4 = param4 - (jj.field_a[param7].fullWidth - ResourceArchive.field_n[param7].field_I >> 1);
             if (0 > ResourceArchive.field_n[param7].field_a) {
               param4 += 16;
             }

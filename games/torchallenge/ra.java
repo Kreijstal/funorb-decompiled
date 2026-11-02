@@ -755,16 +755,16 @@ final class ra {
               var18Lifetime1++;
             }
             var19Lifetime1 = 480 + (-td.field_n - 16);
-            jf.field_qb.field_q = SoftwareRasterizer.field_g;
-            jf.field_qb.field_u = jf.field_qb.field_q;
-            jf.field_qb.field_v = SoftwareRasterizer.field_f;
-            jf.field_qb.field_x = jf.field_qb.field_v;
-            mb.field_c.field_q = SoftwareRasterizer.field_g;
-            jf.field_qb.field_y = SoftwareRasterizer.field_i;
-            mb.field_c.field_v = SoftwareRasterizer.field_f;
-            mb.field_c.field_u = mb.field_c.field_q;
-            mb.field_c.field_y = SoftwareRasterizer.field_i;
-            mb.field_c.field_x = mb.field_c.field_v;
+            jf.field_qb.fullWidth = SoftwareRasterizer.width;
+            jf.field_qb.storedWidth = jf.field_qb.fullWidth;
+            jf.field_qb.fullHeight = SoftwareRasterizer.height;
+            jf.field_qb.storedHeight = jf.field_qb.fullHeight;
+            mb.field_c.fullWidth = SoftwareRasterizer.width;
+            jf.field_qb.pixels = SoftwareRasterizer.pixels;
+            mb.field_c.fullHeight = SoftwareRasterizer.height;
+            mb.field_c.storedWidth = mb.field_c.fullWidth;
+            mb.field_c.pixels = SoftwareRasterizer.pixels;
+            mb.field_c.storedHeight = mb.field_c.fullHeight;
             SoftwareRasterizer.f(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
             for (var20Lifetime1 = 0; var18Lifetime1 > var20Lifetime1; var20Lifetime1++) {
               Sprite.a(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
@@ -943,7 +943,7 @@ final class ra {
         for (var3 = 0; var3 < 3; var3++) {
           for (var4 = 0; var4 <= 1; var4++) {
             for (var5 = 0; 32 > var5; var5++) {
-              cg.field_b[var3][var4][var5] = new Sprite(var5 + 1, ub.field_c[var3][var4].field_v);
+              cg.field_b[var3][var4][var5] = new Sprite(var5 + 1, ub.field_c[var3][var4].fullHeight);
               cg.field_b[var3][var4][var5].d();
               od.c(ub.field_c[var3][var4], 0, 0, var5 + 1, 0);
             }
@@ -954,19 +954,19 @@ final class ra {
         }
         for (var3Lifetime1 = 0; 1 >= var3Lifetime1; var3Lifetime1++) {
           for (var4Lifetime1 = 0; 32 > var4Lifetime1; var4Lifetime1++) {
-            fh.field_a[var3Lifetime1][var4Lifetime1] = new Sprite(var4Lifetime1 + 1, af.field_a[var3Lifetime1].field_v);
+            fh.field_a[var3Lifetime1][var4Lifetime1] = new Sprite(var4Lifetime1 + 1, af.field_a[var3Lifetime1].fullHeight);
             fh.field_a[var3Lifetime1][var4Lifetime1].d();
             od.c(af.field_a[param1 * 2 + var3Lifetime1], 0, 0, 1 + var4Lifetime1, 0);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < 2; var3Lifetime2++) {
           for (var4Lifetime2 = 0; 64 > var4Lifetime2; var4Lifetime2++) {
-            nj.field_e[var3Lifetime2][var4Lifetime2] = new Sprite(var4Lifetime2 + 1, ef.field_a[var3Lifetime2].field_v);
+            nj.field_e[var3Lifetime2][var4Lifetime2] = new Sprite(var4Lifetime2 + 1, ef.field_a[var3Lifetime2].fullHeight);
             nj.field_e[var3Lifetime2][var4Lifetime2].d();
             od.c(ef.field_a[var3Lifetime2], 0, 0, 1 + var4Lifetime2, 0);
           }
         }
-        SectorCacheStore.field_f.a(102);
+        SectorCacheStore.field_f.bindAsTarget(102);
         return;
     }
 
@@ -1007,7 +1007,7 @@ final class ra {
         if (3 < var2) {
           var2 = 3;
         }
-        var3 = ResourceArchive.field_h[0].field_q * ResourceArchive.field_h[0].field_v;
+        var3 = ResourceArchive.field_h[0].fullWidth * ResourceArchive.field_h[0].fullHeight;
         var4 = 32;
         var5 = 16;
         var6 = var4 * 32;
@@ -1105,7 +1105,7 @@ final class ra {
         for (var3_int = 0; var3_int < 3; var3_int++) {
           for (var4 = 0; var4 <= 1; var4++) {
             ub.field_c[var3_int][var4] = ic.field_D[var4 + (param1 * 12 + 2 * var3_int)];
-            SectorCacheStore.field_f.a(-73);
+            SectorCacheStore.field_f.bindAsTarget(-73);
           }
         }
         rj.field_b[0] = af.field_a[param1 * 2];

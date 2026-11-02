@@ -79,7 +79,7 @@ abstract class v extends b {
                   }
                   var13 = (-var12 + 462) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  SoftwareRasterizer.field_i[var10 + var8 * SoftwareRasterizer.field_g + param2] = var13;
+                  SoftwareRasterizer.pixels[var10 + var8 * SoftwareRasterizer.width + param2] = var13;
                 }
                 var10++;
               }
@@ -96,7 +96,7 @@ abstract class v extends b {
                   } else {
                     var15 = (-var14 + 462) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    SoftwareRasterizer.field_i[var11 + (SoftwareRasterizer.field_g * var8 + param2)] = var15;
+                    SoftwareRasterizer.pixels[var11 + (SoftwareRasterizer.width * var8 + param2)] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -193,7 +193,7 @@ abstract class v extends b {
         SoftwareRasterizer.b();
         ef.a(3);
         if (256 > var5) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, -var5 + 256);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
         ie.b((byte) -9);
         if (param2 < 40) {
@@ -339,10 +339,10 @@ abstract class v extends b {
           }
           var5 = SpriteLoader.a(-128, param0, param2, param3);
           var4 = var5;
-          var5[3].field_v = var5[3].field_x;
-          var5[1].field_q = var5[1].field_u;
-          var5[7].field_q = var5[7].field_u;
-          var5[5].field_v = var5[5].field_x;
+          var5[3].fullHeight = var5[3].storedHeight;
+          var5[1].fullWidth = var5[1].storedWidth;
+          var5[7].fullWidth = var5[7].storedWidth;
+          var5[5].fullHeight = var5[5].storedHeight;
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,8 +404,8 @@ abstract class v extends b {
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + var7 * 48 / param4;
             var9 = var8 << 8 | var8 << 16 | var8;
-            SoftwareRasterizer.field_i[param0 + SoftwareRasterizer.field_g * (var7 + param3)] = var9;
-            SoftwareRasterizer.field_i[param2 + SoftwareRasterizer.field_g * (param3 + var7) + param0] = var9;
+            SoftwareRasterizer.pixels[param0 + SoftwareRasterizer.width * (var7 + param3)] = var9;
+            SoftwareRasterizer.pixels[param2 + SoftwareRasterizer.width * (param3 + var7) + param0] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -457,13 +457,13 @@ final class uk extends ic {
         try {
           if (param5 != null &&
             param4 > 0) {
-            var6_int = param5[0].field_q;
-            var7 = param5[2].field_q;
-            var8 = param5[param1].field_q;
+            var6_int = param5[0].fullWidth;
+            var7 = param5[2].fullWidth;
+            var8 = param5[param1].fullWidth;
             param5[0].c(param2, param3, param0);
             param5[2].c(param2 + (param4 - var7), param3, param0);
             SoftwareRasterizer.a(bk.field_s);
-            SoftwareRasterizer.a(var6_int + param2, param3, param4 + param2 - var7, param3 + param5[1].field_v);
+            SoftwareRasterizer.a(var6_int + param2, param3, param4 + param2 - var7, param3 + param5[1].fullHeight);
             var9 = var6_int + param2;
             var10 = -var7 + param2 + param4;
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {

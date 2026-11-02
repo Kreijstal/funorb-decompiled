@@ -47,9 +47,9 @@ final class ue extends IntrusiveNode {
           ii.field_h[2] = rd.field_i[2];
           ii.field_h[0] = rd.field_i[0];
           ii.field_h[7] = rd.field_i[8];
-          var4 = 480 - rd.field_i[0].field_v * 2;
+          var4 = 480 - rd.field_i[0].fullHeight * 2;
           var3 = 3;
-          var2 = rd.field_i[0].field_v;
+          var2 = rd.field_i[0].fullHeight;
           ii.field_h[3] = new Sprite(var3, 480);
           ii.field_h[3].d();
           SoftwareRasterizer.c(var1_int, var2, var3, var4, si.field_H[0], si.field_H[2]);
@@ -61,9 +61,9 @@ final class ue extends IntrusiveNode {
           SoftwareRasterizer.c(var1_int + 1, var2, 1, var4, ih.field_N[1], ih.field_N[3]);
           ii.field_h[4].h();
           var1_intLifetime1 = 0;
-          var2Lifetime1 = rd.field_i[0].field_v;
+          var2Lifetime1 = rd.field_i[0].fullHeight;
           var3Lifetime1 = 3;
-          var4Lifetime1 = -(rd.field_i[0].field_q * 2) + 640;
+          var4Lifetime1 = -(rd.field_i[0].fullWidth * 2) + 640;
           ii.field_h[1] = new Sprite(var3Lifetime1, 640);
           ii.field_h[1].d();
           SoftwareRasterizer.c(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[0], si.field_H[1]);
@@ -71,17 +71,17 @@ final class ue extends IntrusiveNode {
           var5 = new int[640 * var3Lifetime1];
           for (var7 = 0; var7 < 640; var7++) {
             for (var8 = 0; var3Lifetime1 > var8; var8++) {
-              var5[var8 * 640 + var7] = ii.field_h[1].field_y[var8 + var7 * var3Lifetime1];
+              var5[var8 * 640 + var7] = ii.field_h[1].pixels[var8 + var7 * var3Lifetime1];
             }
           }
-          var6 = ii.field_h[1].field_y;
-          ii.field_h[1].field_p = 0;
-          ii.field_h[1].field_v = var3Lifetime1;
-          ii.field_h[1].field_s = 0;
-          ii.field_h[1].field_u = 640;
-          ii.field_h[1].field_y = var5;
-          ii.field_h[1].field_q = 640;
-          ii.field_h[1].field_x = var3Lifetime1;
+          var6 = ii.field_h[1].pixels;
+          ii.field_h[1].offsetY = 0;
+          ii.field_h[1].fullHeight = var3Lifetime1;
+          ii.field_h[1].offsetX = 0;
+          ii.field_h[1].storedWidth = 640;
+          ii.field_h[1].pixels = var5;
+          ii.field_h[1].fullWidth = 640;
+          ii.field_h[1].storedHeight = var3Lifetime1;
           ii.field_h[1].h();
           ii.field_h[6] = new Sprite(var3Lifetime1, 640);
           ii.field_h[6].d();
@@ -89,21 +89,21 @@ final class ue extends IntrusiveNode {
           SoftwareRasterizer.c(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[2], ih.field_N[3]);
           for (var7Lifetime1 = 0; var7Lifetime1 < 640; var7Lifetime1++) {
             for (var8Lifetime1 = 0; var8Lifetime1 < var3Lifetime1; var8Lifetime1++) {
-              var6[var7Lifetime1 + var8Lifetime1 * 640] = ii.field_h[6].field_y[var8Lifetime1 + var7Lifetime1 * var3Lifetime1];
+              var6[var7Lifetime1 + var8Lifetime1 * 640] = ii.field_h[6].pixels[var8Lifetime1 + var7Lifetime1 * var3Lifetime1];
             }
           }
           var8Lifetime2 = 99 % ((-63 - param0) / 49);
-          ii.field_h[6].field_u = 640;
-          ii.field_h[6].field_y = var6;
-          ii.field_h[6].field_v = var3Lifetime1;
-          ii.field_h[6].field_p = 0;
-          ii.field_h[6].field_q = 640;
-          ii.field_h[6].field_x = var3Lifetime1;
-          ii.field_h[6].field_s = 0;
+          ii.field_h[6].storedWidth = 640;
+          ii.field_h[6].pixels = var6;
+          ii.field_h[6].fullHeight = var3Lifetime1;
+          ii.field_h[6].offsetY = 0;
+          ii.field_h[6].fullWidth = 640;
+          ii.field_h[6].storedHeight = var3Lifetime1;
+          ii.field_h[6].offsetX = 0;
           var5Lifetime1 = null;
           ii.field_h[6].h();
           var6Lifetime1 = null;
-          SectorCacheStore.field_f.a(112);
+          SectorCacheStore.field_f.bindAsTarget(112);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ue.E(" + param0 + ')');
         }

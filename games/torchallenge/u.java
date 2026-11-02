@@ -178,20 +178,20 @@ final class u {
 
     final static void a(boolean param0, ResourceArchive param1) {
         Sprite var2 = new Sprite(param1.a(-2, "", "final_frame.jpg"), (java.awt.Component) ((Object) bg.field_P));
-        int var3 = var2.field_u;
-        int var4 = var2.field_x;
+        int var3 = var2.storedWidth;
+        int var4 = var2.storedHeight;
         BufferedSocket.b((byte) 66);
         hf.field_a = new Sprite(var3, 3 * var4 / 4);
         hf.field_a.d();
         var2.a(0, 0);
-        td.field_o = new Sprite(var3, var4 - hf.field_a.field_x);
+        td.field_o = new Sprite(var3, var4 - hf.field_a.storedHeight);
         td.field_o.d();
-        var2.a(0, -hf.field_a.field_x);
+        var2.a(0, -hf.field_a.storedHeight);
         if (!param0) {
           return;
         }
         try {
-          td.field_o.field_p = hf.field_a.field_x;
+          td.field_o.offsetY = hf.field_a.storedHeight;
           ie.b((byte) -9);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "u.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

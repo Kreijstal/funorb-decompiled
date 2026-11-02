@@ -319,8 +319,8 @@ abstract class ic extends UiComponent implements gk {
             }
             var14 = param2 - (var11 >> 1);
             var15 = -(var13 >> 1) + param0;
-            var16 = ph.field_m[0].field_q;
-            var17 = ph.field_m[0].field_v;
+            var16 = ph.field_m[0].fullWidth;
+            var17 = ph.field_m[0].fullHeight;
             ch.a(240, var14 - var16 * 2, -(2 * var17) + var15, var13 + 4 * var17, true, var16 * 4 + var11, ph.field_m);
             if (16 >= param1) {
               return;
@@ -661,8 +661,8 @@ abstract class ic extends UiComponent implements gk {
             }
             var14 = param2 - (var11 >> 1);
             var15 = -(var13 >> 1) + param0;
-            var16 = ph.field_m[0].field_q;
-            var17 = ph.field_m[0].field_v;
+            var16 = ph.field_m[0].fullWidth;
+            var17 = ph.field_m[0].fullHeight;
             ch.a(240, var14 - var16 * 2, -(2 * var17) + var15, var13 + 4 * var17, true, var16 * 4 + var11, ph.field_m);
             if (16 >= param1) {
               return;

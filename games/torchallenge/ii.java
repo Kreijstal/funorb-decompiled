@@ -158,14 +158,14 @@ final class ii {
           }
           if (0 < param0 &&
             0 < param1) {
-            var6_int = param4 + param5 * SoftwareRasterizer.field_g;
-            var7 = SoftwareRasterizer.field_g - param0;
+            var6_int = param4 + param5 * SoftwareRasterizer.width;
+            var7 = SoftwareRasterizer.width - param0;
             if (param3 != 4) {
               return;
             }
             for (param5 = -param1; param5 < 0; param5++) {
               for (param4 = -param0; 0 > param4; param4++) {
-                var8 = SoftwareRasterizer.field_i[var6_int];
+                var8 = SoftwareRasterizer.pixels[var6_int];
                 if ((255 & var8 >> 8) > param2 &&
                   (var8 & 65280) >> 8 >= (var8 & 16711680) >> 16) {
                   var9 = ((var8 & 16711680) >> 15) - 60;
@@ -175,7 +175,7 @@ final class ii {
                   var10 = var8 & 65280;
                   var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.field_i[var6_int] = p.a(p.a(var9 << 16, var10), var11);
+                  SoftwareRasterizer.pixels[var6_int] = p.a(p.a(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }
