@@ -18,25 +18,25 @@ final class qg {
         }
         if (param2 <= param7) {
           if (param4 > param7) {
-            oe.a((byte) 74, param6, lf.field_b, param0, param1, param2, param4, param3, param7);
+            oe.a((byte) 74, param6, SoftwareRasterizer.field_b, param0, param1, param2, param4, param3, param7);
             return;
           }
           if (param4 > param2) {
-            oe.a((byte) 113, param1, lf.field_b, param0, param6, param2, param7, param3, param4);
+            oe.a((byte) 113, param1, SoftwareRasterizer.field_b, param0, param6, param2, param7, param3, param4);
             return;
           }
-          oe.a((byte) 91, param1, lf.field_b, param0, param3, param4, param7, param6, param2);
+          oe.a((byte) 91, param1, SoftwareRasterizer.field_b, param0, param3, param4, param7, param6, param2);
           return;
         }
         if (param2 < param4) {
-          oe.a((byte) 113, param6, lf.field_b, param0, param3, param7, param4, param1, param2);
+          oe.a((byte) 113, param6, SoftwareRasterizer.field_b, param0, param3, param7, param4, param1, param2);
           return;
         }
         if (param7 >= param4) {
-          oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
+          oe.a((byte) 106, param3, SoftwareRasterizer.field_b, param0, param1, param4, param2, param6, param7);
           return;
         }
-        oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
+        oe.a((byte) 106, param3, SoftwareRasterizer.field_b, param0, param6, param7, param2, param1, param4);
     }
 
     public static void a(byte param0) {

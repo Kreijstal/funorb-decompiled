@@ -23,14 +23,14 @@ final class fe implements rd {
             var8 = param0[param3].field_r;
             param0[0].a(param4, param5, param1);
             param0[2].a(-var7 + (param4 + param2), param5, param1);
-            lf.b(uh.field_C);
-            lf.f(param4 + var6_int, param5, -var7 + (param2 + param4), param0[1].field_x + param5);
+            SoftwareRasterizer.b(uh.field_C);
+            SoftwareRasterizer.f(param4 + var6_int, param5, -var7 + (param2 + param4), param0[1].field_x + param5);
             var9 = var6_int + param4;
             var10 = -var7 + param2 + param4;
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].a(param4, param5, param1);
             }
-            lf.a(uh.field_C);
+            SoftwareRasterizer.a(uh.field_C);
             return;
           }
           return;
@@ -67,7 +67,7 @@ final class fe implements rd {
             var8.d(var6_int - (-1 - (param3.field_j - var8.field_r >> 1)), (param3.field_v - var8.field_x >> 1) + (var7 + 1), 256);
           }
           if (param3.a(18337)) {
-            pk.a(param3.field_v - 4, var7 + 2, 2 + var6_int, 1, param3.field_j - 4);
+            TriangleMesh.a(param3.field_v - 4, var7 + 2, 2 + var6_int, 1, param3.field_j - 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

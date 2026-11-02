@@ -8,7 +8,7 @@ final class cg extends kd {
     static int field_j;
     int field_k;
 
-    final static void a(cd param0, db param1, int param2, int param3, byte param4, int param5, int param6, char param7) {
+    final static void a(BinaryBitmapFont param0, db param1, int param2, int param3, byte param4, int param5, int param6, char param7) {
         try {
           param1.d(param6, param3);
           int var8_int = 118 % ((param4 - 3) / 50);
@@ -32,7 +32,7 @@ final class cg extends kd {
         int var1 = 84 % ((16 - param0) / 36);
     }
 
-    final static int a(String[] args, le param1, byte param2, String param3, int param4) {
+    final static int a(String[] args, BitmapFont param1, byte param2, String param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

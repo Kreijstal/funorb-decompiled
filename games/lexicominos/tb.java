@@ -62,9 +62,9 @@ abstract class tb {
 
     abstract void a(byte param0);
 
-    final static pk a(th param0, int param1) {
-        pk stackIn_5_0 = null;
-        pk stackIn_29_0 = null;
+    final static TriangleMesh a(th param0, int param1) {
+        TriangleMesh stackIn_5_0 = null;
+        TriangleMesh stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -73,7 +73,7 @@ abstract class tb {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        pk var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -87,11 +87,11 @@ abstract class tb {
           }
           var3 = hl.a(true, param0) ? 1 : 0;
           if (param1 > -18) {
-            stackIn_5_0 = (pk) null;
+            stackIn_5_0 = (TriangleMesh) null;
             return stackIn_5_0;
           }
           var4 = hl.a(true, param0) ? 1 : 0;
-          var5 = new pk();
+          var5 = new TriangleMesh();
           var5.field_w = (short)param0.g(16, 26527);
           var5.field_h = hi.a(param0, (byte) -94, 16, var5.field_h);
           var5.field_I = hi.a(param0, (byte) -70, 16, var5.field_I);

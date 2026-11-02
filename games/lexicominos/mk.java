@@ -7,7 +7,7 @@ final class mk extends kd {
     static volatile long field_j;
     static int field_m;
     ij field_k;
-    static cd field_h;
+    static BinaryBitmapFont field_h;
 
     final static void a(int param0) {
         if (!qg.field_d) {

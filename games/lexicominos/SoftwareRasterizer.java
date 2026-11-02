@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lf {
+final class SoftwareRasterizer {
     static int field_c;
     static int[] field_b;
     static int field_h;
@@ -232,10 +232,10 @@ final class lf {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
-        lf.a(param0, param1, param2, param4);
-        lf.a(param0, param1 + param3 - 1, param2, param4);
-        lf.e(param0, param1, param3, param4);
-        lf.e(param0 + param2 - 1, param1, param3, param4);
+        SoftwareRasterizer.a(param0, param1, param2, param4);
+        SoftwareRasterizer.a(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.e(param0, param1, param3, param4);
+        SoftwareRasterizer.e(param0 + param2 - 1, param1, param3, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -306,8 +306,8 @@ final class lf {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        lf.a(field_b, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
-        lf.a(field_b, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
+        SoftwareRasterizer.a(field_b, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
+        SoftwareRasterizer.a(field_b, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -369,7 +369,7 @@ final class lf {
         int var22Lifetime2;
         int var22Lifetime3;
         if (param4 == 0) {
-          lf.c(param0, param1, param2, param3, param5);
+          SoftwareRasterizer.c(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -444,10 +444,10 @@ final class lf {
                   field_b[var17 + var19] = param5;
                 }
               }
-              lf.e(param0, param1 + var18, param3 - var18 - var18, param5);
-              lf.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-              lf.a(param0 + var18, param1, param2 - var18 - var18, param5);
-              lf.a(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+              SoftwareRasterizer.e(param0, param1 + var18, param3 - var18 - var18, param5);
+              SoftwareRasterizer.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+              SoftwareRasterizer.a(param0 + var18, param1, param2 - var18 - var18, param5);
+              SoftwareRasterizer.a(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
               while (true) {
                 incrementValue$1 = var19;
                 var19++;
@@ -569,8 +569,8 @@ final class lf {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          lf.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          lf.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -591,7 +591,7 @@ final class lf {
         field_c = param1;
         field_e = param2;
         field_h = param3;
-        lf.d();
+        SoftwareRasterizer.d();
     }
 
     private final static void e(int param0, int param1, int param2, int param3, int param4) {
@@ -644,17 +644,17 @@ final class lf {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            lf.a(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.a(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            lf.a(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.a(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            lf.e(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.e(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            lf.e(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.e(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -715,7 +715,7 @@ final class lf {
         field_b = param0;
         field_f = param1;
         field_a = param2;
-        lf.g(0, 0, param1, param2);
+        SoftwareRasterizer.g(0, 0, param1, param2);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -761,7 +761,7 @@ final class lf {
         field_c = 0;
         field_e = field_f;
         field_h = field_a;
-        lf.d();
+        SoftwareRasterizer.d();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -836,7 +836,7 @@ final class lf {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          lf.a(param0, param1, param3);
+          SoftwareRasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -954,7 +954,7 @@ final class lf {
         if (field_h > param3) {
           field_h = param3;
         }
-        lf.d();
+        SoftwareRasterizer.d();
     }
 
     final static void d(int param0, int param1, int param2, int param3) {
@@ -974,7 +974,7 @@ final class lf {
         }
         int var4 = field_f - param2;
         int var5 = param0 + param1 * field_f;
-        lf.a(var5, field_b, 0, param2, -param3, var4);
+        SoftwareRasterizer.a(var5, field_b, 0, param2, -param3, var4);
     }
 
     private final static void e(int param0, int param1, int param2, int param3) {
@@ -1045,7 +1045,7 @@ final class lf {
         field_c = param0[1];
         field_e = param0[2];
         field_h = param0[3];
-        lf.d();
+        SoftwareRasterizer.d();
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

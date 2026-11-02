@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf {
+final class VorbisFloor {
     private static int[] field_g;
     private int[] field_c;
     private int[] field_j;
@@ -58,8 +58,8 @@ final class mf {
         field_k[1] = true;
         var5[0] = true;
         for (var6 = 2; var6 < var3; var6++) {
-          var7 = mf.b(field_i, var6);
-          var8_int = mf.a(field_i, var6);
+          var7 = VorbisFloor.b(field_i, var6);
+          var8_int = VorbisFloor.a(field_i, var6);
           var9 = this.a(field_i[var7], field_g[var7], field_i[var8_int], field_g[var8_int], field_i[var6]);
           var10 = field_g[var6];
           var11 = var4 - var9;
@@ -159,7 +159,7 @@ final class mf {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (sd.a() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.a() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -168,8 +168,8 @@ final class mf {
         System.arraycopy(this.field_a, 0, field_i, 0, var2);
         var3 = field_b[this.field_d - 1];
         var4 = kb.a(var3 - 1, 16);
-        field_g[0] = sd.a(var4);
-        field_g[1] = sd.a(var4);
+        field_g[0] = VorbisSample.a(var4);
+        field_g[1] = VorbisSample.a(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_e.length; var6++) {
           var7 = this.field_e[var6];
@@ -178,7 +178,7 @@ final class mf {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = sd.field_p[this.field_c[var7]].a();
+            var11 = VorbisSample.field_p[this.field_c[var7]].a();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_l[var7][var11 & var10];
@@ -190,7 +190,7 @@ final class mf {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = sd.field_p[var13].a();
+              stackIn_14_2 = VorbisSample.field_p[var13].a();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }
@@ -286,7 +286,7 @@ final class mf {
         }
     }
 
-    mf() {
+    VorbisFloor() {
         int dupTemp$1 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -307,15 +307,15 @@ final class mf {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = sd.a(16);
+        var1 = VorbisSample.a(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = sd.a(5);
+        var2 = VorbisSample.a(5);
         var3 = 0;
         this.field_e = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = sd.a(4);
+          var5 = VorbisSample.a(4);
           this.field_e[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -326,12 +326,12 @@ final class mf {
         this.field_c = new int[var3];
         this.field_l = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_h[var4Lifetime1] = sd.a(3) + 1;
-          dupTemp$1 = sd.a(2);
+          this.field_h[var4Lifetime1] = VorbisSample.a(3) + 1;
+          dupTemp$1 = VorbisSample.a(2);
           this.field_j[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_c[var4Lifetime1] = sd.a(8);
+            this.field_c[var4Lifetime1] = VorbisSample.a(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -339,11 +339,11 @@ final class mf {
           var6_ref_int__ = var9;
           this.field_l[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = sd.a(8) - 1;
+            var6_ref_int__[var7] = VorbisSample.a(8) - 1;
           }
         }
-        this.field_d = sd.a(2) + 1;
-        var4Lifetime2 = sd.a(4);
+        this.field_d = VorbisSample.a(2) + 1;
+        var4Lifetime2 = VorbisSample.a(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_h[this.field_e[var6]];
@@ -357,7 +357,7 @@ final class mf {
           for (var8 = 0; var8 < this.field_h[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_a[incrementValue$0] = sd.a(var4Lifetime2);
+            this.field_a[incrementValue$0] = VorbisSample.a(var4Lifetime2);
           }
         }
         if (field_i != null &&

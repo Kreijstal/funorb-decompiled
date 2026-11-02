@@ -14,16 +14,16 @@ final class ig {
         field_d = null;
     }
 
-    final static jb[] a(byte[] param0, int param1) {
+    final static IndexedSprite[] a(byte[] param0, int param1) {
         int var6 = 0;
         byte[] dupTemp$0 = null;
-        jb[] stackIn_23_0 = null;
+        IndexedSprite[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        jb[] var3 = null;
+        IndexedSprite[] var3 = null;
         int[] var4 = null;
         int var5 = 0;
         int var7 = 0;
@@ -47,7 +47,7 @@ final class ig {
         try {
           var12 = new wf(param0);
           var15 = var12;
-          var3 = new jb[var15.d(true)];
+          var3 = new IndexedSprite[var15.d(true)];
           var20 = new int[256];
           var16 = var20;
           var4 = var16;
@@ -57,7 +57,7 @@ final class ig {
           var5Lifetime1 = -1;
           for (var6 = 0; var3.length > var6; var6++) {
             boolean decompiledFrameRemainder0 = true;
-            var3[var6] = new jb(640, 480, 256);
+            var3[var6] = new IndexedSprite(640, 480, 256);
             var3[var6].field_j = var4;
             var22 = var3[var6].field_i;
             var18 = var22;

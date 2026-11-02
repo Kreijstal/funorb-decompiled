@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek {
+final class MidiTrackReader {
     private wf field_d;
     private static byte[] field_c;
     int[] field_a;
@@ -202,11 +202,11 @@ final class ek {
         return this.field_h + (long)param0 * (long)this.field_i;
     }
 
-    ek() {
+    MidiTrackReader() {
         this.field_d = new wf((byte[]) null);
     }
 
-    ek(byte[] param0) {
+    MidiTrackReader(byte[] param0) {
         this.field_d = new wf((byte[]) null);
         this.a(param0);
     }

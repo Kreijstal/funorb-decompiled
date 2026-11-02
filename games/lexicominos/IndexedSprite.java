@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends q {
+final class IndexedSprite extends q {
     int[] field_j;
     byte[] field_i;
 
@@ -37,33 +37,33 @@ final class jb extends q {
         int var10Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_f;
-        int var4 = param0 + param1 * lf.field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_f;
         int var5 = 0;
         int var6 = this.field_e;
         int var7 = this.field_b;
-        int var8 = lf.field_f - var7;
+        int var8 = SoftwareRasterizer.field_f - var7;
         int var9 = 0;
-        if (param1 < lf.field_c) {
-          var10 = lf.field_c - param1;
+        if (param1 < SoftwareRasterizer.field_c) {
+          var10 = SoftwareRasterizer.field_c - param1;
           var6 = var6 - var10;
-          param1 = lf.field_c;
+          param1 = SoftwareRasterizer.field_c;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lf.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var6 > lf.field_h) {
-          var6 = var6 - (param1 + var6 - lf.field_h);
+        if (param1 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_h);
         }
-        if (param0 < lf.field_g) {
-          var10Lifetime1 = lf.field_g - param0;
+        if (param0 < SoftwareRasterizer.field_g) {
+          var10Lifetime1 = SoftwareRasterizer.field_g - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lf.field_g;
+          param0 = SoftwareRasterizer.field_g;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lf.field_e) {
-          var10Lifetime2 = param0 + var7 - lf.field_e;
+        if (param0 + var7 > SoftwareRasterizer.field_e) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -72,7 +72,7 @@ final class jb extends q {
           var6 <= 0) {
           return;
         }
-        jb.b(lf.field_b, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.b(SoftwareRasterizer.field_b, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void a(int param0, int param1) {
@@ -81,33 +81,33 @@ final class jb extends q {
         int var9Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_f;
-        int var3 = param0 + param1 * lf.field_f;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_f;
         int var4 = 0;
         int var5 = this.field_e;
         int var6 = this.field_b;
-        int var7 = lf.field_f - var6;
+        int var7 = SoftwareRasterizer.field_f - var6;
         int var8 = 0;
-        if (param1 < lf.field_c) {
-          var9 = lf.field_c - param1;
+        if (param1 < SoftwareRasterizer.field_c) {
+          var9 = SoftwareRasterizer.field_c - param1;
           var5 = var5 - var9;
-          param1 = lf.field_c;
+          param1 = SoftwareRasterizer.field_c;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * lf.field_f;
+          var3 = var3 + var9 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var5 > lf.field_h) {
-          var5 = var5 - (param1 + var5 - lf.field_h);
+        if (param1 + var5 > SoftwareRasterizer.field_h) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_h);
         }
-        if (param0 < lf.field_g) {
-          var9Lifetime1 = lf.field_g - param0;
+        if (param0 < SoftwareRasterizer.field_g) {
+          var9Lifetime1 = SoftwareRasterizer.field_g - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = lf.field_g;
+          param0 = SoftwareRasterizer.field_g;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lf.field_e) {
-          var9Lifetime2 = param0 + var6 - lf.field_e;
+        if (param0 + var6 > SoftwareRasterizer.field_e) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_e;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -116,7 +116,7 @@ final class jb extends q {
           var5 <= 0) {
           return;
         }
-        jb.a(lf.field_b, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(SoftwareRasterizer.field_b, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -181,7 +181,7 @@ final class jb extends q {
         }
     }
 
-    jb(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_h = param0;
         this.field_g = param1;
         this.field_c = param2;
@@ -192,7 +192,7 @@ final class jb extends q {
         this.field_j = param7;
     }
 
-    jb(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_b = param0;
         this.field_h = param0;
         this.field_e = param1;

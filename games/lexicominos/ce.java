@@ -5,7 +5,7 @@ final class ce {
     static int[] field_c;
     static String field_d;
     static String[] field_a;
-    static b field_b;
+    static AudioOutput field_b;
 
     final static void b(int param0) {
         if (!ra.a(-17977)) {
@@ -375,7 +375,7 @@ final class ce {
           stackIn_233_1 = !(param0);
           var2Lifetime50 = e.a(stackIn_232_0, stackIn_233_1);
           if (null != var2Lifetime50) {
-            pk.field_D = ni.a((byte) -55, var2Lifetime50);
+            TriangleMesh.field_D = ni.a((byte) -55, var2Lifetime50);
           }
           var2Lifetime51 = e.a("tutorial_p3", true);
           if (var2Lifetime51 != null) {

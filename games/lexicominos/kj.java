@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends lk {
+final class kj extends PcmStream {
     ng field_n;
     static long[] field_q;
     private hl field_l;
     static String field_p;
     static boolean field_o;
-    hk field_m;
+    PcmStreamMixer field_m;
 
-    final lk b() {
+    final PcmStream b() {
         cb var1;
         int var2;
         var2 = Lexicominos.field_L ? 1 : 0;
@@ -19,7 +19,7 @@ final class kj extends lk {
             return null;
           }
           if (null != var1.field_C) {
-            return (lk) ((Object) var1.field_C);
+            return (PcmStream) ((Object) var1.field_C);
           }
         }
     }
@@ -38,18 +38,18 @@ final class kj extends lk {
         int var5 = 0;
         try {
           if (param2 != 0) {
-            this.field_m = (hk) null;
+            this.field_m = (PcmStreamMixer) null;
           }
           if ((this.field_l.field_q[param1.field_z] & 4) != 0 &&
             0 > param1.field_h) {
-            var4_int = this.field_l.field_O[param1.field_z] / b.field_r;
+            var4_int = this.field_l.field_O[param1.field_z] / AudioOutput.field_r;
             var5 = (-param1.field_E + (1048575 + var4_int)) / var4_int;
             param1.field_E = param0 * var4_int + param1.field_E & 1048575;
             if (var5 <= param0) {
               if (0 == this.field_l.field_u[param1.field_z]) {
-                param1.field_C = cc.a(param1.field_w, param1.field_C.l(), param1.field_C.j(), param1.field_C.k());
+                param1.field_C = PcmSampleStream.a(param1.field_w, param1.field_C.l(), param1.field_C.j(), param1.field_C.k());
               } else {
-                param1.field_C = cc.a(param1.field_w, param1.field_C.l(), 0, param1.field_C.k());
+                param1.field_C = PcmSampleStream.a(param1.field_w, param1.field_C.l(), 0, param1.field_C.k());
                 stackIn_8_0 = this.field_l;
                 stackIn_8_1 = 92;
                 stackIn_8_2 = (cb) (param1);
@@ -94,13 +94,13 @@ final class kj extends lk {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        cc var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = Lexicominos.field_L ? 1 : 0;
         try {
           if ((4 & this.field_l.field_q[param3.field_z]) != 0 &&
             param3.field_h < 0) {
-            var7_int = this.field_l.field_O[param3.field_z] / b.field_r;
+            var7_int = this.field_l.field_O[param3.field_z] / AudioOutput.field_r;
             while (true) {
               var8 = (var7_int + 1048575 - param3.field_E) / var7_int;
               if (var8 > param5) {
@@ -111,16 +111,16 @@ final class kj extends lk {
               param3.field_E = param3.field_E + (var8 * var7_int - 1048576);
               param0 = param0 + var8;
               param5 = param5 - var8;
-              var9 = b.field_r / 100;
+              var9 = AudioOutput.field_r / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
               }
               var11 = param3.field_C;
               if (this.field_l.field_u[param3.field_z] == 0) {
-                param3.field_C = cc.a(param3.field_w, var11.l(), var11.j(), var11.k());
+                param3.field_C = PcmSampleStream.a(param3.field_w, var11.l(), var11.j(), var11.k());
               } else {
-                param3.field_C = cc.a(param3.field_w, var11.l(), 0, var11.k());
+                param3.field_C = PcmSampleStream.a(param3.field_w, var11.l(), 0, var11.k());
                 stackIn_11_0 = this.field_l;
                 stackIn_11_1 = 92;
                 stackIn_11_2 = (cb) (param3);
@@ -284,7 +284,7 @@ final class kj extends lk {
         }
     }
 
-    final lk d() {
+    final PcmStream d() {
         cb var1 = (cb) (this.field_n.a(true));
         if (var1 == null) {
           return null;
@@ -292,12 +292,12 @@ final class kj extends lk {
         if (var1.field_C == null) {
           return this.b();
         }
-        return (lk) ((Object) var1.field_C);
+        return (PcmStream) ((Object) var1.field_C);
     }
 
     kj(hl param0) {
         this.field_n = new ng();
-        this.field_m = new hk();
+        this.field_m = new PcmStreamMixer();
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

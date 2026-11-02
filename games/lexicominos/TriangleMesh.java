@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk {
+final class TriangleMesh {
     short[] field_I;
     short[] field_j;
     int field_v;
@@ -46,7 +46,7 @@ final class pk {
 
     public static void a(int param0) {
         if (param0 != 15569) {
-          pk.a(-101, 70, -94, -69, -87);
+          TriangleMesh.a(-101, 70, -94, -69, -87);
         }
         field_D = null;
         field_n = null;
@@ -105,7 +105,7 @@ final class pk {
         this.field_G = var6;
         if (param0 != -50) {
           var13 = (ab) null;
-          pk.a((ab) null, 77);
+          TriangleMesh.a((ab) null, 77);
         }
         this.field_M = var3;
         this.field_O = var4;
@@ -127,7 +127,7 @@ final class pk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -74) {
-            pk.a(-91);
+            TriangleMesh.a(-91);
           }
           stackIn_3_0 = param0.b(0);
           return stackIn_3_0;
@@ -188,81 +188,81 @@ final class pk {
             field_n = (ab) null;
           }
           var6 = param1 + param0;
-          if (lf.field_g < param2) {
+          if (SoftwareRasterizer.field_g < param2) {
             stackIn_6_0 = param2;
           } else {
-            stackIn_6_0 = lf.field_g;
+            stackIn_6_0 = SoftwareRasterizer.field_g;
           }
           var7 = stackIn_6_0;
-          if (lf.field_c >= param1) {
-            stackIn_9_0 = lf.field_c;
+          if (SoftwareRasterizer.field_c >= param1) {
+            stackIn_9_0 = SoftwareRasterizer.field_c;
           } else {
             stackIn_9_0 = param1;
           }
           var8 = stackIn_9_0;
-          if (var5_int >= lf.field_e) {
-            stackIn_12_0 = lf.field_e;
+          if (var5_int >= SoftwareRasterizer.field_e) {
+            stackIn_12_0 = SoftwareRasterizer.field_e;
           } else {
             stackIn_12_0 = var5_int;
           }
           var9 = stackIn_12_0;
-          if (lf.field_h > var6) {
+          if (SoftwareRasterizer.field_h > var6) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = lf.field_h;
+            stackIn_15_0 = SoftwareRasterizer.field_h;
           }
           var10 = stackIn_15_0;
-          if (param2 >= lf.field_g &&
-            lf.field_e > param2) {
-            var11 = var8 * lf.field_f + param2;
+          if (param2 >= SoftwareRasterizer.field_g &&
+            SoftwareRasterizer.field_e > param2) {
+            var11 = var8 * SoftwareRasterizer.field_f + param2;
             var12 = 1 + var10 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              lf.field_b[var11] = 16777215;
-              var11 = var11 + 2 * lf.field_f;
+              SoftwareRasterizer.field_b[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRasterizer.field_f;
             }
           }
-          if (param1 >= lf.field_c &&
-            lf.field_h > var6) {
-            var11Lifetime1 = var7 + lf.field_f * param1;
+          if (param1 >= SoftwareRasterizer.field_c &&
+            SoftwareRasterizer.field_h > var6) {
+            var11Lifetime1 = var7 + SoftwareRasterizer.field_f * param1;
             var12Lifetime1 = 1 - (-var9 + var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              lf.field_b[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_b[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (lf.field_g <= var5_int &&
-            lf.field_e > var5_int) {
-            var11Lifetime2 = var5_int + lf.field_f * (var8 + (var5_int - param2 & 1));
+          if (SoftwareRasterizer.field_g <= var5_int &&
+            SoftwareRasterizer.field_e > var5_int) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.field_f * (var8 + (var5_int - param2 & 1));
             var12Lifetime2 = -var8 + (var10 + 1) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              lf.field_b[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + lf.field_f * 2;
+              SoftwareRasterizer.field_b[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_f * 2;
             }
           }
-          if (param1 >= lf.field_c) {
-            if (lf.field_h <= var6) {
+          if (param1 >= SoftwareRasterizer.field_c) {
+            if (SoftwareRasterizer.field_h <= var6) {
               return;
             }
-            var11Lifetime3 = var7 + lf.field_f * var6 + (1 & -param1 + var6);
+            var11Lifetime3 = var7 + SoftwareRasterizer.field_f * var6 + (1 & -param1 + var6);
             var12Lifetime3 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              lf.field_b[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_b[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -284,11 +284,11 @@ final class pk {
         }
         this.b(2933);
         if (param2 <= 44) {
-          pk.a(-33);
+          TriangleMesh.a(-33);
         }
     }
 
-    pk() {
+    TriangleMesh() {
         this.field_N = (byte) 0;
         this.field_f = false;
     }

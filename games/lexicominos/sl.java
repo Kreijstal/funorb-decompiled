@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends b {
+final class sl extends AudioOutput {
     private int field_y;
     private byte[] field_v;
     private javax.sound.sampled.AudioFormat field_w;

@@ -13,7 +13,7 @@ final class ff {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, pk param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, TriangleMesh param7) {
         int stackIn_17_0 = 0;
         int[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
@@ -59,7 +59,7 @@ final class ff {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        pk var45 = null;
+        TriangleMesh var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;

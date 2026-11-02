@@ -51,7 +51,7 @@ final class rg {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        pk var4_ref_pk = null;
+        TriangleMesh var4_ref_pk = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -70,7 +70,7 @@ final class rg {
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        pk var17 = null;
+        TriangleMesh var17 = null;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;

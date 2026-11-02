@@ -14,7 +14,7 @@ final class kc {
     private int field_i;
     private long[] field_j;
     static byte[] field_d;
-    static ke[] field_m;
+    static PcmSample[] field_m;
     private long[] field_h;
     private long[] field_e;
 
@@ -559,6 +559,6 @@ final class kc {
 
     static {
         field_l = new int[8192];
-        field_m = new ke[10];
+        field_m = new PcmSample[10];
     }
 }

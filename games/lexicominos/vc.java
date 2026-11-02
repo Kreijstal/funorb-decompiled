@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vc extends nb implements jk {
-    private le field_E;
+    private BitmapFont field_E;
     private int field_J;
     static String field_G;
     private kf[] field_H;
@@ -17,7 +17,7 @@ final class vc extends nb implements jk {
         this.field_E.a(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j - 28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
     }
 
-    vc(uc param0, le param1, String param2) {
+    vc(uc param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (rd) null);
         int var4_int = 0;
         this.field_J = 0;

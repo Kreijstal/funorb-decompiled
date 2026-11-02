@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends lk {
+final class PcmStreamMixer extends PcmStream {
     private ng field_m;
     private ng field_l;
     private int field_o;
@@ -20,8 +20,8 @@ final class hk extends lk {
         }
     }
 
-    final lk b() {
-        return (lk) (this.field_m.f(2));
+    final PcmStream b() {
+        return (PcmStream) (this.field_m.f(2));
     }
 
     private final void a(kd param0, hg param1) {
@@ -43,19 +43,19 @@ final class hk extends lk {
     }
 
     private final void b(int param0) {
-        lk var2 = (lk) (this.field_m.a(true));
+        PcmStream var2 = (PcmStream) (this.field_m.a(true));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (lk) (this.field_m.f(2));
+          var2 = (PcmStream) (this.field_m.f(2));
         }
     }
 
-    final synchronized void a(lk param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_m.a(-68, param0);
     }
 
-    final void a(ke param0, int param1, int param2) {
-        this.a(cc.a(param0, param1, param2));
+    final void a(PcmSample param0, int param1, int param2) {
+        this.a(PcmSampleStream.a(param0, param1, param2));
     }
 
     final synchronized void a(int param0) {
@@ -99,15 +99,15 @@ final class hk extends lk {
         return 0;
     }
 
-    final lk d() {
-        return (lk) (this.field_m.a(true));
+    final PcmStream d() {
+        return (PcmStream) (this.field_m.a(true));
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        lk var4 = (lk) (this.field_m.a(true));
+        PcmStream var4 = (PcmStream) (this.field_m.a(true));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (lk) (this.field_m.f(2));
+          var4 = (PcmStream) (this.field_m.f(2));
         }
     }
 
@@ -160,7 +160,7 @@ final class hk extends lk {
         }
     }
 
-    public hk() {
+    public PcmStreamMixer() {
         this.field_m = new ng();
         this.field_l = new ng();
         this.field_o = 0;

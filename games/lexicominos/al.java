@@ -33,7 +33,7 @@ abstract class al extends nb {
         if (ki.field_c == null) {
           ki.field_c = new db(this.field_j, this.field_v);
           de.a(ki.field_c, param0 + 121);
-          lf.a();
+          SoftwareRasterizer.a();
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
@@ -43,7 +43,7 @@ abstract class al extends nb {
         if (ki.field_c.field_p < this.field_j) {
           ki.field_c = new db(this.field_j, this.field_v);
           de.a(ki.field_c, param0 + 121);
-          lf.a();
+          SoftwareRasterizer.a();
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
@@ -52,7 +52,7 @@ abstract class al extends nb {
         }
         if (this.field_v <= ki.field_c.field_u) {
           de.a(ki.field_c, param0 + 121);
-          lf.a();
+          SoftwareRasterizer.a();
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
@@ -61,7 +61,7 @@ abstract class al extends nb {
         }
         ki.field_c = new db(this.field_j, this.field_v);
         de.a(ki.field_c, param0 + 121);
-        lf.a();
+        SoftwareRasterizer.a();
         this.a(0, (byte) 115, 0);
         super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
         pd.a(-22949);

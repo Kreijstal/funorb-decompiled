@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ql extends al {
-    static le field_Q;
+    static BitmapFont field_Q;
     private int field_L;
     private int field_J;
     static int field_O;
@@ -60,15 +60,15 @@ abstract class ql extends al {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Lexicominos.field_L ? 1 : 0;
-        lf.a(6 + param2, 35 + param0, this.field_j - 12, this.field_v - 40, 2105376, 0);
+        SoftwareRasterizer.a(6 + param2, 35 + param0, this.field_j - 12, this.field_v - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (lf.field_c <= var8 &&
-            lf.field_h > var8) {
+          if (SoftwareRasterizer.field_c <= var8 &&
+            SoftwareRasterizer.field_h > var8) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_j;
@@ -81,7 +81,7 @@ abstract class ql extends al {
                   }
                   var13 = (-var12 + 462) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  lf.field_b[param2 + (var8 * lf.field_f + var10)] = var13;
+                  SoftwareRasterizer.field_b[param2 + (var8 * SoftwareRasterizer.field_f + var10)] = var13;
                 }
                 var10++;
               }
@@ -95,7 +95,7 @@ abstract class ql extends al {
                   if (var14 >= 420) {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    lf.field_b[var11 + lf.field_f * var8 + param2] = var15;
+                    SoftwareRasterizer.field_b[var11 + SoftwareRasterizer.field_f * var8 + param2] = var15;
                   } else {
                     var12Lifetime1 = 1 + var11;
                   }
@@ -107,7 +107,7 @@ abstract class ql extends al {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            lf.a(param2 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.a(param2 + var10, var8, var11 - var10, var9);
           }
           var7++;
           var8++;
@@ -120,8 +120,8 @@ abstract class ql extends al {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          lf.a(param2, var8Lifetime1, 6, var9Lifetime1);
-          lf.a(this.field_j + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.a(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.a(this.field_j + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -137,8 +137,8 @@ abstract class ql extends al {
         while (var8Lifetime2 < var4Lifetime2) {
           var10Lifetime1 = var5Lifetime2 + var8Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
           var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 8 | var10Lifetime1 << 16);
-          lf.a(param2, var9Lifetime2, 6, var10Lifetime1);
-          lf.a(this.field_j + param2 - 6, var9Lifetime2, 6, var10Lifetime1);
+          SoftwareRasterizer.a(param2, var9Lifetime2, 6, var10Lifetime1);
+          SoftwareRasterizer.a(this.field_j + param2 - 6, var9Lifetime2, 6, var10Lifetime1);
           var8Lifetime2++;
           var9Lifetime2++;
         }
@@ -193,11 +193,11 @@ abstract class ql extends al {
         }
     }
 
-    final static jb e(boolean param0) {
+    final static IndexedSprite e(boolean param0) {
         if (param0) {
-          return (jb) null;
+          return (IndexedSprite) null;
         }
-        jb var1 = new jb(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], be.field_f[0], ci.field_b);
+        IndexedSprite var1 = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], be.field_f[0], ci.field_b);
         gk.a(12428);
         return var1;
     }

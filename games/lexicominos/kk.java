@@ -11,12 +11,12 @@ final class kk extends ve {
     static int field_r;
     static String field_q;
     private int field_f;
-    private le field_k;
+    private BitmapFont field_k;
     static String field_i;
     private boolean field_p;
     private String field_l;
 
-    final void a(int param0, int param1, String param2, le param3, int param4) {
+    final void a(int param0, int param1, String param2, BitmapFont param3, int param4) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -24,7 +24,7 @@ final class kk extends ve {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        le var7 = null;
+        BitmapFont var7 = null;
         rj var8 = null;
         rj var9 = null;
         try {
@@ -41,8 +41,8 @@ final class kk extends ve {
           }
           this.field_l = param2;
           if (param0 < 94) {
-            var7 = (le) null;
-            this.a(-77, 114, (String) null, (le) null, -62);
+            var7 = (BitmapFont) null;
+            this.a(-77, 114, (String) null, (BitmapFont) null, -62);
           }
           this.field_p = true;
           this.field_k = param3;
@@ -84,7 +84,7 @@ final class kk extends ve {
         return (java.applet.Applet) ((Object) c.field_j);
     }
 
-    final void a(le param0, int param1, int param2, int param3, int param4, int param5, int param6, String param7) {
+    final void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, String param7) {
         rj stackIn_36_0;
         rj stackIn_36_1;
         int stackIn_36_2;
@@ -93,7 +93,7 @@ final class kk extends ve {
         rj stackIn_37_1 = null;
         int stackIn_37_4 = 0;
         rj stackIn_40_0 = null;
-        le stackIn_40_1 = null;
+        BitmapFont stackIn_40_1 = null;
         int stackIn_41_2 = 0;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
@@ -142,7 +142,7 @@ final class kk extends ve {
           var16 = new String[param0.a(param7, param4) + 1];
           var17 = var16;
           if (param6 >= -113) {
-            this.field_k = (le) null;
+            this.field_k = (BitmapFont) null;
           }
           var10 = Math.max(1, param0.a(param7, new int[]{param4}, var17));
           if (this.field_h == 3 &&
@@ -188,7 +188,7 @@ final class kk extends ve {
             if (var13 != null) {
               var14.field_a[var13.length()] = param0.b(var13);
               stackIn_40_0 = var14;
-              stackIn_40_1 = (le) (param0);
+              stackIn_40_1 = (BitmapFont) (param0);
               if (param1 != 3) {
                 stackIn_41_2 = 0;
               } else {
@@ -220,7 +220,7 @@ final class kk extends ve {
         }
     }
 
-    private final rj a(le param0, String param1, byte param2, int param3) {
+    private final rj a(BitmapFont param0, String param1, byte param2, int param3) {
         rj var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -272,7 +272,7 @@ final class kk extends ve {
         field_q = null;
     }
 
-    final void a(int param0, le param1, String param2, int param3, byte param4) {
+    final void a(int param0, BitmapFont param1, String param2, int param3, byte param4) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -299,7 +299,7 @@ final class kk extends ve {
           this.field_p = true;
           if (param4 != -11) {
             var8 = (String) null;
-            this.a(59, (le) null, (String) null, 117, (byte) -57);
+            this.a(59, (BitmapFont) null, (String) null, 117, (byte) -57);
           }
           this.field_f = 1;
           var9 = this.a(param1, param2, (byte) 93, param0);
@@ -328,7 +328,7 @@ final class kk extends ve {
         }
     }
 
-    final void a(le param0, String param1, byte param2, int param3, int param4) {
+    final void a(BitmapFont param0, String param1, byte param2, int param3, int param4) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -355,7 +355,7 @@ final class kk extends ve {
           this.field_l = param1;
           if (param2 > -69) {
             var7 = (String) null;
-            this.a((le) null, (String) null, (byte) 76, -31, 44);
+            this.a((BitmapFont) null, (String) null, (byte) 76, -31, 44);
           }
           this.field_p = true;
           this.field_f = 2;

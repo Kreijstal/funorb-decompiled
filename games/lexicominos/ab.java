@@ -238,7 +238,7 @@ final class ab implements Runnable {
                           var3_int = var8.field_d;
                           var4 = var8.field_e;
                           if (!this.field_g) {
-                            Class.forName("lc").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{new Integer(var3_int), new Integer(var4)});
                           } else {
                             this.field_u.a(var3_int, var4, 123);
                           }
@@ -252,14 +252,14 @@ final class ab implements Runnable {
                           if (this.field_g) {
                             this.field_u.a(var15, var3_int != 0, true);
                           } else {
-                            Class.forName("lc").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_d, new Object[]{var15, new Boolean(var3_int != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_d, new Object[]{var15, new Boolean(var3_int != 0)});
                           }
                           break;
                         }
                         if (!this.field_g &&
                           var2_int == 17) {
                           var13 = (Object[]) (var8.field_c);
-                          Class.forName("lc").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_d, new Object[]{var13[0], var13[1], new Integer(var8.field_d), new Integer(var8.field_e), var13[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_d, new Object[]{var13[0], var13[1], new Integer(var8.field_d), new Integer(var8.field_e), var13[2]});
                         } else {
                           if (var2_int != 16) {
                             throw ab.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -611,7 +611,7 @@ final class ab implements Runnable {
           }
           try {
             if (!this.field_g) {
-              this.field_d = Class.forName("lc").newInstance();
+              this.field_d = Class.forName("CursorController").newInstance();
             } else {
               this.field_u = new od();
             }

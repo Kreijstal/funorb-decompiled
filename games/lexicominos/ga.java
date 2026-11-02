@@ -57,7 +57,7 @@ final class ga {
                 lj.a(0, param2, 0, (byte) -128);
               }
             } else {
-              lf.a();
+              SoftwareRasterizer.a();
               ra.a(320, 150, 240);
               lj.a(0, param2, 0, (byte) -128);
             }
@@ -129,7 +129,7 @@ final class ga {
                 lj.a(0, param2, 0, (byte) -128);
               }
             } else {
-              lf.a();
+              SoftwareRasterizer.a();
               ra.a(320, 150, 240);
               lj.a(0, param2, 0, (byte) -128);
             }

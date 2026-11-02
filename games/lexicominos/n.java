@@ -86,7 +86,7 @@ final class n {
     }
 
     final void a(lh param0, w param1, int param2, int param3, int param4) {
-        le stackIn_20_0 = null;
+        BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2;
@@ -164,7 +164,7 @@ final class n {
             } else {
               stackIn_27_8 = 256;
             }
-            ((le) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_p, param0.field_m, param0.field_n);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_p, param0.field_m, param0.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

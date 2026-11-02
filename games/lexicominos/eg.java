@@ -151,10 +151,10 @@ final class eg extends mg {
         }
     }
 
-    final static vj a(int param0, int param1, sh param2, sh param3, int param4) {
+    final static CoverageBitmapFont a(int param0, int param1, sh param2, sh param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        vj stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -164,7 +164,7 @@ final class eg extends mg {
         try {
           if (!nb.a(param1, param0, (byte) -122, param2)) {
             stackIn_2_0 = null;
-            return (vj) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param4 <= 15) {
             eg.i(69);

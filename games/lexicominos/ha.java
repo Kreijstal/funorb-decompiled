@@ -82,7 +82,7 @@ final class ha {
             var15++;
           }
         } else {
-          lf.g(0, 8, 311, 450);
+          SoftwareRasterizer.g(0, 8, 311, 450);
           var3_int = this.field_b.field_a * this.field_b.field_b + this.field_b.a((byte) -123);
           if (var3_int < 0) {
             var3_int += 128;
@@ -101,7 +101,7 @@ final class ha {
             var12 = var7 - this.field_g.a((byte) -123) + 416 - var10;
             eb.a(param1 ^ 13560, this.field_e.field_m, 0, var6_ref_db, this.field_h[var8], var12, var11);
           }
-          lf.b();
+          SoftwareRasterizer.b();
         }
         if (param1 != 13551) {
           this.field_g = (tl) null;
@@ -183,12 +183,12 @@ final class ha {
           var12 = 0;
           var8Lifetime1 = 0;
         }
-        L9: while (true) {
+        scanLoop1: while (true) {
           if (var11 == 0 &&
             0 == var12 &&
             var13 == 0 &&
             0 == var14) {
-            break L9;
+            break scanLoop1;
           }
           if (var11 != 0) {
             var15 = rf.a(var11, 47);
@@ -245,7 +245,7 @@ final class ha {
             if (this.a(this.field_g.field_a - 1, this.field_a.field_a, (byte) -15, this.field_b.field_a)) {
               if (this.field_a.field_c != 0 &&
                 !this.a(this.field_g.field_a - 1, this.field_a.field_a + rf.a(this.field_a.field_c, 47), (byte) -15, this.field_b.field_a)) {
-                break L9;
+                break scanLoop1;
               }
               this.field_g.field_a = this.field_g.field_a - 1;
               this.field_g.field_c = this.field_g.field_f - 1;

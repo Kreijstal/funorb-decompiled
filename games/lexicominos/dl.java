@@ -12,10 +12,10 @@ final class dl {
     private int field_e;
     static sh field_d;
 
-    final static cd a(int param0, sh param1, byte param2, sh param3, int param4) {
+    final static BinaryBitmapFont a(int param0, sh param1, byte param2, sh param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        cd stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -25,7 +25,7 @@ final class dl {
         try {
           if (!nb.a(param0, param4, (byte) -4, param1)) {
             stackIn_2_0 = null;
-            return (cd) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param2 > -28) {
             dl.a(-62);
@@ -107,7 +107,7 @@ final class dl {
                 this.field_c.b(0, ra.field_a, 6, -31593);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -123,7 +123,7 @@ final class dl {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (ra.field_a[2] << 8 & 65280) + ((ra.field_a[1] << 16 & 16711680) + (-16777216 & ra.field_a[0] << 24) + (ra.field_a[3] & 255));
                         var12 = (ra.field_a[5] & 255) + (65280 & ra.field_a[4] << 8);
@@ -139,7 +139,7 @@ final class dl {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var10 = ((255 & ra.field_a[5]) << 8) + (((ra.field_a[4] & 255) << 16) + (ra.field_a[6] & 255));
                         var11 = (255 & ra.field_a[1]) + (65280 & ra.field_a[0] << 8);

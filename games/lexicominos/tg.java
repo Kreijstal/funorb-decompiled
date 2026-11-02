@@ -101,9 +101,9 @@ final class tg extends kd {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (param1) {
-          lf.c(0, 0, lf.field_f, lf.field_a, 0, 192);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, 192);
         } else {
-          lf.a();
+          SoftwareRasterizer.a();
         }
         we.a((byte) -65, param1);
         int var3 = -78 % ((param2 + 61) / 51);

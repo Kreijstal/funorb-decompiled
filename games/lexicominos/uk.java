@@ -55,7 +55,7 @@ final class uk extends ql {
         super.a(param0, (byte) 116, param2);
         ra.field_c.a(this.field_W, param2 + (this.field_j >> 1), param0 + 103, 16777215, -1);
         if (this.field_R != null) {
-          lf.a(20 + param2, param0 + 120 - 7, 260, 8421504);
+          SoftwareRasterizer.a(20 + param2, param0 + 120 - 7, 260, 8421504);
           ra.field_c.a(this.field_R, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ra.field_c.field_E);
           return;
         }
@@ -109,7 +109,7 @@ final class uk extends ql {
         }
     }
 
-    final static jb a(int param0, sh param1, int param2, int param3) {
+    final static IndexedSprite a(int param0, sh param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;

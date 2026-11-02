@@ -46,7 +46,7 @@ final class sb {
             ig.field_a = new th(param8);
             ed.field_q = new th(param11);
             bk.field_a = param12;
-            qb.field_c = param4;
+            GameAppletShell.field_c = param4;
             ua.field_a = param5;
             vl.field_a = param1;
             fa.field_a = param0;

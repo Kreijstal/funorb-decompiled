@@ -16,7 +16,7 @@ final class bb extends nb implements jk {
         if (param3 != 0) {
           return;
         }
-        le var5 = ql.field_Q;
+        BitmapFont var5 = ql.field_Q;
         if (null != this.field_D) {
           var5.a(ka.field_a, this.field_t + param2, param1 + this.field_o, this.field_j, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_E);
         }

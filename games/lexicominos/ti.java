@@ -190,12 +190,12 @@ final class ti extends nb implements nf, jk {
         }
     }
 
-    final static jb[] a(byte param0) {
+    final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = Lexicominos.field_L ? 1 : 0;
-        jb[] var1 = new jb[th.field_t];
+        IndexedSprite[] var1 = new IndexedSprite[th.field_t];
         for (var2 = 0; th.field_t > var2; var2++) {
-          var1[var2] = new jb(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], be.field_f[var2], ci.field_b);
+          var1[var2] = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], be.field_f[var2], ci.field_b);
         }
         if (param0 <= 103) {
           field_M = -84L;
@@ -278,7 +278,7 @@ final class ti extends nb implements nf, jk {
         RuntimeException decompiledCaughtException = null;
         v var6 = null;
         RuntimeException var6_ref = null;
-        le var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         m var9 = null;
         jf var12 = null;
@@ -436,7 +436,7 @@ final class ti extends nb implements nf, jk {
           ql.field_Q.a(this.field_F, 20 + (this.field_t + param2), 15 + (param1 + this.field_o), this.field_j - 40, this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
         }
         if (this.field_H != null) {
-          lf.a(param2 + 10, param1 + 134, this.field_j - 20, 4210752);
+          SoftwareRasterizer.a(param2 + 10, param1 + 134, this.field_j - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

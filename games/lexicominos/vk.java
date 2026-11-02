@@ -81,7 +81,7 @@ final class vk implements Iterator {
         return true;
     }
 
-    final static void a(sh param0, int param1, hk param2, int param3) {
+    final static void a(sh param0, int param1, PcmStreamMixer param2, int param3) {
         try {
           tf.field_c = cl.p(-124) * param3 / 1000;
           ed.a(param1 ^ param1, param0);

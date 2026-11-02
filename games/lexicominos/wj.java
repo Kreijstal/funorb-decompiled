@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj extends kd {
-    ke[] field_l;
+    PcmSample[] field_l;
     private int[] field_i;
-    static hk field_j;
+    static PcmStreamMixer field_j;
     byte[] field_n;
     static be field_s;
     byte[] field_q;
@@ -62,7 +62,7 @@ final class wj extends kd {
                   }
                 }
                 if (var7 != null) {
-                  this.field_l[var8] = (ke) (var7);
+                  this.field_l[var8] = (PcmSample) (var7);
                   this.field_i[var8] = 0;
                 }
               }
@@ -253,7 +253,7 @@ final class wj extends kd {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_l = new ke[128];
+          this.field_l = new PcmSample[128];
           this.field_h = new rc[128];
           this.field_q = new byte[128];
           this.field_n = new byte[128];

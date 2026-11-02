@@ -215,11 +215,11 @@ final class sg {
 
     private final void a(byte param0, int param1, int param2) {
         try {
-          lf.b(param2, param1, 40, 40, 6, 12845056);
+          SoftwareRasterizer.b(param2, param1, 40, 40, 6, 12845056);
           int var4_int = 22 / ((param0 - 2) / 34);
-          lf.b(param2 + 1, 1 + param1, 38, 38, 4, 12845056);
-          lf.b(param2 + 2, param1 + 2, 36, 36, 2, 12845056);
-          lf.b(param2 + 2, param1 + 2, 36, 36, 3, 12845056);
+          SoftwareRasterizer.b(param2 + 1, 1 + param1, 38, 38, 4, 12845056);
+          SoftwareRasterizer.b(param2 + 2, param1 + 2, 36, 36, 2, 12845056);
+          SoftwareRasterizer.b(param2 + 2, param1 + 2, 36, 36, 3, 12845056);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "sg.R(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -831,7 +831,7 @@ final class sg {
         var15 = Lexicominos.field_L ? 1 : 0;
         try {
           if (bk.field_b != -1) {
-            stackIn_5_0 = qb.field_b[sh.field_e * 640 + bk.field_b];
+            stackIn_5_0 = GameAppletShell.field_b[sh.field_e * 640 + bk.field_b];
           } else {
             stackIn_5_0 = 0;
           }
@@ -846,7 +846,7 @@ final class sg {
           if (-1 == this.field_o) {
             stackIn_12_0 = 0;
           } else {
-            stackIn_12_0 = qb.field_b[this.field_o + this.field_j * 640];
+            stackIn_12_0 = GameAppletShell.field_b[this.field_o + this.field_j * 640];
           }
           var5Lifetime1 = stackIn_12_0;
           if (var5Lifetime1 >= 0) {
@@ -1040,7 +1040,7 @@ final class sg {
           if (param2 != 95) {
             discarded$1 = this.a((byte) 81, 21);
           }
-          var4_int = qb.field_b[param1 * 640 + param0];
+          var4_int = GameAppletShell.field_b[param1 * 640 + param0];
           if (param0 < 0 ||
             param1 < 0 ||
             640 <= param0 ||
@@ -1126,41 +1126,41 @@ final class sg {
         try {
           param0 = param0 + param3.field_w;
           param4 = param4 + param3.field_s;
-          var6_int = param4 + param0 * lf.field_f;
+          var6_int = param4 + param0 * SoftwareRasterizer.field_f;
           var7 = 0;
           var8 = param3.field_u;
           var10 = 117 / ((param1 + 50) / 45);
           var9 = param3.field_p;
-          var11 = lf.field_f - var9;
-          if (lf.field_c > param0) {
-            var13 = -param0 + lf.field_c;
-            var6_int = var6_int + var13 * lf.field_f;
+          var11 = SoftwareRasterizer.field_f - var9;
+          if (SoftwareRasterizer.field_c > param0) {
+            var13 = -param0 + SoftwareRasterizer.field_c;
+            var6_int = var6_int + var13 * SoftwareRasterizer.field_f;
             var8 = var8 - var13;
-            param0 = lf.field_c;
+            param0 = SoftwareRasterizer.field_c;
             var7 = var7 + var9 * var13;
           }
           var12 = 0;
-          if (lf.field_h < var8 + param0) {
-            var8 = var8 - (var8 + param0 - lf.field_h);
+          if (SoftwareRasterizer.field_h < var8 + param0) {
+            var8 = var8 - (var8 + param0 - SoftwareRasterizer.field_h);
           }
-          if (lf.field_g > param4) {
-            var13Lifetime1 = lf.field_g - param4;
+          if (SoftwareRasterizer.field_g > param4) {
+            var13Lifetime1 = SoftwareRasterizer.field_g - param4;
             var12 = var12 + var13Lifetime1;
             var11 = var11 + var13Lifetime1;
             var6_int = var6_int + var13Lifetime1;
-            param4 = lf.field_g;
+            param4 = SoftwareRasterizer.field_g;
             var7 = var7 + var13Lifetime1;
             var9 = var9 - var13Lifetime1;
           }
-          if (var9 + param4 > lf.field_e) {
-            var13Lifetime2 = -lf.field_e + param4 + var9;
+          if (var9 + param4 > SoftwareRasterizer.field_e) {
+            var13Lifetime2 = -SoftwareRasterizer.field_e + param4 + var9;
             var9 = var9 - var13Lifetime2;
             var11 = var11 + var13Lifetime2;
             var12 = var12 + var13Lifetime2;
           }
           if (var9 > 0 &&
             var8 > 0) {
-            d.a(param2, param3.field_y, var11, var8, var12, var9, var7, -61498200, lf.field_b, 0, var6_int);
+            d.a(param2, param3.field_y, var11, var8, var12, var9, var7, -61498200, SoftwareRasterizer.field_b, 0, var6_int);
             return;
           }
           return;
@@ -1196,40 +1196,40 @@ final class sg {
         try {
           param2 = param2 + param0.field_s;
           param3 = param3 + param0.field_w;
-          var5_int = param2 + param3 * lf.field_f;
+          var5_int = param2 + param3 * SoftwareRasterizer.field_f;
           var6 = 0;
           var7 = param0.field_u;
           var8 = param0.field_p;
-          var9 = lf.field_f - var8;
-          if (param3 < lf.field_c) {
-            var11 = lf.field_c - param3;
-            param3 = lf.field_c;
+          var9 = SoftwareRasterizer.field_f - var8;
+          if (param3 < SoftwareRasterizer.field_c) {
+            var11 = SoftwareRasterizer.field_c - param3;
+            param3 = SoftwareRasterizer.field_c;
             var6 = var6 + var11 * var8;
-            var5_int = var5_int + lf.field_f * var11;
+            var5_int = var5_int + SoftwareRasterizer.field_f * var11;
             var7 = var7 - var11;
           }
           var10 = 0;
-          if (param2 < lf.field_g) {
-            var11Lifetime1 = lf.field_g - param2;
+          if (param2 < SoftwareRasterizer.field_g) {
+            var11Lifetime1 = SoftwareRasterizer.field_g - param2;
             var10 = var10 + var11Lifetime1;
             var9 = var9 + var11Lifetime1;
             var5_int = var5_int + var11Lifetime1;
             var8 = var8 - var11Lifetime1;
             var6 = var6 + var11Lifetime1;
-            param2 = lf.field_g;
+            param2 = SoftwareRasterizer.field_g;
           }
-          if (var7 + param3 > lf.field_h) {
-            var7 = var7 - (param3 + var7 - lf.field_h);
+          if (var7 + param3 > SoftwareRasterizer.field_h) {
+            var7 = var7 - (param3 + var7 - SoftwareRasterizer.field_h);
           }
-          if (lf.field_e < var8 + param2) {
-            var11Lifetime2 = -lf.field_e + var8 + param2;
+          if (SoftwareRasterizer.field_e < var8 + param2) {
+            var11Lifetime2 = -SoftwareRasterizer.field_e + var8 + param2;
             var9 = var9 + var11Lifetime2;
             var8 = var8 - var11Lifetime2;
             var10 = var10 + var11Lifetime2;
           }
           if (var8 > 0 &&
             var7 > 0) {
-            kc.a(var7, var8, lf.field_b, var6, param1, var10, param1 ^ 8, var5_int, param0.field_y, var9);
+            kc.a(var7, var8, SoftwareRasterizer.field_b, var6, param1, var10, param1 ^ 8, var5_int, param0.field_y, var9);
             return;
           }
           return;
@@ -1271,7 +1271,7 @@ final class sg {
             param1 >= 0) {
             if (param0 < param2 &&
               param1 < 480) {
-              var4_int = qb.field_b[param0 + param1 * 640];
+              var4_int = GameAppletShell.field_b[param0 + param1 * 640];
               if (var4_int < 0 &&
                 -1 != var4_int) {
                 var5 = (2047 & var4_int >> 11) + 2 >> 2;
@@ -1337,44 +1337,44 @@ final class sg {
         int var5 = 0;
         boolean stackIn_14_1 = false;
         int stackIn_50_0 = 0;
-        cd stackIn_50_1 = null;
+        BinaryBitmapFont stackIn_50_1 = null;
         int stackIn_51_2 = 0;
         int stackIn_54_0;
-        cd stackIn_54_1;
+        BinaryBitmapFont stackIn_54_1;
         int stackIn_54_2;
         boolean stackIn_54_3;
         int stackIn_54_4;
         int stackIn_55_0 = 0;
-        cd stackIn_55_1 = null;
+        BinaryBitmapFont stackIn_55_1 = null;
         int stackIn_55_2 = 0;
         boolean stackIn_55_5 = false;
         int stackIn_58_0;
-        cd stackIn_58_1;
+        BinaryBitmapFont stackIn_58_1;
         int stackIn_58_2;
         int stackIn_58_3;
         int stackIn_59_4 = 0;
         int stackIn_62_0;
-        cd stackIn_62_1;
+        BinaryBitmapFont stackIn_62_1;
         int stackIn_62_2;
         int stackIn_62_3;
         int stackIn_62_4;
         int stackIn_63_0 = 0;
-        cd stackIn_63_1 = null;
+        BinaryBitmapFont stackIn_63_1 = null;
         int stackIn_63_2 = 0;
         int stackIn_63_3 = 0;
         int stackIn_63_4 = 0;
         boolean stackIn_63_5 = false;
         int stackIn_66_0 = 0;
         int stackIn_66_1 = 0;
-        cd stackIn_66_2 = null;
+        BinaryBitmapFont stackIn_66_2 = null;
         int stackIn_67_3 = 0;
         int stackIn_70_0;
         int stackIn_70_1;
-        cd stackIn_70_2;
+        BinaryBitmapFont stackIn_70_2;
         int stackIn_70_3;
         int stackIn_71_0;
         int stackIn_71_1;
-        cd stackIn_71_2;
+        BinaryBitmapFont stackIn_71_2;
         int stackIn_71_3;
         boolean stackIn_71_4;
         int stackIn_88_0 = 0;
@@ -1491,7 +1491,7 @@ final class sg {
                     stackIn_55_2 = stackIn_51_2;
                     stackIn_55_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_55_0 + ((cd) (Object) stackIn_55_1).a(ii.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).a(ii.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + (gg.field_a[0].field_x * 2 + var3);
                   stackIn_58_0 = var2_intLifetime1;
                   stackIn_58_1 = bi.field_a;
@@ -1522,7 +1522,7 @@ final class sg {
                     stackIn_63_4 = stackIn_59_4;
                     stackIn_63_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_63_0 + ((cd) (Object) stackIn_63_1).a(ac.a(stackIn_63_2 != 0, stackIn_63_3, stackIn_63_4 != 0, stackIn_63_5), 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_63_0 + ((BinaryBitmapFont) (Object) stackIn_63_1).a(ac.a(stackIn_63_2 != 0, stackIn_63_3, stackIn_63_4 != 0, stackIn_63_5), 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + gg.field_a[0].field_x;
                   stackIn_66_0 = var2_intLifetime1;
                   stackIn_66_1 = var3;
@@ -1549,7 +1549,7 @@ final class sg {
                     stackIn_71_3 = stackIn_67_3;
                     stackIn_71_4 = true;
                   }
-                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((cd) (Object) stackIn_71_2).a(dd.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
+                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).a(dd.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
                 } else {
                   if (this.field_d != 3 &&
                     this.field_d != 12) {
@@ -1559,25 +1559,25 @@ final class sg {
                         var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
                         var3 = 40;
                         jh.field_d.a(kk.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                        mk.field_h.c(cb.field_D, 294, lf.field_a - 10, 0, -1);
+                        mk.field_h.c(cb.field_D, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                       } else {
                         if (this.field_d == 9) {
                           var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                           var3 = 40;
-                          jh.field_d.a(pk.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                          mk.field_h.c(rk.field_k, 294, -10 + lf.field_a, 0, -1);
+                          jh.field_d.a(TriangleMesh.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                          mk.field_h.c(rk.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                         } else {
                           if (this.field_d == 10) {
                             var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
                             var3 = 40;
                             jh.field_d.a(tf.field_b, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                            mk.field_h.c(bl.field_a, 294, lf.field_a - 10, 0, -1);
+                            mk.field_h.c(bl.field_a, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                           } else {
                             if ((this.field_d == 11)) {
                               var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                               var3 = 40;
                               jh.field_d.a(kk.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                              mk.field_h.c(eg.field_E, 294, -10 + lf.field_a, 0, -1);
+                              mk.field_h.c(eg.field_E, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                             }
                           }
                         }
@@ -1591,12 +1591,12 @@ final class sg {
                         var3 = var3 + var2_intLifetime1 * jh.field_d.a(var6_ref_String, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
                         var3 = var3 + var2_intLifetime1;
                       }
-                      mk.field_h.c(eg.field_E, 294, lf.field_a - 10, 0, -1);
+                      mk.field_h.c(eg.field_E, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    mk.field_h.c(rk.field_k, 294, -10 + lf.field_a, 0, -1);
+                    mk.field_h.c(rk.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                   }
                 }
               } else {
@@ -1694,7 +1694,7 @@ final class sg {
                     var3 = var3 + var2_int * jh.field_d.a(var12, 12, var3 - jh.field_d.field_E, 278, 1000, 0, -1, 0, 0, var2_int);
                     var3 = var3 + var2_int;
                   }
-                  mk.field_h.b(bl.field_a, 12, -10 + lf.field_a, 0, -1);
+                  mk.field_h.b(bl.field_a, 12, -10 + SoftwareRasterizer.field_a, 0, -1);
                 }
               } else {
                 var2_intLifetime2 = 18;
@@ -1708,7 +1708,7 @@ final class sg {
                   var3Lifetime1 = var3Lifetime1 + var2_intLifetime2;
                   var10++;
                 }
-                mk.field_h.b(cb.field_D, 12, lf.field_a - 10, 0, -1);
+                mk.field_h.b(cb.field_D, 12, SoftwareRasterizer.field_a - 10, 0, -1);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -1719,7 +1719,7 @@ final class sg {
           if (null != this.field_m) {
             this.field_m.d(50);
             if (this.field_d == 11) {
-              lf.g(0, 8, 311, 450);
+              SoftwareRasterizer.g(0, 8, 311, 450);
               var2_intLifetime1 = -300 + (-88 + this.field_m.field_r);
               if (200 < var2_intLifetime1) {
                 var2_intLifetime1 = 200;
@@ -1732,7 +1732,7 @@ final class sg {
                 var11.a((byte) -34);
                 var11 = (gd) (this.field_m.field_j.f(2));
               }
-              lf.b();
+              SoftwareRasterizer.b();
             }
           }
           return;
@@ -1880,7 +1880,7 @@ final class sg {
                 return stackIn_19_0;
               }
             }
-            var5_intLifetime1 = qb.field_b[bk.field_b + sh.field_e * 640];
+            var5_intLifetime1 = GameAppletShell.field_b[bk.field_b + sh.field_e * 640];
             if (var5_intLifetime1 >= -1) {
               stackIn_23_0 = -1;
               return stackIn_23_0;

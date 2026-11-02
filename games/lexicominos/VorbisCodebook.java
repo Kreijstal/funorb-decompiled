@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h {
+final class VorbisCodebook {
     private int[] field_d;
     private int field_b;
     int field_e;
@@ -120,7 +120,7 @@ final class h {
         }
     }
 
-    h() {
+    VorbisCodebook() {
         int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
@@ -145,17 +145,17 @@ final class h {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        sd.a(24);
-        this.field_e = sd.a(16);
-        this.field_b = sd.a(24);
+        VorbisSample.a(24);
+        this.field_e = VorbisSample.a(16);
+        this.field_b = VorbisSample.a(24);
         this.field_d = new int[this.field_b];
-        stackIn_3_0 = (sd.a() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.a() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = sd.a(5) + 1;
+          var3_int = VorbisSample.a(5) + 1;
           while (var2 < this.field_b) {
-            var4_int = sd.a(kb.a(this.field_b - var2, 16));
+            var4_int = VorbisSample.a(kb.a(this.field_b - var2, 16));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -164,36 +164,36 @@ final class h {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (sd.a() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.a() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_b) {
             if (var2 != 0 &&
-              sd.a() == 0) {
+              VorbisSample.a() == 0) {
               this.field_d[var14] = 0;
             } else {
-              this.field_d[var14] = sd.a(5) + 1;
+              this.field_d[var14] = VorbisSample.a(5) + 1;
             }
             var14++;
           }
         }
         this.c();
-        var2Lifetime1 = sd.a(4);
+        var2Lifetime1 = VorbisSample.a(4);
         if (var2Lifetime1 > 0) {
-          var3 = sd.b(sd.a(32));
-          var4 = sd.b(sd.a(32));
-          var5Lifetime1 = sd.a(4) + 1;
-          stackIn_25_0 = (sd.a() == 0) ? 0 : 1;
+          var3 = VorbisSample.b(VorbisSample.a(32));
+          var4 = VorbisSample.b(VorbisSample.a(32));
+          var5Lifetime1 = VorbisSample.a(4) + 1;
+          stackIn_25_0 = (VorbisSample.a() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_b * this.field_e;
           } else {
-            var7 = h.a(this.field_b, this.field_e);
+            var7 = VorbisCodebook.a(this.field_b, this.field_e);
           }
           this.field_f = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_f[var8] = sd.a(var5Lifetime1);
+            this.field_f[var8] = VorbisSample.a(var5Lifetime1);
           }
           this.field_a = new float[this.field_b][this.field_e];
           if (var2Lifetime1 != 1) {
@@ -230,7 +230,7 @@ final class h {
     final int a() {
         int var1 = 0;
         while (this.field_c[var1] >= 0) {
-          var1 = sd.a() != 0 ? this.field_c[var1] : var1 + 1;
+          var1 = VorbisSample.a() != 0 ? this.field_c[var1] : var1 + 1;
         }
         return ~this.field_c[var1];
     }

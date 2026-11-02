@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class uc extends re implements jk {
-    private le field_jb;
+    private BitmapFont field_jb;
     static volatile int field_eb;
     private boolean field_ob;
     private md field_gb;
@@ -193,7 +193,7 @@ class uc extends re implements jk {
         this.b(117, var2);
     }
 
-    uc(eg param0, le param1, String param2, boolean param3, boolean param4) {
+    uc(eg param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vc((uc) null, param1, param2), 77, 10, 10);
         try {
           this.field_ob = false;

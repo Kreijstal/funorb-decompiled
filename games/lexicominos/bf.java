@@ -23,7 +23,7 @@ final class bf {
           ob.field_c = ql.field_K;
           ql.field_K = false;
           nk.field_z = lj.field_a;
-          ef.field_a = qb.field_j;
+          ef.field_a = GameAppletShell.field_j;
           ck.field_a = gk.field_b;
           lj.field_a = 0;
           var2 = -8 / ((param0 - 30) / 41);
@@ -41,10 +41,10 @@ final class bf {
         }
     }
 
-    final static jb a(int[] param0, jb param1, int param2) {
-        jb var3 = null;
+    final static IndexedSprite a(int[] param0, IndexedSprite param1, int param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        jb stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -52,7 +52,7 @@ final class bf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new jb(param2, 0, 0);
+          var3 = new IndexedSprite(param2, 0, 0);
           var3.field_h = param1.field_h;
           var3.field_e = param1.field_e;
           var3.field_c = param1.field_c;
@@ -182,8 +182,8 @@ final class bf {
         field_a = null;
         field_f = null;
         if (param0 > -51) {
-          jb var2 = (jb) null;
-          bf.a((int[]) null, (jb) null, 69);
+          IndexedSprite var2 = (IndexedSprite) null;
+          bf.a((int[]) null, (IndexedSprite) null, 69);
         }
     }
 

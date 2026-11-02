@@ -14,7 +14,7 @@ final class nh {
         if (param0 != 0) {
           return;
         }
-        uh.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * b.field_r / 22050);
+        uh.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
     }
 
     public static void a(int param0) {
@@ -26,12 +26,12 @@ final class nh {
         field_a = null;
     }
 
-    final static jb a(String param0, sh param1, boolean param2, String param3) {
+    final static IndexedSprite a(String param0, sh param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jb stackIn_2_0 = null;
-        jb stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -43,7 +43,7 @@ final class nh {
         try {
           var4_int = param1.c(param0, (byte) -89);
           if (param2) {
-            stackIn_2_0 = (jb) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var5 = param1.a(param3, -27964, var4_int);

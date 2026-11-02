@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic {
+final class Bzip2Decoder {
     private static ok field_a;
 
     public static void a() {
@@ -80,31 +80,31 @@ final class ic {
           if (var26 == 0) {
             return;
           }
-          var1 = ic.b(param0);
+          var1 = Bzip2Decoder.b(param0);
           if (var1 == 23) {
             return;
           }
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.b(param0);
-          var1 = ic.c(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.b(param0);
+          var1 = Bzip2Decoder.c(param0);
           if (var1 == 0) {
           }
           param0.field_s = 0;
-          var1 = ic.b(param0);
+          var1 = Bzip2Decoder.b(param0);
           param0.field_s = param0.field_s << 8 | var1 & 255;
-          var1 = ic.b(param0);
+          var1 = Bzip2Decoder.b(param0);
           param0.field_s = param0.field_s << 8 | var1 & 255;
-          var1 = ic.b(param0);
+          var1 = Bzip2Decoder.b(param0);
           param0.field_s = param0.field_s << 8 | var1 & 255;
           for (var4 = 0; var4 < 16; var4++) {
-            var1 = ic.c(param0);
+            var1 = Bzip2Decoder.c(param0);
             if (var1 != 1) {
               param0.field_J[var4] = false;
             } else {
@@ -117,22 +117,22 @@ final class ic {
           for (var4 = 0; var4 < 16; var4++) {
             if (param0.field_J[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
-                var1 = ic.c(param0);
+                var1 = Bzip2Decoder.c(param0);
                 if (var1 == 1) {
                   param0.field_r[var4 * 16 + var5] = true;
                 }
               }
             }
           }
-          ic.d(param0);
+          Bzip2Decoder.d(param0);
           var7 = param0.field_y + 2;
-          var8 = ic.a(3, param0);
-          var9 = ic.a(15, param0);
+          var8 = Bzip2Decoder.a(3, param0);
+          var9 = Bzip2Decoder.a(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
             while (true) {
-              var1 = ic.c(param0);
+              var1 = Bzip2Decoder.c(param0);
               if (var1 != 0) {
                 var5++;
                 continue;
@@ -162,7 +162,7 @@ final class ic {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = ic.a(5, param0);
+            var17 = Bzip2Decoder.a(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -170,13 +170,13 @@ final class ic {
                 break;
               }
               while (true) {
-                var1 = ic.c(param0);
+                var1 = Bzip2Decoder.c(param0);
                 if (var1 == 0) {
                   param0.field_l[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
-                var1 = ic.c(param0);
+                var1 = Bzip2Decoder.c(param0);
                 if (var1 != 0) {
                   var17--;
                   continue;
@@ -196,7 +196,7 @@ final class ic {
                 var2 = param0.field_l[var6][var4];
               }
             }
-            ic.a(param0.field_C[var6], param0.field_a[var6], param0.field_o[var6], param0.field_l[var6], var2, var3, var7);
+            Bzip2Decoder.a(param0.field_C[var6], param0.field_a[var6], param0.field_o[var6], param0.field_l[var6], var2, var3, var7);
             param0.field_h[var6] = var2;
           }
           var10 = param0.field_y + 1;
@@ -225,10 +225,10 @@ final class ic {
           }
           var12--;
           var18 = var22;
-          var19 = ic.a(var18, param0);
+          var19 = Bzip2Decoder.a(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
-            var20 = ic.c(param0);
+            var20 = Bzip2Decoder.c(param0);
             var19 = var19 << 1 | var20;
           }
           var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -256,7 +256,7 @@ final class ic {
               param0.field_p = param0.field_p >> 8;
               param0.field_E = param0.field_E + 1;
               param0.field_n = var14;
-              ic.a(param0);
+              Bzip2Decoder.a(param0);
               if (param0.field_E == param0.field_n + 1 &&
                 param0.field_j == 0) {
                 var26 = 1;
@@ -328,10 +328,10 @@ final class ic {
               }
               var12--;
               var18 = var22;
-              var19 = ic.a(var18, param0);
+              var19 = Bzip2Decoder.a(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = ic.c(param0);
+                var20 = Bzip2Decoder.c(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -359,10 +359,10 @@ final class ic {
               }
               var12--;
               var18 = var22;
-              var19 = ic.a(var18, param0);
+              var19 = Bzip2Decoder.a(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = ic.c(param0);
+                var20 = Bzip2Decoder.c(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -395,7 +395,7 @@ final class ic {
           field_a.field_F = 0;
           field_a.field_f = 0;
           field_a.field_D = 0;
-          ic.e(field_a);
+          Bzip2Decoder.e(field_a);
           param1 = param1 - field_a.field_e;
           field_a.field_I = null;
           field_a.field_K = null;
@@ -477,11 +477,11 @@ final class ic {
     }
 
     private final static byte c(ok param0) {
-        return (byte)ic.a(1, param0);
+        return (byte)Bzip2Decoder.a(1, param0);
     }
 
     private final static byte b(ok param0) {
-        return (byte)ic.a(8, param0);
+        return (byte)Bzip2Decoder.a(8, param0);
     }
 
     private final static void a(ok param0) {
@@ -514,11 +514,11 @@ final class ic {
         var10 = param0.field_e;
         var11 = var10;
         var12 = param0.field_n + 1;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
               if (var10 == 0) {
-                break L0;
+                break scanLoop1;
               }
               if (var3 != 1) {
                 var8[var9] = (byte)var2;
@@ -531,7 +531,7 @@ final class ic {
             }
             if (var10 == 0) {
               var3 = 1;
-              break L0;
+              break scanLoop1;
             }
             var8[var9] = (byte)var2;
             var9++;
@@ -552,11 +552,11 @@ final class ic {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var3 = 3;
                 var7 = var15Lifetime1[var7];
@@ -564,11 +564,11 @@ final class ic {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
@@ -579,17 +579,17 @@ final class ic {
                 var5 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
-                continue L0;
+                continue scanLoop1;
               }
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             } else {
               var5 = var1;
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             }
             var8[var9] = (byte)var2;

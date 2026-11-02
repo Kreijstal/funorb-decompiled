@@ -131,7 +131,7 @@ final class wi extends kf {
         throw new Error();
     }
 
-    final static void a(int param0, int param1, byte param2, le param3, int param4, int param5, int param6, int param7, int param8, db[] param9, db[] param10) {
+    final static void a(int param0, int param1, byte param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, db[] param9, db[] param10) {
         try {
           ia.a((byte) 46);
           int var11_int = -27 % ((param2 + 35) / 52);

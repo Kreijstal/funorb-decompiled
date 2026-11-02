@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nk extends qb {
+abstract class nk extends GameAppletShell {
     private int field_A;
     private int field_r;
     static int field_z;

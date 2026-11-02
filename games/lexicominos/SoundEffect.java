@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba {
-    private ak[] field_a;
+final class SoundEffect {
+    private SynthInstrument[] field_a;
     private int field_b;
     private int field_c;
 
-    final static ba a(sh param0, String param1, String param2) {
+    final static SoundEffect a(sh param0, String param1, String param2) {
         byte[] var3 = param0.a((byte) 127, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new ba(new wf(var3));
+        return new SoundEffect(new wf(var3));
     }
 
-    final ke a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new ke(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static ba a(sh param0, int param1, int param2) {
+    final static SoundEffect a(sh param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, -27493, param2);
         if (var3 == null) {
           return null;
         }
-        return new ba(new wf(var3));
+        return new SoundEffect(new wf(var3));
     }
 
     private final byte[] b() {
@@ -67,15 +67,15 @@ final class ba {
         return var3;
     }
 
-    private ba(wf param0) {
+    private SoundEffect(wf param0) {
         int var2 = 0;
         int var3;
-        this.field_a = new ak[10];
+        this.field_a = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.d(true);
           if (var3 != 0) {
             param0.field_h = param0.field_h - 1;
-            this.field_a[var2] = new ak();
+            this.field_a[var2] = new SynthInstrument();
             this.field_a[var2].a(param0);
           }
         }

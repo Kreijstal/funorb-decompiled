@@ -276,7 +276,7 @@ class bc extends kf {
           var7 = var9.b((w) (this), 102, param2);
           var8 = var9.a((w) (this), 20340, param1);
           do {
-            pk.a(var6.field_h + 2, -2 + (var8 + var6.field_k), var7 + var6.field_j - 2, param0 ^ -116, var6.field_l + 2);
+            TriangleMesh.a(var6.field_h + 2, -2 + (var8 + var6.field_k), var7 + var6.field_j - 2, param0 ^ -116, var6.field_l + 2);
             var6 = var6.field_p;
           } while (var6 != null);
           return;

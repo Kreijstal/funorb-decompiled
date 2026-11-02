@@ -43,13 +43,13 @@ final class md extends w {
           var10 = -var5 + var6;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 < 256 ? (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 8 : var8 | var9;
-          lf.a(var7, var6, this.field_I, var12);
-          lf.a(var7 - this.field_I * 2, var6, this.field_I, var12);
+          SoftwareRasterizer.a(var7, var6, this.field_I, var12);
+          SoftwareRasterizer.a(var7 - this.field_I * 2, var6, this.field_I, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = param0 & 16711935;
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (16711680 & var11 * var9Lifetime1 | -16711936 & var8Lifetime1 * var11) >>> 8;
-          lf.a(this.field_I + var7, var6, this.field_I, var12Lifetime1);
-          lf.a(-this.field_I + var7, var6, this.field_I, var12Lifetime1);
+          SoftwareRasterizer.a(this.field_I + var7, var6, this.field_I, var12Lifetime1);
+          SoftwareRasterizer.a(-this.field_I + var7, var6, this.field_I, var12Lifetime1);
         }
         pd.a(-22949);
         return var14;
@@ -87,7 +87,7 @@ final class md extends w {
               var6 = Math.sqrt(1.0 - var6);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            lf.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
         pd.a(-22949);
@@ -219,7 +219,7 @@ final class md extends w {
             param0.d(var6, param1);
           }
           pd.a(-22949);
-          if (lf.field_g <= param3 + this.field_H.field_p) {
+          if (SoftwareRasterizer.field_g <= param3 + this.field_H.field_p) {
             de.a(this.field_D, param2 - 16711929);
             param0.d(-this.field_y, 0);
             param0.d(-this.field_y + 2 * this.field_I, 0);
@@ -227,7 +227,7 @@ final class md extends w {
             pd.a(-22949);
             this.field_D.d(param3, param1);
           }
-          if (lf.field_e >= var5_int - this.field_H.field_p) {
+          if (SoftwareRasterizer.field_e >= var5_int - this.field_H.field_p) {
             de.a(this.field_D, 6);
             for (var7 = this.field_j - this.field_H.field_p + this.field_y; 2 * this.field_I < var7; var7 = var7 - 2 * this.field_I) {
             }

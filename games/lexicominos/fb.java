@@ -8,7 +8,7 @@ final class fb implements rd {
     private int field_k;
     private int field_n;
     private int field_r;
-    private le field_b;
+    private BitmapFont field_b;
     private int field_a;
     static aj field_l;
     private int field_s;
@@ -16,7 +16,7 @@ final class fb implements rd {
     private int field_d;
     static rb field_f;
     private int field_h;
-    static le field_m;
+    static BitmapFont field_m;
     private int field_q;
     static long[] field_o;
     static long[][] field_j;
@@ -56,7 +56,7 @@ final class fb implements rd {
             param2 = param2 & var11.field_D;
           }
           var7 = 5592405;
-          lf.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_a);
+          SoftwareRasterizer.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_a);
           if (param2) {
             var7 = 16777215;
           }
@@ -65,11 +65,11 @@ final class fb implements rd {
           if (param4 != -3284) {
             this.field_q = 93;
           }
-          lf.d(var8, var9, this.field_r, this.field_h, 5592405);
-          lf.a(var8, var9, this.field_r, this.field_h, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_r, this.field_h, 5592405);
+          SoftwareRasterizer.a(var8, var9, this.field_r, this.field_h, var7);
           if (var11.field_C) {
-            lf.b(var8, var9, var8 + this.field_r, var9 + this.field_h, 1);
-            lf.b(this.field_r + var8, var9, var8, var9 + this.field_h, 1);
+            SoftwareRasterizer.b(var8, var9, var8 + this.field_r, var9 + this.field_h, 1);
+            SoftwareRasterizer.b(this.field_r + var8, var9, var8, var9 + this.field_h, 1);
           }
           if (null != this.field_b) {
             var10 = this.field_k + (this.field_q + this.field_r);
@@ -90,7 +90,7 @@ final class fb implements rd {
         }
     }
 
-    final static hk b(int param0) {
+    final static PcmStreamMixer b(int param0) {
         if (param0 != 12898) {
           fb.b(-114);
         }
@@ -140,7 +140,7 @@ final class fb implements rd {
         ve.field_d = 2147483647;
     }
 
-    fb(le param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    fb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_s = 1;
         this.field_d = 1;
         try {

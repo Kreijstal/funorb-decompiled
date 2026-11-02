@@ -81,7 +81,7 @@ final class va extends tj {
             return stackIn_19_0;
           }
           if (var7.length() <= 0) {
-            stackIn_22_0 = qb.field_a;
+            stackIn_22_0 = GameAppletShell.field_a;
             return stackIn_22_0;
           }
           if (bi.a((byte) -124, var7, var5)) {

@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "lexicominos": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/lexicominos"
+      },
+      "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
+      "sources": {
+        "files": 297,
+        "sha256": "28329e74a266a3b0a04fe4b7239c0a128810acdb793a93909734a47aab25bc5a"
+      },
+      "dictionary": {
+        "path": "decompilation/lexicominos-naming.json",
+        "sha256": "0c274ac9bfe03cd95e966eeda4a453797332f00d6f7eae080f71e5c2ec45a21d"
+      },
+      "readingGuide": {
+        "path": "games/lexicominos/README.md",
+        "sha256": "b0c23aca0d1ea7bb222a18e8047f51c756f33ec48bb53fcf089b471d0297a0f6"
+      },
+      "rulesSha256": "63f9a25701342ba867499727f2a82bce66f50eed30cfb12cd9bb2bd780cd6c1e",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11623,6 +11647,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 297,
+          "sha256": "28329e74a266a3b0a04fe4b7239c0a128810acdb793a93909734a47aab25bc5a"
         }
       },
       "minerdisturbance": {

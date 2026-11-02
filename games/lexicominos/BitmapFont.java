@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class le extends ca {
+abstract class BitmapFont extends ca {
     int field_G;
     private byte[] field_u;
     private int[] field_x;
@@ -325,7 +325,7 @@ abstract class le extends ca {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_u[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)le.a(var15, var16, var17, this.field_K, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_u[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_K, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -700,10 +700,10 @@ abstract class le extends ca {
               }
               param1 = param1 + this.field_K[var8];
               if (field_y != -1) {
-                lf.a(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_y);
+                SoftwareRasterizer.a(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_y);
               }
               if (field_w != -1) {
-                lf.a(var11, param2 + this.field_C + 1, param1 - var11, field_w);
+                SoftwareRasterizer.a(var11, param2 + this.field_C + 1, param1 - var11, field_w);
               }
               var5 = var8;
             }
@@ -788,7 +788,7 @@ abstract class le extends ca {
         }
     }
 
-    le(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

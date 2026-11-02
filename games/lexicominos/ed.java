@@ -95,13 +95,13 @@ abstract class ed extends ca {
     }
 
     final static void a(int param0, sh param1) {
-        sd var2 = null;
+        VorbisSample var2 = null;
         try {
-          sd.b(param1.a((byte) 127, "", "headers.packvorbis"));
+          VorbisSample.b(param1.a((byte) 127, "", "headers.packvorbis"));
           if (param0 != 0) {
             ed.c(-110);
           }
-          var2 = sd.a(param1, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ed.FB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

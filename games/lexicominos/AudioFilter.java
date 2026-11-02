@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi {
+final class AudioFilter {
     private static float field_h;
     int[] field_c;
     static int[][] field_g;
@@ -67,7 +67,7 @@ final class gi {
     private final float a(int param0, int param1, float param2) {
         float var4 = (float)this.field_d[param0][0][param1] + param2 * (float)(this.field_d[param0][1][param1] - this.field_d[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return gi.a(var4);
+        return AudioFilter.a(var4);
     }
 
     private final static float a(float param0) {
@@ -75,7 +75,7 @@ final class gi {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    final void a(wf param0, se param1) {
+    final void a(wf param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;
@@ -133,7 +133,7 @@ final class gi {
         field_g = (int[][]) null;
     }
 
-    gi() {
+    AudioFilter() {
         this.field_c = new int[2];
         this.field_d = new int[2][2][4];
         this.field_e = new int[2][2][4];

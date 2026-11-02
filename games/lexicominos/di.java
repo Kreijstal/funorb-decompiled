@@ -44,7 +44,7 @@ final class di extends id {
         }
     }
 
-    private di(le param0, int param1) {
+    private di(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

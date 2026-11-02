@@ -9,7 +9,7 @@ final class cb extends kd {
     static String field_t;
     static db field_n;
     int field_i;
-    ke field_w;
+    PcmSample field_w;
     wj field_p;
     int field_y;
     static String field_A;
@@ -22,7 +22,7 @@ final class cb extends kd {
     int field_v;
     int field_B;
     int field_s;
-    cc field_C;
+    PcmSampleStream field_C;
     int field_l;
     int field_z;
     int field_h;
@@ -48,7 +48,7 @@ final class cb extends kd {
         int var1_intLifetime1;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
-          k.b();
+          MeshRasterState.b();
           gl.field_e = new int[260];
           sb.field_d = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {

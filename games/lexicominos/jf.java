@@ -5,7 +5,7 @@ final class jf extends mg {
     static db field_N;
     private boolean field_J;
     static long field_P;
-    private le field_D;
+    private BitmapFont field_D;
     static String field_G;
     static int field_K;
     private int field_F;
@@ -35,7 +35,7 @@ final class jf extends mg {
         return var3Lifetime1;
     }
 
-    jf(int param0, int param1, int param2, int param3, w param4, boolean param5, int param6, int param7, le param8, int param9, String param10) {
+    jf(int param0, int param1, int param2, int param3, w param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (rd) null, (vd) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

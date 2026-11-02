@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lk extends kd {
+abstract class PcmStream extends kd {
     volatile boolean field_j;
     kh field_k;
-    lk field_i;
+    PcmStream field_i;
     int field_h;
 
     final void a(int[] param0, int param1, int param2) {
@@ -21,15 +21,15 @@ abstract class lk extends kd {
 
     abstract void a(int param0);
 
-    abstract lk b();
+    abstract PcmStream b();
 
-    abstract lk d();
+    abstract PcmStream d();
 
     int c() {
         return 255;
     }
 
-    protected lk() {
+    protected PcmStream() {
         this.field_j = true;
     }
 }

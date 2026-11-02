@@ -110,13 +110,13 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var3_int = param1.length();
           var4 = var3_int;
           var5 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             var6_int = param1.indexOf("<%", var5);
             stackIn_6_0 = ~var6_int;
-            L2: while (true) {
+            scanLoop2: while (true) {
               if (stackIn_6_0 > -1) {
                 if (var11 == 0) {
-                  break L2;
+                  break scanLoop2;
                 }
               } else {
                 var5 = var6_int + 2;
@@ -126,7 +126,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 stackIn_6_0 = stackOut_13_0 ? 1 : 0;
                 stackIn_14_0 = stackOut_13_0;
                 if (var11 != 0) {
-                  continue L2;
+                  continue scanLoop2;
                 }
                 if (stackIn_14_0) {
                   var5++;
@@ -137,7 +137,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               var7_ref_String = param1.substring(var6_int + 2, var5);
               if (!bc.a(param2, (CharSequence) ((Object) var7_ref_String)) &&
                 var11 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
               if (var3_int > var5 &&
                 param1.charAt(var5) == 62) {
@@ -146,7 +146,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 var4 = var4 + (args[var8].length() + var6_int - var5);
               }
               if (var11 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
               break;
             }
@@ -155,18 +155,18 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var6 = new StringBuilder(var4);
           var7 = 0;
           var5Lifetime1 = 0;
-          L10: while (true) {
+          scanLoop3: while (true) {
             var8Lifetime1 = param1.indexOf("<%", var5Lifetime1);
             stackIn_32_0 = 0;
             boolean decompiledNaturalLoopExit0 = false;
-            L11: while (!(decompiledNaturalLoopExit0 = (stackIn_32_0 > var8Lifetime1))) {
+            scanLoop4: while (!(decompiledNaturalLoopExit0 = (stackIn_32_0 > var8Lifetime1))) {
               var5Lifetime1 = 2 + var8Lifetime1;
               while (var3_int > var5Lifetime1) {
                 stackOut_35_0 = ne.a((byte) 85, param1.charAt(var5Lifetime1));
                 stackIn_32_0 = stackOut_35_0 ? 1 : 0;
                 stackIn_36_0 = stackOut_35_0;
                 if (var11 != 0) {
-                  continue L11;
+                  continue scanLoop4;
                 }
                 if (stackIn_36_0) {
                   var5Lifetime1++;
@@ -176,7 +176,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               }
               var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
               if (!bc.a(param2, (CharSequence) ((Object) var9))) {
-                continue L10;
+                continue scanLoop3;
               }
               if (var11 == 0) {
                 if (var3_int > var5Lifetime1 &&
@@ -187,7 +187,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   discarded$1 = var6.append(args[var10]);
                   var7 = var5Lifetime1;
                 }
-                continue L10;
+                continue scanLoop3;
               }
               break;
             }
@@ -362,7 +362,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (hh.field_M != null) {
             uc.field_eb = 0;
-            qb.field_j = param0.getX();
+            GameAppletShell.field_j = param0.getX();
             gk.field_b = param0.getY();
             rf.c(0);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
@@ -422,7 +422,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(int[] param0, boolean param1, int[] param2, boolean param3, boolean param4, pk param5, byte param6) {
+    final static void a(int[] param0, boolean param1, int[] param2, boolean param3, boolean param4, TriangleMesh param5, byte param6) {
         int stackIn_60_0 = 0;
         int stackIn_60_1 = 0;
         int stackIn_69_0 = 0;
@@ -507,10 +507,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var9 = var23Lifetime1 * param2[5] + (param2[4] * var22Lifetime1 + var21Lifetime1 * param2[3]) >> 16 - sb.field_d;
           var10 = var22Lifetime1 * param2[7] + var21Lifetime1 * param2[6] + param2[8] * var23Lifetime1 >> 16 - sb.field_d;
           var11 = var21Lifetime1 * param2[9] - (-(var22Lifetime1 * param2[10]) - var23Lifetime1 * param2[11]) >> 16;
-          var21Lifetime2 = k.field_g;
-          var22Lifetime2 = k.field_a;
+          var21Lifetime2 = MeshRasterState.field_g;
+          var22Lifetime2 = MeshRasterState.field_a;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param5.field_w) {
               var24Lifetime1 = param5.field_h[var23Lifetime2];
@@ -524,7 +524,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (var30 != 0) {
                 if (stackIn_60_0 > stackIn_60_1) {
                   stackIn_69_0 = ~var18;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -611,7 +611,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   }
                   stackIn_69_0 = ~var18;
                   if (var30 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_69_0 <= ~qf.field_q.length) {
                     break;

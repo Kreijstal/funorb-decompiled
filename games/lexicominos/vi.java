@@ -67,12 +67,12 @@ final class vi extends kd {
         field_l = null;
     }
 
-    final static cd a(byte[] param0, byte param1) {
-        cd var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, byte param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        cd stackIn_5_0 = null;
-        cd stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -80,13 +80,13 @@ final class vi extends kd {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (cd) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 < 100) {
-            stackIn_5_0 = (cd) null;
+            stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new cd(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, be.field_f);
+          var2 = new BinaryBitmapFont(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, be.field_f);
           gk.a(12428);
           stackIn_7_0 = var2;
           return stackIn_7_0;
