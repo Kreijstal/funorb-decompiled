@@ -20,7 +20,7 @@ final class kh {
 
     final static void a(int param0) {
         qa.field_o = null;
-        jg.field_d = false;
+        FullscreenFocusCanvas.field_d = false;
         qc.field_h = null;
         ak.field_b = null;
         i.field_I = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r {
+final class IsaacRandom {
     private int field_k;
     private int[] field_f;
     private int[] field_h;
@@ -79,7 +79,7 @@ final class r {
         return this.field_f[fieldTemp$0];
     }
 
-    r(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_h = new int[256];
@@ -247,9 +247,9 @@ final class r {
           ae.a(26197, param0);
           pb.a(param0, param2 ^ -89);
           pj.a(param2 + 2, param0);
-          qk.e(param2 ^ param2);
+          ProxySocketConnector.e(param2 ^ param2);
           gl.a((byte) 28);
-          ad.field_h = 0 - a.field_i;
+          BufferedSocket.field_h = 0 - a.field_i;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

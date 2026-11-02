@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends ki implements ka {
+final class ig extends WidgetContainer implements ka {
     private pj field_G;
     static int[] field_H;
     private pj field_E;
@@ -28,7 +28,7 @@ final class ig extends ki implements ka {
 
     public ig() {
         super(0, 0, 476, 225, (j) null);
-        this.field_E = new pj(wk.field_g, (dg) null);
+        this.field_E = new pj(DelegatingCanvas.field_g, (dg) null);
         this.field_F = new pj(mf.field_F, (dg) null);
         this.field_G = new pj(pf.field_c, (dg) null);
         gh var1 = new gh();
@@ -51,7 +51,7 @@ final class ig extends ki implements ka {
         this.a(this.field_G, 5411);
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -146,7 +146,7 @@ final class ig extends ki implements ka {
           if (param3 != this.field_F) {
             if (param3 != this.field_E) {
               if (this.field_G == param3) {
-                qk.f(4);
+                ProxySocketConnector.f(4);
               }
             } else {
               wf.d(350);

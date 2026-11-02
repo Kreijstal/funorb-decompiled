@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c extends rc {
+final class c extends UiWidget {
     private o field_A;
     private o[] field_S;
     private int field_O;
@@ -91,7 +91,7 @@ final class c extends rc {
         this.field_G = new o(this.field_x >> 1, this.field_x);
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -236,7 +236,7 @@ final class c extends rc {
               return true;
             }
           }
-          var2Lifetime1 = qk.field_k;
+          var2Lifetime1 = ProxySocketConnector.field_k;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (var4Lifetime1 == param1) {

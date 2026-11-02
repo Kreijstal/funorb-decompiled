@@ -73,15 +73,15 @@ final class rg {
     }
 
     final static SocketConnector a(String param0, int param1, int param2) {
-        qk var3 = null;
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        qk stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new qk();
+          var3 = new ProxySocketConnector();
           ((SocketConnector) ((Object) var3)).field_b = param1;
           if (param2 != 2525) {
             rg.a(-91);

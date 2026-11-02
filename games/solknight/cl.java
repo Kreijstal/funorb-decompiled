@@ -24,7 +24,7 @@ final class cl extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!ec.a(30418, var5)) {
+          if (!DualLinkNode.a(30418, var5)) {
             stackIn_3_0 = rg.field_f;
             return stackIn_3_0;
           }
@@ -83,7 +83,7 @@ final class cl extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param0, (byte) -116) == rg.field_f) {
-            stackIn_3_0 = qh.field_e;
+            stackIn_3_0 = GameKeyHandler.field_e;
             return stackIn_3_0;
           }
           if (!param1) {

@@ -6,7 +6,7 @@ final class qa extends a {
     static int field_k;
     static java.math.BigInteger field_p;
     private boolean field_l;
-    static dl field_n;
+    static PlatformTaskDispatcher field_n;
     private String field_j;
     static String[] field_o;
     static String field_r;
@@ -51,7 +51,7 @@ final class qa extends a {
             return stackIn_7_0;
           }
           if (param1) {
-            field_n = (dl) null;
+            field_n = (PlatformTaskDispatcher) null;
           }
           stackIn_11_0 = dc.field_l;
           return stackIn_11_0;

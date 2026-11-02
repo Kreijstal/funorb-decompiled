@@ -26,7 +26,7 @@ abstract class a extends wf implements pi {
         }
         try {
           pe.field_m = param1;
-          jl.field_e = param2;
+          SecondaryNodeDequeIterator.field_e = param2;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "a.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

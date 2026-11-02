@@ -90,7 +90,7 @@ final class kb {
         te.field_I[6] = h.field_f;
         te.field_I[12] = vb.field_f;
         te.field_I[14] = k.field_a;
-        te.field_I[17] = rc.field_s;
+        te.field_I[17] = UiWidget.field_s;
         te.field_I[10] = gf.field_X[2];
         te.field_I[18] = ah.field_g;
         if (param0 < -101) {
@@ -107,7 +107,7 @@ final class kb {
         if (param0 != 80) {
           return false;
         }
-        if (rc.field_o == this) {
+        if (UiWidget.field_o == this) {
           return true;
         }
         if (dk.field_h == this) {

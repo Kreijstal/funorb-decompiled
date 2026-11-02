@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class n implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     private int field_g;
     static String field_c;
     static Boolean field_b;
     private IntrusiveNode field_f;
-    static dl field_a;
+    static PlatformTaskDispatcher field_a;
     private IntrusiveNode field_d;
-    private ii field_e;
+    private IterableNodeHashTable field_e;
 
     public static void a(int param0) {
         field_b = null;
@@ -23,7 +23,7 @@ final class n implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = SolKnight.field_L ? 1 : 0;
-        if (this.field_f != this.field_e.field_b[-1 + this.field_g]) {
+        if (this.field_f != this.field_e.buckets[-1 + this.field_g]) {
           return true;
         }
         while (true) {
@@ -32,13 +32,13 @@ final class n implements Iterator {
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          if (this.field_e.field_b[fieldTemp$0].previous == this.field_e.field_b[this.field_g - 1]) {
-            this.field_f = this.field_e.field_b[this.field_g - 1];
+          if (this.field_e.buckets[fieldTemp$0].previous == this.field_e.buckets[this.field_g - 1]) {
+            this.field_f = this.field_e.buckets[this.field_g - 1];
             continue;
           }
           break;
         }
-        this.field_f = this.field_e.field_b[this.field_g - 1].previous;
+        this.field_f = this.field_e.buckets[this.field_g - 1].previous;
         return true;
     }
 
@@ -51,7 +51,7 @@ final class n implements Iterator {
     }
 
     private final void b(int param0) {
-        this.field_f = this.field_e.field_b[0].previous;
+        this.field_f = this.field_e.buckets[0].previous;
         this.field_d = null;
         if (param0 <= -23) {
           this.field_g = 1;
@@ -66,7 +66,7 @@ final class n implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = SolKnight.field_L ? 1 : 0;
-        if (this.field_f != this.field_e.field_b[this.field_g - 1]) {
+        if (this.field_f != this.field_e.buckets[this.field_g - 1]) {
           var1 = this.field_f;
           this.field_f = var1.previous;
           this.field_d = var1;
@@ -78,14 +78,14 @@ final class n implements Iterator {
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          var1 = this.field_e.field_b[fieldTemp$0].previous;
-        } while (this.field_e.field_b[this.field_g - 1] == var1);
+          var1 = this.field_e.buckets[fieldTemp$0].previous;
+        } while (this.field_e.buckets[this.field_g - 1] == var1);
         this.field_f = var1.previous;
         this.field_d = var1;
         return var1;
     }
 
-    n(ii param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_d = null;
         try {
           this.field_e = param0;

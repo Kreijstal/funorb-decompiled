@@ -11,11 +11,11 @@ class uf extends af {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_F, -1, 2147483647, false);
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         try {
           if (param0 < 113) {
-            rc var7 = (rc) null;
-            this.a((byte) 62, -71, true, -109, (rc) null);
+            UiWidget var7 = (UiWidget) null;
+            this.a((byte) 62, -71, true, -109, (UiWidget) null);
           }
           if (param2) {
             pl.a(true, param4.field_x, param4.field_t, param4.field_j + param1, param3 + param4.field_m);
@@ -67,7 +67,7 @@ class uf extends af {
         ff[] var5;
         int var3Lifetime1;
         var4 = SolKnight.field_L ? 1 : 0;
-        var5 = qh.a(-89);
+        var5 = GameKeyHandler.a(-89);
         var2 = var5;
         if (param1 == -121) {
           for (var3 = 0; var5.length > var3; var3++) {

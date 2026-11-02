@@ -70,7 +70,7 @@ final class fc extends IntrusiveNode {
               var6_int = te.field_N.readUnsignedByte(255);
               te.field_N.position = 0;
               if (0 != var6_int) {
-                ef.field_e = ik.field_e;
+                ef.field_e = SecondaryNodeDeque.field_e;
                 ob.field_h = var6_int;
                 te.field_O = -1;
               } else {
@@ -82,10 +82,10 @@ final class fc extends IntrusiveNode {
               i.field_H = te.field_N.readLong(10526);
               te.field_N.position = 0;
               ci.a(-25776, param2, param1, lf.field_a, param3);
-              ef.field_e = rc.field_o;
+              ef.field_e = UiWidget.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ef.field_e == rc.field_o &&
+            if (ef.field_e == UiWidget.field_o &&
               bf.c(53, 1)) {
               var6_intLifetime1 = te.field_N.readUnsignedByte(255);
               ob.field_h = var6_intLifetime1;
@@ -94,7 +94,7 @@ final class fc extends IntrusiveNode {
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ef.field_e = ik.field_e;
+                  ef.field_e = SecondaryNodeDeque.field_e;
                   te.field_O = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -141,7 +141,7 @@ final class fc extends IntrusiveNode {
               }
               ne.field_g = te.field_N.readString(16);
               var13 = (CharSequence) ((Object) ne.field_g);
-              kf.field_D = jg.a(var13, -2);
+              kf.field_D = FullscreenFocusCanvas.a(var13, -2);
               c.field_H = te.field_N.readUnsignedByte(255);
               ef.field_e = jj.field_Y;
               if (lf.field_a.a(123) != dc.field_k) {
@@ -153,7 +153,7 @@ final class fc extends IntrusiveNode {
               }
               je.field_c = false;
               if (var12 != null) {
-                kl.a(ia.g(90), var12, 13536);
+                MouseInputHandler.a(ia.g(90), var12, 13536);
               }
               if (ob.field_l <= 0 &&
                 !lc.field_u) {
@@ -182,7 +182,7 @@ final class fc extends IntrusiveNode {
               stackIn_74_0 = ob.field_h;
               return stackIn_74_0;
             }
-            if (ik.field_e == ef.field_e &&
+            if (SecondaryNodeDeque.field_e == ef.field_e &&
               qd.b((byte) 125)) {
               je.a(false);
               if (ob.field_h == 7 &&
@@ -215,8 +215,8 @@ final class fc extends IntrusiveNode {
                 return stackIn_98_0;
               }
               var6_intLifetime2 = ia.field_kb;
-              ia.field_kb = ki.field_C;
-              ki.field_C = var6_intLifetime2;
+              ia.field_kb = WidgetContainer.field_C;
+              WidgetContainer.field_C = var6_intLifetime2;
               je.field_c = true;
             }
             stackIn_100_0 = -1;

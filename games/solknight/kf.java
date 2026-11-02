@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kf extends ki {
+abstract class kf extends WidgetContainer {
     private int field_I;
     static String field_D;
     static rb[] field_G;
@@ -150,12 +150,12 @@ abstract class kf extends ki {
         return !this.field_J ? 0 : this.field_E.d((byte) 109) == this ? 256 : 0;
     }
 
-    final rc d(byte param0) {
-        rc var2 = super.d(param0);
+    final UiWidget d(byte param0) {
+        UiWidget var2 = super.d(param0);
         if (var2 != null) {
           return var2;
         }
-        return (rc) (this);
+        return (UiWidget) (this);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

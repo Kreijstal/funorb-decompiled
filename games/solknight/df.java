@@ -10,8 +10,8 @@ final class df extends a {
         ua.field_L = 0;
         wd.field_a = 0;
         ti.field_e = uc.field_e;
-        qh.field_b = new sf(2);
-        qh.field_b.a(param1, -1, ad.a(ad.field_m, PacketBuffer.field_j, param0), param0 + 121);
+        GameKeyHandler.field_b = new sf(2);
+        GameKeyHandler.field_b.a(param1, -1, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, param0), param0 + 121);
     }
 
     final String a(String param0, boolean param1) {
@@ -101,7 +101,7 @@ final class df extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!rc.a(111, var5)) {
+          if (!UiWidget.a(111, var5)) {
             stackIn_2_0 = rg.field_f;
             return stackIn_2_0;
           }

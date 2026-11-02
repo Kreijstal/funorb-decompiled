@@ -68,7 +68,7 @@ final class vb extends il {
             return stackIn_6_0;
           }
           if (qc.field_i == ef.field_e) {
-            n.field_b = null;
+            NodeHashTableIterator.field_b = null;
             id.field_c.position = 0;
             if (param3 != null) {
               var9 = 0;
@@ -147,7 +147,7 @@ final class vb extends il {
                 ef.field_e = bj.field_a;
               } else {
                 bf.c(54, sk.g(-9917));
-                n.field_b = new Boolean(lj.a(te.field_N, -2));
+                NodeHashTableIterator.field_b = new Boolean(lj.a(te.field_N, -2));
                 te.field_N.position = 0;
               }
             }
@@ -176,7 +176,7 @@ final class vb extends il {
             } else {
               var9_ref_String = te.field_N.g(86);
               if (var9_ref_String != null) {
-                kl.a(ia.g(param6 + 21721), var9_ref_String, 13536);
+                MouseInputHandler.a(ia.g(param6 + 21721), var9_ref_String, 13536);
               }
             }
             je.a(false);
@@ -196,9 +196,9 @@ final class vb extends il {
               return stackIn_58_0;
             }
             var9Lifetime3 = ia.field_kb;
-            ia.field_kb = ki.field_C;
+            ia.field_kb = WidgetContainer.field_C;
             je.field_c = true;
-            ki.field_C = var9Lifetime3;
+            WidgetContainer.field_C = var9Lifetime3;
           }
           stackIn_60_0 = -1;
           return stackIn_60_0;
@@ -279,7 +279,7 @@ final class vb extends il {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = ig.field_H[fi.a((int) var21[var6], 255)];
             }
-            var1[var2] = new o(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var22);
+            var1[var2] = new o(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var22);
           } else {
             var16 = uf.field_s[var2];
             var12 = var16;
@@ -289,9 +289,9 @@ final class vb extends il {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = qk.a(ig.field_H[fi.a((int) var21[var7], 255)], fi.a((int) var16[var7], 255) << 24);
+              var6_ref_int__[var7] = ProxySocketConnector.a(ig.field_H[fi.a((int) var21[var7], 255)], fi.a((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (o) ((Object) new ui(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var17));
+            var1[var2] = (o) ((Object) new ui(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var17));
           }
         }
         og.a((byte) -97);

@@ -276,7 +276,7 @@ final class rb {
                           var4 = 320 + (-wd.field_c + (this.field_a >> 4));
                           var5 = (this.field_b >> 4) - si.field_E;
                           var6 = -var4 + PacketBuffer.field_j;
-                          var7 = ad.field_m - var5;
+                          var7 = BufferedSocket.field_m - var5;
                           if (ClientException.field_b >= 0) {
                             var6 = -var4 + (sk.field_o >> 4) - wd.field_c + 320;
                             var7 = -var5 + ((wg.field_e >> 4) - si.field_E);
@@ -403,7 +403,7 @@ final class rb {
                                             this.field_j = this.field_j - 5;
                                             ob.field_j = vk.field_p;
                                             bi.field_i = bi.field_i + 1;
-                                            cb.field_a = 256;
+                                            ProxyAuthenticationRequiredException.field_a = 256;
                                             this.field_d = 0;
                                             this.field_e = 0;
                                           }
@@ -456,7 +456,7 @@ final class rb {
                                               this.field_c = 0;
                                               pl.field_a = pl.field_a + vk.field_p * 2;
                                               ob.field_j = vk.field_p;
-                                              cb.field_a = 256;
+                                              ProxyAuthenticationRequiredException.field_a = 256;
                                               ud.field_k = ud.field_k + 2;
                                               bi.field_i = bi.field_i + 2;
                                               ic.field_t = ic.field_t + ((lc.field_h & -125932) >>> 16);
@@ -517,7 +517,7 @@ final class rb {
                                                 this.field_e = 0;
                                                 this.field_j = this.field_j - 5;
                                                 pl.field_a = pl.field_a + 3 * vk.field_p;
-                                                cb.field_a = 256;
+                                                ProxyAuthenticationRequiredException.field_a = 256;
                                               }
                                             } else {
                                               if (var4 == 28) {
@@ -568,7 +568,7 @@ final class rb {
                                                   ob.field_j = vk.field_p;
                                                   pl.field_a = pl.field_a + vk.field_p * 4;
                                                   ud.field_k = ud.field_k + 4;
-                                                  cb.field_a = 256;
+                                                  ProxyAuthenticationRequiredException.field_a = 256;
                                                   bi.field_i = bi.field_i + 4;
                                                   ic.field_t = ic.field_t + ((-111141 & lc.field_h) >>> 15);
                                                   this.field_c = 0;
@@ -621,7 +621,7 @@ final class rb {
                                                     }
                                                     mb.a(true, 26, 256);
                                                     pl.field_a = pl.field_a + 5 * vk.field_p;
-                                                    cb.field_a = 256;
+                                                    ProxyAuthenticationRequiredException.field_a = 256;
                                                     this.field_c = 0;
                                                     bi.field_i = bi.field_i + 5;
                                                     this.field_j = this.field_j - 5;
@@ -701,7 +701,7 @@ final class rb {
                                                     ic.field_t = ic.field_t + 6 * (lc.field_h >>> 17);
                                                     this.field_j = this.field_j - 6;
                                                     this.field_c = 0;
-                                                    cb.field_a = 256;
+                                                    ProxyAuthenticationRequiredException.field_a = 256;
                                                     ob.field_j = vk.field_p;
                                                     ud.field_k = ud.field_k + 6;
                                                     this.field_e = 0;
@@ -784,7 +784,7 @@ final class rb {
                   var4 = (this.field_a >> 4) - wd.field_c + 320;
                   var5 = (this.field_b >> 4) - si.field_E;
                   var6 = -var4 + PacketBuffer.field_j;
-                  var7 = -var5 + ad.field_m;
+                  var7 = -var5 + BufferedSocket.field_m;
                   if (ClientException.field_b >= 0) {
                     var7 = -si.field_E + (wg.field_e >> 4) - var5;
                     var6 = -var4 + 320 + (-wd.field_c + (sk.field_o >> 4));
@@ -820,10 +820,10 @@ final class rb {
     }
 
     final static void c(int param0) {
-        if (ad.field_h != -a.field_i + 0 &&
-          ad.field_h != 250 - a.field_i) {
+        if (BufferedSocket.field_h != -a.field_i + 0 &&
+          BufferedSocket.field_h != 250 - a.field_i) {
         }
-        ad.field_h = ad.field_h + 1;
+        BufferedSocket.field_h = BufferedSocket.field_h + 1;
         if (param0 != -27347) {
           rb.a(78);
         }
@@ -1025,14 +1025,14 @@ final class rb {
                                 if (var7 >= 16) {
                                   break;
                                 }
-                                ii.field_g[var7].c(var4 - 8, -8 + var5, 16, 16, -(16 * this.field_e) + 256);
+                                IterableNodeHashTable.field_g[var7].c(var4 - 8, -8 + var5, 16, 16, -(16 * this.field_e) + 256);
                                 break;
                               case 13:
                                 var7 = 256 * this.field_e / 256;
                                 if (var7 >= 16) {
                                   break;
                                 }
-                                ii.field_g[var7].c(var4 - 16, -16 + var5, 32, 32, 256 - this.field_e * 16);
+                                IterableNodeHashTable.field_g[var7].c(var4 - 16, -16 + var5, 32, 32, 256 - this.field_e * 16);
                                 break;
                               case 14:
                                 mi.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16711680);
@@ -1173,7 +1173,7 @@ final class rb {
                                   if (var7 >= 16) {
                                     break;
                                   }
-                                  ii.field_g[var7].c(this.field_e + (-this.field_g + var4), this.field_e - this.field_g + var5, (-this.field_e + this.field_g) * 2, (this.field_g - this.field_e) * 2, 255 - this.field_e * 255 / this.field_g);
+                                  IterableNodeHashTable.field_g[var7].c(this.field_e + (-this.field_g + var4), this.field_e - this.field_g + var5, (-this.field_e + this.field_g) * 2, (this.field_g - this.field_e) * 2, 255 - this.field_e * 255 / this.field_g);
                                   ua.field_F[0].c(var4 - this.field_e * 4, var5 - 4 * this.field_e, this.field_e * 8, this.field_e * 8, -(128 * this.field_e / this.field_g) + 128);
                                 }
                                 break;
@@ -1243,11 +1243,11 @@ final class rb {
                           } else {
                             var7 = this.field_e * 256 / 256;
                             if (var7 < 16) {
-                              ii.field_g[var7].c(-(this.field_e * 4) + var4, -(this.field_e * 4) + var5, 8 * this.field_e, 8 * this.field_e, 256 - this.field_e * 16);
+                              IterableNodeHashTable.field_g[var7].c(-(this.field_e * 4) + var4, -(this.field_e * 4) + var5, 8 * this.field_e, 8 * this.field_e, 256 - this.field_e * 16);
                             }
                             var7 = 64 * this.field_e / 256;
                             if (16 > var7) {
-                              ii.field_g[var7].c(-(2 * this.field_e) + var4, -(this.field_e * 2) + var5, this.field_e * 4, 4 * this.field_e, -(this.field_e * 4) + 256);
+                              IterableNodeHashTable.field_g[var7].c(-(2 * this.field_e) + var4, -(this.field_e * 2) + var5, this.field_e * 4, 4 * this.field_e, -(this.field_e * 4) + 256);
                             }
                           }
                         } else {

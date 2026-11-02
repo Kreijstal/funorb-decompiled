@@ -36,7 +36,7 @@ final class fb {
             }
             var4 = param1;
             kf.a(1, var4);
-            a.field_h = wk.a((byte) 17, param1);
+            a.field_h = DelegatingCanvas.a((byte) 17, param1);
             return;
           }
           stackIn_12_0 = false;

@@ -100,7 +100,7 @@ class kj extends pj {
             field_I = -117L;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = kf.field_D.equals(jg.a(var3, -2));
+          stackIn_3_0 = kf.field_D.equals(FullscreenFocusCanvas.a(var3, -2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ class kj extends pj {
         }
     }
 
-    boolean a(int param0, rc param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -162,8 +162,8 @@ class kj extends pj {
         li var6 = this.field_Q;
         if (var6 == null) {
         } else {
-          var7 = var5.a(param2, (rc) (this), 0);
-          var8 = var5.a((rc) (this), false, param0);
+          var7 = var5.a(param2, (UiWidget) (this), 0);
+          var8 = var5.a((UiWidget) (this), false, param0);
           do {
             ci.a(2 + var6.field_m, -2 + var6.field_n + var8, 2 + var6.field_i, -2 + var6.field_o + var7, (byte) 123);
             var6 = var6.field_k;
@@ -344,7 +344,7 @@ class kj extends pj {
         this.field_L = new nc();
         var2 = 0;
         var3 = (eg) ((Object) this.field_w);
-        var4 = var3.a(-21480, (rc) (this));
+        var4 = var3.a(-21480, (UiWidget) (this));
         while (true) {
           var5 = this.field_i.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -404,7 +404,7 @@ class kj extends pj {
         return this.field_M[this.field_Q.field_l];
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -420,7 +420,7 @@ class kj extends pj {
           this.field_Q = null;
           if (this.field_v) {
             var5_int = -param0 + (PacketBuffer.field_j - this.field_m);
-            var6 = -this.field_j + (ad.field_m - param2);
+            var6 = -this.field_j + (BufferedSocket.field_m - param2);
             this.field_Q = this.a(var6, (byte) 22, var5_int);
           }
           return;
@@ -467,7 +467,7 @@ class kj extends pj {
         if (param2 != 1) {
           return;
         }
-        this.b(((eg) ((Object) this.field_w)).a((rc) (this), 6), param3, param0, 0, param1);
+        this.b(((eg) ((Object) this.field_w)).a((UiWidget) (this), 6), param3, param0, 0, param1);
     }
 
     static {

@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class si extends rc implements oh {
-    rc field_G;
+abstract class si extends UiWidget implements oh {
+    UiWidget field_G;
     static pc field_C;
     static int field_E;
     static String field_D;
@@ -32,7 +32,7 @@ abstract class si extends rc implements oh {
           this.field_G.g(0);
         }
         if (param0 != 0) {
-          this.field_G = (rc) null;
+          this.field_G = (UiWidget) null;
         }
     }
 
@@ -84,7 +84,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -124,11 +124,11 @@ abstract class si extends rc implements oh {
         }
     }
 
-    rc h(int param0) {
+    UiWidget h(int param0) {
         if (param0 != 0) {
           this.f(-42);
         }
-        rc var2 = this.field_G;
+        UiWidget var2 = this.field_G;
         if (var2 == null) {
           return null;
         }
@@ -141,7 +141,7 @@ abstract class si extends rc implements oh {
     void a(int param0, int param1, int param2, int param3) {
         if (param3 == param1 &&
           null != this.field_w) {
-          this.field_w.a((byte) 118, param0, true, param2, (rc) (this));
+          this.field_w.a((byte) 118, param0, true, param2, (UiWidget) (this));
         }
         if (this.field_G != null) {
           this.field_G.a(param0 + this.field_j, param1, param2 + this.field_m, 0);
@@ -162,7 +162,7 @@ abstract class si extends rc implements oh {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final boolean b(int param0, rc param1) {
+    private final boolean b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -171,7 +171,7 @@ abstract class si extends rc implements oh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 32) {
-            this.field_G = (rc) null;
+            this.field_G = (UiWidget) null;
           }
           stackIn_7_0 = (null != this.field_G) && (!this.field_G.b(true)) && (this.field_G.a(param0 ^ -1431, param1));
           return stackIn_7_0;
@@ -189,7 +189,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -269,7 +269,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    final boolean a(int param0, rc param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -368,7 +368,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -399,9 +399,9 @@ abstract class si extends rc implements oh {
         this.a(-126);
     }
 
-    void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         boolean discarded$1 = false;
-        rc var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -412,8 +412,8 @@ abstract class si extends rc implements oh {
             this.field_G.a(param0, param1 + 0, param2, param3 + this.field_j, param4, this.field_m + param5);
           }
           if (param1 != 0) {
-            var8 = (rc) null;
-            discarded$1 = this.b(-57, (rc) null);
+            var8 = (UiWidget) null;
+            discarded$1 = this.b(-57, (UiWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -430,7 +430,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    private final boolean a(rc param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -505,7 +505,7 @@ abstract class si extends rc implements oh {
         return this.h(0) != null ? true : false;
     }
 
-    final boolean a(int param0, rc param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;

@@ -4,7 +4,7 @@
 final class jd extends PacketBuffer {
     private int field_o;
     static volatile boolean field_p;
-    private r field_n;
+    private IsaacRandom field_n;
 
     final int l(int param0) {
         int fieldTemp$1 = 0;
@@ -255,7 +255,7 @@ final class jd extends PacketBuffer {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_n = new r(param1);
+          this.field_n = new IsaacRandom(param1);
           if (param0 != -1) {
             this.m(0);
           }
@@ -286,7 +286,7 @@ final class jd extends PacketBuffer {
         var6 = SolKnight.field_L ? 1 : 0;
         try {
           if (param0 <= 45) {
-            this.field_n = (r) null;
+            this.field_n = (IsaacRandom) null;
           }
           var5_int = 0;
           while (param1 > var5_int) {

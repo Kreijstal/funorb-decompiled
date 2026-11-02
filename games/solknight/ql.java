@@ -49,8 +49,8 @@ final class ql extends af {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
-        rc stackIn_5_0 = null;
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+        UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -68,7 +68,7 @@ final class ql extends af {
             return;
           }
           if (param4 instanceof pj) {
-            stackIn_5_0 = (rc) (param4);
+            stackIn_5_0 = (UiWidget) (param4);
           } else {
             stackIn_5_0 = null;
           }

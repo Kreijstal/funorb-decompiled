@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_b;
     static int field_a;
 
@@ -111,7 +111,7 @@ final class kl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               var5Lifetime1 = var7;
               if (param2 != 13536) {
                 var6 = (String) null;
-                kl.a((java.applet.Applet) null, (String) null, -70);
+                MouseInputHandler.a((java.applet.Applet) null, (String) null, -70);
               }
               var4 = param0.getParameter("cookiehost");
               var5Lifetime2 = var4;

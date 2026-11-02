@@ -29,17 +29,17 @@ final class pb implements j {
           var3 = var10.readUnsignedByte(255);
           var10.d((byte) -83);
           vc.field_f = ml.a(22795, var10);
-          wk.field_d = new uh[var3];
+          DelegatingCanvas.field_d = new uh[var3];
           bg.field_v = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            wk.field_d[var4] = ab.a(var8, -14945);
+            DelegatingCanvas.field_d[var4] = ab.a(var8, -14945);
           }
           var5_int = -69 % ((param1 + 46) / 41);
           var10.m(0);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = wk.field_d[var9];
+            var5 = DelegatingCanvas.field_d[var9];
             var5.a(8292, 1, 6, 6, 6);
             var5.b(32767);
             var6 = new int[]{var5.field_Q + var5.field_E >> 1, var5.field_m + var5.field_t >> 1, var5.field_G + var5.field_N >> 1};
@@ -62,7 +62,7 @@ final class pb implements j {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -128,7 +128,7 @@ final class pb implements j {
         }
     }
 
-    final static void a(dl param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mg extends ec {
+abstract class mg extends DualLinkNode {
     private int[] field_r;
     private int[] field_y;
     private static StringBuilder field_G;

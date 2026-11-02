@@ -28,7 +28,7 @@ class gj {
         field_p = null;
     }
 
-    final static gj a(dl param0, java.awt.Component param1, int param2, int param3) {
+    final static gj a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           ca var4 = null;
           Throwable var4_ref = null;

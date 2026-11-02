@@ -44,7 +44,7 @@ final class uc {
           var3_int = 0;
           var4 = th.field_J;
           while (vc.field_d.length > var3_int) {
-            var5 = oa.field_l[var3_int];
+            var5 = ImageProducerRasterBuffer.field_l[var3_int];
             if (var5 >= 0) {
               var6 = fa.a(vc.field_d[var3_int], true, (byte) 99);
               var4 = var4 + vg.field_N;
@@ -98,7 +98,7 @@ final class uc {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = jg.a(param1, -2);
+            var4 = FullscreenFocusCanvas.a(param1, -2);
             if (var4 != null &&
               1 <= var4.length()) {
               if (!ck.a(var4.charAt(0), true) &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends ec {
+final class ba extends DualLinkNode {
     private int[][] field_q;
     static String field_o;
     static String field_r;
@@ -140,7 +140,7 @@ final class ba extends ec {
         }
         if (this.field_n != null) {
           for (var2 = 0; var2 < this.field_n.length; var2++) {
-            this.field_n[var2] = qk.a(this.field_n[var2], 32768);
+            this.field_n[var2] = ProxySocketConnector.a(this.field_n[var2], 32768);
           }
         }
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sk extends ec {
+abstract class sk extends DualLinkNode {
     boolean field_r;
     boolean field_q;
     static int field_o;
@@ -46,12 +46,12 @@ abstract class sk extends ec {
         }
     }
 
-    final static void a(int param0, int param1, int param2, dl param3, int param4, int param5, int param6, int param7, String param8) {
+    final static void a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5, int param6, int param7, String param8) {
         try {
           ue.field_a = param2;
-          qk.field_o = param8;
+          ProxySocketConnector.field_o = param8;
           vc.field_e = param4;
-          n.field_a = param3;
+          NodeHashTableIterator.field_a = param3;
           hj.field_x = param5;
           sa.field_o = param7;
           if (param0 != -11400) {

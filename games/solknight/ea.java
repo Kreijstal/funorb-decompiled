@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ea extends va {
-    private ad field_r;
+    private BufferedSocket field_r;
     static String field_q;
     static int[] field_p;
     static int field_o;
@@ -33,7 +33,7 @@ final class ea extends va {
               }
               this.field_r = null;
             }
-            this.field_r = (ad) (param2);
+            this.field_r = (BufferedSocket) (param2);
             if (param1 != 106) {
               this.c(false);
             }
@@ -102,7 +102,7 @@ final class ea extends va {
 
     final static od e(byte param0) {
         int var1 = -72 / ((param0 - 13) / 63);
-        od var2 = new od(kl.field_a, we.field_e, ph.field_h[0], qf.field_d[0], sa.field_l[0], uj.field_b[0], jc.field_c[0], ig.field_H);
+        od var2 = new od(MouseInputHandler.field_a, we.field_e, ph.field_h[0], qf.field_d[0], sa.field_l[0], uj.field_b[0], jc.field_c[0], ig.field_H);
         og.a((byte) -97);
         return var2;
     }
@@ -220,7 +220,7 @@ final class ea extends va {
             while (var2 != null) {
               this.field_e.position = 0;
               this.field_e.c(param0 ^ 71, 1);
-              this.field_e.a(var2.field_l, param0 ^ 25576);
+              this.field_e.a(var2.secondaryKey, param0 ^ 25576);
               this.field_r.a(-28748, 0, this.field_e.payload.length, this.field_e.payload);
               this.field_i.a(var2, 0);
               var2 = (ic) (this.field_m.b(~param0));
@@ -232,7 +232,7 @@ final class ea extends va {
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
               this.field_e.c(117, 0);
-              this.field_e.a(var2Lifetime1.field_l, 25576);
+              this.field_e.a(var2Lifetime1.secondaryKey, 25576);
               this.field_r.a(param0 ^ -28748, 0, this.field_e.payload.length, this.field_e.payload);
               this.field_k.a(var2Lifetime1, 0);
               var2Lifetime1 = (ic) (this.field_d.b(-1));
@@ -279,7 +279,7 @@ final class ea extends va {
                     this.field_a.field_s = 0;
                   }
                 } else {
-                  this.field_a.a(97);
+                  this.field_a.unlinkSecondary(97);
                   this.field_a.field_m = false;
                   this.field_a = null;
                 }
@@ -322,7 +322,7 @@ final class ea extends va {
                     if (var11 == 0) {
                       var14_ref = (ic) (this.field_i.d(124));
                       while (var14_ref != null) {
-                        if (~var14_ref.field_l == ~var12) {
+                        if (~var14_ref.secondaryKey == ~var12) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
@@ -334,7 +334,7 @@ final class ea extends va {
                       (decompiledFrameCompleted0)) {
                       var14_ref = (ic) (this.field_k.d(122));
                       while (var14_ref != null) {
-                        if (~var12 == ~var14_ref.field_l) {
+                        if (~var12 == ~var14_ref.secondaryKey) {
                           break;
                         }
                         var14_ref = (ic) (this.field_k.b(-1));

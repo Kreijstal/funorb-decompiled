@@ -39,7 +39,7 @@ abstract class ld extends kf {
             ld.c(-118, -71, 91);
           }
           try {
-            stackIn_3_0 = (lf) (Class.forName("sc").newInstance());
+            stackIn_3_0 = (lf) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ abstract class ld extends kf {
         }
         fa.field_b.d(param0 - (-this.field_t + 90), param2 + 10);
         je.a(fi.field_a, 5 + param0, param2 + 35, this.field_t - 10, (byte) 93);
-        je.a(qk.field_l, param0, -22 + (this.field_x + param2), this.field_t, (byte) 114);
+        je.a(ProxySocketConnector.field_l, param0, -22 + (this.field_x + param2), this.field_t, (byte) 114);
         var7Lifetime2 = 127;
         var4Lifetime2 = -79 + this.field_x;
         var5Lifetime2 = 169;

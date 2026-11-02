@@ -4,7 +4,7 @@
 final class dj extends IntrusiveNode {
     int field_h;
     int field_i;
-    static jg field_k;
+    static FullscreenFocusCanvas field_k;
     static rl field_j;
 
     private dj() throws Throwable {
@@ -15,7 +15,7 @@ final class dj extends IntrusiveNode {
         field_j = null;
         field_k = null;
         if (param0 > -65) {
-          field_k = (jg) null;
+          field_k = (FullscreenFocusCanvas) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class dj extends IntrusiveNode {
           }
           var4_int = param2.c(120, param3);
           var5 = param2.a(param1, -1, var4_int);
-          stackIn_4_0 = ki.a(10, param2, var5, var4_int);
+          stackIn_4_0 = WidgetContainer.a(10, param2, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

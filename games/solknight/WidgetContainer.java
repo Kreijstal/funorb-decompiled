@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ki extends rc implements oh {
+class WidgetContainer extends UiWidget implements oh {
     static int field_C;
     static String field_A;
     nc field_B;
@@ -12,12 +12,12 @@ class ki extends rc implements oh {
         int var4 = SolKnight.field_L ? 1 : 0;
         ck var2 = new ck(this.field_B);
         if (!param0) {
-          ki.d(false);
+          WidgetContainer.d(false);
         }
-        rc var3 = (rc) (var2.a((byte) 114));
+        UiWidget var3 = (UiWidget) (var2.a((byte) 114));
         while (var3 != null) {
           var3.d(1);
-          var3 = (rc) (var2.c(124));
+          var3 = (UiWidget) (var2.c(124));
         }
     }
 
@@ -26,24 +26,24 @@ class ki extends rc implements oh {
         int var7 = SolKnight.field_L ? 1 : 0;
         int var2 = 0;
         ck var3 = new ck(this.field_B);
-        rc var4 = (rc) (var3.a((byte) -59));
+        UiWidget var4 = (UiWidget) (var3.a((byte) -59));
         int var5 = 21 / ((param0 - 17) / 43);
         while (var4 != null) {
           var6 = var4.f(74);
           if (var2 < var6) {
             var2 = var6;
           }
-          var4 = (rc) (var3.c(116));
+          var4 = (UiWidget) (var3.c(116));
         }
         return var2;
     }
 
-    ki(int param0, int param1, int param2, int param3, j param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, j param4) {
         super(param0, param1, param2, param3, param4, (dg) null);
         this.field_B = new nc();
     }
 
-    final void a(rc param0, int param1) {
+    final void a(UiWidget param0, int param1) {
         try {
           if (param1 != 5411) {
             Hashtable var4 = (Hashtable) null;
@@ -88,7 +88,7 @@ class ki extends rc implements oh {
           }
           if (param0 != 10) {
             var5 = (java.applet.Applet) null;
-            ki.a((java.applet.Applet) null, 57);
+            WidgetContainer.a((java.applet.Applet) null, 57);
           }
           stackIn_6_0 = bl.b(false);
           return stackIn_6_0;
@@ -112,7 +112,7 @@ class ki extends rc implements oh {
         StringBuilder discarded$4 = null;
         ck var5 = null;
         int var6 = 0;
-        rc var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -125,14 +125,14 @@ class ki extends rc implements oh {
         try {
           var6 = 26 / ((param1 - 39) / 59);
           var5 = new ck(this.field_B);
-          var7 = (rc) (var5.a((byte) -99));
+          var7 = (UiWidget) (var5.a((byte) -99));
           while (var7 != null) {
             discarded$3 = param2.append('\n');
             for (var8 = 0; var8 <= param0; var8++) {
               discarded$4 = param2.append(' ');
             }
             var7.a(-81, param3, param2, param0 + 1);
-            var7 = (rc) (var5.c(115));
+            var7 = (UiWidget) (var5.c(115));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -159,22 +159,22 @@ class ki extends rc implements oh {
         int var7 = SolKnight.field_L ? 1 : 0;
         if (param1 == 0 &&
           this.field_w != null) {
-          this.field_w.a((byte) 116, param0, true, param2, (rc) (this));
+          this.field_w.a((byte) 116, param0, true, param2, (UiWidget) (this));
         }
         if (param3 != 0) {
           return;
         }
         ck var5 = new ck(this.field_B);
-        rc var6 = (rc) (var5.a(-25119));
+        UiWidget var6 = (UiWidget) (var5.a(-25119));
         while (var6 != null) {
           var6.a(this.field_j + param0, param1, param2 + this.field_m, 0);
-          var6 = (rc) (var5.b(640));
+          var6 = (UiWidget) (var5.b(640));
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
-        rc var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         ck var11 = null;
         RuntimeException stackIn_14_0 = null;
@@ -184,11 +184,11 @@ class ki extends rc implements oh {
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           var11 = new ck(this.field_B);
-          var9 = (rc) (var11.a((byte) 125));
+          var9 = (UiWidget) (var11.a((byte) 125));
           while (var9 != null) {
             if (var9.isLinked(false)) {
               if (!var9.a(param0, param1 + this.field_m, false, param3, param4, param5 + this.field_j, param6)) {
-                var9 = (rc) (var11.c(122));
+                var9 = (UiWidget) (var11.c(122));
                 continue;
               }
               return true;
@@ -228,11 +228,11 @@ class ki extends rc implements oh {
         }
     }
 
-    final boolean b(int param0, rc param1) {
+    final boolean b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         ck var5 = null;
-        rc var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         ck var8 = null;
         RuntimeException stackIn_21_0 = null;
@@ -248,21 +248,21 @@ class ki extends rc implements oh {
             this.field_B = (nc) null;
           }
           var8 = new ck(this.field_B);
-          var4 = (rc) (var8.a((byte) 112));
+          var4 = (UiWidget) (var8.a((byte) 112));
           while (var4 != null) {
             if (var4.b(true)) {
               var5 = new ck(this.field_B);
               var5.a(26229, var4);
-              var6 = (rc) (var5.c(121));
+              var6 = (UiWidget) (var5.c(121));
               while (var6 != null) {
                 if (!var6.a(-1463, param1)) {
-                  var6 = (rc) (var5.c(125));
+                  var6 = (UiWidget) (var5.c(125));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (rc) (var8.c(115));
+            var4 = (UiWidget) (var8.c(115));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,11 +279,11 @@ class ki extends rc implements oh {
         }
     }
 
-    boolean a(char param0, byte param1, int param2, rc param3) {
+    boolean a(char param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        rc var8 = null;
+        UiWidget var8 = null;
         ck var9 = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_20_0 = null;
@@ -293,14 +293,14 @@ class ki extends rc implements oh {
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           var9 = new ck(this.field_B);
-          var8 = (rc) (var9.a((byte) 77));
+          var8 = (UiWidget) (var9.a((byte) 77));
           while (var8 != null) {
             if (var8.isLinked(false)) {
               if (var8.b(true) &&
                 var8.a(param0, (byte) 88, param2, param3)) {
                 return true;
               }
-              var8 = (rc) (var9.c(115));
+              var8 = (UiWidget) (var9.c(115));
               continue;
             }
             break;
@@ -332,7 +332,7 @@ class ki extends rc implements oh {
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
-        rc var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -346,8 +346,8 @@ class ki extends rc implements oh {
             this.a(param3, -31, param2, param1);
           }
           if (param0 > -41) {
-            var6 = (rc) null;
-            this.a('￯', (byte) 103, -3, (rc) null);
+            var6 = (UiWidget) null;
+            this.a('￯', (byte) 103, -3, (UiWidget) null);
           }
           stackIn_6_0 = (StringBuilder) (param2);
           return stackIn_6_0;
@@ -371,10 +371,10 @@ class ki extends rc implements oh {
         }
     }
 
-    final void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         ck var7 = null;
-        rc var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -386,11 +386,11 @@ class ki extends rc implements oh {
           if (param1 != 0) {
             field_A = (String) null;
           }
-          var8 = (rc) (var7.a((byte) 93));
+          var8 = (UiWidget) (var7.a((byte) 93));
           while (var8 != null) {
             if (var8.isLinked(false)) {
               var8.a(param0, param1 + 0, param2, this.field_j + param3, param4, this.field_m + param5);
-              var8 = (rc) (var7.c(param1 ^ 127));
+              var8 = (UiWidget) (var7.c(param1 ^ 127));
               continue;
             }
             break;
@@ -410,10 +410,10 @@ class ki extends rc implements oh {
         }
     }
 
-    final boolean a(int param0, rc param1, int param2, int param3, int param4, int param5, byte param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, byte param6) {
         ck var8 = null;
         RuntimeException var8_ref = null;
-        rc var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -422,14 +422,14 @@ class ki extends rc implements oh {
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           var8 = new ck(this.field_B);
-          var9 = (rc) (var8.a((byte) 98));
+          var9 = (UiWidget) (var8.a((byte) 98));
           while (var9 != null) {
             if (var9.isLinked(false)) {
               if (var9.b(true) &&
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) 50)) {
                 return true;
               }
-              var9 = (rc) (var8.c(118));
+              var9 = (UiWidget) (var8.c(118));
               continue;
             }
             break;
@@ -454,7 +454,7 @@ class ki extends rc implements oh {
 
     final String c(byte param0) {
         ck var2;
-        rc var3;
+        UiWidget var3;
         String var4;
         int var5;
         var5 = SolKnight.field_L ? 1 : 0;
@@ -462,13 +462,13 @@ class ki extends rc implements oh {
         if (param0 < 14) {
           this.c((byte) 48);
         }
-        var3 = (rc) (var2.a((byte) -122));
+        var3 = (UiWidget) (var2.a((byte) -122));
         while (var3 != null) {
           var4 = var3.c((byte) 106);
           if (var4 != null) {
             return var4;
           }
-          var3 = (rc) (var2.c(117));
+          var3 = (UiWidget) (var2.c(117));
         }
         return null;
     }
@@ -476,21 +476,21 @@ class ki extends rc implements oh {
     final void g(int param0) {
         int var4 = SolKnight.field_L ? 1 : 0;
         if (param0 != 0) {
-          rc var5 = (rc) null;
-          this.a((byte) 3, (rc) null);
+          UiWidget var5 = (UiWidget) null;
+          this.a((byte) 3, (UiWidget) null);
         }
         ck var2 = new ck(this.field_B);
-        rc var3 = (rc) (var2.a((byte) 81));
+        UiWidget var3 = (UiWidget) (var2.a((byte) 81));
         while (var3 != null) {
           var3.g(0);
-          var3 = (rc) (var2.c(115));
+          var3 = (UiWidget) (var2.c(115));
         }
     }
 
-    final boolean a(int param0, rc param1) {
+    final boolean a(int param0, UiWidget param1) {
         ck var3 = null;
         RuntimeException var3_ref = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -499,7 +499,7 @@ class ki extends rc implements oh {
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           var3 = new ck(this.field_B);
-          var4 = (rc) (var3.a((byte) 92));
+          var4 = (UiWidget) (var3.a((byte) 92));
           while (true) {
             if (var4 == null) {
               if (param0 == -1463) {
@@ -509,7 +509,7 @@ class ki extends rc implements oh {
               return false;
             }
             if (!var4.a(-1463, param1)) {
-              var4 = (rc) (var3.c(121));
+              var4 = (UiWidget) (var3.c(121));
               continue;
             }
             break;
@@ -573,13 +573,13 @@ class ki extends rc implements oh {
           return;
         }
         CharSequence var2 = (CharSequence) ((Object) ne.field_g);
-        kf.field_D = jg.a(var2, -2);
+        kf.field_D = FullscreenFocusCanvas.a(var2, -2);
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException runtimeException = null;
         ck var5 = null;
-        rc var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -589,11 +589,11 @@ class ki extends rc implements oh {
         try {
           super.a(param0, param1, param2, param3);
           var5 = new ck(this.field_B);
-          var6 = (rc) (var5.a((byte) 117));
+          var6 = (UiWidget) (var5.a((byte) 117));
           while (var6 != null) {
             if (var6.isLinked(false)) {
               var6.a(param0 + this.field_m, 18874, param2 + this.field_j, param3);
-              var6 = (rc) (var5.c(param1 ^ 18880));
+              var6 = (UiWidget) (var5.c(param1 ^ 18880));
               continue;
             }
             break;
@@ -613,12 +613,12 @@ class ki extends rc implements oh {
         }
     }
 
-    final boolean a(byte param0, rc param1) {
+    final boolean a(byte param0, UiWidget param1) {
         ck var3 = null;
         RuntimeException var3_ref = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         ck var5 = null;
-        rc var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -633,20 +633,20 @@ class ki extends rc implements oh {
           if (param0 >= -104) {
             return false;
           }
-          var4 = (rc) (var3.a(-25119));
+          var4 = (UiWidget) (var3.a(-25119));
           while (var4 != null) {
             if (var4.b(true)) {
               var5 = new ck(this.field_B);
               var5.a(var4, 118);
-              var6 = (rc) (var5.b(640));
+              var6 = (UiWidget) (var5.b(640));
               while (var6 != null) {
                 if (var6.a(-1463, param1)) {
                   return true;
                 }
-                var6 = (rc) (var5.b(640));
+                var6 = (UiWidget) (var5.b(640));
               }
             }
-            var4 = (rc) (var3.b(640));
+            var4 = (UiWidget) (var3.b(640));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -668,21 +668,21 @@ class ki extends rc implements oh {
         this.c(true);
     }
 
-    rc d(byte param0) {
+    UiWidget d(byte param0) {
         ck var2;
-        rc var3;
+        UiWidget var3;
         int var4;
         var4 = SolKnight.field_L ? 1 : 0;
         if (param0 != -48) {
           this.field_B = (nc) null;
         }
         var2 = new ck(this.field_B);
-        var3 = (rc) (var2.a((byte) -119));
+        var3 = (UiWidget) (var2.a((byte) -119));
         while (var3 != null) {
           if (var3.b(true)) {
             return var3;
           }
-          var3 = (rc) (var2.c(121));
+          var3 = (UiWidget) (var2.c(121));
         }
         return null;
     }

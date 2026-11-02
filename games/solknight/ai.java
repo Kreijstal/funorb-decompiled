@@ -16,7 +16,7 @@ final class ai {
           ja.field_a = param8;
           aj.field_p = param10;
           cl.field_o = param7;
-          ii.field_h = param3;
+          IterableNodeHashTable.field_h = param3;
           if (param6 >= -115) {
             field_d = (String) null;
           }
@@ -51,14 +51,14 @@ final class ai {
             ef.field_e = wc.field_f;
           } else {
             try {
-              lf.field_d = new ad((java.net.Socket) (bk.field_a.field_e), qa.field_n);
+              lf.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.field_e), qa.field_n);
               id.field_c.position = 0;
               var4 = te.field_N;
               var5 = var4;
               stackIn_11_0 = (param0) ? -2 : -1;
               nf.field_U = stackIn_11_0;
-              kl.field_b = stackIn_11_0;
-              jg.field_e = stackIn_11_0;
+              MouseInputHandler.field_b = stackIn_11_0;
+              FullscreenFocusCanvas.field_e = stackIn_11_0;
               var5.position = 0;
               ef.field_e = qc.field_i;
               si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
@@ -95,7 +95,7 @@ final class ai {
         if (param2) {
           var4++;
         }
-        return ad.field_c[var4];
+        return BufferedSocket.field_c[var4];
     }
 
     final static void a(o[] param0, byte param1, int param2, int param3) {
@@ -145,6 +145,6 @@ final class ai {
         if (param2) {
           var4++;
         }
-        return ad.field_c[var4];
+        return BufferedSocket.field_c[var4];
     }
 }

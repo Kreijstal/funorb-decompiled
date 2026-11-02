@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends ki implements ka {
+final class ua extends WidgetContainer implements ka {
     static String[] field_M;
     private ge field_K;
     static String field_E;
@@ -21,7 +21,7 @@ final class ua extends ki implements ka {
         if (param1 != -86) {
           field_L = -67;
         }
-        ik.field_b = null;
+        SecondaryNodeDeque.field_b = null;
         int var2 = ue.field_a;
         ue.field_a = vc.field_e;
         if (param0 == 51) {
@@ -49,7 +49,7 @@ final class ua extends ki implements ka {
         return -1;
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -164,7 +164,7 @@ final class ua extends ki implements ka {
           jc.field_c = new byte[nb.field_c][];
           uf.field_s = new byte[nb.field_c][];
           var17.position = -(nb.field_c * 8) + param1.length - 7;
-          kl.field_a = var17.readUnsignedShort(param0 ^ -8);
+          MouseInputHandler.field_a = var17.readUnsignedShort(param0 ^ -8);
           we.field_e = var17.readUnsignedShort(28);
           var3 = 1 + (255 & var17.readUnsignedByte(255));
           for (var4 = 0; nb.field_c > var4; var4++) {

@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
       "sources": {
         "files": 294,
-        "sha256": "ecb9961cf7223a0d65bc4d19b46e25d56465b0b21619b5c84d6075ea3ccff563"
+        "sha256": "1b8d2cf98c1bc73075a9cea54b707ea31974faf90982e111c8f6a122bb8d49fb"
       },
       "dictionary": {
         "path": "decompilation/solknight-naming.json",
-        "sha256": "9595fcb1355eab666c89fd0fa1769bb6a12f7d70ab3f0c7845381265ad0c1771"
+        "sha256": "8059fc74604cbdcc474635687eb15584ef2d1cc03f019b36942ddd0f8199fba0"
       },
       "readingGuide": {
         "path": "games/solknight/README.md",
-        "sha256": "7b5c9616a57bb0cb5a0ab2a78768b276efe0a70e0db6006269330e9a73d45083"
+        "sha256": "81919c9e11df6973259cc65c3933e5cd433083eb62ee07bd0ed5ba3cf01739c3"
       },
-      "rulesSha256": "f214d05fa268c25e042e59ae26c1bdb8d8682d4ceca5577fdfa07e19153b6bf6",
+      "rulesSha256": "81abc15509cfb007f98cea674e6ebf3cbb2306aadedd41a20ed45cceb5208e0c",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11972,7 +11972,7 @@
         },
         "publishedSources": {
           "files": 294,
-          "sha256": "ecb9961cf7223a0d65bc4d19b46e25d56465b0b21619b5c84d6075ea3ccff563"
+          "sha256": "1b8d2cf98c1bc73075a9cea54b707ea31974faf90982e111c8f6a122bb8d49fb"
         }
       },
       "starcannon": {

@@ -160,7 +160,7 @@ final class sg {
         if (param0 >= -102) {
           return true;
         }
-        return jg.field_d;
+        return FullscreenFocusCanvas.field_d;
     }
 
     static {

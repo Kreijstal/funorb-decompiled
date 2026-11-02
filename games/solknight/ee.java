@@ -3,7 +3,7 @@
  */
 final class ee extends IntrusiveNode {
     byte[] field_k;
-    static kl field_j;
+    static MouseInputHandler field_j;
     static int field_l;
     static boolean field_i;
     static PacketBuffer field_h;
@@ -79,7 +79,7 @@ final class ee extends IntrusiveNode {
             field_l = -128;
           }
           for (var3 = 0; var3 < vc.field_d.length; var3++) {
-            var4 = oa.field_l[var3];
+            var4 = ImageProducerRasterBuffer.field_l[var3];
             if (var4 >= 0) {
               if (bc.field_K.field_f != var4) {
                 var5 = rj.field_c;
@@ -208,12 +208,12 @@ final class ee extends IntrusiveNode {
         var19 = SolKnight.field_L ? 1 : 0;
         try {
           aj.field_m = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = wk.field_d.length;
+          var1_int = DelegatingCanvas.field_d.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_uh = wk.field_d[var3];
+            var4_ref_uh = DelegatingCanvas.field_d[var3];
             var17 = var4_ref_uh;
             var17Lifetime2 = var4_ref_uh;
             var4_ref_uh.b(32767);
@@ -230,20 +230,20 @@ final class ee extends IntrusiveNode {
             var2[var3] = var12 * var6 + var11 * var5 + var13 * var7 >> 16;
           }
           if (param0 < 30) {
-            field_j = (kl) null;
+            field_j = (MouseInputHandler) null;
           }
           var3Lifetime1 = aj.field_m[9] >> 8;
           var4 = aj.field_m[10] >> 8;
           var5Lifetime1 = aj.field_m[11] >> 8;
-          var6Lifetime1 = ad.field_h << 4;
+          var6Lifetime1 = BufferedSocket.field_h << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = uk.a((byte) -64, var6Lifetime1) >> 8;
           var9Lifetime1 = rd.a((byte) -30, var6Lifetime1) >> 8;
           if (PacketBuffer.field_j != -1 &&
-            ad.field_m != -1) {
+            BufferedSocket.field_m != -1) {
             var9Lifetime1 = -128;
             var7Lifetime1 = PacketBuffer.field_j - 320;
-            var8Lifetime1 = 240 - ad.field_m;
+            var8Lifetime1 = 240 - BufferedSocket.field_m;
           }
           var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1));
           var8Lifetime1 = (int)((double)var8Lifetime1 * var10);
@@ -256,15 +256,15 @@ final class ee extends IntrusiveNode {
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; var15 < wk.field_d.length; var15++) {
+          for (var15 = 0; var15 < DelegatingCanvas.field_d.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < wk.field_d.length; var17_int++) {
+            for (var17_int = 1; var17_int < DelegatingCanvas.field_d.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var2[var16] = -2147483648;
-            var17Lifetime1 = wk.field_d[var16];
+            var17Lifetime1 = DelegatingCanvas.field_d[var16];
             jh.a((byte) 126, var16);
             for (var18 = 0; var18 < 3; var18++) {
               qf.field_e[var18] = qf.field_e[var18] + bg.field_v[var15][var18];
@@ -287,6 +287,6 @@ final class ee extends IntrusiveNode {
     }
 
     static {
-        field_j = new kl();
+        field_j = new MouseInputHandler();
     }
 }

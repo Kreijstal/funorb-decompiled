@@ -24,7 +24,7 @@ final class ri implements j {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -147,7 +147,7 @@ final class ri implements j {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = pd.field_e[var8Lifetime1];
               var10Lifetime1 = pd.field_e[1 + var8Lifetime1];
-              if (ec.a(var9Lifetime1, -66, param2, var10Lifetime1)) {
+              if (DualLinkNode.a(var9Lifetime1, -66, param2, var10Lifetime1)) {
                 pd.field_e[var8Lifetime1] = var10Lifetime1;
                 pd.field_e[1 + var8Lifetime1] = var9Lifetime1;
               }

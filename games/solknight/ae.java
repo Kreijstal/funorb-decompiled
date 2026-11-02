@@ -30,7 +30,7 @@ final class ae implements Runnable {
         try {
           var5 = new md();
           var5.field_u = param3;
-          var5.field_l = (long)param1;
+          var5.secondaryKey = (long)param1;
           if (param0 < 45) {
             var6 = (byte[]) null;
             this.a(113, 43, (bi) null, (byte[]) null);
@@ -87,7 +87,7 @@ final class ae implements Runnable {
               return stackIn_4_0;
             }
             while (var6 != null) {
-              if (~(long)param1 == ~var6.field_l &&
+              if (~(long)param1 == ~var6.secondaryKey &&
                 param0 == var6.field_x &&
                 var6.field_w == 2) {
                 var4.field_u = var6.field_u;
@@ -188,7 +188,7 @@ final class ae implements Runnable {
           var4.field_w = 3;
           var4.field_x = param1;
           var4.field_r = false;
-          var4.field_l = (long)param2;
+          var4.secondaryKey = (long)param2;
           this.a((byte) -94, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -239,11 +239,11 @@ final class ae implements Runnable {
             }
             try {
               if (var7.field_w == 2) {
-                var7.field_x.a((byte) -46, (int)var7.field_l, var7.field_u, var7.field_u.length);
+                var7.field_x.a((byte) -46, (int)var7.secondaryKey, var7.field_u, var7.field_u.length);
                 var7.field_m = false;
               } else {
                 if (3 == var7.field_w) {
-                  var7.field_u = var7.field_x.a(-925871512, (int)var7.field_l);
+                  var7.field_u = var7.field_x.a(-925871512, (int)var7.secondaryKey);
                   var7.field_m = false;
                 } else {
                   var7.field_m = false;
@@ -278,7 +278,7 @@ final class ae implements Runnable {
         }
     }
 
-    ae(dl param0) {
+    ae(PlatformTaskDispatcher param0) {
         nj var2 = null;
         this.field_d = new hl();
         this.field_b = false;

@@ -12,7 +12,7 @@ final class kc extends pj {
     static long field_P;
     static String field_M;
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_N = this.field_N + 1;
           super.a(param0, param1, param2, param3);
@@ -21,7 +21,7 @@ final class kc extends pj {
         }
     }
 
-    final boolean a(int param0, rc param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

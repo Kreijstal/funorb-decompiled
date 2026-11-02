@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ad implements Runnable {
+final class BufferedSocket implements Runnable {
     private int field_f;
     private boolean field_p;
     private boolean field_n;
@@ -15,7 +15,7 @@ final class ad implements Runnable {
     private int field_j;
     private InputStream field_l;
     private java.net.Socket field_e;
-    private dl field_k;
+    private PlatformTaskDispatcher field_k;
     static String[] field_c;
     private OutputStream field_g;
     static int field_m;
@@ -137,7 +137,7 @@ final class ad implements Runnable {
     final int b(int param0) throws IOException {
         if (param0 != -30119) {
           String var3 = (String) null;
-          ad.a((byte) -118, (String) null);
+          BufferedSocket.a((byte) -118, (String) null);
           if (this.field_n) {
             return 0;
           }
@@ -244,7 +244,7 @@ final class ad implements Runnable {
         }
     }
 
-    ad(java.net.Socket param0, dl param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -464,7 +464,7 @@ final class ad implements Runnable {
           if (param0 <= 64) {
             field_b = (hd) null;
           }
-          while (wk.a((byte) -56)) {
+          while (DelegatingCanvas.a((byte) -56)) {
             bc.field_K.a(true);
             if (bc.field_K.d((byte) -38)) {
               var1_int = 1;
@@ -551,7 +551,7 @@ final class ad implements Runnable {
         }
     }
 
-    private ad(java.net.Socket param0, dl param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_n = false;
         this.field_j = 0;
         this.field_i = 0;

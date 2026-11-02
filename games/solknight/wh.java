@@ -3,7 +3,7 @@
  */
 final class wh {
     static ff field_a;
-    static dl field_c;
+    static PlatformTaskDispatcher field_c;
     static boolean field_b;
 
     final static boolean a(boolean param0, CharSequence param1, byte param2) {
@@ -16,7 +16,7 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
-          if (!qk.a(param1, param0, -2)) {
+          if (!ProxySocketConnector.a(param1, param0, -2)) {
             return false;
           }
           if (param2 > -30) {
@@ -49,7 +49,7 @@ final class wh {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 25817) {
-          field_c = (dl) null;
+          field_c = (PlatformTaskDispatcher) null;
           field_c = null;
           return;
         }

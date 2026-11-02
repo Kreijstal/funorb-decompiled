@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class cb extends IOException {
+final class ProxyAuthenticationRequiredException extends IOException {
     static int field_a;
     static String field_b;
 
@@ -32,10 +32,10 @@ final class cb extends IOException {
         if (param0 != 32) {
           return;
         }
-        rc.field_r = null;
+        UiWidget.field_r = null;
     }
 
-    cb(String param0) {
+    ProxyAuthenticationRequiredException(String param0) {
         super(param0);
     }
 
@@ -45,14 +45,14 @@ final class cb extends IOException {
           var1 = wc.field_a % 32;
           ah.a((byte) -69, 32 + (wc.field_a - var1));
           if (param0 != -39) {
-            cb.b(-18);
+            ProxyAuthenticationRequiredException.b(-18);
             return;
           }
           return;
         }
         ah.a((byte) -103, 256);
         if (param0 != -39) {
-          cb.b(-18);
+          ProxyAuthenticationRequiredException.b(-18);
           return;
         }
     }

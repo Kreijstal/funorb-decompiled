@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ma extends ec {
+class ma extends DualLinkNode {
     static String field_m;
     static int[] field_n;
     static ef field_o;

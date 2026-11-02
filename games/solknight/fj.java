@@ -35,7 +35,7 @@ final class fj extends IntrusiveNode {
           ab.field_s[param5] = param1;
           var8 = 116 / ((-78 - param3) / 48);
           var7_int = 0;
-          var9 = ad.field_b;
+          var9 = BufferedSocket.field_b;
           var10_ref_int__ = param1;
           for (var11 = 0; var10_ref_int__.length > var11; var11++) {
             var12 = var10_ref_int__[var11];

@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class ik implements Iterable {
-    ec field_f;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode field_f;
     static kb field_e;
     static String field_d;
     static java.applet.Applet field_c;
@@ -42,9 +42,9 @@ final class ik implements Iterable {
           var4_int = param0.c(91, param3);
           var5 = param0.a(param2, -1, var4_int);
           if (param1 != -18362) {
-            ik.b((byte) -114);
+            SecondaryNodeDeque.b((byte) -114);
           }
-          stackIn_3_0 = ik.a(param0, param1 - 6521, var5, var4_int);
+          stackIn_3_0 = SecondaryNodeDeque.a(param0, param1 - 6521, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class ik implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -24883) {
-            ik.b((byte) -114);
+            SecondaryNodeDeque.b((byte) -114);
           }
           if (l.a(param1 ^ -24921, param2, param3, param0)) {
             stackIn_6_0 = fi.b(255);
@@ -133,41 +133,41 @@ final class ik implements Iterable {
         }
     }
 
-    final void a(int param0, ec param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
-          if (null != param1.field_k) {
-            param1.a(97);
+          if (null != param1.secondaryNext) {
+            param1.unlinkSecondary(97);
           }
-          param1.field_i = this.field_f;
+          param1.secondaryPrevious = this.field_f;
           int var3_int = -27 / ((-58 - param0) / 51);
-          param1.field_k = this.field_f.field_k;
-          param1.field_k.field_i = param1;
-          param1.field_i.field_k = param1;
+          param1.secondaryNext = this.field_f.secondaryNext;
+          param1.secondaryNext.secondaryPrevious = param1;
+          param1.secondaryPrevious.secondaryNext = param1;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ec a(byte param0) {
-        ec var2 = this.field_f.field_i;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_f.secondaryPrevious;
         if (this.field_f == var2) {
           return null;
         }
         if (param0 <= -105) {
-          var2.a(97);
+          var2.unlinkSecondary(97);
           return var2;
         }
-        ec var3 = (ec) null;
-        this.a(-40, (ec) null);
-        var2.a(97);
+        DualLinkNode var3 = (DualLinkNode) null;
+        this.a(-40, (DualLinkNode) null);
+        var2.unlinkSecondary(97);
         return var2;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new jl(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    private ik() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

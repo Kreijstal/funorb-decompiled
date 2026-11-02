@@ -131,7 +131,7 @@ final class fi {
         if (gf.field_Z == ma.field_o) {
           return lf.field_e;
         }
-        return ec.field_j;
+        return DualLinkNode.field_j;
     }
 
     final void b(byte param0) {
@@ -186,7 +186,7 @@ final class fi {
             var8 = 255 & param1[var5_int] << var6 | (param1[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_g[this.field_c] = (byte)qk.a((int) this.field_g[this.field_c], var8 >>> var7);
+              this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], var8 >>> var7);
               this.field_c = this.field_c + 1;
               this.field_f = this.field_f + (8 - var7);
               if (this.field_f == 512) {
@@ -206,7 +206,7 @@ final class fi {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_g[this.field_c] = (byte)qk.a((int) this.field_g[this.field_c], var8Lifetime1 >>> var7);
+            this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], var8Lifetime1 >>> var7);
           }
           if (param0 + (long)var7 >= 8L) {
             this.field_f = this.field_f + (8 - var7);
@@ -255,7 +255,7 @@ final class fi {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = ig.field_H[fi.a((int) var4[var6], 255)];
           }
-          var1[var2] = new o(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
+          var1[var2] = new o(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
         }
         og.a((byte) -97);
         return var1;
@@ -288,7 +288,7 @@ final class fi {
         byte[] var9 = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          this.field_g[this.field_c] = (byte)qk.a((int) this.field_g[this.field_c], 128 >>> fi.a(7, this.field_f));
+          this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], 128 >>> fi.a(7, this.field_f));
           this.field_c = this.field_c + 1;
           if (param2 < 106) {
             var9 = (byte[]) null;

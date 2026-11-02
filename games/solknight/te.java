@@ -65,7 +65,7 @@ final class te extends si {
         this.field_H = 256;
     }
 
-    te(rc param0) {
+    te(UiWidget param0) {
         super(param0.field_m, param0.field_j, param0.field_t, param0.field_x, (j) null, (dg) null);
         try {
           param0.b(this.field_x, this.field_t, 0, 0, 0);

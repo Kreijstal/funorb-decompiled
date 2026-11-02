@@ -11,9 +11,9 @@ final class sj implements j {
     private int field_f;
     private int field_h;
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int var10 = 0;
-        rc stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -27,7 +27,7 @@ final class sj implements j {
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           if (param4 instanceof hh) {
-            stackIn_4_0 = (rc) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           } else {
             stackIn_4_0 = null;
           }
@@ -140,7 +140,7 @@ final class sj implements j {
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           try {
-            if (!dl.field_t.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_t.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

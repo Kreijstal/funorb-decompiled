@@ -49,7 +49,7 @@ final class hi {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          dl stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -84,13 +84,13 @@ final class hi {
             var8 = hl.a(var7, "%40", "@", true);
             var9 = hl.a(var8, "%26", "&", true);
             var10 = hl.a(var9, "%23", "#", true);
-            if (ik.field_c == null) {
+            if (SecondaryNodeDeque.field_c == null) {
               return;
             }
             stackIn_13_0 = lg.field_l;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
-            stackIn_13_3 = ik.field_c.getCodeBase();
+            stackIn_13_3 = SecondaryNodeDeque.field_c.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(ke.field_J).append("&u=");
             if (lb.field_W != null) {
               stackIn_14_1 = null;
@@ -101,7 +101,7 @@ final class hi {
               stackIn_14_2 = null;
               stackIn_14_5 = "" + d.field_c;
             }
-            var4 = ((dl) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(dl.field_a).append("&v2=").append(dl.field_x).append("&e=").append(var10).toString()), (byte) 68);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_a).append("&v2=").append(PlatformTaskDispatcher.field_x).append("&e=").append(var10).toString()), (byte) 68);
             while (var4.field_c == 0) {
               i.a((byte) 27, 1L);
             }

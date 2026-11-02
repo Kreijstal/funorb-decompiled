@@ -90,7 +90,7 @@ final class ie {
                       if (17 == var5) {
                         if (!(!this.field_f.f(param1 ^ 2647))) {
                           if (!pg.field_e) {
-                            pl.field_a = pl.field_a + oa.field_m * 100;
+                            pl.field_a = pl.field_a + ImageProducerRasterBuffer.field_m * 100;
                           }
                           kb.field_b = kb.field_b + 1;
                           lk.field_b = ud.field_k;
@@ -102,8 +102,8 @@ final class ie {
                             pk.a((byte) -96, 3, true);
                           }
                           f.field_d = 0;
-                          oa.field_m = 0;
-                          jg.field_b = 10;
+                          ImageProducerRasterBuffer.field_m = 0;
+                          FullscreenFocusCanvas.field_b = 10;
                           mf.field_A = 0;
                           ib.field_h = 0;
                           kf.field_G = new rb[10];
@@ -135,7 +135,7 @@ final class ie {
                           if (il.b(507)) {
                             PacketBuffer.a(param0, 8, -128);
                           } else {
-                            if (jl.field_d != 0) {
+                            if (SecondaryNodeDequeIterator.field_d != 0) {
                               PacketBuffer.a(param0, 7, -127);
                               mb.a(true, 14, 256);
                             } else {
@@ -192,11 +192,11 @@ final class ie {
                         if (4 == var5) {
                           if (!(!this.field_f.d((byte) -107))) {
                             if (dj.field_k != null) {
-                              qk.d(14995);
+                              ProxySocketConnector.d(14995);
                               mb.a(true, 14, 256);
                             } else {
                               var5 = param0 ? 1 : 0;
-                              ta.a(false, 320, w.field_b, 2, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s, SocketConnector.field_g, 8, ad.field_b.field_F + ad.field_b.field_s, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, SocketConnector.field_g.field_F, var5 != 0);
+                              ta.a(false, 320, w.field_b, 2, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s, SocketConnector.field_g, 8, BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s, BufferedSocket.field_b.field_F, w.field_b, 8, 240, BufferedSocket.field_b, SocketConnector.field_g.field_F, var5 != 0);
                               mb.a(true, 14, 256);
                             }
                           }
@@ -212,7 +212,7 @@ final class ie {
                                 ah.b(true);
                               }
                               kh.field_c = null;
-                              if (0 == jl.field_d) {
+                              if (0 == SecondaryNodeDequeIterator.field_d) {
                                 PacketBuffer.a(param0, 2, -128);
                               } else {
                                 PacketBuffer.a(param0, 7, -127);
@@ -266,7 +266,7 @@ final class ie {
                               break;
                             }
                             if (dj.field_k != null) {
-                              qk.d(14995);
+                              ProxySocketConnector.d(14995);
                             }
                             he.a(-1, ia.g(-81));
                             mb.a(true, 14, 256);
@@ -274,7 +274,7 @@ final class ie {
                           case 19:
                             if (this.field_f.f(0)) {
                               if (null != dj.field_k) {
-                                qk.d(14995);
+                                ProxySocketConnector.d(14995);
                               }
                               fh.a(25, ia.g(-55));
                               mb.a(true, 14, 256);
@@ -312,7 +312,7 @@ final class ie {
                           pc.a(121);
                         }
                         if (this.field_f.e((byte) -57)) {
-                          cb.b((byte) -39);
+                          ProxyAuthenticationRequiredException.b((byte) -39);
                         }
                       }
                     }
@@ -340,20 +340,20 @@ final class ie {
             }
           } else {
             if (this.field_f.f(0)) {
-              oa.field_n = false;
+              ImageProducerRasterBuffer.field_n = false;
               ClientException.field_b = -1;
               ic.field_t = ic.field_t + lc.field_p;
               bi.field_b = null;
               kh.field_c = null;
               wc.field_c = 0;
-              jl.field_d = 0;
+              SecondaryNodeDequeIterator.field_d = 0;
               lc.field_p = 0;
               lc.field_h = lc.field_h - fa.field_f;
-              oa.field_m = 0;
+              ImageProducerRasterBuffer.field_m = 0;
               k.field_c = 0;
               ic.field_t = ic.field_t - (bi.field_i >>> 11) * fa.field_f;
               uf.field_p = 2;
-              jg.field_b = 10;
+              FullscreenFocusCanvas.field_b = 10;
               kb.field_b = 0;
               pg.field_e = false;
               fg.field_a = 0;
@@ -365,7 +365,7 @@ final class ie {
               bi.field_i = bi.field_i - ud.field_k;
               ib.field_h = 0;
               mf.field_A = 0;
-              cb.field_a = 0;
+              ProxyAuthenticationRequiredException.field_a = 0;
               lk.field_b = 0;
               lk.field_e = 0;
               vk.field_p = 0;
@@ -451,7 +451,7 @@ final class ie {
           if (var4 == null) {
             return jb.field_a[this.field_d];
           }
-          var5 = ad.field_b.b(var4) + 20;
+          var5 = BufferedSocket.field_b.b(var4) + 20;
           return bb.field_P[this.field_d] + (jb.field_a[this.field_d] + var5) >> 1;
         }
         if (param1 != 55) {
@@ -509,7 +509,7 @@ final class ie {
         if (!IntrusiveNode.field_f[this.field_d]) {
           uj.a(var10, var11, var5, w.field_b, var4, 2);
         }
-        var12 = ad.field_b;
+        var12 = BufferedSocket.field_b;
         var13 = -w.field_b[0].field_r + var11 + (-w.field_b[6].field_r + (-var12.field_F - var12.field_s));
         if (12 != var6 &&
           var6 != 13) {
@@ -571,7 +571,7 @@ final class ie {
             PacketBuffer.a(true, 0, param0 ^ -128);
           }
         }
-        while (wk.a((byte) -56)) {
+        while (DelegatingCanvas.a((byte) -56)) {
           if (13 == el.field_n &&
             5 != this.field_d) {
             if (this.field_d == 1) {
@@ -592,7 +592,7 @@ final class ie {
           }
           this.a(false, 2647, this.field_f.field_f);
         }
-        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, ad.field_m), this.a(db.field_o, (byte) 111, s.field_gb));
+        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), this.a(db.field_o, (byte) 111, s.field_gb));
         if (-1 != this.field_f.field_f) {
           this.a(true, 2647, this.field_f.field_f);
         }
@@ -639,7 +639,7 @@ final class ie {
           if (var4 == null) {
             return jb.field_a[this.field_d];
           }
-          var5 = 20 + ad.field_b.b(var4);
+          var5 = 20 + BufferedSocket.field_b.b(var4);
           return jb.field_a[this.field_d] + (bb.field_P[this.field_d] - var5) >> 1;
         }
         return jb.field_a[this.field_d];
@@ -673,32 +673,32 @@ final class ie {
           return;
         }
         if (this.field_d == 8) {
-          var3 = 4 + ad.field_b.field_s + ad.field_b.field_m;
-          var4 = var3 * ad.field_b.b(ba.field_r, 600);
+          var3 = 4 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_m;
+          var4 = var3 * BufferedSocket.field_b.b(ba.field_r, 600);
           stackIn_5_0 = var4;
           stackIn_5_1 = var3;
-          stackIn_5_2 = ad.field_b;
+          stackIn_5_2 = BufferedSocket.field_b;
           stackIn_5_3 = 71;
           stackIn_6_4 = (lk.field_e == 0) ? false : true;
           stackIn_8_5 = false;
-          stackIn_9_6 = (jl.field_d == 0) ? false : true;
+          stackIn_9_6 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
           var4Lifetime1 = stackIn_5_0 + stackIn_5_1 * ((hd) (Object) stackIn_5_2).b(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_9_6), 600);
           ah.field_i[this.field_d] = var4Lifetime1 + 2;
           var4Lifetime1 = var4Lifetime1 + (var3 + 41);
           stackIn_11_0 = var4Lifetime1;
-          stackIn_11_1 = ad.field_b;
-          stackIn_12_2 = (jl.field_d == 0) ? false : true;
+          stackIn_11_1 = BufferedSocket.field_b;
+          stackIn_12_2 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
           stackIn_15_3 = (lk.field_e == 0) ? false : true;
-          var4Lifetime2 = stackIn_11_0 + ((hd) (Object) stackIn_11_1).b(qh.a(stackIn_12_2, stackIn_15_3, false, (byte) 8), 600) * var3;
+          var4Lifetime2 = stackIn_11_0 + ((hd) (Object) stackIn_11_1).b(GameKeyHandler.a(stackIn_12_2, stackIn_15_3, false, (byte) 8), 600) * var3;
           si.field_F[this.field_d] = var4Lifetime2 + 2 - ah.field_i[this.field_d];
           var4Lifetime2 += 41;
           stackIn_17_0 = var4Lifetime2;
-          stackIn_17_1 = ad.field_b;
+          stackIn_17_1 = BufferedSocket.field_b;
           stackIn_18_2 = (lk.field_e == 0) ? false : true;
           stackIn_20_3 = param1 - 3451;
           stackIn_20_4 = false;
-          stackIn_21_5 = (jl.field_d == 0) ? false : true;
-          var4Lifetime3 = stackIn_17_0 + ((hd) (Object) stackIn_17_1).b(jl.a(stackIn_18_2, stackIn_20_3, stackIn_20_4, stackIn_21_5), 600) * var3;
+          stackIn_21_5 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
+          var4Lifetime3 = stackIn_17_0 + ((hd) (Object) stackIn_17_1).b(SecondaryNodeDequeIterator.a(stackIn_18_2, stackIn_20_3, stackIn_20_4, stackIn_21_5), 600) * var3;
           dd.field_b = 480 - var4Lifetime3 >> 1;
           ah.field_i[this.field_d] = ah.field_i[this.field_d] + dd.field_b;
         }
@@ -718,7 +718,7 @@ final class ie {
           -1 != kd.field_a) {
           var3Lifetime1 = this.field_f.field_f;
         }
-        this.field_f.a(param0, var3Lifetime1, this.a(PacketBuffer.field_j, (byte) 111, ad.field_m), 127);
+        this.field_f.a(param0, var3Lifetime1, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), 127);
         this.field_e = -1;
     }
 
@@ -785,7 +785,7 @@ final class ie {
         }
         if (!pg.field_e &&
           PacketBuffer.field_j != -1) {
-          ie.a(PacketBuffer.field_j, ad.field_m, param0 ^ 520);
+          ie.a(PacketBuffer.field_j, BufferedSocket.field_m, param0 ^ 520);
         }
         if (400 <= ClientException.field_b) {
           var2 = (-ClientException.field_b + 500) * 96 / 100;
@@ -859,7 +859,7 @@ final class ie {
                 7 != this.field_d) {
                 if (8 != this.field_d) {
                   if (this.field_d == 9) {
-                    ad.field_b.a(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
+                    BufferedSocket.field_b.a(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
                   } else {
                     if (this.field_d != 5) {
                       if ((6 == this.field_d)) {
@@ -868,7 +868,7 @@ final class ie {
                         var10Lifetime1 = var9Lifetime1 - 10 >> 1;
                         var11Lifetime1 = -37 + (-var8 + 480) + var10Lifetime1 >> 1;
                         fi.a(var9Lifetime1, true, 1, 230, 638, var8, var11Lifetime1);
-                        ad.field_b.a(Integer.toString(100 * oa.field_m), 112, -103 + (var11Lifetime1 + 155), 16777215, -1);
+                        BufferedSocket.field_b.a(Integer.toString(100 * ImageProducerRasterBuffer.field_m), 112, -103 + (var11Lifetime1 + 155), 16777215, -1);
                         SocketConnector.field_g.a(qb.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
                         if (ob.field_l > 0) {
                           var15 = 5000;
@@ -877,17 +877,17 @@ final class ie {
                           var14_ref_String = bb.a(jj.field_I, new String[]{Integer.toString(lk.field_e)}, -63);
                         } else {
                           var12_ref_String = bb.a(he.field_e, new String[]{Integer.toString(kb.field_b + 1)}, -63);
-                          var15 = oa.field_m * 100 + lk.field_e;
+                          var15 = ImageProducerRasterBuffer.field_m * 100 + lk.field_e;
                           var13_ref_String = ud.field_j;
                           var14_ref_String = ai.field_d;
                         }
-                        ad.field_b.a(var12_ref_String, 222, -103 + (71 + var11Lifetime1), 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_s + ad.field_b.field_F);
-                        ad.field_b.a(Integer.toString(var15), 528, var11Lifetime1 + 155 - 103, 16777215, -1);
+                        BufferedSocket.field_b.a(var12_ref_String, 222, -103 + (71 + var11Lifetime1), 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+                        BufferedSocket.field_b.a(Integer.toString(var15), 528, var11Lifetime1 + 155 - 103, 16777215, -1);
                         SocketConnector.field_g.a(var13_ref_String, 528, -103 + (160 + var11Lifetime1), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
-                        ad.field_b.a(var14_ref_String, 320, var11Lifetime1 + 229 - 103, 16776960, -1);
+                        BufferedSocket.field_b.a(var14_ref_String, 320, var11Lifetime1 + 229 - 103, 16776960, -1);
                         h.field_b.c(45, var11Lifetime1 + 200 - 103, 100 * h.field_b.field_q / h.field_b.field_r, 100);
                         h.field_b.c(-(100 * h.field_b.field_q / h.field_b.field_r) + 595, -103 + (var11Lifetime1 + 200), h.field_b.field_q * 100 / h.field_b.field_r, 100);
-                        ad.field_b.a(ti.field_a, 320, 277 - (-var11Lifetime1 + 103), 16727871, -1);
+                        BufferedSocket.field_b.a(ti.field_a, 320, 277 - (-var11Lifetime1 + 103), 16727871, -1);
                         ah.field_i[this.field_d] = var8 + var11Lifetime1;
                       }
                     } else {
@@ -896,18 +896,18 @@ final class ie {
                         this.field_d != ri.field_f) {
                         var8--;
                       }
-                      var9Lifetime1Lifetime2 = ad.field_b.b(rf.field_N[var8], 564);
+                      var9Lifetime1Lifetime2 = BufferedSocket.field_b.b(rf.field_N[var8], 564);
                       var10Lifetime1Lifetime1 = 220 + var9Lifetime1Lifetime2 * 28;
                       var11Lifetime1Lifetime1 = 118;
                       var12 = -10 + var11Lifetime1Lifetime1 >> 1;
                       var13 = -37 + (480 + (-var10Lifetime1Lifetime1 + var12)) >> 1;
                       fi.a(var11Lifetime1Lifetime1, true, 1, 230, 638, var10Lifetime1Lifetime1, var13);
-                      ad.field_b.a(bb.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_F + ad.field_b.field_s);
-                      ad.field_b.a(Integer.toString(oa.field_m * 100), 112, var13 + 52, 16777215, -1);
+                      BufferedSocket.field_b.a(bb.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
+                      BufferedSocket.field_b.a(Integer.toString(ImageProducerRasterBuffer.field_m * 100), 112, var13 + 52, 16777215, -1);
                       SocketConnector.field_g.a(qb.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
-                      ad.field_b.a(Integer.toString(oa.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
+                      BufferedSocket.field_b.a(Integer.toString(ImageProducerRasterBuffer.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
                       SocketConnector.field_g.a(dc.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
-                      ad.field_b.a(gd.field_b, 320, 229 + var13 - 103, 16776960, -1);
+                      BufferedSocket.field_b.a(gd.field_b, 320, 229 + var13 - 103, 16776960, -1);
                       var14 = var8 + 1 << 3;
                       if (var8 == 0) {
                         var14 = 16;
@@ -917,37 +917,37 @@ final class ie {
                       }
                       td.field_e[var14 + hg.field_y].d(83, 248 + var13 - 103);
                       td.field_e[hg.field_y + var14].d(526, var13 + 145);
-                      ad.field_b.a(mf.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
-                      ad.field_b.a(rf.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
+                      BufferedSocket.field_b.a(mf.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
+                      BufferedSocket.field_b.a(rf.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                       ah.field_i[this.field_d] = var13 + var10Lifetime1Lifetime1;
                     }
                   }
                 } else {
                   var8 = dd.field_b;
-                  var9Lifetime1Lifetime1 = 4 + (ad.field_b.field_m + ad.field_b.field_s);
-                  var8 = var8 + var9Lifetime1Lifetime1 * ad.field_b.a(ba.field_r, 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
+                  var9Lifetime1Lifetime1 = 4 + (BufferedSocket.field_b.field_m + BufferedSocket.field_b.field_s);
+                  var8 = var8 + var9Lifetime1Lifetime1 * BufferedSocket.field_b.a(ba.field_r, 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
                   stackIn_59_0 = var8;
-                  stackIn_59_1 = ad.field_b;
+                  stackIn_59_1 = BufferedSocket.field_b;
                   stackIn_59_2 = 71;
                   stackIn_60_3 = (lk.field_e != 0);
                   stackIn_62_4 = false;
-                  stackIn_63_5 = (jl.field_d != 0);
+                  stackIn_63_5 = (SecondaryNodeDequeIterator.field_d != 0);
                   var8 = stackIn_59_0 + ((hd) (Object) stackIn_59_1).a(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_59_2, stackIn_60_3, stackIn_62_4, stackIn_63_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
                   var8 = var8 + (41 + var9Lifetime1Lifetime1);
                   stackIn_65_0 = var8;
                   stackIn_65_1 = var9Lifetime1Lifetime1;
-                  stackIn_65_2 = ad.field_b;
-                  stackIn_66_3 = (jl.field_d != 0);
+                  stackIn_65_2 = BufferedSocket.field_b;
+                  stackIn_66_3 = (SecondaryNodeDequeIterator.field_d != 0);
                   stackIn_69_4 = (lk.field_e != 0);
-                  var8 = stackIn_65_0 + stackIn_65_1 * ((hd) (Object) stackIn_65_2).a(qh.a(stackIn_66_3, stackIn_69_4, false, (byte) 8), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
+                  var8 = stackIn_65_0 + stackIn_65_1 * ((hd) (Object) stackIn_65_2).a(GameKeyHandler.a(stackIn_66_3, stackIn_69_4, false, (byte) 8), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
                   var8 += 41;
                   stackIn_71_0 = var8;
-                  stackIn_71_1 = ad.field_b;
+                  stackIn_71_1 = BufferedSocket.field_b;
                   stackIn_72_2 = (0 != lk.field_e);
                   stackIn_74_3 = -116;
                   stackIn_74_4 = false;
-                  stackIn_75_5 = (jl.field_d != 0);
-                  var8 = stackIn_71_0 + ((hd) (Object) stackIn_71_1).a(jl.a(stackIn_72_2, stackIn_74_3, stackIn_74_4, stackIn_75_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
+                  stackIn_75_5 = (SecondaryNodeDequeIterator.field_d != 0);
+                  var8 = stackIn_71_0 + ((hd) (Object) stackIn_71_1).a(SecondaryNodeDequeIterator.a(stackIn_72_2, stackIn_74_3, stackIn_74_4, stackIn_75_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
                 }
                 break regionExit1;
               }
@@ -984,7 +984,7 @@ final class ie {
         }
         var5 = var5 + SocketConnector.field_g.a(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
         var5 = var5 + (var2 << 1);
-        SocketConnector.field_g.a(ii.field_i, 320, var5, 16776960, -1);
+        SocketConnector.field_g.a(IterableNodeHashTable.field_i, 320, var5, 16776960, -1);
         var5 = var5 + var2;
         SocketConnector.field_g.a(pg.field_c, 320, var5, 16776960, -1);
         var5 = var5 + var2;
@@ -1069,7 +1069,7 @@ final class ie {
         if (il.b(507)) {
           stackIn_29_0 = mf.field_n;
         } else {
-          stackIn_29_0 = ad.field_o;
+          stackIn_29_0 = BufferedSocket.field_o;
         }
         var2Lifetime1 = stackIn_29_0;
         var3.a(var2Lifetime1, 320, 106 + var3.field_F + 252, 1134591, -1);
@@ -1102,7 +1102,7 @@ final class ie {
         }
         var4 = 103;
         if (param0) {
-          stackIn_5_0 = jl.field_d;
+          stackIn_5_0 = SecondaryNodeDequeIterator.field_d;
         } else {
           stackIn_5_0 = ah.field_f;
         }
@@ -1112,7 +1112,7 @@ final class ie {
         for (var8 = 0; var8 < hb.field_m.length; var8++) {
           regionExit1: {
             if ((var5 & 1 << var8) != 0) {
-              ii.field_f[var8].e(var3, var4);
+              IterableNodeHashTable.field_f[var8].e(var3, var4);
             } else {
               if (param0) {
                 break regionExit1;
@@ -1129,8 +1129,8 @@ final class ie {
             }
             if (var3 <= PacketBuffer.field_j &&
               PacketBuffer.field_j <= 32 + var3 &&
-              var4 <= ad.field_m &&
-              ad.field_m <= 32 + var4) {
+              var4 <= BufferedSocket.field_m &&
+              BufferedSocket.field_m <= 32 + var4) {
               var7 = var8;
               mi.b(-2 + var3, var4 - 2, 36, 36, 6, 1134591);
             }
@@ -1161,16 +1161,16 @@ final class ie {
           var7 = this.field_e;
         }
         if (var7 != -1) {
-          var8Lifetime1 = ad.field_b.field_s + ad.field_b.field_m;
-          ad.field_b.a(hb.field_m[var7], 320, 226, 16776960, -1);
+          var8Lifetime1 = BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_m;
+          BufferedSocket.field_b.a(hb.field_m[var7], 320, 226, 16776960, -1);
           var9 = var8Lifetime1;
-          var10 = 226 + ad.field_b.field_F + ad.field_b.field_s;
+          var10 = 226 + BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s;
           stackIn_46_0 = ((var5 & 1 << var7) == 0) ? 0 : 1;
           var11 = stackIn_46_0;
           if (var11 == 0) {
-            ad.field_b.a(lf.field_b, 320, var10, 16727871, -1);
+            BufferedSocket.field_b.a(lf.field_b, 320, var10, 16727871, -1);
           } else {
-            ad.field_b.a(hc.field_f, 320, var10, 16777215, -1);
+            BufferedSocket.field_b.a(hc.field_f, 320, var10, 16777215, -1);
           }
           if (var11 == 0) {
             if (ob.field_l <= 0) {
@@ -1183,31 +1183,31 @@ final class ie {
               jc.field_b.d(36, 226);
             }
           } else {
-            ii.field_f[var7].d(36, 226);
+            IterableNodeHashTable.field_f[var7].d(36, 226);
           }
-          var10 = var10 + (ad.field_b.field_F + ad.field_b.field_s);
+          var10 = var10 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
           var12 = new String[16];
-          var13 = ad.field_b.a(kk.field_a[var7], new int[]{410}, var12);
+          var13 = BufferedSocket.field_b.a(kk.field_a[var7], new int[]{410}, var12);
           for (var14 = 0; var13 > var14; var14++) {
-            ad.field_b.c(var12[var14], 190, var10, 16777215, -1);
+            BufferedSocket.field_b.c(var12[var14], 190, var10, 16777215, -1);
             var10 = var10 + var9;
           }
           var10 += 5;
-          ad.field_b.c(ff.field_d + 100 * fc.field_n[var7], 190, var10, 16777215, -1);
+          BufferedSocket.field_b.c(ff.field_d + 100 * fc.field_n[var7], 190, var10, 16777215, -1);
           var10 = var10 + var9;
           var3Lifetime1 = 190;
-          ad.field_b.c(cf.field_b, var3Lifetime1, var10, 16777215, -1);
-          var3Lifetime1 = var3Lifetime1 + ad.field_b.b(cf.field_b);
+          BufferedSocket.field_b.c(cf.field_b, var3Lifetime1, var10, 16777215, -1);
+          var3Lifetime1 = var3Lifetime1 + BufferedSocket.field_b.b(cf.field_b);
           for (var14Lifetime1 = 0; var14Lifetime1 < fc.field_n[var7]; var14Lifetime1++) {
-            pg.field_a.d(var3Lifetime1, -ad.field_b.field_m + var10);
+            pg.field_a.d(var3Lifetime1, -BufferedSocket.field_b.field_m + var10);
             var3Lifetime1 = var3Lifetime1 + pg.field_a.field_p / 3;
           }
         } else {
           if (il.b(param1 ^ -509)) {
-            ad.field_b.a(kg.field_b, 25, -ad.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, ad.field_b.field_s + ad.field_b.field_F);
-            ad.field_b.a(mf.field_n, 25, 2 * ad.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, ad.field_b.field_s + ad.field_b.field_F);
+            BufferedSocket.field_b.a(kg.field_b, 25, -BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+            BufferedSocket.field_b.a(mf.field_n, 25, 2 * BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
           } else {
-            ad.field_b.a(kg.field_b, 320, 296, 16776960, -1);
+            BufferedSocket.field_b.a(kg.field_b, 320, 296, 16776960, -1);
           }
         }
     }

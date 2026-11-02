@@ -31,7 +31,7 @@ final class cj {
           var1_int = 75 / ((param0 - 8) / 49);
           u.field_b.a(-1, th.field_K, true, ee.field_l);
           u.field_b.c(false);
-          while (wk.a((byte) -56)) {
+          while (DelegatingCanvas.a((byte) -56)) {
             u.field_b.a(el.field_n, ta.field_d, (byte) -48);
           }
           if (he.field_b != -1) {

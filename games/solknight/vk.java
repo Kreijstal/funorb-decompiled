@@ -195,28 +195,28 @@ final class vk extends jf {
             bi.field_i = bi.field_i - ud.field_k;
             ud.field_k = 0;
           }
-          if (ud.field_k > qh.field_a[7]) {
-            var4 = ud.field_k - qh.field_a[7];
+          if (ud.field_k > GameKeyHandler.field_a[7]) {
+            var4 = ud.field_k - GameKeyHandler.field_a[7];
             ic.field_t = ic.field_t - (lc.field_h >>> 17) * var4;
             bi.field_i = bi.field_i - var4;
-            ud.field_k = qh.field_a[7];
+            ud.field_k = GameKeyHandler.field_a[7];
           }
           wg.field_e = (wg.field_e * 9 + var2) / 10;
           sk.field_o = (sk.field_o * 9 + var1_int) / 10;
-          if (1 * qh.field_a[7] / 10 > var3 &&
-            ud.field_k >= qh.field_a[7] * 1 / 10) {
+          if (1 * GameKeyHandler.field_a[7] / 10 > var3 &&
+            ud.field_k >= GameKeyHandler.field_a[7] * 1 / 10) {
             vk.a(250, (byte) 89, 5);
           }
-          if (var3 < qh.field_a[7] * 3 / 10 &&
-            ud.field_k >= qh.field_a[7] * 3 / 10) {
+          if (var3 < GameKeyHandler.field_a[7] * 3 / 10 &&
+            ud.field_k >= GameKeyHandler.field_a[7] * 3 / 10) {
             vk.a(249, (byte) 89, 6);
           }
-          if (6 * qh.field_a[7] / 10 > var3 &&
-            qh.field_a[7] * 6 / 10 <= ud.field_k) {
+          if (6 * GameKeyHandler.field_a[7] / 10 > var3 &&
+            GameKeyHandler.field_a[7] * 6 / 10 <= ud.field_k) {
             vk.a(248, (byte) 89, 7);
           }
-          if (var3 < qh.field_a[7]) {
-            if (ud.field_k < qh.field_a[7]) {
+          if (var3 < GameKeyHandler.field_a[7]) {
+            if (ud.field_k < GameKeyHandler.field_a[7]) {
               return;
             }
             vk.a(247, (byte) 89, 8);
@@ -246,9 +246,9 @@ final class vk extends jf {
           return;
         }
         ah.field_f = ah.field_f | var3;
-        jl.field_d = jl.field_d | var3;
+        SecondaryNodeDequeIterator.field_d = SecondaryNodeDequeIterator.field_d | var3;
         lc.field_t.a(new la(param2), -7044);
-        if (!oa.field_n) {
+        if (!ImageProducerRasterBuffer.field_n) {
           w.field_a.a(new bl(param2, param0, bi.field_i, ic.field_t, lc.field_h, lk.field_e), -7044);
           if (param1 != 89) {
             vk.b((byte) 46);

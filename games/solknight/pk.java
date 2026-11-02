@@ -18,7 +18,7 @@ final class pk extends kj {
         }
     }
 
-    final boolean a(int param0, rc param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -134,7 +134,7 @@ final class pk extends kj {
           var6 = this.field_U.b(-9362);
           var37 = (eg) ((Object) this.field_w);
           var9 = param2 + this.field_m;
-          var10 = var37.a((rc) (this), false, param0) + (var37.a(-21480, (rc) (this)).a((byte) 126) >> 1);
+          var10 = var37.a((UiWidget) (this), false, param0) + (var37.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
           if (var6 != hg.field_E &&
             db.field_u != var6) {
             if (rg.field_f == var6) {
@@ -184,7 +184,7 @@ final class pk extends kj {
           var6 = this.field_U.b(-9362);
           var38 = (eg) ((Object) this.field_w);
           var9Lifetime1 = param2 + this.field_m;
-          var10Lifetime1 = var38.a((rc) (this), false, param0) + (var38.a(-21480, (rc) (this)).a((byte) 126) >> 1);
+          var10Lifetime1 = var38.a((UiWidget) (this), false, param0) + (var38.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
           if (var6 != hg.field_E &&
             db.field_u != var6) {
             if (rg.field_f == var6) {
@@ -234,7 +234,7 @@ final class pk extends kj {
           var6Lifetime1 = this.field_U.b(-9362);
           var39 = (eg) ((Object) this.field_w);
           var9Lifetime2 = param2 + this.field_m;
-          var10Lifetime2 = var39.a((rc) (this), false, param0) + (var39.a(-21480, (rc) (this)).a((byte) 126) >> 1);
+          var10Lifetime2 = var39.a((UiWidget) (this), false, param0) + (var39.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
           if (var6Lifetime1 != hg.field_E &&
             db.field_u != var6Lifetime1) {
             if (rg.field_f == var6Lifetime1) {
@@ -284,7 +284,7 @@ final class pk extends kj {
         var6Lifetime2 = this.field_U.b(-9362);
         var40 = (eg) ((Object) this.field_w);
         var9Lifetime3 = param2 + this.field_m;
-        var10Lifetime3 = var40.a((rc) (this), false, param0) + (var40.a(-21480, (rc) (this)).a((byte) 126) >> 1);
+        var10Lifetime3 = var40.a((UiWidget) (this), false, param0) + (var40.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
         if (var6Lifetime2 != hg.field_E &&
           db.field_u != var6Lifetime2) {
           if (rg.field_f == var6Lifetime2) {
@@ -337,7 +337,7 @@ final class pk extends kj {
         Object var3 = null;
         var3 = kj.field_P;
         synchronized (var3) {
-          jg.a(c.field_M[param1], param0 + 182, param2);
+          FullscreenFocusCanvas.a(c.field_M[param1], param0 + 182, param2);
           be.field_K = qc.field_o[param1];
           ed.a((byte) -122);
         }
@@ -481,9 +481,9 @@ final class pk extends kj {
     }
 
     final static void c(boolean param0) {
-        qk.d(14995);
+        ProxySocketConnector.d(14995);
         if (null == dc.field_q) {
-          cb.a((byte) -15);
+          ProxyAuthenticationRequiredException.a((byte) -15);
           nh.a(-117);
           m.b(param0);
           if (ak.a(60)) {
@@ -494,7 +494,7 @@ final class pk extends kj {
           return;
         }
         nc.a((byte) 86, dc.field_q);
-        cb.a((byte) -15);
+        ProxyAuthenticationRequiredException.a((byte) -15);
         nh.a(-117);
         m.b(param0);
         if (ak.a(60)) {
@@ -504,7 +504,7 @@ final class pk extends kj {
         je.a(param0);
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         this.field_Z = this.field_Z + 1;
         if (param1 != 18874) {
           return;

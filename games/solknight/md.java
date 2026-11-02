@@ -10,7 +10,7 @@ final class md extends sk {
     static String field_v;
     bi field_x;
 
-    final static boolean a(byte param0, dl param1) {
+    final static boolean a(byte param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

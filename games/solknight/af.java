@@ -18,7 +18,7 @@ class af implements j, eg {
     int field_d;
     static da field_c;
 
-    private final int c(int param0, rc param1) {
+    private final int c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -45,7 +45,7 @@ class af implements j, eg {
         }
     }
 
-    public final int a(boolean param0, rc param1) {
+    public final int a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -75,7 +75,7 @@ class af implements j, eg {
         }
     }
 
-    private final void a(rc param0, int param1, int param2, int param3) {
+    private final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.a(param1, param2, -3, 0, this.field_o, this.field_k, param0, 0);
           int var5_int = -24 % ((param3 + 6) / 63);
@@ -84,7 +84,7 @@ class af implements j, eg {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rc param3, int param4) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, int param4) {
         jf var13 = null;
         jf var14 = null;
         int var7 = 0;
@@ -115,7 +115,7 @@ class af implements j, eg {
         }
     }
 
-    private final int a(int param0, int param1, int param2, rc param3) {
+    private final int a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -157,7 +157,7 @@ class af implements j, eg {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, rc param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6, int param7) {
         int discarded$0 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -169,15 +169,15 @@ class af implements j, eg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        rc var14 = null;
+        UiWidget var14 = null;
         int var12Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
         try {
           kf.a((byte) 97, param6.field_m + param0, param1 + param6.field_j, param6.field_m + (param0 + param6.field_t), param6.field_j + param1 + param6.field_x);
           var9_int = this.b(param2 ^ -268, param6);
           if (param2 != -3) {
-            var14 = (rc) null;
-            discarded$0 = this.c(124, (rc) null);
+            var14 = (UiWidget) null;
+            discarded$0 = this.c(124, (UiWidget) null);
           }
           boolean decompiledFrameRemainder0 = true;
           var10 = this.c(param2 + 6, param6);
@@ -229,7 +229,7 @@ class af implements j, eg {
         }
     }
 
-    public final void a(int param0, rc param1, int param2, int param3, int param4, int param5) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -305,7 +305,7 @@ class af implements j, eg {
         }
     }
 
-    public final int a(rc param0, boolean param1, int param2) {
+    public final int a(UiWidget param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -332,7 +332,7 @@ class af implements j, eg {
         }
     }
 
-    public final int a(int param0, rc param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -359,7 +359,7 @@ class af implements j, eg {
         }
     }
 
-    public final int b(int param0, rc param1) {
+    public final int b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -386,7 +386,7 @@ class af implements j, eg {
         }
     }
 
-    public void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         if (null == this.field_l) {
           return;
         }
@@ -401,7 +401,7 @@ class af implements j, eg {
         }
     }
 
-    public final int a(rc param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -431,9 +431,9 @@ class af implements j, eg {
         }
     }
 
-    public final jf a(int param0, rc param1) {
+    public final jf a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         jf stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -444,8 +444,8 @@ class af implements j, eg {
             param1.field_h = (jf) ((Object) new vk());
           }
           if (param0 != -21480) {
-            var4 = (rc) null;
-            this.a(-117, (rc) null);
+            var4 = (UiWidget) null;
+            this.a(-117, (UiWidget) null);
           }
           if (this.field_i) {
             ((vk) (param1.field_h)).a(this.b(param1, 0), this.field_f, this.field_g, 127, this.field_l, this.b(265, param1), this.c(3, param1), this.field_b);
@@ -499,7 +499,7 @@ class af implements j, eg {
         }
     }
 
-    private final void a(rc param0, byte param1) {
+    private final void a(UiWidget param0, byte param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -571,7 +571,7 @@ class af implements j, eg {
         }
     }
 
-    public final int a(rc param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -598,7 +598,7 @@ class af implements j, eg {
         }
     }
 
-    private final int a(rc param0, int param1, int param2, byte param3) {
+    private final int a(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -632,9 +632,9 @@ class af implements j, eg {
         return this.field_l.field_s + this.field_l.field_F;
     }
 
-    String b(rc param0, int param1) {
+    String b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -642,8 +642,8 @@ class af implements j, eg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (rc) null;
-            this.a((byte) -115, 127, false, 29, (rc) null);
+            var4 = (UiWidget) null;
+            this.a((byte) -115, 127, false, 29, (UiWidget) null);
           }
           stackIn_3_0 = param0.field_i;
           return stackIn_3_0;
@@ -661,7 +661,7 @@ class af implements j, eg {
         }
     }
 
-    final static void a(dl param0, PacketBuffer param1, byte param2, int param3) {
+    final static void a(PlatformTaskDispatcher param0, PacketBuffer param1, byte param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;

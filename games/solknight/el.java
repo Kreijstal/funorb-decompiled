@@ -36,7 +36,7 @@ final class el extends a {
             if (var3 != null) {
               if (var3.b(-9362) == ph.field_g &&
                 !param0.equals(this.field_l.field_i)) {
-                stackIn_5_0 = ii.field_c;
+                stackIn_5_0 = IterableNodeHashTable.field_c;
                 return stackIn_5_0;
               }
               stackIn_7_0 = var3.c(-116);
@@ -50,7 +50,7 @@ final class el extends a {
           if (param0.equals(this.field_l.field_i)) {
             return null;
           }
-          stackIn_13_0 = ii.field_c;
+          stackIn_13_0 = IterableNodeHashTable.field_c;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

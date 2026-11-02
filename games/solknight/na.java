@@ -6,7 +6,7 @@ import java.io.*;
 final class na implements Runnable {
     private PacketBuffer field_g;
     private nj field_a;
-    private dl field_h;
+    private PlatformTaskDispatcher field_h;
     private nj field_f;
     private int field_c;
     static boolean field_b;
@@ -202,7 +202,7 @@ final class na implements Runnable {
         }
     }
 
-    na(dl param0, java.net.URL param1, int param2) {
+    na(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param0;
           this.field_e = param1;

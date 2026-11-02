@@ -5,7 +5,7 @@ import java.io.*;
 
 final class qf {
     static String field_f;
-    static ad field_a;
+    static BufferedSocket field_a;
     static String field_g;
     static long field_b;
     static long[] field_c;

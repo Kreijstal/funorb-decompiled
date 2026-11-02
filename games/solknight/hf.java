@@ -363,7 +363,7 @@ final class hf {
             return 1;
           }
           if (lh.field_p == 2 &&
-            ad.a((byte) -105, this.field_h)) {
+            BufferedSocket.a((byte) -105, this.field_h)) {
             return 1;
           }
           if (param0 == 1910696752) {
@@ -403,7 +403,7 @@ final class hf {
           this.field_g = null;
         }
         this.field_h = vd.field_a;
-        this.field_i = qk.field_m;
+        this.field_i = ProxySocketConnector.field_m;
         this.field_f = q.field_b;
     }
 

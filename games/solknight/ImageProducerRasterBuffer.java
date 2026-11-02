@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class oa extends pd implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends pd implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_o;
     static String field_i;
     static wh field_j;
@@ -189,14 +189,14 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
     public static void b(int param0) {
         if (param0 != 768) {
           da var2 = (da) null;
-          oa.a(-87, 28, (da) null);
+          ImageProducerRasterBuffer.a(-87, 28, (da) null);
         }
         field_i = null;
         field_j = null;
         field_l = null;
     }
 
-    oa() {
+    ImageProducerRasterBuffer() {
     }
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {

@@ -36,7 +36,7 @@ final class gh extends af {
         return false;
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class rc extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     int field_t;
     static kb field_o;
     String field_z;
@@ -24,7 +24,7 @@ class rc extends IntrusiveNode {
     int field_x;
     static java.awt.Image field_r;
 
-    boolean a(int param0, rc param1, int param2, int param3, int param4, int param5, byte param6) {
+    boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, byte param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -49,7 +49,7 @@ class rc extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
@@ -60,7 +60,7 @@ class rc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(ad.field_m, PacketBuffer.field_j, param0, param2, param1 - 18970) ? 1 : 0;
+          var5_int = this.a(BufferedSocket.field_m, PacketBuffer.field_j, param0, param2, param1 - 18970) ? 1 : 0;
           if (param1 != 18874) {
             return;
           }
@@ -104,7 +104,7 @@ class rc extends IntrusiveNode {
           field_o = null;
           return;
         }
-        rc.a(32, 42, -124, -105, (o) null, -64, 78, (byte) 43);
+        UiWidget.a(32, 42, -124, -105, (o) null, -64, 78, (byte) 43);
         field_p = null;
         field_s = null;
         field_o = null;
@@ -142,7 +142,7 @@ class rc extends IntrusiveNode {
           }
           if (this.field_w != null) {
             discarded$4 = param0.append(" renderer=");
-            if (!(this.field_w instanceof rc)) {
+            if (!(this.field_w instanceof UiWidget)) {
               discarded$5 = param0.append(this.field_w);
               if (var6 != 0) {
                 param0 = this.a(-100, param2, param0, 1 + param3);
@@ -153,7 +153,7 @@ class rc extends IntrusiveNode {
           }
           if (this.field_n != null) {
             discarded$6 = param0.append(" listener=");
-            if (!(this.field_n instanceof rc)) {
+            if (!(this.field_n instanceof UiWidget)) {
               discarded$7 = param0.append(this.field_n);
               if (var6 != 0) {
                 param0 = this.a(-57, param2, param0, 1 + param3);
@@ -184,7 +184,7 @@ class rc extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
@@ -192,7 +192,7 @@ class rc extends IntrusiveNode {
         }
     }
 
-    boolean a(char param0, byte param1, int param2, rc param3) {
+    boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -225,7 +225,7 @@ class rc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 85) {
-            rc.a(-41, (CharSequence) null);
+            UiWidget.a(-41, (CharSequence) null);
           }
           stackIn_3_0 = wh.a(false, param1, (byte) -123);
           return stackIn_3_0;
@@ -255,7 +255,7 @@ class rc extends IntrusiveNode {
         return false;
     }
 
-    boolean a(int param0, rc param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -340,7 +340,7 @@ class rc extends IntrusiveNode {
           }
           if (0 != cl.field_n &&
             var5 != 0) {
-            this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, ad.field_m, (byte) 96);
+            this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, BufferedSocket.field_m, (byte) 96);
             if (hg.field_F != 0) {
               if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
                 param2 = false;
@@ -361,7 +361,7 @@ class rc extends IntrusiveNode {
               pd.a(125, this.c((byte) 78));
               return param2;
             }
-            this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+            this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
             var8 = jf.field_a;
             if (var8 != null) {
               if (var8.field_n instanceof gk) {
@@ -394,7 +394,7 @@ class rc extends IntrusiveNode {
                 pd.a(125, this.c((byte) 78));
                 return param2;
               }
-              this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+              this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
               var9 = jf.field_a;
               if (var9 != null) {
                 if (!(var9.field_n instanceof gk)) {
@@ -419,7 +419,7 @@ class rc extends IntrusiveNode {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+          this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
           var10 = jf.field_a;
           if (var10 != null) {
             if (var10.field_n instanceof gk) {
@@ -473,7 +473,7 @@ class rc extends IntrusiveNode {
                   pd.a(125, this.c((byte) 78));
                   return param2;
                 }
-                this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+                this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
                 var11 = jf.field_a;
                 if (var11 == null) {
                   ne.field_j = wb.field_c;
@@ -504,7 +504,7 @@ class rc extends IntrusiveNode {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+          this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
           var12 = jf.field_a;
           if (var12 != null) {
             if (var12.field_n instanceof gk) {
@@ -517,7 +517,7 @@ class rc extends IntrusiveNode {
           return param2;
         }
         if (var5Lifetime1 != 0) {
-          this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, ad.field_m, (byte) 96);
+          this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, BufferedSocket.field_m, (byte) 96);
           if (hg.field_F != 0) {
             if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
               param2 = false;
@@ -538,7 +538,7 @@ class rc extends IntrusiveNode {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+          this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
           var14 = jf.field_a;
           var6 = var14;
           if (var14 != null) {
@@ -567,7 +567,7 @@ class rc extends IntrusiveNode {
           pd.a(125, this.c((byte) 78));
           return param2;
         }
-        this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
+        this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
         var24 = jf.field_a;
         if (var24 != null) {
           if (var24.field_n instanceof gk) {
@@ -586,7 +586,7 @@ class rc extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -727,14 +727,14 @@ class rc extends IntrusiveNode {
           this.field_x = param0;
           return;
         }
-        rc.e(-46);
+        UiWidget.e(-46);
         this.field_x = param0;
     }
 
     final void d(int param0) {
         this.b(this.field_x, this.field_t, this.field_m, 0, this.field_j);
         if (param0 != 1) {
-          this.a('�', (byte) -59, 25, (rc) null);
+          this.a('�', (byte) -59, 25, (UiWidget) null);
         }
     }
 
@@ -855,7 +855,7 @@ class rc extends IntrusiveNode {
         return false;
     }
 
-    rc(String param0, dg param1) {
+    UiWidget(String param0, dg param1) {
         this(param0, ph.field_f.field_a, param1);
     }
 
@@ -870,7 +870,7 @@ class rc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            this.a(37, (rc) null);
+            this.a(37, (UiWidget) null);
           }
           if (param2.containsKey(this)) {
             discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
@@ -898,12 +898,12 @@ class rc extends IntrusiveNode {
         }
     }
 
-    protected rc() {
+    protected UiWidget() {
         this.field_k = 0;
         this.field_q = 0;
     }
 
-    rc(String param0, j param1, dg param2) {
+    UiWidget(String param0, j param1, dg param2) {
         eg var4 = null;
         this.field_k = 0;
         this.field_q = 0;
@@ -921,7 +921,7 @@ class rc extends IntrusiveNode {
         }
     }
 
-    rc(int param0, int param1, int param2, int param3, j param4, dg param5) {
+    UiWidget(int param0, int param1, int param2, int param3, j param4, dg param5) {
         this.field_k = 0;
         this.field_q = 0;
         try {

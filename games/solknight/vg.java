@@ -26,7 +26,7 @@ class vg extends pj {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = SolKnight.field_L ? 1 : 0;
-        if (ad.field_h < 0) {
+        if (BufferedSocket.field_h < 0) {
           return;
         }
         var3 = -135 + param1;
@@ -35,11 +35,11 @@ class vg extends pj {
           vg.a((byte) -22);
         }
         var5 = 256;
-        if (75 > ad.field_h) {
-          var5 = (ad.field_h << 8) / 75;
+        if (75 > BufferedSocket.field_h) {
+          var5 = (BufferedSocket.field_h << 8) / 75;
         }
-        if (ad.field_h > 200) {
-          var5 = (250 - ad.field_h << 8) / 50;
+        if (BufferedSocket.field_h > 200) {
+          var5 = (250 - BufferedSocket.field_h << 8) / 50;
         }
         cl.a(-118, tg.field_J);
         hk.a();
@@ -49,12 +49,12 @@ class vg extends pj {
           mi.a(0, 0, mi.field_a, mi.field_d, 0, -var5 + 256);
         }
         mf.e(4096);
-        if (ad.field_h < 150) {
+        if (BufferedSocket.field_h < 150) {
           tg.field_J.f(var3, var4);
         } else {
           IntrusiveNode.field_e.c(15 + var3, var4 + 10, var5);
         }
-        var6 = ad.field_h - 125;
+        var6 = BufferedSocket.field_h - 125;
         if (0 < var6 &&
           var6 < 50) {
           if (var6 < 20) {
@@ -69,7 +69,7 @@ class vg extends pj {
             }
           }
         }
-        var6Lifetime1 = -140 + ad.field_h;
+        var6Lifetime1 = -140 + BufferedSocket.field_h;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
@@ -97,7 +97,7 @@ class vg extends pj {
           this.field_U = false;
           return;
         }
-        this.field_w.a((byte) 126, param0, this.field_B, param2, (rc) (this));
+        this.field_w.a((byte) 126, param0, this.field_B, param2, (UiWidget) (this));
         if (!(this.field_w instanceof eg)) {
           if (param3 == 0) {
             return;
@@ -109,7 +109,7 @@ class vg extends pj {
         if (this.field_O == this.field_K) {
           var6 = je.a(param3 + 1);
           if (500L > (-this.field_V + var6) % 1000L) {
-            var8.a(this.field_K, param0, 1, (rc) (this), param2);
+            var8.a(this.field_K, param0, 1, (UiWidget) (this), param2);
           }
           if (param3 == 0) {
             return;
@@ -117,10 +117,10 @@ class vg extends pj {
           this.field_U = false;
           return;
         }
-        var8.a(this.field_O, (rc) (this), this.field_K, 114, param0, param2);
+        var8.a(this.field_O, (UiWidget) (this), this.field_K, 114, param0, param2);
         var6Lifetime1 = je.a(param3 + 1);
         if (500L > (-this.field_V + var6Lifetime1) % 1000L) {
-          var8.a(this.field_K, param0, 1, (rc) (this), param2);
+          var8.a(this.field_K, param0, 1, (UiWidget) (this), param2);
         }
         if (param3 == 0) {
           return;
@@ -249,7 +249,7 @@ class vg extends pj {
         }
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         eg var5 = null;
         int var6 = 0;
         super.a(param0, param1 + 0, param2, param3);
@@ -261,7 +261,7 @@ class vg extends pj {
           if (1 == this.field_u) {
             if (this.field_w instanceof eg) {
               var5 = (eg) ((Object) this.field_w);
-              var6 = var5.a((rc) (this), 0, PacketBuffer.field_j, ad.field_m, param2, param0);
+              var6 = var5.a((UiWidget) (this), 0, PacketBuffer.field_j, BufferedSocket.field_m, param2, param0);
               if (-1 != var6) {
                 if (this.field_U &&
                   var6 < this.field_R &&
@@ -307,10 +307,10 @@ class vg extends pj {
           return;
         }
         var10 = (eg) ((Object) this.field_w);
-        var3 = var10.a(-21480, (rc) (this));
+        var3 = var10.a(-21480, (UiWidget) (this));
         var6 = -33 % ((-72 - param0) / 42);
         var4 = var3.b(62);
-        var5 = var10.b(265, (rc) (this));
+        var5 = var10.b(265, (UiWidget) (this));
         var7 = var10.a(3) >> 1;
         if (-var7 + var5 > var4) {
           this.field_q = 0;
@@ -336,7 +336,7 @@ class vg extends pj {
         return;
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_33_1 = 0;
         int stackIn_61_1 = 0;
@@ -577,7 +577,7 @@ class vg extends pj {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_22_0 = null;
@@ -594,7 +594,7 @@ class vg extends pj {
           if (!(this.field_w instanceof eg)) {
             return false;
           }
-          var8_int = ((eg) ((Object) this.field_w)).a((rc) (this), 0, PacketBuffer.field_j, ad.field_m, param5, param1);
+          var8_int = ((eg) ((Object) this.field_w)).a((UiWidget) (this), 0, PacketBuffer.field_j, BufferedSocket.field_m, param5, param1);
           if (-1 != var8_int) {
             stackIn_7_1 = var8_int;
           } else {

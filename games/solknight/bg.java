@@ -19,7 +19,7 @@ final class bg extends uf {
         field_v = (int[][]) null;
     }
 
-    final String b(rc param0, int param1) {
+    final String b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

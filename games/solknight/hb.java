@@ -246,7 +246,7 @@ final class hb {
             ic.field_t = ic.field_t + (bi.field_i >>> 11 << kb.field_b);
             fa.field_f = fa.field_f | 1 << kb.field_b;
             lc.field_h = lc.field_h | 1 << kb.field_b;
-            var1_int = ii.a(fa.field_f & 255, 126);
+            var1_int = IterableNodeHashTable.a(fa.field_f & 255, 126);
             vk.a(246, (byte) 89, 9);
             if (var1_int == 4) {
               vk.a(245, (byte) 89, 10);
@@ -260,7 +260,7 @@ final class hb {
             ic.field_t = ic.field_t + (bi.field_i >>> 11 << kb.field_b + 8);
             fa.field_f = fa.field_f | 1 << kb.field_b + 8;
             lc.field_h = lc.field_h | 1 << kb.field_b + 8;
-            var1_intLifetime1 = ii.a(fa.field_f & 65280, 127);
+            var1_intLifetime1 = IterableNodeHashTable.a(fa.field_f & 65280, 127);
             vk.a(243, (byte) 89, 12);
             if (var1_intLifetime1 == 4) {
               vk.a(242, (byte) 89, 13);
@@ -276,8 +276,8 @@ final class hb {
             ic.field_t = ic.field_t + (bi.field_i >>> 11 << 16);
             vk.a(240, (byte) 89, 15);
           }
-          if (vk.field_p > oa.field_m) {
-            oa.field_m = vk.field_p;
+          if (vk.field_p > ImageProducerRasterBuffer.field_m) {
+            ImageProducerRasterBuffer.field_m = vk.field_p;
           }
           var1_intLifetime2 = 0;
           if (kf.field_G != null) {
@@ -292,15 +292,15 @@ final class hb {
             }
           }
           if (!pg.field_e &&
-            lk.field_b >= qh.field_a[kb.field_b] &&
+            lk.field_b >= GameKeyHandler.field_a[kb.field_b] &&
             var1_intLifetime2 == 0 &&
             kd.field_a == -1 &&
             uf.field_p >= 0) {
-            jg.field_b = jg.field_b + 1;
-            if (!(jg.field_b <= 50) ||
+            FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + 1;
+            if (!(FullscreenFocusCanvas.field_b <= 50) ||
               kb.field_b == 7) {
               boolean decompiledFrameRemainder0 = true;
-              jg.field_b = 0;
+              FullscreenFocusCanvas.field_b = 0;
               kh.field_d = 255;
               if (kb.field_b != 7 && (kb.field_b != 2 ||
                 !(ob.field_l <= 0))) {
@@ -308,8 +308,8 @@ final class hb {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                lk.field_e = lk.field_e + oa.field_m * 100;
-                ic.field_t = ic.field_t - 100 * oa.field_m;
+                lk.field_e = lk.field_e + ImageProducerRasterBuffer.field_m * 100;
+                ic.field_t = ic.field_t - 100 * ImageProducerRasterBuffer.field_m;
                 if (kb.field_b == 7) {
                   lk.field_e = lk.field_e + 5000;
                   ic.field_t = ic.field_t - 5000;
@@ -321,14 +321,14 @@ final class hb {
               vk.field_p = 0;
             }
           } else {
-            if (jg.field_b > 0) {
-              jg.field_b = jg.field_b - 1;
+            if (FullscreenFocusCanvas.field_b > 0) {
+              FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b - 1;
             }
           }
           if (!param0) {
             field_j = (String) null;
           }
-          cb.field_a = 15 * cb.field_a / 16 - 1;
+          ProxyAuthenticationRequiredException.field_a = 15 * ProxyAuthenticationRequiredException.field_a / 16 - 1;
           if (0 < ia.field_hb &&
             kd.field_a == -1) {
             ia.field_hb = ia.field_hb + 1;
@@ -339,15 +339,15 @@ final class hb {
               vk.field_p = 0;
             }
           }
-          if (cb.field_a < 0) {
-            cb.field_a = 0;
+          if (ProxyAuthenticationRequiredException.field_a < 0) {
+            ProxyAuthenticationRequiredException.field_a = 0;
           }
           if (0 <= ClientException.field_b) {
             pl.field_a = 0;
           }
-          if (cb.field_a < 128 &&
+          if (ProxyAuthenticationRequiredException.field_a < 128 &&
             0 < vk.field_p) {
-            cb.field_a = 128;
+            ProxyAuthenticationRequiredException.field_a = 128;
           }
           if (pl.field_a > 0) {
             ci.field_ib = 256;
@@ -395,7 +395,7 @@ final class hb {
             !(0 > ClientException.field_b)) {
             lk.field_b = 0;
           }
-          if (qh.field_a[kb.field_b] > lk.field_b && (kd.field_a == -1 ||
+          if (GameKeyHandler.field_a[kb.field_b] > lk.field_b && (kd.field_a == -1 ||
             pg.field_e)) {
             mf.field_A = mf.field_A + 1;
           }
@@ -428,7 +428,7 @@ final class hb {
                 } else {
                   ah.b(true);
                   kh.field_c = null;
-                  if (jl.field_d != 0) {
+                  if (SecondaryNodeDequeIterator.field_d != 0) {
                     PacketBuffer.a(true, 7, -127);
                   } else {
                     PacketBuffer.a(true, 2, -128);
@@ -472,12 +472,12 @@ final class hb {
               }
               if (ib.field_h < kb.field_b &&
                 bk.a(2, jb.field_g, (byte) 76) == 0 &&
-                qh.field_a[kb.field_b] - 50 < lk.field_b &&
+                GameKeyHandler.field_a[kb.field_b] - 50 < lk.field_b &&
                 0 < kb.field_b) {
                 var2Lifetime2 = 5;
               }
-              if (-1 + (qh.field_a[kb.field_b] - lk.field_b) < var2Lifetime2) {
-                var2Lifetime2 = -1 - lk.field_b + qh.field_a[kb.field_b];
+              if (-1 + (GameKeyHandler.field_a[kb.field_b] - lk.field_b) < var2Lifetime2) {
+                var2Lifetime2 = -1 - lk.field_b + GameKeyHandler.field_a[kb.field_b];
               }
               if (var2Lifetime2 < 0) {
                 var2Lifetime2 = 0;
@@ -577,7 +577,7 @@ final class hb {
             if (var2Lifetime3 < 0) {
               var2Lifetime3 = 0;
             }
-            var3Lifetime1 = ad.field_m;
+            var3Lifetime1 = BufferedSocket.field_m;
             if (640 <= var2Lifetime3) {
               var2Lifetime3 = 639;
             }
@@ -595,7 +595,7 @@ final class hb {
             be.c(false);
           }
           if (kd.field_a == -1) {
-            while (wk.a((byte) -56)) {
+            while (DelegatingCanvas.a((byte) -56)) {
               if (13 != el.field_n) {
                 continue;
               }
@@ -617,16 +617,16 @@ final class hb {
             lc.field_p = lc.field_p + 1;
             ic.field_t = ic.field_t - 1;
             vk.field_p = 0;
-            oa.field_n = true;
+            ImageProducerRasterBuffer.field_n = true;
             if (1 + kb.field_b < 8) {
-              lk.field_b = qh.field_a[kb.field_b];
-              var2Lifetime4 = -ud.field_k + (-100 + qh.field_a[1 + kb.field_b]);
+              lk.field_b = GameKeyHandler.field_a[kb.field_b];
+              var2Lifetime4 = -ud.field_k + (-100 + GameKeyHandler.field_a[1 + kb.field_b]);
               bi.field_i = bi.field_i + var2Lifetime4;
               lc.field_p = lc.field_p + var2Lifetime4 * (lc.field_h >>> 17);
-              ud.field_k = qh.field_a[1 + kb.field_b] - 100;
+              ud.field_k = GameKeyHandler.field_a[1 + kb.field_b] - 100;
             } else {
-              lk.field_e = lk.field_e + oa.field_m * 100;
-              ic.field_t = ic.field_t - (oa.field_m * 100 + 5000);
+              lk.field_e = lk.field_e + ImageProducerRasterBuffer.field_m * 100;
+              ic.field_t = ic.field_t - (ImageProducerRasterBuffer.field_m * 100 + 5000);
               lk.field_e = lk.field_e + 5000;
               me.a(false);
               if (!il.b(507)) {
@@ -643,13 +643,13 @@ final class hb {
             ic.field_t = ic.field_t - 1;
             fg.field_a = 500;
             lc.field_p = lc.field_p + 1;
-            oa.field_n = true;
+            ImageProducerRasterBuffer.field_n = true;
             bi.field_h = 1;
           }
           if (lh.field_s >= 2 &&
             fh.field_d[33]) {
             bi.field_h = 2;
-            oa.field_n = true;
+            ImageProducerRasterBuffer.field_n = true;
             fg.field_a = 500;
             ic.field_t = ic.field_t - 1;
             lc.field_p = lc.field_p + 1;

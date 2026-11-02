@@ -73,7 +73,7 @@ final class mf extends ej {
             var9 = (int)var8_ref_ee.key;
             var12 = (fc) (this.field_C.a(true, (long)var9));
             if (var12 == null) {
-              var13 = oa.a(-1803587230, var9, param3);
+              var13 = ImageProducerRasterBuffer.a(-1803587230, var9, param3);
               if (var13 != null) {
                 this.field_C.a((byte) 122, var13, (long)var9);
                 if (!var13.a(param2, (int[]) (var7), var8_ref_ee.field_k, -124)) {
@@ -821,7 +821,7 @@ final class mf extends ej {
           if (var6Lifetime3 < 64) {
             this.field_U[var4Lifetime4] = fi.a(this.field_U[var4Lifetime4], -2);
           } else {
-            this.field_U[var4Lifetime4] = qk.a(this.field_U[var4Lifetime4], 1);
+            this.field_U[var4Lifetime4] = ProxySocketConnector.a(this.field_U[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
@@ -829,7 +829,7 @@ final class mf extends ej {
             this.g(40, var4Lifetime4);
             this.field_U[var4Lifetime4] = fi.a(this.field_U[var4Lifetime4], -3);
           } else {
-            this.field_U[var4Lifetime4] = qk.a(this.field_U[var4Lifetime4], 2);
+            this.field_U[var4Lifetime4] = ProxySocketConnector.a(this.field_U[var4Lifetime4], 2);
           }
         }
         if (99 == var5Lifetime4) {
@@ -876,7 +876,7 @@ final class mf extends ej {
             this.b(-4222, var4Lifetime4);
             this.field_U[var4Lifetime4] = fi.a(this.field_U[var4Lifetime4], -5);
           } else {
-            this.field_U[var4Lifetime4] = qk.a(this.field_U[var4Lifetime4], 4);
+            this.field_U[var4Lifetime4] = ProxySocketConnector.a(this.field_U[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {

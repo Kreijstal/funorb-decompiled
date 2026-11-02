@@ -62,7 +62,7 @@ final class li extends IntrusiveNode {
             }
             var5_ref = SocketConnector.a(var4_ref_String, 113);
             var6_ref = var1.readString(105);
-            var7_ref = jg.a((CharSequence) ((Object) var4_ref_String), -2);
+            var7_ref = FullscreenFocusCanvas.a((CharSequence) ((Object) var4_ref_String), -2);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
@@ -125,12 +125,12 @@ final class li extends IntrusiveNode {
           if (var6 == null) {
             var6 = mc.a(var5, (byte) 105);
             if (var6 != null) {
-              ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
+              ok.field_a.a((long)FullscreenFocusCanvas.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
             }
           }
           if (null == var6) {
             var6 = new ia();
-            ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
+            ok.field_a.a((long)FullscreenFocusCanvas.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
             fieldTemp$0 = ng.field_c;
             ng.field_c = ng.field_c + 1;
             var6.field_jb = fieldTemp$0;

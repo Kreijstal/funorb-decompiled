@@ -204,9 +204,9 @@ final class nc {
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
           pd var5 = null;
-          oa var5_ref = null;
+          ImageProducerRasterBuffer var5_ref = null;
           pd stackIn_3_0 = null;
-          oa stackIn_5_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -224,7 +224,7 @@ final class nc {
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new oa();
+              var5_ref = new ImageProducerRasterBuffer();
               ((pd) ((Object) var5_ref)).a(param3, 9387, param1, param0);
               stackIn_5_0 = var5_ref;
               return (pd) ((Object) stackIn_5_0);

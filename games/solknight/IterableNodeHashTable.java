@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class ii implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static String field_a;
     static String field_c;
     static o[] field_g;
     private IntrusiveNode field_d;
-    IntrusiveNode[] field_b;
+    IntrusiveNode[] buckets;
     static o[] field_f;
     static int field_h;
     int field_e;
@@ -26,19 +26,19 @@ final class ii implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new n(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long key, int obfuscationGuard) {
         IntrusiveNode var5 = null;
         int var6 = SolKnight.field_L ? 1 : 0;
-        IntrusiveNode var4 = this.field_b[(int)((long)(this.field_e - 1) & param0)];
+        IntrusiveNode var4 = this.buckets[(int)((long)(this.field_e - 1) & key)];
         this.field_d = var4.previous;
-        if (param1 >= -83) {
-          ii.a(-1);
+        if (obfuscationGuard >= -83) {
+          IterableNodeHashTable.a(-1);
         }
         while (var4 != this.field_d) {
-          if (~this.field_d.key == ~param0) {
+          if (~this.field_d.key == ~key) {
             var5 = this.field_d;
             this.field_d = this.field_d.previous;
             return var5;
@@ -106,7 +106,7 @@ final class ii implements Iterable {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = var8 >> 3 & 31;
-                  mi.field_f[var6_int] = qk.a(var11, qk.a(var10, var9 << 16));
+                  mi.field_f[var6_int] = ProxySocketConnector.a(var11, ProxySocketConnector.a(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -122,31 +122,31 @@ final class ii implements Iterable {
         }
     }
 
-    private ii() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
-    final void a(int param0, long param1, IntrusiveNode param2) {
+    final void put(int obfuscationGuard, long key, IntrusiveNode node) {
         IntrusiveNode var5 = null;
         try {
-          if (null != param2.next) {
-            param2.unlink(10);
+          if (null != node.next) {
+            node.unlink(10);
           }
-          var5 = this.field_b[(int)(param1 & (long)(-1 + this.field_e))];
-          param2.previous = var5;
-          param2.next = var5.next;
-          param2.next.previous = param2;
-          param2.key = param1;
-          if (param0 != -858993458) {
+          var5 = this.buckets[(int)(key & (long)(-1 + this.field_e))];
+          node.previous = var5;
+          node.next = var5.next;
+          node.next.previous = node;
+          node.key = key;
+          if (obfuscationGuard != -858993458) {
             field_g = (o[]) null;
           }
-          param2.previous.next = param2;
+          node.previous.next = node;
         } catch (RuntimeException runtimeException) {
-          throw fc.a((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "ii.C(" + obfuscationGuard + ',' + key + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static java.awt.Frame a(boolean param0, int param1, dl param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(boolean param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         int var8 = 0;
         java.awt.Frame stackIn_3_0 = null;
         Object stackIn_36_0 = null;

@@ -59,10 +59,10 @@ final class pg {
           var2 = var27.readUnsignedByte(255);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-109);
-            var4_ref_sd = (sd) (r.field_b.a((byte) 51));
+            var4_ref_sd = (sd) (IsaacRandom.field_b.a((byte) 51));
             while (var4_ref_sd != null) {
               if (var3 != var4_ref_sd.field_o) {
-                var4_ref_sd = (sd) (r.field_b.b(-125));
+                var4_ref_sd = (sd) (IsaacRandom.field_b.b(-125));
                 continue;
               }
               break;
@@ -206,20 +206,20 @@ final class pg {
           }
           try {
             if (0 == SocketConnector.field_f) {
-              ik.field_b = n.field_a.a(qk.field_o, ue.field_a, -28148);
+              SecondaryNodeDeque.field_b = NodeHashTableIterator.field_a.a(ProxySocketConnector.field_o, ue.field_a, -28148);
               SocketConnector.field_f = SocketConnector.field_f + 1;
             }
             if (SocketConnector.field_f == 1) {
-              if (2 == ik.field_b.field_c) {
+              if (2 == SecondaryNodeDeque.field_b.field_c) {
                 stackIn_14_0 = ua.a(-1, (byte) -86);
                 return stackIn_14_0;
               }
-              if (ik.field_b.field_c == 1) {
+              if (SecondaryNodeDeque.field_b.field_c == 1) {
                 SocketConnector.field_f = SocketConnector.field_f + 1;
               }
             }
             if (SocketConnector.field_f == 2) {
-              qf.field_a = new ad((java.net.Socket) (ik.field_b.field_e), n.field_a);
+              qf.field_a = new BufferedSocket((java.net.Socket) (SecondaryNodeDeque.field_b.field_e), NodeHashTableIterator.field_a);
               var2 = new PacketBuffer(13);
               si.a(hj.field_x, (byte) 22, sa.field_o, q.field_a, var2);
               var2.c(param0 + 35, 15);
@@ -252,7 +252,7 @@ final class pg {
             }
             il.field_c.a(la.field_n, (byte) 106, qf.field_a);
             SocketConnector.field_f = 0;
-            ik.field_b = null;
+            SecondaryNodeDeque.field_b = null;
             qf.field_a = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;

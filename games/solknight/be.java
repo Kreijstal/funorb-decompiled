@@ -28,7 +28,7 @@ final class be extends pj {
           var3 = -var1 - wd.field_c + ((sk.field_o >> 4) + 320);
           var4 = -var2 - si.field_E + (wg.field_e >> 4);
         } else {
-          var4 = -var2 + ad.field_m;
+          var4 = -var2 + BufferedSocket.field_m;
           var3 = PacketBuffer.field_j - var1;
         }
         regionExit1: {
@@ -68,7 +68,7 @@ final class be extends pj {
               wb.field_b = wb.field_b - 1;
             } else {
               if (wb.field_c == 1 &&
-                jg.field_b == 0 ||
+                FullscreenFocusCanvas.field_b == 0 ||
                 !(0 > ClientException.field_b)) {
                 if (bi.field_h != 1) {
                   mb.a(!param0, 3, 256);
@@ -98,7 +98,7 @@ final class be extends pj {
                 wb.field_b = wb.field_b - 1;
               } else {
                 if (((wb.field_c == 1 &&
-                  0 == jg.field_b) ||
+                  0 == FullscreenFocusCanvas.field_b) ||
                   !(ClientException.field_b < 0))) {
                   if (bi.field_h != 1) {
                     mb.a(true, 8, 256);
@@ -131,7 +131,7 @@ final class be extends pj {
                   break;
                 }
                 if ((wb.field_c != 1 ||
-                  jg.field_b != 0) &&
+                  FullscreenFocusCanvas.field_b != 0) &&
                   0 > ClientException.field_b) {
                   break;
                 }
@@ -151,7 +151,7 @@ final class be extends pj {
                   break;
                 }
                 if ((wb.field_c != 1 ||
-                  jg.field_b != 0) &&
+                  FullscreenFocusCanvas.field_b != 0) &&
                   ClientException.field_b < 0) {
                   break;
                 }
@@ -167,7 +167,7 @@ final class be extends pj {
                   wb.field_b = wb.field_b - 1;
                 } else {
                   if ((wb.field_c != 1 ||
-                    jg.field_b != 0) &&
+                    FullscreenFocusCanvas.field_b != 0) &&
                     ClientException.field_b < 0) {
                     break;
                   }
@@ -192,7 +192,7 @@ final class be extends pj {
                   break;
                 }
                 if ((wb.field_c != 1 ||
-                  jg.field_b != 0) &&
+                  FullscreenFocusCanvas.field_b != 0) &&
                   ClientException.field_b < 0) {
                   break;
                 }
@@ -205,7 +205,7 @@ final class be extends pj {
               case 7:
                 if (wb.field_b <= 0) {
                   if (wb.field_c == 1 &&
-                    0 == jg.field_b ||
+                    0 == FullscreenFocusCanvas.field_b ||
                     !(ClientException.field_b < 0)) {
                     wb.field_b = 175;
                     mb.a(true, 19, 256);
@@ -239,7 +239,7 @@ final class be extends pj {
                   }
                 }
                 if (wb.field_b <= 0 && (wb.field_c == 1 &&
-                  0 == jg.field_b ||
+                  0 == FullscreenFocusCanvas.field_b ||
                   !(0 > ClientException.field_b))) {
                   wb.field_b = 100;
                 }
@@ -271,7 +271,7 @@ final class be extends pj {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;

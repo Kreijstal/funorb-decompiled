@@ -14,7 +14,7 @@ final class lg extends wd {
     private int field_k;
     private bi field_f;
     private ae field_p;
-    static dl field_l;
+    static PlatformTaskDispatcher field_l;
     private boolean field_s;
     static String field_r;
     private nc field_e;
@@ -485,7 +485,7 @@ final class lg extends wd {
         field_l = null;
         field_r = null;
         if (param0 != 0) {
-          field_l = (dl) null;
+          field_l = (PlatformTaskDispatcher) null;
         }
     }
 

@@ -54,7 +54,7 @@ final class uk extends a {
             return stackIn_18_0;
           }
           if (var7.length() <= 0) {
-            stackIn_33_0 = ik.field_a;
+            stackIn_33_0 = SecondaryNodeDeque.field_a;
             return stackIn_33_0;
           }
           if (ne.a(var5, false, var7)) {
@@ -132,10 +132,10 @@ final class uk extends a {
 
     final static boolean h(int param0) {
         if (param0 == 250) {
-          return 250 < ad.field_h ? true : false;
+          return 250 < BufferedSocket.field_h ? true : false;
         }
         uk.i(78);
-        return 250 < ad.field_h ? true : false;
+        return 250 < BufferedSocket.field_h ? true : false;
     }
 
     uk(vg param0, vg param1, vg param2) {

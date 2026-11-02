@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static int field_b;
     static int field_e;
     volatile boolean field_a;
@@ -35,10 +35,10 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
           if (param1 >= -25) {
             field_e = -52;
           }
-          var5 = (sd) (r.field_b.a((byte) 51));
+          var5 = (sd) (IsaacRandom.field_b.a((byte) 51));
           while (var5 != null) {
             fi.a(var5, param0, -24045);
-            var5 = (sd) (r.field_b.b(-119));
+            var5 = (sd) (IsaacRandom.field_b.b(-119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,7 +48,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final void a(int param0, dl param1) {
+    final void a(int param0, PlatformTaskDispatcher param1) {
         if (param0 != -3680) {
           return;
         }
@@ -151,7 +151,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    jg() {
+    FullscreenFocusCanvas() {
     }
 
     public final void paint(java.awt.Graphics param0) {

@@ -18,7 +18,7 @@ final class nf extends ld implements ka {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (te.field_L == param1) {
@@ -38,7 +38,7 @@ final class nf extends ld implements ka {
               }
             }
           }
-          var4 = new rc((String) (var3), (dg) null);
+          var4 = new UiWidget((String) (var3), (dg) null);
           var4.field_j = 50;
           var4.field_m = 0;
           var4.field_t = this.field_t;

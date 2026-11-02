@@ -96,7 +96,7 @@ final class bf {
         }
     }
 
-    final void a(bf param0, int param1, rc param2, int param3, int param4, ql param5) {
+    final void a(bf param0, int param1, UiWidget param2, int param3, int param4, ql param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -186,7 +186,7 @@ final class bf {
         return this;
     }
 
-    final void a(int param0, int param1, int param2, ql param3, rc param4) {
+    final void a(int param0, int param1, int param2, ql param3, UiWidget param4) {
         mg stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
@@ -356,8 +356,8 @@ final class bf {
           param0.field_h = this.field_h;
           param0.field_d = this.field_d;
           if (param1 != 2) {
-            rc var4 = (rc) null;
-            this.a(-90, 43, 73, (ql) null, (rc) null);
+            UiWidget var4 = (UiWidget) null;
+            this.a(-90, 43, 73, (ql) null, (UiWidget) null);
           }
           param0.field_l = this.field_l;
           param0.field_g = this.field_g;

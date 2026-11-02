@@ -73,7 +73,7 @@ final class dc extends a {
         super(param0);
     }
 
-    final static uj[] a(byte param0, dl param1) {
+    final static uj[] a(byte param0, PlatformTaskDispatcher param1) {
         uj[] stackIn_4_0 = null;
         uj[] stackIn_11_0 = null;
         uj[] stackIn_16_0 = null;
@@ -150,7 +150,7 @@ final class dc extends a {
 
     final String a(String param0, boolean param1) {
         RuntimeException var3 = null;
-        dl var4 = null;
+        PlatformTaskDispatcher var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -159,8 +159,8 @@ final class dc extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var4 = (dl) null;
-            dc.a((byte) -32, (dl) null);
+            var4 = (PlatformTaskDispatcher) null;
+            dc.a((byte) -32, (PlatformTaskDispatcher) null);
           }
           if (this.a(param0, (byte) -112) != rg.field_f) {
             stackIn_6_0 = (String) (field_l);

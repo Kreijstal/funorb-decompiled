@@ -40,7 +40,7 @@ final class sf {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ig.field_H[fi.a(255, (int) var2[var4_int])];
         }
-        o var4 = new o(kl.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
+        o var4 = new o(MouseInputHandler.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
         og.a((byte) -97);
         return var4;
     }
@@ -55,8 +55,8 @@ final class sf {
         if (param0 > -109) {
           return (Boolean) null;
         }
-        Boolean var1 = n.field_b;
-        n.field_b = null;
+        Boolean var1 = NodeHashTableIterator.field_b;
+        NodeHashTableIterator.field_b = null;
         return var1;
     }
 

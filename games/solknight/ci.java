@@ -341,10 +341,10 @@ class ci extends gf implements ka {
         int var9Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
         try {
-          fi.field_a = ik.a(param3, -18362, "frame_top", "commonui");
-          qk.field_l = ik.a(param3, -18362, "frame_bottom", "commonui");
+          fi.field_a = SecondaryNodeDeque.a(param3, -18362, "frame_top", "commonui");
+          ProxySocketConnector.field_l = SecondaryNodeDeque.a(param3, -18362, "frame_bottom", "commonui");
           fa.field_b = rb.a("jagex_logo_grey", "commonui", param3, (byte) -125);
-          vk.field_i = ik.a(param3, -18362, "button", "commonui");
+          vk.field_i = SecondaryNodeDeque.a(param3, -18362, "button", "commonui");
           PacketBuffer.field_k = nh.a(param3, "validation", 0, "commonui");
           stackIn_3_0 = (da) (param0);
           stackIn_3_1 = "commonui";
@@ -359,9 +359,9 @@ class ci extends gf implements ka {
           ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
           md.field_s = new od[4];
-          r.field_i = new od[4];
-          jl.field_g = new od[4];
-          var6 = new od[][]{md.field_s, r.field_i, jl.field_g};
+          IsaacRandom.field_i = new od[4];
+          SecondaryNodeDequeIterator.field_g = new od[4];
+          var6 = new od[][]{md.field_s, IsaacRandom.field_i, SecondaryNodeDequeIterator.field_g};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -427,7 +427,7 @@ class ci extends gf implements ka {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -546,7 +546,7 @@ class ci extends gf implements ka {
           id.field_c.position = id.field_c.position + 2;
           var5_int = id.field_c.position;
           id.field_c.b(al.field_n, false);
-          id.field_c.a(wk.field_b, (byte) 63);
+          id.field_c.a(DelegatingCanvas.field_b, (byte) 63);
           var6 = 0;
           if (cl.field_m) {
             var6 = var6 | 1;
@@ -643,7 +643,7 @@ class ci extends gf implements ka {
                   var6.a(0, gh.field_r, (dg) (this));
                 }
               } else {
-                var6.a(9, ik.field_d, 1);
+                var6.a(9, SecondaryNodeDeque.field_d, 1);
               }
             }
           } else {

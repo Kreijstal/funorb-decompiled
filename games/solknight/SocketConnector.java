@@ -116,7 +116,7 @@ abstract class SocketConnector {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = jg.a(var6, -2);
+          var2 = FullscreenFocusCanvas.a(var6, -2);
           if (param1 < 103) {
             stackIn_6_0 = (ia) null;
             return stackIn_6_0;
@@ -130,7 +130,7 @@ abstract class SocketConnector {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_ib);
-            var4 = jg.a(var7, -2);
+            var4 = FullscreenFocusCanvas.a(var7, -2);
             if (var4 == null) {
               var4 = var3.field_ib;
             }

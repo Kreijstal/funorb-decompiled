@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends ki implements ka {
+final class lj extends WidgetContainer implements ka {
     private int field_K;
     private int[] field_L;
     private mg field_J;
@@ -203,7 +203,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("login_gameupdated", 4);
                 if (null != var2) {
-                  jl.field_c = da.a(true, var2);
+                  SecondaryNodeDequeIterator.field_c = da.a(true, var2);
                 }
                 var2 = vd.a("create_unable", 4);
                 if (var2 != null) {
@@ -1175,7 +1175,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("tocustomersupport", param0 ^ 26704);
                 if (null != var2) {
-                  ik.field_d = da.a(true, var2);
+                  SecondaryNodeDeque.field_d = da.a(true, var2);
                 }
                 var2 = vd.a("changedisplayname", 4);
                 if (var2 != null) {
@@ -1437,7 +1437,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("creatingyouraccount", 4);
                 if (var2 != null) {
-                  rc.field_p = da.a(true, var2);
+                  UiWidget.field_p = da.a(true, var2);
                 }
                 var2 = vd.a("create_youmustaccept", param0 ^ 26704);
                 if (null != var2) {
@@ -1521,7 +1521,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("create_createanaccount", param0 - 26704);
                 if (null != var2) {
-                  wk.field_g = da.a(true, var2);
+                  DelegatingCanvas.field_g = da.a(true, var2);
                 }
                 var2 = vd.a("create_username", 4);
                 if (var2 != null) {
@@ -1549,7 +1549,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("create_age", 4);
                 if (var2 != null) {
-                  cb.field_b = da.a(true, var2);
+                  ProxyAuthenticationRequiredException.field_b = da.a(true, var2);
                 }
                 var2 = vd.a("create_u13_email", 4);
                 if (null != var2) {
@@ -1612,7 +1612,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("login_email", 4);
                 if (var2 != null) {
-                  rc.field_y = da.a(true, var2);
+                  UiWidget.field_y = da.a(true, var2);
                 }
                 var2 = vd.a("login_username_tooltip", 4);
                 if (null != var2) {
@@ -1672,7 +1672,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("create_email_tooltip", param0 ^ 26704);
                 if (var2 != null) {
-                  qh.field_d = da.a(true, var2);
+                  GameKeyHandler.field_d = da.a(true, var2);
                 }
                 var2 = vd.a("create_email_confirm_tooltip", 4);
                 if (var2 != null) {
@@ -1680,7 +1680,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("create_age_tooltip", param0 - 26704);
                 if (null != var2) {
-                  oa.field_i = da.a(true, var2);
+                  ImageProducerRasterBuffer.field_i = da.a(true, var2);
                 }
                 var2 = vd.a("create_optin_news_tooltip", 4);
                 if (null != var2) {
@@ -1776,7 +1776,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("create_alert_invalidage", param0 ^ 26704);
                 if (null != var2) {
-                  qh.field_e = da.a(true, var2);
+                  GameKeyHandler.field_e = da.a(true, var2);
                 }
                 var2 = vd.a("create_alert_yearrange", 4);
                 if (null != var2) {
@@ -1784,11 +1784,11 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("create_alert_mismatch", 4);
                 if (null != var2) {
-                  ii.field_c = da.a(true, var2);
+                  IterableNodeHashTable.field_c = da.a(true, var2);
                 }
                 var2 = vd.a("create_passwordvalid", 4);
                 if (var2 != null) {
-                  ik.field_a = da.a(true, var2);
+                  SecondaryNodeDeque.field_a = da.a(true, var2);
                 }
                 var2 = vd.a("create_emailvalid", 4);
                 if (null != var2) {
@@ -1892,7 +1892,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("waitingfor_graphics", 4);
                 if (null != var2) {
-                  r.field_e = da.a(true, var2);
+                  IsaacRandom.field_e = da.a(true, var2);
                 }
                 var2 = vd.a("waitingfor_models", 4);
                 if (var2 != null) {
@@ -2108,7 +2108,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("nextlevel", param0 ^ 26704);
                 if (var2 != null) {
-                  rc.field_s = da.a(true, var2);
+                  UiWidget.field_s = da.a(true, var2);
                 }
                 var2 = vd.a("startgame", param0 ^ 26704);
                 if (var2 != null) {
@@ -2790,7 +2790,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("fs_button_cancel", 4);
                 if (null != var2) {
-                  qk.field_j = da.a(true, var2);
+                  ProxySocketConnector.field_j = da.a(true, var2);
                 }
                 var2 = vd.a("fs_accept_aftercancel", 4);
                 if (null != var2) {
@@ -2874,7 +2874,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("mb_exclusive_2", param0 - 26704);
                 if (null != var2) {
-                  ki.field_A = da.a(true, var2);
+                  WidgetContainer.field_A = da.a(true, var2);
                 }
                 var2 = vd.a("me_extra_benefits", 4);
                 if (null != var2) {
@@ -2882,7 +2882,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("hs_friend_tip", 4);
                 if (var2 != null) {
-                  ad.field_o = da.a(true, var2);
+                  BufferedSocket.field_o = da.a(true, var2);
                 }
                 var2 = vd.a("hs_friend_tip_multi", 4);
                 if (null != var2) {
@@ -2978,31 +2978,31 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("mustlogin2,1", 4);
                 if (null != var2) {
-                  ad.field_c[1] = da.a(true, var2);
+                  BufferedSocket.field_c[1] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin2,2", 4);
                 if (null != var2) {
-                  ad.field_c[2] = da.a(true, var2);
+                  BufferedSocket.field_c[2] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin2,3", 4);
                 if (var2 != null) {
-                  ad.field_c[3] = da.a(true, var2);
+                  BufferedSocket.field_c[3] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin2,4", param0 ^ 26704);
                 if (null != var2) {
-                  ad.field_c[4] = da.a(true, var2);
+                  BufferedSocket.field_c[4] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin2,5", 4);
                 if (null != var2) {
-                  ad.field_c[5] = da.a(true, var2);
+                  BufferedSocket.field_c[5] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin2,6", 4);
                 if (null != var2) {
-                  ad.field_c[6] = da.a(true, var2);
+                  BufferedSocket.field_c[6] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin2,7", 4);
                 if (var2 != null) {
-                  ad.field_c[7] = da.a(true, var2);
+                  BufferedSocket.field_c[7] = da.a(true, var2);
                 }
                 var2 = vd.a("mustlogin3,1", 4);
                 if (null != var2) {
@@ -3194,7 +3194,7 @@ final class lj extends ki implements ka {
           if (!af.b(-3)) {
             if (null != dj.field_k &&
               dj.field_k.field_a) {
-              qk.d(14995);
+              ProxySocketConnector.d(14995);
               vg.field_J.b(new nf(vg.field_J, ne.field_i), 100);
             }
             return;
@@ -3204,7 +3204,7 @@ final class lj extends ki implements ka {
           }
           vg.field_J.a(-1, g.field_a, true, ua.field_N);
           vg.field_J.c(param0);
-          while (wk.a((byte) -56)) {
+          while (DelegatingCanvas.a((byte) -56)) {
             vg.field_J.a(el.field_n, ta.field_d, (byte) -108);
             if (var2 != 0) {
               return;
@@ -3241,7 +3241,7 @@ final class lj extends ki implements ka {
           si.field_A = param0;
           kb.field_f = param3;
           ke.field_H = param2;
-          qk.a(mi.field_a / 2, mi.field_d / 2, -120);
+          ProxySocketConnector.a(mi.field_a / 2, mi.field_d / 2, -120);
           rj.a(param3.field_s + param3.field_m, param3.field_m, (byte) 81, param2.field_s + param2.field_m, param2.field_m);
           if (param1 < 124) {
             lj.a(40, (byte) -107, (mg) null, (mg) null);

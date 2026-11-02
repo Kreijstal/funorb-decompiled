@@ -5,7 +5,7 @@ abstract class lf {
     static String field_e;
     static volatile int field_c;
     static aa field_a;
-    static ad field_d;
+    static BufferedSocket field_d;
     static char[] field_f;
     static String field_b;
 
@@ -36,7 +36,7 @@ abstract class lf {
           var2_long = je.a(1);
           if (0 != rh.field_i &&
             qg.field_a < 0) {
-            var4_ref_sa = (sa) (jl.field_h.a((byte) 51));
+            var4_ref_sa = (sa) (SecondaryNodeDequeIterator.field_h.a((byte) 51));
             if (var4_ref_sa != null &&
               var2_long > var4_ref_sa.field_h) {
               var4_ref_sa.unlink(10);
@@ -45,9 +45,9 @@ abstract class lf {
               for (var5_int = 0; var5_int < te.field_O; var5_int++) {
                 te.field_N.payload[var5_int] = var4_ref_sa.field_k[var5_int];
               }
-              nf.field_U = kl.field_b;
-              kl.field_b = jg.field_e;
-              jg.field_e = ob.field_h;
+              nf.field_U = MouseInputHandler.field_b;
+              MouseInputHandler.field_b = FullscreenFocusCanvas.field_e;
+              FullscreenFocusCanvas.field_e = ob.field_h;
               ob.field_h = var4_ref_sa.field_j;
               return true;
             }
@@ -80,9 +80,9 @@ abstract class lf {
               return false;
             }
             if (rh.field_i == 0) {
-              nf.field_U = kl.field_b;
-              kl.field_b = jg.field_e;
-              jg.field_e = ob.field_h;
+              nf.field_U = MouseInputHandler.field_b;
+              MouseInputHandler.field_b = FullscreenFocusCanvas.field_e;
+              FullscreenFocusCanvas.field_e = ob.field_h;
               ob.field_h = qg.field_a;
               qg.field_a = -1;
               return true;
@@ -98,7 +98,7 @@ abstract class lf {
             for (var6 = 0; var6 < te.field_O; var6++) {
               var5.field_k[var6] = te.field_N.payload[var6];
             }
-            jl.field_h.a(var5, -7044);
+            SecondaryNodeDequeIterator.field_h.a(var5, -7044);
             qg.field_a = -1;
             stackIn_21_0 = qg.field_a;
           }

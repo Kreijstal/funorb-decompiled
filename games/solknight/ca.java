@@ -105,7 +105,7 @@ final class ca extends gj {
           this.field_v.start();
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (ii.a(param0, 126) != 1) {
+          if (IterableNodeHashTable.a(param0, 126) != 1) {
             this.b(ac.a(param0, true));
             return;
           }

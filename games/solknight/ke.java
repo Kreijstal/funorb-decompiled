@@ -49,7 +49,7 @@ final class ke extends si {
           String stackIn_14_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (dl.field_t.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_t.startsWith("win") &&
               sj.a(97, param2)) {
               return;
             }
@@ -182,8 +182,8 @@ final class ke extends si {
             }
             if (var4 == 0 &&
               uc.field_e < ti.field_e &&
-              var3 < ad.field_m &&
-              ad.field_m < var3 + kj.field_S.field_t) {
+              var3 < BufferedSocket.field_m &&
+              BufferedSocket.field_m < var3 + kj.field_S.field_t) {
               if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
                 PacketBuffer.field_j < 269) {
                 ti.field_e = uc.field_e;
@@ -197,29 +197,29 @@ final class ke extends si {
           if (!param0) {
             return 0;
           }
-          qh.field_b.a(-117, ad.a(ad.field_m, PacketBuffer.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
-          if (qh.field_b.d((byte) -8)) {
-            if (qh.field_b.field_f == 0) {
+          GameKeyHandler.field_b.a(-117, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, 0), BufferedSocket.a(s.field_gb, db.field_o, 0));
+          if (GameKeyHandler.field_b.d((byte) -8)) {
+            if (GameKeyHandler.field_b.field_f == 0) {
               stackIn_62_0 = 3;
               return stackIn_62_0;
             }
-            if (qh.field_b.field_f == 1) {
+            if (GameKeyHandler.field_b.field_f == 1) {
               stackIn_65_0 = 2;
               return stackIn_65_0;
             }
           }
           while (true) {
-            if (!wk.a((byte) -56)) {
+            if (!DelegatingCanvas.a((byte) -56)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
-            qh.field_b.a(0, false);
-            if (qh.field_b.d((byte) -33)) {
-              if (qh.field_b.field_f == 0) {
+            GameKeyHandler.field_b.a(0, false);
+            if (GameKeyHandler.field_b.d((byte) -33)) {
+              if (GameKeyHandler.field_b.field_f == 0) {
                 stackIn_72_0 = 3;
                 return stackIn_72_0;
               }
-              if (qh.field_b.field_f == 1) {
+              if (GameKeyHandler.field_b.field_f == 1) {
                 stackIn_75_0 = 1;
                 return stackIn_75_0;
               }
@@ -269,7 +269,7 @@ final class ke extends si {
         return -var3 + (param0 + var3) / param2;
     }
 
-    ke(int param0, int param1, int param2, int param3, rc param4, boolean param5, int param6, int param7, mg param8, int param9, String param10) {
+    ke(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, mg param8, int param9, String param10) {
         super(param0, param1, param2, param3, (j) null, (dg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

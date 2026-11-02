@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ec extends IntrusiveNode {
+class DualLinkNode extends IntrusiveNode {
     static String field_j;
-    long field_l;
+    long secondaryKey;
     static int field_h;
-    ec field_k;
-    ec field_i;
+    DualLinkNode secondaryNext;
+    DualLinkNode secondaryPrevious;
 
     final static aj b(boolean param0) {
         if (param0) {
@@ -27,17 +27,17 @@ class ec extends IntrusiveNode {
         return ji.field_b;
     }
 
-    final void a(int param0) {
-        if (param0 != 97) {
-          this.field_l = 11L;
+    final void unlinkSecondary(int obfuscationGuard) {
+        if (obfuscationGuard != 97) {
+          this.secondaryKey = 11L;
         }
-        if (null == this.field_k) {
+        if (null == this.secondaryNext) {
           return;
         }
-        this.field_k.field_i = this.field_i;
-        this.field_i.field_k = this.field_k;
-        this.field_i = null;
-        this.field_k = null;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryPrevious = null;
+        this.secondaryNext = null;
     }
 
     final static boolean a(char param0, boolean param1) {
@@ -160,12 +160,12 @@ class ec extends IntrusiveNode {
         }
     }
 
-    protected ec() {
+    protected DualLinkNode() {
     }
 
     public static void d(int param0) {
         if (param0 != -1) {
-          ec.e(-35);
+          DualLinkNode.e(-35);
         }
         field_j = null;
     }

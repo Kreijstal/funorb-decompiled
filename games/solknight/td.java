@@ -135,8 +135,8 @@ final class td implements j {
         return param0 | param1;
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
-        rc stackIn_3_0 = null;
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -149,7 +149,7 @@ final class td implements j {
         tg var11 = null;
         try {
           if (param4 instanceof tg) {
-            stackIn_3_0 = (rc) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }

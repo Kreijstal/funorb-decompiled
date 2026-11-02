@@ -47,7 +47,7 @@ abstract class pd {
         try {
           if (ch.field_b == -1 &&
             ql.field_v == -1) {
-            ql.field_v = ad.field_m;
+            ql.field_v = BufferedSocket.field_m;
             ch.field_b = PacketBuffer.field_j;
           }
           boolean decompiledFrameRemainder0 = true;

@@ -56,10 +56,10 @@ final class vd {
         var3 = var8.readUnsignedByte(255);
         stackIn_3_0 = ((var3 & 128) != 0);
         ml.field_e = stackIn_3_0;
-        qk.field_m = 127 & var3;
+        ProxySocketConnector.field_m = 127 & var3;
         th.field_I = var8.readUnsignedByte(255);
         q.field_b = var8.readLong(10526);
-        if (qk.field_m != 2) {
+        if (ProxySocketConnector.field_m != 2) {
           ah.field_c = 0;
           hc.field_b = 0;
         } else {
@@ -74,11 +74,11 @@ final class vd {
         } else {
           field_a = field_e;
         }
-        if (1 == qk.field_m) {
+        if (1 == ProxySocketConnector.field_m) {
           var8.readUnsignedShort(-117);
           var8.readString(27);
         } else {
-          if (4 == qk.field_m) {
+          if (4 == ProxySocketConnector.field_m) {
             var8.readUnsignedShort(-117);
             var8.readString(27);
           }

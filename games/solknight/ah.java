@@ -106,7 +106,7 @@ final class ah {
           }
           of.field_d.c(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
           if (k.field_c > 10) {
-            ad.field_b.a(rg.field_a, 320, 240, 16711680, -1);
+            BufferedSocket.field_b.a(rg.field_a, 320, 240, 16711680, -1);
           }
           if (param1 == 7) {
             return;
@@ -323,11 +323,11 @@ final class ah {
         if (lk.field_e <= 0) {
           return;
         }
-        if (oa.field_n) {
+        if (ImageProducerRasterBuffer.field_n) {
           return;
         }
         if (bi.field_b == null) {
-          bi.field_b = tk.a(bi.field_i, 15, new int[]{100 * ud.field_k / qh.field_a[7] + 101 * lk.field_e}, 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
+          bi.field_b = tk.a(bi.field_i, 15, new int[]{100 * ud.field_k / GameKeyHandler.field_a[7] + 101 * lk.field_e}, 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
           return;
         }
     }

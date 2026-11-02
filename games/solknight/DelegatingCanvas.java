@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static String field_a;
     static uh[] field_d;
     private java.awt.Component field_f;
@@ -48,7 +48,7 @@ final class wk extends java.awt.Canvas {
         }
     }
 
-    wk(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -71,9 +71,9 @@ final class wk extends java.awt.Canvas {
           el.field_n = lb.field_V[pf.field_a];
           if (param0 != -56) {
             var3 = (String[]) null;
-            wk.a((byte) -108, (String[]) null);
+            DelegatingCanvas.a((byte) -108, (String[]) null);
           }
-          ta.field_d = r.field_g[pf.field_a];
+          ta.field_d = IsaacRandom.field_g[pf.field_a];
           pf.field_a = pf.field_a + 1 & 127;
           stackIn_7_0 = true;
         }

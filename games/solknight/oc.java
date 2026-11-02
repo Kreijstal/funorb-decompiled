@@ -68,7 +68,7 @@ final class oc {
         int var4Lifetime1;
         String var1Lifetime1;
         var5 = SolKnight.field_L ? 1 : 0;
-        var6 = "(" + nf.field_U + " " + kl.field_b + " " + jg.field_e + ") " + ob.field_h;
+        var6 = "(" + nf.field_U + " " + MouseInputHandler.field_b + " " + FullscreenFocusCanvas.field_e + ") " + ob.field_h;
         var1 = var6;
         if (!param0) {
           if (te.field_O <= 0) {

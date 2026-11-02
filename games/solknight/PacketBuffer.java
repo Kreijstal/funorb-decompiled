@@ -307,7 +307,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean k(int param0) {
         this.position = this.position - param0;
-        int var2 = ki.a(-27129, this.payload, this.position, 0);
+        int var2 = WidgetContainer.a(-27129, this.payload, this.position, 0);
         int var3 = this.readInt(true);
         if (var3 == var2) {
           return true;
@@ -771,7 +771,7 @@ class PacketBuffer extends IntrusiveNode {
         if (!param0) {
           this.position = -7;
         }
-        int var3 = ki.a(-27129, this.payload, this.position, param1);
+        int var3 = WidgetContainer.a(-27129, this.payload, this.position, param1);
         this.b(var3, false);
         return var3;
     }

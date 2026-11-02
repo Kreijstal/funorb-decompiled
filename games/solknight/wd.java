@@ -20,7 +20,7 @@ abstract class wd {
             return;
           }
           var1 = id.field_c;
-          while (ec.e(param0 ^ 7697789)) {
+          while (DualLinkNode.e(param0 ^ 7697789)) {
             var1.e(8, -2147483648);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
@@ -107,7 +107,7 @@ abstract class wd {
             }
             var4 = param0.substring(0, var2_int);
             var5 = param0.substring(1 + var2_int);
-            var6 = ad.b((byte) -126, var4);
+            var6 = BufferedSocket.b((byte) -126, var4);
             if (var6 == null) {
               return ne.a(var5, 62);
             }

@@ -30,7 +30,7 @@ final class lc extends IntrusiveNode {
         try {
           for (var2_int = param0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!ec.a((char) var3, false) &&
+            if (!DualLinkNode.a((char) var3, false) &&
               !gh.a((char) var3, (byte) -124)) {
               return true;
             }

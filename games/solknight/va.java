@@ -63,7 +63,7 @@ abstract class va {
         ic var8;
         var6 = (long)param2 + ((long)param0 << 32);
         var8 = new ic();
-        var8.field_l = var6;
+        var8.secondaryKey = var6;
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param1) ? false : true;
         stackIn_2_0.field_r = stackIn_3_1;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class pj extends rc {
+class pj extends UiWidget {
     static int field_H;
     boolean field_F;
     static String field_G;
@@ -24,7 +24,7 @@ class pj extends rc {
         this(param0, ph.field_f.field_i, param1);
     }
 
-    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         da var9 = null;
         RuntimeException stackIn_15_0 = null;
@@ -63,7 +63,7 @@ class pj extends rc {
         }
     }
 
-    boolean a(char param0, byte param1, int param2, rc param3) {
+    boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -149,7 +149,7 @@ class pj extends rc {
         }
     }
 
-    final void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (null != this.field_n &&
             this.field_n instanceof oj) {
@@ -182,7 +182,7 @@ class pj extends rc {
           this.field_E = false;
           if (null != this.field_n &&
             this.field_n instanceof p) {
-            ((p) (this.field_n)).a(true, (rc) (this), this.field_E);
+            ((p) (this.field_n)).a(true, (UiWidget) (this), this.field_E);
           }
         }
         if (param0 != 0) {
@@ -243,7 +243,7 @@ class pj extends rc {
         }
     }
 
-    boolean a(int param0, rc param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -260,7 +260,7 @@ class pj extends rc {
           this.field_E = true;
           if (this.field_n != null &&
             this.field_n instanceof p) {
-            ((p) (this.field_n)).a(true, (rc) (this), this.field_E);
+            ((p) (this.field_n)).a(true, (UiWidget) (this), this.field_E);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -363,16 +363,16 @@ class pj extends rc {
         }
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             wb.field_c != this.field_u) {
-            if (this.a(ad.field_m, PacketBuffer.field_j, param0, param2, -107) &&
+            if (this.a(BufferedSocket.field_m, PacketBuffer.field_j, param0, param2, -107) &&
               wb.field_c == 0) {
-              this.a(true, PacketBuffer.field_j - param0, this.field_u, -param2 + ad.field_m);
+              this.a(true, PacketBuffer.field_j - param0, this.field_u, -param2 + BufferedSocket.field_m);
             }
-            this.a(ad.field_m, 0, param3, param2, PacketBuffer.field_j, param0);
+            this.a(BufferedSocket.field_m, 0, param3, param2, PacketBuffer.field_j, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "pj.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

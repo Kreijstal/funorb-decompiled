@@ -176,16 +176,16 @@ final class la extends IntrusiveNode {
             }
             if (param3) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, ec.field_h, cf.field_d);
+              var10.fillRect(0, 0, DualLinkNode.field_h, cf.field_d);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (rc.field_r == null) {
-                rc.field_r = dc.field_q.createImage(304, 34);
+              if (UiWidget.field_r == null) {
+                UiWidget.field_r = dc.field_q.createImage(304, 34);
               }
-              var11 = rc.field_r.getGraphics();
+              var11 = UiWidget.field_r.getGraphics();
               var11.setColor(param1);
               var11.drawRect(0, 0, 303, 33);
               var11.fillRect(2, 2, param0 * 3, 30);
@@ -199,11 +199,11 @@ final class la extends IntrusiveNode {
               var11.setFont(ce.field_f);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param4, (304 - param4.length() * 6) / 2, 22);
-              var10.drawImage(rc.field_r, ec.field_h / 2 - 152, -18 + cf.field_d / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(UiWidget.field_r, DualLinkNode.field_h / 2 - 152, -18 + cf.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = ec.field_h / 2 - 152;
+              var7 = DualLinkNode.field_h / 2 - 152;
               var8 = -18 + cf.field_d / 2;
               var10.setColor(param1);
               var10.drawRect(var7, var8, 303, 33);
@@ -220,7 +220,7 @@ final class la extends IntrusiveNode {
             }
             var10.setFont(ce.field_f);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(ba.field_o, ec.field_h / 2 - ba.field_o.length() * 6 / 2, -26 + cf.field_d / 2);
+            var10.drawString(ba.field_o, DualLinkNode.field_h / 2 - ba.field_o.length() * 6 / 2, -26 + cf.field_d / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -305,7 +305,7 @@ final class la extends IntrusiveNode {
         try {
           lj.a(param14, (byte) 127, param12, param4);
           rj.a(param17, param10, (byte) 106, param19, param0);
-          qk.a(param1, param3, -102);
+          ProxySocketConnector.a(param1, param3, -102);
           SocketConnector.a(param18, param8, param20, param6, (byte) 117, param5);
           if (param11 > -89) {
             return;

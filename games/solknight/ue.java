@@ -457,11 +457,11 @@ final class ue {
           }
           var2Lifetime85 = hj.a((byte) -2, "megapower");
           if (var2Lifetime85 != null) {
-            ii.field_a = da.a(true, var2Lifetime85);
+            IterableNodeHashTable.field_a = da.a(true, var2Lifetime85);
           }
           var2Lifetime86 = hj.a((byte) -2, "destroyedpc");
           if (var2Lifetime86 != null) {
-            wk.field_a = da.a(true, var2Lifetime86);
+            DelegatingCanvas.field_a = da.a(true, var2Lifetime86);
           }
           var2Lifetime87 = hj.a((byte) -2, "incoming");
           if (var2Lifetime87 != null) {
@@ -485,7 +485,7 @@ final class ue {
           }
           var2Lifetime92 = hj.a((byte) -2, "aiming");
           if (var2Lifetime92 != null) {
-            ii.field_i = da.a(true, var2Lifetime92);
+            IterableNodeHashTable.field_i = da.a(true, var2Lifetime92);
           }
           var2Lifetime93 = hj.a((byte) -2, "instructions_pages,0");
           if (var2Lifetime93 != null) {

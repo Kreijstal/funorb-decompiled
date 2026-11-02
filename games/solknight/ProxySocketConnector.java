@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class qk extends SocketConnector {
+final class ProxySocketConnector extends SocketConnector {
     static char[] field_k;
     static String field_j;
     static int field_m;
@@ -43,7 +43,7 @@ final class qk extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        cb var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = SolKnight.field_L ? 1 : 0;
@@ -97,15 +97,15 @@ final class qk extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (cb) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, 80);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (cb decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (cb) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -113,7 +113,7 @@ final class qk extends SocketConnector {
           }
         }
         if (var7 != null) {
-          throw qk.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
         return this.a(param0 ^ -48);
     }
@@ -195,7 +195,7 @@ final class qk extends SocketConnector {
           if (var3_int > 12) {
             return false;
           }
-          var4 = jg.a(param0, -2);
+          var4 = FullscreenFocusCanvas.a(param0, -2);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!ck.a(var4.charAt(0), true) &&
@@ -298,11 +298,11 @@ final class qk extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new cb(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new cb("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_13_0 = var13;
@@ -379,7 +379,7 @@ final class qk extends SocketConnector {
           }
           var3 = param0.address();
           if (param1 <= 73) {
-            qk.a(25, -30, 54);
+            ProxySocketConnector.a(25, -30, 54);
           }
           if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
             return null;
@@ -434,7 +434,7 @@ final class qk extends SocketConnector {
         }
     }
 
-    qk() {
+    ProxySocketConnector() {
         this.field_i = java.net.ProxySelector.getDefault();
     }
 

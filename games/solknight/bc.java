@@ -13,7 +13,7 @@ final class bc extends si {
     private int field_H;
     static sf field_K;
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_11_0 = 0;
@@ -52,7 +52,7 @@ final class bc extends si {
         }
     }
 
-    final void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_u = 0;
@@ -61,7 +61,7 @@ final class bc extends si {
         }
     }
 
-    private bc(int param0, int param1, int param2, int param3, j param4, dg param5, rc param6, boolean param7, boolean param8) {
+    private bc(int param0, int param1, int param2, int param3, j param4, dg param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_M = 2147483647;
         this.field_H = 2147483647;
@@ -74,7 +74,7 @@ final class bc extends si {
         }
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         int stackIn_11_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_19_1 = 0;
@@ -94,7 +94,7 @@ final class bc extends si {
             ((pj) (this.field_G)).field_B) &&
             this.field_u == 1) {
             var5_int = -this.field_N + (PacketBuffer.field_j - param0);
-            var6 = -this.field_L + (ad.field_m - param2);
+            var6 = -this.field_L + (BufferedSocket.field_m - param2);
             if ((var5_int != this.field_m ||
               var6 != this.field_j)) {
               this.field_m = var5_int;

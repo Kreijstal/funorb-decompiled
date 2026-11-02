@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class db extends ec {
+abstract class db extends DualLinkNode {
     int field_n;
     static int[] field_m;
     int field_p;

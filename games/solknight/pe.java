@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pe extends ec {
+abstract class pe extends DualLinkNode {
     static String field_m;
     int field_o;
     static volatile boolean field_n;

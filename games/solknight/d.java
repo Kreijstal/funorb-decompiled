@@ -22,51 +22,51 @@ final class d {
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           ah.a(pg.field_e, 7);
-          je.a(-76, ad.field_m, PacketBuffer.field_j);
+          je.a(-76, BufferedSocket.field_m, PacketBuffer.field_j);
           if (!pg.field_e &&
             PacketBuffer.field_j != -1) {
-            ie.a(PacketBuffer.field_j, ad.field_m, 57);
+            ie.a(PacketBuffer.field_j, BufferedSocket.field_m, 57);
           }
-          if (cb.field_a > 0 &&
+          if (ProxyAuthenticationRequiredException.field_a > 0 &&
             ob.field_j > 1) {
             if (dc.field_n == null) {
-              dc.field_n = new o(256, 1 + (ad.field_b.field_F + ad.field_b.field_s));
+              dc.field_n = new o(256, 1 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s));
             }
             dc.field_n.a();
             mi.a();
-            ad.field_b.a(bb.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, ad.field_b.field_F, 16777215, 8421504);
+            BufferedSocket.field_b.a(bb.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             hj.field_e.a(true);
-            dc.field_n.a(cb.field_a, 46, 107, 0, 125);
+            dc.field_n.a(ProxyAuthenticationRequiredException.field_a, 46, 107, 0, 125);
           }
           if (ci.field_ib > 0 &&
             lk.field_e > 0) {
             if (dc.field_n == null) {
-              dc.field_n = new o(256, 1 + ad.field_b.field_s + ad.field_b.field_F);
+              dc.field_n = new o(256, 1 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
             }
             dc.field_n.a();
             mi.a();
-            ad.field_b.a(bb.a(ha.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, ad.field_b.field_F, 16777215, 8421504);
+            BufferedSocket.field_b.a(bb.a(ha.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             hj.field_e.a(true);
             dc.field_n.a(ci.field_ib, 46, 109, 0, 475);
           }
           if (fg.field_a > 0) {
             if (fg.field_a >= 500) {
               if (bi.field_h == 1) {
-                ad.field_b.a(kc.field_M, 320, 32, 16711680, 8421504);
+                BufferedSocket.field_b.a(kc.field_M, 320, 32, 16711680, 8421504);
               }
               if (2 == bi.field_h) {
-                ad.field_b.a(ii.field_a, 320, 32, 16776960, 8421504);
+                BufferedSocket.field_b.a(IterableNodeHashTable.field_a, 320, 32, 16776960, 8421504);
               }
             } else {
               if (1 == bi.field_h) {
-                ad.field_b.a(bb.a(pk.field_T, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16711680, 8421504);
+                BufferedSocket.field_b.a(bb.a(pk.field_T, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16711680, 8421504);
               }
               if (bi.field_h == 2) {
-                ad.field_b.a(bb.a(og.field_i, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16776960, 8421504);
+                BufferedSocket.field_b.a(bb.a(og.field_i, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16776960, 8421504);
               }
             }
           }
-          var2_int = 30 + SocketConnector.field_g.b(bb.a(wk.field_a, new String[]{Integer.toString(100)}, -63));
+          var2_int = 30 + SocketConnector.field_g.b(bb.a(DelegatingCanvas.field_a, new String[]{Integer.toString(100)}, -63));
           var3 = 30 + SocketConnector.field_g.b(bb.a(nb.field_b, new String[]{Integer.toString(1300)}, -63));
           if (var2_int < var3) {
             var2_int = var3;
@@ -76,11 +76,11 @@ final class d {
             var2_int = var3Lifetime1;
           }
           uj.a(var2_int + 15, 47, 0, GameApplet.field_f, 433, 2);
-          SocketConnector.field_g.c(bb.a(wk.field_a, new String[]{Integer.toString(ud.field_k * 100 / qh.field_a[7])}, -63), 30, 467, 16777215, -1);
-          if (-ud.field_k + (qh.field_a[kb.field_b] - lk.field_f) > 0) {
-            SocketConnector.field_g.c(bb.a(nb.field_b, new String[]{Integer.toString(-ud.field_k + (qh.field_a[kb.field_b] - lk.field_f))}, -63), 30, 455, 16777215, -1);
+          SocketConnector.field_g.c(bb.a(DelegatingCanvas.field_a, new String[]{Integer.toString(ud.field_k * 100 / GameKeyHandler.field_a[7])}, -63), 30, 467, 16777215, -1);
+          if (-ud.field_k + (GameKeyHandler.field_a[kb.field_b] - lk.field_f) > 0) {
+            SocketConnector.field_g.c(bb.a(nb.field_b, new String[]{Integer.toString(-ud.field_k + (GameKeyHandler.field_a[kb.field_b] - lk.field_f))}, -63), 30, 455, 16777215, -1);
           }
-          if (-ud.field_k + qh.field_a[kb.field_b] - lk.field_f <= 0) {
+          if (-ud.field_k + GameKeyHandler.field_a[kb.field_b] - lk.field_f <= 0) {
             SocketConnector.field_g.c(wf.field_b, 30, 455, 16777215, -1);
           }
           var2_intLifetime1 = 74 + SocketConnector.field_g.b(field_a);
@@ -100,7 +100,7 @@ final class d {
           if (0 < uf.field_p) {
             if (lk.field_b < 50 &&
               lk.field_e == 0) {
-              ad.field_b.a(ac.field_a, 320, 33, 16777215, 1);
+              BufferedSocket.field_b.a(ac.field_a, 320, 33, 16777215, 1);
             }
             if (wc.field_c < 200) {
               var6Lifetime1 = 0;
@@ -122,7 +122,7 @@ final class d {
                   var6Lifetime1 = var6Lifetime1 + 1285 * (-wc.field_c + 200);
                 }
               }
-              ad.field_b.a(bb.a(fj.field_j, new String[]{ci.field_gb[kb.field_b], Integer.toString(kb.field_b + 1)}, -63), 0, 0, 640, 480, var6Lifetime1, -1, 1, 1, 24);
+              BufferedSocket.field_b.a(bb.a(fj.field_j, new String[]{ci.field_gb[kb.field_b], Integer.toString(kb.field_b + 1)}, -63), 0, 0, 640, 480, var6Lifetime1, -1, 1, 1, 24);
             }
           }
           return;

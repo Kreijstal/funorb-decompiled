@@ -13,7 +13,7 @@ final class ub {
         field_a = null;
     }
 
-    final static void a(dl param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
         try {
           gj.a(param7, param1, 10);
           if (param6) {
@@ -71,7 +71,7 @@ final class ub {
           return var6.toString();
         }
         mf var12 = (mf) null;
-        ub.a((dl) null, true, 99, 116, (java.awt.Component) null, (mf) null, false, 43);
+        ub.a((PlatformTaskDispatcher) null, true, 99, 116, (java.awt.Component) null, (mf) null, false, 43);
         var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         return var6.toString();

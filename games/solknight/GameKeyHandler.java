@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static sf field_b;
     static int field_c;
     static String field_d;
@@ -20,7 +20,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & rh.field_e + 1;
               if (var3 != pf.field_a) {
                 lb.field_V[rh.field_e] = -1;
-                r.field_g[rh.field_e] = (char)var2_int;
+                IsaacRandom.field_g[rh.field_e] = (char)var2_int;
                 rh.field_e = var3;
               }
             }
@@ -118,7 +118,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & 1 + rh.field_e;
               if (var3 != pf.field_a) {
                 lb.field_V[rh.field_e] = var2_int;
-                r.field_g[rh.field_e] = (char)0;
+                IsaacRandom.field_g[rh.field_e] = (char)0;
                 rh.field_e = var3;
               }
             }
@@ -226,7 +226,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
           field_d = null;
           return;
         }
-        qh.a(-19);
+        GameKeyHandler.a(-19);
         field_b = null;
         field_a = null;
         field_d = null;

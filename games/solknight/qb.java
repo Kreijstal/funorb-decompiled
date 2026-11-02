@@ -69,7 +69,7 @@ final class qb extends vg implements wj {
           if (param0 <= 14) {
             this.a(-32);
           }
-          ja.a(ad.field_m, PacketBuffer.field_j + this.field_t - this.field_Z, (byte) -41);
+          ja.a(BufferedSocket.field_m, PacketBuffer.field_j + this.field_t - this.field_Z, (byte) -41);
           return this.field_z;
         }
         return null;
@@ -79,7 +79,7 @@ final class qb extends vg implements wj {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_Z = -this.field_m + PacketBuffer.field_j - param0;

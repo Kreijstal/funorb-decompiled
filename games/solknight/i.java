@@ -4,7 +4,7 @@
 final class i extends si {
     private nc field_L;
     static long field_H;
-    static qh field_J;
+    static GameKeyHandler field_J;
     static int field_K;
     static String[] field_I;
 
@@ -21,7 +21,7 @@ final class i extends si {
           }
           var3 = (kf) (var2.c(122));
         }
-        this.field_G = (rc) ((Object) this.d((byte) 115));
+        this.field_G = (UiWidget) ((Object) this.d((byte) 115));
     }
 
     public static void a(byte param0) {
@@ -32,13 +32,13 @@ final class i extends si {
         }
     }
 
-    final rc h(int param0) {
+    final UiWidget h(int param0) {
         ck var2;
         kf var3;
         int var4;
         var4 = SolKnight.field_L ? 1 : 0;
         if (param0 != 0) {
-          return (rc) null;
+          return (UiWidget) null;
         }
         var2 = new ck(this.field_L);
         var3 = (kf) (var2.a((byte) 84));
@@ -51,7 +51,7 @@ final class i extends si {
         return null;
     }
 
-    final void b(rc param0, int param1) {
+    final void b(UiWidget param0, int param1) {
         kf var4 = null;
         try {
           if (!(param0 instanceof kf)) {
@@ -61,7 +61,7 @@ final class i extends si {
           var4 = (kf) (param0);
           this.field_L.a(-3024, var4);
           var4.field_J = true;
-          var4.a(-1463, (rc) (this));
+          var4.a(-1463, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -84,16 +84,16 @@ final class i extends si {
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = SolKnight.field_L ? 1 : 0;
         if (null != this.field_w) {
-          this.field_w.a((byte) 125, param0, true, param2, (rc) (this));
+          this.field_w.a((byte) 125, param0, true, param2, (UiWidget) (this));
         }
         if (param3 != 0) {
           this.h(-93);
         }
         ck var5 = new ck(this.field_L);
-        rc var6 = (rc) (var5.a(param3 ^ -25119));
+        UiWidget var6 = (UiWidget) (var5.a(param3 ^ -25119));
         while (var6 != null) {
           var6.a(param0 + this.field_j, param1, this.field_m + param2, param3 ^ 0);
-          var6 = (rc) (var5.b(640));
+          var6 = (UiWidget) (var5.b(640));
         }
     }
 
@@ -152,6 +152,6 @@ final class i extends si {
     }
 
     static {
-        field_J = new qh();
+        field_J = new GameKeyHandler();
     }
 }

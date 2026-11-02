@@ -3,7 +3,7 @@
  */
 final class sb implements Runnable {
     static nc field_c;
-    dl field_b;
+    PlatformTaskDispatcher field_b;
     volatile gj[] field_a;
     volatile boolean field_e;
     volatile boolean field_f;

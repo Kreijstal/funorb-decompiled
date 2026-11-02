@@ -17,7 +17,7 @@ final class mb {
         RuntimeException var5_ref = null;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
-          var5 = (sd) (r.field_b.a((byte) 51));
+          var5 = (sd) (IsaacRandom.field_b.a((byte) 51));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
             stackIn_12_0 = ~var5.field_o;
@@ -27,7 +27,7 @@ final class mb {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var5 = (sd) (r.field_b.b(-123));
+              var5 = (sd) (IsaacRandom.field_b.b(-123));
               continue;
             }
             break;
@@ -43,7 +43,7 @@ final class mb {
           if (stackIn_12_0 <= stackIn_12_1) {
             field_b = (ff) null;
           }
-          r.field_b.a(var5, -7044);
+          IsaacRandom.field_b.a(var5, -7044);
           fi.a(var5, param4, -24045);
           stackIn_16_0 = var5;
           return stackIn_16_0;

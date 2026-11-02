@@ -212,7 +212,7 @@ final class we implements j {
             eb.field_b.a(2, "benefits")) {
             of.field_f = rb.a("headline", "benefits", kc.field_Q, (byte) -120);
             pf.field_b = rb.a("blurbpane", "benefits", kc.field_Q, (byte) -126);
-            r.field_d = rb.a("button", "benefits", kc.field_Q, (byte) -117);
+            IsaacRandom.field_d = rb.a("button", "benefits", kc.field_Q, (byte) -117);
             a.field_e = rb.a("signup_text", "benefits", kc.field_Q, (byte) -119);
             jh.field_b = rb.a("menu_text", "benefits", kc.field_Q, (byte) -114);
             GameApplet.field_j = rb.a("button_frame", "benefits", kc.field_Q, (byte) -121);
@@ -226,37 +226,37 @@ final class we implements j {
             var11 = new o(kj.field_S.field_p + 4, 4 + kj.field_S.field_t);
             var11.a();
             kj.field_S.e(2, 2, ea.field_o);
-            rc.a(var11.field_p, 0, var11.field_t, 2, var11, 0, 1, (byte) 21);
+            UiWidget.a(var11.field_p, 0, var11.field_t, 2, var11, 0, 1, (byte) 21);
             kj.field_S = var11;
             fh.field_f = kj.field_S.b();
             var12 = new o(195, 221);
             var6 = var12.field_p / 2;
             var12.a();
-            kg.field_a.a(bb.a(og.field_e, new String[]{n.field_c}, -63), var6, 40, 16777215, -1);
-            sk.field_n.a(bb.a(b.field_a, new String[]{n.field_c}, -63), var6, 60, 16777215, -1);
+            kg.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
+            sk.field_n.a(bb.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
             kg.field_a.a(bb.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
             sk.field_n.a(bb.a(hb.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
             kg.field_a.a(le.field_b, var6, 180, 16777215, -1);
-            sk.field_n.a(ki.field_A, var6, 200, 16777215, -1);
-            rc.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
+            sk.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
+            UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
             pf.field_b.a();
             var12.d(18 - pf.field_b.field_s, 241 - pf.field_b.field_n);
             for (var7 = 0; ba.field_s.length > var7; var7++) {
               qd.field_e[var7].a();
               sk.field_n.a(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, sk.field_n.field_F + sk.field_n.field_s);
-              rc.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
+              UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
             ke.field_K = a.field_e.c();
             ke.field_K.a();
-            ii.a(mi.field_d * 2 / 3, 0, 0, 64, mi.field_a, true);
+            IterableNodeHashTable.a(mi.field_d * 2 / 3, 0, 0, 64, mi.field_a, true);
             mi.a(var28, var2, var3);
             mi.a(lj.field_D);
-            sa.field_m = 231 + (-GameApplet.field_j.field_p + r.field_d.field_p) / 2;
+            sa.field_m = 231 + (-GameApplet.field_j.field_p + IsaacRandom.field_d.field_p) / 2;
             kc.field_Q = null;
-            lk.field_c = (r.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
-            da.field_f = 390 + (-GameApplet.field_j.field_t + r.field_d.field_t) / 2;
-            ke.field_I = 434 + (r.field_d.field_p - GameApplet.field_j.field_p) / 2;
+            lk.field_c = (IsaacRandom.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
+            da.field_f = 390 + (-GameApplet.field_j.field_t + IsaacRandom.field_d.field_t) / 2;
+            ke.field_I = 434 + (IsaacRandom.field_d.field_p - GameApplet.field_j.field_p) / 2;
           }
           if (!param0) {
             field_e = 49;
@@ -274,7 +274,7 @@ final class we implements j {
             var5 = kg.field_a.c(var14, jj.field_db);
             var6Lifetime1 = kg.field_a.b(var14, jj.field_db, kg.field_a.field_F + kg.field_a.field_s);
             var7Lifetime1 = ji.field_a + (-var5 + jj.field_db) / 2;
-            var8 = cl.field_o + (ii.field_h - var6Lifetime1) / 2;
+            var8 = cl.field_o + (IterableNodeHashTable.field_h - var6Lifetime1) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
             if (var7Lifetime1 < 0) {
@@ -318,8 +318,8 @@ final class we implements j {
             ja.field_a.d();
             var9 = new o(ja.field_a.field_q, ja.field_a.field_r);
             var9.a();
-            kg.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, ii.field_h, 16777215, -1, 1, 1, kg.field_a.field_F + kg.field_a.field_s);
-            rc.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
+            kg.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, kg.field_a.field_F + kg.field_a.field_s);
+            UiWidget.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
             ja.field_a.a();
             var9.d(0, 0);
             rh.field_g = new o(640, 480);
@@ -330,18 +330,18 @@ final class we implements j {
             mi.a(var29, var2Lifetime1, var3Lifetime1);
             mi.a(lj.field_D);
           }
-          if (null != qk.field_n &&
+          if (null != ProxySocketConnector.field_n &&
             null != sk.field_n) {
             var30 = mi.field_f;
             var2Lifetime2 = mi.field_a;
             var3Lifetime2 = mi.field_d;
             mi.b(lj.field_D);
             var16 = new o(412, 43);
-            var17 = bb.a(wb.field_d, new String[]{qk.field_n}, -63);
-            qk.field_n = null;
+            var17 = bb.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
+            ProxySocketConnector.field_n = null;
             var16.a();
             sk.field_n.a(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, sk.field_n.field_F + sk.field_n.field_s);
-            rc.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
+            UiWidget.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
             va.field_g.a();
             var16.d(199 - va.field_g.field_s, -va.field_g.field_n + 83);
             mi.a(var30, var2Lifetime2, var3Lifetime2);
@@ -359,7 +359,7 @@ final class we implements j {
             var7Lifetime2 = 20 + (dc.field_j.field_q + var6Lifetime2);
             va.field_g.a();
             sk.field_n.c(dc.field_p, -va.field_g.field_s + var7Lifetime2, sk.field_n.field_s + (sk.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
-            rc.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
+            UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
             var8Lifetime1 = -va.field_g.field_n + 155 - (-sk.field_n.field_F - 3 + dc.field_j.field_r - sk.field_n.field_s) / 2;
             dc.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
             mi.a(var31, var2Lifetime3, var3Lifetime3);
@@ -379,27 +379,27 @@ final class we implements j {
           if (rh.field_g != null) {
             rh.field_g.d(0, 0);
           }
-          if (null != r.field_d &&
+          if (null != IsaacRandom.field_d &&
             null != GameApplet.field_j) {
-            r.field_d.d(231, 390);
+            IsaacRandom.field_d.d(231, 390);
             var1 = a.field_e;
-            if (qh.field_b.field_f == 0) {
+            if (GameKeyHandler.field_b.field_f == 0) {
               var1 = ke.field_K;
             }
             var1.d(0, 0);
             stackIn_50_0 = 40;
             stackIn_50_1 = wd.field_a;
-            if (0 != qh.field_b.field_f) {
+            if (0 != GameKeyHandler.field_b.field_f) {
               stackIn_51_2 = 3;
             } else {
               stackIn_51_2 = 4;
             }
             var2Lifetime4 = (stackIn_50_0 * kb.a(stackIn_50_1 << stackIn_51_2, false) >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              r.field_d.a(230, 389, var2Lifetime4);
-              r.field_d.a(232, 389, var2Lifetime4);
-              r.field_d.a(232, 391, var2Lifetime4);
-              r.field_d.a(230, 391, var2Lifetime4);
+              IsaacRandom.field_d.a(230, 389, var2Lifetime4);
+              IsaacRandom.field_d.a(232, 389, var2Lifetime4);
+              IsaacRandom.field_d.a(232, 391, var2Lifetime4);
+              IsaacRandom.field_d.a(230, 391, var2Lifetime4);
               var1.a(1, 1, var2Lifetime4);
               var1.a(-1, 1, var2Lifetime4);
               var1.a(1, -1, var2Lifetime4);
@@ -407,27 +407,27 @@ final class we implements j {
             }
             stackIn_55_0 = -50;
             stackIn_55_1 = sa.field_m;
-            stackIn_56_2 = (qh.field_b.field_f == 0);
+            stackIn_56_2 = (GameKeyHandler.field_b.field_f == 0);
             kb.a(stackIn_55_0, stackIn_55_1, stackIn_56_2, da.field_f);
           }
-          if (null != r.field_d &&
+          if (null != IsaacRandom.field_d &&
             GameApplet.field_j != null) {
-            r.field_d.d(434, 390);
+            IsaacRandom.field_d.d(434, 390);
             jh.field_b.d(0, 0);
-            if (qh.field_b.field_f == 1) {
-              ii.a(7 * r.field_d.field_t / 12, 436, 392, 64, r.field_d.field_p - 4, true);
+            if (GameKeyHandler.field_b.field_f == 1) {
+              IterableNodeHashTable.a(7 * IsaacRandom.field_d.field_t / 12, 436, 392, 64, IsaacRandom.field_d.field_p - 4, true);
             }
             stackIn_64_0 = -36;
             stackIn_64_1 = ke.field_I;
-            stackIn_65_2 = (qh.field_b.field_f == 1);
+            stackIn_65_2 = (GameKeyHandler.field_b.field_f == 1);
             kb.a(stackIn_64_0, stackIn_64_1, stackIn_65_2, lk.field_c);
           }
           if (kj.field_S != null) {
             var1_int = -(kj.field_S.field_r / 2) + 357;
             kj.field_S.d(269 - kj.field_S.field_q, var1_int);
             fh.field_f.d(586, var1_int);
-            if (var1_int < ad.field_m &&
-              var1_int + kj.field_S.field_t > ad.field_m) {
+            if (var1_int < BufferedSocket.field_m &&
+              var1_int + kj.field_S.field_t > BufferedSocket.field_m) {
               stackIn_72_0 = 40;
               stackIn_72_1 = wd.field_a << 4;
               stackIn_73_2 = !(param0);
@@ -506,7 +506,7 @@ final class we implements j {
         System.out.println("Error: " + hl.a(param0, "\n", "%0a", true));
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -514,7 +514,7 @@ final class we implements j {
         int var12 = 0;
         int var13 = 0;
         be var14 = null;
-        rc stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -525,7 +525,7 @@ final class we implements j {
         int var12Lifetime1;
         try {
           if (param4 instanceof be) {
-            stackIn_3_0 = (rc) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }

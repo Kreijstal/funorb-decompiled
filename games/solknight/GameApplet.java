@@ -44,12 +44,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = je.a(1);
-          var4 = pg.field_d[jl.field_f];
-          pg.field_d[jl.field_f] = var2_long;
+          var4 = pg.field_d[SecondaryNodeDequeIterator.field_f];
+          pg.field_d[SecondaryNodeDequeIterator.field_f] = var2_long;
           if (var4 != 0L &&
             var2_long <= var4) {
           }
-          jl.field_f = 31 & jl.field_f + 1;
+          SecondaryNodeDequeIterator.field_f = 31 & SecondaryNodeDequeIterator.field_f + 1;
           if (param0 <= 68) {
             return;
           }
@@ -362,11 +362,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != dl.field_a) {
-                var1 = dl.field_a.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_a) {
+                var1 = PlatformTaskDispatcher.field_a.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = dl.field_x;
+                  var2 = PlatformTaskDispatcher.field_x;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -398,7 +398,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (ec.a(30418, (CharSequence) ((Object) var4)) &&
+                      if (DualLinkNode.a(30418, (CharSequence) ((Object) var4)) &&
                         !(il.a((CharSequence) ((Object) var4), 6054) >= 10)) {
                         this.a("wrongjava", -1);
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -408,8 +408,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (dl.field_x != null))) {
-                stackIn_68_0 = dl.field_x.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_x != null))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_x.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -418,8 +418,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (dl.field_x.length() > var1_int) {
-                    var3 = dl.field_x.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_x.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_x.charAt(var1_int);
                     stackIn_80_0 = var3;
                     stackIn_80_1 = 48;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -446,7 +446,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (null != s.field_jb) {
                   var1 = s.field_jb;
                 }
-                var2_ref = dl.field_e;
+                var2_ref = PlatformTaskDispatcher.field_e;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -457,7 +457,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 be.i(4);
                 this.a(true);
-                hj.field_e = nc.a(ec.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
+                hj.field_e = nc.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
                 this.d(-31680);
                 fh.field_e = ee.e(-1);
                 do {
@@ -556,7 +556,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               1000L < -lc.field_s + je.a(1)) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < rc.field_l) {
+                if (var2.width < UiWidget.field_l) {
                   return;
                 }
                 if (var2.height < ph.field_c) {
@@ -582,7 +582,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static void a(mf param0, java.awt.Component param1, boolean param2, byte param3, int param4, dl param5) {
+    final static void a(mf param0, java.awt.Component param1, boolean param2, byte param3, int param4, PlatformTaskDispatcher param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -663,9 +663,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = bg.field_w;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          dc.field_q = (java.awt.Canvas) ((Object) new wk((java.awt.Component) (this)));
+          dc.field_q = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) dc.field_q));
-          dc.field_q.setSize(ec.field_h, cf.field_d);
+          dc.field_q.setSize(DualLinkNode.field_h, cf.field_d);
           dc.field_q.setVisible(true);
           boolean decompiledSharedTail0 = (oc.field_a == var2);
           if (!decompiledSharedTail0) {
@@ -714,7 +714,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             wa.field_b = true;
             jb.field_e = jb.field_e - 50;
-            dc.field_q.setSize(ec.field_h, cf.field_d);
+            dc.field_q.setSize(DualLinkNode.field_h, cf.field_d);
             dc.field_q.setVisible(true);
             boolean decompiledSharedTail0 = (null != oc.field_a &&
               null == bg.field_w);
@@ -839,7 +839,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final void a(byte param0, String param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-          dl dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
           String stackIn_27_2 = null;
@@ -863,16 +863,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (param0 <= 62) {
                 field_j = (o) null;
               }
-              ec.field_h = param2;
-              rc.field_l = param2;
+              DualLinkNode.field_h = param2;
+              UiWidget.field_l = param2;
               ib.field_l = this;
               ib.field_j = 0;
               cf.field_d = param5;
               ph.field_c = param5;
               ke.field_J = param6;
               nc.field_g = 0;
-              ik.field_c = ia.g(-33);
-              dupTemp$0 = new dl(param3, param1, param4, true);
+              SecondaryNodeDeque.field_c = ia.g(-33);
+              dupTemp$0 = new PlatformTaskDispatcher(param3, param1, param4, true);
               wh.field_c = dupTemp$0;
               lg.field_l = dupTemp$0;
               var8 = wh.field_c.a(1, -95, (Runnable) (this));
