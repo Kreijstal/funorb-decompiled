@@ -668,6 +668,46 @@
       "renamedSymbol": "F:Quaternion.x:D"
     },
     {
+      "symbol": "F:qe.field_a:D",
+      "originalName": "field_a",
+      "to": "x",
+      "evidence": "GameEntity adds the velocity fields to its position each tick and wraps the position around a 640 by 480 field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameEntity.x:D"
+    },
+    {
+      "symbol": "F:qe.field_d:D",
+      "originalName": "field_d",
+      "to": "velocityX",
+      "evidence": "GameEntity adds the velocity fields to its position each tick and wraps the position around a 640 by 480 field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameEntity.velocityX:D"
+    },
+    {
+      "symbol": "F:qe.field_h:I",
+      "originalName": "field_h",
+      "to": "heading",
+      "evidence": "Heading in 256 units per turn; thrust uses cos and sin of heading times 2 pi over 256.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameEntity.heading:I"
+    },
+    {
+      "symbol": "F:qe.field_k:D",
+      "originalName": "field_k",
+      "to": "velocityY",
+      "evidence": "GameEntity adds the velocity fields to its position each tick and wraps the position around a 640 by 480 field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameEntity.velocityY:D"
+    },
+    {
+      "symbol": "F:qe.field_l:D",
+      "originalName": "field_l",
+      "to": "y",
+      "evidence": "GameEntity adds the velocity fields to its position each tick and wraps the position around a 640 by 480 field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameEntity.y:D"
+    },
+    {
       "symbol": "F:qe.field_m:I",
       "originalName": "field_m",
       "to": "kind",
@@ -922,6 +962,14 @@
       "evidence": "Fills the double array with rotation entries from the squared and cross terms.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Quaternion.writeRotationMatrix([DI)V"
+    },
+    {
+      "symbol": "M:qe.b(I)Lpb;",
+      "originalName": "b",
+      "to": "currentSprite",
+      "evidence": "Wraps the heading into 0..255 and returns the rotation frame, or an animation frame for kind 11.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameEntity.currentSprite(I)LSprite;"
     },
     {
       "symbol": "M:sd.a(I)Lsd;",
@@ -21824,9 +21872,9 @@
     },
     {
       "symbol": "F:qe.field_a:D",
-      "renamedSymbol": "F:GameEntity.field_a:D",
+      "renamedSymbol": "F:GameEntity.x:D",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "x",
       "declaration": {
         "file": "qe.java",
         "start": 367,
@@ -21857,9 +21905,9 @@
     },
     {
       "symbol": "F:qe.field_d:D",
-      "renamedSymbol": "F:GameEntity.field_d:D",
+      "renamedSymbol": "F:GameEntity.velocityX:D",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "velocityX",
       "declaration": {
         "file": "qe.java",
         "start": 268,
@@ -21901,9 +21949,9 @@
     },
     {
       "symbol": "F:qe.field_h:I",
-      "renamedSymbol": "F:GameEntity.field_h:I",
+      "renamedSymbol": "F:GameEntity.heading:I",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "heading",
       "declaration": {
         "file": "qe.java",
         "start": 220,
@@ -21934,9 +21982,9 @@
     },
     {
       "symbol": "F:qe.field_k:D",
-      "renamedSymbol": "F:GameEntity.field_k:D",
+      "renamedSymbol": "F:GameEntity.velocityY:D",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "velocityY",
       "declaration": {
         "file": "qe.java",
         "start": 330,
@@ -21945,9 +21993,9 @@
     },
     {
       "symbol": "F:qe.field_l:D",
-      "renamedSymbol": "F:GameEntity.field_l:D",
+      "renamedSymbol": "F:GameEntity.y:D",
       "originalName": "field_l",
-      "renamedName": "field_l",
+      "renamedName": "y",
       "declaration": {
         "file": "qe.java",
         "start": 177,
@@ -116754,7 +116802,7 @@
     },
     {
       "symbol": "L:qe.b(I)Lpb;#0",
-      "renamedSymbol": "L:GameEntity.b(I)LSprite;#0",
+      "renamedSymbol": "L:GameEntity.currentSprite(I)LSprite;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -169818,9 +169866,9 @@
     },
     {
       "symbol": "M:qe.b(I)Lpb;",
-      "renamedSymbol": "M:GameEntity.b(I)LSprite;",
+      "renamedSymbol": "M:GameEntity.currentSprite(I)LSprite;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "currentSprite",
       "declaration": {
         "file": "qe.java",
         "start": 64699,
@@ -217558,7 +217606,7 @@
     },
     {
       "symbol": "P:qe.b(I)Lpb;#0",
-      "renamedSymbol": "P:GameEntity.b(I)LSprite;#0",
+      "renamedSymbol": "P:GameEntity.currentSprite(I)LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -241263,7 +241311,7 @@
       "original": "gj.java",
       "renamed": "gj.java",
       "inputSha256": "a80947c09e5b23fb00135870891be27c7d14832692bd47bb4ac0f0c0a9d259e0",
-      "outputSha256": "1185a931f5bccd414c9f8ea6411c3c438ddbfae2d414a51f5365d0867beac182",
+      "outputSha256": "b38feed46ef79ffcd2a923a66c2a1ae18b5710644ab2527102b6107d808f0cb5",
       "edits": [
         {
           "start": 64,
@@ -241292,6 +241340,104 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameEntity"
+        },
+        {
+          "start": 2209,
+          "end": 2216,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 2241,
+          "end": 2248,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 2290,
+          "end": 2297,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 2326,
+          "end": 2333,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 2371,
+          "end": 2378,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 2422,
+          "end": 2429,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 2452,
+          "end": 2459,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 2484,
+          "end": 2491,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 2609,
+          "end": 2610,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 2629,
+          "end": 2636,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 2650,
+          "end": 2657,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 2666,
+          "end": 2667,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 2686,
+          "end": 2693,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 2707,
+          "end": 2714,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         }
       ]
     },
@@ -251169,7 +251315,7 @@
       "original": "o.java",
       "renamed": "o.java",
       "inputSha256": "aecc6e17a98a3cfa3ac1ffe9df91f1d50e4cc15b7e344c90c56344fd5b0b0fe5",
-      "outputSha256": "78b9bfd3994bdd778baf9c1cbd4504528d9f752060a7c58cad6c6d4a94a62ef5",
+      "outputSha256": "c55a878c391fc80f1e0146c337bc7af3b3cb6e9aff8899e0b655141a522266db",
       "edits": [
         {
           "start": 148,
@@ -251326,11 +251472,25 @@
           "renamed": "entities"
         },
         {
+          "start": 7553,
+          "end": 7560,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 7671,
           "end": 7678,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 7682,
+          "end": 7689,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 7759,
@@ -251340,11 +251500,25 @@
           "renamed": "entities"
         },
         {
+          "start": 7770,
+          "end": 7777,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 7852,
           "end": 7859,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 7863,
+          "end": 7870,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 7918,
@@ -251354,11 +251528,25 @@
           "renamed": "entities"
         },
         {
+          "start": 7929,
+          "end": 7936,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 7984,
           "end": 7991,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 7995,
+          "end": 8002,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 8553,
@@ -255662,7 +255850,7 @@
       "original": "qe.java",
       "renamed": "GameEntity.java",
       "inputSha256": "d124434e188951a58d4f5ce864aeb9e9fa59ff386352b6ef11ad964d97420042",
-      "outputSha256": "803732435cab4d87c9d581ff15b4097088471344a5484f2f1e9db43e9fa28f55",
+      "outputSha256": "d5be3e08d308bf0b3186567b0421010a3fdd23a7ebd267da1efff5be2a8e18ea",
       "edits": [
         {
           "start": 69,
@@ -255686,11 +255874,46 @@
           "renamed": "mass"
         },
         {
+          "start": 177,
+          "end": 184,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 198,
           "end": 200,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 220,
+          "end": 227,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 268,
+          "end": 275,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 330,
+          "end": 337,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 367,
+          "end": 374,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 1112,
@@ -255728,6 +255951,34 @@
           "renamed": "kind"
         },
         {
+          "start": 8153,
+          "end": 8160,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 8168,
+          "end": 8175,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 8199,
+          "end": 8206,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 8214,
+          "end": 8221,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 8257,
           "end": 8264,
           "symbol": "F:qe.field_m:I",
@@ -255756,11 +256007,116 @@
           "renamed": "entities"
         },
         {
+          "start": 9468,
+          "end": 9475,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 9483,
+          "end": 9490,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 9513,
           "end": 9520,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 9524,
+          "end": 9531,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 9539,
+          "end": 9546,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 9665,
+          "end": 9672,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 9834,
+          "end": 9841,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 9849,
+          "end": 9856,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 9910,
+          "end": 9917,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 9946,
+          "end": 9953,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 9961,
+          "end": 9968,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 10007,
+          "end": 10014,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 10022,
+          "end": 10029,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 10061,
+          "end": 10068,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 10095,
+          "end": 10102,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 10110,
+          "end": 10117,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 10209,
@@ -255770,6 +256126,13 @@
           "renamed": "entities"
         },
         {
+          "start": 10263,
+          "end": 10270,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 10275,
           "end": 10282,
           "symbol": "F:a.field_h:[Lqe;",
@@ -255777,11 +256140,32 @@
           "renamed": "entities"
         },
         {
+          "start": 10286,
+          "end": 10293,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 10326,
           "end": 10333,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 10337,
+          "end": 10344,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 10352,
+          "end": 10359,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 10731,
@@ -255798,11 +256182,53 @@
           "renamed": "entities"
         },
         {
+          "start": 10920,
+          "end": 10927,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 10935,
+          "end": 10942,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 10990,
           "end": 10997,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 11001,
+          "end": 11008,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 11016,
+          "end": 11023,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 11371,
+          "end": 11378,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 11433,
+          "end": 11440,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 11544,
@@ -255826,11 +256252,39 @@
           "renamed": "entities"
         },
         {
+          "start": 11849,
+          "end": 11856,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 11864,
+          "end": 11871,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 11904,
           "end": 11911,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 11915,
+          "end": 11922,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 11930,
+          "end": 11937,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 12309,
@@ -255854,6 +256308,13 @@
           "renamed": "entities"
         },
         {
+          "start": 12753,
+          "end": 12760,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 12765,
           "end": 12772,
           "symbol": "F:a.field_h:[Lqe;",
@@ -255861,11 +256322,32 @@
           "renamed": "entities"
         },
         {
+          "start": 12776,
+          "end": 12783,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 12816,
           "end": 12823,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 12827,
+          "end": 12834,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 12842,
+          "end": 12849,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 13221,
@@ -255887,6 +256369,34 @@
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 13435,
+          "end": 13442,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 13450,
+          "end": 13457,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 13481,
+          "end": 13488,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 13496,
+          "end": 13503,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 13630,
@@ -255917,11 +256427,123 @@
           "renamed": "entities"
         },
         {
+          "start": 13768,
+          "end": 13775,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 13784,
+          "end": 13791,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 13940,
+          "end": 13947,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 13956,
+          "end": 13963,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 14492,
+          "end": 14499,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 14508,
+          "end": 14515,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 14610,
+          "end": 14617,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 14626,
+          "end": 14633,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 14988,
+          "end": 14995,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 15197,
+          "end": 15204,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 16405,
+          "end": 16412,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 16477,
+          "end": 16484,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 16567,
+          "end": 16574,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 16619,
+          "end": 16626,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 17026,
           "end": 17028,
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 17553,
+          "end": 17560,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 17619,
+          "end": 17626,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 17980,
@@ -255931,11 +256553,39 @@
           "renamed": "entities"
         },
         {
+          "start": 17991,
+          "end": 17998,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18006,
+          "end": 18013,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18059,
+          "end": 18066,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 18071,
           "end": 18078,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 18082,
+          "end": 18089,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 18506,
@@ -255952,11 +256602,39 @@
           "renamed": "entities"
         },
         {
+          "start": 18702,
+          "end": 18709,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18717,
+          "end": 18724,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18768,
+          "end": 18775,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 18780,
           "end": 18787,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 18791,
+          "end": 18798,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 19197,
@@ -255987,11 +256665,39 @@
           "renamed": "entities"
         },
         {
+          "start": 19558,
+          "end": 19565,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 19573,
+          "end": 19580,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 19615,
+          "end": 19622,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 19627,
           "end": 19634,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 19638,
+          "end": 19645,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 20017,
@@ -256001,6 +256707,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 20225,
+          "end": 20232,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 20237,
           "end": 20244,
           "symbol": "F:a.field_h:[Lqe;",
@@ -256008,11 +256721,60 @@
           "renamed": "entities"
         },
         {
+          "start": 20248,
+          "end": 20255,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 20296,
           "end": 20303,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 20307,
+          "end": 20314,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 20322,
+          "end": 20329,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 20507,
+          "end": 20514,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 20522,
+          "end": 20529,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 20686,
+          "end": 20693,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 20701,
+          "end": 20708,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 20816,
@@ -256029,11 +256791,32 @@
           "renamed": "entities"
         },
         {
+          "start": 21169,
+          "end": 21176,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 21181,
           "end": 21188,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 21192,
+          "end": 21199,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 21238,
+          "end": 21245,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 21250,
@@ -256043,11 +256826,60 @@
           "renamed": "entities"
         },
         {
+          "start": 21261,
+          "end": 21268,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 21676,
           "end": 21678,
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 21921,
+          "end": 21928,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 22001,
+          "end": 22008,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 22082,
+          "end": 22089,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 22217,
+          "end": 22224,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 22280,
+          "end": 22287,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 22342,
+          "end": 22349,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 22486,
@@ -256057,11 +256889,25 @@
           "renamed": "entities"
         },
         {
+          "start": 22559,
+          "end": 22566,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 22571,
           "end": 22578,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 22582,
+          "end": 22589,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 22633,
@@ -256071,11 +256917,67 @@
           "renamed": "entities"
         },
         {
+          "start": 22644,
+          "end": 22651,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 22659,
+          "end": 22666,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 23146,
           "end": 23148,
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 23366,
+          "end": 23373,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 23497,
+          "end": 23504,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 23611,
+          "end": 23618,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 23701,
+          "end": 23708,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 23762,
+          "end": 23769,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 23822,
+          "end": 23829,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 24301,
@@ -256106,11 +257008,67 @@
           "renamed": "kind"
         },
         {
+          "start": 25025,
+          "end": 25032,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 25040,
+          "end": 25047,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 25092,
+          "end": 25099,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 25139,
+          "end": 25146,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 25154,
+          "end": 25161,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 25193,
+          "end": 25200,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 25254,
           "end": 25256,
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 25726,
+          "end": 25733,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 25833,
+          "end": 25840,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 26188,
@@ -256218,6 +257176,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 36158,
+          "end": 36165,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 36209,
+          "end": 36216,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 36251,
           "end": 36258,
           "symbol": "F:qe.field_m:I",
@@ -256267,6 +257239,13 @@
           "renamed": "kind"
         },
         {
+          "start": 39349,
+          "end": 39350,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
           "start": 41887,
           "end": 41889,
           "symbol": "C:qe",
@@ -256279,6 +257258,13 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameEntity"
+        },
+        {
+          "start": 43036,
+          "end": 43037,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
         },
         {
           "start": 45606,
@@ -256309,6 +257295,20 @@
           "renamed": "kind"
         },
         {
+          "start": 46939,
+          "end": 46946,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 47073,
+          "end": 47080,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 47853,
           "end": 47860,
           "symbol": "F:qe.field_m:I",
@@ -256337,6 +257337,83 @@
           "renamed": "kind"
         },
         {
+          "start": 51092,
+          "end": 51099,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 51625,
+          "end": 51626,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 51917,
+          "end": 51918,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 51989,
+          "end": 51990,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 52710,
+          "end": 52711,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 52786,
+          "end": 52787,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 52987,
+          "end": 52988,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 53065,
+          "end": 53066,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 53906,
+          "end": 53907,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 55485,
+          "end": 55486,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 55574,
+          "end": 55575,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
           "start": 55664,
           "end": 55671,
           "symbol": "F:qe.field_m:I",
@@ -256349,6 +257426,20 @@
           "symbol": "F:qe.field_m:I",
           "original": "field_m",
           "renamed": "kind"
+        },
+        {
+          "start": 56224,
+          "end": 56231,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 56288,
+          "end": 56295,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 56348,
@@ -256554,6 +257645,90 @@
           "renamed": "entities"
         },
         {
+          "start": 60673,
+          "end": 60680,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 60688,
+          "end": 60695,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 60724,
+          "end": 60731,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 60739,
+          "end": 60746,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 60986,
+          "end": 60993,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 61010,
+          "end": 61017,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 61050,
+          "end": 61057,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 61082,
+          "end": 61089,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 61128,
+          "end": 61135,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 61151,
+          "end": 61158,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 61189,
+          "end": 61196,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 61212,
+          "end": 61219,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 61335,
           "end": 61342,
           "symbol": "F:a.field_h:[Lqe;",
@@ -256615,6 +257790,48 @@
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 62078,
+          "end": 62085,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 62190,
+          "end": 62197,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 62216,
+          "end": 62223,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 62277,
+          "end": 62284,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 62388,
+          "end": 62395,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 62406,
+          "end": 62413,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 62479,
@@ -256743,11 +257960,60 @@
           "renamed": "Sprite"
         },
         {
+          "start": 64699,
+          "end": 64700,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
           "start": 64754,
           "end": 64761,
           "symbol": "F:qe.field_m:I",
           "original": "field_m",
           "renamed": "kind"
+        },
+        {
+          "start": 64959,
+          "end": 64966,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 64989,
+          "end": 64996,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 65004,
+          "end": 65011,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 65053,
+          "end": 65060,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 65079,
+          "end": 65086,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 65094,
+          "end": 65101,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 65136,
@@ -256757,6 +258023,27 @@
           "renamed": "kind"
         },
         {
+          "start": 65188,
+          "end": 65195,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 65286,
+          "end": 65293,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 65384,
+          "end": 65391,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 65455,
           "end": 65457,
           "symbol": "C:pb",
@@ -256764,11 +258051,277 @@
           "renamed": "Sprite"
         },
         {
+          "start": 65812,
+          "end": 65819,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 65827,
+          "end": 65834,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 65842,
+          "end": 65849,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 65864,
+          "end": 65871,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 65879,
+          "end": 65886,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 65894,
+          "end": 65901,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 66149,
+          "end": 66156,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66164,
+          "end": 66171,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66255,
+          "end": 66262,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66287,
+          "end": 66294,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66302,
+          "end": 66309,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66487,
+          "end": 66494,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66502,
+          "end": 66509,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66536,
+          "end": 66543,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66607,
+          "end": 66614,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66622,
+          "end": 66629,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66847,
+          "end": 66854,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66862,
+          "end": 66869,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66953,
+          "end": 66960,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 66985,
+          "end": 66992,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 67000,
+          "end": 67007,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 67185,
+          "end": 67192,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 67200,
+          "end": 67207,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 67234,
+          "end": 67241,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 67305,
+          "end": 67312,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 67320,
+          "end": 67327,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 67432,
           "end": 67439,
           "symbol": "F:qe.field_m:I",
           "original": "field_m",
           "renamed": "kind"
+        },
+        {
+          "start": 67536,
+          "end": 67543,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 67595,
+          "end": 67602,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 67610,
+          "end": 67617,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 67739,
+          "end": 67746,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 67797,
+          "end": 67804,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 67812,
+          "end": 67819,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 67917,
+          "end": 67924,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 67943,
+          "end": 67950,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 67958,
+          "end": 67965,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 68062,
+          "end": 68069,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 68088,
+          "end": 68095,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 68103,
+          "end": 68110,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 68344,
@@ -257121,6 +258674,20 @@
           "renamed": "kind"
         },
         {
+          "start": 73850,
+          "end": 73857,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 73933,
+          "end": 73940,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 74079,
           "end": 74081,
           "symbol": "C:sd",
@@ -257163,6 +258730,34 @@
           "renamed": "GameEntity"
         },
         {
+          "start": 75651,
+          "end": 75658,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 75666,
+          "end": 75673,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 75703,
+          "end": 75710,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 75718,
+          "end": 75725,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 75751,
           "end": 75758,
           "symbol": "F:a.field_h:[Lqe;",
@@ -257175,6 +258770,34 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameEntity"
+        },
+        {
+          "start": 76038,
+          "end": 76045,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 76053,
+          "end": 76060,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 76088,
+          "end": 76095,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 76103,
+          "end": 76110,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 76134,
@@ -257191,6 +258814,34 @@
           "renamed": "GameEntity"
         },
         {
+          "start": 76361,
+          "end": 76368,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 76376,
+          "end": 76383,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 76409,
+          "end": 76416,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 76424,
+          "end": 76431,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 76595,
           "end": 76602,
           "symbol": "F:a.field_h:[Lqe;",
@@ -257205,6 +258856,76 @@
           "renamed": "GameEntity"
         },
         {
+          "start": 76828,
+          "end": 76835,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 76843,
+          "end": 76850,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 76870,
+          "end": 76877,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 76885,
+          "end": 76892,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 76979,
+          "end": 76986,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 77016,
+          "end": 77023,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 77088,
+          "end": 77095,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 77131,
+          "end": 77138,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 77172,
+          "end": 77179,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 77188,
+          "end": 77195,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 77211,
           "end": 77218,
           "symbol": "F:qe.field_n:I",
@@ -257212,11 +258933,39 @@
           "renamed": "mass"
         },
         {
+          "start": 77226,
+          "end": 77233,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 77258,
           "end": 77265,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 77286,
+          "end": 77293,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 77302,
+          "end": 77309,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 77317,
+          "end": 77324,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 77340,
@@ -257240,6 +258989,13 @@
           "renamed": "entities"
         },
         {
+          "start": 77614,
+          "end": 77621,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 77667,
           "end": 77669,
           "symbol": "C:fe",
@@ -257254,6 +259010,13 @@
           "renamed": "entities"
         },
         {
+          "start": 77737,
+          "end": 77744,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 77749,
           "end": 77756,
           "symbol": "F:a.field_h:[Lqe;",
@@ -257261,11 +259024,32 @@
           "renamed": "entities"
         },
         {
+          "start": 77760,
+          "end": 77767,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 77789,
           "end": 77796,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 77800,
+          "end": 77807,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 77815,
+          "end": 77822,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 78780,
@@ -257280,6 +259064,41 @@
           "symbol": "F:qe.field_m:I",
           "original": "field_m",
           "renamed": "kind"
+        },
+        {
+          "start": 78952,
+          "end": 78959,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 78967,
+          "end": 78974,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 79006,
+          "end": 79013,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 79021,
+          "end": 79028,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 79091,
+          "end": 79098,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 80703,
@@ -257387,11 +259206,46 @@
           "renamed": "kind"
         },
         {
+          "start": 82701,
+          "end": 82708,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 82754,
+          "end": 82761,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 82782,
+          "end": 82789,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 82810,
+          "end": 82817,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 82838,
           "end": 82845,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 82866,
+          "end": 82873,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 84882,
@@ -257408,11 +259262,25 @@
           "renamed": "mass"
         },
         {
+          "start": 85026,
+          "end": 85033,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 85119,
           "end": 85126,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 85194,
+          "end": 85201,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 85332,
@@ -257422,11 +259290,25 @@
           "renamed": "mass"
         },
         {
+          "start": 85362,
+          "end": 85369,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 85500,
           "end": 85507,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 85530,
+          "end": 85537,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 85668,
@@ -257436,11 +259318,25 @@
           "renamed": "mass"
         },
         {
+          "start": 85698,
+          "end": 85705,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 85897,
           "end": 85899,
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 86134,
+          "end": 86141,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 86189,
@@ -257450,11 +259346,25 @@
           "renamed": "mass"
         },
         {
+          "start": 86309,
+          "end": 86316,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 86364,
           "end": 86371,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 86508,
+          "end": 86515,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 86563,
@@ -257464,11 +259374,53 @@
           "renamed": "mass"
         },
         {
+          "start": 86660,
+          "end": 86667,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 86715,
           "end": 86722,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 86780,
+          "end": 86787,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 86810,
+          "end": 86817,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 86840,
+          "end": 86847,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 86870,
+          "end": 86877,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 86917,
+          "end": 86924,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 86964,
@@ -257478,11 +259430,74 @@
           "renamed": "mass"
         },
         {
+          "start": 86988,
+          "end": 86995,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 87035,
           "end": 87042,
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 87101,
+          "end": 87108,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 87133,
+          "end": 87140,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 87203,
+          "end": 87210,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 87235,
+          "end": 87242,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 87295,
+          "end": 87302,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 87310,
+          "end": 87317,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 87386,
+          "end": 87393,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 87401,
+          "end": 87408,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         }
       ]
     },
@@ -259144,7 +261159,7 @@
       "original": "sd.java",
       "renamed": "ScorePopup.java",
       "inputSha256": "73f50c2632b548e14aba0349b3b22337adc59f5ddd6eb2f978a1064d074fb3d0",
-      "outputSha256": "5f9438f38a90f23d81966d41dc72dcd9f1bf73524b2da1c0f3f0dc2a865c59bc",
+      "outputSha256": "65147fe16c715fac69ef908036042fea24084a6007f37bedcddee664b097dbcd",
       "edits": [
         {
           "start": 50,
@@ -259707,10 +261722,24 @@
           "renamed": "y"
         },
         {
+          "start": 7050,
+          "end": 7057,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 7074,
           "end": 7081,
           "symbol": "F:sd.field_h:D",
           "original": "field_h",
+          "renamed": "x"
+        },
+        {
+          "start": 7091,
+          "end": 7098,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
           "renamed": "x"
         },
         {
@@ -259721,10 +261750,24 @@
           "renamed": "velocityX"
         },
         {
+          "start": 7132,
+          "end": 7139,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 7156,
           "end": 7163,
           "symbol": "F:sd.field_a:D",
           "original": "field_a",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 7173,
+          "end": 7180,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
           "renamed": "velocityY"
         },
         {
@@ -260139,7 +262182,7 @@
       "original": "stellarshard.java",
       "renamed": "stellarshard.java",
       "inputSha256": "a8f31243b6bc3e79958dc16124f28b5ff43bd2bc95d8d805e17f8b5f4da9baa2",
-      "outputSha256": "760f2309aed9edcaf8d1b71db378f27baf806cd8be382973ff39ff3b94d896c0",
+      "outputSha256": "aa740c83331cf31bf65b75fad1b4c4f585340756a6dfc39301dc20cd4c974b9d",
       "edits": [
         {
           "start": 159,
@@ -261164,11 +263207,32 @@
           "renamed": "entities"
         },
         {
+          "start": 47176,
+          "end": 47183,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 47196,
+          "end": 47203,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 47239,
           "end": 47246,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 47250,
+          "end": 47257,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 47317,
@@ -261178,11 +263242,32 @@
           "renamed": "entities"
         },
         {
+          "start": 47353,
+          "end": 47360,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 47373,
+          "end": 47380,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 47436,
           "end": 47443,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 47447,
+          "end": 47454,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 47484,
@@ -261206,11 +263291,25 @@
           "renamed": "entities"
         },
         {
+          "start": 48004,
+          "end": 48011,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 48227,
           "end": 48234,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 48238,
+          "end": 48245,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 48396,
@@ -261220,11 +263319,25 @@
           "renamed": "entities"
         },
         {
+          "start": 48407,
+          "end": 48414,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 48458,
           "end": 48465,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 48469,
+          "end": 48476,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 48570,
@@ -261234,11 +263347,25 @@
           "renamed": "entities"
         },
         {
+          "start": 48581,
+          "end": 48588,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 48654,
           "end": 48661,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 48665,
+          "end": 48672,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 49042,
@@ -261255,11 +263382,25 @@
           "renamed": "entities"
         },
         {
+          "start": 49260,
+          "end": 49267,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 49452,
           "end": 49459,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 49463,
+          "end": 49470,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 49654,
@@ -261269,11 +263410,25 @@
           "renamed": "entities"
         },
         {
+          "start": 49665,
+          "end": 49672,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 49760,
           "end": 49767,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 49771,
+          "end": 49778,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 49860,
@@ -261283,11 +263438,25 @@
           "renamed": "entities"
         },
         {
+          "start": 49871,
+          "end": 49878,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 49960,
           "end": 49967,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 49971,
+          "end": 49978,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 50472,
@@ -261297,11 +263466,32 @@
           "renamed": "entities"
         },
         {
+          "start": 50565,
+          "end": 50572,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 50650,
           "end": 50657,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 50661,
+          "end": 50668,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 50858,
+          "end": 50865,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 50943,
@@ -261311,11 +263501,32 @@
           "renamed": "entities"
         },
         {
+          "start": 51036,
+          "end": 51043,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 51121,
           "end": 51128,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 51132,
+          "end": 51139,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
+          "start": 51329,
+          "end": 51336,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 51453,
@@ -261325,11 +263536,32 @@
           "renamed": "entities"
         },
         {
+          "start": 51491,
+          "end": 51498,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 51511,
+          "end": 51518,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 51566,
           "end": 51573,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 51577,
+          "end": 51584,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 51631,
@@ -261339,11 +263571,32 @@
           "renamed": "entities"
         },
         {
+          "start": 51669,
+          "end": 51676,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 51689,
+          "end": 51696,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 51724,
           "end": 51731,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 51735,
+          "end": 51742,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 51799,
@@ -261367,11 +263620,25 @@
           "renamed": "entities"
         },
         {
+          "start": 53172,
+          "end": 53179,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 53385,
           "end": 53392,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 53396,
+          "end": 53403,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 53560,
@@ -261381,11 +263648,25 @@
           "renamed": "entities"
         },
         {
+          "start": 53571,
+          "end": 53578,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 53666,
           "end": 53673,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 53677,
+          "end": 53684,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 53766,
@@ -261395,11 +263676,25 @@
           "renamed": "entities"
         },
         {
+          "start": 53777,
+          "end": 53784,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 53866,
           "end": 53873,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 53877,
+          "end": 53884,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 54784,
@@ -261416,11 +263711,25 @@
           "renamed": "entities"
         },
         {
+          "start": 55222,
+          "end": 55229,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 55381,
           "end": 55388,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 55392,
+          "end": 55399,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 55538,
@@ -261430,11 +263739,25 @@
           "renamed": "entities"
         },
         {
+          "start": 55549,
+          "end": 55556,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 55664,
           "end": 55671,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 55675,
+          "end": 55682,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 55750,
@@ -261444,11 +263767,25 @@
           "renamed": "entities"
         },
         {
+          "start": 55761,
+          "end": 55768,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 55830,
           "end": 55837,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 55841,
+          "end": 55848,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 56124,
@@ -261465,11 +263802,39 @@
           "renamed": "entities"
         },
         {
+          "start": 56211,
+          "end": 56218,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 56231,
+          "end": 56238,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 56276,
           "end": 56283,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 56313,
+          "end": 56320,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 56334,
+          "end": 56341,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 56960,
@@ -261535,6 +263900,20 @@
           "renamed": "entities"
         },
         {
+          "start": 58340,
+          "end": 58347,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 58361,
+          "end": 58368,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 58428,
           "end": 58435,
           "symbol": "F:a.field_h:[Lqe;",
@@ -261547,6 +263926,20 @@
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 59296,
+          "end": 59303,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 59317,
+          "end": 59324,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 59384,
@@ -262032,11 +264425,25 @@
           "renamed": "entities"
         },
         {
+          "start": 71179,
+          "end": 71186,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 71349,
           "end": 71356,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 71360,
+          "end": 71367,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 71480,
@@ -262046,11 +264453,25 @@
           "renamed": "entities"
         },
         {
+          "start": 71491,
+          "end": 71498,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 71612,
           "end": 71619,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 71623,
+          "end": 71630,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 71770,
@@ -262060,11 +264481,25 @@
           "renamed": "entities"
         },
         {
+          "start": 71781,
+          "end": 71788,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 71954,
           "end": 71961,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 71965,
+          "end": 71972,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 73117,
@@ -262088,11 +264523,25 @@
           "renamed": "entities"
         },
         {
+          "start": 73431,
+          "end": 73438,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 73572,
           "end": 73579,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 73583,
+          "end": 73590,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 73691,
@@ -262102,11 +264551,25 @@
           "renamed": "entities"
         },
         {
+          "start": 73702,
+          "end": 73709,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 73934,
           "end": 73941,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 73945,
+          "end": 73952,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 74039,
@@ -262116,11 +264579,25 @@
           "renamed": "entities"
         },
         {
+          "start": 74050,
+          "end": 74057,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 74143,
           "end": 74150,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 74154,
+          "end": 74161,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 75391,
@@ -262144,11 +264621,25 @@
           "renamed": "entities"
         },
         {
+          "start": 76134,
+          "end": 76141,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 76299,
           "end": 76306,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 76310,
+          "end": 76317,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 76485,
@@ -262158,11 +264649,25 @@
           "renamed": "entities"
         },
         {
+          "start": 76496,
+          "end": 76503,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 76699,
           "end": 76706,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 76710,
+          "end": 76717,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 76839,
@@ -262172,11 +264677,25 @@
           "renamed": "entities"
         },
         {
+          "start": 76850,
+          "end": 76857,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 76945,
           "end": 76952,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 76956,
+          "end": 76963,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 77815,
@@ -262200,11 +264719,25 @@
           "renamed": "entities"
         },
         {
+          "start": 78593,
+          "end": 78600,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 78758,
           "end": 78765,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 78769,
+          "end": 78776,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 78915,
@@ -262214,11 +264747,25 @@
           "renamed": "entities"
         },
         {
+          "start": 78926,
+          "end": 78933,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 78995,
           "end": 79002,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 79006,
+          "end": 79013,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 79137,
@@ -262228,11 +264775,25 @@
           "renamed": "entities"
         },
         {
+          "start": 79148,
+          "end": 79155,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 79251,
           "end": 79258,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 79262,
+          "end": 79269,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 80678,
@@ -262256,11 +264817,25 @@
           "renamed": "entities"
         },
         {
+          "start": 80920,
+          "end": 80927,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 81050,
           "end": 81057,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 81061,
+          "end": 81068,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 81334,
@@ -262270,11 +264845,25 @@
           "renamed": "entities"
         },
         {
+          "start": 81345,
+          "end": 81352,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 81515,
           "end": 81522,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 81526,
+          "end": 81533,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 82185,
@@ -262298,11 +264887,25 @@
           "renamed": "entities"
         },
         {
+          "start": 82534,
+          "end": 82541,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 82688,
           "end": 82695,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 82699,
+          "end": 82706,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 82808,
@@ -262312,11 +264915,25 @@
           "renamed": "entities"
         },
         {
+          "start": 82819,
+          "end": 82826,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 82926,
           "end": 82933,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 82937,
+          "end": 82944,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 83072,
@@ -262326,11 +264943,25 @@
           "renamed": "entities"
         },
         {
+          "start": 83083,
+          "end": 83090,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 83249,
           "end": 83256,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 83260,
+          "end": 83267,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 83833,
@@ -262354,11 +264985,25 @@
           "renamed": "entities"
         },
         {
+          "start": 84169,
+          "end": 84176,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 84345,
           "end": 84352,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 84356,
+          "end": 84363,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 84503,
@@ -262368,11 +265013,25 @@
           "renamed": "entities"
         },
         {
+          "start": 84514,
+          "end": 84521,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 84589,
           "end": 84596,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 84600,
+          "end": 84607,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 84875,
@@ -262382,11 +265041,25 @@
           "renamed": "entities"
         },
         {
+          "start": 84886,
+          "end": 84893,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 85063,
           "end": 85070,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 85074,
+          "end": 85081,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 85930,
@@ -262410,11 +265083,25 @@
           "renamed": "entities"
         },
         {
+          "start": 86865,
+          "end": 86872,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 87076,
           "end": 87083,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 87087,
+          "end": 87094,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 87175,
@@ -262424,11 +265111,25 @@
           "renamed": "entities"
         },
         {
+          "start": 87186,
+          "end": 87193,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 87297,
           "end": 87304,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 87308,
+          "end": 87315,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 87516,
@@ -262438,11 +265139,25 @@
           "renamed": "entities"
         },
         {
+          "start": 87527,
+          "end": 87534,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 87853,
           "end": 87860,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 87864,
+          "end": 87871,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 88604,
@@ -262459,11 +265174,25 @@
           "renamed": "entities"
         },
         {
+          "start": 89344,
+          "end": 89351,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 89540,
           "end": 89547,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 89551,
+          "end": 89558,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 89673,
@@ -262473,11 +265202,25 @@
           "renamed": "entities"
         },
         {
+          "start": 89684,
+          "end": 89691,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 89795,
           "end": 89802,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 89806,
+          "end": 89813,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 89980,
@@ -262487,11 +265230,25 @@
           "renamed": "entities"
         },
         {
+          "start": 89991,
+          "end": 89998,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 90250,
           "end": 90257,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 90261,
+          "end": 90268,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
         },
         {
           "start": 91072,
@@ -262508,11 +265265,25 @@
           "renamed": "entities"
         },
         {
+          "start": 91827,
+          "end": 91834,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 91968,
           "end": 91975,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 91979,
+          "end": 91986,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 92151,
@@ -262522,11 +265293,25 @@
           "renamed": "entities"
         },
         {
+          "start": 92162,
+          "end": 92169,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 92239,
           "end": 92246,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 92250,
+          "end": 92257,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 92529,
@@ -262536,11 +265321,25 @@
           "renamed": "entities"
         },
         {
+          "start": 92540,
+          "end": 92547,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 92651,
           "end": 92658,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 92662,
+          "end": 92669,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 93358,
@@ -262564,11 +265363,25 @@
           "renamed": "entities"
         },
         {
+          "start": 93944,
+          "end": 93951,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 94093,
           "end": 94100,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 94104,
+          "end": 94111,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 94280,
@@ -262578,11 +265391,25 @@
           "renamed": "entities"
         },
         {
+          "start": 94291,
+          "end": 94298,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 94370,
           "end": 94377,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 94381,
+          "end": 94388,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 94522,
@@ -262592,11 +265419,25 @@
           "renamed": "entities"
         },
         {
+          "start": 94533,
+          "end": 94540,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 94782,
           "end": 94789,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 94793,
+          "end": 94800,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 95225,
@@ -262620,11 +265461,25 @@
           "renamed": "entities"
         },
         {
+          "start": 95590,
+          "end": 95597,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 95781,
           "end": 95788,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 95792,
+          "end": 95799,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 96164,
@@ -262634,11 +265489,25 @@
           "renamed": "entities"
         },
         {
+          "start": 96175,
+          "end": 96182,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 96363,
           "end": 96370,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 96374,
+          "end": 96381,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 97428,
@@ -262683,11 +265552,25 @@
           "renamed": "entities"
         },
         {
+          "start": 98597,
+          "end": 98604,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 98779,
           "end": 98786,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 98790,
+          "end": 98797,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 99305,
@@ -262697,11 +265580,25 @@
           "renamed": "entities"
         },
         {
+          "start": 99316,
+          "end": 99323,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 99398,
           "end": 99405,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 99409,
+          "end": 99416,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 102747,
@@ -262725,11 +265622,25 @@
           "renamed": "entities"
         },
         {
+          "start": 103183,
+          "end": 103190,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
+        },
+        {
           "start": 103332,
           "end": 103339,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 103343,
+          "end": 103350,
+          "symbol": "F:qe.field_h:I",
+          "original": "field_h",
+          "renamed": "heading"
         },
         {
           "start": 103478,
@@ -262739,11 +265650,25 @@
           "renamed": "entities"
         },
         {
+          "start": 103489,
+          "end": 103496,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
           "start": 103548,
           "end": 103555,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 103559,
+          "end": 103566,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
         },
         {
           "start": 103843,
@@ -262753,11 +265678,25 @@
           "renamed": "entities"
         },
         {
+          "start": 103854,
+          "end": 103861,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
           "start": 103941,
           "end": 103948,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 103952,
+          "end": 103959,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 104443,
@@ -262971,11 +265910,25 @@
           "renamed": "entities"
         },
         {
+          "start": 108143,
+          "end": 108150,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 108186,
           "end": 108193,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 108200,
+          "end": 108207,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 108249,
@@ -263054,6 +266007,20 @@
           "symbol": "F:qe.field_m:I",
           "original": "field_m",
           "renamed": "kind"
+        },
+        {
+          "start": 110245,
+          "end": 110252,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 110309,
+          "end": 110316,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 111010,
@@ -266713,7 +269680,7 @@
       "original": "vl.java",
       "renamed": "vl.java",
       "inputSha256": "e88dc87b5ac48fbebf4631cfe14fbece4a14c830963e2b7a95e29818b662c040",
-      "outputSha256": "7efb130ba64bbcd1d6997b4ed5462e5473e8e711c5833525700cab471fd2c3eb",
+      "outputSha256": "930fa798c32cbdefe4e7d5a82d4c39f63307857d9f431d07f7544f879969d025",
       "edits": [
         {
           "start": 200,
@@ -266765,6 +269732,48 @@
           "renamed": "entities"
         },
         {
+          "start": 1444,
+          "end": 1451,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 1509,
+          "end": 1516,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 1828,
+          "end": 1835,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 1852,
+          "end": 1859,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 1959,
+          "end": 1966,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 1990,
+          "end": 1997,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
           "start": 2106,
           "end": 2113,
           "symbol": "F:qe.field_n:I",
@@ -266784,6 +269793,27 @@
           "symbol": "F:qe.field_n:I",
           "original": "field_n",
           "renamed": "mass"
+        },
+        {
+          "start": 2889,
+          "end": 2896,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
+        },
+        {
+          "start": 3083,
+          "end": 3090,
+          "symbol": "F:qe.field_d:D",
+          "original": "field_d",
+          "renamed": "velocityX"
+        },
+        {
+          "start": 3124,
+          "end": 3131,
+          "symbol": "F:qe.field_k:D",
+          "original": "field_k",
+          "renamed": "velocityY"
         },
         {
           "start": 3166,
@@ -266828,11 +269858,25 @@
           "renamed": "entities"
         },
         {
+          "start": 3737,
+          "end": 3744,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
           "start": 3806,
           "end": 3813,
           "symbol": "F:a.field_h:[Lqe;",
           "original": "field_h",
           "renamed": "entities"
+        },
+        {
+          "start": 3817,
+          "end": 3824,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 4357,
@@ -266875,6 +269919,83 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "GameEntity"
+        },
+        {
+          "start": 18007,
+          "end": 18014,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18081,
+          "end": 18088,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18119,
+          "end": 18126,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 18164,
+          "end": 18171,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 18227,
+          "end": 18228,
+          "symbol": "M:qe.b(I)Lpb;",
+          "original": "b",
+          "renamed": "currentSprite"
+        },
+        {
+          "start": 18259,
+          "end": 18266,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18289,
+          "end": 18296,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 18413,
+          "end": 18420,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18479,
+          "end": 18486,
+          "symbol": "F:qe.field_a:D",
+          "original": "field_a",
+          "renamed": "x"
+        },
+        {
+          "start": 18524,
+          "end": 18531,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
+        },
+        {
+          "start": 18581,
+          "end": 18588,
+          "symbol": "F:qe.field_l:D",
+          "original": "field_l",
+          "renamed": "y"
         },
         {
           "start": 20969,
@@ -268791,10 +271912,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "1b8d10267c939b24240dce3121f66fdf4b720721f24fad4486321279f1ed6315",
+    "rulesSha256": "3f665b86a49299a649b776289b607500e2340b39ca3ee2821b1194039039fb1f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "65735390999736f5d2c2ddd502fb22207727ce7377b615bd2b9ebd30dfa56346",
+    "outputTreeSha256": "ad2fe985cec1185a8adf8f07ebf491e4dab406a09749f9077ee929c245877ad5",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -64,14 +64,14 @@ abstract class gj extends DualLinkNode {
             gj.d((byte) -22);
           }
           var5 = param0.c((byte) 39);
-          if (param0.field_a + (double)var5 > param3.field_a - (double)var4_int &&
-            param3.field_a + (double)var4_int > param0.field_a - (double)var5 &&
-            param3.field_l - (double)var4_int < (double)var5 + param0.field_l &&
-            param0.field_l - (double)var5 < param3.field_l + (double)var4_int) {
+          if (param0.x + (double)var5 > param3.x - (double)var4_int &&
+            param3.x + (double)var4_int > param0.x - (double)var5 &&
+            param3.y - (double)var4_int < (double)var5 + param0.y &&
+            param0.y - (double)var5 < param3.y + (double)var4_int) {
             if (param2) {
               return true;
             }
-            if (dk.a(param3.b(640), (int)param3.field_a, (int)param3.field_l, param0.b(640), (int)param0.field_a, (int)param0.field_l)) {
+            if (dk.a(param3.currentSprite(640), (int)param3.x, (int)param3.y, param0.currentSprite(640), (int)param0.x, (int)param0.y)) {
               return true;
             }
           }

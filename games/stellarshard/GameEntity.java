@@ -9,16 +9,16 @@ final class GameEntity {
     int kind;
     int field_i;
     int mass;
-    double field_l;
+    double y;
     private Sprite[] field_f;
-    int field_h;
+    int heading;
     static boolean field_o;
-    double field_d;
+    double velocityX;
     int field_c;
     private int field_b;
-    double field_k;
+    double velocityY;
     int field_g;
-    double field_a;
+    double x;
 
     final static int a(String param0, boolean param1, boolean param2, String param3, int param4, String param5, int param6) {
         am var7 = null;
@@ -227,8 +227,8 @@ final class GameEntity {
         var10 = stellarshard.field_B;
         this.b((byte) 124);
         if (this.kind == 11) {
-          this.field_k = this.field_k * 0.99;
-          this.field_d = this.field_d * 0.99;
+          this.velocityY = this.velocityY * 0.99;
+          this.velocityX = this.velocityX * 0.99;
         }
         if (this.kind == -1) {
           ff.field_k = ff.field_k + 16;
@@ -271,30 +271,30 @@ final class GameEntity {
           this.field_i = this.field_i + 1;
           this.field_j = 0;
           if (this.field_i > 50) {
-            var2_double = a.entities[0].field_a - this.field_a;
-            var4 = a.entities[0].field_l - this.field_l;
+            var2_double = a.entities[0].x - this.x;
+            var4 = a.entities[0].y - this.y;
             var6 = (int)(Math.atan2(var4, -var2_double) * 128.0 / 3.141592653589793);
-            var6 = var6 - this.field_h;
+            var6 = var6 - this.heading;
             if (var6 < -128) {
               var6 += 256;
             }
             if (var6 > 128) {
               var6 -= 256;
             }
-            this.field_h = this.field_h + var6 / 10;
+            this.heading = this.heading + var6 / 10;
           } else {
-            if (this.field_h > 128) {
-              this.field_h = this.field_h - 256;
+            if (this.heading > 128) {
+              this.heading = this.heading - 256;
             }
-            this.field_h = this.field_h * 9 / 10;
-            if (this.field_h < 0) {
-              this.field_h = this.field_h + 256;
+            this.heading = this.heading * 9 / 10;
+            if (this.heading < 0) {
+              this.heading = this.heading + 256;
             }
           }
           if (this.field_i > 100 &&
             null != a.entities[0]) {
-            var2_doubleLifetime6 = this.field_a - a.entities[0].field_a;
-            var4Lifetime7 = -a.entities[0].field_l + this.field_l;
+            var2_doubleLifetime6 = this.x - a.entities[0].x;
+            var4Lifetime7 = -a.entities[0].y + this.y;
             var6Lifetime6 = 128;
             if (var2_doubleLifetime6 != 0.0 ||
               var4Lifetime7 != 0.0) {
@@ -307,14 +307,14 @@ final class GameEntity {
               ll.field_c.a(sb.field_e[8], 100, var6Lifetime6 * pk.field_h / 78);
             }
             this.field_i = 0;
-            var4Lifetime7Lifetime1 = a.entities[0].field_l - this.field_l;
-            var2_doubleLifetime6Lifetime1 = a.entities[0].field_a - this.field_a;
+            var4Lifetime7Lifetime1 = a.entities[0].y - this.y;
+            var2_doubleLifetime6Lifetime1 = a.entities[0].x - this.x;
             var7 = Math.sqrt(var4Lifetime7Lifetime1 * var4Lifetime7Lifetime1 + var2_doubleLifetime6Lifetime1 * var2_doubleLifetime6Lifetime1);
             var9 = new vl(3, this);
             var9.field_a = var4Lifetime7Lifetime1 * 4.0 / var7;
             var9.field_j = var2_doubleLifetime6Lifetime1 * 4.0 / var7;
-            var9.field_c = this.field_a + 8.0 * var9.field_j;
-            var9.field_k = this.field_l + var9.field_a * 8.0;
+            var9.field_c = this.x + 8.0 * var9.field_j;
+            var9.field_k = this.y + var9.field_a * 8.0;
             wk.field_b[eg.a(-79)] = var9;
           }
         }
@@ -326,8 +326,8 @@ final class GameEntity {
             this.field_i = this.field_i - 100;
           }
           if (0 == this.field_i % 10) {
-            var2_doubleLifetime1 = -a.entities[0].field_a + this.field_a;
-            var4Lifetime1 = -a.entities[0].field_l + this.field_l;
+            var2_doubleLifetime1 = -a.entities[0].x + this.x;
+            var4Lifetime1 = -a.entities[0].y + this.y;
             var6Lifetime1 = 128;
             if (var2_doubleLifetime1 != 0.0 ||
               var4Lifetime1 != 0.0) {
@@ -349,8 +349,8 @@ final class GameEntity {
             this.field_i = this.field_i - 100;
           }
           if (this.field_i % 10 == 0) {
-            var2_doubleLifetime2 = this.field_a - a.entities[0].field_a;
-            var4Lifetime2 = -a.entities[0].field_l + this.field_l;
+            var2_doubleLifetime2 = this.x - a.entities[0].x;
+            var4Lifetime2 = -a.entities[0].y + this.y;
             var6Lifetime2 = 128;
             if (0.0 != var2_doubleLifetime2 ||
               0.0 != var4Lifetime2) {
@@ -366,18 +366,18 @@ final class GameEntity {
         }
         if (this.kind == 14 &&
           null != a.entities[0]) {
-          this.field_k = this.field_k * 0.99;
-          this.field_d = this.field_d * 0.99;
+          this.velocityY = this.velocityY * 0.99;
+          this.velocityX = this.velocityX * 0.99;
           this.field_j = this.field_i / 50;
           for (var2 = 0; var2 < 1000; var2++) {
             if (null != a.entities[var2] &&
               a.entities[var2].kind != 14) {
               var11 = a.entities[var2];
-              var4Lifetime3 = this.field_a - var11.field_a;
+              var4Lifetime3 = this.x - var11.x;
               if (480.0 < var4Lifetime3) {
                 var4Lifetime3 = var4Lifetime3 - 960.0;
               }
-              var6_double = this.field_l - var11.field_l;
+              var6_double = this.y - var11.y;
               if (-480.0 > var4Lifetime3) {
                 var4Lifetime3 = var4Lifetime3 + 960.0;
               }
@@ -390,19 +390,19 @@ final class GameEntity {
               if (var4Lifetime3 != 0.0 ||
                 var6_double != 0.0) {
                 var8 = Math.sqrt(var6_double * var6_double + var4Lifetime3 * var4Lifetime3);
-                var11.field_k = var11.field_k + 1.28 * ((double)this.field_i * var6_double) / (var8 * var8) / 1000.0;
-                var11.field_d = var11.field_d + 1.28 * (var4Lifetime3 * (double)this.field_i) / (var8 * var8) / 1000.0;
+                var11.velocityY = var11.velocityY + 1.28 * ((double)this.field_i * var6_double) / (var8 * var8) / 1000.0;
+                var11.velocityX = var11.velocityX + 1.28 * (var4Lifetime3 * (double)this.field_i) / (var8 * var8) / 1000.0;
               }
             }
           }
           for (var2Lifetime2 = 0; var2Lifetime2 < 3000; var2Lifetime2++) {
             if (null != wk.field_b[var2Lifetime2]) {
               var12 = wk.field_b[var2Lifetime2];
-              var4Lifetime3Lifetime1 = -var12.field_c + this.field_a;
+              var4Lifetime3Lifetime1 = -var12.field_c + this.x;
               if (480.0 < var4Lifetime3Lifetime1) {
                 var4Lifetime3Lifetime1 = var4Lifetime3Lifetime1 - 960.0;
               }
-              var6_doubleLifetime2 = -var12.field_k + this.field_l;
+              var6_doubleLifetime2 = -var12.field_k + this.y;
               if (-480.0 > var4Lifetime3Lifetime1) {
                 var4Lifetime3Lifetime1 = var4Lifetime3Lifetime1 + 960.0;
               }
@@ -424,10 +424,10 @@ final class GameEntity {
           if (200.0 * Math.random() * 60.0 < (double)this.field_i) {
             var13 = new vl(1, this);
             var13.field_q = 16711680;
-            var13.field_c = this.field_a + 64.0 * Math.random() - 32.0;
-            var13.field_k = this.field_l + Math.random() * 64.0 - 32.0;
-            var13.field_a = (-var13.field_c + this.field_a) / 100.0;
-            var13.field_j = (this.field_l - var13.field_k) / 100.0;
+            var13.field_c = this.x + 64.0 * Math.random() - 32.0;
+            var13.field_k = this.y + Math.random() * 64.0 - 32.0;
+            var13.field_a = (-var13.field_c + this.x) / 100.0;
+            var13.field_j = (this.y - var13.field_k) / 100.0;
             var3_int = eg.a(-88);
             if (-1 != var3_int) {
               wk.field_b[var3_int] = var13;
@@ -446,8 +446,8 @@ final class GameEntity {
               var14 = new vl(3, this);
               var14.field_j = var14.field_j - Math.sin(2.0 * (3.141592653589793 * (double)var3_intLifetime1) / 256.0) * 4.0;
               var14.field_a = var14.field_a - Math.cos(2.0 * (3.141592653589793 * (double)var3_intLifetime1) / 256.0) * 4.0;
-              var14.field_c = 2.0 * var14.field_j + this.field_a;
-              var14.field_k = 2.0 * var14.field_a + this.field_l;
+              var14.field_c = 2.0 * var14.field_j + this.x;
+              var14.field_k = 2.0 * var14.field_a + this.y;
               var4_int = eg.a(-101);
               if (var4_int != -1) {
                 wk.field_b[var4_int] = var14;
@@ -458,8 +458,8 @@ final class GameEntity {
           if (this.field_i % 10 != 0) {
             if ((this.field_i % 5 == 0) &&
               (!(7500 >= this.field_i))) {
-              var2_doubleLifetime3 = -a.entities[0].field_a + this.field_a;
-              var4Lifetime3Lifetime2 = this.field_l - a.entities[0].field_l;
+              var2_doubleLifetime3 = -a.entities[0].x + this.x;
+              var4Lifetime3Lifetime2 = this.y - a.entities[0].y;
               var6Lifetime3 = 128;
               if (var2_doubleLifetime3 != 0.0 ||
                 var4Lifetime3Lifetime2 != 0.0) {
@@ -473,8 +473,8 @@ final class GameEntity {
               }
             }
           } else {
-            var2_doubleLifetime3 = -a.entities[0].field_a + this.field_a;
-            var4Lifetime3Lifetime2 = this.field_l - a.entities[0].field_l;
+            var2_doubleLifetime3 = -a.entities[0].x + this.x;
+            var4Lifetime3Lifetime2 = this.y - a.entities[0].y;
             var6Lifetime3 = 128;
             if (var2_doubleLifetime3 != 0.0 ||
               var4Lifetime3Lifetime2 != 0.0) {
@@ -493,8 +493,8 @@ final class GameEntity {
           this.field_i = this.field_i + 1;
           this.field_j = 16;
           if (0 == this.field_i % 10) {
-            var2_doubleLifetime4 = -a.entities[0].field_a + this.field_a;
-            var4Lifetime4 = this.field_l - a.entities[0].field_l;
+            var2_doubleLifetime4 = -a.entities[0].x + this.x;
+            var4Lifetime4 = this.y - a.entities[0].y;
             var6Lifetime4 = 128;
             if (0.0 != var2_doubleLifetime4 ||
               0.0 != var4Lifetime4) {
@@ -508,14 +508,14 @@ final class GameEntity {
             }
           }
           if (this.field_i > 100) {
-            var2_doubleLifetime4Lifetime1 = -this.field_a + a.entities[0].field_a;
-            var4Lifetime4Lifetime1 = a.entities[0].field_l - this.field_l;
+            var2_doubleLifetime4Lifetime1 = -this.x + a.entities[0].x;
+            var4Lifetime4Lifetime1 = a.entities[0].y - this.y;
             var6_doubleLifetime1 = Math.sqrt(var4Lifetime4Lifetime1 * var4Lifetime4Lifetime1 + var2_doubleLifetime4Lifetime1 * var2_doubleLifetime4Lifetime1);
-            this.field_k = this.field_k + var4Lifetime4Lifetime1 * 0.1 / var6_doubleLifetime1;
+            this.velocityY = this.velocityY + var4Lifetime4Lifetime1 * 0.1 / var6_doubleLifetime1;
             if (this.field_i > 150) {
               this.field_i = 0;
             }
-            this.field_d = this.field_d + var2_doubleLifetime4Lifetime1 * 0.1 / var6_doubleLifetime1;
+            this.velocityX = this.velocityX + var2_doubleLifetime4Lifetime1 * 0.1 / var6_doubleLifetime1;
           }
         }
         if (15 == this.kind) {
@@ -526,8 +526,8 @@ final class GameEntity {
               stackIn_195_0 = null;
               stackIn_195_1 = a.entities[0];
               if (stackIn_195_0 != stackIn_195_1) {
-                var2_doubleLifetime5 = this.field_a - a.entities[0].field_a;
-                var4Lifetime5 = this.field_l - a.entities[0].field_l;
+                var2_doubleLifetime5 = this.x - a.entities[0].x;
+                var4Lifetime5 = this.y - a.entities[0].y;
                 var6Lifetime5 = 128;
                 if (0.0 != var2_doubleLifetime5 ||
                   var4Lifetime5 != 0.0) {
@@ -540,19 +540,19 @@ final class GameEntity {
                   ll.field_c.a(sb.field_e[8], 100, pk.field_h * var6Lifetime5 / 78);
                 }
                 var15 = new vl(3, this);
-                var15.field_j = 4.0 * Math.cos(2.0 * (3.141592653589793 * (double)this.field_h) / 256.0);
-                var15.field_a = 4.0 * -Math.sin((double)this.field_h * 3.141592653589793 * 2.0 / 256.0);
-                var15.field_k = this.field_l + var15.field_a * 4.0 - 4.0 * var15.field_j;
-                var15.field_c = var15.field_a * 4.0 + (var15.field_j * 4.0 + this.field_a);
-                var15.field_j = var15.field_j + this.field_d;
-                var15.field_a = var15.field_a + this.field_k;
+                var15.field_j = 4.0 * Math.cos(2.0 * (3.141592653589793 * (double)this.heading) / 256.0);
+                var15.field_a = 4.0 * -Math.sin((double)this.heading * 3.141592653589793 * 2.0 / 256.0);
+                var15.field_k = this.y + var15.field_a * 4.0 - 4.0 * var15.field_j;
+                var15.field_c = var15.field_a * 4.0 + (var15.field_j * 4.0 + this.x);
+                var15.field_j = var15.field_j + this.velocityX;
+                var15.field_a = var15.field_a + this.velocityY;
                 wk.field_b[eg.a(-88)] = var15;
               }
             }
             if (this.field_i % 10 == 5 &&
               a.entities[0] != null) {
-              var2_doubleLifetime5Lifetime1 = this.field_a - a.entities[0].field_a;
-              var4Lifetime5Lifetime1 = -a.entities[0].field_l + this.field_l;
+              var2_doubleLifetime5Lifetime1 = this.x - a.entities[0].x;
+              var4Lifetime5Lifetime1 = -a.entities[0].y + this.y;
               var6Lifetime5Lifetime1 = 128;
               if (var2_doubleLifetime5Lifetime1 != 0.0 ||
                 var4Lifetime5Lifetime1 != 0.0) {
@@ -565,12 +565,12 @@ final class GameEntity {
                 ll.field_c.a(sb.field_e[8], 100, var6Lifetime5Lifetime1 * pk.field_h / 78);
               }
               var16 = new vl(3, this);
-              var16.field_j = 4.0 * Math.cos((double)(this.field_h + 128) * 3.141592653589793 * 2.0 / 256.0);
-              var16.field_a = 4.0 * -Math.sin(3.141592653589793 * (double)(this.field_h + 128) * 2.0 / 256.0);
-              var16.field_k = -(var16.field_j * 4.0) + (var16.field_a * 4.0 + this.field_l);
-              var16.field_c = var16.field_a * 4.0 + (4.0 * var16.field_j + this.field_a);
-              var16.field_a = var16.field_a + this.field_k;
-              var16.field_j = var16.field_j + this.field_d;
+              var16.field_j = 4.0 * Math.cos((double)(this.heading + 128) * 3.141592653589793 * 2.0 / 256.0);
+              var16.field_a = 4.0 * -Math.sin(3.141592653589793 * (double)(this.heading + 128) * 2.0 / 256.0);
+              var16.field_k = -(var16.field_j * 4.0) + (var16.field_a * 4.0 + this.y);
+              var16.field_c = var16.field_a * 4.0 + (4.0 * var16.field_j + this.x);
+              var16.field_a = var16.field_a + this.velocityY;
+              var16.field_j = var16.field_j + this.velocityX;
               wk.field_b[eg.a(-56)] = var16;
             }
             if (200 < this.field_i) {
@@ -609,8 +609,8 @@ final class GameEntity {
               this.c(8);
               return null;
             }
-            this.field_k = this.field_k - Math.cos(3.141592653589793 * (double)this.field_h * 2.0 / 256.0) * 0.1;
-            this.field_d = this.field_d - Math.sin(2.0 * ((double)this.field_h * 3.141592653589793) / 256.0) * 0.1;
+            this.velocityY = this.velocityY - Math.cos(3.141592653589793 * (double)this.heading * 2.0 / 256.0) * 0.1;
+            this.velocityX = this.velocityX - Math.sin(2.0 * ((double)this.heading * 3.141592653589793) / 256.0) * 0.1;
             if (MouseWheelInput.field_e &&
               og.field_a <= 0) {
               ll.field_c.a(sb.field_e[35], 100, pk.field_h);
@@ -622,8 +622,8 @@ final class GameEntity {
               var3.field_q = 16711680;
               var3.field_j = 0.0;
               var4Lifetime6 = 6.28 * Math.random();
-              var3.field_c = this.field_a + (double)(int)(16.0 * Math.random() * Math.sin(var4Lifetime6));
-              var3.field_k = this.field_l + (double)(int)(16.0 * Math.random() * Math.cos(var4Lifetime6));
+              var3.field_c = this.x + (double)(int)(16.0 * Math.random() * Math.sin(var4Lifetime6));
+              var3.field_k = this.y + (double)(int)(16.0 * Math.random() * Math.cos(var4Lifetime6));
               wk.field_b[eg.a(-90)] = var3;
             }
             this.field_g = this.field_g - 1;
@@ -930,8 +930,8 @@ final class GameEntity {
         int var31Lifetime1Lifetime1;
         int var32Lifetime1Lifetime1;
         var33 = stellarshard.field_B;
-        var2 = (int)(this.field_a + 320.0 - 48.0);
-        var3 = (int)(this.field_l + 240.0 - 48.0);
+        var2 = (int)(this.x + 320.0 - 48.0);
+        var3 = (int)(this.y + 240.0 - 48.0);
         if (this.kind != -1) {
           if (this.kind == 14) {
             var4 = var2 + 48 << 4;
@@ -1019,7 +1019,7 @@ final class GameEntity {
             10 != this.kind &&
             this.kind != 5) {
             if (!this.a((byte) -51)) {
-              this.b(640).e(var2, var3);
+              this.currentSprite(640).e(var2, var3);
             } else {
               var4 = 48 + var2 << 4;
               var5 = 48 + var3 << 4;
@@ -1100,7 +1100,7 @@ final class GameEntity {
               }
             }
           } else {
-            var4_ref_pb = this.b(640);
+            var4_ref_pb = this.currentSprite(640);
             var5 = var2;
             var5 = var5 + var4_ref_pb.field_t;
             var6 = var3;
@@ -1190,8 +1190,8 @@ final class GameEntity {
           if (this.kind == 12 &&
             null == na.field_j) {
             if (50 < this.field_i) {
-              var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)this.field_h / 128.0) * (double)(-50 + this.field_i)) / 25.0);
-              var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)this.field_h / 128.0) * (double)(-50 + this.field_i)) / 25.0);
+              var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
+              var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
               ti.a(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, ml.field_c);
             }
             if (qi.field_a == 5 &&
@@ -1269,7 +1269,7 @@ final class GameEntity {
           }
           var4 = 0;
           var5 = 0;
-          var6 = this.field_h << 3 & 2045;
+          var6 = this.heading << 3 & 2045;
           var7 = 0;
           var8 = 3;
           if (this.field_j < -5) {
@@ -1291,7 +1291,7 @@ final class GameEntity {
             var8 = 6;
           }
           var9_ref_bj = vl.field_r[var8];
-          this.b(640).e();
+          this.currentSprite(640).e();
           ti.f(0, 0, 96, 96, 0);
           cc.a();
           var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
@@ -1299,9 +1299,9 @@ final class GameEntity {
           if (0 == nc.field_H) {
             if (el.field_I > 0 &&
               (15 & el.field_I) >= 7) {
-              this.b(640).b(var2, var3, 16777215);
+              this.currentSprite(640).b(var2, var3, 16777215);
             } else {
-              this.b(640).e(var2, var3);
+              this.currentSprite(640).e(var2, var3);
             }
           } else {
             if (nc.field_H == 1) {
@@ -1324,17 +1324,17 @@ final class GameEntity {
               nd.a(128, var3 + 48, var10, 48 + var2, (byte) -54, 32);
               if (el.field_I > 0 &&
                 7 <= (el.field_I & 15)) {
-                this.b(640).b(var2, var3, 16777215);
+                this.currentSprite(640).b(var2, var3, 16777215);
               } else {
-                this.b(640).e(var2, var3);
+                this.currentSprite(640).e(var2, var3);
               }
             } else {
               if (nc.field_H == 2) {
                 if (gh.field_b <= 50 &&
                   gh.field_b % 10 >= 5) {
-                  this.b(640).e(var2, var3);
+                  this.currentSprite(640).e(var2, var3);
                 } else {
-                  var35 = this.b(640);
+                  var35 = this.currentSprite(640);
                   var35.e();
                   for (var11 = -(3 & gh.field_b); var11 < var35.field_x; var11 += 3) {
                     ti.g(0, var11, var35.field_w, 0);
@@ -1353,7 +1353,7 @@ final class GameEntity {
             nd.a(128, var3 + 48, 16777215, 48 + var2, (byte) -79, 32);
             if (!(gh.field_b <= 50) ||
               !(5 <= gh.field_b % 10)) {
-              var34 = this.b(640);
+              var34 = this.currentSprite(640);
               var36 = var34;
               var11 = var2;
               var11 = var11 + var36.field_t;
@@ -1389,10 +1389,10 @@ final class GameEntity {
                 }
               }
             }
-            this.b(640).e(var2, var3, 128);
+            this.currentSprite(640).e(var2, var3, 128);
           }
           if (4 == nc.field_H) {
-            this.b(640).e(var2, var3);
+            this.currentSprite(640).e(var2, var3);
           }
         }
         if (ph.field_D >= 2 &&
@@ -1415,8 +1415,8 @@ final class GameEntity {
         int var4;
         boolean decompiledFrameRemainder0 = true;
         var4 = stellarshard.field_B;
-        var2 = 1 + 64 * (int)(this.field_a + 256.0 + 320.0) / 496;
-        var3 = 352 + (int)(this.field_l + 256.0 + 240.0) * 64 / 496;
+        var2 = 1 + 64 * (int)(this.x + 256.0 + 320.0) / 496;
+        var3 = 352 + (int)(this.y + 256.0 + 240.0) * 64 / 496;
         if (-1 == this.kind) {
           ti.e(var2, var3, 4, 16777215);
           ti.b(var2, var3, 4, 0);
@@ -1534,17 +1534,17 @@ final class GameEntity {
             }
             if (decompiledFrameRemainder0) {
               var3 = a.entities[var2];
-              var4 = -var3.field_a + this.field_a;
-              var6 = -var3.field_l + this.field_l;
+              var4 = -var3.x + this.x;
+              var6 = -var3.y + this.y;
               if (var4 != 0.0 ||
                 0.0 != var6) {
                 var8 = Math.sqrt(var4 * var4 + var6 * var6);
                 var10 = var4 / var8;
                 var12 = var6 / var8;
-                var14 = -(var10 * this.field_k) + var12 * this.field_d;
-                var16 = -(var3.field_k * var10) + var12 * var3.field_d;
-                var18 = var12 * this.field_k + var10 * this.field_d;
-                var20 = var3.field_k * var12 + var3.field_d * var10;
+                var14 = -(var10 * this.velocityY) + var12 * this.velocityX;
+                var16 = -(var3.velocityY * var10) + var12 * var3.velocityX;
+                var18 = var12 * this.velocityY + var10 * this.velocityX;
+                var20 = var3.velocityY * var12 + var3.velocityX * var10;
                 if (var20 > var18) {
                   if (!this.a((byte) -113) &&
                     !a.entities[var2].a((byte) -41)) {
@@ -1562,10 +1562,10 @@ final class GameEntity {
                     if (0.0 == var10) {
                       var10 = 0.00001;
                     }
-                    this.field_k = (-var14 + var26Lifetime1 / var10 * var12) / (var12 * var12 / var10 + var10);
-                    this.field_d = (-(var12 * this.field_k) + var26Lifetime1) / var10;
-                    var3.field_k = (var28Lifetime1 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
-                    var3.field_d = (-(var3.field_k * var12) + var28Lifetime1) / var10;
+                    this.velocityY = (-var14 + var26Lifetime1 / var10 * var12) / (var12 * var12 / var10 + var10);
+                    this.velocityX = (-(var12 * this.velocityY) + var26Lifetime1) / var10;
+                    var3.velocityY = (var28Lifetime1 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
+                    var3.velocityX = (-(var3.velocityY * var12) + var28Lifetime1) / var10;
                     if (var3.kind != 11 && (this.kind == -1 ||
                       var3.kind == 14)) {
                       if (14 == var3.kind) {
@@ -1628,7 +1628,7 @@ final class GameEntity {
         }
     }
 
-    final Sprite b(int param0) {
+    final Sprite currentSprite(int param0) {
         int var2 = 0;
         if (this.kind == 11) {
           var2 = this.field_c;
@@ -1637,20 +1637,20 @@ final class GameEntity {
           }
           return e.field_g[var2];
         }
-        if (this.field_h < 0) {
-          this.field_h = this.field_h + 256;
+        if (this.heading < 0) {
+          this.heading = this.heading + 256;
         }
-        if (256 <= this.field_h) {
-          this.field_h = this.field_h - 256;
+        if (256 <= this.heading) {
+          this.heading = this.heading - 256;
         }
         if (this.kind == -1) {
-          return this.field_f[this.field_h / 4];
+          return this.field_f[this.heading / 4];
         }
         if (this.c((byte) 84) == 32) {
-          return this.field_f[this.field_h / 8];
+          return this.field_f[this.heading / 8];
         }
         if (this.c((byte) 65) == 48) {
-          return this.field_f[this.field_h / 2];
+          return this.field_f[this.heading / 2];
         }
         if (param0 != 640) {
           return (Sprite) null;
@@ -1668,50 +1668,50 @@ final class GameEntity {
         int var2Lifetime1;
         int var2Lifetime2;
         var3 = stellarshard.field_B;
-        this.field_l = this.field_l + this.field_k;
-        this.field_a = this.field_a + this.field_d;
+        this.y = this.y + this.velocityY;
+        this.x = this.x + this.velocityX;
         this.field_b = this.field_b + this.field_j;
         while (true) {
           if (this.field_b > 20) {
             stackIn_5_0 = ~this.field_b;
             stackIn_5_1 = -21;
             if (stackIn_5_0 < stackIn_5_1) {
-              this.field_h = this.field_h + 1;
+              this.heading = this.heading + 1;
               this.field_b = this.field_b - 20;
-              if (256 <= this.field_h) {
-                this.field_h = this.field_h - 256;
+              if (256 <= this.heading) {
+                this.heading = this.heading - 256;
               }
             }
             if (-20 <= this.field_b) {
               continue;
             }
             this.field_b = this.field_b + 20;
-            this.field_h = this.field_h - 1;
-            if (this.field_h >= 0) {
+            this.heading = this.heading - 1;
+            if (this.heading >= 0) {
               continue;
             }
-            this.field_h = this.field_h + 256;
+            this.heading = this.heading + 256;
             continue;
           }
           if (-20 > this.field_b) {
             stackIn_13_0 = ~this.field_b;
             stackIn_13_1 = -21;
             if (stackIn_13_0 < stackIn_13_1) {
-              this.field_h = this.field_h + 1;
+              this.heading = this.heading + 1;
               this.field_b = this.field_b - 20;
-              if (256 <= this.field_h) {
-                this.field_h = this.field_h - 256;
+              if (256 <= this.heading) {
+                this.heading = this.heading - 256;
               }
             }
             if (-20 <= this.field_b) {
               continue;
             }
             this.field_b = this.field_b + 20;
-            this.field_h = this.field_h - 1;
-            if (this.field_h >= 0) {
+            this.heading = this.heading - 1;
+            if (this.heading >= 0) {
               continue;
             }
-            this.field_h = this.field_h + 256;
+            this.heading = this.heading + 256;
             continue;
           }
           break;
@@ -1721,20 +1721,20 @@ final class GameEntity {
           var2Lifetime1 = 128;
         }
         var2Lifetime2 = 256;
-        if (this.field_a < (double)(-var2Lifetime2 - 320)) {
-          this.field_a = this.field_a + (double)(640 + 2 * var2Lifetime2);
+        if (this.x < (double)(-var2Lifetime2 - 320)) {
+          this.x = this.x + (double)(640 + 2 * var2Lifetime2);
         }
         if (param0 != 124) {
           return;
         }
-        if (this.field_a > (double)(var2Lifetime2 + 320)) {
-          this.field_a = this.field_a - (double)(640 + 2 * var2Lifetime2);
+        if (this.x > (double)(var2Lifetime2 + 320)) {
+          this.x = this.x - (double)(640 + 2 * var2Lifetime2);
         }
-        if ((double)(-var2Lifetime2 - 240) > this.field_l) {
-          this.field_l = this.field_l + (double)(480 + 2 * var2Lifetime2);
+        if ((double)(-var2Lifetime2 - 240) > this.y) {
+          this.y = this.y + (double)(480 + 2 * var2Lifetime2);
         }
-        if ((double)(240 + var2Lifetime2) < this.field_l) {
-          this.field_l = this.field_l - (double)(2 * var2Lifetime2 + 480);
+        if ((double)(240 + var2Lifetime2) < this.y) {
+          this.y = this.y - (double)(2 * var2Lifetime2 + 480);
         }
         return;
     }
@@ -1942,9 +1942,9 @@ final class GameEntity {
           var14 = new vl(2, this);
           var7_ref_vl = var14;
           var7_ref_vl.field_j = 0.0;
-          var7_ref_vl.field_k = this.field_l;
+          var7_ref_vl.field_k = this.y;
           var7_ref_vl.field_a = 0.0;
-          var7_ref_vl.field_c = this.field_a;
+          var7_ref_vl.field_c = this.x;
           var14.field_q = 16711680;
           wk.field_b[eg.a(-71)] = var14;
         }
@@ -1991,8 +1991,8 @@ final class GameEntity {
                       stackIn_147_0 = new GameEntity(11);
                       var10 = stackIn_147_0;
                       var10.field_c = 16;
-                      var10.field_l = this.field_l;
-                      var10.field_a = this.field_a;
+                      var10.y = this.y;
+                      var10.x = this.x;
                       a.entities[pl.e((byte) 63)] = var10;
                     }
                   } else {
@@ -2000,8 +2000,8 @@ final class GameEntity {
                     stackIn_147_0 = new GameEntity(11);
                     var10 = stackIn_147_0;
                     var10.field_c = 16;
-                    var10.field_l = this.field_l;
-                    var10.field_a = this.field_a;
+                    var10.y = this.y;
+                    var10.x = this.x;
                     a.entities[pl.e((byte) 63)] = var10;
                   }
                 }
@@ -2010,8 +2010,8 @@ final class GameEntity {
           } else {
             var8_ref_qe = new GameEntity(11);
             var8_ref_qe.field_c = var7_int;
-            var8_ref_qe.field_l = this.field_l;
-            var8_ref_qe.field_a = this.field_a;
+            var8_ref_qe.y = this.y;
+            var8_ref_qe.x = this.x;
             if (var8_ref_qe.field_c == e.field_e) {
               b.a(var8_ref_qe.field_c, 6);
               var8_ref_qe.field_c = 8;
@@ -2024,18 +2024,18 @@ final class GameEntity {
           var9 = 0.0;
           for (var11 = 0; var11 < var3; var11++) {
             var12 = new GameEntity(var2);
-            var12.field_l = this.field_l;
-            var12.field_a = this.field_a;
+            var12.y = this.y;
+            var12.x = this.x;
             if (var3 - 1 <= var11 &&
               var2 != 10) {
-              var12.field_d = -var7;
-              var12.field_k = -var9;
+              var12.velocityX = -var7;
+              var12.velocityY = -var9;
             } else {
-              var9 = var9 + var12.field_k;
-              var7 = var7 + var12.field_d;
+              var9 = var9 + var12.velocityY;
+              var7 = var7 + var12.velocityX;
             }
-            var12.field_d = var12.field_d + (double)this.mass * this.field_d / (double)(var3 * var12.mass);
-            var12.field_k = var12.field_k + this.field_k * (double)this.mass / (double)(var3 * var12.mass);
+            var12.velocityX = var12.velocityX + (double)this.mass * this.velocityX / (double)(var3 * var12.mass);
+            var12.velocityY = var12.velocityY + this.velocityY * (double)this.mass / (double)(var3 * var12.mass);
             a.entities[pl.e((byte) 63)] = var12;
           }
         }
@@ -2046,12 +2046,12 @@ final class GameEntity {
         double var5;
         int var7;
         if (param0 != 100) {
-          this.field_d = 0.12426570427502562;
+          this.velocityX = 0.12426570427502562;
         }
         if (MouseWheelInput.field_e &&
           a.entities[0] != null) {
-          var3 = this.field_a - a.entities[0].field_a;
-          var5 = -a.entities[0].field_l + this.field_l;
+          var3 = this.x - a.entities[0].x;
+          var5 = -a.entities[0].y + this.y;
           var7 = 128;
           if (var3 != 0.0 ||
             var5 != 0.0) {
@@ -2093,10 +2093,10 @@ final class GameEntity {
     }
 
     final void a(byte param0, int param1, int param2) {
-        this.field_l = this.field_l - (double)param2;
-        this.field_a = this.field_a - (double)param1;
+        this.y = this.y - (double)param2;
+        this.x = this.x - (double)param1;
         if (param0 > -102) {
-          this.field_l = 1.4581035574663785;
+          this.y = 1.4581035574663785;
         }
     }
 
@@ -2199,12 +2199,12 @@ final class GameEntity {
         this.field_i = 0;
         this.field_b = 0;
         this.field_c = 0;
-        this.field_h = (int)(Math.random() * 256.0);
-        this.field_l = 0.0;
-        this.field_d = 0.0;
-        this.field_a = 0.0;
+        this.heading = (int)(Math.random() * 256.0);
+        this.y = 0.0;
+        this.velocityX = 0.0;
+        this.x = 0.0;
         this.mass = 100;
-        this.field_k = 0.0;
+        this.velocityY = 0.0;
         var2 = 2.0 * (3.141592653589793 * Math.random());
         var4 = 100.0 * (Math.random() * 0.5 + 0.5);
         if (qi.field_a >= 2) {
@@ -2285,27 +2285,27 @@ final class GameEntity {
         if (param0 == 12) {
           this.mass = 200;
           this.field_g = 1 + qi.field_a / 6;
-          this.field_h = (int)(Math.random() * 256.0);
+          this.heading = (int)(Math.random() * 256.0);
         }
         if (param0 == 13) {
           this.mass = 200;
           this.field_g = qi.field_a / 6 + 1;
-          this.field_h = (int)(Math.random() * 256.0);
+          this.heading = (int)(Math.random() * 256.0);
         }
         if (param0 == 15) {
           this.field_g = qi.field_a / 6 + 3;
           this.mass = 100;
-          this.field_h = (int)(256.0 * Math.random());
+          this.heading = (int)(256.0 * Math.random());
         }
         if (param0 == 6) {
           this.field_g = 10 + qi.field_a / 5;
           this.mass = 150;
-          this.field_h = (int)(256.0 * Math.random());
+          this.heading = (int)(256.0 * Math.random());
         }
         if (param0 == 7) {
           this.field_g = 10 + qi.field_a / 5;
           this.mass = 150;
-          this.field_h = (int)(Math.random() * 256.0);
+          this.heading = (int)(Math.random() * 256.0);
         }
         if (param0 < 0) {
           this.field_f = cm.field_d;
@@ -2321,44 +2321,44 @@ final class GameEntity {
           param0 == 2 ||
           4 == param0) {
           this.field_j = 5;
-          this.field_h = (int)(Math.random() * 256.0);
+          this.heading = (int)(Math.random() * 256.0);
           this.mass = 100;
         }
         if (param0 == 8 ||
           9 == param0) {
           this.field_j = 7;
-          this.field_h = (int)(256.0 * Math.random());
+          this.heading = (int)(256.0 * Math.random());
           this.mass = 50;
         }
         if (param0 == 1 ||
           param0 == 3 ||
           param0 == 5) {
           this.field_j = 3;
-          this.field_h = (int)(256.0 * Math.random());
+          this.heading = (int)(256.0 * Math.random());
           this.mass = 200;
         }
         if (param0 == 10) {
           this.field_j = 10;
-          this.field_h = (int)(Math.random() * 256.0);
+          this.heading = (int)(Math.random() * 256.0);
           this.mass = 25;
         }
         if (param0 < 0) {
-          this.field_k = 0.0;
-          this.field_a = 0.0;
-          this.field_d = 0.0;
-          this.field_l = 0.0;
+          this.velocityY = 0.0;
+          this.x = 0.0;
+          this.velocityX = 0.0;
+          this.y = 0.0;
         } else {
-          this.field_d = var4 * Math.sin(var2) / (double)this.mass;
-          this.field_k = Math.cos(var2) * var4 / (double)this.mass;
+          this.velocityX = var4 * Math.sin(var2) / (double)this.mass;
+          this.velocityY = Math.cos(var2) * var4 / (double)this.mass;
           if (!(Math.random() < 0.5)) {
-            this.field_l = 0.0;
-            this.field_a = Math.random() * 1152.0;
+            this.y = 0.0;
+            this.x = Math.random() * 1152.0;
           } else {
-            this.field_a = 0.0;
-            this.field_l = Math.random() * 992.0;
+            this.x = 0.0;
+            this.y = Math.random() * 992.0;
           }
-          this.field_a = this.field_a + (double)(1152 * (int)(2.0 * Math.random()) - 576);
-          this.field_l = this.field_l + (double)(-496 + 992 * (int)(Math.random() * 2.0));
+          this.x = this.x + (double)(1152 * (int)(2.0 * Math.random()) - 576);
+          this.y = this.y + (double)(-496 + 992 * (int)(Math.random() * 2.0));
         }
     }
 

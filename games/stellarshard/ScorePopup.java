@@ -223,10 +223,10 @@ final class ScorePopup {
 
     ScorePopup(int param0, GameEntity param1, int param2) {
         try {
-          this.y = param1.field_l;
-          this.x = param1.field_a;
-          this.velocityX = param1.field_d;
-          this.velocityY = param1.field_k;
+          this.y = param1.y;
+          this.x = param1.x;
+          this.velocityX = param1.velocityX;
+          this.velocityY = param1.velocityY;
           this.field_c = param2;
           this.value = param0;
         } catch (RuntimeException runtimeException) {

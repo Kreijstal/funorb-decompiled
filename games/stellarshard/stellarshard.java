@@ -1312,9 +1312,9 @@ public final class stellarshard extends rb implements cf {
               (decompiledFrameRemainder15 = !(!si.field_jb[99])) &&
               (decompiledFrameRemainder15 = !(0 >= a.entities[0].field_g))) {
               dupTemp$3 = a.entities[0];
-              dupTemp$3.field_k = dupTemp$3.field_k + 0.05 * Math.cos(2.0 * ((double)a.entities[0].field_h * 3.141592653589793) / 256.0);
+              dupTemp$3.velocityY = dupTemp$3.velocityY + 0.05 * Math.cos(2.0 * ((double)a.entities[0].heading * 3.141592653589793) / 256.0);
               dupTemp$4 = a.entities[0];
-              dupTemp$4.field_d = dupTemp$4.field_d + 0.05 * Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].field_h) / 256.0);
+              dupTemp$4.velocityX = dupTemp$4.velocityX + 0.05 * Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].heading) / 256.0);
               if (MouseWheelInput.field_e &&
                 og.field_a <= 0) {
                 ll.field_c.a(sb.field_e[0], 100, pk.field_h / 4);
@@ -1327,12 +1327,12 @@ public final class stellarshard extends rb implements cf {
                 if (var2_int > var5) {
                   var4_ref_vl = new vl(1, a.entities[0]);
                   var4_ref_vl.field_q = 16711680;
-                  var4_ref_vl.field_j = var4_ref_vl.field_j + Math.sin(2.0 * (((double)(96 + a.entities[0].field_h) + 2.0 * ((double)var3 * Math.random()) - (double)var3) * 3.141592653589793) / 256.0) * 2.0;
-                  var4_ref_vl.field_a = var4_ref_vl.field_a + 2.0 * Math.cos(2.0 * (((double)(-var3) + ((double)(-32 + (a.entities[0].field_h + 128)) + 2.0 * ((double)var3 * Math.random()))) * 3.141592653589793) / 256.0);
-                  var4_ref_vl.field_c = var4_ref_vl.field_j * 4.0 + a.entities[0].field_a;
-                  var4_ref_vl.field_k = a.entities[0].field_l + var4_ref_vl.field_a * 4.0;
-                  var4_ref_vl.field_a = var4_ref_vl.field_a + a.entities[0].field_k;
-                  var4_ref_vl.field_j = var4_ref_vl.field_j + a.entities[0].field_d;
+                  var4_ref_vl.field_j = var4_ref_vl.field_j + Math.sin(2.0 * (((double)(96 + a.entities[0].heading) + 2.0 * ((double)var3 * Math.random()) - (double)var3) * 3.141592653589793) / 256.0) * 2.0;
+                  var4_ref_vl.field_a = var4_ref_vl.field_a + 2.0 * Math.cos(2.0 * (((double)(-var3) + ((double)(-32 + (a.entities[0].heading + 128)) + 2.0 * ((double)var3 * Math.random()))) * 3.141592653589793) / 256.0);
+                  var4_ref_vl.field_c = var4_ref_vl.field_j * 4.0 + a.entities[0].x;
+                  var4_ref_vl.field_k = a.entities[0].y + var4_ref_vl.field_a * 4.0;
+                  var4_ref_vl.field_a = var4_ref_vl.field_a + a.entities[0].velocityY;
+                  var4_ref_vl.field_j = var4_ref_vl.field_j + a.entities[0].velocityX;
                   wk.field_b[eg.a(-71)] = var4_ref_vl;
                   var5++;
                   if (var15 == 0) {
@@ -1346,12 +1346,12 @@ public final class stellarshard extends rb implements cf {
               while (var2_int > var5) {
                 var4_ref_vlLifetime2 = new vl(1, a.entities[0]);
                 var4_ref_vlLifetime2.field_q = 16711680;
-                var4_ref_vlLifetime2.field_j = var4_ref_vlLifetime2.field_j + 2.0 * Math.sin(2.0 * (3.141592653589793 * ((double)(32 + a.entities[0].field_h + 128) + 2.0 * ((double)var3 * Math.random()) - (double)var3)) / 256.0);
-                var4_ref_vlLifetime2.field_a = var4_ref_vlLifetime2.field_a + 2.0 * Math.cos(((double)(32 + (a.entities[0].field_h + 128)) + (double)var3 * Math.random() * 2.0 - (double)var3) * 3.141592653589793 * 2.0 / 256.0);
-                var4_ref_vlLifetime2.field_c = var4_ref_vlLifetime2.field_j * 4.0 + a.entities[0].field_a;
-                var4_ref_vlLifetime2.field_k = 4.0 * var4_ref_vlLifetime2.field_a + a.entities[0].field_l;
-                var4_ref_vlLifetime2.field_j = var4_ref_vlLifetime2.field_j + a.entities[0].field_d;
-                var4_ref_vlLifetime2.field_a = var4_ref_vlLifetime2.field_a + a.entities[0].field_k;
+                var4_ref_vlLifetime2.field_j = var4_ref_vlLifetime2.field_j + 2.0 * Math.sin(2.0 * (3.141592653589793 * ((double)(32 + a.entities[0].heading + 128) + 2.0 * ((double)var3 * Math.random()) - (double)var3)) / 256.0);
+                var4_ref_vlLifetime2.field_a = var4_ref_vlLifetime2.field_a + 2.0 * Math.cos(((double)(32 + (a.entities[0].heading + 128)) + (double)var3 * Math.random() * 2.0 - (double)var3) * 3.141592653589793 * 2.0 / 256.0);
+                var4_ref_vlLifetime2.field_c = var4_ref_vlLifetime2.field_j * 4.0 + a.entities[0].x;
+                var4_ref_vlLifetime2.field_k = 4.0 * var4_ref_vlLifetime2.field_a + a.entities[0].y;
+                var4_ref_vlLifetime2.field_j = var4_ref_vlLifetime2.field_j + a.entities[0].velocityX;
+                var4_ref_vlLifetime2.field_a = var4_ref_vlLifetime2.field_a + a.entities[0].velocityY;
                 wk.field_b[eg.a(-53)] = var4_ref_vlLifetime2;
                 var5++;
                 if (var15 != 0) {
@@ -1367,29 +1367,29 @@ public final class stellarshard extends rb implements cf {
               (decompiledFrameCompleted12)) {
               dupTemp$5 = a.entities[0];
               stackIn_415_0 = dupTemp$5;
-              stackIn_415_1 = dupTemp$5.field_k;
-              stackIn_415_2 = Math.cos(2.0 * (3.141592653589793 * (double)a.entities[0].field_h) / 256.0);
+              stackIn_415_1 = dupTemp$5.velocityY;
+              stackIn_415_2 = Math.cos(2.0 * (3.141592653589793 * (double)a.entities[0].heading) / 256.0);
               if (8 != e.field_e) {
                 stackIn_416_3 = 0.1;
               } else {
                 stackIn_416_3 = 0.15;
               }
-              stackIn_415_0.field_k = stackIn_415_1 - stackIn_415_2 * stackIn_416_3;
+              stackIn_415_0.velocityY = stackIn_415_1 - stackIn_415_2 * stackIn_416_3;
               dupTemp$6 = a.entities[0];
               stackIn_419_0 = dupTemp$6;
-              stackIn_419_1 = dupTemp$6.field_d;
-              stackIn_419_2 = Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].field_h) / 256.0);
+              stackIn_419_1 = dupTemp$6.velocityX;
+              stackIn_419_2 = Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].heading) / 256.0);
               if (e.field_e == 8) {
                 stackIn_420_3 = 0.15;
               } else {
                 stackIn_420_3 = 0.1;
               }
-              stackIn_419_0.field_d = stackIn_419_1 - stackIn_419_2 * stackIn_420_3;
+              stackIn_419_0.velocityX = stackIn_419_1 - stackIn_419_2 * stackIn_420_3;
               if (nc.field_H == 4) {
                 dupTemp$7 = a.entities[0];
-                dupTemp$7.field_k = dupTemp$7.field_k - 0.1 * Math.cos(3.141592653589793 * (double)a.entities[0].field_h * 2.0 / 256.0);
+                dupTemp$7.velocityY = dupTemp$7.velocityY - 0.1 * Math.cos(3.141592653589793 * (double)a.entities[0].heading * 2.0 / 256.0);
                 dupTemp$8 = a.entities[0];
-                dupTemp$8.field_d = dupTemp$8.field_d - 0.1 * Math.sin((double)a.entities[0].field_h * 3.141592653589793 * 2.0 / 256.0);
+                dupTemp$8.velocityX = dupTemp$8.velocityX - 0.1 * Math.sin((double)a.entities[0].heading * 3.141592653589793 * 2.0 / 256.0);
                 if (MouseWheelInput.field_e &&
                   og.field_a <= 0) {
                   ll.field_c.a(sb.field_e[35], 100, pk.field_h / 2);
@@ -1425,12 +1425,12 @@ public final class stellarshard extends rb implements cf {
                   var4_ref_vlLifetime1.field_q = 16776960;
                   var4_ref_vlLifetime1.field_p = 10;
                 }
-                var4_ref_vlLifetime1.field_j = var4_ref_vlLifetime1.field_j + 4.0 * Math.sin(((double)(-var3) + ((double)a.entities[0].field_h + Math.random() * (double)var3 * 2.0)) * 3.141592653589793 * 2.0 / 256.0);
-                var4_ref_vlLifetime1.field_a = var4_ref_vlLifetime1.field_a + 4.0 * Math.cos(2.0 * (((double)(-var3) + ((double)a.entities[0].field_h + (double)var3 * Math.random() * 2.0)) * 3.141592653589793) / 256.0);
-                var4_ref_vlLifetime1.field_c = var4_ref_vlLifetime1.field_j * 4.0 + a.entities[0].field_a;
-                var4_ref_vlLifetime1.field_k = var4_ref_vlLifetime1.field_a * 4.0 + a.entities[0].field_l;
-                var4_ref_vlLifetime1.field_a = var4_ref_vlLifetime1.field_a + a.entities[0].field_k;
-                var4_ref_vlLifetime1.field_j = var4_ref_vlLifetime1.field_j + a.entities[0].field_d;
+                var4_ref_vlLifetime1.field_j = var4_ref_vlLifetime1.field_j + 4.0 * Math.sin(((double)(-var3) + ((double)a.entities[0].heading + Math.random() * (double)var3 * 2.0)) * 3.141592653589793 * 2.0 / 256.0);
+                var4_ref_vlLifetime1.field_a = var4_ref_vlLifetime1.field_a + 4.0 * Math.cos(2.0 * (((double)(-var3) + ((double)a.entities[0].heading + (double)var3 * Math.random() * 2.0)) * 3.141592653589793) / 256.0);
+                var4_ref_vlLifetime1.field_c = var4_ref_vlLifetime1.field_j * 4.0 + a.entities[0].x;
+                var4_ref_vlLifetime1.field_k = var4_ref_vlLifetime1.field_a * 4.0 + a.entities[0].y;
+                var4_ref_vlLifetime1.field_a = var4_ref_vlLifetime1.field_a + a.entities[0].velocityY;
+                var4_ref_vlLifetime1.field_j = var4_ref_vlLifetime1.field_j + a.entities[0].velocityX;
                 wk.field_b[eg.a(-87)] = var4_ref_vlLifetime1;
                 var5++;
               }
@@ -1459,12 +1459,12 @@ public final class stellarshard extends rb implements cf {
                     var4_ref_vlLifetime1Lifetime1.field_p = 10;
                     var4_ref_vlLifetime1Lifetime1.field_q = 16776960;
                   }
-                  var4_ref_vlLifetime1Lifetime1.field_j = var4_ref_vlLifetime1Lifetime1.field_j + 2.0 * Math.sin(2.0 * (3.141592653589793 * (double)(a.entities[0].field_h + var5)) / 256.0);
-                  var4_ref_vlLifetime1Lifetime1.field_a = var4_ref_vlLifetime1Lifetime1.field_a + Math.cos(2.0 * ((double)(var5 + a.entities[0].field_h) * 3.141592653589793) / 256.0) * 2.0;
-                  var4_ref_vlLifetime1Lifetime1.field_a = var4_ref_vlLifetime1Lifetime1.field_a + a.entities[0].field_k * 0.8;
-                  var4_ref_vlLifetime1Lifetime1.field_j = var4_ref_vlLifetime1Lifetime1.field_j + a.entities[0].field_d * 0.8;
-                  var4_ref_vlLifetime1Lifetime1.field_c = a.entities[0].field_a;
-                  var4_ref_vlLifetime1Lifetime1.field_k = a.entities[0].field_l;
+                  var4_ref_vlLifetime1Lifetime1.field_j = var4_ref_vlLifetime1Lifetime1.field_j + 2.0 * Math.sin(2.0 * (3.141592653589793 * (double)(a.entities[0].heading + var5)) / 256.0);
+                  var4_ref_vlLifetime1Lifetime1.field_a = var4_ref_vlLifetime1Lifetime1.field_a + Math.cos(2.0 * ((double)(var5 + a.entities[0].heading) * 3.141592653589793) / 256.0) * 2.0;
+                  var4_ref_vlLifetime1Lifetime1.field_a = var4_ref_vlLifetime1Lifetime1.field_a + a.entities[0].velocityY * 0.8;
+                  var4_ref_vlLifetime1Lifetime1.field_j = var4_ref_vlLifetime1Lifetime1.field_j + a.entities[0].velocityX * 0.8;
+                  var4_ref_vlLifetime1Lifetime1.field_c = a.entities[0].x;
+                  var4_ref_vlLifetime1Lifetime1.field_k = a.entities[0].y;
                   wk.field_b[eg.a(-67)] = var4_ref_vlLifetime1Lifetime1;
                   var5 += 32;
                 }
@@ -1474,9 +1474,9 @@ public final class stellarshard extends rb implements cf {
               !si.field_jb[99] &&
               0 < a.entities[0].field_g)) {
               dupTemp$9 = a.entities[0];
-              dupTemp$9.field_d = dupTemp$9.field_d * 0.99;
+              dupTemp$9.velocityX = dupTemp$9.velocityX * 0.99;
               dupTemp$10 = a.entities[0];
-              dupTemp$10.field_k = dupTemp$10.field_k * 0.99;
+              dupTemp$10.velocityY = dupTemp$10.velocityY * 0.99;
               decompiledFrameRemainder16 = (gj.field_r != null);
               if ((decompiledFrameRemainder16) &&
                 (decompiledFrameRemainder16 = !(0 > og.field_a))) {
@@ -1526,7 +1526,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             dupTemp$11 = a.entities[0];
-            dupTemp$11.field_k = dupTemp$11.field_k * 0.99;
+            dupTemp$11.velocityY = dupTemp$11.velocityY * 0.99;
             if (si.field_jb[97] &&
               a.entities[0].field_g > 0) {
               stackIn_503_0 = (8 != e.field_e) ? -75 : -150;
@@ -1553,7 +1553,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             dupTemp$12 = a.entities[0];
-            dupTemp$12.field_d = dupTemp$12.field_d * 0.99;
+            dupTemp$12.velocityX = dupTemp$12.velocityX * 0.99;
             if (si.field_jb[96] &&
               a.entities[0].field_g > 0) {
               stackIn_529_0 = (e.field_e != 8) ? 75 : 150;
@@ -1831,15 +1831,15 @@ public final class stellarshard extends rb implements cf {
                       var4 = -4;
                       while (var4 <= 4) {
                         var2_ref = new vl(0, a.entities[0]);
-                        var2_ref.field_j = var2_ref.field_j - Math.sin(2.0 * ((double)(a.entities[0].field_h + 1 * var4) * 3.141592653589793) / 256.0) * 8.0;
-                        var2_ref.field_a = var2_ref.field_a - Math.cos(3.141592653589793 * (double)(1 * var4 + a.entities[0].field_h) * 2.0 / 256.0) * 8.0;
-                        var2_ref.field_k = -((double)var4 * var2_ref.field_j / 4.0) + (a.entities[0].field_l + 2.0 * var2_ref.field_a);
-                        var2_ref.field_c = var2_ref.field_a * (double)var4 / 4.0 + (a.entities[0].field_a + 2.0 * var2_ref.field_j);
+                        var2_ref.field_j = var2_ref.field_j - Math.sin(2.0 * ((double)(a.entities[0].heading + 1 * var4) * 3.141592653589793) / 256.0) * 8.0;
+                        var2_ref.field_a = var2_ref.field_a - Math.cos(3.141592653589793 * (double)(1 * var4 + a.entities[0].heading) * 2.0 / 256.0) * 8.0;
+                        var2_ref.field_k = -((double)var4 * var2_ref.field_j / 4.0) + (a.entities[0].y + 2.0 * var2_ref.field_a);
+                        var2_ref.field_c = var2_ref.field_a * (double)var4 / 4.0 + (a.entities[0].x + 2.0 * var2_ref.field_j);
                         var2_ref.field_q = 255;
-                        var2_ref.field_a = var2_ref.field_a + a.entities[0].field_k;
+                        var2_ref.field_a = var2_ref.field_a + a.entities[0].velocityY;
                         var2_ref.field_n = e.field_e;
                         var2_ref.field_p = 2;
-                        var2_ref.field_j = var2_ref.field_j + a.entities[0].field_d;
+                        var2_ref.field_j = var2_ref.field_j + a.entities[0].velocityX;
                         stackIn_993_0 = ~var4;
                         stackIn_993_1 = -1;
                         if (var15 != 0) {
@@ -1869,12 +1869,12 @@ public final class stellarshard extends rb implements cf {
                         var4 = -3;
                         while (var4 <= 3) {
                           var2_refLifetime2 = new vl(0, a.entities[0]);
-                          var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * (3.141592653589793 * (double)(a.entities[0].field_h + var4)) / 256.0) * 6.0;
-                          var2_refLifetime2.field_a = var2_refLifetime2.field_a - 6.0 * Math.cos((double)(a.entities[0].field_h + var4) * 3.141592653589793 * 2.0 / 256.0);
-                          var2_refLifetime2.field_k = a.entities[0].field_l + var2_refLifetime2.field_a * 4.0 - (double)var4 * var2_refLifetime2.field_j / 2.0;
-                          var2_refLifetime2.field_c = var2_refLifetime2.field_a * (double)var4 / 2.0 + (var2_refLifetime2.field_j * 4.0 + a.entities[0].field_a);
-                          var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d;
-                          var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k;
+                          var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * (3.141592653589793 * (double)(a.entities[0].heading + var4)) / 256.0) * 6.0;
+                          var2_refLifetime2.field_a = var2_refLifetime2.field_a - 6.0 * Math.cos((double)(a.entities[0].heading + var4) * 3.141592653589793 * 2.0 / 256.0);
+                          var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 4.0 - (double)var4 * var2_refLifetime2.field_j / 2.0;
+                          var2_refLifetime2.field_c = var2_refLifetime2.field_a * (double)var4 / 2.0 + (var2_refLifetime2.field_j * 4.0 + a.entities[0].x);
+                          var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX;
+                          var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY;
                           var2_refLifetime2.field_p = 1;
                           wk.field_b[eg.a(-91)] = var2_refLifetime2;
                           var2_refLifetime2.field_q = 16728128;
@@ -1912,15 +1912,15 @@ public final class stellarshard extends rb implements cf {
                             if (stackIn_981_0 == 0) {
                               mj.field_F = 3 - mj.field_F;
                             }
-                            var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(3.141592653589793 * (double)(a.entities[0].field_h + 4 * (1 + mj.field_F) * var4) * 2.0 / 256.0) * 6.0;
-                            var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos((double)(a.entities[0].field_h + (mj.field_F + 1) * (var4 * 4)) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
-                            var2_refLifetime2.field_c = var2_refLifetime2.field_j * 3.0 + a.entities[0].field_a;
+                            var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(3.141592653589793 * (double)(a.entities[0].heading + 4 * (1 + mj.field_F) * var4) * 2.0 / 256.0) * 6.0;
+                            var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos((double)(a.entities[0].heading + (mj.field_F + 1) * (var4 * 4)) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
+                            var2_refLifetime2.field_c = var2_refLifetime2.field_j * 3.0 + a.entities[0].x;
                             if (var4 == -1) {
                               mj.field_F = -mj.field_F + 3;
                             }
-                            var2_refLifetime2.field_k = a.entities[0].field_l + var2_refLifetime2.field_a * 3.0;
-                            var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d;
-                            var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k;
+                            var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 3.0;
+                            var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX;
+                            var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY;
                             var2_refLifetime2.field_q = 255;
                             var2_refLifetime2.field_p = 4;
                             var2_refLifetime2.field_n = e.field_e;
@@ -1951,12 +1951,12 @@ public final class stellarshard extends rb implements cf {
                               if (2 == Math.abs(var4)) {
                                 var5_double = 4.8;
                               }
-                              var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_double * Math.sin((double)(var4 + a.entities[0].field_h) * 3.141592653589793 * 2.0 / 256.0);
-                              var2_refLifetime2.field_a = var2_refLifetime2.field_a - var5_double * Math.cos((double)(a.entities[0].field_h + var4) * 3.141592653589793 * 2.0 / 256.0);
-                              var2_refLifetime2.field_k = var2_refLifetime2.field_a * 4.0 + a.entities[0].field_l;
-                              var2_refLifetime2.field_c = a.entities[0].field_a + var2_refLifetime2.field_j * 4.0;
-                              var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k / 5.0;
-                              var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d / 5.0;
+                              var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_double * Math.sin((double)(var4 + a.entities[0].heading) * 3.141592653589793 * 2.0 / 256.0);
+                              var2_refLifetime2.field_a = var2_refLifetime2.field_a - var5_double * Math.cos((double)(a.entities[0].heading + var4) * 3.141592653589793 * 2.0 / 256.0);
+                              var2_refLifetime2.field_k = var2_refLifetime2.field_a * 4.0 + a.entities[0].y;
+                              var2_refLifetime2.field_c = a.entities[0].x + var2_refLifetime2.field_j * 4.0;
+                              var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY / 5.0;
+                              var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX / 5.0;
                               var2_refLifetime2.field_q = 16711680;
                               var2_refLifetime2.field_d = 16744576;
                               var2_refLifetime2.field_p = 3;
@@ -1984,13 +1984,13 @@ public final class stellarshard extends rb implements cf {
                               var15 == 0) {
                               a.entities[0].field_i = 0;
                               var2_refLifetime2 = new vl(0, a.entities[0]);
-                              var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].field_h) / 256.0) * 8.0;
-                              var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos((double)a.entities[0].field_h * 3.141592653589793 * 2.0 / 256.0) * 8.0;
+                              var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * (3.141592653589793 * (double)a.entities[0].heading) / 256.0) * 8.0;
+                              var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos((double)a.entities[0].heading * 3.141592653589793 * 2.0 / 256.0) * 8.0;
                               var2_refLifetime2.field_q = 12422335;
                               var2_refLifetime2.field_m = 2;
-                              var2_refLifetime2.field_k = var2_refLifetime2.field_a * 2.0 + a.entities[0].field_l;
+                              var2_refLifetime2.field_k = var2_refLifetime2.field_a * 2.0 + a.entities[0].y;
                               var2_refLifetime2.field_d = 9578383;
-                              var2_refLifetime2.field_c = 2.0 * var2_refLifetime2.field_j + a.entities[0].field_a;
+                              var2_refLifetime2.field_c = 2.0 * var2_refLifetime2.field_j + a.entities[0].x;
                               var2_refLifetime2.field_l = 1000;
                               var2_refLifetime2.field_p = 1;
                               var4 = eg.a(-36);
@@ -2007,13 +2007,13 @@ public final class stellarshard extends rb implements cf {
                                 var4 = -30;
                                 while (30 >= var4) {
                                   var2_refLifetime2 = new vl(0, a.entities[0]);
-                                  var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(3.141592653589793 * (double)(var4 + a.entities[0].field_h) * 2.0 / 256.0) * 4.0;
-                                  var2_refLifetime2.field_a = var2_refLifetime2.field_a - 4.0 * Math.cos((double)(var4 + a.entities[0].field_h) * 3.141592653589793 * 2.0 / 256.0);
-                                  var2_refLifetime2.field_c = a.entities[0].field_a + var2_refLifetime2.field_j * 4.0;
-                                  var2_refLifetime2.field_k = a.entities[0].field_l + 4.0 * var2_refLifetime2.field_a;
-                                  var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d;
+                                  var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(3.141592653589793 * (double)(var4 + a.entities[0].heading) * 2.0 / 256.0) * 4.0;
+                                  var2_refLifetime2.field_a = var2_refLifetime2.field_a - 4.0 * Math.cos((double)(var4 + a.entities[0].heading) * 3.141592653589793 * 2.0 / 256.0);
+                                  var2_refLifetime2.field_c = a.entities[0].x + var2_refLifetime2.field_j * 4.0;
+                                  var2_refLifetime2.field_k = a.entities[0].y + 4.0 * var2_refLifetime2.field_a;
+                                  var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX;
                                   var2_refLifetime2.field_p = 1;
-                                  var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k;
+                                  var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY;
                                   var2_refLifetime2.field_q = 65280 + (Math.abs(var4) * 255 / 30 << 16 & 16771312);
                                   wk.field_b[eg.a(-54)] = var2_refLifetime2;
                                   var2_refLifetime2.field_n = e.field_e;
@@ -2027,15 +2027,15 @@ public final class stellarshard extends rb implements cf {
                                   var4 = -10;
                                   while (var4 <= 10) {
                                     var2_refLifetime2 = new vl(0, a.entities[0]);
-                                    var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin((double)(var4 + a.entities[0].field_h) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
-                                    var2_refLifetime2.field_a = var2_refLifetime2.field_a - 6.0 * Math.cos(2.0 * ((double)(a.entities[0].field_h + var4) * 3.141592653589793) / 256.0);
-                                    var2_refLifetime2.field_c = var2_refLifetime2.field_j * 4.0 + a.entities[0].field_a;
-                                    var2_refLifetime2.field_k = a.entities[0].field_l + var2_refLifetime2.field_a * 4.0;
+                                    var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin((double)(var4 + a.entities[0].heading) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
+                                    var2_refLifetime2.field_a = var2_refLifetime2.field_a - 6.0 * Math.cos(2.0 * ((double)(a.entities[0].heading + var4) * 3.141592653589793) / 256.0);
+                                    var2_refLifetime2.field_c = var2_refLifetime2.field_j * 4.0 + a.entities[0].x;
+                                    var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 4.0;
                                     var2_refLifetime2.field_p = 1;
                                     var2_refLifetime2.field_d = 65535;
-                                    var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k;
+                                    var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY;
                                     var2_refLifetime2.field_q = 16776960;
-                                    var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d;
+                                    var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX;
                                     wk.field_b[eg.a(-113)] = var2_refLifetime2;
                                     var2_refLifetime2.field_n = e.field_e;
                                     var4 += 4;
@@ -2063,16 +2063,16 @@ public final class stellarshard extends rb implements cf {
                                       if (2 == Math.abs(var4 + 10)) {
                                         var5_doubleLifetime1 = 4.8;
                                       }
-                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_doubleLifetime1 * Math.sin(2.0 * ((double)(var4 + a.entities[0].field_h) * 3.141592653589793) / 256.0);
-                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a - var5_doubleLifetime1 * Math.cos(2.0 * (3.141592653589793 * (double)(var4 + a.entities[0].field_h)) / 256.0);
-                                      var2_refLifetime2.field_c = a.entities[0].field_a + 4.0 * var2_refLifetime2.field_j;
-                                      var2_refLifetime2.field_k = a.entities[0].field_l + var2_refLifetime2.field_a * 4.0;
+                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_doubleLifetime1 * Math.sin(2.0 * ((double)(var4 + a.entities[0].heading) * 3.141592653589793) / 256.0);
+                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a - var5_doubleLifetime1 * Math.cos(2.0 * (3.141592653589793 * (double)(var4 + a.entities[0].heading)) / 256.0);
+                                      var2_refLifetime2.field_c = a.entities[0].x + 4.0 * var2_refLifetime2.field_j;
+                                      var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 4.0;
                                       var2_refLifetime2.field_l = 5;
-                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k / 5.0;
+                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY / 5.0;
                                       var2_refLifetime2.field_d = 8454143;
                                       var2_refLifetime2.field_q = 255;
                                       var2_refLifetime2.field_p = 2;
-                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d / 5.0;
+                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX / 5.0;
                                       wk.field_b[eg.a(-71)] = var2_refLifetime2;
                                       var2_refLifetime2.field_n = e.field_e;
                                       var4++;
@@ -2094,15 +2094,15 @@ public final class stellarshard extends rb implements cf {
                                       if (Math.abs(var4) == 2) {
                                         var5_doubleLifetime1 = 4.8;
                                       }
-                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_doubleLifetime1 * Math.sin(3.141592653589793 * (double)(var4 + a.entities[0].field_h) * 2.0 / 256.0);
-                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a - var5_doubleLifetime1 * Math.cos(2.0 * (3.141592653589793 * (double)(var4 + a.entities[0].field_h)) / 256.0);
-                                      var2_refLifetime2.field_c = var2_refLifetime2.field_j * 4.0 + a.entities[0].field_a;
-                                      var2_refLifetime2.field_k = var2_refLifetime2.field_a * 4.0 + a.entities[0].field_l;
+                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_doubleLifetime1 * Math.sin(3.141592653589793 * (double)(var4 + a.entities[0].heading) * 2.0 / 256.0);
+                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a - var5_doubleLifetime1 * Math.cos(2.0 * (3.141592653589793 * (double)(var4 + a.entities[0].heading)) / 256.0);
+                                      var2_refLifetime2.field_c = var2_refLifetime2.field_j * 4.0 + a.entities[0].x;
+                                      var2_refLifetime2.field_k = var2_refLifetime2.field_a * 4.0 + a.entities[0].y;
                                       var2_refLifetime2.field_p = 3;
-                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k / 5.0;
+                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY / 5.0;
                                       var2_refLifetime2.field_q = 49407;
                                       var2_refLifetime2.field_d = 8454143;
-                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d / 5.0;
+                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX / 5.0;
                                       wk.field_b[eg.a(-40)] = var2_refLifetime2;
                                       var2_refLifetime2.field_n = e.field_e;
                                       var2_refLifetime2.field_l = 5;
@@ -2125,14 +2125,14 @@ public final class stellarshard extends rb implements cf {
                                       if (Math.abs(var4 - 10) == 2) {
                                         var5_doubleLifetime1 = 4.8;
                                       }
-                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_doubleLifetime1 * Math.sin(2.0 * (3.141592653589793 * (double)(var4 + a.entities[0].field_h)) / 256.0);
-                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos(2.0 * ((double)(a.entities[0].field_h + var4) * 3.141592653589793) / 256.0) * var5_doubleLifetime1;
-                                      var2_refLifetime2.field_k = 4.0 * var2_refLifetime2.field_a + a.entities[0].field_l;
-                                      var2_refLifetime2.field_c = a.entities[0].field_a + 4.0 * var2_refLifetime2.field_j;
+                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j - var5_doubleLifetime1 * Math.sin(2.0 * (3.141592653589793 * (double)(var4 + a.entities[0].heading)) / 256.0);
+                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos(2.0 * ((double)(a.entities[0].heading + var4) * 3.141592653589793) / 256.0) * var5_doubleLifetime1;
+                                      var2_refLifetime2.field_k = 4.0 * var2_refLifetime2.field_a + a.entities[0].y;
+                                      var2_refLifetime2.field_c = a.entities[0].x + 4.0 * var2_refLifetime2.field_j;
                                       var2_refLifetime2.field_q = 255;
                                       var2_refLifetime2.field_p = 2;
-                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d / 5.0;
-                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k / 5.0;
+                                      var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX / 5.0;
+                                      var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY / 5.0;
                                       var2_refLifetime2.field_d = 8454143;
                                       wk.field_b[eg.a(-112)] = var2_refLifetime2;
                                       var2_refLifetime2.field_n = e.field_e;
@@ -2150,14 +2150,14 @@ public final class stellarshard extends rb implements cf {
                                         var5_doubleLifetime1Lifetime1 = -8.0 + Math.random() * 17.0;
                                         var2_refLifetime2 = new vl(4, a.entities[0]);
                                         var2_refLifetime2.field_q = 16776960;
-                                        var2_refLifetime2.field_j = var2_refLifetime2.field_j - 5.0 * Math.sin(2.0 * (3.141592653589793 * (var5_doubleLifetime1Lifetime1 + (double)a.entities[0].field_h)) / 256.0);
-                                        var2_refLifetime2.field_a = var2_refLifetime2.field_a - 5.0 * Math.cos(2.0 * (((double)a.entities[0].field_h + var5_doubleLifetime1Lifetime1) * 3.141592653589793) / 256.0);
-                                        var2_refLifetime2.field_c = var2_refLifetime2.field_j * 3.0 + a.entities[0].field_a;
-                                        var2_refLifetime2.field_k = a.entities[0].field_l + var2_refLifetime2.field_a * 3.0;
-                                        var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].field_d;
+                                        var2_refLifetime2.field_j = var2_refLifetime2.field_j - 5.0 * Math.sin(2.0 * (3.141592653589793 * (var5_doubleLifetime1Lifetime1 + (double)a.entities[0].heading)) / 256.0);
+                                        var2_refLifetime2.field_a = var2_refLifetime2.field_a - 5.0 * Math.cos(2.0 * (((double)a.entities[0].heading + var5_doubleLifetime1Lifetime1) * 3.141592653589793) / 256.0);
+                                        var2_refLifetime2.field_c = var2_refLifetime2.field_j * 3.0 + a.entities[0].x;
+                                        var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 3.0;
+                                        var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX;
                                         var2_refLifetime2.field_p = 2;
                                         var2_refLifetime2.field_m = 1;
-                                        var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].field_k;
+                                        var2_refLifetime2.field_a = var2_refLifetime2.field_a + a.entities[0].velocityY;
                                         wk.field_b[eg.a(-80)] = var2_refLifetime2;
                                         var4++;
                                       }
@@ -2169,14 +2169,14 @@ public final class stellarshard extends rb implements cf {
                                         var4 = -2;
                                         while (var4 <= 2) {
                                           var2_refLifetime2 = new vl(0, a.entities[0]);
-                                          var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * ((double)(var4 + a.entities[0].field_h) * 3.141592653589793) / 256.0) * 2.0;
-                                          var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos(2.0 * (3.141592653589793 * (double)(a.entities[0].field_h + var4)) / 256.0) * 2.0;
+                                          var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * ((double)(var4 + a.entities[0].heading) * 3.141592653589793) / 256.0) * 2.0;
+                                          var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos(2.0 * (3.141592653589793 * (double)(a.entities[0].heading + var4)) / 256.0) * 2.0;
                                           var2_refLifetime2.field_m = 2;
                                           var2_refLifetime2.field_q = 16711680;
                                           var2_refLifetime2.field_d = 16776960;
-                                          var2_refLifetime2.field_k = 8.0 * var2_refLifetime2.field_a + a.entities[0].field_l;
+                                          var2_refLifetime2.field_k = 8.0 * var2_refLifetime2.field_a + a.entities[0].y;
                                           var2_refLifetime2.field_p = 1;
-                                          var2_refLifetime2.field_c = 8.0 * var2_refLifetime2.field_j + a.entities[0].field_a;
+                                          var2_refLifetime2.field_c = 8.0 * var2_refLifetime2.field_j + a.entities[0].x;
                                           wk.field_b[eg.a(-70)] = var2_refLifetime2;
                                           var2_refLifetime2.field_l = 1001;
                                           var2_refLifetime2.field_n = e.field_e;
@@ -2209,14 +2209,14 @@ public final class stellarshard extends rb implements cf {
                                         var4 = -1;
                                         while (var4 <= 1) {
                                           var2_refLifetime2 = new vl(0, a.entities[0]);
-                                          var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * (3.141592653589793 * (double)(a.entities[0].field_h + 0 * var4)) / 256.0) * 8.0;
-                                          var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos(2.0 * (3.141592653589793 * (double)(a.entities[0].field_h + var4 * 0)) / 256.0) * 8.0;
+                                          var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(2.0 * (3.141592653589793 * (double)(a.entities[0].heading + 0 * var4)) / 256.0) * 8.0;
+                                          var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos(2.0 * (3.141592653589793 * (double)(a.entities[0].heading + var4 * 0)) / 256.0) * 8.0;
                                           var2_refLifetime2.field_m = 2;
                                           var2_refLifetime2.field_p = var3;
                                           var2_refLifetime2.field_q = 65535;
                                           var2_refLifetime2.field_d = 16777215;
-                                          var2_refLifetime2.field_c = (double)var4 * var2_refLifetime2.field_a * (double)var3 / 10.0 + (var2_refLifetime2.field_j * 2.0 + a.entities[0].field_a);
-                                          var2_refLifetime2.field_k = a.entities[0].field_l + var2_refLifetime2.field_a * 2.0 - var2_refLifetime2.field_j * (double)var4 * (double)var3 / 10.0;
+                                          var2_refLifetime2.field_c = (double)var4 * var2_refLifetime2.field_a * (double)var3 / 10.0 + (var2_refLifetime2.field_j * 2.0 + a.entities[0].x);
+                                          var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 2.0 - var2_refLifetime2.field_j * (double)var4 * (double)var3 / 10.0;
                                           wk.field_b[eg.a(-75)] = var2_refLifetime2;
                                           var2_refLifetime2.field_l = 6;
                                           var2_refLifetime2.field_n = e.field_e;
@@ -2297,15 +2297,15 @@ public final class stellarshard extends rb implements cf {
                       var4 = -1;
                     }
                     var2_refLifetime1 = new vl(0, a.entities[0]);
-                    var2_refLifetime1.field_j = var2_refLifetime1.field_j - Math.sin(2.0 * ((double)(var4 + a.entities[0].field_h) * 3.141592653589793) / 256.0) * 8.0;
-                    var2_refLifetime1.field_a = var2_refLifetime1.field_a - Math.cos((double)(var4 + a.entities[0].field_h) * 3.141592653589793 * 2.0 / 256.0) * 8.0;
-                    var2_refLifetime1.field_k = var2_refLifetime1.field_a * 2.0 + a.entities[0].field_l;
-                    var2_refLifetime1.field_c = a.entities[0].field_a + var2_refLifetime1.field_j * 2.0;
+                    var2_refLifetime1.field_j = var2_refLifetime1.field_j - Math.sin(2.0 * ((double)(var4 + a.entities[0].heading) * 3.141592653589793) / 256.0) * 8.0;
+                    var2_refLifetime1.field_a = var2_refLifetime1.field_a - Math.cos((double)(var4 + a.entities[0].heading) * 3.141592653589793 * 2.0 / 256.0) * 8.0;
+                    var2_refLifetime1.field_k = var2_refLifetime1.field_a * 2.0 + a.entities[0].y;
+                    var2_refLifetime1.field_c = a.entities[0].x + var2_refLifetime1.field_j * 2.0;
                     var2_refLifetime1.field_q = 255;
                     var2_refLifetime1.field_p = 1;
                     var2_refLifetime1.field_n = e.field_e;
-                    var2_refLifetime1.field_j = var2_refLifetime1.field_j + a.entities[0].field_d;
-                    var2_refLifetime1.field_a = var2_refLifetime1.field_a + a.entities[0].field_k;
+                    var2_refLifetime1.field_j = var2_refLifetime1.field_j + a.entities[0].velocityX;
+                    var2_refLifetime1.field_a = var2_refLifetime1.field_a + a.entities[0].velocityY;
                     if (0 == var4) {
                       var2_refLifetime1.field_q = 8421631;
                       var2_refLifetime1.field_p = 2;
@@ -2414,8 +2414,8 @@ public final class stellarshard extends rb implements cf {
                       }
                     }
                   } else {
-                    var2_int = (int)a.entities[var5].field_a;
-                    var3 = (int)a.entities[var5].field_l;
+                    var2_int = (int)a.entities[var5].x;
+                    var3 = (int)a.entities[var5].y;
                   }
                   a.entities[var5] = a.entities[var5].a(-95);
                 }
@@ -2469,8 +2469,8 @@ public final class stellarshard extends rb implements cf {
                 if (var10 != null &&
                   var10.kind != -1 &&
                   var10.a((byte) -102)) {
-                  var11 = -(int)var10.field_a + var2_int;
-                  var12 = var3 - (int)var10.field_l;
+                  var11 = -(int)var10.x + var2_int;
+                  var12 = var3 - (int)var10.y;
                   var13 = Math.sqrt((double)(var12 * var12 + var11 * var11));
                   if (var13 < var6_double) {
                     var6_double = var13;

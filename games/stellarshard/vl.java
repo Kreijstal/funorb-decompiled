@@ -56,17 +56,17 @@ final class vl {
             var3 = a.entities[var2];
             if (var3 != this.field_g &&
               !var3.a((byte) -47)) {
-              var4 = -var3.field_a + this.field_c;
-              var6 = this.field_k - var3.field_l;
+              var4 = -var3.x + this.field_c;
+              var6 = this.field_k - var3.y;
               if (0.0 != var4 ||
                 0.0 != var6) {
                 var8 = Math.sqrt(var6 * var6 + var4 * var4);
                 var10 = var4 / var8;
                 var12 = var6 / var8;
                 var14 = -(this.field_a * var10) + var12 * this.field_j;
-                var16 = -(var10 * var3.field_k) + var12 * var3.field_d;
+                var16 = -(var10 * var3.velocityY) + var12 * var3.velocityX;
                 var18 = var10 * this.field_j + this.field_a * var12;
-                var20 = var3.field_d * var10 + var12 * var3.field_k;
+                var20 = var3.velocityX * var10 + var12 * var3.velocityY;
                 if (var18 < var20) {
                   var22 = var18 * (double)this.field_m + (double)var3.mass * var20;
                   var24 = -var20 + var18;
@@ -85,9 +85,9 @@ final class vl {
                   var30.field_f = 6;
                   wk.field_b[eg.a(-101)] = var30;
                   this.field_a = (var12 * (var26Lifetime1 / var10) - var14) / (var12 * var12 / var10 + var10);
-                  var3.field_k = (var28Lifetime1 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
+                  var3.velocityY = (var28Lifetime1 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
                   this.field_j = (-(this.field_a * var12) + var26Lifetime1) / var10;
-                  var3.field_d = (var28Lifetime1 - var12 * var3.field_k) / var10;
+                  var3.velocityX = (var28Lifetime1 - var12 * var3.velocityY) / var10;
                   if (a.entities[var2].kind == -1) {
                     if (el.field_I <= 0) {
                       el.field_I = 50;
@@ -102,8 +102,8 @@ final class vl {
                   }
                   if (MouseWheelInput.field_e &&
                     a.entities[0] != null) {
-                    var31 = -a.entities[0].field_a + this.field_c;
-                    var33 = this.field_k - a.entities[0].field_l;
+                    var31 = -a.entities[0].x + this.field_c;
+                    var33 = this.field_k - a.entities[0].y;
                     var35 = 128;
                     if (var31 != 0.0 ||
                       var33 != 0.0) {
@@ -450,17 +450,17 @@ final class vl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param1.field_a - 48.0 < this.field_c &&
-            this.field_c < 48.0 + param1.field_a &&
-            -48.0 + param1.field_l < this.field_k &&
-            param1.field_l + 48.0 > this.field_k && (param2 ||
-            param1.b(param0 ^ -688).c((int)(param1.field_a - 48.0), (int)(param1.field_l - 48.0), (int)this.field_c, (int)this.field_k))) {
+          if (param1.x - 48.0 < this.field_c &&
+            this.field_c < 48.0 + param1.x &&
+            -48.0 + param1.y < this.field_k &&
+            param1.y + 48.0 > this.field_k && (param2 ||
+            param1.currentSprite(param0 ^ -688).c((int)(param1.x - 48.0), (int)(param1.y - 48.0), (int)this.field_c, (int)this.field_k))) {
             return true;
           }
-          if (-4.0 + param1.field_a < this.field_c &&
-            this.field_c < 4.0 + param1.field_a &&
-            this.field_k > param1.field_l - 4.0 &&
-            this.field_k < 4.0 + param1.field_l) {
+          if (-4.0 + param1.x < this.field_c &&
+            this.field_c < 4.0 + param1.x &&
+            this.field_k > param1.y - 4.0 &&
+            this.field_k < 4.0 + param1.y) {
             return true;
           }
           if (param0 == -48) {
