@@ -125,14 +125,14 @@ final class kh extends ip {
             return false;
           }
           nj.field_b = ra.field_c.c(true);
-          ra.field_c.field_o = 0;
+          ra.field_c.position = 0;
         }
         if (nj.field_b == -2) {
           if (!oi.a(-12929, 2)) {
             return false;
           }
           nj.field_b = ra.field_c.k(0);
-          ra.field_c.field_o = 0;
+          ra.field_c.position = 0;
         }
         if (param0 > -59) {
           field_q = (long[]) null;
@@ -145,7 +145,7 @@ final class kh extends ip {
         if (!param0) {
           field_r = (cn) null;
         }
-        stackIn_9_0 = (null != gi.field_S) || (uc.g(127)) || (null != mh.field_e) || (ck.g(-1));
+        stackIn_9_0 = (null != gi.field_S) || (uc.g(127)) || (null != MouseInput.field_e) || (ck.g(-1));
         return stackIn_9_0;
     }
 

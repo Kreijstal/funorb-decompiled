@@ -13,7 +13,7 @@ final class rc {
         field_b = null;
     }
 
-    final static cn a(String param0, nh param1, String param2, byte param3) {
+    final static cn a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var5 = 0;
         RuntimeException var4 = null;
         int var6 = 0;
@@ -129,7 +129,7 @@ final class rc {
               if (var4 != h.field_h.field_b) {
                 stackIn_16_0 = (qk) (field_a);
               } else {
-                stackIn_16_0 = ug.field_y;
+                stackIn_16_0 = MidiPcmStream.field_y;
               }
               var9 = stackIn_16_0;
               if (var9 != null) {

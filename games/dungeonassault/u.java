@@ -176,7 +176,7 @@ final class u extends gd {
         var4 = DungeonAssault.field_K;
         try {
           if (um.field_i == null) {
-            um.field_i = new hb[8];
+            um.field_i = new Raider[8];
           }
           if (param0 != 1) {
             return;

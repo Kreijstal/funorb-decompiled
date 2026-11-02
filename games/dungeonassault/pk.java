@@ -47,7 +47,7 @@ final class pk extends kl {
         int var3 = 0;
         int[] var4 = null;
         int[] var5 = null;
-        wj var6 = null;
+        CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var9 = 0;
         int[] var10 = null;
@@ -55,7 +55,7 @@ final class pk extends kl {
         ak var12 = null;
         pe var13 = null;
         pe var14 = null;
-        wj var15 = null;
+        CipherPacketBuffer var15 = null;
         var9 = DungeonAssault.field_K;
         try {
           var15 = ra.field_c;
@@ -67,13 +67,13 @@ final class pk extends kl {
             var10 = var11;
             var5 = var10;
             var6 = var15;
-            var7 = ((ec) ((Object) var6)).c(true);
+            var7 = ((PacketBuffer) ((Object) var6)).c(true);
             for (var8 = 0; var7 > var8; var8++) {
-              var10[var8] = ((ec) ((Object) var6)).h(-111);
+              var10[var8] = ((PacketBuffer) ((Object) var6)).readInt(-111);
             }
             var13 = (pe) (sf.field_c.e(-24172));
             if (var13 != null) {
-              var13.a(false);
+              var13.unlink(false);
               return;
             }
             tl.a(111);
@@ -82,7 +82,7 @@ final class pk extends kl {
           if (1 == var2) {
             var12 = (ak) (oh.field_j.e(-24172));
             if (var12 != null) {
-              var12.a(false);
+              var12.unlink(false);
               return;
             }
             tl.a(-110);
@@ -99,7 +99,7 @@ final class pk extends kl {
             return;
           }
           wa.b(-1);
-          var14.a(false);
+          var14.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class pk extends kl {
           oe.field_m.j(-63 + this.field_a, 21);
           ad.field_e.i(23, -38 + this.field_i);
           ad.field_e.f(this.field_a - 39, this.field_i - 38);
-          da.a(this.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + ne.field_c.field_H >> 1) + 14, ne.field_c);
+          da.a(this.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
           jh.b();
           return;
         }
@@ -181,7 +181,7 @@ final class pk extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, -38 + this.field_i);
         ad.field_e.f(this.field_a - 39, this.field_i - 38);
-        da.a(this.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + ne.field_c.field_H >> 1) + 14, ne.field_c);
+        da.a(this.field_p, cm.field_M, this.field_a >> 1, 1917623617, (36 + IntrusiveNode.field_c.field_H >> 1) + 14, IntrusiveNode.field_c);
         jh.b();
     }
 
@@ -205,8 +205,8 @@ final class pk extends kl {
           var6_int = 78 + (jm.field_i.field_v + oj.a(this.field_m, -1, new int[]{300}, la.field_b) * la.field_b.field_H);
           this.a(450, 0, var6_int);
           this.field_d = false;
-          this.field_n = tn.a(-jm.field_i.field_y + (-10 + (this.field_a >> 1)) + this.field_k, this.field_i + (this.field_j - 16) - (jm.field_i.field_v >> 1), ne.field_c, jm.field_i, -67, param2);
-          this.field_s = tn.a(this.field_k - (-(this.field_a >> 1) - 10), -(jm.field_i.field_v >> 1) - 16 + (this.field_j + this.field_i), ne.field_c, jm.field_i, -93, param3);
+          this.field_n = tn.a(-jm.field_i.field_y + (-10 + (this.field_a >> 1)) + this.field_k, this.field_i + (this.field_j - 16) - (jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -67, param2);
+          this.field_s = tn.a(this.field_k - (-(this.field_a >> 1) - 10), -(jm.field_i.field_v >> 1) - 16 + (this.field_j + this.field_i), IntrusiveNode.field_c, jm.field_i, -93, param3);
           this.field_f.a(this.field_n, false);
           this.field_f.a(this.field_s, false);
           return;

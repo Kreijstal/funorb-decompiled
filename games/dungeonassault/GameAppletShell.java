@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class kg extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static long field_d;
     boolean field_i;
     static cn field_a;
-    static nh field_b;
+    static ResourceArchive field_b;
     static String[] field_e;
     static int field_f;
     static String field_m;
@@ -113,7 +113,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
         }
         try {
           nj.field_e = kd.c(-2456);
-          pj.a(0, 5000L);
+          CombatState.a(0, 5000L);
           kf.field_o = null;
           this.a((byte) 116, false);
         } catch (RuntimeException runtimeException) {
@@ -476,7 +476,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
           if (param0 < 111) {
             return;
           }
-          pj.field_z = kd.c(-2456);
+          CombatState.field_z = kd.c(-2456);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -516,7 +516,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
             !cc.field_c) {
             im.field_d = true;
             if (ia.field_O &&
-              -pj.field_z + kd.c(-2456) > 1000L) {
+              -CombatState.field_z + kd.c(-2456) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < sf.field_h) {
@@ -690,7 +690,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected kg() {
+    protected GameAppletShell() {
         this.field_i = false;
     }
 
@@ -769,7 +769,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
           field_b = null;
           field_k = null;
           if (param0) {
-            kg.provideLoaderApplet((java.applet.Applet) null);
+            GameAppletShell.provideLoaderApplet((java.applet.Applet) null);
           }
           field_m = null;
           return;
@@ -833,7 +833,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
               rb.field_L = 0;
               up.field_d = param4;
               sf.field_h = param4;
-              wj.field_s = param6;
+              CipherPacketBuffer.field_s = param6;
               ba.field_c = this;
               aj.field_Gb = 0;
               ci.field_q = m.c(true);
@@ -848,7 +848,7 @@ public abstract class kg extends java.applet.Applet implements Runnable, java.aw
                   }
                   break;
                 }
-                pj.a(0, 10L);
+                CombatState.a(0, 10L);
               } while (var9 == 0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

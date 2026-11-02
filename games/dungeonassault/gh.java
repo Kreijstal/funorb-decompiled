@@ -7,7 +7,7 @@ final class gh {
     static ac[] field_i;
     static long[] field_a;
     static cn[] field_g;
-    static nh field_c;
+    static ResourceArchive field_c;
     static long[][] field_h;
     static boolean field_f;
     static String field_j;

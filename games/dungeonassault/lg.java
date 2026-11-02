@@ -70,7 +70,7 @@ final class lg {
         }
         if (128 <= var2 &&
           var2 < 160) {
-          var3 = mh.field_d[-128 + var2];
+          var3 = MouseInput.field_d[-128 + var2];
           if (0 == var3) {
             var3 = 63;
           }
@@ -129,13 +129,13 @@ final class lg {
           tl.a(-63);
           return;
         }
-        wj var2 = ra.field_c;
-        var2.h(-125);
-        var2.h(-122);
-        var2.h(-38);
-        var2.h(-39);
+        CipherPacketBuffer var2 = ra.field_c;
+        var2.readInt(-125);
+        var2.readInt(-122);
+        var2.readInt(-38);
+        var2.readInt(-39);
         int var3 = 71 / ((33 - param0) / 33);
-        var1.a(false);
+        var1.unlink(false);
     }
 
     public static void a(boolean param0) {

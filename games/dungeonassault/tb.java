@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tb {
-    private ll field_e;
+    private DualLinkNode field_e;
     static q field_a;
     static cn field_c;
     static int field_i;
     static int field_g;
-    private ll[] field_d;
+    private DualLinkNode[] field_d;
     private int field_f;
     static String field_h;
     private long field_b;
 
-    final ll a(byte param0, long param1) {
-        ll var6 = null;
+    final DualLinkNode a(byte param0, long param1) {
+        DualLinkNode var6 = null;
         int var7 = DungeonAssault.field_K;
         this.field_b = param1;
         int var5 = 21 % ((78 - param0) / 40);
-        ll var4 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
+        DualLinkNode var4 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
         this.field_e = var4.field_n;
         while (var4 != this.field_e) {
           if (this.field_e.field_o == param1) {
@@ -40,11 +40,11 @@ final class tb {
         wa.field_c = -1;
     }
 
-    final void a(ll param0, long param1, int param2) {
+    final void a(DualLinkNode param0, long param1, int param2) {
         if (param0.field_l != null) {
           param0.b((byte) -2);
         }
-        ll var5 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
+        DualLinkNode var5 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
         if (param2 >= -60) {
           return;
         }
@@ -59,13 +59,13 @@ final class tb {
         }
     }
 
-    final ll c(byte param0) {
-        ll var3 = null;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var3 = null;
         int var4 = DungeonAssault.field_K;
         if (null == this.field_e) {
           return null;
         }
-        ll var2 = this.field_d[(int)(this.field_b & (long)(this.field_f - 1))];
+        DualLinkNode var2 = this.field_d[(int)(this.field_b & (long)(this.field_f - 1))];
         while (var2 != this.field_e) {
           if (~this.field_e.field_o == ~this.field_b) {
             var3 = this.field_e;
@@ -75,7 +75,7 @@ final class tb {
           this.field_e = this.field_e.field_n;
         }
         if (param0 < 0) {
-          return (ll) null;
+          return (DualLinkNode) null;
         }
         this.field_e = null;
         return null;
@@ -100,12 +100,12 @@ final class tb {
 
     tb(int param0) {
         int var2 = 0;
-        ll dupTemp$0 = null;
-        ll var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_f = param0;
-        this.field_d = new ll[param0];
+        this.field_d = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ll();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
           var3.field_l = var3;

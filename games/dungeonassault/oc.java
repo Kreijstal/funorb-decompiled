@@ -12,7 +12,7 @@ final class oc extends kl {
     int field_q;
     boolean field_t;
     private cn field_m;
-    private hb field_n;
+    private Raider field_n;
     private String field_D;
     private pp field_z;
     private wd field_p;
@@ -153,11 +153,11 @@ final class oc extends kl {
         oe.field_m.j(-63 + this.field_a, 21);
         ad.field_e.i(23, this.field_i - 38);
         ad.field_e.f(-39 + this.field_a, -38 + this.field_i);
-        da.a(bb.field_q, cm.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (ne.field_c.field_H + 36 >> 1), ne.field_c);
+        da.a(bb.field_q, cm.field_M, this.field_a >> 1, param0 + 1917623580, 14 + (IntrusiveNode.field_c.field_H + 36 >> 1), IntrusiveNode.field_c);
         jh.b();
     }
 
-    oc(hb param0, ai param1, boolean param2, String param3) {
+    oc(Raider param0, ai param1, boolean param2, String param3) {
         super(350, 400);
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -201,7 +201,7 @@ final class oc extends kl {
           stackIn_10_1 = (oi.b(0, 2) == 0);
           this.field_u = stackIn_10_1;
           this.field_p = new wd(this.field_n.field_n.field_e);
-          this.field_z = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, this.field_i + this.field_j - jm.field_i.field_v, ne.field_c, jm.field_i, -75, hj.field_X);
+          this.field_z = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, this.field_i + this.field_j - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -75, hj.field_X);
           this.field_f.a(this.field_z, false);
           var5_int = this.field_a - 64;
           var6 = jn.a(this.field_D, new int[]{var5_int}, -105, la.field_b);
@@ -230,11 +230,11 @@ final class oc extends kl {
           var9_ref = var14;
           stackIn_19_0 = (this.field_x) ? 16744448 : 8421504;
           var10Lifetime1 = stackIn_19_0;
-          var5_int = ne.field_c.b(var14);
-          var7Lifetime1 = ne.field_c.field_E + ne.field_c.field_H;
+          var5_int = IntrusiveNode.field_c.b(var14);
+          var7Lifetime1 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
           this.field_y = new cn(var5_int, var7Lifetime1);
           this.field_y.e();
-          ne.field_c.b(var14, 0, ne.field_c.field_H, var10Lifetime1, -1);
+          IntrusiveNode.field_c.b(var14, 0, IntrusiveNode.field_c.field_H, var10Lifetime1, -1);
           this.field_I = rb.a(16, this.field_y, var10Lifetime1, (byte) 100);
           this.field_y.d(65793);
           jh.b();

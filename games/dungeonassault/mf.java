@@ -9,7 +9,7 @@ final class mf {
     static int[] field_d;
     static String field_a;
 
-    final static void a(int param0, ec param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -152,7 +152,7 @@ final class mf {
           }
           if (0 == var3 &&
             kh.field_t == 2) {
-            var4 = -kg.field_d + kd.c(param0 ^ -9766);
+            var4 = -GameAppletShell.field_d + kd.c(param0 ^ -9766);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

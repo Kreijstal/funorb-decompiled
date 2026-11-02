@@ -57,7 +57,7 @@ final class pa {
         field_a = null;
     }
 
-    final static q a(byte param0, nh param1, String param2, String param3) {
+    final static q a(byte param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

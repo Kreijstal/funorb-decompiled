@@ -63,7 +63,7 @@ final class qc extends qe {
           this.field_b.b(false);
           return;
         }
-        if (ll.field_k &&
+        if (DualLinkNode.field_k &&
           qk.field_e[82] &&
           mm.field_t == 49) {
           stackIn_10_0 = (!ve.a(false)) ? 0 : 12;
@@ -127,7 +127,7 @@ final class qc extends qe {
           mn.field_b != 9) {
           le.field_f.h(4 + var3, -28 + var2);
           e.field_j.h(var3 + 198, -28 + var2);
-          wj.field_w.h(var3 + 214, (-3 + this.field_x.field_i) * tg.field_d[this.field_B] + (var2 - 5));
+          CipherPacketBuffer.field_w.h(var3 + 214, (-3 + this.field_x.field_i) * tg.field_d[this.field_B] + (var2 - 5));
           oj.field_a.h(var3 + 4, 293 + var2);
         } else {
           am.field_a.h(-(am.field_a.field_E / 2) + 320, 48);
@@ -138,11 +138,11 @@ final class qc extends qe {
               this.b((byte) 59);
             } else {
               if (this.field_B == 11) {
-                ne.field_c.a(ul.field_d, 80, 80, 480, 1000, 16777215, -1, 0, 0, ne.field_c.field_R);
+                IntrusiveNode.field_c.a(ul.field_d, 80, 80, 480, 1000, 16777215, -1, 0, 0, IntrusiveNode.field_c.field_R);
               } else {
                 if (this.field_B == 0) {
                   fp.field_d.a(320, 25, 1699);
-                  if (ll.field_k) {
+                  if (DualLinkNode.field_k) {
                     kk.field_l.c("Press CTRL-S to start a random single player debug test game", 320, 44, 16777215, 0);
                   }
                 }
@@ -355,14 +355,14 @@ final class qc extends qe {
     private final void a(byte param0, int param1) {
         int var3 = tg.field_f[this.field_B][param1];
         String var4 = ui.a(var3, 19435);
-        int var5 = ne.field_c.b(var4);
-        int var6 = ne.field_c.field_H + ne.field_c.field_E;
+        int var5 = IntrusiveNode.field_c.b(var4);
+        int var6 = IntrusiveNode.field_c.field_H + IntrusiveNode.field_c.field_E;
         cn var7 = new cn(var5, var6);
         jh.a(var7);
         if (param0 != -125) {
           return;
         }
-        ne.field_c.b(var4, 0, ne.field_c.field_H, 16760960, -1);
+        IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         this.field_A[param1] = rb.a(8, var7, 16760960, (byte) 105);
         this.field_s[param1] = rb.a(16, var7, 6307840, (byte) -124);
@@ -543,7 +543,7 @@ final class qc extends qe {
             var5_ref_cn = f.field_a;
             if (var4.field_r) {
               if (var4.field_i != u.field_P) {
-                tf.field_j = ec.field_j[var4.field_i].a();
+                tf.field_j = PacketBuffer.field_j[var4.field_i].a();
                 u.field_P = var4.field_i;
               }
               var5_ref_cn = tf.field_j;
@@ -554,7 +554,7 @@ final class qc extends qe {
             } else {
               var6_ref_cn = ud.field_s[46];
             }
-            if (var4.field_i == kg.field_f) {
+            if (var4.field_i == GameAppletShell.field_f) {
               um.field_g.field_g = -var3 + 94 + (16 + var4.field_o);
               um.field_g.field_b = var4.field_p + 32;
               if (0 == (li.field_k & 1)) {
@@ -580,10 +580,10 @@ final class qc extends qe {
           dd.field_E.field_w) {
           dd.field_E.d(0);
         }
-        if (kg.field_f == -1) {
+        if (GameAppletShell.field_f == -1) {
           stackIn_31_0 = ak.field_n;
         } else {
-          stackIn_31_0 = kg.field_f;
+          stackIn_31_0 = GameAppletShell.field_f;
         }
         var3Lifetime1 = stackIn_31_0;
         if (param0) {
@@ -622,7 +622,7 @@ final class qc extends qe {
           db.field_v.b(var7, 239, var6 + 195, 16777215, -1);
           var8 = 210;
           if (var5 != 0) {
-            ec.field_j[var3Lifetime1].a(89, var8);
+            PacketBuffer.field_j[var3Lifetime1].a(89, var8);
           } else {
             f.field_a.h(89, var8);
           }
@@ -666,7 +666,7 @@ final class qc extends qe {
             var8 = var8 + var6;
           }
           var12Lifetime1 = 355 - cf.field_f.field_G;
-          var13 = (2 * var12Lifetime1 + cf.field_f.field_G) / 2 + ne.field_c.field_E;
+          var13 = (2 * var12Lifetime1 + cf.field_f.field_G) / 2 + IntrusiveNode.field_c.field_E;
           gf.b(239, var12Lifetime1 - 6, 306, 8421504);
           la.field_b.b(op.field_a + sg.field_c[var3Lifetime1], 239, var13, 16777215, -1);
           var14 = 120;
@@ -701,7 +701,7 @@ final class qc extends qe {
         int var13;
         var4 = tg.field_f[this.field_B][param0];
         var5 = ui.a(var4, 19435);
-        var6 = ne.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.b(var5);
         if (param1 != -31) {
           this.field_x = (ae) null;
         }
@@ -737,19 +737,19 @@ final class qc extends qe {
           if (var11 != 0) {
             var12 = ml.field_b;
           } else {
-            var12 = ug.field_E;
+            var12 = MidiPcmStream.field_E;
           }
         }
         if (null == this.field_u[param0] ||
           this.field_u[param0].field_f != var5 &&
           !this.field_u[param0].field_f.equals(var5) ||
           this.field_u[param0].field_h != var12) {
-          this.field_u[param0] = new tf(ne.field_c, var5, var12);
+          this.field_u[param0] = new tf(IntrusiveNode.field_c, var5, var12);
           this.field_A[param0] = null;
         }
         this.field_u[param0].b(var9, 32, var10);
         if (var11 == 0) {
-          hj.field_T.h(-20 + var10, ne.field_c.field_H + (var9 - 15));
+          hj.field_T.h(-20 + var10, IntrusiveNode.field_c.field_H + (var9 - 15));
         }
         if (param2) {
           if (null == this.field_A[param0]) {
@@ -817,7 +817,7 @@ final class qc extends qe {
           var2 = this.field_x.field_b;
         }
         this.field_x.a(false, param0, var2, this.a(eh.field_h, true, hj.field_S));
-        kg.field_f = -1;
+        GameAppletShell.field_f = -1;
         um.field_g = null;
         fj.field_f = null;
         ia.field_X = mo.field_a;
@@ -827,7 +827,7 @@ final class qc extends qe {
           ud.field_s = new cn[47];
           u.field_P = -1;
           for (var3_int = 0; var3_int < 46; var3_int++) {
-            ud.field_s[var3_int] = this.a(120, ec.field_j[var3_int]);
+            ud.field_s[var3_int] = this.a(120, PacketBuffer.field_j[var3_int]);
           }
           jh.c();
           var3 = new cn(64, 64);
@@ -845,7 +845,7 @@ final class qc extends qe {
           var17 = stackIn_21_0;
           var16 = var17;
           var5 = var16;
-          nj.field_f = new md();
+          nj.field_f = new IntrusiveDeque();
           var6 = 0;
           for (var7 = 0; var7 < 46; var7++) {
             stackIn_26_0 = (!vl.a(var7, -124, var17)) ? 0 : 1;
@@ -1013,7 +1013,7 @@ final class qc extends qe {
           discarded$0 = this.a(-114, 14);
         }
         var3 = var3 + " " + tg.a('#', jk.a(new String[]{jg.field_e}, g.a(false, false, (byte) -111, var2 != 0), 30496), 3, "<br><br>");
-        ne.field_c.a(var3, 80, 80, 480, 10 * ne.field_c.field_R, 16777215, -1, 1, 0, ne.field_c.field_R);
+        IntrusiveNode.field_c.a(var3, 80, 80, 480, 10 * IntrusiveNode.field_c.field_R, 16777215, -1, 1, 0, IntrusiveNode.field_c.field_R);
     }
 
     private final int e(int param0, int param1) {

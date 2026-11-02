@@ -3,9 +3,9 @@
  */
 final class gb {
     static int[] field_e;
-    private nh field_d;
+    private ResourceArchive field_d;
     static int field_a;
-    private nh field_b;
+    private ResourceArchive field_b;
     private eg field_c;
 
     final nf a(int param0, int param1) {
@@ -24,7 +24,7 @@ final class gb {
         }
         var3 = new nf();
         if (var4 != null) {
-          var3.a(new ec(var4), param1 + 19255);
+          var3.a(new PacketBuffer(var4), param1 + 19255);
         }
         if (32768 <= param0) {
           var3.d((byte) -74);

@@ -18,7 +18,7 @@ final class sc extends ch {
         return of.field_p;
     }
 
-    final static String a(int param0, ec param1, int param2) {
+    final static String a(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -38,7 +38,7 @@ final class sc extends ch {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param1.field_o = param1.field_o + qh.field_G.a(param1.field_m, var4, (byte) -88, param1.field_o, 0, var3_int);
+            param1.position = param1.position + qh.field_G.a(param1.payload, var4, (byte) -88, param1.position, 0, var3_int);
             var5 = mk.a((byte) -24, var4, var3_int, 0);
             var6 = 114 / ((param2 - 54) / 47);
             stackIn_4_0 = var5;

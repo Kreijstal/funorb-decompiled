@@ -115,7 +115,7 @@ final class pb extends wf {
           var21Lifetime2 = re.field_d;
           var22Lifetime2 = re.field_h;
           var23Lifetime2 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param4.field_B) {
               var24Lifetime1 = param4.field_L[var23Lifetime2];
               var25Lifetime1 = param4.field_S[var23Lifetime2];
@@ -198,7 +198,7 @@ final class pb extends wf {
                   stackIn_62_0 = hk.field_c.length;
                   stackIn_62_1 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_62_0 <= stackIn_62_1) {
                     break;
@@ -217,7 +217,7 @@ final class pb extends wf {
             }
             break;
           }
-          b.a(stackIn_62_0, stackIn_62_1, (byte) -84, param3, param4);
+          ClientException.a(stackIn_62_0, stackIn_62_1, (byte) -84, param3, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -4,19 +4,19 @@
 import java.util.*;
 
 final class id implements Iterator {
-    private ll field_a;
+    private DualLinkNode field_a;
     static String field_k;
     static long[] field_b;
     private dh field_d;
     static rj field_l;
     static String field_c;
     static String field_g;
-    static md field_e;
+    static IntrusiveDeque field_e;
     static int[] field_j;
     static String field_f;
     static cn[] field_m;
-    static nh field_i;
-    private ll field_h;
+    static ResourceArchive field_i;
+    private DualLinkNode field_h;
 
     public final Object next() {
         Object var1 = this.field_h;
@@ -24,9 +24,9 @@ final class id implements Iterator {
           var1 = null;
           this.field_h = null;
         } else {
-          this.field_h = ((ll) (var1)).field_n;
+          this.field_h = ((DualLinkNode) (var1)).field_n;
         }
-        this.field_a = (ll) (var1);
+        this.field_a = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -96,9 +96,9 @@ final class id implements Iterator {
             var8 = sd.field_F[9] >> 2;
             var9 = sd.field_F[10] >> 2;
             var10_int = sd.field_F[11] >> 2;
-            var11 = var10_int * pj.field_e[5] + (var8 * pj.field_e[3] + pj.field_e[4] * var9) >> 14;
-            var12 = pj.field_e[8] * var10_int + var9 * pj.field_e[7] + pj.field_e[6] * var8 >> 14;
-            var13 = var9 * pj.field_e[10] + var8 * pj.field_e[9] + pj.field_e[11] * var10_int >> 14;
+            var11 = var10_int * CombatState.field_e[5] + (var8 * CombatState.field_e[3] + CombatState.field_e[4] * var9) >> 14;
+            var12 = CombatState.field_e[8] * var10_int + var9 * CombatState.field_e[7] + CombatState.field_e[6] * var8 >> 14;
+            var13 = var9 * CombatState.field_e[10] + var8 * CombatState.field_e[9] + CombatState.field_e[11] * var10_int >> 14;
             var2[var3] = var13 * var7 + (var5 * var11 + var6 * var12) >> 16;
           }
           var3Lifetime1 = sd.field_F[9] >> 8;
@@ -140,9 +140,9 @@ final class id implements Iterator {
             var17 = ih.field_w[var16];
             bk.a(7, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              pj.field_e[var18] = pj.field_e[var18] + lk.field_R[var15][var18];
+              CombatState.field_e[var18] = CombatState.field_e[var18] + lk.field_R[var15][var18];
             }
-            pb.a(true, 0, sd.field_F, false, var17, false, pj.field_e);
+            pb.a(true, 0, sd.field_F, false, var17, false, CombatState.field_e);
             ad.a(var13Lifetime1, var8Lifetime1, var7Lifetime1, var14, -106, var12Lifetime1, var9Lifetime1, var17);
           }
           return;
@@ -289,7 +289,7 @@ final class id implements Iterator {
         field_g = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_b = new long[32];
         field_j = new int[]{};
-        field_e = new md();
+        field_e = new IntrusiveDeque();
         field_f = "Waiting for music";
     }
 }

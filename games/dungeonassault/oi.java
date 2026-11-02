@@ -11,8 +11,8 @@ final class oi extends da {
     private int field_O;
     private int field_K;
     private int field_N;
-    static ec field_J;
-    static md field_F;
+    static PacketBuffer field_J;
+    static IntrusiveDeque field_F;
     static String field_G;
     static String field_M;
 
@@ -214,7 +214,7 @@ final class oi extends da {
         }
     }
 
-    final static cn[] a(int param0, int param1, int param2, nh param3) {
+    final static cn[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -222,7 +222,7 @@ final class oi extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            field_F = (md) null;
+            field_F = (IntrusiveDeque) null;
           }
           if (kk.a(param3, 1, param1, param2)) {
             return fo.a(0);
@@ -254,7 +254,7 @@ final class oi extends da {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (ra.field_c.field_o >= param1) {
+          if (ra.field_c.position >= param1) {
             return true;
           }
           if (null == sp.field_c) {
@@ -262,25 +262,25 @@ final class oi extends da {
           }
           int var2_int = sp.field_c.a(0);
           if (0 < var2_int) {
-            if (-ra.field_c.field_o + param1 < var2_int) {
-              var2_int = -ra.field_c.field_o + param1;
+            if (-ra.field_c.position + param1 < var2_int) {
+              var2_int = -ra.field_c.position + param1;
             }
-            sp.field_c.a(ra.field_c.field_m, false, var2_int, ra.field_c.field_o);
+            sp.field_c.a(ra.field_c.payload, false, var2_int, ra.field_c.position);
             qm.field_o = kd.c(param0 ^ 15127);
-            ra.field_c.field_o = ra.field_c.field_o + var2_int;
-            if (!(param1 <= ra.field_c.field_o)) {
+            ra.field_c.position = ra.field_c.position + var2_int;
+            if (!(param1 <= ra.field_c.position)) {
               return false;
             }
-            ra.field_c.field_o = 0;
+            ra.field_c.position = 0;
             return true;
           }
           try {
             if (false) throw (IOException) null;
             if (param0 != -12929) {
-              field_F = (md) null;
+              field_F = (IntrusiveDeque) null;
             }
             if (var2_int >= 0 &&
-              b.a(124) <= 30000L) {
+              ClientException.a(124) <= 30000L) {
               return false;
             }
             tl.a(-77);
@@ -315,7 +315,7 @@ final class oi extends da {
           field_G = null;
           return;
         }
-        field_J = (ec) null;
+        field_J = (PacketBuffer) null;
         field_M = null;
         field_F = null;
         field_J = null;
@@ -323,7 +323,7 @@ final class oi extends da {
     }
 
     static {
-        field_J = new ec(1048576);
+        field_J = new PacketBuffer(1048576);
         field_G = "Connection lost. <%0>";
         field_F = null;
         field_M = "Save and exit";

@@ -77,7 +77,7 @@ final class lk extends gd {
         int var8Lifetime3;
         int var8Lifetime4;
         if (var2 != 0) {
-          var9 = jk.a(new String[]{Integer.toString(var2)}, nh.field_i, 30496);
+          var9 = jk.a(new String[]{Integer.toString(var2)}, ResourceArchive.field_i, 30496);
           var4 = var9;
           var4 = var9;
           var4 = var9;
@@ -351,7 +351,7 @@ final class lk extends gd {
         this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
     }
 
-    final static String a(String param0, nh param1, String param2, byte param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;

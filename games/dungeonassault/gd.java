@@ -226,7 +226,7 @@ class gd extends rj {
         if (fc.a(mn.field_b, (byte) -123)) {
           bf.field_f[mn.field_b].c();
         }
-        gd.a(64, mh.field_f);
+        gd.a(64, MouseInput.field_f);
         te.b();
         co.field_G = new vj(0, param1, 640, 480, 64);
         mn.field_b = param2;

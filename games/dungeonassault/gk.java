@@ -189,7 +189,7 @@ final class gk extends ii implements mg, vg {
         }
     }
 
-    final static ai a(ec param0, byte param1) {
+    final static ai a(PacketBuffer param0, byte param1) {
         int dupTemp$4 = 0;
         int dupTemp$5 = 0;
         int dupTemp$6 = 0;

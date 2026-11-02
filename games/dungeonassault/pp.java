@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pp extends rj {
-    static md field_K;
+    static IntrusiveDeque field_K;
     static String[] field_F;
     static String field_I;
     private cn field_B;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class li {
-    static md field_a;
+    static IntrusiveDeque field_a;
     static cn[] field_l;
     static int field_j;
     static int field_k;
@@ -43,7 +43,7 @@ final class li {
         field_l = null;
     }
 
-    final static cn[] a(int param0, int param1, nh param2, int param3) {
+    final static cn[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         cn[] stackIn_5_0 = null;
@@ -128,7 +128,7 @@ final class li {
         field_d = "Try not to get snared in this spider's webs; the gigantic tarantula is always alert; it likes nothing more than the sweet meat of a raider or two.";
         field_b = new String[6];
         field_e = "Risk of waking dragon: ";
-        field_a = new md();
+        field_a = new IntrusiveDeque();
         field_i = "More suggestions";
         field_f = new String[]{"Scout", "A creature born to the labyrinth, the enhanced senses of the <%0> can sometimes be used to determine what lies beyond the next door. (Single use)"};
     }

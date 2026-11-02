@@ -38,7 +38,7 @@ final class lb {
     int field_A;
     int field_I;
     private long[] field_j;
-    hb[] field_a;
+    Raider[] field_a;
     int field_f;
     int field_y;
     int field_z;
@@ -46,7 +46,7 @@ final class lb {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        hb var2 = null;
+        Raider var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -69,7 +69,7 @@ final class lb {
         }
     }
 
-    private final void a(ec param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         ai dupTemp$0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_92_0 = null;
@@ -96,7 +96,7 @@ final class lb {
           if (param2 < 19) {
             this.field_N = param0.f(-121);
           } else {
-            this.field_N = param0.h(-46);
+            this.field_N = param0.readInt(-46);
           }
           if (param2 < 1) {
             param0.f(-127);
@@ -106,9 +106,9 @@ final class lb {
             this.field_b = 0;
           } else {
             if (param2 >= 19) {
-              this.field_l = param0.h(param1 ^ 13077);
-              this.field_s = param0.h(-107);
-              this.field_m = param0.h(-35);
+              this.field_l = param0.readInt(param1 ^ 13077);
+              this.field_s = param0.readInt(-107);
+              this.field_m = param0.readInt(-35);
             } else {
               this.field_l = param0.f(-128);
               this.field_s = param0.f(-98);
@@ -121,8 +121,8 @@ final class lb {
             this.field_b = -this.field_N + this.field_l;
           }
           if (param2 >= 6) {
-            param0.h(-78);
-            this.field_q = param0.h(param1 + 13099);
+            param0.readInt(-78);
+            this.field_q = param0.readInt(param1 + 13099);
           } else {
             this.field_q = -1;
           }
@@ -146,7 +146,7 @@ final class lb {
             param0.c(true);
           }
           for (var5 = 0; var5 < this.field_k.field_f.length; var5++) {
-            this.field_k.field_f[var5] = param0.h(md.b(param1, 13096));
+            this.field_k.field_f[var5] = param0.readInt(IntrusiveDeque.b(param1, 13096));
           }
           this.field_L = new ai[49];
           this.field_L[24] = new ai(2);
@@ -164,7 +164,7 @@ final class lb {
               this.field_L[var5Lifetime1] = gk.a(param0, (byte) -36);
             }
           }
-          this.field_a = new hb[8];
+          this.field_a = new Raider[8];
           for (var5Lifetime2 = 0; 8 > var5Lifetime2; var5Lifetime2++) {
             this.field_a[var5Lifetime2] = ai.a(param0, var5Lifetime2, -12, param2);
           }
@@ -194,13 +194,13 @@ final class lb {
               this.field_e = this.field_e + var6;
             }
             this.field_f = param0.k(param1 + 13182);
-            this.field_A = param0.h(-75);
+            this.field_A = param0.readInt(-75);
             this.field_z = param0.c(true);
           }
           for (var5Lifetime4 = 0; 10 > var5Lifetime4; var5Lifetime4++) {
             this.field_c[var5Lifetime4] = param0.c((byte) 56);
             if (param2 >= 10) {
-              this.field_G[var5Lifetime4] = param0.e((byte) 114);
+              this.field_G[var5Lifetime4] = param0.readSignedMedium((byte) 114);
             } else {
               this.field_G[var5Lifetime4] = 0;
             }
@@ -210,7 +210,7 @@ final class lb {
             if (param2 < 10) {
               this.field_n[var5Lifetime5] = 0;
             } else {
-              this.field_n[var5Lifetime5] = param0.e((byte) -87);
+              this.field_n[var5Lifetime5] = param0.readSignedMedium((byte) -87);
             }
           }
           for (var5Lifetime6 = 0; var5Lifetime6 < 10; var5Lifetime6++) {
@@ -232,7 +232,7 @@ final class lb {
             for (var5Lifetime7 = 0; var5Lifetime7 < 10; var5Lifetime7++) {
               this.field_j[var5Lifetime7] = param0.c((byte) 63);
               if (param2 >= 15) {
-                this.field_M[var5Lifetime7] = param0.h(-74);
+                this.field_M[var5Lifetime7] = param0.readInt(-74);
               } else {
                 this.field_M[var5Lifetime7] = -1;
               }
@@ -241,9 +241,9 @@ final class lb {
           if (param2 >= 18) {
             this.field_u = param0.c(true);
             param0.k(0);
-            this.field_g = param0.h(-125);
-            this.field_i = param0.h(-76);
-            this.field_p = param0.h(param1 ^ 13114);
+            this.field_g = param0.readInt(-125);
+            this.field_i = param0.readInt(-76);
+            this.field_p = param0.readInt(param1 ^ 13114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -285,7 +285,7 @@ final class lb {
         }
     }
 
-    lb(ec param0, int param1) {
+    lb(PacketBuffer param0, int param1) {
         this();
         try {
           this.a(param0, -13182, param1);
@@ -326,7 +326,7 @@ final class lb {
         this.field_s = 2500;
         this.field_N = 2500;
         this.field_k = new wm(84);
-        this.field_a = new hb[8];
+        this.field_a = new Raider[8];
         this.field_L = new ai[49];
         for (var1 = 0; var1 < 49; var1++) {
           if (var1 != 24) {

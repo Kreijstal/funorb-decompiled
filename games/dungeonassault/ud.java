@@ -3,7 +3,7 @@
  */
 final class ud extends qe {
     static cn[] field_s;
-    static md field_v;
+    static IntrusiveDeque field_v;
     static cn field_r;
     static int field_x;
     static ed field_t;
@@ -50,7 +50,7 @@ final class ud extends qe {
 
     ud() {
         String var1 = ii.field_E.toUpperCase();
-        gp var2 = ne.field_c;
+        gp var2 = IntrusiveNode.field_c;
         rf.field_O = new ob(0L, (ok) null, (ok) null, (ok) null, jm.field_i, "");
         rf.field_O.field_D = 10;
         rf.field_O.field_gb = 630 - rf.field_O.field_Tb.field_L.field_y;
@@ -63,8 +63,8 @@ final class ud extends qe {
         rf.field_O.field_ic.field_ob = rf.field_O.field_Tb.field_L.field_y;
         rf.field_O.field_Tb.field_ob = rf.field_O.field_Tb.field_L.field_y;
         rf.field_O.field_ob = rf.field_O.field_Tb.field_L.field_y;
-        ub.field_i = new tf(ne.field_c, var1, ag.field_c);
-        ok.field_Y = new tf(ne.field_c, var1, ml.field_b);
+        ub.field_i = new tf(IntrusiveNode.field_c, var1, ag.field_c);
+        ok.field_Y = new tf(IntrusiveNode.field_c, var1, ml.field_b);
         ro.field_B = false;
     }
 
@@ -229,7 +229,7 @@ final class ud extends qe {
         int[] var21 = new int[]{sj.field_db[1], sj.field_db[2] - sj.field_db[1], -sj.field_db[2] + sj.field_db[3], sj.field_db[4] - sj.field_db[3], -sj.field_db[4] + sj.field_db[5], -sj.field_db[5] + sj.field_db[6], sj.field_db[7] - sj.field_db[6], sj.field_db[8] - sj.field_db[7], 1870 - sj.field_db[8]};
         int var3Lifetime1;
         int var9Lifetime1;
-        ia.field_K = new tk(ga.field_o, var21, 0, ne.field_c, qh.field_J, (cn[]) null);
+        ia.field_K = new tk(ga.field_o, var21, 0, IntrusiveNode.field_c, qh.field_J, (cn[]) null);
         ia.field_K.field_i = new boolean[]{param0, true, true, true, false, true, true, true, true};
         ia.field_K.field_a[8] = 16777215;
         ia.field_K.field_u[7] = 16777215;
@@ -299,8 +299,8 @@ final class ud extends qe {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeKeyListener(in.field_C);
-          param0.removeFocusListener(in.field_C);
+          param0.removeKeyListener(NetworkGameClient.field_C);
+          param0.removeFocusListener(NetworkGameClient.field_C);
           ia.field_M = param1;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -308,7 +308,7 @@ final class ud extends qe {
     }
 
     static {
-        field_v = new md();
+        field_v = new IntrusiveDeque();
         field_u = "Save the changes to your dungeon and return to the main menu";
     }
 }

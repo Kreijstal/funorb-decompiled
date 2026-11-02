@@ -17,8 +17,8 @@ final class ka {
         ed var5 = var4;
         eh.field_o.field_N = false;
         var5.field_w = false;
-        og.field_e.field_N = true;
-        ed var2 = og.field_e;
+        KeyboardInput.field_e.field_N = true;
+        ed var2 = KeyboardInput.field_e;
         var2.field_w = true;
     }
 

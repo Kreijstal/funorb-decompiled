@@ -5,7 +5,7 @@ final class ba {
     private String field_g;
     static int field_f;
     static String field_d;
-    static kg field_c;
+    static GameAppletShell field_c;
     static int[] field_b;
     static ba field_e;
     static String field_a;
@@ -31,7 +31,7 @@ final class ba {
           return;
         }
         try {
-          og.a(false, 0, uo.field_f[fc.field_d]);
+          KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ba.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

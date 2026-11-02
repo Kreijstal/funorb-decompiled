@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class in extends kg {
+abstract class NetworkGameClient extends GameAppletShell {
     private int field_r;
     String field_p;
     private int field_q;
-    static og field_C;
+    static KeyboardInput field_C;
     private int field_z;
     private boolean field_u;
     private int field_F;
@@ -105,7 +105,7 @@ abstract class in extends kg {
               dh.b(-128);
             } else {
               if (kh.field_n != 0) {
-                td.a(pj.field_r, param0 + 119);
+                td.a(CombatState.field_r, param0 + 119);
               } else {
                 discarded$0 = this.a(false, false, false);
               }
@@ -125,14 +125,14 @@ abstract class in extends kg {
         field_y = null;
         field_B = null;
         if (param0 != -1) {
-          in.e(-36);
+          NetworkGameClient.e(-36);
         }
     }
 
     final static int a(int param0, int param1) {
         param0 = (1431655765 & param0 >>> 1) + (param0 & 1431655765);
         if (param1 != 8) {
-          in.e(-51);
+          NetworkGameClient.e(-51);
         }
         param0 = (param0 >>> 2 & -1288490189) + (param0 & 858993459);
         param0 = param0 + (param0 >>> 4) & 252645135;
@@ -161,7 +161,7 @@ abstract class in extends kg {
         uf.a(param6 ^ 5031);
         bn.field_j = pm.a((byte) 109);
         uk.a(c.field_h, (byte) -126);
-        mh.field_a = param5;
+        MouseInput.field_a = param5;
         s.field_a = param7;
         bh.field_P = param2;
         pm.field_m = param3;
@@ -178,25 +178,25 @@ abstract class in extends kg {
         }
         if (var2 == 0 ||
           var2 == 1) {
-          if (pj.field_w[1]) {
+          if (CombatState.field_w[1]) {
             f.a(2, (byte) -50);
           }
-          if (pj.field_w[2]) {
+          if (CombatState.field_w[2]) {
             fl.a((byte) -93, 3);
           }
-          if (pj.field_w[3]) {
+          if (CombatState.field_w[3]) {
             ep.a((byte) 127, 4);
           }
-          if (pj.field_w[4]) {
+          if (CombatState.field_w[4]) {
             ko.a(true, 5);
           }
-          if (pj.field_w[5]) {
+          if (CombatState.field_w[5]) {
             ol.a(8, 6);
           }
-          if (pj.field_w[6]) {
+          if (CombatState.field_w[6]) {
             tc.a(7, (byte) -112);
           }
-          if (pj.field_w[8]) {
+          if (CombatState.field_w[8]) {
             hj.g(-59);
           }
         }
@@ -346,7 +346,7 @@ abstract class in extends kg {
         var4 = DungeonAssault.field_K;
         var2 = hc.field_c;
         if (var2 < 64 &&
-          pj.field_w[var2]) {
+          CombatState.field_w[var2]) {
           if (!param0) {
             this.field_s = false;
           }
@@ -391,7 +391,7 @@ abstract class in extends kg {
                             ih.a((byte) 59);
                           }
                         } else {
-                          hb.a(-5, ra.field_c, i.field_A, nj.field_b);
+                          Raider.a(-5, ra.field_c, i.field_A, nj.field_b);
                         }
                       } else {
                         this.f(8);
@@ -445,14 +445,14 @@ abstract class in extends kg {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          ec var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = DungeonAssault.field_K;
           if (param0) {
             discarded$0 = this.a(false, false, false);
           }
-          var4 = o.a(16711680, hc.field_d, param1, pj.field_r);
+          var4 = o.a(16711680, hc.field_d, param1, CombatState.field_r);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -491,7 +491,7 @@ abstract class in extends kg {
               var5_intLifetime2 = bh.a(this.field_u, em.e(7142), 106, this.field_q, false, vl.c(-29455));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
-                  ne.field_g = hg.field_s;
+                  IntrusiveNode.field_g = hg.field_s;
                   bl.b((byte) -97);
                   kh.field_n = 10;
                   tl.field_l = false;
@@ -548,7 +548,7 @@ abstract class in extends kg {
                   var9 = (String) null;
                   rg.a(15, (String) null);
                 } else {
-                  var7 = mk.a((byte) -24, var12.field_m, var12.field_o, 0);
+                  var7 = mk.a((byte) -24, var12.payload, var12.position, 0);
                   rg.a(15, var7);
                 }
                 hl.field_i = null;
@@ -598,7 +598,7 @@ abstract class in extends kg {
         }
     }
 
-    protected in() {
+    protected NetworkGameClient() {
     }
 
     final void a(boolean param0, byte param1) {
@@ -633,7 +633,7 @@ abstract class in extends kg {
           cp.f(-30208);
         }
         if (bn.field_j != null) {
-          pj.field_r = bn.field_j.a(6);
+          CombatState.field_r = bn.field_j.a(6);
         }
         if (dh.a((byte) -120)) {
           var3 = 1200 * eg.c(1);
@@ -678,7 +678,7 @@ abstract class in extends kg {
                     nf.a(256, true, ul.field_b);
                   } else {
                     if (gm.field_c != 5) {
-                      nf.a(256, true, b.field_b);
+                      nf.a(256, true, ClientException.field_b);
                     } else {
                       nf.a(5, true, ed.field_W);
                     }
@@ -730,13 +730,13 @@ abstract class in extends kg {
         }
         if (dk.field_c == 1) {
           if (hc.field_d != 0) {
-            ia.field_U = mk.a(mh.field_a, (byte) 34);
+            ia.field_U = mk.a(MouseInput.field_a, (byte) 34);
           }
           fi.field_u = qd.a(false, true, s.field_a, (byte) -31, 1);
-          kg.field_b = qd.a(false, true, pm.field_m, (byte) -31, 1);
+          GameAppletShell.field_b = qd.a(false, true, pm.field_m, (byte) -31, 1);
           ib.field_b = qd.a(false, true, sp.field_h, (byte) -31, 1);
           dk.field_c = 2;
-          gh.field_c = kg.field_b;
+          gh.field_c = GameAppletShell.field_b;
           uc.field_I = fi.field_u;
         }
         if (dk.field_c == 2) {
@@ -757,13 +757,13 @@ abstract class in extends kg {
           }
         }
         if (dk.field_c == 3 &&
-          ql.a(kg.field_b, ib.field_b, (byte) 61, fi.field_u) &&
+          ql.a(GameAppletShell.field_b, ib.field_b, (byte) 61, fi.field_u) &&
           fl.a(-43, ib.field_b)) {
           jm.a(false);
           am.b(112);
           lj.field_e = bg.field_t;
           oj.field_b = false;
-          h.a(param1 ^ -8099, fi.field_u, ib.field_b, ld.field_g, kg.field_b);
+          h.a(param1 ^ -8099, fi.field_u, ib.field_b, ld.field_g, GameAppletShell.field_b);
           if (np.field_D ||
             null != mi.field_d) {
             stackIn_102_0 = 8192;
@@ -779,25 +779,25 @@ abstract class in extends kg {
             je.field_c = fb.b((byte) 127);
             tb.field_g = ab.a((byte) -97);
           }
-          nh.a((byte) -96, ib.field_b, je.field_c, tb.field_g);
+          ResourceArchive.a((byte) -96, ib.field_b, je.field_c, tb.field_g);
           ib.field_b = null;
           fi.field_u = null;
-          kg.field_b = null;
+          GameAppletShell.field_b = null;
           qj.a((java.applet.Applet) (this), (byte) 89);
           nf.d(0);
           dk.field_c = 10;
         }
         if (dk.field_c == 10) {
           if (hc.field_d != 0) {
-            ec.field_k = mk.a(bh.field_P, (byte) 34);
+            PacketBuffer.field_k = mk.a(bh.field_P, (byte) 34);
           }
           dk.field_c = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (dk.field_c == 11) {
-          if (null != ec.field_k && (!ec.field_k.a(-14354) ||
-            !ec.field_k.a((byte) 59))) {
-            tp.a(10, 0.0f, lk.a(ki.field_c, ec.field_k, ec.field_r, (byte) -125));
+          if (null != PacketBuffer.field_k && (!PacketBuffer.field_k.a(-14354) ||
+            !PacketBuffer.field_k.a((byte) 59))) {
+            tp.a(10, 0.0f, lk.a(ki.field_c, PacketBuffer.field_k, PacketBuffer.field_r, (byte) -125));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -826,7 +826,7 @@ abstract class in extends kg {
           this.d((byte) 121);
           uk.a(c.field_h, (byte) -124);
         }
-        if (pj.field_w[8]) {
+        if (CombatState.field_w[8]) {
           ta.b(12841);
         }
     }
@@ -868,20 +868,20 @@ abstract class in extends kg {
     }
 
     final void b(boolean param0, byte param1) {
-        pj.field_w[16] = true;
+        CombatState.field_w[16] = true;
         if (param1 >= -33) {
           this.field_F = 36;
         }
-        pj.field_w[7] = true;
-        pj.field_w[18] = true;
-        pj.field_w[3] = true;
-        pj.field_w[8] = param0;
-        pj.field_w[17] = true;
-        pj.field_w[0] = true;
+        CombatState.field_w[7] = true;
+        CombatState.field_w[18] = true;
+        CombatState.field_w[3] = true;
+        CombatState.field_w[8] = param0;
+        CombatState.field_w[17] = true;
+        CombatState.field_w[0] = true;
     }
 
     static {
-        field_C = new og();
+        field_C = new KeyboardInput();
         field_B = new int[]{2, 13, 14, 8, 28, 7, 11};
         field_t = "Nimble even by the standards of his dexterous race, the saurus slink can dodge traps and attacks with equal ease.";
     }

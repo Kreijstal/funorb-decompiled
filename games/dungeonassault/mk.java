@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk extends ne {
+final class mk extends IntrusiveNode {
     static nn field_j;
     byte[] field_k;
     static int[] field_i;
@@ -38,7 +38,7 @@ final class mk extends ne {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = mh.field_d[var7 - 128];
+                var8 = MouseInput.field_d[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }
@@ -147,7 +147,7 @@ final class mk extends ne {
         }
     }
 
-    final static nh a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 != 34) {
           mk.a(109, (byte) -40);
         }

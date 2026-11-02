@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends ec {
+final class CipherPacketBuffer extends PacketBuffer {
     static cn field_w;
     private ff field_v;
     static int field_s;
@@ -10,9 +10,9 @@ final class wj extends ec {
     static wh field_u;
 
     final void d(byte param0, int param1) {
-        int fieldTemp$0 = this.field_o;
-        this.field_o = this.field_o + 1;
-        this.field_m[fieldTemp$0] = (byte)(param1 + this.field_v.a(26979));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.a(26979));
         if (param0 > -76) {
           this.field_t = 30;
         }
@@ -31,9 +31,9 @@ final class wj extends ec {
         if (param0 != 255) {
           return -17;
         }
-        int fieldTemp$0 = this.field_o;
-        this.field_o = this.field_o + 1;
-        return 255 & this.field_m[fieldTemp$0] - this.field_v.a(26979);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.field_v.a(26979);
     }
 
     final int j(int param0, int param1) {
@@ -47,30 +47,30 @@ final class wj extends ec {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_m[incrementValue$0] & ba.field_b[var4]) << -var4 + param1);
+          var5 = var5 + ((this.payload[incrementValue$0] & ba.field_b[var4]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 == param1) {
-          var5 = var5 + (this.field_m[var3] & ba.field_b[var4]);
+          var5 = var5 + (this.payload[var3] & ba.field_b[var4]);
         } else {
-          var5 = var5 + (this.field_m[var3] >> -param1 + var4 & ba.field_b[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & ba.field_b[param1]);
         }
         return var5;
     }
 
     final void f(byte param0) {
-        this.field_o = (this.field_t + 7) / 8;
+        this.position = (this.field_t + 7) / 8;
         if (param0 <= 19) {
           this.f((byte) -32);
         }
     }
 
-    wj(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
-    wj(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -86,9 +86,9 @@ final class wj extends ec {
         var6 = DungeonAssault.field_K;
         try {
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-            param3[var5_int + param0] = (byte)(this.field_m[fieldTemp$0] - this.field_v.a(26979));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_v.a(26979));
           }
           if (param1 != 95) {
             this.e(true);
@@ -121,7 +121,7 @@ final class wj extends ec {
         if (param0) {
           return;
         }
-        this.field_t = 8 * this.field_o;
+        this.field_t = 8 * this.position;
     }
 
     static {

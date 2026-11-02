@@ -48,18 +48,18 @@ abstract class gj {
           ol.field_i = dh.field_b;
           if (param0 != 255) {
             if (100 > param0) {
-              mh.field_b = p.a(param0, param3, -28323);
+              MouseInput.field_b = p.a(param0, param3, -28323);
             } else {
               if (105 >= param0) {
-                mh.field_b = em.a(param2, 8082);
+                MouseInput.field_b = em.a(param2, 8082);
               } else {
-                mh.field_b = p.a(param0, param3, -28323);
+                MouseInput.field_b = p.a(param0, param3, -28323);
               }
             }
           } else {
             stackIn_4_0 = -49;
             stackIn_5_1 = !(13 <= wk.field_g);
-            mh.field_b = l.$cfr$intArgs$a$fb458fdecc21(stackIn_4_0, stackIn_5_1);
+            MouseInput.field_b = l.$cfr$intArgs$a$fb458fdecc21(stackIn_4_0, stackIn_5_1);
           }
           if (param1 == 29120) {
             return;
@@ -139,7 +139,7 @@ abstract class gj {
         if (var4 <= 0L) {
           return this.b(param0, 2048);
         }
-        pj.a(0, var4);
+        CombatState.a(0, var4);
         return this.b(param0, 2048);
     }
 

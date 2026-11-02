@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static ec field_c;
+    static PacketBuffer field_c;
     static cn field_b;
     static ab field_d;
     static String field_h;
     static String field_g;
     static se field_e;
     static jk field_a;
-    static md field_f;
+    static IntrusiveDeque field_f;
 
     final static String a(se param0, int param1, int param2, String param3, int param4) {
         RuntimeException var5 = null;
@@ -23,7 +23,7 @@ final class ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > 103) {
-            stackIn_4_0 = ia.a(param2, param0, pj.a((byte) 66, param1, param3), 0);
+            stackIn_4_0 = ia.a(param2, param0, CombatState.a((byte) 66, param1, param3), 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -63,7 +63,7 @@ final class ta {
     }
 
     final static void a(byte param0, int param1, kj param2) {
-        wj var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           if (param0 != 11) {
             String var4 = (String) null;
@@ -71,9 +71,9 @@ final class ta {
           }
           var3 = ac.field_B;
           var3.d((byte) -81, param1);
-          var3.a(6, 2);
-          var3.a(6, 0);
-          var3.a(param0 ^ 13, param2.field_j);
+          var3.writeByte(6, 2);
+          var3.writeByte(6, 0);
+          var3.writeByte(param0 ^ 13, param2.field_j);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ta.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -82,7 +82,7 @@ final class ta {
     final static void b(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        wj var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -90,15 +90,15 @@ final class ta {
         try {
           var1 = ac.field_B;
           if (param0 != 12841) {
-            field_c = (ec) null;
+            field_c = (PacketBuffer) null;
           }
           while (mo.b(-101)) {
             var1.d((byte) -102, 8);
-            fieldTemp$0 = var1.field_o + 1;
-            var1.field_o = var1.field_o + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ed.a(false, var1);
-            ac.field_B.c(var1.field_o - var2, -1);
+            ac.field_B.c(var1.position - var2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,10 +109,10 @@ final class ta {
     }
 
     static {
-        field_c = new ec(256);
+        field_c = new PacketBuffer(256);
         field_h = "After a string of unfortunate accidents led to his exile from the mountain home of the dwarves, the dwarven renegade seeks somewhere else to indulge his passion for explosives.";
         field_g = "Select an orc or goblin to sacrifice";
         field_d = new ab();
-        field_f = new md();
+        field_f = new IntrusiveDeque();
     }
 }

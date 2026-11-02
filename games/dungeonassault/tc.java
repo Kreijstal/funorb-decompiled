@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends qb {
+final class tc extends PcmStream {
     private vh field_z;
-    ug field_A;
+    MidiPcmStream field_A;
     private int field_p;
     static int[] field_w;
     private int[] field_s;
@@ -14,9 +14,9 @@ final class tc extends qb {
     private int[] field_y;
     private vh field_x;
     private boolean field_q;
-    private ug field_C;
+    private MidiPcmStream field_C;
     static int[] field_m;
-    ug field_B;
+    MidiPcmStream field_B;
     private int field_t;
     private int field_v;
 
@@ -29,7 +29,7 @@ final class tc extends qb {
         field_u = null;
     }
 
-    private final void a(ug param0, int param1, int param2, int param3) {
+    private final void a(MidiPcmStream param0, int param1, int param2, int param3) {
         try {
           param0.a(param1, param3, (byte) -82);
           param0.b(param2, 0);
@@ -38,11 +38,11 @@ final class tc extends qb {
         }
     }
 
-    final qb c() {
+    final PcmStream c() {
         return null;
     }
 
-    final qb d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -200,11 +200,11 @@ final class tc extends qb {
     final synchronized void a(int param0, int param1, int param2, vh param3, int param4, boolean param5) {
         boolean stackIn_19_1 = false;
         int stackIn_30_0 = 0;
-        ug stackIn_40_0 = null;
+        MidiPcmStream stackIn_40_0 = null;
         vh stackIn_40_1 = null;
         int stackIn_40_2 = 0;
         boolean stackIn_41_3;
-        ug stackIn_49_0 = null;
+        MidiPcmStream stackIn_49_0 = null;
         vh stackIn_49_1 = null;
         int stackIn_49_2 = 0;
         boolean stackIn_50_3;
@@ -272,7 +272,7 @@ final class tc extends qb {
               stackIn_49_1 = (vh) (param3);
               stackIn_49_2 = 20938;
               stackIn_50_3 = !(param5);
-              ((ug) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, stackIn_50_3);
+              ((MidiPcmStream) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, stackIn_50_3);
               this.a(this.field_B, param4, param1, -1);
             }
             this.field_p = -param2;
@@ -286,7 +286,7 @@ final class tc extends qb {
               stackIn_40_1 = (vh) (param3);
               stackIn_40_2 = param0 - 1261;
               stackIn_41_3 = !(param5);
-              ((ug) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3);
+              ((MidiPcmStream) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3);
               this.a(this.field_A, param4, param1, -1);
             }
             this.field_p = param2;
@@ -316,7 +316,7 @@ final class tc extends qb {
         this.field_t = param0;
     }
 
-    private final void a(boolean param0, ug param1, ug param2) {
+    private final void a(boolean param0, MidiPcmStream param1, MidiPcmStream param2) {
         try {
           this.field_B = param2;
           this.field_v = 1048576;
@@ -442,8 +442,8 @@ final class tc extends qb {
         this.field_q = false;
         this.field_r = 0;
         this.field_t = 256;
-        ug var1 = new ug();
-        this.a(true, var1, new ug(var1));
+        MidiPcmStream var1 = new MidiPcmStream();
+        this.a(true, var1, new MidiPcmStream(var1));
     }
 
     static {

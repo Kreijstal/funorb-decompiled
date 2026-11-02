@@ -23,8 +23,8 @@ final class ai {
     int field_a;
 
     final static void a(int param0) {
-        qi.field_b = ne.field_c.b(ll.field_m[13]);
-        int var1 = ne.field_c.b(ll.field_m[14]);
+        qi.field_b = IntrusiveNode.field_c.b(DualLinkNode.field_m[13]);
+        int var1 = IntrusiveNode.field_c.b(DualLinkNode.field_m[14]);
         if (param0 <= -74) {
           if (var1 > qi.field_b) {
             qi.field_b = var1;
@@ -46,32 +46,32 @@ final class ai {
         field_k = null;
     }
 
-    final static hb a(ec param0, int param1, int param2, int param3) {
+    final static Raider a(PacketBuffer param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        hb var5 = null;
-        hb stackIn_2_0 = null;
+        Raider var5 = null;
+        Raider stackIn_2_0 = null;
         Object stackIn_8_0 = null;
-        hb stackIn_13_0 = null;
+        Raider stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -12) {
-            stackIn_2_0 = (hb) null;
+            stackIn_2_0 = (Raider) null;
             return stackIn_2_0;
           }
           var4_int = param0.c(true);
           if (0 == var4_int) {
-            param0.h(param2 - 94);
+            param0.readInt(param2 - 94);
             if (param3 >= 11) {
               param0.c(true);
             }
             stackIn_8_0 = null;
-            return (hb) (stackIn_8_0);
+            return (Raider) (stackIn_8_0);
           }
-          var5 = new hb(param1, var4_int);
+          var5 = new Raider(param1, var4_int);
           var5.field_e = param0.c(true);
           var5.field_g = param0.c(true);
           var5.field_f = param0.c(true);
@@ -97,28 +97,28 @@ final class ai {
         }
     }
 
-    final void a(int param0, boolean param1, ec param2) {
+    final void a(int param0, boolean param1, PacketBuffer param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param2.a(param0 ^ -14, this.field_a);
-          param2.a(param0 + 18, this.field_p);
-          param2.a(6, this.field_g);
-          param2.a(6, this.field_r);
-          param2.a(6, this.field_q);
+          param2.writeByte(param0 ^ -14, this.field_a);
+          param2.writeByte(param0 + 18, this.field_p);
+          param2.writeByte(6, this.field_g);
+          param2.writeByte(6, this.field_r);
+          param2.writeByte(6, this.field_q);
           if (param0 != -12) {
             field_n = -63;
           }
           if (param1) {
             return;
           }
-          param2.a(6, this.field_j);
-          param2.a(6, this.field_l);
-          param2.a(param0 + 18, this.field_s);
-          param2.a(6, this.field_o);
+          param2.writeByte(6, this.field_j);
+          param2.writeByte(6, this.field_l);
+          param2.writeByte(param0 + 18, this.field_s);
+          param2.writeByte(6, this.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

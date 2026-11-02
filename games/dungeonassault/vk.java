@@ -11,13 +11,13 @@ final class vk {
     static String field_b;
     boolean field_f;
 
-    final static b a(Throwable param0, String param1) {
-        b var2 = null;
-        if (!(param0 instanceof b)) {
-          var2 = new b(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (b) ((Object) param0);
-          var2.field_c = var2.field_c + ' ' + param1;
+          var2 = (ClientException) ((Object) param0);
+          var2.context = var2.context + ' ' + param1;
         }
         return var2;
     }
@@ -64,12 +64,12 @@ final class vk {
           if (wd.field_d == dh.field_b &&
             param1.equals(bf.field_o)) {
             wd.field_d = sp.field_e;
-            stackIn_9_0 = ll.field_p;
+            stackIn_9_0 = DualLinkNode.field_p;
             return stackIn_9_0;
           }
           wd.field_d = ql.field_f;
           bf.field_o = param1;
-          ll.field_p = null;
+          DualLinkNode.field_p = null;
           stackIn_11_0 = null;
           return (vk) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

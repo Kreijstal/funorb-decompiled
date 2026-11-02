@@ -202,7 +202,7 @@ final class wk {
         }
     }
 
-    private final void a(nh param0, String param1, String param2, boolean param3, int param4, String param5) {
+    private final void a(ResourceArchive param0, String param1, String param2, boolean param3, int param4, String param5) {
         bl[] var10 = null;
         bl var9 = null;
         bl var11 = null;
@@ -234,7 +234,7 @@ final class wk {
         }
     }
 
-    final void a(String param0, String param1, String param2, nh param3, int param4) {
+    final void a(String param0, String param1, String param2, ResourceArchive param3, int param4) {
         try {
           this.a(param3, param0, param1, false, -1, param2);
           if (param4 >= -75) {
@@ -246,7 +246,7 @@ final class wk {
         }
     }
 
-    final void a(String param0, int param1, String param2, nh param3) {
+    final void a(String param0, int param1, String param2, ResourceArchive param3) {
         if (param1 != 237) {
           return;
         }

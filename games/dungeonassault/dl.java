@@ -6,7 +6,7 @@ final class dl {
     static int field_b;
     static String field_a;
 
-    final static kk a(byte param0, int param1, nh param2) {
+    final static kk a(byte param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -46,8 +46,8 @@ final class dl {
           field_c = null;
           return;
         }
-        nh var2 = (nh) null;
-        dl.a((byte) -53, -32, (nh) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        dl.a((byte) -53, -32, (ResourceArchive) null);
         field_c = null;
     }
 
@@ -61,53 +61,53 @@ final class dl {
         var2 = lk.field_T;
         lk.field_T = bf.field_k;
         if (param1 == 51) {
-          hb.field_a.field_c = 2;
-          hb.field_a.field_h = hb.field_a.field_h + 1;
+          Raider.field_a.field_c = 2;
+          Raider.field_a.field_h = Raider.field_a.field_h + 1;
           bf.field_k = var2;
-          if (hb.field_a.field_h >= 2 &&
+          if (Raider.field_a.field_h >= 2 &&
             51 == param1) {
             return 2;
           }
-          if (hb.field_a.field_h >= 2 &&
+          if (Raider.field_a.field_h >= 2 &&
             50 == param1) {
             return 5;
           }
         } else {
           if (param1 != 50) {
-            hb.field_a.field_c = 1;
-            hb.field_a.field_h = hb.field_a.field_h + 1;
+            Raider.field_a.field_c = 1;
+            Raider.field_a.field_h = Raider.field_a.field_h + 1;
             bf.field_k = var2;
-            if (hb.field_a.field_h >= 2 &&
+            if (Raider.field_a.field_h >= 2 &&
               51 == param1) {
               return 2;
             }
-            if (hb.field_a.field_h >= 2 &&
+            if (Raider.field_a.field_h >= 2 &&
               50 == param1) {
               return 5;
             }
-            if (~hb.field_a.field_h <= param0) {
+            if (~Raider.field_a.field_h <= param0) {
               return 1;
             }
             return -1;
           }
-          hb.field_a.field_c = 5;
-          hb.field_a.field_h = hb.field_a.field_h + 1;
+          Raider.field_a.field_c = 5;
+          Raider.field_a.field_h = Raider.field_a.field_h + 1;
           bf.field_k = var2;
-          if (hb.field_a.field_h >= 2) {
+          if (Raider.field_a.field_h >= 2) {
             if (51 == param1) {
               return 2;
             }
-            if (hb.field_a.field_h >= 2 &&
+            if (Raider.field_a.field_h >= 2 &&
               50 == param1) {
               return 5;
             }
-            if (~hb.field_a.field_h <= param0) {
+            if (~Raider.field_a.field_h <= param0) {
               return 1;
             }
             return -1;
           }
-          if (hb.field_a.field_h < 2) {
-            if (~hb.field_a.field_h <= param0) {
+          if (Raider.field_a.field_h < 2) {
+            if (~Raider.field_a.field_h <= param0) {
               return 1;
             }
             return -1;
@@ -116,7 +116,7 @@ final class dl {
             return 5;
           }
         }
-        if (~hb.field_a.field_h > param0) {
+        if (~Raider.field_a.field_h > param0) {
           return -1;
         }
         return 1;

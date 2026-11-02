@@ -6,7 +6,7 @@ abstract class nl {
     static pp field_a;
     static String[] field_f;
     static String[] field_b;
-    static md field_e;
+    static IntrusiveDeque field_e;
     static String field_c;
     static int field_d;
 

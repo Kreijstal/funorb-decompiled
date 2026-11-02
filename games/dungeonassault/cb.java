@@ -3,10 +3,10 @@
  */
 final class cb {
     static int field_b;
-    static md field_a;
+    static IntrusiveDeque field_a;
     static String field_c;
 
-    final static void a(java.math.BigInteger param0, int param1, byte[] param2, ec param3, int param4, java.math.BigInteger param5, int param6) {
+    final static void a(java.math.BigInteger param0, int param1, byte[] param2, PacketBuffer param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -36,35 +36,35 @@ final class cb {
           var12 = var13;
           var8 = var12;
           if (param4 != 5471) {
-            field_a = (md) null;
+            field_a = (IntrusiveDeque) null;
           }
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = rp.field_g.nextInt();
           }
           if (null == wa.field_b ||
-            !(wa.field_b.field_m.length >= var7_int)) {
-            wa.field_b = new ec(var7_int);
+            !(wa.field_b.payload.length >= var7_int)) {
+            wa.field_b = new PacketBuffer(var7_int);
           }
-          wa.field_b.field_o = 0;
+          wa.field_b.position = 0;
           wa.field_b.a(param2, 1, param1, param6);
-          wa.field_b.g(param4 - 5468, var7_int);
+          wa.field_b.padWithZeros(param4 - 5468, var7_int);
           wa.field_b.a(var13, true);
           if (t.field_d == null ||
-            !(t.field_d.field_m.length >= 100)) {
-            t.field_d = new ec(100);
+            !(t.field_d.payload.length >= 100)) {
+            t.field_d = new PacketBuffer(100);
           }
-          t.field_d.field_o = 0;
-          t.field_d.a(6, 10);
+          t.field_d.position = 0;
+          t.field_d.writeByte(6, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
             t.field_d.a((byte) 63, var13[var11]);
             var11++;
           }
-          t.field_d.i(param1, param4 ^ -5422);
+          t.field_d.writeShort(param1, param4 ^ -5422);
           t.field_d.a(param0, 2, param5);
-          param3.a(t.field_d.field_m, 1, t.field_d.field_o, 0);
-          param3.a(wa.field_b.field_m, param4 ^ 5470, wa.field_b.field_o, 0);
+          param3.a(t.field_d.payload, 1, t.field_d.position, 0);
+          param3.a(wa.field_b.payload, param4 ^ 5470, wa.field_b.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class cb {
     }
 
     static {
-        field_a = new md();
+        field_a = new IntrusiveDeque();
         field_c = "Rot Worms";
     }
 }

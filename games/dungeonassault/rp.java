@@ -88,8 +88,8 @@ final class rp {
           String var2 = (String) null;
           rp.a((String) null, -9);
         }
-        pj.field_c = new gk();
-        ta.field_a.b(1, pj.field_c);
+        CombatState.field_c = new gk();
+        ta.field_a.b(1, CombatState.field_c);
     }
 
     final static boolean a(int param0, int param1) {

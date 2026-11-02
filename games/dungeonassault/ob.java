@@ -37,7 +37,7 @@ final class ob extends ok {
     static char field_Yb;
     static String field_Kb;
     static String[] field_Rb;
-    static ug field_Xb;
+    static MidiPcmStream field_Xb;
 
     final static void a(cn param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_20_0 = null;
@@ -52,13 +52,13 @@ final class ob extends ok {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        nh var12 = null;
+        ResourceArchive var12 = null;
         int var11Lifetime1;
         int var11Lifetime2;
         try {
           if (!param4) {
-            var12 = (nh) null;
-            ob.a((byte) -102, (nh) null);
+            var12 = (ResourceArchive) null;
+            ob.a((byte) -102, (ResourceArchive) null);
           }
           param1 = param1 + param0.field_w;
           param3 = param3 + param0.field_A;
@@ -180,7 +180,7 @@ final class ob extends ok {
         }
     }
 
-    final static void a(byte param0, nh param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         cn var2 = null;
         int var3 = 0;
         int var4 = 0;

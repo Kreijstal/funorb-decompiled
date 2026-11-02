@@ -60,7 +60,7 @@ final class ae {
         if (param1 != -5) {
           return;
         }
-        ec.field_r = lc.field_k[param0];
+        PacketBuffer.field_r = lc.field_k[param0];
         ki.field_c = qh.field_R[param0];
     }
 
@@ -193,7 +193,7 @@ final class ae {
           nk.field_Hb = true;
           kh.field_t = param1;
           if (kh.field_t == 0) {
-            var3_int = og.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, ql.field_k);
+            var3_int = KeyboardInput.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, ql.field_k);
             var4 = var3_int + 3;
             go.field_A = new String[var4];
             to.field_c = new int[var4];
@@ -212,7 +212,7 @@ final class ae {
             to.field_c[var4 - 1] = 1;
             n.field_g[1] = 5;
           } else if (kh.field_t == 1) {
-            var3_int = og.a(n.field_c, (byte) -114, qj.field_e, wa.field_l, ql.field_k);
+            var3_int = KeyboardInput.a(n.field_c, (byte) -114, qj.field_e, wa.field_l, ql.field_k);
             var4 = var3_int + 2;
             to.field_c = new int[var4];
             go.field_A = new String[var4];
@@ -230,9 +230,9 @@ final class ae {
           } else if (kh.field_t != 2) {
             if (kh.field_t == 3) {
               if (i.field_A.field_j) {
-                var3_int = og.a(n.field_c, (byte) 120, qj.field_e, wa.field_l, fg.field_g);
+                var3_int = KeyboardInput.a(n.field_c, (byte) 120, qj.field_e, wa.field_l, fg.field_g);
               } else {
-                var3_int = og.a(n.field_c, (byte) -46, qj.field_e, wa.field_l, oh.field_a);
+                var3_int = KeyboardInput.a(n.field_c, (byte) -46, qj.field_e, wa.field_l, oh.field_a);
               }
               var4 = 2 + var3_int;
               go.field_A = new String[var4];
@@ -249,7 +249,7 @@ final class ae {
               to.field_c[-1 + var4] = 0;
               n.field_g[0] = 5;
             } else if (kh.field_t == 4) {
-              var3_int = og.a(n.field_c, (byte) 101, qj.field_e, wa.field_l, jg.field_b);
+              var3_int = KeyboardInput.a(n.field_c, (byte) 101, qj.field_e, wa.field_l, jg.field_b);
               var4 = var3_int + 2;
               to.field_c = new int[var4];
               go.field_A = new String[var4];
@@ -268,7 +268,7 @@ final class ae {
               if (kh.field_t != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = og.a(n.field_c, (byte) -68, qj.field_e, wa.field_l, id.field_g);
+              var3_int = KeyboardInput.a(n.field_c, (byte) -68, qj.field_e, wa.field_l, id.field_g);
               var4 = 3 + var3_int;
               to.field_c = new int[var4];
               go.field_A = new String[var4];
@@ -288,7 +288,7 @@ final class ae {
               n.field_g[1] = 5;
             }
           } else {
-            var3_int = og.a(n.field_c, (byte) 125, qj.field_e, wa.field_l, jk.a(new String[]{"<br><%0><br>"}, ef.field_b, param2 ^ -30497));
+            var3_int = KeyboardInput.a(n.field_c, (byte) 125, qj.field_e, wa.field_l, jk.a(new String[]{"<br><%0><br>"}, ef.field_b, param2 ^ -30497));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(qj.field_e[var5])) {
@@ -305,7 +305,7 @@ final class ae {
             cp.field_Q = new String[-1 + (-var4 + var3_int)];
             cj.a(qj.field_e, var4 + 1, cp.field_Q, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = og.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, jk.a(new String[]{"<br><%0><br>"}, bn.field_i, param2 ^ -30497));
+            var3_int = KeyboardInput.a(n.field_c, (byte) 84, qj.field_e, wa.field_l, jk.a(new String[]{"<br><%0><br>"}, bn.field_i, param2 ^ -30497));
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(qj.field_e[var5])) {
                 continue;
@@ -373,7 +373,7 @@ final class ae {
               }
               stackIn_47_0[stackIn_47_1] = stackIn_50_2;
             }
-            kg.field_d = kd.c(-2456);
+            GameAppletShell.field_d = kd.c(-2456);
           }
           d.field_g.field_i = n.field_g.length;
           var3_intLifetime1 = 0;
@@ -383,7 +383,7 @@ final class ae {
           }
           while (var4Lifetime1 < go.field_A.length) {
             stackIn_93_0 = !(to.field_c[var4Lifetime1] < 0);
-            var5Lifetime1 = og.a(stackIn_93_0, go.field_A[var4Lifetime1], param2 ^ 30632);
+            var5Lifetime1 = KeyboardInput.a(stackIn_93_0, go.field_A[var4Lifetime1], param2 ^ 30632);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -394,7 +394,7 @@ final class ae {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = og.a(false, var11, param2 - 30632);
+              var7Lifetime1 = KeyboardInput.a(false, var11, param2 - 30632);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -402,7 +402,7 @@ final class ae {
             var4_ref_String__Lifetime1 = cp.field_Q;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = og.a(false, var12, -30633);
+              var7Lifetime1Lifetime1 = KeyboardInput.a(false, var12, -30633);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -427,7 +427,7 @@ final class ae {
           while (go.field_A.length > var4Lifetime3) {
             var6Lifetime1 = to.field_c[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = og.a(true, go.field_A[var4Lifetime3], param2 ^ 30632);
+              var7Lifetime2 = KeyboardInput.a(true, go.field_A[var4Lifetime3], param2 ^ 30632);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + vo.field_r;
               var5Lifetime3 = var5Lifetime3 + ci.field_j;
               dg.field_L[var4Lifetime3] = new int[4];

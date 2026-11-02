@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class je {
-    private ec field_n;
+    private PacketBuffer field_n;
     private em field_m;
     static int[] field_d;
     private java.math.BigInteger field_j;
@@ -89,7 +89,7 @@ final class je {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ec var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -110,11 +110,11 @@ final class je {
         if (this.field_m.field_v) {
           return false;
         }
-        var10 = new ec(this.field_m.b(true));
-        var10.field_o = 5;
+        var10 = new PacketBuffer(this.field_m.b(true));
+        var10.position = 5;
         var3 = var10.c(true);
-        var10.field_o = var10.field_o + 72 * var3;
-        var13 = new byte[-var10.field_o + var10.field_m.length];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a((byte) -105, 0, var13.length, var13);
@@ -129,7 +129,7 @@ final class je {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = rn.a(-5 + (var10.field_o - var13.length), 5, 8, var10.field_m);
+        var15 = rn.a(-5 + (var10.position - var13.length), 5, 8, var10.payload);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();
@@ -165,9 +165,9 @@ final class je {
               stackIn_9_0 = this.field_k[param2];
               return stackIn_9_0;
             }
-            this.field_n.field_o = 6 + 72 * param2;
-            var6_int = this.field_n.h(-31);
-            var7 = this.field_n.h(-54);
+            this.field_n.position = 6 + 72 * param2;
+            var6_int = this.field_n.readInt(-31);
+            var7 = this.field_n.readInt(-54);
             var13 = new byte[64];
             this.field_n.a((byte) -117, 0, 64, var13);
             var9 = new ti(param2, param4, param3, this.field_h, this.field_g, var6_int, var13, var7, param0);

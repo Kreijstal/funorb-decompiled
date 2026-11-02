@@ -57,7 +57,7 @@ final class af {
             ik.field_e = null;
           }
           if (wa.field_a) {
-            ll.field_i = new md();
+            DualLinkNode.field_i = new IntrusiveDeque();
             var4 = gj.field_c;
             var1 = var4;
             for (var2 = 0; var2 < 8; var2++) {

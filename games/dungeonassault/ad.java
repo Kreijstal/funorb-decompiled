@@ -10,7 +10,7 @@ final class ad {
 
     final static ad[] b(int param0) {
         if (param0 == 65280) {
-          return new ad[]{hl.field_c, am.field_b, tp.field_y, m.field_d, kj.field_p, u.field_U, og.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
+          return new ad[]{hl.field_c, am.field_b, tp.field_y, m.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
         }
         return (ad[]) null;
     }
@@ -147,7 +147,7 @@ final class ad {
           if (null != var45.field_y &&
             1 < var45.field_w) {
             var61 = var45.field_y;
-            ll.a(0, var61, true, 0, hk.field_b);
+            DualLinkNode.a(0, var61, true, 0, hk.field_b);
           } else {
             sf.d(3);
           }

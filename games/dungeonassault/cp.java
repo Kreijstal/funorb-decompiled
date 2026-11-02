@@ -209,7 +209,7 @@ final class cp extends gd {
             en.field_b[var7] = new cn(317, 34);
             var7++;
           }
-          ec.field_l = param4;
+          PacketBuffer.field_l = param4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

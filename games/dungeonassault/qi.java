@@ -10,55 +10,55 @@ final class qi implements Iterable {
     static int field_b;
     static pn field_e;
     static cn field_i;
-    private ne field_j;
+    private IntrusiveNode field_j;
     static String field_c;
-    ne[] field_d;
+    IntrusiveNode[] field_d;
     int field_g;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new ho(this));
     }
 
-    final void a(long param0, byte param1, ne param2) {
-        ne var5 = null;
-        if (param2.field_a != null) {
-          param2.a(false);
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
+        if (param2.next != null) {
+          param2.unlink(false);
         }
         if (param1 > -127) {
           return;
         }
         try {
           var5 = this.field_d[(int)(param0 & (long)(-1 + this.field_g))];
-          param2.field_a = var5.field_a;
-          param2.field_e = var5;
-          param2.field_a.field_e = param2;
-          param2.field_e.field_a = param2;
-          param2.field_h = param0;
+          param2.next = var5.next;
+          param2.previous = var5;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
+          param2.key = param0;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "qi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ne a(int param0, long param1) {
-        ne var4;
-        ne var5;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = DungeonAssault.field_K;
         var4 = this.field_d[(int)((long)(this.field_g - param0) & param1)];
-        this.field_j = var4.field_e;
+        this.field_j = var4.previous;
         while (true) {
           if (this.field_j == var4) {
             this.field_j = null;
             return null;
           }
-          if (~this.field_j.field_h != ~param1) {
-            this.field_j = this.field_j.field_e;
+          if (~this.field_j.key != ~param1) {
+            this.field_j = this.field_j.previous;
             continue;
           }
           break;
         }
         var5 = this.field_j;
-        this.field_j = this.field_j.field_e;
+        this.field_j = this.field_j.previous;
         return var5;
     }
 

@@ -8,11 +8,11 @@ final class ib {
     static int field_l;
     static int[] field_a;
     static int field_d;
-    static nh field_b;
+    static ResourceArchive field_b;
     static int[] field_g;
     static String field_i;
     static int field_e;
-    static mh field_f;
+    static MouseInput field_f;
     static String field_c;
 
     final static void a(int param0, cn[] param1) {
@@ -166,7 +166,7 @@ final class ib {
         var8 = DungeonAssault.field_K;
         var1 = new cn[dk.field_d];
         if (param0 != -10718) {
-          field_f = (mh) null;
+          field_f = (MouseInput) null;
         }
         for (var2 = 0; var2 < dk.field_d; var2++) {
           var3 = jn.field_k[var2] * jc.field_f[var2];
@@ -241,6 +241,6 @@ final class ib {
         field_i = "Unpacking graphics";
         field_h = new ad(9, 0, 4, 1);
         field_c = "Sort raiders by <%0>";
-        field_f = new mh();
+        field_f = new MouseInput();
     }
 }

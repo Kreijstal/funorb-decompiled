@@ -47,7 +47,7 @@ final class mj {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 78 % ((param1 - 20) / 32);
-          stackIn_3_0 = (null != ll.a(param0, (byte) -47));
+          stackIn_3_0 = (null != DualLinkNode.a(param0, (byte) -47));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

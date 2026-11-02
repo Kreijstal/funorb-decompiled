@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ak extends ne {
+final class ak extends IntrusiveNode {
     static int field_n;
     int field_s;
     int field_r;

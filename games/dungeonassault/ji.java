@@ -7,7 +7,7 @@ final class ji extends da {
     static int[] field_F;
     static cn field_G;
     static String field_H;
-    private md field_I;
+    private IntrusiveDeque field_I;
 
     final void a(lm param0, int param1) {
         rf var3 = null;
@@ -34,7 +34,7 @@ final class ji extends da {
         }
         dj var5 = new dj(this.field_I);
         if (param2 != 0) {
-          this.field_I = (md) null;
+          this.field_I = (IntrusiveDeque) null;
         }
         lm var6 = (lm) (var5.b(-1225818257));
         while (var6 != null) {
@@ -109,7 +109,7 @@ final class ji extends da {
         rf var3 = (rf) (var2.a(-479592473));
         while (var3 != null) {
           if (var3.f((byte) -90)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (rf) (var2.c(17756));
         }
@@ -118,7 +118,7 @@ final class ji extends da {
 
     public ji() {
         super(0, 0, hn.field_t, vf.field_x, (ca) null, (pg) null);
-        this.field_I = new md();
+        this.field_I = new IntrusiveDeque();
     }
 
     final void j(int param0) {
@@ -130,7 +130,7 @@ final class ji extends da {
         rf var3 = (rf) (var2.a(-479592473));
         while (var3 != null) {
           if (var3.i(462)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (rf) (var2.c(17756));
         }

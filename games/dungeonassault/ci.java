@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ci extends ne {
+final class ci extends IntrusiveNode {
     int field_k;
     int field_r;
     static int[] field_s;
@@ -14,18 +14,18 @@ final class ci extends ne {
     int field_p;
     int field_i;
 
-    final static va a(String param0, int param1) {
+    final static PcmSample a(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
-        va stackIn_3_0 = null;
-        va stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ll.field_r.b(param0, "", (byte) -82)) {
+          if (DualLinkNode.field_r.b(param0, "", (byte) -82)) {
             stackIn_3_0 = ha.field_k.a(param0, (byte) 126, "");
             return stackIn_3_0;
           }
@@ -39,7 +39,7 @@ final class ci extends ne {
           var3 = (String) null;
           ci.a((String) null, 40);
           stackIn_11_0 = null;
-          return (va) (stackIn_11_0);
+          return (PcmSample) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -83,7 +83,7 @@ final class ci extends ne {
           var1_int = jm.field_c;
           var2 = 0;
           if (kh.field_t == 2) {
-            var3_long = -kg.field_d + kd.c(-2456);
+            var3_long = -GameAppletShell.field_d + kd.c(-2456);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -137,7 +137,7 @@ final class ci extends ne {
             if (var4 == -2) {
               var6 = Integer.toString(var2);
             }
-            var7Lifetime1 = og.a(!(var4 < 0), var6, -30633);
+            var7Lifetime1 = KeyboardInput.a(!(var4 < 0), var6, -30633);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + vo.field_r;
             if (var4 >= 0) {
               if (d.field_g.field_b == var4) {

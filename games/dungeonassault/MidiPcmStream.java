@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug extends qb {
+final class MidiPcmStream extends PcmStream {
     private int field_L;
     private wa field_W;
     private int[] field_O;
@@ -103,7 +103,7 @@ final class ug extends qb {
         try {
           this.a(true, -16257, param0, param2);
           if (param1 != 20938) {
-            ug.a(false, 34, (CharSequence) null);
+            MidiPcmStream.a(false, 34, (CharSequence) null);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ug.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -156,7 +156,7 @@ final class ug extends qb {
               if (var3.field_r < 0) {
                 this.field_u[var3.field_p][var3.field_y] = null;
               }
-              var3.a(param1);
+              var3.unlink(param1);
             }
             var3 = (lp) (this.field_R.field_q.a(4));
             continue;
@@ -256,13 +256,13 @@ final class ug extends qb {
         int var5;
         lp var6;
         int var7_int;
-        va var7;
+        PcmSample var7;
         lp var8;
         lp var9;
         int var10;
         kk var11;
         kk var12;
-        L0: {
+        regionExit1: {
           var10 = DungeonAssault.field_K;
           this.a(true, param2, param3, 64);
           var5 = 109 / ((57 - param1) / 44);
@@ -273,7 +273,7 @@ final class ug extends qb {
               stackIn_9_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
               if (var10 != 0) {
-                break L0;
+                break regionExit1;
               }
               if (stackIn_4_0.field_p == param3 &&
                 var6.field_r < 0) {
@@ -316,16 +316,16 @@ final class ug extends qb {
         var8.field_k = 0;
         var8.field_l = 0;
         if (0 != this.field_o[param3]) {
-          var8.field_v = ni.a(var7, this.a((byte) 46, var8), 0, this.a(var8, false));
+          var8.field_v = PcmSampleStream.a(var7, this.a((byte) 46, var8), 0, this.a(var8, false));
           stackIn_18_1 = var8;
           stackIn_18_2 = 4917;
           stackIn_19_3 = !(var11.field_r[param2] >= 0);
           this.a(stackIn_18_1, stackIn_18_2, stackIn_19_3);
           if (var10 != 0) {
-            var8.field_v = ni.a(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
+            var8.field_v = PcmSampleStream.a(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
           }
         } else {
-          var8.field_v = ni.a(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
+          var8.field_v = PcmSampleStream.a(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
         }
         if (var11.field_r[param2] < 0) {
           var8.field_v.e(-1);
@@ -378,7 +378,7 @@ final class ug extends qb {
             return false;
           }
           if (0 <= param0.field_r) {
-            param0.a(false);
+            param0.unlink(false);
             if (param0.field_D > 0 &&
               param0 == this.field_r[param0.field_p][param0.field_D]) {
               this.field_r[param0.field_p][param0.field_D] = null;
@@ -403,7 +403,7 @@ final class ug extends qb {
     private final void a(boolean param0, int param1, int param2) {
         this.field_B[param2] = param1;
         if (param0) {
-          ug.a(false, 29);
+          MidiPcmStream.a(false, 29);
         }
     }
 
@@ -633,8 +633,8 @@ final class ug extends qb {
         }
     }
 
-    final synchronized qb d() {
-        return (qb) ((Object) this.field_R);
+    final synchronized PcmStream d() {
+        return (PcmStream) ((Object) this.field_R);
     }
 
     final synchronized void c(byte param0, int param1, int param2) {
@@ -691,7 +691,7 @@ final class ug extends qb {
         }
     }
 
-    final synchronized qb c() {
+    final synchronized PcmStream c() {
         return null;
     }
 
@@ -740,7 +740,7 @@ final class ug extends qb {
         field_y = null;
         field_M = null;
         if (param0 != 0) {
-          ug.a(true, -75);
+          MidiPcmStream.a(true, -75);
         }
         field_w = null;
     }
@@ -863,7 +863,7 @@ final class ug extends qb {
           if (param3.field_r >= 0 && (null == param3.field_v ||
             param3.field_v.f())) {
             param3.b(true);
-            param3.a(false);
+            param3.unlink(false);
             if (param3.field_D > 0) {
               if (this.field_r[param3.field_p][param3.field_D] != param3) {
                 return true;
@@ -988,7 +988,7 @@ final class ug extends qb {
           }
           param3.b(true);
           if (param3.field_r >= 0) {
-            param3.a(false);
+            param3.unlink(false);
             if (0 < param3.field_D &&
               this.field_r[param3.field_p][param3.field_D] == param3) {
               this.field_r[param3.field_p][param3.field_D] = null;
@@ -1363,7 +1363,7 @@ final class ug extends qb {
 
     }
 
-    final synchronized boolean a(boolean param0, lc param1, nh param2, int param3, vh param4) {
+    final synchronized boolean a(boolean param0, lc param1, ResourceArchive param2, int param3, vh param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -1394,7 +1394,7 @@ final class ug extends qb {
           var8 = (mk) (param4.field_j.a(true));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
-            var9 = (int)var8.field_h;
+            var9 = (int)var8.key;
             var10 = (kk) (this.field_W.a((long)var9, 8));
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;
@@ -1530,7 +1530,7 @@ final class ug extends qb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param0.field_I.field_k.length;
+          var4_int = param0.field_I.data.length;
           boolean decompiledSharedTail0 = (!(param2) ||
             !(param0.field_I.field_j));
           if (!decompiledSharedTail0) {
@@ -1548,7 +1548,7 @@ final class ug extends qb {
           }
           param0.field_v.i(var5);
           if (param1 != 4917) {
-            this.a(false, (lc) null, (nh) null, 98, (vh) null);
+            this.a(false, (lc) null, (ResourceArchive) null, 98, (vh) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1565,7 +1565,7 @@ final class ug extends qb {
         }
     }
 
-    public ug() {
+    public MidiPcmStream() {
         this.field_L = 256;
         this.field_q = new int[16];
         this.field_u = new lp[16][128];
@@ -1593,7 +1593,7 @@ final class ug extends qb {
         this.d(true, 16);
     }
 
-    ug(ug param0) {
+    MidiPcmStream(MidiPcmStream param0) {
         this.field_L = 256;
         this.field_q = new int[16];
         this.field_u = new lp[16][128];

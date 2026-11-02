@@ -7,10 +7,10 @@ final class ho implements Iterator {
     static String field_f;
     static String field_c;
     static String field_i;
-    private ne field_g;
+    private IntrusiveNode field_g;
     static String field_b;
     static String field_e;
-    private ne field_d;
+    private IntrusiveNode field_d;
     private qi field_h;
     private int field_a;
 
@@ -20,14 +20,14 @@ final class ho implements Iterator {
         if (param0 <= 51) {
           field_i = (String) null;
         }
-        this.field_d = this.field_h.field_d[0].field_e;
+        this.field_d = this.field_h.field_d[0].previous;
     }
 
     public final void remove() {
         if (this.field_g == null) {
           throw new IllegalStateException();
         }
-        this.field_g.a(false);
+        this.field_g.unlink(false);
         this.field_g = null;
     }
 
@@ -80,13 +80,13 @@ final class ho implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        ne var1;
+        IntrusiveNode var1;
         int var2;
         var2 = DungeonAssault.field_K;
         if (this.field_h.field_d[-1 + this.field_a] != this.field_d) {
           var1 = this.field_d;
           this.field_g = var1;
-          this.field_d = var1.field_e;
+          this.field_d = var1.previous;
           return var1;
         }
         do {
@@ -95,10 +95,10 @@ final class ho implements Iterator {
           }
           fieldTemp$0 = this.field_a;
           this.field_a = this.field_a + 1;
-          var1 = this.field_h.field_d[fieldTemp$0].field_e;
+          var1 = this.field_h.field_d[fieldTemp$0].previous;
         } while (this.field_h.field_d[this.field_a - 1] == var1);
         this.field_g = var1;
-        this.field_d = var1.field_e;
+        this.field_d = var1.previous;
         return var1;
     }
 
@@ -115,13 +115,13 @@ final class ho implements Iterator {
           }
           fieldTemp$0 = this.field_a;
           this.field_a = this.field_a + 1;
-          if (this.field_h.field_d[fieldTemp$0].field_e == this.field_h.field_d[-1 + this.field_a]) {
+          if (this.field_h.field_d[fieldTemp$0].previous == this.field_h.field_d[-1 + this.field_a]) {
             this.field_d = this.field_h.field_d[this.field_a - 1];
             continue;
           }
           break;
         }
-        this.field_d = this.field_h.field_d[-1 + this.field_a].field_e;
+        this.field_d = this.field_h.field_d[-1 + this.field_a].previous;
         return true;
     }
 
@@ -143,7 +143,7 @@ final class ho implements Iterator {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param0.field_e.peekEvent()) {
-              pj.a(0, 1L);
+              CombatState.a(0, 1L);
               continue;
             }
             break;

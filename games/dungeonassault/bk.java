@@ -49,12 +49,12 @@ final class bk implements Runnable {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          ec var2 = null;
-          if (4 <= hb.field_a.field_h) {
-            if (hb.field_a.field_c == -1) {
+          PacketBuffer var2 = null;
+          if (4 <= Raider.field_a.field_h) {
+            if (Raider.field_a.field_c == -1) {
               return 3;
             }
-            if (hb.field_a.field_c == -2) {
+            if (Raider.field_a.field_c == -2) {
               return 4;
             }
             return 1;
@@ -75,11 +75,11 @@ final class bk implements Runnable {
             }
             if (ba.field_f == 2) {
               pe.field_l = new rk((java.net.Socket) (qi.field_e.field_f), kn.field_f);
-              var2 = new ec(13);
-              rg.a(ri.field_b, var2, pj.field_a, param0 + 127, j.field_J);
-              var2.a(6, 15);
+              var2 = new PacketBuffer(13);
+              rg.a(ri.field_b, var2, CombatState.field_a, param0 + 127, j.field_J);
+              var2.writeByte(6, 15);
               var2.a((byte) 63, ng.field_I);
-              pe.field_l.b(var2.field_m, false, 0, 13);
+              pe.field_l.b(var2.payload, false, 0, 13);
               ba.field_f = ba.field_f + 1;
               ce.field_s = kd.c(param0 - 2456) + 30000L;
             }
@@ -105,7 +105,7 @@ final class bk implements Runnable {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            hb.field_a.a(pe.field_l, kn.field_c, (byte) 118);
+            Raider.field_a.a(pe.field_l, kn.field_c, (byte) 118);
             pe.field_l = null;
             ba.field_f = 0;
             qi.field_e = null;
@@ -188,7 +188,7 @@ final class bk implements Runnable {
           var5 = 1;
           var4 = 1;
         }
-        pj.field_e = vf.a(var5 * var2, var2 * var4, (byte) 84);
+        CombatState.field_e = vf.a(var5 * var2, var2 * var4, (byte) 84);
     }
 
     public final void run() {
@@ -205,7 +205,7 @@ final class bk implements Runnable {
                 var2.a();
               }
             }
-            pj.a(0, 10L);
+            CombatState.a(0, 10L);
             Object var5 = (Object) null;
             ho.a(this.field_h, (Object) null, (byte) -32);
           }

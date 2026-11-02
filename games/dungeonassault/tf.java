@@ -33,10 +33,10 @@ final class tf {
             nf.d(0);
             return false;
           }
-          if (null != ll.field_r) {
+          if (null != DualLinkNode.field_r) {
             tp.a(param1 - 1041792311, 75.0f, i.field_s);
             g.a(fi.d(false), param1 ^ 1041775506);
-            ll.field_r = null;
+            DualLinkNode.field_r = null;
             nf.d(0);
             return false;
           }

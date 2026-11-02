@@ -86,7 +86,7 @@ final class bi {
         return bi.a(var4);
     }
 
-    final void a(ec param0, fh param1) {
+    final void a(PacketBuffer param0, fh param1) {
         int var3;
         int var4;
         int var5;

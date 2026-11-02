@@ -5,7 +5,7 @@ final class jb extends nk implements vg {
     static int[] field_Tb;
     static ai field_Pb;
     private rg field_Ob;
-    static nh field_Qb;
+    static ResourceArchive field_Qb;
     static String field_Nb;
     private boolean field_Rb;
     static int[] field_Sb;
@@ -42,14 +42,14 @@ final class jb extends nk implements vg {
           if (param0 == -90) {
             return super.f((byte) -90);
           }
-          field_Qb = (nh) null;
+          field_Qb = (ResourceArchive) null;
           return super.f((byte) -90);
         }
         if (this.field_Rb) {
           if (param0 == -90) {
             return super.f((byte) -90);
           }
-          field_Qb = (nh) null;
+          field_Qb = (ResourceArchive) null;
           return super.f((byte) -90);
         }
         var2 = pi.a((byte) 80);
@@ -59,7 +59,7 @@ final class jb extends nk implements vg {
         if (param0 == -90) {
           return super.f((byte) -90);
         }
-        field_Qb = (nh) null;
+        field_Qb = (ResourceArchive) null;
         return super.f((byte) -90);
     }
 

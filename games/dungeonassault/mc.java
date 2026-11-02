@@ -8,7 +8,7 @@ class mc extends hh {
     public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
-            ll.a(2, param2 + param1.field_q, param1.field_x, param1.field_s, param3 + param1.field_v);
+            DualLinkNode.a(2, param2 + param1.field_q, param1.field_x, param1.field_s, param3 + param1.field_v);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -87,8 +87,8 @@ class mc extends hh {
               var4_int = var4_int | 1 << var5;
             }
           }
-          ac.field_B.i(param1, -97);
-          ac.field_B.a(6, var4_int);
+          ac.field_B.writeShort(param1, -97);
+          ac.field_B.writeByte(6, var4_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

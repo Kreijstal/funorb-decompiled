@@ -9,7 +9,7 @@ final class fi extends qe {
     private kl field_z;
     private tf field_A;
     private cn field_C;
-    static nh field_u;
+    static ResourceArchive field_u;
     private rh field_s;
     private int field_B;
     private int field_y;
@@ -89,7 +89,7 @@ final class fi extends qe {
         int[] var14;
         var4 = nk.field_Fb[param1];
         var5 = this.a(-13, var4);
-        var6 = ne.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.b(var5);
         var7 = this.a((byte) -4, param1);
         var8 = this.a(param1, (byte) -93);
         var9 = this.a(false, param1);
@@ -105,7 +105,7 @@ final class fi extends qe {
         if (null == this.field_w[param1] ||
           var5 != this.field_w[param1].field_f ||
           this.field_w[param1].field_h != var11) {
-          this.field_w[param1] = new tf(ne.field_c, var5, var14);
+          this.field_w[param1] = new tf(IntrusiveNode.field_c, var5, var14);
         }
         of.field_j.h(640 - of.field_j.field_y >> 1, var9 - 4);
         this.field_w[param1].b(var9, 32, var10);
@@ -244,11 +244,11 @@ final class fi extends qe {
         na.field_w.a(320, 25, 1699);
         if (this.field_A == null ||
           this.field_A.field_f != ie.field_j[mo.field_e]) {
-          this.field_A = new tf(ne.field_c, ie.field_j[mo.field_e], ag.field_c);
+          this.field_A = new tf(IntrusiveNode.field_c, ie.field_j[mo.field_e], ag.field_c);
         }
         this.field_A.b(90, 32, 87);
         this.a(87, 3740, 200, en.field_a[mo.field_e], 446, 125);
-        wk.a(552, bj.a(mo.field_e, 77), ne.field_c, 366, ag.field_c, 31139);
+        wk.a(552, bj.a(mo.field_e, 77), IntrusiveNode.field_c, 366, ag.field_c, 31139);
         if (kn.field_e) {
           this.field_z.a((byte) -64);
           var2Lifetime2 = nk.field_Jb.field_i - 1;
@@ -272,7 +272,7 @@ final class fi extends qe {
               var3 = an.field_D;
             }
           }
-          var5 = ne.field_c.field_E + ne.field_c.field_H;
+          var5 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
           if (this.field_B != 0) {
             var9 = 204;
             var7 = 169;
@@ -284,7 +284,7 @@ final class fi extends qe {
             var6 = 77;
             var8 = 486;
           }
-          pi.a(0, (String) (var4), cm.field_M, 30 + var6, ne.field_c, var5 + var7);
+          pi.a(0, (String) (var4), cm.field_M, 30 + var6, IntrusiveNode.field_c, var5 + var7);
           var7 = var7 + (5 + var5);
           la.field_b.a((String) (var3), 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
         }
@@ -347,14 +347,14 @@ final class fi extends qe {
     private final void b(int param0, int param1) {
         int var3 = nk.field_Fb[param0];
         String var4 = this.a(-13, var3);
-        int var5 = ne.field_c.b(var4);
-        int var6 = ne.field_c.field_E + ne.field_c.field_H;
+        int var5 = IntrusiveNode.field_c.b(var4);
+        int var6 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
         if (param1 > -85) {
           return;
         }
         cn var7 = new cn(var5, var6);
         jh.a(var7);
-        ne.field_c.b(var4, 0, ne.field_c.field_H, 16760960, -1);
+        IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         this.field_v = rb.a(8, var7, 16760960, (byte) 77);
         this.field_C = rb.a(16, var7, 6307840, (byte) -105);
@@ -577,7 +577,7 @@ final class fi extends qe {
         int[] var14;
         var4 = nk.field_Fb[param1];
         var5 = this.a(param0 ^ -14, var4);
-        var6 = ne.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.b(var5);
         if (param0 != 1) {
           return;
         }
@@ -596,7 +596,7 @@ final class fi extends qe {
         if (null == this.field_w[param1] ||
           var5 != this.field_w[param1].field_f ||
           this.field_w[param1].field_h != var11) {
-          this.field_w[param1] = new tf(ne.field_c, var5, var14);
+          this.field_w[param1] = new tf(IntrusiveNode.field_c, var5, var14);
         }
         this.field_w[param1].b(var9, param0 ^ 33, var10);
         if (param2) {
@@ -621,10 +621,10 @@ final class fi extends qe {
     }
 
     private final String a(int param0, int param1) {
-        String var3 = ll.field_m[param1];
+        String var3 = DualLinkNode.field_m[param1];
         if (param1 == 10 &&
           (hl.field_f == 0 || 0 == dc.field_z || hl.field_f == 12 || dc.field_z == 12 || hl.field_f == 1 || dc.field_z == 1)) {
-          var3 = ll.field_m[9];
+          var3 = DualLinkNode.field_m[9];
         }
         if (param0 != -13) {
           return (String) null;

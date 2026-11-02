@@ -8,16 +8,16 @@ final class hp {
     static cf[] field_c;
 
     final static void a(int param0, byte param1) {
-        wj var2 = ac.field_B;
+        CipherPacketBuffer var2 = ac.field_B;
         var2.d((byte) -88, param0);
         if (param1 > 66) {
-          var2.a(6, 1);
-          var2.a(6, 0);
+          var2.writeByte(6, 1);
+          var2.writeByte(6, 0);
           return;
         }
         field_a = (String) null;
-        var2.a(6, 1);
-        var2.a(6, 0);
+        var2.writeByte(6, 1);
+        var2.writeByte(6, 0);
     }
 
     public static void a(int param0) {

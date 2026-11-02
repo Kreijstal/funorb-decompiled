@@ -72,7 +72,7 @@ abstract class l {
         return var2;
     }
 
-    final static fa a(ni param0, int param1) {
+    final static fa a(PcmSampleStream param0, int param1) {
         fa var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
@@ -204,14 +204,14 @@ abstract class l {
           if (bk.field_b != null) {
             try {
               bk.field_b.a(0L, -26296);
-              bk.field_b.a(ra.field_c.field_o, -79, 24, ra.field_c.field_m);
+              bk.field_b.a(ra.field_c.position, -79, 24, ra.field_c.payload);
             } catch (Exception exception) {
             }
           }
           if (param0) {
             return;
           }
-          ra.field_c.field_o = ra.field_c.field_o + 24;
+          ra.field_c.position = ra.field_c.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

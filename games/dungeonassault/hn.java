@@ -18,8 +18,8 @@ final class hn extends kl {
           this.field_p = param0;
           this.field_n = param1;
           this.field_q = param2;
-          this.field_m = tn.a((-jm.field_i.field_y + this.field_a >> 1) + this.field_k, -(2 * jm.field_i.field_v) + (this.field_i + this.field_j) - 24, ne.field_c, jm.field_i, -39, "Accept");
-          this.field_r = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -16 + (this.field_i + (this.field_j - jm.field_i.field_v)), ne.field_c, jm.field_i, -70, "Cancel");
+          this.field_m = tn.a((-jm.field_i.field_y + this.field_a >> 1) + this.field_k, -(2 * jm.field_i.field_v) + (this.field_i + this.field_j) - 24, IntrusiveNode.field_c, jm.field_i, -39, "Accept");
+          this.field_r = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -16 + (this.field_i + (this.field_j - jm.field_i.field_v)), IntrusiveNode.field_c, jm.field_i, -70, "Cancel");
           this.field_f.a(this.field_m, false);
           this.field_f.a(this.field_r, false);
         } catch (RuntimeException runtimeException) {
@@ -106,8 +106,8 @@ final class hn extends kl {
         super.b(117);
         int var2 = (this.field_a >> 1) + this.field_k;
         int var3 = 10 + this.field_j;
-        ne.field_c.c(this.field_p, var2, var3 + ne.field_c.field_H, 16777215, -1);
-        var3 = var3 + (10 + ne.field_c.field_H);
+        IntrusiveNode.field_c.c(this.field_p, var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
+        var3 = var3 + (10 + IntrusiveNode.field_c.field_H);
         int var4 = 50 + this.field_j;
         qe.b(this.field_k + 32, var4, -64 + this.field_a, 4, 0, 128, 128);
         int var5 = 119 / ((param0 - 41) / 63);
@@ -144,9 +144,9 @@ final class hn extends kl {
           }
         }
         qe.field_i[0].h(-50 + var2, var4 + 20);
-        ne.field_c.b(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
+        IntrusiveNode.field_c.b(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
         qe.field_i[1].h(var2, var4 + 20);
-        ne.field_c.b(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
+        IntrusiveNode.field_c.b(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
         ue.field_i[1].h(this.field_k + 20, 24 + this.field_j);
         ue.field_i[0].h(-36 + (this.field_a + this.field_k), this.field_j + 24);
     }

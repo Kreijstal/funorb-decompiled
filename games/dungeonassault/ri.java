@@ -13,17 +13,17 @@ final class ri {
     final static hh a(byte param0) {
         if (param0 <= 25) {
           field_d = (cn[]) null;
-          if (null == ne.field_b) {
-            ne.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
-            return ne.field_b;
+          if (null == IntrusiveNode.field_b) {
+            IntrusiveNode.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
+            return IntrusiveNode.field_b;
           }
-          return ne.field_b;
+          return IntrusiveNode.field_b;
         }
-        if (null != ne.field_b) {
-          return ne.field_b;
+        if (null != IntrusiveNode.field_b) {
+          return IntrusiveNode.field_b;
         }
-        ne.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
-        return ne.field_b;
+        IntrusiveNode.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
+        return IntrusiveNode.field_b;
     }
 
     final static void a(String param0, String[] param1, int param2, int param3) {
@@ -47,21 +47,21 @@ final class ri {
           wd.field_d = dh.field_b;
           if (param2 != 255) {
             if (param2 < 100) {
-              ll.field_p = p.a(param2, param0, -28323);
+              DualLinkNode.field_p = p.a(param2, param0, -28323);
               return;
             }
             if (param2 > 105) {
-              ll.field_p = p.a(param2, param0, -28323);
+              DualLinkNode.field_p = p.a(param2, param0, -28323);
               return;
             }
             var4 = param1;
             ok.a(2, var4);
-            ll.field_p = em.a(param1, 8082);
+            DualLinkNode.field_p = em.a(param1, 8082);
             return;
           }
           stackIn_11_0 = -49;
           stackIn_12_1 = !(wk.field_g >= 13);
-          ll.field_p = l.$cfr$intArgs$a$fb458fdecc21(stackIn_11_0, stackIn_12_1);
+          DualLinkNode.field_p = l.$cfr$intArgs$a$fb458fdecc21(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           ok.a(2, (String[]) null);
           return;

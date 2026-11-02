@@ -187,16 +187,16 @@ final class g extends ok {
     }
 
     final static void a(int param0, ak param1, byte param2) {
-        wj var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = ac.field_B;
           var5.d((byte) -118, param0);
-          var5.field_o = var5.field_o + 1;
-          var4 = var5.field_o;
-          var5.a(6, 1);
-          var5.a(6, param1.field_q);
-          var5.a(6, param1.field_t);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(6, 1);
+          var5.writeByte(6, param1.field_q);
+          var5.writeByte(6, param1.field_t);
           var5.a((byte) 63, param1.field_r);
           var5.a((byte) 63, param1.field_l);
           if (param2 != 50) {
@@ -205,7 +205,7 @@ final class g extends ok {
           var5.a((byte) 63, param1.field_s);
           var5.a((byte) 63, param1.field_i);
           var5.c((byte) -106, var4);
-          var5.c(var5.field_o - var4, -1);
+          var5.c(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

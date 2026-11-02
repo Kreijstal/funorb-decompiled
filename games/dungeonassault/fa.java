@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends ne {
+final class fa extends IntrusiveNode {
     static String field_k;
     static boolean field_j;
     int field_l;
-    ne field_o;
+    IntrusiveNode field_o;
     static String field_m;
     static int field_i;
-    ni field_n;
+    PcmSampleStream field_n;
 
     final static int a(byte param0, int param1, int param2) {
         if (-1 == ce.field_p) {
@@ -117,7 +117,7 @@ final class fa extends ne {
         this.field_n.h(128 + oo.field_d * param0 >> 8);
     }
 
-    fa(ni param0, ne param1) {
+    fa(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_l = param0.i();

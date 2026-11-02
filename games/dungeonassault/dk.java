@@ -35,7 +35,7 @@ final class dk implements ca {
           }
           var6_int = param1.field_q + param2;
           var7 = param3 + param1.field_v;
-          ll.a(param0 ^ 32, var6_int, param1.field_x, param1.field_s, var7);
+          DualLinkNode.a(param0 ^ 32, var6_int, param1.field_x, param1.field_s, var7);
           var8 = sl.field_c[1];
           if (param1 instanceof ck &&
             ((ck) (param1)).field_E) {
@@ -44,7 +44,7 @@ final class dk implements ca {
           if (!param1.a((byte) 28)) {
             return;
           }
-          in.a(2 + var6_int, -4 + param1.field_s, param1.field_x - 4, var7 + 2, param0 - 33);
+          NetworkGameClient.a(2 + var6_int, -4 + param1.field_s, param1.field_x - 4, var7 + 2, param0 - 33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

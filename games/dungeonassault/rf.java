@@ -44,7 +44,7 @@ abstract class rf extends ii {
         this.b(0, param2, -param1 + vf.field_x >> 1, -param2 + hn.field_t >> 1, param1);
     }
 
-    final static q[] a(int param0, byte param1, nh param2, int param3) {
+    final static q[] a(int param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         q[] stackIn_5_0 = null;
         q[] stackIn_7_0 = null;
@@ -98,10 +98,10 @@ abstract class rf extends ii {
         q var1 = var4;
         var4.field_i[1] = 65793;
         for (var2 = 0; var2 < 6; var2++) {
-          og.a(var2 * 2 + 1, (byte) -75, 10 - var2, var1, 5 - var2, (byte) 1);
+          KeyboardInput.a(var2 * 2 + 1, (byte) -75, 10 - var2, var1, 5 - var2, (byte) 1);
         }
         for (var2Lifetime1 = 6; var2Lifetime1 < 11; var2Lifetime1++) {
-          og.a(3, (byte) -78, -var2Lifetime1 + 10, var1, 4, (byte) 1);
+          KeyboardInput.a(3, (byte) -78, -var2Lifetime1 + 10, var1, 4, (byte) 1);
         }
         return var1;
     }
@@ -139,8 +139,8 @@ abstract class rf extends ii {
 
     private final int j(int param0) {
         if (param0 < 61) {
-          nh var3 = (nh) null;
-          rf.a(0, (byte) 10, (nh) null, -24);
+          ResourceArchive var3 = (ResourceArchive) null;
+          rf.a(0, (byte) 10, (ResourceArchive) null, -24);
         }
         return this.field_T ? this.field_R.i(32) != this ? 0 : 256 : 0;
     }

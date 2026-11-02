@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class m implements dp {
-    static md field_a;
+    static IntrusiveDeque field_a;
     private long field_b;
     static String field_f;
     static ad field_d;
@@ -69,7 +69,7 @@ abstract class m implements dp {
           field_e = null;
           return;
         }
-        field_a = (md) null;
+        field_a = (IntrusiveDeque) null;
         field_g = null;
         field_d = null;
         field_f = null;
@@ -120,7 +120,7 @@ abstract class m implements dp {
     abstract od b(boolean param0);
 
     static {
-        field_a = new md();
+        field_a = new IntrusiveDeque();
         field_f = "Unfortunately we are unable to create an account for you at this time.";
         field_g = "OK";
         field_d = new ad(4, 1, 1, 1);

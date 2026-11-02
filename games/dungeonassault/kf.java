@@ -11,7 +11,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
     static String field_q;
     static String field_i;
     static qg field_o;
-    static nh field_p;
+    static ResourceArchive field_p;
     private java.awt.image.ImageConsumer field_n;
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {

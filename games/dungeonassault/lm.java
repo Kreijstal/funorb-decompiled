@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-class lm extends ne {
+class lm extends IntrusiveNode {
     int field_y;
     static byte[][] field_l;
     boolean field_u;
@@ -36,8 +36,8 @@ class lm extends ne {
           RuntimeException var1 = null;
           var4 = DungeonAssault.field_K;
           try {
-            if (hb.field_a != null) {
-              hb.field_a.a(-1016);
+            if (Raider.field_a != null) {
+              Raider.field_a.a(-1016);
             }
             if (null != na.field_y) {
               na.field_y.a(-65);
@@ -726,9 +726,9 @@ class lm extends ne {
           this.a(param2, param0, this, true);
           var5 = this.a((byte) 95) ? 1 : 0;
           if (param3) {
-            if (0 != pj.field_r &&
+            if (0 != CombatState.field_r &&
               var5 != 0) {
-              this.a(param2, param0, hj.field_S, pj.field_r, eh.field_h, this, (byte) -84);
+              this.a(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
             }
             if (no.field_d != 0) {
               if (!this.a(this, no.field_d, hm.field_k, param2, lc.field_c, (byte) 0, param0)) {
@@ -781,7 +781,7 @@ class lm extends ne {
             nk.a(this.c((byte) 34), (byte) 23);
             return param3;
           }
-          if (0 != pj.field_r) {
+          if (0 != CombatState.field_r) {
             if (var5 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (no.field_d != 0) {
@@ -815,7 +815,7 @@ class lm extends ne {
               nk.a(this.c((byte) 34), (byte) 23);
               return param3;
             }
-            this.a(param2, param0, hj.field_S, pj.field_r, eh.field_h, this, (byte) -84);
+            this.a(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
           }
           if (no.field_d != 0) {
             if (this.a(this, no.field_d, hm.field_k, param2, lc.field_c, (byte) 0, param0)) {
@@ -871,7 +871,7 @@ class lm extends ne {
         this.a(param2, param0, this, true);
         var5Lifetime1 = this.a((byte) 95) ? 1 : 0;
         if (param3) {
-          if (0 != pj.field_r) {
+          if (0 != CombatState.field_r) {
             if (var5Lifetime1 == 0) {
               if (no.field_d != 0) {
                 if (this.a(this, no.field_d, hm.field_k, param2, lc.field_c, (byte) 0, param0)) {
@@ -894,9 +894,9 @@ class lm extends ne {
               nk.a(this.c((byte) 34), (byte) 23);
               return param3;
             }
-            this.a(param2, param0, hj.field_S, pj.field_r, eh.field_h, this, (byte) -84);
+            this.a(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
           }
-          sharedTailExit_5: {
+          regionExit1: {
             if (no.field_d != 0) {
               if (this.a(this, no.field_d, hm.field_k, param2, lc.field_c, (byte) 0, param0)) {
                 param3 = false;
@@ -916,7 +916,7 @@ class lm extends ne {
                         ah.field_b = null;
                       }
                     }
-                    break sharedTailExit_5;
+                    break regionExit1;
                   }
                 }
               }
@@ -953,8 +953,8 @@ class lm extends ne {
           nk.a(this.c((byte) 34), (byte) 23);
           return param3;
         }
-        if (0 != pj.field_r) {
-          this.a(param2, param0, hj.field_S, pj.field_r, eh.field_h, this, (byte) -84);
+        if (0 != CombatState.field_r) {
+          this.a(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
         }
         if (no.field_d != 0) {
           if (this.a(this, no.field_d, hm.field_k, param2, lc.field_c, (byte) 0, param0)) {

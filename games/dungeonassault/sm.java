@@ -58,7 +58,7 @@ final class sm {
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = ci.field_q.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(wj.field_s).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(CipherPacketBuffer.field_s).append("&u=");
             if (pe.field_o != null) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -66,11 +66,11 @@ final class sm {
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + ne.field_g;
+              stackIn_15_6 = "" + IntrusiveNode.field_g;
             }
             var4 = ((qg) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(qg.field_c).append("&v2=").append(qg.field_p).append("&e=").append(var10).toString()));
             while (var4.field_c == 0) {
-              pj.a(0, 1L);
+              CombatState.a(0, 1L);
             }
             if (param1 == var4.field_c) {
               var5 = (DataInputStream) (var4.field_f);
@@ -100,7 +100,7 @@ final class sm {
           }
           if (param1 != null &&
             param1.length() >= wa.field_k) {
-            if (param1.length() > md.field_b) {
+            if (param1.length() > IntrusiveDeque.field_b) {
               return true;
             }
             return false;

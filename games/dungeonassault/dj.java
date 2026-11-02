@@ -5,20 +5,20 @@ import java.io.*;
 
 final class dj {
     static volatile int field_d;
-    private ne field_b;
+    private IntrusiveNode field_b;
     static int field_a;
-    private md field_e;
+    private IntrusiveDeque field_e;
     static String field_c;
 
-    final ne c(int param0) {
-        ne var2 = null;
-        ne var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 17756) {
-          ne var3 = (ne) null;
-          this.a((ne) null, true);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, true);
           var2 = this.field_b;
           if (var2 != this.field_e.field_c) {
-            this.field_b = var2.field_e;
+            this.field_b = var2.previous;
             return var2;
           }
           this.field_b = null;
@@ -26,7 +26,7 @@ final class dj {
         }
         var2Lifetime1 = this.field_b;
         if (var2Lifetime1 != this.field_e.field_c) {
-          this.field_b = var2Lifetime1.field_e;
+          this.field_b = var2Lifetime1.previous;
           return var2Lifetime1;
         }
         this.field_b = null;
@@ -43,19 +43,19 @@ final class dj {
           Throwable decompiledCaughtException = null;
           IOException var15 = null;
           RuntimeException var15_ref = null;
-          ec var16 = null;
+          PacketBuffer var16 = null;
           try {
-            ra.field_c = new wj(param10);
-            ac.field_B = new wj(param1);
+            ra.field_c = new CipherPacketBuffer(param10);
+            ac.field_B = new CipherPacketBuffer(param1);
             ld.field_g = param9;
-            mh.field_g = param8;
+            MouseInput.field_g = param8;
             kn.field_b = param0;
             fa.field_j = param11;
             an.field_E = param3;
             dn.field_Q = param2;
             if (param12 != -27) {
-              var16 = (ec) null;
-              dj.a((ec) null, (byte) 79);
+              var16 = (PacketBuffer) null;
+              dj.a((PacketBuffer) null, (byte) 79);
             }
             l.field_b = param7;
             ii.field_D = param4;
@@ -134,11 +134,11 @@ final class dj {
         }
     }
 
-    final ne a(ne param0, boolean param1) {
-        ne var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        ne stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -148,16 +148,16 @@ final class dj {
             field_a = 16;
           }
           if (param0 == null) {
-            var3 = this.field_e.field_c.field_a;
+            var3 = this.field_e.field_c.next;
           } else {
             var3 = param0;
           }
           if (var3 == this.field_e.field_c) {
             this.field_b = null;
             stackIn_8_0 = null;
-            return (ne) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_b = var3.field_a;
+          this.field_b = var3.next;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,13 +174,13 @@ final class dj {
         }
     }
 
-    final ne b(int param0) {
-        ne var2 = this.field_e.field_c.field_a;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_e.field_c.next;
         if (var2 == this.field_e.field_c) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_a;
+        this.field_b = var2.next;
         if (param0 == -1225818257) {
           return var2;
         }
@@ -188,32 +188,32 @@ final class dj {
         return var2;
     }
 
-    final ne a(boolean param0, ne param1) {
-        ne var3 = null;
+    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        ne stackIn_5_0 = null;
+        IntrusiveNode stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        ne stackIn_11_0 = null;
+        IntrusiveNode stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_e.field_c.field_e;
+            var3 = this.field_e.field_c.previous;
           } else {
             var3 = param1;
           }
           if (!param0) {
-            stackIn_5_0 = (ne) null;
+            stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
           if (var3 == this.field_e.field_c) {
             this.field_b = null;
             stackIn_9_0 = null;
-            return (ne) (stackIn_9_0);
+            return (IntrusiveNode) (stackIn_9_0);
           }
-          this.field_b = var3.field_e;
+          this.field_b = var3.previous;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -230,13 +230,13 @@ final class dj {
         }
     }
 
-    final ne d(int param0) {
-        ne var2 = this.field_b;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_e.field_c == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_a;
+        this.field_b = var2.next;
         if (param0 == 1834857157) {
           return var2;
         }
@@ -244,18 +244,18 @@ final class dj {
         return var2;
     }
 
-    final ne a(int param0) {
-        ne var2 = this.field_e.field_c.field_e;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_e.field_c.previous;
         if (var2 == this.field_e.field_c) {
           this.field_b = null;
           return null;
         }
         if (param0 == -479592473) {
-          this.field_b = var2.field_e;
+          this.field_b = var2.previous;
           return var2;
         }
         field_c = (String) null;
-        this.field_b = var2.field_e;
+        this.field_b = var2.previous;
         return var2;
     }
 
@@ -296,7 +296,7 @@ final class dj {
         }
     }
 
-    dj(md param0) {
+    dj(IntrusiveDeque param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -304,7 +304,7 @@ final class dj {
         }
     }
 
-    final static void a(ec param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

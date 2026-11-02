@@ -6,7 +6,7 @@ class ok extends ko {
     private boolean field_Cb;
     private cn field_C;
     private int field_Z;
-    private md field_F;
+    private IntrusiveDeque field_F;
     private int field_xb;
     static int[] field_S;
     private int field_vb;
@@ -290,8 +290,8 @@ class ok extends ko {
           if (param0 != 2) {
             field_Y = (tf) null;
           }
-          if (null != pj.field_c) {
-            pj.field_c.field_P.a((byte) -126, param1);
+          if (null != CombatState.field_c) {
+            CombatState.field_c.field_P.a((byte) -126, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -589,7 +589,7 @@ class ok extends ko {
             this.field_xb = 89;
           }
           if (this.field_F == null) {
-            this.field_F = new md();
+            this.field_F = new IntrusiveDeque();
           }
           this.field_F.a(param0, false);
         } catch (RuntimeException runtimeException) {
@@ -615,7 +615,7 @@ class ok extends ko {
         this.field_J = 256;
         try {
           this.field_D = param3;
-          this.field_h = param0;
+          this.key = param0;
           this.field_gb = param2;
           this.field_B = param5;
           this.field_ob = param4;

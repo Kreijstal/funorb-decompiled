@@ -45,15 +45,15 @@ final class kd {
         sn.a(param0 ^ 61, param0);
     }
 
-    final static void a(int param0, nh param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         qh var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        wj var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        wj var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -65,7 +65,7 @@ final class kd {
           if (param0 != 31913) {
             field_b = (String) null;
           }
-          var8 = new wj(param1.a("logo.fo3d", "", (byte) -113));
+          var8 = new CipherPacketBuffer(param1.a("logo.fo3d", "", (byte) -113));
           var10 = var8;
           var3 = var10.c(true);
           var10.e(false);

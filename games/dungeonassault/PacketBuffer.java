@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ec extends ne {
-    int field_o;
+class PacketBuffer extends IntrusiveNode {
+    int position;
     static String field_r;
     static String[] field_l;
     static fb field_i;
@@ -10,8 +10,8 @@ class ec extends ne {
     static q[] field_j;
     static pp field_n;
     static int field_p;
-    byte[] field_m;
-    static nh field_k;
+    byte[] payload;
+    static ResourceArchive field_k;
 
     final static void a(int param0, int param1, byte param2, cn param3, int param4, int param5) {
         RuntimeException stackIn_31_0 = null;
@@ -91,26 +91,26 @@ class ec extends ne {
         }
     }
 
-    final void i(int param0, int param1) {
+    final void writeShort(int value, int obfuscationGuard) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          fieldTemp$2 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$2] = (byte)(param0 >> 8);
-          if (param1 > -84) {
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(value >> 8);
+          if (obfuscationGuard > -84) {
             this.f(-64);
           }
-          fieldTemp$3 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$3] = (byte)param0;
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)value;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var3), "ec.VA(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "ec.VA(" + value + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -141,7 +141,7 @@ class ec extends ne {
             var8 = param5.charAt(var7 + param1);
             stackIn_187_0 = -1;
             if (var9 == 0) {
-              L3: {
+              regionExit1: {
                 if ((stackIn_187_0 <= ~var8 ||
                   var8 >= 128) &&
                   (var8 < 160 ||
@@ -149,91 +149,91 @@ class ec extends ne {
                   switch (var8) {
                     case 402:
                       param2[var7 + param4] = (byte) -125;
-                      break L3;
+                      break regionExit1;
                     case 8224:
                       param2[var7 + param4] = (byte) -122;
-                      break L3;
+                      break regionExit1;
                     case 8225:
                       param2[var7 + param4] = (byte) -121;
-                      break L3;
+                      break regionExit1;
                     default:
                       switch (var8) {
                         case 8249:
                           param2[param4 + var7] = (byte) -117;
-                          break L3;
+                          break regionExit1;
                         case 8216:
                           param2[param4 + var7] = (byte) -111;
-                          break L3;
+                          break regionExit1;
                         case 8221:
                           param2[param4 + var7] = (byte) -108;
-                          break L3;
+                          break regionExit1;
                         case 8226:
                           param2[param4 + var7] = (byte) -107;
-                          break L3;
+                          break regionExit1;
                         case 8212:
                           param2[param4 + var7] = (byte) -105;
-                          break L3;
+                          break regionExit1;
                         case 732:
                           param2[var7 + param4] = (byte) -104;
-                          break L3;
+                          break regionExit1;
                         case 353:
                           param2[param4 + var7] = (byte) -102;
-                          break L3;
+                          break regionExit1;
                         default:
                           param2[var7 + param4] = (byte) 63;
-                          break L3;
+                          break regionExit1;
                         case 376:
                           param2[param4 + var7] = (byte) -97;
-                          break L3;
+                          break regionExit1;
                         case 382:
                           param2[var7 + param4] = (byte) -98;
-                          break L3;
+                          break regionExit1;
                         case 339:
                           param2[param4 + var7] = (byte) -100;
-                          break L3;
+                          break regionExit1;
                         case 8250:
                           param2[param4 + var7] = (byte) -101;
-                          break L3;
+                          break regionExit1;
                         case 8482:
                           param2[var7 + param4] = (byte) -103;
-                          break L3;
+                          break regionExit1;
                         case 8211:
                           param2[var7 + param4] = (byte) -106;
-                          break L3;
+                          break regionExit1;
                         case 8220:
                           param2[var7 + param4] = (byte) -109;
-                          break L3;
+                          break regionExit1;
                         case 8217:
                           param2[param4 + var7] = (byte) -110;
-                          break L3;
+                          break regionExit1;
                         case 381:
                           param2[var7 + param4] = (byte) -114;
-                          break L3;
+                          break regionExit1;
                         case 338:
                           param2[var7 + param4] = (byte) -116;
-                          break L3;
+                          break regionExit1;
                       }
                     case 352:
                       param2[param4 + var7] = (byte) -118;
-                      break L3;
+                      break regionExit1;
                     case 8240:
                       param2[var7 + param4] = (byte) -119;
-                      break L3;
+                      break regionExit1;
                     case 710:
                       param2[param4 + var7] = (byte) -120;
-                      break L3;
+                      break regionExit1;
                     case 8230:
                       param2[param4 + var7] = (byte) -123;
-                      break L3;
+                      break regionExit1;
                     case 8222:
                       param2[var7 + param4] = (byte) -124;
-                      break L3;
+                      break regionExit1;
                     case 8218:
                       param2[var7 + param4] = (byte) -126;
-                      break L3;
+                      break regionExit1;
                     case 8364:
                       param2[param4 + var7] = (byte) -128;
-                      break L3;
+                      break regionExit1;
                   }
                 }
                 param2[param4 + var7] = (byte)var8;
@@ -267,52 +267,52 @@ class ec extends ne {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void writeByte(int obfuscationGuard, int value) {
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 != 6) {
+          if (obfuscationGuard != 6) {
             this.e(-27, -85);
           }
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$1] = (byte)param1;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)value;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var3), "ec.U(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "ec.U(" + obfuscationGuard + ',' + value + ')');
         }
     }
 
-    final void a(long param0, int param1) {
+    final void writeLong(long value, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         try {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$0] = (byte)(int)(param0 >> 32);
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$1] = (byte)(int)(param0 >> 24);
-          fieldTemp$2 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$2] = (byte)(int)(param0 >> 16);
-          fieldTemp$3 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$3] = (byte)(int)(param0 >> 8);
-          fieldTemp$4 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$4] = (byte)(int)param0;
-          if (param1 != 836) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(int)(value >> 32);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(int)(value >> 24);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(int)(value >> 16);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(int)(value >> 8);
+          fieldTemp$4 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$4] = (byte)(int)value;
+          if (obfuscationGuard != 836) {
             this.c(-37, -35);
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ec.RA(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ec.RA(" + value + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -333,15 +333,15 @@ class ec extends ne {
         int var10 = 0;
         var10 = DungeonAssault.field_K;
         try {
-          var3_int = this.field_o / 8;
-          this.field_o = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           var4 = 0;
           if (!param1) {
             field_n = (pp) null;
           }
           while (var3_int > var4) {
-            var5 = this.h(-56);
-            var6 = this.h(-54);
+            var5 = this.readInt(-56);
+            var6 = this.readInt(-54);
             var7 = 0;
             var8 = -1640531527;
             if (var10 != 0) {
@@ -359,7 +359,7 @@ class ec extends ne {
               }
               break;
             }
-            this.field_o = this.field_o - 8;
+            this.position = this.position - 8;
             this.a((byte) 63, var5);
             this.a((byte) 63, var6);
             var4++;
@@ -468,30 +468,30 @@ class ec extends ne {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          fieldTemp$7 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$7] = (byte)(int)(param0 >> 48);
-          fieldTemp$8 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$8] = (byte)(int)(param0 >> 40);
-          fieldTemp$9 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$9] = (byte)(int)(param0 >> 32);
-          fieldTemp$10 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$10] = (byte)(int)(param0 >> 24);
-          fieldTemp$11 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$11] = (byte)(int)(param0 >> 16);
+          fieldTemp$7 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$7] = (byte)(int)(param0 >> 48);
+          fieldTemp$8 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$8] = (byte)(int)(param0 >> 40);
+          fieldTemp$9 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$9] = (byte)(int)(param0 >> 32);
+          fieldTemp$10 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$10] = (byte)(int)(param0 >> 24);
+          fieldTemp$11 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$11] = (byte)(int)(param0 >> 16);
           if (param1 >= -26) {
             field_l = (String[]) null;
           }
-          fieldTemp$12 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$12] = (byte)(int)(param0 >> 8);
-          fieldTemp$13 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$13] = (byte)(int)param0;
+          fieldTemp$12 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$12] = (byte)(int)(param0 >> 8);
+          fieldTemp$13 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$13] = (byte)(int)param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -500,20 +500,20 @@ class ec extends ne {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void padWithZeros(int obfuscationGuard, int endPosition) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         var4 = DungeonAssault.field_K;
         try {
-          if (param0 != 3) {
+          if (obfuscationGuard != 3) {
             field_p = 126;
           }
-          while (this.field_o < param1) {
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-            this.field_m[fieldTemp$0] = (byte) 0;
+          while (this.position < endPosition) {
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = (byte) 0;
             if (var4 != 0) {
               return;
             }
@@ -522,7 +522,7 @@ class ec extends ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var3), "ec.T(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "ec.T(" + obfuscationGuard + ',' + endPosition + ')');
         }
     }
 
@@ -543,7 +543,7 @@ class ec extends ne {
         }
     }
 
-    final long b(byte param0) {
+    final long readLong(byte obfuscationGuard) {
         long stackIn_1_0 = 0L;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -551,15 +551,15 @@ class ec extends ne {
         long var3 = 0L;
         long var5 = 0L;
         try {
-          var2_int = -31 / ((param0 + 24) / 58);
+          var2_int = -31 / ((obfuscationGuard + 24) / 58);
           var3 = (long)this.f(-112) & 4294967295L;
-          var5 = 4294967295L & (long)this.h(-111);
+          var5 = 4294967295L & (long)this.readInt(-111);
           stackIn_1_0 = (var3 << 32) + var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "ec.SA(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "ec.SA(" + obfuscationGuard + ')');
         }
     }
 
@@ -573,30 +573,30 @@ class ec extends ne {
         int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
         try {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$0] = (byte)(int)(param1 >> 56);
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$1] = (byte)(int)(param1 >> 48);
-          fieldTemp$2 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$2] = (byte)(int)(param1 >> 40);
-          fieldTemp$3 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$3] = (byte)(int)(param1 >> 32);
-          fieldTemp$4 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$4] = (byte)(int)(param1 >> 24);
-          fieldTemp$5 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$5] = (byte)(int)(param1 >> 16);
-          fieldTemp$6 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$6] = (byte)(int)(param1 >> 8);
-          fieldTemp$7 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$7] = (byte)(int)param1;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(int)(param1 >> 48);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(int)(param1 >> 40);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(int)(param1 >> 32);
+          fieldTemp$4 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$4] = (byte)(int)(param1 >> 24);
+          fieldTemp$5 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$5] = (byte)(int)(param1 >> 16);
+          fieldTemp$6 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$6] = (byte)(int)(param1 >> 8);
+          fieldTemp$7 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$7] = (byte)(int)param1;
           if (param0 <= 26) {
             this.k(3);
           }
@@ -622,34 +622,34 @@ class ec extends ne {
         }
     }
 
-    final int h(int param0) {
+    final int readInt(int obfuscationGuard) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 > -29) {
+          if (obfuscationGuard > -29) {
             this.f(30);
           }
-          this.field_o = this.field_o + 4;
-          stackIn_4_0 = (this.field_m[this.field_o - 2] << 8 & 65280) + ((this.field_m[-3 + this.field_o] & 255) << 16) + ((this.field_m[this.field_o - 4] << 24 & -16777216) + (this.field_m[this.field_o - 1] & 255));
+          this.position = this.position + 4;
+          stackIn_4_0 = (this.payload[this.position - 2] << 8 & 65280) + ((this.payload[-3 + this.position] & 255) << 16) + ((this.payload[this.position - 4] << 24 & -16777216) + (this.payload[this.position - 1] & 255));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "ec.BA(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "ec.BA(" + obfuscationGuard + ')');
         }
     }
 
-    final int e(byte param0) {
+    final int readSignedMedium(byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_3_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 90 % ((-5 - param0) / 62);
-          this.field_o = this.field_o + 3;
-          var3 = (this.field_m[-1 + this.field_o] & 255) + ((this.field_m[this.field_o - 3] & 255) << 16) + ((this.field_m[-2 + this.field_o] & 255) << 8);
+          var2_int = 90 % ((-5 - obfuscationGuard) / 62);
+          this.position = this.position + 3;
+          var3 = (this.payload[-1 + this.position] & 255) + ((this.payload[this.position - 3] & 255) << 16) + ((this.payload[-2 + this.position] & 255) << 8);
           if (var3 > 8388607) {
             var3 = var3 - 16777216;
           }
@@ -658,7 +658,7 @@ class ec extends ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "ec.OA(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "ec.OA(" + obfuscationGuard + ')');
         }
     }
 
@@ -668,12 +668,12 @@ class ec extends ne {
         try {
           if (param0 < ~param1 &&
             param1 >= -64) {
-            this.a(6, 64 + param1);
+            this.writeByte(6, 64 + param1);
             return;
           }
           if (param1 < 16384 &&
             -16384 <= param1) {
-            this.i(param1 + 49152, -104);
+            this.writeShort(param1 + 49152, -104);
             return;
           }
           throw new IllegalArgumentException();
@@ -695,23 +695,23 @@ class ec extends ne {
         int var3 = 0;
         int var4 = 0;
         try {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          var2_int = this.field_m[fieldTemp$0];
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          var2_int = this.payload[fieldTemp$0];
           if (var2_int != 0) {
             throw new IllegalStateException("");
           }
-          var3 = this.field_o;
+          var3 = this.position;
           if (param0 != -21030) {
             field_p = 56;
           }
           do {
-            fieldTemp$1 = this.field_o;
-            this.field_o = this.field_o + 1;
-          } while (0 != this.field_m[fieldTemp$1]);
-          var4 = -1 + (this.field_o - var3);
+            fieldTemp$1 = this.position;
+            this.position = this.position + 1;
+          } while (0 != this.payload[fieldTemp$1]);
+          var4 = -1 + (this.position - var3);
           if (var4 != 0) {
-            stackIn_13_0 = mk.a((byte) -24, this.field_m, var4, var3);
+            stackIn_13_0 = mk.a((byte) -24, this.payload, var4, var3);
             return stackIn_13_0;
           }
           stackIn_11_0 = "";
@@ -736,16 +736,16 @@ class ec extends ne {
         try {
           var5_int = param1;
           while (param1 + param2 > var5_int) {
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-            param3[var5_int] = this.field_m[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int] = this.payload[fieldTemp$0];
             var5_int++;
             if (var6 != 0) {
               return;
             }
           }
           if (param0 >= -86) {
-            this.field_m = (byte[]) null;
+            this.payload = (byte[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -762,7 +762,7 @@ class ec extends ne {
         }
     }
 
-    final static void a(nh param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2776_0;
             StringBuilder stackIn_2776_1;
@@ -772,10 +772,10 @@ class ec extends ne {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            nh param0;
+            ResourceArchive param0;
             boolean param1;
             boolean finished;
-            $CfrPartitionedBody(nh initialParam0, boolean initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, boolean initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2776_0 = null;
@@ -1327,7 +1327,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("tutorial_raiders3,1", param1);
                 if (var2 != null) {
-                  og.field_a[1] = dj.a(var2, false);
+                  KeyboardInput.field_a[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_raiders4,0", false);
                 if (null != var2) {
@@ -1403,7 +1403,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("tutorial_strategies4,1", false);
                 if (null != var2) {
-                  ll.field_j[1] = dj.a(var2, param1);
+                  DualLinkNode.field_j[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_trap1,0", false);
                 if (null != var2) {
@@ -1487,11 +1487,11 @@ class ec extends ne {
                 }
                 var2 = gm.a("tutorial_raid_complete,0", false);
                 if (null != var2) {
-                  ug.field_M[0] = dj.a(var2, param1);
+                  MidiPcmStream.field_M[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_raid_complete,1", false);
                 if (var2 != null) {
-                  ug.field_M[1] = dj.a(var2, false);
+                  MidiPcmStream.field_M[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_construction1,0", param1);
                 if (var2 != null) {
@@ -1535,11 +1535,11 @@ class ec extends ne {
                 }
                 var2 = gm.a("tutorial_end_justplay,0", param1);
                 if (null != var2) {
-                  kg.field_e[0] = dj.a(var2, false);
+                  GameAppletShell.field_e[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_end_justplay,1", false);
                 if (var2 != null) {
-                  kg.field_e[1] = dj.a(var2, false);
+                  GameAppletShell.field_e[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_dragonsofrenown1,0", false);
                 if (var2 != null) {
@@ -1753,7 +1753,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("crusher", false);
                 if (null != var2) {
-                  ll.field_u = dj.a(var2, false);
+                  DualLinkNode.field_u = dj.a(var2, false);
                 }
                 var2 = gm.a("hidden_darts", false);
                 if (var2 != null) {
@@ -1825,7 +1825,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("raging_beast", param1);
                 if (null != var2) {
-                  hb.field_h = dj.a(var2, param1);
+                  Raider.field_h = dj.a(var2, param1);
                 }
                 var2 = gm.a("basilisk", param1);
                 if (null != var2) {
@@ -1857,7 +1857,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("magical_guardian_room", false);
                 if (null != var2) {
-                  ll.field_s = dj.a(var2, false);
+                  DualLinkNode.field_s = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_goblin_runt", false);
                 if (var2 != null) {
@@ -1885,7 +1885,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("desc_saurus_slink", false);
                 if (var2 != null) {
-                  in.field_t = dj.a(var2, param1);
+                  NetworkGameClient.field_t = dj.a(var2, param1);
                 }
                 var2 = gm.a("desc_mercenary_knight", false);
                 if (null != var2) {
@@ -1997,7 +1997,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("desc_none", false);
                 if (var2 != null) {
-                  nh.field_a = dj.a(var2, param1);
+                  ResourceArchive.field_a = dj.a(var2, param1);
                 }
                 var2 = gm.a("desc_unknown", false);
                 if (var2 != null) {
@@ -2337,11 +2337,11 @@ class ec extends ne {
                 }
                 var2 = gm.a("ability_ferocity,0", false);
                 if (var2 != null) {
-                  ll.field_t[0] = dj.a(var2, false);
+                  DualLinkNode.field_t[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_ferocity,1", false);
                 if (null != var2) {
-                  ll.field_t[1] = dj.a(var2, false);
+                  DualLinkNode.field_t[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_firststrike,0", param1);
                 if (null != var2) {
@@ -2409,11 +2409,11 @@ class ec extends ne {
                 }
                 var2 = gm.a("ability_pitimmunity_brief,0", param1);
                 if (null != var2) {
-                  ne.field_f[0] = dj.a(var2, false);
+                  IntrusiveNode.field_f[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_pitimmunity_brief,1", false);
                 if (null != var2) {
-                  ne.field_f[1] = dj.a(var2, false);
+                  IntrusiveNode.field_f[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_boostdef_brief,0", false);
                 if (var2 != null) {
@@ -3195,7 +3195,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_search", param1);
                 if (var2 != null) {
-                  hb.field_l = dj.a(var2, false);
+                  Raider.field_l = dj.a(var2, false);
                 }
                 var2 = gm.a("text_search_tip", false);
                 if (var2 != null) {
@@ -3243,7 +3243,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_inst_guardian", false);
                 if (null != var2) {
-                  og.field_d = dj.a(var2, param1);
+                  KeyboardInput.field_d = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_renowntable_hint", false);
                 if (var2 != null) {
@@ -3375,7 +3375,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_orbs_active_x", param1);
                 if (null != var2) {
-                  nh.field_i = dj.a(var2, param1);
+                  ResourceArchive.field_i = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_orbs_charging_x", false);
                 if (null != var2) {
@@ -3437,7 +3437,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_disarm_guardian_tooltip", false);
                 if (var2 != null) {
-                  kg.field_k = dj.a(var2, param1);
+                  GameAppletShell.field_k = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_sneak_past_tooltip", false);
                 if (null != var2) {
@@ -3497,7 +3497,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_guardian_detected_alerted", false);
                 if (var2 != null) {
-                  nh.field_b = dj.a(var2, false);
+                  ResourceArchive.field_b = dj.a(var2, false);
                 }
                 var2 = gm.a("text_raider_snuck_past_guardian", param1);
                 if (null != var2) {
@@ -3649,7 +3649,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_dead", false);
                 if (null != var2) {
-                  kg.field_m = dj.a(var2, param1);
+                  GameAppletShell.field_m = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_incapacitated", false);
                 if (var2 != null) {
@@ -3765,7 +3765,7 @@ class ec extends ne {
                 }
                 var2 = gm.a("text_confirm_changes_dungeon", false);
                 if (var2 != null) {
-                  wj.field_x = dj.a(var2, false);
+                  CipherPacketBuffer.field_x = dj.a(var2, false);
                 }
                 var2 = gm.a("text_confirm_changes_stable", false);
                 if (var2 != null) {
@@ -3977,8 +3977,8 @@ class ec extends ne {
                   throw vk.a((Throwable) ((Object) stackIn_2776_0), ((StringBuilder) (Object) stackIn_2776_1).append(stackIn_2777_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2785_0 = (!kg.field_j);
-                  kg.field_j = stackIn_2785_0;
+                  stackIn_2785_0 = (!GameAppletShell.field_j);
+                  GameAppletShell.field_j = stackIn_2785_0;
                 }
             }
         }
@@ -3988,10 +3988,10 @@ class ec extends ne {
 
     final void d(int param0, int param1) {
         try {
-          this.field_m[-param1 + this.field_o - 4] = (byte)(param1 >> 24);
-          this.field_m[this.field_o + (-param1 - 3)] = (byte)(param1 >> 16);
-          this.field_m[-param1 + (this.field_o - 2)] = (byte)(param1 >> 8);
-          this.field_m[-param1 + this.field_o - param0] = (byte)param1;
+          this.payload[-param1 + this.position - 4] = (byte)(param1 >> 24);
+          this.payload[this.position + (-param1 - 3)] = (byte)(param1 >> 16);
+          this.payload[-param1 + (this.position - 2)] = (byte)(param1 >> 8);
+          this.payload[-param1 + this.position - param0] = (byte)param1;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ec.HA(" + param0 + ',' + param1 + ')');
         }
@@ -4007,7 +4007,7 @@ class ec extends ne {
           if (param0 != 58) {
             this.a((int[]) null, true);
           }
-          var2_int = this.field_m[this.field_o] & 255;
+          var2_int = this.payload[this.position] & 255;
           if (var2_int < 128) {
             stackIn_7_0 = this.c(true);
             return stackIn_7_0;
@@ -4026,11 +4026,11 @@ class ec extends ne {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_o = this.field_o + 3;
+          this.position = this.position + 3;
           if (param0 >= -93) {
-            this.b((byte) 41);
+            this.readLong((byte) 41);
           }
-          stackIn_4_0 = ((this.field_m[this.field_o - 3] & 255) << 16) + (((this.field_m[this.field_o - 2] & 255) << 8) + (255 & this.field_m[-1 + this.field_o]));
+          stackIn_4_0 = ((this.payload[this.position - 3] & 255) << 16) + (((this.payload[this.position - 2] & 255) << 8) + (255 & this.payload[-1 + this.position]));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4058,8 +4058,8 @@ class ec extends ne {
 
     final void b(int param0, int param1) {
         try {
-          this.field_m[-param0 + this.field_o - 2] = (byte)(param0 >> 8);
-          this.field_m[-param0 + this.field_o - param1] = (byte)param0;
+          this.payload[-param0 + this.position - 2] = (byte)(param0 >> 8);
+          this.payload[-param0 + this.position - param1] = (byte)param0;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ec.AA(" + param0 + ',' + param1 + ')');
         }
@@ -4078,12 +4078,12 @@ class ec extends ne {
           if (0 <= var3_int) {
             throw new IllegalArgumentException("");
           }
-          this.field_o = this.field_o + ec.a(param0.length(), 0, this.field_m, -1, this.field_o, (CharSequence) ((Object) param0));
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$1] = (byte) 0;
+          this.position = this.position + PacketBuffer.a(param0.length(), 0, this.payload, -1, this.position, (CharSequence) ((Object) param0));
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
           if (param1 != -20) {
-            field_k = (nh) null;
+            field_k = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4114,8 +4114,8 @@ class ec extends ne {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = this.field_o;
-          this.field_o = 0;
+          var4_int = this.position;
+          this.position = 0;
           var5 = new byte[var4_int];
           this.a((byte) -126, 0, var4_int, var5);
           var6 = new java.math.BigInteger(var5);
@@ -4124,8 +4124,8 @@ class ec extends ne {
             field_l = (String[]) null;
           }
           var8 = var7.toByteArray();
-          this.field_o = 0;
-          this.i(var8.length, -97);
+          this.position = 0;
+          this.writeShort(var8.length, -97);
           this.a(var8, 1, var8.length, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4156,7 +4156,7 @@ class ec extends ne {
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = this.field_m[this.field_o] & 255;
+          var2_int = this.payload[this.position] & 255;
           if (param0 != 0) {
             stackIn_2_0 = 78;
             return stackIn_2_0;
@@ -4180,8 +4180,8 @@ class ec extends ne {
         String stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 == this.field_m[this.field_o]) {
-            this.field_o = this.field_o + 1;
+          if (0 == this.payload[this.position]) {
+            this.position = this.position + 1;
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -4199,7 +4199,7 @@ class ec extends ne {
 
     final void c(int param0, int param1) {
         try {
-          this.field_m[param1 - param0 + this.field_o] = (byte)param0;
+          this.payload[param1 - param0 + this.position] = (byte)param0;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ec.JA(" + param0 + ',' + param1 + ')');
         }
@@ -4211,9 +4211,9 @@ class ec extends ne {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_o = this.field_o + 2;
+          this.position = this.position + 2;
           if (param0 == 0) {
-            stackIn_4_0 = ((255 & this.field_m[this.field_o - 2]) << 8) + (255 & this.field_m[-1 + this.field_o]);
+            stackIn_4_0 = ((255 & this.payload[this.position - 2]) << 8) + (255 & this.payload[-1 + this.position]);
             return stackIn_4_0;
           }
           stackIn_2_0 = -80;
@@ -4233,18 +4233,18 @@ class ec extends ne {
             if ((param1 & -16384) != 0) {
               if (0 != (param1 & -2097152)) {
                 if ((param1 & -268435456) != 0) {
-                  this.a(6, 128 | param1 >>> 28);
+                  this.writeByte(6, 128 | param1 >>> 28);
                 }
-                this.a(6, param1 >>> 21 | 128);
+                this.writeByte(6, param1 >>> 21 | 128);
               }
-              this.a(6, (param1 | 2102129) >>> 14);
+              this.writeByte(6, (param1 | 2102129) >>> 14);
             }
-            this.a(param0 + 268435462, 128 | param1 >>> 7);
+            this.writeByte(param0 + 268435462, 128 | param1 >>> 7);
           }
           if (param0 != -268435456) {
             return;
           }
-          this.a(6, param1 & 127);
+          this.writeByte(6, param1 & 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4274,13 +4274,13 @@ class ec extends ne {
           if (param3 != -10708) {
             field_q = (String) null;
           }
-          var5_int = this.field_o;
-          this.field_o = param2;
+          var5_int = this.position;
+          this.position = param2;
           var6 = (param0 - param2) / 8;
           var7 = 0;
           while (var7 < var6) {
-            var8 = this.h(-52);
-            var9 = this.h(param3 + 10677);
+            var8 = this.readInt(-52);
+            var9 = this.readInt(param3 + 10677);
             var10 = -957401312;
             var11 = -1640531527;
             if (var13 != 0) {
@@ -4298,12 +4298,12 @@ class ec extends ne {
               }
               break;
             }
-            this.field_o = this.field_o - 8;
+            this.position = this.position - 8;
             this.a((byte) 63, var8);
             this.a((byte) 63, var9);
             var7++;
           }
-          this.field_o = var5_int;
+          this.position = var5_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4325,18 +4325,18 @@ class ec extends ne {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         try {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$0] = (byte)(param1 >> 24);
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$1] = (byte)(param1 >> 16);
-          fieldTemp$2 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$2] = (byte)(param1 >> 8);
-          fieldTemp$3 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$3] = (byte)param1;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(param1 >> 16);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(param1 >> 8);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)param1;
           if (param0 != 63) {
             field_p = 0;
           }
@@ -4355,18 +4355,18 @@ class ec extends ne {
         RuntimeException var2 = null;
         int var3 = 0;
         try {
-          var2_int = this.field_o;
+          var2_int = this.position;
           do {
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-          } while (this.field_m[fieldTemp$0] != 0);
-          var3 = -var2_int + this.field_o - 1;
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+          } while (this.payload[fieldTemp$0] != 0);
+          var3 = -var2_int + this.position - 1;
           if (param0 >= -88) {
             stackIn_6_0 = (String) null;
             return stackIn_6_0;
           }
           if (var3 != 0) {
-            stackIn_11_0 = mk.a((byte) -24, this.field_m, var3, var2_int);
+            stackIn_11_0 = mk.a((byte) -24, this.payload, var3, var2_int);
             return stackIn_11_0;
           }
           stackIn_9_0 = "";
@@ -4389,7 +4389,7 @@ class ec extends ne {
             stackIn_2_0 = -109;
             return stackIn_2_0;
           }
-          var3_int = fm.a(this.field_o, 67, param1, this.field_m);
+          var3_int = fm.a(this.position, 67, param1, this.payload);
           this.a((byte) 63, var3_int);
           stackIn_4_0 = var3_int;
           return stackIn_4_0;
@@ -4408,10 +4408,10 @@ class ec extends ne {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 45) {
-            this.field_m = (byte[]) null;
+            this.payload = (byte[]) null;
           }
-          var2_long = 4294967295L & (long)this.h(-86);
-          var4 = (long)this.h(-94) & 4294967295L;
+          var2_long = 4294967295L & (long)this.readInt(-86);
+          var4 = (long)this.readInt(-94) & 4294967295L;
           stackIn_4_0 = (var2_long << 32) + var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4432,11 +4432,11 @@ class ec extends ne {
             stackIn_2_0 = 73;
             return stackIn_2_0;
           }
-          if (this.field_m[this.field_o] >= 0) {
+          if (this.payload[this.position] >= 0) {
             stackIn_7_0 = this.k(0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = 2147483647 & this.h(param0 - 95);
+          stackIn_5_0 = 2147483647 & this.readInt(param0 - 95);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4454,9 +4454,9 @@ class ec extends ne {
           if (param0 != 2) {
             field_l = (String[]) null;
           }
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          stackIn_4_0 = this.field_m[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          stackIn_4_0 = this.payload[fieldTemp$1];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4476,9 +4476,9 @@ class ec extends ne {
             stackIn_2_0 = -37;
             return stackIn_2_0;
           }
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          stackIn_4_0 = 255 & this.field_m[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          stackIn_4_0 = 255 & this.payload[fieldTemp$1];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4493,7 +4493,7 @@ class ec extends ne {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3_int = 0;
-        md var3 = null;
+        IntrusiveDeque var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -4512,7 +4512,7 @@ class ec extends ne {
           if (param1 != 5) {
             field_p = -121;
           }
-          var3 = new md();
+          var3 = new IntrusiveDeque();
           var3.a(new a(param0), false);
           while (!var3.a((byte) -87)) {
             var4 = ((a) (var3.b((byte) -124))).field_j;
@@ -4548,17 +4548,17 @@ class ec extends ne {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         try {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$0] = (byte)(param1 >> 16);
-          fieldTemp$1 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$1] = (byte)(param1 >> 8);
-          fieldTemp$2 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$2] = (byte)param1;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(param1 >> 16);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(param1 >> 8);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)param1;
           if (param0 != -106) {
-            this.e((byte) -94);
+            this.readSignedMedium((byte) -94);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ec.V(" + param0 + ',' + param1 + ')');
@@ -4578,9 +4578,9 @@ class ec extends ne {
         int var4 = 0;
         var4 = DungeonAssault.field_K;
         try {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          var2_int = this.field_m[fieldTemp$0];
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          var2_int = this.payload[fieldTemp$0];
           if (param0 != -651413500) {
             field_q = (String) null;
           }
@@ -4588,9 +4588,9 @@ class ec extends ne {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 0))) {
             var3 = (127 & var2_int | var3) << 7;
-            fieldTemp$1 = this.field_o;
-            this.field_o = this.field_o + 1;
-            stackOut_6_0 = this.field_m[fieldTemp$1];
+            fieldTemp$1 = this.position;
+            this.position = this.position + 1;
+            stackOut_6_0 = this.payload[fieldTemp$1];
             stackIn_9_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
             if (var4 == 0) {
@@ -4616,12 +4616,12 @@ class ec extends ne {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_o = this.field_o - 4;
+          this.position = this.position - 4;
           if (!param0) {
             return true;
           }
-          var2_int = fm.a(this.field_o, 99, 0, this.field_m);
-          var3 = this.h(-80);
+          var2_int = fm.a(this.position, 99, 0, this.payload);
+          var3 = this.readInt(-80);
           if (var2_int != var3) {
             return false;
           }
@@ -4647,13 +4647,13 @@ class ec extends ne {
           if (var3_int >= 0) {
             throw new IllegalArgumentException("");
           }
-          fieldTemp$2 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$2] = (byte) 0;
-          this.field_o = this.field_o + ec.a(param1.length(), 0, this.field_m, param0 ^ -3, this.field_o, (CharSequence) ((Object) param1));
-          fieldTemp$3 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_m[fieldTemp$3] = (byte) 0;
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte) 0;
+          this.position = this.position + PacketBuffer.a(param1.length(), 0, this.payload, param0 ^ -3, this.position, (CharSequence) ((Object) param1));
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte) 0;
           if (param0 != 2) {
             this.b(-99, -104);
           }
@@ -4672,10 +4672,10 @@ class ec extends ne {
         }
     }
 
-    ec(int param0) {
+    PacketBuffer(int param0) {
         try {
-          this.field_o = 0;
-          this.field_m = kn.a(param0, false);
+          this.position = 0;
+          this.payload = kn.a(param0, false);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ')');
         }
@@ -4697,9 +4697,9 @@ class ec extends ne {
           }
           var5_int = param3;
           while (param2 + param3 > var5_int) {
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-            this.field_m[fieldTemp$0] = param0[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param0[var5_int];
             var5_int++;
             if (var6 != 0) {
               return;
@@ -4720,15 +4720,15 @@ class ec extends ne {
         }
     }
 
-    ec(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param0;
-          this.field_o = 0;
+          this.payload = param0;
+          this.position = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

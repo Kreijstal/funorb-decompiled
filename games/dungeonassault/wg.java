@@ -258,7 +258,7 @@ final class wg {
         return 0;
     }
 
-    final void a(ec param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_d = new fh();
@@ -267,7 +267,7 @@ final class wg {
         this.field_m.b(param0);
         int var2 = param0.c(true);
         if (var2 != 0) {
-          param0.field_o = param0.field_o - 1;
+          param0.position = param0.position - 1;
           this.field_n = new fh();
           this.field_n.b(param0);
           this.field_v = new fh();
@@ -275,7 +275,7 @@ final class wg {
         }
         var2 = param0.c(true);
         if (var2 != 0) {
-          param0.field_o = param0.field_o - 1;
+          param0.position = param0.position - 1;
           this.field_p = new fh();
           this.field_p.b(param0);
           this.field_c = new fh();
@@ -283,7 +283,7 @@ final class wg {
         }
         var2 = param0.c(true);
         if (var2 != 0) {
-          param0.field_o = param0.field_o - 1;
+          param0.position = param0.position - 1;
           this.field_i = new fh();
           this.field_i.b(param0);
           this.field_l = new fh();

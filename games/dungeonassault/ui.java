@@ -12,14 +12,14 @@ final class ui {
         if (param1 != 19435) {
           ui.a(65, -11);
         }
-        var2 = ll.field_m[param0];
+        var2 = DualLinkNode.field_m[param0];
         if (param0 == 10 && (g.field_Hb == 0 ||
           dc.field_z == 0 ||
           g.field_Hb == 12 ||
           12 == dc.field_z ||
           g.field_Hb == 1 ||
           dc.field_z == 1)) {
-          var2 = ll.field_m[9];
+          var2 = DualLinkNode.field_m[9];
         }
         if (param0 == 28) {
           if (!gl.field_Lb) {
@@ -63,7 +63,7 @@ final class ui {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        wj var27 = null;
+        CipherPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var3Lifetime1;
@@ -92,7 +92,7 @@ final class ui {
             }
             var5 = var27.c(true);
             if (var5 == 0) {
-              var4_ref.a(false);
+              var4_ref.unlink(false);
               return;
             }
             var6 = var4_ref.field_l;
@@ -121,14 +121,14 @@ final class ui {
             var17 = 0;
             var18 = var27.c(true);
             if (var18 <= 0) {
-              var4_ref.a(false);
+              var4_ref.unlink(false);
               return;
             }
             for (var19 = 0; var18 > var19; var19++) {
               var20 = var27.c(true);
               var21 = lg.field_x[var20].field_a;
               var22 = var27.c((byte) 89);
-              var24 = var27.field_o;
+              var24 = var27.position;
               if (var19 < var6) {
                 var8[0][var12] = var21;
                 var9[0][var12] = lg.field_x[var20].field_d;
@@ -137,7 +137,7 @@ final class ui {
                 for (var25 = 0; var7 > var25; var25++) {
                   incrementValue$0 = var15;
                   var15++;
-                  var35[0][incrementValue$0] = var27.h(-99);
+                  var35[0][incrementValue$0] = var27.readInt(-99);
                 }
               }
               if (var21 != null &&
@@ -145,12 +145,12 @@ final class ui {
                 var8[1][var13] = tc.field_u;
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
-                var27.field_o = var24;
+                var27.position = var24;
                 var13++;
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
-                  var35[1][incrementValue$1] = var27.h(-37);
+                  var35[1][incrementValue$1] = var27.readInt(-37);
                 }
               }
               if (var14 < var6 &&
@@ -159,16 +159,16 @@ final class ui {
                 var8[2][var14] = var21;
                 var9[2][var14] = lg.field_x[var20].field_d;
                 var34[2][var14] = var22;
-                var27.field_o = var24;
+                var27.position = var24;
                 var14++;
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
-                  var35[2][incrementValue$2] = var27.h(md.b(param0, -30643));
+                  var35[2][incrementValue$2] = var27.readInt(IntrusiveDeque.b(param0, -30643));
                 }
               }
             }
-            var4_ref.a(false);
+            var4_ref.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -183,7 +183,7 @@ final class ui {
               break;
             }
             if (var4 != null) {
-              var4.a(false);
+              var4.unlink(false);
               return;
             }
             tl.a(-96);

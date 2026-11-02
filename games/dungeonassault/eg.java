@@ -23,17 +23,17 @@ final class eg {
         }
         Object var5 = var7.d(22698);
         if (var5 == null) {
-          var7.a(false);
+          var7.unlink(false);
           var7.b((byte) -2);
           this.field_e = this.field_e + var7.field_A;
           return null;
         }
         if (var7.c((byte) 21)) {
           var6 = new pb(var5, var7.field_A);
-          this.field_h.a(var7.field_h, (byte) -128, var6);
+          this.field_h.a(var7.key, (byte) -128, var6);
           this.field_c.a(var6, false);
           ((wf) ((Object) var6)).field_o = 0L;
-          var7.a(false);
+          var7.unlink(false);
           var7.b((byte) -2);
           return var5;
         }
@@ -43,10 +43,10 @@ final class eg {
           return var5;
         }
         var6Lifetime1 = new pb(var5, var7.field_A);
-        this.field_h.a(var7.field_h, (byte) -128, var6Lifetime1);
+        this.field_h.a(var7.key, (byte) -128, var6Lifetime1);
         this.field_c.a(var6Lifetime1, false);
         ((wf) ((Object) var6Lifetime1)).field_o = 0L;
-        var7.a(false);
+        var7.unlink(false);
         var7.b((byte) -2);
         return var5;
     }
@@ -76,7 +76,7 @@ final class eg {
         ig.field_a = param6;
         e.field_d = param10;
         wm.field_b = param0;
-        md.field_f = param8;
+        IntrusiveDeque.field_f = param8;
         cb.field_b = param3;
         if (param4 != 5) {
           return;
@@ -106,7 +106,7 @@ final class eg {
     private final void a(wf param0, byte param1) {
         try {
           if (param0 != null) {
-            param0.a(false);
+            param0.unlink(false);
             param0.b((byte) -2);
             this.field_e = this.field_e + param0.field_A;
           }
@@ -298,7 +298,7 @@ final class eg {
         }
     }
 
-    final static void a(md param0, boolean param1) {
+    final static void a(IntrusiveDeque param0, boolean param1) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -307,13 +307,13 @@ final class eg {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        md var5 = null;
+        IntrusiveDeque var5 = null;
         rj var6 = null;
         var4 = DungeonAssault.field_K;
         try {
           if (!param1) {
-            var5 = (md) null;
-            eg.a((md) null, true);
+            var5 = (IntrusiveDeque) null;
+            eg.a((IntrusiveDeque) null, true);
           }
           var6 = to.a(hj.field_S, eh.field_h, param0, 0);
           var2 = var6;
@@ -369,9 +369,9 @@ final class eg {
             rn.field_a = hm.field_k;
             pa.field_c = to.a(lc.field_c, hm.field_k, param0, 0);
           }
-          if (pj.field_r != 0 &&
+          if (CombatState.field_r != 0 &&
             null != wi.field_ob) {
-            wi.field_ob.a(1, pj.field_r);
+            wi.field_ob.a(1, CombatState.field_r);
             return;
           }
           return;

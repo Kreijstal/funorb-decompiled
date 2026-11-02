@@ -126,7 +126,7 @@ final class rk implements Runnable {
           }
           if (this.field_e != null) {
             while (this.field_e.field_c == 0) {
-              pj.a(param0 + 6624, 1L);
+              CombatState.a(param0 + 6624, 1L);
             }
             if (1 == this.field_e.field_c) {
               try {

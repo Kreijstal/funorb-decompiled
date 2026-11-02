@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class bb {
-    static nh field_b;
+    static ResourceArchive field_b;
     static String[] field_t;
     static String field_f;
     static String field_r;
@@ -15,11 +15,11 @@ abstract class bb {
     up field_d;
     up field_s;
     int field_a;
-    ec field_o;
+    PacketBuffer field_o;
     long field_n;
     volatile int field_h;
     volatile int field_c;
-    ec field_m;
+    PacketBuffer field_m;
     byte field_j;
     em field_i;
 
@@ -115,11 +115,11 @@ abstract class bb {
         this.field_p = new up();
         this.field_d = new up();
         this.field_s = new up();
-        this.field_o = new ec(6);
+        this.field_o = new PacketBuffer(6);
         this.field_j = (byte) 0;
         this.field_h = 0;
         this.field_c = 0;
-        this.field_m = new ec(10);
+        this.field_m = new PacketBuffer(10);
     }
 
     static {

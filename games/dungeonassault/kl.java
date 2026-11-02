@@ -6,7 +6,7 @@ class kl {
     boolean field_d;
     static String field_b;
     int field_j;
-    md field_f;
+    IntrusiveDeque field_f;
     private ph field_g;
     static String[] field_c;
     int field_k;
@@ -213,7 +213,7 @@ class kl {
     }
 
     public kl() {
-        this.field_f = new md();
+        this.field_f = new IntrusiveDeque();
         this.field_d = false;
     }
 

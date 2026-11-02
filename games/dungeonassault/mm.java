@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm extends ne {
+final class mm extends IntrusiveNode {
     int field_r;
     static int field_t;
     static int field_q;
@@ -15,10 +15,10 @@ final class mm extends ne {
     static String field_j;
     int field_p;
 
-    final static di a(ec param0, boolean param1) {
+    final static di a(PacketBuffer param0, boolean param1) {
         di var2 = null;
         RuntimeException var2_ref = null;
-        ec var3 = null;
+        PacketBuffer var3 = null;
         di stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -27,8 +27,8 @@ final class mm extends ne {
         try {
           var2 = new di();
           if (param1) {
-            var3 = (ec) null;
-            mm.a((ec) null, false);
+            var3 = (PacketBuffer) null;
+            mm.a((PacketBuffer) null, false);
           }
           var2.a(param0, -1);
           stackIn_3_0 = var2;
@@ -54,8 +54,8 @@ final class mm extends ne {
           field_s = null;
           return;
         }
-        ec var2 = (ec) null;
-        mm.a((ec) null, false);
+        PacketBuffer var2 = (PacketBuffer) null;
+        mm.a((PacketBuffer) null, false);
         field_m = null;
         field_j = null;
         field_s = null;
@@ -80,7 +80,7 @@ final class mm extends ne {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ec var12 = null;
+        PacketBuffer var12 = null;
         var11 = DungeonAssault.field_K;
         try {
           if (param2 >= 2 &&
@@ -90,8 +90,8 @@ final class mm extends ne {
             var6 = 0;
             var7 = param0.length();
             if (param3 != 3703) {
-              var12 = (ec) null;
-              mm.a((ec) null, false);
+              var12 = (PacketBuffer) null;
+              mm.a((PacketBuffer) null, false);
             }
             for (var8 = 0; var7 > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;

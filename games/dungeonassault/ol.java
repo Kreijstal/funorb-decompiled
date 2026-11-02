@@ -268,7 +268,7 @@ final class ol {
     }
 
     final static void a(int param0, int param1) {
-        ne var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ue var4 = null;
         RuntimeException decompiledCaughtException = null;

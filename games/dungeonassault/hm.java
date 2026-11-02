@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends ne {
+final class hm extends IntrusiveNode {
     static boolean[] field_m;
     static String field_l;
     boolean field_r;
@@ -71,7 +71,7 @@ final class hm extends ne {
                                 if (null == cm.field_R) {
                                   var4 = param2 ? 1 : 0;
                                   tl.field_d = false;
-                                  a.a(320, ne.field_c.field_N, ne.field_c, true, var4 != 0, 8, 240, 2, 8, ne.field_c.field_E + ne.field_c.field_N, (cn[]) null, (cn[]) null);
+                                  a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, var4 != 0, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
                                   if (null != cm.field_R) {
                                     i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
                                   }
@@ -91,7 +91,7 @@ final class hm extends ne {
                                   if (var4 != 16) {
                                     if (var4 == 18) {
                                       if (0 < mo.field_e) {
-                                        md.a(20631, -1 + mo.field_e);
+                                        IntrusiveDeque.a(20631, -1 + mo.field_e);
                                       }
                                     } else {
                                       if (var4 != 19) {
@@ -116,7 +116,7 @@ final class hm extends ne {
                                                     }
                                                   }
                                                 } else {
-                                                  mh.b(-1);
+                                                  MouseInput.b(-1);
                                                 }
                                               }
                                             }
@@ -131,7 +131,7 @@ final class hm extends ne {
                                         }
                                       } else {
                                         if (-1 + kd.field_e.length > mo.field_e) {
-                                          md.a(20631, 1 + mo.field_e);
+                                          IntrusiveDeque.a(20631, 1 + mo.field_e);
                                         }
                                       }
                                     }
@@ -151,7 +151,7 @@ final class hm extends ne {
                           }
                         }
                       } else {
-                        md.a(20631, 0);
+                        IntrusiveDeque.a(20631, 0);
                         var4 = param2 ? 1 : 0;
                         gd.a(dc.field_z, 0, 7, var4 != 0);
                       }
@@ -221,7 +221,7 @@ final class hm extends ne {
         var5 = DungeonAssault.field_K;
         try {
           bl.field_c = bl.field_c + 65536;
-          while (mh.a(true, bl.field_c, am.field_d) >= 65536) {
+          while (MouseInput.a(true, bl.field_c, am.field_d) >= 65536) {
             jc.field_e = jc.field_e + 1;
             bl.field_c = bl.field_c - am.field_d;
           }

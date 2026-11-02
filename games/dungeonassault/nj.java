@@ -8,7 +8,7 @@ final class nj {
     static int field_b;
     static String[] field_c;
     static int[] field_g;
-    static md field_f;
+    static IntrusiveDeque field_f;
 
     public static void a(byte param0) {
         field_f = null;
@@ -26,7 +26,7 @@ final class nj {
         field_a = null;
     }
 
-    final static void a(nh param0, nh param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
           hf.field_pb = param0;
           if (param2 != -6332) {

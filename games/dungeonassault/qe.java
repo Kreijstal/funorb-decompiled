@@ -14,7 +14,7 @@ abstract class qe {
     static int field_f;
     private static int[][] field_g;
     static int field_c;
-    md field_p;
+    IntrusiveDeque field_p;
     private static int[][] field_h;
     kl field_b;
     private static cn[] field_o;
@@ -29,7 +29,7 @@ abstract class qe {
             var1 = (rj) (this.field_p.a(4));
           }
         }
-        this.field_p = new md();
+        this.field_p = new IntrusiveDeque();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -139,7 +139,7 @@ abstract class qe {
         }
     }
 
-    final static wb[] a(hb param0, int param1) {
+    final static wb[] a(Raider param0, int param1) {
         int var2 = qe.a(param0, param1, field_k);
         if (var2 == 0) {
           return null;
@@ -256,12 +256,12 @@ abstract class qe {
         this.field_p = null;
     }
 
-    final static void a(int param0, int param1, int param2, hb param3, int param4) {
+    final static void a(int param0, int param1, int param2, Raider param3, int param4) {
         int var5 = qe.a(param3, param4, field_k);
         qe.a(param0, param1, param2, field_k, var5);
     }
 
-    private final static int a(hb param0, int param1, wb[] param2) {
+    private final static int a(Raider param0, int param1, wb[] param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -326,7 +326,7 @@ abstract class qe {
         if ((param0.field_o & 4) != 0) {
           incrementValue$5 = var3;
           var3++;
-          param2[incrementValue$5] = new wb(kg.field_m, ue.field_i[5], 16711680);
+          param2[incrementValue$5] = new wb(GameAppletShell.field_m, ue.field_i[5], 16711680);
         }
         if ((param0.field_o & 2) != 0) {
           incrementValue$6 = var3;
@@ -473,7 +473,7 @@ abstract class qe {
     }
 
     void f() {
-        if (ll.field_k &&
+        if (DualLinkNode.field_k &&
           mm.field_t == 1) {
           ld.field_b = !ld.field_b ? true : false;
         }
@@ -563,7 +563,7 @@ abstract class qe {
         }
         var2 = field_f - field_n;
         var3 = field_l - field_c;
-        var4 = ug.a(true, (var2 >> 12) * (var2 >> 12) + (var3 >> 12) * (var3 >> 12)) >> 6;
+        var4 = MidiPcmStream.a(true, (var2 >> 12) * (var2 >> 12) + (var3 >> 12) * (var3 >> 12)) >> 6;
         if (var4 < 0) {
           throw new RuntimeException();
         }
@@ -762,7 +762,7 @@ abstract class qe {
         return var5;
     }
 
-    final static void a(int param0, int param1, hb param2) {
+    final static void a(int param0, int param1, Raider param2) {
         gf.b(param0 - 4, param1 - 4, 120, 120, 0);
         rp.a(4, 112, (byte) 108, param0, 112, kc.field_S, param1);
         if (param2 == null) {
@@ -911,7 +911,7 @@ abstract class qe {
         }
     }
 
-    final static void a(int param0, int param1, hb param2, int param3) {
+    final static void a(int param0, int param1, Raider param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

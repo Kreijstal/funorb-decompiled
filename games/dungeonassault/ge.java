@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends qb {
+final class ge extends PcmStream {
     private float field_w;
     private int[] field_z;
     private float field_r;
@@ -13,7 +13,7 @@ final class ge extends qb {
     private el[] field_u;
     private float field_v;
     private float field_m;
-    private qb field_t;
+    private PcmStream field_t;
     private float field_o;
     private float field_q;
     private float field_A;
@@ -277,7 +277,7 @@ final class ge extends qb {
         }
     }
 
-    final qb c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -285,7 +285,7 @@ final class ge extends qb {
         this.field_A = param0;
     }
 
-    final qb d() {
+    final PcmStream d() {
         return this.field_t;
     }
 
@@ -352,7 +352,7 @@ final class ge extends qb {
         return param0;
     }
 
-    ge(qb param0) {
+    ge(PcmStream param0) {
         this.field_x = new we[8];
         this.field_x[0] = new we(1116 * vn.field_t / 44100);
         this.field_x[1] = new we(1188 * vn.field_t / 44100);

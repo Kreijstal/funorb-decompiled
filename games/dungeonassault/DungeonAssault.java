@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class DungeonAssault extends in {
+public final class DungeonAssault extends NetworkGameClient {
     static String field_H;
     static cn field_I;
     static String field_G;
@@ -40,8 +40,8 @@ public final class DungeonAssault extends in {
         Random var4_ref_Random = null;
         int var5 = 0;
         int var6 = 0;
-        pj var9 = null;
-        pj var10 = null;
+        CombatState var9 = null;
+        CombatState var10 = null;
         int stackIn_112_0Lifetime1;
         int stackIn_112_1Lifetime1;
         int var4Lifetime1;
@@ -102,12 +102,12 @@ public final class DungeonAssault extends in {
                 if (!ed.c(true)) {
                   vk.a((byte) -31);
                   gd.a(g.field_Hb, 0, sa.field_f, false);
-                  stackIn_16_0 = ll.field_k;
-                  stackIn_17_1 = !(nh.field_k < 2);
-                  ll.field_k = stackIn_16_0 | stackIn_17_1;
+                  stackIn_16_0 = DualLinkNode.field_k;
+                  stackIn_17_1 = !(ResourceArchive.field_k < 2);
+                  DualLinkNode.field_k = stackIn_16_0 | stackIn_17_1;
                   if (tl.field_d) {
                     tl.field_d = false;
-                    a.a(320, ne.field_c.field_N, ne.field_c, true, false, 8, 240, 2, 8, ne.field_c.field_E + ne.field_c.field_N, (cn[]) null, (cn[]) null);
+                    a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, false, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
                     if (cm.field_R != null) {
                       i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 51, false);
                     }
@@ -128,7 +128,7 @@ public final class DungeonAssault extends in {
             this.c(true, (byte) -64);
           }
           if (dc.field_z == -2) {
-            var9 = new pj();
+            var9 = new CombatState();
             var9.field_v = uk.a(0, new Random());
             for (var4 = 0; 49 > var4; var4++) {
               stackIn_112_0 = 0;
@@ -146,10 +146,10 @@ public final class DungeonAssault extends in {
             var4Lifetime2 = stackIn_106_0;
             var9.field_y = var4Lifetime2;
             var9.field_o = var4Lifetime2 / 10;
-            var9.field_A[0] = new hb(0, 25);
-            var9.field_A[1] = new hb(1, 27);
-            var9.field_A[2] = new hb(2, 18);
-            var9.field_A[3] = new hb(3, 19);
+            var9.field_A[0] = new Raider(0, 25);
+            var9.field_A[1] = new Raider(1, 27);
+            var9.field_A[2] = new Raider(2, 18);
+            var9.field_A[3] = new Raider(3, 19);
             var9.a(false, 4);
             ik.field_e = new go(false, var9);
             var5 = cm.field_Q ? 1 : 0;
@@ -159,7 +159,7 @@ public final class DungeonAssault extends in {
           stackIn_112_0Lifetime1 = 2;
           stackIn_112_1Lifetime1 = ~dc.field_z;
           if (stackIn_112_0Lifetime1 == stackIn_112_1Lifetime1) {
-            var10 = new pj();
+            var10 = new CombatState();
             if (!ed.c(true) &&
               gm.field_d.field_q == -1) {
               var10.field_v = new wm(gm.field_d.field_k);
@@ -175,10 +175,10 @@ public final class DungeonAssault extends in {
               }
             }
             var10.field_o = 1000;
-            var10.field_A[0] = new hb(0, 1);
-            var10.field_A[1] = new hb(1, 3);
-            var10.field_A[2] = new hb(2, 4);
-            var10.field_A[3] = new hb(3, 2);
+            var10.field_A[0] = new Raider(0, 1);
+            var10.field_A[1] = new Raider(1, 3);
+            var10.field_A[2] = new Raider(2, 4);
+            var10.field_A[3] = new Raider(3, 2);
             var10.a(false, 4);
             ha.d(1);
             ik.field_e = new go(false, var10);
@@ -213,7 +213,7 @@ public final class DungeonAssault extends in {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        wj var4_ref_wj = null;
+        CipherPacketBuffer var4_ref_wj = null;
         int[] var4_ref_int__ = null;
         int var4 = 0;
         int var5 = 0;
@@ -232,7 +232,7 @@ public final class DungeonAssault extends in {
         int[] var18 = null;
         lb var19 = null;
         String var20 = null;
-        pj var21 = null;
+        CombatState var21 = null;
         int[] var22 = null;
         int[] var4_ref_int__Lifetime1;
         int[] var4_ref_int__Lifetime2;
@@ -344,7 +344,7 @@ public final class DungeonAssault extends in {
                   } else {
                     if (var2_int == 3) {
                       tl.field_d = false;
-                      a.a(320, ne.field_c.field_N, ne.field_c, true, true, 8, 240, 2, 8, ne.field_c.field_E + ne.field_c.field_N, (cn[]) null, (cn[]) null);
+                      a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, true, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
                       if (cm.field_R != null) {
                         i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 86, false);
                       }
@@ -364,21 +364,21 @@ public final class DungeonAssault extends in {
               nb.a(22);
             }
           } else {
-            td.a(pj.field_r, 121);
+            td.a(CombatState.field_r, 121);
             if (this.h(0)) {
               ef.field_h = true;
             }
           }
           if (!ed.c(true)) {
             while (true) {
-              var17_ref = (ak) (ll.field_i.b((byte) -124));
+              var17_ref = (ak) (DualLinkNode.field_i.b((byte) -124));
               if (var17_ref == null) {
                 break;
               }
               vb.a(4, (byte) 84, var17_ref);
             }
           }
-          L19: while (true) {
+          scanLoop1: while (true) {
             stackIn_139_0 = di.a(uo.field_c, -1);
             if (stackIn_139_0) {
               stackIn_254_0 = -55;
@@ -389,9 +389,9 @@ public final class DungeonAssault extends in {
                 var2 = var18;
                 var10 = var2;
                 var4_ref_wj = ra.field_c;
-                var5 = ((ec) ((Object) var4_ref_wj)).c(true);
+                var5 = ((PacketBuffer) ((Object) var4_ref_wj)).c(true);
                 for (var6 = 0; var6 < var5; var6++) {
-                  var10[var6] = ((ec) ((Object) var4_ref_wj)).h(-48);
+                  var10[var6] = ((PacketBuffer) ((Object) var4_ref_wj)).readInt(-48);
                 }
                 if (wh.field_d) {
                   var11 = var2;
@@ -420,7 +420,7 @@ public final class DungeonAssault extends in {
                   var15[var5Lifetime4] = mp.a(var15[var5Lifetime4], var16[var5Lifetime4]);
                 }
                 rf.field_S = true;
-                continue L19;
+                continue scanLoop1;
               }
               if (hc.field_c == 55) {
                 var19 = gm.field_d;
@@ -439,33 +439,33 @@ public final class DungeonAssault extends in {
                 }
                 if (mn.field_b != 3 &&
                   dc.field_z != 3) {
-                  continue L19;
+                  continue scanLoop1;
                 }
                 hi.b(1);
-                continue L19;
+                continue scanLoop1;
               }
               if (56 != hc.field_c &&
                 57 != hc.field_c) {
                 if (hc.field_c == 58) {
                   hm.a(0);
-                  continue L19;
+                  continue scanLoop1;
                 }
                 if (61 == hc.field_c) {
                   var20 = ra.field_c.a(-21030);
                   var3Lifetime2 = ra.field_c.k(0);
                   var4 = ra.field_c.c(true);
-                  var5Lifetime1 = ra.field_c.h(-111);
+                  var5Lifetime1 = ra.field_c.readInt(-111);
                   stackIn_220_0 = (ra.field_c.c(true) != 1) ? 0 : 1;
                   var6Lifetime1 = stackIn_220_0;
                   if (2 != dc.field_z) {
-                    continue L19;
+                    continue scanLoop1;
                   }
                   ((bg) (bf.field_f[2])).a(var6Lifetime1 != 0, var4, 0, var5Lifetime1, var3Lifetime2, var20);
-                  continue L19;
+                  continue scanLoop1;
                 }
                 if (hc.field_c == 62) {
                   af.a((byte) 9);
-                  var21 = new pj(ra.field_c, true);
+                  var21 = new CombatState(ra.field_c, true);
                   if (null != ik.field_e &&
                     ik.field_e.field_Y.field_f == var21.field_f) {
                     ik.field_e = new go(true, var21, ik.field_e);
@@ -475,16 +475,16 @@ public final class DungeonAssault extends in {
                   gd.a(dc.field_z, 0, -1, false);
                   kh.field_s = false;
                   nf.field_A = true;
-                  continue L19;
+                  continue scanLoop1;
                 }
                 if (hc.field_c != 72) {
                   if (nf.field_A &&
                     null != ik.field_e &&
                     ik.field_e.j(0)) {
-                    continue L19;
+                    continue scanLoop1;
                   }
                   this.d(true);
-                  continue L19;
+                  continue scanLoop1;
                 }
                 if (nf.field_A) {
                   af.a((byte) 14);
@@ -495,7 +495,7 @@ public final class DungeonAssault extends in {
                   }
                 }
                 kh.field_s = false;
-                continue L19;
+                continue scanLoop1;
               }
               var2_intLifetime1 = ra.field_c.f(-123);
               var3Lifetime3 = ra.field_c.f(-124);
@@ -509,7 +509,7 @@ public final class DungeonAssault extends in {
               stackIn_208_2 = 22;
               stackIn_209_3 = (hc.field_c == 57);
               ja.$cfr$intArgs$a$ed16b0445cf3(stackIn_208_0, stackIn_208_1, stackIn_208_2, stackIn_209_3, var5_ref_di__);
-              continue L19;
+              continue scanLoop1;
             }
             break;
           }
@@ -596,8 +596,8 @@ public final class DungeonAssault extends in {
           if (param0 > -15) {
             return;
           }
-          stackIn_6_0 = !(2 > nh.field_k);
-          ll.field_k = stackIn_6_0;
+          stackIn_6_0 = !(2 > ResourceArchive.field_k);
+          DualLinkNode.field_k = stackIn_6_0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ public final class DungeonAssault extends in {
         try {
           DungeonAssault.h((byte) 114);
           a.a(23779);
-          md.h(-4);
+          IntrusiveDeque.h(-4);
           tc.a((byte) -86);
           rl.a((byte) 75);
           vj.a(24243);
@@ -629,23 +629,23 @@ public final class DungeonAssault extends in {
           qe.a();
           te.a();
           gh.a(7);
-          og.a(-129);
+          KeyboardInput.a(-129);
           sb.a((byte) -88);
           fo.a((byte) -73);
           t.a(-11353);
           jh.a();
-          in.e(-1);
-          b.b(-30719);
-          kg.a(false);
+          NetworkGameClient.e(-1);
+          ClientException.b(-30719);
+          GameAppletShell.a(false);
           tl.a((byte) 50);
-          mh.a(16);
+          MouseInput.a(16);
           nl.a((byte) -109);
           gf.c();
-          nh.a(param0);
+          ResourceArchive.a(param0);
           se.a();
           ig.a(-2898);
           dm.b(0);
-          ec.i(25);
+          PacketBuffer.i(25);
           kd.a((byte) -101);
           sp.a(true);
           ml.a((byte) 63);
@@ -671,11 +671,11 @@ public final class DungeonAssault extends in {
           ea.a(0);
           ke.a(-123);
           n.a(3554);
-          hb.a((byte) 3);
+          Raider.a((byte) 3);
           ai.a((byte) 106);
           jc.a(0);
           ua.a((byte) 103);
-          ne.b(-18880);
+          IntrusiveNode.b(-18880);
           qj.a(-2418);
           bc.a(24740);
           lc.a(true);
@@ -691,7 +691,7 @@ public final class DungeonAssault extends in {
           kl.a(117);
           rj.b(false);
           sa.b(false);
-          ug.e(0);
+          MidiPcmStream.e(0);
           wa.c(23413);
           lp.a((byte) 16);
           vm.d();
@@ -703,7 +703,7 @@ public final class DungeonAssault extends in {
           qk.a((byte) 127);
           uf.b(0);
           gm.a(-94);
-          pj.e(126);
+          CombatState.e(126);
           mo.a(2);
           ul.a(true);
           jg.a((byte) -126);
@@ -715,7 +715,7 @@ public final class DungeonAssault extends in {
           fd.a((byte) 65);
           hl.a(50);
           rk.a(true);
-          wj.n(7);
+          CipherPacketBuffer.n(7);
           qc.a(0);
           dd.c((byte) -40);
           en.a(0);
@@ -752,7 +752,7 @@ public final class DungeonAssault extends in {
           ff.c(-103);
           hj.f(16744448);
           lo.a(114);
-          ll.a((byte) 92);
+          DualLinkNode.a((byte) 92);
           rd.b(true);
           s.a(-55);
           pa.a(2601);
@@ -1018,11 +1018,11 @@ public final class DungeonAssault extends in {
           nf.d(param0 + 0);
           i.field_A.a((java.awt.Component) ((Object) c.field_h), (byte) 25, false);
           gi.field_R = c.field_h;
-          ll.a(-26);
-          stackIn_46_0Lifetime1 = nh.field_k;
+          DualLinkNode.a(-26);
+          stackIn_46_0Lifetime1 = ResourceArchive.field_k;
           stackIn_46_1Lifetime1 = 2;
           stackIn_50_0 = !(stackIn_46_0Lifetime1 < stackIn_46_1Lifetime1);
-          ll.field_k = stackIn_50_0;
+          DualLinkNode.field_k = stackIn_50_0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1076,7 +1076,7 @@ public final class DungeonAssault extends in {
         try {
           var11 = fi.d(false);
           if (ao.a((byte) 72)) {
-            mf.a((byte) -101, md.f(20), var11);
+            mf.a((byte) -101, IntrusiveDeque.f(20), var11);
             return;
           }
           if (!ef.field_h) {
@@ -1105,7 +1105,7 @@ public final class DungeonAssault extends in {
           if (ib.a((byte) 35)) {
             gf.g(0, 0, gf.field_i, gf.field_c);
             var3_int = 15 + la.a((byte) -105);
-            var4_int = 30 + og.b(4);
+            var4_int = 30 + KeyboardInput.b(4);
             fm.a(ea.a((byte) 13), var3_int, var4_int, (byte) -127);
             ci.a((byte) -119);
           }
@@ -1149,7 +1149,7 @@ public final class DungeonAssault extends in {
                     ri.field_g.d(8, 0, 32, 32, var5_int);
                   }
                 } else {
-                  ec.field_j[var3_ref.field_j].a(8, 0, 32, 32);
+                  PacketBuffer.field_j[var3_ref.field_j].a(8, 0, 32, 32);
                 }
               }
             }
@@ -1165,27 +1165,27 @@ public final class DungeonAssault extends in {
             if (40 <= ke.field_e) {
               if (80 <= ke.field_e) {
                 if (ke.field_e < 230) {
-                  ne.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + ne.field_c.field_H >> 1, 0, -1, 128);
+                  IntrusiveNode.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, 128);
                 } else {
                   if (270 > ke.field_e) {
                     var5_intLifetime1 = (-ke.field_e + 270 << 8) / 40;
-                    ne.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + ne.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
+                    IntrusiveNode.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
                   }
                 }
               } else {
                 var5_intLifetime1 = (-40 + ke.field_e << 8) / 40;
-                ne.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + ne.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
+                IntrusiveNode.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
               }
             }
           }
-          if (nh.field_k >= 2 &&
+          if (ResourceArchive.field_k >= 2 &&
             ld.field_b) {
-            ne.field_c.b(Integer.toString(bc.field_a), 20, 20, 16777215, 1);
+            IntrusiveNode.field_c.b(Integer.toString(bc.field_a), 20, 20, 16777215, 1);
             var4_long = Runtime.getRuntime().totalMemory();
             var6_long = Runtime.getRuntime().freeMemory();
             var8 = var4_long - var6_long;
-            ne.field_c.b((int)(var8 >> 10) + "kb", 4, ne.field_c.field_H * 2 + 8, 16777215, -1);
-            ne.field_c.b(tc.field_u, 20, 80, 16777215, 1);
+            IntrusiveNode.field_c.b((int)(var8 >> 10) + "kb", 4, IntrusiveNode.field_c.field_H * 2 + 8, 16777215, -1);
+            IntrusiveNode.field_c.b(tc.field_u, 20, 80, 16777215, 1);
           }
           var4 = kh.field_m[kj.field_n / 5];
           var5 = jg.field_c[kj.field_n / 5];

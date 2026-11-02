@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lp extends ne {
+final class lp extends IntrusiveNode {
     int field_p;
     static fb field_o;
     int field_J;
     int field_E;
     int field_r;
-    va field_I;
+    PcmSample field_I;
     int field_w;
     int field_u;
     int field_k;
@@ -23,7 +23,7 @@ final class lp extends ne {
     int field_D;
     static int field_z;
     int field_t;
-    ni field_v;
+    PcmSampleStream field_v;
     kk field_x;
     static String[] field_q;
     int field_i;

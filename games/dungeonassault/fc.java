@@ -3,13 +3,13 @@
  */
 final class fc extends en {
     static int[] field_g;
-    private hb field_f;
+    private Raider field_f;
     static String field_e;
     static String field_h;
     static volatile int field_m;
     static int field_d;
     private h field_k;
-    private pj field_i;
+    private CombatState field_i;
     static String field_l;
     static String field_j;
 
@@ -115,7 +115,7 @@ final class fc extends en {
           var17_ref_StringLifetime1 = jk.a(new String[]{var25[0]}, rm.field_J, 30496);
           var18_ref_String = ck.field_H.a(jk.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
           var6[var14] = jn.a(var17_ref_StringLifetime1, new int[]{param1}, -80, la.field_b);
-          var7[var14] = jn.a(var18_ref_String, new int[]{param1}, md.b(param0, -16777100), la.field_b);
+          var7[var14] = jn.a(var18_ref_String, new int[]{param1}, IntrusiveDeque.b(param0, -16777100), la.field_b);
           var9 = var9 + (2 + var6[var14].length + var7[var14].length) * la.field_b.field_H;
         }
         if (var12 != 0) {
@@ -346,7 +346,7 @@ final class fc extends en {
         }
     }
 
-    fc(pj param0, hb param1) {
+    fc(CombatState param0, Raider param1) {
         try {
           this.field_f = param1;
           this.field_i = param0;

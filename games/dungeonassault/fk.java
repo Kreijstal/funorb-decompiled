@@ -17,7 +17,7 @@ final class fk extends kl {
     final void a(lb param0, int param1) {
         int var3_int = 0;
         RuntimeException runtimeException = null;
-        hb var4 = null;
+        Raider var4 = null;
         int var5 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -151,9 +151,9 @@ final class fk extends kl {
         if (-1 != this.field_q) {
           var5 = gm.field_d.field_a[this.field_q];
         }
-        qe.a(50 + this.field_k, this.field_j + 136, (hb) (var5), 0);
+        qe.a(50 + this.field_k, this.field_j + 136, (Raider) (var5), 0);
         if (var5 != null) {
-          db.field_v.a(((hb) (var5)).field_n.field_F.toUpperCase(), 45 + this.field_k, this.field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
+          db.field_v.a(((Raider) (var5)).field_n.field_F.toUpperCase(), 45 + this.field_k, this.field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
         }
     }
 
@@ -165,11 +165,11 @@ final class fk extends kl {
         pp stackIn_39_0 = null;
         boolean stackIn_40_1 = false;
         int var2;
-        hb[] var2_ref_hb__;
-        hb var3;
-        hb var4;
+        Raider[] var2_ref_hb__;
+        Raider var3;
+        Raider var4;
         int var5;
-        hb[] var6;
+        Raider[] var6;
         var5 = DungeonAssault.field_K;
         this.field_q = -1;
         super.a(param0);
@@ -348,7 +348,7 @@ final class fk extends kl {
     }
 
     private final void e(int param0) {
-        hb stackIn_30_0 = null;
+        Raider stackIn_30_0 = null;
         int var2;
         int var3;
         int var4;
@@ -404,8 +404,8 @@ final class fk extends kl {
     final void c(byte param0) {
         int var4 = 0;
         int var2;
-        hb[] var3;
-        hb var5;
+        Raider[] var3;
+        Raider var5;
         int var6;
         var6 = DungeonAssault.field_K;
         super.c((byte) 44);
@@ -441,7 +441,7 @@ final class fk extends kl {
         if (param0 != 37) {
           return;
         }
-        da.a(pi.field_i, cm.field_M, this.field_a >> 1, 1917623617, (ne.field_c.field_H + 36 >> 1) + 7, ne.field_c);
+        da.a(pi.field_i, cm.field_M, this.field_a >> 1, 1917623617, (IntrusiveNode.field_c.field_H + 36 >> 1) + 7, IntrusiveNode.field_c);
         this.d((byte) -123);
         gf.b(44, 64, 141, 53, 65793);
         rp.a(4, 133, (byte) 108, 48, 45, kc.field_S, 68);
@@ -455,8 +455,8 @@ final class fk extends kl {
         try {
           this.field_t = param1;
           this.field_w = param0;
-          this.field_p = tn.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, ne.field_c, jm.field_i, -112, be.field_r.toUpperCase());
-          this.field_o = tn.a(-jm.field_i.field_y + 500, -jm.field_i.field_v + this.field_j + (this.field_i - 20), ne.field_c, jm.field_i, -73, lk.field_P);
+          this.field_p = tn.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, IntrusiveNode.field_c, jm.field_i, -112, be.field_r.toUpperCase());
+          this.field_o = tn.a(-jm.field_i.field_y + 500, -jm.field_i.field_v + this.field_j + (this.field_i - 20), IntrusiveNode.field_c, jm.field_i, -73, lk.field_P);
           this.field_f.a(this.field_p, false);
           this.field_f.a(this.field_o, false);
           this.a((lb) null, 83);

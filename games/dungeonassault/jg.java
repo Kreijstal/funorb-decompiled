@@ -19,7 +19,7 @@ final class jg {
           if (param0 <= 94) {
             field_d = (String) null;
           }
-          stackIn_3_0 = ug.a(false, -44, param1);
+          stackIn_3_0 = MidiPcmStream.a(false, -44, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

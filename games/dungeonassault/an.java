@@ -129,10 +129,10 @@ final class an extends hh {
           }
           bf.field_k = param1;
           j.field_J = param5;
-          pj.field_a = param7;
-          hb.field_a = (bb) ((Object) new tp());
+          CombatState.field_a = param7;
+          Raider.field_a = (bb) ((Object) new tp());
           na.field_y = new cc(param8);
-          bl.field_r = new je(hb.field_a, na.field_y);
+          bl.field_r = new je(Raider.field_a, na.field_y);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "an.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

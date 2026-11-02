@@ -51,7 +51,7 @@ final class jl {
         }
     }
 
-    final static boolean a(wj param0, int param1) {
+    final static boolean a(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;

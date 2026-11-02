@@ -5,7 +5,7 @@ import java.util.*;
 
 final class mo {
     static int field_e;
-    ec field_c;
+    PacketBuffer field_c;
     static int field_a;
     static String field_b;
     static String[] field_g;
@@ -197,7 +197,7 @@ final class mo {
         }
     }
 
-    mo(int param0, ec param1) {
+    mo(int param0, PacketBuffer param1) {
         try {
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
@@ -217,8 +217,8 @@ final class mo {
     }
 
     mo(int param0, int param1) {
-        this(param0, new ec(2));
-        this.field_c.i(param1, -116);
+        this(param0, new PacketBuffer(2));
+        this.field_c.writeShort(param1, -116);
     }
 
     static {

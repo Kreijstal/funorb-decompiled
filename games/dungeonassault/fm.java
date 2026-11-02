@@ -3,7 +3,7 @@
  */
 final class fm {
     static int field_e;
-    static md field_b;
+    static IntrusiveDeque field_b;
     private fm field_c;
     static int[] field_h;
     static gb field_f;
@@ -35,7 +35,7 @@ final class fm {
           return lj.field_o;
         }
         if (param1 == 5) {
-          return in.field_D;
+          return NetworkGameClient.field_D;
         }
         if (6 == param1) {
           return ia.field_R;
@@ -86,7 +86,7 @@ final class fm {
           return up.field_b;
         }
         if (param1 == 22) {
-          return ll.field_q;
+          return DualLinkNode.field_q;
         }
         if (23 == param1) {
           return jc.field_c;
@@ -229,7 +229,7 @@ final class fm {
         }
     }
 
-    final static boolean a(ec param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

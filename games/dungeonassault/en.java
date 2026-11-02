@@ -81,8 +81,8 @@ abstract class en {
     }
 
     final static void a(byte param0) {
-        hb.field_a.field_h = 0;
-        hb.field_a.field_c = 0;
+        Raider.field_a.field_h = 0;
+        Raider.field_a.field_c = 0;
         if (param0 > -42) {
           field_a = (String[]) null;
         }

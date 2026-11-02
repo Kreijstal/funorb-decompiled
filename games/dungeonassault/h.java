@@ -101,10 +101,10 @@ final class h {
           if (!fi.field_u.a(false, "commonui")) {
             return 57;
           }
-          if (!kg.field_b.a(-14354)) {
+          if (!GameAppletShell.field_b.a(-14354)) {
             return 71;
           }
-          if (!kg.field_b.a(false, "commonui")) {
+          if (!GameAppletShell.field_b.a(false, "commonui")) {
             return 80;
           }
           if (!ib.field_b.a(-14354)) {
@@ -120,10 +120,10 @@ final class h {
           if (!fi.field_u.a(false, "commonui")) {
             return 40;
           }
-          if (!kg.field_b.a(-14354)) {
+          if (!GameAppletShell.field_b.a(-14354)) {
             return 50;
           }
-          if (!kg.field_b.a(false, "commonui")) {
+          if (!GameAppletShell.field_b.a(false, "commonui")) {
             return 60;
           }
           if (!ib.field_b.a(-14354)) {
@@ -148,7 +148,7 @@ final class h {
         }
     }
 
-    final static void a(int param0, nh param1, nh param2, boolean param3, nh param4) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
         try {
           im.field_b = oh.a("", -8);
           im.field_b.a(false, false);

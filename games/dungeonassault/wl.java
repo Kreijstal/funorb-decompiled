@@ -8,7 +8,7 @@ final class wl extends IOException {
     static int[] field_e;
     static int field_f;
     static String[] field_c;
-    static md field_a;
+    static IntrusiveDeque field_a;
     static String field_b;
     private static String field_z;
 
@@ -35,6 +35,6 @@ final class wl extends IOException {
         field_c = new String[]{"Death", "<%highlight>Your raider has perished!</col> Some more advanced traps and monsters, such as <%lastroom>, as well as the dragon in the hoard room, are capable of killing raiders outright. You will need to hire a new raider."};
         field_b = "You must raid by <%0> to preserve your streak which started on <%1>";
         field_f = -1;
-        field_a = new md();
+        field_a = new IntrusiveDeque();
     }
 }

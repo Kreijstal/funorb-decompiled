@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kb extends ne {
+abstract class kb extends IntrusiveNode {
     int field_i;
 
     abstract int a(mb param0);

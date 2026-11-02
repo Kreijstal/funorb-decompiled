@@ -30,7 +30,7 @@ final class bo extends ok {
           }
           var4_int = param2;
           if (null != param1.field_b) {
-            ne.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, ne.field_c.field_H);
+            IntrusiveNode.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, IntrusiveNode.field_c.field_H);
             var4_int = var4_int + param1.field_g;
             var4_int += 7;
             gf.b(param3, var4_int, 200, 0);
@@ -66,9 +66,9 @@ final class bo extends ok {
     final static void h(int param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (ec.field_k != null) {
-          ec.a(ec.field_k, false);
-          ec.field_k = null;
+        if (PacketBuffer.field_k != null) {
+          PacketBuffer.a(PacketBuffer.field_k, false);
+          PacketBuffer.field_k = null;
           nf.d(0);
           id.field_i = mk.a(3, (byte) 34);
           mi.field_e = mk.a(4, (byte) 34);
@@ -77,7 +77,7 @@ final class bo extends ok {
           kf.field_p = bg.a(true, 11, false, false, true);
           sb.field_a = bg.a(true, 12, false, false, true);
           ia.field_W = mk.a(13, (byte) 34);
-          ll.field_r = mk.a(14, (byte) 34);
+          DualLinkNode.field_r = mk.a(14, (byte) 34);
           tl.field_k = mk.a(15, (byte) 34);
           bl.field_t = mk.a(16, (byte) 34);
           be.field_s = new wk(75);
@@ -94,7 +94,7 @@ final class bo extends ok {
           be.field_s.a(mp.field_c, "roman12", rf.field_L, gh.field_c, -128);
           be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
           be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
-          be.field_s.a(wo.field_h, 237, rl.field_k, ll.field_r);
+          be.field_s.a(wo.field_h, 237, rl.field_k, DualLinkNode.field_r);
           be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
           be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
           be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
@@ -108,7 +108,7 @@ final class bo extends ok {
         kf.field_p = bg.a(true, 11, false, false, true);
         sb.field_a = bg.a(true, 12, false, false, true);
         ia.field_W = mk.a(13, (byte) 34);
-        ll.field_r = mk.a(14, (byte) 34);
+        DualLinkNode.field_r = mk.a(14, (byte) 34);
         tl.field_k = mk.a(15, (byte) 34);
         bl.field_t = mk.a(16, (byte) 34);
         be.field_s = new wk(75);
@@ -125,7 +125,7 @@ final class bo extends ok {
         be.field_s.a(mp.field_c, "roman12", rf.field_L, gh.field_c, -128);
         be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
         be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
-        be.field_s.a(wo.field_h, 237, rl.field_k, ll.field_r);
+        be.field_s.a(wo.field_h, 237, rl.field_k, DualLinkNode.field_r);
         be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
         be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
         be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
@@ -153,11 +153,11 @@ final class bo extends ok {
           if (ve.a(false)) {
             return;
           }
-          mc.a((byte) 37, 1, in.field_B);
+          mc.a((byte) 37, 1, NetworkGameClient.field_B);
           return;
         }
         if (!ve.a(false)) {
-          mc.a((byte) 37, 1, in.field_B);
+          mc.a((byte) 37, 1, NetworkGameClient.field_B);
           return;
         }
     }

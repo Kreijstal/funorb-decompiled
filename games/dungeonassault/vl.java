@@ -7,7 +7,7 @@ final class vl extends hl {
     static int field_m;
     static String field_l;
 
-    final void a(ec param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         if (param1 >= -5) {
           return;
         }
@@ -74,7 +74,7 @@ final class vl extends hl {
           }
           gm.field_d.field_K = param0;
           ac.field_B.d((byte) -78, 72);
-          ac.field_B.a(6, gm.field_d.field_K);
+          ac.field_B.writeByte(6, gm.field_d.field_K);
         }
         if (param1 == -49) {
           return;
