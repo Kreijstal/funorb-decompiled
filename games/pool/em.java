@@ -434,7 +434,7 @@ final class em extends ob {
         RuntimeException var20 = null;
         try {
           ap.a(param4, false, param13, param8, param9);
-          wo.a(1, param9);
+          DualLinkDeque.a(1, param9);
           rn.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
           jk.a(param3, false, param9, param6);
           ef.a(-74);

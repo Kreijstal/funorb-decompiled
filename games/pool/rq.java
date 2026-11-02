@@ -181,7 +181,7 @@ final class rq extends PcmStream {
         }
     }
 
-    final static kf a(int param0, nb param1) {
+    final static kf a(int param0, PcmSampleStream param1) {
         kf var2 = null;
         RuntimeException var2_ref = null;
         kf stackIn_2_0 = null;

@@ -406,7 +406,7 @@ final class rk {
               var12.field_lc.field_Bb = var24_int;
               var12.field_lc.field_P = var24_int;
               var12.field_lc.field_K = var24_int;
-              if (wo.field_f != param2) {
+              if (DualLinkDeque.field_f != param2) {
                 if (var12.field_mc) {
                   var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, IntrusiveNode.field_f);
                   var12.field_Zb.field_nb = be.field_K;
@@ -434,7 +434,7 @@ final class rk {
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Zb.field_nb) {
-                  if (param2 == wo.field_f) {
+                  if (param2 == DualLinkDeque.field_f) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Zb.b(true) + kj.field_j * 2;
@@ -632,7 +632,7 @@ final class rk {
                     }
                   }
                 }
-                if (param2 == wo.field_f &&
+                if (param2 == DualLinkDeque.field_f &&
                   cj.e((byte) 85)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, ii.field_c);
@@ -646,7 +646,7 @@ final class rk {
                     var24Lifetime2 = var35 + "<br>" + tp.field_d + (String) (var25);
                   }
                 }
-                if (param2 == wo.field_f &&
+                if (param2 == DualLinkDeque.field_f &&
                   !cj.e((byte) 85)) {
                   var27 = em.field_L.field_Ob;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + nr.a(new String[]{var27}, param4 ^ 82, ke.field_b);

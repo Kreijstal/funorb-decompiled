@@ -78,7 +78,7 @@ final class ga extends sl implements sc {
     final static void b(boolean param0) {
         try {
           be.f(-1);
-          wo.field_c = true;
+          DualLinkDeque.field_c = true;
           ro.field_e = true;
           wd.field_Ub.k(-22216);
           wf.a(param0, na.field_d, -127);

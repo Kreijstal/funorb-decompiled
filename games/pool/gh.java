@@ -682,7 +682,7 @@ final class gh extends vc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
-            param0.length() >= wo.field_a) {
+            param0.length() >= DualLinkDeque.field_a) {
             if (param0.length() > GameApplet.field_c) {
               return true;
             }

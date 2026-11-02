@@ -9,7 +9,7 @@ final class fk extends oo {
     private PcmSample field_W;
     private byte field_S;
     private int[] field_L;
-    private nb field_bb;
+    private PcmSampleStream field_bb;
     private PcmSample field_O;
     private PcmSample field_hb;
     private PcmSample field_fb;
@@ -140,7 +140,7 @@ final class fk extends oo {
                         if (null != this.field_bb) {
                           this.a((byte) 73, true, param0);
                         }
-                        this.field_bb = nb.a(this.field_U, 256, 0);
+                        this.field_bb = PcmSampleStream.a(this.field_U, 256, 0);
                         this.field_bb.e(-1);
                         mn.a(-24296, this.field_bb);
                         this.field_bb.d(4096, 16 * param1 >> 8);

@@ -1482,11 +1482,11 @@ final class qk {
                 }
                 var2 = cm.a("doubleplusgood_shot,0", (byte) 95);
                 if (var2 != null) {
-                  wo.field_b[0] = a.a(var2, -37);
+                  DualLinkDeque.field_b[0] = a.a(var2, -37);
                 }
                 var2 = cm.a("doubleplusgood_shot,1", (byte) 61);
                 if (var2 != null) {
-                  wo.field_b[1] = a.a(var2, 124);
+                  DualLinkDeque.field_b[1] = a.a(var2, 124);
                 }
                 var2 = cm.a("plusgood_shot,0", (byte) 103);
                 if (null != var2) {

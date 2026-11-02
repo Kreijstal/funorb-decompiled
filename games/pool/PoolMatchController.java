@@ -8042,7 +8042,7 @@ final class PoolMatchController {
                       if (param0.field_w < 3) {
                         var3 = null;
                       } else {
-                        var3 = wo.field_b;
+                        var3 = DualLinkDeque.field_b;
                       }
                     } else {
                       var3 = pq.field_C;

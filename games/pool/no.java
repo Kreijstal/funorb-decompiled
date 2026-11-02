@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class no {
-    wo field_j;
+    DualLinkDeque field_j;
     static na field_k;
     static int[] field_s;
     static nl field_h;
-    wo field_f;
+    DualLinkDeque field_f;
     static Sprite field_q;
-    wo field_t;
+    DualLinkDeque field_t;
     static int[] field_n;
     static hj field_g;
-    wo field_o;
+    DualLinkDeque field_o;
     PacketBuffer field_r;
     long field_d;
     int field_m;
@@ -297,10 +297,10 @@ abstract class no {
     }
 
     no() {
-        this.field_j = new wo();
-        this.field_f = new wo();
-        this.field_t = new wo();
-        this.field_o = new wo();
+        this.field_j = new DualLinkDeque();
+        this.field_f = new DualLinkDeque();
+        this.field_t = new DualLinkDeque();
+        this.field_o = new DualLinkDeque();
         this.field_r = new PacketBuffer(6);
         this.field_e = 0;
         this.field_a = 0;

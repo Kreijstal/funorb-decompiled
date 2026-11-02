@@ -15,7 +15,7 @@ abstract class oo {
     String field_l;
     double field_p;
     boolean field_h;
-    private nb field_r;
+    private PcmSampleStream field_r;
     int field_d;
     private p[] field_y;
     private int[][] field_a;
@@ -985,7 +985,7 @@ abstract class oo {
               param4[var7].a(var9 + ga.a(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
               param4[var7].field_o.i()) && ga.a(param1, true, ea.field_r) == 0) {
-              param4[var7] = mn.a(-24296, nb.c(param3[ga.a(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7] = mn.a(-24296, PcmSampleStream.c(param3[ga.a(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);

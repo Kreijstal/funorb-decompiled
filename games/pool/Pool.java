@@ -699,7 +699,7 @@ public final class Pool extends ep {
         sg.f(param0 ^ -506724219);
         og.f((byte) -103);
         ug.h(param0 ^ 80);
-        wo.a(true);
+        DualLinkDeque.a(true);
         np.a(true);
         dg.c((byte) -80);
         up.a(true);

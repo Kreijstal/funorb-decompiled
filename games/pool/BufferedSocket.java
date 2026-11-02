@@ -16,7 +16,7 @@ final class BufferedSocket implements Runnable {
     private int field_k;
     private byte[] field_j;
     private boolean field_h;
-    static nb field_b;
+    static PcmSampleStream field_b;
     private OutputStream field_g;
     private PlatformTaskDispatcher field_o;
     static int[] field_p;

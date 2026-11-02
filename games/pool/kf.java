@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kf extends IntrusiveNode {
-    nb field_o;
+    PcmSampleStream field_o;
     static String field_l;
     int field_n;
     IntrusiveNode field_m;
@@ -296,7 +296,7 @@ final class kf extends IntrusiveNode {
         }
     }
 
-    kf(nb param0, IntrusiveNode param1) {
+    kf(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_o = param0;
           this.field_n = param0.j();

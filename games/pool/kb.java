@@ -69,7 +69,7 @@ abstract class kb {
         return this.b(param0, (byte) 113);
     }
 
-    final static void a(byte param0, nb param1) {
+    final static void a(byte param0, PcmSampleStream param1) {
         try {
           int var2_int = 59 % ((param0 + 75) / 33);
           qf.field_d.a(param1);

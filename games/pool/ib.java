@@ -59,9 +59,9 @@ final class ib extends PcmStream {
             param1.field_y = param1.field_y + var4_int * param0 & 1048575;
             if (var5 <= param0) {
               if (this.field_w.field_U[param1.field_t] == 0) {
-                param1.field_o = nb.b(param1.field_C, param1.field_o.m(), param1.field_o.j(), param1.field_o.f());
+                param1.field_o = PcmSampleStream.b(param1.field_C, param1.field_o.m(), param1.field_o.j(), param1.field_o.f());
               } else {
-                param1.field_o = nb.b(param1.field_C, param1.field_o.m(), 0, param1.field_o.f());
+                param1.field_o = PcmSampleStream.b(param1.field_C, param1.field_o.m(), 0, param1.field_o.f());
                 stackIn_9_0 = this.field_w;
                 stackIn_9_1 = param2 - 1048698;
                 stackIn_9_2 = (pr) (param1);
@@ -106,7 +106,7 @@ final class ib extends PcmStream {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        nb var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = Pool.field_O;
         try {
@@ -130,7 +130,7 @@ final class ib extends PcmStream {
               }
               var11 = param2.field_o;
               if (this.field_w.field_U[param2.field_t] != 0) {
-                param2.field_o = nb.b(param2.field_C, var11.m(), 0, var11.f());
+                param2.field_o = PcmSampleStream.b(param2.field_C, var11.m(), 0, var11.f());
                 stackIn_14_0 = this.field_w;
                 stackIn_14_1 = -125;
                 stackIn_14_2 = (pr) (param2);
@@ -138,7 +138,7 @@ final class ib extends PcmStream {
                 ((vk) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
                 param2.field_o.c(var9, var11.j());
               } else {
-                param2.field_o = nb.b(param2.field_C, var11.m(), var11.j(), var11.f());
+                param2.field_o = PcmSampleStream.b(param2.field_C, var11.m(), var11.j(), var11.f());
               }
               if (param2.field_u.field_s[param2.field_A] < 0) {
                 param2.field_o.e(-1);

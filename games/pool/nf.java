@@ -304,9 +304,9 @@ final class nf extends ch implements jb, tb, jn {
     final static vh g(byte param0) {
         if (param0 != 103) {
           field_S = (IntrusiveDeque) null;
-          return wo.field_f.field_Rb;
+          return DualLinkDeque.field_f.field_Rb;
         }
-        return wo.field_f.field_Rb;
+        return DualLinkDeque.field_f.field_Rb;
     }
 
     private final int a(int param0, String param1, ei param2, String param3, int param4, int param5) {

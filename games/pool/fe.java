@@ -365,7 +365,7 @@ class fe extends ei {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = wo.field_f.field_Rb.field_T;
+                var17 = DualLinkDeque.field_f.field_Rb.field_T;
                 var18_ref = (im) (var17.c((byte) 96));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;

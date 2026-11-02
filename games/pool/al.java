@@ -1555,7 +1555,7 @@ final class al {
           }
           ((vh) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
           jh.field_a.b(ad.field_x + 2, 2147483647, -2 + (-nk.field_n + cl.field_d.field_gb - 40), nk.field_n + 42, 18);
-          wo.field_f.a(nk.field_n, -22 + (cl.field_d.field_Db - ad.field_x), (byte) -112, 2, cl.field_d.field_gb, 0, ad.field_x + 22);
+          DualLinkDeque.field_f.a(nk.field_n, -22 + (cl.field_d.field_Db - ad.field_x), (byte) -112, 2, cl.field_d.field_gb, 0, ad.field_x + 22);
           ok.field_ob.b(so.field_k.field_Db - 40, 2147483647, 0, so.field_k.field_gb, 40);
           ii.field_e.b(0, param1 ^ 2147483647, 0, uq.field_f.field_gb, 30);
           rq.field_x.b(30, 2147483647, 0, uq.field_f.field_gb, -30 + (-2 + uq.field_f.field_Db) - 40);

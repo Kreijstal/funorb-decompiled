@@ -853,7 +853,7 @@ final class vk extends PcmStream {
         var7.field_F = 0;
         var7.field_p = 0;
         if (this.field_U[param3] != 0) {
-          var7.field_o = nb.b(var6, this.b(1, var7), 0, this.a((byte) 123, var7));
+          var7.field_o = PcmSampleStream.b(var6, this.b(1, var7), 0, this.a((byte) 123, var7));
           stackIn_17_1 = -123;
           stackIn_17_2 = var7;
           if (var11.field_s[param1] >= 0) {
@@ -865,7 +865,7 @@ final class vk extends PcmStream {
           }
           this.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
         } else {
-          var7.field_o = nb.b(var6, this.b(param0 + 1, var7), this.a(true, var7), this.a((byte) 121, var7));
+          var7.field_o = PcmSampleStream.b(var6, this.b(param0 + 1, var7), this.a(true, var7), this.a((byte) 121, var7));
         }
         if (var11.field_s[param1] < 0) {
           var7.field_o.e(-1);

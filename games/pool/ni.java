@@ -4,7 +4,7 @@
 final class ni extends vc {
     private PcmSample field_W;
     private so field_bb;
-    private nb field_ab;
+    private PcmSampleStream field_ab;
     private PcmSample field_Q;
     static he field_eb;
     private PcmSample field_fb;
@@ -17,14 +17,14 @@ final class ni extends vc {
     private PcmSample field_cb;
     static GameApplet field_ib;
     private PcmSample field_X;
-    private nb field_hb;
+    private PcmSampleStream field_hb;
     static String field_S;
     private so field_U;
     private PcmSample field_db;
     private PcmSample field_V;
 
     final void a(int param0, PoolMatchController param1) {
-        nb dupTemp$0 = null;
+        PcmSampleStream dupTemp$0 = null;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
         int stackIn_40_2 = 0;
@@ -53,7 +53,7 @@ final class ni extends vc {
           if (null != this.field_ab &&
             this.field_ab.i() &&
             this.field_hb == null) {
-            dupTemp$0 = nb.a(this.field_db, 100, this.field_ab.l(), this.field_ab.n());
+            dupTemp$0 = PcmSampleStream.a(this.field_db, 100, this.field_ab.l(), this.field_ab.n());
             this.field_hb = dupTemp$0;
             mn.a(-24296, dupTemp$0);
             this.field_ab = null;
@@ -503,7 +503,7 @@ final class ni extends vc {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        nb dupTemp$0 = null;
+        PcmSampleStream dupTemp$0 = null;
         int var5;
         int var6;
         int var7;
@@ -520,7 +520,7 @@ final class ni extends vc {
               } else {
                 if (var6 != 1) {
                   if (var6 == 4) {
-                    dupTemp$0 = nb.a(this.field_Y, 100, param1, param3);
+                    dupTemp$0 = PcmSampleStream.a(this.field_Y, 100, param1, param3);
                     this.field_ab = dupTemp$0;
                     mn.a(-24296, dupTemp$0);
                   } else {

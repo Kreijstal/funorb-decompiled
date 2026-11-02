@@ -12,7 +12,7 @@ final class mn implements Iterator {
     static String field_d;
     private qi field_f;
 
-    final static kf a(int param0, nb param1) {
+    final static kf a(int param0, PcmSampleStream param1) {
         kf var2 = null;
         RuntimeException var2_ref = null;
         kf stackIn_3_0 = null;

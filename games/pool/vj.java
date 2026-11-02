@@ -159,7 +159,7 @@ final class vj {
           if (param0 != -27) {
             field_b = (String) null;
           }
-          stackIn_3_0 = mn.a(param0 ^ 24317, nb.b(param1, 100, 96));
+          stackIn_3_0 = mn.a(param0 ^ 24317, PcmSampleStream.b(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

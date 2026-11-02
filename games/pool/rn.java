@@ -3,7 +3,7 @@
  */
 final class rn implements Runnable {
     static int field_b;
-    private wo field_c;
+    private DualLinkDeque field_c;
     static int field_d;
     static vh field_f;
     static String[] field_a;
@@ -29,7 +29,7 @@ final class rn implements Runnable {
           var4.field_R = param1;
           this.a(var4, -19789);
           if (param0 != 58) {
-            this.field_c = (wo) null;
+            this.field_c = (DualLinkDeque) null;
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -364,13 +364,13 @@ final class rn implements Runnable {
           nd.field_c.field_Fb = 1;
           br.field_M = new vh(0L, lf.field_d, jh.field_g);
           jh.field_a = new vh(0L, sd.field_Q, wi.field_c);
-          wo.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          DualLinkDeque.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
           cl.field_d.a(-119, nd.field_c);
           cl.field_d.a(-104, br.field_M);
           if (tq.field_p) {
             cl.field_d.a(9, jh.field_a);
           }
-          cl.field_d.a(-109, wo.field_f);
+          cl.field_d.a(-109, DualLinkDeque.field_f);
           ok.field_ob = new vh(0L, tg.field_d, dk.field_g.toUpperCase());
           ii.field_e = new vh(0L, rl.field_d);
           rq.field_x = new vh(0L, ri.field_P);
@@ -626,7 +626,7 @@ final class rn implements Runnable {
 
     rn(PlatformTaskDispatcher param0) {
         AsyncRequest var2 = null;
-        this.field_c = new wo();
+        this.field_c = new DualLinkDeque();
         this.field_j = false;
         this.field_e = 0;
         try {

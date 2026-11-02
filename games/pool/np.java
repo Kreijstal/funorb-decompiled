@@ -496,10 +496,10 @@ final class np {
               Pool.field_Q = kn.field_e.readLong(-412303328);
               kn.field_e.position = 0;
               pj.a(param2, hn.field_c, param3, -98300704, param4);
-              tl.field_J = wo.field_g;
+              tl.field_J = DualLinkDeque.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (tl.field_J == wo.field_g &&
+            if (tl.field_J == DualLinkDeque.field_g &&
               lq.b((byte) 79, 1)) {
               var6_intLifetime1 = kn.field_e.readUnsignedByte(-110);
               kn.field_e.position = 0;

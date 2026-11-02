@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wo {
+final class DualLinkDeque {
     static String[] field_b;
     static boolean field_c;
     private DualLinkNode field_d;
@@ -95,7 +95,7 @@ final class wo {
         return var2;
     }
 
-    public wo() {
+    public DualLinkDeque() {
         this.field_d = new DualLinkNode();
         this.field_d.field_q = this.field_d;
         this.field_d.field_n = this.field_d;

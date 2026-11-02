@@ -1227,56 +1227,56 @@ final class cj extends vc {
             var4 = ga.a(stackIn_11_0, true, ea.field_r);
             var6 = var4;
             if (var6 == 0) {
-              mc.field_j[var3] = mn.a(-24296, nb.a(this.field_db, 100, param1, ga.a(128, true, ea.field_r)));
+              mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.a(128, true, ea.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  mc.field_j[var3] = mn.a(-24296, nb.a(this.field_kb, 100, param1, ga.a(128, true, ea.field_r)));
+                  mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.a(128, true, ea.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        mc.field_j[var3] = mn.a(-24296, nb.a(this.field_Z, 100, param1, ga.a(128, true, ea.field_r)));
+                        mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.a(128, true, ea.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  mc.field_j[var3] = rq.a(126, nb.a(this.field_gb, 100, param1, ga.a(128, true, ea.field_r)));
+                                  mc.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.a(128, true, ea.field_r)));
                                 } else {
                                   var5 = (PcmSample) (mc.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    mc.field_j[var3] = mn.a(-24296, nb.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
+                                    mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
                                   } else {
-                                    mc.field_j[var3] = rq.a(126, nb.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
+                                    mc.field_j[var3] = rq.a(126, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
                                   }
                                 }
                               } else {
-                                mc.field_j[var3] = rq.a(101, nb.a(this.field_Y, 100, param1, ga.a(128, true, ea.field_r)));
+                                mc.field_j[var3] = rq.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.a(128, true, ea.field_r)));
                               }
                             } else {
-                              mc.field_j[var3] = rq.a(124, nb.a(this.field_cb, 100, param1, ga.a(128, true, ea.field_r)));
+                              mc.field_j[var3] = rq.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.a(128, true, ea.field_r)));
                             }
                           } else {
-                            mc.field_j[var3] = rq.a(126, nb.a(this.field_X, 100, param1, ga.a(128, true, ea.field_r)));
+                            mc.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.a(128, true, ea.field_r)));
                           }
                         } else {
-                          mc.field_j[var3] = mn.a(param0 - 19719, nb.a(this.field_ab, 100, param1, ga.a(128, true, ea.field_r)));
+                          mc.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.a(128, true, ea.field_r)));
                         }
                       }
                     } else {
-                      mc.field_j[var3] = mn.a(param0 - 19719, nb.a(this.field_T, 100, param1, ga.a(128, true, ea.field_r)));
+                      mc.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.a(128, true, ea.field_r)));
                     }
                   } else {
-                    mc.field_j[var3] = mn.a(cq.a(param0, 20231), nb.a(this.field_pb, 100, param1, ga.a(128, true, ea.field_r)));
+                    mc.field_j[var3] = mn.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.a(128, true, ea.field_r)));
                   }
                 }
               } else {
-                mc.field_j[var3] = mn.a(-24296, nb.a(this.field_nb, 100, param1, ga.a(128, true, ea.field_r)));
+                mc.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.a(128, true, ea.field_r)));
               }
             }
           }
