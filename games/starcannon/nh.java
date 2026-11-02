@@ -49,7 +49,7 @@ final class nh {
                 nh.a(false);
               }
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              param0.getAppletContext().showDocument(wh.a(127, var2, param0), "_top");
+              param0.getAppletContext().showDocument(NodeHashTableIterator.a(127, var2, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

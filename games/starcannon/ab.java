@@ -38,9 +38,9 @@ class ab extends dk {
         }
     }
 
-    final static hl[] b(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != -25343) {
-          return (hl[]) null;
+          return (Sprite[]) null;
         }
         return cc.a(1, param4, 1, param3, 3, param0, 3, 1, param2);
     }
@@ -60,11 +60,11 @@ class ab extends dk {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        hl var7 = null;
-        hl var8 = null;
-        hl var9 = null;
-        hl var8Lifetime1;
-        hl var8Lifetime2;
+        Sprite var7 = null;
+        Sprite var8 = null;
+        Sprite var9 = null;
+        Sprite var8Lifetime1;
+        Sprite var8Lifetime2;
         int var4Lifetime1;
         var5 = StarCannon.field_A;
         try {

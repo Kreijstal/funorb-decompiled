@@ -3,7 +3,7 @@
  */
 final class ra extends ik {
     static sk field_t;
-    rb field_u;
+    PacketBuffer field_u;
     byte field_w;
     int field_v;
     static String field_y;
@@ -46,14 +46,14 @@ final class ra extends ik {
         if (this.field_r) {
           throw new RuntimeException();
         }
-        if (this.field_u.field_g < this.field_u.field_f.length - this.field_w) {
+        if (this.field_u.position < this.field_u.payload.length - this.field_w) {
           throw new RuntimeException();
         }
         if (param0 == 0) {
-          return this.field_u.field_f;
+          return this.field_u.payload;
         }
         this.f(-20);
-        return this.field_u.field_f;
+        return this.field_u.payload;
     }
 
     final int e(int param0) {
@@ -61,7 +61,7 @@ final class ra extends ik {
           return 0;
         }
         if (param0 == -29144) {
-          return 100 * this.field_u.field_g / (-this.field_w + this.field_u.field_f.length);
+          return 100 * this.field_u.position / (-this.field_w + this.field_u.payload.length);
         }
         return 74;
     }

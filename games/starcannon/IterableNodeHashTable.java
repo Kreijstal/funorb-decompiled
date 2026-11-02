@@ -3,40 +3,40 @@
  */
 import java.util.*;
 
-final class ek implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     int field_c;
     static long field_d;
-    private rf field_e;
+    private IntrusiveNode field_e;
     static java.applet.Applet field_b;
-    rf[] field_a;
+    IntrusiveNode[] field_a;
 
-    final rf a(long param0, int param1) {
-        rf var4;
-        rf var5;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = StarCannon.field_A;
         var4 = this.field_a[(int)(param0 & (long)(this.field_c - param1))];
-        this.field_e = var4.field_a;
+        this.field_e = var4.next;
         while (true) {
           if (var4 == this.field_e) {
             this.field_e = null;
             return null;
           }
-          if (~param0 != ~this.field_e.field_b) {
-            this.field_e = this.field_e.field_a;
+          if (~param0 != ~this.field_e.key) {
+            this.field_e = this.field_e.next;
             continue;
           }
           break;
         }
         var5 = this.field_e;
-        this.field_e = this.field_e.field_a;
+        this.field_e = this.field_e.next;
         return var5;
     }
 
     public static void a(boolean param0) {
         field_b = null;
         if (param0) {
-          ek.a(44);
+          IterableNodeHashTable.a(44);
         }
     }
 
@@ -51,23 +51,23 @@ final class ek implements Iterable {
           var3 = var2 + param1;
           return var3;
         }
-        ek.a(-51, -124);
+        IterableNodeHashTable.a(-51, -124);
         var3Lifetime1 = var2 + param1;
         return var3Lifetime1;
     }
 
-    final void a(long param0, int param1, rf param2) {
-        rf var5 = null;
+    final void a(long param0, int param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_d) {
-            param2.b(4);
+          if (null != param2.previous) {
+            param2.unlink(4);
           }
           var5 = this.field_a[(int)(param0 & (long)(param1 + this.field_c))];
-          param2.field_a = var5;
-          param2.field_d = var5.field_d;
-          param2.field_d.field_a = param2;
-          param2.field_a.field_d = param2;
-          param2.field_b = param0;
+          param2.next = var5;
+          param2.previous = var5.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+          param2.key = param0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -80,12 +80,12 @@ final class ek implements Iterable {
         return !qa.field_a.b(false) ? true : false;
     }
 
-    private ek() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wh(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     static {

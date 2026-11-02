@@ -27,7 +27,7 @@ abstract class uc implements he {
 
     public final p b(byte param0) {
         if (this.a(true)) {
-          return uh.field_g;
+          return DualLinkNode.field_g;
         }
         int var2 = -87 / ((param0 + 85) / 36);
         if (!((this.field_c + 350L) <= dd.b(61))) {

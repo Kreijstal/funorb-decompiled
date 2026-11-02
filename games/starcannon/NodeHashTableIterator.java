@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class wh implements Iterator {
-    private rf field_a;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode field_a;
     static int[] field_e;
-    private ek field_b;
+    private IterableNodeHashTable field_b;
     private int field_c;
-    private rf field_d;
+    private IntrusiveNode field_d;
 
     final static void b(int param0) {
         qb.b(-1);
@@ -16,13 +16,13 @@ final class wh implements Iterator {
         if (param0 > 63) {
           tc.field_x = true;
           ti.field_b.l(26756);
-          sc.a(false, (byte) 118, ui.field_n);
+          sc.a(false, (byte) 118, SpriteState.field_n);
           return;
         }
-        wh.a(false);
+        NodeHashTableIterator.a(false);
         tc.field_x = true;
         ti.field_b.l(26756);
-        sc.a(false, (byte) 118, ui.field_n);
+        sc.a(false, (byte) 118, SpriteState.field_n);
     }
 
     public final boolean hasNext() {
@@ -35,8 +35,8 @@ final class wh implements Iterator {
         while (this.field_b.field_c > this.field_c) {
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_b.field_a[fieldTemp$0].field_a != this.field_b.field_a[this.field_c - 1]) {
-            this.field_a = this.field_b.field_a[-1 + this.field_c].field_a;
+          if (this.field_b.field_a[fieldTemp$0].next != this.field_b.field_a[this.field_c - 1]) {
+            this.field_a = this.field_b.field_a[-1 + this.field_c].next;
             return true;
           }
           this.field_a = this.field_b.field_a[this.field_c - 1];
@@ -45,7 +45,7 @@ final class wh implements Iterator {
     }
 
     private final void a(int param0) {
-        this.field_a = this.field_b.field_a[0].field_a;
+        this.field_a = this.field_b.field_a[0].next;
         this.field_c = 1;
         if (param0 == -17399) {
           this.field_d = null;
@@ -61,7 +61,7 @@ final class wh implements Iterator {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        wh.a(124, (java.net.URL) null, (java.applet.Applet) null);
+        NodeHashTableIterator.a(124, (java.net.URL) null, (java.applet.Applet) null);
     }
 
     final static java.net.URL a(int param0, java.net.URL param1, java.applet.Applet param2) {
@@ -116,13 +116,13 @@ final class wh implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        rf var1;
+        IntrusiveNode var1;
         int var2;
         var2 = StarCannon.field_A;
         if (this.field_b.field_a[this.field_c - 1] != this.field_a) {
           var1 = this.field_a;
           this.field_d = var1;
-          this.field_a = var1.field_a;
+          this.field_a = var1.next;
           return var1;
         }
         do {
@@ -131,10 +131,10 @@ final class wh implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var1 = this.field_b.field_a[fieldTemp$0].field_a;
+          var1 = this.field_b.field_a[fieldTemp$0].next;
         } while (this.field_b.field_a[-1 + this.field_c] == var1);
         this.field_d = var1;
-        this.field_a = var1.field_a;
+        this.field_a = var1.next;
         return var1;
     }
 
@@ -142,11 +142,11 @@ final class wh implements Iterator {
         if (this.field_d == null) {
           throw new IllegalStateException();
         }
-        this.field_d.b(4);
+        this.field_d.unlink(4);
         this.field_d = null;
     }
 
-    wh(ek param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_d = null;
         try {
           this.field_b = param0;

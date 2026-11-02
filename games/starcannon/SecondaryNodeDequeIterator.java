@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-final class ob implements Iterator {
-    private uh field_f;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode field_f;
     private static long[] field_d;
-    private uh field_i;
+    private DualLinkNode field_i;
     static String field_g;
     static int field_j;
     static int field_h;
     static int field_b;
     static String field_a;
-    private bh field_e;
+    private SecondaryNodeDeque field_e;
     static int[] field_c;
 
     final static void a(int param0) {
         int var1;
         var1 = -85 / ((54 - param0) / 61);
         if (bl.field_a == 10 ||
-          !rb.e((byte) -72)) {
-          wh.b(81);
+          !PacketBuffer.e((byte) -72)) {
+          NodeHashTableIterator.b(81);
           bl.field_a = 11;
         }
         kb.field_a = true;
@@ -30,16 +30,16 @@ final class ob implements Iterator {
         t.field_h.c(20317, new db());
         if (param0 != 11) {
           ue var2 = (ue) null;
-          ob.a((String) null, 17, (String) null, (ue) null);
+          SecondaryNodeDequeIterator.a((String) null, 17, (String) null, (ue) null);
         }
     }
 
-    final static hl[] a(String param0, int param1, String param2, ue param3) {
+    final static Sprite[] a(String param0, int param1, String param2, ue param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        hl[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -98,7 +98,7 @@ final class ob implements Iterator {
         field_c = null;
         field_a = null;
         if (param0 != -18147) {
-          ob.a(102);
+          SecondaryNodeDequeIterator.a(102);
         }
     }
 
@@ -122,21 +122,21 @@ final class ob implements Iterator {
     public final Object next() {
         Object var1 = this.field_i;
         if (var1 != this.field_e.field_f) {
-          this.field_i = ((uh) (var1)).field_m;
+          this.field_i = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.field_i = null;
           var1 = null;
         }
-        this.field_f = (uh) (var1);
+        this.field_f = (DualLinkNode) (var1);
         return var1;
     }
 
-    ob(bh param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_f = null;
         try {
           this.field_e = param0;
           this.field_f = null;
-          this.field_i = this.field_e.field_f.field_m;
+          this.field_i = this.field_e.field_f.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

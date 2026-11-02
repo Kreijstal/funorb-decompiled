@@ -20,13 +20,13 @@ final class sd {
         field_b = null;
     }
 
-    final static ii a(Throwable param0, String param1) {
-        ii var2 = null;
-        if (param0 instanceof ii) {
-          var2 = (ii) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_b = var2.field_b + ' ' + param1;
         } else {
-          var2 = new ii(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends rb {
+final class ia extends PacketBuffer {
     static String field_l;
     static int field_k;
     private jb field_m;
@@ -21,39 +21,39 @@ final class ia extends rb {
     final int m(int param0) {
         int fieldTemp$0 = 0;
         if (param0 != 255) {
-          rf var3 = (rf) null;
-          ia.a((rf) null, (rf) null, (byte) -73);
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-          return this.field_f[fieldTemp$0] - this.field_m.d(param0 ^ 252) & 255;
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          ia.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) -73);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_m.d(param0 ^ 252) & 255;
         }
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        return this.field_f[fieldTemp$1] - this.field_m.d(param0 ^ 252) & 255;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$1] - this.field_m.d(param0 ^ 252) & 255;
     }
 
     final void d(byte param0, int param1) {
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(param1 + this.field_m.d(3));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.d(3));
         if (param0 >= 14) {
           return;
         }
         field_l = (String) null;
     }
 
-    final static void a(rf param0, rf param1, byte param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param2 != 57) {
             field_l = (String) null;
           }
-          if (param0.field_d != null) {
-            param0.b(4);
+          if (param0.previous != null) {
+            param0.unlink(4);
           }
-          param0.field_a = param1.field_a;
-          param0.field_d = param1;
-          param0.field_d.field_a = param0;
-          param0.field_a.field_d = param0;
+          param0.next = param1.next;
+          param0.previous = param1;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ia.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -61,7 +61,7 @@ final class ia extends rb {
 
     final void l(int param0) {
         int var2 = -5 / ((58 - param0) / 56);
-        this.field_g = (this.field_j + 7) / 8;
+        this.position = (this.field_j + 7) / 8;
     }
 
     public static void k(int param0) {
@@ -69,8 +69,8 @@ final class ia extends rb {
         if (param0 > 29) {
           return;
         }
-        rf var2 = (rf) null;
-        ia.a((rf) null, (rf) null, (byte) -41);
+        IntrusiveNode var2 = (IntrusiveNode) null;
+        ia.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) -41);
     }
 
     final static boolean a(String param0, byte param1, String param2) {
@@ -135,9 +135,9 @@ final class ia extends rb {
             return;
           }
           while (var5_int < param0) {
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            param2[param3 + var5_int] = (byte)(this.field_f[fieldTemp$0] - this.field_m.d(dg.a((int) param1, -55)));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.d(dg.a((int) param1, -55)));
             var5_int++;
           }
           return;
@@ -159,7 +159,7 @@ final class ia extends rb {
         if (!param0) {
           return;
         }
-        this.field_j = this.field_g * 8;
+        this.field_j = this.position * 8;
     }
 
     final int e(int param0, int param1) {
@@ -172,14 +172,14 @@ final class ia extends rb {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((wh.field_e[var4] & this.field_f[incrementValue$0]) << -var4 + param1);
+          var5 = var5 + ((NodeHashTableIterator.field_e[var4] & this.payload[incrementValue$0]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 == param1) {
-          var5 = var5 + (wh.field_e[var4] & this.field_f[var3]);
+          var5 = var5 + (NodeHashTableIterator.field_e[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.field_f[var3] >> -param1 + var4 & wh.field_e[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & NodeHashTableIterator.field_e[param1]);
         }
         return var5;
     }

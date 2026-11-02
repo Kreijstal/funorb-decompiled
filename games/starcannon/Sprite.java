@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hl extends ui {
+class Sprite extends SpriteState {
     int[] field_B;
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -187,7 +187,7 @@ class hl extends ui {
           if (var5 <= 0) {
             return;
           }
-          hl.c(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.c(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -253,7 +253,7 @@ class hl extends ui {
           if (var6 <= 0) {
             return;
           }
-          hl.c(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.c(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -299,15 +299,15 @@ class hl extends ui {
           if (var6 <= 0) {
             return;
           }
-          hl.b(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    final hl g() {
+    final Sprite g() {
         int var2 = 0;
         int var3 = 0;
-        hl var1 = new hl(this.field_u, this.field_v);
+        Sprite var1 = new Sprite(this.field_u, this.field_v);
         var1.field_x = this.field_x;
         var1.field_q = this.field_q;
         var1.field_w = this.field_x - this.field_u - this.field_w;
@@ -1387,7 +1387,7 @@ class hl extends ui {
           if (var6 <= 0) {
             return;
           }
-          hl.a(ki.field_a, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.a(ki.field_a, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1459,7 +1459,7 @@ class hl extends ui {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          hl.a(ki.field_a, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.a(ki.field_a, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1532,9 +1532,9 @@ class hl extends ui {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            hl.a(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.a(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            hl.a(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.a(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -1607,7 +1607,7 @@ class hl extends ui {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          hl.b(ki.field_a, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.b(ki.field_a, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1619,7 +1619,7 @@ class hl extends ui {
         int var4 = param0 + (this.field_u >> 1) > ki.field_g ? ki.field_g - param0 << 1 : this.field_u;
         int var5 = param1 < ki.field_e ? ki.field_e - param1 << 1 : 0;
         int var6 = param1 + (this.field_v >> 1) > ki.field_i ? ki.field_i - param1 << 1 : this.field_v;
-        hl.a(this.field_B, var5 * this.field_u + var3, (param1 + (var5 >> 1)) * ki.field_j + (param0 + (var3 >> 1)), (this.field_u << 1) - (var4 - var3) + (this.field_u & 1), ki.field_j - (var4 - var3 >> 1), this.field_u, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_B, var5 * this.field_u + var3, (param1 + (var5 >> 1)) * ki.field_j + (param0 + (var3 >> 1)), (this.field_u << 1) - (var4 - var3) + (this.field_u & 1), ki.field_j - (var4 - var3 >> 1), this.field_u, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -1663,7 +1663,7 @@ class hl extends ui {
           if (var6 <= 0) {
             return;
           }
-          hl.a(ki.field_a, this.field_B, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.a(ki.field_a, this.field_B, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1733,7 +1733,7 @@ class hl extends ui {
           if (var5 <= 0) {
             return;
           }
-          hl.a(ki.field_a, this.field_B, var4, var3, var6, var5, var7, var8);
+          Sprite.a(ki.field_a, this.field_B, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1832,12 +1832,12 @@ class hl extends ui {
         int var4Lifetime2;
         int var5Lifetime1;
         var1 = this.field_v - 1;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var1 >= 0) {
             var2 = var1 * this.field_u;
             for (var3 = 0; var3 < this.field_u; var3++) {
               if (this.field_B[var2 + var3] != 0) {
-                break L1;
+                break scanLoop1;
               }
             }
             var1--;
@@ -1846,12 +1846,12 @@ class hl extends ui {
           break;
         }
         var2Lifetime1 = 0;
-        L4: while (true) {
+        scanLoop2: while (true) {
           if (var2Lifetime1 < var1) {
             var3Lifetime1 = var2Lifetime1 * this.field_u;
             for (var4 = 0; var4 < this.field_u; var4++) {
               if (this.field_B[var3Lifetime1 + var4] != 0) {
-                break L4;
+                break scanLoop2;
               }
             }
             var2Lifetime1++;
@@ -1860,11 +1860,11 @@ class hl extends ui {
           break;
         }
         var3Lifetime2 = this.field_u - 1;
-        L7: while (true) {
+        scanLoop3: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
               if (this.field_B[var4Lifetime1 * this.field_u + var3Lifetime2] != 0) {
-                break L7;
+                break scanLoop3;
               }
             }
             var3Lifetime2--;
@@ -1873,11 +1873,11 @@ class hl extends ui {
           break;
         }
         var4Lifetime2 = 0;
-        L10: while (true) {
+        scanLoop4: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
               if (this.field_B[var5 * this.field_u + var4Lifetime2] != 0) {
-                break L10;
+                break scanLoop4;
               }
             }
             var4Lifetime2++;
@@ -2040,7 +2040,7 @@ class hl extends ui {
           if (var5 <= 0) {
             return;
           }
-          hl.a(0, ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2086,7 +2086,7 @@ class hl extends ui {
           if (var5 <= 0) {
             return;
           }
-          hl.b(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.b(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2143,9 +2143,9 @@ class hl extends ui {
         }
     }
 
-    final hl c() {
+    final Sprite c() {
         int var3 = 0;
-        hl var1 = new hl(this.field_u, this.field_v);
+        Sprite var1 = new Sprite(this.field_u, this.field_v);
         var1.field_x = this.field_x;
         var1.field_q = this.field_q;
         var1.field_w = this.field_w;
@@ -2248,7 +2248,7 @@ class hl extends ui {
           if (var6 <= 0) {
             return;
           }
-          hl.a(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2351,9 +2351,9 @@ class hl extends ui {
             return;
           }
           if (param2 == 256) {
-            hl.a(0, 0, 0, ki.field_a, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, ki.field_a, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            hl.a(0, 0, 0, ki.field_a, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, ki.field_a, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -2400,7 +2400,7 @@ class hl extends ui {
           if (var5 <= 0) {
             return;
           }
-          hl.c(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.c(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2851,7 +2851,7 @@ class hl extends ui {
         return;
     }
 
-    hl(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_x = param0;
         this.field_q = param1;
         this.field_w = param2;
@@ -2861,7 +2861,7 @@ class hl extends ui {
         this.field_B = param6;
     }
 
-    hl(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_B = new int[param0 * param1];
         this.field_x = param0;
         this.field_u = param0;
@@ -2871,7 +2871,7 @@ class hl extends ui {
         this.field_w = 0;
     }
 
-    hl(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

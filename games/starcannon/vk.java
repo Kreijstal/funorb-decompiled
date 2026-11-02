@@ -123,7 +123,7 @@ class vk extends uj implements ch {
                 var3.field_g = wa.a((byte) -109);
                 var3.field_k = var3.field_g[0];
                 var3.field_n = true;
-                var3.b(4);
+                var3.unlink(4);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
             }
@@ -133,7 +133,7 @@ class vk extends uj implements ch {
                 ec.a((byte) 27);
                 return;
               }
-              var3_ref.b(4);
+              var3_ref.unlink(4);
             }
           }
           if ((decompiledFrameRemainder0) &&
@@ -142,10 +142,10 @@ class vk extends uj implements ch {
             var3_array = wa.a((byte) -77);
             var4 = var3_array;
             var5 = var1;
-            var6 = ((rb) ((Object) var5)).j(7909);
+            var6 = ((PacketBuffer) ((Object) var5)).j(7909);
             var7 = 0;
             while (var7 < var6) {
-              var4[var7] = ((rb) ((Object) var5)).f((byte) -125);
+              var4[var7] = ((PacketBuffer) ((Object) var5)).f((byte) -125);
               var7++;
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -161,7 +161,7 @@ class vk extends uj implements ch {
               var4_ref.field_n = true;
               var4_ref.field_k = var3_array[0];
               var4_ref.field_g = var3_array;
-              var4_ref.b(4);
+              var4_ref.unlink(4);
             }
           }
           if (param0 >= -25) {
@@ -175,11 +175,11 @@ class vk extends uj implements ch {
         }
     }
 
-    final static hl a(String param0, int param1, String param2, ue param3) {
+    final static Sprite a(String param0, int param1, String param2, ue param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hl stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -345,13 +345,13 @@ class vk extends uj implements ch {
         try {
           var8 = new ba(this.field_u);
           var9 = (uj) (var8.a(0));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var9 != null) {
-              stackOut_3_0 = var9.a((byte) -110);
+              stackOut_3_0 = var9.isLinked((byte) -110);
               stackIn_17_0 = stackOut_3_0 ? 1 : 0;
               stackIn_4_0 = stackOut_3_0;
               if (var10 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_4_0) {
                 if (var9.d(true) &&
@@ -434,7 +434,7 @@ class vk extends uj implements ch {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(wh.a(127, var2, param0), "_top");
+              param0.getAppletContext().showDocument(NodeHashTableIterator.a(127, var2, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -693,7 +693,7 @@ class vk extends uj implements ch {
           var5 = new ba(this.field_u);
           var6 = (uj) (var5.a(0));
           while (var6 != null) {
-            if (var6.a((byte) -125)) {
+            if (var6.isLinked((byte) -125)) {
               var6.a(119, param1 + this.field_s, param2, this.field_j + param3);
               var6 = (uj) (var5.b(69));
               if (var7 == 0) {
@@ -818,13 +818,13 @@ class vk extends uj implements ch {
         try {
           var7 = new ba(this.field_u);
           var8 = (uj) (var7.a(param4 ^ -22));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (null != var8) {
-              stackOut_3_0 = var8.a((byte) 24);
+              stackOut_3_0 = var8.isLinked((byte) 24);
               stackIn_9_0 = stackOut_3_0 ? 1 : 0;
               stackIn_4_0 = stackOut_3_0;
               if (var9 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_4_0) {
                 var8.a(param0, param1 + this.field_j, param2 + this.field_s, param3, (byte) -22, param5);
@@ -983,13 +983,13 @@ class vk extends uj implements ch {
             field_v = (String) null;
           }
           var9 = (uj) (var8.a(param4 ^ -11));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (null != var9) {
-              stackOut_6_0 = var9.a((byte) 120);
+              stackOut_6_0 = var9.isLinked((byte) 120);
               stackIn_17_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var9.a(param0, param1, param2 + this.field_s, param3 + this.field_j, (byte) -11, param5, param6)) {
@@ -1038,13 +1038,13 @@ class vk extends uj implements ch {
             field_x = (String) null;
           }
           var6_ref_uj = (uj) (var5.a(param2 + 90));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (null != var6_ref_uj) {
-              stackOut_6_0 = var6_ref_uj.a((byte) 64);
+              stackOut_6_0 = var6_ref_uj.isLinked((byte) 64);
               stackIn_22_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var6_ref_uj.d(true) &&
@@ -1120,14 +1120,14 @@ class vk extends uj implements ch {
             if (var4_int != 0) {
               var1.a(-71);
             }
-            var6 = wk.a(var5_ref_String, 92);
+            var6 = MouseInput.a(var5_ref_String, 92);
             var7 = var1.a(-79);
             var8 = ni.a(126, (CharSequence) ((Object) var5_ref_String));
             if (var8 == null) {
               var8 = var5_ref_String;
             }
             if (var6 == null) {
-              var6 = wk.a(var7, 89);
+              var6 = MouseInput.a(var7, 89);
               if (var6 != null) {
                 td.field_o.a(2, (long)var8.hashCode(), var6);
               }
@@ -1198,7 +1198,7 @@ class vk extends uj implements ch {
           }
           var7_ref.field_gb = (String) (var4Lifetime1);
           var7_ref.field_kb = var5_ref_StringLifetime1;
-          var7_ref.b(4);
+          var7_ref.unlink(4);
           var8_ref = (ld) (ti.field_a.c(-3905));
           while (var8_ref != null) {
             if (ff.a(80, var7_ref, var8_ref)) {

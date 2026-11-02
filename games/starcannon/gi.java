@@ -3,26 +3,26 @@
  */
 final class gi {
     static String field_c;
-    private hl[] field_d;
+    private Sprite[] field_d;
     static rk field_a;
     static int field_e;
     static String[] field_f;
     static qe field_b;
     static boolean field_g;
 
-    final static hl[] a(int param0, int param1) {
-        hl[] var3 = null;
-        hl[] var2 = null;
-        hl[] var3Lifetime1;
-        hl[] var2Lifetime1;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = null;
+        Sprite[] var2 = null;
+        Sprite[] var3Lifetime1;
+        Sprite[] var2Lifetime1;
         if (param0 == 4477) {
-          var3 = new hl[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = oj.a(0, param1, 64);
           return var2;
         }
         field_g = false;
-        var3Lifetime1 = new hl[9];
+        var3Lifetime1 = new Sprite[9];
         var2Lifetime1 = var3Lifetime1;
         var3Lifetime1[4] = oj.a(0, param1, 64);
         return var2Lifetime1;
@@ -72,7 +72,7 @@ final class gi {
         }
     }
 
-    gi(hl[] param0) {
+    gi(Sprite[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

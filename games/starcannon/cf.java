@@ -4,7 +4,7 @@
 final class cf extends qf {
     private boolean field_l;
     private vb field_o;
-    static hl field_q;
+    static Sprite field_q;
     static String field_p;
     private String field_n;
     static String field_j;
@@ -33,7 +33,7 @@ final class cf extends qf {
           var2.field_g = param0 ? true : false;
           return var2;
         }
-        field_q = (hl) null;
+        field_q = (Sprite) null;
         var2Lifetime1 = new ig(true);
         var2Lifetime1.field_g = param0 ? true : false;
         return var2Lifetime1;
@@ -66,8 +66,8 @@ final class cf extends qf {
             var4 = (String) null;
             this.a((String) null, 74);
           }
-          if (this.field_o.a(param0, param1 ^ 0) == sb.field_n) {
-            stackIn_5_0 = sb.field_n;
+          if (this.field_o.a(param0, param1 ^ 0) == BufferedSocket.field_n) {
+            stackIn_5_0 = BufferedSocket.field_n;
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_n)) {
@@ -82,7 +82,7 @@ final class cf extends qf {
           if (this.field_l) {
             stackIn_14_0 = bf.field_x;
           } else {
-            stackIn_14_0 = sb.field_n;
+            stackIn_14_0 = BufferedSocket.field_n;
           }
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,11 +177,11 @@ final class cf extends qf {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.field_o.a(param0, -26188) == sb.field_n) {
+          if (this.field_o.a(param0, -26188) == BufferedSocket.field_n) {
             stackIn_6_0 = this.field_o.a(param0, false);
             return stackIn_6_0;
           }
-          if (this.a(param0, -26188) != sb.field_n) {
+          if (this.a(param0, -26188) != BufferedSocket.field_n) {
             stackIn_11_0 = wi.field_a;
             return stackIn_11_0;
           }

@@ -11,7 +11,7 @@ final class aj {
         if (var3 == null) {
           return null;
         }
-        return new aj(new rb(var3));
+        return new aj(new PacketBuffer(var3));
     }
 
     final static aj a(ue param0, String param1, String param2) {
@@ -19,7 +19,7 @@ final class aj {
         if (var3 == null) {
           return null;
         }
-        return new aj(new rb(var3));
+        return new aj(new PacketBuffer(var3));
     }
 
     final ud a() {
@@ -67,14 +67,14 @@ final class aj {
         return var3;
     }
 
-    private aj(rb param0) {
+    private aj(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new je[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.j(7909);
           if (var3 != 0) {
-            param0.field_g = param0.field_g - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new je();
             this.field_b[var2].a(param0);
           }

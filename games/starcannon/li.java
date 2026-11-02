@@ -5,7 +5,7 @@ final class li {
     static byte[][] field_a;
     static ue field_b;
 
-    final static void a(hl param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -99,8 +99,8 @@ final class li {
             }
             var2 = fi.field_e;
             while (true) {
-              if (var2.field_a instanceof bf) {
-                var3 = (bf) (var2.field_a);
+              if (var2.next instanceof bf) {
+                var3 = (bf) (var2.next);
                 if (var3.field_q == 6 ||
                   var3.field_q == 7 ||
                   var3.field_q == 14 ||

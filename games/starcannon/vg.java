@@ -13,7 +13,7 @@ final class vg {
         if (null != fa.field_G) {
           fa.field_G.n(-125);
         }
-        String var1 = ob.c(param0 ^ 32013);
+        String var1 = SecondaryNodeDequeIterator.c(param0 ^ 32013);
         wi.field_c = new rg(var1, (String) null, true, false, false);
         ti.field_b.a((byte) 86, (uj) (t.field_h));
         t.field_h.c(param0 ^ 12814, wi.field_c);

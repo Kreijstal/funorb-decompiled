@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends rf {
+final class hb extends IntrusiveNode {
     private int field_h;
     private int field_j;
     private int field_k;
@@ -16,8 +16,8 @@ final class hb extends rf {
         try {
           var6 = d.field_b;
           var6.d((byte) 52, param1);
-          var6.field_g = var6.field_g + 1;
-          var4 = var6.field_g;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.a(1, -84);
           var6.a(param2.field_f, -60);
           var6.a(param2.field_l, -114);
@@ -27,17 +27,17 @@ final class hb extends rf {
           var6.c((byte) -93, param2.field_k);
           var6.c((byte) -118, param2.field_j);
           var6.b((byte) -101, var4);
-          var6.b(var6.field_g - var4, 31700);
+          var6.b(var6.position - var4, 31700);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "hb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static hl[] a(int param0, String param1, ue param2, String param3) {
+    final static Sprite[] a(int param0, String param1, ue param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hl[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

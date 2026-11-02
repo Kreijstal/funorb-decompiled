@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends rf {
+abstract class c extends IntrusiveNode {
     volatile boolean field_i;
     int field_g;
     c field_h;

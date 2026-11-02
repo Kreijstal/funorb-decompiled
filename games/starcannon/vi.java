@@ -12,7 +12,7 @@ final class vi extends c {
     }
 
     final synchronized void a(c param0) {
-        param0.b(4);
+        param0.unlink(4);
     }
 
     final void a(ud param0, int param1, int param2, int param3) {
@@ -81,7 +81,7 @@ final class vi extends c {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_f = var5;
-              this.a(var3.field_a, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_f = 0;
               this.c(var3);
@@ -112,17 +112,17 @@ final class vi extends c {
           this.e();
           param0.field_g = this;
           param0.b();
-          this.a(this.field_j.field_c.field_a, param0);
+          this.a(this.field_j.field_c.next, param0);
           return;
         }
         throw new RuntimeException();
     }
 
     private final void c(oa param0) {
-        param0.b(4);
+        param0.unlink(4);
         param0.a();
         param0.field_g = null;
-        rf var2 = this.field_j.field_c.field_a;
+        IntrusiveNode var2 = this.field_j.field_c.next;
         if (var2 == this.field_j.field_c) {
           this.field_l = -1;
         } else {
@@ -158,7 +158,7 @@ final class vi extends c {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_f = var7;
-              this.a(var5.field_a, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_f = 0;
               this.c(var5);
@@ -181,21 +181,21 @@ final class vi extends c {
         }
     }
 
-    private final void a(rf param0, oa param1) {
+    private final void a(IntrusiveNode param0, oa param1) {
         while (true) {
           if (param0 == this.field_j.field_c) {
             fe.a(param0, param1, false);
-            this.field_l = ((oa) (this.field_j.field_c.field_a)).field_f;
+            this.field_l = ((oa) (this.field_j.field_c.next)).field_f;
             return;
           }
           if (((oa) (param0)).field_f <= param1.field_f) {
-            param0 = param0.field_a;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         fe.a(param0, param1, false);
-        this.field_l = ((oa) (this.field_j.field_c.field_a)).field_f;
+        this.field_l = ((oa) (this.field_j.field_c.next)).field_f;
         return;
     }
 

@@ -42,8 +42,8 @@ final class hi extends java.awt.Canvas {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        rb var16 = null;
-        rb var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -55,9 +55,9 @@ final class hi extends java.awt.Canvas {
         int var4Lifetime5;
         var15 = StarCannon.field_A;
         try {
-          var16 = new rb(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_g = -2 + param0.length;
+          var17.position = -2 + param0.length;
           bj.field_b = var17.i(-1174051992);
           hc.field_a = new boolean[bj.field_b];
           gh.field_C = new int[bj.field_b];
@@ -66,7 +66,7 @@ final class hi extends java.awt.Canvas {
           og.field_c = new byte[bj.field_b][];
           qd.field_H = new int[bj.field_b];
           fc.field_d = new int[bj.field_b];
-          var17.field_g = -(bj.field_b * 8) + (-7 + param0.length);
+          var17.position = -(bj.field_b * 8) + (-7 + param0.length);
           td.field_m = var17.i(-1174051992);
           gb.field_w = var17.i(-1174051992);
           var3 = 1 + (255 & var17.j(7909));
@@ -82,7 +82,7 @@ final class hi extends java.awt.Canvas {
           for (var4Lifetime3 = 0; bj.field_b > var4Lifetime3; var4Lifetime3++) {
             gh.field_C[var4Lifetime3] = var17.i(-1174051992);
           }
-          var17.field_g = -((-1 + var3) * 3) + (-7 + param0.length) - 8 * bj.field_b;
+          var17.position = -((-1 + var3) * 3) + (-7 + param0.length) - 8 * bj.field_b;
           of.field_g = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             of.field_g[var4Lifetime4] = var17.g(-115);
@@ -90,7 +90,7 @@ final class hi extends java.awt.Canvas {
               of.field_g[var4Lifetime4] = 1;
             }
           }
-          var17.field_g = 0;
+          var17.position = 0;
           for (var4Lifetime5 = param1; var4Lifetime5 < bj.field_b; var4Lifetime5++) {
             var5 = gg.field_d[var4Lifetime5];
             var6 = gh.field_C[var4Lifetime5];

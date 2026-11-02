@@ -168,7 +168,7 @@ final class nc {
         }
     }
 
-    final void a(rb param0, boolean param1, byte[] param2) {
+    final void a(PacketBuffer param0, boolean param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -179,13 +179,13 @@ final class nc {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param0.field_f[param0.field_g] == 31 &&
-              -117 == param0.field_f[1 + param0.field_g]) {
+            if (param0.payload[param0.position] == 31 &&
+              -117 == param0.payload[1 + param0.position]) {
               if (null == this.field_b) {
                 this.field_b = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_b.setInput(param0.field_f, 10 + param0.field_g, -10 + (-param0.field_g - (8 - param0.field_f.length)));
+                this.field_b.setInput(param0.payload, 10 + param0.position, -10 + (-param0.position - (8 - param0.payload.length)));
                 this.field_b.inflate(param2);
                 if (!param1) {
                   field_a = (String) null;
@@ -407,10 +407,10 @@ final class nc {
         if (param0 < 45) {
           return;
         }
-        int var1 = ii.a(6940);
+        int var1 = ClientException.a(6940);
         int var2 = wc.d(20);
         u.field_c.a(-qf.field_g + p.field_g, (qf.field_g << 1) + var1, 122, nd.field_m - qc.field_g, var2 + (qc.field_g << 1));
-        bg.b(1000);
+        KeyboardInput.b(1000);
     }
 
     private nc(int param0, int param1, int param2) {

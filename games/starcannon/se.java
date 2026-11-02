@@ -84,7 +84,7 @@ final class se extends bd {
         try {
           jl.field_b[param2] = di.field_l.nextInt();
           jl.field_b[1] = di.field_l.nextInt();
-          ck.field_g.field_g = 0;
+          ck.field_g.position = 0;
           jl.field_b[3] = (int)mi.field_o;
           jl.field_b[2] = (int)(mi.field_o >> 32);
           ck.field_g.c((byte) -113, jl.field_b[0]);
@@ -94,14 +94,14 @@ final class se extends bd {
           fd.a(ck.field_g, (byte) -111);
           ck.field_g.c(param3, param2 - 306);
           param1.a((byte) 69, ck.field_g);
-          d.field_b.field_g = 0;
+          d.field_b.position = 0;
           if (!param0) {
             d.field_b.a(16, -110);
           } else {
             d.field_b.a(18, -108);
           }
-          d.field_b.field_g = d.field_b.field_g + 2;
-          var5_int = d.field_b.field_g;
+          d.field_b.position = d.field_b.position + 2;
+          var5_int = d.field_b.position;
           d.field_b.c((byte) -123, ce.field_b);
           d.field_b.a(true, gh.field_B);
           var6 = 0;
@@ -127,7 +127,7 @@ final class se extends bd {
             d.field_b.a(false, lj.field_c);
           }
           fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
-          d.field_b.a((byte) 88, -var5_int + d.field_b.field_g);
+          d.field_b.a((byte) 88, -var5_int + d.field_b.position);
           nf.a(-1, (byte) 95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -411,7 +411,7 @@ final class se extends bd {
         int var2Lifetime1;
         int var2Lifetime2;
         if (0 >= u.field_d) {
-          if (wk.a(param1 ^ 421)) {
+          if (MouseInput.a(param1 ^ 421)) {
             var2 = 0;
             if (param1 != 480) {
               field_t = (String) null;

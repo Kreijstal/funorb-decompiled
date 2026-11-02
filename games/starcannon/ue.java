@@ -490,10 +490,10 @@ final class ue {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        rb var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        rb var29 = null;
-        rb var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -559,8 +559,8 @@ final class ue {
             var35 = dk.a((byte) -56, this.field_h[param0], true);
             var25 = var35;
             var9 = var25;
-            var26 = new rb(var35);
-            var26.a(param3, var26.field_f.length, -84, 5);
+            var26 = new PacketBuffer(var35);
+            var26.a(param3, var26.payload.length, -84, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -591,10 +591,10 @@ final class ue {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * (var5_int * 4);
-              var29 = new rb(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_g = var11;
+              var29.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
@@ -614,7 +614,7 @@ final class ue {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_g = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var12 > var18Lifetime3; var18Lifetime3++) {
@@ -640,8 +640,8 @@ final class ue {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - 4 * var12Lifetime1 * var5_int;
-            var31 = new rb(var43);
-            var31.field_g = var11;
+            var31 = new PacketBuffer(var43);
+            var31.position = var11;
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
@@ -660,7 +660,7 @@ final class ue {
               var15[var16Lifetime2] = array$1;
               var39[var16Lifetime2] = 0;
             }
-            var31.field_g = var11;
+            var31.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var17Lifetime2 < var12Lifetime1; var17Lifetime2++) {
               var18Lifetime1 = 0;

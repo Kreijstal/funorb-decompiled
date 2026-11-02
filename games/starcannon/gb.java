@@ -3,17 +3,17 @@
  */
 final class gb extends hd {
     static int field_w;
-    private hl[] field_u;
+    private Sprite[] field_u;
     private int field_q;
     private int field_t;
-    static hl field_r;
-    static hl[] field_v;
+    static Sprite field_r;
+    static Sprite[] field_v;
     private int field_s;
 
     public static void b(int param0) {
         field_r = null;
         if (param0 < 32) {
-          field_r = (hl) null;
+          field_r = (Sprite) null;
           field_v = null;
           return;
         }

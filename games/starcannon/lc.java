@@ -33,21 +33,21 @@ final class lc extends qj {
     }
 
     final static void a(boolean param0, ue param1) {
-        hl var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
           if (param0) {
             field_ib = (String) null;
           }
-          var2 = new hl(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) ((Object) kj.field_E));
+          var2 = new Sprite(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) ((Object) kj.field_E));
           var3 = var2.field_u;
           var4 = var2.field_v;
           wj.b(true);
-          m.field_a = new hl(var3, var4 * 3 / 4);
+          m.field_a = new Sprite(var3, var4 * 3 / 4);
           m.field_a.e();
           var2.d(0, 0);
-          ai.field_g = new hl(var3, -m.field_a.field_v + var4);
+          ai.field_g = new Sprite(var3, -m.field_a.field_v + var4);
           ai.field_g.e();
           var2.d(0, -m.field_a.field_v);
           ai.field_g.field_y = m.field_a.field_v;

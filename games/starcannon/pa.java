@@ -4,11 +4,11 @@
 final class pa extends ab {
     private he field_O;
     private String field_M;
-    private hl field_K;
+    private Sprite field_K;
     private int field_N;
     static int field_L;
     static String field_J;
-    static hl[] field_I;
+    static Sprite[] field_I;
 
     pa(he param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, lb.b((byte) -127));
@@ -244,8 +244,8 @@ final class pa extends ab {
         int var13;
         String var17;
         Object var18;
-        hl var19;
-        hl var20;
+        Sprite var19;
+        Sprite var20;
         Object var22;
         Object var26;
         Object var31;
@@ -253,18 +253,18 @@ final class pa extends ab {
         String var5;
         int var11;
         int var12;
-        hl var16;
-        hl var21;
-        hl var23;
-        hl var24;
-        hl var25;
-        hl var27;
-        hl var28;
-        hl var29;
-        hl var30;
-        hl var32;
-        hl var33;
-        hl var34;
+        Sprite var16;
+        Sprite var21;
+        Sprite var23;
+        Sprite var24;
+        Sprite var25;
+        Sprite var27;
+        Sprite var28;
+        Sprite var29;
+        Sprite var30;
+        Sprite var32;
+        Sprite var33;
+        Sprite var34;
         lg var36;
         lg var37;
         lg var38;
@@ -302,7 +302,7 @@ final class pa extends ab {
             var10 = var35.a((byte) -95, (uj) (this), param3) + (var35.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
             if (var6 != cg.field_g &&
               cd.field_a != var6) {
-              if (var6 == sb.field_n) {
+              if (var6 == BufferedSocket.field_n) {
                 var20 = fi.field_g[2];
                 var20.f(var9, var10 - (var20.field_v >> 1), 256);
                 return;
@@ -323,7 +323,7 @@ final class pa extends ab {
               bc.a(this.field_K, 26095);
               ki.b();
             } else {
-              this.field_K = new hl(var11, var12);
+              this.field_K = new Sprite(var11, var12);
               bc.a(this.field_K, 26095);
             }
             var21.b(112, 144, var21.field_x << 4, var21.field_q << 4, -this.field_N << 10, 4096);
@@ -338,7 +338,7 @@ final class pa extends ab {
           var10Lifetime3 = var36.a((byte) -95, (uj) (this), param3) + (var36.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
           if (var6 != cg.field_g &&
             cd.field_a != var6) {
-            if (var6 == sb.field_n) {
+            if (var6 == BufferedSocket.field_n) {
               var24 = fi.field_g[2];
               var24.f(var9Lifetime3, var10Lifetime3 - (var24.field_v >> 1), 256);
               return;
@@ -354,15 +354,15 @@ final class pa extends ab {
           var11Lifetime4 = var25.field_x << 1;
           var12Lifetime4 = var25.field_q << 1;
           if (this.field_K == null) {
-            this.field_K = new hl(var11Lifetime4, var12Lifetime4);
+            this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
             bc.a(this.field_K, 26095);
           } else {
             if (var11Lifetime4 > this.field_K.field_u) {
-              this.field_K = new hl(var11Lifetime4, var12Lifetime4);
+              this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
               bc.a(this.field_K, 26095);
             } else {
               if (var12Lifetime4 > this.field_K.field_v) {
-                this.field_K = new hl(var11Lifetime4, var12Lifetime4);
+                this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
                 bc.a(this.field_K, 26095);
               } else {
                 bc.a(this.field_K, 26095);
@@ -391,7 +391,7 @@ final class pa extends ab {
           var10Lifetime1 = var38.a((byte) -95, (uj) (this), param3) + (var38.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
           if (var6Lifetime1 != cg.field_g &&
             cd.field_a != var6Lifetime1) {
-            if (var6Lifetime1 == sb.field_n) {
+            if (var6Lifetime1 == BufferedSocket.field_n) {
               var33 = fi.field_g[2];
               var33.f(var9Lifetime1, var10Lifetime1 - (var33.field_v >> 1), 256);
               return;
@@ -407,15 +407,15 @@ final class pa extends ab {
           var11Lifetime1 = var34.field_x << 1;
           var12Lifetime1 = var34.field_q << 1;
           if (this.field_K == null) {
-            this.field_K = new hl(var11Lifetime1, var12Lifetime1);
+            this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
             bc.a(this.field_K, 26095);
           } else {
             if (var11Lifetime1 > this.field_K.field_u) {
-              this.field_K = new hl(var11Lifetime1, var12Lifetime1);
+              this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
               bc.a(this.field_K, 26095);
             } else {
               if (var12Lifetime1 > this.field_K.field_v) {
-                this.field_K = new hl(var11Lifetime1, var12Lifetime1);
+                this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
                 bc.a(this.field_K, 26095);
               } else {
                 bc.a(this.field_K, 26095);
@@ -445,7 +445,7 @@ final class pa extends ab {
             bc.a(this.field_K, 26095);
             ki.b();
           } else {
-            this.field_K = new hl(var11Lifetime2, var12Lifetime2);
+            this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
             bc.a(this.field_K, 26095);
           }
           var27.b(112, 144, var27.field_x << 4, var27.field_q << 4, -this.field_N << 10, 4096);
@@ -454,7 +454,7 @@ final class pa extends ab {
           return;
         }
         if (cd.field_a != var6Lifetime2) {
-          if (var6Lifetime2 == sb.field_n) {
+          if (var6Lifetime2 == BufferedSocket.field_n) {
             var29 = fi.field_g[2];
             var29.f(var9Lifetime2, var10Lifetime2 - (var29.field_v >> 1), 256);
             return;
@@ -471,18 +471,18 @@ final class pa extends ab {
         var11Lifetime3 = var30.field_x << 1;
         var12Lifetime3 = var30.field_q << 1;
         if (this.field_K == null) {
-          this.field_K = new hl(var11Lifetime3, var12Lifetime3);
+          this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
           bc.a(this.field_K, 26095);
         } else {
           if (var11Lifetime3 > this.field_K.field_u) {
-            this.field_K = new hl(var11Lifetime3, var12Lifetime3);
+            this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
             bc.a(this.field_K, 26095);
           } else {
             if (var12Lifetime3 <= this.field_K.field_v) {
               bc.a(this.field_K, 26095);
               ki.b();
             } else {
-              this.field_K = new hl(var11Lifetime3, var12Lifetime3);
+              this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
               bc.a(this.field_K, 26095);
             }
           }
@@ -508,7 +508,7 @@ final class pa extends ab {
                 field_J = (String) null;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(wh.a(127, var2, param0), "_top");
+              param0.getAppletContext().showDocument(NodeHashTableIterator.a(127, var2, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

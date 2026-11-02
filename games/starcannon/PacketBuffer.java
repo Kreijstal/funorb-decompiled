@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rb extends rf {
-    int field_g;
+class PacketBuffer extends IntrusiveNode {
+    int position;
     static ge field_h;
-    byte[] field_f;
+    byte[] payload;
     static int field_i;
 
     final void a(int param0, boolean param1) {
@@ -12,10 +12,10 @@ class rb extends rf {
         if (!param1) {
           this.g(63);
         }
-        while (param0 > this.field_g) {
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$0] = (byte) 0;
+        while (param0 > this.position) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
     }
 
@@ -83,7 +83,7 @@ class rb extends rf {
     }
 
     final int d(byte param0) {
-        int var2 = this.field_f[this.field_g] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (param0 <= 17) {
           this.f((byte) 10);
         }
@@ -94,28 +94,28 @@ class rb extends rf {
     }
 
     private final void a(int param0, long param1) {
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(int)(param1 >> 48);
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$1] = (byte)(int)(param1 >> 40);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 40);
         int var4 = -20 / ((-54 - param0) / 33);
-        int fieldTemp$2 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$2] = (byte)(int)(param1 >> 32);
-        int fieldTemp$3 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$3] = (byte)(int)(param1 >> 24);
-        int fieldTemp$4 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$4] = (byte)(int)(param1 >> 16);
-        int fieldTemp$5 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$5] = (byte)(int)(param1 >> 8);
-        int fieldTemp$6 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$6] = (byte)(int)param1;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 32);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param1;
     }
 
     final static void a(java.applet.Applet param0, int param1) {
@@ -130,7 +130,7 @@ class rb extends rf {
         try {
           if (param1 != 65) {
             var3 = (java.applet.Applet) null;
-            rb.a((java.applet.Applet) null, 75);
+            PacketBuffer.a((java.applet.Applet) null, 75);
           }
           var2 = param0.getParameter("username");
           if (var2 != null) {
@@ -155,25 +155,25 @@ class rb extends rf {
     }
 
     final void c(byte param0, int param1) {
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$1] = (byte)(param1 >> 16);
-        int fieldTemp$2 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$2] = (byte)(param1 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param1 >> 8);
         if (param0 >= -67) {
           this.a(90, 18);
         }
-        int fieldTemp$3 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$3] = (byte)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param1;
     }
 
     final void b(int param0, int param1) {
-        this.field_f[-1 + (this.field_g - param0)] = (byte)param0;
+        this.payload[-1 + (this.position - param0)] = (byte)param0;
         if (param1 != 31700) {
           field_i = 5;
         }
@@ -181,19 +181,19 @@ class rb extends rf {
 
     final int g(int param0) {
         int var2 = -39 % ((-27 - param0) / 60);
-        this.field_g = this.field_g + 3;
-        return (65280 & this.field_f[this.field_g - 2] << 8) + ((16711680 & this.field_f[this.field_g - 3] << 16) + (255 & this.field_f[-1 + this.field_g]));
+        this.position = this.position + 3;
+        return (65280 & this.payload[this.position - 2] << 8) + ((16711680 & this.payload[this.position - 3] << 16) + (255 & this.payload[-1 + this.position]));
     }
 
     final void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2) {
-        int var4_int = this.field_g;
-        this.field_g = 0;
+        int var4_int = this.position;
+        this.position = 0;
         byte[] var5 = new byte[var4_int];
         this.a(var4_int, (byte) 88, var5, 0);
         java.math.BigInteger var6 = new java.math.BigInteger(var5);
         java.math.BigInteger var7 = var6.modPow(param0, param1);
         byte[] var8 = var7.toByteArray();
-        this.field_g = 0;
+        this.position = 0;
         this.c(var8.length, param2 + 8093);
         if (param2 != -8399) {
           return;
@@ -209,19 +209,19 @@ class rb extends rf {
         if (param1 != -39) {
           this.a((byte) -99, 27);
         }
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(param0 >> 16);
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$1] = (byte)(param0 >> 8);
-        int fieldTemp$2 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$2] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 16);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param0 >> 8);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param0;
     }
 
     final int d(int param0) {
-        int var2 = 255 & this.field_f[this.field_g];
+        int var2 = 255 & this.payload[this.position];
         if (var2 < param0) {
           return this.j(7909);
         }
@@ -232,38 +232,38 @@ class rb extends rf {
         if (param0 > -41) {
           return;
         }
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(int)(param1 >> 32);
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$1] = (byte)(int)(param1 >> 24);
-        int fieldTemp$2 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$2] = (byte)(int)(param1 >> 16);
-        int fieldTemp$3 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$3] = (byte)(int)(param1 >> 8);
-        int fieldTemp$4 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$4] = (byte)(int)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 24);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param1;
     }
 
     final byte a(boolean param0) {
         if (param0) {
           field_i = -29;
         }
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        return this.field_f[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     final void a(byte param0, int param1) {
         if (param0 != 88) {
           field_i = 116;
         }
-        this.field_f[-2 - param1 + this.field_g] = (byte)(param1 >> 8);
-        this.field_f[-1 + (this.field_g - param1)] = (byte)param1;
+        this.payload[-2 - param1 + this.position] = (byte)(param1 >> 8);
+        this.payload[-1 + (this.position - param1)] = (byte)param1;
     }
 
     final static boolean e(byte param0) {
@@ -278,7 +278,7 @@ class rb extends rf {
         if (param0 > -46) {
           return -57;
         }
-        int var3 = rj.a(param1, this.field_g, (byte) 123, this.field_f);
+        int var3 = rj.a(param1, this.position, (byte) 123, this.payload);
         this.c((byte) -89, var3);
         return var3;
     }
@@ -301,8 +301,8 @@ class rb extends rf {
         int var13 = 0;
         var13 = StarCannon.field_A;
         try {
-          var5_int = this.field_g;
-          this.field_g = param3;
+          var5_int = this.position;
+          this.position = param3;
           if (param2 > -30) {
             this.a(false);
           }
@@ -310,7 +310,7 @@ class rb extends rf {
           var7 = 0;
           while (true) {
             if (var6 <= var7) {
-              this.field_g = var5_int;
+              this.position = var5_int;
               return;
             }
             var8 = this.f((byte) -128);
@@ -329,7 +329,7 @@ class rb extends rf {
               }
               break;
             }
-            this.field_g = this.field_g - 8;
+            this.position = this.position - 8;
             this.c((byte) -69, var8);
             this.c((byte) -75, var9);
             var7++;
@@ -349,8 +349,8 @@ class rb extends rf {
     }
 
     final String b(byte param0) {
-        if (this.field_f[this.field_g] == 0) {
-          this.field_g = this.field_g + 1;
+        if (this.payload[this.position] == 0) {
+          this.position = this.position + 1;
           return null;
         }
         int var2 = 118 % ((-18 - param0) / 37);
@@ -361,32 +361,32 @@ class rb extends rf {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        var2 = this.field_g;
+        var2 = this.position;
         if (param0 >= -7) {
           this.a(15, 52L);
         }
         do {
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-        } while (0 != this.field_f[fieldTemp$0]);
-        var3 = -1 + (this.field_g - var2);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (0 != this.payload[fieldTemp$0]);
+        var3 = -1 + (this.position - var2);
         if (var3 != 0) {
-          return va.a(var2, 105, this.field_f, var3);
+          return va.a(var2, 105, this.payload, var3);
         }
         return "";
     }
 
     final int i(int param0) {
-        this.field_g = this.field_g + 2;
+        this.position = this.position + 2;
         if (param0 != -1174051992) {
           this.j(82);
         }
-        return (this.field_f[-2 + this.field_g] << 8 & 65280) + (255 & this.field_f[-1 + this.field_g]);
+        return (this.payload[-2 + this.position] << 8 & 65280) + (255 & this.payload[-1 + this.position]);
     }
 
     final boolean f(int param0) {
-        this.field_g = this.field_g - 4;
-        int var2 = rj.a(param0, this.field_g, (byte) 94, this.field_f);
+        this.position = this.position - 4;
+        int var2 = rj.a(param0, this.position, (byte) 94, this.payload);
         int var3 = this.f((byte) -89);
         if (var2 == var3) {
           return true;
@@ -395,33 +395,33 @@ class rb extends rf {
     }
 
     final void a(boolean param0, long param1) {
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(int)(param1 >> 56);
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$1] = (byte)(int)(param1 >> 48);
-        int fieldTemp$2 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$2] = (byte)(int)(param1 >> 40);
-        int fieldTemp$3 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$3] = (byte)(int)(param1 >> 32);
-        int fieldTemp$4 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$4] = (byte)(int)(param1 >> 24);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 40);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 24);
         if (!param0) {
           return;
         }
-        int fieldTemp$5 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$5] = (byte)(int)(param1 >> 16);
-        int fieldTemp$6 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$6] = (byte)(int)(param1 >> 8);
-        int fieldTemp$7 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$7] = (byte)(int)param1;
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param1 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param1;
     }
 
     final String h(int param0) {
@@ -429,23 +429,23 @@ class rb extends rf {
         int var2;
         int var3;
         int var4;
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        var2 = this.field_f[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (0 != var2) {
           throw new IllegalStateException("");
         }
         if (param0 != -12287) {
-          this.field_f = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        var3 = this.field_g;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_g;
-          this.field_g = this.field_g + 1;
-        } while (0 != this.field_f[fieldTemp$1]);
-        var4 = -1 + (-var3 + this.field_g);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (0 != this.payload[fieldTemp$1]);
+        var4 = -1 + (-var3 + this.position);
         if (var4 != 0) {
-          return va.a(var3, param0 + 12372, this.field_f, var4);
+          return va.a(var3, param0 + 12372, this.payload, var4);
         }
         return "";
     }
@@ -454,9 +454,9 @@ class rb extends rf {
         if (param1 >= -49) {
           return;
         }
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param0;
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
@@ -469,9 +469,9 @@ class rb extends rf {
         RuntimeException var5 = null;
         try {
           for (var5_int = param3; var5_int < param3 + param1; var5_int++) {
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            this.field_f[fieldTemp$0] = param0[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param0[var5_int];
           }
           if (param2 != -20144) {
             field_h = (ge) null;
@@ -502,9 +502,9 @@ class rb extends rf {
         if (param0 != 7909) {
           this.a((byte) 45, -105);
         }
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        return this.field_f[fieldTemp$0] & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] & 255;
     }
 
     final void b(boolean param0, String param1) {
@@ -520,10 +520,10 @@ class rb extends rf {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.field_g = this.field_g + o.a(this.field_g, param1.length(), var4, 0, (byte) -80, this.field_f);
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$0] = (byte) 0;
+          this.position = this.position + o.a(this.position, param1.length(), var4, 0, (byte) -80, this.payload);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -545,12 +545,12 @@ class rb extends rf {
         int var9 = 0;
         byte[] var10 = null;
         try {
-          var3_int = this.field_g / 8;
+          var3_int = this.position / 8;
           if (param0 > -22) {
             var10 = (byte[]) null;
             this.a((byte[]) null, -6, -89, 118);
           }
-          this.field_g = 0;
+          this.position = 0;
           var4 = 0;
           while (true) {
             if (var3_int <= var4) {
@@ -572,7 +572,7 @@ class rb extends rf {
               }
               break;
             }
-            this.field_g = this.field_g - 8;
+            this.position = this.position - 8;
             this.c((byte) -102, var5);
             this.c((byte) -95, var6);
             var4++;
@@ -601,12 +601,12 @@ class rb extends rf {
         RuntimeException var5 = null;
         try {
           if (param1 != 88) {
-            this.field_f = (byte[]) null;
+            this.payload = (byte[]) null;
           }
           for (var5_int = param3; var5_int < param0 + param3; var5_int++) {
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            param2[var5_int] = this.field_f[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -635,48 +635,48 @@ class rb extends rf {
           return;
         }
         try {
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.field_g = this.field_g + o.a(this.field_g, param1.length(), var4, 0, (byte) -84, this.field_f);
-          fieldTemp$1 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$1] = (byte) 0;
+          this.position = this.position + o.a(this.position, param1.length(), var4, 0, (byte) -84, this.payload);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rb.BB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void c(int param0, int param1) {
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(param0 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 8);
         if (param1 != -306) {
           this.c((byte) 114, -102);
         }
-        int fieldTemp$1 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$1] = (byte)param0;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param0;
     }
 
-    rb(int param0) {
-        this.field_f = mc.a(65536, param0);
-        this.field_g = 0;
+    PacketBuffer(int param0) {
+        this.payload = mc.a(65536, param0);
+        this.position = 0;
     }
 
     final int e(int param0) {
         int var2 = 109 % ((param0 - 12) / 47);
-        if (this.field_f[this.field_g] >= 0) {
+        if (this.payload[this.position] >= 0) {
           return this.i(-1174051992);
         }
         return 2147483647 & this.f((byte) -109);
     }
 
-    rb(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
-          this.field_g = 0;
-          this.field_f = param0;
+          this.position = 0;
+          this.payload = param0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -692,11 +692,11 @@ class rb extends rf {
     }
 
     final int f(byte param0) {
-        this.field_g = this.field_g + 4;
+        this.position = this.position + 4;
         if (param0 >= -78) {
           return -5;
         }
-        return ((this.field_f[this.field_g - 2] & 255) << 8) + (this.field_f[-4 + this.field_g] << 24 & -16777216) - (-((255 & this.field_f[this.field_g - 3]) << 16) - (this.field_f[-1 + this.field_g] & 255));
+        return ((this.payload[this.position - 2] & 255) << 8) + (this.payload[-4 + this.position] << 24 & -16777216) - (-((255 & this.payload[this.position - 3]) << 16) - (this.payload[-1 + this.position] & 255));
     }
 
     final void d(int param0, int param1) {

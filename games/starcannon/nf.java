@@ -38,24 +38,24 @@ final class nf {
           }
           if (null != m.field_b && (0 > param0 ||
             pb.field_a == r.field_c)) {
-            if (d.field_b.field_g == 0 &&
+            if (d.field_b.position == 0 &&
               ca.field_Y + 10000L < dd.b(57)) {
               d.field_b.d((byte) 88, param0);
             }
-            if (d.field_b.field_g > 0) {
+            if (d.field_b.position > 0) {
               try {
-                m.field_b.a(0, d.field_b.field_f, (byte) 87, d.field_b.field_g);
+                m.field_b.a(0, d.field_b.payload, (byte) 87, d.field_b.position);
                 ca.field_Y = dd.b(84);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ec.a((byte) 27);
               }
-              d.field_b.field_g = 0;
+              d.field_b.position = 0;
             }
             return;
           }
-          d.field_b.field_g = 0;
+          d.field_b.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -226,7 +226,7 @@ final class nf {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uh.field_k != cl.field_k) {
+          if (DualLinkNode.field_k != cl.field_k) {
             return false;
           }
           if (param5 != 0) {
@@ -238,7 +238,7 @@ final class nf {
             var8.p(10341);
             return true;
           }
-          uh.field_k = jl.field_a;
+          DualLinkNode.field_k = jl.field_a;
           qb.field_a = param3;
           jl.field_c = param2;
           wj.field_c = param4;

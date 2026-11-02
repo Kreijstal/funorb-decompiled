@@ -6,7 +6,7 @@ abstract class ti {
     static boolean field_d;
     static tc field_b;
     static rk field_a;
-    static hl[] field_e;
+    static Sprite[] field_e;
     static vi field_f;
     static int field_c;
 

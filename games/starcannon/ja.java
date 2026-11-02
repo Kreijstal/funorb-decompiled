@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    static hl field_e;
+    static Sprite field_e;
     static int field_d;
     private ue field_h;
     private ue field_b;
@@ -29,12 +29,12 @@ final class ja {
             stackIn_2_0 = 72;
             return stackIn_2_0;
           }
-          while (var3_int < uh.field_h.length) {
+          while (var3_int < DualLinkNode.field_h.length) {
             var5 = eg.field_a[var3_int];
             if (0 > var5) {
               var4 = var4 + sg.field_e;
             } else {
-              var6 = fb.$cfr$intArgs$a$1694234bddb3(uh.field_h[var3_int], 26, true);
+              var6 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var3_int], 26, true);
               var4 = var4 + mc.field_h;
               var7 = ee.field_b - (var6 >> 1);
               if (rh.a(pk.field_c + (kc.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0, -89)) {
@@ -171,7 +171,7 @@ final class ja {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.b(4);
+          var9.unlink(4);
           this.field_a.a(var6, (byte) -100, var8Lifetime1);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;

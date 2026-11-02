@@ -4,7 +4,7 @@
 final class ic {
     static String field_c;
     static java.awt.Frame field_d;
-    static th field_b;
+    static GameApplet field_b;
     static boolean field_a;
 
     public static void a(byte param0) {

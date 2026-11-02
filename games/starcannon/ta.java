@@ -40,7 +40,7 @@ final class ta {
         }
         var3Lifetime1 = new ff();
         if (var4 != null) {
-          var3Lifetime1.a(new rb(var4), 125);
+          var3Lifetime1.a(new PacketBuffer(var4), 125);
         }
         if (param0 >= 32768) {
           var3Lifetime1.d(-73);
@@ -49,7 +49,7 @@ final class ta {
         return var3Lifetime1;
     }
 
-    final static void a(hl param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           ja.field_e = param0;
           int var2_int = -12 / ((-36 - param1) / 50);

@@ -51,7 +51,7 @@ final class o {
         }
     }
 
-    final static void a(int param0, rb param1) {
+    final static void a(int param0, PacketBuffer param1) {
         ta.field_e = param1.i(-1174051992) << 5;
         int var2_int = param1.j(7909);
         mc.field_f = (var2_int & 7) << 18;
@@ -62,12 +62,12 @@ final class o {
           ta.field_e = ta.field_e + (var2_int >> 3);
           mc.field_f = mc.field_f + (param1.i(param0 ^ 1174064462) << 2);
           var2_int = param1.j(param0 + 28863);
-          rb.field_i = var2_int << 15 & 2064384;
+          PacketBuffer.field_i = var2_int << 15 & 2064384;
           mc.field_f = mc.field_f + (var2_int >> 6);
-          rb.field_i = rb.field_i + (param1.j(7909) << 7);
+          PacketBuffer.field_i = PacketBuffer.field_i + (param1.j(7909) << 7);
           var2_int = param1.j(7909);
           og.field_f = (var2_int & 1) << 16;
-          rb.field_i = rb.field_i + (var2_int >> 1);
+          PacketBuffer.field_i = PacketBuffer.field_i + (var2_int >> 1);
           og.field_f = og.field_f + param1.i(param0 - 1174031038);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "o.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

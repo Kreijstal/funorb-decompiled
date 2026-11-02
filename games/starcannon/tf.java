@@ -9,7 +9,7 @@ final class tf implements de {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        hl var9 = null;
+        Sprite var9 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

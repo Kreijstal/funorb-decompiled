@@ -4,7 +4,7 @@
 final class j {
     static s field_d;
     static int[] field_b;
-    static hl[] field_c;
+    static Sprite[] field_c;
     static vc field_a;
     static int field_e;
 

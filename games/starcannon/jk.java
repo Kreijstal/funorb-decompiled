@@ -4,8 +4,8 @@
 final class jk {
     int field_e;
     int field_h;
-    static hl[] field_f;
-    static hl field_g;
+    static Sprite[] field_f;
+    static Sprite field_g;
     int field_d;
     static vi field_k;
     static int field_l;

@@ -3,7 +3,7 @@
  */
 final class pk {
     static rk field_a;
-    static hl field_e;
+    static Sprite field_e;
     static int field_c;
     static String field_b;
     static int[] field_d;

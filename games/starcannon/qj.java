@@ -127,7 +127,7 @@ abstract class qj extends kc {
     private final void d(int param0, uj param1) {
         try {
           if (this.field_Y != null) {
-            this.field_Y.b(4);
+            this.field_Y.unlink(4);
           }
           if (param1 == null) {
             this.field_Y = new ie();

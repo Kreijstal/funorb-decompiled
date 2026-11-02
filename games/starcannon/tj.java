@@ -152,8 +152,8 @@ final class tj extends kf {
         try {
           var5 = d.field_b;
           var5.d((byte) 100, param2);
-          var5.field_g = var5.field_g + 1;
-          var4 = var5.field_g;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, -70);
           var5.a(param1.field_k, -57);
           var5.d(5918, param1.field_f);
@@ -165,7 +165,7 @@ final class tj extends kf {
           var5.c((byte) -89, param1.field_g);
           var5.c((byte) -88, param1.field_i);
           var5.b((byte) -128, var4);
-          var5.b(var5.field_g - var4, 31700);
+          var5.b(var5.position - var4, 31700);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

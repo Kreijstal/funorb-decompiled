@@ -5,7 +5,7 @@ final class hf extends fi {
     private long field_p;
     private long[] field_k;
     private int field_o;
-    static hl field_i;
+    static Sprite field_i;
     private long field_n;
     private long field_m;
     static int field_l;
@@ -49,7 +49,7 @@ final class hf extends fi {
             var2 = "";
           }
           if (param1) {
-            field_i = (hl) null;
+            field_i = (Sprite) null;
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -99,7 +99,7 @@ final class hf extends fi {
         return var6 / (long)this.field_j;
     }
 
-    final static void a(int param0, int param1, int param2, hl[] param3, int param4, int param5, hl[] param6, int param7, qe param8, int param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, qe param8, int param9, int param10, boolean param11) {
         try {
           qc.a(param3, param4, param2, param6, param4, -109, param2, param7, param11, param5, param0, param8, param10, param1, param8);
           if (param9 != -11) {
@@ -113,7 +113,7 @@ final class hf extends fi {
     public static void b(int param0) {
         if (param0 != -22720) {
           qe var2 = (qe) null;
-          hf.a(91, -55, 77, (hl[]) null, -30, 57, (hl[]) null, 31, (qe) null, 69, -32, false);
+          hf.a(91, -55, 77, (Sprite[]) null, -30, 57, (Sprite[]) null, 31, (qe) null, 69, -32, false);
         }
         field_i = null;
     }

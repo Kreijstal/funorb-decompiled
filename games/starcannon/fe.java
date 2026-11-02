@@ -5,7 +5,7 @@ class fe extends dk {
     private int field_B;
     private boolean field_I;
     private int field_D;
-    static hl field_H;
+    static Sprite field_H;
     private long field_E;
     private long field_F;
     private int field_A;
@@ -322,7 +322,7 @@ class fe extends dk {
         if (param0) {
           return;
         }
-        field_H = (hl) null;
+        field_H = (Sprite) null;
     }
 
     private final void e(byte param0) {
@@ -352,18 +352,18 @@ class fe extends dk {
         }
     }
 
-    final static void a(rf param0, rf param1, boolean param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
         try {
-          if (param1.field_d != null) {
-            param1.b(4);
+          if (param1.previous != null) {
+            param1.unlink(4);
           }
-          param1.field_d = param0.field_d;
-          param1.field_a = param0;
+          param1.previous = param0.previous;
+          param1.next = param0;
           if (param2) {
             field_J = (td[]) null;
           }
-          param1.field_d.field_a = param1;
-          param1.field_a.field_d = param1;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fe.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -648,7 +648,7 @@ class fe extends dk {
     public static void f(byte param0) {
         field_H = null;
         if (param0 != 73) {
-          field_H = (hl) null;
+          field_H = (Sprite) null;
           field_J = null;
           return;
         }

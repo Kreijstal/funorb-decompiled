@@ -11,7 +11,7 @@ final class a {
 
     final static o[] b(int param0) {
         if (param0 == -23508) {
-          return new o[]{va.field_m, ag.field_m, qd.field_D, rf.field_e, ac.field_a, dl.field_b, ce.field_a, ua.field_d, bg.field_f, wg.field_d, bb.field_j, fc.field_a, gg.field_i, pe.field_a};
+          return new o[]{va.field_m, ag.field_m, qd.field_D, IntrusiveNode.field_e, ac.field_a, dl.field_b, ce.field_a, ua.field_d, KeyboardInput.field_f, wg.field_d, bb.field_j, fc.field_a, gg.field_i, pe.field_a};
         }
         return (o[]) null;
     }

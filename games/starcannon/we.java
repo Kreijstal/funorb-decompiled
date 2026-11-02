@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we extends rf {
+final class we extends IntrusiveNode {
     static String field_i;
     static int field_k;
     int[] field_j;
@@ -10,7 +10,7 @@ final class we extends rf {
     static byte[][] field_h;
 
     final static String a(int param0) {
-        if (uh.field_k == jl.field_a) {
+        if (DualLinkNode.field_k == jl.field_a) {
           return wj.field_c;
         }
         if (!qa.field_a.b(false)) {

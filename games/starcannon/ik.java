@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ik extends uh {
+abstract class ik extends DualLinkNode {
     volatile boolean field_r;
     boolean field_o;
     boolean field_n;

@@ -92,12 +92,12 @@ abstract class bd {
             }
           } else {
             if (var2 != 0 &&
-              bh.field_a != 2) {
+              SecondaryNodeDeque.field_a != 2) {
               od.c((byte) 104);
             }
           }
           if (var3 == 0 &&
-            2 == bh.field_a) {
+            2 == SecondaryNodeDeque.field_a) {
             var4 = -af.field_x + dd.b(125);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bc extends rf {
+final class bc extends IntrusiveNode {
     int field_f;
     int field_k;
     int field_i;
@@ -13,7 +13,7 @@ final class bc extends rf {
     int field_g;
     int field_o;
 
-    final static void a(hl param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           if (param1 != 26095) {
             field_l = (String) null;
@@ -32,8 +32,8 @@ final class bc extends rf {
           this.field_o = param0;
           this.field_g = param6;
           if (param7) {
-            hl var10 = (hl) null;
-            bc.a((hl) null, -47);
+            Sprite var10 = (Sprite) null;
+            bc.a((Sprite) null, -47);
           }
           this.field_n = param1;
           this.field_k = param5;

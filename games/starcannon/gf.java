@@ -6,7 +6,7 @@ final class gf {
     static int field_b;
     static boolean field_d;
     static ud[] field_c;
-    static hl[] field_a;
+    static Sprite[] field_a;
 
     public static void a(byte param0) {
         if (param0 <= -102) {
@@ -27,7 +27,7 @@ final class gf {
         var1 = rc.field_d;
         synchronized (var1) {
           pg.field_g = pg.field_g + 1;
-          te.field_b = uh.field_i;
+          te.field_b = DualLinkNode.field_i;
           pe.field_d = hj.field_d;
           la.field_c = wj.field_a;
           uf.field_d = vj.field_Y;

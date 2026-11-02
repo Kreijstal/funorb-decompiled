@@ -13,7 +13,7 @@ final class lh {
     ud[] field_L;
     int[] field_e;
     int field_w;
-    static hl field_N;
+    static Sprite field_N;
     static String field_D;
     int field_p;
     int[] field_A;
@@ -193,7 +193,7 @@ final class lh {
         }
     }
 
-    lh(rb param0, ja param1) {
+    lh(PacketBuffer param0, ja param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

@@ -3,7 +3,7 @@
  */
 final class t extends ti {
     static String field_q;
-    static hl[] field_r;
+    static Sprite[] field_r;
     private uf field_v;
     private int field_n;
     static int field_C;
@@ -57,7 +57,7 @@ final class t extends ti {
           0 == param1 &&
           !var12.field_o &&
           var12.field_r) {
-          var12.b(4);
+          var12.unlink(4);
           var4 = null;
         }
         if (var4 == null) {
@@ -93,7 +93,7 @@ final class t extends ti {
               var4 = this.field_y.a((byte) 16, param0, this.field_p);
             }
           }
-          this.field_w.a((long)param0, (byte) -100, (rf) (var4));
+          this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
         }
         if (((ik) (var4)).field_r) {
           return null;
@@ -131,7 +131,7 @@ final class t extends ti {
                 this.field_j[param0] = (byte) 1;
               }
               if (!((ik) (var4)).field_o) {
-                ((ik) (var4)).b(4);
+                ((ik) (var4)).unlink(4);
               }
               stackIn_62_0 = var4;
               return (ik) (stackIn_62_0);
@@ -141,11 +141,11 @@ final class t extends ti {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_j[param0] = (byte)-1;
-            ((ik) (var4)).b(4);
+            ((ik) (var4)).unlink(4);
             if (((ik) (var4)).field_o &&
               !this.field_s.b((byte) -124)) {
               var4 = this.field_s.a(this.field_k, param0, -28612, true, (byte) 2);
-              this.field_w.a((long)param0, (byte) -100, (rf) (var4));
+              this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -181,13 +181,13 @@ final class t extends ti {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_s.a((byte) 126);
-          ((ik) (var4)).b(4);
+          ((ik) (var4)).unlink(4);
           if (((ik) (var4)).field_o) {
             if (this.field_s.b((byte) -119)) {
               return null;
             }
             var4 = this.field_s.a(this.field_k, param0, -28612, true, (byte) 2);
-            this.field_w.a((long)param0, (byte) -100, (rf) (var4));
+            this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -200,7 +200,7 @@ final class t extends ti {
           }
         }
         if (!((ik) (var4)).field_o) {
-          ((ik) (var4)).b(4);
+          ((ik) (var4)).unlink(4);
         }
         return (ik) (var4);
     }
@@ -224,7 +224,7 @@ final class t extends ti {
           return null;
         }
         byte[] var4 = var3.f(0);
-        var3.b(4);
+        var3.unlink(4);
         if (param1) {
           this.b((byte) 60);
         }
@@ -326,14 +326,14 @@ final class t extends ti {
         ik discarded$0 = null;
         int var2_int;
         ik var2;
-        rf var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        rf var6;
-        rf var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        rf var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = StarCannon.field_A;
         if (param0 != -12) {
           this.a(-73, false);
@@ -347,30 +347,30 @@ final class t extends ti {
             var2_int = 1;
             var3 = this.field_B.c(param0 - 3893);
             while (var3 != null) {
-              var4 = (int)var3.field_b;
+              var4 = (int)var3.key;
               if (this.field_j[var4] == 0) {
                 discarded$3 = this.a(var4, 1, true);
               }
               if (this.field_j[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b(4);
+                var3.unlink(4);
               }
               var3 = this.field_B.a(-16913);
             }
-            L11: while (true) {
+            scanLoop1: while (true) {
               if (this.field_t.field_i.length > this.field_F) {
                 if (this.field_t.field_i[this.field_F] != 0) {
                   if (this.field_y.field_h >= 250) {
                     var2_int = 0;
-                    break L11;
+                    break scanLoop1;
                   }
                   if (0 == this.field_j[this.field_F]) {
                     discarded$2 = this.a(this.field_F, 1, true);
                   }
                   if (0 == this.field_j[this.field_F]) {
-                    var6 = new rf();
-                    var6.field_b = (long)this.field_F;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_F;
                     var2_int = 0;
                     this.field_B.b(69, var6);
                   }
@@ -391,12 +391,12 @@ final class t extends ti {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_B.c(-3905);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_b;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_j[var4Lifetime1]) {
                   discarded$1 = this.a(var4Lifetime1, 2, true);
                 }
                 if (1 == this.field_j[var4Lifetime1]) {
-                  var3Lifetime1.b(4);
+                  var3Lifetime1.unlink(4);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -412,8 +412,8 @@ final class t extends ti {
                     discarded$0 = this.a(this.field_F, 2, true);
                   }
                   if (1 != this.field_j[this.field_F]) {
-                    var7 = new rf();
-                    var7.field_b = (long)this.field_F;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_F;
                     var2_intLifetime1 = 0;
                     this.field_B.b(param0 + 83, var7);
                   }
@@ -445,7 +445,7 @@ final class t extends ti {
                 if (!var2.field_o) {
                   throw new RuntimeException();
                 }
-                var2.b(4);
+                var2.unlink(4);
               }
             }
             var2 = (ik) (this.field_w.a((byte) -64));
@@ -468,17 +468,17 @@ final class t extends ti {
         if (param0 != 0) {
           field_C = -75;
         }
-        rf var2 = this.field_E.c(param0 ^ -3905);
+        IntrusiveNode var2 = this.field_E.c(param0 ^ -3905);
         while (var2 != null) {
-          var3 = (int)var2.field_b;
+          var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.b(4);
+            var2.unlink(4);
           } else {
             if (this.field_t.field_m <= var3) {
-              var2.b(4);
+              var2.unlink(4);
             } else {
               if (this.field_t.field_i[var3] == 0) {
-                var2.b(4);
+                var2.unlink(4);
               } else {
                 if (0 == this.field_j[var3]) {
                   discarded$0 = this.a(var3, 1, true);
@@ -487,7 +487,7 @@ final class t extends ti {
                   discarded$1 = this.a(var3, 2, true);
                 }
                 if (this.field_j[var3] == 1) {
-                  var2.b(4);
+                  var2.unlink(4);
                 }
               }
             }

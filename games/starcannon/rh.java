@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class rh extends rf {
+final class rh extends IntrusiveNode {
     int field_l;
     int field_k;
     static String field_g;
     static char[] field_j;
     static qe field_h;
-    static hl[] field_f;
+    static Sprite[] field_f;
     static int field_i;
 
     public static void a(boolean param0) {
@@ -61,7 +61,7 @@ final class rh extends rf {
             param2 = -param0 + ki.field_i;
           }
           if (!param5) {
-            field_f = (hl[]) null;
+            field_f = (Sprite[]) null;
           }
           if (0 < param1 &&
             param2 > 0) {
@@ -183,7 +183,7 @@ final class rh extends rf {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_g;
+            var4 = param0.position;
             param0.c((byte) -127, var17.field_k);
             for (var5 = 0; var17.field_n > var5; var5++) {
               if (var17.field_g[var5] == 0) {
@@ -291,7 +291,7 @@ final class rh extends rf {
               }
             }
             param0.b((byte) -89, var4);
-            var17.b(4);
+            var17.unlink(4);
             var5 = -107 % ((param1 + 16) / 37);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
@@ -315,7 +315,7 @@ final class rh extends rf {
 
     static {
         field_g = "Unable to connect to the data server. Please check any firewall you are using.";
-        field_f = new hl[8];
+        field_f = new Sprite[8];
         field_j = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
     }
 }

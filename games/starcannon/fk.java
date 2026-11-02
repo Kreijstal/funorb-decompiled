@@ -79,14 +79,14 @@ final class fk {
             return false;
           }
           il.field_g = se.field_p.j(7909);
-          se.field_p.field_g = 0;
+          se.field_p.position = 0;
         }
         if (-2 != il.field_g) {
           return ag.a(125, il.field_g);
         }
         if (ag.a(125, 2)) {
           il.field_g = se.field_p.i(-1174051992);
-          se.field_p.field_g = 0;
+          se.field_p.position = 0;
           return ag.a(125, il.field_g);
         }
         return false;

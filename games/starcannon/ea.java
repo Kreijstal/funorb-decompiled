@@ -3,7 +3,7 @@
  */
 final class ea {
     static char[] field_c;
-    static hl[] field_b;
+    static Sprite[] field_b;
     static n field_a;
     static df field_d;
 
@@ -49,12 +49,12 @@ final class ea {
               var13 = new byte[var4];
               var9.a(var4, (byte) 88, var13, 0);
             }
-            var9.field_g = var9.field_g + 4;
+            var9.position = var9.position + 4;
             if (!var9.f(0)) {
               ec.a((byte) 27);
               return;
             }
-            var8.b(4);
+            var8.unlink(4);
           } else {
             if (1 == var2) {
               var3 = var9.f((byte) -91);
@@ -67,7 +67,7 @@ final class ea {
                 break;
               }
               if (var4_ref_of != null) {
-                var4_ref_of.b(4);
+                var4_ref_of.unlink(4);
                 return;
               }
               ec.a((byte) 27);
@@ -99,7 +99,7 @@ final class ea {
         ia var3 = null;
         try {
           if (param0 < 39) {
-            field_b = (hl[]) null;
+            field_b = (Sprite[]) null;
           }
           var3 = d.field_b;
           var3.d((byte) 74, param2);
@@ -169,6 +169,6 @@ final class ea {
 
     static {
         field_c = new char[]{(char)91, (char)93, (char)35};
-        field_b = new hl[9];
+        field_b = new Sprite[9];
     }
 }

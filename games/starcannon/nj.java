@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class nj extends rf {
+final class nj extends IntrusiveNode {
     private int field_w;
     private static int[] field_f;
     private int field_s;
@@ -558,7 +558,7 @@ final class nj extends rf {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        rb var2 = new rb(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_l = var2.f((byte) -85);
         this.field_C = var2.f((byte) -115);
         this.field_x = var2.f((byte) -120);

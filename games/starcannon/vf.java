@@ -13,7 +13,7 @@ final class vf {
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        rb var6 = null;
+        PacketBuffer var6 = null;
         sk stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -32,8 +32,8 @@ final class vf {
             }
           }
           if (param1 >= -13) {
-            var6 = (rb) null;
-            vf.a((rb) null, -44);
+            var6 = (PacketBuffer) null;
+            vf.a((PacketBuffer) null, -44);
           }
           stackIn_13_0 = ra.field_t;
           return stackIn_13_0;
@@ -113,7 +113,7 @@ final class vf {
         }
     }
 
-    final static boolean a(rb param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

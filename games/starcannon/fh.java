@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class fh extends hd {
-    static hl[] field_r;
-    static hl field_q;
+    static Sprite[] field_r;
+    static Sprite field_q;
 
     fh(qe param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_p, -1, 2147483647, false);
@@ -44,7 +44,7 @@ class fh extends hd {
             if (param2 >= 77) {
               return null;
             }
-            field_r = (hl[]) null;
+            field_r = (Sprite[]) null;
             stackIn_13_0 = null;
             return (String) (stackIn_13_0);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -126,6 +126,6 @@ class fh extends hd {
     }
 
     static {
-        field_r = new hl[8];
+        field_r = new Sprite[8];
     }
 }

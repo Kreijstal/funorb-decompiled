@@ -187,8 +187,8 @@ final class bb {
           return;
         }
         try {
-          var5.field_g = var5.field_g + 1;
-          var4 = var5.field_g;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, -63);
           if (null != param2.field_i) {
             var5.a(param2.field_i.length, param0 - 96);
@@ -197,9 +197,9 @@ final class bb {
             var5.a(0, -111);
           }
           var5.b((byte) -121, var4);
-          var5.field_g = var5.field_g - 4;
+          var5.position = var5.position - 4;
           param2.field_h = var5.f((byte) -109);
-          var5.b(-var4 + var5.field_g, param0 ^ 31702);
+          var5.b(-var4 + var5.position, param0 ^ 31702);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "bb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

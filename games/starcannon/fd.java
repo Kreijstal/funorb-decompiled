@@ -72,7 +72,7 @@ final class fd {
         }
     }
 
-    final static void a(rb param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

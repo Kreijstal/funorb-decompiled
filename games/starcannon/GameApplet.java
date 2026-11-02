@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class th extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_b;
-    static rb field_d;
+    static PacketBuffer field_d;
     static int field_c;
     public static boolean field_i;
     public static int field_f;
@@ -81,7 +81,7 @@ public abstract class th extends java.applet.Applet implements Runnable, java.aw
               ic.field_b = this;
               ef.field_d = param4;
               ig.field_i = param4;
-              ek.field_b = ll.b(125);
+              IterableNodeHashTable.field_b = ll.b(125);
               if (param0 <= 125) {
                 this.paint((java.awt.Graphics) null);
               }
@@ -174,7 +174,7 @@ public abstract class th extends java.applet.Applet implements Runnable, java.aw
               var3 = decompiledCaughtException;
             }
             if (param1) {
-              th.c(81);
+              GameApplet.c(81);
             }
             try {
               this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + param0 + ".ws"), "_top");
@@ -795,7 +795,7 @@ public abstract class th extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected th() {
+    protected GameApplet() {
         this.field_b = false;
     }
 

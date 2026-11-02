@@ -7,32 +7,32 @@ final class ih {
     static String field_f;
     private int field_h;
     static int[] field_d;
-    private rf field_i;
-    private rf[] field_b;
-    private rf field_a;
+    private IntrusiveNode field_i;
+    private IntrusiveNode[] field_b;
+    private IntrusiveNode field_a;
     static mj field_c;
 
-    final void a(long param0, byte param1, rf param2) {
-        rf var5 = null;
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param2.field_d != null) {
-            param2.b(4);
+          if (param2.previous != null) {
+            param2.unlink(4);
           }
           var5 = this.field_b[(int)(param0 & (long)(this.field_e - 1))];
-          param2.field_d = var5.field_d;
+          param2.previous = var5.previous;
           if (param1 != -100) {
             this.a(-118);
           }
-          param2.field_a = var5;
-          param2.field_d.field_a = param2;
-          param2.field_b = param0;
-          param2.field_a.field_d = param2;
+          param2.next = var5;
+          param2.previous.next = param2;
+          param2.key = param0;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ih.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final rf a(int param0) {
+    final IntrusiveNode a(int param0) {
         if (param0 != -1) {
           this.a(-125L, (byte) 91);
           this.field_h = 0;
@@ -42,15 +42,15 @@ final class ih {
         return this.a((byte) 111);
     }
 
-    final rf a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var2;
         int var4;
-        rf var5;
-        rf var6;
-        rf var10;
-        rf var13;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
+        IntrusiveNode var10;
+        IntrusiveNode var13;
         var4 = StarCannon.field_A;
         var2 = -28 % ((36 - param0) / 51);
         if (0 >= this.field_h) {
@@ -60,15 +60,15 @@ final class ih {
             }
             fieldTemp$1 = this.field_h;
             this.field_h = this.field_h + 1;
-            var5 = this.field_b[fieldTemp$1].field_a;
+            var5 = this.field_b[fieldTemp$1].next;
             var6 = var5;
           } while (var5 == this.field_b[-1 + this.field_h]);
-          this.field_a = var6.field_a;
+          this.field_a = var6.next;
           return var6;
         }
         if (this.field_b[this.field_h - 1] != this.field_a) {
           var13 = this.field_a;
-          this.field_a = var13.field_a;
+          this.field_a = var13.next;
           return var13;
         }
         do {
@@ -77,10 +77,10 @@ final class ih {
           }
           fieldTemp$0 = this.field_h;
           this.field_h = this.field_h + 1;
-          var5 = this.field_b[fieldTemp$0].field_a;
+          var5 = this.field_b[fieldTemp$0].next;
           var10 = var5;
         } while (var5 == this.field_b[-1 + this.field_h]);
-        this.field_a = var10.field_a;
+        this.field_a = var10.next;
         return var10;
     }
 
@@ -94,38 +94,38 @@ final class ih {
 
     ih(int param0) {
         int var2 = 0;
-        rf dupTemp$1 = null;
-        rf var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_h = 0;
-        this.field_b = new rf[param0];
+        this.field_b = new IntrusiveNode[param0];
         this.field_e = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new rf();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
-          var3.field_a = var3;
-          var3.field_d = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 
-    final rf a(long param0, byte param1) {
-        rf var5 = null;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
         int var6 = StarCannon.field_A;
-        rf var4 = this.field_b[(int)(param0 & (long)(this.field_e - 1))];
-        this.field_i = var4.field_a;
+        IntrusiveNode var4 = this.field_b[(int)(param0 & (long)(this.field_e - 1))];
+        this.field_i = var4.next;
         if (param1 >= 5) {
           while (var4 != this.field_i) {
-            if (~param0 == ~this.field_i.field_b) {
+            if (~param0 == ~this.field_i.key) {
               var5 = this.field_i;
-              this.field_i = this.field_i.field_a;
+              this.field_i = this.field_i.next;
               return var5;
             }
-            this.field_i = this.field_i.field_a;
+            this.field_i = this.field_i.next;
           }
           this.field_i = null;
           return null;
         }
-        return (rf) null;
+        return (IntrusiveNode) null;
     }
 
     static {

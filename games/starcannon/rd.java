@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rd extends uh {
+class rd extends DualLinkNode {
     static String field_n;
-    static hl[] field_p;
+    static Sprite[] field_p;
     static String field_o;
     static String[] field_q;
 

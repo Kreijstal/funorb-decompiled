@@ -25,7 +25,7 @@ final class tc extends kf {
     }
 
     public tc() {
-        super(0, 0, ui.field_o, ak.field_h, (de) null, (qg) null);
+        super(0, 0, SpriteState.field_o, ak.field_h, (de) null, (qg) null);
         this.field_w = new rk();
     }
 
@@ -71,7 +71,7 @@ final class tc extends kf {
         }
         while (var3 != null) {
           if (var3.g((byte) -124)) {
-            var3.b(4);
+            var3.unlink(4);
           }
           var3 = (qd) (var2.b(param0 + 10679));
         }
@@ -127,7 +127,7 @@ final class tc extends kf {
         qd var3 = (qd) (var2.a(param0 ^ param0));
         while (var3 != null) {
           if (var3.i(-126)) {
-            var3.b(4);
+            var3.unlink(4);
           }
           var3 = (qd) (var2.b(99));
         }

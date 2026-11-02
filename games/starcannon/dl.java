@@ -4,7 +4,7 @@
 final class dl {
     static o field_b;
     private int[] field_e;
-    static hl[] field_c;
+    static Sprite[] field_c;
     static int field_a;
     static boolean field_d;
 
@@ -134,8 +134,8 @@ final class dl {
           if (param0 != -12) {
             return;
           }
-          if (sb.field_g != null) {
-            sb.field_g.field_H.a(param0 ^ -1897, param1);
+          if (BufferedSocket.field_g != null) {
+            BufferedSocket.field_g.field_H.a(param0 ^ -1897, param1);
           }
           if (n.field_l != null) {
             n.field_l.field_z.a(1891, param1);

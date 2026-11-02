@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends rf {
+final class pg extends IntrusiveNode {
     static volatile int field_g;
     static int field_f;
 

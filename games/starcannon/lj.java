@@ -151,7 +151,7 @@ final class lj {
               if (param0 != 816415832) {
                 lj.a(16, -122);
               }
-              var3 = wh.a(127, var4, param1).getFile();
+              var3 = NodeHashTableIterator.a(127, var4, param1).getFile();
               mb.a(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", param0 ^ -816443192);
               mb.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", param0 - 816443336);
               mb.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", -27504);

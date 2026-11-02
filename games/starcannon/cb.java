@@ -166,9 +166,9 @@ final class cb {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               o.a(-20954, var15);
               if (var6_intLifetime1 != 0) {
-                fa.a(mc.field_f, var6_intLifetime1, og.field_f, rb.field_i, ta.field_e, -106);
+                fa.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, -106);
               } else {
-                fa.a(mc.field_f, var6_intLifetime1, og.field_f, rb.field_i, ta.field_e, 12);
+                fa.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, 12);
               }
             }
             kk.a(var5, 42);
@@ -211,10 +211,10 @@ final class cb {
               var14++;
               var13++;
             }
-            var3.b(4);
+            var3.unlink(4);
             return;
           }
-          var3.b(4);
+          var3.unlink(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

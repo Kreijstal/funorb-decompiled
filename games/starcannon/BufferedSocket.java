@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sb implements Runnable {
+final class BufferedSocket implements Runnable {
     private InputStream field_d;
     private ka field_k;
     private OutputStream field_q;
@@ -125,7 +125,7 @@ final class sb implements Runnable {
         }
     }
 
-    sb(java.net.Socket param0, ka param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, ka param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -418,7 +418,7 @@ final class sb implements Runnable {
           return 0;
         }
         if (param0 < 45) {
-          sb.a(false, 123, -100, 77, -90, -56, 113, -109);
+          BufferedSocket.a(false, 123, -100, 77, -90, -56, 113, -109);
         }
         return this.field_d.available();
     }
@@ -430,7 +430,7 @@ final class sb implements Runnable {
         return ri.a(true, param2, param0, param3, false, param1);
     }
 
-    private sb(java.net.Socket param0, ka param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, ka param1, int param2) throws IOException {
         this.field_i = false;
         this.field_l = false;
         this.field_r = 0;

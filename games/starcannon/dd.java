@@ -3,26 +3,26 @@
  */
 final class dd {
     static ge field_b;
-    static rb field_a;
+    static PacketBuffer field_a;
 
     final synchronized static long b(int param0) {
         long var1 = System.currentTimeMillis();
         if (!(db.field_C <= var1)) {
-          ek.field_d = ek.field_d + (-var1 + db.field_C);
+          IterableNodeHashTable.field_d = IterableNodeHashTable.field_d + (-var1 + db.field_C);
         }
         if (param0 >= 55) {
           db.field_C = var1;
-          return var1 + ek.field_d;
+          return var1 + IterableNodeHashTable.field_d;
         }
         dd.b(1);
         db.field_C = var1;
-        return var1 + ek.field_d;
+        return var1 + IterableNodeHashTable.field_d;
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 >= -54) {
-          field_a = (rb) null;
+          field_a = (PacketBuffer) null;
           field_b = null;
           return;
         }

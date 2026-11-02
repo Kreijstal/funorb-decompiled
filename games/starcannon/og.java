@@ -6,7 +6,7 @@ final class og {
     static int field_f;
     static int field_b;
     static byte[][] field_c;
-    static hl[] field_d;
+    static Sprite[] field_d;
     static String field_e;
 
     public static void a(byte param0) {

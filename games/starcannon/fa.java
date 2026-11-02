@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fa extends uj {
-    private hl field_H;
+    private Sprite field_H;
     static boolean field_E;
-    private hl field_J;
+    private Sprite field_J;
     static String field_z;
     static ph field_G;
     private int field_w;
     private int field_C;
     private int field_I;
     boolean field_D;
-    private hl[] field_y;
+    private Sprite[] field_y;
     private int field_B;
     static String[] field_A;
-    private hl field_v;
+    private Sprite field_v;
     private int field_u;
     static String field_t;
     int field_x;
@@ -70,7 +70,7 @@ final class fa extends uj {
         this.field_u = 8355711 & param0 >> 1;
         this.e((byte) 34);
         if (param1 != 2) {
-          this.field_y = (hl[]) null;
+          this.field_y = (Sprite[]) null;
         }
     }
 
@@ -84,7 +84,7 @@ final class fa extends uj {
         field_t = null;
     }
 
-    private final hl a(int param0, int param1, int param2) {
+    private final Sprite a(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -92,7 +92,7 @@ final class fa extends uj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        hl var13 = new hl(2 * this.field_C, this.field_f);
+        Sprite var13 = new Sprite(2 * this.field_C, this.field_f);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -122,25 +122,25 @@ final class fa extends uj {
     }
 
     private final void e(byte param0) {
-        this.field_y = new hl[]{this.a(0, this.field_F, this.field_B), this.a(param0 ^ 34, this.field_w, this.field_u)};
+        this.field_y = new Sprite[]{this.a(0, this.field_F, this.field_B), this.a(param0 ^ 34, this.field_w, this.field_u)};
         this.field_v = this.a(true);
         if (param0 != 34) {
           this.field_x = -4;
         }
         this.field_J = this.field_v.g();
-        this.field_H = new hl(this.field_f >> 1, this.field_f);
+        this.field_H = new Sprite(this.field_f >> 1, this.field_f);
     }
 
-    private final hl a(boolean param0) {
+    private final Sprite a(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var2 = this.field_f >> 1;
-        hl var3 = new hl(var2, this.field_f);
+        Sprite var3 = new Sprite(var2, this.field_f);
         bc.a(var3, 26095);
         if (!param0) {
-          return (hl) null;
+          return (Sprite) null;
         }
         for (var4 = 0; var4 < this.field_f; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -205,7 +205,7 @@ final class fa extends uj {
         }
     }
 
-    private final void a(hl param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

@@ -7,7 +7,7 @@ final class eb {
     static int field_c;
     static boolean field_f;
     static ge field_a;
-    static hl[] field_b;
+    static Sprite[] field_b;
     static String[] field_d;
 
     final static void a(int param0) {
@@ -22,7 +22,7 @@ final class eb {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        hl var2_ref_hl = null;
+        Sprite var2_ref_hl = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -30,12 +30,12 @@ final class eb {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        hl var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        hl var11 = null;
-        hl var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        hl var16 = null;
+        Sprite var16 = null;
         String var17 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -71,8 +71,8 @@ final class eb {
             cf.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
             pc.field_a = vk.a("benefits", 106, "button", g.field_a);
             re.field_f = vk.a("benefits", 17, "signup_text", g.field_a);
-            ui.field_z = vk.a("benefits", 71, "menu_text", g.field_a);
-            bg.field_c = vk.a("benefits", 32, "button_frame", g.field_a);
+            SpriteState.field_z = vk.a("benefits", 71, "menu_text", g.field_a);
+            KeyboardInput.field_c = vk.a("benefits", 32, "button_frame", g.field_a);
             ge.field_b = vk.a("benefits", 123, "arrow", g.field_a);
             gi.field_b = (qe) ((Object) od.a("benefits", g.field_a, "large_font", -1, pf.field_a));
             ah.field_d = (qe) ((Object) od.a("benefits", g.field_a, "small_font", -1, pf.field_a));
@@ -80,19 +80,19 @@ final class eb {
             var2 = ki.field_j;
             var3 = ki.field_f;
             ki.a(wc.field_b);
-            var11 = new hl(4 + ge.field_b.field_u, 4 + ge.field_b.field_v);
+            var11 = new Sprite(4 + ge.field_b.field_u, 4 + ge.field_b.field_v);
             var11.e();
             ge.field_b.c(2, 2, mc.field_c);
             hh.a(0, 0, 2, var11.field_v, false, 1, var11, var11.field_u);
             ge.field_b = var11;
             ma.field_b = ge.field_b.g();
-            var12 = new hl(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_u / 2;
             var12.e();
             gi.field_b.b(fb.a(ra.field_x, -103, new String[]{t.field_q}), var6, 40, 16777215, -1);
             ah.field_d.b(fb.a(ic.field_c, 118, new String[]{t.field_q}), var6, 60, 16777215, -1);
-            gi.field_b.b(fb.a(vk.field_t, 118, new String[]{ii.field_c}), var6, 110, 16777215, -1);
-            ah.field_d.b(fb.a(vg.field_a, -15, new String[]{ii.field_c}), var6, 130, 16777215, -1);
+            gi.field_b.b(fb.a(vk.field_t, 118, new String[]{ClientException.field_c}), var6, 110, 16777215, -1);
+            ah.field_d.b(fb.a(vg.field_a, -15, new String[]{ClientException.field_c}), var6, 130, 16777215, -1);
             gi.field_b.b(be.field_a, var6, 180, 16777215, -1);
             ah.field_d.b(lj.field_a, var6, 200, 16777215, -1);
             hh.a(0, 0, 3, var12.field_v, false, 1, var12, var12.field_u);
@@ -109,11 +109,11 @@ final class eb {
             rh.a(0, ki.field_j, 2 * ki.field_f / 3, 0, 64, true);
             ki.a(var28, var2, var3);
             ki.b(wc.field_b);
-            mf.field_d = (-bg.field_c.field_v + pc.field_a.field_v) / 2 + 390;
-            nh.field_f = (-bg.field_c.field_u + pc.field_a.field_u) / 2 + 231;
+            mf.field_d = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
+            nh.field_f = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 231;
             g.field_a = null;
-            qf.field_e = (-bg.field_c.field_u + pc.field_a.field_u) / 2 + 434;
-            lf.field_Z = (-bg.field_c.field_v + pc.field_a.field_v) / 2 + 390;
+            qf.field_e = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 434;
+            lf.field_Z = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
           }
           if (ba.field_c == null) {
             return;
@@ -170,13 +170,13 @@ final class eb {
               gi.field_e = gi.field_e - var9_intLifetime3;
             }
             re.field_l.f();
-            var9 = new hl(re.field_l.field_x, re.field_l.field_q);
+            var9 = new Sprite(re.field_l.field_x, re.field_l.field_q);
             var9.e();
             gi.field_b.a(var14, cb.field_f, ue.field_e, nd.field_k, td.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
             hh.a(0, 0, 3, var9.field_q, false, 1, var9, var9.field_x);
             re.field_l.e();
             var9.e(0, 0);
-            lh.field_N = new hl(640, 480);
+            lh.field_N = new Sprite(640, 480);
             lh.field_N.e();
             re.field_l.b((re.field_l.field_x >> 1) + w.field_v, (re.field_l.field_q >> 1) + gi.field_e, eh.field_h, 4096);
             re.field_l = null;
@@ -190,7 +190,7 @@ final class eb {
             var2Lifetime2 = ki.field_j;
             var3Lifetime2 = ki.field_f;
             ki.a(wc.field_b);
-            var16 = new hl(412, 43);
+            var16 = new Sprite(412, 43);
             var17 = fb.a(jh.field_f, -115, new String[]{ik.field_q});
             ik.field_q = null;
             var16.e();
@@ -235,7 +235,7 @@ final class eb {
             lh.field_N.e(0, 0);
           }
           if (pc.field_a != null &&
-            null != bg.field_c) {
+            null != KeyboardInput.field_c) {
             pc.field_a.e(231, 390);
             var2_ref_hl = re.field_f;
             if (0 == ea.field_a.field_k) {
@@ -265,9 +265,9 @@ final class eb {
             m.$cfr$intArgs$a$43a9e830b5b3(stackIn_53_0, stackIn_54_1, nh.field_f, lf.field_Z);
           }
           if (pc.field_a != null &&
-            null != bg.field_c) {
+            null != KeyboardInput.field_c) {
             pc.field_a.e(434, 390);
-            ui.field_z.e(0, 0);
+            SpriteState.field_z.e(0, 0);
             if (ea.field_a.field_k == 1) {
               rh.a(392, -4 + pc.field_a.field_u, 7 * pc.field_a.field_v / 12, 436, 64, true);
             }
@@ -327,7 +327,7 @@ final class eb {
 
     static {
         field_g = "Passwords must be between 5 and 20 characters long";
-        field_b = new hl[14];
+        field_b = new Sprite[14];
         field_e = "ESC    Pause and Options";
         field_d = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
         field_a = new ge();

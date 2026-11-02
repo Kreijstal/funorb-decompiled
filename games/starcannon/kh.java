@@ -64,14 +64,14 @@ final class kh extends vk implements dc, ga, qk {
         this.field_K = new ng("", (qg) null, 3);
         int var1 = 1;
         this.field_D = new gh("", (qg) null, var1 != 0);
-        this.field_M = new dk(wk.field_a, (qg) null);
+        this.field_M = new dk(MouseInput.field_a, (qg) null);
         this.field_I = new dk(fk.field_v, (qg) null);
         this.field_J.field_p = ld.field_jb;
         this.field_z.field_p = q.field_h;
         this.field_E.field_p = ca.field_M;
         this.field_L.field_p = mf.field_e;
         this.field_G.field_p = lh.field_n;
-        this.field_K.field_p = ob.field_a;
+        this.field_K.field_p = SecondaryNodeDequeIterator.field_a;
         this.field_D.field_p = ej.field_q;
         this.field_J.a(new nd(this.field_J), 0);
         this.field_z.a(new mh(this.field_z), 0);
@@ -177,13 +177,13 @@ final class kh extends vk implements dc, ga, qk {
             return true;
           }
           var4 = var3.b((byte) -128);
-          if (var4 == sb.field_n) {
+          if (var4 == BufferedSocket.field_n) {
             return false;
           }
           if (cg.field_g == var4) {
             return false;
           }
-          if (uh.field_g != var4) {
+          if (DualLinkNode.field_g != var4) {
             return true;
           }
           return false;
@@ -236,7 +236,7 @@ final class kh extends vk implements dc, ga, qk {
             field_y = (rk) null;
           }
           if (this.field_I == param0) {
-            ob.b(11);
+            SecondaryNodeDequeIterator.b(11);
           } else {
             if (param0 == this.field_M) {
               discarded$1 = this.i(-1);

@@ -7,9 +7,9 @@ final class ha {
     static Calendar field_b;
     static int field_d;
     static int field_c;
-    static hl[] field_a;
+    static Sprite[] field_a;
 
-    final static String a(rb param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -28,7 +28,7 @@ final class ha {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_g = param0.field_g + fd.field_a.a((byte) 125, param0.field_f, var3_int, var4, param0.field_g, 0);
+            param0.position = param0.position + fd.field_a.a((byte) 125, param0.payload, var3_int, var4, param0.position, 0);
             var5 = va.a(param2, param2 ^ 71, var4, var3_int);
             stackIn_3_0 = var5;
             return stackIn_3_0;
@@ -82,7 +82,7 @@ final class ha {
     public static void a(byte param0) {
         field_b = null;
         if (param0 > -53) {
-          field_a = (hl[]) null;
+          field_a = (Sprite[]) null;
           field_a = null;
           return;
         }

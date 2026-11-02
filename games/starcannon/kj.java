@@ -3,7 +3,7 @@
  */
 final class kj extends vk implements ga {
     private int field_B;
-    static hl[] field_y;
+    static Sprite[] field_y;
     private qe field_F;
     private String field_D;
     private ph field_C;
@@ -160,6 +160,6 @@ final class kj extends vk implements ga {
     }
 
     static {
-        field_y = new hl[4];
+        field_y = new Sprite[4];
     }
 }

@@ -77,7 +77,7 @@ final class qi {
           }
           a.field_e = -1;
           if (eg.field_h &&
-            sb.field_c == di.field_m) {
+            BufferedSocket.field_c == di.field_m) {
             eg.field_h = false;
             di.field_m = 0;
           }

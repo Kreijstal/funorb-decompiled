@@ -8,7 +8,7 @@ final class sj extends dk {
     private int field_H;
     private ve field_F;
     static String field_D;
-    static hl[] field_E;
+    static Sprite[] field_E;
     int field_G;
     static int field_I;
 

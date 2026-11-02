@@ -29,7 +29,7 @@ final class ce {
           if (param0 >= -92) {
             field_a = (o) null;
           }
-          ed.field_q.a((byte) -127, true, bg.field_e, ie.field_z);
+          ed.field_q.a((byte) -127, true, KeyboardInput.field_e, ie.field_z);
           ed.field_q.h(-10597);
           while (ad.e((byte) -123)) {
             ed.field_q.a(lb.field_B, -125, StarCannon.field_E);

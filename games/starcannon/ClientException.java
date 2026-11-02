@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends RuntimeException {
+final class ClientException extends RuntimeException {
     static String field_c;
     Throwable field_a;
     String field_b;
 
     final static ig a(byte param0) {
-        if (cl.field_k == uh.field_k) {
+        if (cl.field_k == DualLinkNode.field_k) {
           throw new IllegalStateException();
         }
-        if (s.field_f == uh.field_k) {
-          uh.field_k = cl.field_k;
+        if (s.field_f == DualLinkNode.field_k) {
+          DualLinkNode.field_k = cl.field_k;
           return gj.field_a;
         }
         if (param0 != -92) {
@@ -23,11 +23,11 @@ final class ii extends RuntimeException {
     public static void b(byte param0) {
         field_c = null;
         if (param0 <= 40) {
-          ii.a(78);
+          ClientException.a(78);
         }
     }
 
-    ii(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_b = param1;
         this.field_a = param0;
     }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class uj extends rf {
+class uj extends IntrusiveNode {
     int field_i;
     qg field_g;
     String field_p;

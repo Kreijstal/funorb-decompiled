@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends rf {
+final class re extends IntrusiveNode {
     int field_p;
-    static hl field_f;
+    static Sprite field_f;
     int[] field_o;
     int field_n;
     int field_h;
     int field_m;
     int field_i;
     long field_k;
-    static hl field_l;
+    static Sprite field_l;
     static String field_q;
     int field_j;
     int field_g;
@@ -20,7 +20,7 @@ final class re extends rf {
         field_q = null;
         field_f = null;
         if (param0 != 0) {
-          field_l = (hl) null;
+          field_l = (Sprite) null;
         }
     }
 

@@ -4,7 +4,7 @@
 final class hj {
     boolean field_e;
     static String[] field_b;
-    static bg field_c;
+    static KeyboardInput field_c;
     String field_a;
     static volatile int field_d;
     String field_f;
@@ -19,7 +19,7 @@ final class hj {
           ac.field_e = param5;
           ld.field_fb = param0;
           ij.field_f = param2;
-          ob.field_b = param3;
+          SecondaryNodeDequeIterator.field_b = param3;
           jh.field_b = (eh) ((Object) new vh());
           bc.field_j = new ef(param2);
           bl.field_b = new jc(jh.field_b, bc.field_j);
@@ -39,6 +39,6 @@ final class hj {
     static {
         field_b = new String[]{"All scores", "My scores", "Best each"};
         field_d = -1;
-        field_c = new bg();
+        field_c = new KeyboardInput();
     }
 }

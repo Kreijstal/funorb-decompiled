@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ag extends th {
+abstract class ag extends GameApplet {
     String field_u;
     private int field_v;
     private int field_w;
@@ -57,7 +57,7 @@ abstract class ag extends th {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= se.field_p.field_g) {
+          if (param1 <= se.field_p.position) {
             return true;
           }
           if (m.field_b == null) {
@@ -69,16 +69,16 @@ abstract class ag extends th {
               field_o = 68;
             }
             if (var2_int > 0) {
-              if (var2_int > -se.field_p.field_g + param1) {
-                var2_int = -se.field_p.field_g + param1;
+              if (var2_int > -se.field_p.position + param1) {
+                var2_int = -se.field_p.position + param1;
               }
-              m.field_b.a(se.field_p.field_g, 32498, var2_int, se.field_p.field_f);
+              m.field_b.a(se.field_p.position, 32498, var2_int, se.field_p.payload);
               ik.field_p = dd.b(115);
-              se.field_p.field_g = se.field_p.field_g + var2_int;
-              if (param1 > se.field_p.field_g) {
+              se.field_p.position = se.field_p.position + var2_int;
+              if (param1 > se.field_p.position) {
                 return false;
               }
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               return true;
             }
             if (var2_int >= 0 &&
@@ -182,7 +182,7 @@ abstract class ag extends th {
 
     private final void g(byte param0) {
         int var2 = 24 / ((param0 - 58) / 42);
-        String var3 = rf.c(1);
+        String var3 = IntrusiveNode.c(1);
         hi.a(0, var3, ll.b(110));
     }
 
@@ -254,7 +254,7 @@ abstract class ag extends th {
                             qc.a(var3, (byte) -89);
                           }
                         } else {
-                          wk.a(il.field_g, se.field_p, nb.field_e, false);
+                          MouseInput.a(il.field_g, se.field_p, nb.field_e, false);
                         }
                       } else {
                         this.g((byte) -47);
@@ -311,7 +311,7 @@ abstract class ag extends th {
             !(var3 >= oj.a(-79))) {
             this.field_t = false;
             ec.a((byte) 27);
-            ob.a(-121);
+            SecondaryNodeDequeIterator.a(-121);
             pd.a(sc.field_e, 2, (byte) -77);
             jc.b(0);
             fi.field_h = true;
@@ -356,9 +356,9 @@ abstract class ag extends th {
             }
           } else {
             if (bl.field_a >= 10) {
-              ob.a(-107);
+              SecondaryNodeDequeIterator.a(-107);
               if (qb.field_j == 3) {
-                pd.a(ob.field_g, 256, (byte) -77);
+                pd.a(SecondaryNodeDequeIterator.field_g, 256, (byte) -77);
               } else {
                 if (4 == qb.field_j) {
                   pd.a(d.field_m, 256, (byte) -77);
@@ -399,11 +399,11 @@ abstract class ag extends th {
         }
         if (rk.field_d == 1) {
           if (vg.field_b != 0) {
-            kl.field_b = b.a(false, rf.field_c);
+            kl.field_b = b.a(false, IntrusiveNode.field_c);
           }
-          bf.field_y = sb.a(1, true, false, r.field_a, (byte) 104);
-          fk.field_k = sb.a(1, true, false, ob.field_j, (byte) 104);
-          li.field_b = sb.a(1, true, false, p.field_c, (byte) 103);
+          bf.field_y = BufferedSocket.a(1, true, false, r.field_a, (byte) 104);
+          fk.field_k = BufferedSocket.a(1, true, false, SecondaryNodeDequeIterator.field_j, (byte) 104);
+          li.field_b = BufferedSocket.a(1, true, false, p.field_c, (byte) 103);
           fi.field_f = bf.field_y;
           rk.field_d = 2;
           lf.field_eb = fk.field_k;
@@ -444,15 +444,15 @@ abstract class ag extends th {
           if (cc.field_l) {
             pk.a((byte) -64);
           }
-          if (uh.field_l == null) {
-            uh.field_l = rd.d(param1 - 60);
-            j.field_e = ui.a(true);
+          if (DualLinkNode.field_l == null) {
+            DualLinkNode.field_l = rd.d(param1 - 60);
+            j.field_e = SpriteState.a(true);
           }
-          kg.a(uh.field_l, param1 + 1, j.field_e, li.field_b);
+          kg.a(DualLinkNode.field_l, param1 + 1, j.field_e, li.field_b);
           bf.field_y = null;
           li.field_b = null;
           fk.field_k = null;
-          rb.a((java.applet.Applet) (this), 65);
+          PacketBuffer.a((java.applet.Applet) (this), 65);
           tc.j(param1 ^ -33);
           rk.field_d = 10;
         }
@@ -526,11 +526,11 @@ abstract class ag extends th {
         ge.b(4039);
         qj.field_eb = wc.b(5220);
         mf.a(true, kj.field_E);
-        rf.field_c = param7;
+        IntrusiveNode.field_c = param7;
         p.field_c = param1;
         a.field_d = param3;
         r.field_a = param2;
-        ob.field_j = param5;
+        SecondaryNodeDequeIterator.field_j = param5;
         this.g(-102);
         ng.k(126);
     }
@@ -552,7 +552,7 @@ abstract class ag extends th {
           String var7 = null;
           String var8 = null;
           Boolean var9 = null;
-          rb var10 = null;
+          PacketBuffer var10 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var4 = fa.a(lh.field_I, param2, vg.field_b, (byte) 121);
@@ -568,7 +568,7 @@ abstract class ag extends th {
             }
             var9 = kk.c((byte) 95);
             if (var9 != null) {
-              sb.a(var9.booleanValue(), (byte) 122);
+              BufferedSocket.a(var9.booleanValue(), (byte) 122);
             }
           }
           if (var4 == 2) {
@@ -643,7 +643,7 @@ abstract class ag extends th {
               if (qa.field_b.c((byte) -127)) {
                 var10 = qa.field_b.a((byte) 60);
                 if (var10 != null) {
-                  var7 = va.a(0, 107, var10.field_f, var10.field_g);
+                  var7 = va.a(0, 107, var10.payload, var10.position);
                   ci.a(var7, param0 - 11);
                 } else {
                   var8 = (String) null;
@@ -787,7 +787,7 @@ abstract class ag extends th {
           if (!hd.field_p) {
             this.a("reconnect", false);
           }
-          ob.a(-88);
+          SecondaryNodeDequeIterator.a(-88);
           var3 = 77 / ((param0 - 63) / 62);
           pd.a(uj.field_r, var2, (byte) -77);
           fi.field_h = true;
@@ -810,7 +810,7 @@ abstract class ag extends th {
         int var4 = il.field_g - 1;
         byte[] var5 = new byte[var4];
         se.field_p.b(var4, (byte) -54, var5, 0);
-        ag.a(var3 != 0, uh.a(127, var5), 64, ll.b(126));
+        ag.a(var3 != 0, DualLinkNode.a(127, var5), 64, ll.b(126));
     }
 
     private final void a(int param0, String param1, int param2, int param3, byte param4) {

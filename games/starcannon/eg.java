@@ -136,13 +136,13 @@ final class eg implements de {
     final static void a(int param0, int param1, byte param2, int param3) {
         if (param2 < -47) {
           ig.field_b = param1;
-          sb.field_m = param3;
+          BufferedSocket.field_m = param3;
           sd.field_a = param0;
           return;
         }
         eg.b((byte) 99);
         ig.field_b = param1;
-        sb.field_m = param3;
+        BufferedSocket.field_m = param3;
         sd.field_a = param0;
     }
 

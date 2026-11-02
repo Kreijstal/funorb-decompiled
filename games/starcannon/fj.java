@@ -221,7 +221,7 @@ final class fj extends c {
         if (this.field_q < 0) {
           if (this.field_n <= 0) {
             this.g();
-            this.b(4);
+            this.unlink(4);
             return;
           }
           this.field_q = 0;
@@ -229,7 +229,7 @@ final class fj extends c {
         if (this.field_q >= var7) {
           if (this.field_n >= 0) {
             this.g();
-            this.b(4);
+            this.unlink(4);
             return;
           }
           this.field_q = var7 - 1;
@@ -356,7 +356,7 @@ final class fj extends c {
           if (this.field_q >= var7) {
             this.field_q = var7;
             this.g();
-            this.b(4);
+            this.unlink(4);
           }
           return;
         }
@@ -366,7 +366,7 @@ final class fj extends c {
         }
         this.field_q = -1;
         this.g();
-        this.b(4);
+        this.unlink(4);
         return;
     }
 
@@ -812,7 +812,7 @@ final class fj extends c {
               this.field_s = 0;
               this.field_w = 0;
               this.field_k = 0;
-              this.b(4);
+              this.unlink(4);
               param0 = this.field_v;
             }
             this.field_v = 0;
@@ -830,7 +830,7 @@ final class fj extends c {
         if (this.field_q < 0) {
           if (this.field_n <= 0) {
             this.g();
-            this.b(4);
+            this.unlink(4);
             return;
           }
           this.field_q = 0;
@@ -838,7 +838,7 @@ final class fj extends c {
         if (this.field_q >= var5) {
           if (this.field_n >= 0) {
             this.g();
-            this.b(4);
+            this.unlink(4);
             return;
           }
           this.field_q = var5 - 1;
@@ -951,7 +951,7 @@ final class fj extends c {
           if (this.field_q >= var5) {
             this.field_q = var5;
             this.g();
-            this.b(4);
+            this.unlink(4);
           }
           return;
         }
@@ -960,7 +960,7 @@ final class fj extends c {
         }
         this.field_q = -1;
         this.g();
-        this.b(4);
+        this.unlink(4);
     }
 
     final synchronized void e(int param0) {
@@ -1142,7 +1142,7 @@ final class fj extends c {
           this.field_s = 0;
           this.field_w = 0;
           this.field_k = 0;
-          this.b(4);
+          this.unlink(4);
           return true;
         }
         if (this.field_k >= var1) {
@@ -1466,7 +1466,7 @@ final class fj extends c {
         int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.b(4);
+          this.unlink(4);
           return;
         }
         if (this.field_w != 0) {
@@ -1526,7 +1526,7 @@ final class fj extends c {
         this.field_v = 0;
         this.field_t = 0;
         this.field_k = 0;
-        this.b(4);
+        this.unlink(4);
     }
 
     final synchronized void b(int param0, int param1, int param2) {

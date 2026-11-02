@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mi extends uh {
+abstract class mi extends DualLinkNode {
     static long field_o;
     int field_p;
     static String field_n;

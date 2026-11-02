@@ -37,7 +37,7 @@ final class vj extends kc implements ga {
         }
     }
 
-    final static void a(byte[] param0, int param1, java.math.BigInteger param2, rb param3, int param4, byte param5, java.math.BigInteger param6) {
+    final static void a(byte[] param0, int param1, java.math.BigInteger param2, PacketBuffer param3, int param4, byte param5, java.math.BigInteger param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -57,7 +57,7 @@ final class vj extends kc implements ga {
         int[] var12 = null;
         int var9Lifetime1;
         try {
-          var7_int = ek.a(23201, param4);
+          var7_int = IterableNodeHashTable.a(23201, param4);
           if (bd.field_e == null) {
             bd.field_e = new java.security.SecureRandom();
           }
@@ -71,29 +71,29 @@ final class vj extends kc implements ga {
             vj.e(false);
           }
           if (null == dd.field_a ||
-            !(dd.field_a.field_f.length >= var7_int)) {
-            dd.field_a = new rb(var7_int);
+            !(dd.field_a.payload.length >= var7_int)) {
+            dd.field_a = new PacketBuffer(var7_int);
           }
-          dd.field_a.field_g = 0;
+          dd.field_a.position = 0;
           dd.field_a.a(param0, param4, param5 - 20243, param1);
           dd.field_a.a(var7_int, true);
           dd.field_a.a((byte) -81, var12);
-          if (th.field_d == null ||
-            !(th.field_d.field_f.length >= 100)) {
-            th.field_d = new rb(100);
+          if (GameApplet.field_d == null ||
+            !(GameApplet.field_d.payload.length >= 100)) {
+            GameApplet.field_d = new PacketBuffer(100);
           }
-          th.field_d.field_g = 0;
-          th.field_d.a(10, param5 - 224);
+          GameApplet.field_d.position = 0;
+          GameApplet.field_d.a(10, param5 - 224);
           var10 = 0;
           var9Lifetime1 = var10;
           while (var10 < 4) {
-            th.field_d.c((byte) -106, var12[var10]);
+            GameApplet.field_d.c((byte) -106, var12[var10]);
             var10++;
           }
-          th.field_d.c(param4, -306);
-          th.field_d.a(param2, param6, param5 - 8498);
-          param3.a(th.field_d.field_f, th.field_d.field_g, -20144, 0);
-          param3.a(dd.field_a.field_f, dd.field_a.field_g, -20144, 0);
+          GameApplet.field_d.c(param4, -306);
+          GameApplet.field_d.a(param2, param6, param5 - 8498);
+          param3.a(GameApplet.field_d.payload, GameApplet.field_d.position, -20144, 0);
+          param3.a(dd.field_a.payload, dd.field_a.position, -20144, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class vj extends kc implements ga {
                 this.field_f = this.field_f + 20;
               }
             } else {
-              if (param1 == wk.field_b) {
+              if (param1 == MouseInput.field_b) {
                 var3 = mc.field_a;
                 this.field_f = this.field_f + 30;
               }

@@ -25,11 +25,11 @@ class ph extends qj implements ga {
           if (a.field_a) {
             return;
           }
-          if (!wk.a(112)) {
+          if (!MouseInput.a(112)) {
             rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
             return;
           }
-          bh.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+          SecondaryNodeDeque.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
           return;
         }
         jg.field_H = jg.field_H | var3;
@@ -37,11 +37,11 @@ class ph extends qj implements ga {
         if (a.field_a) {
           return;
         }
-        if (!wk.a(112)) {
+        if (!MouseInput.a(112)) {
           rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
           return;
         }
-        bh.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+        SecondaryNodeDeque.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
     }
 
     final void o(int param0) {
@@ -165,7 +165,7 @@ class ph extends qj implements ga {
           var5 = new kj(this, this.field_fb, param0);
           if (param1 == 5) {
             var5.a(hd.field_i, 13759, 11);
-            var5.a(bg.field_b, 13759, 17);
+            var5.a(KeyboardInput.field_b, 13759, 17);
           } else {
             if (256 != param1) {
               stackIn_14_0 = var5;

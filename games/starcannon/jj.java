@@ -8,12 +8,12 @@ final class jj extends vk implements dc, ga {
     private ok field_z;
     private dk field_y;
     static int field_D;
-    static hl field_A;
+    static Sprite field_A;
     static int field_F;
 
     private final String j(int param0) {
         if (param0 != -99) {
-          field_A = (hl) null;
+          field_A = (Sprite) null;
           return "</col></u>";
         }
         return "</col></u>";
@@ -219,7 +219,7 @@ final class jj extends vk implements dc, ga {
         int var6 = 0;
         try {
           this.field_z = param0;
-          this.field_y = new dk(ui.field_s, (qg) null);
+          this.field_y = new dk(SpriteState.field_s, (qg) null);
           this.field_y.field_o = (de) ((Object) new gb());
           var7 = fb.a(field_C, -98, new String[]{this.a(false), this.j(-99)});
           var3 = 20;
@@ -247,6 +247,6 @@ final class jj extends vk implements dc, ga {
     static {
         field_C = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_E = false;
-        field_A = new hl(160, 120);
+        field_A = new Sprite(160, 120);
     }
 }

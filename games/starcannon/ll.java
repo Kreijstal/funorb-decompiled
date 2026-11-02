@@ -28,15 +28,15 @@ final class ll {
             var4_ref_q = (q) (le.field_e.c(-3905));
             if (var4_ref_q != null &&
               var2_long > var4_ref_q.field_g) {
-              var4_ref_q.b(4);
+              var4_ref_q.unlink(4);
               il.field_g = var4_ref_q.field_k.length;
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               for (var5_int = 0; var5_int < il.field_g; var5_int++) {
-                se.field_p.field_f[var5_int] = var4_ref_q.field_k[var5_int];
+                se.field_p.payload[var5_int] = var4_ref_q.field_k[var5_int];
               }
               wc.field_i = hh.field_a;
-              hh.field_a = bh.field_d;
-              bh.field_d = vh.field_t;
+              hh.field_a = SecondaryNodeDeque.field_d;
+              SecondaryNodeDeque.field_d = vh.field_t;
               vh.field_t = var4_ref_q.field_f;
               return true;
             }
@@ -46,12 +46,12 @@ final class ll {
           }
           while (true) {
             if (t.field_C < 0) {
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               if (!ag.a(125, 1)) {
                 return false;
               }
               t.field_C = se.field_p.m(255);
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               il.field_g = param0[t.field_C];
             }
             if (!fk.a(false)) {
@@ -59,8 +59,8 @@ final class ll {
             }
             if (jl.field_h == 0) {
               wc.field_i = hh.field_a;
-              hh.field_a = bh.field_d;
-              bh.field_d = vh.field_t;
+              hh.field_a = SecondaryNodeDeque.field_d;
+              SecondaryNodeDeque.field_d = vh.field_t;
               vh.field_t = t.field_C;
               t.field_C = -1;
               return true;
@@ -74,7 +74,7 @@ final class ll {
             }
             var5 = new q(var2_long + (long)var4, t.field_C, new byte[il.field_g]);
             for (var6 = 0; var6 < il.field_g; var6++) {
-              var5.field_k[var6] = se.field_p.field_f[var6];
+              var5.field_k[var6] = se.field_p.payload[var6];
             }
             le.field_e.b(80, var5);
             t.field_C = -1;

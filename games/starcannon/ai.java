@@ -3,10 +3,10 @@
  */
 final class ai {
     static sk field_a;
-    static hl field_g;
+    static Sprite field_g;
     private long field_d;
-    private uh field_e;
-    private uh[] field_f;
+    private DualLinkNode field_e;
+    private DualLinkNode[] field_f;
     private int field_b;
     static boolean field_c;
     static qe field_h;
@@ -19,7 +19,7 @@ final class ai {
           wa.a(true, param1);
           if (param2 <= 83) {
             var4 = (qe) null;
-            ai.a(-76, (hl[]) null, 116, -1, (hl[]) null, 61, (qe) null, 62, (qe) null, 22, -36, -35, -61, -45);
+            ai.a(-76, (Sprite[]) null, 116, -1, (Sprite[]) null, 61, (qe) null, 62, (qe) null, 22, -36, -35, -61, -45);
             return;
           }
           return;
@@ -28,14 +28,14 @@ final class ai {
         wa.a(true, param1);
         if (param2 <= 83) {
           var4Lifetime1 = (qe) null;
-          ai.a(-76, (hl[]) null, 116, -1, (hl[]) null, 61, (qe) null, 62, (qe) null, 22, -36, -35, -61, -45);
+          ai.a(-76, (Sprite[]) null, 116, -1, (Sprite[]) null, 61, (qe) null, 62, (qe) null, 22, -36, -35, -61, -45);
           return;
         }
     }
 
-    final uh b(int param0) {
-        uh var2;
-        uh var3;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
         var4 = StarCannon.field_A;
         if (this.field_e == null) {
@@ -48,13 +48,13 @@ final class ai {
             return null;
           }
           if (this.field_e.field_j != this.field_d) {
-            this.field_e = this.field_e.field_m;
+            this.field_e = this.field_e.secondaryNext;
             continue;
           }
           break;
         }
         var3 = this.field_e;
-        this.field_e = this.field_e.field_m;
+        this.field_e = this.field_e.secondaryNext;
         return var3;
     }
 
@@ -127,9 +127,9 @@ final class ai {
         }
     }
 
-    final static void a(int param0, hl[] param1, int param2, int param3, hl[] param4, int param5, qe param6, int param7, qe param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, Sprite[] param4, int param5, qe param6, int param7, qe param8, int param9, int param10, int param11, int param12, int param13) {
         try {
-          ob.a(123);
+          SecondaryNodeDequeIterator.a(123);
           if (param12 != 25574) {
             ai.a(-124);
           }
@@ -138,48 +138,48 @@ final class ai {
         }
     }
 
-    final uh a(long param0, int param1) {
-        uh var4;
-        uh var5;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        uh var4Lifetime1;
-        uh var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = StarCannon.field_A;
         this.field_d = param0;
         if (param1 > 8) {
           var4 = this.field_f[(int)((long)(this.field_b - 1) & param0)];
-          this.field_e = var4.field_m;
+          this.field_e = var4.secondaryNext;
           while (true) {
             if (var4 == this.field_e) {
               this.field_e = null;
               return null;
             }
             if (param0 != this.field_e.field_j) {
-              this.field_e = this.field_e.field_m;
+              this.field_e = this.field_e.secondaryNext;
               continue;
             }
             break;
           }
           var5 = this.field_e;
-          this.field_e = this.field_e.field_m;
+          this.field_e = this.field_e.secondaryNext;
           return var5;
         }
         this.a(-91L, 63);
         var4Lifetime1 = this.field_f[(int)((long)(this.field_b - 1) & param0)];
-        this.field_e = var4Lifetime1.field_m;
+        this.field_e = var4Lifetime1.secondaryNext;
         while (true) {
           if (var4Lifetime1 == this.field_e) {
             this.field_e = null;
             return null;
           }
           if (param0 != this.field_e.field_j) {
-            this.field_e = this.field_e.field_m;
+            this.field_e = this.field_e.secondaryNext;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_e;
-        this.field_e = this.field_e.field_m;
+        this.field_e = this.field_e.secondaryNext;
         return var5Lifetime1;
     }
 
@@ -205,7 +205,7 @@ final class ai {
               fg.field_b = new int[2 * param2];
             }
             if (param1) {
-              field_g = (hl) null;
+              field_g = (Sprite) null;
             }
             if (null == jk.field_c ||
               !(jk.field_c.length >= param0 + param2)) {
@@ -223,7 +223,7 @@ final class ai {
                 fg.field_b = new int[2 * param2];
               }
               if (param1) {
-                field_g = (hl) null;
+                field_g = (Sprite) null;
               }
               if (null == jk.field_c ||
                 !(jk.field_c.length >= param0 + param2)) {
@@ -239,7 +239,7 @@ final class ai {
                 fg.field_b = new int[2 * param2];
               }
               if (param1) {
-                field_g = (hl) null;
+                field_g = (Sprite) null;
                 if (null == jk.field_c ||
                   !(jk.field_c.length >= param0 + param2)) {
                   jk.field_c = new int[2 * (param2 + param0)];
@@ -296,7 +296,7 @@ final class ai {
                 fg.field_b = new int[2 * param2];
               }
               if (param1) {
-                field_g = (hl) null;
+                field_g = (Sprite) null;
               }
               if (null == jk.field_c ||
                 !(jk.field_c.length >= param0 + param2)) {
@@ -314,7 +314,7 @@ final class ai {
                   fg.field_b = new int[2 * param2];
                 }
                 if (param1) {
-                  field_g = (hl) null;
+                  field_g = (Sprite) null;
                 }
                 if (null == jk.field_c ||
                   !(jk.field_c.length >= param0 + param2)) {
@@ -330,7 +330,7 @@ final class ai {
                   fg.field_b = new int[2 * param2];
                 }
                 if (param1) {
-                  field_g = (hl) null;
+                  field_g = (Sprite) null;
                   if (null == jk.field_c ||
                     !(jk.field_c.length >= param0 + param2)) {
                     jk.field_c = new int[2 * (param2 + param0)];
@@ -387,7 +387,7 @@ final class ai {
                 fg.field_b = new int[2 * param2];
               }
               if (param1) {
-                field_g = (hl) null;
+                field_g = (Sprite) null;
               }
               if (null == jk.field_c ||
                 !(jk.field_c.length >= param0 + param2)) {
@@ -408,7 +408,7 @@ final class ai {
                   fg.field_b = new int[2 * param2];
                 }
                 if (param1) {
-                  field_g = (hl) null;
+                  field_g = (Sprite) null;
                 }
                 if (null == jk.field_c ||
                   !(jk.field_c.length >= param0 + param2)) {
@@ -424,7 +424,7 @@ final class ai {
                   fg.field_b = new int[2 * param2];
                 }
                 if (param1) {
-                  field_g = (hl) null;
+                  field_g = (Sprite) null;
                   if (null == jk.field_c) {
                     jk.field_c = new int[2 * (param2 + param0)];
                     if (le.field_d == null ||
@@ -486,21 +486,21 @@ final class ai {
         field_h = null;
     }
 
-    final void a(int param0, long param1, uh param2) {
-        uh var5 = null;
+    final void a(int param0, long param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
-          if (param2.field_f != null) {
+          if (param2.secondaryPrevious != null) {
             param2.a(-6242);
           }
           var5 = this.field_f[(int)((long)(-1 + this.field_b) & param1)];
-          param2.field_m = var5;
-          param2.field_f = var5.field_f;
+          param2.secondaryNext = var5;
+          param2.secondaryPrevious = var5.secondaryPrevious;
           if (param0 != 2) {
             ai.a((byte) -112);
           }
-          param2.field_f.field_m = param2;
+          param2.secondaryPrevious.secondaryNext = param2;
           param2.field_j = param1;
-          param2.field_m.field_f = param2;
+          param2.secondaryNext.secondaryPrevious = param2;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ai.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -508,16 +508,16 @@ final class ai {
 
     ai(int param0) {
         int var2 = 0;
-        uh dupTemp$0 = null;
-        uh var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_b = param0;
-        this.field_f = new uh[param0];
+        this.field_f = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new uh();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_f[var2] = dupTemp$0;
-          var3.field_f = var3;
-          var3.field_m = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

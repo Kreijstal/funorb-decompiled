@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va extends rf {
+final class va extends IntrusiveNode {
     int[] field_q;
     int[] field_g;
     byte[][][] field_l;

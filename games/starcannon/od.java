@@ -90,7 +90,7 @@ class od extends hh {
         }
     }
 
-    final void a(byte param0, rb param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != 69) {
             this.field_e = (String) null;
