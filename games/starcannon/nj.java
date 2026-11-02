@@ -57,7 +57,7 @@ final class nj extends IntrusiveNode {
         return true;
     }
 
-    final ud c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -89,7 +89,7 @@ final class nj extends IntrusiveNode {
           }
         }
         this.field_J = null;
-        return new ud(this.field_l, var1, this.field_x, this.field_s, this.field_r);
+        return new PcmSample(this.field_l, var1, this.field_x, this.field_s, this.field_r);
     }
 
     final static int b() {
@@ -500,7 +500,7 @@ final class nj extends IntrusiveNode {
         }
     }
 
-    final ud a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -550,7 +550,7 @@ final class nj extends IntrusiveNode {
         this.field_J = null;
         var12 = this.field_D;
         this.field_D = null;
-        return new ud(this.field_l, var12, this.field_x, this.field_s, this.field_r);
+        return new PcmSample(this.field_l, var12, this.field_x, this.field_s, this.field_r);
     }
 
     private final void a(byte[] param0) throws IOException {

@@ -4,7 +4,7 @@
 final class hi extends java.awt.Canvas {
     private java.awt.Component field_c;
     static int field_b;
-    static rk field_f;
+    static IntrusiveDeque field_f;
     static String field_e;
     static int[] field_d;
     static String field_a;
@@ -218,7 +218,7 @@ final class hi extends java.awt.Canvas {
     }
 
     static {
-        field_f = new rk();
+        field_f = new IntrusiveDeque();
         field_e = "Email address is unavailable";
         field_d = new int[8192];
         field_a = null;

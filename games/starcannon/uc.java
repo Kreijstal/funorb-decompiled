@@ -4,7 +4,7 @@
 abstract class uc implements he {
     private long field_c;
     static ge field_a;
-    static rk field_b;
+    static IntrusiveDeque field_b;
     static kl[] field_d;
 
     public final String a(int param0) {
@@ -94,6 +94,6 @@ abstract class uc implements he {
 
     static {
         field_a = new ge();
-        field_b = new rk();
+        field_b = new IntrusiveDeque();
     }
 }

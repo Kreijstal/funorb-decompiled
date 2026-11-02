@@ -44,7 +44,7 @@ final class il {
         return this;
     }
 
-    final void a(il param0, int param1, int param2, uj param3, int param4, w param5) {
+    final void a(il param0, int param1, int param2, UiWidget param3, int param4, w param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -139,7 +139,7 @@ final class il {
         return this;
     }
 
-    final void a(int param0, int param1, int param2, w param3, uj param4) {
+    final void a(int param0, int param1, int param2, w param3, UiWidget param4) {
         qe stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;

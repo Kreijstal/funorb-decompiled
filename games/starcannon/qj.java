@@ -8,12 +8,12 @@ abstract class qj extends kc {
     private int field_W;
     private int field_db;
     private og field_Z;
-    private uj field_X;
+    private UiWidget field_X;
     private int field_bb;
     static String field_V;
     private int field_cb;
 
-    void c(int param0, uj param1) {
+    void c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -59,7 +59,7 @@ abstract class qj extends kc {
         return super.i(-125);
     }
 
-    boolean a(uj param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -93,7 +93,7 @@ abstract class qj extends kc {
         }
     }
 
-    qj(tc param0, uj param1, int param2, int param3, int param4) {
+    qj(tc param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_i, param2 + (12 + param1.field_f));
         try {
           this.field_db = param2;
@@ -118,13 +118,13 @@ abstract class qj extends kc {
           this.field_Y.field_w = 0;
           return;
         }
-        this.field_X = (uj) null;
+        this.field_X = (UiWidget) null;
         this.d(6, this.field_X);
         this.field_X = null;
         this.field_Y.field_w = 0;
     }
 
-    private final void d(int param0, uj param1) {
+    private final void d(int param0, UiWidget param1) {
         try {
           if (this.field_Y != null) {
             this.field_Y.unlink(4);

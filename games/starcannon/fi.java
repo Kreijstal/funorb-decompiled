@@ -6,7 +6,7 @@ abstract class fi {
     static int field_d;
     static bf field_e;
     static boolean field_b;
-    static rk field_c;
+    static IntrusiveDeque field_c;
     static Sprite[] field_g;
     static boolean field_h;
     static ue field_f;
@@ -118,6 +118,6 @@ abstract class fi {
         field_d = 0;
         field_a = "Collect power orbs to upgrade the Nova Ray's systems.";
         field_b = false;
-        field_c = new rk();
+        field_c = new IntrusiveDeque();
     }
 }

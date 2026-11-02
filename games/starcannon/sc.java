@@ -52,7 +52,7 @@ final class sc {
           s.field_c = true;
           vj.field_V = param0 ? true : false;
           fa.field_G = new ph(ti.field_b, tk.field_a, param2, tc.field_x, vj.field_V);
-          ti.field_b.a((byte) 85, (uj) (fa.field_G));
+          ti.field_b.a((byte) 85, (UiWidget) (fa.field_G));
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "sc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -112,7 +112,7 @@ final class sc {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (mb.a(param0, "getcookies", param1));
-              var4 = uj.a(-57, ';', var3);
+              var4 = UiWidget.a(-57, ';', var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

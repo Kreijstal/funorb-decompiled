@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends c {
-    private rk field_k;
-    private rk field_j;
+final class PcmStreamMixer extends PcmStream {
+    private IntrusiveDeque field_k;
+    private IntrusiveDeque field_j;
     private int field_m;
     private int field_l;
 
@@ -11,25 +11,25 @@ final class vi extends c {
         return 0;
     }
 
-    final synchronized void a(c param0) {
+    final synchronized void a(PcmStream param0) {
         param0.unlink(4);
     }
 
-    final void a(ud param0, int param1, int param2, int param3) {
-        this.a(fj.a(param0, param1, param2), param3);
+    final void a(PcmSample param0, int param1, int param2, int param3) {
+        this.a(PcmSampleStream.a(param0, param1, param2), param3);
     }
 
     private final void d(int param0) {
-        c var2 = (c) (this.field_k.c(-3905));
+        PcmStream var2 = (PcmStream) (this.field_k.c(-3905));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (c) (this.field_k.a(-16913));
+          var2 = (PcmStream) (this.field_k.a(-16913));
         }
     }
 
-    private final void a(c param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         if (param1 > 0) {
-          param0 = (c) ((Object) eg.a(29723, param1, param0));
+          param0 = (PcmStream) ((Object) eg.a(29723, param1, param0));
         }
         this.b(param0);
     }
@@ -46,12 +46,12 @@ final class vi extends c {
         throw new RuntimeException();
     }
 
-    final void a(ud param0, int param1, int param2) {
-        this.b(fj.a(param0, param1, param2));
+    final void a(PcmSample param0, int param1, int param2) {
+        this.b(PcmSampleStream.a(param0, param1, param2));
     }
 
-    final c c() {
-        return (c) (this.field_k.c(-3905));
+    final PcmStream c() {
+        return (PcmStream) (this.field_k.c(-3905));
     }
 
     final synchronized void a(int param0) {
@@ -91,19 +91,19 @@ final class vi extends c {
         return;
     }
 
-    final c a() {
-        return (c) (this.field_k.a(-16913));
+    final PcmStream a() {
+        return (PcmStream) (this.field_k.a(-16913));
     }
 
-    final synchronized void b(c param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_k.a(-97, param0);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        c var4 = (c) (this.field_k.c(-3905));
+        PcmStream var4 = (PcmStream) (this.field_k.c(-3905));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (c) (this.field_k.a(-16913));
+          var4 = (PcmStream) (this.field_k.a(-16913));
         }
     }
 
@@ -199,9 +199,9 @@ final class vi extends c {
         return;
     }
 
-    public vi() {
-        this.field_k = new rk();
-        this.field_j = new rk();
+    public PcmStreamMixer() {
+        this.field_k = new IntrusiveDeque();
+        this.field_j = new IntrusiveDeque();
         this.field_m = 0;
         this.field_l = -1;
     }

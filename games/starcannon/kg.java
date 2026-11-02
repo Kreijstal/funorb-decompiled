@@ -40,7 +40,7 @@ final class kg {
         }
     }
 
-    final static void a(vi param0, int param1, int param2, ue param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, ue param3) {
         try {
           mh.field_k = wc.a(-43) * param2 / 1000;
           dh.a((byte) 115, param3);

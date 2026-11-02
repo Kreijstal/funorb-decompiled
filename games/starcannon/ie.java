@@ -50,7 +50,7 @@ final class ie extends kf {
         field_B = null;
     }
 
-    ie(uj param0) {
+    ie(UiWidget param0) {
         super(param0.field_s, param0.field_j, param0.field_i, param0.field_f, (de) null, (qg) null);
         try {
           param0.a(0, this.field_i, (byte) 117, this.field_f, 0);

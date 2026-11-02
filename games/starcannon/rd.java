@@ -17,7 +17,7 @@ class rd extends DualLinkNode {
         field_p = null;
     }
 
-    final static vi d(int param0) {
+    final static PcmStreamMixer d(int param0) {
         if (param0 >= -8) {
           field_q = (String[]) null;
           return hh.field_d;

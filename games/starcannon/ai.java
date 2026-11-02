@@ -63,7 +63,7 @@ final class ai {
         if (10 > bl.field_a) {
           return false;
         }
-        if (rk.field_d >= 13) {
+        if (IntrusiveDeque.field_d >= 13) {
           return true;
         }
         return false;

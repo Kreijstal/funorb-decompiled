@@ -11,7 +11,7 @@ final class va extends IntrusiveNode {
     int[] field_r;
     bk[] field_p;
     int field_n;
-    static rk field_h;
+    static IntrusiveDeque field_h;
     static long field_j;
     static int field_f;
     static o field_m;
@@ -90,7 +90,7 @@ final class va extends IntrusiveNode {
 
     static {
         field_u = "Friends can be added in multiplayer<nbsp>games";
-        field_h = new rk();
+        field_h = new IntrusiveDeque();
         field_m = new o(0, 2, 2, 1);
         field_o = "Error connecting to server. Please try using a different server.";
     }

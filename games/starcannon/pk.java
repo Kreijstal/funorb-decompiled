@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pk {
-    static rk field_a;
+    static IntrusiveDeque field_a;
     static Sprite field_e;
     static int field_c;
     static String field_b;
@@ -38,7 +38,7 @@ final class pk {
     }
 
     static {
-        field_a = new rk();
+        field_a = new IntrusiveDeque();
         field_d = new int[4];
         field_b = "Invalid password.";
     }

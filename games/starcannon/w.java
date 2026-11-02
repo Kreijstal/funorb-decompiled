@@ -26,8 +26,8 @@ final class w extends hd {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
-        uj stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -45,7 +45,7 @@ final class w extends hd {
           if (!(param4 instanceof dk)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (uj) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           }
           var11 = (dk) (stackIn_3_0);
           cl.a(true, param4.field_f + param4.field_j + param3, param0 + param4.field_s, param3 + param4.field_j, param4.field_i + (param4.field_s + param0));
@@ -230,7 +230,7 @@ final class w extends hd {
         try {
           if (ve.field_f == null) {
             ve.field_f = new lf(ti.field_b, sg.field_n);
-            ti.field_b.a((byte) 93, (uj) (ve.field_f));
+            ti.field_b.a((byte) 93, (UiWidget) (ve.field_f));
           }
           ve.field_f.a(param0, param2, param3, true);
           ki.b();
@@ -324,7 +324,7 @@ final class w extends hd {
 
     static {
         field_q = "Service unavailable";
-        rk discarded$0 = new rk();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_w = new og();
     }
 }

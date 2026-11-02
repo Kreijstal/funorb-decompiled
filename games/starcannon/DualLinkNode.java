@@ -9,7 +9,7 @@ class DualLinkNode extends IntrusiveNode {
     static volatile int field_i;
     static pf field_k;
     static String[] field_h;
-    static vi field_l;
+    static PcmStreamMixer field_l;
 
     final static String a(int param0, int param1, char param2) {
         int var4 = 0;

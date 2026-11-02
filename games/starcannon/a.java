@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static rk field_f;
+    static IntrusiveDeque field_f;
     static lk field_b;
     static int field_e;
     static boolean field_a;
@@ -26,7 +26,7 @@ final class a {
     }
 
     static {
-        field_f = new rk();
+        field_f = new IntrusiveDeque();
         field_e = -1;
         field_c = "EXTRA LIFE - Provides an extra rewind module to the Nova Ray as a backup if the shields fail.  Each module can only be used once though.";
     }

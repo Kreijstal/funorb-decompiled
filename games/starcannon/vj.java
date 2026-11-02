@@ -153,7 +153,7 @@ final class vj extends kc implements ga {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uj var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == oj.field_j) {
@@ -173,7 +173,7 @@ final class vj extends kc implements ga {
               }
             }
           }
-          var4 = new uj((String) (var3), (qg) null);
+          var4 = new UiWidget((String) (var3), (qg) null);
           var4.field_s = 0;
           var4.field_f = 80;
           var4.field_j = 50;

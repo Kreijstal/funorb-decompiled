@@ -7,7 +7,7 @@ final class lc extends qj {
     static String field_fb;
     static String field_ib;
 
-    final void c(int param0, uj param1) {
+    final void c(int param0, UiWidget param1) {
         try {
           super.c(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -15,7 +15,7 @@ final class lc extends qj {
         }
     }
 
-    lc(tc param0, uj param1) {
+    lc(tc param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

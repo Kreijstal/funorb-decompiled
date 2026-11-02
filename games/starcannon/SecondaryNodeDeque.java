@@ -6,7 +6,7 @@ import java.util.*;
 final class SecondaryNodeDeque implements Iterable {
     static mj field_b;
     DualLinkNode field_f;
-    static rk field_e;
+    static IntrusiveDeque field_e;
     static int field_d;
     static int[] field_c;
     static int field_a;
@@ -114,6 +114,6 @@ final class SecondaryNodeDeque implements Iterable {
         field_b = new mj("usename");
         field_d = -1;
         field_c = new int[8192];
-        field_e = new rk();
+        field_e = new IntrusiveDeque();
     }
 }

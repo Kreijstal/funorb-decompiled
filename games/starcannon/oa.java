@@ -3,9 +3,9 @@
  */
 abstract class oa extends IntrusiveNode {
     int field_f;
-    vi field_g;
+    PcmStreamMixer field_g;
 
-    abstract int a(vi param0);
+    abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 

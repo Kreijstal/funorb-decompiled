@@ -106,12 +106,12 @@ abstract class qd extends vk {
         return false;
     }
 
-    final uj h(int param0) {
-        uj var2 = super.h(param0);
+    final UiWidget h(int param0) {
+        UiWidget var2 = super.h(param0);
         if (var2 != null) {
           return var2;
         }
-        return (uj) (this);
+        return (UiWidget) (this);
     }
 
     public static void h(byte param0) {

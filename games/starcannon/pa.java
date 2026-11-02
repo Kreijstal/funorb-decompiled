@@ -60,7 +60,7 @@ final class pa extends ab {
         field_J = null;
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         this.field_N = this.field_N + 1;
         if (param0 < 27) {
           return;
@@ -299,7 +299,7 @@ final class pa extends ab {
             var6 = this.field_O.b((byte) -127);
             var35 = (lg) ((Object) this.field_o);
             var9 = this.field_s + param1;
-            var10 = var35.a((byte) -95, (uj) (this), param3) + (var35.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
+            var10 = var35.a((byte) -95, (UiWidget) (this), param3) + (var35.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
             if (var6 != cg.field_g &&
               cd.field_a != var6) {
               if (var6 == BufferedSocket.field_n) {
@@ -335,7 +335,7 @@ final class pa extends ab {
           var6 = this.field_O.b((byte) -127);
           var36 = (lg) ((Object) this.field_o);
           var9Lifetime3 = this.field_s + param1;
-          var10Lifetime3 = var36.a((byte) -95, (uj) (this), param3) + (var36.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
+          var10Lifetime3 = var36.a((byte) -95, (UiWidget) (this), param3) + (var36.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
           if (var6 != cg.field_g &&
             cd.field_a != var6) {
             if (var6 == BufferedSocket.field_n) {
@@ -388,7 +388,7 @@ final class pa extends ab {
           var6Lifetime1 = this.field_O.b((byte) -127);
           var38 = (lg) ((Object) this.field_o);
           var9Lifetime1 = this.field_s + param1;
-          var10Lifetime1 = var38.a((byte) -95, (uj) (this), param3) + (var38.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
+          var10Lifetime1 = var38.a((byte) -95, (UiWidget) (this), param3) + (var38.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
           if (var6Lifetime1 != cg.field_g &&
             cd.field_a != var6Lifetime1) {
             if (var6Lifetime1 == BufferedSocket.field_n) {
@@ -434,7 +434,7 @@ final class pa extends ab {
         var6Lifetime2 = this.field_O.b((byte) -127);
         var37 = (lg) ((Object) this.field_o);
         var9Lifetime2 = this.field_s + param1;
-        var10Lifetime2 = var37.a((byte) -95, (uj) (this), param3) + (var37.a((uj) (this), (byte) -38).a(param2 - 169) >> 1);
+        var10Lifetime2 = var37.a((byte) -95, (UiWidget) (this), param3) + (var37.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
         if (var6Lifetime2 == cg.field_g) {
           var27 = fi.field_g[0];
           var11Lifetime2 = var27.field_x << 1;
@@ -534,7 +534,7 @@ final class pa extends ab {
         }
     }
 
-    final boolean a(int param0, uj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

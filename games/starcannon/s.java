@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static rk field_e;
+    static IntrusiveDeque field_e;
     int field_j;
     static String field_d;
     static pf field_f;
@@ -114,7 +114,7 @@ final class s {
     }
 
     static {
-        field_e = new rk();
+        field_e = new IntrusiveDeque();
         field_b = new int[]{1, 3, 3, 5, 5, 10, 2, 2, 3, 1, 2, 3, 1, 2, 3};
         field_d = "Play free version";
         field_f = new pf();

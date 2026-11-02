@@ -106,7 +106,7 @@ final class el extends dk {
         return oj.a(-1, param0, 1, param2, param3);
     }
 
-    final boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;

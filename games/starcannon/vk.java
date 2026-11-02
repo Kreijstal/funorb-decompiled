@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-class vk extends uj implements ch {
+class vk extends UiWidget implements ch {
     static String field_x;
     static String field_w;
     static String field_t;
     static String field_v;
-    rk field_u;
+    IntrusiveDeque field_u;
 
     final void b(byte param0) {
         RuntimeException runtimeException = null;
         ba var2 = null;
-        uj var3 = null;
+        UiWidget var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = StarCannon.field_A;
@@ -22,10 +22,10 @@ class vk extends uj implements ch {
           if (param0 >= -72) {
             field_t = (String) null;
           }
-          var3 = (uj) (var2.a(0));
+          var3 = (UiWidget) (var2.a(0));
           while (var3 != null) {
             var3.b((byte) -127);
-            var3 = (uj) (var2.b(106));
+            var3 = (UiWidget) (var2.b(106));
             if (var4 != 0) {
               return;
             }
@@ -58,23 +58,23 @@ class vk extends uj implements ch {
     void a(int param0, int param1, byte param2, int param3) {
         RuntimeException runtimeException = null;
         ba var5 = null;
-        uj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = StarCannon.field_A;
         try {
           if (param0 == 0 &&
             null != this.field_o) {
-            this.field_o.a(param1, true, 71, param3, (uj) (this));
+            this.field_o.a(param1, true, 71, param3, (UiWidget) (this));
           }
           var5 = new ba(this.field_u);
-          var6 = (uj) (var5.a(false));
+          var6 = (UiWidget) (var5.a(false));
           if (param2 != 49) {
             return;
           }
           while (null != var6) {
             var6.a(param0, this.field_s + param1, (byte) 49, param3 + this.field_j);
-            var6 = (uj) (var5.a((byte) -34));
+            var6 = (UiWidget) (var5.a((byte) -34));
             if (var7 != 0) {
               return;
             }
@@ -227,7 +227,7 @@ class vk extends uj implements ch {
         int var7 = 0;
         StringBuilder discarded$10 = null;
         ba var5 = null;
-        uj var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -240,14 +240,14 @@ class vk extends uj implements ch {
           if (param0 != -36) {
             field_w = (String) null;
           }
-          var6 = (uj) (var5.a(param0 + 36));
+          var6 = (UiWidget) (var5.a(param0 + 36));
           while (null != var6) {
             discarded$9 = param2.append('\n');
             for (var7 = 0; param3 >= var7; var7++) {
               discarded$10 = param2.append(' ');
             }
             var6.a(param1, param2, (byte) 39, 1 + param3);
-            var6 = (uj) (var5.b(param0 + 149));
+            var6 = (UiWidget) (var5.b(param0 + 149));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,9 +270,9 @@ class vk extends uj implements ch {
         }
     }
 
-    final boolean a(int param0, uj param1) {
+    final boolean a(int param0, UiWidget param1) {
         ba var3 = null;
-        uj var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -280,13 +280,13 @@ class vk extends uj implements ch {
         RuntimeException var3_ref = null;
         try {
           var3 = new ba(this.field_u);
-          var4 = (uj) (var3.a(param0));
+          var4 = (UiWidget) (var3.a(param0));
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.a(0, param1)) {
-              var4 = (uj) (var3.b(95));
+              var4 = (UiWidget) (var3.b(95));
               continue;
             }
             break;
@@ -309,17 +309,17 @@ class vk extends uj implements ch {
     private final void g(int param0) {
         RuntimeException runtimeException = null;
         ba var2 = null;
-        uj var3 = null;
+        UiWidget var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ba(this.field_u);
           if (param0 != 27807) {
             this.a((Hashtable) null, (StringBuilder) null, (byte) -115, -49);
           }
-          var3 = (uj) (var2.a(0));
+          var3 = (UiWidget) (var2.a(0));
           while (null != var3) {
             var3.d((byte) -30);
-            var3 = (uj) (var2.b(95));
+            var3 = (UiWidget) (var2.b(95));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -329,10 +329,10 @@ class vk extends uj implements ch {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, uj param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         ba var8 = null;
         RuntimeException var8_ref = null;
-        uj var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         boolean stackIn_4_0 = false;
         int stackIn_17_0 = 0;
@@ -344,7 +344,7 @@ class vk extends uj implements ch {
         var10 = StarCannon.field_A;
         try {
           var8 = new ba(this.field_u);
-          var9 = (uj) (var8.a(0));
+          var9 = (UiWidget) (var8.a(0));
           scanLoop1: while (true) {
             if (var9 != null) {
               stackOut_3_0 = var9.isLinked((byte) -110);
@@ -358,7 +358,7 @@ class vk extends uj implements ch {
                   var9.a(param0, param1, param2, param3, param4, param5, -81)) {
                   return true;
                 }
-                var9 = (uj) (var8.b(param6 ^ -46));
+                var9 = (UiWidget) (var8.b(param6 ^ -46));
                 continue;
               }
             }
@@ -595,7 +595,7 @@ class vk extends uj implements ch {
         try {
           super.a(param0, param1, (byte) 118, param3, param4);
           if (param2 < 115) {
-            this.field_u = (rk) null;
+            this.field_u = (IntrusiveDeque) null;
           }
           this.g(27807);
           return;
@@ -606,11 +606,11 @@ class vk extends uj implements ch {
         }
     }
 
-    final boolean a(byte param0, uj param1) {
+    final boolean a(byte param0, UiWidget param1) {
         ba var3 = null;
-        uj var4 = null;
+        UiWidget var4 = null;
         ba var5 = null;
-        uj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         boolean stackIn_12_0 = false;
         boolean stackIn_21_0 = false;
@@ -631,7 +631,7 @@ class vk extends uj implements ch {
             field_x = (String) null;
           }
           var3 = new ba(this.field_u);
-          var4 = (uj) (var3.a(param0 ^ -103));
+          var4 = (UiWidget) (var3.a(param0 ^ -103));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
             stackOut_11_0 = var4.d(true);
@@ -641,7 +641,7 @@ class vk extends uj implements ch {
               if (stackIn_12_0) {
                 var5 = new ba(this.field_u);
                 var5.a(var4, param0 + 103);
-                var6 = (uj) (var5.b(95));
+                var6 = (UiWidget) (var5.b(95));
                 while (null != var6) {
                   stackOut_20_0 = var6.a(0, param1);
                   stackIn_30_0 = stackOut_20_0;
@@ -649,10 +649,10 @@ class vk extends uj implements ch {
                   if (stackIn_21_0) {
                     return true;
                   }
-                  var6 = (uj) (var5.b(101));
+                  var6 = (UiWidget) (var5.b(101));
                 }
               }
-              var4 = (uj) (var3.b(102));
+              var4 = (UiWidget) (var3.b(102));
               continue;
             }
             break;
@@ -675,10 +675,10 @@ class vk extends uj implements ch {
         }
     }
 
-    void a(int param0, int param1, uj param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException runtimeException = null;
         ba var5 = null;
-        uj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -691,11 +691,11 @@ class vk extends uj implements ch {
           }
           super.a(120, param1, param2, param3);
           var5 = new ba(this.field_u);
-          var6 = (uj) (var5.a(0));
+          var6 = (UiWidget) (var5.a(0));
           while (var6 != null) {
             if (var6.isLinked((byte) -125)) {
               var6.a(119, param1 + this.field_s, param2, this.field_j + param3);
-              var6 = (uj) (var5.b(69));
+              var6 = (UiWidget) (var5.b(69));
               if (var7 == 0) {
                 continue;
               }
@@ -734,7 +734,7 @@ class vk extends uj implements ch {
     final String d(int param0) {
         ba var2 = null;
         RuntimeException var2_ref = null;
-        uj var3 = null;
+        UiWidget var3 = null;
         String var4 = null;
         int var5 = 0;
         String stackIn_12_0 = null;
@@ -743,7 +743,7 @@ class vk extends uj implements ch {
         var5 = StarCannon.field_A;
         try {
           var2 = new ba(this.field_u);
-          var3 = (uj) (var2.a(0));
+          var3 = (UiWidget) (var2.a(0));
           if (param0 != 12606) {
             field_x = (String) null;
           }
@@ -756,7 +756,7 @@ class vk extends uj implements ch {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var3 = (uj) (var2.b(param0 - 12496));
+              var3 = (UiWidget) (var2.b(param0 - 12496));
               continue;
             }
             break;
@@ -772,23 +772,23 @@ class vk extends uj implements ch {
         }
     }
 
-    uj h(int param0) {
+    UiWidget h(int param0) {
         ba var2 = null;
-        uj var3 = null;
-        uj stackIn_6_0 = null;
+        UiWidget var3 = null;
+        UiWidget stackIn_6_0 = null;
         Object stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
           var2 = new ba(this.field_u);
-          var3 = (uj) (var2.a(param0 ^ param0));
+          var3 = (UiWidget) (var2.a(param0 ^ param0));
           while (true) {
             if (null == var3) {
               stackIn_9_0 = null;
-              return (uj) (stackIn_9_0);
+              return (UiWidget) (stackIn_9_0);
             }
             if (!var3.d(true)) {
-              var3 = (uj) (var2.b(114));
+              var3 = (UiWidget) (var2.b(114));
               continue;
             }
             break;
@@ -802,10 +802,10 @@ class vk extends uj implements ch {
         }
     }
 
-    final void a(int param0, int param1, int param2, uj param3, byte param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         RuntimeException runtimeException = null;
         ba var7 = null;
-        uj var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         boolean stackIn_4_0 = false;
         int stackIn_9_0 = 0;
@@ -817,7 +817,7 @@ class vk extends uj implements ch {
         var9 = StarCannon.field_A;
         try {
           var7 = new ba(this.field_u);
-          var8 = (uj) (var7.a(param4 ^ -22));
+          var8 = (UiWidget) (var7.a(param4 ^ -22));
           scanLoop1: while (true) {
             if (null != var8) {
               stackOut_3_0 = var8.isLinked((byte) 24);
@@ -828,7 +828,7 @@ class vk extends uj implements ch {
               }
               if (stackIn_4_0) {
                 var8.a(param0, param1 + this.field_j, param2 + this.field_s, param3, (byte) -22, param5);
-                var8 = (uj) (var7.b(param4 + 142));
+                var8 = (UiWidget) (var7.b(param4 + 142));
                 continue;
               }
             }
@@ -853,12 +853,12 @@ class vk extends uj implements ch {
         }
     }
 
-    final boolean b(int param0, uj param1) {
+    final boolean b(int param0, UiWidget param1) {
         int var3_int = 0;
         ba var4 = null;
-        uj var5 = null;
+        UiWidget var5 = null;
         ba var6 = null;
-        uj var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         boolean stackIn_9_0 = false;
         boolean stackIn_15_0 = false;
@@ -877,7 +877,7 @@ class vk extends uj implements ch {
             return false;
           }
           var4 = new ba(this.field_u);
-          var5 = (uj) (var4.a(false));
+          var5 = (UiWidget) (var4.a(false));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
             stackOut_8_0 = var5.d(true);
@@ -887,7 +887,7 @@ class vk extends uj implements ch {
               if (stackIn_9_0) {
                 var6 = new ba(this.field_u);
                 var6.a(0, var5);
-                var7 = (uj) (var6.a((byte) -34));
+                var7 = (UiWidget) (var6.a((byte) -34));
                 while (var7 != null) {
                   stackOut_14_0 = var7.a(0, param1);
                   stackIn_24_0 = stackOut_14_0;
@@ -895,10 +895,10 @@ class vk extends uj implements ch {
                   if (stackIn_15_0) {
                     return true;
                   }
-                  var7 = (uj) (var6.a((byte) -34));
+                  var7 = (UiWidget) (var6.a((byte) -34));
                 }
               }
-              var5 = (uj) (var4.a((byte) -34));
+              var5 = (UiWidget) (var4.a((byte) -34));
               continue;
             }
             break;
@@ -925,7 +925,7 @@ class vk extends uj implements ch {
         int var2_int = 0;
         RuntimeException var2 = null;
         ba var3 = null;
-        uj var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         int var6 = 0;
         int stackIn_10_0 = 0;
@@ -935,7 +935,7 @@ class vk extends uj implements ch {
         try {
           var2_int = 0;
           var3 = new ba(this.field_u);
-          var4 = (uj) (var3.a(0));
+          var4 = (UiWidget) (var3.a(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
             var5 = var4.c(false);
@@ -944,7 +944,7 @@ class vk extends uj implements ch {
               if (stackIn_10_0 > ~var5) {
                 var2_int = var5;
               }
-              var4 = (uj) (var3.b(80));
+              var4 = (UiWidget) (var3.b(80));
               continue;
             }
             break;
@@ -964,10 +964,10 @@ class vk extends uj implements ch {
         }
     }
 
-    final boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         ba var8 = null;
         RuntimeException var8_ref = null;
-        uj var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_17_0 = false;
@@ -982,7 +982,7 @@ class vk extends uj implements ch {
           if (param4 != -11) {
             field_v = (String) null;
           }
-          var9 = (uj) (var8.a(param4 ^ -11));
+          var9 = (UiWidget) (var8.a(param4 ^ -11));
           scanLoop1: while (true) {
             if (null != var9) {
               stackOut_6_0 = var9.isLinked((byte) 120);
@@ -995,7 +995,7 @@ class vk extends uj implements ch {
                 if (var9.a(param0, param1, param2 + this.field_s, param3 + this.field_j, (byte) -11, param5, param6)) {
                   return true;
                 }
-                var9 = (uj) (var8.b(68));
+                var9 = (UiWidget) (var8.b(68));
                 continue;
               }
             }
@@ -1017,10 +1017,10 @@ class vk extends uj implements ch {
         }
     }
 
-    boolean a(uj param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         ba var5 = null;
         RuntimeException var5_ref = null;
-        uj var6_ref_uj = null;
+        UiWidget var6_ref_uj = null;
         int var6 = 0;
         int var7 = 0;
         boolean stackIn_7_0 = false;
@@ -1037,7 +1037,7 @@ class vk extends uj implements ch {
           if (param2 != -90) {
             field_x = (String) null;
           }
-          var6_ref_uj = (uj) (var5.a(param2 + 90));
+          var6_ref_uj = (UiWidget) (var5.a(param2 + 90));
           scanLoop1: while (true) {
             if (null != var6_ref_uj) {
               stackOut_6_0 = var6_ref_uj.isLinked((byte) 64);
@@ -1051,7 +1051,7 @@ class vk extends uj implements ch {
                   var6_ref_uj.a(param0, param1, (byte) -90, param3)) {
                   return true;
                 }
-                var6_ref_uj = (uj) (var5.b(97));
+                var6_ref_uj = (UiWidget) (var5.b(97));
                 continue;
               }
             }
@@ -1224,7 +1224,7 @@ class vk extends uj implements ch {
         }
     }
 
-    final void a(boolean param0, uj param1) {
+    final void a(boolean param0, UiWidget param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1252,7 +1252,7 @@ class vk extends uj implements ch {
 
     vk(int param0, int param1, int param2, int param3, de param4) {
         super(param0, param1, param2, param3, param4, (qg) null);
-        this.field_u = new rk();
+        this.field_u = new IntrusiveDeque();
     }
 
     static {

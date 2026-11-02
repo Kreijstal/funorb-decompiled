@@ -22,7 +22,7 @@ final class ce {
             if (n.field_a != null &&
               n.field_a.field_b) {
               re.a(0);
-              ed.field_q.a((byte) 85, (uj) (new vj(ed.field_q, cb.field_d)));
+              ed.field_q.a((byte) 85, (UiWidget) (new vj(ed.field_q, cb.field_d)));
             }
             return;
           }

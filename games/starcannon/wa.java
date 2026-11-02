@@ -7,7 +7,7 @@ final class wa implements de {
     static long field_a;
     private int field_c;
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

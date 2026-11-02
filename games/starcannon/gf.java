@@ -5,7 +5,7 @@ final class gf {
     static String field_e;
     static int field_b;
     static boolean field_d;
-    static ud[] field_c;
+    static PcmSample[] field_c;
     static Sprite[] field_a;
 
     public static void a(byte param0) {
@@ -15,7 +15,7 @@ final class gf {
           field_a = null;
           return;
         }
-        field_c = (ud[]) null;
+        field_c = (PcmSample[]) null;
         field_c = null;
         field_e = null;
         field_a = null;

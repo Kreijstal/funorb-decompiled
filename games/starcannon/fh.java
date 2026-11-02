@@ -28,7 +28,7 @@ class fh extends hd {
           try {
             try {
               var3 = (String) (mb.a(param1, "getcookies", true));
-              var4 = uj.a(-89, ';', var3);
+              var4 = UiWidget.a(-89, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -109,7 +109,7 @@ class fh extends hd {
         field_r = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         try {
           if (param1) {
             sk.a(param0 + param4.field_s, param4.field_i, param4.field_f, true, param4.field_j + param3);

@@ -266,7 +266,7 @@ final class b {
             stackIn_7_0 = ai.field_a;
             return stackIn_7_0;
           }
-          var3 = uj.a(-29, '.', param0);
+          var3 = UiWidget.a(-29, '.', param0);
           if (var3.length < 2) {
             stackIn_10_0 = qb.field_b;
             return stackIn_10_0;

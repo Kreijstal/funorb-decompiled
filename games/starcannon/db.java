@@ -72,7 +72,7 @@ final class db extends vk implements ga {
         this.a(true, this.field_z);
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;

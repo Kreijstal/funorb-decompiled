@@ -21,11 +21,11 @@ final class jg extends dk {
         return null;
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param0 < 27) {
-            uj var6 = (uj) null;
-            this.a(64, (uj) null);
+            UiWidget var6 = (UiWidget) null;
+            this.a(64, (UiWidget) null);
           }
           this.field_G = this.field_G + 1;
           super.a(40, param1, param2, param3);
@@ -119,7 +119,7 @@ final class jg extends dk {
         fe.field_H.f(var5 - var15.field_x, -var15.field_q + var6, 256);
     }
 
-    final boolean a(int param0, uj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

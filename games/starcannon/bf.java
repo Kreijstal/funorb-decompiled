@@ -232,7 +232,7 @@ final class bf extends IntrusiveNode {
         return 0;
     }
 
-    private final void a(vi param0, d[] param1, boolean param2, StarCannon param3) {
+    private final void a(PcmStreamMixer param0, d[] param1, boolean param2, StarCannon param3) {
         int stackIn_28_0 = 0;
         int stackIn_30_1 = 0;
         RuntimeException stackIn_63_0 = null;
@@ -421,7 +421,7 @@ final class bf extends IntrusiveNode {
         RuntimeException var4 = null;
         int var9 = 0;
         int var14 = 0;
-        vi var16 = null;
+        PcmStreamMixer var16 = null;
         scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
@@ -636,7 +636,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    private final void a(StarCannon param0, int param1, d[] param2, byte param3, vi param4) {
+    private final void a(StarCannon param0, int param1, d[] param2, byte param3, PcmStreamMixer param4) {
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
         String stackIn_109_2 = null;
@@ -648,7 +648,7 @@ final class bf extends IntrusiveNode {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        vi var8 = null;
+        PcmStreamMixer var8 = null;
         var7 = StarCannon.field_A;
         try {
           var6_int = sd.field_c;
@@ -928,8 +928,8 @@ final class bf extends IntrusiveNode {
             }
           }
           if (param3 != -52) {
-            var8 = (vi) null;
-            this.a((d[]) null, -4, (StarCannon) null, -30, (vi) null);
+            var8 = (PcmStreamMixer) null;
+            this.a((d[]) null, -4, (StarCannon) null, -30, (PcmStreamMixer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1030,7 +1030,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    private final void a(int param0, d[] param1, vi param2, StarCannon param3) {
+    private final void a(int param0, d[] param1, PcmStreamMixer param2, StarCannon param3) {
         RuntimeException stackIn_176_0 = null;
         StringBuilder stackIn_176_1 = null;
         String stackIn_177_2 = null;
@@ -1441,7 +1441,7 @@ final class bf extends IntrusiveNode {
               d.field_b.a(18, -116);
               d.field_b.position = d.field_b.position + 2;
               var10 = d.field_b.position;
-              var11_ref_String = uj.a(ll.b(112), 61);
+              var11_ref_String = UiWidget.a(ll.b(112), 61);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -1488,7 +1488,7 @@ final class bf extends IntrusiveNode {
             } else {
               if (var9Lifetime1 == 248) {
                 mi.a(param3 ^ 1048582, ll.b(param3 ^ 109));
-                uj.field_r = vk.field_x;
+                UiWidget.field_r = vk.field_x;
                 ec.a((byte) 27);
                 eb.field_f = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -1533,7 +1533,7 @@ final class bf extends IntrusiveNode {
                 lj.a(var9_ref_String, param3 ^ 121, ll.b(111));
               }
             } else {
-              uj.field_r = se.field_p.a(-125);
+              UiWidget.field_r = se.field_p.a(-125);
             }
             ec.a((byte) 27);
             eb.field_f = false;
@@ -1543,9 +1543,9 @@ final class bf extends IntrusiveNode {
           if (null == m.field_b) {
             if (eb.field_f) {
               if (30000L >= kg.b((byte) -71)) {
-                uj.field_r = va.field_o;
+                UiWidget.field_r = va.field_o;
               } else {
-                uj.field_r = ti.field_g;
+                UiWidget.field_r = ti.field_g;
               }
               eb.field_f = false;
               stackIn_61_0 = 249;
@@ -1668,7 +1668,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    private final void a(d[] param0, int param1, StarCannon param2, int param3, vi param4) {
+    private final void a(d[] param0, int param1, StarCannon param2, int param3, PcmStreamMixer param4) {
         RuntimeException stackIn_374_0 = null;
         StringBuilder stackIn_374_1 = null;
         String stackIn_375_2 = null;

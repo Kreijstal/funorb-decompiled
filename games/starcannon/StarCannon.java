@@ -1703,7 +1703,7 @@ public final class StarCannon extends ag {
                         return;
                       }
                       jj.i(param1 ^ -1478);
-                      gf.field_c = new ud[48];
+                      gf.field_c = new PcmSample[48];
                       gf.field_c[0] = aj.a(lj.field_h, "", "SC_bossdamage").a();
                       gf.field_c[1] = aj.a(lj.field_h, "", "SC_bossdestroy").a();
                       gf.field_c[2] = aj.a(lj.field_h, "", "SC_collect1").a();
@@ -2006,7 +2006,7 @@ public final class StarCannon extends ag {
     }
 
     private final void m(byte param0) {
-        fj dupTemp$0 = null;
+        PcmSampleStream dupTemp$0 = null;
         int stackIn_103_0 = 0;
         int stackIn_103_1 = 0;
         bf stackIn_106_0 = null;
@@ -2038,8 +2038,8 @@ public final class StarCannon extends ag {
         int var8;
         bf var9;
         bf var10;
-        ud var11;
-        fj var12;
+        PcmSample var11;
+        PcmSampleStream var12;
         bf var13;
         bf var35;
         int[] var78;
@@ -2232,7 +2232,7 @@ public final class StarCannon extends ag {
                   var3 = 42997;
                 }
                 var11 = gf.field_c[39];
-                dupTemp$0 = fj.a(var11, 100, 255 * nb.field_g / 100);
+                dupTemp$0 = PcmSampleStream.a(var11, 100, 255 * nb.field_g / 100);
                 var12 = dupTemp$0;
                 ah.field_a = dupTemp$0;
                 var12.d(var3);
@@ -3319,7 +3319,7 @@ public final class StarCannon extends ag {
         eg.a((byte) -118);
         ci.a(-124);
         bd.a((byte) -74);
-        uj.c((byte) -44);
+        UiWidget.c((byte) -44);
         dk.a(-115);
         kf.a(0);
         kc.a(false);
@@ -3603,8 +3603,8 @@ public final class StarCannon extends ag {
         df.a(22050, false, 10);
         nb.field_f = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 0, 512);
         ea.field_d = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 1, 22050);
-        jk.field_k = new vi();
-        ti.field_f = new vi();
+        jk.field_k = new PcmStreamMixer();
+        ti.field_f = new PcmStreamMixer();
         nb.field_f.a(jk.field_k);
         ea.field_d.a(ti.field_f);
         se.field_m = 0;

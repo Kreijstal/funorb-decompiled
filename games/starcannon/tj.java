@@ -15,7 +15,7 @@ final class tj extends kf {
     private boolean field_B;
     static int field_G;
 
-    private tj(int param0, int param1, int param2, int param3, de param4, qg param5, uj param6, boolean param7, boolean param8) {
+    private tj(int param0, int param1, int param2, int param3, de param4, qg param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_E = 2147483647;
         this.field_z = 2147483647;
@@ -28,7 +28,7 @@ final class tj extends kf {
         }
     }
 
-    final boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_9_0 = 0;
@@ -67,7 +67,7 @@ final class tj extends kf {
         }
     }
 
-    final void a(int param0, int param1, int param2, uj param3, byte param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_l = 0;
@@ -171,7 +171,7 @@ final class tj extends kf {
         }
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_23_1 = 0;

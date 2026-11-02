@@ -132,7 +132,7 @@ final class jj extends vk implements dc, ga {
         }
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;

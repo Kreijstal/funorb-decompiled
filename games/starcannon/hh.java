@@ -3,7 +3,7 @@
  */
 abstract class hh {
     static int field_a;
-    static vi field_d;
+    static PcmStreamMixer field_d;
     static Sprite[] field_b;
     static int field_c;
 

@@ -22,9 +22,9 @@ final class t extends ti {
     private eh field_s;
     private boolean field_D;
     private int field_F;
-    private rk field_B;
+    private IntrusiveDeque field_B;
     private boolean field_l;
-    private rk field_E;
+    private IntrusiveDeque field_E;
     private boolean field_z;
     private long field_o;
 
@@ -214,7 +214,7 @@ final class t extends ti {
         }
         this.field_D = true;
         if (null == this.field_B) {
-          this.field_B = new rk();
+          this.field_B = new IntrusiveDeque();
         }
     }
 
@@ -524,14 +524,14 @@ final class t extends ti {
         RuntimeException var10 = null;
         this.field_w = new ih(16);
         this.field_F = 0;
-        this.field_E = new rk();
+        this.field_E = new IntrusiveDeque();
         this.field_o = 0L;
         try {
           this.field_k = param0;
           this.field_p = param1;
           if (this.field_p != null) {
             this.field_l = true;
-            this.field_B = new rk();
+            this.field_B = new IntrusiveDeque();
           } else {
             this.field_l = false;
           }

@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-abstract class kf extends uj implements ch {
+abstract class kf extends UiWidget implements ch {
     static int field_v;
-    uj field_t;
+    UiWidget field_t;
     static String field_u;
 
     public static void a(int param0) {
@@ -47,7 +47,7 @@ abstract class kf extends uj implements ch {
         this.f(-77);
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -88,7 +88,7 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -117,12 +117,12 @@ abstract class kf extends uj implements ch {
 
     final boolean d(boolean param0) {
         if (!param0) {
-          this.field_t = (uj) null;
+          this.field_t = (UiWidget) null;
         }
         return null != this.e(0) ? true : false;
     }
 
-    private final boolean c(int param0, uj param1) {
+    private final boolean c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -154,7 +154,7 @@ abstract class kf extends uj implements ch {
         int var5_int = 0;
         StringBuilder discarded$31 = null;
         StringBuilder discarded$30 = null;
-        uj var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -165,8 +165,8 @@ abstract class kf extends uj implements ch {
         try {
           discarded$29 = param3.append('\n');
           if (param2 != -349) {
-            var6 = (uj) null;
-            this.a(-87, -65, -10, 79, (uj) null, 82, 123);
+            var6 = (UiWidget) null;
+            this.a(-87, -65, -10, 79, (UiWidget) null, 82, 123);
           }
           for (var5_int = 0; var5_int <= param1; var5_int++) {
             discarded$31 = param3.append(' ');
@@ -197,11 +197,11 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    uj e(int param0) {
+    UiWidget e(int param0) {
         if (param0 != 0) {
           field_u = (String) null;
         }
-        uj var2 = this.field_t;
+        UiWidget var2 = this.field_t;
         if (var2 == null) {
           return null;
         }
@@ -218,7 +218,7 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    final boolean a(int param0, uj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -245,7 +245,7 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, uj param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -272,7 +272,7 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    void a(int param0, int param1, int param2, uj param3, byte param4, int param5) {
+    void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -303,10 +303,10 @@ abstract class kf extends uj implements ch {
     void a(int param0, int param1, byte param2, int param3) {
         if (0 == param0 &&
           this.field_o != null) {
-          this.field_o.a(param1, true, 122, param3, (uj) (this));
+          this.field_o.a(param1, true, 122, param3, (UiWidget) (this));
         }
         if (param2 != 49) {
-          this.field_t = (uj) null;
+          this.field_t = (UiWidget) null;
         }
         if (this.field_t != null) {
           this.field_t.a(param0, param1 + this.field_s, (byte) 49, this.field_j + param3);
@@ -322,7 +322,7 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    private final boolean b(int param0, uj param1) {
+    private final boolean b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -349,7 +349,7 @@ abstract class kf extends uj implements ch {
         }
     }
 
-    void a(int param0, int param1, uj param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

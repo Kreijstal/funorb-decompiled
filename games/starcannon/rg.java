@@ -74,8 +74,8 @@ final class rg extends vk implements si, ga {
     public final void a(int param0, fe param1) {
         try {
           if (param0 != -4312) {
-            uj var4 = (uj) null;
-            this.a((uj) null, 'ﾠ', (byte) 81, -62);
+            UiWidget var4 = (UiWidget) null;
+            this.a((UiWidget) null, 'ﾠ', (byte) 81, -62);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rg.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -184,12 +184,12 @@ final class rg extends vk implements si, ga {
           dupTemp$0 = new ad(10, this.field_j, -20 + this.field_i, 25, this.field_I, false, 80, 3, var7, 16777215, var8);
           var11 = dupTemp$0;
           this.a(true, dupTemp$0);
-          this.field_j = this.field_j + (((uj) ((Object) var11)).field_f + 5);
+          this.field_j = this.field_j + (((UiWidget) ((Object) var11)).field_f + 5);
           dupTemp$1 = new ad(10, this.field_j, -20 + this.field_i, 25, this.field_G, false, 80, 3, var7, 16777215, tj.field_y);
           var12 = dupTemp$1;
           this.a(true, dupTemp$1);
           this.field_C.field_g = (qg) (this);
-          this.field_j = this.field_j + (5 + ((uj) ((Object) var12)).field_f);
+          this.field_j = this.field_j + (5 + ((UiWidget) ((Object) var12)).field_f);
           if (null != this.field_y) {
             this.field_y.field_g = (qg) (this);
           }
@@ -255,7 +255,7 @@ final class rg extends vk implements si, ga {
         }
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -299,7 +299,7 @@ final class rg extends vk implements si, ga {
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_I) {
-            this.field_G.a(0, (uj) (this));
+            this.field_G.a(0, (UiWidget) (this));
           }
           if (this.field_G == param1) {
             this.a(-100);

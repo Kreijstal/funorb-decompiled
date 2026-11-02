@@ -4,7 +4,7 @@
 final class vb extends qf {
     static Sprite field_l;
     private fe field_n;
-    static rk field_k;
+    static IntrusiveDeque field_k;
     static int field_m;
     static String field_j;
 
@@ -643,7 +643,7 @@ final class vb extends qf {
           field_j = null;
           field_k = null;
           if (param0 < 108) {
-            field_k = (rk) null;
+            field_k = (IntrusiveDeque) null;
           }
           field_l = null;
           return;
@@ -696,7 +696,7 @@ final class vb extends qf {
     }
 
     static {
-        field_k = new rk();
+        field_k = new IntrusiveDeque();
         field_j = "Prev";
     }
 }

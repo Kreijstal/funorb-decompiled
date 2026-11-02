@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends uj {
+final class fa extends UiWidget {
     private Sprite field_H;
     static boolean field_E;
     private Sprite field_J;
@@ -174,7 +174,7 @@ final class fa extends uj {
         this.a(param0, param2, (byte) 118, param3, param1);
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sd {
-    static rk field_d;
+    static IntrusiveDeque field_d;
     static String field_b;
     static int[] field_e;
     static int field_a;
@@ -32,7 +32,7 @@ final class sd {
     }
 
     final static void a(byte param0) {
-        ee.field_a = new rk();
+        ee.field_a = new IntrusiveDeque();
         if (param0 != 38) {
           String var2 = (String) null;
           sd.a((Throwable) null, (String) null);
@@ -40,7 +40,7 @@ final class sd {
     }
 
     static {
-        field_d = new rk();
+        field_d = new IntrusiveDeque();
         field_c = 0;
     }
 }

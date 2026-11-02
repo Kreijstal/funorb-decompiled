@@ -3,10 +3,10 @@
  */
 final class tc extends kf {
     static boolean field_x;
-    private rk field_w;
+    private IntrusiveDeque field_w;
     static String field_y;
 
-    final void a(byte param0, uj param1) {
+    final void a(byte param0, UiWidget param1) {
         qd var3 = null;
         if (param0 <= 68) {
           return;
@@ -18,7 +18,7 @@ final class tc extends kf {
           var3 = (qd) (param1);
           this.field_w.a(-125, var3);
           var3.field_G = true;
-          var3.a(0, (uj) (this));
+          var3.a(0, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "tc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -26,7 +26,7 @@ final class tc extends kf {
 
     public tc() {
         super(0, 0, SpriteState.field_o, ak.field_h, (de) null, (qg) null);
-        this.field_w = new rk();
+        this.field_w = new IntrusiveDeque();
     }
 
     final static void j(int param0) {
@@ -75,7 +75,7 @@ final class tc extends kf {
           }
           var3 = (qd) (var2.b(param0 + 10679));
         }
-        this.field_t = (uj) ((Object) this.k(0));
+        this.field_t = (UiWidget) ((Object) this.k(0));
     }
 
     final void l(int param0) {
@@ -91,7 +91,7 @@ final class tc extends kf {
         }
     }
 
-    final uj e(int param0) {
+    final UiWidget e(int param0) {
         ba var2;
         qd var3;
         var2 = new ba(this.field_w);
@@ -108,16 +108,16 @@ final class tc extends kf {
     final void a(int param0, int param1, byte param2, int param3) {
         int var7 = StarCannon.field_A;
         if (this.field_o != null) {
-          this.field_o.a(param1, true, -93, param3, (uj) (this));
+          this.field_o.a(param1, true, -93, param3, (UiWidget) (this));
         }
         ba var5 = new ba(this.field_w);
         if (param2 != 49) {
           return;
         }
-        uj var6 = (uj) (var5.a(false));
+        UiWidget var6 = (UiWidget) (var5.a(false));
         while (var6 != null) {
           var6.a(param0, this.field_s + param1, (byte) 49, param3 + this.field_j);
-          var6 = (uj) (var5.a((byte) -34));
+          var6 = (UiWidget) (var5.a((byte) -34));
         }
     }
 

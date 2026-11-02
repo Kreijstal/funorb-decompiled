@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed extends c {
+final class ed extends PcmStream {
     private int field_l;
-    private c field_m;
+    private PcmStream field_m;
     static java.math.BigInteger field_j;
     static Sprite field_k;
     static tc field_q;
@@ -50,7 +50,7 @@ final class ed extends c {
         }
     }
 
-    final c a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -132,7 +132,7 @@ final class ed extends c {
         }
     }
 
-    ed(c param0, int param1) {
+    ed(PcmStream param0, int param1) {
         try {
           this.field_m = param0;
           this.field_f = this.field_m.field_f;
@@ -142,7 +142,7 @@ final class ed extends c {
         }
     }
 
-    final c c() {
+    final PcmStream c() {
         return null;
     }
 

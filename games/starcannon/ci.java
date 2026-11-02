@@ -23,7 +23,7 @@ final class ci implements de {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int var11 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -32,7 +32,7 @@ final class ci implements de {
         int var10 = 0;
         int var12 = 0;
         sj var13 = null;
-        uj stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -42,7 +42,7 @@ final class ci implements de {
           if (!(param4 instanceof sj)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (uj) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           }
           var13 = (sj) (stackIn_4_0);
           ki.d(param4.field_s + param0, param4.field_j + param3, param4.field_i, param4.field_f, this.field_a);

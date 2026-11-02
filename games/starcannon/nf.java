@@ -233,7 +233,7 @@ final class nf {
             nf.b(124);
           }
           var8 = new ok(ti.field_b, param6);
-          ti.field_b.a((byte) 72, (uj) (var8));
+          ti.field_b.a((byte) 72, (UiWidget) (var8));
           if (dd.a((byte) 77)) {
             var8.p(10341);
             return true;

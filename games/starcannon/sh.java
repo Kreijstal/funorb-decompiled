@@ -269,7 +269,7 @@ final class sh extends fh {
         }
     }
 
-    final String a(uj param0, boolean param1) {
+    final String a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;

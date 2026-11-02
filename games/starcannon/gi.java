@@ -4,7 +4,7 @@
 final class gi {
     static String field_c;
     private Sprite[] field_d;
-    static rk field_a;
+    static IntrusiveDeque field_a;
     static int field_e;
     static String[] field_f;
     static qe field_b;
@@ -88,6 +88,6 @@ final class gi {
     static {
         field_f = new String[16];
         field_c = "Highscores";
-        field_a = new rk();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -4,7 +4,7 @@
 final class ba {
     static String field_a;
     static Sprite field_c;
-    private rk field_d;
+    private IntrusiveDeque field_d;
     private IntrusiveNode field_b;
     static String field_e;
 
@@ -177,7 +177,7 @@ final class ba {
         }
     }
 
-    ba(rk param0) {
+    ba(IntrusiveDeque param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

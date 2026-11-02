@@ -18,7 +18,7 @@ final class ec {
     final static int b(byte param0) {
         int var1;
         var1 = -49 % ((param0 + 82) / 43);
-        if (2 > rk.field_d) {
+        if (2 > IntrusiveDeque.field_d) {
           return 0;
         }
         if (vg.field_b == 0) {

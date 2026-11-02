@@ -17,8 +17,8 @@ final class ni implements de {
     private int field_e;
     static String[] field_f;
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
-        uj stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -32,7 +32,7 @@ final class ni implements de {
         gh var12 = null;
         try {
           if (param4 instanceof gh) {
-            stackIn_3_0 = (uj) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }

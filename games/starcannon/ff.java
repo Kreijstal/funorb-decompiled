@@ -121,7 +121,7 @@ final class ff extends DualLinkNode {
               }
             }
           } else {
-            this.field_t = uj.a(-46, '<', param0.a(-50));
+            this.field_t = UiWidget.a(-46, '<', param0.a(-50));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

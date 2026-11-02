@@ -89,7 +89,7 @@ final class ea {
         if (null == ve.field_f) {
           ve.field_f = new lf(ti.field_b, sg.field_n);
         }
-        ti.field_b.a((byte) 81, (uj) (ve.field_f));
+        ti.field_b.a((byte) 81, (UiWidget) (ve.field_f));
         if (param0 > -19) {
           ea.a((byte) -78);
         }

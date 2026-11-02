@@ -22,9 +22,9 @@ final class aj {
         return new aj(new PacketBuffer(var3));
     }
 
-    final ud a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new ud(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private final byte[] b() {

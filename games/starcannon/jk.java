@@ -7,7 +7,7 @@ final class jk {
     static Sprite[] field_f;
     static Sprite field_g;
     int field_d;
-    static vi field_k;
+    static PcmStreamMixer field_k;
     static int field_l;
     static int[] field_c;
     int field_i;

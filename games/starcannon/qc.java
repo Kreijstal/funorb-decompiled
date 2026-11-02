@@ -301,7 +301,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
               if (vh.field_t == 7) {
                 vh.field_t = 3;
               }
-              uj.field_r = se.field_p.a(-94);
+              UiWidget.field_r = se.field_p.a(-94);
               eb.field_f = false;
               stackIn_82_0 = vh.field_t;
               return stackIn_82_0;
@@ -309,9 +309,9 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             if (m.field_b == null) {
               if (eb.field_f) {
                 if (kg.b((byte) -71) > 30000L) {
-                  uj.field_r = ti.field_g;
+                  UiWidget.field_r = ti.field_g;
                 } else {
-                  uj.field_r = va.field_o;
+                  UiWidget.field_r = va.field_o;
                 }
                 eb.field_f = false;
                 stackIn_92_0 = 3;

@@ -77,8 +77,8 @@ final class nd extends qf {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        ud var10 = gf.field_c[param3];
-        ud var11 = var10;
+        PcmSample var10 = gf.field_c[param3];
+        PcmSample var11 = var10;
         int var5 = var11.field_j * param0 / 1000;
         int var6 = var11.field_j * param2 / 1000;
         if (!(var11.field_i.length >= var5 + var6)) {
@@ -101,11 +101,11 @@ final class nd extends qf {
           var9 = var6;
         }
         if (param1 == -3763) {
-          gf.field_c[param3] = new ud(var11.field_j, var15, var8, var9, var10.field_k);
+          gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
           return;
         }
         nd.a(false, -9, -79);
-        gf.field_c[param3] = new ud(var11.field_j, var15, var8, var9, var10.field_k);
+        gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
     }
 
     final void f(int param0) {

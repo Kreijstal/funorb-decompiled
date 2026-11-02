@@ -64,7 +64,7 @@ final class eg implements de {
         }
     }
 
-    final static ed a(int param0, int param1, c param2) {
+    final static ed a(int param0, int param1, PcmStream param2) {
         RuntimeException var3 = null;
         ed stackIn_2_0 = null;
         ed stackIn_4_0 = null;
@@ -93,7 +93,7 @@ final class eg implements de {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         el var15 = null;
         int var7 = 0;
         int var8 = 0;
