@@ -20,7 +20,7 @@ class tk extends lg {
           var4 = this.field_C < this.field_G ? this.field_G : this.field_C;
           this.field_G = var3;
           this.field_C = var3;
-          this.field_m = this.field_m.substring(0, var3) + this.field_m.substring(var4, this.field_m.length());
+          this.text = this.text.substring(0, var3) + this.text.substring(var4, this.text.length());
           this.l(121);
         }
     }
@@ -29,8 +29,8 @@ class tk extends lg {
         if (param0 < 59) {
           this.i((byte) 122);
         }
-        if (this.field_t instanceof wm) {
-          ((wm) (this.field_t)).a(this, (byte) -124);
+        if (this.listener instanceof wm) {
+          ((wm) (this.listener)).a(this, (byte) -124);
         }
     }
 
@@ -48,10 +48,10 @@ class tk extends lg {
           this.field_v = 0;
           return;
         }
-        if (!(this.field_q instanceof fe)) {
+        if (!(this.renderer instanceof fe)) {
           return;
         }
-        var9 = (fe) ((Object) this.field_q);
+        var9 = (fe) ((Object) this.renderer);
         var3 = var9.b((byte) 105, (UiWidget) (this));
         var4 = var3.a(param0);
         var5 = var9.b((UiWidget) (this), -1);
@@ -289,13 +289,13 @@ class tk extends lg {
           if (!param2) {
             this.field_F = false;
           }
-          this.field_m = param1;
+          this.text = param1;
           var4_int = param1.length();
           if (this.field_I != -1 &&
             var4_int > this.field_I) {
-            this.field_m = this.field_m.substring(0, this.field_I);
+            this.text = this.text.substring(0, this.field_I);
           }
-          dupTemp$1 = this.field_m.length();
+          dupTemp$1 = this.text.length();
           this.field_C = dupTemp$1;
           this.field_G = dupTemp$1;
           if (!param0) {
@@ -360,7 +360,7 @@ class tk extends lg {
         this.field_F = false;
         this.field_D = -1;
         try {
-          this.field_q = ah.field_c.field_g;
+          this.renderer = ah.field_c.field_g;
           this.field_I = param2;
           this.a(true, param0, true);
           this.field_J = true;
@@ -376,7 +376,7 @@ class tk extends lg {
         if (param0 == 1) {
           var2 = this.field_G > this.field_C ? this.field_C : this.field_G;
           var3 = this.field_C >= this.field_G ? this.field_C : this.field_G;
-          return this.field_m.substring(var2, var3);
+          return this.text.substring(var2, var3);
         }
         return (String) null;
     }
@@ -386,12 +386,12 @@ class tk extends lg {
         int var3;
         int var4;
         var4 = Torquing.field_u;
-        var2 = this.field_m.length();
+        var2 = this.text.length();
         if (var2 == this.field_G) {
           return this.field_G;
         }
         for (var3 = this.field_G + 1; var2 > var3; var3++) {
-          if (this.field_m.charAt(var3 - 1) != 32) {
+          if (this.text.charAt(var3 - 1) != 32) {
             continue;
           }
           break;
@@ -409,8 +409,8 @@ class tk extends lg {
           super.a(124, param1, param2, param3);
           this.a(true);
           if (this.field_l == 1) {
-            if (this.field_q instanceof fe) {
-              var7 = (fe) ((Object) this.field_q);
+            if (this.renderer instanceof fe) {
+              var7 = (fe) ((Object) this.renderer);
               var6 = var7.a(k.field_e, -1, (UiWidget) (this), n.field_t, param2, param3);
               if (var6 != -1) {
                 if (this.field_F &&
@@ -455,14 +455,14 @@ class tk extends lg {
               this.f((byte) 127);
             }
             if (this.field_I == -1 ||
-              !(this.field_m.length() >= this.field_I)) {
-              if (this.field_G < this.field_m.length()) {
-                this.field_m = this.field_m.substring(0, this.field_G) + param2 + this.field_m.substring(this.field_G, this.field_m.length());
+              !(this.text.length() >= this.field_I)) {
+              if (this.field_G < this.text.length()) {
+                this.text = this.text.substring(0, this.field_G) + param2 + this.text.substring(this.field_G, this.text.length());
                 this.field_G = this.field_G + 1;
                 this.field_C = this.field_G;
               } else {
-                this.field_m = this.field_m + param2;
-                dupTemp$0 = this.field_m.length();
+                this.text = this.text + param2;
+                dupTemp$0 = this.text.length();
                 this.field_G = dupTemp$0;
                 this.field_C = dupTemp$0;
               }
@@ -476,7 +476,7 @@ class tk extends lg {
                 this.f((byte) 119);
                 return true;
               }
-              if (this.field_G < this.field_m.length()) {
+              if (this.field_G < this.text.length()) {
                 this.field_C = this.field_G + 1;
                 this.f((byte) -1);
                 return true;
@@ -504,7 +504,7 @@ class tk extends lg {
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a((byte) -78, this.field_m.length());
+                    this.a((byte) -78, this.text.length());
                     return true;
                   }
                   if (84 == param0) {
@@ -527,7 +527,7 @@ class tk extends lg {
                     return true;
                   }
                 } else {
-                  if (this.field_G < this.field_m.length()) {
+                  if (this.field_G < this.text.length()) {
                     stackIn_22_1 = -49;
                     if (!i.field_P[82]) {
                       stackIn_23_2 = this.field_G + 1;
@@ -591,11 +591,11 @@ class tk extends lg {
           int[] var8 = (int[]) null;
           tk.a(-25, -56, 58, 91, 83, 87, (int[]) null, 74, (byte) 44);
         }
-        if (null != this.field_q &&
+        if (null != this.renderer &&
           param0 == 0) {
-          this.field_q.a(114, param2, param3, this.field_x, (UiWidget) (this));
-          if (this.field_q instanceof fe) {
-            var9 = (fe) ((Object) this.field_q);
+          this.renderer.a(114, param2, param3, this.field_x, (UiWidget) (this));
+          if (this.renderer instanceof fe) {
+            var9 = (fe) ((Object) this.renderer);
             if (this.field_G != this.field_C) {
               var9.a(param3, this.field_G, this.field_C, -1419356520, param2, (UiWidget) (this));
             }
@@ -630,8 +630,8 @@ class tk extends lg {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, (byte) 70) &&
-            this.field_q instanceof fe) {
-            var8_int = ((fe) ((Object) this.field_q)).a(k.field_e, -1, (UiWidget) (this), n.field_t, param2, param1);
+            this.renderer instanceof fe) {
+            var8_int = ((fe) ((Object) this.renderer)).a(k.field_e, -1, (UiWidget) (this), n.field_t, param2, param1);
             stackIn_5_1 = -94;
             if (var8_int != -1) {
               stackIn_6_2 = var8_int;
@@ -646,7 +646,7 @@ class tk extends lg {
               this.field_C = this.g((byte) -122);
               this.field_G = this.a((byte) 88);
               if (this.field_G > 0 &&
-                this.field_m.charAt(-1 + this.field_G) == 32) {
+                this.text.charAt(-1 + this.field_G) == 32) {
                 this.field_G = this.field_G - 1;
               }
               this.field_D = this.field_G;
@@ -677,7 +677,7 @@ class tk extends lg {
         if (param0 <= 45) {
           this.field_I = -75;
         }
-        this.field_m = "";
+        this.text = "";
         this.field_C = 0;
         this.field_G = 0;
         this.l(-102);
@@ -693,8 +693,8 @@ class tk extends lg {
 
     void l(int param0) {
         int var2 = -107 % ((param0 + 17) / 63);
-        if (this.field_t instanceof wm) {
-          ((wm) (this.field_t)).a(88, this);
+        if (this.listener instanceof wm) {
+          ((wm) (this.listener)).a(88, this);
         }
     }
 
@@ -707,16 +707,16 @@ class tk extends lg {
         RuntimeException var3 = null;
         try {
           if (-1 != this.field_I) {
-            var3_int = this.field_I - this.field_m.length();
+            var3_int = this.field_I - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param1 = param1.substring(0, var3_int);
           }
-          if (this.field_G == this.field_m.length()) {
-            this.field_m = this.field_m + param1;
+          if (this.field_G == this.text.length()) {
+            this.text = this.text + param1;
           } else {
-            this.field_m = this.field_m.substring(0, this.field_G) + param1 + this.field_m.substring(this.field_G, this.field_m.length());
+            this.text = this.text.substring(0, this.field_G) + param1 + this.text.substring(this.field_G, this.text.length());
           }
           this.field_G = this.field_G + param1.length();
           this.field_C = this.field_G;
@@ -769,7 +769,7 @@ class tk extends lg {
           return this.field_G;
         }
         for (var2 = this.field_G - 1; var2 > 0; var2--) {
-          if (this.field_m.charAt(var2 - 1) != 32) {
+          if (this.text.charAt(var2 - 1) != 32) {
             continue;
           }
           break;

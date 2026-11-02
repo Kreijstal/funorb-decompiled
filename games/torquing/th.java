@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends hn implements ba, ng {
+final class th extends WidgetContainer implements ba, ng {
     private lg field_E;
     static gg[] field_F;
     static ResourceArchive field_C;
@@ -26,13 +26,13 @@ final class th extends hn implements ba, ng {
         try {
           var10 = new na(20, param0, param1 + 120, 25, param3, false, 120, 3, dg.field_e, 16777215, param2);
           this.a(var10, -6938);
-          var9 = new bj(((wg) ((Object) param3)).a(-10116), param6, 126, param0 + var10.field_o, param1 + 25, param4);
-          var9.field_t = (ca) (this);
+          var9 = new bj(((wg) ((Object) param3)).a(-10116), param6, 126, param0 + var10.height, param1 + 25, param4);
+          var9.listener = (ca) (this);
           if (!param5) {
             this.field_I = (vp) null;
           }
           this.a(var9, -6938);
-          stackIn_3_0 = var9.field_o + var10.field_o;
+          stackIn_3_0 = var9.height + var10.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,9 +216,9 @@ final class th extends hn implements ba, ng {
         this.field_H.field_n = ag.field_d;
         this.field_H.a(new il(this.field_H), 83);
         this.field_B.field_x = false;
-        this.field_B.field_q = (WidgetRenderer) ((Object) new rf());
-        this.field_E.field_q = (WidgetRenderer) ((Object) new je());
-        this.field_H.field_q = (WidgetRenderer) ((Object) new ig(10000536));
+        this.field_B.renderer = (WidgetRenderer) ((Object) new rf());
+        this.field_E.renderer = (WidgetRenderer) ((Object) new je());
+        this.field_H.renderer = (WidgetRenderer) ((Object) new ig(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -228,12 +228,12 @@ final class th extends hn implements ba, ng {
         var3 = var3 + (this.a(de.field_b, 170, this.field_H, ad.field_l, var3, 126) + 5);
         this.field_B.a((byte) 124, 496 - var5 >> 1, var3, 40, var5);
         this.field_E.a((byte) 125, 3 + var4, 15 + var3, 40, 60);
-        this.field_E.field_t = (ca) (this);
-        this.field_B.field_t = (ca) (this);
+        this.field_E.listener = (ca) (this);
+        this.field_B.listener = (ca) (this);
         this.a(this.field_B, -6938);
         this.a(this.field_E, -6938);
         this.field_I = new vp((ba) (this));
-        this.field_I.a((byte) -94, this.field_H.field_w + (this.field_H.field_p + 60), 20, 150, -this.field_H.field_w + (this.field_p - this.field_H.field_p - 60));
+        this.field_I.a((byte) -94, this.field_H.x + (this.field_H.width + 60), 20, 150, -this.field_H.x + (this.width - this.field_H.width - 60));
         this.a(this.field_I, -6938);
         this.a((byte) 127, 0, 0, var3 + 55 + var4, 496);
     }
@@ -287,13 +287,13 @@ final class th extends hn implements ba, ng {
         if (param0 <= 119) {
           this.a(23, (UiWidget) null, 'ﾚ', -1);
           if (this.b(true)) {
-            cm.a((byte) -21, this.field_H.field_m);
+            cm.a((byte) -21, this.field_H.text);
             return;
           }
           return;
         }
         if (this.b(true)) {
-          cm.a((byte) -21, this.field_H.field_m);
+          cm.a((byte) -21, this.field_H.text);
           return;
         }
     }

@@ -35,7 +35,7 @@ final class ij extends gf {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.field_m.field_m.toLowerCase();
+          var6 = this.field_m.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (0 == var4.length()) {
             stackIn_2_0 = null;
@@ -107,7 +107,7 @@ final class ij extends gf {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = 15 % ((79 - param0) / 43);
-          var3 = this.field_n.field_m.toLowerCase();
+          var3 = this.field_n.text.toLowerCase();
           var5 = param1.toLowerCase();
           if (var3.length() > 0) {
             if (var5.length() <= 0) {
@@ -155,7 +155,7 @@ final class ij extends gf {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_m.field_m.toLowerCase();
+          var3 = this.field_m.text.toLowerCase();
           if (param0 <= 62) {
             stackIn_2_0 = (cd) null;
             return stackIn_2_0;

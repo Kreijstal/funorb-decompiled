@@ -47,7 +47,7 @@ final class eg extends am {
 
     final static void a(int param0, int param1, fn param2, int param3, fn param4, boolean param5) {
         try {
-          hn.field_z = param1;
+          WidgetContainer.field_z = param1;
           id.field_b = param4;
           aq.field_b = param3;
           ln.field_D = param0;

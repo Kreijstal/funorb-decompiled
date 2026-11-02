@@ -33,7 +33,7 @@ final class kf extends UiWidget {
           kf.a(84);
         }
         this.field_H = this.field_E.b();
-        this.field_G = new Sprite(this.field_o >> 1, this.field_o);
+        this.field_G = new Sprite(this.height >> 1, this.height);
     }
 
     final static String a(String param0, char param1, String param2, int param3) {
@@ -126,10 +126,10 @@ final class kf extends UiWidget {
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = Torquing.field_u;
-        var14 = new Sprite(this.field_A * 2, this.field_o);
+        var14 = new Sprite(this.field_A * 2, this.height);
         GzipDecompressor.a((byte) -116, var14);
-        var5 = this.field_o >> 1;
-        for (var6 = 0; this.field_o > var6; var6++) {
+        var5 = this.height >> 1;
+        for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (2 * this.field_A - 1) % (2 * this.field_A);
           var8 = 16711935 & param0;
           var9 = 65280 & param0;
@@ -202,12 +202,12 @@ final class kf extends UiWidget {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Torquing.field_u;
-        int var2 = this.field_o >> 1;
-        Sprite var3 = new Sprite(var2, this.field_o);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         GzipDecompressor.a((byte) 81, var3);
-        for (var4 = 0; var4 < this.field_o; var4++) {
+        for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_o - var4));
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
             var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(-var6 + 1.0);
@@ -252,8 +252,8 @@ final class kf extends UiWidget {
         int var8 = 0;
         var8 = Torquing.field_u;
         try {
-          var5_int = param0 + this.field_p;
-          ld.a(var5_int - this.field_E.field_s, param0 + this.field_E.field_s, this.field_o + param3, param3, (byte) -99);
+          var5_int = param0 + this.width;
+          ld.a(var5_int - this.field_E.field_s, param0 + this.field_E.field_s, this.height + param3, param3, (byte) -99);
           var6 = param0 - this.field_x;
           if (param2 <= 105) {
             this.field_C = (Sprite[]) null;
@@ -273,7 +273,7 @@ final class kf extends UiWidget {
           }
           if (var5_int - this.field_E.field_s <= SoftwareRasterizer.field_a) {
             GzipDecompressor.a((byte) 119, this.field_G);
-            for (var7 = -this.field_E.field_s + this.field_p + this.field_x; var7 > 2 * this.field_A; var7 = var7 - 2 * this.field_A) {
+            for (var7 = -this.field_E.field_s + this.width + this.field_x; var7 > 2 * this.field_A; var7 = var7 - 2 * this.field_A) {
             }
             param1.d(-var7, 0);
             param1.d(2 * this.field_A - var7, 0);
@@ -323,11 +323,11 @@ final class kf extends UiWidget {
         if (param1 > -7) {
           this.field_x = -1;
         }
-        int var5 = this.field_w + param3;
-        int var6 = this.field_k + param2;
+        int var5 = this.x + param3;
+        int var6 = this.y + param2;
         this.a(var5, this.field_C[0], (byte) 125, var6);
         if (this.field_L < 65536) {
-          ld.a(this.field_p + var5, var5 + (this.field_p * this.field_L >> 16), this.field_o + var6, var6, (byte) -98);
+          ld.a(this.width + var5, var5 + (this.width * this.field_L >> 16), this.height + var6, var6, (byte) -98);
           this.a(var5, this.field_C[1], (byte) 124, var6);
           r.a(125);
         }

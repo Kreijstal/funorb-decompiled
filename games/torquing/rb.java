@@ -11,7 +11,7 @@ class rb extends lg {
         super(param0, (ca) null);
         this.field_F = null;
         try {
-          this.field_q = param1;
+          this.renderer = param1;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -52,7 +52,7 @@ class rb extends lg {
         if (param0 != 46) {
           return;
         }
-        this.a((byte) 124, param1, param3, ((fe) ((Object) this.field_q)).a((UiWidget) (this), 2), param2);
+        this.a((byte) 124, param1, param3, ((fe) ((Object) this.renderer)).a((UiWidget) (this), 2), param2);
     }
 
     final static String a(int param0, java.applet.Applet param1) {
@@ -153,8 +153,8 @@ class rb extends lg {
           int var5_int = -86 % ((param0 + 28) / 43);
           this.field_F = null;
           if (this.field_s) {
-            var6 = -this.field_w - param3 + n.field_t;
-            var7 = k.field_e + (-param2 - this.field_k);
+            var6 = -this.x - param3 + n.field_t;
+            var7 = k.field_e + (-param2 - this.y);
             this.field_F = this.a(var6, false, var7);
           }
         } catch (RuntimeException runtimeException) {
@@ -169,7 +169,7 @@ class rb extends lg {
         if (0 != param0) {
           return;
         }
-        fe var10 = (fe) ((Object) this.field_q);
+        fe var10 = (fe) ((Object) this.renderer);
         tb var6 = this.field_F;
         if (var6 != null) {
           var7 = var10.a(2, param3, (UiWidget) (this));
@@ -270,18 +270,18 @@ class rb extends lg {
         var17 = Torquing.field_u;
         this.field_D = new IntrusiveDeque();
         var2 = 0;
-        var3 = (fe) ((Object) this.field_q);
+        var3 = (fe) ((Object) this.renderer);
         var4 = var3.b((byte) 110, (UiWidget) (this));
         var5 = -116 / ((param0 - 76) / 41);
         while (true) {
-          var6 = this.field_m.indexOf("<hotspot=", var2);
+          var6 = this.text.indexOf("<hotspot=", var2);
           if (var6 == -1) {
             return;
           }
-          var8 = this.field_m.indexOf(">", var6);
-          var7 = this.field_m.substring(9 + var6, var8);
+          var8 = this.text.indexOf(">", var6);
+          var7 = this.text.substring(9 + var6, var8);
           var8Lifetime1 = Integer.parseInt(var7);
-          var2 = this.field_m.indexOf("</hotspot>", var6);
+          var2 = this.text.indexOf("</hotspot>", var6);
           var9 = var4.b(var6, (byte) 110);
           var10 = var4.b(var2, (byte) 110);
           var11 = null;
@@ -329,12 +329,12 @@ class rb extends lg {
         if (param2 != -1) {
           return;
         }
-        int var5 = -this.field_w + param3;
-        int var6 = param1 - this.field_k;
+        int var5 = -this.x + param3;
+        int var6 = param1 - this.y;
         tb var7 = this.a(var5, false, var6);
         if (var7 != null &&
-          this.field_t != null) {
-          ((fp) ((Object) this.field_t)).a((byte) 124, param0, var7.field_j, this);
+          this.listener != null) {
+          ((fp) ((Object) this.listener)).a((byte) 124, param0, var7.field_j, this);
         }
     }
 

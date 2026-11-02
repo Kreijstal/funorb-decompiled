@@ -49,7 +49,7 @@ final class io extends ig {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 65) {
-            stackIn_4_0 = ff.a(param1.field_m.length(), '*', true);
+            stackIn_4_0 = ff.a(param1.text.length(), '*', true);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

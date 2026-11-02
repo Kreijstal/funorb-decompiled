@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc extends hn implements fp, ng {
+final class sc extends WidgetContainer implements fp, ng {
     private nm field_C;
     private rb field_D;
     private lg field_E;
@@ -25,7 +25,7 @@ final class sc extends hn implements fp, ng {
         try {
           this.field_C = param0;
           this.field_E = new lg(vd.field_d, (ca) null);
-          this.field_E.field_q = (WidgetRenderer) ((Object) new rf());
+          this.field_E.renderer = (WidgetRenderer) ((Object) new rf());
           var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, DelegatingCanvas.field_d);
           var3 = 20;
           var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
@@ -33,15 +33,15 @@ final class sc extends hn implements fp, ng {
           this.field_D.field_n = "";
           this.field_D.a(0, (byte) -115, Js5Transport.field_e);
           this.field_D.a(1, (byte) -93, Js5Transport.field_e);
-          this.field_D.field_p = -40 + this.field_p;
-          this.field_D.field_t = (ca) (this);
-          this.field_D.a((byte) 46, 26, this.field_p - 40, var3);
-          var3 = var3 + (15 + this.field_D.field_o);
+          this.field_D.width = -40 + this.width;
+          this.field_D.listener = (ca) (this);
+          this.field_D.a((byte) 46, 26, this.width - 40, var3);
+          var3 = var3 + (15 + this.field_D.height);
           this.a(this.field_D, -6938);
           var5 = 4;
           var6 = 200;
           this.field_E.a((byte) -97, 300 - var6 >> 1, var3, 40, var6);
-          this.field_E.field_t = (ca) (this);
+          this.field_E.listener = (ca) (this);
           this.a(this.field_E, -6938);
           this.a((byte) -49, 0, 0, var3 - (-55 - var5), 300);
         } catch (RuntimeException runtimeException) {

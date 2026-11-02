@@ -39,19 +39,19 @@ final class aj extends jh {
             this.field_l == 1) {
             var5_int = n.field_t - this.field_K - param3;
             var6 = k.field_e + (-this.field_G - param2);
-            if (this.field_w != var5_int ||
-              this.field_k != var6) {
-              this.field_k = var6;
-              this.field_w = var5_int;
-              if (this.field_t instanceof sj) {
-                ((sj) (this.field_t)).a(param2, this, (byte) -83, param3);
+            if (this.x != var5_int ||
+              this.y != var6) {
+              this.y = var6;
+              this.x = var5_int;
+              if (this.listener instanceof sj) {
+                ((sj) (this.listener)).a(param2, this, (byte) -83, param3);
               }
             }
           } else {
             if (this.field_H) {
-              if (this.field_w != this.field_D) {
-                var5_int = this.field_D - this.field_w;
-                stackIn_9_1 = this.field_w;
+              if (this.x != this.field_D) {
+                var5_int = this.field_D - this.x;
+                stackIn_9_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int > 0) {
                     stackIn_12_2 = 1;
@@ -61,11 +61,11 @@ final class aj extends jh {
                 } else {
                   stackIn_12_2 = var5_int >> 1;
                 }
-                this.field_w = stackIn_9_1 + stackIn_12_2;
+                this.x = stackIn_9_1 + stackIn_12_2;
               }
-              if (this.field_k != this.field_I) {
-                var5_int = -this.field_k + this.field_I;
-                stackIn_18_1 = this.field_k;
+              if (this.y != this.field_I) {
+                var5_int = -this.y + this.field_I;
+                stackIn_18_1 = this.y;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_19_2 = var5_int >> 1;
                 } else {
@@ -75,7 +75,7 @@ final class aj extends jh {
                     stackIn_19_2 = -1;
                   }
                 }
-                this.field_k = stackIn_18_1 + stackIn_19_2;
+                this.y = stackIn_18_1 + stackIn_19_2;
               }
             }
           }
@@ -158,10 +158,10 @@ final class aj extends jh {
 
     final void f(byte param0) {
         super.f((byte) 121);
-        this.field_C.a((byte) 125, 0, 0, this.field_o, this.field_p);
+        this.field_C.a((byte) 125, 0, 0, this.height, this.width);
         if (param0 >= 103) {
-          this.field_I = this.field_k;
-          this.field_D = this.field_w;
+          this.field_I = this.y;
+          this.field_D = this.x;
           return;
         }
     }
@@ -246,8 +246,8 @@ final class aj extends jh {
             return stackIn_13_0 != 0;
           }
           if (param0 == 1) {
-            this.field_K = -param1 + param4 - this.field_w;
-            this.field_G = -param2 + param3 - this.field_k;
+            this.field_K = -param1 + param4 - this.x;
+            this.field_G = -param2 + param3 - this.y;
             lp.field_d = this;
           }
           this.field_l = param0;

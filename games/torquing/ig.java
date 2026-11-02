@@ -18,7 +18,7 @@ class ig extends pc {
     public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         try {
           if (param3) {
-            tk.a(param4.field_k + param1, param4.field_w + param2, param4.field_o, param4.field_p, false);
+            tk.a(param4.y + param1, param4.x + param2, param4.height, param4.width, false);
           }
           if (param0 < 89) {
             UiWidget var7 = (UiWidget) null;

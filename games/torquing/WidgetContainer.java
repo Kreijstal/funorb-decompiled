@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-class hn extends UiWidget implements cj {
+class WidgetContainer extends UiWidget implements cj {
     static int field_z;
     static String field_A;
-    IntrusiveDeque field_y;
+    IntrusiveDeque children;
     static int field_x;
 
     final static void a(String param0, byte param1) {
@@ -40,7 +40,7 @@ class hn extends UiWidget implements cj {
             var9 = (UiWidget) null;
             this.a(-19, false, 4, -101, (UiWidget) null, 68, 32);
           }
-          var10 = new re(this.field_y);
+          var10 = new re(this.children);
           var6 = (UiWidget) (var10.a((byte) 106));
           while (var6 != null) {
             discarded$3 = param0.append('\n');
@@ -82,7 +82,7 @@ class hn extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var10 = Torquing.field_u;
         try {
-          var8 = new re(this.field_y);
+          var8 = new re(this.children);
           if (param1) {
             return true;
           }
@@ -119,20 +119,20 @@ class hn extends UiWidget implements cj {
           field_z = -92;
         }
         if (0 == param0 &&
-          this.field_q != null) {
-          this.field_q.a(127, param2, param3, true, (UiWidget) (this));
+          this.renderer != null) {
+          this.renderer.a(127, param2, param3, true, (UiWidget) (this));
         }
-        re var5 = new re(this.field_y);
+        re var5 = new re(this.children);
         UiWidget var6 = (UiWidget) (var5.a(17514));
         while (var6 != null) {
-          var6.a(param0, (byte) -107, this.field_k + param2, param3 + this.field_w);
+          var6.a(param0, (byte) -107, this.y + param2, param3 + this.x);
           var6 = (UiWidget) (var5.a(true));
         }
     }
 
     final void a(UiWidget param0, int param1) {
         try {
-          this.field_y.a((byte) 54, param0);
+          this.children.a((byte) 54, param0);
           if (param1 != -6938) {
             this.a(69, (byte) -75, 83, -7);
           }
@@ -143,7 +143,7 @@ class hn extends UiWidget implements cj {
 
     private final void a(boolean param0) {
         int var4 = Torquing.field_u;
-        re var2 = new re(this.field_y);
+        re var2 = new re(this.children);
         if (!param0) {
           field_z = 36;
         }
@@ -165,14 +165,14 @@ class hn extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var9 = Torquing.field_u;
         try {
-          var7 = new re(this.field_y);
+          var7 = new re(this.children);
           if (param3 <= 109) {
-            this.field_y = (IntrusiveDeque) null;
+            this.children = (IntrusiveDeque) null;
           }
           var8 = (UiWidget) (var7.a((byte) 110));
           while (var8 != null) {
             if (var8.e(17)) {
-              var8.a(this.field_k + param0, this.field_w + param1, param2, (byte) 116, param4, param5);
+              var8.a(this.y + param0, this.x + param1, param2, (byte) 116, param4, param5);
               var8 = (UiWidget) (var7.b(true));
               continue;
             }
@@ -247,17 +247,17 @@ class hn extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var7 = Torquing.field_u;
         try {
-          if (this.field_y.e(-93)) {
+          if (this.children.e(-93)) {
             return false;
           }
-          var8 = new re(this.field_y);
+          var8 = new re(this.children);
           var4 = (UiWidget) (var8.a((byte) 84));
           if (param1 != -9928) {
             field_z = 67;
           }
           while (var4 != null) {
             if (var4.g(2)) {
-              var5 = new re(this.field_y);
+              var5 = new re(this.children);
               var5.a(param1 + 23699, var4);
               var6 = (UiWidget) (var5.b(true));
               while (var6 != null) {
@@ -290,7 +290,7 @@ class hn extends UiWidget implements cj {
         String var4;
         int var5;
         var5 = Torquing.field_u;
-        var2 = new re(this.field_y);
+        var2 = new re(this.children);
         var3 = (UiWidget) (var2.a((byte) 63));
         if (param0 != 0) {
           field_A = (String) null;
@@ -319,15 +319,15 @@ class hn extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var8 = Torquing.field_u;
         try {
-          if (this.field_y.e(-102)) {
+          if (this.children.e(-102)) {
             return false;
           }
-          var9 = new re(this.field_y);
+          var9 = new re(this.children);
           var5 = -124 / ((param0 + 40) / 51);
           var4 = (UiWidget) (var9.a(17514));
           while (var4 != null) {
             if (var4.g(2)) {
-              var6 = new re(this.field_y);
+              var6 = new re(this.children);
               var6.a(var4, -27392);
               var7 = (UiWidget) (var6.a(true));
               while (var7 != null) {
@@ -359,7 +359,7 @@ class hn extends UiWidget implements cj {
         int var5 = 0;
         int var6 = Torquing.field_u;
         int var2 = 0;
-        re var3 = new re(this.field_y);
+        re var3 = new re(this.children);
         if (param0 != 28) {
           return -77;
         }
@@ -388,11 +388,11 @@ class hn extends UiWidget implements cj {
         try {
           super.a(-123, param1, param2, param3);
           var6 = -74 % ((param0 + 28) / 43);
-          var5 = new re(this.field_y);
+          var5 = new re(this.children);
           var7 = (UiWidget) (var5.a((byte) 29));
           while (var7 != null) {
             if (var7.e(17)) {
-              var7.a(113, param1, this.field_k + param2, this.field_w + param3);
+              var7.a(113, param1, this.y + param2, this.x + param3);
               var7 = (UiWidget) (var5.b(true));
               continue;
             }
@@ -415,9 +415,9 @@ class hn extends UiWidget implements cj {
 
     final void c(byte param0) {
         int var4 = Torquing.field_u;
-        re var2 = new re(this.field_y);
+        re var2 = new re(this.children);
         if (param0 < 89) {
-          this.field_y = (IntrusiveDeque) null;
+          this.children = (IntrusiveDeque) null;
         }
         UiWidget var3 = (UiWidget) (var2.a((byte) 84));
         while (var3 != null) {
@@ -439,14 +439,14 @@ class hn extends UiWidget implements cj {
         this.a(true);
     }
 
-    hn(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4, (ca) null);
-        this.field_y = new IntrusiveDeque();
+        this.children = new IntrusiveDeque();
     }
 
     UiWidget a(int param0) {
         int var4 = Torquing.field_u;
-        re var2 = new re(this.field_y);
+        re var2 = new re(this.children);
         UiWidget var3 = (UiWidget) (var2.a((byte) 49));
         while (var3 != null) {
           if (var3.g(2)) {
@@ -472,14 +472,14 @@ class hn extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var10 = Torquing.field_u;
         try {
-          var8 = new re(this.field_y);
+          var8 = new re(this.children);
           if (param6 <= 5) {
-            hn.f((byte) 79);
+            WidgetContainer.f((byte) 79);
           }
           var9 = (UiWidget) (var8.a((byte) 122));
           while (var9 != null) {
             if (var9.e(17)) {
-              if (var9.a(param0, param1 + this.field_w, this.field_k + param2, param3, param4, param5, (byte) 58)) {
+              if (var9.a(param0, param1 + this.x, this.y + param2, param3, param4, param5, (byte) 58)) {
                 return true;
               }
               var9 = (UiWidget) (var8.b(true));
@@ -513,7 +513,7 @@ class hn extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var5 = Torquing.field_u;
         try {
-          var3 = new re(this.field_y);
+          var3 = new re(this.children);
           if (param1) {
             field_A = (String) null;
           }
@@ -546,7 +546,7 @@ class hn extends UiWidget implements cj {
     public static void f(byte param0) {
         if (param0 != 2) {
           String var2 = (String) null;
-          hn.a((String) null, (byte) -33);
+          WidgetContainer.a((String) null, (byte) -33);
         }
         field_A = null;
     }
@@ -566,7 +566,7 @@ class hn extends UiWidget implements cj {
         var8 = Torquing.field_u;
         try {
           var5_int = -43 % ((param3 + 33) / 57);
-          var6 = new re(this.field_y);
+          var6 = new re(this.children);
           var9 = (UiWidget) (var6.a((byte) 125));
           while (var9 != null) {
             if (var9.e(17)) {

@@ -43,7 +43,7 @@ final class ri extends lg {
             return false;
           }
           var8_int = -param1 + (param4 - this.field_F);
-          var9 = this.field_p - 2 * this.field_F;
+          var9 = this.width - 2 * this.field_F;
           if (var9 < var8_int) {
             var8_int = var9;
           }

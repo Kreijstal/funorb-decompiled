@@ -56,15 +56,15 @@ class lg extends UiWidget {
           return;
         }
         this.field_z = false;
-        if (null == this.field_t) {
+        if (null == this.listener) {
           if (param0 >= 89) {
             return;
           }
           this.c((byte) 22);
           return;
         }
-        if (this.field_t instanceof ek) {
-          ((ek) (this.field_t)).a(14381, this.field_z, (UiWidget) (this));
+        if (this.listener instanceof ek) {
+          ((ek) (this.listener)).a(14381, this.field_z, (UiWidget) (this));
           if (param0 >= 89) {
             return;
           }
@@ -92,19 +92,19 @@ class lg extends UiWidget {
         if (param2 != -1) {
           Hashtable var6 = (Hashtable) null;
           this.a((StringBuilder) null, (byte) -119, (Hashtable) null, -87);
-          if (null != this.field_t) {
-            if (this.field_t instanceof ng) {
-              ((ng) (this.field_t)).a((byte) -116, this, param0, param1, param3);
+          if (null != this.listener) {
+            if (this.listener instanceof ng) {
+              ((ng) (this.listener)).a((byte) -116, this, param0, param1, param3);
             }
             return;
           }
           return;
         }
-        if (null == this.field_t) {
+        if (null == this.listener) {
           return;
         }
-        if (this.field_t instanceof ng) {
-          ((ng) (this.field_t)).a((byte) -116, this, param0, param1, param3);
+        if (this.listener instanceof ng) {
+          ((ng) (this.listener)).a((byte) -116, this, param0, param1, param3);
           return;
         }
     }
@@ -121,9 +121,9 @@ class lg extends UiWidget {
             this.field_y) {
             param0.c((byte) 91);
             this.field_z = true;
-            if (null != this.field_t &&
-              this.field_t instanceof ek) {
-              ((ek) (this.field_t)).a(14381, this.field_z, (UiWidget) (this));
+            if (null != this.listener &&
+              this.listener instanceof ek) {
+              ((ek) (this.listener)).a(14381, this.field_z, (UiWidget) (this));
             }
             if (param1) {
               var4 = (UiWidget) null;
@@ -148,9 +148,9 @@ class lg extends UiWidget {
 
     final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         try {
-          if (this.field_t != null &&
-            this.field_t instanceof ck) {
-            ((ck) (this.field_t)).a(param1, this, param2, param5, param0, -710);
+          if (this.listener != null &&
+            this.listener instanceof ck) {
+            ((ck) (this.listener)).a(param1, this, param2, param5, param0, -710);
           }
           if (param3 < 109) {
             UiWidget var8 = (UiWidget) null;
@@ -214,9 +214,9 @@ class lg extends UiWidget {
             this.a(param3, param4, param1, param2, 81)) {
             this.a(param5, false);
             this.field_l = param0;
-            if (null != this.field_t &&
-              this.field_t instanceof ck) {
-              ((ck) (this.field_t)).a(param0, param4, param3, param2, this, -78, param1);
+            if (null != this.listener &&
+              this.listener instanceof ck) {
+              ((ck) (this.listener)).a(param0, param4, param3, param2, this, -78, param1);
             }
             return true;
           }
@@ -337,7 +337,7 @@ class lg extends UiWidget {
         this.field_y = true;
         this.field_z = false;
         this.field_x = true;
-        this.field_q = ah.field_c.field_a;
+        this.renderer = ah.field_c.field_a;
     }
 
     static {

@@ -154,13 +154,13 @@ final class jd extends jh {
           var8 = lp.field_d;
           if (var8 != null &&
             this.a(param5, param2, param1, param0, 121)) {
-            if (!(this.field_t instanceof dm)) {
-              if (var8.field_t instanceof dm) {
-                ((dm) (var8.field_t)).a(3139, var8, this);
+            if (!(this.listener instanceof dm)) {
+              if (var8.listener instanceof dm) {
+                ((dm) (var8.listener)).a(3139, var8, this);
                 lp.field_d = null;
               }
             } else {
-              ((dm) (this.field_t)).a(3139, var8, this);
+              ((dm) (this.listener)).a(3139, var8, this);
               lp.field_d = null;
             }
           }

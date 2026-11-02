@@ -194,7 +194,7 @@ final class jn {
                 stackIn_43_0 = kc.field_x;
               }
               var9 = stackIn_43_0;
-              var1_int = var1_int + hn.field_z;
+              var1_int = var1_int + WidgetContainer.field_z;
               if (var9 != null) {
                 var9.a(-aq.field_b + var8Lifetime1, (ln.field_D << 1) + kp.field_d, (aq.field_b << 1) + var7Lifetime1, (byte) 119, var1_int);
               }
@@ -202,7 +202,7 @@ final class jn {
             }
             if (0 <= var4) {
               sp.field_Q.b(var6, var8Lifetime1, var1_int + bi.field_p, var5, -1);
-              var1_int = var1_int + (hn.field_z + (ln.field_D + kp.field_d));
+              var1_int = var1_int + (WidgetContainer.field_z + (ln.field_D + kp.field_d));
             } else {
               bo.field_e.b(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
               var1_int = var1_int + bp.field_e;

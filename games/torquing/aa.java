@@ -21,7 +21,7 @@ abstract class aa extends im {
           }
           int var3_int = 54 % ((-33 - param0) / 56);
           if (param1 != null) {
-            param1.a((byte) 125, 6, this.field_N + 6, param1.field_o, param1.field_p);
+            param1.a((byte) 125, 6, this.field_N + 6, param1.height, param1.width);
             this.field_T = new fq(param1);
           } else {
             this.field_T = new fq();
@@ -45,7 +45,7 @@ abstract class aa extends im {
             return;
           }
           if (this.field_S == IsaacCipher.field_b) {
-            this.b(this.field_N + 12 + this.field_V.field_o, (byte) -15, this.field_O, this.field_V.field_p + 12);
+            this.b(this.field_N + 12 + this.field_V.height, (byte) -15, this.field_O, this.field_V.width + 12);
             this.field_P = 0;
             return;
           }
@@ -70,7 +70,7 @@ abstract class aa extends im {
     }
 
     aa(ln param0, UiWidget param1, int param2, int param3, int param4) {
-        super(param0, param1.field_p + 12, param1.field_o + 12 + param2);
+        super(param0, param1.width + 12, param1.height + 12 + param2);
         try {
           this.field_R = param3;
           this.field_W = param3;
@@ -107,7 +107,7 @@ abstract class aa extends im {
               return super.h(param0 + 0);
             }
             this.field_S = IsaacCipher.field_b;
-            this.b(this.field_V.field_o + (12 + this.field_N), (byte) -15, this.field_O, 12 + this.field_V.field_p);
+            this.b(this.field_V.height + (12 + this.field_N), (byte) -15, this.field_O, 12 + this.field_V.width);
             this.field_T.field_D = 0;
             this.field_P = 0;
             if (param0 != -7) {
@@ -190,7 +190,7 @@ abstract class aa extends im {
           return;
         }
         if (ql.field_s != this.field_S) {
-          this.a(this.field_V.field_p + 12, (byte) -25, this.field_N + 12 + this.field_V.field_o);
+          this.a(this.field_V.width + 12, (byte) -25, this.field_N + 12 + this.field_V.height);
           this.b((byte) -101, this.field_V);
         } else {
           this.field_S = null;

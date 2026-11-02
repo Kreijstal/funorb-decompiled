@@ -30,8 +30,8 @@ final class ub extends lg {
         if (param1 > -7) {
           return;
         }
-        var5 = (this.field_p >> 1) + this.field_w + param3;
-        var6 = this.field_k + param2 + (this.field_o >> 1);
+        var5 = (this.width >> 1) + this.x + param3;
+        var6 = this.y + param2 + (this.height >> 1);
         var8 = this.field_F.a((byte) -87);
         if (var8 == IntrusiveNode.field_a) {
           var16 = wj.field_h[0];

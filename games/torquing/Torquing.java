@@ -260,7 +260,7 @@ public final class Torquing extends tg {
           lg.i(52);
           jh.a((byte) 69);
           im.k(-126);
-          hn.f((byte) 2);
+          WidgetContainer.f((byte) 2);
           re.b(21007);
           r.b(param0 + 33423357);
           p.b(29841);
@@ -678,10 +678,10 @@ public final class Torquing extends tg {
                                 IsaacPacketBuffer.a(27.0f, -72, c.a(17, tf.field_a, "", ac.field_A, th.field_C));
                                 return false;
                               }
-                              IsaacPacketBuffer.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", hn.field_A, vd.field_e));
+                              IsaacPacketBuffer.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", WidgetContainer.field_A, vd.field_e));
                               return false;
                             }
-                            IsaacPacketBuffer.a(23.0f, param1 ^ 41, c.a(17, fn.field_a, "", hn.field_A, bp.field_c));
+                            IsaacPacketBuffer.a(23.0f, param1 ^ 41, c.a(17, fn.field_a, "", WidgetContainer.field_A, bp.field_c));
                             return false;
                           }
                           IsaacPacketBuffer.a(20.0f, param1 + 110, il.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));

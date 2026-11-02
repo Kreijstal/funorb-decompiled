@@ -25,7 +25,7 @@ final class gp extends tk implements wg {
     final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(-73, param1, param2, param3);
-          this.field_O = -this.field_w + n.field_t - param3;
+          this.field_O = -this.x + n.field_t - param3;
           int var5_int = -91 % ((param0 + 28) / 43);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -39,7 +39,7 @@ final class gp extends tk implements wg {
         if (this.field_n == null) {
           return null;
         }
-        bm.a(k.field_e, (byte) 113, -this.field_O + (this.field_p + n.field_t));
+        bm.a(k.field_e, (byte) 113, -this.field_O + (this.width + n.field_t));
         if (param0 == 0) {
           return this.field_n;
         }

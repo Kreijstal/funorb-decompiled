@@ -42,7 +42,7 @@ final class um extends gf {
             stackIn_8_0 = (cd) null;
             return stackIn_8_0;
           }
-          if (!param1.equals(this.field_n.field_m)) {
+          if (!param1.equals(this.field_n.text)) {
             stackIn_12_0 = so.field_u;
           } else {
             stackIn_12_0 = so.field_s;
@@ -80,7 +80,7 @@ final class um extends gf {
             var3 = ((wg) ((Object) this.field_n)).a(param0 ^ 10235);
             if (var3 != null) {
               if (var3.a((byte) -91) == so.field_s &&
-                !param1.equals(this.field_n.field_m)) {
+                !param1.equals(this.field_n.text)) {
                 stackIn_9_0 = hm.field_u;
                 return stackIn_9_0;
               }
@@ -88,7 +88,7 @@ final class um extends gf {
               return stackIn_11_0;
             }
           }
-          if (param1.equals(this.field_n.field_m)) {
+          if (param1.equals(this.field_n.text)) {
             return null;
           }
           stackIn_15_0 = hm.field_u;

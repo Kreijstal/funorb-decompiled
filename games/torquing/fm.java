@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm extends hn implements ng {
+final class fm extends WidgetContainer implements ng {
     private lg field_C;
     static int field_E;
     private lg field_D;
@@ -46,12 +46,12 @@ final class fm extends hn implements ng {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = param3 + this.field_w;
-        int var6 = param2 + this.field_k;
+        int var5 = param3 + this.x;
+        int var6 = param2 + this.y;
         if (param1 > -7) {
           field_E = 119;
         }
-        dg.field_e.a(jl.field_U, 20 + var5, var6 + 20, -40 + this.field_p, -50 + this.field_o, 16777215, -1, 1, 0, dg.field_e.field_x);
+        dg.field_e.a(jl.field_U, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, dg.field_e.field_x);
         super.a(param0, (byte) -112, param2, param3);
     }
 
@@ -185,18 +185,18 @@ final class fm extends hn implements ng {
         this.field_D = new lg(cm.field_k, (ca) null);
         this.field_B = new lg(ha.field_c, (ca) null);
         rf var1 = new rf();
-        this.field_C.field_q = (WidgetRenderer) ((Object) var1);
-        this.field_D.field_q = (WidgetRenderer) ((Object) var1);
-        this.field_B.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_C.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_D.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_B.renderer = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_D.a((byte) -52, this.field_p - var3 >> 1, -var2 + (-48 + this.field_o), 30, var4);
-        this.field_B.a((byte) 126, (this.field_p - var3 >> 1) + var4 + var2, -var2 + (-48 + this.field_o), 30, var4);
-        this.field_C.a((byte) 124, -var3 + this.field_p >> 1, -78 + this.field_o - var2 * 2, 30, var3);
-        this.field_D.field_t = (ca) (this);
-        this.field_C.field_t = (ca) (this);
-        this.field_B.field_t = (ca) (this);
+        this.field_D.a((byte) -52, this.width - var3 >> 1, -var2 + (-48 + this.height), 30, var4);
+        this.field_B.a((byte) 126, (this.width - var3 >> 1) + var4 + var2, -var2 + (-48 + this.height), 30, var4);
+        this.field_C.a((byte) 124, -var3 + this.width >> 1, -78 + this.height - var2 * 2, 30, var3);
+        this.field_D.listener = (ca) (this);
+        this.field_C.listener = (ca) (this);
+        this.field_B.listener = (ca) (this);
         this.field_C.field_n = um.field_q;
         this.field_B.field_n = ll.field_m;
         this.a(this.field_D, -6938);

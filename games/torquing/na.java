@@ -296,17 +296,17 @@ final class na extends jh {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = this.field_w + param3;
+        int var5 = this.x + param3;
         if (param1 >= -7) {
           this.b(85);
         }
-        int var6 = param2 + this.field_k;
+        int var6 = param2 + this.y;
         super.a(param0, (byte) -91, param2, param3);
         if (param0 != 0) {
           return;
         }
-        int var7 = !this.field_J ? 0 : -this.field_H + (this.field_p - 2 * this.field_M);
-        this.field_L.a(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.field_o - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
+        int var7 = !this.field_J ? 0 : -this.field_H + (this.width - 2 * this.field_M);
+        this.field_L.a(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.height - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
     }
 
     final String b(int param0) {

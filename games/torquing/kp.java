@@ -10,7 +10,7 @@ final class kp {
     final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
         try {
           tl.field_n = param8;
-          hn.field_x = param4;
+          WidgetContainer.field_x = param4;
           Torquing.field_x = param1;
           if (param7) {
             field_d = 19;

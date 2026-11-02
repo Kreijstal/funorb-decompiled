@@ -765,10 +765,10 @@ abstract class tg extends GameApplet {
                 var12 = ub.field_G.a(true);
                 if (var12 == null) {
                   var9 = (String) null;
-                  hn.a((String) null, (byte) -126);
+                  WidgetContainer.a((String) null, (byte) -126);
                 } else {
                   var7 = GameApplet.a(var12.position, true, 0, var12.payload);
-                  hn.a(var7, (byte) -84);
+                  WidgetContainer.a(var7, (byte) -84);
                 }
                 ub.field_G = null;
               }
@@ -777,7 +777,7 @@ abstract class tg extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               nn.a("S1", (Throwable) ((Object) var5), -9958);
               var10 = (String) null;
-              hn.a((String) null, (byte) -87);
+              WidgetContainer.a((String) null, (byte) -87);
               ub.field_G = null;
             }
           }

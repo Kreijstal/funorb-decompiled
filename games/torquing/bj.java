@@ -70,14 +70,14 @@ final class bj extends rb {
           var25 = this.field_I.a(126);
           if (var25 == null) {
             var30 = this.field_J;
-            if (!var30.equals(this.field_m)) {
-              this.field_m = var30;
+            if (!var30.equals(this.text)) {
+              this.text = var30;
               this.a((byte) -36);
             }
             super.a(param0, (byte) -63, param2, param3);
             var6 = this.field_I.a((byte) -84);
-            var37 = (fe) ((Object) this.field_q);
-            var9 = this.field_w + param3;
+            var37 = (fe) ((Object) this.renderer);
+            var9 = this.x + param3;
             var10 = var37.a((UiWidget) (this), param2, -101) + (var37.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
             if (var6 != IntrusiveNode.field_a &&
               var6 != IsaacCipher.field_h) {
@@ -118,14 +118,14 @@ final class bj extends rb {
             this.field_G.a(var9 - (var34.field_w >> 1), var10 - var34.field_u, 256);
             return;
           }
-          if (!var25.equals(this.field_m)) {
-            this.field_m = var25;
+          if (!var25.equals(this.text)) {
+            this.text = var25;
             this.a((byte) -36);
           }
           super.a(param0, (byte) -63, param2, param3);
           var6 = this.field_I.a((byte) -84);
-          var36 = (fe) ((Object) this.field_q);
-          var9Lifetime2 = this.field_w + param3;
+          var36 = (fe) ((Object) this.renderer);
+          var9Lifetime2 = this.x + param3;
           var10Lifetime2 = var36.a((UiWidget) (this), param2, -101) + (var36.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
           if (var6 != IntrusiveNode.field_a &&
             var6 != IsaacCipher.field_h) {
@@ -168,14 +168,14 @@ final class bj extends rb {
           return;
         }
         var18 = rg.field_C;
-        if (!var18.equals(this.field_m)) {
-          this.field_m = var18;
+        if (!var18.equals(this.text)) {
+          this.text = var18;
           this.a((byte) -36);
         }
         super.a(param0, (byte) -63, param2, param3);
         var6Lifetime1 = this.field_I.a((byte) -84);
-        var35 = (fe) ((Object) this.field_q);
-        var9Lifetime1 = this.field_w + param3;
+        var35 = (fe) ((Object) this.renderer);
+        var9Lifetime1 = this.x + param3;
         var10Lifetime1 = var35.a((UiWidget) (this), param2, -101) + (var35.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
         if (var6Lifetime1 != IntrusiveNode.field_a &&
           var6Lifetime1 != IsaacCipher.field_h) {

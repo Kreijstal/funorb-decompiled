@@ -141,7 +141,7 @@ class pc implements WidgetRenderer, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 8557) {
-            stackIn_4_0 = -this.field_p + (param0.field_o - this.field_o);
+            stackIn_4_0 = -this.field_p + (param0.height - this.field_o);
             return stackIn_4_0;
           }
           stackIn_2_0 = -106;
@@ -196,7 +196,7 @@ class pc implements WidgetRenderer, fe {
               stackIn_5_3 = var8.field_a;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            ld.a(param1.field_p + (param0 + param1.field_w), param0 + param1.field_w, param1.field_o + param4 + param1.field_k, param1.field_k + param4, (byte) -116);
+            ld.a(param1.width + (param0 + param1.x), param0 + param1.x, param1.height + param4 + param1.y, param1.y + param4, (byte) -116);
             ah.field_c.a(var11, var12, false, var10, this.field_j, var10);
             r.a(126);
           }
@@ -259,7 +259,7 @@ class pc implements WidgetRenderer, fe {
             var4 = (UiWidget) null;
             this.a((byte) -109, (UiWidget) null);
           }
-          stackIn_3_0 = param1.field_m;
+          stackIn_3_0 = param1.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -369,7 +369,7 @@ class pc implements WidgetRenderer, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -1) {
-            stackIn_4_0 = -this.field_e + (-this.field_k + param0.field_p);
+            stackIn_4_0 = -this.field_e + (-this.field_k + param0.width);
             return stackIn_4_0;
           }
           stackIn_2_0 = -14;
@@ -402,7 +402,7 @@ class pc implements WidgetRenderer, fe {
         int var12Lifetime1;
         var13 = Torquing.field_u;
         try {
-          ld.a(param1.field_p + (param1.field_w + param2), param2 + param1.field_w, param5 + param1.field_k + param1.field_o, param1.field_k + param5, (byte) -105);
+          ld.a(param1.width + (param1.x + param2), param2 + param1.x, param5 + param1.y + param1.height, param1.y + param5, (byte) -105);
           if (param0 != -2) {
             field_d = (int[]) null;
           }
@@ -515,7 +515,7 @@ class pc implements WidgetRenderer, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 2) {
-            stackIn_4_0 = param3.field_j + this.field_k + (param3.field_w + (param1 + param0));
+            stackIn_4_0 = param3.field_j + this.field_k + (param3.x + (param1 + param0));
             return stackIn_4_0;
           }
           stackIn_2_0 = 11;
@@ -583,7 +583,7 @@ class pc implements WidgetRenderer, fe {
           }
           var10 = var18.b(var8, (byte) 110);
           var11 = var18.b(var9, (byte) 110);
-          ld.a(param5.field_p + (param5.field_w + param0), param5.field_w + param0, param5.field_o + param5.field_k + param4, param4 + param5.field_k, (byte) -97);
+          ld.a(param5.width + (param5.x + param0), param5.x + param0, param5.height + param5.y + param4, param4 + param5.y, (byte) -97);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_c[var12];
             if (var12 == var10) {
@@ -602,7 +602,7 @@ class pc implements WidgetRenderer, fe {
               }
             }
             var15 = stackIn_20_0;
-            ah.field_c.a(param3 + 1436133735, -var14 + var15, var13.field_a, this.a(var14, param0, param3 ^ -1419356518, param5), this.field_b >>> 24, var13.field_c + param5.field_v + (this.field_p + param5.field_k) + param4, this.field_b);
+            ah.field_c.a(param3 + 1436133735, -var14 + var15, var13.field_a, this.a(var14, param0, param3 ^ -1419356518, param5), this.field_b >>> 24, var13.field_c + param5.field_v + (this.field_p + param5.y) + param4, this.field_b);
           }
           r.a(127);
           return;
@@ -672,7 +672,7 @@ class pc implements WidgetRenderer, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 58 % ((param0 - 36) / 35);
-          stackIn_1_0 = this.field_p + (param2 - (-param1.field_k - (param1.field_v + param3)));
+          stackIn_1_0 = this.field_p + (param2 - (-param1.y - (param1.field_v + param3)));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

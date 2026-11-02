@@ -97,7 +97,7 @@ final class ok extends lg {
     private ok(String param0, WidgetRenderer param1, ca param2) {
         super(param0, param1, param2);
         try {
-          this.field_q = ah.field_c.field_i;
+          this.renderer = ah.field_c.field_i;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -141,7 +141,7 @@ final class ok extends lg {
     private ok(String param0, ca param1) {
         this(param0, ah.field_c.field_k, param1);
         try {
-          this.field_q = ah.field_c.field_i;
+          this.renderer = ah.field_c.field_i;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

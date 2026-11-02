@@ -45,15 +45,15 @@ final class rn implements WidgetRenderer {
             stackIn_4_0 = (UiWidget) (param4);
           }
           var12 = (ri) (stackIn_4_0);
-          SoftwareRasterizer.d(param2 + param4.field_w, param1 + param4.field_k, param4.field_p, param4.field_o, this.field_i);
+          SoftwareRasterizer.d(param2 + param4.x, param1 + param4.y, param4.width, param4.height, this.field_i);
           if (var12 != null) {
           }
           if (param0 < 89) {
             return;
           }
-          var7 = -(2 * var12.field_F) + param4.field_p;
-          var8 = param4.field_w + param2 + var12.field_F;
-          var9 = var12.field_C + (param1 + param4.field_k);
+          var7 = -(2 * var12.field_F) + param4.width;
+          var8 = param4.x + param2 + var12.field_F;
+          var9 = var12.field_C + (param1 + param4.y);
           SoftwareRasterizer.a(var8, var9, var7 + var8, var9, this.field_g);
           for (var10 = var12.a(0) - 1; 0 <= var10; var10--) {
             SoftwareRasterizer.d(var8 + var7 * var12.b(var10, 0) / var12.a((byte) -108), var9, this.field_k, this.field_h);
@@ -61,7 +61,7 @@ final class rn implements WidgetRenderer {
           if (this.field_c == null) {
             return;
           }
-          this.field_c.c(var12.field_m, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
+          this.field_c.c(var12.text, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

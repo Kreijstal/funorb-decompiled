@@ -4,20 +4,20 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    int field_p;
-    WidgetRenderer field_q;
+    int width;
+    WidgetRenderer renderer;
     int field_l;
-    int field_w;
+    int x;
     String field_n;
     uj field_u;
-    int field_k;
+    int y;
     static sm[] field_r;
-    ca field_t;
+    ca listener;
     boolean field_s;
-    String field_m;
+    String text;
     int field_j;
     int field_v;
-    int field_o;
+    int height;
 
     public static void d(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -96,8 +96,8 @@ class UiWidget extends IntrusiveNode {
               this.a(param2, param1, n.field_t, (byte) 111, this, k.field_e);
               var6 = lp.field_d;
               if (var6 != null) {
-                if (var6.field_t instanceof dm) {
-                  ((dm) (var6.field_t)).a(3139, var6, (jd) null);
+                if (var6.listener instanceof dm) {
+                  ((dm) (var6.listener)).a(3139, var6, (jd) null);
                 }
                 lp.field_d = null;
               }
@@ -372,9 +372,9 @@ class UiWidget extends IntrusiveNode {
           stackIn_4_0 = (this.field_s) ? 0 : 1;
           if (stackIn_4_0 == var5_int) {
             this.field_s = var5_int != 0;
-            if (null != this.field_t &&
-              this.field_t instanceof jc) {
-              ((jc) (this.field_t)).a(12359, this, var5_int != 0);
+            if (null != this.listener &&
+              this.listener instanceof jc) {
+              ((jc) (this.listener)).a(12359, this, var5_int != 0);
             }
           }
           return;
@@ -411,12 +411,12 @@ class UiWidget extends IntrusiveNode {
         int var6 = 0;
         var6 = Torquing.field_u;
         try {
-          discarded$0 = param0.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_w).append(",").append(this.field_k).append(" ").append(this.field_p).append("x").append(this.field_o);
+          discarded$0 = param0.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
           if (!param2) {
             return;
           }
-          if (this.field_m != null) {
-            discarded$1 = param0.append(" text=\"").append(this.field_m).append('"');
+          if (this.text != null) {
+            discarded$1 = param0.append(" text=\"").append(this.text).append('"');
           }
           if (this.field_s) {
             discarded$2 = param0.append(" mouseover");
@@ -424,21 +424,21 @@ class UiWidget extends IntrusiveNode {
           if (this.g(2)) {
             discarded$3 = param0.append(" focused");
           }
-          if (null != this.field_q) {
+          if (null != this.renderer) {
             discarded$4 = param0.append(" renderer=");
-            if (this.field_q instanceof UiWidget) {
+            if (this.renderer instanceof UiWidget) {
               param0 = this.a(param0, (byte) 117, param3, 1 + param1);
               if (var6 != 0) {
-                discarded$5 = param0.append(this.field_q);
+                discarded$5 = param0.append(this.renderer);
               }
             } else {
-              discarded$5 = param0.append(this.field_q);
+              discarded$5 = param0.append(this.renderer);
             }
           }
-          if (null != this.field_t) {
+          if (null != this.listener) {
             discarded$6 = param0.append(" listener=");
-            if (!(this.field_t instanceof UiWidget)) {
-              discarded$7 = param0.append(this.field_t);
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$7 = param0.append(this.listener);
               if (var6 == 0) {
                 return;
               }
@@ -577,7 +577,7 @@ class UiWidget extends IntrusiveNode {
     void c(byte param0) {
         try {
           if (param0 <= 89) {
-            this.field_k = -96;
+            this.y = -96;
           }
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.T(" + param0 + ')');
@@ -626,10 +626,10 @@ class UiWidget extends IntrusiveNode {
     void a(byte param0, int param1, int param2, int param3, int param4) {
         try {
           int var6_int = -104 / ((param0 - 66) / 57);
-          this.field_o = param3;
-          this.field_k = param2;
-          this.field_p = param4;
-          this.field_w = param1;
+          this.height = param3;
+          this.y = param2;
+          this.width = param4;
+          this.x = param1;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gm.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -646,7 +646,7 @@ class UiWidget extends IntrusiveNode {
         try {
           var4_int = this.d((byte) 28);
           if (param2 != 113) {
-            this.field_p = 89;
+            this.width = 89;
           }
           var5_int = 0;
           while (var4_int >= var5_int) {
@@ -671,7 +671,7 @@ class UiWidget extends IntrusiveNode {
 
     final void e(byte param0) {
         try {
-          this.a((byte) 3, this.field_w, this.field_k, this.field_o, this.field_p);
+          this.a((byte) 3, this.x, this.y, this.height, this.width);
           if (param0 != 88) {
             this.a(-127, (StringBuilder) null, (Hashtable) null, 78);
           }
@@ -808,7 +808,7 @@ class UiWidget extends IntrusiveNode {
           if (param4 < 57) {
             return false;
           }
-          stackIn_16_0 = ((param2 + this.field_w) <= param1) && (this.field_k + param3 <= param0) && ((this.field_p + (param2 + this.field_w)) > param1) && (param0 < (this.field_o + (param3 + this.field_k)));
+          stackIn_16_0 = ((param2 + this.x) <= param1) && (this.y + param3 <= param0) && ((this.width + (param2 + this.x)) > param1) && (param0 < (this.height + (param3 + this.y)));
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -825,8 +825,8 @@ class UiWidget extends IntrusiveNode {
             return;
           }
           if (param0 == 0 &&
-            null != this.field_q) {
-            this.field_q.a(109, param2, param3, true, this);
+            null != this.renderer) {
+            this.renderer.a(109, param2, param3, true, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -881,13 +881,13 @@ class UiWidget extends IntrusiveNode {
         this.field_j = 0;
         this.field_v = 0;
         try {
-          this.field_q = param1;
-          this.field_t = param2;
-          this.field_m = param0;
-          if (this.field_q instanceof fe) {
-            var4 = (fe) ((Object) this.field_q);
-            this.field_p = var4.a((byte) 89, this);
-            this.field_o = var4.a(this, 2);
+          this.renderer = param1;
+          this.listener = param2;
+          this.text = param0;
+          if (this.renderer instanceof fe) {
+            var4 = (fe) ((Object) this.renderer);
+            this.width = var4.a((byte) 89, this);
+            this.height = var4.a(this, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -927,12 +927,12 @@ class UiWidget extends IntrusiveNode {
         this.field_j = 0;
         this.field_v = 0;
         try {
-          this.field_t = param5;
-          this.field_k = param1;
-          this.field_q = param4;
-          this.field_o = param3;
-          this.field_p = param2;
-          this.field_w = param0;
+          this.listener = param5;
+          this.y = param1;
+          this.renderer = param4;
+          this.height = param3;
+          this.width = param2;
+          this.x = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

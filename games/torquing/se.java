@@ -118,7 +118,7 @@ final class se extends pc {
             stackIn_3_0 = (UiWidget) (param4);
           }
           var11 = (lg) (stackIn_3_0);
-          ld.a(param4.field_p + (param4.field_w + param2), param4.field_w + param2, param1 - (-param4.field_k - param4.field_o), param4.field_k + param1, (byte) -108);
+          ld.a(param4.width + (param4.x + param2), param4.x + param2, param1 - (-param4.y - param4.height), param4.y + param1, (byte) -108);
           if (param0 < 89) {
             var10 = (Sprite) null;
             this.a((byte) 52, (Sprite) null);

@@ -65,8 +65,8 @@ final class rf extends pc {
           var7 = stackIn_15_0;
           stackIn_18_0 = (!param3) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
-          wp.a(param1 + (param4.field_k + (-this.field_s[0].field_u + param4.field_o >> 1)), var7, param4.field_p, false, param4.field_w + param2, this.field_s);
-          this.field_m.a(param4.field_m, param2 + param4.field_w, -2 + (param1 + param4.field_k), param4.field_p, param4.field_o, var8, -1, 1, 1, this.field_m.field_x);
+          wp.a(param1 + (param4.y + (-this.field_s[0].field_u + param4.height >> 1)), var7, param4.width, false, param4.x + param2, this.field_s);
+          this.field_m.a(param4.text, param2 + param4.x, -2 + (param1 + param4.y), param4.width, param4.height, var8, -1, 1, 1, this.field_m.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -109,7 +109,7 @@ abstract class jh extends UiWidget implements cj {
           var5_int = -52 / ((param0 + 28) / 43);
           super.a(26, param1, param2, param3);
           if (null != this.field_C) {
-            this.field_C.a(27, param1, this.field_k + param2, param3 + this.field_w);
+            this.field_C.a(27, param1, this.y + param2, param3 + this.x);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,11 +153,11 @@ abstract class jh extends UiWidget implements cj {
     void a(int param0, byte param1, int param2, int param3) {
         boolean discarded$0 = false;
         if (param0 == 0 &&
-          this.field_q != null) {
-          this.field_q.a(108, param2, param3, true, (UiWidget) (this));
+          this.renderer != null) {
+          this.renderer.a(108, param2, param3, true, (UiWidget) (this));
         }
         if (this.field_C != null) {
-          this.field_C.a(param0, (byte) -107, this.field_k + param2, param3 + this.field_w);
+          this.field_C.a(param0, (byte) -107, this.y + param2, param3 + this.x);
         }
         if (param1 > -7) {
           UiWidget var6 = (UiWidget) null;
@@ -199,7 +199,7 @@ abstract class jh extends UiWidget implements cj {
           if (param6 < 5) {
             field_A = -64;
           }
-          stackIn_6_0 = (this.field_C != null) && (this.field_C.a(param0, this.field_w + param1, this.field_k + param2, param3, param4, param5, (byte) 100));
+          stackIn_6_0 = (this.field_C != null) && (this.field_C.a(param0, this.x + param1, this.y + param2, param3, param4, param5, (byte) 100));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ abstract class jh extends UiWidget implements cj {
         }
         try {
           if (this.field_C != null) {
-            this.field_C.a(this.field_k + param0, param1 + this.field_w, param2, (byte) 119, param4, param5);
+            this.field_C.a(this.y + param0, param1 + this.x, param2, (byte) 119, param4, param5);
           }
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jh.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');

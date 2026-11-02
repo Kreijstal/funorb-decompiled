@@ -269,7 +269,7 @@ final class ka extends IntrusiveNode {
           }
           bh.field_b = vk.field_A + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           v.field_a = -(var3_intLifetime1 >> 1) + vk.field_A;
-          ii.field_k = (hn.field_z + ln.field_D << 1) * kb.field_g.field_i;
+          ii.field_k = (WidgetContainer.field_z + ln.field_D << 1) * kb.field_g.field_i;
           for (var4Lifetime2 = 0; wh.field_z.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = ii.field_k;
             if (0 <= mn.field_Z[var4Lifetime2]) {
@@ -289,14 +289,14 @@ final class ka extends IntrusiveNode {
               var5Lifetime3 = var5Lifetime3 + bp.field_e;
             } else {
               var7Lifetime2 = mh.a(true, -119, wh.field_z[var4Lifetime3]);
-              var5Lifetime3 = var5Lifetime3 + hn.field_z;
+              var5Lifetime3 = var5Lifetime3 + WidgetContainer.field_z;
               var8Lifetime1 = vk.field_A - (var7Lifetime2 >> 1);
               kb.field_e[var4Lifetime3] = new int[4];
               kb.field_e[var4Lifetime3][0] = -aq.field_b + var8Lifetime1;
               kb.field_e[var4Lifetime3][1] = var5Lifetime3;
               kb.field_e[var4Lifetime3][2] = var7Lifetime2 + (aq.field_b << 1);
               kb.field_e[var4Lifetime3][3] = (ln.field_D << 1) + kp.field_d;
-              var5Lifetime3 = var5Lifetime3 + (hn.field_z + ((ln.field_D << 1) + kp.field_d));
+              var5Lifetime3 = var5Lifetime3 + (WidgetContainer.field_z + ((ln.field_D << 1) + kp.field_d));
             }
             var4Lifetime3++;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bb extends hn {
+abstract class bb extends WidgetContainer {
     private ln field_C;
     boolean field_D;
     private int field_B;
@@ -115,88 +115,88 @@ abstract class bb extends hn {
         }
         if (this.field_B >= 256) {
           if (param0 == 0) {
-            this.b(this.field_k + param2, param3 + this.field_w, (byte) -117);
+            this.b(this.y + param2, param3 + this.x, (byte) -117);
             super.a(param0, (byte) -19, param2, param3);
             return;
           }
           return;
         }
         if (null == RandomAccessCacheFile.field_b) {
-          RandomAccessCacheFile.field_b = new Sprite(this.field_p, this.field_o);
+          RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
-            super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+            super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
-            RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+            RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
-          super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+          super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
-        if (this.field_p > RandomAccessCacheFile.field_b.field_s) {
-          RandomAccessCacheFile.field_b = new Sprite(this.field_p, this.field_o);
+        if (this.width > RandomAccessCacheFile.field_b.field_s) {
+          RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
-            super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+            super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
-            RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+            RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
-          super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+          super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
-        if (this.field_o > RandomAccessCacheFile.field_b.field_t) {
-          RandomAccessCacheFile.field_b = new Sprite(this.field_p, this.field_o);
+        if (this.height > RandomAccessCacheFile.field_b.field_t) {
+          RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
             SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
-            super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+            super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
-            RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+            RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
-          super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+          super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
         if (param1 <= -7) {
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
           SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
-          super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+          super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
         this.a((byte) -26);
         GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
         SoftwareRasterizer.b();
         this.b(0, 0, (byte) -127);
-        super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
+        super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
         r.a(126);
-        RandomAccessCacheFile.field_b.e(param3 + this.field_w, this.field_k + param2, this.field_B);
+        RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
     }
 
     static {

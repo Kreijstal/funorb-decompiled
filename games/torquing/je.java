@@ -37,27 +37,27 @@ final class je implements WidgetRenderer {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
+          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.text + "</u>", param4.x + param2, param4.y + param1, param4.width, param4.height, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
           if (!param4.g(2)) {
             return;
           }
-          var7 = this.field_h.a(param4.field_m);
+          var7 = this.field_h.a(param4.text);
           var8 = this.field_h.field_x + this.field_h.field_t;
-          var9 = param4.field_w + param2;
-          var10 = param4.field_k + param1;
+          var9 = param4.x + param2;
+          var10 = param4.y + param1;
           if (this.field_b != 2) {
             if (1 == this.field_b) {
-              var9 = var9 + (-var7 + param4.field_p >> 1);
+              var9 = var9 + (-var7 + param4.width >> 1);
             }
           } else {
-            var9 = var9 + (param4.field_p - var7);
+            var9 = var9 + (param4.width - var7);
           }
           if (this.field_d != 2) {
             if (1 == this.field_d) {
-              var10 = var10 + (param4.field_o - var8 >> 1);
+              var10 = var10 + (param4.height - var8 >> 1);
             }
           } else {
-            var10 = var10 + (-var8 + param4.field_o);
+            var10 = var10 + (-var8 + param4.height);
           }
           he.a(-2 + var9, var8, var10 + 2, 2, 4 + var7);
           return;

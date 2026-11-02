@@ -40,12 +40,12 @@ final class oj implements WidgetRenderer {
             param3 = param3 & var11.field_x;
           }
           var7 = 5592405;
-          SoftwareRasterizer.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_d);
+          SoftwareRasterizer.d(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
-          var8 = param4.field_w + param2 + this.field_k;
-          var9 = this.field_j + param4.field_k + param1;
+          var8 = param4.x + param2 + this.field_k;
+          var9 = this.field_j + param4.y + param1;
           SoftwareRasterizer.e(var8, var9, this.field_i, this.field_e, 5592405);
           if (param0 <= 89) {
             return;
@@ -57,7 +57,7 @@ final class oj implements WidgetRenderer {
           }
           if (null != this.field_c) {
             var10 = this.field_i + this.field_k + this.field_b;
-            this.field_c.a(param4.field_m, var10 + (param2 + param4.field_w), param4.field_k + (param1 + this.field_g), param4.field_p - var10 - this.field_b, -(this.field_b << 1) + param4.field_o, this.field_f, this.field_n, this.field_m, this.field_h, 0);
+            this.field_c.a(param4.text, var10 + (param2 + param4.x), param4.y + (param1 + this.field_g), param4.width - var10 - this.field_b, -(this.field_b << 1) + param4.height, this.field_f, this.field_n, this.field_m, this.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

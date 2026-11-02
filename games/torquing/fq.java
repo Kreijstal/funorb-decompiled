@@ -8,9 +8,9 @@ final class fq extends jh {
     static boolean field_E;
 
     fq(UiWidget param0) {
-        super(param0.field_w, param0.field_k, param0.field_p, param0.field_o, (WidgetRenderer) null, (ca) null);
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (ca) null);
         try {
-          param0.a((byte) -83, 0, 0, this.field_o, this.field_p);
+          param0.a((byte) -83, 0, 0, this.height, this.width);
           this.field_D = 256;
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {
@@ -35,15 +35,15 @@ final class fq extends jh {
           return;
         }
         if (256 == this.field_D) {
-          this.field_C.a(param0, (byte) -70, param2 + this.field_k, this.field_w + param3);
+          this.field_C.a(param0, (byte) -70, param2 + this.y, this.x + param3);
           return;
         }
         if (param1 <= -7) {
-          var5 = new Sprite(this.field_C.field_p, this.field_C.field_o);
+          var5 = new Sprite(this.field_C.width, this.field_C.height);
           GzipDecompressor.a((byte) 34, var5);
           this.field_C.a(param0, (byte) -61, 0, 0);
           r.a(122);
-          var5.e(param3 + this.field_w, this.field_k + param2, this.field_D);
+          var5.e(param3 + this.x, this.y + param2, this.field_D);
           return;
         }
     }

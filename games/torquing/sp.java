@@ -102,7 +102,7 @@ final class sp extends im {
     final void b(int param0, int param1, byte param2) {
         if (param2 <= -16) {
           super.b(param0, param1, (byte) -75);
-          pe.field_E.c(this.field_S, param1 + (this.field_p >> 1), param0 + 103, 16777215, -1);
+          pe.field_E.c(this.field_S, param1 + (this.width >> 1), param0 + 103, 16777215, -1);
           if (null != this.field_N) {
             SoftwareRasterizer.b(20 + param1, -7 + (param0 + 120), 260, 8421504);
             pe.field_E.a(this.field_N, 20 + param1, 8 + param0 + 120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);

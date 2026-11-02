@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo extends hn implements ng {
+final class fo extends WidgetContainer implements ng {
     private int field_J;
     static String field_E;
     private int[] field_H;
@@ -112,7 +112,7 @@ final class fo extends hn implements ng {
 
     final void a(int param0, byte param1, int param2, int param3) {
         super.a(param0, (byte) -29, param2, param3);
-        this.field_G.a(this.field_B, this.field_w + (param3 + 14), this.field_k + (param2 + 10), this.field_p - 28, this.field_o, 16777215, -1, 0, 0, this.field_G.field_x);
+        this.field_G.a(this.field_B, this.x + (param3 + 14), this.y + (param2 + 10), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_G.field_x);
         if (param1 >= -7) {
           ca var6 = (ca) null;
           this.a(92, (String) null, (ca) null);
@@ -173,10 +173,10 @@ final class fo extends hn implements ng {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new lg(param1, param2);
-          var4.field_q = (WidgetRenderer) ((Object) new rf());
-          var5 = -2 + this.field_o;
-          this.a((byte) 127, param0, 0, 34 + this.field_o, this.field_p);
-          var4.a((byte) -42, 7, var5, 30, -14 + this.field_p);
+          var4.renderer = (WidgetRenderer) ((Object) new rf());
+          var5 = -2 + this.height;
+          this.a((byte) 127, param0, 0, 34 + this.height, this.width);
+          var4.a((byte) -42, 7, var5, 30, -14 + this.width);
           this.a(var4, -6938);
           stackIn_1_0 = var4;
           return stackIn_1_0;

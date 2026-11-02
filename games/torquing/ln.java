@@ -37,8 +37,8 @@ final class ln extends jh {
 
     final void a(int param0, byte param1, int param2, int param3) {
         int var7 = Torquing.field_u;
-        if (null != this.field_q) {
-          this.field_q.a(114, param2, param3, true, (UiWidget) (this));
+        if (null != this.renderer) {
+          this.renderer.a(114, param2, param3, true, (UiWidget) (this));
         }
         re var5 = new re(this.field_E);
         if (param1 > -7) {
@@ -46,7 +46,7 @@ final class ln extends jh {
         }
         UiWidget var6 = (UiWidget) (var5.a(17514));
         while (var6 != null) {
-          var6.a(param0, (byte) -58, param2 + this.field_k, param3 + this.field_w);
+          var6.a(param0, (byte) -58, param2 + this.y, param3 + this.x);
           var6 = (UiWidget) (var5.a(true));
         }
     }

@@ -36,21 +36,21 @@ final class kb implements WidgetRenderer {
         int var7 = 0;
         Sprite var8 = null;
         try {
-          var6_int = param4.field_w + param2;
-          var7 = param4.field_k + param1;
+          var6_int = param4.x + param2;
+          var7 = param4.y + param1;
           if (param0 < 89) {
             kb.a((byte) -45);
           }
-          tk.a(var7, var6_int, param4.field_o, param4.field_p, false);
+          tk.a(var7, var6_int, param4.height, param4.width, false);
           var8 = wj.field_h[1];
           if (param4 instanceof lg &&
             ((lg) (param4)).field_A) {
-            var8.a((-var8.field_w + param4.field_p >> 1) + 1 + var6_int, (-var8.field_u + param4.field_o >> 1) + var7 + 1, 256);
+            var8.a((-var8.field_w + param4.width >> 1) + 1 + var6_int, (-var8.field_u + param4.height >> 1) + var7 + 1, 256);
           }
           if (!param4.g(2)) {
             return;
           }
-          he.a(2 + var6_int, param4.field_o - 4, 2 + var7, 2, param4.field_p - 4);
+          he.a(2 + var6_int, param4.height - 4, 2 + var7, 2, param4.width - 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

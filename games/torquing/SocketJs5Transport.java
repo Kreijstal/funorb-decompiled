@@ -2318,7 +2318,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "loading_soundeffects");
                 if (var2 != null) {
-                  hn.field_A = SecondaryNodeDeque.a(var2, false);
+                  WidgetContainer.field_A = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "loading_music");
                 if (var2 != null) {

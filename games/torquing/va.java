@@ -117,8 +117,8 @@ final class va extends lg {
             va.a(56, (CharSequence) null);
             return false;
           }
-          var8_int = param4 - this.field_G - (param1 + this.field_w);
-          var9 = -this.field_k + (-param2 - this.field_F + param3);
+          var8_int = param4 - this.field_G - (param1 + this.x);
+          var9 = -this.y + (-param2 - this.field_F + param3);
           if (this.field_C * this.field_C > var9 * var9 + var8_int * var8_int) {
             var10 = Math.atan2((double)var9, (double)var8_int) - wa.field_e;
             if (0.0 > var10) {

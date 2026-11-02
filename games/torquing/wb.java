@@ -218,9 +218,9 @@ final class wb extends am {
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.b(mo.field_w);
             var14 = ff.a(new String[]{rl.field_b[ProxySocketConnector.field_j]}, 0, wc.field_t);
-            var5 = lh.field_O.b(var14, hn.field_x);
-            var6Lifetime1 = lh.field_O.a(var14, hn.field_x, lh.field_O.field_x + lh.field_O.field_t);
-            var7Lifetime1 = (-var5 + hn.field_x) / 2 + up.field_d;
+            var5 = lh.field_O.b(var14, WidgetContainer.field_x);
+            var6Lifetime1 = lh.field_O.a(var14, WidgetContainer.field_x, lh.field_O.field_x + lh.field_O.field_t);
+            var7Lifetime1 = (-var5 + WidgetContainer.field_x) / 2 + up.field_d;
             var5 += 6;
             var8 = lb.field_y + (-var6Lifetime1 + wh.field_w) / 2;
             var7Lifetime1 -= 3;
@@ -265,7 +265,7 @@ final class wb extends am {
             j.field_F.a();
             var9 = new Sprite(j.field_F.field_w, j.field_F.field_u);
             var9.e();
-            lh.field_O.a(var14, up.field_d, lb.field_y, hn.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
+            lh.field_O.a(var14, up.field_d, lb.field_y, WidgetContainer.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
             hb.a(0, false, var9, var9.field_u, var9.field_w, 1, 0, 3);
             j.field_F.e();
             var9.d(0, 0);
