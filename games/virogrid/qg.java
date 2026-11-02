@@ -12,7 +12,7 @@ final class qg extends IntrusiveNode {
     int field_t;
     static ul field_r;
     int field_i;
-    static Sprite[] field_j;
+    static Sprite[] frameBottomSprites;
     int field_o;
     static int field_n;
     static Sprite field_u;
@@ -102,13 +102,13 @@ final class qg extends IntrusiveNode {
         field_u = null;
         field_s = null;
         field_l = null;
-        field_j = null;
+        frameBottomSprites = null;
         field_m = null;
         if (param0 >= 104) {
           field_r = null;
           return;
         }
-        field_j = (Sprite[]) null;
+        frameBottomSprites = (Sprite[]) null;
         field_r = null;
     }
 

@@ -12,7 +12,7 @@ final class cf {
         int var1 = -95 / ((param0 - 66) / 45);
     }
 
-    final static void a(Js5Archive param0, Js5Archive param1, int param2, Js5Archive param3) {
+    final static void loadCommonUi(Js5Archive param0, Js5Archive param1, int param2, Js5Archive param3) {
         Sprite var17 = null;
         rm[] var5 = null;
         rm[][] var6 = null;
@@ -34,14 +34,14 @@ final class cf {
           if (param2 < 51) {
             cf.a(105);
           }
-          qm.field_Kb = ke.a(32, param0, "commonui", "frame_top");
-          qg.field_j = ke.a(32, param0, "commonui", "frame_bottom");
-          ed.field_d = sn.a(param0, "jagex_logo_grey", "commonui", false);
-          td.field_g = ke.a(32, param0, "commonui", "button");
+          qm.frameTopSprites = ke.a(32, param0, "commonui", "frame_top");
+          qg.frameBottomSprites = ke.a(32, param0, "commonui", "frame_bottom");
+          ed.jagexLogoGrey = sn.a(param0, "jagex_logo_grey", "commonui", false);
+          td.buttonSprites = ke.a(32, param0, "commonui", "button");
           bf.field_p = jj.a("commonui", param0, false, "validation");
-          dk.field_j = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo12", param3));
-          dj.field_h = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14", param3));
-          on.field_b = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14bold", param3));
+          dk.arezzo12Font = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo12", param3));
+          dj.arezzo14Font = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14", param3));
+          on.arezzo14BoldFont = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14bold", param3));
           var17 = new Sprite(param1.a("button.gif", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
           vc.a(param0, "dropdown", "commonui", (byte) 39);
           var5 = ke.a("screen_options", "commonui", param0, 32370);
@@ -82,7 +82,7 @@ final class cf {
           var12.b();
           var17.b(-var9Lifetime1, 0);
           ai.a(true);
-          td.field_g = new Sprite[]{var15, var12, var11};
+          td.buttonSprites = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "cf.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

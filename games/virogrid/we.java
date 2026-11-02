@@ -7,7 +7,7 @@ final class we {
     static String field_f;
     static int field_l;
     static int field_a;
-    static km field_c;
+    static SpriteWidget field_c;
     static Sprite field_e;
     static float field_k;
     static int field_d;

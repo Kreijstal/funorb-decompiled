@@ -166,7 +166,7 @@ final class mk extends dc implements ta {
           var4.field_m = 80;
           var4.field_l = 0;
           var4.field_g = this.field_g;
-          var4.listener = (WidgetListener) ((Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.listener = (WidgetListener) ((Object) new aj(dk.arezzo12Font, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -78);
           this.field_db = this.a(je.field_I, (cd) (this), (byte) 75);
           return;

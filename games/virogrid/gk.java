@@ -9,9 +9,9 @@ final class gk implements Iterable {
     int field_a;
     static IntrusiveDeque field_f;
     IntrusiveNode[] field_h;
-    static km field_b;
+    static SpriteWidget field_b;
     private IntrusiveNode field_d;
-    static km field_e;
+    static SpriteWidget field_e;
 
     public static void a(byte param0) {
         try {
@@ -81,9 +81,9 @@ final class gk implements Iterable {
         int stackIn_7_5;
         boolean stackIn_8_6 = false;
         gh stackIn_12_0 = null;
-        km stackIn_37_0 = null;
+        SpriteWidget stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        km stackIn_41_0 = null;
+        SpriteWidget stackIn_41_0 = null;
         String stackIn_42_1 = null;
         int stackIn_46_0 = 0;
         Object stackIn_87_0 = null;
@@ -140,11 +140,11 @@ final class gk implements Iterable {
               stackIn_12_0 = stackOut_11_0;
               if (var19 == 0) {
                 if (stackIn_12_0.field_W == null) {
-                  var7.field_Eb = new km(0L, gg.field_F);
+                  var7.field_Eb = new SpriteWidget(0L, gg.field_F);
                   var7.a(0, var7.field_Eb);
-                  var7.field_Gb = new km(0L, jd.field_d);
+                  var7.field_Gb = new SpriteWidget(0L, jd.field_d);
                   var7.a(0, var7.field_Gb);
-                  var7.field_Mb = new km(0L, gg.field_F);
+                  var7.field_Mb = new SpriteWidget(0L, gg.field_F);
                   var7.a(0, var7.field_Mb);
                   var7.field_Gb.field_lb = 2;
                   var8 = 1;
@@ -166,7 +166,7 @@ final class gk implements Iterable {
                 if (null != var7.field_Jb &&
                   !var7.field_Jb.equals("")) {
                   var7.field_Mb.field_ab = var11;
-                  var7.field_Mb.field_qb = qg.field_u;
+                  var7.field_Mb.normalSprite = qg.field_u;
                   var7.field_Mb.a(0, pg.field_e, qg.field_u.field_u + 3, (byte) -94, var9);
                   var12 = 1;
                 }
@@ -207,7 +207,7 @@ final class gk implements Iterable {
                   var7.field_kb = -var7.field_ub + var9;
                 }
                 if (var8 != 0) {
-                  ve.field_q.field_Lb.a(2, var7, (km) (var6), (byte) 113);
+                  ve.field_q.field_Lb.a(2, var7, (SpriteWidget) (var6), (byte) 113);
                 }
                 if (var7.field_Mb != null &&
                   var7.field_Mb.field_S) {
@@ -243,7 +243,7 @@ final class gk implements Iterable {
             if (decompiledNaturalLoopExit0) {
               stackIn_87_0 = ve.field_q.field_Fb;
             }
-            if (((km) (stackIn_87_0)).field_nb != 0) {
+            if (((SpriteWidget) (stackIn_87_0)).field_nb != 0) {
               he.field_Xb = new fe(ve.field_q.field_Fb.field_Bb, ve.field_q.field_Fb.field_J, ve.field_q.field_Fb.field_K, ve.field_q.field_Fb.field_ub, jd.field_e, s.field_f, ti.field_h, ti.field_h);
               ge.field_d = 0;
             }
@@ -367,7 +367,7 @@ final class gk implements Iterable {
             field_c = (byte[][][]) null;
           }
           fe.field_Fb = true;
-          hf.field_w = new sh(tm.field_l, on.field_b, param1, kb.field_c, IntrusiveDeque.field_f);
+          hf.field_w = new sh(tm.field_l, on.arezzo14BoldFont, param1, kb.field_c, IntrusiveDeque.field_f);
           tm.field_l.a(0, hf.field_w);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

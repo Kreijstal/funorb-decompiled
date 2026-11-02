@@ -11,7 +11,7 @@ final class pm extends IntrusiveNode {
     int field_r;
     int field_m;
     static MouseInputHandler field_l;
-    static km field_n;
+    static SpriteWidget field_n;
     static int field_k;
     static byte[] field_p;
     static e field_j;

@@ -16,7 +16,7 @@ abstract class od extends GameApplet {
     private int field_z;
     private boolean field_x;
     private boolean field_u;
-    static km field_y;
+    static SpriteWidget field_y;
     private int field_k;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
@@ -410,7 +410,7 @@ abstract class od extends GameApplet {
           var3 = 1200 * wh.a((byte) 5);
           if (this.field_q ||
             !(lj.c(-28791807) <= var3) &&
-            !(km.e(-87) <= var3)) {
+            !(SpriteWidget.e(-87) <= var3)) {
             this.field_q = false;
             tn.a(false);
             ve.c((byte) -50);
@@ -594,7 +594,7 @@ abstract class od extends GameApplet {
           }
         }
         if (!param0 &&
-          km.field_Db) {
+          SpriteWidget.field_Db) {
           af.a((byte) -116, UiWidget.field_v);
           this.recreateCanvas(21616);
           nn.a(UiWidget.field_v, (byte) -124);
@@ -805,7 +805,7 @@ abstract class od extends GameApplet {
                 }
               }
             } else {
-              km.d((byte) 76);
+              SpriteWidget.d((byte) 76);
             }
           } else {
             BufferedSocket.e(-2);

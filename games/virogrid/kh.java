@@ -9,8 +9,8 @@ final class kh {
     static String field_a;
     static ob field_e;
     static int field_d;
-    static km field_g;
-    static km field_b;
+    static SpriteWidget field_g;
+    static SpriteWidget field_b;
 
     public static void a(byte param0) {
         field_c = null;
@@ -124,7 +124,7 @@ final class kh {
         }
     }
 
-    final static void a(km param0, int param1, int param2) {
+    final static void a(SpriteWidget param0, int param1, int param2) {
         dj var9 = null;
         Sprite var11 = null;
         String var10 = null;

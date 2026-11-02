@@ -7,7 +7,7 @@ final class se {
     static int field_d;
     static String field_b;
     static String[] field_f;
-    static km field_c;
+    static SpriteWidget field_c;
     private static String field_z;
 
     public static void a(byte param0) {

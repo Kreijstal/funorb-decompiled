@@ -4,8 +4,8 @@
 class nk extends tg {
     private String[] field_F;
     static String field_M;
-    static km field_H;
-    static km field_I;
+    static SpriteWidget field_H;
+    static SpriteWidget field_I;
     private IntrusiveDeque field_G;
     static String field_J;
     private pb field_L;

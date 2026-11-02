@@ -3,7 +3,7 @@
  */
 final class IntrusiveDeque {
     static int field_d;
-    static km field_a;
+    static SpriteWidget field_a;
     static int field_h;
     static ul field_b;
     static byte[] field_e;
@@ -16,7 +16,7 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0) {
-          field_a = (km) null;
+          field_a = (SpriteWidget) null;
           var2 = this.field_i.next;
           if (this.field_i == var2) {
             this.field_c = null;

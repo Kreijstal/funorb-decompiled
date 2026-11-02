@@ -7,7 +7,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_a;
     static String text3d;
     static boolean field_c;
-    static km field_b;
+    static SpriteWidget field_b;
     static String field_e;
     static int field_d;
 
@@ -85,11 +85,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     }
 
     final static void a(int param0) {
-        ij.field_k = new km(0L, (km) null);
+        ij.field_k = new SpriteWidget(0L, (SpriteWidget) null);
         if (!ql.field_d) {
           ij.field_k.a(0, ij.field_m);
           dd.field_b = new jm(fj.field_a, ij.field_k);
-          WidgetContainer.field_y = new km(0L, (km) null);
+          WidgetContainer.field_y = new SpriteWidget(0L, (SpriteWidget) null);
           WidgetContainer.field_y.a(0, dd.field_b.field_c);
           WidgetContainer.field_y.a(param0, s.field_b);
           id.b(param0 - 105);
@@ -98,7 +98,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         ij.field_k.a(0, qd.field_f);
         ij.field_k.a(0, ij.field_m);
         dd.field_b = new jm(fj.field_a, ij.field_k);
-        WidgetContainer.field_y = new km(0L, (km) null);
+        WidgetContainer.field_y = new SpriteWidget(0L, (SpriteWidget) null);
         WidgetContainer.field_y.a(0, dd.field_b.field_c);
         WidgetContainer.field_y.a(param0, s.field_b);
         id.b(param0 - 105);

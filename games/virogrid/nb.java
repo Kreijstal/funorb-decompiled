@@ -7,7 +7,7 @@ abstract class nb extends DualLinkNode {
     boolean field_w;
     static int field_s;
     static og field_p;
-    static km field_r;
+    static SpriteWidget field_r;
     static il field_x;
     static int[][] field_q;
     volatile boolean field_t;

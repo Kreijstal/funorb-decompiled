@@ -7,7 +7,7 @@ final class nd {
     static String field_b;
     private boolean field_e;
     static co field_j;
-    static km field_a;
+    static SpriteWidget field_a;
     private int[] field_f;
     private int field_i;
     static long field_c;
@@ -55,7 +55,7 @@ final class nd {
           this.field_f = var4;
           return;
         }
-        field_a = (km) null;
+        field_a = (SpriteWidget) null;
         ek.a(this.field_f, 0, var4, 0, this.field_f.length);
         this.field_f = var4;
     }

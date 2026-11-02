@@ -36,7 +36,7 @@ final class b extends sh implements ta {
     }
 
     b(je param0, qh param1) {
-        super(param0, on.field_b, aj.field_e, false, false);
+        super(param0, on.arezzo14BoldFont, aj.field_e, false, false);
         try {
           this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
@@ -136,7 +136,7 @@ final class b extends sh implements ta {
               }
             }
           }
-          var5 = new sf((sh) (this), on.field_b, var4);
+          var5 = new sf((sh) (this), on.arezzo14BoldFont, var4);
           if (!param0.field_a) {
             if (this.field_Bb) {
               var5.a((cd) (this), 260, md.field_c);

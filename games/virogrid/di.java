@@ -4,7 +4,7 @@
 final class di extends qe {
     private String field_s;
     static int field_o;
-    static km field_n;
+    static SpriteWidget field_n;
     private boolean field_p;
     static IntrusiveDeque field_v;
     static String field_q;
@@ -151,11 +151,11 @@ final class di extends qe {
     final static id c(byte param0) {
         if (null == ca.field_Q) {
           ca.field_Q = new id();
-          ca.field_Q.a((byte) 119, dj.field_h);
+          ca.field_Q.a((byte) 119, dj.arezzo14Font);
           ca.field_Q.field_n = 5;
           ca.field_Q.field_e = 2763306;
           ca.field_Q.field_g = 6;
-          ca.field_Q.field_o = dk.field_j;
+          ca.field_Q.field_o = dk.arezzo12Font;
           ca.field_Q.field_k = 14;
           ca.field_Q.field_s = 7697781;
           ca.field_Q.field_q = 0;

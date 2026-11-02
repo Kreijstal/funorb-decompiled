@@ -16,7 +16,7 @@ final class wm {
     int[] field_n;
     short[] field_t;
     int[] field_c;
-    static km field_m;
+    static SpriteWidget field_m;
     int field_T;
     short[] field_j;
     short[] field_e;
@@ -320,7 +320,7 @@ final class wm {
         }
         ch.a(true);
         vb.a((byte) -124);
-        km.field_yb = null;
+        SpriteWidget.field_yb = null;
         f.a((byte) -42);
     }
 

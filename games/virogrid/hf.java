@@ -80,10 +80,10 @@ final class hf extends aj {
 
     private hf(int param0, int param1, int param2) {
         this.field_u = param2;
-        this.field_x = td.field_g;
+        this.field_x = td.buttonSprites;
         this.field_B = param0;
         this.field_y = param1;
-        this.field_i = on.field_b;
+        this.field_i = on.arezzo14BoldFont;
     }
 
     public hf() {

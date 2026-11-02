@@ -68,7 +68,7 @@ abstract class hm {
         int var6 = 0;
         int var11 = 0;
         int stackIn_6_0 = 0;
-        km stackIn_8_0;
+        SpriteWidget stackIn_8_0;
         int stackIn_8_1;
         int stackIn_8_2;
         int stackIn_8_3;
@@ -80,10 +80,10 @@ abstract class hm {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        km var7 = null;
+        SpriteWidget var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        km var8_ref_km = null;
+        SpriteWidget var8_ref_km = null;
         hk var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -114,7 +114,7 @@ abstract class hm {
           } else {
             stackIn_9_4 = 4 + (oc.field_k + 40);
           }
-          ((km) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3 - stackIn_9_4, (byte) -105, 2 + pg.field_e);
+          ((SpriteWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3 - stackIn_9_4, (byte) -105, 2 + pg.field_e);
           gn.field_F.a(-oc.field_k + (ia.field_d.field_K - 42), 18, 42 + oc.field_k, (byte) -107, 2 + pg.field_e);
           wm.field_r.a(2 + pg.field_e + 20, -114, ia.field_d.field_K, 2, -pg.field_e + (ia.field_d.field_ub - 2 - 20), 0, oc.field_k);
           CellFlip.field_o.a(0, 40, ao.field_Eb.field_K, (byte) -120, -40 + ao.field_Eb.field_ub);

@@ -5,7 +5,7 @@ import java.io.*;
 
 abstract class dk {
     static on field_e;
-    static e field_j;
+    static e arezzo12Font;
     static oj field_v;
     static String field_o;
     static String field_a;
@@ -164,7 +164,7 @@ abstract class dk {
         field_r = null;
         field_q = null;
         field_m = null;
-        field_j = null;
+        arezzo12Font = null;
         int var1 = 68 % ((param0 + 29) / 43);
         field_o = null;
         field_e = null;

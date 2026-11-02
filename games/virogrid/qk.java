@@ -21,7 +21,7 @@ final class qk {
     }
 
     final static void a(boolean param0, int param1, byte param2, boolean param3, boolean param4) {
-        km stackIn_18_0 = null;
+        SpriteWidget stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -35,11 +35,11 @@ final class qk {
         boolean stackIn_136_0 = false;
         boolean stackIn_152_0 = false;
         int stackIn_158_0 = 0;
-        km stackIn_178_0 = null;
+        SpriteWidget stackIn_178_0 = null;
         boolean stackIn_179_1 = false;
-        km stackIn_185_0 = null;
+        SpriteWidget stackIn_185_0 = null;
         boolean stackIn_186_1 = false;
-        km stackIn_190_0 = null;
+        SpriteWidget stackIn_190_0 = null;
         boolean stackIn_191_1 = false;
         Object stackIn_192_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -47,9 +47,9 @@ final class qk {
         boolean stackOut_135_0;
         boolean stackOut_151_0;
         RuntimeException var5 = null;
-        km var6 = null;
-        km var7 = null;
-        km var8 = null;
+        SpriteWidget var6 = null;
+        SpriteWidget var7 = null;
+        SpriteWidget var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -71,12 +71,12 @@ final class qk {
         lk var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        km var22 = null;
+        SpriteWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        km var27 = null;
+        SpriteWidget var27 = null;
         int stackIn_54_0Lifetime1;
         int stackIn_54_1Lifetime1;
         int stackIn_63_0Lifetime1;
@@ -472,16 +472,16 @@ final class qk {
           if (decompiledFrameCompleted1) {
             stackIn_178_0 = ao.field_Eb;
             stackIn_179_1 = (param3) && (!param0) && (!ad.field_h);
-            ((km) (Object) stackIn_178_0).a(stackIn_179_1, (byte) 94);
+            ((SpriteWidget) (Object) stackIn_178_0).a(stackIn_179_1, (byte) 94);
             if (param2 < 1) {
               return;
             }
             stackIn_185_0 = dm.field_r;
             stackIn_186_1 = (param3) && (!param0) && (!ad.field_h);
-            ((km) (Object) stackIn_185_0).a(stackIn_186_1, (byte) 123);
+            ((SpriteWidget) (Object) stackIn_185_0).a(stackIn_186_1, (byte) 123);
             stackIn_190_0 = pm.field_n;
             stackIn_191_1 = (param3) && (!param0) && (ad.field_h);
-            ((km) (Object) stackIn_190_0).a(stackIn_191_1, (byte) 122);
+            ((SpriteWidget) (Object) stackIn_190_0).a(stackIn_191_1, (byte) 122);
             he.field_pc.field_c.g(0);
             stackIn_192_0 = null;
           }

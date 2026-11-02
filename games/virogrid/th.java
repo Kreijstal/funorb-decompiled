@@ -11,7 +11,7 @@ final class th extends DualLinkNode {
     static String field_r;
     static String[][] field_p;
     static il field_y;
-    static km[] field_o;
+    static SpriteWidget[] field_o;
     static String field_s;
     static boolean field_q;
 

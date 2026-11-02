@@ -4,7 +4,7 @@
 final class ee {
     static String textEndgameEntrapment;
     static String tutorial1;
-    static km field_e;
+    static SpriteWidget field_e;
     static il field_a;
     static wl field_c;
     static String field_d;

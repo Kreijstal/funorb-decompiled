@@ -5,7 +5,7 @@ final class pa extends AudioStream {
     IntrusiveDeque field_k;
     private i field_m;
     static ob field_l;
-    static km field_o;
+    static SpriteWidget field_o;
     r field_n;
 
     final static int[] a(int param0, int param1, int param2) {
@@ -347,7 +347,7 @@ final class pa extends AudioStream {
 
     public static void c(boolean param0) {
         if (!param0) {
-          field_o = (km) null;
+          field_o = (SpriteWidget) null;
         }
         field_l = null;
         field_o = null;

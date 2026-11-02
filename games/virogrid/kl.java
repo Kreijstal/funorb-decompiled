@@ -56,7 +56,7 @@ final class kl extends WidgetContainer implements ta {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_H[var4_int] = ji.a(11, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new ti(dj.field_h, 0, 1);
+            var4 = new ti(dj.arezzo14Font, 0, 1);
             this.field_F = new tg[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_F[var5] = new tg(this.field_H[var5], (cd) (this));
@@ -206,7 +206,7 @@ final class kl extends WidgetContainer implements ta {
         if (param3 != 0) {
           return;
         }
-        e var5 = dj.field_h;
+        e var5 = dj.arezzo14Font;
         if (this.field_H != null) {
           var5.a(bg.field_Pb, this.field_l + param1, param2 + this.field_u, this.field_g, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_H);
         }

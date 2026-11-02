@@ -5,7 +5,7 @@ final class CellFlip extends IntrusiveNode {
     int field_h;
     boolean newOwnerIsFirstPlayer;
     int phase;
-    static km field_o;
+    static SpriteWidget field_o;
     int column;
     static int[] field_p;
     static String field_m;

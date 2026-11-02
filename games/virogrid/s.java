@@ -8,10 +8,10 @@ final class s {
     static String field_c;
     int field_e;
     int field_d;
-    static km field_b;
+    static SpriteWidget field_b;
     static int field_g;
     int field_i;
-    static km field_f;
+    static SpriteWidget field_f;
 
     final static boolean b(byte param0) {
         int var1 = -51 / ((param0 + 22) / 47);

@@ -6,7 +6,7 @@ final class qc {
     private int field_e;
     String field_j;
     static PlatformTaskDispatcher field_f;
-    static km field_i;
+    static SpriteWidget field_i;
     static int field_c;
     float field_a;
     private int field_d;

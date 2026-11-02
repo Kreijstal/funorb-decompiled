@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends km {
-    static km field_Ib;
+final class na extends SpriteWidget {
+    static SpriteWidget field_Ib;
     static String field_Eb;
-    private km field_Jb;
+    private SpriteWidget field_Jb;
     static lc field_Fb;
     static String field_Gb;
     static int field_Hb;
@@ -66,7 +66,7 @@ final class na extends km {
         field_Gb = null;
     }
 
-    na(km param0, km param1, km param2, km param3, km param4, km param5) {
+    na(SpriteWidget param0, SpriteWidget param1, SpriteWidget param2, SpriteWidget param3, SpriteWidget param4, SpriteWidget param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -83,27 +83,27 @@ final class na extends km {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        km var8 = null;
-        km var9 = null;
+        SpriteWidget var8 = null;
+        SpriteWidget var9 = null;
         int var10 = 0;
         int var11 = 0;
-        km var13 = null;
-        km var14 = null;
+        SpriteWidget var13 = null;
+        SpriteWidget var14 = null;
         int var15 = 0;
-        km var17 = null;
+        SpriteWidget var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new km(0L, param1, je.field_G.toUpperCase());
+          var17 = new SpriteWidget(0L, param1, je.field_G.toUpperCase());
           var17.field_lb = 1;
-          this.field_Jb = new km(0L, param2);
-          var8 = new km(0L, param3);
-          var9 = new km(0L, param3, ImageProducerRasterBuffer.field_q);
+          this.field_Jb = new SpriteWidget(0L, param2);
+          var8 = new SpriteWidget(0L, param3);
+          var9 = new SpriteWidget(0L, param3, ImageProducerRasterBuffer.field_q);
           var9.field_lb = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; dl.field_a.length > var12; var12++) {
-            var13 = new km(0L, param3, lb.field_b[var12]);
-            var14 = new km(0L, param3, dl.field_a[var12]);
+            var13 = new SpriteWidget(0L, param3, lb.field_b[var12]);
+            var14 = new SpriteWidget(0L, param3, dl.field_a[var12]);
             var15 = param3.field_C.a(dl.field_a[var12]);
             var13.a(20, 15, 65, (byte) -76, var10);
             if (var11 < var15) {

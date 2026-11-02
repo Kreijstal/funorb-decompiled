@@ -6,7 +6,7 @@ final class vf {
     static on field_b;
     static aj field_f;
     static String field_a;
-    static km field_e;
+    static SpriteWidget field_e;
     static int field_c;
 
     final static void a(int param0) {

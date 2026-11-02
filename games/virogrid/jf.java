@@ -29,7 +29,7 @@ final class jf {
           }
           w.field_I = oe.a("", false);
           w.field_I.a(false, 11358);
-          cf.a(param2, param3, 60, param1);
+          cf.loadCommonUi(param2, param3, 60, param1);
           jg.b(461050508);
           MouseWheelInput.field_c = kh.field_e;
           pa.field_l = kh.field_e;

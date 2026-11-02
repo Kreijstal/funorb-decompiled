@@ -9,7 +9,7 @@ final class kf {
     static il field_c;
     private long field_d;
     private int field_b;
-    static km field_g;
+    static SpriteWidget field_g;
     private DualLinkNode[] field_f;
     private int field_a;
 

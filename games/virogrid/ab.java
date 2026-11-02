@@ -4,7 +4,7 @@
 final class ab extends gf implements ta {
     static String field_I;
     static int[] field_H;
-    static km field_K;
+    static SpriteWidget field_K;
     static il field_L;
     private jb field_M;
     static bk field_G;
@@ -156,7 +156,7 @@ final class ab extends gf implements ta {
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        dk.field_j.b(bn.field_c, 4 + (this.field_l + param1), 4 + (dk.field_j.field_H + (this.field_u + param2)), 16777215, -1);
+        dk.arezzo12Font.b(bn.field_c, 4 + (this.field_l + param1), 4 + (dk.arezzo12Font.field_H + (this.field_u + param2)), 16777215, -1);
     }
 
     public static void e(int param0) {

@@ -10,7 +10,7 @@ final class ng extends nk {
     private Sprite field_S;
     static String field_Y;
     static volatile int field_Q;
-    static km field_Z;
+    static SpriteWidget field_Z;
     static int[] field_O;
     private int field_U;
     static int field_P;

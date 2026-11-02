@@ -9,7 +9,7 @@ final class td {
     static ml[] field_d;
     static un field_b;
     static int field_h;
-    static Sprite[] field_g;
+    static Sprite[] buttonSprites;
     static Js5Archive field_a;
     static int field_f;
 
@@ -71,7 +71,7 @@ final class td {
         field_e = null;
         if (param0 == 6666) {
           field_c = null;
-          field_g = null;
+          buttonSprites = null;
           field_d = null;
           field_a = null;
           return;
@@ -79,7 +79,7 @@ final class td {
         java.awt.Canvas var2 = (java.awt.Canvas) null;
         td.a(-12, (java.awt.Canvas) null, -119, 111);
         field_c = null;
-        field_g = null;
+        buttonSprites = null;
         field_d = null;
         field_a = null;
     }

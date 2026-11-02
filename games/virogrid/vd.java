@@ -20,7 +20,7 @@ final class vd extends wa implements fg {
         if (this.field_h == null) {
           return null;
         }
-        km.a(this.field_g + (-this.field_W + nl.field_u), hk.field_Jb, -83);
+        SpriteWidget.a(this.field_g + (-this.field_W + nl.field_u), hk.field_Jb, -83);
         if (param0 > 35) {
           return this.field_h;
         }

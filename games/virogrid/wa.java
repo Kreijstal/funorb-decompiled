@@ -18,7 +18,7 @@ class wa extends tg {
     static int field_K;
     static String field_S;
     static String field_L;
-    static km field_I;
+    static SpriteWidget field_I;
 
     final void a(String param0, int param1, boolean param2) {
         int dupTemp$1 = 0;

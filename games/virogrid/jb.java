@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jb extends rd {
-    static km field_J;
+    static SpriteWidget field_J;
     private wa field_F;
     private wa field_G;
     private boolean field_E;
@@ -158,7 +158,7 @@ final class jb extends rd {
 
     private final void a(UiWidget param0, String param1, int param2, int param3, int param4) {
         try {
-          dk.field_j.c(param1, param0.field_l + param3 + (param0.field_g >> 1), -5 + param2 + param0.field_u, 16777215, -1);
+          dk.arezzo12Font.c(param1, param0.field_l + param3 + (param0.field_g >> 1), -5 + param2 + param0.field_u, 16777215, -1);
           if (param4 < 6) {
             jb.a(75, -12);
           }

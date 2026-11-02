@@ -11,7 +11,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
     private vd field_Q;
     private nk field_O;
     private vd field_E;
-    static km field_R;
+    static SpriteWidget field_R;
     private vd field_J;
     kl field_H;
     private vd field_D;
@@ -76,7 +76,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ej(20, param4, 120 + param6, 25, param5, false, 120, 3, dj.field_h, 16777215, param2);
+          var10 = new ej(20, param4, 120 + param6, 25, param5, false, 120, 3, dj.arezzo14Font, 16777215, param2);
           if (param3 <= 40) {
             this.field_H = (kl) null;
           }
@@ -288,10 +288,10 @@ final class qh extends WidgetContainer implements im, ta, fc {
         var3 = var3 + (this.a(19259, 170, va.field_f, this.field_E, pb.field_n, var3) + 5);
         var3 = var3 + (this.a(19259, 170, lm.field_g, this.field_I, ul.field_f, var3) + 5);
         var3 = var3 + this.a(de.field_qb, var3, 170, -87, this.field_S);
-        ej var4 = new ej(46, var3, this.field_g - 90, 25, this.field_P, true, this.field_g - 120, 5, dk.field_j, 11579568, ba.field_b);
+        ej var4 = new ej(46, var3, this.field_g - 90, 25, this.field_P, true, this.field_g - 120, 5, dk.arezzo12Font, 11579568, ba.field_b);
         this.a((UiWidget) (var4), (byte) -78);
         var3 = var3 + var4.field_m;
-        aj var5 = new aj(dj.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, dj.field_h.field_H, -1, 2147483647, true);
+        aj var5 = new aj(dj.arezzo14Font, 0, 0, 0, 0, 16777215, -1, 0, 0, dj.arezzo14Font.field_H, -1, 2147483647, true);
         this.field_O = new nk(var2, var5);
         this.field_O.field_h = "";
         this.field_O.a(al.field_g, (byte) -71, 0);
@@ -330,7 +330,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
             stackIn_2_0 = -105;
             return stackIn_2_0;
           }
-          var6 = new ej(20, param3, param0 + 120, 25, param4, false, 120, 3, dj.field_h, 16777215, param2);
+          var6 = new ej(20, param3, param0 + 120, 25, param4, false, 120, 3, dj.arezzo14Font, 16777215, param2);
           this.a((UiWidget) (var6), (byte) -78);
           stackIn_4_0 = var6.field_m;
           return stackIn_4_0;
@@ -376,7 +376,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
         if (param0 >= 10) {
           return;
         }
-        field_R = (km) null;
+        field_R = (SpriteWidget) null;
     }
 
     private final String g(byte param0) {
@@ -487,12 +487,12 @@ final class qh extends WidgetContainer implements im, ta, fc {
 
     final static void a(byte param0, boolean param1) {
         he.field_pc = param1 ? new jm(gf.field_A, IntrusiveNode.field_b) : new jm(mj.field_A, ia.field_d);
-        ao.field_Eb = new km(0L, (km) null);
+        ao.field_Eb = new SpriteWidget(0L, (SpriteWidget) null);
         ao.field_Eb.a(0, he.field_pc.field_c);
         if (param0 == -68) {
           ao.field_Eb.a(0, CellFlip.field_o);
-          pm.field_n = new km(0L, fn.field_e);
-          jb.field_J = new km(0L, (km) null);
+          pm.field_n = new SpriteWidget(0L, fn.field_e);
+          jb.field_J = new SpriteWidget(0L, (SpriteWidget) null);
           pm.field_n.a(0, jj.field_m);
           pm.field_n.a(0, jb.field_J);
           jb.field_J.a(param0 ^ -68, ij.field_m);
@@ -514,7 +514,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new ej(20, param1, param2 + 120, 25, param4, false, 120, 3, dj.field_h, 16777215, param0);
+          var8 = new ej(20, param1, param2 + 120, 25, param4, false, 120, 3, dj.arezzo14Font, 16777215, param0);
           if (param3 >= -1) {
             this.field_E = (vd) null;
           }

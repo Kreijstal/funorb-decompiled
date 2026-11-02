@@ -4,7 +4,7 @@
 final class qi {
     static MusicTrack field_b;
     static int field_d;
-    static km field_e;
+    static SpriteWidget field_e;
     static int field_f;
     static String field_a;
     static wk field_c;

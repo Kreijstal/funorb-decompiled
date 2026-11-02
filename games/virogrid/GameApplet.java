@@ -347,7 +347,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 21616) {
             this.onCanvasCreated(false);
           }
-          UiWidget.field_v.setSize(fl.field_i, km.field_B);
+          UiWidget.field_v.setSize(fl.field_i, SpriteWidget.field_B);
           UiWidget.field_v.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == bj.field_m);
           if (!decompiledSharedTail0) {
@@ -363,7 +363,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           fe.field_Gb = true;
           ub.field_F = true;
           ce.field_K = true;
-          km.field_Db = false;
+          SpriteWidget.field_Db = false;
           oi.field_b = hc.a(param0 ^ -29554);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -525,15 +525,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (null != jj.field_n) {
-                km.field_pb = km.field_pb + 1;
-                if (km.field_pb < 3) {
+                SpriteWidget.field_pb = SpriteWidget.field_pb + 1;
+                if (SpriteWidget.field_pb < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
                 this.redirectToErrorPage(-25296, "alreadyloaded");
                 return;
               }
-              km.field_B = param1;
+              SpriteWidget.field_B = param1;
               ah.field_g = param1;
               db.field_v = param4;
               rk.field_c = 0;
@@ -766,7 +766,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 we.a(1);
                 this.recreateCanvas(21616);
-                ca.field_M = eg.a((java.awt.Component) ((Object) UiWidget.field_v), fl.field_i, km.field_B, 101);
+                ca.field_M = eg.a((java.awt.Component) ((Object) UiWidget.field_v), fl.field_i, SpriteWidget.field_B, 101);
                 this.initializeGame(true);
                 kb.field_b = gf.g(true);
                 do {
@@ -841,7 +841,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ce.field_K = true;
             lm.field_a = lm.field_a - 50;
-            UiWidget.field_v.setSize(fl.field_i, km.field_B);
+            UiWidget.field_v.setSize(fl.field_i, SpriteWidget.field_B);
             UiWidget.field_v.setVisible(true);
             if (null != bj.field_m &&
               mk.field_cb == null) {
@@ -932,7 +932,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              km.field_Db = true;
+              SpriteWidget.field_Db = true;
             }
             return;
           }

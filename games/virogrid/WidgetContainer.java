@@ -5,7 +5,7 @@ import java.util.*;
 
 class WidgetContainer extends UiWidget implements ja {
     static String field_x;
-    static km field_y;
+    static SpriteWidget field_y;
     static String[] field_A;
     static int[] field_B;
     IntrusiveDeque children;

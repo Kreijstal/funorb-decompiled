@@ -5,7 +5,7 @@ final class em {
     static float field_c;
     static String playernameHotseat2;
     static String[] field_f;
-    static v field_d;
+    static v chatFont;
     static r field_a;
     static String[] instructionPages;
 
@@ -15,14 +15,14 @@ final class em {
           instructionPages = null;
           field_a = null;
           playernameHotseat2 = null;
-          field_d = null;
+          chatFont = null;
           return;
         }
         em.a((byte) -63, 112);
         instructionPages = null;
         field_a = null;
         playernameHotseat2 = null;
-        field_d = null;
+        chatFont = null;
     }
 
     final static void a(byte param0, int param1) {

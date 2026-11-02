@@ -7,7 +7,7 @@ final class ii {
     static PlatformTaskDispatcher field_a;
     private int[] field_e;
     static int field_b;
-    static km field_d;
+    static SpriteWidget field_d;
 
     final static void b(byte param0) {
         vi.b((byte) -123);
@@ -43,7 +43,7 @@ final class ii {
         try {
           var7_int = 0;
           if (param2 != -7089) {
-            field_d = (km) null;
+            field_d = (SpriteWidget) null;
           }
           param0 = param0 + param3;
           var8 = param1 << 3;
@@ -366,7 +366,7 @@ final class ii {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_30_0 = km.field_P;
+                    stackIn_30_0 = SpriteWidget.field_P;
                     return stackIn_30_0;
                   }
                 }

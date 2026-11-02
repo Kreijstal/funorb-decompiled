@@ -6,7 +6,7 @@ final class bd {
     static IntrusiveDeque field_c;
     static int field_e;
     static String[] field_a;
-    static km field_b;
+    static SpriteWidget field_b;
 
     public static void a(int param0) {
         field_d = null;

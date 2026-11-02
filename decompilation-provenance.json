@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "73369b22d01d3ca4afc8a1bb025a3f1d85920183905582e40ec4c7859f2e1c78",
       "sources": {
         "files": 347,
-        "sha256": "923498c927deaa8d4a9b7881717cc85e625229b16e94563eba66f2ea57ffa9e0"
+        "sha256": "70353bc8f2fa4bde12cb192f3f9f8187b9200794c347c2a619e96b87da7d5407"
       },
       "dictionary": {
         "path": "decompilation/virogrid-naming.json",
-        "sha256": "f624187345b7ae21e63fe6737329768edad168c1ba6223ad1a58acc747daf6d8"
+        "sha256": "0f4f717d1c8f08b0e0d785361b97acfa5a7ee8113dda69c3a701488858fc5b15"
       },
       "readingGuide": {
         "path": "games/virogrid/README.md",
-        "sha256": "379cb5c113c49bee61bb4098cc7f865be6e461b85e26e4e57d079a5c2038f14b"
+        "sha256": "157a82e85032be95426823058b30afb16c21169e4fa3e0cf5d412aafd24134f3"
       },
-      "rulesSha256": "f118641b8bcc48f9052a089d9324771ccb4153388d984ec2f7cead0c2430a3ec",
+      "rulesSha256": "260738c92fc274712298502d36918f449b1dccc967aa88be57d74888bf50761e",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12593,7 +12593,7 @@
         },
         "publishedSources": {
           "files": 347,
-          "sha256": "923498c927deaa8d4a9b7881717cc85e625229b16e94563eba66f2ea57ffa9e0"
+          "sha256": "70353bc8f2fa4bde12cb192f3f9f8187b9200794c347c2a619e96b87da7d5407"
         }
       },
       "voidhunters": {

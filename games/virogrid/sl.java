@@ -5,7 +5,7 @@ final class sl {
     private eb field_b;
     static String field_g;
     private int field_e;
-    static km field_h;
+    static SpriteWidget field_h;
     static String field_c;
     private gk field_d;
     private int field_f;

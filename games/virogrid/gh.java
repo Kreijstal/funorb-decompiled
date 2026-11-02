@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class gh extends km {
+final class gh extends SpriteWidget {
     static String field_Kb;
     String field_Pb;
     int field_Nb;
     String field_Jb;
-    km field_Eb;
+    SpriteWidget field_Eb;
     static nh field_Ib;
-    km field_Mb;
+    SpriteWidget field_Mb;
     String field_Hb;
     String field_Ob;
     static String field_Fb;
     static String hotseatoptionAilevelColon;
-    km field_Gb;
+    SpriteWidget field_Gb;
 
     final static String a(long param0, byte param1) {
         int var7 = 0;
@@ -46,7 +46,7 @@ final class gh extends km {
     }
 
     gh() {
-        super(0L, (km) null);
+        super(0L, (SpriteWidget) null);
     }
 
     static {

@@ -10,7 +10,7 @@ final class cg {
     static String field_a;
     static String field_g;
 
-    final static km b(int param0) {
+    final static SpriteWidget b(int param0) {
         if (param0 != 1463) {
           cg.a(false, 127);
           return ch.field_a.field_Jb;
@@ -49,8 +49,8 @@ final class cg {
         if (md.field_e != null) {
           md.field_e.a((byte) -22, param0);
           ra.a((byte) 3, param0);
-          if (null != km.field_yb) {
-            km.field_yb.a(param0, param1 + 18109);
+          if (null != SpriteWidget.field_yb) {
+            SpriteWidget.field_yb.a(param0, param1 + 18109);
           }
           cf.a((byte) -111, param0);
           if (param1 != 6851) {
@@ -60,8 +60,8 @@ final class cg {
           return;
         }
         ra.a((byte) 3, param0);
-        if (null != km.field_yb) {
-          km.field_yb.a(param0, param1 + 18109);
+        if (null != SpriteWidget.field_yb) {
+          SpriteWidget.field_yb.a(param0, param1 + 18109);
         }
         cf.a((byte) -111, param0);
         if (param1 == 6851) {

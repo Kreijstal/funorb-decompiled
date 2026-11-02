@@ -41,7 +41,7 @@ final class li {
             }
           }
           if (fl.field_i != this.field_h ||
-            this.field_r != km.field_B) {
+            this.field_r != SpriteWidget.field_B) {
             this.field_n.a(this.field_r, this.field_h, (byte) 125);
           }
           return;
@@ -89,9 +89,9 @@ final class li {
 
     final h a(int param0) {
         this.field_g = fl.field_i;
-        this.field_v = km.field_B;
+        this.field_v = SpriteWidget.field_B;
         this.field_n.a(this.field_p, this.field_e, (byte) 106);
-        km.field_Db = false;
+        SpriteWidget.field_Db = false;
         if (param0 != 11) {
           li.a(true);
         }
@@ -485,7 +485,7 @@ final class li {
           }
         }
         if (var2 != fl.field_i ||
-          var3 != km.field_B) {
+          var3 != SpriteWidget.field_B) {
           this.field_n.a(var3, var2, (byte) 40);
         }
         if (param0 != 22) {

@@ -22,7 +22,7 @@ final class ac {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        km var5 = null;
+        SpriteWidget var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -55,12 +55,12 @@ final class ac {
                 kh.a(var5, var4_int, 20435);
               }
               var6 = id.a(var4_int, (byte) 119);
-              og.field_g[var4_int].field_qb = j.field_k[var6];
+              og.field_g[var4_int].normalSprite = j.field_k[var6];
               th.field_o[var4_int].field_V = hn.field_i[var6];
             }
           }
           if (~af.field_d.field_nb != param1) {
-            km.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, (String) null, 0L);
+            SpriteWidget.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, (String) null, 0L);
           }
           var9 = da.a(param1 ^ 1402, param0, qi.field_d, pg.field_e);
           if (var9 != null) {

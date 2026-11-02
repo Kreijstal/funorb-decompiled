@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ke extends DualLinkNode {
-    static km field_u;
+    static SpriteWidget field_u;
     static boolean[][] field_t;
     static String field_o;
     static jf field_p;

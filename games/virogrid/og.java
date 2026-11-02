@@ -19,7 +19,7 @@ final class og implements Runnable {
     static String field_n;
     private int field_h;
     static String[] field_o;
-    static km[] field_g;
+    static SpriteWidget[] field_g;
     static String[] field_t;
     private un field_d;
     private java.net.URL field_r;

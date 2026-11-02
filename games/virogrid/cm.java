@@ -4,7 +4,7 @@
 final class cm extends IntrusiveNode {
     static il field_k;
     static String field_i;
-    static km field_h;
+    static SpriteWidget field_h;
     static String field_g;
     static String hotseatmenulabel;
 
@@ -159,7 +159,7 @@ final class cm extends IntrusiveNode {
             }
           }
           if (param1 != -47) {
-            field_h = (km) null;
+            field_h = (SpriteWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

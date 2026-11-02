@@ -12,7 +12,7 @@ final class qd {
     int field_d;
     static ai[] field_m;
     int field_l;
-    static km field_f;
+    static SpriteWidget field_f;
     static String field_g;
     static ml field_i;
     static int field_c;
@@ -136,7 +136,7 @@ final class qd {
         field_f = null;
         field_m = null;
         if (!param0) {
-          field_f = (km) null;
+          field_f = (SpriteWidget) null;
         }
     }
 

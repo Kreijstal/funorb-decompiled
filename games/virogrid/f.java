@@ -5,12 +5,12 @@ import java.util.*;
 
 final class f implements Iterator {
     private DualLinkNode field_a;
-    static km[] field_f;
+    static SpriteWidget[] field_f;
     static ml field_j;
     private eb field_e;
     static String field_d;
     private DualLinkNode field_i;
-    static km field_c;
+    static SpriteWidget field_c;
     static String field_g;
     static int field_b;
     static String field_h;
@@ -229,7 +229,7 @@ final class f implements Iterator {
         int var4 = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
         if (param2 >= -3) {
-          field_c = (km) null;
+          field_c = (SpriteWidget) null;
         }
         char[] var6 = new char[param1];
         char[] var3 = var6;

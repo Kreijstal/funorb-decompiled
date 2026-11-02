@@ -179,7 +179,7 @@ final class wk extends WidgetContainer implements fc, ta {
     public wk() {
         super(0, 0, 496, 0, (WidgetListener) null);
         this.field_D = new vd("", (cd) null, 12);
-        aj var1 = new aj(dk.field_j, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);
+        aj var1 = new aj(dk.arezzo12Font, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.arezzo14Font.field_H, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(GameKeyHandler.field_e, var1, (cd) null);
         this.field_E = new tg(kb.field_a, (cd) null);
         this.field_G = new tg(vb.field_g, (cd) null);
@@ -234,7 +234,7 @@ final class wk extends WidgetContainer implements fc, ta {
           if (param3 != -7815) {
             this.a((UiWidget) null, 'ﾴ', 84, -110);
           }
-          var10 = new ej(20, param1, param5 + 120, 25, param4, false, 120, 3, dj.field_h, 16777215, param2);
+          var10 = new ej(20, param1, param5 + 120, 25, param4, false, 120, 3, dj.arezzo14Font, 16777215, param2);
           this.a((UiWidget) (var10), (byte) -78);
           var9 = new ng(((fg) ((Object) param4)).a(-1), param0, 126, var10.field_m + param1, 25 + param5, param6);
           var9.field_o = (cd) (this);

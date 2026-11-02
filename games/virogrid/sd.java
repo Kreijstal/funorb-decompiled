@@ -7,7 +7,7 @@ final class sd {
     static String field_d;
     static int field_e;
     static ga field_f;
-    static km field_a;
+    static SpriteWidget field_a;
     static String text2d;
 
     public static void a(byte param0) {

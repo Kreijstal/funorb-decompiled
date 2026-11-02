@@ -161,7 +161,7 @@ final class md {
         bk var2 = null;
         bk var2Lifetime1;
         if (vf.field_f == null) {
-          vf.field_f = new aj(dk.field_j, 20, 0, 0, 0, 11579568, -1, 0, 0, dk.field_j.field_H, -1, 2147483647, true);
+          vf.field_f = new aj(dk.arezzo12Font, 20, 0, 0, 0, 11579568, -1, 0, 0, dk.arezzo12Font.field_H, -1, 2147483647, true);
           if (param0 > -102) {
             var2 = (bk) null;
             md.a(false, -13, true, -83, (bk) null);

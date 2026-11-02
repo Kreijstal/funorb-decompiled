@@ -9,7 +9,7 @@ final class dg extends UiWidget {
     boolean field_z;
     private int field_y;
     private Sprite field_I;
-    static km field_E;
+    static SpriteWidget field_E;
     static String textRatedAchievements;
     private Sprite field_B;
     private int field_J;

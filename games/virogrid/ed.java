@@ -5,21 +5,21 @@ final class ed {
     static String field_f;
     static int field_b;
     static String field_e;
-    static Sprite field_d;
-    static km field_c;
+    static Sprite jagexLogoGrey;
+    static SpriteWidget field_c;
     static int field_a;
 
     public static void a(byte param0) {
         if (param0 == 51) {
           field_e = null;
-          field_d = null;
+          jagexLogoGrey = null;
           field_c = null;
           field_f = null;
           return;
         }
         field_b = -120;
         field_e = null;
-        field_d = null;
+        jagexLogoGrey = null;
         field_c = null;
         field_f = null;
     }

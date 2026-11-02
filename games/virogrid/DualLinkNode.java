@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_h;
     static String field_g;
     static String field_i;
-    static km field_m;
+    static SpriteWidget field_m;
     DualLinkNode field_k;
 
     final void c(int param0) {

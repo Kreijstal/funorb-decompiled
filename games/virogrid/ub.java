@@ -123,7 +123,7 @@ final class ub extends nb {
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, fl.field_i, km.field_B);
+              var9.fillRect(0, 0, fl.field_i, SpriteWidget.field_B);
             }
             if (param0 == null) {
               param0 = new java.awt.Color(140, 17, 17);
@@ -143,12 +143,12 @@ final class ub extends nb {
               var10.setFont(oh.field_c);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(oj.field_Gb, fl.field_i / 2 - 152, -18 + km.field_B / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(oj.field_Gb, fl.field_i / 2 - 152, -18 + SpriteWidget.field_B / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + fl.field_i / 2;
-              var8 = -18 + km.field_B / 2;
+              var8 = -18 + SpriteWidget.field_B / 2;
               var9.setColor(param0);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, 3 * param3, 30);
@@ -164,7 +164,7 @@ final class ub extends nb {
             }
             var9.setFont(oh.field_c);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(tm.field_k, fl.field_i / 2 - tm.field_k.length() * 6 / 2, -26 + km.field_B / 2);
+            var9.drawString(tm.field_k, fl.field_i / 2 - tm.field_k.length() * 6 / 2, -26 + SpriteWidget.field_B / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

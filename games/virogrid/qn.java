@@ -15,8 +15,8 @@ final class qn extends tg {
     static Js5Archive field_I;
     static java.util.zip.CRC32 field_S;
     static String field_L;
-    static km field_J;
-    static km field_H;
+    static SpriteWidget field_J;
+    static SpriteWidget field_H;
     static PlatformTaskDispatcher field_R;
 
     public static void c(byte param0) {

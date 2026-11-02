@@ -1036,7 +1036,7 @@ public final class Virogrid extends od {
         var11 = field_F ? 1 : 0;
         try {
           lj.c(param0 ^ -28791807);
-          tl.field_l = km.e(param0 ^ -125);
+          tl.field_l = SpriteWidget.e(param0 ^ -125);
           kh.a(false);
           if (null != ih.field_b &&
             ih.field_b.field_a) {
@@ -2149,7 +2149,7 @@ public final class Virogrid extends od {
           gi.a((byte) -103);
           en.g(0);
           qm.j(124);
-          km.f(param0 + 2147483647);
+          SpriteWidget.f(param0 + 2147483647);
           ga.i(param0 ^ -91);
           ao.g(-119);
           dj.a(false);

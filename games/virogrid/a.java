@@ -15,7 +15,7 @@ final class a extends cc {
     static String field_z;
 
     a(int param0) {
-        this(dj.field_h, param0);
+        this(dj.arezzo14Font, param0);
     }
 
     final static void b(byte param0) {

@@ -3,8 +3,8 @@
  */
 abstract class wh {
     static rm[] field_b;
-    static km field_d;
-    static km field_a;
+    static SpriteWidget field_d;
+    static SpriteWidget field_a;
     static int[] field_c;
 
     abstract void a(byte[] param0, byte param1);

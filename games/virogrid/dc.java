@@ -10,7 +10,7 @@ abstract class dc extends gg {
     private int field_ab;
     static int field_O;
     private int field_T;
-    static km field_R;
+    static SpriteWidget field_R;
     private int field_U;
     private int field_S;
     static boolean[] field_Y;
@@ -205,9 +205,9 @@ abstract class dc extends gg {
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        ed.field_d.d(-90 + this.field_g + param2, param0 + 10);
-        mb.a(-10 + this.field_g, (byte) -117, qm.field_Kb, param2 + 5, 35 + param0);
-        mb.a(this.field_g, (byte) -117, qg.field_j, param2, param0 + this.field_m - 22);
+        ed.jagexLogoGrey.d(-90 + this.field_g + param2, param0 + 10);
+        mb.a(-10 + this.field_g, (byte) -117, qm.frameTopSprites, param2 + 5, 35 + param0);
+        mb.a(this.field_g, (byte) -117, qg.frameBottomSprites, param2, param0 + this.field_m - 22);
         var4Lifetime2 = this.field_m - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

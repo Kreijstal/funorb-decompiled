@@ -63,7 +63,7 @@ final class hj extends IntrusiveNode {
         }
     }
 
-    final static km c(int param0) {
+    final static SpriteWidget c(int param0) {
         if (param0 < 43) {
           field_h = 95;
           return wm.field_r.field_Jb;

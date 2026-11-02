@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um extends km {
-    km field_Jb;
+final class um extends SpriteWidget {
+    SpriteWidget field_Jb;
     static String field_Ib;
-    km field_Eb;
+    SpriteWidget field_Eb;
     static volatile int field_Fb;
     static int field_Gb;
     qm field_Hb;
@@ -100,10 +100,10 @@ final class um extends km {
         }
     }
 
-    um(long param0, km param1, km param2, qm param3) {
-        super(param0, (km) null);
+    um(long param0, SpriteWidget param1, SpriteWidget param2, qm param3) {
+        super(param0, (SpriteWidget) null);
         try {
-          this.field_Eb = new km(0L, param2);
+          this.field_Eb = new SpriteWidget(0L, param2);
           this.field_Hb = new qm(0L, param3);
           this.a(0, this.field_Eb);
           this.a(0, this.field_Hb);

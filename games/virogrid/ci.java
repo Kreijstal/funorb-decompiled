@@ -182,9 +182,9 @@ final class ci extends qe {
         }
     }
 
-    final static km j(int param0) {
+    final static SpriteWidget j(int param0) {
         if (param0 >= -109) {
-          return (km) null;
+          return (SpriteWidget) null;
         }
         return cg.b(1463);
     }

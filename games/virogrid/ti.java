@@ -7,7 +7,7 @@ final class ti implements WidgetListener {
     static e field_g;
     private int field_e;
     static String field_c;
-    static km field_h;
+    static SpriteWidget field_h;
     static kf field_i;
     private e field_d;
     static int field_b;
@@ -134,7 +134,7 @@ final class ti implements WidgetListener {
     }
 
     public ti() {
-        this.field_d = dj.field_h;
+        this.field_d = dj.arezzo14Font;
         this.field_f = 1;
         this.field_e = 1;
     }

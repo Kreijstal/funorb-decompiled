@@ -130,7 +130,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    final static km a(byte param0) {
+    final static SpriteWidget a(byte param0) {
         if (param0 >= -70) {
           bf.a((byte) -57);
           return d.h(0);

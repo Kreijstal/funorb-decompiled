@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij extends IntrusiveNode {
-    static km field_m;
+    static SpriteWidget field_m;
     static String field_i;
     int field_o;
     boolean field_p;
     int field_l;
-    static km field_k;
+    static SpriteWidget field_k;
     static nh[] field_n;
     static String field_h;
     static int field_q;

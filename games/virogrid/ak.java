@@ -8,28 +8,28 @@ final class ak {
     static int field_a;
     static String[] achievementCriteria;
     static int[] field_f;
-    static km[] field_d;
+    static SpriteWidget[] field_d;
     static Sprite lobbyIcon;
 
-    final static void a(int param0, km param1) {
-        km var5 = null;
-        km var2 = null;
+    final static void a(int param0, SpriteWidget param1) {
+        SpriteWidget var5 = null;
+        SpriteWidget var2 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
-        km var2Lifetime1;
+        SpriteWidget var2Lifetime1;
         try {
-          var5 = (km) (param1.field_W.a((byte) -89));
+          var5 = (SpriteWidget) (param1.field_W.a((byte) -89));
           var2 = var5;
           while (var5 != null) {
             var5.field_ub = 0;
             var5.field_Cb = 0;
             var5.field_kb = 0;
             var5.field_F = 0;
-            var5 = (km) (param1.field_W.a(param0 - 164));
+            var5 = (SpriteWidget) (param1.field_W.a(param0 - 164));
             var2Lifetime1 = var5;
           }
           if (param0 != 16377) {
-            km var4 = (km) null;
-            ak.a(97, (km) null);
+            SpriteWidget var4 = (SpriteWidget) null;
+            ak.a(97, (SpriteWidget) null);
           }
           param1.field_F = 0;
           param1.field_kb = 0;
@@ -117,7 +117,7 @@ final class ak {
         se.field_f[5] = eg.field_G;
         se.field_f[4] = s.field_h;
         if (param0 != -7597) {
-          field_d = (km[]) null;
+          field_d = (SpriteWidget[]) null;
         }
         se.field_f[11] = ql.field_e;
         se.field_f[18] = wm.field_Q;

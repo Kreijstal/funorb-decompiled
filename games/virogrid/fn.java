@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn {
-    static km field_d;
+    static SpriteWidget field_d;
     static String[] field_b;
     static String textNotAvailableIn2d;
     static String field_f;
     static IntrusiveDeque field_a;
     static int field_c;
-    static km field_e;
+    static SpriteWidget field_e;
 
     final static boolean a(int param0, int param1, byte param2) {
         StringBuilder discarded$0 = null;
@@ -310,7 +310,7 @@ final class fn {
         int var2 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != -69) {
-            field_e = (km) null;
+            field_e = (SpriteWidget) null;
           }
           for (var1_int = 0; qh.field_K > var1_int; var1_int++) {
             BufferedSocket.field_s[var1_int] = null;

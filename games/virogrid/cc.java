@@ -5,7 +5,7 @@ class cc extends aj {
     static float field_x;
     static Sprite field_u;
     static String[] detailNames;
-    static km field_w;
+    static SpriteWidget field_w;
 
     final static lc[] a(byte param0) {
         if (param0 == -104) {
@@ -53,7 +53,7 @@ class cc extends aj {
     }
 
     cc(int param0) {
-        this(dj.field_h, param0);
+        this(dj.arezzo14Font, param0);
     }
 
     final static void a(boolean param0, he param1, boolean param2, PacketBuffer param3) {

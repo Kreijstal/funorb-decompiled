@@ -25,9 +25,9 @@ final class eg extends AudioStream {
     static int field_y;
     static String field_F;
 
-    final static km d(int param0) {
+    final static SpriteWidget d(int param0) {
         if (param0 != 1048576) {
-          return (km) null;
+          return (SpriteWidget) null;
         }
         return hj.c(112);
     }

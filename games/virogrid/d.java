@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d extends km {
+final class d extends SpriteWidget {
     static String[] field_Kb;
     static String field_Gb;
-    private km field_Jb;
+    private SpriteWidget field_Jb;
     static int[] field_Lb;
     int field_Hb;
-    private km[] field_Fb;
-    private km[] field_Ib;
+    private SpriteWidget[] field_Fb;
+    private SpriteWidget[] field_Ib;
     static long field_Eb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -23,17 +23,17 @@ final class d extends km {
         this.b(param0, param4, param3 ^ -20132);
     }
 
-    final static km h(int param0) {
+    final static SpriteWidget h(int param0) {
         if (param0 != 0) {
-          return (km) null;
+          return (SpriteWidget) null;
         }
         return ve.field_q.field_Lb;
     }
 
     final void g(int param0) {
         int var2 = 0;
-        km dupTemp$0 = null;
-        km dupTemp$1 = null;
+        SpriteWidget dupTemp$0 = null;
+        SpriteWidget dupTemp$1 = null;
         int var3;
         var3 = Virogrid.field_F ? 1 : 0;
         for (var2 = param0; this.field_Fb.length > var2; var2++) {
@@ -51,7 +51,7 @@ final class d extends km {
     }
 
     private final void b(int param0, int param1, int param2) {
-        km dupTemp$0 = null;
+        SpriteWidget dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -246,8 +246,8 @@ final class d extends km {
         }
     }
 
-    d(long param0, km param1, String[] param2, km param3, km[] param4, int param5) {
-        super(param0, (km) null);
+    d(long param0, SpriteWidget param1, String[] param2, SpriteWidget param3, SpriteWidget[] param4, int param5) {
+        super(param0, (SpriteWidget) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -260,15 +260,15 @@ final class d extends km {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        km var9 = null;
+        SpriteWidget var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Fb = new km[param2.length];
-          this.field_Jb = new km(0L, param3);
+          this.field_Fb = new SpriteWidget[param2.length];
+          this.field_Jb = new SpriteWidget(0L, param3);
           this.field_Ib = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new km(0L, param1);
+            var9 = new SpriteWidget(0L, param1);
             var9.field_V = param2[var8_int];
             this.field_Fb[var8_int] = var9;
             this.a(0, var9);

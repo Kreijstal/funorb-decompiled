@@ -8,7 +8,7 @@ final class wc {
     private Js5Archive field_i;
     private sl field_d;
     static String field_g;
-    static km field_k;
+    static SpriteWidget field_k;
     private Js5Archive field_h;
     static ml field_a;
     static String field_b;

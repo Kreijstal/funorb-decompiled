@@ -29,7 +29,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static km d(boolean param0) {
+    final static SpriteWidget d(boolean param0) {
         if (!param0) {
           field_y = 78;
           return lg.field_a.field_Lb;

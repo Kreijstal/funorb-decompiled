@@ -166,7 +166,7 @@ final class ok extends WidgetContainer implements im, ta {
           this.field_I.listener = (WidgetListener) ((Object) new hf());
           var7 = oi.a(new String[]{this.a((byte) 125), this.a(-18042)}, gh.field_Kb, 2);
           var3 = 20;
-          var4 = new aj(dj.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);
+          var4 = new aj(dj.arezzo14Font, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.arezzo14Font.field_H, -1, 2147483647, true);
           this.field_D = new nk(var7, var4);
           this.field_D.field_h = "";
           this.field_D.a(al.field_g, (byte) -100, 0);

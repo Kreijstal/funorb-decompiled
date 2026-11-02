@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class da extends IntrusiveNode {
-    static km field_n;
+    static SpriteWidget field_n;
     int field_q;
     int field_l;
     static int[] field_g;
@@ -75,7 +75,7 @@ final class da extends IntrusiveNode {
               var10 = re.a((byte) -100, var8_ref_cj);
               var11 = var10 + e.b(var8_ref_cj.field_h);
               var12 = qd.a(param0 ^ -18302, var8_ref_cj);
-              var8_ref_cj.field_t = new km(0L, wh.field_d, var11);
+              var8_ref_cj.field_t = new SpriteWidget(0L, wh.field_d, var11);
               var6 = var6 + param3;
               var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 1) - (8355711 & var12 >> 1) + var12;
               var8_ref_cj.field_t.field_A = -(var12 >> 1 & 8355711) + var12 + (wh.field_d.field_A >> 1 & 8355711);

@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends km {
+final class ao extends SpriteWidget {
     static String textEndgameNotimeYou;
-    km field_Lb;
+    SpriteWidget field_Lb;
     um field_Ib;
-    km field_Fb;
+    SpriteWidget field_Fb;
     static ob field_Kb;
-    km field_Mb;
+    SpriteWidget field_Mb;
     static String field_Jb;
-    static km field_Eb;
+    static SpriteWidget field_Eb;
     static boolean field_Gb;
     static float field_Hb;
 
-    ao(long param0, km param1, km param2, qm param3, km param4, String param5, String param6) {
+    ao(long param0, SpriteWidget param1, SpriteWidget param2, qm param3, SpriteWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Lb = new km(0L, (km) null);
+          this.field_Lb = new SpriteWidget(0L, (SpriteWidget) null);
           this.field_Ib = new um(0L, this.field_Lb, param2, param3);
-          this.field_Fb = new km(0L, param4);
-          this.field_Mb = new km(0L, param4);
+          this.field_Fb = new SpriteWidget(0L, param4);
+          this.field_Mb = new SpriteWidget(0L, param4);
           this.field_Fb.field_V = param5;
           this.field_Mb.field_V = param6;
           this.a(0, this.field_Ib);
@@ -30,7 +30,7 @@ final class ao extends km {
         }
     }
 
-    final static km d(boolean param0) {
+    final static SpriteWidget d(boolean param0) {
         if (!param0) {
           ao.d(false);
           return GameBoard.field_j.field_Jb;

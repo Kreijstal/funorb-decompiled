@@ -223,7 +223,7 @@ final class ca extends WidgetContainer implements bo, ta {
             this.field_P.field_h = pj.field_b;
           }
           this.field_u = 15;
-          var7 = dj.field_h;
+          var7 = dj.arezzo14Font;
           if (this.field_S != null) {
             this.field_u = this.field_u + (var7.a(this.field_S, -40 + this.field_g, var7.field_H) + 5);
           }
@@ -464,7 +464,7 @@ final class ca extends WidgetContainer implements bo, ta {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (this.field_S != null) {
-          dj.field_h.a(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.field_h.field_H);
+          dj.arezzo14Font.a(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
         }
         if (this.field_J != null) {
           Rasterizer.b(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);

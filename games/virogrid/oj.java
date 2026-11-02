@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends km {
+final class oj extends SpriteWidget {
     private char[] field_Jb;
     private int field_Lb;
     private int field_Ob;
@@ -45,7 +45,7 @@ final class oj extends km {
         return var2 != 0;
     }
 
-    oj(long param0, km param1, km param2, km param3, oj[] param4, int[] param5, String[] param6, char[] param7) {
+    oj(long param0, SpriteWidget param1, SpriteWidget param2, SpriteWidget param3, oj[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -94,7 +94,7 @@ final class oj extends km {
               -1 == this.field_Sb[var13]) {
               var14 = da.field_h;
             }
-            this.field_Ib[var13] = new hk(0L, param2, (km) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Ib[var13] = new hk(0L, param2, (SpriteWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.a(0, this.field_Ib[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Eb) {

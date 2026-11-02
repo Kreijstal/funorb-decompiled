@@ -6,7 +6,7 @@ final class ln {
     static String field_c;
     static String field_a;
     private IntrusiveNode field_e;
-    static km[] field_i;
+    static SpriteWidget[] field_i;
     private IntrusiveNode[] field_b;
     private int field_h;
     static int field_g;
@@ -22,9 +22,9 @@ final class ln {
           ch.a(true);
           return true;
         }
-        if (km.field_yb != null &&
-          km.field_yb.d(false)) {
-          km.field_yb = null;
+        if (SpriteWidget.field_yb != null &&
+          SpriteWidget.field_yb.d(false)) {
+          SpriteWidget.field_yb = null;
           ch.a(true);
           return true;
         }

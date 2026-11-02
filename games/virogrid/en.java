@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class en extends km {
-    private km field_Ib;
+final class en extends SpriteWidget {
+    private SpriteWidget field_Ib;
     static int[] field_Hb;
-    private km field_Gb;
+    private SpriteWidget field_Gb;
     static String field_Eb;
     static int field_Jb;
     static boolean field_Fb;
@@ -100,11 +100,11 @@ final class en extends km {
         }
     }
 
-    private en(long param0, km param1, km param2, String param3) {
-        super(param0, (km) null);
+    private en(long param0, SpriteWidget param1, SpriteWidget param2, String param3) {
+        super(param0, (SpriteWidget) null);
         try {
-          this.field_Ib = new km(0L, param1);
-          this.field_Gb = new km(0L, param2);
+          this.field_Ib = new SpriteWidget(0L, param1);
+          this.field_Gb = new SpriteWidget(0L, param2);
           this.field_Gb.field_V = param3;
           this.a(0, this.field_Ib);
           this.a(0, this.field_Gb);
@@ -175,12 +175,12 @@ final class en extends km {
         this(param0, param1.field_Ib, param1.field_Gb, param2);
     }
 
-    en(long param0, Sprite param1, Sprite param2, int param3, km param4, String param5) {
-        this(param0, (km) null, param4, param5);
+    en(long param0, Sprite param1, Sprite param2, int param3, SpriteWidget param4, String param5) {
+        this(param0, (SpriteWidget) null, param4, param5);
         try {
           this.field_Ib.field_D = param3;
           this.field_Ib.field_jb = param1;
-          this.field_Ib.field_qb = param2;
+          this.field_Ib.normalSprite = param2;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "en.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

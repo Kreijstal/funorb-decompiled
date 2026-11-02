@@ -33,7 +33,7 @@ final class db {
     int field_b;
     int[][] field_s;
     static int[] field_k;
-    static v field_h;
+    static v generalFont;
     byte[][] field_c;
     byte[] field_I;
     static int field_v;
@@ -46,7 +46,7 @@ final class db {
         if (param0 != 6) {
           return;
         }
-        field_h = null;
+        generalFont = null;
         field_f = null;
         field_z = null;
     }

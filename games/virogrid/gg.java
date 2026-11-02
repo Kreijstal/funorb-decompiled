@@ -4,11 +4,11 @@
 abstract class gg extends WidgetContainer {
     private je field_L;
     static int[][] field_E;
-    static km field_F;
+    static SpriteWidget field_F;
     boolean field_G;
     static String[] field_I;
     static PacketBuffer field_D;
-    static km field_M;
+    static SpriteWidget field_M;
     static String field_N;
     private int field_H;
     static String field_J;
@@ -100,7 +100,7 @@ abstract class gg extends WidgetContainer {
     final void c(int param0, int param1, int param2) {
         this.a(param0, true, mn.field_a - param0 >> 1, mm.field_i - param2 >> 1, param2);
         if (param1 < 106) {
-          field_F = (km) null;
+          field_F = (SpriteWidget) null;
         }
     }
 
@@ -150,7 +150,7 @@ abstract class gg extends WidgetContainer {
     final static void a(int param0, wg param1, boolean param2, int param3) {
         try {
           if (!param2) {
-            field_F = (km) null;
+            field_F = (SpriteWidget) null;
           }
           jf.field_o = param1;
           oe.field_f = param0;

@@ -11,8 +11,8 @@ final class jj {
     Sprite field_c;
     static hh field_f;
     static String field_g;
-    static km field_a;
-    static km field_m;
+    static SpriteWidget field_a;
+    static SpriteWidget field_m;
     static String field_i;
     private int field_h;
     static GameApplet field_n;
@@ -144,7 +144,7 @@ final class jj {
         return this;
     }
 
-    final static void a(int param0, km param1, byte[] param2, int param3, km param4, int param5, int param6, int param7, int param8, km param9) {
+    final static void a(int param0, SpriteWidget param1, byte[] param2, int param3, SpriteWidget param4, int param5, int param6, int param7, int param8, SpriteWidget param9) {
         int var11 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -358,7 +358,7 @@ final class jj {
 
     final jj b(int param0, int param1) {
         if (param1 != -26973) {
-          field_m = (km) null;
+          field_m = (SpriteWidget) null;
         }
         this.field_e = param0;
         return this;
