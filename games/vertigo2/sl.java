@@ -51,7 +51,7 @@ final class sl extends ro {
 
     final static boolean b(int param0) {
         int var1 = -92 / ((param0 - 49) / 40);
-        return dc.field_L != null ? true : uj.field_g;
+        return dc.field_L != null ? true : MenuSelectionCursor.field_g;
     }
 
     final void b(int param0, cc param1, String param2, int param3, int param4) {

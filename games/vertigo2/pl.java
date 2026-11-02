@@ -3,7 +3,7 @@
  */
 final class pl extends jq {
     static String field_p;
-    static er field_h;
+    static Sprite field_h;
     private int field_m;
     static int field_q;
     static boolean field_i;
@@ -202,6 +202,6 @@ final class pl extends jq {
     static {
         field_j = "Orb points: ";
         field_p = "More suggestions";
-        field_h = new er(270, 70);
+        field_h = new Sprite(270, 70);
     }
 }

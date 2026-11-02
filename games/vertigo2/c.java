@@ -40,7 +40,7 @@ class c extends v {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a((byte) -126, this.field_g);
+          param0.writeLong((byte) -126, this.field_g);
           if (param1 != 47) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((PacketBuffer) null, 82);
@@ -186,7 +186,7 @@ class c extends v {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, er[] param4, int param5, cc param6, int param7, int param8, int param9, er[] param10, int param11, int param12, er[] param13, cc param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, cc param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, Sprite[] param13, cc param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -281,7 +281,7 @@ class c extends v {
         try {
           var13 = id.field_f;
           var15 = var13;
-          var2 = var15.h(-11);
+          var2 = var15.readUnsignedByte(-11);
           if (param0 != 4) {
             return;
           }
@@ -297,12 +297,12 @@ class c extends v {
             rm.b((byte) -59);
             return;
           }
-          var4 = var15.h(-11);
+          var4 = var15.readUnsignedByte(-11);
           if (var4 != 0) {
             var5 = var3.field_n;
             Vertigo2.field_I[0] = qe.field_V;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              Vertigo2.field_I[var6_int] = var13.f(128);
+              Vertigo2.field_I[var6_int] = var13.readString(128);
             }
             vl.a(var5, var4, -26418);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

@@ -9,13 +9,13 @@ final class q extends DualLinkNode {
     static int field_x;
     private int[] field_C;
     static int field_v;
-    static er[] field_z;
+    static Sprite[] field_z;
     private String[] field_t;
 
     public static void i(int param0) {
         field_z = null;
         if (param0 != 0) {
-          field_z = (er[]) null;
+          field_z = (Sprite[]) null;
         }
     }
 
@@ -56,7 +56,7 @@ final class q extends DualLinkNode {
             this.a((PacketBuffer) null, 11);
           }
           while (true) {
-            var3_int = param0.h(-11);
+            var3_int = param0.readUnsignedByte(-11);
             if (var3_int == 0) {
               return;
             }
@@ -106,25 +106,25 @@ final class q extends DualLinkNode {
         try {
           if (param2 != 1) {
             if (2 == param2) {
-              var4_int = param0.h(param1 - 19302);
+              var4_int = param0.readUnsignedByte(param1 - 19302);
               this.field_w = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_w[var5] = param0.a((byte) -11);
+                this.field_w[var5] = param0.readUnsignedShort((byte) -11);
               }
             } else {
               if (3 == param2) {
-                var4_int = param0.h(-11);
+                var4_int = param0.readUnsignedByte(-11);
                 this.field_C = new int[var4_int];
                 this.field_A = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param0.a((byte) -11);
+                  var6 = param0.readUnsignedShort((byte) -11);
                   var7 = IntrusiveNode.a(var6, -72);
                   if (var7 != null) {
                     this.field_C[var5] = var6;
                     array$0 = new int[var7.field_c];
                     this.field_A[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_c; var8++) {
-                      this.field_A[var5][var8] = param0.a((byte) -11);
+                      this.field_A[var5][var8] = param0.readUnsignedShort((byte) -11);
                     }
                   }
                 }
@@ -134,7 +134,7 @@ final class q extends DualLinkNode {
               }
             }
           } else {
-            this.field_t = jr.a((byte) -9, '<', param0.f(128));
+            this.field_t = jr.a((byte) -9, '<', param0.readString(128));
           }
           if (param1 != 19291) {
             this.a((byte) 72);

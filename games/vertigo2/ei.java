@@ -47,7 +47,7 @@ final class ei extends DualLinkNode {
           var29 = this.field_u[var14];
           var17 = new PacketBuffer(var29);
           var17.position = 1;
-          var6 = var17.a((byte) -11);
+          var6 = var17.readUnsignedShort((byte) -11);
           var2 = var2 != 0 & hd.field_b.a(var6, (byte) -124) ? 1 : 0;
           var14++;
         }
@@ -66,7 +66,7 @@ final class ei extends DualLinkNode {
           var31 = this.field_u[var6Lifetime1];
           var8 = new PacketBuffer(var31);
           var8.position = 1;
-          var9 = var8.a((byte) -11);
+          var9 = var8.readUnsignedShort((byte) -11);
           var10 = null;
           var11 = (mb) (var3.a((byte) 100));
           while (var11 != null) {
@@ -79,7 +79,7 @@ final class ei extends DualLinkNode {
           }
           if (var10 == null) {
             var10 = new mb(var9, hd.field_b.a(true, var9));
-            var3.a((IntrusiveNode) (var10), false);
+            var3.addFirst((IntrusiveNode) (var10), false);
           }
           this.field_t[var30[var6Lifetime1]] = new ul(var31, (mb) (var10));
         }
@@ -266,7 +266,7 @@ final class ei extends DualLinkNode {
           ui.field_e = lg.a(param0, "", "character/death_block_electric");
           kn.field_p = lg.a(param0, "", "character/mouth");
           sl.field_u = lg.a(param0, "", "character/spikes");
-          fb.field_v = lg.a(param0, "", "character/char_shadow");
+          SpriteState.field_v = lg.a(param0, "", "character/char_shadow");
           var9 = new lg[2];
           var2 = var9;
           var2[1] = rp.field_c;

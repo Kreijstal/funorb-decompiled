@@ -3,7 +3,7 @@
  */
 final class td implements ur {
     private int field_f;
-    static cr field_c;
+    static UiWidget field_c;
     private int field_e;
     private int field_h;
     private int field_k;
@@ -88,7 +88,7 @@ final class td implements ur {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = new qr(param1.n(2), param1.n(2), param1.n(2), param1.n(2), param1.m(0), param1.m(0), param1.h(-11));
+            stackIn_4_0 = new qr(param1.readSignedShort(2), param1.readSignedShort(2), param1.readSignedShort(2), param1.readSignedShort(2), param1.readUnsignedMedium(0), param1.readUnsignedMedium(0), param1.readUnsignedByte(-11));
             return stackIn_4_0;
           }
           stackIn_2_0 = (qr) null;
@@ -116,7 +116,7 @@ final class td implements ur {
         field_c = null;
     }
 
-    final static er a(int param0) {
+    final static Sprite a(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -139,7 +139,7 @@ final class td implements ur {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = in.field_c[b.a((int) var16[var5_int], 255)];
           }
-          var3 = new er(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var8);
+          var3 = new Sprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var8);
         } else {
           var17 = ej.field_c[0];
           var13 = new int[var1];
@@ -151,7 +151,7 @@ final class td implements ur {
           var3 = new fe(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var13);
         }
         la.a((byte) 37);
-        return (er) (var3);
+        return (Sprite) (var3);
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {

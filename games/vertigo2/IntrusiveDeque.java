@@ -12,7 +12,7 @@ final class IntrusiveDeque {
     static int field_d;
     private IntrusiveNode field_g;
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode removeLast(byte param0) {
         if (param0 != -43) {
           return (IntrusiveNode) null;
         }
@@ -24,7 +24,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final void a(IntrusiveNode param0, boolean param1) {
+    final void addFirst(IntrusiveNode param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -73,7 +73,7 @@ final class IntrusiveDeque {
           var3_int = param2.position;
           var5 = (CharSequence) ((Object) param0);
           var4 = bo.a(var5, -711);
-          param2.a(var4.length, (byte) -73);
+          param2.writeSmart(var4.length, (byte) -73);
           if (param1 != 7937) {
             field_f = (String) null;
           }
@@ -100,7 +100,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void c(int param0) {
+    final void clear(int param0) {
         IntrusiveNode var2 = null;
         int var3 = Vertigo2.field_L ? 1 : 0;
         while (true) {
@@ -146,7 +146,7 @@ final class IntrusiveDeque {
         field_i = null;
     }
 
-    final int c(boolean param0) {
+    final int size(boolean param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
         int var2 = 0;
         IntrusiveNode var3 = this.field_h.previous;
@@ -178,7 +178,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isEmpty(boolean param0) {
         if (!param0) {
           return this.field_h.previous == this.field_h ? true : false;
         }
@@ -212,10 +212,10 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final void a(IntrusiveNode param0, byte param1) {
+    final void addLast(IntrusiveNode param0, byte param1) {
         try {
           if (param1 != 27) {
-            this.d((byte) 69);
+            this.removeFirst((byte) 69);
           }
           if (null != param0.next) {
             param0.unlink(2);
@@ -229,7 +229,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode d(byte param0) {
+    final IntrusiveNode removeFirst(byte param0) {
         IntrusiveNode var2 = this.field_h.next;
         if (this.field_h == var2) {
           return null;

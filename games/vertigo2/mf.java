@@ -17,11 +17,11 @@ final class mf {
         field_c = null;
     }
 
-    final static er a(r param0, int param1, byte param2, int param3) {
+    final static Sprite a(r param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        er stackIn_5_0 = null;
-        er stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -29,13 +29,13 @@ final class mf {
         try {
           if (!hq.a(124, param3, param1, param0)) {
             stackIn_2_0 = null;
-            return (er) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           if (param2 <= -72) {
             stackIn_7_0 = td.a(4205);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (er) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

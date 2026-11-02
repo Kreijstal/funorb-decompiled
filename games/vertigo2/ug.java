@@ -81,7 +81,7 @@ abstract class ug {
           var5 = 0;
           while (true) {
             if (var4.length <= var5) {
-              stackIn_20_0 = cr.b(var3[var3.length - 1], 0);
+              stackIn_20_0 = UiWidget.b(var3[var3.length - 1], 0);
               return stackIn_20_0;
             }
             var6 = var4[var5];
@@ -137,7 +137,7 @@ abstract class ug {
             var3 = (String) null;
             ug.a((String) null, (byte) -93);
           }
-          stackIn_3_0 = new gd(param0.n(2), param0.n(2), param0.n(param1 - 44), param0.n(2), param0.n(2), param0.n(2), param0.n(2), param0.n(param1 ^ 44), param0.m(0), param0.h(param1 - 57));
+          stackIn_3_0 = new gd(param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(param1 - 44), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(param1 ^ 44), param0.readUnsignedMedium(0), param0.readUnsignedByte(param1 - 57));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

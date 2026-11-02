@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class eg extends tk {
-    static er[] field_r;
+    static Sprite[] field_r;
     static String field_t;
     private pm field_u;
     static String field_q;
@@ -73,7 +73,7 @@ final class eg extends tk {
             var2 = (ia) (this.field_b.b((byte) -50));
             while (var2 != null) {
               this.field_f.position = 0;
-              this.field_f.f(1, param0 ^ -3703);
+              this.field_f.writeByte(1, param0 ^ -3703);
               this.field_f.b((byte) 90, var2.field_n);
               this.field_u.a(0, this.field_f.payload.length, param0 ^ -3646, this.field_f.payload);
               this.field_a.a(false, var2);
@@ -82,7 +82,7 @@ final class eg extends tk {
             var2Lifetime1 = (ia) (this.field_d.b((byte) -50));
             while (var2Lifetime1 != null) {
               this.field_f.position = 0;
-              this.field_f.f(0, 93);
+              this.field_f.writeByte(0, 93);
               this.field_f.b((byte) 125, var2Lifetime1.field_n);
               this.field_u.a(0, this.field_f.payload.length, -93, this.field_f.payload);
               this.field_g.a(false, var2Lifetime1);
@@ -128,7 +128,7 @@ final class eg extends tk {
                       this.field_h.field_F = 0;
                     }
                   } else {
-                    this.field_h.a(param0 ^ 3700);
+                    this.field_h.unlinkSecondary(param0 ^ 3700);
                     this.field_h.field_z = false;
                     this.field_h = null;
                   }
@@ -157,10 +157,10 @@ final class eg extends tk {
                       }
                     } else {
                       this.field_i.position = 0;
-                      var6 = this.field_i.h(param0 + 3588);
-                      var7 = this.field_i.b(true);
-                      var8 = this.field_i.h(-11);
-                      var9 = this.field_i.b(true);
+                      var6 = this.field_i.readUnsignedByte(param0 + 3588);
+                      var7 = this.field_i.readInt(true);
+                      var8 = this.field_i.readUnsignedByte(-11);
+                      var9 = this.field_i.readInt(true);
                       var10 = var8 & 127;
                       stackIn_50_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -196,8 +196,8 @@ final class eg extends tk {
                       stackIn_66_0 = (0 == var10) ? 5 : 9;
                       var15 = stackIn_66_0;
                       this.field_h.field_J = new PacketBuffer(var9 + (var15 + this.field_h.field_B));
-                      this.field_h.field_J.f(var10, -127);
-                      this.field_h.field_J.e(var9, param0 + 3599);
+                      this.field_h.field_J.writeByte(var10, -127);
+                      this.field_h.field_J.writeInt(var9, param0 + 3599);
                       this.field_h.field_F = 10;
                       this.field_i.position = 0;
                     }
@@ -282,9 +282,9 @@ final class eg extends tk {
             if (this.field_l != 0) {
               try {
                 this.field_f.position = 0;
-                this.field_f.f(4, -84);
-                this.field_f.f((int) this.field_l, 115);
-                this.field_f.e(0, 0);
+                this.field_f.writeByte(4, -84);
+                this.field_f.writeByte((int) this.field_l, 115);
+                this.field_f.writeInt(0, 0);
                 this.field_u.a(0, this.field_f.payload.length, -87, this.field_f.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -386,9 +386,9 @@ final class eg extends tk {
           }
           try {
             this.field_f.position = 0;
-            this.field_f.f(6, 118);
-            this.field_f.i(param0 ^ -1725083856, 3);
-            this.field_f.d(0, param0 ^ -1783);
+            this.field_f.writeByte(6, 118);
+            this.field_f.writeMedium(param0 ^ -1725083856, 3);
+            this.field_f.writeShort(0, param0 ^ -1783);
             this.field_u.a(param0, this.field_f.payload.length, 34, this.field_f.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -465,7 +465,7 @@ final class eg extends tk {
             } else {
               stackIn_8_1 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_7_0).f(stackIn_8_1, 100);
+            ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_8_1, 100);
             this.field_f.b((byte) 50, 0L);
             this.field_u.a(0, this.field_f.payload.length, 26, this.field_f.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {

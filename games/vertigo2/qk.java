@@ -68,17 +68,17 @@ final class qk extends wh {
         if (param2 == 18964) {
           var3 = uh.field_Wb;
           var3.j(param1, 122);
-          var3.f(3, 122);
-          var3.f(9, 107);
-          var3.d(param0, param2 ^ -19683);
+          var3.writeByte(3, 122);
+          var3.writeByte(9, 107);
+          var3.writeShort(param0, param2 ^ -19683);
           return;
         }
         qk.b(true);
         var3Lifetime1 = uh.field_Wb;
         var3Lifetime1.j(param1, 122);
-        var3Lifetime1.f(3, 122);
-        var3Lifetime1.f(9, 107);
-        var3Lifetime1.d(param0, param2 ^ -19683);
+        var3Lifetime1.writeByte(3, 122);
+        var3Lifetime1.writeByte(9, 107);
+        var3Lifetime1.writeShort(param0, param2 ^ -19683);
     }
 
     static {

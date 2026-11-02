@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb extends ji {
+final class nb extends TextureOperator {
     static String field_A;
     static boolean field_z;
     static String field_E;
     private int field_C;
-    static cr field_D;
+    static UiWidget field_D;
     static fd field_F;
     static ve field_B;
     static String field_y;
@@ -137,34 +137,34 @@ final class nb extends ji {
         }
         var8 = id.field_f;
         var2 = var8;
-        var3 = var8.h(-11);
+        var3 = var8.readUnsignedByte(-11);
         ln.field_c = 127 & var3;
         stackIn_5_0 = (0 != (var3 & 128));
         cb.field_Ib = stackIn_5_0;
-        rq.field_u = var8.h(-11);
-        ug.field_a = var8.i(-31016);
+        rq.field_u = var8.readUnsignedByte(-11);
+        ug.field_a = var8.readLong(-31016);
         if (ln.field_c == 2) {
-          ck.field_J = var8.a((byte) -11);
-          qf.field_a = var8.m(0);
+          ck.field_J = var8.readUnsignedShort((byte) -11);
+          qf.field_a = var8.readUnsignedMedium(0);
         } else {
           ck.field_J = 0;
           qf.field_a = 0;
         }
-        stackIn_11_0 = (var8.h(-11) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(-11) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        sp.field_U = var8.f(128);
+        sp.field_U = var8.readString(128);
         if (var4 == 0) {
           fd.field_p = sp.field_U;
         } else {
-          fd.field_p = var8.f(128);
+          fd.field_p = var8.readString(128);
         }
         if (ln.field_c == 1) {
-          tj.field_b = var8.a((byte) -11);
-          ad.field_a = var8.f(128);
+          tj.field_b = var8.readUnsignedShort((byte) -11);
+          ad.field_a = var8.readString(128);
         } else {
           if (ln.field_c == 4) {
-            tj.field_b = var8.a((byte) -11);
-            ad.field_a = var8.f(128);
+            tj.field_b = var8.readUnsignedShort((byte) -11);
+            ad.field_a = var8.readString(128);
           } else {
             tj.field_b = 0;
             ad.field_a = null;
@@ -174,7 +174,7 @@ final class nb extends ji {
           tj.field_a = hh.a((byte) -123, 80, var8);
           sd.field_P = null;
         } else {
-          var5 = var8.a((byte) -11);
+          var5 = var8.readUnsignedShort((byte) -11);
           try {
             var9 = wm.field_k.a(1, var5);
             tj.field_a = var9.h(33);
@@ -259,7 +259,7 @@ final class nb extends ji {
           if (param0.field_s != 2) {
             if (param0.field_s == 0 &&
               fq.field_i) {
-              var3 = "[" + fb.field_A + "] ";
+              var3 = "[" + SpriteState.field_A + "] ";
             }
             if (param0.field_s == 1) {
               var3 = "[" + Vertigo2.a(new String[]{param0.field_k}, ie.field_Rb, -117) + "] ";
@@ -310,7 +310,7 @@ final class nb extends ji {
         try {
           var4_int = param1;
           if (0 == var4_int) {
-            this.field_C = param2.a((byte) -11);
+            this.field_C = param2.readUnsignedShort((byte) -11);
           }
           if (param0 != 110) {
             field_A = (String) null;

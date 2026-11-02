@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gj extends ji {
-    static cr field_z;
+final class gj extends TextureOperator {
+    static UiWidget field_z;
     static int field_y;
 
     final int[][] b(int param0, int param1) {
@@ -173,7 +173,7 @@ final class gj extends ji {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
-        cr stackIn_21_0 = null;
+        UiWidget stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
@@ -187,13 +187,13 @@ final class gj extends ji {
         boolean stackIn_136_0 = false;
         boolean stackIn_153_0 = false;
         int stackIn_160_0 = 0;
-        cr stackIn_178_0 = null;
+        UiWidget stackIn_178_0 = null;
         int stackIn_178_1 = 0;
         boolean stackIn_179_2 = false;
-        cr stackIn_183_0 = null;
+        UiWidget stackIn_183_0 = null;
         int stackIn_183_1 = 0;
         boolean stackIn_184_2 = false;
-        cr stackIn_188_0 = null;
+        UiWidget stackIn_188_0 = null;
         int stackIn_188_1 = 0;
         boolean stackIn_189_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -201,9 +201,9 @@ final class gj extends ji {
         boolean stackOut_135_0;
         boolean stackOut_152_0;
         RuntimeException var5 = null;
-        cr var6 = null;
-        cr var7 = null;
-        cr var8 = null;
+        UiWidget var6 = null;
+        UiWidget var7 = null;
+        UiWidget var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -225,12 +225,12 @@ final class gj extends ji {
         bs var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        cr var22 = null;
+        UiWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        cr var27 = null;
+        UiWidget var27 = null;
         int stackIn_55_0Lifetime1;
         int stackIn_55_1Lifetime1;
         int stackIn_63_0Lifetime1;
@@ -277,7 +277,7 @@ final class gj extends ji {
                 fo.field_f.field_S = fg.field_db.toUpperCase();
                 fo.field_f.field_lb = false;
               }
-              fo.field_f.field_Bb = fb.field_u.field_Bb;
+              fo.field_f.field_Bb = SpriteState.field_u.field_Bb;
               if (kk.field_j > 0) {
                 boolean decompiledSharedTail1 = (1 != kk.field_j);
                 if (!decompiledSharedTail1) {
@@ -289,7 +289,7 @@ final class gj extends ji {
                 }
                 if (0 == (lo.field_d & 16) &&
                   !im.field_g) {
-                  fo.field_f.field_Bb = fb.field_u.field_Q;
+                  fo.field_f.field_Bb = SpriteState.field_u.field_Q;
                 }
                 fo.field_f.field_S = fo.field_f.field_S + "<br>" + var10_ref_String;
               }
@@ -393,7 +393,7 @@ final class gj extends ji {
                   break;
                 }
                 if (!(stackIn_69_0 > fn.field_z) &&
-                  cr.field_eb[12]) {
+                  UiWidget.field_eb[12]) {
                   var10 = 2;
                 }
               }
@@ -506,7 +506,7 @@ final class gj extends ji {
                   break;
                 }
                 if (stackIn_126_0 >= 2 &&
-                  cr.field_eb[12]) {
+                  UiWidget.field_eb[12]) {
                   var16 = 0;
                 }
                 if ((var16 == 0) &&
@@ -616,15 +616,15 @@ final class gj extends ji {
           stackIn_178_0 = hk.field_o;
           stackIn_178_1 = 0;
           stackIn_179_2 = (param4) && (!param2) && (!im.field_g);
-          ((cr) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
+          ((UiWidget) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
           stackIn_183_0 = lb.field_c;
           stackIn_183_1 = 0;
           stackIn_184_2 = (param4) && (!param2) && (!im.field_g);
-          ((cr) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
+          ((UiWidget) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
           stackIn_188_0 = wc.field_m;
           stackIn_188_1 = param3;
           stackIn_189_2 = (param4) && (!param2) && (im.field_g);
-          ((cr) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
+          ((UiWidget) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (gd.field_j != null) {
             if (ne.field_G.field_tb != 0) {
@@ -658,7 +658,7 @@ final class gj extends ji {
         RuntimeException var4 = null;
         try {
           if (param1 == 0) {
-            stackIn_4_1 = (1 == param2.h(-11));
+            stackIn_4_1 = (1 == param2.readUnsignedByte(-11));
             this.field_o = stackIn_4_1;
           }
           if (param0 != 110) {

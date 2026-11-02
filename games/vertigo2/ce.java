@@ -143,7 +143,7 @@ final class ce {
             break;
           }
           if (var2 == null) {
-            nr.field_p.a(param1, false);
+            nr.field_p.addFirst(param1, false);
           } else {
             jn.a(param1, var2, 18724);
           }

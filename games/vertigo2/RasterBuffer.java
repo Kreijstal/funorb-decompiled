@@ -10,7 +10,7 @@ abstract class RasterBuffer {
     java.awt.Image field_b;
     static String field_f;
     static String field_h;
-    static cr field_a;
+    static UiWidget field_a;
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 
@@ -58,15 +58,15 @@ abstract class RasterBuffer {
           }
           var8.unlink(2);
           var4 = 114 % ((param0 - 24) / 54);
-          var8.a(-102);
+          var8.unlinkSecondary(-102);
           sq.field_b = sq.field_b - 1;
           var5 = uh.field_Wb;
           var5.j(param1, 120);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.f(1, -96);
+          var5.writeByte(1, -96);
           var5.a((byte) 0, param2);
-          var5.b((byte) -100, var5.position - var6);
+          var5.patchByteLength((byte) -100, var5.position - var6);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

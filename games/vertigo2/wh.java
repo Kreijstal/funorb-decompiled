@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wh extends ji {
+class wh extends TextureOperator {
     private int field_E;
     static String field_B;
     static String field_A;
@@ -49,7 +49,7 @@ class wh extends ji {
         RuntimeException var4 = null;
         try {
           if (param1 == 0) {
-            this.field_E = param2.a((byte) -11);
+            this.field_E = param2.readUnsignedShort((byte) -11);
           }
           if (param0 != 110) {
             this.g(-43);

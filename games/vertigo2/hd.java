@@ -8,7 +8,7 @@ final class hd {
     static long[] field_d;
     private int field_a;
     static cc field_f;
-    static cr field_g;
+    static UiWidget field_g;
     static String field_h;
     private IntrusiveDeque field_e;
     static r field_b;
@@ -56,7 +56,7 @@ final class hd {
         if (param0 != 16777215) {
           return 90;
         }
-        return this.field_e.c(true);
+        return this.field_e.size(true);
     }
 
     final void a(boolean param0) {
@@ -90,17 +90,17 @@ final class hd {
         if (param2 != 7829367) {
           field_h = (String) null;
         }
-        if (this.field_e.c(true) >= 254) {
+        if (this.field_e.size(true) >= 254) {
           return;
         }
         bo var4 = (bo) (this.field_e.c((byte) -125));
         if (var4 == null) {
           var4 = new bo(this.field_a, param0);
-          this.field_e.a(var4, false);
+          this.field_e.addFirst(var4, false);
         } else {
           if (var4.a((byte) 76)) {
             var4 = new bo(this.field_a, param0);
-            this.field_e.a(var4, false);
+            this.field_e.addFirst(var4, false);
           }
         }
         var4.b(param1, param2 - 7829378);
@@ -131,8 +131,8 @@ final class hd {
         int var6 = param4 / 5;
         int var7 = param1 / 4;
         int var8 = (640 - 2 * var6) / (param4 + var6);
-        int var9 = this.field_e.c(true) / var8;
-        int var10 = this.field_e.c(true) - var9 * var8;
+        int var9 = this.field_e.size(true) / var8;
+        int var10 = this.field_e.size(true) - var9 * var8;
         if (var9 == 0 &&
           var10 == 0) {
           return param3;

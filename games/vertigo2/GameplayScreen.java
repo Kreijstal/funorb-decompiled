@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tr {
+final class GameplayScreen {
     private int field_N;
     private IntrusiveDeque field_z;
     private wo[][] field_K;
     boolean field_i;
-    static cr field_l;
+    static UiWidget field_l;
     private boolean[] field_p;
     private long field_j;
     private int field_x;
@@ -21,7 +21,7 @@ final class tr {
     static String field_O;
     private int field_M;
     static String field_d;
-    private er field_b;
+    private Sprite field_b;
     static String field_e;
     private boolean field_g;
     private am field_G;
@@ -72,9 +72,9 @@ final class tr {
             }
           }
           jq.field_e = jq.field_e | var4_int;
-          bg.field_b.a(new fa(param1), false);
+          bg.field_b.addFirst(new fa(param1), false);
           if (!this.field_c) {
-            fg.field_eb.a(new nf(param1, param2, qr.field_j, sk.field_b, re.field_j, ki.field_c), false);
+            fg.field_eb.addFirst(new nf(param1, param2, qr.field_j, sk.field_b, re.field_j, ki.field_c), false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,14 +87,14 @@ final class tr {
     final void b(int param0, int param1) {
         try {
           uh.field_Wb.j(64, 122);
-          uh.field_Wb.f(22, 119);
-          uh.field_Wb.f(1, -98);
-          uh.field_Wb.f(param0, param1 + 24174);
-          uh.field_Wb.e(this.field_D.field_l[this.field_B].field_H, param1 ^ param1);
-          uh.field_Wb.e(mc.field_e, param1 ^ -24066);
-          uh.field_Wb.e(sl.field_l, param1 + 24066);
-          uh.field_Wb.e(ci.field_b, param1 ^ -24066);
-          uh.field_Wb.e(lj.field_k, 0);
+          uh.field_Wb.writeByte(22, 119);
+          uh.field_Wb.writeByte(1, -98);
+          uh.field_Wb.writeByte(param0, param1 + 24174);
+          uh.field_Wb.writeInt(this.field_D.field_l[this.field_B].field_H, param1 ^ param1);
+          uh.field_Wb.writeInt(mc.field_e, param1 ^ -24066);
+          uh.field_Wb.writeInt(sl.field_l, param1 + 24066);
+          uh.field_Wb.writeInt(ci.field_b, param1 ^ -24066);
+          uh.field_Wb.writeInt(lj.field_k, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "tr.J(" + param0 + ',' + param1 + ')');
         }
@@ -375,11 +375,11 @@ final class tr {
           if (this.field_o) {
             boolean decompiledFrameRemainder2 = true;
             var4 = -this.field_M + this.field_u;
-            if ((!(this.field_z.c(true) > 0) ||
+            if ((!(this.field_z.size(true) > 0) ||
               var4 < 10) &&
-              (decompiledFrameRemainder2 = !(3 >= this.field_z.c(true)))) {
-              while (!(this.field_z.c(true) <= 3)) {
-                this.a((pp) (this.field_z.b((byte) -43)), (byte) 11);
+              (decompiledFrameRemainder2 = !(3 >= this.field_z.size(true)))) {
+              while (!(this.field_z.size(true) <= 3)) {
+                this.a((pp) (this.field_z.removeLast((byte) -43)), (byte) 11);
                 if (var12 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -389,7 +389,7 @@ final class tr {
             }
             if ((decompiledFrameRemainder2) &&
               (decompiledFrameCompleted0)) {
-              this.a((pp) (this.field_z.b((byte) -43)), (byte) 11);
+              this.a((pp) (this.field_z.removeLast((byte) -43)), (byte) 11);
             }
             if (decompiledFrameCompleted0) {
               boolean decompiledFrameRemainder1 = true;
@@ -624,39 +624,39 @@ final class tr {
               if ((!MouseWheelInput.field_a) &&
                 (!tf.a((byte) 49))) {
                 var6 = this.field_G.a((byte) -126);
-                if (cr.field_eb[s.field_y] ||
-                  cr.field_eb[am.field_t]) {
+                if (UiWidget.field_eb[s.field_y] ||
+                  UiWidget.field_eb[am.field_t]) {
                   var5 = var5 | lp.field_B[(var6 + 0) % 4];
                 }
-                if (cr.field_eb[ga.field_gb] ||
-                  cr.field_eb[od.field_Mb]) {
+                if (UiWidget.field_eb[ga.field_gb] ||
+                  UiWidget.field_eb[od.field_Mb]) {
                   var5 = var5 | lp.field_B[(var6 + 2) % 4];
                 }
-                if (cr.field_eb[q.field_u] ||
-                  cr.field_eb[pn.field_O]) {
+                if (UiWidget.field_eb[q.field_u] ||
+                  UiWidget.field_eb[pn.field_O]) {
                   var5 = var5 | lp.field_B[(5 + var6) % 4];
                 }
-                if (cr.field_eb[t.field_g] ||
-                  cr.field_eb[ii.field_E]) {
+                if (UiWidget.field_eb[t.field_g] ||
+                  UiWidget.field_eb[ii.field_E]) {
                   var5 = var5 | lp.field_B[(var6 + 3) % 4];
                 }
               }
             } else {
               var6 = this.field_G.a((byte) -126);
-              if (cr.field_eb[s.field_y] ||
-                cr.field_eb[am.field_t]) {
+              if (UiWidget.field_eb[s.field_y] ||
+                UiWidget.field_eb[am.field_t]) {
                 var5 = var5 | lp.field_B[(var6 + 0) % 4];
               }
-              if (cr.field_eb[ga.field_gb] ||
-                cr.field_eb[od.field_Mb]) {
+              if (UiWidget.field_eb[ga.field_gb] ||
+                UiWidget.field_eb[od.field_Mb]) {
                 var5 = var5 | lp.field_B[(var6 + 2) % 4];
               }
-              if (cr.field_eb[q.field_u] ||
-                cr.field_eb[pn.field_O]) {
+              if (UiWidget.field_eb[q.field_u] ||
+                UiWidget.field_eb[pn.field_O]) {
                 var5 = var5 | lp.field_B[(5 + var6) % 4];
               }
-              if (cr.field_eb[t.field_g] ||
-                cr.field_eb[ii.field_E]) {
+              if (UiWidget.field_eb[t.field_g] ||
+                UiWidget.field_eb[ii.field_E]) {
                 var5 = var5 | lp.field_B[(var6 + 3) % 4];
               }
             }
@@ -1358,8 +1358,8 @@ final class tr {
           }
           regionExit1: {
             if (!this.field_o &&
-              ji.field_r > 0) {
-              cp.field_b = cp.field_b.substring(1) + ji.field_r;
+              TextureOperator.field_r > 0) {
+              cp.field_b = cp.field_b.substring(1) + TextureOperator.field_r;
               if (cp.field_b.equalsIgnoreCase("noir")) {
                 stackIn_214_0 = !(gi.field_r);
                 gi.field_r = stackIn_214_0;
@@ -1649,11 +1649,11 @@ final class tr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -this.field_M + this.field_u &&
-            this.field_z.a(false)) {
+            this.field_z.isEmpty(false)) {
             this.a(param1, (byte) 11);
             return;
           }
-          this.field_z.a(param1, false);
+          this.field_z.addFirst(param1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1822,7 +1822,7 @@ final class tr {
             }
             if (mf.a((byte) 126, 128)) {
               if (this.field_b == null) {
-                this.field_b = new er(640, 480);
+                this.field_b = new Sprite(640, 480);
               }
               this.field_b.d();
               this.field_G.a(this.field_B, -this.field_D.field_e + var5, 1 + (var6 - this.field_D.field_e), true, this.field_D.field_r, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
@@ -1981,8 +1981,8 @@ final class tr {
                   tk.field_c.a("Auth Updates/Sec: " + this.field_y / this.field_J, var10Lifetime1, var8Lifetime2, 65280, -1);
                 }
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                if (0 < this.field_z.c(true)) {
-                  tk.field_c.a("Auth Packets delayed: " + this.field_z.c(true), var10Lifetime1, var8Lifetime2, 65280, -1);
+                if (0 < this.field_z.size(true)) {
+                  tk.field_c.a("Auth Packets delayed: " + this.field_z.size(true), var10Lifetime1, var8Lifetime2, 65280, -1);
                 }
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
                 tk.field_c.a("Gameupdates per tic: " + (int)(0.5f + this.field_E), var10Lifetime1, var8Lifetime2, 65280, -1);
@@ -2021,7 +2021,7 @@ final class tr {
         }
     }
 
-    tr(boolean param0, String[] param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
+    GameplayScreen(boolean param0, String[] param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         boolean stackIn_4_1 = false;
         wo[] stackIn_33_0;
         int stackIn_33_1;

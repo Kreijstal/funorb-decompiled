@@ -3,8 +3,8 @@
  */
 final class gh {
     static int field_a;
-    static cr field_b;
-    static cr[] field_d;
+    static UiWidget field_b;
+    static UiWidget[] field_d;
     static String field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -86,45 +86,45 @@ final class gh {
         return true;
     }
 
-    final static void a(cr param0, byte param1, int param2) {
+    final static void a(UiWidget param0, byte param1, int param2) {
         b var9 = null;
-        er var11 = null;
+        Sprite var11 = null;
         String var10 = null;
         b var12 = null;
-        er var14 = null;
+        Sprite var14 = null;
         String var13 = null;
         b var15 = null;
-        er var17 = null;
+        Sprite var17 = null;
         String var16 = null;
         b var18 = null;
         String var19 = null;
         b var21 = null;
-        er var23 = null;
+        Sprite var23 = null;
         String var22 = null;
         b var24 = null;
-        er var26 = null;
+        Sprite var26 = null;
         String var25 = null;
         b var27 = null;
-        er var29 = null;
+        Sprite var29 = null;
         String var28 = null;
         b var30 = null;
-        er var32 = null;
+        Sprite var32 = null;
         String var31 = null;
         b var33 = null;
-        er var35 = null;
+        Sprite var35 = null;
         String var34 = null;
         b var36 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        er var20 = null;
-        er var20Lifetime1;
-        er var20Lifetime2;
-        er var20Lifetime3;
-        er var20Lifetime4;
-        er var20Lifetime5;
-        er var20Lifetime6;
+        Sprite var20 = null;
+        Sprite var20Lifetime1;
+        Sprite var20Lifetime2;
+        Sprite var20Lifetime3;
+        Sprite var20Lifetime4;
+        Sprite var20Lifetime5;
+        Sprite var20Lifetime6;
         try {
           oq.a((od) null, param2, 4462, -1, (String) null, (int[]) null, param0, 0L, (String) null);
           if (param2 == 0) {
@@ -179,7 +179,7 @@ final class gh {
           var4 = param0.field_ob;
           var5 = param0.field_C;
           if (param1 != 42) {
-            field_d = (cr[]) null;
+            field_d = (UiWidget[]) null;
           }
           var6 = param0.field_Fb;
           var7 = param0.field_db;

@@ -12,7 +12,7 @@ final class vo extends va {
     private int field_B;
     static String field_C;
     static String field_v;
-    private er[] field_w;
+    private Sprite[] field_w;
 
     final static r a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         try {

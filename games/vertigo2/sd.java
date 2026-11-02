@@ -96,7 +96,7 @@ final class sd extends oh {
             throw new IllegalArgumentException();
           }
           var3 = (nm) (param0);
-          this.field_J.a(var3, (byte) 27);
+          this.field_J.addLast(var3, (byte) 27);
           var3.field_I = true;
           if (param1 != 0) {
             sd.f((byte) 122);

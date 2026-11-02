@@ -219,11 +219,11 @@ final class qg extends oh {
           if (param2 != 0) {
             qg.a(-61, -1, -60, -41);
           }
-          uh.field_Wb.a((byte) -119, param5);
+          uh.field_Wb.writeLong((byte) -119, param5);
           uh.field_Wb.a((byte) 0, param4);
-          uh.field_Wb.f(param1, -75);
-          uh.field_Wb.f(param3 ? 1 : 0, 112);
-          uh.field_Wb.b((byte) -125, uh.field_Wb.position - var7_int);
+          uh.field_Wb.writeByte(param1, -75);
+          uh.field_Wb.writeByte(param3 ? 1 : 0, 112);
+          uh.field_Wb.patchByteLength((byte) -125, uh.field_Wb.position - var7_int);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "qg.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

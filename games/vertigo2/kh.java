@@ -4,7 +4,7 @@
 final class kh {
     static String field_a;
     static PacketBuffer field_b;
-    static er[][] field_d;
+    static Sprite[][] field_d;
     static int[] field_c;
 
     final static boolean a(int param0, int param1) {
@@ -34,7 +34,7 @@ final class kh {
     }
 
     public static void a(boolean param0) {
-        field_d = (er[][]) null;
+        field_d = (Sprite[][]) null;
         field_c = null;
         if (!param0) {
           field_a = null;

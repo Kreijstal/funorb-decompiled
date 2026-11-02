@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ji extends IntrusiveNode {
+abstract class TextureOperator extends IntrusiveNode {
     boolean field_o;
     int field_t;
     static String field_q;
-    static cr field_s;
+    static UiWidget field_s;
     static aa field_n;
     static fe field_p;
     kk field_v;
     static char field_r;
     aq field_x;
-    ji[] field_u;
+    TextureOperator[] inputs;
     static String field_w;
 
     void a(int param0) {
         if (param0 >= -98) {
-          ji.a(false);
+          TextureOperator.a(false);
         }
     }
 
@@ -24,10 +24,10 @@ abstract class ji extends IntrusiveNode {
         if (param1 != 3) {
           return (int[][]) null;
         }
-        if (!this.field_u[param0].field_o) {
-          return this.field_u[param0].b(-3780, param2);
+        if (!this.inputs[param0].field_o) {
+          return this.inputs[param0].b(-3780, param2);
         }
-        int[] var6 = this.field_u[param0].c(param2, param1 ^ 110);
+        int[] var6 = this.inputs[param0].c(param2, param1 ^ 110);
         int[] var4 = var6;
         int[][] var5 = new int[3][];
         var5[1] = var6;
@@ -83,15 +83,15 @@ abstract class ji extends IntrusiveNode {
     final int[] a(int param0, int param1, int param2) {
         if (param1 != -1) {
           this.field_o = false;
-          if (!this.field_u[param0].field_o) {
-            return this.field_u[param0].b(param1 - 3779, param2)[0];
+          if (!this.inputs[param0].field_o) {
+            return this.inputs[param0].b(param1 - 3779, param2)[0];
           }
-          return this.field_u[param0].c(param2, 102);
+          return this.inputs[param0].c(param2, 102);
         }
-        if (!this.field_u[param0].field_o) {
-          return this.field_u[param0].b(param1 - 3779, param2)[0];
+        if (!this.inputs[param0].field_o) {
+          return this.inputs[param0].b(param1 - 3779, param2)[0];
         }
-        return this.field_u[param0].c(param2, 102);
+        return this.inputs[param0].c(param2, 102);
     }
 
     int[][] b(int param0, int param1) {
@@ -118,8 +118,8 @@ abstract class ji extends IntrusiveNode {
         this.field_x = new aq(var4, param0, param1);
     }
 
-    ji(int param0, boolean param1) {
-        this.field_u = new ji[param0];
+    TextureOperator(int param0, boolean param1) {
+        this.inputs = new TextureOperator[param0];
         this.field_o = param1 ? true : false;
     }
 

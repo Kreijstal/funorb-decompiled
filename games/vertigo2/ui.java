@@ -3,7 +3,7 @@
  */
 final class ui {
     short field_f;
-    static cr field_b;
+    static UiWidget field_b;
     boolean field_c;
     boolean field_a;
     static int field_g;
@@ -12,22 +12,22 @@ final class ui {
     static lg field_e;
     static int field_d;
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_13_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;
         int stackIn_41_0 = 0;
         int stackIn_53_0 = 0;
-        er[] stackIn_64_0 = null;
+        Sprite[] stackIn_64_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
         RuntimeException var9 = null;
-        er[] var10 = null;
-        er[] var11_ref_er__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_er__ = null;
         int var11 = 0;
         int var12 = 0;
-        er var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -38,7 +38,7 @@ final class ui {
         var15 = Vertigo2.field_L ? 1 : 0;
         try {
           var9_int = param0 + param1 + param5;
-          var10 = new er[]{new er(var9_int, var9_int), new er(param8, var9_int), new er(var9_int, var9_int), new er(var9_int, param8), new er(64, 64), new er(var9_int, param8), new er(var9_int, var9_int), new er(param8, var9_int), new er(var9_int, var9_int)};
+          var10 = new Sprite[]{new Sprite(var9_int, var9_int), new Sprite(param8, var9_int), new Sprite(var9_int, var9_int), new Sprite(var9_int, param8), new Sprite(64, 64), new Sprite(var9_int, param8), new Sprite(var9_int, var9_int), new Sprite(param8, var9_int), new Sprite(var9_int, var9_int)};
           var11_ref_er__ = var10;
           var12 = 0;
           scanLoop1: while (true) {
@@ -201,12 +201,12 @@ final class ui {
           var4.j(param1, 124);
           var4.position = var4.position + 1;
           var5 = var4.position;
-          var4.f(6, 88);
+          var4.writeByte(6, 88);
           if (param2 < 85) {
-            field_b = (cr) null;
+            field_b = (UiWidget) null;
           }
-          var4.a((byte) -117, param0);
-          var4.b((byte) 117, var4.position - var5);
+          var4.writeLong((byte) -117, param0);
+          var4.patchByteLength((byte) 117, var4.position - var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class ui {
             var2 = na.field_l;
           }
           if (param0 != -485) {
-            field_b = (cr) null;
+            field_b = (UiWidget) null;
           }
           if (null != var2) {
             ir.a((String) null, lj.field_p, (String) (var2), 0, 0);
@@ -280,7 +280,7 @@ final class ui {
               if (0 == var6) {
                 if (gd.field_j == null &&
                   fq.field_i) {
-                  var4 = "[" + fb.field_A + "] ";
+                  var4 = "[" + SpriteState.field_A + "] ";
                 }
                 if (gd.field_j != null) {
                   boolean decompiledSharedTail0 = (!(ar.field_t) ||
@@ -332,7 +332,7 @@ final class ui {
                 }
               }
             }
-            ir.a(var5, gg.field_n[var6], var4 + cc.b(fb.field_D.toString()), var7, 0);
+            ir.a(var5, gg.field_n[var6], var4 + cc.b(SpriteState.field_D.toString()), var7, 0);
             if (!MouseWheelInput.field_a) {
               field_b.field_pb = false;
             }

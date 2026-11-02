@@ -11,10 +11,10 @@ final class th {
     float field_j;
     String field_h;
     static String field_k;
-    static er[] field_f;
+    static Sprite[] field_f;
     private int field_d;
 
-    final static cr a(boolean param0) {
+    final static UiWidget a(boolean param0) {
         if (!param0) {
           th.a((byte) -18);
         }
@@ -212,7 +212,7 @@ final class th {
 
     static {
         field_k = "2 players can work together to paint all the blocks on the map purple. If either player is killed, both players have to start again. This mode is only available in unrated games.";
-        field_f = new er[23];
+        field_f = new Sprite[23];
         field_a = new lg[2];
     }
 }

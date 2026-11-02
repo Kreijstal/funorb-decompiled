@@ -69,13 +69,13 @@ final class hq extends IntrusiveNode {
         this.field_o = false;
     }
 
-    final static er[] a(er[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        er var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         r var5 = null;
-        er[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -93,7 +93,7 @@ final class hq extends IntrusiveNode {
             param0[var2_int].field_x = param0[var2_int].field_y;
             param0[var2_int].field_B = param0[var2_int].field_t;
           }
-          stackIn_7_0 = (er[]) (param0);
+          stackIn_7_0 = (Sprite[]) (param0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -75,35 +75,35 @@ abstract class GameShell extends GameApplet {
         if (param1 != -6) {
           this.e((byte) -42);
         }
-        if (tr.field_f == -1 ||
-          0 == tr.field_f) {
-          stackIn_24_0 = (tr.field_f != -1) ? 0 : 1;
+        if (GameplayScreen.field_f == -1 ||
+          0 == GameplayScreen.field_f) {
+          stackIn_24_0 = (GameplayScreen.field_f != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          tr.field_f = qh.b(32);
+          GameplayScreen.field_f = qh.b(32);
           if (var3Lifetime1 != 0 &&
-            tr.field_f == 0 &&
+            GameplayScreen.field_f == 0 &&
             11 == hn.field_w &&
             !va.b((byte) -81)) {
             vo.c((byte) 117);
           }
-          if (-1 != tr.field_f &&
-            tr.field_f != 0) {
+          if (-1 != GameplayScreen.field_f &&
+            GameplayScreen.field_f != 0) {
             ProxySocketConnector.field_j = 15000L + gk.a(90);
           }
         }
-        if (tr.field_f != -1 &&
-          0 != tr.field_f) {
+        if (GameplayScreen.field_f != -1 &&
+          0 != GameplayScreen.field_f) {
           if (10 <= qc.field_A) {
             if (hn.field_w >= 10) {
               wp.a(10);
-              if (3 != tr.field_f) {
-                if (tr.field_f == 4) {
+              if (3 != GameplayScreen.field_f) {
+                if (GameplayScreen.field_f == 4) {
                   oq.a((byte) 102, ec.field_E, 256);
                 } else {
-                  if (tr.field_f == 2) {
+                  if (GameplayScreen.field_f == 2) {
                     oq.a((byte) 102, tq.field_d, 256);
                   } else {
-                    if (tr.field_f != 5) {
+                    if (GameplayScreen.field_f != 5) {
                       oq.a((byte) 102, om.field_C, 256);
                     } else {
                       oq.a((byte) 102, cb.field_Pb, 5);
@@ -116,12 +116,12 @@ abstract class GameShell extends GameApplet {
               br.field_R = true;
             }
           } else {
-            if (tr.field_f == 3) {
+            if (GameplayScreen.field_f == 3) {
               this.a(0, "js5crc");
             } else {
-              if (tr.field_f != 4) {
-                if (tr.field_f != 2) {
-                  if (tr.field_f != 5) {
+              if (GameplayScreen.field_f != 4) {
+                if (GameplayScreen.field_f != 2) {
+                  if (GameplayScreen.field_f != 5) {
                     this.a(0, "js5connect");
                   } else {
                     this.a(0, "outofdate");
@@ -135,18 +135,18 @@ abstract class GameShell extends GameApplet {
             }
           }
         }
-        if ((-1 != tr.field_f &&
-          tr.field_f != 0 ||
+        if ((-1 != GameplayScreen.field_f &&
+          GameplayScreen.field_f != 0 ||
           va.b((byte) -81)) &&
           gk.a(98) >= ProxySocketConnector.field_j) {
           br.field_R = false;
-          if (tr.field_f != -1 &&
-            tr.field_f != 0) {
-            tr.field_f = -1;
+          if (GameplayScreen.field_f != -1 &&
+            GameplayScreen.field_f != 0) {
+            GameplayScreen.field_f = -1;
             fk.f(-1);
           }
         }
-        if (tr.field_f == 0 &&
+        if (GameplayScreen.field_f == 0 &&
           !va.b((byte) -81)) {
           nq.field_E = false;
         }
@@ -316,9 +316,9 @@ abstract class GameShell extends GameApplet {
             }
           }
           if (var4 == 3) {
-            if (tr.field_f != -1 &&
-              tr.field_f != 0) {
-              tr.field_f = -1;
+            if (GameplayScreen.field_f != -1 &&
+              GameplayScreen.field_f != 0) {
+              GameplayScreen.field_f = -1;
               fk.f(-1);
             }
             if (param0) {
@@ -660,7 +660,7 @@ abstract class GameShell extends GameApplet {
     }
 
     private final void i(int param0) {
-        int var2 = id.field_f.h(-11);
+        int var2 = id.field_f.readUnsignedByte(-11);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = param0 + ca.field_b;
         byte[] var5 = new byte[var4];
@@ -827,7 +827,7 @@ abstract class GameShell extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (11 == hn.field_w &&
-            tr.field_f == 0) {
+            GameplayScreen.field_f == 0) {
             vo.c((byte) 117);
           }
           return var2;

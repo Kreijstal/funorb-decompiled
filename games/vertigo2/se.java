@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends ji {
-    static er field_C;
+final class se extends TextureOperator {
+    static Sprite field_C;
     static byte[][] field_y;
     private int field_z;
     static fi field_A;
@@ -68,7 +68,7 @@ final class se extends ji {
         RuntimeException var4 = null;
         try {
           if (0 == param1) {
-            this.field_z = param2.a((byte) -11);
+            this.field_z = param2.readUnsignedShort((byte) -11);
           }
           if (param0 != 110) {
             var5 = (PacketBuffer) null;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qo extends ji {
+final class qo extends TextureOperator {
     private jq[] field_z;
     static IntrusiveDeque field_B;
     static lg field_A;
-    static er field_y;
+    static Sprite field_y;
     static String field_E;
     static lb field_D;
 
@@ -79,9 +79,9 @@ final class qo extends ji {
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param1 == 0) {
-            this.field_z = new jq[param2.h(param0 - 121)];
+            this.field_z = new jq[param2.readUnsignedByte(param0 - 121)];
             for (var4_int = 0; var4_int < this.field_z.length; var4_int++) {
-              var5 = param2.h(-11);
+              var5 = param2.readUnsignedByte(-11);
               var6 = var5;
               if (var6 != 0) {
                 if (var6 == 1) {
@@ -101,7 +101,7 @@ final class qo extends ji {
             }
           } else {
             if (1 == param1) {
-              stackIn_19_1 = (param2.h(-11) == 1);
+              stackIn_19_1 = (param2.readUnsignedByte(-11) == 1);
               this.field_o = stackIn_19_1;
             }
           }

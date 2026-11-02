@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ql extends um implements ij {
-    static cr field_L;
+    static UiWidget field_L;
     private ko field_I;
     static String field_K;
     static int field_M;
@@ -72,7 +72,7 @@ final class ql extends um implements ij {
         int stackIn_3_2;
         boolean stackIn_3_3;
         boolean stackIn_4_4 = false;
-        cr stackIn_20_0 = null;
+        UiWidget stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -118,9 +118,9 @@ final class ql extends um implements ij {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_M == null) {
-              var6.field_Jb = new cr(0L, IterableNodeHashTable.field_b);
+              var6.field_Jb = new UiWidget(0L, IterableNodeHashTable.field_b);
               var6.b(var6.field_Jb, 123);
-              var6.field_Ob = new cr(0L, IterableNodeHashTable.field_b);
+              var6.field_Ob = new UiWidget(0L, IterableNodeHashTable.field_b);
               var6.b(var6.field_Ob, 122);
               var7 = 1;
               var6.i(-2147483648);
@@ -155,7 +155,7 @@ final class ql extends um implements ij {
               var6.field_kb = r.field_f - var6.field_db;
             }
             if (var7 != 0) {
-              ao.field_O.field_Mb.a((byte) 84, (cr) (var5), var6, 2);
+              ao.field_O.field_Mb.a((byte) 84, (UiWidget) (var5), var6, 2);
             }
             if (null != var6.field_Ob &&
               var6.field_Ob.field_pb) {
@@ -210,7 +210,7 @@ final class ql extends um implements ij {
           stackIn_3_1 = (this.field_I.a((byte) -5).a(-23996) == qm.field_G);
           stackIn_2_0.field_F = stackIn_3_1;
           if (param0 < 6) {
-            field_L = (cr) null;
+            field_L = (UiWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

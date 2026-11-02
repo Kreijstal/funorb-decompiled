@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends ji {
+final class jm extends TextureOperator {
     private int[][] field_A;
     static java.math.BigInteger field_H;
     private int[] field_z;
@@ -15,9 +15,9 @@ final class jm extends ji {
     final static void d(int param0, int param1) {
         BitPacketBuffer var2 = uh.field_Wb;
         var2.j(param1, 119);
-        var2.f(2, param0 ^ 108);
-        var2.f(4, 101);
-        var2.f(hr.i(104), -97);
+        var2.writeByte(2, param0 ^ 108);
+        var2.writeByte(4, 101);
+        var2.writeByte(hr.i(104), -97);
         if (param0 == 1) {
           return;
         }
@@ -319,14 +319,14 @@ final class jm extends ji {
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param1 == 0) {
-            var4_int = param2.h(-11);
+            var4_int = param2.readUnsignedByte(-11);
             if (var4_int == 0) {
-              this.field_A = new int[param2.h(param0 ^ -101)][4];
+              this.field_A = new int[param2.readUnsignedByte(param0 ^ -101)][4];
               for (var5 = 0; this.field_A.length > var5; var5++) {
-                this.field_A[var5][0] = param2.a((byte) -11);
-                this.field_A[var5][1] = param2.h(-11) << 4;
-                this.field_A[var5][2] = param2.h(-11) << 4;
-                this.field_A[var5][3] = param2.h(-11) << 4;
+                this.field_A[var5][0] = param2.readUnsignedShort((byte) -11);
+                this.field_A[var5][1] = param2.readUnsignedByte(-11) << 4;
+                this.field_A[var5][2] = param2.readUnsignedByte(-11) << 4;
+                this.field_A[var5][3] = param2.readUnsignedByte(-11) << 4;
               }
             } else {
               this.a(var4_int, (byte) 59);

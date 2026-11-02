@@ -7,7 +7,7 @@ final class oc extends IntrusiveNode {
     int[] field_y;
     wk[] field_t;
     static cc field_s;
-    static cr field_v;
+    static UiWidget field_v;
     static String field_x;
     byte[][][] field_q;
     int[] field_o;
@@ -17,7 +17,7 @@ final class oc extends IntrusiveNode {
 
     final static boolean a(char param0, byte param1) {
         if (param1 > -87) {
-          field_v = (cr) null;
+          field_v = (UiWidget) null;
           if (param0 < 65) {
             if (param0 < 97) {
               return false;

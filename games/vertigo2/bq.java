@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq extends ji {
-    static cr field_B;
+final class bq extends TextureOperator {
+    static UiWidget field_B;
     private int field_y;
     static String field_A;
     static String[] field_G;
@@ -230,10 +230,10 @@ final class bq extends ji {
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_y = param2.a((byte) -11);
+            this.field_y = param2.readUnsignedShort((byte) -11);
           } else {
             if (var4_int == 1) {
-              stackIn_8_1 = (param2.h(-11) == 1);
+              stackIn_8_1 = (param2.readUnsignedByte(-11) == 1);
               this.field_z = stackIn_8_1;
             }
           }

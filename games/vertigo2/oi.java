@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi {
-    static cr field_a;
+    static UiWidget field_a;
     static int field_b;
 
     final static int a(int param0) {

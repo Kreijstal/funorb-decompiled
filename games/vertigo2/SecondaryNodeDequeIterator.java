@@ -10,9 +10,9 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static String field_b;
     static volatile int field_a;
 
-    final static cr a(boolean param0) {
+    final static UiWidget a(boolean param0) {
         if (!param0) {
-          return (cr) null;
+          return (UiWidget) null;
         }
         return pp.f(-126);
     }
@@ -26,13 +26,13 @@ final class SecondaryNodeDequeIterator implements Iterator {
           return true;
         }
         if (de.field_f == 102) {
-          ji.field_n.a((byte) 34);
+          TextureOperator.field_n.a((byte) 34);
           return true;
         }
-        if (ji.field_n == null) {
+        if (TextureOperator.field_n == null) {
           return false;
         }
-        if (ji.field_n.a(param1, false, param2)) {
+        if (TextureOperator.field_n.a(param1, false, param2)) {
           return true;
         }
         return false;
@@ -69,7 +69,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (null == this.field_c) {
           throw new IllegalStateException();
         }
-        this.field_c.a(-105);
+        this.field_c.unlinkSecondary(-105);
         this.field_c = null;
     }
 
@@ -113,7 +113,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_d = null;
           var1 = null;
         } else {
-          this.field_d = ((DualLinkNode) (var1)).field_p;
+          this.field_d = ((DualLinkNode) (var1)).secondaryPrevious;
         }
         this.field_c = (DualLinkNode) (var1);
         return var1;
@@ -154,7 +154,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_e = param0;
           this.field_c = null;
-          this.field_d = this.field_e.field_b.field_p;
+          this.field_d = this.field_e.field_b.secondaryPrevious;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

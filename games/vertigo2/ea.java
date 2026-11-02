@@ -4,12 +4,12 @@
 final class ea {
     static String field_f;
     static String field_a;
-    static cr field_c;
+    static UiWidget field_c;
     static int field_g;
     static int[] field_h;
     static int field_e;
     static String field_b;
-    static er[] field_d;
+    static Sprite[] field_d;
 
     public static void a(byte param0) {
         field_f = null;
@@ -29,8 +29,8 @@ final class ea {
     final static void a(int param0, boolean param1) {
         BitPacketBuffer var2 = uh.field_Wb;
         var2.j(param0, 122);
-        var2.f(1, -99);
-        var2.f(3, 98);
+        var2.writeByte(1, -99);
+        var2.writeByte(3, 98);
         if (param1) {
           return;
         }
@@ -57,7 +57,7 @@ final class ea {
         field_f = "Please enter a year between <%0> and <%1>";
         field_g = 250;
         field_a = "<%0> has lost connection.";
-        field_d = new er[11];
+        field_d = new Sprite[11];
         field_h = new int[8192];
     }
 }

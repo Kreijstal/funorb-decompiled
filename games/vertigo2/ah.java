@@ -13,8 +13,8 @@ class ah extends mo {
           return;
         }
         try {
-          var2.f(1, param0 - 46);
-          var2.f(0, -100);
+          var2.writeByte(1, param0 - 46);
+          var2.writeByte(0, -100);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ah.D(" + param0 + ',' + param1 + ')');
         }
@@ -169,7 +169,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -30, "TIMES");
                 if (null != var2) {
-                  uj.field_k = in.a(0, var2);
+                  MenuSelectionCursor.field_k = in.a(0, var2);
                 }
                 var2 = en.a((byte) -59, "ANY_KEY_TO_CLOSE");
                 if (var2 != null) {
@@ -261,51 +261,51 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -126, "instructions_block_descriptions,0");
                 if (var2 != null) {
-                  uj.field_j[0] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -22, "instructions_block_descriptions,1");
                 if (var2 != null) {
-                  uj.field_j[1] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_block_descriptions,2");
                 if (null != var2) {
-                  uj.field_j[2] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -100, "instructions_block_descriptions,3");
                 if (null != var2) {
-                  uj.field_j[3] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -20, "instructions_block_descriptions,4");
                 if (var2 != null) {
-                  uj.field_j[4] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[4] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -70, "instructions_block_descriptions,5");
                 if (null != var2) {
-                  uj.field_j[5] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[5] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -81, "instructions_block_descriptions,6");
                 if (null != var2) {
-                  uj.field_j[6] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[6] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -27, "instructions_block_descriptions,7");
                 if (var2 != null) {
-                  uj.field_j[7] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[7] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -36, "instructions_block_descriptions,8");
                 if (var2 != null) {
-                  uj.field_j[8] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[8] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -82, "instructions_block_descriptions,9");
                 if (var2 != null) {
-                  uj.field_j[9] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[9] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_block_descriptions,10");
                 if (null != var2) {
-                  uj.field_j[10] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[10] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_block_descriptions,11");
                 if (var2 != null) {
-                  uj.field_j[11] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[11] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -82, "instructions_item_names,0");
                 if (null != var2) {
@@ -1176,7 +1176,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -112, "GENERAL");
                 if (var2 != null) {
-                  ji.field_w = in.a(0, var2);
+                  TextureOperator.field_w = in.a(0, var2);
                 }
                 var2 = en.a((byte) -116, "CONTROLS_1P");
                 if (null != var2) {
@@ -1220,7 +1220,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -29, "DEATHMATCH");
                 if (null != var2) {
-                  tr.field_e = in.a(0, var2);
+                  GameplayScreen.field_e = in.a(0, var2);
                 }
                 var2 = en.a((byte) -58, "COOP");
                 if (null != var2) {
@@ -1312,7 +1312,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -44, "YOUDDIED");
                 if (var2 != null) {
-                  uj.field_e = in.a(0, var2);
+                  MenuSelectionCursor.field_e = in.a(0, var2);
                 }
                 var2 = en.a((byte) -22, "BLUEDIED");
                 if (null != var2) {

@@ -5,14 +5,14 @@ final class qn extends IntrusiveNode {
     int field_n;
     static lg field_p;
     static String field_z;
-    static cr field_s;
+    static UiWidget field_s;
     static String field_o;
     static String field_v;
     static boolean field_q;
     static int field_u;
     static v field_y;
     static int field_w;
-    static er field_r;
+    static Sprite field_r;
     static String[] field_t;
     int field_x;
 

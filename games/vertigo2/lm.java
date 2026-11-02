@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class lm extends ji {
+final class lm extends TextureOperator {
     private int field_z;
     private int field_E;
-    static cr field_F;
+    static UiWidget field_F;
     private int field_C;
     private int field_L;
     private int field_A;
@@ -47,38 +47,38 @@ final class lm extends ji {
           var4_int = param1;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_D = param2.a((byte) -11);
+              this.field_D = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_L = param2.a((byte) -11);
+                    this.field_L = param2.readUnsignedShort((byte) -11);
                   } else {
                     if (5 == var4_int) {
-                      this.field_A = param2.a((byte) -11);
+                      this.field_A = param2.readUnsignedShort((byte) -11);
                     } else {
                       if (var4_int != 6) {
                         if (var4_int != 7) {
                           if (var4_int == 8) {
-                            this.field_J = param2.a((byte) -11);
+                            this.field_J = param2.readUnsignedShort((byte) -11);
                           }
                         } else {
-                          this.field_I = param2.a((byte) -11);
+                          this.field_I = param2.readUnsignedShort((byte) -11);
                         }
                       } else {
-                        this.field_z = param2.h(-11);
+                        this.field_z = param2.readUnsignedByte(-11);
                       }
                     }
                   }
                 } else {
-                  this.field_C = param2.a((byte) -11);
+                  this.field_C = param2.readUnsignedShort((byte) -11);
                 }
               } else {
-                this.field_y = param2.a((byte) -11);
+                this.field_y = param2.readUnsignedShort((byte) -11);
               }
             }
           } else {
-            this.field_E = param2.h(-11);
+            this.field_E = param2.readUnsignedByte(-11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,11 +187,11 @@ final class lm extends ji {
         return;
     }
 
-    final static er[] a(String param0, int param1, String param2, r param3) {
-        er[] var4 = null;
+    final static Sprite[] a(String param0, int param1, String param2, r param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        er[] var5 = null;
-        er[] stackIn_3_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

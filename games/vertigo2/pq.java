@@ -434,7 +434,7 @@ final class pq {
         if (param0 <= 92) {
           pq.b(-21);
         }
-        hj.field_b = id.field_f.h(-11) == 0 ? true : false;
+        hj.field_b = id.field_f.readUnsignedByte(-11) == 0 ? true : false;
     }
 
     static {

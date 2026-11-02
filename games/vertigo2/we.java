@@ -4,23 +4,23 @@
 final class we extends iq {
     private int field_K;
     static String field_N;
-    private er[] field_D;
+    private Sprite[] field_D;
     private int field_C;
-    private er field_I;
+    private Sprite field_I;
     private int field_S;
     private int field_R;
     private int field_P;
     boolean field_F;
     int field_G;
     static String field_H;
-    private er field_E;
+    private Sprite field_E;
     static int field_M;
-    private er field_Q;
+    private Sprite field_Q;
     static String field_J;
     static String field_L;
     private int field_O;
 
-    private final void a(int param0, er param1, boolean param2, int param3) {
+    private final void a(int param0, Sprite param1, boolean param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -166,7 +166,7 @@ final class we extends iq {
         }
     }
 
-    private final er a(int param0, int param1, byte param2) {
+    private final Sprite a(int param0, int param1, byte param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -174,7 +174,7 @@ final class we extends iq {
         int var11 = 0;
         int var12 = 0;
         int var13 = Vertigo2.field_L ? 1 : 0;
-        er var14 = new er(this.field_O * 2, this.field_s);
+        Sprite var14 = new Sprite(this.field_O * 2, this.field_s);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -182,7 +182,7 @@ final class we extends iq {
         int var5 = this.field_s >> 1;
         int var6 = 0;
         if (param2 <= 27) {
-          return (er) null;
+          return (Sprite) null;
         }
         while (this.field_s > var6) {
           var7 = (var6 >> 1) * (-1 + this.field_O * 2) % (2 * this.field_O);
@@ -209,7 +209,7 @@ final class we extends iq {
     }
 
     final void a(byte param0, int param1, int param2, iq param3) {
-        er discarded$1 = null;
+        Sprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -245,7 +245,7 @@ final class we extends iq {
         this.a(85);
     }
 
-    private final er h(int param0) {
+    private final Sprite h(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -255,7 +255,7 @@ final class we extends iq {
           field_H = (String) null;
         }
         int var2 = this.field_s >> 1;
-        er var3 = new er(var2, this.field_s);
+        Sprite var3 = new Sprite(var2, this.field_s);
         lq.a(var3, (byte) -94);
         for (var4 = 0; var4 < this.field_s; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -298,15 +298,15 @@ final class we extends iq {
     }
 
     private final void a(int param0) {
-        this.field_D = new er[]{this.a(this.field_K, this.field_C, (byte) 100), this.a(this.field_S, this.field_R, (byte) 48)};
+        this.field_D = new Sprite[]{this.a(this.field_K, this.field_C, (byte) 100), this.a(this.field_S, this.field_R, (byte) 48)};
         this.field_I = this.h(2);
         this.field_E = this.field_I.a();
-        this.field_Q = new er(this.field_s >> 1, this.field_s);
+        this.field_Q = new Sprite(this.field_s >> 1, this.field_s);
         int var2 = 6 % ((-7 - param0) / 48);
     }
 
     private final static void a(r param0, r param1, r param2, byte param3) {
-        er var17 = null;
+        Sprite var17 = null;
         u[] var5 = null;
         u[][] var6 = null;
         int[][] var19 = null;
@@ -314,10 +314,10 @@ final class we extends iq {
         int[][] var7 = null;
         u[] var14 = null;
         int var11_int = 0;
-        er var15 = null;
-        er var18 = null;
-        er var11 = null;
-        er var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Vertigo2.field_L ? 1 : 0;
@@ -335,7 +335,7 @@ final class we extends iq {
           bl.field_N = (cc) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
           qc.field_x = (cc) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
           sg.field_a = (cc) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
-          var17 = new er(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          var17 = new Sprite(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
           vl.a(0, "commonui", param1, "dropdown");
           var5 = oh.a((byte) -39, "screen_options", "commonui", param1);
           rg.field_e = new u[4];
@@ -364,18 +364,18 @@ final class we extends iq {
           DelegatingCanvas.a((byte) -123);
           var17.d();
           bi.a(0, 0, bi.field_e, bi.field_j);
-          var15 = new er(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();
           var17.c(0, 0);
-          var11 = new er(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.d();
           var17.c(-var17.field_y + var9Lifetime1, 0);
-          var12 = new er(var17.field_y - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_y - var9Lifetime1 * 2, var9Lifetime1);
           var12.d();
           var17.c(-var9Lifetime1, 0);
           ln.d(-28558);
-          q.field_z = new er[]{var15, var12, var11};
+          q.field_z = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "we.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

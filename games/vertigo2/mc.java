@@ -155,7 +155,7 @@ final class mc {
     final void a(cc param0, int param1) {
         va var17 = null;
         mq var4 = null;
-        er[] var5 = null;
+        Sprite[] var5 = null;
         fe var16 = null;
         fe var18 = null;
         int var7_int = 0;
@@ -164,12 +164,12 @@ final class mc {
         td discarded$0 = null;
         jo discarded$1 = null;
         mq var8 = null;
-        er[] var9 = null;
-        er[] var10 = null;
-        er dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         mq var11 = null;
         mq var12 = null;
-        er var13 = null;
+        Sprite var13 = null;
         mq var14 = null;
         mq var19 = null;
         int var15 = Vertigo2.field_L ? 1 : 0;
@@ -198,13 +198,13 @@ final class mc {
           var4.a(0, 6216).a((byte) -59, 15658734).a(-115, wp.a(10066329, (byte) 75, 7829367, 8947848));
           var4.a(1, 6216).a(param1 - 115, wp.a(10066329, (byte) 120, 13421772, 11184810));
           var4.a(3, 6216).a(-121, wp.a(7829367, (byte) 77, 10066329, 8947848)).c(param1 ^ 32350, 1).a(97, 1);
-          var5 = new er[9];
+          var5 = new Sprite[9];
           var16 = new fe(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_F.length; var7_int++) {
             var16.field_F[var7_int] = 1077952576;
           }
-          var5[4] = (er) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(4, 6216).a(true, -107).a(param1 ^ 127, var5);
           var4.a(5, 6216).a(-114, gb.a(0, 65793, 0, param1 ^ -28292, 0)).a(true, param1 ^ 90).a((byte) -68, -1);
           this.field_p = (ur) ((Object) var4);
@@ -222,10 +222,10 @@ final class mc {
           var8.a(0, param1 + 6218).a(param1 - 119, wp.a(7829367, (byte) 118, 10066329, 15658734)).a((byte) -57, 1118481).b(-1, -101);
           var8.a(4, 6216).a(true, param1 - 91).a(-117, var5);
           this.field_c = (ur) ((Object) var8);
-          var9 = new er[9];
-          var10 = new er[9];
-          var9[4] = new er(2, 1);
-          var10[4] = new er(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_F = new int[]{6710886, 7829367};
           var10[4].field_F = new int[]{6710886, 7829367};
@@ -233,7 +233,7 @@ final class mc {
           var12 = new mq();
           var11.a(0, var9, false);
           var12.a(0, var10, false);
-          var13 = new er(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_F = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new mq(var4, true);
           var14.a((byte) 73, var13.c());

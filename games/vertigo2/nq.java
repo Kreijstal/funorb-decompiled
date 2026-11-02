@@ -1051,10 +1051,10 @@ final class nq extends rk {
         }
     }
 
-    final static cr a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, cc param7, int param8, int param9, int param10, int param11, int param12) {
-        cr var13 = null;
+    final static UiWidget a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, cc param7, int param8, int param9, int param10, int param11, int param12) {
+        UiWidget var13 = null;
         RuntimeException var13_ref = null;
-        cr stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1063,7 +1063,7 @@ final class nq extends rk {
           if (param10 < 68) {
             nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (lg) null, -20, 0, (int[]) null);
           }
-          var13 = new cr(0L, (cr) null);
+          var13 = new UiWidget(0L, (UiWidget) null);
           var13.field_Bb = fk.c(-127, param5, param9);
           var13.field_Q = fk.c(-127, param12, param2);
           var13.field_cb = fk.c(-127, param3, param6);

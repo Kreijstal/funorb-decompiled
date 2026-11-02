@@ -198,7 +198,7 @@ final class hi extends bg {
         }
     }
 
-    final static cr b(int param0) {
+    final static UiWidget b(int param0) {
         int var1 = -25 / ((param0 + 54) / 34);
         return ao.field_O.field_Mb;
     }

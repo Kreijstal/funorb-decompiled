@@ -386,9 +386,9 @@ final class fk extends sn {
         return 2;
     }
 
-    final static er[] c(int param0, int param1, int param2) {
+    final static Sprite[] c(int param0, int param1, int param2) {
         if (param0 > -126) {
-          return (er[]) null;
+          return (Sprite[]) null;
         }
         return ca.a((byte) -123, param1, 1, param2);
     }

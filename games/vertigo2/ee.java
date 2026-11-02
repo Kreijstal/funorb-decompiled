@@ -4,7 +4,7 @@
 final class ee {
     static String field_a;
     static int field_c;
-    static cr field_b;
+    static UiWidget field_b;
     static String field_d;
 
     final static void a(int param0, int param1, int param2) {
@@ -91,7 +91,7 @@ final class ee {
         try {
           var1_int = 0;
           if (param0 != -11747) {
-            field_b = (cr) null;
+            field_b = (UiWidget) null;
           }
           while (var1_int < rr.field_B.length) {
             if (rr.field_z[var1_int]) {

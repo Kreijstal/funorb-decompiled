@@ -36,7 +36,7 @@ final class nr extends tb implements ef {
     }
 
     final static void a(int param0, int param1, vi param2) {
-        mc.field_i.a(param2, false);
+        mc.field_i.addFirst(param2, false);
         if (param1 != -22754) {
           return;
         }
@@ -187,7 +187,7 @@ final class nr extends tb implements ef {
           if (param1 < 64) {
             return true;
           }
-          var2_int = param0.h(-11);
+          var2_int = param0.readUnsignedByte(-11);
           stackIn_6_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_6_0;
           stackIn_7_0 = var3;
@@ -213,16 +213,16 @@ final class nr extends tb implements ef {
         return this.e(param0, -1).field_f & 65535;
     }
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4) {
-        er[] var6 = new er[9];
-        er[] var5 = var6;
-        er dupTemp$0 = PacketBuffer.a(param3, param1, false);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = PacketBuffer.a(param3, param1, false);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        er dupTemp$1 = PacketBuffer.a(param2, param1, false);
+        Sprite dupTemp$1 = PacketBuffer.a(param2, param1, false);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -256,33 +256,33 @@ final class nr extends tb implements ef {
         int var4 = 0;
         int var4Lifetime1;
         iq.field_x.position = 0;
-        iq.field_x.f(12, 105);
-        iq.field_x.e(j.field_r.nextInt(), param0 - 115);
-        iq.field_x.e(j.field_r.nextInt(), 0);
+        iq.field_x.writeByte(12, 105);
+        iq.field_x.writeInt(j.field_r.nextInt(), param0 - 115);
+        iq.field_x.writeInt(j.field_r.nextInt(), 0);
         if (param0 == 115) {
-          iq.field_x.f(param2, 101);
-          iq.field_x.f(param3, -67);
-          iq.field_x.d(param1, param0 ^ -1670);
+          iq.field_x.writeByte(param2, 101);
+          iq.field_x.writeByte(param3, -67);
+          iq.field_x.writeShort(param1, param0 ^ -1670);
           iq.field_x.a(lp.field_E, jm.field_H, 9157);
           uh.field_Wb.j(18, param0 + 5);
           fieldTemp$0 = uh.field_Wb.position + 1;
           uh.field_Wb.position = uh.field_Wb.position + 1;
           var4 = fieldTemp$0;
           uh.field_Wb.a(0, -10140, iq.field_x.payload, iq.field_x.position);
-          uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.position);
+          uh.field_Wb.patchByteLength((byte) -95, -var4 + uh.field_Wb.position);
           return;
         }
         nr.a(-111, -84, -8, -110, 72);
-        iq.field_x.f(param2, 101);
-        iq.field_x.f(param3, -67);
-        iq.field_x.d(param1, param0 ^ -1670);
+        iq.field_x.writeByte(param2, 101);
+        iq.field_x.writeByte(param3, -67);
+        iq.field_x.writeShort(param1, param0 ^ -1670);
         iq.field_x.a(lp.field_E, jm.field_H, 9157);
         uh.field_Wb.j(18, param0 + 5);
         int fieldTemp$1 = uh.field_Wb.position + 1;
         uh.field_Wb.position = uh.field_Wb.position + 1;
         var4Lifetime1 = fieldTemp$1;
         uh.field_Wb.a(0, -10140, iq.field_x.payload, iq.field_x.position);
-        uh.field_Wb.b((byte) -95, -var4Lifetime1 + uh.field_Wb.position);
+        uh.field_Wb.patchByteLength((byte) -95, -var4Lifetime1 + uh.field_Wb.position);
     }
 
     static {

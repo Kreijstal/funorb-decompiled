@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fo {
-    static cr field_f;
+    static UiWidget field_f;
     private int field_b;
     static boolean field_d;
     static si field_e;
-    private uj field_a;
-    static cr field_c;
+    private MenuSelectionCursor field_a;
+    static UiWidget field_c;
 
     final void c(int param0) {
         if (this.field_b == 19) {
@@ -83,10 +83,10 @@ final class fo {
           while (NodeHashTableIterator.a(false)) {
             if (de.field_f != 13) {
               this.d((byte) 106);
-              if (-1 == this.field_a.field_c) {
+              if (-1 == this.field_a.selectedIndex) {
                 continue;
               }
-              this.b(this.field_a.field_c, false, 404);
+              this.b(this.field_a.selectedIndex, false, 404);
               continue;
             }
             if (this.field_b == 0) {
@@ -144,8 +144,8 @@ final class fo {
             gj.a((byte) 116, false, am.field_n, -1);
           }
           this.field_a.a((byte) -29, this.a(31, PacketBuffer.field_n, gb.field_d), this.a(121, sd.field_N, no.field_e));
-          if (this.field_a.field_c != -1) {
-            this.b(this.field_a.field_c, true, 404);
+          if (this.field_a.selectedIndex != -1) {
+            this.b(this.field_a.selectedIndex, true, 404);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -186,8 +186,8 @@ final class fo {
               if ((this.field_b == 19)) {
                 if (!mh.field_a) {
                   uh.field_Wb.j(64, 123);
-                  uh.field_Wb.f(1, 107);
-                  uh.field_Wb.f(0, 101);
+                  uh.field_Wb.writeByte(1, 107);
+                  uh.field_Wb.writeByte(0, 101);
                   mh.field_a = true;
                 }
                 var2Lifetime1 = t.field_l;
@@ -267,7 +267,7 @@ final class fo {
         int var3 = -115 / ((63 - param1) / 62);
         if (oj.field_Q[this.field_b]) {
           if ((this.field_b == 5 || this.field_b == 6) &&
-            2 == this.field_a.field_b) {
+            2 == this.field_a.itemCount) {
             if (param0 == 0) {
               return 24 + (320 + va.field_s.a(1, sp.field_Q) / 2);
             }
@@ -301,7 +301,7 @@ final class fo {
         } else {
           this.c((byte) 109);
         }
-        String var2 = !ag.b(49) ? tr.field_O : vg.field_b;
+        String var2 = !ag.b(49) ? GameplayScreen.field_O : vg.field_b;
         rq.a(36, 32 + va.field_s.a(param0 - 11058, var2), 425, -(va.field_s.a(param0 - 11058, var2) / 2) - 16 + 320, 73, 100);
         va.field_s.a(var2, 16777215, -1, 320, 450, 2);
         if (param0 != 11059) {
@@ -399,7 +399,7 @@ final class fo {
         int var6;
         int var7;
         int var8;
-        er var8_ref_er;
+        Sprite var8_ref_er;
         int var9;
         int var10;
         int var11;
@@ -481,7 +481,7 @@ final class fo {
             if (var9 != 0) {
               va.field_s.a(16725760, (byte) 84, -1, 250, wj.field_a, 10 + var8Lifetime1 + 240);
             } else {
-              va.field_s.a(16725760, (byte) 91, -1, 250, cr.field_Z, 240 + var8Lifetime1 + 10);
+              va.field_s.a(16725760, (byte) 91, -1, 250, UiWidget.field_Z, 240 + var8Lifetime1 + 10);
             }
             var10 = 240;
             if (var9 == 0) {
@@ -565,7 +565,7 @@ final class fo {
           var3_int = 8;
           var4 = var3_int * 2 + 210;
           if (param0 != 7) {
-            field_c = (cr) null;
+            field_c = (UiWidget) null;
           }
           var5 = 190;
           var6 = 180;
@@ -624,14 +624,14 @@ final class fo {
         }
         if (oj.field_Q[this.field_b]) {
           this.field_a.a(1, true);
-          if (this.field_a.field_c > -1 &&
-            !this.b(this.field_a.field_c, (byte) 58)) {
+          if (this.field_a.selectedIndex > -1 &&
+            !this.b(this.field_a.selectedIndex, (byte) 58)) {
             if (this.field_a.d(-98)) {
-              this.field_a.field_c = this.field_a.field_c + 1;
+              this.field_a.selectedIndex = this.field_a.selectedIndex + 1;
             } else {
-              this.field_a.field_c = this.field_a.field_c - 2;
-              if (!(this.field_a.field_c >= 0)) {
-                this.field_a.field_c = -1 + this.field_a.field_b;
+              this.field_a.selectedIndex = this.field_a.selectedIndex - 2;
+              if (!(this.field_a.selectedIndex >= 0)) {
+                this.field_a.selectedIndex = -1 + this.field_a.itemCount;
               }
             }
           }
@@ -667,7 +667,7 @@ final class fo {
 
     private final void a(int param0) {
         if (param0 != 3767) {
-          field_c = (cr) null;
+          field_c = (UiWidget) null;
         }
         ie.field_Hb.e(-(ie.field_Hb.field_y / 2) + 320, 240 - ie.field_Hb.field_t / 2);
     }
@@ -721,14 +721,14 @@ final class fo {
         int var9;
         int var10;
         int var11;
-        er[] var12;
+        Sprite[] var12;
         int var13;
         int var14;
         int var15;
         int var16;
         int var17;
         int var18;
-        er var19;
+        Sprite var19;
         int var20;
         String var21;
         int var17Lifetime1;
@@ -941,7 +941,7 @@ final class fo {
         if (!oj.field_Q[this.field_b]) {
           return oj.field_M[this.field_b];
         }
-        if (-1 + this.field_a.field_b == param0 && (this.field_b == 7 ||
+        if (-1 + this.field_a.itemCount == param0 && (this.field_b == 7 ||
           this.field_b == 9 ||
           8 == this.field_b ||
           this.field_b == 5 ||
@@ -956,7 +956,7 @@ final class fo {
         }
         if ((this.field_b == 5 ||
           this.field_b == 6) &&
-          (this.field_a.field_b == 2 &&
+          (this.field_a.itemCount == 2 &&
           param0 == 0)) {
           return -24 - va.field_s.a(1, sp.field_Q) / 2 + 320;
         }
@@ -1086,7 +1086,7 @@ final class fo {
 
     fo(int param0) {
         this.field_b = param0;
-        this.field_a = new uj(oj.field_O[this.field_b].length);
+        this.field_a = new MenuSelectionCursor(oj.field_O[this.field_b].length);
     }
 
     private final void g(int param0) {
@@ -1207,7 +1207,7 @@ final class fo {
           this.d(-72);
         }
         if (!oj.field_Q[this.field_b]) {
-          if (this.field_a.field_b - 1 == param0) {
+          if (this.field_a.itemCount - 1 == param0) {
             if (this.field_b == 7 ||
               this.field_b == 8 ||
               6 == this.field_b ||
@@ -1239,19 +1239,19 @@ final class fo {
     private final void a(boolean param0, byte param1, boolean param2, int param3) {
         int stackIn_11_0 = 0;
         int stackIn_81_0 = 0;
-        tr stackIn_201_0 = null;
+        GameplayScreen stackIn_201_0 = null;
         int var5;
         int var6;
         int var7;
         int var8;
         String var8_ref_String;
-        tr var8_ref_tr;
+        GameplayScreen var8_ref_tr;
         int var9;
         String var9_ref_String;
         int var10;
         int var11;
         String var12;
-        tr var13;
+        GameplayScreen var13;
         int var9Lifetime1;
         int var10Lifetime1;
         int var10Lifetime1Lifetime1;
@@ -1721,8 +1721,8 @@ final class fo {
         if (param0 > -78) {
           this.c(67, true, -90);
         }
-        if (0 < this.field_a.field_c) {
-          param2 = this.field_a.field_c;
+        if (0 < this.field_a.selectedIndex) {
+          param2 = this.field_a.selectedIndex;
         }
         this.field_a.a(param1, this.a(110, PacketBuffer.field_n, gb.field_d), param2, (byte) 80);
         qc.field_t = -1;
@@ -1747,15 +1747,15 @@ final class fo {
         int stackIn_74_2;
         int stackIn_74_3;
         int var2;
-        er var2_ref_er;
+        Sprite var2_ref_er;
         int var3;
-        er var4;
+        Sprite var4;
         regionExit1: {
           var3 = Vertigo2.field_L ? 1 : 0;
           if (this.field_b == 0) {
             uq.field_a.e(-70, 480 - (uq.field_a.field_t + 20));
             eq.field_F.e(50, 10);
-            rq.a(this.a(this.field_a.field_b - 1, (byte) -80) + (this.c(-1 + this.field_a.field_b, (byte) -116) - (this.a(0, (byte) -80) - 2 * IntrusiveNode.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * IntrusiveNode.field_f), this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, param0 ^ -17) - IntrusiveNode.field_f, -101, 150);
+            rq.a(this.a(this.field_a.itemCount - 1, (byte) -80) + (this.c(-1 + this.field_a.itemCount, (byte) -116) - (this.a(0, (byte) -80) - 2 * IntrusiveNode.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * IntrusiveNode.field_f), this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, param0 ^ -17) - IntrusiveNode.field_f, -101, 150);
           } else {
             if (this.field_b != 17 &&
               this.field_b != 18 &&
@@ -1864,11 +1864,11 @@ final class fo {
                   }
                 }
               } else {
-                rq.a(this.a(-1 + this.field_a.field_b, (byte) -80) + this.c(this.field_a.field_b - 1, (byte) -116) - this.a(0, (byte) -80) + IntrusiveNode.field_f * 2, this.a(0, 127) - this.b(0, 89) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 25) - IntrusiveNode.field_f, -72, 150);
+                rq.a(this.a(-1 + this.field_a.itemCount, (byte) -80) + this.c(this.field_a.itemCount - 1, (byte) -116) - this.a(0, (byte) -80) + IntrusiveNode.field_f * 2, this.a(0, 127) - this.b(0, 89) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 25) - IntrusiveNode.field_f, -72, 150);
               }
               break regionExit1;
             }
-            rq.a(this.a(-2 + this.field_a.field_b, (byte) -80) - (-this.c(this.field_a.field_b - 2, (byte) -116) + this.a(0, (byte) -80)) + 2 * IntrusiveNode.field_f, this.a(0, param0 + 239) - this.b(0, 119) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 17) - IntrusiveNode.field_f, param0 + 51, 150);
+            rq.a(this.a(-2 + this.field_a.itemCount, (byte) -80) - (-this.c(this.field_a.itemCount - 2, (byte) -116) + this.a(0, (byte) -80)) + 2 * IntrusiveNode.field_f, this.a(0, param0 + 239) - this.b(0, 119) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 17) - IntrusiveNode.field_f, param0 + 51, 150);
           }
         }
         if (0 <= this.field_b &&
@@ -1877,9 +1877,9 @@ final class fo {
           var2_ref_er = var4;
           var2_ref_er.e(-(var4.field_y / 2) + 320, 50 - var4.field_t / 2);
         }
-        for (var2 = 0; var2 < this.field_a.field_b; var2++) {
+        for (var2 = 0; var2 < this.field_a.itemCount; var2++) {
           stackIn_70_1 = var2;
-          stackIn_71_2 = (~var2 == ~this.field_a.field_c);
+          stackIn_71_2 = (~var2 == ~this.field_a.selectedIndex);
           this.c(stackIn_70_1, stackIn_71_2, 1);
         }
         va.field_s.b(param0 ^ 72);

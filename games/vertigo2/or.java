@@ -8,7 +8,7 @@ final class or {
     private double field_d;
     static PlatformTaskDispatcher field_f;
     static int field_c;
-    static er field_b;
+    static Sprite field_b;
     static String field_h;
     static String field_k;
     static String[] field_n;
@@ -34,7 +34,7 @@ final class or {
     }
 
     final static void b(byte param0) {
-        IntrusiveDeque.field_b = new np(hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e);
+        IntrusiveDeque.field_b = new np(hb.field_D, TextureOperator.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e);
         if (param0 <= 76) {
           or.b(-8);
         }

@@ -16,16 +16,16 @@ final class hb extends bg {
     static wk field_q;
     int field_x;
     private int field_s;
-    static cr field_j;
+    static UiWidget field_j;
     private int field_v;
     private int field_l;
     private int field_m;
     private boolean field_r;
     private int field_g;
-    static cr field_k;
+    static UiWidget field_k;
     private lg field_B;
     private lg field_t;
-    static cr field_D;
+    static UiWidget field_D;
     static int field_p;
 
     final void a(int param0, int param1) {
@@ -109,7 +109,7 @@ final class hb extends bg {
           return null;
         }
         if (!be.field_q) {
-          var2 = new lg(fb.field_v, false, false, false, false);
+          var2 = new lg(SpriteState.field_v, false, false, false, false);
           return var2;
         }
         if (null != this.field_t) {

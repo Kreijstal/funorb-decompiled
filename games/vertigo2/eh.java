@@ -3,7 +3,7 @@
  */
 final class eh {
     static int field_c;
-    static cr field_a;
+    static UiWidget field_a;
     static int field_e;
     static String field_g;
     static String[] field_d;
@@ -56,7 +56,7 @@ final class eh {
         }
         if (0 == var6) {
           if (var7 != 0) {
-            cr.b(param3, param0, param2 ^ 3, param5, param4);
+            UiWidget.b(param3, param0, param2 ^ 3, param5, param4);
           }
           return;
         }
@@ -99,7 +99,7 @@ final class eh {
               var10 = cj.field_D;
             }
           }
-          uj.a(var8, var9, var11, true, var10, param4);
+          MenuSelectionCursor.a(var8, var9, var11, true, var10, param4);
           return;
         }
         if (param1 > ib.field_a) {
@@ -135,7 +135,7 @@ final class eh {
               var10Lifetime1 = cj.field_D;
             }
           }
-          uj.a(var8Lifetime1, var9Lifetime1, var11Lifetime1, true, var10Lifetime1, param4);
+          MenuSelectionCursor.a(var8Lifetime1, var9Lifetime1, var11Lifetime1, true, var10Lifetime1, param4);
           return;
         }
         var11Lifetime2 = param0;
@@ -165,7 +165,7 @@ final class eh {
                 var10Lifetime2 = cj.field_D;
               }
             }
-            uj.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
+            MenuSelectionCursor.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
             return;
           }
           var10Lifetime2 = (ib.field_a * var12 >> 12) + var13;
@@ -189,7 +189,7 @@ final class eh {
             var10Lifetime2 = cj.field_D;
           }
         }
-        uj.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
+        MenuSelectionCursor.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
         return;
     }
 

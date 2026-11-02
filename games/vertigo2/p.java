@@ -25,7 +25,7 @@ final class p {
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           var12 = id.field_f;
-          var2 = var12.h(-11);
+          var2 = var12.readUnsignedByte(-11);
           if (param0 > -108) {
             field_a = (String) null;
           }
@@ -37,9 +37,9 @@ final class p {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).h(-11);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-11);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).b(true);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
             var14 = (hq) (mo.field_h.a((byte) 100));
             if (var14 == null) {

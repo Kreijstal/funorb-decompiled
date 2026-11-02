@@ -6,7 +6,7 @@ final class po {
     static int[] field_c;
     static String field_b;
     static String field_d;
-    static cr field_a;
+    static UiWidget field_a;
 
     final static void b(byte param0) {
         if (param0 == -52) {
@@ -30,7 +30,7 @@ final class po {
           field_d = null;
           return;
         }
-        field_a = (cr) null;
+        field_a = (UiWidget) null;
         field_e = null;
         field_d = null;
     }

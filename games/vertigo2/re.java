@@ -102,9 +102,9 @@ final class re {
         this.field_i[param2] = param1;
     }
 
-    final static cr c(int param0) {
+    final static UiWidget c(int param0) {
         if (param0 != -1087) {
-          return (cr) null;
+          return (UiWidget) null;
         }
         return tf.b((byte) 98);
     }

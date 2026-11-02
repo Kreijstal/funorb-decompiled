@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends ji {
+final class vf extends TextureOperator {
     static int[] field_y;
-    static cr field_B;
+    static UiWidget field_B;
     private int field_z;
     static IntrusiveDeque field_C;
 
@@ -208,10 +208,10 @@ final class vf extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_z = param2.h(param0 ^ -101);
+            this.field_z = param2.readUnsignedByte(param0 ^ -101);
           } else {
             if (1 == var4_int) {
-              stackIn_10_1 = (param2.h(param0 - 121) == 1);
+              stackIn_10_1 = (param2.readUnsignedByte(param0 - 121) == 1);
               this.field_o = stackIn_10_1;
             }
           }
@@ -233,7 +233,7 @@ final class vf extends ji {
     public static void b(byte param0) {
         field_C = null;
         if (param0 != 36) {
-          field_B = (cr) null;
+          field_B = (UiWidget) null;
         }
         field_B = null;
         field_y = null;

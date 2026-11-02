@@ -9,7 +9,7 @@ final class j extends IntrusiveNode {
     static String field_o;
     static String field_p;
     static Random field_r;
-    static cr field_q;
+    static UiWidget field_q;
 
     private j() throws Throwable {
         throw new Error();
@@ -100,7 +100,7 @@ final class j extends IntrusiveNode {
             for (var6 = 0; ca.field_b > var6; var6++) {
               var5.field_n[var6] = id.field_f.payload[var6];
             }
-            s.field_t.a(var5, false);
+            s.field_t.addFirst(var5, false);
             m.field_A = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

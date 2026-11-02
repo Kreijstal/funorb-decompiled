@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class f extends ji {
+final class f extends TextureOperator {
     private int field_G;
     private int field_z;
     static ve field_H;
@@ -116,7 +116,7 @@ final class f extends ji {
                 MouseWheelInput.field_a = false;
               }
               if (oa.field_s.field_tb != 0) {
-                fb.h(0);
+                SpriteState.h(0);
                 MouseWheelInput.field_a = false;
                 return;
               }
@@ -182,8 +182,8 @@ final class f extends ji {
               fn.field_y = new pm((java.net.Socket) (pq.field_f.field_d), or.field_f);
               var2 = new PacketBuffer(13);
               jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
-              var2.f(15, param0 - 85);
-              var2.e(rf.field_q, 0);
+              var2.writeByte(15, param0 - 85);
+              var2.writeInt(rf.field_q, 0);
               fn.field_y.a(0, 13, 127, var2.payload);
               al.field_t = al.field_t + 1;
               pq.field_e = 30000L + gk.a(param0 + 60);
@@ -276,7 +276,7 @@ final class f extends ji {
           qb.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
           qb.field_d.l(0);
           while (NodeHashTableIterator.a(false)) {
-            qb.field_d.a(-122, de.field_f, ji.field_r);
+            qb.field_d.a(-122, de.field_f, TextureOperator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -297,10 +297,10 @@ final class f extends ji {
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_z = param2.a((byte) -11);
+            this.field_z = param2.readUnsignedShort((byte) -11);
           } else {
             if (var4_int == 1) {
-              this.field_G = param2.a((byte) -11);
+              this.field_G = param2.readUnsignedShort((byte) -11);
             }
           }
           if (param0 != 110) {

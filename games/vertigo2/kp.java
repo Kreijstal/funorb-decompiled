@@ -247,13 +247,13 @@ class kp extends d {
         this.field_K = param0;
         if (param1 >= -84) {
           this.a(true, -70, -56, -82);
-          if (!cr.field_eb[81]) {
+          if (!UiWidget.field_eb[81]) {
             this.field_L = this.field_K;
             return;
           }
           return;
         }
-        if (cr.field_eb[81]) {
+        if (UiWidget.field_eb[81]) {
           return;
         }
         this.field_L = this.field_K;
@@ -460,7 +460,7 @@ class kp extends d {
               if (param2 != 96) {
                 if (param2 == 97) {
                   if (this.field_K < this.field_w.length()) {
-                    if (!cr.field_eb[82]) {
+                    if (!UiWidget.field_eb[82]) {
                       stackIn_70_1 = this.field_K + 1;
                     } else {
                       stackIn_70_1 = this.k(-27539);
@@ -481,17 +481,17 @@ class kp extends d {
                     this.g((byte) 100);
                     return true;
                   }
-                  if (cr.field_eb[82] &&
+                  if (UiWidget.field_eb[82] &&
                     param2 == 65) {
                     this.e((byte) 35);
                     return true;
                   }
-                  if (cr.field_eb[82] &&
+                  if (UiWidget.field_eb[82] &&
                     param2 == 66) {
                     this.f((byte) -127);
                     return true;
                   }
-                  if (cr.field_eb[82] &&
+                  if (UiWidget.field_eb[82] &&
                     param2 == 67) {
                     this.i((byte) -35);
                     return true;
@@ -499,7 +499,7 @@ class kp extends d {
                 }
               } else {
                 if (this.field_K > 0) {
-                  if (!cr.field_eb[82]) {
+                  if (!UiWidget.field_eb[82]) {
                     stackIn_41_1 = -1 + this.field_K;
                   } else {
                     stackIn_41_1 = this.l(-128);

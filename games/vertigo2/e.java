@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class e {
-    er[] field_m;
+    Sprite[] field_m;
     private int field_k;
     static int[] field_b;
     static String field_l;
@@ -10,7 +10,7 @@ final class e {
     static String field_e;
     private int field_d;
     static String field_j;
-    er field_h;
+    Sprite field_h;
     private boolean field_g;
     static byte[] field_c;
     private int field_f;
@@ -78,7 +78,7 @@ final class e {
         return this;
     }
 
-    final static void a(int param0, cr param1, cr param2, cr param3, cr param4) {
+    final static void a(int param0, UiWidget param1, UiWidget param2, UiWidget param3, UiWidget param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -92,7 +92,7 @@ final class e {
         String var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        cr var7 = null;
+        UiWidget var7 = null;
         String var8 = null;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
@@ -116,21 +116,21 @@ final class e {
           dj.field_d.field_B = ((np.field_Ib.field_B & 16711422) >> 1) + lj.field_p - (8355711 & lj.field_p >> 1);
           dj.field_d.field_H = -((16711423 & lj.field_p) >> 1) + lj.field_p + ((16711422 & np.field_Ib.field_H) >> 1);
           dj.field_d.field_K = lj.field_p - (((16711422 & lj.field_p) >> 1) - (np.field_Ib.field_K >> 1 & 8355711));
-          gk.field_c = new cr(0L, param1);
-          hb.field_j = new cr(0L, param2);
-          lm.field_F = new cr(0L, (cr) null);
+          gk.field_c = new UiWidget(0L, param1);
+          hb.field_j = new UiWidget(0L, param2);
+          lm.field_F = new UiWidget(0L, (UiWidget) null);
           if (param0 != 12899) {
-            var7 = (cr) null;
-            e.a(-89, (cr) null, (cr) null, (cr) null, (cr) null);
+            var7 = (UiWidget) null;
+            e.a(-89, (UiWidget) null, (UiWidget) null, (UiWidget) null, (UiWidget) null);
           }
-          gg.field_o = new cr(0L, param4);
-          dj.field_d = new cr(0L, param3);
+          gg.field_o = new UiWidget(0L, param4);
+          dj.field_d = new UiWidget(0L, param3);
           dj.field_d.field_z = GameKeyHandler.field_f;
           gg.field_o.b(dj.field_d, 125);
-          ui.field_b = new cr(0L, gj.field_z);
+          ui.field_b = new UiWidget(0L, gj.field_z);
           gg.field_o.b(ui.field_b, 125);
-          kk.field_a = new cr(0L, np.field_Ib, oe.field_rb);
-          oa.field_s = new cr(0L, np.field_Ib);
+          kk.field_a = new UiWidget(0L, np.field_Ib, oe.field_rb);
+          oa.field_s = new UiWidget(0L, np.field_Ib);
           gk.field_c.b(hb.field_j, 127);
           gk.field_c.b(lm.field_F, 123);
           lm.field_F.b(gg.field_o, param0 ^ 12824);
@@ -457,7 +457,7 @@ final class e {
         this.field_i = 0;
     }
 
-    final e a(int param0, er[] param1) {
+    final e a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -465,7 +465,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -110) {
-            this.field_m = (er[]) null;
+            this.field_m = (Sprite[]) null;
           }
           this.field_m = param1;
           return this;

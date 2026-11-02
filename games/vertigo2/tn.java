@@ -19,15 +19,15 @@ final class tn {
     int[] field_f;
     String field_a;
     static String field_g;
-    cr field_e;
+    UiWidget field_e;
     int field_o;
 
-    final static er a(String param0, r param1, int param2, String param3) {
+    final static Sprite a(String param0, r param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        er stackIn_2_0 = null;
-        er stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -40,10 +40,10 @@ final class tn {
           var4_int = param1.a((byte) 118, param3);
           var5 = param1.a(var4_int, param0, 98);
           if (param2 <= -70) {
-            stackIn_4_0 = cr.a(var5, param1, (byte) -117, var4_int);
+            stackIn_4_0 = UiWidget.a(var5, param1, (byte) -117, var4_int);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (er) null;
+          stackIn_2_0 = (Sprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

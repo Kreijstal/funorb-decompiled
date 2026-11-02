@@ -65,7 +65,7 @@ abstract class sp extends nm {
             return stackIn_2_0;
           }
           var2 = new gg(param0, param0);
-          fm.field_b.a(var2, false);
+          fm.field_b.addFirst(var2, false);
           MouseWheelInput.field_g.a(param0);
           stackIn_4_0 = var2;
           return stackIn_4_0;

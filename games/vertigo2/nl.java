@@ -12,7 +12,7 @@ final class nl extends ug {
     private int field_g;
     static int field_k;
 
-    final static er[] a(int param0, int param1, r param2, int param3) {
+    final static Sprite[] a(int param0, int param1, r param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

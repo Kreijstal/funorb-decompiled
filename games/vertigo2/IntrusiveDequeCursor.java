@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDequeCursor {
-    static er field_b;
+    static Sprite field_b;
     static int[] field_d;
     private IntrusiveNode field_a;
     private IntrusiveDeque field_e;

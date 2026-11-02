@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends ji {
+final class so extends TextureOperator {
     static String field_z;
     static long field_y;
     static int field_B;
@@ -10,7 +10,7 @@ final class so extends ji {
         super(1, false);
     }
 
-    final static void a(cr param0, int param1, int param2, int param3, cr param4, byte[] param5, cr param6, int param7, int param8, int param9) {
+    final static void a(UiWidget param0, int param1, int param2, int param3, UiWidget param4, byte[] param5, UiWidget param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -48,7 +48,7 @@ final class so extends ji {
             param6.field_M = new IntrusiveDeque();
           }
           mk.field_J = param6.field_M;
-          mk.field_J.c(0);
+          mk.field_J.clear(0);
           GameShell.field_l = new fi(param7);
           br.field_Q = 0;
           rp.field_a = -1;
@@ -58,13 +58,13 @@ final class so extends ji {
             param4.field_M = new IntrusiveDeque();
           }
           nr.field_p = param4.field_M;
-          nr.field_p.c(0);
+          nr.field_p.clear(0);
           lh.field_b = new fi(param3);
           if (null == param0.field_M) {
             param0.field_M = new IntrusiveDeque();
           }
           kq.field_Rb = param0.field_M;
-          kq.field_Rb.c(0);
+          kq.field_Rb.clear(0);
           ck.field_I = new fi(param9);
           lp.field_D = param2;
           r.field_h = 0L;
@@ -133,7 +133,7 @@ final class so extends ji {
 
     final void a(byte param0, int param1, PacketBuffer param2) {
         RuntimeException var4 = null;
-        cr var5 = null;
+        UiWidget var5 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -141,14 +141,14 @@ final class so extends ji {
         RuntimeException decompiledCaughtException = null;
         try {
           if (0 == param1) {
-            stackIn_5_1 = (param2.h(param0 ^ -101) == 1);
+            stackIn_5_1 = (param2.readUnsignedByte(param0 ^ -101) == 1);
             this.field_o = stackIn_5_1;
           }
           if (param0 == 110) {
             return;
           }
-          var5 = (cr) null;
-          so.a((cr) null, 27, 57, 9, (cr) null, (byte[]) null, (cr) null, 16, -49, -71);
+          var5 = (UiWidget) null;
+          so.a((UiWidget) null, 27, 57, 9, (UiWidget) null, (byte[]) null, (UiWidget) null, 16, -49, -71);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

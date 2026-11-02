@@ -8,7 +8,7 @@ final class qe extends pn {
     private of field_J;
     static String field_X;
     static String field_V;
-    private er field_bb;
+    private Sprite field_bb;
     static fe field_W;
     static long field_cb;
     private String field_ab;
@@ -40,21 +40,21 @@ final class qe extends pn {
         int var13;
         String var17;
         Object var18;
-        er var19;
-        er var20;
-        er var21;
-        er var22;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
+        Sprite var22;
         String var23;
         Object var24;
-        er var25;
-        er var26;
-        er var27;
-        er var28;
+        Sprite var25;
+        Sprite var26;
+        Sprite var27;
+        Sprite var28;
         Object var29;
-        er var30;
-        er var31;
-        er var32;
-        er var33;
+        Sprite var30;
+        Sprite var31;
+        Sprite var32;
+        Sprite var33;
         qa var34;
         qa var35;
         qa var36;
@@ -94,18 +94,18 @@ final class qe extends pn {
             var11 = var20.field_x << 1;
             var12 = var20.field_B << 1;
             if (null == this.field_bb) {
-              this.field_bb = new er(var11, var12);
+              this.field_bb = new Sprite(var11, var12);
               lq.a(this.field_bb, (byte) -94);
             } else {
               if (this.field_bb.field_y < var11) {
-                this.field_bb = new er(var11, var12);
+                this.field_bb = new Sprite(var11, var12);
                 lq.a(this.field_bb, (byte) -94);
               } else {
                 if (var12 <= this.field_bb.field_t) {
                   lq.a(this.field_bb, (byte) -94);
                   bi.c();
                 } else {
-                  this.field_bb = new er(var11, var12);
+                  this.field_bb = new Sprite(var11, var12);
                   lq.a(this.field_bb, (byte) -94);
                 }
               }
@@ -137,7 +137,7 @@ final class qe extends pn {
             lq.a(this.field_bb, (byte) -94);
             bi.c();
           } else {
-            this.field_bb = new er(var11Lifetime4, var12Lifetime4);
+            this.field_bb = new Sprite(var11Lifetime4, var12Lifetime4);
             lq.a(this.field_bb, (byte) -94);
           }
           var19.a(112, 144, var19.field_x << 4, var19.field_B << 4, -this.field_Y << 10, 4096);
@@ -161,18 +161,18 @@ final class qe extends pn {
             var11Lifetime1 = var26.field_x << 1;
             var12Lifetime1 = var26.field_B << 1;
             if (null == this.field_bb) {
-              this.field_bb = new er(var11Lifetime1, var12Lifetime1);
+              this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
               lq.a(this.field_bb, (byte) -94);
             } else {
               if (this.field_bb.field_y < var11Lifetime1) {
-                this.field_bb = new er(var11Lifetime1, var12Lifetime1);
+                this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
                 lq.a(this.field_bb, (byte) -94);
               } else {
                 if (var12Lifetime1 <= this.field_bb.field_t) {
                   lq.a(this.field_bb, (byte) -94);
                   bi.c();
                 } else {
-                  this.field_bb = new er(var11Lifetime1, var12Lifetime1);
+                  this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
                   lq.a(this.field_bb, (byte) -94);
                 }
               }
@@ -204,7 +204,7 @@ final class qe extends pn {
             lq.a(this.field_bb, (byte) -94);
             bi.c();
           } else {
-            this.field_bb = new er(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+            this.field_bb = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             lq.a(this.field_bb, (byte) -94);
           }
           var25.a(112, 144, var25.field_x << 4, var25.field_B << 4, -this.field_Y << 10, 4096);
@@ -230,15 +230,15 @@ final class qe extends pn {
           var11Lifetime2 = var31.field_x << 1;
           var12Lifetime2 = var31.field_B << 1;
           if (null == this.field_bb) {
-            this.field_bb = new er(var11Lifetime2, var12Lifetime2);
+            this.field_bb = new Sprite(var11Lifetime2, var12Lifetime2);
             lq.a(this.field_bb, (byte) -94);
           } else {
             if (this.field_bb.field_y < var11Lifetime2) {
-              this.field_bb = new er(var11Lifetime2, var12Lifetime2);
+              this.field_bb = new Sprite(var11Lifetime2, var12Lifetime2);
               lq.a(this.field_bb, (byte) -94);
             } else {
               if (var12Lifetime2 > this.field_bb.field_t) {
-                this.field_bb = new er(var11Lifetime2, var12Lifetime2);
+                this.field_bb = new Sprite(var11Lifetime2, var12Lifetime2);
                 lq.a(this.field_bb, (byte) -94);
               } else {
                 lq.a(this.field_bb, (byte) -94);
@@ -273,7 +273,7 @@ final class qe extends pn {
           lq.a(this.field_bb, (byte) -94);
           bi.c();
         } else {
-          this.field_bb = new er(var11Lifetime3, var12Lifetime3);
+          this.field_bb = new Sprite(var11Lifetime3, var12Lifetime3);
           lq.a(this.field_bb, (byte) -94);
         }
         var30.a(112, 144, var30.field_x << 4, var30.field_B << 4, -this.field_Y << 10, 4096);
@@ -285,7 +285,7 @@ final class qe extends pn {
         try {
           this.field_Y = this.field_Y + 1;
           if (param0 < 6) {
-            this.field_bb = (er) null;
+            this.field_bb = (Sprite) null;
           }
           super.a((byte) 25, param1, param2, param3);
         } catch (RuntimeException runtimeException) {

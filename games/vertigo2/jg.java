@@ -12,7 +12,7 @@ class jg extends bg {
     int field_l;
     int field_f;
     int field_s;
-    static cr field_q;
+    static UiWidget field_q;
     static String field_m;
     boolean field_i;
     int field_r;

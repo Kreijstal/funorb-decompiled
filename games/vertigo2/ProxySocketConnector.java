@@ -322,24 +322,24 @@ final class ProxySocketConnector extends SocketConnector {
         var8.j(param0, 120);
         var8.position = var8.position + 1;
         int var4 = var8.position;
-        var8.f(1, 85);
-        var8.d(param2.field_u, -1783);
-        var8.d(param2.field_v, -1783);
-        var8.d(param2.field_y, -1783);
-        var8.e(param2.field_t, 0);
-        var8.e(param2.field_p, 0);
-        var8.e(param2.field_q, 0);
+        var8.writeByte(1, 85);
+        var8.writeShort(param2.field_u, -1783);
+        var8.writeShort(param2.field_v, -1783);
+        var8.writeShort(param2.field_y, -1783);
+        var8.writeInt(param2.field_t, 0);
+        var8.writeInt(param2.field_p, 0);
+        var8.writeInt(param2.field_q, 0);
         if (param1 <= 6) {
           return;
         }
         try {
-          var8.e(param2.field_A, 0);
-          var8.f(param2.field_o.length, -76);
+          var8.writeInt(param2.field_A, 0);
+          var8.writeByte(param2.field_o.length, -76);
           for (var5 = 0; param2.field_o.length > var5; var5++) {
-            var7.e(param2.field_o[var5], 0);
+            var7.writeInt(param2.field_o[var5], 0);
           }
           var8.c(var4, 25);
-          var8.b((byte) -95, -var4 + var8.position);
+          var8.patchByteLength((byte) -95, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "aj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

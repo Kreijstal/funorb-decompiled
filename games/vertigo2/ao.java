@@ -49,18 +49,18 @@ final class ao extends d {
     }
 
     final static void a(int param0, r param1) {
-        er var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new er(param1.a("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          var2 = new Sprite(param1.a("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
           var3 = var2.field_y;
           var4 = var2.field_t;
           DelegatingCanvas.a((byte) -31);
-          qn.field_r = new er(var3, param0 * var4 / 4);
+          qn.field_r = new Sprite(var3, param0 * var4 / 4);
           qn.field_r.d();
           var2.c(0, 0);
-          lr.field_O = new er(var3, -qn.field_r.field_t + var4);
+          lr.field_O = new Sprite(var3, -qn.field_r.field_t + var4);
           lr.field_O.d();
           var2.c(0, -qn.field_r.field_t);
           lr.field_O.field_z = qn.field_r.field_t;

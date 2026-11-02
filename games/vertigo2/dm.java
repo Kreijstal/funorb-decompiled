@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends cr {
-    cr field_Hb;
+final class dm extends UiWidget {
+    UiWidget field_Hb;
     static String field_Jb;
     static String field_Ib;
-    cr field_Kb;
-    cr field_Mb;
+    UiWidget field_Kb;
+    UiWidget field_Mb;
     od field_Lb;
 
     public static void l(int param0) {
@@ -95,9 +95,9 @@ final class dm extends cr {
             dm.a(-79, 39, -11, -30);
           }
           var27 = id.field_f;
-          var2 = var27.h(-11);
+          var2 = var27.readUnsignedByte(-11);
           if (var2 == 0) {
-            var3 = var27.a((byte) -11);
+            var3 = var27.readUnsignedShort((byte) -11);
             var4 = (s) (wg.field_i.a((byte) 100));
             while (var4 != null) {
               if (var4.field_p != var3) {
@@ -110,7 +110,7 @@ final class dm extends cr {
               rm.b((byte) 122);
               return;
             }
-            var5 = var27.h(-11);
+            var5 = var27.readUnsignedByte(-11);
             if (var5 != 0) {
               var6 = var4.field_q;
               rk.field_w[0].field_m = false;
@@ -118,12 +118,12 @@ final class dm extends cr {
               rk.field_w[0].field_i = null;
               rk.field_w[0].field_l = qe.field_V;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                rk.field_w[var8_int].field_l = var27.f(param0 + 128);
+                rk.field_w[var8_int].field_l = var27.readString(param0 + 128);
                 rk.field_w[var8_int].field_m = false;
-                if (var27.h(-11) != 1) {
+                if (var27.readUnsignedByte(-11) != 1) {
                   rk.field_w[var8_int].field_i = null;
                 } else {
-                  rk.field_w[var8_int].field_i = var27.f(128);
+                  rk.field_w[var8_int].field_i = var27.readString(128);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -142,12 +142,12 @@ final class dm extends cr {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.h(-11);
+              var18 = var27.readUnsignedByte(-11);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.h(-11);
+                  var20 = var27.readUnsignedByte(-11);
                   var21 = rk.field_w[var20].field_l;
-                  var22 = var27.i(param0 ^ -31016);
+                  var22 = var27.readLong(param0 ^ -31016);
                   var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
@@ -156,7 +156,7 @@ final class dm extends cr {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.b(true);
+                      var11[0][incrementValue$3] = var27.readInt(true);
                     }
                     var12++;
                   }
@@ -170,7 +170,7 @@ final class dm extends cr {
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.b(true);
+                      var11[1][incrementValue$4] = var27.readInt(true);
                     }
                   }
                   if (var6 > var14 &&
@@ -184,7 +184,7 @@ final class dm extends cr {
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.b(true);
+                      var11[2][incrementValue$5] = var27.readInt(true);
                     }
                   }
                 }
@@ -195,8 +195,8 @@ final class dm extends cr {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.a((byte) -11);
-            var4_long = var27.i(-31016);
+            var3Lifetime1 = var27.readUnsignedShort((byte) -11);
+            var4_long = var27.readLong(-31016);
             var6_ref_vi = (vi) (mc.field_i.a((byte) 100));
             while (var6_ref_vi != null) {
               if (var3Lifetime1 != var6_ref_vi.field_u) {
@@ -319,13 +319,13 @@ final class dm extends cr {
         return bi.field_j - param2;
     }
 
-    dm(long param0, cr param1, cr param2, ie param3, cr param4, String param5, String param6) {
+    dm(long param0, UiWidget param1, UiWidget param2, ie param3, UiWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Mb = new cr(0L, (cr) null);
+          this.field_Mb = new UiWidget(0L, (UiWidget) null);
           this.field_Lb = new od(0L, this.field_Mb, param2, param3);
-          this.field_Hb = new cr(0L, param4);
-          this.field_Kb = new cr(0L, param4);
+          this.field_Hb = new UiWidget(0L, param4);
+          this.field_Kb = new UiWidget(0L, param4);
           this.field_Hb.field_S = param5;
           this.field_Kb.field_S = param6;
           this.b(this.field_Lb, 121);

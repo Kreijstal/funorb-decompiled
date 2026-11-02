@@ -84,7 +84,7 @@ final class mh {
         ch.field_e.a(0, 86, 0);
     }
 
-    final static void a(boolean param0, er[][] param1, byte[] param2, int param3, r param4, r param5, boolean param6, int[] param7, String[] param8, String[][] param9, er[][] param10, int param11, String[][] param12, byte[] param13, r param14) {
+    final static void a(boolean param0, Sprite[][] param1, byte[] param2, int param3, r param4, r param5, boolean param6, int[] param7, String[] param8, String[][] param9, Sprite[][] param10, int param11, String[][] param12, byte[] param13, r param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

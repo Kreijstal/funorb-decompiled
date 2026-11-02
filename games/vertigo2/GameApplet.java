@@ -291,7 +291,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var7 = this;
           synchronized (var7) {
-            uj.field_g = sj.field_b;
+            MenuSelectionCursor.field_g = sj.field_b;
           }
           this.f(69);
           return;
@@ -406,7 +406,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ne.field_F.addFocusListener((java.awt.event.FocusListener) (this));
           ne.field_F.requestFocus();
           sj.field_b = true;
-          uj.field_g = true;
+          MenuSelectionCursor.field_g = true;
           uh.field_sc = true;
           oh.field_F = false;
           nf.field_x = gk.a(89);

@@ -3,7 +3,7 @@
  */
 final class ok {
     static String field_a;
-    static cr field_b;
+    static UiWidget field_b;
     static int[] field_d;
     static int field_c;
 

@@ -11,11 +11,11 @@ class va implements ur, qa {
     int field_a;
     static int[] field_b;
     static wn field_s;
-    static cr field_f;
+    static UiWidget field_f;
     int field_e;
     int field_p;
     static String field_r;
-    static cr field_h;
+    static UiWidget field_h;
     int field_i;
     int field_j;
     int field_c;
@@ -350,7 +350,7 @@ class va implements ur, qa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_f = (cr) null;
+            field_f = (UiWidget) null;
           }
           stackIn_3_0 = -this.field_c - this.field_k + param0.field_s;
           return stackIn_3_0;

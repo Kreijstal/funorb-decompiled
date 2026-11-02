@@ -7,7 +7,7 @@ final class oe extends fj implements ij {
     private boolean field_nb;
     static ee field_qb;
     static String field_sb;
-    static tr field_pb;
+    static GameplayScreen field_pb;
     private mk field_tb;
     static int[][] field_ob;
     static String field_vb;
@@ -128,7 +128,7 @@ final class oe extends fj implements ij {
         try {
           this.field_nb = true;
           if (param2 >= -45) {
-            field_pb = (tr) null;
+            field_pb = (GameplayScreen) null;
           }
           if (!param0.field_a) {
             if (param0.field_b == null) {

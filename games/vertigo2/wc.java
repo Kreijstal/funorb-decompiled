@@ -7,7 +7,7 @@ final class wc extends da {
     private kp field_l;
     private kp field_p;
     static int field_n;
-    static cr field_m;
+    static UiWidget field_m;
 
     final String b(int param0, String param1) {
         String var3 = null;
@@ -146,18 +146,18 @@ final class wc extends da {
           var6.j(param2, 119);
           var6.position = var6.position + 1;
           var7 = var6.position;
-          var6.f(4, -93);
-          var6.f(param1, 94);
+          var6.writeByte(4, -93);
+          var6.writeByte(param1, 94);
           if (param3 > -24) {
-            field_m = (cr) null;
+            field_m = (UiWidget) null;
           }
           var8 = param5;
           if (param4) {
             var8 += 128;
           }
-          var6.f(var8, 105);
+          var6.writeByte(var8, 105);
           var6.a(0, -10140, param0, param0.length);
-          var6.b((byte) 77, var6.position - var7);
+          var6.patchByteLength((byte) 77, var6.position - var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class wc extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_m = (cr) null;
+            field_m = (UiWidget) null;
           }
           stackIn_4_0 = Vertigo2.field_F.equals(rc.a((CharSequence) ((Object) param0), 320));
           return stackIn_4_0;
@@ -339,7 +339,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_chat_lobby", false);
                 if (var2 != null) {
-                  fb.field_A = in.a(0, var2);
+                  SpriteState.field_A = in.a(0, var2);
                 }
                 var2 = tk.a("mu_chat_public", false);
                 if (var2 != null) {
@@ -359,7 +359,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_chat_private", false);
                 if (var2 != null) {
-                  ji.field_q = in.a(param0 ^ 0, var2);
+                  TextureOperator.field_q = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("mu_x_entered_game", false);
                 if (null != var2) {
@@ -479,7 +479,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_gamelist_players", false);
                 if (null != var2) {
-                  uj.field_h = in.a(0, var2);
+                  MenuSelectionCursor.field_h = in.a(0, var2);
                 }
                 var2 = tk.a("mu_gamelist_avg_rating", false);
                 if (var2 != null) {
@@ -983,7 +983,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("gameopt_membersonly", false);
                 if (var2 != null) {
-                  tr.field_d = in.a(0, var2);
+                  GameplayScreen.field_d = in.a(0, var2);
                 }
                 var2 = tk.a("gameopt_1moreratedgame", false);
                 if (var2 != null) {
@@ -2467,7 +2467,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("notyetachieved", false);
                 if (null != var2) {
-                  cr.field_Z = in.a(0, var2);
+                  UiWidget.field_Z = in.a(0, var2);
                 }
                 var2 = tk.a("achieved", false);
                 if (null != var2) {
@@ -2958,7 +2958,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("hs_friend_tip", false);
                 if (var2 != null) {
-                  tr.field_O = in.a(0, var2);
+                  GameplayScreen.field_O = in.a(0, var2);
                 }
                 var2 = tk.a("hs_friend_tip_multi", false);
                 if (var2 != null) {
@@ -3320,7 +3320,7 @@ final class wc extends da {
         String var7 = null;
         try {
           if (param1 != -67) {
-            field_m = (cr) null;
+            field_m = (UiWidget) null;
           }
           var3 = this.field_l.field_w.toLowerCase();
           var4 = param0.toLowerCase();

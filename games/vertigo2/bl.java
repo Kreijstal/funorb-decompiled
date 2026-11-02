@@ -18,15 +18,15 @@ final class bl extends l {
     private int field_p;
     int field_P;
     int field_m;
-    private er field_G;
+    private Sprite field_G;
     private boolean field_w;
     private int field_B;
     int field_x;
     boolean field_u;
     int field_J;
-    private er field_M;
+    private Sprite field_M;
     private boolean field_n;
-    private er field_A;
+    private Sprite field_A;
     static String[] field_z;
     static cc field_N;
     private boolean field_H;
@@ -284,7 +284,7 @@ final class bl extends l {
             }
             qe.field_cb = gk.a(95);
           }
-          ve.field_d.field_b = gi.field_n.length;
+          ve.field_d.itemCount = gi.field_n.length;
           var3_intLifetime1 = 0;
           if (param2 != -30962) {
             field_r = (int[]) null;
@@ -316,7 +316,7 @@ final class bl extends l {
               }
             }
           }
-          jp.field_o = ve.field_d.field_b * (qc.field_z + al.field_z << 1);
+          jp.field_o = ve.field_d.itemCount * (qc.field_z + al.field_z << 1);
           sg.field_d = -(var3_intLifetime1 >> 1) + vm.field_c;
           c.field_e = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + vm.field_c;
           for (var4Lifetime2 = 0; var4Lifetime2 < mn.field_q.length; var4Lifetime2++) {
@@ -368,8 +368,8 @@ final class bl extends l {
         int stackIn_7_1 = 0;
         String stackIn_13_0 = null;
         int stackIn_20_0 = 0;
-        er stackIn_48_0 = null;
-        er stackIn_51_0 = null;
+        Sprite stackIn_48_0 = null;
+        Sprite stackIn_51_0 = null;
         int var2;
         int var3;
         int var4;
@@ -378,11 +378,11 @@ final class bl extends l {
         int var5_int;
         int var6;
         int var7;
-        er[] var7_ref_er__;
+        Sprite[] var7_ref_er__;
         int var8;
-        er var9;
+        Sprite var9;
         int var9_int;
-        er var10;
+        Sprite var10;
         int var10_int;
         int var11;
         int var13;
@@ -559,14 +559,14 @@ final class bl extends l {
           this.field_L = this.field_L + uo.field_h;
           if (0 <= this.field_t &&
             this.field_t < this.field_k.length) {
-            if (cr.field_eb[98]) {
+            if (UiWidget.field_eb[98]) {
               if (this.field_O < 0) {
                 this.field_t = this.field_t - 1;
                 this.field_L = this.field_t;
                 this.field_O = wj.field_b;
               }
             } else {
-              if (!cr.field_eb[99]) {
+              if (!UiWidget.field_eb[99]) {
                 this.field_O = -1;
               } else {
                 if (this.field_O < 0) {
@@ -728,7 +728,7 @@ final class bl extends l {
         }
     }
 
-    bl(int param0, int param1, int param2, int param3, wn param4, er param5, er param6, er param7, er param8) {
+    bl(int param0, int param1, int param2, int param3, wn param4, Sprite param5, Sprite param6, Sprite param7, Sprite param8) {
         int stackIn_4_1 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

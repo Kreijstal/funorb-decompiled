@@ -5,7 +5,7 @@ final class wi extends v {
     private String field_e;
     static fc[][] field_j;
     static int field_f;
-    static cr field_g;
+    static UiWidget field_g;
     static go[] field_d;
     private String field_i;
     static boolean[] field_h;

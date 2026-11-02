@@ -45,7 +45,7 @@ abstract class nm extends cj {
           return;
         }
         if (se.field_C == null) {
-          se.field_C = new er(this.field_n, this.field_s);
+          se.field_C = new Sprite(this.field_n, this.field_s);
           lq.a(se.field_C, (byte) -94);
           bi.c();
           this.a((byte) -128, 0, 0);
@@ -55,7 +55,7 @@ abstract class nm extends cj {
           return;
         }
         if (this.field_n > se.field_C.field_y) {
-          se.field_C = new er(this.field_n, this.field_s);
+          se.field_C = new Sprite(this.field_n, this.field_s);
           lq.a(se.field_C, (byte) -94);
           bi.c();
           this.a((byte) -128, 0, 0);
@@ -65,7 +65,7 @@ abstract class nm extends cj {
           return;
         }
         if (this.field_s > se.field_C.field_t) {
-          se.field_C = new er(this.field_n, this.field_s);
+          se.field_C = new Sprite(this.field_n, this.field_s);
           lq.a(se.field_C, (byte) -94);
           bi.c();
           this.a((byte) -128, 0, 0);

@@ -190,7 +190,7 @@ abstract class ro {
         qe.field_U = new String[10];
         td.field_l[2] = or.field_l;
         td.field_l[1] = wp.field_e;
-        td.field_l[5] = uj.field_e;
+        td.field_l[5] = MenuSelectionCursor.field_e;
         td.field_l[3] = ua.field_d;
         td.field_l[7] = pe.field_t;
         qe.field_U[0] = gg.field_s;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fb extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     int field_B;
     int field_x;
     int field_t;
@@ -13,7 +13,7 @@ abstract class fb extends DualLinkNode {
     static int field_E;
     static lg field_v;
     static String field_A;
-    static cr field_u;
+    static UiWidget field_u;
 
     abstract void a(int param0, int param1, int param2, int param3, int param4);
 
@@ -49,7 +49,7 @@ abstract class fb extends DualLinkNode {
           field_w = (boolean[][]) null;
           return;
         }
-        fb.a(-125, false);
+        SpriteState.a(-125, false);
         field_w = (boolean[][]) null;
     }
 
@@ -61,7 +61,7 @@ abstract class fb extends DualLinkNode {
         kp.i(param0);
     }
 
-    fb() {
+    SpriteState() {
     }
 
     static {

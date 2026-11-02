@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class lf extends ji {
+final class lf extends TextureOperator {
     static byte[][] field_A;
     static int[] field_y;
     static String field_E;

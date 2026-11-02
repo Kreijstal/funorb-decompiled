@@ -17,11 +17,11 @@ final class jo implements ur {
     final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           int var5_int = 110 % ((param3 + 26) / 41);
-          param0.f(12, 116);
-          param0.d(17, -1783);
-          param0.d(param4, -1783);
-          param0.d(param1, -1783);
-          param0.f(param2, -107);
+          param0.writeByte(12, 116);
+          param0.writeShort(17, -1783);
+          param0.writeShort(param4, -1783);
+          param0.writeShort(param1, -1783);
+          param0.writeByte(param2, -107);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

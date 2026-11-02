@@ -108,7 +108,7 @@ final class ch {
           }
         }
         if (de.field_f == 13) {
-          fb.h(0);
+          SpriteState.h(0);
           var4 = 1;
           MouseWheelInput.field_a = false;
         }

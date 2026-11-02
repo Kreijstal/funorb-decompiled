@@ -28,7 +28,7 @@ final class pp extends IntrusiveNode {
         field_w = null;
     }
 
-    final static cr f(int param0) {
+    final static UiWidget f(int param0) {
         int var1 = 87 % ((param0 + 53) / 59);
         return h.field_D.field_Mb;
     }
@@ -97,9 +97,9 @@ final class pp extends IntrusiveNode {
         return this.field_o[param1];
     }
 
-    final static cr a(byte param0) {
+    final static UiWidget a(byte param0) {
         if (param0 != 116) {
-          return (cr) null;
+          return (UiWidget) null;
         }
         return ja.field_f.field_Nb;
     }
@@ -119,7 +119,7 @@ final class pp extends IntrusiveNode {
         return this.field_q[param0];
     }
 
-    final static cr a(int param0) {
+    final static UiWidget a(int param0) {
         if (param0 != 12) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           pp.a((java.applet.Applet) null, 100);
@@ -129,7 +129,7 @@ final class pp extends IntrusiveNode {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        er var8 = new er(param3, param6);
+        Sprite var8 = new Sprite(param3, param6);
         int[] var9 = bi.field_l;
         int var10 = bi.field_e;
         int var11 = bi.field_j;

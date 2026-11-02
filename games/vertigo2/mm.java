@@ -12,11 +12,11 @@ final class mm {
         }
         try {
           var3.j(param0, 118);
-          var3.f(5, 105);
-          var3.f(0, -82);
-          var3.d(param1.field_p, -1783);
-          var3.f(param1.field_q, param2 - 202);
-          var3.f(param1.field_o, -69);
+          var3.writeByte(5, 105);
+          var3.writeByte(0, -82);
+          var3.writeShort(param1.field_p, -1783);
+          var3.writeByte(param1.field_q, param2 - 202);
+          var3.writeByte(param1.field_o, -69);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "mm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

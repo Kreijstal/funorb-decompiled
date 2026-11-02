@@ -54,7 +54,7 @@ final class eb {
           for (var3 = 0; mn.field_q.length > var3; var3++) {
             var4 = gd.field_s[var3];
             if (var4 >= 0) {
-              if (var4 == ve.field_d.field_c) {
+              if (var4 == ve.field_d.selectedIndex) {
                 var5 = SecondaryNodeDeque.field_a;
               } else {
                 var5 = ImageProducerRasterBuffer.field_m;
@@ -104,7 +104,7 @@ final class eb {
             var7Lifetime1 = uc.a(stackIn_40_0, stackIn_41_1, false);
             var8Lifetime1 = vm.field_c - (var7Lifetime1 >> 1);
             if (0 <= var4) {
-              if (var4 == ve.field_d.field_c) {
+              if (var4 == ve.field_d.selectedIndex) {
                 stackIn_45_0 = mq.field_v;
               } else {
                 stackIn_45_0 = gl.field_i;

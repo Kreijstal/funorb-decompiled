@@ -685,7 +685,7 @@ abstract class um extends iq implements dq {
           if (var5_int != 80) {
             return false;
           }
-          if (!cr.field_eb[81]) {
+          if (!UiWidget.field_eb[81]) {
             stackIn_19_0 = this.a(param3, (byte) 121);
           } else {
             stackIn_19_0 = this.b((byte) 104, param3);

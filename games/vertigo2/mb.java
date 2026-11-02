@@ -27,7 +27,7 @@ final class mb extends IntrusiveNode {
         var4 = new ri();
         var4.field_n = param1;
         var4.field_w = param0;
-        ob.field_M.a(var4, false);
+        ob.field_M.addFirst(var4, false);
         if (param2 > -70) {
           mb.b((byte) 6);
         }
@@ -99,30 +99,30 @@ final class mb extends IntrusiveNode {
           this.field_x = param0;
           var7 = new PacketBuffer(param1);
           var8 = var7;
-          this.field_o = var8.h(-11);
+          this.field_o = var8.readUnsignedByte(-11);
           this.field_p = new int[this.field_o][];
           this.field_r = new int[this.field_o];
           this.field_n = new boolean[this.field_o];
           this.field_u = new int[this.field_o];
           for (var4 = 0; this.field_o > var4; var4++) {
-            this.field_r[var4] = var7.h(-11);
+            this.field_r[var4] = var7.readUnsignedByte(-11);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < this.field_o; var4Lifetime1++) {
             stackIn_8_0 = this.field_n;
             stackIn_8_1 = var4Lifetime1;
-            stackIn_9_2 = (var8.h(-11) == 1);
+            stackIn_9_2 = (var8.readUnsignedByte(-11) == 1);
             stackIn_8_0[stackIn_8_1] = stackIn_9_2;
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < this.field_o; var4Lifetime2++) {
-            this.field_u[var4Lifetime2] = var7.a((byte) -11);
+            this.field_u[var4Lifetime2] = var7.readUnsignedShort((byte) -11);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_o; var4Lifetime3++) {
-            array$0 = new int[var7.h(-11)];
+            array$0 = new int[var7.readUnsignedByte(-11)];
             this.field_p[var4Lifetime3] = array$0;
           }
           for (var4Lifetime4 = 0; var4Lifetime4 < this.field_o; var4Lifetime4++) {
             for (var5 = 0; this.field_p[var4Lifetime4].length > var5; var5++) {
-              this.field_p[var4Lifetime4][var5] = var7.h(-11);
+              this.field_p[var4Lifetime4][var5] = var7.readUnsignedByte(-11);
             }
           }
           return;

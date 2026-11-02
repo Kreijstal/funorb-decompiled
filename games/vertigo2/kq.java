@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kq extends cr {
+final class kq extends UiWidget {
     private int field_Yb;
     static String field_Vb;
     static int field_Jb;
     static fe field_Kb;
-    private cr field_Nb;
-    private er[] field_Pb;
+    private UiWidget field_Nb;
+    private Sprite[] field_Pb;
     private int[] field_Mb;
     private int field_Xb;
-    private cr field_Sb;
+    private UiWidget field_Sb;
     private int field_Qb;
     static String field_Ub;
     private int field_Ob;
@@ -30,7 +30,7 @@ final class kq extends cr {
         int var1 = -56 / ((92 - param0) / 32);
     }
 
-    kq(cr param0, er[] param1, cr param2, cr param3, int param4, int param5, int param6, int param7, int param8) {
+    kq(UiWidget param0, Sprite[] param1, UiWidget param2, UiWidget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Mb = new int[256];
         this.field_Ib = -2;
@@ -60,7 +60,7 @@ final class kq extends cr {
         int var8Lifetime1;
         var11 = Vertigo2.field_L ? 1 : 0;
         if (this.field_Tb == 0) {
-          this.field_Wb[this.field_Tb] = new nk(0L, (cr) null, (cr) null, this.field_Nb, (er) null, uk.field_y);
+          this.field_Wb[this.field_Tb] = new nk(0L, (UiWidget) null, (UiWidget) null, this.field_Nb, (Sprite) null, uk.field_y);
           this.field_Wb[this.field_Tb].field_ab = 1;
           this.b(this.field_Wb[this.field_Tb], 125);
           this.field_Mb[this.field_Tb] = -1;
@@ -91,7 +91,7 @@ final class kq extends cr {
         if (param0 > -45) {
           field_Lb = (ve) null;
         }
-        fb.a(0, param1);
+        SpriteState.a(0, param1);
     }
 
     final static long a(byte param0, CharSequence param1) {
@@ -177,9 +177,9 @@ final class kq extends cr {
         return this.field_Ib;
     }
 
-    final void a(String param0, er param1, int param2, int param3) {
+    final void a(String param0, Sprite param1, int param2, int param3) {
         try {
-          this.field_Wb[this.field_Tb] = new nk(0L, (cr) null, (cr) null, this.field_Sb, param1, param0);
+          this.field_Wb[this.field_Tb] = new nk(0L, (UiWidget) null, (UiWidget) null, this.field_Sb, param1, param0);
           if (param3 >= -48) {
             field_Vb = (String) null;
           }
@@ -268,7 +268,7 @@ final class kq extends cr {
 
     final void a(String param0, int param1, int param2) {
         try {
-          this.field_Wb[this.field_Tb] = new nk((long)param2, (cr) null, (cr) null, this.field_Sb, (er) null, param0);
+          this.field_Wb[this.field_Tb] = new nk((long)param2, (UiWidget) null, (UiWidget) null, this.field_Sb, (Sprite) null, param0);
           this.field_Wb[this.field_Tb].field_Q = this.field_Pb;
           this.field_Wb[this.field_Tb].field_jb = true;
           this.field_Wb[this.field_Tb].field_ab = 1;

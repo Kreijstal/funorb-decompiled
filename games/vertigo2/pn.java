@@ -10,7 +10,7 @@ class pn extends d {
     static int field_L;
     static int field_O;
     private String[] field_M;
-    static cr field_N;
+    static UiWidget field_N;
     static String field_H;
 
     void a(boolean param0, int param1, int param2, int param3) {
@@ -233,7 +233,7 @@ class pn extends d {
             if (var10 != null) {
               ((pk) (var10)).field_n = var15;
             }
-            this.field_P.a(var15, false);
+            this.field_P.addFirst(var15, false);
             var10 = var15;
           }
         }
@@ -254,8 +254,8 @@ class pn extends d {
           var3 = uh.field_Wb;
           var3.j(param0, 125);
           int var4 = -75 % ((param1 + 70) / 44);
-          var3.f(param2.field_n, 125);
-          var3.d(param2.field_x, -1783);
+          var3.writeByte(param2.field_n, 125);
+          var3.writeShort(param2.field_x, -1783);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "pn.BA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

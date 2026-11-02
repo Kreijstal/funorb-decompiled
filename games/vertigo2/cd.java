@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cd {
-    static er field_b;
+    static Sprite field_b;
     static String field_c;
     static int field_a;
 

@@ -26,7 +26,7 @@ final class wq extends oh {
           this.field_C.a(false, param1, this.field_o + param2, param3 + this.field_t);
           return;
         }
-        er var6 = new er(this.field_C.field_n, this.field_C.field_s);
+        Sprite var6 = new Sprite(this.field_C.field_n, this.field_C.field_s);
         lq.a(var6, (byte) -94);
         this.field_C.a(param0, param1, 0, 0);
         ln.d(-28558);

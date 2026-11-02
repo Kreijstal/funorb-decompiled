@@ -60,10 +60,10 @@ final class g {
           return;
         }
         BitPacketBuffer var2 = id.field_f;
-        var2.b(true);
-        var2.b(!param0 ? true : false);
-        var2.b(true);
-        var2.b(!param0 ? true : false);
+        var2.readInt(true);
+        var2.readInt(!param0 ? true : false);
+        var2.readInt(true);
+        var2.readInt(!param0 ? true : false);
         if (!param0) {
           var1.unlink(2);
           return;
@@ -177,11 +177,11 @@ final class g {
             j.field_n = null;
             mb.field_y = null;
             uh.field_Xb = null;
-            fg.field_eb.c(0);
+            fg.field_eb.clear(0);
             ml.field_z = 0;
             jq.field_e = 0;
             t.field_l = 0;
-            oh.field_D.c(0);
+            oh.field_D.clear(0);
             qh.field_f = false;
           }
         } else {
@@ -223,11 +223,11 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.c(0);
+                fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.c(0);
+                oh.field_D.clear(0);
                 qh.field_f = false;
               }
               if (sk.field_g) {
@@ -250,11 +250,11 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.c(0);
+                fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.c(0);
+                oh.field_D.clear(0);
                 qh.field_f = false;
               }
             } else {
@@ -271,11 +271,11 @@ final class g {
               j.field_n = null;
               mb.field_y = null;
               uh.field_Xb = null;
-              fg.field_eb.c(0);
+              fg.field_eb.clear(0);
               ml.field_z = 0;
               jq.field_e = 0;
               t.field_l = 0;
-              oh.field_D.c(0);
+              oh.field_D.clear(0);
               qh.field_f = false;
             }
             if (sk.field_g) {
@@ -312,11 +312,11 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.c(0);
+                fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.c(0);
+                oh.field_D.clear(0);
                 qh.field_f = false;
               }
               if (sk.field_g) {
@@ -342,11 +342,11 @@ final class g {
               j.field_n = null;
               mb.field_y = null;
               uh.field_Xb = null;
-              fg.field_eb.c(0);
+              fg.field_eb.clear(0);
               ml.field_z = 0;
               jq.field_e = 0;
               t.field_l = 0;
-              oh.field_D.c(0);
+              oh.field_D.clear(0);
               qh.field_f = false;
             }
           } else {
@@ -360,11 +360,11 @@ final class g {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
-                fg.field_eb.c(0);
+                fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.c(0);
+                oh.field_D.clear(0);
                 qh.field_f = false;
               }
               if (!sk.field_g) {
@@ -390,11 +390,11 @@ final class g {
             j.field_n = null;
             mb.field_y = null;
             uh.field_Xb = null;
-            fg.field_eb.c(0);
+            fg.field_eb.clear(0);
             ml.field_z = 0;
             jq.field_e = 0;
             t.field_l = 0;
-            oh.field_D.c(0);
+            oh.field_D.clear(0);
             qh.field_f = false;
           }
         }

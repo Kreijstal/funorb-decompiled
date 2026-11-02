@@ -281,16 +281,16 @@ final class ta extends DualLinkNode {
 
     ta(PacketBuffer param0) {
         this.field_v = new he(param0);
-        this.field_w = param0.h(-11) == 1 ? true : false;
-        this.field_y = param0.h(-11) == 1 ? true : false;
-        param0.h(-11);
-        param0.h(-11);
-        int var2 = param0.h(-11) & 3;
-        param0.g(98);
-        param0.g(126);
-        param0.h(-11);
-        param0.h(-11);
-        param0.h(-11);
+        this.field_w = param0.readUnsignedByte(-11) == 1 ? true : false;
+        this.field_y = param0.readUnsignedByte(-11) == 1 ? true : false;
+        param0.readUnsignedByte(-11);
+        param0.readUnsignedByte(-11);
+        int var2 = param0.readUnsignedByte(-11) & 3;
+        param0.readSignedByte(98);
+        param0.readSignedByte(126);
+        param0.readUnsignedByte(-11);
+        param0.readUnsignedByte(-11);
+        param0.readUnsignedByte(-11);
         if (var2 == 1) {
           return;
         }

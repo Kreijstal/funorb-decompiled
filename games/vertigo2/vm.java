@@ -21,7 +21,7 @@ final class vm {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (pe.field_r) {
-          return lq.field_a.a(-88, de.field_f, ji.field_r);
+          return lq.field_a.a(-88, de.field_f, TextureOperator.field_r);
         }
         if (pm.field_a) {
           return SecondaryNodeDequeIterator.a(31077, param0, param3);

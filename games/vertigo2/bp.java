@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp extends ji {
+final class bp extends TextureOperator {
     static int[] field_E;
     private int field_D;
     static wp field_A;
     static ve field_y;
-    static cr field_C;
+    static UiWidget field_C;
     static int field_z;
 
     final static void a(int param0, boolean param1, java.awt.Canvas param2) {
@@ -122,11 +122,11 @@ final class bp extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_D = param2.a((byte) -11) << 4;
+            this.field_D = param2.readUnsignedShort((byte) -11) << 4;
             return;
           }
           if (var4_int == 1) {
-            stackIn_11_1 = (1 == param2.h(param0 - 121));
+            stackIn_11_1 = (1 == param2.readUnsignedByte(param0 - 121));
             this.field_o = stackIn_11_1;
           }
           return;
@@ -155,7 +155,7 @@ final class bp extends ji {
         field_E = null;
         field_C = null;
         if (param0 != 7750) {
-          field_C = (cr) null;
+          field_C = (UiWidget) null;
         }
     }
 

@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends cr {
-    cr field_Kb;
+final class tp extends UiWidget {
+    UiWidget field_Kb;
     String field_Hb;
     String field_Lb;
     String field_Ib;
-    static cr field_Nb;
-    cr field_Jb;
+    static UiWidget field_Nb;
+    UiWidget field_Jb;
     int field_Pb;
     String field_Mb;
-    cr field_Ob;
+    UiWidget field_Ob;
     private static String field_Qb;
 
     public static void k(int param0) {
@@ -21,7 +21,7 @@ final class tp extends cr {
     }
 
     tp() {
-        super(0L, (cr) null);
+        super(0L, (UiWidget) null);
     }
 
     static {

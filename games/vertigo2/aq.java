@@ -48,7 +48,7 @@ final class aq {
           this.field_g = 40;
         }
         this.field_k = (int[][]) null;
-        this.field_j.c(0);
+        this.field_j.clear(0);
         this.field_j = null;
     }
 
@@ -93,7 +93,7 @@ final class aq {
           }
           this.field_c[param0] = var4;
         }
-        this.field_j.a(var4, (byte) 27);
+        this.field_j.addLast(var4, (byte) 27);
         return this.field_k[var4.field_n];
     }
 

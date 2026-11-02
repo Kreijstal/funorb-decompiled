@@ -27,14 +27,14 @@ final class to {
             return;
           }
           var8 = id.field_f;
-          var2 = var8.h(-11);
+          var2 = var8.readUnsignedByte(-11);
           if (var2 == 0) {
             var3_ref_j = (j) (vf.field_C.a((byte) 100));
             if (var3_ref_j == null) {
               rm.b((byte) -61);
               return;
             }
-            var4_int = var8.h(-11);
+            var4_int = var8.readUnsignedByte(-11);
             if (var4_int != 0) {
               var12 = new byte[var4_int];
               var8.a(0, var12, var4_int, -89);
@@ -54,7 +54,7 @@ final class to {
             rm.b((byte) 117);
             return;
           }
-          var3 = var8.b(true);
+          var3 = var8.readInt(true);
           var4 = (hn) (qo.field_B.a((byte) 100));
           while (var4 != null) {
             if (var3 != var4.field_q) {

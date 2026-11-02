@@ -16,7 +16,7 @@ final class mg extends oh {
     static String field_L;
     static String field_G;
     static od field_R;
-    static cr[] field_M;
+    static UiWidget[] field_M;
 
     mg(int param0, int param1, int param2, int param3, iq param4, boolean param5, int param6, int param7, cc param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ur) null, (uf) null);
@@ -457,7 +457,7 @@ final class mg extends oh {
                 var13 = stackIn_204_0;
               }
               if (2 <= fn.field_z &&
-                cr.field_eb[12]) {
+                UiWidget.field_eb[12]) {
                 var13 = 0;
                 var14 = 0;
                 var10 = 0;
@@ -493,7 +493,7 @@ final class mg extends oh {
                 }
                 uq.a(param3, var7, 20473, 0, -1, var9, -1, param2);
                 if (fn.field_z >= 2 &&
-                  cr.field_eb[12]) {
+                  UiWidget.field_eb[12]) {
                   gd.field_r = true;
                 }
                 if (!gd.field_r) {
@@ -584,7 +584,7 @@ final class mg extends oh {
                       }
                     }
                   } else {
-                    var21 = tr.field_d;
+                    var21 = GameplayScreen.field_d;
                   }
                 } else {
                   var21 = le.field_b;
@@ -625,7 +625,7 @@ final class mg extends oh {
                 }
                 if (var21 != null) {
                   var32 = "<col=A00000>" + (String) (var21);
-                  var33 = uj.a("<br>", "<br><col=A00000>", 0, var32);
+                  var33 = MenuSelectionCursor.a("<br>", "<br><col=A00000>", 0, var32);
                   if (var20 == null) {
                     var20 = var33;
                   } else {

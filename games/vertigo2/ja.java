@@ -4,11 +4,11 @@
 final class ja {
     static volatile int field_h;
     static qb field_d;
-    static cr field_b;
+    static UiWidget field_b;
     static int field_a;
     static String field_g;
     static String field_c;
-    static cr field_e;
+    static UiWidget field_e;
     static od field_f;
 
     final static boolean a(int param0) {

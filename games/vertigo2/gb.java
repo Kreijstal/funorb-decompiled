@@ -6,10 +6,10 @@ import java.io.*;
 final class gb {
     static String field_a;
     static cc field_b;
-    static cr field_c;
+    static UiWidget field_c;
     static int field_d;
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 28290) {
           field_d = -33;
         }
@@ -66,7 +66,7 @@ final class gb {
         }
     }
 
-    final static void a(int param0, fb param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
+    final static void a(int param0, SpriteState param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
         try {
           if (param7 >= -82) {
             field_a = (String) null;

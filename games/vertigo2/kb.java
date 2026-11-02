@@ -3,7 +3,7 @@
  */
 final class kb implements ur {
     static co field_c;
-    static er[] field_d;
+    static Sprite[] field_d;
     static GameKeyHandler field_a;
     static tk field_e;
     static r field_b;
@@ -17,7 +17,7 @@ final class kb implements ur {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        er var8 = null;
+        Sprite var8 = null;
         try {
           if (!param2) {
             kb.a(10);

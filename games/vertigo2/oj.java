@@ -140,7 +140,7 @@ final class oj extends cj implements ij {
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
-          this.field_C.c(0);
+          this.field_C.clear(0);
           if (param0 != null &&
             0 != param0.length) {
             var3_int = param0.length;

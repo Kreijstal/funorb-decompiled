@@ -91,14 +91,14 @@ final class qd {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_f.h(-11);
+          var3 = this.field_f.readUnsignedByte(-11);
           var4 = this.field_f.a(false);
           if (var3 == 47) {
             this.field_f.position = this.field_f.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_f.m(0);
+            var5 = this.field_f.readUnsignedMedium(0);
             var4 -= 3;
             var6 = this.field_b[param0];
             this.field_h = this.field_h + (long)var6 * (long)(this.field_d - var5);
@@ -112,10 +112,10 @@ final class qd {
         var3Lifetime1 = field_e[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_f.h(-11) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_f.readUnsignedByte(-11) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_f.h(-11) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_f.readUnsignedByte(-11) << 16;
         }
         return var4Lifetime1;
     }
@@ -154,14 +154,14 @@ final class qd {
         int var3Lifetime1;
         this.field_f.payload = param0;
         this.field_f.position = 10;
-        int var2 = this.field_f.a((byte) -11);
-        this.field_c = this.field_f.a((byte) -11);
+        int var2 = this.field_f.readUnsignedShort((byte) -11);
+        this.field_c = this.field_f.readUnsignedShort((byte) -11);
         this.field_d = 500000;
         this.field_a = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_f.b(true);
-          var5 = this.field_f.b(true);
+          var4 = this.field_f.readInt(true);
+          var5 = this.field_f.readInt(true);
           if (var4 == 1297379947) {
             this.field_a[var3] = this.field_f.position;
             var3++;

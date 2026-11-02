@@ -10,13 +10,13 @@ final class ClientException extends RuntimeException {
     static String field_b;
 
     final static void a(int param0, int param1, boolean param2, boolean param3) {
-        cr stackIn_9_0 = null;
+        UiWidget stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        cr stackIn_16_0 = null;
+        UiWidget stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        cr stackIn_21_0 = null;
+        UiWidget stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         km.i(202);
@@ -28,15 +28,15 @@ final class ClientException extends RuntimeException {
         stackIn_9_0 = ca.field_h;
         stackIn_9_1 = param0 ^ 0;
         stackIn_10_2 = (param3) && (!param2) && (!ce.field_c) && (null == gd.field_j) && (sj.field_d == null);
-        ((cr) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+        ((UiWidget) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
         stackIn_16_0 = ud.field_A;
         stackIn_16_1 = 0;
         stackIn_17_2 = (param3) && (!param2) && (!ce.field_c) && (gd.field_j == null) && (null == sj.field_d);
-        ((cr) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+        ((UiWidget) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
         stackIn_21_0 = oc.field_v;
         stackIn_21_1 = 0;
         stackIn_22_2 = (param3) && (!param2) && (ce.field_c);
-        ((cr) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+        ((UiWidget) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
         qo.field_D.field_b.k(0);
         if (0 != vb.field_j.field_tb) {
           cn.field_v = true;
@@ -44,7 +44,7 @@ final class ClientException extends RuntimeException {
         if (0 != b.field_h.field_tb && (vb.field_g ||
           !(q.field_y <= 0) ||
           !(fn.field_z < 2) &&
-          cr.field_eb[12])) {
+          UiWidget.field_eb[12])) {
           ah.a((byte) -50, param1);
         }
         if (la.field_f.field_tb != 0) {
@@ -83,7 +83,7 @@ final class ClientException extends RuntimeException {
         boolean stackIn_43_4 = false;
         int stackIn_46_0 = 0;
         int stackIn_57_0 = 0;
-        cr stackIn_93_0 = null;
+        UiWidget stackIn_93_0 = null;
         int stackIn_93_1 = 0;
         int stackIn_94_2 = 0;
         RuntimeException stackIn_218_0 = null;
@@ -103,11 +103,11 @@ final class ClientException extends RuntimeException {
         int var12 = 0;
         bs var13 = null;
         int var14 = 0;
-        cr var15 = null;
-        cr var16 = null;
-        cr var17 = null;
-        cr var18 = null;
-        cr var19 = null;
+        UiWidget var15 = null;
+        UiWidget var16 = null;
+        UiWidget var17 = null;
+        UiWidget var18 = null;
+        UiWidget var19 = null;
         int var20 = 0;
         String var21 = null;
         int var22 = 0;
@@ -200,19 +200,19 @@ final class ClientException extends RuntimeException {
           while (var13 != null) {
             var14 = 0;
             if (null == var13.field_M) {
-              var13.field_Sb = new cr(0L, IterableNodeHashTable.field_b);
+              var13.field_Sb = new UiWidget(0L, IterableNodeHashTable.field_b);
               var13.b(var13.field_Sb, 125);
-              var13.field_Nb = new cr(0L, tm.field_b);
+              var13.field_Nb = new UiWidget(0L, tm.field_b);
               if (db.field_S) {
                 var13.b(var13.field_Nb, 120);
               }
               var13.field_Nb.field_O = 2;
-              var13.field_Qb = new cr(0L, ee.field_b);
+              var13.field_Qb = new UiWidget(0L, ee.field_b);
               var13.b(var13.field_Qb, 122);
               var13.i(-2147483648);
-              var13.field_Tb = new cr(0L, sc.field_c);
+              var13.field_Tb = new UiWidget(0L, sc.field_c);
               var13.b(var13.field_Tb, 123);
-              var13.field_Lb = new cr(0L, gh.field_b);
+              var13.field_Lb = new UiWidget(0L, gh.field_b);
               var13.b(var13.field_Lb, 122);
               var14 = 1;
             }
@@ -323,7 +323,7 @@ final class ClientException extends RuntimeException {
               } else {
                 stackIn_94_2 = 42;
               }
-              ((cr) (Object) stackIn_93_0).a(stackIn_93_1, -stackIn_94_2 + var13.field_Fb - var26_int, r.field_f, var20, var26_int);
+              ((UiWidget) (Object) stackIn_93_0).a(stackIn_93_1, -stackIn_94_2 + var13.field_Fb - var26_int, r.field_f, var20, var26_int);
               var13.field_Nb.field_S = Integer.toString(var13.field_Rb);
               var13.field_Nb.a(91, 40, r.field_f, var20, -40 + var13.field_Fb);
               var20 = var20 + r.field_f;
@@ -360,7 +360,7 @@ final class ClientException extends RuntimeException {
               var13.field_kb = -var13.field_db + var20;
             }
             if (var14 != 0) {
-              param1.field_Nb.a((byte) 8, (cr) (var11), var13, 2);
+              param1.field_Nb.a((byte) 8, (UiWidget) (var11), var13, 2);
             }
             if (0 != var13.field_tb &&
               !var13.k(15)) {

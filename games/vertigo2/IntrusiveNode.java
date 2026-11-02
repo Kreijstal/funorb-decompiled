@@ -13,7 +13,7 @@ class IntrusiveNode {
     static String field_b;
     static fe[] field_i;
     static int field_d;
-    static er field_m;
+    static Sprite field_m;
     static int[] field_l;
 
     public static void d(int param0) {

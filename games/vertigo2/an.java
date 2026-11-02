@@ -12,12 +12,12 @@ final class an {
     private int[][] field_g;
     static String[][] field_f;
 
-    final static er b(int param0, String param1) {
+    final static Sprite b(int param0, String param1) {
         int var13_int = 0;
         int var17 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
-        er stackIn_66_0 = null;
+        Sprite stackIn_66_0 = null;
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
@@ -27,15 +27,15 @@ final class an {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        er var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        er var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
-        er var15 = null;
+        Sprite var15 = null;
         int var16 = 0;
         int var18 = 0;
         cc var19 = null;
@@ -56,7 +56,7 @@ final class an {
           var4 = 64 + var19.c(param1);
           var5 = var4;
           var6 = var3;
-          var7 = new er(var5, var6);
+          var7 = new Sprite(var5, var6);
           var7.d();
           bi.e(32, 32, var7.field_y - 64, var7.field_t - 64, 9361151, 1282259);
           var10 = 0;
@@ -75,12 +75,12 @@ final class an {
               bi.b(var8, var9, 657930);
             }
           }
-          var13 = new er(var4, var3);
+          var13 = new Sprite(var4, var3);
           var13.d();
           var19.b(param1, 32, var19.field_D + 32, 16711680, -1);
           var14 = -35 % ((param0 - 29) / 61);
           var13.d();
-          var15 = new er(var5, var6);
+          var15 = new Sprite(var5, var6);
           var15.d();
           for (var16 = 0; var16 < var13.field_F.length; var16++) {
             if (var13.field_F[var16] != 0 && (0 == var13.field_F[1 + var16] ||
@@ -161,24 +161,24 @@ final class an {
     final static void a(boolean param0, int param1, boolean param2, int param3) {
         int stackIn_11_0 = 0;
         String stackIn_25_0 = null;
-        cr stackIn_36_0 = null;
+        UiWidget stackIn_36_0 = null;
         String stackIn_37_1 = null;
-        cr stackIn_39_0 = null;
+        UiWidget stackIn_39_0 = null;
         String[] stackIn_39_1 = null;
         String stackIn_40_2 = null;
-        cr stackIn_73_0 = null;
+        UiWidget stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         boolean stackIn_74_2 = false;
-        cr stackIn_78_0 = null;
+        UiWidget stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         boolean stackIn_79_2 = false;
-        cr stackIn_83_0 = null;
+        UiWidget stackIn_83_0 = null;
         int stackIn_83_1 = 0;
         boolean stackIn_84_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        cr var5 = null;
-        cr var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -189,9 +189,9 @@ final class an {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        cr var15 = null;
+        UiWidget var15 = null;
         String var16 = null;
-        cr var17 = null;
+        UiWidget var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -277,7 +277,7 @@ final class an {
                 }
                 uq.a(sj.field_d, ol.field_A, 20473, 0, -1, -1, -1, true);
                 if (!(fn.field_z < 2) &&
-                  cr.field_eb[12]) {
+                  UiWidget.field_eb[12]) {
                   gd.field_r = true;
                 }
               }
@@ -339,15 +339,15 @@ final class an {
           stackIn_73_0 = hk.field_o;
           stackIn_73_1 = 0;
           stackIn_74_2 = (param2) && (!param0) && (!im.field_g);
-          ((cr) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
+          ((UiWidget) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
           stackIn_78_0 = lb.field_c;
           stackIn_78_1 = 0;
           stackIn_79_2 = (param2) && (!param0) && (!im.field_g);
-          ((cr) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
+          ((UiWidget) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
           stackIn_83_0 = wc.field_m;
           stackIn_83_1 = 0;
           stackIn_84_2 = (param2) && (!param0) && (im.field_g);
-          ((cr) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
+          ((UiWidget) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (null != sj.field_d) {
             if (ne.field_G.field_tb != 0) {
@@ -434,9 +434,9 @@ final class an {
         }
     }
 
-    final static er[] a(int param0, int param1) {
-        er[] var3 = new er[9];
-        er[] var2 = var3;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = PacketBuffer.a(param1, 64, false);
         if (param0 > -63) {
           field_c = true;
@@ -529,8 +529,8 @@ final class an {
           var4 = sf.field_b.field_t << 4;
           var5 = Vertigo2.field_C.field_y << 3;
           var6 = Vertigo2.field_C.field_t << 3;
-          var7 = ji.field_p.field_y << 3;
-          var8 = ji.field_p.field_t << 3;
+          var7 = TextureOperator.field_p.field_y << 3;
+          var8 = TextureOperator.field_p.field_t << 3;
           var9 = jf.field_M.field_y << 3;
           var10 = jf.field_M.field_t << 3;
           gb.a(this.field_h[0][1], jf.field_M, var10, this.field_h[0][0], this.field_d, this.field_h[0][2], var9, param0 - 128);
@@ -538,7 +538,7 @@ final class an {
             gb.a(this.field_g[var11][1], var13, var4, this.field_g[var11][0], this.field_d, this.field_g[var11][2], var3, param0 - 96);
           }
           gb.a(this.field_a[0][1], Vertigo2.field_C, var6, this.field_a[0][0], this.field_d, this.field_a[0][2], var5, param0 ^ -116);
-          gb.a(this.field_a[1][1], ji.field_p, var8, this.field_a[1][0], this.field_d, this.field_a[1][2], var7, -118);
+          gb.a(this.field_a[1][1], TextureOperator.field_p, var8, this.field_a[1][0], this.field_d, this.field_a[1][2], var7, -118);
         }
     }
 

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mp {
-    private er[] field_e;
+    private Sprite[] field_e;
     static String field_c;
     static fe field_a;
-    static cr field_g;
+    static UiWidget field_g;
     static ch field_f;
     static int field_d;
     static int field_b;
@@ -27,7 +27,7 @@ final class mp {
         }
     }
 
-    mp(er[] param0) {
+    mp(Sprite[] param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -127,15 +127,15 @@ final class mp {
         if (param1 > 17) {
           var2 = uh.field_Wb;
           var2.j(param0, 118);
-          var2.f(1, 112);
-          var2.f(0, 99);
+          var2.writeByte(1, 112);
+          var2.writeByte(0, 99);
           return;
         }
         mp.a(-79, -52);
         var2Lifetime1 = uh.field_Wb;
         var2Lifetime1.j(param0, 118);
-        var2Lifetime1.f(1, 112);
-        var2Lifetime1.f(0, 99);
+        var2Lifetime1.writeByte(1, 112);
+        var2Lifetime1.writeByte(0, 99);
     }
 
     static {

@@ -14,9 +14,9 @@ final class kk {
     private int field_b;
     private int[][][] field_l;
     static String field_h;
-    static cr field_a;
+    static UiWidget field_a;
     boolean field_c;
-    static cr field_f;
+    static UiWidget field_f;
 
     final int[][] a(int param0, int param1) {
         boolean stackIn_6_1 = false;
@@ -56,7 +56,7 @@ final class kk {
         } else {
           this.field_c = false;
         }
-        this.field_i.a(var3, (byte) 27);
+        this.field_i.addLast(var3, (byte) 27);
         return this.field_l[var3.field_s];
     }
 
@@ -206,7 +206,7 @@ final class kk {
           return;
         }
         this.field_m = null;
-        this.field_i.c(0);
+        this.field_i.clear(0);
         this.field_i = null;
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class er extends fb {
+class Sprite extends SpriteState {
     int[] field_F;
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -142,9 +142,9 @@ class er extends fb {
             return;
           }
           if (param2 == 256) {
-            er.a(0, 0, 0, bi.field_l, this.field_F, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, bi.field_l, this.field_F, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            er.a(0, 0, 0, bi.field_l, this.field_F, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, bi.field_l, this.field_F, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -157,7 +157,7 @@ class er extends fb {
         int var4 = param0 + (this.field_y >> 1) > bi.field_i ? bi.field_i - param0 << 1 : this.field_y;
         int var5 = param1 < bi.field_f ? bi.field_f - param1 << 1 : 0;
         int var6 = param1 + (this.field_t >> 1) > bi.field_c ? bi.field_c - param1 << 1 : this.field_t;
-        er.a(this.field_F, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * bi.field_e + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), bi.field_e - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_F, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * bi.field_e + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), bi.field_e - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void b() {
@@ -229,7 +229,7 @@ class er extends fb {
           if (var6 <= 0) {
             return;
           }
-          er.a(bi.field_l, this.field_F, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(bi.field_l, this.field_F, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -468,7 +468,7 @@ class er extends fb {
           if (var5 <= 0) {
             return;
           }
-          er.a(bi.field_l, this.field_F, var4, var3, var6, var5, var7, var8);
+          Sprite.a(bi.field_l, this.field_F, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -514,7 +514,7 @@ class er extends fb {
           if (var5 <= 0) {
             return;
           }
-          er.a(bi.field_l, this.field_F, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(bi.field_l, this.field_F, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -696,7 +696,7 @@ class er extends fb {
           if (var5 <= 0) {
             return;
           }
-          er.a(bi.field_l, this.field_F, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(bi.field_l, this.field_F, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -742,7 +742,7 @@ class er extends fb {
           if (var6 <= 0) {
             return;
           }
-          er.b(bi.field_l, this.field_F, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(bi.field_l, this.field_F, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -834,15 +834,15 @@ class er extends fb {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          er.a(bi.field_l, this.field_F, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.a(bi.field_l, this.field_F, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
 
-    final er a() {
+    final Sprite a() {
         int var2 = 0;
         int var3 = 0;
-        er var1 = new er(this.field_y, this.field_t);
+        Sprite var1 = new Sprite(this.field_y, this.field_t);
         var1.field_x = this.field_x;
         var1.field_B = this.field_B;
         var1.field_C = this.field_x - this.field_y - this.field_C;
@@ -971,7 +971,7 @@ class er extends fb {
           if (var6 <= 0) {
             return;
           }
-          er.b(bi.field_l, this.field_F, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.b(bi.field_l, this.field_F, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1237,14 +1237,14 @@ class er extends fb {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          er.a(bi.field_l, this.field_F, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(bi.field_l, this.field_F, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    final er c() {
+    final Sprite c() {
         int var3 = 0;
-        er var1 = new er(this.field_y, this.field_t);
+        Sprite var1 = new Sprite(this.field_y, this.field_t);
         var1.field_x = this.field_x;
         var1.field_B = this.field_B;
         var1.field_C = this.field_C;
@@ -1297,7 +1297,7 @@ class er extends fb {
           if (var5 <= 0) {
             return;
           }
-          er.a(0, bi.field_l, this.field_F, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, bi.field_l, this.field_F, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1717,7 +1717,7 @@ class er extends fb {
         return;
     }
 
-    er(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_x = param0;
         this.field_B = param1;
         this.field_C = param2;
@@ -1727,7 +1727,7 @@ class er extends fb {
         this.field_F = param6;
     }
 
-    er(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_F = new int[param0 * param1];
         this.field_x = param0;
         this.field_y = param0;
@@ -1737,7 +1737,7 @@ class er extends fb {
         this.field_C = 0;
     }
 
-    er(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

@@ -61,10 +61,10 @@ final class ho {
 
     final static void a(int param0, boolean param1) {
         int var6 = 0;
-        cr dupTemp$0 = null;
+        UiWidget dupTemp$0 = null;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        cr stackIn_6_0 = null;
+        UiWidget stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         int stackIn_48_0 = 0;
@@ -74,17 +74,17 @@ final class ho {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        cr var7 = null;
+        UiWidget var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        cr var8_ref_cr = null;
+        UiWidget var8_ref_cr = null;
         nk var9 = null;
         int var9_int = 0;
         int var10 = 0;
         nk var10_ref_nk = null;
         int var12 = 0;
         int var13 = 0;
-        cr var14 = null;
+        UiWidget var14 = null;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           om.field_D = bi.field_j;
@@ -104,7 +104,7 @@ final class ho {
           } else {
             stackIn_7_2 = 0;
           }
-          ((cr) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + r.field_f, 0);
+          ((UiWidget) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + r.field_f, 0);
           eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + r.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
           vd.field_d.a(2 + r.field_f + 20, 2, re.field_k, -22 + (de.field_g.field_db - r.field_f), 0, de.field_g.field_Fb, 3124);
           ne.field_G.a(76, hk.field_o.field_Fb, 40, -40 + hk.field_o.field_db, param0);

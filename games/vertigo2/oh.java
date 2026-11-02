@@ -519,7 +519,7 @@ abstract class oh extends iq implements dq {
           if (var5_int != 80) {
             return false;
           }
-          if (!cr.field_eb[81]) {
+          if (!UiWidget.field_eb[81]) {
             stackIn_13_0 = this.a(param3, 16777088);
           } else {
             stackIn_13_0 = this.a(78, param3);

@@ -7,28 +7,28 @@ final class dk extends da {
     static String field_l;
     static String field_n;
 
-    final static er[] a(int[] param0, boolean param1, er[] param2) {
+    final static Sprite[] a(int[] param0, boolean param1, Sprite[] param2) {
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
-        er[] stackIn_20_0 = null;
+        Sprite[] stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        er[] var3 = null;
+        Sprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        er var8 = null;
+        Sprite var8 = null;
         int var11 = 0;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
-          var3 = new er[96];
+          var3 = new Sprite[96];
           var4 = 0;
           var5 = 0;
           if (!param1) {
@@ -46,7 +46,7 @@ final class dk extends da {
             param0[var5] = (-param2[var5].field_y + 512) / 8;
             for (var6 = 0; var6 < 4; var6++) {
               for (var7 = 0; 4 > var7; var7++) {
-                var8 = new er(128, 128);
+                var8 = new Sprite(128, 128);
                 var8.d();
                 param2[var5].c(param0[var5] - param2[var5].field_y * var7 / 4, param0[var5] - var6 * param2[var5].field_t / 4);
                 for (var9 = param0[var5] - 1; var9 >= 0; var9--) {

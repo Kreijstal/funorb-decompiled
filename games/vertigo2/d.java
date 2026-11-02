@@ -262,24 +262,24 @@ class d extends iq {
             return;
           }
           var1 = id.field_f;
-          var2 = var1.h(-11);
+          var2 = var1.readUnsignedByte(-11);
           if (var2 == 0) {
             if (null == jn.field_g) {
               jn.field_g = new fi(128);
               vd.field_a = 0;
             }
-            stackIn_14_0 = (1 != var1.h(-11)) ? 0 : 1;
+            stackIn_14_0 = (1 != var1.readUnsignedByte(-11)) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.f(128);
+            var4_ref_String = var1.readString(128);
             if (var3_int == 0) {
               var5 = var4_ref_String;
             }
             if (var3_int != 0 ||
               var9 != 0) {
-              var5 = var1.f(128);
+              var5 = var1.readString(128);
             }
             var6 = or.a(56, var4_ref_String);
-            var7_ref = var1.f(128);
+            var7_ref = var1.readString(128);
             var8 = rc.a((CharSequence) ((Object) var4_ref_String), 320);
             if (null == var8) {
               var8 = var4_ref_String;
@@ -296,7 +296,7 @@ class d extends iq {
               fieldTemp$1 = vd.field_a;
               vd.field_a = vd.field_a + 1;
               var6.field_Pb = fieldTemp$1;
-              vj.field_d.a(var6, false);
+              vj.field_d.addFirst(var6, false);
             }
             var6.field_Mb = var4_ref_String;
             var6.field_Ib = var7_ref;
@@ -322,9 +322,9 @@ class d extends iq {
               return;
             }
             ba.field_d = 1;
-            var3 = var1.f(128);
+            var3 = var1.readString(128);
             ClientException.field_d = ((String) (var3)).intern();
-            var4 = var1.h(-11);
+            var4 = var1.readUnsignedByte(-11);
             ir.a(var4, (byte) -65);
             return;
           }
@@ -332,12 +332,12 @@ class d extends iq {
             se.field_A = new fi(128);
             sq.field_b = 0;
           }
-          var3Lifetime1 = var1.f(128);
+          var3Lifetime1 = var1.readString(128);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.f(128);
-          var5Lifetime1 = var1.f(128);
+          var4_ref_StringLifetime1 = var1.readString(128);
+          var5Lifetime1 = var1.readString(128);
           var6Lifetime1 = vo.a(var4_ref_StringLifetime1, 0);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = vo.a(var5Lifetime1, 0);
@@ -351,7 +351,7 @@ class d extends iq {
             fieldTemp$0 = sq.field_b;
             sq.field_b = sq.field_b + 1;
             var6Lifetime1.field_Pb = fieldTemp$0;
-            tm.field_a.a(var6Lifetime1, false);
+            tm.field_a.addFirst(var6Lifetime1, false);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -376,7 +376,7 @@ class d extends iq {
               return;
             }
           }
-          tm.field_a.a(var6Lifetime1, false);
+          tm.field_a.addFirst(var6Lifetime1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

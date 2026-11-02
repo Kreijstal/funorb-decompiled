@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca {
-    static cr field_f;
+    static UiWidget field_f;
     static int field_g;
-    static cr field_h;
+    static UiWidget field_h;
     static int[] field_a;
     static String field_e;
     static int field_b;
@@ -46,11 +46,11 @@ final class ca {
         }
     }
 
-    final static er[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        er[] var7 = new er[9];
-        er[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         if (param0 <= -73) {
           var7[0] = PacketBuffer.a(param3, param2, false);
           for (var5 = 1; var5 < 9; var5++) {
@@ -59,7 +59,7 @@ final class ca {
           var4[4] = PacketBuffer.a(param1, 64, false);
           return var4;
         }
-        return (er[]) null;
+        return (Sprite[]) null;
     }
 
     final static void a(boolean param0, int param1) {

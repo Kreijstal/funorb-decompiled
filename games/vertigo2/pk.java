@@ -22,9 +22,9 @@ final class pk extends IntrusiveNode {
         field_v = null;
     }
 
-    final static cr e(int param0) {
+    final static UiWidget e(int param0) {
         if (param0 != 2) {
-          return (cr) null;
+          return (UiWidget) null;
         }
         return vd.field_d.field_Nb;
     }
@@ -58,7 +58,7 @@ final class pk extends IntrusiveNode {
           }
           ch.field_e.l(0);
           while (NodeHashTableIterator.a(false)) {
-            ch.field_e.a(param0 - 93, de.field_f, ji.field_r);
+            ch.field_e.a(param0 - 93, de.field_f, TextureOperator.field_r);
           }
           if (nm.field_F != -1) {
             var1_int = nm.field_F;

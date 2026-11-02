@@ -47,9 +47,9 @@ final class ul {
         try {
           var14 = new PacketBuffer(param0);
           var4 = new PacketBuffer(param0);
-          var14.h(-11);
+          var14.readUnsignedByte(-11);
           var14.position = var14.position + 2;
-          var5 = var14.h(-11);
+          var5 = var14.readUnsignedByte(-11);
           var6 = 0;
           var7 = -1;
           var8 = -1;
@@ -59,7 +59,7 @@ final class ul {
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.h(-11);
+            var11 = var14.readUnsignedByte(-11);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;
@@ -72,17 +72,17 @@ final class ul {
               if ((var11 & 1) == 0) {
                 field_m[var6] = (short)var12;
               } else {
-                field_m[var6] = (short)var4.j(-3084);
+                field_m[var6] = (short)var4.readSignedSmart(-3084);
               }
               if ((var11 & 2) == 0) {
                 field_j[var6] = (short)var12;
               } else {
-                field_j[var6] = (short)var4.j(-3084);
+                field_j[var6] = (short)var4.readSignedSmart(-3084);
               }
               if ((var11 & 4) == 0) {
                 field_h[var6] = (short)var12;
               } else {
-                field_h[var6] = (short)var4.j(-3084);
+                field_h[var6] = (short)var4.readSignedSmart(-3084);
               }
               field_b[var6] = (byte)(var11 >>> 3 & 3);
               if (var10 == 2) {

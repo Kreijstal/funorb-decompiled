@@ -43,14 +43,14 @@ final class ph extends IntrusiveNode {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param3) {
-            param0.field_Qb = param2.h(-11);
+            param0.field_Qb = param2.readUnsignedByte(-11);
           }
-          param0.field_uc = param2.h(-11);
-          param0.field_Ub = param2.h(-11);
+          param0.field_uc = param2.readUnsignedByte(-11);
+          param0.field_Ub = param2.readUnsignedByte(-11);
           if (!param1) {
             return;
           }
-          var4_int = param2.h(-11);
+          var4_int = param2.readUnsignedByte(-11);
           stackIn_8_0 = (uh) (param0);
           stackIn_9_1 = ((var4_int & 128) != 0);
           stackIn_8_0.field_Mb = stackIn_9_1;
@@ -78,16 +78,16 @@ final class ph extends IntrusiveNode {
           param2.a(0, param0.field_fc, param0.field_fc.length, 61);
           stackIn_31_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
-          param0.field_tc = param2.a((byte) -11);
-          param0.field_Pb = gk.a(94) - (long)param2.b(param1);
+          param0.field_tc = param2.readUnsignedShort((byte) -11);
+          param0.field_Pb = gk.a(94) - (long)param2.readInt(param1);
           if (var5 != 0) {
-            param0.field_Yb = param2.b(true);
+            param0.field_Yb = param2.readInt(true);
           } else {
             param0.field_Yb = -1;
           }
-          param0.field_hc = param2.i(-31016);
+          param0.field_hc = param2.readLong(-31016);
           var7 = param2.position;
-          param0.field_Nb = param2.f(128);
+          param0.field_Nb = param2.readString(128);
           if (var6 == 0) {
             param0.field_Hb = null;
             return;
@@ -95,7 +95,7 @@ final class ph extends IntrusiveNode {
           param0.field_Hb = new String[param0.field_Qb];
           param2.position = var7;
           for (var8 = 0; param0.field_Qb > var8; var8++) {
-            param0.field_Hb[var8] = param2.f(128);
+            param0.field_Hb[var8] = param2.readString(128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

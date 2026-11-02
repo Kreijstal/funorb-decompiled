@@ -8,7 +8,7 @@ final class rq extends sn {
     IntrusiveDeque field_w;
     static int field_B;
     fp field_z;
-    static cr field_t;
+    static UiWidget field_t;
     static int field_u;
     static String field_v;
     static boolean field_y;
@@ -34,7 +34,7 @@ final class rq extends sn {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = np.field_Lb;
-          ql.field_L = new cr(0L, (cr) null);
+          ql.field_L = new UiWidget(0L, (UiWidget) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             ke.a((Throwable) null, "QC1", 0);
@@ -57,7 +57,7 @@ final class rq extends sn {
           var5 = bi.field_e;
           var6 = bi.field_j;
           var15 = bi.field_l;
-          fm.field_g = new er(10, 14);
+          fm.field_g = new Sprite(10, 14);
           fm.field_g.d();
           for (var8 = param1; var8 < 7; var8++) {
             bi.e(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
@@ -86,12 +86,12 @@ final class rq extends sn {
         }
     }
 
-    final static er a(r param0, String param1, String param2, byte param3) {
+    final static Sprite a(r param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        er stackIn_2_0 = null;
-        er stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -102,7 +102,7 @@ final class rq extends sn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 98) {
-            stackIn_2_0 = (er) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           var4_int = param0.a((byte) 120, param2);
@@ -383,7 +383,7 @@ final class rq extends sn {
             ClientException.field_f[var9 - 1] = 0;
             rc.field_c[0] = 2;
           }
-          kg.field_G.field_b = rc.field_c.length;
+          kg.field_G.itemCount = rc.field_c.length;
           var8Lifetime1 = 0;
           for (var9Lifetime1 = 0; al.field_y.length > var9Lifetime1; var9Lifetime1++) {
             stackIn_25_0 = 121;
@@ -399,7 +399,7 @@ final class rq extends sn {
           }
           qp.field_d = -(var8Lifetime1 >> 1) + var8Lifetime1 + ni.field_a;
           pk.field_o = -(var8Lifetime1 >> 1) + ni.field_a;
-          sf.field_d = kg.field_G.field_b * (vo.field_y + eb.field_h << 1);
+          sf.field_d = kg.field_G.itemCount * (vo.field_y + eb.field_h << 1);
           for (var9Lifetime2 = 0; var9Lifetime2 < al.field_y.length; var9Lifetime2++) {
             stackIn_36_0 = sf.field_d;
             if (ClientException.field_f[var9Lifetime2] >= 0) {
@@ -427,7 +427,7 @@ final class rq extends sn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        er var6 = new er(param1, param0);
+        Sprite var6 = new Sprite(param1, param0);
         int var7 = 47 % ((3 - param4) / 57);
         var6.d();
         bi.f(0, 0, param1, param0, 12, 5921370);

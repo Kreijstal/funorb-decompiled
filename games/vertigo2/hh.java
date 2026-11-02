@@ -12,12 +12,12 @@ final class hh {
           return;
         }
         try {
-          ji.field_n = param1;
-          ql.field_L.field_M.c(0);
+          TextureOperator.field_n = param1;
+          ql.field_L.field_M.clear(0);
           if (param0 >= -17) {
             hh.a(76, 115, true);
           }
-          ql.field_L.b(ji.field_n, 121);
+          ql.field_L.b(TextureOperator.field_n, 121);
           pm.field_a = true;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "hh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -55,7 +55,7 @@ final class hh {
               var6 = (PacketBuffer) null;
               hh.a((byte) 33, -101, (PacketBuffer) null);
             }
-            var3_int = param2.l(-1317721944);
+            var3_int = param2.readSmart(-1317721944);
             if (var3_int > param1) {
               var3_int = param1;
             }

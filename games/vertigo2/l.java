@@ -179,7 +179,7 @@ abstract class l {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ml.a(var1, (byte) -25);
-            uh.field_Wb.b((byte) 15, var1.position - var2);
+            uh.field_Wb.patchByteLength((byte) 15, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

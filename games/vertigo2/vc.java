@@ -3,7 +3,7 @@
  */
 final class vc {
     static String field_a;
-    static cr field_b;
+    static UiWidget field_b;
 
     final static void a(int param0) {
         int var1_int = 0;
@@ -246,7 +246,7 @@ final class vc {
             param4 == param5 &&
             param0 == param6 &&
             param3 == param2) {
-            uj.a(param8, param6, param3, true, param4, param9);
+            MenuSelectionCursor.a(param8, param6, param3, true, param4, param9);
             return;
           }
           var11 = param8;
@@ -274,7 +274,7 @@ final class vc {
             var33 = var25 * var24;
             var34 = (var32 + var30 + var28 >> 12) + param8;
             var35 = (var29 + (var31 + var33) >> 12) + param4;
-            uj.a(var11, var34, var35, true, var12, param9);
+            MenuSelectionCursor.a(var11, var34, var35, true, var12, param9);
             var11 = var34;
             var12 = var35;
           }

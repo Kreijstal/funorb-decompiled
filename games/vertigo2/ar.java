@@ -70,21 +70,21 @@ final class ar {
         var2.j(param1, 126);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.f(5, -105);
+        var2.writeByte(5, -105);
         if (param0 == 953354214) {
-          var2.f(gd.field_j.field_uc, -116);
+          var2.writeByte(gd.field_j.field_uc, -116);
           var4 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
-          var2.f(var4, -109);
+          var2.writeByte(var4, -109);
           var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
-          var2.b((byte) 6, -var3 + var2.position);
+          var2.patchByteLength((byte) 6, -var3 + var2.position);
           return;
         }
         ar.a(-18, (byte) -22, -75, 35, 98);
-        var2.f(gd.field_j.field_uc, -116);
+        var2.writeByte(gd.field_j.field_uc, -116);
         var4Lifetime1 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
-        var2.f(var4Lifetime1, -109);
+        var2.writeByte(var4Lifetime1, -109);
         var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
-        var2.b((byte) 6, -var3 + var2.position);
+        var2.patchByteLength((byte) 6, -var3 + var2.position);
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {

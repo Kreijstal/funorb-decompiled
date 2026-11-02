@@ -69,8 +69,8 @@ final class kr {
               return stackIn_10_0;
             }
             this.field_d.position = param3 * 72 + 6;
-            var6_int = this.field_d.b(true);
-            var7 = this.field_d.b(true);
+            var6_int = this.field_d.readInt(true);
+            var7 = this.field_d.readInt(true);
             var13 = new byte[64];
             this.field_d.a(0, var13, 64, 67);
             var9 = new uk(param3, param4, param1, this.field_f, this.field_a, var6_int, var13, var7, param2);
@@ -185,7 +185,7 @@ final class kr {
         }
         var11 = new PacketBuffer(this.field_e.a((byte) -106));
         var11.position = 5;
-        var3 = var11.h(-11);
+        var3 = var11.readUnsignedByte(-11);
         var11.position = var11.position + var3 * 72;
         var5 = 13 % ((-4 - param0) / 48);
         var14 = new byte[var11.payload.length - var11.position];

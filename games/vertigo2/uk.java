@@ -4,13 +4,13 @@
 final class uk extends ab {
     private int field_A;
     private byte[] field_g;
-    static er[] field_r;
+    static Sprite[] field_r;
     static od field_v;
     private int field_z;
     private t field_p;
     private rk field_s;
     private jl field_q;
-    static cr field_e;
+    static UiWidget field_e;
     private tk field_w;
     private int field_t;
     static String field_u;
@@ -171,7 +171,7 @@ final class uk extends ab {
                   var7 = new IntrusiveNode();
                   var7.key = (long)this.field_B;
                   var2_int = 0;
-                  this.field_j.a(var7, false);
+                  this.field_j.addFirst(var7, false);
                 }
                 this.field_B = this.field_B + 1;
                 continue;
@@ -213,7 +213,7 @@ final class uk extends ab {
                   if (1 != this.field_g[this.field_B]) {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_B;
-                    this.field_j.a(var6, false);
+                    this.field_j.addFirst(var6, false);
                     var2_intLifetime1 = 0;
                   }
                   this.field_B = this.field_B + 1;

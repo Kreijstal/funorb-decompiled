@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fn extends ji {
+final class fn extends TextureOperator {
     static pm field_y;
     static int field_z;
     static String field_B;

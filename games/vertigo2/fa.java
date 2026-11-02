@@ -10,7 +10,7 @@ final class fa extends IntrusiveNode {
     static String field_v;
     static String field_q;
     static String field_t;
-    static er[] field_s;
+    static Sprite[] field_s;
 
     fa(int param0) {
         this.field_n = param0;
@@ -41,9 +41,9 @@ final class fa extends IntrusiveNode {
           br.field_Q = param1;
           var4 = uh.field_Wb;
           var4.j(param0, 125);
-          var4.f(3, -86);
-          var4.f(11, -112);
-          var4.d(param1, -1783);
+          var4.writeByte(3, -86);
+          var4.writeByte(11, -112);
+          var4.writeShort(param1, -1783);
         }
         if (param2) {
           return;

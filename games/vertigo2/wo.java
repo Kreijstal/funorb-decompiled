@@ -206,7 +206,7 @@ final class wo {
           if (2 != param0 &&
             3 != param0) {
             tn.field_i.e(10, 10);
-            va.field_s.a(16777215, (byte) 75, -1, tn.field_i.field_x + 15, Vertigo2.a(new String[]{Integer.toString(this.field_ab)}, uj.field_k, 109), 10 + (va.field_s.field_k + 10));
+            va.field_s.a(16777215, (byte) 75, -1, tn.field_i.field_x + 15, Vertigo2.a(new String[]{Integer.toString(this.field_ab)}, MenuSelectionCursor.field_k, 109), 10 + (va.field_s.field_k + 10));
           }
           var8 = td.field_c.field_C;
           var9 = 0;

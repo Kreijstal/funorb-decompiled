@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ki {
-    static er[] field_b;
+    static Sprite[] field_b;
     static IntrusiveDeque field_a;
     static int field_c;
 
@@ -14,7 +14,7 @@ final class ki {
           bm.g(0);
           return;
         }
-        field_b = (er[]) null;
+        field_b = (Sprite[]) null;
         ql.i(34);
         al.a((byte) -41);
         up.field_z = null;
@@ -24,7 +24,7 @@ final class ki {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -7) {
-          field_b = (er[]) null;
+          field_b = (Sprite[]) null;
           field_a = null;
           return;
         }

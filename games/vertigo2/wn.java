@@ -6,7 +6,7 @@ final class wn {
     int field_k;
     int field_c;
     static String field_i;
-    private er field_h;
+    private Sprite field_h;
     static an field_b;
     cc field_f;
     static String field_d;
@@ -65,7 +65,7 @@ final class wn {
           bi.b(this.field_a);
           this.field_e = true;
           if (param1 <= 51) {
-            this.field_h = (er) null;
+            this.field_h = (Sprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class wn {
         int var2 = -117 % ((30 - param0) / 60);
     }
 
-    final static void a(String[] args, byte[] param1, int[] param2, String[][] param3, u[] param4, r param5, r param6, byte param7, er[][] param8, String[][] param9, r param10, int param11, byte[] param12, er[][] param13, int param14, int[] param15, boolean param16) {
+    final static void a(String[] args, byte[] param1, int[] param2, String[][] param3, u[] param4, r param5, r param6, byte param7, Sprite[][] param8, String[][] param9, r param10, int param11, byte[] param12, Sprite[][] param13, int param14, int[] param15, boolean param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -141,7 +141,7 @@ final class wn {
           nk.a(param14, param9, param5, (byte) 58, param11, param1, param13, param3, args, param12, (String[]) null, param8, param10, param6, param2, 1, param16, param4, param15);
           if (param7 != -42) {
             var18 = (int[]) null;
-            wn.a((String[]) null, (byte[]) null, (int[]) null, (String[][]) null, (u[]) null, (r) null, (r) null, (byte) -38, (er[][]) null, (String[][]) null, (r) null, 49, (byte[]) null, (er[][]) null, 77, (int[]) null, true);
+            wn.a((String[]) null, (byte[]) null, (int[]) null, (String[][]) null, (u[]) null, (r) null, (r) null, (byte) -38, (Sprite[][]) null, (String[][]) null, (r) null, 49, (byte[]) null, (Sprite[][]) null, 77, (int[]) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -271,7 +271,7 @@ final class wn {
         }
     }
 
-    final static void a(int param0, cr param1, cr param2) {
+    final static void a(int param0, UiWidget param1, UiWidget param2) {
         try {
           if (param1.field_M == null) {
             param1.field_M = new IntrusiveDeque();
@@ -438,8 +438,8 @@ final class wn {
             uh.field_Wb.position = 0;
             if (param4 == null) {
               iq.field_x.position = 0;
-              iq.field_x.e(j.field_r.nextInt(), 0);
-              iq.field_x.e(j.field_r.nextInt(), 0);
+              iq.field_x.writeInt(j.field_r.nextInt(), 0);
+              iq.field_x.writeInt(j.field_r.nextInt(), 0);
               stackIn_16_0 = iq.field_x;
               stackIn_16_1 = 684868900;
               if (!param2.a(113)) {
@@ -456,27 +456,27 @@ final class wn {
                 stackIn_20_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
-              uh.field_Wb.f(16, -53);
+              uh.field_Wb.writeByte(16, -53);
               uh.field_Wb.position = uh.field_Wb.position + 1;
               var9 = uh.field_Wb.position;
               mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
-              uh.field_Wb.b((byte) -97, uh.field_Wb.position - var9);
+              uh.field_Wb.patchByteLength((byte) -97, uh.field_Wb.position - var9);
             } else {
               var9 = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
               iq.field_x.position = 0;
-              iq.field_x.e(j.field_r.nextInt(), 0);
-              iq.field_x.e(j.field_r.nextInt(), 0);
+              iq.field_x.writeInt(j.field_r.nextInt(), 0);
+              iq.field_x.writeInt(j.field_r.nextInt(), 0);
               iq.field_x.a(684868900, var14);
               iq.field_x.a(684868900, var8);
               var15 = (CharSequence) ((Object) param4);
               iq.field_x.a(684868900, rr.a(-99, var15));
-              iq.field_x.d(param1, -1783);
-              iq.field_x.f(param3, 80);
-              iq.field_x.f(var9, 100);
-              uh.field_Wb.f(18, -93);
+              iq.field_x.writeShort(param1, -1783);
+              iq.field_x.writeByte(param3, 80);
+              iq.field_x.writeByte(var9, 100);
+              uh.field_Wb.writeByte(18, -93);
               uh.field_Wb.position = uh.field_Wb.position + 2;
               var10 = uh.field_Wb.position;
               var11_ref_String = vq.a(ob.e((byte) 74), (byte) 114);
@@ -485,14 +485,14 @@ final class wn {
               }
               uh.field_Wb.a((byte) 0, var11_ref_String);
               mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
-              uh.field_Wb.a((byte) -120, -var10 + uh.field_Wb.position);
+              uh.field_Wb.patchShortLength((byte) -120, -var10 + uh.field_Wb.position);
             }
             lf.d(106, -1);
             rg.field_d = fi.field_b;
           }
           if (fi.field_b == rg.field_d &&
             c.a(1, (byte) -104)) {
-            var9Lifetime1 = id.field_f.h(-11);
+            var9Lifetime1 = id.field_f.readUnsignedByte(-11);
             id.field_f.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -521,7 +521,7 @@ final class wn {
           if (rg.field_d == RandomAccessCacheFile.field_f) {
             var9Lifetime2 = 2;
             if (c.a(var9Lifetime2, (byte) -104)) {
-              var10Lifetime1 = id.field_f.a((byte) -11);
+              var10Lifetime1 = id.field_f.readUnsignedShort((byte) -11);
               id.field_f.position = 0;
               if (c.a(var10Lifetime1, (byte) -104)) {
                 var11 = na.field_m.length;
@@ -538,9 +538,9 @@ final class wn {
           if (rg.field_d == ko.field_O &&
             dl.b((byte) -72)) {
             if (255 != lc.field_f) {
-              nk.field_Kb = id.field_f.f(128);
+              nk.field_Kb = id.field_f.readString(128);
             } else {
-              var9_ref_String = id.field_f.k(-116);
+              var9_ref_String = id.field_f.readNullableString(-116);
               if (var9_ref_String != null) {
                 be.a(var9_ref_String, -1, ob.e((byte) 106));
               }
@@ -620,7 +620,7 @@ final class wn {
     wn(cc param0) {
         try {
           this.field_f = param0;
-          this.field_h = new er(640, 480);
+          this.field_h = new Sprite(640, 480);
           this.field_k = param0.field_D;
           this.field_g = param0.field_t;
           this.field_c = param0.field_M;

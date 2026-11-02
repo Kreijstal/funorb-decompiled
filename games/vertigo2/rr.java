@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rr extends ji {
+final class rr extends TextureOperator {
     static String field_A;
     static boolean[] field_z;
     static boolean field_C;
@@ -145,7 +145,7 @@ final class rr extends ji {
         RuntimeException var4 = null;
         try {
           if (0 == param1) {
-            stackIn_5_1 = (param2.h(-11) == 1);
+            stackIn_5_1 = (param2.readUnsignedByte(-11) == 1);
             this.field_o = stackIn_5_1;
           }
           if (param0 != 110) {

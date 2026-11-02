@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends ji {
+final class w extends TextureOperator {
     static String field_E;
     static String field_B;
     static String field_y;
     static String field_A;
     static String field_D;
     static int field_z;
-    static cr[] field_C;
+    static UiWidget[] field_C;
 
     final static ge a(byte[] param0, boolean param1) {
         ge var2 = null;

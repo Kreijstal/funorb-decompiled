@@ -6,7 +6,7 @@ import java.util.*;
 final class k {
     private java.util.zip.Inflater field_a;
     static String field_d;
-    static er field_c;
+    static Sprite field_c;
     static String field_b;
 
     final static void a(boolean param0) {
@@ -20,17 +20,17 @@ final class k {
           gd.field_j = null;
           qn.field_q = param0;
           if (mk.field_J != null) {
-            mk.field_J.c(0);
+            mk.field_J.clear(0);
             mk.field_J = null;
           }
           GameShell.field_l = null;
           if (null != nr.field_p) {
-            nr.field_p.c(0);
+            nr.field_p.clear(0);
             nr.field_p = null;
           }
           lh.field_b = null;
           if (null != kq.field_Rb) {
-            kq.field_Rb.c(0);
+            kq.field_Rb.clear(0);
             kq.field_Rb = null;
           }
           ck.field_I = null;
@@ -39,7 +39,7 @@ final class k {
           }
           var3 = (bs) (GameShell.field_l.b(29));
           while (var3 != null) {
-            var3.a(-123);
+            var3.unlinkSecondary(-123);
             var3 = (bs) (GameShell.field_l.a((byte) -60));
           }
           GameShell.field_l = null;

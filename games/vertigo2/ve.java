@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static uj field_d;
+    static MenuSelectionCursor field_d;
     int field_e;
     int field_c;
     static int field_a;
-    static cr field_f;
+    static UiWidget field_f;
     static String field_b;
 
-    final static ji a(byte param0, PacketBuffer param1) {
+    final static TextureOperator a(byte param0, PacketBuffer param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ji var4 = null;
+        TextureOperator var4 = null;
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        ji stackIn_5_0 = null;
+        TextureOperator stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -26,13 +26,13 @@ final class ve {
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           var2_int = -50 % ((-39 - param0) / 41);
-          param1.h(-11);
-          var3 = param1.h(-11);
+          param1.readUnsignedByte(-11);
+          var3 = param1.readUnsignedByte(-11);
           var4 = qf.a(-39, var3);
-          var4.field_t = param1.h(-11);
-          var5 = param1.h(-11);
+          var4.field_t = param1.readUnsignedByte(-11);
+          var5 = param1.readUnsignedByte(-11);
           for (var6 = 0; var6 < var5; var6++) {
-            var7 = param1.h(-11);
+            var7 = param1.readUnsignedByte(-11);
             var4.a((byte) 110, var7, param1);
           }
           var4.a(-107);
@@ -154,7 +154,7 @@ final class ve {
     }
 
     static {
-        field_d = new uj(1);
+        field_d = new MenuSelectionCursor(1);
         field_a = 34;
         field_b = "Similar rating";
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rp implements ef {
-    private er[] field_h;
+    private Sprite[] field_h;
     private fc field_g;
     static ve field_f;
     static String field_b;
@@ -100,7 +100,7 @@ final class rp implements ef {
         return true;
     }
 
-    rp(boolean param0, er[] param1) {
+    rp(boolean param0, Sprite[] param1) {
         int[] var5 = null;
         ef var4 = null;
         try {

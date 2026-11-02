@@ -43,7 +43,7 @@ final class uo {
     final static void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        cr dupTemp$0 = null;
+        UiWidget dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -54,25 +54,25 @@ final class uo {
         boolean stackIn_3_3;
         boolean stackIn_4_4 = false;
         uh stackIn_11_0;
-        cr stackIn_11_1;
-        cr stackIn_11_2;
+        UiWidget stackIn_11_1;
+        UiWidget stackIn_11_2;
         long stackIn_11_3;
-        cr stackIn_12_1 = null;
-        cr stackIn_12_2 = null;
-        cr stackIn_12_4 = null;
+        UiWidget stackIn_12_1 = null;
+        UiWidget stackIn_12_2 = null;
+        UiWidget stackIn_12_4 = null;
         uh stackIn_28_0;
-        cr stackIn_28_1;
-        cr stackIn_28_2;
+        UiWidget stackIn_28_1;
+        UiWidget stackIn_28_2;
         long stackIn_28_3;
-        cr stackIn_29_1;
-        cr stackIn_29_2;
-        cr stackIn_29_4;
+        UiWidget stackIn_29_1;
+        UiWidget stackIn_29_2;
+        UiWidget stackIn_29_4;
         int stackIn_33_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_77_0 = 0;
-        er[] stackIn_79_0 = null;
+        Sprite[] stackIn_79_0 = null;
         int stackIn_80_1 = 0;
-        er[] stackIn_87_0 = null;
+        Sprite[] stackIn_87_0 = null;
         int stackIn_88_1 = 0;
         String stackIn_153_0 = null;
         String stackIn_162_0 = null;
@@ -86,19 +86,19 @@ final class uo {
         uh var12 = null;
         int var13 = 0;
         int var14 = 0;
-        cr var18 = null;
-        cr var19 = null;
-        cr var20 = null;
-        cr var21 = null;
-        cr var22 = null;
-        cr var23 = null;
-        cr var24 = null;
-        cr var25 = null;
-        cr var26 = null;
-        cr var27 = null;
-        cr var28 = null;
-        cr var29 = null;
-        cr var30 = null;
+        UiWidget var18 = null;
+        UiWidget var19 = null;
+        UiWidget var20 = null;
+        UiWidget var21 = null;
+        UiWidget var22 = null;
+        UiWidget var23 = null;
+        UiWidget var24 = null;
+        UiWidget var25 = null;
+        UiWidget var26 = null;
+        UiWidget var27 = null;
+        UiWidget var28 = null;
+        UiWidget var29 = null;
+        UiWidget var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -114,23 +114,23 @@ final class uo {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        er var42 = null;
-        cr var43 = null;
-        cr var44 = null;
-        cr var45 = null;
-        cr var46 = null;
-        cr var47 = null;
-        cr var48 = null;
-        cr var49 = null;
+        Sprite var42 = null;
+        UiWidget var43 = null;
+        UiWidget var44 = null;
+        UiWidget var45 = null;
+        UiWidget var46 = null;
+        UiWidget var47 = null;
+        UiWidget var48 = null;
+        UiWidget var49 = null;
         Object var50 = null;
-        er var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        er var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        er var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        er var53_ref = null;
-        er var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -163,18 +163,18 @@ final class uo {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param1 | param0;
-              var12.field_rc = new cr(0L, tm.field_b);
+              var12.field_rc = new UiWidget(0L, tm.field_b);
               var12.b(var12.field_rc, param6 + 120);
               var12.field_rc.field_O = 1;
-              var12.field_Vb = new cr(0L, IterableNodeHashTable.field_b);
+              var12.field_Vb = new UiWidget(0L, IterableNodeHashTable.field_b);
               var12.b(var12.field_Vb, 124);
-              var12.field_cc = new cr(0L, tm.field_b);
+              var12.field_cc = new UiWidget(0L, tm.field_b);
               var12.b(var12.field_cc, 124);
               var12.field_cc.field_R = 0;
-              var12.field_ac = new cr(0L, tm.field_b);
+              var12.field_ac = new UiWidget(0L, tm.field_b);
               var12.b(var12.field_ac, param6 + 124);
               var12.field_ac.field_R = 0;
-              var12.field_gc = new cr(0L, IterableNodeHashTable.field_b);
+              var12.field_gc = new UiWidget(0L, IterableNodeHashTable.field_b);
               var12.b(var12.field_gc, 122);
               var12.field_gc.field_O = 2;
               stackIn_11_0 = var12;
@@ -190,22 +190,22 @@ final class uo {
                 stackIn_12_2 = null;
                 stackIn_12_4 = IterableNodeHashTable.field_b;
               }
-              stackIn_11_0.field_pc = new cr(stackIn_11_3, stackIn_12_4);
+              stackIn_11_0.field_pc = new UiWidget(stackIn_11_3, stackIn_12_4);
               var12.b(var12.field_pc, 124);
-              var12.field_Zb = new cr[ol.field_A];
-              var12.field_jc = new cr(0L, (cr) null);
+              var12.field_Zb = new UiWidget[ol.field_A];
+              var12.field_jc = new UiWidget(0L, (UiWidget) null);
               if ((1 << t.field_b & var14) != 0) {
                 var12.field_pc.b(var12.field_jc, param6 + 124);
               }
-              var12.field_ec = new cr(0L, (cr) null);
+              var12.field_ec = new UiWidget(0L, (UiWidget) null);
               if ((var14 & 1 << jn.field_c) != 0) {
                 var12.field_pc.b(var12.field_ec, param6 + 118);
               }
-              var12.field_wc = new cr(0L, (cr) null);
+              var12.field_wc = new UiWidget(0L, (UiWidget) null);
               if (0 != (1 << pf.field_a & var14)) {
                 var12.field_pc.b(var12.field_wc, param6 ^ 126);
               }
-              var12.field_Kb = new cr(0L, (cr) null);
+              var12.field_Kb = new UiWidget(0L, (UiWidget) null);
               if (0 != (var14 & 1 << ao.field_K)) {
                 var12.field_pc.b(var12.field_Kb, 127);
               }
@@ -217,7 +217,7 @@ final class uo {
               var44.field_ab = 1;
               var45.field_ab = 1;
               for (var18_int = 0; ol.field_A > var18_int; var18_int++) {
-                var12.field_Zb[var18_int] = new cr(0L, (cr) null);
+                var12.field_Zb[var18_int] = new UiWidget(0L, (UiWidget) null);
                 if ((1 << qr.field_n + var18_int & var14) != 0) {
                   var12.field_pc.b(var12.field_Zb[var18_int], 121);
                 }
@@ -236,19 +236,19 @@ final class uo {
                 stackIn_29_2 = null;
                 stackIn_29_4 = IterableNodeHashTable.field_b;
               }
-              stackIn_28_0.field_Ob = new cr(stackIn_28_3, stackIn_29_4);
+              stackIn_28_0.field_Ob = new UiWidget(stackIn_28_3, stackIn_29_4);
               var12.b(var12.field_Ob, 126);
               var12.field_Ob.field_O = 2;
-              var12.field_Jb = new cr(0L, IterableNodeHashTable.field_b);
+              var12.field_Jb = new UiWidget(0L, IterableNodeHashTable.field_b);
               var12.b(var12.field_Jb, param6 + 127);
-              var12.field_Ib = new cr(0L, ja.field_e);
+              var12.field_Ib = new UiWidget(0L, ja.field_e);
               var12.b(var12.field_Ib, 121);
-              var12.field_bc = new cr(0L, ja.field_e);
+              var12.field_bc = new UiWidget(0L, ja.field_e);
               var12.b(var12.field_bc, 118);
-              var12.field_Rb = new cr(0L, ee.field_b);
+              var12.field_Rb = new UiWidget(0L, ee.field_b);
               var12.b(var12.field_Rb, param6 + 125);
               var12.i(-2147483648);
-              var12.field_nc = new cr(0L, sc.field_c);
+              var12.field_nc = new UiWidget(0L, sc.field_c);
               var12.b(var12.field_nc, param6 ^ 122);
               var13 = 1;
             }
@@ -509,7 +509,7 @@ final class uo {
               var12.field_kb = var31 - var12.field_db;
             }
             if (var13 != 0) {
-              uk.field_v.field_Nb.a((byte) 109, (cr) (var11), var12, 2);
+              uk.field_v.field_Nb.a((byte) 109, (UiWidget) (var11), var12, 2);
             }
             for (var34_intLifetime2 = 0; ol.field_A > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Zb[var34_intLifetime2].field_pb) {

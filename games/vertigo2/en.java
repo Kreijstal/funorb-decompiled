@@ -134,16 +134,16 @@ final class en {
             return stackIn_11_0;
           }
           var8.unlink(2);
-          var8.a(-124);
+          var8.unlinkSecondary(-124);
           vd.field_a = vd.field_a - 1;
           var6 = 97 % ((param1 + 39) / 55);
           var5 = uh.field_Wb;
           var5.j(param3, 120);
           var5.position = var5.position + 1;
           var7 = var5.position;
-          var5.f(3, 81);
+          var5.writeByte(3, 81);
           var5.a((byte) 0, param0);
-          var5.b((byte) -96, -var7 + var5.position);
+          var5.patchByteLength((byte) -96, -var7 + var5.position);
           stackIn_13_0 = null;
           return (String) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

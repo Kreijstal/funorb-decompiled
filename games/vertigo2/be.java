@@ -12,7 +12,7 @@ final class be extends IntrusiveNode {
     static String field_s;
     int[] field_o;
 
-    final static void a(int param0, er[] param1, int param2, int param3, int param4, int param5, int param6, int param7, er[] param8, int param9, er[] param10, int param11, cc param12, int param13, int param14) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite[] param8, int param9, Sprite[] param10, int param11, cc param12, int param13, int param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

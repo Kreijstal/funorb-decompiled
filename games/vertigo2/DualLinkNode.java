@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    DualLinkNode field_p;
+    DualLinkNode secondaryPrevious;
     long field_n;
-    DualLinkNode field_o;
+    DualLinkNode secondaryNext;
     static r field_s;
     static String field_r;
     static String field_q;
@@ -21,21 +21,21 @@ class DualLinkNode extends IntrusiveNode {
         return this.field_n;
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (param0 >= -96) {
           return;
         }
-        if (this.field_o == null) {
+        if (this.secondaryNext == null) {
           return;
         }
-        this.field_o.field_p = this.field_p;
-        this.field_p.field_o = this.field_o;
-        this.field_o = null;
-        this.field_p = null;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
     }
 
     final void a(int param0, long param1) {
-        if (null != this.field_o) {
+        if (null != this.secondaryNext) {
           throw new RuntimeException();
         }
         this.field_n = param1;
@@ -48,7 +48,7 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     final boolean e(int param0) {
-        if (null == this.field_o) {
+        if (null == this.secondaryNext) {
           return false;
         }
         if (param0 >= -12) {
@@ -94,8 +94,8 @@ class DualLinkNode extends IntrusiveNode {
           var14 = Vertigo2.field_L ? 1 : 0;
           try {
             var18 = new oc();
-            var18.field_n = param2.h(-11);
-            var18.field_p = param2.b(true);
+            var18.field_n = param2.readUnsignedByte(-11);
+            var18.field_p = param2.readInt(true);
             if (param1 >= -71) {
               return;
             }
@@ -107,25 +107,25 @@ class DualLinkNode extends IntrusiveNode {
             var18.field_u = new int[var18.field_n];
             for (var5 = 0; var5 < var18.field_n; var5++) {
               try {
-                var6_int = param2.h(-11);
+                var6_int = param2.readUnsignedByte(-11);
                 if (var6_int != 0 &&
                   1 != var6_int &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.f(128);
-                    var21 = param2.f(128);
-                    var9 = param2.h(-11);
+                    var20 = param2.readString(128);
+                    var21 = param2.readString(128);
+                    var9 = param2.readUnsignedByte(-11);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param2.f(128);
+                      var10[var11_int] = param2.readString(128);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (3 == var6_int) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param2.b(true);
+                        var13 = param2.readInt(true);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param2.a(0, var22[var12_int], var13, 105);
@@ -143,11 +143,11 @@ class DualLinkNode extends IntrusiveNode {
                     var18.field_q[var5] = var22;
                   }
                 } else {
-                  var15 = param2.f(128);
-                  var16 = param2.f(128);
+                  var15 = param2.readString(128);
+                  var16 = param2.readString(128);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param2.b(true);
+                    var9 = param2.readInt(true);
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_u[var5] = var9;
@@ -175,7 +175,7 @@ class DualLinkNode extends IntrusiveNode {
                 var18.field_y[var5] = -5;
               }
             }
-            mg.field_N.a(var18, false);
+            mg.field_N.addFirst(var18, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

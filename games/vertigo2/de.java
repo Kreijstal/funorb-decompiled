@@ -4,7 +4,7 @@
 abstract class de implements of {
     static String field_c;
     static String field_b;
-    static cr field_g;
+    static UiWidget field_g;
     static int field_f;
     static int[] field_d;
     private long field_e;
@@ -99,7 +99,7 @@ abstract class de implements of {
 
     final static void a(int param0, nf param1, int param2) {
         try {
-          ki.field_a.a(param1, false);
+          ki.field_a.addFirst(param1, false);
           jc.a(-14499, param2, param1);
           if (param0 < 3) {
             field_a = (String) null;

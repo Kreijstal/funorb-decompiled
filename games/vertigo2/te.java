@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends ji {
+final class te extends TextureOperator {
     static IntrusiveDeque field_z;
     private int field_A;
     static int[][] field_D;
@@ -43,7 +43,7 @@ final class te extends ji {
           }
           var4_int = param1;
           if (0 == var4_int) {
-            this.d(-17016, param2.m(0));
+            this.d(-17016, param2.readUnsignedMedium(0));
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "te.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

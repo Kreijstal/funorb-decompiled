@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sq {
-    static er[] field_a;
+    static Sprite[] field_a;
     static boolean field_c;
     static int field_e;
     static String field_d;

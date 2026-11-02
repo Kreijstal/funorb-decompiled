@@ -89,17 +89,17 @@ final class ep {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.h(-11);
+        var3 = param0.readUnsignedByte(-11);
         this.field_e[0] = var3 >> 4;
         this.field_e[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_a[0] = param0.a((byte) -11);
-          this.field_a[1] = param0.a((byte) -11);
-          var4 = param0.h(-11);
+          this.field_a[0] = param0.readUnsignedShort((byte) -11);
+          this.field_a[1] = param0.readUnsignedShort((byte) -11);
+          var4 = param0.readUnsignedByte(-11);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_e[var5]; var6++) {
-              this.field_c[var5][0][var6] = param0.a((byte) -11);
-              this.field_f[var5][0][var6] = param0.a((byte) -11);
+              this.field_c[var5][0][var6] = param0.readUnsignedShort((byte) -11);
+              this.field_f[var5][0][var6] = param0.readUnsignedShort((byte) -11);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -110,8 +110,8 @@ final class ep {
                 this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
                 this.field_f[var5Lifetime1][1][var7] = this.field_f[var5Lifetime1][0][var7];
               } else {
-                this.field_c[var5Lifetime1][1][var7] = param0.a((byte) -11);
-                this.field_f[var5Lifetime1][1][var7] = param0.a((byte) -11);
+                this.field_c[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -11);
+                this.field_f[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -11);
               }
               var7++;
             }

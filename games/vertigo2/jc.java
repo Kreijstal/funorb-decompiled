@@ -132,18 +132,18 @@ final class jc implements ur {
           var5.j(param1, param0 ^ -14553);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.f(1, 121);
-          var5.f(param2.field_p, param0 + 14428);
-          var5.f(param2.field_t, -100);
+          var5.writeByte(1, 121);
+          var5.writeByte(param2.field_p, param0 + 14428);
+          var5.writeByte(param2.field_t, -100);
           if (param0 != -14499) {
             field_b = (int[]) null;
           }
-          var5.e(param2.field_r, 0);
-          var5.e(param2.field_s, 0);
-          var5.e(param2.field_y, param0 + 14499);
-          var5.e(param2.field_n, 0);
+          var5.writeInt(param2.field_r, 0);
+          var5.writeInt(param2.field_s, 0);
+          var5.writeInt(param2.field_y, param0 + 14499);
+          var5.writeInt(param2.field_n, 0);
           var5.c(var4, 120);
-          var5.b((byte) 115, var5.position - var4);
+          var5.patchByteLength((byte) 115, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

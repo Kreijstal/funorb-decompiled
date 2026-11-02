@@ -112,7 +112,7 @@ final class on {
         if (param3 > 70) {
           var5.field_o = param0;
           var5.field_p = param4;
-          wg.field_i.a(var5, false);
+          wg.field_i.addFirst(var5, false);
           mm.a(param1, var5, (byte) 108);
           return var5;
         }

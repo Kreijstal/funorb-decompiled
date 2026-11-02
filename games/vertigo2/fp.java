@@ -23,7 +23,7 @@ final class fp extends sn {
     }
 
     final synchronized void a(sn param0) {
-        this.field_t.a(param0, (byte) 27);
+        this.field_t.addLast(param0, (byte) 27);
     }
 
     private final void a(IntrusiveNode param0, o param1) {

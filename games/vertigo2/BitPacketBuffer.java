@@ -65,11 +65,11 @@ final class BitPacketBuffer extends PacketBuffer {
         return 255 & this.payload[fieldTemp$0] - this.field_v.a((byte) 72);
     }
 
-    final static er[] a(String param0, r param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, r param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        er[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

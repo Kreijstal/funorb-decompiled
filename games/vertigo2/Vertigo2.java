@@ -10,7 +10,7 @@ public final class Vertigo2 extends GameShell {
     static String[] field_I;
     static String field_F;
     static fe field_C;
-    static cr field_M;
+    static UiWidget field_M;
     static String[] field_G;
     public static boolean field_L;
 
@@ -67,7 +67,7 @@ public final class Vertigo2 extends GameShell {
         int var9 = 0;
         int var10 = 0;
         String[] var11 = null;
-        tr var12 = null;
+        GameplayScreen var12 = null;
         int var13 = 0;
         int var14 = 0;
         ub var15 = null;
@@ -116,7 +116,7 @@ public final class Vertigo2 extends GameShell {
               rg.field_a = true;
             }
           } else {
-            if (!fb.i(11)) {
+            if (!SpriteState.i(11)) {
               t.a((byte) 44);
             } else {
               if (!kg.h(114)) {
@@ -173,7 +173,7 @@ public final class Vertigo2 extends GameShell {
           }
           if (!ag.b(49)) {
             while (true) {
-              var16_ref = (nf) (fg.field_eb.b((byte) -43));
+              var16_ref = (nf) (fg.field_eb.removeLast((byte) -43));
               if (var16_ref != null) {
                 de.a(4, var16_ref, 4);
                 continue;
@@ -181,7 +181,7 @@ public final class Vertigo2 extends GameShell {
               break;
             }
             while (true) {
-              var15 = (ub) (oh.field_D.b((byte) -43));
+              var15 = (ub) (oh.field_D.removeLast((byte) -43));
               if (var15 == null) {
                 break;
               }
@@ -249,7 +249,7 @@ public final class Vertigo2 extends GameShell {
                 SocketConnector.field_c = new short[50];
               }
               for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 50; var3Lifetime1Lifetime1++) {
-                SocketConnector.field_c[var3Lifetime1Lifetime1] = (short)id.field_f.a((byte) -11);
+                SocketConnector.field_c[var3Lifetime1Lifetime1] = (short)id.field_f.readUnsignedShort((byte) -11);
                 if (0 == SocketConnector.field_c[var3Lifetime1Lifetime1]) {
                   SocketConnector.field_c[var3Lifetime1Lifetime1] = (short)30000;
                 }
@@ -262,7 +262,7 @@ public final class Vertigo2 extends GameShell {
               am.field_n = 11;
               kj.field_C = false;
               rg.field_b = false;
-              ke.field_i = id.field_f.f(128);
+              ke.field_i = id.field_f.readString(128);
               continue;
             }
             if (lc.field_f == 14) {
@@ -298,12 +298,12 @@ public final class Vertigo2 extends GameShell {
               continue;
             }
             if (lc.field_f == 67) {
-              var3Lifetime1Lifetime2 = id.field_f.b(true);
+              var3Lifetime1Lifetime2 = id.field_f.readInt(true);
               var3Lifetime1Lifetime2 = var3Lifetime1Lifetime2 & ~ml.field_z;
               if (sp.field_V) {
                 for (var4Lifetime1 = 0; hi.field_i.length > var4Lifetime1; var4Lifetime1++) {
                   if ((1 << var4Lifetime1 & var3Lifetime1Lifetime2) != 0) {
-                    bg.field_b.a(new fa(var4Lifetime1), false);
+                    bg.field_b.addFirst(new fa(var4Lifetime1), false);
                   }
                 }
               }
@@ -342,20 +342,20 @@ public final class Vertigo2 extends GameShell {
               }
               if (var3_ref != null) {
                 if (lc.field_f == 70) {
-                  var4_ref_pp = new pp(((tr) (var3_ref)).field_D.field_z);
-                  var4_ref_pp.a((byte) -8, ((tr) (var3_ref)).field_B, id.field_f);
-                  ((tr) (var3_ref)).a(10, var4_ref_pp);
+                  var4_ref_pp = new pp(((GameplayScreen) (var3_ref)).field_D.field_z);
+                  var4_ref_pp.a((byte) -8, ((GameplayScreen) (var3_ref)).field_B, id.field_f);
+                  ((GameplayScreen) (var3_ref)).a(10, var4_ref_pp);
                   continue;
                 }
                 if (lc.field_f == 62) {
-                  var4Lifetime2 = id.field_f.g(88);
-                  var5 = id.field_f.h(-11);
-                  var6 = id.field_f.h(-11);
-                  ((tr) (var3_ref)).field_D.a((byte) 2, var4Lifetime2);
-                  ((tr) (var3_ref)).field_D.field_g = var6;
-                  ((tr) (var3_ref)).field_D.field_f = var5;
+                  var4Lifetime2 = id.field_f.readSignedByte(88);
+                  var5 = id.field_f.readUnsignedByte(-11);
+                  var6 = id.field_f.readUnsignedByte(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.a((byte) 2, var4Lifetime2);
+                  ((GameplayScreen) (var3_ref)).field_D.field_g = var6;
+                  ((GameplayScreen) (var3_ref)).field_D.field_f = var5;
                   var7 = var3_ref;
-                  if (2 != ((tr) (var7)).field_D.field_j) {
+                  if (2 != ((GameplayScreen) (var7)).field_D.field_j) {
                     gj.a((byte) -81, true, am.field_n, 15);
                     continue;
                   }
@@ -363,7 +363,7 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
                 if (lc.field_f == 63) {
-                  ((tr) (var3_ref)).field_D.field_d = id.field_f.h(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.field_d = id.field_f.readUnsignedByte(-11);
                   if (ln.field_d == null) {
                     continue;
                   }
@@ -371,11 +371,11 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
                 if (lc.field_f == 64) {
-                  ((tr) (var3_ref)).field_D.field_u = id.field_f.h(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.field_u = id.field_f.readUnsignedByte(-11);
                   continue;
                 }
                 if (lc.field_f == 65) {
-                  ((tr) (var3_ref)).field_D.field_t = id.field_f.h(-11);
+                  ((GameplayScreen) (var3_ref)).field_D.field_t = id.field_f.readUnsignedByte(-11);
                   if (ln.field_d == null) {
                     continue;
                   }
@@ -383,7 +383,7 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
                 if (lc.field_f == 66) {
-                  ((tr) (var3_ref)).field_h = id.field_f.h(-11);
+                  ((GameplayScreen) (var3_ref)).field_h = id.field_f.readUnsignedByte(-11);
                   if (null == ln.field_d) {
                     continue;
                   }
@@ -395,28 +395,28 @@ public final class Vertigo2 extends GameShell {
               continue;
             }
             g.b(7);
-            var3Lifetime1Lifetime3 = id.field_f.h(-11);
-            var4Lifetime3 = id.field_f.h(-11);
-            var5Lifetime1 = id.field_f.h(-11);
-            var6Lifetime1 = id.field_f.h(-11);
-            var7_int = id.field_f.a((byte) -11);
-            var8 = id.field_f.a((byte) -11);
-            stackIn_125_0 = (id.field_f.h(-11) == 0) ? 0 : 1;
+            var3Lifetime1Lifetime3 = id.field_f.readUnsignedByte(-11);
+            var4Lifetime3 = id.field_f.readUnsignedByte(-11);
+            var5Lifetime1 = id.field_f.readUnsignedByte(-11);
+            var6Lifetime1 = id.field_f.readUnsignedByte(-11);
+            var7_int = id.field_f.readUnsignedShort((byte) -11);
+            var8 = id.field_f.readUnsignedShort((byte) -11);
+            stackIn_125_0 = (id.field_f.readUnsignedByte(-11) == 0) ? 0 : 1;
             var9 = stackIn_125_0;
-            var10 = -2 + id.field_f.h(-11);
-            var11 = new String[id.field_f.h(-11)];
+            var10 = -2 + id.field_f.readUnsignedByte(-11);
+            var11 = new String[id.field_f.readUnsignedByte(-11)];
             for (var12_int = 0; var12_int < var11.length; var12_int++) {
-              var11[var12_int] = id.field_f.f(128);
+              var11[var12_int] = id.field_f.readString(128);
             }
             uh.field_Xb = null;
             j.field_n = null;
-            var12 = new tr(true, var11, var10, var9 != 0, var3Lifetime1Lifetime3, var4Lifetime3, var5Lifetime1, var6Lifetime1);
+            var12 = new GameplayScreen(true, var11, var10, var9 != 0, var3Lifetime1Lifetime3, var4Lifetime3, var5Lifetime1, var6Lifetime1);
             var12.field_D.field_f = var7_int;
             var12.field_D.field_g = var8;
-            var13 = id.field_f.h(-11);
+            var13 = id.field_f.readUnsignedByte(-11);
             if (var13 == 1) {
-              var12.a(16, id.field_f.h(-11));
-              var12.field_D.field_q = id.field_f.b(true);
+              var12.a(16, id.field_f.readUnsignedByte(-11));
+              var12.field_D.field_q = id.field_f.readInt(true);
               var12.a(id.field_f, 101);
             }
             if (an.field_c) {
@@ -447,14 +447,14 @@ public final class Vertigo2 extends GameShell {
 
     private final void n(byte param0) {
         ee.a(11579, nn.field_y);
-        er var7 = new er(nn.field_y.a("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        er var8 = var7;
-        er var3 = new er(nn.field_y.a("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        er var4 = new er(nn.field_y.a("", "planet_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        er var5 = new er(nn.field_y.a("", "stars.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        er var6 = new er(nn.field_y.a("", "asteroids.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        qr.field_l = new rp(true, new er[]{var7, var3, var4, var5, var7.c(), var6});
-        ue.field_N = new er(640, 480);
+        Sprite var7 = new Sprite(nn.field_y.a("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var8 = var7;
+        Sprite var3 = new Sprite(nn.field_y.a("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var4 = new Sprite(nn.field_y.a("", "planet_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var5 = new Sprite(nn.field_y.a("", "stars.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var6 = new Sprite(nn.field_y.a("", "asteroids.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        qr.field_l = new rp(true, new Sprite[]{var7, var3, var4, var5, var7.c(), var6});
+        ue.field_N = new Sprite(640, 480);
         ue.field_N.d();
         var8.c(0, 0);
         if (param0 > -89) {
@@ -643,12 +643,12 @@ public final class Vertigo2 extends GameShell {
         u[] var11 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        er[][] var4 = null;
+        Sprite[][] var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        er[] var10 = null;
+        Sprite[] var10 = null;
         int var4_intLifetime1;
         int var4_intLifetime2;
         int var4_intLifetime3;
@@ -682,18 +682,18 @@ public final class Vertigo2 extends GameShell {
           tk.field_c.a(var2, (int[]) null);
           fa.field_s = lm.a("", param0 + 23078, "button_purple_frame", rn.field_u);
           uk.field_r = lm.a("", 23109, "button_blue_frame", rn.field_u);
-          mn.field_o = new er[3];
+          mn.field_o = new Sprite[3];
           mn.field_o[0] = tn.a("button_start_blue", rn.field_u, -117, "");
           mn.field_o[1] = tn.a("button_middle_blue", rn.field_u, -108, "");
           mn.field_o[2] = tn.a("button_end_blue", rn.field_u, tk.a((int) param0, -102), "");
           if (param0 != 31) {
             field_I = (String[]) null;
           }
-          sq.field_a = new er[3];
+          sq.field_a = new Sprite[3];
           sq.field_a[0] = tn.a("button_start_grey", rn.field_u, -111, "");
           sq.field_a[1] = tn.a("button_middle_grey", rn.field_u, -114, "");
           sq.field_a[2] = tn.a("button_end_grey", rn.field_u, -128, "");
-          ln.field_b = new er[3];
+          ln.field_b = new Sprite[3];
           ln.field_b[0] = tn.a("button_start_purple", rn.field_u, -126, "");
           ln.field_b[1] = tn.a("button_middle_purple", rn.field_u, tk.a((int) param0, -83), "");
           ln.field_b[2] = tn.a("button_end_purple", rn.field_u, tk.a((int) param0, -84), "");
@@ -715,7 +715,7 @@ public final class Vertigo2 extends GameShell {
           qe.field_W = (fe) (rq.a(rn.field_u, "interface_box_end", "", (byte) 98));
           ln.field_f = (fe) (rq.a(rn.field_u, "interface_box_rend", "", (byte) 98));
           var3 = tk.field_c.field_z + tk.field_c.field_M;
-          k.field_c = new er(var3, var3);
+          k.field_c = new Sprite(var3, var3);
           k.field_c.d();
           IsaacCipher.field_f.b(0, 0, var3, var3);
           IsaacCipher.field_f = null;
@@ -744,7 +744,7 @@ public final class Vertigo2 extends GameShell {
           sf.field_b = (fe) (rq.a(rn.field_u, "star", "", (byte) 98));
           am.field_o = (fe) (rq.a(rn.field_u, "cloud", "", (byte) 98));
           field_C = (fe) (rq.a(rn.field_u, "planet1", "", (byte) 98));
-          ji.field_p = (fe) (rq.a(rn.field_u, "planet2", "", (byte) 98));
+          TextureOperator.field_p = (fe) (rq.a(rn.field_u, "planet2", "", (byte) 98));
           jf.field_M = (fe) (rq.a(rn.field_u, "nebula", "", (byte) 98));
           mp.field_a = (fe) (rq.a(rn.field_u, "instructions_how_to_play", "", (byte) 98));
           IntrusiveNode.field_i = new fe[aa.field_Sb.length];
@@ -760,20 +760,20 @@ public final class Vertigo2 extends GameShell {
           hh.field_a = (fe) (rq.a(rn.field_u, "timeattack_bronze", "", (byte) 98));
           kq.field_Kb = (fe) (rq.a(rn.field_u, "timeattack_silver", "", (byte) 98));
           MouseWheelInput.field_c = (fe) (rq.a(rn.field_u, "timeattack_gold", "", (byte) 98));
-          var4 = new er[][]{new er[]{tn.a("coop_icon", rn.field_u, -79, ""), tn.a("versus_icon", rn.field_u, -108, "")}, gk.a(rn.field_u, "", "start_icon", true), gk.a(rn.field_u, "", "end_icon", true)};
+          var4 = new Sprite[][]{new Sprite[]{tn.a("coop_icon", rn.field_u, -79, ""), tn.a("versus_icon", rn.field_u, -108, "")}, gk.a(rn.field_u, "", "start_icon", true), gk.a(rn.field_u, "", "end_icon", true)};
           mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, ho.field_e, wo.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
-          jl.field_g = (er) ((Object) oj.field_L);
+          jl.field_g = (Sprite) ((Object) oj.field_L);
           ll.a((byte) -111, 200);
           vb.field_g = true;
           gr.field_W = eg.field_s;
           dl.field_b = vg.field_c;
-          be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (er[]) null, 8, fa.field_s, 8, va.field_s.field_f, 280, 16777215);
+          be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (Sprite[]) null, 8, fa.field_s, 8, va.field_s.field_f, 280, 16777215);
           var5 = tk.field_c.field_t + tk.field_c.field_M;
           var6 = tk.field_c.field_t;
           var7 = va.field_s.field_f.field_t + va.field_s.field_f.field_M;
           var8 = va.field_s.field_f.field_t;
-          var10 = (er[]) null;
-          ua.a(12, uk.field_r, 320, var7, 480, 240, 10, fa.field_s, 12, va.field_s.field_f, 0, var5, 16777215, 16777215, 16777215, var6, (er[]) null, 0, var8, (byte) 92, tk.field_c);
+          var10 = (Sprite[]) null;
+          ua.a(12, uk.field_r, 320, var7, 480, 240, 10, fa.field_s, 12, va.field_s.field_f, 0, var5, 16777215, 16777215, 16777215, var6, (Sprite[]) null, 0, var8, (byte) 92, tk.field_c);
           di.b((byte) -90);
           rn.field_u = null;
           this.d(param0 - 48);
@@ -858,7 +858,7 @@ public final class Vertigo2 extends GameShell {
           wn.a(23744);
           bl.a((byte) -50);
           fo.f((byte) 123);
-          tr.a(false);
+          GameplayScreen.a(false);
           rp.a(-78);
           an.a(true);
           IntrusiveNode.d(55);
@@ -868,11 +868,11 @@ public final class Vertigo2 extends GameShell {
           rq.e(0);
           dd.a();
           fk.e(-257);
-          uj.a(true);
+          MenuSelectionCursor.a(true);
           fh.h(-90);
           mp.a(-127);
           ca.a((byte) -90);
-          cr.a(false);
+          UiWidget.a(false);
           uh.b((byte) -69);
           fi.c(0);
           bs.b((byte) 100);
@@ -915,7 +915,7 @@ public final class Vertigo2 extends GameShell {
           rd.b();
           DualLinkNode.g(52);
           fq.a(-126);
-          fb.a((byte) 115);
+          SpriteState.a((byte) 115);
           ua.a((byte) 114);
           vd.a(-115);
           sm.a((byte) 76);
@@ -966,7 +966,7 @@ public final class Vertigo2 extends GameShell {
           rk.a(false);
           DelegatingCanvas.b(4);
           ce.a(true);
-          ji.a(true);
+          TextureOperator.a(true);
           pq.a(-1);
           dh.a(-1);
           rj.a();
@@ -1204,7 +1204,7 @@ public final class Vertigo2 extends GameShell {
             an.a(-1243, var8);
             return;
           }
-          if (!fb.i(param0 + 28)) {
+          if (!SpriteState.i(param0 + 28)) {
             ProxySocketConnector.a(false, 100.0f, dk.field_n);
             an.a(-1243, var8);
             return;
@@ -1297,7 +1297,7 @@ public final class Vertigo2 extends GameShell {
           } else {
             if (pq.b(0)) {
               if (null == dc.field_L) {
-                stackIn_82_0 = uj.field_g;
+                stackIn_82_0 = MenuSelectionCursor.field_g;
               } else {
                 stackIn_82_0 = true;
               }
@@ -1372,8 +1372,8 @@ public final class Vertigo2 extends GameShell {
           }
           var2 = 0;
           if (var1_int != 0 &&
-            kg.field_G.field_c >= 0) {
-            var2 = rc.field_c[kg.field_G.field_c];
+            kg.field_G.selectedIndex >= 0) {
+            var2 = rc.field_c[kg.field_G.selectedIndex];
             if (var2 == 2) {
               lb.a(11141);
             }
@@ -1819,7 +1819,7 @@ public final class Vertigo2 extends GameShell {
               oa.field_l = oa.field_l + 1;
               if (335 == fieldTemp$0) {
                 oa.field_l = 0;
-                bg.field_b.b((byte) -43);
+                bg.field_b.removeLast((byte) -43);
               }
             }
           }
@@ -1836,7 +1836,7 @@ public final class Vertigo2 extends GameShell {
             } else {
               var6 = qe.field_V;
             }
-            ln.field_d = new tr(false, new String[]{var6}, 0, false, var5Lifetime1, var4Lifetime1, var4Lifetime1, -1);
+            ln.field_d = new GameplayScreen(false, new String[]{var6}, 0, false, var5Lifetime1, var4Lifetime1, var4Lifetime1, -1);
             stackIn_105_0 = (!pm.field_d) ? 0 : 1;
             var7Lifetime1 = stackIn_105_0;
             gj.a((byte) 54, var7Lifetime1 != 0, am.field_n, -1);
@@ -1900,7 +1900,7 @@ public final class Vertigo2 extends GameShell {
             } else {
               var6 = qe.field_V;
             }
-            ln.field_d = new tr(false, new String[]{var6}, 0, false, var5Lifetime3, var4Lifetime3, var4Lifetime3, 1);
+            ln.field_d = new GameplayScreen(false, new String[]{var6}, 0, false, var5Lifetime3, var4Lifetime3, var4Lifetime3, 1);
             stackIn_145_0 = (!pm.field_d) ? 0 : 1;
             var7Lifetime3 = stackIn_145_0;
             gj.a((byte) 91, var7Lifetime3 != 0, am.field_n, -1);

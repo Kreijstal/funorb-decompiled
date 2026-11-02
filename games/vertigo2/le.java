@@ -55,8 +55,8 @@ final class le {
             return;
           }
           var9 = id.field_f;
-          var2 = var9.h(-11);
-          var3 = var9.h(-11);
+          var2 = var9.readUnsignedByte(-11);
+          var3 = var9.readUnsignedByte(-11);
           if (var2 == 0) {
             var4 = (be) (mb.field_v.a((byte) 100));
             if (var4 == null) {
@@ -71,7 +71,7 @@ final class le {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.h(-11) << b.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-11) << b.a(768, var7 << 8));
             }
             var4.field_p = true;
             var4.unlink(2);
@@ -82,7 +82,7 @@ final class le {
             rm.b((byte) -30);
             return;
           }
-          var4_int = var9.j(-3084);
+          var4_int = var9.readSignedSmart(-3084);
           var5_ref_ub = (ub) (ob.field_Q.a((byte) 100));
           while (var5_ref_ub != null) {
             if (var5_ref_ub.field_u != var3 ||

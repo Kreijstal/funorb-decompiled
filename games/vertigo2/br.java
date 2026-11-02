@@ -138,9 +138,9 @@ final class br extends kp implements ik {
           var5.j(param1, 127);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.f(2, -92);
+          var5.writeByte(2, -92);
           var5.a((byte) 0, param0);
-          var5.b((byte) -98, var5.position - var4);
+          var5.patchByteLength((byte) -98, var5.position - var4);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

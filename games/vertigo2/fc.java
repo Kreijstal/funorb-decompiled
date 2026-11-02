@@ -1335,7 +1335,7 @@ final class fc extends bn {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(RandomAccessCacheFile.field_h + oo.field_l, fb.field_E + oo.field_e, field_cb[var9], field_cb[var10], field_cb[var11], var12, var13, var14_int)) {
+                this.a(RandomAccessCacheFile.field_h + oo.field_l, SpriteState.field_E + oo.field_e, field_cb[var9], field_cb[var10], field_cb[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = ec.field_C;
                 ec.field_C = ec.field_C + 1;
                 un.field_Mb[fieldTemp$13] = param2;

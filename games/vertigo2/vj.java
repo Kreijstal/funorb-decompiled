@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj {
-    static er[] field_b;
+    static Sprite[] field_b;
     static IntrusiveDeque field_d;
     static int field_c;
     static int[] field_f;

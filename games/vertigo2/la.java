@@ -5,7 +5,7 @@ final class la {
     private DualLinkNode field_b;
     static int[] field_d;
     static ej field_i;
-    static cr field_f;
+    static UiWidget field_f;
     static cc field_a;
     static r field_e;
     static String field_c;
@@ -78,11 +78,11 @@ final class la {
           } else {
             var5 = this.field_h.a(-124);
             var5.unlink(param0 ^ -3);
-            var5.a(-99);
+            var5.unlinkSecondary(-99);
             if (var5 == this.field_b) {
               var5 = this.field_h.a(-98);
               var5.unlink(param0 + 3);
-              var5.a(-109);
+              var5.unlinkSecondary(-109);
             }
           }
           this.field_g.a(param1, param2, false);

@@ -16,7 +16,7 @@ final class lo {
 
     final Object b(long param0, byte param1) {
         oq var6 = null;
-        qc var7 = (qc) (this.field_f.a(param0, (byte) 27));
+        qc var7 = (qc) (this.field_f.get(param0, (byte) 27));
         if (var7 == null) {
           return null;
         }
@@ -26,20 +26,20 @@ final class lo {
         Object var5 = var7.a((byte) 121);
         if (var5 == null) {
           var7.unlink(2);
-          var7.a(-121);
+          var7.unlinkSecondary(-121);
           this.field_c = this.field_c + var7.field_C;
           return null;
         }
         if (!var7.i(0)) {
-          this.field_e.a((byte) 118, var7);
+          this.field_e.addFirst((byte) 118, var7);
           var7.field_n = 0L;
         } else {
           var6 = new oq(var5, var7.field_C);
-          this.field_f.a(var7.key, var6, 120);
-          this.field_e.a((byte) 102, var6);
+          this.field_f.put(var7.key, var6, 120);
+          this.field_e.addFirst((byte) 102, var6);
           ((qc) ((Object) var6)).field_n = 0L;
           var7.unlink(2);
-          var7.a(-122);
+          var7.unlinkSecondary(-122);
         }
         return var5;
     }
@@ -48,7 +48,7 @@ final class lo {
         try {
           if (param0 != null) {
             param0.unlink(2);
-            param0.a(-115);
+            param0.unlinkSecondary(-115);
             this.field_c = this.field_c + param0.field_C;
           }
           int var3_int = 4 % ((param1 + 12) / 48);
@@ -58,7 +58,7 @@ final class lo {
     }
 
     private final void a(long param0, byte param1) {
-        qc var4 = (qc) (this.field_f.a(param0, (byte) 32));
+        qc var4 = (qc) (this.field_f.get(param0, (byte) 32));
         int var5 = 56 % ((2 - param1) / 33);
         this.a(var4, 118);
     }
@@ -83,7 +83,7 @@ final class lo {
           this.a(param3, (byte) 126);
           this.field_c = this.field_c - param1;
           while (this.field_c < 0) {
-            var9 = (qc) (this.field_e.a(param0 ^ -66));
+            var9 = (qc) (this.field_e.removeLast(param0 ^ -66));
             this.a(var9, 56);
           }
           if (param0 != 89) {
@@ -91,8 +91,8 @@ final class lo {
             this.a(101L, (Object) null, (byte) -113);
           }
           var6 = new oq(param2, param1);
-          this.field_f.a(param3, var6, param0 ^ 32);
-          this.field_e.a((byte) 35, var6);
+          this.field_f.put(param3, var6, param0 ^ 32);
+          this.field_e.addFirst((byte) 35, var6);
           ((qc) ((Object) var6)).field_n = 0L;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "lo.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

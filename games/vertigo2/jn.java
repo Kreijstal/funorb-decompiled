@@ -8,7 +8,7 @@ final class jn {
     private r field_f;
     private r field_a;
     static int field_c;
-    static er[] field_b;
+    static Sprite[] field_b;
 
     final q a(int param0, int param1) {
         q var3;
@@ -148,7 +148,7 @@ final class jn {
         ek.field_E = param2;
     }
 
-    final static void a(int[] param0, int param1, fb param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int[] param0, int param1, SpriteState param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;

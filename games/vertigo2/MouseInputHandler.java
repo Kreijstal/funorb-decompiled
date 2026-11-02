@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static cr field_b;
-    static cr field_a;
+    static UiWidget field_b;
+    static UiWidget field_a;
     static int[] field_d;
     static int[] field_c;
 

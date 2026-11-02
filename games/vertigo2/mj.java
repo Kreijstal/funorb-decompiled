@@ -6,9 +6,9 @@ import java.util.*;
 final class mj {
     static r field_b;
     static String field_a;
-    static er[] field_c;
+    static Sprite[] field_c;
 
-    final static void a(int param0, u[] param1, r param2, String[][] param3, byte[] param4, int param5, er[][] param6, String[] param7, er[][] param8, r param9, int[] param10, byte[] param11, String[][] param12, String[] param13, boolean param14, String[] param15, int[] param16, int param17, int param18, r param19) {
+    final static void a(int param0, u[] param1, r param2, String[][] param3, byte[] param4, int param5, Sprite[][] param6, String[] param7, Sprite[][] param8, r param9, int[] param10, byte[] param11, String[][] param12, String[] param13, boolean param14, String[] param15, int[] param16, int param17, int param18, r param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -293,7 +293,7 @@ final class mj {
 
     public static void a(int param0) {
         if (param0 != 18641) {
-          field_c = (er[]) null;
+          field_c = (Sprite[]) null;
         }
         field_a = null;
         field_b = null;

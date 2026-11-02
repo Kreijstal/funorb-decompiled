@@ -3,7 +3,7 @@
  */
 final class rh extends cj implements ij {
     static int[] field_O;
-    static cr field_I;
+    static UiWidget field_I;
     private int field_N;
     private d[] field_P;
     private cc field_M;
@@ -49,7 +49,7 @@ final class rh extends cj implements ij {
           this.field_P[var4_int] = this.a(param0, (uf) (this), -121);
           this.field_J[var4_int] = param1;
           if (param2 >= -24) {
-            field_I = (cr) null;
+            field_I = (UiWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,7 +188,7 @@ final class rh extends cj implements ij {
 
     final static boolean e(byte param0) {
         if (param0 != 99) {
-          field_I = (cr) null;
+          field_I = (UiWidget) null;
         }
         return ii.field_z;
     }
@@ -243,21 +243,21 @@ final class rh extends cj implements ij {
         nm.field_F = param1;
     }
 
-    final static er[] a(er param0, int param1) {
-        er[] var2 = null;
+    final static Sprite[] a(Sprite param0, int param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        er[] var3 = null;
-        er[] stackIn_2_0 = null;
-        er[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new er[9];
+          var3 = new Sprite[9];
           var2 = var3;
           if (param1 != -27140) {
-            stackIn_2_0 = (er[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var3[4] = param0;

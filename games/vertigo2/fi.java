@@ -27,16 +27,16 @@ final class fi {
     final void a(DualLinkNode param0, long param1, int param2) {
         DualLinkNode var5 = null;
         try {
-          if (null != param0.field_o) {
-            param0.a(-107);
+          if (null != param0.secondaryNext) {
+            param0.unlinkSecondary(-107);
           }
           int var6 = 118 / ((param2 + 20) / 35);
           var5 = this.field_f[(int)(param1 & (long)(-1 + this.field_g))];
-          param0.field_p = var5;
-          param0.field_o = var5.field_o;
-          param0.field_o.field_p = param0;
+          param0.secondaryPrevious = var5;
+          param0.secondaryNext = var5.secondaryNext;
+          param0.secondaryNext.secondaryPrevious = param0;
           param0.field_n = param1;
-          param0.field_p.field_o = param0;
+          param0.secondaryPrevious.secondaryNext = param0;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -73,10 +73,10 @@ final class fi {
               }
               fieldTemp$1 = this.field_h;
               this.field_h = this.field_h + 1;
-              var4 = this.field_f[fieldTemp$1].field_p;
+              var4 = this.field_f[fieldTemp$1].secondaryPrevious;
               var58 = var4;
             } while (var4 == this.field_f[-1 + this.field_h]);
-            this.field_a = var58.field_p;
+            this.field_a = var58.secondaryPrevious;
             return var58;
           }
           this.a(-90);
@@ -86,15 +86,15 @@ final class fi {
             }
             fieldTemp$0 = this.field_h;
             this.field_h = this.field_h + 1;
-            var4 = this.field_f[fieldTemp$0].field_p;
+            var4 = this.field_f[fieldTemp$0].secondaryPrevious;
             var59 = var4;
           } while (var4 == this.field_f[-1 + this.field_h]);
-          this.field_a = var59.field_p;
+          this.field_a = var59.secondaryPrevious;
           return var59;
         }
         if (this.field_a != this.field_f[this.field_h - 1]) {
           var57 = this.field_a;
-          this.field_a = var57.field_p;
+          this.field_a = var57.secondaryPrevious;
           return var57;
         }
         if (param0 == -60) {
@@ -104,10 +104,10 @@ final class fi {
             }
             fieldTemp$3 = this.field_h;
             this.field_h = this.field_h + 1;
-            var4 = this.field_f[fieldTemp$3].field_p;
+            var4 = this.field_f[fieldTemp$3].secondaryPrevious;
             var5 = var4;
           } while (var4 == this.field_f[-1 + this.field_h]);
-          this.field_a = var5.field_p;
+          this.field_a = var5.secondaryPrevious;
           return var5;
         }
         this.a(-90);
@@ -117,10 +117,10 @@ final class fi {
           }
           fieldTemp$2 = this.field_h;
           this.field_h = this.field_h + 1;
-          var4 = this.field_f[fieldTemp$2].field_p;
+          var4 = this.field_f[fieldTemp$2].secondaryPrevious;
           var29 = var4;
         } while (var4 == this.field_f[-1 + this.field_h]);
-        this.field_a = var29.field_p;
+        this.field_a = var29.secondaryPrevious;
         return var29;
     }
 
@@ -179,20 +179,20 @@ final class fi {
           return (DualLinkNode) null;
         }
         var4 = this.field_f[(int)((long)(this.field_g - 1) & param1)];
-        this.field_i = var4.field_p;
+        this.field_i = var4.secondaryPrevious;
         while (true) {
           if (var4 == this.field_i) {
             this.field_i = null;
             return null;
           }
           if (~param1 != ~this.field_i.field_n) {
-            this.field_i = this.field_i.field_p;
+            this.field_i = this.field_i.secondaryPrevious;
             continue;
           }
           break;
         }
         var5 = this.field_i;
-        this.field_i = this.field_i.field_p;
+        this.field_i = this.field_i.secondaryPrevious;
         return var5;
     }
 
@@ -214,13 +214,13 @@ final class fi {
             return null;
           }
           if (~this.field_i.field_n != ~this.field_d) {
-            this.field_i = this.field_i.field_p;
+            this.field_i = this.field_i.secondaryPrevious;
             continue;
           }
           break;
         }
         var3 = this.field_i;
-        this.field_i = this.field_i.field_p;
+        this.field_i = this.field_i.secondaryPrevious;
         return var3;
     }
 
@@ -235,8 +235,8 @@ final class fi {
           dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
-          var3.field_p = var3;
-          var3.field_o = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

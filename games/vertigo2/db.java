@@ -16,7 +16,7 @@ final class db extends sn {
     private int[] field_F;
     private int[] field_y;
     private int[] field_Q;
-    static cr field_t;
+    static UiWidget field_t;
     private int[] field_R;
     private int[] field_T;
     private qd field_I;
@@ -211,7 +211,7 @@ final class db extends sn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        er var5 = new er(param2, param1);
+        Sprite var5 = new Sprite(param2, param1);
         int[] var6 = bi.field_l;
         int var7 = bi.field_e;
         int var8 = bi.field_j;
@@ -844,7 +844,7 @@ final class db extends sn {
           }
           this.field_L[param0][var7.field_I] = var7;
         }
-        this.field_P.field_w.a(var7, false);
+        this.field_P.field_w.addFirst(var7, false);
         this.field_u[param0][param3] = var7;
         return;
     }
@@ -899,7 +899,7 @@ final class db extends sn {
           var3_int = var3_int + ((this.field_W[param1.field_q] - 8192) * this.field_w[param1.field_q] >> 12);
           var4 = param1.field_p;
           if (param0 > -44) {
-            field_t = (cr) null;
+            field_t = (UiWidget) null;
           }
           if (var4.field_b > 0 && (!(var4.field_c <= 0) ||
             this.field_X[param1.field_q] > 0)) {

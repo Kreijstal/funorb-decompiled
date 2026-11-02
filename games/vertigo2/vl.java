@@ -423,38 +423,38 @@ final class vl {
         ti.c(-95);
     }
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        er var16 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var16 = null;
         int[] var18 = bi.field_l;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
         int var7 = bi.field_e;
         int var8 = bi.field_j;
-        er var9 = new er(param1, param0 - param1 * 2);
+        Sprite var9 = new Sprite(param1, param0 - param1 * 2);
         var9.d();
         bi.e(0, param2, param1, -(param1 * 2) + param0, param4, param5);
-        er var10 = new er(param1, param1);
+        Sprite var10 = new Sprite(param1, param1);
         var10.d();
         bi.b(0, 0, param1, param1, param4);
-        er var11 = new er(16, param1);
+        Sprite var11 = new Sprite(16, param1);
         var11.d();
         bi.b(0, 0, 16, param1, param4);
-        er var12 = new er(param1, param1);
+        Sprite var12 = new Sprite(param1, param1);
         var12.d();
         bi.b(0, 0, param1, param1, param5);
-        er var13 = new er(16, param1);
+        Sprite var13 = new Sprite(16, param1);
         var13.d();
         bi.b(0, 0, 16, param1, param5);
         Object var14 = null;
         if (param3 > 0) {
-          var16 = new er(16, 16);
+          var16 = new Sprite(16, 16);
           var14 = var16;
           var16.d();
           bi.b(0, 0, 16, 16, param3);
         }
         bi.a(var18, var7, var8);
-        return new er[]{var10, var11, var10, var9, (er) (var14), var9, var12, var13, var12};
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
     static {

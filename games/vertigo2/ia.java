@@ -90,9 +90,9 @@ final class ia extends rk {
           }
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.f(0, 127);
+          var5.writeByte(0, 127);
           var5.a((byte) 0, param2);
-          var5.b((byte) 66, -var4 + var5.position);
+          var5.patchByteLength((byte) 66, -var4 + var5.position);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ final class ia extends rk {
             break;
           }
           if (var2 == null) {
-            mk.field_J.a(param1, false);
+            mk.field_J.addFirst(param1, false);
           } else {
             jn.a(param1, var2, 18724);
           }

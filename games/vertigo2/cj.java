@@ -40,7 +40,7 @@ class cj extends iq implements dq {
           if (var6 != 80) {
             return false;
           }
-          if (!cr.field_eb[81]) {
+          if (!UiWidget.field_eb[81]) {
             stackIn_17_0 = this.b((byte) -89, param3);
           } else {
             stackIn_17_0 = this.a(32345, param3);
@@ -107,7 +107,7 @@ class cj extends iq implements dq {
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (this.field_C.a(false)) {
+          if (this.field_C.isEmpty(false)) {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_C);
@@ -382,7 +382,7 @@ class cj extends iq implements dq {
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (this.field_C.a(false)) {
+          if (this.field_C.isEmpty(false)) {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_C);
@@ -423,7 +423,7 @@ class cj extends iq implements dq {
     final void c(byte param0, iq param1) {
         try {
           int var3_int = 36 / ((param0 - 35) / 38);
-          this.field_C.a(param1, false);
+          this.field_C.addFirst(param1, false);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "cj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -555,19 +555,19 @@ class cj extends iq implements dq {
           return;
         }
         ql.field_L.a(0, param0);
-        var4 = ji.field_n.l(0) ? 1 : 0;
+        var4 = TextureOperator.field_n.l(0) ? 1 : 0;
         if (param1 != ~kf.field_c &&
           var4 == 0) {
           param0 = false;
           on.a(9110);
         }
         if (param0) {
-          ji.field_n.a(param2, 538, param3);
+          TextureOperator.field_n.a(param2, 538, param3);
         }
         if (var4 != 0) {
           ql.field_L.a(0, param0);
         }
-        var5 = ji.field_n.k(12282) + ji.field_n.field_ob;
+        var5 = TextureOperator.field_n.k(12282) + TextureOperator.field_n.field_ob;
         if (var5 <= 640) {
           if (635 > var5 &&
             !(0 >= gr.field_Y)) {

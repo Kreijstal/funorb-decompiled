@@ -130,7 +130,7 @@ class fj extends rl implements ij {
         }
     }
 
-    final static aa a(cr param0, cr param1, ud param2, int param3, cr param4) {
+    final static aa a(UiWidget param0, UiWidget param1, ud param2, int param3, UiWidget param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends ji {
+final class ec extends TextureOperator {
     static String field_D;
     private int field_y;
     private int field_A;
@@ -84,9 +84,9 @@ final class ec extends ji {
           return;
         }
         try {
-          var3.f(2, 126);
-          var3.f(0, 79);
-          var3.f(param2.field_r, 89);
+          var3.writeByte(2, 126);
+          var3.writeByte(0, 79);
+          var3.writeByte(param2.field_r, 89);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -133,17 +133,17 @@ final class ec extends ji {
           }
           var4_int = param1;
           if (0 == var4_int) {
-            this.field_y = param2.h(-11);
+            this.field_y = param2.readUnsignedByte(-11);
             return;
           }
           if (var4_int == 1) {
-            this.field_A = param2.h(-11);
+            this.field_A = param2.readUnsignedByte(-11);
             return;
           }
           if (var4_int != 3) {
             return;
           }
-          this.field_B = param2.h(param0 ^ -101);
+          this.field_B = param2.readUnsignedByte(param0 ^ -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

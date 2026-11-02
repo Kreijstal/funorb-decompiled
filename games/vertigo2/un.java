@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class un extends cr {
+final class un extends UiWidget {
     private StringBuilder field_Kb;
     static long[] field_Mb;
-    private cr field_Nb;
+    private UiWidget field_Nb;
     static boolean field_Ib;
     static ee field_Hb;
-    private cr field_Jb;
+    private UiWidget field_Jb;
     private int field_Ob;
     static b field_Lb;
 
@@ -43,7 +43,7 @@ final class un extends cr {
         }
         if (de.field_f != 85) {
           if (12 > this.field_Kb.length()) {
-            var2 = Character.toLowerCase(ji.field_r);
+            var2 = Character.toLowerCase(TextureOperator.field_r);
             if (32 == var2) {
               var2 = 95;
             }
@@ -171,7 +171,7 @@ final class un extends cr {
           }
           return true;
         }
-        var2Lifetime1 = Character.toLowerCase(ji.field_r);
+        var2Lifetime1 = Character.toLowerCase(TextureOperator.field_r);
         if (32 == var2Lifetime1) {
           var2Lifetime1 = 95;
         }
@@ -389,19 +389,19 @@ final class un extends cr {
             this.field_Kb.length() > 0) {
             w.a(true, ' ', this.field_Kb.length() - 1, this.field_Kb);
           }
-          if (gi.a((CharSequence) ((Object) this.field_Kb), ji.field_r, (byte) 31)) {
-            discarded$0 = this.field_Kb.append(ji.field_r);
+          if (gi.a((CharSequence) ((Object) this.field_Kb), TextureOperator.field_r, (byte) 31)) {
+            discarded$0 = this.field_Kb.append(TextureOperator.field_r);
           } else {
             if (0 == this.field_Kb.length() &&
-              ji.field_r == 91) {
-              discarded$1 = this.field_Kb.append(ji.field_r);
+              TextureOperator.field_r == 91) {
+              discarded$1 = this.field_Kb.append(TextureOperator.field_r);
             } else {
               if (1 == this.field_Kb.length() &&
-                35 == ji.field_r) {
-                discarded$2 = this.field_Kb.append(ji.field_r);
+                35 == TextureOperator.field_r) {
+                discarded$2 = this.field_Kb.append(TextureOperator.field_r);
               } else {
-                if (93 == ji.field_r) {
-                  discarded$3 = this.field_Kb.append(ji.field_r);
+                if (93 == TextureOperator.field_r) {
+                  discarded$3 = this.field_Kb.append(TextureOperator.field_r);
                 }
               }
             }
@@ -421,7 +421,7 @@ final class un extends cr {
         return 2;
     }
 
-    un(int param0, int param1, int param2, int param3, String param4, cr param5, cr param6, cr param7) {
+    un(int param0, int param1, int param2, int param3, String param4, UiWidget param5, UiWidget param6, UiWidget param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -441,9 +441,9 @@ final class un extends cr {
         int var13 = 0;
         this.field_Ob = 0;
         try {
-          this.field_Nb = new cr(0L, param6, param4);
+          this.field_Nb = new UiWidget(0L, param6, param4);
           this.b(this.field_Nb, 127);
-          this.field_Jb = new cr(0L, param7);
+          this.field_Jb = new UiWidget(0L, param7);
           this.field_Jb.field_A = 16764006;
           this.b(this.field_Jb, 123);
           this.field_Jb.field_J = "|";
@@ -509,7 +509,7 @@ final class un extends cr {
         return false;
     }
 
-    final static cr b(byte param0) {
+    final static UiWidget b(byte param0) {
         int var1 = -13 / ((37 - param0) / 47);
         return pk.e(2);
     }

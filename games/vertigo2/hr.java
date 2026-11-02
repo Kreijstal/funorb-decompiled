@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr extends ji {
+final class hr extends TextureOperator {
     static String field_z;
     private int[][] field_B;
     private int field_E;
     private int[] field_y;
     private short[] field_F;
-    static cr field_C;
+    static UiWidget field_C;
     static int field_D;
     private int[] field_A;
 
@@ -137,11 +137,11 @@ final class hr extends ji {
             return;
           }
           if (param1 == 0) {
-            this.field_E = param2.h(param0 ^ -101);
-            this.field_B = new int[param2.h(param0 - 121)][2];
+            this.field_E = param2.readUnsignedByte(param0 ^ -101);
+            this.field_B = new int[param2.readUnsignedByte(param0 - 121)][2];
             for (var4_int = 0; var4_int < this.field_B.length; var4_int++) {
-              this.field_B[var4_int][0] = param2.a((byte) -11);
-              this.field_B[var4_int][1] = param2.a((byte) -11);
+              this.field_B[var4_int][0] = param2.readUnsignedShort((byte) -11);
+              this.field_B[var4_int][1] = param2.readUnsignedShort((byte) -11);
             }
             return;
           }

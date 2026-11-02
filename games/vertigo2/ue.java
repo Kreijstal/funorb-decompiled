@@ -12,7 +12,7 @@ final class ue extends cj implements cm, ij {
     static int[] field_M;
     static String field_H;
     static int field_O;
-    static er field_N;
+    static Sprite field_N;
 
     private final String a(byte param0) {
         if (param0 != -88) {

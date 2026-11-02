@@ -37,9 +37,9 @@ final class pf {
         boolean stackIn_4_3;
         boolean stackIn_5_4 = false;
         tp stackIn_12_0 = null;
-        cr stackIn_37_0 = null;
+        UiWidget stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        cr stackIn_41_0 = null;
+        UiWidget stackIn_41_0 = null;
         String stackIn_42_1 = null;
         int stackIn_46_0 = 0;
         Object stackIn_101_0 = null;
@@ -95,11 +95,11 @@ final class pf {
                 break;
               }
               if (stackIn_12_0.field_M == null) {
-                var7.field_Jb = new cr(0L, IterableNodeHashTable.field_b);
+                var7.field_Jb = new UiWidget(0L, IterableNodeHashTable.field_b);
                 var7.b(var7.field_Jb, 119);
-                var7.field_Kb = new cr(0L, tm.field_b);
+                var7.field_Kb = new UiWidget(0L, tm.field_b);
                 var7.b(var7.field_Kb, 126);
-                var7.field_Ob = new cr(0L, IterableNodeHashTable.field_b);
+                var7.field_Ob = new UiWidget(0L, IterableNodeHashTable.field_b);
                 var7.b(var7.field_Ob, 125);
                 var7.field_Kb.field_O = 2;
                 var8 = 1;
@@ -162,7 +162,7 @@ final class pf {
                 var7.field_kb = var9 - var7.field_db;
               }
               if (var8 != 0) {
-                h.field_D.field_Mb.a((byte) 121, (cr) (var6), var7, 2);
+                h.field_D.field_Mb.a((byte) 121, (UiWidget) (var6), var7, 2);
               }
               var6 = var7;
               if (var7.field_Ob == null ||

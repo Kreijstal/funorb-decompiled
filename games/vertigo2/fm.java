@@ -3,12 +3,12 @@
  */
 final class fm {
     static String field_h;
-    static cr field_e;
+    static UiWidget field_e;
     static IntrusiveDeque field_b;
     static String field_c;
     static String field_a;
     static int field_d;
-    static er field_g;
+    static Sprite field_g;
     static String field_f;
 
     public static void a(byte param0) {
@@ -28,7 +28,7 @@ final class fm {
         }
     }
 
-    final static void a(cr param0, cr param1, cr param2, ie param3, int param4, cc param5, cr param6, boolean param7, cr param8, cr param9, cr param10, cr param11) {
+    final static void a(UiWidget param0, UiWidget param1, UiWidget param2, ie param3, int param4, cc param5, UiWidget param6, boolean param7, UiWidget param8, UiWidget param9, UiWidget param10, UiWidget param11) {
         String stackIn_16_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -53,13 +53,13 @@ final class fm {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        er var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        er[] var16 = null;
-        cr var17 = null;
+        Sprite[] var16 = null;
+        UiWidget var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -79,7 +79,7 @@ final class fm {
           gg.field_n[4] = 16711935;
           lj.field_p = 8421504;
           wc.field_q[2] = 16736352;
-          var12 = new er(4, 4);
+          var12 = new Sprite(4, 4);
           var13 = var12.field_F;
           var14 = var12.field_F;
           var12.field_F[15] = 7368816;
@@ -87,31 +87,31 @@ final class fm {
           var15[8] = 7368816;
           var13[2] = 7368816;
           var14[5] = 7368816;
-          var16 = new er[9];
+          var16 = new Sprite[9];
           if (param4 != 12895) {
-            fm.a((cr) null, (cr) null, (cr) null, (ie) null, -50, (cc) null, (cr) null, false, (cr) null, (cr) null, (cr) null, (cr) null);
+            fm.a((UiWidget) null, (UiWidget) null, (UiWidget) null, (ie) null, -50, (cc) null, (UiWidget) null, false, (UiWidget) null, (UiWidget) null, (UiWidget) null, (UiWidget) null);
           }
           var16[4] = var12;
-          td.field_c = new cr(0L, param6);
-          ad.field_f = new cr(0L, param0);
+          td.field_c = new UiWidget(0L, param6);
+          ad.field_f = new UiWidget(0L, param0);
           td.field_c.b(ad.field_f, param4 - 12771);
-          var17 = new cr(0L, (cr) null);
+          var17 = new UiWidget(0L, (UiWidget) null);
           var17.field_M = new IntrusiveDeque();
           mg.field_R = new od(0L, var17, param1, param3);
           ad.field_f.b(mg.field_R, 119);
-          bp.field_C = new cr(0L, param11);
+          bp.field_C = new UiWidget(0L, param11);
           ad.field_f.b(bp.field_C, 125);
-          dj.field_d = new cr(0L, param8);
+          dj.field_d = new UiWidget(0L, param8);
           dj.field_d.field_z = GameKeyHandler.field_f;
           bp.field_C.b(dj.field_d, 120);
           bp.field_C.i(-2147483648);
-          ui.field_b = new cr(0L, (cr) null);
+          ui.field_b = new UiWidget(0L, (UiWidget) null);
           ui.field_b.field_Bb = var16;
           bp.field_C.b(ui.field_b, 121);
-          hl.field_q = new cr[5];
-          w.field_C = new cr[5];
-          gh.field_d = new cr[5];
-          mg.field_M = new cr[5];
+          hl.field_q = new UiWidget[5];
+          w.field_C = new UiWidget[5];
+          gh.field_d = new UiWidget[5];
+          mg.field_M = new UiWidget[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (5 <= var18))) {
@@ -122,24 +122,24 @@ final class fm {
                 if (!fq.field_i) {
                   stackIn_16_0 = ua.field_f;
                 } else {
-                  stackIn_16_0 = fb.field_A;
+                  stackIn_16_0 = SpriteState.field_A;
                 }
                 var19 = stackIn_16_0;
               } else if (var18 != 1 ||
                 !fq.field_i) {
                 decompiledFrameRemainder0 = (var18 == 2);
                 if (decompiledFrameRemainder0) {
-                  var19 = ji.field_q;
+                  var19 = TextureOperator.field_q;
                 }
               } else {
                 var19 = or.field_k;
               }
               if (decompiledFrameRemainder0) {
-                hl.field_q[var18] = new cr(0L, param2);
-                gh.field_d[var18] = new cr(0L, np.field_Ib, var19);
-                w.field_C[var18] = new cr(0L, (cr) null);
+                hl.field_q[var18] = new UiWidget(0L, param2);
+                gh.field_d[var18] = new UiWidget(0L, np.field_Ib, var19);
+                w.field_C[var18] = new UiWidget(0L, (UiWidget) null);
                 w.field_C[var18].field_ab = 1;
-                mg.field_M[var18] = new cr(0L, np.field_Ib);
+                mg.field_M[var18] = new UiWidget(0L, np.field_Ib);
                 mg.field_M[var18].field_ab = 1;
                 hl.field_q[var18].b(gh.field_d[var18], 125);
                 hl.field_q[var18].b(w.field_C[var18], param4 ^ 12837);
@@ -154,7 +154,7 @@ final class fm {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            ea.field_c = new cr(0L, param10);
+            ea.field_c = new UiWidget(0L, param10);
             ea.field_c.field_S = ad.field_c;
             td.field_c.b(ea.field_c, param4 - 12774);
             stackIn_34_0 = oe.q(76) ? 1 : 0;

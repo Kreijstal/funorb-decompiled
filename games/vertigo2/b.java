@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class b {
-    cr field_l;
+    UiWidget field_l;
     private int field_c;
     private int[] field_g;
     int field_j;
@@ -11,7 +11,7 @@ final class b {
     static ll field_d;
     static int field_i;
     static String field_a;
-    static cr field_h;
+    static UiWidget field_h;
     static String field_f;
     static String field_b;
     private String field_e;
@@ -269,7 +269,7 @@ final class b {
         if (param1 != 17) {
           return false;
         }
-        up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
+        up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, hb.field_D, TextureOperator.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
         return true;
     }
 
@@ -365,7 +365,7 @@ final class b {
 
     final boolean d(int param0) {
         if (param0 != 2) {
-          this.field_l = (cr) null;
+          this.field_l = (UiWidget) null;
           if (this.field_n == null) {
             return false;
           }
@@ -586,7 +586,7 @@ final class b {
         return true;
     }
 
-    b(cr param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    b(UiWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_n = new kq(ar.field_c);
           this.field_l = param0;

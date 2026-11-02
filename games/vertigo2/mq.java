@@ -8,7 +8,7 @@ final class mq extends va {
     private e[] field_w;
     static mp field_v;
 
-    final void a(byte param0, er param1) {
+    final void a(byte param0, Sprite param1) {
         e[] var7 = null;
         int var4 = 0;
         e var5_ref_e = null;
@@ -251,7 +251,7 @@ final class mq extends va {
         }
     }
 
-    final void a(int param0, er[] param1, boolean param2) {
+    final void a(int param0, Sprite[] param1, boolean param2) {
         int var4_int = 0;
         if (param2) {
           return;
@@ -267,7 +267,7 @@ final class mq extends va {
         }
     }
 
-    final void a(er[] param0, byte param1) {
+    final void a(Sprite[] param0, byte param1) {
         int var4 = 0;
         e[] var3 = null;
         e var5 = null;
@@ -417,7 +417,7 @@ final class mq extends va {
           ar.a(param13, (byte) 77, param14, param5, param18);
           tn.a(param20, param8, 55);
           vd.a(param4, param9, 1516482162, param17, param12, param1);
-          tr.a(param2, param0, param19, -25220);
+          GameplayScreen.a(param2, param0, param19, -25220);
           pb.a((byte) -26, param7, param16, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

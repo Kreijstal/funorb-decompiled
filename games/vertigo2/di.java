@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends ji {
+final class di extends TextureOperator {
     static String field_B;
     private int field_A;
     static String field_y;
@@ -329,14 +329,14 @@ final class di extends ji {
           if (0 != var4_int) {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                stackIn_14_1 = (param2.h(-11) == 1);
+                stackIn_14_1 = (param2.readUnsignedByte(-11) == 1);
                 this.field_o = stackIn_14_1;
               }
             } else {
-              this.field_A = param2.h(-11);
+              this.field_A = param2.readUnsignedByte(-11);
             }
           } else {
-            this.field_z = param2.h(-11);
+            this.field_z = param2.readUnsignedByte(-11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

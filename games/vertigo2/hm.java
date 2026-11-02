@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends ji {
+final class hm extends TextureOperator {
     private int field_E;
     private int[] field_y;
     private int field_D;
@@ -35,12 +35,12 @@ final class hm extends ji {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param1);
-          var3 = var9.h(-11);
+          var3 = var9.readUnsignedByte(-11);
           if (param0 != -20595) {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var4 = var9.b(true);
+          var4 = var9.readInt(true);
           if (0 <= var4 && (0 == eo.field_j ||
             !(var4 > eo.field_j))) {
             if (0 == var3) {
@@ -51,7 +51,7 @@ final class hm extends ji {
               stackIn_24_0 = var5;
               return stackIn_24_0;
             }
-            var5_int = var9.b(true);
+            var5_int = var9.readInt(true);
             if (var5_int >= 0 && (eo.field_j == 0 ||
               !(eo.field_j < var5_int))) {
               var12 = new byte[var5_int];
@@ -332,14 +332,14 @@ final class hm extends ji {
           var4_int = param1;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_G = param2.a((byte) -11);
+              this.field_G = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int == 2) {
-                this.field_E = param2.a((byte) -11);
+                this.field_E = param2.readUnsignedShort((byte) -11);
               }
             }
           } else {
-            this.field_D = param2.a((byte) -11);
+            this.field_D = param2.readUnsignedShort((byte) -11);
           }
           if (param0 != 110) {
             this.field_y = (int[]) null;
@@ -430,8 +430,8 @@ final class hm extends ji {
         if (param0 != 0) {
           field_F = -89;
         }
-        var2.f(1, -83);
-        var2.f(2, 78);
+        var2.writeByte(1, -83);
+        var2.writeByte(2, 78);
     }
 
     public static void b(boolean param0) {
@@ -447,7 +447,7 @@ final class hm extends ji {
 
     final static hq a(int param0, boolean param1) {
         hq var2 = new hq();
-        mo.field_h.a(var2, !param1 ? true : false);
+        mo.field_h.addFirst(var2, !param1 ? true : false);
         if (!param1) {
           field_C = (int[]) null;
         }

@@ -4,13 +4,13 @@
 final class ne extends cj implements nc, ij {
     private br field_H;
     static int field_P;
-    static cr field_G;
+    static UiWidget field_G;
     static ej field_N;
     static int[] field_O;
     private d field_L;
     private d field_M;
     oj field_K;
-    static er[] field_I;
+    static Sprite[] field_I;
     static java.awt.Canvas field_F;
 
     public final void a(int param0) {
@@ -38,14 +38,14 @@ final class ne extends cj implements nc, ij {
     }
 
     final static void c(boolean param0) {
-        MouseWheelInput.field_k = new cr(0L, (cr) null);
+        MouseWheelInput.field_k = new UiWidget(0L, (UiWidget) null);
         if (db.field_S) {
           MouseWheelInput.field_k.b(bf.field_c, 121);
         }
         MouseWheelInput.field_k.b(im.field_j, 118);
         if (!param0) {
-          qo.field_D = new lb(fb.field_A, MouseWheelInput.field_k);
-          ca.field_h = new cr(0L, (cr) null);
+          qo.field_D = new lb(SpriteState.field_A, MouseWheelInput.field_k);
+          ca.field_h = new UiWidget(0L, (UiWidget) null);
           ca.field_h.b(qo.field_D.field_b, 123);
           ca.field_h.b(vb.field_j, 123);
           jr.a(98);

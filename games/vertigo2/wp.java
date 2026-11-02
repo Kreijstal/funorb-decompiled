@@ -12,9 +12,9 @@ final class wp {
         throw new IllegalStateException();
     }
 
-    final static er[] a(int param0, byte param1, int param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3) {
         if (param1 < 72) {
-          return (er[]) null;
+          return (Sprite[]) null;
         }
         return nr.a(param3, 1, param2, param0, -33);
     }

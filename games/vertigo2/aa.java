@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends cr {
+final class aa extends UiWidget {
     private int[] field_Ob;
     private int field_Rb;
     static int[] field_Jb;
@@ -33,12 +33,12 @@ final class aa extends cr {
           return this.field_Ib.a(param0, false, param2);
         }
         if (null == this.field_Ib &&
-          ji.field_n == this &&
+          TextureOperator.field_n == this &&
           var4 != 0) {
           bm.g(0);
           return true;
         }
-        int var5 = ji.field_r;
+        int var5 = TextureOperator.field_r;
         if (var5 > 0) {
           if (v.field_c == var5) {
             var5 = 63;
@@ -56,7 +56,7 @@ final class aa extends cr {
         return false;
     }
 
-    aa(long param0, cr param1, cr param2, cr param3, aa[] param4, int[] param5, String[] param6, char[] param7) {
+    aa(long param0, UiWidget param1, UiWidget param2, UiWidget param3, aa[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -105,7 +105,7 @@ final class aa extends cr {
               -1 == this.field_Ob[var13]) {
               var14 = fm.field_g;
             }
-            this.field_Lb[var13] = new nk(0L, param2, (cr) null, param3, (er) (var14), param6[var13]);
+            this.field_Lb[var13] = new nk(0L, param2, (UiWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.b(this.field_Lb[var13], 118);
             var15 = var17.c(param6[var13]);
             if (var15 > this.field_Nb) {

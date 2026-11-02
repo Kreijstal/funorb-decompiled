@@ -18,25 +18,25 @@ final class wl {
           he.field_u[2] = (int)(dc.field_F >> 32);
           iq.field_x.position = 0;
           he.field_u[3] = (int)dc.field_F;
-          iq.field_x.e(he.field_u[0], 0);
-          iq.field_x.e(he.field_u[1], 0);
-          iq.field_x.e(he.field_u[2], 0);
-          iq.field_x.e(he.field_u[3], 0);
+          iq.field_x.writeInt(he.field_u[0], 0);
+          iq.field_x.writeInt(he.field_u[1], 0);
+          iq.field_x.writeInt(he.field_u[2], 0);
+          iq.field_x.writeInt(he.field_u[3], 0);
           cn.a(iq.field_x, 117);
-          iq.field_x.d(param3, -1783);
+          iq.field_x.writeShort(param3, -1783);
           param4.a(iq.field_x, 47);
           uh.field_Wb.position = 0;
           if (param0) {
-            uh.field_Wb.f(18, 95);
+            uh.field_Wb.writeByte(18, 95);
           }
           if (!param0 ||
             Vertigo2.field_L) {
-            uh.field_Wb.f(16, 78);
+            uh.field_Wb.writeByte(16, 78);
           }
           uh.field_Wb.position = uh.field_Wb.position + 2;
           var5_int = uh.field_Wb.position;
-          uh.field_Wb.e(ng.field_c, 0);
-          uh.field_Wb.a((byte) -116, ff.field_d);
+          uh.field_Wb.writeInt(ng.field_c, 0);
+          uh.field_Wb.writeLong((byte) -116, ff.field_d);
           var6 = 0;
           if (pl.field_i) {
             var6 = var6 | 1;
@@ -50,7 +50,7 @@ final class wl {
           if (go.field_g != null) {
             var6 = var6 | 16;
           }
-          uh.field_Wb.f(var6, -127);
+          uh.field_Wb.writeByte(var6, -127);
           var7 = vq.a(ob.e((byte) 66), (byte) 114);
           if (null == var7) {
             var7 = "";
@@ -61,7 +61,7 @@ final class wl {
           }
           var8 = -1 % ((param2 - 22) / 34);
           mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
-          uh.field_Wb.a((byte) -116, uh.field_Wb.position - var5_int);
+          uh.field_Wb.patchShortLength((byte) -116, uh.field_Wb.position - var5_int);
           lf.d(50, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

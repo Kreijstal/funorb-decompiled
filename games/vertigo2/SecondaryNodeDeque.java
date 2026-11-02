@@ -13,13 +13,13 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_b.field_p;
+    final DualLinkNode removeLast(int param0) {
+        DualLinkNode var2 = this.field_b.secondaryPrevious;
         if (param0 >= -3) {
           return (DualLinkNode) null;
         }
         if (var2 != this.field_b) {
-          var2.a(-120);
+          var2.unlinkSecondary(-120);
           return var2;
         }
         return null;
@@ -33,20 +33,20 @@ final class SecondaryNodeDeque implements Iterable {
         field_c = null;
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void addFirst(byte param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_o != null) {
-            param1.a(-120);
+          if (param1.secondaryNext != null) {
+            param1.unlinkSecondary(-120);
           }
-          param1.field_p = this.field_b;
-          param1.field_o = this.field_b.field_o;
-          param1.field_o.field_p = param1;
-          param1.field_p.field_o = param1;
+          param1.secondaryPrevious = this.field_b;
+          param1.secondaryNext = this.field_b.secondaryNext;
+          param1.secondaryNext.secondaryPrevious = param1;
+          param1.secondaryPrevious.secondaryNext = param1;
           if (param0 >= 7) {
             return;
           }
@@ -68,8 +68,8 @@ final class SecondaryNodeDeque implements Iterable {
 
     SecondaryNodeDeque() {
         this.field_b = new DualLinkNode();
-        this.field_b.field_p = this.field_b;
-        this.field_b.field_o = this.field_b;
+        this.field_b.secondaryPrevious = this.field_b;
+        this.field_b.secondaryNext = this.field_b;
     }
 
     static {

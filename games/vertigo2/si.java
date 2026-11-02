@@ -212,8 +212,8 @@ final class si extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
-        var2 = param0.h(-11);
-        var3 = param0.a((byte) -11);
+        var2 = param0.readUnsignedByte(-11);
+        var3 = param0.readUnsignedShort((byte) -11);
         var4 = 14 + var2 * 10;
         param0.position = 0;
         var5 = 0;
@@ -228,7 +228,7 @@ final class si extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.h(-11);
+            var15 = param0.readUnsignedByte(-11);
             if (var15 != var14) {
               var4++;
             }
@@ -295,7 +295,7 @@ final class si extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.h(-11) & 127;
+          var28 = var28 + param0.readUnsignedByte(-11) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {
@@ -411,17 +411,17 @@ final class si extends IntrusiveNode {
         param0.position = param0.position + var5 * 3;
         this.field_n = new byte[var4];
         var51 = new PacketBuffer(this.field_n);
-        var51.e(1297377380, 0);
-        var51.e(6, 0);
+        var51.writeInt(1297377380, 0);
+        var51.writeInt(6, 0);
         stackIn_84_0 = var51;
         if (var2 <= 1) {
           stackIn_85_1 = 0;
         } else {
           stackIn_85_1 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).d(stackIn_85_1, -1783);
-        var51.d(var2, -1783);
-        var51.d(var3, -1783);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_85_1, -1783);
+        var51.writeShort(var2, -1783);
+        var51.writeShort(var3, -1783);
         param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
@@ -437,7 +437,7 @@ final class si extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.e(1297379947, 0);
+          var51.writeInt(1297379947, 0);
           var51.position = var51.position + 4;
           var61 = var51.position;
           var62 = -1;
@@ -452,35 +452,35 @@ final class si extends IntrusiveNode {
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {
-                var51.f(255, -117);
+                var51.writeByte(255, -117);
               }
-              var51.f(47, -81);
-              var51.f(0, -68);
-              var51.g(var51.position - var61, 108);
+              var51.writeByte(47, -81);
+              var51.writeByte(0, -68);
+              var51.patchIntLength(var51.position - var61, 108);
               var60++;
               break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
-                var51.f(255, -67);
+                var51.writeByte(255, -67);
               }
-              var51.f(81, -118);
-              var51.f(3, -61);
+              var51.writeByte(81, -118);
+              var51.writeByte(3, -61);
               incrementValue$25 = var50;
               var50++;
-              var51.f((int) param0.payload[incrementValue$25], -89);
+              var51.writeByte((int) param0.payload[incrementValue$25], -89);
               incrementValue$26 = var50;
               var50++;
-              var51.f((int) param0.payload[incrementValue$26], -53);
+              var51.writeByte((int) param0.payload[incrementValue$26], -53);
               incrementValue$27 = var50;
               var50++;
-              var51.f((int) param0.payload[incrementValue$27], 93);
+              var51.writeByte((int) param0.payload[incrementValue$27], 93);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
             if (var62 == 0) {
               if (var65 != 0) {
-                var51.f(144 + var52, 84);
+                var51.writeByte(144 + var52, 84);
               }
               incrementValue$23 = var37;
               var37++;
@@ -488,13 +488,13 @@ final class si extends IntrusiveNode {
               incrementValue$24 = var38;
               var38++;
               var54 = var54 + param0.payload[incrementValue$24];
-              var51.f(var53 & 127, 127);
-              var51.f(var54 & 127, -114);
+              var51.writeByte(var53 & 127, 127);
+              var51.writeByte(var54 & 127, -114);
               continue;
             }
             if (var62 == 1) {
               if (var65 != 0) {
-                var51.f(128 + var52, 116);
+                var51.writeByte(128 + var52, 116);
               }
               incrementValue$21 = var37;
               var37++;
@@ -502,14 +502,14 @@ final class si extends IntrusiveNode {
               incrementValue$22 = var40;
               var40++;
               var55 = var55 + param0.payload[incrementValue$22];
-              var51.f(var53 & 127, -101);
-              var51.f(var55 & 127, 95);
+              var51.writeByte(var53 & 127, -101);
+              var51.writeByte(var55 & 127, 95);
               continue;
             }
             if (var62 != 2) {
               if (var62 == 3) {
                 if (var65 != 0) {
-                  var51.f(224 + var52, 117);
+                  var51.writeByte(224 + var52, 117);
                 }
                 incrementValue$5 = var45;
                 var45++;
@@ -517,18 +517,18 @@ final class si extends IntrusiveNode {
                 incrementValue$6 = var33;
                 var33++;
                 var56 = var56 + (param0.payload[incrementValue$6] << 7);
-                var51.f(var56 & 127, -81);
-                var51.f(var56 >> 7 & 127, -108);
+                var51.writeByte(var56 & 127, -81);
+                var51.writeByte(var56 >> 7 & 127, -108);
                 continue;
               }
               if (var62 == 4) {
                 if (var65 != 0) {
-                  var51.f(208 + var52, 113);
+                  var51.writeByte(208 + var52, 113);
                 }
                 incrementValue$4 = var32;
                 var32++;
                 var57 = var57 + param0.payload[incrementValue$4];
-                var51.f(var57 & 127, -122);
+                var51.writeByte(var57 & 127, -122);
                 continue;
               }
               if (var62 != 5) {
@@ -536,15 +536,15 @@ final class si extends IntrusiveNode {
                   throw new RuntimeException();
                 }
                 if (var65 != 0) {
-                  var51.f(192 + var52, -79);
+                  var51.writeByte(192 + var52, -79);
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.f((int) param0.payload[incrementValue$1], -53);
+                var51.writeByte((int) param0.payload[incrementValue$1], -53);
                 continue;
               }
               if (var65 != 0) {
-                var51.f(160 + var52, -58);
+                var51.writeByte(160 + var52, -58);
               }
               incrementValue$2 = var37;
               var37++;
@@ -552,17 +552,17 @@ final class si extends IntrusiveNode {
               incrementValue$3 = var31;
               var31++;
               var58 = var58 + param0.payload[incrementValue$3];
-              var51.f(var53 & 127, 84);
-              var51.f(var58 & 127, 110);
+              var51.writeByte(var53 & 127, 84);
+              var51.writeByte(var58 & 127, 110);
               continue;
             }
             if (var65 != 0) {
-              var51.f(176 + var52, -69);
+              var51.writeByte(176 + var52, -69);
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
             var28Lifetime1 = var28Lifetime1 + param0.payload[incrementValue$7] & 127;
-            var51.f(var28Lifetime1, -108);
+            var51.writeByte(var28Lifetime1, -108);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
@@ -625,7 +625,7 @@ final class si extends IntrusiveNode {
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;
-            var51.f(var66 & 127, -127);
+            var51.writeByte(var66 & 127, -127);
           }
         }
     }

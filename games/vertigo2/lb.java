@@ -6,7 +6,7 @@ final class lb {
     static String field_a;
     static tq field_e;
     kl field_b;
-    static cr field_c;
+    static UiWidget field_c;
     static double field_g;
     static bh field_d;
 
@@ -20,7 +20,7 @@ final class lb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 92) {
-            stackIn_4_0 = new nh(param0.n(2), param0.n(2), param0.n(2), param0.n(2), param0.m(0), param0.h(-11));
+            stackIn_4_0 = new nh(param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(2), param0.readUnsignedMedium(0), param0.readUnsignedByte(-11));
             return stackIn_4_0;
           }
           stackIn_2_0 = (nh) null;
@@ -87,12 +87,12 @@ final class lb {
         }
     }
 
-    lb(String param0, cr param1) {
+    lb(String param0, UiWidget param1) {
         String[] var3 = null;
-        cr[] var4 = null;
+        UiWidget[] var4 = null;
         try {
           var3 = new String[]{param0, uo.field_j, dm.field_Ib};
-          var4 = new cr[]{param1, wi.field_g, (cr) ((Object) ao.field_O)};
+          var4 = new UiWidget[]{param1, wi.field_g, (UiWidget) ((Object) ao.field_O)};
           this.field_b = new kl(0L, qr.field_m, var3, ab.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

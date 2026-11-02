@@ -9,7 +9,7 @@ final class jl {
     static String[] field_a;
     static String field_h;
     private int field_b;
-    static er field_g;
+    static Sprite field_g;
     private IntrusiveNode[] field_e;
 
     final void a(IntrusiveNode param0, long param1, boolean param2) {
@@ -50,7 +50,7 @@ final class jl {
         try {
           var8 = new BitPacketBuffer(param0.a("logo.fo3d", "", 0));
           var10 = var8;
-          var3 = var10.h(-11);
+          var3 = var10.readUnsignedByte(-11);
           var10.p(0);
           wc.field_o = ng.a((byte) -108, var10);
           jg.field_j = new int[var3][];

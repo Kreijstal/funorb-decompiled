@@ -60,14 +60,14 @@ final class qp {
             hh.field_b = new PacketBuffer(100);
           }
           hh.field_b.position = 0;
-          hh.field_b.f(10, 79);
+          hh.field_b.writeByte(10, 79);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            hh.field_b.e(var13[var11], 0);
+            hh.field_b.writeInt(var13[var11], 0);
             var11++;
           }
-          hh.field_b.d(param4, param5 - 1846);
+          hh.field_b.writeShort(param4, param5 - 1846);
           hh.field_b.a(param0, param1, 9157);
           param6.a(0, -10140, hh.field_b.payload, hh.field_b.position);
           param6.a(0, param5 - 10203, kh.field_b.payload, kh.field_b.position);

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class dc extends ji {
+final class dc extends TextureOperator {
     private int field_I;
     private int field_z;
     static int field_O;
@@ -40,28 +40,28 @@ final class dc extends ji {
             if (var4_int != 1) {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_C = param2.h(-11);
+                  this.field_C = param2.readUnsignedByte(-11);
                 } else {
                   if (4 != var4_int) {
                     if (5 == var4_int) {
-                      this.field_y = param2.h(param0 ^ -101);
+                      this.field_y = param2.readUnsignedByte(param0 ^ -101);
                     } else {
                       if (var4_int == 6) {
-                        this.field_I = param2.h(-11);
+                        this.field_I = param2.readUnsignedByte(-11);
                       }
                     }
                   } else {
-                    this.field_z = param2.h(-11);
+                    this.field_z = param2.readUnsignedByte(-11);
                   }
                 }
               } else {
-                this.field_H = param2.a((byte) -11);
+                this.field_H = param2.readUnsignedShort((byte) -11);
               }
             } else {
-              this.field_N = param2.h(-11);
+              this.field_N = param2.readUnsignedByte(-11);
             }
           } else {
-            dupTemp$0 = param2.h(-11);
+            dupTemp$0 = param2.readUnsignedByte(-11);
             this.field_I = dupTemp$0;
             this.field_y = dupTemp$0;
           }

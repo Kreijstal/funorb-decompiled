@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj {
+final class MenuSelectionCursor {
     private int field_d;
     static String field_e;
     private int field_l;
-    int field_b;
+    int itemCount;
     static boolean field_g;
     private int field_a;
     static String field_h;
@@ -13,11 +13,11 @@ final class uj {
     private int field_i;
     static String field_k;
     static String[] field_j;
-    int field_c;
+    int selectedIndex;
 
     final static boolean c(byte param0) {
         if (param0 != -87) {
-          uj.a(-74, 73, 75, true, 41, -1);
+          MenuSelectionCursor.a(-74, 73, 75, true, 41, -1);
           if (null == IntrusiveDeque.field_b) {
             return pm.field_a ? true : false;
           }
@@ -40,10 +40,10 @@ final class uj {
         }
         if (0 == this.field_l &&
           de.field_f == 98) {
-          if (this.field_c <= 0) {
-            this.field_c = this.field_b;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_c = this.field_c - 1;
+          this.selectedIndex = this.selectedIndex - 1;
           this.field_f = false;
         }
         if (param0 <= 32) {
@@ -55,12 +55,12 @@ final class uj {
         if (99 != de.field_f) {
           return;
         }
-        this.field_c = this.field_c + 1;
+        this.selectedIndex = this.selectedIndex + 1;
         this.field_f = false;
-        if (this.field_c < this.field_b) {
+        if (this.selectedIndex < this.itemCount) {
           return;
         }
-        this.field_c = 0;
+        this.selectedIndex = 0;
     }
 
     final boolean a(int param0) {
@@ -87,10 +87,10 @@ final class uj {
     }
 
     final void a(byte param0, int param1, int param2) {
-        if (this.field_b <= param1) {
+        if (this.itemCount <= param1) {
           throw new IllegalArgumentException();
         }
-        if (this.field_b <= param2) {
+        if (this.itemCount <= param2) {
           throw new IllegalArgumentException();
         }
         this.field_a = 0;
@@ -99,7 +99,7 @@ final class uj {
           if (kf.field_c != 0) {
             this.field_l = kf.field_c;
             this.field_a = kf.field_c;
-            this.field_c = param2;
+            this.selectedIndex = param2;
             this.field_f = true;
             this.field_d = uh.field_mc;
           }
@@ -119,14 +119,14 @@ final class uj {
                 }
                 if (param1 < 0) {
                   if (this.field_f) {
-                    this.field_c = -1;
+                    this.selectedIndex = -1;
                   }
                 } else {
-                  if (this.field_c == param1) {
-                    this.field_c = param1;
+                  if (this.selectedIndex == param1) {
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   } else {
-                    this.field_c = param1;
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   }
                 }
@@ -144,14 +144,14 @@ final class uj {
                 }
                 if (param1 < 0) {
                   if (this.field_f) {
-                    this.field_c = -1;
+                    this.selectedIndex = -1;
                   }
                 } else {
-                  if (this.field_c == param1) {
-                    this.field_c = param1;
+                  if (this.selectedIndex == param1) {
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   } else {
-                    this.field_c = param1;
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   }
                 }
@@ -171,12 +171,12 @@ final class uj {
             if (!this.field_f) {
               return;
             }
-            this.field_c = -1;
+            this.selectedIndex = -1;
             return;
           }
-          if (this.field_c == param1) {
+          if (this.selectedIndex == param1) {
           }
-          this.field_c = param1;
+          this.selectedIndex = param1;
           this.field_f = true;
           return;
         }
@@ -199,14 +199,14 @@ final class uj {
                 }
                 if (param1 < 0) {
                   if (this.field_f) {
-                    this.field_c = -1;
+                    this.selectedIndex = -1;
                   }
                 } else {
-                  if (this.field_c == param1) {
-                    this.field_c = param1;
+                  if (this.selectedIndex == param1) {
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   } else {
-                    this.field_c = param1;
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   }
                 }
@@ -224,14 +224,14 @@ final class uj {
                 }
                 if (param1 < 0) {
                   if (this.field_f) {
-                    this.field_c = -1;
+                    this.selectedIndex = -1;
                   }
                 } else {
-                  if (this.field_c == param1) {
-                    this.field_c = param1;
+                  if (this.selectedIndex == param1) {
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   } else {
-                    this.field_c = param1;
+                    this.selectedIndex = param1;
                     this.field_f = true;
                   }
                 }
@@ -251,18 +251,18 @@ final class uj {
             if (!this.field_f) {
               return;
             }
-            this.field_c = -1;
+            this.selectedIndex = -1;
             return;
           }
-          if (this.field_c == param1) {
+          if (this.selectedIndex == param1) {
           }
-          this.field_c = param1;
+          this.selectedIndex = param1;
           this.field_f = true;
           return;
         }
         this.field_l = kf.field_c;
         this.field_a = kf.field_c;
-        this.field_c = param2;
+        this.selectedIndex = param2;
         this.field_f = true;
         this.field_d = uh.field_mc;
         if (this.field_l == 0) {
@@ -281,12 +281,12 @@ final class uj {
             if (!this.field_f) {
               return;
             }
-            this.field_c = -1;
+            this.selectedIndex = -1;
             return;
           }
-          if (this.field_c == param1) {
+          if (this.selectedIndex == param1) {
           }
-          this.field_c = param1;
+          this.selectedIndex = param1;
           this.field_f = true;
           return;
         }
@@ -306,15 +306,15 @@ final class uj {
                 if (!this.field_f) {
                   return;
                 }
-                this.field_c = -1;
+                this.selectedIndex = -1;
                 return;
               }
-              if (this.field_c != param1) {
-                this.field_c = param1;
+              if (this.selectedIndex != param1) {
+                this.selectedIndex = param1;
                 this.field_f = true;
                 return;
               }
-              this.field_c = param1;
+              this.selectedIndex = param1;
               this.field_f = true;
               return;
             }
@@ -332,15 +332,15 @@ final class uj {
               if (!this.field_f) {
                 return;
               }
-              this.field_c = -1;
+              this.selectedIndex = -1;
               return;
             }
-            if (this.field_c != param1) {
-              this.field_c = param1;
+            if (this.selectedIndex != param1) {
+              this.selectedIndex = param1;
               this.field_f = true;
               return;
             }
-            this.field_c = param1;
+            this.selectedIndex = param1;
             this.field_f = true;
             return;
           }
@@ -359,12 +359,12 @@ final class uj {
               if (!this.field_f) {
                 return;
               }
-              this.field_c = -1;
+              this.selectedIndex = -1;
               return;
             }
-            if (this.field_c == param1) {
+            if (this.selectedIndex == param1) {
             }
-            this.field_c = param1;
+            this.selectedIndex = param1;
             this.field_f = true;
             return;
           }
@@ -376,16 +376,16 @@ final class uj {
             return;
           }
           if (param1 >= 0) {
-            if (this.field_c == param1) {
+            if (this.selectedIndex == param1) {
             }
-            this.field_c = param1;
+            this.selectedIndex = param1;
             this.field_f = true;
             return;
           }
           if (!this.field_f) {
             return;
           }
-          this.field_c = -1;
+          this.selectedIndex = -1;
         }
     }
 
@@ -395,14 +395,14 @@ final class uj {
         if (this.field_l != 0) {
           if (0 == this.field_l &&
             de.field_f == 96) {
-            if (this.field_c > 0) {
-              this.field_c = this.field_c - 1;
+            if (this.selectedIndex > 0) {
+              this.selectedIndex = this.selectedIndex - 1;
               this.field_f = false;
               if (this.field_l == 0 &&
                 de.field_f == 97) {
-                this.field_c = this.field_c + 1;
-                if (this.field_c >= this.field_b) {
-                  this.field_c = 0;
+                this.selectedIndex = this.selectedIndex + 1;
+                if (this.selectedIndex >= this.itemCount) {
+                  this.selectedIndex = 0;
                 }
                 this.field_f = false;
               }
@@ -415,20 +415,20 @@ final class uj {
                   return;
                 }
                 this.field_f = false;
-                if (0 > this.field_c) {
-                  this.field_c = param0;
+                if (0 > this.selectedIndex) {
+                  this.selectedIndex = param0;
                 }
               }
               return;
             }
-            this.field_c = this.field_b;
-            this.field_c = this.field_c - 1;
+            this.selectedIndex = this.itemCount;
+            this.selectedIndex = this.selectedIndex - 1;
             this.field_f = false;
             if (this.field_l == 0 &&
               de.field_f == 97) {
-              this.field_c = this.field_c + 1;
-              if (this.field_c >= this.field_b) {
-                this.field_c = 0;
+              this.selectedIndex = this.selectedIndex + 1;
+              if (this.selectedIndex >= this.itemCount) {
+                this.selectedIndex = 0;
               }
               this.field_f = false;
             }
@@ -441,8 +441,8 @@ final class uj {
                 return;
               }
               this.field_f = false;
-              if (0 > this.field_c) {
-                this.field_c = param0;
+              if (0 > this.selectedIndex) {
+                this.selectedIndex = param0;
               }
             }
             return;
@@ -458,15 +458,15 @@ final class uj {
                   return;
                 }
                 this.field_f = false;
-                if (0 > this.field_c) {
-                  this.field_c = param0;
+                if (0 > this.selectedIndex) {
+                  this.selectedIndex = param0;
                 }
               }
               return;
             }
-            this.field_c = this.field_c + 1;
-            if (this.field_c >= this.field_b) {
-              this.field_c = 0;
+            this.selectedIndex = this.selectedIndex + 1;
+            if (this.selectedIndex >= this.itemCount) {
+              this.selectedIndex = 0;
             }
             this.field_f = false;
           }
@@ -478,8 +478,8 @@ final class uj {
                 return;
               }
               this.field_f = false;
-              if (0 > this.field_c) {
-                this.field_c = param0;
+              if (0 > this.selectedIndex) {
+                this.selectedIndex = param0;
               }
             }
             return;
@@ -489,18 +489,18 @@ final class uj {
           }
           if (de.field_f == 98) {
             this.field_f = false;
-            if (0 <= this.field_c) {
+            if (0 <= this.selectedIndex) {
               return;
             }
-            this.field_c = param0;
+            this.selectedIndex = param0;
             return;
           }
           if (de.field_f != 99) {
             return;
           }
           this.field_f = false;
-          if (0 > this.field_c) {
-            this.field_c = param0;
+          if (0 > this.selectedIndex) {
+            this.selectedIndex = param0;
           }
           return;
         }
@@ -517,15 +517,15 @@ final class uj {
                   return;
                 }
                 this.field_f = false;
-                if (0 > this.field_c) {
-                  this.field_c = param0;
+                if (0 > this.selectedIndex) {
+                  this.selectedIndex = param0;
                 }
               }
               return;
             }
-            this.field_c = this.field_c + 1;
-            if (this.field_c >= this.field_b) {
-              this.field_c = 0;
+            this.selectedIndex = this.selectedIndex + 1;
+            if (this.selectedIndex >= this.itemCount) {
+              this.selectedIndex = 0;
             }
             this.field_f = false;
           }
@@ -537,8 +537,8 @@ final class uj {
                 return;
               }
               this.field_f = false;
-              if (0 > this.field_c) {
-                this.field_c = param0;
+              if (0 > this.selectedIndex) {
+                this.selectedIndex = param0;
               }
             }
             return;
@@ -548,30 +548,30 @@ final class uj {
           }
           if (de.field_f == 98) {
             this.field_f = false;
-            if (0 <= this.field_c) {
+            if (0 <= this.selectedIndex) {
               return;
             }
-            this.field_c = param0;
+            this.selectedIndex = param0;
             return;
           }
           if (de.field_f != 99) {
             return;
           }
           this.field_f = false;
-          if (0 > this.field_c) {
-            this.field_c = param0;
+          if (0 > this.selectedIndex) {
+            this.selectedIndex = param0;
           }
           return;
         }
         if (de.field_f == 96) {
-          if (this.field_c > 0) {
-            this.field_c = this.field_c - 1;
+          if (this.selectedIndex > 0) {
+            this.selectedIndex = this.selectedIndex - 1;
             this.field_f = false;
             if (this.field_l == 0 &&
               de.field_f == 97) {
-              this.field_c = this.field_c + 1;
-              if (this.field_c >= this.field_b) {
-                this.field_c = 0;
+              this.selectedIndex = this.selectedIndex + 1;
+              if (this.selectedIndex >= this.itemCount) {
+                this.selectedIndex = 0;
               }
               this.field_f = false;
             }
@@ -584,20 +584,20 @@ final class uj {
                 return;
               }
               this.field_f = false;
-              if (0 > this.field_c) {
-                this.field_c = param0;
+              if (0 > this.selectedIndex) {
+                this.selectedIndex = param0;
               }
             }
             return;
           }
-          this.field_c = this.field_b;
-          this.field_c = this.field_c - 1;
+          this.selectedIndex = this.itemCount;
+          this.selectedIndex = this.selectedIndex - 1;
           this.field_f = false;
           if (this.field_l == 0 &&
             de.field_f == 97) {
-            this.field_c = this.field_c + 1;
-            if (this.field_c >= this.field_b) {
-              this.field_c = 0;
+            this.selectedIndex = this.selectedIndex + 1;
+            if (this.selectedIndex >= this.itemCount) {
+              this.selectedIndex = 0;
             }
             this.field_f = false;
           }
@@ -609,14 +609,14 @@ final class uj {
           }
           if (de.field_f == 98) {
             this.field_f = false;
-            if (0 > this.field_c) {
-              this.field_c = param0;
+            if (0 > this.selectedIndex) {
+              this.selectedIndex = param0;
             }
           } else {
             if (de.field_f == 99) {
               this.field_f = false;
-              if (0 > this.field_c) {
-                this.field_c = param0;
+              if (0 > this.selectedIndex) {
+                this.selectedIndex = param0;
               }
             }
           }
@@ -633,8 +633,8 @@ final class uj {
                   return;
                 }
                 this.field_f = false;
-                if (0 > this.field_c) {
-                  this.field_c = param0;
+                if (0 > this.selectedIndex) {
+                  this.selectedIndex = param0;
                 }
               }
               return;
@@ -648,16 +648,16 @@ final class uj {
                 return;
               }
               this.field_f = false;
-              if (0 > this.field_c) {
-                this.field_c = param0;
+              if (0 > this.selectedIndex) {
+                this.selectedIndex = param0;
               }
               return;
             }
           }
           if (decompiledFrameRemainder0) {
-            this.field_c = this.field_c + 1;
-            if (this.field_c >= this.field_b) {
-              this.field_c = 0;
+            this.selectedIndex = this.selectedIndex + 1;
+            if (this.selectedIndex >= this.itemCount) {
+              this.selectedIndex = 0;
             }
             this.field_f = false;
           }
@@ -675,10 +675,10 @@ final class uj {
           }
         }
         this.field_f = false;
-        if (0 <= this.field_c) {
+        if (0 <= this.selectedIndex) {
           return;
         }
-        this.field_c = param0;
+        this.selectedIndex = param0;
     }
 
     public static void a(boolean param0) {
@@ -698,7 +698,7 @@ final class uj {
         if (param0 == 0) {
           return this.field_i == 103 ? true : false;
         }
-        uj.c((byte) -98);
+        MenuSelectionCursor.c((byte) -98);
         return this.field_i == 103 ? true : false;
     }
 
@@ -912,21 +912,21 @@ final class uj {
     final void a(boolean param0, int param1, int param2, byte param3) {
         this.field_l = 0;
         if (param3 != 80) {
-          this.field_b = -66;
+          this.itemCount = -66;
           this.field_f = param0 ? true : false;
           if (!this.field_f) {
-            this.field_c = param2;
+            this.selectedIndex = param2;
             return;
           }
-          this.field_c = param1;
+          this.selectedIndex = param1;
           return;
         }
         this.field_f = param0 ? true : false;
         if (!this.field_f) {
-          this.field_c = param2;
+          this.selectedIndex = param2;
           return;
         }
-        this.field_c = param1;
+        this.selectedIndex = param1;
     }
 
     final boolean b(byte param0) {
@@ -937,10 +937,10 @@ final class uj {
         return this.field_l != 0 ? true : false;
     }
 
-    uj(int param0) {
+    MenuSelectionCursor(int param0) {
         this.field_f = false;
-        this.field_c = 0;
-        this.field_b = param0;
+        this.selectedIndex = 0;
+        this.itemCount = param0;
     }
 
     static {

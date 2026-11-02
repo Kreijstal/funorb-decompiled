@@ -6,7 +6,7 @@ final class hk extends da {
     private String field_l;
     static int[] field_q;
     private boolean field_p;
-    static cr field_o;
+    static UiWidget field_o;
     static String field_r;
     static int field_n;
 
@@ -67,15 +67,15 @@ final class hk extends da {
         BitPacketBuffer var3 = uh.field_Wb;
         var3.j(param0, param1 ^ 75);
         if (param1 == 60) {
-          var3.f(3, 91);
-          var3.f(8, param1 + 41);
-          var3.d(param2, param1 ^ -1739);
+          var3.writeByte(3, 91);
+          var3.writeByte(8, param1 + 41);
+          var3.writeShort(param2, param1 ^ -1739);
           return;
         }
         field_r = (String) null;
-        var3.f(3, 91);
-        var3.f(8, param1 + 41);
-        var3.d(param2, param1 ^ -1739);
+        var3.writeByte(3, 91);
+        var3.writeByte(8, param1 + 41);
+        var3.writeShort(param2, param1 ^ -1739);
     }
 
     final String b(int param0, String param1) {
@@ -93,7 +93,7 @@ final class hk extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 3614) {
-            field_o = (cr) null;
+            field_o = (UiWidget) null;
           }
           var5 = (CharSequence) ((Object) param1);
           var3 = gm.a((byte) 92, var5);
@@ -181,13 +181,13 @@ final class hk extends da {
     final static void g(int param0) {
         CharSequence var3 = null;
         if (param0 == 3) {
-          qe.field_V = id.field_f.f(param0 ^ 131);
+          qe.field_V = id.field_f.readString(param0 ^ 131);
           var3 = (CharSequence) ((Object) qe.field_V);
           Vertigo2.field_F = rc.a(var3, param0 + 317);
           return;
         }
         field_m = -23;
-        qe.field_V = id.field_f.f(param0 ^ 131);
+        qe.field_V = id.field_f.readString(param0 ^ 131);
         CharSequence var2 = (CharSequence) ((Object) qe.field_V);
         Vertigo2.field_F = rc.a(var2, param0 + 317);
     }

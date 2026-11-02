@@ -9,9 +9,9 @@ final class IterableNodeHashTable implements Iterable {
     IntrusiveNode[] field_f;
     private IntrusiveNode field_g;
     static lb field_e;
-    static cr[] field_h;
-    static cr field_a;
-    static cr field_b;
+    static UiWidget[] field_h;
+    static UiWidget field_a;
+    static UiWidget field_b;
 
     final static int b(boolean param0) {
         if (!param0) {
@@ -26,7 +26,7 @@ final class IterableNodeHashTable implements Iterable {
         field_h = null;
         field_b = null;
         if (param0) {
-          field_b = (cr) null;
+          field_b = (UiWidget) null;
         }
         field_d = null;
     }
@@ -58,7 +58,7 @@ final class IterableNodeHashTable implements Iterable {
           var14 = pk.a((byte) -14, ib.field_a, param3, ap.field_e);
           var15 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
           if (param1 >= -122) {
-            field_h = (cr[]) null;
+            field_h = (UiWidget[]) null;
           }
           var8_int = pk.a((byte) -14, cj.field_D, param0 + param6, ua.field_e);
           var9 = pk.a((byte) -14, cj.field_D, -param0 + param5, ua.field_e);
@@ -84,7 +84,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long param0, byte param1) {
         IntrusiveNode var5 = null;
         int var6 = Vertigo2.field_L ? 1 : 0;
         IntrusiveNode var4 = this.field_f[(int)(param0 & (long)(this.field_c - 1))];
@@ -104,7 +104,7 @@ final class IterableNodeHashTable implements Iterable {
         return null;
     }
 
-    final void a(long param0, IntrusiveNode param1, int param2) {
+    final void put(long param0, IntrusiveNode param1, int param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1.next != null) {

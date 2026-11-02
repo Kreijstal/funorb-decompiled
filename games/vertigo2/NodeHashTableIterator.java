@@ -36,7 +36,7 @@ final class NodeHashTableIterator implements Iterator {
             return false;
           }
           de.field_f = wm.field_j[rq.field_B];
-          ji.field_r = af.field_F[rq.field_B];
+          TextureOperator.field_r = af.field_F[rq.field_B];
           rq.field_B = 127 & rq.field_B + 1;
           stackIn_8_0 = true;
         }
@@ -186,10 +186,10 @@ final class NodeHashTableIterator implements Iterator {
         }
         if (de.field_f == 84) {
           if (var3 != 0) {
-            if (0 >= fb.field_D.length()) {
-              fb.h(0);
+            if (0 >= SpriteState.field_D.length()) {
+              SpriteState.h(0);
             } else {
-              var4_ref_String = fb.field_D.toString();
+              var4_ref_String = SpriteState.field_D.toString();
               if (!wn.a(var4_ref_String, 0)) {
                 var5 = ui.field_g;
                 if (var5 == 0 &&
@@ -200,7 +200,7 @@ final class NodeHashTableIterator implements Iterator {
                   SecondaryNodeDequeIterator.a(var5, 1, param0, (byte) 118);
                 }
                 tf.a(ui.field_g, ea.field_b, -117, var4_ref_String, param1, -1);
-                fb.h(0);
+                SpriteState.h(0);
               } else {
                 var13 = (String) null;
                 var12 = (String) null;
@@ -208,12 +208,12 @@ final class NodeHashTableIterator implements Iterator {
                 var15 = (String) null;
                 var14 = (String) null;
                 dh.a((byte) -7, ch.field_f, 2, (String) null, 0, (String) null);
-                fb.h(0);
+                SpriteState.h(0);
               }
             }
           } else {
             if (ui.field_g != 0) {
-              fb.h(0);
+              SpriteState.h(0);
             }
           }
           return true;
@@ -222,23 +222,23 @@ final class NodeHashTableIterator implements Iterator {
           if (var3 == 0) {
             return true;
           }
-          if (0 >= fb.field_D.length()) {
+          if (0 >= SpriteState.field_D.length()) {
             return true;
           }
-          w.a(true, ' ', fb.field_D.length() - 1, fb.field_D);
+          w.a(true, ' ', SpriteState.field_D.length() - 1, SpriteState.field_D);
           return true;
         }
-        var4 = ji.field_r;
+        var4 = TextureOperator.field_r;
         if (!p.a(376, (char) var4)) {
           return false;
         }
         if (var3 == 0) {
           return true;
         }
-        if (fb.field_D.length() >= 80) {
+        if (SpriteState.field_D.length() >= 80) {
           return true;
         }
-        discarded$0 = fb.field_D.append((char) var4);
+        discarded$0 = SpriteState.field_D.append((char) var4);
         var5Lifetime1 = 485;
         var17 = qe.field_V;
         var16 = jk.a(15709, var17);
@@ -248,8 +248,8 @@ final class NodeHashTableIterator implements Iterator {
           if (ui.field_g != 0) {
             var28 = var7 + var19 + ": ";
             var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var28);
-            if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-              w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+            if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+              w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
             }
             return true;
           }
@@ -258,8 +258,8 @@ final class NodeHashTableIterator implements Iterator {
               if (gd.field_j == null) {
                 var33 = var7 + var19 + ": ";
                 var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var33);
-                if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-                  w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                  w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
                 }
                 return true;
               }
@@ -267,8 +267,8 @@ final class NodeHashTableIterator implements Iterator {
                 var31 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
                 var32 = var31 + var19 + ": ";
                 var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var32);
-                if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-                  w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                  w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
                 }
                 return true;
               }
@@ -276,28 +276,28 @@ final class NodeHashTableIterator implements Iterator {
                 var29 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
                 var30 = var29 + var19 + ": ";
                 var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var30);
-                if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-                  w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                  w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
                 }
                 return true;
               }
               var7 = "[" + v.field_a + "] ";
               var33Lifetime1 = var7 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var33Lifetime1);
-              if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-                w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+              if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
               }
               return true;
             }
-            var7 = "[" + fb.field_A + "] ";
+            var7 = "[" + SpriteState.field_A + "] ";
           }
           if (gd.field_j != null) {
             if (!ar.field_t) {
               var36 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
               var37 = var36 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var37);
-              if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-                w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+              if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
               }
               return true;
             }
@@ -305,8 +305,8 @@ final class NodeHashTableIterator implements Iterator {
               var34 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
               var35 = var34 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var35);
-              if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
-                w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+              if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
               }
               return true;
             }
@@ -326,10 +326,10 @@ final class NodeHashTableIterator implements Iterator {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (GameKeyHandler.field_f.c(fb.field_D.toString()) <= var5Lifetime1) {
+        if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) <= var5Lifetime1) {
           return true;
         }
-        w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+        w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
         return true;
     }
 
