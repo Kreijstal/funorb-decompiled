@@ -20,19 +20,19 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 
     private final void c(int param0) {
         PcmStream var2 = (PcmStream) (this.field_o.first((byte) 110));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skip(param0);
           var2 = (PcmStream) (this.field_o.next(-270));
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return (PcmStream) (this.field_o.first((byte) -113));
     }
 
@@ -54,14 +54,14 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return (PcmStream) (this.field_o.next(-270));
     }
 
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_o.first((byte) 117));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
+          var4.process(param0, param1, param2);
           var4 = (PcmStream) (this.field_o.next(-270));
         }
     }
@@ -70,7 +70,7 @@ final class PcmStreamMixer extends PcmStream {
         this.field_o.a((byte) 113, param0);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         jb var5 = null;
         int var7 = 0;
@@ -119,7 +119,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2 = 0;
         jb var3 = null;
         int var5 = 0;

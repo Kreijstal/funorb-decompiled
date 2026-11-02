@@ -44,7 +44,7 @@ final class je {
           }
           var6_ref = new re(param1, param2);
           this.field_d.put((byte) 31, var6_ref, param3);
-          this.field_k.a(var6_ref, 2);
+          this.field_k.addLast(var6_ref, 2);
           ((lb) ((Object) var6_ref)).field_l = (long)param0;
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "je.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -294,7 +294,7 @@ final class je {
         try {
           if (param0 != null) {
             param0.unlink(true);
-            param0.a(12695);
+            param0.unlinkSecondary(12695);
             this.field_j = this.field_j + param0.field_r;
           }
           if (param1 == -27615) {
@@ -338,40 +338,40 @@ final class je {
           var8 = var7.c((byte) 70);
           if (var8 != null) {
             if (!var7.e(1024)) {
-              this.field_k.a(var7, 2);
+              this.field_k.addLast(var7, 2);
               var7.field_l = 0L;
             } else {
               var6 = new re(var8, var7.field_r);
               this.field_d.put((byte) 112, var6, var7.key);
-              this.field_k.a(var6, 2);
+              this.field_k.addLast(var6, 2);
               ((lb) ((Object) var6)).field_l = 0L;
               var7.unlink(true);
-              var7.a(12695);
+              var7.unlinkSecondary(12695);
             }
             return var8;
           }
           var7.unlink(true);
-          var7.a(param1 ^ 12695);
+          var7.unlinkSecondary(param1 ^ 12695);
           this.field_j = this.field_j + var7.field_r;
           return null;
         }
         Object var9 = var7.c((byte) 70);
         if (var9 != null) {
           if (!var7.e(1024)) {
-            this.field_k.a(var7, 2);
+            this.field_k.addLast(var7, 2);
             var7.field_l = 0L;
           } else {
             var6Lifetime1 = new re(var9, var7.field_r);
             this.field_d.put((byte) 112, var6Lifetime1, var7.key);
-            this.field_k.a(var6Lifetime1, 2);
+            this.field_k.addLast(var6Lifetime1, 2);
             ((lb) ((Object) var6Lifetime1)).field_l = 0L;
             var7.unlink(true);
-            var7.a(12695);
+            var7.unlinkSecondary(12695);
           }
           return var9;
         }
         var7.unlink(true);
-        var7.a(param1 ^ 12695);
+        var7.unlinkSecondary(param1 ^ 12695);
         this.field_j = this.field_j + var7.field_r;
         return null;
     }

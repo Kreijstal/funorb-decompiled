@@ -215,7 +215,7 @@ final class hc extends ng {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var28.readUnsignedByte(-85);
                   var21 = ph.field_b[var20].field_g;
-                  var22 = var28.k(-120);
+                  var22 = var28.readLong(-120);
                   var24 = var28.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
@@ -264,7 +264,7 @@ final class hc extends ng {
           }
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort(false);
-            var4 = var28.k(param0 ^ 95);
+            var4 = var28.readLong(param0 ^ 95);
             var6 = (ji) (wf.field_g.first((byte) 1));
             while (var6 != null) {
               if (var6.field_l != var3Lifetime1) {

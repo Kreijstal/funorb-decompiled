@@ -91,7 +91,7 @@ final class pc {
     }
 
     final void c(int param0) {
-        int var2 = this.field_c.f(-10);
+        int var2 = this.field_c.readVarInt(-10);
         this.field_f[param0] = this.field_f[param0] + var2;
     }
 
@@ -127,7 +127,7 @@ final class pc {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_c.f(127);
+        var3 = this.field_c.readVarInt(127);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_c.payload[this.field_c.position] & 255;
@@ -174,7 +174,7 @@ final class pc {
         int var4Lifetime1;
         if (param1 == 255) {
           var3 = this.field_c.readUnsignedByte(-111);
-          var4 = this.field_c.f(-124);
+          var4 = this.field_c.readVarInt(-124);
           if (var3 == 47) {
             this.field_c.position = this.field_c.position + var4;
             return 1;

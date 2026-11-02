@@ -244,7 +244,7 @@ final class ul extends IntrusiveNode {
             var7.writeInt(param1.field_w[var5], false);
           }
           var8.b(var4, 14430);
-          var8.a(var8.position - var4, -120);
+          var8.patchByteLength(var8.position - var4, -120);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

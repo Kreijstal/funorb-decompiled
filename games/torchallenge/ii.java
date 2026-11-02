@@ -73,11 +73,11 @@ final class ii {
           return null;
         }
         if (param0 == -1) {
-          var2.a(12695);
+          var2.unlinkSecondary(12695);
           return var2;
         }
         field_f = (int[][]) null;
-        var2.a(12695);
+        var2.unlinkSecondary(12695);
         return var2;
     }
 
@@ -104,7 +104,7 @@ final class ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.secondaryPrevious != null) {
-            param0.a(12695);
+            param0.unlinkSecondary(12695);
           }
           param0.secondaryPrevious = this.field_l.secondaryPrevious;
           param0.secondaryNext = this.field_l;

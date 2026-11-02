@@ -81,7 +81,7 @@ final class kk extends t {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a((byte) 28, this.field_f);
+          param0.writePrefixedString((byte) 28, this.field_f);
           param0.b(this.field_g, (byte) -110);
           if (param1 >= -29) {
             kk.c(true);
@@ -106,7 +106,7 @@ final class kk extends t {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.b((byte) 24);
+            var3_int = param0.readUnsignedSmart((byte) 24);
             if (var3_int > param2) {
               var3_int = param2;
             }

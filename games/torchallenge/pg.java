@@ -12,13 +12,13 @@ final class pg extends PcmStream {
     PcmStreamMixer field_u;
     static int[][] field_n;
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         dl var3;
         int var4;
         boolean stackIn_3_0 = false;
         var4 = TorChallenge.field_F ? 1 : 0;
-        this.field_u.a(param0);
+        this.field_u.skip(param0);
         var3 = (dl) (this.field_o.first((byte) -128));
         while (var3 != null) {
           stackIn_3_0 = this.field_t.a(var3, (byte) 22);
@@ -47,7 +47,7 @@ final class pg extends PcmStream {
         return MouseInputHandler.field_a;
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         dl var1;
         while (true) {
           var1 = (dl) (this.field_o.next(-270));
@@ -60,7 +60,7 @@ final class pg extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         dl var6 = null;
@@ -73,7 +73,7 @@ final class pg extends PcmStream {
         RuntimeException var4 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
-          this.field_u.b(param0, param1, param2);
+          this.field_u.mixInto(param0, param1, param2);
           var6 = (dl) (this.field_o.first((byte) 112));
           while (var6 != null) {
             stackIn_4_0 = this.field_t.a(var6, (byte) 22);
@@ -144,7 +144,7 @@ final class pg extends PcmStream {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(param0 ^ -1048518, var13, var4, 0);
+              var9.readBytes(param0 ^ -1048518, var13, var4, 0);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
@@ -182,7 +182,7 @@ final class pg extends PcmStream {
         }
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 
@@ -222,7 +222,7 @@ final class pg extends PcmStream {
           if (param1 != -45) {
             return;
           }
-          param2.field_K.a(param0);
+          param2.field_K.skip(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,7 +266,7 @@ final class pg extends PcmStream {
                 param0.field_x = param0.field_x + var7_int * param2;
                 break;
               }
-              param0.field_K.b(param4, param5, var8);
+              param0.field_K.mixInto(param4, param5, var8);
               param2 = param2 - var8;
               param5 = param5 + var8;
               param0.field_x = param0.field_x + (-1048576 + var7_int * var8);
@@ -290,7 +290,7 @@ final class pg extends PcmStream {
                 param0.field_K.e(-1);
               }
               var11.g(var9);
-              var11.b(param4, param5, param1 - param5);
+              var11.mixInto(param4, param5, param1 - param5);
               if (!var11.l()) {
                 continue;
               }
@@ -298,9 +298,9 @@ final class pg extends PcmStream {
             }
           }
           if (param3 <= 51) {
-            this.c();
+            this.firstSubstream();
           }
-          param0.field_K.b(param4, param5, param2);
+          param0.field_K.mixInto(param4, param5, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -322,7 +322,7 @@ final class pg extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         dl var1 = (dl) (this.field_o.first((byte) 112));
         if (var1 == null) {
           return null;
@@ -330,7 +330,7 @@ final class pg extends PcmStream {
         if (null != var1.field_K) {
           return (PcmStream) ((Object) var1.field_K);
         }
-        return this.b();
+        return this.nextSubstream();
     }
 
     final static boolean d(int param0) {

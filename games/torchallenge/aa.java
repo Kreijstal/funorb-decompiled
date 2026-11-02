@@ -160,7 +160,7 @@ final class aa {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryPrevious != null) {
-            param1.a(12695);
+            param1.unlinkSecondary(12695);
           }
           var5 = this.field_i[(int)(param0 & (long)(this.field_d - 1))];
           param1.secondaryNext = var5;

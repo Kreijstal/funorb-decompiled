@@ -285,7 +285,7 @@ final class ej extends IntrusiveNode {
         var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.f(-102);
+          param0.readVarInt(-102);
         }
         var4 = var4 + (param0.position - var13Lifetime1);
         var15Lifetime2 = param0.position;
@@ -450,8 +450,8 @@ final class ej extends IntrusiveNode {
           var61 = var51.position;
           var62 = -1;
           while (true) {
-            var63 = param0.f(-9);
-            var51.b((byte) 117, var63);
+            var63 = param0.readVarInt(-9);
+            var51.writeVarInt((byte) 117, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.payload[incrementValue$0] & 255;
@@ -464,7 +464,7 @@ final class ej extends IntrusiveNode {
               }
               var51.writeByte(47, (byte) 122);
               var51.writeByte(0, (byte) 122);
-              var51.c(var51.position - var61, -3);
+              var51.patchIntLength(var51.position - var61, -3);
               var60++;
               break;
             }

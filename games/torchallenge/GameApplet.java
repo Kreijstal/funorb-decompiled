@@ -134,7 +134,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a((byte) -126, "wrongjava");
+                    this.redirectToErrorPage((byte) -126, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -156,7 +156,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       var4 = var2.substring(6, var3);
                       if (ei.a((byte) -117, (CharSequence) ((Object) var4)) &&
                         !(qh.a((CharSequence) ((Object) var4), (byte) -85) >= 10)) {
-                        this.a((byte) -116, "wrongjava");
+                        this.redirectToErrorPage((byte) -116, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -246,7 +246,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               td.a((String) null, (Throwable) (var1), (byte) -128);
-              this.a((byte) -127, "crash");
+              this.redirectToErrorPage((byte) -127, "crash");
             }
             this.a(0, true);
             return;
@@ -355,18 +355,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     final static void a(int param0, lj param1) {
-        wg var2 = null;
+        VorbisSample var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          wg.b(param1.a(-2, "", "headers.packvorbis"));
+          VorbisSample.b(param1.a(-2, "", "headers.packvorbis"));
           if (param0 != 0) {
             screens = (GameScreen[]) null;
           }
-          var2 = wg.a(param1, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -433,7 +433,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void b(int param0);
 
-    final void a(byte param0, String param1) {
+    final void redirectToErrorPage(byte param0, String param1) {
         try {
           Throwable throwable = null;
           Exception exception = null;
@@ -535,7 +535,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a((byte) -127, "alreadyloaded");
+                this.redirectToErrorPage((byte) -127, "alreadyloaded");
                 return;
               }
               ra.field_g = 0;
@@ -551,7 +551,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dupTemp$0 = new PlatformTaskDispatcher(param4, param1, param6, true);
               sh.field_u = dupTemp$0;
               u.field_a = dupTemp$0;
-              var9 = sh.field_u.a((Runnable) (this), true, 1);
+              var9 = sh.field_u.requestThread((Runnable) (this), true, 1);
               while (true) {
                 if (var9.field_d == 0) {
                   c.a(-123, 10L);
@@ -565,7 +565,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
               td.a((String) null, var8, (byte) -69);
-              this.a((byte) -124, "crash");
+              this.redirectToErrorPage((byte) -124, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

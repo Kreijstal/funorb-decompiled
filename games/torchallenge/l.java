@@ -140,7 +140,7 @@ final class l {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (wg.a() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.a() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -149,8 +149,8 @@ final class l {
         System.arraycopy(this.field_f, 0, field_c, 0, var2);
         var3 = field_j[this.field_e - 1];
         var4 = sa.a((byte) 94, var3 - 1);
-        field_a[0] = wg.d(var4);
-        field_a[1] = wg.d(var4);
+        field_a[0] = VorbisSample.d(var4);
+        field_a[1] = VorbisSample.d(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_d.length; var6++) {
           var7 = this.field_d[var6];
@@ -159,7 +159,7 @@ final class l {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = wg.field_q[this.field_i[var7]].c();
+            var11 = VorbisSample.field_q[this.field_i[var7]].c();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_g[var7][var11 & var10];
@@ -171,7 +171,7 @@ final class l {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = wg.field_q[var13].c();
+              stackIn_14_2 = VorbisSample.field_q[var13].c();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }
@@ -307,15 +307,15 @@ final class l {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = wg.d(16);
+        var1 = VorbisSample.d(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = wg.d(5);
+        var2 = VorbisSample.d(5);
         var3 = 0;
         this.field_d = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = wg.d(4);
+          var5 = VorbisSample.d(4);
           this.field_d[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -326,12 +326,12 @@ final class l {
         this.field_i = new int[var3];
         this.field_g = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_b[var4Lifetime1] = wg.d(3) + 1;
-          dupTemp$1 = wg.d(2);
+          this.field_b[var4Lifetime1] = VorbisSample.d(3) + 1;
+          dupTemp$1 = VorbisSample.d(2);
           this.field_h[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_i[var4Lifetime1] = wg.d(8);
+            this.field_i[var4Lifetime1] = VorbisSample.d(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -339,11 +339,11 @@ final class l {
           var6_ref_int__ = var9;
           this.field_g[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = wg.d(8) - 1;
+            var6_ref_int__[var7] = VorbisSample.d(8) - 1;
           }
         }
-        this.field_e = wg.d(2) + 1;
-        var4Lifetime2 = wg.d(4);
+        this.field_e = VorbisSample.d(2) + 1;
+        var4Lifetime2 = VorbisSample.d(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_b[this.field_d[var6]];
@@ -357,7 +357,7 @@ final class l {
           for (var8 = 0; var8 < this.field_b[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_f[incrementValue$0] = wg.d(var4Lifetime2);
+            this.field_f[incrementValue$0] = VorbisSample.d(var4Lifetime2);
           }
         }
         if (field_c != null &&

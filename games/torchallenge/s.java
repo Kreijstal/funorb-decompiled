@@ -70,7 +70,7 @@ final class s extends IntrusiveNode {
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == gf.field_o) {
-            gf.field_o = vl.field_a.a(ae.field_x, ll.field_f, 431890200);
+            gf.field_o = vl.field_a.requestSocket(ae.field_x, ll.field_f, 431890200);
           }
           if (gf.field_o.field_d == 0) {
             return false;

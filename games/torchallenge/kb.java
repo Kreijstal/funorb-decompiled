@@ -127,7 +127,7 @@ final class kb extends PcmStream {
           this.field_t[var3] = this.field_q[var3];
         }
         if (param0 != -1863960953) {
-          this.b();
+          this.nextSubstream();
         }
         int var5 = 0;
         var3Lifetime1 = var5;
@@ -370,7 +370,7 @@ final class kb extends PcmStream {
         this.field_s = param1;
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 0;
     }
 
@@ -431,7 +431,7 @@ final class kb extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var6;
@@ -447,7 +447,7 @@ final class kb extends PcmStream {
             }
             var5 = (int)((-1L + (this.field_x - this.field_H + (long)var2)) / (long)var2);
             this.field_H = this.field_H + (long)var5 * (long)var2;
-            this.field_I.a(var5);
+            this.field_I.skip(var5);
             param0 = param0 - var5;
             this.c(true);
             if (!this.field_P.d()) {
@@ -455,7 +455,7 @@ final class kb extends PcmStream {
             }
           }
         }
-        this.field_I.a(param0);
+        this.field_I.skip(param0);
     }
 
     private final int a(int param0, dl param1) {
@@ -655,7 +655,7 @@ final class kb extends PcmStream {
         }
         if (param1 != 122) {
           int[] var6 = (int[]) null;
-          this.b((int[]) null, -5, 97);
+          this.mixInto((int[]) null, -5, 97);
         }
     }
 
@@ -666,7 +666,7 @@ final class kb extends PcmStream {
         var4 = TorChallenge.field_F ? 1 : 0;
         if (param1 >= -95) {
           var5 = (int[]) null;
-          this.b((int[]) null, -23, -98);
+          this.mixInto((int[]) null, -23, -98);
         }
         if ((2 & this.field_J[param0]) != 0) {
           var3 = (dl) (this.field_I.field_o.first((byte) 113));
@@ -694,7 +694,7 @@ final class kb extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -713,7 +713,7 @@ final class kb extends PcmStream {
               if (0L > -var5 + this.field_x) {
                 var7 = (int)((-1L + (long)var4_int + (-this.field_H + this.field_x)) / (long)var4_int);
                 this.field_H = this.field_H + (long)var7 * (long)var4_int;
-                this.field_I.b(param0, param1, var7);
+                this.field_I.mixInto(param0, param1, var7);
                 this.c(true);
                 param1 = param1 + var7;
                 param2 = param2 - var7;
@@ -725,10 +725,10 @@ final class kb extends PcmStream {
               }
               break;
             }
-            this.field_I.b(param0, param1, param2);
+            this.field_I.mixInto(param0, param1, param2);
             return;
           }
-          this.field_I.b(param0, param1, param2);
+          this.field_I.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -993,9 +993,9 @@ final class kb extends PcmStream {
           }
           param4.field_K.g(param4.field_z);
           if (param2 != null) {
-            param4.field_K.b(param2, param0, param3);
+            param4.field_K.mixInto(param2, param0, param3);
           } else {
-            param4.field_K.a(param3);
+            param4.field_K.skip(param3);
           }
           if (param4.field_K.l()) {
             this.field_I.field_u.a(param4.field_K);
@@ -1121,11 +1121,11 @@ final class kb extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream nextSubstream() {
         return null;
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream firstSubstream() {
         return (PcmStream) ((Object) this.field_I);
     }
 

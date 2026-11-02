@@ -39,7 +39,7 @@ final class fl extends vb {
               stackIn_8_1 = 2;
             }
             ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_8_1, (byte) 122);
-            this.field_d.a(0L, -1709073240);
+            this.field_d.writeFiveByteValue(0L, -1709073240);
             this.field_u.a(this.field_d.payload.length, 0, (byte) 98, this.field_d.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -319,7 +319,7 @@ final class fl extends vb {
             while (var2 != null) {
               this.field_d.position = 0;
               this.field_d.writeByte(1, (byte) 122);
-              this.field_d.a(var2.field_l, -1709073240);
+              this.field_d.writeFiveByteValue(var2.field_l, -1709073240);
               this.field_u.a(this.field_d.payload.length, 0, (byte) 101, this.field_d.payload);
               this.field_l.a(var2, 3329);
               var2 = (db) (this.field_c.d(49));
@@ -331,7 +331,7 @@ final class fl extends vb {
             while (var2Lifetime1 != null) {
               this.field_d.position = 0;
               this.field_d.writeByte(0, (byte) 122);
-              this.field_d.a(var2Lifetime1.field_l, -1709073240);
+              this.field_d.writeFiveByteValue(var2Lifetime1.field_l, -1709073240);
               this.field_u.a(this.field_d.payload.length, 0, (byte) 76, this.field_d.payload);
               this.field_i.a(var2Lifetime1, 3329);
               var2Lifetime1 = (db) (this.field_k.d(118));
@@ -441,7 +441,7 @@ final class fl extends vb {
                 this.field_p.field_C = this.field_p.field_C + var6;
                 this.field_p.field_A.position = this.field_p.field_A.position + var6;
                 if (this.field_p.field_A.position == var5) {
-                  this.field_p.a(12695);
+                  this.field_p.unlinkSecondary(12695);
                   this.field_p.field_v = false;
                   this.field_p = null;
                 } else {

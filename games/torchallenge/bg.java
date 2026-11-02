@@ -204,7 +204,7 @@ final class bg extends ic {
                         var13 = param3.readInt(98);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param3.a(102, var21[var12_int], var13, 0);
+                        param3.readBytes(102, var21[var12_int], var13, 0);
                       }
                     }
                     var18.field_t[var5] = var6_int;
@@ -215,7 +215,7 @@ final class bg extends ic {
                       var12[var17] = gf.a(0, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param2.a(var8, (byte) 113, var12, gf.a(0, var20));
+                    var18.field_q[var5] = param2.requestMethod(var8, (byte) 113, var12, gf.a(0, var20));
                     var18.field_s[var5] = var21;
                   }
                 } else {
@@ -229,7 +229,7 @@ final class bg extends ic {
                   }
                   var18.field_t[var5] = var6_int;
                   var18.field_u[var5] = var9;
-                  var18.field_j[var5] = param2.a((byte) -125, var15, gf.a(0, var16));
+                  var18.field_j[var5] = param2.requestField((byte) -125, var15, gf.a(0, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

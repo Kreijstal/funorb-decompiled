@@ -197,12 +197,12 @@ final class hb {
                       param0.writeByte(0, (byte) 122);
                     } else if (var11 instanceof Number) {
                       param0.writeByte(1, (byte) 122);
-                      param0.a(true, ((Number) (var11)).longValue());
+                      param0.writeLong(true, ((Number) (var11)).longValue());
                     } else if (!(var11 instanceof String)) {
                       param0.writeByte(4, (byte) 122);
                     } else {
                       param0.writeByte(2, (byte) 122);
-                      param0.a((String) (var11), (byte) 123);
+                      param0.writeString((String) (var11), (byte) 123);
                     }
                   } else {
                     if (var7_int == 4) {

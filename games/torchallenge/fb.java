@@ -362,7 +362,7 @@ final class fb extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.f(-98);
+              var22 = var38.readVarInt(-98);
             }
             this.field_j[var23] = (short)(this.field_j[var23] + jh.a(32768, var22 - 1 << 14));
             this.field_m[var23] = var22;

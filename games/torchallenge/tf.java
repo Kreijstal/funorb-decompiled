@@ -163,7 +163,7 @@ final class tf {
             } else {
               for (var11Lifetime2 = 0; var11Lifetime2 < this.field_m; var11Lifetime2++) {
                 var22 = new byte[64];
-                var18.a(93, var22, 64, 0);
+                var18.readBytes(93, var22, 64, 0);
                 this.field_n[this.field_y[var11Lifetime2]] = var22;
               }
               for (var11Lifetime2 = 0; this.field_m > var11Lifetime2; var11Lifetime2++) {

@@ -266,7 +266,7 @@ final class u {
         RuntimeException var5 = null;
         long var6 = 0L;
         fe var8 = null;
-        wg var9 = null;
+        VorbisSample var9 = null;
         fe stackIn_2_0 = null;
         fe stackIn_5_0 = null;
         Object stackIn_9_0 = null;
@@ -296,9 +296,9 @@ final class u {
             stackIn_9_0 = null;
             return (fe) (stackIn_9_0);
           }
-          var9 = (wg) (this.field_f.a((byte) 100, var6));
+          var9 = (VorbisSample) (this.field_f.a((byte) 100, var6));
           if (var9 == null) {
-            var9 = wg.a(this.field_e, param3, param2);
+            var9 = VorbisSample.a(this.field_e, param3, param2);
             if (var9 == null) {
               stackIn_14_0 = null;
               return (fe) (stackIn_14_0);

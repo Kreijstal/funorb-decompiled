@@ -69,7 +69,7 @@ final class wj {
             ob.b(param0 ^ -363);
             return;
           }
-          var4 = var10.e((byte) -92);
+          var4 = var10.readSignedSmart((byte) -92);
           var5 = (bk) (na.field_d.first((byte) -68));
           while (var5 != null) {
             if (~var3 != ~var5.field_v ||

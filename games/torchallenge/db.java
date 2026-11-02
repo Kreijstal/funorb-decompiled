@@ -82,7 +82,7 @@ final class db extends sh {
               var11 = var12;
               var8 = var11;
               var5 = var8;
-              var10.a(111, var12, var4, 0);
+              var10.readBytes(111, var12, var4, 0);
             }
             var10.position = var10.position + 4;
             if (!var10.e(0)) {

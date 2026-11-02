@@ -290,16 +290,16 @@ final class dc {
           this.field_d.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.b((byte) 24);
+          var4 = param0.readUnsignedSmart((byte) 24);
           if (var4 == 0) {
             break;
           }
           this.field_l[var3] = var4;
-          this.field_j[var3] = param0.e((byte) -95);
-          this.field_u[var3] = param0.b((byte) 24);
+          this.field_j[var3] = param0.readSignedSmart((byte) -95);
+          this.field_u[var3] = param0.readUnsignedSmart((byte) 24);
         }
-        this.field_s = param0.b((byte) 24);
-        this.field_k = param0.b((byte) 24);
+        this.field_s = param0.readUnsignedSmart((byte) 24);
+        this.field_k = param0.readUnsignedSmart((byte) 24);
         this.field_h = param0.readUnsignedShort(false);
         this.field_t = param0.readUnsignedShort(false);
         this.field_c = new ce();

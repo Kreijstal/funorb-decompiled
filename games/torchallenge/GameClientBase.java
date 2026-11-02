@@ -123,20 +123,20 @@ abstract class GameClientBase extends GameApplet {
           ah.field_b != 0) {
           if (li.field_K < 10) {
             if (3 == ah.field_b) {
-              this.a((byte) -105, "js5crc");
+              this.redirectToErrorPage((byte) -105, "js5crc");
             } else {
               if (ah.field_b != 4) {
                 if (ah.field_b != 2) {
                   if (ah.field_b != 5) {
-                    this.a((byte) -99, "js5connect");
+                    this.redirectToErrorPage((byte) -99, "js5connect");
                   } else {
-                    this.a((byte) -126, "outofdate");
+                    this.redirectToErrorPage((byte) -126, "outofdate");
                   }
                 } else {
-                  this.a((byte) -108, "js5connect_full");
+                  this.redirectToErrorPage((byte) -108, "js5connect_full");
                 }
               } else {
-                this.a((byte) -111, "js5io");
+                this.redirectToErrorPage((byte) -111, "js5io");
               }
             }
           } else {
@@ -467,7 +467,7 @@ abstract class GameClientBase extends GameApplet {
           return var2;
         }
         if (!ll.field_i) {
-          this.a((byte) -108, "reconnect");
+          this.redirectToErrorPage((byte) -108, "reconnect");
         }
         LocalizedStrings.f(10);
         te.a(-1, var2, SecondaryNodeDequeIterator.field_c);
@@ -688,7 +688,7 @@ abstract class GameClientBase extends GameApplet {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             td.a((String) null, (Throwable) ((Object) var6_ref), (byte) -52);
-            this.a((byte) -122, "crash");
+            this.redirectToErrorPage((byte) -122, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

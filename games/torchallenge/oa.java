@@ -51,7 +51,7 @@ final class oa {
             var6_int = this.field_f.readInt(param3 ^ 41);
             var7 = this.field_f.readInt(97);
             var13 = new byte[64];
-            this.field_f.a(84, var13, 64, 0);
+            this.field_f.readBytes(84, var13, 64, 0);
             var9 = new di(param0, param1, param4, this.field_c, this.field_j, var6_int, var13, var7, param2);
             this.field_b[param0] = var9;
             stackIn_13_0 = var9;
@@ -111,7 +111,7 @@ final class oa {
         o.field_m = stackIn_3_0;
         uk.field_L = 127 & var3;
         ih.field_K = var9.readUnsignedByte(-85);
-        ik.field_b = var9.k(-123);
+        ik.field_b = var9.readLong(-123);
         if (uk.field_L != 2) {
           hc.field_O = 0;
           hf.field_e = 0;
@@ -231,7 +231,7 @@ final class oa {
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(param0 + 12048, var4, var13.length, 0);
+        var10.readBytes(param0 + 12048, var4, var13.length, 0);
         if (this.field_i == null) {
           var5 = var4;
           if (var5.length != 65) {

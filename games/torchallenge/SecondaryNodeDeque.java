@@ -15,9 +15,9 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_c;
     static String field_g;
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         if (param0.secondaryPrevious != null) {
-          param0.a(12695);
+          param0.unlinkSecondary(12695);
         }
         if (param1 != 2) {
           return;
@@ -137,14 +137,14 @@ final class SecondaryNodeDeque implements Iterable {
           field_a = (Sprite[][]) null;
           var2 = this.field_f.secondaryNext;
           if (this.field_f != var2) {
-            var2.a(12695);
+            var2.unlinkSecondary(12695);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_f.secondaryNext;
         if (this.field_f != var2Lifetime1) {
-          var2Lifetime1.a(12695);
+          var2Lifetime1.unlinkSecondary(12695);
           return var2Lifetime1;
         }
         return null;

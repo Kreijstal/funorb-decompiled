@@ -271,7 +271,7 @@ final class nc extends PcmStream {
         return param5 >> 1;
     }
 
-    final int a() {
+    final int activity() {
         if (this.field_q == 0 &&
           this.field_w == 0) {
           return 0;
@@ -421,7 +421,7 @@ final class nc extends PcmStream {
         return this.field_A < 0 || this.field_A >= ((fe) (this.field_k)).field_k.length << 8;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -975,7 +975,7 @@ final class nc extends PcmStream {
         this.field_A = param0;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -991,7 +991,7 @@ final class nc extends PcmStream {
         int var10Lifetime1;
         if (this.field_q == 0 &&
           this.field_w == 0) {
-          this.a(param2);
+          this.skip(param2);
           return;
         }
         var4 = (fe) (this.field_k);
@@ -1286,7 +1286,7 @@ final class nc extends PcmStream {
         this.field_u = param1;
     }
 
-    final int d() {
+    final int priority() {
         int var1 = this.field_o * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_x == 0) {
@@ -1342,7 +1342,7 @@ final class nc extends PcmStream {
         return param3;
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -1747,7 +1747,7 @@ final class nc extends PcmStream {
         return param3;
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 

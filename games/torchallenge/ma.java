@@ -25,7 +25,7 @@ abstract class ma extends ui implements cc {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             hb.a(var1, -95);
-            dk.field_s.a(var1.position - var2, -111);
+            dk.field_s.patchByteLength(var1.position - var2, -111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

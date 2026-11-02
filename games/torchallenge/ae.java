@@ -95,13 +95,13 @@ final class ae extends IntrusiveNode {
           if (param2 != -15024) {
             field_A = (int[]) null;
           }
-          var5.c((byte) -89, param1.field_o);
+          var5.writeSignedSmart((byte) -89, param1.field_o);
           var5.writeInt(param1.field_m, false);
           var5.writeInt(param1.field_k, false);
           var5.writeInt(param1.field_u, false);
           var5.writeInt(param1.field_j, false);
           var5.b(var4, param2 + 29454);
-          var5.a(var5.position - var4, -111);
+          var5.patchByteLength(var5.position - var4, -111);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

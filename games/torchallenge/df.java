@@ -109,7 +109,7 @@ class df extends ng {
           }
           try {
             if (nh.field_jb == 0) {
-              n.field_cb = rc.field_t.a(BufferedSocket.field_d, mc.field_o, 431890200);
+              n.field_cb = rc.field_t.requestSocket(BufferedSocket.field_d, mc.field_o, 431890200);
               nh.field_jb = nh.field_jb + 1;
             }
             if (nh.field_jb == 1) {

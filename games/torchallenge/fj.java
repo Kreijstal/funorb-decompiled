@@ -32,7 +32,7 @@ final class fj extends PcmStream {
         jl.field_c = null;
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -55,7 +55,7 @@ final class fj extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -192,24 +192,24 @@ final class fj extends PcmStream {
         field_p = null;
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 2;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         if (this.field_w > 0 &&
           null != this.field_n) {
-          this.field_B.a(param0);
+          this.field_B.skip(param0);
         }
         if (this.field_w < 1048576 &&
           null != this.field_A) {
-          this.field_v.a(param0);
+          this.field_v.skip(param0);
         }
         if (this.field_o > 0 &&
           null != this.field_r) {
-          this.field_D.a(param0);
+          this.field_D.skip(param0);
         }
         if (this.field_t) {
           if (this.field_x > 0 &&
@@ -256,7 +256,7 @@ final class fj extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -280,7 +280,7 @@ final class fj extends PcmStream {
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           if (this.field_y <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_t) {
@@ -337,7 +337,7 @@ final class fj extends PcmStream {
           if (this.field_o < 256 && (null != this.field_n ||
             this.field_A != null)) {
             if (256 == var4_int) {
-              this.field_B.b(param0, param1, param2);
+              this.field_B.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (null != this.field_u &&
@@ -348,8 +348,8 @@ final class fj extends PcmStream {
                   this.field_u = new int[var6];
                   this.field_q = new int[var6];
                 }
-                this.field_B.b(this.field_u, 0, param2);
-                this.field_v.b(this.field_q, 0, param2);
+                this.field_B.mixInto(this.field_u, 0, param2);
+                this.field_v.mixInto(this.field_q, 0, param2);
                 if (kh.field_g) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -362,7 +362,7 @@ final class fj extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_u[var8] * var4_int + var5 * this.field_q[var8] >> 8);
                 }
               } else {
-                this.field_v.b(param0, param1, param2);
+                this.field_v.mixInto(param0, param1, param2);
               }
             }
           }
@@ -377,7 +377,7 @@ final class fj extends PcmStream {
               this.field_q = new int[var6];
               this.field_u = new int[var6];
             }
-            this.field_D.b(this.field_u, 0, param2);
+            this.field_D.mixInto(this.field_u, 0, param2);
             if (kh.field_g) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;

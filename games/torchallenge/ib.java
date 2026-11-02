@@ -528,7 +528,7 @@ final class ib extends kj implements tb, sg {
           dk.field_s.position = dk.field_s.position + 2;
           var5_int = dk.field_s.position;
           dk.field_s.writeInt(na.field_c, false);
-          dk.field_s.a(true, wh.field_c);
+          dk.field_s.writeLong(true, wh.field_c);
           var6 = 0;
           if (fg.field_S) {
             var6 = var6 | 1;
@@ -547,12 +547,12 @@ final class ib extends kj implements tb, sg {
           if (var7 == null) {
             var7 = "";
           }
-          dk.field_s.a(var7, (byte) 94);
+          dk.field_s.writeString(var7, (byte) 94);
           if (le.field_c != null) {
-            dk.field_s.a((byte) 27, le.field_c);
+            dk.field_s.writePrefixedString((byte) 27, le.field_c);
           }
           ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
-          dk.field_s.b(-var5_int + dk.field_s.position, (byte) -40);
+          dk.field_s.patchShortLength(-var5_int + dk.field_s.position, (byte) -40);
           nb.a(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -108,9 +108,9 @@ final class GameScreen {
               DelegatingCanvas.field_e.position = 0;
               DelegatingCanvas.field_e.writeInt(id.field_a.nextInt(), false);
               DelegatingCanvas.field_e.writeInt(id.field_a.nextInt(), false);
-              DelegatingCanvas.field_e.a((byte) 15, var7);
-              DelegatingCanvas.field_e.a((byte) 70, var8);
-              DelegatingCanvas.field_e.a((byte) 73, cd.a(-98, (CharSequence) ((Object) param2)));
+              DelegatingCanvas.field_e.writePrefixedString((byte) 15, var7);
+              DelegatingCanvas.field_e.writePrefixedString((byte) 70, var8);
+              DelegatingCanvas.field_e.writePrefixedString((byte) 73, cd.a(-98, (CharSequence) ((Object) param2)));
               DelegatingCanvas.field_e.writeShort(param4, (byte) 106);
               DelegatingCanvas.field_e.writeByte(param1, (byte) 122);
               DelegatingCanvas.field_e.writeByte(var9, (byte) 122);
@@ -121,9 +121,9 @@ final class GameScreen {
               if (null == var11_ref_String) {
                 var11_ref_String = "";
               }
-              dk.field_s.a(var11_ref_String, (byte) 97);
+              dk.field_s.writeString(var11_ref_String, (byte) 97);
               ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
-              dk.field_s.b(dk.field_s.position - var10, (byte) -40);
+              dk.field_s.patchShortLength(dk.field_s.position - var10, (byte) -40);
               decompiledFrameRemainder1 = (var13 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -137,7 +137,7 @@ final class GameScreen {
               } else {
                 stackIn_27_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_26_0).a((byte) stackIn_26_1, stackIn_27_2);
+              ((PacketBuffer) (Object) stackIn_26_0).writePrefixedString((byte) stackIn_26_1, stackIn_27_2);
               stackIn_30_0 = DelegatingCanvas.field_e;
               stackIn_30_1 = 26;
               if (!param0.b((byte) -29)) {
@@ -145,12 +145,12 @@ final class GameScreen {
               } else {
                 stackIn_31_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_30_0).a((byte) stackIn_30_1, stackIn_31_2);
+              ((PacketBuffer) (Object) stackIn_30_0).writePrefixedString((byte) stackIn_30_1, stackIn_31_2);
               dk.field_s.writeByte(16, (byte) 122);
               dk.field_s.position = dk.field_s.position + 1;
               var9 = dk.field_s.position;
               ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
-              dk.field_s.a(-var9 + dk.field_s.position, -111);
+              dk.field_s.patchByteLength(-var9 + dk.field_s.position, -111);
             }
             nb.a(-1, -1);
             aj.field_c = sh.field_t;
@@ -204,7 +204,7 @@ final class GameScreen {
                     ck.field_b = false;
                     break;
                   }
-                  ra.field_d[var12] = id.field_b.c((byte) 110);
+                  ra.field_d[var12] = id.field_b.readPrefixedString((byte) 110);
                   var12++;
                 } while (var13 == 0);
                 stackIn_69_0 = 100 + var11;
@@ -220,7 +220,7 @@ final class GameScreen {
               decompiledSharedTail0 = (var13 != 0);
             }
             if (decompiledSharedTail0) {
-              var9_ref_String = id.field_b.a(-29648475);
+              var9_ref_String = id.field_b.readOptionalString(-29648475);
               if (var9_ref_String != null) {
                 hl.a(param5 ^ -116, gi.b(12476), var9_ref_String);
               }

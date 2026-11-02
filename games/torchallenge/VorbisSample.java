@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wg extends IntrusiveNode {
+final class VorbisSample extends IntrusiveNode {
     private int field_u;
     private static float[] field_E;
     private static float[] field_C;
@@ -18,7 +18,7 @@ final class wg extends IntrusiveNode {
     private float[] field_J;
     private int field_A;
     private int field_N;
-    static th[] field_q;
+    static VorbisCodebook[] field_q;
     private static l[] field_v;
     private static int[] field_L;
     private static float[] field_z;
@@ -39,10 +39,10 @@ final class wg extends IntrusiveNode {
     private static ig[] field_G;
     private static int field_t;
 
-    final static wg a(lj param0, String param1, String param2) {
+    final static VorbisSample a(lj param0, String param1, String param2) {
         try {
-          wg var4_ref = null;
-          if (!wg.a(param0)) {
+          VorbisSample var4_ref = null;
+          if (!VorbisSample.a(param0)) {
             param0.b(-120, param1, param2);
             return null;
           }
@@ -52,7 +52,7 @@ final class wg extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new wg(var3);
+            var4_ref = new VorbisSample(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -64,10 +64,10 @@ final class wg extends IntrusiveNode {
         }
     }
 
-    final static wg a(lj param0, int param1, int param2) {
+    final static VorbisSample a(lj param0, int param1, int param2) {
         try {
-          wg var4_ref = null;
-          if (!wg.a(param0)) {
+          VorbisSample var4_ref = null;
+          if (!VorbisSample.a(param0)) {
             param0.a(param2, 76, param1);
             return null;
           }
@@ -77,7 +77,7 @@ final class wg extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new wg(var3);
+            var4_ref = new VorbisSample(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -115,7 +115,7 @@ final class wg extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(100, var6, var5, 0);
+          var2.readBytes(100, var6, var5, 0);
           this.field_x[var4] = var6;
         }
     }
@@ -133,7 +133,7 @@ final class wg extends IntrusiveNode {
           if (var1 == null) {
             return false;
           }
-          wg.b(var1);
+          VorbisSample.b(var1);
         }
         return true;
     }
@@ -231,9 +231,9 @@ final class wg extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        wg.a(param0, 0);
-        field_w = 1 << wg.d(4);
-        field_F = 1 << wg.d(4);
+        VorbisSample.a(param0, 0);
+        field_w = 1 << VorbisSample.d(4);
+        field_F = 1 << VorbisSample.d(4);
         field_B = new float[field_F];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -277,41 +277,41 @@ final class wg extends IntrusiveNode {
             field_y = var9;
           }
         }
-        var1Lifetime1 = wg.d(8) + 1;
-        field_q = new th[var1Lifetime1];
+        var1Lifetime1 = VorbisSample.d(8) + 1;
+        field_q = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_q[var2Lifetime1] = new th();
+          field_q[var2Lifetime1] = new VorbisCodebook();
         }
-        var2Lifetime2 = wg.d(6) + 1;
+        var2Lifetime2 = VorbisSample.d(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          wg.d(16);
+          VorbisSample.d(16);
         }
-        var2Lifetime3 = wg.d(6) + 1;
+        var2Lifetime3 = VorbisSample.d(6) + 1;
         field_v = new l[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_v[var3Lifetime2] = new l();
         }
-        var3Lifetime3 = wg.d(6) + 1;
+        var3Lifetime3 = VorbisSample.d(6) + 1;
         field_I = new lf[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_I[var4Lifetime1] = new lf();
         }
-        var4Lifetime2 = wg.d(6) + 1;
+        var4Lifetime2 = VorbisSample.d(6) + 1;
         field_G = new ig[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_G[var5Lifetime1] = new ig();
         }
-        var5Lifetime2 = wg.d(6) + 1;
+        var5Lifetime2 = VorbisSample.d(6) + 1;
         field_D = new boolean[var5Lifetime2];
         field_o = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_D);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (wg.a() != 0);
+          stackIn_42_2 = (VorbisSample.a() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          wg.d(16);
-          wg.d(16);
-          field_o[var6] = wg.d(8);
+          VorbisSample.d(16);
+          VorbisSample.d(16);
+          field_o[var6] = VorbisSample.d(8);
         }
         field_O = true;
     }
@@ -514,9 +514,9 @@ final class wg extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        wg.a(this.field_x[param0], 0);
-        wg.a();
-        var2 = wg.d(sa.a((byte) 65, field_o.length - 1));
+        VorbisSample.a(this.field_x[param0], 0);
+        VorbisSample.a();
+        var2 = VorbisSample.d(sa.a((byte) 65, field_o.length - 1));
         var3 = field_D[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_w;
@@ -527,9 +527,9 @@ final class wg extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (wg.a() == 0) ? 0 : 1;
+          stackIn_7_0 = (VorbisSample.a() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (wg.a() == 0) ? 0 : 1;
+          stackIn_10_0 = (VorbisSample.a() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -754,7 +754,7 @@ final class wg extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    private wg(byte[] param0) throws IOException {
+    private VorbisSample(byte[] param0) throws IOException {
         this.a(param0);
     }
 

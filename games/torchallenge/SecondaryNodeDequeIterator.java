@@ -39,7 +39,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.a(12695);
+        this.field_a.unlinkSecondary(12695);
         this.field_a = null;
     }
 

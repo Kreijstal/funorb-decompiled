@@ -25,14 +25,14 @@ class kh {
     private int field_d;
 
     private final static void a(PcmStream param0) {
-        param0.field_j = false;
+        param0.active = false;
         if (param0.field_k != null) {
           param0.field_k.field_i = 0;
         }
-        PcmStream var1 = param0.c();
+        PcmStream var1 = param0.firstSubstream();
         while (var1 != null) {
           kh.a(var1);
-          var1 = param0.b();
+          var1 = param0.nextSubstream();
         }
     }
 
@@ -116,7 +116,7 @@ class kh {
                 field_n == null) {
                 field_n = new bb();
                 field_n.field_b = param0;
-                param0.a((Runnable) ((Object) field_n), true, field_i);
+                param0.requestThread((Runnable) ((Object) field_n), true, field_i);
               }
               if (field_n != null) {
                 if (field_n.field_a[param2] != null) {
@@ -172,7 +172,7 @@ class kh {
           this.field_e <= 0) {
           this.field_e = this.field_e + (field_p >> 4);
           kh.a(this.field_u);
-          this.a(this.field_u, this.field_u.d());
+          this.a(this.field_u, this.field_u.priority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -199,11 +199,11 @@ class kh {
                       var12.field_i > var8_int) {
                       var5 = var5 | 1 << var7_int;
                       var10 = var11;
-                      var11 = var11.field_i;
+                      var11 = var11.schedulerNext;
                       continue;
                     }
-                    var11.field_j = true;
-                    var13 = var11.a();
+                    var11.active = true;
+                    var13 = var11.activity();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_i = var12.field_i + var13;
@@ -211,18 +211,18 @@ class kh {
                     if (var4 >= this.field_l) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    var14Lifetime2 = var11.firstSubstream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_l;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.d() >> 8);
-                        var14Lifetime2 = var11.b();
+                        this.a(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
+                        var14Lifetime2 = var11.nextSubstream();
                       }
                     }
-                    var15 = var11.field_i;
-                    var11.field_i = null;
+                    var15 = var11.schedulerNext;
+                    var11.schedulerNext = null;
                     if (var10 != null) {
-                      ((PcmStream) (var10)).field_i = var15;
+                      ((PcmStream) (var10)).schedulerNext = var15;
                     } else {
                       this.field_f[var7_int] = var15;
                     }
@@ -248,8 +248,8 @@ class kh {
             this.field_s[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((PcmStream) (var7)).field_i;
-              ((PcmStream) (var7)).field_i = null;
+              var10Lifetime1 = ((PcmStream) (var7)).schedulerNext;
+              ((PcmStream) (var7)).schedulerNext = null;
               var7 = var10Lifetime1;
             }
           }
@@ -258,7 +258,7 @@ class kh {
           this.field_e = 0;
         }
         if (this.field_u != null) {
-          this.field_u.b(param0, 0, param1);
+          this.field_u.mixInto(param0, 0, param1);
         }
         this.field_h = ol.a(256);
     }
@@ -302,7 +302,7 @@ class kh {
         if (var4 == null) {
           this.field_f[var3] = param0;
         } else {
-          var4.field_i = param0;
+          var4.schedulerNext = param0;
         }
         this.field_s[var3] = param0;
         param0.field_l = param1;
@@ -317,7 +317,7 @@ class kh {
           this.field_e = 0;
         }
         if (this.field_u != null) {
-          this.field_u.a(param0);
+          this.field_u.skip(param0);
           return;
         }
     }

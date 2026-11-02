@@ -60,7 +60,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a(param3 ? 22 : 1, 0, param0, param2, -27024);
     }
 
-    final PlatformTask a(byte param0, String param1, Class param2) {
+    final PlatformTask requestField(byte param0, String param1, Class param2) {
         if (param0 >= -121) {
           return (PlatformTask) null;
         }
@@ -83,19 +83,19 @@ final class PlatformTaskDispatcher implements Runnable {
     final PlatformTask a(int param0, java.awt.Frame param1) {
         if (param0 != -3816) {
           java.net.URL var4 = (java.net.URL) null;
-          this.a((java.net.URL) null, 122);
+          this.requestUrl((java.net.URL) null, 122);
         }
         return this.a(7, 0, 0, param1, -27024);
     }
 
-    final PlatformTask a(java.net.URL param0, int param1) {
+    final PlatformTask requestUrl(java.net.URL param0, int param1) {
         if (param1 > -122) {
           field_f = 125L;
         }
         return this.a(4, 0, 0, param0, -27024);
     }
 
-    final PlatformTask a(Runnable param0, boolean param1, int param2) {
+    final PlatformTask requestThread(Runnable param0, boolean param1, int param2) {
         if (!param1) {
           this.field_k = (PlatformTask) null;
         }
@@ -352,7 +352,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(String param0, byte param1, Class[] param2, Class param3) {
+    final PlatformTask requestMethod(String param0, byte param1, Class[] param2, Class param3) {
         if (param1 <= 40) {
           return (PlatformTask) null;
         }
@@ -474,7 +474,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(int param0, String param1, int param2) {
+    final PlatformTask requestSocket(int param0, String param1, int param2) {
         if (param2 != 431890200) {
           return (PlatformTask) null;
         }

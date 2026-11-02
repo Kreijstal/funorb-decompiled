@@ -74,7 +74,7 @@ final class sa {
           var5.b(var4, 14430);
           var5.position = var5.position - 4;
           param2.field_j = var5.readInt(67);
-          var5.a(var5.position - var4, -112);
+          var5.patchByteLength(var5.position - var4, -112);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -344,7 +344,7 @@ final class td {
               stackIn_17_2 = null;
               stackIn_17_5 = ch.field_d;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_n).append("&e=").append(var7).toString()), -123);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).requestUrl(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_n).append("&e=").append(var7).toString()), -123);
             while (var4.field_d == 0) {
               c.a(51, 1L);
             }

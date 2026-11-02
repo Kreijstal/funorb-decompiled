@@ -322,7 +322,7 @@ final class rb implements Runnable {
         this.field_e = 0;
         this.field_f = false;
         try {
-          var2 = param0.a((Runnable) (this), true, 5);
+          var2 = param0.requestThread((Runnable) (this), true, 5);
           while (var2.field_d == 0) {
             c.a(-105, 10L);
           }
