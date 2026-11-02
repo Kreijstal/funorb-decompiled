@@ -6,7 +6,7 @@ import java.util.*;
 abstract class mi extends ub implements bg {
     ub field_F;
     static ga field_z;
-    static kl field_y;
+    static kl soundArchive;
     static kl field_E;
     static fl field_D;
     static String field_C;
@@ -172,7 +172,7 @@ abstract class mi extends ub implements bg {
         field_C = null;
         field_B = null;
         field_D = null;
-        field_y = null;
+        soundArchive = null;
         if (param0 != -4) {
           field_E = (kl) null;
         }
@@ -431,7 +431,7 @@ abstract class mi extends ub implements bg {
 
     final static void d(int param0) {
         if (param0 != 3) {
-          field_y = (kl) null;
+          soundArchive = (kl) null;
         }
     }
 

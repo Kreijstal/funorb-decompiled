@@ -7,7 +7,7 @@ final class sl extends na {
     static si[] field_o;
     private BufferedSocket field_p;
     static int field_r;
-    static ji[] field_q;
+    static ji[] musicTracks;
 
     final void a(boolean param0) {
         try {
@@ -303,12 +303,12 @@ final class sl extends na {
           this.field_p.b((byte) 76);
         }
         if (param0 > -73) {
-          field_q = (ji[]) null;
+          musicTracks = (ji[]) null;
         }
     }
 
     public static void e(int param0) {
-        field_q = null;
+        musicTracks = null;
         field_o = null;
         if (param0 != -1) {
           sl.a(-54, 7, -58);

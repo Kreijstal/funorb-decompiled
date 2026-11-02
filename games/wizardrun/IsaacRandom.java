@@ -213,7 +213,7 @@ final class IsaacRandom {
         return this.field_f[fieldTemp$0];
     }
 
-    final static gb a(int param0, String param1, kl param2, String param3, kl param4) {
+    final static gb loadFont(int param0, String param1, kl param2, String param3, kl param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

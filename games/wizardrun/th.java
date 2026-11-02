@@ -3,7 +3,7 @@
  */
 final class th {
     static byte[][][] field_a;
-    static boolean field_h;
+    static boolean resourcesLoaded;
     static bh field_d;
     static int field_i;
     private DualLinkNode field_c;

@@ -4,14 +4,14 @@
 final class hj {
     static int field_a;
     static String field_d;
-    static gb field_g;
+    static gb wizardFont;
     static int field_c;
     static int field_f;
     static int[] field_b;
     static int field_e;
 
     public static void a(byte param0) {
-        field_g = null;
+        wizardFont = null;
         field_d = null;
         field_b = null;
         if (param0 != -62) {

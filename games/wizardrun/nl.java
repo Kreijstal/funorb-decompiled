@@ -13,7 +13,7 @@ abstract class nl extends DualLinkNode {
     int field_u;
     int field_s;
     static String[] field_t;
-    static je[] field_q;
+    static je[] secondarySoundEffects;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         this.a(param4 << 8, param1, param0, (byte) -103, param3 << 5);
@@ -29,7 +29,7 @@ abstract class nl extends DualLinkNode {
           return;
         }
         field_A = null;
-        field_q = null;
+        secondarySoundEffects = null;
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
@@ -92,6 +92,6 @@ abstract class nl extends DualLinkNode {
         field_y = 0;
         field_t = new String[]{"Master Wizard", "Hat of Wizardry", "Cloak of Wizardry", "Gown of Wizardry", "Star of the Master", "Spider's Bane", "Pygmy Catcher", "Ghost Hunter", "Troll Basher", "Dragon Tamer", "Master of Magic", "Pumpkin Collector"};
         field_A = new int[8192];
-        field_q = new je[38];
+        secondarySoundEffects = new je[38];
     }
 }

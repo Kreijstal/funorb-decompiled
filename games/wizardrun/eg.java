@@ -21,15 +21,15 @@ final class eg extends qh {
     int field_y;
 
     private final void a(int param0, int param1, boolean param2, String param3, int param4) {
-        jj.field_b.b(param3, -1 + param1, param4, 0, -1);
-        jj.field_b.b(param3, param1 + 1, param4, 0, -1);
-        jj.field_b.b(param3, param1, -1 + param4, 0, -1);
-        jj.field_b.b(param3, param1, 1 + param4, 0, -1);
+        jj.wizardFont2.b(param3, -1 + param1, param4, 0, -1);
+        jj.wizardFont2.b(param3, param1 + 1, param4, 0, -1);
+        jj.wizardFont2.b(param3, param1, -1 + param4, 0, -1);
+        jj.wizardFont2.b(param3, param1, 1 + param4, 0, -1);
         if (!param2) {
           return;
         }
         try {
-          jj.field_b.b(param3, param1, param4, param0, -1);
+          jj.wizardFont2.b(param3, param1, param4, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -57,7 +57,7 @@ final class eg extends qh {
           if (param1 != 120) {
             return;
           }
-          this.a(20, tl.field_a, pk.field_s, si.field_j, (byte) -15, param2);
+          this.a(20, tl.field_a, pk.field_s, si.soundEffects, (byte) -15, param2);
           this.field_o = 6;
           this.field_w = this.field_w + 1;
           if (param0) {
@@ -191,7 +191,7 @@ final class eg extends qh {
             if (stackIn_94_0 == 1) {
               return;
             }
-            tl.field_a.a(si.field_j[6], 100, 256 * ee.field_p / 100);
+            tl.field_a.a(si.soundEffects[6], 100, 256 * ee.field_p / 100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class eg extends qh {
             }
             stackIn_34_0 = !(pk.field_s);
             if (!stackIn_34_0) {
-              tl.field_a.a(si.field_j[7], 100, ee.field_p * 256 / 100);
+              tl.field_a.a(si.soundEffects[7], 100, ee.field_p * 256 / 100);
             }
             this.field_w = 0;
             this.field_B = 44;
@@ -318,7 +318,7 @@ final class eg extends qh {
             this.field_o = this.field_o + 1;
             this.field_p = 0;
             if (pk.field_s) {
-              tl.field_a.a(si.field_j[6], 100, 256 * ee.field_p / 100);
+              tl.field_a.a(si.soundEffects[6], 100, 256 * ee.field_p / 100);
             }
           }
         }
@@ -519,11 +519,11 @@ final class eg extends qh {
                               this.field_o == 2) &&
                               (qh.field_l == 5 &&
                               ve.a((byte) 123, 0))) {
-                              jj.field_a[8].e(var2, var3);
+                              jj.gemSprites[8].e(var2, var3);
                             } else {
-                              jj.field_a[this.field_o].e(var2, var3);
+                              jj.gemSprites[this.field_o].e(var2, var3);
                             }
-                            this.field_q = jj.field_a[this.field_o];
+                            this.field_q = jj.gemSprites[this.field_o];
                             this.field_y = var2;
                             this.field_A = var3;
                             break regionExit1;
@@ -673,11 +673,11 @@ final class eg extends qh {
                                   if (this.field_o == 7) {
                                     var10 = 500;
                                   }
-                                  a.field_a.b(Integer.toString(var10), 16 + var2, var3 - 1, 0, -1);
-                                  a.field_a.b(Integer.toString(var10), 16 + var2, var3 + 1, 0, -1);
-                                  a.field_a.b(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
-                                  a.field_a.b(Integer.toString(var10), 17 + var2, var3, 0, -1);
-                                  a.field_a.b(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
+                                  a.font12.b(Integer.toString(var10), 16 + var2, var3 - 1, 0, -1);
+                                  a.font12.b(Integer.toString(var10), 16 + var2, var3 + 1, 0, -1);
+                                  a.font12.b(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
+                                  a.font12.b(Integer.toString(var10), 17 + var2, var3, 0, -1);
+                                  a.font12.b(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
                                   break regionExit1;
                               }
                             }
@@ -721,13 +721,13 @@ final class eg extends qh {
             if (0 <= qh.field_g &&
               !pg.field_q) {
               if (this.field_h == -1) {
-                ve.field_c[this.field_n].e(var2, var3);
-                this.field_q = ra.field_m[this.field_n];
+                ve.wizardSprites[this.field_n].e(var2, var3);
+                this.field_q = ra.wizardNoHatSprites[this.field_n];
                 this.field_y = var2;
                 this.field_A = var3;
               } else {
-                ve.field_c[this.field_n].d(var2, var3);
-                this.field_q = ra.field_m[this.field_n].c();
+                ve.wizardSprites[this.field_n].d(var2, var3);
+                this.field_q = ra.wizardNoHatSprites[this.field_n].c();
                 this.field_A = var3;
                 this.field_y = var2;
               }
@@ -747,12 +747,12 @@ final class eg extends qh {
                   } else {
                     stackIn_90_1 = 16776960;
                   }
-                  this.a(stackIn_90_1, ve.field_c[this.field_n].field_x + var2, true, ")", 32 + var3);
+                  this.a(stackIn_90_1, ve.wizardSprites[this.field_n].field_x + var2, true, ")", 32 + var3);
                 }
                 if (nk.field_T >= 50 &&
                   nk.field_T < 100) {
-                  var11 = jj.field_b.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
-                  var12 = var2 + ve.field_c[this.field_n].field_x / 2;
+                  var11 = jj.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
+                  var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
                   }
@@ -768,8 +768,8 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 100 &&
                   nk.field_T < 150) {
-                  var11 = jj.field_b.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
-                  var12 = var2 + ve.field_c[this.field_n].field_x / 2;
+                  var11 = jj.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
+                  var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
                   }
@@ -785,8 +785,8 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 150 &&
                   nk.field_T < 200) {
-                  var11 = jj.field_b.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
-                  var12 = var2 + ve.field_c[this.field_n].field_x / 2;
+                  var11 = jj.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
+                  var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
                   }
@@ -805,9 +805,9 @@ final class eg extends qh {
                 7 > cd.field_e % 10 &&
                 1 < cd.field_e % 10) {
                 if (this.field_h != -1) {
-                  ve.field_c[this.field_n].c().b(var2, var3, 16777215);
+                  ve.wizardSprites[this.field_n].c().b(var2, var3, 16777215);
                 } else {
-                  ve.field_c[this.field_n].b(var2, var3, 16777215);
+                  ve.wizardSprites[this.field_n].b(var2, var3, 16777215);
                 }
               }
               if (120 > fi.field_x) {
@@ -828,7 +828,7 @@ final class eg extends qh {
     }
 
     private final void c(int param0) {
-        tl.field_a.a(si.field_j[10], 100, ee.field_p * 256 / 100);
+        tl.field_a.a(si.soundEffects[10], 100, ee.field_p * 256 / 100);
         if (param0 != 1) {
           tg var3 = (tg) null;
           this.a(-123, (byte) -40, (tg) null, true);
@@ -964,7 +964,7 @@ final class eg extends qh {
           if (this.field_e == 0) {
             this.field_e = 20;
           }
-          this.a(1, si.field_j, param2, 1, param0, 1, tl.field_a, pk.field_s, (byte) 127);
+          this.a(1, si.soundEffects, param2, 1, param0, 1, tl.field_a, pk.field_s, (byte) 127);
           if (this.field_s > 0 &&
             !param3) {
             this.field_s = this.field_s - 1;
@@ -1006,15 +1006,15 @@ final class eg extends qh {
           this.field_w = 0;
           this.field_r = 0;
           if (pk.field_s) {
-            tl.field_a.a(si.field_j[6], 100, ee.field_p * 256 / 100);
+            tl.field_a.a(si.soundEffects[6], 100, ee.field_p * 256 / 100);
           }
         }
-        this.a(1, si.field_j, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) -57);
+        this.a(1, si.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) -57);
         if (1 == this.b(param1, -4) &&
           this.field_f.field_a == 0) {
           this.field_e = 20;
           if (pk.field_s) {
-            tl.field_a.a(si.field_j[2], 100, ee.field_p * 64 / 100);
+            tl.field_a.a(si.soundEffects[2], 100, ee.field_p * 64 / 100);
           }
         }
         this.field_n = 31;
@@ -1056,94 +1056,94 @@ final class eg extends qh {
         String var3;
         ol.field_e = true;
         if (3 == this.field_B) {
-          tl.field_a.a(nl.field_q[3], 100, ee.field_p * 256 / 100);
+          tl.field_a.a(nl.secondarySoundEffects[3], 100, ee.field_p * 256 / 100);
         } else {
           if (this.field_B == 4) {
-            tl.field_a.a(nl.field_q[4], 100, ee.field_p * 256 / 100);
+            tl.field_a.a(nl.secondarySoundEffects[4], 100, ee.field_p * 256 / 100);
           } else {
             if (5 == this.field_B) {
-              tl.field_a.a(nl.field_q[5], 100, ee.field_p * 256 / 100);
+              tl.field_a.a(nl.secondarySoundEffects[5], 100, ee.field_p * 256 / 100);
             } else {
               if (this.field_B == 6) {
-                tl.field_a.a(nl.field_q[7], 100, ee.field_p * 256 / 100);
+                tl.field_a.a(nl.secondarySoundEffects[7], 100, ee.field_p * 256 / 100);
               } else {
                 if (this.field_B == 8) {
-                  tl.field_a.a(nl.field_q[8], 100, 256 * ee.field_p / 100);
+                  tl.field_a.a(nl.secondarySoundEffects[8], 100, 256 * ee.field_p / 100);
                 } else {
                   if (this.field_B == 7) {
-                    tl.field_a.a(nl.field_q[9], 100, 256 * ee.field_p / 100);
+                    tl.field_a.a(nl.secondarySoundEffects[9], 100, 256 * ee.field_p / 100);
                   } else {
                     if (this.field_B == 9) {
-                      tl.field_a.a(nl.field_q[10], 100, 256 * ee.field_p / 100);
+                      tl.field_a.a(nl.secondarySoundEffects[10], 100, 256 * ee.field_p / 100);
                     } else {
                       if (this.field_B == 10) {
-                        tl.field_a.a(nl.field_q[11], 100, 256 * ee.field_p / 100);
+                        tl.field_a.a(nl.secondarySoundEffects[11], 100, 256 * ee.field_p / 100);
                       } else {
                         if (this.field_B == 12) {
-                          tl.field_a.a(nl.field_q[13], 100, ee.field_p * 256 / 100);
+                          tl.field_a.a(nl.secondarySoundEffects[13], 100, ee.field_p * 256 / 100);
                         } else {
                           if (this.field_B == 14) {
-                            tl.field_a.a(nl.field_q[14], 100, ee.field_p * 256 / 100);
+                            tl.field_a.a(nl.secondarySoundEffects[14], 100, ee.field_p * 256 / 100);
                           } else {
                             if (this.field_B == 13) {
-                              tl.field_a.a(nl.field_q[15], 100, 256 * ee.field_p / 100);
+                              tl.field_a.a(nl.secondarySoundEffects[15], 100, 256 * ee.field_p / 100);
                             } else {
                               if (this.field_B == 15) {
-                                tl.field_a.a(nl.field_q[16], 100, 256 * ee.field_p / 100);
+                                tl.field_a.a(nl.secondarySoundEffects[16], 100, 256 * ee.field_p / 100);
                               } else {
                                 if (this.field_B == 16) {
-                                  tl.field_a.a(nl.field_q[19], 100, ee.field_p * 256 / 100);
+                                  tl.field_a.a(nl.secondarySoundEffects[19], 100, ee.field_p * 256 / 100);
                                 } else {
                                   if (this.field_B == 17) {
-                                    tl.field_a.a(nl.field_q[21], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.a(nl.secondarySoundEffects[21], 100, 256 * ee.field_p / 100);
                                   } else {
                                     if (22 == this.field_B) {
-                                      tl.field_a.a(nl.field_q[22], 100, ee.field_p * 256 / 100);
+                                      tl.field_a.a(nl.secondarySoundEffects[22], 100, ee.field_p * 256 / 100);
                                     } else {
                                       if (this.field_B == 24) {
-                                        tl.field_a.a(nl.field_q[23], 100, 256 * ee.field_p / 100);
+                                        tl.field_a.a(nl.secondarySoundEffects[23], 100, 256 * ee.field_p / 100);
                                       } else {
                                         if (this.field_B == 23) {
-                                          tl.field_a.a(nl.field_q[24], 100, ee.field_p * 256 / 100);
+                                          tl.field_a.a(nl.secondarySoundEffects[24], 100, ee.field_p * 256 / 100);
                                         } else {
                                           if (26 == this.field_B) {
-                                            tl.field_a.a(nl.field_q[26], 100, ee.field_p * 256 / 100);
+                                            tl.field_a.a(nl.secondarySoundEffects[26], 100, ee.field_p * 256 / 100);
                                           } else {
                                             if (this.field_B == 29) {
-                                              tl.field_a.a(nl.field_q[27], 100, 256 * ee.field_p / 100);
+                                              tl.field_a.a(nl.secondarySoundEffects[27], 100, 256 * ee.field_p / 100);
                                             } else {
                                               if (31 == this.field_B) {
-                                                tl.field_a.a(nl.field_q[28], 100, ee.field_p * 256 / 100);
+                                                tl.field_a.a(nl.secondarySoundEffects[28], 100, ee.field_p * 256 / 100);
                                               } else {
                                                 if (30 == this.field_B) {
-                                                  tl.field_a.a(nl.field_q[29], 100, 256 * ee.field_p / 100);
+                                                  tl.field_a.a(nl.secondarySoundEffects[29], 100, 256 * ee.field_p / 100);
                                                 } else {
                                                   if (this.field_B == 32) {
-                                                    tl.field_a.a(nl.field_q[30], 100, 256 * ee.field_p / 100);
+                                                    tl.field_a.a(nl.secondarySoundEffects[30], 100, 256 * ee.field_p / 100);
                                                   } else {
                                                     if (this.field_B == 33) {
-                                                      tl.field_a.a(nl.field_q[31], 100, 256 * ee.field_p / 100);
+                                                      tl.field_a.a(nl.secondarySoundEffects[31], 100, 256 * ee.field_p / 100);
                                                     } else {
                                                       if (this.field_B == 36) {
-                                                        tl.field_a.a(nl.field_q[32], 100, 256 * ee.field_p / 100);
+                                                        tl.field_a.a(nl.secondarySoundEffects[32], 100, 256 * ee.field_p / 100);
                                                       } else {
                                                         if (param0) {
                                                           var3 = (String) null;
                                                           this.a(-17, 111, false, (String) null, 55);
                                                         }
                                                         if (this.field_B == 38) {
-                                                          tl.field_a.a(nl.field_q[33], 100, ee.field_p * 256 / 100);
+                                                          tl.field_a.a(nl.secondarySoundEffects[33], 100, ee.field_p * 256 / 100);
                                                         } else {
                                                           if (this.field_B == 37) {
-                                                            tl.field_a.a(nl.field_q[34], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.a(nl.secondarySoundEffects[34], 100, ee.field_p * 256 / 100);
                                                           } else {
                                                             if (39 == this.field_B) {
-                                                              tl.field_a.a(nl.field_q[35], 100, ee.field_p * 256 / 100);
+                                                              tl.field_a.a(nl.secondarySoundEffects[35], 100, ee.field_p * 256 / 100);
                                                             } else {
                                                               if (this.field_B == 40) {
-                                                                tl.field_a.a(nl.field_q[37], 100, 256 * ee.field_p / 100);
+                                                                tl.field_a.a(nl.secondarySoundEffects[37], 100, 256 * ee.field_p / 100);
                                                               } else {
-                                                                tl.field_a.a(si.field_j[9], 100, ee.field_p * 256 / 100);
+                                                                tl.field_a.a(si.soundEffects[9], 100, ee.field_p * 256 / 100);
                                                               }
                                                             }
                                                           }
@@ -1339,7 +1339,7 @@ final class eg extends qh {
                   this.b(param1, param0 + 119) == 1) {
                   this.field_e = 70;
                   if (pk.field_s) {
-                    tl.field_a.a(si.field_j[3], 100, ee.field_p * 256 / 100);
+                    tl.field_a.a(si.soundEffects[3], 100, ee.field_p * 256 / 100);
                   }
                 }
                 this.field_f.field_b = this.field_f.field_b + 120;
@@ -1395,7 +1395,7 @@ final class eg extends qh {
                   10 < this.field_e) {
                   this.field_e = this.field_e - 4;
                 }
-                this.a(1, si.field_j, param1, 1, var3_int, 1, tl.field_a, pk.field_s, (byte) -104);
+                this.a(1, si.soundEffects, param1, 1, var3_int, 1, tl.field_a, pk.field_s, (byte) -104);
                 if (!sc.field_m.field_d) {
                   if (p.field_V < 10) {
                     if (fi.field_x > 0 &&
@@ -1411,7 +1411,7 @@ final class eg extends qh {
                       dupTemp$2.field_b = dupTemp$2.field_b + 40;
                       od.field_k = od.field_k + 1;
                       if (pk.field_s) {
-                        tl.field_a.a(si.field_j[0], 100, ee.field_p * 256 / 100);
+                        tl.field_a.a(si.soundEffects[0], 100, ee.field_p * 256 / 100);
                       }
                     }
                     if (fi.field_x >= 10 &&
@@ -1440,7 +1440,7 @@ final class eg extends qh {
                       ii.field_e[od.field_k].field_e = 10;
                       od.field_k = od.field_k + 1;
                       if (pk.field_s) {
-                        tl.field_a.a(si.field_j[23], 100, ee.field_p * 256 / 100);
+                        tl.field_a.a(si.soundEffects[23], 100, ee.field_p * 256 / 100);
                       }
                     }
                     if (fi.field_x >= 40 &&
@@ -1478,7 +1478,7 @@ final class eg extends qh {
                       ii.field_e[od.field_k].field_e = -30;
                       od.field_k = od.field_k + 1;
                       if (pk.field_s) {
-                        tl.field_a.a(si.field_j[24], 100, ee.field_p * 256 / 100);
+                        tl.field_a.a(si.soundEffects[24], 100, ee.field_p * 256 / 100);
                       }
                     }
                     if (fi.field_x < 100) {
@@ -1501,7 +1501,7 @@ final class eg extends qh {
                     od.field_k = od.field_k + 1;
                     stackIn_183_0 = !(pk.field_s);
                     if (!stackIn_183_0) {
-                      tl.field_a.a(si.field_j[2], 100, 256 * ee.field_p / 100);
+                      tl.field_a.a(si.soundEffects[2], 100, 256 * ee.field_p / 100);
                     }
                   }
                 } else {
@@ -1513,7 +1513,7 @@ final class eg extends qh {
                   }
                   if (fi.field_x % 10 == 5 &&
                     pk.field_s) {
-                    tl.field_a.a(si.field_j[16], 100, 256 * ee.field_p / 100);
+                    tl.field_a.a(si.soundEffects[16], 100, 256 * ee.field_p / 100);
                   }
                 }
                 this.field_d = this.field_d * 2;
@@ -1532,7 +1532,7 @@ final class eg extends qh {
                     stackIn_84_1 = 1;
                   }
                   if (stackIn_83_0 == stackIn_84_1) {
-                    tl.field_a.a(si.field_j[8], 100, ee.field_p * 256 / 100);
+                    tl.field_a.a(si.soundEffects[8], 100, ee.field_p * 256 / 100);
                   }
                 }
                 this.field_e = this.field_e + 1;
@@ -1578,13 +1578,13 @@ final class eg extends qh {
                     this.field_i.field_b < 20) {
                     stackIn_195_0 = (pk.field_s) ? 0 : 1;
                     if (stackIn_195_0 != 1) {
-                      tl.field_a.a(si.field_j[1], 100, ee.field_p * 128 / 100);
+                      tl.field_a.a(si.soundEffects[1], 100, ee.field_p * 128 / 100);
                     }
                   }
                 }
                 this.field_w = this.field_w + 1;
                 if (this.field_w <= 2) {
-                  this.a(1, si.field_j, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) -73);
+                  this.a(1, si.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) -73);
                   if (!pg.field_q) {
                     for (var4 = 0; od.field_k > var4; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
@@ -1601,7 +1601,7 @@ final class eg extends qh {
                           dupTemp$14 = ii.field_e[var4];
                           dupTemp$14.field_s = dupTemp$14.field_s + 1;
                           if (pk.field_s) {
-                            tl.field_a.a(si.field_j[10], 100, 256 * ee.field_p / 100);
+                            tl.field_a.a(si.soundEffects[10], 100, 256 * ee.field_p / 100);
                           }
                           ii.field_e[var4].field_m = this.field_h;
                           this.field_B = 20;
@@ -1635,7 +1635,7 @@ final class eg extends qh {
                       var4_ref_eg.field_h = this.field_h;
                     }
                     this.field_i.field_a = this.field_i.field_a + 1;
-                    this.a(1, si.field_j, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 29);
+                    this.a(1, si.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 29);
                     for (var4 = 0; var4 < od.field_k; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
                         this.field_q != null &&
@@ -1659,7 +1659,7 @@ final class eg extends qh {
                             }
                             if (stackIn_248_0 != stackIn_249_1 &&
                               ii.field_e[var4].field_r <= 0) {
-                              tl.field_a.a(si.field_j[2], 100, 256 * ee.field_p / 100);
+                              tl.field_a.a(si.soundEffects[2], 100, 256 * ee.field_p / 100);
                             }
                             ii.field_e[var4].field_r = 1;
                             ii.field_e[var4].field_w = 0;
@@ -1667,7 +1667,7 @@ final class eg extends qh {
                             dupTemp$15 = ii.field_e[var4];
                             dupTemp$15.field_s = dupTemp$15.field_s + 10;
                             if (pk.field_s) {
-                              tl.field_a.a(si.field_j[2], 100, 256 * ee.field_p / 100);
+                              tl.field_a.a(si.soundEffects[2], 100, 256 * ee.field_p / 100);
                             }
                             ii.field_e[var4].field_m = this.field_h;
                             if (!(ii.field_e[var4].field_p < 10) ||
@@ -1746,7 +1746,7 @@ final class eg extends qh {
                               this.field_s = this.field_s - 1;
                               this.field_o = 0;
                               if (pk.field_s) {
-                                tl.field_a.a(si.field_j[30], 100, 256 * ee.field_p / 100);
+                                tl.field_a.a(si.soundEffects[30], 100, 256 * ee.field_p / 100);
                               }
                             }
                             w.field_b = w.field_b + 1;
@@ -1792,7 +1792,7 @@ final class eg extends qh {
                               this.field_p = this.field_p - 1;
                               this.field_s = this.field_s - 1;
                               if (pk.field_s) {
-                                tl.field_a.a(si.field_j[25], 100, ee.field_p * 256 / 100);
+                                tl.field_a.a(si.soundEffects[25], 100, ee.field_p * 256 / 100);
                               }
                               if (this.field_p > 0) {
                                 this.e(false);
@@ -1874,7 +1874,7 @@ final class eg extends qh {
                                   if (stackIn_440_0 == 1) {
                                     this.e(false);
                                   } else {
-                                    tl.field_a.a(si.field_j[13], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.a(si.soundEffects[13], 100, 256 * ee.field_p / 100);
                                     this.e(false);
                                   }
                                 }
@@ -1884,7 +1884,7 @@ final class eg extends qh {
                         } else {
                           if (var4 == 11) {
                             this.field_e = 2;
-                            this.a(1, si.field_j, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 127);
+                            this.a(1, si.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 127);
                             this.e(false);
                           } else {
                             if (var4 == 12) {
@@ -1899,7 +1899,7 @@ final class eg extends qh {
                                       17 > this.field_i.field_b) {
                                       if (((this.field_z == 1)) &&
                                         ((this.field_n == 3))) {
-                                        tl.field_a.a(nl.field_q[12], 100, 256 * ee.field_p / 100);
+                                        tl.field_a.a(nl.secondarySoundEffects[12], 100, 256 * ee.field_p / 100);
                                       }
                                       decompiledFrameRemainder0 = false;
                                     }
@@ -1966,7 +1966,7 @@ final class eg extends qh {
                                     od.field_k = od.field_k + 1;
                                   }
                                   if (pk.field_s) {
-                                    tl.field_a.a(si.field_j[25], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.a(si.soundEffects[25], 100, 256 * ee.field_p / 100);
                                   }
                                   if (this.field_p <= 0) {
                                     this.c(false);
@@ -1989,7 +1989,7 @@ final class eg extends qh {
                                     this.field_x = 0;
                                     stackIn_457_0 = (pk.field_s) ? 0 : 1;
                                     if (stackIn_457_0 != 1) {
-                                      tl.field_a.a(si.field_j[17], 100, 256 * ee.field_p / 100);
+                                      tl.field_a.a(si.soundEffects[17], 100, 256 * ee.field_p / 100);
                                     }
                                   }
                                   w.field_b = w.field_b + 1;
@@ -2085,7 +2085,7 @@ final class eg extends qh {
                                         od.field_k = od.field_k + 1;
                                         stackIn_535_0 = (pk.field_s) ? 0 : 1;
                                         if (stackIn_535_0 != 1) {
-                                          tl.field_a.a(nl.field_q[17], 100, ee.field_p * 256 / 100);
+                                          tl.field_a.a(nl.secondarySoundEffects[17], 100, ee.field_p * 256 / 100);
                                         }
                                       }
                                       this.e(false);
@@ -2163,7 +2163,7 @@ final class eg extends qh {
                                           od.field_k = od.field_k + 1;
                                           stackIn_574_0 = !(pk.field_s);
                                           if (!stackIn_574_0) {
-                                            tl.field_a.a(nl.field_q[18], 100, ee.field_p * 256 / 100);
+                                            tl.field_a.a(nl.secondarySoundEffects[18], 100, ee.field_p * 256 / 100);
                                           }
                                         }
                                         this.e(false);
@@ -2190,7 +2190,7 @@ final class eg extends qh {
                                             w.field_b = 250;
                                             this.field_s = this.field_s - 1;
                                             if (pk.field_s) {
-                                              tl.field_a.a(si.field_j[29], 100, ee.field_p * 256 / 100);
+                                              tl.field_a.a(si.soundEffects[29], 100, ee.field_p * 256 / 100);
                                             }
                                           }
                                           w.field_b = w.field_b + 1;
@@ -2247,7 +2247,7 @@ final class eg extends qh {
                                             }
                                             this.field_o = 1;
                                             if (pk.field_s) {
-                                              tl.field_a.a(si.field_j[29], 100, 256 * ee.field_p / 100);
+                                              tl.field_a.a(si.soundEffects[29], 100, 256 * ee.field_p / 100);
                                             }
                                             if (this.field_p <= 0) {
                                               this.c(false);
@@ -2273,7 +2273,7 @@ final class eg extends qh {
                                             this.field_n = 34;
                                           }
                                         } else {
-                                          this.a(1, si.field_j, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) 127);
+                                          this.a(1, si.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) 127);
                                           if (36 > this.field_n) {
                                             this.field_n = 36;
                                           }
@@ -2298,7 +2298,7 @@ final class eg extends qh {
                                         }
                                       } else {
                                         if (var4 == 19) {
-                                          this.a(1, si.field_j, param1, 1, 25, 0, tl.field_a, pk.field_s, (byte) -120);
+                                          this.a(1, si.soundEffects, param1, 1, 25, 0, tl.field_a, pk.field_s, (byte) -120);
                                           this.e(false);
                                           this.field_n = 37;
                                           if (((this.b(param1, -4) == 1)) &&
@@ -2371,7 +2371,7 @@ final class eg extends qh {
                                                 this.field_e <= 0) {
                                                 this.b(5);
                                               } else {
-                                                this.a(1, si.field_j, param1, 1, 30, 1, tl.field_a, pk.field_s, (byte) 126);
+                                                this.a(1, si.soundEffects, param1, 1, 30, 1, tl.field_a, pk.field_s, (byte) 126);
                                               }
                                             } else {
                                               if (var4 == 22) {
@@ -2429,7 +2429,7 @@ final class eg extends qh {
                                                           this.field_s = this.field_s - 1;
                                                           this.field_x = 0;
                                                           if (pk.field_s) {
-                                                            tl.field_a.a(si.field_j[26], 100, 256 * ee.field_p / 100);
+                                                            tl.field_a.a(si.soundEffects[26], 100, 256 * ee.field_p / 100);
                                                           }
                                                         }
                                                         w.field_b = w.field_b + 1;
@@ -2508,7 +2508,7 @@ final class eg extends qh {
                                                             stackIn_774_1 = 1;
                                                           }
                                                           if (stackIn_773_0 == stackIn_774_1) {
-                                                            tl.field_a.a(nl.field_q[25], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.a(nl.secondarySoundEffects[25], 100, ee.field_p * 256 / 100);
                                                           }
                                                         }
                                                         if (this.field_s > 0) {
@@ -2537,7 +2537,7 @@ final class eg extends qh {
                                                           }
                                                           stackIn_784_0 = (pk.field_s) ? 0 : 1;
                                                           if (stackIn_784_0 != 1) {
-                                                            tl.field_a.a(si.field_j[26], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.a(si.soundEffects[26], 100, ee.field_p * 256 / 100);
                                                           }
                                                           if (this.field_p <= 0) {
                                                             this.c(false);
@@ -2549,7 +2549,7 @@ final class eg extends qh {
                                                     }
                                                   } else {
                                                     if (var4 == 27) {
-                                                      this.a(1, si.field_j, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                      this.a(1, si.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) 126);
                                                       this.e(false);
                                                       if (((this.b(param1, -4) == 1)) &&
                                                         ((this.field_f.field_a == 0))) {
@@ -2567,19 +2567,19 @@ final class eg extends qh {
                                                         od.field_k = od.field_k + 1;
                                                         stackIn_808_0 = (pk.field_s) ? 0 : 1;
                                                         if ((stackIn_808_0 != 1)) {
-                                                          tl.field_a.a(si.field_j[5], 100, ee.field_p * 256 / 100);
+                                                          tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                         }
                                                       }
                                                     } else {
                                                       if (var4 == 28) {
-                                                        this.a(1, si.field_j, param1, 1, 20, 0, tl.field_a, pk.field_s, (byte) -50);
+                                                        this.a(1, si.soundEffects, param1, 1, 20, 0, tl.field_a, pk.field_s, (byte) -50);
                                                         this.e(false);
                                                         if (((this.b(param1, -4) == 1)) &&
                                                           ((this.field_f.field_a == 0))) {
                                                           this.field_k = 1;
                                                           stackIn_817_0 = (pk.field_s) ? 0 : 1;
                                                           if ((stackIn_817_0 != 1)) {
-                                                            tl.field_a.a(si.field_j[5], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                           }
                                                         }
                                                       } else {
@@ -2648,7 +2648,7 @@ final class eg extends qh {
                                                                   ii.field_e[od.field_k].field_w = 10;
                                                                   od.field_k = od.field_k + 1;
                                                                   if (pk.field_s) {
-                                                                    tl.field_a.a(si.field_j[13], 100, 256 * ee.field_p / 100);
+                                                                    tl.field_a.a(si.soundEffects[13], 100, 256 * ee.field_p / 100);
                                                                   }
                                                                 }
                                                                 if (this.field_x == 0) {
@@ -2736,7 +2736,7 @@ final class eg extends qh {
                                                                     stackIn_897_1 = 1;
                                                                   }
                                                                   if (stackIn_896_0 == stackIn_897_1) {
-                                                                    tl.field_a.a(si.field_j[13], 100, ee.field_p * 256 / 100);
+                                                                    tl.field_a.a(si.soundEffects[13], 100, ee.field_p * 256 / 100);
                                                                   }
                                                                 }
                                                                 this.e(false);
@@ -2786,7 +2786,7 @@ final class eg extends qh {
                                                                       ii.field_e[od.field_k].field_w = 0;
                                                                       od.field_k = od.field_k + 1;
                                                                       if (pk.field_s) {
-                                                                        tl.field_a.a(si.field_j[13], 100, ee.field_p * 256 / 100);
+                                                                        tl.field_a.a(si.soundEffects[13], 100, ee.field_p * 256 / 100);
                                                                       }
                                                                     }
                                                                     if (this.field_w % 100 > 20 &&
@@ -2819,7 +2819,7 @@ final class eg extends qh {
                                                                     this.field_s = this.field_s - 1;
                                                                     this.field_x = 0;
                                                                     if (pk.field_s) {
-                                                                      tl.field_a.a(si.field_j[27], 100, ee.field_p * 256 / 100);
+                                                                      tl.field_a.a(si.soundEffects[27], 100, ee.field_p * 256 / 100);
                                                                     }
                                                                   }
                                                                   w.field_b = w.field_b + 1;
@@ -2848,7 +2848,7 @@ final class eg extends qh {
                                                                       ii.field_e[od.field_k].field_w = 0;
                                                                       od.field_k = od.field_k + 1;
                                                                       if (pk.field_s) {
-                                                                        tl.field_a.a(si.field_j[13], 100, 256 * ee.field_p / 100);
+                                                                        tl.field_a.a(si.soundEffects[13], 100, 256 * ee.field_p / 100);
                                                                       }
                                                                     }
                                                                     if (this.field_w < 250) {
@@ -2899,7 +2899,7 @@ final class eg extends qh {
                                                                         od.field_k = od.field_k + 1;
                                                                       }
                                                                       if (pk.field_s) {
-                                                                        tl.field_a.a(si.field_j[27], 100, 256 * ee.field_p / 100);
+                                                                        tl.field_a.a(si.soundEffects[27], 100, 256 * ee.field_p / 100);
                                                                       }
                                                                       if (!(this.field_p > 0)) {
                                                                         this.c(false);
@@ -2911,7 +2911,7 @@ final class eg extends qh {
                                                               } else {
                                                                 if (var4 == 34) {
                                                                   this.field_e = 2;
-                                                                  this.a(1, si.field_j, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                                  this.a(1, si.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                   this.e(false);
                                                                 } else {
                                                                   if (35 != var4 &&
@@ -3105,7 +3105,7 @@ final class eg extends qh {
                                                                               switch (var4) {
                                                                                 case 41:
                                                                                   this.field_e = 2;
-                                                                                  this.a(1, si.field_j, param1, 1, 100, 0, tl.field_a, pk.field_s, (byte) -126);
+                                                                                  this.a(1, si.soundEffects, param1, 1, 100, 0, tl.field_a, pk.field_s, (byte) -126);
                                                                                   this.e(false);
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (this.field_w % 10 >= 5) {
@@ -3122,7 +3122,7 @@ final class eg extends qh {
                                                                                   break regionExit1;
                                                                                 case 42:
                                                                                   this.field_e = 2;
-                                                                                  this.a(1, si.field_j, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                                                  this.a(1, si.soundEffects, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                                   this.e(false);
                                                                                   break regionExit1;
                                                                                 case 44:
@@ -3174,7 +3174,7 @@ final class eg extends qh {
                                                                                   this.c(false);
                                                                                 }
                                                                                 if (pk.field_s) {
-                                                                                  tl.field_a.a(si.field_j[28], 100, 256 * ee.field_p / 100);
+                                                                                  tl.field_a.a(si.soundEffects[28], 100, 256 * ee.field_p / 100);
                                                                                 }
                                                                               }
                                                                               if (5 == ql.field_c) {
@@ -3217,7 +3217,7 @@ final class eg extends qh {
                                                                                   ql.field_c = 6;
                                                                                   this.field_x = 0;
                                                                                   if (pk.field_s) {
-                                                                                    tl.field_a.a(si.field_j[22], 100, ee.field_p * 256 / 100);
+                                                                                    tl.field_a.a(si.soundEffects[22], 100, ee.field_p * 256 / 100);
                                                                                   }
                                                                                 }
                                                                               }
@@ -3269,7 +3269,7 @@ final class eg extends qh {
                                                                                       ii.field_e[od.field_k].field_w = 0;
                                                                                       od.field_k = od.field_k + 1;
                                                                                       if (pk.field_s) {
-                                                                                        tl.field_a.a(si.field_j[5], 100, ee.field_p * 256 / 100);
+                                                                                        tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                                                       }
                                                                                     }
                                                                                   }
@@ -3306,7 +3306,7 @@ final class eg extends qh {
                                                                                         stackIn_1185_1 = 1;
                                                                                       }
                                                                                       if (stackIn_1184_0 == stackIn_1185_1) {
-                                                                                        tl.field_a.a(si.field_j[5], 100, 256 * ee.field_p / 100);
+                                                                                        tl.field_a.a(si.soundEffects[5], 100, 256 * ee.field_p / 100);
                                                                                       }
                                                                                     } else {
                                                                                       this.field_i.field_a = this.field_i.field_a - 1;
@@ -3339,7 +3339,7 @@ final class eg extends qh {
                                                                                       stackIn_1240_1 = 1;
                                                                                     }
                                                                                     if (stackIn_1239_0 == stackIn_1240_1) {
-                                                                                      tl.field_a.a(si.field_j[22], 100, 256 * ee.field_p / 100);
+                                                                                      tl.field_a.a(si.soundEffects[22], 100, 256 * ee.field_p / 100);
                                                                                     }
                                                                                   }
                                                                                   if (250 <= w.field_b) {
@@ -3364,7 +3364,7 @@ final class eg extends qh {
                                                                                         ii.field_e[od.field_k].field_w = (int)(Math.random() * 100.0);
                                                                                         od.field_k = od.field_k + 1;
                                                                                         if (pk.field_s) {
-                                                                                          tl.field_a.a(nl.field_q[36], 100, 192 * ee.field_p / 100);
+                                                                                          tl.field_a.a(nl.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
                                                                                         }
                                                                                       }
                                                                                       if (25 > this.field_n) {
@@ -3426,7 +3426,7 @@ final class eg extends qh {
                                                                                         stackIn_1228_1 = 1;
                                                                                       }
                                                                                       if (stackIn_1227_0 == stackIn_1228_1) {
-                                                                                        tl.field_a.a(si.field_j[5], 100, 256 * ee.field_p / 100);
+                                                                                        tl.field_a.a(si.soundEffects[5], 100, 256 * ee.field_p / 100);
                                                                                       }
                                                                                     }
                                                                                   }
@@ -3440,7 +3440,7 @@ final class eg extends qh {
                                                                     }
                                                                   } else {
                                                                     if (this.field_w <= 2) {
-                                                                      this.a(1, si.field_j, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) -123);
+                                                                      this.a(1, si.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) -123);
                                                                     }
                                                                     this.e(false);
                                                                     if (1 == this.b(param1, -4) &&
@@ -3454,7 +3454,7 @@ final class eg extends qh {
                                                                         stackIn_1001_1 = 1;
                                                                       }
                                                                       if (stackIn_1000_0 == stackIn_1001_1) {
-                                                                        tl.field_a.a(si.field_j[14], 100, ee.field_p * 256 / 100);
+                                                                        tl.field_a.a(si.soundEffects[14], 100, ee.field_p * 256 / 100);
                                                                       }
                                                                       ii.field_e[od.field_k].a(9147, this.field_B, this.field_i);
                                                                       ii.field_e[od.field_k].field_f.a(-112, this.field_f);
@@ -3611,7 +3611,7 @@ final class eg extends qh {
                             }
                             stackIn_401_0 = (pk.field_s) ? 0 : 1;
                             if (stackIn_401_0 != 1) {
-                              tl.field_a.a(si.field_j[12], 100, 256 * ee.field_p / 100);
+                              tl.field_a.a(si.soundEffects[12], 100, 256 * ee.field_p / 100);
                             }
                             this.field_x = 0;
                             this.field_w = 0;
@@ -3735,10 +3735,10 @@ final class eg extends qh {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ok.field_a = pe.a("commonui", param3, "frame_top", 127);
-          ia.field_i = pe.a("commonui", param3, "frame_bottom", 88);
-          hg.field_d = vg.a(15, "jagex_logo_grey", param3, "commonui");
-          vf.field_j = pe.a("commonui", param3, "button", 121);
+          ok.field_a = pe.loadSpriteStrip("commonui", param3, "frame_top", 127);
+          ia.field_i = pe.loadSpriteStrip("commonui", param3, "frame_bottom", 88);
+          hg.field_d = vg.loadSprite(15, "jagex_logo_grey", param3, "commonui");
+          vf.field_j = pe.loadSpriteStrip("commonui", param3, "button", 121);
           te.field_k = pc.a((byte) 125, "commonui", param3, "validation");
           e.field_b = (vd) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
           gh.field_b = (vd) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
@@ -3868,7 +3868,7 @@ final class eg extends qh {
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
-          this.a(1, si.field_j, param3, 1, param0, 1, tl.field_a, pk.field_s, (byte) 126);
+          this.a(1, si.soundEffects, param3, 1, param0, 1, tl.field_a, pk.field_s, (byte) 126);
           if (param1 > -73) {
             return;
           }
@@ -3889,13 +3889,13 @@ final class eg extends qh {
               if (stackIn_13_0 != stackIn_14_1) {
                 if (pk.field_s) {
                   if (6 == this.field_B) {
-                    tl.field_a.a(nl.field_q[6], 100, 256 * ee.field_p / 100);
+                    tl.field_a.a(nl.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
                   } else {
-                    tl.field_a.a(si.field_j[5], 100, ee.field_p * 256 / 100);
+                    tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
                   }
                 }
               } else {
-                tl.field_a.a(si.field_j[4], 100, ee.field_p * 256 / 100);
+                tl.field_a.a(si.soundEffects[4], 100, ee.field_p * 256 / 100);
               }
             }
           }
@@ -3966,7 +3966,7 @@ final class eg extends qh {
             var6 = (ob) null;
             this.a(81, 113, (ob) null);
           }
-          this.a(1, si.field_j, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
+          this.a(1, si.soundEffects, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
           if (this.field_e <= 0) {
             this.field_x = 3;
             this.field_z = 0;
@@ -4026,20 +4026,20 @@ final class eg extends qh {
             this.field_x = 3;
           }
           if (param1 == 3) {
-            this.a(2, si.field_j, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
+            this.a(2, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
           }
           if (param1 == 0) {
-            this.a(1, si.field_j, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
+            this.a(1, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
           }
           if (param1 == 2) {
-            this.a(0, si.field_j, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) -117);
+            this.a(0, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) -117);
           }
           if (param1 == 1) {
             if (this.field_i.field_a <= ii.field_e[0].field_i.field_a &&
               this.field_e == 0) {
-              this.a(0, si.field_j, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 127);
+              this.a(0, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 127);
             } else {
-              this.a(1, si.field_j, param4, 1, param2, 1, tl.field_a, pk.field_s, (byte) -65);
+              this.a(1, si.soundEffects, param4, 1, param2, 1, tl.field_a, pk.field_s, (byte) -65);
             }
           }
           this.field_z = this.field_z - 1;

@@ -65,7 +65,7 @@ final class ok {
         }
     }
 
-    final static void a(String param0, float param1, int param2) {
+    final static void showLoadingProgress(String param0, float param1, int param2) {
         try {
           dg.field_a = param0;
           if (param2 != 0) {

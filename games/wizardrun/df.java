@@ -151,15 +151,15 @@ abstract class df {
             null != pj.field_M &&
             pj.field_M.b(param0 + 17818) &&
             pj.field_M.a((byte) 29, "benefits")) {
-            ab.field_c = vg.a(15, "headline", qk.field_j, "benefits");
-            MouseWheelInput.field_b = vg.a(15, "blurbpane", qk.field_j, "benefits");
-            mj.field_b = vg.a(15, "button", qk.field_j, "benefits");
-            ei.field_l = vg.a(15, "signup_text", qk.field_j, "benefits");
-            ae.field_c = vg.a(15, "menu_text", qk.field_j, "benefits");
-            ef.field_H = vg.a(15, "button_frame", qk.field_j, "benefits");
-            ra.field_p = vg.a(param0 + 13, "arrow", qk.field_j, "benefits");
-            v.field_b = (vd) ((Object) IsaacRandom.a(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
-            bk.field_a = (vd) ((Object) IsaacRandom.a(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
+            ab.field_c = vg.loadSprite(15, "headline", qk.field_j, "benefits");
+            MouseWheelInput.field_b = vg.loadSprite(15, "blurbpane", qk.field_j, "benefits");
+            mj.field_b = vg.loadSprite(15, "button", qk.field_j, "benefits");
+            ei.field_l = vg.loadSprite(15, "signup_text", qk.field_j, "benefits");
+            ae.field_c = vg.loadSprite(15, "menu_text", qk.field_j, "benefits");
+            ef.field_H = vg.loadSprite(15, "button_frame", qk.field_j, "benefits");
+            ra.field_p = vg.loadSprite(param0 + 13, "arrow", qk.field_j, "benefits");
+            v.field_b = (vd) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
+            bk.field_a = (vd) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
             var27 = ed.field_k;
             var2 = ed.field_h;
             var3 = ed.field_d;

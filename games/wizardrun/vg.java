@@ -166,12 +166,12 @@ final class vg extends rg implements qd {
           return;
         }
         String var2 = (String) null;
-        vg.a(11, (String) null, (kl) null, (String) null);
+        vg.loadSprite(11, (String) null, (kl) null, (String) null);
         field_U = null;
         field_W = null;
     }
 
-    final static o a(int param0, String param1, kl param2, String param3) {
+    final static o loadSprite(int param0, String param1, kl param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -229,7 +229,7 @@ final class vg extends rg implements qd {
           return;
         }
         String var3 = (String) null;
-        vg.a(24, (String) null, (kl) null, (String) null);
+        vg.loadSprite(24, (String) null, (kl) null, (String) null);
         this.field_H = false;
     }
 

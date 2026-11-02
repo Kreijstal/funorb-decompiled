@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    static o[] field_a;
-    static gb field_b;
+    static o[] gemSprites;
+    static gb wizardFont2;
     static String field_c;
     static rj field_d;
 
@@ -33,13 +33,13 @@ final class jj {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        wizardFont2 = null;
         if (param0 != 0) {
           return;
         }
         field_c = null;
         field_d = null;
-        field_a = null;
+        gemSprites = null;
     }
 
     static {

@@ -4,7 +4,7 @@
 final class pd extends mi {
     static String field_G;
     static String[] field_I;
-    static o[] field_H;
+    static o[] frameSprites;
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;
@@ -210,7 +210,7 @@ final class pd extends mi {
         if (param0 != -27864) {
           return;
         }
-        field_H = null;
+        frameSprites = null;
     }
 
     static {

@@ -39,20 +39,20 @@ final class ph extends ge {
           if (param2 == 1) {
             var6 = vk.field_o;
             if (param1) {
-              var7 = jj.field_b.b(var6);
+              var7 = jj.wizardFont2.b(var6);
               ok.field_d[2].e(268 - (var7 / 2 + ok.field_d[2].field_z), param0);
               ok.field_d[2].e(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
             }
-            jj.field_b.b(var6, 267, param0 + 18, 0, -1);
-            jj.field_b.b(var6, 269, param0 + 18, 0, -1);
-            jj.field_b.b(var6, 268, 18 + param0 - 1, 0, -1);
-            jj.field_b.b(var6, 268, 1 + (18 + param0), 0, -1);
-            jj.field_b.b(var6, 269, param0 + 18 + 1, 0, -1);
-            jj.field_b.b(var6, 270, 2 + param0 + 18, 0, -1);
-            jj.field_b.b(var6, 268, param0 + 18, var5, -1);
+            jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+            jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+            jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+            jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+            jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+            jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+            jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
             return;
           }
           if ((param2 != 5 ||
@@ -121,20 +121,20 @@ final class ph extends ge {
               else {
                 if (param2 != 4) {
                   if (param1) {
-                    var7Lifetime2Lifetime2 = jj.field_b.b(var6);
+                    var7Lifetime2Lifetime2 = jj.wizardFont2.b(var6);
                     ok.field_d[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.field_d[2].field_z), param0);
                     ok.field_d[2].e(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
                   }
-                  jj.field_b.b(var6, 267, param0 + 18, 0, -1);
-                  jj.field_b.b(var6, 269, param0 + 18, 0, -1);
-                  jj.field_b.b(var6, 268, 18 + param0 - 1, 0, -1);
-                  jj.field_b.b(var6, 268, 1 + (18 + param0), 0, -1);
-                  jj.field_b.b(var6, 269, param0 + 18 + 1, 0, -1);
-                  jj.field_b.b(var6, 270, 2 + param0 + 18, 0, -1);
-                  jj.field_b.b(var6, 268, param0 + 18, var5, -1);
+                  jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+                  jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+                  jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+                  jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+                  jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+                  jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+                  jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
                 if (!e.a(-114)) {
@@ -147,20 +147,20 @@ final class ph extends ge {
                 }
                 else {
                   if (param1) {
-                    var7Lifetime2Lifetime3 = jj.field_b.b(var6);
+                    var7Lifetime2Lifetime3 = jj.wizardFont2.b(var6);
                     ok.field_d[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.field_d[2].field_z), param0);
                     ok.field_d[2].e(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
                   }
-                  jj.field_b.b(var6, 267, param0 + 18, 0, -1);
-                  jj.field_b.b(var6, 269, param0 + 18, 0, -1);
-                  jj.field_b.b(var6, 268, 18 + param0 - 1, 0, -1);
-                  jj.field_b.b(var6, 268, 1 + (18 + param0), 0, -1);
-                  jj.field_b.b(var6, 269, param0 + 18 + 1, 0, -1);
-                  jj.field_b.b(var6, 270, 2 + param0 + 18, 0, -1);
-                  jj.field_b.b(var6, 268, param0 + 18, var5, -1);
+                  jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+                  jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+                  jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+                  jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+                  jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+                  jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+                  jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
               }
@@ -172,20 +172,20 @@ final class ph extends ge {
             }
             var6 = od.field_o;
             if (param1) {
-              var7Lifetime3 = jj.field_b.b(var6);
+              var7Lifetime3 = jj.wizardFont2.b(var6);
               ok.field_d[2].e(268 - (var7Lifetime3 / 2 + ok.field_d[2].field_z), param0);
               ok.field_d[2].e(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
             }
-            jj.field_b.b(var6, 267, param0 + 18, 0, -1);
-            jj.field_b.b(var6, 269, param0 + 18, 0, -1);
-            jj.field_b.b(var6, 268, 18 + param0 - 1, 0, -1);
-            jj.field_b.b(var6, 268, 1 + (18 + param0), 0, -1);
-            jj.field_b.b(var6, 269, param0 + 18 + 1, 0, -1);
-            jj.field_b.b(var6, 270, 2 + param0 + 18, 0, -1);
-            jj.field_b.b(var6, 268, param0 + 18, var5, -1);
+            jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+            jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+            jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+            jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+            jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+            jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+            jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
             return;
           }
         }
@@ -198,20 +198,20 @@ final class ph extends ge {
           }
         }
         if (param1) {
-          var7Lifetime1 = jj.field_b.b(var6);
+          var7Lifetime1 = jj.wizardFont2.b(var6);
           ok.field_d[2].e(268 - (var7Lifetime1 / 2 + ok.field_d[2].field_z), param0);
           ok.field_d[2].e(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {
           ph.a((byte) 46);
         }
-        jj.field_b.b(var6, 267, param0 + 18, 0, -1);
-        jj.field_b.b(var6, 269, param0 + 18, 0, -1);
-        jj.field_b.b(var6, 268, 18 + param0 - 1, 0, -1);
-        jj.field_b.b(var6, 268, 1 + (18 + param0), 0, -1);
-        jj.field_b.b(var6, 269, param0 + 18 + 1, 0, -1);
-        jj.field_b.b(var6, 270, 2 + param0 + 18, 0, -1);
-        jj.field_b.b(var6, 268, param0 + 18, var5, -1);
+        jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+        jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+        jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+        jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+        jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+        jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+        jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
     }
 
     ph() {
@@ -333,7 +333,7 @@ final class ph extends ge {
             }
             if ((!(!pk.field_s)) &&
               (!(nl.field_y > 0))) {
-              tl.field_a.a(si.field_j[0], 100, ee.field_p * 256 / 100);
+              tl.field_a.a(si.soundEffects[0], 100, ee.field_p * 256 / 100);
               nl.field_y = 25;
             }
             decompiledFrameRemainder0 = false;
@@ -360,7 +360,7 @@ final class ph extends ge {
             }
             if (pk.field_s &&
               nl.field_y <= 0) {
-              tl.field_a.a(si.field_j[0], 100, 256 * ee.field_p / 100);
+              tl.field_a.a(si.soundEffects[0], 100, 256 * ee.field_p / 100);
               nl.field_y = 25;
             }
             if (hc.field_o >= 10) {

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class jl extends ll {
-    static kl field_u;
+    static kl bossSoundArchive;
     static int field_r;
     static int field_s;
     private o[] field_x;
@@ -213,7 +213,7 @@ final class jl extends ll {
           field_w = (o) null;
         }
         field_w = null;
-        field_u = null;
+        bossSoundArchive = null;
         field_v = null;
     }
 

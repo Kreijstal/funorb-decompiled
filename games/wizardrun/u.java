@@ -350,7 +350,7 @@ abstract class u extends GameApplet {
         if (ri.field_a == 11) {
           if (null != oh.field_b && (!oh.field_b.b(17820) ||
             !oh.field_b.d(-111))) {
-            ok.a(SecondaryNodeDeque.a(param0 ^ 4150, td.field_e, oh.field_b, bl.field_c), 0.0f, 0);
+            ok.showLoadingProgress(SecondaryNodeDeque.a(param0 ^ 4150, td.field_e, oh.field_b, bl.field_c), 0.0f, 0);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -367,7 +367,7 @@ abstract class u extends GameApplet {
           if (null != ih.field_b) {
             stackIn_139_0 = (!ih.field_b.a(true)) ? 0 : 1;
             var3Lifetime2 = stackIn_139_0;
-            ok.a(ih.field_b.field_i, ih.field_b.field_k, 0);
+            ok.showLoadingProgress(ih.field_b.field_i, ih.field_b.field_k, 0);
           }
           if (var3Lifetime2 != 0) {
             ri.field_a = 20;

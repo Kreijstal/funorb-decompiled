@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static gb field_a;
+    static gb font12;
     static String[] field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
@@ -33,7 +33,7 @@ final class a {
           if (param6 >= 0 &&
             param8 < cj.field_d) {
             if (param7 != -20476) {
-              field_a = (gb) null;
+              font12 = (gb) null;
             }
             if (param3 < 0 &&
               param5 < 0 &&
@@ -207,7 +207,7 @@ final class a {
           a.a(-97, -4, 61, -122, (int[]) null, -38, 93, 89, -73);
         }
         field_b = null;
-        field_a = null;
+        font12 = null;
     }
 
     static {

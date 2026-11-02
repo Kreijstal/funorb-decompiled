@@ -41,7 +41,7 @@ final class vk extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        ga.field_e = sl.field_q[qh.field_l];
+        ga.field_e = sl.musicTracks[qh.field_l];
         if (tl.field_e) {
           mi.field_D.a(true, -110, ga.field_e);
         }
