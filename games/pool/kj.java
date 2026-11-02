@@ -66,14 +66,14 @@ final class kj {
         return 0 <= this.field_n ? true : false;
     }
 
-    final void a(ge param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         if (param1 < 67) {
           return;
         }
         try {
-          param0.a((byte) -81, this.field_n);
-          param0.a((byte) -81, this.field_h & 2047);
-          param0.a((byte) -81, this.field_k);
+          param0.writeShort((byte) -81, this.field_n);
+          param0.writeShort((byte) -81, this.field_h & 2047);
+          param0.writeShort((byte) -81, this.field_k);
           param0.a(this.field_d, false);
           param0.a(this.field_e, false);
         } catch (RuntimeException runtimeException) {
@@ -144,7 +144,7 @@ final class kj {
           if (var44.field_K != null &&
             var44.field_I > 1) {
             var60 = var44.field_K;
-            ko.a(wa.field_ib, 0, var60, 0, -147296924);
+            IntrusiveDeque.a(wa.field_ib, 0, var60, 0, -147296924);
           } else {
             bo.a(-94);
           }
@@ -222,11 +222,11 @@ final class kj {
             }
             var21 = stackIn_38_0;
             var22 = ch.field_M[var15Lifetime1];
-            var23 = li.field_h[var15Lifetime1];
+            var23 = IsaacCipher.field_h[var15Lifetime1];
             var24 = ch.field_M[var16];
-            var25 = li.field_h[var16];
+            var25 = IsaacCipher.field_h[var16];
             var26 = ch.field_M[var17];
-            var27 = li.field_h[var17];
+            var27 = IsaacCipher.field_h[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var54[var18];
@@ -374,13 +374,13 @@ final class kj {
         }
     }
 
-    final static void a(int param0, dd param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           uc.a((byte) 90);
           qh.a(param1.field_D, param1.field_w, param1.field_y);
           if (param0 < 38) {
-            dd var3 = (dd) null;
-            kj.a(30, (dd) null);
+            Sprite var3 = (Sprite) null;
+            kj.a(30, (Sprite) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kj.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -414,16 +414,16 @@ final class kj {
         }
     }
 
-    final void a(int param0, ge param1) {
-        this.field_n = param1.d(-1034);
-        this.field_h = param1.d(-1034);
-        this.field_k = param1.d(param0 ^ -64266);
+    final void a(int param0, PacketBuffer param1) {
+        this.field_n = param1.readUnsignedShort(-1034);
+        this.field_h = param1.readUnsignedShort(-1034);
+        this.field_k = param1.readUnsignedShort(param0 ^ -64266);
         if (param0 != 65280) {
           return;
         }
         try {
-          this.field_d = param1.e((byte) 105);
-          this.field_e = param1.e((byte) 105);
+          this.field_d = param1.readByte((byte) 105);
+          this.field_e = param1.readByte((byte) 105);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

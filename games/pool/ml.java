@@ -82,7 +82,7 @@ final class ml {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, dd param4, int param5) {
+    final static void a(int param0, byte param1, int param2, int param3, Sprite param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -104,7 +104,7 @@ final class ml {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        dd var21 = null;
+        Sprite var21 = null;
         int var14Lifetime1;
         int var14Lifetime2;
         int var14Lifetime3;
@@ -149,8 +149,8 @@ final class ml {
           if (0 < var11 &&
             var10 > 0) {
             if (param1 < 44) {
-              var21 = (dd) null;
-              ml.a(26, (byte) 106, -29, 66, (dd) null, 59);
+              var21 = (Sprite) null;
+              ml.a(26, (byte) 106, -29, 66, (Sprite) null, 59);
             }
             for (param3 = -var10; param3 < 0; param3++) {
               var14Lifetime3 = var7;

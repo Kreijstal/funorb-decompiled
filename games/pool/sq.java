@@ -105,7 +105,7 @@ abstract class sq {
         field_c = null;
     }
 
-    abstract dd b(qe param0, int param1);
+    abstract Sprite b(qe param0, int param1);
 
     int m(int param0) {
         if (param0 != 0) {
@@ -199,13 +199,13 @@ abstract class sq {
               param2 <= 105) {
               var4 = args;
               gf.a(92, var4);
-              uf.field_gb = jo.a(args, 57);
+              PoolMatchController.field_gb = jo.a(args, 57);
               return;
             }
-            uf.field_gb = gg.a(param2, true, param3);
+            PoolMatchController.field_gb = gg.a(param2, true, param3);
           } else {
             stackIn_6_0 = !(j.field_b >= 13);
-            uf.field_gb = ta.a(stackIn_6_0, -30914);
+            PoolMatchController.field_gb = ta.a(stackIn_6_0, -30914);
             var5 = (String[]) null;
             gf.a(108, (String[]) null);
           }
@@ -245,7 +245,7 @@ abstract class sq {
         return true;
     }
 
-    void a(ge param0, boolean param1) {
+    void a(PacketBuffer param0, boolean param1) {
         try {
           if (!param1) {
             this.a(-101);

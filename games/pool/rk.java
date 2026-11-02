@@ -12,7 +12,7 @@ final class rk {
     private int[] field_b;
     static String field_g;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, dd[] param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -224,7 +224,7 @@ final class rk {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        ko var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         im var12 = null;
@@ -292,7 +292,7 @@ final class rk {
                   var6 = var11_int;
                 }
                 if (0 != var11_int &&
-                  !rg.field_s) {
+                  !DualLinkNode.field_s) {
                   var5_int = 1;
                 }
               }
@@ -307,7 +307,7 @@ final class rk {
                   var7 = var11_intLifetime1;
                 }
                 if (var11_intLifetime1 != 0 &&
-                  !rg.field_s) {
+                  !DualLinkNode.field_s) {
                   var5_int = 1;
                 }
               }
@@ -328,7 +328,7 @@ final class rk {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_T) {
-              var12.field_ac = new vh(0L, ge.field_s);
+              var12.field_ac = new vh(0L, PacketBuffer.field_s);
               var12.a(-106, var12.field_ac);
               var12.field_Tb = new vh(0L, tm.field_d);
               if (tq.field_p) {
@@ -406,9 +406,9 @@ final class rk {
               var12.field_lc.field_Bb = var24_int;
               var12.field_lc.field_P = var24_int;
               var12.field_lc.field_K = var24_int;
-              if (wo.field_f != param2) {
+              if (DualLinkDeque.field_f != param2) {
                 if (var12.field_mc) {
-                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, ma.field_f);
+                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, IntrusiveNode.field_f);
                   var12.field_Zb.field_nb = be.field_K;
                 } else {
                   if (var12.field_Yb) {
@@ -434,7 +434,7 @@ final class rk {
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Zb.field_nb) {
-                  if (param2 == wo.field_f) {
+                  if (param2 == DualLinkDeque.field_f) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Zb.b(true) + kj.field_j * 2;
@@ -592,7 +592,7 @@ final class rk {
                     ci.field_d[var27_int] != null) {
                     var30_int = ci.field_d[var27_int][var28];
                     if (var30_int != 0 &&
-                      !rg.field_s &&
+                      !DualLinkNode.field_s &&
                       !var12.field_Pb) {
                       var29 = 1;
                     }
@@ -604,7 +604,7 @@ final class rk {
                     w.field_j[var27_int] != null) {
                     var30_intLifetime1 = w.field_j[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !rg.field_s &&
+                      !DualLinkNode.field_s &&
                       !var12.field_Pb) {
                       var29 = 1;
                     }
@@ -632,7 +632,7 @@ final class rk {
                     }
                   }
                 }
-                if (param2 == wo.field_f &&
+                if (param2 == DualLinkDeque.field_f &&
                   cj.e((byte) 85)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, ii.field_c);
@@ -646,7 +646,7 @@ final class rk {
                     var24Lifetime2 = var35 + "<br>" + tp.field_d + (String) (var25);
                   }
                 }
-                if (param2 == wo.field_f &&
+                if (param2 == DualLinkDeque.field_f &&
                   !cj.e((byte) 85)) {
                   var27 = em.field_L.field_Ob;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + nr.a(new String[]{var27}, param4 ^ 82, ke.field_b);
@@ -719,7 +719,7 @@ final class rk {
           param5 = param5 + param1;
           var7_int = 0;
           var8 = param2;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param4[var8];
             if (0 > var9) {
               var7_int = this.field_c[var7_int];
@@ -733,7 +733,7 @@ final class rk {
               param1++;
               param3[incrementValue$1] = (byte)(~var10);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -749,7 +749,7 @@ final class rk {
               param1++;
               param3[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -765,7 +765,7 @@ final class rk {
               param1++;
               param3[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param1 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -781,7 +781,7 @@ final class rk {
               param1++;
               param3[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param1 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -797,7 +797,7 @@ final class rk {
               param1++;
               param3[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -813,7 +813,7 @@ final class rk {
               param1++;
               param3[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -829,7 +829,7 @@ final class rk {
               param1++;
               param3[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -845,7 +845,7 @@ final class rk {
               param1++;
               param3[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param5 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -994,11 +994,11 @@ final class rk {
             var4_ref_fr = (fr) (vn.field_g.c((byte) -112));
             if (var4_ref_fr != null &&
               var4_ref_fr.field_p < var2_long) {
-              var4_ref_fr.a((byte) -117);
+              var4_ref_fr.unlink((byte) -117);
               of.field_Pb = var4_ref_fr.field_l.length;
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               for (var5_int = 0; var5_int < of.field_Pb; var5_int++) {
-                kn.field_e.field_t[var5_int] = var4_ref_fr.field_l[var5_int];
+                kn.field_e.payload[var5_int] = var4_ref_fr.field_l[var5_int];
               }
               hb.field_e = vd.field_g;
               vd.field_g = ia.field_l;
@@ -1023,12 +1023,12 @@ final class rk {
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               if (!lq.b((byte) 107, 1)) {
                 return false;
               }
               wq.field_b = kn.field_e.q(param0 + 107);
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               of.field_Pb = param1[wq.field_b];
             }
             if (!wf.a((byte) 39)) {
@@ -1051,7 +1051,7 @@ final class rk {
             }
             var5 = new fr(var2_long + (long)var4, wq.field_b, new byte[of.field_Pb]);
             for (var6 = 0; var6 < of.field_Pb; var6++) {
-              var5.field_l[var6] = kn.field_e.field_t[var6];
+              var5.field_l[var6] = kn.field_e.payload[var6];
             }
             vn.field_g.b((byte) -64, var5);
             wq.field_b = -1;
@@ -1073,8 +1073,8 @@ final class rk {
 
     final static int b(boolean param0) {
         if (!param0) {
-          dd[] var2 = (dd[]) null;
-          rk.a(37, -53, 4, 85, 43, -30, (dd[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          rk.a(37, -53, 4, 85, 43, -30, (Sprite[]) null);
         }
         return di.field_e + (ol.field_e << 2) + (ec.field_i << 4);
     }

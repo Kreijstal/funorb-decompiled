@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class fm extends ei implements lj {
-    static dd[] field_G;
+    static Sprite[] field_G;
     static boolean field_H;
     static jd[][] field_K;
     static String field_I;
@@ -506,15 +506,15 @@ abstract class fm extends ei implements lj {
         }
     }
 
-    final static void a(ge param0, boolean param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, boolean param1, int param2, int param3, int param4) {
         param0.a(12, false);
-        param0.a((byte) -81, 17);
+        param0.writeShort((byte) -81, 17);
         if (!param1) {
           return;
         }
         try {
-          param0.a((byte) -81, param2);
-          param0.a((byte) -81, param4);
+          param0.writeShort((byte) -81, param2);
+          param0.writeShort((byte) -81, param4);
           param0.a(param3, false);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "fm.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -851,7 +851,7 @@ abstract class fm extends ei implements lj {
             dj.field_l[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            oa.field_f[var1_intLifetime1] = 0L;
+            ClientException.field_f[var1_intLifetime1] = 0L;
           }
           rn.field_b = 0;
         } catch (RuntimeException runtimeException) {

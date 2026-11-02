@@ -41,7 +41,7 @@ final class ae {
             stackIn_11_0 = nr.a(new String[]{param1}, -1, sg.field_Q);
             return stackIn_11_0;
           }
-          var8.a((byte) -117);
+          var8.unlink((byte) -117);
           var8.a(false);
           gi.field_t = gi.field_t - 1;
           if (param0 != -3266) {
@@ -50,11 +50,11 @@ final class ae {
           }
           var5 = ej.field_j;
           var5.b(false, param3);
-          var5.field_v = var5.field_v + 1;
-          var6 = var5.field_v;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.a(3, false);
           var5.a(-9946, param2);
-          var5.b(-var6 + var5.field_v, true);
+          var5.b(-var6 + var5.position, true);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class ae {
         int stackIn_66_1 = 0;
         boolean stackIn_67_2 = false;
         RuntimeException decompiledCaughtException = null;
-        dd var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -112,12 +112,12 @@ final class ae {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        dd var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        dd var11 = null;
-        dd var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        dd var16 = null;
+        Sprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -141,36 +141,36 @@ final class ae {
         int var9_intLifetime3;
         var10 = Pool.field_O;
         try {
-          if (bm.field_k != null &&
-            bm.field_k.d(-86) &&
-            bm.field_k.a("benefits", 0) &&
+          if (IterableNodeHashTable.field_k != null &&
+            IterableNodeHashTable.field_k.d(-86) &&
+            IterableNodeHashTable.field_k.a("benefits", 0) &&
             null != rl.field_c &&
             rl.field_c.d(-62) &&
             rl.field_c.a("benefits", 0)) {
-            rf.field_e = pf.a("benefits", (byte) 51, "headline", bm.field_k);
-            ec.field_d = pf.a("benefits", (byte) 79, "blurbpane", bm.field_k);
-            ph.field_f = pf.a("benefits", (byte) 89, "button", bm.field_k);
-            i.field_o = pf.a("benefits", (byte) 109, "signup_text", bm.field_k);
-            dl.field_h = pf.a("benefits", (byte) 86, "menu_text", bm.field_k);
-            o.field_C = pf.a("benefits", (byte) 78, "button_frame", bm.field_k);
-            vq.field_Yb = pf.a("benefits", (byte) 75, "arrow", bm.field_k);
-            de.field_d = (lr) ((Object) he.a(bm.field_k, "large_font", 0, rl.field_c, "benefits"));
-            so.field_h = (lr) ((Object) he.a(bm.field_k, "small_font", 0, rl.field_c, "benefits"));
+            rf.field_e = pf.a("benefits", (byte) 51, "headline", IterableNodeHashTable.field_k);
+            ec.field_d = pf.a("benefits", (byte) 79, "blurbpane", IterableNodeHashTable.field_k);
+            ph.field_f = pf.a("benefits", (byte) 89, "button", IterableNodeHashTable.field_k);
+            i.field_o = pf.a("benefits", (byte) 109, "signup_text", IterableNodeHashTable.field_k);
+            dl.field_h = pf.a("benefits", (byte) 86, "menu_text", IterableNodeHashTable.field_k);
+            o.field_C = pf.a("benefits", (byte) 78, "button_frame", IterableNodeHashTable.field_k);
+            vq.field_Yb = pf.a("benefits", (byte) 75, "arrow", IterableNodeHashTable.field_k);
+            de.field_d = (lr) ((Object) he.a(IterableNodeHashTable.field_k, "large_font", 0, rl.field_c, "benefits"));
+            so.field_h = (lr) ((Object) he.a(IterableNodeHashTable.field_k, "small_font", 0, rl.field_c, "benefits"));
             var27 = qh.field_d;
             var2 = qh.field_l;
             var3 = qh.field_f;
             qh.a(ka.field_o);
-            var11 = new dd(4 + vq.field_Yb.field_z, 4 + vq.field_Yb.field_A);
+            var11 = new Sprite(4 + vq.field_Yb.field_z, 4 + vq.field_Yb.field_A);
             var11.e();
             vq.field_Yb.b(2, 2, er.field_X);
             hd.a(1, 2, var11.field_A, var11, 4, var11.field_z, 0, 0);
             vq.field_Yb = var11;
             w.field_f = vq.field_Yb.a();
-            var12 = new dd(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_z / 2;
             var12.e();
             de.field_d.b(nr.a(new String[]{sa.field_o}, -1, ul.field_l), var6, 40, 16777215, -1);
-            so.field_h.b(nr.a(new String[]{sa.field_o}, -1, vb.field_c), var6, 60, 16777215, -1);
+            so.field_h.b(nr.a(new String[]{sa.field_o}, -1, BufferedSocket.field_c), var6, 60, 16777215, -1);
             de.field_d.b(nr.a(new String[]{pd.field_e}, -1, up.field_w), var6, 110, 16777215, -1);
             so.field_h.b(nr.a(new String[]{pd.field_e}, -1, cr.field_t), var6, 130, 16777215, -1);
             de.field_d.b(mp.field_X, var6, 180, 16777215, -1);
@@ -192,7 +192,7 @@ final class ae {
             ln.field_o = 390 + (ph.field_f.field_A - o.field_C.field_A) / 2;
             tn.field_o = 434 + (ph.field_f.field_z - o.field_C.field_z) / 2;
             oj.field_s = 390 + (-o.field_C.field_A + ph.field_f.field_A) / 2;
-            bm.field_k = null;
+            IterableNodeHashTable.field_k = null;
             ir.field_n = (-o.field_C.field_z + ph.field_f.field_z) / 2 + 231;
           }
           if (null == wa.field_gb) {
@@ -208,7 +208,7 @@ final class ae {
             var5 = de.field_d.a(var14, jc.field_h);
             var6Lifetime1 = de.field_d.b(var14, jc.field_h, de.field_d.field_C + de.field_d.field_w);
             var7Lifetime1 = se.field_h + (-var5 + jc.field_h) / 2;
-            var8 = rf.field_c + (-var6Lifetime1 + li.field_e) / 2;
+            var8 = rf.field_c + (-var6Lifetime1 + IsaacCipher.field_e) / 2;
             var7Lifetime1 -= 3;
             var5 += 6;
             if (0 > var7Lifetime1) {
@@ -250,13 +250,13 @@ final class ae {
               ad.field_r = ad.field_r - var9_intLifetime3;
             }
             vn.field_j.c();
-            var9 = new dd(vn.field_j.field_w, vn.field_j.field_y);
+            var9 = new Sprite(vn.field_j.field_w, vn.field_j.field_y);
             var9.e();
-            de.field_d.a(var14, se.field_h, rf.field_c, jc.field_h, li.field_e, 16777215, -1, 1, 1, de.field_d.field_C + de.field_d.field_w);
+            de.field_d.a(var14, se.field_h, rf.field_c, jc.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, de.field_d.field_C + de.field_d.field_w);
             hd.a(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
             vn.field_j.e();
             var9.c(0, 0);
-            ua.field_u = new dd(640, 480);
+            ua.field_u = new Sprite(640, 480);
             ua.field_u.e();
             vn.field_j.b((vn.field_j.field_w >> 1) + pq.field_m, (vn.field_j.field_y >> 1) + ad.field_r, ej.field_g, 4096);
             vn.field_j = null;
@@ -270,7 +270,7 @@ final class ae {
             var2Lifetime2 = qh.field_l;
             var3Lifetime2 = qh.field_f;
             qh.a(ka.field_o);
-            var16 = new dd(412, 43);
+            var16 = new Sprite(412, 43);
             var5_ref_String = nr.a(new String[]{nr.field_N}, -1, wm.field_cc);
             nr.field_N = null;
             var16.e();
@@ -326,7 +326,7 @@ final class ae {
             var1.c(0, 0);
             stackIn_52_0 = 40;
             stackIn_52_1 = 40;
-            stackIn_52_2 = uf.field_X;
+            stackIn_52_2 = PoolMatchController.field_X;
             if (jc.field_j.field_h != 0) {
               stackIn_53_3 = 3;
             } else {
@@ -366,7 +366,7 @@ final class ae {
             w.field_f.c(586, var1_int);
             if (gg.field_f > var1_int &&
               gg.field_f < vq.field_Yb.field_A + var1_int) {
-              var2Lifetime5 = (ao.a(uf.field_X << 4, true) * 40 >> 16) + 40;
+              var2Lifetime5 = (ao.a(PoolMatchController.field_X << 4, true) * 40 >> 16) + 40;
               if (var2Lifetime5 <= 0) {
                 pj.f(-1);
                 jr.field_m[rj.field_f].c(269, 340);

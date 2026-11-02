@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pj extends ob {
-    static ko field_H;
+    static IntrusiveDeque field_H;
     static ie field_K;
     static kb field_J;
     static String field_I;
@@ -64,24 +64,24 @@ final class pj extends ob {
           Pool.field_L[1] = lc.field_P.nextInt();
           Pool.field_L[2] = (int)(Pool.field_Q >> 32);
           Pool.field_L[3] = (int)Pool.field_Q;
-          bc.field_b.field_v = 0;
+          bc.field_b.position = 0;
           bc.field_b.a(true, Pool.field_L[0]);
           bc.field_b.a(true, Pool.field_L[1]);
           bc.field_b.a(true, Pool.field_L[2]);
           bc.field_b.a(true, Pool.field_L[3]);
           be.a(bc.field_b, 0);
-          bc.field_b.a((byte) -81, param4);
+          bc.field_b.writeShort((byte) -81, param4);
           param1.a((byte) 121, bc.field_b);
-          ej.field_j.field_v = 0;
+          ej.field_j.position = 0;
           if (param0) {
             ej.field_j.a(18, false);
           } else {
             ej.field_j.a(16, false);
           }
-          ej.field_j.field_v = ej.field_j.field_v + 2;
-          var5_int = ej.field_j.field_v;
+          ej.field_j.position = ej.field_j.position + 2;
+          var5_int = ej.field_j.position;
           ej.field_j.a(true, im.field_ec);
-          ej.field_j.a(kn.field_j, (byte) -80);
+          ej.field_j.writeLong(kn.field_j, (byte) -80);
           var6 = 0;
           if (bf.field_g) {
             var6 = var6 | 1;
@@ -105,7 +105,7 @@ final class pj extends ob {
             ej.field_j.a(false, ri.field_N);
           }
           ad.a((byte) 93, rb.field_l, bc.field_b, ei.field_q, ej.field_j);
-          ej.field_j.c(ej.field_j.field_v - var5_int, (byte) -92);
+          ej.field_j.c(ej.field_j.position - var5_int, (byte) -92);
           de.a(-1, 0);
           if (param3 != -98300704) {
             pj.b(false);
@@ -126,7 +126,7 @@ final class pj extends ob {
     }
 
     pj(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super((dd) null, param0, param1, param2, param3, param4, param5);
+        super((Sprite) null, param0, param1, param2, param3, param4, param5);
     }
 
     final void c(int param0) {
@@ -156,9 +156,9 @@ final class pj extends ob {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dd var6 = null;
-        dd var7 = null;
-        dd var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = Pool.field_O;
         try {
@@ -223,7 +223,7 @@ final class pj extends ob {
     }
 
     static {
-        field_H = new ko();
+        field_H = new IntrusiveDeque();
         field_K = new ie();
         field_I = null;
     }

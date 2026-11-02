@@ -11,7 +11,7 @@ final class v {
     static int[] field_a;
     static int[] field_f;
     static byte[][] field_b;
-    static dd field_c;
+    static Sprite field_c;
     static int[] field_i;
     private long field_h;
     static vh field_j;
@@ -113,7 +113,7 @@ final class v {
     }
 
     final static void b(byte param0) {
-        ma.field_e = null;
+        IntrusiveNode.field_e = null;
         wn.field_g = null;
         be.field_L = null;
         vi.field_c = null;
@@ -129,7 +129,7 @@ final class v {
         if (param0 >= -59) {
           v.a(-8, -59, 'ﾽ');
         }
-        rg.field_p = true;
+        DualLinkNode.field_p = true;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {

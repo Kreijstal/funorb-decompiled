@@ -132,7 +132,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 96, "idlemessage20min");
                 if (var2 != null) {
-                  bm.field_l = a.a(var2, -125);
+                  IterableNodeHashTable.field_l = a.a(var2, -125);
                 }
                 var2 = gg.a((byte) 95, "error_js5crc");
                 if (null != var2) {
@@ -284,7 +284,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 123, "mu_game_is_full");
                 if (var2 != null) {
-                  ql.field_a = a.a(var2, -56);
+                  MouseHandler.field_a = a.a(var2, -56);
                 }
                 var2 = gg.a((byte) 106, "mu_game_has_started");
                 if (var2 != null) {
@@ -308,7 +308,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -102, "mu_all_players_have_left");
                 if (null != var2) {
-                  ge.field_x = a.a(var2, -58);
+                  PacketBuffer.field_x = a.a(var2, -58);
                 }
                 var2 = gg.a((byte) -77, "mu_lobby_name");
                 if (null != var2) {
@@ -324,7 +324,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 109, "mu_lobby_friend_rm");
                 if (var2 != null) {
-                  ge.field_m = a.a(var2, 127);
+                  PacketBuffer.field_m = a.a(var2, 127);
                 }
                 var2 = gg.a((byte) -81, "mu_lobby_name_add");
                 if (null != var2) {
@@ -496,7 +496,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -78, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  ko.field_d = a.a(var2, -2);
+                  IntrusiveDeque.field_d = a.a(var2, -2);
                 }
                 var2 = gg.a((byte) 124, "mu_chat_lobby_friends_only");
                 if (var2 != null) {
@@ -652,7 +652,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 93, "inviting_x");
                 if (null != var2) {
-                  ma.field_f = a.a(var2, param1 ^ -21100);
+                  IntrusiveNode.field_f = a.a(var2, param1 ^ -21100);
                 }
                 var2 = gg.a((byte) -80, "x_wants_to_join");
                 if (var2 != null) {
@@ -732,7 +732,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 108, "spectate_xs_game");
                 if (null != var2) {
-                  ge.field_w = a.a(var2, 126);
+                  PacketBuffer.field_w = a.a(var2, 126);
                 }
                 var2 = gg.a((byte) -100, "hide_players_in_xs_game");
                 if (var2 != null) {
@@ -804,7 +804,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 97, "esc_cancelprivatemessage");
                 if (null != var2) {
-                  li.field_g = a.a(var2, -32);
+                  IsaacCipher.field_g = a.a(var2, -32);
                 }
                 var2 = gg.a((byte) 125, "esc_cancelthisline");
                 if (null != var2) {
@@ -828,7 +828,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 117, "privatechat_friend_offline");
                 if (null != var2) {
-                  bm.field_d = a.a(var2, param1 ^ -21023);
+                  IterableNodeHashTable.field_d = a.a(var2, param1 ^ -21023);
                 }
                 var2 = gg.a((byte) -51, "privatechat_friend_notlisted");
                 if (null != var2) {
@@ -884,7 +884,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 94, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  bg.field_b = a.a(var2, -49);
+                  SocketConnector.field_b = a.a(var2, -49);
                 }
                 var2 = gg.a((byte) 98, "gameopt_playernotmember");
                 if (var2 != null) {
@@ -1046,7 +1046,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -39, "rule_1_0");
                 if (null != var2) {
-                  ql.field_c = a.a(var2, param1 ^ -21098);
+                  MouseHandler.field_c = a.a(var2, param1 ^ -21098);
                 }
                 var2 = gg.a((byte) 98, "rule_1_1");
                 if (var2 != null) {
@@ -1373,7 +1373,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -82, "create");
                 if (var2 != null) {
-                  qo.field_E = a.a(var2, -59);
+                  SpriteState.field_E = a.a(var2, -59);
                 }
                 var2 = gg.a((byte) 122, "create_pleasechooseapassword");
                 if (var2 != null) {
@@ -1629,7 +1629,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 126, "create_age_tooltip");
                 if (var2 != null) {
-                  uf.field_J = a.a(var2, 123);
+                  PoolMatchController.field_J = a.a(var2, 123);
                 }
                 var2 = gg.a((byte) -107, "create_optin_news_tooltip");
                 if (var2 != null) {
@@ -1685,7 +1685,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -27, "create_alert_passchars");
                 if (var2 != null) {
-                  bm.field_a = a.a(var2, param1 ^ 21092);
+                  IterableNodeHashTable.field_a = a.a(var2, param1 ^ 21092);
                 }
                 var2 = gg.a((byte) -122, "create_alert_passrepeated");
                 if (null != var2) {
@@ -1999,7 +1999,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -62, "achievements");
                 if (null != var2) {
-                  ge.field_o = a.a(var2, -20);
+                  PacketBuffer.field_o = a.a(var2, -20);
                 }
                 var2 = gg.a((byte) 98, "achievementsthisgame");
                 if (null != var2) {
@@ -2099,7 +2099,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -102, "endgame");
                 if (null != var2) {
-                  bm.field_i = a.a(var2, 11);
+                  IterableNodeHashTable.field_i = a.a(var2, 11);
                 }
                 var2 = gg.a((byte) -85, "endtutorial");
                 if (var2 != null) {
@@ -2167,7 +2167,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 126, "resign");
                 if (null != var2) {
-                  ko.field_b = a.a(var2, -62);
+                  IntrusiveDeque.field_b = a.a(var2, -62);
                 }
                 var2 = gg.a((byte) 119, "returntolobby");
                 if (null != var2) {
@@ -2495,7 +2495,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 96, "mp_x_haswon");
                 if (null != var2) {
-                  ge.field_r = a.a(var2, param1 + 20900);
+                  PacketBuffer.field_r = a.a(var2, param1 + 20900);
                 }
                 var2 = gg.a((byte) 106, "mp_youhavewon");
                 if (null != var2) {
@@ -2807,7 +2807,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 100, "mb_full_access_2");
                 if (var2 != null) {
-                  vb.field_c = a.a(var2, -17);
+                  BufferedSocket.field_c = a.a(var2, -17);
                 }
                 var2 = gg.a((byte) 94, "mb_achievement_count_1");
                 if (var2 != null) {
@@ -2861,11 +2861,11 @@ final class nk {
                 }
                 var2 = gg.a((byte) -115, "rating_mode_long_name,0");
                 if (null != var2) {
-                  kq.field_g[0] = a.a(var2, 124);
+                  GameApplet.field_g[0] = a.a(var2, 124);
                 }
                 var2 = gg.a((byte) -128, "rating_mode_long_name,1");
                 if (null != var2) {
-                  kq.field_g[1] = a.a(var2, -44);
+                  GameApplet.field_g[1] = a.a(var2, -44);
                 }
                 var2 = gg.a((byte) 109, "graphics_config_fixed_size");
                 if (var2 != null) {
@@ -3129,8 +3129,8 @@ final class nk {
                   throw wm.a((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2635_0 = (!kq.field_k);
-                  kq.field_k = stackIn_2635_0;
+                  stackIn_2635_0 = (!GameApplet.field_k);
+                  GameApplet.field_k = stackIn_2635_0;
                 }
             }
         }
@@ -3181,7 +3181,7 @@ final class nk {
             return;
           }
           var1 = kn.field_e;
-          var2 = var1.g(-72);
+          var2 = var1.readUnsignedByte(-72);
           if (var2 != 0) {
             if (var2 != 1) {
               tc.a((Throwable) null, "A1: " + t.a(93), -8555);
@@ -3190,7 +3190,7 @@ final class nk {
                 return;
               }
             }
-            var3_int = var1.b(true);
+            var3_int = var1.readInt(true);
             var4_ref_kg = (kg) (we.field_c.c((byte) 86));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
@@ -3205,7 +3205,7 @@ final class nk {
               }
               if (decompiledFrameRemainder0) {
                 if (null != var4_ref_kg) {
-                  var4_ref_kg.a((byte) -117);
+                  var4_ref_kg.unlink((byte) -117);
                   if (var6 == 0) {
                     return;
                   }
@@ -3222,7 +3222,7 @@ final class nk {
             dn.c(116);
             return;
           }
-          var4 = var1.g(-70);
+          var4 = var1.readUnsignedByte(-70);
           if (var4 == 0) {
             var5 = null;
           }
@@ -3231,12 +3231,12 @@ final class nk {
             var5_array = new byte[var4];
             var1.a(0, (byte) -121, var5_array, var4);
           }
-          var1.field_v = var1.field_v + 4;
+          var1.position = var1.position + 4;
           if (!var1.a(false)) {
             dn.c(112);
             return;
           }
-          var3.a((byte) -117);
+          var3.unlink((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

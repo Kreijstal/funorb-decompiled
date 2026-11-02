@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ue {
-    static dd field_c;
+    static Sprite field_c;
     static String field_d;
-    static ko field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     static int field_e;
 
@@ -165,6 +165,6 @@ final class ue {
     static {
         field_d = "Next";
         field_e = 2048;
-        field_b = new ko();
+        field_b = new IntrusiveDeque();
     }
 }

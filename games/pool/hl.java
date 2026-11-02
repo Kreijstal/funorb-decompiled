@@ -152,7 +152,7 @@ final class hl implements fp {
         return rl.field_a;
     }
 
-    final static void a(dd param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           int var2_int = 17 % ((param1 - 33) / 56);
           mm.field_c = param0;

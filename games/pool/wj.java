@@ -21,7 +21,7 @@ final class wj extends ud {
           qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
           ln.field_q.a((byte) -79, param1);
         }
-        if (uf.field_z > 0) {
+        if (PoolMatchController.field_z > 0) {
           if (nr.field_bb) {
             qh.g(0, 0, qh.field_l, fl.field_q.field_ib);
             de.field_b.a((byte) -79, param1);

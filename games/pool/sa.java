@@ -40,7 +40,7 @@ final class sa {
             return l.field_c;
           }
           if (ig.field_j.a(88)) {
-            return qo.field_x;
+            return SpriteState.field_x;
           }
           return l.field_c;
         }
@@ -48,7 +48,7 @@ final class sa {
           return l.field_c;
         }
         if (ig.field_j.a(88)) {
-          return qo.field_x;
+          return SpriteState.field_x;
         }
         return l.field_c;
     }
@@ -61,24 +61,24 @@ final class sa {
           oq var5 = null;
           int stackIn_8_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (ge.field_u == null) {
-            ge.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
+          if (PacketBuffer.field_u == null) {
+            PacketBuffer.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
           }
-          if (ge.field_u.field_f == 0) {
+          if (PacketBuffer.field_u.field_f == 0) {
             return false;
           }
           dupTemp$1 = rl.a((byte) -95);
           nf.field_Q = dupTemp$1;
           ob.field_v = dupTemp$1;
-          if (ge.field_u.field_f != 1) {
+          if (PacketBuffer.field_u.field_f != 1) {
             tl.field_J = vk.field_V;
           } else {
             try {
-              jd.field_c = new vb((java.net.Socket) (ge.field_u.field_e), nd.field_a);
+              jd.field_c = new BufferedSocket((java.net.Socket) (PacketBuffer.field_u.field_e), nd.field_a);
               var4 = kn.field_e;
               var5 = var4;
-              ej.field_j.field_v = 0;
-              var5.field_v = 0;
+              ej.field_j.position = 0;
+              var5.position = 0;
               stackIn_8_0 = (!param1) ? -1 : -2;
               hb.field_e = stackIn_8_0;
               vd.field_g = stackIn_8_0;
@@ -93,14 +93,14 @@ final class sa {
               if (param0 != 65) {
                 return false;
               }
-              ge.field_u = null;
+              PacketBuffer.field_u = null;
               return true;
             }
           }
           if (param0 != 65) {
             return false;
           }
-          ge.field_u = null;
+          PacketBuffer.field_u = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

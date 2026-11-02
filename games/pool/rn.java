@@ -3,7 +3,7 @@
  */
 final class rn implements Runnable {
     static int field_b;
-    private wo field_c;
+    private DualLinkDeque field_c;
     static int field_d;
     static vh field_f;
     static String[] field_a;
@@ -29,7 +29,7 @@ final class rn implements Runnable {
           var4.field_R = param1;
           this.a(var4, -19789);
           if (param0 != 58) {
-            this.field_c = (wo) null;
+            this.field_c = (DualLinkDeque) null;
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -210,7 +210,7 @@ final class rn implements Runnable {
         lq.a(param1, param6, 0, param11);
     }
 
-    final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, dd[][] param6, dd[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, di param14) {
+    final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, Sprite[][] param6, Sprite[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, di param14) {
         uo[] array$0 = null;
         uo[] array$1 = null;
         uo[] array$2 = null;
@@ -314,7 +314,7 @@ final class rn implements Runnable {
           mm.field_g = new vh(0L, f.field_e, ol.field_b);
           mn.field_e = new vh(0L, f.field_e, n.field_T);
           l.field_f = new vh(0L, sd.field_Q, ml.field_f);
-          vb.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          BufferedSocket.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
           field_f = new vh(0L, mg.field_c, fc.field_a.toUpperCase());
           field_f.field_pb = tq.field_p;
           stackIn_8_0 = null;
@@ -342,7 +342,7 @@ final class rn implements Runnable {
           }
           pk.field_a.a(-117, mn.field_e);
           pk.field_a.a(104, l.field_f);
-          pk.field_a.a(-127, vb.field_m);
+          pk.field_a.a(-127, BufferedSocket.field_m);
           if (tq.field_p) {
             oi.field_n.a(-97, field_f);
           }
@@ -364,49 +364,49 @@ final class rn implements Runnable {
           nd.field_c.field_Fb = 1;
           br.field_M = new vh(0L, lf.field_d, jh.field_g);
           jh.field_a = new vh(0L, sd.field_Q, wi.field_c);
-          wo.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          DualLinkDeque.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
           cl.field_d.a(-119, nd.field_c);
           cl.field_d.a(-104, br.field_M);
           if (tq.field_p) {
             cl.field_d.a(9, jh.field_a);
           }
-          cl.field_d.a(-109, wo.field_f);
+          cl.field_d.a(-109, DualLinkDeque.field_f);
           ok.field_ob = new vh(0L, tg.field_d, dk.field_g.toUpperCase());
           ii.field_e = new vh(0L, rl.field_d);
           rq.field_x = new vh(0L, ri.field_P);
           oi.field_q = new vh(0L, bh.field_b, gr.field_D.toUpperCase());
           oi.field_v = new vh[4 + param3];
           mc.field_f = new uo[param3 + 4][];
-          oi.field_v[0] = new vh(0L, kq.field_a, fr.field_q);
+          oi.field_v[0] = new vh(0L, GameApplet.field_a, fr.field_q);
           mc.field_f[0] = new uo[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             mc.field_f[0][1 + var17_int] = new uo(0L, ef.field_c, (vh) null, ei.field_A, uk.field_i[var17_int], pn.field_i[var17_int]);
           }
           if (dg.field_T.length >= 2) {
-            oi.field_v[1] = new vh(0L, kq.field_a, ab.field_h);
+            oi.field_v[1] = new vh(0L, GameApplet.field_a, ab.field_h);
             array$0 = new uo[dg.field_T.length + 1];
             mc.field_f[1] = array$0;
-            mc.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
+            mc.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
             for (var17_intLifetime1 = 0; dg.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
-              mc.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, Integer.toString(dg.field_T[var17_intLifetime1]));
+              mc.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
             }
           }
-          oi.field_v[2] = new vh(0L, kq.field_a, ve.field_o);
-          mc.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.field_g), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.field_f)};
+          oi.field_v[2] = new vh(0L, GameApplet.field_a, ve.field_o);
+          mc.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.field_g), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.field_f)};
           if (1 < ji.field_g) {
-            oi.field_v[3] = new vh(0L, kq.field_a, pk.field_c);
+            oi.field_v[3] = new vh(0L, GameApplet.field_a, pk.field_c);
             array$1 = new uo[1 + ji.field_g];
             mc.field_f[3] = array$1;
-            mc.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
+            mc.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ji.field_g; var17_intLifetime2++) {
-              mc.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, ln.field_r[var17_intLifetime2]);
+              mc.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
-            oi.field_v[var17_intLifetime3 + 4] = new vh(0L, kq.field_a, ck.field_R[var17_intLifetime3]);
+            oi.field_v[var17_intLifetime3 + 4] = new vh(0L, GameApplet.field_a, ck.field_R[var17_intLifetime3]);
             array$2 = new uo[rb.b(255, (int) gr.field_E[var17_intLifetime3]) + 1];
             mc.field_f[4 + var17_intLifetime3] = array$2;
-            mc.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
+            mc.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
             for (var18 = 0; var18 < (255 & gr.field_E[var17_intLifetime3]); var18++) {
               if (null == jl.field_d) {
                 var19_ref = null;
@@ -426,7 +426,7 @@ final class rn implements Runnable {
               } else {
                 var20 = null;
               }
-              mc.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) (var19_ref), (String) (var20));
+              mc.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param3 > var17_intLifetime4; var17_intLifetime4++) {
@@ -624,9 +624,9 @@ final class rn implements Runnable {
         field_f = null;
     }
 
-    rn(sj param0) {
-        le var2 = null;
-        this.field_c = new wo();
+    rn(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
+        this.field_c = new DualLinkDeque();
         this.field_j = false;
         this.field_e = 0;
         try {

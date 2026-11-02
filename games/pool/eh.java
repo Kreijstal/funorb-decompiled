@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends ma {
+final class eh extends IntrusiveNode {
     static nl field_l;
     int field_v;
     String[][] field_m;
@@ -15,7 +15,7 @@ final class eh extends ma {
     boolean field_u;
     int[][] field_z;
     static int field_x;
-    static dd field_y;
+    static Sprite field_y;
     static int[] field_p;
     static int[] field_w;
 
@@ -72,7 +72,7 @@ final class eh extends ma {
           return;
         }
         lr var2 = (lr) null;
-        eh.a(-96, 113, (dd[]) null, (lr) null, -106, (dd[]) null, 56, -114, -28, 47, (dd[]) null, -80, -127, (lr) null, -116, -112, -82, 45, -61, -51);
+        eh.a(-96, 113, (Sprite[]) null, (lr) null, -106, (Sprite[]) null, 56, -114, -28, 47, (Sprite[]) null, -80, -127, (lr) null, -116, -112, -82, 45, -61, -51);
         field_p = null;
         field_s = null;
         field_n = null;
@@ -81,7 +81,7 @@ final class eh extends ma {
         field_l = null;
     }
 
-    final static void a(int param0, int param1, dd[] param2, lr param3, int param4, dd[] param5, int param6, int param7, int param8, int param9, dd[] param10, int param11, int param12, lr param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, Sprite[] param2, lr param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, lr param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

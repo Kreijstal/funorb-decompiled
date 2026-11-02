@@ -6,11 +6,11 @@ final class dr {
     static int field_b;
     static int field_c;
     static nl field_a;
-    static dd field_d;
+    static Sprite field_d;
     static String field_e;
 
     final static void a(byte param0, di param1) {
-        dd var2 = null;
+        Sprite var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -19,14 +19,14 @@ final class dr {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new dd(param1.a(false, "", "final_frame.jpg"), (java.awt.Component) ((Object) pa.field_K));
+          var2 = new Sprite(param1.a(false, "", "final_frame.jpg"), (java.awt.Component) ((Object) pa.field_K));
           var3 = var2.field_z;
           var4 = var2.field_A;
           uc.a((byte) -6);
-          qf.field_k = new dd(var3, 3 * var4 / 4);
+          qf.field_k = new Sprite(var3, 3 * var4 / 4);
           qf.field_k.e();
           var2.a(0, 0);
-          we.field_k = new dd(var3, -qf.field_k.field_A + var4);
+          we.field_k = new Sprite(var3, -qf.field_k.field_A + var4);
           we.field_k.e();
           var2.a(0, -qf.field_k.field_A);
           we.field_k.field_B = qf.field_k.field_A;

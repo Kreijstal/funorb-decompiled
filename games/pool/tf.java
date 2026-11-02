@@ -7,7 +7,7 @@ final class tf {
     int field_c;
     static String field_b;
 
-    final static dd a(int param0, int param1) {
+    final static Sprite a(int param0, int param1) {
         if (param0 != -17104) {
           field_a = (tm) null;
           if (mp.field_V > 0) {

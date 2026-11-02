@@ -3,7 +3,7 @@
  */
 final class sp extends gr {
     byte field_L;
-    ge field_K;
+    PacketBuffer field_K;
     int field_J;
 
     final static boolean h(int param0) {
@@ -41,8 +41,8 @@ final class sp extends gr {
           return (byte[]) null;
         }
         if (!this.field_F &&
-          this.field_K.field_v >= this.field_K.field_t.length - this.field_L) {
-          return this.field_K.field_t;
+          this.field_K.position >= this.field_K.payload.length - this.field_L) {
+          return this.field_K.payload;
         }
         throw new RuntimeException();
     }
@@ -57,7 +57,7 @@ final class sp extends gr {
         if (param0 <= 6) {
           return 22;
         }
-        return 100 * this.field_K.field_v / (this.field_K.field_t.length - this.field_L);
+        return 100 * this.field_K.position / (this.field_K.payload.length - this.field_L);
     }
 
     static {

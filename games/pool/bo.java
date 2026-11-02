@@ -3,7 +3,7 @@
  */
 final class bo {
     static String field_b;
-    static dd[] field_a;
+    static Sprite[] field_a;
 
     final static int b(int param0, int param1) {
         if (param0 != -65536) {
@@ -188,7 +188,7 @@ final class bo {
           stackIn_37_0 = (param0 % 400 == 0);
           return stackIn_37_0;
         }
-        field_a = (dd[]) null;
+        field_a = (Sprite[]) null;
         if (param0 < 0) {
           stackIn_5_0 = ((param0 + 1) % 4 == 0);
           return stackIn_5_0;

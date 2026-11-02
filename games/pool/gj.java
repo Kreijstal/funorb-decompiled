@@ -3,25 +3,25 @@
  */
 final class gj extends ei {
     private int field_J;
-    static dd field_T;
+    static Sprite field_T;
     static java.applet.Applet field_W;
     static int field_S;
     static lr field_R;
     private int field_Q;
     private int field_I;
     private int field_M;
-    private dd field_H;
+    private Sprite field_H;
     static vh field_K;
     boolean field_N;
     private int field_V;
-    private dd[] field_O;
+    private Sprite[] field_O;
     int field_P;
-    private dd field_U;
+    private Sprite field_U;
     static int field_G;
-    private dd field_F;
+    private Sprite field_F;
     private int field_L;
 
-    private final dd a(int param0, int param1, byte param2) {
+    private final Sprite a(int param0, int param1, byte param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -35,7 +35,7 @@ final class gj extends ei {
         if (param2 < 82) {
           this.a(-24, (byte) -90, 11, -53);
         }
-        dd var13 = new dd(2 * this.field_Q, this.field_y);
+        Sprite var13 = new Sprite(2 * this.field_Q, this.field_y);
         kj.a(113, var13);
         int var5 = this.field_y >> 1;
         for (var6 = 0; var6 < this.field_y; var6++) {
@@ -99,14 +99,14 @@ final class gj extends ei {
         this.f((byte) 33);
     }
 
-    private final dd a(int param0) {
+    private final Sprite a(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        dd discarded$0 = null;
+        Sprite discarded$0 = null;
         int var2 = this.field_y >> 1;
-        dd var3 = new dd(var2, this.field_y);
+        Sprite var3 = new Sprite(var2, this.field_y);
         kj.a(55, var3);
         for (var4 = 0; var4 < this.field_y; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -126,7 +126,7 @@ final class gj extends ei {
         return var3;
     }
 
-    private final void a(boolean param0, int param1, int param2, dd param3) {
+    private final void a(boolean param0, int param1, int param2, Sprite param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -142,7 +142,7 @@ final class gj extends ei {
             param3.c(var6, param2);
           }
           if (param0) {
-            this.field_U = (dd) null;
+            this.field_U = (Sprite) null;
           }
           oc.a(121);
           if (qh.field_b <= param1 + this.field_U.field_z) {
@@ -236,14 +236,14 @@ final class gj extends ei {
     }
 
     private final void f(byte param0) {
-        this.field_O = new dd[]{this.a(this.field_M, this.field_V, (byte) 108), this.a(this.field_L, this.field_I, (byte) 110)};
+        this.field_O = new Sprite[]{this.a(this.field_M, this.field_V, (byte) 108), this.a(this.field_L, this.field_I, (byte) 110)};
         if (param0 <= 8) {
           byte[] var3 = (byte[]) null;
           gj.a((byte[]) null, -61, 57);
         }
         this.field_U = this.a(16711422);
         this.field_F = this.field_U.a();
-        this.field_H = new dd(this.field_y >> 1, this.field_y);
+        this.field_H = new Sprite(this.field_y >> 1, this.field_y);
     }
 
     final void a(int param0, int param1, int param2) {

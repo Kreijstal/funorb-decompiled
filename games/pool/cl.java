@@ -3,9 +3,9 @@
  */
 final class cl {
     static vh field_d;
-    static dd field_k;
+    static Sprite field_k;
     static int field_h;
-    static dd field_m;
+    static Sprite field_m;
     static int field_g;
     static java.awt.Font field_c;
     static String field_i;
@@ -78,7 +78,7 @@ final class cl {
             stackIn_2_0 = null;
             return (wl) (stackIn_2_0);
           }
-          var2 = new wl(param0, el.field_I, ih.field_d, pd.field_a, rc.field_f, ma.field_h, v.field_b);
+          var2 = new wl(param0, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
           sh.h(-1);
           if (!param1) {
             field_j = (String) null;

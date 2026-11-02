@@ -24,7 +24,7 @@ final class uo extends vh {
         return var5 + (param2 + var4) + param1 + param2;
     }
 
-    uo(long param0, vh param1, vh param2, vh param3, dd param4, String param5) {
+    uo(long param0, vh param1, vh param2, vh param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -110,7 +110,7 @@ final class uo extends vh {
         var8 = Pool.field_O;
         try {
           var13 = kn.field_e;
-          var2 = var13.g(-94);
+          var2 = var13.readUnsignedByte(-94);
           if (param0 >= -102) {
             uo.f(44);
           }
@@ -120,9 +120,9 @@ final class uo extends vh {
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((ge) ((Object) var5)).g(-101);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-101);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((ge) ((Object) var5)).b(true);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
             var11 = (tq) (hb.field_j.c((byte) 77));
             if (var11 == null) {
@@ -131,7 +131,7 @@ final class uo extends vh {
             }
             var11.field_l = var3;
             var11.field_s = true;
-            var11.a((byte) -117);
+            var11.unlink((byte) -117);
             return;
           }
           if (var2 == 1) {
@@ -140,7 +140,7 @@ final class uo extends vh {
               dn.c(-69);
               return;
             }
-            var12.a((byte) -117);
+            var12.unlink((byte) -117);
           } else {
             if (2 == var2) {
               var14 = (tq) (hb.field_j.c((byte) -112));
@@ -150,7 +150,7 @@ final class uo extends vh {
               }
               var14.field_l = ek.a(117);
               var14.field_s = true;
-              var14.a((byte) -117);
+              var14.unlink((byte) -117);
             } else {
               tc.a((Throwable) null, "A1: " + t.a(99), -8555);
               dn.c(84);
@@ -239,7 +239,7 @@ final class uo extends vh {
           while (var2 != null) {
             if (var2.field_v &&
               var2.field_p >= 230) {
-              var2.a((byte) -117);
+              var2.unlink((byte) -117);
             }
             var2 = (lk) (var1.b(-117));
           }

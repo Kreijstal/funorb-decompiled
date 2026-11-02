@@ -4,10 +4,10 @@
 final class wf {
     static int field_d;
     static int[] field_b;
-    static dd field_a;
+    static Sprite field_a;
     static java.awt.Image field_c;
 
-    final static void a(int param0, int param1, int param2, dd param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -21,8 +21,8 @@ final class wf {
           param3.c(param6 - 1, -1 + param8, param1);
           param3.c(-1 + param6, param8 + 1, param1);
           if (param0 > -9) {
-            dd var12 = (dd) null;
-            wf.a(39, -40, -90, (dd) null, 42, 37, -34, 83, 88);
+            Sprite var12 = (Sprite) null;
+            wf.a(39, -40, -90, (Sprite) null, 42, 37, -34, 83, 88);
           }
           qh.b(ka.field_o);
           qh.d(var9_int + 1, 0, var10 + 1, var11 + param2);
@@ -51,7 +51,7 @@ final class wf {
           d.field_d = new qq(wd.field_Ub, bi.field_e, param1, ro.field_e, to.field_q);
           wd.field_Ub.b(d.field_d, 30000);
           if (param2 > -122) {
-            field_a = (dd) null;
+            field_a = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "wf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -72,20 +72,20 @@ final class wf {
           if (!lq.b((byte) 114, 1)) {
             return false;
           }
-          of.field_Pb = kn.field_e.g(-86);
-          kn.field_e.field_v = 0;
+          of.field_Pb = kn.field_e.readUnsignedByte(-86);
+          kn.field_e.position = 0;
         }
         if (of.field_Pb == -2) {
           if (!lq.b((byte) 76, 2)) {
             return false;
           }
-          of.field_Pb = kn.field_e.d(-1034);
-          kn.field_e.field_v = 0;
+          of.field_Pb = kn.field_e.readUnsignedShort(-1034);
+          kn.field_e.position = 0;
         }
         if (param0 == 39) {
           return lq.b((byte) 67, of.field_Pb);
         }
-        field_a = (dd) null;
+        field_a = (Sprite) null;
         return lq.b((byte) 67, of.field_Pb);
     }
 
@@ -107,11 +107,11 @@ final class wf {
         String var14 = null;
         kn var15 = null;
         try {
-          dr.a((String) null, -1, 0L, param2.g(20872), vb.field_m, (String) null, 32540, param2, (int[]) null);
+          dr.a((String) null, -1, 0L, param2.g(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
           if (param2.field_ec && (param2.field_Yb == 2 ||
             !(hq.field_i < 2))) {
             var9 = vl.field_m;
-            var10 = nr.a(new String[]{param3}, param0 + 109, ge.field_w);
+            var10 = nr.a(new String[]{param3}, param0 + 109, PacketBuffer.field_w);
             var9.field_n.a(var10, 17130, 10);
           }
           vl.field_m.b(2616);
@@ -128,7 +128,7 @@ final class wf {
           }
           var15 = vl.field_m;
           if (param0 != -110) {
-            field_a = (dd) null;
+            field_a = (Sprite) null;
           }
           var5 = lq.field_W;
           var6 = ua.field_o;

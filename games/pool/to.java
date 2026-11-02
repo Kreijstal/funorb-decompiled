@@ -3,7 +3,7 @@
  */
 final class to extends tm {
     static boolean field_q;
-    static jg field_l;
+    static PcmSample field_l;
     static int field_p;
     static String field_n;
     static int field_o;
@@ -169,7 +169,7 @@ final class to extends tm {
         if (param0 >= 9) {
           return param1 == 0 ? ij.field_t : ld.field_h;
         }
-        field_l = (jg) null;
+        field_l = (PcmSample) null;
         return param1 == 0 ? ij.field_t : ld.field_h;
     }
 

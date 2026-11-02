@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ep extends kq {
+abstract class ep extends GameApplet {
     private int field_q;
-    static ko field_A;
+    static IntrusiveDeque field_A;
     private int field_E;
     static di field_F;
     static String field_v;
@@ -14,7 +14,7 @@ abstract class ep extends kq {
     private int field_w;
     private boolean field_x;
     private int field_u;
-    static dd field_s;
+    static Sprite field_s;
     private boolean field_r;
     static boolean field_z;
     private boolean field_C;
@@ -137,7 +137,7 @@ abstract class ep extends kq {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          ge var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Pool.field_O;
@@ -185,7 +185,7 @@ abstract class ep extends kq {
                 }
               }
             } else {
-              rg.field_v = false;
+              DualLinkNode.field_v = false;
             }
           }
           if (4 == var4) {
@@ -232,7 +232,7 @@ abstract class ep extends kq {
               if (l.field_d.a((byte) -118)) {
                 var12 = l.field_d.a(-25955);
                 if (var12 != null) {
-                  var7 = tl.a(var12.field_v, -7510, var12.field_t, 0);
+                  var7 = tl.a(var12.position, -7510, var12.payload, 0);
                   hg.a(var7, true);
                 } else {
                   var9 = (String) null;
@@ -300,7 +300,7 @@ abstract class ep extends kq {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 1:
                 cm.f(80);
@@ -323,17 +323,17 @@ abstract class ep extends kq {
                   switch (var2) {
                     case 13:
                       ga.n(29769);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.d(70);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       ul.i(3);
-                      break L1;
+                      break regionExit1;
                     default:
                       tc.a((Throwable) null, "MGS1: " + t.a(127), param0 - 23555);
                       dn.c(-75);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_29_0 = -31;
@@ -381,7 +381,7 @@ abstract class ep extends kq {
         vp.a(this.field_u, this.field_D, (byte) 86, this.field_r, gj.field_S, this.field_B, param5, this.field_t, lg.field_s, 5000, this.field_q, 5000, param6, this.field_o);
         je.a(lg.field_s, param6, this.field_D, this.field_B, this.field_t, (byte) -96, this.field_u, gj.field_S, this.field_q);
         fl.a(true);
-        oa.field_a = nn.b(96);
+        ClientException.field_a = nn.b(96);
         kc.a(pa.field_K, param4 + param4);
         jd.field_d = param2;
         mk.field_c = param0;
@@ -392,7 +392,7 @@ abstract class ep extends kq {
         ao.c(false);
     }
 
-    final static void a(byte param0, uf param1) {
+    final static void a(byte param0, PoolMatchController param1) {
         ij dupTemp$0 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_63_0 = null;
@@ -403,14 +403,14 @@ abstract class ep extends kq {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        uf var5 = null;
+        PoolMatchController var5 = null;
         ij var6 = null;
         var4 = Pool.field_O;
         try {
           if (!nd.field_i.c(0)) {
             kg.field_m = kg.field_m + 1;
-            if (kq.field_l != null) {
-              kq.field_l.a(false, 50, kg.field_m);
+            if (GameApplet.field_l != null) {
+              GameApplet.field_l.a(false, 50, kg.field_m);
             }
             if (null != nl.field_b) {
               nl.field_b.a(false, 50, kg.field_m);
@@ -508,8 +508,8 @@ abstract class ep extends kq {
             }
           }
           if (param0 != -73) {
-            var5 = (uf) null;
-            ep.a((byte) -7, (uf) null);
+            var5 = (PoolMatchController) null;
+            ep.a((byte) -7, (PoolMatchController) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -579,7 +579,7 @@ abstract class ep extends kq {
 
     private final void d(int param0) {
         int var4 = 122 % ((-11 - param0) / 50);
-        int var2 = kn.field_e.g(-74);
+        int var2 = kn.field_e.readUnsignedByte(-74);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var5 = -1 + of.field_Pb;
         byte[] var6 = new byte[var5];
@@ -595,7 +595,7 @@ abstract class ep extends kq {
         if (!pk.b((byte) 109)) {
           return -1;
         }
-        if (rg.field_v) {
+        if (DualLinkNode.field_v) {
           return -1;
         }
         var2 = np.a(false, sa.a(false), true, this.field_x, this.field_w, kg.c((byte) 121));
@@ -619,7 +619,7 @@ abstract class ep extends kq {
             }
             de.c(param0 + 11);
             re.a(true, ke.field_g, var2);
-            rg.field_v = true;
+            DualLinkNode.field_v = true;
             ia.field_k = rl.a((byte) -93) + 15000L;
           }
         }
@@ -628,7 +628,7 @@ abstract class ep extends kq {
 
     private final void j(int param0) {
         if (param0 < 27) {
-          field_s = (dd) null;
+          field_s = (Sprite) null;
         }
         fe.field_H[1] = true;
     }
@@ -660,8 +660,8 @@ abstract class ep extends kq {
           fk.field_ab != 11) {
           t.b(-11);
         }
-        if (null != oa.field_a) {
-          wp.field_d = oa.field_a.b(2);
+        if (null != ClientException.field_a) {
+          wp.field_d = ClientException.field_a.b(2);
         }
         if (mg.a(-66)) {
           var3 = up.a(-21282) * 1200;
@@ -671,9 +671,9 @@ abstract class ep extends kq {
             this.field_C = false;
             dn.c(-80);
             de.c(param0 + 15);
-            re.a(true, bm.field_l, 2);
+            re.a(true, IterableNodeHashTable.field_l, 2);
             qr.c(640);
-            rg.field_v = true;
+            DualLinkNode.field_v = true;
             ia.field_k = 15000L + rl.a((byte) -101);
           }
         }
@@ -718,7 +718,7 @@ abstract class ep extends kq {
               } else {
                 re.a(true, br.field_L, 256);
               }
-              rg.field_v = true;
+              DualLinkNode.field_v = true;
             }
           } else {
             if (sk.field_a != 3) {
@@ -744,7 +744,7 @@ abstract class ep extends kq {
           sk.field_a != 0 ||
           pk.b((byte) 109)) &&
           ia.field_k <= rl.a((byte) -126)) {
-          rg.field_v = false;
+          DualLinkNode.field_v = false;
           if (-1 != sk.field_a &&
             0 != sk.field_a) {
             sk.field_a = -1;
@@ -765,7 +765,7 @@ abstract class ep extends kq {
           }
           uj.field_d = oq.a(false, -4, 1, pp.field_a, true);
           vf.field_nb = oq.a(false, -49, 1, ie.field_g, true);
-          rg.field_r = oq.a(false, -40, 1, cj.field_eb, true);
+          DualLinkNode.field_r = oq.a(false, -40, 1, cj.field_eb, true);
           qp.field_Zb = vf.field_nb;
           sf.field_y = 2;
           sd.field_R = uj.field_d;
@@ -788,13 +788,13 @@ abstract class ep extends kq {
           }
         }
         if (sf.field_y == 3 &&
-          k.a(uj.field_d, vf.field_nb, rg.field_r, true) &&
-          ab.a(rg.field_r, true)) {
+          k.a(uj.field_d, vf.field_nb, DualLinkNode.field_r, true) &&
+          ab.a(DualLinkNode.field_r, true)) {
           dn.d(8192);
           ia.a((byte) 98);
           am.field_n = o.field_A;
           mf.field_o = false;
-          uf.a(param0 ^ 11934, bf.field_g, uj.field_d, rg.field_r, vf.field_nb);
+          PoolMatchController.a(param0 ^ 11934, bf.field_g, uj.field_d, DualLinkNode.field_r, vf.field_nb);
           if (pd.field_g ||
             null != b.field_J) {
             stackIn_102_0 = -122;
@@ -806,11 +806,11 @@ abstract class ep extends kq {
             al.m(4);
           }
           if (null == oh.field_c) {
-            oh.field_c = vb.b(105);
+            oh.field_c = BufferedSocket.b(105);
             u.field_a = sq.g(108);
           }
-          wj.a(rg.field_r, u.field_a, false, oh.field_c);
-          rg.field_r = null;
+          wj.a(DualLinkNode.field_r, u.field_a, false, oh.field_c);
+          DualLinkNode.field_r = null;
           vf.field_nb = null;
           uj.field_d = null;
           pr.a(-23989, (java.applet.Applet) (this));
@@ -819,15 +819,15 @@ abstract class ep extends kq {
         }
         if (sf.field_y == 10) {
           if (gj.field_S != 0) {
-            kq.field_m = fh.a(mk.field_c, (byte) 103);
+            GameApplet.field_m = fh.a(mk.field_c, (byte) 103);
           }
           sf.field_y = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (sf.field_y == 11) {
-          if (kq.field_m != null && (!kq.field_m.d(param0 ^ -52) ||
-            !kq.field_m.c(param0 ^ 61))) {
-            fo.a(hp.a(kq.field_m, ir.field_b, -641, ud.field_F), 0.0f, false);
+          if (GameApplet.field_m != null && (!GameApplet.field_m.d(param0 ^ -52) ||
+            !GameApplet.field_m.c(param0 ^ 61))) {
+            fo.a(hp.a(GameApplet.field_m, ir.field_b, -641, ud.field_F), 0.0f, false);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -893,12 +893,12 @@ abstract class ep extends kq {
         }
     }
 
-    final static dd[] a(int param0, di param1, String param2, String param3) {
+    final static Sprite[] a(int param0, di param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        uf var6 = null;
-        dd[] stackIn_3_0 = null;
+        PoolMatchController var6 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -909,8 +909,8 @@ abstract class ep extends kq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 36) {
-            var6 = (uf) null;
-            ep.a((byte) -107, (uf) null);
+            var6 = (PoolMatchController) null;
+            ep.a((byte) -107, (PoolMatchController) null);
           }
           var4_int = param1.b(param3, -1);
           var5 = param1.a(var4_int, 0, param2);
@@ -982,7 +982,7 @@ abstract class ep extends kq {
         field_v = "This is <%0>'s RuneScape clan if they have one.";
         field_z = false;
         field_p = "Report <%0> for abuse";
-        field_s = new dd(360, 240);
+        field_s = new Sprite(360, 240);
         field_y = "Log in / Create account";
     }
 }

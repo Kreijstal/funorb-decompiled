@@ -22,14 +22,14 @@ final class al {
     int field_q;
     private int[] field_d;
     int[][] field_e;
-    ko field_u;
+    IntrusiveDeque field_u;
     int field_s;
     String[] field_h;
     static tm[] field_B;
     static int[] field_g;
     int field_b;
     private int[] field_a;
-    ko field_i;
+    IntrusiveDeque field_i;
     df[] field_r;
     private int[] field_t;
 
@@ -168,7 +168,7 @@ final class al {
         if ((um.field_c & var8.field_s) != 0) {
           if (var4_ref.field_P != -1) {
             if (var4_ref.field_Q != -1) {
-              this.a(var4_ref.field_Q, (li) null, (byte) -118, var4_ref.field_P, 0);
+              this.a(var4_ref.field_Q, (IsaacCipher) null, (byte) -118, var4_ref.field_P, 0);
             } else {
               this.n(-16739);
             }
@@ -210,7 +210,7 @@ final class al {
         if (0 != (var8.field_s & sg.field_O)) {
           this.field_y = 1;
         }
-        if ((oa.field_b & var8.field_s) != 0) {
+        if ((ClientException.field_b & var8.field_s) != 0) {
           var5Lifetime1 = var8.field_l & 3;
           if (var5Lifetime1 != 1) {
             if (var5Lifetime1 == 2) {
@@ -224,7 +224,7 @@ final class al {
         return false;
     }
 
-    final void a(int param0, li param1, byte param2, int param3, int param4) {
+    final void a(int param0, IsaacCipher param1, byte param2, int param3, int param4) {
         try {
           this.a(param0, param3, param1, -30896, param4, 8192);
           int var6_int = 99 / ((param2 + 26) / 53);
@@ -241,14 +241,14 @@ final class al {
         var2.field_q = 2;
     }
 
-    private final ge b(byte param0) {
+    private final PacketBuffer b(byte param0) {
         int var4 = 0;
         int var4Lifetime1;
         if (param0 <= 79) {
           this.n(117);
         }
-        ge var2 = new ge(this.f(0));
-        ge var3 = var2;
+        PacketBuffer var2 = new PacketBuffer(this.f(0));
+        PacketBuffer var3 = var2;
         var3.a(this.field_l.length, false);
         for (var4 = 0; this.field_l.length > var4; var4++) {
           this.field_l[var4].a(0, var3);
@@ -393,7 +393,7 @@ final class al {
     }
 
     private final void n(int param0) {
-        this.a(50, (li) null);
+        this.a(50, (IsaacCipher) null);
         if (param0 != -16739) {
           this.field_p = 125;
         }
@@ -442,7 +442,7 @@ final class al {
         this.field_w[5] = new dl(this.field_c[22]);
     }
 
-    private final void b(int param0, ge param1) {
+    private final void b(int param0, PacketBuffer param1) {
         int var4_int = 0;
         int var11 = 0;
         qe stackIn_5_0 = null;
@@ -472,19 +472,19 @@ final class al {
         int var6Lifetime2Lifetime1;
         var12 = Pool.field_O;
         try {
-          this.field_u = new ko();
-          var3_int = param1.b(true);
+          this.field_u = new IntrusiveDeque();
+          var3_int = param1.readInt(true);
           for (var4_int = 0; var3_int > var4_int; var4_int++) {
             var5 = new qe();
-            var5.field_v = param1.b(true);
-            var5.field_M = param1.d((byte) -86);
-            var6 = param1.g(param0 ^ -85);
+            var5.field_v = param1.readInt(true);
+            var5.field_M = param1.readShort((byte) -86);
+            var6 = param1.readUnsignedByte(param0 ^ -85);
             var5.field_q = 15 & var6 >> 4;
             stackIn_5_0 = var5;
             stackIn_6_1 = (8 == (8 & var6));
             stackIn_5_0.field_t = stackIn_6_1;
             var5.field_L = var6 & 7;
-            var6Lifetime1 = param1.g(-120);
+            var6Lifetime1 = param1.readUnsignedByte(-120);
             var5.field_z = 15 & var6Lifetime1;
             stackIn_8_0 = var5;
             stackIn_9_1 = ((var6Lifetime1 & 64) != 0);
@@ -493,43 +493,43 @@ final class al {
             if (var5.field_z == 15) {
               var5.field_z = -1;
             }
-            var5.field_P = param1.b(true);
-            var5.field_Q = param1.b(true);
+            var5.field_P = param1.readInt(true);
+            var5.field_Q = param1.readInt(true);
             if (var5.field_q >= 1) {
-              var5.field_C = (short)param1.d(-1034);
-              var5.field_A = (short)param1.d(-1034);
-              var5.field_V = (short)param1.d(-1034);
-              var5.field_D = (byte)param1.g(-77);
-              var5.field_H = (byte)param1.g(param0 ^ -101);
+              var5.field_C = (short)param1.readUnsignedShort(-1034);
+              var5.field_A = (short)param1.readUnsignedShort(-1034);
+              var5.field_V = (short)param1.readUnsignedShort(-1034);
+              var5.field_D = (byte)param1.readUnsignedByte(-77);
+              var5.field_H = (byte)param1.readUnsignedByte(param0 ^ -101);
             }
             if (var5.field_q >= 2) {
               var6Lifetime2 = var5.field_m.a(68);
-              var6Lifetime2Lifetime1 = param1.g(-97);
+              var6Lifetime2Lifetime1 = param1.readUnsignedByte(-97);
               if (var6Lifetime2Lifetime1 > 0) {
-                var5.field_m = new ko();
+                var5.field_m = new IntrusiveDeque();
                 for (var7 = 0; var7 < var6Lifetime2Lifetime1; var7++) {
-                  var8 = param1.g(param0 ^ -125);
+                  var8 = param1.readUnsignedByte(param0 ^ -125);
                   var5.field_m.b((byte) 97, new cr(31 & var8, var8 >> 5));
                 }
               }
-              var7Lifetime1 = param1.g(-123);
+              var7Lifetime1 = param1.readUnsignedByte(-123);
               if (var7Lifetime1 > 0) {
-                var5.field_R = new ko();
+                var5.field_R = new IntrusiveDeque();
                 for (var8Lifetime1 = 0; var7Lifetime1 > var8Lifetime1; var8Lifetime1++) {
-                  var9 = param1.g(param0 ^ -97);
-                  var14 = new int[param1.g(-88)];
+                  var9 = param1.readUnsignedByte(param0 ^ -97);
+                  var14 = new int[param1.readUnsignedByte(-88)];
                   var13 = var14;
                   var10 = var13;
                   for (var11 = 0; var11 < var14.length; var11++) {
-                    var10[var11] = param1.g(cq.a(param0, -124));
+                    var10[var11] = param1.readUnsignedByte(cq.a(param0, -124));
                   }
                   var5.field_R.b((byte) -70, new dn(var9, var14));
                 }
               }
-              var5.field_s = param1.f(81);
+              var5.field_s = param1.readUnsignedMedium(81);
             }
             if (var5.field_q >= 3) {
-              var5.field_l = (byte)param1.g(param0 - 130);
+              var5.field_l = (byte)param1.readUnsignedByte(param0 - 130);
             }
             this.field_u.b((byte) 94, var5);
           }
@@ -586,7 +586,7 @@ final class al {
         return this.f((byte) 116);
     }
 
-    private final void a(int param0, int param1, li param2, int param3, int param4, int param5) {
+    private final void a(int param0, int param1, IsaacCipher param2, int param3, int param4, int param5) {
         int var13 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -701,7 +701,7 @@ final class al {
         for (var8 = 0; this.field_c.length > var8; var8++) {
           var9 = this.field_c[var8].field_j - this.field_c[var8].field_l;
           var10 = this.field_c[var8].field_f - this.field_c[var8].field_a;
-          var11_long = bm.a(param3 ^ -314, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
+          var11_long = IterableNodeHashTable.a(param3 ^ -314, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
           if (-2147483648L > var11_long ||
             var11_long > 2147483647L) {
             System.out.println("Wall normal overflow " + lo.a(var11_long, 7697781));
@@ -718,41 +718,41 @@ final class al {
               var16 <= 2147483647L) {
               if ((!(var16 < 0L)) &&
                 (!(var16 > (long)var7))) {
-                L12: {
+                regionExit1: {
                   var18 = s.field_e[9] * (int)var16 + s.field_e[0];
                   var19_int = s.field_e[1] + s.field_e[10] * (int)var16;
                   var20 = s.field_e[2] + (int)var16 * s.field_e[11];
                   if (var10 != 0) {
                     if (this.field_c[var8].field_a >= this.field_c[var8].field_f) {
                       if (var18 < this.field_c[var8].field_f) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (var18 > this.field_c[var8].field_a) {
-                        break L12;
+                        break regionExit1;
                       }
                     } else {
                       if (this.field_c[var8].field_a > var18) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (var18 > this.field_c[var8].field_f) {
-                        break L12;
+                        break regionExit1;
                       }
                     }
                   }
                   if (var9 != 0) {
                     if (this.field_c[var8].field_l <= this.field_c[var8].field_j) {
                       if (this.field_c[var8].field_l > var19_int) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (this.field_c[var8].field_j < var19_int) {
-                        break L12;
+                        break regionExit1;
                       }
                     } else {
                       if (var19_int < this.field_c[var8].field_j) {
-                        break L12;
+                        break regionExit1;
                       }
                       if (this.field_c[var8].field_l < var19_int) {
-                        break L12;
+                        break regionExit1;
                       }
                     }
                   }
@@ -781,7 +781,7 @@ final class al {
         }
         var8Lifetime1 = 4194304;
         for (var9Lifetime1 = 1; var9Lifetime1 < this.field_l.length; var9Lifetime1++) {
-          L3: {
+          regionExit2: {
             if (this.field_l[var9Lifetime1].field_s) {
               var10Lifetime1 = -s.field_e[0] + this.field_l[var9Lifetime1].field_g;
               var11Lifetime1 = -s.field_e[1] + this.field_l[var9Lifetime1].field_k;
@@ -791,7 +791,7 @@ final class al {
               var17 = od.a((long)var10Lifetime1, (long)var10Lifetime1, false) + od.a((long)var11Lifetime1, (long)var11Lifetime1, false) - (-od.a((long)var12, (long)var12, false) + (long)var8Lifetime1);
               var19 = od.a(var15, var15, false) - 4L * od.a(var13, var17, false);
               if (var19 >= 0L) {
-                var21 = bm.a(param3 ^ -278, var19);
+                var21 = IterableNodeHashTable.a(param3 ^ -278, var19);
                 if (var21 <= 2147483647L &&
                   -2147483648L <= var21) {
                   var23 = (-var15 + var21) / var13 / 2L;
@@ -808,10 +808,10 @@ final class al {
                   }
                   var25 = (-var15 - var21) / var13 / 2L;
                   if (0L > var25) {
-                    break L3;
+                    break regionExit2;
                   }
                   if ((long)var7 < var25) {
-                    break L3;
+                    break regionExit2;
                   }
                   var27 = (long)s.field_e[0] + var25 * (long)s.field_e[9];
                   var29 = (long)s.field_e[10] * var25 + (long)s.field_e[1];
@@ -908,14 +908,14 @@ final class al {
         if (param4 != 19063) {
           return;
         }
-        L0: {
+        regionExit1: {
           if (!this.field_u.c(param4 - 19063)) {
             dupTemp$3 = this.j(49);
             var7 = dupTemp$3;
             var6 = var7;
             if ((param2 & 255) == (dupTemp$3.field_v & 255)) {
               var7.field_L = param3;
-              break L0;
+              break regionExit1;
             }
           }
           dupTemp$4 = new qe(param2, param3);
@@ -933,19 +933,19 @@ final class al {
         var6.field_T = this.b((byte) 98);
     }
 
-    final void a(int param0, ge param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         try {
-          var3_int = param1.g(-117);
-          var4 = param1.g(param0 ^ -113);
-          var5 = param1.d((byte) -111);
+          var3_int = param1.readUnsignedByte(-117);
+          var4 = param1.readUnsignedByte(param0 ^ -113);
+          var5 = param1.readShort((byte) -111);
           if (param0 != 2) {
-            this.field_i = (ko) null;
+            this.field_i = (IntrusiveDeque) null;
           }
-          var6 = -1 + param1.g(-119);
+          var6 = -1 + param1.readUnsignedByte(-119);
           this.a(var5, var6, var3_int, var4, 19063);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "al.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1053,7 +1053,7 @@ final class al {
             var9 = 8191 & var6 + var7;
             var5.field_j = true;
             var10 = 0;
-            L8: while (true) {
+            scanLoop1: while (true) {
               if (var10 < var3Lifetime4) {
                 boolean decompiledFrameRemainder0 = true;
                 var11 = this.field_r[this.field_t[var10]];
@@ -1073,7 +1073,7 @@ final class al {
                       }
                       else {
                         var5.field_j = false;
-                        break L8;
+                        break scanLoop1;
                       }
                     }
                     if (decompiledFrameRemainder0) {
@@ -1082,7 +1082,7 @@ final class al {
                         var11.field_k < var9 &&
                         var11.field_d > var9) {
                         var5.field_j = false;
-                        break L8;
+                        break scanLoop1;
                       }
                       if (var11.field_k < var8 &&
                         var8 < var11.field_d) {
@@ -1107,7 +1107,7 @@ final class al {
                       if (var8 > var11.field_k &&
                         var9 < var11.field_d) {
                         var5.field_j = false;
-                        break L8;
+                        break scanLoop1;
                       }
                       if (var11.field_d >= var9) {
                         if (var11.field_k > var8) {
@@ -1202,7 +1202,7 @@ final class al {
         var4.field_n = aj.a(-aj.a(var14, false, var21), false, var22);
         var4.field_b = aj.a(aj.a(var13, false, var21), false, var22);
         var4.field_K = aj.a(aj.a(var14, false, var19) - aj.a(var13, false, var20), false, var22);
-        pq.field_i = vb.a(-6584, this.field_l[0]);
+        pq.field_i = BufferedSocket.a(-6584, this.field_l[0]);
     }
 
     final static void l(int param0) {
@@ -1223,8 +1223,8 @@ final class al {
         int var1 = -44 % ((-83 - param0) / 40);
         if (lo.field_a) {
           ti.field_d = null;
-          ad.field_l = new ko();
-          oa.field_g = ek.a(124);
+          ad.field_l = new IntrusiveDeque();
+          ClientException.field_g = ek.a(124);
           hp.field_c = ek.a(-110);
           lo.field_a = false;
         }
@@ -1236,7 +1236,7 @@ final class al {
         }
     }
 
-    final void a(ge param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var6 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1249,17 +1249,17 @@ final class al {
         pq var7 = null;
         int var8 = 0;
         int[] var9 = null;
-        ge var10 = null;
+        PacketBuffer var10 = null;
         int var4Lifetime1;
         var8 = Pool.field_O;
         try {
           this.b(2, param0);
           this.field_f.a(param0, true);
-          var3_int = param0.g(-67);
+          var3_int = param0.readUnsignedByte(-67);
           if (0 != var3_int) {
             if (var3_int == 1) {
               var10 = param0;
-              this.d(-14894, var10.g(-95));
+              this.d(-14894, var10.readUnsignedByte(-95));
               for (var4 = 0; var4 < this.field_l.length; var4++) {
                 this.field_l[var4].a(var10, -1285);
               }
@@ -1277,7 +1277,7 @@ final class al {
               }
             }
           } else {
-            this.b(param0.d(-1034), 456);
+            this.b(param0.readUnsignedShort(-1034), 456);
           }
           if (param1 <= 98) {
             var9 = (int[]) null;
@@ -1340,7 +1340,7 @@ final class al {
         int var2;
         int var3;
         qe var4;
-        li var6;
+        IsaacCipher var6;
         int var7;
         int var8;
         int var9;
@@ -1363,14 +1363,14 @@ final class al {
         if (var4.field_M < 0) {
           var4.field_M = ga.a(512, true, ea.field_r);
         }
-        var6 = new li(new int[]{var4.field_M});
+        var6 = new IsaacCipher(new int[]{var4.field_M});
         var7 = 1;
         var8 = 1;
         var9 = 1;
         var10 = hc.a(2047, 170) * 16;
         do {
           var11 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var11 < var7) {
               if (var21[var9] != -1) {
                 var12 = var6.a(23165, 65536);
@@ -1392,7 +1392,7 @@ final class al {
                 var16.d((byte) -27);
                 var8++;
                 if (var8 >= this.field_l.length) {
-                  break L3;
+                  break scanLoop1;
                 }
               }
               var9++;
@@ -1420,7 +1420,7 @@ final class al {
     }
 
     private final int o(int param0) {
-        ma stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         int var2;
         int var3;
         aa var4;
@@ -1448,7 +1448,7 @@ final class al {
           if (var5 == null) {
             stackIn_10_0 = var4.b((byte) -92);
           } else {
-            stackIn_10_0 = var4.a(var5.field_d, false);
+            stackIn_10_0 = var4.a(var5.previous, false);
           }
           var5Lifetime1 = (qe) (stackIn_10_0);
           while (var5Lifetime1 != null) {
@@ -1536,7 +1536,7 @@ final class al {
           f.field_h = qh.field_f;
           stackIn_3_0 = -127;
           if (param0) {
-            stackIn_4_1 = uf.field_z;
+            stackIn_4_1 = PoolMatchController.field_z;
           } else {
             stackIn_4_1 = nj.field_b;
           }
@@ -1555,7 +1555,7 @@ final class al {
           }
           ((vh) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
           jh.field_a.b(ad.field_x + 2, 2147483647, -2 + (-nk.field_n + cl.field_d.field_gb - 40), nk.field_n + 42, 18);
-          wo.field_f.a(nk.field_n, -22 + (cl.field_d.field_Db - ad.field_x), (byte) -112, 2, cl.field_d.field_gb, 0, ad.field_x + 22);
+          DualLinkDeque.field_f.a(nk.field_n, -22 + (cl.field_d.field_Db - ad.field_x), (byte) -112, 2, cl.field_d.field_gb, 0, ad.field_x + 22);
           ok.field_ob.b(so.field_k.field_Db - 40, 2147483647, 0, so.field_k.field_gb, 40);
           ii.field_e.b(0, param1 ^ 2147483647, 0, uq.field_f.field_gb, 30);
           rq.field_x.b(30, 2147483647, 0, uq.field_f.field_gb, -30 + (-2 + uq.field_f.field_Db) - 40);
@@ -1686,7 +1686,7 @@ final class al {
         int var8 = 0;
         qe var2;
         qe var3;
-        ge var4;
+        PacketBuffer var4;
         int var5;
         dl var7;
         pq var9;
@@ -1701,9 +1701,9 @@ final class al {
         }
         var2 = (qe) (this.field_u.b(-1));
         var3 = (qe) (this.field_u.a((byte) -127));
-        var3.field_T.field_v = 0;
+        var3.field_T.position = 0;
         var4 = var3.field_T;
-        this.d(-14894, var4.g(-65));
+        this.d(-14894, var4.readUnsignedByte(-65));
         for (var5 = 0; var5 < this.field_l.length; var5++) {
           this.field_l[var5].a(var4, -1285);
         }
@@ -1724,7 +1724,7 @@ final class al {
         var3.field_m.d((byte) 83);
         var3.field_s = uk.field_a;
         if (null == this.field_i) {
-          this.field_i = new ko();
+          this.field_i = new IntrusiveDeque();
         }
         this.field_i.a((byte) -84, var2);
         return;
@@ -1824,7 +1824,7 @@ final class al {
         return false;
     }
 
-    private final void a(int param0, li param1) {
+    private final void a(int param0, IsaacCipher param1) {
         qe var3 = null;
         qe var4 = null;
         Object var5 = null;
@@ -1933,7 +1933,7 @@ final class al {
         this.field_y = 0;
         this.field_z = 0;
         this.field_m = false;
-        this.field_u = new ko();
+        this.field_u = new IntrusiveDeque();
         this.field_r = null;
         this.field_t = null;
         this.field_a = null;

@@ -39,7 +39,7 @@ final class oh {
         }
     }
 
-    final void a(byte[] param0, boolean param1, ge param2) {
+    final void a(byte[] param0, boolean param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -53,13 +53,13 @@ final class oh {
             if (!param1) {
               oh.a((byte) 4);
             }
-            if (param2.field_t[param2.field_v] == 31 &&
-              param2.field_t[param2.field_v + 1] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[param2.position + 1] == -117) {
               if (null == this.field_b) {
                 this.field_b = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_b.setInput(param2.field_t, 10 + param2.field_v, -10 + (-param2.field_v - 8 + param2.field_t.length));
+                this.field_b.setInput(param2.payload, 10 + param2.position, -10 + (-param2.position - 8 + param2.payload.length));
                 this.field_b.inflate(param0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

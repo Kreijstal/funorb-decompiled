@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends ma {
+final class tn extends IntrusiveNode {
     static int field_u;
     static String field_p;
     static ba field_n;
@@ -15,7 +15,7 @@ final class tn extends ma {
     int field_r;
     int[] field_q;
 
-    final static void a(uf param0, int param1) {
+    final static void a(PoolMatchController param0, int param1) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_28_0 = null;

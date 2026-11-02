@@ -4,12 +4,12 @@
 import java.io.*;
 
 final class lq extends ud {
-    private ko field_P;
+    private IntrusiveDeque field_P;
     static String field_O;
     static so field_R;
     static int[] field_T;
     static String field_S;
-    static dd field_Q;
+    static Sprite field_Q;
     static String field_U;
     static String field_N;
     static int field_V;
@@ -20,7 +20,7 @@ final class lq extends ud {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= kn.field_e.field_v) {
+          if (param1 <= kn.field_e.position) {
             return true;
           }
           if (null == jd.field_c) {
@@ -32,16 +32,16 @@ final class lq extends ud {
               field_U = (String) null;
             }
             if (0 < var2_int) {
-              if (var2_int > param1 - kn.field_e.field_v) {
-                var2_int = param1 - kn.field_e.field_v;
+              if (var2_int > param1 - kn.field_e.position) {
+                var2_int = param1 - kn.field_e.position;
               }
-              jd.field_c.a(var2_int, 0, kn.field_e.field_v, kn.field_e.field_t);
+              jd.field_c.a(var2_int, 0, kn.field_e.position, kn.field_e.payload);
               ob.field_v = rl.a((byte) -97);
-              kn.field_e.field_v = kn.field_e.field_v + var2_int;
-              if (param1 > kn.field_e.field_v) {
+              kn.field_e.position = kn.field_e.position + var2_int;
+              if (param1 > kn.field_e.position) {
                 return false;
               }
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
               return true;
             }
             if (var2_int < 0) {
@@ -67,7 +67,7 @@ final class lq extends ud {
 
     public lq() {
         super(0, 0, nk.field_j, md.field_b, (fp) null, (cc) null);
-        this.field_P = new ko();
+        this.field_P = new IntrusiveDeque();
     }
 
     final void k(int param0) {
@@ -211,7 +211,7 @@ final class lq extends ud {
         oe var3 = (oe) (var2.b((byte) -92));
         while (var3 != null) {
           if (var3.a(false)) {
-            var3.a((byte) -117);
+            var3.unlink((byte) -117);
           }
           var3 = (oe) (var2.b(-86));
         }
@@ -225,7 +225,7 @@ final class lq extends ud {
         oe var3 = (oe) (var2.b((byte) -92));
         while (var3 != null) {
           if (var3.g((byte) -20)) {
-            var3.a((byte) -117);
+            var3.unlink((byte) -117);
           }
           var3 = (oe) (var2.b(-112));
         }
@@ -287,9 +287,9 @@ final class lq extends ud {
     }
 
     final static void l(int param0) {
-        rg var2 = null;
+        DualLinkNode var2 = null;
         int var3 = Pool.field_O;
-        rg var2Lifetime1;
+        DualLinkNode var2Lifetime1;
         try {
           gi.field_t = 0;
           int var1_int = 83 % ((17 - param0) / 34);

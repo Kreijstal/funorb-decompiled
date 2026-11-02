@@ -39,7 +39,7 @@ final class jc {
           String stackIn_14_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (sj.field_w.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_w.startsWith("win") &&
               ll.a(param2, param0 ^ -10570)) {
               return;
             }

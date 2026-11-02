@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends ma {
+final class ij extends IntrusiveNode {
     int field_E;
     int[] field_L;
     int field_B;
@@ -17,7 +17,7 @@ final class ij extends ma {
     vh field_I;
     int[] field_F;
     int[] field_z;
-    dd field_K;
+    Sprite field_K;
     int field_r;
     static String field_A;
     int field_C;
@@ -93,7 +93,7 @@ final class ij extends ma {
         String[] var10 = null;
         int var11 = 0;
         int var13 = 0;
-        dd var14 = null;
+        Sprite var14 = null;
         try {
           if (param1 < 79) {
             this.field_L = (int[]) null;
@@ -110,7 +110,7 @@ final class ij extends ma {
           var7 = 5 + mc.field_e.field_C + (mc.field_e.field_w + var6);
           stackIn_7_0 = (var5 >= 320) ? var5 : 320;
           var8 = stackIn_7_0;
-          this.field_K = new dd(var8, var7);
+          this.field_K = new Sprite(var8, var7);
           this.field_K.e();
           var14.c(var8 - var14.field_z >> 1, 0);
           var9 = 0;

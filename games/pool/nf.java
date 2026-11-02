@@ -9,7 +9,7 @@ final class nf extends ch implements jb, tb, jn {
     private fe field_Y;
     private fe field_U;
     private ga field_R;
-    static ko field_S;
+    static IntrusiveDeque field_S;
     private ga field_O;
     private ri field_W;
     private ga field_ab;
@@ -18,7 +18,7 @@ final class nf extends ch implements jb, tb, jn {
     static int field_T;
     static long field_Q;
     static String field_db;
-    static dd[] field_V;
+    static Sprite[] field_V;
 
     private final int a(String param0, ei param1, int param2, int param3, String param4, int param5, byte param6) {
         RuntimeException var8 = null;
@@ -111,11 +111,11 @@ final class nf extends ch implements jb, tb, jn {
         var3.a(3, !param1 ? true : false);
         var3.a(9, !param1 ? true : false);
         if (param1) {
-          var3.a((byte) -81, param0);
+          var3.writeShort((byte) -81, param0);
           return;
         }
         nf.g((byte) 125);
-        var3.a((byte) -81, param0);
+        var3.writeShort((byte) -81, param0);
     }
 
     public final void a(int param0) {
@@ -223,7 +223,7 @@ final class nf extends ch implements jb, tb, jn {
         var6 = Pool.field_O;
         try {
           if (param2 != -12147) {
-            field_V = (dd[]) null;
+            field_V = (Sprite[]) null;
           }
           if (param3 == 0) {
             ci.a("terms.ws", -127);
@@ -303,10 +303,10 @@ final class nf extends ch implements jb, tb, jn {
 
     final static vh g(byte param0) {
         if (param0 != 103) {
-          field_S = (ko) null;
-          return wo.field_f.field_Rb;
+          field_S = (IntrusiveDeque) null;
+          return DualLinkDeque.field_f.field_Rb;
         }
-        return wo.field_f.field_Rb;
+        return DualLinkDeque.field_f.field_Rb;
     }
 
     private final int a(int param0, String param1, ei param2, String param3, int param4, int param5) {
@@ -435,14 +435,14 @@ final class nf extends ch implements jb, tb, jn {
         this.field_ab = new ga("", (cc) null, 3);
         int var1 = 1;
         this.field_W = new ri("", (cc) null, var1 != 0);
-        this.field_U = new fe(qo.field_E, (cc) null);
+        this.field_U = new fe(SpriteState.field_E, (cc) null);
         this.field_Y = new fe(lc.field_Q, (cc) null);
         this.field_bb.field_p = sg.field_H;
         this.field_cb.field_p = ri.field_T;
         this.field_O.field_p = wp.field_e;
         this.field_X.field_p = kc.field_f;
         this.field_R.field_p = ii.field_b;
-        this.field_ab.field_p = uf.field_J;
+        this.field_ab.field_p = PoolMatchController.field_J;
         this.field_W.field_p = ui.field_ab;
         this.field_bb.a((byte) -111, new ua(this.field_bb));
         this.field_cb.a((byte) -111, new r(this.field_cb));
@@ -556,10 +556,10 @@ final class nf extends ch implements jb, tb, jn {
         } catch (NumberFormatException numberFormatException) {
         }
         if (param0 >= 94) {
-          return vb.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
+          return BufferedSocket.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
         }
         nf.g((byte) -63);
-        return vb.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
+        return BufferedSocket.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
     }
 
     public final void a(String param0, int param1) {
@@ -578,7 +578,7 @@ final class nf extends ch implements jb, tb, jn {
     }
 
     static {
-        field_S = new ko();
+        field_S = new IntrusiveDeque();
         field_db = "You and <%0> have won!";
     }
 }

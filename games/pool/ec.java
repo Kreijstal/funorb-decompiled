@@ -3,7 +3,7 @@
  */
 final class ec implements eb {
     static byte[][] field_g;
-    static dd field_d;
+    static Sprite field_d;
     static char[] field_j;
     static int field_f;
     private int field_e;
@@ -38,7 +38,7 @@ final class ec implements eb {
           var6 = param4.getParameter("currency");
           if (var6 != null &&
             ka.a(10, (CharSequence) ((Object) var6))) {
-            qg.field_e = kq.a((byte) 63, (CharSequence) ((Object) var6));
+            qg.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
           } else {
             qg.field_e = 2;
           }
@@ -48,9 +48,9 @@ final class ec implements eb {
           vc.field_L = param1;
           oo.field_k = param0;
           er.field_X = param5;
-          jr.field_m = new dd[param3.length];
+          jr.field_m = new Sprite[param3.length];
           for (var7 = 0; var7 < param3.length; var7++) {
-            jr.field_m[var7] = new dd(317, 34);
+            jr.field_m[var7] = new Sprite(317, 34);
           }
           mk.field_a = param3;
           return;

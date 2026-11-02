@@ -43,8 +43,8 @@ final class ja {
           to.field_p > 0) {
           fieldTemp$0 = to.field_p - 1;
           to.field_p = to.field_p - 1;
-          var2_ref_byte__ = uf.field_y[fieldTemp$0];
-          uf.field_y[to.field_p] = null;
+          var2_ref_byte__ = PoolMatchController.field_y[fieldTemp$0];
+          PoolMatchController.field_y[to.field_p] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&

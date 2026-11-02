@@ -61,7 +61,7 @@ final class wd extends vh {
         if (param1 <= 51) {
           return (String) null;
         }
-        return ((param0 & nd.field_j) == 0 ? "" : "cont vis|") + ((sg.field_O & param0) == 0 ? "" : "gv visit+1|") + ((be.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & nr.field_Q) ? "" : "gv BiH anywhere|") + (0 != (nr.field_R & param0) ? "gv BiH kitchen|" : "") + ((nr.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ag.field_e & param0) != 0 ? "wins|" : "") + ((hm.field_e & param0) == 0 ? "" : "loses|") + ((param0 & oa.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & um.field_c) ? "respot white|" : "") + ((param0 & ob.field_F) == 0 ? "" : "rerack|") + (0 != (ll.field_f & param0) ? "ends turn|" : "");
+        return ((param0 & nd.field_j) == 0 ? "" : "cont vis|") + ((sg.field_O & param0) == 0 ? "" : "gv visit+1|") + ((be.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & nr.field_Q) ? "" : "gv BiH anywhere|") + (0 != (nr.field_R & param0) ? "gv BiH kitchen|" : "") + ((nr.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ag.field_e & param0) != 0 ? "wins|" : "") + ((hm.field_e & param0) == 0 ? "" : "loses|") + ((param0 & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & um.field_c) ? "respot white|" : "") + ((param0 & ob.field_F) == 0 ? "" : "rerack|") + (0 != (ll.field_f & param0) ? "ends turn|" : "");
     }
 
     wd(long param0, vh param1, String[] param2, vh param3, vh[] param4, int param5) {

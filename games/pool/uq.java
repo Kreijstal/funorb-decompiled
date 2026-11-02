@@ -10,7 +10,7 @@ final class uq {
     int field_u;
     int field_e;
     int field_h;
-    static jg field_i;
+    static PcmSample field_i;
     static vh field_D;
     static int field_c;
     int field_H;
@@ -77,7 +77,7 @@ final class uq {
             var1 = (kf) (oj.field_o.c((byte) 116));
             while (var1 != null) {
               if (!var1.field_m.b(-126)) {
-                var1.a((byte) -117);
+                var1.unlink((byte) -117);
               }
               var1 = (kf) (oj.field_o.f((byte) -5));
             }
@@ -85,7 +85,7 @@ final class uq {
               var1Lifetime1 = (kf) (mp.field_R.c((byte) -84));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_m.b(-117)) {
-                  var1Lifetime1.a((byte) -117);
+                  var1Lifetime1.unlink((byte) -117);
                 }
                 var1Lifetime1 = (kf) (mp.field_R.f((byte) -5));
               }
@@ -112,7 +112,7 @@ final class uq {
     final static void a(int param0, String param1, int param2, byte param3, long param4) {
         try {
           if (param3 > -52) {
-            field_i = (jg) null;
+            field_i = (PcmSample) null;
           }
           hj.field_c = param4;
           nr.field_T = true;

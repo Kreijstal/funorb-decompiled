@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends ma {
+final class kg extends IntrusiveNode {
     int field_o;
     byte[] field_p;
     static int field_m;

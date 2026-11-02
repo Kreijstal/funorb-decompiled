@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li {
+final class IsaacCipher {
     private int field_m;
     private int field_i;
     private int field_c;
     static int field_e;
-    static jg field_l;
+    static PcmSample field_l;
     static int field_d;
     static String field_g;
     static int[] field_h;
     private int[] field_j;
     private int[] field_a;
-    static dd[] field_f;
+    static Sprite[] field_f;
     static int[] field_b;
     private int field_k;
 
@@ -24,7 +24,7 @@ final class li {
         field_b = null;
         if (param0 >= 0) {
           al var2 = (al) null;
-          li.a(57, (al) null);
+          IsaacCipher.a(57, (al) null);
         }
     }
 
@@ -36,7 +36,7 @@ final class li {
         int var3 = 2147483647 - (int)(4294967296L % (long)param1);
         if (param0 != 23165) {
           al var5 = (al) null;
-          li.a(73, (al) null);
+          IsaacCipher.a(73, (al) null);
         }
         do {
           var4 = this.a((byte) 7);
@@ -299,7 +299,7 @@ final class li {
               var11[0] = param0.field_q[param0.field_p[var3Lifetime1]];
               var11[1] = param0.field_q[param0.field_H[var3Lifetime1]];
               var11[2] = param0.field_q[param0.field_C[var3Lifetime1]];
-              ge.a(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
+              PacketBuffer.a(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
               ob.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
               param0.field_k[var2_intLifetime1] = param0.a((short)param0.a(jo.c(0, -54264319, var25[0]), jo.c(0, -54264319, var27[0]), jo.c(0, -54264319, var22[0])), (short)param0.a(jo.c(0, cq.a(param1, -54264319), var25[1]), jo.c(0, -54264319, var27[1]), jo.c(0, -54264319, var22[1])), (short)param0.a(jo.c(0, -54264319, var25[2]), jo.c(0, -54264319, var27[2]), jo.c(0, -54264319, var22[2])));
             }
@@ -319,7 +319,7 @@ final class li {
         }
     }
 
-    li(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_j = new int[256];
@@ -386,18 +386,18 @@ final class li {
           while (var4 != null) {
             var5.a(true, var4.field_v);
             var5.a(var4.field_L, false);
-            var5.a((byte) -81, var4.field_M);
+            var5.writeShort((byte) -81, var4.field_M);
             var5.a(true, var4.field_P);
             var5.a(true, var4.field_Q);
-            var5.a((byte) -81, (int) var4.field_C);
-            var5.a((byte) -81, (int) var4.field_A);
-            var5.a((byte) -81, (int) var4.field_V);
+            var5.writeShort((byte) -81, (int) var4.field_C);
+            var5.writeShort((byte) -81, (int) var4.field_A);
+            var5.writeShort((byte) -81, (int) var4.field_V);
             var5.a((int) var4.field_D, false);
             var5.a((int) var4.field_H, false);
             var5.a(var4.field_q, false);
             if (var4.field_q >= 2) {
               var4.b(var5, (byte) -122);
-              var5.a(var4.field_x, (byte) -122);
+              var5.writeLong(var4.field_x, (byte) -122);
             }
             if (var4.field_q >= 3) {
               var4.a(var5, (byte) 0);

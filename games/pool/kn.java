@@ -205,7 +205,7 @@ final class kn {
             }
           }
         } else {
-          kr.a((byte) -75, this.field_l, this.field_m);
+          ProxySocketConnector.a((byte) -75, this.field_l, this.field_m);
         }
         if (param1 >= 57) {
           return true;
@@ -380,7 +380,7 @@ final class kn {
 
     kn(vh param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_n = new vq(ko.field_c);
+          this.field_n = new vq(IntrusiveDeque.field_c);
           this.field_d = param3;
           this.field_l = param1;
           this.field_b = param4;

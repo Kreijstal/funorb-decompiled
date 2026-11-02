@@ -103,7 +103,7 @@ final class of extends vh {
           for (var2_int = 0; nn.field_b.length > var2_int; var2_int++) {
             nn.field_b[var2_int].b(5, param1);
           }
-          pn.field_l = new dd(param1.a(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          pn.field_l = new Sprite(param1.a(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "of.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -165,7 +165,7 @@ final class of extends vh {
         int var5 = 0;
         aa var6 = null;
         lk var7 = null;
-        dd var9 = null;
+        Sprite var9 = null;
         int var5Lifetime1;
         try {
           if (ne.field_r.c(0)) {

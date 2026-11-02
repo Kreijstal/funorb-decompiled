@@ -25,10 +25,10 @@ final class kc {
             kc.a((java.awt.Canvas) null, -76);
           }
           hi.a((java.awt.Component) ((Object) param0), param1 ^ -14764);
-          if (null == oa.field_a) {
+          if (null == ClientException.field_a) {
             return;
           }
-          oa.field_a.a((byte) 104, (java.awt.Component) ((Object) param0));
+          ClientException.field_a.a((byte) 104, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

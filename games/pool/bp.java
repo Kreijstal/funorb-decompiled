@@ -7,16 +7,16 @@ class bp {
     private int field_e;
     private static mq field_u;
     int[] field_l;
-    private kd field_p;
+    private PcmStream field_p;
     static boolean field_r;
     private boolean field_s;
     private int field_t;
     private long field_b;
     private long field_d;
-    private kd[] field_j;
+    private PcmStream[] field_j;
     private int field_o;
     private int field_c;
-    private kd[] field_f;
+    private PcmStream[] field_f;
     private int field_i;
     private int field_a;
     private int field_q;
@@ -40,9 +40,9 @@ class bp {
     void a(int param0) throws Exception {
     }
 
-    private final void a(kd param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        kd var4 = this.field_j[var3];
+        PcmStream var4 = this.field_j[var3];
         if (var4 == null) {
           this.field_f[var3] = param0;
         } else {
@@ -58,15 +58,15 @@ class bp {
     void a() {
     }
 
-    final static bp a(sj param0, java.awt.Component param1, int param2, int param3) {
+    final static bp a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          pg var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          pg var5 = null;
-          pg stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          pg stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_h == 0) {
             throw new IllegalStateException();
@@ -77,7 +77,7 @@ class bp {
               param3 = 256;
             }
             try {
-              var5 = new pg();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
@@ -122,7 +122,7 @@ class bp {
         }
     }
 
-    final synchronized void a(kd param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_p = param0;
     }
 
@@ -244,20 +244,20 @@ class bp {
         int var7_int;
         Object var7;
         int var8_int;
-        kd[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        kd var11;
-        qm var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        kd var14;
+        PcmStream var14;
         int var15_int;
-        kd var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        kd var14Lifetime1;
-        kd var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_r) {
           var3 = var3 << 1;
@@ -272,7 +272,7 @@ class bp {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -305,7 +305,7 @@ class bp {
                       var12.field_l = var12.field_l + var13;
                     }
                     if (var4 >= this.field_e) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {
@@ -318,12 +318,12 @@ class bp {
                     var15 = var11.field_o;
                     var11.field_o = null;
                     if (var10 != null) {
-                      ((kd) (var10)).field_o = var15;
+                      ((PcmStream) (var10)).field_o = var15;
                     } else {
                       this.field_f[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_j[var7_int] = (kd) (var10);
+                      this.field_j[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -344,8 +344,8 @@ class bp {
             this.field_j[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((kd) (var7)).field_o;
-              ((kd) (var7)).field_o = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_o;
+              ((PcmStream) (var7)).field_o = null;
               var7 = var10Lifetime1;
             }
           }
@@ -359,12 +359,12 @@ class bp {
         this.field_g = rl.a((byte) -125);
     }
 
-    private final static void b(kd param0) {
+    private final static void b(PcmStream param0) {
         param0.field_l = false;
         if (param0.field_n != null) {
           param0.field_n.field_l = 0;
         }
-        kd var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
           bp.b(var1);
           var1 = param0.b();
@@ -409,10 +409,10 @@ class bp {
         this.field_d = 0L;
         this.field_c = 0;
         this.field_o = 0;
-        this.field_j = new kd[8];
+        this.field_j = new PcmStream[8];
         this.field_n = true;
         this.field_k = 0;
-        this.field_f = new kd[8];
+        this.field_f = new PcmStream[8];
         this.field_i = 0;
     }
 }

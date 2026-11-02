@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qo extends rg {
+abstract class SpriteState extends DualLinkNode {
     static String field_x;
     int field_z;
     int field_w;
@@ -20,7 +20,7 @@ abstract class qo extends rg {
         if (param0 != -82) {
           return;
         }
-        bg.field_d = param1;
+        SocketConnector.field_d = param1;
         hd.field_H = param3;
     }
 
@@ -45,7 +45,7 @@ abstract class qo extends rg {
         this.a(var6, var7, param4, param1, param0, param2);
     }
 
-    final static void a(byte param0, boolean param1, byte[] param2, di param3, di param4, int param5, String[][] param6, int param7, di param8, String[] param9, dd[][] param10, String[][] param11, int[] param12, byte[] param13, dd[][] param14) {
+    final static void a(byte param0, boolean param1, byte[] param2, di param3, di param4, int param5, String[][] param6, int param7, di param8, String[] param9, Sprite[][] param10, String[][] param11, int[] param12, byte[] param13, Sprite[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -161,7 +161,7 @@ abstract class qo extends rg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
-            stackIn_4_0 = oa.a(0, param0, ~param2, param1);
+            stackIn_4_0 = ClientException.a(0, param0, ~param2, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -30;
@@ -215,7 +215,7 @@ abstract class qo extends rg {
         }
     }
 
-    qo() {
+    SpriteState() {
     }
 
     static {

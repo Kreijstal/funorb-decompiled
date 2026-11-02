@@ -4,31 +4,31 @@
 import java.util.*;
 
 final class fk extends oo {
-    private jg field_db;
+    private PcmSample field_db;
     static int field_Z;
-    private jg field_W;
+    private PcmSample field_W;
     private byte field_S;
     private int[] field_L;
-    private nb field_bb;
-    private jg field_O;
-    private jg field_hb;
-    private jg field_fb;
-    private jg field_J;
+    private PcmSampleStream field_bb;
+    private PcmSample field_O;
+    private PcmSample field_hb;
+    private PcmSample field_fb;
+    private PcmSample field_J;
     static lq field_cb;
-    private jg field_Y;
+    private PcmSample field_Y;
     static int field_ab;
     private ji[] field_K;
-    private jg field_Q;
+    private PcmSample field_Q;
     static int field_V;
-    private jg field_N;
+    private PcmSample field_N;
     private int[] field_R;
     static String field_eb;
     private int[] field_X;
     private int[] field_M;
     static hr field_gb;
-    private jg field_T;
-    private jg field_U;
-    private jg field_P;
+    private PcmSample field_T;
+    private PcmSample field_U;
+    private PcmSample field_P;
 
     final void a(al param0, int param1) {
         int var5_int = 0;
@@ -140,7 +140,7 @@ final class fk extends oo {
                         if (null != this.field_bb) {
                           this.a((byte) 73, true, param0);
                         }
-                        this.field_bb = nb.a(this.field_U, 256, 0);
+                        this.field_bb = PcmSampleStream.a(this.field_U, 256, 0);
                         this.field_bb.e(-1);
                         mn.a(-24296, this.field_bb);
                         this.field_bb.d(4096, 16 * param1 >> 8);
@@ -219,7 +219,7 @@ final class fk extends oo {
           stackIn_3_1 = (16 - mf.field_l) * (v.field_i.length - 1) >> 4;
         }
         ba.field_tb = stackIn_2_0[stackIn_3_1];
-        bm.field_h = 64 + mf.field_l;
+        IterableNodeHashTable.field_h = 64 + mf.field_l;
         rb.field_g = 128 + mf.field_l;
         cl.field_g = v.field_i[64 + (mf.field_l >> 1)];
         eq.field_Y = 192 + mf.field_l;
@@ -321,7 +321,7 @@ final class fk extends oo {
         t.field_a = (int[][][]) null;
         fm.field_K = (jd[][]) null;
         ro.field_v = (int[][][]) null;
-        ma.field_b = (bl[][][]) null;
+        IntrusiveNode.field_b = (bl[][][]) null;
         cn.field_a = (jd[][]) null;
         this.field_K = null;
     }
@@ -358,9 +358,9 @@ final class fk extends oo {
                 param2 = (param0 & 16777472) + (param3 - param0 & 65536);
                 qh.field_d[param8] = param3 - param2 | param2 - (param2 >>> 8);
               } else {
-                if (param1 > bm.field_h &&
+                if (param1 > IterableNodeHashTable.field_h &&
                   param1 < rb.field_g) {
-                  param1 = (param1 - bm.field_h - 32) * 255 >> 5;
+                  param1 = (param1 - IterableNodeHashTable.field_h - 32) * 255 >> 5;
                   if (param1 < 0) {
                     param1 = -param1;
                   }
@@ -589,10 +589,10 @@ final class fk extends oo {
           var9[0] = var9[0] >> 8;
           var4 = -81 / ((param0 + 64) / 52);
           var9[2] = var9[2] >> 8;
-          for (var5 = 0; ma.field_b.length > var5; var5++) {
-            for (var6 = 0; var6 < ma.field_b[var5].length; var6++) {
-              for (var7 = 0; var7 < ma.field_b[var5][var6].length; var7++) {
-                ma.field_b[var5][var6][var7].a(-56, var13);
+          for (var5 = 0; IntrusiveNode.field_b.length > var5; var5++) {
+            for (var6 = 0; var6 < IntrusiveNode.field_b[var5].length; var6++) {
+              for (var7 = 0; var7 < IntrusiveNode.field_b[var5][var6].length; var7++) {
+                IntrusiveNode.field_b[var5][var6][var7].a(-56, var13);
               }
             }
           }
@@ -625,7 +625,7 @@ final class fk extends oo {
         int var1 = -122 / ((param0 + 65) / 38);
     }
 
-    private final void a(boolean param0, int[] param1, uf param2) {
+    private final void a(boolean param0, int[] param1, PoolMatchController param2) {
         int stackIn_26_0 = 0;
         int stackIn_29_1 = 0;
         RuntimeException stackIn_34_0 = null;
@@ -726,7 +726,7 @@ final class fk extends oo {
         }
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = Pool.field_O;
         try {
@@ -781,8 +781,8 @@ final class fk extends oo {
         if (param0 != 2) {
           return;
         }
-        for (var2 = 0; var2 < ma.field_b.length; var2++) {
-          var3 = ma.field_b[var2];
+        for (var2 = 0; var2 < IntrusiveNode.field_b.length; var2++) {
+          var3 = IntrusiveNode.field_b[var2];
           for (var4_int = 0; var4_int < 16; var4_int++) {
             var19 = var3[var4_int];
             for (var6_int = 0; var6_int < 16; var6_int++) {
@@ -950,7 +950,7 @@ final class fk extends oo {
         return;
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         int var5 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_1 = 0;
@@ -1140,7 +1140,7 @@ final class fk extends oo {
           var4 = var27;
           var5 = ro.field_v[1][var3_int];
           if (param0 != -25) {
-            this.field_Y = (jg) null;
+            this.field_Y = (PcmSample) null;
           }
           var35 = ro.field_v[2][var3_int];
           var30 = var35;
@@ -1224,10 +1224,10 @@ final class fk extends oo {
           if (param0 != 44) {
             field_eb = (String) null;
           }
-          for (var3_int = 0; ma.field_b.length > var3_int; var3_int++) {
-            for (var4 = 0; ma.field_b[var3_int].length > var4; var4++) {
-              for (var5 = 0; ma.field_b[var3_int][var4].length > var5; var5++) {
-                ma.field_b[var3_int][var4][var5].a((byte) 67);
+          for (var3_int = 0; IntrusiveNode.field_b.length > var3_int; var3_int++) {
+            for (var4 = 0; IntrusiveNode.field_b[var3_int].length > var4; var4++) {
+              for (var5 = 0; IntrusiveNode.field_b[var3_int][var4].length > var5; var5++) {
+                IntrusiveNode.field_b[var3_int][var4][var5].a((byte) 67);
               }
             }
           }
@@ -1264,17 +1264,17 @@ final class fk extends oo {
         if (param0 != 10) {
           return;
         }
-        ma.field_b = new bl[4][16][16];
+        IntrusiveNode.field_b = new bl[4][16][16];
         for (var2 = 0; var2 < 16; var2++) {
           var3 = -128 + (var2 * 2048 + 256) / 128;
           var4 = ((1 + var2) * 2048 - 256) / 128 - 128;
           for (var5 = 0; var5 < 16; var5++) {
             var6 = (256 + 2048 * var5) / 128 - 128;
             var7 = -128 + (-256 + (var5 + 1) * 2048) / 128;
-            ma.field_b[0][var2][var5] = new bl(128, -var6, var3, 128, -var7, var3, 128, -var6, var4, 128, -var7, var4);
-            ma.field_b[1][var2][var5] = new bl(-var6, -128, var3, -var7, -128, var3, -var6, -128, var4, -var7, -128, var4);
-            ma.field_b[2][var2][var5] = new bl(-128, var6, var3, -128, var7, var3, -128, var6, var4, -128, var7, var4);
-            ma.field_b[3][var2][var5] = new bl(var6, 128, var3, var7, 128, var3, var6, 128, var4, var7, 128, var4);
+            IntrusiveNode.field_b[0][var2][var5] = new bl(128, -var6, var3, 128, -var7, var3, 128, -var6, var4, 128, -var7, var4);
+            IntrusiveNode.field_b[1][var2][var5] = new bl(-var6, -128, var3, -var7, -128, var3, -var6, -128, var4, -var7, -128, var4);
+            IntrusiveNode.field_b[2][var2][var5] = new bl(-128, var6, var3, -128, var7, var3, -128, var6, var4, -128, var7, var4);
+            IntrusiveNode.field_b[3][var2][var5] = new bl(var6, 128, var3, var7, 128, var3, var6, 128, var4, var7, 128, var4);
           }
         }
     }
@@ -1285,7 +1285,7 @@ final class fk extends oo {
           this.field_bb = null;
         }
         if (param0) {
-          this.field_T = (jg) null;
+          this.field_T = (PcmSample) null;
         }
     }
 

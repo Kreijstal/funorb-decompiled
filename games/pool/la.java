@@ -56,27 +56,27 @@ final class la {
           } else {
             if (!ea.field_z) {
               if (!hr.field_y) {
-                rg.field_p = true;
+                DualLinkNode.field_p = true;
               } else {
                 r.c((byte) 50);
               }
             }
           }
           int var8_int = -106 % ((param0 + 1) / 55);
-          if (rg.field_p) {
+          if (DualLinkNode.field_p) {
             lm.a(param1, param6, 20, 4, param2, param7, param4, param3, param3);
             uq.field_D.a(param5, false);
             if (!param5) {
               return;
             }
             if (0 != be.field_L.field_R) {
-              rg.field_p = false;
+              DualLinkNode.field_p = false;
             }
             if (0 == wn.field_g.field_R) {
               return;
             }
             cl.a(14851);
-            rg.field_p = false;
+            DualLinkNode.field_p = false;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');

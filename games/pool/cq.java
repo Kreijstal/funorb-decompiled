@@ -4,9 +4,9 @@
 final class cq {
     static String field_e;
     static int field_a;
-    static dd[] field_b;
+    static Sprite[] field_b;
     static vh field_d;
-    static ko field_g;
+    static IntrusiveDeque field_g;
     static int field_c;
     static String field_f;
 
@@ -32,10 +32,10 @@ final class cq {
         return param0 ^ param1;
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         int var6 = Pool.field_O;
-        dd[] var7 = new dd[9];
-        dd[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = ad.a(param2, param0, 7);
         int var5 = 1;
         if (param1 != 4578) {
@@ -79,23 +79,23 @@ final class cq {
             return param6 + var11;
           }
         }
-        L2: {
+        regionExit1: {
           if (var12 > 0 &&
             65536 - param6 >= var12) {
             var10Lifetime1 = param5 + aj.a(var12, false, param4);
             if (param7 >= param9) {
               if (var10Lifetime1 < param9) {
-                break L2;
+                break regionExit1;
               }
               if (param7 < var10Lifetime1) {
-                break L2;
+                break regionExit1;
               }
             } else {
               if (var10Lifetime1 < param7) {
-                break L2;
+                break regionExit1;
               }
               if (param9 < var10Lifetime1) {
-                break L2;
+                break regionExit1;
               }
             }
             return var12 + param6;
@@ -193,7 +193,7 @@ final class cq {
 
     static {
         field_e = "Unpacking sound effects";
-        field_g = new ko();
+        field_g = new IntrusiveDeque();
         field_f = "Enter name of friend to add to list";
     }
 }

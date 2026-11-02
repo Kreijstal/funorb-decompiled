@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends ma {
+final class bk extends IntrusiveNode {
     int field_s;
     private int field_n;
-    private dd field_z;
+    private Sprite field_z;
     static String field_x;
-    private ko field_r;
+    private IntrusiveDeque field_r;
     int field_l;
     gi field_q;
     int field_o;
@@ -90,22 +90,22 @@ final class bk extends ma {
             this.field_y = sa.field_h.field_G;
           }
           this.field_t = sa.field_h.b(this.field_p, this.field_n, this.field_y);
-          if (param0.field_d.field_e != this.field_k &&
+          if (param0.field_d.field_e != this.next &&
             !pl.field_b.field_pb) {
             pl.field_b.field_pb = true;
           } else {
-            if (this.field_k == param0.field_d.field_e &&
+            if (this.next == param0.field_d.field_e &&
               pl.field_b.field_pb) {
               pl.field_b.field_R = 0;
               pl.field_b.field_pb = false;
             }
           }
-          if ((param0.field_d.field_e != this.field_d ||
+          if ((param0.field_d.field_e != this.previous ||
             param0.field_j != null) &&
             !jq.field_d.field_pb) {
             jq.field_d.field_pb = true;
           } else {
-            if (this.field_d == param0.field_d.field_e &&
+            if (this.previous == param0.field_d.field_e &&
               null == param0.field_j &&
               jq.field_d.field_pb) {
               jq.field_d.field_pb = false;
@@ -124,7 +124,7 @@ final class bk extends ma {
               param0.field_a.a(false, (byte) -122);
             }
           }
-          this.field_z = new dd(al.field_k.field_gb, this.field_t + 10);
+          this.field_z = new Sprite(al.field_k.field_gb, this.field_t + 10);
           this.field_z.e();
           sa.field_h.a(nf.field_Z, bi.field_d);
           sa.field_h.a(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
@@ -290,7 +290,7 @@ final class bk extends ma {
         }
     }
 
-    bk(String param0, int param1, int param2, ko param3) {
+    bk(String param0, int param1, int param2, IntrusiveDeque param3) {
         RuntimeException runtimeException = null;
         aa var5 = null;
         bk var6 = null;

@@ -36,9 +36,9 @@ final class mk {
         int stackIn_37_0 = 0;
         int stackIn_70_0 = 0;
         int stackIn_81_0 = 0;
-        dd[] stackIn_83_0 = null;
+        Sprite[] stackIn_83_0 = null;
         int stackIn_84_1 = 0;
-        dd[] stackIn_91_0 = null;
+        Sprite[] stackIn_91_0 = null;
         int stackIn_92_1 = 0;
         String stackIn_157_0 = null;
         String stackIn_166_0 = null;
@@ -46,7 +46,7 @@ final class mk {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        ko var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         kh var12 = null;
@@ -81,7 +81,7 @@ final class mk {
         int var40 = 0;
         int var41 = 0;
         vh var42 = null;
-        dd var43 = null;
+        Sprite var43 = null;
         vh var44 = null;
         vh var45 = null;
         vh var46 = null;
@@ -90,14 +90,14 @@ final class mk {
         vh var49 = null;
         vh var50 = null;
         Object var51 = null;
-        dd var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        dd var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        dd var53_ref = null;
+        Sprite var53_ref = null;
         Object var54 = null;
-        dd var54_ref = null;
-        dd var55 = null;
+        Sprite var54_ref = null;
+        Sprite var55 = null;
         String var34Lifetime1;
         String var34Lifetime2;
         int var14Lifetime1;
@@ -115,15 +115,15 @@ final class mk {
         var54 = null;
         var41 = Pool.field_O;
         try {
-          stackIn_3_0 = vb.field_m;
+          stackIn_3_0 = BufferedSocket.field_m;
           stackIn_3_1 = param3;
-          stackIn_4_2 = (pf.field_c == vb.field_m);
+          stackIn_4_2 = (pf.field_c == BufferedSocket.field_m);
           var7_int = ((of) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, (byte) -112, 2 * (ad.field_x + 2), (8 + 4 * ad.field_x) * param6) ? 1 : 0;
           if (param1 != 0) {
             var42 = (vh) null;
             mk.a((vh) null, 35, (vh) null, 120, (byte[]) null, 54, 24, (vh) null, 88, -75);
           }
-          var8 = vb.field_m.field_Rb.field_T;
+          var8 = BufferedSocket.field_m.field_Rb.field_T;
           var9 = rl.a((byte) -120);
           var11 = null;
           var12 = (kh) (var8.c((byte) -127));
@@ -136,7 +136,7 @@ final class mk {
               var12.field_xc = new vh(0L, tm.field_d);
               var12.a(-108, var12.field_xc);
               var12.field_xc.field_Fb = 1;
-              var12.field_cc = new vh(0L, ge.field_s);
+              var12.field_cc = new vh(0L, PacketBuffer.field_s);
               var12.a(119, var12.field_cc);
               var12.field_Lb = new vh(0L, tm.field_d);
               var12.a(-111, var12.field_Lb);
@@ -144,7 +144,7 @@ final class mk {
               var12.field_nc = new vh(0L, tm.field_d);
               var12.a(-123, var12.field_nc);
               var12.field_nc.field_tb = 0;
-              var12.field_Bc = new vh(0L, ge.field_s);
+              var12.field_Bc = new vh(0L, PacketBuffer.field_s);
               var12.a(118, var12.field_Bc);
               var12.field_Bc.field_Fb = 2;
               stackIn_12_0 = var12;
@@ -158,7 +158,7 @@ final class mk {
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = ge.field_s;
+                stackIn_13_4 = PacketBuffer.field_s;
               }
               stackIn_12_0.field_Sb = new vh(stackIn_12_3, stackIn_13_4);
               var12.a(94, var12.field_Sb);
@@ -204,12 +204,12 @@ final class mk {
               } else {
                 stackIn_33_1 = null;
                 stackIn_33_2 = null;
-                stackIn_33_4 = ge.field_s;
+                stackIn_33_4 = PacketBuffer.field_s;
               }
               stackIn_32_0.field_dc = new vh(stackIn_32_3, stackIn_33_4);
               var12.a(53, var12.field_dc);
               var12.field_dc.field_Fb = 2;
-              var12.field_jc = new vh(0L, ge.field_s);
+              var12.field_jc = new vh(0L, PacketBuffer.field_s);
               var12.a(-100, var12.field_jc);
               var12.field_Rb = new vh(0L, ei.field_A);
               var12.a(40, var12.field_Rb);
@@ -294,7 +294,7 @@ final class mk {
             var12.field_Cc.field_Db = 0;
             var30 = var12.field_Cc;
             var30.field_gb = 0;
-            var12.field_gb = vb.field_m.field_Rb.field_gb;
+            var12.field_gb = BufferedSocket.field_m.field_Rb.field_gb;
             var31 = 0;
             var32 = var12.field_Ob;
             if (!var12.f(-14144)) {
@@ -481,7 +481,7 @@ final class mk {
               var12.field_Cb = -var12.field_Db + var31;
             }
             if (var13 != 0) {
-              vb.field_m.field_Rb.a((vh) (var11), 2, var12, param1 - 79);
+              BufferedSocket.field_m.field_Rb.a((vh) (var11), 2, var12, param1 - 79);
             }
             for (var34_intLifetime2 = 0; dr.field_c > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_W) {
@@ -587,11 +587,11 @@ final class mk {
         try {
           qf.field_j = param4;
           ve.field_m = -1L;
-          uf.field_hb = param8;
+          PoolMatchController.field_hb = param8;
           dr.field_c = param4.length;
           tp.field_e = null;
           em.field_L = null;
-          md.field_c = new byte[(uf.field_hb + 7) / 8];
+          md.field_c = new byte[(PoolMatchController.field_hb + 7) / 8];
           kh.field_Ac = false;
           var10_int = 0;
           for (var11 = 0; qf.field_j.length > var11; var11++) {
@@ -603,23 +603,23 @@ final class mk {
           var10_int = (var10_int + 7) / 8;
           ka.field_s = new byte[var10_int];
           if (null == param7.field_T) {
-            param7.field_T = new ko();
+            param7.field_T = new IntrusiveDeque();
           }
-          ma.field_i = param7.field_T;
-          ma.field_i.d((byte) 106);
+          IntrusiveNode.field_i = param7.field_T;
+          IntrusiveNode.field_i.d((byte) 106);
           ln.field_n = new tk(param6);
-          uf.field_jb = 0;
+          PoolMatchController.field_jb = 0;
           og.field_I = -1;
           mg.field_d = -1;
           ka.field_r = 0;
           if (param0.field_T == null) {
-            param0.field_T = new ko();
+            param0.field_T = new IntrusiveDeque();
           }
           ep.field_A = param0.field_T;
           ep.field_A.d((byte) 123);
           lf.field_a = new tk(param1);
           if (null == param2.field_T) {
-            param2.field_T = new ko();
+            param2.field_T = new IntrusiveDeque();
           }
           ck.field_W = param2.field_T;
           ck.field_W.d((byte) 36);

@@ -172,10 +172,10 @@ final class np {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var5 = new StringBuilder(2 * param1.field_v);
+          var5 = new StringBuilder(2 * param1.position);
           var2 = var5;
-          for (var3 = 0; param1.field_v > var3; var3++) {
-            var4 = 255 & param1.field_t[var3];
+          for (var3 = 0; param1.position > var3; var3++) {
+            var4 = 255 & param1.payload[var3];
             discarded$2 = var5.append(ec.field_j[var4 >> 4 & 15]);
             discarded$3 = var5.append(ec.field_j[15 & var4]);
           }
@@ -289,7 +289,7 @@ final class np {
                 this.field_f.a(6, dg.field_S, 0, -1);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -305,7 +305,7 @@ final class np {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (dg.field_S[3] & 255) + (65280 & dg.field_S[2] << 8);
                         var10 = ((255 & dg.field_S[5]) << 8) + ((16711680 & dg.field_S[4] << 16) + (255 & dg.field_S[6]));
@@ -321,7 +321,7 @@ final class np {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (dg.field_S[3] & 255) + ((65280 & dg.field_S[2] << 8) + ((dg.field_S[0] << 24 & -16777216) + (16711680 & dg.field_S[1] << 16)));
                         var12 = (65280 & dg.field_S[4] << 8) + (dg.field_S[5] & 255);
@@ -473,7 +473,7 @@ final class np {
                 var11 = (String) null;
                 hn.field_c = bi.a(hm.field_a, -16595, param5, false, (String) null);
               }
-              ej.field_j.field_v = 0;
+              ej.field_j.position = 0;
               ej.field_j.a(14, false);
               ej.field_j.a(hn.field_c.b((byte) -101).field_c, false);
               de.a(-1, 0);
@@ -481,7 +481,7 @@ final class np {
             }
             if (vn.field_d == tl.field_J &&
               lq.b((byte) 87, 1)) {
-              var6_int = kn.field_e.g(-82);
+              var6_int = kn.field_e.readUnsignedByte(-82);
               if (var6_int == 0) {
                 tl.field_J = fr.field_o;
               } else {
@@ -489,20 +489,20 @@ final class np {
                 of.field_Pb = -1;
                 tl.field_J = hm.field_k;
               }
-              kn.field_e.field_v = 0;
+              kn.field_e.position = 0;
             }
             if (fr.field_o == tl.field_J &&
               lq.b((byte) 43, 8)) {
-              Pool.field_Q = kn.field_e.h(-412303328);
-              kn.field_e.field_v = 0;
+              Pool.field_Q = kn.field_e.readLong(-412303328);
+              kn.field_e.position = 0;
               pj.a(param2, hn.field_c, param3, -98300704, param4);
-              tl.field_J = wo.field_g;
+              tl.field_J = DualLinkDeque.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (tl.field_J == wo.field_g &&
+            if (tl.field_J == DualLinkDeque.field_g &&
               lq.b((byte) 79, 1)) {
-              var6_intLifetime1 = kn.field_e.g(-110);
-              kn.field_e.field_v = 0;
+              var6_intLifetime1 = kn.field_e.readUnsignedByte(-110);
+              kn.field_e.position = 0;
               ri.field_N = null;
               uq.field_c = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
@@ -526,13 +526,13 @@ final class np {
             }
             if (ff.field_b == tl.field_J &&
               wf.a((byte) 39)) {
-              hm.field_a = kn.field_e.h(-412303328);
+              hm.field_a = kn.field_e.readLong(-412303328);
               ei.field_E = param5;
-              hq.field_i = kn.field_e.g(-68);
-              ta.field_f = kn.field_e.g(-105);
-              mp.field_V = kn.field_e.d(-1034);
+              hq.field_i = kn.field_e.readUnsignedByte(-68);
+              ta.field_f = kn.field_e.readUnsignedByte(-105);
+              mp.field_V = kn.field_e.readUnsignedShort(-1034);
               var12 = kn.field_e.m(108);
-              var7 = kn.field_e.g(-76);
+              var7 = kn.field_e.readUnsignedByte(-76);
               if (0 != (1 & var7)) {
                 ke.a(100);
               }
@@ -550,19 +550,19 @@ final class np {
                 }
               }
               if (hk.field_s) {
-                kn.field_e.g(-114);
-                kn.field_e.g(-99);
-                kn.field_e.b(true);
-                va.field_X = kn.field_e.d(-1034);
+                kn.field_e.readUnsignedByte(-114);
+                kn.field_e.readUnsignedByte(-99);
+                kn.field_e.readInt(true);
+                va.field_X = kn.field_e.readUnsignedShort(-1034);
                 sn.field_n = new byte[va.field_X];
                 for (var8 = 0; va.field_X > var8; var8++) {
-                  sn.field_n[var8] = kn.field_e.e((byte) 105);
+                  sn.field_n[var8] = kn.field_e.readByte((byte) 105);
                 }
               }
               di.field_j = kn.field_e.j(-22);
               var13 = (CharSequence) ((Object) di.field_j);
               oj.field_y = hq.a(101, var13);
-              no.field_l = kn.field_e.g(-126);
+              no.field_l = kn.field_e.readUnsignedByte(-126);
               tl.field_J = ta.field_a;
               if (hn.field_c.b((byte) -110) == dg.field_L) {
                 stackIn_67_0 = eo.field_Xb;

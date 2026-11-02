@@ -12,16 +12,16 @@ final class aj extends vh {
     static ao field_Mb;
     static String field_Sb;
 
-    final static dd f(byte param0) {
+    final static Sprite f(byte param0) {
         int var4_int = 0;
         int var5 = Pool.field_O;
         int var1 = rc.field_f[0] * pd.field_a[0];
         byte[] var2 = v.field_b[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = ma.field_h[rb.b((int) var2[var4_int], 255)];
+          var3[var4_int] = IntrusiveNode.field_h[rb.b((int) var2[var4_int], 255)];
         }
-        dd var4 = new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var3);
+        Sprite var4 = new Sprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var3);
         if (param0 != 89) {
           aj.f((byte) 30);
         }
@@ -116,11 +116,11 @@ final class aj extends vh {
         return (param2 + (param2 >>> 31)) % param1 + var3;
     }
 
-    final static dd[] a(int param0, String param1, di param2, String param3) {
+    final static Sprite[] a(int param0, String param1, di param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        dd[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

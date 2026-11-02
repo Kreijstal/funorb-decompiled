@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ln extends ma {
+final class ln extends IntrusiveNode {
     static String field_l;
     static vh field_q;
     static String[] field_r;
     static tk field_n;
     static vh[] field_v;
     static int field_o;
-    static dd[] field_s;
+    static Sprite[] field_s;
     static int field_t;
     static boolean field_p;
     static int[] field_m;
@@ -18,10 +18,10 @@ final class ln extends ma {
         throw new Error();
     }
 
-    final static dd[] a(int param0, byte param1, di param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, di param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        dd[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

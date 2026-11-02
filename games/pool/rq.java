@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends kd {
+final class rq extends PcmStream {
     private int[] field_u;
     private cg field_D;
     private int field_s;
@@ -18,7 +18,7 @@ final class rq extends kd {
     private cg field_E;
     private int field_F;
     private vk field_p;
-    private static ko field_q;
+    private static IntrusiveDeque field_q;
     static vh field_x;
     static String[] field_H;
     static int[] field_B;
@@ -27,7 +27,7 @@ final class rq extends kd {
         if (param0 != 946) {
           return;
         }
-        pj.field_H = new ko();
+        pj.field_H = new IntrusiveDeque();
     }
 
     final void a(int[] param0, int param1, int param2) {
@@ -181,7 +181,7 @@ final class rq extends kd {
         }
     }
 
-    final static kf a(int param0, nb param1) {
+    final static kf a(int param0, PcmSampleStream param1) {
         kf var2 = null;
         RuntimeException var2_ref = null;
         kf stackIn_2_0 = null;
@@ -216,10 +216,10 @@ final class rq extends kd {
 
     final static void a(int param0, int param1) {
         String dupTemp$0 = null;
-        uf stackIn_8_0 = null;
+        PoolMatchController stackIn_8_0 = null;
         StringBuilder stackIn_15_0 = null;
         String stackIn_16_1 = null;
-        uf var2;
+        PoolMatchController var2;
         String var3;
         int var4;
         String var5;
@@ -496,30 +496,30 @@ final class rq extends kd {
                 var4 = 0;
               }
             }
-            if (0 < ej.field_j.field_v) {
-              var14 = new byte[ej.field_j.field_v];
+            if (0 < ej.field_j.position) {
+              var14 = new byte[ej.field_j.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var6 < var14.length; var6++) {
-                var8[var6] = ej.field_j.field_t[var6];
+                var8[var6] = ej.field_j.payload[var6];
               }
-              var6_ref_fr = new fr((long)var4 + var2_long, ej.field_j.field_v, var17);
+              var6_ref_fr = new fr((long)var4 + var2_long, ej.field_j.position, var17);
               field_q.b((byte) 90, var6_ref_fr);
-              ej.field_j.field_v = 0;
+              ej.field_j.position = 0;
             }
             var9 = (fr) (field_q.c((byte) -73));
             var13 = var9;
             if (var13 != null &&
               var13.field_p < var2_long) {
-              var13.a((byte) -117);
+              var13.unlink((byte) -117);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.field_r) {
-                ej.field_j.field_t[var10] = var9.field_l[var10];
+                ej.field_j.payload[var10] = var9.field_l[var10];
                 var10++;
               }
-              ej.field_j.field_v = var13.field_r;
+              ej.field_j.position = var13.field_r;
             }
           }
           if (param0 >= -16) {
@@ -534,7 +534,7 @@ final class rq extends kd {
         }
     }
 
-    final kd a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -549,7 +549,7 @@ final class rq extends kd {
         return 2;
     }
 
-    final kd b() {
+    final PcmStream b() {
         return null;
     }
 

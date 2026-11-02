@@ -3,7 +3,7 @@
  */
 final class sg extends ob {
     static jj field_J;
-    static dd[] field_M;
+    static Sprite[] field_M;
     static String field_N;
     static int field_P;
     static String field_Q;
@@ -116,13 +116,13 @@ final class sg extends ob {
           return 260;
         }
         if (param0 != 6) {
-          sj var4 = (sj) null;
-          sg.a((java.awt.Component) null, (vk) null, -11, (sj) null, -109, true);
+          PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
+          sg.a((java.awt.Component) null, (vk) null, -11, (PlatformTaskDispatcher) null, -109, true);
         }
         return 390;
     }
 
-    final static dd[] h(int param0) {
+    final static Sprite[] h(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var10 = null;
@@ -130,10 +130,10 @@ final class sg extends ob {
         int[] var9 = null;
         int[] var5 = null;
         int var6 = 0;
-        dd[] var1 = new dd[wf.field_d];
+        Sprite[] var1 = new Sprite[wf.field_d];
         if (param0 != 152) {
-          sj var7 = (sj) null;
-          sg.a((java.awt.Component) null, (vk) null, -111, (sj) null, -54, true);
+          PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
+          sg.a((java.awt.Component) null, (vk) null, -111, (PlatformTaskDispatcher) null, -54, true);
         }
         for (var2 = 0; var2 < wf.field_d; var2++) {
           var3 = pd.field_a[var2] * rc.field_f[var2];
@@ -142,16 +142,16 @@ final class sg extends ob {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = ma.field_h[rb.b((int) var10[var6], 255)];
+            var5[var6] = IntrusiveNode.field_h[rb.b((int) var10[var6], 255)];
           }
-          var1[var2] = new dd(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var11);
+          var1[var2] = new Sprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var11);
         }
         sh.h(-1);
         return var1;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        dd var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         if (!(this.g(1) <= param0)) {
           var7 = !this.a(param0, true) ? ne.field_t[param0] : og.field_K[param0];
@@ -185,12 +185,12 @@ final class sg extends ob {
         return 36;
     }
 
-    final static void a(java.awt.Component param0, vk param1, int param2, sj param3, int param4, boolean param5) {
+    final static void a(java.awt.Component param0, vk param1, int param2, PlatformTaskDispatcher param3, int param4, boolean param5) {
         try {
           nq.a(param1, param3, param0, param2, false, 1024, param5, param2);
           if (param4 != 10282) {
-            sj var7 = (sj) null;
-            sg.a((java.awt.Component) null, (vk) null, 11, (sj) null, -77, false);
+            PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
+            sg.a((java.awt.Component) null, (vk) null, 11, (PlatformTaskDispatcher) null, -77, false);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "sg.HB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

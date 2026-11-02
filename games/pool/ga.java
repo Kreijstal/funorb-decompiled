@@ -78,7 +78,7 @@ final class ga extends sl implements sc {
     final static void b(boolean param0) {
         try {
           be.f(-1);
-          wo.field_c = true;
+          DualLinkDeque.field_c = true;
           ro.field_e = true;
           wd.field_Ub.k(-22216);
           wf.a(param0, na.field_d, -127);
@@ -110,13 +110,13 @@ final class ga extends sl implements sc {
         eo var6Lifetime1;
         try {
           var1 = kn.field_e;
-          var2 = var1.g(-125);
+          var2 = var1.readUnsignedByte(-125);
           if (var2 == 0) {
             if (gd.field_c == null) {
               gd.field_c = new tk(128);
               gi.field_t = 0;
             }
-            stackIn_10_0 = (1 != var1.g(-91)) ? 0 : 1;
+            stackIn_10_0 = (1 != var1.readUnsignedByte(-91)) ? 0 : 1;
             var3_int = stackIn_10_0;
             var4_ref_String = var1.j(param0 - 29836);
             if (var3_int != 0) {
@@ -173,7 +173,7 @@ final class ga extends sl implements sc {
             th.field_a = 1;
             var3 = var1.j(-118);
             cm.field_J = ((String) (var3)).intern();
-            var4 = var1.g(-84);
+            var4 = var1.readUnsignedByte(-84);
             vd.a((byte) 78, var4);
             return;
           }
@@ -208,7 +208,7 @@ final class ga extends sl implements sc {
           var6Lifetime1.field_Wb = (String) (var3Lifetime1);
           var6Lifetime1.field_Zb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Sb = var5Lifetime1;
-          var6Lifetime1.a((byte) -117);
+          var6Lifetime1.unlink((byte) -117);
           var7_ref = (eo) (cf.field_k.c((byte) -125));
           while (var7_ref != null) {
             if (wk.a(var6Lifetime1, var7_ref, 83)) {
@@ -249,7 +249,7 @@ final class ga extends sl implements sc {
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (ql.a(param0, -90)) {
+          if (MouseHandler.a(param0, -90)) {
             stackIn_10_0 = (int)(((long)param2.nextInt() & 4294967295L) * (long)param0 >> 32);
             return stackIn_10_0;
           }

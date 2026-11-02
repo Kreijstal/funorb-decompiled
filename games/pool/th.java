@@ -136,7 +136,7 @@ final class th {
           discarded$1 = td.field_c.append((char) var5);
           var6Lifetime1 = 485;
           var65 = di.field_j;
-          var16 = bm.a(524288, var65);
+          var16 = IterableNodeHashTable.a(524288, var65);
           var66 = var16;
           if (hn.field_b != 2) {
             var8Lifetime1 = "";

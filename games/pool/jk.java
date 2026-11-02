@@ -18,7 +18,7 @@ final class jk {
 
     final static void a(boolean param0, boolean param1, di param2, di param3) {
         try {
-          ub.a(md.field_d, ol.field_c, cq.field_d, iq.field_f, uo.field_Lb, ei.field_A, pa.field_M, i.field_l, param0, kq.field_a, ag.field_f, (byte) 37);
+          ub.a(md.field_d, ol.field_c, cq.field_d, iq.field_f, uo.field_Lb, ei.field_A, pa.field_M, i.field_l, param0, GameApplet.field_a, ag.field_f, (byte) 37);
           if (param1) {
             di var5 = (di) null;
             jk.a(true, true, (di) null, (di) null);
@@ -120,14 +120,14 @@ final class jk {
     final static void a(long param0, int param1, int param2) {
         oq var4 = ej.field_j;
         var4.b(false, param1);
-        var4.field_v = var4.field_v + 1;
+        var4.position = var4.position + 1;
         if (param2 != 0) {
           field_c = (String) null;
         }
-        int var5 = var4.field_v;
+        int var5 = var4.position;
         var4.a(7, false);
-        var4.a(param0, (byte) -119);
-        var4.b(var4.field_v - var5, true);
+        var4.writeLong(param0, (byte) -119);
+        var4.b(var4.position - var5, true);
     }
 
     final void a(int param0) {
@@ -239,7 +239,7 @@ final class jk {
           stackIn_14_2 = (param0) && (!tf.field_d);
           ((vh) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
         }
-        if (!(uf.field_z <= 0) ||
+        if (!(PoolMatchController.field_z <= 0) ||
           !(nj.field_b <= 0)) {
           if (null != ac.field_n) {
             ac.field_n.a(so.field_k.field_qb, 0);
@@ -286,7 +286,7 @@ final class jk {
         }
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         try {
           this.a(param1, (byte) 95);
           this.a((byte) 112);
@@ -300,7 +300,7 @@ final class jk {
         }
     }
 
-    private final void a(uf param0, byte param1) {
+    private final void a(PoolMatchController param0, byte param1) {
         int var11 = 0;
         double var3_double = 0.0;
         double var5 = 0.0;

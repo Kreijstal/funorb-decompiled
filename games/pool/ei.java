@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ei extends ma {
+class ei extends IntrusiveNode {
     int field_D;
     int field_v;
     static vh field_A;
@@ -309,9 +309,9 @@ class ei extends ma {
         return stackIn_18_0;
     }
 
-    final static dd[] a(byte param0, int param1) {
-        dd[] var4 = new dd[9];
-        dd[] var2 = var4;
+    final static Sprite[] a(byte param0, int param1) {
+        Sprite[] var4 = new Sprite[9];
+        Sprite[] var2 = var4;
         if (param0 > 4) {
           var4[4] = ad.a(param1, 64, 7);
           return var2;
@@ -536,7 +536,7 @@ class ei extends ma {
           }
         } else {
           if (wp.field_d == 0) {
-            sharedTailExit_0: {
+            regionExit1: {
               if (ne.field_s != 0) {
                 if (!this.a(this, param1, true, ne.field_s, ua.field_o, param3, lq.field_W)) {
                   if (var5Lifetime1 == 0) {
@@ -565,7 +565,7 @@ class ei extends ma {
                       }
                     }
                   }
-                  break sharedTailExit_0;
+                  break regionExit1;
                 }
                 param2 = false;
               }

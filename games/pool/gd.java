@@ -3,10 +3,10 @@
  */
 final class gd {
     static int[] field_d;
-    static ge field_f;
+    static PacketBuffer field_f;
     static int field_g;
     static boolean field_b;
-    static dd field_e;
+    static Sprite field_e;
     static int[] field_a;
     static tk field_c;
 
@@ -19,7 +19,7 @@ final class gd {
           field_c = null;
           return;
         }
-        field_f = (ge) null;
+        field_f = (PacketBuffer) null;
         field_f = null;
         field_e = null;
         field_a = null;
@@ -38,10 +38,10 @@ final class gd {
           return ig.field_j.b(2);
         }
         if (param0) {
-          return qo.field_x;
+          return SpriteState.field_x;
         }
         gd.a(-107);
-        return qo.field_x;
+        return SpriteState.field_x;
     }
 
     static {

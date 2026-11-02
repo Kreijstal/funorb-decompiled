@@ -11,7 +11,7 @@ final class em extends ob {
     static int field_P;
     static ao field_J;
     static boolean field_N;
-    static dd field_M;
+    static Sprite field_M;
 
     private final boolean g(int param0, int param1) {
         int var3;
@@ -67,7 +67,7 @@ final class em extends ob {
         if (null == eq.field_V) {
           eq.field_V = jf.a(-112, 1, fd.field_O, 3, 10);
         }
-        L1: {
+        regionExit1: {
           if (eq.field_V.field_u) {
             if (null != eq.field_V.field_m) {
               nj.a(vk.field_y, (byte) -87, 320, 160, 160, 165 + ni.field_Z.field_G + 16);
@@ -110,7 +110,7 @@ final class em extends ob {
                 sa.field_h.d(di.field_j, 190, var5, 16764057, -1);
                 sa.field_h.b(lh.b(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
               }
-              break L1;
+              break regionExit1;
             }
             var2 = fh.field_a;
           } else {
@@ -157,7 +157,7 @@ final class em extends ob {
         if (param0 != 0) {
           return 97;
         }
-        L0: {
+        regionExit1: {
           if (!hk.b(35)) {
             var3 = param1;
             if (var3 != 0 &&
@@ -170,7 +170,7 @@ final class em extends ob {
                 case 4:
                   return 170;
                 default:
-                  break L0;
+                  break regionExit1;
                 case 5:
                   return 380;
               }
@@ -251,12 +251,12 @@ final class em extends ob {
         }
     }
 
-    final dd a(String param0, int param1, int param2, int param3) {
+    final Sprite a(String param0, int param1, int param2, int param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int[] var6 = null;
-        dd stackIn_5_0 = null;
-        dd stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -331,7 +331,7 @@ final class em extends ob {
         }
         var3.a(3, false);
         var3.a(8, false);
-        var3.a((byte) -81, param0);
+        var3.writeShort((byte) -81, param0);
     }
 
     final void c(int param0) {
@@ -397,7 +397,7 @@ final class em extends ob {
         }
     }
 
-    final static void a(String[] args, int param1, int param2, boolean param3, di param4, int param5, di param6, byte[] param7, int[] param8, di param9, String[][] param10, String[] param11, byte[] param12, qb[] param13, String[] param14, dd[][] param15, String[][] param16, byte param17, dd[][] param18, int[] param19) {
+    final static void a(String[] args, int param1, int param2, boolean param3, di param4, int param5, di param6, byte[] param7, int[] param8, di param9, String[][] param10, String[] param11, byte[] param12, qb[] param13, String[] param14, Sprite[][] param15, String[][] param16, byte param17, Sprite[][] param18, int[] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -434,7 +434,7 @@ final class em extends ob {
         RuntimeException var20 = null;
         try {
           ap.a(param4, false, param13, param8, param9);
-          wo.a(1, param9);
+          DualLinkDeque.a(1, param9);
           rn.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
           jk.a(param3, false, param9, param6);
           ef.a(-74);
@@ -540,7 +540,7 @@ final class em extends ob {
         }
     }
 
-    final dd[] b(int param0, int param1) {
+    final Sprite[] b(int param0, int param1) {
         if (param1 != -34) {
           field_J = (ao) null;
         }

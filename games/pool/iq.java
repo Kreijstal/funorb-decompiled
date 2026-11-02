@@ -10,10 +10,10 @@ abstract class iq {
     int field_e;
     java.awt.Image field_c;
     static java.awt.Frame field_l;
-    static dd[] field_a;
+    static Sprite[] field_a;
     int field_k;
     static String field_g;
-    static dd field_d;
+    static Sprite field_d;
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 

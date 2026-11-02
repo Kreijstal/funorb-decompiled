@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mj {
-    static dd field_b;
+    static Sprite field_b;
     static int[] field_a;
     static hj field_d;
     static String[][] field_c;
@@ -51,9 +51,9 @@ final class mj {
           if (param0 != 0) {
             mj.a(99, 12);
           }
-          if (null != ma.field_i) {
-            ma.field_i.d((byte) 49);
-            ma.field_i = null;
+          if (null != IntrusiveNode.field_i) {
+            IntrusiveNode.field_i.d((byte) 49);
+            IntrusiveNode.field_i = null;
           }
           ln.field_n = null;
           if (ep.field_A != null) {

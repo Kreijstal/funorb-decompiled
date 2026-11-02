@@ -6,8 +6,8 @@ final class mp extends ch implements tb {
     static String field_Q;
     static String field_X;
     private String[] field_T;
-    static ko field_R;
-    static dd[] field_N;
+    static IntrusiveDeque field_R;
+    static Sprite[] field_N;
     private jn field_Y;
     static String field_S;
     static int field_V;
@@ -158,7 +158,7 @@ final class mp extends ch implements tb {
         }
         gi.field_o.field_tb = pa.field_M.field_tb;
         gi.field_o.field_Fb = 1;
-        if (uf.field_z > 0) {
+        if (PoolMatchController.field_z > 0) {
           wk.a(param4, param9, param1, 112);
         }
         if (nj.field_b > 0) {
@@ -175,7 +175,7 @@ final class mp extends ch implements tb {
           rk.a(param7, param0, ci.field_c, param9, (byte) -83);
         }
         mk.a(param3, 0, param9, param7, param6, param2, param0);
-        rk.a(param7, param0, wo.field_f, param9, (byte) -83);
+        rk.a(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
         va.field_V = va.field_V + 1;
     }
 

@@ -7,7 +7,7 @@ final class rm {
     static nm field_e;
     static String field_f;
     static int field_b;
-    static dd[] field_g;
+    static Sprite[] field_g;
     static long field_c;
 
     final static double[][] a(double[] param0, int param1) {

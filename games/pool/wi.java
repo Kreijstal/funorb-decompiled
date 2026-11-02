@@ -213,15 +213,15 @@ final class wi {
             field_b = (String) null;
           }
           var9 = kn.field_e;
-          var2 = var9.g(-125);
-          var3 = var9.g(param0 ^ -151);
+          var2 = var9.readUnsignedByte(-125);
+          var3 = var9.readUnsignedByte(param0 ^ -151);
           if (var2 == 0) {
             var4_ref_fl = (fl) (cq.field_g.c((byte) -124));
             if (var4_ref_fl == null) {
               dn.c(param0 - 79);
               return;
             }
-            var5_int = of.field_Pb - var9.field_v;
+            var5_int = of.field_Pb - var9.position;
             var11 = var4_ref_fl.field_r;
             var10 = var11;
             var6 = var10;
@@ -229,9 +229,9 @@ final class wi {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.g(-100) << (rb.b(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-100) << (rb.b(var7, 3) << 8));
             }
-            var4_ref_fl.a((byte) -117);
+            var4_ref_fl.unlink((byte) -117);
             return;
           }
           if (var2 == 1) {
@@ -249,7 +249,7 @@ final class wi {
               dn.c(118);
               return;
             }
-            var5.a((byte) -117);
+            var5.unlink((byte) -117);
             return;
           }
           tc.a((Throwable) null, "LR1: " + t.a(param0 ^ 159), param0 - 8754);

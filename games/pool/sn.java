@@ -113,7 +113,7 @@ final class sn extends gg implements pe, ha {
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return gp.field_d;
         }
-        return kr.field_e;
+        return ProxySocketConnector.field_e;
     }
 
     public final void a(sl param0, boolean param1) {

@@ -19,10 +19,10 @@ final class he {
           if (param1 != 0) {
             return;
           }
-          if (oa.field_a == null) {
+          if (ClientException.field_a == null) {
             return;
           }
-          oa.field_a.a((java.awt.Component) ((Object) param0), 84);
+          ClientException.field_a.a((java.awt.Component) ((Object) param0), 84);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -112,32 +112,32 @@ final class de {
           if (jd.field_c != null) {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (tl.field_J == ta.field_a);
-              if ((decompiledFrameRemainder0) && (ej.field_j.field_v == 0 &&
+              if ((decompiledFrameRemainder0) && (ej.field_j.position == 0 &&
                 rl.a((byte) -108) > nf.field_Q + 10000L)) {
                 ej.field_j.b(false, param0);
               }
             } else {
-              if (ej.field_j.field_v == 0 &&
+              if (ej.field_j.position == 0 &&
                 rl.a((byte) -108) > nf.field_Q + 10000L) {
                 ej.field_j.b(false, param0);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ej.field_j.field_v > 0) {
+              if (ej.field_j.position > 0) {
                 try {
-                  jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
+                  jd.field_c.a(ej.field_j.payload, (byte) 70, ej.field_j.position, 0);
                   nf.field_Q = rl.a((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dn.c(-74);
                 }
-                ej.field_j.field_v = 0;
+                ej.field_j.position = 0;
               }
               return;
             }
           }
-          ej.field_j.field_v = 0;
+          ej.field_j.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -145,7 +145,7 @@ final class de {
         }
     }
 
-    final static boolean a(byte param0, ge param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -157,7 +157,7 @@ final class de {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.g(-112);
+          var2_int = param1.readUnsignedByte(-112);
           stackIn_3_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_3_0;
           var4 = 127 / ((13 - param0) / 63);

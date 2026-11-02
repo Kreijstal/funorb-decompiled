@@ -36,7 +36,7 @@ final class ee {
         int var10;
         String var11;
         int var12;
-        oa var13;
+        ClientException var13;
         StringWriter var14;
         String var15;
         String var16;
@@ -61,11 +61,11 @@ final class ee {
         String var2Lifetime3Lifetime11;
         String var2Lifetime3Lifetime12;
         String var11Lifetime3Lifetime1;
-        if (!(param1 instanceof oa)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
         } else {
-          var13 = (oa) ((Object) param1);
+          var13 = (ClientException) ((Object) param1);
           var2 = var13.field_i + " | ";
           param1 = var13.field_c;
         }
@@ -169,7 +169,7 @@ final class ee {
             rn.field_g = param0.field_d;
             hg.field_a = param0.field_p;
           }
-          oa.a(-114, param0);
+          ClientException.a(-114, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,20 +201,20 @@ final class ee {
         var7 = Pool.field_O;
         var8 = kn.field_e;
         var2 = var8;
-        var3 = var8.g(-111);
+        var3 = var8.readUnsignedByte(-111);
         stackIn_3_0 = ((var3 & 128) != 0);
         qg.field_d = stackIn_3_0;
         um.field_d = var3 & 127;
-        df.field_e = var8.g(-105);
-        qg.field_c = var8.h(-412303328);
+        df.field_e = var8.readUnsignedByte(-105);
+        qg.field_c = var8.readLong(-412303328);
         if (2 != um.field_d) {
           m.field_e = 0;
           wq.field_a = 0;
         } else {
-          wq.field_a = var8.d(-1034);
-          m.field_e = var8.f(98);
+          wq.field_a = var8.readUnsignedShort(-1034);
+          m.field_e = var8.readUnsignedMedium(98);
         }
-        stackIn_9_0 = (var8.g(param0 ^ 94) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         n.field_S = var8.j(-105);
         if (param0 != -31) {
@@ -226,11 +226,11 @@ final class ee {
           lh.field_f = var8.j(param0 ^ 82);
         }
         if (um.field_d == 1) {
-          pp.field_b = var8.d(-1034);
+          pp.field_b = var8.readUnsignedShort(-1034);
           tp.field_g = var8.j(-49);
         } else {
           if (4 == um.field_d) {
-            pp.field_b = var8.d(-1034);
+            pp.field_b = var8.readUnsignedShort(-1034);
             tp.field_g = var8.j(-49);
           } else {
             pp.field_b = 0;
@@ -238,7 +238,7 @@ final class ee {
           }
         }
         if (param1) {
-          var5 = var8.d(-1034);
+          var5 = var8.readUnsignedShort(-1034);
           try {
             var9 = o.field_x.a(127, var5);
             np.field_a = var9.e(param0 ^ -31);
@@ -278,7 +278,7 @@ final class ee {
         }
         var3 = new sf();
         if (var4 != null) {
-          var3.a((byte) -123, new ge(var4));
+          var3.a((byte) -123, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
           var3.f(0);
@@ -348,20 +348,20 @@ final class ee {
         var7 = Pool.field_O;
         var8 = kn.field_e;
         var2 = var8;
-        var3 = var8.g(-111);
+        var3 = var8.readUnsignedByte(-111);
         stackIn_3_0 = ((var3 & 128) != 0);
         qg.field_d = stackIn_3_0;
         um.field_d = var3 & 127;
-        df.field_e = var8.g(-105);
-        qg.field_c = var8.h(-412303328);
+        df.field_e = var8.readUnsignedByte(-105);
+        qg.field_c = var8.readLong(-412303328);
         if (2 != um.field_d) {
           m.field_e = 0;
           wq.field_a = 0;
         } else {
-          wq.field_a = var8.d(-1034);
-          m.field_e = var8.f(98);
+          wq.field_a = var8.readUnsignedShort(-1034);
+          m.field_e = var8.readUnsignedMedium(98);
         }
-        stackIn_9_0 = (var8.g(param0 ^ 94) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         n.field_S = var8.j(-105);
         if (param0 != -31) {
@@ -373,11 +373,11 @@ final class ee {
           lh.field_f = var8.j(param0 ^ 82);
         }
         if (um.field_d == 1) {
-          pp.field_b = var8.d(-1034);
+          pp.field_b = var8.readUnsignedShort(-1034);
           tp.field_g = var8.j(-49);
         } else {
           if (4 == um.field_d) {
-            pp.field_b = var8.d(-1034);
+            pp.field_b = var8.readUnsignedShort(-1034);
             tp.field_g = var8.j(-49);
           } else {
             pp.field_b = 0;
@@ -385,7 +385,7 @@ final class ee {
           }
         }
         if (param1) {
-          var5 = var8.d(-1034);
+          var5 = var8.readUnsignedShort(-1034);
           try {
             var9 = o.field_x.a(127, var5);
             np.field_a = var9.e(param0 ^ -31);

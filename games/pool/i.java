@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ma {
+final class i extends IntrusiveNode {
     int field_t;
     int field_q;
     int field_p;
     private static int field_u;
     static vh field_l;
-    static dd field_o;
+    static Sprite field_o;
     int field_s;
     int field_r;
     static int field_m;

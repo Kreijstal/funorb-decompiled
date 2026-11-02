@@ -129,7 +129,7 @@ final class fj extends sq {
         }
     }
 
-    final static dd[] a(int param0, int param1, int param2, boolean param3) {
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           String var5 = (String) null;
           fj.a((String) null, (byte) 90);
@@ -145,7 +145,7 @@ final class fj extends sq {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rg.field_p) {
+          if (!DualLinkNode.field_p) {
             return false;
           }
           if (hn.field_b == 2 &&
@@ -206,18 +206,18 @@ final class fj extends sq {
         }
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         RuntimeException var3 = null;
-        dd stackIn_2_0 = null;
-        dd stackIn_5_0 = null;
-        dd stackIn_7_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            stackIn_2_0 = (dd) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (param0.field_z != -1) {
@@ -408,8 +408,8 @@ final class fj extends sq {
     final int[] a(int param0, byte param1) {
         int var4 = 0;
         int var5 = Pool.field_O;
-        li var6 = new li(new int[]{1024 + param0});
-        li var3 = var6;
+        IsaacCipher var6 = new IsaacCipher(new int[]{1024 + param0});
+        IsaacCipher var3 = var6;
         for (var4 = 0; var4 < 7; var4++) {
           up.field_M[var4] = var4 + 2;
           dj.field_a[var4] = var6.a(23165, 2048);

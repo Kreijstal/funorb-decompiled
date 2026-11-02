@@ -7,7 +7,7 @@ final class jp extends ch implements jn, tb {
     private ga field_O;
     static int field_V;
     static ee field_N;
-    static dd field_T;
+    static Sprite field_T;
     private fe field_U;
     static eg field_P;
     mp field_S;
@@ -180,7 +180,7 @@ final class jp extends ch implements jn, tb {
             this.field_U = (fe) null;
           }
           var4 = var3.c(-31873);
-          stackIn_8_0 = (var4 == kr.field_e);
+          stackIn_8_0 = (var4 == ProxySocketConnector.field_e);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,10 +240,10 @@ final class jp extends ch implements jn, tb {
         this.a(496, 0, var4 + 55 + var3, false, 0);
     }
 
-    final static dd a(int param0, byte param1, di param2, int param3) {
+    final static Sprite a(int param0, byte param1, di param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        dd stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -251,7 +251,7 @@ final class jp extends ch implements jn, tb {
         try {
           if (!vj.a(param3, param2, param0, (byte) 121)) {
             stackIn_2_0 = null;
-            return (dd) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           if (param1 <= 12) {
             jp.a(true);

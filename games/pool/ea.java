@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ea extends ma {
+final class ea extends IntrusiveNode {
     String[][] field_n;
     static boolean field_l;
     boolean field_v;

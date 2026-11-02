@@ -30,7 +30,7 @@ final class r extends ig {
             return stackIn_6_0;
           }
           if (param1) {
-            stackIn_11_0 = kr.field_e;
+            stackIn_11_0 = ProxySocketConnector.field_e;
             return stackIn_11_0;
           }
           stackIn_9_0 = (na) null;

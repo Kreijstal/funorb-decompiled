@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends RuntimeException {
+final class ClientException extends RuntimeException {
     private static int field_k;
     static int field_b;
     static id field_a;
@@ -32,7 +32,7 @@ final class oa extends RuntimeException {
     public static void a(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          oa.a(0, -103, 105, (byte[]) null);
+          ClientException.a(0, -103, 105, (byte[]) null);
         }
         field_d = null;
         field_a = null;
@@ -65,8 +65,8 @@ final class oa extends RuntimeException {
         int var13 = 0;
         int var14 = 0;
         byte[] var15 = null;
-        ge var16 = null;
-        ge var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -77,10 +77,10 @@ final class oa extends RuntimeException {
         int var4Lifetime4;
         int var4Lifetime5;
         try {
-          var16 = new ge(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_v = -2 + param1.length;
-          wf.field_d = var17.d(-1034);
+          var17.position = -2 + param1.length;
+          wf.field_d = var17.readUnsignedShort(-1034);
           wg.field_Sb = new byte[wf.field_d][];
           rc.field_f = new int[wf.field_d];
           v.field_b = new byte[wf.field_d][];
@@ -88,34 +88,34 @@ final class oa extends RuntimeException {
           el.field_I = new int[wf.field_d];
           ih.field_d = new int[wf.field_d];
           gg.field_d = new boolean[wf.field_d];
-          var17.field_v = param1.length - 7 - wf.field_d * 8;
-          vd.field_c = var17.d(-1034);
-          tq.field_r = var17.d(-1034);
-          var3 = (var17.g(-97) & 255) + 1;
+          var17.position = param1.length - 7 - wf.field_d * 8;
+          vd.field_c = var17.readUnsignedShort(-1034);
+          tq.field_r = var17.readUnsignedShort(-1034);
+          var3 = (var17.readUnsignedByte(-97) & 255) + 1;
           for (var4 = 0; wf.field_d > var4; var4++) {
-            el.field_I[var4] = var16.d(-1034);
+            el.field_I[var4] = var16.readUnsignedShort(-1034);
           }
           for (var4Lifetime1 = 0; wf.field_d > var4Lifetime1; var4Lifetime1++) {
-            ih.field_d[var4Lifetime1] = var16.d(-1034);
+            ih.field_d[var4Lifetime1] = var16.readUnsignedShort(-1034);
           }
           for (var4Lifetime2 = 0; wf.field_d > var4Lifetime2; var4Lifetime2++) {
-            pd.field_a[var4Lifetime2] = var16.d(-1034);
+            pd.field_a[var4Lifetime2] = var16.readUnsignedShort(-1034);
           }
           for (var4Lifetime3 = 0; wf.field_d > var4Lifetime3; var4Lifetime3++) {
-            rc.field_f[var4Lifetime3] = var16.d(-1034);
+            rc.field_f[var4Lifetime3] = var16.readUnsignedShort(-1034);
           }
-          var17.field_v = -(3 * (-1 + var3)) + (-(8 * wf.field_d) + (-7 + param1.length));
-          ma.field_h = new int[var3];
+          var17.position = -(3 * (-1 + var3)) + (-(8 * wf.field_d) + (-7 + param1.length));
+          IntrusiveNode.field_h = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            ma.field_h[var4Lifetime4] = var16.f(99);
-            if (0 == ma.field_h[var4Lifetime4]) {
-              ma.field_h[var4Lifetime4] = 1;
+            IntrusiveNode.field_h[var4Lifetime4] = var16.readUnsignedMedium(99);
+            if (0 == IntrusiveNode.field_h[var4Lifetime4]) {
+              IntrusiveNode.field_h[var4Lifetime4] = 1;
             }
           }
-          var17.field_v = 0;
+          var17.position = 0;
           if (!param0) {
             var15 = (byte[]) null;
-            oa.a(true, (byte[]) null);
+            ClientException.a(true, (byte[]) null);
           }
           for (var4Lifetime5 = 0; wf.field_d > var4Lifetime5; var4Lifetime5++) {
             var5 = pd.field_a[var4Lifetime5];
@@ -130,14 +130,14 @@ final class oa extends RuntimeException {
             var9 = var19;
             wg.field_Sb[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.g(-121);
+            var11 = var17.readUnsignedByte(-121);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var16.e((byte) 105);
+                var8[var12] = var16.readByte((byte) 105);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$0 = var16.e((byte) 105);
+                  dupTemp$0 = var16.readByte((byte) 105);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_48_0 = var10;
@@ -152,13 +152,13 @@ final class oa extends RuntimeException {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5 + var12] = var16.e((byte) 105);
+                  var8[var13 * var5 + var12] = var16.readByte((byte) 105);
                 }
               }
               if (0 != (2 & var11)) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var16.e((byte) 105);
+                    dupTemp$1 = var16.readByte((byte) 105);
                     var9[var12 + var13 * var5] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_36_0 = var10;
@@ -241,7 +241,7 @@ final class oa extends RuntimeException {
             g.field_l[var2_int] = 0;
           }
           if (param0 > -30) {
-            oa.a(-9);
+            ClientException.a(-9);
           }
           for (var2_intLifetime1 = 0; aa.field_e > var2_intLifetime1; var2_intLifetime1++) {
             if (param1.field_p == wb.field_e[var2_intLifetime1].field_p) {
@@ -287,7 +287,7 @@ final class oa extends RuntimeException {
         }
     }
 
-    oa(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_c = param0;
         this.field_i = param1;
     }

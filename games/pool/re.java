@@ -225,7 +225,7 @@ abstract class re {
 
     abstract tf b(byte param0);
 
-    abstract void a(byte param0, ge param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     final static void a(boolean param0, String param1, int param2) {
         int var3_int = 0;
@@ -238,7 +238,7 @@ abstract class re {
           if (!param0) {
             return;
           }
-          wo.field_c = false;
+          DualLinkDeque.field_c = false;
           ep.field_z = false;
           if (null != d.field_d &&
             d.field_d.field_R) {
@@ -249,7 +249,7 @@ abstract class re {
                 param1 = eh.field_n;
               }
               param2 = 2;
-              vj.field_j.a(8, qo.field_x);
+              vj.field_j.a(8, SpriteState.field_x);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -257,7 +257,7 @@ abstract class re {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (wo.field_c) {
+              if (DualLinkDeque.field_c) {
                 param1 = nr.a(new String[]{param1}, -1, lq.field_U);
               }
               if (to.field_q) {

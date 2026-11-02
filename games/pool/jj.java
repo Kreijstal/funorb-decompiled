@@ -5,7 +5,7 @@ final class jj extends fm implements tb {
     private fe field_O;
     private co field_N;
     static String field_P;
-    static dd[] field_S;
+    static Sprite[] field_S;
     static String field_R;
     static int field_F;
     static String field_Q;
@@ -112,7 +112,7 @@ final class jj extends fm implements tb {
             var4 = ll.field_a[var3];
             if (var4 >= 0) {
               if (un.field_f.field_h == var4) {
-                var5 = bg.field_d;
+                var5 = SocketConnector.field_d;
               } else {
                 var5 = hd.field_H;
               }
@@ -159,7 +159,7 @@ final class jj extends fm implements tb {
     final void a(ei param0, int param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_O.field_I = this.field_N.a(param1 - 997).c(-31873) == kr.field_e ? true : false;
+          this.field_O.field_I = this.field_N.a(param1 - 997).c(-31873) == ProxySocketConnector.field_e ? true : false;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "jj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -171,12 +171,12 @@ final class jj extends fm implements tb {
         field_P = null;
         field_Q = null;
         if (param0 != 100) {
-          field_S = (dd[]) null;
+          field_S = (Sprite[]) null;
         }
     }
 
     public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
-        if (this.field_N.a(-41).c(-31873) != kr.field_e) {
+        if (this.field_N.a(-41).c(-31873) != ProxySocketConnector.field_e) {
           return;
         }
         try {
@@ -202,7 +202,7 @@ final class jj extends fm implements tb {
           var2_int = param0.length;
           var3 = new byte[var2_int];
           if (param1 != 91) {
-            field_S = (dd[]) null;
+            field_S = (Sprite[]) null;
           }
           qn.a(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;

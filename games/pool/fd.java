@@ -42,10 +42,10 @@ final class fd extends kk {
         int var5 = 0;
         var5 = Pool.field_O;
         try {
-          li.field_d = li.field_d + 65536;
-          while (ng.a(hj.field_f, param1 - 65, li.field_d) >= 65536) {
-            li.field_d = li.field_d - hj.field_f;
-            uf.field_X = uf.field_X + 1;
+          IsaacCipher.field_d = IsaacCipher.field_d + 65536;
+          while (ng.a(hj.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
+            IsaacCipher.field_d = IsaacCipher.field_d - hj.field_f;
+            PoolMatchController.field_X = PoolMatchController.field_X + 1;
           }
           var2_int = -1;
           if (nf.field_V == null) {
@@ -185,11 +185,11 @@ final class fd extends kk {
           }
           while (va.g((byte) -120)) {
             var1.b(false, 8);
-            fieldTemp$0 = var1.field_v + 1;
-            var1.field_v = var1.field_v + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             wn.a(var1, 1);
-            ej.field_j.b(var1.field_v - var2, true);
+            ej.field_j.b(var1.position - var2, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

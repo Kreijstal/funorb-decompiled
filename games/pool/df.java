@@ -14,7 +14,7 @@ final class df {
     boolean field_h;
     boolean field_j;
     int field_d;
-    static dd field_i;
+    static Sprite field_i;
 
     final boolean a(byte param0, int param1, al param2) {
         boolean stackIn_9_0 = false;
@@ -76,11 +76,11 @@ final class df {
         if (!vf.field_nb.a("commonui", 0)) {
           return kb.field_a + " - " + vf.field_nb.a(100, "commonui") + "%";
         }
-        if (!rg.field_r.d(66)) {
+        if (!DualLinkNode.field_r.d(66)) {
           return de.field_e;
         }
-        if (!rg.field_r.c(-63)) {
-          return cf.field_c + " - " + rg.field_r.b(0) + "%";
+        if (!DualLinkNode.field_r.c(-63)) {
+          return cf.field_c + " - " + DualLinkNode.field_r.b(0) + "%";
         }
         return cl.field_j;
     }
@@ -114,7 +114,7 @@ final class df {
             var6 = (long)param1.field_k - (long)var10[1];
             var6 = var6 >> 8;
           }
-          var8 = bm.a(-119, var4_long * var4_long + var6 * var6);
+          var8 = IterableNodeHashTable.a(-119, var4_long * var4_long + var6 * var6);
           if (-2147483648L <= var8 &&
             var8 <= 2147483647L) {
             if (param0 != 1763073386) {
@@ -187,7 +187,7 @@ final class df {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -6661) {
-            field_i = (dd) null;
+            field_i = (Sprite) null;
           }
           if (this.field_h) {
             var6 = param0.field_l[this.field_g];

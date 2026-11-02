@@ -4,18 +4,18 @@
 import java.util.*;
 
 final class uk implements Iterable {
-    static dd[] field_b;
-    ma[] field_k;
+    static Sprite[] field_b;
+    IntrusiveNode[] field_k;
     static boolean field_c;
     int field_h;
     static nm field_d;
     private static int field_f;
-    static dd field_g;
+    static Sprite field_g;
     static int field_a;
     static int field_l;
     static int field_m;
-    static dd[] field_i;
-    private ma field_e;
+    static Sprite[] field_i;
+    private IntrusiveNode field_e;
     static int field_j;
 
     final static void a(int[] param0, int param1, eg param2) {
@@ -50,7 +50,7 @@ final class uk implements Iterable {
               param2.field_q[var3_intLifetime2] = param2.field_q[var3_intLifetime2] - var6;
             }
             if (param1 >= -121) {
-              field_i = (dd[]) null;
+              field_i = (Sprite[]) null;
             }
             boolean decompiledFrameRemainder0 = true;
             if (param0.length == 12 && (65536 != param0[3] ||
@@ -101,7 +101,7 @@ final class uk implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, dd[] param11, int param12, lr param13, int param14, int param15, int param16, int param17, dd[] param18, dd[] param19, lr param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, lr param13, int param14, int param15, int param16, int param17, Sprite[] param18, Sprite[] param19, lr param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -161,8 +161,8 @@ final class uk implements Iterable {
         }
     }
 
-    final void a(ma param0, boolean param1, long param2) {
-        ma var5 = null;
+    final void a(IntrusiveNode param0, boolean param1, long param2) {
+        IntrusiveNode var5 = null;
         eg var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -170,15 +170,15 @@ final class uk implements Iterable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (param0.field_k != null) {
-            param0.a((byte) -117);
+          if (param0.next != null) {
+            param0.unlink((byte) -117);
           }
           var5 = this.field_k[(int)((long)(this.field_h - 1) & param2)];
-          param0.field_d = var5;
-          param0.field_k = var5.field_k;
-          param0.field_k.field_d = param0;
-          param0.field_c = param2;
-          param0.field_d.field_k = param0;
+          param0.previous = var5;
+          param0.next = var5.next;
+          param0.next.previous = param0;
+          param0.key = param2;
+          param0.previous.next = param0;
           if (!param1) {
             var6 = (eg) null;
             uk.a((int[]) null, 89, (eg) null);
@@ -243,7 +243,7 @@ final class uk implements Iterable {
               if (null == var8_ref_pn.field_u) {
                 ib.field_r = ib.field_r + 1;
               }
-              var10 = ge.a((byte) -24, var8_ref_pn);
+              var10 = PacketBuffer.a((byte) -24, var8_ref_pn);
               var11 = var10 + lr.a(var8_ref_pn.field_f);
               var12 = fn.a(var8_ref_pn, -55);
               var8_ref_pn.field_u = new vh(0L, kb.field_h, var11);
@@ -285,7 +285,7 @@ final class uk implements Iterable {
           field_a = 102;
         }
         qd.field_b.field_Rb.field_Cb = -qd.field_b.field_Rb.field_Db + var7Lifetime1;
-        if (rg.field_p &&
+        if (DualLinkNode.field_p &&
           null != uq.field_D) {
           gd.field_b = true;
         }
@@ -302,28 +302,28 @@ final class uk implements Iterable {
     public static void a(int param0) {
         field_g = null;
         if (param0 >= -37) {
-          field_g = (dd) null;
+          field_g = (Sprite) null;
         }
         field_b = null;
         field_i = null;
         field_d = null;
     }
 
-    final ma a(int param0, long param1) {
-        ma var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Pool.field_O;
         if (param0 != -28010) {
-          return (ma) null;
+          return (IntrusiveNode) null;
         }
-        ma var4 = this.field_k[(int)(param1 & (long)(-1 + this.field_h))];
-        this.field_e = var4.field_d;
+        IntrusiveNode var4 = this.field_k[(int)(param1 & (long)(-1 + this.field_h))];
+        this.field_e = var4.previous;
         while (this.field_e != var4) {
-          if (~param1 == ~this.field_e.field_c) {
+          if (~param1 == ~this.field_e.key) {
             var5 = this.field_e;
-            this.field_e = this.field_e.field_d;
+            this.field_e = this.field_e.previous;
             return var5;
           }
-          this.field_e = this.field_e.field_d;
+          this.field_e = this.field_e.previous;
         }
         this.field_e = null;
         return null;
@@ -331,16 +331,16 @@ final class uk implements Iterable {
 
     uk(int param0) {
         int var2 = 0;
-        ma dupTemp$0 = null;
-        ma var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_h = param0;
-        this.field_k = new ma[param0];
+        this.field_k = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ma();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_k[var2] = dupTemp$0;
-          var3.field_k = var3;
-          var3.field_d = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 
@@ -364,7 +364,7 @@ final class uk implements Iterable {
               mo.a("updatelinks", new Object[]{"options", var3 + "options.ws"}, param0 ^ 558370174, param1);
               mo.a("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0 ^ 558370117, param1);
               if (param0 != 558370049) {
-                field_b = (dd[]) null;
+                field_b = (Sprite[]) null;
               }
               mo.a("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, 125, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

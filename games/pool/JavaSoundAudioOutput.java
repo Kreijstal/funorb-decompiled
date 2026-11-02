@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends bp {
+final class JavaSoundAudioOutput extends bp {
     private byte[] field_w;
     private javax.sound.sampled.SourceDataLine field_v;
     private javax.sound.sampled.AudioFormat field_x;
@@ -37,7 +37,7 @@ final class pg extends bp {
         this.field_v.write(this.field_w, 0, var1 << 1);
     }
 
-    pg() {
+    JavaSoundAudioOutput() {
     }
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {

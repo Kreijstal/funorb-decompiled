@@ -8,7 +8,7 @@ final class dp implements in {
     static char[] field_d;
     static int field_l;
     static int[] field_k;
-    private ko field_a;
+    private IntrusiveDeque field_a;
     static vh field_c;
     private int field_j;
     private int field_b;
@@ -31,7 +31,7 @@ final class dp implements in {
             this.field_a.a((byte) -84, var7);
             return var7.field_r;
           }
-          var7.a((byte) -117);
+          var7.unlink((byte) -117);
           var7.a();
           this.field_j = this.field_j + 1;
         }
@@ -101,7 +101,7 @@ final class dp implements in {
         if (param0 != 104) {
           kh var2 = (kh) null;
           dp.a(70, (kh) null);
-          if (oa.field_j) {
+          if (ClientException.field_j) {
             return -1;
           }
           if (hh.field_a < se.field_l) {
@@ -112,7 +112,7 @@ final class dp implements in {
           }
           return -1;
         }
-        if (oa.field_j) {
+        if (ClientException.field_j) {
           return -1;
         }
         if (hh.field_a < se.field_l) {
@@ -156,7 +156,7 @@ final class dp implements in {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          param1.a((byte) -117);
+          param1.unlink((byte) -117);
           var2 = (kh) (ep.field_A.c((byte) -72));
           while (var2 != null) {
             if (var2.a(param1, false)) {
@@ -249,7 +249,7 @@ final class dp implements in {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
-        ge var8 = null;
+        PacketBuffer var8 = null;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
@@ -260,7 +260,7 @@ final class dp implements in {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        this.field_a = new ko();
+        this.field_a = new IntrusiveDeque();
         this.field_b = 128;
         this.field_j = 0;
         try {
@@ -275,7 +275,7 @@ final class dp implements in {
           var6 = var12.length;
           this.field_f = new dh[param0.a(false, 0)];
           for (var7 = 0; var7 < var6; var7++) {
-            var8 = new ge(param0.a(86, var12[var7], 0));
+            var8 = new PacketBuffer(param0.a(86, var12[var7], 0));
             this.field_f[var12[var7]] = new dh(var8);
           }
           return;

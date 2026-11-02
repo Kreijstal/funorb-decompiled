@@ -31,7 +31,7 @@ final class ll {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            if (!sj.field_w.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_w.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

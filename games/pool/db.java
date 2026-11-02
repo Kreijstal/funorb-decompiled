@@ -12,7 +12,7 @@ final class db extends vh {
     private vh field_Rb;
     static nm field_Vb;
     static oh field_Qb;
-    static dd field_Wb;
+    static Sprite field_Wb;
     private int field_Mb;
     static cd field_Ub;
     static nq field_Sb;
@@ -449,7 +449,7 @@ final class db extends vh {
     }
 
     final static void a(byte param0, int param1) {
-        ma var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         i var4 = null;

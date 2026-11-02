@@ -5,7 +5,7 @@ final class jr extends tm {
     static int[][] field_o;
     static String[] field_l;
     static int field_n;
-    static dd[] field_m;
+    static Sprite[] field_m;
 
     final void a(di param0, byte param1) {
         eg dupTemp$1 = null;
@@ -185,18 +185,18 @@ final class jr extends tm {
         im var1Lifetime1;
         var2 = Pool.field_O;
         try {
-          var1 = (im) (ma.field_i.c((byte) -48));
+          var1 = (im) (IntrusiveNode.field_i.c((byte) -48));
           while (var1 != null) {
             if (var1.field_gc > 0) {
               var1.field_gc = var1.field_gc - 1;
               if (var1.field_gc == 0) {
                 var1.field_hc = 0;
                 if (var1.c(true)) {
-                  var1.a((byte) -117);
+                  var1.unlink((byte) -117);
                 }
               }
             }
-            var1 = (im) (ma.field_i.f((byte) -5));
+            var1 = (im) (IntrusiveNode.field_i.f((byte) -5));
           }
           var1_ref = (kh) (ep.field_A.c((byte) 123));
           while (var1_ref != null) {
@@ -205,7 +205,7 @@ final class jr extends tm {
               if (var1_ref.field_Mb == 0) {
                 var1_ref.field_Fc = 0;
                 if (var1_ref.f(-14144)) {
-                  var1_ref.a((byte) -117);
+                  var1_ref.unlink((byte) -117);
                 }
               }
             }
@@ -225,7 +225,7 @@ final class jr extends tm {
               }
               var1Lifetime1.field_hc = 0;
               if (var1Lifetime1.c(true)) {
-                var1Lifetime1.a((byte) -117);
+                var1Lifetime1.unlink((byte) -117);
               }
             }
             var1Lifetime1 = (im) (ck.field_W.f((byte) -5));
@@ -238,9 +238,9 @@ final class jr extends tm {
         }
     }
 
-    final static dd[] a(int param0, byte param1, int param2) {
+    final static Sprite[] a(int param0, byte param1, int param2) {
         if (param1 != 20) {
-          return (dd[]) null;
+          return (Sprite[]) null;
         }
         return cq.a(1, 4578, param0, param2);
     }

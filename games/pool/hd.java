@@ -17,7 +17,7 @@ final class hd extends ob {
     final void c(int param0) {
         int var2 = 0;
         int var3;
-        dd var4;
+        Sprite var4;
         var3 = Pool.field_O;
         pn.field_l.a(0, 0);
         if (cm.f((byte) 109)) {
@@ -34,8 +34,8 @@ final class hd extends ob {
           }
         }
         if (param0 <= 36) {
-          var4 = (dd) null;
-          hd.a(-122, -16, 103, (dd) null, 91, -103, -122, -85);
+          var4 = (Sprite) null;
+          hd.a(-122, -16, 103, (Sprite) null, 91, -103, -122, -85);
         }
     }
 
@@ -103,7 +103,7 @@ final class hd extends ob {
     }
 
     hd(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super((dd) null, param0, param1, param2, param3, param4, param5);
+        super((Sprite) null, param0, param1, param2, param3, param4, param5);
     }
 
     final void d(int param0) {
@@ -128,7 +128,7 @@ final class hd extends ob {
         }
     }
 
-    final static void a(int param0, int param1, int param2, dd param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -143,7 +143,7 @@ final class hd extends ob {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        dd var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;

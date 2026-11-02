@@ -70,7 +70,7 @@ final class nq {
           }
           if (param0 > -42) {
             var6 = (java.awt.Component) null;
-            nq.a((vk) null, (sj) null, (java.awt.Component) null, -58, true, 17, true, -29);
+            nq.a((vk) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, -58, true, 17, true, -29);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -261,15 +261,15 @@ final class nq {
         var4.b(0, 0).c(15658734, 57).a(fj.a(8947848, 10066329, 7829367, false), (byte) 67);
         var4.b(1, 0).a(fj.a(11184810, 10066329, 13421772, false), (byte) 76);
         var4.b(3, 0).a(fj.a(8947848, 7829367, 10066329, false), (byte) 64).a(1, -1).a(1, (byte) 90);
-        dd[] var5 = new dd[9];
+        Sprite[] var5 = new Sprite[9];
         lp var16 = new lp(32, 32);
         lp var18 = var16;
         for (var7_int = 0; var7_int < var18.field_D.length; var7_int++) {
           var16.field_D[var7_int] = 1077952576;
         }
-        var5[4] = (dd) ((Object) var18);
+        var5[4] = (Sprite) ((Object) var18);
         var4.b(4, 0).a(-15359, true).a(var5, (byte) 126);
-        var4.b(5, 0).a(rg.a(0, 0, -119, 65793, 0), (byte) 90).a(-15359, true).c(-1, 71);
+        var4.b(5, 0).a(DualLinkNode.a(0, 0, -119, 65793, 0), (byte) 90).a(-15359, true).c(-1, 71);
         this.field_l = (fp) ((Object) var4);
         lg var6 = new lg(var4, true);
         var6.field_m = 0;
@@ -285,18 +285,18 @@ final class nq {
         var8.b(0, 0).a(fj.a(15658734, 7829367, 10066329, false), (byte) 74).c(1118481, 72).b(true, -1);
         var8.b(4, 0).a(-15359, true).a(var5, (byte) 77);
         this.field_j = (fp) ((Object) var8);
-        dd[] var9 = new dd[9];
-        var9[4] = new dd(2, 1);
-        dd[] var10 = new dd[9];
-        var10[4] = new dd(1, 2);
-        dd dupTemp$2 = var9[4];
+        Sprite[] var9 = new Sprite[9];
+        var9[4] = new Sprite(2, 1);
+        Sprite[] var10 = new Sprite[9];
+        var10[4] = new Sprite(1, 2);
+        Sprite dupTemp$2 = var9[4];
         dupTemp$2.field_D = new int[]{6710886, 7829367};
         var10[4].field_D = new int[]{6710886, 7829367};
         lg var11 = new lg();
         lg var12 = new lg();
         var11.a((byte) -79, 0, var9);
         var12.a((byte) -79, 0, var10);
-        dd var13 = new dd(7, 4);
+        Sprite var13 = new Sprite(7, 4);
         var13.field_D = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
         lg var14 = new lg(var4, true);
         var14.a(var13.d(), 117);
@@ -318,7 +318,7 @@ final class nq {
         }
     }
 
-    final static void a(vk param0, sj param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
+    final static void a(vk param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
           bp.a(param7, param6, 10);
           ib.field_s = bp.a(param1, param2, 0, param3);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uh extends ig {
-    static dd field_p;
+    static Sprite field_p;
     static int field_x;
     static int field_q;
     static String field_s;
@@ -11,7 +11,7 @@ final class uh extends ig {
     private sl field_m;
     static int field_n;
     static int[] field_t;
-    static ge field_r;
+    static PacketBuffer field_r;
     private sl field_v;
     static int field_w;
 
@@ -34,7 +34,7 @@ final class uh extends ig {
           if (oq.field_z != null) {
             return;
           }
-          rg.field_p = false;
+          DualLinkNode.field_p = false;
           if (ea.field_z) {
             var5 = fg.field_e;
           } else {
@@ -52,7 +52,7 @@ final class uh extends ig {
           pa.field_J.field_Bb = -((mc.field_g & 16711422) >> 1) + (mc.field_g + (8355711 & kb.field_h.field_Bb >> 1));
           oq.field_z = pa.field_J;
           uq.field_D = new vh(0L, param4);
-          ma.field_e = new vh(0L, param3);
+          IntrusiveNode.field_e = new vh(0L, param3);
           ml.field_e = new vh(0L, (vh) null);
           vi.field_c = new vh(0L, param1);
           pa.field_J = new vh(0L, param2);
@@ -63,7 +63,7 @@ final class uh extends ig {
           be.field_L = new vh(0L, kb.field_h, ra.field_d);
           wn.field_g = new vh(0L, kb.field_h);
           var6 = 43 % ((-44 - param0) / 45);
-          uq.field_D.a(14, ma.field_e);
+          uq.field_D.a(14, IntrusiveNode.field_e);
           uq.field_D.a(-121, ml.field_e);
           ml.field_e.a(-96, vi.field_c);
           ml.field_e.a(127, be.field_L);
@@ -115,7 +115,7 @@ final class uh extends ig {
         try {
           var3 = this.field_v.field_m.toLowerCase();
           if (!param1) {
-            field_p = (dd) null;
+            field_p = (Sprite) null;
           }
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
@@ -127,7 +127,7 @@ final class uh extends ig {
             return stackIn_9_0;
           }
           if (!this.a(-31894, param0)) {
-            return kr.field_e;
+            return ProxySocketConnector.field_e;
           }
           stackIn_13_0 = gp.field_d;
           return stackIn_13_0;
@@ -251,10 +251,10 @@ final class uh extends ig {
             this.a((String) null, -37);
           }
           if (qa.a(1, var5)) {
-            stackIn_10_0 = bm.field_a;
+            stackIn_10_0 = IterableNodeHashTable.field_a;
             return stackIn_10_0;
           }
-          if (bm.a(var5, -113)) {
+          if (IterableNodeHashTable.a(var5, -113)) {
             stackIn_14_0 = lh.field_b;
             return stackIn_14_0;
           }

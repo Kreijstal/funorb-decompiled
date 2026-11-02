@@ -11,8 +11,8 @@ final class wn {
     static int field_j;
     static String field_c;
     static int field_l;
-    static jg field_b;
-    static dd field_e;
+    static PcmSample field_b;
+    static Sprite field_e;
     static int[] field_f;
     static int field_i;
     static int[] field_d;
@@ -98,7 +98,7 @@ final class wn {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_v;
+            var4 = param0.position;
             param0.a(true, var16_ref.field_o);
             for (var5 = 0; var5 < var16_ref.field_t; var5++) {
               if (0 == var16_ref.field_q[var5]) {
@@ -137,7 +137,7 @@ final class wn {
                       param0.a(0, false);
                     } else if (var10 instanceof Number) {
                       param0.a(1, false);
-                      param0.a(((Number) (var10)).longValue(), (byte) -116);
+                      param0.writeLong(((Number) (var10)).longValue(), (byte) -116);
                     } else if (!(var10 instanceof String)) {
                       param0.a(4, false);
                     } else {
@@ -206,7 +206,7 @@ final class wn {
               }
             }
             param0.d(-1, var4);
-            var16_ref.a((byte) -117);
+            var16_ref.unlink((byte) -117);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

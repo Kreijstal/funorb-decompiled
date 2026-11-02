@@ -211,19 +211,19 @@ final class af extends sq {
         return this.u(4);
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
-        dd[] var6 = new dd[9];
-        dd[] var5 = var6;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
         if (param1 != 64) {
           af.a(-37, true);
         }
-        dd dupTemp$0 = ad.a(param3, param4, 7);
+        Sprite dupTemp$0 = ad.a(param3, param4, 7);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        dd dupTemp$1 = ad.a(param2, param4, 7);
+        Sprite dupTemp$1 = ad.a(param2, param4, 7);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -441,7 +441,7 @@ final class af extends sq {
               var11 = 3 & var10;
               if (var11 != 0) {
                 if (var11 == 1) {
-                  var4 = var4 | (oa.field_b | i.field_m);
+                  var4 = var4 | (ClientException.field_b | i.field_m);
                 }
               } else {
                 var4 = var4 | i.field_m;
@@ -733,14 +733,14 @@ final class af extends sq {
         return this.u(4);
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        dd stackIn_6_0 = null;
-        dd stackIn_15_0 = null;
-        dd stackIn_17_0 = null;
-        dd stackIn_19_0 = null;
-        dd stackIn_21_0 = null;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_15_0 = null;
+        Sprite stackIn_17_0 = null;
+        Sprite stackIn_19_0 = null;
+        Sprite stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -1018,7 +1018,7 @@ final class af extends sq {
         return param1 < 6144 ? -wf.field_b[-4096 + param1] : -wf.field_b[8192 - param1];
     }
 
-    final void a(ge param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -1029,7 +1029,7 @@ final class af extends sq {
           if (!param1) {
             this.e(99, 46);
           }
-          var3_int = param0.e((byte) 105);
+          var3_int = param0.readByte((byte) 105);
           this.field_g[0] = var3_int >> 7;
           if (this.field_g[0] != -1) {
             this.field_g[1] = 1 - this.field_g[0];

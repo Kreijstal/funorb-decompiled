@@ -2,29 +2,29 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ni extends vc {
-    private jg field_W;
+    private PcmSample field_W;
     private so field_bb;
-    private nb field_ab;
-    private jg field_Q;
+    private PcmSampleStream field_ab;
+    private PcmSample field_Q;
     static he field_eb;
-    private jg field_fb;
-    private jg field_Y;
+    private PcmSample field_fb;
+    private PcmSample field_Y;
     private so field_gb;
     private so field_jb;
     private so field_R;
     private boolean[] field_kb;
     static an field_Z;
-    private jg field_cb;
-    static kq field_ib;
-    private jg field_X;
-    private nb field_hb;
+    private PcmSample field_cb;
+    static GameApplet field_ib;
+    private PcmSample field_X;
+    private PcmSampleStream field_hb;
     static String field_S;
     private so field_U;
-    private jg field_db;
-    private jg field_V;
+    private PcmSample field_db;
+    private PcmSample field_V;
 
-    final void a(int param0, uf param1) {
-        nb dupTemp$0 = null;
+    final void a(int param0, PoolMatchController param1) {
+        PcmSampleStream dupTemp$0 = null;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
         int stackIn_40_2 = 0;
@@ -53,7 +53,7 @@ final class ni extends vc {
           if (null != this.field_ab &&
             this.field_ab.i() &&
             this.field_hb == null) {
-            dupTemp$0 = nb.a(this.field_db, 100, this.field_ab.l(), this.field_ab.n());
+            dupTemp$0 = PcmSampleStream.a(this.field_db, 100, this.field_ab.l(), this.field_ab.n());
             this.field_hb = dupTemp$0;
             mn.a(-24296, dupTemp$0);
             this.field_ab = null;
@@ -131,7 +131,7 @@ final class ni extends vc {
         }
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         boolean[] stackIn_7_0 = null;
@@ -283,7 +283,7 @@ final class ni extends vc {
           dupTemp$1 = var56[0];
           var7Lifetime1 = dupTemp$1;
           var6 = dupTemp$1;
-          for (var5Lifetime1 = ma.field_g - 1; var5Lifetime1 >= vf.field_lb; var5Lifetime1--) {
+          for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= vf.field_lb; var5Lifetime1--) {
             th.field_l[var5Lifetime1].c(6710886, oh.field_d);
             hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 <= var56[0]) {
@@ -503,7 +503,7 @@ final class ni extends vc {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        nb dupTemp$0 = null;
+        PcmSampleStream dupTemp$0 = null;
         int var5;
         int var6;
         int var7;
@@ -520,7 +520,7 @@ final class ni extends vc {
               } else {
                 if (var6 != 1) {
                   if (var6 == 4) {
-                    dupTemp$0 = nb.a(this.field_Y, 100, param1, param3);
+                    dupTemp$0 = PcmSampleStream.a(this.field_Y, 100, param1, param3);
                     this.field_ab = dupTemp$0;
                     mn.a(-24296, dupTemp$0);
                   } else {
@@ -646,7 +646,7 @@ final class ni extends vc {
             nd.a(var8[var11Lifetime1][var12_intLifetime1], (byte) -37);
           }
         }
-        th.field_l = new p[-1 * (-ch.field_G + af.field_e) + -1 * (pf.field_k - fc.field_c) + (oo.field_I - uk.field_l) * 3 + (dp.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-rb.field_a + rg.field_u))))];
+        th.field_l = new p[-1 * (-ch.field_G + af.field_e) + -1 * (pf.field_k - fc.field_c) + (oo.field_I - uk.field_l) * 3 + (dp.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-rb.field_a + DualLinkNode.field_u))))];
         var11Lifetime2 = 0;
         vf.field_lb = var11Lifetime2;
         for (var2 = kj.field_b; var2 < eh.field_t; var2++) {
@@ -661,7 +661,7 @@ final class ni extends vc {
           var11Lifetime2 = var11Lifetime2 + var4[-kj.field_b + var2].length;
         }
         sb.field_d = var11Lifetime2;
-        ma.field_g = var11Lifetime2;
+        IntrusiveNode.field_g = var11Lifetime2;
         for (var2Lifetime1 = tj.field_fb; nd.field_m > var2Lifetime1; var2Lifetime1++) {
           var12_intLifetime3 = var11Lifetime2;
           var25 = var8[var2Lifetime1 - tj.field_fb];
@@ -712,7 +712,7 @@ final class ni extends vc {
         this.field_bb = dupTemp$1;
         dupTemp$2 = new so(4 * (af.field_e - ch.field_G));
         this.field_U = dupTemp$2;
-        dupTemp$3 = new so(4 * (-fc.field_c + pf.field_k) + (rg.field_u - rb.field_a) * 2);
+        dupTemp$3 = new so(4 * (-fc.field_c + pf.field_k) + (DualLinkNode.field_u - rb.field_a) * 2);
         this.field_gb = dupTemp$3;
         dupTemp$4 = new so(new so[]{dupTemp$2, dupTemp$3});
         this.field_R = dupTemp$4;
@@ -757,7 +757,7 @@ final class ni extends vc {
           bh.a(var35, false, var48[1], var48[2], this.field_O[var16], var48[0], var18);
           var15 += 4;
         }
-        for (var2Lifetime8 = rb.field_a; rg.field_u > var2Lifetime8; var2Lifetime8++) {
+        for (var2Lifetime8 = rb.field_a; DualLinkNode.field_u > var2Lifetime8; var2Lifetime8++) {
           var16Lifetime1 = var2Lifetime8;
           var37 = this.field_gb.field_b;
           var18Lifetime1 = var15;
@@ -816,17 +816,17 @@ final class ni extends vc {
 
     final void b(int param0, di param1) {
         try {
-          this.field_B = new dd(param1.a(false, "modern-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          this.field_B = new Sprite(param1.a(false, "modern-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
           if (param0 != 5) {
-            uf var4 = (uf) null;
-            this.a(false, (uf) null);
+            PoolMatchController var4 = (PoolMatchController) null;
+            this.a(false, (PoolMatchController) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ni.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(boolean param0, uf param1) {
+    private final void a(boolean param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -972,7 +972,7 @@ final class ni extends vc {
           var3_int++;
           this.field_O[incrementValue$15] = eg.a(param0, "", "new_classic_table/class_hole_b");
           ch.field_G = var3_int;
-          rg.field_u = var3_int;
+          DualLinkNode.field_u = var3_int;
           incrementValue$16 = var3_int;
           var3_int++;
           this.field_O[incrementValue$16] = eg.a(param0, "", "new_classic_table/class_corner");

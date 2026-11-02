@@ -35,12 +35,12 @@ final class gp {
         try {
           var6 = ej.field_j;
           var6.b(false, param0);
-          var6.field_v = var6.field_v + 1;
+          var6.position = var6.position + 1;
           if (param2 != -6725) {
             i var5 = (i) null;
             gp.a(80, (i) null, -101);
           }
-          var4 = var6.field_v;
+          var4 = var6.position;
           var6.a(1, false);
           var6.a(param1.field_r, false);
           var6.a(param1.field_n, false);
@@ -49,7 +49,7 @@ final class gp {
           var6.a(true, param1.field_t);
           var6.a(true, param1.field_q);
           var6.d(-1, var4);
-          var6.b(-var4 + var6.field_v, true);
+          var6.b(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

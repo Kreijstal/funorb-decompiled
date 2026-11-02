@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rg extends ma {
+class DualLinkNode extends IntrusiveNode {
     long field_m;
     static di field_r;
     static String field_l;
     static String field_t;
-    rg field_q;
+    DualLinkNode field_q;
     static boolean field_s;
-    rg field_n;
+    DualLinkNode field_n;
     static boolean field_p;
     static String field_o;
     static boolean field_v;
@@ -35,7 +35,7 @@ class rg extends ma {
         field_r = null;
         if (param0 != -3604) {
           lr var2 = (lr) null;
-          rg.a(-30, (String[]) null, (String) null, (lr) null, -45);
+          DualLinkNode.a(-30, (String[]) null, (String) null, (lr) null, -45);
         }
         field_t = null;
     }
@@ -50,12 +50,12 @@ class rg extends ma {
         return true;
     }
 
-    protected rg() {
+    protected DualLinkNode() {
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 > -107) {
-          rg.a(-20, 53, 78, true, 78, 37, 85);
+          DualLinkNode.a(-20, 53, 78, true, 78, 37, 85);
         }
         return il.a(1, 1, param4, 3, 4, 1, param0, param3, param1);
     }
@@ -76,7 +76,7 @@ class rg extends ma {
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var7 = null;
         if (param4 != 4010) {
-          rg.a(33, -109, 29, false, 1, 26, 48);
+          DualLinkNode.a(33, -109, 29, false, 1, 26, 48);
         }
         if (hn.field_b != 2) {
           var7 = vd.field_f;

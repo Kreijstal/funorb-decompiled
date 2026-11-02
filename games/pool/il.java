@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il {
-    static ge field_b;
+    static PacketBuffer field_b;
     static String field_d;
     static String field_h;
-    static dd field_a;
-    static jg[] field_c;
+    static Sprite field_a;
+    static PcmSample[] field_c;
     static String field_e;
     static vh[] field_g;
-    static dd field_f;
+    static Sprite field_f;
 
     public static void a(int param0) {
         field_a = null;
@@ -23,14 +23,14 @@ final class il {
         field_b = null;
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        dd[] var10;
-        dd[] var11_ref_dd__;
+        Sprite[] var10;
+        Sprite[] var11_ref_dd__;
         int var11;
         int var12;
-        dd var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -39,10 +39,10 @@ final class il {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        dd[] var10Lifetime1;
+        Sprite[] var10Lifetime1;
         var15 = Pool.field_O;
         var9 = param1 + param0 + param5;
-        var10 = new dd[]{new dd(var9, var9), new dd(param3, var9), new dd(var9, var9), new dd(var9, param3), new dd(64, 64), new dd(var9, param3), new dd(var9, var9), new dd(param3, var9), new dd(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
         var11_ref_dd__ = var10;
         for (var12 = 0; var11_ref_dd__.length > var12; var12++) {
           var13 = var11_ref_dd__[var12];
@@ -61,7 +61,7 @@ final class il {
         }
         var11Lifetime1 = 0;
         if (param4 != 4) {
-          field_f = (dd) null;
+          field_f = (Sprite) null;
         }
         while (var11Lifetime1 < param5) {
           for (var12Lifetime2 = 0; var9 > var12Lifetime2; var12Lifetime2++) {
@@ -146,7 +146,7 @@ final class il {
     }
 
     static {
-        field_c = new jg[4];
+        field_c = new PcmSample[4];
         field_h = "You have won!";
         field_e = "OFF";
         field_d = "Breaking real-world laws";

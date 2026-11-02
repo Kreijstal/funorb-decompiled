@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr extends ma {
+final class cr extends IntrusiveNode {
     static String field_q;
     static int[] field_p;
     static int field_l;
     static String field_s;
     int field_r;
-    static dd field_m;
+    static Sprite field_m;
     int field_n;
-    static jg field_o;
+    static PcmSample field_o;
     static String field_t;
 
     final static int a(int param0, double param1) {
@@ -48,7 +48,7 @@ final class cr extends ma {
           field_s = null;
           return;
         }
-        field_o = (jg) null;
+        field_o = (PcmSample) null;
         field_t = null;
         field_m = null;
         field_q = null;

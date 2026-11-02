@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends kd {
+final class vk extends PcmStream {
     private int[] field_Y;
     private int[] field_T;
     static tf field_db;
@@ -14,7 +14,7 @@ final class vk extends kd {
     private int field_N;
     private int[] field_A;
     private gq field_Z;
-    static dd[] field_y;
+    static Sprite[] field_y;
     private int[] field_B;
     int[] field_U;
     private int[] field_p;
@@ -23,7 +23,7 @@ final class vk extends kd {
     int[] field_F;
     private pr[][] field_R;
     private int[] field_K;
-    private bm field_z;
+    private IterableNodeHashTable field_z;
     private pr[][] field_I;
     private int[] field_J;
     static int field_bb;
@@ -46,8 +46,8 @@ final class vk extends kd {
         return 0;
     }
 
-    final synchronized kd a() {
-        return (kd) ((Object) this.field_u);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_u);
     }
 
     final synchronized boolean a(cf param0, di param1, cg param2, int param3, int param4) {
@@ -81,7 +81,7 @@ final class vk extends kd {
           var8 = (te) (param2.field_m.a(0));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_c;
+            var9 = (int)var8.key;
             var10 = (g) (this.field_z.a(false, (long)var9));
             if (var10 == null) {
               var10 = hk.a(param1, (byte) 127, var9);
@@ -381,7 +381,7 @@ final class vk extends kd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 118) {
-            field_y = (dd[]) null;
+            field_y = (Sprite[]) null;
           }
           var3_int = this.field_B[param1.field_t];
           if (var3_int >= 8192) {
@@ -412,7 +412,7 @@ final class vk extends kd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -16257) {
-            this.field_z = (bm) null;
+            this.field_z = (IterableNodeHashTable) null;
           }
           if (null != param1.field_o) {
             return false;
@@ -420,7 +420,7 @@ final class vk extends kd {
           if (param1.field_G < 0) {
             return true;
           }
-          param1.a((byte) -117);
+          param1.unlink((byte) -117);
           if (param1.field_n > 0 &&
             param1 == this.field_R[param1.field_t][param1.field_n]) {
             this.field_R[param1.field_t][param1.field_n] = null;
@@ -767,7 +767,7 @@ final class vk extends kd {
 
     private final void c(byte param0, int param1, int param2) {
         if (param0 != -62) {
-          this.field_z = (bm) null;
+          this.field_z = (IterableNodeHashTable) null;
         }
     }
 
@@ -790,7 +790,7 @@ final class vk extends kd {
             if (var3.field_G < 0) {
               this.field_I[var3.field_t][var3.field_A] = null;
             }
-            var3.a((byte) -117);
+            var3.unlink((byte) -117);
           }
           var3 = (pr) (this.field_u.field_t.f((byte) -5));
         }
@@ -803,7 +803,7 @@ final class vk extends kd {
         boolean stackIn_18_3;
         pr var5;
         int var6_int;
-        jg var6;
+        PcmSample var6;
         pr var7;
         pr var8;
         int var9;
@@ -853,7 +853,7 @@ final class vk extends kd {
         var7.field_F = 0;
         var7.field_p = 0;
         if (this.field_U[param3] != 0) {
-          var7.field_o = nb.b(var6, this.b(1, var7), 0, this.a((byte) 123, var7));
+          var7.field_o = PcmSampleStream.b(var6, this.b(1, var7), 0, this.a((byte) 123, var7));
           stackIn_17_1 = -123;
           stackIn_17_2 = var7;
           if (var11.field_s[param1] >= 0) {
@@ -865,7 +865,7 @@ final class vk extends kd {
           }
           this.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
         } else {
-          var7.field_o = nb.b(var6, this.b(param0 + 1, var7), this.a(true, var7), this.a((byte) 121, var7));
+          var7.field_o = PcmSampleStream.b(var6, this.b(param0 + 1, var7), this.a(true, var7), this.a((byte) 121, var7));
         }
         if (var11.field_s[param1] < 0) {
           var7.field_o.e(-1);
@@ -1072,7 +1072,7 @@ final class vk extends kd {
         }
     }
 
-    final synchronized kd b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -1188,7 +1188,7 @@ final class vk extends kd {
           if (param4.field_G >= 0 && (param4.field_o == null ||
             param4.field_o.i())) {
             param4.a(param3 ^ 3);
-            param4.a((byte) -117);
+            param4.unlink((byte) -117);
             if (0 < param4.field_n &&
               param4 == this.field_R[param4.field_t][param4.field_n]) {
               this.field_R[param4.field_t][param4.field_n] = null;
@@ -1276,7 +1276,7 @@ final class vk extends kd {
           }
           param4.a(2);
           if (param4.field_G >= 0) {
-            param4.a((byte) -117);
+            param4.unlink((byte) -117);
             if (0 < param4.field_n &&
               this.field_R[param4.field_t][param4.field_n] == param4) {
               this.field_R[param4.field_t][param4.field_n] = null;
@@ -1326,7 +1326,7 @@ final class vk extends kd {
         this.field_A = new int[16];
         this.field_Z = new gq();
         this.field_u = new ib(this);
-        this.field_z = new bm(128);
+        this.field_z = new IterableNodeHashTable(128);
         this.a((byte) -127, -1, 256);
         this.b(true, 123);
     }

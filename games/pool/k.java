@@ -40,12 +40,12 @@ final class k extends ud {
     final static void a(int param0, byte param1, long param2) {
         oq var4 = ej.field_j;
         var4.b(false, param0);
-        var4.field_v = var4.field_v + 1;
+        var4.position = var4.position + 1;
         int var6 = 84 / ((-74 - param1) / 37);
-        int var5 = var4.field_v;
+        int var5 = var4.position;
         var4.a(6, false);
-        var4.a(param2, (byte) -126);
-        var4.b(var4.field_v - var5, true);
+        var4.writeLong(param2, (byte) -126);
+        var4.b(var4.position - var5, true);
     }
 
     final static void g(byte param0) {

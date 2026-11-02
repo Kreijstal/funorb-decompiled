@@ -14,7 +14,7 @@ final class so {
     private nc[] field_e;
     int[] field_d;
 
-    final static void a(String[][] param0, int param1, di param2, dd[][] param3, String[][] param4, int param5, int param6, dd[][] param7, String[] param8, byte[] param9, int param10, int[] param11, di param12, String[] param13, byte[] param14, int[] param15, di param16, boolean param17, qb[] param18) {
+    final static void a(String[][] param0, int param1, di param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, di param12, String[] param13, byte[] param14, int[] param15, di param16, boolean param17, qb[] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -53,7 +53,7 @@ final class so {
           em.a((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
           if (param5 != -25) {
             var20 = (qb[]) null;
-            so.a((String[][]) null, -73, (di) null, (dd[][]) null, (String[][]) null, 7, 14, (dd[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (di) null, (String[]) null, (byte[]) null, (int[]) null, (di) null, false, (qb[]) null);
+            so.a((String[][]) null, -73, (di) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (di) null, (String[]) null, (byte[]) null, (int[]) null, (di) null, false, (qb[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -148,7 +148,7 @@ final class so {
         }
     }
 
-    so(ko param0) {
+    so(IntrusiveDeque param0) {
         this();
         try {
           this.a((byte) -107, param0);
@@ -678,7 +678,7 @@ final class so {
         }
     }
 
-    final void a(byte param0, ko param1) {
+    final void a(byte param0, IntrusiveDeque param1) {
         int incrementValue$2 = 0;
         int var3_int = 0;
         int var4 = 0;

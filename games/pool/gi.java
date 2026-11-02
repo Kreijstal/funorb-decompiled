@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends ma {
+final class gi extends IntrusiveNode {
     static vh field_o;
     int field_r;
     int field_p;
@@ -104,9 +104,9 @@ final class gi extends ma {
             var8 = eh.field_p[9] >> 2;
             var9 = eh.field_p[10] >> 2;
             var10_int = eh.field_p[11] >> 2;
-            var11 = var10_int * li.field_b[5] + (var8 * li.field_b[3] + var9 * li.field_b[4]) >> 14;
-            var12 = li.field_b[8] * var10_int + li.field_b[6] * var8 + var9 * li.field_b[7] >> 14;
-            var13 = li.field_b[10] * var9 + (li.field_b[9] * var8 + li.field_b[11] * var10_int) >> 14;
+            var11 = var10_int * IsaacCipher.field_b[5] + (var8 * IsaacCipher.field_b[3] + var9 * IsaacCipher.field_b[4]) >> 14;
+            var12 = IsaacCipher.field_b[8] * var10_int + IsaacCipher.field_b[6] * var8 + var9 * IsaacCipher.field_b[7] >> 14;
+            var13 = IsaacCipher.field_b[10] * var9 + (IsaacCipher.field_b[9] * var8 + IsaacCipher.field_b[11] * var10_int) >> 14;
             var2[var3] = var7 * var13 + (var11 * var5 + var12 * var6) >> 16;
           }
           var3Lifetime1 = eh.field_p[9] >> 8;
@@ -147,9 +147,9 @@ final class gi extends ma {
             var17 = qe.field_S[var16];
             qe.b(0, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              li.field_b[var18] = li.field_b[var18] + qp.field_gc[var15][var18];
+              IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + qp.field_gc[var15][var18];
             }
-            ve.a(param0 + 21815, false, eh.field_p, false, true, li.field_b, var17);
+            ve.a(param0 + 21815, false, eh.field_p, false, true, IsaacCipher.field_b, var17);
             kj.a(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
           }
           return;

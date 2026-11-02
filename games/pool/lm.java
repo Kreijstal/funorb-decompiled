@@ -6,11 +6,11 @@ final class lm extends tm {
     }
 
     final static void i(int param0) {
-        dd var1 = null;
-        dd var3 = null;
+        Sprite var1 = null;
+        Sprite var3 = null;
         int var4 = 0;
         try {
-          var1 = new dd(540, 140);
+          var1 = new Sprite(540, 140);
           int var2 = -31 / ((79 - param0) / 34);
           kj.a(62, var1);
           fb.a();
@@ -44,14 +44,14 @@ final class lm extends tm {
     final static void c(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, param1);
-        var2.field_v = var2.field_v + 1;
-        int var3 = var2.field_v;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(param0, false);
         var2.a(em.field_L.field_Nb, false);
         int var4 = em.field_L.field_ac + (em.field_L.field_Yb << 6);
         var2.a(var4, false);
         var2.a(em.field_L.field_tc, (byte) 0, 0, em.field_L.field_tc.length);
-        var2.b(-var3 + var2.field_v, true);
+        var2.b(-var3 + var2.position, true);
     }
 
     final void a(di param0, byte param1) {
@@ -106,11 +106,11 @@ final class lm extends tm {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ma.field_e.field_nb = param6;
+        IntrusiveNode.field_e.field_nb = param6;
         if (hn.field_b != 2) {
           wn.field_g.field_nb = ff.field_j;
         } else {
-          wn.field_g.field_nb = li.field_g;
+          wn.field_g.field_nb = IsaacCipher.field_g;
         }
         if (param3 != 4) {
           return;
@@ -126,7 +126,7 @@ final class lm extends tm {
           var11 = wn.field_g.b(true);
           wn.field_g.b(var10, 2147483647, -var11 + var9_int - 5, var11, param8);
           var12 = param8 + var10 + 5;
-          ma.field_e.b(0, param3 ^ 2147483643, 0, var9_int, param2);
+          IntrusiveNode.field_e.b(0, param3 ^ 2147483643, 0, var9_int, param2);
           ml.field_e.b(param2, param3 ^ 2147483643, 0, var9_int, var12);
           var12 = var12 + param2;
           ml.field_e.field_F = rp.a(32450, 3, 2105376, ml.field_e.field_Db, 11579568, 8421504);

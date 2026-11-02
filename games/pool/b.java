@@ -49,9 +49,9 @@ final class b extends ob {
           this.b(10 + var3, false);
           if (this.field_I != qd.field_k) {
             qd.field_k = this.field_I;
-            kq.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
+            GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          kq.field_h.c(620 - kq.field_h.field_z, -mc.field_e.field_C + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
           var4 = dp.a(104);
           if (var4 == -1) {
             return;
@@ -80,9 +80,9 @@ final class b extends ob {
           this.b(10 + var3Lifetime1, false);
           if (this.field_I != qd.field_k) {
             qd.field_k = this.field_I;
-            kq.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
+            GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          kq.field_h.c(620 - kq.field_h.field_z, -mc.field_e.field_C + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
           var4Lifetime1 = dp.a(104);
           if (var4Lifetime1 != -1) {
             qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var4Lifetime1], 15658734, 4144959);
@@ -107,9 +107,9 @@ final class b extends ob {
           this.b(10 + var3Lifetime1, false);
           if (this.field_I != qd.field_k) {
             qd.field_k = this.field_I;
-            kq.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
+            GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          kq.field_h.c(620 - kq.field_h.field_z, -mc.field_e.field_C + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
           var4Lifetime2 = dp.a(104);
           if (var4Lifetime2 != -1) {
             qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var4Lifetime2], 15658734, 4144959);
@@ -130,9 +130,9 @@ final class b extends ob {
         this.b(10 + var3Lifetime1, false);
         if (this.field_I != qd.field_k) {
           qd.field_k = this.field_I;
-          kq.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
+          GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
         }
-        kq.field_h.c(620 - kq.field_h.field_z, -mc.field_e.field_C + 60);
+        GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
         var4Lifetime3 = dp.a(104);
         if (var4Lifetime3 == -1) {
           return;

@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wp implements si {
-    static ql field_g;
+    static MouseHandler field_g;
     static String field_h;
     static String[] field_f;
     static String field_b;
     static int field_d;
     static int field_c;
-    static dd field_a;
+    static Sprite field_a;
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
-        ge var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -27,9 +27,9 @@ final class wp implements si {
         String stackIn_37_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2 = new ge(param1);
-          var3 = var2.g(-72);
-          var4 = var2.b(true);
+          var2 = new PacketBuffer(param1);
+          var3 = var2.readUnsignedByte(-72);
+          var4 = var2.readInt(true);
           if (0 <= var4 && (sb.field_b == 0 ||
             !(var4 > sb.field_b))) {
             if (param0 == var3) {
@@ -38,7 +38,7 @@ final class wp implements si {
               stackIn_12_0 = var5_ref_byte__;
               return stackIn_12_0;
             }
-            var5 = var2.b(true);
+            var5 = var2.readInt(true);
             if (var5 >= 0 && (0 == sb.field_b ||
               !(var5 > sb.field_b))) {
               var6 = new byte[var5];
@@ -83,7 +83,7 @@ final class wp implements si {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ko var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6_ref = null;
         int var6 = 0;
@@ -117,11 +117,11 @@ final class wp implements si {
             while (null != var7) {
               var8 = 0;
               if (var7.field_T == null) {
-                var7.field_Pb = new vh(0L, ge.field_s);
+                var7.field_Pb = new vh(0L, PacketBuffer.field_s);
                 var7.a(94, var7.field_Pb);
                 var7.field_Nb = new vh(0L, tm.field_d);
                 var7.a(-103, var7.field_Nb);
-                var7.field_Ob = new vh(0L, ge.field_s);
+                var7.field_Ob = new vh(0L, PacketBuffer.field_s);
                 var7.a(-120, var7.field_Ob);
                 var7.field_Nb.field_Fb = 2;
                 var7.d((byte) -127);
@@ -257,7 +257,7 @@ final class wp implements si {
         try {
           var4 = (ea) (rc.field_c.c((byte) -82));
           if (param2 <= 27) {
-            field_g = (ql) null;
+            field_g = (MouseHandler) null;
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
@@ -287,7 +287,7 @@ final class wp implements si {
         }
     }
 
-    final static od a(int param0, sj param1, byte param2, int param3, int param4, int param5) {
+    final static od a(int param0, PlatformTaskDispatcher param1, byte param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         od var7 = null;
@@ -337,7 +337,7 @@ final class wp implements si {
           field_g = null;
           field_b = null;
           if (param0 != 0) {
-            field_a = (dd) null;
+            field_a = (Sprite) null;
           }
           field_f = null;
           field_a = null;
@@ -352,7 +352,7 @@ final class wp implements si {
     static {
         field_h = "Members";
         field_b = "Return to Main Menu";
-        field_g = new ql();
+        field_g = new MouseHandler();
         field_c = 50;
         field_e = "Type your email address again to make sure it's correct";
     }

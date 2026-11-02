@@ -712,7 +712,7 @@ final class qk {
                 }
                 var2 = cm.a("target_open_table", (byte) 40);
                 if (null != var2) {
-                  rg.field_t = a.a(var2, -4);
+                  DualLinkNode.field_t = a.a(var2, -4);
                 }
                 var2 = cm.a("target_black_ball", (byte) 97);
                 if (var2 != null) {
@@ -1190,7 +1190,7 @@ final class qk {
                 }
                 var2 = cm.a("ticker_hint_leave_shot_mode", (byte) 76);
                 if (var2 != null) {
-                  uf.field_s = a.a(var2, 125);
+                  PoolMatchController.field_s = a.a(var2, 125);
                 }
                 var2 = cm.a("ticker_hint_move_cueball", (byte) 76);
                 if (null != var2) {
@@ -1230,7 +1230,7 @@ final class qk {
                 }
                 var2 = cm.a("menu_settings", (byte) 19);
                 if (null != var2) {
-                  ko.field_a = a.a(var2, 126);
+                  IntrusiveDeque.field_a = a.a(var2, 126);
                 }
                 var2 = cm.a("foul_exclamation", (byte) 107);
                 if (null != var2) {
@@ -1258,7 +1258,7 @@ final class qk {
                 }
                 var2 = cm.a("status_out_of_lives", (byte) 82);
                 if (null != var2) {
-                  rg.field_l = a.a(var2, 124);
+                  DualLinkNode.field_l = a.a(var2, 124);
                 }
                 var2 = cm.a("status_resigned", (byte) 78);
                 if (var2 != null) {
@@ -1270,7 +1270,7 @@ final class qk {
                 }
                 var2 = cm.a("status_wants_a_rematch", (byte) 30);
                 if (var2 != null) {
-                  ge.field_n = a.a(var2, 123);
+                  PacketBuffer.field_n = a.a(var2, 123);
                 }
                 var2 = cm.a("player_list_first", (byte) 33);
                 if (var2 != null) {
@@ -1350,7 +1350,7 @@ final class qk {
                 }
                 var2 = cm.a("player_x2_are_offering_draw", (byte) 52);
                 if (null != var2) {
-                  rg.field_o = a.a(var2, 127);
+                  DualLinkNode.field_o = a.a(var2, 127);
                 }
                 var2 = cm.a("player_list_are_offering_draw", (byte) 83);
                 if (var2 != null) {
@@ -1482,11 +1482,11 @@ final class qk {
                 }
                 var2 = cm.a("doubleplusgood_shot,0", (byte) 95);
                 if (var2 != null) {
-                  wo.field_b[0] = a.a(var2, -37);
+                  DualLinkDeque.field_b[0] = a.a(var2, -37);
                 }
                 var2 = cm.a("doubleplusgood_shot,1", (byte) 61);
                 if (var2 != null) {
-                  wo.field_b[1] = a.a(var2, 124);
+                  DualLinkDeque.field_b[1] = a.a(var2, 124);
                 }
                 var2 = cm.a("plusgood_shot,0", (byte) 103);
                 if (null != var2) {
@@ -1626,7 +1626,7 @@ final class qk {
                 }
                 var2 = cm.a("time_trial_failed", (byte) 62);
                 if (var2 != null) {
-                  ql.field_b = a.a(var2, 124);
+                  MouseHandler.field_b = a.a(var2, 124);
                 }
                 var2 = cm.a("timer_seconds", (byte) 64);
                 if (var2 != null) {
@@ -1654,7 +1654,7 @@ final class qk {
                 }
                 var2 = cm.a("mouse_y_axis_normal", (byte) 48);
                 if (null != var2) {
-                  uf.field_K = a.a(var2, 123);
+                  PoolMatchController.field_K = a.a(var2, 123);
                 }
                 var2 = cm.a("mouse_y_axis_inverted", (byte) 82);
                 if (null != var2) {
@@ -1706,7 +1706,7 @@ final class qk {
                 }
                 var2 = cm.a("keycode_default_down2", (byte) 106);
                 if (var2 != null) {
-                  kr.field_h = 255 & var2[0];
+                  ProxySocketConnector.field_h = 255 & var2[0];
                 }
                 var2 = cm.a("keycode_default_left1", (byte) 17);
                 if (null != var2) {
@@ -1753,7 +1753,7 @@ final class qk {
                   }
                   throw wm.a((Throwable) ((Object) stackIn_1506_0), ((StringBuilder) (Object) stackIn_1506_1).append(stackIn_1507_2).append(',').append(param1).append(')').toString());
                 }
-                if (kq.field_k) {
+                if (GameApplet.field_k) {
                   var4++;
                   Pool.field_O = var4;
                 }

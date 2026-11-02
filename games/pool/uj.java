@@ -4,7 +4,7 @@
 final class uj {
     static ie field_e;
     static di field_d;
-    static dd field_c;
+    static Sprite field_c;
     static String field_b;
     static int[] field_a;
 
@@ -21,7 +21,7 @@ final class uj {
         field_c = null;
     }
 
-    final static void a(uf param0, ij param1, int[] param2, int[] param3, int param4) {
+    final static void a(PoolMatchController param0, ij param1, int[] param2, int[] param3, int param4) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;

@@ -15,7 +15,7 @@ abstract class oo {
     String field_l;
     double field_p;
     boolean field_h;
-    private nb field_r;
+    private PcmSampleStream field_r;
     int field_d;
     private p[] field_y;
     private int[][] field_a;
@@ -30,13 +30,13 @@ abstract class oo {
     private eg[][] field_f;
     static String field_c;
     cg field_i;
-    static dd field_D;
+    static Sprite field_D;
     double field_E;
     private int[][] field_g;
     int field_H;
     cg field_b;
     private p[][] field_o;
-    dd field_B;
+    Sprite field_B;
     private int field_t;
     private eg field_s;
 
@@ -111,7 +111,7 @@ abstract class oo {
     }
 
     final void a(int[] param0, int param1, int param2, int[] param3) {
-        ma.a(2, param3, param0);
+        IntrusiveNode.a(2, param3, param0);
         if (param2 > -74) {
           return;
         }
@@ -122,7 +122,7 @@ abstract class oo {
         }
     }
 
-    private final void a(dl param0, int param1, uf param2, int param3) {
+    private final void a(dl param0, int param1, PoolMatchController param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -139,7 +139,7 @@ abstract class oo {
           var13 = param2.field_I.field_l[param3];
           var6 = (long)(-param0.field_g + var13.field_g);
           var8 = (long)(var13.field_k - param0.field_f);
-          var10 = bm.a(param1 ^ -24621, od.a(var6, var6, false) + od.a(var8, var8, false));
+          var10 = IterableNodeHashTable.a(param1 ^ -24621, od.a(var6, var6, false) + od.a(var8, var8, false));
           var13.b(true);
           if (var13.field_j > 4194304) {
             param2.a(0, param3);
@@ -714,7 +714,7 @@ abstract class oo {
         try {
           if (param0 != 3) {
             var5 = (kf[]) null;
-            this.a(-23, -100, (byte) -87, (jg[]) null, (kf[]) null);
+            this.a(-23, -100, (byte) -87, (PcmSample[]) null, (kf[]) null);
           }
           if (this.field_b != null) {
             tl.field_N.a(param1, param2, this.field_b, param0 ^ 79, 0);
@@ -957,7 +957,7 @@ abstract class oo {
         }
     }
 
-    final void a(int param0, int param1, byte param2, jg[] param3, kf[] param4) {
+    final void a(int param0, int param1, byte param2, PcmSample[] param3, kf[] param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -985,7 +985,7 @@ abstract class oo {
               param4[var7].a(var9 + ga.a(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
               param4[var7].field_o.i()) && ga.a(param1, true, ea.field_r) == 0) {
-              param4[var7] = mn.a(-24296, nb.c(param3[ga.a(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7] = mn.a(-24296, PcmSampleStream.c(param3[ga.a(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1071,7 +1071,7 @@ abstract class oo {
         }
     }
 
-    abstract void a(byte param0, uf param1);
+    abstract void a(byte param0, PoolMatchController param1);
 
     void j(int param0) {
         if (param0 != 2) {
@@ -1114,7 +1114,7 @@ abstract class oo {
 
     final void a(int param0, int[] param1, int param2, int[] param3, int param4) {
         try {
-          ma.a(param0 - 1336449638, param3, param1);
+          IntrusiveNode.a(param0 - 1336449638, param3, param1);
           this.a(param4, mn.field_g * param2 >> 8, (byte) -111, br.field_I);
           if (param0 != 1336449640) {
             this.field_j = 1.1224327362689441;
@@ -1411,7 +1411,7 @@ abstract class oo {
             var9 = param0[var17[var15][1]].a((byte) -127) - param0[var17[var15][0]].a((byte) -127);
             this.field_a[var15][0] = -var9 >> 13;
             this.field_a[var15][1] = var8 >> 13;
-            var10 = bm.a(-111, od.a((long)var8, (long)var8, false) + od.a((long)var9, (long)var9, false));
+            var10 = IterableNodeHashTable.a(-111, od.a((long)var8, (long)var8, false) + od.a((long)var9, (long)var9, false));
             if (var10 <= 2147483647L &&
               var10 >= -2147483648L) {
               this.field_a[var15][0] = lh.a((int)var10, (byte) -74, (long)this.field_a[var15][0]);
@@ -1557,7 +1557,7 @@ abstract class oo {
         this.b(115);
     }
 
-    void a(int param0, uf param1) {
+    void a(int param0, PoolMatchController param1) {
         int var4 = 0;
         int var6 = 0;
         dl[] var3 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ap extends rg {
+final class ap extends DualLinkNode {
     int[] field_C;
     private String[] field_A;
     private int[] field_z;
@@ -53,8 +53,8 @@ final class ap extends rg {
         if (null != tl.field_N) {
           tl.field_N.a(param0, (byte) -46);
         }
-        if (qo.field_C != null) {
-          qo.field_C.b(param0, param1 - 3804437);
+        if (SpriteState.field_C != null) {
+          SpriteState.field_C.b(param0, param1 - 3804437);
         }
     }
 
@@ -88,7 +88,7 @@ final class ap extends rg {
         }
     }
 
-    final void a(int param0, ge param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -102,7 +102,7 @@ final class ap extends rg {
             field_D = (kf[]) null;
           }
           while (true) {
-            var3_int = param1.g(param0 ^ 20652);
+            var3_int = param1.readUnsignedByte(param0 ^ 20652);
             if (var3_int == 0) {
               return;
             }
@@ -134,10 +134,10 @@ final class ap extends rg {
     }
 
     final static void a(di param0, boolean param1, qb[] param2, int[] param3, di param4) {
-        dd[] dupTemp$0 = null;
-        dd[] dupTemp$1 = null;
-        dd[] dupTemp$2 = null;
-        dd[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         qb[] var5 = null;
         qb[] var6 = null;
         int[] var6_array = null;
@@ -165,12 +165,12 @@ final class ap extends rg {
         vh var9 = null;
         vh var10 = null;
         vh var11 = null;
-        dd[] var12 = null;
-        dd[] var13 = null;
-        dd[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         vh var15 = null;
-        dd[] var16 = null;
-        dd[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -279,15 +279,15 @@ final class ap extends rg {
           pa.field_M = new vh(0L, uo.field_Lb);
           pa.field_M.field_F = qi.a(2236962, 2236962, false, 16, -125, false);
           pa.field_M.field_tb = 2;
-          kq.field_a = new vh(0L, uo.field_Lb);
-          kq.field_a.field_F = qi.a(1513239, 1513239, false, 16, -97, false);
-          kq.field_a.field_tb = 2;
+          GameApplet.field_a = new vh(0L, uo.field_Lb);
+          GameApplet.field_a.field_F = qi.a(1513239, 1513239, false, 16, -97, false);
+          GameApplet.field_a.field_tb = 2;
           tm.field_d = new vh(0L, pa.field_M);
           tm.field_d.a((byte) -87, ei.field_A);
-          ge.field_s = new vh(0L, kq.field_a);
-          ge.field_s.a((byte) -87, ei.field_A);
+          PacketBuffer.field_s = new vh(0L, GameApplet.field_a);
+          PacketBuffer.field_s.a((byte) -87, ei.field_A);
           var16 = aj.a(0, "lobby", param4, "button_mouseover");
-          ko.field_c = new vq(wa.field_qb, var12, uo.field_Lb, ei.field_A, 3, 2, ja.field_b, 3, ad.field_x);
+          IntrusiveDeque.field_c = new vq(wa.field_qb, var12, uo.field_Lb, ei.field_A, 3, 2, ja.field_b, 3, ad.field_x);
           ug.field_x = new vh(0L, ei.field_A);
           ug.field_x.field_O = 1;
           ug.field_x.field_Z = 1;
@@ -426,7 +426,7 @@ final class ap extends rg {
         }
     }
 
-    private final void a(int param0, ge param1, byte param2) {
+    private final void a(int param0, PacketBuffer param1, byte param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -446,24 +446,24 @@ final class ap extends rg {
           }
           if (param0 != 1) {
             if (param0 == 2) {
-              var4_int = param1.g(-105);
+              var4_int = param1.readUnsignedByte(-105);
               this.field_C = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_C[var5] = param1.d(-1034);
+                this.field_C[var5] = param1.readUnsignedShort(-1034);
               }
             } else if (param0 == 3) {
-              var4_int = param1.g(-107);
+              var4_int = param1.readUnsignedByte(-107);
               this.field_x = new int[var4_int][];
               this.field_z = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                var6 = param1.d(-1034);
+                var6 = param1.readUnsignedShort(-1034);
                 var7 = tm.a(var6, -124);
                 if (var7 != null) {
                   this.field_z[var5] = var6;
                   array$0 = new int[var7.field_b];
                   this.field_x[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_b; var8++) {
-                    this.field_x[var5][var8] = param1.d(-1034);
+                    this.field_x[var5][var8] = param1.readUnsignedShort(-1034);
                   }
                 }
               }

@@ -5,10 +5,10 @@ final class ta {
     static gl field_h;
     static nl field_a;
     static vh[] field_b;
-    static dd field_e;
+    static Sprite field_e;
     static int field_c;
-    static ko field_i;
-    static dd[][] field_d;
+    static IntrusiveDeque field_i;
+    static Sprite[][] field_d;
     static int field_f;
     static tq field_g;
 
@@ -38,14 +38,14 @@ final class ta {
         field_g = null;
         if (param0 == 24470) {
           field_e = null;
-          field_d = (dd[][]) null;
+          field_d = (Sprite[][]) null;
           field_b = null;
           field_i = null;
           return;
         }
         ta.a(false, -31);
         field_e = null;
-        field_d = (dd[][]) null;
+        field_d = (Sprite[][]) null;
         field_b = null;
         field_i = null;
     }
@@ -144,7 +144,7 @@ final class ta {
             stackIn_2_0 = null;
             return (kl) (stackIn_2_0);
           }
-          var2 = new kl(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, ma.field_h, v.field_b);
+          var2 = new kl(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
           if (param0 != 16908) {
             field_f = -3;
           }
@@ -190,11 +190,11 @@ final class ta {
         if (param0 <= -124) {
           return;
         }
-        field_i = (ko) null;
+        field_i = (IntrusiveDeque) null;
     }
 
     static {
         field_a = new nl();
-        field_i = new ko();
+        field_i = new IntrusiveDeque();
     }
 }

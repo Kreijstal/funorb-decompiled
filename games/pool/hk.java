@@ -8,7 +8,7 @@ final class hk extends kb {
     static String[] field_n;
     private long field_m;
     private long field_p;
-    static dd field_r;
+    static Sprite field_r;
     static String field_q;
     private int field_l;
     private int field_j;
@@ -333,6 +333,6 @@ final class hk extends kb {
     static {
         field_u = "Solicitation";
         field_q = "You now have <%0> lives";
-        field_r = new dd(360, 240);
+        field_r = new Sprite(360, 240);
     }
 }

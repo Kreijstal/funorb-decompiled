@@ -42,7 +42,7 @@ final class da {
         try {
           var13 = kn.field_e;
           var15 = var13;
-          var2 = var15.g(-113);
+          var2 = var15.readUnsignedByte(-113);
           if (param0 < 93) {
             return;
           }
@@ -58,7 +58,7 @@ final class da {
             dn.c(-82);
             return;
           }
-          var4 = var15.g(-79);
+          var4 = var15.readUnsignedByte(-79);
           if (var4 != 0) {
             var5 = var3.field_o;
             sa.field_e[0] = di.field_j;
@@ -69,13 +69,13 @@ final class da {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               sf.b((byte) 125, var15);
               if (0 == var6_intLifetime1) {
-                var3.field_t = vb.field_f;
+                var3.field_t = BufferedSocket.field_f;
                 var3.field_w = vd.field_n;
                 var3.field_y = wi.field_a;
                 var3.field_x = jj.field_F;
-                rq.a(vd.field_n, var6_intLifetime1, true, vb.field_f, wi.field_a, jj.field_F);
+                rq.a(vd.field_n, var6_intLifetime1, true, BufferedSocket.field_f, wi.field_a, jj.field_F);
               } else {
-                rq.a(vd.field_n, var6_intLifetime1, true, vb.field_f, wi.field_a, jj.field_F);
+                rq.a(vd.field_n, var6_intLifetime1, true, BufferedSocket.field_f, wi.field_a, jj.field_F);
               }
             }
             sp.a(true, var5);
@@ -123,7 +123,7 @@ final class da {
             }
           }
           var3.field_v = true;
-          var3.a((byte) -117);
+          var3.unlink((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,21 +148,21 @@ final class da {
           nk.field_f[6] = wd.field_Ob;
           nk.field_f[13] = dk.field_g;
           nk.field_f[4] = uj.field_b;
-          nk.field_f[11] = ko.field_b;
+          nk.field_f[11] = IntrusiveDeque.field_b;
           nk.field_f[0] = tg.field_e;
-          nk.field_f[9] = bm.field_i;
+          nk.field_f[9] = IterableNodeHashTable.field_i;
           nk.field_f[1] = gr.field_H;
           nk.field_f[48] = un.field_d;
           nk.field_f[5] = hb.field_p;
           nk.field_f[23] = ep.field_y;
-          nk.field_f[49] = th.field_h ? hb.field_q : uf.field_K;
+          nk.field_f[49] = th.field_h ? hb.field_q : PoolMatchController.field_K;
           nk.field_f[38] = s.field_d[1];
           nk.field_f[59] = wm.field_Yb;
           nk.field_f[19] = qd.field_e;
           nk.field_f[21] = fn.field_Nb;
           nk.field_f[56] = cb.field_b[2];
           nk.field_f[53] = pl.field_e;
-          nk.field_f[47] = ko.field_a;
+          nk.field_f[47] = IntrusiveDeque.field_a;
           nk.field_f[24] = de.field_f;
           nk.field_f[60] = md.field_a[5];
           nk.field_f[54] = cb.field_b[0];
@@ -178,7 +178,7 @@ final class da {
           nk.field_f[26] = ue.field_d;
           nk.field_f[51] = pl.field_e;
           int var1_int = -62 / ((-24 - param0) / 60);
-          nk.field_f[22] = ge.field_o;
+          nk.field_f[22] = PacketBuffer.field_o;
           nk.field_f[25] = cb.field_c;
           nk.field_f[42] = pf.field_a;
           nk.field_f[17] = mm.field_n[0];
@@ -213,7 +213,7 @@ final class da {
           wj.field_S[5] = bo.field_b;
           wj.field_S[11] = vf.field_Q;
           wj.field_S[2] = ln.field_l;
-          wj.field_S[9] = rg.field_t;
+          wj.field_S[9] = DualLinkNode.field_t;
           wj.field_S[12] = oq.field_C;
           wj.field_S[10] = me.field_w;
           for (var2Lifetime2 = 1; 9 >= var2Lifetime2; var2Lifetime2++) {

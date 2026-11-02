@@ -176,7 +176,7 @@ final class vp extends sq {
         return 1;
     }
 
-    final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, boolean param6, String param7, sj param8, int param9, int param10, int param11, int param12, long param13) {
+    final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, boolean param6, String param7, PlatformTaskDispatcher param8, int param9, int param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -241,21 +241,21 @@ final class vp extends sq {
     public static void p(int param0) {
         field_e = null;
         if (param0 != -9) {
-          vp.a(89, 15, (byte) -50, true, -63, 93, true, (String) null, (sj) null, -10, -14, -81, -56, -98L);
+          vp.a(89, 15, (byte) -50, true, -63, 93, true, (String) null, (PlatformTaskDispatcher) null, -10, -14, -81, -56, -98L);
         }
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         RuntimeException var3 = null;
-        dd stackIn_2_0 = null;
-        dd stackIn_6_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            stackIn_2_0 = (dd) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (param0.field_z != -1) {

@@ -4,17 +4,17 @@
 import java.io.*;
 
 final class ej implements Runnable {
-    private le field_f;
-    private sj field_b;
+    private AsyncRequest field_f;
+    private PlatformTaskDispatcher field_b;
     private java.net.URL field_i;
     private int field_e;
     static oq field_j;
-    private le field_a;
-    private ge field_d;
+    private AsyncRequest field_a;
+    private PacketBuffer field_d;
     static String field_c;
     private DataInputStream field_h;
     static int field_g;
-    private le field_k;
+    private AsyncRequest field_k;
     static boolean field_l;
 
     final synchronized boolean a(byte param0) {
@@ -68,7 +68,7 @@ final class ej implements Runnable {
                 var4.write(hi.a(-98, (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"))));
                 this.field_h = new DataInputStream(var3.getInputStream());
               }
-              this.field_d.field_v = 0;
+              this.field_d.position = 0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (IOException) (Object) decompiledCaughtException;
@@ -140,7 +140,7 @@ final class ej implements Runnable {
           param8.field_q = ro.field_d;
           param8.field_l = ld.field_g;
           param8.field_M = nj.field_d;
-          param8.field_K = uf.field_W;
+          param8.field_K = PoolMatchController.field_W;
           var11.field_Z = null;
           param8.field_v = vn.field_h;
           param8.field_N = hi.field_k;
@@ -418,20 +418,20 @@ final class ej implements Runnable {
         }
     }
 
-    final ge a(int param0) {
+    final PacketBuffer a(int param0) {
         RuntimeException var2 = null;
-        ge stackIn_2_0 = null;
-        ge stackIn_5_0 = null;
+        PacketBuffer stackIn_2_0 = null;
+        PacketBuffer stackIn_5_0 = null;
         Object stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -25955) {
-            stackIn_2_0 = (ge) null;
+            stackIn_2_0 = (PacketBuffer) null;
             return stackIn_2_0;
           }
           if (this.field_e != 3) {
             stackIn_7_0 = null;
-            return (ge) (stackIn_7_0);
+            return (PacketBuffer) (stackIn_7_0);
           }
           stackIn_5_0 = this.field_d;
           return stackIn_5_0;
@@ -456,26 +456,26 @@ final class ej implements Runnable {
           var4 = Pool.field_O;
           try {
             try {
-              L2: while (true) {
-                if (this.field_d.field_t.length > this.field_d.field_v) {
-                  var1_int = this.field_h.read(this.field_d.field_t, this.field_d.field_v, this.field_d.field_t.length - this.field_d.field_v);
+              scanLoop1: while (true) {
+                if (this.field_d.payload.length > this.field_d.position) {
+                  var1_int = this.field_h.read(this.field_d.payload, this.field_d.position, this.field_d.payload.length - this.field_d.position);
                   stackIn_13_0 = -1;
                   stackIn_13_1 = ~var1_int;
                   if (var4 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_13_0 >= stackIn_13_1 ||
                     var4 != 0) {
-                    this.field_d.field_v = this.field_d.field_v + var1_int;
+                    this.field_d.position = this.field_d.position + var1_int;
                     continue;
                   }
                 }
-                stackIn_13_0 = ~this.field_d.field_t.length;
-                stackIn_13_1 = ~this.field_d.field_v;
+                stackIn_13_0 = ~this.field_d.payload.length;
+                stackIn_13_1 = ~this.field_d.position;
                 break;
               }
               if (stackIn_13_0 == stackIn_13_1) {
-                throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.field_t.length + " " + this.field_i));
+                throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_i));
               }
               var1 = this;
               synchronized (var1) {
@@ -550,11 +550,11 @@ final class ej implements Runnable {
             var12 = param4.field_u[var9];
             if (param0) {
               var13 = ch.field_M[var10];
-              var14 = li.field_h[var10];
+              var14 = IsaacCipher.field_h[var10];
               var15 = ch.field_M[var11] - var13;
               var16 = -var13 + ch.field_M[var12];
-              var17 = -var14 + li.field_h[var11];
-              var18 = li.field_h[var12] - var14;
+              var17 = -var14 + IsaacCipher.field_h[var11];
+              var18 = IsaacCipher.field_h[var12] - var14;
             }
             if (!param0 ||
               !(var15 * var18 - var16 * var17 >= 0)) {
@@ -667,7 +667,7 @@ final class ej implements Runnable {
         }
     }
 
-    ej(sj param0, java.net.URL param1, int param2) {
+    ej(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -678,7 +678,7 @@ final class ej implements Runnable {
         try {
           this.field_i = param1;
           this.field_b = param0;
-          this.field_d = new ge(param2);
+          this.field_d = new PacketBuffer(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

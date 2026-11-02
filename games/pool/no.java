@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class no {
-    wo field_j;
+    DualLinkDeque field_j;
     static na field_k;
     static int[] field_s;
     static nl field_h;
-    wo field_f;
-    static dd field_q;
-    wo field_t;
+    DualLinkDeque field_f;
+    static Sprite field_q;
+    DualLinkDeque field_t;
     static int[] field_n;
     static hj field_g;
-    wo field_o;
-    ge field_r;
+    DualLinkDeque field_o;
+    PacketBuffer field_r;
     long field_d;
     int field_m;
     static String field_b;
     static int field_l;
-    ge field_p;
+    PacketBuffer field_p;
     volatile int field_a;
     byte field_c;
     volatile int field_e;
@@ -108,7 +108,7 @@ abstract class no {
               if (0L > var22) {
                 return -1;
               }
-              var24 = bm.a(param11 ^ 106, var22);
+              var24 = IterableNodeHashTable.a(param11 ^ 106, var22);
               if (var24 > 2147483647L) {
                 throw new IllegalStateException("Out of range: 0x" + Long.toString(var24, 16));
               }
@@ -156,7 +156,7 @@ abstract class no {
               if (0L > var22Lifetime1) {
                 return -1;
               }
-              var24Lifetime1 = bm.a(param11 ^ 106, var22Lifetime1);
+              var24Lifetime1 = IterableNodeHashTable.a(param11 ^ 106, var22Lifetime1);
               if (var24Lifetime1 <= 2147483647L &&
                 var24Lifetime1 >= -2147483648L) {
                 var26Lifetime1 = (int)((-var18Lifetime1 + var24Lifetime1 << 15) / (long)var17Lifetime1);
@@ -208,7 +208,7 @@ abstract class no {
             if (0L > var22Lifetime2) {
               return -1;
             }
-            var24Lifetime2 = bm.a(param11 ^ 106, var22Lifetime2);
+            var24Lifetime2 = IterableNodeHashTable.a(param11 ^ 106, var22Lifetime2);
             if (var24Lifetime2 > 2147483647L) {
               throw new IllegalStateException("Out of range: 0x" + Long.toString(var24Lifetime2, 16));
             }
@@ -297,15 +297,15 @@ abstract class no {
     }
 
     no() {
-        this.field_j = new wo();
-        this.field_f = new wo();
-        this.field_t = new wo();
-        this.field_o = new wo();
-        this.field_r = new ge(6);
+        this.field_j = new DualLinkDeque();
+        this.field_f = new DualLinkDeque();
+        this.field_t = new DualLinkDeque();
+        this.field_o = new DualLinkDeque();
+        this.field_r = new PacketBuffer(6);
         this.field_e = 0;
         this.field_a = 0;
         this.field_c = (byte) 0;
-        this.field_p = new ge(10);
+        this.field_p = new PacketBuffer(10);
     }
 
     static {

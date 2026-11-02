@@ -212,17 +212,17 @@ final class ic {
         }
     }
 
-    final static dd a(int param0, boolean param1, int param2, String param3, int param4) {
+    final static Sprite a(int param0, boolean param1, int param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        dd var7 = null;
+        Sprite var7 = null;
         int var10 = 0;
         int var11 = 0;
-        dd var12 = null;
+        Sprite var12 = null;
         int[] var19 = null;
         int[] var20 = null;
-        dd stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -233,7 +233,7 @@ final class ic {
           if (!param1) {
             ic.a(-50);
           }
-          var7 = new dd(param2 + 4, 4 + var6);
+          var7 = new Sprite(param2 + 4, 4 + var6);
           var7.field_B = -2;
           var7.field_G = -2;
           var19 = new int[4];

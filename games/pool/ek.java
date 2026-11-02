@@ -86,7 +86,7 @@ final class ek {
             return;
           }
           stackIn_5_0 = (vh) (param0);
-          stackIn_6_1 = (param2 != -1) && ((long)param2 == param0.field_c);
+          stackIn_6_1 = (param2 != -1) && ((long)param2 == param0.key);
           stackIn_5_0.field_Ib = stackIn_6_1;
           if (null != param0.field_T &&
             !param0.field_T.c(0)) {

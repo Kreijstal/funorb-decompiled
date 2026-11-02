@@ -36,8 +36,8 @@ final class ra {
     final static void a(int param0, oi param1, int param2) {
         oq var5 = ej.field_j;
         var5.b(false, param0);
-        var5.field_v = var5.field_v + 1;
-        int var4 = var5.field_v;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.a(1, false);
         var5.a(param1.field_t, false);
         var5.c(-128, param1.field_l);
@@ -50,7 +50,7 @@ final class ra {
           return;
         }
         try {
-          var5.b(var5.field_v - var4, true);
+          var5.b(var5.position - var4, true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

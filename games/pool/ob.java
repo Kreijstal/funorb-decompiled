@@ -5,7 +5,7 @@ class ob extends jh {
     int field_s;
     gi field_G;
     ia field_B;
-    dd field_z;
+    Sprite field_z;
     boolean field_p;
     private int field_A;
     static int field_u;
@@ -75,12 +75,12 @@ class ob extends jh {
         Object var8;
         int var9;
         int var10;
-        dd var10_ref_dd;
+        Sprite var10_ref_dd;
         int var11;
         int var12;
         int var14;
         int var15;
-        dd[] var16;
+        Sprite[] var16;
         int[] var20;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -167,10 +167,10 @@ class ob extends jh {
         return;
     }
 
-    dd a(String param0, int param1, int param2, int param3) {
+    Sprite a(String param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
-        dd stackIn_2_0 = null;
-        dd stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -180,7 +180,7 @@ class ob extends jh {
             stackIn_4_0 = dq.a(param1, 0, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dd) null;
+          stackIn_2_0 = (Sprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,7 +203,7 @@ class ob extends jh {
         return -2;
     }
 
-    dd[] b(int param0, int param1) {
+    Sprite[] b(int param0, int param1) {
         int var3;
         if (param0 == this.field_B.field_h) {
           return ln.field_s;
@@ -379,8 +379,8 @@ class ob extends jh {
         if (this.field_B.field_a) {
           vj.a((byte) -27, il.field_c[0]);
         }
-        L1: {
-          L2: {
+        regionExit1: {
+          regionExit2: {
             var4 = this.field_h[param2];
             var6 = var4;
             if (var6 != 0 &&
@@ -397,7 +397,7 @@ class ob extends jh {
                 } else {
                   if (var6 == 49) {
                     if (!this.field_B.b((byte) 78)) {
-                      break L2;
+                      break regionExit2;
                     }
                     stackIn_82_0 = !(th.field_h);
                     th.field_h = stackIn_82_0;
@@ -406,19 +406,19 @@ class ob extends jh {
                     if (th.field_h) {
                       stackIn_85_2 = hb.field_q;
                     } else {
-                      stackIn_85_2 = uf.field_K;
+                      stackIn_85_2 = PoolMatchController.field_K;
                     }
                     stackIn_84_0[stackIn_84_1] = stackIn_85_2;
                   } else {
                     if (var6 == 29) {
                       if (!this.field_B.b((byte) 58)) {
-                        break L2;
+                        break regionExit2;
                       }
                       this.a(0, param1, 0);
                     } else {
                       if (var6 == 30) {
                         if (!this.field_B.b((byte) 63)) {
-                          break L2;
+                          break regionExit2;
                         }
                         this.a(1, param1, param0 ^ -16470);
                       } else {
@@ -434,19 +434,19 @@ class ob extends jh {
                           } else {
                             if (var6 == 33) {
                               if (!this.field_B.b((byte) 73)) {
-                                break L2;
+                                break regionExit2;
                               }
                               this.a(4, param1, 0);
                             } else {
                               if (var6 == 34) {
                                 if (!this.field_B.b((byte) 86)) {
-                                  break L2;
+                                  break regionExit2;
                                 }
                                 this.a(5, param1, param0 + 16470);
                               } else {
                                 if (var6 == 35) {
                                   if (!this.field_B.b((byte) 125)) {
-                                    break L2;
+                                    break regionExit2;
                                   }
                                   this.a(6, param1, 0);
                                 } else {
@@ -471,7 +471,7 @@ class ob extends jh {
                                       } else {
                                         if (var6 == 42) {
                                           if (!this.field_B.b((byte) 84)) {
-                                            break L2;
+                                            break regionExit2;
                                           }
                                           sq.field_b = -6;
                                           vh.field_Ab = so.field_g[2];
@@ -485,7 +485,7 @@ class ob extends jh {
                                           } else {
                                             if (var6 == 50) {
                                               if (!this.field_B.b((byte) 90)) {
-                                                break L2;
+                                                break regionExit2;
                                               }
                                               un.field_e = 0;
                                               sq.field_b = -8;
@@ -498,7 +498,7 @@ class ob extends jh {
                                               } else {
                                                 if (1 == var6) {
                                                   if (!this.field_B.b((byte) 76)) {
-                                                    break L2;
+                                                    break regionExit2;
                                                   }
                                                   if (hk.b(107)) {
                                                     bl.field_x = true;
@@ -544,7 +544,7 @@ class ob extends jh {
                                                             } else {
                                                               if (8 == var6) {
                                                                 if (!this.field_B.b((byte) 89)) {
-                                                                  break L2;
+                                                                  break regionExit2;
                                                                 }
                                                                 if ((sq.field_b != this.field_w)) {
                                                                   stackIn_151_0 = -3405;
@@ -566,7 +566,7 @@ class ob extends jh {
                                                                 } else {
                                                                   if (var6 == 48) {
                                                                     if (!this.field_B.b((byte) 89)) {
-                                                                      break L2;
+                                                                      break regionExit2;
                                                                     }
                                                                     var6 = param1 ? 1 : 0;
                                                                     fq.a(-3405, 16, sq.field_b, var6 != 0);
@@ -611,7 +611,7 @@ class ob extends jh {
                                                                       if ((var5 != 0)) {
                                                                         if (this.field_B.c((byte) 103) &&
                                                                           eo.field_Tb <= field_D) {
-                                                                          break L2;
+                                                                          break regionExit2;
                                                                         }
                                                                         vj.a((byte) -27, il.field_c[2]);
                                                                         field_D = eo.field_Tb + 20;
@@ -647,7 +647,7 @@ class ob extends jh {
                                                                       } else {
                                                                         if (var6 == 6) {
                                                                           if (!this.field_B.b((byte) 112)) {
-                                                                            break L2;
+                                                                            break regionExit2;
                                                                           }
                                                                           if (ne.field_u != null) {
                                                                             tq.d((byte) -124);
@@ -689,7 +689,7 @@ class ob extends jh {
                                                                               } else {
                                                                                 if (12 == var6) {
                                                                                   if (!this.field_B.b((byte) 120)) {
-                                                                                    break L2;
+                                                                                    break regionExit2;
                                                                                   }
                                                                                   if ((ba.field_ub.field_L & hq.field_c) != 0) {
                                                                                     ba.field_ub.o((byte) -17);
@@ -717,33 +717,33 @@ class ob extends jh {
                                                                                           ef.a(0, 3, 11);
                                                                                         }
                                                                                       }
-                                                                                      break L1;
+                                                                                      break regionExit1;
                                                                                     }
                                                                                     switch (var6) {
                                                                                       case 17:
                                                                                         if (!this.field_B.b((byte) 94)) {
-                                                                                          break L2;
+                                                                                          break regionExit2;
                                                                                         }
                                                                                         eo.field_Lb = 0;
-                                                                                        break L1;
+                                                                                        break regionExit1;
                                                                                       case 18:
                                                                                         if (!this.field_B.b((byte) 86)) {
-                                                                                          break L2;
+                                                                                          break regionExit2;
                                                                                         }
                                                                                         eo.field_Lb = 1;
-                                                                                        break L1;
+                                                                                        break regionExit1;
                                                                                       default:
-                                                                                        break L1;
+                                                                                        break regionExit1;
                                                                                       case 19:
                                                                                         if (!this.field_B.b((byte) 83)) {
-                                                                                          break L2;
+                                                                                          break regionExit2;
                                                                                         }
                                                                                         tk.a(-1, hk.d(99));
-                                                                                        break L1;
+                                                                                        break regionExit1;
                                                                                     }
                                                                                   }
                                                                                   if (!this.field_B.b((byte) 78)) {
-                                                                                    break L2;
+                                                                                    break regionExit2;
                                                                                   }
                                                                                   if ((ba.field_ub.field_L & f.field_f) != 0) {
                                                                                     var6 = param1 ? 1 : 0;
@@ -783,7 +783,7 @@ class ob extends jh {
                                                                             }
                                                                           } else {
                                                                             if (!this.field_B.b((byte) 75)) {
-                                                                              break L2;
+                                                                              break regionExit2;
                                                                             }
                                                                             ba.field_ub.c(256, param1);
                                                                             vq.field_Sb = true;
@@ -831,7 +831,7 @@ class ob extends jh {
                   }
                 }
               }
-              break L1;
+              break regionExit1;
             }
             if (this.field_B.b((byte) 97)) {
               fq.a(-3405, 6, 0, param1);
@@ -882,7 +882,7 @@ class ob extends jh {
             for (var11 = 0; var9 > var11; var11++) {
               var10 = var10 + param1[var11 % param1.length];
             }
-            uh.field_p = new dd(param5, var10 + param0.field_w);
+            uh.field_p = new Sprite(param5, var10 + param0.field_w);
             var25 = new int[4];
             var26 = qh.field_d;
             var13 = qh.field_l;
@@ -1027,7 +1027,7 @@ class ob extends jh {
         this.a(false);
         if (fm.field_G == null ||
           !(fm.field_G.length >= this.field_B.field_e)) {
-          fm.field_G = new dd[this.field_B.field_e];
+          fm.field_G = new Sprite[this.field_B.field_e];
           mc.field_h = new int[this.field_B.field_e];
           jq.field_e = new String[this.field_B.field_e];
         }
@@ -1197,7 +1197,7 @@ class ob extends jh {
         return this.e(param0, -126);
     }
 
-    ob(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ob(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_q = false;
         this.field_n = true;
         this.field_z = null;

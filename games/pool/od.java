@@ -5,7 +5,7 @@ final class od extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_e;
     static boolean field_c;
     java.awt.Frame field_b;
-    static dd field_a;
+    static Sprite field_a;
     static int field_d;
 
     public final void paint(java.awt.Graphics param0) {
@@ -14,11 +14,11 @@ final class od extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(sj param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           og.a(this.field_b, param0, 24442);
           if (param1 != -1) {
-            field_a = (dd) null;
+            field_a = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "od.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends rg {
+final class sf extends DualLinkNode {
     static int field_y;
     char[] field_w;
     static String field_z;
@@ -24,7 +24,7 @@ final class sf extends rg {
         field_B = null;
     }
 
-    private final void a(int param0, ge param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         char[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_12_2 = 0;
@@ -44,12 +44,12 @@ final class sf extends rg {
         try {
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param1.g(-90);
+              var4_int = param1.readUnsignedByte(-90);
               this.field_w = new char[var4_int];
               this.field_F = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_F[var5] = param1.d(-1034);
-                var6 = param1.e((byte) 105);
+                this.field_F[var5] = param1.readUnsignedShort(-1034);
+                var6 = param1.readByte((byte) 105);
                 stackIn_17_0 = this.field_w;
                 stackIn_17_1 = var5;
                 if (var6 != 0) {
@@ -61,12 +61,12 @@ final class sf extends rg {
               }
             } else {
               if (param2 == 3) {
-                var4_int = param1.g(-106);
+                var4_int = param1.readUnsignedByte(-106);
                 this.field_A = new char[var4_int];
                 this.field_D = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  this.field_D[var5] = param1.d(-1034);
-                  var6 = param1.e((byte) 105);
+                  this.field_D[var5] = param1.readUnsignedShort(-1034);
+                  var6 = param1.readByte((byte) 105);
                   stackIn_11_0 = this.field_A;
                   stackIn_11_1 = var5;
                   if (var6 != 0) {
@@ -122,12 +122,12 @@ final class sf extends rg {
           }
         }
         if (param0 != 0) {
-          ge var4 = (ge) null;
-          this.a((byte) -86, (ge) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a((byte) -86, (PacketBuffer) null);
         }
     }
 
-    final void a(byte param0, ge param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -138,7 +138,7 @@ final class sf extends rg {
         var4 = Pool.field_O;
         try {
           while (true) {
-            var3_int = param1.g(param0 ^ 1);
+            var3_int = param1.readUnsignedByte(param0 ^ 1);
             if (var3_int != 0) {
               this.a(-121, param1, var3_int);
               continue;
@@ -163,27 +163,27 @@ final class sf extends rg {
         }
     }
 
-    final static void b(byte param0, ge param1) {
+    final static void b(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          wi.field_a = param1.d(-1034) << 5;
-          var2_int = param1.g(-74);
+          wi.field_a = param1.readUnsignedShort(-1034) << 5;
+          var2_int = param1.readUnsignedByte(-74);
           jj.field_F = (var2_int & 7) << 18;
           wi.field_a = wi.field_a + (var2_int >> 3);
-          jj.field_F = jj.field_F + (param1.d(-1034) << 2);
-          var2_intLifetime1 = param1.g(-115);
+          jj.field_F = jj.field_F + (param1.readUnsignedShort(-1034) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(-115);
           vd.field_n = (63 & var2_intLifetime1) << 15;
           jj.field_F = jj.field_F + (var2_intLifetime1 >> 6);
           if (param0 <= 112) {
             field_x = (String) null;
           }
-          vd.field_n = vd.field_n + (param1.g(-75) << 7);
-          var2_intLifetime2 = param1.g(-61);
+          vd.field_n = vd.field_n + (param1.readUnsignedByte(-75) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(-61);
           vd.field_n = vd.field_n + (var2_intLifetime2 >> 1);
-          vb.field_f = (var2_intLifetime2 & 1) << 16;
-          vb.field_f = vb.field_f + param1.d(-1034);
+          BufferedSocket.field_f = (var2_intLifetime2 & 1) << 16;
+          BufferedSocket.field_f = BufferedSocket.field_f + param1.readUnsignedShort(-1034);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

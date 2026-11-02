@@ -12,10 +12,10 @@ final class hm {
     int field_h;
     static String field_d;
     static int field_j;
-    static dd[] field_l;
+    static Sprite[] field_l;
     static long field_a;
 
-    final void a(ge param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -181,15 +181,15 @@ final class hm {
         }
     }
 
-    final void a(boolean param0, ge param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         try {
-          this.field_b = param1.l(0);
-          this.field_f = param1.l(0);
+          this.field_b = param1.readMedium(0);
+          this.field_f = param1.readMedium(0);
           if (param0) {
             this.b(96);
           }
-          this.field_h = param1.l(0);
-          this.field_c = param1.l(0);
+          this.field_h = param1.readMedium(0);
+          this.field_c = param1.readMedium(0);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends kd {
-    private ko field_s;
-    private ko field_q;
+final class ai extends PcmStream {
+    private IntrusiveDeque field_s;
+    private IntrusiveDeque field_q;
     private int field_p;
     private int field_r;
 
-    private final void a(ma param0, rd param1) {
+    private final void a(IntrusiveNode param0, rd param1) {
         while (true) {
           if (param0 == this.field_q.field_e) {
             vj.a(param1, (byte) -119, param0);
-            this.field_p = ((rd) (this.field_q.field_e.field_d)).field_l;
+            this.field_p = ((rd) (this.field_q.field_e.previous)).field_l;
             return;
           }
           if (((rd) (param0)).field_l <= param1.field_l) {
-            param0 = param0.field_d;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         vj.a(param1, (byte) -119, param0);
-        this.field_p = ((rd) (this.field_q.field_e.field_d)).field_l;
+        this.field_p = ((rd) (this.field_q.field_e.previous)).field_l;
         return;
     }
 
@@ -53,7 +53,7 @@ final class ai extends kd {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_l = var7;
-              this.a(var5.field_d, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_l = 0;
               this.a(var5);
@@ -64,9 +64,9 @@ final class ai extends kd {
     }
 
     private final void a(rd param0) {
-        param0.a((byte) -117);
+        param0.unlink((byte) -117);
         param0.a();
-        ma var2 = this.field_q.field_e.field_d;
+        IntrusiveNode var2 = this.field_q.field_e.previous;
         if (var2 == this.field_q.field_e) {
           this.field_p = -1;
         } else {
@@ -87,23 +87,23 @@ final class ai extends kd {
         }
     }
 
-    final kd a() {
-        return (kd) (this.field_s.c((byte) 102));
+    final PcmStream a() {
+        return (PcmStream) (this.field_s.c((byte) 102));
     }
 
-    final kd b() {
-        return (kd) (this.field_s.f((byte) -5));
+    final PcmStream b() {
+        return (PcmStream) (this.field_s.f((byte) -5));
     }
 
-    final synchronized void a(kd param0) {
-        param0.a((byte) -117);
+    final synchronized void a(PcmStream param0) {
+        param0.unlink((byte) -117);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        kd var4 = (kd) (this.field_s.c((byte) -90));
+        PcmStream var4 = (PcmStream) (this.field_s.c((byte) -90));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (kd) (this.field_s.f((byte) -5));
+          var4 = (PcmStream) (this.field_s.f((byte) -5));
         }
     }
 
@@ -134,7 +134,7 @@ final class ai extends kd {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_l = var5;
-              this.a(var3.field_d, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_l = 0;
               this.a(var3);
@@ -144,7 +144,7 @@ final class ai extends kd {
         return;
     }
 
-    final synchronized void b(kd param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_s.a((byte) -84, param0);
     }
 
@@ -153,16 +153,16 @@ final class ai extends kd {
     }
 
     private final void c(int param0) {
-        kd var2 = (kd) (this.field_s.c((byte) -30));
+        PcmStream var2 = (PcmStream) (this.field_s.c((byte) -30));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (kd) (this.field_s.f((byte) -5));
+          var2 = (PcmStream) (this.field_s.f((byte) -5));
         }
     }
 
     public ai() {
-        this.field_s = new ko();
-        this.field_q = new ko();
+        this.field_s = new IntrusiveDeque();
+        this.field_q = new IntrusiveDeque();
         this.field_p = -1;
         this.field_r = 0;
     }

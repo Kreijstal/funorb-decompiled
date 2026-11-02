@@ -65,7 +65,7 @@ final class s {
         return -3;
     }
 
-    final static String a(ge param0, int param1, boolean param2) {
+    final static String a(PacketBuffer param0, int param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -89,7 +89,7 @@ final class s {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_v = param0.field_v + Pool.field_J.a((byte) 36, 0, param0.field_v, var4, param0.field_t, var3_int);
+            param0.position = param0.position + Pool.field_J.a((byte) 36, 0, param0.position, var4, param0.payload, var3_int);
             var5 = tl.a(var3_int, -7510, var4, 0);
             stackIn_7_0 = var5;
             return stackIn_7_0;
@@ -113,7 +113,7 @@ final class s {
         }
     }
 
-    final static dj[] a(byte param0, sj param1) {
+    final static dj[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         dj[] stackIn_3_0 = null;
         dj[] stackIn_10_0 = null;
@@ -127,7 +127,7 @@ final class s {
         dj[] var4 = null;
         dj var6 = null;
         int var7 = 0;
-        le var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Pool.field_O;

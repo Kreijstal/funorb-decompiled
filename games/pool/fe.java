@@ -4,7 +4,7 @@
 import java.util.*;
 
 class fe extends ei {
-    static sj field_M;
+    static PlatformTaskDispatcher field_M;
     boolean field_G;
     private boolean field_F;
     static boolean field_J;
@@ -101,7 +101,7 @@ class fe extends ei {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        ko var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         im var18_ref = null;
@@ -145,14 +145,14 @@ class fe extends ei {
                 kc.field_b.field_pb = false;
               }
               kc.field_b.field_F = mg.field_c.field_F;
-              if (uf.field_jb > 0) {
-                boolean decompiledSharedTail1 = (uf.field_jb != 1);
+              if (PoolMatchController.field_jb > 0) {
+                boolean decompiledSharedTail1 = (PoolMatchController.field_jb != 1);
                 if (!decompiledSharedTail1) {
                   var10_ref_String = lo.field_b;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = nr.a(new String[]{Integer.toString(uf.field_jb)}, -1, hq.field_f);
+                  var10_ref_String = nr.a(new String[]{Integer.toString(PoolMatchController.field_jb)}, -1, hq.field_f);
                 }
                 if ((va.field_V & 16) == 0 &&
                   !nr.field_bb) {
@@ -181,12 +181,12 @@ class fe extends ei {
                   gf.field_b[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_67_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_67_0;
                     while (true) {
@@ -199,7 +199,7 @@ class fe extends ei {
                         var13_ref_int__ = var20;
                         stackIn_63_0 = 0;
                         var14 = stackIn_63_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var23.length > var14) {
                             var15 = var23[var14];
                             var16 = var20[1 + var14];
@@ -212,11 +212,11 @@ class fe extends ei {
                               }
                               var17_int = stackIn_45_0;
                               if (~var17_int != ~var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (var16 != (em.field_L.field_tc[var15] & 255)) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -338,7 +338,7 @@ class fe extends ei {
                         var13Lifetime1 = var18_int;
                       }
                       if (var18_int != 0 &&
-                        !rg.field_s) {
+                        !DualLinkNode.field_s) {
                         var11 = 1;
                       }
                     }
@@ -353,7 +353,7 @@ class fe extends ei {
                         var14 = var18_intLifetime1;
                       }
                       if (0 != var18_intLifetime1 &&
-                        !rg.field_s) {
+                        !DualLinkNode.field_s) {
                         var11 = 1;
                       }
                     }
@@ -365,16 +365,16 @@ class fe extends ei {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = wo.field_f.field_Rb.field_T;
+                var17 = DualLinkDeque.field_f.field_Rb.field_T;
                 var18_ref = (im) (var17.c((byte) 96));
-                L54: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
                     stackOut_130_0 = var18_ref.c(true);
                     stackIn_150_0 = stackOut_130_0 ? 1 : 0;
                     stackIn_131_0 = stackOut_130_0;
                     if (var19 != 0) {
-                      break L54;
+                      break scanLoop3;
                     }
                     if (!stackIn_131_0 ||
                       var19 != 0) {

@@ -4,7 +4,7 @@
 final class hp {
     static long field_a;
     static int[] field_c;
-    static dd field_b;
+    static Sprite field_b;
     static String field_e;
     static int[] field_d;
 

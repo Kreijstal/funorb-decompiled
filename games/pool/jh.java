@@ -6,7 +6,7 @@ class jh {
     static cg field_d;
     static String field_g;
     static String field_b;
-    static dd field_e;
+    static Sprite field_e;
     static int field_c;
     static String field_f;
 
@@ -35,11 +35,11 @@ class jh {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new pn(param3, param4, param0, param2, param1);
-          oa.a(-63, var6);
+          ClientException.a(-63, var6);
           if (param5) {
             return;
           }
-          field_e = (dd) null;
+          field_e = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

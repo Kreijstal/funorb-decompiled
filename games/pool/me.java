@@ -9,7 +9,7 @@ final class me extends ig {
     static di field_r;
     static int field_o;
     static int field_s;
-    static dd field_p;
+    static Sprite field_p;
     static so field_y;
     static String field_u;
     static int field_x;
@@ -21,7 +21,7 @@ final class me extends ig {
         int var3 = Pool.field_O;
         qb[] var1 = new qb[wf.field_d];
         for (var2 = param0; wf.field_d > var2; var2++) {
-          var1[var2] = new qb(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], ma.field_h);
+          var1[var2] = new qb(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], IntrusiveNode.field_h);
         }
         sh.h(-1);
         return var1;
@@ -139,7 +139,7 @@ final class me extends ig {
           if (!this.field_m) {
             stackIn_13_0 = gp.field_d;
           } else {
-            stackIn_13_0 = kr.field_e;
+            stackIn_13_0 = ProxySocketConnector.field_e;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

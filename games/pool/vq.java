@@ -3,8 +3,8 @@
  */
 final class vq extends vh {
     static String field_bc;
-    private dd[] field_Pb;
-    static dd field_Yb;
+    private Sprite[] field_Pb;
+    static Sprite field_Yb;
     private int field_cc;
     private int field_Nb;
     static int[] field_Ub;
@@ -25,7 +25,7 @@ final class vq extends vh {
     public static void f(int param0) {
         field_bc = null;
         if (param0 < 109) {
-          field_Yb = (dd) null;
+          field_Yb = (Sprite) null;
         }
         field_Zb = null;
         field_Ub = null;
@@ -58,7 +58,7 @@ final class vq extends vh {
 
     final void a(String param0, int param1, int param2) {
         try {
-          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, (dd) null, param0);
+          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, (Sprite) null, param0);
           this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
           this.field_Rb[this.field_Nb].field_J = true;
           this.field_Rb[this.field_Nb].field_cb = 1;
@@ -67,7 +67,7 @@ final class vq extends vh {
           this.field_Nb = this.field_Nb + 1;
           if (param1 != 17130) {
             String var5 = (String) null;
-            this.a(-100, (byte) -124, (dd) null, (String) null);
+            this.a(-100, (byte) -124, (Sprite) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -83,7 +83,7 @@ final class vq extends vh {
         int var7Lifetime1;
         int var8Lifetime1;
         if (this.field_Nb == 0) {
-          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Wb, (dd) null, np.field_g);
+          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Wb, (Sprite) null, np.field_g);
           this.field_Rb[this.field_Nb].field_cb = 1;
           this.a(76, this.field_Rb[this.field_Nb]);
           this.field_dc[this.field_Nb] = -1;
@@ -106,7 +106,7 @@ final class vq extends vh {
         }
     }
 
-    vq(vh param0, dd[] param1, vh param2, vh param3, int param4, int param5, int param6, int param7, int param8) {
+    vq(vh param0, Sprite[] param1, vh param2, vh param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Qb = -2;
         this.field_Rb = new uo[256];
@@ -146,7 +146,7 @@ final class vq extends vh {
         return this.field_Qb;
     }
 
-    final void a(int param0, byte param1, dd param2, String param3) {
+    final void a(int param0, byte param1, Sprite param2, String param3) {
         try {
           this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, param2, param3);
           this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;

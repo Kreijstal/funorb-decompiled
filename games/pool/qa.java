@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends ma {
+final class qa extends IntrusiveNode {
     int field_s;
     static String field_u;
     qa field_l;
@@ -98,7 +98,7 @@ final class qa extends ma {
 
     final static void a(boolean param0, String param1, int param2, String param3) {
         try {
-          qo.field_x = param1;
+          SpriteState.field_x = param1;
           qg.field_a = param3;
           wf.a(param0, gg.field_a, -126);
           int var4_int = -110 % ((param2 + 30) / 57);
@@ -144,7 +144,7 @@ final class qa extends ma {
     }
 
     final static void a(byte param0, boolean param1) {
-        oa.a(param1, (byte) 80);
+        ClientException.a(param1, (byte) 80);
         if (param0 != 55) {
           String var3 = (String) null;
           qa.a((String) null, 95);

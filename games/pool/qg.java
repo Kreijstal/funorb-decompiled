@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qg {
-    static dd field_b;
+    static Sprite field_b;
     static int field_e;
     static boolean field_d;
     static vh field_f;
@@ -38,13 +38,13 @@ final class qg {
                 var5.field_B = 0;
               }
             } else {
-              var5.a((byte) -117);
+              var5.unlink((byte) -117);
             }
           }
           var3 = (ij) (var4.b(-108));
           while (var3 != null) {
             if (param1 == var3.field_m) {
-              var3.a((byte) -117);
+              var3.unlink((byte) -117);
             }
             var3 = (ij) (var4.b(-88));
           }

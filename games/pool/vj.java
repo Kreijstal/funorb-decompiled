@@ -50,18 +50,18 @@ final class vj {
         return null == ne.field_u ? pa.field_K : (java.awt.Canvas) ((Object) ne.field_u);
     }
 
-    final static void a(ma param0, byte param1, ma param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
-          if (null != param0.field_k) {
-            param0.a((byte) -117);
+          if (null != param0.next) {
+            param0.unlink((byte) -117);
           }
-          param0.field_k = param2.field_k;
+          param0.next = param2.next;
           if (param1 != -119) {
             field_g = (String) null;
           }
-          param0.field_d = param2;
-          param0.field_k.field_d = param0;
-          param0.field_d.field_k = param0;
+          param0.previous = param2;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -128,7 +128,7 @@ final class vj {
           if (var5 == null) {
             return false;
           }
-          oa.a(true, var5);
+          ClientException.a(true, var5);
           if (param3 == 121) {
             return true;
           }
@@ -148,7 +148,7 @@ final class vj {
         }
     }
 
-    final static kf a(byte param0, jg param1) {
+    final static kf a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
         kf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -159,7 +159,7 @@ final class vj {
           if (param0 != -27) {
             field_b = (String) null;
           }
-          stackIn_3_0 = mn.a(param0 ^ 24317, nb.b(param1, 100, 96));
+          stackIn_3_0 = mn.a(param0 ^ 24317, PcmSampleStream.b(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

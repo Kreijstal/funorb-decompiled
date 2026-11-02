@@ -6,33 +6,33 @@ import java.util.*;
 final class vf extends vc {
     static int field_lb;
     static String field_Q;
-    private jg field_fb;
+    private PcmSample field_fb;
     private vm[] field_U;
-    jg field_X;
-    private jg field_Z;
-    private jg field_ib;
+    PcmSample field_X;
+    private PcmSample field_Z;
+    private PcmSample field_ib;
     static String field_gb;
-    private jg field_ab;
-    private jg field_cb;
-    private jg field_W;
-    private jg field_T;
-    jg field_hb;
-    private jg field_mb;
-    private jg field_jb;
-    private jg field_kb;
-    jg field_bb;
+    private PcmSample field_ab;
+    private PcmSample field_cb;
+    private PcmSample field_W;
+    private PcmSample field_T;
+    PcmSample field_hb;
+    private PcmSample field_mb;
+    private PcmSample field_jb;
+    private PcmSample field_kb;
+    PcmSample field_bb;
     static di field_nb;
-    private jg field_S;
-    jg field_Y;
-    private jg field_db;
-    private jg field_V;
-    private jg field_eb;
+    private PcmSample field_S;
+    PcmSample field_Y;
+    private PcmSample field_db;
+    private PcmSample field_V;
+    private PcmSample field_eb;
 
     final void i(int param0) {
         super.i(param0);
     }
 
-    final void a(int param0, uf param1) {
+    final void a(int param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = Pool.field_O;
         try {
@@ -41,14 +41,14 @@ final class vf extends vc {
           for (var3_int = 0; var3_int < this.field_U.length; var3_int++) {
             this.field_U[var3_int].a(this, 10);
           }
-          this.a(24, 50, (byte) -121, new jg[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
-          this.a(24, 50, (byte) 125, new jg[]{this.field_eb, this.field_Z, this.field_kb}, ca.field_g);
+          this.a(24, 50, (byte) -121, new PcmSample[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
+          this.a(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, ca.field_g);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vf.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, uf param1) {
+    final void a(byte param0, PoolMatchController param1) {
         int var3_int = 0;
         int var6 = 0;
         boolean[] stackIn_13_0 = null;
@@ -267,9 +267,9 @@ final class vf extends vc {
         so dupTemp$500 = null;
         so dupTemp$501 = null;
         int var2;
-        ko var3;
-        ko var4;
-        ko var5;
+        IntrusiveDeque var3;
+        IntrusiveDeque var4;
+        IntrusiveDeque var5;
         so var6;
         so var7;
         so var8;
@@ -288,7 +288,7 @@ final class vf extends vc {
         so var27;
         eg var28;
         so var29;
-        ko var33;
+        IntrusiveDeque var33;
         int stackIn_15_0 = 0;
         eg stackIn_15_1 = null;
         int stackIn_15_2 = 0;
@@ -301,7 +301,7 @@ final class vf extends vc {
         so[] var17;
         int var18;
         int var19;
-        uf var21;
+        PoolMatchController var21;
         so var30;
         eg var31;
         so var32;
@@ -328,9 +328,9 @@ final class vf extends vc {
         var20 = Pool.field_O;
         var2 = 0;
         this.field_U = new vm[-gk.field_hb + mf.field_m];
-        var3 = new ko();
-        var4 = new ko();
-        var5 = new ko();
+        var3 = new IntrusiveDeque();
+        var4 = new IntrusiveDeque();
+        var5 = new IntrusiveDeque();
         var6 = new so();
         var7 = new so();
         var8 = new so();
@@ -367,7 +367,7 @@ final class vf extends vc {
         }
         for (var2Lifetime3 = gk.field_hb; mf.field_m > var2Lifetime3; var2Lifetime3++) {
           var24 = this.field_O[var2Lifetime3];
-          var33 = new ko();
+          var33 = new IntrusiveDeque();
           var24.e();
           if (var24.field_V > -this.field_M[var2Lifetime3][2]) {
             dupTemp$497 = hc.a(var24, this.field_M[var2Lifetime3], (byte) 101);
@@ -410,8 +410,8 @@ final class vf extends vc {
         var6.a((byte) -120, var3);
         var7.a((byte) 38, var4);
         if (!param0) {
-          var21 = (uf) null;
-          this.a((byte) 16, (uf) null);
+          var21 = (PoolMatchController) null;
+          this.a((byte) 16, (PoolMatchController) null);
         }
         var8.a((byte) 72, var5);
         var15 = 0;
@@ -885,7 +885,7 @@ final class vf extends vc {
           }
           this.field_M = new int[this.field_O.length][3];
           if (param1 >= -43) {
-            this.field_V = (jg) null;
+            this.field_V = (PcmSample) null;
           }
           for (var4Lifetime3 = 0; this.field_O.length > var4Lifetime3; var4Lifetime3++) {
             ln.a(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
@@ -908,7 +908,7 @@ final class vf extends vc {
     final void d(boolean param0) {
         pi.a();
         oo.field_w = null;
-        vb.field_p = null;
+        BufferedSocket.field_p = null;
         p.field_c = null;
         if (!param0) {
           return;
@@ -933,7 +933,7 @@ final class vf extends vc {
           oo.field_w = ta.a(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
           pi.c();
           this.a(86, param0.field_l.length);
-          vb.field_p = new int[65536];
+          BufferedSocket.field_p = new int[65536];
           we.field_g = new int[65536];
           p.field_c = new int[65536];
         } catch (RuntimeException runtimeException) {
@@ -958,7 +958,7 @@ final class vf extends vc {
         int var5;
         int var6;
         int var7;
-        L0: {
+        regionExit1: {
           var7 = Pool.field_O;
           var5 = -125 / ((-44 - param2) / 56);
           var6 = param0;
@@ -985,20 +985,20 @@ final class vf extends vc {
                   switch (var6) {
                     case 0:
                       kp.a(100, this.field_Y, param3, param1);
-                      break L0;
+                      break regionExit1;
                     case 1:
                       kp.a(100, this.field_X, param3, param1);
-                      break L0;
+                      break regionExit1;
                     case 6:
                       kp.a(100, this.field_S, param3, param1);
                       System.out.println("playing respot the white");
-                      break L0;
+                      break regionExit1;
                     case 4:
                       kp.a(100, this.field_jb, param3, param1);
-                      break L0;
+                      break regionExit1;
                     default:
                       super.a(param0, param1, (byte) 115, param3);
-                      break L0;
+                      break regionExit1;
                   }
                 }
                 kp.a(100, this.field_hb, param3, param1);
@@ -1015,14 +1015,14 @@ final class vf extends vc {
     final void c(int param0, di param1) {
         try {
           if (param0 != -23569) {
-            this.field_T = (jg) null;
+            this.field_T = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vf.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(boolean param0, uf param1) {
+    private final void a(boolean param0, PoolMatchController param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1075,12 +1075,12 @@ final class vf extends vc {
           for (var4 = 0; var4 < 256; var4++) {
             incrementValue$0 = var3;
             var3++;
-            vb.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
+            BufferedSocket.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
           }
         }
         if (var1 >= 256) {
-          var2 = vb.field_p;
-          vb.field_p = we.field_g;
+          var2 = BufferedSocket.field_p;
+          BufferedSocket.field_p = we.field_g;
           we.field_g = p.field_c;
           p.field_c = var2;
           var1 = 32;
@@ -1129,9 +1129,9 @@ final class vf extends vc {
     final void b(int param0, di param1) {
         try {
           if (param0 != 5) {
-            this.field_fb = (jg) null;
+            this.field_fb = (PcmSample) null;
           }
-          this.field_B = new dd(param1.a(false, "polar-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          this.field_B = new Sprite(param1.a(false, "polar-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vf.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

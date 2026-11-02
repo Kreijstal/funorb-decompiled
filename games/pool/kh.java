@@ -117,17 +117,17 @@ final class kh extends vh {
         int var3;
         var3 = Pool.field_O;
         ep.field_z = false;
-        oa.field_d = null;
+        ClientException.field_d = null;
         var1 = -42 % ((-1 - param0) / 38);
         if (!ro.field_e) {
           var2 = no.field_l;
           if (var2 > 0) {
             if (1 == var2) {
-              oa.field_d = vd.field_m;
+              ClientException.field_d = vd.field_m;
             } else {
-              oa.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.field_d);
+              ClientException.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.field_d);
             }
-            oa.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) oa.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.field_E)});
+            ClientException.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.field_E)});
           }
           d.field_d.k(17);
           ci.d((byte) -126);
@@ -183,25 +183,25 @@ final class kh extends vh {
         int statePc = 0;
         Throwable caughtException = null;
         RuntimeException var3 = null;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var4 = Pool.field_O;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
                         var3_int = 0;
                         if (param0 == -3) {
                             statePc = 4;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 2. */
                             {
                                 stackIn_3_0 = 1;
                                 statePc = 3;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -210,7 +210,7 @@ final class kh extends vh {
                             throw kh.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 3: {
@@ -219,20 +219,20 @@ final class kh extends vh {
                 case 4: {
                     stackIn_6_0 = (eg) (param1);
                     statePc = 6;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 5: {
                     try {
                         stackIn_6_0 = (eg) (param1);
                         statePc = 6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
                             throw kh.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 6: {
@@ -242,25 +242,25 @@ final class kh extends vh {
                             {
                                 stackIn_18_0 = 0;
                                 statePc = 18;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 7. */
                             {
                                 if (param1.field_Q == null) {
                                     statePc = 10;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 8. */
                                     {
                                         if (param1.field_Q[var3_int] == 2) {
                                             statePc = 16;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 9. */
                                             {
                                                 statePc = 10;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -273,26 +273,26 @@ final class kh extends vh {
                             throw kh.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 10: {
                     try {
                         if (param2 == param1.field_N[var3_int]) {
                             statePc = 14;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 11. */
                             {
                                 if (param2 == param1.field_v[var3_int]) {
                                     statePc = 14;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 12. */
                                     {
                                         if (param2 != param1.field_X[var3_int]) {
                                             statePc = 16;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 13. */
                                             {
@@ -309,21 +309,21 @@ final class kh extends vh {
                             throw kh.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 14: {
                     try {
                         stackIn_15_0 = 1;
                         statePc = 15;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_14) {
                         statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
                             throw kh.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 15: {
@@ -333,14 +333,14 @@ final class kh extends vh {
                     try {
                         var3_int++;
                         statePc = 5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_16) {
                         statePc = ((Object) stateCaught_16 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
                             throw kh.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 18: {
@@ -357,21 +357,21 @@ final class kh extends vh {
                     } else {
                         statePc = 20;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 20: {
                     stackIn_22_0 = stackIn_20_0;
                     stackIn_22_1 = stackIn_20_1;
                     stackIn_22_2 = "{...}";
                     statePc = 22;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 21: {
                     stackIn_22_0 = stackIn_21_0;
                     stackIn_22_1 = stackIn_21_1;
                     stackIn_22_2 = "null";
                     statePc = 22;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 22: {
                     throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());

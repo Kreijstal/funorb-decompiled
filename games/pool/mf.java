@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mf extends tm {
-    static dd field_n;
+    static Sprite field_n;
     static int field_l;
     static boolean field_o;
     static int field_m;
@@ -45,7 +45,7 @@ final class mf extends tm {
           }
           for (var3_int = 1; this.field_a.length > var3_int; var3_int++) {
             this.field_a[var3_int].a(8, 8, 8, 4);
-            li.a(this.field_a[var3_int], 0);
+            IsaacCipher.a(this.field_a[var3_int], 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class mf extends tm {
     }
 
     final void a(int param0, di param1) {
-        dd[] dupTemp$0 = null;
+        Sprite[] dupTemp$0 = null;
         try {
           dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
           this.field_e = dupTemp$0;

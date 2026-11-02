@@ -3,7 +3,7 @@
  */
 final class hh {
     static int field_a;
-    static dd[] field_f;
+    static Sprite[] field_f;
     static boolean field_c;
     static String field_d;
     static String field_b;
@@ -12,9 +12,9 @@ final class hh {
     final static vh a(byte param0) {
         if (param0 != 1) {
           field_a = 112;
-          return vb.field_m.field_Rb;
+          return BufferedSocket.field_m.field_Rb;
         }
-        return vb.field_m.field_Rb;
+        return BufferedSocket.field_m.field_Rb;
     }
 
     public static void a(int param0) {

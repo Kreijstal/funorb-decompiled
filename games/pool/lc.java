@@ -18,14 +18,14 @@ final class lc extends fe {
         int var7_int = 0;
         try {
           ej.field_j.b(false, param3);
-          ej.field_j.field_v = ej.field_j.field_v + 1;
+          ej.field_j.position = ej.field_j.position + 1;
           int var8 = 55 % ((param5 + 38) / 51);
-          var7_int = ej.field_j.field_v;
-          ej.field_j.a(param4, (byte) -79);
+          var7_int = ej.field_j.position;
+          ej.field_j.writeLong(param4, (byte) -79);
           ej.field_j.a(-9946, param1);
           ej.field_j.a(param2, false);
           ej.field_j.a(!param0 ? 0 : 1, false);
-          ej.field_j.b(ej.field_j.field_v - var7_int, true);
+          ej.field_j.b(ej.field_j.position - var7_int, true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -100,9 +100,9 @@ final class lc extends fe {
         int var10;
         int var11;
         int var12;
-        dd var13;
-        dd var14;
-        dd var15;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
         var12 = Pool.field_O;
         super.a(param0, (byte) -122, param2, param3);
         if (param0 != 0) {
@@ -117,7 +117,7 @@ final class lc extends fe {
           if (var9 == gp.field_d) {
             var15 = bo.field_a[2];
             var15.c(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
-          } else if (var9 == kr.field_e) {
+          } else if (var9 == ProxySocketConnector.field_e) {
             var14 = bo.field_a[1];
             var14.c(-(var14.field_z >> 1) + var5, -(var14.field_A >> 1) + var6, 256);
           }
@@ -131,7 +131,7 @@ final class lc extends fe {
             kj.a(104, sm.field_z);
             qh.d();
           } else {
-            sm.field_z = new dd(var10, var11);
+            sm.field_z = new Sprite(var10, var11);
             kj.a(56, sm.field_z);
           }
           var13.b(112, 144, var13.field_w << 4, var13.field_y << 4, -this.field_S << 10, 4096);

@@ -164,7 +164,7 @@ final class ab {
           stackIn_26_1 = "loses|";
         }
         stackIn_28_0 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_26_1);
-        if (0 == (param0 & oa.field_b)) {
+        if (0 == (param0 & ClientException.field_b)) {
           stackIn_29_1 = "";
         } else {
           stackIn_29_1 = "group choice|";

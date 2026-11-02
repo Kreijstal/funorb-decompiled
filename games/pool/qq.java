@@ -71,7 +71,7 @@ class qq extends ok implements tb {
         }
         this.field_R = false;
         if (this.field_sb) {
-          kr.a(false);
+          ProxySocketConnector.a(false);
           return;
         }
         if (!this.field_tb) {

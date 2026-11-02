@@ -11,7 +11,7 @@ class am implements fp, io {
     lr field_a;
     static int field_q;
     int field_g;
-    static uf field_e;
+    static PoolMatchController field_e;
     int field_f;
     int field_p;
     int field_j;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class gm extends ma {
+final class gm extends IntrusiveNode {
     private int field_u;
     private static float[] field_z;
     private boolean field_D;
@@ -460,16 +460,16 @@ final class gm extends ma {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        ge var2 = new ge(param0);
-        this.field_x = var2.b(true);
-        this.field_o = var2.b(true);
-        this.field_s = var2.b(true);
-        this.field_M = var2.b(true);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_x = var2.readInt(true);
+        this.field_o = var2.readInt(true);
+        this.field_s = var2.readInt(true);
+        this.field_M = var2.readInt(true);
         if (this.field_M < 0) {
           this.field_M = ~this.field_M;
           this.field_T = true;
         }
-        int var3 = var2.b(true);
+        int var3 = var2.readInt(true);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -477,7 +477,7 @@ final class gm extends ma {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.g(-85);
+            var6_int = var2.readUnsignedByte(-85);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -486,7 +486,7 @@ final class gm extends ma {
         }
     }
 
-    final jg a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -536,7 +536,7 @@ final class gm extends ma {
         this.field_A = null;
         var12 = this.field_S;
         this.field_S = null;
-        return new jg(this.field_x, var12, this.field_s, this.field_M, this.field_T);
+        return new PcmSample(this.field_x, var12, this.field_s, this.field_M, this.field_T);
     }
 
     final static void b(byte[] param0) {
@@ -694,7 +694,7 @@ final class gm extends ma {
         }
     }
 
-    final jg b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -726,7 +726,7 @@ final class gm extends ma {
           }
         }
         this.field_A = null;
-        return new jg(this.field_x, var1, this.field_s, this.field_M, this.field_T);
+        return new PcmSample(this.field_x, var1, this.field_s, this.field_M, this.field_T);
     }
 
     final static gm a(di param0, String param1, String param2) {

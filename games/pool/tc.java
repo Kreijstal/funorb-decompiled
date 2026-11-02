@@ -140,7 +140,7 @@ final class tc {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          sj stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           java.net.URL stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -151,7 +151,7 @@ final class tc {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          le var4 = null;
+          AsyncRequest var4 = null;
           DataInputStream var5 = null;
           String var6 = null;
           String var7 = null;
@@ -181,16 +181,16 @@ final class tc {
             stackIn_14_2 = null;
             stackIn_14_3 = gj.field_W.getCodeBase();
             stackIn_14_4 = new StringBuilder().append("clienterror.ws?c=").append(ok.field_rb).append("&u=");
-            if (ma.field_j == null) {
+            if (IntrusiveNode.field_j == null) {
               stackIn_15_1 = null;
               stackIn_15_2 = null;
               stackIn_15_5 = "" + hf.field_e;
             } else {
               stackIn_15_1 = null;
               stackIn_15_2 = null;
-              stackIn_15_5 = ma.field_j;
+              stackIn_15_5 = IntrusiveNode.field_j;
             }
-            var4 = ((sj) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, ((StringBuilder) (Object) stackIn_14_4).append(stackIn_15_5).append("&v1=").append(sj.field_o).append("&v2=").append(sj.field_t).append("&e=").append(var9).toString()), 1);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, ((StringBuilder) (Object) stackIn_14_4).append(stackIn_15_5).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var9).toString()), 1);
             while (var4.field_f == 0) {
               cf.a(-100, 1L);
             }

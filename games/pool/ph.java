@@ -6,7 +6,7 @@ final class ph {
     static vh field_d;
     static String field_a;
     static volatile long field_b;
-    static dd field_f;
+    static Sprite field_f;
     static int field_e;
     static String field_c;
 

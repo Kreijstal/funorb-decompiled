@@ -5,10 +5,10 @@ final class og extends ob {
     static nl field_L;
     static String field_H;
     static int[] field_J;
-    static dd[] field_K;
+    static Sprite[] field_K;
     static int field_I;
 
-    og(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    og(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -27,9 +27,9 @@ final class og extends ob {
         field_H = null;
     }
 
-    final static void a(java.awt.Frame param0, sj param1, int param2) {
-        le var3 = null;
-        sj var4 = null;
+    final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, int param2) {
+        AsyncRequest var3 = null;
+        PlatformTaskDispatcher var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -39,8 +39,8 @@ final class og extends ob {
         RuntimeException var3_ref = null;
         try {
           if (param2 != 24442) {
-            var4 = (sj) null;
-            og.a((java.awt.Frame) null, (sj) null, 107);
+            var4 = (PlatformTaskDispatcher) null;
+            og.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, 107);
           }
           while (true) {
             var3 = param1.a(param0, false);

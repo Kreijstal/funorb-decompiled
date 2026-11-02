@@ -9,9 +9,9 @@ final class gn {
     static int field_c;
     static eg field_e;
 
-    final static dd[] a(dd[] param0, byte param1) {
+    final static Sprite[] a(Sprite[] param0, byte param1) {
         RuntimeException var2 = null;
-        dd[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -24,7 +24,7 @@ final class gn {
           param0[1].field_w = param0[1].field_z;
           param0[5].field_y = param0[5].field_A;
           param0[7].field_w = param0[7].field_z;
-          stackIn_3_0 = (dd[]) (param0);
+          stackIn_3_0 = (Sprite[]) (param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

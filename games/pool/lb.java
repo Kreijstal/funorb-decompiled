@@ -4,7 +4,7 @@
 final class lb extends jo {
     static hj field_N;
     static String field_M;
-    static dd[] field_O;
+    static Sprite[] field_O;
     static String[][] field_P;
 
     final void b(byte param0) {
@@ -24,12 +24,12 @@ final class lb extends jo {
         }
     }
 
-    final static dd a(di param0, int param1, String param2, String param3) {
+    final static Sprite a(di param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        dd stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -70,7 +70,7 @@ final class lb extends jo {
         }
     }
 
-    lb(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    lb(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 

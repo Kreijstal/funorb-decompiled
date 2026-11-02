@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class bg {
+abstract class SocketConnector {
     static String field_b;
     int field_a;
     String field_c;

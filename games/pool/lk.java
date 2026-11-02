@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends ma {
+final class lk extends IntrusiveNode {
     boolean field_v;
     int field_l;
     String field_x;
     int field_s;
     static String field_r;
     static int field_m;
-    dd field_n;
+    Sprite field_n;
     static int field_u;
     int field_q;
-    static dd field_w;
+    static Sprite field_w;
     static String field_t;
     static boolean field_o;
     int field_p;
@@ -27,7 +27,7 @@ final class lk extends ma {
 
     final void c(int param0) {
         int var2 = sa.field_h.b(this.field_x);
-        this.field_n = new dd(2 + var2, sa.field_h.field_C - (-sa.field_h.field_w - 2));
+        this.field_n = new Sprite(2 + var2, sa.field_h.field_C - (-sa.field_h.field_w - 2));
         this.field_n.e();
         sa.field_h.a(nf.field_Z, bi.field_d);
         sa.field_h.d(this.field_x, 1, 1 + sa.field_h.field_C, this.field_s, param0);

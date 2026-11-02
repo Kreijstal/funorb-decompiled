@@ -804,7 +804,7 @@ final class tl extends ob {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
-                    !rg.field_s &&
+                    !DualLinkNode.field_s &&
                     0 >= mp.field_V) {
                     var10 = 1;
                   }
@@ -827,7 +827,7 @@ final class tl extends ob {
                   w.field_j[var7] != null) {
                   var16Lifetime2 = w.field_j[var7][var9];
                   if (var16Lifetime2 != 0 &&
-                    !rg.field_s &&
+                    !DualLinkNode.field_s &&
                     mp.field_V <= 0) {
                     var10 = 1;
                   }
@@ -1013,7 +1013,7 @@ final class tl extends ob {
                     }
                   }
                   if (var23 != 0) {
-                    var21 = bg.field_b + (String) (var22);
+                    var21 = SocketConnector.field_b + (String) (var22);
                   } else {
                     var21 = nr.a(new String[]{(String) (var22)}, ~param2, ka.field_t);
                   }
@@ -1138,13 +1138,13 @@ final class tl extends ob {
         }
     }
 
-    final dd a(String param0, int param1, int param2, int param3) {
+    final Sprite a(String param0, int param1, int param2, int param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
         int[] var7 = null;
-        dd stackIn_6_0 = null;
-        dd stackIn_8_0 = null;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -1257,7 +1257,7 @@ final class tl extends ob {
         if (param0 <= 36) {
           return;
         }
-        L1: {
+        regionExit1: {
           var2 = var2 + (8 + (ni.field_Z.field_w + sa.field_h.field_C));
           if (!tm.field_b.field_v) {
             var4 = cl.field_j;
@@ -1294,7 +1294,7 @@ final class tl extends ob {
                 var3Lifetime2Lifetime1 = 4;
                 this.a(-1, tm.field_b.field_y, tm.field_b.field_x, tm.field_b.field_w, tm.field_b.field_t, 100, 16777215, var2, di.field_j);
               }
-              break L1;
+              break regionExit1;
             }
             var4 = fh.field_a;
           }

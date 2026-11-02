@@ -3,7 +3,7 @@
  */
 final class ba extends ok {
     static int field_wb;
-    static uf field_ub;
+    static PoolMatchController field_ub;
     static int field_tb;
     static vh field_vb;
     static vh field_sb;

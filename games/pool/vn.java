@@ -3,9 +3,9 @@
  */
 final class vn {
     static nl field_d;
-    static ko field_g;
+    static IntrusiveDeque field_g;
     static int field_f;
-    static dd field_j;
+    static Sprite field_j;
     static int field_c;
     static int field_b;
     wd field_i;
@@ -13,7 +13,7 @@ final class vn {
     static int[] field_h;
     static String[] field_a;
 
-    final static void a(byte param0, int param1, sj param2, ge param3) {
+    final static void a(byte param0, int param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -53,18 +53,18 @@ final class vn {
           var15 = Pool.field_O;
           try {
             var19 = new ho();
-            var19.field_t = param3.g(-105);
-            var19.field_o = param3.b(true);
+            var19.field_t = param3.readUnsignedByte(-105);
+            var19.field_o = param3.readInt(true);
             var19.field_w = new byte[var19.field_t][][];
             var19.field_r = new int[var19.field_t];
-            var19.field_p = new le[var19.field_t];
+            var19.field_p = new AsyncRequest[var19.field_t];
             var19.field_m = new int[var19.field_t];
-            var19.field_n = new le[var19.field_t];
+            var19.field_n = new AsyncRequest[var19.field_t];
             var5 = 57 % ((param0 + 62) / 55);
             var19.field_q = new int[var19.field_t];
             for (var6 = 0; var6 < var19.field_t; var6++) {
               try {
-                var7_int = param3.g(-102);
+                var7_int = param3.readUnsignedByte(-102);
                 if (0 != var7_int &&
                   var7_int != 1 &&
                   var7_int != 2) {
@@ -72,7 +72,7 @@ final class vn {
                     var7_int == 4) {
                     var21 = param3.j(-21);
                     var22 = param3.j(-26);
-                    var10 = param3.g(-84);
+                    var10 = param3.readUnsignedByte(-84);
                     var11 = new String[var10];
                     for (var12_int = 0; var10 > var12_int; var12_int++) {
                       var11[var12_int] = param3.j(-49);
@@ -82,7 +82,7 @@ final class vn {
                     var12 = var20;
                     if (var7_int == 3) {
                       for (var13_int = 0; var13_int < var10; var13_int++) {
-                        var14 = param3.b(true);
+                        var14 = param3.readInt(true);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
                         param3.a(0, (byte) -124, var23[var13_int], var14);
@@ -106,7 +106,7 @@ final class vn {
                   var9 = var17;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param3.b(true);
+                    var10 = param3.readInt(true);
                   }
                   var19.field_m[var6] = var7_int;
                   var19.field_r[var6] = var10;
@@ -199,8 +199,8 @@ final class vn {
         field_j = null;
         field_g = null;
         if (!param0) {
-          ge var2 = (ge) null;
-          vn.a((byte) -54, -128, (sj) null, (ge) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          vn.a((byte) -54, -128, (PlatformTaskDispatcher) null, (PacketBuffer) null);
         }
     }
 

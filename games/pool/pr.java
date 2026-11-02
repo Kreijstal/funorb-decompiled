@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pr extends ma {
+final class pr extends IntrusiveNode {
     int field_w;
     int field_A;
     int field_E;
-    jg field_C;
+    PcmSample field_C;
     int field_G;
     static int field_l;
     int field_B;
@@ -20,7 +20,7 @@ final class pr extends ma {
     int field_t;
     int field_r;
     int field_D;
-    nb field_o;
+    PcmSampleStream field_o;
     int field_n;
     int field_p;
     kp field_x;

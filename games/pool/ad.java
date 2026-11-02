@@ -17,21 +17,21 @@ final class ad {
     wi field_p;
     int[] field_m;
     int[][] field_k;
-    static ko field_l;
+    static IntrusiveDeque field_l;
     wi[] field_n;
     static String field_e;
     static int field_x;
     static int[] field_o;
     static String field_b;
-    static dd field_y;
+    static Sprite field_y;
     static int field_r;
     static int field_c;
     static String field_t;
     static int field_u;
 
-    final static void a(byte param0, java.math.BigInteger param1, ge param2, java.math.BigInteger param3, ge param4) {
+    final static void a(byte param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          lf.a(param3, param2.field_t, param1, param4, param2.field_v, 0, 0);
+          lf.a(param3, param2.payload, param1, param4, param2.position, 0, 0);
           if (param0 != 93) {
             ad.a(122, 64, 86);
           }
@@ -82,7 +82,7 @@ final class ad {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ge var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -99,22 +99,22 @@ final class ad {
         int var13Lifetime1Lifetime1;
         var16 = Pool.field_O;
         try {
-          var17 = new ge(wp.a(0, param0));
-          var4 = var17.g(param1 ^ 105);
+          var17 = new PacketBuffer(wp.a(0, param0));
+          var4 = var17.readUnsignedByte(param1 ^ 105);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_h = var17.b(true);
+              this.field_h = var17.readInt(true);
             } else {
               this.field_h = 0;
             }
-            var5 = var17.g(-60);
+            var5 = var17.readUnsignedByte(-60);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
               this.field_g = var17.c(99);
             } else {
-              this.field_g = var17.d(-1034);
+              this.field_g = var17.readUnsignedShort(-1034);
             }
             stackIn_17_0 = (0 == (var5 & 2)) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -132,7 +132,7 @@ final class ad {
               }
             } else {
               for (var10 = 0; this.field_g > var10; var10++) {
-                dupTemp$1 = var8 + var17.d(cq.a(param1, 1033));
+                dupTemp$1 = var8 + var17.readUnsignedShort(cq.a(param1, 1033));
                 var8 = dupTemp$1;
                 this.field_m[var10] = dupTemp$1;
                 if (this.field_m[var10] > var9) {
@@ -155,12 +155,12 @@ final class ad {
                 this.field_f[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_g > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_f[this.field_m[var10Lifetime1Lifetime1]] = var17.b(true);
+                this.field_f[this.field_m[var10Lifetime1Lifetime1]] = var17.readInt(true);
               }
               this.field_p = new wi(this.field_f);
             }
             for (var10Lifetime2 = 0; this.field_g > var10Lifetime2; var10Lifetime2++) {
-              this.field_w[this.field_m[var10Lifetime2]] = var17.b(true);
+              this.field_w[this.field_m[var10Lifetime2]] = var17.readInt(true);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_g; var10Lifetime3++) {
@@ -170,7 +170,7 @@ final class ad {
               }
             }
             for (var10Lifetime4 = 0; this.field_g > var10Lifetime4; var10Lifetime4++) {
-              this.field_i[this.field_m[var10Lifetime4]] = var17.b(true);
+              this.field_i[this.field_m[var10Lifetime4]] = var17.readInt(true);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; this.field_g > var10Lifetime5; var10Lifetime5++) {
@@ -200,7 +200,7 @@ final class ad {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_g; var10Lifetime5++) {
-                this.field_s[this.field_m[var10Lifetime5]] = var17.d(param1 - 1033);
+                this.field_s[this.field_m[var10Lifetime5]] = var17.readUnsignedShort(param1 - 1033);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_g; var10Lifetime5++) {
                 var11 = this.field_m[var10Lifetime5];
@@ -210,7 +210,7 @@ final class ad {
                 array$5 = new int[var12];
                 this.field_k[var11] = array$5;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.d(-1034);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(-1034);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_k[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -242,7 +242,7 @@ final class ad {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_j[var11Lifetime1][var14Lifetime1] = var17.b(true);
+                  this.field_j[var11Lifetime1][var14Lifetime1] = var17.readInt(true);
                 }
                 this.field_n[var11Lifetime1] = new wi(this.field_j[var11Lifetime1]);
               }
@@ -268,7 +268,7 @@ final class ad {
     ad(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_v = qo.a(param0.length, param0, 0);
+          this.field_v = SpriteState.a(param0.length, param0, 0);
           if (this.field_v != param1) {
             throw new RuntimeException();
           }
@@ -289,13 +289,13 @@ final class ad {
         }
     }
 
-    final static dd a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         if (param2 != 7) {
           ad.a(82);
         }
-        dd var5 = new dd(param1, param1);
-        dd var3 = var5;
+        Sprite var5 = new Sprite(param1, param1);
+        Sprite var3 = var5;
         for (var4 = 0; var4 < var3.field_D.length; var4++) {
           var5.field_D[var4] = param0;
         }
@@ -303,7 +303,7 @@ final class ad {
     }
 
     static {
-        field_l = new ko();
+        field_l = new IntrusiveDeque();
         field_e = "Cancel";
         field_o = new int[]{2, 20, 21, 49, 5, 3, 9};
         field_b = "<%0> gained 1 life!";

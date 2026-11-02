@@ -22,7 +22,7 @@ final class rj extends sq {
           sa.field_f = null;
           return true;
         }
-        if (!rg.field_p) {
+        if (!DualLinkNode.field_p) {
           if (!fm.field_H &&
             qi.field_a != 9 &&
             10 != qi.field_a &&
@@ -33,7 +33,7 @@ final class rj extends sq {
             if (!mp.g((byte) -108)) {
               return false;
             }
-            rg.field_p = true;
+            DualLinkNode.field_p = true;
             return true;
           }
           return tf.a(param2 + 15586, param0, param3);
@@ -45,12 +45,12 @@ final class rj extends sq {
         var4 = stackIn_22_0;
         if (80 == qi.field_a ||
           84 == qi.field_a) {
-          rg.field_p = false;
+          DualLinkNode.field_p = false;
           var4 = 1;
         }
         if (qi.field_a == 13) {
           cl.a(param2 + 14852);
-          rg.field_p = false;
+          DualLinkNode.field_p = false;
           var4 = 1;
         }
         return var4 != 0;
@@ -159,7 +159,7 @@ final class rj extends sq {
         return var4;
     }
 
-    final void a(ge param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -175,7 +175,7 @@ final class rj extends sq {
           }
           var3_int = 0;
           while (true) {
-            var4 = param0.g(-119);
+            var4 = param0.readUnsignedByte(-119);
             this.field_e[var3_int] = rb.b(var4, 254) >> 4;
             var3_int++;
             if (this.field_d.field_h.length != var3_int) {
@@ -306,7 +306,7 @@ final class rj extends sq {
         return 1;
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         RuntimeException var3 = null;
         qe var4 = null;
         Object stackIn_3_0 = null;
@@ -321,7 +321,7 @@ final class rj extends sq {
           var4 = (qe) null;
           this.a(40, (byte) -54, (qe) null);
           stackIn_3_0 = null;
-          return (dd) (stackIn_3_0);
+          return (Sprite) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -425,7 +425,7 @@ final class rj extends sq {
 
     final int j(int param0) {
         int var2 = 0;
-        if (ko.a(param0, (byte) 99) &&
+        if (IntrusiveDeque.a(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
           var2 = ga.a(14, true, ea.field_r);
           return var2 - (-1 - var2 / 7);

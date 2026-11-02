@@ -4,7 +4,7 @@
 final class lg extends am {
     static String field_v;
     static String field_y;
-    static sj field_s;
+    static PlatformTaskDispatcher field_s;
     private pf field_t;
     static int field_x;
     static String field_w;
@@ -77,7 +77,7 @@ final class lg extends am {
         var1.a(-51);
     }
 
-    final void a(dd param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         pf[] var3 = null;
         int var5 = 0;
@@ -115,7 +115,7 @@ final class lg extends am {
         }
     }
 
-    final void a(byte param0, int param1, dd[] param2) {
+    final void a(byte param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -133,8 +133,8 @@ final class lg extends am {
 
     final pf b(int param0, int param1) {
         if (param1 != 0) {
-          dd var4 = (dd) null;
-          this.a((dd) null, -125);
+          Sprite var4 = (Sprite) null;
+          this.a((Sprite) null, -125);
         }
         pf dupTemp$0 = new pf();
         this.field_u[param0] = dupTemp$0;
@@ -152,7 +152,7 @@ final class lg extends am {
         field_s = null;
     }
 
-    final void a(dd[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         pf[] var3 = null;
         pf var5 = null;

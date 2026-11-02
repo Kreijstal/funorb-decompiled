@@ -34,7 +34,7 @@ final class kp {
         field_h = null;
     }
 
-    final static kf a(int param0, jg param1, int param2, int param3) {
+    final static kf a(int param0, PcmSample param1, int param2, int param3) {
         RuntimeException var4 = null;
         kf stackIn_2_0 = null;
         kf stackIn_4_0 = null;
@@ -44,7 +44,7 @@ final class kp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 100) {
-            stackIn_4_0 = mn.a(-24296, nb.a(param1, 100, param3, param2));
+            stackIn_4_0 = mn.a(-24296, PcmSampleStream.a(param1, 100, param3, param2));
             return stackIn_4_0;
           }
           stackIn_2_0 = (kf) null;

@@ -124,9 +124,9 @@ final class cm extends ob {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        dd var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        dd var5 = null;
+        Sprite var5 = null;
         var4 = Pool.field_O;
         try {
           if (cr.field_m != null) {
@@ -146,10 +146,10 @@ final class cm extends ob {
           }
           rf.field_g = pf.a("benefits", (byte) 118, "members_benefits_logo", hr.field_q);
           qp.field_Rb = pf.a("benefits", (byte) 69, "members_benefits_price", hr.field_q);
-          var5 = new dd(rl.field_h.a(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) vj.a((byte) -67)));
-          dn.field_o = new dd[3];
+          var5 = new Sprite(rl.field_h.a(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) vj.a((byte) -67)));
+          dn.field_o = new Sprite[3];
           for (var2 = 0; var2 < dn.field_o.length; var2++) {
-            var3 = new dd(var5.field_w, var5.field_y / dn.field_o.length);
+            var3 = new Sprite(var5.field_w, var5.field_y / dn.field_o.length);
             var3.e();
             var5.a(0, -var2 * var5.field_y / dn.field_o.length);
             dn.field_o[var2] = var3;
@@ -160,7 +160,7 @@ final class cm extends ob {
           sh.field_P.b(15100);
           ef.a(-2107, cr.field_m, wm.field_Yb);
           bq.a(40, qp.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
-          kq.a(dn.field_o, -58);
+          GameApplet.a(dn.field_o, -58);
           hl.a(rf.field_g, 106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,26 +262,26 @@ final class cm extends ob {
           this.d(4, 111);
         }
         nm.field_a = new vh(-1L, (vh) null, var2, var3, qh.field_l - 2 * var2, -var3 + var4 + (qh.field_f - var3), (String) null);
-        bm.field_e = new vh(-1L, (vh) null, 40, 50, 240, 200, (String) null);
-        bm.field_e.field_Fb = 1;
-        bm.field_e.field_F = rm.field_g;
-        bm.field_e.field_Kb = ln.field_s;
-        nm.field_a.a(-114, bm.field_e);
+        IterableNodeHashTable.field_e = new vh(-1L, (vh) null, 40, 50, 240, 200, (String) null);
+        IterableNodeHashTable.field_e.field_Fb = 1;
+        IterableNodeHashTable.field_e.field_F = rm.field_g;
+        IterableNodeHashTable.field_e.field_Kb = ln.field_s;
+        nm.field_a.a(-114, IterableNodeHashTable.field_e);
         vh dupTemp$0 = u.a((byte) 68, 10, 55, false, 28);
         cj.field_V = dupTemp$0;
-        bm.field_e.a(-102, dupTemp$0);
+        IterableNodeHashTable.field_e.a(-102, dupTemp$0);
         vh dupTemp$1 = u.a((byte) 120, 210, 55, true, 27);
         we.field_f = dupTemp$1;
-        bm.field_e.a(122, dupTemp$1);
-        va.a(false, bm.field_e, cj.field_V);
-        va.a(false, bm.field_e, we.field_f);
+        IterableNodeHashTable.field_e.a(122, dupTemp$1);
+        va.a(false, IterableNodeHashTable.field_e, cj.field_V);
+        va.a(false, IterableNodeHashTable.field_e, we.field_f);
         jq.field_f = new vh(-1L, (vh) null, 0, 0, 160, 150, (String) null);
         jq.field_f.field_Fb = 1;
         jq.field_f.field_cb = 1;
         jq.field_f.field_F = mp.field_N;
-        bm.field_e.a(-116, jq.field_f);
+        IterableNodeHashTable.field_e.a(-116, jq.field_f);
         this.g(4);
-        al.field_v = new vh(-1L, (vh) null, 290, bm.field_e.field_eb, 270, 60, (String) null);
+        al.field_v = new vh(-1L, (vh) null, 290, IterableNodeHashTable.field_e.field_eb, 270, 60, (String) null);
         al.field_v.field_hb = dq.a(4, 0, ab.field_h);
         al.field_v.field_hb.field_G = 10;
         al.field_v.field_F = rm.field_g;
@@ -356,9 +356,9 @@ final class cm extends ob {
     }
 
     private final void g(int param0) {
-        bm.field_e.field_hb = dq.a(param0, 0, im.field_ic[er.field_W]);
+        IterableNodeHashTable.field_e.field_hb = dq.a(param0, 0, im.field_ic[er.field_W]);
         jq.field_f.field_hb = sb.field_c[er.field_W];
-        dp.a(bm.field_e, jq.field_f, -89);
+        dp.a(IterableNodeHashTable.field_e, jq.field_f, -89);
     }
 
     final void c(int param0) {
@@ -471,11 +471,11 @@ final class cm extends ob {
           return;
         }
         oq var3 = kn.field_e;
-        var3.b(true);
-        var3.b(true);
-        var3.b(true);
-        var3.b(true);
-        var1.a((byte) -117);
+        var3.readInt(true);
+        var3.readInt(true);
+        var3.readInt(true);
+        var3.readInt(true);
+        var1.unlink((byte) -117);
     }
 
     final boolean e(int param0, int param1) {

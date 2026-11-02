@@ -11,7 +11,7 @@ final class nl {
         if (param0 != 719) {
           return true;
         }
-        if (this == wo.field_g) {
+        if (this == DualLinkDeque.field_g) {
           return true;
         }
         if (this == ff.field_b) {

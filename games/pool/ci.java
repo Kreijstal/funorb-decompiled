@@ -19,7 +19,7 @@ final class ci {
     private int field_o;
     private int field_b;
     static String field_m;
-    static dd field_h;
+    static Sprite field_h;
     static int[] field_p;
 
     final boolean c(byte param0) {
@@ -184,7 +184,7 @@ final class ci {
     final static void d(byte param0) {
         wd.field_Ub.k(-22216);
         if (of.field_Nb == null) {
-          of.field_Nb = new wa(wd.field_Ub, oa.field_d);
+          of.field_Nb = new wa(wd.field_Ub, ClientException.field_d);
         }
         if (param0 <= -108) {
           wd.field_Ub.b(of.field_Nb, 30000);
@@ -437,6 +437,6 @@ final class ci {
         field_i = -1;
         field_a = "Your ignore list is full. Max of 100 hit.";
         field_m = "If you are not, please change your password to something more obscure!";
-        field_h = new dd(270, 70);
+        field_h = new Sprite(270, 70);
     }
 }

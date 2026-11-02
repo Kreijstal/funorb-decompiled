@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pm extends ma {
+final class pm extends IntrusiveNode {
     static String field_o;
     static int field_p;
     so field_n;
     static vh field_m;
     static int field_l;
 
-    final static void a(byte[] param0, byte[] param1, String[][] param2, di param3, dd[][] param4, int param5, qb[] param6, int[] param7, dd[][] param8, int param9, String[] param10, di param11, boolean param12, int[] param13, di param14, String[][] param15, int param16) {
+    final static void a(byte[] param0, byte[] param1, String[][] param2, di param3, Sprite[][] param4, int param5, qb[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, di param11, boolean param12, int[] param13, di param14, String[][] param15, int param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -132,7 +132,7 @@ final class pm extends ma {
 
     final static int a(int param0) {
         if (param0 != -27011) {
-          pm.a((byte[]) null, (byte[]) null, (String[][]) null, (di) null, (dd[][]) null, 100, (qb[]) null, (int[]) null, (dd[][]) null, 104, (String[]) null, (di) null, false, (int[]) null, (di) null, (String[][]) null, 112);
+          pm.a((byte[]) null, (byte[]) null, (String[][]) null, (di) null, (Sprite[][]) null, 100, (qb[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (di) null, false, (int[]) null, (di) null, (String[][]) null, 112);
           if (cl.a(1, pl.field_b)) {
             return 0;
           }

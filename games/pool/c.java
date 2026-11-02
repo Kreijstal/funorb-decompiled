@@ -4,7 +4,7 @@
 final class c {
     static int field_b;
     static String field_a;
-    static dd[] field_c;
+    static Sprite[] field_c;
     static vh field_e;
     static long field_d;
 
@@ -57,14 +57,14 @@ final class c {
           var5 = qh.field_l;
           var6 = qh.field_f;
           var16 = qh.field_d;
-          ue.field_c = new dd(10, 14);
+          ue.field_c = new Sprite(10, 14);
           ue.field_c.e();
           for (var8 = 2; var8 < 7; var8++) {
             qh.b(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           qh.a(var16, var5, var6);
           w.field_b = hk.a(br.field_J, bf.field_c, var4, tp.field_i, (byte) 112);
-          e.field_a.field_T = new ko();
+          e.field_a.field_T = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

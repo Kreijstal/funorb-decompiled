@@ -158,7 +158,7 @@ final class pp {
         if (!param0) {
           return true;
         }
-        stackIn_6_0 = (fe.a(oa.field_g, -13671, 26)) || (ko.a(0, (byte) -127));
+        stackIn_6_0 = (fe.a(ClientException.field_g, -13671, 26)) || (IntrusiveDeque.a(0, (byte) -127));
         return stackIn_6_0;
     }
 

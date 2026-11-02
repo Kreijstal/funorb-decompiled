@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends ma {
+final class dn extends IntrusiveNode {
     int[] field_l;
     static String field_p;
     static int[][] field_m;
     static int[] field_n;
-    static dd[] field_o;
+    static Sprite[] field_o;
     int field_q;
 
     public static void a(int param0) {

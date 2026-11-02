@@ -5,7 +5,7 @@ final class nn {
     static boolean field_d;
     static oo[] field_b;
     static int field_c;
-    static dd[][] field_a;
+    static Sprite[][] field_a;
     static int[][] field_e;
 
     final static void a(boolean param0, int param1, int param2) {
@@ -18,7 +18,7 @@ final class nn {
           tf.field_a.field_j[vn.field_e] = (nc) (tf.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
         tf.field_a.a(tp.field_h, bf.field_i, vn.field_e, -3637);
-        uf var3 = ba.field_ub;
+        PoolMatchController var3 = ba.field_ub;
         if (var3 == null) {
           var3 = am.field_e;
         }
@@ -51,7 +51,7 @@ final class nn {
 
     public static void a(int param0) {
         field_b = null;
-        field_a = (dd[][]) null;
+        field_a = (Sprite[][]) null;
         if (param0 != 16006) {
           return;
         }
@@ -140,7 +140,7 @@ final class nn {
             return (id) null;
           }
           try {
-            stackIn_3_0 = (id) (Class.forName("po").newInstance());
+            stackIn_3_0 = (id) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,6 +157,6 @@ final class nn {
     static {
         field_d = false;
         field_e = new int[64][3];
-        field_a = new dd[][]{null, null, null, null};
+        field_a = new Sprite[][]{null, null, null, null};
     }
 }

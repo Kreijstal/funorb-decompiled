@@ -7,8 +7,8 @@ final class rf {
     static char[] field_a;
     static String field_b;
     static int field_d;
-    static dd field_g;
-    static dd field_e;
+    static Sprite field_g;
+    static Sprite field_e;
     static int field_c;
 
     final static String a(byte param0) {
@@ -90,7 +90,7 @@ final class rf {
     final static void a(String param0, int param1, String param2) {
         try {
           if (param1 > -116) {
-            field_g = (dd) null;
+            field_g = (Sprite) null;
           }
           if (d.field_d != null) {
             d.field_d.k(17);

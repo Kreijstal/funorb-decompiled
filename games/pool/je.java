@@ -6,7 +6,7 @@ final class je {
     static String field_a;
     static String field_b;
 
-    final static void a(sj param0, int param1, int param2, int param3, String param4, byte param5, int param6, int param7, int param8) {
+    final static void a(PlatformTaskDispatcher param0, int param1, int param2, int param3, String param4, byte param5, int param6, int param7, int param8) {
         try {
           na.field_a = param6;
           nr.field_X = param4;
@@ -63,8 +63,8 @@ final class je {
         try {
           var6 = ej.field_j;
           var6.b(param5, param0);
-          var6.field_v = var6.field_v + 1;
-          var7 = var6.field_v;
+          var6.position = var6.position + 1;
+          var7 = var6.position;
           var6.a(4, false);
           var6.a(param1, param5);
           var8 = param4;
@@ -73,7 +73,7 @@ final class je {
           }
           var6.a(var8, param5);
           var6.a(param3, (byte) 0, 0, param3.length);
-          var6.b(var6.field_v - var7, !param5 ? true : false);
+          var6.b(var6.position - var7, !param5 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "je.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

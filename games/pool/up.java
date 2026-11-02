@@ -11,7 +11,7 @@ final class up extends lh {
     static int field_l;
     private ad field_z;
     static String field_L;
-    private bm field_G;
+    private IterableNodeHashTable field_G;
     static String field_K;
     private byte[] field_E;
     private int field_y;
@@ -28,8 +28,8 @@ final class up extends lh {
     private int field_x;
     private boolean field_B;
     private boolean field_C;
-    private ko field_q;
-    private ko field_s;
+    private IntrusiveDeque field_q;
+    private IntrusiveDeque field_s;
     private long field_F;
     private boolean field_A;
 
@@ -44,17 +44,17 @@ final class up extends lh {
         if (this.b((byte) -21) == null) {
           return;
         }
-        ma var2 = this.field_q.c((byte) 111);
+        IntrusiveNode var2 = this.field_q.c((byte) 111);
         while (var2 != null) {
-          var3 = (int)var2.field_c;
+          var3 = (int)var2.key;
           if (0 > var3) {
-            var2.a((byte) -117);
+            var2.unlink((byte) -117);
           } else {
             if (var3 >= this.field_z.field_d) {
-              var2.a((byte) -117);
+              var2.unlink((byte) -117);
             } else {
               if (this.field_z.field_s[var3] == 0) {
-                var2.a((byte) -117);
+                var2.unlink((byte) -117);
               } else {
                 if (this.field_E[var3] == 0) {
                   discarded$0 = this.a(var3, 1, (byte) 25);
@@ -63,7 +63,7 @@ final class up extends lh {
                   discarded$1 = this.a(var3, 2, (byte) 25);
                 }
                 if (this.field_E[var3] == 1) {
-                  var2.a((byte) -117);
+                  var2.unlink((byte) -117);
                 }
               }
             }
@@ -83,7 +83,7 @@ final class up extends lh {
           }
           this.field_B = true;
           if (null == this.field_s) {
-            this.field_s = new ko();
+            this.field_s = new IntrusiveDeque();
           }
           return;
         }
@@ -184,13 +184,13 @@ final class up extends lh {
         return (int)(1000000000L / oh.field_e);
     }
 
-    final static dd[] a(dd[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        dd var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        dd[] stackIn_3_0 = null;
-        dd[] stackIn_8_0 = null;
+        Sprite[] stackIn_3_0 = null;
+        Sprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -198,7 +198,7 @@ final class up extends lh {
         var4 = Pool.field_O;
         try {
           if (param1 != 12519) {
-            stackIn_3_0 = (dd[]) null;
+            stackIn_3_0 = (Sprite[]) null;
             return stackIn_3_0;
           }
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
@@ -208,7 +208,7 @@ final class up extends lh {
             param0[var2_int].field_w = param0[var2_int].field_z;
             param0[var2_int].field_y = param0[var2_int].field_A;
           }
-          stackIn_8_0 = (dd[]) (param0);
+          stackIn_8_0 = (Sprite[]) (param0);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -344,7 +344,7 @@ final class up extends lh {
           param1 == 0 &&
           !var12.field_x &&
           var12.field_F) {
-          var12.a((byte) -117);
+          var12.unlink((byte) -117);
           var4 = null;
         }
         if (var4 == null) {
@@ -380,7 +380,7 @@ final class up extends lh {
               var4 = this.field_r.a(param0, this.field_k, (byte) 2, false, -154018400);
             }
           }
-          this.field_G.a((byte) -114, (ma) (var4), (long)param0);
+          this.field_G.a((byte) -114, (IntrusiveNode) (var4), (long)param0);
         }
         if (((gr) (var4)).field_F) {
           return null;
@@ -421,7 +421,7 @@ final class up extends lh {
                 this.field_E[param0] = (byte) 1;
               }
               if (!((gr) (var4)).field_x) {
-                ((gr) (var4)).a((byte) -117);
+                ((gr) (var4)).unlink((byte) -117);
               }
               stackIn_88_0 = var4;
               return (gr) (stackIn_88_0);
@@ -431,13 +431,13 @@ final class up extends lh {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_E[param0] = (byte)-1;
-            ((gr) (var4)).a((byte) -117);
+            ((gr) (var4)).unlink((byte) -117);
             if (!((gr) (var4)).field_x) {
               return null;
             }
             if (!this.field_r.b((byte) -125)) {
               var4 = this.field_r.a(param0, this.field_k, (byte) 2, true, param2 ^ -154018375);
-              this.field_G.a((byte) -127, (ma) (var4), (long)param0);
+              this.field_G.a((byte) -127, (IntrusiveNode) (var4), (long)param0);
             }
             return null;
           }
@@ -470,7 +470,7 @@ final class up extends lh {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_r.a((byte) -53);
-          ((gr) (var4)).a((byte) -117);
+          ((gr) (var4)).unlink((byte) -117);
           if (!((gr) (var4)).field_x) {
             return null;
           }
@@ -478,7 +478,7 @@ final class up extends lh {
             return null;
           }
           var4 = this.field_r.a(param0, this.field_k, (byte) 2, true, -154018400);
-          this.field_G.a((byte) -124, (ma) (var4), (long)param0);
+          this.field_G.a((byte) -124, (IntrusiveNode) (var4), (long)param0);
           return null;
         }
         var5[var18.length - 2] = (byte)(this.field_z.field_i[param0] >>> 8);
@@ -490,7 +490,7 @@ final class up extends lh {
           }
         }
         if (!((gr) (var4)).field_x) {
-          ((gr) (var4)).a((byte) -117);
+          ((gr) (var4)).unlink((byte) -117);
         }
         return (gr) (var4);
     }
@@ -502,17 +502,17 @@ final class up extends lh {
         gr discarded$2 = null;
         int var2_int;
         gr var2;
-        ma var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ma var6;
-        ma var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var2_intLifetime3;
         int var2_intLifetime4;
         int var4Lifetime1;
-        ma var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Pool.field_O;
         if (this.field_s != null) {
@@ -523,12 +523,12 @@ final class up extends lh {
             var2_int = 1;
             var3 = this.field_s.c((byte) 78);
             while (var3 != null) {
-              var4 = (int)var3.field_c;
+              var4 = (int)var3.key;
               if (0 == this.field_E[var4]) {
                 discarded$1 = this.a(var4, 1, (byte) 25);
               }
               if (this.field_E[var4] != 0) {
-                var3.a((byte) -117);
+                var3.unlink((byte) -117);
               } else {
                 var2_int = 0;
               }
@@ -544,8 +544,8 @@ final class up extends lh {
                   discarded$0 = this.a(this.field_x, 1, (byte) 25);
                 }
                 if (this.field_E[this.field_x] == 0) {
-                  var7 = new ma();
-                  var7.field_c = (long)this.field_x;
+                  var7 = new IntrusiveNode();
+                  var7.key = (long)this.field_x;
                   this.field_s.b((byte) -64, var7);
                   var2_int = 0;
                 }
@@ -566,30 +566,30 @@ final class up extends lh {
               var2_intLifetime4 = 1;
               var3Lifetime1 = this.field_s.c((byte) -58);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_c;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_E[var4Lifetime1] != 1) {
                   discarded$3 = this.a(var4Lifetime1, 2, (byte) 25);
                 }
                 if (this.field_E[var4Lifetime1] == 1) {
-                  var3Lifetime1.a((byte) -117);
+                  var3Lifetime1.unlink((byte) -117);
                 } else {
                   var2_intLifetime4 = 0;
                 }
                 var3Lifetime1 = this.field_s.f((byte) -5);
               }
-              L10: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_x < this.field_z.field_s.length) {
                   if (this.field_z.field_s[this.field_x] != 0) {
                     if (this.field_r.a(20)) {
                       var2_intLifetime4 = 0;
-                      break L10;
+                      break scanLoop1;
                     }
                     if (this.field_E[this.field_x] != 1) {
                       discarded$2 = this.a(this.field_x, 2, (byte) 25);
                     }
                     if (this.field_E[this.field_x] != 1) {
-                      var6 = new ma();
-                      var6.field_c = (long)this.field_x;
+                      var6 = new IntrusiveNode();
+                      var6.key = (long)this.field_x;
                       var2_intLifetime4 = 0;
                       this.field_s.b((byte) 96, var6);
                     }
@@ -627,7 +627,7 @@ final class up extends lh {
               if (!var2.field_x) {
                 throw new RuntimeException();
               }
-              var2.a((byte) -117);
+              var2.unlink((byte) -117);
             }
           }
           var2 = (gr) (this.field_G.b(-1));
@@ -645,7 +645,7 @@ final class up extends lh {
         }
         if (param1 == 19) {
           var4 = var3.b(false);
-          var3.a((byte) -117);
+          var3.unlink((byte) -117);
           return var4;
         }
         return (byte[]) null;
@@ -666,16 +666,16 @@ final class up extends lh {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_G = new bm(16);
+        this.field_G = new IterableNodeHashTable(16);
         this.field_x = 0;
-        this.field_q = new ko();
+        this.field_q = new IntrusiveDeque();
         this.field_F = 0L;
         try {
           this.field_k = param0;
           this.field_t = param1;
           if (null != this.field_t) {
             this.field_C = true;
-            this.field_s = new ko();
+            this.field_s = new IntrusiveDeque();
           } else {
             this.field_C = false;
           }
