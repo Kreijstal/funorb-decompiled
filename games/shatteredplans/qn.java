@@ -103,10 +103,10 @@ final class qn {
           return;
         }
         try {
-          for (var1_int = 0; var1_int < da.field_g; var1_int++) {
+          for (var1_int = 0; var1_int < DebouncedValidator.field_g; var1_int++) {
             wm.field_d[var1_int] = null;
           }
-          da.field_g = 0;
+          DebouncedValidator.field_g = 0;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
         }

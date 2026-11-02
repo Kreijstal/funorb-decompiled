@@ -90,7 +90,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (param0 >= -90) {
           return false;
         }
-        return ~np.field_a.field_fc == ~ec.field_p ? true : false;
+        return ~np.field_a.field_fc == ~UsernameAvailabilityValidator.field_p ? true : false;
     }
 
     public static void a(int param0) {

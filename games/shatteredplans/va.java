@@ -101,7 +101,7 @@ final class va {
               return;
             }
             if (param2 <= 105) {
-              wh.field_c = tc.a(args, (byte) -64);
+              wh.field_c = DialogRoot.a(args, (byte) -64);
               return;
             }
             wh.field_c = ck.a(param3, param2, -80);
@@ -149,7 +149,7 @@ final class va {
           var4_int = param3.a(123, param2);
           var5 = param3.a(var4_int, (byte) 106, param0);
           if (param1 == 0) {
-            stackIn_4_0 = um.a(var4_int, param3, var5, param1 - 84);
+            stackIn_4_0 = PlayerStats.a(var4_int, param3, var5, param1 - 84);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite[]) null;

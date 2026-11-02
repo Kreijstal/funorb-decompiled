@@ -21,11 +21,11 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
         int var11 = 0;
         int var12 = 0;
         try {
-          mb.field_n.field_z = param3;
+          AgeValidator.field_n.field_z = param3;
           if (em.field_h == 2) {
             cb.field_l.field_z = kh.field_Kb;
           } else {
-            cb.field_l.field_z = SolarFlareEvent.field_m;
+            cb.field_l.field_z = StellarBombEvent.field_m;
           }
           var9_int = 495;
           var10 = 5;
@@ -37,7 +37,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           var11 = cb.field_l.e(false);
           cb.field_l.a(var11, param1, (byte) 39, var10, -var11 + (-5 + var9_int));
           var12 = 5 + (var10 + param1);
-          mb.field_n.a(var9_int, param7, (byte) 70, 0, 0);
+          AgeValidator.field_n.a(var9_int, param7, (byte) 70, 0, 0);
           fe.field_w.a(var9_int, var12, (byte) 48, param7, 0);
           fe.field_w.field_F = Wormhole.a(16, 3, fe.field_w.field_mb, 11579568, 8421504, 2105376);
           var12 = var12 + param7;
@@ -78,7 +78,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
             }
           }
           wl.field_b = ah.field_Q;
-          qr.a(hn.field_j, pg.field_C, MidiPcmStream.field_w, ub.field_Db, CellVertex.field_d, 5, w.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
+          qr.a(hn.field_j, pg.field_C, MidiPcmStream.field_w, ub.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
           gn.field_y = id.a(2, param5, "", "lobbyicon");
           hm.field_o = false;
           pe.field_D = ms.field_c;

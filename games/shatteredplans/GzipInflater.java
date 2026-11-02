@@ -104,7 +104,7 @@ final class GzipInflater {
               return;
             }
             if (var2 != 4) {
-              GameKeyHandler.a(-29901, (Throwable) null, "F1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "F1: " + Dialog.a(16738));
               q.g(-101);
               return;
             }
@@ -183,17 +183,17 @@ final class GzipInflater {
     }
 
     final static void a(int param0) {
-        ec.a(-1, FullscreenFocusCanvas.field_a, 5);
+        UsernameAvailabilityValidator.a(-1, FullscreenFocusCanvas.field_a, 5);
         if (param0 != 1) {
           return;
         }
         try {
-          ec.a(param0 ^ -2, bg.field_c, 8);
+          UsernameAvailabilityValidator.a(param0 ^ -2, bg.field_c, 8);
           if (!AttackTask.d((byte) 104)) {
-            ec.a(-1, IterableNodeHashTable.field_h, 1);
-            ec.a(-1, SecondaryNodeDeque.field_b, 2);
-            ec.a(param0 ^ -2, hr.field_e, 3);
-            ec.a(param0 ^ -2, lm.field_e, 4);
+            UsernameAvailabilityValidator.a(-1, IterableNodeHashTable.field_h, 1);
+            UsernameAvailabilityValidator.a(-1, SecondaryNodeDeque.field_b, 2);
+            UsernameAvailabilityValidator.a(param0 ^ -2, hr.field_e, 3);
+            UsernameAvailabilityValidator.a(param0 ^ -2, lm.field_e, 4);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "s.C(" + param0 + ')');

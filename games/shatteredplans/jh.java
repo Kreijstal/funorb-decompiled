@@ -131,7 +131,7 @@ final class jh extends vd implements ok {
           WhirlpoolHasher.field_j = cg.field_C;
           uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           fa.field_X = new qr(0L, param1);
-          mb.field_n = new qr(0L, param2);
+          AgeValidator.field_n = new qr(0L, param2);
           fe.field_w = new qr(0L, (qr) null);
           sg.field_Ab = new qr(0L, param3);
           uq.field_j = new qr((long)param4, param0);
@@ -141,7 +141,7 @@ final class jh extends vd implements ok {
           sg.field_Ab.a(4, cg.field_C);
           hd.field_m = new qr(0L, BoundsRect.field_k, ld.field_n);
           cb.field_l = new qr(0L, BoundsRect.field_k);
-          fa.field_X.a(4, mb.field_n);
+          fa.field_X.a(4, AgeValidator.field_n);
           fa.field_X.a(4, fe.field_w);
           fe.field_w.a(4, sg.field_Ab);
           fe.field_w.a(param4 + 4, hd.field_m);

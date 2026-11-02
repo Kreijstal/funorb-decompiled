@@ -18,14 +18,14 @@ final class js {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         gm var2Lifetime1;
         try {
-          tf.field_p = param0;
+          CheckboxPainter.field_p = param0;
           if (param1 != 197126152) {
             js.b((byte) -92);
           }
           var2 = (gm) (eo.field_ab.startForward(0));
           while (var2 != null) {
             if (var2.field_n.isLinked(param1 - 197124104)) {
-              var2.field_p.e(var2.field_h * tf.field_p + 128 >> 8);
+              var2.field_p.e(var2.field_h * CheckboxPainter.field_p + 128 >> 8);
             } else {
               var2.unlink((byte) -75);
             }
@@ -37,7 +37,7 @@ final class js {
               if (!var2Lifetime1.field_n.isLinked(param1 - 197124104)) {
                 var2Lifetime1.unlink((byte) -69);
               } else {
-                var2Lifetime1.field_p.e(128 + tf.field_p * var2Lifetime1.field_h >> 8);
+                var2Lifetime1.field_p.e(128 + CheckboxPainter.field_p * var2Lifetime1.field_h >> 8);
               }
               var2Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
             }
@@ -388,11 +388,11 @@ final class js {
           kp.field_j = jb.field_d;
           ph.field_g = false;
           WhirlpoolHasher.field_g = false;
-          DerelictMapGenerator.field_q = tp.field_b;
+          DerelictMapGenerator.field_q = SliderPainter.field_b;
           WeightedLruCache.field_g = hm.field_q;
           ArchiveRequest.field_r = fe.field_B;
           VictoryChecker.field_j = false;
-          td.field_L = false;
+          SliderWidget.field_L = false;
           AchievementProgress.field_k = false;
           if (param0 != -10) {
             js.a((byte) 43);

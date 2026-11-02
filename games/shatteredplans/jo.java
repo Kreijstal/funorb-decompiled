@@ -96,7 +96,7 @@ final class jo {
             MusicTrack var5 = (MusicTrack) null;
             jo.a(6, (MusicTrack) null, false, -66);
           }
-          u.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
+          ValidationState.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "jo.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

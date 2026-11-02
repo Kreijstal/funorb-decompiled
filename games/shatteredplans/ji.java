@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ji extends WidgetContainer implements ki {
+abstract class ji extends WidgetContainer implements ValidatableWidget {
     static ns field_G;
     static ub field_I;
     static String field_F;
@@ -20,17 +20,17 @@ abstract class ji extends WidgetContainer implements ki {
         field_D = (int[][]) null;
     }
 
-    ji(int param0, int param1, int param2, int param3, iq param4) {
+    ji(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 
     abstract int f(byte param0);
 
-    public final gk a(byte param0) {
+    public final ValidationSource a(byte param0) {
         if (param0 < 58) {
           field_I = (ub) null;
         }
-        return (gk) ((Object) this.field_H);
+        return (ValidationSource) ((Object) this.field_H);
     }
 
     void a(ja param0, int param1) {
@@ -83,14 +83,14 @@ abstract class ji extends WidgetContainer implements ki {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (tc.a(param0.charAt(var2_int), 2)) {
+            if (DialogRoot.a(param0.charAt(var2_int), 2)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (tc.a(param0.charAt(-1 + var3), 2)) {
+            if (DialogRoot.a(param0.charAt(-1 + var3), 2)) {
               var3--;
               continue;
             }
@@ -206,19 +206,19 @@ abstract class ji extends WidgetContainer implements ki {
           if (param0 != -7416) {
             ji.a(7);
           }
-          if (ue.field_a == fj.field_s) {
+          if (ue.field_a == MatchingTextValidator.field_s) {
             stackIn_4_0 = null;
             return (kj) (stackIn_4_0);
           }
-          if (rh.field_g == fj.field_s &&
+          if (rh.field_g == MatchingTextValidator.field_s &&
             param1.equals(gp.field_b)) {
-            fj.field_s = oj.field_Fb;
+            MatchingTextValidator.field_s = oj.field_Fb;
             stackIn_8_0 = ij.field_a;
             return stackIn_8_0;
           }
           gp.field_b = param1;
           ij.field_a = null;
-          fj.field_s = ue.field_a;
+          MatchingTextValidator.field_s = ue.field_a;
           stackIn_10_0 = null;
           return (kj) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

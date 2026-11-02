@@ -588,8 +588,8 @@ class WidgetContainer extends UiWidget implements ni {
         return null;
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, iq param4) {
-        super(param0, param1, param2, param3, param4, (ko) null);
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
         this.field_A = new IntrusiveDeque();
     }
 

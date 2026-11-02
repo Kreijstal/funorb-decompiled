@@ -25,7 +25,7 @@ final class eo extends jl {
         this.field_bb.field_L = false;
     }
 
-    eo(tc param0, String param1) {
+    eo(DialogRoot param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {

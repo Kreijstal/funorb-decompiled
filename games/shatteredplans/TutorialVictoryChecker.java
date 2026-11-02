@@ -13,10 +13,10 @@ final class TutorialVictoryChecker extends VictoryChecker {
     static int[] field_m;
     private int[] field_n;
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void readScores(PacketBuffer param0, byte param1) {
         try {
           if (param1 != -109) {
-            this.b(true);
+            this.resultsPanelHeight(true);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -49,7 +49,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         }
     }
 
-    final void a(byte param0, GameState param1, GameScreen param2) {
+    final void showResults(byte param0, GameState param1, GameScreen param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_45_0 = null;
@@ -191,14 +191,14 @@ final class TutorialVictoryChecker extends VictoryChecker {
         }
     }
 
-    final int b(boolean param0) {
+    final int resultsPanelHeight(boolean param0) {
         if (param0) {
           field_p = (int[][]) null;
         }
-        return 4 * cc.field_n + rs.field_Cb.field_J;
+        return 4 * PasswordValidator.field_n + rs.field_Cb.field_J;
     }
 
-    final boolean a(GameState param0, byte param1) {
+    final boolean detectWinners(GameState param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -253,7 +253,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         }
     }
 
-    final Player[] b(int param0) {
+    final Player[] projectedWinners(int param0) {
         if (param0 != 0) {
           this.field_n = (int[]) null;
         }
@@ -274,7 +274,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         field_l = null;
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writeScores(int param0, PacketBuffer param1) {
         try {
           int var3_int = 1 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
@@ -296,7 +296,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          tp.a((int[]) null, param1.field_Ib, param1.field_Cb, param1.field_Db, 293, param3, param1, -1, -1);
+          SliderPainter.a((int[]) null, param1.field_Ib, param1.field_Cb, param1.field_Db, 293, param3, param1, -1, -1);
           DerelictVictoryChecker.field_m.a(true, param6 ^ -16763);
           DerelictVictoryChecker.field_m.a((int[]) null, 0, (byte) -36);
           DerelictVictoryChecker.field_m.b(17);

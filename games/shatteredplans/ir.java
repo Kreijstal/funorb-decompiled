@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ir extends WidgetContainer implements dl, bp {
+final class ir extends WidgetContainer implements dl, ButtonListener {
     static int field_D;
     private fa field_H;
     static int field_E;
-    private kg field_G;
+    private FocusableWidget field_G;
     bj field_F;
-    private kg field_I;
+    private FocusableWidget field_I;
 
     private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, boolean param6) {
         RuntimeException var8 = null;
@@ -24,12 +24,12 @@ final class ir extends WidgetContainer implements dl, bp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param6) {
-            this.field_I = (kg) null;
+            this.field_I = (FocusableWidget) null;
           }
           var10 = new pg(20, param1, 120 + param2, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -68, var10);
-          var9 = new ah(((ki) ((Object) param3)).a((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
-          var9.field_u = (ko) (this);
+          var9 = new ah(((ValidatableWidget) ((Object) param3)).a((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
+          var9.field_u = (WidgetListener) (this);
           this.b((byte) -100, var9);
           stackIn_3_0 = var9.field_n + var10.field_n;
           return stackIn_3_0;
@@ -70,12 +70,12 @@ final class ir extends WidgetContainer implements dl, bp {
 
     public final void a(int param0) {
         if (param0 == 2147483647) {
-          ((ec) (this.field_H.a((byte) 63))).d(0);
+          ((UsernameAvailabilityValidator) (this.field_H.a((byte) 63))).d(0);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.a(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
-        ((ec) (this.field_H.a((byte) 63))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_H.a((byte) 63))).d(0);
     }
 
     public final void a(int param0, String param1) {
@@ -87,7 +87,7 @@ final class ir extends WidgetContainer implements dl, bp {
           }
           var3 = this.field_H;
           var4 = param1;
-          ((go) ((Object) var3)).a(63, var4, false);
+          ((TextFieldWidget) ((Object) var3)).a(63, var4, false);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -131,7 +131,7 @@ final class ir extends WidgetContainer implements dl, bp {
         FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -212,12 +212,12 @@ final class ir extends WidgetContainer implements dl, bp {
     private final boolean k(int param0) {
         if (param0 != -60) {
           this.field_F = (bj) null;
-          if (this.a((ki) (this.field_H), (byte) 13)) {
+          if (this.a((ValidatableWidget) (this.field_H), (byte) 13)) {
             return true;
           }
           return false;
         }
-        if (this.a((ki) (this.field_H), (byte) 13)) {
+        if (this.a((ValidatableWidget) (this.field_H), (byte) 13)) {
           return true;
         }
         return false;
@@ -263,10 +263,10 @@ final class ir extends WidgetContainer implements dl, bp {
         }
     }
 
-    private final boolean a(ki param0, byte param1) {
-        gk var3 = null;
+    private final boolean a(ValidatableWidget param0, byte param1) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        u var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -298,18 +298,18 @@ final class ir extends WidgetContainer implements dl, bp {
     }
 
     public ir() {
-        super(0, 0, 496, 0, (iq) null);
-        this.field_H = new fa("", (ko) null, 12);
-        o var1 = new o(mf.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(IterableNodeHashTable.field_i, var1, (ko) null);
-        this.field_I = new kg(ck.field_c, (ko) null);
-        this.field_G = new kg(fb.field_bc, (ko) null);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_H = new fa("", (WidgetListener) null, 12);
+        WidgetTheme var1 = new WidgetTheme(EmailValidator.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(IterableNodeHashTable.field_i, var1, (WidgetListener) null);
+        this.field_I = new FocusableWidget(ck.field_c, (WidgetListener) null);
+        this.field_G = new FocusableWidget(fb.field_bc, (WidgetListener) null);
         this.field_H.field_v = WeightedLruCache.field_i;
-        this.field_H.a(new ec(this.field_H), 8945);
+        this.field_H.a(new UsernameAvailabilityValidator(this.field_H), 8945);
         this.field_I.field_y = false;
-        this.field_I.field_p = (iq) ((Object) new qp());
-        this.field_G.field_p = (iq) ((Object) new rq());
-        this.field_H.field_p = (iq) ((Object) new rr(10000536));
+        this.field_I.field_p = (WidgetPainter) ((Object) new qp());
+        this.field_G.field_p = (WidgetPainter) ((Object) new LinkPainter());
+        this.field_H.field_p = (WidgetPainter) ((Object) new rr(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -319,8 +319,8 @@ final class ir extends WidgetContainer implements dl, bp {
         var3 = var3 + (this.a((byte) -110, 170, var3, this.field_H, AllianceExpiredEvent.field_m, MapView.field_zb) + 5);
         this.field_I.a(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
         this.field_G.a(var3 + 15, 40, (byte) 127, var4 + 3, 60);
-        this.field_G.field_u = (ko) (this);
-        this.field_I.field_u = (ko) (this);
+        this.field_G.field_u = (WidgetListener) (this);
+        this.field_I.field_u = (WidgetListener) (this);
         this.b((byte) -63, this.field_I);
         this.b((byte) -48, this.field_G);
         this.field_F = new bj((dl) (this));

@@ -5,7 +5,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private SectorCacheStore field_r;
     private byte[] field_v;
     private int field_t;
-    static u field_g;
+    static ValidationState field_g;
     private DiskCacheWorker field_k;
     private IntrusiveNodeHashTable field_f;
     private SectorCacheStore field_o;
@@ -625,7 +625,7 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     static {
-        field_g = new u();
+        field_g = new ValidationState();
         field_y = "<%0> has joined your game.";
     }
 }

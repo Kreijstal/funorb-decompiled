@@ -43,8 +43,8 @@ final class di extends IntrusiveNode {
               for (var5_int = 0; rr.field_t > var5_int; var5_int++) {
                 sa.field_a.payload[var5_int] = var4_ref_sk.field_h[var5_int];
               }
-              IterableNodeHashTable.field_e = tp.field_g;
-              tp.field_g = kp.field_n;
+              IterableNodeHashTable.field_e = SliderPainter.field_g;
+              SliderPainter.field_g = kp.field_n;
               kp.field_n = BufferedCacheFile.field_e;
               BufferedCacheFile.field_e = var4_ref_sk.field_j;
               return true;
@@ -67,8 +67,8 @@ final class di extends IntrusiveNode {
               return false;
             }
             if (ArchiveRequest.field_o == 0) {
-              IterableNodeHashTable.field_e = tp.field_g;
-              tp.field_g = kp.field_n;
+              IterableNodeHashTable.field_e = SliderPainter.field_g;
+              SliderPainter.field_g = kp.field_n;
               kp.field_n = BufferedCacheFile.field_e;
               BufferedCacheFile.field_e = ArchiveNetworkClient.field_b;
               ArchiveNetworkClient.field_b = -1;
@@ -291,7 +291,7 @@ final class di extends IntrusiveNode {
             1 != po.field_b) {
             wg.field_a.field_s = false;
             wg.field_a.field_Db.field_zb.field_z = tb.field_c;
-            fj.a(false, wg.field_a.field_Eb);
+            MatchingTextValidator.a(false, wg.field_a.field_Eb);
             return;
           }
           wg.field_a.field_Db.field_zb.field_z = null;
@@ -351,13 +351,13 @@ final class di extends IntrusiveNode {
             }
             var5 = var6;
             if (0 != var6.field_rb) {
-              tp.a((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, wg.field_a.field_Db, var6, -1, -1);
+              SliderPainter.a((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, wg.field_a.field_Db, var6, -1, -1);
               var16 = DerelictVictoryChecker.field_m;
               var13_ref_String = TutorialVictoryChecker.field_o;
               var16.field_j.a(1, 7, var13_ref_String);
               var17 = DerelictVictoryChecker.field_m;
               var13 = PointsVictoryChecker.field_p;
-              var14 = td.field_P;
+              var14 = SliderWidget.field_P;
               var17.field_j.b(0, 0, 0, var13, var14);
             }
             var6 = (ve) (var4.nextForward((byte) -71));

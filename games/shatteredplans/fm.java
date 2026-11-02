@@ -29,7 +29,7 @@ final class fm {
             var2 = 2;
           }
         } else {
-          var2 = (w.d(true)) ? 0 : 1;
+          var2 = (Dialog.d(true)) ? 0 : 1;
         }
         if (null == BoundsRect.field_p &&
           cp.field_u) {

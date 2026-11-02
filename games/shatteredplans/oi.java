@@ -30,13 +30,13 @@ final class oi {
         RuntimeException var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          Star.field_K = mf.a(param1, "", "starfield", false);
+          Star.field_K = EmailValidator.a(param1, "", "starfield", false);
           mp.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
             mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
-          ce.field_v = mf.a(param1, "", "win", false);
-          dp.field_s = mf.a(param1, "", "lose", false);
+          ce.field_v = EmailValidator.a(param1, "", "win", false);
+          dp.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
             oi.a((byte) -117, (Archive) null);

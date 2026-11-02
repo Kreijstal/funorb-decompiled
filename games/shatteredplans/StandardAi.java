@@ -54,7 +54,7 @@ class StandardAi implements Ai {
           for (var8 = this.field_o - 1; var8 >= 0; var8--) {
             if (param2 != 0) {
               var9_int = param3[var8];
-              if (0 != u.field_d[var9_int]) {
+              if (0 != ValidationState.field_d[var9_int]) {
                 if (0 != WeightedLruCache.field_a[var9_int]) {
                   var10_int = WeightedLruCache.field_a[var9_int] * var6 / param1;
                   if (0 != var10_int) {
@@ -67,7 +67,7 @@ class StandardAi implements Ai {
                       throw new RuntimeException();
                     }
                     if (var11 < var10_int) {
-                      u.field_c[var9_int] = u.field_c[var9_int] + (-var11 + var10_int);
+                      ValidationState.field_c[var9_int] = ValidationState.field_c[var9_int] + (-var11 + var10_int);
                     }
                     var5_int = var5_int + var10_int;
                     param2 = param2 - var10_int;
@@ -223,7 +223,7 @@ class StandardAi implements Ai {
             cb.field_o[var6] = var8;
             StandardMapGenerator.field_i[var6] = var9;
             ei.field_d[var6] = this.d(var7, 2);
-            u.field_d[var6] = (var8 << 16) / var9;
+            ValidationState.field_d[var6] = (var8 << 16) / var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -798,7 +798,7 @@ class StandardAi implements Ai {
           var6 = this.field_g.field_g.field_e[var5];
           var4 = var4 + ja.field_i[var5];
           var4 = var4 - QuaternaryNodeList.field_b[var5];
-          var4 = var4 - u.field_c[var5];
+          var4 = var4 - ValidationState.field_c[var5];
           if (ja.field_i[var5] > var6.field_J) {
             throw new RuntimeException();
           }
@@ -974,7 +974,7 @@ class StandardAi implements Ai {
           var8Lifetime1 = 0;
           if (this.field_l) {
             var9Lifetime1 = this.a(param0, (byte) -58);
-            var7 = ik.a(u.field_d, this.field_o, (byte) 49);
+            var7 = ik.a(ValidationState.field_d, this.field_o, (byte) 49);
             if (var9Lifetime1 > var6) {
               var9Lifetime1 = var6;
             }
@@ -1024,7 +1024,7 @@ class StandardAi implements Ai {
           ue.field_e[var2] = 0;
           QuaternaryNodeList.field_b[var2] = 0;
           ja.field_i[var2] = 0;
-          u.field_c[var2] = 0;
+          ValidationState.field_c[var2] = 0;
           rl.field_b[var2] = false;
         }
         if (param0 != -17286) {
@@ -1228,7 +1228,7 @@ class StandardAi implements Ai {
           var3_int = 0;
           var4 = -58 % ((param0 - 53) / 47);
           while (this.field_o > var3_int) {
-            if (0 != u.field_c[var3_int]) {
+            if (0 != ValidationState.field_c[var3_int]) {
               var5_ref_ln = this.field_g.field_g.field_e[var3_int];
               var6 = null;
               var7 = var5_ref_ln.field_D;
@@ -1239,8 +1239,8 @@ class StandardAi implements Ai {
                   var6 = var9;
                 }
               }
-              this.a(u.field_c[var3_int], 86, (Star) (var6));
-              u.field_c[var3_int] = 0;
+              this.a(ValidationState.field_c[var3_int], 86, (Star) (var6));
+              ValidationState.field_c[var3_int] = 0;
               this.c(0, cq.field_E, -1);
             }
             var3_int++;
@@ -1388,7 +1388,7 @@ class StandardAi implements Ai {
               }
               if (var10 != param2.length) {
                 this.c(param0 + param1, cq.field_E, -1);
-                if (0 == u.field_d[var8]) {
+                if (0 == ValidationState.field_d[var8]) {
                   break scanLoop1;
                 }
                 if (ei.field_d[var8] <= param1) {
@@ -1998,11 +1998,11 @@ class StandardAi implements Ai {
               throw new RuntimeException();
             }
             if (var6 < var5) {
-              u.field_c[var4_int] = var5 - var6;
+              ValidationState.field_c[var4_int] = var5 - var6;
             }
             ig.field_c[var4_int] = ig.field_c[var4_int] + var6;
           } else {
-            u.field_c[var4_int] = var5;
+            ValidationState.field_c[var4_int] = var5;
           }
           if (param2 == 30) {
             stackIn_16_0 = var5;
@@ -2071,7 +2071,7 @@ class StandardAi implements Ai {
           cb.field_o[var2] = 0;
           StandardMapGenerator.field_i[var2] = 0;
           ei.field_d[var2] = 0;
-          u.field_d[var2] = 0;
+          ValidationState.field_d[var2] = 0;
           oe.field_i[var2] = 0;
           ig.field_c[var2] = 0;
           var2++;
@@ -2202,10 +2202,10 @@ class StandardAi implements Ai {
           this.a((Player) null, (byte) -78);
         }
         var4 = 0;
-        var5 = ik.a(u.field_c, this.field_o, (byte) 49);
+        var5 = ik.a(ValidationState.field_c, this.field_o, (byte) 49);
         for (var6 = 0; var6 < this.field_o; var6++) {
           var7 = var5[-var6 - 1 + this.field_o];
-          var8 = u.field_c[var7];
+          var8 = ValidationState.field_c[var7];
           if (0 != param0 &&
             0 != cq.field_E &&
             var8 != 0) {

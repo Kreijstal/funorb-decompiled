@@ -169,7 +169,7 @@ final class IsolationistAi extends StandardAi {
             if (!param1.field_h) {
               if (param1.field_l == 0 &&
                 param1.field_e == 0) {
-                var3 = re.a(fj.field_q, 4371, new String[]{(String) (var2)});
+                var3 = re.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
               } else {
                 var3 = re.a(cf.field_M, 4371, new String[]{(String) (var2)});
               }

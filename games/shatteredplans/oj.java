@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ns implements bp {
+final class oj extends ns implements ButtonListener {
     private boolean field_Eb;
     static String field_Bb;
     static String field_Ib;
@@ -41,7 +41,7 @@ final class oj extends ns implements bp {
             return;
           }
           for (var4 = 0; var3 > var4; var4++) {
-            vc.field_d[var4] = ec.a(var8, (byte) 6);
+            vc.field_d[var4] = UsernameAvailabilityValidator.a(var8, (byte) 6);
           }
           var10.i((byte) -47);
           var9 = 0;
@@ -83,7 +83,7 @@ final class oj extends ns implements bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_Eb) {
           wa.a((byte) -40, false, true);
           return;
@@ -134,7 +134,7 @@ final class oj extends ns implements bp {
         return super.a((byte) 30);
     }
 
-    oj(tc param0, aa param1) {
+    oj(DialogRoot param0, aa param1) {
         super(param0, CipherPacketBuffer.field_p, mp.field_a, false, false);
         try {
           this.field_Db = param1;
@@ -187,7 +187,7 @@ final class oj extends ns implements bp {
                 var5.a(ss.field_e, (byte) 106, -1);
               }
             } else {
-              var5.a((ko) (this), param0 ^ 108, gq.field_b);
+              var5.a((WidgetListener) (this), param0 ^ 108, gq.field_b);
             }
             if (param2.field_c == 3) {
               var5.a(rs.field_yb, (byte) 103, 7);
@@ -201,7 +201,7 @@ final class oj extends ns implements bp {
               this.b(new pe(this), -51);
               return;
             }
-            var5.a((ko) (this), param0 ^ 107, gq.field_b);
+            var5.a((WidgetListener) (this), param0 ^ 107, gq.field_b);
           }
           this.b(var5, 126);
           return;

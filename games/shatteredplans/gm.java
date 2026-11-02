@@ -63,7 +63,7 @@ final class gm extends IntrusiveNode {
           eh.field_C = param2;
           BoundsRect.field_j = true;
           if (eh.field_C == 0) {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, hl.field_D, ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, ts.field_K, 3);
             var4 = 3 + var3_int;
             kr.field_f = new String[var4];
             ss.field_a = new int[var4];
@@ -82,7 +82,7 @@ final class gm extends IntrusiveNode {
             ss.field_a[var4 - 1] = 1;
             ShatteredPlansClient.field_E[1] = 5;
           } else if (eh.field_C == 1) {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, hl.field_D, ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, ts.field_K, 3);
             var4 = 2 + var3_int;
             kr.field_f = new String[var4];
             ss.field_a = new int[var4];
@@ -100,9 +100,9 @@ final class gm extends IntrusiveNode {
           } else if (eh.field_C != 2) {
             if (eh.field_C == 3) {
               if (fa.field_W.field_w) {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, ja.field_k, ts.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ja.field_k, ts.field_K, 3);
               } else {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, BattleContribution.field_n, ts.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BattleContribution.field_n, ts.field_K, 3);
               }
               var4 = 2 + var3_int;
               kr.field_f = new String[var4];
@@ -119,7 +119,7 @@ final class gm extends IntrusiveNode {
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else if (4 == eh.field_C) {
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, lp.field_z, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, lp.field_z, ts.field_K, 3);
               var4 = var3_int + 2;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -138,7 +138,7 @@ final class gm extends IntrusiveNode {
               if (eh.field_C != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, AggressiveAi.field_p, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, AggressiveAi.field_p, ts.field_K, 3);
               var4 = 3 + var3_int;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -158,7 +158,7 @@ final class gm extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, re.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, re.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
@@ -175,7 +175,7 @@ final class gm extends IntrusiveNode {
             kd.field_b = new String[-1 + (var3_int - var4)];
             ps.a(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, re.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, re.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
                 continue;
@@ -347,7 +347,7 @@ final class gm extends IntrusiveNode {
 
     final void a(byte param0, int param1) {
         this.field_h = param1;
-        this.field_p.e(128 + tf.field_p * param1 >> 8);
+        this.field_p.e(128 + CheckboxPainter.field_p * param1 >> 8);
         int var3 = 85 % ((param0 - 59) / 59);
     }
 
@@ -356,7 +356,7 @@ final class gm extends IntrusiveNode {
           this.field_p = param0;
           this.field_h = param0.i();
           this.field_n = param1;
-          this.field_p.e(128 + this.field_h * tf.field_p >> 8);
+          this.field_p.e(128 + this.field_h * CheckboxPainter.field_p >> 8);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

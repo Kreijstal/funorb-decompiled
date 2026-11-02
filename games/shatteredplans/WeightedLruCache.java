@@ -102,7 +102,7 @@ final class WeightedLruCache {
           if (ih.b(-124)) {
             return true;
           }
-          if (tc.field_G != null) {
+          if (DialogRoot.field_G != null) {
             return true;
           }
           if (!ep.a(640)) {
@@ -116,7 +116,7 @@ final class WeightedLruCache {
         if (ih.b(-124)) {
           return true;
         }
-        if (tc.field_G != null) {
+        if (DialogRoot.field_G != null) {
           return true;
         }
         if (!ep.a(640)) {
@@ -136,19 +136,19 @@ final class WeightedLruCache {
         ff var2 = null;
         bd var3 = null;
         bd var4 = null;
-        go.field_E = new os(5, 5, 500, 45);
+        TextFieldWidget.field_E = new os(5, 5, 500, 45);
         ad var1 = new ad();
-        go.field_E.field_v = (jk) ((Object) var1);
+        TextFieldWidget.field_E.field_v = (jk) ((Object) var1);
         if (param0 == 69) {
           var2 = new ff(15, 10, 36, 36, (Sprite) null);
-          go.field_E.a(var2, 8);
+          TextFieldWidget.field_E.a(var2, 8);
           var1.field_e = var2;
-          var3 = new bd(15, 5 - (-(go.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
-          var4 = new bd(15, go.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
+          var3 = new bd(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
+          var4 = new bd(15, TextFieldWidget.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
           var1.field_f = var3;
-          go.field_E.a(var3, 8);
-          go.field_E.a(var4, param0 ^ 77);
-          return go.field_E;
+          TextFieldWidget.field_E.a(var3, 8);
+          TextFieldWidget.field_E.a(var4, param0 ^ 77);
+          return TextFieldWidget.field_E;
         }
         return (os) null;
     }

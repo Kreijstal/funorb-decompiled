@@ -68,7 +68,7 @@ class qk extends vd {
               }
               break;
             }
-            var6.a(SolarFlareEvent.a(param0, -var3 + var4, var3, -118), -126);
+            var6.a(StellarBombEvent.a(param0, -var3 + var4, var3, -118), -126);
             while (param0.length > var4) {
               if (13 == param0[var4] ||
                 param0[var4] == 10) {

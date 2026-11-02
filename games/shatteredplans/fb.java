@@ -95,7 +95,7 @@ final class fb extends qr {
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var9 = -18 % ((param2 + 43) / 35);
-          var17 = new lp(0, 0, 182, cc.field_n);
+          var17 = new lp(0, 0, 182, PasswordValidator.field_n);
           var10 = 0;
           var11_ref_fs__ = param6;
           for (var12_int = 0; var11_ref_fs__.length > var12_int; var12_int++) {
@@ -193,7 +193,7 @@ final class fb extends qr {
           gf.field_b == so.field_q.field_g)) {
           if (null == np.field_a) {
             if (null == he.field_p) {
-              tc.j(param9 ^ 97);
+              DialogRoot.j(param9 ^ 97);
             } else {
               en.a(param9 + 15471, true);
             }
@@ -206,7 +206,7 @@ final class fb extends qr {
         } else {
           tm.field_h = gn.field_t;
         }
-        mf.a(true, param5);
+        EmailValidator.a(true, param5);
         if (PlacementOrder.field_t > param9) {
           TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }
@@ -222,7 +222,7 @@ final class fb extends qr {
           np.field_a.field_Eb <= np.field_a.field_Lb) {
           ls.field_a.field_zb.field_z = gm.field_j;
           lp.field_v.field_s = false;
-          fj.a(false, ls.field_a.field_xb);
+          MatchingTextValidator.a(false, ls.field_a.field_xb);
         } else {
           lp.field_v.field_s = true;
           ls.field_a.field_zb.field_z = null;

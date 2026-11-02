@@ -56,7 +56,7 @@ abstract class il extends jl {
         }
     }
 
-    il(tc param0, UiWidget param1, int param2, int param3, int param4) {
+    il(DialogRoot param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_x, param1.field_n + param2 + 12);
         try {
           this.field_db = param2;

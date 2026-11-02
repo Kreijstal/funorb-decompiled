@@ -164,7 +164,7 @@ final class ch implements wr {
             ch.a((Archive) null, 22, -122, 78);
           }
           if (vd.a(param3, param2, param0, 2)) {
-            stackIn_6_0 = rq.a(0);
+            stackIn_6_0 = LinkPainter.a(0);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -198,14 +198,14 @@ final class ch implements wr {
             stackIn_3_0 = 86;
             return stackIn_3_0;
           }
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             ns.field_nb.b(0);
             if (!ns.field_nb.a((byte) -82)) {
               continue;
             }
             var1_int = 1;
           }
-          ns.field_nb.a(-1, ch.a(-15073, td.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, pd.field_k));
+          ns.field_nb.a(-1, ch.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, pd.field_k));
           if (ns.field_nb.a((byte) 36)) {
             var1_int = 1;
           }

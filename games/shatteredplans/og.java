@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og implements iq {
+final class og implements WidgetPainter {
     static int[] field_c;
     static bg field_b;
     static String field_a;
@@ -126,8 +126,8 @@ final class og implements iq {
           var7 = param3 + param0.field_q;
           ClientException.a((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
           var8 = lp.field_w[1];
-          if (param0 instanceof kg &&
-            ((kg) (param0)).field_z) {
+          if (param0 instanceof FocusableWidget &&
+            ((FocusableWidget) (param0)).field_z) {
             var8.c(1 + (var6_int + (param0.field_x - var8.field_o >> 1)), (-var8.field_p + param0.field_n >> 1) + 1 + var7, 256);
           }
           if (!param0.f(param4 ^ 13)) {

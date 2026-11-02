@@ -19,7 +19,7 @@ final class rh implements jk {
         RuntimeException var1_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = rp.i(0);
+          var1 = DialWidget.i(0);
           if (var1 != null &&
             var1 != StandardMapGenerator.field_j) {
             no.a(StandardMapGenerator.field_j, 1);
@@ -66,7 +66,7 @@ final class rh implements jk {
           return;
         }
         DerelictMapGenerator.c(-113);
-        tc.field_G = null;
+        DialogRoot.field_G = null;
         jp.g((byte) 122);
     }
 

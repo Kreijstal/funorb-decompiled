@@ -33,7 +33,7 @@ final class uo {
             return stackIn_3_0;
           }
           stackIn_6_0 = 55;
-          while (cc.$cfr$intArgs$e$296a4c2b494e(stackIn_6_0)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(stackIn_6_0)) {
             le.field_e.a(oq.field_j, ho.field_h, true);
             stackIn_6_0 = 55;
           }
@@ -47,7 +47,7 @@ final class uo {
             stackIn_15_0 = 3;
             return stackIn_15_0;
           }
-          if (fj.field_s == ue.field_a) {
+          if (MatchingTextValidator.field_s == ue.field_a) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
@@ -188,9 +188,9 @@ final class uo {
           qo.a(22353, ee.field_k);
           if (null != np.field_a) {
             boolean decompiledFrameRemainder0 = true;
-            i.field_g.field_s = true;
-            go.field_I.field_mb = 0;
-            var21 = go.field_I;
+            DialPainter.field_g.field_s = true;
+            TextFieldWidget.field_I.field_mb = 0;
+            var21 = TextFieldWidget.field_I;
             var25 = var21;
             var25.field_K = 0;
             var6 = aq.field_j;
@@ -208,15 +208,15 @@ final class uo {
             } else {
               ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
-              go.field_I.a(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
+              TextFieldWidget.field_I.a(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
               if (np.field_a.field_Lb >= np.field_a.field_Eb) {
-                go.field_I.field_z = gm.field_j.toUpperCase();
-                go.field_I.field_s = false;
+                TextFieldWidget.field_I.field_z = gm.field_j.toUpperCase();
+                TextFieldWidget.field_I.field_s = false;
               } else {
-                go.field_I.field_z = ph.field_c.toUpperCase();
-                go.field_I.field_s = true;
+                TextFieldWidget.field_I.field_z = ph.field_c.toUpperCase();
+                TextFieldWidget.field_I.field_s = true;
               }
-              go.field_I.field_F = IsaacBackedRandom.field_a.field_F;
+              TextFieldWidget.field_I.field_F = IsaacBackedRandom.field_a.field_F;
               if (0 < ah.field_X) {
                 if (ah.field_X != 1) {
                   var10_ref_String = re.a(AudioService.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
@@ -225,9 +225,9 @@ final class uo {
                 }
                 if ((16 & Star.field_w) == 0 &&
                   !IntrusiveNodeHashTable.field_e) {
-                  go.field_I.field_F = IsaacBackedRandom.field_a.field_lb;
+                  TextFieldWidget.field_I.field_F = IsaacBackedRandom.field_a.field_lb;
                 }
-                go.field_I.field_z = go.field_I.field_z + "<br>" + var10_ref_String;
+                TextFieldWidget.field_I.field_z = TextFieldWidget.field_I.field_z + "<br>" + var10_ref_String;
               }
               aq.field_j.a(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
               aq.field_j.field_z = lp.field_u.toUpperCase();
@@ -306,7 +306,7 @@ final class uo {
                 }
               }
               if (var10 >= 2) {
-                if ((null != td.field_E ||
+                if ((null != SliderWidget.field_E ||
                   null != ArchiveIndex.field_h ||
                   null != pg.field_A ||
                   null != ji.field_D)) {
@@ -317,9 +317,9 @@ final class uo {
                   var15Lifetime1 = 0;
                   for (var16Lifetime1 = 0; em.field_k > var16Lifetime1; var16Lifetime1++) {
                     var17_intLifetime1 = 255 & np.field_a.field_dc[var16Lifetime1];
-                    if (null != td.field_E &&
-                      td.field_E[var16Lifetime1] != null &&
-                      td.field_E[var16Lifetime1][var17_intLifetime1]) {
+                    if (null != SliderWidget.field_E &&
+                      SliderWidget.field_E[var16Lifetime1] != null &&
+                      SliderWidget.field_E[var16Lifetime1][var17_intLifetime1]) {
                       var11_intLifetime1 = 1;
                     }
                     if (null != ArchiveIndex.field_h &&
@@ -459,13 +459,13 @@ final class uo {
             field_c = (String) (stackIn_172_0);
           }
           if (np.field_a != null) {
-            if (0 != i.field_g.field_rb) {
+            if (0 != DialPainter.field_g.field_rb) {
               NetworkArchiveRequest.a(param2, np.field_a.g(-92), (byte) -2);
             }
             if (0 != aq.field_j.field_rb) {
               DefendTask.field_u = true;
             }
-            if (0 != go.field_I.field_rb) {
+            if (0 != TextFieldWidget.field_I.field_rb) {
               IntrusiveNodeHashTable.field_e = true;
             }
             if (oo.field_c.field_rb != 0) {

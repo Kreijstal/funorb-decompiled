@@ -163,7 +163,7 @@ final class uk {
           var9 = param2.readUnsignedShort(param6 - 20969);
           var10 = param2.readUnsignedShort(param6 - 20969);
           var11 = param2.readUnsignedShort(-20976);
-          var12 = hl.a(-33, var9);
+          var12 = ValidationIndicator.a(-33, var9);
           var13 = sa.a(var10, -109);
           if (param6 != -7) {
             var27 = (Star) null;
@@ -293,7 +293,7 @@ final class uk {
             }
             throw new kr("Tannhauser Gate is unconnected at at least one end.");
           }
-          param1.field_x.a(param2, (byte) -109);
+          param1.field_x.readScores(param2, (byte) -109);
           var21Lifetime5 = param2.readUnsignedByte(param6 - 63);
           var22Lifetime2 = param2.readUnsignedByte(param6 - 55);
           param1.setYearNameIndices(var22Lifetime2, var21Lifetime5, false);

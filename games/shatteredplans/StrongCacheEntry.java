@@ -25,7 +25,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
         stackIn_9_0 = ((IsolationistAi.field_r &&
           MusicCrossfadeStream.field_q) ||
-          w.d(true));
+          Dialog.d(true));
         return stackIn_9_0;
     }
 
@@ -164,7 +164,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             param2.writeByte(var12.field_m, (byte) -82);
             var12 = (Wormhole) (param4.nextForward((byte) -71));
           }
-          param6.a(-3, param2);
+          param6.writeScores(-3, param2);
           param2.writeByte(param5, (byte) -125);
           param2.writeByte(param3, (byte) -90);
           return;
@@ -264,7 +264,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         int var7_intLifetime3;
         var18 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var20 = tp.a("lobby", param4, "crowns", (byte) -118);
+          var20 = SliderPainter.a("lobby", param4, "crowns", (byte) -118);
           var5 = var20;
           ClientException.field_d = var20.length;
           if (param3 != null) {
@@ -302,9 +302,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           tg.field_a = 4;
           cr.field_c = 15;
           qo.field_b = 2;
-          var7 = go.a(115, "largefont", param4, param2, "lobby");
-          ImageProducerRasterBuffer.field_p = go.a(117, "generalfont", param4, param2, "lobby");
-          ul.field_xb = go.a(123, "chatfont", param4, param2, "lobby");
+          var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
+          ImageProducerRasterBuffer.field_p = TextFieldWidget.a(117, "generalfont", param4, param2, "lobby");
+          ul.field_xb = TextFieldWidget.a(123, "chatfont", param4, param2, "lobby");
           var7.a(var5, var24);
           ImageProducerRasterBuffer.field_p.a(var5, var24);
           ul.field_xb.a(var5, var24);
@@ -340,9 +340,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           po.field_d.field_fb = id.a(2, param4, "lobby", "closebutton_mouseover");
           nl.field_b = new qr(0L, var8);
           nl.field_b.field_F = ArchiveSourceManager.a(true, 2039583, true, 40, 3815994, (byte) -47);
-          td.field_N = new qr(0L, var10);
-          td.field_N.field_kb = 2;
-          td.field_N.field_F = ArchiveSourceManager.a(true, 2039583, false, 30, 3815994, (byte) -111);
+          SliderWidget.field_N = new qr(0L, var10);
+          SliderWidget.field_N.field_kb = 2;
+          SliderWidget.field_N.field_F = ArchiveSourceManager.a(true, 2039583, false, 30, 3815994, (byte) -111);
           jr.field_h = new qr(0L, var10);
           jr.field_h.field_kb = 2;
           jr.field_h.field_F = ArchiveSourceManager.a(false, 2039583, false, 30, 3815994, (byte) -35);
@@ -464,11 +464,11 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           sj.field_c.field_lb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_mouseover"));
           sj.field_c.field_vb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_mouseheld"));
           sj.field_c.field_wb = cg.a(-15338, id.a(2, param4, "lobby", "slideregion_disabled"));
-          ml.field_l = new qr(0L, (qr) null);
-          ml.field_l.field_F = re.a(ae.a(126, "lobby", param4, "dragbar"), 33);
-          ml.field_l.field_lb = re.a(ae.a(-109, "lobby", param4, "dragbar_mouseover"), 118);
-          ml.field_l.field_vb = re.a(ae.a(-77, "lobby", param4, "dragbar_mouseheld"), 67);
-          ml.field_l.field_wb = re.a(ae.a(57, "lobby", param4, "dragbar_disabled"), 126);
+          TextFieldValidator.field_l = new qr(0L, (qr) null);
+          TextFieldValidator.field_l.field_F = re.a(ae.a(126, "lobby", param4, "dragbar"), 33);
+          TextFieldValidator.field_l.field_lb = re.a(ae.a(-109, "lobby", param4, "dragbar_mouseover"), 118);
+          TextFieldValidator.field_l.field_vb = re.a(ae.a(-77, "lobby", param4, "dragbar_mouseheld"), 67);
+          TextFieldValidator.field_l.field_wb = re.a(ae.a(57, "lobby", param4, "dragbar_disabled"), 126);
           sk.field_k = new qr(0L, (qr) null);
           sk.field_k.field_pb = id.a(2, param4, "lobby", "upbutton");
           sk.field_k.field_fb = id.a(2, param4, "lobby", "upbutton_mouseover");
@@ -479,7 +479,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           BattleEvent.field_u.field_fb = id.a(2, param4, "lobby", "downbutton_mouseover");
           BattleEvent.field_u.field_U = id.a(2, param4, "lobby", "downbutton_mouseheld");
           BattleEvent.field_u.field_ob = id.a(2, param4, "lobby", "downbutton_disabled");
-          AchievementProgress.field_m = new ur(0L, sk.field_k, BattleEvent.field_u, sj.field_c, ml.field_l);
+          AchievementProgress.field_m = new ur(0L, sk.field_k, BattleEvent.field_u, sj.field_c, TextFieldValidator.field_l);
           ih.field_g = new am(0L, (qr) null, VictoryChecker.field_d, AchievementProgress.field_m, jf.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -530,7 +530,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         RuntimeException var21 = null;
         Sprite[] var22 = null;
         try {
-          mb.a(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new v(param8), new v(param19), param18, param11, param14, new v(param5), param15);
+          AgeValidator.a(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new v(param8), new v(param19), param18, param11, param14, new v(param5), param15);
           if (param1 != 13421772) {
             var22 = (Sprite[]) null;
             StrongCacheEntry.a(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (nq) null, (nq) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);

@@ -298,12 +298,12 @@ final class lr {
         if (nn.field_c != null) {
           for (var2 = 0; var2 < nf.field_a.length; var2++) {
             if (nf.field_a[var2] == param0 &&
-              tf.field_a[var2] > 0) {
-              dupTemp$6 = tf.field_a[var2] - 1;
+              CheckboxPainter.field_a[var2] > 0) {
+              dupTemp$6 = CheckboxPainter.field_a[var2] - 1;
               arrayValue$7 = nn.field_c[var2];
-              tf.field_a[var2] = dupTemp$6;
+              CheckboxPainter.field_a[var2] = dupTemp$6;
               var3 = arrayValue$7[dupTemp$6];
-              nn.field_c[var2][tf.field_a[var2]] = null;
+              nn.field_c[var2][CheckboxPainter.field_a[var2]] = null;
               return var3;
             }
           }
@@ -384,7 +384,7 @@ final class lr {
               var16_ref.field_l = true;
               var16_ref.unlink((byte) -89);
             } else {
-              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
               q.g(-125);
             }
           }

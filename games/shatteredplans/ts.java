@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class ts extends kg {
+class ts extends FocusableWidget {
     static String[] field_K;
     static Sprite[] field_L;
     private IntrusiveDeque field_D;
@@ -21,7 +21,7 @@ class ts extends kg {
         if (0 != param0) {
           return;
         }
-        pj var5 = (pj) ((Object) this.field_p);
+        WidgetMetrics var5 = (WidgetMetrics) ((Object) this.field_p);
         ql var6 = this.field_I;
         if (var6 != null) {
           var7 = var5.b(0, (UiWidget) (this), param3);
@@ -78,8 +78,8 @@ class ts extends kg {
         }
     }
 
-    ts(String param0, iq param1) {
-        super(param0, (ko) null);
+    ts(String param0, WidgetPainter param1) {
+        super(param0, (WidgetListener) null);
         this.field_I = null;
         try {
           this.field_p = param1;
@@ -137,26 +137,26 @@ class ts extends kg {
           CipherPacketBuffer var5 = null;
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (da.field_e == null) {
-            da.field_e = StarAbandonedEvent.field_l.a(65535, of.field_f, mk.field_c);
+          if (DebouncedValidator.field_e == null) {
+            DebouncedValidator.field_e = StarAbandonedEvent.field_l.a(65535, of.field_f, mk.field_c);
           }
-          if (da.field_e.field_d == 0) {
+          if (DebouncedValidator.field_e.field_d == 0) {
             return false;
           }
           dupTemp$1 = pr.a(14274);
           mj.field_Pb = dupTemp$1;
           IntrusiveDeque.field_e = dupTemp$1;
-          if (param1 != ~da.field_e.field_d) {
+          if (param1 != ~DebouncedValidator.field_e.field_d) {
             Wormhole.field_j = oa.field_a;
           } else {
             try {
-              wg.field_f = new BufferedSocket((java.net.Socket) (da.field_e.field_e), StarAbandonedEvent.field_l);
+              wg.field_f = new BufferedSocket((java.net.Socket) (DebouncedValidator.field_e.field_e), StarAbandonedEvent.field_l);
               var4 = sa.field_a;
               var5 = var4;
               js.field_f.position = 0;
               stackIn_9_0 = (param0) ? -2 : -1;
               IterableNodeHashTable.field_e = stackIn_9_0;
-              tp.field_g = stackIn_9_0;
+              SliderPainter.field_g = stackIn_9_0;
               kp.field_n = stackIn_9_0;
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
@@ -166,11 +166,11 @@ class ts extends kg {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               Wormhole.field_j = oa.field_a;
-              da.field_e = null;
+              DebouncedValidator.field_e = null;
               return true;
             }
           }
-          da.field_e = null;
+          DebouncedValidator.field_e = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -221,7 +221,7 @@ class ts extends kg {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        this.a(param1, ((pj) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
+        this.a(param1, ((WidgetMetrics) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
         if (param2 != 57) {
           field_E = (String) null;
         }
@@ -285,7 +285,7 @@ class ts extends kg {
         qo var24;
         ha var25;
         ql var26;
-        pj var27;
+        WidgetMetrics var27;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_29_0 = 0;
@@ -294,7 +294,7 @@ class ts extends kg {
         qo var19;
         ha var20;
         ql var21;
-        pj var28;
+        WidgetMetrics var28;
         int var2Lifetime1;
         int var5Lifetime1;
         int var7Lifetime1;
@@ -312,7 +312,7 @@ class ts extends kg {
         this.field_D = new IntrusiveDeque();
         if (!param0) {
           var2 = 0;
-          var27 = (pj) ((Object) this.field_p);
+          var27 = (WidgetMetrics) ((Object) this.field_p);
           var24 = var27.a((UiWidget) (this), true);
           while (true) {
             var5 = this.field_s.indexOf("<hotspot=", var2);
@@ -358,7 +358,7 @@ class ts extends kg {
         }
         field_L = (Sprite[]) null;
         var2Lifetime1 = 0;
-        var28 = (pj) ((Object) this.field_p);
+        var28 = (WidgetMetrics) ((Object) this.field_p);
         var19 = var28.a((UiWidget) (this), true);
         while (true) {
           var5Lifetime1 = this.field_s.indexOf("<hotspot=", var2Lifetime1);

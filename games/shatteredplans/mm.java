@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm extends ml {
+final class mm extends TextFieldValidator {
     static String field_p;
     static Sprite field_o;
     static boolean field_n;
@@ -50,7 +50,7 @@ final class mm extends ml {
         }
     }
 
-    mm(go param0) {
+    mm(TextFieldWidget param0) {
         super(param0);
     }
 
@@ -76,12 +76,12 @@ final class mm extends ml {
         bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
     }
 
-    final u b(int param0, String param1) {
+    final ValidationState b(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        u stackIn_5_0 = null;
-        u stackIn_9_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -90,7 +90,7 @@ final class mm extends ml {
           stackIn_3_0 = (BattleSnapshot.a(64, param1) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param0 != -11196) {
-            stackIn_5_0 = (u) null;
+            stackIn_5_0 = (ValidationState) null;
             return stackIn_5_0;
           }
           if (var3_int != 0) {

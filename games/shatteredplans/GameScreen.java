@@ -231,13 +231,13 @@ final class GameScreen {
             }
             if ((decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, i.field_f);
+              this.a(10, 0, DialPainter.field_f);
               if (var9 == 0) {
                 return;
               }
             }
             if (decompiledFrameRemainder2) {
-              this.a(10, 0, ml.field_k);
+              this.a(10, 0, TextFieldValidator.field_k);
               if (var9 == 0) {
                 return;
               }
@@ -527,7 +527,7 @@ final class GameScreen {
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("resources")) {
-              td.field_L = true;
+              SliderWidget.field_L = true;
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("productionHammer")) {
@@ -669,10 +669,10 @@ final class GameScreen {
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
                   var5.a((byte) -109, 3375155, fb.field_gc);
-                  var7.field_o = re.a(mf.field_u, 4371, new String[]{param1.name});
+                  var7.field_o = re.a(EmailValidator.field_u, 4371, new String[]{param1.name});
                   var9 = (vd) (var7.field_l.startForward(0));
                   while (var9 != null) {
-                    var9.field_o = re.a(mf.field_u, 4371, new String[]{param1.name});
+                    var9.field_o = re.a(EmailValidator.field_u, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.nextForward((byte) -71));
                     if (var11 != 0) {
                       decompiledFrameCompleted2 = false;
@@ -961,7 +961,7 @@ final class GameScreen {
           var5 = (640 - var4) / 2;
           var6 = 80;
           var7 = 360;
-          if (fj.field_t.field_h == 2) {
+          if (MatchingTextValidator.field_t.field_h == 2) {
             sn.a(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
             var8 = qh.a((Sprite) null, var6, var4, var5, -1, var7);
             bs.a(var8, 93);
@@ -971,8 +971,8 @@ final class GameScreen {
             decompiledFrameRemainder1 = (var40 != 0);
           }
           if (decompiledFrameRemainder1) {
-            if (fj.field_t.field_h != 1) {
-              if (fj.field_t.field_h == 0) {
+            if (MatchingTextValidator.field_t.field_h != 1) {
+              if (MatchingTextValidator.field_t.field_h == 0) {
                 if (var3_int != 32) {
                   gf.c(var5, var6, var4, var7, 855316, (var3_int << 8) / 32);
                   if (var40 != 0) {
@@ -1009,7 +1009,7 @@ final class GameScreen {
             stackIn_36_0 = (this.field_s.field_n.field_x != this.field_s.field_P.field_k) ? 0 : 1;
             var9 = stackIn_36_0;
             if ((this.field_s.field_P.field_w & 1 << this.field_s.field_n.field_x) == 0 &&
-              !this.field_s.field_P.field_x.a((byte) 108, this.field_s.field_n)) {
+              !this.field_s.field_P.field_x.isLoser((byte) 108, this.field_s.field_n)) {
               stackIn_43_0 = 0;
             } else {
               stackIn_43_0 = 1;
@@ -1075,7 +1075,7 @@ final class GameScreen {
               var22Lifetime3 = 0;
               if (var21Lifetime4 >= 0 ||
                 var40 != 0) {
-                ml.a(var19Lifetime3, var21Lifetime4, var18Lifetime3, var20_intLifetime2, var14, var22Lifetime3, 16403);
+                TextFieldValidator.a(var19Lifetime3, var21Lifetime4, var18Lifetime3, var20_intLifetime2, var14, var22Lifetime3, 16403);
                 gf.f(var20_intLifetime2, var19Lifetime3, var21Lifetime4, 0, 192);
                 gf.a(var20_intLifetime2 - 1, var19Lifetime3, 16777215);
                 gf.a(var20_intLifetime2 + var21Lifetime4, var19Lifetime3, 16777215);
@@ -1133,12 +1133,12 @@ final class GameScreen {
                 if (var11 == 0) {
                   stackIn_117_0 = null;
                 } else {
-                  stackIn_117_0 = fj.field_o;
+                  stackIn_117_0 = MatchingTextValidator.field_o;
                 }
               }
             }
           } else {
-            stackIn_117_0 = fj.field_o;
+            stackIn_117_0 = MatchingTextValidator.field_o;
           }
           var20 = stackIn_117_0;
           if (this.field_s.field_n == null &&
@@ -1676,7 +1676,7 @@ final class GameScreen {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + tc.field_E[2];
+          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
           rs.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = UiWidget.field_t.field_z * 2 + rs.field_Cb.c("= " + vs.field_a);
           gf.a((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
@@ -1711,7 +1711,7 @@ final class GameScreen {
         String var5 = null;
         int var6 = 0;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + tc.field_E[1];
+          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
           rs.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = qe.field_j.field_z + rs.field_Cb.c("= " + vs.field_a);
           gf.a(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, qe.field_j.field_w + 10, 5, 0, 128);
@@ -1739,7 +1739,7 @@ final class GameScreen {
         int var9_int = 0;
         Player var9 = null;
         int[][] var10 = null;
-        um var10_ref = null;
+        PlayerStats var10_ref = null;
         int var11_int = 0;
         int[] var11 = null;
         int var12_int = 0;
@@ -2041,7 +2041,7 @@ final class GameScreen {
         try {
           var3 = (rh) (this.field_j.field_x);
           if (null != var3.field_b[param0]) {
-            var3.field_b[param0].a((byte) -88, mf.field_v);
+            var3.field_b[param0].a((byte) -88, EmailValidator.field_v);
           }
           if (param1 <= 126) {
             this.a(-90);
@@ -2159,7 +2159,7 @@ final class GameScreen {
           }
           if (kb.field_x == 7) {
             this.field_s.field_P.field_x = (VictoryChecker) ((Object) new TutorialVictoryChecker(param0));
-            this.field_s.field_P.field_x.a((byte) -24, this.field_s.field_P, this);
+            this.field_s.field_P.field_x.showResults((byte) -24, this.field_s.field_P, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2230,7 +2230,7 @@ final class GameScreen {
             if (this.field_s.field_S < 0) {
               rs.field_Cb.c(this.a(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
             }
-            if (mb.field_o[this.field_s.field_P.field_J] <= (3 * this.field_s.field_S)) {
+            if (AgeValidator.field_o[this.field_s.field_P.field_J] <= (3 * this.field_s.field_S)) {
               rs.field_Cb.c(this.a(false, Math.abs(var2_int)), rk.field_j.field_z / 2 + 3 * MusicCrossfadeStream.field_F.field_z + 521, rs.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
               decompiledFrameRemainder0 = (var12 != 0);
             }
@@ -2350,7 +2350,7 @@ final class GameScreen {
             stackIn_122_0 = (this.field_s.field_P.field_k >= 0) ? 0 : 1;
             var6Lifetime2 = stackIn_122_0;
             if (this.field_s.field_n != null && ((1 << this.field_s.field_n.field_x & this.field_s.field_P.field_w) != 0 ||
-              this.field_s.field_P.field_x.a((byte) 69, this.field_s.field_n))) {
+              this.field_s.field_P.field_x.isLoser((byte) 69, this.field_s.field_n))) {
               var7Lifetime1 = 1;
             }
             if (var7Lifetime1 != 0) {
@@ -2359,7 +2359,7 @@ final class GameScreen {
               if (var6Lifetime2 != 0) {
                 stackIn_140_0 = StrongCacheEntry.field_v;
               } else {
-                stackIn_140_0 = fj.field_o;
+                stackIn_140_0 = MatchingTextValidator.field_o;
               }
             }
             var8 = stackIn_140_0;
@@ -2442,7 +2442,7 @@ final class GameScreen {
     private final void a(int param0, int param1, byte param2, int param3) {
         String var5 = null;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + tc.field_E[0];
+          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[0];
           int var6 = 107 / ((10 - param2) / 56);
           rs.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
         } catch (RuntimeException runtimeException) {
@@ -2635,7 +2635,7 @@ final class GameScreen {
           this.field_s.field_z.a(-1, new IntrusiveDeque(), false);
           this.field_s.a(2);
           this.field_X.d(false);
-          this.field_X.field_o = da.field_f;
+          this.field_X.field_o = DebouncedValidator.field_f;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2698,8 +2698,8 @@ final class GameScreen {
             scanLoop1: while (true) {
               if (var5 < var4_ref_fs__.length) {
                 var6_ref_fs = var4_ref_fs__[var5];
-                var7_ref_int__ = var6_ref_fs.field_q.b((byte) -111);
-                var8 = var6_ref_fs.field_q.a(121);
+                var7_ref_int__ = var6_ref_fs.field_q.statValues((byte) -111);
+                var8 = var6_ref_fs.field_q.statTexts(121);
                 stackIn_37_0 = 0;
                 if (var10 != 0) {
                   break scanLoop1;
@@ -2894,10 +2894,10 @@ final class GameScreen {
           if (!this.field_s.field_P.field_o.field_l) {
             var8 = var8 + og.field_a;
             if (var16 != 0) {
-              var8 = var8 + tp.field_k;
+              var8 = var8 + SliderPainter.field_k;
             }
           } else {
-            var8 = var8 + tp.field_k;
+            var8 = var8 + SliderPainter.field_k;
           }
           rs.field_Cb.d(var8.toUpperCase(), 10 + var4, rs.field_Cb.field_J + var5, 16777215, -1);
           ij.a(0, -rs.field_Cb.field_J + 450 + 1, true, var4 + rs.field_Cb.field_J / 2, 10 + hb.field_b[0].field_w, rs.field_Cb.field_J + var5 + 5);
@@ -3470,7 +3470,7 @@ final class GameScreen {
                 this.field_N.field_o = NodeHashTableIterator.field_e;
                 if (this.field_X.f(244874369)) {
                   this.field_X.e((byte) 88);
-                  this.field_X.field_o = da.field_f;
+                  this.field_X.field_o = DebouncedValidator.field_f;
                 }
                 stackIn_187_0 = this.field_s.field_z;
                 stackIn_187_1 = -1;
@@ -3504,7 +3504,7 @@ final class GameScreen {
                 decompiledSharedTail0 = (var9 != 0);
               }
               if (decompiledSharedTail0) {
-                this.field_X.field_o = da.field_f;
+                this.field_X.field_o = DebouncedValidator.field_f;
                 stackIn_210_0 = this.field_s.field_z;
                 stackIn_210_1 = -1;
                 if (null == this.field_s.field_Q) {
@@ -3523,10 +3523,10 @@ final class GameScreen {
               if (this.field_d.f(244874369)) {
                 this.field_d.field_o = de.field_k;
                 if (var9 != 0) {
-                  this.field_d.field_o = ec.field_t;
+                  this.field_d.field_o = UsernameAvailabilityValidator.field_t;
                 }
               } else {
-                this.field_d.field_o = ec.field_t;
+                this.field_d.field_o = UsernameAvailabilityValidator.field_t;
               }
               this.m(108);
               stackIn_224_0 = var3_int;
@@ -3966,15 +3966,15 @@ final class GameScreen {
           if (this.field_s.field_W) {
             gi.a(false);
             RandomAccessCacheFile.a(-127);
-            fj.field_r.e();
-            gf.d(0, 0, fj.field_r.field_z, fj.field_r.field_w, 0);
+            MatchingTextValidator.field_r.e();
+            gf.d(0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w, 0);
             if (AchievementProgress.field_k) {
               aq.field_i.f(10, 10);
               var5Lifetime1 = SolVictoryChecker.a(0, 16777215, -96, RasterBuffer.field_f);
-              fj.field_r.f(var5Lifetime1);
-              fj.field_r.f(var5Lifetime1);
-              fj.field_r.e();
-              gf.b(5, 5, 0, 0, fj.field_r.field_z, fj.field_r.field_w);
+              MatchingTextValidator.field_r.f(var5Lifetime1);
+              MatchingTextValidator.field_r.f(var5Lifetime1);
+              MatchingTextValidator.field_r.e();
+              gf.b(5, 5, 0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w);
             }
             kb.field_w.e();
             gf.d(0, 0, kb.field_w.field_z, kb.field_w.field_w, 0);
@@ -4229,7 +4229,7 @@ final class GameScreen {
           this.field_E.field_xb.field_M.clear(0);
           var5 = 0;
           var6 = 0;
-          var7 = -1 + da.field_g;
+          var7 = -1 + DebouncedValidator.field_g;
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var7 < 0))) {
             var8_ref_nf = wm.field_d[var7];
@@ -4262,7 +4262,7 @@ final class GameScreen {
           }
           var8 = stackIn_21_0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var8 < da.field_g)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var8 < DebouncedValidator.field_g)))) {
             var9_ref_nf = wm.field_d[var8];
             if (var11 == 0) {
               if (null != var9_ref_nf.field_j) {
@@ -4818,7 +4818,7 @@ final class GameScreen {
         int var6 = 0;
         int var7 = 0;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + tc.field_E[3];
+          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
           rs.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = 20 + param3 + rs.field_Cb.field_J + 9;
           var7 = 64 + rs.field_Cb.c("= " + re.a(sq.field_p, 4371, new String[]{Integer.toString(2)}));
@@ -4868,7 +4868,7 @@ final class GameScreen {
           }
           var9 = this.field_nb.field_z;
           var9.e(0);
-          var10 = mf.a(param5, true);
+          var10 = EmailValidator.a(param5, true);
           var10.a((byte) 61, var9.field_k, var9.field_y + var9.field_t);
           var9.a(var10, 8);
           var11 = 0;
@@ -5063,7 +5063,7 @@ final class GameScreen {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_v = true;
         try {
-          fj.field_r = new Sprite(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
+          MatchingTextValidator.field_r = new Sprite(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
           kb.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
           this.field_I = true;
           this.field_s = param0;
@@ -5079,7 +5079,7 @@ final class GameScreen {
           this.field_y.addLast((byte) -113, this.field_J);
           this.field_cb = DisplayModeInfo.a(this.field_s.field_P.field_r, -1);
           this.field_y.addLast((byte) -113, this.field_cb);
-          var2_int = this.field_s.field_P.field_x.b(false);
+          var2_int = this.field_s.field_P.field_x.resultsPanelHeight(false);
           if (var2_int > 0) {
             this.field_nb = SecondaryNodeHashTable.a(var2_int, true);
             this.field_y.addLast((byte) -113, this.field_nb);
@@ -5123,10 +5123,10 @@ final class GameScreen {
             this.field_N.field_o = NodeHashTableIterator.field_e;
           }
           this.field_X = new jh(610, -StarAbandonedEvent.field_r[1].field_w + 480, StarAbandonedEvent.field_r[1].field_z, StarAbandonedEvent.field_r[1].field_w, -1, StarAbandonedEvent.field_r[1], (String) null, 0, -1, StarAbandonedEvent.field_r[4], (String) null, 0);
-          this.field_X.field_o = da.field_f;
+          this.field_X.field_o = DebouncedValidator.field_f;
           this.field_d = new jh(625, 480 - StarAbandonedEvent.field_r[5].field_w, StarAbandonedEvent.field_r[5].field_z, StarAbandonedEvent.field_r[5].field_w, -1, StarAbandonedEvent.field_r[5], (String) null, 0, -1, StarAbandonedEvent.field_r[2], (String) null, 0);
           if ((de.field_j & 64) == 0) {
-            this.field_d.field_o = ec.field_t;
+            this.field_d.field_o = UsernameAvailabilityValidator.field_t;
             if (var6 != 0) {
               this.field_d.e((byte) 23);
               this.field_d.field_o = de.field_k;
@@ -5142,10 +5142,10 @@ final class GameScreen {
           this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, ByteArrayNode.field_l, 16777215, -1, (Sprite) null, DualLinkDeque.field_d, 16777215);
           this.field_V.a(this.field_f, 8);
           this.field_y.addFirst(this.field_V, 0);
-          this.field_t = new ArgbSprite(go.field_L.field_o, go.field_L.field_p);
+          this.field_t = new ArgbSprite(TextFieldWidget.field_L.field_o, TextFieldWidget.field_L.field_p);
           RandomAccessCacheFile.a(-128);
           this.field_t.e();
-          go.field_L.d(0, 0, 16711680);
+          TextFieldWidget.field_L.d(0, 0, 16711680);
           var3 = 0;
           scanLoop1: while (true) {
             if (this.field_t.field_B.length > var3) {

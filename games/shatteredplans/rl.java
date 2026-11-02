@@ -141,7 +141,7 @@ final class rl {
         if (param0 != -1) {
           return (Archive) null;
         }
-        return cc.a(param2, false, param3, param0 + 12001, param1, param4);
+        return PasswordValidator.a(param2, false, param3, param0 + 12001, param1, param4);
     }
 
     private final String b(int param0, String param1) {

@@ -109,16 +109,16 @@ final class BattleContribution extends IntrusiveNode {
         we.field_f = null;
         DualLinkDeque.field_a = null;
         MusicVoice.field_n = null;
-        w.field_D = null;
+        Dialog.field_D = null;
         va.field_e = null;
         ks.field_j = null;
-        tf.field_b = null;
+        CheckboxPainter.field_b = null;
         DefendTask.field_s = null;
         if (!param0) {
           field_n = (String) null;
         }
         sr.field_F = null;
-        tp.field_e = null;
+        SliderPainter.field_e = null;
         DefensiveAi.field_r = null;
         q.field_Cb = null;
         oe.field_c = null;
@@ -165,7 +165,7 @@ final class BattleContribution extends IntrusiveNode {
           BufferedSocket.a(param1 - 5, var4);
           kh.field_Nb = StandardMapReader.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (nq) null, 0, 2245737, 1513239, 8947848);
           nl.field_d = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
-          hl.field_I = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
+          ValidationIndicator.field_I = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
           if (param1 != -64) {
             field_j = -87;
           }
@@ -178,7 +178,7 @@ final class BattleContribution extends IntrusiveNode {
             gf.j(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           gf.a(var14, var5, var6);
-          of.field_b = gn.a(0, var4, hl.field_I, nl.field_d, kh.field_Nb);
+          of.field_b = gn.a(0, var4, ValidationIndicator.field_I, nl.field_d, kh.field_Nb);
           SectorCacheStore.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

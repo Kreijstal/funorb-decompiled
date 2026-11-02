@@ -37,8 +37,8 @@ final class mj extends qr {
           DerelictVictoryChecker.field_m.a(13505, param1);
           if (param0 == 0) {
             r.a((byte) -82, param1);
-            if (null != tc.field_G) {
-              tc.field_G.b(param1, -68);
+            if (null != DialogRoot.field_G) {
+              DialogRoot.field_G.b(param1, -68);
             }
             ho.a(param1, param0 + 8323199);
             return;
@@ -47,8 +47,8 @@ final class mj extends qr {
         }
         if (param0 == 0) {
           r.a((byte) -82, param1);
-          if (null != tc.field_G) {
-            tc.field_G.b(param1, -68);
+          if (null != DialogRoot.field_G) {
+            DialogRoot.field_G.b(param1, -68);
           }
           ho.a(param1, param0 + 8323199);
           return;

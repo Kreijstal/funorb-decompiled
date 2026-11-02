@@ -121,9 +121,9 @@ final class BoundsRect extends IntrusiveNode {
 
     final static String d(int param0) {
         if (ue.field_a == ee.field_l) {
-          return um.field_j;
+          return PlayerStats.field_j;
         }
-        if (ue.field_a == fj.field_s) {
+        if (ue.field_a == MatchingTextValidator.field_s) {
           return gp.field_b;
         }
         if (!wh.field_a.b(14)) {

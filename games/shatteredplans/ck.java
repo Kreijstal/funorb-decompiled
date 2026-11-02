@@ -141,13 +141,13 @@ final class ck {
           wo.field_b = id.a(2, param0, "", "shield");
           oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
           ab.field_e = id.a(2, param0, "", "chevron");
-          go.field_L = ds.a(true, param0, "", "warning");
+          TextFieldWidget.field_L = ds.a(true, param0, "", "warning");
           bd.field_G = id.a(2, param0, "", "hammer");
           e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
           UiWidget.field_t = ds.a(true, param0, "", "factionring");
           SpriteState.field_y = ds.a(true, param0, "", "factionringtag");
           ek.field_z = ds.a(true, param0, "", "factionringcentre");
-          fj.field_p = ds.a(true, param0, "", "arrowship");
+          MatchingTextValidator.field_p = ds.a(true, param0, "", "arrowship");
           eq.field_o = ds.a(true, param0, "", "arrowshipdamaged");
           cf.field_F = ds.a(true, param0, "", "fleetsarrowship");
           di.field_i = va.a("fleetbuttons", 0, "", param0);
@@ -256,7 +256,7 @@ final class ck {
           ab.field_e.b(1, 1, 8421504);
           wa.field_b = new Sprite(128, 128);
           wa.field_b.e();
-          go.field_L.f(0, 0);
+          TextFieldWidget.field_L.f(0, 0);
           for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
             if (wa.field_b.field_B[var13_intLifetime7] != 0) {
               gf.c(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
@@ -275,7 +275,7 @@ final class ck {
           ef.field_f.f(16777215);
           mj.field_Kb.f(16777215);
           fb.field_Vb.f(16777215);
-          kj.field_f = hl.a((byte) 111, 80);
+          kj.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
           cm.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
@@ -311,8 +311,8 @@ final class ck {
           cg.i(0);
           GameKeyHandler.field_e.f(2458760);
           bg.field_a.f(2458760);
-          o.field_k = bg.field_a.g();
-          o.field_k.b();
+          WidgetTheme.field_k = bg.field_a.g();
+          WidgetTheme.field_k.b();
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

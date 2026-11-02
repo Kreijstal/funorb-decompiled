@@ -465,7 +465,7 @@ abstract class MapViewState {
         this.field_T = -1;
         this.field_t = 0;
         this.field_o.field_X.d(false);
-        this.field_o.field_X.field_o = da.field_f;
+        this.field_o.field_X.field_o = DebouncedValidator.field_f;
         if (param0 != -18641) {
           this.a(17, false, -42);
         }
@@ -587,7 +587,7 @@ abstract class MapViewState {
         Star[] var2 = var7;
         for (var3 = param0; var3 < var7.length; var3++) {
           var4 = var7[var3];
-          var5 = mf.a((byte) 74, var4.field_G);
+          var5 = EmailValidator.a((byte) 74, var4.field_G);
           this.field_R[var4.field_p] = var5;
         }
     }
@@ -657,7 +657,7 @@ abstract class MapViewState {
         BattleEvent var11 = null;
         StarAbandonedEvent var12 = null;
         FleetMove var13 = null;
-        SolarFlareEvent var14 = null;
+        StellarBombEvent var14 = null;
         PlacementEvent var15 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -681,8 +681,8 @@ abstract class MapViewState {
                   var15 = (PlacementEvent) (var5);
                   this.field_eb[var15.field_i.field_p] = this.field_eb[var15.field_i.field_p] + var15.field_h;
                 } else {
-                  if (var5 instanceof SolarFlareEvent) {
-                    var14 = (SolarFlareEvent) (var5);
+                  if (var5 instanceof StellarBombEvent) {
+                    var14 = (StellarBombEvent) (var5);
                     this.field_eb[var14.field_l.field_p] = this.field_eb[var14.field_l.field_p] - var14.field_i;
                   } else {
                     if (!(var5 instanceof FleetMove)) {

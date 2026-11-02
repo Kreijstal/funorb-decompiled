@@ -461,11 +461,11 @@ class qr extends hm {
           je.field_d != 0 &&
           gf.field_i <= PointsVictoryChecker.field_p &&
           gf.field_l > PointsVictoryChecker.field_p &&
-          td.field_P >= gf.field_a &&
-          td.field_P < gf.field_f) {
+          SliderWidget.field_P >= gf.field_a &&
+          SliderWidget.field_P < gf.field_f) {
           this.field_Q = -this.field_B + PointsVictoryChecker.field_p;
           var13 = 1;
-          this.field_X = -this.field_N + td.field_P;
+          this.field_X = -this.field_N + SliderWidget.field_P;
           this.field_rb = je.field_d;
           this.field_ub = je.field_d;
         } else {

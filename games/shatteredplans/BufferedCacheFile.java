@@ -574,7 +574,7 @@ final class BufferedCacheFile {
                 return;
               }
             }
-            GameKeyHandler.a(-29901, (Throwable) null, "LR1: " + w.a(16738));
+            GameKeyHandler.a(-29901, (Throwable) null, "LR1: " + Dialog.a(16738));
             q.g(-113);
             if (var8 == 0) {
               return;
@@ -743,7 +743,7 @@ final class BufferedCacheFile {
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
-            mf.e(param0 ^ -97);
+            EmailValidator.e(param0 ^ -97);
           }
           qj.field_e = 0;
           var8 = 0;
@@ -895,7 +895,7 @@ final class BufferedCacheFile {
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
-            mf.e(param0 ^ -97);
+            EmailValidator.e(param0 ^ -97);
           }
           qj.field_e = 0;
           var8 = 0;

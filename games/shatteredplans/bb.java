@@ -114,9 +114,9 @@ final class bb {
             field_d = (String) null;
           }
           if (he.field_p != null) {
-            var15 = go.field_I;
+            var15 = TextFieldWidget.field_I;
             var17 = var15;
-            go.field_I.field_mb = 0;
+            TextFieldWidget.field_I.field_mb = 0;
             var17.field_K = 0;
             var5 = aq.field_j;
             aq.field_j.field_mb = 0;
@@ -159,7 +159,7 @@ final class bb {
             }
             aq.field_j.field_s = true;
             if (TurnEventLog.field_i) {
-              i.field_g.field_s = false;
+              DialPainter.field_g.field_s = false;
               IntrusiveNode.field_c.field_z = nb.field_c;
               if (var8 == 0) {
                 stackIn_57_0 = cm.field_c;
@@ -200,7 +200,7 @@ final class bb {
               }
               stackIn_28_0.field_z = re.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
               dn.field_f.field_z = wg.field_b;
-              i.field_g.field_s = true;
+              DialPainter.field_g.field_s = true;
               wg.field_d = true;
               if (null != pe.field_D) {
                 wg.field_d = false;
@@ -260,7 +260,7 @@ final class bb {
           ((qr) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);
           if (he.field_p != null) {
-            stackIn_83_0 = ~i.field_g.field_rb;
+            stackIn_83_0 = ~DialPainter.field_g.field_rb;
             if (stackIn_83_0 != -1) {
               je.a((byte) 62, param3);
             }

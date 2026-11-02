@@ -39,7 +39,7 @@ final class GalaxyMap {
         if (param0 != 26253) {
           this.field_j = (Random) null;
         }
-        this.field_c = mb.a(this.field_e, false);
+        this.field_c = AgeValidator.a(this.field_e, false);
     }
 
     private final void a(Player param0, GameRules param1, int param2, Star param3) {

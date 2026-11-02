@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends WidgetContainer implements bp {
-    private kg field_G;
-    private kg field_J;
-    private kg field_H;
+final class cq extends WidgetContainer implements ButtonListener {
+    private FocusableWidget field_G;
+    private FocusableWidget field_J;
+    private FocusableWidget field_H;
     static String field_F;
     static int field_E;
     static String field_I;
@@ -30,7 +30,7 @@ final class cq extends WidgetContainer implements bp {
         try {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             GameState.field_l.b(0);
             if (GameState.field_l.a((byte) -46)) {
               var1_int = 1;
@@ -40,7 +40,7 @@ final class cq extends WidgetContainer implements bp {
             }
             var2 = 1;
           }
-          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, td.field_P, 16777215), GameScreen.a(pd.field_k, bb.field_b, 16777215));
+          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(pd.field_k, bb.field_b, 16777215));
           if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }
@@ -124,7 +124,7 @@ final class cq extends WidgetContainer implements bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -170,7 +170,7 @@ final class cq extends WidgetContainer implements bp {
             String var3 = (String) null;
             cq.a(-64, -115, (String) null, (String) null, 39);
           }
-          StandardMapGenerator.field_j = rp.i(0);
+          StandardMapGenerator.field_j = DialWidget.i(0);
           ld.field_p = new IntrusiveDeque();
           PlacementEvent.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
@@ -203,23 +203,23 @@ final class cq extends WidgetContainer implements bp {
     }
 
     public cq() {
-        super(0, 0, 476, 225, (iq) null);
-        this.field_H = new kg(oj.field_Ab, (ko) null);
-        this.field_J = new kg(DiskCacheWorker.field_a, (ko) null);
-        this.field_G = new kg(MapView.field_Pb, (ko) null);
+        super(0, 0, 476, 225, (WidgetPainter) null);
+        this.field_H = new FocusableWidget(oj.field_Ab, (WidgetListener) null);
+        this.field_J = new FocusableWidget(DiskCacheWorker.field_a, (WidgetListener) null);
+        this.field_G = new FocusableWidget(MapView.field_Pb, (WidgetListener) null);
         qp var1 = new qp();
-        this.field_H.field_p = (iq) ((Object) var1);
-        this.field_J.field_p = (iq) ((Object) var1);
-        this.field_G.field_p = (iq) ((Object) var1);
+        this.field_H.field_p = (WidgetPainter) ((Object) var1);
+        this.field_J.field_p = (WidgetPainter) ((Object) var1);
+        this.field_G.field_p = (WidgetPainter) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
         this.field_J.a(this.field_n - 48 - var2, 30, (byte) 113, -var3 + this.field_x >> 1, var4);
         this.field_G.a(-var2 - 48 + this.field_n, 30, (byte) 104, var2 + var4 + (this.field_x - var3 >> 1), var4);
         this.field_H.a(this.field_n - (78 + var2 * 2), 30, (byte) 104, this.field_x - var3 >> 1, var3);
-        this.field_J.field_u = (ko) (this);
-        this.field_H.field_u = (ko) (this);
-        this.field_G.field_u = (ko) (this);
+        this.field_J.field_u = (WidgetListener) (this);
+        this.field_H.field_u = (WidgetListener) (this);
+        this.field_G.field_u = (WidgetListener) (this);
         this.field_H.field_v = nc.field_m;
         this.field_G.field_v = bs.field_c;
         this.b((byte) -46, this.field_J);

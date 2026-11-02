@@ -127,7 +127,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
 
     final static boolean a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (WeightedLruCache.a(-126)) {
-          o.a(param3, param6, false, param2);
+          WidgetTheme.a(param3, param6, false, param2);
           if (null != DerelictVictoryChecker.field_m &&
             DerelictVictoryChecker.field_m.a(param6, param1, -16, param5, param3)) {
             ai.a(3);
@@ -149,15 +149,15 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int var2Lifetime1;
         wm.field_b = param1;
         if (jh.field_B == null) {
-          if (null != u.field_b) {
-            u.field_b.a(param1, 0);
+          if (null != ValidationState.field_b) {
+            ValidationState.field_b.a(param1, 0);
           }
           var2 = -9 / ((62 - param0) / 62);
           return;
         }
         jh.field_B.c(598, param1);
-        if (null != u.field_b) {
-          u.field_b.a(param1, 0);
+        if (null != ValidationState.field_b) {
+          ValidationState.field_b.a(param1, 0);
         }
         var2Lifetime1 = -9 / ((62 - param0) / 62);
     }

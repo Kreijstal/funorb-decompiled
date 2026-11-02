@@ -177,7 +177,7 @@ final class no {
               var3.field_e[6].field_R = var24;
               var3.field_e[7].field_R = var24;
               var23.field_i.addLast((byte) -113, var24);
-              var23.field_q = new um(var3.field_e[7].field_x + var3.field_e[6].field_x);
+              var23.field_q = new PlayerStats(var3.field_e[7].field_x + var3.field_e[6].field_x);
             }
             if (6 == kb.field_x) {
               var25 = new Player(2, hn.field_f[2], or.field_b[2], DualLinkNode.field_k[2], ho.field_e[2]);
@@ -193,7 +193,7 @@ final class no {
               var27.addStar(-21771, var26Lifetime2);
               var26Lifetime2.field_R = var27;
               var25.field_i.addLast((byte) -113, var27);
-              var25.field_q = new um(var26Lifetime2.field_x);
+              var25.field_q = new PlayerStats(var26Lifetime2.field_x);
             }
             if (kb.field_x == 7) {
               var28 = new Player(3, hn.field_f[3], or.field_b[3], DualLinkNode.field_k[3], ho.field_e[3]);
@@ -231,7 +231,7 @@ final class no {
               var31.field_R = var32;
               var10.field_R = var32;
               var28.field_i.addLast((byte) -113, var32);
-              var28.field_q = new um(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
+              var28.field_q = new PlayerStats(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
             }
             if (var5 != null) {
               oq.field_a.a(2, (Player) (var5));
@@ -312,7 +312,7 @@ final class no {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var2_int = 0;
-          for (var3 = -1 + da.field_g; var3 >= 0; var3--) {
+          for (var3 = -1 + DebouncedValidator.field_g; var3 >= 0; var3--) {
             if (param0 != wm.field_d[var3]) {
               continue;
             }
@@ -322,7 +322,7 @@ final class no {
           if (param1 != 1) {
             field_e = (ri) null;
           }
-          for (var3Lifetime1 = var2_int; var3Lifetime1 < da.field_g; var3Lifetime1++) {
+          for (var3Lifetime1 = var2_int; var3Lifetime1 < DebouncedValidator.field_g; var3Lifetime1++) {
             if (null != wm.field_d[var3Lifetime1].field_j) {
               ks.a(param1 ^ -115, false, wm.field_d[var3Lifetime1].field_j.field_z);
             }

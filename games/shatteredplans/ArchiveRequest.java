@@ -47,7 +47,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2 = rp.a(false, "jagex-last-login-method", param0);
+          var2 = DialWidget.a(false, "jagex-last-login-method", param0);
           if (var2 == null) {
             stackIn_4_0 = mj.field_Rb;
             return stackIn_4_0;

@@ -287,7 +287,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (go.a(0, (CharSequence) ((Object) var4)) &&
+                      if (TextFieldWidget.a(0, (CharSequence) ((Object) var4)) &&
                         !(DefensiveAi.a((CharSequence) ((Object) var4), 2) >= 10)) {
                         this.a((byte) -113, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -594,7 +594,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ts.field_G = this;
               VictoryChecker.field_e = param6;
               ArchiveSourceManager.field_h = param6;
-              td.field_G = param5;
+              SliderWidget.field_G = param5;
               NanoFrameTimer.field_k = 0;
               ei.field_c = GameScreen.f((byte) 126);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param4, param1, true);
@@ -822,7 +822,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);
-            rq.field_i = ((var6_int >> 1) + 32000) / var6_int;
+            LinkPainter.field_i = ((var6_int >> 1) + 32000) / var6_int;
           }
           fieldTemp$1 = mk.field_a;
           mk.field_a = mk.field_a + 1;

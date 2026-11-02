@@ -25,7 +25,7 @@ final class Player {
     int field_k;
     static fg field_l;
     Sprite field_d;
-    um field_q;
+    PlayerStats field_q;
     String name;
     static String field_j;
     static int[] field_y;

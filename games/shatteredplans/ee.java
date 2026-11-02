@@ -397,91 +397,91 @@ final class ee extends ms {
                 }
                 var2 = nb.a("gameoptnames,1,0", 100);
                 if (var2 != null) {
-                  w.field_J[1][0] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,1,1", 101);
                 if (null != var2) {
-                  w.field_J[1][1] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,1,2", 115);
                 if (null != var2) {
-                  w.field_J[1][2] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,1,3", 108);
                 if (null != var2) {
-                  w.field_J[1][3] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,1,4", 97);
                 if (var2 != null) {
-                  w.field_J[1][4] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,1,5", 107);
                 if (null != var2) {
-                  w.field_J[1][5] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,1,6", 107);
                 if (var2 != null) {
-                  w.field_J[1][6] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[1][6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,2,0", 108);
                 if (null != var2) {
-                  w.field_J[2][0] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[2][0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,2,1", 116);
                 if (null != var2) {
-                  w.field_J[2][1] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[2][1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,2,2", 106);
                 if (null != var2) {
-                  w.field_J[2][2] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[2][2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,2,3", 122);
                 if (var2 != null) {
-                  w.field_J[2][3] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[2][3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,3,0", 122);
                 if (var2 != null) {
-                  w.field_J[3][0] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[3][0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,3,1", 119);
                 if (null != var2) {
-                  w.field_J[3][1] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[3][1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,3,2", 104);
                 if (null != var2) {
-                  w.field_J[3][2] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[3][2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,3,3", 120);
                 if (null != var2) {
-                  w.field_J[3][3] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[3][3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,3,4", 111);
                 if (null != var2) {
-                  w.field_J[3][4] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[3][4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,4,0", 97);
                 if (null != var2) {
-                  w.field_J[4][0] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[4][0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptnames,4,1", 100);
                 if (var2 != null) {
-                  w.field_J[4][1] = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_J[4][1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gametypeTooltips,0", 118);
                 if (null != var2) {
-                  tc.field_E[0] = IterableNodeHashTable.a(var2, 17746);
+                  DialogRoot.field_E[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gametypeTooltips,1", 115);
                 if (null != var2) {
-                  tc.field_E[1] = IterableNodeHashTable.a(var2, 17746);
+                  DialogRoot.field_E[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gametypeTooltips,2", 110);
                 if (var2 != null) {
-                  tc.field_E[2] = IterableNodeHashTable.a(var2, 17746);
+                  DialogRoot.field_E[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gametypeTooltips,3", 108);
                 if (null != var2) {
-                  tc.field_E[3] = IterableNodeHashTable.a(var2, 17746);
+                  DialogRoot.field_E[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("rulesetTooltips,0", 127);
                 if (null != var2) {
@@ -713,11 +713,11 @@ final class ee extends ms {
                 }
                 var2 = nb.a("hint_select_gate_src", 113);
                 if (null != var2) {
-                  i.field_f = IterableNodeHashTable.a(var2, 17746);
+                  DialPainter.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("hint_select_gate_dest", 111);
                 if (null != var2) {
-                  ml.field_k = IterableNodeHashTable.a(var2, 17746);
+                  TextFieldValidator.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("hint_cancel", 97);
                 if (null != var2) {
@@ -737,7 +737,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_victory", 108);
                 if (var2 != null) {
-                  fj.field_o = IterableNodeHashTable.a(var2, 17746);
+                  MatchingTextValidator.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_defeat", 119);
                 if (var2 != null) {
@@ -1087,7 +1087,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_fleetsize", 95);
                 if (null != var2) {
-                  da.field_a = IterableNodeHashTable.a(var2, 17746);
+                  DebouncedValidator.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_endturn", 125);
                 if (null != var2) {
@@ -1563,7 +1563,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_ready", 109);
                 if (null != var2) {
-                  mf.field_v = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_v = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_pending", 124);
                 if (null != var2) {
@@ -1616,15 +1616,15 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_ships_lost", 114);
                 if (var2 != null) {
-                  rq.field_c = IterableNodeHashTable.a(var2, 17746);
+                  LinkPainter.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_avg_move_size", 127);
                 if (null != var2) {
-                  tc.field_D = IterableNodeHashTable.a(var2, 17746);
+                  DialogRoot.field_D = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_max_production", 107);
                 if (var2 != null) {
-                  lk.field_D = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxWidget.field_D = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_ships_constructed", 116);
                 if (null != var2) {
@@ -1636,7 +1636,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_research_wasted", 95);
                 if (var2 != null) {
-                  rp.field_J = IterableNodeHashTable.a(var2, 17746);
+                  DialWidget.field_J = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_attacks_successful", 118);
                 if (var2 != null) {
@@ -1648,7 +1648,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_defences_successful", 117);
                 if (var2 != null) {
-                  w.field_H = IterableNodeHashTable.a(var2, 17746);
+                  Dialog.field_H = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_defences_failed", 123);
                 if (null != var2) {
@@ -1772,7 +1772,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_garrison_no", 106);
                 if (null != var2) {
-                  tp.field_k = IterableNodeHashTable.a(var2, 17746);
+                  SliderPainter.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_skirmish_start", 95);
                 if (var2 != null) {
@@ -2006,7 +2006,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipWaitTreaty", 106);
                 if (var2 != null) {
-                  mf.field_u = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_u = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipPartiallyComplete", 117);
                 if (null != var2) {
@@ -2094,7 +2094,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipAnimClickToPlay", 116);
                 if (null != var2) {
-                  da.field_f = IterableNodeHashTable.a(var2, 17746);
+                  DebouncedValidator.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipAnimClickToStop", 126);
                 if (var2 != null) {
@@ -2102,7 +2102,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipAnimSpeedIsNormal", 119);
                 if (null != var2) {
-                  ec.field_t = IterableNodeHashTable.a(var2, 17746);
+                  UsernameAvailabilityValidator.field_t = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipAnimSpeedIsDouble", 95);
                 if (var2 != null) {

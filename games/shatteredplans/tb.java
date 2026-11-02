@@ -68,12 +68,12 @@ final class tb {
           Star.field_O = param9;
           ei.field_f = param2;
           nl.field_a = param1;
-          ec.field_v = param6;
+          UsernameAvailabilityValidator.field_v = param6;
           so.field_r = param12;
           nb.field_d = param7;
           FleetMove.field_A = param8;
           uk.field_b = ae.a(62, "lobby", param4, "gameprivacy");
-          tf.field_l = ae.a(83, "lobby", param4, "ratedgame");
+          CheckboxPainter.field_l = ae.a(83, "lobby", param4, "ratedgame");
           ji.field_E = ae.a(-88, "lobby", param4, "opentome");
           LegacyAi.field_s = ae.a(71, "lobby", param4, "allowspectators");
           mk.field_e = new String[5];
@@ -83,7 +83,7 @@ final class tb {
           mk.field_e[1] = id.field_a;
           mk.field_e[2] = MouseWheelInput.field_e;
           lp.field_v = new qr(0L, (qr) null);
-          gm.field_m = new qr(0L, td.field_N, gd.field_c);
+          gm.field_m = new qr(0L, SliderWidget.field_N, gd.field_c);
           sf.field_f = new qr(0L, vm.field_Cb, mk.field_b);
           ls.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
           lp.field_v.a(param13 ^ -7962, gm.field_m);
@@ -101,13 +101,13 @@ final class tb {
           vm.field_Ab = new qr(0L, bd.field_E, v.field_a.toUpperCase());
           sg.field_zb = new qr(0L, gg.field_d, uc.field_z.toUpperCase());
           qf.field_e = new qr(0L, rs.field_Eb);
-          BattleSnapshot.field_y = new qr(0L, td.field_N, sm.field_c);
+          BattleSnapshot.field_y = new qr(0L, SliderWidget.field_N, sm.field_c);
           GameSession.field_e = new qr(0L, jr.field_h, di.field_j);
           WeightedCacheEntry.field_t = new qr(0L, jr.field_h, vm.field_Lb);
           ta.field_d = new qr(0L, jr.field_h, fa.field_T);
           IsaacBackedRandom.field_c = new qr(0L, jr.field_h, WidgetContainer.field_z);
           hq.field_b = new qr(0L, vm.field_Cb, DerelictMapGenerator.field_o);
-          qs.field_y = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
+          SingleChildWidget.field_y = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
           gb.field_m = new qr(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
           gb.field_m.field_s = ns.field_pb;
           stackIn_6_0 = null;
@@ -123,7 +123,7 @@ final class tb {
             stackIn_7_1 = null;
             stackIn_7_4 = rh.field_a;
           }
-          rq.field_b = new qr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
+          LinkPainter.field_b = new qr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           AchievementProgress.field_i = new qr(0L, (qr) null);
           AchievementProgress.field_i.a(param13 ^ -7962, sg.field_zb);
           AchievementProgress.field_i.a(4, qf.field_e);
@@ -135,11 +135,11 @@ final class tb {
           }
           qf.field_e.a(4, IsaacBackedRandom.field_c);
           qf.field_e.a(4, hq.field_b);
-          qf.field_e.a(4, qs.field_y);
+          qf.field_e.a(4, SingleChildWidget.field_y);
           if (ns.field_pb) {
             AchievementProgress.field_i.a(4, gb.field_m);
           }
-          AchievementProgress.field_i.a(4, rq.field_b);
+          AchievementProgress.field_i.a(4, LinkPainter.field_b);
           SoundCache.field_c = new qr(0L, SpriteState.field_u);
           SoundCache.field_c.field_G = 0;
           SoundCache.field_c.field_y = 1;
@@ -155,7 +155,7 @@ final class tb {
           so.field_t = new qr(0L, (qr) null);
           DefendTask.field_x = new qr(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
-          lr.field_a = new qr(0L, td.field_N, gd.field_c);
+          lr.field_a = new qr(0L, SliderWidget.field_N, gd.field_c);
           vd.field_q = new qr(0L, vm.field_Cb, mk.field_b);
           ro.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.a(4, DefendTask.field_x);
@@ -164,7 +164,7 @@ final class tb {
             so.field_t.a(4, vd.field_q);
           }
           so.field_t.a(param13 + 7970, ro.field_a);
-          i.field_g = new qr(0L, bd.field_E, tm.field_o.toUpperCase());
+          DialPainter.field_g = new qr(0L, bd.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new qr(0L, gg.field_d);
           bj.field_D = new qr(0L, rs.field_Eb);
           StarAnnotation.field_l = new qr(0L, nl.field_b, ds.field_e.toUpperCase());
@@ -238,7 +238,7 @@ final class tb {
               }
             }
           }
-          go.field_I = new qr(0L, IsaacBackedRandom.field_a);
+          TextFieldWidget.field_I = new qr(0L, IsaacBackedRandom.field_a);
           aq.field_j = new qr(0L, IsaacBackedRandom.field_a);
           dn.field_f = new qr(0L, fg.field_b);
           dn.field_f.a(SpriteState.field_u, false);
@@ -261,10 +261,10 @@ final class tb {
               }
             }
           }
-          IntrusiveDeque.field_g.a(4, go.field_I);
+          IntrusiveDeque.field_g.a(4, TextFieldWidget.field_I);
           IntrusiveDeque.field_g.a(param13 + 7970, aq.field_j);
           IntrusiveDeque.field_g.a(4, dn.field_f);
-          hl.field_K = new qr(0L, un.field_g, ph.field_c.toUpperCase());
+          ValidationIndicator.field_K = new qr(0L, un.field_g, ph.field_c.toUpperCase());
           oo.field_c = new qr(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

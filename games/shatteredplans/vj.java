@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj extends qs {
+final class vj extends SingleChildWidget {
     static IntrusiveDeque field_E;
     private static int[] field_G;
     static int[] field_F;
@@ -28,7 +28,7 @@ final class vj extends qs {
             cb.field_n = bb.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
-          rq.field_e = rq.field_e + 1;
+          LinkPainter.field_e = LinkPainter.field_e + 1;
           if (param0 == null) {
             decompiledFrameRemainder0 = (GameKeyHandler.field_d == null);
           } else {
@@ -36,8 +36,8 @@ final class vj extends qs {
           }
           if (decompiledFrameRemainder0) {
             if (!AggressiveAi.field_q) {
-              if (ri.field_F <= rq.field_e) {
-                stackIn_16_0 = (rq.field_e < ri.field_F + de.field_i) ? 1 : 0;
+              if (ri.field_F <= LinkPainter.field_e) {
+                stackIn_16_0 = (LinkPainter.field_e < ri.field_F + de.field_i) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -46,15 +46,15 @@ final class vj extends qs {
             }
             var2_int = stackIn_16_0;
             if (param0 == null) {
-              rq.field_e = 0;
+              LinkPainter.field_e = 0;
             } else {
               if (AggressiveAi.field_q) {
-                rq.field_e = ri.field_F;
+                LinkPainter.field_e = ri.field_F;
               } else {
                 if (var2_int == 0) {
-                  rq.field_e = 0;
+                  LinkPainter.field_e = 0;
                 } else {
-                  rq.field_e = ri.field_F;
+                  LinkPainter.field_e = ri.field_F;
                 }
               }
             }
@@ -70,9 +70,9 @@ final class vj extends qs {
           }
           GameKeyHandler.field_d = param0;
           if (!AggressiveAi.field_q &&
-            rq.field_e < ri.field_F &&
+            LinkPainter.field_e < ri.field_F &&
             r.field_d) {
-            rq.field_e = 0;
+            LinkPainter.field_e = 0;
             rs.field_Fb = cb.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
@@ -82,9 +82,9 @@ final class vj extends qs {
           }
           cb.field_n = -1;
           if (AggressiveAi.field_q &&
-            rq.field_e == t.field_f) {
+            LinkPainter.field_e == t.field_f) {
             AggressiveAi.field_q = false;
-            rq.field_e = 0;
+            LinkPainter.field_e = 0;
             return;
           }
           return;
@@ -108,18 +108,18 @@ final class vj extends qs {
         }
         if (StarAnnotation.field_j != null) {
           if (!StarAnnotation.field_j.b((byte) 107)) {
-            return i.field_a;
+            return DialPainter.field_a;
           }
           return ns.field_xb;
         }
-        if (!rq.field_g.b((byte) 13)) {
+        if (!LinkPainter.field_g.b((byte) 13)) {
           return fa.field_J;
         }
-        if (!rq.field_g.a("commonui", 77)) {
-          return SpriteState.field_r + " - " + rq.field_g.a("commonui", (byte) 65) + "%";
+        if (!LinkPainter.field_g.a("commonui", 77)) {
+          return SpriteState.field_r + " - " + LinkPainter.field_g.a("commonui", (byte) 65) + "%";
         }
         if (!tq.field_f.b((byte) -69)) {
-          return rq.field_h;
+          return LinkPainter.field_h;
         }
         if (!tq.field_f.a("commonui", -91)) {
           return IntrusiveDequeCursor.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
@@ -177,7 +177,7 @@ final class vj extends qs {
         }
     }
 
-    private vj(int param0, int param1, int param2, int param3, iq param4, ko param5, UiWidget param6) {
+    private vj(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_z = param6;

@@ -11,15 +11,15 @@ final class SolVictoryChecker extends VictoryChecker {
     static int field_p;
     private Player field_l;
 
-    final int b(boolean param0) {
+    final int resultsPanelHeight(boolean param0) {
         if (param0) {
           GameScreen var3 = (GameScreen) null;
-          this.a((byte) -126, (GameState) null, (GameScreen) null);
+          this.showResults((byte) -126, (GameState) null, (GameScreen) null);
         }
-        return rs.field_Cb.field_J * 3 + this.field_n.length * cc.field_n;
+        return rs.field_Cb.field_J * 3 + this.field_n.length * PasswordValidator.field_n;
     }
 
-    final boolean a(GameState param0, byte param1) {
+    final boolean detectWinners(GameState param0, byte param1) {
         int var7 = 0;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
@@ -36,7 +36,7 @@ final class SolVictoryChecker extends VictoryChecker {
         int var6Lifetime2;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (super.a(param0, (byte) 100)) {
+          if (super.detectWinners(param0, (byte) 100)) {
             return true;
           }
           this.field_l = param0.field_g.field_e[36].field_y;
@@ -125,7 +125,7 @@ final class SolVictoryChecker extends VictoryChecker {
         return cg.field_F;
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writeScores(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -138,7 +138,7 @@ final class SolVictoryChecker extends VictoryChecker {
         }
     }
 
-    final Player[] b(int param0) {
+    final Player[] projectedWinners(int param0) {
         int var4_int = 0;
         int var2;
         int var3;
@@ -195,7 +195,7 @@ final class SolVictoryChecker extends VictoryChecker {
         return var4;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void readScores(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -226,7 +226,7 @@ final class SolVictoryChecker extends VictoryChecker {
         }
     }
 
-    final void a(byte param0, GameState param1, GameScreen param2) {
+    final void showResults(byte param0, GameState param1, GameScreen param2) {
         int var8_int = 0;
         int var11_int = 0;
         int[] stackIn_19_0 = null;
@@ -314,7 +314,7 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             stackIn_19_0[stackIn_19_1] = stackIn_20_2;
           }
-          var11 = this.b(0);
+          var11 = this.projectedWinners(0);
           if (this.field_g != null) {
             this.field_r = 0;
           } else {
@@ -415,7 +415,7 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (MusicVoice.field_m == Wormhole.field_j &&
               StarAnnotation.a(-91, 8)) {
-              w.field_I = sa.field_a.readLong(110);
+              Dialog.field_I = sa.field_a.readLong(110);
               sa.field_a.position = 0;
               gi.a(param0, param2, param4, -84, mq.field_c);
               Wormhole.field_j = IntrusiveNodeHashTable.field_d;
@@ -484,7 +484,7 @@ final class SolVictoryChecker extends VictoryChecker {
               Star.field_o = sa.field_a.readString(-1);
               var11 = (CharSequence) ((Object) Star.field_o);
               ArchiveIndex.field_d = ji.a(var11, true);
-              tf.field_n = sa.field_a.readUnsignedByte(-112);
+              CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
               Wormhole.field_j = ih.field_f;
               if (mq.field_c.a((byte) 115) != IsolationistAi.field_u) {
                 if (mq.field_c.a((byte) 123) == oi.field_b) {

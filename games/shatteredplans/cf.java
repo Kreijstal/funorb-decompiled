@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends WidgetContainer implements bp {
+final class cf extends WidgetContainer implements ButtonListener {
     static String field_M;
     private ns field_K;
     static int field_D;
@@ -11,7 +11,7 @@ final class cf extends WidgetContainer implements bp {
     private int[] field_N;
     static int[] field_H;
     private int field_G;
-    private kg[] field_E;
+    private FocusableWidget[] field_E;
     static String field_I;
 
     final static hh a(Archive param0, int param1, Archive param2, int param3, int param4) {
@@ -97,10 +97,10 @@ final class cf extends WidgetContainer implements bp {
               }
             }
           } else {
-            ba.field_c = td.field_P;
+            ba.field_c = SliderWidget.field_P;
             ck.field_e = PointsVictoryChecker.field_p;
             uq.field_i = 0;
-            BattleSnapshot.field_s = rr.a(param0, td.field_P, PointsVictoryChecker.field_p, param1 - 37);
+            BattleSnapshot.field_s = rr.a(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,9 +132,9 @@ final class cf extends WidgetContainer implements bp {
         int stackIn_12_9;
         int stackIn_12_10;
         boolean stackIn_14_11 = false;
-        mf.d(58);
+        EmailValidator.d(58);
         if (np.field_a != null) {
-          stackIn_6_0 = (tf.a(true, np.field_a.field_Lb)) ? 1 : 0;
+          stackIn_6_0 = (CheckboxPainter.a(true, np.field_a.field_Lb)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -173,12 +173,12 @@ final class cf extends WidgetContainer implements bp {
         }
     }
 
-    final kg a(ko param0, int param1, String param2) {
-        kg var4 = null;
+    final FocusableWidget a(WidgetListener param0, int param1, String param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        kg stackIn_2_0 = null;
-        kg stackIn_4_0 = null;
+        FocusableWidget stackIn_2_0 = null;
+        FocusableWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -186,12 +186,12 @@ final class cf extends WidgetContainer implements bp {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kg(param2, param0);
-          var4.field_p = (iq) ((Object) new qp());
+          var4 = new FocusableWidget(param2, param0);
+          var4.field_p = (WidgetPainter) ((Object) new qp());
           var5 = -2 + this.field_n;
           this.a(0, this.field_n + 34, (byte) 127, 0, this.field_x);
           if (param1 <= 119) {
-            stackIn_2_0 = (kg) null;
+            stackIn_2_0 = (FocusableWidget) null;
             return stackIn_2_0;
           }
           var4.a(var5, 30, (byte) 103, 7, -14 + this.field_x);
@@ -237,7 +237,7 @@ final class cf extends WidgetContainer implements bp {
     }
 
     cf(ns param0, nq param1, String param2) {
-        super(0, 0, 288, 0, (iq) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_G = 0;
         try {
@@ -256,7 +256,7 @@ final class cf extends WidgetContainer implements bp {
         try {
           var4_int = this.field_G;
           this.b(1 + var4_int, true);
-          this.field_E[var4_int] = this.a((ko) (this), 122, param0);
+          this.field_E[var4_int] = this.a((WidgetListener) (this), 122, param0);
           if (param1 < 99) {
             this.b(105, true);
           }
@@ -274,7 +274,7 @@ final class cf extends WidgetContainer implements bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -321,8 +321,8 @@ final class cf extends WidgetContainer implements bp {
         if (param0 <= this.field_G) {
           return;
         }
-        kg[] var7 = new kg[param0];
-        kg[] var3 = var7;
+        FocusableWidget[] var7 = new FocusableWidget[param0];
+        FocusableWidget[] var3 = var7;
         int[] var4 = new int[param0];
         if (!param1) {
           this.field_K = (ns) null;

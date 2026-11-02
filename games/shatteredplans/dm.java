@@ -99,15 +99,15 @@ final class dm {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != np.field_a && (null != td.field_E ||
+          if (null != np.field_a && (null != SliderWidget.field_E ||
             ArchiveIndex.field_h != null ||
             null != pg.field_A ||
             null != ji.field_D)) {
             for (var9 = 0; var9 < em.field_k; var9++) {
               var10_int = np.field_a.field_dc[var9] & 255;
-              if (td.field_E != null &&
-                null != td.field_E[var9] &&
-                td.field_E[var9][var10_int]) {
+              if (SliderWidget.field_E != null &&
+                null != SliderWidget.field_E[var9] &&
+                SliderWidget.field_E[var9][var10_int]) {
                 var5_int = 1;
               }
               if (ArchiveIndex.field_h != null &&
@@ -234,15 +234,15 @@ final class dm {
               var12.field_Jb.field_jb = var24_int;
               if (ro.field_a != param2) {
                 if (var12.field_Tb) {
-                  var12.field_Ab.field_z = re.a(o.field_q, 4371, new String[]{var20});
+                  var12.field_Ab.field_z = re.a(WidgetTheme.field_q, 4371, new String[]{var20});
                   var12.field_Mb.field_z = fb.field_bc;
                 } else {
                   if (!var12.field_Vb) {
-                    var12.field_Jb.field_z = um.field_p;
+                    var12.field_Jb.field_z = PlayerStats.field_p;
                   } else {
                     var12.field_Ab.field_z = re.a(FleetMove.field_E, 4371, new String[]{var20});
-                    var12.field_Jb.field_z = o.field_m;
-                    var12.field_Mb.field_z = hl.field_J;
+                    var12.field_Jb.field_z = WidgetTheme.field_m;
+                    var12.field_Mb.field_z = ValidationIndicator.field_J;
                   }
                 }
               } else {
@@ -253,7 +253,7 @@ final class dm {
               var25_int = 0;
               if (np.field_a != null &&
                 SecondaryNodeDequeIterator.a((byte) -97) &&
-                ~ec.field_p != ~var12.field_Ib) {
+                ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
                   var26 = var12.field_Jb.e(false) + 2 * tg.field_a;
                   var12.field_Jb.a(var26, cr.field_c, (byte) 80, var19, var25_int);
@@ -320,7 +320,7 @@ final class dm {
                 ArchiveSourceManager.a((byte) -79, param4, var12.field_Ib);
               } else {
                 if (0 == var12.field_Mb.field_rb) {
-                  TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, td.field_P, param2, 0, 0, (byte) 110);
+                  TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, SliderWidget.field_P, param2, 0, 0, (byte) 110);
                 } else {
                   Archive.a(param4, (byte) 2, var12.field_Ib);
                 }
@@ -333,7 +333,7 @@ final class dm {
                 continue;
               }
               var24Lifetime2 = null;
-              if (ec.field_p != var12.field_Ib) {
+              if (UsernameAvailabilityValidator.field_p != var12.field_Ib) {
                 if (var5_int != 0 &&
                   !var12.field_Ub) {
                   var24Lifetime2 = re.a(fb.field_kc, param1 ^ 4371, new String[]{var20});
@@ -407,9 +407,9 @@ final class dm {
                 for (var27_int = 0; var27_int < em.field_k; var27_int++) {
                   var28 = 255 & np.field_a.field_dc[var27_int];
                   var29 = 0;
-                  if (td.field_E != null &&
-                    td.field_E[var27_int] != null &&
-                    td.field_E[var27_int][var28] &&
+                  if (SliderWidget.field_E != null &&
+                    SliderWidget.field_E[var27_int] != null &&
+                    SliderWidget.field_E[var27_int][var28] &&
                     !var12.field_Ub) {
                     var29 = 1;
                   }
@@ -499,7 +499,7 @@ final class dm {
 
     final static void a(int param0, int param1) {
         de.field_h = ff.field_v[param1];
-        i.field_a = MusicCrossfadeStream.field_w[param1];
+        DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ub var3 = (ub) null;
           dm.a(-32, 115, (ub) null, false, 125);

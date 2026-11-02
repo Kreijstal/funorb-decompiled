@@ -515,10 +515,10 @@ final class AggressiveAi extends StandardAi {
               }
               if (var30.field_v &&
                 var7Lifetime3 > 0) {
-                if (null == ec.field_v) {
+                if (null == UsernameAvailabilityValidator.field_v) {
                   stackIn_156_0 = null;
                 } else {
-                  stackIn_156_0 = ec.field_v[-1 + var7Lifetime3];
+                  stackIn_156_0 = UsernameAvailabilityValidator.field_v[-1 + var7Lifetime3];
                 }
                 var9 = stackIn_156_0;
                 if (var9 != null) {
@@ -553,10 +553,10 @@ final class AggressiveAi extends StandardAi {
                   var15 = 1;
                   var16 = DualLinkDeque.a(107, ji.field_D[var8][var10] & ~GameRules.field_m);
                 }
-                if (td.field_E != null &&
-                  td.field_E[var8] != null &&
+                if (SliderWidget.field_E != null &&
+                  SliderWidget.field_E[var8] != null &&
                   0 >= StarAnnotation.field_m &&
-                  td.field_E[var8][var10]) {
+                  SliderWidget.field_E[var8][var10]) {
                   var11 = 1;
                 }
                 if (null != ArchiveIndex.field_h &&

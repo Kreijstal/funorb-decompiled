@@ -233,9 +233,9 @@ final class ub extends qr {
         int var2 = 0;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!mf.field_r) {
+          if (!EmailValidator.field_r) {
             if (DerelictVictoryChecker.field_n.a("intro", param0 ^ 52)) {
-              mf.field_r = true;
+              EmailValidator.field_r = true;
             }
           } else {
             if (!jn.field_a) {
@@ -245,7 +245,7 @@ final class ub extends qr {
           if (param0 != 93) {
             ub.f((byte) -67);
           }
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j == 13) {
               ArchiveRequest.a(-1, (byte) 125);
               continue;
@@ -270,10 +270,10 @@ final class ub extends qr {
             }
             ArchiveRequest.a(stackIn_21_0, (byte) 125);
           }
-          if (50 + u.field_a < cl.field_n) {
-            u.field_a = cl.field_n + vc.a((byte) -39, 50);
+          if (50 + ValidationState.field_a < cl.field_n) {
+            ValidationState.field_a = cl.field_n + vc.a((byte) -39, 50);
           }
-          var1_int = cl.field_n - u.field_a;
+          var1_int = cl.field_n - ValidationState.field_a;
           if (0 > var1_int) {
             dp.field_r = 0;
           } else {
@@ -349,7 +349,7 @@ final class ub extends qr {
                   }
                 }
               } else {
-                um.b(-63);
+                PlayerStats.b(-63);
               }
             }
           } else {
@@ -375,8 +375,8 @@ final class ub extends qr {
           if (je.field_d != 0) {
             if (540 <= PointsVictoryChecker.field_p &&
               PointsVictoryChecker.field_p < 620 &&
-              440 <= td.field_P &&
-              td.field_P < 460) {
+              440 <= SliderWidget.field_P &&
+              SliderWidget.field_P < 460) {
               ArchiveRequest.a(-1, (byte) 122);
               return;
             }

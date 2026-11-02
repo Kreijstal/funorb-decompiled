@@ -81,7 +81,7 @@ final class vm extends qr {
             vm.g(-38);
           }
           if (!param2) {
-            stackIn_6_0 = um.field_c.c(param0);
+            stackIn_6_0 = PlayerStats.field_c.c(param0);
             return stackIn_6_0;
           }
           stackIn_4_0 = ql.field_n.c(param0);
@@ -141,17 +141,17 @@ final class vm extends qr {
     }
 
     final static String a(long param0, int param1) {
-        i.field_e.setTime(new Date(param0));
-        int var3 = i.field_e.get(7);
-        int var4 = i.field_e.get(5);
-        int var5 = i.field_e.get(2);
+        DialPainter.field_e.setTime(new Date(param0));
+        int var3 = DialPainter.field_e.get(7);
+        int var4 = DialPainter.field_e.get(5);
+        int var5 = DialPainter.field_e.get(2);
         if (param1 != 10) {
           return (String) null;
         }
-        int var6 = i.field_e.get(1);
-        int var7 = i.field_e.get(11);
-        int var8 = i.field_e.get(12);
-        int var9 = i.field_e.get(13);
+        int var6 = DialPainter.field_e.get(1);
+        int var7 = DialPainter.field_e.get(11);
+        int var8 = DialPainter.field_e.get(12);
+        int var9 = DialPainter.field_e.get(13);
         return LegacyAi.field_q[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + PlacementOrder.field_o[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

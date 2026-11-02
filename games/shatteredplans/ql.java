@@ -35,25 +35,25 @@ final class ql extends IntrusiveNode {
             return;
           }
           if (0 == vc.field_c.length) {
-            mf.field_q = null;
+            EmailValidator.field_q = null;
             return;
           }
-          um.field_k = 0;
-          tp.b((byte) 93);
+          PlayerStats.field_k = 0;
+          SliderPainter.b((byte) 93);
           var9 = new dm();
           var3 = nd.a((byte) -106);
           while (var3 != null) {
             var9.a(false, var3);
             var3 = nd.a((byte) 118);
           }
-          mf.field_q = new sq[var9.field_g];
+          EmailValidator.field_q = new sq[var9.field_g];
           for (var4 = 0; var4 < var9.field_g; var4++) {
-            mf.field_q[var4] = (sq) (var9.field_b[var4]);
+            EmailValidator.field_q[var4] = (sq) (var9.field_b[var4]);
           }
           var8 = 0;
           var4Lifetime1 = var8;
           while (var9.field_g - 1 > var8) {
-            var5 = mf.field_q[var8].field_d;
+            var5 = EmailValidator.field_q[var8].field_d;
             if (var5 == null) {
               stackIn_17_0 = null;
             } else {
@@ -61,10 +61,10 @@ final class ql extends IntrusiveNode {
             }
             var6 = stackIn_17_0;
             if (var6 == null &&
-              !mf.field_q[var8].field_r) {
-              var6 = mf.field_q[var8 + 1];
+              !EmailValidator.field_q[var8].field_r) {
+              var6 = EmailValidator.field_q[var8 + 1];
             }
-            mf.field_q[var8].field_l = var6;
+            EmailValidator.field_q[var8].field_l = var6;
             var8++;
           }
           return;

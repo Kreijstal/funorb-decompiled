@@ -37,7 +37,7 @@ final class e {
           var12.a(var5, 8);
           var6 = new b(d.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - d.field_b[param2].field_z / 2, d.field_b[param2].field_w, 2, 2105376);
           var12.a(var6, 8);
-          var7 = new ff(3 * d.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, ec.a(param2, param0, true));
+          var7 = new ff(3 * d.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, UsernameAvailabilityValidator.a(param2, param0, true));
           var12.a(var7, 8);
           var8 = new ff(0, 2 + rs.field_Cb.field_J, d.field_b[param2]);
           var12.a(var8, 8);
@@ -49,7 +49,7 @@ final class e {
             var5.field_o = dupTemp$1;
             var12.field_o = dupTemp$1;
           } else {
-            var9 = new qk(d.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + d.field_b[param2].field_w / 8), 130 - d.field_b[param2].field_z, d.field_b[param2].field_w, mf.field_v);
+            var9 = new qk(d.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + d.field_b[param2].field_w / 8), 130 - d.field_b[param2].field_z, d.field_b[param2].field_w, EmailValidator.field_v);
             var12.a(var9, 8);
             param3.field_b[param2] = var9;
             var9.field_o = mm.field_q;
@@ -98,7 +98,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 13 / ((-40 - param1) / 39);
-          stackIn_1_0 = da.a(-128, PcmSampleStream.a(param2, 100, param0));
+          stackIn_1_0 = DebouncedValidator.a(-128, PcmSampleStream.a(param2, 100, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

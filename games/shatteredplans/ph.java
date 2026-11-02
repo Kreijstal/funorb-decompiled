@@ -59,7 +59,7 @@ final class ph implements jk {
 
     final static void a(Archive param0, int param1) {
         try {
-          tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
+          DialogRoot.a((byte) 23, param0.a(true, "tutorial.txt", ""));
           int var2_int = -90 / ((param1 + 9) / 32);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

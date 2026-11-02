@@ -32,7 +32,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           }
           var6 = param0.getParameter("currency");
           if (var6 != null &&
-            go.a(0, (CharSequence) ((Object) var6))) {
+            TextFieldWidget.a(0, (CharSequence) ((Object) var6))) {
             DefensiveAi.a((CharSequence) ((Object) var6), param3 + 5);
           }
           ImageProducerRasterBuffer.field_l = new Sprite[param4.length];
@@ -70,7 +70,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         return param1 >= 0 ? true : false;
     }
 
-    final Player[] b(int param0) {
+    final Player[] projectedWinners(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var2;
@@ -120,7 +120,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         return var5;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void readScores(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -232,14 +232,14 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    final int b(boolean param0) {
+    final int resultsPanelHeight(boolean param0) {
         if (param0) {
           PointsVictoryChecker.a((byte) 114, 82);
         }
-        return cc.field_n * this.field_o.length + rs.field_Cb.field_J;
+        return PasswordValidator.field_n * this.field_o.length + rs.field_Cb.field_J;
     }
 
-    final boolean a(GameState param0, byte param1) {
+    final boolean detectWinners(GameState param0, byte param1) {
         int stackIn_41_0 = 0;
         int stackIn_41_1 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -262,7 +262,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         int var3_intLifetime2;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (super.a(param0, (byte) 116)) {
+          if (super.detectWinners(param0, (byte) 116)) {
             return true;
           }
           if (this.field_k == 0) {
@@ -309,7 +309,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           }
           if (param1 < 23) {
             var8 = (GameState) null;
-            this.a((GameState) null, (byte) -96);
+            this.detectWinners((GameState) null, (byte) -96);
           }
           var3_intLifetime2 = 0;
           var4Lifetime1 = 0;
@@ -371,7 +371,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         sp.field_r = param1;
     }
 
-    final void a(byte param0, GameState param1, GameScreen param2) {
+    final void showResults(byte param0, GameState param1, GameScreen param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_34_0 = null;
@@ -461,7 +461,7 @@ final class PointsVictoryChecker extends VictoryChecker {
             var8[var10_int] = this.field_o[var26[var10_int]];
             var9[var10_int] = this.field_n[var26[var10_int]];
           }
-          var10 = this.b(0);
+          var10 = this.projectedWinners(0);
           if (null == this.field_g &&
             0 != var10.length) {
             var12 = var10[0].field_x;
@@ -492,7 +492,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writeScores(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3_intLifetime1;

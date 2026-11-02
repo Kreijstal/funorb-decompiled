@@ -28,7 +28,7 @@ final class fc {
           this.field_b = 56L;
           return;
         }
-        if (this.field_b == ec.field_p) {
+        if (this.field_b == UsernameAvailabilityValidator.field_p) {
           if (param1 == -16661) {
             return;
           }
@@ -134,7 +134,7 @@ final class fc {
         if (param1 != 17) {
           return false;
         }
-        tc.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -142,10 +142,10 @@ final class fc {
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (8 == param0) {
-          kg.a(-125, this.field_b, this.field_k);
+          FocusableWidget.a(-125, this.field_b, this.field_k);
         } else {
           if (param0 == 18) {
-            i.a((byte) 49, this.field_k, this.field_b);
+            DialPainter.a((byte) 49, this.field_k, this.field_b);
           } else {
             if (param0 == 11) {
               gb.a((byte) 49, param2, 0, this.field_l);
@@ -202,7 +202,7 @@ final class fc {
           return true;
         }
         if (param0 == 5) {
-          var6 = o.a((byte) -107, param1, this.field_k);
+          var6 = WidgetTheme.a((byte) -107, param1, this.field_k);
           if (var6 == null) {
             return true;
           }
@@ -240,7 +240,7 @@ final class fc {
         int var6 = 0;
         String var7 = null;
         try {
-          if (this.field_k != null && (~this.field_b != ~ec.field_p ||
+          if (this.field_k != null && (~this.field_b != ~UsernameAvailabilityValidator.field_p ||
             param1 == 2) && po.field_b == 2) {
             var7 = this.a(-121);
             var4 = var7;
@@ -269,7 +269,7 @@ final class fc {
                   this.field_j.a(1, 19, re.a(ri.field_G, 4371, new String[]{var7}));
                 }
               }
-              this.field_j.a(1, 5, re.a(kg.field_C, 4371, new String[]{var7}));
+              this.field_j.a(1, 5, re.a(FocusableWidget.field_C, 4371, new String[]{var7}));
             }
             if (var6 != 0) {
               this.field_j.a(1, 7, re.a(ByteArrayNode.field_m, 4371, new String[]{var7}));
@@ -313,10 +313,10 @@ final class fc {
         if (param0 != 17) {
           this.field_i = (int[]) null;
           if (this.field_k != null) {
-            if (~ec.field_p != ~this.field_b) {
+            if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
               var3 = this.a(-127);
               var2 = var3;
-              this.field_j.a(1, 17, re.a(ml.field_m, 4371, new String[]{var3}));
+              this.field_j.a(1, 17, re.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
             }
             return;
           }
@@ -325,10 +325,10 @@ final class fc {
         if (this.field_k == null) {
           return;
         }
-        if (~ec.field_p != ~this.field_b) {
+        if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
           var3 = this.a(-127);
           var2Lifetime1 = var3;
-          this.field_j.a(1, 17, re.a(ml.field_m, 4371, new String[]{var3}));
+          this.field_j.a(1, 17, re.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
           return;
         }
     }

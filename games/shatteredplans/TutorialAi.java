@@ -260,7 +260,7 @@ final class TutorialAi extends LegacyAi {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          tp.a((int[]) null, 0L, (String) null, (String) null, 293, (ub) null, param2, param0, -1);
+          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, (ub) null, param2, param0, -1);
           if (0 == param0) {
             var11 = DerelictVictoryChecker.field_m;
             var12 = BoundsRect.field_m[0];

@@ -3,7 +3,7 @@
  */
 final class lm {
     static String field_a;
-    static u field_d;
+    static ValidationState field_d;
     String field_c;
     static int[] field_e;
     String field_b;
@@ -48,6 +48,6 @@ final class lm {
     static {
         field_a = "Game Type: Conquest";
         field_e = new int[]{2, 21, 22, 7, 6, 14};
-        field_d = new u();
+        field_d = new ValidationState();
     }
 }

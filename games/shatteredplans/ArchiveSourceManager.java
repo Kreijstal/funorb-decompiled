@@ -5,7 +5,7 @@ final class ArchiveSourceManager {
     private CachedArchiveSource[] field_a;
     private PacketBuffer field_i;
     private ArchiveNetworkClient field_e;
-    static u field_b;
+    static ValidationState field_b;
     private DiskCacheWorker field_d;
     private java.math.BigInteger field_g;
     private java.math.BigInteger field_j;
@@ -101,7 +101,7 @@ final class ArchiveSourceManager {
           gf.f(0, 4, 1, 0);
         }
         if (param5 >= -22) {
-          field_b = (u) null;
+          field_b = (ValidationState) null;
         }
         Object var11 = null;
         if (param2) {
@@ -236,6 +236,6 @@ final class ArchiveSourceManager {
     }
 
     static {
-        field_b = new u();
+        field_b = new ValidationState();
     }
 }

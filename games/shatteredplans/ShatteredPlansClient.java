@@ -52,7 +52,7 @@ public final class ShatteredPlansClient extends tl {
         if (null != bj.field_K) {
           BufferedCacheFile.c(0);
         }
-        w.f((byte) 89);
+        Dialog.f((byte) 89);
     }
 
     final void c(int param0) {
@@ -62,7 +62,7 @@ public final class ShatteredPlansClient extends tl {
         var3.field_r.d(128, (byte) -110, 9);
         var3.field_u.c(598, wm.field_b);
         var3.field_r.c(param0 ^ -599, wm.field_b);
-        da.a((java.awt.Component) ((Object) tm.field_i), fa.field_W, var3, 1102, false, 22050, 22050, true);
+        DebouncedValidator.a((java.awt.Component) ((Object) tm.field_i), fa.field_W, var3, 1102, false, 22050, 22050, true);
         IterableNodeHashTable.field_b = 2458760;
         wo.field_a = 2805974;
         em.field_j = 2458760;
@@ -71,7 +71,7 @@ public final class ShatteredPlansClient extends tl {
         StarAnnotation.field_n = 2805974;
         em.a(us.b(0), 1);
         this.a(false, true, -2839, true, true, false, false);
-        td.field_K = TaskAi.field_a;
+        SliderWidget.field_K = TaskAi.field_a;
         ae.field_a[71] = 4;
         ae.field_a[74] = -2;
         ae.field_a[58] = -2;
@@ -149,9 +149,9 @@ public final class ShatteredPlansClient extends tl {
           }
           stackIn_7_1 = (null != bj.field_K);
           this.a(stackIn_7_1, 77);
-          if (um.field_n) {
+          if (PlayerStats.field_n) {
             this.c(false);
-            um.field_n = false;
+            PlayerStats.field_n = false;
           }
           cl.field_n = cl.field_n + 1;
           if (uf.a(false)) {
@@ -174,7 +174,7 @@ public final class ShatteredPlansClient extends tl {
             }
           } else {
             if (!StrongCacheEntry.f((byte) 122)) {
-              tc.f((byte) 125);
+              DialogRoot.f((byte) 125);
             } else {
               if (DisplayModeInfo.field_e) {
                 if (!sq.a(false)) {
@@ -189,12 +189,12 @@ public final class ShatteredPlansClient extends tl {
                         BufferedCacheFile.c(0);
                       }
                       if (2 == var3) {
-                        da.a(1, (java.applet.Applet) (this));
+                        DebouncedValidator.a(1, (java.applet.Applet) (this));
                       }
                     }
                     this.b(false, true);
                   } else {
-                    if (i.c(0)) {
+                    if (DialPainter.c(0)) {
                       var2 = 1;
                       if (~jb.field_c != ~jb.field_g) {
                         this.b(false, false);
@@ -241,7 +241,7 @@ public final class ShatteredPlansClient extends tl {
                   var2 = 1;
                 }
               } else {
-                if (!w.d(true)) {
+                if (!Dialog.d(true)) {
                   GzipInflater.a(1);
                 }
                 DisplayModeInfo.field_e = true;
@@ -265,7 +265,7 @@ public final class ShatteredPlansClient extends tl {
               }
             }
           }
-          if (!w.d(true)) {
+          if (!Dialog.d(true)) {
             while (true) {
               var3_ref_lq = (lq) (GameKeyHandler.field_a.pollFirst(54));
               if (var3_ref_lq == null) {
@@ -289,18 +289,18 @@ public final class ShatteredPlansClient extends tl {
               DiskCacheWorker.a(1048576);
               be.a(a.a(20605), js.a(2000, (byte) 122), pe.m(42), 1024, js.a(6, (byte) 122), (byte) -122, hn.field_j.length, bb.a((byte) 100), pg.field_C, 150);
               sj.a((byte) 77, js.b((byte) 121), NodeHashTableIterator.a(83));
-              mf.field_p = true;
+              EmailValidator.field_p = true;
               md.field_Q = false;
               gr.field_o = -2;
               continue;
             }
             if (15 == BufferedCacheFile.field_e) {
-              if (mf.field_p) {
+              if (EmailValidator.field_p) {
                 DiskCacheWorker.a(1048576);
                 rh.a((byte) -122);
                 qn.b(112);
                 ta.a(0, 0, (byte) 96, false);
-                mf.field_p = false;
+                EmailValidator.field_p = false;
                 lg.field_b = true;
                 Wormhole.field_i = false;
                 MusicEnvelope.field_d = false;
@@ -313,8 +313,8 @@ public final class ShatteredPlansClient extends tl {
               continue;
             }
             if (BufferedCacheFile.field_e == 10 &&
-              mf.field_p) {
-              rp.h(112);
+              EmailValidator.field_p) {
+              DialWidget.h(112);
               continue;
             }
             if (BufferedCacheFile.field_e == 71) {
@@ -499,7 +499,7 @@ public final class ShatteredPlansClient extends tl {
                 is.field_a = true;
                 md.field_Q = true;
               } else {
-                if (mf.field_p) {
+                if (EmailValidator.field_p) {
                   lg.field_b = true;
                   Wormhole.field_i = false;
                   DiskArchiveRequest.field_A = true;
@@ -513,7 +513,7 @@ public final class ShatteredPlansClient extends tl {
                   mj.field_Hb[GameRules.field_c].a(0, (byte) 84, false);
                   MusicEnvelope.field_d = false;
                   v.field_b = false;
-                  mf.field_p = false;
+                  EmailValidator.field_p = false;
                   wm.a(0);
                 }
                 md.field_Q = false;
@@ -527,7 +527,7 @@ public final class ShatteredPlansClient extends tl {
             if (var5 != 0) {
               var7 = 1;
             }
-            if (mf.field_p ||
+            if (EmailValidator.field_p ||
               md.field_Q ||
               is.field_a) {
               var7 = 1;
@@ -592,36 +592,36 @@ public final class ShatteredPlansClient extends tl {
             SpriteState.a(StrongCacheEntry.field_z, DualLinkNode.field_n, param0 - 47);
             DualLinkNode.field_n = null;
             StrongCacheEntry.field_z = null;
-            u.c(126);
+            ValidationState.c(126);
             return false;
           }
           if (IntrusiveNodeHashTable.field_g != null) {
-            nj.a(90.0f, 2, cc.field_p);
+            nj.a(90.0f, 2, PasswordValidator.field_p);
             this.d(1);
             ck.a(ms.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, la.field_k, (byte) -8);
             rl.field_f = null;
             IntrusiveNodeHashTable.field_g = null;
             la.field_k = null;
-            u.c(122);
+            ValidationState.c(122);
             return false;
           }
           if (PointsVictoryChecker.field_l != null) {
             oi.a((byte) -126, PointsVictoryChecker.field_l);
             PointsVictoryChecker.field_l = null;
-            u.c(125);
+            ValidationState.c(125);
             return false;
           }
           if (null != ai.field_c) {
             ph.a(ai.field_c, param0 - 167);
             IsaacRandom.field_h = oq.a(ai.field_c.a(true, "starnames.txt", ""), (byte) -17);
             ai.field_c = null;
-            u.c(121);
+            ValidationState.c(121);
             return false;
           }
           if (null != oi.field_h) {
             CellVertex.a(1, new fm(oi.field_h.a(true, "huffman", "")));
             oi.field_h = null;
-            u.c(126);
+            ValidationState.c(126);
             return false;
           }
           this.l(1);
@@ -640,8 +640,8 @@ public final class ShatteredPlansClient extends tl {
           GameRules.field_c = 0;
           de.field_j = -1;
           hk.a(50, (byte) 52);
-          ec.b(param0 ^ -86, 50);
-          u.c(122);
+          UsernameAvailabilityValidator.b(param0 ^ -86, 50);
+          ValidationState.c(122);
           jo.a(32767, hk.field_nb, true, 1048576);
           return true;
         }
@@ -680,7 +680,7 @@ public final class ShatteredPlansClient extends tl {
                                   vo.a(ld.field_m, cm.field_a, param0 + 18);
                                   cm.field_a = null;
                                   ld.field_m = null;
-                                  u.c(122);
+                                  ValidationState.c(122);
                                   return false;
                                 }
                                 nj.a(75.0f, 2, nc.a(MouseInputHandler.field_e, la.field_k, param0 ^ 118, jh.field_v));
@@ -713,7 +713,7 @@ public final class ShatteredPlansClient extends tl {
               nj.a(20.0f, 2, BoundsRect.a("", cm.field_a, (byte) 117, kh.field_Db, TurnEventLog.field_e));
               return false;
             }
-            nj.a(17.0f, 2, BoundsRect.a("lobby", rl.field_f, (byte) 94, rq.field_h, IntrusiveDequeCursor.field_h));
+            nj.a(17.0f, 2, BoundsRect.a("lobby", rl.field_f, (byte) 94, LinkPainter.field_h, IntrusiveDequeCursor.field_h));
             return false;
           }
           nj.a(13.0f, 2, BoundsRect.a("lobby", AttackTask.field_s, (byte) 19, fa.field_J, SpriteState.field_r));
@@ -772,7 +772,7 @@ public final class ShatteredPlansClient extends tl {
         ArchiveSourceManager.a((byte) 124);
         BufferedCacheFile.a(false);
         BufferedSocket.b((byte) -127);
-        um.a((byte) -17);
+        PlayerStats.a((byte) -17);
         SolVictoryChecker.c(-26088);
         IntrusiveNode.a(true);
         c.b();
@@ -821,7 +821,7 @@ public final class ShatteredPlansClient extends tl {
         ArchiveSource.a(false);
         ig.a((byte) 92);
         ta.a((byte) 118);
-        tc.e(true);
+        DialogRoot.e(true);
         oj.q(-17682);
         eo.h((byte) -94);
         hk.p(param0 + 24089);
@@ -875,7 +875,7 @@ public final class ShatteredPlansClient extends tl {
         BattleEvent.a(param0 + 24195);
         PlacementEvent.a((byte) 12);
         BattleContribution.c(false);
-        SolarFlareEvent.a(0);
+        StellarBombEvent.a(0);
         StarAbandonedEvent.a((byte) 48);
         TurnEventLog.a(0);
         hb.c((byte) -122);
@@ -939,7 +939,7 @@ public final class ShatteredPlansClient extends tl {
         ArchiveRequest.g(param0 ^ 6520);
         ng.a(-109);
         bo.p(param0 ^ -24069);
-        o.a((byte) -77);
+        WidgetTheme.a((byte) -77);
         wn.b();
         VorbisSample.a();
         hc.a((byte) 66);
@@ -956,16 +956,16 @@ public final class ShatteredPlansClient extends tl {
         na.b((byte) -105);
         lr.b(3);
         gi.a(32);
-        tf.a(false);
+        CheckboxPainter.a(false);
         gn.b(true);
-        i.b(16711935);
-        tp.a((byte) 49);
+        DialPainter.b(16711935);
+        SliderPainter.a((byte) 49);
         qo.a(-109);
         UiWidget.d(0);
-        kg.d(true);
-        qs.a((byte) 109);
+        FocusableWidget.d(true);
+        SingleChildWidget.a((byte) 109);
         jl.o(-123);
-        w.m(-1);
+        Dialog.m(-1);
         WidgetContainer.j(param0 ^ -24192);
         IntrusiveDequeCursor.b(22256);
         wl.a((byte) 85);
@@ -1005,19 +1005,19 @@ public final class ShatteredPlansClient extends tl {
         MusicEnvelope.a(false);
         pg.f((byte) -43);
         fa.l(5);
-        go.k(102);
+        TextFieldWidget.k(102);
         il.h((byte) 88);
         md.j(-125);
         bj.a(param0 ^ -32120);
         ts.a((byte) -104);
-        hl.a((byte) 107);
+        ValidationIndicator.a((byte) 107);
         ah.i(4096);
-        lk.h(-22429);
-        ml.d((byte) -65);
+        CheckboxWidget.h(-22429);
+        TextFieldValidator.d((byte) -65);
         bk.a(param0 + 26631);
         pe.a((byte) -75);
-        rp.a(4);
-        td.a(-104);
+        DialWidget.a(4);
+        SliderWidget.a(-104);
         en.a(-5);
         cr.a((byte) 41);
         DerelictMapReader.a(false);
@@ -1066,7 +1066,7 @@ public final class ShatteredPlansClient extends tl {
         BoundsRect.a(0);
         oq.a(param0 + 24098);
         qp.b((byte) -128);
-        rq.b(-110);
+        LinkPainter.b(-110);
         ce.b(true);
         og.a(-1);
         cg.j(124);
@@ -1100,16 +1100,16 @@ public final class ShatteredPlansClient extends tl {
         aq.a((byte) 107);
         wk.a((byte) 70);
         ha.a(4324);
-        ec.b(true);
-        cc.d(param0 + 24324);
+        UsernameAvailabilityValidator.b(true);
+        PasswordValidator.d(param0 + 24324);
         mm.e(param0 + 23978);
-        mf.f(0);
-        mb.d(127);
-        fj.d(param0 + 24147);
+        EmailValidator.f(0);
+        AgeValidator.d(127);
+        MatchingTextValidator.d(param0 + 24147);
         oa.b(78);
         ql.a((byte) -53);
-        u.b(-31);
-        da.b((byte) -37);
+        ValidationState.b(-31);
+        DebouncedValidator.b((byte) -37);
         ro.a((byte) -92);
         this.field_s = null;
         this.field_G = null;
@@ -1151,7 +1151,7 @@ public final class ShatteredPlansClient extends tl {
         if (~jb.field_c != ~jb.field_g) {
           if (jb.field_g != po.field_f) {
             if (~jb.field_g == ~NanoFrameTimer.field_d) {
-              if (!w.d(true)) {
+              if (!Dialog.d(true)) {
                 if (null != tq.field_b) {
                   ks.a(20, tq.field_b, 3);
                 }
@@ -1175,7 +1175,7 @@ public final class ShatteredPlansClient extends tl {
               }
               ns.field_ob = false;
               BattleContribution.field_s = false;
-              jb.field_g = o.field_n;
+              jb.field_g = WidgetTheme.field_n;
             } else {
               na.field_F = na.field_F - 1;
               if (na.field_F == 0) {
@@ -1215,9 +1215,9 @@ public final class ShatteredPlansClient extends tl {
                   var3 = 1;
                 }
               } else {
-                if (!mf.field_p) {
+                if (!EmailValidator.field_p) {
                   ce.field_x.b(true, true);
-                  while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+                  while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
                     ce.field_x.g(-86);
                   }
                 } else {
@@ -1236,7 +1236,7 @@ public final class ShatteredPlansClient extends tl {
               }
             }
           }
-          if (mf.field_p &&
+          if (EmailValidator.field_p &&
             !md.field_Q &&
             !is.field_a) {
             if (v.field_b &&
@@ -1251,7 +1251,7 @@ public final class ShatteredPlansClient extends tl {
               cf.a(320, 8, 180, var4 != 0);
               ce.field_x.b(var4 != 0, true);
             }
-            while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+            while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
               if (v.field_b) {
                 if (gn.a(13, -9861, 12, 15)) {
                   continue;
@@ -1269,7 +1269,7 @@ public final class ShatteredPlansClient extends tl {
               ce.field_x.g(-99);
             }
           }
-          stackIn_47_0Lifetime1 = mf.field_p;
+          stackIn_47_0Lifetime1 = EmailValidator.field_p;
           if (!stackIn_47_0Lifetime1) {
             DelegatingCanvas.b(0);
           }
@@ -1305,7 +1305,7 @@ public final class ShatteredPlansClient extends tl {
         if (gr.field_o == -4) {
           tq.field_b = null;
           var11 = new String[]{hn.field_f[0], hn.field_f[1], hn.field_f[2], hn.field_f[3]};
-          ce.field_x = new GameSession(false, false, (int) MidiPcmStream.field_w[0], td.field_K, PlacementEvent.field_k, var11, 0, false, (GameScreen) null);
+          ce.field_x = new GameSession(false, false, (int) MidiPcmStream.field_w[0], SliderWidget.field_K, PlacementEvent.field_k, var11, 0, false, (GameScreen) null);
           stackIn_102_0 = (!uh.field_i) ? 0 : 1;
           var4Lifetime1 = stackIn_102_0;
           ta.a(0, -1, (byte) 96, var4Lifetime1 != 0);
@@ -1331,7 +1331,7 @@ public final class ShatteredPlansClient extends tl {
         if (StandardAi.field_e != null) {
           ee.a(-47, StandardAi.field_e);
           StandardAi.field_e = null;
-          u.c(121);
+          ValidationState.c(121);
         }
         oi.field_h = SoundCache.a(3, 50);
         ms.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
@@ -1396,7 +1396,7 @@ public final class ShatteredPlansClient extends tl {
         }
         if (~gr.field_o != ~GameRules.field_c) {
           stackIn_28_0 = (-1 == GameRules.field_c);
-          u.a(stackIn_28_0, false);
+          ValidationState.a(stackIn_28_0, false);
           if (~GameRules.field_c != ~gr.field_o ||
             -2 != GameRules.field_c) {
             ShatteredPlansClient.n((byte) 67);
@@ -1418,7 +1418,7 @@ public final class ShatteredPlansClient extends tl {
         } else {
           if (GameRules.field_c != -2) {
             stackIn_18_0 = (GameRules.field_c == -1);
-            u.a(stackIn_18_0, false);
+            ValidationState.a(stackIn_18_0, false);
             if (GameRules.field_c != gr.field_o ||
               GameRules.field_c != -2) {
               ShatteredPlansClient.n((byte) 67);
@@ -1455,7 +1455,7 @@ public final class ShatteredPlansClient extends tl {
             stackIn_71_1 = (null != bj.field_K) || (MusicPatch.field_i);
             Player.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
           } else {
-            if (!i.c(0)) {
+            if (!DialPainter.c(0)) {
               if (!this.field_G.isEmpty(27)) {
                 var3_ref_he = (he) (this.field_G.startForward(param0 ^ 1));
                 var4 = ud.field_a[var3_ref_he.field_k];
@@ -1496,7 +1496,7 @@ public final class ShatteredPlansClient extends tl {
         }
         if (mm.field_n &&
           AchievementProgress.field_g) {
-          mp.field_b.d(Integer.toString(rq.field_i), 4, 4 + mp.field_b.field_J, 16777215, -1);
+          mp.field_b.d(Integer.toString(LinkPainter.field_i), 4, 4 + mp.field_b.field_J, 16777215, -1);
           var3 = Runtime.getRuntime().totalMemory();
           var5 = Runtime.getRuntime().freeMemory();
           var7 = -var5 + var3;

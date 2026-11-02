@@ -123,7 +123,7 @@ final class gi {
             ei.field_e = re.a(kp.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
             stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
-            AttackTask.field_o = re.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, tp.field_b, 0);
+            AttackTask.field_o = re.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, SliderPainter.field_b, 0);
           }
           if (null != oi.field_i) {
             var1_int = 1;
@@ -182,8 +182,8 @@ final class gi {
           qn.field_b[0] = na.field_u.nextInt();
           qn.field_b[1] = na.field_u.nextInt();
           eo.field_cb.position = 0;
-          qn.field_b[3] = (int)w.field_I;
-          qn.field_b[2] = (int)(w.field_I >> 32);
+          qn.field_b[3] = (int)Dialog.field_I;
+          qn.field_b[2] = (int)(Dialog.field_I >> 32);
           eo.field_cb.writeInt(11135, qn.field_b[0]);
           eo.field_cb.writeInt(11135, qn.field_b[1]);
           eo.field_cb.writeInt(11135, qn.field_b[2]);

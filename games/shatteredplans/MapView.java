@@ -353,7 +353,7 @@ final class MapView extends MapViewState {
               var18Lifetime1 = var9[var26 * 2];
               if ((this.field_I < 700.0f &&
                 var7 <= 12) &&
-                (decompiledFrameRemainder0 = !(fj.field_p.field_w * fj.field_p.field_w / 4 < (-var18Lifetime1 + param1) * (-var18Lifetime1 + param1) + (-var19Lifetime1 + param2) * (-var19Lifetime1 + param2)))) {
+                (decompiledFrameRemainder0 = !(MatchingTextValidator.field_p.field_w * MatchingTextValidator.field_p.field_w / 4 < (-var18Lifetime1 + param1) * (-var18Lifetime1 + param1) + (-var19Lifetime1 + param2) * (-var19Lifetime1 + param2)))) {
                 this.field_nb[0] = var18Lifetime1;
                 this.field_nb[1] = var19Lifetime1;
                 stackIn_40_0 = var6Lifetime1;
@@ -593,7 +593,7 @@ final class MapView extends MapViewState {
             12 >= var4) {
             gf.b(var5, var6, 30, 16777215);
             gf.c(var5, var6, 30, 16777215, 92);
-            ie.a((ArgbSprite) (this.field_B.field_n), fj.field_p.field_z << 3, fj.field_p.field_w << 3, var5 * 16, var6 * 16, 3800 + (var17Lifetime1 - 16384), 4096);
+            ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var5 * 16, var6 * 16, 3800 + (var17Lifetime1 - 16384), 4096);
             gf.c(var5, var6, 9, 0, 92);
             rs.field_Cb.c(Integer.toString(this.field_rb.field_z), var5, var6 + 4, 16777215, -1);
             di.field_i[0].f(30 + (var5 - di.field_i[0].field_z / 2), -(di.field_i[0].field_w / 2) + var6);
@@ -605,7 +605,7 @@ final class MapView extends MapViewState {
             var19--;
             gf.b(var18, var19, 30, 16777215);
             gf.c(var18, var19, 30, 16777215, 92);
-            ie.a((ArgbSprite) (this.field_B.field_n), fj.field_p.field_z << 3, fj.field_p.field_w << 3, 16 * var18, 16 * var19, var17Lifetime1 - 16384, 4096);
+            ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var18, 16 * var19, var17Lifetime1 - 16384, 4096);
             gf.c(var18, var19, 9, 0, 92);
             rs.field_Cb.c(Integer.toString(this.field_rb.field_z), var18, var19 + 4, 16777215, -1);
             di.field_i[0].f(30 + var18 - di.field_i[0].field_z / 2, -(di.field_i[0].field_w / 2) + var19);
@@ -646,7 +646,7 @@ final class MapView extends MapViewState {
           }
           gf.b(var2, var3, 30, 16777215);
           gf.c(var2, var3, 30, 16777215, 92);
-          ie.a((ArgbSprite) (this.field_B.field_n), fj.field_p.field_z << 3, fj.field_p.field_w << 3, var2 * 16, 16 * var3, var6 - 16384, 4096);
+          ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var2 * 16, 16 * var3, var6 - 16384, 4096);
           gf.c(var2, var3, 9, 0, 92);
           rs.field_Cb.c(Integer.toString(this.field_rb.field_z), var2, 4 + var3, 16777215, -1);
           di.field_i[0].f(var2 + (30 - di.field_i[0].field_z / 2), -(di.field_i[0].field_w / 2) + var3);
@@ -700,7 +700,7 @@ final class MapView extends MapViewState {
             var7 = this.field_i[var6] - var4;
             var8 = -var5 + this.field_J[var6];
             var9 = (float)Math.sqrt((double)((float)(var7 * var7 + var8 * var8) + this.field_I * this.field_I)) / 300.0f;
-            var3.field_i.a((byte) 120, (int)((float)(tf.field_p * pd.field_m.field_a << 6) / (var9 * 96.0f)));
+            var3.field_i.a((byte) 120, (int)((float)(CheckboxPainter.field_p * pd.field_m.field_a << 6) / (var9 * 96.0f)));
             var3 = (so) (this.field_Y.nextForward((byte) -71));
           }
           this.a(-3, param0);
@@ -1202,7 +1202,7 @@ final class MapView extends MapViewState {
                 if (param0) {
                   if (700.0f > this.field_I &&
                     var7 <= 12) {
-                    ie.a((ArgbSprite) (this.field_B.field_n), fj.field_p.field_z << 3, fj.field_p.field_w << 3, 16 * var20Lifetime1, var21Lifetime1 * 16, -16384 + (var29 + 3800), 4096);
+                    ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var20Lifetime1, var21Lifetime1 * 16, -16384 + (var29 + 3800), 4096);
                     gf.c(var20Lifetime1, var21Lifetime1, 9, 0, 92);
                     rs.field_Cb.c(Integer.toString(var6_refLifetime2.field_z), var20Lifetime1, 4 + var21Lifetime1, 16777215, -1);
                   } else {
@@ -1465,7 +1465,7 @@ final class MapView extends MapViewState {
                 stackIn_30_0 = var5.field_m.field_b;
               }
               var37_ref = (ArgbSprite) (stackIn_30_0);
-              ie.a(var37_ref, fj.field_p.field_z << 3, fj.field_p.field_w << 3, var34, var35, var36Lifetime1, 4096);
+              ie.a(var37_ref, MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var34, var35, var36Lifetime1, 4096);
               gf.c(var34 >> 4, var35 >> 4, 9, 0, 92);
               rs.field_Cb.c(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
             } else {
@@ -1508,11 +1508,11 @@ final class MapView extends MapViewState {
           for (var4 = 0; var4 < cf.field_F.field_B.length; var4++) {
             this.field_ib[var2].field_v.field_B[var4] = we.a(-16777216, cf.field_F.field_B[var4]) + we.a(16777215, this.field_ib[var2].field_v.field_B[var4]);
           }
-          this.field_ib[var2].field_n = (Sprite) ((Object) new ArgbSprite(fj.field_p.field_o, fj.field_p.field_p));
+          this.field_ib[var2].field_n = (Sprite) ((Object) new ArgbSprite(MatchingTextValidator.field_p.field_o, MatchingTextValidator.field_p.field_p));
           this.field_ib[var2].field_n.e();
-          fj.field_p.d(0, 0, var3);
-          for (var4Lifetime1 = 0; var4Lifetime1 < fj.field_p.field_B.length; var4Lifetime1++) {
-            this.field_ib[var2].field_n.field_B[var4Lifetime1] = we.a(-16777216, fj.field_p.field_B[var4Lifetime1]) + we.a(this.field_ib[var2].field_n.field_B[var4Lifetime1], 16777215);
+          MatchingTextValidator.field_p.d(0, 0, var3);
+          for (var4Lifetime1 = 0; var4Lifetime1 < MatchingTextValidator.field_p.field_B.length; var4Lifetime1++) {
+            this.field_ib[var2].field_n.field_B[var4Lifetime1] = we.a(-16777216, MatchingTextValidator.field_p.field_B[var4Lifetime1]) + we.a(this.field_ib[var2].field_n.field_B[var4Lifetime1], 16777215);
           }
           this.field_ib[var2].field_b = (Sprite) ((Object) new ArgbSprite(eq.field_o.field_o, eq.field_o.field_p));
           this.field_ib[var2].field_b.e();
@@ -1531,7 +1531,7 @@ final class MapView extends MapViewState {
           ab.field_e.b(1, 1, var3);
           this.field_ib[var2].field_e = new Sprite(128, 128);
           this.field_ib[var2].field_e.e();
-          go.field_L.d(0, 0, var3);
+          TextFieldWidget.field_L.d(0, 0, var3);
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_ib[var2].field_e.field_B.length; var4Lifetime3++) {
             if (this.field_ib[var2].field_e.field_B[var4Lifetime3] != 0) {
               gf.c(var4Lifetime3 % this.field_ib[var2].field_e.field_z, var4Lifetime3 / this.field_ib[var2].field_e.field_z, this.field_ib[var2].field_k, 128);
@@ -1835,7 +1835,7 @@ final class MapView extends MapViewState {
               this.field_qb[2][param0.field_G[2]].b(-2 + (this.field_i[var3_int] - this.field_Hb + (int)(rh.field_e * (62.0 * var5_double))), (int)(33.0 * var5_double) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[2][0].field_z), (int)(var5_double * (double)this.field_qb[2][0].field_w));
               this.field_qb[3][param0.field_G[3]].b(this.field_Hb + (this.field_i[var3_int] + (int)(var5_double * 4.0)), -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double));
               if (this.field_X &&
-                td.field_L) {
+                SliderWidget.field_L) {
                 mj.field_Nb[param0.field_G[0]].b(-(int)(var5_double * 35.0) - this.field_Hb + this.field_i[var3_int], -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)((double)this.field_qb[0][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[0][0].field_w), RasterBuffer.field_f);
                 ts.field_L[param0.field_G[1]].b(this.field_i[var3_int] + (-this.field_Hb - (int)(rh.field_e * (32.0 * var5_double))), this.field_J[var3_int] + (int)(33.0 * var5_double), (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)((double)this.field_qb[1][0].field_w * var5_double), RasterBuffer.field_f);
                 var10 = (ArgbSprite) (ts.field_L[param0.field_G[2]]);
@@ -2363,7 +2363,7 @@ final class MapView extends MapViewState {
                   if (this.field_t >= 200) {
                     this.a(-1, param1, false);
                     this.field_o.field_X.d(false);
-                    this.field_o.field_X.field_o = da.field_f;
+                    this.field_o.field_X.field_o = DebouncedValidator.field_f;
                   }
                 }
               } else {
@@ -3082,18 +3082,18 @@ final class MapView extends MapViewState {
                       var23_ref.field_m != 3) {
                       var22 = (-1 + var23_ref.field_m) * var22 / 2;
                       var29 = 65537 * var22 + 256 * (var22 >> 1);
-                      if (fj.field_t.field_f) {
+                      if (MatchingTextValidator.field_t.field_f) {
                         we.a(9, var27 << 4, var26 << 4, var25 << 4, var24, 0, var28 << 4, var29, 80);
                         break;
                       }
                       be.a((byte) 92, 0, var27 << 4, var24, var26 << 4, var29, var25 << 4, var28 << 4, 5);
                       break;
                     }
-                    if (fj.field_t.field_f) {
+                    if (MatchingTextValidator.field_t.field_f) {
                       kr.a(70, var26 << 4, var27 << 4, var25 << 4, var24, var28 << 4);
                       break;
                     }
-                    u.a(var26 << 4, -40, var27 << 4, var25 << 4, var28 << 4, var24);
+                    ValidationState.a(var26 << 4, -40, var27 << 4, var25 << 4, var28 << 4, var24);
                     break;
                   }
                 }

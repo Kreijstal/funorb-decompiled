@@ -179,7 +179,7 @@ final class vq {
             return stackIn_7_0;
           }
           if (po.field_b != 2) {
-            stackIn_10_0 = tp.field_d;
+            stackIn_10_0 = SliderPainter.field_d;
             return stackIn_10_0;
           }
           if (IntrusiveNodeHashTable.a(param1, true)) {
@@ -190,7 +190,7 @@ final class vq {
             stackIn_17_0 = mi.field_a;
             return stackIn_17_0;
           }
-          if (da.a(param0 - 30108, param1)) {
+          if (DebouncedValidator.a(param0 - 30108, param1)) {
             stackIn_21_0 = re.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }

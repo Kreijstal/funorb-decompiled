@@ -31,8 +31,8 @@ final class wj extends IntrusiveNode {
           if (1 == je.field_d) {
             jb.field_b = 0;
             am.field_Gb = PointsVictoryChecker.field_p;
-            tc.field_C = td.field_P;
-            wl.field_f = as.a(param0, tc.field_C, (byte) -41, am.field_Gb);
+            DialogRoot.field_C = SliderWidget.field_P;
+            wl.field_f = as.a(param0, DialogRoot.field_C, (byte) -41, am.field_Gb);
             stackIn_26_0 = (null != wl.field_f);
             return stackIn_26_0;
           }
@@ -42,13 +42,13 @@ final class wj extends IntrusiveNode {
               rs.field_Db.b(pd.field_k, bb.field_b, -498);
               return true;
             }
-            var2_int = (-pd.field_k + am.field_Gb) * (am.field_Gb - pd.field_k) + (-bb.field_b + tc.field_C) * (tc.field_C - bb.field_b);
+            var2_int = (-pd.field_k + am.field_Gb) * (am.field_Gb - pd.field_k) + (-bb.field_b + DialogRoot.field_C) * (DialogRoot.field_C - bb.field_b);
             if (5 < jb.field_b &&
               25 < var2_int &&
               wl.field_f != null) {
               lh.field_w = wl.field_f.field_k - am.field_Gb;
               rs.field_Db = wl.field_f;
-              ir.field_D = wl.field_f.field_t - tc.field_C;
+              ir.field_D = wl.field_f.field_t - DialogRoot.field_C;
             }
             return false;
           }
@@ -162,7 +162,7 @@ final class wj extends IntrusiveNode {
               gf.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, fe.field_u);
             }
           }
-          var7_ref = (sb) (rp.field_K.startForward(0));
+          var7_ref = (sb) (DialWidget.field_K.startForward(0));
           while (var7_ref != null) {
             var2Lifetime2 = (int)var7_ref.field_n;
             var1_intLifetime2 = (int)var7_ref.field_l;
@@ -176,7 +176,7 @@ final class wj extends IntrusiveNode {
               var2Lifetime2 = (int)var7_ref.field_i[var9];
             }
             gf.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, fe.field_u);
-            var7_ref = (sb) (rp.field_K.nextForward((byte) -71));
+            var7_ref = (sb) (DialWidget.field_K.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

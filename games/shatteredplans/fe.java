@@ -55,7 +55,7 @@ final class fe extends vd {
         TertiaryNodeList.field_b = false;
         qj.a((byte) -127, param0);
         ee.field_l = oj.field_Fb;
-        fj.field_s = oj.field_Fb;
+        MatchingTextValidator.field_s = oj.field_Fb;
     }
 
     final void a(byte param0, int param1, String param2) {

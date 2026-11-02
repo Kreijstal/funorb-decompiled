@@ -67,10 +67,10 @@ final class dg extends qr {
           var9.field_y = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < tf.field_c.length; var12++) {
+          for (var12 = 0; var12 < CheckboxPainter.field_c.length; var12++) {
             var13 = new qr(0L, param3, bg.field_d[var12]);
-            var14 = new qr(0L, param3, tf.field_c[var12]);
-            var15 = param3.field_nb.c(tf.field_c[var12]);
+            var14 = new qr(0L, param3, CheckboxPainter.field_c[var12]);
+            var15 = param3.field_nb.c(CheckboxPainter.field_c[var12]);
             var13.a(65, 15, (byte) 69, var10, 20);
             if (var15 > var11) {
               var11 = var15;

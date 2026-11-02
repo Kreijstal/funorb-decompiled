@@ -12,12 +12,12 @@ class DualLinkNode extends IntrusiveNode {
 
     final static void c(boolean param0) {
         int var1 = 0;
-        if (tf.field_p > 32) {
-          var1 = tf.field_p % 32;
+        if (CheckboxPainter.field_p > 32) {
+          var1 = CheckboxPainter.field_p % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          js.a(tf.field_p - var1, 197126152);
+          js.a(CheckboxPainter.field_p - var1, 197126152);
         } else {
           js.a(0, 197126152);
         }

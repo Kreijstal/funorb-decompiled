@@ -5,13 +5,13 @@ import java.util.*;
 
 class UiWidget extends IntrusiveNode {
     qo field_j;
-    ko field_u;
+    WidgetListener field_u;
     String field_v;
     int field_x;
     int field_n;
     int field_m;
     int field_q;
-    iq field_p;
+    WidgetPainter field_p;
     int field_o;
     String field_s;
     static int[] field_w;
@@ -114,7 +114,7 @@ class UiWidget extends IntrusiveNode {
             this.a(0, bb.field_b, pd.field_k, this, param2, param0, so.field_o);
           }
           if (je.field_d != 0) {
-            if (!this.a(je.field_d, PointsVictoryChecker.field_p, (byte) 96, td.field_P, param0, param2, this)) {
+            if (!this.a(je.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
               if (var5 != 0) {
                 this.e((byte) -126);
               }
@@ -254,7 +254,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 95) {
-            this.field_p = (iq) null;
+            this.field_p = (WidgetPainter) null;
           }
           if (!this.a(param1, 88, param3, param5, param4)) {
             return false;
@@ -291,8 +291,8 @@ class UiWidget extends IntrusiveNode {
             stackIn_7_1 = (var5_int != 0);
             this.field_k = stackIn_7_1;
             if (null != this.field_u &&
-              this.field_u instanceof hf) {
-              ((hf) (this.field_u)).a(this, (byte) 116, var5_int != 0);
+              this.field_u instanceof HoverListener) {
+              ((HoverListener) (this.field_u)).a(this, (byte) 116, var5_int != 0);
             }
           }
           if (param3 != 91) {
@@ -509,20 +509,20 @@ class UiWidget extends IntrusiveNode {
         this.field_l = 0;
     }
 
-    UiWidget(String param0, ko param1) {
+    UiWidget(String param0, WidgetListener param1) {
         this(param0, MusicVoice.field_I.field_s, param1);
     }
 
-    UiWidget(String param0, iq param1, ko param2) {
-        pj var4 = null;
+    UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
+        WidgetMetrics var4 = null;
         this.field_h = 0;
         this.field_l = 0;
         try {
           this.field_p = param1;
           this.field_s = param0;
           this.field_u = param2;
-          if (this.field_p instanceof pj) {
-            var4 = (pj) ((Object) this.field_p);
+          if (this.field_p instanceof WidgetMetrics) {
+            var4 = (WidgetMetrics) ((Object) this.field_p);
             this.field_x = var4.a((byte) -52, this);
             this.field_n = var4.a(true, this);
           }
@@ -531,7 +531,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, iq param4, ko param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         this.field_h = 0;
         this.field_l = 0;
         try {

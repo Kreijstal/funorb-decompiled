@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bo extends jl implements bp {
-    private kg field_X;
+final class bo extends jl implements ButtonListener {
+    private FocusableWidget field_X;
     static String field_Y;
 
     public static void p(int param0) {
@@ -12,7 +12,7 @@ final class bo extends jl implements bp {
         }
     }
 
-    bo(tc param0, ih param1) {
+    bo(DialogRoot param0, ih param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -41,14 +41,14 @@ final class bo extends jl implements bp {
           } else {
             var3 = BattleContribution.field_n;
           }
-          var4 = new UiWidget((String) (var3), (ko) null);
+          var4 = new UiWidget((String) (var3), (WidgetListener) null);
           var4.field_q = 50;
           var4.field_x = this.field_x;
           var4.field_m = 0;
           var4.field_n = 80;
-          var4.field_p = (iq) ((Object) new o(mf.field_x, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_p = (WidgetPainter) ((Object) new WidgetTheme(EmailValidator.field_x, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) -49, var4);
-          this.field_X = this.a((ko) (this), nf.field_i, 0);
+          this.field_X = this.a((WidgetListener) (this), nf.field_i, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,11 +79,11 @@ final class bo extends jl implements bp {
         return !wh.field_a.b(14) ? true : false;
     }
 
-    private final kg a(ko param0, String param1, int param2) {
-        kg var4 = null;
+    private final FocusableWidget a(WidgetListener param0, String param1, int param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        kg stackIn_3_0 = null;
+        FocusableWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,8 +91,8 @@ final class bo extends jl implements bp {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kg(param1, param0);
-          var4.field_p = (iq) ((Object) new qp());
+          var4 = new FocusableWidget(param1, param0);
+          var4.field_p = (WidgetPainter) ((Object) new qp());
           var5 = -6 + this.field_n;
           this.field_n = this.field_n + 38;
           if (param2 != 0) {
@@ -140,7 +140,7 @@ final class bo extends jl implements bp {
         var2.writeByte(param1, (byte) -97);
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

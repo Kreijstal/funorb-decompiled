@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends go implements ki {
+final class fa extends TextFieldWidget implements ValidatableWidget {
     static String field_T;
     static String field_J;
     static String field_Y;
     static PlatformTaskDispatcher field_W;
     static String field_S;
     static int[][] field_Z;
-    private gk field_V;
+    private ValidationSource field_V;
     private int field_U;
     static qr field_X;
 
@@ -21,7 +21,7 @@ final class fa extends go implements ki {
         }
     }
 
-    fa(String param0, ko param1, int param2) {
+    fa(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -46,7 +46,7 @@ final class fa extends go implements ki {
         }
     }
 
-    final void a(gk param0, int param1) {
+    final void a(ValidationSource param0, int param1) {
         try {
           if (param1 != 8945) {
             field_T = (String) null;
@@ -57,7 +57,7 @@ final class fa extends go implements ki {
         }
     }
 
-    public final gk a(byte param0) {
+    public final ValidationSource a(byte param0) {
         if (param0 <= 58) {
           this.a((byte) -52);
           return this.field_V;

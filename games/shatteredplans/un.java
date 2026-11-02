@@ -6,7 +6,7 @@ final class un extends hb {
     private static int[] field_k;
     private IntrusiveDeque field_h;
     static qr field_g;
-    static u field_i;
+    static ValidationState field_i;
     static String field_j;
 
     final int b(byte param0) {
@@ -75,7 +75,7 @@ final class un extends hb {
         for (var0Lifetime1 = 0; var0Lifetime1 < 12; var0Lifetime1++) {
           field_k[var0Lifetime1] = (-var0Lifetime1 + 11) * 526344;
         }
-        field_i = new u();
+        field_i = new ValidationState();
         field_j = "Played";
     }
 }

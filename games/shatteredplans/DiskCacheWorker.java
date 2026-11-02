@@ -22,14 +22,14 @@ final class DiskCacheWorker implements Runnable {
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
         RandomAccessCacheFile.a(-111);
         vm.field_Jb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
-        w.field_D = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
+        Dialog.field_D = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
         DualLinkDeque.field_a = id.a(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
         sr.field_F = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
         oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
-        tp.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
+        SliderPainter.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.e();
         BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
-        w.field_D.e();
+        Dialog.field_D.e();
         BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
         vm.field_Jb.e();
         MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
@@ -102,8 +102,8 @@ final class DiskCacheWorker implements Runnable {
           uo.a((byte) 110, MusicVoice.field_n, 32768);
           var1_int = MusicVoice.field_n.field_z;
           var2 = MusicVoice.field_n.field_z + 120;
-          tf.field_b = new Sprite(var1_int, var2);
-          tf.field_b.e();
+          CheckboxPainter.field_b = new Sprite(var1_int, var2);
+          CheckboxPainter.field_b.e();
           MusicVoice.field_n.e(0, 120, 4259648);
           gf.b(120, 120, 0, 0, var1_int, var2);
           cg.i(0);
@@ -278,7 +278,7 @@ final class DiskCacheWorker implements Runnable {
           qf.a((byte) -126);
         }
         if (0 == gr.field_o &&
-          !u.field_b.a(hk.field_nb, (byte) -23)) {
+          !ValidationState.field_b.a(hk.field_nb, (byte) -23)) {
           jo.a(param0 - 1015809, hk.field_nb, true, 1048576);
         }
         if (gr.field_o == -6) {
@@ -310,7 +310,7 @@ final class DiskCacheWorker implements Runnable {
         }
         if (DiskArchiveRequest.field_A) {
           rh.a((byte) -120);
-          ec.e((byte) -66);
+          UsernameAvailabilityValidator.e((byte) -66);
           an.a(true);
           DiskArchiveRequest.field_A = false;
         }
@@ -363,7 +363,7 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(int param0, Archive param1, boolean param2, Archive param3, Archive param4) {
         try {
-          wh.field_a = tf.a("", -12179);
+          wh.field_a = CheckboxPainter.a("", -12179);
           if (param0 != 624) {
             DiskCacheWorker.b((byte) -62);
           }
@@ -371,7 +371,7 @@ final class DiskCacheWorker implements Runnable {
           SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
           ee.field_l = oj.field_Fb;
-          fj.field_s = oj.field_Fb;
+          MatchingTextValidator.field_s = oj.field_Fb;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "rn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

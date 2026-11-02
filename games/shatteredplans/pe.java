@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends WidgetContainer implements op, bp {
-    private kg field_H;
+final class pe extends WidgetContainer implements op, ButtonListener {
+    private FocusableWidget field_H;
     private ts field_G;
     static String[] field_J;
     private oj field_I;
@@ -41,11 +41,11 @@ final class pe extends WidgetContainer implements op, bp {
     }
 
     pe(oj param0) {
-        super(0, 0, 288, 0, (iq) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         RuntimeException runtimeException = null;
         String var2 = null;
         int var3 = 0;
-        o var4 = null;
+        WidgetTheme var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -54,16 +54,16 @@ final class pe extends WidgetContainer implements op, bp {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_I = param0;
-          this.field_H = new kg(gq.field_b, (ko) null);
-          this.field_H.field_p = (iq) ((Object) new qp());
+          this.field_H = new FocusableWidget(gq.field_b, (WidgetListener) null);
+          this.field_H.field_p = (WidgetPainter) ((Object) new qp());
           var2 = re.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
-          var4 = new o(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
+          var4 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
           this.field_G = new ts(var2, var4);
           this.field_G.field_v = "";
           this.field_G.a(0, true, bk.field_c);
           this.field_G.a(1, true, bk.field_c);
-          this.field_G.field_u = (ko) (this);
+          this.field_G.field_u = (WidgetListener) (this);
           this.field_G.field_x = -40 + this.field_x;
           this.field_G.a(26, var3, (byte) 57, this.field_x - 40);
           var3 = var3 + (this.field_G.field_n + 15);
@@ -71,7 +71,7 @@ final class pe extends WidgetContainer implements op, bp {
           var5 = 4;
           var6 = 200;
           this.field_H.a(var3, 40, (byte) 115, -var6 + 300 >> 1, var6);
-          this.field_H.field_u = (ko) (this);
+          this.field_H.field_u = (WidgetListener) (this);
           this.b((byte) -126, this.field_H);
           this.a(0, var3 + 55 + var5, (byte) 121, 0, 300);
           return;
@@ -190,7 +190,7 @@ final class pe extends WidgetContainer implements op, bp {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
-            var5 = SolarFlareEvent.a(var4, var3_int, 0, param1 ^ -127);
+            var5 = StellarBombEvent.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -547,7 +547,7 @@ final class pe extends WidgetContainer implements op, bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

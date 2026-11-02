@@ -84,7 +84,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (var2_int >= 0) {
               var3 = cg.field_I + 1 & 127;
-              if (var3 != tc.field_B) {
+              if (var3 != DialogRoot.field_B) {
                 ng.field_a[cg.field_I] = var2_int;
                 fb.field_yb[cg.field_I] = (char)0;
                 cg.field_I = var3;
@@ -129,7 +129,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int != 65535 &&
               pg.a(28654, (char) var2_int)) {
               var3 = 1 + cg.field_I & 127;
-              if (var3 != tc.field_B) {
+              if (var3 != DialogRoot.field_B) {
                 ng.field_a[cg.field_I] = -1;
                 fb.field_yb[cg.field_I] = (char)var2_int;
                 cg.field_I = var3;
@@ -209,7 +209,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = ei.field_c.getCodeBase();
-            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(td.field_G).append("&u=");
+            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(SliderWidget.field_G).append("&u=");
             if (null == bj.field_E) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;

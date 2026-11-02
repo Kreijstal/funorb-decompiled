@@ -68,7 +68,7 @@ final class we {
           var1 = im.field_c;
           synchronized (var1) {
             of.field_e = of.field_e + 1;
-            tc.field_B = fe.field_J;
+            DialogRoot.field_B = fe.field_J;
             if (param0 != -59) {
               we.a(49, -95, -50, 61, 66, -88, -81, -110, -20);
             }

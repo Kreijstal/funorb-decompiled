@@ -23,9 +23,9 @@ final class qf {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (DerelictVictoryChecker.field_m == null) {
-          if (tc.field_G != null &&
-            tc.field_G.h(0)) {
-            tc.field_G = null;
+          if (DialogRoot.field_G != null &&
+            DialogRoot.field_G.h(0)) {
+            DialogRoot.field_G = null;
             ai.a(3);
             return true;
           }
@@ -44,7 +44,7 @@ final class qf {
           ai.a(param0 + 3);
           return true;
         }
-        if (tc.field_G == null) {
+        if (DialogRoot.field_G == null) {
           if (param0 != 0) {
             qf.a(-33, 11, -33, 82);
           }
@@ -56,8 +56,8 @@ final class qf {
           }
           return false;
         }
-        if (tc.field_G.h(0)) {
-          tc.field_G = null;
+        if (DialogRoot.field_G.h(0)) {
+          DialogRoot.field_G = null;
           ai.a(3);
           return true;
         }
@@ -82,9 +82,9 @@ final class qf {
 
     final static void a(byte param0) {
         int var1 = 125 / ((param0 + 68) / 50);
-        u.field_a = vc.a((byte) -39, 50);
+        ValidationState.field_a = vc.a((byte) -39, 50);
         NetworkArchiveRequest.field_C = (nq) ((Object) rs.field_Cb);
-        rp.field_K = new IntrusiveDeque();
+        DialWidget.field_K = new IntrusiveDeque();
         SolVictoryChecker.field_m = 0;
         MusicEnvelope.field_i = 0;
         di.field_m = 0;
@@ -92,7 +92,7 @@ final class qf {
         bj.field_L = 0;
         MusicTrack var2 = (MusicTrack) null;
         jo.a(32767, (MusicTrack) null, true, 50);
-        kg.f((byte) -123);
+        FocusableWidget.f((byte) -123);
     }
 
     final static int a(byte param0, int param1, Random param2) {

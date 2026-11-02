@@ -64,7 +64,7 @@ final class IntrusiveDeque {
         if (param2 != -1043) {
           return;
         }
-        ve var3 = rq.a(true, param0, param1);
+        ve var3 = LinkPainter.a(true, param0, param1);
         if (var3 != null) {
           DerelictVictoryChecker.field_m.a(false, param2 - 15618);
           var4 = DerelictVictoryChecker.field_m;
@@ -72,7 +72,7 @@ final class IntrusiveDeque {
           var4.field_j.a(param2 ^ -1044, 5, var5_ref_String);
           var4Lifetime1 = DerelictVictoryChecker.field_m;
           var5 = PointsVictoryChecker.field_p;
-          var6 = td.field_P;
+          var6 = SliderWidget.field_P;
           var4Lifetime1.field_j.b(0, 0, 0, var5, var6);
         }
         di.a(-7904, param1, param0);

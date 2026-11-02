@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qp extends o {
+final class qp extends WidgetTheme {
     static String field_v;
     private int field_y;
     private int field_u;
@@ -340,8 +340,8 @@ final class qp extends o {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param0 instanceof kg) {
-            param2 = param2 & ((kg) (param0)).field_y;
+          if (param0 instanceof FocusableWidget) {
+            param2 = param2 & ((FocusableWidget) (param0)).field_y;
           }
           if (param2) {
             if (var6_int != 0) {

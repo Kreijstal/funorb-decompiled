@@ -192,7 +192,7 @@ final class RandomAccessCacheFile {
     final static void a(int param0, int param1) {
         im.field_b = new int[3];
         wm.field_d = new nf[param1 * 15];
-        da.field_g = 0;
+        DebouncedValidator.field_g = 0;
         kp.field_i = param1;
         int var2 = -27 % ((param0 + 56) / 49);
     }
@@ -241,7 +241,7 @@ final class RandomAccessCacheFile {
           RandomAccessCacheFile.a(109, 107);
         }
         bf.field_c[field_k] = gf.field_a;
-        da.field_d[field_k] = gf.field_f;
+        DebouncedValidator.field_d[field_k] = gf.field_f;
         oj.field_Cb[field_k] = gf.field_b;
         TertiaryLinkNode.field_s[field_k] = gf.field_k;
         field_k = field_k + 1;

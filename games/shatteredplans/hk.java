@@ -24,7 +24,7 @@ final class hk extends il {
         field_pb = null;
     }
 
-    hk(tc param0, UiWidget param1) {
+    hk(DialogRoot param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

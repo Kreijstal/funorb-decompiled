@@ -77,7 +77,7 @@ final class ei {
             im.field_b[var2_int] = 0;
             var2_int++;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < da.field_g; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < DebouncedValidator.field_g; var2_intLifetime1++) {
             if (wm.field_d[var2_intLifetime1].field_n == param1.field_n) {
               dupTemp$3 = wm.field_d[var2_intLifetime1].a((byte) 115);
               im.field_b[dupTemp$3] = im.field_b[dupTemp$3] + 1;
@@ -86,7 +86,7 @@ final class ei {
           dupTemp$0 = param1.a((byte) 113);
           im.field_b[dupTemp$0] = im.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < da.field_g; var3++) {
+          for (var3 = 0; var3 < DebouncedValidator.field_g; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (wm.field_d[var3].field_n == param1.field_n) {
               var4 = wm.field_d[var3].a((byte) 115);
@@ -101,9 +101,9 @@ final class ei {
               wm.field_d[incrementValue$2] = wm.field_d[var3];
             }
           }
-          da.field_g = var2_intLifetime2;
-          fieldTemp$1 = da.field_g;
-          da.field_g = da.field_g + 1;
+          DebouncedValidator.field_g = var2_intLifetime2;
+          fieldTemp$1 = DebouncedValidator.field_g;
+          DebouncedValidator.field_g = DebouncedValidator.field_g + 1;
           wm.field_d[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,10 +232,10 @@ final class ei {
           return 0;
         }
         if (0 == ai.field_e) {
-          if (!rq.field_g.b((byte) 122)) {
+          if (!LinkPainter.field_g.b((byte) 122)) {
             return 20;
           }
-          if (!rq.field_g.a("commonui", 60)) {
+          if (!LinkPainter.field_g.a("commonui", 60)) {
             return 40;
           }
           if (!tq.field_f.b((byte) -109)) {
@@ -262,10 +262,10 @@ final class ei {
               return 29;
             }
           }
-          if (!rq.field_g.b((byte) 125)) {
+          if (!LinkPainter.field_g.b((byte) 125)) {
             return 43;
           }
-          if (!rq.field_g.a("commonui", 127)) {
+          if (!LinkPainter.field_g.a("commonui", 127)) {
             return 57;
           }
           if (!tq.field_f.b((byte) -90)) {

@@ -36,7 +36,7 @@ final class of {
           if (!wh.field_a.b(14)) {
             return wh.field_a.a(98);
           }
-          if (ue.field_a != fj.field_s) {
+          if (ue.field_a != MatchingTextValidator.field_s) {
             return qh.field_B;
           }
           return wh.field_a.a(-45);
@@ -44,7 +44,7 @@ final class of {
         if (!wh.field_a.b(14)) {
           return wh.field_a.a(98);
         }
-        if (ue.field_a != fj.field_s) {
+        if (ue.field_a != MatchingTextValidator.field_s) {
           return qh.field_B;
         }
         return wh.field_a.a(-45);

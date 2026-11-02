@@ -7,7 +7,7 @@ final class ah extends ts {
     static String field_O;
     static int field_X;
     static int field_R;
-    private gk field_M;
+    private ValidationSource field_M;
     private Sprite field_V;
     private String field_W;
     private int field_N;
@@ -15,7 +15,7 @@ final class ah extends ts {
     static String field_S;
     static int field_U;
 
-    ah(gk param0, String param1, int param2, int param3, int param4, int param5) {
+    ah(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, IsaacBackedRandom.b(114));
         try {
           this.field_M = param0;
@@ -45,7 +45,7 @@ final class ah extends ts {
 
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
-        u var6;
+        ValidationState var6;
         int var9;
         int var10;
         int var11;
@@ -74,10 +74,10 @@ final class ah extends ts {
         Sprite var40;
         Sprite var41;
         Sprite var42;
-        pj var43;
-        pj var44;
-        pj var45;
-        pj var46;
+        WidgetMetrics var43;
+        WidgetMetrics var44;
+        WidgetMetrics var45;
+        WidgetMetrics var46;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -96,8 +96,8 @@ final class ah extends ts {
         int var12Lifetime5;
         int var11Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
-        u var6Lifetime1;
-        u var6Lifetime2;
+        ValidationState var6Lifetime1;
+        ValidationState var6Lifetime2;
         var18 = null;
         var24 = null;
         var30 = null;
@@ -112,7 +112,7 @@ final class ah extends ts {
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_M.c(-123);
-          var43 = (pj) ((Object) this.field_p);
+          var43 = (WidgetMetrics) ((Object) this.field_p);
           var9 = this.field_m + param3;
           var10 = var43.a(param2, (UiWidget) (this), 66) + (var43.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h == var6) {
@@ -179,7 +179,7 @@ final class ah extends ts {
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_M.c(-123);
-          var44 = (pj) ((Object) this.field_p);
+          var44 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime1 = this.field_m + param3;
           var10Lifetime1 = var44.a(param2, (UiWidget) (this), 66) + (var44.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h == var6) {
@@ -248,7 +248,7 @@ final class ah extends ts {
           }
           super.a(param0, param1, param2, param3);
           var6Lifetime1 = this.field_M.c(-123);
-          var45 = (pj) ((Object) this.field_p);
+          var45 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime2 = this.field_m + param3;
           var10Lifetime2 = var45.a(param2, (UiWidget) (this), 66) + (var45.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h != var6Lifetime1 &&
@@ -297,7 +297,7 @@ final class ah extends ts {
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime2 = this.field_M.c(-123);
-        var46 = (pj) ((Object) this.field_p);
+        var46 = (WidgetMetrics) ((Object) this.field_p);
         var9Lifetime3 = this.field_m + param3;
         var10Lifetime3 = var46.a(param2, (UiWidget) (this), 66) + (var46.a((UiWidget) (this), true).b(438) >> 1);
         if (pd.field_h == var6Lifetime2) {

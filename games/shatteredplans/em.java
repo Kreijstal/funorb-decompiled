@@ -64,9 +64,9 @@ final class em implements jk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          fj.field_t = param0;
-          if (2 != fj.field_t.field_c &&
-            1 != fj.field_t.field_c) {
+          MatchingTextValidator.field_t = param0;
+          if (2 != MatchingTextValidator.field_t.field_c &&
+            1 != MatchingTextValidator.field_t.field_c) {
           }
           if (param1 != 1) {
             field_g = (String) null;

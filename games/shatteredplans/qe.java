@@ -46,10 +46,10 @@ class qe extends IntrusiveNode {
         if (param0 < 89) {
           return true;
         }
-        if (rp.field_I == null) {
+        if (DialWidget.field_I == null) {
           return false;
         }
-        if (rp.field_I.g((byte) 105) == null) {
+        if (DialWidget.field_I.g((byte) 105) == null) {
           return false;
         }
         return true;

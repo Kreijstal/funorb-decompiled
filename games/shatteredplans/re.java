@@ -74,7 +74,7 @@ final class re {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!go.a(0, (CharSequence) ((Object) var7_ref_String))) {
+              if (!TextFieldWidget.a(0, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -110,7 +110,7 @@ final class re {
               break;
             }
             var9 = param0.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!go.a(0, (CharSequence) ((Object) var9))) {
+            if (!TextFieldWidget.a(0, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {

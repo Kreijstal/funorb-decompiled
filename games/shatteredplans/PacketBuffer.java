@@ -29,7 +29,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -var3 + (this.position - 1);
         if (var4 != 0) {
-          return SolarFlareEvent.a(this.payload, var4, var3, -119);
+          return StellarBombEvent.a(this.payload, var4, var3, -119);
         }
         return "";
     }
@@ -379,7 +379,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return SolarFlareEvent.a(this.payload, var3, var2, -116);
+        return StellarBombEvent.a(this.payload, var3, var2, -116);
     }
 
     final int readMedium(int param0) {
@@ -680,10 +680,10 @@ class PacketBuffer extends IntrusiveNode {
           md.a((byte) 112, 16777215, 11);
           uq.field_m = new rl(wg.field_e);
           aj.field_a = new IntrusiveDeque();
-          SolarFlareEvent.field_h = new IntrusiveDeque();
+          StellarBombEvent.field_h = new IntrusiveDeque();
           is.field_b = false;
           tl.field_u = false;
-          td.field_L = false;
+          SliderWidget.field_L = false;
           ImageProducerRasterBuffer.field_i = 0;
           WhirlpoolHasher.field_g = false;
           ph.field_g = false;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class le {
-    static tc field_e;
+    static DialogRoot field_e;
     static String field_a;
     static String field_c;
     static int field_b;
@@ -79,7 +79,7 @@ abstract class le {
               md.a(2, pr.field_e, 0, (String) null, (String) null, -16169);
               var15 = (String) null;
               var14 = (String) null;
-              md.a(2, go.field_K, 0, (String) null, (String) null, -16169);
+              md.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
               MusicVoice.c(param2);
               return true;
             }
@@ -130,7 +130,7 @@ abstract class le {
         var18 = var16;
         if (em.field_h == 2) {
           var61 = (CharSequence) ((Object) gi.field_a);
-          var20 = re.a(fj.field_q, 4371, new String[]{ih.a(var61, -117)});
+          var20 = re.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
           var8 = re.a(cf.field_M, 4371, new String[]{var16});
           var9 = ho.field_f.c(var20);
           var10 = ho.field_f.c(var8);
@@ -163,7 +163,7 @@ abstract class le {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 return true;
               }
-              if (!i.field_c) {
+              if (!DialPainter.field_c) {
                 var50 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var51);
@@ -192,7 +192,7 @@ abstract class le {
             var7 = "[" + ds.field_a + "] ";
           }
           if (null != np.field_a) {
-            if (!i.field_c) {
+            if (!DialPainter.field_c) {
               var57 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var58);

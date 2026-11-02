@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends WidgetContainer implements bp {
+final class bj extends WidgetContainer implements ButtonListener {
     private dl field_F;
     static wa[] field_J;
     static String field_E;
     static qr field_D;
     static String field_M;
     static int field_L;
-    private kg[] field_I;
+    private FocusableWidget[] field_I;
     static FullscreenFocusCanvas field_K;
     static Sprite field_H;
     private String[] field_G;
@@ -60,11 +60,11 @@ final class bj extends WidgetContainer implements bp {
         }
         nq var5 = gn.field_u;
         if (this.field_G != null) {
-          var5.a(da.field_c, param3 + this.field_m, this.field_q + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_J);
+          var5.a(DebouncedValidator.field_c, param3 + this.field_m, this.field_q + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_J);
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -101,7 +101,7 @@ final class bj extends WidgetContainer implements bp {
     }
 
     bj(dl param0) {
-        super(0, 0, 0, 0, (iq) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {
@@ -118,7 +118,7 @@ final class bj extends WidgetContainer implements bp {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        rq var4 = null;
+        LinkPainter var4 = null;
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -130,17 +130,17 @@ final class bj extends WidgetContainer implements bp {
             for (var4_int = param1; var3_int > var4_int; var4_int++) {
               this.field_G[var4_int] = ih.a((CharSequence) ((Object) param0[var4_int]), 68).replace(' ', ' ');
             }
-            var4 = new rq(gn.field_u, 0, 1);
-            this.field_I = new kg[var3_int + 1];
+            var4 = new LinkPainter(gn.field_u, 0, 1);
+            this.field_I = new FocusableWidget[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
-              this.field_I[var5] = new kg(this.field_G[var5], (ko) (this));
-              this.field_I[var5].field_p = (iq) ((Object) var4);
+              this.field_I[var5] = new FocusableWidget(this.field_G[var5], (WidgetListener) (this));
+              this.field_I[var5].field_p = (WidgetPainter) ((Object) var4);
               this.field_I[var5].field_v = SecondaryNodeDequeIterator.field_f;
               this.field_I[var5].a(20 + var5 * 16, 15, (byte) 112, 0, 80);
               this.b((byte) -107, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new kg(SolMapGenerator.field_p, (ko) (this));
-            this.field_I[var3_int].field_p = (iq) ((Object) var4);
+            this.field_I[var3_int] = new FocusableWidget(SolMapGenerator.field_p, (WidgetListener) (this));
+            this.field_I[var3_int].field_p = (WidgetPainter) ((Object) var4);
             this.field_I[var3_int].a(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
             this.b((byte) -65, this.field_I[var3_int]);
             return;

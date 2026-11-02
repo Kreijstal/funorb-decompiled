@@ -23,7 +23,7 @@ abstract class bq {
           cg.field_A = new qr(0L, (qr) null);
           RecklessAi.field_p = new qr(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;
-          BattleSnapshot.field_t = new qr(0L, td.field_N, gd.field_c);
+          BattleSnapshot.field_t = new qr(0L, SliderWidget.field_N, gd.field_c);
           FleetMove.field_F = new qr(0L, vm.field_Cb, GalaxyMap.field_i);
           kh.field_Ib = new qr(0L, gn.field_w);
           cg.field_A.a(4, RecklessAi.field_p);

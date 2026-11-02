@@ -13,7 +13,7 @@ final class TurnEventLog {
     static boolean field_i;
     static int[] field_g;
 
-    final void a(int param0, Star param1, Star param2, Player param3) {
+    final void recordTannhauser(int param0, Star param1, Star param2, Player param3) {
         try {
           this.field_a.addLast((byte) -113, new ProjectUse(3, param3, param1, param2));
           int var5_int = -23 / ((param0 + 43) / 44);
@@ -22,7 +22,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(Star param0, Player param1, byte param2, boolean param3, int param4, Star param5) {
+    final void recordFleetMove(Star param0, Player param1, byte param2, boolean param3, int param4, Star param5) {
         FleetMove var7 = null;
         try {
           int var8 = -65 % ((-22 - param2) / 40);
@@ -33,7 +33,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(int param0, Player param1, Player param2) {
+    final void recordAllianceExpired(int param0, Player param1, Player param2) {
         try {
           this.field_a.addLast((byte) -113, new AllianceExpiredEvent(param1, param2));
           if (param0 != 255) {
@@ -44,7 +44,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(Star param0, int param1, int[] param2, Star[] param3) {
+    final void recordStarAbandoned(Star param0, int param1, int[] param2, Star[] param3) {
         int var7_int = 0;
         int var9 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -71,7 +71,7 @@ final class TurnEventLog {
           var6 = 0;
           if (param1 < 64) {
             var11 = (Star[]) null;
-            this.a((Star) null, -107, (int[]) null, (Star[]) null);
+            this.recordStarAbandoned((Star) null, -107, (int[]) null, (Star[]) null);
           }
           for (var7_int = 0; var7_int < param2.length; var7_int++) {
             if (param2[var7_int] != 0) {
@@ -137,7 +137,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(int param0, Star param1, boolean param2) {
+    final void recordStarAbandonedWithoutNeighbours(int param0, Star param1, boolean param2) {
         try {
           this.field_a.addLast((byte) -113, new StarAbandonedEvent(param1, param0));
           if (!param2) {
@@ -148,7 +148,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(int param0, Star param1, Player param2) {
+    final void recordProject(int param0, Star param1, Player param2) {
         try {
           this.field_a.addLast((byte) -113, new ProjectUse(param0, param2, param1));
         } catch (RuntimeException runtimeException) {
@@ -160,16 +160,16 @@ final class TurnEventLog {
         this.field_a = new IntrusiveDeque();
     }
 
-    final void a(int param0, Star param1, Player param2, int param3) {
+    final void recordStellarBomb(int param0, Star param1, Player param2, int param3) {
         try {
           int var5_int = 48 / ((param3 + 6) / 60);
-          this.field_a.addLast((byte) -113, new SolarFlareEvent(param1, param2, param0));
+          this.field_a.addLast((byte) -113, new StellarBombEvent(param1, param2, param0));
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "k.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final BattleEvent a(int[] param0, Star param1, int param2, Player[] param3) {
+    final BattleEvent recordBattle(int[] param0, Star param1, int param2, Player[] param3) {
         BattleEvent var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -217,12 +217,12 @@ final class TurnEventLog {
         }
     }
 
-    final void a(Player param0, boolean param1) {
+    final void recordElimination(Player param0, boolean param1) {
         try {
           this.field_a.addLast((byte) -113, new PlayerEliminatedEvent(param0));
           if (param1) {
             Star var4 = (Star) null;
-            this.a(-87, (Star) null, -32);
+            this.recordPlacement(-87, (Star) null, -32);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "k.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -381,7 +381,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(Player param0, Star param1, byte param2) {
+    final void recordTerraform(Player param0, Star param1, byte param2) {
         try {
           this.field_a.addLast((byte) -113, new ProjectUse(1, param0, param1));
           int var4_int = 21 % ((-27 - param2) / 52);
@@ -390,7 +390,7 @@ final class TurnEventLog {
         }
     }
 
-    final void a(int param0, Star param1, int param2) {
+    final void recordPlacement(int param0, Star param1, int param2) {
         try {
           if (param2 != -4900) {
             this.field_a = (IntrusiveDeque) null;

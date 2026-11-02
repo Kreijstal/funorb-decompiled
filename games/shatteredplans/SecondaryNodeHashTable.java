@@ -590,7 +590,7 @@ final class SecondaryNodeHashTable {
         MapViewState.field_j = new qr(0L, (qr) null);
         MapViewState.field_j.a(param0 + 87, Archive.field_g.field_d);
         MapViewState.field_j.a(4, vm.field_Ab);
-        tc.j(96);
+        DialogRoot.j(96);
     }
 
     final DualLinkNode c(byte param0) {

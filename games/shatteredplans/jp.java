@@ -446,7 +446,7 @@ final class jp extends qr {
           return this.field_Ab;
         }
         while (true) {
-          if (!cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          if (!PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (param0 < -42) {
               this.field_zb.field_z = this.field_Db.toString();
               if (!param1) {

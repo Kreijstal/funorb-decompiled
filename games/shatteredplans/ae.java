@@ -60,10 +60,10 @@ final class ae {
           var2 = var27.readUnsignedByte(-56);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(-20976);
-            var4 = (jr) (i.field_n.startForward(0));
+            var4 = (jr) (DialPainter.field_n.startForward(0));
             while (var4 != null) {
               if (~var3 != ~var4.field_j) {
-                var4 = (jr) (i.field_n.nextForward((byte) -71));
+                var4 = (jr) (DialPainter.field_n.nextForward((byte) -71));
                 continue;
               }
               break;
@@ -169,7 +169,7 @@ final class ae {
               }
             }
             if (decompiledFrameRemainder0) {
-              GameKeyHandler.a(-29901, (Throwable) null, "HS1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "HS1: " + Dialog.a(16738));
               q.g(-100);
             }
           }
@@ -216,7 +216,7 @@ final class ae {
           kh.field_Lb = false;
           je.field_d = vh.field_c;
           PointsVictoryChecker.field_p = ArchiveSource.field_c;
-          td.field_P = TertiaryNodeList.field_e;
+          SliderWidget.field_P = TertiaryNodeList.field_e;
           vh.field_c = 0;
         }
     }

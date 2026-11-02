@@ -212,13 +212,13 @@ final class sr {
             }
             var2 = (de) (aj.field_a.nextForward((byte) -71));
           }
-          var2Lifetime1 = (de) (SolarFlareEvent.field_h.startForward(param0));
+          var2Lifetime1 = (de) (StellarBombEvent.field_h.startForward(param0));
           while (true) {
             if (var2Lifetime1 == null) {
               return false;
             }
             if (!param1.equalsIgnoreCase(var2Lifetime1.field_l)) {
-              var2Lifetime1 = (de) (SolarFlareEvent.field_h.nextForward((byte) -71));
+              var2Lifetime1 = (de) (StellarBombEvent.field_h.nextForward((byte) -71));
               continue;
             }
             break;

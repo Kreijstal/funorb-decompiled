@@ -19,7 +19,7 @@ final class uf {
         if (!QuaternaryNodeList.b(109)) {
           return true;
         }
-        if (tf.field_n <= 0) {
+        if (CheckboxPainter.field_n <= 0) {
           return false;
         }
         if (!dh.a(-12165)) {

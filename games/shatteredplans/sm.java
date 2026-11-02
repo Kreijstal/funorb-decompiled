@@ -44,7 +44,7 @@ final class sm {
         var10 = var6 + 10;
         kp.field_m = qh.a(kp.field_m, var9 - 3, 24, -3 + var7, -1, 24);
         SolMapGenerator.field_q = qh.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
-        if (fj.field_t.field_a == 2) {
+        if (MatchingTextValidator.field_t.field_a == 2) {
           sn.a(var8, -50, var10, param1 + 128, var7, var9);
           bs.field_a = qh.a(bs.field_a, var9, var8, var7, -1, var10);
           bs.a(bs.field_a, 107);
@@ -52,7 +52,7 @@ final class sm {
           bs.field_a.a(var7, var9, 128 - param1 << 1);
           cg.i(0);
         } else {
-          if (fj.field_t.field_a == 1) {
+          if (MatchingTextValidator.field_t.field_a == 1) {
             sn.a(var8, -29, var10, 128 + param1, var7, var9);
           } else {
             gf.c(var7, var9, var8, var10, 855316, -param1 + 128 << 1);
@@ -77,7 +77,7 @@ final class sm {
         }
         var2 = 0;
         if (je.field_d != 0) {
-          var3 = this.b(107, PointsVictoryChecker.field_p, td.field_P);
+          var3 = this.b(107, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (0 <= var3) {
             this.d(4, var3);
           }
@@ -248,8 +248,8 @@ final class sm {
         }
         var6 = param0 - (-TutorialVictoryChecker.field_r[this.field_a] - 18);
         param0 -= 8;
-        gf.a(param0 + 20, param1 + 2, 18 + (-60 + TutorialVictoryChecker.field_r[this.field_a] + o.field_k.field_z), 309, 10, 0, 92);
-        gf.f(20 + param0, 2 + param1, TutorialVictoryChecker.field_r[this.field_a] - 60 + (18 + o.field_k.field_z), 309, 10, 2458760);
+        gf.a(param0 + 20, param1 + 2, 18 + (-60 + TutorialVictoryChecker.field_r[this.field_a] + WidgetTheme.field_k.field_z), 309, 10, 0, 92);
+        gf.f(20 + param0, 2 + param1, TutorialVictoryChecker.field_r[this.field_a] - 60 + (18 + WidgetTheme.field_k.field_z), 309, 10, 2458760);
         var25 = new int[4];
         gf.a(var25);
         gf.i(25 + param0, 5 + param1, var6 - 20, param1 + TutorialVictoryChecker.field_t[this.field_a] - 14);
@@ -274,9 +274,9 @@ final class sm {
           }
         }
         if (0 < var4) {
-          o.field_k.c(-26 + (param0 + TutorialVictoryChecker.field_r[this.field_a]), 5 + param1, 256);
+          WidgetTheme.field_k.c(-26 + (param0 + TutorialVictoryChecker.field_r[this.field_a]), 5 + param1, 256);
           if (BattleContribution.field_o == -2) {
-            o.field_k.c(TutorialVictoryChecker.field_r[this.field_a] + (param0 - 26), param1 + 5, 256);
+            WidgetTheme.field_k.c(TutorialVictoryChecker.field_r[this.field_a] + (param0 - 26), param1 + 5, 256);
           }
         }
         var9Lifetime1 = -(21 * var5) + 310;
@@ -402,10 +402,10 @@ final class sm {
           }
           break;
         }
-        o.field_s = var4;
+        WidgetTheme.field_s = var4;
         var5 = BattleContribution.field_o;
         if (var5 < 0) {
-          var5 = o.field_s;
+          var5 = WidgetTheme.field_s;
         }
         nc.field_t = 0;
         for (var4Lifetime1 = 0; var4Lifetime1 < Star.field_H.length; var4Lifetime1++) {
@@ -587,7 +587,7 @@ final class sm {
           var9 = var9 + IsolationistAi.field_t;
           gf.d(var9, var10 + (var8 / 2 - 1), 121, 2, var7, param2);
           if (var5 == 21) {
-            stackIn_11_0 = tf.field_p * 120 / 256;
+            stackIn_11_0 = CheckboxPainter.field_p * 120 / 256;
           } else {
             stackIn_11_0 = wm.field_b * 120 / 256;
           }
@@ -771,7 +771,7 @@ final class sm {
         if (param0 != -23) {
           discarded$0 = this.c(72, -48);
         }
-        if (w.d(true)) {
+        if (Dialog.d(true)) {
           this.d(param0 ^ -21);
           return;
         }
@@ -876,7 +876,7 @@ final class sm {
         for (var4 = 1; 6 > var4; var4++) {
           Star.field_H[var4] = 0;
         }
-        o.field_s = 0;
+        WidgetTheme.field_s = 0;
         if (this.field_a == 8) {
           SecondaryNodeDeque.field_d = 0;
         }
@@ -919,7 +919,7 @@ final class sm {
           var8 = var8 + IsolationistAi.field_t;
           gf.b(var8, -1 + (var9 + var7 / 2), 121, 2, var6);
           if (21 == var4) {
-            stackIn_11_0 = tf.field_p * 120 / 256;
+            stackIn_11_0 = CheckboxPainter.field_p * 120 / 256;
           } else {
             stackIn_11_0 = 120 * wm.field_b / 256;
           }
@@ -1199,7 +1199,7 @@ final class sm {
                 return;
               }
               if (param2 == 6) {
-                var45 = (ArgbSprite) (fj.field_p);
+                var45 = (ArgbSprite) (MatchingTextValidator.field_p);
                 var10_ref_om = var45.h();
                 var10_ref_om.f();
                 var11Lifetime2 = cl.field_n % 200;
@@ -1245,7 +1245,7 @@ final class sm {
                     gf.b(var12Lifetime1, 30 + var13Lifetime1, di.field_i[2].field_z / 2, 16777215);
                   }
                 }
-                var32 = da.field_a;
+                var32 = DebouncedValidator.field_a;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + 4 * var14) >> 2);
                 var15 = cl.field_n % 50;
@@ -1597,7 +1597,7 @@ final class sm {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!md.field_Q &&
           !is.field_a) {
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j != 13) {
               this.k(23);
               if (this.field_d.field_c == -1) {
@@ -1627,7 +1627,7 @@ final class sm {
             this.a(-16084);
           }
           v.a((byte) -128);
-          this.field_d.a(param0 ^ -2665, this.a(td.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(bb.field_b, (byte) -109, pd.field_k));
+          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(bb.field_b, (byte) -109, pd.field_k));
           if (this.field_d.field_c != -1) {
             this.a(true, this.field_d.field_c, false);
           }
@@ -1668,7 +1668,7 @@ final class sm {
         }
         if (je.field_d == 0) {
         } else {
-          var2 = this.d(84, PointsVictoryChecker.field_p, td.field_P);
+          var2 = this.d(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (var2 == an.field_c) {
             an.field_c = -1;
           } else {
@@ -1701,7 +1701,7 @@ final class sm {
     private final void d(int param0, int param1) {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        o.field_s = param1;
+        WidgetTheme.field_s = param1;
         pr.field_g = 0 != jn.field_b ? re.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
         DefendTask.field_w = 0;
         if (param0 != 4) {
@@ -1778,12 +1778,12 @@ final class sm {
           if (var6 == 21) {
             var5 = 0;
             if (this.field_d.a(-1) &&
-              tf.field_p > 0) {
+              CheckboxPainter.field_p > 0) {
               js.a(0, 197126152);
               var5 = 1;
             }
             if (this.field_d.a(true) &&
-              tf.field_p < 256) {
+              CheckboxPainter.field_p < 256) {
               var5 = 1;
               js.a(256, 197126152);
             }
@@ -1803,14 +1803,14 @@ final class sm {
               var5 = 1;
             }
             if (this.field_d.c(-97) &&
-              tf.field_p > 0) {
+              CheckboxPainter.field_p > 0) {
               var5 = 1;
               DualLinkNode.c(!param2);
             }
             if (this.field_d.f(-97) &&
-              tf.field_p < 256) {
+              CheckboxPainter.field_p < 256) {
               var5 = 1;
-              cc.f((byte) 124);
+              PasswordValidator.f((byte) 124);
             }
             if (((var5 != 0)) && ((!(this.field_d.b((byte) -114)) ||
               !(cl.field_n <= TutorialVictoryChecker.field_q)))) {
@@ -1845,7 +1845,7 @@ final class sm {
                 }
               }
               if (this.field_d.c(-97)) {
-                qs.d(!param2);
+                SingleChildWidget.d(!param2);
               }
               if (this.field_d.f(-77)) {
                 jn.a(11615);
@@ -2266,7 +2266,7 @@ final class sm {
               ta.a(0, -4, (byte) 96, var6 != 0);
             } else {
               if (var5 == 1) {
-                if (w.d(true)) {
+                if (Dialog.d(true)) {
                   var5 = 0;
                   uc.a(320, mp.field_b.field_K, mp.field_b.field_K + mp.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, mp.field_b, false, 8, var5);
                 } else {
@@ -2379,7 +2379,7 @@ final class sm {
                                                     } else {
                                                       if (var5 == 20) {
                                                         this.field_g = param0;
-                                                        da.a(param3 ^ -32579, GameScreen.f((byte) 127));
+                                                        DebouncedValidator.a(param3 ^ -32579, GameScreen.f((byte) 127));
                                                       } else {
                                                         if (27 == var5) {
                                                           var5 = param1 ? 1 : 0;
@@ -2409,11 +2409,11 @@ final class sm {
                                                             }
                                                           }
                                                           if (var5 == 29) {
-                                                            if (TaskAi.field_a != td.field_K) {
-                                                              oq.field_i[29] = tp.field_k;
-                                                              td.field_K = TaskAi.field_a;
+                                                            if (TaskAi.field_a != SliderWidget.field_K) {
+                                                              oq.field_i[29] = SliderPainter.field_k;
+                                                              SliderWidget.field_K = TaskAi.field_a;
                                                             } else {
-                                                              td.field_K = ec.field_s;
+                                                              SliderWidget.field_K = UsernameAvailabilityValidator.field_s;
                                                               oq.field_i[29] = og.field_a;
                                                             }
                                                             break regionExit1;
@@ -2748,11 +2748,11 @@ final class sm {
         var32Lifetime1 -= 16384;
         var32Lifetime1 = -3800 + (var32Lifetime1 + param1 * 7600 / 200);
         if (!param3) {
-          stackIn_23_0 = fj.field_p;
+          stackIn_23_0 = MatchingTextValidator.field_p;
         } else {
           stackIn_23_0 = eq.field_o;
         }
-        ie.a((ArgbSprite) (stackIn_23_0), fj.field_p.field_z << 3, fj.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
+        ie.a((ArgbSprite) (stackIn_23_0), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
         if (param8) {
           gf.c(var30 >> 4, var31 >> 4, 9, 0, 92);
           rs.field_Cb.c(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);

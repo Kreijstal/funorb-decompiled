@@ -10,14 +10,14 @@ final class DerelictVictoryChecker extends VictoryChecker {
     private int[] field_o;
     static int field_p;
 
-    final int b(boolean param0) {
+    final int resultsPanelHeight(boolean param0) {
         if (param0) {
           DerelictVictoryChecker.b((byte) -59);
         }
-        return rs.field_Cb.field_J + this.field_o.length * cc.field_n;
+        return rs.field_Cb.field_J + this.field_o.length * PasswordValidator.field_n;
     }
 
-    final boolean a(GameState param0, byte param1) {
+    final boolean detectWinners(GameState param0, byte param1) {
         int stackIn_26_0 = 0;
         int stackIn_26_1 = 0;
         RuntimeException stackIn_51_0 = null;
@@ -39,7 +39,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         int var3_intLifetime2;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (super.a(param0, (byte) 94)) {
+          if (super.detectWinners(param0, (byte) 94)) {
             return true;
           }
           for (var3_int = 0; var3_int < this.field_i.length; var3_int++) {
@@ -55,7 +55,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
             }
           }
           if (param1 < 23) {
-            this.b(false);
+            this.resultsPanelHeight(false);
           }
           for (var3_intLifetime1 = 0; this.field_i.length > var3_intLifetime1; var3_intLifetime1++) {
             this.field_o[var3_intLifetime1] = this.field_o[var3_intLifetime1] + this.field_q[var3_intLifetime1];
@@ -120,7 +120,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writeScores(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -133,7 +133,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         }
     }
 
-    final Player[] b(int param0) {
+    final Player[] projectedWinners(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var2;
@@ -217,7 +217,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         int var1 = 29 / ((param0 - 12) / 51);
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void readScores(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         String var5 = null;
@@ -250,7 +250,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         }
     }
 
-    final void a(byte param0, GameState param1, GameScreen param2) {
+    final void showResults(byte param0, GameState param1, GameScreen param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_23_0 = null;
@@ -325,7 +325,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
             var8[var10_int] = this.field_o[var26[var10_int]];
             var9[var10_int] = this.field_q[var26[var10_int]];
           }
-          var10 = this.b(0);
+          var10 = this.projectedWinners(0);
           if (null == this.field_g &&
             var10.length != 0) {
             var12 = var10[0].field_x;

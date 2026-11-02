@@ -82,14 +82,14 @@ final class ta {
         if (WidgetContainer.field_C) {
           gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.b(param0, -68);
-          ml.a((byte) 99, param0);
+          TextFieldValidator.a((byte) 99, param0);
           if (param1 < 38) {
             field_c = (String) null;
             return;
           }
           return;
         }
-        ml.a((byte) 99, param0);
+        TextFieldValidator.a((byte) 99, param0);
         if (param1 >= 38) {
           return;
         }
@@ -119,7 +119,7 @@ final class ta {
 
     final static boolean a(int param0) {
         int var1 = 94 / ((param0 + 29) / 49);
-        return fj.field_s == ue.field_a ? true : false;
+        return MatchingTextValidator.field_s == ue.field_a ? true : false;
     }
 
     final static void b(byte param0) {
@@ -128,7 +128,7 @@ final class ta {
         byte[] var1Lifetime1;
         byte[] var2Lifetime1;
         if (param0 == -69) {
-          if (w.d(true)) {
+          if (Dialog.d(true)) {
             return;
           }
           if (de.field_j == -1) {
@@ -146,7 +146,7 @@ final class ta {
           return;
         }
         ta.a(true, -56);
-        if (w.d(true)) {
+        if (Dialog.d(true)) {
           return;
         }
         if (de.field_j == -1) {

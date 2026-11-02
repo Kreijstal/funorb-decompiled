@@ -39,7 +39,7 @@ final class kd {
             var6 = var8[var5];
             if (param2.field_y != var6.field_y ||
               param1 &&
-              ec.field_r[var6.field_p]) {
+              UsernameAvailabilityValidator.field_r[var6.field_p]) {
               param2.field_N = param2.field_N + 1;
             }
           }
@@ -312,7 +312,7 @@ final class kd {
               ql.field_n.d(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
               var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
-              um.field_c.d(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
+              PlayerStats.field_c.d(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
               var1_int = var1_int + e.field_d;
             }
           }
@@ -339,7 +339,7 @@ final class kd {
         if (param0 != 23299) {
           field_c = (String) null;
         }
-        u.field_c = new int[param1];
+        ValidationState.field_c = new int[param1];
         cb.field_o = new int[param1];
         ah.field_U = param1;
         QuaternaryNodeList.field_b = new int[param1];
@@ -347,7 +347,7 @@ final class kd {
         WeightedLruCache.field_a = new int[param1];
         StandardMapGenerator.field_i = new int[param1];
         oe.field_i = new int[param1];
-        u.field_d = new int[param1];
+        ValidationState.field_d = new int[param1];
         ei.field_d = new int[param1];
         ig.field_c = new int[param1];
         ue.field_e = new int[param1];

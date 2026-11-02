@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd extends ji {
-    private go field_R;
-    private go field_O;
+    private TextFieldWidget field_R;
+    private TextFieldWidget field_O;
     private boolean field_J;
-    private go field_M;
+    private TextFieldWidget field_M;
     static IntrusiveDeque field_P;
     static char[] field_L;
     static String field_Q;
@@ -18,7 +18,7 @@ final class wd extends ji {
             ja var7 = (ja) null;
             this.a((ja) null, -116);
           }
-          mf.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> 1)), param2.field_q + param4 - 5, 16777215, -1);
+          EmailValidator.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> 1)), param2.field_q + param4 - 5, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "wd.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -29,7 +29,7 @@ final class wd extends ji {
         int var6Lifetime1;
         super.a(param0, param1, (byte) 119, param3, param4);
         if (param2 <= 99) {
-          this.field_M = (go) null;
+          this.field_M = (TextFieldWidget) null;
           var6 = -130 + param4 >> 1;
           if (this.field_J) {
             this.field_M.a(0, param1, (byte) 125, var6, 25);
@@ -140,17 +140,17 @@ final class wd extends ji {
         try {
           super.a(param0, -93);
           if (param1 >= -47) {
-            this.field_M = (go) null;
+            this.field_M = (TextFieldWidget) null;
           }
-          this.field_O.field_u = (ko) ((Object) param0);
-          this.field_M.field_u = (ko) ((Object) param0);
-          this.field_R.field_u = (ko) ((Object) param0);
+          this.field_O.field_u = (WidgetListener) ((Object) param0);
+          this.field_M.field_u = (WidgetListener) ((Object) param0);
+          this.field_R.field_u = (WidgetListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "wd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    wd(iq param0, boolean param1, int param2, int param3, int param4, int param5) {
+    wd(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(param3, param5, (byte) 110, param2, param4);
@@ -159,12 +159,12 @@ final class wd extends ji {
         }
     }
 
-    private wd(iq param0, boolean param1) {
-        super(0, 0, 0, 0, (iq) null);
+    private wd(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_O = (go) ((Object) new fa("", (ko) null, 2));
-          this.field_M = (go) ((Object) new fa("", (ko) null, 2));
-          this.field_R = (go) ((Object) new fa("", (ko) null, 4));
+          this.field_O = (TextFieldWidget) ((Object) new fa("", (WidgetListener) null, 2));
+          this.field_M = (TextFieldWidget) ((Object) new fa("", (WidgetListener) null, 2));
+          this.field_R = (TextFieldWidget) ((Object) new fa("", (WidgetListener) null, 4));
           this.field_R.field_p = param0;
           this.field_M.field_p = param0;
           this.field_O.field_p = param0;

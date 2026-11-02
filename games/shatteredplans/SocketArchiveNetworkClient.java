@@ -449,14 +449,14 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           if (param1 > -108) {
             return true;
           }
-          var2 = (de) (SolarFlareEvent.field_h.startForward(0));
+          var2 = (de) (StellarBombEvent.field_h.startForward(0));
           while (var2 != null) {
             if (param0.equalsIgnoreCase(var2.field_l)) {
               return false;
             }
-            var2 = (de) (SolarFlareEvent.field_h.nextForward((byte) -71));
+            var2 = (de) (StellarBombEvent.field_h.nextForward((byte) -71));
           }
-          SolarFlareEvent.field_h.addLast((byte) -113, new de(param0));
+          StellarBombEvent.field_h.addLast((byte) -113, new de(param0));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

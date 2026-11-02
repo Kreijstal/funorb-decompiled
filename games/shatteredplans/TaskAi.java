@@ -865,7 +865,7 @@ final class TaskAi implements Ai {
             gd.a(param3, 1);
           }
         }
-        if (rq.field_b.field_rb != 0) {
+        if (LinkPainter.field_b.field_rb != 0) {
           if (1 == nl.field_a.length &&
             nl.field_a[0] != qk.field_x) {
             qk.field_x = nl.field_a[0];
@@ -1589,7 +1589,7 @@ final class TaskAi implements Ai {
             }
           }
         }
-        var4 = this.field_m.field_x.b(0);
+        var4 = this.field_m.field_x.projectedWinners(0);
         if (1 != var4.length) {
           this.field_g = -1;
         } else {

@@ -57,7 +57,7 @@ final class fg {
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6_ref_String = var4[var5];
-            var7 = w.a((byte) -94, var6_ref_String);
+            var7 = Dialog.a((byte) -94, var6_ref_String);
             if (var7 != null) {
               stackIn_17_0 = var7;
               return stackIn_17_0;

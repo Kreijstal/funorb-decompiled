@@ -130,7 +130,7 @@ final class be extends IntrusiveNode {
           }
           sb.field_h = param6;
           ks.field_e = param8;
-          ec.field_p = -1L;
+          UsernameAvailabilityValidator.field_p = -1L;
           em.field_k = param8.length;
           he.field_p = null;
           np.field_a = null;

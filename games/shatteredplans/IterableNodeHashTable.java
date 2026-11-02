@@ -54,7 +54,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param1 != 17746) {
             field_a = (java.awt.Image) null;
           }
-          stackIn_3_0 = SolarFlareEvent.a(param0, param0.length, 0, param1 - 17864);
+          stackIn_3_0 = StellarBombEvent.a(param0, param0.length, 0, param1 - 17864);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,9 +152,9 @@ final class IterableNodeHashTable implements Iterable {
     final static Archive a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         if (!param3) {
           field_c = (String) null;
-          return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+          return PasswordValidator.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
         }
-        return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+        return PasswordValidator.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
     }
 
     static {

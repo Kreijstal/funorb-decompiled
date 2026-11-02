@@ -192,7 +192,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             stackIn_6_0 = var11;
           }
           var12 = stackIn_6_0;
-          tf.field_b.c(var1_intLifetime1, var2Lifetime1 + (var12 - 120), 128);
+          CheckboxPainter.field_b.c(var1_intLifetime1, var2Lifetime1 + (var12 - 120), 128);
           MusicVoice.field_n.f(var1_intLifetime1, var12 + var2Lifetime1);
           if (var5 <= di.field_m) {
             stackIn_11_0 = 205 + var10 << 4;

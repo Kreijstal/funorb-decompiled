@@ -25,7 +25,7 @@ final class MusicVoice extends IntrusiveNode {
     static String field_l;
     int field_p;
     int field_B;
-    static o field_o;
+    static WidgetTheme field_o;
     static wa field_D;
     int field_i;
     static String field_N;

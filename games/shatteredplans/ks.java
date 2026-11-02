@@ -190,7 +190,7 @@ final class ks {
         if (GameRules.field_a == null) {
           GameRules.field_a = new sp();
           GameRules.field_a.a(gn.field_u, true);
-          GameRules.field_a.field_h = mf.field_x;
+          GameRules.field_a.field_h = EmailValidator.field_x;
           GameRules.field_a.field_l = 14;
           GameRules.field_a.field_i = 7697781;
           GameRules.field_a.field_e = 5;
@@ -314,7 +314,7 @@ final class ks {
           } else {
             stackIn_3_8 = 0;
           }
-          tp.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ub) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ub) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
             !ha.a((byte) 95) &&
             null == np.field_a &&
@@ -348,7 +348,7 @@ final class ks {
           DerelictVictoryChecker.field_m.a(param0, (byte) -100);
           var13 = DerelictVictoryChecker.field_m;
           var3 = PointsVictoryChecker.field_p;
-          var4 = td.field_P;
+          var4 = SliderWidget.field_P;
           var13.field_j.b(0, param1, 0, var3, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

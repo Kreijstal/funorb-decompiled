@@ -22,14 +22,14 @@ abstract class SpriteState extends DualLinkNode {
         hk.field_nb = wp.field_a;
         PlacementEvent.field_n = MusicTrack.a(param0, "", "shattered_plans_win");
         wh.field_b = MusicTrack.a(param0, "", "shattered_plans_lose");
-        u.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
-        u.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
-        u.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
         if (param2 < 26) {
           return;
         }
         try {
-          u.field_b.field_u.f(256);
+          ValidationState.field_b.field_u.f(256);
           mj.field_Sb = null;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

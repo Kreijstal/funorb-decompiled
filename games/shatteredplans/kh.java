@@ -110,7 +110,7 @@ final class kh extends qr {
           this.field_Cb = new qr(0L, (qr) null);
           this.a(4, this.field_Cb);
           if (param11 != null) {
-            this.field_Ab = new qr(0L, param8, o.field_a);
+            this.field_Ab = new qr(0L, param8, WidgetTheme.field_a);
             this.field_Ab.field_y = 1;
             this.field_Ab.field_x = 11184810;
             this.field_Cb.a(4, this.field_Ab);

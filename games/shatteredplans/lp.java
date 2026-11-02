@@ -93,7 +93,7 @@ final class lp extends vd implements gj {
           }
           hm.field_q = param1;
           if (param1 == null) {
-            tp.field_b = DerelictMapGenerator.field_q;
+            SliderPainter.field_b = DerelictMapGenerator.field_q;
             jb.field_d = kp.field_j + ArchiveRequest.field_r >> 1;
             fe.field_B = kp.field_j + ArchiveRequest.field_r >> 1;
             oi.field_a = be.field_h;
@@ -142,7 +142,7 @@ final class lp extends vd implements gj {
             var2_int = var2_int - var4;
           }
           jb.field_d = var4 + var2_int;
-          tp.field_b = var3 + var5;
+          SliderPainter.field_b = var3 + var5;
           oi.field_a = var3;
           fe.field_B = var2_int;
           qj.a(param1, param0 ^ -1546006978);
@@ -152,7 +152,7 @@ final class lp extends vd implements gj {
           if (WeightedLruCache.field_g != null) {
             return;
           }
-          DerelictMapGenerator.field_q = tp.field_b;
+          DerelictMapGenerator.field_q = SliderPainter.field_b;
           be.field_h = oi.field_a;
           kp.field_j = jb.field_d + fe.field_B >> 1;
           ArchiveRequest.field_r = jb.field_d + fe.field_B >> 1;

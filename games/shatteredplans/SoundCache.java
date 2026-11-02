@@ -300,10 +300,10 @@ final class SoundCache {
 
     final static Archive a(int param0, int param1) {
         if (param1 >= 27) {
-          return cc.a(1, false, param0, 12000, true, false);
+          return PasswordValidator.a(1, false, param0, 12000, true, false);
         }
         field_c = (qr) null;
-        return cc.a(1, false, param0, 12000, true, false);
+        return PasswordValidator.a(1, false, param0, 12000, true, false);
     }
 
     private final PcmSample a(String param0, boolean param1, int[] param2, String param3) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends da implements od, g {
+final class ja extends DebouncedValidator implements TextFieldListener, g {
     ji field_m;
     static String field_j;
     static String field_l;
@@ -9,7 +9,7 @@ final class ja extends da implements od, g {
     static String field_k;
     static int[] field_i;
 
-    public final void a(go param0, int param1) {
+    public final void a(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
             this.a(25);
@@ -120,7 +120,7 @@ final class ja extends da implements od, g {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        go var6 = null;
+        TextFieldWidget var6 = null;
         String stackIn_6_0 = null;
         Object stackIn_9_0 = null;
         Throwable decompiledCaughtException = null;
@@ -128,8 +128,8 @@ final class ja extends da implements od, g {
           var2_int = this.field_m.d(false);
           var3 = this.field_m.f((byte) 119);
           if (param0 < 61) {
-            var6 = (go) null;
-            this.a((go) null, 80);
+            var6 = (TextFieldWidget) null;
+            this.a((TextFieldWidget) null, 80);
           }
           var4 = this.field_m.l(115);
           var5 = BattleSnapshot.e(-13299);
@@ -140,7 +140,7 @@ final class ja extends da implements od, g {
               return (String) (stackIn_9_0);
             }
           } else {
-            stackIn_6_0 = re.a(um.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_6_0 = re.a(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_6_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -153,15 +153,15 @@ final class ja extends da implements od, g {
     public ja() {
     }
 
-    final u a(boolean param0) {
+    final ValidationState a(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        u stackIn_3_0 = null;
-        u stackIn_7_0 = null;
-        u stackIn_10_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_m.d(param0);
@@ -188,7 +188,7 @@ final class ja extends da implements od, g {
         return CachedArchiveSource.field_g;
     }
 
-    public final void a(int param0, go param1) {
+    public final void a(int param0, TextFieldWidget param1) {
         try {
           if (param0 != 4340) {
             field_l = (String) null;

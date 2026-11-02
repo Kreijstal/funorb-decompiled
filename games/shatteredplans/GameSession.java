@@ -965,7 +965,7 @@ final class GameSession implements AiHost {
             this.field_Y.o(-4956);
             boolean decompiledSharedTail0 = ((this.field_n == null ||
               (this.field_P.field_w & 1 << this.field_h) == 0) &&
-              !(this.field_P.field_x.a((byte) 123, this.field_n)));
+              !(this.field_P.field_x.isLoser((byte) 123, this.field_n)));
             if (!decompiledSharedTail0) {
               jo.a(param0 ^ 18008, wh.field_b, false, 10);
               decompiledSharedTail0 = (var11 != 0);
@@ -1112,7 +1112,7 @@ final class GameSession implements AiHost {
         FleetMove var7_ref_mg = null;
         BattleEvent var7_ref_eg = null;
         StarAbandonedEvent var7_ref_nr = null;
-        SolarFlareEvent var7_ref_qi = null;
+        StellarBombEvent var7_ref_qi = null;
         ProjectUse var7_ref_qm = null;
         PlacementEvent var7_ref_hj = null;
         int var7 = 0;
@@ -1173,7 +1173,7 @@ final class GameSession implements AiHost {
                     var8 = (BattleContribution) (var7_ref_eg.field_v.nextForward((byte) -71));
                   }
                 } else if (!(var4 instanceof ProjectUse)) {
-                  if (!(var4 instanceof SolarFlareEvent)) {
+                  if (!(var4 instanceof StellarBombEvent)) {
                     if (var4 instanceof StarAbandonedEvent) {
                       var7_ref_nr = (StarAbandonedEvent) (var4);
                       if (null != var7_ref_nr.field_j) {
@@ -1192,7 +1192,7 @@ final class GameSession implements AiHost {
                       this.field_z.field_P[var7_ref_nr.field_p.field_p] = true;
                     }
                   } else {
-                    var7_ref_qi = (SolarFlareEvent) (var4);
+                    var7_ref_qi = (StellarBombEvent) (var4);
                     this.field_z.a(var7_ref_qi.field_l, -123, 2, var7_ref_qi.field_k);
                   }
                 } else {
@@ -1259,7 +1259,7 @@ final class GameSession implements AiHost {
             NodeHashTableIterator.a(0, "losegame");
           }
           if (this.field_W) {
-            var8_array = this.field_P.field_x.a((byte) -23);
+            var8_array = this.field_P.field_x.getWinners((byte) -23);
             if (var8_array != null &&
               this.field_n == var8_array[0]) {
               NodeHashTableIterator.a(0, "wingame");
@@ -1325,7 +1325,7 @@ final class GameSession implements AiHost {
           }
           if (decompiledSharedTail1) {
             if (je.field_d == 1) {
-              this.a(td.field_P, (byte) -103, PointsVictoryChecker.field_p);
+              this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
             this.a(-3587, pd.field_k, bb.field_b);
             this.field_z.a(this.field_m, 0, pd.field_k, bb.field_b);
@@ -1581,7 +1581,7 @@ final class GameSession implements AiHost {
           var2.position = var2.position + 2;
           var3 = var2.position;
           var2.writeByte(this.field_P.field_O, (byte) -109);
-          AchievementProgress.a(MapView.a((byte) 81, this.field_o), -256, MapView.a((byte) 93, this.field_ab), rp.a(-125, this.field_v), var2);
+          AchievementProgress.a(MapView.a((byte) 81, this.field_o), -256, MapView.a((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
           this.field_ab.clear((byte) 35);
           this.field_o.clear((byte) 87);
           this.field_v.a((byte) 112);
@@ -2271,7 +2271,7 @@ final class GameSession implements AiHost {
         int var12 = 0;
         PlacementEvent var12_ref_hj = null;
         BattleEvent var12_ref_eg = null;
-        SolarFlareEvent var12_ref_qi = null;
+        StellarBombEvent var12_ref_qi = null;
         ProjectUse var12_ref_qm = null;
         FleetMove var12_ref_mg = null;
         Star var13 = null;
@@ -2279,9 +2279,9 @@ final class GameSession implements AiHost {
         int var13_int = 0;
         Player[] var13_array = null;
         BattleContribution var13_ref2 = null;
-        um var13_ref3 = null;
+        PlayerStats var13_ref3 = null;
         int var14_int = 0;
-        um var14 = null;
+        PlayerStats var14 = null;
         int var15_int = 0;
         Territory var15 = null;
         Player var15_ref = null;
@@ -2426,8 +2426,8 @@ final class GameSession implements AiHost {
                     }
                   }
                   stackIn_116_0 = var11_ref_oh;
-                  if (stackIn_116_0 instanceof SolarFlareEvent) {
-                    var12_ref_qi = (SolarFlareEvent) (var11_ref_oh);
+                  if (stackIn_116_0 instanceof StellarBombEvent) {
+                    var12_ref_qi = (StellarBombEvent) (var11_ref_oh);
                     var8[var12_ref_qi.field_k.field_x] = var8[var12_ref_qi.field_k.field_x] + var12_ref_qi.field_i;
                     var12_ref_qi.field_k.field_q.field_s = var12_ref_qi.field_k.field_q.field_s + 1;
                   }
@@ -3089,7 +3089,7 @@ final class GameSession implements AiHost {
               if (var6 < 24) {
                 var6 = 24;
               }
-              var4_ref2 = rp.a(96, SocketArchiveNetworkClient.field_w, var6);
+              var4_ref2 = DialWidget.a(96, SocketArchiveNetworkClient.field_w, var6);
               if (var8 != 0) {
                 var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
               }
@@ -3208,7 +3208,7 @@ final class GameSession implements AiHost {
             this.a(false, 84, (Star) null, (Star) null);
           }
           this.field_n = this.field_P.field_v[this.field_h];
-          this.field_S = mb.field_o[this.field_P.field_J];
+          this.field_S = AgeValidator.field_o[this.field_P.field_J];
           this.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3535,7 +3535,7 @@ final class GameSession implements AiHost {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           System.gc();
-          this.field_P.field_x.a((byte) -70, this.field_P, this.field_Y);
+          this.field_P.field_x.showResults((byte) -70, this.field_P, this.field_Y);
           var2 = this.field_P.field_g.field_e;
           var3_int = 0;
           scanLoop1: while (true) {
@@ -3685,7 +3685,7 @@ final class GameSession implements AiHost {
           this.field_b = false;
           this.field_Y.o(-4956);
           if ((this.field_n == null ||
-            (1 << this.field_h & this.field_P.field_w) == 0) && !this.field_P.field_x.a((byte) -123, this.field_n)) {
+            (1 << this.field_h & this.field_P.field_w) == 0) && !this.field_P.field_x.isLoser((byte) -123, this.field_n)) {
             if (this.field_P.field_z) {
               jo.a(32767, PlacementEvent.field_n, false, 10);
               if (var6 != 0) {
@@ -4264,7 +4264,7 @@ final class GameSession implements AiHost {
                 }
               } else {
                 stackIn_21_0 = this.field_P.field_v[0];
-                if (w.d(true)) {
+                if (Dialog.d(true)) {
                   stackIn_22_1 = hn.field_f[0];
                 } else {
                   stackIn_22_1 = Star.field_o;
@@ -4312,7 +4312,7 @@ final class GameSession implements AiHost {
             boolean decompiledFrameRemainder1 = true;
             if (var10.length > var11) {
               var12 = var10[var11];
-              var12.field_q = new um(20);
+              var12.field_q = new PlayerStats(20);
               var11++;
               if (var13 == 0) {
                 continue;
@@ -4372,7 +4372,7 @@ final class GameSession implements AiHost {
             this.b((byte) -81);
             this.field_z.field_p = null;
             this.field_P.setTurnNumber(-9778, 0);
-            this.field_S = mb.field_o[this.field_P.field_J];
+            this.field_S = AgeValidator.field_o[this.field_P.field_J];
           }
           this.field_G = false;
           this.field_L = false;

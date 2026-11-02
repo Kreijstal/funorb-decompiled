@@ -31,7 +31,7 @@ final class GameRules {
             return stackIn_2_0;
           }
           var3 = "turn0" + param1;
-          stackIn_4_0 = mf.a(param0, "", var3, false);
+          stackIn_4_0 = EmailValidator.a(param0, "", var3, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

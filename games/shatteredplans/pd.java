@@ -4,7 +4,7 @@
 final class pd extends hb {
     static MouseInputHandler field_j;
     private TertiaryNodeList field_i;
-    static u field_h;
+    static ValidationState field_h;
     static qf field_m;
     static int field_k;
     static IntrusiveDeque field_f;
@@ -115,7 +115,7 @@ final class pd extends hb {
 
     static {
         field_j = new MouseInputHandler();
-        field_h = new u();
+        field_h = new ValidationState();
         field_k = 0;
         field_f = new IntrusiveDeque();
         field_g = "Showing combat and damaged fleets retreating.";

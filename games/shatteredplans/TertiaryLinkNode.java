@@ -37,10 +37,10 @@ class TertiaryLinkNode extends DualLinkNode {
             TertiaryLinkNode.a((String) null, 69);
           }
           var2_int = 16711935 & param1;
-          lk.a(param0 ^ 27840);
+          CheckboxWidget.a(param0 ^ 27840);
           var3 = param1 & 65280;
           while (true) {
-            dupTemp$0 = tf.a((byte) -92);
+            dupTemp$0 = CheckboxPainter.a((byte) -92);
             var4 = dupTemp$0;
             if (dupTemp$0 == null) {
               if (bd.field_A) {

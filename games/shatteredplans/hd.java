@@ -39,7 +39,7 @@ final class hd extends IntrusiveNode {
           var1_int = -25 + var2 / 8;
           DualLinkDeque.field_a.b(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
-          w.field_D.b(var1_intLifetime1, 0, 4227327);
+          Dialog.field_D.b(var1_intLifetime1, 0, 4227327);
           oi.field_d.a(var1_intLifetime1, 0, dp.field_r / 8);
           var7 = fe.field_y;
           var3 = var7;
@@ -51,7 +51,7 @@ final class hd extends IntrusiveNode {
           }
           var1_intLifetime2 = -250 + var2 / 4;
           vm.field_Jb.b(var1_intLifetime2, 120, 8421631);
-          tp.field_e.a(var1_intLifetime2, param0, dp.field_r / 4);
+          SliderPainter.field_e.a(var1_intLifetime2, param0, dp.field_r / 4);
           sr.field_F.a(var1_intLifetime2, 120, dp.field_r);
           var3Lifetime1 = fe.field_H;
           var8 = 0;

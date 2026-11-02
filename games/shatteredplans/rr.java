@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rr extends o {
+class rr extends WidgetTheme {
     static int field_t;
 
     final static a a(IntrusiveDeque param0, int param1, int param2, int param3) {

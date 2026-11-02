@@ -19,7 +19,7 @@ final class us {
 
     final static void a(int param0, int param1) {
         if (~SolVictoryChecker.field_m == ~(!CachedArchiveSource.field_n ? 3 : 2)) {
-          i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
+          DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
           if (param0 == 0) {
             return;
           }
@@ -28,7 +28,7 @@ final class us {
         }
         if (CachedArchiveSource.field_n) {
           if (MusicEnvelope.field_i == -1) {
-            i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
+            DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
             if (param0 == 0) {
               return;
             }

@@ -46,7 +46,7 @@ final class nc extends IntrusiveNode {
           }
           if (param0.field_l != 0 ||
             param0.field_e != 0) {
-            for (var2_int = 0; var2_int < da.field_g; var2_int++) {
+            for (var2_int = 0; var2_int < DebouncedValidator.field_g; var2_int++) {
               var3 = wm.field_d[var2_int];
               if (2 == var3.field_n &&
                 param0.field_l == var3.field_l &&

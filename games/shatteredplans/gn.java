@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn extends o {
+final class gn extends WidgetTheme {
     static String field_v;
     static String field_x;
     static Sprite field_y;
@@ -392,18 +392,18 @@ final class gn extends o {
         wk var7 = null;
         wk var9 = null;
         Sprite var10 = null;
-        kg var11 = null;
+        FocusableWidget var11 = null;
         wk var12 = null;
         wk var13 = null;
         wk var14 = null;
         wk var15 = null;
         try {
-          if (!(param0 instanceof kg)) {
+          if (!(param0 instanceof FocusableWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param0);
           }
-          var11 = (kg) (stackIn_3_0);
+          var11 = (FocusableWidget) (stackIn_3_0);
           BufferedSocket.a(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
           if (var11 != null) {
             param2 = param2 & var11.field_y;

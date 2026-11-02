@@ -124,7 +124,7 @@ final class os extends vd {
           }
           if (wh.field_a.b(14) &&
             !param1.equals(wh.field_a.a(-103))) {
-            wh.field_a = tf.a(param1, param0 ^ -12121);
+            wh.field_a = CheckboxPainter.a(param1, param0 ^ -12121);
           }
           stackIn_7_0 = wh.field_a;
           return stackIn_7_0;

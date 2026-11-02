@@ -223,7 +223,7 @@ final class AttackTask extends AiTask {
         if (param0 < 95) {
           AttackTask.d((byte) -4);
         }
-        stackIn_7_0 = (w.d(true)) || !(0 < StarAnnotation.field_m);
+        stackIn_7_0 = (Dialog.d(true)) || !(0 < StarAnnotation.field_m);
         return stackIn_7_0;
     }
 

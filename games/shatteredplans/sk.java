@@ -61,7 +61,7 @@ final class sk extends IntrusiveNode {
         }
         if (!param0) {
           BufferedSocket.field_h = pe.a(var8, param1 + 1, 80);
-          mb.field_p = null;
+          AgeValidator.field_p = null;
           return new nf(param0);
         }
         var5 = var8.readUnsignedShort(-20976);
@@ -73,13 +73,13 @@ final class sk extends IntrusiveNode {
           } else {
             stackIn_22_0 = var9.field_o;
           }
-          mb.field_p = stackIn_22_0;
+          AgeValidator.field_p = stackIn_22_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           GameKeyHandler.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
           BufferedSocket.field_h = null;
-          mb.field_p = null;
+          AgeValidator.field_p = null;
           return new nf(param0);
         }
         return new nf(param0);

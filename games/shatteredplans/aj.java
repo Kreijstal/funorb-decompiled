@@ -62,7 +62,7 @@ final class aj {
         String var12 = null;
         fc var13 = null;
         try {
-          tp.a((int[]) null, 0L, (String) null, (String) null, 293, qs.field_y, param2, -1, param2.g(-77));
+          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, SingleChildWidget.field_y, param2, -1, param2.g(-77));
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(bs.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;
@@ -86,7 +86,7 @@ final class aj {
             return;
           }
           var5 = PointsVictoryChecker.field_p;
-          var6 = td.field_P;
+          var6 = SliderWidget.field_P;
           var13.field_j.b(0, 0, 0, var5, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,7 +131,7 @@ final class aj {
           for (var7 = 0; param3.length > var7; var7 += 2) {
             var8 = param3[var7];
             var9 = param3[var7 + 1];
-            if (td.a(var5, -120, var4_int, var9, param1, var8, param2)) {
+            if (SliderWidget.a(var5, -120, var4_int, var9, param1, var8, param2)) {
               var6++;
             }
             var5 = var9;

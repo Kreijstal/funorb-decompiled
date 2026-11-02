@@ -75,7 +75,7 @@ final class nb {
           throw new IllegalStateException();
         }
         if (null == ji.field_G) {
-          var1 = w.l(param0 ^ param0);
+          var1 = Dialog.l(param0 ^ param0);
           no.field_e = new ri(var1, (String) null, true, false, false);
           le.field_e.a(true, ae.field_f);
           ae.field_f.b(no.field_e, param0 - 18);
@@ -83,7 +83,7 @@ final class nb {
           return;
         }
         ji.field_G.i((byte) -104);
-        var1Lifetime1 = w.l(param0 ^ param0);
+        var1Lifetime1 = Dialog.l(param0 ^ param0);
         no.field_e = new ri(var1Lifetime1, (String) null, true, false, false);
         le.field_e.a(true, ae.field_f);
         ae.field_f.b(no.field_e, param0 - 18);

@@ -451,12 +451,12 @@ final class MidiPcmStream extends PcmStream {
         var53 = null;
         var41 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          stackIn_3_0 = qs.field_y;
+          stackIn_3_0 = SingleChildWidget.field_y;
           stackIn_3_1 = (cr.field_c * 4 + 8) * param5;
           stackIn_3_2 = (2 + cr.field_c) * 2;
-          stackIn_4_3 = (DerelictVictoryChecker.field_l == qs.field_y);
+          stackIn_4_3 = (DerelictVictoryChecker.field_l == SingleChildWidget.field_y);
           var7_int = ((ub) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
-          var8 = qs.field_y.field_xb.field_M;
+          var8 = SingleChildWidget.field_y.field_xb.field_M;
           if (param1 <= 109) {
             MidiPcmStream.a((nk[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
@@ -522,7 +522,7 @@ final class MidiPcmStream extends PcmStream {
               var45.field_G = 1;
               for (var18_int = 0; em.field_k > var18_int; var18_int++) {
                 var12.field_xb[var18_int] = new qr(0L, (qr) null);
-                if (0 != (var14 & 1 << var18_int + ml.field_j)) {
+                if (0 != (var14 & 1 << var18_int + TextFieldValidator.field_j)) {
                   var12.field_Mb.a(4, var12.field_xb[var18_int]);
                 }
                 var12.field_xb[var18_int].field_G = 1;
@@ -628,7 +628,7 @@ final class MidiPcmStream extends PcmStream {
             var12.field_ic.field_mb = 0;
             var30 = var12.field_ic;
             var30.field_K = 0;
-            var12.field_K = qs.field_y.field_xb.field_K;
+            var12.field_K = SingleChildWidget.field_y.field_xb.field_K;
             var31 = 0;
             var32 = var12.field_Xb;
             if (!var12.f((byte) -78)) {
@@ -657,7 +657,7 @@ final class MidiPcmStream extends PcmStream {
                   }
                   else {
                     if (2 != var12.field_Fb) {
-                      var12.field_Ub.field_z = tc.field_F;
+                      var12.field_Ub.field_z = DialogRoot.field_F;
                     } else {
                       var12.field_Db.field_z = ro.field_d;
                     }
@@ -723,7 +723,7 @@ final class MidiPcmStream extends PcmStream {
                 var34_int = var34_int + (qo.field_b + var52_ref.field_o);
               }
               if ((1 << v.field_e & var14Lifetime1) != 0) {
-                stackIn_88_0 = tf.field_l;
+                stackIn_88_0 = CheckboxPainter.field_l;
                 if (var12.field_ec) {
                   stackIn_91_1 = 1;
                 } else {
@@ -737,7 +737,7 @@ final class MidiPcmStream extends PcmStream {
               if (null != Star.field_O) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < em.field_k; var36Lifetime1++) {
                   if (Star.field_O[var36Lifetime1] != null &&
-                    0 != (var14Lifetime1 & 1 << var36Lifetime1 + ml.field_j)) {
+                    0 != (var14Lifetime1 & 1 << var36Lifetime1 + TextFieldValidator.field_j)) {
                     var42 = Star.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_xb[var36Lifetime1].field_pb = var42;
@@ -778,7 +778,7 @@ final class MidiPcmStream extends PcmStream {
               if (var12.field_jc != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(hl.field_H);
+                discarded$1 = var37.append(ValidationIndicator.field_H);
                 discarded$2 = var37.append(var12.field_jc[0]);
                 for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_Lb; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -813,7 +813,7 @@ final class MidiPcmStream extends PcmStream {
               var12.field_gb = -var12.field_mb + var31;
             }
             if (var13 != 0) {
-              qs.field_y.field_xb.a(2, (qr) (var11), var12, (byte) 65);
+              SingleChildWidget.field_y.field_xb.a(2, (qr) (var11), var12, (byte) 65);
             }
             for (var34_intLifetime2 = 0; em.field_k > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_xb[var34_intLifetime2].field_L) {
@@ -1437,7 +1437,7 @@ final class MidiPcmStream extends PcmStream {
         rs.field_Fb = -1;
         AggressiveAi.field_q = false;
         RandomAccessCacheFile.field_g = -1;
-        rq.field_e = 0;
+        LinkPainter.field_e = 0;
     }
 
     private final void a(int param0, int param1, boolean param2, int param3) {

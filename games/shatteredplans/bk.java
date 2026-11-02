@@ -105,10 +105,10 @@ final class bk {
             }
             if (var5.field_k <= var2_ref.field_k) {
               if (!(var2_ref.field_k <= var5.field_k)) {
-                tc.a(param1 ^ 24, var5, false, var2_ref);
+                DialogRoot.a(param1 ^ 24, var5, false, var2_ref);
               }
             } else {
-              tc.a(61, var2_ref, true, var5);
+              DialogRoot.a(61, var2_ref, true, var5);
             }
             var2_ref = var5;
             var4++;
@@ -173,7 +173,7 @@ final class bk {
           }
           if (em.field_h == 2 &&
             !lh.e((byte) 75)) {
-            if (!da.a(-30106, nd.field_k)) {
+            if (!DebouncedValidator.a(-30106, nd.field_k)) {
               var2 = re.a(of.field_g, 4371, new String[]{gi.field_a});
               if (var11 != 0) {
                 var2 = re.a(oi.field_g, 4371, new String[]{gi.field_a});
@@ -201,7 +201,7 @@ final class bk {
             var7 = em.field_h;
             var8 = 0;
             if (var7 == 2) {
-              var5 = re.a(fj.field_q, 4371, new String[]{gi.field_a});
+              var5 = re.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
               var9 = re.a(cf.field_M, 4371, new String[]{var4});
               var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.c(var9) + ho.field_f.c(var5));
               if (var8 < 0) {
@@ -215,7 +215,7 @@ final class bk {
                 }
                 if (null != np.field_a) {
                   var7 = 1;
-                  boolean decompiledSharedTail1 = (!(i.field_c) ||
+                  boolean decompiledSharedTail1 = (!(DialPainter.field_c) ||
                     null == AiTask.field_m);
                   if (!decompiledSharedTail1) {
                     var5 = "[" + AiTask.field_m + "] ";

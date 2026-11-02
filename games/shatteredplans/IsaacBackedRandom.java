@@ -67,9 +67,9 @@ final class IsaacBackedRandom extends Random {
         this.field_f = new IsaacRandom(var4);
     }
 
-    final static o b(int param0) {
+    final static WidgetTheme b(int param0) {
         if (MusicVoice.field_o == null) {
-          MusicVoice.field_o = new o(mf.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, mf.field_x.field_J, -1, 2147483647, true);
+          MusicVoice.field_o = new WidgetTheme(EmailValidator.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, EmailValidator.field_x.field_J, -1, 2147483647, true);
         }
         if (param0 > 12) {
           return MusicVoice.field_o;

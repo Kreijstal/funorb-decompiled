@@ -9,7 +9,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
     static boolean field_n;
     static int field_k;
 
-    final void a(byte param0, GameState param1, GameScreen param2) {
+    final void showResults(byte param0, GameState param1, GameScreen param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -75,7 +75,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writeScores(int param0, PacketBuffer param1) {
         try {
           int var3_int = -114 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
@@ -83,7 +83,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         }
     }
 
-    final int b(boolean param0) {
+    final int resultsPanelHeight(boolean param0) {
         if (param0) {
           return 8;
         }
@@ -111,16 +111,16 @@ final class ConquestVictoryChecker extends VictoryChecker {
         super(param0);
     }
 
-    final Player[] b(int param0) {
+    final Player[] projectedWinners(int param0) {
         if (param0 != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a((PacketBuffer) null, (byte) -82);
+          this.readScores((PacketBuffer) null, (byte) -82);
           return new Player[]{};
         }
         return new Player[]{};
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void readScores(PacketBuffer param0, byte param1) {
         try {
           if (param1 != -109) {
             field_o = (String) null;

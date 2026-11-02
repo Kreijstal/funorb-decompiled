@@ -27,11 +27,11 @@ final class nf {
           if (this.field_c > 0) {
             return 2;
           }
-          if (~this.field_p == ~ec.field_p) {
+          if (~this.field_p == ~UsernameAvailabilityValidator.field_p) {
             return 1;
           }
           if (po.field_b == 2) {
-            if (da.a(-30106, this.field_b)) {
+            if (DebouncedValidator.a(-30106, this.field_b)) {
               return 1;
             }
             if (param0 > 100) {
@@ -44,11 +44,11 @@ final class nf {
           }
           return 23;
         }
-        if (~this.field_p == ~ec.field_p) {
+        if (~this.field_p == ~UsernameAvailabilityValidator.field_p) {
           return 1;
         }
         if (po.field_b == 2) {
-          if (da.a(-30106, this.field_b)) {
+          if (DebouncedValidator.a(-30106, this.field_b)) {
             return 1;
           }
           if (param0 > 100) {
@@ -219,14 +219,14 @@ final class nf {
         int var3 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
-        if (null != tc.field_G) {
-          var3 = tc.field_G.b(param2, (byte) -68);
+        if (null != DialogRoot.field_G) {
+          var3 = DialogRoot.field_G.b(param2, (byte) -68);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = tc.field_G.i(-86) ? 1 : 0;
-              bb.a(94, tc.field_G.field_Gb, param1, var4 != 0, tc.field_G.g((byte) -42), var3);
+              var4 = DialogRoot.field_G.i(-86) ? 1 : 0;
+              bb.a(94, DialogRoot.field_G.field_Gb, param1, var4 != 0, DialogRoot.field_G.g((byte) -42), var3);
             }
-            tc.field_G = null;
+            DialogRoot.field_G = null;
             ai.a(3);
           }
           var3Lifetime2 = 107 % ((param0 + 29) / 53);
@@ -238,7 +238,7 @@ final class nf {
     nf(boolean param0) {
         this.field_e = va.field_b;
         if (param0) {
-          this.field_f = mb.field_p;
+          this.field_f = AgeValidator.field_p;
         } else {
           this.field_f = null;
         }

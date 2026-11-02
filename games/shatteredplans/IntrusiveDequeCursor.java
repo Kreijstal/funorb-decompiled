@@ -29,10 +29,10 @@ final class IntrusiveDequeCursor {
           if (AggressiveAi.field_q) {
             return null;
           }
-          if (ri.field_F > rq.field_e) {
+          if (ri.field_F > LinkPainter.field_e) {
             return null;
           }
-          if (!((ri.field_F + de.field_i) <= rq.field_e)) {
+          if (!((ri.field_F + de.field_i) <= LinkPainter.field_e)) {
             return GameKeyHandler.field_d;
           }
           return null;
@@ -40,10 +40,10 @@ final class IntrusiveDequeCursor {
         if (AggressiveAi.field_q) {
           return null;
         }
-        if (ri.field_F > rq.field_e) {
+        if (ri.field_F > LinkPainter.field_e) {
           return null;
         }
-        if (!((ri.field_F + de.field_i) <= rq.field_e)) {
+        if (!((ri.field_F + de.field_i) <= LinkPainter.field_e)) {
           return GameKeyHandler.field_d;
         }
         return null;

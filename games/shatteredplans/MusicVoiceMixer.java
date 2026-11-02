@@ -145,7 +145,7 @@ final class MusicVoiceMixer extends PcmStream {
         try {
           var21 = new lp(0, 0, 209, 70);
           var21.field_h = param1;
-          var5 = new ff(-5 + (40 - (-((5 + dm.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, fj.field_r);
+          var5 = new ff(-5 + (40 - (-((5 + dm.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, MatchingTextValidator.field_r);
           var21.a(var5, 8);
           var22 = param1.field_q.name;
           var6 = var22;

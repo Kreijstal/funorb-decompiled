@@ -99,7 +99,7 @@ abstract class tl extends GameApplet {
                   nl.field_c = null;
                 } else {
                   GarrisonTask.field_o = pd.field_l;
-                  rq.c(98);
+                  LinkPainter.c(98);
                   eh.field_P = false;
                   gm.field_i = 10;
                 }
@@ -115,7 +115,7 @@ abstract class tl extends GameApplet {
             }
           }
           if (5 == var4) {
-            da.a(param1 + 0, GameScreen.f((byte) 126));
+            DebouncedValidator.a(param1 + 0, GameScreen.f((byte) 126));
           }
           if (var4 == 6 &&
             or.field_a) {
@@ -150,7 +150,7 @@ abstract class tl extends GameApplet {
                   var9 = (String) null;
                   aa.a((String) null, true);
                 } else {
-                  var7 = SolarFlareEvent.a(var12.payload, var12.position, 0, param1 ^ -128);
+                  var7 = StellarBombEvent.a(var12.payload, var12.position, 0, param1 ^ -128);
                   aa.a(var7, true);
                 }
                 va.field_g = null;
@@ -199,7 +199,7 @@ abstract class tl extends GameApplet {
         ConquestVictoryChecker.field_k = param2;
         ai.field_a = param5;
         ArchiveRequest.field_p = param1;
-        tp.field_j = param6;
+        SliderPainter.field_j = param6;
         lo.field_B = param7;
         this.l((byte) 64);
         qj.b((byte) -120);
@@ -260,7 +260,7 @@ abstract class tl extends GameApplet {
                                 SolMapReader.a(-1);
                                 return;
                               }
-                              GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + w.a(16738));
+                              GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + Dialog.a(16738));
                               q.g(-107);
                               return;
                             }
@@ -286,7 +286,7 @@ abstract class tl extends GameApplet {
           }
           return;
         }
-        GameKeyHandler.a(-29901, (Throwable) null, "MGS2: " + w.a(16738));
+        GameKeyHandler.a(-29901, (Throwable) null, "MGS2: " + Dialog.a(16738));
         q.g(-127);
     }
 
@@ -412,12 +412,12 @@ abstract class tl extends GameApplet {
           qj.field_g == 0) {
           stackIn_24_0 = (qj.field_g != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          qj.field_g = u.a(-95);
+          qj.field_g = ValidationState.a(-95);
           if (var3Lifetime1 != 0 &&
             qj.field_g == 0 &&
             gm.field_i == 11 &&
             !ArchiveRequest.f(-11)) {
-            rq.c(86);
+            LinkPainter.c(86);
           }
           if (qj.field_g != -1 &&
             qj.field_g != 0) {
@@ -494,11 +494,11 @@ abstract class tl extends GameApplet {
           if (ai.field_e != 0) {
             StarAnnotation.field_j = SoundCache.a(ai.field_a, 124);
           }
-          rq.field_g = rl.a(-1, true, 1, ArchiveRequest.field_p, false);
-          tq.field_f = rl.a(-1, true, 1, tp.field_j, false);
+          LinkPainter.field_g = rl.a(-1, true, 1, ArchiveRequest.field_p, false);
+          tq.field_f = rl.a(-1, true, 1, SliderPainter.field_j, false);
           GalaxyMap.field_g = rl.a(-1, true, 1, ConquestVictoryChecker.field_k, false);
           DefensiveAi.field_p = 2;
-          AttackTask.field_s = rq.field_g;
+          AttackTask.field_s = LinkPainter.field_g;
           rl.field_f = tq.field_f;
         }
         if (DefensiveAi.field_p == 2) {
@@ -508,7 +508,7 @@ abstract class tl extends GameApplet {
               if (StarAnnotation.field_j.a("", 51)) {
                 TutorialMapGenerator.a(StarAnnotation.field_j, true);
                 StarAnnotation.field_j = null;
-                u.c(126);
+                ValidationState.c(126);
               }
             } else {
               StarAnnotation.field_j = null;
@@ -519,19 +519,19 @@ abstract class tl extends GameApplet {
           }
         }
         if (DefensiveAi.field_p == 3 &&
-          ig.a(rq.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
+          ig.a(LinkPainter.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
           uq.a(GalaxyMap.field_g, 0)) {
           qr.f(-98);
           GameScreen.c(28164);
           DerelictMapGenerator.field_r = tb.field_c;
           or.field_a = false;
-          DiskCacheWorker.a(624, rq.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, tq.field_f);
-          if (go.field_D ||
+          DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, tq.field_f);
+          if (TextFieldWidget.field_D ||
             null != hr.field_b) {
             stackIn_106_0 = hr.field_b;
-            stackIn_107_1 = !(go.field_D);
+            stackIn_107_1 = !(TextFieldWidget.field_D);
             stackIn_109_2 = -70;
-            stackIn_110_3 = !(go.field_D);
+            stackIn_110_3 = !(TextFieldWidget.field_D);
             jm.$cfr$intArgs$a$88c6728ee5b1(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
           if (cm.field_f) {
@@ -543,10 +543,10 @@ abstract class tl extends GameApplet {
           }
           DiskCacheWorker.a(ns.field_rb, md.field_M, 1000, GalaxyMap.field_g);
           tq.field_f = null;
-          rq.field_g = null;
+          LinkPainter.field_g = null;
           GalaxyMap.field_g = null;
           we.a((java.applet.Applet) (this), 4289);
-          u.c(124);
+          ValidationState.c(124);
           DefensiveAi.field_p = 10;
         }
         if (DefensiveAi.field_p == 10) {
@@ -559,16 +559,16 @@ abstract class tl extends GameApplet {
         if (DefensiveAi.field_p == 11) {
           if (StandardAi.field_e != null && (!StandardAi.field_e.b((byte) -88) ||
             !StandardAi.field_e.a(-1))) {
-            nj.a(0.0f, 2, nc.a(i.field_a, StandardAi.field_e, -80, ns.field_xb));
+            nj.a(0.0f, 2, nc.a(DialPainter.field_a, StandardAi.field_e, -80, ns.field_xb));
             decompiledFrameRemainder0 = false;
           }
           else {
-            um.field_n = true;
+            PlayerStats.field_n = true;
             DefensiveAi.field_p = 12;
           }
         }
         if (DefensiveAi.field_p == 12 &&
-          !um.field_n) {
+          !PlayerStats.field_n) {
           DefensiveAi.field_p = 13;
         }
         if (DefensiveAi.field_p == 13) {
@@ -682,7 +682,7 @@ abstract class tl extends GameApplet {
           var2 == 1) {
           if (11 == gm.field_i &&
             0 == qj.field_g) {
-            rq.c(60);
+            LinkPainter.c(60);
           }
           return var2;
         }
