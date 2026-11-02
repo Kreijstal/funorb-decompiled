@@ -8,7 +8,7 @@ final class sn extends df implements ro, vb {
     private ag field_O;
     static int[] field_H;
     static String field_L;
-    static ll[] field_E;
+    static IndexedSprite[] field_E;
     static String field_N;
     private bi field_D;
     static int field_G;
@@ -320,7 +320,7 @@ final class sn extends df implements ro, vb {
         }
     }
 
-    final static void a(int param0, ll param1, int param2, int param3, nf param4, boolean param5, int param6, byte param7) {
+    final static void a(int param0, IndexedSprite param1, int param2, int param3, nf param4, boolean param5, int param6, byte param7) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

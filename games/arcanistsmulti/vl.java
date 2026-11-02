@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl extends pg {
+final class vl extends IntrusiveNode {
     int field_o;
     int field_j;
     int field_m;
@@ -10,7 +10,7 @@ final class vl extends pg {
     static String field_k;
     static String field_l;
     int field_n;
-    static ll[] field_i;
+    static IndexedSprite[] field_i;
 
     final static void d(byte param0) {
         int incrementValue$0 = 0;
@@ -51,7 +51,7 @@ final class vl extends pg {
               var4 = ud.field_z;
             }
             if (var3 == 2) {
-              var4 = ug.field_d;
+              var4 = IsaacCipher.field_d;
             }
             if (var3 == 3) {
               var4 = hi.field_b;
@@ -88,7 +88,7 @@ final class vl extends pg {
             var1[incrementValue$1] = (byte)b.field_f[var3Lifetime2];
           }
           if (!lc.a((byte) 112)) {
-            tf.a(6, -25866, var10);
+            DualLinkNode.a(6, -25866, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class vl extends pg {
         field_l = null;
         field_i = null;
         if (param0 > -66) {
-          field_i = (ll[]) null;
+          field_i = (IndexedSprite[]) null;
         }
     }
 

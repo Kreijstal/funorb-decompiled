@@ -8,7 +8,7 @@ abstract class kh {
     static String field_c;
     vd[] field_f;
     static boolean field_b;
-    static ll field_d;
+    static IndexedSprite field_d;
 
     final int a(String param0, boolean param1, int param2, int param3) {
         int var8 = 0;
@@ -133,7 +133,7 @@ abstract class kh {
               kn.a(param1, (byte) -101, 0, 0);
             } else {
               if (fj.field_j != 0) {
-                eg.a(param1, (byte) -39);
+                ResourceArchive.a(param1, (byte) -39);
               } else {
                 la.a(param2, false, (byte) -72);
                 kn.a(param1, (byte) -97, 0, 0);
@@ -145,7 +145,7 @@ abstract class kh {
               var3_int = 1;
               hj.field_d = false;
             }
-            io.a(qj.field_h, bb.b((byte) -126), var3_int != 0, tl.c((byte) -77), -6885);
+            io.a(qj.field_h, bb.b((byte) -126), var3_int != 0, ArchiveProvider.c((byte) -77), -6885);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

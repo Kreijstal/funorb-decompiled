@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    static ll[] field_j;
+    static IndexedSprite[] field_j;
     static String field_b;
     static java.awt.Color field_h;
     static String field_e;
     static String field_i;
-    static ll[] field_d;
+    static IndexedSprite[] field_d;
     static int field_c;
     static int field_a;
     static String field_f;
@@ -91,7 +91,7 @@ final class qj {
         if (param0 != 10040319) {
           qj.b(-91);
         }
-        return df.field_z.l(-1);
+        return df.field_z.readString(-1);
     }
 
     public static void c(int param0) {

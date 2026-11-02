@@ -13,7 +13,7 @@ final class gd extends ob {
     static int[] field_pb;
     private om field_ob;
     private String field_lb;
-    static qb field_mb;
+    static Sprite field_mb;
 
     final void a(String param0, float param1, boolean param2, byte param3) {
         int var5_int = 0;
@@ -79,7 +79,7 @@ final class gd extends ob {
         }
     }
 
-    final static void a(int[] param0, ll[] param1, qb[][] param2, int param3, String[][] param4, String[] param5, int param6, eg param7, byte[] param8, String[] param9, eg param10, String[] param11, int param12, qb[][] param13, boolean param14, int param15, String[][] param16, eg param17, byte[] param18, int[] param19) {
+    final static void a(int[] param0, IndexedSprite[] param1, Sprite[][] param2, int param3, String[][] param4, String[] param5, int param6, ResourceArchive param7, byte[] param8, String[] param9, ResourceArchive param10, String[] param11, int param12, Sprite[][] param13, boolean param14, int param15, String[][] param16, ResourceArchive param17, byte[] param18, int[] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

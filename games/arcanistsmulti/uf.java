@@ -3,7 +3,7 @@
  */
 final class uf {
     static String field_b;
-    static vn field_a;
+    static IntrusiveDeque field_a;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, String param5, int param6, int param7) {
         try {

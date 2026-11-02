@@ -51,10 +51,10 @@ class im extends bd {
 
     final static na a(int param0, byte param1) {
         if (param1 < -28) {
-          return null == nk.field_q ? null : (na) (nk.field_q.a((long)param0, (byte) -102));
+          return null == nk.field_q ? null : (na) (nk.field_q.get((long)param0, (byte) -102));
         }
         field_i = (String) null;
-        return null == nk.field_q ? null : (na) (nk.field_q.a((long)param0, (byte) -102));
+        return null == nk.field_q ? null : (na) (nk.field_q.get((long)param0, (byte) -102));
     }
 
     final static void d(int param0) {
@@ -67,7 +67,7 @@ class im extends bd {
         RuntimeException var1_ref = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var5 = jb.field_s;
+          var5 = SpriteState.field_s;
           var1 = var5;
           if (param0 != -24000) {
             field_i = (String) null;
@@ -97,7 +97,7 @@ class im extends bd {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        ab var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
@@ -105,12 +105,12 @@ class im extends bd {
           var1_int = -117 / ((param0 - 89) / 35);
           var2 = he.field_e;
           while (bl.d(0)) {
-            var2.b((byte) -66, 8);
-            fieldTemp$0 = var2.field_g + 1;
-            var2.field_g = var2.field_g + 1;
+            var2.writeOpcode((byte) -66, 8);
+            fieldTemp$0 = var2.position + 1;
+            var2.position = var2.position + 1;
             var3 = fieldTemp$0;
             ho.a(-5534, var2);
-            he.field_e.b(var2.field_g - var3, (byte) 43);
+            he.field_e.writeByteLengthAtMark(var2.position - var3, (byte) 43);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ class im extends bd {
             stackIn_12_0 = null;
             return (wa) (stackIn_12_0);
           }
-          var3 = (wa) (ie.field_Qb.a((long)var2.hashCode(), (byte) -72));
+          var3 = (wa) (ie.field_Qb.get((long)var2.hashCode(), (byte) -72));
           while (true) {
             if (var3 == null) {
               return null;
@@ -183,7 +183,7 @@ class im extends bd {
             var7 = (CharSequence) ((Object) var3.field_Cb);
             var4 = gk.a(var7, -13);
             if (!var4.equals(var2)) {
-              var3 = (wa) (ie.field_Qb.d(-107));
+              var3 = (wa) (ie.field_Qb.getNextWithSameKey(-107));
               continue;
             }
             break;
@@ -204,7 +204,7 @@ class im extends bd {
         }
     }
 
-    final void a(wk param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_h, (byte) 109);
           int var3_int = 116 / ((-35 - param1) / 36);
@@ -225,7 +225,7 @@ class im extends bd {
         }
     }
 
-    final static nc a(eg param0, int param1, eg param2, int param3, int param4) {
+    final static nc a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         nc stackIn_6_0 = null;

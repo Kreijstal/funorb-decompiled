@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends pg {
+final class nk extends IntrusiveNode {
     int[][] field_l;
-    static qb[][] field_m;
+    static Sprite[][] field_m;
     int field_h;
     static kc field_n;
     int field_i;
@@ -11,7 +11,7 @@ final class nk extends pg {
     String[][] field_r;
     int field_p;
     static String field_o;
-    static mo field_q;
+    static IntrusiveNodeHashTable field_q;
     int field_s;
     static String field_j;
     int field_t;
@@ -23,12 +23,12 @@ final class nk extends pg {
         field_q = null;
         field_n = null;
         if (param0 == 30025) {
-          field_m = (qb[][]) null;
+          field_m = (Sprite[][]) null;
           field_o = null;
           return;
         }
         nk.a(68);
-        field_m = (qb[][]) null;
+        field_m = (Sprite[][]) null;
         field_o = null;
     }
 

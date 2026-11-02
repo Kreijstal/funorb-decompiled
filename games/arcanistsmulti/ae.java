@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ae {
-    static qb[] field_a;
+    static Sprite[] field_a;
     static String field_d;
     static String field_b;
     static byte[] field_c;
@@ -64,7 +64,7 @@ final class ae {
         no.h(-1);
         if (null == wi.field_f) {
           var2 = 0;
-          sharedTailExit_0: {
+          regionExit1: {
             if (!hi.field_a) {
               if (mj.field_w) {
                 var3 = 1;
@@ -75,7 +75,7 @@ final class ae {
                 stackIn_7_4 = wn.field_y;
                 stackIn_8_5 = (hk.field_o <= 50) ? false : true;
                 fe.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5, param1, var2 != 0, var3 != 0, true, 14, param0);
-                break sharedTailExit_0;
+                break regionExit1;
               }
               stackIn_18_0 = 0;
             } else {
@@ -104,11 +104,11 @@ final class ae {
                 stackIn_69_5 = (hk.field_o <= 50) ? false : true;
                 fe.a(stackIn_68_0, stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_69_5, param1, var2 != 0, var3 != 0, true, 14, param0);
                 if (bj.field_ub) {
-                  he.field_e.b((byte) -22, 57);
+                  he.field_e.writeOpcode((byte) -22, 57);
                   bj.field_ub = false;
                 }
                 if (dh.field_Mb) {
-                  he.field_e.b((byte) -114, 10);
+                  he.field_e.writeOpcode((byte) -114, 10);
                   dh.field_Mb = false;
                 }
                 if (!me.field_C) {
@@ -131,11 +131,11 @@ final class ae {
             stackIn_82_5 = (hk.field_o <= 50) ? false : true;
             fe.a(stackIn_81_0, stackIn_81_1, stackIn_81_2, stackIn_81_3, stackIn_81_4, stackIn_82_5, param1, var2 != 0, var3 != 0, true, 14, param0);
             if (bj.field_ub) {
-              he.field_e.b((byte) -22, 57);
+              he.field_e.writeOpcode((byte) -22, 57);
               bj.field_ub = false;
             }
             if (dh.field_Mb) {
-              he.field_e.b((byte) -114, 10);
+              he.field_e.writeOpcode((byte) -114, 10);
               dh.field_Mb = false;
             }
             if (!me.field_C) {
@@ -157,11 +157,11 @@ final class ae {
               stackIn_39_5 = (hk.field_o <= 50) ? false : true;
               fe.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_39_5, param1, var2 != 0, var3 != 0, true, 14, param0);
               if (bj.field_ub) {
-                he.field_e.b((byte) -22, 57);
+                he.field_e.writeOpcode((byte) -22, 57);
                 bj.field_ub = false;
               }
               if (dh.field_Mb) {
-                he.field_e.b((byte) -114, 10);
+                he.field_e.writeOpcode((byte) -114, 10);
                 dh.field_Mb = false;
               }
               if (!me.field_C) {
@@ -185,11 +185,11 @@ final class ae {
           fe.a(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_52_5, param1, var2 != 0, var3 != 0, true, 14, param0);
         }
         if (bj.field_ub) {
-          he.field_e.b((byte) -22, 57);
+          he.field_e.writeOpcode((byte) -22, 57);
           bj.field_ub = false;
         }
         if (dh.field_Mb) {
-          he.field_e.b((byte) -114, 10);
+          he.field_e.writeOpcode((byte) -114, 10);
           dh.field_Mb = false;
         }
         if (!me.field_C) {

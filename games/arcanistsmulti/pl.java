@@ -11,20 +11,20 @@ final class pl {
         return new wf(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static pl a(eg param0, int param1, int param2) {
+    final static pl a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.b(param2, 26219, param1);
         if (var3 == null) {
           return null;
         }
-        return new pl(new wk(var3));
+        return new pl(new PacketBuffer(var3));
     }
 
-    final static pl a(eg param0, String param1, String param2) {
+    final static pl a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, -1);
         if (var3 == null) {
           return null;
         }
-        return new pl(new wk(var3));
+        return new pl(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -67,19 +67,19 @@ final class pl {
         return var3;
     }
 
-    private pl(wk param0) {
+    private pl(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new jj[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.e((byte) 110);
+          var3 = param0.readUnsignedByte((byte) 110);
           if (var3 != 0) {
-            param0.field_g = param0.field_g - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new jj();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.n(-98);
-        this.field_c = param0.n(-98);
+        this.field_a = param0.readUnsignedShort(-98);
+        this.field_c = param0.readUnsignedShort(-98);
     }
 }

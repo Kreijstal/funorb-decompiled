@@ -5,7 +5,7 @@ abstract class mg extends df implements el {
     private bl field_D;
     static String field_F;
     static dj field_C;
-    static eg field_E;
+    static ResourceArchive field_E;
 
     mg(int param0, int param1, int param2, int param3, pf param4) {
         super(param0, param1, param2, param3, param4);
@@ -20,7 +20,7 @@ abstract class mg extends df implements el {
           field_E = null;
           return;
         }
-        field_E = (eg) null;
+        field_E = (ResourceArchive) null;
         field_F = null;
         field_C = null;
         field_E = null;

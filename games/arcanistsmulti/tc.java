@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tc extends ib {
-    static eg field_x;
+    static ResourceArchive field_x;
     static String[] field_w;
     static String field_z;
     static String field_y;
@@ -51,7 +51,7 @@ final class tc extends ib {
         h.field_K[5] = aa.field_i;
         h.field_K[param0] = lf.field_h;
         h.field_K[13] = wi.field_g;
-        h.field_K[7] = jb.field_r;
+        h.field_K[7] = SpriteState.field_r;
         h.field_K[16] = kn.field_sb;
         h.field_K[4] = cc.field_c;
         h.field_K[21] = ja.field_w;
@@ -124,29 +124,29 @@ final class tc extends ib {
     final static void b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        ab var2 = he.field_e;
+        CipherPacketBuffer var2 = he.field_e;
         int var3Lifetime1;
         int var4Lifetime1;
-        var2.b((byte) -126, param1);
-        var2.field_g = var2.field_g + 1;
+        var2.writeOpcode((byte) -126, param1);
+        var2.position = var2.position + 1;
         if (param0 == 12657) {
-          var3 = var2.field_g;
-          var2.f(5, (byte) -39);
-          var2.f(wi.field_f.field_dc, (byte) -3);
+          var3 = var2.position;
+          var2.writeByte(5, (byte) -39);
+          var2.writeByte(wi.field_f.field_dc, (byte) -3);
           var4 = wi.field_f.field_Pb + (wi.field_f.field_Fb << 6);
-          var2.f(var4, (byte) -97);
+          var2.writeByte(var4, (byte) -97);
           var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
-          var2.b(var2.field_g - var3, (byte) 43);
+          var2.writeByteLengthAtMark(var2.position - var3, (byte) 43);
           return;
         }
         field_E = (String) null;
-        var3Lifetime1 = var2.field_g;
-        var2.f(5, (byte) -39);
-        var2.f(wi.field_f.field_dc, (byte) -3);
+        var3Lifetime1 = var2.position;
+        var2.writeByte(5, (byte) -39);
+        var2.writeByte(wi.field_f.field_dc, (byte) -3);
         var4Lifetime1 = wi.field_f.field_Pb + (wi.field_f.field_Fb << 6);
-        var2.f(var4Lifetime1, (byte) -97);
+        var2.writeByte(var4Lifetime1, (byte) -97);
         var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
-        var2.b(var2.field_g - var3Lifetime1, (byte) 43);
+        var2.writeByteLengthAtMark(var2.position - var3Lifetime1, (byte) 43);
     }
 
     static {

@@ -3,26 +3,26 @@
  */
 final class eb implements pf {
     static mc[] field_b;
-    static qb field_d;
+    static Sprite field_d;
     static String field_c;
     static int field_a;
 
     final static nk a(boolean param0, int param1, int param2, int param3) {
         nk var6 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        nk var4 = (nk) (pe.field_Lb.b(12623));
+        nk var4 = (nk) (pe.field_Lb.first(12623));
         if (param0) {
           while (var4 != null) {
             if (param2 == var4.field_p) {
               return var4;
             }
-            var4 = (nk) (pe.field_Lb.a(0));
+            var4 = (nk) (pe.field_Lb.next(0));
           }
           var6 = new nk();
           var4 = var6;
           var6.field_p = param2;
           var6.field_t = param1;
-          pe.field_Lb.b(var6, -1);
+          pe.field_Lb.addLast(var6, -1);
           fj.a(-26971, var6, param3);
           return var6;
         }
@@ -31,13 +31,13 @@ final class eb implements pf {
           if (param2 == var4.field_p) {
             return var4;
           }
-          var4 = (nk) (pe.field_Lb.a(0));
+          var4 = (nk) (pe.field_Lb.next(0));
         }
         nk var7 = new nk();
         var4 = var7;
         var7.field_p = param2;
         var7.field_t = param1;
-        pe.field_Lb.b(var7, -1);
+        pe.field_Lb.addLast(var7, -1);
         fj.a(-26971, var7, param3);
         return var7;
     }
@@ -177,13 +177,13 @@ final class eb implements pf {
         }
     }
 
-    final static void a(qb[] param0, int param1, int param2, int param3) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3) {
         try {
           ol.field_f = new ec(param0);
           mj.field_r = param3;
           int var4_int = -103 / ((param2 - 31) / 55);
           tg.field_d = param1;
-          eg.b(403300833);
+          ResourceArchive.b(403300833);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

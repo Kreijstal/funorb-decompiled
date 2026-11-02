@@ -3,7 +3,7 @@
  */
 final class ua extends kl {
     static String field_H;
-    static eg field_K;
+    static ResourceArchive field_K;
     static boolean field_J;
     private int[] field_O;
     private int field_N;
@@ -19,7 +19,7 @@ final class ua extends kl {
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 0) {
-          field_K = (eg) null;
+          field_K = (ResourceArchive) null;
         }
         int var4 = null != this.field_O ? this.field_O.length : 0;
         qm[] var5 = new qm[var4 * param2];
@@ -35,7 +35,7 @@ final class ua extends kl {
     }
 
     final static void g(int param0) {
-        pm.field_b = new sa(mf.field_d, be.field_l, wj.field_b, pg.field_c, ec.field_g, nj.field_d);
+        pm.field_b = new sa(mf.field_d, be.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d);
         if (param0 != -19741) {
           field_J = true;
         }

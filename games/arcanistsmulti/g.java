@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g {
-    static qb field_a;
+    static Sprite field_a;
     static String field_c;
     static kc field_g;
     static jg[] field_d;
-    static ll[] field_f;
+    static IndexedSprite[] field_f;
     static no field_e;
     static String field_b;
 

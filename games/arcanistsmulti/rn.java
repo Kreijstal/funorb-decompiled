@@ -74,7 +74,7 @@ class rn extends ag {
         }
         if (!la.field_a &&
           !ta.field_b) {
-          he.field_e.b((byte) -84, 65);
+          he.field_e.writeOpcode((byte) -84, 65);
           ta.field_b = true;
         }
         if (la.field_a) {
@@ -197,7 +197,7 @@ class rn extends ag {
 
     final static void i(byte param0) {
         int var2 = 0;
-        ab var3 = null;
+        CipherPacketBuffer var3 = null;
         cg var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -207,28 +207,28 @@ class rn extends ag {
           om.field_x = null;
           wi.field_f = null;
           if (param0 >= -97) {
-            var3 = (ab) null;
-            rn.a(true, (ab) null);
+            var3 = (CipherPacketBuffer) null;
+            rn.a(true, (CipherPacketBuffer) null);
           }
           if (null != gm.field_j) {
-            gm.field_j.c(-124);
+            gm.field_j.clear(-124);
             gm.field_j = null;
           }
           bc.field_c = null;
           if (null != vh.field_a) {
-            vh.field_a.c(99);
+            vh.field_a.clear(99);
             vh.field_a = null;
           }
           nk.field_q = null;
           if (ph.field_a != null) {
-            ph.field_a.c(10);
+            ph.field_a.clear(10);
             ph.field_a = null;
           }
           kn.field_qb = null;
           if (null != bc.field_c) {
             var4 = (cg) (bc.field_c.f(102));
             while (var4 != null) {
-              var4.a((byte) 88);
+              var4.unlinkSecondary((byte) 88);
               var4 = (cg) (bc.field_c.a(-1));
             }
             bc.field_c = null;
@@ -580,7 +580,7 @@ class rn extends ag {
         }
     }
 
-    final static vg a(boolean param0, ab param1) {
+    final static vg a(boolean param0, CipherPacketBuffer param1) {
         int var7 = 0;
         vg stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -596,7 +596,7 @@ class rn extends ag {
         int var8 = 0;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2_int = param1.d(28089, 8);
+          var2_int = param1.readBits(28089, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -606,16 +606,16 @@ class rn extends ag {
             field_K = (String) null;
           }
           var5 = new vg();
-          var5.field_f = (short)param1.d(28089, 16);
+          var5.field_f = (short)param1.readBits(28089, 16);
           var5.field_b = eo.a(param1, var5.field_b, 16, 16);
           var5.field_B = eo.a(param1, var5.field_B, 16, 16);
           var5.field_L = eo.a(param1, var5.field_L, 16, 16);
-          var5.field_G = (short)param1.d(28089, 16);
+          var5.field_G = (short)param1.readBits(28089, 16);
           var5.field_U = eo.a(param1, var5.field_U, 16, 16);
           var5.field_T = eo.a(param1, var5.field_T, 16, 16);
           var5.field_O = eo.a(param1, var5.field_O, 16, 16);
           if (var3 != 0) {
-            var5.field_A = (short)param1.d(28089, 16);
+            var5.field_A = (short)param1.readBits(28089, 16);
             var5.field_r = eo.a(param1, var5.field_r, 16, 16);
             var5.field_e = eo.a(param1, var5.field_e, 16, 16);
             var5.field_S = eo.a(param1, var5.field_S, 16, 16);
@@ -624,7 +624,7 @@ class rn extends ag {
             var5.field_u = eo.a(param1, var5.field_u, 16, 16);
           }
           if (var4 != 0) {
-            param1.d(28089, 16);
+            param1.readBits(28089, 16);
             var5.field_Q = eo.a(param1, var5.field_Q, 16, 16);
             var5.field_d = eo.a(param1, var5.field_d, 16, 16);
             var5.field_D = eo.a(param1, var5.field_D, 16, 16);

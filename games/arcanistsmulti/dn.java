@@ -12,7 +12,7 @@ final class dn extends kc {
     static String field_Fb;
     static boolean[] field_Ib;
 
-    final static void a(wk param0, na param1, boolean param2, int param3) {
+    final static void a(PacketBuffer param0, na param1, boolean param2, int param3) {
         int var8 = 0;
         na stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -43,11 +43,11 @@ final class dn extends kc {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2) {
-            param1.field_Rb = param0.e((byte) 49);
+            param1.field_Rb = param0.readUnsignedByte((byte) 49);
           }
-          param1.field_dc = param0.e((byte) 78);
-          param1.field_Pb = param0.e((byte) -121);
-          var4_int = param0.e((byte) 127);
+          param1.field_dc = param0.readUnsignedByte((byte) 78);
+          param1.field_Pb = param0.readUnsignedByte((byte) -121);
+          var4_int = param0.readUnsignedByte((byte) 127);
           stackIn_5_0 = (na) (param1);
           stackIn_6_1 = ((var4_int & 128) != 0);
           stackIn_5_0.field_mc = stackIn_6_1;
@@ -75,21 +75,21 @@ final class dn extends kc {
           param0.a((byte) 122, 0, param1.field_Wb, param1.field_Wb.length);
           stackIn_28_0 = ((var4_int & param3) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
-          param1.field_Db = param0.n(param3 ^ -100);
-          param1.field_Yb = qj.b(param3 - 26574) - (long)param0.d(-10674);
+          param1.field_Db = param0.readUnsignedShort(param3 ^ -100);
+          param1.field_Yb = qj.b(param3 - 26574) - (long)param0.readInt(-10674);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {
-            param1.field_nc = param0.d(-10674);
+            param1.field_nc = param0.readInt(-10674);
           }
-          param1.field_Bb = param0.c(-943038560);
-          var7 = param0.field_g;
-          param1.field_ic = param0.l(-1);
+          param1.field_Bb = param0.readLong(-943038560);
+          var7 = param0.position;
+          param1.field_ic = param0.readString(-1);
           if (var6 != 0) {
             param1.field_Qb = new String[param1.field_Rb];
-            param0.field_g = var7;
+            param0.position = var7;
             for (var8 = 0; param1.field_Rb > var8; var8++) {
-              param1.field_Qb[var8] = param0.l(-1);
+              param1.field_Qb[var8] = param0.readString(-1);
             }
             return;
           }
@@ -170,7 +170,7 @@ final class dn extends kc {
               return;
             }
             var7 = (na) null;
-            dn.a((wk) null, (na) null, false, -49);
+            dn.a((PacketBuffer) null, (na) null, false, -49);
             return;
           }
           if (-this.field_Hb.field_I + (this.field_Cb.field_I + this.field_Cb.field_B) >= -(this.field_Cb.field_db + this.field_Cb.field_bb)) {
@@ -186,7 +186,7 @@ final class dn extends kc {
               return;
             }
             var7Lifetime2 = (na) null;
-            dn.a((wk) null, (na) null, false, -49);
+            dn.a((PacketBuffer) null, (na) null, false, -49);
             return;
           }
           this.field_Cb.field_bb = -(-this.field_Hb.field_I + (this.field_Cb.field_B + this.field_Cb.field_I)) - this.field_Cb.field_db;
@@ -199,7 +199,7 @@ final class dn extends kc {
               return;
             }
             var7Lifetime3 = (na) null;
-            dn.a((wk) null, (na) null, false, -49);
+            dn.a((PacketBuffer) null, (na) null, false, -49);
             return;
           }
           this.field_Cb.field_db = -this.field_Eb.a(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
@@ -208,7 +208,7 @@ final class dn extends kc {
         this.field_Eb.a(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
         if (param3 != 63) {
           var7Lifetime1 = (na) null;
-          dn.a((wk) null, (na) null, false, -49);
+          dn.a((PacketBuffer) null, (na) null, false, -49);
         }
     }
 
@@ -324,23 +324,23 @@ final class dn extends kc {
           hj.field_a[1] = ag.field_D.nextInt();
           hj.field_a[2] = (int)(of.field_j >> 32);
           hj.field_a[3] = (int)of.field_j;
-          jf.field_a.field_g = 0;
-          jf.field_a.a(hj.field_a[0], (byte) -101);
-          jf.field_a.a(hj.field_a[1], (byte) -101);
-          jf.field_a.a(hj.field_a[2], (byte) -101);
-          jf.field_a.a(hj.field_a[3], (byte) -101);
+          jf.field_a.position = 0;
+          jf.field_a.writeInt(hj.field_a[0], (byte) -101);
+          jf.field_a.writeInt(hj.field_a[1], (byte) -101);
+          jf.field_a.writeInt(hj.field_a[2], (byte) -101);
+          jf.field_a.writeInt(hj.field_a[3], (byte) -101);
           i.a(jf.field_a, 24);
-          jf.field_a.c(param4, (byte) -62);
+          jf.field_a.writeShort(param4, (byte) -62);
           param1.a(jf.field_a, param2 - 55);
-          he.field_e.field_g = 0;
+          he.field_e.position = 0;
           if (!param0) {
-            he.field_e.f(16, (byte) -8);
+            he.field_e.writeByte(16, (byte) -8);
           } else {
-            he.field_e.f(18, (byte) -4);
+            he.field_e.writeByte(18, (byte) -4);
           }
-          he.field_e.field_g = he.field_e.field_g + 2;
-          var5_int = he.field_e.field_g;
-          he.field_e.a(gm.field_d, (byte) -101);
+          he.field_e.position = he.field_e.position + 2;
+          var5_int = he.field_e.position;
+          he.field_e.writeInt(gm.field_d, (byte) -101);
           he.field_e.a(ho.field_c, (byte) 36);
           var6 = 0;
           if (lk.field_d) {
@@ -355,7 +355,7 @@ final class dn extends kc {
           if (null != rj.field_i) {
             var6 = var6 | 16;
           }
-          he.field_e.f(var6, (byte) -54);
+          he.field_e.writeByte(var6, (byte) -54);
           var7 = gb.a(cd.e(param2 ^ 3), -120);
           if (var7 == null) {
             var7 = "";
@@ -368,7 +368,7 @@ final class dn extends kc {
           if (param2 != 116) {
             dn.e(-40);
           }
-          he.field_e.a(he.field_e.field_g - var5_int, -19571);
+          he.field_e.writeShortLengthAtMark(he.field_e.position - var5_int, -19571);
           we.a(-1, (byte) 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -403,7 +403,7 @@ final class dn extends kc {
     }
 
     final static void a(int param0, int param1, byte[] param2, int param3, int param4, boolean param5) {
-        ab var6 = null;
+        CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
@@ -411,18 +411,18 @@ final class dn extends kc {
             field_Db = false;
           }
           var6 = he.field_e;
-          var6.b((byte) -44, param3);
-          var6.field_g = var6.field_g + 1;
-          var7 = var6.field_g;
-          var6.f(4, (byte) -77);
-          var6.f(param4, (byte) -56);
+          var6.writeOpcode((byte) -44, param3);
+          var6.position = var6.position + 1;
+          var7 = var6.position;
+          var6.writeByte(4, (byte) -77);
+          var6.writeByte(param4, (byte) -56);
           var8 = param1;
           if (param5) {
             var8 += 128;
           }
-          var6.f(var8, (byte) -32);
+          var6.writeByte(var8, (byte) -32);
           var6.a(param2, 0, (byte) -86, param2.length);
-          var6.b(var6.field_g - var7, (byte) 43);
+          var6.writeByteLengthAtMark(var6.position - var7, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dn.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

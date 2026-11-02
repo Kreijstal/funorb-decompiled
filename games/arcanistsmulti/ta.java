@@ -9,7 +9,7 @@ final class ta {
     int field_h;
     static boolean field_b;
     String field_j;
-    eg field_c;
+    ResourceArchive field_c;
     String field_g;
     static boolean field_d;
 

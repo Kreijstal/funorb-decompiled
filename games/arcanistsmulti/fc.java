@@ -5,7 +5,7 @@ final class fc {
     static ri field_c;
     static aj field_b;
     static String field_d;
-    static qb[] field_e;
+    static Sprite[] field_e;
     static boolean field_a;
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, byte param6, byte[] param7, int param8, int param9) {
@@ -102,7 +102,7 @@ final class fc {
 
     final static void a(byte param0, kc param1) {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
-        kc var4 = (kc) (param1.field_G.b(12623));
+        kc var4 = (kc) (param1.field_G.first(12623));
         if (param0 >= -60) {
           return;
         }
@@ -112,7 +112,7 @@ final class fc {
             var4.field_I = 0;
             var4.field_bb = 0;
             var4.field_B = 0;
-            var4 = (kc) (param1.field_G.a(0));
+            var4 = (kc) (param1.field_G.next(0));
           }
           param1.field_I = 0;
           param1.field_bb = 0;
@@ -127,13 +127,13 @@ final class fc {
         field_b = null;
         field_d = null;
         if (param0 != -71) {
-          field_e = (qb[]) null;
+          field_e = (Sprite[]) null;
         }
         field_c = null;
         field_e = null;
     }
 
-    final static boolean a(int param0, eg param1, int param2, int param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

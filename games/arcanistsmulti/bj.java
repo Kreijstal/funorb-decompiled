@@ -12,7 +12,7 @@ final class bj extends ob implements vb {
     private ag field_nb;
     static int field_tb;
     static String field_kb;
-    static ll[] field_ob;
+    static IndexedSprite[] field_ob;
     static String field_qb;
     static boolean field_ub;
 
@@ -162,7 +162,7 @@ final class bj extends ob implements vb {
         int var7 = 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (tl.field_d) {
+          if (ArchiveProvider.field_d) {
             param0.d((byte) 29);
           }
           var5_long = qj.b(-26572) - this.field_V;
@@ -213,7 +213,7 @@ final class bj extends ob implements vb {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        vn var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         wa var7 = null;
@@ -239,13 +239,13 @@ final class bj extends ob implements vb {
           var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_5_1, (byte) 98, ga.field_r + 2, 2, (3 * ga.field_r + 6) * param2, param0) ? 1 : 0;
           var4 = nl.field_Gb.field_Eb.field_G;
           var5 = null;
-          if (param1 == ~jb.field_t) {
+          if (param1 == ~SpriteState.field_t) {
             ec.field_d.field_ub = true;
             lj.field_j.field_rb = tj.a(param1 - 94, new String[]{ie.field_Nb}, e.field_C);
             nl.field_Gb.field_Db.field_Hb.field_rb = null;
             var6 = null;
-            var7 = (wa) (var4.b(param1 ^ -12622));
-            L5: while (true) {
+            var7 = (wa) (var4.first(param1 ^ -12622));
+            scanLoop1: while (true) {
               if (var7 != null) {
                 var8 = 0;
                 if (var19 == 0) {
@@ -347,20 +347,20 @@ final class bj extends ob implements vb {
                   } else {
                     kh.field_c = var7.field_Gb;
                   }
-                  var7 = (wa) (var4.a(0));
+                  var7 = (wa) (var4.next(0));
                   continue;
                 }
               } else {
                 if (0 == nl.field_Gb.field_Jb.field_U) {
-                  break L5;
+                  break scanLoop1;
                 }
-                tc.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, dg.field_v, ck.field_a, pg.field_c, pg.field_c);
+                tc.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, dg.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               }
               vd.field_h = 0;
               break;
             }
             if (nl.field_Gb.field_Lb.field_U != 0) {
-              tc.field_A = new dh(nl.field_Gb.field_Lb.field_V, nl.field_Gb.field_Lb.field_nb, nl.field_Gb.field_Lb.field_x, nl.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, pg.field_c, pg.field_c);
+              tc.field_A = new dh(nl.field_Gb.field_Lb.field_V, nl.field_Gb.field_Lb.field_nb, nl.field_Gb.field_Lb.field_x, nl.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               vd.field_h = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -368,7 +368,7 @@ final class bj extends ob implements vb {
           else {
             lj.field_j.field_rb = ba.field_f;
             ec.field_d.field_ub = false;
-            if (jb.field_t == 1) {
+            if (SpriteState.field_t == 1) {
               nl.field_Gb.field_Db.field_Hb.field_rb = le.field_db;
               if (var19 != 0) {
                 nl.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
@@ -580,7 +580,7 @@ final class bj extends ob implements vb {
             return;
           }
           if (param0 < 85) {
-            field_ob = (ll[]) null;
+            field_ob = (IndexedSprite[]) null;
           }
           this.field_G = false;
           return;

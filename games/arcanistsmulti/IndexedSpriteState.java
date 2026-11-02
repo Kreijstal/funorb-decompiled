@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class s {
+abstract class IndexedSpriteState {
     static String field_a;
     static int[] field_i;
     int field_f;

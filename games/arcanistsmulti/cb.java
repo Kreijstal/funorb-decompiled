@@ -30,12 +30,12 @@ final class cb {
         RuntimeException decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          param0.a(true);
+          param0.unlink(true);
           var3 = 19 % ((-78 - param1) / 48);
-          var2 = (na) (vh.field_a.b(12623));
+          var2 = (na) (vh.field_a.first(12623));
           while (var2 != null) {
             if (var2.a(param0, 2)) {
-              var2 = (na) (vh.field_a.a(0));
+              var2 = (na) (vh.field_a.next(0));
               continue;
             }
             break;
@@ -44,7 +44,7 @@ final class cb {
             da.a(var2, 20, param0);
             return;
           }
-          vh.field_a.b(param0, -1);
+          vh.field_a.addLast(param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

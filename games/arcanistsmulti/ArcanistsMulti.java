@@ -23,12 +23,12 @@ public final class ArcanistsMulti extends ud {
         }
     }
 
-    final void d(byte param0) {
+    final void shutdownClient(byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 115 / ((param0 + 83) / 41);
+          var2_int = 115 / ((obfuscationGuard + 83) / 41);
           sb.a(8000);
           if (null != ka.field_m) {
             u.b(6);
@@ -38,7 +38,7 @@ public final class ArcanistsMulti extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ArcanistsMulti.G(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ArcanistsMulti.G(" + obfuscationGuard + ')');
         }
     }
 
@@ -103,7 +103,7 @@ public final class ArcanistsMulti extends ud {
         }
     }
 
-    final void f(byte param0) {
+    final void releaseClientStatics(byte obfuscationGuard) {
         boolean discarded$0 = false;
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
@@ -176,7 +176,7 @@ public final class ArcanistsMulti extends ud {
         try {
           be.a(1497225488);
           hk.field_o = ao.a(true);
-          mo.e(200);
+          IntrusiveNodeHashTable.e(200);
           if (null != ka.field_m &&
             ka.field_m.field_e) {
             u.b(6);
@@ -192,7 +192,7 @@ public final class ArcanistsMulti extends ud {
             this.e(true);
             ja.field_y = false;
           }
-          jb.field_v = jb.field_v + 1;
+          SpriteState.field_v = SpriteState.field_v + 1;
           if (oc.a(-15576)) {
             this.d(-107);
             if (oc.a(-15576)) {
@@ -275,7 +275,7 @@ public final class ArcanistsMulti extends ud {
           }
           if (!lc.a((byte) 112)) {
             do {
-              var2 = (cm) (wh.field_h.c(true));
+              var2 = (cm) (wh.field_h.removeFirst(true));
               if (null == var2) {
                 if (var27 == 0) {
                   break;
@@ -296,20 +296,20 @@ public final class ArcanistsMulti extends ud {
                   continue;
                 }
                 if (79 == on.field_g) {
-                  bc.field_b = df.field_z.e((byte) 100);
-                  mf.field_a = df.field_z.e((byte) 50);
+                  bc.field_b = df.field_z.readUnsignedByte((byte) 100);
+                  mf.field_a = df.field_z.readUnsignedByte((byte) 50);
                   continue;
                 }
                 if (on.field_g == 9) {
                   lf.a((byte) 80);
                   kh.field_b = false;
                   mn.field_r = 9;
-                  jm.field_b = df.field_z.l(-1);
+                  jm.field_b = df.field_z.readString(-1);
                   continue;
                 }
                 if (on.field_g == 14) {
                   lf.a((byte) 80);
-                  jn.a(150, dn.f((byte) -112), -13173, ql.a(1), li.field_E, wk.f((byte) -125), 1024, wh.a(1000, 678231216), wh.a(6, 678231216), jk.field_a.length);
+                  jn.a(150, dn.f((byte) -112), -13173, ql.a(1), li.field_E, PacketBuffer.f((byte) -125), 1024, wh.a(1000, 678231216), wh.a(6, 678231216), ArchiveIndex.field_a.length);
                   ra.a(v.b((byte) 115), 64, pa.c((byte) -122));
                   mn.field_r = -2;
                   wa.field_Ob = true;
@@ -340,14 +340,14 @@ public final class ArcanistsMulti extends ud {
                   continue;
                 }
                 if (73 == on.field_g) {
-                  var2_intLifetime1 = df.field_z.e((byte) -122);
+                  var2_intLifetime1 = df.field_z.readUnsignedByte((byte) -122);
                   var3_ref_int__ = new int[var2_intLifetime1];
                   var4 = 0;
-                  L34: while (true) {
+                  scanLoop1: while (true) {
                     stackIn_137_0 = var2_intLifetime1;
                     stackIn_137_1 = var4;
                     if (stackIn_137_0 > stackIn_137_1) {
-                      var3_ref_int__[var4] = df.field_z.d(-10674);
+                      var3_ref_int__[var4] = df.field_z.readInt(-10674);
                       var3_ref_int__[var4] = dg.a(var3_ref_int__[var4], ~ad.field_f[var4]);
                       stackIn_99_0 = pe.field_Jb;
                       if (stackIn_99_0) {
@@ -358,14 +358,14 @@ public final class ArcanistsMulti extends ud {
                           stackIn_137_1 = ~(var5 + 32 * var4);
                           if (stackIn_137_0 < stackIn_137_1 &&
                             (var6 & var3_ref_int__[var4]) != 0) {
-                            b.field_a.b(new qa(32 * var4 + var5), -1);
+                            b.field_a.addLast(new qa(32 * var4 + var5), -1);
                           }
                           var5++;
                         }
                       }
                       ad.field_f[var4] = fj.b(ad.field_f[var4], var3_ref_int__[var4]);
                       var4++;
-                      continue L34;
+                      continue scanLoop1;
                     }
                     break;
                   }
@@ -373,13 +373,13 @@ public final class ArcanistsMulti extends ud {
                 }
                 if (on.field_g == 74) {
                   if (!td.e(true)) {
-                    jf.field_j = df.field_z.n(-98);
-                    cb.field_e = df.field_z.c(-943038560);
-                    ad.field_d = df.field_z.e((byte) -100);
+                    jf.field_j = df.field_z.readUnsignedShort(-98);
+                    cb.field_e = df.field_z.readLong(-943038560);
+                    ad.field_d = df.field_z.readUnsignedByte((byte) -100);
                   } else {
-                    var2_intLifetime1 = df.field_z.n(-98);
-                    var3_long = df.field_z.c(-943038560);
-                    ad.field_d = df.field_z.e((byte) 62);
+                    var2_intLifetime1 = df.field_z.readUnsignedShort(-98);
+                    var3_long = df.field_z.readLong(-943038560);
+                    ad.field_d = df.field_z.readUnsignedByte((byte) 62);
                     if (var2_intLifetime1 > jf.field_j) {
                       jf.field_j = var2_intLifetime1;
                     }
@@ -393,16 +393,16 @@ public final class ArcanistsMulti extends ud {
                 if (on.field_g == 57 ||
                   on.field_g == 58) {
                   lf.a((byte) 80);
-                  var2_intLifetime1 = df.field_z.e((byte) -124);
-                  var3 = df.field_z.e((byte) -101);
-                  stackIn_173_0 = (0 == df.field_z.e((byte) 106)) ? 0 : 1;
+                  var2_intLifetime1 = df.field_z.readUnsignedByte((byte) -124);
+                  var3 = df.field_z.readUnsignedByte((byte) -101);
+                  stackIn_173_0 = (0 == df.field_z.readUnsignedByte((byte) 106)) ? 0 : 1;
                   var4Lifetime2 = stackIn_173_0;
-                  stackIn_177_0 = (df.field_z.e((byte) 111) == 0) ? 0 : 1;
+                  stackIn_177_0 = (df.field_z.readUnsignedByte((byte) 111) == 0) ? 0 : 1;
                   var5Lifetime1 = stackIn_177_0;
-                  var6Lifetime1 = df.field_z.n(-98);
-                  var7 = new String[df.field_z.e((byte) 115)];
+                  var6Lifetime1 = df.field_z.readUnsignedShort(-98);
+                  var7 = new String[df.field_z.readUnsignedByte((byte) 115)];
                   var8 = -2;
-                  var8Lifetime1 = df.field_z.o(6);
+                  var8Lifetime1 = df.field_z.readByte(6);
                   var9 = new int[var7.length][18];
                   var10 = new int[var7.length][16];
                   var11 = new int[var7.length];
@@ -413,12 +413,12 @@ public final class ArcanistsMulti extends ud {
                     var7[var14] = df.field_z.e(-32461);
                     stackIn_209_0 = 0;
                     var15 = stackIn_209_0;
-                    L51: while (true) {
+                    scanLoop2: while (true) {
                       if (var15 >= 18) {
                         while (true) {
                           var15 = 0;
                           while (var15 < 16) {
-                            var16 = df.field_z.e((byte) 109) & 255;
+                            var16 = df.field_z.readUnsignedByte((byte) 109) & 255;
                             stackIn_183_0 = var10[var14];
                             stackIn_183_1 = var15;
                             stackIn_183_2 = -256;
@@ -431,24 +431,24 @@ public final class ArcanistsMulti extends ud {
                             stackIn_183_0[stackIn_183_1] = stackIn_192_2;
                             var15++;
                           }
-                          break L51;
+                          break scanLoop2;
                         }
                       }
                       stackIn_183_0Lifetime1 = var9[var14];
                       stackIn_183_1Lifetime1 = var15;
-                      stackIn_183_2Lifetime1 = df.field_z.e((byte) -88);
+                      stackIn_183_2Lifetime1 = df.field_z.readUnsignedByte((byte) -88);
                       stackIn_183_3Lifetime1 = 255;
                       while (true) {
                         stackIn_183_0Lifetime1[stackIn_183_1Lifetime1] = dg.a(stackIn_183_2Lifetime1, stackIn_183_3Lifetime1);
                         var15++;
-                        continue L51;
+                        continue scanLoop2;
                       }
 
                     }
-                    var11[var14] = df.field_z.e((byte) 76);
+                    var11[var14] = df.field_z.readUnsignedByte((byte) 76);
                     stackIn_196_0 = var12;
                     stackIn_196_1 = var14;
-                    stackIn_197_2 = (df.field_z.e((byte) 123) == 1);
+                    stackIn_197_2 = (df.field_z.readUnsignedByte((byte) 123) == 1);
                     stackIn_196_0[stackIn_196_1] = stackIn_197_2;
                     if (var12[var14] &&
                       0 == var10[var14][0] &&
@@ -475,14 +475,14 @@ public final class ArcanistsMulti extends ud {
                     }
                     var14++;
                   }
-                  var14Lifetime1 = df.field_z.d(-10674);
-                  stackIn_209_0Lifetime1 = df.field_z.e((byte) -118);
+                  var14Lifetime1 = df.field_z.readInt(-10674);
+                  stackIn_209_0Lifetime1 = df.field_z.readUnsignedByte((byte) -118);
                   var15Lifetime1 = stackIn_209_0Lifetime1;
                   stackIn_213_0 = ((var15Lifetime1 & 128) == 0) ? 0 : 1;
                   var16Lifetime1 = stackIn_213_0;
                   r.field_b = null;
                   var15Lifetime1 = var15Lifetime1 & 127;
-                  jb.field_z = null;
+                  SpriteState.field_z = null;
                   System.gc();
                   var17 = new le(true, var2_intLifetime1, var3, var4Lifetime2 != 0, var7, var8Lifetime1, var9, var10, var11, var14Lifetime1, var15Lifetime1, var5Lifetime1 != 0, var6Lifetime1, var12);
                   mi.a(jh.field_c[var17.field_V.a(-31497) + 1], 3);
@@ -506,10 +506,10 @@ public final class ArcanistsMulti extends ud {
                     r.field_b = var17;
                     mj.field_w = true;
                   } else {
-                    jb.field_z = var17;
+                    SpriteState.field_z = var17;
                     hi.field_a = true;
                     jg.a(-3);
-                    jk.a((byte) 121);
+                    ArchiveIndex.a((byte) 121);
                     sc.i((byte) -53);
                   }
                   stackIn_233_0 = (var16Lifetime1 == 0) ? 5 : -1;
@@ -523,8 +523,8 @@ public final class ArcanistsMulti extends ud {
                     mj.field_w) {
                     lf.a((byte) 80);
                     if (hi.field_a &&
-                      jb.field_z != null) {
-                      jb.field_z.a(-112, false);
+                      SpriteState.field_z != null) {
+                      SpriteState.field_z.a(-112, false);
                     }
                     fi.field_h = true;
                     hi.field_a = false;
@@ -544,7 +544,7 @@ public final class ArcanistsMulti extends ud {
                     var2 = r.field_b;
                   }
                 } else {
-                  var2 = jb.field_z;
+                  var2 = SpriteState.field_z;
                 }
                 if (null != var2 &&
                   ((le) (var2)).e((byte) -78)) {
@@ -555,7 +555,7 @@ public final class ArcanistsMulti extends ud {
               }
             } else {
               stackIn_263_0 = -27;
-              stackIn_263_1 = (0 - param0) / 36;
+              stackIn_263_1 = (0 - obfuscationGuard) / 36;
             }
             var2_intLifetime1 = stackIn_263_0 % stackIn_263_1;
             we.a(0, (byte) 121);
@@ -597,7 +597,7 @@ public final class ArcanistsMulti extends ud {
                       gj.a(false, true, 0, mn.field_r);
                     }
                     lf.a((byte) 80);
-                    tl.field_f[si.field_g].a(false, 0, (byte) -123);
+                    ArchiveProvider.field_f[si.field_g].a(false, 0, (byte) -123);
                     mj.field_w = false;
                     wa.field_Ob = false;
                     hi.field_a = false;
@@ -628,7 +628,7 @@ public final class ArcanistsMulti extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (var2), "ArcanistsMulti.A(" + param0 + ')');
+          throw aa.a((Throwable) (var2), "ArcanistsMulti.A(" + obfuscationGuard + ')');
         }
     }
 
@@ -681,13 +681,13 @@ public final class ArcanistsMulti extends ud {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
-        ll[] var4 = null;
-        qb[][] var5 = null;
-        qb[][] var6 = null;
-        qb var7 = null;
-        ll[] var8 = null;
+        IndexedSprite[] var4 = null;
+        Sprite[][] var5 = null;
+        Sprite[][] var6 = null;
+        Sprite var7 = null;
+        IndexedSprite[] var8 = null;
         int var9 = 0;
-        qb var7Lifetime1;
+        Sprite var7Lifetime1;
         int var3_intLifetime1;
         var9 = field_G ? 1 : 0;
         try {
@@ -757,7 +757,7 @@ public final class ArcanistsMulti extends ud {
                                       ua.field_K.a(-121)) {
                                       wm.g(0);
                                       rb.a(sn.field_N, false, 60.0f);
-                                      this.c((byte) -89);
+                                      this.updateClient((byte) -89);
                                       if (!param1) {
                                         return false;
                                       }
@@ -809,7 +809,7 @@ public final class ArcanistsMulti extends ud {
           if (tc.field_x != null &&
             jh.field_c == null) {
             rb.a(vi.field_J, false, 85.0f);
-            this.c((byte) -89);
+            this.updateClient((byte) -89);
             jh.field_c = new ha[10];
             bk.a(2);
             return false;
@@ -818,15 +818,15 @@ public final class ArcanistsMulti extends ud {
           if (null != so.field_k) {
             if (hf.field_o == null) {
               rb.a(hi.field_c, false, 90.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               hf.field_o = fj.a("", -22612, ue.field_d, "funorblogo");
-              vn.field_b = fj.a("", -22612, ue.field_d, "newlogo");
+              IntrusiveDeque.field_b = fj.a("", -22612, ue.field_d, "newlogo");
               g.field_a = fj.a("", -22612, ue.field_d, "newlogostars");
               sm.field_d = fj.a("", -22612, ue.field_d, "newlogostars2");
               vi.field_I = fj.a("", -22612, ue.field_d, "arrowbuttonsmall");
               to.field_q = fj.a("", -22612, ue.field_d, "arrowbutton");
               km.field_e = fj.a("", -22612, ue.field_d, "border_corner");
-              wk.field_l = fj.a("", -22612, ue.field_d, "border_bar_h");
+              PacketBuffer.field_l = fj.a("", -22612, ue.field_d, "border_bar_h");
               hk.field_k = fj.a("", -22612, ue.field_d, "border_bar_v");
               mc.field_a = qe.a(ue.field_d, "charactericons", "", 55);
               rb.field_o = qe.a(ue.field_d, "bonushats", "", 63);
@@ -835,13 +835,13 @@ public final class ArcanistsMulti extends ud {
             }
             if (e.field_M == null) {
               rb.a(hi.field_c, false, 91.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               wm.field_H = qe.a(ue.field_d, "menu_overlays", "", 41);
-              e.field_M = new ll[9];
+              e.field_M = new IndexedSprite[9];
               oo.field_t = fj.a("", -22612, ue.field_d, "logo_arcanists");
               wm.field_H[13].a();
-              vn.field_b.field_x = -(vn.field_b.field_n / 2) + 320;
-              vn.field_b.field_o = 16;
+              IntrusiveDeque.field_b.field_x = -(IntrusiveDeque.field_b.field_n / 2) + 320;
+              IntrusiveDeque.field_b.field_o = 16;
               rk.g(491697968);
               kf.field_b = qe.a(ue.field_d, "frame2", "", 83);
               uj.field_f = fj.a("", -22612, ue.field_d, "gamespell");
@@ -858,8 +858,8 @@ public final class ArcanistsMulti extends ud {
             }
             if (null == ea.field_E) {
               rb.a(hi.field_c, false, 92.0f);
-              this.c((byte) -89);
-              ea.field_E = new qb[15];
+              this.updateClient((byte) -89);
+              ea.field_E = new Sprite[15];
               var4_int = 0;
               do {
                 if (var4_int >= 15) {
@@ -885,7 +885,7 @@ public final class ArcanistsMulti extends ud {
               }
               if (decompiledNaturalLoopExit0) {
                 ea.field_E[0] = null;
-                vn.field_b = null;
+                IntrusiveDeque.field_b = null;
                 ce.field_m.a(true);
                 dh.a(ue.field_d, (byte) -66);
                 tj.field_t = rc.a(so.field_k, -24755, "", "font", ue.field_d);
@@ -897,7 +897,7 @@ public final class ArcanistsMulti extends ud {
             }
             if (mb.field_ab == null) {
               rb.a(hi.field_c, false, 93.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               mb.field_ab = pk.a("", 0, "spellclasses", ue.field_d);
               vd.field_b = fj.a("basic", -22612, rc.field_a, "unachieved");
               ii.field_d = fj.a("basic", -22612, rc.field_a, "locked");
@@ -916,10 +916,10 @@ public final class ArcanistsMulti extends ud {
             }
             if (null == ij.field_Pb) {
               rb.a(hi.field_c, false, 94.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               ij.field_Pb = qe.a(ue.field_d, "conductororb", "", 60);
               fc.field_e = qe.a(ue.field_d, "phylactery", "", 92);
-              tf.field_j = qe.a(ue.field_d, "stonemonster", "", 64);
+              DualLinkNode.field_j = qe.a(ue.field_d, "stonemonster", "", 64);
               fo.field_g = qe.a(ue.field_d, "frostsprite", "", 56);
               rc.field_k = qe.a(ue.field_d, "fungus", "", 102);
               lf.field_c = qe.a(ue.field_d, "flamesprite", "", 69);
@@ -935,7 +935,7 @@ public final class ArcanistsMulti extends ud {
             }
             if (null == nm.field_i) {
               rb.a(hi.field_c, false, 95.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               bb.field_g = qe.a(ue.field_d, "spellicons", "", 75);
               nm.field_i = qe.a(ue.field_d, "frame", "", 51);
               nm.field_i[1].field_n = nm.field_i[1].field_q;
@@ -949,36 +949,36 @@ public final class ArcanistsMulti extends ud {
             }
             if (null == ve.field_t) {
               rb.a(hi.field_c, false, 96.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               ve.field_t = qe.a(ue.field_d, "button_frame_r", "", 94);
               qe.a(ue.field_d, "button_frame_d", "", 44);
-              mo.field_a = qe.a(ue.field_d, "achievements_large", "", 98);
+              IntrusiveNodeHashTable.field_a = qe.a(ue.field_d, "achievements_large", "", 98);
               var4_int = 95;
               do {
-                if (!(var4_int < mo.field_a.length)) {
-                  ih.field_e = new qb(32, 32);
+                if (!(var4_int < IntrusiveNodeHashTable.field_a.length)) {
+                  ih.field_e = new Sprite(32, 32);
                   ih.field_e.a();
                   di.field_d.d(0, 0, 32, 32);
                   ce.field_m.a(true);
                   bk.a(2);
                   break;
                 }
-                mo.field_a[var4_int] = null;
+                IntrusiveNodeHashTable.field_a[var4_int] = null;
                 var4_int++;
               } while (var9 == 0);
               return false;
             }
             if (so.field_k != null) {
               rb.a(hi.field_c, false, 97.0f);
-              this.c((byte) -89);
+              this.updateClient((byte) -89);
               rc.field_a.field_f = 0;
               ud.field_D.field_f = 0;
               wn.a((byte) 111, rc.a(ud.field_D, -24755, "lobby", "chatfont", rc.field_a));
               rc.field_a.field_f = 1;
               ud.field_D.field_f = 1;
               var4 = pk.a("", 0, "minibonushats", ue.field_d);
-              var5 = new qb[3][];
-              var6 = new qb[3][];
+              var5 = new Sprite[3][];
+              var6 = new Sprite[3][];
               var5[0] = qe.a(ue.field_d, "turntime_icons", "", 76);
               var5[1] = qe.a(ue.field_d, "levelstyle_iconssmall", "", 56);
               var5[2] = qe.a(ue.field_d, "team_iconssmall", "", 76);
@@ -995,7 +995,7 @@ public final class ArcanistsMulti extends ud {
               var6[1][2] = var6[1][1];
               var6[1][1] = var6[1][0];
               var6[1][0] = var7Lifetime1;
-              rb.a(li.field_E, ua.field_K, var4, var5, true, jh.field_d, rm.field_l, 6, ud.field_D, (int[]) null, var6, cn.field_O, (byte) -67, jk.field_a, 3, aj.field_a, rc.field_a);
+              rb.a(li.field_E, ua.field_K, var4, var5, true, jh.field_d, rm.field_l, 6, ud.field_D, (int[]) null, var6, cn.field_O, (byte) -67, ArchiveIndex.field_a, 3, aj.field_a, rc.field_a);
               fn.a(200, (byte) -106);
               um.field_a = qf.field_c;
               gm.field_c = false;
@@ -1013,7 +1013,7 @@ public final class ArcanistsMulti extends ud {
             }
           }
           if (hb.field_Fb == null) {
-            wk.d((byte) -98);
+            PacketBuffer.d((byte) -98);
             return true;
           }
           gh.a(-92, new u(hb.field_Fb.a("huffman", "", -1)));
@@ -1132,7 +1132,7 @@ public final class ArcanistsMulti extends ud {
           ArcanistsMulti.h((byte) -91);
           fn.a((byte) -60);
           qa.a((byte) 92);
-          vn.e(true);
+          IntrusiveDeque.e(true);
           cb.a((byte) 44);
           ik.a(0);
           c.a(30);
@@ -1144,16 +1144,16 @@ public final class ArcanistsMulti extends ud {
           ci.a(0);
           uf.a((byte) -81);
           ud.d(true);
-          p.a((byte) -46);
-          dc.a(false);
+          ClientException.a((byte) -46);
+          GameAppletShell.a(false);
           hn.a(66);
           je.a(-10338);
           hh.b(1);
           de.c();
-          eg.a(false);
+          ResourceArchive.a(false);
           dj.a();
           rg.a(35);
-          wk.b(true);
+          PacketBuffer.b(true);
           qj.c(-13019);
           ra.b(64);
           oj.a(1);
@@ -1183,7 +1183,7 @@ public final class ArcanistsMulti extends ud {
           sd.b(-1);
           k.c(11138);
           nf.r(0);
-          pg.c((byte) -115);
+          IntrusiveNode.c((byte) -115);
           pn.b((byte) 122);
           cc.a((byte) 107);
           so.a(param0);
@@ -1198,12 +1198,12 @@ public final class ArcanistsMulti extends ud {
           ec.b(0);
           kj.a(true);
           lf.a(-15);
-          jk.a(0);
+          ArchiveIndex.a(0);
           nb.a(-79);
-          tl.a((byte) -51);
+          ArchiveProvider.a((byte) -51);
           ml.h(false);
           qc.a(54);
-          tf.a(49);
+          DualLinkNode.a(49);
           mi.g(2);
           oc.b(false);
           hi.a((byte) 60);
@@ -1244,15 +1244,15 @@ public final class ArcanistsMulti extends ud {
           cg.e(param0);
           i.a((byte) 6);
           na.g((byte) 120);
-          jb.c(122);
+          SpriteState.c(122);
           we.c(120);
           wj.a(0);
-          mo.c(0);
+          IntrusiveNodeHashTable.c(0);
           tg.c(-92);
           mc.a(73);
           ao.b(0);
           sb.c(-1);
-          s.a((byte) -109);
+          IndexedSpriteState.a((byte) -109);
           bm.a(false);
           fc.a((byte) -71);
           nm.a(-1);
@@ -1261,11 +1261,11 @@ public final class ArcanistsMulti extends ud {
           gj.a(false);
           ch.a(false);
           bd.b(0);
-          ab.q(21657);
+          CipherPacketBuffer.q(21657);
           da.a(-121);
           u.a(1);
           vm.a((byte) -75);
-          ug.a(109);
+          IsaacCipher.a(109);
           ic.a(0);
           ge.a(-117);
           cn.g((byte) 112);
@@ -1491,12 +1491,12 @@ public final class ArcanistsMulti extends ud {
           if (bj.g(false)) {
             param1 = true;
           }
-          if (b.field_a.b(12623) != null) {
+          if (b.field_a.first(12623) != null) {
             fieldTemp$0 = wi.field_h + 1;
             wi.field_h = wi.field_h + 1;
             if (fieldTemp$0 == 335) {
               wi.field_h = 0;
-              b.field_a.c(true);
+              b.field_a.removeFirst(true);
             }
           }
           boolean decompiledFrameRemainder2 = true;
@@ -1535,7 +1535,7 @@ public final class ArcanistsMulti extends ud {
               decompiledFrameRemainder2 = (u.field_i == 16);
               if (decompiledFrameRemainder2) {
                 if (!w.field_Cb) {
-                  vn.a((byte) 4);
+                  IntrusiveDeque.a((byte) 4);
                   if (var13 != 0) {
                     am.a(3020);
                   }
@@ -1562,7 +1562,7 @@ public final class ArcanistsMulti extends ud {
                 }
               }
               if (decompiledFrameRemainder1) {
-                var5 = jb.field_z;
+                var5 = SpriteState.field_z;
                 if (null == var5) {
                   var5 = r.field_b;
                 }
@@ -1572,7 +1572,7 @@ public final class ArcanistsMulti extends ud {
                     si.field_g != 4) {
                     if ((si.field_g != -2) &&
                       (decompiledFrameRemainder1 = !(!ij.b(si.field_g, param0 ^ -83)))) {
-                      tl.field_f[si.field_g].b(91);
+                      ArchiveProvider.field_f[si.field_g].b(91);
                       decompiledFrameRemainder1 = (var13 != 0);
                     }
                     if (decompiledFrameRemainder1) {
@@ -1584,7 +1584,7 @@ public final class ArcanistsMulti extends ud {
                     if (!var5.field_ab) {
                       var5.a(true, false);
                     }
-                    tl.field_f[si.field_g].b(param0 ^ -2);
+                    ArchiveProvider.field_f[si.field_g].b(param0 ^ -2);
                     decompiledFrameRemainder1 = (var13 != 0);
                   }
                 }
@@ -1623,9 +1623,9 @@ public final class ArcanistsMulti extends ud {
                 r.field_b.a(true, var4 != 0);
               }
               if (hi.field_a &&
-                null != jb.field_z) {
+                null != SpriteState.field_z) {
                 nh.a((byte) -66, 320, 180, var5_int != 0);
-                jb.field_z.a(true, var4 != 0);
+                SpriteState.field_z.a(true, var4 != 0);
               }
               while (true) {
                 if (ib.b(false)) {
@@ -1635,7 +1635,7 @@ public final class ArcanistsMulti extends ud {
                     if (stackIn_152_0) {
                       if ((hi.field_a) &&
                         (decompiledFrameRemainder0 = !(!tg.a(12, 27, 15, 13)))) {
-                        jb.field_z.field_O = true;
+                        SpriteState.field_z.field_O = true;
                         continue;
                       }
                       if (decompiledFrameRemainder0) {
@@ -1648,7 +1648,7 @@ public final class ArcanistsMulti extends ud {
                     if (!hi.field_a) {
                       continue;
                     }
-                    jb.field_z.k(param0 ^ -90);
+                    SpriteState.field_z.k(param0 ^ -90);
                     continue;
                   }
                 } else {
@@ -1704,12 +1704,12 @@ public final class ArcanistsMulti extends ud {
             stackIn_179_0[5] = false;
             var8 = stackIn_179_0;
             var9 = 0;
-            L38: while (true) {
+            scanLoop1: while (true) {
               if (var9 < 6) {
                 var10 = 0;
                 stackIn_212_0 = 0;
                 if (var13 != 0) {
-                  break L38;
+                  break scanLoop1;
                 }
                 var11 = stackIn_212_0;
                 while (var11 < 4) {
@@ -1739,7 +1739,7 @@ public final class ArcanistsMulti extends ud {
                 var9++;
                 continue;
               }
-              jb.field_z = new le(false, 0, 3, false, var4_ref_String__, 0, var5_array, var6, var7, 0, 0, false, 0, var8);
+              SpriteState.field_z = new le(false, 0, 3, false, var4_ref_String__, 0, var5_array, var6, var7, 0, 0, false, 0, var8);
               gj.a(ta.field_d, true, 14, -1);
               stackIn_212_0 = 1;
               break;
@@ -1753,17 +1753,17 @@ public final class ArcanistsMulti extends ud {
             if (jh.field_c[0] == f.field_g) {
               mi.a(jh.field_c[0], param0 + 92);
             }
-            he.field_e.b((byte) -59, 64);
+            he.field_e.writeOpcode((byte) -59, 64);
             var3_int = 0;
-            L56: while (true) {
+            scanLoop2: while (true) {
               if (var3_int < 4) {
                 stackIn_235_0 = 0;
                 if (var13 != 0) {
-                  break L56;
+                  break scanLoop2;
                 }
                 var4 = stackIn_235_0;
                 while (var4 < 3) {
-                  he.field_e.f(kg.field_d[var3_int][var4], (byte) -60);
+                  he.field_e.writeByte(kg.field_d[var3_int][var4], (byte) -60);
                   var4++;
                 }
                 var3_int++;
@@ -1778,16 +1778,16 @@ public final class ArcanistsMulti extends ud {
                 var3_int = 0;
                 break;
               }
-              he.field_e.f(so.field_c[var3_int], (byte) -81);
+              he.field_e.writeByte(so.field_c[var3_int], (byte) -81);
               var3_int++;
             } while (var13 == 0);
             do {
               if (var3_int >= 16) {
-                he.field_e.b((byte) -127, 9);
+                he.field_e.writeOpcode((byte) -127, 9);
                 mn.field_r = si.field_g;
                 break;
               }
-              he.field_e.f(b.field_f[var3_int], (byte) -47);
+              he.field_e.writeByte(b.field_f[var3_int], (byte) -47);
               var3_int++;
             } while (var13 == 0);
             kh.field_b = true;
@@ -1805,7 +1805,7 @@ public final class ArcanistsMulti extends ud {
         }
     }
 
-    final void e(byte param0) {
+    final void initializeClient(byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         gh var2 = null;
         int var3 = 0;
@@ -1854,8 +1854,8 @@ public final class ArcanistsMulti extends ud {
           he.field_a = new int[256];
           cj.field_g = new int[256];
           kg.field_d[3] = hi.field_b[0];
-          kg.field_d[2] = ug.field_d[0];
-          var3 = -120 % ((-68 - param0) / 33);
+          kg.field_d[2] = IsaacCipher.field_d[0];
+          var3 = -120 % ((-68 - obfuscationGuard) / 33);
           kg.field_d[1] = ud.field_z[0];
           var4 = 0;
           while (256 > var4) {
@@ -1870,7 +1870,7 @@ public final class ArcanistsMulti extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ArcanistsMulti.E(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ArcanistsMulti.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -1882,7 +1882,7 @@ public final class ArcanistsMulti extends ud {
         }
     }
 
-    final void c(byte param0) {
+    final void updateClient(byte obfuscationGuard) {
         Object stackIn_5_0 = null;
         int stackIn_67_0 = 0;
         boolean stackIn_125_0 = false;
@@ -1902,7 +1902,7 @@ public final class ArcanistsMulti extends ud {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        qb var15 = null;
+        Sprite var15 = null;
         kc var16 = null;
         int var17 = 0;
         int var18 = 0;
@@ -1924,7 +1924,7 @@ public final class ArcanistsMulti extends ud {
           }
           var2 = stackIn_5_0;
           ce.field_m.a(true);
-          if (param0 != -89) {
+          if (obfuscationGuard != -89) {
             ArcanistsMulti.a(66, (int[]) null, (dn) null, (String) null, 78L, -15, 110, (String) null, (kc) null);
           }
           if (oc.a(-15576)) {
@@ -1932,16 +1932,16 @@ public final class ArcanistsMulti extends ud {
             return;
           }
           if (!ue.field_e) {
-            eg.a((java.awt.Canvas) (var2), (byte) -29);
+            ResourceArchive.a((java.awt.Canvas) (var2), (byte) -29);
             return;
           }
           if (!hn.a((byte) 87)) {
             rb.a(mm.field_t, false, 100.0f);
-            eg.a((java.awt.Canvas) (var2), (byte) -62);
+            ResourceArchive.a((java.awt.Canvas) (var2), (byte) -62);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          this.m(param0 + 15522);
+          this.m(obfuscationGuard + 15522);
           if (mn.field_r != si.field_g) {
             if (-2 != si.field_g &&
               mn.field_r != -2) {
@@ -1997,32 +1997,32 @@ public final class ArcanistsMulti extends ud {
             rc.a(var5, -30218);
             to.a(gj.a(29372), (byte) 119);
             if (si.field_g == -2) {
-              var3_intLifetime1 = (int)(Math.sin((double)jb.field_v * 0.2) * 8.0);
-              var4Lifetime3 = -(int)(Math.cos((double)jb.field_v * 0.2) * 5.0);
+              var3_intLifetime1 = (int)(Math.sin((double)SpriteState.field_v * 0.2) * 8.0);
+              var4Lifetime3 = -(int)(Math.cos((double)SpriteState.field_v * 0.2) * 5.0);
               if (var4Lifetime3 > 0) {
                 var4Lifetime3 = 0;
               }
               var5Lifetime2 = -var3_intLifetime1;
-              var6 = (int)(Math.cos(0.2 * (double)jb.field_v) * 5.0);
+              var6 = (int)(Math.cos(0.2 * (double)SpriteState.field_v) * 5.0);
               if (var6 > 0) {
                 var6 = 0;
               }
-              var7 = (int)(Math.sin((double)jb.field_v * 0.1) * 8.0) + 16;
+              var7 = (int)(Math.sin((double)SpriteState.field_v * 0.1) * 8.0) + 16;
               var8 = 0;
-              var9 = -(int)(8.0 * Math.sin(-0.1 + (double)jb.field_v * 0.1)) - 16;
+              var9 = -(int)(8.0 * Math.sin(-0.1 + (double)SpriteState.field_v * 0.1)) - 16;
               var10 = 0;
-              var11 = (jb.field_v >> 9) % 24;
+              var11 = (SpriteState.field_v >> 9) % 24;
               var12 = 32;
               var13 = 160;
               stackIn_67_0 = (so.field_c[5] + so.field_c[2] + (so.field_c[0] + so.field_c[1]) - (-so.field_c[3] - so.field_c[4]) != 0) ? 0 : 1;
               boolean decompiledFrameRemainder1 = true;
               var14 = stackIn_67_0;
-              if (((jb.field_v & 1024) > 0) &&
-                (decompiledFrameRemainder1 = !((1023 & -jb.field_v + 1024) < 512)) &&
+              if (((SpriteState.field_v & 1024) > 0) &&
+                (decompiledFrameRemainder1 = !((1023 & -SpriteState.field_v + 1024) < 512)) &&
                 (decompiledFrameRemainder1 = (var14 != 0))) {
                 var10 = 0;
                 var6 = 0;
-                var11 = (jb.field_v >> 3) % 2;
+                var11 = (SpriteState.field_v >> 3) % 2;
                 var3_intLifetime1 = 0;
                 var5Lifetime2 = 0;
                 var8 = 0;
@@ -2031,19 +2031,19 @@ public final class ArcanistsMulti extends ud {
                 var7 = 16;
                 decompiledFrameRemainder1 = (var20 != 0);
               }
-              if ((decompiledFrameRemainder1) && ((1023 & jb.field_v) >= 512 &&
+              if ((decompiledFrameRemainder1) && ((1023 & SpriteState.field_v) >= 512 &&
                 var14 != 0)) {
                 var3_intLifetime1 = 0;
                 var10 = 0;
                 var9 = -16;
                 var5Lifetime2 = 0;
-                var11 = (jb.field_v >> 3) % 2;
+                var11 = (SpriteState.field_v >> 3) % 2;
                 var4Lifetime3 = 0;
                 var7 = 16;
                 var6 = 0;
                 var8 = 0;
               }
-              var15 = new qb(128, 256);
+              var15 = new Sprite(128, 256);
               var15.a();
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var8 + var13, kg.field_d[3], kg.field_d[0], 116, kg.field_d[1], qe.field_i[so.field_c[3]], var12 + var7);
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13 + var4Lifetime3, kg.field_d[3], kg.field_d[0], -87, kg.field_d[1], fn.field_b[0], var3_intLifetime1 + var12);
@@ -2068,8 +2068,8 @@ public final class ArcanistsMulti extends ud {
                 var18 = -480 + an.field_j;
                 if (qf.field_d < 2) {
                   var19 = var18 + 87;
-                  if (0 >= (1024 & jb.field_v)) {
-                    var12Lifetime1 = 1023 & jb.field_v;
+                  if (0 >= (1024 & SpriteState.field_v)) {
+                    var12Lifetime1 = 1023 & SpriteState.field_v;
                     if (512 > var12Lifetime1 ||
                       var14 == 0) {
                       var15.c(var12Lifetime1 + var17, var19);
@@ -2081,7 +2081,7 @@ public final class ArcanistsMulti extends ud {
                       mi.field_B.a(io.field_x, var17 + (-300 + var12Lifetime1), var13 + (80 + var18), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
                       var15.e(var12Lifetime1 + var17, var19);
                       if (var20 != 0) {
-                        var12Lifetime1 = -(1023 & jb.field_v) + 1024;
+                        var12Lifetime1 = -(1023 & SpriteState.field_v) + 1024;
                         if (var12Lifetime1 >= 512 &&
                           var14 != 0) {
                           var12Lifetime1 = 512;
@@ -2091,7 +2091,7 @@ public final class ArcanistsMulti extends ud {
                         var15.e(var17 + var12Lifetime1, var19);
                       }
                     }} else {
-                    var12Lifetime1 = -(1023 & jb.field_v) + 1024;
+                    var12Lifetime1 = -(1023 & SpriteState.field_v) + 1024;
                     if (var12Lifetime1 >= 512 &&
                       var14 != 0) {
                       var12Lifetime1 = 512;
@@ -2104,7 +2104,7 @@ public final class ArcanistsMulti extends ud {
                     var12Lifetime1 = 512;
                     de.e(var12Lifetime1 - (300 - var17), 78 + var13 + 20 + var18, 424, 64, 0, 128);
                     var19 = 16737792;
-                    if ((jb.field_v & 64) > 0) {
+                    if ((SpriteState.field_v & 64) > 0) {
                       var19 = 16777215;
                     }
                     mi.field_B.a("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12Lifetime1 + var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + mi.field_B.field_C);
@@ -2113,7 +2113,7 @@ public final class ArcanistsMulti extends ud {
                   var12Lifetime1 = 512;
                   de.e(var12Lifetime1 - (300 - var17), 78 + var13 + 20 + var18, 424, 64, 0, 128);
                   var19 = 16737792;
-                  if ((jb.field_v & 64) > 0) {
+                  if ((SpriteState.field_v & 64) > 0) {
                     var19 = 16777215;
                   }
                   mi.field_B.a("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12Lifetime1 + var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + mi.field_B.field_C);
@@ -2124,7 +2124,7 @@ public final class ArcanistsMulti extends ud {
             uh.a(gj.a(29372), 115);
             le.c(1, gj.a(29372));
           }
-          var3 = (qa) (b.field_a.b(12623));
+          var3 = (qa) (b.field_a.first(12623));
           if (var3 != null) {
             var5Lifetime1 = wi.field_h;
             if (80 <= var5Lifetime1) {
@@ -2146,12 +2146,12 @@ public final class ArcanistsMulti extends ud {
             de.a(4, -4 + var4Lifetime1, tj.field_t.b(rb.field_n[var3.field_n]) + 56, 40, 0);
             de.a(5, var4Lifetime1 - 3, 54 + tj.field_t.b(rb.field_n[var3.field_n]), 38, 16741888);
             de.a(6, var4Lifetime1 - 2, tj.field_t.b(rb.field_n[var3.field_n]) + 52, 36, 0);
-            mo.field_a[var3.field_n].c(8, var4Lifetime1, 32, 32);
+            IntrusiveNodeHashTable.field_a[var3.field_n].c(8, var4Lifetime1, 32, 32);
             tj.field_t.a(rb.field_n[var3.field_n], 47, tj.field_t.field_C + var4Lifetime1, 0, 0);
             tj.field_t.a(rb.field_n[var3.field_n], 48, -1 + (var4Lifetime1 + tj.field_t.field_C), 0, 0);
             tj.field_t.a(rb.field_n[var3.field_n], 48, tj.field_t.field_C + var4Lifetime1, 16746496, -1);
           }
-          boolean decompiledSharedTail0 = !(rc.b(param0 ^ 88));
+          boolean decompiledSharedTail0 = !(rc.b(obfuscationGuard ^ 88));
           if (!decompiledSharedTail0) {
             if (null != ka.field_m) {
               stackIn_125_0 = true;
@@ -2178,16 +2178,16 @@ public final class ArcanistsMulti extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "ArcanistsMulti.L(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var2_ref), "ArcanistsMulti.L(" + obfuscationGuard + ')');
         }
     }
 
-    final static void a(eg param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ab var2 = null;
+        CipherPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -2196,16 +2196,16 @@ public final class ArcanistsMulti extends ud {
         int var7 = 0;
         var7 = field_G ? 1 : 0;
         try {
-          var2 = new ab(param0.a("", "logo.fo3d", -1));
-          var3 = var2.e((byte) -121);
-          var2.p(param1 + 166);
+          var2 = new CipherPacketBuffer(param0.a("", "logo.fo3d", -1));
+          var3 = var2.readUnsignedByte((byte) -121);
+          var2.beginBitAccess(param1 + 166);
           ph.field_e = ma.a((byte) -101, var2);
           gn.field_g = new int[var3][];
           oo.field_u = new vg[var3];
           var4 = 0;
           do {
             if (var3 <= var4) {
-              var2.r(param1 + 80);
+              var2.endBitAccess(param1 + 80);
               break;
             }
             oo.field_u[var4] = rn.a(true, var2);
@@ -2364,7 +2364,7 @@ public final class ArcanistsMulti extends ud {
                               !ue.field_d.a(true, "frostdragon", "streamed")) {
                               if (wn.field_C == 16 &&
                                 ue.field_d.a(true, "stormdragon", "streamed")) {
-                                jk.field_m = pk.a("streamed", 0, "stormdragon", ue.field_d);
+                                ArchiveIndex.field_m = pk.a("streamed", 0, "stormdragon", ue.field_d);
                                 wn.field_C = wn.field_C + 1;
                                 if (var3 == 0) {
                                   return;
@@ -2631,7 +2631,7 @@ public final class ArcanistsMulti extends ud {
                                         return;
                                       }
                                     }
-                                    jk.field_n = pk.a("streamed", 0, "elf", ue.field_d);
+                                    ArchiveIndex.field_n = pk.a("streamed", 0, "elf", ue.field_d);
                                     wn.field_C = wn.field_C + 1;
                                     if (var3 == 0) {
                                       return;
@@ -3350,7 +3350,7 @@ public final class ArcanistsMulti extends ud {
             }
             if (be.field_f == 53 &&
               wh.field_l.a("spell_cast_nature", -24417)) {
-              pi.field_e = tl.field_g;
+              pi.field_e = ArchiveProvider.field_g;
               be.field_f = 54;
               this.a(255, 148, pl.a(wh.field_l, "spell_cast_nature", "arcanists_cast_79_thornball").a(), to.field_r, false, cf.field_h);
               this.a(255, 149, pl.a(wh.field_l, "spell_cast_nature", "arcanists_cast_80_thornbomb").a(), to.field_r, false, cf.field_h);
@@ -3434,9 +3434,9 @@ public final class ArcanistsMulti extends ud {
                 this.a(159, in.field_Fb[2], ai.a(ck.field_b, "slyph", "arcanists_slyph_hit").c(), tm.field_a, false, uk.field_g);
                 this.a(181, in.field_Fb[1], ai.a(ck.field_b, "slyph", "arcanists_slyph_death").c(), tm.field_a, false, uk.field_g);
                 this.a(161, 185, ai.a(ck.field_b, "slyph", "arcanists_slyph_arrow_attack").c(), to.field_r, false, cf.field_h);
-                this.a(138, s.field_i[0], ai.a(ck.field_b, "wraith", "arcanists_wraith_select").c(), tm.field_a, false, uk.field_g);
-                this.a(178, s.field_i[2], ai.a(ck.field_b, "wraith", "arcanists_wraith_hit").c(), tm.field_a, false, uk.field_g);
-                this.a(166, s.field_i[1], ai.a(ck.field_b, "wraith", "arcanists_wraith_death").c(), tm.field_a, false, uk.field_g);
+                this.a(138, IndexedSpriteState.field_i[0], ai.a(ck.field_b, "wraith", "arcanists_wraith_select").c(), tm.field_a, false, uk.field_g);
+                this.a(178, IndexedSpriteState.field_i[2], ai.a(ck.field_b, "wraith", "arcanists_wraith_hit").c(), tm.field_a, false, uk.field_g);
+                this.a(166, IndexedSpriteState.field_i[1], ai.a(ck.field_b, "wraith", "arcanists_wraith_death").c(), tm.field_a, false, uk.field_g);
                 this.a(255, 219, ai.a(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_attack").c(), to.field_r, false, cf.field_h);
                 this.a(79, lj.field_g[0], ai.a(ck.field_b, "footmen", "arcanists_imp_yes_master").c(), tm.field_a, false, uk.field_g);
                 uk.field_g[lj.field_g[2]] = null;

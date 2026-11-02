@@ -10,7 +10,7 @@ final class be {
     private int field_k;
     private sd field_e;
     static int[] field_d;
-    static ll field_j;
+    static IndexedSprite field_j;
     static boolean field_g;
     static String field_i;
     static String field_a;
@@ -263,7 +263,7 @@ final class be {
                 this.field_e.a((byte) -53, 0, ae.field_c, 6);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -279,7 +279,7 @@ final class be {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = (255 & ae.field_c[5]) + (ae.field_c[4] << 8 & 65280);
                         var10 = (65280 & ae.field_c[7] << 8) + ((255 & ae.field_c[6]) << 16) + (ae.field_c[8] & 255);
@@ -295,7 +295,7 @@ final class be {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var10 = (65280 & ae.field_c[5] << 8) + (((255 & ae.field_c[4]) << 16) + (255 & ae.field_c[6]));
                         var11 = (ae.field_c[1] & 255) + ((255 & ae.field_c[0]) << 8);

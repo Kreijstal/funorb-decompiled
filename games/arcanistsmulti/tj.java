@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends tl {
+final class tj extends ArchiveProvider {
     static lg field_t;
     static String field_y;
     private byte[] field_E;
     private int field_i;
-    static qb[] field_A;
+    static Sprite[] field_A;
     private di field_n;
     private byte[] field_w;
     private int field_q;
@@ -17,12 +17,12 @@ final class tj extends tl {
     static kc field_o;
     private be field_D;
     private be field_F;
-    private jk field_k;
+    private ArchiveIndex field_k;
     private ve field_x;
     private lk field_B;
-    private vn field_h;
+    private IntrusiveDeque field_h;
     private int field_p;
-    private vn field_m;
+    private IntrusiveDeque field_m;
     private boolean field_l;
     private boolean field_j;
     private boolean field_z;
@@ -38,7 +38,7 @@ final class tj extends tl {
           if (param1 != -21402) {
             tj.b(68);
           }
-          i.field_e.b(var2, -1);
+          i.field_e.addLast(var2, -1);
           gb.a(param0, true);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -61,7 +61,7 @@ final class tj extends tl {
             this.field_x = (ve) null;
           }
           if (null == this.field_h) {
-            this.field_h = new vn();
+            this.field_h = new IntrusiveDeque();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,10 +74,10 @@ final class tj extends tl {
     final void a(boolean param0) {
         ve discarded$0 = null;
         ve discarded$1 = null;
-        pg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
-        pg stackIn_17_0 = null;
+        IntrusiveNode stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -92,9 +92,9 @@ final class tj extends tl {
           if (param0) {
             return;
           }
-          var2 = this.field_m.b(12623);
+          var2 = this.field_m.first(12623);
           while (var2 != null) {
-            var3 = (int)var2.field_e;
+            var3 = (int)var2.key;
             if (var3 >= 0 &&
               this.field_k.field_f > var3 &&
               this.field_k.field_b[var3] != 0) {
@@ -105,14 +105,14 @@ final class tj extends tl {
                 discarded$1 = this.a(2, 62, var3);
               }
               if (this.field_E[var3] == 1) {
-                var2.a(true);
+                var2.unlink(true);
               }
             } else {
               stackIn_17_0 = var2;
               stackIn_18_1 = !(param0);
-              ((pg) (Object) stackIn_17_0).a(stackIn_18_1);
+              ((IntrusiveNode) (Object) stackIn_17_0).unlink(stackIn_18_1);
             }
-            var2 = this.field_m.a(0);
+            var2 = this.field_m.next(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class tj extends tl {
                 continue;
               }
               var5++;
-              var8 = dc.a((CharSequence) ((Object) var13), 126);
+              var8 = GameAppletShell.a((CharSequence) ((Object) var13), 126);
               var4 = var4 + (param1[var8].length() - var5 + var6);
               continue;
             }
@@ -213,7 +213,7 @@ final class tj extends tl {
               continue;
             }
             var5Lifetime1++;
-            var11 = dc.a((CharSequence) ((Object) var10), 127);
+            var11 = GameAppletShell.a((CharSequence) ((Object) var10), 127);
             discarded$1 = var14.append(param2.substring(var8Lifetime1, var9));
             var8Lifetime1 = var5Lifetime1;
             discarded$2 = var14.append(param1[var11]);
@@ -289,12 +289,12 @@ final class tj extends tl {
         int var2_int = 0;
         ve var2_ref = null;
         RuntimeException var2_ref2 = null;
-        pg var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
-        pg var6 = null;
-        pg var7 = null;
-        pg var3Lifetime1;
+        IntrusiveNode var6 = null;
+        IntrusiveNode var7 = null;
+        IntrusiveNode var3Lifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
         var2 = null;
@@ -307,18 +307,18 @@ final class tj extends tl {
             }
             if (this.field_j) {
               var2_int = 1;
-              var3 = this.field_h.b(12623);
+              var3 = this.field_h.first(12623);
               while (var3 != null) {
-                var4 = (int)var3.field_e;
+                var4 = (int)var3.key;
                 if (this.field_E[var4] == 0) {
                   discarded$3 = this.a(1, 96, var4);
                 }
                 if (this.field_E[var4] != 0) {
-                  var3.a(true);
+                  var3.unlink(true);
                 } else {
                   var2_int = 0;
                 }
-                var3 = this.field_h.a(0);
+                var3 = this.field_h.next(0);
               }
               while (this.field_p < this.field_k.field_b.length) {
                 if (this.field_k.field_b[this.field_p] == 0) {
@@ -330,9 +330,9 @@ final class tj extends tl {
                     discarded$2 = this.a(1, 85, this.field_p);
                   }
                   if (0 == this.field_E[this.field_p]) {
-                    var6 = new pg();
-                    var6.field_e = (long)this.field_p;
-                    this.field_h.b(var6, -1);
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_p;
+                    this.field_h.addLast(var6, -1);
                     var2_int = 0;
                   }
                   this.field_p = this.field_p + 1;
@@ -350,18 +350,18 @@ final class tj extends tl {
             else {
               if (this.field_l) {
                 var2_intLifetime1 = 1;
-                var3Lifetime1 = this.field_h.b(12623);
+                var3Lifetime1 = this.field_h.first(12623);
                 while (var3Lifetime1 != null) {
-                  var4Lifetime1 = (int)var3Lifetime1.field_e;
+                  var4Lifetime1 = (int)var3Lifetime1.key;
                   if (1 != this.field_E[var4Lifetime1]) {
                     discarded$1 = this.a(2, -114, var4Lifetime1);
                   }
                   if (this.field_E[var4Lifetime1] != 1) {
                     var2_intLifetime1 = 0;
                   } else {
-                    var3Lifetime1.a(true);
+                    var3Lifetime1.unlink(true);
                   }
-                  var3Lifetime1 = this.field_h.a(0);
+                  var3Lifetime1 = this.field_h.next(0);
                 }
                 while (this.field_k.field_b.length > this.field_p) {
                   if (this.field_k.field_b[this.field_p] == 0) {
@@ -373,9 +373,9 @@ final class tj extends tl {
                       discarded$0 = this.a(2, 61, this.field_p);
                     }
                     if (this.field_E[this.field_p] != 1) {
-                      var7 = new pg();
-                      var7.field_e = (long)this.field_p;
-                      this.field_h.b(var7, -1);
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_p;
+                      this.field_h.addLast(var7, -1);
                       var2_intLifetime1 = 0;
                     }
                     this.field_p = this.field_p + 1;
@@ -406,7 +406,7 @@ final class tj extends tl {
                   if (!var2_ref.field_q) {
                     throw new RuntimeException();
                   }
-                  var2_ref.a(true);
+                  var2_ref.unlink(true);
                 }
               }
               var2_ref = (ve) (this.field_n.c(-87));
@@ -424,14 +424,14 @@ final class tj extends tl {
         }
     }
 
-    final jk d(byte param0) {
-        jk stackIn_5_0 = null;
+    final ArchiveIndex d(byte param0) {
+        ArchiveIndex stackIn_5_0 = null;
         Object stackIn_11_0 = null;
         Object stackIn_15_0 = null;
-        jk stackIn_18_0 = null;
+        ArchiveIndex stackIn_18_0 = null;
         Object stackIn_31_0 = null;
         Object stackIn_50_0 = null;
-        jk stackIn_54_0 = null;
+        ArchiveIndex stackIn_54_0 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
@@ -449,20 +449,20 @@ final class tj extends tl {
           if (this.field_x == null) {
             if (this.field_B.c((byte) -66)) {
               stackIn_11_0 = null;
-              return (jk) (stackIn_11_0);
+              return (ArchiveIndex) (stackIn_11_0);
             }
             this.field_x = (ve) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
           }
           if (this.field_x.field_p) {
             stackIn_15_0 = null;
-            return (jk) (stackIn_15_0);
+            return (ArchiveIndex) (stackIn_15_0);
           }
           var7 = this.field_x.c(-42);
           var6 = var7;
           var5 = var6;
           var2 = var5;
           if (param0 <= 74) {
-            stackIn_18_0 = (jk) null;
+            stackIn_18_0 = (ArchiveIndex) null;
             return stackIn_18_0;
           }
           if (this.field_x instanceof ea) {
@@ -470,7 +470,7 @@ final class tj extends tl {
               if (var5 == null) {
                 throw new RuntimeException();
               }
-              this.field_k = new jk(var7, this.field_q, this.field_w);
+              this.field_k = new ArchiveIndex(var7, this.field_q, this.field_w);
               if (this.field_v != this.field_k.field_g) {
                 throw new RuntimeException();
               }
@@ -484,14 +484,14 @@ final class tj extends tl {
                 this.field_x = (ve) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
               }
               stackIn_50_0 = null;
-              return (jk) (stackIn_50_0);
+              return (ArchiveIndex) (stackIn_50_0);
             }
           } else {
             try {
               if (var5 == null) {
                 throw new RuntimeException();
               }
-              this.field_k = new jk(var7, this.field_q, this.field_w);
+              this.field_k = new ArchiveIndex(var7, this.field_q, this.field_w);
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = decompiledCaughtException;
@@ -503,7 +503,7 @@ final class tj extends tl {
                 this.field_x = (ve) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
               }
               stackIn_31_0 = null;
-              return (jk) (stackIn_31_0);
+              return (ArchiveIndex) (stackIn_31_0);
             }
             if (null != this.field_D) {
               this.field_s.a(this.field_i, 93, var7, this.field_D);
@@ -567,7 +567,7 @@ final class tj extends tl {
             param0 == 0 &&
             !var13.field_q &&
             var13.field_p) {
-            var13.a(true);
+            var13.unlink(true);
             var4 = null;
           }
           if (var4 == null) {
@@ -603,7 +603,7 @@ final class tj extends tl {
                 var4 = this.field_B.a(param2, true, this.field_i, (byte) -80, (byte) 2);
               }
             }
-            this.field_n.a((pg) (var4), true, (long)param2);
+            this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
           }
           if (((ve) (var4)).field_p) {
             stackIn_38_0 = null;
@@ -646,7 +646,7 @@ final class tj extends tl {
                   this.field_E[param2] = (byte) 1;
                 }
                 if (!((ve) (var4)).field_q) {
-                  ((ve) (var4)).a(true);
+                  ((ve) (var4)).unlink(true);
                 }
                 stackIn_106_0 = var4;
                 return (ve) (stackIn_106_0);
@@ -656,11 +656,11 @@ final class tj extends tl {
               decompiledCaughtException = decompiledCaughtParameter0;
               var7 = (Exception) (Object) decompiledCaughtException;
               this.field_E[param2] = (byte)-1;
-              ((ve) (var4)).a(true);
+              ((ve) (var4)).unlink(true);
               if (((ve) (var4)).field_q &&
                 !this.field_B.c((byte) 67)) {
                 var4 = this.field_B.a(param2, true, this.field_i, (byte) -80, (byte) 2);
-                this.field_n.a((pg) (var4), true, (long)param2);
+                this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
               }
               stackIn_115_0 = null;
               return (ve) (stackIn_115_0);
@@ -694,13 +694,13 @@ final class tj extends tl {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (RuntimeException) (Object) decompiledCaughtException;
             this.field_B.a((byte) 0);
-            ((ve) (var4)).a(true);
+            ((ve) (var4)).unlink(true);
             if (!((ve) (var4)).field_q) {
               return null;
             }
             if (!this.field_B.c((byte) 16)) {
               var4 = this.field_B.a(param2, true, this.field_i, (byte) -80, (byte) 2);
-              this.field_n.a((pg) (var4), true, (long)param2);
+              this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
             }
             stackIn_67_0 = null;
             return (ve) (stackIn_67_0);
@@ -714,7 +714,7 @@ final class tj extends tl {
             }
           }
           if (!((ve) (var4)).field_q) {
-            ((ve) (var4)).a(true);
+            ((ve) (var4)).unlink(true);
           }
           stackIn_75_0 = var4;
           return (ve) (stackIn_75_0);
@@ -739,7 +739,7 @@ final class tj extends tl {
             return (byte[]) (stackIn_2_0);
           }
           var4 = var3.c(-108);
-          var3.a(param1);
+          var3.unlink(param1);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -811,14 +811,14 @@ final class tj extends tl {
         RuntimeException var10 = null;
         this.field_n = new di(16);
         this.field_p = 0;
-        this.field_m = new vn();
+        this.field_m = new IntrusiveDeque();
         this.field_r = 0L;
         try {
           this.field_F = param1;
           this.field_i = param0;
           if (this.field_F != null) {
             this.field_j = true;
-            this.field_h = new vn();
+            this.field_h = new IntrusiveDeque();
           } else {
             this.field_j = false;
           }

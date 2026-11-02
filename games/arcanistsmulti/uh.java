@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends pg {
+final class uh extends IntrusiveNode {
     static ri field_i;
     static int field_m;
     static String field_s;
@@ -14,7 +14,7 @@ final class uh extends pg {
     static String field_q;
     int[] field_j;
     static String field_l;
-    static vn field_n;
+    static IntrusiveDeque field_n;
 
     final static void a(int[] param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, byte param8, int[] param9, int param10, int param11, int[] param12, int param13, int[] param14, int param15) {
         int incrementValue$1 = 0;
@@ -46,11 +46,11 @@ final class uh extends pg {
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           param6 = -param3;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (param6 < 0) {
               stackIn_53_0 = -param13;
               if (var17 != 0) {
-                break L0;
+                break scanLoop1;
               }
               param7 = stackIn_53_0;
               while (param7 < 0) {
@@ -114,7 +114,7 @@ final class uh extends pg {
               stackIn_51_1Lifetime1 = param2;
               param11 = stackIn_51_0Lifetime1 + stackIn_51_1Lifetime1;
               param6++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_53_0 = param8;
             break;
@@ -167,7 +167,7 @@ final class uh extends pg {
         }
     }
 
-    final static void a(qb param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -349,6 +349,6 @@ final class uh extends pg {
         field_q = "Increases the power of your flame spells by up to 50%";
         field_l = "Make your way to the islands of Mos Le'Harmless to get your hands on some 'rum', but watch out for the monkeys - they might just rain on your parade.";
         field_i = new ri();
-        field_n = new vn();
+        field_n = new IntrusiveDeque();
     }
 }

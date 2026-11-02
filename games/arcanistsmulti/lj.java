@@ -83,36 +83,36 @@ final class lj extends hg {
     final static void a(boolean param0, int param1) {
         int var2;
         int var3;
-        qb var4;
-        qb var5;
+        Sprite var4;
+        Sprite var5;
         int var6;
-        qb var8;
-        qb var9;
-        qb var10;
-        qb var11;
-        qb var12;
-        qb var13;
-        qb var14;
-        qb var15;
-        qb var16;
-        qb var17;
+        Sprite var8;
+        Sprite var9;
+        Sprite var10;
+        Sprite var11;
+        Sprite var12;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = param1;
-        vn.field_b = ea.field_E[var2];
+        IntrusiveDeque.field_b = ea.field_E[var2];
         wm.field_H[var2] = null;
-        wm.field_H[var2] = new qb(640, 480);
+        wm.field_H[var2] = new Sprite(640, 480);
         wm.field_H[var2].a();
         if (5 != param1 &&
           param1 != 3 &&
           param1 != 2 &&
           4 != param1 &&
           param1 != 1 && (param1 != 7 ||
-          null == jb.field_z &&
+          null == SpriteState.field_z &&
           null == r.field_b)) {
           ql.a(640, 480, 0);
         }
         if (param1 == 0) {
-          var8 = new qb(640, 480);
+          var8 = new Sprite(640, 480);
           var9 = var8;
           var9.a();
           ArcanistsMulti.a(param1, (byte) -26);
@@ -121,7 +121,7 @@ final class lj extends hg {
         }
         if (param1 == 0) {
           var3 = sc.field_U[param1] * wl.field_L[param1].length + tg.field_f[param1];
-          var4 = new qb(640, 480);
+          var4 = new Sprite(640, 480);
           var4.a();
           o.field_F.c(-64 + lm.field_e[param1], var3 - 80);
           j.field_a.c(eo.field_b[param1] - 110, -70 + var3);
@@ -159,7 +159,7 @@ final class lj extends hg {
         if (5 == param1) {
         }
         if (param1 == 6) {
-          var10 = new qb(640, 480);
+          var10 = new Sprite(640, 480);
           var10.a();
           gl.a(371, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].a();
@@ -173,7 +173,7 @@ final class lj extends hg {
           gd.field_mb.c(-(gd.field_mb.field_n / 2) + 320, -5);
         }
         if (7 == param1) {
-          var11 = new qb(640, 480);
+          var11 = new Sprite(640, 480);
           var11.a();
           gl.a(385, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].a();
@@ -187,12 +187,12 @@ final class lj extends hg {
           gd.field_mb.c(320 - gd.field_mb.field_n / 2, -5);
         }
         if (param1 == 9) {
-          var12 = new qb(640, 480);
+          var12 = new Sprite(640, 480);
           var12.a();
           gl.a(330, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].a();
           var12.b(0, 0, 128);
-          var13 = new qb(640, 480);
+          var13 = new Sprite(640, 480);
           var13.a();
           gd.field_mb.c(320 - gd.field_mb.field_n / 2, 35);
           de.d(4, 4, 0, 0, 640, 480);
@@ -204,14 +204,14 @@ final class lj extends hg {
           lj.a(true, -39);
         }
         if (param1 == 8) {
-          var14 = new qb(640, 480);
+          var14 = new Sprite(640, 480);
           var14.a();
           fe.field_o.a(0, 0, 16777215);
           de.d(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].a();
           var14.b(0, 0, 255);
           fe.field_o.c(0, 0);
-          var15 = new qb(640, 480);
+          var15 = new Sprite(640, 480);
           var15.a();
           o.field_F.c(343, -2);
           j.field_a.c(108, 6);
@@ -222,7 +222,7 @@ final class lj extends hg {
           j.field_a.c(108, 6);
         }
         if (param1 == 11) {
-          var16 = new qb(640, 480);
+          var16 = new Sprite(640, 480);
           var16.a();
           gd.field_mb.c(320 - gd.field_mb.field_n / 2 - 72, 10);
           gd.field_mb.c(72 + (-(gd.field_mb.field_n / 2) + 320), 10);
@@ -233,7 +233,7 @@ final class lj extends hg {
           gd.field_mb.c(72 - gd.field_mb.field_n / 2 + 320, 10);
         }
         if (param1 == 12) {
-          var17 = new qb(640, 480);
+          var17 = new Sprite(640, 480);
           var17.a();
           gd.field_mb.c(248 - gd.field_mb.field_n / 2, 0);
           gd.field_mb.c(72 + (320 - gd.field_mb.field_n / 2), 0);

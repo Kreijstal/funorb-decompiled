@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class he {
-    static ab field_e;
-    static vn field_f;
+    static CipherPacketBuffer field_e;
+    static IntrusiveDeque field_f;
     static String field_b;
     static String field_g;
     static int[] field_a;

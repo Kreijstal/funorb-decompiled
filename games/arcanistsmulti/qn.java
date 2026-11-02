@@ -7,7 +7,7 @@ final class qn extends ob implements vb {
     static le field_ob;
     static String field_lb;
     static String field_pb;
-    static vn field_mb;
+    static IntrusiveDeque field_mb;
     static String field_nb;
     static String field_jb;
 
@@ -100,7 +100,7 @@ final class qn extends ob implements vb {
         }
     }
 
-    final static void a(int param0, eg param1, eg param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           bb.field_a = param2;
           an.field_o = param1;
@@ -113,18 +113,18 @@ final class qn extends ob implements vb {
     }
 
     final static void i(int param0) {
-        tf var1 = null;
+        DualLinkNode var1 = null;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
-        tf var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           rc.field_m = 0;
           ie.field_Nb = null;
           pc.field_b = 0;
-          vd.field_d.c(-124);
-          oo.field_B.c(-124);
+          vd.field_d.clear(-124);
+          oo.field_B.clear(-124);
           var1 = ie.field_Qb.f(-118);
           while (var1 != null) {
-            var1.a((byte) 88);
+            var1.unlinkSecondary((byte) 88);
             var1 = ie.field_Qb.a(-1);
           }
           if (param0 < 30) {
@@ -132,10 +132,10 @@ final class qn extends ob implements vb {
           }
           var1Lifetime1 = uc.field_c.f(-63);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.a((byte) 88);
+            var1Lifetime1.unlinkSecondary((byte) 88);
             var1Lifetime1 = uc.field_c.a(-1);
           }
-          jb.field_t = 0;
+          SpriteState.field_t = 0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
         }
@@ -162,8 +162,8 @@ final class qn extends ob implements vb {
           uf.a(param5, param2, param6, param4, -7361, var7, param3, param0);
           return;
         }
-        eg var8 = (eg) null;
-        qn.a(10, (eg) null, (eg) null);
+        ResourceArchive var8 = (ResourceArchive) null;
+        qn.a(10, (ResourceArchive) null, (ResourceArchive) null);
         uf.a(param5, param2, param6, param4, -7361, var7, param3, param0);
     }
 
@@ -275,7 +275,7 @@ final class qn extends ob implements vb {
         field_kb = "Unit cannot use this ability after being damaged";
         field_lb = "Continue";
         field_pb = "Join";
-        field_mb = new vn();
+        field_mb = new IntrusiveDeque();
         field_nb = "Report abuse";
         field_jb = "With spells like this, you just need to click on the location you wish the effect to be centred on and the spell will be activated. Try clicking on a target.";
     }

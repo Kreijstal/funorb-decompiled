@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends pg {
+final class cm extends IntrusiveNode {
     int field_i;
     int field_o;
     int field_k;
     int field_n;
     int field_g;
-    static vn field_l;
+    static IntrusiveDeque field_l;
     int field_m;
     static String field_h;
     static int field_j;
@@ -33,7 +33,7 @@ final class cm extends pg {
 
     static {
         field_h = "Passwords can only contain letters and numbers";
-        field_l = new vn();
+        field_l = new IntrusiveDeque();
         field_j = 49;
     }
 }

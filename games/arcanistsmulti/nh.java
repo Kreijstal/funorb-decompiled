@@ -41,7 +41,7 @@ final class nh extends nn {
           return;
         }
         try {
-          vn.field_f = k.field_k[param1];
+          IntrusiveDeque.field_f = k.field_k[param1];
           ld.field_o = fn.field_c[param1];
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nh.J(" + param0 + ',' + param1 + ')');
@@ -118,7 +118,7 @@ final class nh extends nn {
         int fieldTemp$0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ab var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -138,24 +138,24 @@ final class nh extends nn {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var1 = df.field_z;
-          var2 = var1.e((byte) -107);
+          var2 = var1.readUnsignedByte((byte) -107);
           if (0 == var2) {
             if (uc.field_c == null) {
-              uc.field_c = new mo(128);
+              uc.field_c = new IntrusiveNodeHashTable(128);
               pc.field_b = 0;
             }
-            stackIn_12_0 = (var1.e((byte) -125) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte((byte) -125) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.l(-1);
+            var4_ref_String = var1.readString(-1);
             if (var3_int == 0) {
               var5 = var4_ref_String;
             }
             if (var3_int != 0 ||
               var9 != 0) {
-              var5 = var1.l(-1);
+              var5 = var1.readString(-1);
             }
             var6 = mf.a(-1, var4_ref_String);
-            var7_ref = var1.l(-1);
+            var7_ref = var1.readString(-1);
             var8 = gk.a((CharSequence) ((Object) var4_ref_String), -13);
             if (null == var8) {
               var8 = var4_ref_String;
@@ -163,16 +163,16 @@ final class nh extends nn {
             if (var6 == null) {
               var6 = mf.a(-1, var7_ref);
               if (var6 != null) {
-                uc.field_c.a(var6, (long)var8.hashCode(), (byte) 118);
+                uc.field_c.put(var6, (long)var8.hashCode(), (byte) 118);
               }
             }
             if (null == var6) {
               var6 = new wa();
-              uc.field_c.a(var6, (long)var8.hashCode(), (byte) 126);
+              uc.field_c.put(var6, (long)var8.hashCode(), (byte) 126);
               fieldTemp$1 = pc.field_b;
               pc.field_b = pc.field_b + 1;
               var6.field_Bb = fieldTemp$1;
-              oo.field_B.b(var6, -1);
+              oo.field_B.addLast(var6, -1);
             }
             var6.field_Cb = var4_ref_String;
             var6.field_Gb = var7_ref;
@@ -181,14 +181,14 @@ final class nh extends nn {
           }
           if (1 != var2) {
             if (2 == var2) {
-              if (jb.field_t == 1) {
-                jb.field_t = 2;
+              if (SpriteState.field_t == 1) {
+                SpriteState.field_t = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (jb.field_t == 2) {
-                jb.field_t = 1;
+              if (SpriteState.field_t == 2) {
+                SpriteState.field_t = 1;
               }
               return;
             }
@@ -200,37 +200,37 @@ final class nh extends nn {
               ka.b(false);
               return;
             }
-            jb.field_t = 1;
-            var3 = var1.l(-1);
+            SpriteState.field_t = 1;
+            var3 = var1.readString(-1);
             ie.field_Nb = ((String) (var3)).intern();
-            var4 = var1.e((byte) 110);
+            var4 = var1.readUnsignedByte((byte) 110);
             qo.a(2, var4);
             return;
           }
           if (null == ie.field_Qb) {
-            ie.field_Qb = new mo(128);
+            ie.field_Qb = new IntrusiveNodeHashTable(128);
             rc.field_m = 0;
           }
-          var3Lifetime1 = var1.l(-1);
+          var3Lifetime1 = var1.readString(-1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.l(-1);
-          var5Lifetime1 = var1.l(-1);
+          var4_ref_StringLifetime1 = var1.readString(-1);
+          var5Lifetime1 = var1.readString(-1);
           var6Lifetime1 = im.a(0, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = im.a(0, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              ie.field_Qb.a(var6Lifetime1, (long)gk.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
+              ie.field_Qb.put(var6Lifetime1, (long)gk.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new wa();
-            ie.field_Qb.a(var6Lifetime1, (long)gk.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
+            ie.field_Qb.put(var6Lifetime1, (long)gk.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
             fieldTemp$0 = rc.field_m;
             rc.field_m = rc.field_m + 1;
             var6Lifetime1.field_Bb = fieldTemp$0;
-            vd.field_d.b(var6Lifetime1, -1);
+            vd.field_d.addLast(var6Lifetime1, -1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -238,11 +238,11 @@ final class nh extends nn {
           var6Lifetime1.field_Gb = var5Lifetime1;
           var6Lifetime1.field_Cb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
-          var6Lifetime1.a(true);
-          var7 = (wa) (vd.field_d.b(12623));
+          var6Lifetime1.unlink(true);
+          var7 = (wa) (vd.field_d.first(12623));
           while (null != var7) {
             if (qa.a(false, var6Lifetime1, var7)) {
-              var7 = (wa) (vd.field_d.a(0));
+              var7 = (wa) (vd.field_d.next(0));
               if (var9 == 0) {
                 continue;
               }
@@ -255,7 +255,7 @@ final class nh extends nn {
               return;
             }
           }
-          vd.field_d.b(var6Lifetime1, -1);
+          vd.field_d.addLast(var6Lifetime1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

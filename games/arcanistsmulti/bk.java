@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk extends ag {
-    static ll[] field_L;
+    static IndexedSprite[] field_L;
     static int field_I;
     static String field_K;
     static String field_H;

@@ -3,14 +3,14 @@
  */
 final class ec {
     static String field_a;
-    private qb[] field_f;
+    private Sprite[] field_f;
     static String field_h;
     static String field_e;
     static kc field_d;
     static af field_g;
     static String field_b;
     static String field_c;
-    static qb[] field_i;
+    static Sprite[] field_i;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         gl.a(param4, param0, -27327, param3, this.field_f, param1);
@@ -34,7 +34,7 @@ final class ec {
     }
 
     final static void a(int param0) {
-        uh var1 = (uh) (km.field_a.d(true));
+        uh var1 = (uh) (km.field_a.removeLast(true));
         if (var1 == null) {
           var1 = new uh();
         }
@@ -42,7 +42,7 @@ final class ec {
           return;
         }
         var1.a(de.field_c, de.field_l, (byte) 27, de.field_k, de.field_h, de.field_j, de.field_e, de.field_i);
-        lk.field_j.b(var1, -1);
+        lk.field_j.addLast(var1, -1);
     }
 
     final static void a(byte[] param0, byte param1) {
@@ -83,7 +83,7 @@ final class ec {
           if (34 == param0.length) {
             var2_int = 0;
             kg.field_d[0] = ld.field_n[0];
-            kg.field_d[2] = ug.field_d[0];
+            kg.field_d[2] = IsaacCipher.field_d[0];
             kg.field_d[1] = ud.field_z[0];
             kg.field_d[3] = hi.field_b[0];
             incrementValue$7 = var2_int;
@@ -121,11 +121,11 @@ final class ec {
             incrementValue$15 = var2_int;
             var2_int++;
             var3 = ((255 & param0[incrementValue$13]) << 16) - (-(param0[incrementValue$14] << 8 & 65280) - (255 & param0[incrementValue$15]));
-            for (var4 = 0; ug.field_d.length > var4; var4++) {
-              if (~(ug.field_d[var4][0] << 16) == ~(var3 & 16711680) &&
-                ug.field_d[var4][1] << 8 == (65280 & var3) &&
-                ug.field_d[var4][2] == (var3 & 255)) {
-                kg.field_d[2] = ug.field_d[var4];
+            for (var4 = 0; IsaacCipher.field_d.length > var4; var4++) {
+              if (~(IsaacCipher.field_d[var4][0] << 16) == ~(var3 & 16711680) &&
+                IsaacCipher.field_d[var4][1] << 8 == (65280 & var3) &&
+                IsaacCipher.field_d[var4][2] == (var3 & 255)) {
+                kg.field_d[2] = IsaacCipher.field_d[var4];
               }
             }
             incrementValue$16 = var2_int;
@@ -198,7 +198,7 @@ final class ec {
               kg.field_d[1] = ud.field_z[dg.a(255, (int) param0[incrementValue$2])];
               incrementValue$3 = var2_int;
               var2_int++;
-              kg.field_d[2] = ug.field_d[dg.a((int) param0[incrementValue$3], 255)];
+              kg.field_d[2] = IsaacCipher.field_d[dg.a((int) param0[incrementValue$3], 255)];
               incrementValue$4 = var2_int;
               var2_int++;
               kg.field_d[3] = hi.field_b[dg.a(255, (int) param0[incrementValue$4])];
@@ -235,7 +235,7 @@ final class ec {
         }
     }
 
-    ec(qb[] param0) {
+    ec(Sprite[] param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {

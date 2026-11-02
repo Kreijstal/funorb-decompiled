@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cc {
-    static vn field_e;
+    static IntrusiveDeque field_e;
     private static jm field_f;
     static String field_b;
     static kc field_a;
@@ -49,7 +49,7 @@ final class cc {
 
     static {
         field_b = "Pressing '<col=ffffff><%0></col>' or '<col=ffffff><%2></col>' causes the currently selected unit to leap forwards. This allows you to jump over small gaps.<br>Pressing '<col=ffffff><%1></col>' or '<col=ffffff><%3></col>' causes the currently selected unit to perform a high jump upwards. This can be useful for scaling steep cliffs.<br>These keys also serve to make flying units fly up or down, as well as to make a unit dismount or an Arcanist exit from a tower.";
-        field_e = new vn();
+        field_e = new IntrusiveDeque();
         field_d = new boolean[64];
         field_c = "Exploiting a bug";
     }

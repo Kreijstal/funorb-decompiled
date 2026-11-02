@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd implements qi {
-    static qb field_e;
+    static Sprite field_e;
     static String field_i;
-    static qb[] field_h;
+    static Sprite[] field_h;
     static long field_b;
     static kc field_a;
     static int[] field_c;

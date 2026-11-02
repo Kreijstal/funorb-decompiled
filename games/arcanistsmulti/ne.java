@@ -102,7 +102,7 @@ final class ne {
 
     private final boolean a(int param0, byte param1, int param2) {
         if (param2 == 17) {
-          db.field_a = new w(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, mf.field_d, be.field_l, wj.field_b, pg.field_c, ec.field_g, nj.field_d, this.field_h, this.field_d);
+          db.field_a = new w(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, mf.field_d, be.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, this.field_h, this.field_d);
           return true;
         }
         if (param1 == -64) {
@@ -305,14 +305,14 @@ final class ne {
     final void a(int param0) {
         String var3;
         int var4;
-        qb[] var5;
+        Sprite[] var5;
         na var6;
         na var7;
         na var8;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 3) {
-          var5 = (qb[]) null;
-          ne.a(39, -67, (qb[]) null, -123, 12, 116);
+          var5 = (Sprite[]) null;
+          ne.a(39, -67, (Sprite[]) null, -123, 12, 116);
           if (wi.field_f != null) {
             return;
           }
@@ -393,11 +393,11 @@ final class ne {
         RuntimeException var4_ref = null;
         wa var5 = null;
         int var6 = 0;
-        qb[] var7 = null;
+        Sprite[] var7 = null;
         String var8 = null;
         try {
           if (null != this.field_h && (~qf.field_a != ~this.field_d ||
-            param0 == 2) && jb.field_t == 2) {
+            param0 == 2) && SpriteState.field_t == 2) {
             var8 = this.a((byte) 32);
             var4 = var8;
             var5 = im.a(param2 ^ 13, this.field_h);
@@ -434,8 +434,8 @@ final class ne {
           if (param2 == 13) {
             return;
           }
-          var7 = (qb[]) null;
-          ne.a(-44, -48, (qb[]) null, 59, 24, -88);
+          var7 = (Sprite[]) null;
+          ne.a(-44, -48, (Sprite[]) null, 59, 24, -88);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -596,7 +596,7 @@ final class ne {
         }
     }
 
-    final static void a(int param0, int param1, qb[] param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

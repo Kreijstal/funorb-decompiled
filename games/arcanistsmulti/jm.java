@@ -96,11 +96,11 @@ class jm implements pf, ac {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L4: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     param6 != vf.field_l) {
-                    break L4;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
@@ -113,13 +113,13 @@ class jm implements pf, ac {
                     }
                   }
                   var8_int = 0;
-                  break L4;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[var12 + 1];
                 if (var13Lifetime1 == -1) {
                   if (var14 != ao.field_h[param0]) {
-                    break L4;
+                    break scanLoop1;
                   }
                 } else {
                   if (var13Lifetime1 == param6 &&
@@ -127,10 +127,10 @@ class jm implements pf, ac {
                     var11 = 1;
                   } else {
                     if (param6 <= var13Lifetime1) {
-                      break L4;
+                      break scanLoop1;
                     }
                     if ((qa.field_l[var13Lifetime1] & 255) != var14) {
-                      break L4;
+                      break scanLoop1;
                     }
                   }
                 }
@@ -141,7 +141,7 @@ class jm implements pf, ac {
               var9++;
             }
           }
-          stackIn_6_0 = s.field_e;
+          stackIn_6_0 = IndexedSpriteState.field_e;
           if (-1 == param6) {
             stackIn_7_1 = 1;
           } else {

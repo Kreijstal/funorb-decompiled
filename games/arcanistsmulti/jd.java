@@ -10,7 +10,7 @@ final class jd {
     private int field_b;
     static String field_e;
     static String field_i;
-    static qb[] field_j;
+    static Sprite[] field_j;
     static String field_g;
     private int field_h;
 

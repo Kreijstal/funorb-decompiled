@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class dc extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static aj field_e;
     static int[] field_k;
     static String field_g;
@@ -88,7 +88,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (fi.a((CharSequence) ((Object) var4), 10) &&
-                        !(10 <= dc.a((CharSequence) ((Object) var4), 126))) {
+                        !(10 <= GameAppletShell.a((CharSequence) ((Object) var4), 126))) {
                         this.a("wrongjava", (byte) -121);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -131,7 +131,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = ug.field_k;
+                var1 = IsaacCipher.field_k;
                 if (bd.field_c != null) {
                   var1 = bd.field_c;
                 }
@@ -147,7 +147,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
                 ee.b(true);
                 this.a(-11232);
                 ce.field_m = se.a(o.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
-                this.e((byte) -116);
+                this.initializeClient((byte) -116);
                 tg.field_e = ki.e((byte) -126);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -199,7 +199,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == ug.field_k &&
+          if (this == IsaacCipher.field_k &&
             !jg.field_r) {
             wd.field_b = 0L;
             return;
@@ -220,7 +220,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (ug.field_k == this &&
+          if (IsaacCipher.field_k == this &&
             !jg.field_r) {
             hj.field_d = true;
             if (an.field_l &&
@@ -253,7 +253,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void d(byte param0);
+    abstract void shutdownClient(byte obfuscationGuard);
 
     public final java.applet.AppletContext getAppletContext() {
         RuntimeException var1 = null;
@@ -378,7 +378,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
     abstract void b(boolean param0);
 
     public final void destroy() {
-        if (ug.field_k != this ||
+        if (IsaacCipher.field_k != this ||
           jg.field_r) {
           return;
         }
@@ -437,11 +437,11 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
               if (bd.field_c != null) {
                 var2 = bd.field_c;
                 if (var4 != 0) {
-                  var2 = ug.field_k;
+                  var2 = IsaacCipher.field_k;
                   var2 = in.field_Eb;
                 }
               } else {
-                var2 = ug.field_k;
+                var2 = IsaacCipher.field_k;
                 if (var4 != 0) {
                   var2 = in.field_Eb;
                 }
@@ -491,12 +491,12 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = qj.b(-26572);
-          var4 = rl.field_l[p.field_e];
-          rl.field_l[p.field_e] = var2_long;
+          var4 = rl.field_l[ClientException.field_e];
+          rl.field_l[ClientException.field_e] = var2_long;
           if (0L != var4 &&
             var4 >= var2_long) {
           }
-          p.field_e = 1 + p.field_e & 31;
+          ClientException.field_e = 1 + ClientException.field_e & 31;
           fieldTemp$1 = om.field_H;
           om.field_H = om.field_H + 1;
           if (fieldTemp$1 > 50) {
@@ -515,7 +515,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
               on.field_c.setLocation(ta.field_e, ge.field_i);
             }
           }
-          this.c((byte) -89);
+          this.updateClient((byte) -89);
           if (param0 < 55) {
             this.getCodeBase();
           }
@@ -603,7 +603,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void c(byte param0);
+    abstract void updateClient(byte obfuscationGuard);
 
     private final void a(boolean param0, int param1) {
         Exception exception = null;
@@ -625,7 +625,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
             bd.field_c.destroy();
           }
           try {
-            this.d((byte) -124);
+            this.shutdownClient((byte) -124);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -666,7 +666,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void stop() {
-        if (ug.field_k != this ||
+        if (IsaacCipher.field_k != this ||
           jg.field_r) {
           return;
         }
@@ -727,7 +727,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
           synchronized (var6) {
             ie.field_Pb = k.field_c;
           }
-          this.f((byte) 49);
+          this.releaseClientStatics((byte) 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -736,7 +736,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void e(byte param0);
+    abstract void initializeClient(byte obfuscationGuard);
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
@@ -752,7 +752,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
           var9 = ArcanistsMulti.field_G ? 1 : 0;
           try {
             try {
-              if (null != ug.field_k) {
+              if (null != IsaacCipher.field_k) {
                 kg.field_b = kg.field_b + 1;
                 if (kg.field_b < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -761,7 +761,7 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
                 this.a("alreadyloaded", (byte) -121);
                 return;
               }
-              ug.field_k = this;
+              IsaacCipher.field_k = this;
               if (param3 != 11431) {
                 field_k = (int[]) null;
               }
@@ -850,9 +850,9 @@ public abstract class dc extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void f(byte param0);
+    abstract void releaseClientStatics(byte obfuscationGuard);
 
-    protected dc() {
+    protected GameAppletShell() {
         this.field_d = false;
     }
 

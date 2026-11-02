@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends pg {
+final class fk extends IntrusiveNode {
     static long field_k;
     static String field_i;
     kd field_m;
-    static qb[] field_g;
-    pg field_n;
+    static Sprite[] field_g;
+    IntrusiveNode field_n;
     int field_l;
     static int[] field_h;
     static String field_j;
@@ -21,10 +21,10 @@ final class fk extends pg {
         field_h = null;
     }
 
-    final static qb[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         if (param1 <= 27) {
-          qb var4 = (qb) null;
-          fk.a((nf) null, -111, (ll) null, 35, (byte) -40, (qb) null);
+          Sprite var4 = (Sprite) null;
+          fk.a((nf) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
         }
         return ql.a(1, (byte) 127, param2, param0);
     }
@@ -41,7 +41,7 @@ final class fk extends pg {
         ii.field_f = true;
     }
 
-    final static boolean a(nf param0, int param1, ll param2, int param3, byte param4, qb param5) {
+    final static boolean a(nf param0, int param1, IndexedSprite param2, int param3, byte param4, Sprite param5) {
         int var19 = 0;
         int var20 = 0;
         int stackIn_16_0 = 0;
@@ -200,22 +200,22 @@ final class fk extends pg {
         }
     }
 
-    final static ll[] c(int param0) {
+    final static IndexedSprite[] c(int param0) {
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
-        ll[] var1 = new ll[h.field_J];
+        IndexedSprite[] var1 = new IndexedSprite[h.field_J];
         for (var2 = param0; h.field_J > var2; var2++) {
-          var1[var2] = new ll(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
+          var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
         }
         dk.a(-18229);
         return var1;
     }
 
-    final static void a(qb param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           if (param1 != -23095) {
-            qb var3 = (qb) null;
-            fk.a((qb) null, -12);
+            Sprite var3 = (Sprite) null;
+            fk.a((Sprite) null, -12);
           }
           ec.a(65280);
           de.a(param0.field_A, param0.field_n, param0.field_w);
@@ -231,14 +231,14 @@ final class fk extends pg {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        ab var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         cm var11 = null;
         fe var12 = null;
-        ab var13 = null;
+        CipherPacketBuffer var13 = null;
         fe var14 = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -246,47 +246,47 @@ final class fk extends pg {
             return;
           }
           var13 = df.field_z;
-          var2 = var13.e((byte) 54);
+          var2 = var13.readUnsignedByte((byte) 54);
           if (var2 == 0) {
             var10 = la.b((byte) 12);
             var3 = var10;
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((wk) ((Object) var5)).e((byte) -100);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -100);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((wk) ((Object) var5)).d(-10674);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(-10674);
             }
-            var12 = (fe) (i.field_e.b(param0 ^ -12637));
+            var12 = (fe) (i.field_e.first(param0 ^ -12637));
             if (var12 == null) {
               ka.b(false);
               return;
             }
             var12.field_l = true;
             var12.field_i = var3;
-            var12.a(true);
+            var12.unlink(true);
             return;
           }
           if (var2 == 1) {
-            var11 = (cm) (cc.field_e.b(12623));
+            var11 = (cm) (cc.field_e.first(12623));
             if (var11 == null) {
               ka.b(false);
               return;
             }
-            var11.a(true);
+            var11.unlink(true);
           } else {
             if (var2 != 2) {
               jh.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
               ka.b(false);
             } else {
-              var14 = (fe) (i.field_e.b(12623));
+              var14 = (fe) (i.field_e.first(12623));
               if (var14 == null) {
                 ka.b(false);
                 return;
               }
               var14.field_i = la.b((byte) 12);
               var14.field_l = true;
-              var14.a(true);
+              var14.unlink(true);
             }
           }
           return;
@@ -358,20 +358,20 @@ final class fk extends pg {
         try {
           var2_int = an.field_g;
           var3 = me.field_I;
-          var4 = pg.field_c.field_Z.a(param1, 500);
-          var5 = 6 + pg.field_c.field_Z.c(param1, 500);
+          var4 = IntrusiveNode.field_c.field_Z.a(param1, 500);
+          var5 = 6 + IntrusiveNode.field_c.field_Z.c(param1, 500);
           var6 = 2 + var4 * ga.field_r;
           var7 = ih.a(var2_int, var5, 12, 246);
           var8 = ql.a(param0 + 10, 20, var6, var3);
           de.a(var7, var8, var5, var6, 0);
           de.d(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
-          pg.field_c.field_Z.a(param1, var7 + 3, 1 + (var8 + oc.field_i - pg.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ga.field_r);
+          IntrusiveNode.field_c.field_Z.a(param1, var7 + 3, 1 + (var8 + oc.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ga.field_r);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    fk(kd param0, pg param1) {
+    fk(kd param0, IntrusiveNode param1) {
         try {
           this.field_m = param0;
           this.field_l = param0.f();

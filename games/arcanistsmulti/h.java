@@ -4,9 +4,9 @@
 final class h extends wn {
     static aj field_G;
     static String field_E;
-    private vn field_H;
+    private IntrusiveDeque field_H;
     static String[] field_K;
-    static qb[] field_I;
+    static Sprite[] field_I;
     static int field_J;
 
     final qm a(int param0) {
@@ -15,7 +15,7 @@ final class h extends wn {
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 <= 31) {
-          this.field_H = (vn) null;
+          this.field_H = (IntrusiveDeque) null;
         }
         var2 = new oc(this.field_H);
         var3 = (vi) (var2.b(-109));
@@ -54,7 +54,7 @@ final class h extends wn {
 
     public h() {
         super(0, 0, gi.field_c, mf.field_c, (pf) null, (wc) null);
-        this.field_H = new vn();
+        this.field_H = new IntrusiveDeque();
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -98,7 +98,7 @@ final class h extends wn {
         }
         int var4 = (param1 - this.field_v) / 2;
         if (param0 >= -111) {
-          this.field_H = (vn) null;
+          this.field_H = (IntrusiveDeque) null;
         }
         int var5 = (param2 - this.field_k) / 2;
         oc var6 = new oc(this.field_H);
@@ -142,12 +142,12 @@ final class h extends wn {
     }
 
     final static void j(int param0) {
-        qb var1 = null;
-        qb var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1 = new qb(540, 140);
+          var1 = new Sprite(540, 140);
           fk.a(var1, -23095);
           id.a();
           de.b();
@@ -178,11 +178,11 @@ final class h extends wn {
             throw new IllegalArgumentException();
           }
           var3 = (vi) (param0);
-          this.field_H.a((pg) (var3), (byte) -58);
+          this.field_H.addFirst((IntrusiveNode) (var3), (byte) -58);
           var3.field_G = true;
           var3.a(0, (qm) (this));
           if (param1 != 15637) {
-            this.field_H = (vn) null;
+            this.field_H = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class h extends wn {
         vi var3 = (vi) (var2.b(param0 ^ -68));
         while (var3 != null) {
           if (var3.a((byte) 112)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (vi) (var2.d(param0 ^ -18498));
         }
@@ -224,7 +224,7 @@ final class h extends wn {
         vi var3 = (vi) (var2.b(param0 - 131));
         while (var3 != null) {
           if (var3.g((byte) 45)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (vi) (var2.d(-18502));
         }

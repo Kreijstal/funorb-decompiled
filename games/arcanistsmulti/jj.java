@@ -269,32 +269,32 @@ final class jj {
         field_m = null;
     }
 
-    final void a(wk param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_j = new rh();
         this.field_j.a(param0);
         this.field_f = new rh();
         this.field_f.a(param0);
-        int var2 = param0.e((byte) -95);
+        int var2 = param0.readUnsignedByte((byte) -95);
         if (var2 != 0) {
-          param0.field_g = param0.field_g - 1;
+          param0.position = param0.position - 1;
           this.field_e = new rh();
           this.field_e.a(param0);
           this.field_l = new rh();
           this.field_l.a(param0);
         }
-        var2 = param0.e((byte) 62);
+        var2 = param0.readUnsignedByte((byte) 62);
         if (var2 != 0) {
-          param0.field_g = param0.field_g - 1;
+          param0.position = param0.position - 1;
           this.field_u = new rh();
           this.field_u.a(param0);
           this.field_d = new rh();
           this.field_d.a(param0);
         }
-        var2 = param0.e((byte) 119);
+        var2 = param0.readUnsignedByte((byte) 119);
         if (var2 != 0) {
-          param0.field_g = param0.field_g - 1;
+          param0.position = param0.position - 1;
           this.field_o = new rh();
           this.field_o.a(param0);
           this.field_h = new rh();
@@ -311,8 +311,8 @@ final class jj {
         }
         this.field_n = param0.f(128);
         this.field_w = param0.f(128);
-        this.field_s = param0.n(-98);
-        this.field_p = param0.n(-98);
+        this.field_s = param0.readUnsignedShort(-98);
+        this.field_p = param0.readUnsignedShort(-98);
         this.field_q = new jc();
         this.field_b = new rh();
         this.field_q.a(param0, this.field_b);

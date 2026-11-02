@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih {
-    static qb field_e;
+    static Sprite field_e;
     static kc field_d;
     static int field_f;
     static String field_a;

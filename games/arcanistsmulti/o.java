@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends pg {
+final class o extends IntrusiveNode {
     int field_u;
     int field_l;
     int field_h;
@@ -17,9 +17,9 @@ final class o extends pg {
     static int field_r;
     static int field_s;
     int field_y;
-    static ll[] field_E;
+    static IndexedSprite[] field_E;
     fg field_D;
-    static qb field_F;
+    static Sprite field_F;
     static int field_g;
     int field_p;
     wf field_m;
@@ -30,7 +30,7 @@ final class o extends pg {
     int field_z;
     int field_B;
 
-    final static void a(ll param0, byte param1, int param2, byte param3, int param4, int param5, nf param6) {
+    final static void a(IndexedSprite param0, byte param1, int param2, byte param3, int param4, int param5, nf param6) {
         try {
           if (param1 != -47) {
             field_o = (String) null;

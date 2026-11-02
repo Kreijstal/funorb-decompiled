@@ -8,7 +8,7 @@ final class mm extends jm {
     private int field_q;
     private int field_w;
     static String field_y;
-    private qb[] field_u;
+    private Sprite[] field_u;
     static String field_r;
     static int field_p;
     static String field_t;

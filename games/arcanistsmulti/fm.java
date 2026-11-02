@@ -10,33 +10,33 @@ final class fm {
     long field_d;
 
     final static void a(int param0, boolean param1) {
-        ab var5 = null;
+        CipherPacketBuffer var5 = null;
         int var3 = 0;
         int var3Lifetime1;
         if (param1) {
           var5 = he.field_e;
-          var5.b((byte) -57, param0);
-          var5.field_g = var5.field_g + 1;
-          var3 = var5.field_g;
-          var5.f(2, (byte) -12);
+          var5.writeOpcode((byte) -57, param0);
+          var5.position = var5.position + 1;
+          var3 = var5.position;
+          var5.writeByte(2, (byte) -12);
           var5.a(gh.field_E, 0, (byte) -86, gh.field_E.length);
-          var5.f(q.field_L, (byte) -14);
-          var5.f(q.field_N, (byte) -3);
+          var5.writeByte(q.field_L, (byte) -14);
+          var5.writeByte(q.field_N, (byte) -3);
           var5.a(ng.field_D, 0, (byte) -86, ng.field_D.length);
-          var5.b(var5.field_g - var3, (byte) 43);
+          var5.writeByteLengthAtMark(var5.position - var3, (byte) 43);
           return;
         }
         fm.a(48, false);
-        ab var4 = he.field_e;
-        var4.b((byte) -57, param0);
-        var4.field_g = var4.field_g + 1;
-        var3Lifetime1 = var4.field_g;
-        var4.f(2, (byte) -12);
+        CipherPacketBuffer var4 = he.field_e;
+        var4.writeOpcode((byte) -57, param0);
+        var4.position = var4.position + 1;
+        var3Lifetime1 = var4.position;
+        var4.writeByte(2, (byte) -12);
         var4.a(gh.field_E, 0, (byte) -86, gh.field_E.length);
-        var4.f(q.field_L, (byte) -14);
-        var4.f(q.field_N, (byte) -3);
+        var4.writeByte(q.field_L, (byte) -14);
+        var4.writeByte(q.field_N, (byte) -3);
         var4.a(ng.field_D, 0, (byte) -86, ng.field_D.length);
-        var4.b(var4.field_g - var3Lifetime1, (byte) 43);
+        var4.writeByteLengthAtMark(var4.position - var3Lifetime1, (byte) 43);
     }
 
     public static void a(int param0) {

@@ -3,7 +3,7 @@
  */
 final class bo {
     static volatile int field_e;
-    static qb[] field_a;
+    static Sprite[] field_a;
     static int field_d;
     static boolean field_c;
     static String field_b;
@@ -23,15 +23,15 @@ final class bo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        ab var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!vn.a(var6, 0)) {
+          if (!IntrusiveDeque.a(var6, 0)) {
             stackIn_3_0 = fn.field_h;
             return stackIn_3_0;
           }
-          if (jb.field_t != 2) {
+          if (SpriteState.field_t != 2) {
             stackIn_6_0 = nm.field_e;
             return stackIn_6_0;
           }
@@ -60,12 +60,12 @@ final class bo {
             return stackIn_26_0;
           }
           var5 = he.field_e;
-          var5.b((byte) -63, param2);
-          var5.field_g = var5.field_g + 1;
-          var4 = var5.field_g;
-          var5.f(0, (byte) -80);
+          var5.writeOpcode((byte) -63, param2);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(0, (byte) -80);
           var5.a(param0, param1 ^ -23357);
-          var5.b(-var4 + var5.field_g, (byte) 43);
+          var5.writeByteLengthAtMark(-var4 + var5.position, (byte) 43);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

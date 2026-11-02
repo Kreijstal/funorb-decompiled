@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb extends pg {
+final class pb extends IntrusiveNode {
     byte[] field_j;
-    static vn field_m;
+    static IntrusiveDeque field_m;
     static int field_g;
     boolean field_k;
     static int field_h;
@@ -167,8 +167,8 @@ final class pb extends pg {
           }
           return;
         }
-        if (p.field_j != null) {
-          mc.field_b.a(p.field_j, var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
+        if (ClientException.field_j != null) {
+          mc.field_b.a(ClientException.field_j, var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
           var4Lifetime2 = -mc.field_b.field_C - 32 + (64 + (128 + (bo.field_d + 32)));
           mc.field_b.a("Orb coins to purchase", var6 + 32 + 32, var4Lifetime2, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
           ih.field_e.c(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime2 + 16);
@@ -304,29 +304,29 @@ final class pb extends pg {
     }
 
     final static void a(int param0, int param1, f param2) {
-        ab var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = he.field_e;
-          ab var3 = var6;
-          var6.b((byte) -80, param1);
-          var6.field_g = var6.field_g + 1;
+          CipherPacketBuffer var3 = var6;
+          var6.writeOpcode((byte) -80, param1);
+          var6.position = var6.position + 1;
           if (param0 != 32) {
             f var5 = (f) null;
             pb.a(-102, -101, (f) null);
           }
-          var4 = var6.field_g;
-          var6.f(1, (byte) -89);
+          var4 = var6.position;
+          var6.writeByte(1, (byte) -89);
           if (param2.field_k != null) {
-            var6.f(param2.field_k.length, (byte) -64);
+            var6.writeByte(param2.field_k.length, (byte) -64);
             var6.a(param2.field_k, 0, (byte) -86, param2.field_k.length);
           } else {
-            var6.f(0, (byte) -92);
+            var6.writeByte(0, (byte) -92);
           }
           var6.a(true, var4);
-          var6.field_g = var6.field_g - 4;
-          param2.field_j = var6.d(-10674);
-          var6.b(var6.field_g - var4, (byte) 43);
+          var6.position = var6.position - 4;
+          param2.field_j = var6.readInt(-10674);
+          var6.writeByteLengthAtMark(var6.position - var4, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "pb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -336,7 +336,7 @@ final class pb extends pg {
     }
 
     static {
-        field_m = new vn();
+        field_m = new IntrusiveDeque();
         field_i = "<%0> is offering an unrated rematch.";
         field_h = 0;
         field_l = "Shields you and your minions up to 5 points per round";

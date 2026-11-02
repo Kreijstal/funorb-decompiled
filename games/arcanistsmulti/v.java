@@ -288,7 +288,7 @@ final class v {
         return false;
     }
 
-    final static eg a(byte param0, boolean param1, boolean param2, int param3, int param4) {
+    final static ResourceArchive a(byte param0, boolean param1, boolean param2, int param3, int param4) {
         if (param0 == -93) {
           return me.a(param3, param2, param0 + 2097245, param1, param4, false);
         }

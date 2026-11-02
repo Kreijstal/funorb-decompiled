@@ -11,7 +11,7 @@ abstract class qk extends ob {
     private int field_mb;
     private int field_ob;
     private db field_rb;
-    static qb[] field_lb;
+    static Sprite[] field_lb;
     static String field_pb;
 
     final static boolean k(byte param0) {
@@ -29,7 +29,7 @@ abstract class qk extends ob {
         RuntimeException var3 = null;
         try {
           if (null != this.field_sb) {
-            this.field_sb.a(true);
+            this.field_sb.unlink(true);
           }
           if (param1 != null) {
             param1.a(param1.field_k, this.field_mb + 6, param1.field_v, 6, param0 ^ -55);
@@ -127,7 +127,7 @@ abstract class qk extends ob {
           if (param1 < -120) {
             return false;
           }
-          field_lb = (qb[]) null;
+          field_lb = (Sprite[]) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

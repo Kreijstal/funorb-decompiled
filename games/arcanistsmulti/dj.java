@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dj extends tf {
+abstract class dj extends DualLinkNode {
     private static StringBuilder field_F;
     int field_H;
     private static int field_A;
@@ -15,7 +15,7 @@ abstract class dj extends tf {
     private static int field_n;
     int field_m;
     int field_C;
-    private s[] field_s;
+    private IndexedSpriteState[] field_s;
     private static int field_u;
     private static int field_J;
     private static int field_G;
@@ -65,7 +65,7 @@ abstract class dj extends tf {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = dc.a(var10, 126);
+                                  var9_int = GameAppletShell.a(var10, 126);
                                   var4 = var4 + this.field_s[var9_int].field_g;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ abstract class dj extends tf {
         this.b(param0, param1 - this.b(param0) / 2, param2);
     }
 
-    final void a(s[] param0, int[] param1) {
+    final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -311,7 +311,7 @@ abstract class dj extends tf {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_G = dc.a(var4, 126);
+                field_G = GameAppletShell.a(var4, 126);
               }
             } else {
               field_A = field_J;
@@ -387,7 +387,7 @@ abstract class dj extends tf {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = dc.a(var18, 126);
+                                    var16_int = GameAppletShell.a(var18, 126);
                                     var4 = var4 + this.field_s[var16_int].field_g;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -639,7 +639,7 @@ abstract class dj extends tf {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        s var11_ref_s = null;
+        IndexedSpriteState var11_ref_s = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -668,7 +668,7 @@ abstract class dj extends tf {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = dc.a(var13, 127);
+                                  var10 = GameAppletShell.a(var13, 127);
                                   var11_ref_s = this.field_s[var10];
                                   if (this.field_x == null) {
                                     stackIn_27_0 = var11_ref_s.field_k;

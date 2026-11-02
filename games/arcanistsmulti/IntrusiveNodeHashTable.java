@@ -1,71 +1,71 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo {
+final class IntrusiveNodeHashTable {
     static String field_l;
     static kc field_o;
-    private int field_e;
-    private tf[] field_n;
+    private int bucketCount;
+    private DualLinkNode[] buckets;
     static int field_p;
     static String field_d;
-    static qb[] field_a;
+    static Sprite[] field_a;
     static int field_h;
-    private int field_i;
+    private int traversalIndex;
     static String field_g;
     static String field_f;
-    private tf field_k;
-    private tf field_c;
-    static qb[] field_b;
+    private DualLinkNode field_k;
+    private DualLinkNode field_c;
+    static Sprite[] field_b;
     private long field_m;
     static String field_j;
 
-    final tf a(int param0) {
+    final DualLinkNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        tf var4;
-        tf var5;
-        tf var9;
-        tf var12;
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var9;
+        DualLinkNode var12;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        if (param0 <= ~this.field_i) {
+        if (param0 <= ~this.traversalIndex) {
           do {
-            if (this.field_i >= this.field_e) {
+            if (this.traversalIndex >= this.bucketCount) {
               return null;
             }
-            fieldTemp$1 = this.field_i;
-            this.field_i = this.field_i + 1;
-            var4 = this.field_n[fieldTemp$1].field_l;
+            fieldTemp$1 = this.traversalIndex;
+            this.traversalIndex = this.traversalIndex + 1;
+            var4 = this.buckets[fieldTemp$1].secondaryNext;
             var5 = var4;
-          } while (var4 == this.field_n[-1 + this.field_i]);
-          this.field_k = var5.field_l;
+          } while (var4 == this.buckets[-1 + this.traversalIndex]);
+          this.field_k = var5.secondaryNext;
           return var5;
         }
-        if (this.field_k != this.field_n[this.field_i - 1]) {
+        if (this.field_k != this.buckets[this.traversalIndex - 1]) {
           var12 = this.field_k;
-          this.field_k = var12.field_l;
+          this.field_k = var12.secondaryNext;
           return var12;
         }
         do {
-          if (this.field_i >= this.field_e) {
+          if (this.traversalIndex >= this.bucketCount) {
             return null;
           }
-          fieldTemp$0 = this.field_i;
-          this.field_i = this.field_i + 1;
-          var4 = this.field_n[fieldTemp$0].field_l;
+          fieldTemp$0 = this.traversalIndex;
+          this.traversalIndex = this.traversalIndex + 1;
+          var4 = this.buckets[fieldTemp$0].secondaryNext;
           var9 = var4;
-        } while (var4 == this.field_n[-1 + this.field_i]);
-        this.field_k = var9.field_l;
+        } while (var4 == this.buckets[-1 + this.traversalIndex]);
+        this.field_k = var9.secondaryNext;
         return var9;
     }
 
-    final tf f(int param0) {
-        this.field_i = 0;
+    final DualLinkNode f(int param0) {
+        this.traversalIndex = 0;
         int var2 = -85 / ((param0 - 26) / 58);
         return this.a(-1);
     }
 
-    final static fg a(byte param0, eg param1, int param2) {
+    final static fg a(byte param0, ResourceArchive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -101,23 +101,23 @@ final class mo {
         }
     }
 
-    final tf d(int param0) {
-        tf var3 = null;
+    final DualLinkNode getNextWithSameKey(int obfuscationGuard) {
+        DualLinkNode var3 = null;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_c) {
           return null;
         }
-        tf var2 = this.field_n[(int)((long)(-1 + this.field_e) & this.field_m)];
+        DualLinkNode var2 = this.buckets[(int)((long)(-1 + this.bucketCount) & this.field_m)];
         while (this.field_c != var2) {
-          if (this.field_c.field_k == this.field_m) {
+          if (this.field_c.secondaryKey == this.field_m) {
             var3 = this.field_c;
-            this.field_c = this.field_c.field_l;
+            this.field_c = this.field_c.secondaryNext;
             return var3;
           }
-          this.field_c = this.field_c.field_l;
+          this.field_c = this.field_c.secondaryNext;
         }
-        if (param0 >= -12) {
-          return (tf) null;
+        if (obfuscationGuard >= -12) {
+          return (DualLinkNode) null;
         }
         this.field_c = null;
         return null;
@@ -125,7 +125,7 @@ final class mo {
 
     final static void g(int param0) {
         if (param0 != -1) {
-          field_b = (qb[]) null;
+          field_b = (Sprite[]) null;
           ff.a(true, kf.field_a, (byte) -97, on.field_d);
           di.field_h = true;
           return;
@@ -247,7 +247,7 @@ final class mo {
     public static void c(int param0) {
         field_l = null;
         if (param0 != 0) {
-          mo.b(31);
+          IntrusiveNodeHashTable.b(31);
           field_d = null;
           field_j = null;
           field_a = null;
@@ -266,60 +266,60 @@ final class mo {
         field_o = null;
     }
 
-    final void a(tf param0, long param1, byte param2) {
-        tf var5 = null;
+    final void put(DualLinkNode node, long key, byte obfuscationGuard) {
+        DualLinkNode var5 = null;
         try {
-          if (null != param0.field_i) {
-            param0.a((byte) 88);
+          if (null != node.secondaryPrevious) {
+            node.unlinkSecondary((byte) 88);
           }
-          var5 = this.field_n[(int)((long)(this.field_e - 1) & param1)];
-          param0.field_i = var5.field_i;
-          param0.field_l = var5;
-          param0.field_i.field_l = param0;
-          param0.field_l.field_i = param0;
-          if (param2 <= 106) {
-            mo.a(109, true, 64);
+          var5 = this.buckets[(int)((long)(this.bucketCount - 1) & key)];
+          node.secondaryPrevious = var5.secondaryPrevious;
+          node.secondaryNext = var5;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
+          if (obfuscationGuard <= 106) {
+            IntrusiveNodeHashTable.a(109, true, 64);
           }
-          param0.field_k = param1;
+          node.secondaryKey = key;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mo.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "mo.I(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
         }
     }
 
-    final tf a(long param0, byte param1) {
-        tf var5 = null;
+    final DualLinkNode get(long key, byte obfuscationGuard) {
+        DualLinkNode var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
-        this.field_m = param0;
-        tf var4 = this.field_n[(int)(param0 & (long)(this.field_e - 1))];
-        this.field_c = var4.field_l;
+        this.field_m = key;
+        DualLinkNode var4 = this.buckets[(int)(key & (long)(this.bucketCount - 1))];
+        this.field_c = var4.secondaryNext;
         while (var4 != this.field_c) {
-          if (param0 == this.field_c.field_k) {
+          if (key == this.field_c.secondaryKey) {
             var5 = this.field_c;
-            this.field_c = this.field_c.field_l;
+            this.field_c = this.field_c.secondaryNext;
             return var5;
           }
-          this.field_c = this.field_c.field_l;
+          this.field_c = this.field_c.secondaryNext;
         }
-        if (param1 > -61) {
-          return (tf) null;
+        if (obfuscationGuard > -61) {
+          return (DualLinkNode) null;
         }
         this.field_c = null;
         return null;
     }
 
-    mo(int param0) {
+    IntrusiveNodeHashTable(int param0) {
         int var2 = 0;
-        tf dupTemp$1 = null;
-        tf var3;
-        this.field_i = 0;
-        this.field_e = param0;
-        this.field_n = new tf[param0];
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
+        this.traversalIndex = 0;
+        this.bucketCount = param0;
+        this.buckets = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new tf();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
-          this.field_n[var2] = dupTemp$1;
-          var3.field_l = var3;
-          var3.field_i = var3;
+          this.buckets[var2] = dupTemp$1;
+          var3.secondaryNext = var3;
+          var3.secondaryPrevious = var3;
         }
     }
 
@@ -335,25 +335,25 @@ final class mo {
           oh.field_k.g();
           lf.field_a.g();
           if (param0 != 200) {
-            field_a = (qb[]) null;
+            field_a = (Sprite[]) null;
           }
           ja.field_u = ja.field_u - 1;
           if (ja.field_u == 0) {
             ja.field_u = 200;
-            var1 = (fk) (qn.field_mb.b(12623));
+            var1 = (fk) (qn.field_mb.first(12623));
             while (var1 != null) {
-              if (!var1.field_n.b((byte) -93)) {
-                var1.a(true);
+              if (!var1.field_n.isLinked((byte) -93)) {
+                var1.unlink(true);
               }
-              var1 = (fk) (qn.field_mb.a(0));
+              var1 = (fk) (qn.field_mb.next(0));
             }
             if (he.field_f != null) {
-              var1Lifetime1 = (fk) (he.field_f.b(12623));
+              var1Lifetime1 = (fk) (he.field_f.first(12623));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_n.b((byte) -44)) {
-                  var1Lifetime1.a(true);
+                if (!var1Lifetime1.field_n.isLinked((byte) -44)) {
+                  var1Lifetime1.unlink(true);
                 }
-                var1Lifetime1 = (fk) (he.field_f.a(0));
+                var1Lifetime1 = (fk) (he.field_f.next(0));
               }
             }
           }

@@ -34,7 +34,7 @@ final class hi {
           } else {
             var2Lifetime3 = new wd();
           }
-          jk.a(-113, new v((qi) (var2Lifetime3)));
+          ArchiveIndex.a(-113, new v((qi) (var2Lifetime3)));
           return;
         }
         hi.a(23, true);
@@ -44,7 +44,7 @@ final class hi {
         } else {
           var2Lifetime2 = new wd();
         }
-        jk.a(-113, new v((qi) (var2Lifetime2)));
+        ArchiveIndex.a(-113, new v((qi) (var2Lifetime2)));
     }
 
     static {

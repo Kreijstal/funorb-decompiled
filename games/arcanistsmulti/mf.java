@@ -39,7 +39,7 @@ final class mf {
             var6 = (String) null;
             mf.a(-34, (String) null);
           }
-          var3 = (wa) (uc.field_c.a((long)var2.hashCode(), (byte) -64));
+          var3 = (wa) (uc.field_c.get((long)var2.hashCode(), (byte) -64));
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_Cb);
             var4 = gk.a(var8, param0 - 12);
@@ -50,7 +50,7 @@ final class mf {
               stackIn_17_0 = var3;
               return stackIn_17_0;
             }
-            var3 = (wa) (uc.field_c.d(param0 ^ 82));
+            var3 = (wa) (uc.field_c.getNextWithSameKey(param0 ^ 82));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,14 +76,14 @@ final class mf {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           si.field_l = param0;
-          var2 = (fk) (qn.field_mb.b(12623));
+          var2 = (fk) (qn.field_mb.first(12623));
           while (var2 != null) {
-            if (var2.field_n.b((byte) -119)) {
+            if (var2.field_n.isLinked((byte) -119)) {
               var2.field_m.c(si.field_l * var2.field_l + 128 >> 8);
             } else {
-              var2.a(true);
+              var2.unlink(true);
             }
-            var2 = (fk) (qn.field_mb.a(0));
+            var2 = (fk) (qn.field_mb.next(0));
           }
           if (param1 != 21298) {
             return;
@@ -91,14 +91,14 @@ final class mf {
           if (null == he.field_f) {
             return;
           }
-          var2Lifetime1 = (fk) (he.field_f.b(12623));
+          var2Lifetime1 = (fk) (he.field_f.first(12623));
           while (var2Lifetime1 != null) {
-            if (!var2Lifetime1.field_n.b((byte) -36)) {
-              var2Lifetime1.a(true);
+            if (!var2Lifetime1.field_n.isLinked((byte) -36)) {
+              var2Lifetime1.unlink(true);
             } else {
               var2Lifetime1.field_m.c(var2Lifetime1.field_l * si.field_l + 128 >> 8);
             }
-            var2Lifetime1 = (fk) (he.field_f.a(0));
+            var2Lifetime1 = (fk) (he.field_f.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

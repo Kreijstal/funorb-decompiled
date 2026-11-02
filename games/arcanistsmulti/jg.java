@@ -6,8 +6,8 @@ final class jg {
     int field_d;
     int field_m;
     int field_b;
-    static ll[] field_c;
-    static ll[] field_l;
+    static IndexedSprite[] field_c;
+    static IndexedSprite[] field_l;
     int field_k;
     kc field_a;
     String field_e;
@@ -32,7 +32,7 @@ final class jg {
         if (~this.field_h == ~qf.field_a) {
           return 1;
         }
-        if (jb.field_t == 2 &&
+        if (SpriteState.field_t == 2 &&
           kl.a(this.field_n, 1)) {
           return 1;
         }
@@ -45,27 +45,27 @@ final class jg {
 
     final static void a(int param0) {
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
-        if (null == jb.field_z) {
+        if (null == SpriteState.field_z) {
           return;
         }
         if (param0 != -3) {
-          field_c = (ll[]) null;
-          if ((jb.field_z.field_D & 1 << jb.field_z.field_I) != 0) {
+          field_c = (IndexedSprite[]) null;
+          if ((SpriteState.field_z.field_D & 1 << SpriteState.field_z.field_I) != 0) {
             ce.field_g[10] = uh.field_s;
             return;
           }
-          if (0 != jb.field_z.field_D) {
+          if (0 != SpriteState.field_z.field_D) {
             ce.field_g[10] = pe.field_Nb;
             return;
           }
           ce.field_g[10] = cn.field_K;
           return;
         }
-        if ((jb.field_z.field_D & 1 << jb.field_z.field_I) != 0) {
+        if ((SpriteState.field_z.field_D & 1 << SpriteState.field_z.field_I) != 0) {
           ce.field_g[10] = uh.field_s;
           return;
         }
-        if (0 != jb.field_z.field_D) {
+        if (0 != SpriteState.field_z.field_D) {
           ce.field_g[10] = pe.field_Nb;
           return;
         }

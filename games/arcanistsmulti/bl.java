@@ -28,11 +28,11 @@ final class bl extends ee implements bn, ak {
               var6 = vh.a(true, (byte) 29, ib.field_v[var3_int]);
               var4 = var4 + da.field_c;
               var7 = vd.field_l - (var6 >> 1);
-              if (bj.a(param0, 30, var4, var6 + (la.field_d << 1), mo.field_h + (bm.field_h << 1), param2, -la.field_d + var7)) {
+              if (bj.a(param0, 30, var4, var6 + (la.field_d << 1), IntrusiveNodeHashTable.field_h + (bm.field_h << 1), param2, -la.field_d + var7)) {
                 stackIn_6_0 = var5;
                 return stackIn_6_0;
               }
-              var4 = var4 + (mo.field_h + da.field_c + (bm.field_h << 1));
+              var4 = var4 + (IntrusiveNodeHashTable.field_h + da.field_c + (bm.field_h << 1));
             }
             var3_int++;
           }
@@ -135,7 +135,7 @@ final class bl extends ee implements bn, ak {
             for (var14 = 0; param3.field_D.length > var14; var14++) {
               var15 = param3.field_D[var14];
               if (var15 == -1) {
-                var8[var12Lifetime1 + var14] = mo.field_j;
+                var8[var12Lifetime1 + var14] = IntrusiveNodeHashTable.field_j;
                 var9[var12Lifetime1 + var14] = param3.field_z[var14];
                 var10[var12Lifetime1 + var14] = param3.field_D[var14];
               } else {
@@ -215,7 +215,7 @@ final class bl extends ee implements bn, ak {
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4 = (oh) (la.field_b.b(12623));
+          var4 = (oh) (la.field_b.first(12623));
           var1 = var4;
           if (var1 == null) {
             return false;

@@ -5,10 +5,10 @@ import java.util.*;
 
 class df extends qm implements a {
     static String field_A;
-    vn field_B;
+    IntrusiveDeque field_B;
     static int field_y;
     static String field_x;
-    static ab field_z;
+    static CipherPacketBuffer field_z;
 
     final boolean b(int param0, qm param1) {
         RuntimeException var3 = null;
@@ -23,13 +23,13 @@ class df extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (this.field_B.b(true)) {
+          if (this.field_B.isEmpty(true)) {
             return false;
           }
           var8 = new oc(this.field_B);
           var4 = (qm) (var8.b(-73));
           if (param0 != 2) {
-            this.field_B = (vn) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           while (var4 != null) {
             if (var4.d(-2116)) {
@@ -76,7 +76,7 @@ class df extends qm implements a {
           var9 = new oc(this.field_B);
           var8 = (qm) (var9.b(-127));
           while (var8 != null) {
-            if (var8.b((byte) -66)) {
+            if (var8.isLinked((byte) -66)) {
               if (var8.d(-2116) &&
                 var8.a(param0, (byte) -122, param2, param3)) {
                 return true;
@@ -255,7 +255,7 @@ class df extends qm implements a {
 
     df(int param0, int param1, int param2, int param3, pf param4) {
         super(param0, param1, param2, param3, param4, (wc) null);
-        this.field_B = new vn();
+        this.field_B = new IntrusiveDeque();
     }
 
     void a(byte param0, int param1, int param2, int param3) {
@@ -287,7 +287,7 @@ class df extends qm implements a {
           return;
         }
         try {
-          this.field_B.b(param1, -1);
+          this.field_B.addLast(param1, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "df.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -309,7 +309,7 @@ class df extends qm implements a {
           var12 = new oc(this.field_B);
           var10 = (qm) (var12.b(-46));
           while (var10 != null) {
-            if (var10.b((byte) -105)) {
+            if (var10.isLinked((byte) -105)) {
               if (var10.a(param0, param1, param2, param3 + this.field_j, 89, param5, this.field_n + param6)) {
                 return true;
               }
@@ -374,7 +374,7 @@ class df extends qm implements a {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        ab var27 = null;
+        CipherPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var3Lifetime1;
@@ -383,16 +383,16 @@ class df extends qm implements a {
         var26 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var27 = field_z;
-          var2 = var27.e((byte) -127);
+          var2 = var27.readUnsignedByte((byte) -127);
           if (param0) {
             return;
           }
           if (var2 == 0) {
-            var3 = var27.n(-98);
-            var4_ref = (rf) (ef.field_u.b(12623));
+            var3 = var27.readUnsignedShort(-98);
+            var4_ref = (rf) (ef.field_u.first(12623));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_i) {
-                var4_ref = (rf) (ef.field_u.a(0));
+                var4_ref = (rf) (ef.field_u.next(0));
                 continue;
               }
               break;
@@ -401,9 +401,9 @@ class df extends qm implements a {
               ka.b(false);
               return;
             }
-            var5 = var27.e((byte) 112);
+            var5 = var27.readUnsignedByte((byte) 112);
             if (var5 == 0) {
-              var4_ref.a(true);
+              var4_ref.unlink(true);
               return;
             }
             var6 = var4_ref.field_m;
@@ -412,10 +412,10 @@ class df extends qm implements a {
             lc.field_q[0].field_j = false;
             lc.field_q[0].field_f = null;
             for (var8_int = 1; var5 > var8_int; var8_int++) {
-              lc.field_q[var8_int].field_e = var27.l(-1);
+              lc.field_q[var8_int].field_e = var27.readString(-1);
               lc.field_q[var8_int].field_j = false;
-              if (var27.e((byte) 35) == 1) {
-                lc.field_q[var8_int].field_f = var27.l(-1);
+              if (var27.readUnsignedByte((byte) 35) == 1) {
+                lc.field_q[var8_int].field_f = var27.readString(-1);
               } else {
                 lc.field_q[var8_int].field_f = null;
               }
@@ -430,16 +430,16 @@ class df extends qm implements a {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var27.e((byte) 97);
+            var18 = var27.readUnsignedByte((byte) 97);
             if (var18 <= 0) {
-              var4_ref.a(true);
+              var4_ref.unlink(true);
               return;
             }
             for (var19 = 0; var19 < var18; var19++) {
-              var20 = var27.e((byte) 107);
+              var20 = var27.readUnsignedByte((byte) 107);
               var21 = lc.field_q[var20].field_e;
-              var22 = var27.c(-943038560);
-              var24 = var27.field_g;
+              var22 = var27.readLong(-943038560);
+              var24 = var27.position;
               if (var6 > var19) {
                 var8[0][var12] = var21;
                 var9[0][var12] = lc.field_q[var20].field_f;
@@ -447,7 +447,7 @@ class df extends qm implements a {
                 for (var25 = 0; var7 > var25; var25++) {
                   incrementValue$0 = var15;
                   var15++;
-                  var35[0][incrementValue$0] = var27.d(-10674);
+                  var35[0][incrementValue$0] = var27.readInt(-10674);
                 }
                 var12++;
               }
@@ -456,12 +456,12 @@ class df extends qm implements a {
                 var8[1][var13] = ah.field_b;
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
-                var27.field_g = var24;
+                var27.position = var24;
                 var13++;
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
-                  var35[1][incrementValue$1] = var27.d(-10674);
+                  var35[1][incrementValue$1] = var27.readInt(-10674);
                 }
               }
               if (var6 > var14 &&
@@ -470,25 +470,25 @@ class df extends qm implements a {
                 var8[2][var14] = var21;
                 var9[2][var14] = lc.field_q[var20].field_f;
                 var34[2][var14] = var22;
-                var27.field_g = var24;
+                var27.position = var24;
                 var14++;
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
-                  var35[2][incrementValue$2] = var27.d(-10674);
+                  var35[2][incrementValue$2] = var27.readInt(-10674);
                 }
               }
             }
-            var4_ref.a(true);
+            var4_ref.unlink(true);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.n(-98);
-            var27.c(-943038560);
-            var4 = (fj) (me.field_O.b(12623));
+            var3Lifetime1 = var27.readUnsignedShort(-98);
+            var27.readLong(-943038560);
+            var4 = (fj) (me.field_O.first(12623));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_k) {
-                var4 = (fj) (me.field_O.a(0));
+                var4 = (fj) (me.field_O.next(0));
                 continue;
               }
               break;
@@ -499,7 +499,7 @@ class df extends qm implements a {
             }
             stackIn_54_0 = var4;
             stackIn_55_1 = !(param0);
-            ((fj) (Object) stackIn_54_0).a(stackIn_55_1);
+            ((fj) (Object) stackIn_54_0).unlink(stackIn_55_1);
             return;
           }
           jh.a((Throwable) null, "HS1: " + nn.g((byte) -25), (byte) 20);
@@ -548,7 +548,7 @@ class df extends qm implements a {
 
     boolean d(int param0) {
         if (param0 != -2116) {
-          this.field_B = (vn) null;
+          this.field_B = (IntrusiveDeque) null;
         }
         return this.e(852710177) != null ? true : false;
     }
@@ -568,7 +568,7 @@ class df extends qm implements a {
           var5 = new oc(this.field_B);
           var6 = (qm) (var5.b(-83));
           while (var6 != null) {
-            if (var6.b((byte) -121)) {
+            if (var6.isLinked((byte) -121)) {
               var6.a(param0, param1 + this.field_n, 170, param3 + this.field_j);
               var6 = (qm) (var5.d(-18502));
               continue;
@@ -658,7 +658,7 @@ class df extends qm implements a {
           var7 = new oc(this.field_B);
           var8 = (qm) (var7.b(-78));
           while (var8 != null) {
-            if (var8.b((byte) -99)) {
+            if (var8.isLinked((byte) -99)) {
               var8.a(param0, -20592, param2, this.field_j + param3, this.field_n + param4, param5);
               var8 = (qm) (var7.d(-18502));
               continue;
@@ -705,7 +705,7 @@ class df extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (this.field_B.b(true)) {
+          if (this.field_B.isEmpty(true)) {
             return false;
           }
           if (param1 != 9555) {
@@ -759,7 +759,7 @@ class df extends qm implements a {
           var8 = new oc(this.field_B);
           var9 = (qm) (var8.b(-113));
           while (var9 != null) {
-            if (var9.b((byte) -80)) {
+            if (var9.isLinked((byte) -80)) {
               if (var9.d(-2116) &&
                 var9.a(param0, param1, param2, param3, param4, 0, param6)) {
                 return true;

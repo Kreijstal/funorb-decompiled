@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sc extends ej {
-    private qb field_Y;
+    private Sprite field_Y;
     static String field_S;
     static aj field_W;
     private int field_X;
@@ -17,16 +17,16 @@ final class sc extends ej {
     final void a(byte param0, int param1, int param2, int param3) {
         String var17 = null;
         ac var35 = null;
-        qb var19 = null;
-        qb var20 = null;
-        qb var21 = null;
+        Sprite var19 = null;
+        Sprite var20 = null;
+        Sprite var21 = null;
         ac var36 = null;
-        qb var23 = null;
-        qb var24 = null;
-        qb var29 = null;
-        qb var30 = null;
-        qb var32 = null;
-        qb var33 = null;
+        Sprite var23 = null;
+        Sprite var24 = null;
+        Sprite var29 = null;
+        Sprite var30 = null;
+        Sprite var32 = null;
+        Sprite var33 = null;
         String var5 = null;
         int var9 = 0;
         int var10 = 0;
@@ -55,14 +55,14 @@ final class sc extends ej {
           }
           super.a((byte) -58, param1, param2, param3);
           if (param0 > -52) {
-            this.field_Y = (qb) null;
+            this.field_Y = (Sprite) null;
           }
           var6 = this.field_J.a(-103);
           var35 = (ac) ((Object) this.field_r);
           var9 = this.field_n + param1;
           var10 = var35.a(param3, -13372, (qm) (this)) + (var35.a((qm) (this), -126).a((byte) -58) >> 1);
           if (da.field_f != var6 &&
-            ug.field_c != var6) {
+            IsaacCipher.field_c != var6) {
             if (var6 == ra.field_k) {
               var19 = qk.field_lb[2];
               var19.b(var9, var10 - (var19.field_y >> 1), 256);
@@ -79,7 +79,7 @@ final class sc extends ej {
           var11 = var21.field_n << 1;
           var12 = var21.field_w << 1;
           if (null == this.field_Y) {
-            this.field_Y = new qb(var11, var12);
+            this.field_Y = new Sprite(var11, var12);
             fk.a(this.field_Y, -23095);
             var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
@@ -87,7 +87,7 @@ final class sc extends ej {
             return;
           }
           if (var11 > this.field_Y.field_q) {
-            this.field_Y = new qb(var11, var12);
+            this.field_Y = new Sprite(var11, var12);
             fk.a(this.field_Y, -23095);
             var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
@@ -102,14 +102,14 @@ final class sc extends ej {
             this.field_Y.b(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
-          this.field_Y = new qb(var11, var12);
+          this.field_Y = new Sprite(var11, var12);
           fk.a(this.field_Y, -23095);
           var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
           this.field_Y.b(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
           return;
         }
-        if (ug.field_c == var6) {
+        if (IsaacCipher.field_c == var6) {
           var5 = ea.field_D;
         } else {
           var5 = this.field_J.c(26146);
@@ -132,7 +132,7 @@ final class sc extends ej {
             var11Lifetime1 = var23.field_n << 1;
             var12Lifetime1 = var23.field_w << 1;
             if (null == this.field_Y) {
-              this.field_Y = new qb(var11Lifetime1, var12Lifetime1);
+              this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.a(this.field_Y, -23095);
               var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
@@ -140,7 +140,7 @@ final class sc extends ej {
               return;
             }
             if (var11Lifetime1 > this.field_Y.field_q) {
-              this.field_Y = new qb(var11Lifetime1, var12Lifetime1);
+              this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.a(this.field_Y, -23095);
               var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
@@ -155,20 +155,20 @@ final class sc extends ej {
               this.field_Y.b(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
-            this.field_Y = new qb(var11Lifetime1, var12Lifetime1);
+            this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
             fk.a(this.field_Y, -23095);
             var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
             this.field_Y.b(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
             return;
           }
-          if (ug.field_c == var6) {
+          if (IsaacCipher.field_c == var6) {
             var24 = qk.field_lb[0];
-            qb var16 = var24;
+            Sprite var16 = var24;
             var11Lifetime1Lifetime1 = var24.field_n << 1;
             var12Lifetime1Lifetime1 = var24.field_w << 1;
             if (null == this.field_Y) {
-              this.field_Y = new qb(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+              this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.a(this.field_Y, -23095);
               var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
@@ -176,7 +176,7 @@ final class sc extends ej {
               return;
             }
             if (var11Lifetime1Lifetime1 > this.field_Y.field_q) {
-              this.field_Y = new qb(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+              this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.a(this.field_Y, -23095);
               var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
@@ -184,7 +184,7 @@ final class sc extends ej {
               return;
             }
             if (this.field_Y.field_y < var12Lifetime1Lifetime1) {
-              this.field_Y = new qb(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+              this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.a(this.field_Y, -23095);
               var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
@@ -210,13 +210,13 @@ final class sc extends ej {
           var30.b(var9Lifetime1, var10Lifetime1 - (var30.field_y >> 1), 256);
           return;
         }
-        this.field_Y = (qb) null;
+        this.field_Y = (Sprite) null;
         var6 = this.field_J.a(-103);
         ac var37 = (ac) ((Object) this.field_r);
         var9Lifetime2 = this.field_n + param1;
         var10Lifetime2 = var37.a(param3, -13372, (qm) (this)) + (var37.a((qm) (this), -126).a((byte) -58) >> 1);
         if (da.field_f != var6 &&
-          ug.field_c != var6) {
+          IsaacCipher.field_c != var6) {
           if (var6 == ra.field_k) {
             var32 = qk.field_lb[2];
             var32.b(var9Lifetime2, var10Lifetime2 - (var32.field_y >> 1), 256);
@@ -229,11 +229,11 @@ final class sc extends ej {
           var33.b(var9Lifetime2, var10Lifetime2 - (var33.field_y >> 1), 256);
           return;
         }
-        qb var34 = qk.field_lb[0];
+        Sprite var34 = qk.field_lb[0];
         var11Lifetime2 = var34.field_n << 1;
         var12Lifetime2 = var34.field_w << 1;
         if (null == this.field_Y) {
-          this.field_Y = new qb(var11Lifetime2, var12Lifetime2);
+          this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.a(this.field_Y, -23095);
           var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
@@ -241,7 +241,7 @@ final class sc extends ej {
           return;
         }
         if (var11Lifetime2 > this.field_Y.field_q) {
-          this.field_Y = new qb(var11Lifetime2, var12Lifetime2);
+          this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.a(this.field_Y, -23095);
           var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
@@ -256,7 +256,7 @@ final class sc extends ej {
           this.field_Y.b(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
-        this.field_Y = new qb(var11Lifetime2, var12Lifetime2);
+        this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
         fk.a(this.field_Y, -23095);
         var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
         oo.c(-15405);
@@ -267,7 +267,7 @@ final class sc extends ej {
         if (!param0) {
           return;
         }
-        q.a(pg.field_c, false, be.field_l, mf.field_d, am.field_c);
+        q.a(IntrusiveNode.field_c, false, be.field_l, mf.field_d, am.field_c);
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
@@ -580,7 +580,7 @@ final class sc extends ej {
             uh.a(pn.field_c, param0 + 0);
             return;
           }
-          pn.field_c = new qb(param2 / 2, param1 / 2);
+          pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.a();
           ql.a(param2, param1, 0);
           ce.field_m.a(true);
@@ -593,7 +593,7 @@ final class sc extends ej {
               uh.a(pn.field_c, param0 + 0);
               return;
             }
-            pn.field_c = new qb(param2 / 2, param1 / 2);
+            pn.field_c = new Sprite(param2 / 2, param1 / 2);
             pn.field_c.a();
             ql.a(param2, param1, 0);
             ce.field_m.a(true);
@@ -608,7 +608,7 @@ final class sc extends ej {
             uh.a(pn.field_c, param0 + 0);
             return;
           }
-          pn.field_c = new qb(param2 / 2, param1 / 2);
+          pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.a();
           ql.a(param2, param1, 0);
           ce.field_m.a(true);
@@ -620,7 +620,7 @@ final class sc extends ej {
             uh.a(pn.field_c, param0 + 0);
             return;
           }
-          pn.field_c = new qb(param2 / 2, param1 / 2);
+          pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.a();
           ql.a(param2, param1, 0);
           ce.field_m.a(true);
@@ -633,7 +633,7 @@ final class sc extends ej {
           uh.a(pn.field_c, param0 + 0);
           return;
         }
-        pn.field_c = new qb(param2 / 2, param1 / 2);
+        pn.field_c = new Sprite(param2 / 2, param1 / 2);
         pn.field_c.a();
         ql.a(param2, param1, 0);
         ce.field_m.a(true);
@@ -662,7 +662,7 @@ final class sc extends ej {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new fk(param0, param0);
-          qn.field_mb.b(var2, -1);
+          qn.field_mb.addLast(var2, -1);
           pc.field_e.b(param0);
           if (param1 == 68) {
             stackIn_4_0 = var2;

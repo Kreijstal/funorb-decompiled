@@ -9,9 +9,9 @@ final class fd {
     static String[] field_g;
     static long field_d;
     static String field_c;
-    static ll[] field_j;
+    static IndexedSprite[] field_j;
     static int[] field_h;
-    static qb field_f;
+    static Sprite field_f;
 
     public static void a(int param0) {
         if (param0 != -1) {

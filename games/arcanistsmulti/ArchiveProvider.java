@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tl {
+abstract class ArchiveProvider {
     static String field_c;
     static String field_e;
-    static qb[] field_a;
+    static Sprite[] field_a;
     static boolean field_d;
     static String field_g;
     static lc[] field_f;
@@ -39,7 +39,7 @@ abstract class tl {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 >= -52) {
-            tl.c((byte) -27);
+            ArchiveProvider.c((byte) -27);
           }
           var5 = kl.field_B;
           var1 = var5;
@@ -68,7 +68,7 @@ abstract class tl {
           return 0;
         }
         if (param0 != -77) {
-          tl.e((byte) -108);
+          ArchiveProvider.e((byte) -108);
         }
         if (gm.field_f == 0) {
           if (!da.field_b.c(-10923)) {
@@ -125,7 +125,7 @@ abstract class tl {
 
     final static String b(byte param0) {
         if (param0 < 95) {
-          tl.a((byte) 55);
+          ArchiveProvider.a((byte) 55);
           return vi.field_F;
         }
         return vi.field_F;
@@ -133,7 +133,7 @@ abstract class tl {
 
     abstract int a(int param0, byte param1);
 
-    abstract jk d(byte param0);
+    abstract ArchiveIndex d(byte param0);
 
     abstract byte[] a(int param0, boolean param1);
 

@@ -5,11 +5,11 @@ final class kg {
     static int field_b;
     static boolean field_f;
     private ig field_g;
-    private eg field_e;
+    private ResourceArchive field_e;
     static ec field_h;
     static kc field_c;
     static int[][] field_d;
-    private eg field_i;
+    private ResourceArchive field_i;
     static boolean field_a;
 
     public static void a(int param0) {
@@ -37,7 +37,7 @@ final class kg {
         }
         oo var5 = new oo();
         if (var4 != null) {
-          var5.a((byte) 116, new wk(var4));
+          var5.a((byte) 116, new PacketBuffer(var4));
           if (param1 >= 32768) {
             var5.f(-94);
             this.field_g.a(var5, (long)param1, -65);
@@ -55,7 +55,7 @@ final class kg {
         return var5;
     }
 
-    kg(int param0, eg param1, eg param2) {
+    kg(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

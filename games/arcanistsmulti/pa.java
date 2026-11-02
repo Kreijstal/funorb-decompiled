@@ -3,7 +3,7 @@
  */
 final class pa implements Runnable {
     private tg field_e;
-    static ll[] field_a;
+    static IndexedSprite[] field_a;
     static String field_c;
     private Thread field_h;
     private boolean field_b;
@@ -31,7 +31,7 @@ final class pa implements Runnable {
           synchronized (var5) {
             var6 = (ea) (this.field_e.b(37));
             while (var6 != null) {
-              if (~(long)param1 == ~var6.field_k &&
+              if (~(long)param1 == ~var6.secondaryKey &&
                 param0 == var6.field_x &&
                 2 == var6.field_A) {
                 var4.field_p = false;
@@ -98,7 +98,7 @@ final class pa implements Runnable {
           var5.field_q = false;
           var5.field_x = param3;
           var5.field_A = 2;
-          var5.field_k = (long)param0;
+          var5.secondaryKey = (long)param0;
           var5.field_z = param2;
           this.a((byte) 100, var5);
           stackIn_4_0 = var5;
@@ -214,11 +214,11 @@ final class pa implements Runnable {
             }
             try {
               if (var7.field_A == 2) {
-                var7.field_x.a(var7.field_z, true, var7.field_z.length, (int)var7.field_k);
+                var7.field_x.a(var7.field_z, true, var7.field_z.length, (int)var7.secondaryKey);
                 var7.field_p = false;
               } else {
                 if (var7.field_A == 3) {
-                  var7.field_z = var7.field_x.a((int)var7.field_k, -61);
+                  var7.field_z = var7.field_x.a((int)var7.secondaryKey, -61);
                   var7.field_p = false;
                 } else {
                   var7.field_p = false;
@@ -244,7 +244,7 @@ final class pa implements Runnable {
         ul.field_h = true;
         int var1 = -24 % ((71 - param0) / 35);
         hk.field_s = true;
-        p.field_b.f(-126);
+        ClientException.field_b.f(-126);
         jn.a(fi.field_a, false, -1);
     }
 
@@ -272,7 +272,7 @@ final class pa implements Runnable {
           }
           var4 = new ea();
           var4.field_A = 3;
-          var4.field_k = (long)param0;
+          var4.secondaryKey = (long)param0;
           var4.field_q = false;
           var4.field_x = param2;
           this.a((byte) 84, var4);

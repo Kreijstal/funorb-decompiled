@@ -8,7 +8,7 @@ final class mn extends rl {
     static int field_r;
     static kc[] field_s;
     static kc field_t;
-    static ll field_y;
+    static IndexedSprite field_y;
     private rn field_u;
     static String field_x;
 

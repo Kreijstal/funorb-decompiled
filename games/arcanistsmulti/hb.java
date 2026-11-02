@@ -10,7 +10,7 @@ final class hb extends kc {
     dn field_Db;
     kc field_Jb;
     kc field_Lb;
-    static eg field_Fb;
+    static ResourceArchive field_Fb;
     static double field_Cb;
     static int field_Kb;
 
@@ -45,18 +45,18 @@ final class hb extends kc {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        wk var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new wk(param1);
-          var3 = var9.e((byte) 73);
+          var9 = new PacketBuffer(param1);
+          var3 = var9.readUnsignedByte((byte) 73);
           if (param0) {
             hb.e(127);
           }
-          var4 = var9.d(-10674);
+          var4 = var9.readInt(-10674);
           if (var4 >= 0 && (ub.field_a == 0 ||
             !(ub.field_a < var4))) {
             if (var3 == 0) {
@@ -67,7 +67,7 @@ final class hb extends kc {
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.d(-10674);
+            var5 = var9.readInt(-10674);
             if (var5 >= 0 && (ub.field_a == 0 ||
               !(var5 > ub.field_a))) {
               var13 = new byte[var5];
@@ -116,30 +116,30 @@ final class hb extends kc {
     }
 
     final static void a(cm param0, int param1, byte param2) {
-        ab var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = he.field_e;
-          var6.b((byte) -123, param1);
-          var6.field_g = var6.field_g + 1;
-          var4 = var6.field_g;
-          var6.f(1, (byte) -21);
-          var6.f(param0.field_g, (byte) -80);
-          var6.f(param0.field_i, (byte) -7);
+          var6.writeOpcode((byte) -123, param1);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, (byte) -21);
+          var6.writeByte(param0.field_g, (byte) -80);
+          var6.writeByte(param0.field_i, (byte) -7);
           int var5 = 1 / ((22 - param2) / 57);
-          var6.a(param0.field_m, (byte) -101);
-          var6.a(param0.field_n, (byte) -101);
-          var6.a(param0.field_o, (byte) -101);
-          var6.a(param0.field_k, (byte) -101);
+          var6.writeInt(param0.field_m, (byte) -101);
+          var6.writeInt(param0.field_n, (byte) -101);
+          var6.writeInt(param0.field_o, (byte) -101);
+          var6.writeInt(param0.field_k, (byte) -101);
           var6.a(true, var4);
-          var6.b(-var4 + var6.field_g, (byte) 43);
+          var6.writeByteLengthAtMark(-var4 + var6.position, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void f(byte param0) {
-        mo.field_p = -1;
+        IntrusiveNodeHashTable.field_p = -1;
         cb.field_c = null;
         oh.field_i = false;
         int var1 = 57 / ((param0 + 19) / 41);

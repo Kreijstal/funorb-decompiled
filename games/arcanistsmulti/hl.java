@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends pg {
+final class hl extends IntrusiveNode {
     int field_g;
     static String field_i;
     static String field_h;
     static kc field_m;
     int field_k;
     static int[] field_l;
-    wk field_j;
+    PacketBuffer field_j;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var15 = 0;

@@ -15,7 +15,7 @@ final class rm {
     private long[] field_i;
     private long[] field_f;
     private long[] field_c;
-    static qb[] field_o;
+    static Sprite[] field_o;
     private byte[] field_b;
     static String[][] field_l;
 
@@ -252,10 +252,10 @@ final class rm {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var2_int = -101 % ((param1 - 46) / 54);
-          var3 = jk.field_u;
+          var3 = ArchiveIndex.field_u;
           if (2 == param0.field_m) {
             if (param0.field_i) {
-              var3Lifetime1 = jk.field_u;
+              var3Lifetime1 = ArchiveIndex.field_u;
             } else {
               if (param0.field_d == 0 &&
                 param0.field_k == 0) {
@@ -299,8 +299,8 @@ final class rm {
         field_o = null;
         field_p = null;
         if (param0 != -6566) {
-          wk var2 = (wk) null;
-          rm.a((wk) null, 18, 22);
+          PacketBuffer var2 = (PacketBuffer) null;
+          rm.a((PacketBuffer) null, 18, 22);
         }
     }
 
@@ -323,7 +323,7 @@ final class rm {
         }
     }
 
-    final static String a(wk param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -343,7 +343,7 @@ final class rm {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_g = param0.field_g + kh.field_g.a(0, (byte) -126, var4, var3_int, param0.field_j, param0.field_g);
+            param0.position = param0.position + kh.field_g.a(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
             var5 = ba.a(0, var3_int, (byte) -124, var4);
             if (param2 < -55) {
               stackIn_7_0 = var5;
@@ -404,7 +404,7 @@ final class rm {
         }
     }
 
-    final static nc a(String param0, eg param1, String param2, int param3, eg param4) {
+    final static nc a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

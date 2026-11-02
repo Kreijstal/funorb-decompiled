@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends pg {
+final class rb extends IntrusiveNode {
     static dl field_k;
     String field_j;
-    static qb[] field_o;
+    static Sprite[] field_o;
     static String field_l;
     static String[] field_p;
     boolean field_i;
@@ -42,11 +42,11 @@ final class rb extends pg {
         field_k = null;
     }
 
-    final static qb[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
-        qb var19 = null;
-        qb var20 = null;
-        qb var17 = null;
-        qb var18 = null;
+    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+        Sprite var19 = null;
+        Sprite var20 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         Object var10 = null;
         Object var11 = null;
         int[] var16 = de.field_l;
@@ -55,7 +55,7 @@ final class rb extends pg {
         int[] var6 = var12;
         int var7 = de.field_e;
         int var8 = de.field_j;
-        qb var9 = new qb(16, param5);
+        Sprite var9 = new Sprite(16, param5);
         var9.a();
         de.c(0, 0, 16, param5, param4, param3);
         if (param2 == 652) {
@@ -82,7 +82,7 @@ final class rb extends pg {
             de.f(15, 4, 1, 0);
           }
           de.a(var16, var7, var8);
-          return new qb[]{null, null, null, (qb) (var10), var9, (qb) (var11), null, null, null};
+          return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_n = (String[]) null;
         var10 = null;
@@ -108,10 +108,10 @@ final class rb extends pg {
           de.f(15, 4, 1, 0);
         }
         de.a(var16, var7, var8);
-        return new qb[]{null, null, null, (qb) (var10), var9, (qb) (var11), null, null, null};
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
-    final static void a(byte[] param0, eg param1, ll[] param2, qb[][] param3, boolean param4, String[][] param5, String[][] param6, int param7, eg param8, int[] param9, qb[][] param10, byte[] param11, byte param12, int[] param13, int param14, String[] param15, eg param16) {
+    final static void a(byte[] param0, ResourceArchive param1, IndexedSprite[] param2, Sprite[][] param3, boolean param4, String[][] param5, String[][] param6, int param7, ResourceArchive param8, int[] param9, Sprite[][] param10, byte[] param11, byte param12, int[] param13, int param14, String[] param15, ResourceArchive param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -246,13 +246,13 @@ final class rb extends pg {
         String var7 = null;
         byte[] var8 = null;
         pb var9 = null;
-        ab var10 = null;
+        CipherPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var10 = df.field_z;
-          var2 = var10.e((byte) 81);
+          var2 = var10.readUnsignedByte((byte) 81);
           if (param0 > -22) {
             var7 = (String) null;
             rb.a(-32, (String) null, 120, (String) null, -69);
@@ -263,28 +263,28 @@ final class rb extends pg {
               ka.b(false);
               return;
             }
-            var3 = var10.d(-10674);
-            var4_ref_f = (f) (cm.field_l.b(12623));
+            var3 = var10.readInt(-10674);
+            var4_ref_f = (f) (cm.field_l.first(12623));
             while (var4_ref_f != null) {
               if (var4_ref_f.field_j != var3) {
-                var4_ref_f = (f) (cm.field_l.a(0));
+                var4_ref_f = (f) (cm.field_l.next(0));
                 continue;
               }
               break;
             }
             if (var4_ref_f != null) {
-              var4_ref_f.a(true);
+              var4_ref_f.unlink(true);
               return;
             }
             ka.b(false);
             return;
           }
-          var9 = (pb) (hn.field_q.b(12623));
+          var9 = (pb) (hn.field_q.first(12623));
           if (var9 == null) {
             ka.b(false);
             return;
           }
-          var4 = var10.e((byte) -100);
+          var4 = var10.readUnsignedByte((byte) -100);
           if (0 == var4) {
             var5 = null;
           } else {
@@ -294,14 +294,14 @@ final class rb extends pg {
             var5 = var8;
             var10.a((byte) 100, 0, var12, var4);
           }
-          var10.field_g = var10.field_g + 4;
+          var10.position = var10.position + 4;
           if (!var10.c(true)) {
             ka.b(false);
             return;
           }
           var9.field_k = true;
           var9.field_j = (byte[]) (var5);
-          var9.a(true);
+          var9.unlink(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

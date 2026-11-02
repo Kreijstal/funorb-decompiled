@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-class to extends tf {
-    static qb field_q;
+class to extends DualLinkNode {
+    static Sprite field_q;
     static String field_n;
     static int[] field_r;
     static hf field_s;
@@ -77,12 +77,12 @@ class to extends tf {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var5_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (kl.field_B.length > var5_int) {
               param3 = kl.field_B[var5_int];
               stackIn_13_0 = var5_int << 4;
               if (var7 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var6 = stackIn_13_0;
               while (true) {
@@ -101,7 +101,7 @@ class to extends tf {
                 break;
               }
               var5_int++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = param1 ? 1 : 0;
             break;
@@ -142,7 +142,7 @@ class to extends tf {
           int stackIn_52_0 = 0;
           int stackIn_54_0 = 0;
           Throwable decompiledCaughtException = null;
-          wk var1 = null;
+          PacketBuffer var1 = null;
           int var1_int = 0;
           IOException var1_ref = null;
           RuntimeException var1_ref2 = null;
@@ -178,11 +178,11 @@ class to extends tf {
               }
               if (uh.field_m == 2) {
                 td.field_E = new k((java.net.Socket) (hg.field_a.field_g), ri.field_g);
-                var1 = new wk(13);
-                jb.a(var1, ne.field_b, ib.field_u, ce.field_o, 123);
-                var1.f(15, (byte) -28);
-                var1.a(hd.field_a, (byte) -101);
-                td.field_E.a(13, 0, (byte) 126, var1.field_j);
+                var1 = new PacketBuffer(13);
+                SpriteState.a(var1, ne.field_b, ib.field_u, ce.field_o, 123);
+                var1.writeByte(15, (byte) -28);
+                var1.writeInt(hd.field_a, (byte) -101);
+                td.field_E.a(13, 0, (byte) 126, var1.payload);
                 uh.field_m = uh.field_m + 1;
                 ud.field_E = qj.b(-26572) + 30000L;
               }
@@ -207,7 +207,7 @@ class to extends tf {
                 stackIn_52_0 = -1;
                 return stackIn_52_0;
               }
-              jl.field_c.a(ab.field_n, true, td.field_E);
+              jl.field_c.a(CipherPacketBuffer.field_n, true, td.field_E);
               hg.field_a = null;
               td.field_E = null;
               uh.field_m = 0;
@@ -319,7 +319,7 @@ class to extends tf {
           var22Lifetime2 = id.field_i;
           var23Lifetime2 = id.field_g;
           var24Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var24Lifetime2 < param4.field_f) {
               var25Lifetime1 = param4.field_b[var24Lifetime2];
@@ -333,7 +333,7 @@ class to extends tf {
               if (var31 != 0) {
                 if (stackIn_57_0 < stackIn_57_1) {
                   stackIn_66_0 = ~var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -344,12 +344,12 @@ class to extends tf {
                   if (var30Lifetime1 > var8) {
                     var8 = var30Lifetime1;
                   }
-                  eg.field_a[var24Lifetime2] = var30Lifetime1;
+                  ResourceArchive.field_a[var24Lifetime2] = var30Lifetime1;
                   if (var30Lifetime1 < var7_int) {
                     var7_int = var30Lifetime1;
                   }
                 } else {
-                  eg.field_a[var24Lifetime2] = -2147483648;
+                  ResourceArchive.field_a[var24Lifetime2] = -2147483648;
                 }
                 if (param6) {
                   ba.field_k[var24Lifetime2] = var28Lifetime1 >> tj.field_C;
@@ -415,15 +415,15 @@ class to extends tf {
                   }
                   stackIn_66_0 = ~var18;
                   if (var31 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
-                  if (stackIn_66_0 <= ~dc.field_k.length) {
+                  if (stackIn_66_0 <= ~GameAppletShell.field_k.length) {
                     break;
                   }
                   var19 = param4.field_r[var18];
                   var20 = param4.field_e[var18];
                   var21 = param4.field_S[var18];
-                  dc.field_k[var18] = var9 * var19 - (-(var12 * var20) - var21 * var15Lifetime1) >> 16;
+                  GameAppletShell.field_k[var18] = var9 * var19 - (-(var12 * var20) - var21 * var15Lifetime1) >> 16;
                   nf.field_Lb[var18] = var16 * var21 + var13 * var20 + var10 * var19 >> 16;
                   mf.field_b[var18] = var21 * var17 + var19 * var11 + var20 * var14 >> 16;
                   var18++;

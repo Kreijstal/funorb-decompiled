@@ -138,23 +138,23 @@ final class lm {
           if (!param0) {
             for (var6 = 0; var6 < 5; var6++) {
               if (var4_int != 0 &&
-                s.field_e[0][1 + var6].field_U != 0 &&
+                IndexedSpriteState.field_e[0][1 + var6].field_U != 0 &&
                 var6 != param2.field_Pb) {
                 var5 = 1;
                 param2.field_Pb = var6;
               }
-              stackIn_26_0 = s.field_e[0][var6 + 1];
+              stackIn_26_0 = IndexedSpriteState.field_e[0][var6 + 1];
               stackIn_27_1 = (var4_int != 0);
               stackIn_26_0.field_ub = stackIn_27_1;
               if (!fc.field_a &&
                 var6 == 3) {
-                s.field_e[0][1 + var6].field_ub = false;
+                IndexedSpriteState.field_e[0][1 + var6].field_ub = false;
               }
-              stackIn_33_0 = s.field_e[0][var6 + 1];
+              stackIn_33_0 = IndexedSpriteState.field_e[0][var6 + 1];
               stackIn_34_1 = (var6 == param2.field_Pb);
               stackIn_33_0.field_ab = stackIn_34_1;
             }
-            if (s.field_e[0][2].field_A) {
+            if (IndexedSpriteState.field_e[0][2].field_A) {
               if (!qk.k((byte) 111)) {
                 kh.field_c = tj.a(param3 ^ -111, new String[]{wi.field_f.field_ic}, ed.field_tb);
               } else {
@@ -186,28 +186,28 @@ final class lm {
               } else {
                 stackIn_63_0 = 0;
               }
-              L16: {
-                L17: {
+              regionExit1: {
+                regionExit2: {
                   boolean decompiledFrameRemainder0 = true;
                   var8_intLifetime1 = stackIn_63_0;
                   if (var4_int != 0 &&
-                    s.field_e[1][1 + var7].field_U != 0) {
+                    IndexedSpriteState.field_e[1][1 + var7].field_U != 0) {
                     if (param0) {
                       if (var6Lifetime4 != 0) {
                         if (!param0) {
-                          break L17;
+                          break regionExit2;
                         }
                         decompiledFrameRemainder0 = (var7 == -1);
                         if (decompiledFrameRemainder0) {
-                          s.field_e[1][1 + var7].field_ab = true;
+                          IndexedSpriteState.field_e[1][1 + var7].field_ab = true;
                           for (var9 = 0; var9 < ao.field_h.length; var9++) {
-                            dupTemp$0 = s.field_e[1][var7 + 1];
+                            dupTemp$0 = IndexedSpriteState.field_e[1][var7 + 1];
                             stackIn_76_0 = dupTemp$0;
                             stackIn_76_1 = dupTemp$0.field_ab;
                             stackIn_77_2 = ((gh.field_E[var9 / 8] & 1 << (7 & var9)) == 0);
                             stackIn_76_0.field_ab = stackIn_76_1 & stackIn_77_2;
                           }
-                          break L16;
+                          break regionExit1;
                         }
                       }
                       if (decompiledFrameRemainder0) {
@@ -229,41 +229,41 @@ final class lm {
                   }
                   if (decompiledFrameRemainder0) {
                     if (!param0) {
-                      break L17;
+                      break regionExit2;
                     }
                     if (var7 == -1) {
-                      s.field_e[1][1 + var7].field_ab = true;
+                      IndexedSpriteState.field_e[1][1 + var7].field_ab = true;
                       for (var9 = 0; var9 < ao.field_h.length; var9++) {
-                        dupTemp$1 = s.field_e[1][var7 + 1];
+                        dupTemp$1 = IndexedSpriteState.field_e[1][var7 + 1];
                         stackIn_89_0 = dupTemp$1;
                         stackIn_89_1 = dupTemp$1.field_ab;
                         stackIn_90_2 = ((gh.field_E[var9 / 8] & 1 << (7 & var9)) == 0);
                         stackIn_89_0.field_ab = stackIn_89_1 & stackIn_90_2;
                       }
-                      break L16;
+                      break regionExit1;
                     }
                   }
-                  stackIn_93_0 = s.field_e[1][var7 + 1];
+                  stackIn_93_0 = IndexedSpriteState.field_e[1][var7 + 1];
                   stackIn_93_1 = 0;
                   stackIn_93_2 = gh.field_E[var7 / 8];
                   stackIn_93_3 = 1 << (var7 & 7);
                   stackIn_96_1 = (stackIn_93_1 != (stackIn_93_2 & stackIn_93_3));
                   stackIn_93_0.field_ab = stackIn_96_1;
-                  break L16;
+                  break regionExit1;
                 }
                 var9 = ao.field_h[var7];
-                stackIn_99_0 = s.field_e[1][1 + var7];
+                stackIn_99_0 = IndexedSpriteState.field_e[1][1 + var7];
                 stackIn_100_1 = (param2.field_dc == var9);
                 stackIn_99_0.field_ab = stackIn_100_1;
               }
-              stackIn_104_0 = s.field_e[1][var7 + 1];
+              stackIn_104_0 = IndexedSpriteState.field_e[1][var7 + 1];
               stackIn_105_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_104_0.field_ub = stackIn_105_1;
             }
           }
           stackIn_109_0 = (!param0) ? 1 : 0;
           for (var6Lifetime1 = stackIn_109_0; var6Lifetime1 < 3; var6Lifetime1++) {
-            var28 = s.field_e[2][var6Lifetime1];
+            var28 = IndexedSpriteState.field_e[2][var6Lifetime1];
             if (var4_int != 0 &&
               0 != var28.field_U) {
               if (!param0) {
@@ -301,7 +301,7 @@ final class lm {
           if (param0 &&
             le.field_q > 1) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 1 + le.field_q; var6Lifetime2++) {
-              var29 = s.field_e[3][var6Lifetime2];
+              var29 = IndexedSpriteState.field_e[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_U) {
                 q.field_L = var6Lifetime2;
@@ -328,7 +328,7 @@ final class lm {
           }
           var6Lifetime3 = 0;
           for (var7 = param3; vf.field_l > var7; var7++) {
-            var30 = s.field_e[4 + var7];
+            var30 = IndexedSpriteState.field_e[4 + var7];
             var8_array = var30;
             stackIn_165_0 = (param0) ? -1 : 0;
             for (var9 = stackIn_165_0; var9 < var30.length - 1; var9++) {
@@ -654,7 +654,7 @@ final class lm {
     }
 
     final static void a(byte param0, boolean param1) {
-        p.field_b.a(0, true, 0);
+        ClientException.field_b.a(0, true, 0);
         if (param0 > -7) {
           field_c = (String) null;
         }

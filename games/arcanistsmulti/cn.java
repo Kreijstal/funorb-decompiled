@@ -3,14 +3,14 @@
  */
 final class cn extends kl implements vb {
     static String field_H;
-    static ll[] field_S;
+    static IndexedSprite[] field_S;
     static String field_K;
     private wl field_P;
     static String field_I;
     private ag field_L;
     static int[] field_M;
     static byte[] field_O;
-    static ll[] field_N;
+    static IndexedSprite[] field_N;
     static String field_J;
     static String field_Q;
 

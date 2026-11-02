@@ -37,7 +37,7 @@ final class sa extends kc {
         kc var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new kc(0L, param1, mo.field_j.toUpperCase());
+          var17 = new kc(0L, param1, IntrusiveNodeHashTable.field_j.toUpperCase());
           var17.field_X = 1;
           this.field_Fb = new kc(0L, param2);
           var8 = new kc(0L, param3);

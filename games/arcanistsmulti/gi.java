@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gi {
-    private eg field_g;
-    static qb field_k;
+    private ResourceArchive field_g;
+    static Sprite field_k;
     static int field_a;
     private di field_b;
     static String field_h;
     static String field_l;
-    private eg field_e;
+    private ResourceArchive field_e;
     static int field_c;
     static String field_i;
     static String field_f;
-    static ll[] field_m;
+    static IndexedSprite[] field_m;
     private di field_d;
     static String field_j;
 
@@ -32,8 +32,8 @@ final class gi {
     final static void a(boolean param0, String param1, float param2, byte param3) {
         try {
           if (ci.field_c == null) {
-            ci.field_c = new gd(p.field_b, fg.field_o);
-            p.field_b.b(ci.field_c, 15637);
+            ci.field_c = new gd(ClientException.field_b, fg.field_o);
+            ClientException.field_b.b(ci.field_c, 15637);
           }
           ci.field_c.a(param1, param2, param0, (byte) -105);
           de.b();
@@ -94,7 +94,7 @@ final class gi {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.a(true);
+          var9.unlink(true);
           this.field_d.a(var8Lifetime1, true, var6);
           stackIn_18_0 = var8Lifetime1;
           return stackIn_18_0;
@@ -244,7 +244,7 @@ final class gi {
         return ah.field_b;
     }
 
-    gi(eg param0, eg param1) {
+    gi(ResourceArchive param0, ResourceArchive param1) {
         this.field_b = new di(256);
         this.field_d = new di(256);
         try {
@@ -262,6 +262,6 @@ final class gi {
         field_i = "MOST CRUEL - ";
         field_f = "Overlight spells focus on healing and the defence of your forces.";
         field_j = "Your rating is <%0>";
-        field_k = new qb(270, 70);
+        field_k = new Sprite(270, 70);
     }
 }

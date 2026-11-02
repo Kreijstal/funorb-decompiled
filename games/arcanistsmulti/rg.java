@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rg {
-    static qb field_a;
+    static Sprite field_a;
     static String field_e;
     static String field_b;
     static String field_f;
@@ -35,11 +35,11 @@ final class rg {
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (~vn.field_d == param1) {
+          if (~IntrusiveDeque.field_d == param1) {
             uc.c(3);
             return true;
           }
-          if (102 == vn.field_d) {
+          if (102 == IntrusiveDeque.field_d) {
             nn.field_q.e(param1 ^ -89);
             return true;
           }
@@ -63,16 +63,16 @@ final class rg {
             rg.a(-21, -66, -84, -38);
           }
           if (pm.field_b != null &&
-            13 == vn.field_d) {
+            13 == IntrusiveDeque.field_d) {
             pm.field_b = null;
             return true;
           }
           if (!ef.field_r) {
             if (!oj.field_i &&
-              vn.field_d != 9 &&
-              vn.field_d != 10 &&
-              vn.field_d != 11) {
-              if (80 == vn.field_d &&
+              IntrusiveDeque.field_d != 9 &&
+              IntrusiveDeque.field_d != 10 &&
+              IntrusiveDeque.field_d != 11) {
+              if (80 == IntrusiveDeque.field_d &&
                 tn.g((byte) 111)) {
                 ef.field_r = true;
                 return true;
@@ -86,12 +86,12 @@ final class rg {
             return false;
           }
           var4_int = ko.a(param2 - 121, param0, param3) ? 1 : 0;
-          if (vn.field_d == 80 ||
-            vn.field_d == 84) {
+          if (IntrusiveDeque.field_d == 80 ||
+            IntrusiveDeque.field_d == 84) {
             var4_int = 1;
             ef.field_r = false;
           }
-          if (vn.field_d == 13) {
+          if (IntrusiveDeque.field_d == 13) {
             ue.b(10);
             var4_int = 1;
             ef.field_r = false;
@@ -105,7 +105,7 @@ final class rg {
         }
     }
 
-    final static void a(eg param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_3095_0;
             StringBuilder stackIn_3095_1;
@@ -115,10 +115,10 @@ final class rg {
             RuntimeException var2_ref;
             int var3;
             int var4;
-            eg param0;
+            ResourceArchive param0;
             byte param1;
             boolean finished;
-            $CfrPartitionedBody(eg initialParam0, byte initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, byte initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_3095_0 = null;
@@ -850,7 +850,7 @@ final class rg {
                 }
                 var2 = tj.a("needhatsfortime", param1 ^ -114);
                 if (null != var2) {
-                  vn.field_j = sc.a((byte) 126, var2);
+                  IntrusiveDeque.field_j = sc.a((byte) 126, var2);
                 }
                 var2 = tj.a("spellnames,0", param1 - 136);
                 if (var2 != null) {
@@ -2274,7 +2274,7 @@ final class rg {
                 }
                 var2 = tj.a("keycode_scrollleft", param1 - 119);
                 if (var2 != null) {
-                  p.field_a = var2[0] & 255;
+                  ClientException.field_a = var2[0] & 255;
                 }
                 var2 = tj.a("keycode_scrollright", -105);
                 if (null != var2) {
@@ -2526,7 +2526,7 @@ final class rg {
                 }
                 var2 = tj.a("wandsavail", -87);
                 if (var2 != null) {
-                  ug.field_l = sc.a((byte) 89, var2);
+                  IsaacCipher.field_l = sc.a((byte) 89, var2);
                 }
                 var2 = tj.a("playmoregames", -115);
                 if (null != var2) {
@@ -2630,7 +2630,7 @@ final class rg {
                 }
                 var2 = tj.a("underdisc2", -71);
                 if (var2 != null) {
-                  jk.field_v = sc.a((byte) 122, var2);
+                  ArchiveIndex.field_v = sc.a((byte) 122, var2);
                 }
                 var2 = tj.a("frostdisc2", -111);
                 if (var2 != null) {
@@ -2763,7 +2763,7 @@ final class rg {
                 }
                 var2 = tj.a("notenoughwands", param1 - 137);
                 if (null != var2) {
-                  jk.field_d = sc.a((byte) 104, var2);
+                  ArchiveIndex.field_d = sc.a((byte) 104, var2);
                 }
                 var2 = tj.a("buyasmember", param1 ^ -107);
                 if (var2 != null) {
@@ -2827,7 +2827,7 @@ final class rg {
                 }
                 var2 = tj.a("mostcrap", -72);
                 if (var2 != null) {
-                  wk.field_h = sc.a((byte) 125, var2);
+                  PacketBuffer.field_h = sc.a((byte) 125, var2);
                 }
                 var2 = tj.a("mostwet", param1 - 147);
                 if (null != var2) {
@@ -2839,7 +2839,7 @@ final class rg {
                 }
                 var2 = tj.a("mostkill", -86);
                 if (var2 != null) {
-                  tl.field_e = sc.a((byte) 90, var2);
+                  ArchiveProvider.field_e = sc.a((byte) 90, var2);
                 }
                 var2 = tj.a("mostminion", -124);
                 if (null != var2) {
@@ -3059,7 +3059,7 @@ final class rg {
                 }
                 var2 = tj.a("ins14", -123);
                 if (var2 != null) {
-                  p.field_h = sc.a((byte) 116, var2);
+                  ClientException.field_h = sc.a((byte) 116, var2);
                 }
                 var2 = tj.a("ins13", -85);
                 if (var2 != null) {
@@ -3199,7 +3199,7 @@ final class rg {
                 }
                 var2 = tj.a("tut50", -111);
                 if (var2 != null) {
-                  mo.field_l = sc.a((byte) 120, var2);
+                  IntrusiveNodeHashTable.field_l = sc.a((byte) 120, var2);
                 }
                 var2 = tj.a("tut49", -112);
                 if (var2 != null) {
@@ -3219,7 +3219,7 @@ final class rg {
                 }
                 var2 = tj.a("tut45", -79);
                 if (null != var2) {
-                  dc.field_g = sc.a((byte) 102, var2);
+                  GameAppletShell.field_g = sc.a((byte) 102, var2);
                 }
                 var2 = tj.a("tut44", param1 - 143);
                 if (null != var2) {
@@ -3327,7 +3327,7 @@ final class rg {
                 }
                 var2 = tj.a("tut18", -84);
                 if (null != var2) {
-                  tf.field_h = sc.a((byte) 122, var2);
+                  DualLinkNode.field_h = sc.a((byte) 122, var2);
                 }
                 var2 = tj.a("tut17", param1 - 96);
                 if (var2 != null) {
@@ -3395,7 +3395,7 @@ final class rg {
                 }
                 var2 = tj.a("tut1", param1 ^ -106);
                 if (null != var2) {
-                  ab.field_s = sc.a((byte) 99, var2);
+                  CipherPacketBuffer.field_s = sc.a((byte) 99, var2);
                 }
                 var2 = tj.a("tut0", -102);
                 if (var2 != null) {
@@ -3455,7 +3455,7 @@ final class rg {
                 }
                 var2 = tj.a("unpacknature", param1 ^ -96);
                 if (null != var2) {
-                  tl.field_g = sc.a((byte) 100, var2);
+                  ArchiveProvider.field_g = sc.a((byte) 100, var2);
                 }
                 var2 = tj.a("unpackocean", -99);
                 if (var2 != null) {
@@ -3479,7 +3479,7 @@ final class rg {
                 }
                 var2 = tj.a("hahahiddenisthis", -118);
                 if (var2 != null) {
-                  wk.field_k = sc.a((byte) 123, var2);
+                  PacketBuffer.field_k = sc.a((byte) 123, var2);
                 }
                 var2 = tj.a("blueteam", param1 - 142);
                 if (var2 != null) {
@@ -3507,7 +3507,7 @@ final class rg {
                 }
                 var2 = tj.a("summonclickonscreen", -87);
                 if (null != var2) {
-                  vn.field_a = sc.a((byte) 87, var2);
+                  IntrusiveDeque.field_a = sc.a((byte) 87, var2);
                 }
                 var2 = tj.a("timetimetime", -111);
                 if (null != var2) {
@@ -3611,7 +3611,7 @@ final class rg {
                 }
                 var2 = tj.a("arcanzeroblocks", -82);
                 if (null != var2) {
-                  s.field_a = sc.a((byte) 104, var2);
+                  IndexedSpriteState.field_a = sc.a((byte) 104, var2);
                 }
                 var2 = tj.a("youareentangled", -82);
             }
@@ -3641,7 +3641,7 @@ final class rg {
                 }
                 var2 = tj.a("gotosandbox", -103);
                 if (var2 != null) {
-                  mo.field_d = sc.a((byte) 120, var2);
+                  IntrusiveNodeHashTable.field_d = sc.a((byte) 120, var2);
                 }
                 var2 = tj.a("brats", -74);
                 if (null != var2) {
@@ -3693,7 +3693,7 @@ final class rg {
                 }
                 var2 = tj.a("optionscreen", param1 - 110);
                 if (var2 != null) {
-                  jk.field_j = sc.a((byte) 116, var2);
+                  ArchiveIndex.field_j = sc.a((byte) 116, var2);
                 }
                 gn.field_e = null;
             }
@@ -3723,9 +3723,9 @@ final class rg {
                   throw aa.a((Throwable) ((Object) stackIn_3095_0), ((StringBuilder) (Object) stackIn_3095_1).append(stackIn_3096_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = dc.field_b;
+                  var4 = GameAppletShell.field_b;
                   var4++;
-                  dc.field_b = var4;
+                  GameAppletShell.field_b = var4;
                 }
             }
         }

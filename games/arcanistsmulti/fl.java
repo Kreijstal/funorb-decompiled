@@ -36,7 +36,7 @@ final class fl {
               fh.field_i = ho.a((byte) 120, param2);
               return;
             }
-            fh.field_i = ab.a(param0 - 20657, param3, param1);
+            fh.field_i = CipherPacketBuffer.a(param0 - 20657, param3, param1);
             return;
           }
           stackIn_6_0 = param0 ^ 12212;
@@ -78,22 +78,22 @@ final class fl {
         field_c = null;
     }
 
-    final static void a(int param0, eg param1) {
-        qb var2 = null;
+    final static void a(int param0, ResourceArchive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
           if (param0 != -2389) {
             field_a = true;
           }
-          var2 = new qb(param1.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) on.field_c));
+          var2 = new Sprite(param1.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) on.field_c));
           var3 = var2.field_q;
           var4 = var2.field_y;
           ec.a(65280);
-          mi.field_E = new qb(var3, 3 * var4 / 4);
+          mi.field_E = new Sprite(var3, 3 * var4 / 4);
           mi.field_E.a();
           var2.h(0, 0);
-          gm.field_l = new qb(var3, -mi.field_E.field_y + var4);
+          gm.field_l = new Sprite(var3, -mi.field_E.field_y + var4);
           gm.field_l.a();
           var2.h(0, -mi.field_E.field_y);
           gm.field_l.field_o = mi.field_E.field_y;

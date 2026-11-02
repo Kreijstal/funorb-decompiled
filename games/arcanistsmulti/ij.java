@@ -5,7 +5,7 @@ final class ij extends kc {
     private int field_Db;
     private char[] field_Lb;
     private int field_Kb;
-    static qb field_Tb;
+    static Sprite field_Tb;
     static String field_Rb;
     static String field_Gb;
     static String field_Cb;
@@ -19,7 +19,7 @@ final class ij extends kc {
     private int field_Hb;
     private int field_Eb;
     private ij[] field_Fb;
-    static qb[] field_Pb;
+    static Sprite[] field_Pb;
     private ij field_Sb;
     private int[] field_Ib;
 
@@ -135,7 +135,7 @@ final class ij extends kc {
         }
         if (this.field_Sb != null) {
           this.field_Sb.e(78);
-          this.field_Sb.a(true);
+          this.field_Sb.unlink(true);
         }
         this.field_Sb = null;
         int var2 = -112 % ((-38 - param0) / 54);
@@ -208,7 +208,7 @@ final class ij extends kc {
               -1 == this.field_Ib[var13]) {
               var14 = ql.field_c;
             }
-            this.field_Bb[var13] = new nl(0L, param2, (kc) null, param3, (qb) (var14), param6[var13]);
+            this.field_Bb[var13] = new nl(0L, param2, (kc) null, param3, (Sprite) (var14), param6[var13]);
             this.a(this.field_Bb[var13], 90);
             var15 = var17.b(param6[var13]);
             if (var15 > this.field_Kb) {
@@ -304,7 +304,7 @@ final class ij extends kc {
           this.field_Bb[var7].a(param0, 0, this.field_Db, this.field_Nb, 0, this.field_Bb[var7].field_db, param5);
         }
         if (!param3) {
-          field_Tb = (qb) null;
+          field_Tb = (Sprite) null;
         }
         if (this.field_Hb != -1 &&
           null != this.field_Fb[this.field_Hb]) {
@@ -329,7 +329,7 @@ final class ij extends kc {
         int var7;
         int stackIn_3_0 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
-        stackIn_3_0 = (vn.field_d != 85) ? 0 : 1;
+        stackIn_3_0 = (IntrusiveDeque.field_d != 85) ? 0 : 1;
         var4 = stackIn_3_0;
         if (this.field_Sb != null) {
           if (var4 != 0 &&

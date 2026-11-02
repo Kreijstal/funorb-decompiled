@@ -3,7 +3,7 @@
  */
 abstract class lk {
     tg field_b;
-    static vn field_j;
+    static IntrusiveDeque field_j;
     static String field_l;
     static boolean field_d;
     tg field_g;
@@ -11,9 +11,9 @@ abstract class lk {
     tg field_f;
     tg field_m;
     int field_k;
-    wk field_c;
+    PacketBuffer field_c;
     long field_p;
-    wk field_e;
+    PacketBuffer field_e;
     volatile int field_o;
     byte field_a;
     volatile int field_i;
@@ -82,7 +82,7 @@ abstract class lk {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = jb.field_z;
+          var4 = SpriteState.field_z;
           if (param1 != 10) {
             field_d = false;
           }
@@ -154,7 +154,7 @@ abstract class lk {
           stackIn_15_0 = var8;
           stackIn_16_1 = (!param1) ? false : true;
           stackIn_15_0.field_q = stackIn_16_1;
-          var8.field_k = var6;
+          var8.secondaryKey = var6;
           if (!param1) {
             if (this.a(-72) >= 20) {
               throw new RuntimeException();
@@ -174,7 +174,7 @@ abstract class lk {
         stackIn_3_0 = var8Lifetime1;
         stackIn_4_1 = (!param1) ? false : true;
         stackIn_3_0.field_q = stackIn_4_1;
-        var8Lifetime1.field_k = var6;
+        var8Lifetime1.secondaryKey = var6;
         if (!param1) {
           if (this.a(-72) >= 20) {
             throw new RuntimeException();
@@ -202,16 +202,16 @@ abstract class lk {
         this.field_g = new tg();
         this.field_f = new tg();
         this.field_m = new tg();
-        this.field_c = new wk(6);
+        this.field_c = new PacketBuffer(6);
         this.field_i = 0;
         this.field_a = (byte) 0;
         this.field_o = 0;
-        this.field_e = new wk(10);
+        this.field_e = new PacketBuffer(10);
     }
 
     static {
         field_l = "Show private chat from my friends and opponents";
-        field_j = new vn();
+        field_j = new IntrusiveDeque();
         field_h = "Quick Chat lobby";
     }
 }

@@ -8,11 +8,11 @@ abstract class kl extends qm implements a {
     static String field_C;
     static String field_F;
     qm[] field_z;
-    static ll[] field_G;
+    static IndexedSprite[] field_G;
     static String field_y;
     static int field_A;
     static int[] field_B;
-    static qb[] field_E;
+    static Sprite[] field_E;
     static String field_D;
 
     private final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {

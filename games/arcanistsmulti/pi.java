@@ -9,7 +9,7 @@ final class pi {
     static kc field_d;
 
     final static void a(boolean param0) {
-        la.field_b = new vn();
+        la.field_b = new IntrusiveDeque();
         if (!param0) {
           pi.a((byte) 83);
         }

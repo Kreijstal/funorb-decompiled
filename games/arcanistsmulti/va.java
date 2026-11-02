@@ -3,7 +3,7 @@
  */
 final class va implements pf {
     static String field_a;
-    static eg field_c;
+    static ResourceArchive field_c;
     static String field_b;
     static String field_d;
     static String field_e;
@@ -84,7 +84,7 @@ final class va implements pf {
           var7 = (CharSequence) ((Object) param3);
           ua.field_S = gk.a(var7, param1 ^ -14);
           gg.field_e = param0;
-          var6 = ff.a(param2, 49, gl.field_c, mj.field_z, ab.field_p);
+          var6 = ff.a(param2, 49, gl.field_c, mj.field_z, CipherPacketBuffer.field_p);
           ag.a(var6, (byte) -104);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

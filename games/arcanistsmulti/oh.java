@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends pg {
+final class oh extends IntrusiveNode {
     og[] field_n;
     int[] field_p;
     og[] field_g;

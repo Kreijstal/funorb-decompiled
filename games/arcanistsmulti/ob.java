@@ -16,7 +16,7 @@ abstract class ob extends vi {
     static int field_ab;
     private int field_cb;
     private int field_Z;
-    static ll[] field_db;
+    static IndexedSprite[] field_db;
 
     void e(boolean param0) {
         if (param0) {
@@ -243,15 +243,15 @@ abstract class ob extends vi {
           return;
         }
         try {
-          he.field_e.b((byte) -98, 58);
-          he.field_e.f(param2, (byte) -7);
-          he.field_e.c(param1.field_o, (byte) -109);
-          he.field_e.c(param1.field_j, (byte) -101);
-          he.field_e.c(param1.field_q, (byte) -56);
-          he.field_e.c(param1.field_s, (byte) -79);
-          he.field_e.c(param1.field_k, (byte) -113);
-          he.field_e.f(param1.field_m, (byte) -111);
-          he.field_e.f(param1.field_h, (byte) -124);
+          he.field_e.writeOpcode((byte) -98, 58);
+          he.field_e.writeByte(param2, (byte) -7);
+          he.field_e.writeShort(param1.field_o, (byte) -109);
+          he.field_e.writeShort(param1.field_j, (byte) -101);
+          he.field_e.writeShort(param1.field_q, (byte) -56);
+          he.field_e.writeShort(param1.field_s, (byte) -79);
+          he.field_e.writeShort(param1.field_k, (byte) -113);
+          he.field_e.writeByte(param1.field_m, (byte) -111);
+          he.field_e.writeByte(param1.field_h, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ob.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class me extends df implements vb {
-    static vn field_O;
+    static IntrusiveDeque field_O;
     private String field_J;
     static String field_Q;
     private ed field_G;
@@ -124,8 +124,8 @@ final class me extends df implements vb {
     public static void a(byte param0) {
         field_O = null;
         if (param0 <= 88) {
-          eg var2 = (eg) null;
-          me.a((eg) null, -67, 92, -61);
+          ResourceArchive var2 = (ResourceArchive) null;
+          me.a((ResourceArchive) null, -67, 92, -61);
         }
         field_L = null;
         field_E = null;
@@ -136,23 +136,23 @@ final class me extends df implements vb {
         field_R = null;
     }
 
-    private final static ll a(int param0) {
-        ll var1 = new ll(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], ln.field_I[param0], ph.field_c);
+    private final static IndexedSprite a(int param0) {
+        IndexedSprite var1 = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], ln.field_I[param0], ph.field_c);
         dk.a(-18229);
         return var1;
     }
 
-    final static eg a(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           tj var8 = null;
-          eg stackIn_2_0 = null;
-          eg stackIn_15_0 = null;
+          ResourceArchive stackIn_2_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param2 != 2097152) {
-              stackIn_2_0 = (eg) null;
+              stackIn_2_0 = (ResourceArchive) null;
               return stackIn_2_0;
             }
             var6 = null;
@@ -176,7 +176,7 @@ final class me extends df implements vb {
             if (param3) {
               var8.g((byte) 53);
             }
-            stackIn_15_0 = new eg(var8, param1, param4);
+            stackIn_15_0 = new ResourceArchive(var8, param1, param4);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,10 +190,10 @@ final class me extends df implements vb {
         }
     }
 
-    final static ll a(eg param0, int param1, int param2, int param3) {
+    final static IndexedSprite a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        ll stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -207,7 +207,7 @@ final class me extends df implements vb {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (ll) (stackIn_4_0);
+          return (IndexedSprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -272,7 +272,7 @@ final class me extends df implements vb {
         field_L = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_P = "Towers:";
         field_H = new int[]{25, 8, 26};
-        field_O = new vn();
+        field_O = new IntrusiveDeque();
         field_I = 0;
     }
 }

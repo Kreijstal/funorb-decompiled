@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tf extends pg {
+class DualLinkNode extends IntrusiveNode {
     static int[] field_g;
     static String field_h;
-    long field_k;
-    tf field_i;
-    static qb[] field_j;
-    tf field_l;
+    long secondaryKey;
+    DualLinkNode secondaryPrevious;
+    static Sprite[] field_j;
+    DualLinkNode secondaryNext;
 
     public static void a(int param0) {
         field_h = null;
@@ -60,7 +60,7 @@ class tf extends pg {
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = mo.a(var6, 45);
+            var7 = IntrusiveNodeHashTable.a(var6, 45);
             if (var7 != null) {
               stackIn_21_0 = var7;
               return stackIn_21_0;
@@ -97,7 +97,7 @@ class tf extends pg {
             return stackIn_2_0;
           }
           var3 = new f(param2);
-          cm.field_l.b(var3, -1);
+          cm.field_l.addLast(var3, -1);
           pb.a(32, param0, var3);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -115,47 +115,47 @@ class tf extends pg {
         }
     }
 
-    final void a(byte param0) {
-        if (param0 != 88) {
-          this.field_k = 116L;
+    final void unlinkSecondary(byte obfuscationGuard) {
+        if (obfuscationGuard != 88) {
+          this.secondaryKey = 116L;
         }
-        if (this.field_i == null) {
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_i.field_l = this.field_l;
-        this.field_l.field_i = this.field_i;
-        this.field_l = null;
-        this.field_i = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
     }
 
     final long b(boolean param0) {
         if (param0) {
           return 111L;
         }
-        return this.field_k;
+        return this.secondaryKey;
     }
 
     final void a(int param0, long param1) {
         if (param0 != 46) {
           return;
         }
-        if (null != this.field_i) {
+        if (null != this.secondaryPrevious) {
           throw new RuntimeException();
         }
-        this.field_k = param1;
+        this.secondaryKey = param1;
     }
 
-    final boolean d(byte param0) {
-        if (param0 != -17) {
+    final boolean isSecondaryLinked(byte obfuscationGuard) {
+        if (obfuscationGuard != -17) {
           return false;
         }
-        if (this.field_i != null) {
+        if (this.secondaryPrevious != null) {
           return true;
         }
         return false;
     }
 
-    protected tf() {
+    protected DualLinkNode() {
     }
 
     static {

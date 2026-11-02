@@ -16,7 +16,7 @@ final class dm extends wn {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        qb var8 = null;
+        Sprite var8 = null;
         if (0 != param2) {
           return;
         }
@@ -31,7 +31,7 @@ final class dm extends wn {
           return;
         }
         if (param0 < -52) {
-          var8 = new qb(this.field_B.field_v, this.field_B.field_k);
+          var8 = new Sprite(this.field_B.field_v, this.field_B.field_k);
           fk.a(var8, -23095);
           this.field_B.a((byte) -128, 0, param2, 0);
           oo.c(-15405);
@@ -39,7 +39,7 @@ final class dm extends wn {
           return;
         }
         dm.h((byte) -53);
-        qb var7 = new qb(this.field_B.field_v, this.field_B.field_k);
+        Sprite var7 = new Sprite(this.field_B.field_v, this.field_B.field_k);
         fk.a(var7, -23095);
         this.field_B.a((byte) -128, 0, param2, 0);
         oo.c(-15405);
@@ -48,7 +48,7 @@ final class dm extends wn {
 
     final static boolean h(byte param0) {
         int var2 = 0;
-        rb var1 = (rb) (pb.field_m.b(12623));
+        rb var1 = (rb) (pb.field_m.first(12623));
         int var2Lifetime1;
         int var2Lifetime2;
         if (var1 == null) {

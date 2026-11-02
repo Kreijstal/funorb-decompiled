@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class go {
-    static ll[] field_j;
+    static IndexedSprite[] field_j;
     static String field_f;
     static String field_h;
     String field_e;

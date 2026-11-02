@@ -4,14 +4,14 @@
 final class vg {
     int field_i;
     short[] field_s;
-    static eg field_l;
+    static ResourceArchive field_l;
     int[] field_g;
     int field_R;
     short[] field_w;
     int[] field_y;
     int[] field_j;
     short[] field_D;
-    static ll field_M;
+    static IndexedSprite field_M;
     int[] field_p;
     short[] field_b;
     short[] field_S;
@@ -53,23 +53,23 @@ final class vg {
         if (!td.e(true)) {
           return;
         }
-        if (vn.field_d == 71 &&
+        if (IntrusiveDeque.field_d == 71 &&
           mj.field_p > 0) {
           df.a((byte) 65, mj.field_p - 1);
         }
-        if (vn.field_d == 72 &&
+        if (IntrusiveDeque.field_d == 72 &&
           mj.field_p < 7) {
           df.a((byte) -125, mj.field_p + 1);
         }
-        if (vn.field_d == 33 &&
+        if (IntrusiveDeque.field_d == 33 &&
           0 < ed.field_Cb) {
           ed.field_Cb = ed.field_Cb - 1;
         }
-        if (vn.field_d == 34 &&
+        if (IntrusiveDeque.field_d == 34 &&
           ed.field_Cb < 8) {
           ed.field_Cb = ed.field_Cb + 1;
         }
-        if (vn.field_d == 35) {
+        if (IntrusiveDeque.field_d == 35) {
           ed.field_Cb = 6;
         }
         var1 = 36 / ((21 - param0) / 50);

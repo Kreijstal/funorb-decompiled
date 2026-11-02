@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends pg {
+final class vf extends IntrusiveNode {
     static so field_g;
     byte[] field_t;
     static ed field_k;
@@ -87,9 +87,9 @@ final class vf extends pg {
     final static cg a(long param0, int param1) {
         if (param1 != 8192) {
           field_h = (String) null;
-          return (cg) (kn.field_qb.a(param0, (byte) -121));
+          return (cg) (kn.field_qb.get(param0, (byte) -121));
         }
-        return (cg) (kn.field_qb.a(param0, (byte) -121));
+        return (cg) (kn.field_qb.get(param0, (byte) -121));
     }
 
     public static void a(int param0) {

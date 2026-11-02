@@ -6,7 +6,7 @@ final class dh extends kc {
     private kc field_Cb;
     static String field_Nb;
     private int field_Eb;
-    static ll[] field_Jb;
+    static IndexedSprite[] field_Jb;
     static String field_Bb;
     static boolean[] field_Fb;
     private kc field_Ob;
@@ -101,7 +101,7 @@ final class dh extends kc {
     final static void a(int[] param0, int param1, int param2) {
         try {
           wl.field_L[param2] = param0;
-          tl.field_f[param2] = new lc(param2);
+          ArchiveProvider.field_f[param2] = new lc(param2);
           if (param1 != 9) {
             dh.f((byte) 121);
           }
@@ -110,7 +110,7 @@ final class dh extends kc {
         }
     }
 
-    final static void a(eg param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         int var5 = 0;
         Object stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -118,7 +118,7 @@ final class dh extends kc {
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         int var3_int = 0;
-        qb var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -130,8 +130,8 @@ final class dh extends kc {
         int var4Lifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          go.field_j = new ll[72];
-          ti.field_I = new ll[9];
+          go.field_j = new IndexedSprite[72];
+          ti.field_I = new IndexedSprite[9];
           var2 = null;
           var3_int = 0;
           for (var4 = 0; var4 < 9; var4++) {
@@ -162,9 +162,9 @@ final class dh extends kc {
             if (var4 == 8) {
               var2 = pk.a("", 0, "scn8", param0);
             }
-            ti.field_I[var4] = (ll) (((Object[]) (var2))[0]);
+            ti.field_I[var4] = (IndexedSprite) (((Object[]) (var2))[0]);
             for (var5 = 1; 9 > var5; var5++) {
-              go.field_j[var3_int] = (ll) (((Object[]) (var2))[var5]);
+              go.field_j[var3_int] = (IndexedSprite) (((Object[]) (var2))[var5]);
               var3_int++;
             }
           }
@@ -189,7 +189,7 @@ final class dh extends kc {
           }
           kh.field_d = ti.field_I[3];
           bg.field_e = fj.a("", -22612, param0, "slab");
-          uj.field_i = new qb[7];
+          uj.field_i = new Sprite[7];
           uj.field_i[0] = fj.a("", param1 - 22546, param0, "spells_universal_tower_64x32");
           if (param1 != -66) {
             field_Kb = (String[]) null;
@@ -199,7 +199,7 @@ final class dh extends kc {
           uj.field_i[3] = fj.a("", -22612, param0, "den");
           uj.field_i[4] = fj.a("", -22612, param0, "light");
           var3 = fj.a("", param1 - 22546, param0, "nature");
-          uj.field_i[5] = new qb(80, 95);
+          uj.field_i[5] = new Sprite(80, 95);
           uj.field_i[5].a();
           de.c(40, 16, 16, 1);
           var3.c(0, 16);
@@ -233,7 +233,7 @@ final class dh extends kc {
         this.b(param1, (byte) 92);
         if (param1) {
           while (ib.b(param0)) {
-            if (vn.field_d == 85 &&
+            if (IntrusiveDeque.field_d == 85 &&
               this.field_Ib.length() > 0) {
               qj.a(-1 + this.field_Ib.length(), this.field_Ib, ' ', false);
             }
@@ -245,8 +245,8 @@ final class dh extends kc {
               ed.field_Bb == 93) {
               discarded$0 = this.field_Ib.append(ed.field_Bb);
             }
-            if (vn.field_d != 84) {
-              if (vn.field_d == 13) {
+            if (IntrusiveDeque.field_d != 84) {
+              if (IntrusiveDeque.field_d == 13) {
                 return 1;
               }
               continue;
@@ -615,7 +615,7 @@ final class dh extends kc {
         if (this.field_Eb != 0) {
           return false;
         }
-        if (vn.field_d == 85 &&
+        if (IntrusiveDeque.field_d == 85 &&
           0 < this.field_Ib.length()) {
           qj.a(this.field_Ib.length() - 1, this.field_Ib, ' ', false);
         }
@@ -637,7 +637,7 @@ final class dh extends kc {
           var3 = (int[]) null;
           dh.a((int[]) null, 117, 95);
         }
-        if (vn.field_d == 84) {
+        if (IntrusiveDeque.field_d == 84) {
           if (this.field_Ib.length() <= 0) {
             this.field_Eb = 1;
           } else {
@@ -645,7 +645,7 @@ final class dh extends kc {
             this.field_Eb = 2;
           }
         }
-        if (13 != vn.field_d) {
+        if (13 != IntrusiveDeque.field_d) {
           return true;
         }
         this.field_Eb = 1;

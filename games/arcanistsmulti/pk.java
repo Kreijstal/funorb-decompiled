@@ -6,20 +6,20 @@ import java.util.*;
 final class pk implements Iterable {
     static String field_b;
     static String field_f;
-    private pg field_e;
+    private IntrusiveNode field_e;
     int field_d;
-    pg[] field_c;
-    static ll[] field_a;
+    IntrusiveNode[] field_c;
+    static IndexedSprite[] field_a;
     static String field_g;
 
-    final static qb[] a(byte param0) {
+    final static Sprite[] a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
-        qb[] var1 = new qb[h.field_J];
+        Sprite[] var1 = new Sprite[h.field_J];
         if (param0 >= -106) {
           field_f = (String) null;
         }
@@ -30,7 +30,7 @@ final class pk implements Iterable {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = ph.field_c[dg.a((int) var4[var6], 255)];
           }
-          var1[var2] = new qb(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var5);
+          var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var5);
         }
         dk.a(-18229);
         return var1;
@@ -40,21 +40,21 @@ final class pk implements Iterable {
         return (Iterator) ((Object) new jf(this));
     }
 
-    final void a(byte param0, pg param1, long param2) {
-        pg var5 = null;
+    final void a(byte param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_a != null) {
-            param1.a(true);
+          if (param1.previous != null) {
+            param1.unlink(true);
           }
           if (param0 > -17) {
             pk.a(75);
           }
           var5 = this.field_c[(int)(param2 & (long)(-1 + this.field_d))];
-          param1.field_a = var5.field_a;
-          param1.field_b = var5;
-          param1.field_a.field_b = param1;
-          param1.field_b.field_a = param1;
-          param1.field_e = param2;
+          param1.previous = var5.previous;
+          param1.next = var5;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
+          param1.key = param2;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "pk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -65,24 +65,24 @@ final class pk implements Iterable {
         field_a = null;
         field_f = null;
         if (param0 != -14987) {
-          field_a = (ll[]) null;
+          field_a = (IndexedSprite[]) null;
         }
         field_b = null;
     }
 
-    final pg a(byte param0, long param1) {
-        pg var6 = null;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var6 = null;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         int var5 = -25 / ((param0 - 51) / 52);
-        pg var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
-        this.field_e = var4.field_b;
+        IntrusiveNode var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
+        this.field_e = var4.next;
         while (this.field_e != var4) {
-          if (~param1 == ~this.field_e.field_e) {
+          if (~param1 == ~this.field_e.key) {
             var6 = this.field_e;
-            this.field_e = this.field_e.field_b;
+            this.field_e = this.field_e.next;
             return var6;
           }
-          this.field_e = this.field_e.field_b;
+          this.field_e = this.field_e.next;
         }
         this.field_e = null;
         return null;
@@ -90,24 +90,24 @@ final class pk implements Iterable {
 
     pk(int param0) {
         int var2 = 0;
-        pg dupTemp$0 = null;
-        pg var3 = null;
-        this.field_c = new pg[param0];
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
+        this.field_c = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new pg();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
-          var3.field_a = var3;
-          var3.field_b = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 
-    final static ll[] a(String param0, int param1, String param2, eg param3) {
+    final static IndexedSprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ll[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

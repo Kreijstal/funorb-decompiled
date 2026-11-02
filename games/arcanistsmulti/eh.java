@@ -8,7 +8,7 @@ final class eh {
     static String field_d;
     static volatile int field_c;
     static String field_b;
-    static qb field_e;
+    static Sprite field_e;
 
     final static String[] a(boolean param0, char param1, String param2) {
         int var7 = 0;
@@ -29,7 +29,7 @@ final class eh {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0) {
-            field_e = (qb) null;
+            field_e = (Sprite) null;
           }
           var10 = (CharSequence) ((Object) param2);
           var3_int = wa.a(param1, var10, (byte) -16);
@@ -62,18 +62,18 @@ final class eh {
     }
 
     final static void b(byte param0) {
-        ce var1 = (ce) (lh.field_c.b(12623));
+        ce var1 = (ce) (lh.field_c.first(12623));
         int var2 = -104 % ((-41 - param0) / 40);
         if (var1 == null) {
           ka.b(false);
           return;
         }
-        ab var3 = df.field_z;
-        var3.d(-10674);
-        var3.d(-10674);
-        var3.d(-10674);
-        var3.d(-10674);
-        var1.a(true);
+        CipherPacketBuffer var3 = df.field_z;
+        var3.readInt(-10674);
+        var3.readInt(-10674);
+        var3.readInt(-10674);
+        var3.readInt(-10674);
+        var1.unlink(true);
     }
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
@@ -81,7 +81,7 @@ final class eh {
           eh.b((byte) -111);
         }
         if (wh.field_g) {
-          return ln.field_U.a(ed.field_Bb, (byte) 123, vn.field_d);
+          return ln.field_U.a(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
         }
         if (oj.field_i) {
           return rg.a(param3, -14, param2);
@@ -114,11 +114,11 @@ final class eh {
         RuntimeException var3 = null;
         int var4 = 0;
         String var5 = null;
-        ab var6 = null;
+        CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param2);
-          if (!vn.a(var7, 0)) {
+          if (!IntrusiveDeque.a(var7, 0)) {
             stackIn_3_0 = fn.field_h;
             return stackIn_3_0;
           }
@@ -126,7 +126,7 @@ final class eh {
             stackIn_7_0 = sd.field_l;
             return stackIn_7_0;
           }
-          if (jb.field_t != 2) {
+          if (SpriteState.field_t != 2) {
             stackIn_11_0 = vi.field_K;
             return stackIn_11_0;
           }
@@ -143,16 +143,16 @@ final class eh {
             return stackIn_23_0;
           }
           var6 = he.field_e;
-          var6.b((byte) -67, param1);
-          var6.field_g = var6.field_g + 1;
-          var4 = var6.field_g;
-          var6.f(2, (byte) -70);
+          var6.writeOpcode((byte) -67, param1);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(2, (byte) -70);
           if (param0 >= -14) {
             var5 = (String) null;
             eh.a(false, '￞', (String) null);
           }
           var6.a(param2, 23333);
-          var6.b(-var4 + var6.field_g, (byte) 43);
+          var6.writeByteLengthAtMark(-var4 + var6.position, (byte) 43);
           stackIn_27_0 = null;
           return (String) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class eh {
         field_a = null;
     }
 
-    final static boolean a(int param0, eg param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -225,13 +225,13 @@ final class eh {
           kg.field_c.field_rb = null;
         }
         stackIn_11_0 = k.field_d;
-        stackIn_12_1 = (param0) && (!param1) && (!pg.field_d) && (null == wi.field_f) && (om.field_x == null);
+        stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == wi.field_f) && (om.field_x == null);
         ((kc) (Object) stackIn_11_0).b(stackIn_12_1, (byte) 75);
         stackIn_18_0 = fn.field_e;
-        stackIn_19_1 = (param0) && (!param1) && (!pg.field_d) && (null == wi.field_f) && (null == om.field_x);
+        stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == wi.field_f) && (null == om.field_x);
         ((kc) (Object) stackIn_18_0).b(stackIn_19_1, (byte) 121);
         stackIn_23_0 = gm.field_h;
-        stackIn_24_1 = (param0) && (!param1) && (pg.field_d);
+        stackIn_24_1 = (param0) && (!param1) && (IntrusiveNode.field_d);
         ((kc) (Object) stackIn_23_0).b(stackIn_24_1, (byte) 115);
         aj.field_h.field_c.h((byte) 100);
         if (0 != ii.field_b.field_U) {
@@ -264,7 +264,7 @@ final class eh {
           dn.a(param2 - 13218, 0, ml.field_m, param3, ef.field_t, true);
         }
         if (0 != dm.field_E.field_U) {
-          pg.field_d = false;
+          IntrusiveNode.field_d = false;
         }
     }
 

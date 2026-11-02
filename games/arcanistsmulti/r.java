@@ -11,16 +11,16 @@ final class r {
     final static void a(boolean param0) {
         ed.j(120);
         if (param0) {
-          eg var2 = (eg) null;
-          r.a(51, -102, 48, (eg) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          r.a(51, -102, 48, (ResourceArchive) null);
         }
-        oc.a(112, nn.field_p, tl.field_a[0].field_n, dh.field_Gb, ga.field_r, ra.field_h);
+        oc.a(112, nn.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ga.field_r, ra.field_h);
     }
 
-    final static qb a(int param0, int param1, int param2, eg param3) {
+    final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        qb stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -28,7 +28,7 @@ final class r {
         try {
           if (!fc.a(-126, param3, param2, param1)) {
             stackIn_2_0 = null;
-            return (qb) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           if (param0 != -17928) {
             field_a = (String) null;

@@ -11,19 +11,19 @@ final class qo {
     static String field_g;
 
     final static void a(int param0, byte param1, long param2) {
-        ab var4 = he.field_e;
-        var4.b((byte) -75, param0);
-        var4.field_g = var4.field_g + 1;
-        int var5 = var4.field_g;
-        var4.f(6, (byte) -32);
+        CipherPacketBuffer var4 = he.field_e;
+        var4.writeOpcode((byte) -75, param0);
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
+        var4.writeByte(6, (byte) -32);
         if (param1 < -61) {
           var4.a(param2, (byte) 72);
-          var4.b(var4.field_g - var5, (byte) 43);
+          var4.writeByteLengthAtMark(var4.position - var5, (byte) 43);
           return;
         }
         field_e = -61;
         var4.a(param2, (byte) 72);
-        var4.b(var4.field_g - var5, (byte) 43);
+        var4.writeByteLengthAtMark(var4.position - var5, (byte) 43);
     }
 
     final static void a(int param0, int param1) {
@@ -45,33 +45,33 @@ final class qo {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        jf.field_a.field_g = 0;
-        jf.field_a.f(12, (byte) -45);
-        jf.field_a.a(ag.field_D.nextInt(), (byte) -101);
-        jf.field_a.a(ag.field_D.nextInt(), (byte) -101);
-        jf.field_a.f(param0, (byte) -10);
+        jf.field_a.position = 0;
+        jf.field_a.writeByte(12, (byte) -45);
+        jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
+        jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
+        jf.field_a.writeByte(param0, (byte) -10);
         if (param3 < -125) {
-          jf.field_a.f(param1, (byte) -50);
-          jf.field_a.c(param2, (byte) -66);
+          jf.field_a.writeByte(param1, (byte) -50);
+          jf.field_a.writeShort(param2, (byte) -66);
           jf.field_a.a(q.field_K, (byte) 98, nl.field_Jb);
-          he.field_e.b((byte) -25, 18);
-          fieldTemp$0 = he.field_e.field_g + 1;
-          he.field_e.field_g = he.field_e.field_g + 1;
+          he.field_e.writeOpcode((byte) -25, 18);
+          fieldTemp$0 = he.field_e.position + 1;
+          he.field_e.position = he.field_e.position + 1;
           var4 = fieldTemp$0;
-          he.field_e.a(jf.field_a.field_j, 0, (byte) -86, jf.field_a.field_g);
-          he.field_e.b(he.field_e.field_g - var4, (byte) 43);
+          he.field_e.a(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
+          he.field_e.writeByteLengthAtMark(he.field_e.position - var4, (byte) 43);
           return;
         }
         qo.a(5, 14, 54, (byte) 68);
-        jf.field_a.f(param1, (byte) -50);
-        jf.field_a.c(param2, (byte) -66);
+        jf.field_a.writeByte(param1, (byte) -50);
+        jf.field_a.writeShort(param2, (byte) -66);
         jf.field_a.a(q.field_K, (byte) 98, nl.field_Jb);
-        he.field_e.b((byte) -25, 18);
-        int fieldTemp$1 = he.field_e.field_g + 1;
-        he.field_e.field_g = he.field_e.field_g + 1;
+        he.field_e.writeOpcode((byte) -25, 18);
+        int fieldTemp$1 = he.field_e.position + 1;
+        he.field_e.position = he.field_e.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        he.field_e.a(jf.field_a.field_j, 0, (byte) -86, jf.field_a.field_g);
-        he.field_e.b(he.field_e.field_g - var4Lifetime1, (byte) 43);
+        he.field_e.a(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
+        he.field_e.writeByteLengthAtMark(he.field_e.position - var4Lifetime1, (byte) 43);
     }
 
     final static String a(byte param0, CharSequence param1) {

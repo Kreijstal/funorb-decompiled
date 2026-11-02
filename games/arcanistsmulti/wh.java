@@ -8,12 +8,12 @@ final class wh {
     static int field_c;
     static int[][] field_d;
     static String field_a;
-    static vn field_h;
+    static IntrusiveDeque field_h;
     static boolean field_g;
-    static ll[] field_k;
+    static IndexedSprite[] field_k;
     static e field_f;
     static String field_j;
-    static eg field_l;
+    static ResourceArchive field_l;
 
     final static int a(int param0, int param1) {
         param0--;
@@ -22,7 +22,7 @@ final class wh {
         param0 = param0 | param0 >>> 4;
         param0 = param0 | param0 >>> 8;
         if (param1 != 678231216) {
-          field_k = (ll[]) null;
+          field_k = (IndexedSprite[]) null;
         }
         param0 = param0 | param0 >>> 16;
         return 1 + param0;
@@ -51,7 +51,7 @@ final class wh {
         wn.field_z.a(param1, (byte) -127);
     }
 
-    final static qb a(int param0) {
+    final static Sprite a(int param0) {
         int var4_int = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > -100) {
@@ -63,7 +63,7 @@ final class wh {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
         }
-        qb var4 = new qb(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
+        Sprite var4 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
         dk.a(-18229);
         return var4;
     }
@@ -73,7 +73,7 @@ final class wh {
         field_a = "Waiting for fonts";
         field_i = new int[]{1, 2, 3, 4, 5, 6, 53, 57, 54};
         field_g = true;
-        field_h = new vn();
+        field_h = new IntrusiveDeque();
         field_j = "Reading Book of Frost";
     }
 }

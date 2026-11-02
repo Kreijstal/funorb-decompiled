@@ -4,11 +4,11 @@
 final class uj {
     int field_d;
     int field_g;
-    static qb field_f;
+    static Sprite field_f;
     static String field_b;
     static int[] field_c;
     int field_e;
-    static qb[] field_i;
+    static Sprite[] field_i;
     int field_a;
     static co field_h;
 
@@ -64,15 +64,15 @@ final class uj {
         if (param0) {
           return;
         }
-        field_f = (qb) null;
+        field_f = (Sprite) null;
     }
 
     final static void a(int param0, byte param1, int param2) {
-        ab var3 = he.field_e;
-        var3.b((byte) -32, param2);
-        var3.f(3, (byte) -54);
-        var3.f(8, (byte) -85);
-        var3.c(param0, (byte) -93);
+        CipherPacketBuffer var3 = he.field_e;
+        var3.writeOpcode((byte) -32, param2);
+        var3.writeByte(3, (byte) -54);
+        var3.writeByte(8, (byte) -85);
+        var3.writeShort(param0, (byte) -93);
         if (param1 >= -92) {
           jd var4 = (jd) null;
           uj.a((jd) null, 16, (byte) 39);
@@ -84,7 +84,7 @@ final class uj {
         if (param0 == -2147483648) {
           return param1 == (param1 & -param1) ? true : false;
         }
-        field_f = (qb) null;
+        field_f = (Sprite) null;
         return param1 == (param1 & -param1) ? true : false;
     }
 

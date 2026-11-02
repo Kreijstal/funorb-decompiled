@@ -49,9 +49,9 @@ final class hd {
         }
     }
 
-    final static boolean a(ab param0, byte param1) {
+    final static boolean a(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
-        ab var3 = null;
+        CipherPacketBuffer var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -59,10 +59,10 @@ final class hd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 108) {
-            var3 = (ab) null;
-            hd.a((ab) null, (byte) -121);
+            var3 = (CipherPacketBuffer) null;
+            hd.a((CipherPacketBuffer) null, (byte) -121);
           }
-          stackIn_5_0 = (param0.d(28089, 1) == 1);
+          stackIn_5_0 = (param0.readBits(28089, 1) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,8 +6,8 @@ final class pm {
     static rc field_h;
     static String[] field_f;
     static h field_e;
-    static ll[] field_d;
-    static qb field_a;
+    static IndexedSprite[] field_d;
+    static Sprite field_a;
     static sa field_b;
     static int field_c;
 
@@ -130,7 +130,7 @@ final class pm {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (tl.field_b.indexOf(var5Lifetime1) == -1) {
+              if (ArchiveProvider.field_b.indexOf(var5Lifetime1) == -1) {
                 stackIn_47_0 = n.field_b;
                 return stackIn_47_0;
               }
@@ -152,20 +152,20 @@ final class pm {
         }
     }
 
-    final static qb[] a(int param0, qb param1) {
-        qb[] var2 = null;
+    final static Sprite[] a(int param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        qb[] var3 = null;
-        qb[] stackIn_3_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 29) {
-            field_a = (qb) null;
+            field_a = (Sprite) null;
           }
-          var3 = new qb[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           stackIn_3_0 = var2;

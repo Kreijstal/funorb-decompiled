@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ud extends dc {
+abstract class ud extends GameAppletShell {
     private int field_m;
     static int[][] field_z;
     static int[] field_p;
@@ -16,7 +16,7 @@ abstract class ud extends dc {
     static long field_E;
     private boolean field_A;
     String field_q;
-    static eg field_D;
+    static ResourceArchive field_D;
     static String field_y;
     private int field_l;
     private boolean field_s;
@@ -167,7 +167,7 @@ abstract class ud extends dc {
           int var8 = 0;
           String var9 = null;
           Boolean var10 = null;
-          wk var11 = null;
+          PacketBuffer var11 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ArcanistsMulti.field_G ? 1 : 0;
@@ -243,13 +243,13 @@ abstract class ud extends dc {
             g.a(cd.e(122), -10400);
           }
           if (10 == var4) {
-            he.field_e.b((byte) -68, 17);
+            he.field_e.writeOpcode((byte) -68, 17);
           }
           if (var4 == 11) {
             mc.a(30449, cd.e(122));
           }
           if (var4 == 12) {
-            fk.a(cd.e(116), false, tl.b((byte) 121));
+            fk.a(cd.e(116), false, ArchiveProvider.b((byte) 121));
           }
           if (var4 == 13) {
             try {
@@ -263,7 +263,7 @@ abstract class ud extends dc {
                   stackIn_71_1 = !(param0);
                   bc.a((String) (stackIn_70_0), stackIn_71_1);
                 } else {
-                  var7 = ba.a(0, var11.field_g, (byte) -123, var11.field_j);
+                  var7 = ba.a(0, var11.position, (byte) -123, var11.payload);
                   stackIn_66_0 = var7;
                   stackIn_67_1 = !(param0);
                   bc.a(stackIn_66_0, stackIn_67_1);
@@ -438,7 +438,7 @@ abstract class ud extends dc {
                     rb.c(-54);
                   } else {
                     if (6 == var2) {
-                      pg.b(-112);
+                      IntrusiveNode.b(-112);
                     } else {
                       if (var2 == 7) {
                         this.f(-18075);
@@ -491,7 +491,7 @@ abstract class ud extends dc {
 
     private final void h(int param0) {
         if (param0 > -17) {
-          field_D = (eg) null;
+          field_D = (ResourceArchive) null;
         }
         cc.field_d[2] = true;
     }
@@ -589,7 +589,7 @@ abstract class ud extends dc {
                     if (u.field_b != 5) {
                       oa.a(true, 256, dd.field_a);
                     } else {
-                      oa.a(true, 5, s.field_d);
+                      oa.a(true, 5, IndexedSpriteState.field_d);
                     }
                   }
                 }
@@ -651,7 +651,7 @@ abstract class ud extends dc {
           }
         }
         if (ih.field_f == 3 &&
-          vn.a(ho.field_g, param0, ea.field_C, da.field_b) &&
+          IntrusiveDeque.a(ho.field_g, param0, ea.field_C, da.field_b) &&
           eh.a(18306, ho.field_g)) {
           rk.f(-73);
           cj.b(-128);
@@ -672,7 +672,7 @@ abstract class ud extends dc {
             gk.field_k = ld.a(false);
             mb.field_P = sc.h((byte) -34);
           }
-          ug.a(mb.field_P, gk.field_k, ho.field_g, 121);
+          IsaacCipher.a(mb.field_P, gk.field_k, ho.field_g, 121);
           ho.field_g = null;
           ea.field_C = null;
           da.field_b = null;
@@ -690,7 +690,7 @@ abstract class ud extends dc {
         if (ih.field_f == 11) {
           if (null != va.field_c && (!va.field_c.c(-10923) ||
             !va.field_c.a(-49))) {
-            rb.a(qe.a(ld.field_o, 87, va.field_c, vn.field_f), false, 0.0f);
+            rb.a(qe.a(ld.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -726,7 +726,7 @@ abstract class ud extends dc {
 
     private final void c(boolean param0) {
         int discarded$0 = 0;
-        int var2 = df.field_z.e((byte) 97);
+        int var2 = df.field_z.readUnsignedByte((byte) 97);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + fj.field_h;
         byte[] var5 = new byte[var4];

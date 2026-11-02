@@ -6,15 +6,15 @@ import java.io.*;
 final class i {
     static String field_b;
     static ho field_i;
-    static ll[] field_g;
-    static vn field_e;
+    static IndexedSprite[] field_g;
+    static IntrusiveDeque field_e;
     static int field_f;
     static String field_h;
-    static ll[] field_a;
+    static IndexedSprite[] field_a;
     tn field_c;
     static int field_d;
 
-    final static qb a(boolean param0) {
+    final static Sprite a(boolean param0) {
         int var5_int = 0;
         byte[] var17 = null;
         int[] var13 = null;
@@ -25,7 +25,7 @@ final class i {
         Object var3 = null;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0) {
-          return (qb) null;
+          return (Sprite) null;
         }
         int var1 = jg.field_p[0] * ho.field_i[0];
         byte[] var16 = ln.field_I[0];
@@ -34,7 +34,7 @@ final class i {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = ph.field_c[dg.a((int) var16[var5_int], 255)];
           }
-          var3 = new qb(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var8);
+          var3 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var8);
         } else {
           var17 = vi.field_O[0];
           var13 = new int[var1];
@@ -46,7 +46,7 @@ final class i {
           var3 = new od(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var13);
         }
         dk.a(-18229);
-        return (qb) (var3);
+        return (Sprite) (var3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -54,7 +54,7 @@ final class i {
         int var7 = param4;
         this.field_c.a(param0, param2, var7, var6, 0, param3, param1);
         lj.field_j.a(ec.field_d.field_x, 0, 0, ga.field_r, (byte) -120);
-        p.field_d.a(-80 + (-2 + ec.field_d.field_x) - (nn.field_p + 2), 0, 2 + ga.field_r, 18, (byte) -120);
+        ClientException.field_d.a(-80 + (-2 + ec.field_d.field_x) - (nn.field_p + 2), 0, 2 + ga.field_r, 18, (byte) -120);
         nk.field_n.a(nn.field_p + 82, ec.field_d.field_x - (nn.field_p + 2) - 80, ga.field_r + 2, 18, (byte) -120);
         nl.field_Gb.a(20, 2, ec.field_d.field_I - ga.field_r - 2 - 20, ec.field_d.field_x, 2 + ga.field_r + 20, 0, -16624, nn.field_p);
         dd.field_c.a(2, 20, nn.field_p, false);
@@ -72,7 +72,7 @@ final class i {
         field_g = null;
     }
 
-    final static void a(ll param0, int param1, int param2, byte param3, nf param4, qb param5, int param6) {
+    final static void a(IndexedSprite param0, int param1, int param2, byte param3, nf param4, Sprite param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -180,7 +180,7 @@ final class i {
           pm.field_e.a(df.field_y, vi.field_L, true, (byte) -88);
           pm.field_e.i(4);
           while (ib.b(false)) {
-            pm.field_e.a(ed.field_Bb, (byte) 33, vn.field_d);
+            pm.field_e.a(ed.field_Bb, (byte) 33, IntrusiveDeque.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ final class i {
         }
     }
 
-    final static void a(wk param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -208,10 +208,10 @@ final class i {
           try {
             var6 = new byte[param1];
             var2 = var6;
-            if (pg.field_f != null) {
+            if (IntrusiveNode.field_f != null) {
               try {
-                pg.field_f.a(0L, -97);
-                pg.field_f.a(-13848, var6);
+                IntrusiveNode.field_f.a(0L, -97);
+                IntrusiveNode.field_f.a(-13848, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -277,6 +277,6 @@ final class i {
     static {
         field_b = "You have been removed from <%0>'s game.";
         field_h = "Wands:";
-        field_e = new vn();
+        field_e = new IntrusiveDeque();
     }
 }

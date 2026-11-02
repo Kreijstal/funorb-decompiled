@@ -21,10 +21,10 @@ class ib extends jm {
     }
 
     final static void a(int param0, int param1) {
-        ab var2 = he.field_e;
-        var2.b((byte) -79, param0);
-        var2.f(1, (byte) -92);
-        var2.f(param1, (byte) -32);
+        CipherPacketBuffer var2 = he.field_e;
+        var2.writeOpcode((byte) -79, param0);
+        var2.writeByte(1, (byte) -92);
+        var2.writeByte(param1, (byte) -32);
     }
 
     ib(int param0) {
@@ -59,7 +59,7 @@ class ib extends jm {
           if (gn.field_b == vk.field_u) {
             return false;
           }
-          vn.field_d = v.field_p[vk.field_u];
+          IntrusiveDeque.field_d = v.field_p[vk.field_u];
           ed.field_Bb = qa.field_i[vk.field_u];
           vk.field_u = 1 + vk.field_u & 127;
           if (param0) {

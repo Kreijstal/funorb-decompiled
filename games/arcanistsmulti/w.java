@@ -138,7 +138,7 @@ final class w extends kc {
             this.field_Mb.field_L = "|";
             if (!(5 > ib.field_r) ||
               !(qf.field_d < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -152,7 +152,7 @@ final class w extends kc {
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
                     stackIn_9_5 = vd.field_a;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_9_0Lifetime1 = this;
@@ -400,7 +400,7 @@ final class w extends kc {
         if (this.field_Hb != -2) {
           return false;
         }
-        if (vn.field_d == 13) {
+        if (IntrusiveDeque.field_d == 13) {
           this.field_Hb = -1;
           return true;
         }

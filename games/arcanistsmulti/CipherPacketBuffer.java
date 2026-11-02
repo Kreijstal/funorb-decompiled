@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends wk {
+final class CipherPacketBuffer extends PacketBuffer {
     static boolean field_n;
     static String field_q;
-    private int field_t;
+    private int bitPosition;
     static kc field_p;
     static String field_r;
-    private ug field_o;
+    private IsaacCipher opcodeCipher;
     static String field_s;
 
     final static ho a(int param0, int param1, String param2) {
@@ -23,7 +23,7 @@ final class ab extends wk {
           var3.field_e = param2;
           var3.field_a = param1;
           if (param0 != 0) {
-            ab.q(55);
+            CipherPacketBuffer.q(55);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -53,12 +53,12 @@ final class ab extends wk {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 != 108) {
-            this.r(-49);
+            this.endBitAccess(-49);
           }
           for (var5_int = 0; param3 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            param0[param2 + var5_int] = (byte)(this.field_j[fieldTemp$0] - this.field_o.a(false));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.nextValue(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,77 +87,77 @@ final class ab extends wk {
         field_q = null;
     }
 
-    final void b(int param0, int[] param1) {
+    final void installCipher(int obfuscationGuard, int[] seed) {
         try {
-          int var3_int = -46 / ((param0 + 16) / 57);
-          this.field_o = new ug(param1);
+          int var3_int = -46 / ((obfuscationGuard + 16) / 57);
+          this.opcodeCipher = new IsaacCipher(seed);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ab.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ab.C(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void r(int param0) {
-        if (param0 != 0) {
+    final void endBitAccess(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
-        this.field_g = (this.field_t + 7) / 8;
+        this.position = (this.bitPosition + 7) / 8;
     }
 
-    ab(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void b(byte param0, int param1) {
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 + this.field_o.a(false));
-        if (param0 > -11) {
-          this.field_t = -103;
+    final void writeOpcode(byte obfuscationGuard, int opcode) {
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(opcode + this.opcodeCipher.nextValue(false));
+        if (obfuscationGuard > -11) {
+          this.bitPosition = -103;
         }
     }
 
-    final int g(byte param0) {
-        int var2 = 124 / ((param0 + 69) / 45);
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        return 255 & this.field_j[fieldTemp$0] - this.field_o.a(false);
+    final int readOpcode(byte obfuscationGuard) {
+        int var2 = 124 / ((obfuscationGuard + 69) / 45);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.nextValue(false);
     }
 
-    final int d(int param0, int param1) {
+    final int readBits(int obfuscationGuard, int bitCount) {
         int incrementValue$0 = 0;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
-        int var3 = this.field_t >> 3;
-        int var4 = -(7 & this.field_t) + 8;
-        this.field_t = this.field_t + param1;
+        int var3 = this.bitPosition >> 3;
+        int var4 = -(7 & this.bitPosition) + 8;
+        this.bitPosition = this.bitPosition + bitCount;
         int var5 = 0;
-        while (var4 < param1) {
+        while (var4 < bitCount) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_j[incrementValue$0] & rg.field_d[var4]) << param1 - var4);
-          param1 = param1 - var4;
+          var5 = var5 + ((this.payload[incrementValue$0] & rg.field_d[var4]) << bitCount - var4);
+          bitCount = bitCount - var4;
           var4 = 8;
         }
-        if (var4 == param1) {
-          var5 = var5 + (rg.field_d[var4] & this.field_j[var3]);
+        if (var4 == bitCount) {
+          var5 = var5 + (rg.field_d[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.field_j[var3] >> -param1 + var4 & rg.field_d[param1]);
+          var5 = var5 + (this.payload[var3] >> -bitCount + var4 & rg.field_d[bitCount]);
         }
-        if (param0 == 28089) {
+        if (obfuscationGuard == 28089) {
           return var5;
         }
         String var7 = (String) null;
-        ab.a(6, -10, (String) null);
+        CipherPacketBuffer.a(6, -10, (String) null);
         return var5;
     }
 
-    final void p(int param0) {
-        this.field_t = 8 * this.field_g;
-        if (param0 < 26) {
-          this.d(5, 58);
+    final void beginBitAccess(int obfuscationGuard) {
+        this.bitPosition = 8 * this.position;
+        if (obfuscationGuard < 26) {
+          this.readBits(5, 58);
         }
     }
 
-    ab(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 

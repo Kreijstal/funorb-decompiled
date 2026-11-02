@@ -48,7 +48,7 @@ final class dg extends rl {
               this.field_r = param0;
               this.field_w = var3.field_f;
             } else {
-              stackIn_8_0 = ug.field_c;
+              stackIn_8_0 = IsaacCipher.field_c;
               return stackIn_8_0;
             }
           }
@@ -141,7 +141,7 @@ final class dg extends rl {
             this.field_w = var4.field_f;
           }
           if (this.field_w) {
-            return wk.field_i;
+            return PacketBuffer.field_i;
           }
           stackIn_17_0 = ec.field_e;
           return stackIn_17_0;

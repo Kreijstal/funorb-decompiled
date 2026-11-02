@@ -7,12 +7,12 @@ final class ub {
     static int field_b;
     static String field_f;
     static int field_h;
-    static ll[] field_e;
+    static IndexedSprite[] field_e;
     static int field_g;
     static String field_d;
     static kc field_c;
 
-    final static byte[] a(int param0, ab param1, int param2, byte[] param3) {
+    final static byte[] a(int param0, CipherPacketBuffer param1, int param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -28,7 +28,7 @@ final class ub {
         RuntimeException var4 = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4_int = param1.d(28089, param2);
+          var4_int = param1.readBits(28089, param2);
           if (0 == var4_int) {
             return null;
           }
@@ -36,15 +36,15 @@ final class ub {
             var4_int != param3.length) {
             param3 = new byte[var4_int];
           }
-          var5 = param1.d(28089, param0);
-          var6 = (byte)param1.d(param0 + 28086, 8);
+          var5 = param1.readBits(28089, param0);
+          var6 = (byte)param1.readBits(param0 + 28086, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param3[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (byte)(var6 + param1.d(hh.a(param0, 28090), var5));
+              param3[var7] = (byte)(var6 + param1.readBits(hh.a(param0, 28090), var5));
             }
           }
           stackIn_16_0 = (byte[]) (param3);
@@ -70,14 +70,14 @@ final class ub {
     }
 
     final static void a(int param0, boolean param1) {
-        ab var2 = he.field_e;
+        CipherPacketBuffer var2 = he.field_e;
         if (param1) {
           return;
         }
-        var2.b((byte) -115, param0);
-        var2.f(2, (byte) -128);
-        var2.f(4, (byte) -43);
-        var2.f(qn.k((byte) -14), (byte) -57);
+        var2.writeOpcode((byte) -115, param0);
+        var2.writeByte(2, (byte) -128);
+        var2.writeByte(4, (byte) -43);
+        var2.writeByte(qn.k((byte) -14), (byte) -57);
     }
 
     public static void a(int param0) {
@@ -92,7 +92,7 @@ final class ub {
     }
 
     final static void a(byte param0, int param1) {
-        pg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         cm var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -102,15 +102,15 @@ final class ub {
           if (param0 < 109) {
             field_f = (String) null;
           }
-          var4 = (cm) (cc.field_e.b(12623));
+          var4 = (cm) (cc.field_e.first(12623));
           while (var4 != null) {
             hb.a(var4, param1, (byte) 93);
-            var4 = (cm) (cc.field_e.a(0));
+            var4 = (cm) (cc.field_e.next(0));
           }
-          var2 = i.field_e.b(12623);
+          var2 = i.field_e.first(12623);
           while (var2 != null) {
             gb.a(param1, true);
-            var2 = i.field_e.a(0);
+            var2 = i.field_e.next(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

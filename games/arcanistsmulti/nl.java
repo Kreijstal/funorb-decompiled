@@ -18,8 +18,8 @@ final class nl extends kc {
         }
         gi.field_c = param0;
         mf.field_c = param2;
-        if (p.field_b != null) {
-          p.field_b.a(-118, param0, param2);
+        if (ClientException.field_b != null) {
+          ClientException.field_b.a(-118, param0, param2);
         }
     }
 
@@ -52,11 +52,11 @@ final class nl extends kc {
         return param1 + (var6 + var4 + param1) + param0;
     }
 
-    final static qb[] a(byte param0, eg param1, String param2, String param3) {
+    final static Sprite[] a(byte param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qb[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -112,7 +112,7 @@ final class nl extends kc {
         }
     }
 
-    nl(long param0, kc param1, kc param2, kc param3, qb param4, String param5) {
+    nl(long param0, kc param1, kc param2, kc param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

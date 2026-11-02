@@ -4,7 +4,7 @@
 final class cj {
     static int[] field_a;
     static int field_b;
-    static ll[] field_f;
+    static IndexedSprite[] field_f;
     static String field_c;
     static String field_e;
     static int field_d;
@@ -12,7 +12,7 @@ final class cj {
 
     final static void b(int param0) {
         int var1 = -65 / ((param0 + 81) / 41);
-        qj.field_i = tc.field_C + " <b>" + ln.field_R + "</b> " + li.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + p.field_f;
+        qj.field_i = tc.field_C + " <b>" + ln.field_R + "</b> " + li.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + ClientException.field_f;
     }
 
     final static void a(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
@@ -80,7 +80,7 @@ final class cj {
           if (var45.field_H != null &&
             1 < var45.field_F) {
             var61 = var45.field_H;
-            to.a(var61, false, jb.field_s, 0, 0);
+            to.a(var61, false, SpriteState.field_s, 0, 0);
           } else {
             ol.a((byte) 91);
           }
@@ -89,7 +89,7 @@ final class cj {
           var41 = var50;
           var8 = var41;
           var65 = new int[param4.field_A];
-          var64 = dc.field_k;
+          var64 = GameAppletShell.field_k;
           var63 = nf.field_Lb;
           var62 = mf.field_b;
           for (var13 = 0; param4.field_A > var13; var13++) {
@@ -126,19 +126,19 @@ final class cj {
             var15Lifetime1 = param4.field_U[var14Lifetime1];
             var16 = param4.field_T[var14Lifetime1];
             var17 = param4.field_O[var14Lifetime1];
-            if (param4.field_w[var14Lifetime1] < dc.field_k.length) {
+            if (param4.field_w[var14Lifetime1] < GameAppletShell.field_k.length) {
               stackIn_24_0 = param4.field_w[var14Lifetime1];
             } else {
               stackIn_24_0 = -1;
             }
             var18 = stackIn_24_0;
-            if (dc.field_k.length > param4.field_q[var14Lifetime1]) {
+            if (GameAppletShell.field_k.length > param4.field_q[var14Lifetime1]) {
               stackIn_27_0 = param4.field_q[var14Lifetime1];
             } else {
               stackIn_27_0 = -1;
             }
             var19 = stackIn_27_0;
-            if (param4.field_u[var14Lifetime1] >= dc.field_k.length) {
+            if (param4.field_u[var14Lifetime1] >= GameAppletShell.field_k.length) {
               stackIn_30_0 = -1;
             } else {
               stackIn_30_0 = param4.field_u[var14Lifetime1];
@@ -220,7 +220,7 @@ final class cj {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_f = (ll[]) null;
+          field_f = (IndexedSprite[]) null;
         }
         field_f = null;
         field_c = null;
@@ -242,9 +242,9 @@ final class cj {
     final static int a(boolean param0, byte param1, int param2, hc param3, int param4, hc param5, String param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        wk stackIn_18_0 = null;
+        PacketBuffer stackIn_18_0 = null;
         String stackIn_19_1 = null;
-        wk stackIn_21_0 = null;
+        PacketBuffer stackIn_21_0 = null;
         String stackIn_22_1 = null;
         int stackIn_36_0 = 0;
         int stackIn_45_0 = 0;
@@ -299,63 +299,63 @@ final class cj {
           }
           if (ob.field_eb == pc.field_g) {
             kj.field_e = null;
-            he.field_e.field_g = 0;
+            he.field_e.position = 0;
             if (param6 == null) {
-              jf.field_a.field_g = 0;
-              jf.field_a.a(ag.field_D.nextInt(), (byte) -101);
-              jf.field_a.a(ag.field_D.nextInt(), (byte) -101);
+              jf.field_a.position = 0;
+              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
               stackIn_18_0 = jf.field_a;
               if (param5.a(true)) {
                 stackIn_19_1 = var15;
               } else {
                 stackIn_19_1 = "";
               }
-              ((wk) (Object) stackIn_18_0).a(stackIn_19_1, (byte) -115);
+              ((PacketBuffer) (Object) stackIn_18_0).a(stackIn_19_1, (byte) -115);
               stackIn_21_0 = jf.field_a;
               if (param3.a(true)) {
                 stackIn_22_1 = var8;
               } else {
                 stackIn_22_1 = "";
               }
-              ((wk) (Object) stackIn_21_0).a(stackIn_22_1, (byte) -92);
-              he.field_e.f(16, (byte) -75);
-              he.field_e.field_g = he.field_e.field_g + 1;
-              var9 = he.field_e.field_g;
+              ((PacketBuffer) (Object) stackIn_21_0).a(stackIn_22_1, (byte) -92);
+              he.field_e.writeByte(16, (byte) -75);
+              he.field_e.position = he.field_e.position + 1;
+              var9 = he.field_e.position;
               vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
-              he.field_e.b(he.field_e.field_g - var9, (byte) 43);
+              he.field_e.writeByteLengthAtMark(he.field_e.position - var9, (byte) 43);
             } else {
               var9 = 0;
-              jf.field_a.field_g = 0;
+              jf.field_a.position = 0;
               if (param0) {
                 var9 = var9 | 1;
               }
-              jf.field_a.a(ag.field_D.nextInt(), (byte) -101);
-              jf.field_a.a(ag.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
               jf.field_a.a(var15, (byte) -100);
               jf.field_a.a(var8, (byte) -96);
               var17 = (CharSequence) ((Object) param6);
               jf.field_a.a(vl.a((byte) 106, var17), (byte) -92);
-              jf.field_a.c(param4, (byte) -73);
-              jf.field_a.f(param2, (byte) -118);
-              jf.field_a.f(var9, (byte) -62);
-              he.field_e.f(18, (byte) -114);
-              he.field_e.field_g = he.field_e.field_g + 2;
-              var10 = he.field_e.field_g;
+              jf.field_a.writeShort(param4, (byte) -73);
+              jf.field_a.writeByte(param2, (byte) -118);
+              jf.field_a.writeByte(var9, (byte) -62);
+              he.field_e.writeByte(18, (byte) -114);
+              he.field_e.position = he.field_e.position + 2;
+              var10 = he.field_e.position;
               var11_ref_StringLifetime4 = gb.a(cd.e(121), param1 ^ 32);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               he.field_e.a(var11_ref_StringLifetime4, 23333);
               vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
-              he.field_e.a(he.field_e.field_g - var10, -19571);
+              he.field_e.writeShortLengthAtMark(he.field_e.position - var10, -19571);
             }
             we.a(-1, (byte) 113);
             ob.field_eb = sb.field_f;
           }
           if (ob.field_eb == sb.field_f &&
             pe.a((byte) -86, 1)) {
-            var9Lifetime1 = df.field_z.e((byte) 56);
-            df.field_z.field_g = 0;
+            var9Lifetime1 = df.field_z.readUnsignedByte((byte) 56);
+            df.field_z.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ob.field_eb = ej.field_R;
@@ -376,15 +376,15 @@ final class cj {
               } else {
                 pe.a((byte) -86, oi.b(88));
                 kj.field_e = new Boolean(jo.a(df.field_z, param1 + 89));
-                df.field_z.field_g = 0;
+                df.field_z.position = 0;
               }
             }
           }
           if (ob.field_eb == ej.field_R) {
             var9Lifetime2 = 2;
             if (pe.a((byte) -86, var9Lifetime2)) {
-              var10Lifetime1 = df.field_z.n(-98);
-              df.field_z.field_g = 0;
+              var10Lifetime1 = df.field_z.readUnsignedShort(-98);
+              df.field_z.position = 0;
               if (pe.a((byte) -86, var10Lifetime1)) {
                 var11 = ul.field_M.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -400,9 +400,9 @@ final class cj {
           if (ob.field_eb == di.field_i &&
             pn.b(-12564)) {
             if (on.field_g != 255) {
-              me.field_E = df.field_z.l(param1 + 90);
+              me.field_E = df.field_z.readString(param1 + 90);
             } else {
-              var9_ref_String = df.field_z.g(-112);
+              var9_ref_String = df.field_z.readOptionalString(-112);
               if (var9_ref_String != null) {
                 jf.a(var9_ref_String, cd.e(110), 0);
               }

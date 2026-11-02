@@ -1,46 +1,46 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn {
+final class IntrusiveDeque {
     static int field_g;
-    pg field_e;
+    IntrusiveNode sentinel;
     static int field_d;
     static in field_i;
-    private pg field_h;
+    private IntrusiveNode traversalCursor;
     static int field_c;
     static String field_j;
     static String field_a;
-    static qb field_b;
+    static Sprite field_b;
     static String field_f;
 
-    final pg a(boolean param0) {
-        if (!param0) {
-          return (pg) null;
+    final IntrusiveNode last(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
+          return (IntrusiveNode) null;
         }
-        pg var2 = this.field_e.field_a;
-        if (this.field_e == var2) {
-          this.field_h = null;
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (this.sentinel == var2) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_h = var2.field_a;
+        this.traversalCursor = var2.previous;
         return var2;
     }
 
-    final pg c(boolean param0) {
-        pg var2 = this.field_e.field_b;
-        if (var2 == this.field_e) {
+    final IntrusiveNode removeFirst(boolean obfuscationGuard) {
+        IntrusiveNode var2 = this.sentinel.next;
+        if (var2 == this.sentinel) {
           return null;
         }
-        var2.a(param0);
+        var2.unlink(obfuscationGuard);
         return var2;
     }
 
-    final pg d(boolean param0) {
-        pg var2 = this.field_e.field_a;
-        if (this.field_e == var2) {
+    final IntrusiveNode removeLast(boolean obfuscationGuard) {
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (this.sentinel == var2) {
           return null;
         }
-        var2.a(param0);
+        var2.unlink(obfuscationGuard);
         return var2;
     }
 
@@ -56,9 +56,9 @@ final class vn {
         fj.field_j = 0;
     }
 
-    private final void a(vn param0, int param1, pg param2) {
-        pg var4 = null;
-        pg var5 = null;
+    private final void a(IntrusiveDeque param0, int param1, IntrusiveNode param2) {
+        IntrusiveNode var4 = null;
+        IntrusiveNode var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -68,17 +68,17 @@ final class vn {
         RuntimeException var4_ref = null;
         try {
           if (param1 != 3) {
-            var5 = (pg) null;
-            this.a((pg) null, -100);
+            var5 = (IntrusiveNode) null;
+            this.a((IntrusiveNode) null, -100);
           }
-          var4 = this.field_e.field_a;
-          this.field_e.field_a = param2.field_a;
-          param2.field_a.field_b = this.field_e;
-          if (this.field_e != param2) {
-            param2.field_a = param0.field_e.field_a;
-            param2.field_a.field_b = param2;
-            var4.field_b = param0.field_e;
-            param0.field_e.field_a = var4;
+          var4 = this.sentinel.previous;
+          this.sentinel.previous = param2.previous;
+          param2.previous.next = this.sentinel;
+          if (this.sentinel != param2) {
+            param2.previous = param0.sentinel.previous;
+            param2.previous.next = param2;
+            var4.next = param0.sentinel;
+            param0.sentinel.previous = var4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,28 +101,28 @@ final class vn {
         }
     }
 
-    final void a(vn param0, boolean param1) {
+    final void a(IntrusiveDeque param0, boolean param1) {
         try {
-          this.a(param0, 3, this.field_e.field_b);
+          this.a(param0, 3, this.sentinel.next);
           if (param1) {
-            eg var4 = (eg) null;
-            vn.a((eg) null, false, (eg) null, (eg) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            IntrusiveDeque.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "vn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final pg a(int param0) {
-        if (param0 != 0) {
+    final IntrusiveNode next(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           field_a = (String) null;
         }
-        pg var2 = this.field_h;
-        if (this.field_e == var2) {
-          this.field_h = null;
+        IntrusiveNode var2 = this.traversalCursor;
+        if (this.sentinel == var2) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_h = var2.field_b;
+        this.traversalCursor = var2.next;
         return var2;
     }
 
@@ -224,7 +224,7 @@ final class vn {
           }
           if (param3 < 102) {
             var15 = (CharSequence) null;
-            vn.a((CharSequence) null, -78);
+            IntrusiveDeque.a((CharSequence) null, -78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -247,28 +247,28 @@ final class vn {
         }
     }
 
-    final pg a(pg param0, int param1) {
-        pg var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_5_0 = null;
-        pg stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_e.field_b;
+            var3 = this.sentinel.next;
           } else {
             var3 = param0;
           }
-          if (this.field_e == var3) {
-            this.field_h = null;
+          if (this.sentinel == var3) {
+            this.traversalCursor = null;
             stackIn_5_0 = null;
-            return (pg) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
-          this.field_h = var3.field_b;
+          this.traversalCursor = var3.next;
           var4 = -40 / ((param1 - 22) / 52);
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -286,22 +286,22 @@ final class vn {
         }
     }
 
-    final void a(pg param0, byte param1) {
+    final void addFirst(IntrusiveNode node, byte obfuscationGuard) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0.field_a != null) {
-            param0.a(true);
+          if (node.previous != null) {
+            node.unlink(true);
           }
-          param0.field_a = this.field_e;
-          param0.field_b = this.field_e.field_b;
-          param0.field_a.field_b = param0;
-          param0.field_b.field_a = param0;
-          if (param1 != -58) {
-            this.field_e = (pg) null;
+          node.previous = this.sentinel;
+          node.next = this.sentinel.next;
+          node.previous.next = node;
+          node.next.previous = node;
+          if (obfuscationGuard != -58) {
+            this.sentinel = (IntrusiveNode) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -309,25 +309,25 @@ final class vn {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("vn.D(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final pg b(byte param0) {
-        if (param0 < 16) {
+    final IntrusiveNode previous(byte obfuscationGuard) {
+        if (obfuscationGuard < 16) {
           field_f = (String) null;
         }
-        pg var2 = this.field_h;
-        if (var2 == this.field_e) {
-          this.field_h = null;
+        IntrusiveNode var2 = this.traversalCursor;
+        if (var2 == this.sentinel) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_h = var2.field_a;
+        this.traversalCursor = var2.previous;
         return var2;
     }
 
@@ -364,27 +364,27 @@ final class vn {
         }
     }
 
-    public vn() {
-        this.field_e = new pg();
-        this.field_e.field_a = this.field_e;
-        this.field_e.field_b = this.field_e;
+    public IntrusiveDeque() {
+        this.sentinel = new IntrusiveNode();
+        this.sentinel.previous = this.sentinel;
+        this.sentinel.next = this.sentinel;
     }
 
-    final void c(int param0) {
+    final void clear(int obfuscationGuard) {
         int var2;
-        pg var3;
+        IntrusiveNode var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = 76 / ((-64 - param0) / 59);
+        var2 = 76 / ((-64 - obfuscationGuard) / 59);
         while (true) {
-          var3 = this.field_e.field_b;
-          if (var3 != this.field_e) {
-            var3.a(true);
+          var3 = this.sentinel.next;
+          if (var3 != this.sentinel) {
+            var3.unlink(true);
             continue;
           }
           break;
         }
-        this.field_h = null;
+        this.traversalCursor = null;
         return;
     }
 
@@ -392,39 +392,39 @@ final class vn {
         field_b = null;
         field_a = null;
         if (!param0) {
-          eg var2 = (eg) null;
-          vn.a((eg) null, false, (eg) null, (eg) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          IntrusiveDeque.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
         }
         field_j = null;
         field_i = null;
         field_f = null;
     }
 
-    final boolean b(boolean param0) {
-        if (!param0) {
-          this.field_h = (pg) null;
+    final boolean isEmpty(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
+          this.traversalCursor = (IntrusiveNode) null;
         }
-        return this.field_e == this.field_e.field_b ? true : false;
+        return this.sentinel == this.sentinel.next ? true : false;
     }
 
-    final void b(pg param0, int param1) {
-        if (param1 != -1) {
+    final void addLast(IntrusiveNode node, int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           return;
         }
         try {
-          if (null != param0.field_a) {
-            param0.a(true);
+          if (null != node.previous) {
+            node.unlink(true);
           }
-          param0.field_a = this.field_e.field_a;
-          param0.field_b = this.field_e;
-          param0.field_a.field_b = param0;
-          param0.field_b.field_a = param0;
+          node.previous = this.sentinel.previous;
+          node.next = this.sentinel;
+          node.previous.next = node;
+          node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "vn.B(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static boolean a(eg param0, boolean param1, eg param2, eg param3) {
+    final static boolean a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -436,7 +436,7 @@ final class vn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            vn.e(true);
+            IntrusiveDeque.e(true);
           }
           if (param3.c(-10923) &&
             param3.a("commonui", -24417)) {
@@ -479,16 +479,16 @@ final class vn {
         }
     }
 
-    final pg b(int param0) {
-        if (param0 != 12623) {
+    final IntrusiveNode first(int obfuscationGuard) {
+        if (obfuscationGuard != 12623) {
           field_c = -68;
         }
-        pg var2 = this.field_e.field_b;
-        if (var2 == this.field_e) {
-          this.field_h = null;
+        IntrusiveNode var2 = this.sentinel.next;
+        if (var2 == this.sentinel) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_h = var2.field_b;
+        this.traversalCursor = var2.next;
         return var2;
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class af extends kc {
-    static qb[] field_Jb;
+    static Sprite[] field_Jb;
     static int field_Eb;
     static boolean field_Ib;
     private kc field_Db;
@@ -13,11 +13,11 @@ final class af extends kc {
     static float field_Hb;
     private kc field_Fb;
 
-    final static ll a(String param0, String param1, int param2, eg param3) {
+    final static IndexedSprite a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ll stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -340,7 +340,7 @@ final class af extends kc {
         int var1 = 66 / ((-6 - param0) / 44);
     }
 
-    af(long param0, qb param1, qb param2, int param3, kc param4, String param5) {
+    af(long param0, Sprite param1, Sprite param2, int param3, kc param4, String param5) {
         this(param0, (kc) null, param4, param5);
         try {
           this.field_Fb.field_gb = param3;

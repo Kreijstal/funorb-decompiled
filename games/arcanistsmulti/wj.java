@@ -145,7 +145,7 @@ final class wj {
         }
     }
 
-    final static void a(qb[] param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7, qb[] param8, int param9, int param10, int param11, dj param12, dj param13, int param14) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7, Sprite[] param8, int param9, int param10, int param11, dj param12, dj param13, int param14) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -158,7 +158,7 @@ final class wj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
         try {
-          gh.a(p.field_c, param13, param9, param12, param1, param5, to.field_m, 480, param7, 0, 0, param3, (qb[]) null, param14, param11, (byte) -105, param4, param0, sl.field_T, param8, param10);
+          gh.a(ClientException.field_c, param13, param9, param12, param1, param5, to.field_m, 480, param7, 0, 0, param3, (Sprite[]) null, param14, param11, (byte) -105, param4, param0, sl.field_T, param8, param10);
           if (param2 < 108) {
             wj.a(-97);
           }

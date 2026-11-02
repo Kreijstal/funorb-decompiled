@@ -28,10 +28,10 @@ final class of implements pf {
           if (param1 != 16) {
             return;
           }
-          var4 = (nk) (pe.field_Lb.b(12623));
+          var4 = (nk) (pe.field_Lb.first(12623));
           while (var4 != null) {
             fj.a(-26971, var4, param0);
-            var4 = (nk) (pe.field_Lb.a(param1 - 16));
+            var4 = (nk) (pe.field_Lb.next(param1 - 16));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -41,51 +41,51 @@ final class of implements pf {
         }
     }
 
-    final static qb[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        qb var21 = null;
-        qb var20 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var21 = null;
+        Sprite var20 = null;
         int[] var19 = de.field_l;
         int[] var18 = var19;
         int[] var16 = var18;
         int[] var6 = var16;
         int var7 = de.field_e;
         int var8 = de.field_j;
-        qb var9 = new qb(param0, -(2 * param0) + param1);
+        Sprite var9 = new Sprite(param0, -(2 * param0) + param1);
         var9.a();
         de.c(0, 0, param0, -(2 * param0) + param1, param4, param5);
-        qb var10 = new qb(param0, param0);
+        Sprite var10 = new Sprite(param0, param0);
         var10.a();
         de.d(0, 0, param0, param0, param4);
-        qb var11 = new qb(16, param0);
+        Sprite var11 = new Sprite(16, param0);
         var11.a();
         de.d(0, 0, 16, param0, param4);
-        qb var12 = new qb(param0, param0);
+        Sprite var12 = new Sprite(param0, param0);
         var12.a();
         de.d(0, 0, param0, param0, param5);
-        qb var13 = new qb(16, param0);
+        Sprite var13 = new Sprite(16, param0);
         var13.a();
         de.d(0, 0, 16, param0, param5);
         Object var14 = null;
         if (param2 == 1) {
           if (param3 > 0) {
-            var21 = new qb(16, 16);
+            var21 = new Sprite(16, 16);
             var14 = var21;
             var21.a();
             de.d(0, 0, 16, 16, param3);
           }
           de.a(var19, var7, var8);
-          return new qb[]{var10, var11, var10, var9, (qb) (var14), var9, var12, var13, var12};
+          return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
         }
-        eg var15 = (eg) null;
-        of.a(90, (byte) 7, (eg) null, 120);
+        ResourceArchive var15 = (ResourceArchive) null;
+        of.a(90, (byte) 7, (ResourceArchive) null, 120);
         if (param3 > 0) {
-          var20 = new qb(16, 16);
+          var20 = new Sprite(16, 16);
           var14 = var20;
           var20.a();
           de.d(0, 0, 16, 16, param3);
         }
         de.a(var19, var7, var8);
-        return new qb[]{var10, var11, var10, var9, (qb) (var14), var9, var12, var13, var12};
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
     final static int a(int param0, int param1) {
@@ -97,11 +97,11 @@ final class of implements pf {
         return param1 >= 6144 ? -ge.field_l[-param1 + 8192] : -ge.field_l[-4096 + param1];
     }
 
-    final static qb[] a(int param0, byte param1, eg param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        qb[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -113,7 +113,7 @@ final class of implements pf {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (qb[]) (stackIn_2_0);
+          return (Sprite[]) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

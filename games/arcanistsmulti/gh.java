@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends sg {
+final class gh extends PcmStream {
     private int[] field_p;
     private int[] field_R;
     static oc field_D;
@@ -48,7 +48,7 @@ final class gh extends sg {
         if (param1 != 0) {
           return;
         }
-        var3 = (o) (this.field_G.field_l.b(param1 ^ 12623));
+        var3 = (o) (this.field_G.field_l.first(param1 ^ 12623));
         while (var3 != null) {
           if (param0 < 0 ||
             param0 == var3.field_H) {
@@ -62,9 +62,9 @@ final class gh extends sg {
             if (var3.field_y < 0) {
               this.field_A[var3.field_H][var3.field_t] = null;
             }
-            var3.a(true);
+            var3.unlink(true);
           }
-          var3 = (o) (this.field_G.field_l.a(0));
+          var3 = (o) (this.field_G.field_l.next(0));
         }
     }
 
@@ -80,12 +80,12 @@ final class gh extends sg {
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         int var3 = 118 % ((40 - param1) / 57);
         if ((this.field_Q[param0] & 4) != 0) {
-          var4 = (o) (this.field_G.field_l.b(12623));
+          var4 = (o) (this.field_G.field_l.first(12623));
           while (var4 != null) {
             if (var4.field_H == param0) {
               var4.field_l = 0;
             }
-            var4 = (o) (this.field_G.field_l.a(0));
+            var4 = (o) (this.field_G.field_l.next(0));
           }
         }
     }
@@ -255,7 +255,7 @@ final class gh extends sg {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         this.a(false, param0, 64, param2);
         if (0 != (2 & this.field_Q[param0])) {
-          var5 = (o) (this.field_G.field_l.a(true));
+          var5 = (o) (this.field_G.field_l.last(true));
           while (var5 != null) {
             if (param0 == var5.field_H &&
               var5.field_y < 0) {
@@ -268,7 +268,7 @@ final class gh extends sg {
               var5.field_t = param2;
               return;
             }
-            var5 = (o) (this.field_G.field_l.b((byte) 48));
+            var5 = (o) (this.field_G.field_l.previous((byte) 48));
           }
         }
         var11 = (fg) (this.field_F.a((long)this.field_q[param0], -74));
@@ -319,7 +319,7 @@ final class gh extends sg {
           }
           this.field_m[param0][var7.field_k] = var7;
         }
-        this.field_G.field_l.b(var7, -1);
+        this.field_G.field_l.addLast(var7, -1);
         this.field_A[param0][param2] = var7;
         return;
     }
@@ -373,7 +373,7 @@ final class gh extends sg {
         }
     }
 
-    final synchronized boolean a(int param0, gi param1, eg param2, ha param3, int param4) {
+    final synchronized boolean a(int param0, gi param1, ResourceArchive param2, ha param3, int param4) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -402,10 +402,10 @@ final class gh extends sg {
           }
           var9 = (vf) (param3.field_h.a(10));
           while (var9 != null) {
-            var10 = (int)var9.field_e;
+            var10 = (int)var9.key;
             var11 = (fg) (this.field_F.a((long)var10, -102));
             if (var11 == null) {
-              var11 = mo.a((byte) -127, param2, var10);
+              var11 = IntrusiveNodeHashTable.a((byte) -127, param2, var10);
               if (var11 != null) {
                 this.field_F.a(var11, true, (long)var10);
               } else {
@@ -449,7 +449,7 @@ final class gh extends sg {
         }
     }
 
-    final synchronized sg b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -478,7 +478,7 @@ final class gh extends sg {
         if (param1 != 27652) {
           this.field_w = -18;
         }
-        var3 = (o) (this.field_G.field_l.b(param1 ^ 23883));
+        var3 = (o) (this.field_G.field_l.first(param1 ^ 23883));
         while (var3 != null) {
           if ((param0 < 0 ||
             param0 == var3.field_H) &&
@@ -486,7 +486,7 @@ final class gh extends sg {
             this.field_A[var3.field_H][var3.field_t] = null;
             var3.field_y = 0;
           }
-          var3 = (o) (this.field_G.field_l.a(0));
+          var3 = (o) (this.field_G.field_l.next(0));
         }
     }
 
@@ -502,7 +502,7 @@ final class gh extends sg {
         return param0 * var3 + (var5 * var4 + (var4 * var6 >> 16));
     }
 
-    final static void a(int param0, dj param1, int param2, dj param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, qb[] param12, int param13, int param14, byte param15, int param16, qb[] param17, int param18, qb[] param19, int param20) {
+    final static void a(int param0, dj param1, int param2, dj param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, Sprite[] param12, int param13, int param14, byte param15, int param16, Sprite[] param17, int param18, Sprite[] param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -518,7 +518,7 @@ final class gh extends sg {
         RuntimeException var21 = null;
         java.applet.Applet var22 = null;
         try {
-          ug.a((byte) 100, param8, param2, param7, param3, param14, param18, param10, param13, param6, param9, new ec(param12), param20, param1, new ec(param17), param11, param4, param16, param5, new ec(param19), param0);
+          IsaacCipher.a((byte) 100, param8, param2, param7, param3, param14, param18, param10, param13, param6, param9, new ec(param12), param20, param1, new ec(param17), param11, param4, param16, param5, new ec(param19), param0);
           if (param15 >= -99) {
             var22 = (java.applet.Applet) null;
             gh.a(125, (java.applet.Applet) null);
@@ -798,14 +798,14 @@ final class gh extends sg {
         o var3_ref_o = null;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         if ((this.field_Q[param1] & 2) != 0) {
-          var3_ref_o = (o) (this.field_G.field_l.b(12623));
+          var3_ref_o = (o) (this.field_G.field_l.first(12623));
           while (var3_ref_o != null) {
             if (~var3_ref_o.field_H == ~param1 &&
               this.field_A[param1][var3_ref_o.field_t] == null &&
               var3_ref_o.field_y < 0) {
               var3_ref_o.field_y = 0;
             }
-            var3_ref_o = (o) (this.field_G.field_l.a(0));
+            var3_ref_o = (o) (this.field_G.field_l.next(0));
           }
         }
         int var3 = -77 / ((param0 - 3) / 33);
@@ -881,7 +881,7 @@ final class gh extends sg {
           if (param4.field_y >= 0 && (null == param4.field_n ||
             param4.field_n.k())) {
             param4.b(true);
-            param4.a(true);
+            param4.unlink(true);
             if (0 < param4.field_k) {
               if (this.field_m[param4.field_H][param4.field_k] != param4) {
                 return true;
@@ -970,7 +970,7 @@ final class gh extends sg {
           }
           param4.b(true);
           if (param4.field_y >= 0) {
-            param4.a(true);
+            param4.unlink(true);
             if (0 < param4.field_k &&
               param4 == this.field_m[param4.field_H][param4.field_k]) {
               this.field_m[param4.field_H][param4.field_k] = null;
@@ -1089,14 +1089,14 @@ final class gh extends sg {
         if (0 == (2 & this.field_Q[param1])) {
           var8.field_y = 0;
         } else {
-          var6 = (o) (this.field_G.field_l.b(12623));
+          var6 = (o) (this.field_G.field_l.first(12623));
           while (var6 != null) {
             if (var8.field_H == var6.field_H && var6.field_y < 0 &&
               var6 != var8) {
               var8.field_y = 0;
               break;
             }
-            var6 = (o) (this.field_G.field_l.a(0));
+            var6 = (o) (this.field_G.field_l.next(0));
           }
         }
         if (param0) {
@@ -1174,8 +1174,8 @@ final class gh extends sg {
 
     public static void d(byte param0) {
         if (param0 < 49) {
-          qb[] var2 = (qb[]) null;
-          gh.a(-77, (dj) null, 44, (dj) null, 50, -28, 27, 16, 26, 104, 12, -16, (qb[]) null, -80, -75, (byte) -94, -15, (qb[]) null, 47, (qb[]) null, 87);
+          Sprite[] var2 = (Sprite[]) null;
+          gh.a(-77, (dj) null, 44, (dj) null, 50, -28, 27, 16, 26, 104, 12, -16, (Sprite[]) null, -80, -75, (byte) -94, -15, (Sprite[]) null, 47, (Sprite[]) null, 87);
         }
         field_z = null;
         field_o = null;
@@ -1236,7 +1236,7 @@ final class gh extends sg {
           if (param1.field_y < 0) {
             return true;
           }
-          param1.a(true);
+          param1.unlink(true);
           if (0 < param1.field_k &&
             param1 == this.field_m[param1.field_H][param1.field_k]) {
             this.field_m[param1.field_H][param1.field_k] = null;
@@ -1298,8 +1298,8 @@ final class gh extends sg {
         }
     }
 
-    final synchronized sg a() {
-        return (sg) ((Object) this.field_G);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_G);
     }
 
     final static void a(int param0, u param1) {

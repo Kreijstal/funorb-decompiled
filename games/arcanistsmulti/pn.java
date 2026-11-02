@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pn {
-    static qb[][] field_b;
+    static Sprite[][] field_b;
     static int field_d;
     static int[] field_a;
-    static qb field_c;
-    static qb field_e;
+    static Sprite field_c;
+    static Sprite field_e;
 
     public static void b(byte param0) {
         field_c = null;
         field_e = null;
         int var1 = -20 / ((34 - param0) / 57);
         field_a = null;
-        field_b = (qb[][]) null;
+        field_b = (Sprite[][]) null;
     }
 
     final static void a(int param0) {
@@ -105,7 +105,7 @@ final class pn {
               i.field_i = ho.a((byte) 102, args);
               return;
             }
-            i.field_i = ab.a(0, param1, param3);
+            i.field_i = CipherPacketBuffer.a(0, param1, param3);
           } else {
             stackIn_6_0 = 32517;
             stackIn_7_1 = !(qm.field_u >= 13);
@@ -137,15 +137,15 @@ final class pn {
           if (!pe.a((byte) -86, 1)) {
             return false;
           }
-          fj.field_h = df.field_z.e((byte) -108);
-          df.field_z.field_g = 0;
+          fj.field_h = df.field_z.readUnsignedByte((byte) -108);
+          df.field_z.position = 0;
         }
         if (fj.field_h == -2) {
           if (!pe.a((byte) -86, 2)) {
             return false;
           }
-          fj.field_h = df.field_z.n(-98);
-          df.field_z.field_g = 0;
+          fj.field_h = df.field_z.readUnsignedShort(-98);
+          df.field_z.position = 0;
         }
         if (param0 != -12564) {
           return false;
@@ -175,13 +175,13 @@ final class pn {
               return stackIn_7_0;
             }
             if (param0 != 78) {
-              field_e = (qb) null;
+              field_e = (Sprite) null;
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
             var5 = pm.a((byte) -58, var3);
             if (var5 == null) {
-              return tf.a(32752, var4);
+              return DualLinkNode.a(32752, var4);
             }
             stackIn_13_0 = var5;
             return stackIn_13_0;

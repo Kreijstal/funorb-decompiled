@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class jf implements Iterator {
-    static wk field_a;
+    static PacketBuffer field_a;
     private int field_b;
-    private pg field_g;
+    private IntrusiveNode field_g;
     private pk field_c;
     static kc field_d;
-    private pg field_h;
+    private IntrusiveNode field_h;
     static String field_i;
     static boolean field_e;
     static String field_f;
@@ -27,11 +27,11 @@ final class jf implements Iterator {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var2_int = 63 / ((64 - param1) / 44);
-          param0.a(true);
-          var3 = (cg) (gm.field_j.b(12623));
+          param0.unlink(true);
+          var3 = (cg) (gm.field_j.first(12623));
           while (var3 != null) {
             if (var3.a((byte) 121, param0)) {
-              var3 = (cg) (gm.field_j.a(0));
+              var3 = (cg) (gm.field_j.next(0));
               continue;
             }
             break;
@@ -40,7 +40,7 @@ final class jf implements Iterator {
             da.a(var3, 20, param0);
             return;
           }
-          gm.field_j.b(param0, -1);
+          gm.field_j.addLast(param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,12 +59,12 @@ final class jf implements Iterator {
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        pg var3;
-        pg var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_c.field_c[-1 + this.field_b] != this.field_g) {
           var4 = this.field_g;
-          this.field_g = var4.field_b;
+          this.field_g = var4.next;
           this.field_h = var4;
           return var4;
         }
@@ -74,10 +74,10 @@ final class jf implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var3 = this.field_c.field_c[fieldTemp$0].field_b;
+          var3 = this.field_c.field_c[fieldTemp$0].next;
         } while (this.field_c.field_c[-1 + this.field_b] == var3);
         this.field_h = var3;
-        this.field_g = var3.field_b;
+        this.field_g = var3.next;
         return var3;
     }
 
@@ -85,13 +85,13 @@ final class jf implements Iterator {
         if (null == this.field_h) {
           throw new IllegalStateException();
         }
-        this.field_h.a(true);
+        this.field_h.unlink(true);
         this.field_h = null;
     }
 
     private final void a(int param0) {
         this.field_h = null;
-        this.field_g = this.field_c.field_c[0].field_b;
+        this.field_g = this.field_c.field_c[0].next;
         if (param0 == -1) {
           this.field_b = 1;
           return;
@@ -111,13 +111,13 @@ final class jf implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_c.field_c[fieldTemp$0].field_b == this.field_c.field_c[this.field_b - 1]) {
+          if (this.field_c.field_c[fieldTemp$0].next == this.field_c.field_c[this.field_b - 1]) {
             this.field_g = this.field_c.field_c[-1 + this.field_b];
             continue;
           }
           break;
         }
-        this.field_g = this.field_c.field_c[-1 + this.field_b].field_b;
+        this.field_g = this.field_c.field_c[-1 + this.field_b].next;
         return true;
     }
 
@@ -188,7 +188,7 @@ final class jf implements Iterator {
     }
 
     static {
-        field_a = new wk(256);
+        field_a = new PacketBuffer(256);
         field_f = "This is a <col=ff00ff><shad=0>level 2</col></shad> spell and is unavailable unless you also put the related <col=D4D0C8><shad=0>level 1</col></shad> spell <%0> into your spellbook.";
         field_i = "Spell types 2/2:";
     }

@@ -7,25 +7,25 @@ final class jn {
     static int[] field_c;
 
     final static void a(byte param0, int param1) {
-        pg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         f var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4 = (f) (cm.field_l.b(12623));
+          var4 = (f) (cm.field_l.first(12623));
           while (var4 != null) {
             pb.a(32, param1, var4);
-            var4 = (f) (cm.field_l.a(0));
+            var4 = (f) (cm.field_l.next(0));
           }
           if (param0 != -64) {
             field_c = (int[]) null;
           }
-          var2 = hn.field_q.b(12623);
+          var2 = hn.field_q.first(12623);
           while (var2 != null) {
             ik.a(param1, 0);
-            var2 = hn.field_q.a(0);
+            var2 = hn.field_q.next(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -38,12 +38,12 @@ final class jn {
     final static void a(String param0, boolean param1, int param2) {
         u.field_k = true;
         di.field_h = param1 ? true : false;
-        vf.field_k = new ed(p.field_b, go.field_k, param0, hk.field_s, di.field_h);
+        vf.field_k = new ed(ClientException.field_b, go.field_k, param0, hk.field_s, di.field_h);
         if (param2 != -1) {
           return;
         }
         try {
-          p.field_b.b(vf.field_k, 15637);
+          ClientException.field_b.b(vf.field_k, 15637);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -81,27 +81,27 @@ final class jn {
           var10_int = (var10_int + 7) / 8;
           ng.field_D = new byte[var10_int];
           if (param1.field_G == null) {
-            param1.field_G = new vn();
+            param1.field_G = new IntrusiveDeque();
           }
           gm.field_j = param1.field_G;
-          gm.field_j.c(-124);
-          bc.field_c = new mo(param7);
+          gm.field_j.clear(-124);
+          bc.field_c = new IntrusiveNodeHashTable(param7);
           ki.field_q = 0;
           oe.field_b = 0;
           jh.field_e = -1;
           sk.field_e = -1;
           if (null == param3.field_G) {
-            param3.field_G = new vn();
+            param3.field_G = new IntrusiveDeque();
           }
           vh.field_a = param3.field_G;
-          vh.field_a.c(param2 + 13049);
-          nk.field_q = new mo(param6);
+          vh.field_a.clear(param2 + 13049);
+          nk.field_q = new IntrusiveNodeHashTable(param6);
           if (null == param5.field_G) {
-            param5.field_G = new vn();
+            param5.field_G = new IntrusiveDeque();
           }
           ph.field_a = param5.field_G;
-          ph.field_a.c(-124);
-          kn.field_qb = new mo(param8);
+          ph.field_a.clear(-124);
+          kn.field_qb = new IntrusiveNodeHashTable(param8);
           ba.field_a = 0L;
           if (param2 != -13173) {
             field_a = (int[]) null;

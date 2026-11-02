@@ -13,7 +13,7 @@ final class ti extends df implements vb {
     static String field_C;
     boolean field_G;
     private int field_R;
-    static ll[] field_I;
+    static IndexedSprite[] field_I;
     static String field_M;
     sl field_H;
     private boolean field_J;
@@ -55,7 +55,7 @@ final class ti extends df implements vb {
             this.a((qm) null, -14, -32, 91);
           }
           this.field_G = false;
-          this.field_H.a(true);
+          this.field_H.unlink(true);
           return;
         }
     }
@@ -210,7 +210,7 @@ final class ti extends df implements vb {
         }
     }
 
-    final static boolean a(int param0, int param1, boolean param2, qb param3, ll param4, nf param5, int param6) {
+    final static boolean a(int param0, int param1, boolean param2, Sprite param3, IndexedSprite param4, nf param5, int param6) {
         int var21 = 0;
         int var22 = 0;
         int stackIn_17_0 = 0;
@@ -383,7 +383,7 @@ final class ti extends df implements vb {
           return;
         }
         ce.field_g = new String[31];
-        ce.field_g[14] = jk.field_j;
+        ce.field_g[14] = ArchiveIndex.field_j;
         ce.field_g[0] = nj.field_g;
         ce.field_g[23] = ArcanistsMulti.field_H;
         ce.field_g[19] = tm.field_f;
@@ -403,9 +403,9 @@ final class ti extends df implements vb {
         ce.field_g[7] = se.field_J;
         ce.field_g[4] = da.field_a;
         ce.field_g[5] = he.field_b;
-        ce.field_g[11] = eg.field_d;
+        ce.field_g[11] = ResourceArchive.field_d;
         ce.field_g[1] = ol.field_a;
-        ce.field_g[30] = mo.field_d;
+        ce.field_g[30] = IntrusiveNodeHashTable.field_d;
         ce.field_g[29] = me.field_Q;
         ce.field_g[8] = null;
         ce.field_g[27] = ie.field_Lb;
@@ -413,7 +413,7 @@ final class ti extends df implements vb {
         ce.field_g[15] = be.field_i;
         ce.field_g[24] = lh.field_a;
         ce.field_g[13] = gb.field_a;
-        ce.field_g[25] = ab.field_q;
+        ce.field_g[25] = CipherPacketBuffer.field_q;
     }
 
     private final void h(int param0) {
@@ -523,7 +523,7 @@ final class ti extends df implements vb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -30) {
-            field_I = (ll[]) null;
+            field_I = (IndexedSprite[]) null;
           }
           stackIn_3_0 = sc.a(kd.a(param2, 100, param1), (byte) 68);
           return stackIn_3_0;
@@ -680,7 +680,7 @@ final class ti extends df implements vb {
     public static void k(int param0) {
         if (param0 != 0) {
           nf var2 = (nf) null;
-          ti.a(64, -6, true, (qb) null, (ll) null, (nf) null, 111);
+          ti.a(64, -6, true, (Sprite) null, (IndexedSprite) null, (nf) null, 111);
         }
         field_F = null;
         field_M = null;

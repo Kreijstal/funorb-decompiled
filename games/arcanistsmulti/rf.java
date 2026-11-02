@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf extends pg {
+final class rf extends IntrusiveNode {
     static String field_q;
-    static ll[] field_j;
+    static IndexedSprite[] field_j;
     static String field_l;
     static volatile int field_o;
     static String field_k;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph {
-    static vn field_a;
+    static IntrusiveDeque field_a;
     static gl[] field_e;
     static int[] field_c;
     static String field_b;

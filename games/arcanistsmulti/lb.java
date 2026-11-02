@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lb {
-    private sg field_s;
+    private PcmStream field_s;
     private boolean field_t;
     private static int field_f;
     private static rj field_o;
@@ -15,12 +15,12 @@ class lb {
     private int field_p;
     private int field_q;
     private int field_j;
-    private sg[] field_h;
+    private PcmStream[] field_h;
     private long field_c;
     private int field_e;
     private int field_l;
     private int field_d;
-    private sg[] field_u;
+    private PcmStream[] field_u;
     private boolean field_m;
     private int field_n;
 
@@ -37,12 +37,12 @@ class lb {
     void d() throws Exception {
     }
 
-    private final static void b(sg param0) {
+    private final static void b(PcmStream param0) {
         param0.field_i = false;
         if (param0.field_j != null) {
           param0.field_j.field_g = 0;
         }
-        sg var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
           lb.b(var1);
           var1 = param0.b();
@@ -116,9 +116,9 @@ class lb {
     void a() throws Exception {
     }
 
-    private final void a(sg param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        sg var4 = this.field_h[var3];
+        PcmStream var4 = this.field_h[var3];
         if (var4 == null) {
           this.field_u[var3] = param0;
         } else {
@@ -282,20 +282,20 @@ class lb {
         int var7_int;
         Object var7;
         int var8_int;
-        sg[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        sg var11;
+        PcmStream var11;
         tb var12;
         int var13;
-        sg var14;
+        PcmStream var14;
         int var15_int;
-        sg var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        sg var14Lifetime1;
-        sg var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_i) {
           var3 = var3 << 1;
@@ -310,7 +310,7 @@ class lb {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -343,7 +343,7 @@ class lb {
                       var12.field_g = var12.field_g + var13;
                     }
                     if (var4 >= this.field_g) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {
@@ -356,12 +356,12 @@ class lb {
                     var15 = var11.field_g;
                     var11.field_g = null;
                     if (var10 != null) {
-                      ((sg) (var10)).field_g = var15;
+                      ((PcmStream) (var10)).field_g = var15;
                     } else {
                       this.field_u[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_h[var7_int] = (sg) (var10);
+                      this.field_h[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -382,8 +382,8 @@ class lb {
             this.field_h[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((sg) (var7)).field_g;
-              ((sg) (var7)).field_g = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_g;
+              ((PcmStream) (var7)).field_g = null;
               var7 = var10Lifetime1;
             }
           }
@@ -397,7 +397,7 @@ class lb {
         this.field_b = qj.b(-26572);
     }
 
-    final synchronized void a(sg param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_s = param0;
     }
 
@@ -426,8 +426,8 @@ class lb {
         this.field_b = qj.b(-26572);
         this.field_p = 0;
         this.field_k = 0L;
-        this.field_h = new sg[8];
-        this.field_u = new sg[8];
+        this.field_h = new PcmStream[8];
+        this.field_u = new PcmStream[8];
         this.field_d = 0;
         this.field_l = 0;
         this.field_n = 0;

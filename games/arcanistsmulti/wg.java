@@ -4,7 +4,7 @@
 final class wg extends ag {
     private int field_K;
     int field_L;
-    static qb[] field_J;
+    static Sprite[] field_J;
     private jl field_I;
     int field_H;
 

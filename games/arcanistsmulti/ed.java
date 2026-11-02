@@ -16,7 +16,7 @@ class ed extends qk implements vb {
     static int field_Cb;
     private om field_ub;
     private dj field_wb;
-    static qb field_vb;
+    static Sprite field_vb;
     static int field_Hb;
 
     final boolean a(qm param0, byte param1, char param2, int param3) {
@@ -107,7 +107,7 @@ class ed extends qk implements vb {
         int var3Lifetime1;
         int var2Lifetime2;
         int var3Lifetime2;
-        if (null == jb.field_z) {
+        if (null == SpriteState.field_z) {
           if (null == r.field_b) {
             var2 = 25 % ((38 - param1) / 34);
             if (cb.field_b &&
@@ -168,7 +168,7 @@ class ed extends qk implements vb {
           }
           return;
         }
-        jb.field_z.a(param0, an.field_j, 0, true, 0, 96, an.field_f);
+        SpriteState.field_z.a(param0, an.field_j, 0, true, 0, 96, an.field_f);
         if (null == r.field_b) {
           var2Lifetime1 = 25 % ((38 - param1) / 34);
           if (!cb.field_b) {
@@ -341,7 +341,7 @@ class ed extends qk implements vb {
         return ge.field_g;
     }
 
-    final static void a(byte param0, eg param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         ai var2 = null;
         try {
           ai.a(param1.a("", "headers.packvorbis", -1));

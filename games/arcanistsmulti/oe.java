@@ -4,7 +4,7 @@
 final class oe {
     static boolean field_a;
     static int field_b;
-    static ll[] field_d;
+    static IndexedSprite[] field_d;
     static int[] field_c;
 
     final static int a(int param0, int param1, int param2) {
@@ -19,7 +19,7 @@ final class oe {
 
     public static void a(int param0) {
         if (param0 <= 119) {
-          field_d = (ll[]) null;
+          field_d = (IndexedSprite[]) null;
           field_d = null;
           field_c = null;
           return;
@@ -43,16 +43,16 @@ final class oe {
         int var6 = 0;
         wa var7 = null;
         wa var8 = null;
-        ab var9 = null;
+        CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!vn.a(var10, param1 - 29140)) {
+          if (!IntrusiveDeque.a(var10, param1 - 29140)) {
             stackIn_4_0 = fn.field_h;
             return stackIn_4_0;
           }
-          if (jb.field_t != 2) {
+          if (SpriteState.field_t != 2) {
             stackIn_8_0 = oo.field_E;
             return stackIn_8_0;
           }
@@ -63,27 +63,27 @@ final class oe {
           }
           vd.field_d.a(var8, 121);
           while (true) {
-            var7 = (wa) (vd.field_d.a(param1 ^ 29140));
+            var7 = (wa) (vd.field_d.next(param1 ^ 29140));
             if (var7 != null) {
               var7.field_Bb = var7.field_Bb - 1;
               continue;
             }
             break;
           }
-          var8.a(true);
-          var8.a((byte) 88);
+          var8.unlink(true);
+          var8.unlinkSecondary((byte) 88);
           rc.field_m = rc.field_m - 1;
           if (param1 != 29140) {
             stackIn_19_0 = (String) null;
             return stackIn_19_0;
           }
           var9 = he.field_e;
-          var9.b((byte) -48, param2);
-          var9.field_g = var9.field_g + 1;
-          var5 = var9.field_g;
-          var9.f(1, (byte) -118);
+          var9.writeOpcode((byte) -48, param2);
+          var9.position = var9.position + 1;
+          var5 = var9.position;
+          var9.writeByte(1, (byte) -118);
           var9.a(param0, 23333);
-          var9.b(var9.field_g - var5, (byte) 43);
+          var9.writeByteLengthAtMark(var9.position - var5, (byte) 43);
           stackIn_21_0 = null;
           return (String) (stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

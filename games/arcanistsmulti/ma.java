@@ -731,7 +731,7 @@ final class ma extends kl implements vb {
         }
     }
 
-    final static gl[] a(byte param0, ab param1) {
+    final static gl[] a(byte param0, CipherPacketBuffer param1) {
         gl[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -748,25 +748,25 @@ final class ma extends kl implements vb {
         int var5Lifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2_int = param1.d(28089, 8);
+          var2_int = param1.readBits(28089, 8);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.d(28089, 12);
+          var3 = param1.readBits(28089, 12);
           var4 = new gl[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (hd.a(param1, (byte) 112)) {
               var6 = new gl();
-              param1.d(28089, 24);
-              param1.d(28089, 24);
-              var6.field_e = param1.d(28089, 24);
-              param1.d(28089, 9);
-              param1.d(28089, 12);
-              param1.d(28089, 12);
-              param1.d(28089, 12);
+              param1.readBits(28089, 24);
+              param1.readBits(28089, 24);
+              var6.field_e = param1.readBits(28089, 24);
+              param1.readBits(28089, 9);
+              param1.readBits(28089, 12);
+              param1.readBits(28089, 12);
+              param1.readBits(28089, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.d(28089, fj.a(-1 + var5, 29797));
+              var6_int = param1.readBits(28089, fj.a(-1 + var5, 29797));
               var4[var5] = var4[var6_int];
             }
           }
@@ -818,7 +818,7 @@ final class ma extends kl implements vb {
         }
         try {
           var3 = new rb(param0, param1);
-          pb.field_m.b(var3, -1);
+          pb.field_m.addLast(var3, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ma.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

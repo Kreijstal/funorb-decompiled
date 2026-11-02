@@ -5,14 +5,14 @@ final class ji implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static String field_e;
     static boolean field_d;
     static String field_j;
-    static wk field_b;
+    static PacketBuffer field_b;
     static int field_g;
     static String field_a;
     static String field_l;
     static String field_f;
-    static qb[] field_h;
+    static Sprite[] field_h;
     static String field_k;
-    static qb[] field_c;
+    static Sprite[] field_c;
     static String field_i;
 
     public static void a(int param0) {
@@ -164,7 +164,7 @@ final class ji implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 ed.a(false, (byte) 81);
                 de.b(0, 0, an.field_f, an.field_j);
               }
-              tl.field_f[param2].e((byte) -45);
+              ArchiveProvider.field_f[param2].e((byte) -45);
             }
           }
         }

@@ -23,7 +23,7 @@ final class mj extends jm {
         }
     }
 
-    final void a(int param0, qb param1) {
+    final void a(int param0, Sprite param1) {
         int var4 = 0;
         vc[] var3 = null;
         vc var5 = null;
@@ -59,7 +59,7 @@ final class mj extends jm {
         }
     }
 
-    final void a(byte param0, int param1, qb[] param2) {
+    final void a(byte param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -90,7 +90,7 @@ final class mj extends jm {
         field_u = null;
     }
 
-    final void a(qb[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         vc[] var3 = null;
         vc var5 = null;
@@ -291,7 +291,7 @@ final class mj extends jm {
         RuntimeException var6 = null;
         vc var7 = null;
         vc var9 = null;
-        qb[] var10 = null;
+        Sprite[] var10 = null;
         ag var11 = null;
         vc var12 = null;
         vc var13 = null;
@@ -305,8 +305,8 @@ final class mj extends jm {
           }
           var11 = (ag) (stackIn_3_0);
           if (param1 != 5592405) {
-            var10 = (qb[]) null;
-            this.a((byte) 33, 29, (qb[]) null);
+            var10 = (Sprite[]) null;
+            this.a((byte) 33, 29, (Sprite[]) null);
           }
           da.a(param0.field_v + param0.field_n + param2, param0.field_j + param3 + param0.field_k, 127, param0.field_n + param2, param3 + param0.field_j);
           if (var11 != null) {

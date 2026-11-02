@@ -4,7 +4,7 @@
 final class j implements pf {
     static String field_c;
     static String field_e;
-    static qb field_a;
+    static Sprite field_a;
     static kc field_f;
     static String field_b;
     private ti field_d;
@@ -78,7 +78,7 @@ final class j implements pf {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = 117 % ((param2 + 43) / 50);
-          var7 = (mi) (uh.field_n.c(true));
+          var7 = (mi) (uh.field_n.removeFirst(true));
           if (var7 == null) {
             stackIn_2_0 = new mi(param6, param4, param5, param1, param0, param3);
             return stackIn_2_0;
@@ -108,15 +108,15 @@ final class j implements pf {
 
     final static void b(int param0) {
         try {
-          if (null != pg.field_f) {
+          if (null != IntrusiveNode.field_f) {
             try {
-              pg.field_f.a(0L, -101);
-              pg.field_f.a((byte) -53, df.field_z.field_g, df.field_z.field_j, 24);
+              IntrusiveNode.field_f.a(0L, -101);
+              IntrusiveNode.field_f.a((byte) -53, df.field_z.position, df.field_z.payload, 24);
             } catch (Exception exception) {
             }
           }
           int var1 = 125 / ((param0 - 27) / 38);
-          df.field_z.field_g = df.field_z.field_g + 24;
+          df.field_z.position = df.field_z.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -234,13 +234,13 @@ final class j implements pf {
     final static void a(boolean param0, String param1, boolean param2, boolean param3) {
         try {
           hk.d(-24225);
-          p.field_b.f(-117);
+          ClientException.field_b.f(-117);
           if (param3) {
             j.a(-101, 37, 87);
           }
           wh.field_f = new e(ge.field_g, (String) null, hk.field_s, param0, param2);
-          g.field_e = new no(p.field_b, wh.field_f);
-          p.field_b.b(g.field_e, 15637);
+          g.field_e = new no(ClientException.field_b, wh.field_f);
+          ClientException.field_b.b(g.field_e, 15637);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "j.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

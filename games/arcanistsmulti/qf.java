@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qf {
-    static qb field_b;
+    static Sprite field_b;
     static int field_d;
     static long field_a;
     static int[][] field_c;

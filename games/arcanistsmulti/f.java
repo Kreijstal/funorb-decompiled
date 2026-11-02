@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f extends pg {
+final class f extends IntrusiveNode {
     static ha field_g;
     byte[] field_k;
     int field_j;
@@ -47,7 +47,7 @@ final class f extends pg {
         int var9Lifetime3Lifetime1;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         var4 = null;
-        qo.field_f.field_Cb.field_G.c(param0 ^ -16711298);
+        qo.field_f.field_Cb.field_G.clear(param0 ^ -16711298);
         var5 = 0;
         var6 = 0;
         for (var7 = gb.field_f - 1; var7 >= 0; var7--) {
@@ -71,7 +71,7 @@ final class f extends pg {
               if (var8_ref_jg.field_a == null) {
                 vh.field_t = vh.field_t + 1;
               }
-              var10 = jk.a(3, var8_ref_jg);
+              var10 = ArchiveIndex.a(3, var8_ref_jg);
               var11 = var10 + dj.a(var8_ref_jg.field_e);
               var12 = rm.a(var8_ref_jg, (byte) 106);
               var8_ref_jg.field_a = new kc(0L, nf.field_A, var11);
@@ -279,7 +279,7 @@ final class f extends pg {
         ej.a(101);
         param3 = w.a(0, param8, param1, param11, param3, param2, param13);
         fn.a(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);
-        mo.a(1, param10, param7);
+        IntrusiveNodeHashTable.a(1, param10, param7);
         if (param4 >= -28) {
           f.a(-1);
         } else {

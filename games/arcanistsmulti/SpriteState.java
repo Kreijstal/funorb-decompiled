@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jb extends tf {
+abstract class SpriteState extends DualLinkNode {
     int field_w;
     static le field_z;
     static int field_t;
@@ -17,14 +17,14 @@ abstract class jb extends tf {
     int field_y;
     static int[] field_s;
 
-    final static void a(wk param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
-          param0.f(12, (byte) -120);
-          param0.c(17, (byte) -59);
+          param0.writeByte(12, (byte) -120);
+          param0.writeShort(17, (byte) -59);
           int var5_int = 76 % ((-70 - param4) / 32);
-          param0.c(param1, (byte) -119);
-          param0.c(param3, (byte) -88);
-          param0.f(param2, (byte) -97);
+          param0.writeShort(param1, (byte) -119);
+          param0.writeShort(param3, (byte) -88);
+          param0.writeByte(param2, (byte) -97);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "jb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -50,7 +50,7 @@ abstract class jb extends tf {
         this.a(var6, var7, param3, param1, param4, param0);
     }
 
-    jb() {
+    SpriteState() {
     }
 
     static {

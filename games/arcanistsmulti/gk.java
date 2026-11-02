@@ -3,7 +3,7 @@
  */
 final class gk {
     private java.math.BigInteger field_i;
-    private wk field_d;
+    private PacketBuffer field_d;
     private lk field_l;
     private java.math.BigInteger field_j;
     static java.awt.Frame field_c;
@@ -22,7 +22,7 @@ final class gk {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        wk var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -40,11 +40,11 @@ final class gk {
         if (this.field_h.field_p) {
           return false;
         }
-        var10 = new wk(this.field_h.c(-20));
-        var10.field_g = 5;
-        var3 = var10.e((byte) 103);
-        var10.field_g = var10.field_g + var3 * 72;
-        var13 = new byte[-var10.field_g + var10.field_j.length];
+        var10 = new PacketBuffer(this.field_h.c(-20));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte((byte) 103);
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a((byte) 74, 0, var4, var13.length);
@@ -62,7 +62,7 @@ final class gk {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = nn.a(var10.field_g - (var13.length + 5), (byte) -93, var10.field_j, 5);
+        var15 = nn.a(var10.position - (var13.length + 5), (byte) -93, var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[1 + var7]) {
             throw new RuntimeException();
@@ -101,12 +101,12 @@ final class gk {
               stackIn_10_0 = this.field_b[param4];
               return stackIn_10_0;
             }
-            this.field_d.field_g = 6 + 72 * param4;
+            this.field_d.position = 6 + 72 * param4;
             if (param2 > -51) {
               field_g = (kc) null;
             }
-            var6_int = this.field_d.d(-10674);
-            var7 = this.field_d.d(-10674);
+            var6_int = this.field_d.readInt(-10674);
+            var7 = this.field_d.readInt(-10674);
             var13 = new byte[64];
             this.field_d.a((byte) 92, 0, var13, 64);
             var9 = new tj(param4, param3, param0, this.field_l, this.field_e, var6_int, var13, var7, param1);

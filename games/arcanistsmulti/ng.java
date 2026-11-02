@@ -141,7 +141,7 @@ final class ng extends df implements pj, vb {
               }
               stackIn_36_0.field_rb = tj.a(stackIn_36_1, stackIn_36_2, stackIn_37_3);
               jf.field_d.field_rb = me.field_R;
-              mo.field_o.field_ub = true;
+              IntrusiveNodeHashTable.field_o.field_ub = true;
               bg.field_a = true;
               if (um.field_a != null) {
                 if (qa.field_l == null) {
@@ -189,7 +189,7 @@ final class ng extends df implements pj, vb {
                 }
               }
             } else {
-              mo.field_o.field_ub = false;
+              IntrusiveNodeHashTable.field_o.field_ub = false;
               vc.field_c.field_rb = j.field_e;
               if (var8 == 0) {
                 stackIn_24_0 = ql.field_e;
@@ -227,7 +227,7 @@ final class ng extends df implements pj, vb {
           ((kc) (Object) stackIn_74_0).b(stackIn_75_1, (byte) 64);
           tn.field_Ob.field_c.h((byte) 101);
           if (null != om.field_x) {
-            if (mo.field_o.field_U != 0) {
+            if (IntrusiveNodeHashTable.field_o.field_U != 0) {
               bc.a(param1, -14431);
             }
             if (dk.field_k.field_U != 0) {
@@ -262,7 +262,7 @@ final class ng extends df implements pj, vb {
             discarded$1 = this.g(-67);
           }
           if (this.field_F == param4) {
-            mo.g(-1);
+            IntrusiveNodeHashTable.g(-1);
             this.field_E.h(77);
           }
           return;
