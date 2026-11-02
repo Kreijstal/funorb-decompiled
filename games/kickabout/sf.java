@@ -52,7 +52,7 @@ final class sf extends qt {
             SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
-          if (la.a(100)) {
+          if (PlayArea.a(100)) {
             SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
@@ -68,7 +68,7 @@ final class sf extends qt {
           SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
@@ -267,7 +267,7 @@ final class sf extends qt {
             return;
           }
           ii.a((byte) -117);
-          if (la.a(100)) {
+          if (PlayArea.a(100)) {
             qt.a(16144);
           } else {
             if (!GameLoopApplet.field_E.field_J[0]) {
@@ -283,7 +283,7 @@ final class sf extends qt {
           }
           return;
         }
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           this.field_B.field_gb = false;
         }
         var3Lifetime1 = 46 % ((param0 - 38) / 60);
@@ -291,7 +291,7 @@ final class sf extends qt {
           return;
         }
         ii.a((byte) -117);
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           qt.a(16144);
         } else {
           if (!GameLoopApplet.field_E.field_J[0]) {

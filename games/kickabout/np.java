@@ -298,7 +298,7 @@ final class np extends hd {
           eq.field_a = eq.field_j;
           return;
         }
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           if (vs.field_g != null) {
             LoginForm.a((byte) 70, 3, vs.field_g);
           }

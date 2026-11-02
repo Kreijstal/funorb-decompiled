@@ -117,7 +117,7 @@ public final class Kickabout extends GameLoopApplet {
           }
           this.u(param0 ^ 23294);
         }
-        if (la.a(100) &&
+        if (PlayArea.a(100) &&
           ws.field_f) {
           ql.a(31663);
           ws.field_f = false;
@@ -412,7 +412,7 @@ public final class Kickabout extends GameLoopApplet {
           }
           if ((decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
-            (!la.a(100))) {
+            (!PlayArea.a(100))) {
             var6_intLifetime2 = 0;
             for (var7 = 0; var7 < GameLoopApplet.field_E.field_J.length; var7++) {
               stackOut_139_0 = GameLoopApplet.field_E.field_J[var7];
@@ -476,17 +476,17 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param1 == 40 &&
-              !la.a(param0 ^ 11416)) {
+              !PlayArea.a(param0 ^ 11416)) {
               or.field_d.b(85, (byte) 112);
               return true;
             }
             if (param1 == 41 &&
-              !la.a(100)) {
+              !PlayArea.a(100)) {
               or.field_d.b(80, (byte) 114);
               return true;
             }
             if (param1 == 56 &&
-              !la.a(100)) {
+              !PlayArea.a(100)) {
               or.field_d.b(81, (byte) 107);
               or.field_d.field_n = or.field_d.field_n + 2;
               var6_intLifetime1 = or.field_d.field_n;
@@ -1114,18 +1114,18 @@ public final class Kickabout extends GameLoopApplet {
                 if (68 == param0) {
                   var4_intLifetime6 = param1.h((byte) -105);
                   for (var5Lifetime4 = 0; var5Lifetime4 < var4_intLifetime6; var5Lifetime4++) {
-                    um.field_e.field_m.d(4);
+                    um.field_e.field_m.tick(4);
                   }
                   var5Lifetime4 = param1.k(4);
                   um.field_e.field_m.a(param1, -5);
-                  var6Lifetime3 = um.field_e.field_m.c(-98);
+                  var6Lifetime3 = um.field_e.field_m.computeChecksum(-98);
                   if (var5Lifetime4 != -1 &&
                     ~var6Lifetime3 != ~var5Lifetime4 &&
                     um.field_e.field_g) {
                     bd.a("ChecksumError: server=" + Integer.toHexString(var5Lifetime4) + " client=" + Integer.toHexString(var6Lifetime3), (Throwable) ((Object) new IllegalStateException(um.field_e.field_m.toString())), 1);
                     um.field_e.field_g = false;
                   }
-                  um.field_e.field_i.a(um.field_e.field_m, (byte) 119);
+                  um.field_e.field_i.copyStateFrom(um.field_e.field_m, (byte) 119);
                   return true;
                 }
               }
@@ -1593,7 +1593,7 @@ public final class Kickabout extends GameLoopApplet {
         ne.g(29250);
         cb.a((byte) -100);
         ob.i(127);
-        la.a((byte) -124);
+        PlayArea.a((byte) -124);
         BallAgent.f(0);
         FootballerAgent.e((byte) -108);
         is.b(116);

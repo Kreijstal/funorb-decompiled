@@ -201,7 +201,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
             !PacketBuffer.field_l) {
             return;
           }
-          la.field_a = new ib(0, 0, 0, 0);
+          PlayArea.field_a = new ib(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

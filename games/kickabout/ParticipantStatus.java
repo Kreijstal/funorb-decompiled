@@ -10,7 +10,7 @@ final class ParticipantStatus extends MatchAgent {
     boolean resigned;
     static ArchiveNetworkClient field_t;
     static String field_m;
-    int field_g;
+    int controlledSlot;
     static String field_r;
     boolean offerDraw;
     static int field_w;
@@ -74,7 +74,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean isActive(int param0) {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -101,7 +101,7 @@ final class ParticipantStatus extends MatchAgent {
           if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
           }
-          this.field_g = -1 + param0.l(3, 59);
+          this.controlledSlot = -1 + param0.l(3, 59);
           this.field_p = param0.l(3, param1 ^ 58) - param1;
           this.field_k = ContentTransitionDialog.a(param0, (byte) -39);
           this.offerDraw = ContentTransitionDialog.a(param0, (byte) -39);
@@ -177,7 +177,7 @@ final class ParticipantStatus extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -52) {
-            this.field_g = -97;
+            this.controlledSlot = -97;
           }
           var3 = (ParticipantStatus) (param1);
           this.offerDraw = var3.offerDraw;
@@ -185,7 +185,7 @@ final class ParticipantStatus extends MatchAgent {
           this.loadedPitch = var3.loadedPitch;
           this.departed = var3.departed;
           this.resigned = var3.resigned;
-          this.field_g = var3.field_g;
+          this.controlledSlot = var3.controlledSlot;
           this.field_k = var3.field_k;
           this.field_p = var3.field_p;
           this.rewardEligible = var3.rewardEligible;

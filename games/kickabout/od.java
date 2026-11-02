@@ -153,10 +153,10 @@ final class od extends sr {
                   us.field_j < var13) {
                   wa.a((byte) 52, vo.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{kn.field_G[var12], var14 + ""}));
                 }
-                stackIn_29_0 = (vt.field_c.participantStatus[var12].d(3511)) ? 16777215 : 11184810;
+                stackIn_29_0 = (vt.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
                 ((BitmapFont) ((Object) var4)).a(kn.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
-                if (vt.field_c.participantStatus[var12].d(3511)) {
+                if (vt.field_c.participantStatus[var12].isActive(3511)) {
                   if (vt.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
                     pt.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);

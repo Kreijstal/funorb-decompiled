@@ -282,7 +282,7 @@ final class hf {
         }
     }
 
-    final static int a(int param0, CommonGame param1, int param2) {
+    final static int findClosestOutfielder(int param0, CommonGame param1, int param2) {
         int var6 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -310,7 +310,7 @@ final class hf {
           var4 = stackIn_9_0;
           var5 = -1;
           for (var6 = 1; 5 > var6; var6++) {
-            var7 = param1.field_P[param0][var6].a(true);
+            var7 = param1.field_P[param0][var6].pixelY(true);
             if (var3_int != 0 &&
               var7 >= var4 ||
               var3_int == 0 &&

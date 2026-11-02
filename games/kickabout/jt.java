@@ -43,7 +43,7 @@ final class jt extends hd implements lv {
           return var4;
         }
         CommonGame var6 = (CommonGame) null;
-        jt.a((CommonGame) null, (byte) 12, -47, -89);
+        jt.updateOutfielderAI((CommonGame) null, (byte) 12, -47, -89);
         vg.a(true, var4, param3);
         return var4;
     }
@@ -623,7 +623,7 @@ final class jt extends hd implements lv {
         q.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
     }
 
-    final static boolean a(CommonGame param0, byte param1, int param2, int param3) {
+    final static boolean updateOutfielderAI(CommonGame param0, byte param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -639,7 +639,7 @@ final class jt extends hd implements lv {
           if (param1 != -127) {
             field_yb = -107;
           }
-          stackIn_5_0 = (param0.a((byte) 6, param3, param2) < 0) ? 0 : 1;
+          stackIn_5_0 = (param0.findControllingParticipant((byte) 6, param3, param2) < 0) ? 0 : 1;
           var4_int = stackIn_5_0;
           stackIn_8_0 = (param0.field_X.goalCount < 40) ? 0 : 1;
           var5 = stackIn_8_0;
@@ -651,13 +651,13 @@ final class jt extends hd implements lv {
             if (var4_int != 0) {
               return false;
             }
-            ri.a((byte) -93, param2, param0, param3);
+            ri.updateIdleMovement((byte) -93, param2, param0, param3);
           } else {
             var7 = 1 - param0.field_X.goalScorer;
             if (param0.disableOpponent) {
               var7 = 0;
             }
-            go.a(cp.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
+            go.moveToTarget(cp.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

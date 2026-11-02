@@ -15,7 +15,7 @@ final class nb {
     static String field_h;
     static boolean field_f;
 
-    final static int a(FootballerAgent param0, int param1) {
+    final static int keeperReach(FootballerAgent param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

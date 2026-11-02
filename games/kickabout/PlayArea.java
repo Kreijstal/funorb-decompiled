@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la {
+final class PlayArea {
     private int field_b;
     private int field_h;
     private int field_j;
@@ -60,7 +60,7 @@ final class la {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3) {
         boolean stackIn_15_0 = false;
         boolean stackIn_21_0 = false;
         boolean stackIn_41_0 = false;
@@ -118,13 +118,13 @@ final class la {
 
     final static boolean a(int param0) {
         if (param0 != 100) {
-          la.b(78);
+          PlayArea.b(78);
           return nb.field_f;
         }
         return nb.field_f;
     }
 
-    la(int param0, int param1, int param2, int param3) {
+    PlayArea(int param0, int param1, int param2, int param3) {
         this(param0, param1, param2, param3, 0, 0);
     }
 
@@ -135,7 +135,7 @@ final class la {
         }
     }
 
-    la(int param0, int param1, int param2, int param3, int param4, int param5) {
+    PlayArea(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_i = param2 << 16;
         this.field_j = param5 << 16;
         this.field_h = param3 << 16;

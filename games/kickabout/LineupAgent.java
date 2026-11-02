@@ -317,7 +317,7 @@ final class LineupAgent extends MatchAgent {
         if (param0 >= -80) {
           return false;
         }
-        stackIn_7_0 = !(this.field_f[param1].d(3511)) || ((1 << param1 & this.field_h) != 0);
+        stackIn_7_0 = !(this.field_f[param1].isActive(3511)) || ((1 << param1 & this.field_h) != 0);
         return stackIn_7_0;
     }
 

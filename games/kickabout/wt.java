@@ -363,19 +363,19 @@ abstract class wt extends UiWidget implements UiContainerMarker {
         int var7 = 0;
         String[] var8 = null;
         try {
-          if (-1 == param0.field_m &&
-            0 != param0.field_h) {
+          if (-1 == param0.possessorTeam &&
+            0 != param0.velocityY) {
             var4_int = -(param1.field_o >> 1) + 20;
             if (param2 != -75) {
               var8 = (String[]) null;
               wt.a(69, (String[]) null);
             }
-            var5 = (param1.field_w - param0.field_p) / param0.field_h;
+            var5 = (param1.positionY - param0.positionY) / param0.velocityY;
             var5 = 9 * var5 >> 3;
             if (var5 > 2 &&
               var5 < var4_int) {
-              var6 = param0.field_t + param0.field_q * var5;
-              var7 = Math.abs(-var6 + param1.field_M);
+              var6 = param0.positionX + param0.velocityX * var5;
+              var7 = Math.abs(-var6 + param1.positionX);
               if (var6 > 24379392 &&
                 var6 < 34275328) {
                 if (-28 + (var7 >> 16) > 12) {
@@ -383,15 +383,15 @@ abstract class wt extends UiWidget implements UiContainerMarker {
                   return true;
                 }
                 stackIn_17_0 = (FootballerAgent) (param1);
-                if (param1.field_M < var6) {
+                if (param1.positionX < var6) {
                   stackIn_18_1 = 8;
                 } else {
                   stackIn_18_1 = 2;
                 }
-                stackIn_17_0.field_G = stackIn_18_1;
+                stackIn_17_0.directionMask = stackIn_18_1;
                 return true;
               }
-              param1.field_G = 0;
+              param1.directionMask = 0;
               return false;
             }
             return false;

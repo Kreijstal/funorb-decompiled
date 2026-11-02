@@ -43,7 +43,7 @@ final class pl {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (var9 >= la.field_k.length) {
+              if (var9 >= PlayArea.field_k.length) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -52,7 +52,7 @@ final class pl {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var19 = la.field_k[var9];
+              var19 = PlayArea.field_k[var9];
               var18 = var19;
               var10 = var18;
               var11 = 0;

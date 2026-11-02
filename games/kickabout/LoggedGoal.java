@@ -159,8 +159,8 @@ final class LoggedGoal extends IntrusiveNode {
           this.field_s = param0;
           this.field_k = param2;
           this.field_g = param7;
-          this.field_q = var12.f(-124);
-          this.field_r = var12.a(true);
+          this.field_q = var12.pixelX(-124);
+          this.field_r = var12.pixelY(true);
           if (param3 == 2) {
             this.field_j = var12.field_m;
             this.goalType = 2;
@@ -182,8 +182,8 @@ final class LoggedGoal extends IntrusiveNode {
               this.field_j = var12.field_m;
             }
           }
-          this.field_m = var10.f(-93);
-          this.field_p = var10.a(true);
+          this.field_m = var10.pixelX(-93);
+          this.field_p = var10.pixelY(true);
           this.time = param1;
           this.field_e = var10.field_o;
           while (true) {

@@ -132,7 +132,7 @@ final class ap extends js {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.e(-2) &&
-          this.field_o.participantStatus[this.field_h].d(3511) &&
+          this.field_o.participantStatus[this.field_h].isActive(3511) &&
           wt.field_x >= 0 &&
           us.field_j >= 0 &&
           wt.field_x < 640 &&
@@ -202,9 +202,9 @@ final class ap extends js {
         }
         this.field_o.a((byte) -87);
         this.field_o.field_E.b(22997);
-        this.field_o.d(4);
+        this.field_o.tick(4);
         if (this.field_t) {
-          this.field_i.d(4);
+          this.field_i.tick(4);
         }
         ie.g(-128);
         re.b(101);
@@ -229,11 +229,11 @@ final class ap extends js {
         }
         if (!this.field_t) {
           if (2 == this.field_o.phase &&
-            this.field_o.field_C.a((byte) 107)) {
+            this.field_o.field_C.allFormationsConfirmed((byte) 107)) {
             var7 = 0;
             var4Lifetime1 = var7;
             while (var7 < 2) {
-              this.field_o.field_r[var7] = this.field_o.field_C.field_k[var7];
+              this.field_o.field_r[var7] = this.field_o.field_C.formationChoice[var7];
               var7++;
             }
             this.b(26415, 3);
@@ -568,17 +568,17 @@ final class ap extends js {
     final void a(int param0, boolean param1) {
         int stackIn_24_0 = 0;
         BinaryBitmapFont var3_ref_uo;
-        la[] var3_ref_la__;
+        PlayArea[] var3_ref_la__;
         int var3;
         int var4;
-        la var5;
+        PlayArea var5;
         int var6;
-        la[] var7;
-        la[] var8;
+        PlayArea[] var7;
+        PlayArea[] var8;
         int var4Lifetime1;
         int var4Lifetime2;
-        la[] var3_ref_la__Lifetime1;
-        la var5Lifetime1;
+        PlayArea[] var3_ref_la__Lifetime1;
+        PlayArea var5Lifetime1;
         var6 = Kickabout.field_G;
         if (param0 != ~this.field_o.phase) {
           MidiPcmStream.a(true, (byte) -114);
@@ -719,7 +719,7 @@ final class ap extends js {
             }
             if (!this.e(-2) &&
               this.field_o.phase != 5 &&
-              this.field_o.participantStatus[this.field_h].d(3511)) {
+              this.field_o.participantStatus[this.field_h].isActive(3511)) {
               jm.a(var4, false, -2);
               return true;
             }
@@ -784,7 +784,7 @@ final class ap extends js {
           this.field_u = true;
           this.h(9);
           this.field_i.a(param1, this.field_h, param0 ^ -18);
-          this.field_m.a(this.field_i, (byte) 77);
+          this.field_m.copyStateFrom(this.field_i, (byte) 77);
           if (this.field_i.phase > 0) {
             stackIn_4_0 = 1;
             if (this.e(param0 ^ 17)) {
@@ -795,7 +795,7 @@ final class ap extends js {
             var3_int = stackIn_4_0 - stackIn_5_1;
             this.a(var3_int, this.field_i.field_d, false, this.field_i.field_Q, this.field_i.field_H);
           }
-          this.field_o.a(this.field_i, (byte) 122);
+          this.field_o.copyStateFrom(this.field_i, (byte) 122);
           this.d(-2);
           if (param0 != -17) {
             this.field_n = (gr) null;

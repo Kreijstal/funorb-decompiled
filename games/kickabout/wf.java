@@ -140,7 +140,7 @@ final class wf extends qt {
         stackIn_6_1 = (ds.field_g) ? 0 : 1;
         stackIn_9_2 = (dg.field_e) ? 0 : 1;
         stackIn_11_1 = stackIn_6_1 & stackIn_9_2;
-        stackIn_12_2 = (la.a(100)) ? 0 : 1;
+        stackIn_12_2 = (PlayArea.a(100)) ? 0 : 1;
         param1 = stackIn_5_0 & (stackIn_11_1 & stackIn_12_2) != 0;
         this.field_G.a(param1, false);
         this.field_L.field_s = this.field_j;
@@ -186,7 +186,7 @@ final class wf extends qt {
     final int b(int param0, int param1) {
         int var3;
         int stackIn_14_0 = 0;
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           var3 = 320;
           if (param0 == 1) {
             return var3 - (this.field_i[1].field_d + this.field_i[0].field_d >> 1);
@@ -389,7 +389,7 @@ final class wf extends qt {
           var3 = stackIn_8_0;
           IsSixCommand.field_C.d(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
         }
-        if (la.a(param0 ^ -97)) {
+        if (PlayArea.a(param0 ^ -97)) {
           SoftwareRasterizer.a(this.field_j, 48, 640, 383, 0, 196);
         }
         if (ds.field_g ||
@@ -586,7 +586,7 @@ final class wf extends qt {
 
     private final void e(int param0) {
         long var2 = 0L;
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           if (dg.field_e ||
             ds.field_g) {
             return;
@@ -721,7 +721,7 @@ final class wf extends qt {
             um.field_e.field_o.disableLocal = true;
             um.field_e.field_o.field_b[1][3] = var4.field_i[3];
             um.field_e.b(param0 + 26405, 4);
-            la.a(um.field_e.field_o, 0);
+            PlayArea.a(um.field_e.field_o, 0);
           } else {
             um.field_e.b(26415, 2);
             gm.a(GameKeyHandler.field_a, true, (byte) -117);
@@ -769,7 +769,7 @@ final class wf extends qt {
         if (param1 > -125) {
           return;
         }
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           if (dg.field_e ||
             ds.field_g) {
             return;

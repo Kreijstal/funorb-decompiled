@@ -980,7 +980,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               tt.field_c = true;
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
-                la.field_k != null && (!param3 ||
+                PlayArea.field_k != null && (!param3 ||
                 !hw.field_k)) {
                 if (null == SumIntegersCommand.field_G) {
                   m.field_f = new boolean[ss.field_j];
@@ -1220,7 +1220,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ContentTransitionDialog.a(12, qq.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), he.a(320), la.b(820907312), this.field_r);
+            var5_intLifetime1 = ContentTransitionDialog.a(12, qq.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), he.a(320), PlayArea.b(820907312), this.field_r);
             if (var5_intLifetime1 != -1) {
               vs.a(gd.field_b, ValidatedTextWidget.field_X, (byte) 122, var5_intLifetime1);
               ValidatedTextWidget.field_X = null;

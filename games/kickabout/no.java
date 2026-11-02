@@ -150,7 +150,7 @@ final class no extends i {
 
     final void a(int param0, int param1) {
         super.a(122, param1);
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return;
         }
         if (param0 <= 60) {

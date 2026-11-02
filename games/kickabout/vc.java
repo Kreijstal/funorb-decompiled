@@ -108,8 +108,8 @@ final class vc extends fp {
         FootballerAgent var2_ref_nl = null;
         FootballerAgent var3 = null;
         int var3_int = 0;
-        la[] var4 = null;
-        la var6 = null;
+        PlayArea[] var4 = null;
+        PlayArea var6 = null;
         int var7 = 0;
         String var8 = null;
         BallAgent var9 = null;
@@ -124,43 +124,43 @@ final class vc extends fp {
           }
           var9 = et.field_d.field_V;
           if (ic.field_i) {
-            var2 = et.field_d.participantStatus[0].field_g;
-            if (var9.field_m == 1) {
-              var9.field_m = -1;
+            var2 = et.field_d.participantStatus[0].controlledSlot;
+            if (var9.possessorTeam == 1) {
+              var9.possessorTeam = -1;
             }
-            if (0 == var9.field_m &&
-              var2 != var9.field_s) {
-              var9.field_m = -1;
+            if (0 == var9.possessorTeam &&
+              var2 != var9.possessorSlot) {
+              var9.possessorTeam = -1;
             }
-            if (0 == var9.field_m &&
-              var9.field_s == var2) {
+            if (0 == var9.possessorTeam &&
+              var9.possessorSlot == var2) {
               ic.field_i = false;
               return;
             }
             var3 = et.field_d.field_P[0][var2];
-            if (!qg.a(2235, var3.field_w, 20, var3.field_M)) {
+            if (!qg.a(2235, var3.positionY, 20, var3.positionX)) {
               var9.uncatchable = 3;
             } else {
               var9.uncatchable = 0;
               if (var3.action != 0) {
-                var3.a((byte) -31, 0);
+                var3.setAction((byte) -31, 0);
               }
             }
           } else {
-            if (var9.field_m == -1 &&
-              var9.field_p > 0) {
-              if (var9.field_p >= 88080384) {
+            if (var9.possessorTeam == -1 &&
+              var9.positionY > 0) {
+              if (var9.positionY >= 88080384) {
                 return;
               }
-              var2_ref_nl = et.field_d.a((byte) 120, 0);
+              var2_ref_nl = et.field_d.getControlledFootballer((byte) 120, 0);
               var3_int = 0;
               var4 = et.field_d.field_x;
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5];
-                var3_int = var3_int != 0 | var6.a(var2_ref_nl.field_M, var2_ref_nl.field_w, 703166480, var2_ref_nl.field_v) ? 1 : 0;
+                var3_int = var3_int != 0 | var6.containsPoint(var2_ref_nl.positionX, var2_ref_nl.positionY, 703166480, var2_ref_nl.height) ? 1 : 0;
               }
               if (var3_int == 0) {
-                if (262144 <= var9.e(-111)) {
+                if (262144 <= var9.horizontalSpeedSquared(-111)) {
                   return;
                 }
                 ic.field_i = true;
@@ -197,14 +197,14 @@ final class vc extends fp {
         int var3 = 0;
         var4 = Kickabout.field_G;
         try {
-          wo.a(ar.field_c, (gm) (NotCommand.field_F.b((byte) -96)), (byte) 118, 256);
+          wo.a(ar.field_c, (gm) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
           if (param0 != 45) {
             vc.i((byte) 21);
           }
           for (var1_int = 0; var1_int < NotCommand.field_F.playerCount; var1_int++) {
-            if (NotCommand.field_F.participantStatus[var1_int].d(3511) &&
+            if (NotCommand.field_F.participantStatus[var1_int].isActive(3511) &&
               wp.field_c == NotCommand.field_F.field_g[var1_int].field_p) {
-              var2 = (gm) (NotCommand.field_F.a((byte) -60, var1_int));
+              var2 = (gm) (NotCommand.field_F.getControlledFootballer((byte) -60, var1_int));
               stackIn_14_0 = (RegistrationRequestDialog.field_kb != var1_int) ? 160 : 256;
               var3 = stackIn_14_0;
               wo.a(da.field_u[va.field_J], var2, (byte) -17, var3);

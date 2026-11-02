@@ -183,7 +183,7 @@ final class eh implements pk {
           var12 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           int[] var15 = (int[]) null;
           uf.a(var11, id.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
-          la.field_k = da.field_k;
+          PlayArea.field_k = da.field_k;
           IndexedSpriteState.field_e = lr.field_n;
           TextButton.field_z = ja.field_Z;
           pn.field_t = 0;

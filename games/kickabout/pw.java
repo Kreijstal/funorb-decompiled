@@ -15,7 +15,7 @@ final class pw extends i {
         int stackIn_28_2 = 0;
         boolean decompiledFrameRemainder0 = true;
         super.a(69, param1);
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           if (!dg.field_e &&
             !ds.field_g) {
             if (param0 <= 60) {

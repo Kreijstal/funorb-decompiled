@@ -675,7 +675,7 @@ final class bf extends hs {
           for (var7Lifetime2 = 0; param0.playerCount > var7Lifetime2; var7Lifetime2++) {
             if (this.field_h == param0.field_g[var7Lifetime2].field_p &&
               var7Lifetime2 != param1 &&
-              param0.participantStatus[var7Lifetime2].d(3511)) {
+              param0.participantStatus[var7Lifetime2].isActive(3511)) {
               this.field_v = true;
             }
           }

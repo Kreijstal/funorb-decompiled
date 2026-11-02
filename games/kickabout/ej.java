@@ -41,21 +41,21 @@ final class ej extends hd {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        FootballerAgent var4 = et.field_d.b((byte) -96);
+        FootballerAgent var4 = et.field_d.getBallCarrier((byte) -96);
         var4.field_O = false;
         var4.field_x = param0;
         var4.field_P = param2;
         var4.field_z = param3;
-        int var5 = var4.d(5339);
+        int var5 = var4.directionMask(5339);
         int var6 = uv.a(true, param2, param0);
         int var7 = param1 > ~pq.b(param1 ^ -172, var6 ^ var5) ? 1 : 0;
         var4.field_h = var6;
-        var4.a((byte) -31, 2);
-        var4.a(var4.field_h, 26214);
+        var4.setAction((byte) -31, 2);
+        var4.setDirectionFromMask(var4.field_h, 26214);
         if (var7 != 0) {
-          var4.field_L = var4.field_L + 16;
+          var4.actionTime = var4.actionTime + 16;
         }
-        var4.field_L = var4.field_L + param3;
+        var4.actionTime = var4.actionTime + param3;
     }
 
     final static void a(java.awt.Component param0, int param1) {

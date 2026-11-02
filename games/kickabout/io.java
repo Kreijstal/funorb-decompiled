@@ -219,7 +219,7 @@ final class io {
                 }
               }
             } else {
-              if (!la.a(100)) {
+              if (!PlayArea.a(100)) {
                 if (!GameLoopApplet.field_E.field_J[0]) {
                   tb.a((byte) 126, 26);
                 } else {
@@ -488,7 +488,7 @@ final class io {
         }
         ll.field_o.d(this.field_p, param1, 2 + param0, 16777215, -1);
         if (this.field_m == 1 && (!GameLoopApplet.field_E.field_J[0] ||
-          la.a(100))) {
+          PlayArea.a(100))) {
           param0 -= 4;
           SoftwareRasterizer.a(-(this.field_d >> 1) + param1, -(this.field_h >> 1) + param0, this.field_d, this.field_h, 0, 128);
         }

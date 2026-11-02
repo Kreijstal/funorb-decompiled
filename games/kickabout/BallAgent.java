@@ -4,15 +4,15 @@
 class BallAgent extends MatchAgent {
     int field_j;
     int field_i;
-    int field_q;
+    int velocityX;
     boolean field_y;
     int field_o;
-    int field_h;
-    int field_v;
+    int velocityY;
+    int height;
     int highFriction;
     static ff field_z;
     int modelId;
-    int field_t;
+    int positionX;
     static boolean field_u;
     static IndexedSprite[] field_f;
     boolean field_x;
@@ -20,10 +20,10 @@ class BallAgent extends MatchAgent {
     static String field_g;
     static String[][] field_w;
     int uncatchable;
-    int field_s;
-    int field_n;
-    int field_m;
-    int field_p;
+    int possessorSlot;
+    int verticalVelocity;
+    int possessorTeam;
+    int positionY;
 
     public static void f(int param0) {
         field_w = (String[][]) null;
@@ -35,17 +35,17 @@ class BallAgent extends MatchAgent {
         field_z = null;
     }
 
-    final int d(int param0) {
+    final int computeChecksum(int param0) {
         int var3 = 18 / ((81 - param0) / 37);
         int var2 = 0;
-        var2 = fj.a(-40, var2 ^ this.field_t);
-        var2 = fj.a(-40, this.field_p ^ var2);
-        var2 = fj.a(-40, this.field_v ^ var2);
-        var2 = fj.a(-40, this.field_q ^ var2);
-        var2 = fj.a(-40, var2 ^ this.field_h);
-        var2 = fj.a(-40, var2 ^ this.field_n);
-        var2 = fj.a(-40, this.field_m ^ var2);
-        var2 = fj.a(-40, this.field_s ^ var2);
+        var2 = fj.a(-40, var2 ^ this.positionX);
+        var2 = fj.a(-40, this.positionY ^ var2);
+        var2 = fj.a(-40, this.height ^ var2);
+        var2 = fj.a(-40, this.velocityX ^ var2);
+        var2 = fj.a(-40, var2 ^ this.velocityY);
+        var2 = fj.a(-40, var2 ^ this.verticalVelocity);
+        var2 = fj.a(-40, this.possessorTeam ^ var2);
+        var2 = fj.a(-40, this.possessorSlot ^ var2);
         var2 = fj.a(-40, var2 ^ this.uncatchable);
         var2 = fj.a(-40, this.highFriction ^ var2);
         var2 = fj.a(-40, this.modelId ^ var2);
@@ -54,30 +54,30 @@ class BallAgent extends MatchAgent {
 
     void a(int param0, int param1, byte param2, int param3) {
         if (param2 == 26) {
-          this.field_t = param0;
-          this.field_n = 0;
-          this.field_p = param3;
-          this.field_v = param1;
-          this.field_q = 0;
-          this.field_h = 0;
+          this.positionX = param0;
+          this.verticalVelocity = 0;
+          this.positionY = param3;
+          this.height = param1;
+          this.velocityX = 0;
+          this.velocityY = 0;
           return;
         }
     }
 
     public final String toString() {
         StringBuilder var2 = new StringBuilder("AgentBall p=[");
-        eh.a(this.field_t, 100, var2);
+        eh.a(this.positionX, 100, var2);
         StringBuilder discarded$0 = var2.append(",");
-        eh.a(this.field_p, 100, var2);
+        eh.a(this.positionY, 100, var2);
         StringBuilder discarded$1 = var2.append(",");
-        eh.a(this.field_v, 100, var2);
+        eh.a(this.height, 100, var2);
         StringBuilder discarded$2 = var2.append("]\tv=[");
-        eh.a(this.field_q, 100, var2);
+        eh.a(this.velocityX, 100, var2);
         StringBuilder discarded$3 = var2.append(",");
-        eh.a(this.field_h, 100, var2);
+        eh.a(this.velocityY, 100, var2);
         StringBuilder discarded$4 = var2.append(",");
-        eh.a(this.field_n, 100, var2);
-        StringBuilder discarded$5 = var2.append("]\tposessor=" + this.field_m + "/" + this.field_s);
+        eh.a(this.verticalVelocity, 100, var2);
+        StringBuilder discarded$5 = var2.append("]\tposessor=" + this.possessorTeam + "/" + this.possessorSlot);
         StringBuilder discarded$6 = var2.append("\tuncatchable=" + this.uncatchable);
         StringBuilder discarded$7 = var2.append("\thigh_friction=" + this.highFriction);
         StringBuilder discarded$8 = var2.append("\tmodel_id=" + this.modelId);
@@ -157,33 +157,33 @@ class BallAgent extends MatchAgent {
         }
     }
 
-    private final int b(boolean param0) {
+    private final int pixelHeight(boolean param0) {
         if (!param0) {
           return 99;
         }
-        return this.field_v >> 16;
+        return this.height >> 16;
     }
 
-    final int a(boolean param0) {
+    final int pixelX(boolean param0) {
         if (!param0) {
-          this.field_p = 99;
-          return this.field_t >> 16;
+          this.positionY = 99;
+          return this.positionX >> 16;
         }
-        return this.field_t >> 16;
+        return this.positionX >> 16;
     }
 
-    final int e(int param0) {
-        int var2 = this.field_q >> 8;
-        int var3 = this.field_h >> 8;
+    final int horizontalSpeedSquared(int param0) {
+        int var2 = this.velocityX >> 8;
+        int var3 = this.velocityY >> 8;
         int var4 = -84 / ((-60 - param0) / 39);
         return var3 * var3 + var2 * var2;
     }
 
-    final int c(int param0) {
+    final int pixelY(int param0) {
         if (param0 != 879306160) {
           return 87;
         }
-        return this.field_p >> 16;
+        return this.positionY >> 16;
     }
 
     final void c(CipherPacketBuffer param0, int param1) {
@@ -194,19 +194,19 @@ class BallAgent extends MatchAgent {
         RuntimeException var3 = null;
         try {
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
-            this.field_m = -1 + param0.l(2, param1 ^ 42);
-            this.field_s = param0.l(3, 59);
+            this.possessorTeam = -1 + param0.l(2, param1 ^ 42);
+            this.possessorSlot = param0.l(3, 59);
           }
           if (param1 != 17) {
             return;
           }
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
-            this.field_t = this.field_t + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
-            this.field_p = this.field_p + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
-            this.field_v = this.field_v + BufferedCacheFile.a((byte) 125, 20, param0, 0, 24, 30);
-            this.field_q = this.field_q + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
-            this.field_h = this.field_h + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
-            this.field_n = this.field_n + BufferedCacheFile.a((byte) 125, 18, param0, 0, 24, 30);
+            this.positionX = this.positionX + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
+            this.positionY = this.positionY + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
+            this.height = this.height + BufferedCacheFile.a((byte) 125, 20, param0, 0, 24, 30);
+            this.velocityX = this.velocityX + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
+            this.velocityY = this.velocityY + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
+            this.verticalVelocity = this.verticalVelocity + BufferedCacheFile.a((byte) 125, 18, param0, 0, 24, 30);
           }
           if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
@@ -232,18 +232,18 @@ class BallAgent extends MatchAgent {
     final void a(CipherPacketBuffer param0, byte param1) {
         int discarded$0 = 0;
         try {
-          this.field_m = param0.l(2, 59) - 1;
-          this.field_s = param0.l(3, 59);
-          this.field_t = param0.l(32, 59);
-          this.field_p = param0.l(32, 59);
-          this.field_v = param0.l(32, 59);
-          this.field_q = param0.l(32, 59);
-          this.field_h = param0.l(32, 59);
-          this.field_n = param0.l(32, 59);
+          this.possessorTeam = param0.l(2, 59) - 1;
+          this.possessorSlot = param0.l(3, 59);
+          this.positionX = param0.l(32, 59);
+          this.positionY = param0.l(32, 59);
+          this.height = param0.l(32, 59);
+          this.velocityX = param0.l(32, 59);
+          this.velocityY = param0.l(32, 59);
+          this.verticalVelocity = param0.l(32, 59);
           this.uncatchable = param0.l(10, 59);
           this.highFriction = param0.l(5, 59);
           if (param1 >= -94) {
-            discarded$0 = this.b(false);
+            discarded$0 = this.pixelHeight(false);
           }
           this.modelId = param0.l(4, 59);
         } catch (RuntimeException runtimeException) {
@@ -251,18 +251,18 @@ class BallAgent extends MatchAgent {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean canBeCaught(int param0) {
         int var2 = 58 / ((param0 + 51) / 54);
         if (this.uncatchable != 0) {
           return false;
         }
-        if (this.b(true) >= 30) {
+        if (this.pixelHeight(true) >= 30) {
           return false;
         }
-        if (0 > this.field_p) {
+        if (0 > this.positionY) {
           return false;
         }
-        if (this.field_p <= 88080384) {
+        if (this.positionY <= 88080384) {
           return true;
         }
         return false;
@@ -272,29 +272,29 @@ class BallAgent extends MatchAgent {
         BallAgent var5 = null;
         try {
           var5 = (BallAgent) (param1);
-          this.field_m = var5.field_m;
-          this.field_n = var5.field_n;
-          this.field_s = var5.field_s;
+          this.possessorTeam = var5.possessorTeam;
+          this.verticalVelocity = var5.verticalVelocity;
+          this.possessorSlot = var5.possessorSlot;
           this.modelId = var5.modelId;
           this.field_o = var5.field_o;
-          this.field_v = var5.field_v;
+          this.height = var5.height;
           if (param0 > -52) {
             CipherPacketBuffer var4 = (CipherPacketBuffer) null;
             this.c((CipherPacketBuffer) null, -54);
           }
-          this.field_t = var5.field_t;
-          this.field_q = var5.field_q;
-          this.field_p = var5.field_p;
+          this.positionX = var5.positionX;
+          this.velocityX = var5.velocityX;
+          this.positionY = var5.positionY;
           this.highFriction = var5.highFriction;
           this.uncatchable = var5.uncatchable;
           this.field_i = var5.field_i;
-          this.field_h = var5.field_h;
+          this.velocityY = var5.velocityY;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void a(byte param0, int param1, la[] param2) {
+    void stepPhysics(byte param0, int param1, PlayArea[] param2) {
         int stackIn_14_0 = 0;
         long stackIn_17_0 = 0L;
         long stackIn_38_0 = 0L;
@@ -322,11 +322,11 @@ class BallAgent extends MatchAgent {
           }
           var4_int = 90 / ((-3 - param0) / 59);
           this.field_j = -1;
-          if (this.field_m != -1) {
+          if (this.possessorTeam != -1) {
             return;
           }
-          if (this.field_p >= -65536) {
-            stackIn_14_0 = (this.field_p > 88145920) ? 1 : 0;
+          if (this.positionY >= -65536) {
+            stackIn_14_0 = (this.positionY > 88145920) ? 1 : 0;
           } else {
             stackIn_14_0 = 1;
           }
@@ -334,52 +334,52 @@ class BallAgent extends MatchAgent {
           stackIn_17_0 = (var5 != 0) ? 2000L : 58982L;
           var6 = stackIn_17_0;
           var8 = jk.field_m[param1];
-          var17 = lt.a(this.field_q, this.field_h, param2, -66, this.field_v, this.field_p, this.field_t, this.field_n);
-          this.field_v = var17[2];
-          this.field_t = var17[0];
-          this.field_p = var17[1];
-          if (this.field_q != var17[3]) {
-            this.field_q = jw.a(var6, var17[3], (byte) 115);
+          var17 = lt.moveWithinAreas(this.velocityX, this.velocityY, param2, -66, this.height, this.positionY, this.positionX, this.verticalVelocity);
+          this.height = var17[2];
+          this.positionX = var17[0];
+          this.positionY = var17[1];
+          if (this.velocityX != var17[3]) {
+            this.velocityX = jw.a(var6, var17[3], (byte) 115);
             this.field_y = true;
           }
-          if (this.field_h != var17[4]) {
-            this.field_h = jw.a(var6, var17[4], (byte) 119);
+          if (this.velocityY != var17[4]) {
+            this.velocityY = jw.a(var6, var17[4], (byte) 119);
             this.field_y = true;
           }
-          if (var17[5] != this.field_n) {
-            this.field_n = d.a(true, jw.a(var8, var17[5], (byte) 105));
-            if (this.field_n == 0) {
-              this.field_v = 0;
+          if (var17[5] != this.verticalVelocity) {
+            this.verticalVelocity = d.a(true, jw.a(var8, var17[5], (byte) 105));
+            if (this.verticalVelocity == 0) {
+              this.height = 0;
             }
             this.field_k = true;
           }
-          if (this.field_q == 0 &&
-            this.field_h == 0 &&
-            this.field_n == 0 &&
-            this.field_v == 0) {
+          if (this.velocityX == 0 &&
+            this.velocityY == 0 &&
+            this.verticalVelocity == 0 &&
+            this.height == 0) {
             return;
           }
           if (this.highFriction > 10) {
             stackIn_38_0 = 60293L;
           } else {
-            if (this.field_v >= 65536) {
+            if (this.height >= 65536) {
               stackIn_38_0 = sg.field_d[param1];
             } else {
               stackIn_38_0 = en.field_q[param1];
             }
           }
           var11 = stackIn_38_0;
-          this.field_q = (int)(var11 * (long)this.field_q >> 16);
-          this.field_h = (int)((long)this.field_h * var11 >> 16);
-          if (this.field_v > 0) {
-            this.field_n = this.field_n - 16384;
+          this.velocityX = (int)(var11 * (long)this.velocityX >> 16);
+          this.velocityY = (int)((long)this.velocityY * var11 >> 16);
+          if (this.height > 0) {
+            this.verticalVelocity = this.verticalVelocity - 16384;
           }
-          var13 = this.e(-128);
+          var13 = this.horizontalSpeedSquared(-128);
           if (4096 <= var13) {
             return;
           }
-          this.field_h = 0;
-          this.field_q = 0;
+          this.velocityY = 0;
+          this.velocityX = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -398,9 +398,9 @@ class BallAgent extends MatchAgent {
     public BallAgent() {
         this.field_j = -1;
         this.field_o = -1;
-        this.field_s = 0;
+        this.possessorSlot = 0;
         this.field_i = -1;
-        this.field_m = -1;
+        this.possessorTeam = -1;
         this.highFriction = 0;
     }
 

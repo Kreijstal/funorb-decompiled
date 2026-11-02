@@ -56,21 +56,21 @@ final class es extends IntrusiveNode {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4.field_m == -1) {
+          if (param4.possessorTeam == -1) {
             return;
           }
-          var5_int = param1.f(-92) - param4.a(true);
+          var5_int = param1.pixelX(-92) - param4.pixelX(true);
           if (param0 >= -56) {
             var8 = (BallAgent) null;
             es.a(-29, (FootballerAgent) null, -8, (FootballerAgent) null, (BallAgent) null);
           }
-          var6 = param1.a(true) - param4.c(879306160);
-          var7 = nb.a(param1, 170);
+          var6 = param1.pixelY(true) - param4.pixelY(879306160);
+          var7 = nb.keeperReach(param1, 170);
           if (var7 * var7 <= var5_int * var5_int + var6 * var6) {
             return;
           }
-          param1.b(0, -1);
-          param1.field_L = 200;
+          param1.startTackle(0, -1);
+          param1.actionTime = 200;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

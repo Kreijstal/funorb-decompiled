@@ -52,8 +52,8 @@ final class gg extends hd {
           }
           stackIn_3_2[stackIn_3_3] = stackIn_4_4;
           stackIn_3_0[stackIn_3_1] = stackIn_4_4;
-          var3_int = param2.a(true);
-          var4 = param2.c(param1 ^ 879306160);
+          var3_int = param2.pixelX(true);
+          var4 = param2.pixelY(param1 ^ 879306160);
           if (var3_int > 448) {
             var5 = kk.field_B[0];
             kk.field_B[0] = kk.field_B[1];
@@ -107,7 +107,7 @@ final class gg extends hd {
 
     final static void h(byte param0) {
         hd.field_K = CachedArchiveSource.field_C;
-        hw.field_f = la.field_d;
+        hw.field_f = PlayArea.field_d;
         jr.field_Gb = cq.field_f;
         up.field_f = 0.0;
         DualLinkDeque.field_e = 0.0;

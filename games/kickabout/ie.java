@@ -51,7 +51,7 @@ final class ie extends i {
           if (sl.field_Eb) {
             if (bt.b(105)) {
               sl.field_Eb = false;
-              et.field_d.participantStatus[0].field_g = vb.field_d;
+              et.field_d.participantStatus[0].controlledSlot = vb.field_d;
               p.a(false);
               mk.b(-1622);
               no.g(99);
@@ -86,7 +86,7 @@ final class ie extends i {
           var3Lifetime1 = 640;
           if (ks.field_e == 1 &&
             !sl.field_Eb &&
-            (1050 > mh.field_k.a(true) ||
+            (1050 > mh.field_k.pixelY(true) ||
             640 != cq.field_g) ||
             (2 == ks.field_e ||
             ks.field_e == 3)) {
@@ -112,33 +112,33 @@ final class ie extends i {
             }
             ig.a(false, (byte) 23, 1, 0);
             var4_ref_nl = et.field_d.field_P[1][4];
-            if (0 == et.field_d.field_V.field_m &&
+            if (0 == et.field_d.field_V.possessorTeam &&
               var4_ref_nl.action == 0) {
-              var5_int = var4_ref_nl.f(-111) - ld.field_f.f(-124);
-              var6 = var4_ref_nl.a(true) - ld.field_f.a(true);
+              var5_int = var4_ref_nl.pixelX(-111) - ld.field_f.pixelX(-124);
+              var6 = var4_ref_nl.pixelY(true) - ld.field_f.pixelY(true);
               if (!(var5_int * var5_int + var6 * var6 >= 3600)) {
-                var4_ref_nl.b(0, -1);
-                var4_ref_nl.field_G = 0;
+                var4_ref_nl.startTackle(0, -1);
+                var4_ref_nl.directionMask = 0;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (1 == et.field_d.field_V.field_m &&
+              if (1 == et.field_d.field_V.possessorTeam &&
                 var4_ref_nl.action == 0) {
                 tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                 if (sl.field_Eb &&
                   ld.field_f.action == 0) {
-                  ld.field_f.field_G = 0;
-                  ld.field_f.a(1, 26214);
+                  ld.field_f.directionMask = 0;
+                  ld.field_f.setDirectionFromMask(1, 26214);
                 }
               }
             }
           }
           if (ks.field_e == 8) {
             if (!sl.field_Eb) {
-              et.field_d.participantStatus[1].field_g = 0;
-              var4Lifetime2 = et.field_d.field_V.a(true);
-              var5_intLifetime1 = et.field_d.field_V.c(879306160);
+              et.field_d.participantStatus[1].controlledSlot = 0;
+              var4Lifetime2 = et.field_d.field_V.pixelX(true);
+              var5_intLifetime1 = et.field_d.field_V.pixelY(879306160);
               IntDoubleCommand.a((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
               IntDoubleCommand.a((byte) -107, var4Lifetime2, 810, var5_intLifetime1, 510, 258, 1, 558);
               IntDoubleCommand.a((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
@@ -154,7 +154,7 @@ final class ie extends i {
             for (var4Lifetime3Lifetime1 = 3; var4Lifetime3Lifetime1 < 5; var4Lifetime3Lifetime1++) {
               if (!sl.field_Eb &&
                 et.field_d.field_P[1][var4Lifetime3Lifetime1].action == 0) {
-                et.field_d.field_P[1][var4Lifetime3Lifetime1].a(1, 26214);
+                et.field_d.field_P[1][var4Lifetime3Lifetime1].setDirectionFromMask(1, 26214);
               }
             }
             df.d(true);
@@ -171,7 +171,7 @@ final class ie extends i {
           if (ks.field_e == 12 &&
             et.field_d.field_X.goalCount > 25) {
             et.field_d.field_X.goalCount = 0;
-            if (et.field_d.field_V.e(-1) == 0) {
+            if (et.field_d.field_V.horizontalSpeedSquared(-1) == 0) {
               jw.c(13, false);
             }
           }
@@ -179,19 +179,19 @@ final class ie extends i {
             if (!sl.field_Eb) {
               if (et.field_d.field_X.goalCount > 25) {
                 et.field_d.field_X.goalCount = 0;
-                if (et.field_d.field_V.e(44) == 0) {
+                if (et.field_d.field_V.horizontalSpeedSquared(44) == 0) {
                   jw.c(14, false);
                 }
               }
             } else {
               et.field_d.field_X.goalCount = 0;
-              if (et.field_d.field_P[1][0].field_w < 0) {
+              if (et.field_d.field_P[1][0].positionY < 0) {
                 qg.a(2235, 2949120, 4, 29360128);
               }
-              if (et.field_d.field_V.field_m == 0) {
-                et.field_d.field_V.field_m = -1;
+              if (et.field_d.field_V.possessorTeam == 0) {
+                et.field_d.field_V.possessorTeam = -1;
               }
-              et.field_d.participantStatus[0].field_g = 0;
+              et.field_d.participantStatus[0].controlledSlot = 0;
             }
           }
           if (ks.field_e == 14 &&
@@ -203,7 +203,7 @@ final class ie extends i {
             var5 = var9;
             if (!var5[0]) {
               var5[0] = true;
-              if (la.a(100)) {
+              if (PlayArea.a(100)) {
                 return;
               }
               var6Lifetime1 = 0;

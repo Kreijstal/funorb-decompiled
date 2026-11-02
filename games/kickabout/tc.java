@@ -254,54 +254,54 @@ final class tc extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if ((param3.field_G & 8) != 0 &&
-            param2 < param3.field_M) {
-            param3.field_M = param2;
+          if ((param3.directionMask & 8) != 0 &&
+            param2 < param3.positionX) {
+            param3.positionX = param2;
           }
-          if ((4 & param3.field_G) != 0 &&
-            param3.field_w < param4) {
-            param3.field_w = param4;
+          if ((4 & param3.directionMask) != 0 &&
+            param3.positionY < param4) {
+            param3.positionY = param4;
           }
-          if ((2 & param3.field_G) != 0 &&
-            param2 > param3.field_M) {
-            param3.field_M = param2;
+          if ((2 & param3.directionMask) != 0 &&
+            param2 > param3.positionX) {
+            param3.positionX = param2;
           }
-          if ((param3.field_G & 1) != 0 &&
-            param3.field_w > param4) {
-            param3.field_w = param4;
+          if ((param3.directionMask & 1) != 0 &&
+            param3.positionY > param4) {
+            param3.positionY = param4;
           }
           if (param1 <= 80) {
             return true;
           }
-          if (param2 == param3.field_M &&
-            param3.field_w == param4) {
-            param3.field_G = 0;
-            param3.a(param0, 26214);
+          if (param2 == param3.positionX &&
+            param3.positionY == param4) {
+            param3.directionMask = 0;
+            param3.setDirectionFromMask(param0, 26214);
             return true;
           }
           stackIn_23_0 = (FootballerAgent) (param3);
-          if (param4 > param3.field_w) {
+          if (param4 > param3.positionY) {
             stackIn_24_1 = 1;
           } else {
             stackIn_24_1 = 0;
           }
-          if (param3.field_M >= param2) {
+          if (param3.positionX >= param2) {
             stackIn_27_2 = 0;
           } else {
             stackIn_27_2 = 8;
           }
-          if (param3.field_M <= param2) {
+          if (param3.positionX <= param2) {
             stackIn_30_3 = 0;
           } else {
             stackIn_30_3 = 2;
           }
           stackIn_32_1 = stackIn_24_1 | (stackIn_27_2 | stackIn_30_3);
-          if (param3.field_w > param4) {
+          if (param3.positionY > param4) {
             stackIn_33_2 = 4;
           } else {
             stackIn_33_2 = 0;
           }
-          stackIn_23_0.field_G = stackIn_32_1 | stackIn_33_2;
+          stackIn_23_0.directionMask = stackIn_32_1 | stackIn_33_2;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

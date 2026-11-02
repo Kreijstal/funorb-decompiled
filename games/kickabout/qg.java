@@ -42,15 +42,15 @@ final class qg extends IntrusiveNode {
         int stackIn_36_0 = 0;
         var12 = null;
         var12_ref = (ob) (et.field_d.field_V);
-        if (param3 != var12_ref.field_t) {
-          var5 = var12_ref.field_t;
-          var6 = var12_ref.field_p;
+        if (param3 != var12_ref.positionX) {
+          var5 = var12_ref.positionX;
+          var6 = var12_ref.positionY;
           stackIn_33_0 = (var5 >= param3) ? 0 : 1;
           var7 = stackIn_33_0;
           stackIn_36_0 = (param1 <= var6) ? 0 : 1;
           var8 = stackIn_36_0;
-          var9 = (param3 >> 16) - var12_ref.a(true);
-          var10 = (param1 >> 16) - var12_ref.c(879306160);
+          var9 = (param3 >> 16) - var12_ref.pixelX(true);
+          var10 = (param1 >> 16) - var12_ref.pixelY(879306160);
           if (param0 != 2235) {
             qg.a(-120, 112, -101, 49);
           }
@@ -78,17 +78,17 @@ final class qg extends IntrusiveNode {
             }
           }
         } else {
-          if (var12_ref.field_p == param1) {
+          if (var12_ref.positionY == param1) {
             return true;
           }
-          var5 = var12_ref.field_t;
-          var6 = var12_ref.field_p;
+          var5 = var12_ref.positionX;
+          var6 = var12_ref.positionY;
           stackIn_6_0 = (var5 >= param3) ? 0 : 1;
           var7 = stackIn_6_0;
           stackIn_9_0 = (param1 <= var6) ? 0 : 1;
           var8 = stackIn_9_0;
-          var9 = (param3 >> 16) - var12_ref.a(true);
-          var10 = (param1 >> 16) - var12_ref.c(879306160);
+          var9 = (param3 >> 16) - var12_ref.pixelX(true);
+          var10 = (param1 >> 16) - var12_ref.pixelY(879306160);
           if (param0 != 2235) {
             qg.a(-120, 112, -101, 49);
           }
@@ -108,7 +108,7 @@ final class qg extends IntrusiveNode {
             if (var7 != 0 &&
               var5 > param3) {
               var5 = param3;
-              var12_ref.a(var5, var12_ref.field_v, (byte) 26, var6);
+              var12_ref.a(var5, var12_ref.height, (byte) 26, var6);
               return false;
             }
             if (var7 == 0 &&
@@ -117,7 +117,7 @@ final class qg extends IntrusiveNode {
             }
           }
         }
-        var12_ref.a(var5, var12_ref.field_v, (byte) 26, var6);
+        var12_ref.a(var5, var12_ref.height, (byte) 26, var6);
         return false;
     }
 

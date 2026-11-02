@@ -30,45 +30,45 @@ final class nt extends hd implements lv {
         var5 = et.field_d.field_V;
         if (ks.field_e == 1) {
           if (sl.field_Eb) {
-            var2 = mh.field_k.a(true);
+            var2 = mh.field_k.pixelY(true);
             var3 = (var2 * -200 + 326800) / -490;
             mj.a(256.0, 60, 448.0, (double)(var3 + 1344));
           } else {
-            mj.a(256.0, param0 ^ 13487, (double)mh.field_k.f(-122), (double)mh.field_k.a(true));
+            mj.a(256.0, param0 ^ 13487, (double)mh.field_k.pixelX(-122), (double)mh.field_k.pixelY(true));
           }
         } else {
           if (ks.field_e != 2) {
             if (ks.field_e != 3) {
               if (ks.field_e == 4) {
                 if (!sl.field_Eb) {
-                  mj.a(200.0, 60, (double)mh.field_k.f(param0 - 13564), (double)(mh.field_k.a(true) - 55));
+                  mj.a(200.0, 60, (double)mh.field_k.pixelX(param0 - 13564), (double)(mh.field_k.pixelY(true) - 55));
                 } else {
-                  mj.a(160.0, 60, (double)(ld.field_f.f(-119) + mh.field_k.f(-118) >> 1), (double)(ld.field_f.a(true) + mh.field_k.a(true) >> 1));
+                  mj.a(160.0, 60, (double)(ld.field_f.pixelX(-119) + mh.field_k.pixelX(-118) >> 1), (double)(ld.field_f.pixelY(true) + mh.field_k.pixelY(true) >> 1));
                 }
               } else {
                 if (5 != ks.field_e) {
                   if (6 == ks.field_e) {
-                    mj.a(180.0, 60, (double)(mh.field_k.f(-99) + ld.field_f.f(-97) >> 1), (double)mh.field_k.a(true));
+                    mj.a(180.0, 60, (double)(mh.field_k.pixelX(-99) + ld.field_f.pixelX(-97) >> 1), (double)mh.field_k.pixelY(true));
                   } else {
                     if (ks.field_e == 7) {
                       var2_ref_nl = et.field_d.field_P[1][4];
-                      mj.a(220.0, 60, (double)(ld.field_f.f(-107) + var2_ref_nl.f(-89) >> 1), (double)(ld.field_f.a(true) + var2_ref_nl.a(true) >> 1));
+                      mj.a(220.0, 60, (double)(ld.field_f.pixelX(-107) + var2_ref_nl.pixelX(-89) >> 1), (double)(ld.field_f.pixelY(true) + var2_ref_nl.pixelY(true) >> 1));
                     } else {
                       if (ks.field_e != 8) {
                         if (ks.field_e == 9) {
-                          mj.a(220.0, 60, (double)(mh.field_k.f(-128) + ld.field_f.f(-121) >> 1), (double)mh.field_k.a(true));
+                          mj.a(220.0, 60, (double)(mh.field_k.pixelX(-128) + ld.field_f.pixelX(-121) >> 1), (double)mh.field_k.pixelY(true));
                         } else {
                           if (ks.field_e != 10) {
                             if (ks.field_e != 11) {
                               if (ks.field_e != 12) {
                                 if (ks.field_e == 13) {
                                   if (!sl.field_Eb &&
-                                    var5.field_p >= 0) {
-                                    if (var5.field_m != 0 &&
-                                      var5.e(-125) < 1638400) {
-                                      mj.a(200.0, 60, (double)(fc.field_c.f(param0 - 13584) + var5.a(true) >> 1), (double)(fc.field_c.a(true) + var5.c(879306160) >> 1));
+                                    var5.positionY >= 0) {
+                                    if (var5.possessorTeam != 0 &&
+                                      var5.horizontalSpeedSquared(-125) < 1638400) {
+                                      mj.a(200.0, 60, (double)(fc.field_c.pixelX(param0 - 13584) + var5.pixelX(true) >> 1), (double)(fc.field_c.pixelY(true) + var5.pixelY(879306160) >> 1));
                                     } else {
-                                      mj.a(170.0, param0 - 13399, (double)(fc.field_c.f(param0 ^ -13553) * 3 + 448 >> 2), (double)(fc.field_c.a(true) * 3 >> 2));
+                                      mj.a(170.0, param0 - 13399, (double)(fc.field_c.pixelX(param0 ^ -13553) * 3 + 448 >> 2), (double)(fc.field_c.pixelY(true) * 3 >> 2));
                                     }
                                     decompiledFrameRemainder0 = false;
                                   }
@@ -77,17 +77,17 @@ final class nt extends hd implements lv {
                                   }
                                 }
                               } else {
-                                mj.a(200.0, 60, (double)(fc.field_c.f(-92) + var5.a(true) >> 1), (double)(fc.field_c.a(true) + (-160 + var5.c(879306160)) >> 1));
+                                mj.a(200.0, 60, (double)(fc.field_c.pixelX(-92) + var5.pixelX(true) >> 1), (double)(fc.field_c.pixelY(true) + (-160 + var5.pixelY(879306160)) >> 1));
                               }
                             } else {
-                              mj.a(200.0, 60, (double)(fc.field_c.f(-109) + var5.a(true) >> 1), (double)(fc.field_c.a(true) + var5.c(879306160) >> 1));
+                              mj.a(200.0, 60, (double)(fc.field_c.pixelX(-109) + var5.pixelX(true) >> 1), (double)(fc.field_c.pixelY(true) + var5.pixelY(879306160) >> 1));
                             }
                           } else {
                             mj.a(160.0, 60, 448.0, 672.0);
                           }
                         }
                       } else {
-                        var2 = ld.field_f.a(true);
+                        var2 = ld.field_f.pixelY(true);
                         var3 = 0;
                         if (var2 <= 810) {
                           if (var2 > 400) {
@@ -97,26 +97,26 @@ final class nt extends hd implements lv {
                           var3 = 2;
                         }
                         if (!sl.field_Eb) {
-                          mj.a(190.0, 60, (double)ld.field_f.f(-92), (double)te.field_a[var3]);
+                          mj.a(190.0, 60, (double)ld.field_f.pixelX(-92), (double)te.field_a[var3]);
                         } else {
-                          mj.a(256.0, 60, (double)ld.field_f.f(param0 ^ -13551), (double)ld.field_f.a(true));
+                          mj.a(256.0, 60, (double)ld.field_f.pixelX(param0 ^ -13551), (double)ld.field_f.pixelY(true));
                         }
                       }
                     }
                   }
                 } else {
                   if (sl.field_Eb) {
-                    mj.a(160.0, 60, (double)ld.field_f.f(-124), (double)ld.field_f.a(true));
+                    mj.a(160.0, 60, (double)ld.field_f.pixelX(-124), (double)ld.field_f.pixelY(true));
                   } else {
-                    mj.a(200.0, 60, (double)ld.field_f.f(-118), (double)(ld.field_f.a(true) - 55));
+                    mj.a(200.0, 60, (double)ld.field_f.pixelX(-118), (double)(ld.field_f.pixelY(true) - 55));
                   }
                 }
               }
             } else {
-              mj.a(200.0, 60, (double)mh.field_k.f(-108), (double)mh.field_k.a(true));
+              mj.a(200.0, 60, (double)mh.field_k.pixelX(-108), (double)mh.field_k.pixelY(true));
             }
           } else {
-            mj.a(226.0, 60, (double)mh.field_k.f(-111), (double)mh.field_k.a(true));
+            mj.a(226.0, 60, (double)mh.field_k.pixelX(-111), (double)mh.field_k.pixelY(true));
           }
         }
 
@@ -137,16 +137,16 @@ final class nt extends hd implements lv {
     }
 
     public final void a(int param0, int param1, int param2) {
-        js.a(this.field_Eb, this.field_Db, la.field_e, -83);
-        eo.a(la.field_e, 131586);
-        eo.a(la.field_e, 16777215);
-        eo.a(la.field_e, 13421772);
-        eo.a(la.field_e, 11184810);
+        js.a(this.field_Eb, this.field_Db, PlayArea.field_e, -83);
+        eo.a(PlayArea.field_e, 131586);
+        eo.a(PlayArea.field_e, 16777215);
+        eo.a(PlayArea.field_e, 13421772);
+        eo.a(PlayArea.field_e, 11184810);
         if (param1 != 23) {
           PcmStreamMixer var5 = (PcmStreamMixer) null;
           nt.a(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
         }
-        la.field_e.drawHalfSize(-(la.field_e.field_o >> 2) + param2, param0 - (la.field_e.field_v >> 2));
+        PlayArea.field_e.drawHalfSize(-(PlayArea.field_e.field_o >> 2) + param2, param0 - (PlayArea.field_e.field_v >> 2));
     }
 
     final static int[] k(int param0) {
@@ -211,25 +211,25 @@ final class nt extends hd implements lv {
           SoftwareRasterizer.drawRoundedRectangle(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
         }
         if (null != this.field_Eb) {
-          js.a(this.field_Eb, this.field_Db, la.field_e, -101);
+          js.a(this.field_Eb, this.field_Db, PlayArea.field_e, -101);
           if (var2 == 0) {
             if (var3 == 0) {
               if (this.field_Fb == 15 ||
                 15 == this.field_Ab) {
-                eo.a(la.field_e, 16777215);
-                eo.a(la.field_e, 7829367);
+                eo.a(PlayArea.field_e, 16777215);
+                eo.a(PlayArea.field_e, 7829367);
               }
             } else {
-              eo.a(la.field_e, 131586);
-              eo.a(la.field_e, 65793);
+              eo.a(PlayArea.field_e, 131586);
+              eo.a(PlayArea.field_e, 65793);
             }
           } else {
-            eo.a(la.field_e, 131586);
-            eo.a(la.field_e, 16777215);
-            eo.a(la.field_e, 13421772);
-            eo.a(la.field_e, 11184810);
+            eo.a(PlayArea.field_e, 131586);
+            eo.a(PlayArea.field_e, 16777215);
+            eo.a(PlayArea.field_e, 13421772);
+            eo.a(PlayArea.field_e, 11184810);
           }
-          la.field_e.drawHalfSize(this.field_Jb.field_F + (-50 + this.field_Jb.field_q >> 1), (this.field_Jb.field_mb - 50 >> 1) + this.field_Jb.field_T);
+          PlayArea.field_e.drawHalfSize(this.field_Jb.field_F + (-50 + this.field_Jb.field_q >> 1), (this.field_Jb.field_mb - 50 >> 1) + this.field_Jb.field_T);
         }
         var5 = (this.field_Jb.field_q >> 1) + this.field_Jb.field_F;
         var6 = this.field_Jb.field_mb + this.field_Jb.field_T + 5;

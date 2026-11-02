@@ -63,18 +63,18 @@ final class jw extends hd {
         try {
           for (var2_int = 0; 2 > var2_int; var2_int++) {
             for (var3 = 1; 5 > var3; var3++) {
-              et.field_d.field_P[var2_int][var3].field_G = 0;
+              et.field_d.field_P[var2_int][var3].directionMask = 0;
               et.field_d.field_E.b(22997);
             }
           }
-          et.field_d.participantStatus[0].field_g = 0;
+          et.field_d.participantStatus[0].controlledSlot = 0;
           ks.field_e = param0;
           ic.field_i = false;
-          et.field_d.participantStatus[1].field_g = 0;
+          et.field_d.participantStatus[1].controlledSlot = 0;
           if (ks.field_e == 1) {
             mh.field_k.a(29360128, false, 0, 107085824);
             mh.field_k.field_R = 1024;
-            mh.field_k.a(4, 26214);
+            mh.field_k.setDirectionFromMask(4, 26214);
             et.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
             vb.field_d = 1;
           } else {
@@ -97,9 +97,9 @@ final class jw extends hd {
                         vb.field_d = 3;
                         var8 = (gm) (et.field_d.field_P[1][4]);
                         var8.a(-13107200, false, 0, 22937600);
-                        et.field_d.participantStatus[1].field_g = 4;
-                        var8.field_G = 8;
-                        ld.field_f.field_G = 4;
+                        et.field_d.participantStatus[1].controlledSlot = 4;
+                        var8.directionMask = 8;
+                        ld.field_f.directionMask = 4;
                       } else {
                         if (ks.field_e == 8) {
                           vb.field_d = 3;
@@ -123,7 +123,7 @@ final class jw extends hd {
                                     var7 = (gm) (et.field_d.field_P[1][0]);
                                     var7.a(29360128, false, 0, -19005440);
                                     var7.field_o = 8;
-                                    var7.field_G = 0;
+                                    var7.directionMask = 0;
                                   }
                                 }
                               }
@@ -155,7 +155,7 @@ final class jw extends hd {
           sl.field_Eb = true;
           ps.a(-25246, false, param1, false, false, false, false);
           mk.b(-1622);
-          et.field_d.field_x = new la[]{new la(-800, -800, 1800, 1800)};
+          et.field_d.field_x = new PlayArea[]{new PlayArea(-800, -800, 1800, 1800)};
           et.field_d.field_B = et.field_d.field_x;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

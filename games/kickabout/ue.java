@@ -10,7 +10,7 @@ final class ue extends IntrusiveNode {
     static String[] field_g;
     static vs[] field_f;
 
-    final static void a(int param0, int param1, FootballerAgent param2, int param3) {
+    final static void steerTowardsPoint(int param0, int param1, FootballerAgent param2, int param3) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -23,32 +23,32 @@ final class ue extends IntrusiveNode {
           if (param3 > 1324) {
             param3 = 1324;
           }
-          if (param2.a(true) > 10 + param3) {
-            param2.field_G = param2.field_G | 4;
+          if (param2.pixelY(true) > 10 + param3) {
+            param2.directionMask = param2.directionMask | 4;
           }
-          if (-10 + param3 > param2.a(true)) {
-            param2.field_G = param2.field_G | 1;
+          if (-10 + param3 > param2.pixelY(true)) {
+            param2.directionMask = param2.directionMask | 1;
           }
-          if (param2.f(-113) > 10 + param1) {
-            param2.field_G = param2.field_G | 2;
+          if (param2.pixelX(-113) > 10 + param1) {
+            param2.directionMask = param2.directionMask | 2;
           }
-          if (-10 + param1 > param2.f(-98)) {
-            param2.field_G = param2.field_G | 8;
+          if (-10 + param1 > param2.pixelX(-98)) {
+            param2.directionMask = param2.directionMask | 8;
           }
           if (param0 != 4) {
             field_g = (String[]) null;
           }
-          if (param1 > param2.f(param0 ^ -97)) {
-            param2.field_G = param2.field_G & -3;
+          if (param1 > param2.pixelX(param0 ^ -97)) {
+            param2.directionMask = param2.directionMask & -3;
           }
-          if (param1 < param2.f(param0 ^ -118)) {
-            param2.field_G = param2.field_G & -9;
+          if (param1 < param2.pixelX(param0 ^ -118)) {
+            param2.directionMask = param2.directionMask & -9;
           }
-          if (param2.a(true) < param3) {
-            param2.field_G = param2.field_G & -5;
+          if (param2.pixelY(true) < param3) {
+            param2.directionMask = param2.directionMask & -5;
           }
-          if (param3 < param2.a(true)) {
-            param2.field_G = param2.field_G & -2;
+          if (param3 < param2.pixelY(true)) {
+            param2.directionMask = param2.directionMask & -2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

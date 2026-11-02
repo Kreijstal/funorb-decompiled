@@ -581,12 +581,12 @@ final class ResourceArchive {
           field_g = false;
         }
         cq.field_f = cq.field_f + param0;
-        la.field_d = la.field_d + 8.0 * param3;
-        if (848.0 > la.field_d) {
-          la.field_d = 848.0;
+        PlayArea.field_d = PlayArea.field_d + 8.0 * param3;
+        if (848.0 > PlayArea.field_d) {
+          PlayArea.field_d = 848.0;
         }
-        if (2048.0 < la.field_d) {
-          la.field_d = 2048.0;
+        if (2048.0 < PlayArea.field_d) {
+          PlayArea.field_d = 2048.0;
         }
         if (IsSixCommand.field_B) {
           return;
@@ -639,7 +639,7 @@ final class ResourceArchive {
               }
               var4 = var4 + ((pr.field_d << 1) + aj.field_a + nr.field_j);
             } else {
-              var4 = var4 + la.field_c;
+              var4 = var4 + PlayArea.field_c;
             }
             var3_int++;
           }

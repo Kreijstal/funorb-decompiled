@@ -122,7 +122,7 @@ final class re implements WidgetPainter {
             }
             if (var4 < 0) {
               cv.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
-              var1_int = var1_int + la.field_c;
+              var1_int = var1_int + PlayArea.field_c;
             } else {
               sf.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
               var1_int = var1_int + (nr.field_j + aj.field_a + pr.field_d);
@@ -297,7 +297,7 @@ final class re implements WidgetPainter {
         es var9 = null;
         var8 = Kickabout.field_G;
         try {
-          if (la.a(100)) {
+          if (PlayArea.a(100)) {
             return;
           }
           if (uv.field_f) {

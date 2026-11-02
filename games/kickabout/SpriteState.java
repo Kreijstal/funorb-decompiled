@@ -140,7 +140,7 @@ abstract class SpriteState extends DualLinkNode {
               stackIn_18_0.field_lb = stackIn_19_1;
               var8 = GoalStateAgent.field_k;
               var10 = 2;
-              if (la.field_k != null) {
+              if (PlayArea.field_k != null) {
                 if (SumIntegersCommand.field_G == null) {
                   m.field_f = new boolean[ss.field_j];
                   SumIntegersCommand.field_G = new byte[ss.field_j];
@@ -154,14 +154,14 @@ abstract class SpriteState extends DualLinkNode {
                     var11_intLifetime2 = 0;
                     var12 = 0;
                     while (true) {
-                      if (var12 >= la.field_k.length) {
+                      if (var12 >= PlayArea.field_k.length) {
                         if (var11_intLifetime2 != 0) {
                           break scanLoop1;
                         }
                         var10++;
                         continue scanLoop1;
                       }
-                      var25 = la.field_k[var12];
+                      var25 = PlayArea.field_k[var12];
                       var22 = var25;
                       var13 = var22;
                       var14_int = 0;

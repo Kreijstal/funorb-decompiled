@@ -5,7 +5,7 @@ final class vi extends mc {
     private int field_m;
     private long field_u;
     private long[] field_w;
-    static la[] field_t;
+    static PlayArea[] field_t;
     private int field_r;
     private long field_v;
     private long field_p;
@@ -178,7 +178,7 @@ final class vi extends mc {
         int var1;
         var1 = -1;
         if (param0 != -59) {
-          field_t = (la[]) null;
+          field_t = (PlayArea[]) null;
         }
         if (null != um.field_e &&
           um.field_e.field_A) {
@@ -287,7 +287,7 @@ final class vi extends mc {
 
     static {
         field_q = new int[4];
-        field_t = new la[]{new la(0, 0, 896, 1344), new la(370, -45, 525, 1389, 0, 45)};
+        field_t = new PlayArea[]{new PlayArea(0, 0, 896, 1344), new PlayArea(370, -45, 525, 1389, 0, 45)};
         field_n = false;
         field_o = "<%0>: Unread Chat";
     }

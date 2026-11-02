@@ -4,38 +4,38 @@
 final class TeamSelectionAgent extends MatchAgent {
     static String field_j;
     static String field_m;
-    private int field_o;
+    private int readyMask;
     private ParticipantStatus[] field_h;
     static String field_l;
     private int field_i;
     static String field_n;
     static int field_f;
-    int[] field_k;
+    int[] selection;
     static Sprite[] field_p;
     static String field_g;
 
-    final boolean a(int param0, int param1) {
+    final boolean isReadyOrInactive(int param0, int param1) {
         boolean stackIn_7_0 = false;
         if (param0 != 8658) {
-          this.field_o = -4;
+          this.readyMask = -4;
         }
-        stackIn_7_0 = !(this.field_h[param1].d(param0 ^ 11365)) || ((this.field_o & 1 << param1) != 0);
+        stackIn_7_0 = !(this.field_h[param1].isActive(param0 ^ 11365)) || ((this.readyMask & 1 << param1) != 0);
         return stackIn_7_0;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean canJoinTeamZero(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
         boolean stackIn_11_0 = false;
-        var3 = this.e(-102);
+        var3 = this.countTeamZero(-102);
         if (param0 < 39) {
-          this.a(-33, -45, -53);
+          this.applyCommand(-33, -45, -53);
         }
         boolean decompiledFrameRemainder0 = true;
-        var4 = this.d(0);
+        var4 = this.countTeamOne(0);
         var5 = this.field_i - (var3 + var4);
-        if (this.field_k[param1] != 1 && (this.field_k[param1] != -1 ||
+        if (this.selection[param1] != 1 && (this.selection[param1] != -1 ||
           var4 <= 0 &&
           1 >= var5 ||
           var3 >= 4)) {
@@ -57,12 +57,12 @@ final class TeamSelectionAgent extends MatchAgent {
           var6 = (TeamSelectionAgent) (param1);
           var3 = var6;
           for (var4 = 0; this.field_i > var4; var4++) {
-            this.field_k[var4] = var6.field_k[var4];
+            this.selection[var4] = var6.selection[var4];
           }
           if (param0 > -52) {
             this.field_h = (ParticipantStatus[]) null;
           }
-          this.field_o = var3.field_o;
+          this.readyMask = var3.readyMask;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "oe.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -78,21 +78,21 @@ final class TeamSelectionAgent extends MatchAgent {
         int[] var8;
         int var4Lifetime1;
         var5 = Kickabout.field_G;
-        this.field_k[param1] = -1;
-        this.field_o = this.field_o | 1 << param1;
+        this.selection[param1] = -1;
+        this.readyMask = this.readyMask | 1 << param1;
         var8 = new int[2];
         var7 = var8;
         var3 = var7;
         if (param0) {
-          this.a((byte) 59, -19);
+          this.canJoinTeamZero((byte) 59, -19);
         }
         for (var4 = 0; var4 < this.field_i; var4++) {
-          if (this.field_h[var4].d(3511)) {
-            if (this.field_k[var4] == -1) {
+          if (this.field_h[var4].isActive(3511)) {
+            if (this.selection[var4] == -1) {
               var3[0] = var3[0] + 1;
               var3[1] = var3[1] + 1;
             } else {
-              dupTemp$0 = this.field_k[var4];
+              dupTemp$0 = this.selection[var4];
               var3[dupTemp$0] = var3[dupTemp$0] + 1;
             }
           }
@@ -102,16 +102,16 @@ final class TeamSelectionAgent extends MatchAgent {
           var6 = 0;
           var4Lifetime1 = var6;
           while (var6 < this.field_i) {
-            if (this.field_h[var6].d(3511)) {
-              this.field_o = this.field_o & ~(1 << var6);
-              this.field_k[var6] = -1;
+            if (this.field_h[var6].isActive(3511)) {
+              this.readyMask = this.readyMask & ~(1 << var6);
+              this.selection[var6] = -1;
             }
             var6++;
           }
         }
     }
 
-    private final int e(int param0) {
+    private final int countTeamZero(int param0) {
         int var4 = 0;
         int var2;
         int[] var3;
@@ -119,7 +119,7 @@ final class TeamSelectionAgent extends MatchAgent {
         int var6;
         var6 = Kickabout.field_G;
         var2 = 0;
-        var3 = this.field_k;
+        var3 = this.selection;
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (var5 == 0) {
@@ -138,7 +138,7 @@ final class TeamSelectionAgent extends MatchAgent {
         }
     }
 
-    final boolean b(byte param0, int param1) {
+    final boolean canJoinTeamOne(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -147,10 +147,10 @@ final class TeamSelectionAgent extends MatchAgent {
           field_j = (String) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        var3 = this.e(-104);
-        var4 = this.d(0);
+        var3 = this.countTeamZero(-104);
+        var4 = this.countTeamOne(0);
         var5 = -var3 + (this.field_i - var4);
-        if (0 != this.field_k[param1] && (this.field_k[param1] != -1 ||
+        if (0 != this.selection[param1] && (this.selection[param1] != -1 ||
           var3 <= 0 &&
           var5 <= 1 ||
           var4 >= 4)) {
@@ -173,38 +173,38 @@ final class TeamSelectionAgent extends MatchAgent {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void applyCommand(int param0, int param1, int param2) {
         int var5;
         var5 = Kickabout.field_G;
         if (0 != param2) {
           if (param2 != 1) {
             if (2 == param2) {
-              this.field_o = this.field_o ^ 1 << param0;
+              this.readyMask = this.readyMask ^ 1 << param0;
             }
           } else {
-            if (0 != this.field_k[param0]) {
-              if (this.b((byte) 125, param0)) {
-                this.field_k[param0] = 1;
-                this.field_o = this.field_o & ~(1 << param0);
+            if (0 != this.selection[param0]) {
+              if (this.canJoinTeamOne((byte) 125, param0)) {
+                this.selection[param0] = 1;
+                this.readyMask = this.readyMask & ~(1 << param0);
               }
             } else {
-              this.field_k[param0] = -1;
-              this.field_o = this.field_o & ~(1 << param0);
+              this.selection[param0] = -1;
+              this.readyMask = this.readyMask & ~(1 << param0);
             }
           }
         } else {
-          if (this.field_k[param0] == 1) {
-            this.field_k[param0] = -1;
-            this.field_o = this.field_o & ~(1 << param0);
+          if (this.selection[param0] == 1) {
+            this.selection[param0] = -1;
+            this.readyMask = this.readyMask & ~(1 << param0);
           } else {
-            if (this.a((byte) 61, param0)) {
-              this.field_k[param0] = 0;
-              this.field_o = this.field_o & ~(1 << param0);
+            if (this.canJoinTeamZero((byte) 61, param0)) {
+              this.selection[param0] = 0;
+              this.readyMask = this.readyMask & ~(1 << param0);
             }
           }
         }
         if (param1 != 11678) {
-          this.a(15, -11, -81);
+          this.applyCommand(15, -11, -81);
         }
     }
 
@@ -225,10 +225,10 @@ final class TeamSelectionAgent extends MatchAgent {
           var3_int = 0;
           int var4 = 14 / ((param0 + 25) / 44);
           while (this.field_i > var3_int) {
-            this.field_k[var3_int] = -1 + param1.l(2, 59);
+            this.selection[var3_int] = -1 + param1.l(2, 59);
             var3_int++;
           }
-          this.field_o = param1.l(8, 59);
+          this.readyMask = param1.l(8, 59);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -250,14 +250,14 @@ final class TeamSelectionAgent extends MatchAgent {
         var3 = Kickabout.field_G;
         var4 = new StringBuilder("AgentTeamSelection\t ready=");
         var1 = var4;
-        IntrusiveNode.a(this.field_o, -28745, this.field_i, var1);
+        IntrusiveNode.a(this.readyMask, -28745, this.field_i, var1);
         StringBuilder discarded$74 = var1.append("\tselection=[");
-        for (var2 = 0; var2 < this.field_k.length; var2++) {
-          if (this.field_k[var2] >= 0) {
+        for (var2 = 0; var2 < this.selection.length; var2++) {
+          if (this.selection[var2] >= 0) {
             discarded$76 = var1.append(" ");
           }
           stackIn_6_0 = var1;
-          if (this.a(8658, var2)) {
+          if (this.isReadyOrInactive(8658, var2)) {
             var4Lifetime1 = var1;
             stackIn_7_1 = " ";
           } else {
@@ -265,8 +265,8 @@ final class TeamSelectionAgent extends MatchAgent {
           }
           var4Lifetime1Lifetime1 = var1;
           discarded$77 = ((StringBuilder) (Object) stackIn_6_0).append(stackIn_7_1);
-          discarded$78 = var4Lifetime1Lifetime1.append(this.field_k[var2]);
-          if (var2 < -1 + this.field_k.length) {
+          discarded$78 = var4Lifetime1Lifetime1.append(this.selection[var2]);
+          if (var2 < -1 + this.selection.length) {
             discarded$79 = var1.append(",");
           }
         }
@@ -274,7 +274,7 @@ final class TeamSelectionAgent extends MatchAgent {
         return var1.toString();
     }
 
-    private final int d(int param0) {
+    private final int countTeamOne(int param0) {
         int var4 = 0;
         int var2;
         int[] var3;
@@ -282,7 +282,7 @@ final class TeamSelectionAgent extends MatchAgent {
         int var6;
         var6 = Kickabout.field_G;
         var2 = param0;
-        var3 = this.field_k;
+        var3 = this.selection;
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 == 1) {
@@ -302,9 +302,9 @@ final class TeamSelectionAgent extends MatchAgent {
         try {
           this.field_h = param0;
           this.field_i = this.field_h.length;
-          this.field_k = new int[this.field_i];
+          this.selection = new int[this.field_i];
           for (var2_int = 0; this.field_i > var2_int; var2_int++) {
-            this.field_k[var2_int] = -1;
+            this.selection[var2_int] = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

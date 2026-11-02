@@ -179,8 +179,8 @@ final class qa extends dj {
             var2_ref_gm = (gm) (sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
             var3 = null;
             var4 = 0;
-            if (var2_ref_gm.field_C > 0) {
-              var5 = Math.min(-1 + kj.field_b.length, 210 * var2_ref_gm.field_C / var2_ref_gm.a((byte) -99));
+            if (var2_ref_gm.dashCooldown > 0) {
+              var5 = Math.min(-1 + kj.field_b.length, 210 * var2_ref_gm.dashCooldown / var2_ref_gm.dashCooldown((byte) -99));
               var4 = 72;
               var3 = kj.field_b[var5];
             } else {

@@ -48,10 +48,10 @@ final class ob extends BallAgent {
         var8 = Kickabout.field_G;
         try {
           if (param0 != null) {
-            stackIn_6_0 = (!param0.b(false)) ? 0 : 1;
+            stackIn_6_0 = (!param0.isMovingDiagonally(false)) ? 0 : 1;
             var3_int = stackIn_6_0;
             this.field_M = 0;
-            stackIn_8_1 = param0.field_j;
+            stackIn_8_1 = param0.directionX;
             if (var3_int != 0) {
               stackIn_9_2 = 926720;
             } else {
@@ -59,7 +59,7 @@ final class ob extends BallAgent {
             }
             this.field_N = stackIn_8_1 * stackIn_9_2 + param0.field_kb;
             stackIn_11_1 = param0.field_bb;
-            stackIn_11_2 = param0.field_n;
+            stackIn_11_2 = param0.directionY;
             if (var3_int != 0) {
               stackIn_12_0 = this;
               stackIn_12_3 = 602368;
@@ -108,10 +108,10 @@ final class ob extends BallAgent {
               stackIn_32_0 = 0;
             }
             var5Lifetime1 = stackIn_32_0;
-            if (0 == this.field_n) {
+            if (0 == this.verticalVelocity) {
               var6 = 16;
             } else {
-              var6 = (this.field_n >> 16) * 32;
+              var6 = (this.verticalVelocity >> 16) * 32;
             }
             if (ih.field_c == 0) {
               var6 -= 40;
@@ -125,7 +125,7 @@ final class ob extends BallAgent {
             he.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
           }
           if (this.highFriction > 0) {
-            var5Lifetime2 = this.e(92) >> 16;
+            var5Lifetime2 = this.horizontalSpeedSquared(92) >> 16;
             var6Lifetime1 = var5Lifetime2 * 160 / 324;
             if (var6Lifetime1 > 255) {
               var6Lifetime1 = 255;
@@ -250,7 +250,7 @@ final class ob extends BallAgent {
         }
     }
 
-    final void a(byte param0, int param1, la[] param2) {
+    final void stepPhysics(byte param0, int param1, PlayArea[] param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -265,30 +265,30 @@ final class ob extends BallAgent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = this.field_t;
-          var5 = this.field_p;
-          var6 = this.field_v;
-          super.a((byte) -81, param1, param2);
+          var4_int = this.positionX;
+          var5 = this.positionY;
+          var6 = this.height;
+          super.stepPhysics((byte) -81, param1, param2);
           if (!this.field_I) {
-            this.field_M = this.field_v;
-            this.field_N = this.field_t;
-            this.field_E = this.field_p;
+            this.field_M = this.height;
+            this.field_N = this.positionX;
+            this.field_E = this.positionY;
             return;
           }
-          this.field_N = this.field_N + (this.field_t - var4_int);
+          this.field_N = this.field_N + (this.positionX - var4_int);
           var7 = 111 / ((param0 + 3) / 59);
-          this.field_M = this.field_M + (this.field_v - var6);
-          this.field_E = this.field_E + (this.field_p - var5);
+          this.field_M = this.field_M + (this.height - var6);
+          this.field_E = this.field_E + (this.positionY - var5);
           if (this.field_S) {
-            this.field_N = this.field_t + 7 * this.field_N >> 3;
-            this.field_M = this.field_v + 7 * this.field_M >> 3;
-            this.field_E = this.field_p + this.field_E * 7 >> 3;
-            var8 = this.field_N - this.field_t >> 16;
-            var9 = this.field_E - this.field_p >> 16;
-            var10 = -this.field_v + this.field_M >> 16;
+            this.field_N = this.positionX + 7 * this.field_N >> 3;
+            this.field_M = this.height + 7 * this.field_M >> 3;
+            this.field_E = this.positionY + this.field_E * 7 >> 3;
+            var8 = this.field_N - this.positionX >> 16;
+            var9 = this.field_E - this.positionY >> 16;
+            var10 = -this.height + this.field_M >> 16;
             var11 = var10 * var10 + (var8 * var8 + var9 * var9);
             if (var11 > 2 &&
-              -1 == this.field_m) {
+              -1 == this.possessorTeam) {
               return;
             }
             this.field_S = false;
@@ -417,12 +417,12 @@ final class ob extends BallAgent {
             this.field_D = (int[]) null;
           }
           if (!this.field_S) {
-            if (this.field_m != -1) {
+            if (this.possessorTeam != -1) {
               return;
             }
-            var6 = -this.field_t + this.field_N >> 16;
-            var7 = -this.field_p + this.field_E >> 16;
-            var8 = this.field_M - this.field_v >> 16;
+            var6 = -this.positionX + this.field_N >> 16;
+            var7 = -this.positionY + this.field_E >> 16;
+            var8 = this.field_M - this.height >> 16;
             var9 = var8 * var8 + var6 * var6 + var7 * var7;
             if (var9 > 144) {
               this.field_S = true;
@@ -675,9 +675,9 @@ final class ob extends BallAgent {
           this.field_Q.a(8, this.field_G);
           this.field_D = new int[12];
           this.a((byte) 127, 1200, 300);
-          this.field_N = this.field_t;
-          this.field_M = this.field_v;
-          this.field_E = this.field_p;
+          this.field_N = this.positionX;
+          this.field_M = this.height;
+          this.field_E = this.positionY;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

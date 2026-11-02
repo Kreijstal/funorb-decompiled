@@ -47,14 +47,14 @@ final class sb {
           nr.field_j = param1;
           jl.field_d = param2;
           ConsoleExpression.field_g = param0;
-          la.field_c = param3;
+          PlayArea.field_c = param3;
           return;
         }
         field_h = (int[]) null;
         nr.field_j = param1;
         jl.field_d = param2;
         ConsoleExpression.field_g = param0;
-        la.field_c = param3;
+        PlayArea.field_c = param3;
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {

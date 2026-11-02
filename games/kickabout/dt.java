@@ -103,7 +103,7 @@ final class dt {
         int var1 = 0;
         int var2 = 0;
         if (ks.field_e == 1) {
-          var1 = et.field_d.field_P[0][1].a(true);
+          var1 = et.field_d.field_P[0][1].pixelY(true);
           var2 = 30 + (var1 - 1634 << 8) / -490;
           return Math.max(0, Math.min(256, 768 - var2 * 3));
         }

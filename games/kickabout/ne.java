@@ -113,51 +113,51 @@ final class ne extends dj {
         var9 = Kickabout.field_G;
         super.a((byte) -106, param1);
         if (this.field_C == 0) {
-          bk.field_a[1].field_G = 0;
+          bk.field_a[1].directionMask = 0;
           var10 = bk.field_a[0];
           var5_ref_gm = var10;
           var5_ref_gmLifetime1 = var10;
           var3_ref_gm = var10;
-          var10.field_G = 0;
+          var10.directionMask = 0;
           if (field_G[rb.field_Kb]) {
             dupTemp$0 = bk.field_a[0];
-            dupTemp$0.field_G = dupTemp$0.field_G | 4;
+            dupTemp$0.directionMask = dupTemp$0.directionMask | 4;
           }
           if (field_G[uv.field_e]) {
             dupTemp$1 = bk.field_a[0];
-            dupTemp$1.field_G = dupTemp$1.field_G | 2;
+            dupTemp$1.directionMask = dupTemp$1.directionMask | 2;
           }
           if (field_G[oc.field_e]) {
             dupTemp$2 = bk.field_a[0];
-            dupTemp$2.field_G = dupTemp$2.field_G | 1;
+            dupTemp$2.directionMask = dupTemp$2.directionMask | 1;
           }
           if (field_G[IsSixCommand.field_A]) {
             dupTemp$3 = bk.field_a[0];
-            dupTemp$3.field_G = dupTemp$3.field_G | 8;
+            dupTemp$3.directionMask = dupTemp$3.directionMask | 8;
           }
           if (field_G[98]) {
             dupTemp$4 = bk.field_a[1];
-            dupTemp$4.field_G = dupTemp$4.field_G | 4;
+            dupTemp$4.directionMask = dupTemp$4.directionMask | 4;
           }
           if (field_G[96]) {
             dupTemp$5 = bk.field_a[1];
-            dupTemp$5.field_G = dupTemp$5.field_G | 2;
+            dupTemp$5.directionMask = dupTemp$5.directionMask | 2;
           }
           if (field_G[99]) {
             dupTemp$6 = bk.field_a[1];
-            dupTemp$6.field_G = dupTemp$6.field_G | 1;
+            dupTemp$6.directionMask = dupTemp$6.directionMask | 1;
           }
           if (field_G[97]) {
             dupTemp$7 = bk.field_a[1];
-            dupTemp$7.field_G = dupTemp$7.field_G | 8;
+            dupTemp$7.directionMask = dupTemp$7.directionMask | 8;
           }
           for (var4 = 0; var4 < 2; var4++) {
             var5_ref_gmLifetime2 = bk.field_a[var4];
-            var5_ref_gmLifetime2.a(2, (la[]) null, false, false);
+            var5_ref_gmLifetime2.stepMovement(2, (PlayArea[]) null, false, false);
             var5_ref_gmLifetime2.g((byte) 126);
             if (var5_ref_gmLifetime2.action != 0 &&
-              0 >= var5_ref_gmLifetime2.field_L) {
-              var5_ref_gmLifetime2.a((byte) -31, 0);
+              0 >= var5_ref_gmLifetime2.actionTime) {
+              var5_ref_gmLifetime2.setAction((byte) -31, 0);
             }
           }
         }
@@ -400,7 +400,7 @@ final class ne extends dj {
         var6.field_g = 100;
         for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
           bk.field_a[var3_intLifetime1] = new gm(fp.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
-          bk.field_a[var3_intLifetime1].a(true, var6, 3);
+          bk.field_a[var3_intLifetime1].applyPlayerStats(true, var6, 3);
         }
         sn.field_k = new Sprite(200, 300);
         for (var3_intLifetime2 = 0; 9 > var3_intLifetime2; var3_intLifetime2++) {
@@ -523,7 +523,7 @@ final class ne extends dj {
           SoftwareRasterizer.b();
           bk.field_a[var4].a(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
           ta.e(param0 ^ 24);
-          var6 = bk.field_a[var4].field_G;
+          var6 = bk.field_a[var4].directionMask;
           array$0 = new boolean[4];
           stackIn_12_0 = array$0;
           stackIn_12_1 = array$0;
@@ -565,7 +565,7 @@ final class ne extends dj {
           }
           ((BinaryBitmapFont) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
           if (bk.field_a[var4].action == 4) {
-            stackIn_38_0 = (bk.field_a[var4].field_L > vf.field_I[4] - 13) ? 1 : 0;
+            stackIn_38_0 = (bk.field_a[var4].actionTime > vf.field_I[4] - 13) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
           }
@@ -601,14 +601,14 @@ final class ne extends dj {
             }
             if (param0 == 83) {
               if (bk.field_a[0].action == 0) {
-                bk.field_a[0].a((byte) -31, 4);
+                bk.field_a[0].setAction((byte) -31, 4);
               }
               return true;
             }
             decompiledFrameRemainder0 = (param0 == 82);
             if (decompiledFrameRemainder0) {
               if (0 == bk.field_a[1].action) {
-                bk.field_a[1].a((byte) -31, 4);
+                bk.field_a[1].setAction((byte) -31, 4);
               }
               return true;
             }

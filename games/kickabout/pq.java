@@ -17,7 +17,7 @@ final class pq extends i {
     final static void a(int param0, String param1, boolean param2) {
         int fieldTemp$0 = 0;
         int var3_int = 0;
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return;
         }
         if (uv.field_f) {
@@ -116,7 +116,7 @@ final class pq extends i {
               }
               if (this.field_H.field_Fb != -1 &&
                 gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
               IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
@@ -131,7 +131,7 @@ final class pq extends i {
               if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
                 IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
             }
             return;
@@ -142,7 +142,7 @@ final class pq extends i {
           }
           if (this.field_H.field_Fb != -1 &&
             gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-            IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
           IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
@@ -160,7 +160,7 @@ final class pq extends i {
             if (!cq.e(15137)) {
               if (this.field_H.field_Fb != -1 &&
                 gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
               IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
@@ -175,7 +175,7 @@ final class pq extends i {
                 if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
                   IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
                 } else {
-                  IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                  IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 }
               }
             }
@@ -188,7 +188,7 @@ final class pq extends i {
             IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           } else {
             if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-              IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+              IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             } else {
               IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             }
@@ -203,7 +203,7 @@ final class pq extends i {
               if (gp.a(GameLoopApplet.field_E.field_i[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
                 IsSixCommand.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                IsSixCommand.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
             }
           }

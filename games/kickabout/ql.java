@@ -115,7 +115,7 @@ final class ql {
             sk.a(1, var3_int);
             od.a(param2, var3_int, vt.field_c.participantStatus, 14839);
             if (vu.field_Cb == -2 ||
-              !vt.field_c.participantStatus[vu.field_Cb].d(3511)) {
+              !vt.field_c.participantStatus[vu.field_Cb].isActive(3511)) {
               ig.a(param1, 16777215, var3_int);
             }
           }

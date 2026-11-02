@@ -183,13 +183,13 @@ final class gm extends FootballerAgent {
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        this.field_M = param0;
-        this.field_w = param3;
-        this.field_v = param2;
+        this.positionX = param0;
+        this.positionY = param3;
+        this.height = param2;
         if (!param1) {
-          this.field_bb = this.field_w;
-          this.field_X = this.field_v;
-          this.field_kb = this.field_M;
+          this.field_bb = this.positionY;
+          this.field_X = this.height;
+          this.field_kb = this.positionX;
           return;
         }
     }
@@ -208,7 +208,7 @@ final class gm extends FootballerAgent {
         }
         if (this.megamode &&
           this.action == 4) {
-          var7 = this.field_L * (2048 / vf.field_I[4]) + var7 & 2047;
+          var7 = this.actionTime * (2048 / vf.field_I[4]) + var7 & 2047;
         }
         var8.a(0, var7, 0, param1, 0, 0, 0, param0);
         if (param4 >= -63) {
@@ -241,9 +241,9 @@ final class gm extends FootballerAgent {
         var2 = var2 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 2, MidiPcmStream.field_l);
         var3 = NotCommand.h(-2521);
         var4 = IsaacRandom.a(true);
-        if (512 > Math.abs((this.field_M >> 16) - var3) &&
-          Math.abs(-var4 + (this.field_w >> 16)) < 512) {
-          var5 = ad.a(-var3 + (this.field_M >> 16), true, (this.field_w >> 16) - var4);
+        if (512 > Math.abs((this.positionX >> 16) - var3) &&
+          Math.abs(-var4 + (this.positionY >> 16)) < 512) {
+          var5 = ad.a(-var3 + (this.positionX >> 16), true, (this.positionY >> 16) - var4);
           var6 = -var5 + 512 >> 3;
           if (var6 < 16) {
             var6 = 0;
@@ -251,7 +251,7 @@ final class gm extends FootballerAgent {
           if (var6 > 36) {
             var6 = 36;
           }
-          var7 = 128 + ((this.field_M >> 16) - var3);
+          var7 = 128 + ((this.positionX >> 16) - var3);
           if (var7 < 0) {
             var7 = 0;
           }
@@ -315,15 +315,15 @@ final class gm extends FootballerAgent {
         var6 = hw.field_i * 70 >> 8;
         var7 = hw.field_i * 10 >> 8;
         if (th.field_d &&
-          this.field_N.field_q != 4) {
+          this.stats.field_q != 4) {
           var8_ref_String__ = new String[]{"action:", "action_time:", "dash_delay"};
-          var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.field_L), Integer.toString(this.field_C)};
+          var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.actionTime), Integer.toString(this.dashCooldown)};
           var10 = new StringBuilder("(");
-          eh.a(this.field_M, 100, var10);
+          eh.a(this.positionX, 100, var10);
           discarded$6 = var10.append(", ");
-          eh.a(this.field_w, 100, var10);
+          eh.a(this.positionY, 100, var10);
           discarded$7 = var10.append(", ");
-          eh.a(this.field_v, 100, var10);
+          eh.a(this.height, 100, var10);
           discarded$8 = var10.append(')');
           var11_ref_StringBuilder = new StringBuilder("(");
           eh.a(this.field_kb, 100, var11_ref_StringBuilder);
@@ -332,11 +332,11 @@ final class gm extends FootballerAgent {
           discarded$10 = var11_ref_StringBuilder.append(", ");
           eh.a(this.field_X, 100, var11_ref_StringBuilder);
           discarded$11 = var11_ref_StringBuilder.append(')');
-          var12 = this.field_N.b(0);
-          var13 = this.field_N.a(15);
+          var12 = this.stats.b(0);
+          var13 = this.stats.a(15);
           var14 = new Sprite(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
           PacketBuffer.a(-64, var14);
-          this.field_N.a(var13 >> 1, 23, var12 >> 1);
+          this.stats.a(var13 >> 1, 23, var12 >> 1);
           var15 = q.field_d;
           var16 = var13 + 11;
           for (var17 = 0; var8_ref_String__.length > var17; var17++) {
@@ -372,7 +372,7 @@ final class gm extends FootballerAgent {
         if (this.archetype == 4 &&
           15 == this.field_ob) {
           stackIn_18_0 = ia.field_c;
-          stackIn_19_1 = (this.a(true) >= 672) ? false : true;
+          stackIn_19_1 = (this.pixelY(true) >= 672) ? false : true;
           if (stackIn_18_0 ^ stackIn_19_1) {
             var8 = 220;
           }
@@ -421,9 +421,9 @@ final class gm extends FootballerAgent {
     gm(vn param0, int param1, boolean param2, FootballerAgent param3) {
         this(param0, param1, param2);
         try {
-          this.a(param3.member, param3.field_N, 3);
+          this.applyPlayerStats(param3.member, param3.stats, 3);
           this.a(param3, false);
-          this.a(this.field_M, false, this.field_v, this.field_w);
+          this.a(this.positionX, false, this.height, this.positionY);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -470,7 +470,7 @@ final class gm extends FootballerAgent {
         }
     }
 
-    final void a(int param0, la[] param1, boolean param2, boolean param3) {
+    final void stepMovement(int param0, PlayArea[] param1, boolean param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -487,26 +487,26 @@ final class gm extends FootballerAgent {
           if (param0 != 2) {
             this.field_W = -115;
           }
-          var5_int = this.field_M;
-          var6 = this.field_w;
-          var7 = this.field_v;
-          super.a(param0 + 0, param1, param2, param3);
+          var5_int = this.positionX;
+          var6 = this.positionY;
+          var7 = this.height;
+          super.stepMovement(param0 + 0, param1, param2, param3);
           if (!this.field_E) {
-            this.field_bb = this.field_w;
-            this.field_kb = this.field_M;
-            this.field_X = this.field_v;
+            this.field_bb = this.positionY;
+            this.field_kb = this.positionX;
+            this.field_X = this.height;
             return;
           }
-          this.field_bb = this.field_bb + (-var6 + this.field_w);
-          this.field_X = this.field_X + (this.field_v - var7);
-          this.field_kb = this.field_kb + (-var5_int + this.field_M);
+          this.field_bb = this.field_bb + (-var6 + this.positionY);
+          this.field_X = this.field_X + (this.height - var7);
+          this.field_kb = this.field_kb + (-var5_int + this.positionX);
           if (this.field_Z) {
-            this.field_bb = this.field_w + 3 * this.field_bb >> 2;
-            this.field_X = this.field_X * 3 + this.field_v >> 2;
-            this.field_kb = this.field_M + this.field_kb * 3 >> 2;
-            var8 = -this.field_M + this.field_kb >> 16;
-            var9 = this.field_bb - this.field_w >> 16;
-            var10 = -this.field_v + this.field_X >> 16;
+            this.field_bb = this.positionY + 3 * this.field_bb >> 2;
+            this.field_X = this.field_X * 3 + this.height >> 2;
+            this.field_kb = this.positionX + this.field_kb * 3 >> 2;
+            var8 = -this.positionX + this.field_kb >> 16;
+            var9 = this.field_bb - this.positionY >> 16;
+            var10 = -this.height + this.field_X >> 16;
             var11 = var9 * var9 + var8 * var8 + var10 * var10;
             if (var11 > 2) {
               return;
@@ -567,17 +567,17 @@ final class gm extends FootballerAgent {
         var5 = 0;
         if (this.action == 5 ||
           this.action == 6) {
-          stackIn_18_0 = (this.a(true) >= 672) ? 0 : 1;
+          stackIn_18_0 = (this.pixelY(true) >= 672) ? 0 : 1;
           var6 = stackIn_18_0;
           stackIn_20_0 = var6;
-          if ((this.field_G & 2) == 0) {
+          if ((this.directionMask & 2) == 0) {
             stackIn_21_1 = 0;
           } else {
             stackIn_21_1 = 1;
           }
           var4 = stackIn_20_0 ^ stackIn_21_1;
           stackIn_23_0 = var6;
-          if (this.field_j != -1) {
+          if (this.directionX != -1) {
             stackIn_24_1 = 0;
           } else {
             stackIn_24_1 = 1;
@@ -663,7 +663,7 @@ final class gm extends FootballerAgent {
         if (10 == this.action) {
           var7Lifetime1 = 6;
           var8 = 2.0;
-          if (this.field_L > vf.field_I[10]) {
+          if (this.actionTime > vf.field_I[10]) {
             var7Lifetime1 = 7;
           }
         }
@@ -683,7 +683,7 @@ final class gm extends FootballerAgent {
           this.field_Y = false;
         } else {
           if (!this.field_Y &&
-            49 > this.field_L) {
+            49 > this.actionTime) {
             var10Lifetime1 = -1;
             var11 = -1;
             if (ih.field_c == 0) {
@@ -724,14 +724,14 @@ final class gm extends FootballerAgent {
         }
         if (this.action == 1 &&
           this.e(292603688)) {
-          var8 = (!this.field_N.c(this.member, (byte) -62)) ? 0.25 : 0.5;
+          var8 = (!this.stats.c(this.member, (byte) -62)) ? 0.25 : 0.5;
         }
         if (!this.field_nb) {
           this.b((byte) -128, var7Lifetime1);
         }
         if (this.megamode) {
           if (7 == this.action &&
-            this.field_L == 1) {
+            this.actionTime == 1) {
             dn.b(-5, 10);
           }
           var8 = var8 / 2.0;
@@ -747,7 +747,7 @@ final class gm extends FootballerAgent {
           }
           if (!this.field_nb) {
             if (this.field_ob == 4 &&
-              this.field_L < 20) {
+              this.actionTime < 20) {
               this.field_mb.a(-1 + this.field_mb.a(true), 103);
             }
             if (0 == this.field_ob &&
@@ -755,7 +755,7 @@ final class gm extends FootballerAgent {
               this.field_mb.a(9, 98);
             }
             if (this.field_ob == 6 &&
-              30 < this.field_L) {
+              30 < this.actionTime) {
               this.field_mb.a(0, 109);
             }
             if (this.field_ob == 15 &&
@@ -765,13 +765,13 @@ final class gm extends FootballerAgent {
           }
         }
         if (this.action == 4 &&
-          this.field_N.c(this.member, -94) &&
-          this.field_L % 2 == 0) {
+          this.stats.c(this.member, -94) &&
+          this.actionTime % 2 == 0) {
           fs.a(100, this, 109);
         }
         if (3 == this.action &&
-          this.field_N.a((byte) 44, this.member) &&
-          this.field_L % 2 == 0) {
+          this.stats.a((byte) 44, this.member) &&
+          this.actionTime % 2 == 0) {
           fs.a(60, this, 104);
         }
     }
@@ -795,27 +795,27 @@ final class gm extends FootballerAgent {
           this.action == 10 ||
           this.action == 12) &&
           (this.field_s ||
-          !this.field_N.a((byte) 44, this.member))) {
+          !this.stats.a((byte) 44, this.member))) {
           return (uv.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
         var2 = -68 / ((param0 + 17) / 51);
-        if (this.field_j < 0) {
-          if (this.field_n == -1) {
+        if (this.directionX < 0) {
+          if (this.directionY == -1) {
             return 768;
           }
-          if (this.field_n == 1) {
+          if (this.directionY == 1) {
             return 256;
           }
           return 512;
         }
-        if (this.field_j <= 0) {
-          stackIn_20_0 = (this.field_n < 0) ? 1024 : 0;
+        if (this.directionX <= 0) {
+          stackIn_20_0 = (this.directionY < 0) ? 1024 : 0;
           return stackIn_20_0;
         }
-        if (this.field_n == -1) {
+        if (this.directionY == -1) {
           return 1280;
         }
-        if (this.field_n == 1) {
+        if (this.directionY == 1) {
           return 1792;
         }
         return 1536;
@@ -836,8 +836,8 @@ final class gm extends FootballerAgent {
     final void g(byte param0) {
         this.a(false, false, 0);
         if (param0 < 124) {
-          la[] var3 = (la[]) null;
-          this.a(-73, (la[]) null, false, true);
+          PlayArea[] var3 = (PlayArea[]) null;
+          this.stepMovement(-73, (PlayArea[]) null, false, true);
         }
     }
 
@@ -898,9 +898,9 @@ final class gm extends FootballerAgent {
           }
           this.a(param0, false);
           if (!this.field_Z) {
-            var6 = this.field_kb - this.field_M >> 16;
-            var7 = this.field_bb - this.field_w >> 16;
-            var8 = -this.field_v + this.field_X >> 16;
+            var6 = this.field_kb - this.positionX >> 16;
+            var7 = this.field_bb - this.positionY >> 16;
+            var8 = -this.height + this.field_X >> 16;
             var9 = var8 * var8 + (var6 * var6 + var7 * var7);
             if (var9 > ds.field_c) {
               this.field_Z = true;
@@ -968,7 +968,7 @@ final class gm extends FootballerAgent {
           this.field_mb = new dd(1);
           this.field_ob = -1;
           this.b((byte) -128, 3);
-          this.a(this.field_M, false, this.field_v, this.field_w);
+          this.a(this.positionX, false, this.height, this.positionY);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

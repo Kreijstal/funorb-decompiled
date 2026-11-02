@@ -33,12 +33,12 @@ final class ConsoleExpression extends IntrusiveNode {
           } else {
             stackIn_3_1 = -1;
           }
-          stackIn_2_0.field_n = stackIn_3_1;
-          param3.field_j = 0;
-          param3.field_z = -hf.a(param0, param1, 27);
+          stackIn_2_0.directionY = stackIn_3_1;
+          param3.directionX = 0;
+          param3.field_z = -hf.findClosestOutfielder(param0, param1, 27);
           var7 = param1.field_P[param0][-param3.field_z];
-          var5 = var7.field_w;
-          var6 = var7.field_M;
+          var5 = var7.positionY;
+          var6 = var7.positionX;
           if (param2 > -12) {
             return;
           }
@@ -46,9 +46,9 @@ final class ConsoleExpression extends IntrusiveNode {
             var5 = 44040192;
             var6 = 29360128;
           }
-          param3.field_h = uv.a(true, var5 - param3.field_w, var6 - param3.field_M);
-          param3.a((byte) -31, 2);
-          param3.field_L = param3.field_L + 25;
+          param3.field_h = uv.a(true, var5 - param3.positionY, var6 - param3.positionX);
+          param3.setAction((byte) -31, 2);
+          param3.actionTime = param3.actionTime + 25;
           if (15 <= param3.field_o) {
             return;
           }

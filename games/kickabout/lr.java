@@ -47,7 +47,7 @@ final class lr extends hs {
         var7 = Kickabout.field_G;
         this.c(param0 ^ 106);
         this.a(false, tl.field_b);
-        if (!this.field_a.field_C.field_i[this.field_h]) {
+        if (!this.field_a.field_C.formationConfirmed[this.field_h]) {
           if (this.field_g != -2 &&
             this.field_g == this.field_a.b((byte) -89, this.field_h)) {
             var3_int = 0;
@@ -80,7 +80,7 @@ final class lr extends hs {
         IsSixCommand.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         this.d(param0 - 95);
         this.b(param0 ^ -2352, this.field_a.phaseTime);
-        var2 = this.field_a.field_C.field_k[this.field_h];
+        var2 = this.field_a.field_C.formationChoice[this.field_h];
         SoftwareRasterizer.a(220, 332, 150, 26, 8, 65793, 128);
         var3 = df.field_F[var2].toLowerCase();
         un.field_d.d(var3, 293, 351, 16777215, -1);
@@ -164,10 +164,10 @@ final class lr extends hs {
         if (this.field_a.b((byte) -71, this.field_a.field_g[this.field_g].field_p) != this.field_g) {
           return false;
         }
-        if (this.field_a.field_C.field_i[var3]) {
+        if (this.field_a.field_C.formationConfirmed[var3]) {
           return false;
         }
-        var4 = this.field_a.field_C.field_k[this.field_a.field_g[this.field_g].field_p];
+        var4 = this.field_a.field_C.formationChoice[this.field_a.field_g[this.field_g].field_p];
         if (param1 != 50) {
           field_s = (String) null;
         }

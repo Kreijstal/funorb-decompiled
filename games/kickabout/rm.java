@@ -156,7 +156,7 @@ final class rm extends qt {
     }
 
     final int b(int param0, int param1) {
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           if (param0 == 0) {
             return (this.field_i[0].field_d >> 1) + 25;
           }
@@ -207,7 +207,7 @@ final class rm extends qt {
 
     final int a(int param0, int param1) {
         int var3 = -89 / ((param0 + 49) / 52);
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return super.a(-101, param1);
         }
         if (2 != param1) {
@@ -239,7 +239,7 @@ final class rm extends qt {
         SoftwareRasterizer.a(10 + this.field_j, 80, 364, 320, 10, 0, 128);
         ta.e(126);
         super.a(param0, param1);
-        if (la.a(param0 ^ -97)) {
+        if (PlayArea.a(param0 ^ -97)) {
           this.g((byte) -4);
           return;
         }

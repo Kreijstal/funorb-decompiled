@@ -415,35 +415,35 @@ class qt extends js {
         var3 = Kickabout.field_G;
         try {
           if (ks.field_e == 1) {
-            stackIn_70_0 = (et.field_d.field_V.field_m == 0);
+            stackIn_70_0 = (et.field_d.field_V.possessorTeam == 0);
             return stackIn_70_0;
           }
           if (2 == ks.field_e) {
-            stackIn_6_0 = !(mh.field_k.a(true) >= 285);
+            stackIn_6_0 = !(mh.field_k.pixelY(true) >= 285);
             return stackIn_6_0;
           }
           if (ks.field_e == 3) {
-            stackIn_12_0 = (790 < mh.field_k.f(param0 - 85)) && (1000 < mh.field_k.a(true));
+            stackIn_12_0 = (790 < mh.field_k.pixelX(param0 - 85)) && (1000 < mh.field_k.pixelY(true));
             return stackIn_12_0;
           }
           if (ks.field_e == 4) {
-            stackIn_66_0 = (et.field_d.field_V.field_m == 0) && (et.field_d.field_V.field_s == 3);
+            stackIn_66_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 3);
             return stackIn_66_0;
           }
           if (5 == ks.field_e) {
-            stackIn_19_0 = (et.field_d.field_V.field_m == 0) && (et.field_d.field_V.field_s == 1);
+            stackIn_19_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 1);
             return stackIn_19_0;
           }
           if (ks.field_e == 6) {
-            stackIn_61_0 = (et.field_d.field_V.field_m == 0) && (3 == et.field_d.field_V.field_s);
+            stackIn_61_0 = (et.field_d.field_V.possessorTeam == 0) && (3 == et.field_d.field_V.possessorSlot);
             return stackIn_61_0;
           }
           if (ks.field_e == 7) {
-            stackIn_49_0 = (et.field_d.field_V.field_m != 0) ? 0 : 1;
+            stackIn_49_0 = (et.field_d.field_V.possessorTeam != 0) ? 0 : 1;
             var1_int = stackIn_49_0;
             for (var2 = 1; 4 > var2; var2++) {
               stackIn_53_0 = var1_int;
-              if (et.field_d.field_P[1][var2].field_w != fm.a((byte) -27, 1)) {
+              if (et.field_d.field_P[1][var2].positionY != fm.a((byte) -27, 1)) {
                 stackIn_54_1 = 0;
               } else {
                 stackIn_54_1 = 1;
@@ -454,19 +454,19 @@ class qt extends js {
             return stackIn_56_0 != 0;
           }
           if (8 == ks.field_e) {
-            stackIn_28_0 = (et.field_d.field_V.field_m == 0) && (ld.field_f.f(-115) > 760) && (ld.field_f.a(true) > 1000);
+            stackIn_28_0 = (et.field_d.field_V.possessorTeam == 0) && (ld.field_f.pixelX(-115) > 760) && (ld.field_f.pixelY(true) > 1000);
             return stackIn_28_0;
           }
           if (9 == ks.field_e) {
-            stackIn_34_0 = (0 == et.field_d.field_V.field_m) && (et.field_d.field_V.field_s == 1);
+            stackIn_34_0 = (0 == et.field_d.field_V.possessorTeam) && (et.field_d.field_V.possessorSlot == 1);
             return stackIn_34_0;
           }
           if (ks.field_e == 10) {
-            stackIn_39_0 = (et.field_d.participantStatus[0].field_g == 4);
+            stackIn_39_0 = (et.field_d.participantStatus[0].controlledSlot == 4);
             return stackIn_39_0;
           }
           if (11 == ks.field_e) {
-            stackIn_45_0 = (et.field_d.field_V.field_m == 0);
+            stackIn_45_0 = (et.field_d.field_V.possessorTeam == 0);
             return stackIn_45_0;
           }
           if (param0 != -8) {

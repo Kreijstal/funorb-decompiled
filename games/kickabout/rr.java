@@ -127,7 +127,7 @@ final class rr {
           var5 = (CharSequence) ((Object) param0);
           qi.field_o = MatchAgent.a(param1 ^ -70, var5);
           IntDoubleCommand.field_A = param2;
-          la.a(true);
+          PlayArea.a(true);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

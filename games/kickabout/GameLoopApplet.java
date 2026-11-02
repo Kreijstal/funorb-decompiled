@@ -97,7 +97,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
           }
         } else {
           if (!MouseWheelInput.field_b) {
-            if (!la.a(100)) {
+            if (!PlayArea.a(100)) {
               if (NetworkGameClient.field_t.c(-27598)) {
                 MouseWheelInput.field_b = true;
                 this.o(55);
@@ -110,7 +110,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
             this.p(18861);
           }
         }
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           while (true) {
             var5 = (ii) (ve.field_R.b((byte) 127));
             if (var5 == null) {
@@ -283,7 +283,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements hc {
           return;
         }
         if (!MouseWheelInput.field_b &&
-          !la.a(100)) {
+          !PlayArea.a(100)) {
           ju.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
           FormationAgent.a(var2, -14142);
           return;

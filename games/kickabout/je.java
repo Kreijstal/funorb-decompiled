@@ -51,10 +51,10 @@ final class je extends IntrusiveNode {
           return 0;
         }
         if (ks.field_e == 2) {
-          if (mh.field_k.a(true) > 477) {
+          if (mh.field_k.pixelY(true) > 477) {
             return 1;
           }
-          if (mh.field_k.field_C > 0) {
+          if (mh.field_k.dashCooldown > 0) {
             return 2;
           }
           return 3;
@@ -83,8 +83,8 @@ final class je extends IntrusiveNode {
               return 10;
             }
             if (!sl.field_Eb &&
-              ld.field_f.f(-120) < 248 &&
-              400 > ld.field_f.a(true)) {
+              ld.field_f.pixelX(-120) < 248 &&
+              400 > ld.field_f.pixelY(true)) {
               return 11;
             }
           } else {
@@ -99,7 +99,7 @@ final class je extends IntrusiveNode {
                 return 15;
               }
               if (ks.field_e == 12) {
-                if (et.field_d.field_V.field_m == 0) {
+                if (et.field_d.field_V.possessorTeam == 0) {
                   return 16;
                 }
               } else {
@@ -133,8 +133,8 @@ final class je extends IntrusiveNode {
             return 9;
           }
           if (sl.field_Eb &&
-            1 == et.field_d.field_V.field_m &&
-            et.field_d.b((byte) -96).action == 0) {
+            1 == et.field_d.field_V.possessorTeam &&
+            et.field_d.getBallCarrier((byte) -96).action == 0) {
             return 8;
           }
         }

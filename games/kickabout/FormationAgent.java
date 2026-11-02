@@ -4,29 +4,29 @@
 final class FormationAgent extends MatchAgent {
     static ff field_h;
     static int field_j;
-    int[] field_k;
-    boolean[] field_i;
+    int[] formationChoice;
+    boolean[] formationConfirmed;
     static int field_f;
     static String field_g;
     static int field_l;
 
-    final void a(int param0, int param1, int param2) {
-        if (this.field_i[param0]) {
+    final void applyCommand(int param0, int param1, int param2) {
+        if (this.formationConfirmed[param0]) {
           return;
         }
         if (param2 == 0 &&
-          this.field_k[param0] > 0) {
-          this.field_k[param0] = this.field_k[param0] - 1;
+          this.formationChoice[param0] > 0) {
+          this.formationChoice[param0] = this.formationChoice[param0] - 1;
         }
         if (param2 == 1 &&
-          -1 + ws.field_b.length > this.field_k[param0]) {
-          this.field_k[param0] = this.field_k[param0] + 1;
+          -1 + ws.field_b.length > this.formationChoice[param0]) {
+          this.formationChoice[param0] = this.formationChoice[param0] + 1;
         }
         if (param1 != 1) {
           return;
         }
         if (param2 == 2) {
-          this.field_i[param0] = true;
+          this.formationConfirmed[param0] = true;
         }
     }
 
@@ -78,14 +78,14 @@ final class FormationAgent extends MatchAgent {
 
     final void c(CipherPacketBuffer param0, int param1) {
         try {
-          this.field_k[0] = param0.l(3, 59);
+          this.formationChoice[0] = param0.l(3, 59);
           if (param1 != 2) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
             FormationAgent.a((java.awt.Canvas) null, 103);
           }
-          this.field_k[1] = param0.l(3, 59);
-          this.field_i[0] = ContentTransitionDialog.a(param0, (byte) -39);
-          this.field_i[1] = ContentTransitionDialog.a(param0, (byte) -39);
+          this.formationChoice[1] = param0.l(3, 59);
+          this.formationConfirmed[0] = ContentTransitionDialog.a(param0, (byte) -39);
+          this.formationConfirmed[1] = ContentTransitionDialog.a(param0, (byte) -39);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -140,16 +140,16 @@ final class FormationAgent extends MatchAgent {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean allFormationsConfirmed(byte param0) {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = 76 / ((param0 - 57) / 37);
-        stackIn_4_0 = (this.field_i[0]) && (this.field_i[1]);
+        stackIn_4_0 = (this.formationConfirmed[0]) && (this.formationConfirmed[1]);
         return stackIn_4_0;
     }
 
     public final String toString() {
-        return "AgentFormation\tteam0=" + this.field_k[0] + "/" + this.field_i[0] + "\tteam1=" + this.field_k[1] + "/" + this.field_i[1];
+        return "AgentFormation\tteam0=" + this.formationChoice[0] + "/" + this.formationConfirmed[0] + "\tteam1=" + this.formationChoice[1] + "/" + this.formationConfirmed[1];
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
@@ -199,8 +199,8 @@ final class FormationAgent extends MatchAgent {
           var6 = (FormationAgent) (param1);
           var3 = var6;
           for (var4 = 0; var4 < 2; var4++) {
-            this.field_k[var4] = var6.field_k[var4];
-            this.field_i[var4] = var6.field_i[var4];
+            this.formationChoice[var4] = var6.formationChoice[var4];
+            this.formationConfirmed[var4] = var6.formationConfirmed[var4];
           }
           if (param0 > -52) {
             FormationAgent.a(false);
@@ -221,8 +221,8 @@ final class FormationAgent extends MatchAgent {
     }
 
     public FormationAgent() {
-        this.field_k = new int[2];
-        this.field_i = new boolean[2];
+        this.formationChoice = new int[2];
+        this.formationConfirmed = new boolean[2];
     }
 
     static {

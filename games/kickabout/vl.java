@@ -153,8 +153,8 @@ final class vl {
         int var6 = 0;
         int var7 = 0;
         try {
-          var2_int = param0.field_V.a(true);
-          var3 = param0.field_V.c(879306160);
+          var2_int = param0.field_V.pixelX(true);
+          var3 = param0.field_V.pixelY(879306160);
           if (param1 >= -39) {
             vl.a(127);
           }

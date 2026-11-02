@@ -163,7 +163,7 @@ final class kq extends hd {
               this.field_Db = pg.a(param0, param1, this.field_Eb, -79, param3);
             }
           } else {
-            this.field_Db.a(2, (la[]) null, false, false);
+            this.field_Db.stepMovement(2, (PlayArea[]) null, false, false);
             this.field_Db.g((byte) 127);
           }
           return;

@@ -14,13 +14,13 @@ final class df extends dj {
         if (!param0) {
           df.g(57);
         }
-        if (0 != et.field_d.participantStatus[1].field_g) {
-          if (et.field_d.field_V.field_m == 1) {
-            var1 = et.field_d.a((byte) 104, 0);
-            var2 = et.field_d.a((byte) -71, 1);
-            ej.b(var1.f(-121) - var2.f(-99), -2, var1.a(true) - var2.a(true), 10);
+        if (0 != et.field_d.participantStatus[1].controlledSlot) {
+          if (et.field_d.field_V.possessorTeam == 1) {
+            var1 = et.field_d.getControlledFootballer((byte) 104, 0);
+            var2 = et.field_d.getControlledFootballer((byte) -71, 1);
+            ej.b(var1.pixelX(-121) - var2.pixelX(-99), -2, var1.pixelY(true) - var2.pixelY(true), 10);
           }
-          et.field_d.participantStatus[1].field_g = 0;
+          et.field_d.participantStatus[1].controlledSlot = 0;
         }
     }
 

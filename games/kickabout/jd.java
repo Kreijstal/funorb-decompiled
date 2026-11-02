@@ -180,7 +180,7 @@ abstract class jd extends lg implements TextInputListener {
         if (param0 != -1) {
           return false;
         }
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return true;
         }
         if (eq.field_d > 0) {

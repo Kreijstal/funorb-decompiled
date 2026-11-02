@@ -117,12 +117,12 @@ final class jk extends IntrusiveNode {
             var3 = (ob) (tb.field_w.field_V);
             var4Lifetime1 = var3.field_N >> 16;
             var5Lifetime1 = var3.field_E >> 16;
-            if (tb.field_w.field_V.field_m != -1) {
-              var12 = (gm) (tb.field_w.b((byte) -96));
-              stackIn_34_0 = (!var12.b(false)) ? 40 : 30;
+            if (tb.field_w.field_V.possessorTeam != -1) {
+              var12 = (gm) (tb.field_w.getBallCarrier((byte) -96));
+              stackIn_34_0 = (!var12.isMovingDiagonally(false)) ? 40 : 30;
               var7Lifetime1 = stackIn_34_0;
-              var5Lifetime1 = (var12.field_bb >> 16) + var12.field_n * var7Lifetime1;
-              var4Lifetime1 = var12.field_j * var7Lifetime1 + (var12.field_kb >> 16);
+              var5Lifetime1 = (var12.field_bb >> 16) + var12.directionY * var7Lifetime1;
+              var4Lifetime1 = var12.directionX * var7Lifetime1 + (var12.field_kb >> 16);
             }
             if (ia.field_c) {
               var5Lifetime1 = -var5Lifetime1 + 1344;

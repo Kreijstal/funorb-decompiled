@@ -21,7 +21,7 @@ final class p {
         boolean decompiledFrameRemainder0 = true;
         et.field_d.field_x = wk.field_g;
         if (ks.field_e == 1) {
-          et.field_d.field_x = new la[]{new la(368, 600, 528, 1200)};
+          et.field_d.field_x = new PlayArea[]{new PlayArea(368, 600, 528, 1200)};
           et.field_d.field_B = et.field_d.field_x;
         } else {
           if (ks.field_e != 2) {
@@ -29,56 +29,56 @@ final class p {
               if (ks.field_e != 4) {
                 if (ks.field_e != 5) {
                   if (6 == ks.field_e) {
-                    et.field_d.field_x = new la[]{new la(320, 0, 660, 1344)};
-                    et.field_d.field_B = new la[]{new la(0, 0, 896, 1344)};
+                    et.field_d.field_x = new PlayArea[]{new PlayArea(320, 0, 660, 1344)};
+                    et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
                   } else {
                     if (ks.field_e != 7) {
                       if (ks.field_e == 8) {
-                        et.field_d.field_x = new la[]{new la(10, 200, 860, 300), new la(348, 100, 648, 400), new la(10, 610, 860, 710), new la(258, 510, 558, 810), new la(10, 1000, 860, 1100), new la(298, 900, 748, 1200), new la(760, 200, 860, 710), new la(10, 610, 110, 1100)};
+                        et.field_d.field_x = new PlayArea[]{new PlayArea(10, 200, 860, 300), new PlayArea(348, 100, 648, 400), new PlayArea(10, 610, 860, 710), new PlayArea(258, 510, 558, 810), new PlayArea(10, 1000, 860, 1100), new PlayArea(298, 900, 748, 1200), new PlayArea(760, 200, 860, 710), new PlayArea(10, 610, 110, 1100)};
                         et.field_d.field_B = et.field_d.field_x;
                       } else {
                         if (ks.field_e == 9) {
-                          et.field_d.field_x = new la[]{new la(0, 0, 896, 800)};
-                          et.field_d.field_B = new la[]{new la(0, 0, 896, 1344)};
+                          et.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 800)};
+                          et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
                         } else {
                           if (ks.field_e != 10 &&
                             ks.field_e != 11) {
                             if (ks.field_e == 12) {
-                              et.field_d.field_x = new la[]{};
-                              et.field_d.field_B = new la[]{new la(0, 0, 896, 530), new la(370, -45, 525, 530, 0, 45)};
+                              et.field_d.field_x = new PlayArea[]{};
+                              et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
                             } else {
                               if ((ks.field_e == 13)) {
-                                et.field_d.field_x = new la[]{new la(0, 0, 896, 530)};
-                                et.field_d.field_B = new la[]{new la(0, 0, 896, 530), new la(370, -45, 525, 530, 0, 45)};
+                                et.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 530)};
+                                et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
                               }
                             }
                             decompiledFrameRemainder0 = false;
                           }
                           else {
-                            et.field_d.field_x = new la[]{new la(300, 466, 850, 646), new la(0, 672, 100, 1344)};
+                            et.field_d.field_x = new PlayArea[]{new PlayArea(300, 466, 850, 646), new PlayArea(0, 672, 100, 1344)};
                             et.field_d.field_B = et.field_d.field_x;
                           }
                         }
                       }
                     } else {
-                      et.field_d.field_x = new la[]{new la(60, 250, 300, 700), new la(320, 0, 896, 1344)};
+                      et.field_d.field_x = new PlayArea[]{new PlayArea(60, 250, 300, 700), new PlayArea(320, 0, 896, 1344)};
                       et.field_d.field_B = et.field_d.field_x;
                     }
                   }
                 } else {
-                  et.field_d.field_x = new la[]{};
-                  et.field_d.field_B = new la[]{new la(0, 0, 896, 900), new la(0, 940, 896, 1344), new la(826, 0, 896, 1344), new la(0, 0, 710, 1344)};
+                  et.field_d.field_x = new PlayArea[]{};
+                  et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 900), new PlayArea(0, 940, 896, 1344), new PlayArea(826, 0, 896, 1344), new PlayArea(0, 0, 710, 1344)};
                 }
               } else {
-                et.field_d.field_x = new la[]{};
-                et.field_d.field_B = new la[]{new la(0, 0, 896, 1344)};
+                et.field_d.field_x = new PlayArea[]{};
+                et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
               }
             } else {
-              et.field_d.field_x = new la[]{new la(390, 220, 850, 320), new la(600, 220, 850, 620), new la(20, 470, 850, 620), new la(20, 470, 200, 900), new la(20, 800, 390, 900), new la(310, 800, 390, 1160), new la(310, 1060, 850, 1160)};
+              et.field_d.field_x = new PlayArea[]{new PlayArea(390, 220, 850, 320), new PlayArea(600, 220, 850, 620), new PlayArea(20, 470, 850, 620), new PlayArea(20, 470, 200, 900), new PlayArea(20, 800, 390, 900), new PlayArea(310, 800, 390, 1160), new PlayArea(310, 1060, 850, 1160)};
               et.field_d.field_B = et.field_d.field_x;
             }
           } else {
-            et.field_d.field_x = new la[]{new la(368, 240, 528, 770)};
+            et.field_d.field_x = new PlayArea[]{new PlayArea(368, 240, 528, 770)};
             et.field_d.field_B = et.field_d.field_x;
           }
         }
@@ -139,21 +139,21 @@ final class p {
           }
           var5 = param1.field_V;
           var6 = var5;
-          if (88080384 != var6.c(879306160)) {
-            stackIn_7_0 = (var6.field_p < 44040192) ? 0 : 1;
+          if (88080384 != var6.pixelY(879306160)) {
+            stackIn_7_0 = (var6.positionY < 44040192) ? 0 : 1;
             var4 = stackIn_7_0;
-            if (var6.field_p == 44040192) {
+            if (var6.positionY == 44040192) {
               var4 = this.field_e;
               this.field_e = 1 - this.field_e;
             }
             this.field_c[var4] = this.field_c[var4] + 1;
           }
-          if (var6.field_m == -1) {
+          if (var6.possessorTeam == -1) {
             this.field_d = this.field_d + 1;
           } else {
-            dupTemp$8 = this.field_b[var5.field_m];
-            dupTemp$8[var5.field_s] = dupTemp$8[var5.field_s] + 1;
-            var4Lifetime1 = param1.a((byte) 6, var6.field_m, var6.field_s);
+            dupTemp$8 = this.field_b[var5.possessorTeam];
+            dupTemp$8[var5.possessorSlot] = dupTemp$8[var5.possessorSlot] + 1;
+            var4Lifetime1 = param1.findControllingParticipant((byte) 6, var6.possessorTeam, var6.possessorSlot);
             if (var4Lifetime1 != -1) {
               this.field_f[var4Lifetime1] = this.field_f[var4Lifetime1] + 1;
             }

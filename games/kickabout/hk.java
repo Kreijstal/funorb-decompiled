@@ -108,7 +108,7 @@ final class hk extends i {
 
     final void a(int param0, int param1) {
         super.a(82, param1);
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return;
         }
         if (dg.field_e) {

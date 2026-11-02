@@ -66,7 +66,7 @@ final class gp extends ps {
 
     final static void a(boolean param0, byte param1) {
         g.field_a.a(97, param0);
-        ib var2 = la.field_a;
+        ib var2 = PlayArea.field_a;
         if (param1 >= -27) {
           gp.b((byte) 111);
         }

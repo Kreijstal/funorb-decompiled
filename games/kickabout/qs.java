@@ -174,7 +174,7 @@ final class qs extends ta {
           }
           while (var1_int < 4) {
             var2 = sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int];
-            if (0 < var2.field_C &&
+            if (0 < var2.dashCooldown &&
               var2.action != 4) {
               mn.field_b[var1_int] = 16;
             } else {

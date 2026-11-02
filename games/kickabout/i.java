@@ -93,9 +93,9 @@ class i extends jb {
             var2 == 0) {
             return;
           }
-          var3 = et.field_d.a((byte) -90, 0);
+          var3 = et.field_d.getControlledFootballer((byte) -90, 0);
           if (var1_int != 0) {
-            var4 = var3.field_G;
+            var4 = var3.directionMask;
             array$0 = new boolean[4];
             stackIn_26_0 = array$0;
             stackIn_26_1 = array$0;
@@ -113,8 +113,8 @@ class i extends jb {
             stackIn_26_0[stackIn_35_2] = stackIn_36_3;
             var17 = stackIn_26_0;
             var5 = var17;
-            var6 = var3.f(-113);
-            var7 = -22 + var3.a(true);
+            var6 = var3.pixelX(-113);
+            var7 = -22 + var3.pixelY(true);
             var8_ref_int__ = new int[]{var6 - 60, var6 + 60, var6, var6};
             var9_ref_int__ = new int[]{var7, var7, -60 + var7, 60 + var7};
             stackIn_38_0 = AccountRegistrationPanel.field_C;
@@ -156,11 +156,11 @@ class i extends jb {
             var18 = stackIn_54_0[stackIn_55_1];
             var5_ref = var18;
             if (var1_int != 0) {
-              var6 = var3.f(-101);
-              var7 = 70 + var3.a(true);
+              var6 = var3.pixelX(-101);
+              var7 = 70 + var3.pixelY(true);
             } else {
-              var6 = var3.f(-124);
-              var7 = var3.a(true) + 30;
+              var6 = var3.pixelX(-124);
+              var7 = var3.pixelY(true) + 30;
             }
             var8 = hw.field_i * var18.field_o >> 8;
             var9 = hw.field_i * var18.field_v >> 8;

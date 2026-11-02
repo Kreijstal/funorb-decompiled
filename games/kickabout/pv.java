@@ -29,7 +29,7 @@ final class pv extends i {
         boolean[] var7;
         var6 = Kickabout.field_G;
         super.a(84, param1);
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return;
         }
         var7 = GameLoopApplet.field_E.field_J;
@@ -41,7 +41,7 @@ final class pv extends i {
           return;
         }
         var7[this.field_K] = true;
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           var4 = 0;
           for (var5 = 0; var7.length > var5; var5++) {
             if (var7[var5]) {

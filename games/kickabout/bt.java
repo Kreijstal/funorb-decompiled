@@ -152,7 +152,7 @@ final class bt {
           }
           if (ks.field_e == 7) {
             var2_ref_nl = et.field_d.field_P[1][4];
-            stackIn_68_0 = (var2_ref_nl.f(-107) == 180) && (var2_ref_nl.a(true) == 550);
+            stackIn_68_0 = (var2_ref_nl.pixelX(-107) == 180) && (var2_ref_nl.pixelY(true) == 550);
             return stackIn_68_0;
           }
           if (ks.field_e == 8) {
@@ -166,7 +166,7 @@ final class bt {
             }
             var2Lifetime3Lifetime1 = stackIn_50_0 & stackIn_51_1;
             stackIn_53_0 = var2Lifetime3Lifetime1;
-            if (et.field_d.field_P[1][4].field_w != fm.a((byte) -27, 1)) {
+            if (et.field_d.field_P[1][4].positionY != fm.a((byte) -27, 1)) {
               stackIn_54_1 = 0;
             } else {
               stackIn_54_1 = 1;
@@ -176,14 +176,14 @@ final class bt {
               for (var3 = 0; var3 < 4; var3++) {
                 var4 = (gm) (et.field_d.field_P[1][1 + var3]);
                 var4.a(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
-                var4.field_G = 0;
+                var4.directionMask = 0;
                 stackIn_60_0 = var4;
                 if (var3 == 1) {
                   stackIn_61_1 = 8;
                 } else {
                   stackIn_61_1 = 2;
                 }
-                ((gm) (Object) stackIn_60_0).a(stackIn_61_1, 26214);
+                ((gm) (Object) stackIn_60_0).setDirectionFromMask(stackIn_61_1, 26214);
               }
             }
             stackIn_63_0 = var2Lifetime3Lifetime2;
@@ -213,7 +213,7 @@ final class bt {
             var2Lifetime5 = var2Lifetime5 != 0 & tc.a(4, (byte) 96, 29360128, fc.field_c, 19660800) ? 1 : 0;
             var2Lifetime5 = var2Lifetime5 != 0 & tc.a(1, (byte) 84, 29360128, et.field_d.field_P[1][0], 1310720) ? 1 : 0;
             stackIn_40_0 = var2Lifetime5;
-            if (-1 != et.field_d.field_V.field_m) {
+            if (-1 != et.field_d.field_V.possessorTeam) {
               stackIn_41_1 = 0;
             } else {
               stackIn_41_1 = 1;
@@ -226,19 +226,19 @@ final class bt {
           var2Lifetime6 = var2Lifetime6 != 0 & tc.a(12, (byte) 113, 3276800, mh.field_k, 58982400) ? 1 : 0;
           if (var2Lifetime6 != 0 &&
             mh.field_k.action == 0 &&
-            0 == et.field_d.field_V.field_m) {
+            0 == et.field_d.field_V.possessorTeam) {
             ej.b(200, -2, -100, 30);
           }
           var2Lifetime6 = var2Lifetime6 != 0 & tc.a(8, (byte) 86, 29360128, fc.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;
-          if (-1 != et.field_d.field_V.field_m) {
+          if (-1 != et.field_d.field_V.possessorTeam) {
             stackIn_27_1 = 0;
           } else {
             stackIn_27_1 = 1;
           }
           var2Lifetime7 = stackIn_26_0 & stackIn_27_1;
           stackIn_29_0 = var2Lifetime7;
-          if (et.field_d.field_V.e(-105) >= 131072) {
+          if (et.field_d.field_V.horizontalSpeedSquared(-105) >= 131072) {
             stackIn_30_1 = 0;
           } else {
             stackIn_30_1 = 1;

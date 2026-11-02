@@ -100,9 +100,9 @@ final class IntDoubleCommand extends ConsoleCommand {
           var14.action != 9) {
           if (var14.action == 10) {
             if (var14.action == 8) {
-              var14.field_L = var14.field_L + 1;
+              var14.actionTime = var14.actionTime + 1;
             }
-            var8.field_G = 0;
+            var8.directionMask = 0;
             return;
           }
           if (var14.action != 3 &&
@@ -126,7 +126,7 @@ final class IntDoubleCommand extends ConsoleCommand {
               nq.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_45_3, (byte) 69, var9);
               return;
             }
-            if (0 != et.field_d.field_V.field_m) {
+            if (0 != et.field_d.field_V.possessorTeam) {
               if (ld.field_f.action != 9 &&
                 7 != ld.field_f.action &&
                 ld.field_f.action != 12 &&
@@ -138,11 +138,11 @@ final class IntDoubleCommand extends ConsoleCommand {
               }
               var12Lifetime1 = stackIn_56_0;
               var13Lifetime1 = 0 / ((-30 - param0) / 52);
-              if (et.field_d.field_V.field_m == -1) {
+              if (et.field_d.field_V.possessorTeam == -1) {
                 nq.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
-              if (et.field_d.field_V.field_m == 0) {
+              if (et.field_d.field_V.possessorTeam == 0) {
                 if (var12Lifetime1 != 0) {
                   nq.a(30, param3, var14, 0, (byte) 42, param1);
                 } else {
@@ -161,10 +161,10 @@ final class IntDoubleCommand extends ConsoleCommand {
               nq.a(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3, (byte) 69, var9);
               return;
             }
-            var12Lifetime2 = -var14.a(true) + param3;
-            var13Lifetime2 = param1 - var14.f(-124);
+            var12Lifetime2 = -var14.pixelY(true) + param3;
+            var13Lifetime2 = param1 - var14.pixelX(-124);
             if (var12Lifetime2 * var12Lifetime2 + var13Lifetime2 * var13Lifetime2 < 3600) {
-              var14.b(0, -1);
+              var14.startTackle(0, -1);
               if (ld.field_f.action != 9 &&
                 7 != ld.field_f.action &&
                 ld.field_f.action != 12 &&
@@ -176,11 +176,11 @@ final class IntDoubleCommand extends ConsoleCommand {
               }
               var12Lifetime2 = stackIn_78_0;
               var13Lifetime2 = 0 / ((-30 - param0) / 52);
-              if (et.field_d.field_V.field_m == -1) {
+              if (et.field_d.field_V.possessorTeam == -1) {
                 nq.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
-              if (et.field_d.field_V.field_m == 0 &&
+              if (et.field_d.field_V.possessorTeam == 0 &&
                 var12Lifetime2 != 0) {
                 nq.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
@@ -203,11 +203,11 @@ final class IntDoubleCommand extends ConsoleCommand {
             }
             var12Lifetime3 = stackIn_96_0;
             var13Lifetime3 = 0 / ((-30 - param0) / 52);
-            if (et.field_d.field_V.field_m == -1) {
+            if (et.field_d.field_V.possessorTeam == -1) {
               nq.a(30, param3, var14, 0, (byte) 42, param1);
               return;
             }
-            if (et.field_d.field_V.field_m == 0) {
+            if (et.field_d.field_V.possessorTeam == 0) {
               if (var12Lifetime3 != 0) {
                 nq.a(30, param3, var14, 0, (byte) 42, param1);
               } else {
@@ -226,7 +226,7 @@ final class IntDoubleCommand extends ConsoleCommand {
             nq.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_107_3, (byte) 69, var9);
             return;
           }
-          if (0 == et.field_d.field_V.field_m) {
+          if (0 == et.field_d.field_V.possessorTeam) {
             if (var11 == 0) {
               return;
             }
@@ -235,9 +235,9 @@ final class IntDoubleCommand extends ConsoleCommand {
           return;
         }
         if (var14.action == 8) {
-          var14.field_L = var14.field_L + 1;
+          var14.actionTime = var14.actionTime + 1;
         }
-        var8.field_G = 0;
+        var8.directionMask = 0;
     }
 
     public static void g(int param0) {

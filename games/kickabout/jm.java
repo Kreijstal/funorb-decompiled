@@ -120,7 +120,7 @@ final class jm extends IntrusiveNode {
           ra.field_G = lg.a(param0, 24939);
           if (26 == cq.field_h.field_c &&
             !(ra.field_G instanceof ap) &&
-            !la.a(param2 ^ -102)) {
+            !PlayArea.a(param2 ^ -102)) {
             or.field_d.b(91, (byte) 114);
           }
           boolean decompiledFrameRemainder0 = true;
@@ -161,7 +161,7 @@ final class jm extends IntrusiveNode {
               if (var5 > 255) {
                 var5 = 255;
               }
-              if (!la.a(100)) {
+              if (!PlayArea.a(100)) {
                 or.field_d.b(65, (byte) 119);
                 or.field_d.a(103, var5);
                 or.field_d.a(param2 ^ -113, var4Lifetime1);

@@ -58,7 +58,7 @@ abstract class hs {
         if (param0 != 13) {
           this.d(-24);
         }
-        stackIn_6_0 = (this.field_g != -2) && (this.field_a.participantStatus[this.field_g].d(3511));
+        stackIn_6_0 = (this.field_g != -2) && (this.field_a.participantStatus[this.field_g].isActive(3511));
         return stackIn_6_0;
     }
 
@@ -456,11 +456,11 @@ abstract class hs {
         while (var14 < this.field_a.playerCount) {
           if (param0 == this.field_a.field_g[var14].field_p) {
             b.field_U[this.field_a.field_g[var14].field_f].c(param3, -16 + param1);
-            stackIn_24_0 = (this.field_a.participantStatus[var14].d(3511)) ? 16777215 : 11184810;
+            stackIn_24_0 = (this.field_a.participantStatus[var14].isActive(3511)) ? 16777215 : 11184810;
             var8 = stackIn_24_0;
             var9 = this.field_a.field_S[var14].toLowerCase();
             un.field_d.d(var9, param3 + 80, param1, var8, -1);
-            if (!this.field_a.participantStatus[var14].d(3511)) {
+            if (!this.field_a.participantStatus[var14].isActive(3511)) {
               var10 = un.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;

@@ -9,7 +9,7 @@ final class wk {
     static String field_e;
     static String field_b;
     static Sprite[] field_d;
-    static la[] field_g;
+    static PlayArea[] field_g;
     static up field_c;
 
     final static short a(int param0, int param1) {
@@ -188,6 +188,6 @@ final class wk {
     static {
         field_e = "games in progress (<%0>)";
         field_a = "Kick";
-        field_g = new la[]{new la(0, 0, 896, 1344)};
+        field_g = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
     }
 }

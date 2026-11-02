@@ -288,7 +288,7 @@ final class mf extends hd {
 
     final void c(boolean param0) {
         int var2;
-        if (!la.a(100) &&
+        if (!PlayArea.a(100) &&
           null != this.field_Bb) {
           or.field_d.b(81, (byte) 84);
           or.field_d.field_n = or.field_d.field_n + 2;

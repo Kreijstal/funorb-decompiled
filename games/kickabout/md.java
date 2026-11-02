@@ -25,7 +25,7 @@ final class md implements hc {
           var11 = ih.a(21656, rp.field_z[param1][var4]);
           var6 = hs.a(false, var4 % 3, var3, LongPlusOneCommand.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, LongPlusOneCommand.field_B[31]);
           this.field_i[var4] = new gm(var6, var3, true);
-          this.field_i[var4].field_G = 1;
+          this.field_i[var4].directionMask = 1;
           this.field_i[var4].g((byte) 127);
           this.field_i[var4].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.a(true), new Random()), 123);
         }
@@ -199,7 +199,7 @@ final class md implements hc {
           return;
         }
         for (var3 = 0; var3 < 4; var3++) {
-          this.field_i[var3].a(param0 ^ -27, (la[]) null, false, false);
+          this.field_i[var3].stepMovement(param0 ^ -27, (PlayArea[]) null, false, false);
           this.field_i[var3].g((byte) 126);
         }
     }

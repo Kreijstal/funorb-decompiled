@@ -154,8 +154,8 @@ final class he extends hd {
         var9 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].d(3511)) {
-            var10 = (gm) (IntrusiveDequeCursor.field_b.a((byte) -76, ek.field_G));
+            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].isActive(3511)) {
+            var10 = (gm) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = lf.a((byte) -119, var10.field_bb >> 16);
             if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
@@ -168,7 +168,7 @@ final class he extends hd {
               var7 = -1;
               for (var8 = 0; IntrusiveDequeCursor.field_b.playerCount > var8; var8++) {
                 if (IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p == IntrusiveDequeCursor.field_b.field_g[var8].field_p &&
-                  var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].field_g) {
+                  var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].controlledSlot) {
                   var7 = var8;
                 }
                 var6.a(var2, var3, var7, -113);

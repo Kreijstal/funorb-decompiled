@@ -84,11 +84,11 @@ final class DemoIntegersCommand extends ConsoleCommand {
           }
           eq.a(0);
           g.field_a.b(0, param0);
-          if (null != la.field_a) {
+          if (null != PlayArea.field_a) {
             if (PacketBuffer.field_l) {
-              la.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
+              PlayArea.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
             } else {
-              la.field_a = null;
+              PlayArea.field_a = null;
             }
           }
           var4_int = 52 / ((-26 - param3) / 46);

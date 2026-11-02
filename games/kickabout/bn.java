@@ -11,7 +11,7 @@ final class bn extends qt {
     static String[] field_F;
 
     final int b(int param0, int param1) {
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           if (param0 == 0) {
             return 25 + (this.field_i[0].field_d >> 1);
           }
@@ -70,7 +70,7 @@ final class bn extends qt {
         var8 = Kickabout.field_G;
         super.a((byte) -71, param1);
         stackIn_2_0 = param1;
-        stackIn_3_1 = (la.a(100)) ? false : true;
+        stackIn_3_1 = (PlayArea.a(100)) ? false : true;
         param1 = stackIn_2_0 & stackIn_3_1;
         stackIn_5_0 = param1;
         stackIn_6_1 = (rr.field_f) ? false : true;
@@ -164,7 +164,7 @@ final class bn extends qt {
         int var7 = Kickabout.field_G;
         if (gu.field_Jb == null) {
           gu.field_Jb = om.field_zb;
-          if (la.a(100)) {
+          if (PlayArea.a(100)) {
             gu.field_Jb = SectorCacheStore.field_g;
           }
         }
@@ -204,7 +204,7 @@ final class bn extends qt {
         io.field_e.a((byte) -126, (hd) (jh.field_Hb));
         io.field_e.a((byte) -106, (hd) (w.field_b));
         io.field_e.a((byte) -112, np.field_Cb);
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           sp.a(ArchiveSource.field_e, (byte) 74);
         }
     }
@@ -226,11 +226,11 @@ final class bn extends qt {
           bn.a('c', (byte) -84);
         }
         boolean discarded$3 = super.a(param0, -11, param2);
-        if (!la.a(100) &&
+        if (!PlayArea.a(100) &&
           w.field_b.a(param0, param2, 875)) {
           return true;
         }
-        if (!la.a(100) &&
+        if (!PlayArea.a(100) &&
           param0 == 84) {
           var4 = w.field_b.j((byte) -16);
           if (var4.length() > 0) {
@@ -307,7 +307,7 @@ final class bn extends qt {
         }
         if (jh.field_Hb.field_Db.field_jb == null ||
           jh.field_Hb.field_Db.field_jb.a(false) == 0) {
-          if (!la.a(100)) {
+          if (!PlayArea.a(100)) {
             if (!uv.field_f) {
               un.field_d.d(lo.field_k.toLowerCase(), 194 + this.field_j, 290, 16777215, -1);
             } else {
@@ -325,7 +325,7 @@ final class bn extends qt {
           un.field_d.a(gu.field_Jb.toLowerCase(), sd.field_b + this.field_j, 423, 16679959, -1);
         }
         ta.e(param0 + 128);
-        if (la.a(100) ||
+        if (PlayArea.a(100) ||
           rr.field_f) {
           SoftwareRasterizer.darkenRectangle(this.field_j, 48, 450, 382);
           if (rr.field_f) {

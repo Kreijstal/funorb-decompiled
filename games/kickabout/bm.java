@@ -38,7 +38,7 @@ final class bm extends i {
           return;
         }
         super.a(62, param1);
-        if (!la.a(100) &&
+        if (!PlayArea.a(100) &&
           this.field_G) {
           or.field_d.b(60, (byte) 104);
           this.field_J.a(or.field_d, 5);

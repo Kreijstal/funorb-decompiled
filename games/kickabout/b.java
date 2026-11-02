@@ -37,7 +37,7 @@ final class b extends ta {
           i.field_A[var4] = null;
         }
         gb.field_F = false;
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
         } else {
           if (!ic.field_h.a(-4)) {
             gb.field_F = true;
@@ -261,7 +261,7 @@ final class b extends ta {
           var15_ref = var28;
           if (!ds.field_g) {
             if (var15_ref != null &&
-              !la.a(param0 + 105)) {
+              !PlayArea.a(param0 + 105)) {
               if (!gb.field_F) {
                 jr.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {

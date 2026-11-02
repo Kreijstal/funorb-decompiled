@@ -51,10 +51,10 @@ final class va extends hs {
         var7 = this.field_a.field_P[var4];
         for (var8 = 1; var7.length > var8; var8++) {
           var9 = var7[var8];
-          var10 = -param1 + var9.f(-125);
-          var11 = -param0 + var9.a(true);
+          var10 = -param1 + var9.pixelX(-125);
+          var11 = -param0 + var9.pixelY(true);
           var12 = var10 * var10 + var11 * var11;
-          if (this.field_a.a((byte) 6, var4, var8) >= 0) {
+          if (this.field_a.findControllingParticipant((byte) 6, var4, var8) >= 0) {
             var12 = var12 << 1;
           }
           if (var12 < var6) {
@@ -83,9 +83,9 @@ final class va extends hs {
         if (this.field_a.field_X.goalCount >= 40) {
           return;
         }
-        if (this.field_a.field_V.field_m >= 0 &&
+        if (this.field_a.field_V.possessorTeam >= 0 &&
           0 <= this.field_s &&
-          this.field_a.field_V.field_m != this.field_s) {
+          this.field_a.field_V.possessorTeam != this.field_s) {
           if (1 == rm.field_C ||
             rm.field_C == 2) {
             stackIn_12_0 = false;
@@ -121,7 +121,7 @@ final class va extends hs {
           return;
         }
         if (this.field_s == -1 &&
-          1 - param2 == this.field_a.field_V.field_m &&
+          1 - param2 == this.field_a.field_V.possessorTeam &&
           param2 == this.field_D) {
           if (rm.field_C == 1) {
             ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 91, 5);
@@ -211,11 +211,11 @@ final class va extends hs {
           stackIn_25_0 = 0;
         }
         var2 = stackIn_25_0;
-        stackIn_28_0 = (this.field_a.field_V.field_m != var2) ? 0 : 1;
+        stackIn_28_0 = (this.field_a.field_V.possessorTeam != var2) ? 0 : 1;
         var3 = stackIn_28_0;
         stackIn_30_0 = 44040192;
         stackIn_31_1 = (var2 == 0) ? -655360 : 655360;
-        stackIn_34_0 = (stackIn_30_0 + stackIn_31_1 <= this.field_a.field_V.field_p) ? 0 : 1;
+        stackIn_34_0 = (stackIn_30_0 + stackIn_31_1 <= this.field_a.field_V.positionY) ? 0 : 1;
         var4 = stackIn_34_0;
         if (var2 == 0 &&
           var4 == 0) {
@@ -250,11 +250,11 @@ final class va extends hs {
             this.o(-23079);
           }
         }
-        if (this.field_a.field_V.field_m == -1 &&
+        if (this.field_a.field_V.possessorTeam == -1 &&
           this.field_s >= 0 ||
           !(0 > this.field_a.field_V.field_j)) {
-          if (Math.abs(this.field_a.field_V.field_n >> 16) <= 4) {
-            if (this.field_a.field_V.e(-118) > 6553600) {
+          if (Math.abs(this.field_a.field_V.verticalVelocity >> 16) <= 4) {
+            if (this.field_a.field_V.horizontalSpeedSquared(-118) > 6553600) {
               sp.c(37, -113);
             } else {
               sp.c(36, param0 ^ -2087);
@@ -268,9 +268,9 @@ final class va extends hs {
         }
         if (vi.field_n && (this.field_a.field_V.field_y ||
           this.field_a.field_V.field_x)) {
-          if (24248320 < this.field_a.field_V.field_t) {
-            if (this.field_a.field_V.field_t < 34603008) {
-              stackIn_94_0 = (this.field_a.field_V.field_v < 2359296) ? 1 : 0;
+          if (24248320 < this.field_a.field_V.positionX) {
+            if (this.field_a.field_V.positionX < 34603008) {
+              stackIn_94_0 = (this.field_a.field_V.height < 2359296) ? 1 : 0;
             } else {
               stackIn_94_0 = 0;
             }
@@ -278,8 +278,8 @@ final class va extends hs {
             stackIn_94_0 = 0;
           }
           var7 = stackIn_94_0;
-          if (this.field_a.field_V.field_t > 19573418) {
-            stackIn_100_0 = (39146837 <= this.field_a.field_V.field_t) ? 0 : 1;
+          if (this.field_a.field_V.positionX > 19573418) {
+            stackIn_100_0 = (39146837 <= this.field_a.field_V.positionX) ? 0 : 1;
           } else {
             stackIn_100_0 = 0;
           }
@@ -344,8 +344,8 @@ final class va extends hs {
         }
         this.field_v[0] = this.field_a.field_X.score[0];
         this.field_v[1] = this.field_a.field_X.score[1];
-        if (this.field_a.field_V.field_m == 1 - this.field_D) {
-          this.field_D = this.field_a.field_V.field_m;
+        if (this.field_a.field_V.possessorTeam == 1 - this.field_D) {
+          this.field_D = this.field_a.field_V.possessorTeam;
         }
     }
 
@@ -381,7 +381,7 @@ final class va extends hs {
             var4 = (byte)param0;
             var5 = (byte)param1;
             if (this.field_a.c(this.field_g, -111)) {
-              stackIn_10_0 = this.field_a.a((byte) 97, this.field_g).field_L;
+              stackIn_10_0 = this.field_a.getControlledFootballer((byte) 97, this.field_g).actionTime;
             } else {
               stackIn_10_0 = 0;
             }
@@ -498,7 +498,7 @@ final class va extends hs {
               var7 = var7 | 8;
             }
             if (this.field_H != var7 ||
-              this.field_a.a((byte) -38, this.field_g).field_G != var7) {
+              this.field_a.getControlledFootballer((byte) -38, this.field_g).directionMask != var7) {
               this.field_H = var7;
               this.b(false);
             }
@@ -591,11 +591,11 @@ final class va extends hs {
           }
         } else {
           if (this.field_l &&
-            this.field_a.participantStatus[this.field_g].d(param0 ^ 19800)) {
+            this.field_a.participantStatus[this.field_g].isActive(param0 ^ 19800)) {
             stackIn_22_0 = (!this.field_k) ? 0 : 1;
             var2 = stackIn_22_0;
             var3 = this.field_m ? 1 : 0;
-            var4 = this.field_a.a((byte) 122, this.field_g);
+            var4 = this.field_a.getControlledFootballer((byte) 122, this.field_g);
             if (0 == this.field_I ||
               var2 != 0) {
               if (wt.field_x == -1 &&
@@ -603,8 +603,8 @@ final class va extends hs {
                 this.field_z = -1;
                 this.field_G = -1;
               } else {
-                this.field_z = AccountTermsPanel.a(wt.field_x, 6784) - var4.f(-103);
-                this.field_G = qj.a(-6779, us.field_j) - var4.a(true);
+                this.field_z = AccountTermsPanel.a(wt.field_x, 6784) - var4.pixelX(-103);
+                this.field_G = qj.a(-6779, us.field_j) - var4.pixelY(true);
               }
             }
             if (var4.action == 1) {
@@ -800,7 +800,7 @@ final class va extends hs {
                 var11 = (var14_int & 245) >> 4;
               }
               if (wn.a((byte) 24)) {
-                stackIn_22_0 = (param0.field_P[var4_int][var8].field_N.c((byte) -107, param0.field_P[var4_int][var8].member)) ? 1 : 0;
+                stackIn_22_0 = (param0.field_P[var4_int][var8].stats.c((byte) -107, param0.field_P[var4_int][var8].member)) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
               }
@@ -848,7 +848,7 @@ final class va extends hs {
           }
           if (param1.field_r == 0 ||
             1 == param1.field_r) {
-            ((gm) (this.field_a.a((byte) 105, this.field_g))).field_Z = false;
+            ((gm) (this.field_a.getControlledFootballer((byte) 105, this.field_g))).field_Z = false;
           }
           if (2 == param1.field_r &&
             this.field_a.c(this.field_g, -7) &&
@@ -901,17 +901,17 @@ final class va extends hs {
           this.a(false, 114, -8);
         }
         var2 = this.h(-41);
-        var3 = (gm) (this.field_a.a((byte) -70, var2));
+        var3 = (gm) (this.field_a.getControlledFootballer((byte) -70, var2));
         if (this.field_a.c(var2, -67)) {
           var4 = var3.g(1606384336);
           var5 = var3.h(1000);
-          var6 = var3.field_j * 0;
-          var7 = 50 * var3.field_n;
+          var6 = var3.directionX * 0;
+          var7 = 50 * var3.directionY;
           mj.a((double)this.field_q, 60, (double)(var6 + var4), (double)(var5 + var7));
         } else {
           var4_ref_ob = (ob) (this.field_a.field_V);
-          var5 = var4_ref_ob.field_t >> 16;
-          var6 = var4_ref_ob.c(true) + (var4_ref_ob.field_p >> 16) >> 1;
+          var5 = var4_ref_ob.positionX >> 16;
+          var6 = var4_ref_ob.c(true) + (var4_ref_ob.positionY >> 16) >> 1;
           var7_double = (double)var3.field_kb / 65536.0;
           var9 = (double)var3.field_bb / 65536.0;
           var11 = (double)(this.field_q + 40);
@@ -950,7 +950,7 @@ final class va extends hs {
         if (param0 <= 102) {
           this.field_L = true;
         }
-        var4 = (gm) (this.field_a.a((byte) 93, this.field_g));
+        var4 = (gm) (this.field_a.getControlledFootballer((byte) 93, this.field_g));
         var5 = ug.a(0, var4.field_kb >> 16);
         var6 = lf.a((byte) -110, var4.field_bb >> 16);
         if (this.field_a.c(this.field_g, -50) &&
@@ -962,7 +962,7 @@ final class va extends hs {
             lo.a(706856675, 128, 256, var2, var3, true);
             ee.a(653278209, var5, var6);
           } else {
-            var7 = var4.a(var4.field_L, (byte) -68);
+            var7 = var4.a(var4.actionTime, (byte) -68);
             lo.a(706856675, 256, var7, var2, var3, true);
             ee.a(653278209, var5, var6);
           }
@@ -975,7 +975,7 @@ final class va extends hs {
             if (0 == var4.archetype) {
               var7 = var7 << 1;
             }
-            var8 = var7 - var4.field_L;
+            var8 = var7 - var4.actionTime;
             if (var8 < 0) {
               var8 = 0;
             }
@@ -1022,52 +1022,52 @@ final class va extends hs {
             var17.a((byte) 120);
           }
           for (var4 = 0; var4 < 50; var4++) {
-            if (-1 != var17.field_V.field_m) {
-              var17.d(4);
+            if (-1 != var17.field_V.possessorTeam) {
+              var17.tick(4);
               continue;
             }
             break;
           }
-          if (var17.field_V.field_m != -1) {
+          if (var17.field_V.possessorTeam != -1) {
             return;
           }
           var6 = var17.field_V;
-          var6.a((byte) -86, this.field_a.surface, this.field_a.field_B);
+          var6.stepPhysics((byte) -86, this.field_a.surface, this.field_a.field_B);
           while (!var6.field_k) {
-            if (var6.field_v != 0) {
-              var6.a((byte) -106, this.field_a.surface, this.field_a.field_B);
+            if (var6.height != 0) {
+              var6.stepPhysics((byte) -106, this.field_a.surface, this.field_a.field_B);
               continue;
             }
             break;
           }
-          var4Lifetime1 = var6.a(true);
-          var5 = var6.c(879306160);
+          var4Lifetime1 = var6.pixelX(true);
+          var5 = var6.pixelY(879306160);
           var7 = -89 % ((param1 + 55) / 38);
-          while (250000 < var6.e(28)) {
-            var6.a((byte) 122, this.field_a.surface, this.field_a.field_B);
-            var6.a((byte) -70, this.field_a.surface, this.field_a.field_B);
+          while (250000 < var6.horizontalSpeedSquared(28)) {
+            var6.stepPhysics((byte) 122, this.field_a.surface, this.field_a.field_B);
+            var6.stepPhysics((byte) -70, this.field_a.surface, this.field_a.field_B);
           }
           if (param0 != null) {
-            var4Lifetime1 = var4Lifetime1 + var6.a(true) >> 1;
-            var5 = var6.c(879306160) + var5 >> 1;
+            var4Lifetime1 = var4Lifetime1 + var6.pixelX(true) >> 1;
+            var5 = var6.pixelY(879306160) + var5 >> 1;
           } else {
-            var4Lifetime1 = var6.a(true);
-            var5 = var6.c(879306160);
+            var4Lifetime1 = var6.pixelX(true);
+            var5 = var6.pixelY(879306160);
           }
           var8 = this.field_a.field_g[this.field_g].field_p;
           var9 = -1;
           var10 = 2147483647;
           for (var11 = 1; this.field_a.field_P[var8].length > var11; var11++) {
             var12 = this.field_a.field_P[var8][var11];
-            var13 = -var4Lifetime1 + (var12.field_M >> 16);
-            var14 = -var5 + (var12.field_w >> 16);
+            var13 = -var4Lifetime1 + (var12.positionX >> 16);
+            var14 = -var5 + (var12.positionY >> 16);
             var15 = var13 * var13 + var14 * var14;
             if (var15 < var10) {
               var10 = var15;
               var9 = var11;
             }
           }
-          if (this.field_a.a((byte) 6, var8, var9) == -1) {
+          if (this.field_a.findControllingParticipant((byte) 6, var8, var9) == -1) {
             this.g(var9 + 1, -1);
           }
           return;
@@ -1207,8 +1207,8 @@ final class va extends hs {
     final void g(int param0) {
         ki var3;
         if (-2 != this.field_s ||
-          this.field_a.field_V.field_m != -1) {
-          this.field_s = this.field_a.field_V.field_m;
+          this.field_a.field_V.possessorTeam != -1) {
+          this.field_s = this.field_a.field_V.possessorTeam;
         }
         if (param0 != 0) {
           var3 = (ki) null;
@@ -1281,8 +1281,8 @@ final class va extends hs {
           stackIn_21_0 = (!this.field_f) ? 12 : 0;
           var2Lifetime1 = stackIn_21_0 + (hw.field_i * 100 >> 8);
           for (var3Lifetime1 = 0; this.field_a.playerCount > var3Lifetime1; var3Lifetime1++) {
-            if (this.field_a.participantStatus[var3Lifetime1].d(3511)) {
-              var4_ref_gm = (gm) (this.field_a.a((byte) 112, var3Lifetime1));
+            if (this.field_a.participantStatus[var3Lifetime1].isActive(3511)) {
+              var4_ref_gm = (gm) (this.field_a.getControlledFootballer((byte) 112, var3Lifetime1));
               this.field_C[var3Lifetime1].c(ug.a(0, var4_ref_gm.g(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), lf.a((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
             }
           }
@@ -1370,7 +1370,7 @@ final class va extends hs {
         if (!this.a((byte) 13)) {
           return true;
         }
-        if (this.field_a.participantStatus[this.field_g].d(param1 ^ 2865)) {
+        if (this.field_a.participantStatus[this.field_g].isActive(param1 ^ 2865)) {
           if (param2 == 83 ||
             param2 == 82) {
             this.g(0, param1 - 1671);
@@ -1422,9 +1422,9 @@ final class va extends hs {
           this.field_n = this.field_a.bigHeadMode;
           this.j(-90);
         }
-        FootballerAgent var4 = this.field_a.b((byte) -96);
+        FootballerAgent var4 = this.field_a.getBallCarrier((byte) -96);
         if (var4 != null) {
-          ((ob) (this.field_a.field_V)).field_E = ((ob) (this.field_a.field_V)).field_E + (var4.field_n << 16);
+          ((ob) (this.field_a.field_V)).field_E = ((ob) (this.field_a.field_V)).field_E + (var4.directionY << 16);
         }
         if (param0 > -92) {
           return;
@@ -1482,7 +1482,7 @@ final class va extends hs {
               var7 = 0;
             }
             if (wn.a((byte) -86)) {
-              stackIn_27_0 = (this.field_a.field_P[var2][var6].field_N.c((byte) -107, this.field_a.field_P[var2][var6].member)) ? 1 : 0;
+              stackIn_27_0 = (this.field_a.field_P[var2][var6].stats.c((byte) -107, this.field_a.field_P[var2][var6].member)) ? 1 : 0;
             } else {
               stackIn_27_0 = 0;
             }
@@ -1510,12 +1510,12 @@ final class va extends hs {
             for (var4 = 0; var4 < 5; var4++) {
               var5 = (gm) (param1.field_P[var3_int][var4]);
               var6 = ~param1.field_X.goalScorer == ~var3_int ? 1 : 0;
-              var7 = param1.a((byte) 6, var3_int, var4);
+              var7 = param1.findControllingParticipant((byte) 6, var3_int, var4);
               var8 = var7 == -1 ? 0 : param1.participantStatus[var7].field_l;
               var5.a(var6 != 0, false, var8);
             }
           }
-          ((ob) (param1.field_V)).a((gm) (param1.b((byte) -96)), (byte) 50);
+          ((ob) (param1.field_V)).a((gm) (param1.getBallCarrier((byte) -96)), (byte) 50);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "va.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

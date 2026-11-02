@@ -57,7 +57,7 @@ final class mg {
             mg.a((up) null, 111, 43, false, 111, (byte) 15);
           }
           var7 = new gm(var6, param0.field_q, true);
-          var7.a((byte) -31, 0);
+          var7.setAction((byte) -31, 0);
           var7.field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
           stackIn_3_0 = var7;
           return stackIn_3_0;

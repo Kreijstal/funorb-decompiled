@@ -41,7 +41,7 @@ final class ConsoleEvaluationException extends Exception {
         var3 = Kickabout.field_G;
         if (param1 == 0) {
           if (eq.field_d <= 0) {
-            if (!la.a(100)) {
+            if (!PlayArea.a(100)) {
               var2 = 1;
             } else {
               var2 = 0;
@@ -77,7 +77,7 @@ final class ConsoleEvaluationException extends Exception {
         } else {
           ConsoleEvaluationException.a(-109);
           if (eq.field_d <= 0) {
-            if (!la.a(100)) {
+            if (!PlayArea.a(100)) {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
                 cv.field_e) {

@@ -76,7 +76,7 @@ final class nk extends dg {
         int var1_int = 0;
         hn var2 = null;
         int var3 = Kickabout.field_G;
-        if (la.a(param0 + 156)) {
+        if (PlayArea.a(param0 + 156)) {
           wk.a(50);
           return;
         }

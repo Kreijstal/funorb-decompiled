@@ -18,7 +18,7 @@ final class hp {
 
     final static void b(int param0) {
         NodeHashTableIterator.field_b = param0;
-        la.a(true);
+        PlayArea.a(true);
     }
 
     static {

@@ -33,10 +33,10 @@ final class jr extends im {
           }
           var3 = stackIn_8_0;
           stackIn_18_0 = this.field_Cb;
-          stackIn_19_1 = (!la.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
+          stackIn_19_1 = (!PlayArea.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
           stackIn_18_0.field_lb = stackIn_19_1;
           stackIn_29_0 = this.field_Jb;
-          stackIn_30_1 = (!la.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.a(this.field_Hb.field_a, (byte) -79));
+          stackIn_30_1 = (!PlayArea.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.a(this.field_Hb.field_a, (byte) -79));
           stackIn_29_0.field_lb = stackIn_30_1;
           if (param1) {
             for (var4 = 0; var4 < this.field_Eb.length; var4++) {

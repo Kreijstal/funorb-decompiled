@@ -353,7 +353,7 @@ final class ba extends sr {
             if (dk.field_g[var4Lifetime2] >= 0) {
               stackIn_115_1 = nr.field_j;
             } else {
-              stackIn_115_1 = la.field_c;
+              stackIn_115_1 = PlayArea.field_c;
             }
             BufferedSocket.field_j = stackIn_114_0 + stackIn_115_1;
           }
@@ -364,7 +364,7 @@ final class ba extends sr {
           while (eq.field_c.length > var4Lifetime3) {
             var6Lifetime1 = dk.field_g[var4Lifetime3];
             if (var6Lifetime1 < 0) {
-              var5Lifetime3 = var5Lifetime3 + la.field_c;
+              var5Lifetime3 = var5Lifetime3 + PlayArea.field_c;
             } else {
               var7Lifetime2 = ud.a(10, eq.field_c[var4Lifetime3], true);
               var8Lifetime1 = ta.field_A - (var7Lifetime2 >> 1);

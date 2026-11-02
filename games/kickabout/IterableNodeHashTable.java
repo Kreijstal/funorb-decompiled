@@ -110,19 +110,19 @@ final class IterableNodeHashTable implements Iterable {
         double var26Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
-        if (848.0 > la.field_d) {
-          la.field_d = 848.0;
+        if (848.0 > PlayArea.field_d) {
+          PlayArea.field_d = 848.0;
         }
         stackIn_5_0 = (param0) ? 1.4 : 0.013999999999999999;
         var2 = stackIn_5_0;
-        if (2048.0 < la.field_d) {
-          la.field_d = 2048.0;
+        if (2048.0 < PlayArea.field_d) {
+          PlayArea.field_d = 2048.0;
         }
         var4 = CachedArchiveSource.field_C - hd.field_K;
         var6 = -jr.field_Gb + cq.field_f;
         if (param1 != 89) {
           field_c = (ResourceArchive) null;
-          var8 = la.field_d - hw.field_f;
+          var8 = PlayArea.field_d - hw.field_f;
           var10 = Math.sqrt(var4 * var4 + var6 * var6 + var8 * var8);
           if (var10 > 0.0001) {
             var12_double = mc.a(var10, var2, false) / var10;
@@ -169,16 +169,16 @@ final class IterableNodeHashTable implements Iterable {
               jr.field_Gb = cq.field_f;
             }
           }
-          stackIn_40_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+          stackIn_40_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
           var12Lifetime3 = stackIn_40_0;
           hw.field_f = hw.field_f + DualLinkDeque.field_e;
           if (var12Lifetime3 != 0 &&
-            hw.field_f > la.field_d) {
-            hw.field_f = la.field_d;
+            hw.field_f > PlayArea.field_d) {
+            hw.field_f = PlayArea.field_d;
           } else {
             if (var12Lifetime3 == 0 &&
-              la.field_d > hw.field_f) {
-              hw.field_f = la.field_d;
+              PlayArea.field_d > hw.field_f) {
+              hw.field_f = PlayArea.field_d;
             }
           }
           sp.i(-320);
@@ -188,7 +188,7 @@ final class IterableNodeHashTable implements Iterable {
           hw.field_i = (int)hw.field_f >> 3;
           return;
         }
-        var8Lifetime1 = la.field_d - hw.field_f;
+        var8Lifetime1 = PlayArea.field_d - hw.field_f;
         var10Lifetime1 = Math.sqrt(var4 * var4 + var6 * var6 + var8Lifetime1 * var8Lifetime1);
         if (var10Lifetime1 > 0.0001) {
           var12_doubleLifetime1 = mc.a(var10Lifetime1, var2, false) / var10Lifetime1;
@@ -223,16 +223,16 @@ final class IterableNodeHashTable implements Iterable {
               cq.field_f > jr.field_Gb) {
               jr.field_Gb = cq.field_f;
             }
-            stackIn_74_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+            stackIn_74_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
             var12Lifetime1 = stackIn_74_0;
             hw.field_f = hw.field_f + DualLinkDeque.field_e;
             if (var12Lifetime1 != 0 &&
-              hw.field_f > la.field_d) {
-              hw.field_f = la.field_d;
+              hw.field_f > PlayArea.field_d) {
+              hw.field_f = PlayArea.field_d;
             } else {
               if (var12Lifetime1 == 0 &&
-                la.field_d > hw.field_f) {
-                hw.field_f = la.field_d;
+                PlayArea.field_d > hw.field_f) {
+                hw.field_f = PlayArea.field_d;
               }
             }
           } else {
@@ -247,31 +247,31 @@ final class IterableNodeHashTable implements Iterable {
               if (cq.field_f > jr.field_Gb) {
                 jr.field_Gb = cq.field_f;
               }
-              stackIn_98_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+              stackIn_98_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_98_0;
               hw.field_f = hw.field_f + DualLinkDeque.field_e;
               if (var12Lifetime1 != 0 &&
-                hw.field_f > la.field_d) {
-                hw.field_f = la.field_d;
+                hw.field_f > PlayArea.field_d) {
+                hw.field_f = PlayArea.field_d;
               } else {
                 if (var12Lifetime1 == 0 &&
-                  la.field_d > hw.field_f) {
-                  hw.field_f = la.field_d;
+                  PlayArea.field_d > hw.field_f) {
+                  hw.field_f = PlayArea.field_d;
                 }
               }
             } else {
               if (jr.field_Gb > cq.field_f) {
                 jr.field_Gb = cq.field_f;
-                stackIn_131_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+                stackIn_131_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
                 var12Lifetime1 = stackIn_131_0;
                 hw.field_f = hw.field_f + DualLinkDeque.field_e;
                 if (var12Lifetime1 != 0 &&
-                  hw.field_f > la.field_d) {
-                  hw.field_f = la.field_d;
+                  hw.field_f > PlayArea.field_d) {
+                  hw.field_f = PlayArea.field_d;
                 } else {
                   if (var12Lifetime1 == 0 &&
-                    la.field_d > hw.field_f) {
-                    hw.field_f = la.field_d;
+                    PlayArea.field_d > hw.field_f) {
+                    hw.field_f = PlayArea.field_d;
                   }
                 }
               } else {
@@ -279,16 +279,16 @@ final class IterableNodeHashTable implements Iterable {
                   cq.field_f > jr.field_Gb) {
                   jr.field_Gb = cq.field_f;
                 }
-                stackIn_117_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+                stackIn_117_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
                 var12Lifetime1 = stackIn_117_0;
                 hw.field_f = hw.field_f + DualLinkDeque.field_e;
                 if (var12Lifetime1 != 0 &&
-                  hw.field_f > la.field_d) {
-                  hw.field_f = la.field_d;
+                  hw.field_f > PlayArea.field_d) {
+                  hw.field_f = PlayArea.field_d;
                 } else {
                   if (var12Lifetime1 == 0 &&
-                    la.field_d > hw.field_f) {
-                    hw.field_f = la.field_d;
+                    PlayArea.field_d > hw.field_f) {
+                    hw.field_f = PlayArea.field_d;
                   }
                 }
               }
@@ -303,16 +303,16 @@ final class IterableNodeHashTable implements Iterable {
             if (var12Lifetime1 == 0) {
               if (var12Lifetime1 == 0) {
                 if (!(cq.field_f > jr.field_Gb)) {
-                  stackIn_174_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+                  stackIn_174_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
                   var12Lifetime1 = stackIn_174_0;
                   hw.field_f = hw.field_f + DualLinkDeque.field_e;
                   if (var12Lifetime1 != 0 &&
-                    hw.field_f > la.field_d) {
-                    hw.field_f = la.field_d;
+                    hw.field_f > PlayArea.field_d) {
+                    hw.field_f = PlayArea.field_d;
                   } else {
                     if (var12Lifetime1 == 0 &&
-                      la.field_d > hw.field_f) {
-                      hw.field_f = la.field_d;
+                      PlayArea.field_d > hw.field_f) {
+                      hw.field_f = PlayArea.field_d;
                       sp.i(-320);
                       if (0.0 != fw.field_G) {
                         fw.field_G = fw.field_G * -0.9;
@@ -333,16 +333,16 @@ final class IterableNodeHashTable implements Iterable {
                   cq.field_f > jr.field_Gb) {
                   jr.field_Gb = cq.field_f;
                 }
-                stackIn_157_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+                stackIn_157_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
                 var12Lifetime1 = stackIn_157_0;
                 hw.field_f = hw.field_f + DualLinkDeque.field_e;
                 if (var12Lifetime1 != 0 &&
-                  hw.field_f > la.field_d) {
-                  hw.field_f = la.field_d;
+                  hw.field_f > PlayArea.field_d) {
+                  hw.field_f = PlayArea.field_d;
                 } else {
                   if (var12Lifetime1 == 0 &&
-                    la.field_d > hw.field_f) {
-                    hw.field_f = la.field_d;
+                    PlayArea.field_d > hw.field_f) {
+                    hw.field_f = PlayArea.field_d;
                   }
                 }
                 decompiledFrameRemainder1 = false;
@@ -352,21 +352,21 @@ final class IterableNodeHashTable implements Iterable {
               }
             }
             if (decompiledFrameRemainder1) {
-              stackIn_191_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+              stackIn_191_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_191_0;
               hw.field_f = hw.field_f + DualLinkDeque.field_e;
               if (var12Lifetime1 == 0) {
                 if (var12Lifetime1 == 0 &&
-                  la.field_d > hw.field_f) {
-                  hw.field_f = la.field_d;
+                  PlayArea.field_d > hw.field_f) {
+                  hw.field_f = PlayArea.field_d;
                 }
               } else {
-                if (hw.field_f > la.field_d) {
-                  hw.field_f = la.field_d;
+                if (hw.field_f > PlayArea.field_d) {
+                  hw.field_f = PlayArea.field_d;
                 } else {
                   if (var12Lifetime1 == 0 &&
-                    la.field_d > hw.field_f) {
-                    hw.field_f = la.field_d;
+                    PlayArea.field_d > hw.field_f) {
+                    hw.field_f = PlayArea.field_d;
                   }
                 }
               }
@@ -383,16 +383,16 @@ final class IterableNodeHashTable implements Iterable {
                 cq.field_f > jr.field_Gb) {
                 jr.field_Gb = cq.field_f;
               }
-              stackIn_228_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+              stackIn_228_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_228_0;
               hw.field_f = hw.field_f + DualLinkDeque.field_e;
               if (var12Lifetime1 != 0 &&
-                hw.field_f > la.field_d) {
-                hw.field_f = la.field_d;
+                hw.field_f > PlayArea.field_d) {
+                hw.field_f = PlayArea.field_d;
               } else {
                 if (var12Lifetime1 == 0 &&
-                  la.field_d > hw.field_f) {
-                  hw.field_f = la.field_d;
+                  PlayArea.field_d > hw.field_f) {
+                  hw.field_f = PlayArea.field_d;
                 }
               }
             } else {
@@ -404,16 +404,16 @@ final class IterableNodeHashTable implements Iterable {
                 decompiledFrameRemainder0 = (var12Lifetime1 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (!(cq.field_f > jr.field_Gb))) {
-                  stackIn_267_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+                  stackIn_267_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
                   var12Lifetime1 = stackIn_267_0;
                   hw.field_f = hw.field_f + DualLinkDeque.field_e;
                   if (var12Lifetime1 != 0 &&
-                    hw.field_f > la.field_d) {
-                    hw.field_f = la.field_d;
+                    hw.field_f > PlayArea.field_d) {
+                    hw.field_f = PlayArea.field_d;
                   } else {
                     if (var12Lifetime1 == 0 &&
-                      la.field_d > hw.field_f) {
-                      hw.field_f = la.field_d;
+                      PlayArea.field_d > hw.field_f) {
+                      hw.field_f = PlayArea.field_d;
                       sp.i(-320);
                       if (0.0 != fw.field_G) {
                         fw.field_G = fw.field_G * -0.9;
@@ -437,16 +437,16 @@ final class IterableNodeHashTable implements Iterable {
                     cq.field_f > jr.field_Gb) {
                     jr.field_Gb = cq.field_f;
                   }
-                  stackIn_251_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+                  stackIn_251_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
                   var12Lifetime1 = stackIn_251_0;
                   hw.field_f = hw.field_f + DualLinkDeque.field_e;
                   if (var12Lifetime1 != 0 &&
-                    hw.field_f > la.field_d) {
-                    hw.field_f = la.field_d;
+                    hw.field_f > PlayArea.field_d) {
+                    hw.field_f = PlayArea.field_d;
                   } else {
                     if (var12Lifetime1 == 0 &&
-                      la.field_d > hw.field_f) {
-                      hw.field_f = la.field_d;
+                      PlayArea.field_d > hw.field_f) {
+                      hw.field_f = PlayArea.field_d;
                     }
                   }
                   sp.i(-320);
@@ -460,20 +460,20 @@ final class IterableNodeHashTable implements Iterable {
               if (decompiledFrameRemainder0) {
                 jr.field_Gb = cq.field_f;
               }
-              stackIn_285_0 = (!(la.field_d > hw.field_f)) ? 0 : 1;
+              stackIn_285_0 = (!(PlayArea.field_d > hw.field_f)) ? 0 : 1;
               var12Lifetime1 = stackIn_285_0;
               hw.field_f = hw.field_f + DualLinkDeque.field_e;
               if (var12Lifetime1 == 0) {
-                if (la.field_d > hw.field_f) {
-                  hw.field_f = la.field_d;
+                if (PlayArea.field_d > hw.field_f) {
+                  hw.field_f = PlayArea.field_d;
                 }
               } else {
-                if (hw.field_f > la.field_d) {
-                  hw.field_f = la.field_d;
+                if (hw.field_f > PlayArea.field_d) {
+                  hw.field_f = PlayArea.field_d;
                 } else {
                   if (var12Lifetime1 == 0 &&
-                    la.field_d > hw.field_f) {
-                    hw.field_f = la.field_d;
+                    PlayArea.field_d > hw.field_f) {
+                    hw.field_f = PlayArea.field_d;
                   }
                 }
               }

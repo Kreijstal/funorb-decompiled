@@ -162,14 +162,14 @@ final class DualLinkDeque {
           }
           while (var1_int < 3) {
             var2 = et.field_d.field_P[1][var1_int + 1];
-            if (tc.a(0, (byte) 86, var2.field_M, var2, nt.field_zb[var1_int] << 16)) {
-              nt.field_zb[var1_int] = 700 + (-var2.a(true) + 700);
+            if (tc.a(0, (byte) 86, var2.positionX, var2, nt.field_zb[var1_int] << 16)) {
+              nt.field_zb[var1_int] = 700 + (-var2.pixelY(true) + 700);
               if (nt.field_zb[var1_int] <= 700) {
                 nt.field_zb[var1_int] = Math.max(520, nt.field_zb[var1_int] - 20);
               } else {
                 nt.field_zb[var1_int] = Math.min(880, nt.field_zb[var1_int] + 20);
               }
-              tc.a(0, (byte) 122, var2.field_M, var2, nt.field_zb[var1_int] << 16);
+              tc.a(0, (byte) 122, var2.positionX, var2, nt.field_zb[var1_int] << 16);
             }
             var1_int++;
           }

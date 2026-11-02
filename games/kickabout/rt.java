@@ -138,7 +138,7 @@ final class rt extends i {
           this.field_H != -1 &&
           this.field_M[this.field_H] < 100) {
           if (!(cq.field_h instanceof ta)) {
-            if (!la.a(100)) {
+            if (!PlayArea.a(100)) {
               var4 = new hn(3, new int[]{this.field_P, this.field_H});
               if (cq.field_h instanceof ap &&
                 null != um.field_e &&

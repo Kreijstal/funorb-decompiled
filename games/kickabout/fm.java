@@ -83,7 +83,7 @@ final class fm extends qt {
         var9 = 230;
         SoftwareRasterizer.a(this.field_j + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
-          if (!la.a(100)) {
+          if (!PlayArea.a(100)) {
             IsSixCommand.field_C.a(rt.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           } else {
             IsSixCommand.field_C.a(sh.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
@@ -491,7 +491,7 @@ final class fm extends qt {
     }
 
     final int b(int param0, int param1) {
-        if (!la.a(100)) {
+        if (!PlayArea.a(100)) {
           if (param1 == -22667) {
             return super.b(param0, -22667);
           }

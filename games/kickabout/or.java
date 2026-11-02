@@ -86,8 +86,8 @@ final class or {
         int var29 = Kickabout.field_G;
         try {
           var30 = param0.field_P[param2][param1];
-          var5 = var30.f(-110);
-          var6 = var30.a(true);
+          var5 = var30.pixelX(-110);
+          var6 = var30.pixelY(true);
           var7 = param0.field_r[param2];
           var8 = ws.field_c[var7][-1 + param1][2];
           var9 = ws.field_c[var7][-1 + param1][3];
@@ -112,10 +112,10 @@ final class or {
           var19 = param2 == 1 ? 13369344 : ih.field_c != 2 ? 65793 : 16777215;
           var20 = 24;
           var21 = 24;
-          if ((10 & var30.field_G) == 0) {
+          if ((10 & var30.directionMask) == 0) {
             var20 = var20 << 1;
           }
-          if ((5 & var30.field_G) == 0) {
+          if ((5 & var30.directionMask) == 0) {
             var21 = var21 << 1;
           }
           var20 = hw.field_i * (var20 << 1) >> 8;

@@ -139,8 +139,8 @@ final class nq extends i {
           if (param4 <= 36) {
             field_G = (Sprite) null;
           }
-          var6_int = param2.f(-95);
-          var7 = param2.a(true);
+          var6_int = param2.pixelX(-95);
+          var7 = param2.pixelY(true);
           stackIn_4_0 = (FootballerAgent) (param2);
           if (param1 + param0 < var7) {
             stackIn_5_1 = 4;
@@ -163,9 +163,9 @@ final class nq extends i {
           } else {
             stackIn_14_3 = 0;
           }
-          stackIn_4_0.field_G = stackIn_5_1 | (stackIn_13_2 | stackIn_14_3);
-          if (param2.field_G == 0) {
-            param2.a(param3, 26214);
+          stackIn_4_0.directionMask = stackIn_5_1 | (stackIn_13_2 | stackIn_14_3);
+          if (param2.directionMask == 0) {
+            param2.setDirectionFromMask(param3, 26214);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,7 +183,7 @@ final class nq extends i {
     }
 
     final static void b(int param0, int param1) {
-        if (la.a(100)) {
+        if (PlayArea.a(100)) {
           return;
         }
         if (uv.field_f) {

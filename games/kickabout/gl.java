@@ -143,13 +143,13 @@ final class gl {
                       var8 = 1344;
                     }
                   }
-                  var9 = param1.field_V.field_t;
-                  var10 = param1.field_V.field_p;
-                  param1.field_V.field_t = var7 << 16;
-                  param1.field_V.field_p = var8 << 16;
+                  var9 = param1.field_V.positionX;
+                  var10 = param1.field_V.positionY;
+                  param1.field_V.positionX = var7 << 16;
+                  param1.field_V.positionY = var8 << 16;
                   vl.a(param1, (byte) -75);
-                  param1.field_V.field_t = var9;
-                  param1.field_V.field_p = var10;
+                  param1.field_V.positionX = var9;
+                  param1.field_V.positionY = var10;
                   ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
                   in.field_c[var2_int][var3][var4][var6][0] = ge.field_m[0];
                   in.field_c[var2_int][var3][var4][var6][1] = ge.field_m[1];

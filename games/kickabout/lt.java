@@ -32,7 +32,7 @@ final class lt {
         return 1;
     }
 
-    final static int[] a(int param0, int param1, la[] param2, int param3, int param4, int param5, int param6, int param7) {
+    final static int[] moveWithinAreas(int param0, int param1, PlayArea[] param2, int param3, int param4, int param5, int param6, int param7) {
         int[] stackIn_2_0 = null;
         int[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -40,7 +40,7 @@ final class lt {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        la[] var9 = null;
+        PlayArea[] var9 = null;
         try {
           RandomAccessCacheFile.field_b[1] = param5;
           RandomAccessCacheFile.field_b[5] = param7;
@@ -48,26 +48,26 @@ final class lt {
           RandomAccessCacheFile.field_b[0] = param6;
           RandomAccessCacheFile.field_b[4] = param1;
           RandomAccessCacheFile.field_b[2] = param4;
-          if (!pe.a(param2, (byte) -124, RandomAccessCacheFile.field_b)) {
+          if (!pe.isInsideAnyArea(param2, (byte) -124, RandomAccessCacheFile.field_b)) {
             stackIn_2_0 = RandomAccessCacheFile.field_b;
             return stackIn_2_0;
           }
           RandomAccessCacheFile.field_b[0] = RandomAccessCacheFile.field_b[0] + RandomAccessCacheFile.field_b[3];
-          if (!pe.a(param2, (byte) -104, RandomAccessCacheFile.field_b)) {
+          if (!pe.isInsideAnyArea(param2, (byte) -104, RandomAccessCacheFile.field_b)) {
             RandomAccessCacheFile.field_b[0] = param6;
             RandomAccessCacheFile.field_b[3] = -RandomAccessCacheFile.field_b[3];
           }
           RandomAccessCacheFile.field_b[1] = RandomAccessCacheFile.field_b[1] + RandomAccessCacheFile.field_b[4];
-          if (!pe.a(param2, (byte) -61, RandomAccessCacheFile.field_b)) {
+          if (!pe.isInsideAnyArea(param2, (byte) -61, RandomAccessCacheFile.field_b)) {
             RandomAccessCacheFile.field_b[1] = param5;
             RandomAccessCacheFile.field_b[4] = -RandomAccessCacheFile.field_b[4];
           }
           RandomAccessCacheFile.field_b[2] = RandomAccessCacheFile.field_b[2] + RandomAccessCacheFile.field_b[5];
           if (param3 >= -51) {
-            var9 = (la[]) null;
-            lt.a(-23, 65, (la[]) null, -116, 62, 0, -89, 61);
+            var9 = (PlayArea[]) null;
+            lt.moveWithinAreas(-23, 65, (PlayArea[]) null, -116, 62, 0, -89, 61);
           }
-          if (!pe.a(param2, (byte) -85, RandomAccessCacheFile.field_b)) {
+          if (!pe.isInsideAnyArea(param2, (byte) -85, RandomAccessCacheFile.field_b)) {
             RandomAccessCacheFile.field_b[5] = -RandomAccessCacheFile.field_b[5];
             RandomAccessCacheFile.field_b[2] = param4;
           }

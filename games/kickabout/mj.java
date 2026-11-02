@@ -77,7 +77,7 @@ final class mj {
         if (param1 != 60) {
           mj.a(49);
         }
-        la.field_d = param0 * 8.0;
+        PlayArea.field_d = param0 * 8.0;
         if (ia.field_c) {
           CachedArchiveSource.field_C = 896.0 - CachedArchiveSource.field_C;
           cq.field_f = 1344.0 - cq.field_f;

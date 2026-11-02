@@ -90,11 +90,11 @@ final class j {
 
     final void a(int param0, int param1) {
         if (param0 == 0) {
-          this.field_b.field_G = 0;
-          this.field_b.field_j = 1;
-          this.field_b.field_n = 0;
+          this.field_b.directionMask = 0;
+          this.field_b.directionX = 1;
+          this.field_b.directionY = 0;
           if (param0 != 129) {
-            this.field_b.a(2, (la[]) null, false, false);
+            this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
             if (param1 == 1) {
               this.field_b.g((byte) 125);
               return;
@@ -103,8 +103,8 @@ final class j {
             this.field_b.g((byte) 125);
             return;
           }
-          this.field_b.field_G = 3;
-          this.field_b.a(2, (la[]) null, false, false);
+          this.field_b.directionMask = 3;
+          this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
           if (param1 != 1) {
             field_a = (String[]) null;
             this.field_b.g((byte) 125);
@@ -113,10 +113,10 @@ final class j {
           this.field_b.g((byte) 125);
           return;
         }
-        this.field_b.field_G = 8;
+        this.field_b.directionMask = 8;
         if (param0 == 129) {
-          this.field_b.field_G = 3;
-          this.field_b.a(2, (la[]) null, false, false);
+          this.field_b.directionMask = 3;
+          this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
           if (param1 == 1) {
             this.field_b.g((byte) 125);
             return;
@@ -125,7 +125,7 @@ final class j {
           this.field_b.g((byte) 125);
           return;
         }
-        this.field_b.a(2, (la[]) null, false, false);
+        this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
         if (param1 == 1) {
           this.field_b.g((byte) 125);
           return;
@@ -147,7 +147,7 @@ final class j {
         }
         vn var4 = fp.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
         this.field_b = new gm(var4, var2, false);
-        this.field_b.field_G = 8;
+        this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;
         this.field_b.b((byte) -128, 5);
         if (param0 == 0) {

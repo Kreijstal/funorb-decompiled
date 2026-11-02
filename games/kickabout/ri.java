@@ -8,7 +8,7 @@ class ri extends TextWidgetPainter {
     static String field_v;
     static int field_r;
 
-    final static void a(byte param0, int param1, CommonGame param2, int param3) {
+    final static void updateIdleMovement(byte param0, int param1, CommonGame param2, int param3) {
         FootballerAgent stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -38,30 +38,30 @@ class ri extends TextWidgetPainter {
           if (param0 != -93) {
             ri.a(113, false, true, 5);
           }
-          var6 = var16.f(param0 - 7);
-          var7 = var16.a(true);
-          var8 = param2.field_V.a(true);
-          var9 = param2.field_V.c(879306160);
+          var6 = var16.pixelX(param0 - 7);
+          var7 = var16.pixelY(true);
+          var8 = param2.field_V.pixelX(true);
+          var9 = param2.field_V.pixelY(879306160);
           if ((var5 & (1 << var16.aiWait) - 1) != 0) {
-            if ((1 & var16.field_G) != 0 &&
-              88080384 <= var16.field_w) {
-              var16.field_G = var16.field_G & -2;
-              var16.field_G = var16.field_G | 4;
+            if ((1 & var16.directionMask) != 0 &&
+              88080384 <= var16.positionY) {
+              var16.directionMask = var16.directionMask & -2;
+              var16.directionMask = var16.directionMask | 4;
             }
-            if ((4 & var16.field_G) != 0 &&
-              var16.field_w <= 0) {
-              var16.field_G = var16.field_G & -5;
-              var16.field_G = var16.field_G | 1;
+            if ((4 & var16.directionMask) != 0 &&
+              var16.positionY <= 0) {
+              var16.directionMask = var16.directionMask & -5;
+              var16.directionMask = var16.directionMask | 1;
             }
-            if (0 != (8 & var16.field_G) &&
-              58720256 <= var16.field_M) {
-              var16.field_G = var16.field_G & -9;
-              var16.field_G = var16.field_G | 2;
+            if (0 != (8 & var16.directionMask) &&
+              58720256 <= var16.positionX) {
+              var16.directionMask = var16.directionMask & -9;
+              var16.directionMask = var16.directionMask | 2;
             }
-            if ((var16.field_G & 2) != 0 &&
-              var16.field_M <= 0) {
-              var16.field_G = var16.field_G & -3;
-              var16.field_G = var16.field_G | 8;
+            if ((var16.directionMask & 2) != 0 &&
+              var16.positionX <= 0) {
+              var16.directionMask = var16.directionMask & -3;
+              var16.directionMask = var16.directionMask | 8;
             }
           } else {
             ParticipantStatus.a(param1, param3, (byte) 103, param2.field_r[param3]);
@@ -69,22 +69,22 @@ class ri extends TextWidgetPainter {
             var11 = -ge.field_m[1] + var7;
             var12 = 24;
             var13 = 24;
-            if ((10 & var16.field_G) == 0) {
+            if ((10 & var16.directionMask) == 0) {
               var12 = var12 << 1;
             }
-            if ((5 & var16.field_G) == 0) {
+            if ((5 & var16.directionMask) == 0) {
               var13 = var13 << 1;
             }
             if (Math.abs(var10) <= var12 &&
               Math.abs(var11) <= var13) {
               stackIn_17_0 = var16;
-              if (var16.field_G == 0) {
+              if (var16.directionMask == 0) {
                 stackIn_18_1 = 5;
               } else {
                 stackIn_18_1 = 7;
               }
               stackIn_17_0.aiWait = stackIn_18_1;
-              var16.field_G = 0;
+              var16.directionMask = 0;
             } else {
               var14 = 0;
               if (var12 < var10) {
@@ -99,21 +99,21 @@ class ri extends TextWidgetPainter {
               if (-var13 > var11) {
                 var14 = var14 | 1;
               }
-              if (var16.field_G != var14) {
+              if (var16.directionMask != var14) {
                 var16.aiWait = 1;
               } else {
                 if (var16.aiWait < 4 &&
-                  var16.field_G == var14) {
+                  var16.directionMask == var14) {
                   var16.aiWait = var16.aiWait + 1;
                 }
               }
-              var16.field_G = var14;
+              var16.directionMask = var14;
             }
           }
-          if (var16.field_G == 0 &&
+          if (var16.directionMask == 0 &&
             0 == var16.action &&
             var5 % 10 == 0) {
-            var16.a(uv.a(true, -var7 + var9, -var6 + var8), 26214);
+            var16.setDirectionFromMask(uv.a(true, -var7 + var9, -var6 + var8), 26214);
             return;
           }
           return;
@@ -246,7 +246,7 @@ class ri extends TextWidgetPainter {
           var10.field_y = 16777215;
           if (param2 > -51) {
             var19 = (CommonGame) null;
-            ri.a((byte) -76, -14, (CommonGame) null, 71);
+            ri.updateIdleMovement((byte) -76, -14, (CommonGame) null, 71);
           }
           var10.field_X = (BitmapFont) ((Object) rq.field_E);
           var10.field_xb = sh.field_c;
@@ -653,7 +653,7 @@ class ri extends TextWidgetPainter {
               nv.field_F.field_E = jw.field_Db;
               ac.field_b.field_lb = true;
               tt.field_c = true;
-              if (null != la.field_k) {
+              if (null != PlayArea.field_k) {
                 ee.field_e = false;
                 tt.field_c = false;
                 if (SumIntegersCommand.field_G == null) {

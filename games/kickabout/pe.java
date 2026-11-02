@@ -103,13 +103,13 @@ final class pe {
         }
     }
 
-    final static boolean a(la[] param0, byte param1, int[] param2) {
-        la[] var3 = null;
+    final static boolean isInsideAnyArea(PlayArea[] param0, byte param1, int[] param2) {
+        PlayArea[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        la var5 = null;
+        PlayArea var5 = null;
         int var6 = 0;
-        la[] var7 = null;
+        PlayArea[] var7 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -132,7 +132,7 @@ final class pe {
               return false;
             }
             var5 = var7[var4];
-            if (!var5.a(param2[0], param2[1], 703166480, param2[2])) {
+            if (!var5.containsPoint(param2[0], param2[1], 703166480, param2[2])) {
               var4++;
               continue;
             }
@@ -165,7 +165,7 @@ final class pe {
           SoftwareRasterizer.b();
           if (param3 != 40) {
             int[] var5 = (int[]) null;
-            pe.a((la[]) null, (byte) 103, (int[]) null);
+            pe.isInsideAnyArea((PlayArea[]) null, (byte) 103, (int[]) null);
           }
           TriangleRasterizer.c();
           TriangleRasterizer.b(SoftwareRasterizer.field_g >> 1, 198);

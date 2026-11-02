@@ -3480,7 +3480,7 @@ final class ad {
                 }
                 var2 = ib.a("no_worthless_auctions", -94);
                 if (null != var2) {
-                  la.field_f = kt.a(var2, true);
+                  PlayArea.field_f = kt.a(var2, true);
                 }
                 var2 = ib.a("lineup_two_players", param1 ^ -84);
                 if (null != var2) {

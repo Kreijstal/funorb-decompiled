@@ -38,7 +38,7 @@ final class wb extends hs {
         this.a(false, gb.field_H);
         this.b(-2351, this.field_a.phaseTime);
         if (~this.field_g != param0) {
-          stackIn_6_0 = (this.field_a.field_n.a(8658, this.field_g)) ? 1 : 0;
+          stackIn_6_0 = (this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -77,7 +77,7 @@ final class wb extends hs {
         var4Lifetime1 = 128;
         for (var5 = 0; var5 < this.field_a.playerCount; var5++) {
           var6 = this.field_k[var5];
-          if (!this.field_a.participantStatus[var5].d(3511)) {
+          if (!this.field_a.participantStatus[var5].isActive(3511)) {
             var7 = un.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
@@ -92,7 +92,7 @@ final class wb extends hs {
           SoftwareRasterizer.a(78, var4Lifetime1, 512, 21, 7, 65793, 128);
           ta.e(121);
           var4Lifetime1 += 23;
-          if (this.field_a.field_n.a(param0 ^ 8659, var5)) {
+          if (this.field_a.field_n.isReadyOrInactive(param0 ^ 8659, var5)) {
             vb.field_l.c(564, var6.field_T - 4);
           }
         }
@@ -240,13 +240,13 @@ final class wb extends hs {
 
     final boolean a(char param0, int param1, int param2) {
         if (this.a((byte) 13) &&
-          !this.field_a.field_n.a(8658, this.field_g)) {
+          !this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) {
           if (param2 == 96 &&
-            this.field_a.field_n.a((byte) 107, this.field_g)) {
+            this.field_a.field_n.canJoinTeamZero((byte) 107, this.field_g)) {
             this.a((byte) -119, 0);
           }
           if (param2 == 97 &&
-            this.field_a.field_n.b((byte) 100, this.field_g)) {
+            this.field_a.field_n.canJoinTeamOne((byte) 100, this.field_g)) {
             this.a((byte) -103, 1);
           }
           if (param2 == 84) {
@@ -353,7 +353,7 @@ final class wb extends hs {
         super.a(-103, param1);
         for (var3 = 0; this.field_a.playerCount > var3; var3++) {
           stackIn_4_0 = this.field_k[var3];
-          stackIn_5_1 = (~(this.field_k[var3].field_s + (this.field_k[var3].field_q >> 1)) == ~qs.field_P[this.field_a.field_n.field_k[var3] + 1]);
+          stackIn_5_1 = (~(this.field_k[var3].field_s + (this.field_k[var3].field_q >> 1)) == ~qs.field_P[this.field_a.field_n.selection[var3] + 1]);
           stackIn_4_0.field_lb = stackIn_5_1;
         }
         if (param0 >= -92) {
@@ -364,7 +364,7 @@ final class wb extends hs {
         var3Lifetime1 = var9;
         while (this.field_a.playerCount > var9) {
           var4 = this.field_k[var9];
-          var5 = 1 + this.field_a.field_n.field_k[var9];
+          var5 = 1 + this.field_a.field_n.selection[var9];
           var6 = qs.field_P[var5] - (var4.field_q >> 1);
           if (~var6 != ~var4.field_s) {
             var7 = var4.field_s;
@@ -384,8 +384,8 @@ final class wb extends hs {
           var9++;
         }
         if (this.a((byte) 13)) {
-          this.field_o.field_lb = this.field_a.field_n.a((byte) 50, this.field_g);
-          this.field_s.field_lb = this.field_a.field_n.b((byte) 79, this.field_g);
+          this.field_o.field_lb = this.field_a.field_n.canJoinTeamZero((byte) 50, this.field_g);
+          this.field_s.field_lb = this.field_a.field_n.canJoinTeamOne((byte) 79, this.field_g);
           if (0 != this.field_o.field_sb) {
             this.field_o.b(0, param1);
             this.a((byte) -109, 0);
@@ -400,7 +400,7 @@ final class wb extends hs {
             this.a((byte) -118, 2);
             sp.c(61, -126);
           }
-          this.field_l.field_Gb = this.field_a.field_n.a(8658, this.field_g);
+          this.field_l.field_Gb = this.field_a.field_n.isReadyOrInactive(8658, this.field_g);
         }
     }
 

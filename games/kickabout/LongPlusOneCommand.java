@@ -83,8 +83,8 @@ final class LongPlusOneCommand extends ConsoleCommand {
         int var15Lifetime1;
         int var16Lifetime1;
         gg.a(param2, 0, param0.field_V);
-        int var3_int = ug.a(0, param0.field_V.a(true));
-        int var4 = lf.a((byte) -110, param0.field_V.c(879306160));
+        int var3_int = ug.a(0, param0.field_V.pixelX(true));
+        int var4 = lf.a((byte) -110, param0.field_V.pixelY(879306160));
         SoftwareRasterizer.e(var3_int, var4, ug.a(0, kk.field_B[0]), lf.a((byte) -70, or.field_a[0]), 16777215, 64);
         SoftwareRasterizer.e(var3_int, var4, ug.a(0, kk.field_B[1]), lf.a((byte) -68, or.field_a[1]), 16777215, 64);
         SoftwareRasterizer.drawLine(ug.a(0, kk.field_B[0]), lf.a((byte) -92, or.field_a[0]), ug.a(0, kk.field_B[1]), lf.a((byte) -98, or.field_a[1]), 16777215);
@@ -98,38 +98,38 @@ final class LongPlusOneCommand extends ConsoleCommand {
           SoftwareRasterizer.drawLine(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
           SoftwareRasterizer.drawLine(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
           var7 = param0.field_P[param2][0];
-          SoftwareRasterizer.c(ug.a(0, 372), lf.a((byte) -110, var7.a(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
+          SoftwareRasterizer.c(ug.a(0, 372), lf.a((byte) -110, var7.pixelY(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
           var8 = 4474111;
-          var9 = var7.f(-105) - param0.field_V.a(true);
-          var10 = var7.a(true) - param0.field_V.c(879306160);
-          var11 = nb.a(var7, 170);
+          var9 = var7.pixelX(-105) - param0.field_V.pixelX(true);
+          var10 = var7.pixelY(true) - param0.field_V.pixelY(879306160);
+          var11 = nb.keeperReach(var7, 170);
           if (var11 * var11 > var10 * var10 + var9 * var9) {
             var8 = 16711680;
           }
           var12 = var11 * hw.field_i >> 8;
-          SoftwareRasterizer.drawCircle(ug.a(0, var7.f(-101)), lf.a((byte) -125, var7.a(true)), var12, var8);
+          SoftwareRasterizer.drawCircle(ug.a(0, var7.pixelX(-101)), lf.a((byte) -125, var7.pixelY(true)), var12, var8);
           var12Lifetime1 = 28 * hw.field_i >> 8;
-          SoftwareRasterizer.drawCircle(ug.a(0, var7.f(-120)), lf.a((byte) -64, var7.a(true)), var12Lifetime1, 16777215);
+          SoftwareRasterizer.drawCircle(ug.a(0, var7.pixelX(-120)), lf.a((byte) -64, var7.pixelY(true)), var12Lifetime1, 16777215);
           var12Lifetime2 = 250 * hw.field_i >> 8;
           var13 = 0 == param2 ? 1344 : 0;
-          var9Lifetime1 = -param0.field_V.a(true) + 448;
-          var10Lifetime1 = -param0.field_V.c(879306160) + var13;
+          var9Lifetime1 = -param0.field_V.pixelX(true) + 448;
+          var10Lifetime1 = -param0.field_V.pixelY(879306160) + var13;
           var14 = 3407616;
           if (var9Lifetime1 * var9Lifetime1 + var10Lifetime1 * var10Lifetime1 < 62500) {
             var14 = 16711680;
           }
           SoftwareRasterizer.drawCircle(ug.a(0, 448), lf.a((byte) -65, var13), var12Lifetime2, var14);
-          if (-1 == param0.field_V.field_m) {
-            if (param0.field_V.field_h == 0) {
+          if (-1 == param0.field_V.possessorTeam) {
+            if (param0.field_V.velocityY == 0) {
             } else {
               if (param2 != 1) {
-                var15 = (-param0.field_V.field_p + 88080384) / param0.field_V.field_h;
+                var15 = (-param0.field_V.positionY + 88080384) / param0.field_V.velocityY;
               } else {
-                var15 = -param0.field_V.field_p / param0.field_V.field_h;
+                var15 = -param0.field_V.positionY / param0.field_V.velocityY;
               }
               if (var15 > 0 &&
                 20 > var15) {
-                var16 = param0.field_V.field_t + var15 * param0.field_V.field_q >> 16;
+                var16 = param0.field_V.positionX + var15 * param0.field_V.velocityX >> 16;
                 if (param2 != 1) {
                   SoftwareRasterizer.a(ug.a(0, var16) - 10, lf.a((byte) -126, 1344), 20, 16776960);
                 } else {
@@ -138,10 +138,10 @@ final class LongPlusOneCommand extends ConsoleCommand {
               }
             }
           }
-          var15Lifetime1 = ug.a(0, var7.f(-116));
-          var16Lifetime1 = lf.a((byte) -82, var7.a(true));
+          var15Lifetime1 = ug.a(0, var7.pixelX(-116));
+          var16Lifetime1 = lf.a((byte) -82, var7.pixelY(true));
           SoftwareRasterizer.a(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
-          q.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.field_L, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
+          q.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.actionTime, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ev.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

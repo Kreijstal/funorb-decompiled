@@ -67,7 +67,7 @@ final class ak extends IntrusiveNode {
     final int a(byte param0) {
         int var2 = 69 / ((param0 - 50) / 59);
         if (this.field_j == 1) {
-          return this.field_m.a(true);
+          return this.field_m.pixelY(true);
         }
         if (this.field_j == 2) {
           return this.field_h.field_E >> 16;
