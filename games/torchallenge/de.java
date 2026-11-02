@@ -97,7 +97,7 @@ final class de {
         RuntimeException decompiledCaughtException = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          var4 = (gh) (pf.field_d.c((byte) -66));
+          var4 = (gh) (pf.field_d.first((byte) -66));
           var1 = var4;
           if (var1 == null) {
             return false;

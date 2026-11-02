@@ -47,7 +47,7 @@ final class ac {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = la.field_d;
+          stackIn_2_0 = SectorCacheStore.field_d;
           stackIn_2_1 = 12048;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = param1;

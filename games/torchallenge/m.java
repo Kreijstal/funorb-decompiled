@@ -141,13 +141,13 @@ final class m {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(sl.field_f + (ai.field_a << 1), var1_int, -1, -ni.field_i + var8Lifetime1, (ni.field_i << 1) + var7Lifetime1);
+                var9.a(IntrusiveDeque.field_f + (ai.field_a << 1), var1_int, -1, -ni.field_i + var8Lifetime1, (ni.field_i << 1) + var7Lifetime1);
               }
               var1_int = var1_int + ai.field_a;
             }
             if (var4 >= 0) {
               ec.field_c.c(var6, var8Lifetime1, re.field_A + var1_int, var5, -1);
-              var1_int = var1_int + (sl.field_f + (ai.field_a + uc.field_Y));
+              var1_int = var1_int + (IntrusiveDeque.field_f + (ai.field_a + uc.field_Y));
             } else {
               pf.field_c.c(var6, var8Lifetime1, var1_int + hb.field_d, var5, -1);
               var1_int = var1_int + ok.field_e;

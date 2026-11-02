@@ -17,7 +17,7 @@ final class ek extends UiComponent {
     static int[] field_K;
     static boolean field_P;
     private int field_H;
-    static eg field_G;
+    static BitmapFont field_G;
 
     public static void c(byte param0) {
         if (param0 <= 114) {
@@ -36,18 +36,18 @@ final class ek extends UiComponent {
         RuntimeException var2_ref = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          var4 = (eh) (nh.field_cb.c((byte) -43));
+          var4 = (eh) (nh.field_cb.first((byte) -43));
           while (var4 != null) {
             sa.a((byte) 61, param1, var4);
-            var4 = (eh) (nh.field_cb.c(param0 + 26175));
+            var4 = (eh) (nh.field_cb.next(param0 + 26175));
           }
           if (param0 != -26445) {
-            field_G = (eg) null;
+            field_G = (BitmapFont) null;
           }
-          var2 = ga.field_w.c((byte) 111);
+          var2 = ga.field_w.first((byte) 111);
           while (var2 != null) {
             kk.a(param1, -117);
-            var2 = ga.field_w.c(-270);
+            var2 = ga.field_w.next(-270);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

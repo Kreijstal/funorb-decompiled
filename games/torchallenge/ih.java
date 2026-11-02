@@ -112,7 +112,7 @@ final class ih extends kj implements sg {
         if (param0 <= 84) {
           field_O = (int[]) null;
         }
-        rk.field_e = true;
+        BufferedCacheFile.field_e = true;
         o.field_l = 0;
         FullscreenFocusCanvas.field_a = true;
         tk.field_P = false;

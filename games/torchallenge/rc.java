@@ -249,7 +249,7 @@ class rc extends DualLinkNode {
               fieldTemp$1 = MouseWheelInput.field_a;
               MouseWheelInput.field_a = MouseWheelInput.field_a + 1;
               var5_ref.field_ob = fieldTemp$1;
-              ie.field_d.a(var5_ref, -42);
+              ie.field_d.addLast(var5_ref, -42);
             }
             var5_ref.field_F = var4_ref_String;
             return;
@@ -302,7 +302,7 @@ class rc extends DualLinkNode {
             fieldTemp$0 = kf.field_c;
             kf.field_c = kf.field_c + 1;
             var6.field_ob = fieldTemp$0;
-            rk.field_g.a(var6, -35);
+            BufferedCacheFile.field_g.addLast(var6, -35);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -310,7 +310,7 @@ class rc extends DualLinkNode {
           var6.field_mb = (String) (var3Lifetime1);
           var6.field_F = var4_ref_StringLifetime1;
           var6.unlink(true);
-          var7 = (qk) (rk.field_g.c((byte) -7));
+          var7 = (qk) (BufferedCacheFile.field_g.first((byte) -7));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
@@ -320,7 +320,7 @@ class rc extends DualLinkNode {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_58_0)) {
-                var7 = (qk) (rk.field_g.c(-270));
+                var7 = (qk) (BufferedCacheFile.field_g.next(-270));
                 continue;
               }
             }
@@ -336,7 +336,7 @@ class rc extends DualLinkNode {
             }
             break;
           }
-          rk.field_g.a(var6, -86);
+          BufferedCacheFile.field_g.addLast(var6, -86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -403,11 +403,11 @@ class rc extends DualLinkNode {
             hf.a(254, 89, 1);
           }
           if (!t.a(2, var4, 126) &&
-            0 < gf.a(hd.field_c[vj.field_c], (byte) 78)) {
+            0 < gf.a(GzipDecoder.field_c[vj.field_c], (byte) 78)) {
             hf.a(253, 13, 2);
           }
           if (!t.a(3, var4, 121) &&
-            gf.a(hd.field_c[vj.field_c], (byte) 78) >= 3) {
+            gf.a(GzipDecoder.field_c[vj.field_c], (byte) 78) >= 3) {
             hf.a(252, param0 ^ -62, 3);
           }
           if (!t.a(4, var4, 117)) {
@@ -415,7 +415,7 @@ class rc extends DualLinkNode {
             while (true) {
               if (3 > var5) {
                 stackIn_58_0 = 3;
-                stackIn_58_1 = gf.a(hd.field_c[var5], (byte) 78);
+                stackIn_58_1 = gf.a(GzipDecoder.field_c[var5], (byte) 78);
                 if (var7 == 0) {
                   if (stackIn_58_0 <= stackIn_58_1) {
                     var1_int++;
@@ -554,18 +554,18 @@ class rc extends DualLinkNode {
             }
           }
           if (!t.a(12, var4, 117) &&
-            rk.a((byte) -119, pi.field_d[vj.field_c]) >= 20) {
+            BufferedCacheFile.a((byte) -119, pi.field_d[vj.field_c]) >= 20) {
             hf.a(243, param0 + 172, 12);
           }
           if (!t.a(13, var4, 113) &&
-            30 <= rk.a((byte) 118, pi.field_d[vj.field_c])) {
+            30 <= BufferedCacheFile.a((byte) 118, pi.field_d[vj.field_c])) {
             hf.a(242, 101, 13);
           }
           if (!t.a(14, var4, 121)) {
             var5Lifetime5 = 0;
             while (true) {
               if (var5Lifetime5 < 3) {
-                var3 = var3 + rk.a((byte) 49, pi.field_d[var5Lifetime5]);
+                var3 = var3 + BufferedCacheFile.a((byte) 49, pi.field_d[var5Lifetime5]);
                 var5Lifetime5++;
                 if (var7 == 0) {
                   continue;

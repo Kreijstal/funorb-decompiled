@@ -6,7 +6,7 @@ final class db extends sh {
     static int[][] field_x;
     static int field_y;
     int field_C;
-    static sl field_D;
+    static IntrusiveDeque field_D;
     static int field_B;
     PacketBuffer field_A;
     static int field_z;
@@ -69,7 +69,7 @@ final class db extends sh {
           var10 = id.field_b;
           var2 = var10.readUnsignedByte(-99);
           if (var2 == 0) {
-            var9 = (eb) (ga.field_w.c((byte) -71));
+            var9 = (eb) (ga.field_w.first((byte) -71));
             if (var9 == null) {
               ob.b(-128);
               return;
@@ -95,10 +95,10 @@ final class db extends sh {
           } else {
             if (var2 == 1) {
               var3 = var10.readInt(30);
-              var4_ref_eh = (eh) (nh.field_cb.c((byte) 105));
+              var4_ref_eh = (eh) (nh.field_cb.first((byte) 105));
               while (var4_ref_eh != null) {
                 if (~var4_ref_eh.field_j != ~var3) {
-                  var4_ref_eh = (eh) (nh.field_cb.c(-270));
+                  var4_ref_eh = (eh) (nh.field_cb.next(-270));
                   continue;
                 }
                 break;
@@ -154,7 +154,7 @@ final class db extends sh {
             eb.field_n) {
             var7 = vk.field_i;
             var9 = var7;
-            var1_int = qk.a(-1, var9.field_o, var9.field_H, -1, 123, BufferedSocket.field_p.field_H, -1, BufferedSocket.field_p.field_o);
+            var1_int = qk.a(-1, var9.x, var9.y, -1, 123, BufferedSocket.field_p.y, -1, BufferedSocket.field_p.x);
             var1_int = sh.field_r * var1_int / 256;
             fh.field_h[1] = var1_int;
             fj.field_p[1] = var7.field_y;
@@ -165,7 +165,7 @@ final class db extends sh {
               ie.field_e[var5].field_nb) {
               var8 = ie.field_e[var5];
               var10 = var8;
-              var1_intLifetime1 = qk.a(-1, var10.field_o, var10.field_H, -1, -3, BufferedSocket.field_p.field_H, -1, BufferedSocket.field_p.field_o);
+              var1_intLifetime1 = qk.a(-1, var10.x, var10.y, -1, -3, BufferedSocket.field_p.y, -1, BufferedSocket.field_p.x);
               var1_intLifetime1 = var1_intLifetime1 * sh.field_r / 256;
               if (fh.field_h[0] <= var1_intLifetime1) {
                 fh.field_h[0] = var1_intLifetime1;
@@ -197,7 +197,7 @@ final class db extends sh {
 
     static {
         field_x = new int[][]{new int[]{4, 4, 4}, new int[]{6, 6, 6}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{3, 2, 3}, new int[]{2, 4, 2}, new int[]{2, 6, 4}, new int[]{6, 6, 6}, new int[]{2, 5, 3}, new int[]{0, 5, 0}, new int[]{6, 0, 6}, new int[]{2, 2, 2}, new int[]{1, 1, 1}};
-        field_D = new sl();
+        field_D = new IntrusiveDeque();
         field_E = new int[]{-5, -5, -5};
         field_z = -1;
     }

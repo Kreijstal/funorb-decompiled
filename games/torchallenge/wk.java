@@ -184,7 +184,7 @@ final class wk extends ic {
             cg.field_g.d();
             SoftwareRasterizer.b();
             var13.d(0, 0);
-            la.field_f.a(117);
+            SectorCacheStore.field_f.a(117);
             var7Lifetime2 = cg.field_g;
           }
           var7Lifetime2.b(var1_int - var6, -var6 + var2, 256);
@@ -205,7 +205,7 @@ final class wk extends ic {
             cg.field_g.d();
             SoftwareRasterizer.b();
             var15Lifetime2.d(0, 0);
-            la.field_f.a(126);
+            SectorCacheStore.field_f.a(126);
             var7Lifetime4 = cg.field_g;
           }
           var7Lifetime4.b(-var6 + var1_intLifetime1, -var6 + var2Lifetime1, 256);

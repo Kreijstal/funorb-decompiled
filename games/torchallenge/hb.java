@@ -130,7 +130,7 @@ final class hb {
           var23 = null;
           var13 = TorChallenge.field_F ? 1 : 0;
           try {
-            var14 = (gh) (pf.field_d.c((byte) -79));
+            var14 = (gh) (pf.field_d.first((byte) -79));
             var19 = var14;
             if (var19 == null) {
               return;

@@ -4,7 +4,7 @@
 final class tj {
     static int[] field_c;
     static int field_b;
-    static sl field_e;
+    static IntrusiveDeque field_e;
     static ll field_d;
     static int[] field_a;
 
@@ -59,7 +59,7 @@ final class tj {
           field_d = null;
           return;
         }
-        field_e = (sl) null;
+        field_e = (IntrusiveDeque) null;
         field_a = null;
         field_e = null;
         field_c = null;
@@ -68,7 +68,7 @@ final class tj {
 
     static {
         field_c = new int[]{13, 11};
-        field_e = new sl();
+        field_e = new IntrusiveDeque();
         field_d = new ll();
         field_a = new int[8192];
     }

@@ -111,7 +111,7 @@ final class cd {
         NodeHashTableIterator.field_j = null;
         ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
         ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
-        BufferedSocket.field_p.a(aa.field_g, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.field_H, BufferedSocket.field_p.field_o, 0, 2657, BufferedSocket.field_p.field_u);
+        BufferedSocket.field_p.a(aa.field_g, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, 0, 2657, BufferedSocket.field_p.field_u);
         BufferedSocket.field_p.a((byte) 79, df.field_R, aa.field_g);
         if (param1 != -1) {
           if (ii.field_d) {

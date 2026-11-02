@@ -6,7 +6,7 @@ final class di extends kl {
     private int field_s;
     static Sprite[] field_t;
     private vb field_G;
-    private la field_v;
+    private SectorCacheStore field_v;
     private sh field_u;
     private int field_z;
     private int field_l;
@@ -17,16 +17,16 @@ final class di extends kl {
     static int field_A;
     static byte[][] field_E;
     private ha field_j;
-    private la field_o;
+    private SectorCacheStore field_o;
     static char field_m;
     private boolean field_q;
-    private sl field_D;
+    private IntrusiveDeque field_D;
     private boolean field_h;
     private int field_r;
     static k field_F;
     static String field_B;
     static String field_n;
-    private sl field_w;
+    private IntrusiveDeque field_w;
     private boolean field_x;
     private long field_p;
 
@@ -295,7 +295,7 @@ final class di extends kl {
         }
         this.field_h = true;
         if (this.field_D == null) {
-          this.field_D = new sl();
+          this.field_D = new IntrusiveDeque();
         }
     }
 
@@ -338,7 +338,7 @@ final class di extends kl {
           }
           if (this.field_q) {
             var2_int = 1;
-            var3 = this.field_D.c((byte) 114);
+            var3 = this.field_D.first((byte) 114);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_k[var4]) {
@@ -349,7 +349,7 @@ final class di extends kl {
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_D.c(-270);
+              var3 = this.field_D.next(-270);
             }
             while (this.field_C.field_e.length > this.field_r) {
               if (this.field_C.field_e[this.field_r] == 0) {
@@ -364,7 +364,7 @@ final class di extends kl {
                   var6 = new IntrusiveNode();
                   var6.key = (long)this.field_r;
                   var2_int = 0;
-                  this.field_D.a(var6, -36);
+                  this.field_D.addLast(var6, -36);
                 }
                 this.field_r = this.field_r + 1;
                 continue;
@@ -381,7 +381,7 @@ final class di extends kl {
           else {
             if (this.field_h) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_D.c((byte) 123);
+              var3Lifetime1 = this.field_D.first((byte) 123);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_k[var4Lifetime1] != 1) {
@@ -392,7 +392,7 @@ final class di extends kl {
                 } else {
                   var3Lifetime1.unlink(true);
                 }
-                var3Lifetime1 = this.field_D.c(-270);
+                var3Lifetime1 = this.field_D.next(-270);
               }
               scanLoop1: while (true) {
                 if (this.field_C.field_e.length > this.field_r) {
@@ -407,7 +407,7 @@ final class di extends kl {
                     if (this.field_k[this.field_r] != 1) {
                       var7 = new IntrusiveNode();
                       var7.key = (long)this.field_r;
-                      this.field_D.a(var7, -62);
+                      this.field_D.addLast(var7, -62);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -475,7 +475,7 @@ final class di extends kl {
         if (param0 >= -107) {
           this.field_p = 74L;
         }
-        var2 = this.field_w.c((byte) -61);
+        var2 = this.field_w.first((byte) -61);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0) {
@@ -499,7 +499,7 @@ final class di extends kl {
           } else {
             var2.unlink(true);
           }
-          var2 = this.field_w.c(-270);
+          var2 = this.field_w.next(-270);
         }
     }
 
@@ -514,7 +514,7 @@ final class di extends kl {
         return 0;
     }
 
-    di(int param0, la param1, la param2, vb param3, rb param4, int param5, byte[] param6, int param7, boolean param8) {
+    di(int param0, SectorCacheStore param1, SectorCacheStore param2, vb param3, rb param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -531,14 +531,14 @@ final class di extends kl {
         RuntimeException var10 = null;
         this.field_j = new ha(16);
         this.field_r = 0;
-        this.field_w = new sl();
+        this.field_w = new IntrusiveDeque();
         this.field_p = 0L;
         try {
           this.field_v = param1;
           this.field_z = param0;
           if (null != this.field_v) {
             this.field_q = true;
-            this.field_D = new sl();
+            this.field_D = new IntrusiveDeque();
           } else {
             this.field_q = false;
           }

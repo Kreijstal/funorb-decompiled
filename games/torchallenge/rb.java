@@ -44,7 +44,7 @@ final class rb implements Runnable {
         }
     }
 
-    final al a(la param0, boolean param1, int param2) {
+    final al a(SectorCacheStore param0, boolean param1, int param2) {
         al var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -101,15 +101,15 @@ final class rb implements Runnable {
     private final void a(int param0, al param1) {
         Object var3 = null;
         Throwable var4 = null;
-        la var5 = null;
+        SectorCacheStore var5 = null;
         Object stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            var5 = (la) null;
-            this.a((la) null, true, 40);
+            var5 = (SectorCacheStore) null;
+            this.a((SectorCacheStore) null, true, 40);
           }
           var3 = this.field_a;
           synchronized (var3) {
@@ -137,7 +137,7 @@ final class rb implements Runnable {
         field_c = null;
     }
 
-    final al a(int param0, int param1, la param2) {
+    final al a(int param0, int param1, SectorCacheStore param2) {
         al var4 = null;
         RuntimeException var4_ref = null;
         al stackIn_1_0 = null;
@@ -273,7 +273,7 @@ final class rb implements Runnable {
         }
     }
 
-    final al a(int param0, la param1, byte param2, byte[] param3) {
+    final al a(int param0, SectorCacheStore param1, byte param2, byte[] param3) {
         al var5 = null;
         RuntimeException var5_ref = null;
         al stackIn_3_0 = null;

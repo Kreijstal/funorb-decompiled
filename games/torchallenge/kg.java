@@ -10,7 +10,7 @@ class kg extends rc {
     private boolean field_kb;
     private int field_Z;
     private int field_jb;
-    private eg field_S;
+    private BitmapFont field_S;
     private Sprite[] field_A;
     private int field_z;
     private Sprite field_X;

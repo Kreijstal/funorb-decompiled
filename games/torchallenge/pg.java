@@ -5,11 +5,11 @@ final class pg extends PcmStream {
     static int field_q;
     private kb field_t;
     static boolean field_s;
-    sl field_o;
+    IntrusiveDeque field_o;
     static nc field_p;
     static int field_m;
     static int[] field_r;
-    jk field_u;
+    PcmStreamMixer field_u;
     static int[][] field_n;
 
     final void a(int param0) {
@@ -19,7 +19,7 @@ final class pg extends PcmStream {
         boolean stackIn_3_0 = false;
         var4 = TorChallenge.field_F ? 1 : 0;
         this.field_u.a(param0);
-        var3 = (dl) (this.field_o.c((byte) -128));
+        var3 = (dl) (this.field_o.first((byte) -128));
         while (var3 != null) {
           stackIn_3_0 = this.field_t.a(var3, (byte) 22);
           boolean decompiledFrameCompleted0 = true;
@@ -38,7 +38,7 @@ final class pg extends PcmStream {
               var3.field_z = var3.field_z - var2;
             }
           }
-          var3 = (dl) (this.field_o.c(-270));
+          var3 = (dl) (this.field_o.next(-270));
         }
     }
 
@@ -50,7 +50,7 @@ final class pg extends PcmStream {
     final PcmStream b() {
         dl var1;
         while (true) {
-          var1 = (dl) (this.field_o.c(-270));
+          var1 = (dl) (this.field_o.next(-270));
           if (var1 == null) {
             return null;
           }
@@ -74,7 +74,7 @@ final class pg extends PcmStream {
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           this.field_u.b(param0, param1, param2);
-          var6 = (dl) (this.field_o.c((byte) 112));
+          var6 = (dl) (this.field_o.first((byte) 112));
           while (var6 != null) {
             stackIn_4_0 = this.field_t.a(var6, (byte) 22);
             boolean decompiledFrameCompleted0 = true;
@@ -95,7 +95,7 @@ final class pg extends PcmStream {
                 var6.field_z = var6.field_z - var5;
               }
             }
-            var6 = (dl) (this.field_o.c(-270));
+            var6 = (dl) (this.field_o.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,7 +323,7 @@ final class pg extends PcmStream {
     }
 
     final PcmStream c() {
-        dl var1 = (dl) (this.field_o.c((byte) 112));
+        dl var1 = (dl) (this.field_o.first((byte) 112));
         if (var1 == null) {
           return null;
         }
@@ -344,7 +344,7 @@ final class pg extends PcmStream {
           var1_int = 0;
           for (var2 = param0; var2 < ea.field_g.length; var2++) {
             if (null != ea.field_g[var2] &&
-              ea.field_g[var2].field_F == 19) {
+              ea.field_g[var2].type == 19) {
               var1_int++;
             }
           }
@@ -400,8 +400,8 @@ final class pg extends PcmStream {
     }
 
     pg(kb param0) {
-        this.field_o = new sl();
-        this.field_u = new jk();
+        this.field_o = new IntrusiveDeque();
+        this.field_u = new PcmStreamMixer();
         try {
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {

@@ -12,10 +12,10 @@ final class LevelEntity {
     private boolean field_O;
     private int field_W;
     int field_B;
-    int field_H;
+    int y;
     private boolean field_Z;
     int field_db;
-    int field_V;
+    int variant;
     static int field_R;
     private int field_P;
     boolean field_s;
@@ -26,7 +26,7 @@ final class LevelEntity {
     private int field_M;
     static String field_J;
     int field_L;
-    int field_F;
+    int type;
     int field_kb;
     boolean field_ab;
     int field_y;
@@ -49,7 +49,7 @@ final class LevelEntity {
     private boolean field_t;
     boolean field_c;
     int field_G;
-    int field_o;
+    int x;
     private boolean field_cb;
     boolean field_n;
     private boolean field_v;
@@ -73,18 +73,18 @@ final class LevelEntity {
         RuntimeException var2 = null;
         try {
           if (param0 != 96) {
-            this.field_o = 91;
+            this.x = 91;
           }
           this.field_N = false;
           this.field_ab = false;
           this.field_j = false;
-          if (this.field_F != 3 ||
+          if (this.type != 3 ||
             !this.field_k) {
             this.field_k = false;
           }
           this.field_c = false;
           this.field_s = false;
-          if (this.field_F == 0 &&
+          if (this.type == 0 &&
             cl.field_z) {
             cl.field_z = false;
             if (2 != vj.field_c) {
@@ -309,7 +309,7 @@ final class LevelEntity {
           var3 = -1;
           var4 = -1;
           if (var2_int == 0) {
-            var3 = oi.a((byte) -75, BufferedSocket.field_p.field_H);
+            var3 = oi.a((byte) -75, BufferedSocket.field_p.y);
           }
           if (var3 >= 0) {
             var4 = ub.a(var3, 48, BufferedSocket.field_p.field_e, BufferedSocket.field_p.field_I);
@@ -318,7 +318,7 @@ final class LevelEntity {
           var5 = stackIn_35_0;
           var6 = -1;
           if (var5 == 0) {
-            var6 = oi.a((byte) -58, this.field_H);
+            var6 = oi.a((byte) -58, this.y);
           }
           if (var6 >= 0) {
             ub.a(var6, 87, this.field_e, this.field_I);
@@ -491,7 +491,7 @@ final class LevelEntity {
             var8Lifetime3 = this.a(BufferedSocket.field_p.field_e, BufferedSocket.field_p.field_I, true);
             if (!this.f(8) &&
               0 == this.field_lb) {
-              var9Lifetime2 = 32 * rk.field_a[1];
+              var9Lifetime2 = 32 * BufferedCacheFile.field_a[1];
               if (var8Lifetime3 <= var9Lifetime2) {
                 this.field_L = 3;
               }
@@ -540,7 +540,7 @@ final class LevelEntity {
         RuntimeException decompiledCaughtException = null;
         try {
           if (1024 == this.field_u &&
-            this.field_H == -1 + ba.field_i.field_a) {
+            this.y == -1 + ba.field_i.field_a) {
             return;
           }
           param2 = param2 << 4;
@@ -574,7 +574,7 @@ final class LevelEntity {
           if (param0 != -8) {
             this.field_eb = false;
           }
-          var2 = new LevelEntity(this.field_o, this.field_H, 7, this.field_V);
+          var2 = new LevelEntity(this.x, this.y, 7, this.variant);
           ef.a(0, var2);
           var2.field_u = this.field_u - 192;
           if (this.field_a > 0) {
@@ -590,11 +590,11 @@ final class LevelEntity {
           }
           var2.field_a = this.field_a;
           var2.field_D = 250;
-          var2.field_z = var2.field_H * 64 + var2.field_u * 64 / 256;
+          var2.field_z = var2.y * 64 + var2.field_u * 64 / 256;
           var2.field_m = true;
-          var2.field_e = var2.field_o * 32 + 32 * var2.field_B / 256;
+          var2.field_e = var2.x * 32 + 32 * var2.field_B / 256;
           this.field_S = true;
-          hc.a(54, BufferedSocket.field_p.field_H, this.field_V, 6, BufferedSocket.field_p.field_o, dg.field_T[this.field_F], this.field_H, this.field_o);
+          hc.a(54, BufferedSocket.field_p.y, this.variant, 6, BufferedSocket.field_p.x, dg.field_T[this.type], this.y, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -649,8 +649,8 @@ final class LevelEntity {
           this.field_e = this.field_Q * 32 / 256 + this.field_e;
           this.field_u = 256 * (this.field_z % 64) / 64;
           this.field_B = 256 * (this.field_e % 32) / 32;
-          this.field_o = this.field_e / 32;
-          this.field_H = this.field_z / 64;
+          this.x = this.field_e / 32;
+          this.y = this.field_z / 64;
           var9 = this.a((byte) -50, vc.field_b) ? 1 : 0;
           if (var9 == 0) {
             stackIn_23_0 = null;
@@ -965,9 +965,9 @@ final class LevelEntity {
           }
           if (stackIn_81_0 >= stackIn_81_1) {
             kf.field_d = 1;
-            if (!rk.field_e) {
-              stackIn_91_0 = !(rk.field_e);
-              rk.field_e = stackIn_91_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_91_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_91_0;
             }
             return;
           }
@@ -980,9 +980,9 @@ final class LevelEntity {
             return;
           }
           kf.field_d = 0;
-          if (!rk.field_e) {
-            stackIn_103_0 = !(rk.field_e);
-            rk.field_e = stackIn_103_0;
+          if (!BufferedCacheFile.field_e) {
+            stackIn_103_0 = !(BufferedCacheFile.field_e);
+            BufferedCacheFile.field_e = stackIn_103_0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1000,8 +1000,8 @@ final class LevelEntity {
         int var4 = 0;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (this.field_F != 23 &&
-            this.field_F != 24) {
+          if (this.type != 23 &&
+            this.type != 24) {
             if (param0 != 0) {
               return;
             }
@@ -1022,8 +1022,8 @@ final class LevelEntity {
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  if ((this.field_F == 7 ||
-                    !(this.field_D > -ik.field_d[2][dg.field_T[this.field_F]][this.field_V] + 200) ||
+                  if ((this.type == 7 ||
+                    !(this.field_D > -ik.field_d[2][dg.field_T[this.type]][this.variant] + 200) ||
                     this.field_L != 0) &&
                     this.field_L != 1) {
                     if (this.field_L == 0) {
@@ -1045,19 +1045,19 @@ final class LevelEntity {
               }
             }
             if (var2_int != 4) {
-              if (this.field_F == 2 && (112 < this.field_D ||
+              if (this.type == 2 && (112 < this.field_D ||
                 this.field_S)) {
                 var2_int = 5;
               }
-              boolean decompiledSharedTail0 = (3 != this.field_F || ((!(this.field_D > 112) ||
-                !(this.field_H < BufferedSocket.field_p.field_H)) &&
+              boolean decompiledSharedTail0 = (3 != this.type || ((!(this.field_D > 112) ||
+                !(this.y < BufferedSocket.field_p.y)) &&
                 !(this.field_T)));
               if (!decompiledSharedTail0) {
                 var2_int = 6;
                 decompiledSharedTail0 = (var4 != 0);
               }
-              if ((decompiledSharedTail0) && (3 == this.field_F &&
-                2 == this.field_V &&
+              if ((decompiledSharedTail0) && (3 == this.type &&
+                2 == this.variant &&
                 this.field_k)) {
                 var2_int = 7;
               }
@@ -1079,13 +1079,13 @@ final class LevelEntity {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.field_P = (ef.field_k - this.field_p) / ik.field_d[this.field_g][dg.field_T[this.field_F]][this.field_V];
+              this.field_P = (ef.field_k - this.field_p) / ik.field_d[this.field_g][dg.field_T[this.type]][this.variant];
             }
-            if (qh.field_O[this.field_g][dg.field_T[this.field_F]][this.field_V]) {
-              this.field_P = this.field_P % h.field_b[this.field_g][dg.field_T[this.field_F]][this.field_V];
+            if (qh.field_O[this.field_g][dg.field_T[this.type]][this.variant]) {
+              this.field_P = this.field_P % h.field_b[this.field_g][dg.field_T[this.type]][this.variant];
             }
-            if (this.field_P >= h.field_b[this.field_g][dg.field_T[this.field_F]][this.field_V]) {
-              this.field_P = -1 + h.field_b[this.field_g][dg.field_T[this.field_F]][this.field_V];
+            if (this.field_P >= h.field_b[this.field_g][dg.field_T[this.type]][this.variant]) {
+              this.field_P = -1 + h.field_b[this.field_g][dg.field_T[this.type]][this.variant];
             }
             boolean decompiledFrameRemainder0 = true;
             if (2 != this.field_g ||
@@ -1102,7 +1102,7 @@ final class LevelEntity {
                       this.field_p = ef.field_k;
                       this.field_v = false;
                     }
-                    if ((ef.field_k - this.field_p) > ik.field_d[this.field_g][dg.field_T[this.field_F]][this.field_V]) {
+                    if ((ef.field_k - this.field_p) > ik.field_d[this.field_g][dg.field_T[this.type]][this.variant]) {
                       this.field_eb = false;
                     }
                     this.field_P = 1;
@@ -1123,9 +1123,9 @@ final class LevelEntity {
             } else {
               this.field_P = 1;
             }
-            if (this.field_P >= h.field_b[this.field_g][dg.field_T[this.field_F]][this.field_V] &&
-              h.field_b[this.field_g][dg.field_T[this.field_F]][this.field_V] > 0) {
-              this.field_P = h.field_b[this.field_g][dg.field_T[this.field_F]][this.field_V] - 1;
+            if (this.field_P >= h.field_b[this.field_g][dg.field_T[this.type]][this.variant] &&
+              h.field_b[this.field_g][dg.field_T[this.type]][this.variant] > 0) {
+              this.field_P = h.field_b[this.field_g][dg.field_T[this.type]][this.variant] - 1;
             }
             return;
           }
@@ -1165,11 +1165,11 @@ final class LevelEntity {
           if (param0 != 116) {
             this.field_Q = 16;
           }
-          if (this.field_F == 0) {
+          if (this.type == 0) {
             return false;
           }
           if (this.field_G > 0 &&
-            this.field_F != 6) {
+            this.type != 6) {
             this.field_jb = false;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -1197,7 +1197,7 @@ final class LevelEntity {
               if (ec.field_e) {
                 return false;
               }
-              if (this.field_F == 23) {
+              if (this.type == 23) {
                 var2_int += 16;
                 var3 += 16;
                 var4 -= 32;
@@ -1206,8 +1206,8 @@ final class LevelEntity {
               boolean decompiledFrameRemainder1 = true;
               if (2 == vj.field_c &&
                 cl.field_z &&
-                this.field_a != BufferedSocket.field_p.field_a && (this.field_F != 7 ||
-                this.field_V != 2)) {
+                this.field_a != BufferedSocket.field_p.field_a && (this.type != 7 ||
+                this.variant != 2)) {
                 stackIn_67_0 = 1;
                 decompiledFrameRemainder1 = false;
               }
@@ -1220,7 +1220,7 @@ final class LevelEntity {
                 this.field_Q = 0;
                 if (!(BufferedSocket.field_p.field_G > 0) ||
                   !(BufferedSocket.field_p.field_G > 50) &&
-                  this.field_F == 3) {
+                  this.type == 3) {
                   if (var10 == 0) {
                     BufferedSocket.field_p.field_G = BufferedSocket.field_p.field_G + 50;
                     if (GameKeyHandler.field_b) {
@@ -1248,7 +1248,7 @@ final class LevelEntity {
                     jj.field_d = false;
                     BufferedSocket.field_p.field_L = 12;
                     if (BufferedSocket.field_p.field_db > 0 &&
-                      this.field_F == 3) {
+                      this.type == 3) {
                       BufferedSocket.field_p.field_G = BufferedSocket.field_p.field_G + 50;
                       BufferedSocket.field_p.field_db = BufferedSocket.field_p.field_db - 1;
                     }
@@ -1266,7 +1266,7 @@ final class LevelEntity {
                     this.field_a = 1;
                   }
                   kl.field_a = true;
-                  if (this.field_F == 6) {
+                  if (this.type == 6) {
                     this.field_a = -this.field_a;
                   }
                 }
@@ -1301,15 +1301,15 @@ final class LevelEntity {
           this.field_u = this.field_u + this.field_h;
           if (this.field_u < 0) {
             this.field_u = this.field_u + 256;
-            this.field_H = this.field_H - 1;
+            this.y = this.y - 1;
             if (var4 != 0 &&
               this.field_u >= 256) {
-              this.field_H = this.field_H + 1;
+              this.y = this.y + 1;
               this.field_u = this.field_u - 256;
             }
           } else {
             if (this.field_u >= 256) {
-              this.field_H = this.field_H + 1;
+              this.y = this.y + 1;
               this.field_u = this.field_u - 256;
             }
           }
@@ -1317,7 +1317,7 @@ final class LevelEntity {
             this.a((byte) 54);
           }
           var3_int = this.field_h;
-          while (ol.field_g.a(2, 32 * this.field_o + this.field_B * 32 / 256, this.field_w, this.field_I, -this.field_w + (this.field_u * 64 / 256 + 64 * this.field_H))) {
+          while (ol.field_g.a(2, 32 * this.x + this.field_B * 32 / 256, this.field_w, this.field_I, -this.field_w + (this.field_u * 64 / 256 + 64 * this.y))) {
             if (var4 != 0) {
               return;
             }
@@ -1330,28 +1330,28 @@ final class LevelEntity {
             }
             if (this.field_u >= 0) {
               if (this.field_u >= 256) {
-                this.field_H = this.field_H + 1;
+                this.y = this.y + 1;
                 this.field_u = this.field_u - 256;
               }
             } else {
-              this.field_H = this.field_H - 1;
+              this.y = this.y - 1;
               this.field_u = this.field_u + 256;
             }
             if (var3_int > 0) {
               this.field_h = 0;
-              if (this.field_F == 0) {
+              if (this.type == 0) {
                 ve.field_a.field_h = var3_int;
               }
               if (!param1) {
                 boolean decompiledFrameRemainder0 = true;
                 if (this.field_L == 2) {
                   this.field_eb = true;
-                  if (this.field_F == 0) {
+                  if (this.type == 0) {
                     wh.a(vj.field_c, 1, -113);
                   } else {
-                    if (28 != this.field_F) {
-                      if (!(!vg.a(this.field_F, -1))) {
-                        qa.a(this.field_o, BufferedSocket.field_p.field_H, dg.field_T[this.field_F], this, this.field_H, -1, 4, BufferedSocket.field_p.field_o, 25, this.field_V);
+                    if (28 != this.type) {
+                      if (!(!vg.a(this.type, -1))) {
+                        qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 4, BufferedSocket.field_p.x, 25, this.variant);
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -1362,7 +1362,7 @@ final class LevelEntity {
                 }
                 this.field_L = 0;
                 kl.field_a = false;
-                if (this.field_F != 5) {
+                if (this.type != 5) {
                   this.field_D = 0;
                 }
               }
@@ -1371,13 +1371,13 @@ final class LevelEntity {
                 this.field_h = this.field_h + 1;
               }
             }
-            if (this.field_H >= 0 &&
-              this.field_H < ol.field_g.field_a) {
+            if (this.y >= 0 &&
+              this.y < ol.field_g.field_a) {
               continue;
             }
             var3_int = -var3_int;
           }
-          this.field_z = this.field_u * 64 / 256 + this.field_H * 64;
+          this.field_z = this.field_u * 64 / 256 + this.y * 64;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1415,14 +1415,14 @@ final class LevelEntity {
           if (param0 > -16) {
             return;
           }
-          var3_int = this.field_o;
+          var3_int = this.x;
           var3_int++;
           if (64 <= var3_int) {
             var3_int -= 64;
           }
           var4 = var3_int;
           stackIn_10_0 = ic.field_E[var3_int];
-          stackIn_10_1 = this.field_H;
+          stackIn_10_1 = this.y;
           if (param1) {
             stackIn_11_2 = 31;
           } else {
@@ -1434,7 +1434,7 @@ final class LevelEntity {
             var3_int -= 64;
           }
           stackIn_18_0 = ic.field_E[var3_int];
-          stackIn_18_1 = this.field_H;
+          stackIn_18_1 = this.y;
           if (param1) {
             stackIn_19_2 = 31;
           } else {
@@ -1457,18 +1457,18 @@ final class LevelEntity {
               var9 = cb.field_c[var10][3];
               var7 = cb.field_c[var10][2];
               if (var4 == var6 &&
-                var8 == this.field_H ||
+                var8 == this.y ||
                 var6 == var5 &&
-                ~this.field_H == ~var8) {
+                ~this.y == ~var8) {
                 cb.field_c[var10][0] = -1;
                 cb.field_c[var10][1] = -1;
                 cb.field_c[var10][2] = -1;
                 cb.field_c[var10][3] = -1;
               }
               if (~var4 == ~var7 &&
-                ~var9 == ~this.field_H ||
+                ~var9 == ~this.y ||
                 ~var5 == ~var7 &&
-                ~this.field_H == ~var9) {
+                ~this.y == ~var9) {
                 cb.field_c[var10][0] = -1;
                 cb.field_c[var10][1] = -1;
                 cb.field_c[var10][2] = -1;
@@ -1500,19 +1500,19 @@ final class LevelEntity {
               }
               else {
                 if (stackIn_55_0 == stackIn_55_1 &&
-                  this.field_H == var8) {
+                  this.y == var8) {
                   return;
                 }
                 if (var5 == var6 &&
-                  var8 == this.field_H) {
+                  var8 == this.y) {
                   return;
                 }
                 if (~var4 == ~var7 &&
-                  ~this.field_H == ~var9) {
+                  ~this.y == ~var9) {
                   return;
                 }
                 if (~var7 == ~var5 &&
-                  ~this.field_H == ~var9) {
+                  ~this.y == ~var9) {
                   return;
                 }
                 var10++;
@@ -1541,9 +1541,9 @@ final class LevelEntity {
               }
               if (decompiledFrameCompleted0) {
                 cb.field_c[var10][0] = var4;
-                cb.field_c[var10][1] = this.field_H;
+                cb.field_c[var10][1] = this.y;
                 cb.field_c[var10][2] = var5;
-                cb.field_c[var10][3] = this.field_H;
+                cb.field_c[var10][3] = this.y;
                 return;
               }
             }
@@ -1554,10 +1554,10 @@ final class LevelEntity {
           if (stackIn_65_0 <= stackIn_65_1) {
             return;
           }
-          cb.field_c[0][1] = this.field_H;
+          cb.field_c[0][1] = this.y;
           cb.field_c[0][2] = var5;
           cb.field_c[0][0] = var4;
-          cb.field_c[0][3] = this.field_H;
+          cb.field_c[0][3] = this.y;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1618,7 +1618,7 @@ final class LevelEntity {
           var4 = var3[0] << 3;
           var5 = var3[1] << 3;
           var6 = ki.field_e[dg.field_T[23]];
-          var7 = new LevelEntity(this.field_o, this.field_H, 23, 0);
+          var7 = new LevelEntity(this.x, this.y, 23, 0);
           var7.field_e = this.field_e;
           var7.field_z = var5 + (-this.field_w + this.field_z);
           if (0 > this.field_a) {
@@ -1633,8 +1633,8 @@ final class LevelEntity {
           var7.field_cb = true;
           var7.field_B = 256 * (var7.field_e % 32) / 32;
           var7.field_u = 256 * (var7.field_z % 64) / 64;
-          var7.field_H = var7.field_z / 64;
-          var7.field_o = var7.field_e / 32;
+          var7.y = var7.field_z / 64;
+          var7.x = var7.field_e / 32;
           ef.a(0, var7);
           sd.field_d = 350;
           return;
@@ -1721,7 +1721,7 @@ final class LevelEntity {
           if (param1 != 0) {
             this.field_K = -75;
           }
-          var3_int = -this.field_w + (64 * this.field_H - param0 + 64 * this.field_u / 256);
+          var3_int = -this.field_w + (64 * this.y - param0 + 64 * this.field_u / 256);
           var4 = -param0 + (this.field_f * 64 - this.field_w);
           var5 = 0;
           if (var4 < 2 * -this.field_w) {
@@ -1731,7 +1731,7 @@ final class LevelEntity {
             var5 = 1;
           }
           if (BufferedSocket.field_p != null) {
-            var6 = Math.abs(this.field_r - BufferedSocket.field_p.field_o);
+            var6 = Math.abs(this.field_r - BufferedSocket.field_p.x);
             if (32 < var6) {
               var6 = -var6 + 64;
             }
@@ -1746,8 +1746,8 @@ final class LevelEntity {
           if (!this.field_Z ||
             this.field_L != 14 ||
             !(BufferedSocket.field_p.field_db > 0)) {
-            if (this.field_F != 14 &&
-              this.field_F != 18 ||
+            if (this.type != 14 &&
+              this.type != 18 ||
               (14 != this.field_L ||
               !(BufferedSocket.field_p.field_db <= 0))) {
               if (this.field_Z &&
@@ -1782,7 +1782,7 @@ final class LevelEntity {
           if ((var3_int < (-this.field_w * 2) ||
             480 < var3_int ||
             this.field_L == 14 ||
-            this.field_F == 0 &&
+            this.type == 0 &&
             this.field_L == 13) && var5 != 0) {
             if (this.field_f == -1) {
               stackIn_82_0 = null;
@@ -1790,13 +1790,13 @@ final class LevelEntity {
             }
             this.field_l = this.field_l + 1;
             if (50 < this.field_l) {
-              if (this.field_F == 6 &&
+              if (this.type == 6 &&
                 13 != this.field_L) {
                 this.a((byte) -19, false);
               }
               aj.a((byte) -101, this, this.field_y);
-              this.field_H = this.field_f;
-              this.field_o = this.field_r;
+              this.y = this.field_f;
+              this.x = this.field_r;
               kf.a(this, this.field_y, param1 ^ 8);
               this.field_l = 0;
               this.field_db = this.field_d;
@@ -1807,7 +1807,7 @@ final class LevelEntity {
               this.field_B = 0;
               this.field_u = 0;
               this.field_D = 0;
-              if (this.field_F == 0) {
+              if (this.type == 0) {
                 kl.field_a = false;
                 if (this.field_L == 13) {
                   this.field_L = 0;
@@ -1819,8 +1819,8 @@ final class LevelEntity {
               this.field_b = 0;
               this.field_a = 0;
               this.c(true);
-              this.field_z = 64 * this.field_u / 256 + this.field_H * 64;
-              this.field_e = 32 * this.field_o + 32 * this.field_B / 256;
+              this.field_z = 64 * this.field_u / 256 + this.y * 64;
+              this.field_e = 32 * this.x + 32 * this.field_B / 256;
             }
           }
           return this;
@@ -1918,7 +1918,7 @@ final class LevelEntity {
             param1 != 1) {
             return false;
           }
-          var3_int = this.field_H;
+          var3_int = this.y;
           this.field_h = this.field_h + param1;
           var4 = this.field_u;
           this.field_u = this.field_u + this.field_h;
@@ -1933,11 +1933,11 @@ final class LevelEntity {
                 break scanLoop1;
               }
               if (stackIn_34_0 == 0 &&
-                this.field_H > 0 ||
+                this.y > 0 ||
                 param1 == 1 &&
-                !(this.field_H >= ba.field_i.field_a - 1)) {
+                !(this.y >= ba.field_i.field_a - 1)) {
                 this.field_u = this.field_u + -param1 * 256;
-                this.field_H = this.field_H + param1;
+                this.y = this.y + param1;
                 continue;
               }
             }
@@ -1945,16 +1945,16 @@ final class LevelEntity {
             break;
           }
           if (stackIn_34_0 < this.field_u && (param1 == -1 &&
-            0 >= this.field_H ||
+            0 >= this.y ||
             param1 == 1 &&
-            !((ba.field_i.field_a - 1) > this.field_H))) {
+            !((ba.field_i.field_a - 1) > this.y))) {
             this.field_u = 1024 * param1;
           }
           boolean decompiledFrameCompleted0 = true;
-          if (22 == this.field_F) {
+          if (22 == this.type) {
             var5 = 64 * var3_int + (var4 * 64 / 256 + this.field_w);
-            var6 = this.field_w + (64 * this.field_H + 64 * this.field_u / 256);
-            var7 = 32 * this.field_o + 32 * this.field_B / 256;
+            var6 = this.field_w + (64 * this.y + 64 * this.field_u / 256);
+            var7 = 32 * this.x + 32 * this.field_B / 256;
             if (var7 >= 2048) {
               var7 -= 2048;
             }
@@ -1978,7 +1978,7 @@ final class LevelEntity {
                 if (this.field_X) {
                   var8 = var8 + (this.field_w >> 1);
                   this.field_u = var8 % 64 * 256 / 64;
-                  this.field_H = var8 / 64;
+                  this.y = var8 / 64;
                   return true;
                 }
               }
@@ -1986,14 +1986,14 @@ final class LevelEntity {
             }
           }
           if (decompiledFrameCompleted0) {
-            stackIn_80_0 = this.field_F;
+            stackIn_80_0 = this.type;
           }
           if (stackIn_80_0 == 0 &&
-            this.field_H >= ol.field_g.field_a &&
+            this.y >= ol.field_g.field_a &&
             this.field_db <= 0) {
             bd.field_l = true;
           }
-          this.field_z = 64 * this.field_u / 256 + this.field_H * 64;
+          this.field_z = 64 * this.field_u / 256 + this.y * 64;
           var5Lifetime1 = 7 / ((-12 - param0) / 59);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2027,29 +2027,29 @@ final class LevelEntity {
           if (this.field_x >= 0) {
             this.field_x = this.field_x - 1;
           }
-          if (this.field_F == 23) {
+          if (this.type == 23) {
             var3 = this.o(param0 ^ 39);
             stackIn_12_0 = var3;
             return stackIn_12_0;
           }
-          if (this.field_F == 24) {
+          if (this.type == 24) {
             var3Lifetime1 = this.g(param0 + 11198);
             stackIn_10_0 = var3Lifetime1;
             return stackIn_10_0;
           }
-          if (this.field_F == 28 &&
+          if (this.type == 28 &&
             0 == fh.field_e) {
             this.E(24888);
             this.k(-47);
             return this;
           }
-          if (this.field_F == 28 &&
+          if (this.type == 28 &&
             fh.field_e == 1) {
             this.l((byte) 122);
             this.k(123);
             return this;
           }
-          if (this.field_F == 28 &&
+          if (this.type == 28 &&
             fh.field_e == 2) {
             this.o((byte) 39);
             this.k(10);
@@ -2065,19 +2065,19 @@ final class LevelEntity {
           if (param0 != 29) {
             this.field_fb = true;
           }
-          if (0 == this.field_F) {
+          if (0 == this.type) {
             this.u(-91);
           }
-          if (vg.a(this.field_F, -1)) {
-            this.b((byte) -121, this.field_F);
-            this.b(359, this.field_F);
+          if (vg.a(this.type, -1)) {
+            this.b((byte) -121, this.type);
+            this.b(359, this.type);
           }
-          if (this.field_F == 28) {
+          if (this.type == 28) {
             this.a((byte) -35);
             this.b((byte) -66);
           }
           this.d(-15777);
-          if (28 == this.field_F) {
+          if (28 == this.type) {
             stackIn_58_0 = 0;
             if (this.field_jb) {
               stackIn_59_1 = 0;
@@ -2112,15 +2112,15 @@ final class LevelEntity {
               var5 == 0) {
               if (this.field_fb &&
                 !ol.field_g.a(2, this.field_e, this.field_w, this.field_I, -this.field_w + this.field_z + 1) &&
-                22 != this.field_F) {
+                22 != this.type) {
                 this.field_L = 2;
-                if (!(!vg.a(this.field_F, param0 ^ -30))) {
-                  qa.a(this.field_o, BufferedSocket.field_p.field_H, dg.field_T[this.field_F], this, this.field_H, -1, 5, BufferedSocket.field_p.field_o, 25, this.field_V);
+                if (!(!vg.a(this.type, param0 ^ -30))) {
+                  qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 5, BufferedSocket.field_p.x, 25, this.variant);
                 }
               } else {
                 boolean decompiledFrameRemainder9 = true;
-                if (this.field_F == 0) {
-                  if (0 != this.field_F ||
+                if (this.type == 0) {
+                  if (0 != this.type ||
                     vj.field_c != 2 ||
                     !kl.field_a) {
                     if (!this.field_c &&
@@ -2174,10 +2174,10 @@ final class LevelEntity {
                   }
                 }
                 aj.a((byte) -94, this, this.field_y);
-                if (this.field_F == 0) {
+                if (this.type == 0) {
                   this.v(12);
-                } else if (this.field_F != 22) {
-                  if (this.field_F != 0) {
+                } else if (this.type != 22) {
+                  if (this.type != 0) {
                     this.field_O = this.g(false);
                   }
                 } else {
@@ -2191,7 +2191,7 @@ final class LevelEntity {
                 if (this.field_O) {
                   this.j(false);
                 } else {
-                  if (this.field_F == 7 &&
+                  if (this.type == 7 &&
                     0 >= this.field_D) {
                     this.field_O = true;
                     this.j(false);
@@ -2201,10 +2201,10 @@ final class LevelEntity {
                       !ol.field_g.a(param0 - 27, this.field_e, this.field_w, this.field_I, -16 + (this.field_z - this.field_w))) {
                       this.field_h = -this.field_M;
                       this.field_L = 1;
-                      if (this.field_F != 0) {
-                        if (this.field_F != 28) {
-                          if (vg.a(this.field_F, -1)) {
-                            qa.a(this.field_o, BufferedSocket.field_p.field_H, dg.field_T[this.field_F], this, this.field_H, param0 ^ -30, 3, BufferedSocket.field_p.field_o, 25, this.field_V);
+                      if (this.type != 0) {
+                        if (this.type != 28) {
+                          if (vg.a(this.type, -1)) {
+                            qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, param0 ^ -30, 3, BufferedSocket.field_p.x, 25, this.variant);
                           }
                         } else {
                           jc.b(fh.field_e, 1, 0);
@@ -2215,14 +2215,14 @@ final class LevelEntity {
                       this.field_D = 0;
                     }
                     if (this.field_ib &&
-                      this.field_F == 2) {
+                      this.type == 2) {
                       this.p(param0 - 37);
                     }
                     if (this.field_ib &&
-                      this.field_F == 3) {
+                      this.type == 3) {
                       this.C(-126);
                     }
-                    if ((0 == this.field_F)) {
+                    if ((0 == this.type)) {
                       this.l(false);
                     }
                   }
@@ -2267,7 +2267,7 @@ final class LevelEntity {
               (decompiledFrameRemainder0)) {
               aj.a((byte) -94, this, this.field_y);
               this.a(true, false);
-              if (0 == this.field_F) {
+              if (0 == this.type) {
                 this.v(12);
                 if (var5 != 0) {
                   this.field_O = this.g(false);
@@ -2282,7 +2282,7 @@ final class LevelEntity {
               }
               if (decompiledFrameRemainder10) {
                 if (this.field_ib &&
-                  this.field_F == 0 &&
+                  this.type == 0 &&
                   ch.field_a[vj.field_c][pl.field_e[10]] &&
                   this.field_h > 0 &&
                   !ol.field_g.a(param0 ^ 31, this.field_e, (-this.field_w + 160) / 2, this.field_I, this.field_z)) {
@@ -2295,7 +2295,7 @@ final class LevelEntity {
                 }
                 if ((decompiledFrameRemainder10) &&
                   (decompiledFrameRemainder10 = (this.field_ib)) &&
-                  (decompiledFrameRemainder10 = (this.field_F == 0)) &&
+                  (decompiledFrameRemainder10 = (this.type == 0)) &&
                   (decompiledFrameRemainder10 = !(this.field_h <= 0))) {
                   this.field_L = 3;
                   this.H(param0 ^ 20);
@@ -2320,11 +2320,11 @@ final class LevelEntity {
               this.a(true, false);
               if (0 < this.field_h) {
                 this.field_L = 2;
-                if (vg.a(this.field_F, -1)) {
-                  qa.a(this.field_o, BufferedSocket.field_p.field_H, dg.field_T[this.field_F], this, this.field_H, param0 - 30, 5, BufferedSocket.field_p.field_o, 20, this.field_V);
+                if (vg.a(this.type, -1)) {
+                  qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, param0 - 30, 5, BufferedSocket.field_p.x, 20, this.variant);
                 }
               }
-              if (this.field_F != 0) {
+              if (this.type != 0) {
                 this.field_O = this.g(false);
                 if (var5 != 0) {
                   this.v(12);
@@ -2339,7 +2339,7 @@ final class LevelEntity {
               }
               if ((decompiledFrameRemainder10) &&
                 (decompiledFrameRemainder10 = (this.field_ib)) &&
-                (decompiledFrameRemainder10 = (0 == this.field_F)) &&
+                (decompiledFrameRemainder10 = (0 == this.type)) &&
                 (decompiledFrameRemainder10 = !(!ch.field_a[vj.field_c][pl.field_e[10]]))) {
                 ti.field_d = 10;
                 this.field_L = 10;
@@ -2348,7 +2348,7 @@ final class LevelEntity {
                   this.field_h = this.field_h - 7;
                   this.field_Q = this.field_Q + 20 * this.field_a;
                 }
-                if (this.field_F != 0) {
+                if (this.type != 0) {
                   this.field_D = 0;
                 }
                 this.n(param0 + 67);
@@ -2362,7 +2362,7 @@ final class LevelEntity {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2)) {
-              if (this.field_F == 28) {
+              if (this.type == 28) {
                 this.a(true, -121);
                 decompiledFrameRemainder10 = (var5 != 0);
               }
@@ -2379,11 +2379,11 @@ final class LevelEntity {
               this.field_D = this.field_D + 1;
               if (this.field_D > 24) {
                 this.field_L = 0;
-                if (this.field_F == 0) {
+                if (this.type == 0) {
                   kl.field_a = false;
                 }
               }
-              if (vg.a(this.field_F, -1)) {
+              if (vg.a(this.type, -1)) {
                 aj.a((byte) -123, this, this.field_y);
               }
               var3_int = this.field_D;
@@ -2393,10 +2393,10 @@ final class LevelEntity {
                 24 >= this.field_D) {
                 this.field_L = 12;
               }
-              if (this.field_F == 0) {
+              if (this.type == 0) {
                 this.v(param0 ^ 17);
                 if (var5 != 0) {
-                  if (this.field_F == 28) {
+                  if (this.type == 28) {
                     this.e(false);
                     this.field_O = this.g(false);
                   } else {
@@ -2404,7 +2404,7 @@ final class LevelEntity {
                   }
                 }
               } else {
-                if (this.field_F == 28) {
+                if (this.type == 28) {
                   this.e(false);
                   if (var5 != 0) {
                     this.field_O = this.g(false);
@@ -2413,7 +2413,7 @@ final class LevelEntity {
                   this.field_O = this.g(false);
                 }
               }
-              if (vg.a(this.field_F, -1)) {
+              if (vg.a(this.type, -1)) {
                 kf.a(this, this.field_y, 8);
                 if (this.field_O) {
                   this.j(false);
@@ -2421,7 +2421,7 @@ final class LevelEntity {
                 }
               }
               if ((decompiledFrameRemainder10) &&
-                (decompiledFrameRemainder10 = (this.field_F == 0)) &&
+                (decompiledFrameRemainder10 = (this.type == 0)) &&
                 (decompiledFrameRemainder10 = !(!ol.field_g.a(2, this.field_e, this.field_w, this.field_I, 1 + (-this.field_w + this.field_z))))) {
                 if ((!this.field_ib) &&
                   (decompiledFrameRemainder10 = (this.field_ab))) {
@@ -2453,11 +2453,11 @@ final class LevelEntity {
               decompiledFrameRemainder10 = !(this.field_D <= 50);
               if (decompiledFrameRemainder10) {
                 discarded$0 = this.c((byte) 88, true);
-                this.field_o = this.field_o + 32;
-                if (this.field_o >= 64) {
-                  this.field_o = this.field_o - 64;
+                this.x = this.x + 32;
+                if (this.x >= 64) {
+                  this.x = this.x - 64;
                 }
-                this.field_e = 32 * this.field_o;
+                this.field_e = 32 * this.x;
                 var4 = 2048;
                 this.field_D = 0;
                 if (var4 <= this.field_e) {
@@ -2501,7 +2501,7 @@ final class LevelEntity {
               }
             }
           }
-          if (this.field_F == 6 &&
+          if (this.type == 6 &&
             BufferedSocket.field_p != null &&
             this.field_db > 0 &&
             BufferedSocket.field_p.field_z <= (-this.field_w + this.field_z)) {
@@ -2653,7 +2653,7 @@ final class LevelEntity {
           var3 = stackIn_13_0;
           if (this.field_L == 0 &&
             var3 != 0 && (2 != var2_int ||
-            this.field_F == 28)) {
+            this.type == 28)) {
             return;
           }
           if (this.field_L == 0 &&
@@ -2718,18 +2718,18 @@ final class LevelEntity {
           }
           param1.field_b = 0;
           var3_int = df.field_R / 32;
-          if (param1.field_o < var3_int &&
+          if (param1.x < var3_int &&
             this.field_a > 0) {
             param1.field_b = 64;
           }
           if (param0 > -18) {
             this.r(-61);
           }
-          if (var3_int < param1.field_o &&
+          if (var3_int < param1.x &&
             this.field_a < 0) {
             param1.field_b = -64;
           }
-          param1.field_b = param1.field_o - var3_int;
+          param1.field_b = param1.x - var3_int;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2752,9 +2752,9 @@ final class LevelEntity {
         RuntimeException var2_ref = null;
         try {
           if (this.field_db <= 0 &&
-            !this.field_Z && (6 != this.field_F ||
-            this.field_V != 0 &&
-            2 != this.field_V) && this.field_L != 13) {
+            !this.field_Z && (6 != this.type ||
+            this.variant != 0 &&
+            2 != this.variant) && this.field_L != 13) {
             if (BufferedSocket.field_p == this) {
               if (GameKeyHandler.field_b) {
                 vd.field_b = true;
@@ -2776,18 +2776,18 @@ final class LevelEntity {
             if (this.field_nb) {
               this.field_nb = false;
               wj.field_a = wj.field_a + 1;
-              var2 = new LevelEntity(this.field_o, this.field_H, 8 + this.field_V, 0);
+              var2 = new LevelEntity(this.x, this.y, 8 + this.variant, 0);
               ef.a(0, var2);
               var2.field_B = this.field_B;
               var2.field_u = this.field_u;
               var2.field_L = 1;
-              this.field_z = this.field_H * 64 + this.field_u * 64 / 256;
+              this.field_z = this.y * 64 + this.field_u * 64 / 256;
               var2.field_h = -10;
-              this.field_e = 32 * this.field_B / 256 + this.field_o * 32;
+              this.field_e = 32 * this.field_B / 256 + this.x * 32;
               var2.field_Q = 0;
             }
-            if (6 == this.field_F &&
-              this.field_V == 1) {
+            if (6 == this.type &&
+              this.variant == 1) {
               this.a((byte) -117, false);
             }
           }
@@ -2898,9 +2898,9 @@ final class LevelEntity {
           var4 = 0;
           var5 = this.a((byte) -50, fk.field_s) ? 1 : 0;
           if (var5 == 0) {
-            if (!rk.field_e) {
-              stackIn_10_0 = !(rk.field_e);
-              rk.field_e = stackIn_10_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_10_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_10_0;
             }
             this.field_Q = 0;
             kf.field_d = 2;
@@ -2912,9 +2912,9 @@ final class LevelEntity {
             kf.field_d = 2;
             this.field_Q = 0;
             this.field_h = 0;
-            if (!rk.field_e) {
-              stackIn_23_0 = !(rk.field_e);
-              rk.field_e = stackIn_23_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_23_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_23_0;
             }
             return;
           }
@@ -2926,7 +2926,7 @@ final class LevelEntity {
           if (var4Lifetime1 != 0) {
             this.d((byte) 120, var6);
           }
-          if (sl.a(var6, var7, var8, -22981)) {
+          if (IntrusiveDeque.a(var6, var7, var8, -22981)) {
             stackIn_40_0 = !(ql.field_j);
             ql.field_j = stackIn_40_0;
             this.field_a = -this.field_a;
@@ -2937,16 +2937,16 @@ final class LevelEntity {
           var2_int = 0;
           var3 = 0;
           if (param0 != 29647) {
-            this.field_V = 96;
+            this.variant = 96;
           }
           discarded$0 = this.a(var2_int != 0, (byte) -127, var3 != 0);
           var9 = this.b((byte) 109, var4Lifetime1 != 0);
           if (var7 == var9) {
             this.field_Q = 0;
             kf.field_d = 0;
-            if (!rk.field_e) {
-              stackIn_58_0 = !(rk.field_e);
-              rk.field_e = stackIn_58_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_58_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_58_0;
             }
           }
           return;
@@ -3274,7 +3274,7 @@ final class LevelEntity {
           }
           if (param1 == 1) {
             this.x(96);
-            if (this.field_V > 0) {
+            if (this.variant > 0) {
               this.field_D = this.field_D + 1;
             }
             if (this.field_a > 0) {
@@ -3290,7 +3290,7 @@ final class LevelEntity {
             }
             this.field_D = 0;
             this.field_ab = true;
-            if (this.field_V <= 1) {
+            if (this.variant <= 1) {
               return;
             }
             this.b(true);
@@ -3332,7 +3332,7 @@ final class LevelEntity {
               this.field_N = false;
               this.field_j = true;
               this.field_c = false;
-              if (this.field_V <= 1) {
+              if (this.variant <= 1) {
                 return;
               }
               this.b(true);
@@ -3346,7 +3346,7 @@ final class LevelEntity {
             this.field_c = false;
             this.field_ib = true;
             this.field_j = true;
-            if (this.field_V <= 1) {
+            if (this.variant <= 1) {
               return;
             }
             this.b(true);
@@ -3378,17 +3378,17 @@ final class LevelEntity {
                 this.field_c = false;
               }
               if (this.field_T ||
-                2 != this.field_V ||
+                2 != this.variant ||
                 !this.a((byte) -25, this.field_a) &&
                 !this.field_k) {
-                if (this.field_V > 0) {
+                if (this.variant > 0) {
                   this.field_D = this.field_D + 1;
                   if (this.field_D > 37) {
                     this.field_T = false;
                   }
                   if (this.field_D > 112 &&
-                    BufferedSocket.field_p.field_H > this.field_H) {
-                    if (this.field_V > 1) {
+                    BufferedSocket.field_p.y > this.y) {
+                    if (this.variant > 1) {
                       this.b(true);
                     }
                     this.field_t = true;
@@ -3436,7 +3436,7 @@ final class LevelEntity {
                 } else {
                   this.field_N = true;
                 }
-                if (2 != this.field_V) {
+                if (2 != this.variant) {
                   return;
                 }
                 this.field_G = 0;
@@ -3444,7 +3444,7 @@ final class LevelEntity {
                   return;
                 }
               }
-              if (0 == this.field_V) {
+              if (0 == this.variant) {
                 this.field_Q = 0;
               }
               if (this.field_D <= 0) {
@@ -3460,7 +3460,7 @@ final class LevelEntity {
                   return;
                 }
               }
-              if (2 == this.field_V) {
+              if (2 == this.variant) {
                 this.b(true);
                 this.field_k = true;
               }
@@ -3478,12 +3478,12 @@ final class LevelEntity {
               }
             }
             this.x(96);
-            if (this.field_V > 0 &&
+            if (this.variant > 0 &&
               this.field_L == 2) {
               this.b(true);
               this.field_k = true;
             }
-            if (this.field_V > 1) {
+            if (this.variant > 1) {
               this.field_D = this.field_D + 1;
             }
             if (this.field_D > 200) {
@@ -3633,7 +3633,7 @@ final class LevelEntity {
                       od.a(0, 0, 0, var16, 0, of.field_b);
                     }
                   }
-                  la.field_f.a(param5 ^ 20762);
+                  SectorCacheStore.field_f.a(param5 ^ 20762);
                 }
                 param1 -= 32;
                 var19 = 160;
@@ -3834,7 +3834,7 @@ final class LevelEntity {
                     var27 != 0) {
                     oa.field_e.d(0, 0, var20, var19);
                   }
-                  la.field_f.a(-72);
+                  SectorCacheStore.field_f.a(-72);
                   var11 = param6 + param4;
                   SoftwareRasterizer.b(bf.field_l);
                   var12Lifetime1Lifetime1 = var11 + var20;
@@ -4091,7 +4091,7 @@ final class LevelEntity {
             if (this.field_L == 0) {
               this.field_ib = false;
               kf.field_d = 2;
-              kf.field_d = lg.b((byte) 84, this.field_H);
+              kf.field_d = lg.b((byte) 84, this.y);
               if (kf.field_d < 0) {
                 kf.field_d = 0;
               }
@@ -4101,7 +4101,7 @@ final class LevelEntity {
           if (kf.field_d == 2) {
             this.a(true);
             this.field_mb = false;
-            kf.field_d = lg.b((byte) 84, this.field_H);
+            kf.field_d = lg.b((byte) 84, this.y);
             if (kf.field_d < 0) {
               kf.field_d = 0;
             }
@@ -4117,7 +4117,7 @@ final class LevelEntity {
               this.field_h = -this.field_M;
               this.field_Q = 0;
             }
-            var11Lifetime1 = lg.b((byte) 84, BufferedSocket.field_p.field_H);
+            var11Lifetime1 = lg.b((byte) 84, BufferedSocket.field_p.y);
             if (this.j((byte) 112) ||
               var11Lifetime1 < 0 ||
               var11Lifetime1 == 2) {
@@ -4141,7 +4141,7 @@ final class LevelEntity {
               wh.field_b = false;
               this.field_ib = false;
               kf.field_d = 4;
-              kf.field_d = lg.b((byte) 84, this.field_H);
+              kf.field_d = lg.b((byte) 84, this.y);
               if (0 > kf.field_d) {
                 kf.field_d = 0;
               }
@@ -4179,7 +4179,7 @@ final class LevelEntity {
               if (this.field_L == 0) {
                 var11Lifetime2 = this.h(-26698);
                 if (var11Lifetime2 < 0) {
-                  kf.field_d = lg.b((byte) 84, this.field_H);
+                  kf.field_d = lg.b((byte) 84, this.y);
                   if (kf.field_d < 0) {
                     kf.field_d = 0;
                   }
@@ -4213,7 +4213,7 @@ final class LevelEntity {
             td.field_e = 0;
             return;
           }
-          kf.field_d = lg.b((byte) 84, this.field_H);
+          kf.field_d = lg.b((byte) 84, this.y);
           if (kf.field_d < 0) {
             kf.field_d = 0;
           }
@@ -4238,7 +4238,7 @@ final class LevelEntity {
                 }
                 return;
               }
-              kf.field_d = lg.b((byte) 84, this.field_H);
+              kf.field_d = lg.b((byte) 84, this.y);
               if (0 > kf.field_d) {
                 kf.field_d = 0;
               }
@@ -4265,10 +4265,10 @@ final class LevelEntity {
                 if (var16 == 0 &&
                   var10 != 0) {
                   var17 = var2[0];
-                  if (BufferedSocket.field_p.field_H == var17 &&
-                    var8 > BufferedSocket.field_p.field_o &&
+                  if (BufferedSocket.field_p.y == var17 &&
+                    var8 > BufferedSocket.field_p.x &&
                     var11Lifetime3 == 0 ||
-                    !(BufferedSocket.field_p.field_o <= var8) &&
+                    !(BufferedSocket.field_p.x <= var8) &&
                     1 == var11Lifetime3) {
                     stackIn_212_0 = (var16 != 0) ? 0 : 1;
                     var16 = stackIn_212_0;
@@ -4577,24 +4577,24 @@ final class LevelEntity {
         try {
           if (this.field_B >= 256) {
             this.field_B = this.field_B - 256;
-            this.field_o = this.field_o + 1;
-            if (64 <= this.field_o) {
-              this.field_o = this.field_o - 64;
+            this.x = this.x + 1;
+            if (64 <= this.x) {
+              this.x = this.x - 64;
               if (TorChallenge.field_F &&
                 this.field_B < 0) {
-                this.field_o = this.field_o - 1;
+                this.x = this.x - 1;
                 this.field_B = this.field_B + 256;
-                if (this.field_o < 0) {
-                  this.field_o = this.field_o + 64;
+                if (this.x < 0) {
+                  this.x = this.x + 64;
                 }
               }
             }
           } else {
             if (this.field_B < 0) {
-              this.field_o = this.field_o - 1;
+              this.x = this.x - 1;
               this.field_B = this.field_B + 256;
-              if (this.field_o < 0) {
-                this.field_o = this.field_o + 64;
+              if (this.x < 0) {
+                this.x = this.x + 64;
               }
             }
           }
@@ -4703,8 +4703,8 @@ final class LevelEntity {
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           var2_int = 5;
-          if (8 <= this.field_F &&
-            this.field_F < 21) {
+          if (8 <= this.type &&
+            this.type < 21) {
             this.field_gb = false;
             if (this.field_f == -1) {
               this.field_fb = true;
@@ -4718,12 +4718,12 @@ final class LevelEntity {
             this.field_Q = this.field_Q / 2;
             this.x(96);
             this.field_jb = false;
-            if (this.field_F == 12 &&
+            if (this.type == 12 &&
               o.field_l == 0 &&
               this.field_f != -1) {
               this.i(false);
             }
-            if (this.field_F == 13 &&
+            if (this.type == 13 &&
               o.field_l == 0) {
               this.i(false);
             }
@@ -4733,7 +4733,7 @@ final class LevelEntity {
             null != BufferedSocket.field_p &&
             0 < BufferedSocket.field_p.field_db &&
             0 <= this.field_h) {
-            if (13 == this.field_F &&
+            if (13 == this.type &&
               db.field_B >= 10) {
               return;
             }
@@ -4741,13 +4741,13 @@ final class LevelEntity {
               boolean decompiledFrameRemainder0 = true;
               this.field_L = 14;
               this.f((byte) -17);
-              if ((18 == this.field_F) &&
+              if ((18 == this.type) &&
                 (decompiledFrameRemainder0 = !(SocketConnector.field_k >= 9))) {
                 SocketConnector.field_k = SocketConnector.field_k + 1;
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (this.field_F == 14) {
+                if (this.type == 14) {
                   if (BufferedSocket.field_p.field_d <= BufferedSocket.field_p.field_db) {
                     this.field_L = 0;
                     decompiledFrameRemainder0 = (ea.field_e == 0);
@@ -4764,9 +4764,9 @@ final class LevelEntity {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (12 != this.field_F) {
-                    if (this.field_F != 13) {
-                      if (15 == this.field_F) {
+                  if (12 != this.type) {
+                    if (this.type != 13) {
+                      if (15 == this.type) {
                         if (this.field_nb) {
                           var3 = -1;
                           var4 = 0;
@@ -4792,7 +4792,7 @@ final class LevelEntity {
                             mh.field_d[var3] = this.field_y;
                           }
                           this.field_nb = false;
-                          hd.field_d = hd.field_d + 1;
+                          GzipDecoder.field_d = GzipDecoder.field_d + 1;
                           var4Lifetime2 = jj.a(255);
                           BufferedSocket.field_p.field_d = 3 + var4Lifetime2 / var2_int;
                           if (jj.field_d) {
@@ -4810,13 +4810,13 @@ final class LevelEntity {
                           ii.field_i = 50;
                           be.field_d = BufferedSocket.field_p.field_db;
                         }
-                        BufferedSocket.field_p.field_r = this.field_o;
-                        BufferedSocket.field_p.field_f = this.field_H;
+                        BufferedSocket.field_p.field_r = this.x;
+                        BufferedSocket.field_p.field_f = this.y;
                         BufferedSocket.field_p.field_db = BufferedSocket.field_p.field_d;
                         decompiledFrameRemainder0 = (var5 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        if (this.field_F == 20) {
+                        if (this.type == 20) {
                           ij.field_z = true;
                           this.field_L = 0;
                           var3Lifetime1 = 0;
@@ -4862,7 +4862,7 @@ final class LevelEntity {
                           decompiledFrameRemainder0 = (var5 != 0);
                         }
                         if ((decompiledFrameRemainder0) &&
-                          (decompiledFrameRemainder0 = (this.field_F == 19))) {
+                          (decompiledFrameRemainder0 = (this.type == 19))) {
                           this.field_L = 0;
                           rj.field_d = vb.a(ea.field_e, (byte) 109, this.field_hb);
                           decompiledFrameRemainder0 = (var5 != 0);
@@ -4916,19 +4916,19 @@ final class LevelEntity {
                   }
                 }
               }
-              this.e(this.field_F, -1);
+              this.e(this.type, -1);
             }
           }
           if (param0 != -15777) {
             discarded$0 = this.c((byte) -5, true);
           }
-          if (this.field_F == 15) {
+          if (this.type == 15) {
             stackIn_199_0 = !(this.field_nb);
             if (stackIn_199_0 &&
-              !wa.field_pb[-(ea.field_e * 5) + this.field_V]) {
+              !wa.field_pb[-(ea.field_e * 5) + this.variant]) {
               this.field_D = this.field_D + 1;
               if (this.field_D >= 51) {
-                wa.field_pb[this.field_V - 5 * ea.field_e] = true;
+                wa.field_pb[this.variant - 5 * ea.field_e] = true;
               }
             }
           }
@@ -5609,9 +5609,9 @@ final class LevelEntity {
           }
           var3_int = dg.field_T[param1];
           this.field_fb = lb.field_q[var3_int];
-          this.field_mb = ja.field_j[var3_int][this.field_V];
+          this.field_mb = ja.field_j[var3_int][this.variant];
           this.field_gb = be.field_c[var3_int];
-          this.field_jb = dl.field_r[var3_int][this.field_V];
+          this.field_jb = dl.field_r[var3_int][this.variant];
           if (0 == this.field_a) {
             this.field_a = -1;
           }
@@ -5895,7 +5895,7 @@ final class LevelEntity {
             this.field_e = -var2_int + this.field_e;
           }
           this.field_B = this.field_e % 32 * 256 / 32;
-          this.field_o = this.field_e / 32;
+          this.x = this.field_e / 32;
           if (param0 != 11227) {
             stackIn_17_0 = (LevelEntity) null;
             return stackIn_17_0;
@@ -5995,7 +5995,7 @@ final class LevelEntity {
                 while (var6 <= 1) {
                   var4 = var2[var5][var6];
                   stackIn_6_0 = var4;
-                  stackIn_6_1 = this.field_o;
+                  stackIn_6_1 = this.x;
                   if (stackIn_6_0 == stackIn_6_1) {
                     stackIn_14_0 = var5;
                     return stackIn_14_0;
@@ -6169,15 +6169,15 @@ final class LevelEntity {
           var3_int = dg.field_T[param0];
           this.field_I = pl.field_b[var3_int];
           this.field_w = ae.field_A[var3_int];
-          if (this.field_V > 2) {
+          if (this.variant > 2) {
             return;
           }
-          this.field_db = dl.field_C[var3_int][this.field_V];
-          this.field_nb = de.field_c[var3_int][this.field_V];
-          this.field_K = mh.field_c[var3_int][this.field_V];
+          this.field_db = dl.field_C[var3_int][this.variant];
+          this.field_nb = de.field_c[var3_int][this.variant];
+          this.field_K = mh.field_c[var3_int][this.variant];
           this.field_M = ck.field_a[var3_int];
           this.field_cb = bc.field_l[var3_int];
-          this.field_C = ll.field_k[var3_int][this.field_V];
+          this.field_C = ll.field_k[var3_int][this.variant];
           this.field_L = 0;
           if (param1 <= 41) {
             this.a(-49, 35, 18, 17, 35, 117, -19, 68);
@@ -6469,7 +6469,7 @@ final class LevelEntity {
         int var16Lifetime1;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
-          var3_int = this.field_o;
+          var3_int = this.x;
           var4 = 32 * var3_int;
           var6 = var4 + this.field_B * 32 / 256 + this.field_I;
           var7 = 2048;
@@ -6484,8 +6484,8 @@ final class LevelEntity {
           if (var8 != 0) {
             var10 = 63;
           }
-          var11 = this.field_H;
-          var12 = 64 * this.field_u / 256 + this.field_H * 64;
+          var11 = this.y;
+          var12 = 64 * this.field_u / 256 + this.y * 64;
           var14 = -this.field_w + var12;
           if (var11 < 0) {
             var11 = 0;
@@ -6517,10 +6517,10 @@ final class LevelEntity {
                   if (stackIn_22_0 > stackIn_22_1) {
                     if (param1) {
                       this.field_B = 0;
-                      this.field_o = var15;
-                      this.field_H = 1 + var16;
-                      if (this.field_H >= ol.field_g.field_a) {
-                        this.field_H = ol.field_g.field_a - 1;
+                      this.x = var15;
+                      this.y = 1 + var16;
+                      if (this.y >= ol.field_g.field_a) {
+                        this.y = ol.field_g.field_a - 1;
                       }
                       this.field_u = 0;
                     }
@@ -6557,11 +6557,11 @@ final class LevelEntity {
                   if (stackIn_45_0Lifetime1 < stackIn_45_1Lifetime1) {
                     if (param1) {
                       this.field_B = 0;
-                      this.field_H = 1 + var16Lifetime1;
-                      this.field_o = var15;
+                      this.y = 1 + var16Lifetime1;
+                      this.x = var15;
                       this.field_u = 0;
-                      if (this.field_H >= ol.field_g.field_a) {
-                        this.field_H = -1 + ol.field_g.field_a;
+                      if (this.y >= ol.field_g.field_a) {
+                        this.y = -1 + ol.field_g.field_a;
                       }
                     }
                     return true;
@@ -6596,7 +6596,7 @@ final class LevelEntity {
             var3_int = ab.field_d * cd.field_d[var4];
             qk.field_lb = qk.field_lb + 1;
             if (param0 == 11) {
-              hd.field_c[vj.field_c] = p.a(hd.field_c[vj.field_c], 1 << -1 + ea.field_e);
+              GzipDecoder.field_c[vj.field_c] = p.a(GzipDecoder.field_c[vj.field_c], 1 << -1 + ea.field_e);
             }
           }
           if (param0 == 13 &&
@@ -6604,7 +6604,7 @@ final class LevelEntity {
             var3_int = ab.field_d * 500;
           }
           tf.field_o = tf.field_o + var3_int;
-          pd.field_c = pd.field_c - var3_int;
+          GameScreen.field_c = GameScreen.field_c - var3_int;
           ub.field_j = ub.field_j - 1;
           pi.field_f = pi.field_f - al.field_z;
           return;
@@ -6643,15 +6643,15 @@ final class LevelEntity {
           var8 = 0;
           stackIn_7_0 = (0 <= this.field_a) ? 0 : 1;
           var9 = stackIn_7_0;
-          var10 = ae.field_s[dg.field_T[this.field_F]];
+          var10 = ae.field_s[dg.field_T[this.type]];
           stackIn_11_0 = (0 >= this.field_G) ? 0 : 1;
           var11 = stackIn_11_0;
-          var12 = bc.field_l[dg.field_T[this.field_F]] ? 1 : 0;
-          if (this.field_F == 23) {
+          var12 = bc.field_l[dg.field_T[this.type]] ? 1 : 0;
+          if (this.type == 23) {
             RandomAccessCacheFile.a(-996593372, param2, param3);
             return;
           }
-          if (this.field_F == 24) {
+          if (this.type == 24) {
             if (this.field_a < 0) {
               if (cb.field_f == null) {
                 cb.field_f = new Sprite(ki.field_e[dg.field_T[24]], ae.field_s[dg.field_T[24]]);
@@ -6659,7 +6659,7 @@ final class LevelEntity {
               cb.field_f.d();
               SoftwareRasterizer.b();
               dj.field_O.d(0, 0);
-              la.field_f.a(110);
+              SectorCacheStore.field_f.a(110);
               cb.field_f.d(param2, param3, param5 - param2, ae.field_s[dg.field_T[24]]);
               if (var15 == 0) {
                 return;
@@ -6668,34 +6668,34 @@ final class LevelEntity {
             dj.field_O.d(param2, param3, -param2 + param5, ae.field_s[dg.field_T[24]]);
             return;
           }
-          if (0 <= dg.field_T[this.field_F] &&
-            dg.field_T[this.field_F] < ah.field_d.length) {
+          if (0 <= dg.field_T[this.type] &&
+            dg.field_T[this.type] < ah.field_d.length) {
             if (this.field_g >= 0 &&
-              this.field_g < ah.field_d[dg.field_T[this.field_F]].length) {
-              if (this.field_V >= 0 &&
-                ah.field_d[dg.field_T[this.field_F]][this.field_g].length > this.field_V) {
+              this.field_g < ah.field_d[dg.field_T[this.type]].length) {
+              if (this.variant >= 0 &&
+                ah.field_d[dg.field_T[this.type]][this.field_g].length > this.variant) {
                 if (0 <= this.field_P &&
-                  this.field_P < ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V].length) {
-                  if (this.field_F == 5 &&
+                  this.field_P < ah.field_d[dg.field_T[this.type]][this.field_g][this.variant].length) {
+                  if (this.type == 5 &&
                     this.field_D == 0) {
                     SoftwareRasterizer.a(bf.field_l);
                     mb.field_e.d();
                     SoftwareRasterizer.b();
-                    ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P].d(0, 0, param5 - param2, var10);
+                    ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].d(0, 0, param5 - param2, var10);
                     jc.field_i.d();
                     SoftwareRasterizer.b();
                     mb.field_e.b(0, var10 - this.field_w >> 1);
-                    la.field_f.a(126);
+                    SectorCacheStore.field_f.a(126);
                     SoftwareRasterizer.b(bf.field_l);
                   }
                   if (var9 != 0) {
                     SoftwareRasterizer.a(bf.field_l);
                     mb.field_e.d();
                     SoftwareRasterizer.b();
-                    ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P].d(0, 0, param5 - param2, var10);
+                    ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].d(0, 0, param5 - param2, var10);
                     jj.field_e.d();
                     SoftwareRasterizer.b();
-                    if (5 != this.field_F ||
+                    if (5 != this.type ||
                       this.field_D != 0) {
                       mb.field_e.d(0, 0);
                       if (var15 != 0) {
@@ -6704,46 +6704,46 @@ final class LevelEntity {
                     } else {
                       jc.field_i.d(0, 0);
                     }
-                    la.field_f.a(112);
+                    SectorCacheStore.field_f.a(112);
                     SoftwareRasterizer.b(bf.field_l);
                   }
                   if (6 == this.field_g) {
                     if (0 == this.field_P &&
                       !this.field_T) {
                       if (var9 == 0) {
-                        this.a(param1, param0, -128 + this.field_B, this.field_H, this.field_o, 22, 2657, -128 + this.field_u);
+                        this.a(param1, param0, -128 + this.field_B, this.y, this.x, 22, 2657, -128 + this.field_u);
                       }
                       if (var9 != 0 ||
                         var15 != 0) {
-                        this.a(param1, param0, 256 * (16 + (this.field_I - pl.field_b[dg.field_T[22]])) / 32 + this.field_B, this.field_H, this.field_o, 22, 2657, -128 + this.field_u);
+                        this.a(param1, param0, 256 * (16 + (this.field_I - pl.field_b[dg.field_T[22]])) / 32 + this.field_B, this.y, this.x, 22, 2657, -128 + this.field_u);
                       }
-                      ah.field_d[dg.field_T[22]][1][this.field_V][0].d(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], ae.field_s[dg.field_T[22]]);
+                      ah.field_d[dg.field_T[22]][1][this.variant][0].d(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], ae.field_s[dg.field_T[22]]);
                       if ((var15 != 0) && (this.field_P == 1 &&
                         !this.field_T)) {
                         if (var9 != 0) {
-                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[dg.field_T[22]] + this.field_I)) * 256 / 32, this.field_H, this.field_o, 22, 2657, -256 + this.field_u);
+                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[dg.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
                         }
-                        this.a(param1, param0, 256 + this.field_B, this.field_H, this.field_o, 22, 2657, this.field_u - 256);
-                        ah.field_d[dg.field_T[22]][1][this.field_V][0].d(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[dg.field_T[22]]);
+                        this.a(param1, param0, 256 + this.field_B, this.y, this.x, 22, 2657, this.field_u - 256);
+                        ah.field_d[dg.field_T[22]][1][this.variant][0].d(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[dg.field_T[22]]);
                       }
                     } else {
                       if (this.field_P == 1 &&
                         !this.field_T) {
                         if (var9 != 0) {
-                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[dg.field_T[22]] + this.field_I)) * 256 / 32, this.field_H, this.field_o, 22, 2657, -256 + this.field_u);
+                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[dg.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
                         }
                         if (var9 == 0 ||
                           var15 != 0) {
-                          this.a(param1, param0, 256 + this.field_B, this.field_H, this.field_o, 22, 2657, this.field_u - 256);
+                          this.a(param1, param0, 256 + this.field_B, this.y, this.x, 22, 2657, this.field_u - 256);
                         }
-                        ah.field_d[dg.field_T[22]][1][this.field_V][0].d(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[dg.field_T[22]]);
+                        ah.field_d[dg.field_T[22]][1][this.variant][0].d(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[dg.field_T[22]]);
                       }
                     }
                   }
                   regionExit1: {
-                    if (this.field_F != 4 ||
+                    if (this.type != 4 ||
                       this.field_g == 4) {
-                      if (7 == this.field_F &&
+                      if (7 == this.type &&
                         this.field_m) {
                         if (0 != this.field_P) {
                           this.field_m = false;
@@ -6751,9 +6751,9 @@ final class LevelEntity {
                             break regionExit1;
                           }
                         }
-                        var13 = (ef.field_k - this.field_p << 7) / ik.field_d[this.field_g][dg.field_T[this.field_F]][this.field_V] + 128;
+                        var13 = (ef.field_k - this.field_p << 7) / ik.field_d[this.field_g][dg.field_T[this.type]][this.variant] + 128;
                         if (var9 == 0) {
-                          ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P].b(param2, param3, -param2 + param5, var10, var13);
+                          ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].b(param2, param3, -param2 + param5, var10, var13);
                         }
                         if (var9 != 0 ||
                           var15 != 0) {
@@ -6766,10 +6766,10 @@ final class LevelEntity {
                       if ((var11 == 0 ||
                         this.field_g == 4) &&
                         (!ol.field_a ||
-                        ~this.field_o != ~ol.field_g.field_l ||
-                        ~ol.field_g.field_i != ~this.field_H)) {
+                        ~this.x != ~ol.field_g.field_l ||
+                        ~ol.field_g.field_i != ~this.y)) {
                         if (var9 == 0) {
-                          if (this.field_F == 5 &&
+                          if (this.type == 5 &&
                             this.field_D == 0) {
                             var8Lifetime1 = param3 + var10 - 96;
                             var7_intLifetime1 = param2;
@@ -6786,7 +6786,7 @@ final class LevelEntity {
                             }
                           }
                           var7_intLifetime1 = param2;
-                          if (5 != this.field_F) {
+                          if (5 != this.type) {
                             var8Lifetime1 = param3;
                             if (var15 != 0) {
                               var8Lifetime1 = param3 - (var10 - this.field_w >> 1);
@@ -6796,7 +6796,7 @@ final class LevelEntity {
                           }
                           if (this.field_g != 4 ||
                             var12 != 0) {
-                            ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P].d(var7_intLifetime1, var8Lifetime1, -param2 + param5, var10);
+                            ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].d(var7_intLifetime1, var8Lifetime1, -param2 + param5, var10);
                             if (var15 == 0) {
                               break regionExit1;
                             }
@@ -6804,17 +6804,17 @@ final class LevelEntity {
                           SoftwareRasterizer.a(bf.field_l);
                           mb.field_e.d();
                           SoftwareRasterizer.b();
-                          ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P].d(0, 0, -param2 + param5, var10);
-                          la.field_f.a(100);
+                          ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].d(0, 0, -param2 + param5, var10);
+                          SectorCacheStore.field_f.a(100);
                           SoftwareRasterizer.b(bf.field_l);
                           this.a(mb.field_e, var8Lifetime1, var7_intLifetime1, 34);
                           if (var15 == 0) {
                             break regionExit1;
                           }
                         }
-                        if (this.field_F != 5 ||
+                        if (this.type != 5 ||
                           this.field_D != 0) {
-                          if (this.field_F != 22 ||
+                          if (this.type != 22 ||
                             !this.field_q) {
                             var8Lifetime1 = param3 - (var10 - this.field_w >> 1);
                             var7_intLifetime1 = -96 + param5 + (-param2 + param2);
@@ -6865,8 +6865,8 @@ final class LevelEntity {
                         var13Lifetime1 = (255 * var14 - 1275) / 5;
                       }
                       if (ol.field_a &&
-                        this.field_o == ol.field_g.field_l &&
-                        ~ol.field_g.field_i == ~this.field_H) {
+                        this.x == ol.field_g.field_l &&
+                        ~ol.field_g.field_i == ~this.y) {
                         var13Lifetime1 = 1;
                       }
                       if (var13Lifetime1 <= 0) {
@@ -6874,7 +6874,7 @@ final class LevelEntity {
                       }
                       boolean decompiledFrameRemainder0 = true;
                       if (var9 == 0) {
-                        if (5 == this.field_F &&
+                        if (5 == this.type &&
                           this.field_D == 0) {
                           var7_intLifetime1Lifetime1 = param2;
                           var8Lifetime1Lifetime1 = var10 - 96 + param3;
@@ -6884,20 +6884,20 @@ final class LevelEntity {
                         if (decompiledFrameRemainder0) {
                           var8Lifetime1Lifetime1 = param3;
                           var7_intLifetime1Lifetime1 = param2;
-                          if (5 == this.field_F) {
+                          if (5 == this.type) {
                             var8Lifetime1Lifetime1 = -(var10 - this.field_w >> 1) + var8Lifetime1Lifetime1;
                           }
-                          ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P].a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                          ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                         }
                       }
                       if ((decompiledFrameRemainder0) &&
                         (var9 != 0 ||
                         var15 != 0)) {
-                        if (this.field_F != 5 ||
+                        if (this.type != 5 ||
                           this.field_D != 0) {
                           var8Lifetime1Lifetime1 = param3;
                           var7_intLifetime1Lifetime1 = param2 + (-96 - (-param5 + param2));
-                          if (this.field_F == 5) {
+                          if (this.type == 5) {
                             var8Lifetime1Lifetime1 = -(-this.field_w + var10 >> 1) + var8Lifetime1Lifetime1;
                           }
                           jj.field_e.a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
@@ -6913,10 +6913,10 @@ final class LevelEntity {
                         }
                       }
                       if (var15 != 0) {
-                        this.a(param3, param5, (byte) 87, param2, ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P], this.field_P);
+                        this.a(param3, param5, (byte) 87, param2, ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P], this.field_P);
                       }
                     } else {
-                      this.a(param3, param5, (byte) 87, param2, ah.field_d[dg.field_T[this.field_F]][this.field_g][this.field_V][this.field_P], this.field_P);
+                      this.a(param3, param5, (byte) 87, param2, ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P], this.field_P);
                     }
                   }
                   if (this.field_g == 7) {
@@ -6990,11 +6990,11 @@ final class LevelEntity {
           this.field_h = 0;
           this.field_Q = 0;
           this.field_L = 13;
-          if (this.field_F != 22 &&
-            this.field_F != 7) {
+          if (this.type != 22 &&
+            this.type != 7) {
             return;
           }
-          hc.a(35, BufferedSocket.field_p.field_H, this.field_V, 4, BufferedSocket.field_p.field_o, dg.field_T[this.field_F], this.field_H, this.field_o);
+          hc.a(35, BufferedSocket.field_p.y, this.variant, 4, BufferedSocket.field_p.x, dg.field_T[this.type], this.y, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7048,7 +7048,7 @@ final class LevelEntity {
         int var14Lifetime1;
         var19 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (19 == this.field_F &&
+          if (19 == this.type &&
             !ui.field_b) {
             return;
           }
@@ -7059,12 +7059,12 @@ final class LevelEntity {
           var10 = 0;
           if (var5 > var4_int) {
             var11 = null;
-            if (vg.a(this.field_F, -1)) {
+            if (vg.a(this.type, -1)) {
               this.a(param1, param2, var4_int, var6, 47, var5);
             }
             var13 = 0;
-            if (this.field_F >= 8 &&
-              11 >= this.field_F) {
+            if (this.type >= 8 &&
+              11 >= this.type) {
               if (100 <= FullscreenFocusCanvas.field_c) {
                 FullscreenFocusCanvas.field_c = FullscreenFocusCanvas.field_c % 100;
               }
@@ -7074,14 +7074,14 @@ final class LevelEntity {
                 var9 = var8 - var9;
                 var10 = 1;
               }
-              var11 = dk.field_c[-8 + this.field_F][var9];
+              var11 = dk.field_c[-8 + this.type][var9];
               var13 = 1;
             }
-            if (this.field_F == 15) {
+            if (this.type == 15) {
               var11 = ec.field_a[3];
               var13 = 1;
             }
-            if (this.field_F == 18) {
+            if (this.type == 18) {
               var9Lifetime1 = 7;
               if (vj.field_c == 0) {
                 var9Lifetime1 = 7;
@@ -7114,53 +7114,53 @@ final class LevelEntity {
               var11 = ec.field_a[var9Lifetime1];
               var13 = 1;
             }
-            if (this.field_F == 19) {
+            if (this.type == 19) {
               var13 = 1;
               var11 = ec.field_a[5];
             }
-            if (this.field_F == 12 &&
+            if (this.type == 12 &&
               0 >= o.field_l) {
               var13 = 1;
               var11 = ec.field_a[0];
             }
-            if (this.field_F == 13 && (!(o.field_l <= 0) ||
+            if (this.type == 13 && (!(o.field_l <= 0) ||
               ol.field_a)) {
               var13 = 1;
               var6 += 16;
               var11 = ec.field_a[1];
             }
-            if (this.field_F == 14) {
+            if (this.type == 14) {
               var11 = ec.field_a[6];
               var13 = 1;
             }
             if (var13 != 0) {
               if (var10 != 0) {
-                if (pd.field_i == null) {
-                  pd.field_i = new Sprite(dk.field_c[0][0].field_q, dk.field_c[0][0].field_v);
+                if (GameScreen.field_i == null) {
+                  GameScreen.field_i = new Sprite(dk.field_c[0][0].field_q, dk.field_c[0][0].field_v);
                 }
                 SoftwareRasterizer.a(bf.field_l);
-                pd.field_i.d();
+                GameScreen.field_i.d();
                 SoftwareRasterizer.b();
                 ((Sprite) (var11)).d(0, 0);
-                la.field_f.a(-117);
+                SectorCacheStore.field_f.a(-117);
                 SoftwareRasterizer.b(bf.field_l);
-                var11 = pd.field_i;
+                var11 = GameScreen.field_i;
               }
               boolean decompiledFrameRemainder1 = true;
               SoftwareRasterizer.a(bf.field_l);
               SoftwareRasterizer.a(var4_int, var6, var4_int + ((Sprite) (var11)).field_q, ((Sprite) (var11)).field_v + var6);
               if (ol.field_a &&
-                ~this.field_o == ~ol.field_g.field_l &&
-                ~this.field_H == ~ol.field_g.field_i) {
+                ~this.x == ~ol.field_g.field_l &&
+                ~this.y == ~ol.field_g.field_i) {
                 ((Sprite) (var11)).a(var4_int, var6, 16711680);
                 decompiledFrameRemainder1 = (var19 != 0);
               }
               if (decompiledFrameRemainder1) {
-                if (this.field_F == 15 &&
-                  BufferedSocket.field_p != null && (~this.field_o == ~BufferedSocket.field_p.field_r &&
-                  ~this.field_H == ~BufferedSocket.field_p.field_f ||
+                if (this.type == 15 &&
+                  BufferedSocket.field_p != null && (~this.x == ~BufferedSocket.field_p.field_r &&
+                  ~this.y == ~BufferedSocket.field_p.field_f ||
                   !this.field_nb)) {
-                  if (!wa.field_pb[-(ea.field_e * 5) + this.field_V]) {
+                  if (!wa.field_pb[-(ea.field_e * 5) + this.variant]) {
                     if (te.field_e == null) {
                       te.field_e = new Sprite(16 + ((Sprite) (var11)).field_q, ((Sprite) (var11)).field_v + 16);
                     }
@@ -7168,7 +7168,7 @@ final class LevelEntity {
                     SoftwareRasterizer.b(bf.field_l);
                     SoftwareRasterizer.b();
                     ((Sprite) (var11)).a(0, 0, -(this.field_D * 5) + 255, 16777215);
-                    la.field_f.a(115);
+                    SectorCacheStore.field_f.a(115);
                     te.field_e.g(var4_int, var6);
                     var11 = te.field_e;
                     decompiledFrameRemainder1 = (var19 != 0);
@@ -7179,7 +7179,7 @@ final class LevelEntity {
                   }
                 }
                 if (decompiledFrameRemainder1) {
-                  if (15 != this.field_F) {
+                  if (15 != this.type) {
                     if (0 < this.field_G &&
                       this.field_G % 4 >= 2) {
                       ((Sprite) (var11)).a(var4_int, var6, 16777215);
@@ -7211,7 +7211,7 @@ final class LevelEntity {
                 }
               }
               if (this.field_L == 14) {
-                var15 = -8 + this.field_F;
+                var15 = -8 + this.type;
                 if (0 <= var15 &&
                   var15 < cd.field_d.length) {
                   var14_ref_String = Integer.toString(ab.field_d * cd.field_d[var15]);
@@ -7221,13 +7221,13 @@ final class LevelEntity {
                   tf.field_x.a(var14_ref_String, var16, var18, 0, -1);
                 }
               }
-              if (this.field_F == 19 &&
+              if (this.type == 19 &&
                 ol.field_a) {
-                tf.field_x.c("X:" + this.field_o + " Y:" + this.field_H, var4_int, var6, 0, -1);
+                tf.field_x.c("X:" + this.x + " Y:" + this.y, var4_int, var6, 0, -1);
               }
               SoftwareRasterizer.b(bf.field_l);
-              if (this.field_F != 13) {
-                if (this.field_F == 12) {
+              if (this.type != 13) {
+                if (this.type == 12) {
                   stackIn_156_0 = ba.field_f;
                   stackIn_156_1 = var6;
                   stackIn_156_2 = ec.field_a[4].field_v;
@@ -7253,7 +7253,7 @@ final class LevelEntity {
               }
             }
             var12 = 0;
-            if (this.field_F == 20) {
+            if (this.type == 20) {
               var13Lifetime1 = 5;
               var14 = 0;
               while (true) {
@@ -7280,17 +7280,17 @@ final class LevelEntity {
                 if (!ol.field_a) {
                   break;
                 }
-                if (this.field_o != ol.field_g.field_l) {
+                if (this.x != ol.field_g.field_l) {
                   break;
                 }
-                if (ol.field_g.field_i != this.field_H) {
+                if (ol.field_g.field_i != this.y) {
                   break;
                 }
                 SoftwareRasterizer.f(var4_int, var6, var5 - var4_int, 128, 16711680);
                 break;
               }
             }
-            if (this.field_F == 0 &&
+            if (this.type == 0 &&
               !ol.field_a) {
               if (GameKeyHandler.field_b &&
                 BufferedSocket.field_p.field_L != 19 &&
@@ -7306,9 +7306,9 @@ final class LevelEntity {
                 return;
               }
             }
-            if (0 != this.field_F ||
+            if (0 != this.type ||
               !ol.field_a) {
-              if (this.field_F != 28) {
+              if (this.type != 28) {
                 return;
               }
               this.a(var12, var6, var5, (byte) -66, var4_int);
@@ -7318,21 +7318,21 @@ final class LevelEntity {
             }
             var13Lifetime2 = param1 / 32;
             var14Lifetime1 = 0;
-            if (BufferedSocket.field_p.field_o >= var13Lifetime2) {
-              var14Lifetime1 = -var13Lifetime2 + BufferedSocket.field_p.field_o;
+            if (BufferedSocket.field_p.x >= var13Lifetime2) {
+              var14Lifetime1 = -var13Lifetime2 + BufferedSocket.field_p.x;
               if (!(var14Lifetime1 < 32)) {
                 var14Lifetime1 -= 32;
                 if ((var19 != 0) &&
-                  (BufferedSocket.field_p.field_o < var13Lifetime2)) {
-                  var14Lifetime1 = var13Lifetime2 - BufferedSocket.field_p.field_o;
+                  (BufferedSocket.field_p.x < var13Lifetime2)) {
+                  var14Lifetime1 = var13Lifetime2 - BufferedSocket.field_p.x;
                   if (32 <= var14Lifetime1) {
                     var14Lifetime1 -= 32;
                   }
                 }
               }
             } else {
-              if (BufferedSocket.field_p.field_o < var13Lifetime2) {
-                var14Lifetime1 = var13Lifetime2 - BufferedSocket.field_p.field_o;
+              if (BufferedSocket.field_p.x < var13Lifetime2) {
+                var14Lifetime1 = var13Lifetime2 - BufferedSocket.field_p.x;
                 if (32 <= var14Lifetime1) {
                   var14Lifetime1 -= 32;
                 }
@@ -7343,8 +7343,8 @@ final class LevelEntity {
               var12Lifetime1 = -(var5 - var4_int);
               var6 -= 32;
               ((Sprite) (var11Lifetime1)).g(var4_int + var12Lifetime1, var6);
-              if (~ol.field_g.field_l == ~this.field_o &&
-                ol.field_g.field_i == this.field_H) {
+              if (~ol.field_g.field_l == ~this.x &&
+                ol.field_g.field_i == this.y) {
                 ((Sprite) (var11Lifetime1)).a(var12Lifetime1 + var4_int, var6, 16711680);
               }
             }
@@ -7361,21 +7361,21 @@ final class LevelEntity {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (this.field_o < 64 &&
-            ol.field_g.field_a > this.field_H) {
-            if (0 < (8 & ic.field_E[this.field_o][this.field_H])) {
+          if (this.x < 64 &&
+            ol.field_g.field_a > this.y) {
+            if (0 < (8 & ic.field_E[this.x][this.y])) {
               this.field_u = 192;
             }
-            if ((ic.field_E[this.field_o][this.field_H] & 4) > 0) {
+            if ((ic.field_E[this.x][this.y] & 4) > 0) {
               this.field_u = 128;
             }
-            if ((ic.field_E[this.field_o][this.field_H] & 2) > 0) {
+            if ((ic.field_E[this.x][this.y] & 2) > 0) {
               this.field_u = 64;
             }
             if (!param0) {
               this.field_r = 12;
             }
-            if ((ic.field_E[this.field_o][this.field_H] & 1) > 0) {
+            if ((ic.field_E[this.x][this.y] & 1) > 0) {
               this.field_u = 0;
             }
             return;
@@ -7584,8 +7584,8 @@ final class LevelEntity {
             }
             var2_int = this.a(stackIn_11_1, (byte) stackIn_14_2, stackIn_15_3) ? 1 : 0;
             if (var2_int != 0) {
-              if (this.field_F == 6) {
-                qa.a(this.field_o, BufferedSocket.field_p.field_H, dg.field_T[this.field_F], this, this.field_H, -1, 4, BufferedSocket.field_p.field_o, 25, this.field_V);
+              if (this.type == 6) {
+                qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 4, BufferedSocket.field_p.x, 25, this.variant);
               }
               if (this.field_cb) {
                 return true;
@@ -7593,14 +7593,14 @@ final class LevelEntity {
               if (0 >= this.field_lb &&
                 0 == this.field_L &&
                 112 < this.field_D &&
-                this.field_F == 3) {
+                this.type == 3) {
                 this.field_lb = 187 - this.field_D;
               }
               boolean decompiledFrameRemainder1 = true;
               if (this.field_lb <= 0 &&
                 this.field_L == 0 &&
                 112 < this.field_D &&
-                this.field_F == 2) {
+                this.type == 2) {
                 this.field_lb = 187 - this.field_D;
                 decompiledFrameRemainder1 = (var3 != 0);
               }
@@ -7608,7 +7608,7 @@ final class LevelEntity {
                 if (0 >= this.field_lb &&
                   this.field_L == 0 &&
                   this.field_k &&
-                  this.field_F == 3) {
+                  this.type == 3) {
                   this.field_lb = 50;
                   if (0 >= this.field_Q) {
                     this.field_a = 1;
@@ -7638,14 +7638,14 @@ final class LevelEntity {
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_F == 3 &&
+          if (this.type == 3 &&
             this.field_k &&
             this.field_c) {
             this.field_Q = this.field_Q - 1;
             decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (this.field_F != 3 ||
+            if (this.type != 3 ||
               !this.field_k ||
               !this.field_N) {
               if (!this.field_c ||
@@ -7697,15 +7697,15 @@ final class LevelEntity {
               this.field_Q = this.field_Q + 1;
             }
           }
-          boolean decompiledSharedTail0 = (this.field_F != 3 ||
+          boolean decompiledSharedTail0 = (this.type != 3 ||
             !(this.field_k));
           if (!decompiledSharedTail0) {
-            qa.a(this.field_o, BufferedSocket.field_p.field_H, dg.field_T[this.field_F], this, this.field_H, -1, 7, BufferedSocket.field_p.field_o, 25, this.field_V);
+            qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 7, BufferedSocket.field_p.x, 25, this.variant);
             decompiledSharedTail0 = (var3 != 0);
           }
-          if ((decompiledSharedTail0) && (this.field_F == 4 &&
+          if ((decompiledSharedTail0) && (this.type == 4 &&
             !hc.field_Q)) {
-            cb.a(25, BufferedSocket.field_p.field_H, (byte) 125, BufferedSocket.field_p.field_o);
+            cb.a(25, BufferedSocket.field_p.y, (byte) 125, BufferedSocket.field_p.x);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7772,9 +7772,9 @@ final class LevelEntity {
           if (var2_int == 0) {
             kf.field_d = 2;
             this.field_h = 0;
-            if (!rk.field_e) {
-              stackIn_10_0 = !(rk.field_e);
-              rk.field_e = stackIn_10_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_10_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_10_0;
             }
             this.field_Q = 0;
             return;
@@ -7782,9 +7782,9 @@ final class LevelEntity {
           var3 = this.b((byte) 109, false);
           if (var3 < 0) {
             kf.field_d = 2;
-            if (!rk.field_e) {
-              stackIn_23_0 = !(rk.field_e);
-              rk.field_e = stackIn_23_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_23_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_23_0;
             }
             this.field_h = 0;
             this.field_Q = 0;
@@ -7801,9 +7801,9 @@ final class LevelEntity {
           var6 = this.b(true, -1);
           if (~var4 == ~var6) {
             kf.field_d = 1;
-            if (!rk.field_e) {
-              stackIn_38_0 = !(rk.field_e);
-              rk.field_e = stackIn_38_0;
+            if (!BufferedCacheFile.field_e) {
+              stackIn_38_0 = !(BufferedCacheFile.field_e);
+              BufferedCacheFile.field_e = stackIn_38_0;
             }
             this.field_h = 0;
           }
@@ -7879,9 +7879,9 @@ final class LevelEntity {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           if (SecondaryNodeDeque.field_j[param1][0] < 0) {
-            SecondaryNodeDeque.field_j[param1][0] = this.field_o;
+            SecondaryNodeDeque.field_j[param1][0] = this.x;
             SecondaryNodeDeque.field_j[param1][1] = this.field_B;
-            SecondaryNodeDeque.field_j[param1][2] = this.field_H;
+            SecondaryNodeDeque.field_j[param1][2] = this.y;
             SecondaryNodeDeque.field_j[param1][3] = this.field_u;
           }
           if (SecondaryNodeDeque.field_j[h.field_b[7][dg.field_T[3]][0] - 1][0] >= 0) {
@@ -7893,7 +7893,7 @@ final class LevelEntity {
             stackIn_13_0 = 256 - (param1 - var6) * 256 / (h.field_b[7][dg.field_T[3]][0] * 2 - 2);
             if (var8 == 0) {
               var5_int = stackIn_13_0;
-              this.a(param2, param0, SecondaryNodeDeque.field_j[var6][1], SecondaryNodeDeque.field_j[var6][2], SecondaryNodeDeque.field_j[var6][0], this.field_F, 2657, SecondaryNodeDeque.field_j[var6][3]);
+              this.a(param2, param0, SecondaryNodeDeque.field_j[var6][1], SecondaryNodeDeque.field_j[var6][2], SecondaryNodeDeque.field_j[var6][0], this.type, 2657, SecondaryNodeDeque.field_j[var6][3]);
               wh.field_f[var6].b(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], this.field_w, var5_int);
               var6++;
               continue;
@@ -7960,14 +7960,14 @@ final class LevelEntity {
             this.field_G = this.field_G - 1;
             var2_int = 0;
             while (var2_int < 10) {
-              stackIn_14_0 = this.field_F;
+              stackIn_14_0 = this.type;
               stackIn_14_1 = ba.field_g[var2_int];
               if (var3 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_14_0 == stackIn_14_1) {
-                la.a(this, 75);
+                SectorCacheStore.a(this, 75);
               }
               var2_int++;
             }
@@ -8120,9 +8120,9 @@ final class LevelEntity {
         try {
           this.field_Q = 0;
           if (param0 >= -104) {
-            this.field_H = -10;
+            this.y = -10;
           }
-          var2 = new LevelEntity(this.field_o, this.field_H, 22, this.field_V);
+          var2 = new LevelEntity(this.x, this.y, 22, this.variant);
           ef.a(0, var2);
           boolean decompiledSharedTail0 = !(this.field_a > 0);
           if (!decompiledSharedTail0) {
@@ -8139,9 +8139,9 @@ final class LevelEntity {
           var2.field_a = this.field_a;
           var2.field_X = false;
           var2.field_i = false;
-          var2.field_e = 32 * var2.field_o + var2.field_B * 32 / 256;
-          var2.field_z = 64 * var2.field_u / 256 + var2.field_H * 64;
-          hc.a(44, BufferedSocket.field_p.field_H, this.field_V, 6, BufferedSocket.field_p.field_o, dg.field_T[this.field_F], this.field_H, this.field_o);
+          var2.field_e = 32 * var2.x + var2.field_B * 32 / 256;
+          var2.field_z = 64 * var2.field_u / 256 + var2.y * 64;
+          hc.a(44, BufferedSocket.field_p.y, this.variant, 6, BufferedSocket.field_p.x, dg.field_T[this.type], this.y, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8164,7 +8164,7 @@ final class LevelEntity {
           var2_int = tj.field_c[0] << 3;
           var3 = tj.field_c[1] << 3;
           var4 = ki.field_e[dg.field_T[24]];
-          var5 = new LevelEntity(this.field_o, this.field_H, 24, 0);
+          var5 = new LevelEntity(this.x, this.y, 24, 0);
           var5.field_e = this.field_e;
           boolean decompiledSharedTail0 = !(this.field_a >= 0);
           if (!decompiledSharedTail0) {
@@ -8191,9 +8191,9 @@ final class LevelEntity {
           if (0 > var5.field_z) {
             var5.field_z = 0;
           }
-          var5.field_o = var5.field_e / 32;
+          var5.x = var5.field_e / 32;
           var5.field_u = var5.field_z % 64 * 256 / 64;
-          var5.field_H = var5.field_z / 64;
+          var5.y = var5.field_z / 64;
           var5.field_B = var5.field_e % 32 * 256 / 32;
           var5.field_cb = true;
           ef.a(0, var5);
@@ -8262,7 +8262,7 @@ final class LevelEntity {
         try {
           var4 = this;
           if (var4 != null &&
-            ((LevelEntity) (var4)).field_F == 0) {
+            ((LevelEntity) (var4)).type == 0) {
             if (param0 == null) {
               return false;
             }
@@ -8345,38 +8345,38 @@ final class LevelEntity {
           boolean decompiledFrameRemainder0 = true;
           this.e(-126);
           if (param2 &&
-            ol.field_g.a(2, this.field_o * 32 + 32 * this.field_B / 256, this.field_w, this.field_I, -this.field_w + this.field_H * 64 + this.field_u * 64 / 256) &&
+            ol.field_g.a(2, this.x * 32 + 32 * this.field_B / 256, this.field_w, this.field_I, -this.field_w + this.y * 64 + this.field_u * 64 / 256) &&
             ~var4_int != ~this.field_B &&
-            !ol.field_g.a(2, 32 * this.field_o + this.field_B * 32 / 256, this.field_w, this.field_I, 64 * this.field_u / 256 + 64 * this.field_H - this.field_w - 16)) {
+            !ol.field_g.a(2, 32 * this.x + this.field_B * 32 / 256, this.field_w, this.field_I, 64 * this.field_u / 256 + 64 * this.y - this.field_w - 16)) {
             this.field_u = this.field_u - 64;
             decompiledFrameRemainder0 = !(this.field_u >= 0);
             if (decompiledFrameRemainder0) {
               this.field_u = this.field_u + 256;
-              this.field_H = this.field_H - 1;
-              decompiledFrameRemainder0 = !(0 <= this.field_H);
+              this.y = this.y - 1;
+              decompiledFrameRemainder0 = !(0 <= this.y);
               if (decompiledFrameRemainder0) {
-                this.field_H = this.field_H + ol.field_g.field_a;
+                this.y = this.y + ol.field_g.field_a;
                 decompiledFrameRemainder0 = (var7 != 0);
               }
             }
           }
           if ((decompiledFrameRemainder0) && (param2 &&
-            ol.field_g.a(2, this.field_o * 32 + 32 * (-(var5 * 256) + this.field_B) / 256, this.field_w, this.field_I, 16 + this.field_u * 64 / 256 + (this.field_H * 64 - this.field_w)) &&
-            !ol.field_g.a(2, this.field_B * 32 / 256 + this.field_o * 32, this.field_w, this.field_I, 16 + (this.field_H * 64 + (this.field_u * 64 / 256 - this.field_w))) &&
+            ol.field_g.a(2, this.x * 32 + 32 * (-(var5 * 256) + this.field_B) / 256, this.field_w, this.field_I, 16 + this.field_u * 64 / 256 + (this.y * 64 - this.field_w)) &&
+            !ol.field_g.a(2, this.field_B * 32 / 256 + this.x * 32, this.field_w, this.field_I, 16 + (this.y * 64 + (this.field_u * 64 / 256 - this.field_w))) &&
             ~this.field_B != ~var4_int &&
-            ol.field_g.a(param1 + 129, this.field_B * 32 / 256 + 32 * this.field_o, this.field_w, this.field_I, 32 + 64 * this.field_u / 256 + this.field_H * 64 - this.field_w))) {
+            ol.field_g.a(param1 + 129, this.field_B * 32 / 256 + 32 * this.x, this.field_w, this.field_I, 32 + 64 * this.field_u / 256 + this.y * 64 - this.field_w))) {
             this.field_u = this.field_u + 64;
             if (this.field_u >= 256) {
-              this.field_H = this.field_H + 1;
+              this.y = this.y + 1;
               this.field_u = this.field_u - 256;
-              if (ba.field_i.field_a <= this.field_H) {
-                this.field_H = this.field_H - ba.field_i.field_a;
+              if (ba.field_i.field_a <= this.y) {
+                this.y = this.y - ba.field_i.field_a;
               }
             }
           }
           var6 = 0;
           scanLoop1: while (true) {
-            if (ol.field_g.a(2, 32 * this.field_B / 256 + 32 * this.field_o, this.field_w, this.field_I, 64 * this.field_u / 256 + (this.field_H * 64 - this.field_w))) {
+            if (ol.field_g.a(2, 32 * this.field_B / 256 + 32 * this.x, this.field_w, this.field_I, 64 * this.field_u / 256 + (this.y * 64 - this.field_w))) {
               stackIn_65_0 = ~var4_int;
               if (var7 != 0) {
                 break scanLoop1;
@@ -8398,7 +8398,7 @@ final class LevelEntity {
           if (stackIn_65_0 == 0) {
             stackIn_71_0 = ol.field_g;
             stackIn_71_1 = 2;
-            stackIn_71_2 = this.field_o * 32;
+            stackIn_71_2 = this.x * 32;
             stackIn_71_3 = -(32 * this.field_B / 256);
             if (this.field_a > 0) {
               stackIn_72_4 = this.field_I;
@@ -8411,12 +8411,12 @@ final class LevelEntity {
             } else {
               stackIn_76_3 = 8;
             }
-            if (!((ra) (Object) stackIn_71_0).a(stackIn_71_1, stackIn_75_2, stackIn_76_3 + this.field_w, this.field_I, -this.field_w + (64 * this.field_u / 256 + this.field_H * 64))) {
+            if (!((ra) (Object) stackIn_71_0).a(stackIn_71_1, stackIn_75_2, stackIn_76_3 + this.field_w, this.field_I, -this.field_w + (64 * this.field_u / 256 + this.y * 64))) {
               var6 = 1;
             }
           }
-          this.field_z = 64 * this.field_u / 256 + 64 * this.field_H;
-          this.field_e = 32 * this.field_o + 32 * this.field_B / 256;
+          this.field_z = 64 * this.field_u / 256 + 64 * this.y;
+          this.field_e = 32 * this.x + 32 * this.field_B / 256;
           stackIn_81_0 = var6;
           return stackIn_81_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8449,8 +8449,8 @@ final class LevelEntity {
           }
           var3_int = this.field_e;
           var4 = this.field_z - this.field_w;
-          var7 = this.field_o;
-          var8 = this.field_H;
+          var7 = this.x;
+          var8 = this.y;
           var5 = var3_int;
           var6 = var4;
           var10 = this.field_u;
@@ -8458,7 +8458,7 @@ final class LevelEntity {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 >= 8))) {
             var5Lifetime1 = var3_int + 32 * (param1 * var9);
-            var7Lifetime1 = this.field_o + var9 * param1;
+            var7Lifetime1 = this.x + var9 * param1;
             stackIn_80_0 = -2049;
             if (var11 == 0) {
               if (stackIn_80_0 > ~var5Lifetime1) {
@@ -8507,12 +8507,12 @@ final class LevelEntity {
                   var8--;
                 }
               }
-              if (~BufferedSocket.field_p.field_o == ~var7Lifetime1 &&
-                BufferedSocket.field_p.field_H == var8) {
+              if (~BufferedSocket.field_p.x == ~var7Lifetime1 &&
+                BufferedSocket.field_p.y == var8) {
                 return true;
               }
-              if (~var7Lifetime1 == ~BufferedSocket.field_p.field_o &&
-                BufferedSocket.field_p.field_H == -1 + var8) {
+              if (~var7Lifetime1 == ~BufferedSocket.field_p.x &&
+                BufferedSocket.field_p.y == -1 + var8) {
                 return true;
               }
               var9++;
@@ -8610,7 +8610,7 @@ final class LevelEntity {
             this.a(ea.field_h, param2, param4, new int[]{this.field_a, i.field_r, n.field_jb, 16777215}, param0, -20861, param3, 1);
             ea.field_h.d();
             SoftwareRasterizer.d(2, 2, 0, 0, ea.field_h.field_u, ea.field_h.field_x);
-            la.field_f.a(124);
+            SectorCacheStore.field_f.a(124);
             ul.field_m = this.field_a;
             ec.field_b = i.field_r;
             fa.field_t = n.field_jb;
@@ -8642,17 +8642,17 @@ final class LevelEntity {
                 LocalizedStrings.field_w[var16 - 1][0] = this.field_a;
                 LocalizedStrings.field_w[-1 + var16][1] = i.field_r;
                 LocalizedStrings.field_w[var16 - 1][2] = n.field_jb;
-                id.field_d[var16 - 1][0] = this.field_o;
+                id.field_d[var16 - 1][0] = this.x;
                 id.field_d[var16 - 1][1] = this.field_B;
-                id.field_d[var16 - 1][2] = this.field_H;
+                id.field_d[var16 - 1][2] = this.y;
                 id.field_d[-1 + var16][3] = this.field_u;
                 if (var19 != 0) {
                   LocalizedStrings.field_w[var15Lifetime1][0] = this.field_a;
                   LocalizedStrings.field_w[var15Lifetime1][1] = i.field_r;
                   LocalizedStrings.field_w[var15Lifetime1][2] = n.field_jb;
-                  id.field_d[var15Lifetime1][0] = this.field_o;
+                  id.field_d[var15Lifetime1][0] = this.x;
                   id.field_d[var15Lifetime1][1] = this.field_B;
-                  id.field_d[var15Lifetime1][2] = this.field_H;
+                  id.field_d[var15Lifetime1][2] = this.y;
                   id.field_d[var15Lifetime1][3] = this.field_u;
                 }
               }
@@ -8660,9 +8660,9 @@ final class LevelEntity {
               LocalizedStrings.field_w[var15Lifetime1][0] = this.field_a;
               LocalizedStrings.field_w[var15Lifetime1][1] = i.field_r;
               LocalizedStrings.field_w[var15Lifetime1][2] = n.field_jb;
-              id.field_d[var15Lifetime1][0] = this.field_o;
+              id.field_d[var15Lifetime1][0] = this.x;
               id.field_d[var15Lifetime1][1] = this.field_B;
-              id.field_d[var15Lifetime1][2] = this.field_H;
+              id.field_d[var15Lifetime1][2] = this.y;
               id.field_d[var15Lifetime1][3] = this.field_u;
             }
           }
@@ -8671,7 +8671,7 @@ final class LevelEntity {
           }
           var17 = stackIn_63_0;
           while (var16 > var17) {
-            this.a(param1, df.field_R, id.field_d[var17][1], id.field_d[var17][2], id.field_d[var17][0], this.field_F, 2657, id.field_d[var17][3]);
+            this.a(param1, df.field_R, id.field_d[var17][1], id.field_d[var17][2], id.field_d[var17][0], this.type, 2657, id.field_d[var17][3]);
             var9 = dl.field_n[2];
             var7_int = dl.field_n[0];
             var8 = dl.field_n[1];
@@ -8724,7 +8724,7 @@ final class LevelEntity {
           }
           var7 = BufferedSocket.field_p.field_e;
           var8 = var7 + BufferedSocket.field_p.field_I;
-          var9 = BufferedSocket.field_p.field_H;
+          var9 = BufferedSocket.field_p.y;
           var10 = 0;
           while (true) {
             stackIn_6_0 = 1;
@@ -8773,7 +8773,7 @@ final class LevelEntity {
             return;
           }
           if (param0 <= 34) {
-            this.field_o = 93;
+            this.x = 93;
           }
           this.field_D = this.field_D + 1;
           if (this.field_D <= 100) {
@@ -8850,7 +8850,7 @@ final class LevelEntity {
           }
           regionExit1: {
             var4 = 5;
-            var5 = this.field_F;
+            var5 = this.type;
             regionExit2: switch ((var6 == 0
               || var5 == 8
               || var5 == 13
@@ -8900,7 +8900,7 @@ final class LevelEntity {
                   }
                 }
                 if (this.field_nb &&
-                  hd.field_d % 5 == 4) {
+                  GzipDecoder.field_d % 5 == 4) {
                   var2_int = 3;
                 }
                 var5 = 0;
@@ -9031,24 +9031,24 @@ final class LevelEntity {
           this.field_B = this.field_B + this.field_Q;
           scanLoop1: while (true) {
             if (var2_int * this.field_B > 256) {
-              this.field_o = this.field_o + var2_int;
+              this.x = this.x + var2_int;
               this.field_B = this.field_B + -256 * var2_int;
               this.field_b = this.field_b + var2_int;
               if (var5 == 0) {
                 continue;
               }
             } else {
-              if (64 > this.field_o) {
-                if (0 <= this.field_o) {
+              if (64 > this.x) {
+                if (0 <= this.x) {
                   break scanLoop1;
                 }
-                this.field_o = this.field_o + 64;
+                this.x = this.x + 64;
                 if (var5 == 0) {
                   break scanLoop1;
                 }
               }
             }
-            this.field_o = this.field_o - 64;
+            this.x = this.x - 64;
             break;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -9062,22 +9062,22 @@ final class LevelEntity {
               decompiledFrameRemainder0 = !(var2_int >= 0);
             }
             if (decompiledFrameRemainder0) {
-              this.field_H = ba.field_i.field_a - 1;
-              if (this.field_F == 0) {
+              this.y = ba.field_i.field_a - 1;
+              if (this.type == 0) {
                 bd.field_l = true;
               }
               this.field_u = 1024;
               this.field_Q = 0;
-              if (this.field_F == 22) {
-                this.field_z = this.field_u * 64 / 256 + this.field_H * 64;
-                this.field_e = this.field_o * 32 + 32 * this.field_B / 256;
+              if (this.type == 22) {
+                this.field_z = this.field_u * 64 / 256 + this.y * 64;
+                this.field_e = this.x * 32 + 32 * this.field_B / 256;
                 stackIn_51_0 = null;
                 return (LevelEntity) (stackIn_51_0);
               }
             }
           }
-          this.field_z = 64 * this.field_H + this.field_u * 64 / 256;
-          this.field_e = 32 * this.field_B / 256 + 32 * this.field_o;
+          this.field_z = 64 * this.y + this.field_u * 64 / 256;
+          this.field_e = 32 * this.field_B / 256 + 32 * this.x;
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9479,7 +9479,7 @@ final class LevelEntity {
           var4 = this.field_I - 16;
           var5 = this.field_w;
           var6 = param0 + BufferedSocket.field_p.field_e;
-          if (20 == this.field_F) {
+          if (20 == this.type) {
             var4 = 32;
             var2_int = this.field_e + 48;
             var6 = BufferedSocket.field_p.field_e + 16;
@@ -9492,7 +9492,7 @@ final class LevelEntity {
           }
           var7 = BufferedSocket.field_p.field_z - this.field_w;
           var8 = BufferedSocket.field_p.field_I;
-          if (this.field_F == 20) {
+          if (this.type == 20) {
             var8 = 32;
           }
           var9 = BufferedSocket.field_p.field_w;
@@ -9569,8 +9569,8 @@ final class LevelEntity {
           if (param0 == null) {
             return false;
           }
-          if (!vg.a(param0.field_F, -1) &&
-            28 != param0.field_F) {
+          if (!vg.a(param0.type, -1) &&
+            28 != param0.type) {
             stackIn_13_0 = 0;
           } else {
             stackIn_13_0 = 1;
@@ -9579,26 +9579,26 @@ final class LevelEntity {
           if (var4_intLifetime1 == 0) {
             return false;
           }
-          if (param0.field_F == 6 && (param0.field_V == 0 ||
-            param0.field_V == 2)) {
+          if (param0.type == 6 && (param0.variant == 0 ||
+            param0.variant == 2)) {
             return false;
           }
-          if (7 == param0.field_F &&
-            param0.field_V == 2) {
+          if (7 == param0.type &&
+            param0.variant == 2) {
             return false;
           }
-          if (param0.field_F == 23) {
+          if (param0.type == 23) {
             return false;
           }
-          if (param0.field_F == 24) {
+          if (param0.type == 24) {
             return false;
           }
-          if (28 == param0.field_F &&
+          if (28 == param0.type &&
             wh.field_b &&
             param0.field_a != this.field_a) {
             var9 = 0;
           }
-          if (param0.field_F == 28 &&
+          if (param0.type == 28 &&
             wh.field_b) {
             var9 = 0;
             var10 = 0;
@@ -9629,7 +9629,7 @@ final class LevelEntity {
             stackIn_85_2 = !(param1);
             boolean decompiledFrameRemainder0 = true;
             rc.a(stackIn_84_0, stackIn_84_1, stackIn_85_2, this.field_I, this.field_w, this.field_e, param0.field_w, this.field_z, param0.field_e);
-            if (param0.field_F == 28 &&
+            if (param0.type == 28 &&
               fh.field_e == 2) {
               if (!s.field_m) {
                 ha.field_d = ha.field_d + 1;
@@ -9642,47 +9642,47 @@ final class LevelEntity {
               decompiledFrameRemainder0 = (var12 != 0);
             }
             if (decompiledFrameRemainder0) {
-              boolean decompiledSharedTail1 = (param0.field_F != 28 ||
+              boolean decompiledSharedTail1 = (param0.type != 28 ||
                 fh.field_e != 1);
               if (!decompiledSharedTail1) {
-                if (rk.field_e) {
-                  stackIn_113_0 = !(rk.field_e);
-                  rk.field_e = stackIn_113_0;
+                if (BufferedCacheFile.field_e) {
+                  stackIn_113_0 = !(BufferedCacheFile.field_e);
+                  BufferedCacheFile.field_e = stackIn_113_0;
                   stackIn_117_0 = !(ql.field_j);
                   ql.field_j = stackIn_117_0;
                 }
                 ProxySocketConnector.field_o = -param0.field_db + param0.field_d;
                 decompiledSharedTail1 = (var12 != 0);
               }
-              if ((decompiledSharedTail1) && (param0.field_F == 28 &&
+              if ((decompiledSharedTail1) && (param0.type == 28 &&
                 fh.field_e == 0)) {
                 ProxySocketConnector.field_o = param0.field_d - param0.field_db;
               }
             }
             if (!(param0.field_db <= 0) ||
-              param0.field_F == 28 ||
-              param0.field_F == 24 ||
-              param0.field_F == 23) {
+              param0.type == 28 ||
+              param0.type == 24 ||
+              param0.type == 23) {
               if ((!(param0.field_db > 0)) &&
-                (param0.field_F == 28)) {
+                (param0.type == 28)) {
                 jc.b(fh.field_e, 1, 7);
                 if (var12 != 0) {
-                  hc.a(91, BufferedSocket.field_p.field_H, param0.field_V, 0, BufferedSocket.field_p.field_o, dg.field_T[param0.field_F], param0.field_H, param0.field_o);
+                  hc.a(91, BufferedSocket.field_p.y, param0.variant, 0, BufferedSocket.field_p.x, dg.field_T[param0.type], param0.y, param0.x);
                 }
               }
             } else {
-              hc.a(91, BufferedSocket.field_p.field_H, param0.field_V, 0, BufferedSocket.field_p.field_o, dg.field_T[param0.field_F], param0.field_H, param0.field_o);
+              hc.a(91, BufferedSocket.field_p.y, param0.variant, 0, BufferedSocket.field_p.x, dg.field_T[param0.type], param0.y, param0.x);
             }
             param0.field_G = param0.field_G + 10;
             if (GameKeyHandler.field_b) {
               param0.field_db = param0.field_db - (-(dk.field_a >> 1) + dk.field_a);
             }
             param0.field_Y = true;
-            if (param0.field_F == 28 && (fh.field_e == 1 ||
+            if (param0.type == 28 && (fh.field_e == 1 ||
               fh.field_e == 2)) {
               param0.field_G = param0.field_G + 14;
             }
-            if (param0.field_F == 28) {
+            if (param0.type == 28) {
               if (param0.field_db > 0) {
                 jc.b(fh.field_e, 1, 8);
               }
@@ -9692,7 +9692,7 @@ final class LevelEntity {
           }
           stackIn_174_0 = (this.field_Q >= 0) ? 1 : -1;
           var6 = stackIn_174_0;
-          boolean decompiledSharedTail0 = (28 != param0.field_F ||
+          boolean decompiledSharedTail0 = (28 != param0.type ||
             2 != fh.field_e);
           if (!decompiledSharedTail0) {
             param0.field_Q = param0.field_Q;
@@ -9710,14 +9710,14 @@ final class LevelEntity {
             param0.field_Q = param0.field_Q + (-(dk.field_a >> 1) + dk.field_a) * this.field_a * 10;
           }
           if (param2 &&
-            !param0.field_Y && (28 != param0.field_F &&
-            0 < h.field_b[3][dg.field_T[param0.field_F]][this.field_V] ||
-            param0.field_F == 28)) {
-            if (5 != param0.field_F) {
+            !param0.field_Y && (28 != param0.type &&
+            0 < h.field_b[3][dg.field_T[param0.type]][this.variant] ||
+            param0.type == 28)) {
+            if (5 != param0.type) {
               param0.field_h = -8;
               param0.field_L = 2;
-              if (vg.a(this.field_F, -1)) {
-                qa.a(this.field_o, BufferedSocket.field_p.field_H, this.field_F, this, this.field_H, -1, 5, BufferedSocket.field_p.field_o, 20, this.field_V);
+              if (vg.a(this.type, -1)) {
+                qa.a(this.x, BufferedSocket.field_p.y, this.type, this, this.y, -1, 5, BufferedSocket.field_p.x, 20, this.variant);
                 if (var12 != 0) {
                   this.field_D = 1;
                 }
@@ -9782,7 +9782,7 @@ final class LevelEntity {
           var9 = 0;
           do {
             if (var9 >= 3) {
-              la.field_f.a(-91);
+              SectorCacheStore.field_f.a(-91);
               SoftwareRasterizer.b(bf.field_l);
               break;
             }
@@ -9867,7 +9867,7 @@ final class LevelEntity {
             }
             if (null != ea.field_g[var2_int] &&
               ea.field_g[var2_int].field_Y &&
-              ea.field_g[var2_int].field_F != 0) {
+              ea.field_g[var2_int].type != 0) {
               ea.field_g[var2_int].field_Y = false;
             }
             var2_int++;
@@ -10222,7 +10222,7 @@ final class LevelEntity {
                 cb.field_f.d();
                 SoftwareRasterizer.b();
                 dj.field_O.d(0, 0);
-                la.field_f.a(126);
+                SectorCacheStore.field_f.a(126);
                 cb.field_f.d(var15, param1 + var14, var8 * var16 / this.field_I, ae.field_s[dg.field_T[24]]);
                 decompiledSharedTail0 = (var17 != 0);
               }
@@ -10238,7 +10238,7 @@ final class LevelEntity {
             vd.field_d[fh.field_e].d();
             SoftwareRasterizer.b();
             g.field_i[we.field_j][fh.field_e][oa.field_g].d(0, 0);
-            la.field_f.a(123);
+            SectorCacheStore.field_f.a(123);
             SoftwareRasterizer.b(bf.field_l);
           }
           boolean decompiledFrameRemainder0 = true;
@@ -10254,7 +10254,7 @@ final class LevelEntity {
                 var17 != 0) {
                 g.field_i[we.field_j][fh.field_e][oa.field_g].d(0, 0, var8, var7);
               }
-              la.field_f.a(124);
+              SectorCacheStore.field_f.a(124);
               this.a(jl.field_a[fh.field_e], param1, param0 + param4, 89);
               decompiledFrameRemainder0 = (var17 != 0);
             }
@@ -10300,7 +10300,7 @@ final class LevelEntity {
               var17 != 0) {
               vd.field_d[fh.field_e].d(0, 0, var8, var7);
             }
-            la.field_f.a(106);
+            SectorCacheStore.field_f.a(106);
             SoftwareRasterizer.b(bf.field_l);
             jl.field_a[fh.field_e].a(param0 + param4, param1, var14Lifetime1, var16Lifetime1);
           }
@@ -10326,7 +10326,7 @@ final class LevelEntity {
                 gj.field_b.d();
                 SoftwareRasterizer.b();
                 si.field_I[fh.field_e][var9][oa.field_g].d(0, 0);
-                la.field_f.a(-67);
+                SectorCacheStore.field_f.a(-67);
                 SoftwareRasterizer.b(bf.field_l);
                 gj.field_b.d(param0 + param4, param1, var8, var7, var11Lifetime2);
                 if (var17 != 0) {
@@ -10371,16 +10371,16 @@ final class LevelEntity {
         try {
           this.field_u = 256;
           this.field_B = 0;
-          this.field_o = this.field_r;
+          this.x = this.field_r;
           if (param0) {
             this.field_L = -19;
           }
-          this.field_H = this.field_f;
+          this.y = this.field_f;
           this.field_L = 0;
           this.field_h = 0;
           this.field_Q = 0;
-          this.field_e = this.field_o * 32 + 32 * this.field_B / 256;
-          this.field_z = this.field_u * 64 / 256 + 64 * this.field_H;
+          this.field_e = this.x * 32 + 32 * this.field_B / 256;
+          this.field_z = this.field_u * 64 / 256 + 64 * this.y;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10419,16 +10419,16 @@ final class LevelEntity {
           if (-1 != param0 &&
             -1 != param1) {
             boolean decompiledFrameRemainder0 = true;
-            this.field_o = param0;
+            this.x = param0;
             this.field_B = 0;
-            this.field_H = param1;
+            this.y = param1;
             this.field_f = param1;
             this.field_Q = 0;
-            this.field_F = param2;
+            this.type = param2;
             this.field_h = 0;
             this.field_r = param0;
             this.field_u = 0;
-            this.field_V = param3;
+            this.variant = param3;
             this.field_u = 256;
             this.c(true);
             this.field_z = param1 * 64 + this.field_u * 64 / 256;

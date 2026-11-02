@@ -5,9 +5,9 @@ import java.util.*;
 
 class kj extends UiComponent implements gk {
     static Sprite[] field_C;
-    sl field_F;
+    IntrusiveDeque field_F;
     static int field_D;
-    static sl field_B;
+    static IntrusiveDeque field_B;
     static String field_E;
     static String field_H;
     static int field_A;
@@ -149,7 +149,7 @@ class kj extends UiComponent implements gk {
 
     kj(int param0, int param1, int param2, int param3, j param4) {
         super(param0, param1, param2, param3, param4, (gg) null);
-        this.field_F = new sl();
+        this.field_F = new IntrusiveDeque();
     }
 
     final boolean b(int param0, UiComponent param1) {
@@ -353,7 +353,7 @@ class kj extends UiComponent implements gk {
 
     final void a(int param0, UiComponent param1) {
         try {
-          this.field_F.a(param1, param0 - 128);
+          this.field_F.addLast(param1, param0 - 128);
           if (param0 != 0) {
             StringBuilder var4 = (StringBuilder) null;
             this.a((Hashtable) null, 58, (StringBuilder) null, true);
@@ -666,7 +666,7 @@ class kj extends UiComponent implements gk {
 
     static {
         field_D = 0;
-        field_B = new sl();
+        field_B = new IntrusiveDeque();
         field_G = -1;
         field_I = new boolean[6];
         field_H = "Sound: ";

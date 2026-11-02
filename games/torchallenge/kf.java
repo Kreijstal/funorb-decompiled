@@ -68,7 +68,7 @@ final class kf {
         try {
           var4 = -1;
           var5 = 0;
-          if (!vg.a(param0.field_F, -1)) {
+          if (!vg.a(param0.type, -1)) {
             if (param2 != 8) {
               field_d = 52;
             }
@@ -79,28 +79,28 @@ final class kf {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (param0.field_H >= 0 &&
-            param0.field_H < ol.field_g.field_a &&
-            n.field_kb[param0.field_o][param0.field_H] == null) {
-            n.field_kb[param0.field_o][param0.field_H] = new int[8];
+          if (param0.y >= 0 &&
+            param0.y < ol.field_g.field_a &&
+            n.field_kb[param0.x][param0.y] == null) {
+            n.field_kb[param0.x][param0.y] = new int[8];
             for (var3_int = 0; var3_int < 8; var3_int++) {
-              n.field_kb[param0.field_o][param0.field_H][var3_int] = -1;
+              n.field_kb[param0.x][param0.y][var3_int] = -1;
             }
-            n.field_kb[param0.field_o][param0.field_H][0] = param1;
+            n.field_kb[param0.x][param0.y][0] = param1;
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }
-          if (param0.field_H >= 0 &&
-            param0.field_H < ol.field_g.field_a &&
-            n.field_kb[param0.field_o][param0.field_H] != null) {
+          if (param0.y >= 0 &&
+            param0.y < ol.field_g.field_a &&
+            n.field_kb[param0.x][param0.y] != null) {
             var7 = 0;
             var3_intLifetime1 = var7;
             while (8 > var7) {
-              if (n.field_kb[param0.field_o][param0.field_H][var7] == param1) {
+              if (n.field_kb[param0.x][param0.y][var7] == param1) {
                 stackIn_21_0 = 1;
                 return stackIn_21_0;
               }
-              if (n.field_kb[param0.field_o][param0.field_H][var7] < 0 &&
+              if (n.field_kb[param0.x][param0.y][var7] < 0 &&
                 var4 < 0) {
                 var4 = var7;
               }
@@ -109,7 +109,7 @@ final class kf {
             if (var4 < 0) {
               return 1;
             }
-            n.field_kb[param0.field_o][param0.field_H][var4] = param1;
+            n.field_kb[param0.x][param0.y][var4] = param1;
             stackIn_32_0 = 1;
             return stackIn_32_0;
           }

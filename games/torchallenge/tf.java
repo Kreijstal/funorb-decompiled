@@ -28,7 +28,7 @@ final class tf {
     static int[] field_u;
     byte[][] field_n;
     private byte[] field_q;
-    static eg field_x;
+    static BitmapFont field_x;
 
     public static void a(byte param0) {
         field_u = null;
@@ -41,7 +41,7 @@ final class tf {
         field_l = null;
         field_x = null;
         if (param0 < 46) {
-          field_x = (eg) null;
+          field_x = (BitmapFont) null;
         }
     }
 

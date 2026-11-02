@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hd {
+final class GzipDecoder {
     static int field_d;
     static String field_g;
     private java.util.zip.Inflater field_e;
@@ -118,7 +118,7 @@ final class hd {
         field_b = null;
     }
 
-    private hd(int param0, int param1, int param2) {
+    private GzipDecoder(int param0, int param1, int param2) {
     }
 
     final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
@@ -317,7 +317,7 @@ final class hd {
         }
     }
 
-    public hd() {
+    public GzipDecoder() {
         this(-1, 1000000, 1000000);
     }
 

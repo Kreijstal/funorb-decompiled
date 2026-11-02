@@ -44,15 +44,15 @@ final class fg extends kj implements cc, sg {
           if (param1) {
             field_M = (int[]) null;
           }
-          var4 = (rd) (bb.field_d.c((byte) 118));
+          var4 = (rd) (bb.field_d.first((byte) 118));
           while (var4 != null) {
             mg.a(-127, var4, param0);
-            var4 = (rd) (bb.field_d.c(-270));
+            var4 = (rd) (bb.field_d.next(-270));
           }
-          var2 = ji.field_q.c((byte) -49);
+          var2 = ji.field_q.first((byte) -49);
           while (var2 != null) {
             af.b(9245, param0);
-            var2 = ji.field_q.c(-270);
+            var2 = ji.field_q.next(-270);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,7 +103,7 @@ final class fg extends kj implements cc, sg {
         RuntimeException decompiledCaughtException = null;
         cl var6 = null;
         RuntimeException var6_ref = null;
-        eg var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         hb var9 = null;
         bg var12 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends eg {
+final class rh extends BitmapFont {
     int[][] field_O;
     private byte[][] field_N;
 

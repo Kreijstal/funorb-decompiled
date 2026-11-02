@@ -976,19 +976,19 @@ final class LocalizedStrings extends ma {
           }
           var2Lifetime180 = MouseInputHandler.a(95, "INTERFACE_INSTRUCTIONS,0");
           if (var2Lifetime180 != null) {
-            sl.field_d[0] = re.a(18990, var2Lifetime180);
+            IntrusiveDeque.field_d[0] = re.a(18990, var2Lifetime180);
           }
           var2Lifetime181 = MouseInputHandler.a(95, "INTERFACE_INSTRUCTIONS,1");
           if (null != var2Lifetime181) {
-            sl.field_d[1] = re.a(param1 + 18990, var2Lifetime181);
+            IntrusiveDeque.field_d[1] = re.a(param1 + 18990, var2Lifetime181);
           }
           var2Lifetime182 = MouseInputHandler.a(95, "INTERFACE_INSTRUCTIONS,2");
           if (null != var2Lifetime182) {
-            sl.field_d[2] = re.a(18990, var2Lifetime182);
+            IntrusiveDeque.field_d[2] = re.a(18990, var2Lifetime182);
           }
           var2Lifetime183 = MouseInputHandler.a(95, "INTERFACE_INSTRUCTIONS,3");
           if (var2Lifetime183 != null) {
-            sl.field_d[3] = re.a(TorChallenge.a(param1, 18990), var2Lifetime183);
+            IntrusiveDeque.field_d[3] = re.a(TorChallenge.a(param1, 18990), var2Lifetime183);
           }
           var2Lifetime184 = MouseInputHandler.a(95, "HEALTH_POTION_MESSAGE");
           if (var2Lifetime184 != null) {
@@ -1056,7 +1056,7 @@ final class LocalizedStrings extends ma {
             stackIn_10_0 = kg.field_cb;
             return stackIn_10_0;
           }
-          stackIn_12_0 = rk.field_c;
+          stackIn_12_0 = BufferedCacheFile.field_c;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

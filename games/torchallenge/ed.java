@@ -220,10 +220,10 @@ final class ed {
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < ea.field_g.length; var2_intLifetime2++) {
             if (ea.field_g[var2_intLifetime2] != null &&
-              0 != ea.field_g[var2_intLifetime2].field_F) {
+              0 != ea.field_g[var2_intLifetime2].type) {
               ea.field_g[var2_intLifetime2] = ea.field_g[var2_intLifetime2].c((byte) 29, param1);
               if (ea.field_g[var2_intLifetime2] != null &&
-                vg.a(ea.field_g[var2_intLifetime2].field_F, -1)) {
+                vg.a(ea.field_g[var2_intLifetime2].type, -1)) {
                 ea.field_g[var2_intLifetime2].l(0);
               }
             }
@@ -231,7 +231,7 @@ final class ed {
           if (hc.field_Q &&
             ub.field_n >= 0) {
             ub.field_n = ub.field_n - 1;
-            cb.a(25, BufferedSocket.field_p.field_H, (byte) 93, BufferedSocket.field_p.field_o);
+            cb.a(25, BufferedSocket.field_p.y, (byte) 93, BufferedSocket.field_p.x);
           }
           t.b(true);
           hk.a(126);

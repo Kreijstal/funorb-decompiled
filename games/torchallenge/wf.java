@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wf {
-    static sl field_g;
+    static IntrusiveDeque field_g;
     static Sprite field_b;
     static String[] field_e;
     static String field_a;
@@ -556,7 +556,7 @@ final class wf {
         field_e = new String[16];
         field_d = new int[]{0, 350};
         field_a = "Waiting for fonts";
-        field_g = new sl();
+        field_g = new IntrusiveDeque();
         field_h = new int[][]{new int[]{0, 119}, new int[]{0, 0}};
         field_f = "New Game";
         field_c = new int[][]{new int[]{9, 10}, new int[]{51, 52}};

@@ -7,7 +7,7 @@ final class ij extends fk {
     static long[] field_A;
     static String field_x;
     static int field_B;
-    static rk[] field_y;
+    static BufferedCacheFile[] field_y;
 
     final String a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
@@ -20,7 +20,7 @@ final class ij extends fk {
           if (param1 != -6782) {
             ij.c((byte) -111);
           }
-          stackIn_3_0 = la.a((byte) 123, param0.field_v.length(), '*');
+          stackIn_3_0 = SectorCacheStore.a((byte) 123, param0.field_v.length(), '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,7 +40,7 @@ final class ij extends fk {
         this(RasterBuffer.field_g, param0);
     }
 
-    private ij(eg param0, int param1) {
+    private ij(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -48,7 +48,7 @@ final class ij extends fk {
         if (gi.field_d == null) {
           return;
         }
-        rk.a((byte) 116, gi.field_d);
+        BufferedCacheFile.a((byte) 116, gi.field_d);
         if (param0 < -77) {
           gi.field_d.a(sh.field_u, -69);
           gi.field_d = null;

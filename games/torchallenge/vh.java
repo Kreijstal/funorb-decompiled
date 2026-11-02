@@ -23,10 +23,10 @@ final class vh {
             var4 = (CharSequence) null;
             vh.a((byte) -81, false, -106, (CharSequence) null);
           }
-          var5 = (o) (ve.field_c.c((byte) -72));
+          var5 = (o) (ve.field_c.first((byte) -72));
           while (var5 != null) {
             te.a(param0, 9082, var5);
-            var5 = (o) (ve.field_c.c(-270));
+            var5 = (o) (ve.field_c.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

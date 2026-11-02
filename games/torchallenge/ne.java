@@ -34,7 +34,7 @@ final class ne {
           var17 = -param4 + var15 >> 1;
           de.field_a.d();
           SoftwareRasterizer.b();
-          hd.a(param8, param4, param0, (byte) -96, var17, var16);
+          GzipDecoder.a(param8, param4, param0, (byte) -96, var17, var16);
           SoftwareRasterizer.a(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
           if (gf.field_n == null) {
             gf.field_n = new Sprite(var14_int, var15);
@@ -44,7 +44,7 @@ final class ne {
           SoftwareRasterizer.b(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
           de.field_a.d();
           od.b(gf.field_n, 0, 0, 0, param13);
-          la.field_f.a(-97);
+          SectorCacheStore.field_f.a(-97);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ne.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
         }

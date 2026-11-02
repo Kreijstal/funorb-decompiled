@@ -8,7 +8,7 @@ final class me implements j {
     private int field_h;
     static boolean field_b;
     static int field_g;
-    private eg field_c;
+    private BitmapFont field_c;
     private int field_f;
 
     public static void a(int param0) {
@@ -50,7 +50,7 @@ final class me implements j {
         this.field_f = 1;
     }
 
-    me(eg param0, int param1, int param2) {
+    me(BitmapFont param0, int param1, int param2) {
         try {
           this.field_h = param1;
           this.field_f = param2;

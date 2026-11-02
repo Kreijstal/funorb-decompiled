@@ -327,16 +327,16 @@ final class ni {
         RuntimeException var2 = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5 = (ji) (wf.field_g.c((byte) 113));
+          var5 = (ji) (wf.field_g.first((byte) 113));
           while (var5 != null) {
             ul.a(-18261, var5, param0);
-            var5 = (ji) (wf.field_g.c(-270));
+            var5 = (ji) (wf.field_g.next(-270));
           }
-          var6 = (ae) (bk.field_t.c((byte) 122));
+          var6 = (ae) (bk.field_t.first((byte) 122));
           var3 = -23 % ((param1 - 23) / 38);
           while (var6 != null) {
             bg.a(param0, (byte) 26, var6);
-            var6 = (ae) (bk.field_t.c(-270));
+            var6 = (ae) (bk.field_t.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

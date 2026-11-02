@@ -232,7 +232,7 @@ final class rl {
           ob.b(-95);
           return;
         }
-        rk.a((byte) -100, bg.field_P);
+        BufferedCacheFile.a((byte) -100, bg.field_P);
         var1Lifetime1 = 0 / ((-30 - param0) / 53);
         cg.a((byte) -102);
         tc.c(-119);

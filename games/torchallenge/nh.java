@@ -7,7 +7,7 @@ final class nh extends v implements sg {
     static int[] field_hb;
     static String field_fb;
     static String field_ib;
-    static sl field_cb;
+    static IntrusiveDeque field_cb;
     static PacketBuffer field_eb;
     static int[] field_db;
     static int field_bb;
@@ -30,7 +30,7 @@ final class nh extends v implements sg {
           this.field_l = this.field_l + 38;
           var4.a((byte) 117, 15, 30, -16 + this.field_p - 14, var5);
           if (param1 != 2) {
-            field_cb = (sl) null;
+            field_cb = (IntrusiveDeque) null;
           }
           this.a(0, var4);
           this.b((byte) 112);
@@ -99,8 +99,8 @@ final class nh extends v implements sg {
           if (param1 != 0) {
             nh.l(19);
           }
-          var4 = ea.field_a[param2] + (rk.field_p[param2] + cb.field_e[param2]);
-          var5 = cb.field_e[param3] + (rk.field_p[param3] + ea.field_a[param3]);
+          var4 = ea.field_a[param2] + (BufferedCacheFile.field_p[param2] + cb.field_e[param2]);
+          var5 = cb.field_e[param3] + (BufferedCacheFile.field_p[param3] + ea.field_a[param3]);
           if (var4 < var5) {
             return true;
           }
@@ -122,8 +122,8 @@ final class nh extends v implements sg {
           return false;
         }
         if (param1 == 0) {
-          var4Lifetime1 = ea.field_a[param2] + (rk.field_p[param2] + cb.field_e[param2]);
-          var5Lifetime1 = cb.field_e[param3] + (rk.field_p[param3] + ea.field_a[param3]);
+          var4Lifetime1 = ea.field_a[param2] + (BufferedCacheFile.field_p[param2] + cb.field_e[param2]);
+          var5Lifetime1 = cb.field_e[param3] + (BufferedCacheFile.field_p[param3] + ea.field_a[param3]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -133,8 +133,8 @@ final class nh extends v implements sg {
           return !(param2 >= param3);
         }
         nh.l(19);
-        var4Lifetime2 = ea.field_a[param2] + (rk.field_p[param2] + cb.field_e[param2]);
-        var5Lifetime2 = cb.field_e[param3] + (rk.field_p[param3] + ea.field_a[param3]);
+        var4Lifetime2 = ea.field_a[param2] + (BufferedCacheFile.field_p[param2] + cb.field_e[param2]);
+        var5Lifetime2 = cb.field_e[param3] + (BufferedCacheFile.field_p[param3] + ea.field_a[param3]);
         if (var4Lifetime2 < var5Lifetime2) {
           return true;
         }
@@ -194,7 +194,7 @@ final class nh extends v implements sg {
               var3 = uc.field_T;
               if (nh.g((byte) 94)) {
                 this.field_l = this.field_l + 20;
-                var3 = hd.field_g;
+                var3 = GzipDecoder.field_g;
               }
             } else {
               if (tj.field_d == param1) {
@@ -261,7 +261,7 @@ final class nh extends v implements sg {
         field_ib = "Error connecting to server. Please try using a different server.";
         field_fb = "Cancel";
         field_db = new int[]{468, 6, 168, 40};
-        field_cb = new sl();
+        field_cb = new IntrusiveDeque();
         field_bb = 5;
     }
 }

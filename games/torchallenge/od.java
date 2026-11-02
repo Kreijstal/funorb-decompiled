@@ -597,7 +597,7 @@ final class od {
           param7.d();
           SoftwareRasterizer.b();
           SoftwareRasterizer.c(0, 0, var19, var20, var15Lifetime1, var16Lifetime1);
-          la.field_f.a(-99);
+          SectorCacheStore.field_f.a(-99);
           var22 = param0;
           var23 = param1;
           if (var21 == 90) {
@@ -612,11 +612,11 @@ final class od {
           }
           param6.d();
           param7.e(var22, var23);
-          la.field_f.a(-86);
+          SectorCacheStore.field_f.a(-86);
         }
         param6.d();
         SoftwareRasterizer.f(param0 + var10, param1 + var11, param4, param5 + 1, var9);
-        la.field_f.a(115);
+        SectorCacheStore.field_f.a(115);
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {

@@ -171,14 +171,14 @@ final class oi extends of {
             } else {
               var12 = var12 >> -gb.field_c[var13];
             }
-            var10 = (pd.field_f[var13] == 0) ? var6 : var7;
+            var10 = (GameScreen.field_f[var13] == 0) ? var6 : var7;
             var12 = var12 & rf.field_jb[var13];
             var10 = var10 & rf.field_jb[var13];
             if (0 != (var12 ^ var10)) {
               var11 = 1;
             }
             if (var11 != 0) {
-              var5 = pd.field_f[var13] * 4 + 8 * var4;
+              var5 = GameScreen.field_f[var13] * 4 + 8 * var4;
               hf.field_d[var5 + 0] = (byte)p.a((int) hf.field_d[var5 + 0], jh.a(255, var12));
               hf.field_d[var5 + 1] = (byte)p.a((int) hf.field_d[var5 + 1], jh.a(jh.a(var12, 65280), 65479) >> 8);
               hf.field_d[var5 + 2] = (byte)p.a((int) hf.field_d[var5 + 2], jh.a(16744105, jh.a(16711680, var12)) >> 16);
@@ -190,7 +190,7 @@ final class oi extends of {
           var5 = 24;
           var6 = hf.field_d[var5] + ((hf.field_d[var5 + 1] << 8) + ((hf.field_d[var5 + 2] << 16) + (hf.field_d[3 + var5] << 24)));
           if (!gh.field_x) {
-            var12 = hd.field_c[var4];
+            var12 = GzipDecoder.field_c[var4];
             if (bj.field_a[var4] < 0) {
               var12 = var12 >> -bj.field_a[var4];
             } else {
@@ -214,7 +214,7 @@ final class oi extends of {
           if (param2 &&
             !bh.field_p &&
             !GameClientBase.p(-113)) {
-            wj.field_b.a(new eh(hf.field_d), -50);
+            wj.field_b.addLast(new eh(hf.field_d), -50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

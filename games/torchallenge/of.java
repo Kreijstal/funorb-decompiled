@@ -181,7 +181,7 @@ abstract class of {
         try {
           var5_int = gh.field_x ? 1 : 0;
           var6 = bc.field_o;
-          var7 = bb.field_h;
+          var7 = bb.activeScreenId;
           if (var5_int != 0) {
             if (-1 != var6) {
               if (var6 != 13) {
@@ -232,7 +232,7 @@ abstract class of {
             for (var20 = 0; var20 < 5; var20++) {
               if (0 < (1 << var20 & vi.field_a)) {
                 var19 = ea.field_g[mh.field_d[var20]];
-                if (!wa.field_pb[-(ea.field_e * 5) + var19.field_V] &&
+                if (!wa.field_pb[-(ea.field_e * 5) + var19.variant] &&
                   var15 == 0) {
                   var17 = var19.field_D;
                   var16 = var20;

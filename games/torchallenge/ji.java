@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ji extends IntrusiveNode {
-    static sl field_q;
+    static IntrusiveDeque field_q;
     int field_o;
     int field_l;
     long field_x;
@@ -77,6 +77,6 @@ final class ji extends IntrusiveNode {
 
     static {
         field_u = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
-        field_q = new sl();
+        field_q = new IntrusiveDeque();
     }
 }

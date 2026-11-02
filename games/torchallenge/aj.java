@@ -31,15 +31,15 @@ final class aj {
             return stackIn_3_0;
           }
           var4 = 0;
-          if (!vg.a(param1.field_F, -1)) {
+          if (!vg.a(param1.type, -1)) {
             return -1;
           }
           if (null != n.field_kb &&
             param1 != null &&
-            n.field_kb[param1.field_o][param1.field_H] != null) {
+            n.field_kb[param1.x][param1.y] != null) {
             for (var3_int = 0; 8 > var3_int; var3_int++) {
-              if (param2 == n.field_kb[param1.field_o][param1.field_H][var3_int]) {
-                n.field_kb[param1.field_o][param1.field_H][var3_int] = -1;
+              if (param2 == n.field_kb[param1.x][param1.y][var3_int]) {
+                n.field_kb[param1.x][param1.y][var3_int] = -1;
               }
             }
             stackIn_19_0 = 1;
@@ -139,10 +139,10 @@ final class aj {
           var13 = id.field_b;
           var15 = var13;
           var2 = var15.readUnsignedByte(-87);
-          var3 = (ue) (wl.field_b.c((byte) -63));
+          var3 = (ue) (wl.field_b.first((byte) -63));
           while (var3 != null) {
             if (var2 != var3.field_k) {
-              var3 = (ue) (wl.field_b.c(param0 - 5697));
+              var3 = (ue) (wl.field_b.next(param0 - 5697));
               continue;
             }
             break;
@@ -177,11 +177,11 @@ final class aj {
               var11 = hi.field_G[var9];
               var6[0][var10] = LevelDecoder.field_b[var11];
               var19[0][4 * var10] = bg.field_Q[var11];
-              var19[0][var10 * 4 + 1] = rk.field_p[var11];
+              var19[0][var10 * 4 + 1] = BufferedCacheFile.field_p[var11];
               var19[0][var10 * 4 + 2] = ea.field_a[var11];
               var19[0][3 + var10 * 4] = cb.field_e[var11];
               if (jc.a(LevelDecoder.field_b[var11], 26691) &&
-                ea.field_a[var11] + (rk.field_p[var11] + cb.field_e[var11]) == 0) {
+                ea.field_a[var11] + (BufferedCacheFile.field_p[var11] + cb.field_e[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -195,11 +195,11 @@ final class aj {
               var11Lifetime1 = hi.field_G[var9Lifetime1 + var5];
               var6[1][var14] = LevelDecoder.field_b[var11Lifetime1];
               var19[1][var14 * 4] = bg.field_Q[var11Lifetime1];
-              var19[1][1 + 4 * var14] = rk.field_p[var11Lifetime1];
+              var19[1][1 + 4 * var14] = BufferedCacheFile.field_p[var11Lifetime1];
               var19[1][2 + var14 * 4] = ea.field_a[var11Lifetime1];
               var19[1][3 + 4 * var14] = cb.field_e[var11Lifetime1];
               if (jc.a(LevelDecoder.field_b[var11Lifetime1], 26691) &&
-                rk.field_p[var11Lifetime1] + (ea.field_a[var11Lifetime1] + cb.field_e[var11Lifetime1]) == 0) {
+                BufferedCacheFile.field_p[var11Lifetime1] + (ea.field_a[var11Lifetime1] + cb.field_e[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -267,7 +267,7 @@ final class aj {
                 }
                 if (!bh.field_p &&
                   !GameClientBase.p(param0 ^ -99)) {
-                  wj.field_b.a(new eh(hf.field_d), -55);
+                  wj.field_b.addLast(new eh(hf.field_d), -55);
                 }
                 if (vh.field_d == null) {
                   SocketConnector.field_a = false;
@@ -278,7 +278,7 @@ final class aj {
                 jl.a((byte) 123);
                 if (!bh.field_p &&
                   !GameClientBase.p(-86)) {
-                  wj.field_b.a(new eh(hf.field_d), -82);
+                  wj.field_b.addLast(new eh(hf.field_d), -82);
                 }
                 if (vh.field_d == null) {
                   SocketConnector.field_a = false;

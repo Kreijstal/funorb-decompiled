@@ -7,7 +7,7 @@ class df extends ng {
     static int field_Q;
     static int field_R;
     private String[] field_U;
-    private sl field_T;
+    private IntrusiveDeque field_T;
     private ia field_S;
     static boolean field_O;
     static String field_P;
@@ -255,7 +255,7 @@ class df extends ng {
         if (param2 <= 46) {
           return (ia) null;
         }
-        var4 = (ia) (this.field_T.c((byte) -19));
+        var4 = (ia) (this.field_T.first((byte) -19));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -267,7 +267,7 @@ class df extends ng {
             }
             var5 = var5.field_k;
           }
-          var4 = (ia) (this.field_T.c(-270));
+          var4 = (ia) (this.field_T.next(-270));
         }
         return null;
     }
@@ -383,7 +383,7 @@ class df extends ng {
         int var16;
         int var7Lifetime1;
         var16 = TorChallenge.field_F ? 1 : 0;
-        this.field_T = new sl();
+        this.field_T = new IntrusiveDeque();
         if (param0) {
           field_P = (String) null;
         }
@@ -424,7 +424,7 @@ class df extends ng {
             if (var10 != null) {
               ((ia) (var10)).field_k = var15;
             }
-            this.field_T.a(var15, -63);
+            this.field_T.addLast(var15, -63);
             var10 = var15;
           }
         }

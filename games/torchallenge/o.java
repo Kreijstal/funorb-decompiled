@@ -7,7 +7,7 @@ final class o extends IntrusiveNode {
     static int field_i;
     static String field_n;
     static int[] field_j;
-    static jk field_k;
+    static PcmStreamMixer field_k;
     int field_p;
     static boolean field_m;
 
@@ -547,7 +547,7 @@ final class o extends IntrusiveNode {
         rf.field_ib = 0;
         RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];
         bc.field_o = 13;
-        bb.field_h = 13;
+        bb.activeScreenId = 13;
         ch.b(!param1);
     }
 

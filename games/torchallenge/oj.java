@@ -1557,7 +1557,7 @@ final class oj {
                 }
                 var2 = dl.a("create_email_confirm_tooltip", false);
                 if (null != var2) {
-                  pd.field_d = re.a(18990, var2);
+                  GameScreen.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("create_age_tooltip", false);
                 if (null != var2) {
@@ -1633,7 +1633,7 @@ final class oj {
                 }
                 var2 = dl.a("create_alert_passcontainsemail", false);
                 if (null != var2) {
-                  pd.field_a = re.a(18990, var2);
+                  GameScreen.field_a = re.a(18990, var2);
                 }
                 var2 = dl.a("create_alert_passcontainsname_partial", false);
                 if (null != var2) {
@@ -1673,7 +1673,7 @@ final class oj {
                 }
                 var2 = dl.a("create_emailvalid", false);
                 if (null != var2) {
-                  rk.field_c = re.a(18990, var2);
+                  BufferedCacheFile.field_c = re.a(18990, var2);
                 }
                 var2 = dl.a("create_account_success", false);
                 if (null != var2) {
@@ -2711,7 +2711,7 @@ final class oj {
                 }
                 var2 = dl.a("fs_focus_or_resolution", false);
                 if (null != var2) {
-                  hd.field_g = re.a(param0 ^ -17660, var2);
+                  GzipDecoder.field_g = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("fs_timeout", false);
                 if (var2 != null) {

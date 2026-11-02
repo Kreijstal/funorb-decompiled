@@ -268,7 +268,7 @@ final class ib extends kj implements tb, sg {
                 ib.a((java.awt.Canvas) null, -77, false);
               }
               var9 = "tuhstatbut";
-              var3 = (String) (ff.a("getcookies", param1, 20511));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, 20511));
               var4 = dl.a(var3, ';', -26);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

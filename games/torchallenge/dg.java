@@ -472,7 +472,7 @@ final class dg extends kj implements tl, sg, tb {
         this.field_V = new ng(uk.field_Q, (gg) null);
         this.field_Q.field_r = ci.field_o;
         this.field_cb.field_r = SecondaryNodeDeque.field_c;
-        this.field_P.field_r = pd.field_d;
+        this.field_P.field_r = GameScreen.field_d;
         this.field_X.field_r = vl.field_c;
         this.field_K.field_r = bi.field_c;
         this.field_S.field_r = SecondaryNodeDeque.field_d;

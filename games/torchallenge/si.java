@@ -7,7 +7,7 @@ final class si extends ic {
     static int[] field_L;
     static String field_M;
     static int[] field_H;
-    private sl field_G;
+    private IntrusiveDeque field_G;
     static Sprite field_F;
     static int[] field_K;
 
@@ -142,7 +142,7 @@ final class si extends ic {
               var12.g(var10, var11);
             }
           }
-          la.field_f.a(param0 - 188);
+          SectorCacheStore.field_f.a(param0 - 188);
           ll.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -275,11 +275,11 @@ final class si extends ic {
                 var8 = param1[var10][param2];
                 od.a(nj.field_e[var9][var6_int - 1], var8);
                 SoftwareRasterizer.b(ae.field_y);
-                la.field_f.a(-38);
+                SectorCacheStore.field_f.a(-38);
               }
             }
           }
-          la.field_f.a(param5 + 104);
+          SectorCacheStore.field_f.a(param5 + 104);
           if (param5 != 1) {
             field_L = (int[]) null;
           }
@@ -315,7 +315,7 @@ final class si extends ic {
           var3 = (b) (var2.a(false));
         }
         if (param0 > -38) {
-          this.field_G = (sl) null;
+          this.field_G = (IntrusiveDeque) null;
         }
         this.field_A = (UiComponent) ((Object) this.f((byte) 123));
     }
@@ -402,7 +402,7 @@ final class si extends ic {
 
     public si() {
         super(0, 0, TorChallenge.field_G, NodeHashTableIterator.field_h, (j) null, (gg) null);
-        this.field_G = new sl();
+        this.field_G = new IntrusiveDeque();
     }
 
     static {

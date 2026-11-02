@@ -4,7 +4,7 @@
 final class dk {
     j field_l;
     int field_k;
-    eg field_t;
+    BitmapFont field_t;
     j field_i;
     static pa field_s;
     private int field_b;
@@ -161,7 +161,7 @@ final class dk {
         }
     }
 
-    final void a(eg param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         bc var18 = null;
         ga var4 = null;
         Sprite[] var5 = null;
@@ -186,8 +186,8 @@ final class dk {
         ga var14Lifetime2;
         try {
           if (param1 != -22373) {
-            eg var16 = (eg) null;
-            this.a((eg) null, 22);
+            BitmapFont var16 = (BitmapFont) null;
+            this.a((BitmapFont) null, 22);
           }
           var18 = new bc(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_K + param0.field_x);
           this.field_q = (j) ((Object) var18);

@@ -52,7 +52,7 @@ final class oh {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              ff.a(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 1);
+              JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

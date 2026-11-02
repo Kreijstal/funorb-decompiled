@@ -78,7 +78,7 @@ final class il extends ma {
             return stackIn_2_0;
           }
           if (this.a((byte) 24, param0) != lk.field_c) {
-            stackIn_7_0 = rk.field_c;
+            stackIn_7_0 = BufferedCacheFile.field_c;
             return stackIn_7_0;
           }
           stackIn_5_0 = GameClientBase.field_r;

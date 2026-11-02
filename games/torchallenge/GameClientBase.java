@@ -186,10 +186,10 @@ abstract class GameClientBase extends GameApplet {
           if (kf.field_b != 0) {
             rj.field_f = pe.b(rj.field_c, -1);
           }
-          sl.field_a = ProxySocketConnector.a(false, 1, 88, a.field_a, true);
+          IntrusiveDeque.field_a = ProxySocketConnector.a(false, 1, 88, a.field_a, true);
           gf.field_p = ProxySocketConnector.a(false, 1, -116, qh.field_P, true);
           jl.field_b = ProxySocketConnector.a(false, 1, -20, gh.field_w, true);
-          aj.field_f = sl.field_a;
+          aj.field_f = IntrusiveDeque.field_a;
           FullscreenFocusCanvas.field_g = gf.field_p;
           li.field_K = 2;
         }
@@ -211,13 +211,13 @@ abstract class GameClientBase extends GameApplet {
           }
         }
         if (li.field_K == 3 &&
-          pl.a(gf.field_p, jl.field_b, (byte) -100, sl.field_a) &&
+          pl.a(gf.field_p, jl.field_b, (byte) -100, IntrusiveDeque.field_a) &&
           de.a(30, jl.field_b)) {
           ch.a(76);
           sa.a(0);
           sa.field_b = BufferedSocket.field_m;
           fh.field_g = false;
-          rf.a(sl.field_a, (byte) -23, fg.field_S, jl.field_b, gf.field_p);
+          rf.a(IntrusiveDeque.field_a, (byte) -23, fg.field_S, jl.field_b, gf.field_p);
           if (qc.field_j ||
             LevelEntity.field_bb != null) {
             stackIn_102_0 = !(qc.field_j);
@@ -229,13 +229,13 @@ abstract class GameClientBase extends GameApplet {
             hf.a((byte) -116);
           }
           if (null == o.field_k) {
-            o.field_k = sl.b(-944);
+            o.field_k = IntrusiveDeque.b(-944);
             ja.field_a = gb.b(38);
           }
           v.a((byte) 127, o.field_k, ja.field_a, jl.field_b);
           jl.field_b = null;
           gf.field_p = null;
-          sl.field_a = null;
+          IntrusiveDeque.field_a = null;
           ca.a((java.applet.Applet) (this), -109);
           id.a(127);
           li.field_K = 10;
@@ -275,7 +275,7 @@ abstract class GameClientBase extends GameApplet {
         }
         if (!param1 &&
           sa.field_c) {
-          rk.a((byte) -104, bg.field_P);
+          BufferedCacheFile.a((byte) -104, bg.field_P);
           this.e(-72);
           lk.a(bg.field_P, false);
         }
@@ -336,7 +336,7 @@ abstract class GameClientBase extends GameApplet {
               hc.d((byte) -117);
             } else {
               if (var2 == 3) {
-                la.a((byte) -64);
+                SectorCacheStore.a((byte) -64);
               } else {
                 if (var2 != 4) {
                   if (var2 != 5) {
@@ -420,7 +420,7 @@ abstract class GameClientBase extends GameApplet {
         kf.field_b = this.field_v;
         rd.a(kf.field_b, (byte) 121);
         rj.a(this.field_u, 5000, this.field_B, this.field_C, param4, 5000, this.field_D, this.field_x, this.field_w, kf.field_b, this.field_q, param0, param7, sh.field_u);
-        hd.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, sh.field_u);
+        GzipDecoder.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, sh.field_u);
         kk.e(-79);
         ef.field_l = dj.c((byte) 96);
         lk.a(bg.field_P, param0);
@@ -522,7 +522,7 @@ abstract class GameClientBase extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = TorChallenge.a(il.f(-24044), hd.b((byte) 83), -20031, this.field_s, si.h(127), a.a((byte) 126), vd.c(0));
+            var5_intLifetime1 = TorChallenge.a(il.f(-24044), GzipDecoder.b((byte) 83), -20031, this.field_s, si.h(127), a.a((byte) 126), vd.c(0));
             if (var5_intLifetime1 != -1) {
               hl.a(0, var5_intLifetime1, ra.field_d, SecondaryNodeDequeIterator.field_c);
               SecondaryNodeDequeIterator.field_c = null;
@@ -571,7 +571,7 @@ abstract class GameClientBase extends GameApplet {
             this.i(123);
           }
           if (var4 == 7) {
-            hd.a(gi.b(12476), 101);
+            GzipDecoder.a(gi.b(12476), 101);
           }
           if (var4 == 8) {
             pl.a((byte) 126, gi.b(12476));

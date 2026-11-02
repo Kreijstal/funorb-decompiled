@@ -5,7 +5,7 @@ final class wc {
     static String field_i;
     static int field_b;
     static String field_f;
-    static sl field_g;
+    static IntrusiveDeque field_g;
     static int[][][] field_e;
     static r field_h;
     static String field_a;
@@ -246,6 +246,6 @@ final class wc {
         field_a = "Unpacking music";
         field_i = "Player";
         field_c = new int[][]{new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}};
-        field_g = new sl();
+        field_g = new IntrusiveDeque();
     }
 }

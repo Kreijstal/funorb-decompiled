@@ -121,7 +121,7 @@ final class qh extends kj implements tl, sg {
           uk.field_N.d();
           wf.field_b.g(var2Lifetime4, var3Lifetime4);
         }
-        la.field_f.a(-53);
+        SectorCacheStore.field_f.a(-53);
     }
 
     public final void a(df param0, int param1, int param2, boolean param3) {

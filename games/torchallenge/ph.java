@@ -6,7 +6,7 @@ final class ph implements j {
     private int field_c;
     static vk[] field_b;
     private int field_j;
-    private eg field_l;
+    private BitmapFont field_l;
     private int field_i;
     static int field_d;
     private int field_g;
@@ -91,7 +91,7 @@ final class ph implements j {
         field_f = null;
     }
 
-    ph(eg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ph(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_n = param3;
           this.field_k = param5;

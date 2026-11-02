@@ -60,7 +60,7 @@ final class we implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new e(param0, param0);
-          tj.field_e.a(var2, param1 - 6300);
+          tj.field_e.addLast(var2, param1 - 6300);
           if (param1 != 6222) {
             we.b(false);
           }

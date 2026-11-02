@@ -4,7 +4,7 @@
 final class wl {
     int field_h;
     private boolean field_f;
-    static sl field_b;
+    static IntrusiveDeque field_b;
     private int field_k;
     private int field_e;
     private boolean field_g;
@@ -56,7 +56,7 @@ final class wl {
             this.c((byte) -13);
           }
           if (!ol.field_a) {
-            BufferedSocket.field_p.a(this.field_e, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.field_H, BufferedSocket.field_p.field_o, 0, 2657, BufferedSocket.field_p.field_u);
+            BufferedSocket.field_p.a(this.field_e, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, 0, 2657, BufferedSocket.field_p.field_u);
             BufferedSocket.field_p.a((byte) -126, df.field_R, this.field_e);
             lb.a(df.field_R, this.field_e, param0 ^ 119);
             if (df.field_O) {
@@ -95,7 +95,7 @@ final class wl {
           }
           if (ol.field_a &&
             BufferedSocket.field_p != null) {
-            BufferedSocket.field_p.a(aa.field_g, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.field_H, BufferedSocket.field_p.field_o, BufferedSocket.field_p.field_F, 2657, BufferedSocket.field_p.field_u);
+            BufferedSocket.field_p.a(aa.field_g, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, BufferedSocket.field_p.type, 2657, BufferedSocket.field_p.field_u);
             BufferedSocket.field_p.b(false, false);
             BufferedSocket.field_p.a((byte) -86, df.field_R, aa.field_g);
           }
@@ -109,7 +109,7 @@ final class wl {
         if (tf.field_o > 0 &&
           !bh.field_p &&
           null == kf.field_a) {
-          kf.field_a = wi.a(pd.field_c, pa.field_x, new int[]{tf.field_o}, (byte) 77, 31, ac.field_d, ae.field_z, 65504, 3);
+          kf.field_a = wi.a(GameScreen.field_c, pa.field_x, new int[]{tf.field_o}, (byte) 77, 31, ac.field_d, ae.field_z, 65504, 3);
         }
         int var2 = 123 % ((param0 - 34) / 54);
     }
@@ -215,8 +215,8 @@ final class wl {
         if (SocketConnector.field_k <= 0) {
           this.field_j = this.field_j + 1;
           if (this.field_j > 100) {
-            BufferedSocket.field_p.field_o = BufferedSocket.field_p.field_r;
-            BufferedSocket.field_p.field_H = BufferedSocket.field_p.field_f;
+            BufferedSocket.field_p.x = BufferedSocket.field_p.field_r;
+            BufferedSocket.field_p.y = BufferedSocket.field_p.field_f;
             if (!GameClientBase.p(-114)) {
               this.c((byte) -39);
             }
@@ -280,7 +280,7 @@ final class wl {
           if (3 != b.field_J) {
             continue;
           }
-          pd.field_c = pd.field_c - 32;
+          GameScreen.field_c = GameScreen.field_c - 32;
           pi.field_f = pi.field_f + 64;
           if (!nj.field_a) {
             nj.field_a = true;
@@ -315,7 +315,7 @@ final class wl {
             BufferedSocket.field_p.field_d = BufferedSocket.field_p.field_d + 1;
             pg.field_s = false;
           }
-          pd.field_c = pd.field_c + 128;
+          GameScreen.field_c = GameScreen.field_c + 128;
         }
         if (nj.field_c[96] &&
           null != BufferedSocket.field_p) {
@@ -324,7 +324,7 @@ final class wl {
         if (this.field_f &&
           nj.field_c[22]) {
           pg.field_s = true;
-          pd.field_c = pd.field_c + 512;
+          GameScreen.field_c = GameScreen.field_c + 512;
           pi.field_f = pi.field_f - 32;
           bh.field_p = true;
         }
@@ -368,7 +368,7 @@ final class wl {
           nj.field_c[48]) {
           pi.field_a = pi.field_a + 1024;
           bh.field_p = true;
-          pd.field_c = pd.field_c - 128;
+          GameScreen.field_c = GameScreen.field_c - 128;
           hf.a(255, 13, qb.field_d);
           qb.field_d = qb.field_d + 1;
           if (qb.field_d >= 16) {
@@ -401,8 +401,8 @@ final class wl {
         BufferedSocket.field_p.c((byte) 29, aa.field_g);
         if (0 < BufferedSocket.field_p.field_db) {
           ub.field_i = false;
-          df.field_R = 32 * BufferedSocket.field_p.field_o - (-(32 * BufferedSocket.field_p.field_B / 256) - 32);
-          aa.field_g = -32 + (-240 + (64 * BufferedSocket.field_p.field_u / 256 + BufferedSocket.field_p.field_H * 64));
+          df.field_R = 32 * BufferedSocket.field_p.x - (-(32 * BufferedSocket.field_p.field_B / 256) - 32);
+          aa.field_g = -32 + (-240 + (64 * BufferedSocket.field_p.field_u / 256 + BufferedSocket.field_p.y * 64));
           if (aa.field_g < 0) {
             aa.field_g = 0;
           }
@@ -472,7 +472,7 @@ final class wl {
           o.a(5, true);
         }
         if (cj.field_b) {
-          bb.field_h = 13;
+          bb.activeScreenId = 13;
           bc.field_o = 13;
           cj.field_b = false;
         }
@@ -504,7 +504,7 @@ final class wl {
         Object var20 = null;
         int var19 = TorChallenge.field_F ? 1 : 0;
         int var4 = 112 % ((param0 + 31) / 32);
-        ul var20_ref = (ul) (db.field_D.c((byte) 106));
+        ul var20_ref = (ul) (db.field_D.first((byte) 106));
         ul var2 = var20_ref;
         int var13 = tf.field_j[0].field_x >> 2;
         Sprite[] var14 = ng.field_L;
@@ -533,7 +533,7 @@ final class wl {
           }
           var10 = var16 + 1;
           var8 = var15;
-          hd.a(var14, var12, var11, (byte) -78, var9, var7);
+          GzipDecoder.a(var14, var12, var11, (byte) -78, var9, var7);
           tf.field_j[var20_ref.field_i].h(var8 + var7, var10 + var9);
           var6 = 24;
           var8Lifetime1 = var15 + 40;
@@ -547,12 +547,12 @@ final class wl {
     final void a(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = -62 % ((-15 - param0) / 35);
-        if (null != db.field_D.c((byte) 124)) {
+        if (null != db.field_D.first((byte) 124)) {
           fieldTemp$0 = fk.field_t + 1;
           fk.field_t = fk.field_t + 1;
           if (fieldTemp$0 == 335) {
             fk.field_t = 0;
-            db.field_D.a((byte) 93);
+            db.field_D.pollFirst((byte) 93);
           }
           return;
         }
@@ -569,7 +569,7 @@ final class wl {
         cd.field_b = cd.field_b + 1;
         kk.field_d = cd.field_b;
         if (!(cd.field_b <= aa.field_f >> 1)) {
-          bb.field_h = 10;
+          bb.activeScreenId = 10;
           bc.field_o = 10;
           kk.field_d = kk.field_d - (aa.field_f >> 1);
           fh.field_b = -1;
@@ -621,20 +621,20 @@ final class wl {
         tf.field_o = 0;
         ac.field_d = 8;
         ef.field_k = 0;
-        pd.field_c = -1089027477;
+        GameScreen.field_c = -1089027477;
         vj.field_c = param1;
         ab.field_d = 1;
         this.field_i = param0;
         pa.field_x = 32;
         gh.field_x = false;
-        hd.field_d = 0;
+        GzipDecoder.field_d = 0;
         ea.field_e = this.field_i;
         SocketConnector.field_k = 3;
         var4 = 5;
         for (var5 = 0; var5 < 6; var5++) {
           for (var6 = 0; var4 > var6; var6++) {
             if ((pi.field_d[vj.field_c][var5] & 1 << var6) > 0) {
-              hd.field_d = hd.field_d + 1;
+              GzipDecoder.field_d = GzipDecoder.field_d + 1;
             }
           }
         }
@@ -665,8 +665,8 @@ final class wl {
           LevelDecoder.a(false, je.field_c[ea.field_e], 24233, true);
         }
         if (BufferedSocket.field_p != null) {
-          aa.field_g = -32 + 64 * BufferedSocket.field_p.field_H + BufferedSocket.field_p.field_u * 64 / 256 - 240;
-          df.field_R = 32 * BufferedSocket.field_p.field_B / 256 + 32 * BufferedSocket.field_p.field_o + 32;
+          aa.field_g = -32 + 64 * BufferedSocket.field_p.y + BufferedSocket.field_p.field_u * 64 / 256 - 240;
+          df.field_R = 32 * BufferedSocket.field_p.field_B / 256 + 32 * BufferedSocket.field_p.x + 32;
           if (aa.field_g < 0) {
             aa.field_g = 0;
           }
@@ -703,8 +703,8 @@ final class wl {
           }
         }
         bj.a((byte) 71);
-        while (null != db.field_D.c((byte) -69)) {
-          db.field_D.a((byte) 101);
+        while (null != db.field_D.first((byte) -69)) {
+          db.field_D.pollFirst((byte) 101);
         }
         qh.field_J = 0;
         fk.field_t = 0;
@@ -714,6 +714,6 @@ final class wl {
         field_d = "Email: ";
         field_c = new fe[14][3];
         field_l = new int[]{1, 1, 1, 1, 1, 2};
-        field_b = new sl();
+        field_b = new IntrusiveDeque();
     }
 }

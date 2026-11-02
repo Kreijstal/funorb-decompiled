@@ -4,7 +4,7 @@
 final class ba {
     static Sprite[] field_d;
     static String[] field_c;
-    static sl field_a;
+    static IntrusiveDeque field_a;
     static Sprite[] field_b;
     static boolean[][][] field_e;
     static int[][] field_j;
@@ -64,7 +64,7 @@ final class ba {
           }
         }
         var11 = ui.field_i;
-        hd.a(var11, var9, var8, (byte) 102, var7, var6);
+        GzipDecoder.a(var11, var9, var8, (byte) 102, var7, var6);
         var12 = ph.field_o[var5];
         var7Lifetime1 = ic.field_B[param0][7];
         var6Lifetime1 = ic.field_B[param0][6];

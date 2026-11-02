@@ -7,7 +7,7 @@ final class cf {
     static Sprite field_c;
     static Calendar field_e;
     static int field_f;
-    static rk field_d;
+    static BufferedCacheFile field_d;
     static int field_a;
     static int field_b;
 

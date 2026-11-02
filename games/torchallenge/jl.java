@@ -185,19 +185,19 @@ abstract class jl {
             }
             var3 = 0;
             for (var7 = 0; var7 < 3; var7++) {
-              hd.field_c[var7] = 0;
+              GzipDecoder.field_c[var7] = 0;
             }
             var3 = var3 | var1_int & 31;
-            hd.field_c[0] = p.a(hd.field_c[0], jh.a(var3, 31));
+            GzipDecoder.field_c[0] = p.a(GzipDecoder.field_c[0], jh.a(var3, 31));
             if (param0 <= 111) {
               field_h = 53L;
             }
             var3 = 0;
             var3 = var3 | (var1_int & 992) >> 5;
-            hd.field_c[1] = p.a(hd.field_c[1], jh.a(var3, 31));
+            GzipDecoder.field_c[1] = p.a(GzipDecoder.field_c[1], jh.a(var3, 31));
             var3 = 0;
             var3 = var3 | (var1_int & 31744) >> 10;
-            hd.field_c[2] = p.a(hd.field_c[2], jh.a(var3, 31));
+            GzipDecoder.field_c[2] = p.a(GzipDecoder.field_c[2], jh.a(var3, 31));
             return;
           }
           return;

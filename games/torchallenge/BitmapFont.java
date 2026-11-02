@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eg extends DualLinkNode {
+abstract class BitmapFont extends DualLinkNode {
     private int[] field_H;
     int field_G;
     int field_t;
@@ -223,7 +223,7 @@ abstract class eg extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_s[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)eg.a(var15, var16, var17, this.field_M, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_s[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_M, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -846,7 +846,7 @@ abstract class eg extends DualLinkNode {
         field_E = 0;
     }
 
-    eg(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

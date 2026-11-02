@@ -3,7 +3,7 @@
  */
 final class al extends sh {
     int field_C;
-    la field_D;
+    SectorCacheStore field_D;
     static ej[] field_x;
     static int[][] field_A;
     byte[] field_y;

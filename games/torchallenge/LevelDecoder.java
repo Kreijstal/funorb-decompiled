@@ -198,10 +198,10 @@ final class LevelDecoder {
               if (var10 == 0) {
                 BufferedSocket.field_p = ea.field_g[var5Lifetime2Lifetime1];
               }
-              if (15 == ea.field_g[var5Lifetime2Lifetime1].field_F) {
+              if (15 == ea.field_g[var5Lifetime2Lifetime1].type) {
                 bl.field_O[0][var14] = var12;
                 bl.field_O[1][var14] = var5Lifetime2Lifetime1;
-                ea.field_g[var5Lifetime2Lifetime1].field_V = var15;
+                ea.field_g[var5Lifetime2Lifetime1].variant = var15;
                 if (0 < (pi.field_d[vj.field_c][ea.field_e] & 1 << -(var6 * ea.field_e) + var15)) {
                   ea.field_g[var5Lifetime2Lifetime1].field_nb = true;
                   if (var15 == ci.field_n) {
@@ -256,17 +256,17 @@ final class LevelDecoder {
         int[] var4 = new int[]{5};
         int[] var15 = lg.field_d[4];
         IntrusiveNode.a(200, 440, var15[6] + var15[8], 61, var15[3], 4, var4);
-        GameApplet.field_i[4] = new pd(4, be.field_e);
+        GameApplet.screens[4] = new GameScreen(4, be.field_e);
         int[] var16 = lg.field_d[2];
         int[] var6 = new int[]{8, 9, 10, 5};
         IntrusiveNode.a(var16[1], var16[2], var16[6] + var16[8], 74, var16[3], param0, var6);
-        GameApplet.field_i[2] = new pd(2, be.field_e);
+        GameApplet.screens[2] = new GameScreen(2, be.field_e);
         if (0 < UiComponent.field_o &&
           ol.a((byte) -119, sh.field_u)) {
           var17 = lg.field_d[1];
           var8 = new int[]{1, 12, 13, 4, 31, 3, 7};
           IntrusiveNode.a(var17[1], var17[2], var17[6] + var17[8], 118, var17[3], 1, var8);
-          GameApplet.field_i[1] = new pd(1, be.field_e);
+          GameApplet.screens[1] = new GameScreen(1, be.field_e);
         }
         ll.field_b = -1;
     }

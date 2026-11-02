@@ -3,7 +3,7 @@
  */
 abstract class RasterBuffer {
     static int[] field_a;
-    static eg field_g;
+    static BitmapFont field_g;
     static Sprite[] field_d;
     static int[] field_b;
     int field_h;

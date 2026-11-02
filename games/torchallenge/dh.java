@@ -339,28 +339,28 @@ final class dh extends df {
         var5 = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         if (param2 == -69) {
-          var5_ref = (ae) (bk.field_t.c((byte) 121));
+          var5_ref = (ae) (bk.field_t.first((byte) 121));
           while (var5_ref != null) {
             if (var5_ref.field_o == param0) {
               return var5_ref;
             }
-            var5_ref = (ae) (bk.field_t.c(param2 ^ 329));
+            var5_ref = (ae) (bk.field_t.next(param2 ^ 329));
           }
         } else {
           dh.a(-109, -75, (byte) -32, 2, -86);
-          var5_ref = (ae) (bk.field_t.c((byte) 121));
+          var5_ref = (ae) (bk.field_t.first((byte) 121));
           while (var5_ref != null) {
             if (var5_ref.field_o == param0) {
               return var5_ref;
             }
-            var5_ref = (ae) (bk.field_t.c(param2 ^ 329));
+            var5_ref = (ae) (bk.field_t.next(param2 ^ 329));
           }
         }
         var5_refLifetime1 = new ae();
         var5_refLifetime1.field_r = param1;
         var5_refLifetime1.field_q = param3;
         var5_refLifetime1.field_o = param0;
-        bk.field_t.a(var5_refLifetime1, -53);
+        bk.field_t.addLast(var5_refLifetime1, -53);
         bg.a(param4, (byte) 26, var5_refLifetime1);
         return var5_refLifetime1;
     }

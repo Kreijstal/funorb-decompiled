@@ -66,7 +66,7 @@ final class bh extends ma {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, int param6, Sprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, eg param14, int param15, int param16, int param17, Sprite[] param18, int param19, eg param20) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, int param6, Sprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, Sprite[] param18, int param19, BitmapFont param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -283,7 +283,7 @@ final class bh extends ma {
             return stackIn_17_0;
           }
           if (this.a(-1, param0)) {
-            stackIn_21_0 = pd.field_a;
+            stackIn_21_0 = GameScreen.field_a;
             return stackIn_21_0;
           }
           if (var6.length() <= 0) {

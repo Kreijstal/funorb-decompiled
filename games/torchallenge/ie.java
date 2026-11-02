@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ie {
-    static sl field_d;
+    static IntrusiveDeque field_d;
     static int[][][] field_b;
     static LevelEntity[] field_e;
     static String field_c;
@@ -21,7 +21,7 @@ final class ie {
           field_c = (String) null;
         }
         var1.field_j = null;
-        mc.field_k.a(var1, param0 - 26);
+        mc.field_k.addLast(var1, param0 - 26);
     }
 
     public static void a(byte param0) {

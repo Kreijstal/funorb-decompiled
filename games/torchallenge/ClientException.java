@@ -5,7 +5,7 @@ final class ClientException extends RuntimeException {
     String context;
     static lj field_e;
     static String field_d;
-    static hd field_b;
+    static GzipDecoder field_b;
     Throwable cause;
     static String field_f;
     static int[] field_g;
@@ -118,7 +118,7 @@ final class ClientException extends RuntimeException {
     static {
         field_z = "jd.B(";
         field_d = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
-        field_b = new hd();
+        field_b = new GzipDecoder();
         field_f = "From only <%0>/month";
         field_g = new int[]{10, 10, 5};
     }

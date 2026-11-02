@@ -5,14 +5,14 @@ final class tk extends ng {
     static String field_T;
     private int field_S;
     static boolean field_P;
-    static eg field_R;
+    static BitmapFont field_R;
     static int[] field_Q;
     private wd field_O;
 
     public static void c(byte param0) {
         field_T = null;
         if (param0 < 68) {
-          field_R = (eg) null;
+          field_R = (BitmapFont) null;
         }
         field_Q = null;
         field_R = null;
@@ -144,7 +144,7 @@ final class tk extends ng {
           var2 = mh.a(122, ic.field_C, "font", "");
           ProxySocketConnector.field_p = id.a(var10, var2, 256);
           var3 = vh.a(var2, 2, 33, var10, 16301089, 8015912);
-          tf.field_x = (eg) ((Object) var3);
+          tf.field_x = (BitmapFont) ((Object) var3);
           if (param0 < 101) {
             tk.c((byte) 15);
           }
@@ -210,7 +210,7 @@ final class tk extends ng {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 256) {
-            field_R = (eg) null;
+            field_R = (BitmapFont) null;
           }
           if (!param1.b(param3 - 8213)) {
             stackIn_5_0 = (String) (param0);

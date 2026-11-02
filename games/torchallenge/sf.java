@@ -83,7 +83,7 @@ final class sf {
           }
           param1[5].d(var7_int - var9, param2 + var10, var9, param3 - var10 * 2);
           param1[4].d(param4 + var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);
-          la.field_f.a(-47);
+          SectorCacheStore.field_f.a(-47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

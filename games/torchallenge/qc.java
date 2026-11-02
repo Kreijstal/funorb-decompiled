@@ -15,7 +15,7 @@ final class qc {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         hb.field_d = param2;
-        sl.field_f = param3;
+        IntrusiveDeque.field_f = param3;
         if (param0 >= -21) {
           return;
         }

@@ -3,7 +3,7 @@
  */
 class na extends t {
     private long field_h;
-    static sl field_d;
+    static IntrusiveDeque field_d;
     static int field_c;
     static boolean field_f;
     private String field_g;
@@ -90,7 +90,7 @@ class na extends t {
     static {
         field_f = false;
         field_e = true;
-        field_d = new sl();
+        field_d = new IntrusiveDeque();
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

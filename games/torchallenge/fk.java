@@ -44,7 +44,7 @@ class fk extends bc {
         }
     }
 
-    fk(eg param0, int param1) {
+    fk(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_x, -1, 2147483647, false);
     }
 

@@ -30,7 +30,7 @@ final class ok {
         field_c = (int[][]) null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void updatePageLinks(java.applet.Applet param0, int param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -45,16 +45,16 @@ final class ok {
             try {
               var5 = param0.getCodeBase();
               var3 = mc.a(var5, param1 ^ 0, param0).getFile();
-              ff.a("updatelinks", new Object[]{"home", var3 + "home.ws"}, param0, -29585);
-              ff.a("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, -29585);
-              ff.a("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, -29585);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"home", var3 + "home.ws"}, param0, -29585);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, -29585);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, -29585);
               if (param1 != -1) {
                 var4 = (java.applet.Applet) null;
-                ok.a((java.applet.Applet) null, -76);
+                ok.updatePageLinks((java.applet.Applet) null, -76);
               }
-              ff.a("updatelinks", new Object[]{"options", var3 + "options.ws"}, param0, -29585);
-              ff.a("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0, -29585);
-              ff.a("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0, -29585);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"options", var3 + "options.ws"}, param0, -29585);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0, -29585);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0, -29585);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

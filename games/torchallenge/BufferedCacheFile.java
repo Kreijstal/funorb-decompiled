@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class rk {
+final class BufferedCacheFile {
     private long field_i;
     static cf field_n;
     private int field_l;
@@ -17,7 +17,7 @@ final class rk {
     private int field_f;
     private long field_m;
     private long field_o;
-    static sl field_g;
+    static IntrusiveDeque field_g;
     static String field_h;
     static int[] field_p;
     static boolean field_e;
@@ -62,7 +62,7 @@ final class rk {
             }
             if (this.field_d.length >= param3) {
               if (param0 != -4573) {
-                rk.b(false);
+                BufferedCacheFile.b(false);
               }
               if (param3 <= 0) {
                 return;
@@ -392,7 +392,7 @@ final class rk {
         }
         if (!param0) {
           var8 = (java.net.URL) null;
-          rk.a((String) null, -7, (String) null, -38, (java.net.URL) null);
+          BufferedCacheFile.a((String) null, -7, (String) null, -38, (java.net.URL) null);
         }
     }
 
@@ -400,7 +400,7 @@ final class rk {
         this.a(true);
         if (param0 != -57) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
-          rk.a((byte) 19, (java.awt.Canvas) null);
+          BufferedCacheFile.a((byte) 19, (java.awt.Canvas) null);
         }
         this.field_j.a((byte) 47);
     }
@@ -630,7 +630,7 @@ final class rk {
         }
     }
 
-    rk(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
+    BufferedCacheFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_l = 0;
         this.field_i = -1L;

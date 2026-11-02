@@ -7,7 +7,7 @@ final class ua {
     static volatile boolean field_c;
     static String field_b;
 
-    final static void a(int param0, byte param1, eg param2, String param3, qi param4) {
+    final static void a(int param0, byte param1, BitmapFont param2, String param3, qi param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

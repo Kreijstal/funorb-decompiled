@@ -33,7 +33,7 @@ final class wi {
             var10 = (int[]) null;
             wi.a(85, 87, (int[]) null, (byte) -123, -94, 96, 7, -66, 33);
           }
-          wf.field_g.a(var9, param3 - 188);
+          wf.field_g.addLast(var9, param3 - 188);
           ul.a(-18261, var9, param8);
           stackIn_3_0 = var9;
           return stackIn_3_0;

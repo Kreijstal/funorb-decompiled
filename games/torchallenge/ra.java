@@ -74,10 +74,10 @@ final class ra {
           return -37;
         }
         if (kf.field_b == 0) {
-          if (!sl.field_a.b(param0 - 7958)) {
+          if (!IntrusiveDeque.field_a.b(param0 - 7958)) {
             return 20;
           }
-          if (!sl.field_a.b(param0 + 4, "commonui")) {
+          if (!IntrusiveDeque.field_a.b(param0 + 4, "commonui")) {
             return 40;
           }
           if (!gf.field_p.b(-7957)) {
@@ -104,10 +104,10 @@ final class ra {
               return 29;
             }
           }
-          if (!sl.field_a.b(-7957)) {
+          if (!IntrusiveDeque.field_a.b(-7957)) {
             return 43;
           }
-          if (!sl.field_a.b(param0 ^ 4, "commonui")) {
+          if (!IntrusiveDeque.field_a.b(param0 ^ 4, "commonui")) {
             return 57;
           }
           if (!gf.field_p.b(param0 - 7958)) {
@@ -966,7 +966,7 @@ final class ra {
             od.c(ef.field_a[var3Lifetime2], 0, 0, 1 + var4Lifetime2, 0);
           }
         }
-        la.field_f.a(102);
+        SectorCacheStore.field_f.a(102);
         return;
     }
 
@@ -1105,7 +1105,7 @@ final class ra {
         for (var3_int = 0; var3_int < 3; var3_int++) {
           for (var4 = 0; var4 <= 1; var4++) {
             ub.field_c[var3_int][var4] = ic.field_D[var4 + (param1 * 12 + 2 * var3_int)];
-            la.field_f.a(-73);
+            SectorCacheStore.field_f.a(-73);
           }
         }
         rj.field_b[0] = af.field_a[param1 * 2];

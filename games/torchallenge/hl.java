@@ -118,10 +118,10 @@ final class hl {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ff.a(param1, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 1);
+              JavaScriptBridge.evaluate(param1, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 1);
             } catch (Throwable throwable) {
             }
-            ok.a(param1, -1);
+            ok.updatePageLinks(param1, -1);
           } catch (RuntimeException runtimeException) {
             throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -192,14 +192,14 @@ final class hl {
           if (255 == param1) {
             stackIn_10_0 = -114;
             stackIn_11_1 = !(13 <= cf.field_f);
-            pd.field_h = be.a(stackIn_10_0, stackIn_11_1);
+            GameScreen.field_h = be.a(stackIn_10_0, stackIn_11_1);
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              pd.field_h = wk.a(param2, param0 - 1);
+              GameScreen.field_h = wk.a(param2, param0 - 1);
               return;
             }
-            pd.field_h = mg.a((byte) 81, param3, param1);
+            GameScreen.field_h = mg.a((byte) 81, param3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,7 +234,7 @@ final class hl {
         }
     }
 
-    final static void a(eg param0, eg param1, int param2, int param3) {
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           int var4_int = -83 % ((param2 + 5) / 60);
           ec.field_c = param1;

@@ -155,7 +155,7 @@ final class li extends kj implements sg {
         if (param3 != 0) {
           return;
         }
-        eg var5 = RasterBuffer.field_g;
+        BitmapFont var5 = RasterBuffer.field_g;
         if (this.field_M != null) {
           var5.a(dg.field_Y, this.field_m + param1, this.field_i + param0, this.field_p, 20, 16777215, -1, 0, 0, var5.field_K + var5.field_x);
         }

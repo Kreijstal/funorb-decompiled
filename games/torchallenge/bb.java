@@ -5,11 +5,11 @@ import java.io.*;
 
 final class bb implements Runnable {
     static int[] field_j;
-    static sl field_d;
+    static IntrusiveDeque field_d;
     static int[] field_g;
     volatile boolean field_f;
     PlatformTaskDispatcher field_b;
-    static int field_h;
+    static int activeScreenId;
     volatile kh[] field_a;
     volatile boolean field_e;
     static int field_i;
@@ -37,21 +37,21 @@ final class bb implements Runnable {
             var6 = null;
             var7 = null;
             if (null != rc.field_t.field_x) {
-              jj.field_b = new rk(rc.field_t.field_x, 5200, 0);
+              jj.field_b = new BufferedCacheFile(rc.field_t.field_x, 5200, 0);
               rc.field_t.field_x = null;
-              var6 = new la(255, jj.field_b, new rk(rc.field_t.field_i, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, jj.field_b, new BufferedCacheFile(rc.field_t.field_i, 12000, 0), 2097152);
             }
             if (jj.field_b != null) {
               if (ij.field_y == null) {
-                ij.field_y = new rk[rc.field_t.field_r.length];
+                ij.field_y = new BufferedCacheFile[rc.field_t.field_r.length];
               }
               if (ij.field_y[param0] == null) {
-                ij.field_y[param0] = new rk(rc.field_t.field_r[param0], 12000, 0);
+                ij.field_y[param0] = new BufferedCacheFile(rc.field_t.field_r[param0], 12000, 0);
                 rc.field_t.field_r[param0] = null;
               }
-              var7 = new la(param0, jj.field_b, ij.field_y[param0], 2097152);
+              var7 = new SectorCacheStore(param0, jj.field_b, ij.field_y[param0], 2097152);
             }
-            var8 = wf.field_i.a(param0, (la) (var7), param4, (byte) 15, (la) (var6));
+            var8 = wf.field_i.a(param0, (SectorCacheStore) (var7), param4, (byte) 15, (SectorCacheStore) (var6));
             if (param5) {
               var8.d(14);
             }
@@ -91,7 +91,7 @@ final class bb implements Runnable {
             }
             c.a(100, 10L);
             Object var5 = (Object) null;
-            hd.a(117, this.field_b, (Object) null);
+            GzipDecoder.a(117, this.field_b, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;
@@ -120,7 +120,7 @@ final class bb implements Runnable {
     static {
         field_j = new int[]{103, 88, 87, 100, 50, 42};
         field_g = new int[128];
-        field_d = new sl();
+        field_d = new IntrusiveDeque();
         field_k = new int[][]{new int[]{8, 8, 8}, new int[]{7, 7, 7}, new int[]{4, 4, 4}, new int[]{4, 4, 4}, new int[]{4, 4, 4}, new int[]{8, 8, 8}, new int[]{8, 8, 8}, new int[]{8, 8, 8}, new int[]{4, 4, 4}, new int[]{8, 8, 8}, new int[]{8, 8, 8}, new int[]{12, 8, 16}, new int[]{12, 8, 16}, new int[]{12, 8, 16}, new int[]{3, 3, 3}, new int[]{6, 6, 6}, new int[]{6, 6, 6}, new int[]{6, 6, 6}, new int[]{6, 6, 6}, new int[]{6, 6, 6}};
     }
 }

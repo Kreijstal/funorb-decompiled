@@ -42,25 +42,25 @@ final class cl extends bc {
           var1_int = 120 % ((param0 + 61) / 54);
           if (qb.field_b == 0) {
             qb.field_b = 200;
-            var2 = (e) (tj.field_e.c((byte) 112));
+            var2 = (e) (tj.field_e.first((byte) 112));
             while (var2 != null) {
               if (!var2.field_k.isLinked(11163)) {
                 var2.unlink(true);
               }
-              var2 = (e) (tj.field_e.c(-270));
+              var2 = (e) (tj.field_e.next(-270));
             }
             if (TorChallenge.field_I != null) {
-              var2Lifetime1 = (e) (TorChallenge.field_I.c((byte) -118));
+              var2Lifetime1 = (e) (TorChallenge.field_I.first((byte) -118));
               while (var2Lifetime1 != null) {
                 if (!var2Lifetime1.field_k.isLinked(11163)) {
                   var2Lifetime1.unlink(true);
                 }
-                var2Lifetime1 = (e) (TorChallenge.field_I.c(-270));
+                var2Lifetime1 = (e) (TorChallenge.field_I.next(-270));
               }
             }
           }
-          if (la.field_a != null) {
-            stackIn_17_0 = la.field_a.d(0);
+          if (SectorCacheStore.field_a != null) {
+            stackIn_17_0 = SectorCacheStore.field_a.d(0);
             if (!stackIn_17_0) {
               SpriteState.field_t = null;
               return;

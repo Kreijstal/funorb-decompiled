@@ -128,18 +128,18 @@ final class ah {
         RuntimeException var2 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5 = (bk) (na.field_d.c((byte) 118));
+          var5 = (bk) (na.field_d.first((byte) 118));
           if (param0 != -86) {
             field_i = true;
           }
           while (var5 != null) {
             ae.a(param1, var5, -15024);
-            var5 = (bk) (na.field_d.c(-270));
+            var5 = (bk) (na.field_d.next(-270));
           }
-          var4 = (tc) (gf.field_q.c((byte) -18));
+          var4 = (tc) (gf.field_q.first((byte) -18));
           while (var4 != null) {
             ue.a(var4, 2, param1);
-            var4 = (tc) (gf.field_q.c(param0 ^ 344));
+            var4 = (tc) (gf.field_q.next(param0 ^ 344));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

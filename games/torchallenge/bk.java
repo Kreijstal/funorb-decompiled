@@ -5,7 +5,7 @@ final class bk extends IntrusiveNode {
     int field_u;
     static boolean field_w;
     static int field_i;
-    static sl field_t;
+    static IntrusiveDeque field_t;
     static String field_n;
     static String field_l;
     static int field_p;
@@ -154,7 +154,7 @@ final class bk extends IntrusiveNode {
         field_r = "Unable to connect to the data server. Please check any firewall you are using.";
         field_n = "Connection restored.";
         field_l = "Loading extra data";
-        field_t = new sl();
+        field_t = new IntrusiveDeque();
         field_q = new int[8192];
         field_s = new int[4];
     }

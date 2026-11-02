@@ -9,7 +9,7 @@ final class gb {
     static double field_a;
     static h field_f;
 
-    final static void a(int param0, int param1, eg param2, int param3, Sprite[] param4, Sprite[] param5, boolean param6, int param7, eg param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, Sprite[] param4, Sprite[] param5, boolean param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         try {
           Sprite[] var16 = (Sprite[]) null;
           bh.a(param10, param14, ai.field_d, 0, param4, qa.field_f, param9, param5, param7, param12, param3, param13, 0, param0, param8, param11, -96, 480, (Sprite[]) null, lg.field_f, param2);

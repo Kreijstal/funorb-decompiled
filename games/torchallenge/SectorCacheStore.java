@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class la {
-    private rk field_c;
+final class SectorCacheStore {
+    private BufferedCacheFile field_c;
     private int field_b;
     static RasterBuffer field_f;
-    private rk field_e;
+    private BufferedCacheFile field_e;
     static kb field_a;
     static fj field_d;
     private int field_g;
@@ -359,13 +359,13 @@ final class la {
             var2_int = -1;
           }
           var3 = param0.field_B + param0.field_Q;
-          var4 = param0.field_o;
+          var4 = param0.x;
           var5 = 89 / ((11 - param1) / 56);
           while (256 < var3 * var2_int) {
             var4 = var4 + var2_int;
             var3 = var3 + var2_int * -256;
           }
-          var6 = (-param0.field_o + var4) * var2_int;
+          var6 = (-param0.x + var4) * var2_int;
           if (var4 >= 64) {
             var4 -= 64;
           }
@@ -374,23 +374,23 @@ final class la {
           }
           var11 = 0;
           for (var12 = 0; var6 > var12; var12++) {
-            var7 = var2_int * var12 + param0.field_o;
+            var7 = var2_int * var12 + param0.x;
             var15 = var7 % 64;
             var7Lifetime1 = var15;
             if (var15 < 0) {
               var15 += 64;
             }
-            if (null != n.field_kb[var15][param0.field_H]) {
-              for (var13 = 0; n.field_kb[var15][param0.field_H].length > var13; var13++) {
+            if (null != n.field_kb[var15][param0.y]) {
+              for (var13 = 0; n.field_kb[var15][param0.y].length > var13; var13++) {
                 if (var13 >= 0) {
                   var8 = var13;
-                  if (eh.a(var2_int, -30917, n.field_kb[var15][param0.field_H], var8, param0)) {
+                  if (eh.a(var2_int, -30917, n.field_kb[var15][param0.y], var8, param0)) {
                     if (var11 == 0) {
                       param0.field_Q = 8 * param0.field_Q / 10;
                       var11 = 1;
                     }
-                    if (n.field_kb[var15][param0.field_H][var8] < ea.field_g.length) {
-                      var9 = ea.field_g[n.field_kb[var15][param0.field_H][var8]];
+                    if (n.field_kb[var15][param0.y][var8] < ea.field_g.length) {
+                      var9 = ea.field_g[n.field_kb[var15][param0.y][var8]];
                       if (var9 != null) {
                         var9.field_Q = param0.field_Q;
                       }
@@ -463,7 +463,7 @@ final class la {
         field_d = null;
         field_f = null;
         if (param0 != -64) {
-          la.b((byte) -70);
+          SectorCacheStore.b((byte) -70);
         }
     }
 
@@ -491,7 +491,7 @@ final class la {
         try {
           var13 = id.field_b;
           if (param0 >= -29) {
-            la.a((byte) 70);
+            SectorCacheStore.a((byte) 70);
           }
           var2 = var13.readUnsignedByte(-126);
           if (var2 == 0) {
@@ -506,7 +506,7 @@ final class la {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(38);
             }
-            var15 = (ql) (ji.field_q.c((byte) 119));
+            var15 = (ql) (ji.field_q.first((byte) 119));
             if (var15 == null) {
               ob.b(-100);
               return;
@@ -522,7 +522,7 @@ final class la {
               td.a("A1: " + ck.a(-13299), (Throwable) null, (byte) -74);
               ob.b(-87);
             } else {
-              var16_ref = (ql) (ji.field_q.c((byte) 125));
+              var16_ref = (ql) (ji.field_q.first((byte) 125));
               if (var16_ref == null) {
                 ob.b(-107);
                 return;
@@ -533,7 +533,7 @@ final class la {
               var16_ref.unlink(true);
             }
           } else {
-            var12 = (rd) (bb.field_d.c((byte) 113));
+            var12 = (rd) (bb.field_d.first((byte) 113));
             if (var12 == null) {
               ob.b(-93);
               return;
@@ -566,7 +566,7 @@ final class la {
         return new String(var6);
     }
 
-    la(int param0, rk param1, rk param2, int param3) {
+    SectorCacheStore(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
         this.field_c = null;
         this.field_e = null;
         this.field_g = 65000;

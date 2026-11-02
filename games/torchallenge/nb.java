@@ -14,7 +14,7 @@ final class nb {
             if (!param1) {
               field_a = (Sprite) null;
             }
-            ff.a("resizing", new Object[]{new Integer(param0)}, gi.b(12476), -29585);
+            JavaScriptBridge.callWithArguments("resizing", new Object[]{new Integer(param0)}, gi.b(12476), -29585);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -95,29 +95,29 @@ final class nb {
             boolean decompiledFrameRemainder0 = true;
             if (ea.field_g[var14] != null) {
               var15 = ea.field_g[var14];
-              if (var15.field_F != 0) {
+              if (var15.type != 0) {
                 if (param1[0][0] <= param1[0][1]) {
                   var8 = param1[0][1];
                   var7 = param1[0][0];
-                  decompiledFrameRemainder0 = (!(var7 > var15.field_o) ||
-                    !(var15.field_o >= var8));
+                  decompiledFrameRemainder0 = (!(var7 > var15.x) ||
+                    !(var15.x >= var8));
                 } else {
                   var8 = param1[0][0];
                   var7 = param1[0][1];
-                  decompiledFrameRemainder0 = (!(var15.field_o >= var7) ||
-                    !(var15.field_o < var8));
+                  decompiledFrameRemainder0 = (!(var15.x >= var7) ||
+                    !(var15.x < var8));
                 }
-                if ((decompiledFrameRemainder0) && (!(var15.field_H < param1[1][0]) ||
-                  !(var15.field_H >= param1[1][1]))) {
-                  if (var15.field_F >= 8) {
-                    stackIn_39_0 = (var15.field_F <= 21) ? 1 : 0;
+                if ((decompiledFrameRemainder0) && (!(var15.y < param1[1][0]) ||
+                  !(var15.y >= param1[1][1]))) {
+                  if (var15.type >= 8) {
+                    stackIn_39_0 = (var15.type <= 21) ? 1 : 0;
                   } else {
                     stackIn_39_0 = 0;
                   }
                   var3 = stackIn_39_0;
                   if (var15.field_L != 13) {
                     if (var3 == 0) {
-                      stackIn_47_0 = (var15.field_F == 22) ? 0 : 1;
+                      stackIn_47_0 = (var15.type == 22) ? 0 : 1;
                     } else {
                       stackIn_47_0 = 0;
                     }
@@ -127,7 +127,7 @@ final class nb {
                   var4 = stackIn_47_0;
                   if (13 != var15.field_L &&
                     var15.field_db >= 0 &&
-                    var15.field_F != 22) {
+                    var15.type != 22) {
                     stackIn_56_0 = 0;
                   } else {
                     stackIn_56_0 = (var3 == 0) ? 1 : 0;
@@ -141,19 +141,19 @@ final class nb {
                     } else {
                       var9Lifetime1 = (var4 == 0) ? 2 : 1;
                     }
-                    if (0 <= var15.field_H &&
-                      var15.field_H < ol.field_g.field_a &&
-                      bi.field_g[var15.field_o][var15.field_H][var9Lifetime1] == null) {
-                      bi.field_g[var15.field_o][var15.field_H][var9Lifetime1] = new int[9];
-                      bi.field_g[var15.field_o][var15.field_H][var9Lifetime1][var6] = 0;
+                    if (0 <= var15.y &&
+                      var15.y < ol.field_g.field_a &&
+                      bi.field_g[var15.x][var15.y][var9Lifetime1] == null) {
+                      bi.field_g[var15.x][var15.y][var9Lifetime1] = new int[9];
+                      bi.field_g[var15.x][var15.y][var9Lifetime1][var6] = 0;
                     }
-                    if (var15.field_H >= 0 &&
-                      var15.field_H < ol.field_g.field_a &&
-                      8 > bi.field_g[var15.field_o][var15.field_H][var9Lifetime1][var6]) {
-                      dupTemp$0 = bi.field_g[var15.field_o][var15.field_H][var9Lifetime1];
+                    if (var15.y >= 0 &&
+                      var15.y < ol.field_g.field_a &&
+                      8 > bi.field_g[var15.x][var15.y][var9Lifetime1][var6]) {
+                      dupTemp$0 = bi.field_g[var15.x][var15.y][var9Lifetime1];
                       dupTemp$0[var6] = dupTemp$0[var6] + 1;
-                      var10 = bi.field_g[var15.field_o][var15.field_H][var9Lifetime1][var6];
-                      bi.field_g[var15.field_o][var15.field_H][var9Lifetime1][var10] = var14;
+                      var10 = bi.field_g[var15.x][var15.y][var9Lifetime1][var6];
+                      bi.field_g[var15.x][var15.y][var9Lifetime1][var10] = var14;
                     }
                   }
                 }
@@ -181,11 +181,11 @@ final class nb {
           nb.a(127, (byte) -24);
         }
         nk.field_h = param0;
-        if (null != la.field_a) {
-          la.field_a.c(param0, false);
+        if (null != SectorCacheStore.field_a) {
+          SectorCacheStore.field_a.c(param0, false);
         }
-        if (null != la.field_d) {
-          la.field_d.a(-127, param0);
+        if (null != SectorCacheStore.field_d) {
+          SectorCacheStore.field_d.a(-127, param0);
         }
     }
 

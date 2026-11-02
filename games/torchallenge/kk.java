@@ -143,7 +143,7 @@ final class kk extends t {
         if (!g.a(105, param1)) {
           return;
         }
-        if (param0.field_F != 1) {
+        if (param0.type != 1) {
           return;
         }
         if (!(param0.field_db <= 0)) {
@@ -167,7 +167,7 @@ final class kk extends t {
 
     final static eb b(int param0, int param1) {
         eb var2 = new eb();
-        ga.field_w.a(var2, param1 ^ 6153);
+        ga.field_w.addLast(var2, param1 ^ 6153);
         if (param1 == -6262) {
           kk.a(param0, -122);
           return var2;

@@ -18,7 +18,7 @@ abstract class v extends b {
         tc var4 = new tc();
         var4.field_n = new int[param0];
         var4.field_j = param3;
-        gf.field_q.a(var4, -104);
+        gf.field_q.addLast(var4, -104);
         ue.a(var4, param1 ^ 258, param2);
         if (param1 != 256) {
           v.b(-126, -115, -75, 79, 102);
@@ -415,7 +415,7 @@ abstract class v extends b {
         }
     }
 
-    final static void a(byte param0, jk param1, int param2, lj param3) {
+    final static void a(byte param0, PcmStreamMixer param1, int param2, lj param3) {
         try {
           vk.field_h = param2 * ol.b(-128) / 1000;
           GameApplet.a(0, param3);

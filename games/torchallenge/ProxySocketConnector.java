@@ -375,7 +375,7 @@ final class ProxySocketConnector extends SocketConnector {
             rd var4 = (rd) null;
             ProxySocketConnector.a((rd) null, 123, false);
           }
-          bb.field_d.a(param0, -70);
+          bb.field_d.addLast(param0, -70);
           mg.a(-127, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

@@ -11,7 +11,7 @@ final class bg extends ic {
     private String field_L;
     private int field_H;
     static jf field_K;
-    private eg field_F;
+    private BitmapFont field_F;
     static int[][] field_I;
     static float field_G;
 
@@ -120,13 +120,13 @@ final class bg extends ic {
           kh.a(param1, param7, 10);
           bh.field_o = kh.a(param5, param4, 0, param3);
           re.field_B = kh.a(param5, param4, 1, param2);
-          GameKeyHandler.field_a = new jk();
+          GameKeyHandler.field_a = new PcmStreamMixer();
           ea.field_f = param2 * 1000 / param1;
           re.field_B.b(GameKeyHandler.field_a);
-          la.field_a = param0;
-          la.field_a.c(nk.field_h, false);
+          SectorCacheStore.field_a = param0;
+          SectorCacheStore.field_a.c(nk.field_h, false);
           int var8_int = -123 % ((param6 - 59) / 51);
-          bh.field_o.b(la.field_a);
+          bh.field_o.b(SectorCacheStore.field_a);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "bg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
@@ -253,7 +253,7 @@ final class bg extends ic {
                 var18.field_o[var5] = -5;
               }
             }
-            pf.field_d.a(var18, -83);
+            pf.field_d.addLast(var18, -83);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -280,7 +280,7 @@ final class bg extends ic {
         }
     }
 
-    bg(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, eg param8, int param9, String param10) {
+    bg(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (j) null, (gg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

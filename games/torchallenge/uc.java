@@ -23,21 +23,21 @@ final class uc extends ng {
         Throwable decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (la.field_d != null) {
+          if (SectorCacheStore.field_d != null) {
             ac.a(false, param3, param0, param2, 1048576);
           }
-          if (la.field_a != null) {
+          if (SectorCacheStore.field_a != null) {
             var4 = bh.field_o;
             synchronized (var4) {
-              la.field_a.a(param1 + 298, param3, -1);
+              SectorCacheStore.field_a.a(param1 + 298, param3, -1);
               if (SpriteState.field_t == param0) {
                 return;
               }
-              la.field_a.b((byte) 31);
+              SectorCacheStore.field_a.b((byte) 31);
               bh.field_o.g();
               SpriteState.field_t = param0;
               if (SpriteState.field_t != null) {
-                la.field_a.a(-8126, SpriteState.field_t, param2);
+                SectorCacheStore.field_a.a(-8126, SpriteState.field_t, param2);
               }
             }
           }

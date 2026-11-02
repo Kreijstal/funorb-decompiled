@@ -22,11 +22,11 @@ final class sa {
           }
           return sd.field_g;
         }
-        if (!sl.field_a.b(-7957)) {
+        if (!IntrusiveDeque.field_a.b(-7957)) {
           return uk.field_K;
         }
-        if (!sl.field_a.b(5, "commonui")) {
-          return ra.field_m + " - " + sl.field_a.a(112, "commonui") + "%";
+        if (!IntrusiveDeque.field_a.b(5, "commonui")) {
+          return ra.field_m + " - " + IntrusiveDeque.field_a.a(112, "commonui") + "%";
         }
         if (!gf.field_p.b(-7957)) {
           return wf.field_a;

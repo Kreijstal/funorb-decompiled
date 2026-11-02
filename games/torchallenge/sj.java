@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj extends kj implements sg {
-    private eg field_P;
+    private BitmapFont field_P;
     static int[] field_S;
     static int field_N;
     private String field_Q;
@@ -46,7 +46,7 @@ final class sj extends kj implements sg {
         this.field_M = param0;
     }
 
-    sj(wa param0, eg param1, String param2) {
+    sj(wa param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (j) null);
         int var4_int = 0;
         this.field_M = 0;

@@ -42,9 +42,9 @@ final class vj {
           rj.field_a = qk.a("commonui", "jagex_logo_grey", param3, 0);
           ae.field_v = lk.a(param2 ^ -23127, "button", "commonui", param3);
           ub.field_f = s.a(param3, "commonui", 0, "validation");
-          GameApplet.field_f = (eg) ((Object) qi.a(param0, "commonui", param3, "arezzo12", 0));
-          RasterBuffer.field_g = (eg) ((Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
-          dl.field_H = (eg) ((Object) qi.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
+          GameApplet.field_f = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo12", 0));
+          RasterBuffer.field_g = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
+          dl.field_H = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
           var17 = new Sprite(param1.a(-2, "", "button.gif"), (java.awt.Component) ((Object) bg.field_P));
           rb.a(param3, "commonui", (byte) -114, "dropdown");
           var5 = mh.a(32, param3, "screen_options", "commonui");

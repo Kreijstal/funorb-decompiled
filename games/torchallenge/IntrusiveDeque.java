@@ -1,44 +1,44 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl {
+final class IntrusiveDeque {
     static int field_b;
     static lj field_a;
     static int field_f;
     static String[] field_d;
-    IntrusiveNode field_e;
-    private IntrusiveNode field_c;
+    IntrusiveNode sentinel;
+    private IntrusiveNode cursor;
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode pollFirst(byte param0) {
         int var2 = 46 / ((param0 + 1) / 60);
-        IntrusiveNode var3 = this.field_e.next;
-        if (var3 != this.field_e) {
+        IntrusiveNode var3 = this.sentinel.next;
+        if (var3 != this.sentinel) {
           var3.unlink(true);
           return var3;
         }
         return null;
     }
 
-    final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_c;
-        if (var2 != this.field_e) {
+    final IntrusiveNode next(int param0) {
+        IntrusiveNode var2 = this.cursor;
+        if (var2 != this.sentinel) {
           if (param0 != -270) {
             field_b = 98;
           }
-          this.field_c = var2.next;
+          this.cursor = var2.next;
           return var2;
         }
-        this.field_c = null;
+        this.cursor = null;
         return null;
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addLast(IntrusiveNode param0, int param1) {
         try {
           if (param0.previous != null) {
             param0.unlink(true);
           }
-          param0.previous = this.field_e.previous;
-          param0.next = this.field_e;
+          param0.previous = this.sentinel.previous;
+          param0.next = this.sentinel;
           if (param1 > -34) {
             field_f = 42;
           }
@@ -57,14 +57,14 @@ final class sl {
         }
     }
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode first(byte param0) {
         int var3 = 29 / ((52 - param0) / 51);
-        IntrusiveNode var2 = this.field_e.next;
-        if (var2 != this.field_e) {
-          this.field_c = var2.next;
+        IntrusiveNode var2 = this.sentinel.next;
+        if (var2 != this.sentinel) {
+          this.cursor = var2.next;
           return var2;
         }
-        this.field_c = null;
+        this.cursor = null;
         return null;
     }
 
@@ -118,7 +118,7 @@ final class sl {
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param0) {
-            sl.a(92, 123, -107);
+            IntrusiveDeque.a(92, 123, -107);
           }
           if (IterableNodeHashTable.field_c != null &&
             IterableNodeHashTable.field_c.b(-7957) &&
@@ -129,12 +129,12 @@ final class sl {
             IntrusiveNode.field_b = qk.a("benefits", "headline", IterableNodeHashTable.field_c, 0);
             me.field_e = qk.a("benefits", "blurbpane", IterableNodeHashTable.field_c, 0);
             NodeHashTableIterator.field_b = qk.a("benefits", "button", IterableNodeHashTable.field_c, 0);
-            hd.field_b = qk.a("benefits", "signup_text", IterableNodeHashTable.field_c, 0);
+            GzipDecoder.field_b = qk.a("benefits", "signup_text", IterableNodeHashTable.field_c, 0);
             SocketConnector.field_h = qk.a("benefits", "menu_text", IterableNodeHashTable.field_c, 0);
             ub.field_e = qk.a("benefits", "button_frame", IterableNodeHashTable.field_c, 0);
             le.field_e = qk.a("benefits", "arrow", IterableNodeHashTable.field_c, 0);
-            tk.field_R = (eg) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "large_font", false));
-            ek.field_G = (eg) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "small_font", false));
+            tk.field_R = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "large_font", false));
+            ek.field_G = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "small_font", false));
             var28 = SoftwareRasterizer.field_i;
             var2 = SoftwareRasterizer.field_g;
             var3 = SoftwareRasterizer.field_f;
@@ -163,7 +163,7 @@ final class sl {
               ih.a(SecondaryNodeDeque.field_i[var7].field_u, 0, 4, SecondaryNodeDeque.field_i[var7].field_x, 3, SecondaryNodeDeque.field_i[var7], 0, 1);
             }
             hb.field_g = null;
-            dg.field_R = hd.field_b.c();
+            dg.field_R = GzipDecoder.field_b.c();
             dg.field_R.d();
             ii.a(SoftwareRasterizer.field_g, 2 * SoftwareRasterizer.field_f / 3, 64, 4, 0, 0);
             SoftwareRasterizer.a(var28, var2, var3);
@@ -295,7 +295,7 @@ final class sl {
           if (null != NodeHashTableIterator.field_b &&
             null != ub.field_e) {
             NodeHashTableIterator.field_b.g(231, 390);
-            var1 = hd.field_b;
+            var1 = GzipDecoder.field_b;
             if (0 == of.field_c.field_j) {
               var1 = dg.field_R;
             }
@@ -371,9 +371,9 @@ final class sl {
         }
     }
 
-    final static jk b(int param0) {
+    final static PcmStreamMixer b(int param0) {
         if (param0 != -944) {
-          return (jk) null;
+          return (PcmStreamMixer) null;
         }
         return GameKeyHandler.field_a;
     }
@@ -382,12 +382,12 @@ final class sl {
         if (param0 != 65) {
           this.d((byte) 1);
         }
-        IntrusiveNode var2 = this.field_e.previous;
-        if (this.field_e != var2) {
-          this.field_c = var2.previous;
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (this.sentinel != var2) {
+          this.cursor = var2.previous;
           return var2;
         }
-        this.field_c = null;
+        this.cursor = null;
         return null;
     }
 
@@ -396,14 +396,14 @@ final class sl {
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         while (true) {
-          var2 = this.field_e.next;
-          if (var2 != this.field_e) {
+          var2 = this.sentinel.next;
+          if (var2 != this.sentinel) {
             var2.unlink(true);
             continue;
           }
           break;
         }
-        this.field_c = null;
+        this.cursor = null;
         if (param0 != -14341) {
           field_a = (lj) null;
         }
@@ -414,7 +414,7 @@ final class sl {
         if (param0 > -113) {
           return false;
         }
-        return this.field_e == this.field_e.next ? true : false;
+        return this.sentinel == this.sentinel.next ? true : false;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -443,7 +443,7 @@ final class sl {
         }
         var5 = stackIn_13_0;
         if (param3 != -22981) {
-          sl.a(false);
+          IntrusiveDeque.a(false);
         }
         if (var5 == 0) {
           return false;
@@ -458,10 +458,10 @@ final class sl {
     }
 
     final IntrusiveNode d(byte param0) {
-        IntrusiveNode var2 = this.field_e.previous;
-        if (var2 != this.field_e) {
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (var2 != this.sentinel) {
           if (param0 >= -103) {
-            sl.a(false);
+            IntrusiveDeque.a(false);
           }
           var2.unlink(true);
           return var2;
@@ -485,8 +485,8 @@ final class sl {
           if (param1.previous != null) {
             param1.unlink(true);
           }
-          param1.previous = this.field_e;
-          param1.next = this.field_e.next;
+          param1.previous = this.sentinel;
+          param1.next = this.sentinel.next;
           param1.previous.next = param1;
           param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
@@ -495,20 +495,20 @@ final class sl {
     }
 
     final IntrusiveNode e(byte param0) {
-        IntrusiveNode var2 = this.field_c;
-        if (var2 == this.field_e) {
-          this.field_c = null;
+        IntrusiveNode var2 = this.cursor;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
         int var3 = 91 % ((param0 + 42) / 61);
-        this.field_c = var2.previous;
+        this.cursor = var2.previous;
         return var2;
     }
 
-    public sl() {
-        this.field_e = new IntrusiveNode();
-        this.field_e.next = this.field_e;
-        this.field_e.previous = this.field_e;
+    public IntrusiveDeque() {
+        this.sentinel = new IntrusiveNode();
+        this.sentinel.next = this.sentinel;
+        this.sentinel.previous = this.sentinel;
     }
 
     static {

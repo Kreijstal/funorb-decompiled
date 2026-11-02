@@ -188,7 +188,7 @@ final class lh extends DualLinkNode {
         if (param0 <= 44) {
           return;
         }
-        o var1 = (o) (ve.field_c.c((byte) 116));
+        o var1 = (o) (ve.field_c.first((byte) 116));
         if (var1 == null) {
           ob.b(-103);
           return;

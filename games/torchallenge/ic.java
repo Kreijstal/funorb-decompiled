@@ -563,7 +563,7 @@ abstract class ic extends UiComponent implements gk {
             field_D = (Sprite[]) null;
           }
           var4 = (String) null;
-          stackIn_3_0 = pd.a(param0, 0, (String) null, false, 0, -1, param1);
+          stackIn_3_0 = GameScreen.a(param0, 0, (String) null, false, 0, -1, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

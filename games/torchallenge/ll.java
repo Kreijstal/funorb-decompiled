@@ -111,7 +111,7 @@ final class ll {
             je.field_g.e(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.g(0, 0);
-            la.field_f.a(119);
+            SectorCacheStore.field_f.a(119);
             je.field_i = true;
           }
           SoftwareRasterizer.a(vd.field_e);
@@ -188,7 +188,7 @@ final class ll {
             je.field_g.e(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.g(0, 0);
-            la.field_f.a(119);
+            SectorCacheStore.field_f.a(119);
             je.field_i = true;
           }
           SoftwareRasterizer.a(vd.field_e);
@@ -265,7 +265,7 @@ final class ll {
           je.field_g.e(0, 0, param8);
           od.a(cj.field_c, 33, 30, 68, 90);
           var16.g(0, 0);
-          la.field_f.a(119);
+          SectorCacheStore.field_f.a(119);
           je.field_i = true;
         }
         SoftwareRasterizer.a(vd.field_e);

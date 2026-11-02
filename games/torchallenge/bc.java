@@ -14,7 +14,7 @@ class bc implements j, gd {
     int field_r;
     int field_i;
     int field_c;
-    eg field_g;
+    BitmapFont field_g;
     private boolean field_j;
     static int field_o;
     int field_k;
@@ -339,7 +339,7 @@ class bc implements j, gd {
         }
     }
 
-    bc(eg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    bc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -770,7 +770,7 @@ class bc implements j, gd {
         }
     }
 
-    bc(eg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    bc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_n = param9;
           this.field_c = param10;

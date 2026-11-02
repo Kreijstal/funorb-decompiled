@@ -103,7 +103,7 @@ final class ue extends IntrusiveNode {
           var5Lifetime1 = null;
           ii.field_h[6].h();
           var6Lifetime1 = null;
-          la.field_f.a(112);
+          SectorCacheStore.field_f.a(112);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ue.E(" + param0 + ')');
         }
@@ -176,8 +176,8 @@ final class ue extends IntrusiveNode {
     }
 
     final static int a(int param0, int param1, int param2, int param3, byte param4) {
-        int var5 = -BufferedSocket.field_p.field_o + param0;
-        int var6 = param2 - BufferedSocket.field_p.field_H;
+        int var5 = -BufferedSocket.field_p.x + param0;
+        int var6 = param2 - BufferedSocket.field_p.y;
         if (var5 < 0) {
           var5 = -var5;
         }

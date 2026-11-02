@@ -51,7 +51,7 @@ abstract class sh extends DualLinkNode {
               SoftwareRasterizer.a(0, 0, var7_int, var8);
               od.a(cg.field_b[var10][param0][var7_int - 1], param2);
               SoftwareRasterizer.b(ae.field_y);
-              la.field_f.a(-106);
+              SectorCacheStore.field_f.a(-106);
             }
           }
           var12 = 0;
@@ -75,11 +75,11 @@ abstract class sh extends DualLinkNode {
               SoftwareRasterizer.a(0, 0, var7_intLifetime1, var8);
               od.a(fh.field_a[param0][var7_intLifetime1 - 1], var9);
               SoftwareRasterizer.b(ae.field_y);
-              la.field_f.a(-106);
+              SectorCacheStore.field_f.a(-106);
             }
             var12++;
           }
-          la.field_f.a(-27);
+          SectorCacheStore.field_f.a(-27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

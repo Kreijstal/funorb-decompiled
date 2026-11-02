@@ -3,7 +3,7 @@
  */
 class wa extends n implements sg {
     static String field_qb;
-    private eg field_yb;
+    private BitmapFont field_yb;
     static boolean[] field_pb;
     static ge field_xb;
     static int[] field_rb;
@@ -203,7 +203,7 @@ class wa extends n implements sg {
         }
     }
 
-    wa(si param0, eg param1, String param2, boolean param3, boolean param4) {
+    wa(si param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new sj((wa) null, param1, param2), 77, 10, 10);
         try {
           this.field_tb = param3 ? true : false;

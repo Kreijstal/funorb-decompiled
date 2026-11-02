@@ -10,9 +10,9 @@ final class ob {
         int var3 = param1;
         pa.field_x = pa.field_x + var3;
         if (!bh.field_p) {
-          kj.field_B.a(new bk(param0, var3, ac.field_d, ae.field_z, pa.field_x, pd.field_c + tf.field_o), -66);
+          kj.field_B.addLast(new bk(param0, var3, ac.field_d, ae.field_z, pa.field_x, GameScreen.field_c + tf.field_o), -66);
         }
-        pd.field_c = pd.field_c + var3;
+        GameScreen.field_c = GameScreen.field_c + var3;
         if (param2 == -7756) {
           return;
         }

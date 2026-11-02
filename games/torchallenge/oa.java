@@ -20,7 +20,7 @@ final class oa {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final di a(int param0, la param1, boolean param2, byte param3, la param4) {
+    final di a(int param0, SectorCacheStore param1, boolean param2, byte param3, SectorCacheStore param4) {
         di stackIn_9_0 = null;
         di stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;

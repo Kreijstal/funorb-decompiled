@@ -405,12 +405,12 @@ final class kb extends PcmStream {
         dl var3 = null;
         int var4 = TorChallenge.field_F ? 1 : 0;
         if (0 != (4 & this.field_J[param0])) {
-          var3 = (dl) (this.field_I.field_o.c((byte) -22));
+          var3 = (dl) (this.field_I.field_o.first((byte) -22));
           while (var3 != null) {
             if (var3.field_G == param0) {
               var3.field_x = 0;
             }
-            var3 = (dl) (this.field_I.field_o.c(-270));
+            var3 = (dl) (this.field_I.field_o.next(-270));
           }
         }
         if (param1 != -870) {
@@ -547,7 +547,7 @@ final class kb extends PcmStream {
 
     private final void a(boolean param0, int param1) {
         int var4 = TorChallenge.field_F ? 1 : 0;
-        dl var3 = (dl) (this.field_I.field_o.c((byte) -83));
+        dl var3 = (dl) (this.field_I.field_o.first((byte) -83));
         if (!param0) {
           ej var5 = (ej) null;
           this.a(-128, (ej) null, true);
@@ -567,7 +567,7 @@ final class kb extends PcmStream {
             }
             var3.unlink(true);
           }
-          var3 = (dl) (this.field_I.field_o.c(-270));
+          var3 = (dl) (this.field_I.field_o.next(-270));
         }
     }
 
@@ -669,18 +669,18 @@ final class kb extends PcmStream {
           this.b((int[]) null, -23, -98);
         }
         if ((2 & this.field_J[param0]) != 0) {
-          var3 = (dl) (this.field_I.field_o.c((byte) 113));
+          var3 = (dl) (this.field_I.field_o.first((byte) 113));
           while (var3 != null) {
             if (param0 == var3.field_G) {
               if (this.field_r[param0][var3.field_p] != null) {
-                var3 = (dl) (this.field_I.field_o.c(-270));
+                var3 = (dl) (this.field_I.field_o.next(-270));
                 continue;
               }
               if (var3.field_F < 0) {
                 var3.field_F = 0;
               }
             }
-            var3 = (dl) (this.field_I.field_o.c(-270));
+            var3 = (dl) (this.field_I.field_o.next(-270));
           }
         }
     }
@@ -1110,14 +1110,14 @@ final class kb extends PcmStream {
         if (param1 <= 84) {
           return;
         }
-        dl var3 = (dl) (this.field_I.field_o.c((byte) 120));
+        dl var3 = (dl) (this.field_I.field_o.first((byte) 120));
         while (var3 != null) {
           if ((0 > param0 || param0 == var3.field_G) &&
             var3.field_F < 0) {
             this.field_r[var3.field_G][var3.field_p] = null;
             var3.field_F = 0;
           }
-          var3 = (dl) (this.field_I.field_o.c(-270));
+          var3 = (dl) (this.field_I.field_o.next(-270));
         }
     }
 
@@ -1209,7 +1209,7 @@ final class kb extends PcmStream {
           }
           this.field_v[param2][var7.field_i] = var7;
         }
-        this.field_I.field_o.a(var7, -53);
+        this.field_I.field_o.addLast(var7, -53);
         this.field_r[param2][param3] = var7;
         return;
     }
@@ -1240,7 +1240,7 @@ final class kb extends PcmStream {
         if (0 == (this.field_J[param0] & 2)) {
           var8.field_F = 0;
         } else {
-          var6 = (dl) (this.field_I.field_o.c((byte) 110));
+          var6 = (dl) (this.field_I.field_o.first((byte) 110));
           while (var6 != null) {
             if (var8.field_G == var6.field_G &&
               var6.field_F < 0 &&
@@ -1248,7 +1248,7 @@ final class kb extends PcmStream {
               var8.field_F = 0;
               break;
             }
-            var6 = (dl) (this.field_I.field_o.c(-270));
+            var6 = (dl) (this.field_I.field_o.next(-270));
           }
         }
     }

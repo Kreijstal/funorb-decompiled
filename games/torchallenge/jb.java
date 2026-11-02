@@ -4,7 +4,7 @@
 abstract class jb extends IntrusiveNode {
     int field_i;
 
-    abstract int a(jk param0);
+    abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 

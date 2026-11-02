@@ -192,8 +192,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 var5 = var5 - 1;
                 var2Lifetime2 = 0;
                 var2Lifetime2 = 1 << var5 | var2Lifetime2;
-                if ((hd.field_c[var6] & var2Lifetime2) > 0) {
-                  hd.field_c[var6] = TorChallenge.a(hd.field_c[var6], var2Lifetime2);
+                if ((GzipDecoder.field_c[var6] & var2Lifetime2) > 0) {
+                  GzipDecoder.field_c[var6] = TorChallenge.a(GzipDecoder.field_c[var6], var2Lifetime2);
                 }
               }
             }

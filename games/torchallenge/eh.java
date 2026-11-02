@@ -96,10 +96,10 @@ final class eh extends IntrusiveNode {
     final static void b(byte param0) {
         if (param0 >= -45) {
           field_l = -119;
-          pf.field_d = new sl();
+          pf.field_d = new IntrusiveDeque();
           return;
         }
-        pf.field_d = new sl();
+        pf.field_d = new IntrusiveDeque();
     }
 
     eh(byte[] param0) {

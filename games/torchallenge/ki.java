@@ -10,7 +10,7 @@ final class ki {
 
     final static void a(eh param0, int param1, int param2) {
         try {
-          nh.field_cb.a(param0, -66);
+          nh.field_cb.addLast(param0, -66);
           sa.a((byte) 18, param1, param0);
           if (param2 != 160) {
             field_b = (hb) null;

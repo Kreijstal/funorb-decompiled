@@ -5,7 +5,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static GameApplet field_c;
     static boolean field_b;
     static String field_d;
-    static jk field_a;
+    static PcmStreamMixer field_a;
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
@@ -60,7 +60,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (ff.a("getcookies", param0, 20511));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, 20511));
               var5 = dl.a(var4, ';', -32);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

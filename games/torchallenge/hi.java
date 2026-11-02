@@ -91,8 +91,8 @@ final class hi extends ic {
           if (null == vk.field_i) {
             return;
           }
-          var13 = vk.field_i.field_o;
-          var14 = vk.field_i.field_H;
+          var13 = vk.field_i.x;
+          var14 = vk.field_i.y;
           var15 = 1 + var13;
           var16 = var13 + 2;
           var17 = 0;
@@ -290,21 +290,21 @@ final class hi extends ic {
           if (var6_ref == null) {
             return null;
           }
-          if (var14.field_o != param1) {
+          if (var14.x != param1) {
             return null;
           }
-          if (param5 != var14.field_H) {
+          if (param5 != var14.y) {
             return null;
           }
-          if (8 <= var14.field_F) {
-            stackIn_26_0 = (21 >= var14.field_F) ? 1 : 0;
+          if (8 <= var14.type) {
+            stackIn_26_0 = (21 >= var14.type) ? 1 : 0;
           } else {
             stackIn_26_0 = 0;
           }
           var9 = stackIn_26_0;
           if (var14.field_L != 13) {
             if (var9 == 0) {
-              stackIn_34_0 = (var14.field_F != 22) ? 1 : 0;
+              stackIn_34_0 = (var14.type != 22) ? 1 : 0;
             } else {
               stackIn_34_0 = 0;
             }
@@ -314,7 +314,7 @@ final class hi extends ic {
           var10 = stackIn_34_0;
           if (13 != var14.field_L &&
             var14.field_db >= 0 &&
-            var14.field_F != 22) {
+            var14.type != 22) {
             stackIn_43_0 = 0;
           } else {
             stackIn_43_0 = (var9 == 0) ? 1 : 0;
@@ -326,7 +326,7 @@ final class hi extends ic {
             var10 != 0 ||
             param3 == 2 &&
             var11 != 0) {
-            var14.a(param0, param2, var14.field_B, var14.field_H, var14.field_o, var14.field_F, 2657, var14.field_u);
+            var14.a(param0, param2, var14.field_B, var14.y, var14.x, var14.type, 2657, var14.field_u);
             var14.a((byte) -117, param2, param0);
             var7 = var6_ref;
           }

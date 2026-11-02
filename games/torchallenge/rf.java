@@ -5,7 +5,7 @@ final class rf extends dj implements uh {
     private wd field_fb;
     private int field_gb;
     static int field_ib;
-    static sl field_db;
+    static IntrusiveDeque field_db;
     static int[] field_hb;
     static int[][] field_eb;
     static int[] field_jb;
@@ -71,11 +71,11 @@ final class rf extends dj implements uh {
           return null;
         }
         if (!param0) {
-          sl.a(this.field_p - (this.field_gb - LocalizedStrings.field_u), ph.field_d, -6665);
+          IntrusiveDeque.a(this.field_p - (this.field_gb - LocalizedStrings.field_u), ph.field_d, -6665);
           return this.field_r;
         }
         field_jb = (int[]) null;
-        sl.a(this.field_p - (this.field_gb - LocalizedStrings.field_u), ph.field_d, -6665);
+        IntrusiveDeque.a(this.field_p - (this.field_gb - LocalizedStrings.field_u), ph.field_d, -6665);
         return this.field_r;
     }
 
@@ -87,7 +87,7 @@ final class rf extends dj implements uh {
         if (param0 < -79) {
           return;
         }
-        field_db = (sl) null;
+        field_db = (IntrusiveDeque) null;
     }
 
     final void a(int param0, wd param1) {
@@ -126,7 +126,7 @@ final class rf extends dj implements uh {
 
     static {
         field_ib = 0;
-        field_db = new sl();
+        field_db = new IntrusiveDeque();
         field_hb = new int[]{0, 0, 1, 0, 0, 1, 2, 3, 4};
         field_eb = new int[][]{new int[]{384, 413, 244, 56}, new int[]{384, 413, 247, 62}, new int[]{411, 413, 184, 55}};
         field_jb = new int[]{2048, 8388608, 8};

@@ -560,7 +560,7 @@ class UiComponent extends IntrusiveNode {
 
     final static void a(bk param0, int param1, byte param2) {
         try {
-          na.field_d.a(param0, -104);
+          na.field_d.addLast(param0, -104);
           if (param2 != -43) {
             field_n = (int[]) null;
           }
@@ -645,7 +645,7 @@ class UiComponent extends IntrusiveNode {
         v.$cfr$intArgs$a$b1efba5c64a3(param2, -24, param0, (String) null);
     }
 
-    final static void a(int param0, int param1, h param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, eg param12, int param13, eg param14, int param15, int param16, h param17, int param18, h param19, int param20) {
+    final static void a(int param0, int param1, h param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, BitmapFont param12, int param13, BitmapFont param14, int param15, int param16, h param17, int param18, h param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

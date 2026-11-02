@@ -72,10 +72,10 @@ final class pa extends PacketBuffer {
             if (param0.length() == 0) {
               var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            ff.a(param2, "document.cookie=\"" + var5 + "\"", (byte) 1);
+            JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var5 + "\"", (byte) 1);
           } catch (Throwable throwable) {
           }
-          ok.a(param2, -1);
+          ok.updatePageLinks(param2, -1);
           if (param1 != 8) {
             Sprite[] var6 = (Sprite[]) null;
             pa.a(-68, (Sprite[]) null);

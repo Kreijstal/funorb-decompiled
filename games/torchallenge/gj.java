@@ -356,7 +356,7 @@ final class gj {
           for (var4Lifetime2 = 0; gf.field_s.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_112_0 = fh.field_c;
             if (dl.field_s[var4Lifetime2] >= 0) {
-              stackIn_113_1 = sl.field_f;
+              stackIn_113_1 = IntrusiveDeque.field_f;
             } else {
               stackIn_113_1 = ok.field_e;
             }
@@ -378,8 +378,8 @@ final class gj {
               r.field_h[var4Lifetime3][0] = var8Lifetime1 - ni.field_i;
               r.field_h[var4Lifetime3][1] = var5Lifetime3;
               r.field_h[var4Lifetime3][2] = (ni.field_i << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (uc.field_Y + (ai.field_a << 1) + sl.field_f);
-              r.field_h[var4Lifetime3][3] = sl.field_f + (ai.field_a << 1);
+              var5Lifetime3 = var5Lifetime3 + (uc.field_Y + (ai.field_a << 1) + IntrusiveDeque.field_f);
+              r.field_h[var4Lifetime3][3] = IntrusiveDeque.field_f + (ai.field_a << 1);
             }
             var4Lifetime3++;
           }
@@ -397,7 +397,7 @@ final class gj {
     }
 
     final void a(int param0, UiComponent param1, int param2, ga param3, byte param4) {
-        eg stackIn_20_0 = null;
+        BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2 = 0;
@@ -419,7 +419,7 @@ final class gj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hd.a(this.field_k, param1.field_l, param1.field_p, (byte) 95, param1.field_i + param0, param1.field_m + param2);
+          GzipDecoder.a(this.field_k, param1.field_l, param1.field_p, (byte) 95, param1.field_i + param0, param1.field_m + param2);
           if (null != this.field_e) {
             var6_int = param2 + param1.field_m + this.field_f;
             var7 = param1.field_i + (param0 + this.field_h);
@@ -467,7 +467,7 @@ final class gj {
             } else {
               stackIn_27_8 = 256;
             }
-            ((eg) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_e, param3.field_i, param3.field_n);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_e, param3.field_i, param3.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -31,9 +31,9 @@ final class hh {
             !(param2 <= bg.field_Q.length)) {
             bg.field_Q = new int[param2 * 2];
           }
-          if (rk.field_p == null ||
-            !(rk.field_p.length >= param2)) {
-            rk.field_p = new int[2 * param2];
+          if (BufferedCacheFile.field_p == null ||
+            !(BufferedCacheFile.field_p.length >= param2)) {
+            BufferedCacheFile.field_p = new int[2 * param2];
           }
           if (null != ea.field_a &&
             ea.field_a.length >= param2) {
@@ -128,9 +128,9 @@ final class hh {
           }
           if (null == bg.field_Q) {
             bg.field_Q = new int[param2 * 2];
-            if (rk.field_p == null ||
-              !(rk.field_p.length >= param2)) {
-              rk.field_p = new int[2 * param2];
+            if (BufferedCacheFile.field_p == null ||
+              !(BufferedCacheFile.field_p.length >= param2)) {
+              BufferedCacheFile.field_p = new int[2 * param2];
             }
             if (null != ea.field_a &&
               ea.field_a.length >= param2) {
@@ -221,9 +221,9 @@ final class hh {
             if (param2 > bg.field_Q.length) {
               bg.field_Q = new int[param2 * 2];
             }
-            if (rk.field_p == null ||
-              !(rk.field_p.length >= param2)) {
-              rk.field_p = new int[2 * param2];
+            if (BufferedCacheFile.field_p == null ||
+              !(BufferedCacheFile.field_p.length >= param2)) {
+              BufferedCacheFile.field_p = new int[2 * param2];
             }
             if (null != ea.field_a &&
               ea.field_a.length >= param2) {

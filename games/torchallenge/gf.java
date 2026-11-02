@@ -8,7 +8,7 @@ final class gf extends ma {
     static Sprite field_n;
     static lj field_p;
     static int[][] field_m;
-    static sl field_q;
+    static IntrusiveDeque field_q;
     static PlatformTask field_o;
     static String[] field_s;
     static String field_v;
@@ -223,6 +223,6 @@ final class gf extends ma {
     static {
         field_n = null;
         field_m = new int[][]{new int[]{0}, new int[]{0}, new int[]{0}, new int[]{15245826, 0, 0}, new int[]{0}};
-        field_q = new sl();
+        field_q = new IntrusiveDeque();
     }
 }

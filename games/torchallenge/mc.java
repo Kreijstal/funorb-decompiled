@@ -3,8 +3,8 @@
  */
 final class mc implements j {
     private int field_h;
-    private eg field_b;
-    static sl field_k;
+    private BitmapFont field_b;
+    static IntrusiveDeque field_k;
     private int field_n;
     private int field_e;
     private int field_c;
@@ -77,7 +77,7 @@ final class mc implements j {
             !e.field_i.equals(param2.getParameter("session"))) {
             var4 = e.field_i;
           }
-          stackIn_11_0 = rk.a((String) (var4), -1, (String) (var3), -1, param0);
+          stackIn_11_0 = BufferedCacheFile.a((String) (var4), -1, (String) (var3), -1, param0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,7 +165,7 @@ final class mc implements j {
         }
     }
 
-    mc(eg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    mc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_e = 1;
         this.field_i = 1;
         try {
@@ -185,7 +185,7 @@ final class mc implements j {
     }
 
     static {
-        field_k = new sl();
+        field_k = new IntrusiveDeque();
         field_g = new int[][][]{new int[][]{new int[]{6, 6, 6, 6, 6, 6}, new int[]{0}, new int[]{0}, new int[]{6, 6, 6, 6, 6, 6}, new int[]{0}, new int[]{0}, new int[]{0}}, new int[][]{new int[]{5, 5, 5, 5, 5, 5}, new int[]{5, 5, 5, 5, 5}, new int[]{5, 5, 5, 5}, new int[]{0}, new int[]{0}, new int[]{5, 5, 5, 15, 5, 5, 5}, new int[]{0}}, new int[][]{new int[]{5, 5, 5, 5, 5, 5}, new int[]{0}, new int[]{0}, new int[]{0}, new int[]{5, 5, 5, 5, 5, 5, 5}, new int[]{0}, new int[]{5, 5, 5, 5, 5, 5}}};
     }
 }

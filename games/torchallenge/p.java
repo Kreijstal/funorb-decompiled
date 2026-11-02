@@ -110,9 +110,9 @@ final class p {
             p.a(72);
           }
           var2_long = ol.a(256);
-          if (sl.field_b != 0 &&
+          if (IntrusiveDeque.field_b != 0 &&
             jf.field_tb < 0) {
-            var4_ref_lc = (lc) (ba.field_a.c((byte) -5));
+            var4_ref_lc = (lc) (ba.field_a.first((byte) -5));
             if (var4_ref_lc != null &&
               var2_long > var4_ref_lc.field_l) {
               var4_ref_lc.unlink(true);
@@ -141,7 +141,7 @@ final class p {
             if (!NodeHashTableIterator.a((byte) 124)) {
               return false;
             }
-            if (sl.field_b == 0) {
+            if (IntrusiveDeque.field_b == 0) {
               ul.field_j = uc.field_X;
               uc.field_X = NodeHashTableIterator.field_i;
               NodeHashTableIterator.field_i = cb.field_g;
@@ -149,7 +149,7 @@ final class p {
               jf.field_tb = -1;
               return true;
             }
-            var4 = sl.field_b;
+            var4 = IntrusiveDeque.field_b;
             if (0.0 != tf.field_i) {
               var4 = (int)((double)var4 + id.field_a.nextGaussian() * tf.field_i);
               if (var4 < 0) {
@@ -160,7 +160,7 @@ final class p {
             for (var6 = 0; var6 < bb.field_i; var6++) {
               var5.field_q[var6] = id.field_b.payload[var6];
             }
-            ba.field_a.a(var5, -111);
+            ba.field_a.addLast(var5, -111);
             jf.field_tb = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

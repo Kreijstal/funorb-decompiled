@@ -301,7 +301,7 @@ final class rj {
             }
             if (null != vl.field_a.field_d) {
               try {
-                cf.field_d = new rk(vl.field_a.field_d, 64, 0);
+                cf.field_d = new BufferedCacheFile(vl.field_a.field_d, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

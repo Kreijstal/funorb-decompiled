@@ -103,7 +103,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param3 < ol.field_d) {
             pi.field_e = param3;
           }
-          rk.field_p[bb.field_c] = param0;
+          BufferedCacheFile.field_p[bb.field_c] = param0;
           if (param2 != 27715) {
             return;
           }

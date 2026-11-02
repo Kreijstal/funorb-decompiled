@@ -26,13 +26,13 @@ final class be {
     }
 
     final static void a(int param0, byte param1, boolean param2) {
-        bb.field_h = param0;
+        bb.activeScreenId = param0;
         if (param1 >= -101) {
           be.a(19, (byte) -122, true);
         }
         hk.field_e = 0;
-        if (!(bb.field_h < 0)) {
-          GameApplet.field_i[bb.field_h].a(3, param2);
+        if (!(bb.activeScreenId < 0)) {
+          GameApplet.screens[bb.activeScreenId].a(3, param2);
         }
     }
 
@@ -124,7 +124,7 @@ final class be {
             IterableNodeHashTable.field_h.g(0, 0);
             SoftwareRasterizer.d(2, 2, 0, 0, var18, var19);
             SoftwareRasterizer.b(sh.field_w);
-            la.field_f.a(-123);
+            SectorCacheStore.field_f.a(-123);
             if (param1 == 4) {
               var19 += 2;
               param3--;
@@ -175,7 +175,7 @@ final class be {
         if (param1 != 31315) {
           field_e = (TorChallenge) null;
         }
-        ji.field_q.a(var2, -77);
+        ji.field_q.addLast(var2, -77);
         af.b(9245, param0);
         return var2;
     }

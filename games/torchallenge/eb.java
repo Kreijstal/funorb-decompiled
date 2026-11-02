@@ -48,7 +48,7 @@ final class eb extends IntrusiveNode {
           cf.field_f = param5;
           PacketBuffer.field_j = param2;
           cj.field_d = param1;
-          pd.field_h = null;
+          GameScreen.field_h = null;
           gj.field_a = qc.field_i;
           vb.field_m = param0;
           return true;

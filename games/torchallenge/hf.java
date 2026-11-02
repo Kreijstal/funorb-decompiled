@@ -92,9 +92,9 @@ final class hf implements j {
         ae.field_z = ae.field_z ^ 4;
         jj.field_c = jj.field_c | var3;
         eh.field_l = eh.field_l | var3;
-        db.field_D.a(new ul(param2), -83);
+        db.field_D.addLast(new ul(param2), -83);
         if (!bh.field_p) {
-          wc.field_g.a(new rd(param2, param0, al.field_z, pi.field_a, pi.field_f, ub.field_j), -53);
+          wc.field_g.addLast(new rd(param2, param0, al.field_z, pi.field_a, pi.field_f, ub.field_j), -53);
         }
     }
 

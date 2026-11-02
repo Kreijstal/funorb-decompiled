@@ -25,7 +25,7 @@ abstract class n extends v {
           throw new IllegalStateException();
         }
         if (IntrusiveNode.field_c == null) {
-          var1 = pd.f((byte) 48);
+          var1 = GameScreen.f((byte) 48);
           kb.field_O = new fg(var1, (String) null, true, false, false);
           t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
           bg.field_K.c(0, kb.field_O);
@@ -34,7 +34,7 @@ abstract class n extends v {
           return;
         }
         IntrusiveNode.field_c.o(77);
-        var1Lifetime1 = pd.f((byte) 48);
+        var1Lifetime1 = GameScreen.f((byte) 48);
         kb.field_O = new fg(var1Lifetime1, (String) null, true, false, false);
         t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
         bg.field_K.c(0, kb.field_O);

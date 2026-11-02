@@ -3,7 +3,7 @@
  */
 final class ga extends bc {
     private gj field_t;
-    static sl field_w;
+    static IntrusiveDeque field_w;
     static String field_u;
     private gj[] field_v;
     static boolean field_y;
@@ -201,7 +201,7 @@ final class ga extends bc {
         }
     }
 
-    final static int a(int param0, eg param1, String[] param2, int param3, String param4) {
+    final static int a(int param0, BitmapFont param1, String[] param2, int param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -379,7 +379,7 @@ final class ga extends bc {
 
     static {
         field_u = "Unfortunately we are unable to create an account for you at this time.";
-        field_w = new sl();
+        field_w = new IntrusiveDeque();
         field_x = new int[][][]{new int[][]{new int[]{40, 40, 40}, new int[]{40, 40}, new int[]{40, 40}, new int[]{40, 40, 40, 40, 40, 40}, new int[]{40, 40}, new int[]{0}, new int[]{100, 100, 100, 100, 100, 80}}, new int[][]{new int[]{60, 60}, new int[]{60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60}, new int[]{0}}, new int[][]{new int[]{30, 30, 30}, new int[]{30, 30}, new int[]{30, 30, 30, 30}, new int[]{30, 30, 30, 30, 30, 30}, new int[]{30, 30, 30}, new int[]{0}, new int[]{60, 60, 60, 60, 60, 60}}};
         field_s = new int[][]{new int[]{6, 0, 0, 5, 0, 0, 0}, new int[]{6, 5, 4, 0, 0, 7, 0}, new int[]{6, 0, 0, 0, 6, 0, 6}};
     }

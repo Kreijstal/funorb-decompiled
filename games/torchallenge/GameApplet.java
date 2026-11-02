@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static pd[] field_i;
+    static GameScreen[] screens;
     static String field_a;
     static boolean field_p;
     static int field_o;
     private static int field_j;
     static int[] field_e;
     static dg field_n;
-    static eg field_f;
+    static BitmapFont field_f;
     boolean field_g;
     public static int field_k;
     public static boolean field_l;
@@ -213,7 +213,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 ef.a((byte) 88);
                 this.e(-87);
-                la.field_f = dk.a(fl.field_v, (java.awt.Component) ((Object) bg.field_P), -124, sd.field_c);
+                SectorCacheStore.field_f = dk.a(fl.field_v, (java.awt.Component) ((Object) bg.field_P), -124, sd.field_c);
                 this.d(-117);
                 hl.field_b = ac.a(true);
                 do {
@@ -234,7 +234,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(k.field_g > var3)) {
                       this.g(-30261);
-                      hd.a(119, sh.field_u, bg.field_P);
+                      GzipDecoder.a(119, sh.field_u, bg.field_P);
                       break;
                     }
                     this.c(126);
@@ -364,7 +364,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           wg.b(param1.a(-2, "", "headers.packvorbis"));
           if (param0 != 0) {
-            field_i = (pd[]) null;
+            screens = (GameScreen[]) null;
           }
           var2 = wg.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
@@ -449,7 +449,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_g = true;
             System.out.println("error_game_" + param1);
             try {
-              ff.a("loggedout", gi.b(12476), 20511);
+              JavaScriptBridge.callWithoutArguments("loggedout", gi.b(12476), 20511);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -888,7 +888,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          field_i = null;
+          screens = null;
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ug.DA(" + param0 + ')');
         }
@@ -1066,7 +1066,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_a = "Connection lost. <%0>";
         field_p = false;
         field_o = 0;
-        field_i = new pd[16];
+        screens = new GameScreen[16];
     }
 
     private static int $cfr$lcmp(long left, long right) {

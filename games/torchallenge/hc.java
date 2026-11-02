@@ -166,10 +166,10 @@ final class hc extends ng {
           }
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(false);
-            var4_ref_ae = (ae) (bk.field_t.c((byte) -110));
+            var4_ref_ae = (ae) (bk.field_t.first((byte) -110));
             while (var4_ref_ae != null) {
               if (var4_ref_ae.field_o != var3) {
-                var4_ref_ae = (ae) (bk.field_t.c(-270));
+                var4_ref_ae = (ae) (bk.field_t.next(-270));
                 continue;
               }
               break;
@@ -265,10 +265,10 @@ final class hc extends ng {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort(false);
             var4 = var28.k(param0 ^ 95);
-            var6 = (ji) (wf.field_g.c((byte) 1));
+            var6 = (ji) (wf.field_g.first((byte) 1));
             while (var6 != null) {
               if (var6.field_l != var3Lifetime1) {
-                var6 = (ji) (wf.field_g.c(-270));
+                var6 = (ji) (wf.field_g.next(-270));
                 continue;
               }
               break;

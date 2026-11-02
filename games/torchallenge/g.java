@@ -8,7 +8,7 @@ final class g implements j {
     private int field_d;
     private int field_f;
     private int field_g;
-    private eg field_a;
+    private BitmapFont field_a;
     static Sprite[][][] field_i;
     private int field_c;
 
@@ -34,7 +34,7 @@ final class g implements j {
           try {
             var3_int = -68 % ((param1 + 48) / 58);
             try {
-              var4 = (String) (ff.a("getcookies", param2, 20511));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param2, 20511));
               var5 = dl.a(var4, ';', -75);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -134,7 +134,7 @@ final class g implements j {
         }
     }
 
-    g(eg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    g(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param1;
           this.field_f = param2;

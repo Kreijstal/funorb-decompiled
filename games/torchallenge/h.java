@@ -85,7 +85,7 @@ final class h {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        hd.a(this.field_c, param0, param4, (byte) -66, param1, param3);
+        GzipDecoder.a(this.field_c, param0, param4, (byte) -66, param1, param3);
         if (param2 != -1) {
           this.field_c = (Sprite[]) null;
         }

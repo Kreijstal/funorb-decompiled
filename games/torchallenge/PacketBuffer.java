@@ -227,7 +227,7 @@ class PacketBuffer extends IntrusiveNode {
                 bb.field_i = -1;
                 aj.field_c = qc.field_f;
               } else {
-                aj.field_c = rk.field_n;
+                aj.field_c = BufferedCacheFile.field_n;
               }
               id.field_b.position = 0;
             }
@@ -235,7 +235,7 @@ class PacketBuffer extends IntrusiveNode {
               stackIn_20_0 = -1;
               return stackIn_20_0;
             }
-            if (aj.field_c == rk.field_n &&
+            if (aj.field_c == BufferedCacheFile.field_n &&
               pe.a((byte) 105, 8)) {
               lh.field_u = id.field_b.k(-125);
               id.field_b.position = 0;
@@ -316,14 +316,14 @@ class PacketBuffer extends IntrusiveNode {
               if (0 >= UiComponent.field_o &&
                 !me.field_b) {
                 try {
-                  ff.a("unzap", gi.b(12476), 20511);
+                  JavaScriptBridge.callWithoutArguments("unzap", gi.b(12476), 20511);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ff.a("zap", new Object[]{MouseInputHandler.a(-113, ed.field_j)}, gi.b(12476), -29585);
+                  JavaScriptBridge.callWithArguments("zap", new Object[]{MouseInputHandler.a(-113, ed.field_j)}, gi.b(12476), -29585);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -418,7 +418,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         if (hf.field_b == gj.field_a) {
           gj.field_a = mg.field_c;
-          return pd.field_h;
+          return GameScreen.field_h;
         }
         return null;
     }

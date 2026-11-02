@@ -3,7 +3,7 @@
  */
 final class ec {
     static int field_b;
-    static eg field_c;
+    static BitmapFont field_c;
     static boolean field_e;
     static int field_d;
     static Sprite[] field_a;

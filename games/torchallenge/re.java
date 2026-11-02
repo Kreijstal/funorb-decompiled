@@ -138,7 +138,7 @@ final class re extends lb {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (rk.field_h.indexOf(var5Lifetime1) == -1) {
+              if (BufferedCacheFile.field_h.indexOf(var5Lifetime1) == -1) {
                 stackIn_44_0 = di.field_g;
                 return stackIn_44_0;
               }

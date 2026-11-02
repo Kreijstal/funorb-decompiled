@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    static rk field_b;
+    static BufferedCacheFile field_b;
     static Sprite field_e;
     static boolean field_d;
     static int field_c;

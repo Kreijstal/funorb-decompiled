@@ -35,11 +35,11 @@ final class ha {
               var6 = ki.$cfr$intArgs$a$62abead39cee(-18, true, gf.field_s[var3_int]);
               var7 = -(var6 >> 1) + dg.field_ab;
               var4 = var4 + uc.field_Y;
-              if (kg.a((byte) -121, var4, var6 + (ni.field_i << 1), var7 - ni.field_i, param1, param0, (ai.field_a << 1) + sl.field_f)) {
+              if (kg.a((byte) -121, var4, var6 + (ni.field_i << 1), var7 - ni.field_i, param1, param0, (ai.field_a << 1) + IntrusiveDeque.field_f)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (sl.field_f + (uc.field_Y + (ai.field_a << 1)));
+              var4 = var4 + (IntrusiveDeque.field_f + (uc.field_Y + (ai.field_a << 1)));
             }
             var3_int++;
           }

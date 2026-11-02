@@ -67,7 +67,7 @@ final class e extends IntrusiveNode {
               SoftwareRasterizer.b(ui.field_f);
             }
             SoftwareRasterizer.d(param1, param1, 0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
-            la.field_f.a(-32);
+            SectorCacheStore.field_f.a(-32);
             vj.field_d[var4].h();
           }
           cg.field_g = new Sprite(var2_int, var3);
@@ -100,10 +100,10 @@ final class e extends IntrusiveNode {
           if (param0 != -1) {
             field_j = (String) null;
           }
-          var4 = (ue) (wl.field_b.c((byte) -29));
+          var4 = (ue) (wl.field_b.first((byte) -29));
           while (var4 != null) {
             ji.a((byte) 92, param1, var4);
-            var4 = (ue) (wl.field_b.c(-270));
+            var4 = (ue) (wl.field_b.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
