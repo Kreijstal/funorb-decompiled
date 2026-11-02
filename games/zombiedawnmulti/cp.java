@@ -143,7 +143,7 @@ final class cp extends WidgetContainer implements jn, in {
     }
 
     public cp() {
-        super(0, 0, 496, 0, (nl) null);
+        super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_G = new on("", (bj) null, 12);
         hq var1 = new hq(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(la.field_e, var1, (bj) null);
@@ -152,9 +152,9 @@ final class cp extends WidgetContainer implements jn, in {
         this.field_G.field_x = bi.field_d;
         this.field_G.a((byte) -27, new tp(this.field_G));
         this.field_M.field_F = false;
-        this.field_M.field_h = (nl) ((Object) new oq());
-        this.field_W.field_h = (nl) ((Object) new he());
-        this.field_G.field_h = (nl) ((Object) new tb(10000536));
+        this.field_M.listener = (WidgetActionListener) ((Object) new oq());
+        this.field_W.listener = (WidgetActionListener) ((Object) new he());
+        this.field_G.listener = (WidgetActionListener) ((Object) new tb(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.b(20, var3, 28972, 270, 50);

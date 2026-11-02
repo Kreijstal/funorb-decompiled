@@ -4,19 +4,19 @@
 final class sk {
     static boolean field_j;
     int field_p;
-    nl field_o;
+    WidgetActionListener field_o;
     int field_e;
     int field_c;
-    nl field_k;
+    WidgetActionListener field_k;
     static String field_r;
     int field_m;
     static String field_q;
-    nl field_a;
+    WidgetActionListener field_a;
     int field_b;
     int field_d;
-    nl field_s;
+    WidgetActionListener field_s;
     BitmapFont field_h;
-    nl field_n;
+    WidgetActionListener field_n;
     static cj field_i;
     private int field_f;
     int field_l;
@@ -92,7 +92,7 @@ final class sk {
         jl var14Lifetime2;
         try {
           var18 = new hq(param1, 2, 2, 2236962, 1, 1, 1, param1.field_r + (param1.field_C + 2));
-          this.field_s = (nl) ((Object) var18);
+          this.field_s = (WidgetActionListener) ((Object) var18);
           var18.field_q = 16777215;
           var4 = new jl();
           var18.a(param0 - 125269882, var4);
@@ -119,21 +119,21 @@ final class sk {
           var5[4] = (Sprite) ((Object) var19);
           var4.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
           var4.a(5, (byte) -36).a(u.a(21242, 0, 65793, 0, 0), 2147483647).a(true, 2521).b(-1, 0);
-          this.field_n = (nl) ((Object) var4);
+          this.field_n = (WidgetActionListener) ((Object) var4);
           var6 = new jl(var4, true);
           var6.field_d = 0;
           var7 = new jl(var4, true);
           var7.field_d = 0;
           var7.a(nk.a(8947848, (byte) -98), false);
           var7.a(1, (byte) -36).a(nk.a(11184810, (byte) 108), 2147483647).b(2236962, 0);
-          this.field_k = (nl) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_k = (WidgetActionListener) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new wa(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new jl();
           var18.a(-3, var8);
           var8.a(0, (byte) -36).a(vn.a(120, 10066329, 7829367, 15658734), 2147483647).b(1118481, 0).a((byte) 44, -1);
           var8.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
-          this.field_o = (nl) ((Object) var8);
+          this.field_o = (WidgetActionListener) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);

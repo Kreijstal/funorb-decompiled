@@ -191,7 +191,7 @@ class sq extends gn {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.b(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.field_h)).a((byte) 39, (UiWidget) (this)));
+        this.b(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
     }
 
     final void a(byte param0) {
@@ -219,7 +219,7 @@ class sq extends gn {
         if (param0 != 94) {
           this.a((byte) -110);
         }
-        var3 = (rk) ((Object) this.field_h);
+        var3 = (rk) ((Object) this.listener);
         var4 = var3.a((UiWidget) (this), -102);
         while (true) {
           var5 = this.field_j.indexOf("<hotspot=", var2);
@@ -308,11 +308,11 @@ class sq extends gn {
         }
     }
 
-    sq(String param0, nl param1) {
+    sq(String param0, WidgetActionListener param1) {
         super(param0, (bj) null);
         this.field_V = null;
         try {
-          this.field_h = param1;
+          this.listener = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -325,7 +325,7 @@ class sq extends gn {
         if (0 != param2) {
           return;
         }
-        rk var5 = (rk) ((Object) this.field_h);
+        rk var5 = (rk) ((Object) this.listener);
         wi var6 = this.field_V;
         if (var6 != null) {
           var7 = var5.a(false, param3, (UiWidget) (this));

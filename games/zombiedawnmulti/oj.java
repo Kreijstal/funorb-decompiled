@@ -36,12 +36,12 @@ final class oj extends pl implements in {
     }
 
     oj(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (nl) null);
+        super(param0, param1, param2, param3, (WidgetActionListener) null);
         this.field_P = new em(new tb(10000536), tm.field_b, 0, 0, 140, 25);
         this.field_P.a(3, new dj());
         this.field_B = new gn(ub.field_xb, (bj) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};
-        this.field_B.field_h = (nl) ((Object) new oq());
+        this.field_B.listener = (WidgetActionListener) ((Object) new oq());
         this.e(-1);
     }
 

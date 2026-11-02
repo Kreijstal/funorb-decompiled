@@ -83,7 +83,7 @@ final class wd extends WidgetContainer implements in {
     }
 
     wd(ne param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (nl) null);
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         int var4_int = 0;
         this.field_J = 0;
         try {
@@ -110,7 +110,7 @@ final class wd extends WidgetContainer implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new gn(param0, param2);
-          var4.field_h = (nl) ((Object) new oq());
+          var4.listener = (WidgetActionListener) ((Object) new oq());
           var5 = this.field_w - 2;
           this.b(0, 0, 28972, this.field_n, this.field_w + 34);
           var4.b(7, var5, 28972, -14 + this.field_n, 30);

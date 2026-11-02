@@ -256,15 +256,15 @@ final class em extends wk {
         }
     }
 
-    private em(nl param0, boolean param1) {
-        super(0, 0, 0, 0, (nl) null);
+    private em(WidgetActionListener param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
           this.field_R = (pm) ((Object) new on("", (bj) null, 2));
           this.field_T = (pm) ((Object) new on("", (bj) null, 2));
           this.field_Q = (pm) ((Object) new on("", (bj) null, 4));
-          this.field_Q.field_h = param0;
-          this.field_T.field_h = param0;
-          this.field_R.field_h = param0;
+          this.field_Q.listener = param0;
+          this.field_T.listener = param0;
+          this.field_R.listener = param0;
           this.field_Z = param1 ? true : false;
           if (!this.field_Z) {
             this.b((byte) 111, this.field_R);
@@ -279,7 +279,7 @@ final class em extends wk {
         }
     }
 
-    em(nl param0, boolean param1, int param2, int param3, int param4, int param5) {
+    em(WidgetActionListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.b(param2, param3, 28972, param4, param5);

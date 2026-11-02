@@ -56,7 +56,7 @@ final class pj extends WidgetContainer implements co, in {
     }
 
     pj(tf param0) {
-        super(0, 0, 288, 0, (nl) null);
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         String var7 = null;
         int var3 = 0;
         hq var4 = null;
@@ -65,7 +65,7 @@ final class pj extends WidgetContainer implements co, in {
         try {
           this.field_H = param0;
           this.field_G = new gn(ub.field_xb, (bj) null);
-          this.field_G.field_h = (nl) ((Object) new oq());
+          this.field_G.listener = (WidgetActionListener) ((Object) new oq());
           var7 = vl.a(ng.field_a, new String[]{this.h(-1), this.a(111)}, 2);
           var3 = 20;
           var4 = new hq(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);

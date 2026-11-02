@@ -636,6 +636,14 @@
       "renamedSymbol": "C:MouseWheelInput"
     },
     {
+      "symbol": "C:nl",
+      "originalName": "nl",
+      "to": "WidgetActionListener",
+      "evidence": "Interface with one callback receiving the UiWidget that fired; held by UiWidget and implemented by widget owners.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:WidgetActionListener"
+    },
+    {
       "symbol": "C:nq",
       "originalName": "nq",
       "to": "SpriteState",
@@ -754,6 +762,14 @@
       "evidence": "IntrusiveNode link fields and unlink body; hash table buckets and deques splice them.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IntrusiveNode.key:J"
+    },
+    {
+      "symbol": "F:cf.field_h:Lnl;",
+      "originalName": "field_h",
+      "to": "listener",
+      "evidence": "UiWidget holds the WidgetActionListener that receives this widget on activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:UiWidget.listener:LWidgetActionListener;"
     },
     {
       "symbol": "F:dl.field_b:Ljava/lang/String;",
@@ -4515,9 +4531,9 @@
     },
     {
       "symbol": "C:nl",
-      "renamedSymbol": "C:nl",
+      "renamedSymbol": "C:WidgetActionListener",
       "originalName": "nl",
-      "renamedName": "nl",
+      "renamedName": "WidgetActionListener",
       "declaration": {
         "file": "nl.java",
         "start": 48,
@@ -10422,9 +10438,9 @@
     },
     {
       "symbol": "F:cf.field_h:Lnl;",
-      "renamedSymbol": "F:UiWidget.field_h:Lnl;",
+      "renamedSymbol": "F:UiWidget.listener:LWidgetActionListener;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "listener",
       "declaration": {
         "file": "cf.java",
         "start": 378,
@@ -40661,7 +40677,7 @@
     },
     {
       "symbol": "F:sk.field_a:Lnl;",
-      "renamedSymbol": "F:sk.field_a:Lnl;",
+      "renamedSymbol": "F:sk.field_a:LWidgetActionListener;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -40771,7 +40787,7 @@
     },
     {
       "symbol": "F:sk.field_k:Lnl;",
-      "renamedSymbol": "F:sk.field_k:Lnl;",
+      "renamedSymbol": "F:sk.field_k:LWidgetActionListener;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -40804,7 +40820,7 @@
     },
     {
       "symbol": "F:sk.field_n:Lnl;",
-      "renamedSymbol": "F:sk.field_n:Lnl;",
+      "renamedSymbol": "F:sk.field_n:LWidgetActionListener;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -40815,7 +40831,7 @@
     },
     {
       "symbol": "F:sk.field_o:Lnl;",
-      "renamedSymbol": "F:sk.field_o:Lnl;",
+      "renamedSymbol": "F:sk.field_o:LWidgetActionListener;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -40859,7 +40875,7 @@
     },
     {
       "symbol": "F:sk.field_s:Lnl;",
-      "renamedSymbol": "F:sk.field_s:Lnl;",
+      "renamedSymbol": "F:sk.field_s:LWidgetActionListener;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -67941,7 +67957,7 @@
     },
     {
       "symbol": "L:cf.<init>(IIIILnl;Lbj;)V#0",
-      "renamedSymbol": "L:UiWidget.<init>(IIIILnl;Lbj;)V#0",
+      "renamedSymbol": "L:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -67952,7 +67968,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -67963,7 +67979,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67974,7 +67990,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#10",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#10",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -67985,7 +68001,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -67996,7 +68012,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#3",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#3",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -68007,7 +68023,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#4",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#4",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -68018,7 +68034,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#5",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#5",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -68029,7 +68045,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#6",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#6",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -68040,7 +68056,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#7",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#7",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#7",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -68051,7 +68067,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#8",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#8",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#8",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -68062,7 +68078,7 @@
     },
     {
       "symbol": "L:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#9",
-      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#9",
+      "renamedSymbol": "L:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -85893,7 +85909,7 @@
     },
     {
       "symbol": "L:em.<init>(Lnl;Z)V#0",
-      "renamedSymbol": "L:em.<init>(Lnl;Z)V#0",
+      "renamedSymbol": "L:em.<init>(LWidgetActionListener;Z)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -85904,7 +85920,7 @@
     },
     {
       "symbol": "L:em.<init>(Lnl;ZIIII)V#0",
-      "renamedSymbol": "L:em.<init>(Lnl;ZIIII)V#0",
+      "renamedSymbol": "L:em.<init>(LWidgetActionListener;ZIIII)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -95034,7 +95050,7 @@
     },
     {
       "symbol": "L:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
-      "renamedSymbol": "L:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
+      "renamedSymbol": "L:fj.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -207806,7 +207822,7 @@
     },
     {
       "symbol": "L:sd.<init>(IIIILnl;Lbj;Lcf;)V#0",
-      "renamedSymbol": "L:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#0",
+      "renamedSymbol": "L:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -215814,7 +215830,7 @@
     },
     {
       "symbol": "L:sq.<init>(Ljava/lang/String;Lnl;)V#0",
-      "renamedSymbol": "L:sq.<init>(Ljava/lang/String;Lnl;)V#0",
+      "renamedSymbol": "L:sq.<init>(Ljava/lang/String;LWidgetActionListener;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -223943,7 +223959,7 @@
     },
     {
       "symbol": "L:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#0",
-      "renamedSymbol": "L:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#0",
+      "renamedSymbol": "L:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -250508,7 +250524,7 @@
     },
     {
       "symbol": "M:cf.<init>(IIIILnl;Lbj;)V",
-      "renamedSymbol": "M:UiWidget.<init>(IIIILnl;Lbj;)V",
+      "renamedSymbol": "M:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V",
       "originalName": "cf",
       "renamedName": "UiWidget",
       "declaration": {
@@ -250530,7 +250546,7 @@
     },
     {
       "symbol": "M:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V",
-      "renamedSymbol": "M:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V",
+      "renamedSymbol": "M:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V",
       "originalName": "cf",
       "renamedName": "UiWidget",
       "declaration": {
@@ -253830,7 +253846,7 @@
     },
     {
       "symbol": "M:em.<init>(Lnl;Z)V",
-      "renamedSymbol": "M:em.<init>(Lnl;Z)V",
+      "renamedSymbol": "M:em.<init>(LWidgetActionListener;Z)V",
       "originalName": "em",
       "renamedName": "em",
       "declaration": {
@@ -253841,7 +253857,7 @@
     },
     {
       "symbol": "M:em.<init>(Lnl;ZIIII)V",
-      "renamedSymbol": "M:em.<init>(Lnl;ZIIII)V",
+      "renamedSymbol": "M:em.<init>(LWidgetActionListener;ZIIII)V",
       "originalName": "em",
       "renamedName": "em",
       "declaration": {
@@ -255513,7 +255529,7 @@
     },
     {
       "symbol": "M:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V",
-      "renamedSymbol": "M:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V",
+      "renamedSymbol": "M:fj.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V",
       "originalName": "fj",
       "renamedName": "fj",
       "declaration": {
@@ -258208,7 +258224,7 @@
     },
     {
       "symbol": "M:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V",
-      "renamedSymbol": "M:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V",
+      "renamedSymbol": "M:gn.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V",
       "originalName": "gn",
       "renamedName": "gn",
       "declaration": {
@@ -268933,7 +268949,7 @@
     },
     {
       "symbol": "M:nl.a(ZIIILcf;)V",
-      "renamedSymbol": "M:nl.a(ZIIILUiWidget;)V",
+      "renamedSymbol": "M:WidgetActionListener.a(ZIIILUiWidget;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -271804,7 +271820,7 @@
     },
     {
       "symbol": "M:pl.<init>(IIIILnl;)V",
-      "renamedSymbol": "M:pl.<init>(IIIILnl;)V",
+      "renamedSymbol": "M:pl.<init>(IIIILWidgetActionListener;)V",
       "originalName": "pl",
       "renamedName": "pl",
       "declaration": {
@@ -274983,7 +274999,7 @@
     },
     {
       "symbol": "M:rg.<init>(IIIILnl;Lbj;)V",
-      "renamedSymbol": "M:rg.<init>(IIIILnl;Lbj;)V",
+      "renamedSymbol": "M:rg.<init>(IIIILWidgetActionListener;Lbj;)V",
       "originalName": "rg",
       "renamedName": "rg",
       "declaration": {
@@ -276930,7 +276946,7 @@
     },
     {
       "symbol": "M:sd.<init>(IIIILnl;Lbj;Lcf;)V",
-      "renamedSymbol": "M:sd.<init>(IIIILnl;Lbj;LUiWidget;)V",
+      "renamedSymbol": "M:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V",
       "originalName": "sd",
       "renamedName": "sd",
       "declaration": {
@@ -277007,7 +277023,7 @@
     },
     {
       "symbol": "M:se.<init>(IIIILnl;)V",
-      "renamedSymbol": "M:WidgetContainer.<init>(IIIILnl;)V",
+      "renamedSymbol": "M:WidgetContainer.<init>(IIIILWidgetActionListener;)V",
       "originalName": "se",
       "renamedName": "WidgetContainer",
       "declaration": {
@@ -278140,7 +278156,7 @@
     },
     {
       "symbol": "M:sq.<init>(Ljava/lang/String;Lnl;)V",
-      "renamedSymbol": "M:sq.<init>(Ljava/lang/String;Lnl;)V",
+      "renamedSymbol": "M:sq.<init>(Ljava/lang/String;LWidgetActionListener;)V",
       "originalName": "sq",
       "renamedName": "sq",
       "declaration": {
@@ -279856,7 +279872,7 @@
     },
     {
       "symbol": "M:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V",
-      "renamedSymbol": "M:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V",
+      "renamedSymbol": "M:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V",
       "originalName": "ua",
       "renamedName": "ua",
       "declaration": {
@@ -284102,7 +284118,7 @@
     },
     {
       "symbol": "M:wk.<init>(IIIILnl;)V",
-      "renamedSymbol": "M:wk.<init>(IIIILnl;)V",
+      "renamedSymbol": "M:wk.<init>(IIIILWidgetActionListener;)V",
       "originalName": "wk",
       "renamedName": "wk",
       "declaration": {
@@ -292319,7 +292335,7 @@
     },
     {
       "symbol": "P:cf.<init>(IIIILnl;Lbj;)V#0",
-      "renamedSymbol": "P:UiWidget.<init>(IIIILnl;Lbj;)V#0",
+      "renamedSymbol": "P:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292330,7 +292346,7 @@
     },
     {
       "symbol": "P:cf.<init>(IIIILnl;Lbj;)V#1",
-      "renamedSymbol": "P:UiWidget.<init>(IIIILnl;Lbj;)V#1",
+      "renamedSymbol": "P:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -292341,7 +292357,7 @@
     },
     {
       "symbol": "P:cf.<init>(IIIILnl;Lbj;)V#2",
-      "renamedSymbol": "P:UiWidget.<init>(IIIILnl;Lbj;)V#2",
+      "renamedSymbol": "P:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -292352,7 +292368,7 @@
     },
     {
       "symbol": "P:cf.<init>(IIIILnl;Lbj;)V#3",
-      "renamedSymbol": "P:UiWidget.<init>(IIIILnl;Lbj;)V#3",
+      "renamedSymbol": "P:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -292363,7 +292379,7 @@
     },
     {
       "symbol": "P:cf.<init>(IIIILnl;Lbj;)V#4",
-      "renamedSymbol": "P:UiWidget.<init>(IIIILnl;Lbj;)V#4",
+      "renamedSymbol": "P:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -292374,7 +292390,7 @@
     },
     {
       "symbol": "P:cf.<init>(IIIILnl;Lbj;)V#5",
-      "renamedSymbol": "P:UiWidget.<init>(IIIILnl;Lbj;)V#5",
+      "renamedSymbol": "P:UiWidget.<init>(IIIILWidgetActionListener;Lbj;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -292407,7 +292423,7 @@
     },
     {
       "symbol": "P:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
-      "renamedSymbol": "P:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
+      "renamedSymbol": "P:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292418,7 +292434,7 @@
     },
     {
       "symbol": "P:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
-      "renamedSymbol": "P:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
+      "renamedSymbol": "P:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -292429,7 +292445,7 @@
     },
     {
       "symbol": "P:cf.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
-      "renamedSymbol": "P:UiWidget.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
+      "renamedSymbol": "P:UiWidget.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -301185,7 +301201,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;Z)V#0",
-      "renamedSymbol": "P:em.<init>(Lnl;Z)V#0",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -301196,7 +301212,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;Z)V#1",
-      "renamedSymbol": "P:em.<init>(Lnl;Z)V#1",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -301207,7 +301223,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;ZIIII)V#0",
-      "renamedSymbol": "P:em.<init>(Lnl;ZIIII)V#0",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;ZIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -301218,7 +301234,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;ZIIII)V#1",
-      "renamedSymbol": "P:em.<init>(Lnl;ZIIII)V#1",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;ZIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -301229,7 +301245,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;ZIIII)V#2",
-      "renamedSymbol": "P:em.<init>(Lnl;ZIIII)V#2",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;ZIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -301240,7 +301256,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;ZIIII)V#3",
-      "renamedSymbol": "P:em.<init>(Lnl;ZIIII)V#3",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;ZIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -301251,7 +301267,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;ZIIII)V#4",
-      "renamedSymbol": "P:em.<init>(Lnl;ZIIII)V#4",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;ZIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -301262,7 +301278,7 @@
     },
     {
       "symbol": "P:em.<init>(Lnl;ZIIII)V#5",
-      "renamedSymbol": "P:em.<init>(Lnl;ZIIII)V#5",
+      "renamedSymbol": "P:em.<init>(LWidgetActionListener;ZIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -305574,7 +305590,7 @@
     },
     {
       "symbol": "P:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
-      "renamedSymbol": "P:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
+      "renamedSymbol": "P:fj.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -305585,7 +305601,7 @@
     },
     {
       "symbol": "P:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
-      "renamedSymbol": "P:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
+      "renamedSymbol": "P:fj.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -305596,7 +305612,7 @@
     },
     {
       "symbol": "P:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
-      "renamedSymbol": "P:fj.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
+      "renamedSymbol": "P:fj.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -311789,7 +311805,7 @@
     },
     {
       "symbol": "P:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
-      "renamedSymbol": "P:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V#0",
+      "renamedSymbol": "P:gn.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -311800,7 +311816,7 @@
     },
     {
       "symbol": "P:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
-      "renamedSymbol": "P:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V#1",
+      "renamedSymbol": "P:gn.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -311811,7 +311827,7 @@
     },
     {
       "symbol": "P:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
-      "renamedSymbol": "P:gn.<init>(Ljava/lang/String;Lnl;Lbj;)V#2",
+      "renamedSymbol": "P:gn.<init>(Ljava/lang/String;LWidgetActionListener;Lbj;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -337045,7 +337061,7 @@
     },
     {
       "symbol": "P:nl.a(ZIIILcf;)V#0",
-      "renamedSymbol": "P:nl.a(ZIIILUiWidget;)V#0",
+      "renamedSymbol": "P:WidgetActionListener.a(ZIIILUiWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -337056,7 +337072,7 @@
     },
     {
       "symbol": "P:nl.a(ZIIILcf;)V#1",
-      "renamedSymbol": "P:nl.a(ZIIILUiWidget;)V#1",
+      "renamedSymbol": "P:WidgetActionListener.a(ZIIILUiWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -337067,7 +337083,7 @@
     },
     {
       "symbol": "P:nl.a(ZIIILcf;)V#2",
-      "renamedSymbol": "P:nl.a(ZIIILUiWidget;)V#2",
+      "renamedSymbol": "P:WidgetActionListener.a(ZIIILUiWidget;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -337078,7 +337094,7 @@
     },
     {
       "symbol": "P:nl.a(ZIIILcf;)V#3",
-      "renamedSymbol": "P:nl.a(ZIIILUiWidget;)V#3",
+      "renamedSymbol": "P:WidgetActionListener.a(ZIIILUiWidget;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -337089,7 +337105,7 @@
     },
     {
       "symbol": "P:nl.a(ZIIILcf;)V#4",
-      "renamedSymbol": "P:nl.a(ZIIILUiWidget;)V#4",
+      "renamedSymbol": "P:WidgetActionListener.a(ZIIILUiWidget;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -344591,7 +344607,7 @@
     },
     {
       "symbol": "P:pl.<init>(IIIILnl;)V#0",
-      "renamedSymbol": "P:pl.<init>(IIIILnl;)V#0",
+      "renamedSymbol": "P:pl.<init>(IIIILWidgetActionListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -344602,7 +344618,7 @@
     },
     {
       "symbol": "P:pl.<init>(IIIILnl;)V#1",
-      "renamedSymbol": "P:pl.<init>(IIIILnl;)V#1",
+      "renamedSymbol": "P:pl.<init>(IIIILWidgetActionListener;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -344613,7 +344629,7 @@
     },
     {
       "symbol": "P:pl.<init>(IIIILnl;)V#2",
-      "renamedSymbol": "P:pl.<init>(IIIILnl;)V#2",
+      "renamedSymbol": "P:pl.<init>(IIIILWidgetActionListener;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -344624,7 +344640,7 @@
     },
     {
       "symbol": "P:pl.<init>(IIIILnl;)V#3",
-      "renamedSymbol": "P:pl.<init>(IIIILnl;)V#3",
+      "renamedSymbol": "P:pl.<init>(IIIILWidgetActionListener;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -344635,7 +344651,7 @@
     },
     {
       "symbol": "P:pl.<init>(IIIILnl;)V#4",
-      "renamedSymbol": "P:pl.<init>(IIIILnl;)V#4",
+      "renamedSymbol": "P:pl.<init>(IIIILWidgetActionListener;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -352973,7 +352989,7 @@
     },
     {
       "symbol": "P:rg.<init>(IIIILnl;Lbj;)V#0",
-      "renamedSymbol": "P:rg.<init>(IIIILnl;Lbj;)V#0",
+      "renamedSymbol": "P:rg.<init>(IIIILWidgetActionListener;Lbj;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -352984,7 +353000,7 @@
     },
     {
       "symbol": "P:rg.<init>(IIIILnl;Lbj;)V#1",
-      "renamedSymbol": "P:rg.<init>(IIIILnl;Lbj;)V#1",
+      "renamedSymbol": "P:rg.<init>(IIIILWidgetActionListener;Lbj;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -352995,7 +353011,7 @@
     },
     {
       "symbol": "P:rg.<init>(IIIILnl;Lbj;)V#2",
-      "renamedSymbol": "P:rg.<init>(IIIILnl;Lbj;)V#2",
+      "renamedSymbol": "P:rg.<init>(IIIILWidgetActionListener;Lbj;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -353006,7 +353022,7 @@
     },
     {
       "symbol": "P:rg.<init>(IIIILnl;Lbj;)V#3",
-      "renamedSymbol": "P:rg.<init>(IIIILnl;Lbj;)V#3",
+      "renamedSymbol": "P:rg.<init>(IIIILWidgetActionListener;Lbj;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -353017,7 +353033,7 @@
     },
     {
       "symbol": "P:rg.<init>(IIIILnl;Lbj;)V#4",
-      "renamedSymbol": "P:rg.<init>(IIIILnl;Lbj;)V#4",
+      "renamedSymbol": "P:rg.<init>(IIIILWidgetActionListener;Lbj;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -353028,7 +353044,7 @@
     },
     {
       "symbol": "P:rg.<init>(IIIILnl;Lbj;)V#5",
-      "renamedSymbol": "P:rg.<init>(IIIILnl;Lbj;)V#5",
+      "renamedSymbol": "P:rg.<init>(IIIILWidgetActionListener;Lbj;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -358209,7 +358225,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#0",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#0",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -358220,7 +358236,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#1",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#1",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -358231,7 +358247,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#2",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#2",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -358242,7 +358258,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#3",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#3",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -358253,7 +358269,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#4",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#4",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -358264,7 +358280,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#5",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#5",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -358275,7 +358291,7 @@
     },
     {
       "symbol": "P:sd.<init>(IIIILnl;Lbj;Lcf;)V#6",
-      "renamedSymbol": "P:sd.<init>(IIIILnl;Lbj;LUiWidget;)V#6",
+      "renamedSymbol": "P:sd.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -358484,7 +358500,7 @@
     },
     {
       "symbol": "P:se.<init>(IIIILnl;)V#0",
-      "renamedSymbol": "P:WidgetContainer.<init>(IIIILnl;)V#0",
+      "renamedSymbol": "P:WidgetContainer.<init>(IIIILWidgetActionListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -358495,7 +358511,7 @@
     },
     {
       "symbol": "P:se.<init>(IIIILnl;)V#1",
-      "renamedSymbol": "P:WidgetContainer.<init>(IIIILnl;)V#1",
+      "renamedSymbol": "P:WidgetContainer.<init>(IIIILWidgetActionListener;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -358506,7 +358522,7 @@
     },
     {
       "symbol": "P:se.<init>(IIIILnl;)V#2",
-      "renamedSymbol": "P:WidgetContainer.<init>(IIIILnl;)V#2",
+      "renamedSymbol": "P:WidgetContainer.<init>(IIIILWidgetActionListener;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -358517,7 +358533,7 @@
     },
     {
       "symbol": "P:se.<init>(IIIILnl;)V#3",
-      "renamedSymbol": "P:WidgetContainer.<init>(IIIILnl;)V#3",
+      "renamedSymbol": "P:WidgetContainer.<init>(IIIILWidgetActionListener;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -358528,7 +358544,7 @@
     },
     {
       "symbol": "P:se.<init>(IIIILnl;)V#4",
-      "renamedSymbol": "P:WidgetContainer.<init>(IIIILnl;)V#4",
+      "renamedSymbol": "P:WidgetContainer.<init>(IIIILWidgetActionListener;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -362114,7 +362130,7 @@
     },
     {
       "symbol": "P:sq.<init>(Ljava/lang/String;Lnl;)V#0",
-      "renamedSymbol": "P:sq.<init>(Ljava/lang/String;Lnl;)V#0",
+      "renamedSymbol": "P:sq.<init>(Ljava/lang/String;LWidgetActionListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -362125,7 +362141,7 @@
     },
     {
       "symbol": "P:sq.<init>(Ljava/lang/String;Lnl;)V#1",
-      "renamedSymbol": "P:sq.<init>(Ljava/lang/String;Lnl;)V#1",
+      "renamedSymbol": "P:sq.<init>(Ljava/lang/String;LWidgetActionListener;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -366085,7 +366101,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#0",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#0",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -366096,7 +366112,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#1",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#1",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -366107,7 +366123,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#2",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#2",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -366118,7 +366134,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#3",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#3",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -366129,7 +366145,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#4",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#4",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -366140,7 +366156,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#5",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#5",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -366151,7 +366167,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#6",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#6",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -366162,7 +366178,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#7",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#7",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -366173,7 +366189,7 @@
     },
     {
       "symbol": "P:ua.<init>(IIIILnl;Lbj;Lcf;ZZ)V#8",
-      "renamedSymbol": "P:ua.<init>(IIIILnl;Lbj;LUiWidget;ZZ)V#8",
+      "renamedSymbol": "P:ua.<init>(IIIILWidgetActionListener;Lbj;LUiWidget;ZZ)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -377195,7 +377211,7 @@
     },
     {
       "symbol": "P:wk.<init>(IIIILnl;)V#0",
-      "renamedSymbol": "P:wk.<init>(IIIILnl;)V#0",
+      "renamedSymbol": "P:wk.<init>(IIIILWidgetActionListener;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377206,7 +377222,7 @@
     },
     {
       "symbol": "P:wk.<init>(IIIILnl;)V#1",
-      "renamedSymbol": "P:wk.<init>(IIIILnl;)V#1",
+      "renamedSymbol": "P:wk.<init>(IIIILWidgetActionListener;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377217,7 +377233,7 @@
     },
     {
       "symbol": "P:wk.<init>(IIIILnl;)V#2",
-      "renamedSymbol": "P:wk.<init>(IIIILnl;)V#2",
+      "renamedSymbol": "P:wk.<init>(IIIILWidgetActionListener;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -377228,7 +377244,7 @@
     },
     {
       "symbol": "P:wk.<init>(IIIILnl;)V#3",
-      "renamedSymbol": "P:wk.<init>(IIIILnl;)V#3",
+      "renamedSymbol": "P:wk.<init>(IIIILWidgetActionListener;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -377239,7 +377255,7 @@
     },
     {
       "symbol": "P:wk.<init>(IIIILnl;)V#4",
-      "renamedSymbol": "P:wk.<init>(IIIILnl;)V#4",
+      "renamedSymbol": "P:wk.<init>(IIIILWidgetActionListener;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -382058,8 +382074,15 @@
       "original": "bg.java",
       "renamed": "bg.java",
       "inputSha256": "1a4286dd270e09dfaee40e1656e9bf4603dbfabb7e99bfe6bc5bff1651fe650a",
-      "outputSha256": "eecf69764eca66715f0079f7484bbaa6563d6919140496803277a3ea174a8917",
+      "outputSha256": "70382c06e86652309d6fde8ebff39c2e42ee7048ad23f70d3d068e89664834b4",
       "edits": [
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 285,
           "end": 287,
@@ -383752,7 +383775,7 @@
       "original": "cf.java",
       "renamed": "UiWidget.java",
       "inputSha256": "ff1e9f7c8ab29c40f4c3b6d35353cdd7466d0b24b35df7d5905c5275929deeb7",
-      "outputSha256": "f9a74287134b8a49c00e811d7e2056f459de855697c5c10a672347e65bffcc4c",
+      "outputSha256": "c064cbd5e405ff2c2bd8d340f26022298ccc72b4433a6c6d426b29dbb1cccf60",
       "edits": [
         {
           "start": 65,
@@ -383774,6 +383797,20 @@
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "GameSimulation"
+        },
+        {
+          "start": 375,
+          "end": 377,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 378,
+          "end": 385,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 596,
@@ -383922,11 +383959,32 @@
           "kind": "label"
         },
         {
+          "start": 16134,
+          "end": 16141,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 16231,
+          "end": 16238,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 16250,
           "end": 16252,
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 16304,
+          "end": 16311,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 16731,
@@ -383948,6 +384006,34 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 19675,
+          "end": 19682,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19713,
+          "end": 19720,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19880,
+          "end": 19887,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19916,
+          "end": 19923,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 20101,
@@ -384041,11 +384127,53 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 29077,
+          "end": 29079,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 29627,
+          "end": 29634,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 29697,
+          "end": 29704,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 29761,
+          "end": 29768,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 30962,
           "end": 30964,
           "symbol": "M:cf.<init>(IIIILnl;Lbj;)V",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 31013,
+          "end": 31015,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 31118,
+          "end": 31125,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         }
       ]
     },
@@ -386010,7 +386138,7 @@
       "original": "cp.java",
       "renamed": "cp.java",
       "inputSha256": "8132b728198c2f15edaaa5af47055b99883c2b557ccf3bc28b94846e8278303d",
-      "outputSha256": "bbe44599b33e6c584741b936137c5c5bba84fe50affd469eb6b49764c5861444",
+      "outputSha256": "8f0f54934ee18f25e49b468b3b374059e9cabfc788b5d0e5c54392d66b954a1c",
       "edits": [
         {
           "start": 82,
@@ -386048,6 +386176,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 5038,
+          "end": 5040,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 5216,
           "end": 5218,
           "symbol": "C:cf",
@@ -386060,6 +386195,48 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 5531,
+          "end": 5538,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 5542,
+          "end": 5544,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 5588,
+          "end": 5595,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 5599,
+          "end": 5601,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 5645,
+          "end": 5652,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 5656,
+          "end": 5658,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 7344,
@@ -386536,7 +386713,7 @@
       "original": "df.java",
       "renamed": "df.java",
       "inputSha256": "b761972c626f9f47ad1f4664c05ffcb808ce08c2650ace9639cb20ff8aca129c",
-      "outputSha256": "efd15853257babfb4f9d942424c74c142967e7d6047339007f84a91bc00624da",
+      "outputSha256": "9c0937546dcd9c007ec53e35c142b96ffb6409f92222dae673b2dd9c230d38cb",
       "edits": [
         {
           "start": 64,
@@ -386551,6 +386728,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 812,
+          "end": 814,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 4538,
@@ -386719,7 +386903,7 @@
       "original": "dg.java",
       "renamed": "dg.java",
       "inputSha256": "ce6db42d8736014ac5eb6896fc47292b281aa875d252c541ee18a7303b26b289",
-      "outputSha256": "d5b05853d1a2f6f246b1859f09ca5355dc43dcbd272c2c99f325830060821cc9",
+      "outputSha256": "40492e9dbe52fe34cd979eb967c24aec2ebc55b8b4895aadf65d4c98bdf6f277",
       "edits": [
         {
           "start": 61,
@@ -386734,6 +386918,55 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 3471,
+          "end": 3473,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 3693,
+          "end": 3700,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 3704,
+          "end": 3706,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 3746,
+          "end": 3753,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 3757,
+          "end": 3759,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 3799,
+          "end": 3806,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 3810,
+          "end": 3812,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 4622,
@@ -387932,7 +388165,7 @@
       "original": "el.java",
       "renamed": "el.java",
       "inputSha256": "b30aa0a9e0e3f2366e1192b6807b65d07341cffc304bff56e8d813c4854298b0",
-      "outputSha256": "4bac5b651daca799e1f70162e1c1a039735d2a8d57e5f24d63155388871d9c82",
+      "outputSha256": "c345c26c38c1a44a01869e261f14719fc145e8eb565f886b97a3fbdece04e58e",
       "edits": [
         {
           "start": 257,
@@ -388165,6 +388398,13 @@
           "symbol": "C:fm",
           "original": "fm",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 14877,
+          "end": 14879,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         }
       ]
     },
@@ -388172,7 +388412,7 @@
       "original": "em.java",
       "renamed": "em.java",
       "inputSha256": "fbc324bda9edea6b3e76e1798d58b8bacf8242c4e7841627e64fb19ed511b699",
-      "outputSha256": "c23dbe389333d62d64f1bec16193c50c1b154be808c92d36572f9f19d1dc9072",
+      "outputSha256": "859f83b67f6a7fdcde8c0b0ced52c4389be9cf296bc3762e4d6c9057623739de",
       "edits": [
         {
           "start": 1517,
@@ -388215,6 +388455,48 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 9761,
+          "end": 9763,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 9817,
+          "end": 9819,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 10066,
+          "end": 10073,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 10107,
+          "end": 10114,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 10148,
+          "end": 10155,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 10716,
+          "end": 10718,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         }
       ]
     },
@@ -389672,7 +389954,7 @@
       "original": "fe.java",
       "renamed": "fe.java",
       "inputSha256": "349afb5c12a81742fc1c144a5f4dd228f14ffed04fcdc3a80d40403d1b1c4d7f",
-      "outputSha256": "4b8d9458c28b6e59e76c966a2433ac69dd00dd5e926746ed0cc817390bec1f62",
+      "outputSha256": "3d686257a635104243fb5669900a972aa032ae434b9bf1c1283c838d2adeb72f",
       "edits": [
         {
           "start": 61,
@@ -389787,6 +390069,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 17820,
+          "end": 17822,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 18437,
           "end": 18438,
           "symbol": "C:o",
@@ -389799,6 +390088,132 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 19083,
+          "end": 19090,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19094,
+          "end": 19096,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19140,
+          "end": 19147,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19151,
+          "end": 19153,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19197,
+          "end": 19204,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19208,
+          "end": 19210,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19303,
+          "end": 19310,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19314,
+          "end": 19316,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19361,
+          "end": 19368,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19372,
+          "end": 19374,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19419,
+          "end": 19426,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19430,
+          "end": 19432,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19484,
+          "end": 19491,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19495,
+          "end": 19497,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19580,
+          "end": 19587,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19591,
+          "end": 19593,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 19638,
+          "end": 19645,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 19649,
+          "end": 19651,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 19852,
@@ -390075,8 +390490,29 @@
       "original": "fj.java",
       "renamed": "fj.java",
       "inputSha256": "a8b8a5c53cd6a83532a47bee9a83ebe316a511dcdef64cfb0d745adc034da11d",
-      "outputSha256": "efae30b891f7935bf1d32d661e057e160af561dfe7ad7760054f4793102495d3",
+      "outputSha256": "b52cc89fcc93fb830733ac95d5e1fbd838c4819fb1bc8a7b614ad150684164bd",
       "edits": [
+        {
+          "start": 217,
+          "end": 224,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 513,
+          "end": 515,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 605,
+          "end": 612,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
         {
           "start": 1111,
           "end": 1118,
@@ -392716,7 +393152,7 @@
       "original": "gl.java",
       "renamed": "gl.java",
       "inputSha256": "e010b3b76d1daf9682a73db116613c05295e37fb736aee7f895aee7fb4c9275c",
-      "outputSha256": "8476a19b2ad5df600f4649d23e5015751b509230a3a6816388011e2b7fd8ce8a",
+      "outputSha256": "c7dd4f627f8791d01f2adee260ee6c3fc66512dfda580e4ca9b09c8a689be2ec",
       "edits": [
         {
           "start": 61,
@@ -392731,6 +393167,41 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 1265,
+          "end": 1267,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 2697,
+          "end": 2704,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 2708,
+          "end": 2710,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 3027,
+          "end": 3034,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 3038,
+          "end": 3040,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 4115,
@@ -392837,7 +393308,7 @@
       "original": "gn.java",
       "renamed": "gn.java",
       "inputSha256": "150f7190835452da50f0576ceff5996e63ef92323e9ab1e0a7103492227315e8",
-      "outputSha256": "574d21c59f174223dacfd83a29a9490fcfd0fc473eec34f3d6726c9e4ec4f69f",
+      "outputSha256": "6d485c96fa6d21344ea1bea8603371ebb47c0df1ef3a6d99b0c6cbc6ad4b8232",
       "edits": [
         {
           "start": 76,
@@ -392845,6 +393316,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 415,
+          "end": 417,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 596,
@@ -392999,6 +393477,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 15920,
+          "end": 15927,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         }
       ]
     },
@@ -394199,8 +394684,15 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "c40ad80add2e93041472363c7132506e21fe54005952d475d6354bf329f2c5c9",
-      "outputSha256": "86a9d977a5765ad6beb7d2e61ba5d52b78a361e2a30fb0738033deda86dd039c",
+      "outputSha256": "6343c98e885d43e54491085ab3c829d69d0b84f6893d7682e91bdd1f307e8650",
       "edits": [
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 237,
           "end": 239,
@@ -394718,8 +395210,15 @@
       "original": "hq.java",
       "renamed": "hq.java",
       "inputSha256": "91da113f24fda55731e3b3a46b273fd5574dcdc5acb9434695c154a4e10a15a2",
-      "outputSha256": "ce6ed52d02c7f4e09a853d22b87525dc6893df4bb532aab91daaea6e1d26cb19",
+      "outputSha256": "cb3b7f32c85e4533e795799871483cb1a7b8d9ddb2829893760dc1c559d82a9e",
       "edits": [
+        {
+          "start": 58,
+          "end": 60,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 154,
           "end": 156,
@@ -395007,8 +395506,15 @@
       "original": "ib.java",
       "renamed": "ib.java",
       "inputSha256": "a618cd0d188f3f266c9dfa6b67a9f23cd4a61744571c269c10ffc90c270eb0e3",
-      "outputSha256": "75c860cf39c34cb268805eeaba889c98536aa72d71841ea954fe7bb3e012fa9a",
+      "outputSha256": "7fc0633d7157dfbdd5abb3a0230367af231ffd2359cd4cdad18bd925fc27f09c",
       "edits": [
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 643,
           "end": 645,
@@ -395609,8 +396115,15 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "e7065833b02fee1abeb2b305d06250265c53bb3234bb99fe0c3104244181832c",
-      "outputSha256": "8d66935cea6ef24c6da681af99bf8374d8cb6b2787b2476522602a00f3b3adb7",
+      "outputSha256": "0204e716efbfe13edd4afff1261179e60523b1b976135c033ca6545491fc1ea2",
       "edits": [
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 384,
           "end": 386,
@@ -402877,7 +403390,7 @@
       "original": "km.java",
       "renamed": "km.java",
       "inputSha256": "815abd452f8233d8223339997a631eb081855d89b923fa8715df23c17002c34d",
-      "outputSha256": "efa0195e1b984dd9c05da78f3399f322b0ccba8c204f6f750e474f3d579999b7",
+      "outputSha256": "1b7640c00e7fe2d983f7ed20d970a8413631d7fa30a0fb1ff79c854b972032cc",
       "edits": [
         {
           "start": 184,
@@ -402913,6 +403426,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1178,
+          "end": 1185,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 1250,
@@ -406928,7 +407448,7 @@
       "original": "na.java",
       "renamed": "na.java",
       "inputSha256": "f456a63f6c43f2beb87b67be36d6d3bf2918d39f1549d1fe010fdbd454231fc9",
-      "outputSha256": "0767327460f2be4c9bc6623a10f841d8f54a7af9be0063a5d3898056735dd258",
+      "outputSha256": "03a6b497bd1cbd75aaea12fd45cc682f278ac6f9e9399408aa14c00a86fc615b",
       "edits": [
         {
           "start": 144,
@@ -406943,6 +407463,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 339,
+          "end": 341,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 1360,
@@ -406964,6 +407491,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1713,
+          "end": 1715,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 1949,
@@ -407965,10 +408499,17 @@
     },
     {
       "original": "nl.java",
-      "renamed": "nl.java",
+      "renamed": "WidgetActionListener.java",
       "inputSha256": "173c206a0fed7482e5df33b98ecbfc9fc7d16c57275731897cc738406763daa0",
-      "outputSha256": "49fd2681551a9c7b3472aa0495581876e19b9155ed7869f20fac7692041ae1ea",
+      "outputSha256": "00ba0af4f799adb55b3f47aa615119b7a52d3b334a32c9d0e6becf178e0090c7",
       "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 132,
           "end": 134,
@@ -408828,7 +409369,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "3a4734f285c51b39b461ed655934bf520204198b2ad72a7990c80f5888ae32d8",
-      "outputSha256": "9ef0b015f32649eeca09e1e733410ab7ec3469113c5c14912eb2ceec3576f92a",
+      "outputSha256": "57f49cd32b0bef22d7868e3e599b223e489598d15acc3f4934edf5b20bafb91b",
       "edits": [
         {
           "start": 115,
@@ -408843,6 +409384,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1488,
+          "end": 1490,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 1696,
@@ -408864,6 +409412,20 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 1783,
+          "end": 1790,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 1794,
+          "end": 1796,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 2422,
@@ -410354,7 +410916,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "cbee5c91ebba8485440d267d91978fc6d15ab59ea28831894eafd8d48f0301e8",
-      "outputSha256": "32921a2ff6b602ba1c942beaec780ab912d6e8264f8e8f54aeb53d57104eb17b",
+      "outputSha256": "cf6e8665eda51fd1222990f1e53d4978e368da0a4bfa0c60c21e8127bf191e5e",
       "edits": [
         {
           "start": 61,
@@ -410362,6 +410924,27 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 1888,
+          "end": 1890,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 2144,
+          "end": 2151,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 2155,
+          "end": 2157,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 3599,
@@ -410412,7 +410995,7 @@
       "original": "pl.java",
       "renamed": "pl.java",
       "inputSha256": "35b6d8c83c36707f9169479de999edfb261b330d7fa0ba39b8fec8958314ec73",
-      "outputSha256": "f8d8fae2a53446a43d90d4ee91e0262793114478af2e694a192c768e2aa42371",
+      "outputSha256": "2f49e0f97d93cedaf86fd9408a4429a769ace21d0c513a5afe79e51653ac6ce4",
       "edits": [
         {
           "start": 85,
@@ -410653,6 +411236,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 14378,
+          "end": 14380,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 14492,
           "end": 14494,
           "symbol": "C:cf",
@@ -410807,6 +411397,20 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 21761,
+          "end": 21768,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 21795,
+          "end": 21802,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 21836,
           "end": 21838,
           "symbol": "C:cf",
@@ -410868,7 +411472,7 @@
       "original": "pm.java",
       "renamed": "pm.java",
       "inputSha256": "7abb24cc5da5e65331fde91bc0937bd28f76cefd91e16d00c7da71bd41dbe669",
-      "outputSha256": "d9bfbab227ca9184d0cb40060b42ab0f46c0682e817356a9a6dd275162675f39",
+      "outputSha256": "51aabef650fe9e95c9c46dc66f5f169f9e28a127a706367342e781201ecfdd23",
       "edits": [
         {
           "start": 124,
@@ -410899,6 +411503,20 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6695,
+          "end": 6702,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 6764,
+          "end": 6771,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 6792,
           "end": 6794,
           "symbol": "C:bd",
@@ -410913,11 +411531,39 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 9311,
+          "end": 9318,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 9362,
+          "end": 9369,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 9411,
           "end": 9413,
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 9443,
+          "end": 9450,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 9507,
+          "end": 9514,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 9645,
@@ -410934,6 +411580,20 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 10788,
+          "end": 10795,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 10877,
+          "end": 10884,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 10910,
           "end": 10912,
           "symbol": "C:cf",
@@ -410948,11 +411608,32 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 11933,
+          "end": 11940,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 13716,
           "end": 13718,
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 13950,
+          "end": 13957,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 14016,
+          "end": 14023,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 14070,
@@ -414928,7 +415609,7 @@
       "original": "qm.java",
       "renamed": "qm.java",
       "inputSha256": "93d98d1502fc9e00dec12cf40a0f023db26fe152ce1284c34688c9ffea93f2bf",
-      "outputSha256": "a44068232d397b5c4211023b357ef3260be3b6388a55576cfdb478d8d37007be",
+      "outputSha256": "3f38f4ed3465b7707ff586cc7c66835ed8dfb5dc04218ab5a1156b03335e8253",
       "edits": [
         {
           "start": 61,
@@ -414973,11 +415654,116 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6098,
+          "end": 6100,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 6780,
           "end": 6782,
           "symbol": "C:fm",
           "original": "fm",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 8269,
+          "end": 8276,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 8280,
+          "end": 8282,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 8336,
+          "end": 8343,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 8347,
+          "end": 8349,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 8429,
+          "end": 8436,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 8440,
+          "end": 8442,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 8524,
+          "end": 8531,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 8535,
+          "end": 8537,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 8631,
+          "end": 8638,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 8642,
+          "end": 8644,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 9018,
+          "end": 9025,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 9029,
+          "end": 9031,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 9102,
+          "end": 9109,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 9113,
+          "end": 9115,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 9493,
@@ -416051,7 +416837,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "09ec849337656a15bf1e8ec1438801f45c923beeeaf298723f784893a6280c54",
-      "outputSha256": "be77bb40bd14249a368bc619ba635aefb815f90ccfd209f19a98f3a2cae96120",
+      "outputSha256": "1b4043cf7bdd310ce0e112fd5b47cf09bfdd032eed3c794939c6734564d7bf8c",
       "edits": [
         {
           "start": 85,
@@ -416096,6 +416882,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6830,
+          "end": 6832,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 7017,
           "end": 7019,
           "symbol": "C:cf",
@@ -416136,6 +416929,20 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 12462,
+          "end": 12469,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 12488,
+          "end": 12495,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 12529,
@@ -419476,7 +420283,7 @@
       "original": "sd.java",
       "renamed": "sd.java",
       "inputSha256": "c6c900fb2ebe349deb76fd98340b98f3490a2b4043d02103fb5c408da6779180",
-      "outputSha256": "ffe8c36ed62cda7e1ea2b6d90d73b7aea5ac7301bd23c1c3c9a229136e950046",
+      "outputSha256": "fba64b4c272c5aca0e959426b6c6f7783a9da264e2842a1f2b8c9f8091ac9b82",
       "edits": [
         {
           "start": 1767,
@@ -419484,6 +420291,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2743,
+          "end": 2745,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 2765,
@@ -419498,7 +420312,7 @@
       "original": "se.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "964db70a000176e0c2880dee0a55cce972dddf67154befe82a566716bdd6cf4f",
-      "outputSha256": "4f7978cdaf40bdf38f8cd4938d7be6d8f08abd4fe767390341ddb228f616514b",
+      "outputSha256": "357f83e54139b0d95bfc6548cf188ce2df5aff36560e98b2b06e6f3783575e8a",
       "edits": [
         {
           "start": 65,
@@ -419800,6 +420614,20 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 7872,
+          "end": 7879,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 7906,
+          "end": 7913,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 7947,
@@ -420185,6 +421013,13 @@
           "symbol": "M:se.<init>(IIIILnl;)V",
           "original": "se",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 18858,
+          "end": 18860,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 18964,
@@ -420636,14 +421471,49 @@
       "original": "sk.java",
       "renamed": "sk.java",
       "inputSha256": "83cd78d23d6bd435d0e4e20fec71bdabf713f7aa3147ee92e4ec8312929464c8",
-      "outputSha256": "053954f2a143b6b6700acbc5084ca972844eb7a48e3e22a07da36632de862b9e",
+      "outputSha256": "17151c0869af8304efd94641bc0d32b2dacfa8e867de2855a359df5ba7db3eb5",
       "edits": [
+        {
+          "start": 104,
+          "end": 106,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 154,
+          "end": 156,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 241,
+          "end": 243,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 291,
+          "end": 293,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 307,
           "end": 309,
           "symbol": "C:fm",
           "original": "fm",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 323,
+          "end": 325,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 2101,
@@ -420702,6 +421572,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2850,
+          "end": 2852,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 3654,
           "end": 3656,
           "symbol": "C:ja",
@@ -420735,6 +421612,27 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4092,
+          "end": 4094,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 4410,
+          "end": 4412,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 4928,
+          "end": 4930,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 4970,
@@ -421500,7 +422398,7 @@
       "original": "sq.java",
       "renamed": "sq.java",
       "inputSha256": "55c4af7de36cde553fab688a62976f8d78ce332d50687a2b57dcbcd187eb777a",
-      "outputSha256": "d2fa24a396cff0b47bada283c97e0d54b9b4cb76bb0e961a46d20b42b4af534f",
+      "outputSha256": "207a1b47bdd0c35eec86d33a5c8a5bbb01eccf62045a42f9193b5abd10c0d43f",
       "edits": [
         {
           "start": 126,
@@ -421615,6 +422513,13 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 6984,
+          "end": 6991,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 7008,
           "end": 7010,
           "symbol": "C:cf",
@@ -421629,6 +422534,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 7635,
+          "end": 7642,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 7668,
           "end": 7670,
           "symbol": "C:cf",
@@ -421641,6 +422553,27 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 10609,
+          "end": 10611,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 10714,
+          "end": 10721,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 11215,
+          "end": 11222,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
         },
         {
           "start": 11325,
@@ -424587,7 +425520,7 @@
       "original": "ua.java",
       "renamed": "ua.java",
       "inputSha256": "112486f653fe356d919b8c046244946547cfd6c22b112943a4eee3c835630259",
-      "outputSha256": "68e4cd6237f61ee32143a168e019ff003e50aa6928b67f1aa8b43b40ebb717f3",
+      "outputSha256": "a80f03516ca9d04dbbdc8af9d307783a695c363c777095150deee63b648dd26c",
       "edits": [
         {
           "start": 2638,
@@ -424623,6 +425556,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 8748,
+          "end": 8750,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         },
         {
           "start": 8770,
@@ -427809,7 +428749,7 @@
       "original": "vk.java",
       "renamed": "vk.java",
       "inputSha256": "8b9dbbce6ad1c793224429c9c4c94f2d9aa5c3b30826eca8d388220254d38279",
-      "outputSha256": "c459cb156ab032864b1baca15ed5d8c73356519e2aa3940db1176dd0b67df92b",
+      "outputSha256": "5ccc776bc964a6dda0ca417499a24dffe8572e9c6782f99ccc353f27dbfddda6",
       "edits": [
         {
           "start": 131,
@@ -427896,6 +428836,20 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 7214,
+          "end": 7221,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 7248,
+          "end": 7255,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
           "start": 7289,
           "end": 7291,
           "symbol": "C:cf",
@@ -427980,6 +428934,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 13139,
+          "end": 13141,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 13188,
           "end": 13190,
           "symbol": "C:th",
@@ -428042,7 +429003,7 @@
       "original": "vm.java",
       "renamed": "vm.java",
       "inputSha256": "70138672d2457aceb40dbda482d21071b61450e0fcf2db9b9a62868229dea956",
-      "outputSha256": "af136cc727d5a60a4d3ae93022f358ca90b5e82a60e091abaa292823a2dc0eb3",
+      "outputSha256": "79cc76659a298b1283c57b273f72bc2d29acca830d264264616ad06ac4c4ca9c",
       "edits": [
         {
           "start": 146,
@@ -428073,11 +429034,39 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 1889,
+          "end": 1896,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 1900,
+          "end": 1902,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
           "start": 3028,
           "end": 3030,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3689,
+          "end": 3696,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 3700,
+          "end": 3702,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         }
       ]
     },
@@ -428495,8 +429484,15 @@
       "original": "wa.java",
       "renamed": "wa.java",
       "inputSha256": "470d8f383f7a452673e86a3369c4f4b097602c5279d56c98f89e0c1218dd8718",
-      "outputSha256": "ce8381542a54d6b2d3e326df252c93f33a68a267208ebd14f12cecccb79d3a71",
+      "outputSha256": "b1ffc952d72f9dc11fa40cef31a1c1652c2e7b0e082524405b9bee1711c5e90f",
       "edits": [
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
         {
           "start": 157,
           "end": 159,
@@ -429551,7 +430547,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "50c9e7725247e49ee0c867fb4be31b11c351d8b782ff8c3374c00908b9cce024",
-      "outputSha256": "8e0476f64ba5fd320326173b3afdb29950ae4c9b61fcf8877cfa3e0cae8043e6",
+      "outputSha256": "31f1ad50391d14b34db4a7cba62bea34fba63b8190fb4a19716ee45a91c4d24d",
       "edits": [
         {
           "start": 61,
@@ -429580,6 +430576,27 @@
           "symbol": "C:fm",
           "original": "fm",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 2821,
+          "end": 2823,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 3936,
+          "end": 3943,
+          "symbol": "F:cf.field_h:Lnl;",
+          "original": "field_h",
+          "renamed": "listener"
+        },
+        {
+          "start": 3947,
+          "end": 3949,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         }
       ]
     },
@@ -430272,7 +431289,7 @@
       "original": "wk.java",
       "renamed": "wk.java",
       "inputSha256": "2fd095f9de4b1bfddeba772b9ee131776e6c806eba91840114516a4672243d8e",
-      "outputSha256": "2de2849ad7d61f6ee112ec34e129a3d32ad202bc0f43fe34cb52eb206b4de5d1",
+      "outputSha256": "9b0f64c833d7ca5a322ae7b2e880010f3afa74b7424b352fe510971a373f5de4",
       "edits": [
         {
           "start": 64,
@@ -430280,6 +431297,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 419,
+          "end": 421,
+          "symbol": "C:nl",
+          "original": "nl",
+          "renamed": "WidgetActionListener"
         }
       ]
     },
@@ -430707,10 +431731,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/zombiedawnmulti"
     },
-    "rulesSha256": "1d183621a17a5d5e83897c4519160aadd5ae94fa68f26abcba49b44719cf0d3e",
+    "rulesSha256": "a759551448765cb26264bb96c9158bb92bab986a88f4fa857c0be39b369781f6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db",
-    "outputTreeSha256": "c6a8717be0d7becb1a0f4bf372c2ffdfa4c831b1488170d67b47ba85bed8d6cb",
+    "outputTreeSha256": "557a3f7e3ee95821401ceda6f5daca2400a9ca94292d8ca6dd2d307cb5634bf7",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

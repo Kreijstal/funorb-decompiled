@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hq implements nl, rk {
+class hq implements WidgetActionListener, rk {
     int field_g;
     int field_d;
     int field_f;

@@ -112,14 +112,14 @@ final class dg extends WidgetContainer implements in {
     }
 
     public dg() {
-        super(0, 0, 476, 225, (nl) null);
+        super(0, 0, 476, 225, (WidgetActionListener) null);
         this.field_P = new gn(en.field_a, (bj) null);
         this.field_N = new gn(oq.field_v, (bj) null);
         this.field_H = new gn(gf.field_a, (bj) null);
         oq var1 = new oq();
-        this.field_P.field_h = (nl) ((Object) var1);
-        this.field_N.field_h = (nl) ((Object) var1);
-        this.field_H.field_h = (nl) ((Object) var1);
+        this.field_P.listener = (WidgetActionListener) ((Object) var1);
+        this.field_N.listener = (WidgetActionListener) ((Object) var1);
+        this.field_H.listener = (WidgetActionListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;

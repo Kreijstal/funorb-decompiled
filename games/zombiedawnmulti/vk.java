@@ -214,8 +214,8 @@ final class vk extends rg {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (this.field_h != null) {
-          this.field_h.a(true, param1, -15112, param3, (UiWidget) (this));
+        if (this.listener != null) {
+          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
           return;
@@ -354,7 +354,7 @@ final class vk extends rg {
     }
 
     public vk() {
-        super(0, 0, ub.field_wb, kc.field_a, (nl) null, (bj) null);
+        super(0, 0, ub.field_wb, kc.field_a, (WidgetActionListener) null, (bj) null);
         this.field_H = new IntrusiveDeque();
     }
 

@@ -43,7 +43,7 @@ final class km extends sq {
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_Y.d(97);
-        var8 = (rk) ((Object) this.field_h);
+        var8 = (rk) ((Object) this.listener);
         var9 = this.field_y + param3;
         var10 = var8.a((UiWidget) (this), 0, param1) + (var8.a((UiWidget) (this), param0 - 99).a((byte) -111) >> 1);
         if (h.field_H == var6Lifetime1) {

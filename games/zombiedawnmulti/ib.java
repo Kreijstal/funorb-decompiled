@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib implements nl {
+final class ib implements WidgetActionListener {
     static int field_b;
     static int field_a;
 

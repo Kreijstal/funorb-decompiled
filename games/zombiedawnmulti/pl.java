@@ -415,7 +415,7 @@ abstract class pl extends UiWidget implements dh {
         field_D = null;
     }
 
-    pl(int param0, int param1, int param2, int param3, nl param4) {
+    pl(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
         super(param0, param1, param2, param3, param4, (bj) null);
     }
 
@@ -617,8 +617,8 @@ abstract class pl extends UiWidget implements dh {
         int var7;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 == param2 &&
-          this.field_h != null) {
-          this.field_h.a(true, param1, -15112, param3, (UiWidget) (this));
+          this.listener != null) {
+          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
           this.c(31);

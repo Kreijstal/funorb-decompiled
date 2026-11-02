@@ -18,7 +18,7 @@ class UiWidget extends IntrusiveNode {
     int field_z;
     bj field_A;
     int field_y;
-    nl field_h;
+    WidgetActionListener listener;
     mp field_k;
     static long field_g;
     String field_j;
@@ -448,10 +448,10 @@ class UiWidget extends IntrusiveNode {
           if (this.c(param2 + 98)) {
             discarded$3 = param1.append(" focused");
           }
-          if (this.field_h != null) {
+          if (this.listener != null) {
             discarded$4 = param1.append(" renderer=");
-            if (!(this.field_h instanceof UiWidget)) {
-              discarded$5 = param1.append(this.field_h);
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$5 = param1.append(this.listener);
               if (var6 != 0) {
                 param1 = this.a(7, param3, 1 + param0, param1);
               }
@@ -548,16 +548,16 @@ class UiWidget extends IntrusiveNode {
         if (param0 != -2) {
           this.field_n = -82;
           if (param2 == 0) {
-            if (this.field_h != null) {
-              this.field_h.a(true, param1, -15112, param3, this);
+            if (this.listener != null) {
+              this.listener.a(true, param1, -15112, param3, this);
             }
             return;
           }
           return;
         }
         if (param2 == 0) {
-          if (this.field_h != null) {
-            this.field_h.a(true, param1, -15112, param3, this);
+          if (this.listener != null) {
+            this.listener.a(true, param1, -15112, param3, this);
           }
           return;
         }
@@ -832,7 +832,7 @@ class UiWidget extends IntrusiveNode {
         this.field_q = 0;
     }
 
-    UiWidget(String param0, nl param1, bj param2) {
+    UiWidget(String param0, WidgetActionListener param1, bj param2) {
         RuntimeException runtimeException = null;
         rk var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -847,10 +847,10 @@ class UiWidget extends IntrusiveNode {
         this.field_q = 0;
         try {
           this.field_j = param0;
-          this.field_h = param1;
+          this.listener = param1;
           this.field_A = param2;
-          if (this.field_h instanceof rk) {
-            var4 = (rk) ((Object) this.field_h);
+          if (this.listener instanceof rk) {
+            var4 = (rk) ((Object) this.listener);
             this.field_n = var4.b(this, -126);
             this.field_w = var4.a((byte) 39, this);
           }
@@ -881,11 +881,11 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, nl param4, bj param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetActionListener param4, bj param5) {
         this.field_z = 0;
         this.field_q = 0;
         try {
-          this.field_h = param4;
+          this.listener = param4;
           this.field_A = param5;
           this.field_n = param2;
           this.field_y = param0;

@@ -169,7 +169,7 @@ final class qm extends WidgetContainer implements fi, in {
     }
 
     qm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (nl) null);
+        super(0, 0, 310, 190, (WidgetActionListener) null);
         el dupTemp$0 = null;
         el dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -229,15 +229,15 @@ final class qm extends WidgetContainer implements fi, in {
             this.field_J = new gn(oe.field_b, (bj) null);
             this.field_H.field_F = false;
           }
-          this.field_H.field_h = (nl) ((Object) new tb(10000536));
-          this.field_M.field_h = (nl) ((Object) new m(10000536));
+          this.field_H.listener = (WidgetActionListener) ((Object) new tb(10000536));
+          this.field_M.listener = (WidgetActionListener) ((Object) new m(10000536));
           var6 = new oq();
-          this.field_G.field_h = (nl) ((Object) var6);
+          this.field_G.listener = (WidgetActionListener) ((Object) var6);
           if (this.field_J != null) {
-            this.field_J.field_h = (nl) ((Object) var6);
+            this.field_J.listener = (WidgetActionListener) ((Object) var6);
           }
           if (null != this.field_P) {
-            this.field_P.field_h = (nl) ((Object) var6);
+            this.field_P.listener = (WidgetActionListener) ((Object) var6);
           }
           this.field_H.field_x = lh.field_e;
           if (null != this.field_P) {
@@ -248,9 +248,9 @@ final class qm extends WidgetContainer implements fi, in {
           } else {
             if (this.field_L) {
               this.field_J.field_x = de.field_a;
-              this.field_J.field_h = (nl) ((Object) new he());
+              this.field_J.listener = (WidgetActionListener) ((Object) new he());
             } else {
-              this.field_J.field_h = (nl) ((Object) new he());
+              this.field_J.listener = (WidgetActionListener) ((Object) new he());
             }
           }
           this.field_i = 15;

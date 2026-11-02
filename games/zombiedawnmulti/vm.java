@@ -65,7 +65,7 @@ final class vm extends al implements in {
           var4.field_i = 50;
           var4.field_w = 80;
           var4.field_y = 0;
-          var4.field_h = (nl) ((Object) new hq(cp.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.listener = (WidgetActionListener) ((Object) new hq(cp.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 70, var4);
           this.field_kb = this.a((byte) -103, (bj) (this), ic.field_f);
           return;
@@ -114,7 +114,7 @@ final class vm extends al implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new gn(param2, param1);
-          var4.field_h = (nl) ((Object) new oq());
+          var4.listener = (WidgetActionListener) ((Object) new oq());
           var5 = -6 + this.field_w;
           this.field_w = this.field_w + 38;
           var4.b(15, var5, 28972, -16 + (-14 + this.field_n), 30);

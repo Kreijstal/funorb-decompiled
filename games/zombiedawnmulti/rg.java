@@ -179,7 +179,7 @@ abstract class rg extends UiWidget implements dh {
         }
     }
 
-    rg(int param0, int param1, int param2, int param3, nl param4, bj param5) {
+    rg(int param0, int param1, int param2, int param3, WidgetActionListener param4, bj param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -329,8 +329,8 @@ abstract class rg extends UiWidget implements dh {
           this.f((byte) 0);
         }
         if (param2 == 0 &&
-          null != this.field_h) {
-          this.field_h.a(true, param1, -15112, param3, (UiWidget) (this));
+          null != this.listener) {
+          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (null != this.field_B) {
           this.field_B.a(param0 ^ 0, this.field_i + param1, param2, this.field_y + param3);

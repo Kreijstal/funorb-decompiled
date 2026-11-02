@@ -7,16 +7,16 @@ final class fj extends gn {
     private fj(String param0, bj param1) {
         this(param0, ra.field_o.field_n, param1);
         try {
-          this.field_h = ra.field_o.field_k;
+          this.listener = ra.field_o.field_k;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private fj(String param0, nl param1, bj param2) {
+    private fj(String param0, WidgetActionListener param1, bj param2) {
         super(param0, param1, param2);
         try {
-          this.field_h = ra.field_o.field_k;
+          this.listener = ra.field_o.field_k;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

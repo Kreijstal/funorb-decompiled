@@ -39,7 +39,7 @@ final class gl extends WidgetContainer implements in {
     }
 
     gl(jn param0) {
-        super(0, 0, 0, 0, (nl) null);
+        super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
@@ -75,13 +75,13 @@ final class gl extends WidgetContainer implements in {
             this.field_I = new gn[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new gn(this.field_G[var5], (bj) (this));
-              this.field_I[var5].field_h = (nl) ((Object) var4);
+              this.field_I[var5].listener = (WidgetActionListener) ((Object) var4);
               this.field_I[var5].field_x = wd.field_I;
               this.field_I[var5].b(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
             this.field_I[var3_int] = new gn(al.field_ab, (bj) (this));
-            this.field_I[var3_int].field_h = (nl) ((Object) var4);
+            this.field_I[var3_int].listener = (WidgetActionListener) ((Object) var4);
             this.field_I[var3_int].b(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
             this.b((byte) 55, this.field_I[var3_int]);
             return;

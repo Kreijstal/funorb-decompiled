@@ -30,7 +30,7 @@ abstract class df extends WidgetContainer {
     }
 
     df(vk param0, int param1, int param2) {
-        super(ub.field_wb - param1 >> 1, -param2 + kc.field_a >> 1, param1, param2, (nl) null);
+        super(ub.field_wb - param1 >> 1, -param2 + kc.field_a >> 1, param1, param2, (WidgetActionListener) null);
         try {
           this.field_N = param0;
           this.field_R = false;

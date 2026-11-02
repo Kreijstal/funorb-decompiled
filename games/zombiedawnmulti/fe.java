@@ -481,7 +481,7 @@ final class fe extends WidgetContainer implements co, in, jn {
     }
 
     public fe() {
-        super(0, 0, 496, 0, (nl) null);
+        super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_V = new on("", (bj) null, 12);
         this.field_M = new on("", (bj) null, 100);
         this.field_T = new on("", (bj) null, 100);
@@ -506,17 +506,17 @@ final class fe extends WidgetContainer implements co, in, jn {
         this.field_I.a((byte) -27, new qp(this.field_I, this.field_P));
         this.field_N.a((byte) -27, new bp(this.field_N));
         this.field_S.field_F = false;
-        this.field_S.field_h = (nl) ((Object) new oq());
-        this.field_O.field_h = (nl) ((Object) new he());
-        this.field_V.field_h = (nl) ((Object) new tb(10000536));
+        this.field_S.listener = (WidgetActionListener) ((Object) new oq());
+        this.field_O.listener = (WidgetActionListener) ((Object) new he());
+        this.field_V.listener = (WidgetActionListener) ((Object) new tb(10000536));
         tb dupTemp$0 = new tb(10000536);
-        this.field_T.field_h = (nl) ((Object) dupTemp$0);
-        this.field_M.field_h = (nl) ((Object) dupTemp$0);
-        this.field_N.field_h = (nl) ((Object) new tb(10000536));
-        this.field_H.field_h = (nl) ((Object) new ib());
+        this.field_T.listener = (WidgetActionListener) ((Object) dupTemp$0);
+        this.field_M.listener = (WidgetActionListener) ((Object) dupTemp$0);
+        this.field_N.listener = (WidgetActionListener) ((Object) new tb(10000536));
+        this.field_H.listener = (WidgetActionListener) ((Object) new ib());
         m dupTemp$1 = new m(10000536);
-        this.field_I.field_h = (nl) ((Object) dupTemp$1);
-        this.field_P.field_h = (nl) ((Object) dupTemp$1);
+        this.field_I.listener = (WidgetActionListener) ((Object) dupTemp$1);
+        this.field_P.listener = (WidgetActionListener) ((Object) dupTemp$1);
         String var2 = vl.a(wa.field_d, new String[]{this.h((byte) 3), this.g((byte) -109)}, 2);
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_M, var3, 73, InflaterDecompressor.field_i);

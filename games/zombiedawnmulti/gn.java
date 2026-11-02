@@ -16,7 +16,7 @@ class gn extends UiWidget {
     static String field_C;
     static String field_E;
 
-    gn(String param0, nl param1, bj param2) {
+    gn(String param0, WidgetActionListener param1, bj param2) {
         super(param0, param1, param2);
         this.field_J = true;
         this.field_F = true;
@@ -454,7 +454,7 @@ class gn extends UiWidget {
         this.field_J = true;
         this.field_F = true;
         this.field_H = false;
-        this.field_h = ra.field_o.field_a;
+        this.listener = ra.field_o.field_a;
     }
 
     static {
