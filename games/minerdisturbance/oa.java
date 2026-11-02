@@ -47,7 +47,7 @@ final class oa {
             var6_int = param1.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (g.a(param1.charAt(var5), (byte) -68)) {
+                if (ArchiveIndex.a(param1.charAt(var5), (byte) -68)) {
                   continue;
                 }
                 break;
@@ -84,7 +84,7 @@ final class oa {
               return stackIn_28_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (g.a(param1.charAt(var5Lifetime1), (byte) -68)) {
+              if (ArchiveIndex.a(param1.charAt(var5Lifetime1), (byte) -68)) {
                 continue;
               }
               break;

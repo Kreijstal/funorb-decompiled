@@ -4,7 +4,7 @@
 final class tf {
     static int field_b;
     static int field_a;
-    static ea[] field_c;
+    static Sprite[] field_c;
 
     final static void a(byte param0, vf param1, java.awt.Frame param2) {
         ia var3 = null;

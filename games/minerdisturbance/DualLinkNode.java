@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class al extends pi {
+class DualLinkNode extends IntrusiveNode {
     static ih field_r;
-    al field_q;
+    DualLinkNode field_q;
     long field_p;
     static String field_o;
     static volatile int field_n;
-    al field_t;
+    DualLinkNode field_t;
     static wh field_s;
 
     final void a(byte param0) {
@@ -40,7 +40,7 @@ class al extends pi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -10218) {
-            al.e(-101);
+            DualLinkNode.e(-101);
           }
           stackIn_3_0 = new jf(param1);
           return stackIn_3_0;
@@ -79,7 +79,7 @@ class al extends pi {
         try {
           if (param0 <= 72) {
             var3 = (String) null;
-            al.a(-123, (String) null);
+            DualLinkNode.a(-123, (String) null);
           }
           for (var1_int = 0; var1_int < 25; var1_int++) {
             if (dn.field_t[var1_int] != null) {
@@ -105,7 +105,7 @@ class al extends pi {
         }
     }
 
-    protected al() {
+    protected DualLinkNode() {
     }
 
     static {

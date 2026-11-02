@@ -6,7 +6,7 @@ final class im {
     static int field_c;
     static id[] field_a;
 
-    final static void a(bj param0, byte param1, bj param2) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
         try {
           uk.field_xb = param2;
           if (param1 <= 68) {
@@ -66,7 +66,7 @@ final class im {
           while (true) {
             if (0 > qh.field_a) {
               kj.field_a.field_o = 0;
-              if (!ta.a(param1 ^ 0, 1)) {
+              if (!IntrusiveDeque.a(param1 ^ 0, 1)) {
                 return false;
               }
               qh.field_a = kj.field_a.e((byte) 0);
@@ -191,8 +191,8 @@ final class im {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        sb var16 = null;
-        sb var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -204,11 +204,11 @@ final class im {
         int var4Lifetime5;
         var15 = MinerDisturbance.field_ab;
         try {
-          var16 = new sb(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.field_o = -2 + param1.length;
           sc.field_d = var17.e(-120);
-          db.field_b = new byte[sc.field_d][];
+          ClientException.field_b = new byte[sc.field_d][];
           jk.field_gb = new boolean[sc.field_d];
           oc.field_e = new int[sc.field_d];
           bg.field_d = new int[sc.field_d];
@@ -250,7 +250,7 @@ final class im {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            db.field_b[var4Lifetime5] = var20;
+            ClientException.field_b[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

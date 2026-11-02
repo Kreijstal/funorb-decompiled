@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class me {
-    static ea[] field_k;
+    static Sprite[] field_k;
     private byte[] field_o;
     private long field_g;
     private long field_b;
@@ -46,7 +46,7 @@ final class me {
         var5 = MinerDisturbance.field_ab;
         try {
           if (param0 != 8) {
-            field_k = (ea[]) null;
+            field_k = (Sprite[]) null;
           }
           var6 = new int[8];
           var3 = var6;
@@ -77,7 +77,7 @@ final class me {
 
     final long a(byte param0) {
         if (param0 >= -35) {
-          field_k = (ea[]) null;
+          field_k = (Sprite[]) null;
         }
         return this.field_b;
     }
@@ -488,6 +488,6 @@ final class me {
     static {
         field_h = 0;
         field_l = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
-        field_k = new ea[2];
+        field_k = new Sprite[2];
     }
 }

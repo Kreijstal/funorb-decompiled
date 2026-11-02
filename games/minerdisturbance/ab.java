@@ -9,8 +9,8 @@ final class ab {
     final static void a(int param0, int param1, wb param2) {
         int var5 = 0;
         int var6 = MinerDisturbance.field_ab;
-        ld var7 = sn.field_c;
-        ld var8 = var7;
+        CipherPacketBuffer var7 = sn.field_c;
+        CipherPacketBuffer var8 = var7;
         var8.d((byte) -82, param1);
         var8.field_o = var8.field_o + 1;
         int var4 = var8.field_o;

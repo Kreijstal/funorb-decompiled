@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends pi {
+final class lj extends IntrusiveNode {
     static String[][] field_u;
     static int field_r;
     static String field_s;
@@ -12,12 +12,12 @@ final class lj extends pi {
     String field_n;
     static int field_q;
 
-    final static db a(Throwable param0, String param1) {
-        db var2 = null;
-        if (!(param0 instanceof db)) {
-          var2 = new db(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (db) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
@@ -41,7 +41,7 @@ final class lj extends pi {
         }
     }
 
-    final static pb a(ld param0, byte param1) {
+    final static pb a(CipherPacketBuffer param0, byte param1) {
         int var7 = 0;
         pb stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -55,7 +55,7 @@ final class lj extends pi {
         pb var5 = null;
         int var6 = 0;
         int var8 = 0;
-        ld var9 = null;
+        CipherPacketBuffer var9 = null;
         var8 = MinerDisturbance.field_ab;
         try {
           var2_int = param0.c((byte) -70, 8);
@@ -63,8 +63,8 @@ final class lj extends pi {
             throw new IllegalStateException("" + var2_int);
           }
           if (param1 != -62) {
-            var9 = (ld) null;
-            lj.a((ld) null, (byte) 35);
+            var9 = (CipherPacketBuffer) null;
+            lj.a((CipherPacketBuffer) null, (byte) 35);
           }
           var3 = ql.a(param0, (byte) 100) ? 1 : 0;
           var4 = ql.a(param0, (byte) 100) ? 1 : 0;

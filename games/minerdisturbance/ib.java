@@ -3,7 +3,7 @@
  */
 final class ib implements uj {
     static ln[] field_c;
-    static ea field_a;
+    static Sprite field_a;
     static int[] field_b;
 
     public final String a(byte param0) {

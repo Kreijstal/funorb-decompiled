@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ok implements jm {
-    static ta field_b;
+    static IntrusiveDeque field_b;
     private long field_c;
     static String[][] field_d;
     static String field_a;
@@ -129,7 +129,7 @@ abstract class ok implements jm {
     abstract String e(int param0);
 
     static {
-        field_b = new ta();
+        field_b = new IntrusiveDeque();
         field_d = new String[][]{null, new String[]{"Cold: This is the measure of how cold you are. If you get too cold you'll freeze to death. You warm up when you're on dry land."}};
         field_a = "A Miner and a Survivor";
     }

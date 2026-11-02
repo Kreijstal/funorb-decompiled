@@ -8,7 +8,7 @@ final class ed {
     static String[][] field_b;
     static int[][] field_a;
     String[] field_d;
-    static ea[] field_g;
+    static Sprite[] field_g;
     static String field_f;
     boolean field_c;
     int field_e;
@@ -46,10 +46,10 @@ final class ed {
         RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          var3 = (sl) (vb.field_c.b(88));
+          var3 = (sl) (ArchiveProvider.field_c.b(88));
           while (var3 != null) {
             qd.a(4, (byte) -90, var3);
-            var3 = (sl) (vb.field_c.b((byte) 56));
+            var3 = (sl) (ArchiveProvider.field_c.b((byte) 56));
           }
           if (param0 == 4) {
             return;
@@ -94,7 +94,7 @@ final class ed {
           if (param2 == -1) {
             return;
           }
-          field_g = (ea[]) null;
+          field_g = (Sprite[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ final class ed {
           long dupTemp$1 = 0L;
           int var2 = 0;
           IOException var3 = null;
-          ld var4 = null;
+          CipherPacketBuffer var4 = null;
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (dk.field_b == null) {

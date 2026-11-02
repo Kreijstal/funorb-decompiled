@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ol {
-    static ea field_a;
+    static Sprite field_a;
     static String[][] field_b;
-    static ea field_c;
+    static Sprite field_c;
     static String field_d;
 
     final static void a(byte param0) {
@@ -123,7 +123,7 @@ final class ol {
           var2Lifetime1 += 2;
         }
         if (param1 != 8) {
-          field_c = (ea) null;
+          field_c = (Sprite) null;
         }
         if (param0 < -2) {
           var2Lifetime1++;

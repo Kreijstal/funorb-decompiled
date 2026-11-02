@@ -3,7 +3,7 @@
  */
 final class r {
     static String field_b;
-    static ea[] field_a;
+    static Sprite[] field_a;
     static int field_c;
     static ki field_d;
 
@@ -166,7 +166,7 @@ final class r {
         }
     }
 
-    final static ea[] a(byte param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = -91 / ((param0 + 27) / 36);
         return sc.a(3, param1, 1, param3, param4, 1, (byte) -81, param2, 1);
     }

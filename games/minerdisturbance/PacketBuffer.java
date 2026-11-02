@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-class sb extends pi {
+class PacketBuffer extends IntrusiveNode {
     int field_o;
     static Random field_t;
     static String[][] field_s;
     static String field_q;
-    static bj field_r;
+    static ResourceArchive field_r;
     static p field_n;
     byte[] field_u;
     static int field_p;
@@ -318,7 +318,7 @@ class sb extends pi {
 
     final int d(byte param0) {
         if (param0 != -54) {
-          sb.a(-98);
+          PacketBuffer.a(-98);
         }
         int fieldTemp$0 = this.field_o;
         this.field_o = this.field_o + 1;
@@ -504,7 +504,7 @@ class sb extends pi {
 
     final byte m(int param0) {
         if (param0 != 4) {
-          field_r = (bj) null;
+          field_r = (ResourceArchive) null;
         }
         int fieldTemp$0 = this.field_o;
         this.field_o = this.field_o + 1;
@@ -745,12 +745,12 @@ class sb extends pi {
         return var2 | var3;
     }
 
-    sb(int param0) {
+    PacketBuffer(int param0) {
         this.field_o = 0;
         this.field_u = lh.a((byte) 33, param0);
     }
 
-    sb(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_u = param0;
           this.field_o = 0;

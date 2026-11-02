@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class pd {
-    static ea field_a;
+    static Sprite field_a;
     private java.util.zip.Inflater field_c;
     static MinerDisturbance field_b;
 
@@ -30,12 +30,12 @@ final class pd {
         if (mn.field_x > 200) {
           var5 = (-mn.field_x + 250 << 8) / 50;
         }
-        vb.a(nn.field_c, 127);
+        ArchiveProvider.a(nn.field_c, 127);
         dj.a();
-        eh.d();
+        SoftwareRasterizer.d();
         oj.o(-1236579128);
         if (var5 < 256) {
-          eh.b(0, 0, eh.field_g, eh.field_c, 0, 256 - var5);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c, 0, 256 - var5);
         }
         tk.b(true);
         if (mn.field_x >= 150) {
@@ -72,7 +72,7 @@ final class pd {
         return;
     }
 
-    final void a(sb param0, boolean param1, byte[] param2) {
+    final void a(PacketBuffer param0, boolean param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -230,22 +230,22 @@ final class pd {
         if (param8 >= param13) {
           if (param8 >= param1) {
             if (param13 >= param1) {
-              of.a(param5, -5190, param0, param6, param7, param3, param1, param8, param13, param11, param10, eh.field_f, param4, param12, param14, param15, param2);
+              of.a(param5, -5190, param0, param6, param7, param3, param1, param8, param13, param11, param10, SoftwareRasterizer.field_f, param4, param12, param14, param15, param2);
             } else {
-              of.a(param5, -5190, param14, param12, param7, param3, param13, param8, param1, param11, param2, eh.field_f, param15, param6, param0, param4, param10);
+              of.a(param5, -5190, param14, param12, param7, param3, param13, param8, param1, param11, param2, SoftwareRasterizer.field_f, param15, param6, param0, param4, param10);
             }
           } else {
-            of.a(param14, -5190, param5, param7, param12, param4, param13, param1, param8, param10, param2, eh.field_f, param15, param6, param0, param3, param11);
+            of.a(param14, -5190, param5, param7, param12, param4, param13, param1, param8, param10, param2, SoftwareRasterizer.field_f, param15, param6, param0, param3, param11);
           }
         } else {
           if (param1 <= param13) {
             if (param1 <= param8) {
-              of.a(param0, param9 - 5130, param5, param7, param6, param15, param1, param13, param8, param2, param10, eh.field_f, param4, param12, param14, param3, param11);
+              of.a(param0, param9 - 5130, param5, param7, param6, param15, param1, param13, param8, param2, param10, SoftwareRasterizer.field_f, param4, param12, param14, param3, param11);
             } else {
-              of.a(param0, param9 - 5130, param14, param12, param6, param15, param8, param13, param1, param2, param11, eh.field_f, param3, param7, param5, param4, param10);
+              of.a(param0, param9 - 5130, param14, param12, param6, param15, param8, param13, param1, param2, param11, SoftwareRasterizer.field_f, param3, param7, param5, param4, param10);
             }
           } else {
-            of.a(param14, param9 ^ 5246, param0, param6, param12, param4, param8, param1, param13, param10, param11, eh.field_f, param3, param7, param5, param15, param2);
+            of.a(param14, param9 ^ 5246, param0, param6, param12, param4, param8, param1, param13, param10, param11, SoftwareRasterizer.field_f, param3, param7, param5, param15, param2);
           }
         }
         if (param9 != -60) {
@@ -281,7 +281,7 @@ final class pd {
             36 >= param3) {
             var4_int = 0;
             if (!param2) {
-              field_a = (ea) null;
+              field_a = (Sprite) null;
             }
             var5 = 0;
             var6 = 0;

@@ -3,7 +3,7 @@
  */
 final class vl extends em {
     int field_H;
-    static ea field_E;
+    static Sprite field_E;
     static String field_I;
     uh field_D;
     byte[] field_F;

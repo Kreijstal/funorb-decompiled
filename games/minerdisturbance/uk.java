@@ -4,7 +4,7 @@
 final class uk extends rg implements sh {
     private boolean field_yb;
     private ik field_Ab;
-    static bj field_xb;
+    static ResourceArchive field_xb;
     private boolean field_zb;
 
     final boolean n(int param0) {
@@ -36,7 +36,7 @@ final class uk extends rg implements sh {
 
     public final void a(int param0, byte param1, hc param2, int param3, int param4) {
         if (param1 != 6) {
-          field_xb = (bj) null;
+          field_xb = (ResourceArchive) null;
         }
         if (this.field_zb) {
           ie.a(false, true, -84);

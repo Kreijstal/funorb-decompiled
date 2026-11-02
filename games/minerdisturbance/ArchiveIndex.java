@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g {
+final class ArchiveIndex {
     static boolean field_o;
     byte[][] field_l;
     da[] field_n;
@@ -21,7 +21,7 @@ final class g {
     private int field_g;
     int[] field_t;
     private int[][] field_i;
-    static ea[] field_j;
+    static Sprite[] field_j;
 
     final static void a(int param0, int param1) {
         ud.field_e = param0 >> 4 & 3;
@@ -41,9 +41,9 @@ final class g {
     final static void a(boolean param0, int param1, boolean param2) {
         int var3 = -2 % ((46 - param1) / 51);
         if (param0) {
-          eh.b(0, 0, eh.field_g, eh.field_c, 0, 192);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c, 0, 192);
         } else {
-          eh.d();
+          SoftwareRasterizer.d();
         }
         pf.a(0, param0);
     }
@@ -112,7 +112,7 @@ final class g {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, ea[] param5) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4, Sprite[] param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -191,77 +191,77 @@ final class g {
             var19 = var15;
             if (param4 <= 13) {
               var23 = (java.applet.Applet) null;
-              g.a((java.applet.Applet) null, 77);
+              ArchiveIndex.a((java.applet.Applet) null, 77);
             }
             if (var18 > var19) {
               var19 = param1 * var8 / (var9 + var8) + param0;
               var18 = param1 * var8 / (var9 + var8) + param0;
             }
-            eh.b(fm.field_N);
+            SoftwareRasterizer.b(fm.field_N);
             if (param5[0] != null) {
-              eh.f(param2, param0, var16, var18);
+              SoftwareRasterizer.f(param2, param0, var16, var18);
               param5[0].f(param2, param0);
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (param5[2] != null) {
-              eh.f(var17, param0, var10, var18);
+              SoftwareRasterizer.f(var17, param0, var10, var18);
               param5[2].f(var13, param0);
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (param5[6] != null) {
-              eh.f(param2, var19, var16, var11);
+              SoftwareRasterizer.f(param2, var19, var16, var11);
               param5[6].f(param2, var15);
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (param5[8] != null) {
-              eh.f(var17, var19, var10, var11);
+              SoftwareRasterizer.f(var17, var19, var10, var11);
               param5[8].f(var13, var15);
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (param5[1] != null &&
               0 != param5[1].field_x) {
-              eh.f(var16, param0, var17, var18);
+              SoftwareRasterizer.f(var16, param0, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_x) {
                 param5[1].f(var20, param0);
               }
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (null != param5[7] &&
               param5[7].field_x != 0) {
-              eh.f(var16, var19, var17, var11);
+              SoftwareRasterizer.f(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].field_x) {
                 param5[7].f(var20Lifetime1, var15);
               }
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (param5[3] != null &&
               param5[3].field_A != 0) {
-              eh.f(param2, var18, var16, var19);
+              SoftwareRasterizer.f(param2, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param5[3].field_A) {
                 param5[3].f(param2, var20Lifetime2);
               }
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (param5[5] != null &&
               param5[5].field_A != 0) {
-              eh.f(var17, var18, var10, var19);
+              SoftwareRasterizer.f(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].field_A) {
                 param5[5].f(var13, var20Lifetime3);
               }
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             if (null != param5[4] &&
               param5[4].field_x != 0) {
               if (param5[4].field_A == 0) {
                 return;
               }
-              eh.f(var16, var18, var17, var19);
+              SoftwareRasterizer.f(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].field_A) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param5[4].field_x) {
                   param5[4].f(var21, var20Lifetime4);
                 }
               }
-              eh.a(fm.field_N);
+              SoftwareRasterizer.a(fm.field_N);
             }
             return;
           }
@@ -310,7 +310,7 @@ final class g {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        sb var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -326,7 +326,7 @@ final class g {
         int var13Lifetime1Lifetime1;
         var16 = MinerDisturbance.field_ab;
         try {
-          var17 = new sb(in.a(param1, param0 - 2));
+          var17 = new PacketBuffer(in.a(param1, param0 - 2));
           var4 = var17.d((byte) -54);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -500,7 +500,7 @@ final class g {
         field_e = null;
         field_j = null;
         if (param0 != 16704) {
-          g.a(121);
+          ArchiveIndex.a(121);
         }
     }
 
@@ -508,13 +508,13 @@ final class g {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        ea[] var3 = null;
+        Sprite[] var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
         try {
           if (param0 != -36) {
-            var3 = (ea[]) null;
-            g.a(25, -9, -119, -32, (byte) 41, (ea[]) null);
+            var3 = (Sprite[]) null;
+            ArchiveIndex.a(25, -9, -119, -32, (byte) 41, (Sprite[]) null);
           }
           for (var1_int = 0; var1_int < 35; var1_int++) {
             if (th.field_b[var1_int][cm.field_o] &&
@@ -535,7 +535,7 @@ final class g {
         boolean stackIn_6_0 = false;
         if (param1 != -68) {
           var3 = (java.applet.Applet) null;
-          g.a((java.applet.Applet) null, -49);
+          ArchiveIndex.a((java.applet.Applet) null, -49);
         }
         stackIn_6_0 = (param0 >= 48) && (param0 <= 57);
         return stackIn_6_0;
@@ -550,7 +550,7 @@ final class g {
         return fh.field_b == 11 ? true : false;
     }
 
-    g(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_b = gn.a(param0.length, param0, true);

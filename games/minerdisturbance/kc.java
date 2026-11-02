@@ -3,7 +3,7 @@
  */
 final class kc {
     static int field_d;
-    static ea field_a;
+    static Sprite field_a;
     static String field_e;
     static String field_c;
     static java.math.BigInteger field_b;

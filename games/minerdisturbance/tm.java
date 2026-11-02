@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends pi {
+final class tm extends IntrusiveNode {
     private int field_F;
     private int field_y;
     private int field_n;
@@ -56,7 +56,7 @@ final class tm extends pi {
 
     final void a(boolean param0) {
         try {
-          this.field_p = db.field_d;
+          this.field_p = ClientException.field_d;
           this.field_E = li.field_c;
           if (param0) {
             this.field_A = -66;
@@ -155,7 +155,7 @@ final class tm extends pi {
             field_I = 80;
           }
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_y > var23Lifetime2) {
               var24Lifetime1 = param0.field_n[var23Lifetime2];
@@ -170,7 +170,7 @@ final class tm extends pi {
                 if (stackIn_61_0 < stackIn_61_1) {
                   stackIn_70_0 = fb.field_b.length;
                   stackIn_70_1 = var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -258,7 +258,7 @@ final class tm extends pi {
                   stackIn_70_0 = fb.field_b.length;
                   stackIn_70_1 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_70_0 <= stackIn_70_1) {
                     break;
@@ -318,7 +318,7 @@ final class tm extends pi {
             return true;
           }
           var2_int = -li.field_c + this.field_E;
-          var3 = -db.field_d + this.field_p;
+          var3 = -ClientException.field_d + this.field_p;
           var4 = var2_int + this.field_z;
           var5 = this.field_C + var3;
           stackIn_25_0 = ((!(this.field_q >= 0) &&
@@ -435,13 +435,13 @@ final class tm extends pi {
           }
           if (this.field_D > 0 &&
             this.field_J > 0) {
-            ef.field_b[3].a(-li.field_c + (this.field_D - ef.field_b[3].field_x), (ef.field_b[3].field_A >> 2) + (this.field_J - db.field_d), ~this.field_G | this.field_G << 12);
+            ef.field_b[3].a(-li.field_c + (this.field_D - ef.field_b[3].field_x), (ef.field_b[3].field_A >> 2) + (this.field_J - ClientException.field_d), ~this.field_G | this.field_G << 12);
           }
           boolean decompiledFrameRemainder0 = true;
           var3 = -li.field_c + this.field_E;
-          var4 = -db.field_d + this.field_p;
+          var4 = -ClientException.field_d + this.field_p;
           var5 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
-          var6 = -db.field_d + 32 * hf.field_t + mf.field_i / 10;
+          var6 = -ClientException.field_d + 32 * hf.field_t + IsaacRandom.field_i / 10;
           var7 = 360;
           if (var5 > (-96 + (this.field_z + var3) - 32) &&
             (45 + (this.field_z + var3 - (-var7 - 96))) > var5 &&
@@ -473,12 +473,12 @@ final class tm extends pi {
             if (var14 < 0) {
               var14 = 0;
             }
-            if (eh.field_g - 1 < var12) {
-              var17 = var12 + 1 - eh.field_g;
-              var12 = -1 + eh.field_g;
+            if (SoftwareRasterizer.field_g - 1 < var12) {
+              var17 = var12 + 1 - SoftwareRasterizer.field_g;
+              var12 = -1 + SoftwareRasterizer.field_g;
             }
-            if (var14 > -1 + eh.field_c) {
-              var14 = eh.field_c - 1;
+            if (var14 > -1 + SoftwareRasterizer.field_c) {
+              var14 = SoftwareRasterizer.field_c - 1;
             }
             while (var14 < var13) {
               var9 = var9 + var16;
@@ -491,7 +491,7 @@ final class tm extends pi {
               while (var18 < var12) {
                 incrementValue$0 = var9;
                 var9++;
-                m.field_j[incrementValue$0] = eh.field_f[var14 * eh.field_g + var18];
+                GameAppletShell.field_j[incrementValue$0] = SoftwareRasterizer.field_f[var14 * SoftwareRasterizer.field_g + var18];
                 var18++;
               }
               var9 = var9 + var17;
@@ -518,11 +518,11 @@ final class tm extends pi {
             }
             var11Lifetime1 = 60 + var7 - var9Lifetime1;
             var12Lifetime1 = -var10Lifetime1 + 60 + this.field_A;
-            g.a(this.field_C + var4 + var12Lifetime1 / 2, var10Lifetime1, var3 + (this.field_z + var11Lifetime1 / 2), var9Lifetime1, (byte) 31, ah.field_c);
+            ArchiveIndex.a(this.field_C + var4 + var12Lifetime1 / 2, var10Lifetime1, var3 + (this.field_z + var11Lifetime1 / 2), var9Lifetime1, (byte) 31, ah.field_c);
           }
           if (stackIn_53_0 == 0 ||
             var28 != 0) {
-            g.a(var4 + this.field_C, 60 + this.field_A, var3 + this.field_z, var7 + 60, (byte) 93, hd.field_d);
+            ArchiveIndex.a(var4 + this.field_C, 60 + this.field_A, var3 + this.field_z, var7 + 60, (byte) 93, hd.field_d);
           }
           var9Lifetime2 = 0;
           var10Lifetime2 = 30 + this.field_z + var3;
@@ -625,15 +625,15 @@ final class tm extends pi {
               var20 = 0;
             }
             var22 = 0;
-            if (-1 + eh.field_g < var17Lifetime1) {
-              var22 = -eh.field_g + 1 + var17Lifetime1;
-              var17Lifetime1 = -1 + eh.field_g;
+            if (-1 + SoftwareRasterizer.field_g < var17Lifetime1) {
+              var22 = -SoftwareRasterizer.field_g + 1 + var17Lifetime1;
+              var17Lifetime1 = -1 + SoftwareRasterizer.field_g;
             }
             if (0 > var19) {
               var19 = 0;
             }
-            if (eh.field_c - 1 < var19) {
-              var19 = -1 + eh.field_c;
+            if (SoftwareRasterizer.field_c - 1 < var19) {
+              var19 = -1 + SoftwareRasterizer.field_c;
             }
             while (true) {
               if (var19 >= var18Lifetime1) {
@@ -647,11 +647,11 @@ final class tm extends pi {
               while (var17Lifetime1 > var23) {
                 var24 = ec.field_b[var14Lifetime1];
                 var25 = -var24 + 256;
-                var26 = eh.field_f[eh.field_g * var19 + var23];
+                var26 = SoftwareRasterizer.field_f[SoftwareRasterizer.field_g * var19 + var23];
                 incrementValue$1 = var14Lifetime1;
                 var14Lifetime1++;
-                var27 = m.field_j[incrementValue$1];
-                eh.field_f[var23 + eh.field_g * var19] = c.a(16711680, var24 * c.a(var27, 65280) + c.a(var26, 65280) * var25) + c.a(-16711936, var25 * c.a(var26, 16711935) + c.a(var27, 16711935) * var24) >> 8;
+                var27 = GameAppletShell.field_j[incrementValue$1];
+                SoftwareRasterizer.field_f[var23 + SoftwareRasterizer.field_g * var19] = c.a(16711680, var24 * c.a(var27, 65280) + c.a(var26, 65280) * var25) + c.a(-16711936, var25 * c.a(var26, 16711935) + c.a(var27, 16711935) * var24) >> 8;
                 var23++;
               }
               var14Lifetime1 = var14Lifetime1 + var22;
@@ -740,11 +740,11 @@ final class tm extends pi {
             param1 = param1 - li.field_c;
           }
           var8 = 20 + this.field_A;
-          var9 = -var8 + (-64 + 32 * hf.field_t) - db.field_d;
+          var9 = -var8 + (-64 + 32 * hf.field_t) - ClientException.field_d;
           this.field_o = 32 * ca.field_k - li.field_c - 180;
-          if (!(db.field_d + var9 >= 32) ||
+          if (!(ClientException.field_d + var9 >= 32) ||
             this.field_B) {
-            var9 = 64 + (32 * hf.field_t - db.field_d);
+            var9 = 64 + (32 * hf.field_t - ClientException.field_d);
           }
           this.field_z = -var7;
           this.field_C = 480 + var8;
@@ -762,7 +762,7 @@ final class tm extends pi {
           this.field_r = var9;
           this.field_w = 180 + (this.field_r + this.field_z);
           this.field_E = li.field_c;
-          this.field_p = db.field_d;
+          this.field_p = ClientException.field_d;
           this.field_n = this.field_C + this.field_o + this.field_A / 2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

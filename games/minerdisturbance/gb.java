@@ -5,14 +5,14 @@ import java.util.*;
 
 final class gb implements Iterator {
     static int field_e;
-    static ea field_a;
+    static Sprite field_a;
     private sd field_f;
-    private pi field_c;
+    private IntrusiveNode field_c;
     private int field_b;
-    private pi field_d;
+    private IntrusiveNode field_d;
 
     public final boolean hasNext() {
-        pi[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
         var2 = MinerDisturbance.field_ab;
@@ -56,13 +56,13 @@ final class gb implements Iterator {
               }
               var1 = (sa) (hj.field_b.b((byte) 56));
             }
-            if (null != m.field_c) {
-              var1Lifetime1 = (sa) (m.field_c.b(114));
+            if (null != GameAppletShell.field_c) {
+              var1Lifetime1 = (sa) (GameAppletShell.field_c.b(114));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_p.c(122)) {
                   var1Lifetime1.b(34);
                 }
-                var1Lifetime1 = (sa) (m.field_c.b((byte) 56));
+                var1Lifetime1 = (sa) (GameAppletShell.field_c.b((byte) 56));
               }
             }
           }
@@ -92,9 +92,9 @@ final class gb implements Iterator {
     }
 
     public final Object next() {
-        pi[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
-        pi var1;
+        IntrusiveNode var1;
         int var2;
         var2 = MinerDisturbance.field_ab;
         if (this.field_d != this.field_f.field_b[this.field_b - 1]) {
@@ -124,7 +124,7 @@ final class gb implements Iterator {
           this.field_b = 1;
           return;
         }
-        this.field_c = (pi) null;
+        this.field_c = (IntrusiveNode) null;
         this.field_d = this.field_f.field_b[0].field_f;
         this.field_b = 1;
     }

@@ -31,7 +31,7 @@ final class pa {
 
     final static void a(boolean param0, String param1, float param2) {
         try {
-          bj.field_c = param1;
+          ResourceArchive.field_c = param1;
           oe.field_d = param2;
           if (!param0) {
             String var4 = (String) null;

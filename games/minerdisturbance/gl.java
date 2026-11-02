@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends pi {
+final class gl extends IntrusiveNode {
     static rc[] field_u;
     int[] field_s;
     int field_n;

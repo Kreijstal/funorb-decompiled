@@ -6,17 +6,17 @@ final class hj {
     static sj field_e;
     String field_g;
     int field_d;
-    bj field_j;
+    ResourceArchive field_j;
     static String field_a;
-    static ta field_k;
+    static IntrusiveDeque field_k;
     String field_m;
-    static ea field_h;
+    static Sprite field_h;
     private static int[] field_c;
     static char[] field_n;
-    static ta field_b;
+    static IntrusiveDeque field_b;
     static hg field_f;
     static hg field_o;
-    static bj field_i;
+    static ResourceArchive field_i;
 
     final static String a(byte param0) {
         int var2 = 0;
@@ -58,15 +58,15 @@ final class hj {
         return var1;
     }
 
-    final static void a(bj param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         pb var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        ld var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        ld var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -78,7 +78,7 @@ final class hj {
           if (param1 != 347664612) {
             return;
           }
-          var8 = new ld(param0.a("", 0, "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param0.a("", 0, "logo.fo3d"));
           var10 = var8;
           var3 = var10.d((byte) -54);
           var10.f((byte) 16);
@@ -144,7 +144,7 @@ final class hj {
         int var1 = 0;
         field_e = new sj("usename");
         field_a = "Just play";
-        field_k = new ta();
+        field_k = new IntrusiveDeque();
         field_c = new int[98304];
         for (var0 = 92682; var0 >= 46341; var0--) {
           var4 = (long)(-1 + (var0 << 1));
@@ -159,6 +159,6 @@ final class hj {
           }
         }
         field_n = new char[128];
-        field_b = new ta();
+        field_b = new IntrusiveDeque();
     }
 }

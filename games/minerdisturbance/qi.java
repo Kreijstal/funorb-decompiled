@@ -57,7 +57,7 @@ final class qi extends cb {
           km.field_b = param6;
           wm.field_d = param0;
           ic.field_l = ci.field_e;
-          g.field_o = param3;
+          ArchiveIndex.field_o = param3;
           vk.field_g = null;
           me.field_j = param1;
           return true;

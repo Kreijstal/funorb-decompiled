@@ -5,20 +5,20 @@ final class je {
     private static int[] field_K;
     static double field_l;
     static rb field_O;
-    static ea[][] field_j;
-    static ea[] field_w;
+    static Sprite[][] field_j;
+    static Sprite[] field_w;
     private static int field_F;
-    static ea[] field_y;
+    static Sprite[] field_y;
     private static int field_f;
     private static int field_o;
     boolean field_E;
-    static ea[] field_L;
+    static Sprite[] field_L;
     int field_r;
-    static ea[][] field_z;
+    static Sprite[][] field_z;
     private static int field_m;
     boolean field_e;
     private int field_Q;
-    static ea[] field_c;
+    static Sprite[] field_c;
     boolean field_S;
     static int field_t;
     private int field_s;
@@ -27,29 +27,29 @@ final class je {
     private static int field_M;
     static boolean field_J;
     int field_U;
-    static ea[][] field_p;
-    static ea[][] field_x;
-    static ea[] field_n;
+    static Sprite[][] field_p;
+    static Sprite[][] field_x;
+    static Sprite[] field_n;
     private static int field_W;
-    static ea[] field_C;
-    static ea[][] field_P;
-    static ea[] field_g;
+    static Sprite[] field_C;
+    static Sprite[][] field_P;
+    static Sprite[] field_g;
     boolean field_b;
     static int field_H;
-    static ea[][] field_d;
+    static Sprite[][] field_d;
     static int[] field_N;
     static int field_u;
     boolean field_a;
     private static int field_D;
-    static ea[] field_B;
+    static Sprite[] field_B;
     int field_q;
     static je[][] field_I;
-    static ea[] field_k;
-    static ea[][] field_R;
+    static Sprite[] field_k;
+    static Sprite[][] field_R;
     int field_i;
     private static int field_T;
     private static int[][] field_h;
-    static ea[] field_G;
+    static Sprite[] field_G;
     boolean field_V;
     private static String field_X;
 
@@ -164,7 +164,7 @@ final class je {
         int var15Lifetime3;
         if (field_T >= 0) {
           var2 = field_o * 32 - li.field_c;
-          var3 = field_f * 32 - db.field_d;
+          var3 = field_f * 32 - ClientException.field_d;
           je.e().f(var2, var3);
         }
         if (cm.field_o == 0) {
@@ -172,8 +172,8 @@ final class je {
         }
         var2Lifetime1 = li.field_c / 32;
         var3Lifetime1 = (640 + li.field_c) / 32;
-        var4 = db.field_d / 32 - 1;
-        var5 = (640 + db.field_d) / 32;
+        var4 = ClientException.field_d / 32 - 1;
+        var5 = (640 + ClientException.field_d) / 32;
         if (var2Lifetime1 < 1) {
           var2Lifetime1 = 1;
         }
@@ -189,7 +189,7 @@ final class je {
         for (var9 = var4 - 1; var9 <= var5 + 1; var9++) {
           for (var10 = var2Lifetime1 - 1; var10 <= var3Lifetime1 + 1; var10++) {
             var7 = var10 * 32 - li.field_c;
-            var8 = var9 * 32 - db.field_d;
+            var8 = var9 * 32 - ClientException.field_d;
             if (var7 > -64 &&
               var8 > -64 &&
               var7 < 704 &&
@@ -338,16 +338,16 @@ final class je {
                   pj.field_e[var15Lifetime3].f(var7, var8 + 16);
                 }
                 if (var11 != 0) {
-                  eh.e(var7 - 8, var8, 8, 32, 1642509);
+                  SoftwareRasterizer.e(var7 - 8, var8, 8, 32, 1642509);
                 }
                 if (var12 != 0) {
-                  eh.e(var7 + 32, var8, 8, 32, 1642509);
+                  SoftwareRasterizer.e(var7 + 32, var8, 8, 32, 1642509);
                 }
                 if (var13 != 0) {
-                  eh.e(var7, var8 - 11, 32, 11, 1642509);
+                  SoftwareRasterizer.e(var7, var8 - 11, 32, 11, 1642509);
                 }
                 if (var14 != 0) {
-                  eh.e(var7, var8 + 32, 32, 8, 1642509);
+                  SoftwareRasterizer.e(var7, var8 + 32, 32, 8, 1642509);
                 }
               }
             }
@@ -430,7 +430,7 @@ final class je {
         }
     }
 
-    private final static ea e() {
+    private final static Sprite e() {
         if (field_T == 0) {
           return il.field_s;
         }
@@ -457,7 +457,7 @@ final class je {
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
         int var2;
-        ea var3;
+        Sprite var3;
         int var4;
         int var5;
         int var6;
@@ -490,10 +490,10 @@ final class je {
         int var35;
         int var36;
         int var37;
-        ea[] var38;
-        ea[] var39;
-        ea[] var40;
-        ea[] var41;
+        Sprite[] var38;
+        Sprite[] var39;
+        Sprite[] var40;
+        Sprite[] var41;
         int var8Lifetime1;
         int var9Lifetime1;
         int var18Lifetime1;
@@ -522,8 +522,8 @@ final class je {
         var3 = je.a(param0, param1, var2 != 0);
         var4 = li.field_c / 32;
         var5 = (640 + li.field_c) / 32;
-        var6 = db.field_d / 32 - 1;
-        var7 = (640 + db.field_d) / 32;
+        var6 = ClientException.field_d / 32 - 1;
+        var7 = (640 + ClientException.field_d) / 32;
         if (var4 < 1) {
           var4 = 1;
         }
@@ -537,7 +537,7 @@ final class je {
           var7 = field_t - 2;
         }
         var8 = 512 - li.field_c;
-        var9 = -db.field_d;
+        var9 = -ClientException.field_d;
         hj.field_h.f(var8, var9);
         field_O.a(var5, var6, var4, var7, 17761, field_I);
         var10 = cm.field_o;
@@ -583,7 +583,7 @@ final class je {
           for (var32 = var4 - 1; var32 <= var5 + 1; var32++) {
             var15 = field_I[var32][var16];
             var8Lifetime1 = var32 * 32 - li.field_c;
-            var9Lifetime1 = var16 * 32 - db.field_d;
+            var9Lifetime1 = var16 * 32 - ClientException.field_d;
             if (var8Lifetime1 > -64 &&
               var9Lifetime1 > -64 &&
               var8Lifetime1 < 704 &&
@@ -860,19 +860,19 @@ final class je {
                     break;
                   }
                   var34Lifetime1 = var34Lifetime1 * 8;
-                  eh.a(var8Lifetime1 + param0, var9Lifetime1 + param1 + 32 - var34Lifetime1, var8Lifetime1 + param0 + 32, var9Lifetime1 + param1 + 32);
+                  SoftwareRasterizer.a(var8Lifetime1 + param0, var9Lifetime1 + param1 + 32 - var34Lifetime1, var8Lifetime1 + param0 + 32, var9Lifetime1 + param1 + 32);
                   for (var35Lifetime1Lifetime1 = 0; var35Lifetime1Lifetime1 < 3; var35Lifetime1Lifetime1++) {
                     var36Lifetime1 = var8Lifetime1 + param0 + 1 + ll.a((byte) -73, 30);
                     var37Lifetime1 = var9Lifetime1 + param1 + 1 + ll.a((byte) -73, 30);
                     if (var35Lifetime1Lifetime1 == 0) {
-                      eh.e(var36Lifetime1 - 1, var37Lifetime1, 3, 16777215);
-                      eh.g(var36Lifetime1, var37Lifetime1 - 1, 3, 16777215);
+                      SoftwareRasterizer.e(var36Lifetime1 - 1, var37Lifetime1, 3, 16777215);
+                      SoftwareRasterizer.g(var36Lifetime1, var37Lifetime1 - 1, 3, 16777215);
                     } else {
-                      eh.d(var36Lifetime1 - 1, var37Lifetime1 - 1, var36Lifetime1 + 1, var37Lifetime1 + 1, 16777215);
-                      eh.d(var36Lifetime1 + 1, var37Lifetime1 - 1, var36Lifetime1 - 1, var37Lifetime1 + 1, 16777215);
+                      SoftwareRasterizer.d(var36Lifetime1 - 1, var37Lifetime1 - 1, var36Lifetime1 + 1, var37Lifetime1 + 1, 16777215);
+                      SoftwareRasterizer.d(var36Lifetime1 + 1, var37Lifetime1 - 1, var36Lifetime1 - 1, var37Lifetime1 + 1, 16777215);
                     }
                   }
-                  eh.a();
+                  SoftwareRasterizer.a();
                 }
               }
             }
@@ -1083,7 +1083,7 @@ final class je {
         int var9Lifetime3;
         if (qn.field_J != null &&
           field_J) {
-          var3 = field_D + param1 - db.field_d;
+          var3 = field_D + param1 - ClientException.field_d;
           var4 = 0;
           var5 = (int)(Math.sin(field_l) * 80.0);
           var6 = te.field_c[0].field_x * 80 / 100;
@@ -1123,7 +1123,7 @@ final class je {
         }
     }
 
-    private final static ea a(int param0, int param1, boolean param2) {
+    private final static Sprite a(int param0, int param1, boolean param2) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_16_0 = 0;
@@ -1137,10 +1137,10 @@ final class je {
         int var10;
         int var11;
         Object var12;
-        ea var12_ref;
-        ea var13;
+        Sprite var12_ref;
+        Sprite var13;
         var3 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
-        var4 = hf.field_t * 32 - db.field_d + mf.field_i / 10;
+        var4 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
         var5 = ca.c(-2302) ? 1 : 0;
         if (var5 == 0) {
           stackIn_6_0 = (tb.field_c >= 0) ? 1 : 0;
@@ -1189,12 +1189,12 @@ final class je {
           if (di.field_K != 1) {
             if (var5 != 0 &&
               var10 != 0) {
-              ((ea) (var7)).b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
+              ((Sprite) (var7)).b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
             } else {
-              ((ea) (var7)).h(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+              ((Sprite) (var7)).h(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
             }
             if (var9 != 0) {
-              var13 = ((ea) (var7)).e();
+              var13 = ((Sprite) (var7)).e();
               var7 = var13;
               var13.d(40, 40, 80);
               var13.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
@@ -1218,12 +1218,12 @@ final class je {
           } else {
             if (var5 != 0 &&
               var10 != 0) {
-              ((ea) (var7)).b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
+              ((Sprite) (var7)).b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
             } else {
-              ((ea) (var7)).f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+              ((Sprite) (var7)).f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
             }
             if (var9 != 0) {
-              var12_ref = ((ea) (var7)).c();
+              var12_ref = ((Sprite) (var7)).c();
               var7 = var12_ref;
               var12_ref.d(40, 40, 80);
               var12_ref.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
@@ -1252,14 +1252,14 @@ final class je {
           }
           if (var5 == 0 &&
             var10 != 0) {
-            eh.f(var3 + ll.a((byte) -73, 32), var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4), 8, 16711680, 110);
-            eh.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 64, 6, re.field_c);
-            eh.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 64, 6, re.field_c);
-            eh.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 80, 4, re.field_c);
-            eh.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 80, 4, re.field_c);
+            SoftwareRasterizer.f(var3 + ll.a((byte) -73, 32), var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4), 8, 16711680, 110);
+            SoftwareRasterizer.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 64, 6, re.field_c);
+            SoftwareRasterizer.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 64, 6, re.field_c);
+            SoftwareRasterizer.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 80, 4, re.field_c);
+            SoftwareRasterizer.a(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 80, 4, re.field_c);
           }
         }
-        return (ea) (var7);
+        return (Sprite) (var7);
     }
 
     private final static void c(int param0, int param1) {
@@ -1314,8 +1314,8 @@ final class je {
         int var25Lifetime1;
         var2 = li.field_c / 32;
         var3 = (640 + li.field_c) / 32;
-        var4 = db.field_d / 32 - 1;
-        var5 = (640 + db.field_d) / 32;
+        var4 = ClientException.field_d / 32 - 1;
+        var5 = (640 + ClientException.field_d) / 32;
         if (var2 < 1) {
           var2 = 1;
         }
@@ -1329,7 +1329,7 @@ final class je {
           var5 = field_t - 2;
         }
         var6 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
-        var7 = hf.field_t * 32 - db.field_d + mf.field_i / 10;
+        var7 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
         if (!wm.field_e) {
           stackIn_14_0 = (!vi.field_h) ? 1 : 0;
         } else {
@@ -1340,7 +1340,7 @@ final class je {
           for (var11 = var2 - 1; var11 <= var3 + 1; var11++) {
             var9 = field_I[var11][var10];
             var6Lifetime1 = var11 * 32 - li.field_c;
-            var7Lifetime1 = var10 * 32 - db.field_d;
+            var7Lifetime1 = var10 * 32 - ClientException.field_d;
             if (var6Lifetime1 > -64 &&
               var7Lifetime1 > -64 &&
               var6Lifetime1 < 704 &&
@@ -1406,9 +1406,9 @@ final class je {
                 var22 == var23 &&
                 var23 == var24) {
                 if (var22 != 0) {
-                  eh.b(var6Lifetime1 + param0, var7Lifetime1 + param1, 32, 32, 0, 256 - var21);
+                  SoftwareRasterizer.b(var6Lifetime1 + param0, var7Lifetime1 + param1, 32, 32, 0, 256 - var21);
                 } else {
-                  eh.e(var6Lifetime1 + param0, var7Lifetime1 + param1, 32, 32, 0);
+                  SoftwareRasterizer.e(var6Lifetime1 + param0, var7Lifetime1 + param1, 32, 32, 0);
                 }
               } else {
                 var25 = var6Lifetime1 + param0;
@@ -1423,34 +1423,34 @@ final class je {
                 var34 = 255;
                 var35 = 0;
                 var36 = 255;
-                if (var25 < eh.field_a) {
-                  var31 = var31 - (eh.field_a - var25);
-                  var35 = 8 * (eh.field_a - var25);
+                if (var25 < SoftwareRasterizer.field_a) {
+                  var31 = var31 - (SoftwareRasterizer.field_a - var25);
+                  var35 = 8 * (SoftwareRasterizer.field_a - var25);
                   var36 = 255 - var35;
-                  var25 = eh.field_a;
+                  var25 = SoftwareRasterizer.field_a;
                 }
-                if (var26 < eh.field_d) {
-                  var32 = var32 - (eh.field_d - var26);
-                  var33 = 8 * (eh.field_d - var26);
+                if (var26 < SoftwareRasterizer.field_d) {
+                  var32 = var32 - (SoftwareRasterizer.field_d - var26);
+                  var33 = 8 * (SoftwareRasterizer.field_d - var26);
                   var34 = 255 - var33;
-                  var26 = eh.field_d;
+                  var26 = SoftwareRasterizer.field_d;
                 }
-                if (var25 + var31 > eh.field_k) {
-                  var31 = eh.field_k - var25;
+                if (var25 + var31 > SoftwareRasterizer.field_k) {
+                  var31 = SoftwareRasterizer.field_k - var25;
                 }
-                if (var26 + var32 > eh.field_e) {
-                  var32 = eh.field_e - var26;
+                if (var26 + var32 > SoftwareRasterizer.field_e) {
+                  var32 = SoftwareRasterizer.field_e - var26;
                 }
-                var37 = eh.field_g - var31;
-                var38 = var25 + eh.field_g * var26;
-                je.a(eh.field_f, 0, 0, var37, var33, var34, var27, var28, var29, var30, var38, var31, var32, var35, var36);
+                var37 = SoftwareRasterizer.field_g - var31;
+                var38 = var25 + SoftwareRasterizer.field_g * var26;
+                je.a(SoftwareRasterizer.field_f, 0, 0, var37, var33, var34, var27, var28, var29, var30, var38, var31, var32, var35, var36);
               }
               if (var8 != 0 &&
                 var9.field_U >= 0 && (!var9.field_b ||
                 qe.field_b[9])) {
                 var25Lifetime1 = var9.field_U;
                 if (!field_J ||
-                  !(var7Lifetime1 >= field_D - db.field_d)) {
+                  !(var7Lifetime1 >= field_D - ClientException.field_d)) {
                   if (var9.field_b) {
                     field_w[var25Lifetime1 + var9.field_Q * 6].f(var6Lifetime1 + param0, var7Lifetime1 + param1, 82);
                   } else {
@@ -1662,7 +1662,7 @@ final class je {
         return field_O.a((byte) -114, (param1 << 2) + param3, (param0 << 2) + param2);
     }
 
-    private final static void a(int param0, int param1, ea param2) {
+    private final static void a(int param0, int param1, Sprite param2) {
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
         int var3;
@@ -1670,12 +1670,12 @@ final class je {
         int var5;
         int var6;
         int var7;
-        ea var8_ref_ea;
+        Sprite var8_ref_ea;
         int var8;
         int var9;
         int var10;
         int var11;
-        ea var12_ref_ea;
+        Sprite var12_ref_ea;
         int var12;
         int var13;
         int var14;
@@ -1701,14 +1701,14 @@ final class je {
         }
         var5 = stackIn_9_0;
         var6 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
-        var7 = hf.field_t * 32 - db.field_d + mf.field_i / 10;
+        var7 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
         if (var3 != 0 &&
           var4 == 0) {
           if (fn.a(true)) {
             var8 = ca.field_k * 4 + sk.field_d / 80 - 1;
-            var9 = hf.field_t * 4 + mf.field_i / 80 - 1;
+            var9 = hf.field_t * 4 + IsaacRandom.field_i / 80 - 1;
             var10 = var8 * 8 - li.field_c;
-            var11 = var9 * 8 - db.field_d;
+            var11 = var9 * 8 - ClientException.field_d;
             if (ch.field_h != 5) {
               if (var5 == 0) {
                 var12_ref_ea = eg.field_m[-tb.field_c];
@@ -1720,10 +1720,10 @@ final class je {
             }
             for (var13 = 0; var13 <= 5; var13++) {
               var14 = var9;
-              var11Lifetime3 = var9 * 8 - db.field_d;
+              var11Lifetime3 = var9 * 8 - ClientException.field_d;
               for (var15 = 0; var15 <= 5; var15++) {
                 if (field_O.a(var8, var14, (byte) 61)) {
-                  eh.a(var10, var11Lifetime3, var10 + 8, var11Lifetime3 + 8);
+                  SoftwareRasterizer.a(var10, var11Lifetime3, var10 + 8, var11Lifetime3 + 8);
                   if (di.field_K >= 0) {
                     param2.e(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 1);
                     var12_ref_ea.e(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 11243013);
@@ -1738,7 +1738,7 @@ final class je {
               var10 += 8;
               var8++;
             }
-            eh.a();
+            SoftwareRasterizer.a();
           } else {
             if (ch.field_h != 5 &&
               var5 != 0 &&
@@ -1765,24 +1765,24 @@ final class je {
                 if (var10Lifetime1 < 250 &&
                   var10Lifetime1 / 10 % 2 == 0) {
                   var11Lifetime1 = 16711680;
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 100 &&
                   var10Lifetime1 / 10 % 2 == 1) {
                   var11Lifetime1 = 16776960;
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 50 &&
                   var10Lifetime1 / 25 % 2 == 0) {
                   var11Lifetime1 = 16777215;
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
                 }
                 var11Lifetime1 = 10341850;
                 var12 = var10Lifetime1 * pd.field_a.field_A / 450;
                 if (var12 > 0) {
-                  eh.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
-                  eh.a();
+                  SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.a();
                 }
                 pd.field_a.f(var8Lifetime1, var9Lifetime1, 100);
               }
@@ -1792,24 +1792,24 @@ final class je {
                 if (var10Lifetime1 < 250 &&
                   var10Lifetime1 / 10 % 2 == 0) {
                   var11Lifetime1 = 16711680;
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 100 &&
                   var10Lifetime1 / 10 % 2 == 1) {
                   var11Lifetime1 = 16776960;
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 50 &&
                   var10Lifetime1 / 25 % 2 == 0) {
                   var11Lifetime1 = 16777215;
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
                 }
                 var11Lifetime1 = 10341850;
                 var12 = var10Lifetime1 * pd.field_a.field_A / 950;
                 if (var12 > 0) {
-                  eh.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
-                  eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
-                  eh.a();
+                  SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
+                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.a();
                 }
                 pd.field_a.f(var8Lifetime1, var9Lifetime1, 100);
               }
@@ -1820,27 +1820,27 @@ final class je {
               if (var10Lifetime1 < 250 &&
                 var10Lifetime1 / 10 % 2 == 0) {
                 var11Lifetime1 = 16711680;
-                eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
               }
               if (var10Lifetime1 < 100 &&
                 var10Lifetime1 / 10 % 2 == 1) {
                 var11Lifetime1 = 16776960;
-                eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
               }
               if (var10Lifetime1 < 50 &&
                 var10Lifetime1 / 25 % 2 == 0) {
                 var11Lifetime1 = 16777215;
-                eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
               }
               var11Lifetime1 = 10341850;
               var12 = var10Lifetime1 * pd.field_a.field_A / 1950;
               if (var12 > 0) {
-                eh.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
-                eh.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
-                eh.a();
+                SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
+                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.a();
               }
               pd.field_a.f(var8Lifetime1, var9Lifetime1, 100);
-              eh.d(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), (pd.field_a.field_A >> 1) + 2, 16774927);
+              SoftwareRasterizer.d(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), (pd.field_a.field_A >> 1) + 2, 16774927);
             }
           }
           if (!qe.field_b[16]) {
@@ -1852,20 +1852,20 @@ final class je {
               var15Lifetime1 = kc.field_a.field_C;
               var16 = var15Lifetime1 - var14Lifetime1;
               kc.field_a.g();
-              eh.d();
-              eh.a(0, var14Lifetime1, kc.field_a.field_y, var15Lifetime1);
-              eh.c(0, 0, 8, var15Lifetime1, 16722703, 1562103);
-              eh.a();
+              SoftwareRasterizer.d();
+              SoftwareRasterizer.a(0, var14Lifetime1, kc.field_a.field_y, var15Lifetime1);
+              SoftwareRasterizer.c(0, 0, 8, var15Lifetime1, 16722703, 1562103);
+              SoftwareRasterizer.a();
               if (var16 < var15Lifetime1 / 2 &&
                 ce.field_b % 10 < 5) {
                 rf.field_d.a(0, 0, 16711680);
               } else {
                 rf.field_d.f(0, 0);
               }
-              bj.field_e.a((byte) -45);
-              eh.a(var12Lifetime1, var13Lifetime1, var12Lifetime1 + pn.field_c.field_a, var13Lifetime1 + pn.field_c.field_f);
+              ResourceArchive.field_e.a((byte) -45);
+              SoftwareRasterizer.a(var12Lifetime1, var13Lifetime1, var12Lifetime1 + pn.field_c.field_a, var13Lifetime1 + pn.field_c.field_f);
               kc.field_a.a(pn.field_c, var12Lifetime1, var13Lifetime1);
-              eh.a();
+              SoftwareRasterizer.a();
             }
           }
         }
@@ -1885,8 +1885,8 @@ final class je {
         int var1Lifetime1;
         var0 = li.field_c / 32;
         var1 = (640 + li.field_c) / 32;
-        var2 = db.field_d / 32 - field_W;
-        var3 = (640 + db.field_d) / 32 + field_M;
+        var2 = ClientException.field_d / 32 - field_W;
+        var3 = (640 + ClientException.field_d) / 32 + field_M;
         if (var0 < 1) {
           var0 = 1;
         }
@@ -2011,7 +2011,7 @@ final class je {
     }
 
     final static boolean a() {
-        return field_O.c(121, (hf.field_t << 2) + (mf.field_i + 160) / 80, (ca.field_k << 2) + (sk.field_d + 160) / 80);
+        return field_O.c(121, (hf.field_t << 2) + (IsaacRandom.field_i + 160) / 80, (ca.field_k << 2) + (sk.field_d + 160) / 80);
     }
 
     private final void h() {
@@ -2033,7 +2033,7 @@ final class je {
         int var6 = 0;
         int var0;
         int var1;
-        ea var2;
+        Sprite var2;
         int var3;
         int var4;
         var0 = 0;
@@ -2462,7 +2462,7 @@ final class je {
         var2 = fd.a(cm.field_o, -1, field_u);
         for (var3 = 1; var3 < 31; var3++) {
           for (var4 = 0; var4 < 24; var4++) {
-            L27: {
+            regionExit1: {
               var5 = var4 + param0;
               field_I[var3][var5].h();
               if (field_u != field_N[cm.field_o]) {
@@ -2501,7 +2501,7 @@ final class je {
                       }
                     }
                   }
-                  break L27;
+                  break regionExit1;
                 }
                 field_I[var3][var5].field_a = false;
                 if (!var2.field_k) {
@@ -2535,7 +2535,7 @@ final class je {
           for (var4 = 0; var4 < 24; var4++) {
             var5 = var4 + param0;
             if (field_I[var3][var5].field_U == 5) {
-              L24: {
+              regionExit2: {
                 field_I[var3][var5].field_E = false;
                 field_I[var3][var5].field_v = true;
                 if (var3 > 1) {
@@ -2548,7 +2548,7 @@ final class je {
                         field_I[var3][var5 - 1].field_v = true;
                         field_I[var3][var5 - 1].field_E = false;
                       }
-                      break L24;
+                      break regionExit2;
                     }
                     if (!field_I[var3 + 1][var5].field_a) {
                       if ((!(var5 <= 1)) &&
@@ -2556,7 +2556,7 @@ final class je {
                         field_I[var3][var5 - 1].field_v = true;
                         field_I[var3][var5 - 1].field_E = false;
                       }
-                      break L24;
+                      break regionExit2;
                     }
                     field_I[var3 + 1][var5].field_v = true;
                     field_I[var3 + 1][var5].field_E = false;
@@ -2567,7 +2567,7 @@ final class je {
                         field_I[var3][var5 - 1].field_v = true;
                         field_I[var3][var5 - 1].field_E = false;
                       }
-                      break L24;
+                      break regionExit2;
                     }
                     if (!field_I[var3 + 1][var5].field_a) {
                       if ((!(var5 <= 1)) &&
@@ -2575,7 +2575,7 @@ final class je {
                         field_I[var3][var5 - 1].field_v = true;
                         field_I[var3][var5 - 1].field_E = false;
                       }
-                      break L24;
+                      break regionExit2;
                     }
                     field_I[var3 + 1][var5].field_v = true;
                     field_I[var3 + 1][var5].field_E = false;
@@ -2587,7 +2587,7 @@ final class je {
                       field_I[var3][var5 - 1].field_v = true;
                       field_I[var3][var5 - 1].field_E = false;
                     }
-                    break L24;
+                    break regionExit2;
                   }
                   if (!field_I[var3 + 1][var5].field_a) {
                     if ((!(var5 <= 1)) &&
@@ -2595,7 +2595,7 @@ final class je {
                       field_I[var3][var5 - 1].field_v = true;
                       field_I[var3][var5 - 1].field_E = false;
                     }
-                    break L24;
+                    break regionExit2;
                   }
                   field_I[var3 + 1][var5].field_v = true;
                   field_I[var3 + 1][var5].field_E = false;
@@ -2616,7 +2616,7 @@ final class je {
         }
         var3 = 10;
         var4 = 0;
-        L3: while (true) {
+        scanLoop3: while (true) {
           if (var4 <= var3) {
             var5 = var4 / 2;
             if ((var4 & 1) != 0) {
@@ -2637,7 +2637,7 @@ final class je {
                     incrementValue$0 = var9;
                     var9--;
                     if (incrementValue$0 < 0) {
-                      break L3;
+                      break scanLoop3;
                     }
                     var11 = ll.a((byte) -73, 3) - 1;
                     if (var10 != 0 &&
@@ -2672,7 +2672,7 @@ final class je {
                     }
                     var8++;
                   } while (var8 < field_I[var6].length - 1);
-                  break L3;
+                  break scanLoop3;
                 }
                 continue;
               }
@@ -2727,10 +2727,10 @@ final class je {
     public static void c() {
         field_N = null;
         field_h = (int[][]) null;
-        field_d = (ea[][]) null;
-        field_P = (ea[][]) null;
-        field_R = (ea[][]) null;
-        field_p = (ea[][]) null;
+        field_d = (Sprite[][]) null;
+        field_P = (Sprite[][]) null;
+        field_R = (Sprite[][]) null;
+        field_p = (Sprite[][]) null;
         field_k = null;
         field_y = null;
         field_n = null;
@@ -2739,11 +2739,11 @@ final class je {
         field_c = null;
         field_C = null;
         field_g = null;
-        field_z = (ea[][]) null;
+        field_z = (Sprite[][]) null;
         field_w = null;
         field_B = null;
-        field_x = (ea[][]) null;
-        field_j = (ea[][]) null;
+        field_x = (Sprite[][]) null;
+        field_j = (Sprite[][]) null;
         field_I = (je[][]) null;
         field_O = null;
         field_K = null;
@@ -2756,7 +2756,7 @@ final class je {
         int var0;
         int var1;
         int var2;
-        ea var2_ref_ea;
+        Sprite var2_ref_ea;
         int var3_int;
         je var3;
         int var4;
@@ -2826,8 +2826,8 @@ final class je {
             ne.a(21, 30);
           }
         }
-        var0Lifetime1 = db.field_d / 32 - field_W;
-        var1Lifetime1 = (640 + db.field_d) / 32 + field_M;
+        var0Lifetime1 = ClientException.field_d / 32 - field_W;
+        var1Lifetime1 = (640 + ClientException.field_d) / 32 + field_M;
         if (var0Lifetime1 < 1) {
           var0Lifetime1 = 1;
         }
@@ -3020,14 +3020,14 @@ final class je {
               if (var4_ref_je.field_i > 128) {
                 var4_ref_je.field_V = true;
               }
-              L58: {
+              regionExit1: {
                 if (var4_ref_je.field_e) {
                   if (!var4_ref_je.field_a &&
                     !je.c(var3_intLifetime2, var2Lifetime2, 1, 1)) {
                     if (!(var4_ref_je.field_i >= 80)) {
                       var4_ref_je.field_i = 80;
                     }
-                    break L58;
+                    break regionExit1;
                   }
                   var4_ref_je.field_e = false;
                 }
@@ -3107,7 +3107,7 @@ final class je {
               if (var3.field_U > -1) {
                 var8 = 16777215;
               }
-              eh.a(var7, var6Lifetime2 + 32, var8);
+              SoftwareRasterizer.a(var7, var6Lifetime2 + 32, var8);
             }
           }
           if (var2Lifetime4 >= 16 &&
@@ -3189,16 +3189,16 @@ final class je {
 
     static {
         field_X = "TVie: ";
-        field_j = new ea[2][];
-        field_z = new ea[4][];
+        field_j = new Sprite[2][];
+        field_z = new Sprite[4][];
         field_K = new int[]{0, 1, 2, 0, 2, 1, 0, 1, 0, 2};
-        field_x = new ea[2][];
-        field_p = new ea[2][];
+        field_x = new Sprite[2][];
+        field_p = new Sprite[2][];
         field_N = new int[]{20, 31};
-        field_d = new ea[2][];
+        field_d = new Sprite[2][];
         field_t = 0;
-        field_P = new ea[2][];
-        field_R = new ea[2][];
+        field_P = new Sprite[2][];
+        field_R = new Sprite[2][];
         field_h = new int[][]{new int[]{8421504, 13744249, 10976325, 8011818, 4340751, 7170907}, new int[]{16777215, 15202815, 12119039, 7196662, 11849706, 6330319}};
     }
 }

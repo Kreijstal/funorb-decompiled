@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends um {
-    private ta field_u;
-    private ta field_r;
+final class hg extends PcmStream {
+    private IntrusiveDeque field_u;
+    private IntrusiveDeque field_r;
     private int field_s;
     private int field_t;
 
     private final void a(rl param0) {
         param0.b(34);
         param0.a();
-        pi var2 = this.field_r.field_c.field_f;
+        IntrusiveNode var2 = this.field_r.field_c.field_f;
         if (var2 == this.field_r.field_c) {
           this.field_s = -1;
         } else {
@@ -18,15 +18,15 @@ final class hg extends um {
         }
     }
 
-    final synchronized void b(um param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_u.a(param0, 27862);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        um var4 = (um) (this.field_u.b(73));
+        PcmStream var4 = (PcmStream) (this.field_u.b(73));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (um) (this.field_u.b((byte) 56));
+          var4 = (PcmStream) (this.field_u.b((byte) 56));
         }
     }
 
@@ -68,16 +68,16 @@ final class hg extends um {
         return;
     }
 
-    final synchronized void a(um param0) {
+    final synchronized void a(PcmStream param0) {
         param0.b(34);
     }
 
-    final um b() {
-        return (um) (this.field_u.b(123));
+    final PcmStream b() {
+        return (PcmStream) (this.field_u.b(123));
     }
 
-    final um c() {
-        return (um) (this.field_u.b((byte) 56));
+    final PcmStream c() {
+        return (PcmStream) (this.field_u.b((byte) 56));
     }
 
     private final void e() {
@@ -93,7 +93,7 @@ final class hg extends um {
         }
     }
 
-    private final void a(pi param0, rl param1) {
+    private final void a(IntrusiveNode param0, rl param1) {
         while (true) {
           if (param0 == this.field_r.field_c) {
             oj.$cfr$intArgs$a$c5042ffd0615(param1, param0, -117);
@@ -153,16 +153,16 @@ final class hg extends um {
     }
 
     private final void e(int param0) {
-        um var2 = (um) (this.field_u.b(111));
+        PcmStream var2 = (PcmStream) (this.field_u.b(111));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (um) (this.field_u.b((byte) 56));
+          var2 = (PcmStream) (this.field_u.b((byte) 56));
         }
     }
 
     public hg() {
-        this.field_u = new ta();
-        this.field_r = new ta();
+        this.field_u = new IntrusiveDeque();
+        this.field_r = new IntrusiveDeque();
         this.field_s = -1;
         this.field_t = 0;
     }

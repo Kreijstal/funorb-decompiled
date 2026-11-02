@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class sd implements Iterable {
-    private pi field_h;
+    private IntrusiveNode field_h;
     static int[] field_g;
     int field_f;
     static String field_e;
     static ed field_d;
-    pi[] field_b;
+    IntrusiveNode[] field_b;
     static int[] field_c;
-    static ta field_a;
+    static IntrusiveDeque field_a;
 
     public static void a(int param0) {
         field_e = null;
@@ -22,15 +22,15 @@ final class sd implements Iterable {
           field_a = null;
           return;
         }
-        field_a = (ta) null;
+        field_a = (IntrusiveDeque) null;
         field_a = null;
     }
 
-    final void a(long param0, boolean param1, pi param2) {
+    final void a(long param0, boolean param1, IntrusiveNode param2) {
         if (null != param2.field_c) {
           param2.b(34);
         }
-        pi var5 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
+        IntrusiveNode var5 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
         if (!param1) {
           return;
         }
@@ -45,10 +45,10 @@ final class sd implements Iterable {
         }
     }
 
-    final pi a(int param0, long param1) {
-        pi var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = MinerDisturbance.field_ab;
-        pi var4 = this.field_b[(int)((long)(-1 + this.field_f) & param1)];
+        IntrusiveNode var4 = this.field_b[(int)((long)(-1 + this.field_f) & param1)];
         this.field_h = var4.field_f;
         while (this.field_h != var4) {
           if (~param1 == ~this.field_h.field_d) {
@@ -60,7 +60,7 @@ final class sd implements Iterable {
         }
         this.field_h = null;
         if (param0 >= -53) {
-          return (pi) null;
+          return (IntrusiveNode) null;
         }
         return null;
     }
@@ -77,6 +77,6 @@ final class sd implements Iterable {
         field_e = "Start Game";
         field_c = new int[25];
         field_g = new int[8192];
-        field_a = new ta();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi extends pi {
+final class bi extends IntrusiveNode {
     int field_n;
     static int field_p;
     int field_o;
@@ -57,7 +57,7 @@ final class bi extends pi {
           for (var2_int = param0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!ra.a((byte) 121, (char) var3) &&
-              !g.a((char) var3, (byte) -68)) {
+              !ArchiveIndex.a((char) var3, (byte) -68)) {
               return true;
             }
           }

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf {
-    static ta field_h;
+final class IsaacRandom {
+    static IntrusiveDeque field_h;
     private int field_g;
     private int field_d;
     private int[] field_l;
@@ -13,13 +13,13 @@ final class mf {
     private int field_b;
     static char[] field_f;
     static Boolean field_a;
-    static ea field_c;
+    static Sprite field_c;
     static int[] field_m;
     static ac field_j;
 
     public static void c(byte param0) {
         if (param0 <= 0) {
-          field_h = (ta) null;
+          field_h = (IntrusiveDeque) null;
         }
         field_j = null;
         field_f = null;
@@ -37,7 +37,7 @@ final class mf {
           if (11 == fh.field_b) {
             pk.b(114);
           }
-          mn.a((byte) -63, oe.field_d, ul.field_a, bj.field_c);
+          mn.a((byte) -63, oe.field_d, ul.field_a, ResourceArchive.field_c);
           cl.a(param1, 0, 0, 310);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -231,7 +231,7 @@ final class mf {
         return this.field_l[fieldTemp$0];
     }
 
-    mf(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_l = new int[256];
@@ -247,8 +247,8 @@ final class mf {
 
     static {
         field_k = 0L;
-        field_h = new ta();
+        field_h = new IntrusiveDeque();
         field_f = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
-        field_c = new ea(640, 480);
+        field_c = new Sprite(640, 480);
     }
 }

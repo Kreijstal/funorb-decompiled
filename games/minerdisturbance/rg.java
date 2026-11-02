@@ -5,7 +5,7 @@ class rg extends jk implements sh {
     static boolean[] field_ub;
     private we field_vb;
     private boolean field_ob;
-    static ea[] field_tb;
+    static Sprite[] field_tb;
     private boolean field_rb;
     static int field_wb;
     private oi field_pb;

@@ -243,7 +243,7 @@ final class uf extends ch {
                       stackIn_59_0 = (var10 == 0) ? 5 : 9;
                       var15 = stackIn_59_0;
                       this.field_c = var14_ref;
-                      this.field_c.field_G = new sb(this.field_c.field_I + var15 + var9);
+                      this.field_c.field_G = new PacketBuffer(this.field_c.field_I + var15 + var9);
                       this.field_c.field_G.c(var10, 25564);
                       this.field_c.field_G.a((byte) 92, var9);
                       this.field_a.field_o = 0;
@@ -313,7 +313,7 @@ final class uf extends ch {
     private final void a(boolean param0, int param1) {
         try {
           IOException iOException = null;
-          sb stackIn_4_0 = null;
+          PacketBuffer stackIn_4_0 = null;
           int stackIn_5_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -328,7 +328,7 @@ final class uf extends ch {
             } else {
               stackIn_5_1 = 3;
             }
-            ((sb) (Object) stackIn_4_0).c(stackIn_5_1, 25564);
+            ((PacketBuffer) (Object) stackIn_4_0).c(stackIn_5_1, 25564);
             this.field_k.a(-116, 0L);
             this.field_s.a((byte) 120, this.field_k.field_u, this.field_k.field_u.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {

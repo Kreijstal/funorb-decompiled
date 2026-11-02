@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class h {
-    static ea field_c;
+    static Sprite field_c;
     static int field_b;
     static int[] field_a;
     static wh field_d;
@@ -170,7 +170,7 @@ final class h {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + eh.field_g;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_g;
                 }
               }
               var16Lifetime3 = -param0 + param4;
@@ -249,7 +249,7 @@ final class h {
               if (param1 >= dj.field_f) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + eh.field_g;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_g;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }
@@ -289,7 +289,7 @@ final class h {
         int[] var7 = null;
         byte[] var8 = null;
         af var9 = null;
-        ld var10 = null;
+        CipherPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         var6 = MinerDisturbance.field_ab;

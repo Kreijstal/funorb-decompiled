@@ -21,7 +21,7 @@ final class ti extends hc {
         if (var1 == null) {
           var1 = new nk();
         }
-        var1.a(eh.field_c, eh.field_a, eh.field_k, 0, eh.field_g, eh.field_e, eh.field_d, eh.field_f);
+        var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_e, SoftwareRasterizer.field_d, SoftwareRasterizer.field_f);
         int var2 = -89 % ((66 - param0) / 60);
         eb.field_f.a((byte) 121, var1);
     }
@@ -73,7 +73,7 @@ final class ti extends hc {
     }
 
     final static void a(jb param0, boolean param1, int param2) {
-        ld var3 = null;
+        CipherPacketBuffer var3 = null;
         if (!param1) {
           return;
         }
@@ -88,16 +88,16 @@ final class ti extends hc {
         }
     }
 
-    final static ea a(int param0) {
+    final static Sprite a(int param0) {
         int var4_int = 0;
         int var5 = MinerDisturbance.field_ab;
         int var1 = qk.field_b[0] * ng.field_e[0];
-        byte[] var2 = db.field_b[0];
+        byte[] var2 = ClientException.field_b[0];
         int[] var3 = new int[var1];
         for (var4_int = param0; var1 > var4_int; var4_int++) {
           var3[var4_int] = af.field_p[c.a(255, (int) var2[var4_int])];
         }
-        ea var4 = new ea(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var3);
+        Sprite var4 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var3);
         ec.a((byte) -106);
         return var4;
     }

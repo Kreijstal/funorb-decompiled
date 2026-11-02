@@ -5,10 +5,10 @@ final class sn {
     static lc[] field_b;
     static String field_e;
     static int field_d;
-    static ld field_c;
-    static ea field_a;
+    static CipherPacketBuffer field_c;
+    static Sprite field_a;
 
-    final static byte[] a(byte[] param0, ld param1, int param2, int param3) {
+    final static byte[] a(byte[] param0, CipherPacketBuffer param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

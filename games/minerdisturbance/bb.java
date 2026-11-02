@@ -3,7 +3,7 @@
  */
 final class bb {
     static String field_b;
-    static ta field_a;
+    static IntrusiveDeque field_a;
 
     final static void a(String param0, int param1, we param2, int param3, int param4) {
         RuntimeException stackIn_9_0 = null;
@@ -21,15 +21,15 @@ final class bb {
           var5_int = param2.a(param0);
           var6 = param2.field_N + param2.field_E;
           var7 = im.field_c;
-          if (var5_int + (var7 - param4) > eh.field_g) {
-            var7 = -6 + (eh.field_g - var5_int);
+          if (var5_int + (var7 - param4) > SoftwareRasterizer.field_g) {
+            var7 = -6 + (SoftwareRasterizer.field_g - var5_int);
           }
           var8 = -param2.field_N + qd.field_P + 32;
-          if (6 + (var8 + var6) > eh.field_c) {
-            var8 = -var6 + (eh.field_c - 6);
+          if (6 + (var8 + var6) > SoftwareRasterizer.field_c) {
+            var8 = -var6 + (SoftwareRasterizer.field_c - 6);
           }
-          eh.a(var7, var8, 6 + var5_int, var6 + 6, param1);
-          eh.e(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, param3);
+          SoftwareRasterizer.a(var7, var8, 6 + var5_int, var6 + 6, param1);
+          SoftwareRasterizer.e(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, param3);
           param2.a(param0, 3 + var7, var8 + 3 + param2.field_N, param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,11 +60,11 @@ final class bb {
         field_a = null;
     }
 
-    final static ea a(String param0, bj param1, int param2, String param3) {
+    final static Sprite a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ea stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -77,7 +77,7 @@ final class bb {
           var4_int = param1.a(-43, param3);
           var5 = param1.a(param0, var4_int, -81);
           if (param2 > -92) {
-            field_a = (ta) null;
+            field_a = (IntrusiveDeque) null;
           }
           stackIn_3_0 = bl.a(var5, param1, (byte) -79, var4_int);
           return stackIn_3_0;
@@ -112,7 +112,7 @@ final class bb {
           vl.h(param0 ^ -19932);
           mb.field_b.n(21974);
           if (param0 != 19931) {
-            field_a = (ta) null;
+            field_a = (IntrusiveDeque) null;
           }
           di.field_D = new cl(pl.field_a, (String) null, gd.field_B, param1, param3);
           de.field_a = new rh(mb.field_b, di.field_D);
@@ -124,6 +124,6 @@ final class bb {
 
     static {
         field_b = "to return to the normal view.";
-        field_a = new ta();
+        field_a = new IntrusiveDeque();
     }
 }

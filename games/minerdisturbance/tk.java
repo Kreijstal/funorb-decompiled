@@ -16,8 +16,8 @@ final class tk implements uj {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        eh.a(var1.field_y, var1.field_n, var1.field_s);
-        eh.a(var1.field_r, var1.field_o, var1.field_t, var1.field_q);
+        SoftwareRasterizer.a(var1.field_y, var1.field_n, var1.field_s);
+        SoftwareRasterizer.a(var1.field_r, var1.field_o, var1.field_t, var1.field_q);
         var1.field_y = null;
         ah.field_g.a((byte) 91, var1);
         if (!param0) {
@@ -64,7 +64,7 @@ final class tk implements uj {
     }
 
     final static void a(bi param0, int param1, byte param2) {
-        ld var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = sn.field_c;
           var3.d((byte) -82, param1);
@@ -164,7 +164,7 @@ final class tk implements uj {
         gd.field_x = 3;
     }
 
-    final static ud[] a(int param0, ld param1) {
+    final static ud[] a(int param0, CipherPacketBuffer param1) {
         ud[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;

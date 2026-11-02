@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class di extends um {
+final class di extends PcmStream {
     private int field_Q;
     private int[] field_P;
     static String field_cb;
@@ -17,7 +17,7 @@ final class di extends um {
     private int[] field_H;
     private tg field_F;
     static cl field_D;
-    static ea field_ab;
+    static Sprite field_ab;
     private int[] field_I;
     private int[] field_R;
     private int[] field_y;
@@ -117,7 +117,7 @@ final class di extends um {
         }
     }
 
-    final synchronized um c() {
+    final synchronized PcmStream c() {
         return null;
     }
 
@@ -508,7 +508,7 @@ final class di extends um {
         }
     }
 
-    final synchronized boolean a(boolean param0, wh param1, ri param2, int param3, bj param4) {
+    final synchronized boolean a(boolean param0, wh param1, ri param2, int param3, ResourceArchive param4) {
         tg stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_24_0 = 0;
@@ -675,8 +675,8 @@ final class di extends um {
         this.c(param0, param1, -73);
     }
 
-    final synchronized um b() {
-        return (um) ((Object) this.field_z);
+    final synchronized PcmStream b() {
+        return (PcmStream) ((Object) this.field_z);
     }
 
     private final void b(int param0, int param1) {
@@ -1002,10 +1002,10 @@ final class di extends um {
               var3 = var3 + param2;
             }
             vj.a(var3, param1);
-            var3 = ld.a("%3a", -1, var3, ":");
-            var3 = ld.a("%40", -1, var3, "@");
-            var3 = ld.a("%26", -1, var3, "&");
-            var7 = ld.a("%23", param1 ^ -2, var3, "#");
+            var3 = CipherPacketBuffer.a("%3a", -1, var3, ":");
+            var3 = CipherPacketBuffer.a("%40", -1, var3, "@");
+            var3 = CipherPacketBuffer.a("%26", -1, var3, "&");
+            var7 = CipherPacketBuffer.a("%23", param1 ^ -2, var3, "#");
             if (null == aj.field_d) {
               return;
             }
@@ -1217,7 +1217,7 @@ final class di extends um {
           }
           if (var5Lifetime1 == 64) {
             if (var6Lifetime1 >= 64) {
-              this.field_v[var4Lifetime1] = hi.a(this.field_v[var4Lifetime1], 1);
+              this.field_v[var4Lifetime1] = SpriteState.a(this.field_v[var4Lifetime1], 1);
             } else {
               this.field_v[var4Lifetime1] = c.a(this.field_v[var4Lifetime1], -2);
             }
@@ -1227,7 +1227,7 @@ final class di extends um {
               this.d(var4Lifetime1, -114);
               this.field_v[var4Lifetime1] = c.a(this.field_v[var4Lifetime1], -3);
             } else {
-              this.field_v[var4Lifetime1] = hi.a(this.field_v[var4Lifetime1], 2);
+              this.field_v[var4Lifetime1] = SpriteState.a(this.field_v[var4Lifetime1], 2);
             }
           }
           if (var5Lifetime1 == 99) {
@@ -1274,7 +1274,7 @@ final class di extends um {
               this.f(var4Lifetime1, 20257);
               this.field_v[var4Lifetime1] = c.a(this.field_v[var4Lifetime1], -5);
             } else {
-              this.field_v[var4Lifetime1] = hi.a(this.field_v[var4Lifetime1], 4);
+              this.field_v[var4Lifetime1] = SpriteState.a(this.field_v[var4Lifetime1], 4);
             }
           }
           if (var5Lifetime1 == 17) {

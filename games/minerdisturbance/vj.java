@@ -210,11 +210,11 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
 
     final static void a(String param0, int param1) {
         if (param1 == 1) {
-          System.out.println("Error: " + ld.a("\n", param1 ^ -2, param0, "%0a"));
+          System.out.println("Error: " + CipherPacketBuffer.a("\n", param1 ^ -2, param0, "%0a"));
           return;
         }
         field_l = (String) null;
-        System.out.println("Error: " + ld.a("\n", param1 ^ -2, param0, "%0a"));
+        System.out.println("Error: " + CipherPacketBuffer.a("\n", param1 ^ -2, param0, "%0a"));
     }
 
     static {

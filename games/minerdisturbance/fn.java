@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fn extends pi {
+final class fn extends IntrusiveNode {
     static boolean field_o;
     static String field_r;
     String[] field_n;
@@ -20,7 +20,7 @@ final class fn extends pi {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          sb var2 = null;
+          PacketBuffer var2 = null;
           if (!param0) {
             fn.a(-74, -57);
           }
@@ -49,7 +49,7 @@ final class fn extends pi {
             }
             if (tl.field_m == 2) {
               mb.field_c = new ll((java.net.Socket) (em.field_B.field_a), jl.field_fb);
-              var2 = new sb(13);
+              var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
               var2.c(15, 25564);
               var2.a((byte) 120, gd.field_y);
@@ -127,7 +127,7 @@ final class fn extends pi {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        ld var27 = null;
+        CipherPacketBuffer var27 = null;
         long[][] var31 = null;
         int var3Lifetime1;
         int var25Lifetime1;
@@ -295,11 +295,11 @@ final class fn extends pi {
         var6 = sj.field_d;
         var3 = var6;
         var4Lifetime1 = param0;
-        var3[var4Lifetime1 >> 5] = hi.a(var6[var4Lifetime1 >> 5], 1 << c.a(31, var4Lifetime1));
+        var3[var4Lifetime1 >> 5] = SpriteState.a(var6[var4Lifetime1 >> 5], 1 << c.a(31, var4Lifetime1));
         var7 = di.field_x;
         var3Lifetime1 = var7;
         var4Lifetime2 = param0;
-        var3Lifetime1[var4Lifetime2 >> 5] = hi.a(var7[var4Lifetime2 >> 5], 1 << c.a(var4Lifetime2, 31));
+        var3Lifetime1[var4Lifetime2 >> 5] = SpriteState.a(var7[var4Lifetime2 >> 5], 1 << c.a(var4Lifetime2, 31));
         ce.field_a.a((byte) 40, new cm(param0));
         if (!kj.a(false) &&
           wf.q(89)) {
@@ -307,7 +307,7 @@ final class fn extends pi {
           r.field_d = gk.b(4, 1);
           return;
         }
-        vb.field_c.a((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));
+        ArchiveProvider.field_c.a((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));
         return;
     }
 
@@ -343,7 +343,7 @@ final class fn extends pi {
         if (!param1) {
           fn.a(100);
         }
-        ld var2 = new ld(param0);
+        CipherPacketBuffer var2 = new CipherPacketBuffer(param0);
         if (var2.d((byte) -54) != 2) {
           aa.field_j = new th();
           return;

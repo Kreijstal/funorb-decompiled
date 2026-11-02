@@ -32,7 +32,7 @@ final class tb implements uj {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        ld var8 = null;
+        CipherPacketBuffer var8 = null;
         fc var9 = null;
         var7 = MinerDisturbance.field_ab;
         var8 = kj.field_a;
@@ -68,7 +68,7 @@ final class tb implements uj {
         }
         if (!param0) {
           bf.field_c = dl.a(var8, 80, -27898);
-          pi.field_l = null;
+          IntrusiveNode.field_l = null;
           return new id(param0);
         }
         var5 = var8.e(param1 ^ 50);
@@ -80,13 +80,13 @@ final class tb implements uj {
           } else {
             stackIn_22_0 = var9.field_y;
           }
-          pi.field_l = stackIn_22_0;
+          IntrusiveNode.field_l = stackIn_22_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           di.a((Throwable) ((Object) var6), 1, "CC1");
           bf.field_c = null;
-          pi.field_l = null;
+          IntrusiveNode.field_l = null;
           return new id(param0);
         }
         return new id(param0);
@@ -106,7 +106,7 @@ final class tb implements uj {
         return "Make Ore Gold";
     }
 
-    final static ln[] a(String param0, String param1, bj param2, int param3) {
+    final static ln[] a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

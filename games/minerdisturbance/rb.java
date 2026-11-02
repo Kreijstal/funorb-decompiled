@@ -1275,8 +1275,8 @@ final class rb {
                           }
                         }
                         if (var18 != 0) {
-                          pi.field_a = pi.field_a + 1;
-                          if (2800 <= pi.field_a) {
+                          IntrusiveNode.field_a = IntrusiveNode.field_a + 1;
+                          if (2800 <= IntrusiveNode.field_a) {
                             fn.a(26, 229, 3);
                           }
                         }
@@ -1428,7 +1428,7 @@ final class rb {
             for (var10 = param2 * 4; var10 <= 4 + 4 * param0; var10++) {
               for (var11 = param3 * 4; var11 >= 4 + param1 * 4; var11--) {
                 var7_int = 8 * var10 - li.field_c;
-                var8 = 8 * var11 - db.field_d;
+                var8 = 8 * var11 - ClientException.field_d;
                 if (var7_int > -64 &&
                   var8 > -64 &&
                   704 > var7_int &&
@@ -1442,17 +1442,17 @@ final class rb {
                       var14 = 12;
                     }
                     var15 = 8;
-                    eh.e(var7_int, var13, var15, var14, 0);
+                    SoftwareRasterizer.e(var7_int, var13, var15, var14, 0);
                     if (!this.field_g[var12 - 1]) {
                       if ((this.field_b[var12] ||
                         !param5[var10 >> 2][var11 + 1 >> 2].field_a) &&
                         !this.field_g[this.field_k + var12]) {
-                        eh.c(var7_int, var13 + 4, 3, 0);
+                        SoftwareRasterizer.c(var7_int, var13 + 4, 3, 0);
                       } else {
                         if (this.field_g[var12 - 1 + this.field_k]) {
-                          eh.a(-8 + var7_int, var13 - 8, var7_int, var13 + 8);
-                          eh.c(var7_int, var13 + 8, 6, 0);
-                          eh.a();
+                          SoftwareRasterizer.a(-8 + var7_int, var13 - 8, var7_int, var13 + 8);
+                          SoftwareRasterizer.c(var7_int, var13 + 8, 6, 0);
+                          SoftwareRasterizer.a();
                         }
                       }
                     }
@@ -1460,12 +1460,12 @@ final class rb {
                       if ((this.field_b[var12] ||
                         !param5[var10 >> 2][1 + var11 >> 2].field_a) &&
                         !this.field_g[var12 + this.field_k]) {
-                        eh.c(var7_int + 8, 4 + var13, 3, 0);
+                        SoftwareRasterizer.c(var7_int + 8, 4 + var13, 3, 0);
                       } else {
                         if (this.field_g[this.field_k + (var12 + 1)]) {
-                          eh.a(8 + var7_int, var13 - 8, 16 + var7_int, var13 + 8);
-                          eh.c(8 + var7_int, var13 + 8, 6, 0);
-                          eh.a();
+                          SoftwareRasterizer.a(8 + var7_int, var13 - 8, 16 + var7_int, var13 + 8);
+                          SoftwareRasterizer.c(8 + var7_int, var13 + 8, 6, 0);
+                          SoftwareRasterizer.a();
                         }
                       }
                     }
@@ -1473,9 +1473,9 @@ final class rb {
                     if (!this.field_g[var16] &&
                       !this.field_g[var16 + 1] &&
                       !this.field_g[var16 - 1]) {
-                      eh.g(var7_int, var13, 8, 16777113, 200);
-                      eh.g(var7_int, 1 + var13, 9, 16777113, 128);
-                      eh.g(var7_int, var13 + 2, 10, 16777113, 64);
+                      SoftwareRasterizer.g(var7_int, var13, 8, 16777113, 200);
+                      SoftwareRasterizer.g(var7_int, 1 + var13, 9, 16777113, 128);
+                      SoftwareRasterizer.g(var7_int, var13 + 2, 10, 16777113, 64);
                     }
                   }
                 }
@@ -1489,7 +1489,7 @@ final class rb {
             for (var12Lifetime1 = param2 * 4; var12Lifetime1 <= 4 + 4 * param0; var12Lifetime1++) {
               for (var13Lifetime1 = param3 * 4; var13Lifetime1 >= 4 * param1 + 4; var13Lifetime1--) {
                 var7_intLifetime1 = -li.field_c + var12Lifetime1 * 8;
-                var8Lifetime1 = -db.field_d + var13Lifetime1 * 8;
+                var8Lifetime1 = -ClientException.field_d + var13Lifetime1 * 8;
                 if (-64 < var7_intLifetime1 &&
                   var8Lifetime1 > -64 &&
                   var7_intLifetime1 < 704 &&
@@ -1509,15 +1509,15 @@ final class rb {
                       if (this.field_b[var14Lifetime1 + this.field_k]) {
                         var16Lifetime1 = this.field_i[var14Lifetime1];
                         var17 = (this.field_i[-1 + var14Lifetime1] + (var16Lifetime1 + this.field_i[1 + var14Lifetime1])) / 3;
-                        eh.b(var7_intLifetime1, -var17 + var8Lifetime1 + 8, 8, var17, var15Lifetime1, var10Lifetime1);
+                        SoftwareRasterizer.b(var7_intLifetime1, -var17 + var8Lifetime1 + 8, 8, var17, var15Lifetime1, var10Lifetime1);
                       } else {
                         if (this.field_p[var14Lifetime1] > 16) {
                           var16Lifetime1 = this.field_p[var14Lifetime1 + this.field_k] + this.field_p[-this.field_k + var14Lifetime1] + (this.field_p[var14Lifetime1 - 1] + this.field_p[var14Lifetime1]) >> 2;
-                          eh.b(var7_intLifetime1, var8Lifetime1, 8, 8, 65280, var16Lifetime1);
+                          SoftwareRasterizer.b(var7_intLifetime1, var8Lifetime1, 8, 8, 65280, var16Lifetime1);
                         }
                       }
                     } else {
-                      eh.b(var7_intLifetime1, var8Lifetime1, 8, 8, var15Lifetime1, var10Lifetime1);
+                      SoftwareRasterizer.b(var7_intLifetime1, var8Lifetime1, 8, 8, var15Lifetime1, var10Lifetime1);
                     }
                   } else {
                     var9 = this.field_c[var14Lifetime1];
@@ -1549,7 +1549,7 @@ final class rb {
                     if (9 <= var9) {
                       var15Lifetime1 = 16777215;
                     }
-                    eh.b(var7_intLifetime1 - 4, var8Lifetime1 + 4, 16, 16, var15Lifetime1, var10Lifetime1);
+                    SoftwareRasterizer.b(var7_intLifetime1 - 4, var8Lifetime1 + 4, 16, 16, var15Lifetime1, var10Lifetime1);
                   }
                 }
               }
@@ -1557,7 +1557,7 @@ final class rb {
             for (var12Lifetime2 = 4 * param2; 4 * param0 + 4 >= var12Lifetime2; var12Lifetime2++) {
               for (var13Lifetime2 = param3 * 4; var13Lifetime2 >= 4 * param1 + 4; var13Lifetime2--) {
                 var7_intLifetime2 = -li.field_c + 8 * var12Lifetime2;
-                var8Lifetime2 = -db.field_d + var13Lifetime2 * 8;
+                var8Lifetime2 = -ClientException.field_d + var13Lifetime2 * 8;
                 if (-64 < var7_intLifetime2 &&
                   -64 < var8Lifetime2 &&
                   var7_intLifetime2 < 704 &&
@@ -1568,14 +1568,14 @@ final class rb {
                     if (this.field_d[var14Lifetime2] &&
                       !this.field_g[var14Lifetime2 - this.field_k]) {
                       var16Lifetime2 = 8;
-                      eh.f(ll.a((byte) -73, 8) + var7_intLifetime2, -var15Lifetime2 + (var8Lifetime2 - ll.a((byte) -73, 4)), 4, 16711680, 110);
+                      SoftwareRasterizer.f(ll.a((byte) -73, 8) + var7_intLifetime2, -var15Lifetime2 + (var8Lifetime2 - ll.a((byte) -73, 4)), 4, 16711680, 110);
                       if (8 < var16Lifetime2 + (8 - var15Lifetime2)) {
                         var16Lifetime2 = -var15Lifetime2 + 8;
                       }
-                      eh.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -ll.a((byte) -73, 4) + var8Lifetime2 - (var15Lifetime2 - 1) << 4, 64, 4, re.field_c);
-                      eh.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -var15Lifetime2 + var8Lifetime2 + (-ll.a((byte) -73, 4) + 1) << 4, 64, 4, re.field_c);
-                      eh.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + (-ll.a((byte) -73, 6) + (var8Lifetime2 - var15Lifetime2)) << 4, 80, 5, re.field_c);
-                      eh.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + var8Lifetime2 - var15Lifetime2 - ll.a((byte) -73, 6) << 4, 80, 5, re.field_c);
+                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -ll.a((byte) -73, 4) + var8Lifetime2 - (var15Lifetime2 - 1) << 4, 64, 4, re.field_c);
+                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -var15Lifetime2 + var8Lifetime2 + (-ll.a((byte) -73, 4) + 1) << 4, 64, 4, re.field_c);
+                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + (-ll.a((byte) -73, 6) + (var8Lifetime2 - var15Lifetime2)) << 4, 80, 5, re.field_c);
+                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + var8Lifetime2 - var15Lifetime2 - ll.a((byte) -73, 6) << 4, 80, 5, re.field_c);
                     }
                   }
                 }

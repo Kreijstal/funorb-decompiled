@@ -269,7 +269,7 @@ final class ve {
         field_b = null;
     }
 
-    final void a(sb param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_k = new cj();

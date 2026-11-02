@@ -227,7 +227,7 @@ final class of {
                   if (dj.field_f <= param6) {
                     return;
                   }
-                  var36Lifetime2 = var36Lifetime2 + eh.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_g;
                   var21 = var21 + var23;
                   var25 = var25 + var27;
                   var17_int = var17_int + var19;
@@ -319,7 +319,7 @@ final class of {
               var29 = var29 + var31;
               var30 = var30 + var32;
               var17_int = var17_int + var19;
-              var35Lifetime1 = var35Lifetime1 + eh.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_g;
               var25 = var25 + var27;
               var26 = var26 + var28;
               var18 = var18 + var20;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends pi {
+final class il extends IntrusiveNode {
     int field_w;
     int field_o;
     static String[][] field_t;
     static long field_v;
     int field_p;
-    static ea field_s;
+    static Sprite field_s;
     static boolean field_n;
     int field_u;
     int field_q;

@@ -4,16 +4,16 @@
 final class nb {
     static int[][] field_g;
     private int field_b;
-    static ea[] field_a;
+    static Sprite[] field_a;
     private int field_h;
     static int field_f;
     private boolean field_l;
     private int field_k;
     private int field_c;
-    ea field_e;
+    Sprite field_e;
     static ml[] field_i;
     private int field_j;
-    ea[] field_d;
+    Sprite[] field_d;
 
     final static void a(byte param0, int param1) {
         int var3 = 0;
@@ -78,7 +78,7 @@ final class nb {
         String var7 = null;
         int var6_intLifetime1;
         try {
-          g.a(param1.field_t + param3, param1.field_q, param0 + param1.field_u, param1.field_v, (byte) 55, this.field_d);
+          ArchiveIndex.a(param1.field_t + param3, param1.field_q, param0 + param1.field_u, param1.field_v, (byte) 55, this.field_d);
           if (null != this.field_e) {
             var6_int = param1.field_u + (param0 + this.field_c);
             var7_int = this.field_k + (param1.field_t + param3);
@@ -160,7 +160,7 @@ final class nb {
         return this;
     }
 
-    final nb a(ea[] param0, int param1) {
+    final nb a(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -244,7 +244,7 @@ final class nb {
             param3.b(param0 ^ -14098);
           }
           if (param0 != 14097) {
-            this.field_d = (ea[]) null;
+            this.field_d = (Sprite[]) null;
           }
           if (this.field_k != -2147483648) {
             param3.field_k = this.field_k;

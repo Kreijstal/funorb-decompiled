@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends pi {
+final class sa extends IntrusiveNode {
     static String field_r;
-    pi field_p;
+    IntrusiveNode field_p;
     int field_q;
     static ln[][] field_t;
     static volatile int field_o;
@@ -62,7 +62,7 @@ final class sa extends pi {
         }
     }
 
-    sa(rc param0, pi param1) {
+    sa(rc param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_q = param0.i();

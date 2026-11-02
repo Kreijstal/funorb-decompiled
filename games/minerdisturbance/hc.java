@@ -215,9 +215,9 @@ class hc extends fe {
           }
           super.a(param0, param1, (byte) 56, param3);
           if (this.field_w != 0 &&
-            this.field_w != ld.field_B) {
+            this.field_w != CipherPacketBuffer.field_B) {
             if (this.b(gb.field_e, param1, param0, nk.field_w, -118) &&
-              0 == ld.field_B) {
+              0 == CipherPacketBuffer.field_B) {
               this.a(-1, -param1 + nk.field_w, gb.field_e - param0, this.field_w);
             }
             this.a(param1, gb.field_e, nk.field_w, param0, param3, 0);

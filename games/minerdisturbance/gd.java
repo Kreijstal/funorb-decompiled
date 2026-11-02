@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends um {
+final class gd extends PcmStream {
     static long field_s;
     static String field_z;
     static int field_y;
@@ -11,7 +11,7 @@ final class gd extends um {
     static boolean field_B;
     static String field_t;
     private di field_u;
-    ta field_v;
+    IntrusiveDeque field_v;
     static String field_A;
     hg field_r;
 
@@ -164,7 +164,7 @@ final class gd extends um {
           param2.field_w.a(param1);
           if (param0 <= 64) {
             var6 = (short[]) null;
-            gd.a((ld) null, 110, -27, (short[]) null);
+            gd.a((CipherPacketBuffer) null, 110, -27, (short[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ final class gd extends um {
         }
     }
 
-    final um c() {
+    final PcmStream c() {
         cg var1_ref = null;
         do {
           var1_ref = (cg) (this.field_v.b((byte) 56));
@@ -189,7 +189,7 @@ final class gd extends um {
             return null;
           }
         } while (var1_ref.field_w == null);
-        return (um) ((Object) var1_ref.field_w);
+        return (PcmStream) ((Object) var1_ref.field_w);
     }
 
     final static boolean b(byte param0) {
@@ -211,7 +211,7 @@ final class gd extends um {
         field_C = null;
     }
 
-    final static short[] a(ld param0, int param1, int param2, short[] param3) {
+    final static short[] a(CipherPacketBuffer param0, int param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -343,19 +343,19 @@ final class gd extends um {
         }
     }
 
-    final um b() {
+    final PcmStream b() {
         cg var1 = (cg) (this.field_v.b(97));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_w) {
-          return (um) ((Object) var1.field_w);
+          return (PcmStream) ((Object) var1.field_w);
         }
         return this.c();
     }
 
     gd(di param0) {
-        this.field_v = new ta();
+        this.field_v = new IntrusiveDeque();
         this.field_r = new hg();
         try {
           this.field_u = param0;

@@ -73,15 +73,15 @@ abstract class wf extends cc {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = MinerDisturbance.field_ab;
-        eh.c(6 + param2, 35 + param1, this.field_v - 12, -40 + this.field_q, 2105376, 0);
+        SoftwareRasterizer.c(6 + param2, 35 + param1, this.field_v - 12, -40 + this.field_q, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var4 > var7) {
-          if (eh.field_d <= var8 &&
-            var8 < eh.field_e) {
+          if (SoftwareRasterizer.field_d <= var8 &&
+            var8 < SoftwareRasterizer.field_e) {
             var9 = var7 * (-var5 + var6) / var4 + var5;
             var10 = 0;
             var11 = this.field_v;
@@ -94,7 +94,7 @@ abstract class wf extends cc {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  eh.field_f[var10 + eh.field_g * var8 + param2] = var13;
+                  SoftwareRasterizer.field_f[var10 + SoftwareRasterizer.field_g * var8 + param2] = var13;
                 }
                 var10++;
               }
@@ -109,7 +109,7 @@ abstract class wf extends cc {
                   if (var14 >= 420) {
                     var15 = (-var14 + 462) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    eh.field_f[var11 + (var8 * eh.field_g + param2)] = var15;
+                    SoftwareRasterizer.field_f[var11 + (var8 * SoftwareRasterizer.field_g + param2)] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -122,7 +122,7 @@ abstract class wf extends cc {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            eh.e(param2 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.e(param2 + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -135,8 +135,8 @@ abstract class wf extends cc {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          eh.e(param2, var8Lifetime1, 6, var9Lifetime1);
-          eh.e(param2 + this.field_v - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.e(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.e(param2 + this.field_v - 6, var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -154,8 +154,8 @@ abstract class wf extends cc {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          eh.e(param2, var8Lifetime2, 6, var9Lifetime2);
-          eh.e(-6 + this.field_v + param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.e(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.e(-6 + this.field_v + param2, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -195,7 +195,7 @@ abstract class wf extends cc {
           field_N = (String) null;
         }
         ti.a((byte) 127);
-        eh.f(param1, param0, param3, param4);
+        SoftwareRasterizer.f(param1, param0, param3, param4);
     }
 
     void o(int param0) {

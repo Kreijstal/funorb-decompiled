@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class te implements uj {
-    static ea[] field_d;
-    static ea[][] field_e;
+    static Sprite[] field_d;
+    static Sprite[][] field_e;
     static String field_a;
-    static ea[] field_c;
+    static Sprite[] field_c;
     static String field_b;
 
     public final String a(byte param0) {
@@ -15,7 +15,7 @@ final class te implements uj {
 
     public static void b(int param0) {
         field_a = null;
-        field_e = (ea[][]) null;
+        field_e = (Sprite[][]) null;
         if (param0 != 31960) {
           return;
         }
@@ -63,14 +63,14 @@ final class te implements uj {
           }
           return 80;
         }
-        if (null != sb.field_r) {
-          if (!sb.field_r.a((byte) 125)) {
+        if (null != PacketBuffer.field_r) {
+          if (!PacketBuffer.field_r.a((byte) 125)) {
             return 14;
           }
-          if (!sb.field_r.b(false, "")) {
+          if (!PacketBuffer.field_r.b(false, "")) {
             return 29;
           }
-          if (!sb.field_r.a(false, "")) {
+          if (!PacketBuffer.field_r.a(false, "")) {
             return 29;
           }
         }
@@ -96,8 +96,8 @@ final class te implements uj {
     }
 
     static {
-        field_d = new ea[4];
-        field_e = new ea[2][];
+        field_d = new Sprite[4];
+        field_e = new Sprite[2][];
         field_a = "Resume Game";
         field_b = "Ranking: Chilly Caver";
     }

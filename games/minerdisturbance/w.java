@@ -6,7 +6,7 @@ import java.io.*;
 final class w extends tn {
     static me field_W;
     private int field_O;
-    private ea field_Q;
+    private Sprite field_Q;
     static String field_T;
     static String field_X;
     static String[] field_P;
@@ -27,7 +27,7 @@ final class w extends tn {
         int var11;
         String var12;
         int var14;
-        db var15;
+        ClientException var15;
         StringWriter var16;
         String var17;
         String var18;
@@ -54,11 +54,11 @@ final class w extends tn {
         String var2Lifetime3Lifetime12;
         String var12Lifetime3Lifetime1;
         var14 = MinerDisturbance.field_ab;
-        if (!(param0 instanceof db)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
           var12 = var2;
         } else {
-          var15 = (db) ((Object) param0);
+          var15 = (ClientException) ((Object) param0);
           var2 = var15.field_a + " | ";
           param0 = var15.field_c;
         }
@@ -129,31 +129,31 @@ final class w extends tn {
         int var11;
         int var12;
         int var13;
-        ea var16;
+        Sprite var16;
         String var17;
         Object var18;
         cf var18_ref;
-        ea var19;
-        ea var20;
-        ea var21;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
         String var22;
         Object var23;
         cf var23_ref;
-        ea var24;
-        ea var25;
-        ea var26;
+        Sprite var24;
+        Sprite var25;
+        Sprite var26;
         String var27;
         Object var28;
         cf var28_ref;
-        ea var29;
-        ea var30;
-        ea var31;
+        Sprite var29;
+        Sprite var30;
+        Sprite var31;
         String var32;
         Object var33;
         cf var33_ref;
-        ea var34;
-        ea var35;
-        ea var36;
+        Sprite var34;
+        Sprite var35;
+        Sprite var36;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -203,19 +203,19 @@ final class w extends tn {
           var11 = var21.field_x << 1;
           var12 = var21.field_A << 1;
           if (null == this.field_Q) {
-            this.field_Q = new ea(var11, var12);
-            vb.a(this.field_Q, 126);
+            this.field_Q = new Sprite(var11, var12);
+            ArchiveProvider.a(this.field_Q, 126);
           } else {
             if (this.field_Q.field_y < var11) {
-              this.field_Q = new ea(var11, var12);
-              vb.a(this.field_Q, 126);
+              this.field_Q = new Sprite(var11, var12);
+              ArchiveProvider.a(this.field_Q, 126);
             } else {
               if (this.field_Q.field_C < var12) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
+                this.field_Q = new Sprite(var11, var12);
+                ArchiveProvider.a(this.field_Q, 126);
               } else {
-                vb.a(this.field_Q, 127);
-                eh.d();
+                ArchiveProvider.a(this.field_Q, 127);
+                SoftwareRasterizer.d();
               }
             }
           }
@@ -253,19 +253,19 @@ final class w extends tn {
           var11Lifetime1 = var26.field_x << 1;
           var12Lifetime1 = var26.field_A << 1;
           if (null == this.field_Q) {
-            this.field_Q = new ea(var11Lifetime1, var12Lifetime1);
-            vb.a(this.field_Q, 126);
+            this.field_Q = new Sprite(var11Lifetime1, var12Lifetime1);
+            ArchiveProvider.a(this.field_Q, 126);
           } else {
             if (this.field_Q.field_y < var11Lifetime1) {
-              this.field_Q = new ea(var11Lifetime1, var12Lifetime1);
-              vb.a(this.field_Q, 126);
+              this.field_Q = new Sprite(var11Lifetime1, var12Lifetime1);
+              ArchiveProvider.a(this.field_Q, 126);
             } else {
               if (this.field_Q.field_C < var12Lifetime1) {
-                this.field_Q = new ea(var11Lifetime1, var12Lifetime1);
-                vb.a(this.field_Q, 126);
+                this.field_Q = new Sprite(var11Lifetime1, var12Lifetime1);
+                ArchiveProvider.a(this.field_Q, 126);
               } else {
-                vb.a(this.field_Q, 127);
-                eh.d();
+                ArchiveProvider.a(this.field_Q, 127);
+                SoftwareRasterizer.d();
               }
             }
           }
@@ -303,19 +303,19 @@ final class w extends tn {
           var11Lifetime2 = var31.field_x << 1;
           var12Lifetime2 = var31.field_A << 1;
           if (null == this.field_Q) {
-            this.field_Q = new ea(var11Lifetime2, var12Lifetime2);
-            vb.a(this.field_Q, 126);
+            this.field_Q = new Sprite(var11Lifetime2, var12Lifetime2);
+            ArchiveProvider.a(this.field_Q, 126);
           } else {
             if (this.field_Q.field_y < var11Lifetime2) {
-              this.field_Q = new ea(var11Lifetime2, var12Lifetime2);
-              vb.a(this.field_Q, 126);
+              this.field_Q = new Sprite(var11Lifetime2, var12Lifetime2);
+              ArchiveProvider.a(this.field_Q, 126);
             } else {
               if (this.field_Q.field_C >= var12Lifetime2) {
-                vb.a(this.field_Q, 127);
-                eh.d();
+                ArchiveProvider.a(this.field_Q, 127);
+                SoftwareRasterizer.d();
               } else {
-                this.field_Q = new ea(var11Lifetime2, var12Lifetime2);
-                vb.a(this.field_Q, 126);
+                this.field_Q = new Sprite(var11Lifetime2, var12Lifetime2);
+                ArchiveProvider.a(this.field_Q, 126);
               }
             }
           }
@@ -353,19 +353,19 @@ final class w extends tn {
         var11Lifetime3 = var36.field_x << 1;
         var12Lifetime3 = var36.field_A << 1;
         if (null == this.field_Q) {
-          this.field_Q = new ea(var11Lifetime3, var12Lifetime3);
-          vb.a(this.field_Q, 126);
+          this.field_Q = new Sprite(var11Lifetime3, var12Lifetime3);
+          ArchiveProvider.a(this.field_Q, 126);
         } else {
           if (this.field_Q.field_y < var11Lifetime3) {
-            this.field_Q = new ea(var11Lifetime3, var12Lifetime3);
-            vb.a(this.field_Q, 126);
+            this.field_Q = new Sprite(var11Lifetime3, var12Lifetime3);
+            ArchiveProvider.a(this.field_Q, 126);
           } else {
             if (this.field_Q.field_C >= var12Lifetime3) {
-              vb.a(this.field_Q, 127);
-              eh.d();
+              ArchiveProvider.a(this.field_Q, 127);
+              SoftwareRasterizer.d();
             } else {
-              this.field_Q = new ea(var11Lifetime3, var12Lifetime3);
-              vb.a(this.field_Q, 126);
+              this.field_Q = new Sprite(var11Lifetime3, var12Lifetime3);
+              ArchiveProvider.a(this.field_Q, 126);
             }
           }
         }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame field_d;
     static String field_e;
-    static ea field_c;
+    static Sprite field_c;
     static String field_a;
     volatile boolean field_b;
 
@@ -40,11 +40,11 @@ final class l extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           if (param1 >= -126) {
             var3 = (String) null;
-            l.a((String) null, (byte) 111);
+            FullscreenFocusCanvas.a((String) null, (byte) 111);
           }
           if (wm.field_f.a(0) &&
             !param0.equals(wm.field_f.a(false))) {
-            wm.field_f = al.a(-10218, param0);
+            wm.field_f = DualLinkNode.a(-10218, param0);
           }
           stackIn_6_0 = wm.field_f;
           return stackIn_6_0;
@@ -76,7 +76,7 @@ final class l extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    l() {
+    FullscreenFocusCanvas() {
     }
 
     public final void paint(java.awt.Graphics param0) {

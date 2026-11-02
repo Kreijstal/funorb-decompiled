@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class bc implements Iterator {
-    private al field_c;
+    private DualLinkNode field_c;
     static int field_a;
     static int field_d;
     private qc field_f;
-    private al field_e;
-    static ea field_b;
+    private DualLinkNode field_e;
+    static Sprite field_b;
 
     public final void remove() {
         if (null == this.field_e) {
@@ -57,9 +57,9 @@ final class bc implements Iterator {
           var1 = null;
           this.field_c = null;
         } else {
-          this.field_c = ((al) (var1)).field_t;
+          this.field_c = ((DualLinkNode) (var1)).field_t;
         }
-        this.field_e = (al) (var1);
+        this.field_e = (DualLinkNode) (var1);
         return var1;
     }
 

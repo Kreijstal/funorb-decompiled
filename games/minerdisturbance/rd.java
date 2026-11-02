@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rd {
-    static ea[] field_b;
+    static Sprite[] field_b;
     static boolean field_f;
     static String field_e;
     static String field_c;
@@ -78,7 +78,7 @@ final class rd {
         int var1 = -52 / ((param0 + 31) / 32);
     }
 
-    final static vm a(String param0, int param1, bj param2, bj param3, String param4) {
+    final static vm a(String param0, int param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

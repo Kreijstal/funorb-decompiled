@@ -6,7 +6,7 @@ final class sj {
     static int[] field_d;
     static bg field_a;
     static String field_e;
-    static ta field_g;
+    static IntrusiveDeque field_g;
     static rg field_h;
     static int field_c;
     static int field_f;
@@ -90,16 +90,16 @@ final class sj {
           var3_int = 0;
           var4 = lj.field_p;
           while (var3_int < ne.field_K.length) {
-            var5 = mf.field_m[var3_int];
+            var5 = IsaacRandom.field_m[var3_int];
             if (0 <= var5) {
               var6 = hl.a(ne.field_K[var3_int], true, -15388);
               var7 = -(var6 >> 1) + rj.field_e;
-              var4 = var4 + hi.field_z;
+              var4 = var4 + SpriteState.field_z;
               if (hc.a(103, var4, nk.field_u + (sn.field_d << 1), var7 - ka.field_a, param0, (ka.field_a << 1) + var6, param2)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (nk.field_u + (hi.field_z + (sn.field_d << 1)));
+              var4 = var4 + (nk.field_u + (SpriteState.field_z + (sn.field_d << 1)));
             } else {
               var4 = var4 + vd.field_z;
             }
@@ -120,7 +120,7 @@ final class sj {
     final static void a(String param0, int param1, String param2) {
         try {
           if (param1 != 19260) {
-            field_g = (ta) null;
+            field_g = (IntrusiveDeque) null;
           }
           jg.a(param0, param2, param1 - 19380, false);
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ final class sj {
     static {
         field_a = new bg(10, 2, 2, 0);
         field_e = "This password contains your email address, and would be easy to guess";
-        field_g = new ta();
+        field_g = new IntrusiveDeque();
         field_f = 0;
     }
 }

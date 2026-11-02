@@ -5,7 +5,7 @@ final class dl {
     static bg field_e;
     static String field_b;
     static int field_c;
-    static ea[] field_d;
+    static Sprite[] field_d;
     static String field_f;
     static String field_a;
 
@@ -28,7 +28,7 @@ final class dl {
         return bi.a(sj.field_d, true);
     }
 
-    final static String a(sb param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -74,7 +74,7 @@ final class dl {
         }
     }
 
-    final static vm a(bj param0, int param1, int param2, byte param3, bj param4) {
+    final static vm a(ResourceArchive param0, int param1, int param2, byte param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -142,7 +142,7 @@ final class dl {
             }
             var2 = 1;
           }
-          pn.field_a.a(sj.a(nk.field_w, (byte) 126, gb.field_e), sj.a(wi.field_w, (byte) 124, m.field_e), -1);
+          pn.field_a.a(sj.a(nk.field_w, (byte) 126, gb.field_e), sj.a(wi.field_w, (byte) 124, GameAppletShell.field_e), -1);
           if (pn.field_a.b(true)) {
             var1_int = 1;
           }
@@ -214,7 +214,7 @@ final class dl {
     static {
         field_e = new bg(12, 0, 1, 0);
         field_b = "Ranking: Macho Miner";
-        field_d = new ea[2];
+        field_d = new Sprite[2];
         field_f = "Achieved";
         field_a = "Email address is unavailable";
     }

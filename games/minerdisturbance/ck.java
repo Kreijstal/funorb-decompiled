@@ -5,7 +5,7 @@ final class ck {
     static String field_b;
     static String[] field_c;
     static String field_e;
-    static ea field_a;
+    static Sprite field_a;
     static long field_d;
 
     public static void a(byte param0) {
@@ -14,14 +14,14 @@ final class ck {
         field_b = null;
         field_a = null;
         if (param0 != -100) {
-          bj var2 = (bj) null;
-          ck.a(-35, -80, 96, (bj) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          ck.a(-35, -80, 96, (ResourceArchive) null);
         }
     }
 
-    final static ea[] a(int param0, int param1, int param2, bj param3) {
+    final static Sprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        ea[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -49,9 +49,9 @@ final class ck {
         }
     }
 
-    final static ea[] a(byte param0, int param1) {
-        ea[] var3 = new ea[9];
-        ea[] var2 = var3;
+    final static Sprite[] a(byte param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = hb.a(64, 32768, param1);
         if (param0 == 126) {
           return var2;

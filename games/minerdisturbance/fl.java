@@ -4,7 +4,7 @@
 final class fl implements ad {
     private int field_i;
     private int field_m;
-    static bj field_f;
+    static ResourceArchive field_f;
     private we field_k;
     static int field_c;
     static boolean field_d;
@@ -37,7 +37,7 @@ final class fl implements ad {
             stackIn_4_0 = null;
           }
           var12 = (ne) (stackIn_4_0);
-          eh.e(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_l);
+          SoftwareRasterizer.e(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_l);
           if (param0 != 12088) {
             return;
           }
@@ -46,9 +46,9 @@ final class fl implements ad {
           var7 = -(var12.field_J * 2) + param2.field_v;
           var8 = param1 + (param2.field_u + var12.field_J);
           var9 = var12.field_P + (param2.field_t + param3);
-          eh.d(var8, var9, var8 + var7, var9, this.field_m);
+          SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_m);
           for (var10 = var12.m(22302) - 1; var10 >= 0; var10--) {
-            eh.c(var7 * var12.a(var10, true) / var12.a((byte) -84) + var8, var9, this.field_a, this.field_i);
+            SoftwareRasterizer.c(var7 * var12.a(var10, true) / var12.a((byte) -84) + var8, var9, this.field_a, this.field_i);
           }
           if (this.field_k != null) {
             this.field_k.b(var12.field_s, var7 / 2 + var8, var12.field_P + (this.field_k.field_G + var9), this.field_e, this.field_g);

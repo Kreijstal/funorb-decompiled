@@ -7,7 +7,7 @@ final class pj implements uj {
     static int field_a;
     static int field_b;
     static String field_d;
-    static ea[] field_e;
+    static Sprite[] field_e;
     static th field_c;
 
     public static void a(int param0) {
@@ -19,7 +19,7 @@ final class pj implements uj {
         field_d = null;
     }
 
-    final static void a(byte param0, ld param1) {
+    final static void a(byte param0, CipherPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -71,7 +71,7 @@ final class pj implements uj {
             var13 = (gl) (on.field_t.b(105));
             var17 = var13;
             if (param0 != 119) {
-              field_e = (ea[]) null;
+              field_e = (Sprite[]) null;
             }
             if (var17 == null) {
               return;
@@ -231,8 +231,8 @@ final class pj implements uj {
         tb.field_a = 4;
         om.field_g = 9;
         if (param0) {
-          bj var3 = (bj) null;
-          pj.a(106, 69, (bj) null, 17, (bj) null);
+          ResourceArchive var3 = (ResourceArchive) null;
+          pj.a(106, 69, (ResourceArchive) null, 17, (ResourceArchive) null);
         }
     }
 
@@ -270,7 +270,7 @@ final class pj implements uj {
         }
     }
 
-    final static p a(int param0, int param1, bj param2, int param3, bj param4) {
+    final static p a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         p stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

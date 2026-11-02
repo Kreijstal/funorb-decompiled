@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends pi {
+final class dn extends IntrusiveNode {
     static String field_s;
     static String field_n;
     static int field_w;
@@ -24,7 +24,7 @@ final class dn extends pi {
         this.field_v = this.field_v + 4;
         if (param0 == -126) {
           var2 = -li.field_c + (this.field_p >> 4);
-          var3 = (this.field_o >> 4) - db.field_d;
+          var3 = (this.field_o >> 4) - ClientException.field_d;
           if (0 > var2) {
             return true;
           }
@@ -47,7 +47,7 @@ final class dn extends pi {
         }
         field_t = (rc[]) null;
         var2Lifetime1 = -li.field_c + (this.field_p >> 4);
-        var3Lifetime1 = (this.field_o >> 4) - db.field_d;
+        var3Lifetime1 = (this.field_o >> 4) - ClientException.field_d;
         if (0 > var2Lifetime1) {
           return true;
         }
@@ -114,8 +114,8 @@ final class dn extends pi {
         field_n = null;
     }
 
-    final static void a(bj param0, byte param1) {
-        ea var2 = null;
+    final static void a(ResourceArchive param0, byte param1) {
+        Sprite var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -124,14 +124,14 @@ final class dn extends pi {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ea(param0.a("", 0, "final_frame.jpg"), (java.awt.Component) ((Object) ef.field_c));
+          var2 = new Sprite(param0.a("", 0, "final_frame.jpg"), (java.awt.Component) ((Object) ef.field_c));
           var3 = var2.field_y;
           var4 = var2.field_C;
           ti.a((byte) -4);
-          bl.field_x = new ea(var3, var4 * 3 / 4);
+          bl.field_x = new Sprite(var3, var4 * 3 / 4);
           bl.field_x.g();
           var2.g(0, 0);
-          eg.field_b = new ea(var3, -bl.field_x.field_C + var4);
+          eg.field_b = new Sprite(var3, -bl.field_x.field_C + var4);
           eg.field_b.g();
           var2.g(0, -bl.field_x.field_C);
           eg.field_b.field_u = bl.field_x.field_C;
@@ -158,7 +158,7 @@ final class dn extends pi {
     final void a(int param0) {
         int var2 = -li.field_c + (this.field_p >> 4);
         int var3 = 56 % ((param0 - 21) / 42);
-        int var4 = -db.field_d + (this.field_o >> 4);
+        int var4 = -ClientException.field_d + (this.field_o >> 4);
         je.field_B[this.field_q % je.field_B.length].b(-120, var2, 2048, 65535 & this.field_u, var4);
     }
 

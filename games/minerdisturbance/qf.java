@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf extends pi {
-    static ea[][] field_o;
+final class qf extends IntrusiveNode {
+    static Sprite[][] field_o;
     static String field_r;
     static int field_p;
     static int field_n;
@@ -40,34 +40,34 @@ final class qf extends pi {
           var7 = (param1 << 8) + param2.field_b * var6_int;
           param5 = param5 + param2.field_b;
           param3 = param3 + param2.field_e;
-          var8 = param3 * eh.field_g + param5;
+          var8 = param3 * SoftwareRasterizer.field_g + param5;
           var9 = param4;
           var10 = param2.field_f;
           var11 = param2.field_a;
-          var12 = eh.field_g - var11;
-          if (param3 < eh.field_d) {
-            var14 = eh.field_d - param3;
+          var12 = SoftwareRasterizer.field_g - var11;
+          if (param3 < SoftwareRasterizer.field_d) {
+            var14 = SoftwareRasterizer.field_d - param3;
             var9 = var9 + var14 * var11;
-            param3 = eh.field_d;
+            param3 = SoftwareRasterizer.field_d;
             var10 = var10 - var14;
-            var8 = var8 + eh.field_g * var14;
+            var8 = var8 + SoftwareRasterizer.field_g * var14;
           }
           var13 = 0;
-          if (param5 < eh.field_a) {
-            var14Lifetime1 = eh.field_a - param5;
+          if (param5 < SoftwareRasterizer.field_a) {
+            var14Lifetime1 = SoftwareRasterizer.field_a - param5;
             var12 = var12 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var7 = var7 + var14Lifetime1 * var6_int;
             var9 = var9 + var14Lifetime1;
-            param5 = eh.field_a;
+            param5 = SoftwareRasterizer.field_a;
             var8 = var8 + var14Lifetime1;
           }
-          if (param3 + var10 > eh.field_e) {
-            var10 = var10 - (-eh.field_e + (var10 + param3));
+          if (param3 + var10 > SoftwareRasterizer.field_e) {
+            var10 = var10 - (-SoftwareRasterizer.field_e + (var10 + param3));
           }
-          if (eh.field_k < var11 + param5) {
-            var14Lifetime2 = -eh.field_k + param5 + var11;
+          if (SoftwareRasterizer.field_k < var11 + param5) {
+            var14Lifetime2 = -SoftwareRasterizer.field_k + param5 + var11;
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
@@ -86,11 +86,11 @@ final class qf extends pi {
                   var17 = param2.field_n[255 & param2.field_m[incrementValue$0]];
                   if (0 != var17) {
                     if (var15 > 255) {
-                      eh.field_f[var8] = var17;
+                      SoftwareRasterizer.field_f[var8] = var17;
                     } else {
-                      var18 = eh.field_f[var8];
+                      var18 = SoftwareRasterizer.field_f[var8];
                       var19 = 16711935 & var16 * (16711935 & var18) + var15 * (var17 & 16711935) >> 8;
-                      eh.field_f[var8] = (c.a(16711707, var16 * c.a(var18, 65280) + var15 * c.a(65280, var17)) >> 8) + var19;
+                      SoftwareRasterizer.field_f[var8] = (c.a(16711707, var16 * c.a(var18, 65280) + var15 * c.a(65280, var17)) >> 8) + var19;
                     }
                   }
                   var8++;
@@ -123,7 +123,7 @@ final class qf extends pi {
         if (param0 != -28581) {
           return;
         }
-        field_o = (ea[][]) null;
+        field_o = (Sprite[][]) null;
         field_r = null;
         field_q = null;
     }
@@ -137,7 +137,7 @@ final class qf extends pi {
     }
 
     static {
-        field_o = new ea[2][9];
+        field_o = new Sprite[2][9];
         field_p = 0;
         field_n = 0;
         field_q = "Anon.";

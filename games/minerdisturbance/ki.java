@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends pi {
+final class ki extends IntrusiveNode {
     static int field_n;
     int[] field_p;
     boolean field_o;
@@ -13,14 +13,14 @@ final class ki extends pi {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        ld var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         sl var11 = null;
         ki var12 = null;
-        ld var13 = null;
+        CipherPacketBuffer var13 = null;
         ki var14 = null;
         var8 = MinerDisturbance.field_ab;
         try {
@@ -35,9 +35,9 @@ final class ki extends pi {
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((sb) ((Object) var5)).d((byte) -54);
+            var6 = ((PacketBuffer) ((Object) var5)).d((byte) -54);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((sb) ((Object) var5)).b((byte) 118);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).b((byte) 118);
             }
             var12 = (ki) (on.field_v.b(110));
             if (var12 == null) {
@@ -79,10 +79,10 @@ final class ki extends pi {
         }
     }
 
-    final static ea[] a(int param0, bj param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        bj var5 = null;
-        ea[] stackIn_6_0 = null;
+        ResourceArchive var5 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -92,8 +92,8 @@ final class ki extends pi {
             return null;
           }
           if (param3 != -7) {
-            var5 = (bj) null;
-            ki.a(-56, (bj) null, -11, (byte) 16);
+            var5 = (ResourceArchive) null;
+            ki.a(-56, (ResourceArchive) null, -11, (byte) 16);
           }
           stackIn_6_0 = wc.a(-29);
           return stackIn_6_0;

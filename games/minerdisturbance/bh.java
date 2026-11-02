@@ -115,7 +115,7 @@ final class bh extends wf implements sh {
             stackIn_5_0 = null;
             return (vm) (stackIn_5_0);
           }
-          var2 = new vm(param1, bg.field_d, oc.field_e, qk.field_b, ng.field_e, db.field_b);
+          var2 = new vm(param1, bg.field_d, oc.field_e, qk.field_b, ng.field_e, ClientException.field_b);
           ec.a((byte) 106);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -183,8 +183,8 @@ final class bh extends wf implements sh {
         int var2_int = ii.field_b.c((byte) 66);
         int var3 = var2_int / 12;
         if (param1 != -115) {
-          sb var5 = (sb) null;
-          bh.a((sb) null, -119);
+          PacketBuffer var5 = (PacketBuffer) null;
+          bh.a((PacketBuffer) null, -119);
         }
         if (4 <= var3) {
           return;
@@ -197,7 +197,7 @@ final class bh extends wf implements sh {
         }
     }
 
-    final static boolean a(sb param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

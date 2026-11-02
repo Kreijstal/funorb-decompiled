@@ -4,7 +4,7 @@
 final class c {
     static int[] field_c;
     static String field_b;
-    static sb field_a;
+    static PacketBuffer field_a;
 
     final static void a(byte param0) {
         int fieldTemp$13 = 0;

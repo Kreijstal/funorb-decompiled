@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class b extends pi {
+final class b extends IntrusiveNode {
     private byte[][] field_t;
     private int field_H;
     private static float[] field_q;
@@ -115,7 +115,7 @@ final class b extends pi {
         return new ji(this.field_B, var12, this.field_u, this.field_H, this.field_w);
     }
 
-    private final static boolean a(bj param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_G) {
           var1 = param0.a(false, 0, 0);
@@ -315,7 +315,7 @@ final class b extends pi {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static b a(bj param0, String param1, String param2) {
+    final static b a(ResourceArchive param0, String param1, String param2) {
         try {
           b var4_ref = null;
           if (!b.a(param0)) {
@@ -340,7 +340,7 @@ final class b extends pi {
         }
     }
 
-    final static b a(bj param0, int param1, int param2) {
+    final static b a(ResourceArchive param0, int param1, int param2) {
         try {
           b var4_ref = null;
           if (!b.a(param0)) {
@@ -728,7 +728,7 @@ final class b extends pi {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        sb var2 = new sb(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_B = var2.b((byte) 39);
         this.field_C = var2.b((byte) 53);
         this.field_u = var2.b((byte) 88);

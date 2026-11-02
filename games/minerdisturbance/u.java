@@ -5,7 +5,7 @@ final class u {
     static String field_b;
     static String field_a;
 
-    final static String a(String param0, bj param1, String param2, int param3, String param4) {
+    final static String a(String param0, ResourceArchive param1, String param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -83,7 +83,7 @@ final class u {
         if (param0 != 27443) {
           return true;
         }
-        return g.a((byte) -128);
+        return ArchiveIndex.a((byte) -128);
     }
 
     static {

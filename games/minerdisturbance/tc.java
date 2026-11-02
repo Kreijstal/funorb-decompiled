@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends pi {
-    static ta field_v;
+final class tc extends IntrusiveNode {
+    static IntrusiveDeque field_v;
     int field_w;
     static int field_s;
     uj field_u;
@@ -36,7 +36,7 @@ final class tc extends pi {
     }
 
     final static void a(int param0, int param1) {
-        ld var2 = sn.field_c;
+        CipherPacketBuffer var2 = sn.field_c;
         var2.d((byte) -87, param1);
         var2.c(param0, 25564);
         var2.c(2, 25564);
@@ -54,7 +54,7 @@ final class tc extends pi {
     }
 
     static {
-        field_v = new ta();
+        field_v = new IntrusiveDeque();
         field_r = "This password contains your Player Name, and would be easy to guess";
         field_p = "An alternative to conventional mining. Using this you can push rocks into gaps or force ore out of boulders. Essential for the eccentric dwarf.";
     }

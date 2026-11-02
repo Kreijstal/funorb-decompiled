@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ja extends al {
+class ja extends DualLinkNode {
     static int field_u;
     static byte[] field_v;
     private static String field_z;

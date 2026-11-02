@@ -17,7 +17,7 @@ final class lg {
         }
     }
 
-    final static void a(bj param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1680_0;
             StringBuilder stackIn_1680_1;
@@ -26,10 +26,10 @@ final class lg {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            bj param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(bj initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1680_0 = null;
@@ -72,139 +72,139 @@ final class lg {
                 }
                 var2 = lh.b(-1, "achievement_names,0");
                 if (null != var2) {
-                  ld.field_A[0] = bh.a(var2, 23);
+                  CipherPacketBuffer.field_A[0] = bh.a(var2, 23);
                 }
                 var2 = lh.b(-1, "achievement_names,1");
                 if (var2 != null) {
-                  ld.field_A[1] = bh.a(var2, 66);
+                  CipherPacketBuffer.field_A[1] = bh.a(var2, 66);
                 }
                 var2 = lh.b(-1, "achievement_names,2");
                 if (var2 != null) {
-                  ld.field_A[2] = bh.a(var2, 100);
+                  CipherPacketBuffer.field_A[2] = bh.a(var2, 100);
                 }
                 var2 = lh.b(-1, "achievement_names,3");
                 if (var2 != null) {
-                  ld.field_A[3] = bh.a(var2, 104);
+                  CipherPacketBuffer.field_A[3] = bh.a(var2, 104);
                 }
                 var2 = lh.b(-1, "achievement_names,4");
                 if (var2 != null) {
-                  ld.field_A[4] = bh.a(var2, -127);
+                  CipherPacketBuffer.field_A[4] = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "achievement_names,5");
                 if (var2 != null) {
-                  ld.field_A[5] = bh.a(var2, 15);
+                  CipherPacketBuffer.field_A[5] = bh.a(var2, 15);
                 }
                 var2 = lh.b(-1, "achievement_names,6");
                 if (null != var2) {
-                  ld.field_A[6] = bh.a(var2, -119);
+                  CipherPacketBuffer.field_A[6] = bh.a(var2, -119);
                 }
                 var2 = lh.b(-1, "achievement_names,7");
                 if (var2 != null) {
-                  ld.field_A[7] = bh.a(var2, 31);
+                  CipherPacketBuffer.field_A[7] = bh.a(var2, 31);
                 }
                 var2 = lh.b(-1, "achievement_names,8");
                 if (null != var2) {
-                  ld.field_A[8] = bh.a(var2, 77);
+                  CipherPacketBuffer.field_A[8] = bh.a(var2, 77);
                 }
                 var2 = lh.b(-1, "achievement_names,9");
                 if (var2 != null) {
-                  ld.field_A[9] = bh.a(var2, -127);
+                  CipherPacketBuffer.field_A[9] = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "achievement_names,10");
                 if (null != var2) {
-                  ld.field_A[10] = bh.a(var2, -124);
+                  CipherPacketBuffer.field_A[10] = bh.a(var2, -124);
                 }
                 var2 = lh.b(-1, "achievement_names,11");
                 if (null != var2) {
-                  ld.field_A[11] = bh.a(var2, -120);
+                  CipherPacketBuffer.field_A[11] = bh.a(var2, -120);
                 }
                 var2 = lh.b(-1, "achievement_names,12");
                 if (null != var2) {
-                  ld.field_A[12] = bh.a(var2, -124);
+                  CipherPacketBuffer.field_A[12] = bh.a(var2, -124);
                 }
                 var2 = lh.b(-1, "achievement_names,13");
                 if (var2 != null) {
-                  ld.field_A[13] = bh.a(var2, -122);
+                  CipherPacketBuffer.field_A[13] = bh.a(var2, -122);
                 }
                 var2 = lh.b(-1, "achievement_names,14");
                 if (null != var2) {
-                  ld.field_A[14] = bh.a(var2, -119);
+                  CipherPacketBuffer.field_A[14] = bh.a(var2, -119);
                 }
                 var2 = lh.b(-1, "achievement_names,15");
                 if (null != var2) {
-                  ld.field_A[15] = bh.a(var2, -120);
+                  CipherPacketBuffer.field_A[15] = bh.a(var2, -120);
                 }
                 var2 = lh.b(-1, "achievement_names,16");
                 if (var2 != null) {
-                  ld.field_A[16] = bh.a(var2, 123);
+                  CipherPacketBuffer.field_A[16] = bh.a(var2, 123);
                 }
                 var2 = lh.b(-1, "achievement_names,17");
                 if (var2 != null) {
-                  ld.field_A[17] = bh.a(var2, -128);
+                  CipherPacketBuffer.field_A[17] = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "achievement_names,18");
                 if (var2 != null) {
-                  ld.field_A[18] = bh.a(var2, 13);
+                  CipherPacketBuffer.field_A[18] = bh.a(var2, 13);
                 }
                 var2 = lh.b(-1, "achievement_names,19");
                 if (null != var2) {
-                  ld.field_A[19] = bh.a(var2, -128);
+                  CipherPacketBuffer.field_A[19] = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "achievement_names,20");
                 if (null != var2) {
-                  ld.field_A[20] = bh.a(var2, -125);
+                  CipherPacketBuffer.field_A[20] = bh.a(var2, -125);
                 }
                 var2 = lh.b(-1, "achievement_names,21");
                 if (var2 != null) {
-                  ld.field_A[21] = bh.a(var2, 66);
+                  CipherPacketBuffer.field_A[21] = bh.a(var2, 66);
                 }
                 var2 = lh.b(-1, "achievement_names,22");
                 if (var2 != null) {
-                  ld.field_A[22] = bh.a(var2, -128);
+                  CipherPacketBuffer.field_A[22] = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "achievement_names,23");
                 if (var2 != null) {
-                  ld.field_A[23] = bh.a(var2, 59);
+                  CipherPacketBuffer.field_A[23] = bh.a(var2, 59);
                 }
                 var2 = lh.b(-1, "achievement_names,24");
                 if (null != var2) {
-                  ld.field_A[24] = bh.a(var2, 118);
+                  CipherPacketBuffer.field_A[24] = bh.a(var2, 118);
                 }
                 var2 = lh.b(-1, "achievement_names,25");
                 if (var2 != null) {
-                  ld.field_A[25] = bh.a(var2, -127);
+                  CipherPacketBuffer.field_A[25] = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "achievement_names,26");
                 if (null != var2) {
-                  ld.field_A[26] = bh.a(var2, -125);
+                  CipherPacketBuffer.field_A[26] = bh.a(var2, -125);
                 }
                 var2 = lh.b(-1, "achievement_names,27");
                 if (var2 != null) {
-                  ld.field_A[27] = bh.a(var2, -124);
+                  CipherPacketBuffer.field_A[27] = bh.a(var2, -124);
                 }
                 var2 = lh.b(-1, "achievement_names,28");
                 if (var2 != null) {
-                  ld.field_A[28] = bh.a(var2, 32);
+                  CipherPacketBuffer.field_A[28] = bh.a(var2, 32);
                 }
                 var2 = lh.b(-1, "achievement_names,29");
                 if (var2 != null) {
-                  ld.field_A[29] = bh.a(var2, 98);
+                  CipherPacketBuffer.field_A[29] = bh.a(var2, 98);
                 }
                 var2 = lh.b(-1, "achievement_names,30");
                 if (null != var2) {
-                  ld.field_A[30] = bh.a(var2, 71);
+                  CipherPacketBuffer.field_A[30] = bh.a(var2, 71);
                 }
                 var2 = lh.b(-1, "achievement_names,31");
                 if (null != var2) {
-                  ld.field_A[31] = bh.a(var2, -118);
+                  CipherPacketBuffer.field_A[31] = bh.a(var2, -118);
                 }
                 var2 = lh.b(-1, "achievement_names,32");
                 if (null != var2) {
-                  ld.field_A[32] = bh.a(var2, 92);
+                  CipherPacketBuffer.field_A[32] = bh.a(var2, 92);
                 }
                 var2 = lh.b(-1, "achievement_names,33");
                 if (null != var2) {
-                  ld.field_A[33] = bh.a(var2, 3);
+                  CipherPacketBuffer.field_A[33] = bh.a(var2, 3);
                 }
                 var2 = lh.b(-1, "achievement_criteria,0");
                 if (null != var2) {
@@ -491,7 +491,7 @@ final class lg {
                   ol.field_b[0][4] = bh.a(var2, 109);
                 }
                 if (param1 >= -35) {
-                  lg.a((bj) null, -75);
+                  lg.a((ResourceArchive) null, -75);
                 }
                 var2 = lh.b(-1, "INSTRUCTION,1,0");
                 if (var2 != null) {
@@ -1589,7 +1589,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialCoatedInOil,1,0");
                 if (null != var2) {
-                  sb.field_s[1][0] = bh.a(var2, 27);
+                  PacketBuffer.field_s[1][0] = bh.a(var2, 27);
                 }
                 var2 = lh.b(-1, "tutorialSnow,1,0");
                 if (var2 != null) {
@@ -1693,7 +1693,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltipWoolyJumper");
                 if (null != var2) {
-                  g.field_e = bh.a(var2, 18);
+                  ArchiveIndex.field_e = bh.a(var2, 18);
                 }
                 var2 = lh.b(-1, "tooltipCrampons");
                 if (null != var2) {
@@ -1705,7 +1705,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "basicKit");
                 if (null != var2) {
-                  ta.field_f = bh.a(var2, 121);
+                  IntrusiveDeque.field_f = bh.a(var2, 121);
                 }
                 var2 = lh.b(-1, "sellBasicKit");
                 if (var2 != null) {
@@ -1891,7 +1891,7 @@ final class lg {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  dc.field_c = bh.a(var2, 11);
+                  GameCanvas.field_c = bh.a(var2, 11);
                 }
                 var2 = lh.b(-1, "stillLoadingSuperVolcano");
                 if (var2 != null) {
@@ -1919,7 +1919,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "keycode_mine_right");
                 if (null != var2) {
-                  hi.field_v = var2[0] & 255;
+                  SpriteState.field_v = var2[0] & 255;
                 }
                 var2 = lh.b(-1, "keycode_mine_down_left");
                 if (var2 != null) {
@@ -1964,7 +1964,7 @@ final class lg {
                   }
                   throw lj.a((Throwable) ((Object) stackIn_1680_0), ((StringBuilder) (Object) stackIn_1680_1).append(stackIn_1681_2).append(',').append(param1).append(')').toString());
                 }
-                if (m.field_h) {
+                if (GameAppletShell.field_h) {
                   var3++;
                   MinerDisturbance.field_ab = var3;
                 }
@@ -1991,7 +1991,7 @@ final class lg {
             stackIn_5_0 = null;
             return (p) (stackIn_5_0);
           }
-          var2 = new p(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, db.field_b);
+          var2 = new p(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
           ec.a((byte) 70);
           stackIn_7_0 = var2;
           return stackIn_7_0;

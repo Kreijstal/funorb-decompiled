@@ -48,7 +48,7 @@ final class da {
             }
             var3_int = 1;
             if (10 == param2) {
-              bj.a(0);
+              ResourceArchive.a(0);
               var3_int = 0;
             }
             if (var3_int != 0) {

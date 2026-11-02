@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "minerdisturbance": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/minerdisturbance"
+      },
+      "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
+      "sources": {
+        "files": 341,
+        "sha256": "1cfa436f1128d690184dc2434b601a44eb759ece5188b13db44cfd3c052b4e4f"
+      },
+      "dictionary": {
+        "path": "decompilation/minerdisturbance-naming.json",
+        "sha256": "fc01a6fcaca4f9ab592badf8ff10346dd2dffe66a9f9362cff542196b4e9862f"
+      },
+      "readingGuide": {
+        "path": "games/minerdisturbance/README.md",
+        "sha256": "7240548026f956edfb3bfc0474dcbb6ee7a6256a1ceeb57e11ee10aba32e652d"
+      },
+      "rulesSha256": "bfadc73ad0f04182aa7c3976167e13ed8580150fd7a6a76be882e72cf86ff9e0",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11669,6 +11693,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 341,
+          "sha256": "1cfa436f1128d690184dc2434b601a44eb759ece5188b13db44cfd3c052b4e4f"
         }
       },
       "monkeypuzzle2": {

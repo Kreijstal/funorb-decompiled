@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fc extends al {
+final class fc extends DualLinkNode {
     private String[] field_w;
     int[] field_y;
     private int[][] field_v;
     private int[] field_x;
     static long field_u;
 
-    private final void a(int param0, byte param1, sb param2) {
+    private final void a(int param0, byte param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -123,7 +123,7 @@ final class fc extends al {
         return var2.toString();
     }
 
-    final void a(int param0, sb param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -163,12 +163,12 @@ final class fc extends al {
         int var2 = 0;
         int var3 = MinerDisturbance.field_ab;
         if (param0 != 60) {
-          sb var4 = (sb) null;
-          this.a(80, (sb) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a(80, (PacketBuffer) null);
         }
         if (null != this.field_y) {
           for (var2 = 0; this.field_y.length > var2; var2++) {
-            this.field_y[var2] = hi.a(this.field_y[var2], 32768);
+            this.field_y[var2] = SpriteState.a(this.field_y[var2], 32768);
           }
         }
     }

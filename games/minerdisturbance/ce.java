@@ -4,7 +4,7 @@
 final class ce {
     static vm field_d;
     static int field_b;
-    static ta field_a;
+    static IntrusiveDeque field_a;
     static String[] field_c;
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3) {
@@ -52,8 +52,8 @@ final class ce {
             if (param3) {
               stackIn_21_0 = 0;
             } else {
-              if (!pi.field_k[var7]) {
-                if (pi.field_e[var7]) {
+              if (!IntrusiveNode.field_k[var7]) {
+                if (IntrusiveNode.field_e[var7]) {
                   stackIn_21_0 = (0 < pj.field_a) ? 1 : 0;
                 } else {
                   stackIn_21_0 = 1;
@@ -76,16 +76,16 @@ final class ce {
           var9Lifetime1 = 126;
           var10 = (var7Lifetime1 * 9 + (-var6 + 9)) * 20;
           var11 = 0;
-          for (var12 = 0; var12 < ld.field_A.length; var12++) {
+          for (var12 = 0; var12 < CipherPacketBuffer.field_A.length; var12++) {
             if (nm.a(var12, var21, -827843803) ||
-              !pi.field_k[var12] &&
+              !IntrusiveNode.field_k[var12] &&
               !param3 &&
               (!(0 >= pj.field_a) ||
-              !pi.field_e[var12])) {
+              !IntrusiveNode.field_e[var12])) {
               if (var8Lifetime1 <= wi.field_w &&
                 wi.field_w <= var8Lifetime1 + 32 &&
-                m.field_e >= var9Lifetime1 &&
-                m.field_e <= 32 + var9Lifetime1) {
+                GameAppletShell.field_e >= var9Lifetime1 &&
+                GameAppletShell.field_e <= 32 + var9Lifetime1) {
                 qh.field_c = 0;
                 if (ah.field_e != var12) {
                   ah.field_e = var12;
@@ -154,6 +154,6 @@ final class ce {
     }
 
     static {
-        field_a = new ta();
+        field_a = new IntrusiveDeque();
     }
 }

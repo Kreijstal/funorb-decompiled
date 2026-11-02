@@ -59,12 +59,12 @@ final class am extends jc {
             }
             var3 = 0;
             var4 = 0;
-            L2: while (true) {
+            scanLoop1: while (true) {
               if (var4 < 2) {
                 if (th.field_b[var2][var4]) {
                   if (d.a(var2, var4, (byte) 68)) {
                     var3 = 1;
-                    break L2;
+                    break scanLoop1;
                   }
                   if (vd.field_s[var2]) {
                     for (var5 = 0; var5 < 2; var5++) {
@@ -159,7 +159,7 @@ final class am extends jc {
         }
     }
 
-    final static void a(bj param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         wm var4 = null;
         wm var5 = null;
         try {

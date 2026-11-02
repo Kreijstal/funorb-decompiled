@@ -25,27 +25,27 @@ final class vi {
         if (param1 != 0) {
           vi.a(69);
         }
-        eh.b(param5, param6, param4, param2, param3, param0);
+        SoftwareRasterizer.b(param5, param6, param4, param2, param3, param0);
     }
 
     final void a(int param0, we param1) {
         eg var17 = null;
         on var4 = null;
-        ea[] var5 = null;
-        og var16 = null;
-        og var18 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         on var6 = null;
         on var7 = null;
         qg discarded$0 = null;
         fl discarded$1 = null;
         on var8 = null;
-        ea[] var9 = null;
-        ea[] var10 = null;
-        ea dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         on var11 = null;
         on var12 = null;
-        ea var13 = null;
+        Sprite var13 = null;
         on var14 = null;
         on var19 = null;
         int var15 = MinerDisturbance.field_ab;
@@ -71,13 +71,13 @@ final class vi {
           var4.a((byte) -123, 0).a(101, 15658734).a(gn.a(7829367, 10066329, 8947848, false), 7392);
           var4.a((byte) -98, 1).a(gn.a(13421772, 10066329, 11184810, false), 7392);
           var4.a((byte) -114, 3).a(gn.a(10066329, 7829367, 8947848, false), 7392).b(1, (byte) -93).a(1, (byte) -58);
-          var5 = new ea[9];
-          var16 = new og(32, 32);
+          var5 = new Sprite[9];
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_D.length > var7_int; var7_int++) {
             var16.field_D[var7_int] = 1077952576;
           }
-          var5[4] = (ea) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) -103, 4).a(-13903, true).a(var5, 7392);
           var4.a((byte) -119, 5).a(r.a((byte) 93, 0, 0, param0, 0), 7392).a(-13903, true).a(116, -1);
           this.field_m = (ad) ((Object) var4);
@@ -95,10 +95,10 @@ final class vi {
           var8.a((byte) -120, 0).a(gn.a(10066329, 7829367, 15658734, false), 7392).a(101, 1118481).b(-1, true);
           var8.a((byte) -112, 4).a(-13903, true).a(var5, 7392);
           this.field_a = (ad) ((Object) var8);
-          var9 = new ea[9];
-          var9[4] = new ea(2, 1);
-          var10 = new ea[9];
-          var10[4] = new ea(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_D = new int[]{6710886, 7829367};
           var10[4].field_D = new int[]{6710886, 7829367};
@@ -106,7 +106,7 @@ final class vi {
           var12 = new on();
           var11.a(0, var9, (byte) 24);
           var12.a(0, var10, (byte) 24);
-          var13 = new ea(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_D = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new on(var4, true);
           var14.a((byte) 87, var13.c());
@@ -172,15 +172,15 @@ final class vi {
           var5_int = this.field_p.a(param1);
           var6 = this.field_p.field_N + this.field_p.field_E;
           var7 = param3;
-          if (!(var7 + var5_int + 6 <= eh.field_g)) {
-            var7 = -var5_int + (eh.field_g - 6);
+          if (!(var7 + var5_int + 6 <= SoftwareRasterizer.field_g)) {
+            var7 = -var5_int + (SoftwareRasterizer.field_g - 6);
           }
           var8 = param2 - this.field_p.field_N + 32;
-          if (var6 + var8 + 6 > eh.field_c) {
-            var8 = -var6 + (eh.field_c - 6);
+          if (var6 + var8 + 6 > SoftwareRasterizer.field_c) {
+            var8 = -var6 + (SoftwareRasterizer.field_c - 6);
           }
-          eh.a(var7, var8, 6 + var5_int, var6 + 6, this.field_f);
-          eh.e(1 + var7, var8 + 1, param0 + var5_int, var6 + 4, this.field_k);
+          SoftwareRasterizer.a(var7, var8, 6 + var5_int, var6 + 6, this.field_f);
+          SoftwareRasterizer.e(1 + var7, var8 + 1, param0 + var5_int, var6 + 4, this.field_k);
           this.field_p.a(param1, var7 + 3, this.field_p.field_N + var8 + 3, this.field_f, -1);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -216,7 +216,7 @@ final class vi {
           if (var7 == -1) {
             var7 = this.field_p.field_I + this.field_p.field_E;
           }
-          var8 = eh.field_g >> 2;
+          var8 = SoftwareRasterizer.field_g >> 2;
           var9 = this.field_p.a(param3);
           var10 = this.field_p.field_E + this.field_p.field_I;
           var11 = 1;
@@ -246,15 +246,15 @@ final class vi {
             this.a(-39, -84, -19, (String) null);
           }
           var12 = param0;
-          if (var9 + (var12 + var5_int) > eh.field_g) {
-            var12 = eh.field_g - var9 - var5_int;
+          if (var9 + (var12 + var5_int) > SoftwareRasterizer.field_g) {
+            var12 = SoftwareRasterizer.field_g - var9 - var5_int;
           }
           var13Lifetime1 = 32 + (param1 - this.field_p.field_N);
-          if (var6 + var13Lifetime1 + var10 > eh.field_c) {
+          if (var6 + var13Lifetime1 + var10 > SoftwareRasterizer.field_c) {
             var13Lifetime1 = -var10 + param1 - var6;
           }
-          eh.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_g);
-          eh.e(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + (var6 + var10), this.field_k);
+          SoftwareRasterizer.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_g);
+          SoftwareRasterizer.e(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + (var6 + var10), this.field_k);
           this.field_p.a(param3, var12 + this.field_r, var13Lifetime1 + this.field_i, var9, var10, this.field_f, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,7 +279,7 @@ final class vi {
         if (param3 < 92) {
           return;
         }
-        eh.d(param4, param2, param0, param1, param5);
+        SoftwareRasterizer.d(param4, param2, param0, param1, param5);
     }
 
     static {

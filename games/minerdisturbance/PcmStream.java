@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class um extends pi {
+abstract class PcmStream extends IntrusiveNode {
     volatile boolean field_n;
     int field_p;
-    um field_o;
+    PcmStream field_o;
     gg field_q;
 
     abstract int d();
 
-    abstract um c();
+    abstract PcmStream c();
 
     final void b(int[] param0, int param1, int param2) {
         if (this.field_n) {
@@ -25,9 +25,9 @@ abstract class um extends pi {
         return 255;
     }
 
-    abstract um b();
+    abstract PcmStream b();
 
-    protected um() {
+    protected PcmStream() {
         this.field_n = true;
     }
 

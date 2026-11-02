@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends ea {
+final class ArgbSprite extends Sprite {
     final void d(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6;
@@ -53,7 +53,7 @@ final class og extends ea {
         }
     }
 
-    og(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
@@ -63,33 +63,33 @@ final class og extends ea {
         int var10Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * eh.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = this.field_C;
         int var7 = this.field_y;
-        int var8 = eh.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param1 < eh.field_d) {
-          var10 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * eh.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var6 > eh.field_e) {
-          var6 = var6 - (param1 + var6 - eh.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var10Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var10Lifetime1 = SoftwareRasterizer.field_a - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > eh.field_k) {
-          var10Lifetime2 = param0 + var7 - eh.field_k;
+        if (param0 + var7 > SoftwareRasterizer.field_k) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_k;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -98,7 +98,7 @@ final class og extends ea {
           if (var6 <= 0) {
             return;
           }
-          og.b(0, 0, 0, eh.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -113,33 +113,33 @@ final class og extends ea {
         }
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * eh.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = this.field_C;
         int var7 = this.field_y;
-        int var8 = eh.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param1 < eh.field_d) {
-          var10 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * eh.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var6 > eh.field_e) {
-          var6 = var6 - (param1 + var6 - eh.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var10Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var10Lifetime1 = SoftwareRasterizer.field_a - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > eh.field_k) {
-          var10Lifetime2 = param0 + var7 - eh.field_k;
+        if (param0 + var7 > SoftwareRasterizer.field_k) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_k;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -148,7 +148,7 @@ final class og extends ea {
           if (var6 <= 0) {
             return;
           }
-          og.e(eh.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.e(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -210,33 +210,33 @@ final class og extends ea {
         int var9Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var3 = param0 + param1 * eh.field_g;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
         int var4 = 0;
         int var5 = this.field_C;
         int var6 = this.field_y;
-        int var7 = eh.field_g - var6;
+        int var7 = SoftwareRasterizer.field_g - var6;
         int var8 = 0;
-        if (param1 < eh.field_d) {
-          var9 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var9 = SoftwareRasterizer.field_d - param1;
           var5 = var5 - var9;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * eh.field_g;
+          var3 = var3 + var9 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var5 > eh.field_e) {
-          var5 = var5 - (param1 + var5 - eh.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var9Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var9Lifetime1 = SoftwareRasterizer.field_a - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > eh.field_k) {
-          var9Lifetime2 = param0 + var6 - eh.field_k;
+        if (param0 + var6 > SoftwareRasterizer.field_k) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_k;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -245,7 +245,7 @@ final class og extends ea {
           if (var5 <= 0) {
             return;
           }
-          og.d(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -298,30 +298,30 @@ final class og extends ea {
           if (var7 < var11) {
             param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * eh.field_g;
-          var15 = eh.field_g - param2;
-          if (param1 + param3 > eh.field_e) {
-            param3 = param3 - (param1 + param3 - eh.field_e);
+          var14Lifetime2 = param0 + param1 * SoftwareRasterizer.field_g;
+          var15 = SoftwareRasterizer.field_g - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_e) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_e);
           }
-          if (param1 < eh.field_d) {
-            var16 = eh.field_d - param1;
+          if (param1 < SoftwareRasterizer.field_d) {
+            var16 = SoftwareRasterizer.field_d - param1;
             param3 = param3 - var16;
-            var14Lifetime2 = var14Lifetime2 + var16 * eh.field_g;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRasterizer.field_g;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > eh.field_k) {
-            var16Lifetime1 = param0 + param2 - eh.field_k;
+          if (param0 + param2 > SoftwareRasterizer.field_k) {
+            var16Lifetime1 = param0 + param2 - SoftwareRasterizer.field_k;
             param2 = param2 - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < eh.field_a) {
-            var16Lifetime2 = eh.field_a - param0;
+          if (param0 < SoftwareRasterizer.field_a) {
+            var16Lifetime2 = SoftwareRasterizer.field_a - param0;
             param2 = param2 - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          og.b(eh.field_f, this.field_D, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.b(SoftwareRasterizer.field_f, this.field_D, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -399,33 +399,33 @@ final class og extends ea {
         int var9Lifetime2;
         param0 = param0 + (this.field_x - this.field_y - this.field_B);
         param1 = param1 + this.field_u;
-        int var3 = param0 + param1 * eh.field_g;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
         int var4 = this.field_y - 1;
         int var5 = this.field_C;
         int var6 = this.field_y;
-        int var7 = eh.field_g - var6;
+        int var7 = SoftwareRasterizer.field_g - var6;
         int var8 = var6 + var6;
-        if (param1 < eh.field_d) {
-          var9 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var9 = SoftwareRasterizer.field_d - param1;
           var5 = var5 - var9;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * eh.field_g;
+          var3 = var3 + var9 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var5 > eh.field_e) {
-          var5 = var5 - (param1 + var5 - eh.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var9Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var9Lifetime1 = SoftwareRasterizer.field_a - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > eh.field_k) {
-          var9Lifetime2 = param0 + var6 - eh.field_k;
+        if (param0 + var6 > SoftwareRasterizer.field_k) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_k;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -434,7 +434,7 @@ final class og extends ea {
           if (var5 <= 0) {
             return;
           }
-          og.e(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.e(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -470,7 +470,7 @@ final class og extends ea {
         }
     }
 
-    og(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -678,17 +678,17 @@ final class og extends ea {
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
         var22 = var22 + 15 >> 4;
-        if (var19 < eh.field_a) {
-          var19 = eh.field_a;
+        if (var19 < SoftwareRasterizer.field_a) {
+          var19 = SoftwareRasterizer.field_a;
         }
-        if (var20 > eh.field_k) {
-          var20 = eh.field_k;
+        if (var20 > SoftwareRasterizer.field_k) {
+          var20 = SoftwareRasterizer.field_k;
         }
-        if (var21 < eh.field_d) {
-          var21 = eh.field_d;
+        if (var21 < SoftwareRasterizer.field_d) {
+          var21 = SoftwareRasterizer.field_d;
         }
-        if (var22 > eh.field_e) {
-          var22 = eh.field_e;
+        if (var22 > SoftwareRasterizer.field_e) {
+          var22 = SoftwareRasterizer.field_e;
         }
         var20 = var19 - var20;
         if (var20 >= 0) {
@@ -698,7 +698,7 @@ final class og extends ea {
         if (var22 >= 0) {
           return;
         }
-        var23 = var21 * eh.field_g + var19;
+        var23 = var21 * SoftwareRasterizer.field_g + var19;
         var24 = 16777216.0 / (double)param5;
         var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
         var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
@@ -720,17 +720,17 @@ final class og extends ea {
                 var36 - (this.field_C << 12) < 0) {
                 while (var37 < 0) {
                   var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
-                  var39 = eh.field_f[var34];
+                  var39 = SoftwareRasterizer.field_f[var34];
                   var40 = var38 >>> 24;
                   var41 = 256 - var40;
                   incrementValue$8 = var34;
                   var34++;
-                  eh.field_f[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                  SoftwareRasterizer.field_f[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                   var37++;
                 }
               }
               var33++;
-              var23 = var23 + eh.field_g;
+              var23 = var23 + SoftwareRasterizer.field_g;
             }
             return;
           }
@@ -755,19 +755,19 @@ final class og extends ea {
                 }
                 while (var37Lifetime5 < 0) {
                   var38Lifetime5 = this.field_D[(var36Lifetime5 >> 12) * this.field_y + (var35Lifetime5 >> 12)];
-                  var39Lifetime5 = eh.field_f[var34Lifetime5];
+                  var39Lifetime5 = SoftwareRasterizer.field_f[var34Lifetime5];
                   var40Lifetime5 = var38Lifetime5 >>> 24;
                   var41Lifetime5 = 256 - var40Lifetime5;
                   incrementValue$6 = var34Lifetime5;
                   var34Lifetime5++;
-                  eh.field_f[incrementValue$6] = ((var38Lifetime5 & 16711935) * var40Lifetime5 + (var39Lifetime5 & 16711935) * var41Lifetime5 & -16711936) + ((var38Lifetime5 & 65280) * var40Lifetime5 + (var39Lifetime5 & 65280) * var41Lifetime5 & 16711680) >>> 8;
+                  SoftwareRasterizer.field_f[incrementValue$6] = ((var38Lifetime5 & 16711935) * var40Lifetime5 + (var39Lifetime5 & 16711935) * var41Lifetime5 & -16711936) + ((var38Lifetime5 & 65280) * var40Lifetime5 + (var39Lifetime5 & 65280) * var41Lifetime5 & 16711680) >>> 8;
                   var36Lifetime5 = var36Lifetime5 + var26;
                   var37Lifetime5++;
                 }
               }
               var33Lifetime5++;
               var30 = var30 - var26;
-              var23 = var23 + eh.field_g;
+              var23 = var23 + SoftwareRasterizer.field_g;
             }
             return;
           }
@@ -792,19 +792,19 @@ final class og extends ea {
               }
               while (var37Lifetime6 < 0) {
                 var38Lifetime6 = this.field_D[(var36Lifetime6 >> 12) * this.field_y + (var35Lifetime6 >> 12)];
-                var39Lifetime6 = eh.field_f[var34Lifetime6];
+                var39Lifetime6 = SoftwareRasterizer.field_f[var34Lifetime6];
                 var40Lifetime6 = var38Lifetime6 >>> 24;
                 var41Lifetime6 = 256 - var40Lifetime6;
                 incrementValue$7 = var34Lifetime6;
                 var34Lifetime6++;
-                eh.field_f[incrementValue$7] = ((var38Lifetime6 & 16711935) * var40Lifetime6 + (var39Lifetime6 & 16711935) * var41Lifetime6 & -16711936) + ((var38Lifetime6 & 65280) * var40Lifetime6 + (var39Lifetime6 & 65280) * var41Lifetime6 & 16711680) >>> 8;
+                SoftwareRasterizer.field_f[incrementValue$7] = ((var38Lifetime6 & 16711935) * var40Lifetime6 + (var39Lifetime6 & 16711935) * var41Lifetime6 & -16711936) + ((var38Lifetime6 & 65280) * var40Lifetime6 + (var39Lifetime6 & 65280) * var41Lifetime6 & 16711680) >>> 8;
                 var36Lifetime6 = var36Lifetime6 + var26;
                 var37Lifetime6++;
               }
             }
             var33Lifetime6++;
             var30 = var30 - var26;
-            var23 = var23 + eh.field_g;
+            var23 = var23 + SoftwareRasterizer.field_g;
           }
           return;
         }
@@ -830,19 +830,19 @@ final class og extends ea {
                 }
                 while (var37Lifetime1 < 0) {
                   var38Lifetime1 = this.field_D[(var36Lifetime1 >> 12) * this.field_y + (var35Lifetime1 >> 12)];
-                  var39Lifetime1 = eh.field_f[var34Lifetime1];
+                  var39Lifetime1 = SoftwareRasterizer.field_f[var34Lifetime1];
                   var40Lifetime1 = var38Lifetime1 >>> 24;
                   var41Lifetime1 = 256 - var40Lifetime1;
                   incrementValue$2 = var34Lifetime1;
                   var34Lifetime1++;
-                  eh.field_f[incrementValue$2] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
+                  SoftwareRasterizer.field_f[incrementValue$2] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
                   var35Lifetime1 = var35Lifetime1 + var27;
                   var37Lifetime1++;
                 }
               }
               var33Lifetime1++;
               var31 = var31 + var27;
-              var23 = var23 + eh.field_g;
+              var23 = var23 + SoftwareRasterizer.field_g;
             }
             return;
           }
@@ -877,12 +877,12 @@ final class og extends ea {
               }
               while (var37Lifetime1Lifetime1 < 0) {
                 var38Lifetime1Lifetime1 = this.field_D[(var36Lifetime1Lifetime1 >> 12) * this.field_y + (var35Lifetime1Lifetime1 >> 12)];
-                var39Lifetime1Lifetime1 = eh.field_f[var34Lifetime1Lifetime1];
+                var39Lifetime1Lifetime1 = SoftwareRasterizer.field_f[var34Lifetime1Lifetime1];
                 var40Lifetime1Lifetime1 = var38Lifetime1Lifetime1 >>> 24;
                 var41Lifetime1Lifetime1 = 256 - var40Lifetime1Lifetime1;
                 incrementValue$0 = var34Lifetime1Lifetime1;
                 var34Lifetime1Lifetime1++;
-                eh.field_f[incrementValue$0] = ((var38Lifetime1Lifetime1 & 16711935) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 16711935) * var41Lifetime1Lifetime1 & -16711936) + ((var38Lifetime1Lifetime1 & 65280) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 65280) * var41Lifetime1Lifetime1 & 16711680) >>> 8;
+                SoftwareRasterizer.field_f[incrementValue$0] = ((var38Lifetime1Lifetime1 & 16711935) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 16711935) * var41Lifetime1Lifetime1 & -16711936) + ((var38Lifetime1Lifetime1 & 65280) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 65280) * var41Lifetime1Lifetime1 & 16711680) >>> 8;
                 var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27;
                 var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26;
                 var37Lifetime1Lifetime1++;
@@ -890,7 +890,7 @@ final class og extends ea {
               var33Lifetime1Lifetime1++;
               var30 = var30 - var26;
               var31 = var31 + var27;
-              var23 = var23 + eh.field_g;
+              var23 = var23 + SoftwareRasterizer.field_g;
             }
             return;
           }
@@ -925,12 +925,12 @@ final class og extends ea {
             }
             while (var37Lifetime1Lifetime2 < 0) {
               var38Lifetime1Lifetime2 = this.field_D[(var36Lifetime1Lifetime2 >> 12) * this.field_y + (var35Lifetime1Lifetime2 >> 12)];
-              var39Lifetime1Lifetime2 = eh.field_f[var34Lifetime1Lifetime2];
+              var39Lifetime1Lifetime2 = SoftwareRasterizer.field_f[var34Lifetime1Lifetime2];
               var40Lifetime1Lifetime2 = var38Lifetime1Lifetime2 >>> 24;
               var41Lifetime1Lifetime2 = 256 - var40Lifetime1Lifetime2;
               incrementValue$1 = var34Lifetime1Lifetime2;
               var34Lifetime1Lifetime2++;
-              eh.field_f[incrementValue$1] = ((var38Lifetime1Lifetime2 & 16711935) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 16711935) * var41Lifetime1Lifetime2 & -16711936) + ((var38Lifetime1Lifetime2 & 65280) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 65280) * var41Lifetime1Lifetime2 & 16711680) >>> 8;
+              SoftwareRasterizer.field_f[incrementValue$1] = ((var38Lifetime1Lifetime2 & 16711935) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 16711935) * var41Lifetime1Lifetime2 & -16711936) + ((var38Lifetime1Lifetime2 & 65280) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 65280) * var41Lifetime1Lifetime2 & 16711680) >>> 8;
               var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27;
               var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26;
               var37Lifetime1Lifetime2++;
@@ -938,7 +938,7 @@ final class og extends ea {
             var33Lifetime1Lifetime2++;
             var30 = var30 - var26;
             var31 = var31 + var27;
-            var23 = var23 + eh.field_g;
+            var23 = var23 + SoftwareRasterizer.field_g;
           }
           return;
         }
@@ -964,19 +964,19 @@ final class og extends ea {
               }
               while (var37Lifetime2 < 0) {
                 var38Lifetime2 = this.field_D[(var36Lifetime2 >> 12) * this.field_y + (var35Lifetime2 >> 12)];
-                var39Lifetime2 = eh.field_f[var34Lifetime2];
+                var39Lifetime2 = SoftwareRasterizer.field_f[var34Lifetime2];
                 var40Lifetime2 = var38Lifetime2 >>> 24;
                 var41Lifetime2 = 256 - var40Lifetime2;
                 incrementValue$5 = var34Lifetime2;
                 var34Lifetime2++;
-                eh.field_f[incrementValue$5] = ((var38Lifetime2 & 16711935) * var40Lifetime2 + (var39Lifetime2 & 16711935) * var41Lifetime2 & -16711936) + ((var38Lifetime2 & 65280) * var40Lifetime2 + (var39Lifetime2 & 65280) * var41Lifetime2 & 16711680) >>> 8;
+                SoftwareRasterizer.field_f[incrementValue$5] = ((var38Lifetime2 & 16711935) * var40Lifetime2 + (var39Lifetime2 & 16711935) * var41Lifetime2 & -16711936) + ((var38Lifetime2 & 65280) * var40Lifetime2 + (var39Lifetime2 & 65280) * var41Lifetime2 & 16711680) >>> 8;
                 var35Lifetime2 = var35Lifetime2 + var27;
                 var37Lifetime2++;
               }
             }
             var33Lifetime2++;
             var31 = var31 + var27;
-            var23 = var23 + eh.field_g;
+            var23 = var23 + SoftwareRasterizer.field_g;
           }
           return;
         }
@@ -1012,12 +1012,12 @@ final class og extends ea {
             }
             while (var37Lifetime3 < 0) {
               var38Lifetime3 = this.field_D[(var36Lifetime3 >> 12) * this.field_y + (var35Lifetime3 >> 12)];
-              var39Lifetime3 = eh.field_f[var34Lifetime3];
+              var39Lifetime3 = SoftwareRasterizer.field_f[var34Lifetime3];
               var40Lifetime3 = var38Lifetime3 >>> 24;
               var41Lifetime3 = 256 - var40Lifetime3;
               incrementValue$3 = var34Lifetime3;
               var34Lifetime3++;
-              eh.field_f[incrementValue$3] = ((var38Lifetime3 & 16711935) * var40Lifetime3 + (var39Lifetime3 & 16711935) * var41Lifetime3 & -16711936) + ((var38Lifetime3 & 65280) * var40Lifetime3 + (var39Lifetime3 & 65280) * var41Lifetime3 & 16711680) >>> 8;
+              SoftwareRasterizer.field_f[incrementValue$3] = ((var38Lifetime3 & 16711935) * var40Lifetime3 + (var39Lifetime3 & 16711935) * var41Lifetime3 & -16711936) + ((var38Lifetime3 & 65280) * var40Lifetime3 + (var39Lifetime3 & 65280) * var41Lifetime3 & 16711680) >>> 8;
               var35Lifetime3 = var35Lifetime3 + var27;
               var36Lifetime3 = var36Lifetime3 + var26;
               var37Lifetime3++;
@@ -1025,7 +1025,7 @@ final class og extends ea {
             var33Lifetime3++;
             var30 = var30 - var26;
             var31 = var31 + var27;
-            var23 = var23 + eh.field_g;
+            var23 = var23 + SoftwareRasterizer.field_g;
           }
           return;
         }
@@ -1061,12 +1061,12 @@ final class og extends ea {
           }
           while (var37Lifetime4 < 0) {
             var38Lifetime4 = this.field_D[(var36Lifetime4 >> 12) * this.field_y + (var35Lifetime4 >> 12)];
-            var39Lifetime4 = eh.field_f[var34Lifetime4];
+            var39Lifetime4 = SoftwareRasterizer.field_f[var34Lifetime4];
             var40Lifetime4 = var38Lifetime4 >>> 24;
             var41Lifetime4 = 256 - var40Lifetime4;
             incrementValue$4 = var34Lifetime4;
             var34Lifetime4++;
-            eh.field_f[incrementValue$4] = ((var38Lifetime4 & 16711935) * var40Lifetime4 + (var39Lifetime4 & 16711935) * var41Lifetime4 & -16711936) + ((var38Lifetime4 & 65280) * var40Lifetime4 + (var39Lifetime4 & 65280) * var41Lifetime4 & 16711680) >>> 8;
+            SoftwareRasterizer.field_f[incrementValue$4] = ((var38Lifetime4 & 16711935) * var40Lifetime4 + (var39Lifetime4 & 16711935) * var41Lifetime4 & -16711936) + ((var38Lifetime4 & 65280) * var40Lifetime4 + (var39Lifetime4 & 65280) * var41Lifetime4 & 16711680) >>> 8;
             var35Lifetime4 = var35Lifetime4 + var27;
             var36Lifetime4 = var36Lifetime4 + var26;
             var37Lifetime4++;
@@ -1074,7 +1074,7 @@ final class og extends ea {
           var33Lifetime4++;
           var30 = var30 - var26;
           var31 = var31 + var27;
-          var23 = var23 + eh.field_g;
+          var23 = var23 + SoftwareRasterizer.field_g;
         }
         return;
     }
@@ -1139,33 +1139,33 @@ final class og extends ea {
         int var10Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * eh.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = this.field_C;
         int var7 = this.field_y;
-        int var8 = eh.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param1 < eh.field_d) {
-          var10 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * eh.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var6 > eh.field_e) {
-          var6 = var6 - (param1 + var6 - eh.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var10Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var10Lifetime1 = SoftwareRasterizer.field_a - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > eh.field_k) {
-          var10Lifetime2 = param0 + var7 - eh.field_k;
+        if (param0 + var7 > SoftwareRasterizer.field_k) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_k;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1174,7 +1174,7 @@ final class og extends ea {
           if (var6 <= 0) {
             return;
           }
-          og.f(eh.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.f(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1185,33 +1185,33 @@ final class og extends ea {
         int var10Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * eh.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = this.field_C;
         int var7 = this.field_y;
-        int var8 = eh.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param1 < eh.field_d) {
-          var10 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * eh.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var6 > eh.field_e) {
-          var6 = var6 - (param1 + var6 - eh.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var10Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var10Lifetime1 = SoftwareRasterizer.field_a - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > eh.field_k) {
-          var10Lifetime2 = param0 + var7 - eh.field_k;
+        if (param0 + var7 > SoftwareRasterizer.field_k) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_k;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1220,7 +1220,7 @@ final class og extends ea {
           if (var6 <= 0) {
             return;
           }
-          og.c(eh.field_f, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.c(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1231,33 +1231,33 @@ final class og extends ea {
         int var9Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var3 = param0 + param1 * eh.field_g;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
         int var4 = 0;
         int var5 = this.field_C;
         int var6 = this.field_y;
-        int var7 = eh.field_g - var6;
+        int var7 = SoftwareRasterizer.field_g - var6;
         int var8 = 0;
-        if (param1 < eh.field_d) {
-          var9 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var9 = SoftwareRasterizer.field_d - param1;
           var5 = var5 - var9;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * eh.field_g;
+          var3 = var3 + var9 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var5 > eh.field_e) {
-          var5 = var5 - (param1 + var5 - eh.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var9Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var9Lifetime1 = SoftwareRasterizer.field_a - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > eh.field_k) {
-          var9Lifetime2 = param0 + var6 - eh.field_k;
+        if (param0 + var6 > SoftwareRasterizer.field_k) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_k;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1266,7 +1266,7 @@ final class og extends ea {
           if (var5 <= 0) {
             return;
           }
-          og.d(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1306,28 +1306,28 @@ final class og extends ea {
         var4 = this.field_C >> 2;
         param0 = param0 + this.field_B / 4;
         param1 = param1 + this.field_u / 4;
-        if (param0 >= eh.field_a) {
+        if (param0 >= SoftwareRasterizer.field_a) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = eh.field_a - param0 << 2;
+          stackIn_3_0 = SoftwareRasterizer.field_a - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= eh.field_k) {
+        if (param0 + var3 <= SoftwareRasterizer.field_k) {
           stackIn_6_0 = this.field_y - 4;
         } else {
-          stackIn_6_0 = (eh.field_k - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRasterizer.field_k - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= eh.field_d) {
+        if (param1 >= SoftwareRasterizer.field_d) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = eh.field_d - param1 << 2;
+          stackIn_9_0 = SoftwareRasterizer.field_d - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= eh.field_e) {
+        if (param1 + var4 <= SoftwareRasterizer.field_e) {
           stackIn_12_0 = this.field_C - 4;
         } else {
-          stackIn_12_0 = (eh.field_e - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRasterizer.field_e - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -1336,7 +1336,7 @@ final class og extends ea {
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
             var12 = var10 * this.field_y + var11;
-            var13 = (param1 + (var10 >> 2)) * eh.field_g + (param0 + (var11 >> 2));
+            var13 = (param1 + (var10 >> 2)) * SoftwareRasterizer.field_g + (param0 + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
                 var9[(var14 << 2) + var15] = this.field_D[var12 + var14 * this.field_y + var15];
@@ -1360,8 +1360,8 @@ final class og extends ea {
               var17 = var17 / var15Lifetime1 << 8;
               var19Lifetime1 = var15Lifetime1 >> 4;
               var20 = 256 - var19Lifetime1;
-              var21 = eh.field_f[var13];
-              eh.field_f[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRasterizer.field_f[var13];
+              SoftwareRasterizer.field_f[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
           }
         }
@@ -1411,30 +1411,30 @@ final class og extends ea {
           if (var6 < var10) {
             param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param0 + param1 * eh.field_g;
-          var14 = eh.field_g - param2;
-          if (param1 + param3 > eh.field_e) {
-            param3 = param3 - (param1 + param3 - eh.field_e);
+          var13Lifetime2 = param0 + param1 * SoftwareRasterizer.field_g;
+          var14 = SoftwareRasterizer.field_g - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_e) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_e);
           }
-          if (param1 < eh.field_d) {
-            var15 = eh.field_d - param1;
+          if (param1 < SoftwareRasterizer.field_d) {
+            var15 = SoftwareRasterizer.field_d - param1;
             param3 = param3 - var15;
-            var13Lifetime2 = var13Lifetime2 + var15 * eh.field_g;
+            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_g;
             var8 = var8 + var12 * var15;
           }
-          if (param0 + param2 > eh.field_k) {
-            var15Lifetime1 = param0 + param2 - eh.field_k;
+          if (param0 + param2 > SoftwareRasterizer.field_k) {
+            var15Lifetime1 = param0 + param2 - SoftwareRasterizer.field_k;
             param2 = param2 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param0 < eh.field_a) {
-            var15Lifetime2 = eh.field_a - param0;
+          if (param0 < SoftwareRasterizer.field_a) {
+            var15Lifetime2 = SoftwareRasterizer.field_a - param0;
             param2 = param2 - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          og.d(eh.field_f, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.d(SoftwareRasterizer.field_f, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1467,9 +1467,9 @@ final class og extends ea {
         }
     }
 
-    final og h() {
+    final ArgbSprite h() {
         int var3 = 0;
-        og var1 = new og(this.field_y, this.field_C);
+        ArgbSprite var1 = new ArgbSprite(this.field_y, this.field_C);
         var1.field_x = this.field_x;
         var1.field_A = this.field_A;
         var1.field_B = this.field_B;
@@ -1487,33 +1487,33 @@ final class og extends ea {
         int var10Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * eh.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = this.field_C;
         int var7 = this.field_y;
-        int var8 = eh.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param1 < eh.field_d) {
-          var10 = eh.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = eh.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * eh.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var6 > eh.field_e) {
-          var6 = var6 - (param1 + var6 - eh.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < eh.field_a) {
-          var10Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var10Lifetime1 = SoftwareRasterizer.field_a - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > eh.field_k) {
-          var10Lifetime2 = param0 + var7 - eh.field_k;
+        if (param0 + var7 > SoftwareRasterizer.field_k) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_k;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1522,7 +1522,7 @@ final class og extends ea {
           if (var6 <= 0) {
             return;
           }
-          og.d(eh.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.d(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1625,33 +1625,33 @@ final class og extends ea {
         var4 = this.field_C >> 1;
         param0 = param0 + this.field_B / 2;
         param1 = param1 + this.field_u / 2;
-        if (param0 >= eh.field_a) {
+        if (param0 >= SoftwareRasterizer.field_a) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = eh.field_a - param0 << 1;
+          stackIn_3_0 = SoftwareRasterizer.field_a - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= eh.field_k) {
+        if (param0 + var3 <= SoftwareRasterizer.field_k) {
           stackIn_6_0 = this.field_y - 2;
         } else {
-          stackIn_6_0 = (eh.field_k - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.field_k - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= eh.field_d) {
+        if (param1 >= SoftwareRasterizer.field_d) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = eh.field_d - param1 << 1;
+          stackIn_9_0 = SoftwareRasterizer.field_d - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= eh.field_e) {
+        if (param1 + var4 <= SoftwareRasterizer.field_e) {
           stackIn_12_0 = this.field_C - 2;
         } else {
-          stackIn_12_0 = (eh.field_e - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.field_e - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
           var10 = var9 * this.field_y + var5;
-          var11 = (param1 + (var9 >> 1)) * eh.field_g + (param0 + (var5 >> 1));
+          var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.field_g + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -1680,8 +1680,8 @@ final class og extends ea {
               var16 = var16 / var18 << 8;
               var19Lifetime1 = var18 >> 2;
               var20 = 256 - var19Lifetime1;
-              var21 = eh.field_f[var11];
-              eh.field_f[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRasterizer.field_f[var11];
+              SoftwareRasterizer.field_f[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
             var12 += 2;
             var11++;
@@ -1696,33 +1696,33 @@ final class og extends ea {
         int var9Lifetime2;
         param0 = param0 + this.field_B;
         param1 = param1 + (this.field_A - this.field_C - this.field_u);
-        int var3 = param0 + (param1 + this.field_C - 1) * eh.field_g;
+        int var3 = param0 + (param1 + this.field_C - 1) * SoftwareRasterizer.field_g;
         int var4 = 0;
         int var5 = this.field_C;
         int var6 = this.field_y;
-        int var7 = -eh.field_g - var6;
+        int var7 = -SoftwareRasterizer.field_g - var6;
         int var8 = 0;
-        if (param1 < eh.field_d) {
-          var5 = var5 - (eh.field_d - param1);
-          param1 = eh.field_d;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var5 = var5 - (SoftwareRasterizer.field_d - param1);
+          param1 = SoftwareRasterizer.field_d;
         }
-        if (param1 + var5 > eh.field_e) {
-          var9 = param1 + var5 - eh.field_e;
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var9 = param1 + var5 - SoftwareRasterizer.field_e;
           var5 = var5 - var9;
-          var3 = var3 - var9 * eh.field_g;
+          var3 = var3 - var9 * SoftwareRasterizer.field_g;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < eh.field_a) {
-          var9Lifetime1 = eh.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var9Lifetime1 = SoftwareRasterizer.field_a - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = eh.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > eh.field_k) {
-          var9Lifetime2 = param0 + var6 - eh.field_k;
+        if (param0 + var6 > SoftwareRasterizer.field_k) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_k;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1731,7 +1731,7 @@ final class og extends ea {
           if (var5 <= 0) {
             return;
           }
-          og.d(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

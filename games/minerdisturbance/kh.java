@@ -14,7 +14,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (lb.field_y != null) {
             t.field_c = 0;
-            al.field_n = param0.getX();
+            DualLinkNode.field_n = param0.getX();
             vl.field_G = param0.getY();
             sf.a((byte) -42);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
@@ -220,7 +220,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           for (var2_int = 0; var2_int < 3; var2_int++) {
             c.field_c[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < sb.field_p; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < PacketBuffer.field_p; var2_intLifetime1++) {
             if (param0.field_g == im.field_a[var2_intLifetime1].field_g) {
               dupTemp$3 = im.field_a[var2_intLifetime1].a(126);
               c.field_c[dupTemp$3] = c.field_c[dupTemp$3] + 1;
@@ -229,7 +229,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           dupTemp$0 = param0.a(119);
           c.field_c[dupTemp$0] = c.field_c[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; sb.field_p > var3; var3++) {
+          for (var3 = 0; PacketBuffer.field_p > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_g == im.field_a[var3].field_g) {
               var4 = im.field_a[var3].a(60);
@@ -248,9 +248,9 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var6 = (byte[]) null;
             kh.a((byte[]) null, (byte) -81);
           }
-          sb.field_p = var2_intLifetime2;
-          fieldTemp$1 = sb.field_p;
-          sb.field_p = sb.field_p + 1;
+          PacketBuffer.field_p = var2_intLifetime2;
+          fieldTemp$1 = PacketBuffer.field_p;
+          PacketBuffer.field_p = PacketBuffer.field_p + 1;
           im.field_a[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

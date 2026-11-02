@@ -4,14 +4,14 @@
 class tn extends hc {
     private lb field_N;
     static boolean field_M;
-    static ea[] field_K;
+    static Sprite[] field_K;
     static boolean field_J;
     private String[] field_L;
-    private ta field_I;
+    private IntrusiveDeque field_I;
 
     final static boolean a(int param0, int param1) {
         if (param1 != -3236) {
-          field_K = (ea[]) null;
+          field_K = (Sprite[]) null;
         }
         return param0 == (-param0 & param0) ? true : false;
     }
@@ -196,7 +196,7 @@ class tn extends hc {
         int var16;
         int var7Lifetime1;
         var16 = MinerDisturbance.field_ab;
-        this.field_I = new ta();
+        this.field_I = new IntrusiveDeque();
         var2 = 0;
         var3 = (cf) ((Object) this.field_A);
         var4 = var3.c(0, (fe) (this));

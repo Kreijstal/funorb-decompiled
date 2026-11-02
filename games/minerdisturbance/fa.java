@@ -4,7 +4,7 @@
 final class fa {
     static boolean field_e;
     static boolean field_b;
-    static bj field_d;
+    static ResourceArchive field_d;
     static volatile boolean field_a;
     static String field_c;
 
@@ -34,9 +34,9 @@ final class fa {
     final static boolean a(boolean param0) {
         if (!param0) {
           field_c = (String) null;
-          return g.field_o;
+          return ArchiveIndex.field_o;
         }
-        return g.field_o;
+        return ArchiveIndex.field_o;
     }
 
     public static void a(int param0) {

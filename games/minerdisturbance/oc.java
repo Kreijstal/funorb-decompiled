@@ -207,7 +207,7 @@ final class oc extends hn {
         }
     }
 
-    final static ih a(bj param0, byte param1, String param2, String param3, bj param4) {
+    final static ih a(ResourceArchive param0, byte param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -277,8 +277,8 @@ final class oc extends hn {
 
     final static boolean d(int param0) {
         if (param0 <= 42) {
-          bj var2 = (bj) null;
-          oc.a((bj) null, (byte) -68, (String) null, (String) null, (bj) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          oc.a((ResourceArchive) null, (byte) -68, (String) null, (String) null, (ResourceArchive) null);
         }
         return cg.field_C;
     }
@@ -292,7 +292,7 @@ final class oc extends hn {
         }
     }
 
-    final void a(sb param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         if (param1 > -85) {
           return;
         }

@@ -7,7 +7,7 @@ final class kf {
     static String field_b;
     static long field_f;
     static int[] field_e;
-    static l field_d;
+    static FullscreenFocusCanvas field_d;
 
     final static void a(MinerDisturbance param0, int param1) {
         int[] var9 = null;
@@ -75,7 +75,7 @@ final class kf {
           field_a = null;
           return;
         }
-        field_d = (l) null;
+        field_d = (FullscreenFocusCanvas) null;
         field_b = null;
         field_d = null;
         field_a = null;

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ma extends jc {
     private int field_K;
-    static ea field_O;
+    static Sprite field_O;
     private int field_N;
     private boolean field_M;
     private int field_P;
@@ -43,10 +43,10 @@ final class ma extends jc {
             }
             var2 = (sa) (hj.field_b.b((byte) 56));
           }
-          if (m.field_c == null) {
+          if (GameAppletShell.field_c == null) {
             return;
           }
-          var2Lifetime1 = (sa) (m.field_c.b(80));
+          var2Lifetime1 = (sa) (GameAppletShell.field_c.b(80));
           while (var2Lifetime1 != null) {
             stackIn_15_0 = var2Lifetime1.field_p.c(118);
             if (!stackIn_15_0) {
@@ -54,7 +54,7 @@ final class ma extends jc {
             } else {
               var2Lifetime1.field_n.f(128 + oc.field_f * var2Lifetime1.field_q >> 8);
             }
-            var2Lifetime1 = (sa) (m.field_c.b((byte) 56));
+            var2Lifetime1 = (sa) (GameAppletShell.field_c.b((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

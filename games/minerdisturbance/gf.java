@@ -36,7 +36,7 @@ final class gf {
             this.field_m = -58;
           }
           var2_int = 16 + (this.field_k / 10 + this.field_n * 32) - li.field_c;
-          var3 = 16 + (this.field_f / 10 + this.field_p * 32) - db.field_d;
+          var3 = 16 + (this.field_f / 10 + this.field_p * 32) - ClientException.field_d;
           var4 = q.field_b[this.field_n][this.field_p].field_i;
           if (var4 < 1) {
             var4 = 1;
@@ -51,12 +51,12 @@ final class gf {
             this.field_d = this.field_d - 1;
           }
           var5 = this.field_k / 10 + (32 * this.field_n - 32 * ca.field_k) - sk.field_d / 10;
-          var6 = -(hf.field_t * 32) - (mf.field_i / 10 - this.field_p * 32 - this.field_f / 10);
+          var6 = -(hf.field_t * 32) - (IsaacRandom.field_i / 10 - this.field_p * 32 - this.field_f / 10);
           var7 = (int)Math.sqrt((double)(var6 * var6 + var5 * var5)) / this.field_d;
           var2_int = (int)((double)var2_int + (double)var7 * Math.sin((double)pa.field_d * 3.14 / 16384.0) / 3.0);
           var3 = (int)((double)var3 + Math.cos((double)pa.field_d * 3.14 / 16384.0) * (double)var7 / 3.0);
           for (var8 = 0; var8 < 4; var8++) {
-            eh.f(var2_int, var3, -(var8 * 8) + 64, 16777215, 16);
+            SoftwareRasterizer.f(var2_int, var3, -(var8 * 8) + 64, 16777215, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,14 +70,14 @@ final class gf {
         int var12 = 0;
         int var14 = 0;
         int stackIn_18_0 = 0;
-        ea stackIn_27_0 = null;
+        Sprite stackIn_27_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ea var6 = null;
+        Sprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -85,7 +85,7 @@ final class gf {
         int var11 = 0;
         int var13 = 0;
         int var15 = 0;
-        ea var16 = null;
+        Sprite var16 = null;
         int var2_intLifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
@@ -104,14 +104,14 @@ final class gf {
             }
             if (this.field_d > 0) {
               var2_int = 32 * this.field_n + (this.field_k / 10 - sk.field_d / 10 - 32 * ca.field_k);
-              var3 = this.field_f / 10 + (32 * this.field_p + (-(mf.field_i / 10) - 32 * hf.field_t));
+              var3 = this.field_f / 10 + (32 * this.field_p + (-(IsaacRandom.field_i / 10) - 32 * hf.field_t));
               var4 = (int)Math.sqrt((double)(var2_int * var2_int + var3 * var3)) / this.field_d;
               if (var4 > 100) {
                 return;
               }
             }
             var2_intLifetime1 = -li.field_c + 32 * this.field_n + this.field_k / 10;
-            var3Lifetime1 = -db.field_d + (this.field_p * 32 + this.field_f / 10);
+            var3Lifetime1 = -ClientException.field_d + (this.field_p * 32 + this.field_f / 10);
             stackIn_18_0 = (!je.c(this.field_n, this.field_p, 1, 1)) ? 0 : 1;
             var4Lifetime1 = stackIn_18_0;
             var5 = (this.field_c & 63) / 16;
@@ -153,13 +153,13 @@ final class gf {
             var8 = -1 + (this.field_f / 80 + this.field_p * 4);
             var11 = -68 % ((-35 - param0) / 44);
             var9 = -li.field_c + var7Lifetime1 * 8;
-            var10 = var8 * 8 - db.field_d;
+            var10 = var8 * 8 - ClientException.field_d;
             for (var12 = 0; var12 <= 6; var12++) {
-              var10Lifetime1 = -db.field_d + 8 * var8;
+              var10Lifetime1 = -ClientException.field_d + 8 * var8;
               var13 = var8;
               for (var14 = 0; var14 <= 5; var14++) {
                 if (je.field_O.a(var7Lifetime1, var13, (byte) 61)) {
-                  eh.a(var9, var10Lifetime1, var9 + 8, var10Lifetime1 + 8);
+                  SoftwareRasterizer.a(var9, var10Lifetime1, var9 + 8, var10Lifetime1 + 8);
                   if (this.field_i >= 0) {
                     var6.f(var2_intLifetime1, var3Lifetime1);
                   } else {
@@ -172,7 +172,7 @@ final class gf {
               var9 += 8;
               var7Lifetime1++;
             }
-            eh.a();
+            SoftwareRasterizer.a();
             return;
           }
           return;
@@ -185,17 +185,17 @@ final class gf {
 
     final void b(int param0) {
         int stackIn_51_0 = 0;
-        ea stackIn_55_0 = null;
+        Sprite stackIn_55_0 = null;
         int stackIn_81_0 = 0;
-        ea stackIn_87_0 = null;
+        Sprite stackIn_87_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ea var5_ref_ea = null;
-        ea var6 = null;
+        Sprite var5_ref_ea = null;
+        Sprite var6 = null;
         int var7 = 0;
         int var4Lifetime1;
         int var4Lifetime2;
@@ -203,7 +203,7 @@ final class gf {
         var7 = MinerDisturbance.field_ab;
         try {
           var2_int = this.field_k / 10 + (this.field_n * 32 - li.field_c);
-          var3 = -db.field_d + (32 * this.field_p + this.field_f / 10);
+          var3 = -ClientException.field_d + (32 * this.field_p + this.field_f / 10);
           if (this.a((byte) 103)) {
             mb.field_d[this.field_h].f(var2_int, var3);
           }
@@ -221,10 +221,10 @@ final class gf {
                 if (20 == this.field_h) {
                   if (this.field_g == 0) {
                     if (this.field_b >= 250) {
-                      g.field_j[4].f(var2_int, var3);
+                      ArchiveIndex.field_j[4].f(var2_int, var3);
                       return;
                     }
-                    g.field_j[5 * this.field_b / 250].f(var2_int, var3);
+                    ArchiveIndex.field_j[5 * this.field_b / 250].f(var2_int, var3);
                     return;
                   }
                   if (5 > this.field_g) {
@@ -491,7 +491,7 @@ final class gf {
             q.field_b[this.field_n][this.field_p].field_i < 120) {
             var3_int = 0;
             var4 = 0;
-            L14: while (true) {
+            scanLoop1: while (true) {
               if (var4 < uf.field_p.length) {
                 if (null != uf.field_p[var4] &&
                   uf.field_p[var4].field_h == 10) {
@@ -501,7 +501,7 @@ final class gf {
                     uf.field_p[var4].field_n = this.field_n;
                     uf.field_p[var4].field_p = this.field_p;
                     var3_int = 1;
-                    break L14;
+                    break scanLoop1;
                   }
                 }
                 var4++;
@@ -706,7 +706,7 @@ final class gf {
             q.field_b[this.field_n][this.field_p].field_i < 120) {
             var4 = 0;
             var5 = 0;
-            L14: while (true) {
+            scanLoop1: while (true) {
               if (var5 < uf.field_p.length) {
                 if (null != uf.field_p[var5] &&
                   10 == uf.field_p[var5].field_h) {
@@ -716,7 +716,7 @@ final class gf {
                     uf.field_p[var5].field_n = this.field_n;
                     var4 = 1;
                     uf.field_p[var5].field_p = this.field_p;
-                    break L14;
+                    break scanLoop1;
                   }
                 }
                 var5++;

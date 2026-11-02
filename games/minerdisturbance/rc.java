@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc extends um {
+final class rc extends PcmStream {
     private int field_A;
     private int field_B;
     private int field_E;
@@ -29,7 +29,7 @@ final class rc extends um {
         }
     }
 
-    final um b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -1120,7 +1120,7 @@ final class rc extends um {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    final um c() {
+    final PcmStream c() {
         return null;
     }
 

@@ -3,7 +3,7 @@
  */
 final class nl {
     private static byte[] field_i;
-    private sb field_h;
+    private PacketBuffer field_h;
     private int[] field_c;
     int field_g;
     int[] field_b;
@@ -208,11 +208,11 @@ final class nl {
     }
 
     nl() {
-        this.field_h = new sb((byte[]) null);
+        this.field_h = new PacketBuffer((byte[]) null);
     }
 
     nl(byte[] param0) {
-        this.field_h = new sb((byte[]) null);
+        this.field_h = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

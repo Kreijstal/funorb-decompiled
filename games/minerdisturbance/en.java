@@ -6,16 +6,16 @@ final class en {
     static int[] field_b;
 
     final static byte[] a(byte param0) {
-        ld var1 = null;
-        ld var1Lifetime1;
+        CipherPacketBuffer var1 = null;
+        CipherPacketBuffer var1Lifetime1;
         if (param0 == -92) {
-          var1 = new ld(10);
+          var1 = new CipherPacketBuffer(10);
           var1.c(2, 25564);
           aa.field_j.b(param0 + 27529, var1);
           return var1.field_u;
         }
         field_a = (String[]) null;
-        var1Lifetime1 = new ld(10);
+        var1Lifetime1 = new CipherPacketBuffer(10);
         var1Lifetime1.c(2, 25564);
         aa.field_j.b(param0 + 27529, var1Lifetime1);
         return var1Lifetime1.field_u;

@@ -81,7 +81,7 @@ final class la {
         return la.a(var4);
     }
 
-    final void a(sb param0, cj param1) {
+    final void a(PacketBuffer param0, cj param1) {
         int var3;
         int var4;
         int var5;

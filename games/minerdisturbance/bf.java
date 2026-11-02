@@ -46,17 +46,17 @@ final class bf {
             return;
           }
           var2 = nk.field_w + li.field_c;
-          var3 = gb.field_e + db.field_d;
+          var3 = gb.field_e + ClientException.field_d;
           var4 = var2 / 32 * 32 - li.field_c;
-          var5 = -db.field_d + 32 * (var3 / 32);
-          eh.e(var4, var5, 8, 16711680);
-          eh.g(var4, var5, 8, 16711680);
-          eh.e(var4, var5 + 32, 8, 16711680);
-          eh.g(var4, 24 + var5, 8, 16711680);
-          eh.e(var4 + 24, var5, 8, 16711680);
-          eh.g(var4 + 32, var5, 8, 16711680);
-          eh.e(var4 + 24, var5, 8, 16711680);
-          eh.g(var4 + 32, var5 + 24, 8, 16711680);
+          var5 = -ClientException.field_d + 32 * (var3 / 32);
+          SoftwareRasterizer.e(var4, var5, 8, 16711680);
+          SoftwareRasterizer.g(var4, var5, 8, 16711680);
+          SoftwareRasterizer.e(var4, var5 + 32, 8, 16711680);
+          SoftwareRasterizer.g(var4, 24 + var5, 8, 16711680);
+          SoftwareRasterizer.e(var4 + 24, var5, 8, 16711680);
+          SoftwareRasterizer.g(var4 + 32, var5, 8, 16711680);
+          SoftwareRasterizer.e(var4 + 24, var5, 8, 16711680);
+          SoftwareRasterizer.g(var4 + 32, var5 + 24, 8, 16711680);
         }
         if (param0 < -57) {
           return;
@@ -97,14 +97,14 @@ final class bf {
             if (wi.field_w < 0) {
               return;
             }
-            if (m.field_e < 0) {
+            if (GameAppletShell.field_e < 0) {
               return;
             }
             if (jk.field_ab == 0) {
               return;
             }
             var2 = nk.field_w + li.field_c;
-            var3 = db.field_d + gb.field_e;
+            var3 = ClientException.field_d + gb.field_e;
             var4 = var2 / 32;
             var5 = var3 / 32;
             qm.field_f = true;
@@ -189,14 +189,14 @@ final class bf {
         if (wi.field_w < 0) {
           return;
         }
-        if (m.field_e < 0) {
+        if (GameAppletShell.field_e < 0) {
           return;
         }
         if (jk.field_ab == 0) {
           return;
         }
         var2Lifetime1 = nk.field_w + li.field_c;
-        var3Lifetime1 = db.field_d + gb.field_e;
+        var3Lifetime1 = ClientException.field_d + gb.field_e;
         var4Lifetime1 = var2Lifetime1 / 32;
         var5Lifetime1 = var3Lifetime1 / 32;
         qm.field_f = true;

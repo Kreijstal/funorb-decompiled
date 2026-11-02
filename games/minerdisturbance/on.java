@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class on extends eg {
-    static ta field_t;
+    static IntrusiveDeque field_t;
     private nb[] field_w;
     static String field_z;
     private nb field_y;
-    static ta field_v;
-    static ea field_x;
+    static IntrusiveDeque field_v;
+    static Sprite field_x;
     static int field_u;
     static String field_s;
 
-    final void a(byte param0, ea param1) {
+    final void a(byte param0, Sprite param1) {
         int var4 = 0;
         nb[] var3 = null;
         nb var5 = null;
@@ -200,7 +200,7 @@ final class on extends eg {
         }
     }
 
-    final void a(int param0, ea[] param1, byte param2) {
+    final void a(int param0, Sprite[] param1, byte param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
@@ -216,7 +216,7 @@ final class on extends eg {
         }
     }
 
-    final void a(ea[] param0, boolean param1) {
+    final void a(Sprite[] param0, boolean param1) {
         int var4 = 0;
         nb[] var3 = null;
         nb var5 = null;
@@ -230,7 +230,7 @@ final class on extends eg {
         var6 = MinerDisturbance.field_ab;
         try {
           if (!param1) {
-            field_x = (ea) null;
+            field_x = (Sprite) null;
           }
           var7 = this.field_w;
           var3 = var7;
@@ -262,7 +262,7 @@ final class on extends eg {
         field_v = null;
         field_s = null;
         if (param0 >= -49) {
-          field_v = (ta) null;
+          field_v = (IntrusiveDeque) null;
         }
     }
 
@@ -289,9 +289,9 @@ final class on extends eg {
     }
 
     static {
-        field_t = new ta();
+        field_t = new IntrusiveDeque();
         field_z = "Become a member to get this expansion and...";
-        field_v = new ta();
+        field_v = new IntrusiveDeque();
         field_s = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
     }
 }

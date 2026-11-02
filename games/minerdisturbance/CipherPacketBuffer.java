@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends sb {
+final class CipherPacketBuffer extends PacketBuffer {
     static int field_B;
-    private mf field_v;
-    static ea field_x;
+    private IsaacRandom field_v;
+    static Sprite field_x;
     static int field_w;
     private int field_z;
     private int field_y;
@@ -12,7 +12,7 @@ final class ld extends sb {
 
     final void b(int[] param0, int param1) {
         try {
-          this.field_v = new mf(param0);
+          this.field_v = new IsaacRandom(param0);
           int var3_int = -24 % ((param1 - 64) / 40);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ld.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -79,7 +79,7 @@ final class ld extends sb {
         int var2 = 55 / ((param0 + 5) / 39);
     }
 
-    ld(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -167,7 +167,7 @@ final class ld extends sb {
           this.field_u[fieldTemp$0] = (byte)(param1 + this.field_v.b(4));
           return;
         }
-        field_x = (ea) null;
+        field_x = (Sprite) null;
         int fieldTemp$1 = this.field_o;
         this.field_o = this.field_o + 1;
         this.field_u[fieldTemp$1] = (byte)(param1 + this.field_v.b(4));
@@ -225,7 +225,7 @@ final class ld extends sb {
         }
     }
 
-    ld(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -286,7 +286,7 @@ final class ld extends sb {
             }
           }
         }
-        field_x = (ea) null;
+        field_x = (Sprite) null;
         param0 = param0 & pl.field_b[param2];
         while (true) {
           if (this.field_z >= param2) {

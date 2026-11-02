@@ -222,9 +222,9 @@ final class ll implements Runnable {
     final static int a(byte param0, int param1) {
         if (param0 != -73) {
           ll.a((byte) -58, -86);
-          return ke.a(param1, -21937, sb.field_t);
+          return ke.a(param1, -21937, PacketBuffer.field_t);
         }
-        return ke.a(param1, -21937, sb.field_t);
+        return ke.a(param1, -21937, PacketBuffer.field_t);
     }
 
     final static void a(int param0) {

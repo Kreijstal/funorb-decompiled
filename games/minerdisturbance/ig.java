@@ -4,7 +4,7 @@
 final class ig {
     static int field_e;
     static String field_d;
-    static bj field_c;
+    static ResourceArchive field_c;
     static int field_b;
     static String field_a;
 
@@ -29,7 +29,7 @@ final class ig {
     }
 
     final static void a(int param0, int param1, il param2) {
-        ld var3 = null;
+        CipherPacketBuffer var3 = null;
         int var4 = 0;
         try {
           var3 = sn.field_c;

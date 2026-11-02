@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ob extends m {
+abstract class ob extends GameAppletShell {
     private int field_o;
     private boolean field_x;
     private int field_t;
-    static ea[] field_w;
+    static Sprite[] field_w;
     private int field_r;
     String field_s;
-    static bj field_q;
+    static ResourceArchive field_q;
     static String[][] field_n;
     private int field_B;
     private int field_A;
@@ -48,7 +48,7 @@ abstract class ob extends m {
         field_v = null;
         field_n = (String[][]) null;
         if (param0 < 48) {
-          field_q = (bj) null;
+          field_q = (ResourceArchive) null;
         }
     }
 
@@ -74,7 +74,7 @@ abstract class ob extends m {
             gi.a(85, 6);
           }
           if (mk.field_b[6]) {
-            g.a((byte) -69, 7);
+            ArchiveIndex.a((byte) -69, 7);
           }
           if (mk.field_b[8]) {
             hd.a(-124);
@@ -238,7 +238,7 @@ abstract class ob extends m {
         }
         if (af.field_u == 1) {
           if (kb.field_c != 0) {
-            sb.field_r = lb.a(1, s.field_Q);
+            PacketBuffer.field_r = lb.a(1, s.field_Q);
           }
           hj.field_i = eb.a(true, fn.field_p, false, 1, true);
           pb.field_r = eb.a(true, se.field_N, false, 1, true);
@@ -248,19 +248,19 @@ abstract class ob extends m {
           field_q = hj.field_i;
         }
         if (af.field_u == 2) {
-          if (null != sb.field_r &&
-            sb.field_r.a((byte) 83)) {
-            if (sb.field_r.b(false, "")) {
-              if (sb.field_r.a(false, "")) {
-                li.a(9259, sb.field_r);
-                sb.field_r = null;
+          if (null != PacketBuffer.field_r &&
+            PacketBuffer.field_r.a((byte) 83)) {
+            if (PacketBuffer.field_r.b(false, "")) {
+              if (PacketBuffer.field_r.a(false, "")) {
+                li.a(9259, PacketBuffer.field_r);
+                PacketBuffer.field_r = null;
                 wf.p(4462);
               }
             } else {
-              sb.field_r = null;
+              PacketBuffer.field_r = null;
             }
           }
-          if (null == sb.field_r) {
+          if (null == PacketBuffer.field_r) {
             af.field_u = 3;
           }
         }
@@ -269,7 +269,7 @@ abstract class ob extends m {
           eb.a(oh.field_C, (byte) 124)) {
           bh.h((byte) 123);
           em.g(-1719110238);
-          bj.field_c = ll.field_e;
+          ResourceArchive.field_c = ll.field_e;
           jb.field_q = false;
           mj.a(v.field_e, hj.field_i, 43, oh.field_C, pb.field_r);
           if (nc.field_e ||
@@ -484,7 +484,7 @@ abstract class ob extends m {
     final static boolean l(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -1) {
-          field_q = (bj) null;
+          field_q = (ResourceArchive) null;
         }
         stackIn_6_0 = (ci.field_i != null) && (qd.field_Q.a(param0 ^ -18545));
         return stackIn_6_0;
@@ -573,16 +573,16 @@ abstract class ob extends m {
           int var8 = 0;
           String var9 = null;
           Boolean var10 = null;
-          sb var11 = null;
+          PacketBuffer var11 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = MinerDisturbance.field_ab;
-          var4 = bj.a(ki.field_n, kb.field_c, param2, 65);
+          var4 = ResourceArchive.a(ki.field_n, kb.field_c, param2, 65);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ob.a((byte) 112, mf.a(15), fe.f(0));
+            var5_int = ob.a((byte) 112, IsaacRandom.a(15), fe.f(0));
             if (-1 != var5_int) {
               vj.a(-21614, nf.field_g, var5_int, vh.field_i);
               nf.field_g = null;

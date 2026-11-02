@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends pi {
+final class nk extends IntrusiveNode {
     int field_t;
     static int field_u;
     static String[][] field_v;

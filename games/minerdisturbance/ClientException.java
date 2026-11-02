@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends RuntimeException {
-    static ea field_f;
+final class ClientException extends RuntimeException {
+    static Sprite field_f;
     static int field_d;
     static boolean field_e;
     String field_a;
@@ -20,7 +20,7 @@ final class db extends RuntimeException {
         field_f = null;
     }
 
-    db(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_c = param0;
         this.field_a = param1;
     }

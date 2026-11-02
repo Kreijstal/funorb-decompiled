@@ -8,7 +8,7 @@ final class mc {
     private int field_l;
     private int field_s;
     private int field_c;
-    private ea field_r;
+    private Sprite field_r;
     static String field_e;
     private MinerDisturbance field_q;
     private int field_b;
@@ -16,16 +16,16 @@ final class mc {
     private int field_f;
     private int[] field_g;
     static String field_z;
-    static ea field_u;
+    static Sprite field_u;
     private boolean[] field_i;
     private int[] field_j;
     private int field_y;
-    private ea field_h;
+    private Sprite field_h;
     boolean field_o;
     private int field_n;
     private int field_k;
     private int field_a;
-    static ta field_m;
+    static IntrusiveDeque field_m;
     private int field_v;
     static int field_w;
 
@@ -770,7 +770,7 @@ final class mc {
         int stackIn_70_2;
         int stackIn_70_3;
         int stackIn_71_4 = 0;
-        ea stackIn_73_0 = null;
+        Sprite stackIn_73_0 = null;
         int stackIn_74_1 = 0;
         boolean stackIn_81_1 = false;
         Object stackIn_83_0;
@@ -810,14 +810,14 @@ final class mc {
         Object var13;
         String var13_ref;
         vm var14;
-        ea var15;
+        Sprite var15;
         int var16;
         int var17;
         int var18;
         int var19;
         int var20;
         int var21;
-        ea var22;
+        Sprite var22;
         int var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
@@ -851,10 +851,10 @@ final class mc {
           var3 = 345 - (qc.field_d.field_x >> 1);
           var4 = 320 + (qc.field_d.field_x >> 1) - 25;
           while (var3 < var4) {
-            eh.a(var3 << 4, this.field_v + 42 << 4, 800, var2, s.field_I);
+            SoftwareRasterizer.a(var3 << 4, this.field_v + 42 << 4, 800, var2, s.field_I);
             var3 += 50;
           }
-          eh.a(var4 << 4, 42 + this.field_v << 4, 800, var2, s.field_I);
+          SoftwareRasterizer.a(var4 << 4, 42 + this.field_v << 4, 800, var2, s.field_I);
         }
         var2Lifetime1 = wc.field_c[ah.field_f][0].field_A;
         var3Lifetime1 = wc.field_c[ah.field_f][0].field_x;
@@ -865,12 +865,12 @@ final class mc {
           var6 = 4;
         }
         var7 = 0;
-        L5: while (var6 > var7) {
+        scanLoop1: while (var6 > var7) {
           var8_int = 0;
           while (true) {
             if (var4Lifetime1 <= var8_int) {
               var7++;
-              continue L5;
+              continue scanLoop1;
             }
             if (21 <= var5) {
               break;
@@ -890,12 +890,12 @@ final class mc {
         var21 = 0;
         var5Lifetime1 = var21;
         var7Lifetime1 = 0;
-        L9: while (var7Lifetime1 < var6) {
+        scanLoop2: while (var7Lifetime1 < var6) {
           var8_intLifetime1 = 0;
           while (true) {
             if (var8_intLifetime1 >= var4Lifetime1) {
               var7Lifetime1++;
-              continue L9;
+              continue scanLoop2;
             }
             if (var21 >= 21) {
               break;
@@ -959,7 +959,7 @@ final class mc {
             var21++;
             if (var13_int == 0) {
               this.field_h.g();
-              eh.d();
+              SoftwareRasterizer.d();
               stackIn_70_0 = ce.field_d;
               stackIn_70_1 = Integer.toString(var10Lifetime1 * 100);
               stackIn_70_2 = 10;
@@ -976,8 +976,8 @@ final class mc {
               } else {
                 stackIn_74_1 = 16777215;
               }
-              ((ea) (Object) stackIn_73_0).f(stackIn_74_1);
-              bj.field_e.a((byte) -45);
+              ((Sprite) (Object) stackIn_73_0).f(stackIn_74_1);
+              ResourceArchive.field_e.a((byte) -45);
               this.field_h.c(var18, var17, var12, var2Lifetime1);
             } else {
               gb.field_a.c(var18, var17, var12, var2Lifetime1);
@@ -986,8 +986,8 @@ final class mc {
           }
           break;
         }
-        eh.b(this.field_v, 440, 640, 40, 4539717, 160);
-        eh.a(this.field_v, 441, 640, 41, 10066329);
+        SoftwareRasterizer.b(this.field_v, 440, 640, 40, 4539717, 160);
+        SoftwareRasterizer.a(this.field_v, 441, 640, 41, 10066329);
         stackIn_81_1 = (this.field_f == 0) && (this.field_c % 10 < 5);
         stackIn_83_0 = this;
         stackIn_83_2 = -123;
@@ -1014,7 +1014,7 @@ final class mc {
           a.field_a[this.field_b + 16].f(this.field_v + 590, -a.field_a[0].field_u - a.field_a[0].field_C + 480);
         }
         var7Lifetime2 = -this.field_v - 0;
-        var8 = ta.field_f;
+        var8 = IntrusiveDeque.field_f;
         if (this.field_i[21]) {
           var8 = se.field_L;
         }
@@ -1036,10 +1036,10 @@ final class mc {
           var9.a(var8, 0, 0, kd.field_r.field_x, kd.field_r.field_A, 16437248, -1, 1, 1, var10Lifetime2);
         }
         var11Lifetime2 = -101 / ((-70 - param0) / 32);
-        bj.field_e.a((byte) -45);
+        ResourceArchive.field_e.a((byte) -45);
         this.field_r.c(39 + (var7Lifetime2 - (this.field_p[21] >> 1)), 315, kd.field_r.field_x + this.field_p[21], kd.field_r.field_A);
-        g.a(316, 113, var7Lifetime2 + 190, 414, (byte) 83, he.field_b);
-        g.a(391, 38, var7Lifetime2 + 39, 142, (byte) 109, he.field_b);
+        ArchiveIndex.a(316, 113, var7Lifetime2 + 190, 414, (byte) 83, he.field_b);
+        ArchiveIndex.a(391, 38, var7Lifetime2 + 39, 142, (byte) 109, he.field_b);
         if (this.field_v == 0) {
           var12 = -1;
           if (this.field_a >= 0 &&
@@ -1237,10 +1237,10 @@ final class mc {
             }
           }
           this.field_d = wc.field_c[ah.field_f][0].field_x;
-          this.field_h = new ea(this.field_d, wc.field_c[ah.field_f][0].field_A);
+          this.field_h = new Sprite(this.field_d, wc.field_c[ah.field_f][0].field_A);
           this.field_l = -1;
           this.field_y = 0;
-          this.field_r = new ea(kd.field_r.field_x, kd.field_r.field_A);
+          this.field_r = new Sprite(kd.field_r.field_x, kd.field_r.field_A);
           this.a(param1, (byte) 27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

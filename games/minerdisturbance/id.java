@@ -4,7 +4,7 @@
 final class id {
     int field_g;
     int field_d;
-    static bj field_c;
+    static ResourceArchive field_c;
     static String[] field_l;
     private long field_k;
     String field_e;
@@ -102,7 +102,7 @@ final class id {
         this.field_d = ig.field_e;
         this.field_g = pf.field_i;
         if (param0) {
-          this.field_a = pi.field_l;
+          this.field_a = IntrusiveNode.field_l;
         } else {
           this.field_a = null;
         }

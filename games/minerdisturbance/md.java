@@ -40,12 +40,12 @@ final class md {
         }
     }
 
-    final static ea[] a(String param0, bj param1, int param2, String param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ea[] stackIn_2_0 = null;
-        ea[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -56,7 +56,7 @@ final class md {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 10) {
-            stackIn_2_0 = (ea[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param1.a(126, param3);

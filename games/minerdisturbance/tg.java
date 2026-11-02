@@ -4,15 +4,15 @@
 final class tg {
     static int field_f;
     private int field_h;
-    private pi field_e;
-    private pi field_c;
+    private IntrusiveNode field_e;
+    private IntrusiveNode field_c;
     static int field_g;
     static int field_i;
     static int field_d;
     private int field_a;
-    private pi[] field_b;
+    private IntrusiveNode[] field_b;
 
-    final pi a(int param0) {
+    final IntrusiveNode a(int param0) {
         this.field_h = 0;
         if (param0 != -16545) {
           this.a(77);
@@ -21,10 +21,10 @@ final class tg {
         return this.a(true);
     }
 
-    final pi a(long param0, int param1) {
-        pi var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = MinerDisturbance.field_ab;
-        pi var4 = this.field_b[(int)(param0 & (long)(this.field_a - 1))];
+        IntrusiveNode var4 = this.field_b[(int)(param0 & (long)(this.field_a - 1))];
         this.field_c = var4.field_f;
         while (this.field_c != var4) {
           if (this.field_c.field_d == param0) {
@@ -36,7 +36,7 @@ final class tg {
         }
         this.field_c = null;
         if (param1 != -27109) {
-          this.field_e = (pi) null;
+          this.field_e = (IntrusiveNode) null;
           return null;
         }
         return null;
@@ -226,13 +226,13 @@ final class tg {
 
     tg(int param0) {
         int var2 = 0;
-        pi dupTemp$1 = null;
-        pi var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_h = 0;
-        this.field_b = new pi[param0];
+        this.field_b = new IntrusiveNode[param0];
         this.field_a = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new pi();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
           var3.field_f = var3;
@@ -240,19 +240,19 @@ final class tg {
         }
     }
 
-    final pi a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        pi var4;
-        pi var5;
-        pi var6;
-        pi var18;
-        pi var19;
-        pi var23;
-        pi var32;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
+        IntrusiveNode var18;
+        IntrusiveNode var19;
+        IntrusiveNode var23;
+        IntrusiveNode var32;
         var3 = MinerDisturbance.field_ab;
         if (this.field_h <= 0) {
           if (param0) {
@@ -268,8 +268,8 @@ final class tg {
             this.field_e = var18.field_f;
             return var18;
           }
-          var4 = (pi) null;
-          this.a(-99, -121L, (pi) null);
+          var4 = (IntrusiveNode) null;
+          this.a(-99, -121L, (IntrusiveNode) null);
           do {
             if (this.field_a <= this.field_h) {
               return null;
@@ -300,8 +300,8 @@ final class tg {
           this.field_e = var19.field_f;
           return var19;
         }
-        var4 = (pi) null;
-        this.a(-99, -121L, (pi) null);
+        var4 = (IntrusiveNode) null;
+        this.a(-99, -121L, (IntrusiveNode) null);
         do {
           if (this.field_a <= this.field_h) {
             return null;
@@ -315,8 +315,8 @@ final class tg {
         return var23;
     }
 
-    final void a(int param0, long param1, pi param2) {
-        pi var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param2.field_c != null) {
             param2.b(34);

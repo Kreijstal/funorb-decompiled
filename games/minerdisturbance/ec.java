@@ -8,7 +8,7 @@ final class ec {
     static String field_f;
     static gj field_d;
     static int field_e;
-    static ta field_c;
+    static IntrusiveDeque field_c;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -21,7 +21,7 @@ final class ec {
         oc.field_e = null;
         af.field_p = null;
         qk.field_b = null;
-        db.field_b = (byte[][]) null;
+        ClientException.field_b = (byte[][]) null;
     }
 
     public static void a(int param0) {
@@ -64,6 +64,6 @@ final class ec {
         field_f = "Loading extra data";
         field_e = 64;
         field_d = new gj();
-        field_c = new ta();
+        field_c = new IntrusiveDeque();
     }
 }

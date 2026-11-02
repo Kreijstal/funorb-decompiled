@@ -41,7 +41,7 @@ final class th {
         return var3;
     }
 
-    private final void a(int param0, ld param1) {
+    private final void a(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
@@ -61,7 +61,7 @@ final class th {
         }
     }
 
-    th(ld param0) {
+    th(CipherPacketBuffer param0) {
         try {
           this.a((byte) 126);
           this.a(33, param0);
@@ -70,11 +70,11 @@ final class th {
         }
     }
 
-    final void b(int param0, ld param1) {
+    final void b(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ld stackIn_7_0 = null;
+        CipherPacketBuffer stackIn_7_0 = null;
         int stackIn_8_1 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -86,13 +86,13 @@ final class th {
           param1.c(true);
           for (var3_int = 0; var3_int < 35; var3_int++) {
             for (var4 = 0; var4 < 2; var4++) {
-              stackIn_7_0 = (ld) (param1);
+              stackIn_7_0 = (CipherPacketBuffer) (param1);
               if (this.field_c[var3_int][var4]) {
                 stackIn_8_1 = 1;
               } else {
                 stackIn_8_1 = 0;
               }
-              ((ld) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 14, 1);
+              ((CipherPacketBuffer) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 14, 1);
             }
           }
           param1.n(98);

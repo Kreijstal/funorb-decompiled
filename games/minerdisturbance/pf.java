@@ -5,7 +5,7 @@ final class pf {
     static String[][] field_d;
     static String[] field_f;
     static String[][] field_g;
-    static ea[] field_a;
+    static Sprite[] field_a;
     static oe field_e;
     private boolean field_h;
     static int field_c;

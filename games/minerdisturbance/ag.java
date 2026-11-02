@@ -4,8 +4,8 @@
 final class ag {
     static String field_d;
     static boolean field_c;
-    static ea[] field_a;
-    static ta field_b;
+    static Sprite[] field_a;
+    static IntrusiveDeque field_b;
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var5;
@@ -24,11 +24,11 @@ final class ag {
           if (0 <= param3 &&
             param2 >= 0 &&
             li.field_c > 0 &&
-            db.field_d > 0) {
+            ClientException.field_d > 0) {
             if ((-li.field_c + param3 >= 0 &&
               608 >= -li.field_c + param3) &&
-              (decompiledFrameRemainder0 = (!(-db.field_d + param2 >= 0) ||
-              !(-db.field_d + param2 <= 448)))) {
+              (decompiledFrameRemainder0 = (!(-ClientException.field_d + param2 >= 0) ||
+              !(-ClientException.field_d + param2 <= 448)))) {
               return;
             }
             if (decompiledFrameRemainder0) {
@@ -64,7 +64,7 @@ final class ag {
     }
 
     final static void a(hf param0, int param1, int param2) {
-        ld var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = sn.field_c;
@@ -157,6 +157,6 @@ final class ag {
 
     static {
         field_c = false;
-        field_b = new ta();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh {
+final class SoftwareRasterizer {
     private static int[] field_l;
     static int field_k;
     static int field_d;
@@ -20,7 +20,7 @@ final class eh {
         field_d = 0;
         field_k = field_g;
         field_e = field_c;
-        eh.b();
+        SoftwareRasterizer.b();
     }
 
     final static void d() {
@@ -92,10 +92,10 @@ final class eh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        eh.e(param0, param1, param2, param4);
-        eh.e(param0, param1 + param3 - 1, param2, param4);
-        eh.g(param0, param1, param3, param4);
-        eh.g(param0 + param2 - 1, param1, param3, param4);
+        SoftwareRasterizer.e(param0, param1, param2, param4);
+        SoftwareRasterizer.e(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.g(param0, param1, param3, param4);
+        SoftwareRasterizer.g(param0 + param2 - 1, param1, param3, param4);
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4) {
@@ -141,7 +141,7 @@ final class eh {
           return;
         }
         if (param4 == 256) {
-          eh.c(param0, param1, param2, param3);
+          SoftwareRasterizer.c(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -252,7 +252,7 @@ final class eh {
         field_d = param0[1];
         field_k = param0[2];
         field_e = param0[3];
-        eh.b();
+        SoftwareRasterizer.b();
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -357,8 +357,8 @@ final class eh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        eh.a(field_f, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        eh.a(field_f, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+        SoftwareRasterizer.a(field_f, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
+        SoftwareRasterizer.a(field_f, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -772,17 +772,17 @@ final class eh {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            eh.e(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.e(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            eh.e(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.e(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            eh.g(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.g(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            eh.g(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.g(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -971,8 +971,8 @@ final class eh {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          eh.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          eh.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -987,7 +987,7 @@ final class eh {
         int var9;
         int var10;
         if (param2 == 0) {
-          eh.b(param0, param1, param3);
+          SoftwareRasterizer.b(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1167,7 +1167,7 @@ final class eh {
         if (field_e > param3) {
           field_e = param3;
         }
-        eh.b();
+        SoftwareRasterizer.b();
     }
 
     final static void c(int param0, int param1, int param2, int param3) {
@@ -1198,7 +1198,7 @@ final class eh {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          eh.b(param0, param1, param3);
+          SoftwareRasterizer.b(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1354,7 +1354,7 @@ final class eh {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_g;
         int var23 = field_g + var6 - var7;
-        eh.a(0, 0, 0, 0, 0, var15, var5, var22, field_f, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRasterizer.a(0, 0, 0, 0, 0, var15, var5, var22, field_f, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -1395,7 +1395,7 @@ final class eh {
         field_d = param1;
         field_k = param2;
         field_e = param3;
-        eh.b();
+        SoftwareRasterizer.b();
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4) {
@@ -1432,7 +1432,7 @@ final class eh {
         field_f = param0;
         field_g = param1;
         field_c = param2;
-        eh.a(0, 0, param1, param2);
+        SoftwareRasterizer.a(0, 0, param1, param2);
     }
 
     final static void b(int param0, int param1, int param2) {

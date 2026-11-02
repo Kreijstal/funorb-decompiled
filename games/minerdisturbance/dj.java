@@ -18,7 +18,7 @@ final class dj {
     }
 
     final static void a() {
-        dj.a(eh.field_a, eh.field_d, eh.field_k, eh.field_e);
+        dj.a(SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, SoftwareRasterizer.field_e);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -29,10 +29,10 @@ final class dj {
         if (field_a.length < field_f) {
           field_a = new int[ab.a(field_f, 15952)];
         }
-        int var4 = param1 * eh.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer.field_g + param0;
         for (var5 = 0; var5 < field_f; var5++) {
           field_a[var5] = var4;
-          var4 = var4 + eh.field_g;
+          var4 = var4 + SoftwareRasterizer.field_g;
         }
     }
 

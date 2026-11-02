@@ -21,9 +21,9 @@ abstract class cc extends kn {
           return;
         }
         if (null == mn.field_t) {
-          mn.field_t = new ea(this.field_v, this.field_q);
-          vb.a(mn.field_t, 127);
-          eh.d();
+          mn.field_t = new Sprite(this.field_v, this.field_q);
+          ArchiveProvider.a(mn.field_t, 127);
+          SoftwareRasterizer.d();
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
@@ -31,9 +31,9 @@ abstract class cc extends kn {
           return;
         }
         if (this.field_v > mn.field_t.field_y) {
-          mn.field_t = new ea(this.field_v, this.field_q);
-          vb.a(mn.field_t, 127);
-          eh.d();
+          mn.field_t = new Sprite(this.field_v, this.field_q);
+          ArchiveProvider.a(mn.field_t, 127);
+          SoftwareRasterizer.d();
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
@@ -41,17 +41,17 @@ abstract class cc extends kn {
           return;
         }
         if (mn.field_t.field_C >= this.field_q) {
-          vb.a(mn.field_t, 127);
-          eh.d();
+          ArchiveProvider.a(mn.field_t, 127);
+          SoftwareRasterizer.d();
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
           mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
           return;
         }
-        mn.field_t = new ea(this.field_v, this.field_q);
-        vb.a(mn.field_t, 127);
-        eh.d();
+        mn.field_t = new Sprite(this.field_v, this.field_q);
+        ArchiveProvider.a(mn.field_t, 127);
+        SoftwareRasterizer.d();
         this.b(21533, 0, 0);
         super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
         tk.b(true);
@@ -109,10 +109,10 @@ abstract class cc extends kn {
           var3 = tf.field_a;
           if (var3 < 100) {
             var2 = 480 + (32 + (-var3 / 2 - 38));
-            var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-            g.a(var2 - 10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+            var4 = ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 640);
+            ArchiveIndex.a(var2 - 10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
             nj.field_c[var6.field_s].c(590, var2);
-            ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+            ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
             if (param0 >= -79) {
               cc.a(37, 30);
               return;
@@ -121,10 +121,10 @@ abstract class cc extends kn {
           }
           if (var3 >= 250) {
             var2Lifetime1 = -123 - (-(var3 / 2) - 480) - 58;
-            var4Lifetime1 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-            g.a(var2Lifetime1 - 10, 60, -var4Lifetime1 + 570, var4Lifetime1 + 60, (byte) 60, he.field_b);
+            var4Lifetime1 = ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 640);
+            ArchiveIndex.a(var2Lifetime1 - 10, 60, -var4Lifetime1 + 570, var4Lifetime1 + 60, (byte) 60, he.field_b);
             nj.field_c[var6.field_s].c(590, var2Lifetime1);
-            ce.field_d.c(ld.field_A[var6.field_s], 582, var2Lifetime1 + ce.field_d.field_I, 1, -1);
+            ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime1 + ce.field_d.field_I, 1, -1);
             if (param0 >= -79) {
               cc.a(37, 30);
               return;
@@ -132,10 +132,10 @@ abstract class cc extends kn {
             return;
           }
           var2Lifetime2 = 424;
-          var4Lifetime2 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-          g.a(var2Lifetime2 - 10, 60, -var4Lifetime2 + 570, var4Lifetime2 + 60, (byte) 60, he.field_b);
+          var4Lifetime2 = ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 640);
+          ArchiveIndex.a(var2Lifetime2 - 10, 60, -var4Lifetime2 + 570, var4Lifetime2 + 60, (byte) 60, he.field_b);
           nj.field_c[var6.field_s].c(590, var2Lifetime2);
-          ce.field_d.c(ld.field_A[var6.field_s], 582, var2Lifetime2 + ce.field_d.field_I, 1, -1);
+          ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime2 + ce.field_d.field_I, 1, -1);
         }
         if (param0 < -79) {
           return;

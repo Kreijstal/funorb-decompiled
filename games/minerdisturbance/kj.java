@@ -3,7 +3,7 @@
  */
 final class kj {
     static int field_d;
-    static ld field_a;
+    static CipherPacketBuffer field_a;
     static String field_b;
     static eg field_c;
 
@@ -66,7 +66,7 @@ final class kj {
 
     final static boolean b(int param0) {
         if (-1 == rj.field_d) {
-          if (!ta.a(0, 1)) {
+          if (!IntrusiveDeque.a(0, 1)) {
             return false;
           }
           rj.field_d = field_a.d((byte) -54);
@@ -75,22 +75,22 @@ final class kj {
         if (param0 != -9319) {
           field_b = (String) null;
           if (-2 != rj.field_d) {
-            return ta.a(0, rj.field_d);
+            return IntrusiveDeque.a(0, rj.field_d);
           }
-          if (ta.a(0, 2)) {
+          if (IntrusiveDeque.a(0, 2)) {
             rj.field_d = field_a.e(-81);
             field_a.field_o = 0;
-            return ta.a(0, rj.field_d);
+            return IntrusiveDeque.a(0, rj.field_d);
           }
           return false;
         }
         if (-2 != rj.field_d) {
-          return ta.a(0, rj.field_d);
+          return IntrusiveDeque.a(0, rj.field_d);
         }
-        if (ta.a(0, 2)) {
+        if (IntrusiveDeque.a(0, 2)) {
           rj.field_d = field_a.e(-81);
           field_a.field_o = 0;
-          return ta.a(0, rj.field_d);
+          return IntrusiveDeque.a(0, rj.field_d);
         }
         return false;
     }

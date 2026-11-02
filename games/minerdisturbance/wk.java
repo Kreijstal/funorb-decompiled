@@ -3,7 +3,7 @@
  */
 final class wk {
     static kd field_a;
-    static bj field_c;
+    static ResourceArchive field_c;
     static String field_d;
     static String field_b;
     private static String field_z;
@@ -13,7 +13,7 @@ final class wk {
         field_b = null;
         field_d = null;
         if (!param0) {
-          field_c = (bj) null;
+          field_c = (ResourceArchive) null;
           field_c = null;
           return;
         }

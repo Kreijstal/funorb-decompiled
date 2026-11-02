@@ -4,7 +4,7 @@
 final class sk implements uj {
     static int field_d;
     static int[] field_b;
-    static ea field_e;
+    static Sprite field_e;
     static long field_c;
     static long field_a;
 

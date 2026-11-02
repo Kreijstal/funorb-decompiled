@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends pi {
+final class mj extends IntrusiveNode {
     static int[] field_n;
     static fj field_o;
     int field_r;
     static int field_p;
     int field_q;
 
-    final static void a(boolean param0, bj param1, int param2, bj param3, bj param4) {
-        wm.field_f = al.a(-10218, "");
+    final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3, ResourceArchive param4) {
+        wm.field_f = DualLinkNode.a(-10218, "");
         if (param2 < 34) {
           return;
         }

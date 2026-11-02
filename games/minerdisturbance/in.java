@@ -13,7 +13,7 @@ final class in {
         int var5_int = 0;
         byte[] var5 = null;
         byte[] var6 = null;
-        sb var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -26,7 +26,7 @@ final class in {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new sb(param0);
+          var9 = new PacketBuffer(param0);
           var3 = var9.d((byte) -54);
           var4 = var9.b((byte) 69);
           if (var4 >= 0 && (eg.field_h == 0 ||
@@ -46,9 +46,9 @@ final class in {
               var10 = var12;
               var6 = var10;
               if (var3 != 1) {
-                var7 = pi.field_g;
+                var7 = IntrusiveNode.field_g;
                 synchronized (var7) {
-                  pi.field_g.a(var9, true, var12);
+                  IntrusiveNode.field_g.a(var9, true, var12);
                 }
               } else {
                 va.a(var12, var5_int, param0, var4, 9);

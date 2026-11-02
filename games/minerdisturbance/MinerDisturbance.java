@@ -187,7 +187,7 @@ public final class MinerDisturbance extends ob {
             return;
           }
           if (!nn.field_n) {
-            mf.a(-752960408, (java.awt.Canvas) (var2));
+            IsaacRandom.a(-752960408, (java.awt.Canvas) (var2));
             return;
           }
           if (!od.e(param0) &&
@@ -198,10 +198,10 @@ public final class MinerDisturbance extends ob {
               ci.field_b) {
               this.t(48);
               if (var4 != 0) {
-                eh.d();
+                SoftwareRasterizer.d();
               }
             } else {
-              eh.d();
+              SoftwareRasterizer.d();
             }
             stackIn_46_0 = !(ke.field_V);
             ij.field_p = stackIn_46_0;
@@ -221,7 +221,7 @@ public final class MinerDisturbance extends ob {
               ff.a(false);
             }
             if (0 != on.field_u) {
-              eh.b(0, 0, 640, 480, 1, on.field_u << 1);
+              SoftwareRasterizer.b(0, 0, 640, 480, 1, on.field_u << 1);
             }
             boolean decompiledSharedTail0 = !(oc.d(108));
             if (!decompiledSharedTail0) {
@@ -229,7 +229,7 @@ public final class MinerDisturbance extends ob {
               decompiledSharedTail0 = (var4 != 0);
             }
             if ((decompiledSharedTail0) &&
-              (g.a((byte) -126))) {
+              (ArchiveIndex.a((byte) -126))) {
               if (kf.field_d != null) {
                 stackIn_83_0 = true;
               } else {
@@ -253,7 +253,7 @@ public final class MinerDisturbance extends ob {
               var3 += 30;
               ce.field_d.c("ICE BLOCKS CREATED: " + re.field_d, 630, var3, 65535, -1);
               var3 += 30;
-              ce.field_d.c("PERCENT OIL FOR ACHIEVEMENT: " + 100 * pi.field_a / 2800 + "%", 630, var3, 65535, -1);
+              ce.field_d.c("PERCENT OIL FOR ACHIEVEMENT: " + 100 * IntrusiveNode.field_a / 2800 + "%", 630, var3, 65535, -1);
               var3 += 30;
               ce.field_d.c("CURRENTLEVEL: " + je.field_u, 630, var3, 65535, -1);
               var3 += 30;
@@ -280,7 +280,7 @@ public final class MinerDisturbance extends ob {
             return;
           }
           pa.a(true, ec.field_f, 100.0f);
-          mf.a(-752960408, (java.awt.Canvas) (var2));
+          IsaacRandom.a(-752960408, (java.awt.Canvas) (var2));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,7 +345,7 @@ public final class MinerDisturbance extends ob {
               je.field_j[1] = td.a("sky", fl.field_f, "supervolcano", (byte) 120);
               ph.field_e = td.a("walrus", fl.field_f, "supervolcano", (byte) 122);
               fi.field_b = td.a("penguin", fl.field_f, "supervolcano", (byte) 124);
-              g.field_j = td.a("icebomb", fl.field_f, "supervolcano", (byte) 118);
+              ArchiveIndex.field_j = td.a("icebomb", fl.field_f, "supervolcano", (byte) 118);
               hk.field_a = td.a("freezeexplosion", fl.field_f, "supervolcano", (byte) 113);
               me.field_k[1] = jn.a("levelbackground", -29553, "supervolcano", fl.field_f);
               return false;
@@ -395,7 +395,7 @@ public final class MinerDisturbance extends ob {
               pc.field_f = td.a("jetpack_onfire", fl.field_f, "supervolcano", (byte) 110);
               ob.field_w = td.a("miner_pickup_freezium", fl.field_f, "supervolcano", (byte) 117);
               tf.field_c = td.a("miner_pickup_freezium_oily", fl.field_f, "supervolcano", (byte) 122);
-              lb.field_x = new ea[ob.field_w.length];
+              lb.field_x = new Sprite[ob.field_w.length];
               var2_int = 0;
               while (true) {
                 stackIn_47_0 = var2_int;
@@ -434,7 +434,7 @@ public final class MinerDisturbance extends ob {
               pn.field_c = pb.a("supervolcano", fl.field_f, "thermometer_mask", (byte) -77);
               kc.field_a = rf.field_d.c();
               pf.field_a = td.a("oildrips", fl.field_f, "supervolcano", (byte) 123);
-              vc.field_o = new ea[ph.field_e.length];
+              vc.field_o = new Sprite[ph.field_e.length];
               var2_int = 0;
               while (true) {
                 stackIn_66_0 = ~var2_int;
@@ -571,7 +571,7 @@ public final class MinerDisturbance extends ob {
             }
             this.field_M = this.field_M * -1;
             if (fl.field_d) {
-              pi.a(this.field_K, 2);
+              IntrusiveNode.a(this.field_K, 2);
             }
             if (sc.field_b) {
               if (!ni.a(14, 11764) &&
@@ -594,10 +594,10 @@ public final class MinerDisturbance extends ob {
                 if (!this.field_K) {
                   kh.a((byte) 92);
                   if (var5 != 0) {
-                    al.e(param0 + 82);
+                    DualLinkNode.e(param0 + 82);
                   }
                 } else {
-                  al.e(param0 + 82);
+                  DualLinkNode.e(param0 + 82);
                 }
               }
               this.field_X = this.field_K;
@@ -629,7 +629,7 @@ public final class MinerDisturbance extends ob {
             (sc.field_b)) {
             if (!this.field_Y &&
               fl.field_d) {
-              pi.a(this.field_K, 2);
+              IntrusiveNode.a(this.field_K, 2);
             }
             je.j();
           }
@@ -647,9 +647,9 @@ public final class MinerDisturbance extends ob {
               return;
             }
           }
-          L37: {
-            L38: {
-              L39: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
                 boolean decompiledFrameRemainder0 = true;
                 var2_intLifetime1 = 0;
                 var3Lifetime1 = pl.field_h;
@@ -668,33 +668,33 @@ public final class MinerDisturbance extends ob {
                   var5 != 0))) {
                   if (var3Lifetime1 == 0 &&
                     var5 == 0) {
-                    break L39;
+                    break regionExit3;
                   }
                   if (var3Lifetime1 == 14 &&
                     var5 == 0) {
-                    break L38;
+                    break regionExit2;
                   }
                   if (5 != var3Lifetime1) {
-                    break L37;
+                    break regionExit1;
                   }
                   if (var5 == 0) {
-                    break L38;
+                    break regionExit2;
                   }
                 }
                 if (decompiledFrameRemainder0) {
                   var2_intLifetime1 = 45;
                   if (var5 == 0) {
-                    break L37;
+                    break regionExit1;
                   }
                 }
                 var2_intLifetime1 = 49;
                 if (var5 == 0) {
-                  break L37;
+                  break regionExit1;
                 }
               }
               var2_intLifetime1 = 65;
               if (var5 == 0) {
-                break L37;
+                break regionExit1;
               }
             }
             var2_intLifetime1 = 1;
@@ -752,7 +752,7 @@ public final class MinerDisturbance extends ob {
         Object stackIn_92_0 = null;
         gf stackIn_92_1 = null;
         RuntimeException decompiledCaughtException = null;
-        ea var2 = null;
+        Sprite var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -770,14 +770,14 @@ public final class MinerDisturbance extends ob {
           boolean decompiledFrameRemainder1 = true;
           if (vi.field_h ||
             wm.field_e) {
-            eh.d();
+            SoftwareRasterizer.d();
             decompiledFrameRemainder1 = (var8 != 0);
           }
           if (decompiledFrameRemainder1) {
             var2 = me.field_k[cm.field_o];
             var3 = -(li.field_c % var2.field_x);
             while (var3 < 640) {
-              stackIn_20_0 = -(db.field_d % var2.field_A);
+              stackIn_20_0 = -(ClientException.field_d % var2.field_A);
               if (var8 != 0) {
                 decompiledFrameCompleted2 = false;
                 break;
@@ -824,7 +824,7 @@ public final class MinerDisturbance extends ob {
             return;
           }
           var4Lifetime2 = 0;
-          L16: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
@@ -878,7 +878,7 @@ public final class MinerDisturbance extends ob {
                     var4Lifetime2 = 0;
                     while (var4Lifetime2 < 1000) {
                       if (var8 != 0) {
-                        break L16;
+                        break scanLoop1;
                       }
                       stackIn_92_0 = null;
                       stackIn_92_1 = uf.field_p[var4Lifetime2];
@@ -932,7 +932,7 @@ public final class MinerDisturbance extends ob {
             }
             break;
           }
-          var5 = mf.field_i / 10 + hf.field_t * 32 - db.field_d;
+          var5 = IsaacRandom.field_i / 10 + hf.field_t * 32 - ClientException.field_d;
           var6 = 0;
           if (pl.field_h == 0) {
             if (500 > cm.field_r) {
@@ -1068,10 +1068,10 @@ public final class MinerDisturbance extends ob {
             fieldTemp$0 = cm.field_r;
             cm.field_r = cm.field_r + 1;
             var7 = 25 * fieldTemp$0;
-            eh.e(var4Lifetime2 - 1250, 0, var7, 480, 0);
-            eh.e(-var7 + (var4Lifetime2 + 1282), 0, var7, 480, 0);
-            eh.e(0, var5 - 1250, 640, var7, 0);
-            eh.e(0, 32 + var5 + (1250 - var7), 640, var7, 0);
+            SoftwareRasterizer.e(var4Lifetime2 - 1250, 0, var7, 480, 0);
+            SoftwareRasterizer.e(-var7 + (var4Lifetime2 + 1282), 0, var7, 480, 0);
+            SoftwareRasterizer.e(0, var5 - 1250, 640, var7, 0);
+            SoftwareRasterizer.e(0, 32 + var5 + (1250 - var7), 640, var7, 0);
           }
           if (13 != pl.field_h &&
             pl.field_h != 5 &&
@@ -1392,7 +1392,7 @@ public final class MinerDisturbance extends ob {
           this.a((byte) -123, var3);
           oe.field_b = false;
           var4Lifetime1 = 0;
-          L19: while (true) {
+          scanLoop1: while (true) {
             if (var4Lifetime1 < 1000) {
               if (var21 == 0) {
                 if (uf.field_p[var4Lifetime1] != null) {
@@ -1404,19 +1404,19 @@ public final class MinerDisturbance extends ob {
             } else {
               if (!gm.field_a) {
                 if (ke.field_V) {
-                  break L19;
+                  break scanLoop1;
                 }
                 if (pl.field_h != 15) {
-                  break L19;
+                  break scanLoop1;
                 }
                 fieldTemp$1 = ca.field_g;
                 ca.field_g = ca.field_g + 1;
                 if (9000 >= fieldTemp$1) {
-                  break L19;
+                  break scanLoop1;
                 }
                 gm.field_a = true;
                 if (var21 == 0) {
-                  break L19;
+                  break scanLoop1;
                 }
               }
               this.h((byte) -128);
@@ -1440,23 +1440,23 @@ public final class MinerDisturbance extends ob {
             je.d();
           }
           if (!kd.field_i) {
-            db.field_d = 16 + hf.field_t * 32 + mf.field_i / 10 - 240;
+            ClientException.field_d = 16 + hf.field_t * 32 + IsaacRandom.field_i / 10 - 240;
             if (var21 != 0) {
-              if ((mf.field_i / 10 + (32 * hf.field_t - 240 + 16)) <= db.field_d) {
+              if ((IsaacRandom.field_i / 10 + (32 * hf.field_t - 240 + 16)) <= ClientException.field_d) {
                 kd.field_i = false;
-                db.field_d = db.field_d + 1;
+                ClientException.field_d = ClientException.field_d + 1;
               } else {
-                db.field_d = db.field_d + 1;
+                ClientException.field_d = ClientException.field_d + 1;
               }
             }
           } else {
-            if ((mf.field_i / 10 + (32 * hf.field_t - 240 + 16)) <= db.field_d) {
+            if ((IsaacRandom.field_i / 10 + (32 * hf.field_t - 240 + 16)) <= ClientException.field_d) {
               kd.field_i = false;
               if (var21 != 0) {
-                db.field_d = db.field_d + 1;
+                ClientException.field_d = ClientException.field_d + 1;
               }
             } else {
-              db.field_d = db.field_d + 1;
+              ClientException.field_d = ClientException.field_d + 1;
             }
           }
           li.field_c = -304 + (sk.field_d / 10 + 32 * ca.field_k);
@@ -1518,14 +1518,14 @@ public final class MinerDisturbance extends ob {
           if (li.field_c < 16) {
             li.field_c = 16;
           }
-          if ((-544 + 32 * je.field_t) < db.field_d) {
-            db.field_d = -64 + 32 * je.field_t - 480;
+          if ((-544 + 32 * je.field_t) < ClientException.field_d) {
+            ClientException.field_d = -64 + 32 * je.field_t - 480;
           }
           if (368 < li.field_c) {
             li.field_c = 368;
           }
-          if (16 > db.field_d) {
-            db.field_d = 16;
+          if (16 > ClientException.field_d) {
+            ClientException.field_d = 16;
           }
           if (!ke.field_V &&
             il.e(-31391)) {
@@ -1816,7 +1816,7 @@ public final class MinerDisturbance extends ob {
           if (rj.field_f != 0) {
             ph.field_b = 0;
           }
-          L110: {
+          regionExit2: {
             boolean decompiledFrameRemainder24 = true;
             boolean decompiledFrameRemainder23 = true;
             boolean decompiledFrameRemainder22 = true;
@@ -1844,7 +1844,7 @@ public final class MinerDisturbance extends ob {
                 (decompiledFrameRemainder24 = (var13 != 12 ||
                 var21 != 0))) {
                 if (13 != var13) {
-                  break L110;
+                  break regionExit2;
                 }
                 if (var21 == 0) {
                   field_J = 0;
@@ -1890,35 +1890,35 @@ public final class MinerDisturbance extends ob {
                     uf.field_p[jf.b((byte) 61)] = var13_ref_gf;
                     bd.field_k = -160;
                   }
-                  mf.field_i = mf.field_i + bd.field_k;
+                  IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
                   sk.field_d = sk.field_d + rg.field_wb;
-                  if (mf.field_i > 40 &&
+                  if (IsaacRandom.field_i > 40 &&
                     mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                    mf.field_i = 40;
+                    IsaacRandom.field_i = 40;
                     bd.field_k = 0;
                   }
-                  if (mf.field_i < -40 &&
+                  if (IsaacRandom.field_i < -40 &&
                     mh.field_e[ca.field_k][hf.field_t - 1].g()) {
-                    mf.field_i = -40;
+                    IsaacRandom.field_i = -40;
                     bd.field_k = 0;
                   }
                   if (sk.field_d > 80 &&
-                    mf.field_i < -40 &&
+                    IsaacRandom.field_i < -40 &&
                     mh.field_e[ca.field_k + 1][hf.field_t - 1].g()) {
                     sk.field_d = 80;
                   }
                   if (sk.field_d < -80 &&
-                    -40 > mf.field_i &&
+                    -40 > IsaacRandom.field_i &&
                     mh.field_e[ca.field_k - 1][-1 + hf.field_t].g()) {
                     sk.field_d = -80;
                   }
                   if (sk.field_d > 80 &&
-                    mf.field_i > 40 &&
+                    IsaacRandom.field_i > 40 &&
                     mh.field_e[ca.field_k + 1][hf.field_t + 1].g()) {
                     sk.field_d = 80;
                   }
                   if (sk.field_d < -80 &&
-                    40 < mf.field_i &&
+                    40 < IsaacRandom.field_i &&
                     mh.field_e[ca.field_k - 1][hf.field_t + 1].g()) {
                     sk.field_d = -80;
                   }
@@ -1938,18 +1938,18 @@ public final class MinerDisturbance extends ob {
                     ca.field_k = ca.field_k - 1;
                     sk.field_d = sk.field_d + 320;
                   }
-                  if (mf.field_i > 160) {
+                  if (IsaacRandom.field_i > 160) {
                     hf.field_t = hf.field_t + 1;
-                    mf.field_i = mf.field_i - 320;
+                    IsaacRandom.field_i = IsaacRandom.field_i - 320;
                   }
-                  if (-160 > mf.field_i) {
-                    mf.field_i = mf.field_i + 320;
+                  if (-160 > IsaacRandom.field_i) {
+                    IsaacRandom.field_i = IsaacRandom.field_i + 320;
                     hf.field_t = hf.field_t - 1;
                   }
                   if (!(!je.c(ca.field_k, hf.field_t, 1, 1))) {
                     rj.field_f = 2;
                   }
-                  break L110;
+                  break regionExit2;
                 }
               }
             }
@@ -2136,10 +2136,10 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (!qe.field_b[4]) {
-                break L110;
+                break regionExit2;
               }
               if (var2_int == 0) {
-                break L110;
+                break regionExit2;
               }
               var2_int = 0;
               if (bd.field_k >= 0 &&
@@ -2153,7 +2153,7 @@ public final class MinerDisturbance extends ob {
                   var2_int = 1;
                 }
               }
-              if (mf.field_i >= 0 &&
+              if (IsaacRandom.field_i >= 0 &&
                 bd.field_k >= 0) {
                 if (mh.field_e[ca.field_k][1 + hf.field_t].g()) {
                   var2_int = 0;
@@ -2169,7 +2169,7 @@ public final class MinerDisturbance extends ob {
               }
               if (var2_int != 0) {
                 tb.field_c = 104;
-                mf.field_i = mf.field_i / 2;
+                IsaacRandom.field_i = IsaacRandom.field_i / 2;
                 if (ph.field_b != 6) {
                   an.field_f = 5;
                   ph.field_b = 6;
@@ -2181,7 +2181,7 @@ public final class MinerDisturbance extends ob {
               }
               var2_int = 1;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -2206,19 +2206,19 @@ public final class MinerDisturbance extends ob {
               else {
                 stackIn_906_0 = 0;
               }
-              L195: {
+              regionExit3: {
                 var6Lifetime2 = stackIn_906_0;
                 if ((!d.field_b ||
                   !qd.field_O[96]) && this.field_E != 2) {
                   if (var6Lifetime2 != 0) {
-                    break L195;
+                    break regionExit3;
                   }
                   if (0 <= rg.field_wb) {
-                    break L195;
+                    break regionExit3;
                   }
                   rg.field_wb = rg.field_wb + 1;
                   if (var21 == 0) {
-                    break L195;
+                    break regionExit3;
                   }
                 }
                 if (var6Lifetime2 == 0) {
@@ -2248,19 +2248,19 @@ public final class MinerDisturbance extends ob {
                   }
                 }
               }
-              L201: {
+              regionExit4: {
                 if ((!d.field_b ||
                   !qd.field_O[97]) &&
                   this.field_E != 1) {
                   if (var6Lifetime2 != 0) {
-                    break L201;
+                    break regionExit4;
                   }
                   if (rg.field_wb <= 0) {
-                    break L201;
+                    break regionExit4;
                   }
                   rg.field_wb = rg.field_wb - 1;
                   if (var21 == 0) {
-                    break L201;
+                    break regionExit4;
                   }
                 }
                 di.field_K = 1;
@@ -2376,7 +2376,7 @@ public final class MinerDisturbance extends ob {
               tf.field_b = tf.field_b % 7;
               tb.field_c = tf.field_b + 112;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -2496,7 +2496,7 @@ public final class MinerDisturbance extends ob {
                 var2_int != 0) {
                 rj.field_f = 1;
                 bd.field_k = 0;
-                mf.field_i = 0;
+                IsaacRandom.field_i = 0;
               }
               if (var4Lifetime3 != 0 &&
                 !qe.field_b[15]) {
@@ -2507,7 +2507,7 @@ public final class MinerDisturbance extends ob {
                   bd.field_k = bd.field_k / 2;
                 }
               }
-              mf.field_i = mf.field_i + bd.field_k;
+              IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
               sk.field_d = sk.field_d + rg.field_wb;
               if (!qd.field_O[98] &&
                 this.field_E != 5) {
@@ -2519,47 +2519,47 @@ public final class MinerDisturbance extends ob {
                   (mh.field_e[ca.field_k - 1][hf.field_t].g())) {
                   sk.field_d = -80;
                   if (var21 != 0) {
-                    if (mf.field_i > 40 &&
+                    if (IsaacRandom.field_i > 40 &&
                       mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                      mf.field_i = 40;
+                      IsaacRandom.field_i = 40;
                       bd.field_k = 0;
                     }
-                    if (mf.field_i < -40 &&
+                    if (IsaacRandom.field_i < -40 &&
                       mh.field_e[ca.field_k][hf.field_t - 1].g()) {
-                      mf.field_i = -40;
+                      IsaacRandom.field_i = -40;
                       bd.field_k = 0;
                     }
                   }
                 }
               } else {
-                if (mf.field_i > 40 &&
+                if (IsaacRandom.field_i > 40 &&
                   mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                  mf.field_i = 40;
+                  IsaacRandom.field_i = 40;
                   bd.field_k = 0;
                 }
-                if (mf.field_i < -40 &&
+                if (IsaacRandom.field_i < -40 &&
                   mh.field_e[ca.field_k][hf.field_t - 1].g()) {
-                  mf.field_i = -40;
+                  IsaacRandom.field_i = -40;
                   bd.field_k = 0;
                 }
               }
               if (sk.field_d > 80 &&
-                mf.field_i < -40 &&
+                IsaacRandom.field_i < -40 &&
                 mh.field_e[1 + ca.field_k][hf.field_t - 1].g()) {
                 sk.field_d = 80;
               }
               if (-80 > sk.field_d &&
-                -40 > mf.field_i &&
+                -40 > IsaacRandom.field_i &&
                 mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
                 sk.field_d = -80;
               }
               if (sk.field_d > 80 &&
-                mf.field_i > 40 &&
+                IsaacRandom.field_i > 40 &&
                 mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
                 sk.field_d = 80;
               }
               if (sk.field_d < -80 &&
-                40 < mf.field_i &&
+                40 < IsaacRandom.field_i &&
                 mh.field_e[-1 + ca.field_k][hf.field_t + 1].g()) {
                 sk.field_d = -80;
               }
@@ -2572,27 +2572,27 @@ public final class MinerDisturbance extends ob {
                   (mh.field_e[ca.field_k - 1][hf.field_t].g())) {
                   sk.field_d = -80;
                   if (var21 != 0) {
-                    if (40 < mf.field_i &&
+                    if (40 < IsaacRandom.field_i &&
                       mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                       bd.field_k = 0;
-                      mf.field_i = 40;
+                      IsaacRandom.field_i = 40;
                     }
-                    if (-40 > mf.field_i &&
+                    if (-40 > IsaacRandom.field_i &&
                       mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
-                      mf.field_i = -40;
+                      IsaacRandom.field_i = -40;
                       bd.field_k = 0;
                     }
                   }
                 }
               } else {
-                if (40 < mf.field_i &&
+                if (40 < IsaacRandom.field_i &&
                   mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                   bd.field_k = 0;
-                  mf.field_i = 40;
+                  IsaacRandom.field_i = 40;
                 }
-                if (-40 > mf.field_i &&
+                if (-40 > IsaacRandom.field_i &&
                   mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
-                  mf.field_i = -40;
+                  IsaacRandom.field_i = -40;
                   bd.field_k = 0;
                 }
               }
@@ -2600,17 +2600,17 @@ public final class MinerDisturbance extends ob {
                 sk.field_d = sk.field_d - 320;
                 ca.field_k = ca.field_k + 1;
               }
-              if (160 < mf.field_i) {
+              if (160 < IsaacRandom.field_i) {
                 hf.field_t = hf.field_t + 1;
-                mf.field_i = mf.field_i - 320;
+                IsaacRandom.field_i = IsaacRandom.field_i - 320;
               }
               if (-160 > sk.field_d) {
                 sk.field_d = sk.field_d + 320;
                 ca.field_k = ca.field_k - 1;
               }
-              if (mf.field_i < -160) {
+              if (IsaacRandom.field_i < -160) {
                 hf.field_t = hf.field_t - 1;
-                mf.field_i = mf.field_i + 320;
+                IsaacRandom.field_i = IsaacRandom.field_i + 320;
               }
               if (!je.c(ca.field_k, hf.field_t, 1, 1) &&
                 !je.c(ca.field_k, hf.field_t, 0, 1) &&
@@ -2634,7 +2634,7 @@ public final class MinerDisturbance extends ob {
               tf.field_b = tf.field_b % 5;
               tb.field_c = 32 + tf.field_b;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -2692,9 +2692,9 @@ public final class MinerDisturbance extends ob {
                   rg.field_wb = rg.field_wb - 1;
                 }
               }
-              mf.field_i = mf.field_i + bd.field_k;
+              IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
               sk.field_d = sk.field_d + rg.field_wb;
-              if (mf.field_i > 0 &&
+              if (IsaacRandom.field_i > 0 &&
                 mh.field_e[ca.field_k][hf.field_t + 1].g()) {
                 if (!je.c(ca.field_k, hf.field_t + 1, 1, 0)) {
                   if (cm.field_o == 0 ||
@@ -2719,32 +2719,32 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                 }
-                mf.field_i = 0;
+                IsaacRandom.field_i = 0;
                 bd.field_k = 0;
               }
-              if (mf.field_i < 0 &&
+              if (IsaacRandom.field_i < 0 &&
                 mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
-                mf.field_i = 0;
+                IsaacRandom.field_i = 0;
                 bd.field_k = 0;
               }
-              if (Math.abs(sk.field_d) >= Math.abs(mf.field_i) && (!d.field_b ||
+              if (Math.abs(sk.field_d) >= Math.abs(IsaacRandom.field_i) && (!d.field_b ||
                 !qd.field_O[99])) {
                 if (80 < sk.field_d &&
-                  mf.field_i < 0 &&
+                  IsaacRandom.field_i < 0 &&
                   bd.field_k <= 0 &&
                   mh.field_e[1 + ca.field_k][-1 + hf.field_t].g()) {
                   bd.field_k = 0;
-                  mf.field_i = 0;
+                  IsaacRandom.field_i = 0;
                 }
                 if (sk.field_d < -80 &&
-                  0 > mf.field_i &&
+                  0 > IsaacRandom.field_i &&
                   bd.field_k <= 0 &&
                   mh.field_e[-1 + ca.field_k][hf.field_t - 1].g()) {
-                  mf.field_i = 0;
+                  IsaacRandom.field_i = 0;
                   bd.field_k = 0;
                 }
                 if (80 < sk.field_d &&
-                  mf.field_i > 0 &&
+                  IsaacRandom.field_i > 0 &&
                   bd.field_k >= 0 &&
                   mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
                   if (mh.field_e[ca.field_k + 1][hf.field_t + 1].field_v &&
@@ -2757,10 +2757,10 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                   bd.field_k = 0;
-                  mf.field_i = 0;
+                  IsaacRandom.field_i = 0;
                 }
                 if ((!(sk.field_d >= -80)) &&
-                  (!(mf.field_i <= 0)) &&
+                  (!(IsaacRandom.field_i <= 0)) &&
                   (!(bd.field_k < 0)) &&
                   (mh.field_e[-1 + ca.field_k][hf.field_t + 1].g())) {
                   if (mh.field_e[ca.field_k - 1][hf.field_t + 1].field_v &&
@@ -2773,28 +2773,28 @@ public final class MinerDisturbance extends ob {
                     }
                   }
                   bd.field_k = 0;
-                  mf.field_i = 0;
+                  IsaacRandom.field_i = 0;
                   if (var21 != 0) {
                     if (sk.field_d > 80 &&
-                      mf.field_i < 0 &&
+                      IsaacRandom.field_i < 0 &&
                       rg.field_wb >= 0 &&
                       mh.field_e[ca.field_k + 1][-1 + hf.field_t].g()) {
                       sk.field_d = 80;
                     }
                     if (sk.field_d < -80 &&
-                      mf.field_i < 0 &&
+                      IsaacRandom.field_i < 0 &&
                       0 >= rg.field_wb &&
                       mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
                       sk.field_d = -80;
                     }
                     if (sk.field_d > 80 &&
-                      mf.field_i > 0 &&
+                      IsaacRandom.field_i > 0 &&
                       rg.field_wb >= 0 &&
                       mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
                       sk.field_d = 80;
                     }
                     if (sk.field_d < -80 &&
-                      mf.field_i > 0 &&
+                      IsaacRandom.field_i > 0 &&
                       rg.field_wb <= 0 &&
                       mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
                       sk.field_d = -80;
@@ -2803,25 +2803,25 @@ public final class MinerDisturbance extends ob {
                 }
               } else {
                 if (sk.field_d > 80 &&
-                  mf.field_i < 0 &&
+                  IsaacRandom.field_i < 0 &&
                   rg.field_wb >= 0 &&
                   mh.field_e[ca.field_k + 1][-1 + hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if (sk.field_d < -80 &&
-                  mf.field_i < 0 &&
+                  IsaacRandom.field_i < 0 &&
                   0 >= rg.field_wb &&
                   mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
                   sk.field_d = -80;
                 }
                 if (sk.field_d > 80 &&
-                  mf.field_i > 0 &&
+                  IsaacRandom.field_i > 0 &&
                   rg.field_wb >= 0 &&
                   mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if (sk.field_d < -80 &&
-                  mf.field_i > 0 &&
+                  IsaacRandom.field_i > 0 &&
                   rg.field_wb <= 0 &&
                   mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
                   sk.field_d = -80;
@@ -2880,13 +2880,13 @@ public final class MinerDisturbance extends ob {
                 var9Lifetime1 = 1;
                 sk.field_d = sk.field_d + 320;
               }
-              if (mf.field_i > 160) {
-                mf.field_i = mf.field_i - 320;
+              if (IsaacRandom.field_i > 160) {
+                IsaacRandom.field_i = IsaacRandom.field_i - 320;
                 var9Lifetime1 = 1;
                 hf.field_t = hf.field_t + 1;
               }
-              if (mf.field_i < -160) {
-                mf.field_i = mf.field_i + 320;
+              if (IsaacRandom.field_i < -160) {
+                IsaacRandom.field_i = IsaacRandom.field_i + 320;
                 hf.field_t = hf.field_t - 1;
                 var9Lifetime1 = 1;
               }
@@ -2927,7 +2927,7 @@ public final class MinerDisturbance extends ob {
                 !(10 < qd.field_K)) {
                 if ((!je.c(ca.field_k, hf.field_t, 1, 3)) &&
                   (pl.field_h == 15)) {
-                  var13 = (640 + mf.field_i * 4) / 320;
+                  var13 = (640 + IsaacRandom.field_i * 4) / 320;
                   if (var13 == 4) {
                     var13--;
                   }
@@ -2955,11 +2955,11 @@ public final class MinerDisturbance extends ob {
                 tb.field_c = tb.field_c + 1;
               }
               if (var2_int == 0) {
-                break L110;
+                break regionExit2;
               }
               tb.field_c = 45;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -3045,11 +3045,11 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (kj.field_d <= 10) {
-                break L110;
+                break regionExit2;
               }
               rj.field_f = 0;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -3086,11 +3086,11 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (kj.field_d <= 10) {
-                break L110;
+                break regionExit2;
               }
               rj.field_f = 3;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -3131,11 +3131,11 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (kj.field_d <= 40) {
-                break L110;
+                break regionExit2;
               }
               rj.field_f = 0;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder24) &&
@@ -3155,7 +3155,7 @@ public final class MinerDisturbance extends ob {
                 rj.field_f = 0;
                 kj.field_d = 0;
                 if (var21 == 0) {
-                  break L110;
+                  break regionExit2;
                 }
               }
               kj.field_d = kj.field_d + 1;
@@ -3195,11 +3195,11 @@ public final class MinerDisturbance extends ob {
                 uf.field_p[jf.b((byte) 60)] = new gf(di.field_K * 1 + ca.field_k, hf.field_t, 8);
               }
               if (kj.field_d <= 20) {
-                break L110;
+                break regionExit2;
               }
               rj.field_f = 0;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             if (decompiledFrameRemainder24) {
@@ -3236,11 +3236,11 @@ public final class MinerDisturbance extends ob {
                 tb.field_c = tb.field_c + 1;
               }
               if (kj.field_d <= 60) {
-                break L110;
+                break regionExit2;
               }
               rj.field_f = 0;
               if (var21 == 0) {
-                break L110;
+                break regionExit2;
               }
             }
             ne.a(35, param0 + 16440);
@@ -3300,7 +3300,7 @@ public final class MinerDisturbance extends ob {
               if (var2_int != 0) {
                 rj.field_f = 1;
                 bd.field_k = 0;
-                mf.field_i = 0;
+                IsaacRandom.field_i = 0;
                 if (var21 != 0) {
                   rj.field_f = 4;
                 }
@@ -3309,7 +3309,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             sk.field_d = sk.field_d + rg.field_wb;
-            mf.field_i = mf.field_i + bd.field_k;
+            IsaacRandom.field_i = IsaacRandom.field_i + bd.field_k;
             if ((var4Lifetime3 != 0 ||
               !(tc.field_s <= 0)) && (var12 != 0 &&
               !qe.field_b[15])) {
@@ -3317,15 +3317,15 @@ public final class MinerDisturbance extends ob {
               rj.field_f = 13;
             }
             if (var12 != 0) {
-              if (mf.field_i > 40 &&
+              if (IsaacRandom.field_i > 40 &&
                 mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                mf.field_i = 40;
+                IsaacRandom.field_i = 40;
                 bd.field_k = 0;
               }
-              if ((!(mf.field_i >= -40)) &&
+              if ((!(IsaacRandom.field_i >= -40)) &&
                 (mh.field_e[ca.field_k][hf.field_t - 1].g())) {
                 bd.field_k = 0;
-                mf.field_i = -40;
+                IsaacRandom.field_i = -40;
                 if (var21 != 0) {
                   if (sk.field_d > 80 &&
                     mh.field_e[1 + ca.field_k][hf.field_t].g()) {
@@ -3348,34 +3348,34 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (80 < sk.field_d &&
-              -40 > mf.field_i &&
+              -40 > IsaacRandom.field_i &&
               mh.field_e[ca.field_k + 1][-1 + hf.field_t].g()) {
               sk.field_d = 80;
             }
             if (sk.field_d < -80 &&
-              -40 > mf.field_i &&
+              -40 > IsaacRandom.field_i &&
               mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
               sk.field_d = -80;
             }
             if (sk.field_d > 80 &&
-              mf.field_i > 40 &&
+              IsaacRandom.field_i > 40 &&
               mh.field_e[ca.field_k + 1][hf.field_t + 1].g()) {
               sk.field_d = 80;
             }
             if (sk.field_d < -80 &&
-              mf.field_i > 40 &&
+              IsaacRandom.field_i > 40 &&
               mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
               sk.field_d = -80;
             }
             if (var12 == 0) {
-              if (40 < mf.field_i &&
+              if (40 < IsaacRandom.field_i &&
                 mh.field_e[ca.field_k][1 + hf.field_t].g()) {
-                mf.field_i = 40;
+                IsaacRandom.field_i = 40;
                 bd.field_k = 0;
               }
-              if ((!(-40 <= mf.field_i)) &&
+              if ((!(-40 <= IsaacRandom.field_i)) &&
                 (mh.field_e[ca.field_k][-1 + hf.field_t].g())) {
-                mf.field_i = -40;
+                IsaacRandom.field_i = -40;
                 bd.field_k = 0;
                 if (var21 != 0) {
                   if (sk.field_d > 80 &&
@@ -3402,16 +3402,16 @@ public final class MinerDisturbance extends ob {
               ca.field_k = ca.field_k + 1;
               sk.field_d = sk.field_d - 320;
             }
-            if (mf.field_i > 160) {
-              mf.field_i = mf.field_i - 320;
+            if (IsaacRandom.field_i > 160) {
+              IsaacRandom.field_i = IsaacRandom.field_i - 320;
               hf.field_t = hf.field_t + 1;
             }
             if (sk.field_d < -160) {
               ca.field_k = ca.field_k - 1;
               sk.field_d = sk.field_d + 320;
             }
-            if (mf.field_i < -160) {
-              mf.field_i = mf.field_i + 320;
+            if (IsaacRandom.field_i < -160) {
+              IsaacRandom.field_i = IsaacRandom.field_i + 320;
               hf.field_t = hf.field_t - 1;
             }
             if (je.c(ca.field_k, hf.field_t, 1, 1)) {
@@ -3431,7 +3431,7 @@ public final class MinerDisturbance extends ob {
               if (sc.field_b &&
                 !ni.a(16, 11764)) {
                 var6Lifetime3 = 32 * ca.field_k + sk.field_d / 10;
-                var7Lifetime3 = mf.field_i / 10 + 32 * hf.field_t;
+                var7Lifetime3 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                 var8Lifetime2 = -pd.field_a.field_x + (var6Lifetime3 - 1);
                 var9Lifetime2 = -1 + var7Lifetime3;
                 ag.a(true, 16, -(ef.field_b[3].field_A >> 1) + (pd.field_a.field_A >> 1) + var9Lifetime2, -ef.field_b[3].field_y + var8Lifetime2);
@@ -3448,7 +3448,7 @@ public final class MinerDisturbance extends ob {
                   (!(450 <= kn.field_E)) &&
                   (!ni.a(9, 11764))) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
-                  var7Lifetime3Lifetime1 = mf.field_i / 10 + 32 * hf.field_t;
+                  var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                   var8Lifetime2Lifetime1 = -1 - pd.field_a.field_x + var6Lifetime3Lifetime1;
                   var9Lifetime2Lifetime1 = -1 + var7Lifetime3Lifetime1;
                   ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (pd.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
@@ -3456,7 +3456,7 @@ public final class MinerDisturbance extends ob {
               } else {
                 if (!ni.a(9, 11764)) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
-                  var7Lifetime3Lifetime1 = mf.field_i / 10 + 32 * hf.field_t;
+                  var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                   var8Lifetime2Lifetime1 = -1 - pd.field_a.field_x + var6Lifetime3Lifetime1;
                   var9Lifetime2Lifetime1 = -1 + var7Lifetime3Lifetime1;
                   ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (pd.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
@@ -3530,7 +3530,7 @@ public final class MinerDisturbance extends ob {
                   if (sc.field_b &&
                     !ni.a(29, 11764)) {
                     var6Lifetime4 = 32 * ca.field_k + sk.field_d / 10;
-                    var7Lifetime4 = mf.field_i / 10 + 32 * hf.field_t;
+                    var7Lifetime4 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                     var8Lifetime3 = 28 + var6Lifetime4;
                     var9Lifetime3 = -1 + var7Lifetime4;
                     ag.a(true, 29, var9Lifetime3 + 8 - (ef.field_b[3].field_A >> 1), var8Lifetime3 - 2);
@@ -3550,7 +3550,7 @@ public final class MinerDisturbance extends ob {
             if (sc.field_b &&
               !ni.a(29, 11764)) {
               var6Lifetime4 = 32 * ca.field_k + sk.field_d / 10;
-              var7Lifetime4 = mf.field_i / 10 + 32 * hf.field_t;
+              var7Lifetime4 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
               var8Lifetime3 = 28 + var6Lifetime4;
               var9Lifetime3 = -1 + var7Lifetime4;
               ag.a(true, 29, var9Lifetime3 + 8 - (ef.field_b[3].field_A >> 1), var8Lifetime3 - 2);
@@ -3658,7 +3658,7 @@ public final class MinerDisturbance extends ob {
           else {
             stackIn_2618_0 = 0;
           }
-          L442: {
+          regionExit5: {
             var11Lifetime2 = stackIn_2618_0;
             if (d.field_b && (qd.field_O[lb.field_w] ||
               var8Lifetime4 != 0 &&
@@ -3666,33 +3666,33 @@ public final class MinerDisturbance extends ob {
               !qd.field_O[96] &&
               !qd.field_O[97])) {
               stackIn_2637_0 = 1;
-              break L442;
+              break regionExit5;
             }
             stackIn_2637_0 = 0;
           }
-          L445: {
+          regionExit6: {
             var12Lifetime1 = stackIn_2637_0;
             if (d.field_b && (qd.field_O[hd.field_l] ||
               var8Lifetime4 != 0 &&
               qd.field_O[97] &&
               qd.field_O[98])) {
               stackIn_2653_0 = 1;
-              break L445;
+              break regionExit6;
             }
             stackIn_2653_0 = 0;
           }
-          L448: {
+          regionExit7: {
             var13Lifetime1 = stackIn_2653_0;
             if (d.field_b && (qd.field_O[tk.field_g] ||
               var8Lifetime4 != 0 &&
               qd.field_O[96] &&
               qd.field_O[99])) {
               stackIn_2669_0 = 1;
-              break L448;
+              break regionExit7;
             }
             stackIn_2669_0 = 0;
           }
-          L451: {
+          regionExit8: {
             var14Lifetime1 = stackIn_2669_0;
             if (d.field_b && (qd.field_O[qc.field_c] ||
               var8Lifetime4 != 0 &&
@@ -3700,22 +3700,22 @@ public final class MinerDisturbance extends ob {
               !qd.field_O[96] &&
               !qd.field_O[97])) {
               stackIn_2688_0 = 1;
-              break L451;
+              break regionExit8;
             }
             stackIn_2688_0 = 0;
           }
-          L454: {
+          regionExit9: {
             var15 = stackIn_2688_0;
             if (d.field_b && (qd.field_O[qm.field_a] ||
               var8Lifetime4 != 0 &&
               qd.field_O[97] &&
               qd.field_O[99])) {
               stackIn_2704_0 = 1;
-              break L454;
+              break regionExit9;
             }
             stackIn_2704_0 = 0;
           }
-          L457: {
+          regionExit10: {
             var16 = stackIn_2704_0;
             if (d.field_b && (qd.field_O[ge.field_f] ||
               var8Lifetime4 != 0 &&
@@ -3723,13 +3723,13 @@ public final class MinerDisturbance extends ob {
               !qd.field_O[98] &&
               !qd.field_O[99])) {
               stackIn_2723_0 = 1;
-              break L457;
+              break regionExit10;
             }
             stackIn_2723_0 = 0;
           }
           boolean decompiledFrameRemainder12 = true;
           var17 = stackIn_2723_0;
-          if (d.field_b && (qd.field_O[hi.field_v] ||
+          if (d.field_b && (qd.field_O[SpriteState.field_v] ||
             var8Lifetime4 != 0 &&
             qd.field_O[97] &&
             !qd.field_O[98] &&
@@ -3960,8 +3960,8 @@ public final class MinerDisturbance extends ob {
     }
 
     private final void x(int param0) {
-        ea[] array$2 = null;
-        ea[] array$3 = null;
+        Sprite[] array$2 = null;
+        Sprite[] array$3 = null;
         int var2_int = 0;
         double var2_double = 0.0;
         double var4 = 0.0;
@@ -3997,21 +3997,21 @@ public final class MinerDisturbance extends ob {
           ce.field_d = rd.a("", -90, ne.field_L, fl.field_f, "b12");
           pk.field_b = rd.a("", -116, ne.field_L, fl.field_f, "big_font");
           mm.field_a = rd.a("", -79, ne.field_L, fl.field_f, "small_font");
-          sb.field_n = tl.a("grave_font", fl.field_f, 2, "", ne.field_L);
-          wd.field_e = sb.field_n.f(16777215);
+          PacketBuffer.field_n = tl.a("grave_font", fl.field_f, 2, "", ne.field_L);
+          wd.field_e = PacketBuffer.field_n.f(16777215);
           if (param0 > -29) {
             this.field_M = 19;
           }
-          bi.field_p = sb.field_n.f(65280);
-          re.field_b = sb.field_n.f(16711680);
+          bi.field_p = PacketBuffer.field_n.f(65280);
+          re.field_b = PacketBuffer.field_n.f(16711680);
           nj.field_c = td.a("achievements", fl.field_f, "", (byte) 110);
           te.field_d = td.a("dinamite", fl.field_f, "", (byte) 127);
           wj.field_k = td.a("smoke", fl.field_f, "", (byte) 126);
           ne.field_O = td.a("charge", fl.field_f, "", (byte) 111);
           wj.field_l = jn.a("minersplat", -29553, "", fl.field_f);
           hj.field_h = jn.a("rope", -29553, "", fl.field_f);
-          m.field_m = jn.a("title1", -29553, "", fl.field_f);
-          l.field_c = jn.a("title_dwarf", -29553, "", fl.field_f);
+          GameAppletShell.field_m = jn.a("title1", -29553, "", fl.field_f);
+          FullscreenFocusCanvas.field_c = jn.a("title_dwarf", -29553, "", fl.field_f);
           ak.field_c = bb.a("iphone_ad", fl.field_f, -127, "");
           gi.field_a = bb.a("iphone_ad_mouseover", fl.field_f, -120, "");
           jn.a("locked_option", -29553, "", fl.field_f);
@@ -4020,7 +4020,7 @@ public final class MinerDisturbance extends ob {
           gb.field_a = jn.a("sold", -29553, "shop", fl.field_f);
           kd.field_r = jn.a("green_frame", -29553, "shop", fl.field_f);
           ib.field_a = jn.a("controls", -29553, "", fl.field_f);
-          vc.field_p = new ea[9];
+          vc.field_p = new Sprite[9];
           var2_int = 0;
           while (var2_int < 9) {
             vc.field_p[var2_int] = jn.a("fs_button" + var2_int, -29553, "", fl.field_f);
@@ -4033,10 +4033,10 @@ public final class MinerDisturbance extends ob {
           var2_double = 6.283185307179586;
           var4 = 2.356194490192345;
           var6 = 0.7853981633974483;
-          ef.field_b = new ea[8];
+          ef.field_b = new Sprite[8];
           ef.field_b[3] = jn.a("arrow", -29553, "", fl.field_f);
           var8_int = 0;
-          L5: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var8_int < 8) {
               stackIn_21_0 = var8_int;
@@ -4047,7 +4047,7 @@ public final class MinerDisturbance extends ob {
                   ml.a((byte) 93, 16777215, pk.field_h[var8_int], a.field_a[var8_int]);
                   var9 = pk.field_h[var8_int].field_D;
                   stackIn_36_0 = -1 + var9.length;
-                  break L5;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -4055,7 +4055,7 @@ public final class MinerDisturbance extends ob {
                 if (stackIn_21_0 == stackIn_21_1) {
                   var4 = var4 - var6;
                 } else {
-                  ef.field_b[var8_int] = new ea(32, 32);
+                  ef.field_b[var8_int] = new Sprite(32, 32);
                   ef.field_b[var8_int].g();
                   ef.field_b[3].b(-106, 16, 4096, (int)(0.5 + 65535.0 * var4 / var2_double), 16);
                   ef.field_b[var8_int].f(1);
@@ -4067,12 +4067,12 @@ public final class MinerDisturbance extends ob {
             }
             if (decompiledFrameRemainder0) {
               ef.field_b[3].f(1);
-              bj.field_e.a((byte) -45);
+              ResourceArchive.field_e.a((byte) -45);
               ha.field_c = jn.a("unachieved", -29553, "basic", ob.field_q);
               cb.field_e = jn.a("orbcoin", -29553, "basic", ob.field_q);
               a.field_a = td.a("miner2", fl.field_f, "", (byte) 118);
               ag.field_a = td.a("miner_stash", fl.field_f, "", (byte) 121);
-              pk.field_h = new ea[a.field_a.length];
+              pk.field_h = new Sprite[a.field_a.length];
               var8_int = 0;
               while (true) {
                 stackIn_21_0Lifetime1 = ~var8_int;
@@ -4085,7 +4085,7 @@ public final class MinerDisturbance extends ob {
                 var9 = pk.field_h[var8_int].field_D;
                 stackIn_36_0 = -1 + var9.length;
                 if (var13 != 0) {
-                  break L5;
+                  break scanLoop1;
                 }
                 var10_int = stackIn_36_0;
                 while (0 <= var10_int) {
@@ -4100,7 +4100,7 @@ public final class MinerDisturbance extends ob {
                 var8_int++;
               }
             }
-            eg.field_m = new ea[ag.field_a.length];
+            eg.field_m = new Sprite[ag.field_a.length];
             stackIn_36_0 = 0;
             break;
           }
@@ -4131,7 +4131,7 @@ public final class MinerDisturbance extends ob {
               pj.field_e = md.a("shadow", fl.field_f, 10, "");
               tn.field_K = td.a("shop_illustrations", fl.field_f, "shop", (byte) 118);
               wc.field_c[0] = td.a("powerups_volc", fl.field_f, "shop", (byte) 109);
-              array$2 = new ea[wc.field_c[0].length];
+              array$2 = new Sprite[wc.field_c[0].length];
               te.field_e[0] = array$2;
               stackIn_53_0 = 0;
             }
@@ -4139,11 +4139,11 @@ public final class MinerDisturbance extends ob {
             do {
               if (!(var8_int < te.field_e[0].length)) {
                 wc.field_c[1] = td.a("powerups_super", fl.field_f, "shop", (byte) 127);
-                array$3 = new ea[wc.field_c[1].length];
+                array$3 = new Sprite[wc.field_c[1].length];
                 te.field_e[1] = array$3;
                 break;
               }
-              te.field_e[0][var8_int] = new ea(wc.field_c[0][var8_int].field_x, wc.field_c[0][var8_int].field_A);
+              te.field_e[0][var8_int] = new Sprite(wc.field_c[0][var8_int].field_x, wc.field_c[0][var8_int].field_A);
               te.field_e[0][var8_int].g();
               wc.field_c[0][var8_int].h(0, 0);
               var8_int++;
@@ -4151,13 +4151,13 @@ public final class MinerDisturbance extends ob {
             var8_int = 0;
             do {
               if (!(te.field_e[1].length > var8_int)) {
-                bj.field_e.a((byte) -45);
+                ResourceArchive.field_e.a((byte) -45);
                 he.field_b = td.a("shopframe", fl.field_f, "shop", (byte) 125);
-                vh.field_a = new ea[2];
+                vh.field_a = new Sprite[2];
                 vh.field_a[0] = jn.a("shop_background", -29553, "shop", fl.field_f);
                 vh.field_a[1] = jn.a("shop_background_ice", -29553, "shop", fl.field_f);
                 qc.field_d = jn.a("shop_sign", -29553, "shop", fl.field_f);
-                hd.field_d = new ea[9];
+                hd.field_d = new Sprite[9];
                 hd.field_d[0] = jn.a("frame_topleft", -29553, "", fl.field_f);
                 hd.field_d[1] = jn.a("frame_top", -29553, "", fl.field_f);
                 hd.field_d[2] = jn.a("frame_topright", -29553, "", fl.field_f);
@@ -4167,7 +4167,7 @@ public final class MinerDisturbance extends ob {
                 hd.field_d[6] = jn.a("frame_bottomleft", -29553, "", fl.field_f);
                 hd.field_d[7] = jn.a("frame_bottom", -29553, "", fl.field_f);
                 hd.field_d[8] = jn.a("frame_bottomright", -29553, "", fl.field_f);
-                ak.field_a = new ea[9];
+                ak.field_a = new Sprite[9];
                 ak.field_a[0] = jn.a("bigframe_topleft", -29553, "", fl.field_f);
                 ak.field_a[1] = jn.a("bigframe_top", -29553, "", fl.field_f);
                 ak.field_a[2] = jn.a("bigframe_topright", -29553, "", fl.field_f);
@@ -4177,7 +4177,7 @@ public final class MinerDisturbance extends ob {
                 ak.field_a[6] = jn.a("bigframe_bottomleft", -29553, "", fl.field_f);
                 ak.field_a[7] = jn.a("bigframe_bottom", -29553, "", fl.field_f);
                 ak.field_a[8] = jn.a("bigframe_bottomright", -29553, "", fl.field_f);
-                ah.field_c = new ea[9];
+                ah.field_c = new Sprite[9];
                 ah.field_c[0] = jn.a("danger_topleft", -29553, "", fl.field_f);
                 ah.field_c[1] = jn.a("danger_top", -29553, "", fl.field_f);
                 ah.field_c[2] = jn.a("danger_topright", -29553, "", fl.field_f);
@@ -4190,18 +4190,18 @@ public final class MinerDisturbance extends ob {
                 bl.field_w = jn.a("highscore_arrow", -29553, "", fl.field_f);
                 h.field_c = jn.a("highscore_arrow_highlight", -29553, "", fl.field_f);
                 ff.field_f = jn.a("highscore_plaque", -29553, "", fl.field_f);
-                s.field_L = new ea[3];
+                s.field_L = new Sprite[3];
                 s.field_L[0] = jn.a("scroll_top", -29553, "", fl.field_f);
                 s.field_L[1] = jn.a("scroll_middle", -29553, "", fl.field_f);
                 s.field_L[2] = jn.a("scroll_bottom", -29553, "", fl.field_f);
                 ck.field_a = jn.a("seismograph_base", -29553, "", fl.field_f);
                 ma.field_O = jn.a("seismograph_grid", -29553, "", fl.field_f);
-                bj.field_e.a((byte) -45);
+                ResourceArchive.field_e.a((byte) -45);
                 ol.field_a = jn.a("seismograph_needle", -29553, "", fl.field_f);
                 ol.field_c = jn.a("title_achievements", -29553, "", fl.field_f);
                 on.field_x = jn.a("title_allscores", -29553, "", fl.field_f);
                 sk.field_e = jn.a("title_bestscores", -29553, "", fl.field_f);
-                ld.field_x = jn.a("title_myscores", -29553, "", fl.field_f);
+                CipherPacketBuffer.field_x = jn.a("title_myscores", -29553, "", fl.field_f);
                 ha.field_a = jn.a("title_instructions", -29553, "", fl.field_f);
                 jc.field_G = jn.a("title_choose", -29553, "", fl.field_f);
                 pd.field_a = jn.a("bubble", -29553, "", fl.field_f);
@@ -4209,10 +4209,10 @@ public final class MinerDisturbance extends ob {
                 qn.field_J = bb.a("worm_gums", fl.field_f, -123, "");
                 ij.field_t = bb.a("worm_skin", fl.field_f, -102, "");
                 te.field_c = md.a("worm_teeth", fl.field_f, 10, "");
-                nb.field_a = new ea[te.field_c.length];
+                nb.field_a = new Sprite[te.field_c.length];
                 break;
               }
-              te.field_e[1][var8_int] = new ea(wc.field_c[1][var8_int].field_x, wc.field_c[1][var8_int].field_A);
+              te.field_e[1][var8_int] = new Sprite(wc.field_c[1][var8_int].field_x, wc.field_c[1][var8_int].field_A);
               te.field_e[1][var8_int].g();
               wc.field_c[1][var8_int].h(0, 0);
               var8_int++;
@@ -4223,8 +4223,8 @@ public final class MinerDisturbance extends ob {
                 fl.field_j = tb.a("instruction_pics", "", fl.field_f, 1);
                 break;
               }
-              nb.field_a[var8_int] = (ea) ((Object) ((og) (te.field_c[var8_int])).h());
-              ((og) (nb.field_a[var8_int])).d(0, -40, -40, -40);
+              nb.field_a[var8_int] = (Sprite) ((Object) ((ArgbSprite) (te.field_c[var8_int])).h());
+              ((ArgbSprite) (nb.field_a[var8_int])).d(0, -40, -40, -40);
               var8_int++;
             } while (var13 == 0);
             var8 = new ln[3];
@@ -4326,11 +4326,11 @@ public final class MinerDisturbance extends ob {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ea[] var9 = null;
+        Sprite[] var9 = null;
         double var10_double = 0.0;
         int var10 = 0;
         int var12 = 0;
-        ea[] var9Lifetime1;
+        Sprite[] var9Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -4446,7 +4446,7 @@ public final class MinerDisturbance extends ob {
                               var5[9].b(var6, 0);
                               var9 = mb.field_d;
                               var10_double = 0.0;
-                              L22: while (true) {
+                              scanLoop1: while (true) {
                                 if (var10_double < 6.28) {
                                   var7 = (int)((double)(160 + var6) + 128.0 * Math.sin((double)pa.field_d * 0.05 + var10_double));
                                   var8 = (int)(240.0 + 128.0 * Math.cos(var10_double + (double)pa.field_d * 0.05));
@@ -4471,7 +4471,7 @@ public final class MinerDisturbance extends ob {
                                   if (pl.field_h == 0) {
                                     var10 = 140;
                                     param3 -= 15;
-                                    break L22;
+                                    break scanLoop1;
                                   }
                                   param3 -= 27;
                                 }
@@ -4583,7 +4583,7 @@ public final class MinerDisturbance extends ob {
                     var5[9].b(var6Lifetime1, 0);
                     var9Lifetime1 = mb.field_d;
                     var10_doubleLifetime1 = 0.0;
-                    L41: while (true) {
+                    scanLoop2: while (true) {
                       if (6.28 > var10_doubleLifetime1) {
                         var7Lifetime1 = (int)((double)(160 + var6Lifetime1) + Math.sin(var10_doubleLifetime1 + 0.05 * (double)pa.field_d) * 128.0);
                         var8Lifetime1 = (int)(240.0 + Math.cos(var10_doubleLifetime1 + 0.05 * (double)pa.field_d) * 128.0);
@@ -4608,7 +4608,7 @@ public final class MinerDisturbance extends ob {
                         if (pl.field_h == 0) {
                           var10 = 140;
                           param3 -= 15;
-                          break L41;
+                          break scanLoop2;
                         }
                       }
                       var10 = 300;
@@ -4695,11 +4695,11 @@ public final class MinerDisturbance extends ob {
           gi.a(0);
           df.a((byte) 125);
           im.a(param0 ^ 6777);
-          m.f(-1);
+          GameAppletShell.f(-1);
           kh.a(true);
-          eh.c();
+          SoftwareRasterizer.c();
           kk.a((byte) 75);
-          bj.c((byte) -125);
+          ResourceArchive.c((byte) -125);
           we.a();
           di.a((byte) 98);
           eb.b((byte) 127);
@@ -4719,8 +4719,8 @@ public final class MinerDisturbance extends ob {
           ja.f(param0 ^ 151);
           bf.a(param0 ^ 49);
           wd.a(param0 - 98);
-          sb.l(109);
-          db.a((byte) 84);
+          PacketBuffer.l(109);
+          ClientException.a((byte) 84);
           lf.a(false);
           oe.b((byte) 124);
           de.a((byte) 34);
@@ -4737,14 +4737,14 @@ public final class MinerDisturbance extends ob {
           ek.a((byte) 19);
           ci.b(0);
           dm.a(20583);
-          l.a((byte) 79);
+          FullscreenFocusCanvas.a((byte) 79);
           pl.e(-26537);
           mc.a((byte) -43);
           gf.a(param0 ^ -114);
           je.c();
           ie.b(5);
-          pi.d(2);
-          ta.d((byte) -113);
+          IntrusiveNode.d(2);
+          IntrusiveDeque.d((byte) -113);
           dh.a(-123);
           in.a(param0 ^ 14913);
           kb.a((byte) 60);
@@ -4779,20 +4779,20 @@ public final class MinerDisturbance extends ob {
           pf.a(-1);
           vi.a(-1);
           dl.a((byte) -118);
-          g.b(16704);
+          ArchiveIndex.b(16704);
           pd.a((byte) 117);
-          vb.a(-7672);
+          ArchiveProvider.a(-7672);
           kl.a(true);
           dk.b(param0 + 96);
           sc.a(5565);
           ec.a(-65);
           hn.a(param0 - 1);
-          ld.d(false);
+          CipherPacketBuffer.d(false);
           c.b((byte) -73);
           wm.a(param0 - 8);
           ql.b(0);
           pk.a(-94);
-          al.a(-483);
+          DualLinkNode.a(-483);
           hd.a((byte) 123);
           u.c(33);
           ml.a((byte) 119);
@@ -4802,7 +4802,7 @@ public final class MinerDisturbance extends ob {
           fh.a(param0 ^ -12662);
           ff.a(-12);
           tf.a(24044);
-          hi.a(true);
+          SpriteState.a(true);
           uf.f(param0 ^ 201);
           wa.e(112);
           ee.h(256);
@@ -4813,8 +4813,8 @@ public final class MinerDisturbance extends ob {
           si.b((byte) -128);
           kc.a(param0 ^ 16575);
           em.b((byte) -86);
-          mf.c((byte) 81);
-          dc.a((byte) -22);
+          IsaacRandom.c((byte) 81);
+          GameCanvas.a((byte) -22);
           nj.a(-109);
           ni.a((byte) -112);
           va.a();
@@ -5033,7 +5033,7 @@ public final class MinerDisturbance extends ob {
                 var6 = -16;
               }
             }
-            var4 = -db.field_d + hf.field_t * 32;
+            var4 = -ClientException.field_d + hf.field_t * 32;
             var3 = -li.field_c + ca.field_k * 32;
             var4 = -4 + var4 + (var6 >> 1);
             var3 = (var5 >> 1) + var3 - 4;
@@ -5045,8 +5045,8 @@ public final class MinerDisturbance extends ob {
               !mh.field_e[ca.field_k][-1 + hf.field_t].field_a)) {
               var8 = var4 - 32;
               var7 = var3 - 32;
-              eh.b(var7, var8, 32, 32, var10, var9);
-              eh.a(var7, var8, 32, 32, var10);
+              SoftwareRasterizer.b(var7, var8, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7, var8, 32, 32, var10);
               ef.field_b[0].f(var7, var8);
             }
             if (var2_int != 0 &&
@@ -5054,8 +5054,8 @@ public final class MinerDisturbance extends ob {
               mh.field_e[ca.field_k][hf.field_t - 1].field_a) {
               var7Lifetime1 = var3;
               var8Lifetime1 = var4 - 32;
-              eh.b(var7Lifetime1, var8Lifetime1, 32, 32, var10, var9);
-              eh.a(var7Lifetime1, var8Lifetime1, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime1, var8Lifetime1, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime1, var8Lifetime1, 32, 32, var10);
               ef.field_b[1].f(var7Lifetime1, var8Lifetime1);
             }
             if (var2_int != 0 &&
@@ -5064,16 +5064,16 @@ public final class MinerDisturbance extends ob {
               !mh.field_e[ca.field_k][-1 + hf.field_t].field_a)) {
               var8Lifetime2 = -32 + var4;
               var7Lifetime2 = 32 + var3;
-              eh.b(var7Lifetime2, var8Lifetime2, 32, 32, var10, var9);
-              eh.a(var7Lifetime2, var8Lifetime2, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime2, var8Lifetime2, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime2, var8Lifetime2, 32, 32, var10);
               ef.field_b[2].f(var7Lifetime2, var8Lifetime2);
             }
             if (!mh.field_e[param0 + ca.field_k][hf.field_t].field_b &&
               mh.field_e[1 + ca.field_k][hf.field_t].field_a) {
               var8Lifetime3 = var4;
               var7Lifetime3 = var3 + 32;
-              eh.b(var7Lifetime3, var8Lifetime3, 32, 32, var10, var9);
-              eh.a(var7Lifetime3, var8Lifetime3, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime3, var8Lifetime3, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime3, var8Lifetime3, 32, 32, var10);
               ef.field_b[3].f(var7Lifetime3 + (ef.field_b[3].field_x >> 2), var8Lifetime3 + (ef.field_b[3].field_A >> 2));
             }
             if (var2_int != 0 &&
@@ -5082,8 +5082,8 @@ public final class MinerDisturbance extends ob {
               !mh.field_e[ca.field_k][hf.field_t + 1].field_a)) {
               var8Lifetime4 = 32 + var4;
               var7Lifetime4 = 32 + var3;
-              eh.b(var7Lifetime4, var8Lifetime4, 32, 32, var10, var9);
-              eh.a(var7Lifetime4, var8Lifetime4, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime4, var8Lifetime4, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime4, var8Lifetime4, 32, 32, var10);
               ef.field_b[4].f(var7Lifetime4, var8Lifetime4);
             }
             if (var2_int != 0 &&
@@ -5091,8 +5091,8 @@ public final class MinerDisturbance extends ob {
               mh.field_e[ca.field_k][hf.field_t + 1].field_a) {
               var8Lifetime5 = 32 + var4;
               var7Lifetime5 = var3;
-              eh.b(var7Lifetime5, var8Lifetime5, 32, 32, var10, var9);
-              eh.a(var7Lifetime5, var8Lifetime5, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime5, var8Lifetime5, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime5, var8Lifetime5, 32, 32, var10);
               ef.field_b[5].f(var7Lifetime5, var8Lifetime5);
             }
             if (var2_int != 0 &&
@@ -5101,16 +5101,16 @@ public final class MinerDisturbance extends ob {
               !mh.field_e[ca.field_k][1 + hf.field_t].field_a)) {
               var7Lifetime6 = var3 - 32;
               var8Lifetime6 = var4 + 32;
-              eh.b(var7Lifetime6, var8Lifetime6, 32, 32, var10, var9);
-              eh.a(var7Lifetime6, var8Lifetime6, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime6, var8Lifetime6, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime6, var8Lifetime6, 32, 32, var10);
               ef.field_b[6].f(var7Lifetime6, var8Lifetime6);
             }
             if (!mh.field_e[ca.field_k - 1][hf.field_t].field_b &&
               mh.field_e[ca.field_k - 1][hf.field_t].field_a) {
               var8Lifetime7 = var4;
               var7Lifetime7 = var3 - 32;
-              eh.b(var7Lifetime7, var8Lifetime7, 32, 32, var10, var9);
-              eh.a(var7Lifetime7, var8Lifetime7, 32, 32, var10);
+              SoftwareRasterizer.b(var7Lifetime7, var8Lifetime7, 32, 32, var10, var9);
+              SoftwareRasterizer.a(var7Lifetime7, var8Lifetime7, 32, 32, var10);
               ef.field_b[7].f(var7Lifetime7, var8Lifetime7);
             }
             return;
@@ -5159,7 +5159,7 @@ public final class MinerDisturbance extends ob {
               ei.field_M.f(7, 472, var2_int);
             }
             var2_int = 640 * di.field_Z / 64;
-            eh.a(0, 0, var2_int, 480);
+            SoftwareRasterizer.a(0, 0, var2_int, 480);
           }
           boolean decompiledFrameRemainder12 = true;
           var2_int = 73;
@@ -5173,10 +5173,10 @@ public final class MinerDisturbance extends ob {
               this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
             }
             boolean decompiledFrameRemainder11 = true;
-            L7: {
-              L8: {
-                L9: {
-                  L10: {
+            regionExit1: {
+              regionExit2: {
+                regionExit3: {
+                  regionExit4: {
                     boolean decompiledFrameRemainder10 = true;
                     boolean decompiledFrameRemainder9 = true;
                     boolean decompiledFrameRemainder8 = true;
@@ -5189,9 +5189,9 @@ public final class MinerDisturbance extends ob {
                     boolean decompiledFrameRemainder1 = true;
                     boolean decompiledFrameRemainder0 = true;
                     var8_ref_String = sl.field_u[pl.field_h][this.field_T];
-                    sb.field_n.field_T[0][wd.field_e] = 4408131;
-                    sb.field_n.field_T[0][bi.field_p] = 0;
-                    sb.field_n.field_T[0][re.field_b] = 14540253;
+                    PacketBuffer.field_n.field_T[0][wd.field_e] = 4408131;
+                    PacketBuffer.field_n.field_T[0][bi.field_p] = 0;
+                    PacketBuffer.field_n.field_T[0][re.field_b] = 14540253;
                     var10_int = pl.field_h;
                     if ((var10_int != 4) &&
                       (decompiledFrameRemainder0 = (var10_int != 1)) &&
@@ -5215,14 +5215,14 @@ public final class MinerDisturbance extends ob {
                       var15 != 0))) {
                       switch (var10_int) {
                         case 11:
-                          break L10;
+                          break regionExit4;
                         case 12:
-                          break L9;
+                          break regionExit3;
                         default:
-                          break L7;
+                          break regionExit1;
                         case 14:
                           if (var15 == 0) {
-                            break L8;
+                            break regionExit2;
                           }
                           break;
                       }
@@ -5366,7 +5366,7 @@ public final class MinerDisturbance extends ob {
             if (var10 == null) {
               var10 = lj.field_s;
             }
-            sb.field_n.a(we.a(sb.field_n, var10, 170), -80 + (nn.field_h[cm.field_o].field_x >> 1), var4, 160, sb.field_n.field_E + sb.field_n.field_I, 0, -1, 1, 0, 0);
+            PacketBuffer.field_n.a(we.a(PacketBuffer.field_n, var10, 170), -80 + (nn.field_h[cm.field_o].field_x >> 1), var4, 160, PacketBuffer.field_n.field_E + PacketBuffer.field_n.field_I, 0, -1, 1, 0, 0);
             var4 += 40;
             var7 = 175;
             ce.field_d.a(var8_ref_String, var2_int, var4, var3 - var2_int, var5 * 3, 16777215, 6710886, 1, 1, var5);
@@ -5425,7 +5425,7 @@ public final class MinerDisturbance extends ob {
             decompiledFrameRemainder12 = (var15 != 0);
           }
           if (decompiledFrameRemainder12) {
-            g.a(30, 420, 15, 360, (byte) 113, qf.field_o[cm.field_o]);
+            ArchiveIndex.a(30, 420, 15, 360, (byte) 113, qf.field_o[cm.field_o]);
             var8 = 75;
             dl.field_d[cm.field_o].f(60, var8);
             dl.field_d[cm.field_o].b(60, 285);
@@ -5440,16 +5440,16 @@ public final class MinerDisturbance extends ob {
               this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
             }
             var9_ref_String = sl.field_u[pl.field_h][this.field_T];
-            sb.field_n.field_T[0][wd.field_e] = 9737364;
-            sb.field_n.field_T[0][bi.field_p] = 0;
-            sb.field_n.field_T[0][re.field_b] = 12892208;
+            PacketBuffer.field_n.field_T[0][wd.field_e] = 9737364;
+            PacketBuffer.field_n.field_T[0][bi.field_p] = 0;
+            PacketBuffer.field_n.field_T[0][re.field_b] = 12892208;
             var10 = ti.field_J;
             if (var10 == null) {
               var10 = qf.field_q;
             }
             stackIn_134_0 = (a.field_c < 1000000) ? 0 : 30;
             var11 = stackIn_134_0;
-            sb.field_n.b(var10, 195, 112 + var11, 0, -1);
+            PacketBuffer.field_n.b(var10, 195, 112 + var11, 0, -1);
             ce.field_d.a(var9_ref_String, var2_int, var11 + 137, -var2_int + var3, 50, 12584192, 6710886, 1, 1, var5);
             var12_ref_String = ok.field_a;
             var6 = 100;
@@ -5548,15 +5548,15 @@ public final class MinerDisturbance extends ob {
             var7 = 80;
             var6 = 195;
             var10_array = new int[4];
-            eh.b(var10_array);
-            eh.f(40, 54, 350, 426);
+            SoftwareRasterizer.b(var10_array);
+            SoftwareRasterizer.f(40, 54, 350, 426);
             var11 = Math.abs(nk.field_w - 320) / 2;
             var12 = 0;
             while (307 > var12) {
-              eh.g(var11 + 40 + var12, 450 - var12, 10, 16777215, 140);
-              eh.g(var11 + 60 + var12, 450 - var12, 40, 16777215, 140);
-              eh.g(var11 + 107 + var12, -var12 + 450, 30, 16777215, 140);
-              eh.g(var11 + var12 + 152, 450 - var12, 6, 16777215, 140);
+              SoftwareRasterizer.g(var11 + 40 + var12, 450 - var12, 10, 16777215, 140);
+              SoftwareRasterizer.g(var11 + 60 + var12, 450 - var12, 40, 16777215, 140);
+              SoftwareRasterizer.g(var11 + 107 + var12, -var12 + 450, 30, 16777215, 140);
+              SoftwareRasterizer.g(var11 + var12 + 152, 450 - var12, 6, 16777215, 140);
               var12++;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -5564,7 +5564,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (decompiledFrameCompleted0) {
-              eh.a(var10_array);
+              SoftwareRasterizer.a(var10_array);
             }
           }
           stackIn_188_1 = var8;
@@ -5595,7 +5595,7 @@ public final class MinerDisturbance extends ob {
             return;
           }
           ha.field_b = a.field_c;
-          eh.a();
+          SoftwareRasterizer.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5835,7 +5835,7 @@ public final class MinerDisturbance extends ob {
                 mh.field_d = jn.a("screen_box_right", -29553, "volcano", fl.field_f);
                 fh.field_e = jn.a("screen_box_top", -29553, "volcano", fl.field_f);
                 ei.field_M = jn.a("screen_box_bottom", -29553, "volcano", fl.field_f);
-                pi.field_b = jn.a("score_box", -29553, "volcano", fl.field_f);
+                IntrusiveNode.field_b = jn.a("score_box", -29553, "volcano", fl.field_f);
                 me.field_k[0] = jn.a("levelbackground", -29553, "volcano", fl.field_f);
               }
               qd.field_S = true;
@@ -5920,10 +5920,10 @@ public final class MinerDisturbance extends ob {
         try {
           var3 = 596 - (s.field_L[1].field_x >> 1);
           s.field_L[0].f(var3, -s.field_L[0].field_A + 76);
-          eh.a(var3, 76, s.field_L[1].field_x + 580, 76 - (-this.field_G + this.field_W));
+          SoftwareRasterizer.a(var3, 76, s.field_L[1].field_x + 580, 76 - (-this.field_G + this.field_W));
           var4 = 76 + this.field_G;
           var5 = -li.field_c + (32 * ca.field_k + sk.field_d / 10);
-          var6 = -db.field_d + (hf.field_t * 32 + mf.field_i / 10);
+          var6 = -ClientException.field_d + (hf.field_t * 32 + IsaacRandom.field_i / 10);
           if ((var3 - 96) < var5 &&
             var6 > -20 &&
             96 + (76 + var4) > var6) {
@@ -5947,15 +5947,15 @@ public final class MinerDisturbance extends ob {
               var15 = var14 * -1;
               var14 = 0;
             }
-            if (-1 + eh.field_g < var11) {
-              var16 = 1 - eh.field_g + var11;
-              var11 = -1 + eh.field_g;
+            if (-1 + SoftwareRasterizer.field_g < var11) {
+              var16 = 1 - SoftwareRasterizer.field_g + var11;
+              var11 = -1 + SoftwareRasterizer.field_g;
             }
             if (0 > var13) {
               var13 = 0;
             }
-            if (var13 > -1 + eh.field_c) {
-              var13 = -1 + eh.field_c;
+            if (var13 > -1 + SoftwareRasterizer.field_c) {
+              var13 = -1 + SoftwareRasterizer.field_c;
             }
             while (var12 > var13) {
               var8 = var8 + var15;
@@ -5968,7 +5968,7 @@ public final class MinerDisturbance extends ob {
               while (var11 > var17) {
                 incrementValue$0 = var8;
                 var8++;
-                this.field_L[incrementValue$0] = eh.field_f[var13 * eh.field_g + var17];
+                this.field_L[incrementValue$0] = SoftwareRasterizer.field_f[var13 * SoftwareRasterizer.field_g + var17];
                 var17++;
               }
               var8 = var8 + var16;
@@ -6042,7 +6042,7 @@ public final class MinerDisturbance extends ob {
                           var13Lifetime1 = 16714252;
                         }
                       }
-                      eh.b(2 + (var12Lifetime1 + 580), 76 + var9Lifetime1, var13Lifetime1);
+                      SoftwareRasterizer.b(2 + (var12Lifetime1 + 580), 76 + var9Lifetime1, var13Lifetime1);
                     }
                   }
                   var12Lifetime1++;
@@ -6080,7 +6080,7 @@ public final class MinerDisturbance extends ob {
                     stackIn_101_0 = Math.abs(-16 + var14Lifetime1Lifetime1) >> 1;
                     stackIn_101_1 = var12Lifetime1Lifetime1;
                     if (stackIn_101_0 >= stackIn_101_1) {
-                      eh.b(580 + (var14Lifetime1Lifetime1 + 2), 76 + var11Lifetime1, var13Lifetime1Lifetime1);
+                      SoftwareRasterizer.b(580 + (var14Lifetime1Lifetime1 + 2), 76 + var11Lifetime1, var13Lifetime1Lifetime1);
                     }
                     var14Lifetime1Lifetime1++;
                   }
@@ -6089,9 +6089,9 @@ public final class MinerDisturbance extends ob {
                   continue;
                 }
               } else {
-                eh.c(580 + (ca.field_k + 2), -this.field_W + (hf.field_t + 76), 2, 16777215);
-                eh.d(ca.field_k + 580 + 2, 76 - this.field_W + hf.field_t, 3, 0);
-                eh.a();
+                SoftwareRasterizer.c(580 + (ca.field_k + 2), -this.field_W + (hf.field_t + 76), 2, 16777215);
+                SoftwareRasterizer.d(ca.field_k + 580 + 2, 76 - this.field_W + hf.field_t, 3, 0);
+                SoftwareRasterizer.a();
                 s.field_L[2].f(var3, Math.max(this.field_G - this.field_W, 0) + 76);
                 stackIn_112_0 = var7;
               }
@@ -6112,12 +6112,12 @@ public final class MinerDisturbance extends ob {
                 if (var16Lifetime1 < 0) {
                   var16Lifetime1 = 0;
                 }
-                if (var14Lifetime1Lifetime1 > (-1 + eh.field_g)) {
-                  var19 = var14Lifetime1Lifetime1 + 1 - eh.field_g;
-                  var14Lifetime1Lifetime1 = eh.field_g - 1;
+                if (var14Lifetime1Lifetime1 > (-1 + SoftwareRasterizer.field_g)) {
+                  var19 = var14Lifetime1Lifetime1 + 1 - SoftwareRasterizer.field_g;
+                  var14Lifetime1Lifetime1 = SoftwareRasterizer.field_g - 1;
                 }
-                if (var16Lifetime1 > (-1 + eh.field_c)) {
-                  var16Lifetime1 = -1 + eh.field_c;
+                if (var16Lifetime1 > (-1 + SoftwareRasterizer.field_c)) {
+                  var16Lifetime1 = -1 + SoftwareRasterizer.field_c;
                 }
                 while (true) {
                   if (var16Lifetime1 >= var15Lifetime1) {
@@ -6131,11 +6131,11 @@ public final class MinerDisturbance extends ob {
                   while (var20 < var14Lifetime1Lifetime1) {
                     var21 = jl.field_gb[var11Lifetime1];
                     var22 = -var21 + 256;
-                    var23 = eh.field_f[var20 + var16Lifetime1 * eh.field_g];
+                    var23 = SoftwareRasterizer.field_f[var20 + var16Lifetime1 * SoftwareRasterizer.field_g];
                     incrementValue$1 = var11Lifetime1;
                     var11Lifetime1++;
                     var24 = this.field_L[incrementValue$1];
-                    eh.field_f[var16Lifetime1 * eh.field_g + var20] = c.a(-16711936, var22 * c.a(var23, 16711935) + var21 * c.a(var24, 16711935)) + c.a(16711680, var22 * c.a(var23, 65280) + c.a(65280, var24) * var21) >> 8;
+                    SoftwareRasterizer.field_f[var16Lifetime1 * SoftwareRasterizer.field_g + var20] = c.a(-16711936, var22 * c.a(var23, 16711935) + var21 * c.a(var24, 16711935)) + c.a(16711680, var22 * c.a(var23, 65280) + c.a(65280, var24) * var21) >> 8;
                     var20++;
                   }
                   var11Lifetime1 = var11Lifetime1 + var19;
@@ -6154,10 +6154,10 @@ public final class MinerDisturbance extends ob {
 
     private final void a(boolean param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
-        sb var3 = null;
+        PacketBuffer var3 = null;
         String var3_ref = null;
         RuntimeException var3_ref2 = null;
-        sb var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
         var5 = field_ab;
         try {
@@ -6213,18 +6213,18 @@ public final class MinerDisturbance extends ob {
                             }
                             pa.a(true, s.field_T, 95.0f);
                             this.b(false);
-                            var3 = new sb(id.field_c.a("volcano.csv", 0, ""));
-                            var4 = new sb(id.field_c.a("supervolcano.csv", 0, ""));
+                            var3 = new PacketBuffer(id.field_c.a("volcano.csv", 0, ""));
+                            var4 = new PacketBuffer(id.field_c.a("supervolcano.csv", 0, ""));
                             ml.a(var4, (byte) 0, var3);
                             this.h((byte) 65);
                             an.a(-122, 50);
                             ke.field_V = false;
-                            bj.a(-6358, ph.field_a);
+                            ResourceArchive.a(-6358, ph.field_a);
                             oi.a(mm.field_a, ce.field_d, 97, 300);
                             ud.a(new ac(hd.field_d), 30, 30, 88);
                             ic.a(113, 4473924, 15885602, 16502531);
                             aa.a(6, new ac(vc.field_p), -1, 6, new ac(vc.field_p), 6);
-                            bj.field_e.a((byte) -45);
+                            ResourceArchive.field_e.a((byte) -45);
                             qd.n(21);
                             nn.field_n = true;
                             wf.p(4462);
@@ -6253,7 +6253,7 @@ public final class MinerDisturbance extends ob {
                         pa.a(true, u.a(ub.field_c, ob.field_q, ul.field_d, -7157, "basic"), 35.0f);
                         return;
                       }
-                      pa.a(true, u.a(mb.field_a, ne.field_L, dc.field_a, -7157, ""), 30.0f);
+                      pa.a(true, u.a(mb.field_a, ne.field_L, GameCanvas.field_a, -7157, ""), 30.0f);
                       return;
                     }
                     pa.a(true, u.a(ub.field_c, fl.field_f, ul.field_d, -7157, "shop"), 26.0f);
@@ -6347,7 +6347,7 @@ public final class MinerDisturbance extends ob {
           jc.field_H = 0;
           ch.field_h = -1;
           cl.field_I = 0;
-          pi.field_a = 0;
+          IntrusiveNode.field_a = 0;
           eb.field_e = 0;
           me.field_h = 0;
           hn.field_c = false;
@@ -6385,7 +6385,7 @@ public final class MinerDisturbance extends ob {
               ca.field_k = 16;
               kj.field_d = 0;
               this.field_Y = false;
-              mf.field_i = 0;
+              IsaacRandom.field_i = 0;
               sk.field_d = 0;
               tb.field_c = 0;
               cn.field_C = 0;
@@ -6397,7 +6397,7 @@ public final class MinerDisturbance extends ob {
           } while (var4 == 0);
           if (sc.field_b) {
             li.field_c = 0;
-            db.field_d = 0;
+            ClientException.field_d = 0;
           }
           bd.field_k = -1;
           rg.field_wb = 0;
@@ -6455,7 +6455,7 @@ public final class MinerDisturbance extends ob {
                 ah.field_i = true;
               }
               c.a((byte) -98);
-              sb.a(6);
+              PacketBuffer.a(6);
               if (!od.e(false) &&
                 !qi.f(-9202)) {
                 if (!u.a(27443) ||
@@ -6522,7 +6522,7 @@ public final class MinerDisturbance extends ob {
                     }
                     if (decompiledFrameRemainder0) {
                       var3 = 0;
-                      L24: while (true) {
+                      scanLoop1: while (true) {
                         if (var3 < 2) {
                           sn.field_b[var3] = null;
                           var3++;
@@ -6533,7 +6533,7 @@ public final class MinerDisturbance extends ob {
                           if (kj.a(false)) {
                             jc.a(false, -105, jf.field_b);
                             if (var4 == 0) {
-                              break L24;
+                              break scanLoop1;
                             }
                           }
                         }
@@ -6660,7 +6660,7 @@ public final class MinerDisturbance extends ob {
           var4 = 6;
           var5 = 0;
           var6 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (21 > var6) {
               stackIn_54_0 = 0;
               stackIn_54_1 = var6;
@@ -6685,27 +6685,27 @@ public final class MinerDisturbance extends ob {
               }
             } else {
               if (!qe.field_b[14]) {
-                break L1;
+                break scanLoop1;
               }
               if (jk.field_ab == 0) {
                 if (hc.a(19, 65, 10, 572, nk.field_w, 48, gb.field_e)) {
                   var2_int = -2;
                   if (var10 == 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                 }
                 if (!hc.a(119, 75, this.field_G - this.field_W, 576, nk.field_w, 44, gb.field_e)) {
-                  break L1;
+                  break scanLoop1;
                 }
                 var2_int = -3;
                 if (var10 == 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               stackIn_54_0 = 119;
               stackIn_54_1 = 65;
             }
-            if (hc.a(stackIn_54_0, stackIn_54_1, 10, 572, wi.field_w, 48, m.field_e)) {
+            if (hc.a(stackIn_54_0, stackIn_54_1, 10, 572, wi.field_w, 48, GameAppletShell.field_e)) {
               stackIn_61_1 = !(this.field_eb);
               this.field_eb = stackIn_61_1;
             }
@@ -6738,7 +6738,7 @@ public final class MinerDisturbance extends ob {
             if (jk.field_ab != 0) {
               this.field_O = false;
               this.q(-46);
-              bj.a(-6358, ph.field_a);
+              ResourceArchive.a(-6358, ph.field_a);
               fm.f((byte) 81);
               if (!kj.a(false)) {
                 if (ig.a(-20144)) {
@@ -6770,7 +6770,7 @@ public final class MinerDisturbance extends ob {
             }
           }
           while (mm.b((byte) 84)) {
-            var6Lifetime1 = (lj.field_t + (rg.field_sb + (m.field_e + nk.field_w))) % 8;
+            var6Lifetime1 = (lj.field_t + (rg.field_sb + (GameAppletShell.field_e + nk.field_w))) % 8;
             if (var10 != 0) {
               return;
             }
@@ -6803,7 +6803,7 @@ public final class MinerDisturbance extends ob {
               qd.field_M = qd.field_M - 1;
               di.field_X = di.field_X + ac.field_b;
             }
-            var6Lifetime1Lifetime1 = (nk.field_w + m.field_e + (rg.field_sb + lj.field_t)) % 4;
+            var6Lifetime1Lifetime1 = (nk.field_w + GameAppletShell.field_e + (rg.field_sb + lj.field_t)) % 4;
             if (var6Lifetime1Lifetime1 == 0) {
               hl.field_b = hl.field_b + 1;
               pn.field_b = pn.field_b + aa.field_b;
@@ -6923,7 +6923,7 @@ public final class MinerDisturbance extends ob {
               fm.f((byte) 81);
               df.a(0, 5494, -1);
               ne.a(1, -90);
-              al.e(107);
+              DualLinkNode.e(107);
               this.field_K = true;
             }
             boolean decompiledFrameRemainder2 = true;
@@ -6936,7 +6936,7 @@ public final class MinerDisturbance extends ob {
               }
               if (lj.field_t == 84) {
                 this.q(-46);
-                bj.a(-6358, ph.field_a);
+                ResourceArchive.a(-6358, ph.field_a);
                 fm.f((byte) 81);
                 if (!kj.a(false)) {
                   jc.a(false, -107, 2);
@@ -7063,7 +7063,7 @@ public final class MinerDisturbance extends ob {
                 il.e(-31391)) {
                 this.field_O = false;
                 this.q(-46);
-                bj.a(-6358, ph.field_a);
+                ResourceArchive.a(-6358, ph.field_a);
                 fm.f((byte) 81);
                 if (kj.a(false)) {
                   jc.a(false, -125, 6);
@@ -7093,7 +7093,7 @@ public final class MinerDisturbance extends ob {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3_int = 0;
-        ea var3 = null;
+        Sprite var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
         int var5 = 0;
@@ -7160,12 +7160,12 @@ public final class MinerDisturbance extends ob {
             mm.field_a.b(var4_ref_String, var5, pk.field_b.field_I + var3_int, var7_int, -1);
           }
           ck.field_a.g(15, 369);
-          eh.a(19, 373, 69, 463);
+          SoftwareRasterizer.a(19, 373, 69, 463);
           var2_int = -this.field_H + (373 - (-90 - ma.field_O.field_A));
           var3_int = -this.field_H + 373;
           do {
             if (var2_int <= var3_int) {
-              eh.a();
+              SoftwareRasterizer.a();
               break;
             }
             ma.field_O.g(19, var3_int);
@@ -7174,13 +7174,13 @@ public final class MinerDisturbance extends ob {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (this.field_S >= 1) {
-            eh.d(this.field_F, 453, this.field_D[this.field_I] + 44, 452 - this.field_cb, 1);
+            SoftwareRasterizer.d(this.field_F, 453, this.field_D[this.field_I] + 44, 452 - this.field_cb, 1);
             var3_int = this.field_I - 1;
             if (var3_int < 0) {
               var3_int = -1 + this.field_D.length;
             }
             var4 = 1;
-            L13: while (true) {
+            scanLoop1: while (true) {
               boolean decompiledFrameRemainder1 = true;
               if (var4 < this.field_S) {
                 var5 = 1 + var3_int;
@@ -7188,10 +7188,10 @@ public final class MinerDisturbance extends ob {
                 stackIn_47_1 = ~var5;
                 if (var10 != 0) {
                   if (stackIn_47_0 < stackIn_47_1) {
-                    eh.g(19, var5, 50, 1, var4);
+                    SoftwareRasterizer.g(19, var5, 50, 1, var4);
                     var4 -= 20;
                     var5++;
-                    break L13;
+                    break scanLoop1;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -7199,7 +7199,7 @@ public final class MinerDisturbance extends ob {
                   if (stackIn_47_0 == stackIn_47_1) {
                     var5 = 0;
                   }
-                  eh.d(this.field_D[var5] + 44, 453 + (-(1 * var4) - this.field_cb), this.field_D[var3_int] + 44, -(1 * (1 + var4)) - this.field_cb + 453, 1);
+                  SoftwareRasterizer.d(this.field_D[var5] + 44, 453 + (-(1 * var4) - this.field_cb), this.field_D[var3_int] + 44, -(1 * (1 + var4)) - this.field_cb + 453, 1);
                   if (0 >= var3_int) {
                     var3_int = this.field_D.length - 1;
                   } else {
@@ -7218,11 +7218,11 @@ public final class MinerDisturbance extends ob {
                   if (stackIn_47_0Lifetime1 >= stackIn_47_1Lifetime1) {
                     break;
                   }
-                  eh.g(19, var5, 50, 1, var4);
+                  SoftwareRasterizer.g(19, var5, 50, 1, var4);
                   var4 -= 20;
                   var5++;
                   if (var10 != 0) {
-                    break L13;
+                    break scanLoop1;
                   }
                 }
               }
@@ -7235,7 +7235,7 @@ public final class MinerDisturbance extends ob {
                 ol.field_a.f(this.field_D[this.field_I] + (-(ol.field_a.field_x >> 1) + 44), -(ol.field_a.field_A >> 1) + 453);
                 break;
               }
-              eh.g(19, var5, 50, 1, var4);
+              SoftwareRasterizer.g(19, var5, 50, 1, var4);
               var4 += 20;
               var5++;
             } while (var10 == 0);
@@ -7246,7 +7246,7 @@ public final class MinerDisturbance extends ob {
             var4 = 373;
             while (true) {
               if (382 > var4) {
-                eh.g(19, var4, 50, 1, var3_int);
+                SoftwareRasterizer.g(19, var4, 50, 1, var3_int);
                 var3_int -= 20;
                 var4++;
                 if (var10 == 0) {
@@ -7259,7 +7259,7 @@ public final class MinerDisturbance extends ob {
             }
             var4 = 454;
             while (var4 < 463) {
-              eh.g(19, var4, 50, 1, var3_int);
+              SoftwareRasterizer.g(19, var4, 50, 1, var3_int);
               var3_int += 20;
               var4++;
               if (var10 != 0) {
@@ -7280,7 +7280,7 @@ public final class MinerDisturbance extends ob {
           fh.field_e.f(7, 0);
           mh.field_d.f(628, 0);
           ei.field_M.f(7, 472);
-          var3 = pi.field_b;
+          var3 = IntrusiveNode.field_b;
           var3.f(-var3.field_x + 640, 0);
           mm.field_a.c(Integer.toString(a.field_c), 627, 32, 16777215, -1);
           var4 = 2;
@@ -7299,22 +7299,22 @@ public final class MinerDisturbance extends ob {
                 qe.field_b[var8]) {
                 ff.field_c[var8].f(var4, var5);
                 if (var8 == pa.field_c) {
-                  eh.b(var7);
-                  eh.f(var4, var5 + 6, 33 + var4, var5 + 32);
+                  SoftwareRasterizer.b(var7);
+                  SoftwareRasterizer.f(var4, var5 + 6, 33 + var4, var5 + 32);
                   var9 = 65 + (int)(Math.sin(0.03 * (double)bf.field_d) * 130.0 + 0.5);
                   if (var9 > 0) {
                     ff.field_c[var8].g(var4, var5, var9);
                   } else {
                     ff.field_c[var8].c(var4, var5, var9 + 256);
                   }
-                  eh.a(var7);
+                  SoftwareRasterizer.a(var7);
                 }
                 if (var8 == 20) {
-                  eh.b(var7);
+                  SoftwareRasterizer.b(var7);
                   var9Lifetime1 = 32 - qd.field_K * 32 / 100;
-                  eh.f(var4, var5 + 6, 33 + var4, var9Lifetime1 + (var5 + 6));
+                  SoftwareRasterizer.f(var4, var5 + 6, 33 + var4, var9Lifetime1 + (var5 + 6));
                   ff.field_c[var8].c(var4, var5, 64);
-                  eh.a(var7);
+                  SoftwareRasterizer.a(var7);
                 }
                 var6Lifetime1++;
                 var4 += 33;
@@ -7323,8 +7323,8 @@ public final class MinerDisturbance extends ob {
                   var5 += 33;
                   var4 = 4;
                   var6Lifetime1 = 0;
-                  eh.a(0, 39, 640, 480);
-                  eh.b(var7);
+                  SoftwareRasterizer.a(0, 39, 640, 480);
+                  SoftwareRasterizer.b(var7);
                 }
               }
               var8++;
@@ -7336,10 +7336,10 @@ public final class MinerDisturbance extends ob {
             stackIn_128_0 = 0;
           }
           if (stackIn_128_0 != var5) {
-            eh.a(0, 45, 640, 480);
+            SoftwareRasterizer.a(0, 45, 640, 480);
           }
           ff.field_c[21].f(var4, var5);
-          eh.a();
+          SoftwareRasterizer.a();
           var8Lifetime1 = pb.b(false);
           if (var8Lifetime1 == 6) {
             bb.a(lb.field_t, 0, ce.field_d, 16513123, -6);
@@ -7437,7 +7437,7 @@ public final class MinerDisturbance extends ob {
                 if (var8Lifetime1 != 15) {
                   if (17 != var8Lifetime1) {
                     if (var8Lifetime1 == 16) {
-                      bb.a(g.field_e, 0, ce.field_d, 16513123, -6);
+                      bb.a(ArchiveIndex.field_e, 0, ce.field_d, 16513123, -6);
                       if (var10 == 0) {
                         return;
                       }

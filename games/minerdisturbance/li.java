@@ -41,7 +41,7 @@ final class li implements uj {
         }
     }
 
-    final static void a(int param0, bj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2629_0;
             StringBuilder stackIn_2629_1;
@@ -52,9 +52,9 @@ final class li implements uj {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            bj param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, bj initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2629_0 = null;
@@ -74,7 +74,7 @@ final class li implements uj {
                 }
                 var2 = e.a(98, "loginm2");
                 if (null != var2) {
-                  l.field_a = bh.a(var2, param0 ^ -9304);
+                  FullscreenFocusCanvas.field_a = bh.a(var2, param0 ^ -9304);
                 }
                 var2 = e.a(param0 ^ -9285, "loginm1");
                 if (null != var2) {
@@ -1140,7 +1140,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-108, "connectionlost_reconnecting");
                 if (var2 != null) {
-                  vb.field_a = bh.a(var2, param0 ^ -9299);
+                  ArchiveProvider.field_a = bh.a(var2, param0 ^ -9299);
                 }
                 var2 = e.a(114, "connectionlost_withreason");
                 if (null != var2) {
@@ -1552,7 +1552,7 @@ final class li implements uj {
                 }
                 var2 = e.a(127, "create_displayname_hint");
                 if (var2 != null) {
-                  hi.field_w = bh.a(var2, param0 - 9187);
+                  SpriteState.field_w = bh.a(var2, param0 - 9187);
                 }
                 var2 = e.a(param0 ^ 9327, "create_password_tooltip");
                 if (var2 != null) {
@@ -1680,7 +1680,7 @@ final class li implements uj {
                 }
                 var2 = e.a(46, "create_alert_mismatch");
                 if (null != var2) {
-                  sb.field_q = bh.a(var2, -127);
+                  PacketBuffer.field_q = bh.a(var2, -127);
                 }
                 var2 = e.a(param0 ^ -9294, "create_passwordvalid");
                 if (null != var2) {
@@ -1796,7 +1796,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-109, "waitingfor_fonts");
                 if (null != var2) {
-                  dc.field_a = bh.a(var2, -120);
+                  GameCanvas.field_a = bh.a(var2, -120);
                 }
                 var2 = e.a(param0 - 9207, "waitingfor_soundeffects");
                 if (var2 != null) {
@@ -1816,7 +1816,7 @@ final class li implements uj {
                 }
                 var2 = e.a(param0 - 9370, "waitingfor_extradata");
                 if (null != var2) {
-                  l.field_e = bh.a(var2, param0 ^ -9309);
+                  FullscreenFocusCanvas.field_e = bh.a(var2, param0 ^ -9309);
                 }
                 var2 = e.a(param0 - 9365, "waitingfor_languages");
                 if (null != var2) {
@@ -2705,7 +2705,7 @@ final class li implements uj {
                 }
                 var2 = e.a(52, "fs_nonmember");
                 if (null != var2) {
-                  ta.field_a = bh.a(var2, -120);
+                  IntrusiveDeque.field_a = bh.a(var2, -120);
                 }
                 var2 = e.a(-115, "fs_button_close");
                 if (var2 != null) {
@@ -2857,7 +2857,7 @@ final class li implements uj {
                 }
                 var2 = e.a(param0 - 9365, "createtouse");
                 if (null != var2) {
-                  vb.field_d = bh.a(var2, 23);
+                  ArchiveProvider.field_d = bh.a(var2, 23);
                 }
                 var2 = e.a(-115, "achievementsoffline");
                 if (null != var2) {
@@ -3079,8 +3079,8 @@ final class li implements uj {
                   throw lj.a((Throwable) ((Object) stackIn_2629_0), ((StringBuilder) (Object) stackIn_2629_1).append(stackIn_2630_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2638_0 = (!m.field_h);
-                  m.field_h = stackIn_2638_0;
+                  stackIn_2638_0 = (!GameAppletShell.field_h);
+                  GameAppletShell.field_h = stackIn_2638_0;
                 }
             }
         }

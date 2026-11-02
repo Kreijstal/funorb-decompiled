@@ -8,7 +8,7 @@ final class el {
     static char field_d;
 
     final static void a(int param0, int param1) {
-        if (al.field_s != de.field_b &&
+        if (DualLinkNode.field_s != de.field_b &&
           aa.field_e != de.field_b) {
           if (param1 != -5629) {
             el.a(53, -55);
@@ -23,10 +23,10 @@ final class el {
         }
     }
 
-    final static ea a(int param0, int param1, bj param2, int param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        ea stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -40,7 +40,7 @@ final class el {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (ea) (stackIn_4_0);
+          return (Sprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

@@ -106,7 +106,7 @@ final class od extends cb {
             return stackIn_6_0;
           }
           if (!param0.equals(this.field_l)) {
-            var3 = l.a(param0, (byte) -128);
+            var3 = FullscreenFocusCanvas.a(param0, (byte) -128);
             if (!var3.a(0)) {
               stackIn_11_0 = bm.field_o;
               return stackIn_11_0;

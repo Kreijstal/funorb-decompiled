@@ -28,7 +28,7 @@ abstract class ek {
 
     abstract void a(boolean param0);
 
-    final static ln[] a(int param0, bj param1, int param2, int param3) {
+    final static ln[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -60,7 +60,7 @@ abstract class ek {
 
     final static boolean a(int param0, String param1) {
         RuntimeException var2 = null;
-        bj var3 = null;
+        ResourceArchive var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -72,8 +72,8 @@ abstract class ek {
             if (param0 < -56) {
               return false;
             }
-            var3 = (bj) null;
-            ek.a(107, (bj) null, -97, 126);
+            var3 = (ResourceArchive) null;
+            ek.a(107, (ResourceArchive) null, -97, 126);
             return false;
           }
           return true;

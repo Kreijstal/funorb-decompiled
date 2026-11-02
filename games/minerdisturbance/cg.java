@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends pi {
+final class cg extends IntrusiveNode {
     static boolean field_C;
     int field_y;
     int field_A;

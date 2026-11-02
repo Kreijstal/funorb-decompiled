@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb {
-    static ta field_f;
+    static IntrusiveDeque field_f;
     static int field_b;
     static ek field_d;
     static String field_a;
@@ -10,7 +10,7 @@ final class eb {
     static String field_c;
     static int field_e;
 
-    final static bj a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
         if (param4) {
           return eg.a(-104, param1, false, param2, param0, param3);
         }
@@ -47,7 +47,7 @@ final class eb {
         ul.field_a = true;
     }
 
-    final static boolean a(bj param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -77,7 +77,7 @@ final class eb {
     static {
         field_b = 0;
         field_a = "Visit the Account Management section on the main site to view.";
-        field_f = new ta();
+        field_f = new IntrusiveDeque();
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_g = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_e = 0;

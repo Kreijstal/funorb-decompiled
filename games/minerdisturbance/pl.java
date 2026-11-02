@@ -23,7 +23,7 @@ final class pl {
     static int[] field_b;
     private mi field_l;
     private int field_s;
-    static ea field_k;
+    static Sprite field_k;
     private int field_m;
 
     final void b(int param0) {
@@ -46,9 +46,9 @@ final class pl {
         this.field_d = param1;
     }
 
-    final l a(byte param0) {
-        l var2 = null;
-        l var2Lifetime1;
+    final FullscreenFocusCanvas a(byte param0) {
+        FullscreenFocusCanvas var2 = null;
+        FullscreenFocusCanvas var2Lifetime1;
         if (param0 == -70) {
           this.field_e = ml.field_a;
           this.field_q = nk.field_x;

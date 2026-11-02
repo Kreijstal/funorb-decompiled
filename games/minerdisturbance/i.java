@@ -59,7 +59,7 @@ final class i implements uj {
             return stackIn_3_0;
           }
           while (8 > var4) {
-            var6[var4] = hi.a(param1[var4], param2[var4]);
+            var6[var4] = SpriteState.a(param1[var4], param2[var4]);
             var4++;
           }
           stackIn_7_0 = var3;
