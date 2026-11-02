@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-abstract class nl {
-    static oj field_e;
+abstract class SocketConnector {
+    static IntrusiveDeque field_e;
     static String field_b;
     static String field_d;
     int field_g;
@@ -14,7 +14,7 @@ abstract class nl {
 
     final static int[] a(int param0, int param1, int param2) {
         if (param0 > -110) {
-          nl.a((byte) 75);
+          SocketConnector.a((byte) 75);
         }
         int var3 = hd.a(param1, 49);
         int var4 = lc.a(param1, false);
@@ -52,7 +52,7 @@ abstract class nl {
         field_b = "Achievements";
         field_d = "members-only content";
         field_a = "Visit the Account Management section on the main site to view.";
-        field_e = new oj();
+        field_e = new IntrusiveDeque();
         field_f = "Wave gun";
     }
 }

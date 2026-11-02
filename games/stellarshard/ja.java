@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends gg {
+final class ja extends IntrusiveNode {
     static String field_k;
     ja field_p;
     int field_o;
@@ -26,7 +26,7 @@ final class ja extends gg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        pb var17 = null;
+        Sprite var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -79,7 +79,7 @@ final class ja extends gg {
           var16Lifetime1 = var11 - var9;
           if (0 < var15Lifetime1 &&
             var16Lifetime1 > 0) {
-            var17 = new pb(var15Lifetime1, var16Lifetime1);
+            var17 = new Sprite(var15Lifetime1, var16Lifetime1);
             var18 = param1 * param1;
             var19 = (param1 + param2) * (param1 + param2);
             var20 = 0;
@@ -233,8 +233,8 @@ final class ja extends gg {
           var8Lifetime1 = hd.a(var6Lifetime1, 99) >> 8;
           var9Lifetime1 = lc.a(var6Lifetime1, false) >> 8;
           if (-1 != ni.field_e &&
-            -1 != eb.field_a) {
-            var8Lifetime1 = -eb.field_a + 240;
+            -1 != KeyHandler.field_a) {
+            var8Lifetime1 = -KeyHandler.field_a + 240;
             var9Lifetime1 = -128;
             var7Lifetime1 = -320 + ni.field_e;
           }
@@ -262,7 +262,7 @@ final class ja extends gg {
             for (var18 = 0; var18 < 3; var18++) {
               pd.field_u[var18] = pd.field_u[var18] + bi.field_s[var15][var18];
             }
-            vi.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a, false);
+            RasterBuffer.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a, false);
             kf.a(-62, var8Lifetime1, var13Lifetime1, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1);
           }
           return;

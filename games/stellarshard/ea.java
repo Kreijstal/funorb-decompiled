@@ -3,8 +3,8 @@
  */
 final class ea extends lk {
     static int field_p;
-    static pb field_m;
-    static pb field_l;
+    static Sprite field_m;
+    static Sprite field_l;
     private ae field_q;
     static ua field_o;
     static String field_k;
@@ -127,7 +127,7 @@ final class ea extends lk {
           gh.field_b = 0;
           e.field_e = -1;
           nc.field_H = 0;
-          s.field_i = false;
+          DualLinkDequeIterator.field_i = false;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ea.B(" + param0 + ')');
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ob {
-    static fh field_b;
+    static BufferedSocket field_b;
     static String field_d;
     static long field_a;
     static int[] field_c;
@@ -43,7 +43,7 @@ final class ob {
             param4 = -param5 + ti.field_l;
           }
           if (param0 < 93) {
-            field_b = (fh) null;
+            field_b = (BufferedSocket) null;
           }
           if (param3 > 0 &&
             0 < param4) {

@@ -6,17 +6,17 @@ abstract class fb {
     static int field_f;
     static int field_n;
     static int field_b;
-    static ej field_d;
+    static PlatformTaskDispatcher field_d;
     static String[] field_e;
     al field_q;
-    static pb field_h;
+    static Sprite field_h;
     al field_j;
     al field_k;
-    ka field_c;
+    PacketBuffer field_c;
     int field_m;
     long field_l;
     volatile int field_g;
-    ka field_a;
+    PacketBuffer field_a;
     byte field_p;
     volatile int field_i;
     ph field_r;
@@ -133,7 +133,7 @@ abstract class fb {
         return this.a(0) >= 20 ? true : false;
     }
 
-    final static void a(ka param0, int param1, ej param2, int param3) {
+    final static void a(PacketBuffer param0, int param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -291,7 +291,7 @@ abstract class fb {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var8 = 0;
-        ej var9 = null;
+        PlatformTaskDispatcher var9 = null;
         var8 = stellarshard.field_B;
         try {
           vd.field_d = param3.getParameter("overxgames");
@@ -315,13 +315,13 @@ abstract class fb {
           ki.field_x = param5;
           jb.field_a = param0;
           ki.field_t = param2;
-          dl.field_C = new pb[param1.length];
+          dl.field_C = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
-            dl.field_C[var7] = new pb(317, 34);
+            dl.field_C[var7] = new Sprite(317, 34);
           }
           if (param4 != -1) {
-            var9 = (ej) null;
-            fb.a((ka) null, 60, (ej) null, 71);
+            var9 = (PlatformTaskDispatcher) null;
+            fb.a((PacketBuffer) null, 60, (PlatformTaskDispatcher) null, 71);
           }
           pk.field_d = param1;
           return;
@@ -350,11 +350,11 @@ abstract class fb {
         this.field_q = new al();
         this.field_j = new al();
         this.field_k = new al();
-        this.field_c = new ka(6);
+        this.field_c = new PacketBuffer(6);
         this.field_p = (byte) 0;
         this.field_i = 0;
         this.field_g = 0;
-        this.field_a = new ka(10);
+        this.field_a = new PacketBuffer(10);
     }
 
     static {

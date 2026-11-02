@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends gg {
+final class ma extends IntrusiveNode {
     static String field_o;
     int[] field_p;
     int field_u;
@@ -14,16 +14,16 @@ final class ma extends gg {
     int field_t;
     int field_r;
 
-    final static pb[] a(boolean param0) {
+    final static Sprite[] a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = stellarshard.field_B;
-        pb[] var1 = new pb[sb.field_b];
+        Sprite[] var1 = new Sprite[sb.field_b];
         if (param0) {
-          return (pb[]) null;
+          return (Sprite[]) null;
         }
         for (var2 = 0; sb.field_b > var2; var2++) {
           var3 = vc.field_b[var2] * ih.field_d[var2];
@@ -32,7 +32,7 @@ final class ma extends gg {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = gj.field_w[sa.a((int) var4[var6], 255)];
           }
-          var1[var2] = new pb(nc.field_G, wd.field_b, ak.field_c[var2], vi.field_c[var2], vc.field_b[var2], ih.field_d[var2], var5);
+          var1[var2] = new Sprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var5);
         }
         tb.f((byte) -45);
         return var1;
@@ -121,13 +121,13 @@ final class ma extends gg {
     ma() {
     }
 
-    final static wg a(Throwable param0, String param1) {
-        wg var2 = null;
-        if (param0 instanceof wg) {
-          var2 = (wg) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_f = var2.field_f + ' ' + param1;
         } else {
-          var2 = new wg(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

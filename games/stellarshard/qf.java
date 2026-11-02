@@ -5,7 +5,7 @@ final class qf implements Runnable {
     volatile ba[] field_e;
     volatile boolean field_b;
     static ql field_d;
-    ej field_h;
+    PlatformTaskDispatcher field_h;
     static java.awt.Color field_a;
     volatile boolean field_c;
     static int[] field_g;
@@ -24,7 +24,7 @@ final class qf implements Runnable {
           if (param0 != -125) {
             qf.a((byte) 102);
           }
-          gg.field_f = ee.a(5, 0, (byte) -124, 1);
+          IntrusiveNode.field_f = ee.a(5, 0, (byte) -124, 1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "qf.B(" + param0 + ')');
         }

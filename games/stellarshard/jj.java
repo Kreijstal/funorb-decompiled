@@ -132,7 +132,7 @@ final class jj {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, pb[] param7, pb[] param8, int param9, int param10, int param11, bd param12, bd param13) {
+    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite[] param7, Sprite[] param8, int param9, int param10, int param11, bd param12, bd param13) {
         try {
           pk.a(4);
           if (!param0) {
@@ -151,7 +151,7 @@ final class jj {
         return new bh[]{kk.field_k, ak.field_d, ma.field_m};
     }
 
-    jj(ka param0, gk param1) {
+    jj(PacketBuffer param0, gk param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

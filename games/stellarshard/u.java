@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends gg {
+final class u extends IntrusiveNode {
     static int field_k;
     int field_n;
     static java.math.BigInteger field_o;
     int field_q;
-    static pb field_m;
+    static Sprite field_m;
     static int field_p;
     static String field_l;
 
@@ -45,7 +45,7 @@ final class u extends gg {
 
     static {
         field_o = new java.math.BigInteger("65537");
-        field_m = new pb(540, 140);
+        field_m = new Sprite(540, 140);
         field_p = 0;
         field_l = "Passwords must be between 5 and 20 letters and numbers";
     }

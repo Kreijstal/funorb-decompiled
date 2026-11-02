@@ -15,7 +15,7 @@ final class pe {
     final static void c(int param0) {
         u var1 = (u) (i.field_c.b(-103));
         if (var1 == null) {
-          oj.c(-2290);
+          IntrusiveDeque.c(-2290);
           return;
         }
         ha var2 = ae.field_N;

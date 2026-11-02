@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha extends ka {
+final class ha extends PacketBuffer {
     static int field_w;
     static String field_v;
     static int field_t;
@@ -82,7 +82,7 @@ final class ha extends ka {
         }
     }
 
-    final static void a(java.math.BigInteger param0, ka param1, ka param2, int param3, java.math.BigInteger param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, int param3, java.math.BigInteger param4) {
         try {
           if (param3 >= -94) {
             ha.k(109);

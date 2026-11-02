@@ -37,7 +37,7 @@ final class kk extends lk {
         }
     }
 
-    final static void a(int param0, gg param1, gg param2) {
+    final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

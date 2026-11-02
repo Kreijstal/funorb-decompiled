@@ -47,7 +47,7 @@ final class hj {
         }
     }
 
-    final static void a(pb param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         kg.d(false);
         if (param1 != 1) {
           return;
@@ -72,7 +72,7 @@ final class hj {
         if (e.field_c) {
           return;
         }
-        if (ah.a(-1)) {
+        if (DualLinkNode.a(-1)) {
           ue.field_c.b(-47, new kl(param1, param0, hk.field_p, lg.field_f, lh.field_d, ed.field_b));
           return;
         }

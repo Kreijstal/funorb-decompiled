@@ -3,7 +3,7 @@
  */
 final class rh {
     static String field_c;
-    static pb[] field_a;
+    static Sprite[] field_a;
     static pa field_b;
 
     public static void a(int param0) {
@@ -61,7 +61,7 @@ final class rh {
           if (param2 != -115) {
             rh.a(true, (n) null, (byte) 64, 68, 93);
           }
-          var5_int = ug.a((param4 - param3) * 3, 4);
+          var5_int = IntrusiveDequeCursor.a((param4 - param3) * 3, 4);
           var6 = 3 * param3;
           var7 = -10 + var5_int;
           al.b(false);
@@ -97,7 +97,7 @@ final class rh {
                     var14 = wl.field_P[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + (var14 + var12Lifetime1) + var13Lifetime1;
-                      stackIn_32_0 = gg.field_h.length;
+                      stackIn_32_0 = IntrusiveNode.field_h.length;
                       stackIn_32_1 = 1;
                       if (var7 < 0) {
                         stackIn_33_2 = var15 << -var7;
@@ -105,7 +105,7 @@ final class rh {
                         stackIn_33_2 = var15 >> var7;
                       }
                       var16 = stackIn_32_0 - (stackIn_32_1 + stackIn_33_2);
-                      var17 = gg.field_h[var16];
+                      var17 = IntrusiveNode.field_h[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -115,14 +115,14 @@ final class rh {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = gg.field_h[var16];
+                          var17 = IntrusiveNode.field_h[var16];
                           continue;
                         }
                         stackIn_43_0Lifetime1 = var16 << 4;
                         stackIn_43_1Lifetime1 = var17;
                         var18 = stackIn_43_0Lifetime1 + stackIn_43_1Lifetime1;
                         ki.field_z[var18] = var8;
-                        gg.field_h[var16] = var17 + 1;
+                        IntrusiveNode.field_h[var16] = var17 + 1;
                         if (0 < param1.field_N &&
                           param1.field_g != null) {
                           dupTemp$0 = param1.field_g[var8];

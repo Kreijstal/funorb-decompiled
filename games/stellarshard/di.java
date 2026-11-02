@@ -5,9 +5,9 @@ final class di {
     static int field_b;
     static int field_a;
 
-    final static pb[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != -80) {
-          return (pb[]) null;
+          return (Sprite[]) null;
         }
         return qd.a(param1, 1, param0, param3, param2, 1, -1, 1, 3);
     }

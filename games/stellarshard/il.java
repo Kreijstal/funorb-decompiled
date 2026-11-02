@@ -3,7 +3,7 @@
  */
 final class il extends vg {
     static li field_u;
-    static ej field_v;
+    static PlatformTaskDispatcher field_v;
     static int field_w;
     static String field_x;
 

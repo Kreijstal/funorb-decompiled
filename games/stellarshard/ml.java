@@ -74,12 +74,12 @@ final class ml {
         field_c = null;
     }
 
-    final static pb[] a(String param0, byte param1, pf param2, String param3) {
+    final static Sprite[] a(String param0, byte param1, pf param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        pb[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

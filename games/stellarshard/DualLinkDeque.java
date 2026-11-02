@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class bg implements Iterable {
-    ah field_b;
+final class DualLinkDeque implements Iterable {
+    DualLinkNode field_b;
     static th field_c;
     static wb field_a;
 
-    private bg() throws Throwable {
+    private DualLinkDeque() throws Throwable {
         throw new Error();
     }
 
-    final ah b(byte param0) {
-        ah var2 = this.field_b.field_m;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_b.field_m;
         if (this.field_b != var2) {
           int var3 = 65 / ((0 - param0) / 47);
           var2.c((byte) 36);
@@ -45,18 +45,18 @@ final class bg implements Iterable {
         int var7Lifetime1;
         int var7Lifetime2;
         String var8Lifetime1;
-        ge.field_n[fh.field_b] = param5;
-        fj.field_b[fh.field_b] = fh.field_b;
-        se.field_B[fh.field_b] = param1;
+        ge.field_n[BufferedSocket.field_b] = param5;
+        fj.field_b[BufferedSocket.field_b] = BufferedSocket.field_b;
+        se.field_B[BufferedSocket.field_b] = param1;
         if (param1 < ta.field_q) {
           af.field_k = param1;
           if (param0 >= 73) {
             if (param1 > oe.field_c) {
               ce.field_b = param1;
             }
-            qf.field_g[fh.field_b] = param4;
-            wb.field_e[fh.field_b] = param3;
-            vc.field_f[fh.field_b] = param2;
+            qf.field_g[BufferedSocket.field_b] = param4;
+            wb.field_e[BufferedSocket.field_b] = param3;
+            vc.field_f[BufferedSocket.field_b] = param2;
             var6 = param4 - (-param3 - param2);
             if (var6 != 0) {
               stackIn_8_0 = 1000 * param4 / var6;
@@ -66,13 +66,13 @@ final class bg implements Iterable {
             var7 = stackIn_8_0;
           } else {
             var8 = (String) null;
-            bg.a(-95, -87, 106, 102, (ej) null, 54, (String) null, 31, -43);
+            DualLinkDeque.a(-95, -87, 106, 102, (PlatformTaskDispatcher) null, 54, (String) null, 31, -43);
             if (param1 > oe.field_c) {
               ce.field_b = param1;
             }
-            qf.field_g[fh.field_b] = param4;
-            wb.field_e[fh.field_b] = param3;
-            vc.field_f[fh.field_b] = param2;
+            qf.field_g[BufferedSocket.field_b] = param4;
+            wb.field_e[BufferedSocket.field_b] = param3;
+            vc.field_f[BufferedSocket.field_b] = param2;
             var6 = param4 - (-param3 - param2);
             if (var6 != 0) {
               stackIn_24_0 = 1000 * param4 / var6;
@@ -81,11 +81,11 @@ final class bg implements Iterable {
             }
             var7 = stackIn_24_0;
           }
-          vh.field_h[fh.field_b] = var7;
+          vh.field_h[BufferedSocket.field_b] = var7;
           if (ce.field_b < var7) {
             ce.field_b = var7;
           }
-          fh.field_b = fh.field_b + 1;
+          BufferedSocket.field_b = BufferedSocket.field_b + 1;
           if (af.field_k > var7) {
             af.field_k = var7;
           }
@@ -95,9 +95,9 @@ final class bg implements Iterable {
           if (param1 > oe.field_c) {
             ce.field_b = param1;
           }
-          qf.field_g[fh.field_b] = param4;
-          wb.field_e[fh.field_b] = param3;
-          vc.field_f[fh.field_b] = param2;
+          qf.field_g[BufferedSocket.field_b] = param4;
+          wb.field_e[BufferedSocket.field_b] = param3;
+          vc.field_f[BufferedSocket.field_b] = param2;
           var6Lifetime1 = param4 - (-param3 - param2);
           if (var6Lifetime1 != 0) {
             stackIn_57_0 = 1000 * param4 / var6Lifetime1;
@@ -105,24 +105,24 @@ final class bg implements Iterable {
             stackIn_57_0 = 0;
           }
           var7Lifetime1 = stackIn_57_0;
-          vh.field_h[fh.field_b] = var7Lifetime1;
+          vh.field_h[BufferedSocket.field_b] = var7Lifetime1;
           if (ce.field_b < var7Lifetime1) {
             ce.field_b = var7Lifetime1;
           }
-          fh.field_b = fh.field_b + 1;
+          BufferedSocket.field_b = BufferedSocket.field_b + 1;
           if (af.field_k > var7Lifetime1) {
             af.field_k = var7Lifetime1;
           }
           return;
         }
         var8Lifetime1 = (String) null;
-        bg.a(-95, -87, 106, 102, (ej) null, 54, (String) null, 31, -43);
+        DualLinkDeque.a(-95, -87, 106, 102, (PlatformTaskDispatcher) null, 54, (String) null, 31, -43);
         if (param1 > oe.field_c) {
           ce.field_b = param1;
         }
-        qf.field_g[fh.field_b] = param4;
-        wb.field_e[fh.field_b] = param3;
-        vc.field_f[fh.field_b] = param2;
+        qf.field_g[BufferedSocket.field_b] = param4;
+        wb.field_e[BufferedSocket.field_b] = param3;
+        vc.field_f[BufferedSocket.field_b] = param2;
         var6Lifetime2 = param4 - (-param3 - param2);
         if (var6Lifetime2 != 0) {
           stackIn_41_0 = 1000 * param4 / var6Lifetime2;
@@ -130,18 +130,18 @@ final class bg implements Iterable {
           stackIn_41_0 = 0;
         }
         var7Lifetime2 = stackIn_41_0;
-        vh.field_h[fh.field_b] = var7Lifetime2;
+        vh.field_h[BufferedSocket.field_b] = var7Lifetime2;
         if (ce.field_b < var7Lifetime2) {
           ce.field_b = var7Lifetime2;
         }
-        fh.field_b = fh.field_b + 1;
+        BufferedSocket.field_b = BufferedSocket.field_b + 1;
         if (af.field_k > var7Lifetime2) {
           af.field_k = var7Lifetime2;
         }
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ej param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         try {
           n.field_d = param1;
           ld.field_C = param2;
@@ -153,7 +153,7 @@ final class bg implements Iterable {
           fa.field_p = param4;
           if (param0 < 39) {
             byte[] var10 = (byte[]) null;
-            bg.a(7, (byte[]) null, -15);
+            DualLinkDeque.a(7, (byte[]) null, -15);
           }
           od.field_v = (fb) ((Object) new wj());
           ib.field_k = new rk(param4);
@@ -164,7 +164,7 @@ final class bg implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new s(this));
+        return (Iterator) ((Object) new DualLinkDequeIterator(this));
     }
 
     final static int a(int param0, byte[] param1, int param2) {
@@ -178,7 +178,7 @@ final class bg implements Iterable {
         try {
           if (param2 != 0) {
             var4 = (byte[]) null;
-            bg.a(-89, (byte[]) null, 45);
+            DualLinkDeque.a(-89, (byte[]) null, 45);
           }
           stackIn_3_0 = jj.a(0, param1, param0, -64);
           return stackIn_3_0;
@@ -196,14 +196,14 @@ final class bg implements Iterable {
         }
     }
 
-    final void a(boolean param0, ah param1) {
+    final void a(boolean param0, DualLinkNode param1) {
         try {
           if (param1.field_l != null) {
             param1.c((byte) 36);
           }
           if (!param0) {
-            ah var4 = (ah) null;
-            this.a(false, (ah) null);
+            DualLinkNode var4 = (DualLinkNode) null;
+            this.a(false, (DualLinkNode) null);
           }
           param1.field_m = this.field_b;
           param1.field_l = this.field_b.field_l;

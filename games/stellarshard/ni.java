@@ -14,7 +14,7 @@ final class ni {
         field_b = null;
         if (param0 >= -39) {
           Object var2 = (Object) null;
-          ni.a((ej) null, (Object) null, 118);
+          ni.a((PlatformTaskDispatcher) null, (Object) null, 118);
         }
         field_c = null;
     }
@@ -73,7 +73,7 @@ final class ni {
         }
     }
 
-    final static String a(boolean param0, int param1, ka param2) {
+    final static String a(boolean param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -121,7 +121,7 @@ final class ni {
         }
     }
 
-    final static void a(ej param0, Object param1, int param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

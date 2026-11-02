@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends gg {
-    static pb field_n;
+final class af extends IntrusiveNode {
+    static Sprite field_n;
     static int field_q;
     static int field_k;
     int[] field_s;
@@ -12,7 +12,7 @@ final class af extends gg {
     static int field_o;
     int field_p;
 
-    final static void a(int param0, int param1, int param2, int param3, pb[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -83,8 +83,8 @@ final class af extends gg {
         if (param0 == 1) {
           if (param1 >= wc.field_y &&
             param1 < ui.field_F.field_v + wc.field_y &&
-            vi.field_a <= param2 &&
-            vi.field_a + ui.field_F.field_y > param2) {
+            RasterBuffer.field_a <= param2 &&
+            RasterBuffer.field_a + ui.field_F.field_y > param2) {
             return 0;
           }
         } else {
@@ -119,8 +119,8 @@ final class af extends gg {
             }
             return 1;
           }
-          if (vi.field_a <= param2 &&
-            vi.field_a + ui.field_F.field_y > param2) {
+          if (RasterBuffer.field_a <= param2 &&
+            RasterBuffer.field_a + ui.field_F.field_y > param2) {
             return 0;
           }
         }

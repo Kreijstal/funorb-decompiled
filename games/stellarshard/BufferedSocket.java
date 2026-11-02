@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class fh implements Runnable {
-    private ej field_j;
+final class BufferedSocket implements Runnable {
+    private PlatformTaskDispatcher field_j;
     private java.net.Socket field_g;
     private InputStream field_d;
     private re field_f;
@@ -14,7 +14,7 @@ final class fh implements Runnable {
     private int field_a;
     private boolean field_n;
     private int field_l;
-    static pb[] field_k;
+    static Sprite[] field_k;
     private byte[] field_e;
     static int[] field_h;
     private OutputStream field_o;
@@ -23,10 +23,10 @@ final class fh implements Runnable {
     final static void a(pf param0, pf param1, pf param2, byte param3) {
         ek[] var14 = null;
         int var11_int = 0;
-        pb var15 = null;
-        pb var18 = null;
-        pb var11 = null;
-        pb var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = stellarshard.field_B;
@@ -34,12 +34,12 @@ final class fh implements Runnable {
         qh.field_a = ml.a("commonui", (byte) -123, param2, "frame_top");
         sa.field_g = ml.a("commonui", (byte) 122, param2, "frame_bottom");
         ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
-        mh.field_i = ml.a("commonui", (byte) 85, param2, "button");
-        ah.field_p = pf.a("commonui", (byte) -98, "validation", param2);
+        ImageProducerRasterBuffer.field_i = ml.a("commonui", (byte) 85, param2, "button");
+        DualLinkNode.field_p = pf.a("commonui", (byte) -98, "validation", param2);
         de.field_c = (bd) ((Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63));
         si.field_V = (bd) ((Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63));
-        s.field_c = (bd) ((Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63));
-        pb var17 = new pb(param0.a("button.gif", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
+        DualLinkDequeIterator.field_c = (bd) ((Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63));
+        Sprite var17 = new Sprite(param0.a("button.gif", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
         el.a("dropdown", param2, (byte) -89, "commonui");
         ek[] var5 = bf.a("screen_options", (byte) 37, "commonui", param2);
         nc.field_F = new ek[4];
@@ -72,18 +72,18 @@ final class fh implements Runnable {
           kg.d(false);
           var17.e();
           ti.c(0, 0, ti.field_i, ti.field_b);
-          var15 = new pb(var9, var9);
+          var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.e();
           var17.d(0, 0);
-          var11 = new pb(var9, var9);
+          var11 = new Sprite(var9, var9);
           var11.e();
           var17.d(var9 - var17.field_v, 0);
-          var12 = new pb(var17.field_v - 2 * var9, var9);
+          var12 = new Sprite(var17.field_v - 2 * var9, var9);
           var12.e();
           var17.d(-var9, 0);
           id.b((byte) -58);
-          mh.field_i = new pb[]{var15, var12, var11};
+          ImageProducerRasterBuffer.field_i = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "fh.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -137,7 +137,7 @@ final class fh implements Runnable {
           throw new IOException();
         }
         if (param0 != 58962) {
-          fh.a((byte) 63);
+          BufferedSocket.a((byte) 63);
         }
     }
 
@@ -241,7 +241,7 @@ final class fh implements Runnable {
           return 0;
         }
         if (param0 >= -84) {
-          fh.a((byte) -53);
+          BufferedSocket.a((byte) -53);
         }
         return this.field_d.available();
     }
@@ -406,7 +406,7 @@ final class fh implements Runnable {
         }
     }
 
-    fh(java.net.Socket param0, ej param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -444,7 +444,7 @@ final class fh implements Runnable {
         this.a(true);
     }
 
-    private fh(java.net.Socket param0, ej param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_n = false;
         this.field_i = false;
         this.field_l = 0;

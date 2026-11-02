@@ -143,16 +143,16 @@ class ck extends wl implements oi {
         }
     }
 
-    final static fe n(int param0) {
+    final static MouseWheelInput n(int param0) {
         try {
           Throwable var1 = null;
-          fe stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != 2113632) {
             field_db = true;
           }
           try {
-            stackIn_3_0 = (fe) (Class.forName("hb").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,7 +273,7 @@ class ck extends wl implements oi {
           if (!param0) {
             field_ib = (byte[][]) null;
           }
-          if (ac.field_k == null) {
+          if (GameApplet.field_k == null) {
             return null;
           }
           if (param1 == null) {
@@ -288,7 +288,7 @@ class ck extends wl implements oi {
           if (var2 == null) {
             return null;
           }
-          var3 = (fd) (ac.field_k.a((long)var2.hashCode(), -119));
+          var3 = (fd) (GameApplet.field_k.a((long)var2.hashCode(), -119));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_rb);
             var4 = nh.a(var7, false);
@@ -296,7 +296,7 @@ class ck extends wl implements oi {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (fd) (ac.field_k.a(true));
+            var3 = (fd) (GameApplet.field_k.a(true));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

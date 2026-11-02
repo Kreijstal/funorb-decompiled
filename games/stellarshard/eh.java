@@ -5,7 +5,7 @@ final class eh {
     static cg field_c;
     static qc field_a;
     static String field_b;
-    static pb field_f;
+    static Sprite field_f;
     static int field_g;
     static int[] field_e;
     static boolean field_d;
@@ -120,23 +120,23 @@ final class eh {
               break;
             }
             if (var4 == null) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             var5 = var28.f(4);
             if (var5 != 0) {
               var6 = var4.field_q;
-              hi.field_e[0].field_e = wf.field_b;
-              hi.field_e[0].field_d = null;
+              DelegatingCanvas.field_e[0].field_e = wf.field_b;
+              DelegatingCanvas.field_e[0].field_d = null;
               var7 = var4.field_r;
-              hi.field_e[0].field_a = false;
+              DelegatingCanvas.field_e[0].field_a = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                hi.field_e[var8_int].field_e = var28.e((byte) 115);
-                hi.field_e[var8_int].field_a = false;
+                DelegatingCanvas.field_e[var8_int].field_e = var28.e((byte) 115);
+                DelegatingCanvas.field_e[var8_int].field_a = false;
                 if (1 != var28.f(4)) {
-                  hi.field_e[var8_int].field_d = null;
+                  DelegatingCanvas.field_e[var8_int].field_d = null;
                 } else {
-                  hi.field_e[var8_int].field_d = var28.e((byte) 117);
+                  DelegatingCanvas.field_e[var8_int].field_d = var28.e((byte) 117);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -159,12 +159,12 @@ final class eh {
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.f(4);
-                  var21 = hi.field_e[var20].field_e;
+                  var21 = DelegatingCanvas.field_e[var20].field_e;
                   var22 = var28.d(~param0);
                   var24 = var28.field_k;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = hi.field_e[var20].field_d;
+                    var9[0][var12] = DelegatingCanvas.field_e[var20].field_d;
                     var10[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
@@ -187,10 +187,10 @@ final class eh {
                     }
                   }
                   if (var14 < var6 &&
-                    !hi.field_e[var20].field_a) {
-                    hi.field_e[var20].field_a = true;
+                    !DelegatingCanvas.field_e[var20].field_a) {
+                    DelegatingCanvas.field_e[var20].field_a = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = hi.field_e[var20].field_d;
+                    var9[2][var14] = DelegatingCanvas.field_e[var20].field_d;
                     var10[2][var14] = var22;
                     var14++;
                     var28.field_k = var24;
@@ -219,7 +219,7 @@ final class eh {
               break;
             }
             if (var6_ref_nf == null) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             var6_ref_nf.field_k = var4_long;
@@ -227,7 +227,7 @@ final class eh {
             return;
           }
           qe.a(-121, "HS1: " + bh.b((byte) -106), (Throwable) null);
-          oj.c(param0 ^ 2289);
+          IntrusiveDeque.c(param0 ^ 2289);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

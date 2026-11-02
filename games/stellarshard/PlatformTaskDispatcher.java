@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ej implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     kb field_e;
     kb field_f;
     private Thread field_n;
@@ -286,7 +286,7 @@ final class ej implements Runnable {
                   case 16:
                   default:
                     if (!this.field_p) {
-                      throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -304,7 +304,7 @@ final class ej implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = ej.a(-100, field_b, field_x, (String) (var8.field_a));
+                        var3_ref = PlatformTaskDispatcher.a(-100, field_b, field_x, (String) (var8.field_a));
                         var8.field_b = var3_ref;
                         break;
                       case 16:
@@ -338,21 +338,21 @@ final class ej implements Runnable {
                           Class.forName("ne").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_a, new Object[]{var14[0], var14[1], new Integer(var8.field_g), new Integer(var8.field_c), var14[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_k.startsWith("win")) {
-                              throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var13 = (String) (var8.field_a);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var13.length() > var5; var5++) {
                               if (-1 == var4_ref_String.indexOf((int) var13.charAt(var5))) {
-                                throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -361,12 +361,12 @@ final class ej implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.field_b = var3_ref2;
-                            throw ej.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref = ej.a(-122, field_b, "", (String) (var8.field_a));
+                        var3_ref = PlatformTaskDispatcher.a(-122, field_b, "", (String) (var8.field_a));
                         var8.field_b = var3_ref;
                         break;
                       case 6:
@@ -489,7 +489,7 @@ final class ej implements Runnable {
         return null != this.field_j ? true : false;
     }
 
-    ej(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

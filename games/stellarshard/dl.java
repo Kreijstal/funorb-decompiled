@@ -5,7 +5,7 @@ import java.util.*;
 
 final class dl extends dg {
     private int field_H;
-    static pb[] field_C;
+    static Sprite[] field_C;
     private int field_J;
     private int field_E;
     static re field_A;
@@ -48,11 +48,11 @@ final class dl extends dg {
         }
     }
 
-    final static pb[] d(byte param0) {
+    final static Sprite[] d(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        pb[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -63,7 +63,7 @@ final class dl extends dg {
         int[] var21;
         byte[] var22;
         var8 = stellarshard.field_B;
-        var1 = new pb[sb.field_b];
+        var1 = new Sprite[sb.field_b];
         for (var2 = 0; sb.field_b > var2; var2++) {
           var3 = vc.field_b[var2] * ih.field_d[var2];
           var20 = ih.field_b[var2];
@@ -73,7 +73,7 @@ final class dl extends dg {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = gj.field_w[sa.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new pb(nc.field_G, wd.field_b, ak.field_c[var2], vi.field_c[var2], vc.field_b[var2], ih.field_d[var2], var21);
+            var1[var2] = new Sprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var21);
           } else {
             var22 = lj.field_D[var2];
             var16 = new int[var3];
@@ -82,7 +82,7 @@ final class dl extends dg {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = vf.b(gj.field_w[sa.a(255, (int) var20[var7])], sa.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (pb) ((Object) new jc(nc.field_G, wd.field_b, ak.field_c[var2], vi.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
+            var1[var2] = (Sprite) ((Object) new jc(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
           }
         }
         if (param0 <= 85) {
@@ -160,7 +160,7 @@ final class dl extends dg {
         }
     }
 
-    final static a[] a(ej param0, boolean param1) {
+    final static a[] a(PlatformTaskDispatcher param0, boolean param1) {
         int var5 = 0;
         a[] stackIn_4_0 = null;
         a[] stackIn_11_0 = null;
@@ -284,7 +284,7 @@ final class dl extends dg {
             ((ig) (this.field_y)).field_E) &&
             1 == this.field_o) {
             var5_int = -this.field_J + (ni.field_e - param2);
-            var6 = -this.field_H + eb.field_a - param0;
+            var6 = -this.field_H + KeyHandler.field_a - param0;
             if (var5_int != this.field_w ||
               this.field_k != var6) {
               this.field_k = var6;

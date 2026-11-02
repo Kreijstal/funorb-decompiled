@@ -21,18 +21,18 @@ final class ih {
         if (param0 == -98) {
           var1 = System.currentTimeMillis();
           if (!(bh.field_c <= var1)) {
-            gg.field_a = gg.field_a + (bh.field_c - var1);
+            IntrusiveNode.field_a = IntrusiveNode.field_a + (bh.field_c - var1);
           }
           bh.field_c = var1;
-          return gg.field_a + var1;
+          return IntrusiveNode.field_a + var1;
         }
         ih.a(-100);
         var1Lifetime1 = System.currentTimeMillis();
         if (!(bh.field_c <= var1Lifetime1)) {
-          gg.field_a = gg.field_a + (bh.field_c - var1Lifetime1);
+          IntrusiveNode.field_a = IntrusiveNode.field_a + (bh.field_c - var1Lifetime1);
         }
         bh.field_c = var1Lifetime1;
-        return gg.field_a + var1Lifetime1;
+        return IntrusiveNode.field_a + var1Lifetime1;
     }
 
     static int a(int param0, int param1) {

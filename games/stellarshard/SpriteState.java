@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ie extends ah {
+abstract class SpriteState extends DualLinkNode {
     int field_t;
     int field_x;
     static pf field_u;
@@ -53,7 +53,7 @@ abstract class ie extends ah {
         }
     }
 
-    ie() {
+    SpriteState() {
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {

@@ -22,7 +22,7 @@ final class t {
             pg.field_fb.f(1, 950);
             ue.a((byte) -96, 0);
           }
-          oj.c(-2290);
+          IntrusiveDeque.c(-2290);
           return;
         }
         field_d = -85L;
@@ -31,7 +31,7 @@ final class t {
           pg.field_fb.f(1, 950);
           ue.a((byte) -96, 0);
         }
-        oj.c(-2290);
+        IntrusiveDeque.c(-2290);
     }
 
     public static void a(int param0) {

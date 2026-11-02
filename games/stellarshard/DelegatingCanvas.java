@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static uf[] field_e;
     private java.awt.Component field_b;
     static ml field_d;
@@ -17,7 +17,7 @@ final class hi extends java.awt.Canvas {
         var4 = stellarshard.field_B;
         try {
           if (param1 != 109) {
-            hi.a((byte) -90);
+            DelegatingCanvas.a((byte) -90);
           }
           var3_int = 0;
           while (param0 > 0) {
@@ -42,7 +42,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    hi(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
@@ -53,7 +53,7 @@ final class hi extends java.awt.Canvas {
     public static void a(byte param0) {
         field_e = null;
         if (param0 != -92) {
-          hi.a((byte) 93);
+          DelegatingCanvas.a((byte) 93);
         }
         field_c = null;
         field_d = null;
@@ -96,10 +96,10 @@ final class hi extends java.awt.Canvas {
     }
 
     final static void b(byte param0) {
-        vi.a(true);
+        RasterBuffer.a(true);
         if (param0 != 109) {
           String var2 = (String) null;
-          hi.a((String) null, false);
+          DelegatingCanvas.a((String) null, false);
         }
     }
 

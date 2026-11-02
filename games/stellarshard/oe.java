@@ -7,7 +7,7 @@ final class oe {
     static jj field_a;
     static String field_d;
 
-    final static java.awt.Frame a(ej param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_8_0 = null;
         Object stackIn_30_0 = null;

@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj {
+final class IntrusiveDeque {
     static int field_b;
     static String field_a;
-    gg field_d;
-    private gg field_c;
+    IntrusiveNode field_d;
+    private IntrusiveNode field_c;
 
-    final gg c(byte param0) {
-        gg var2 = this.field_d.field_c;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_c;
         if (param0 >= -108) {
-          return (gg) null;
+          return (IntrusiveNode) null;
         }
         if (var2 == this.field_d) {
           return null;
@@ -21,7 +21,7 @@ final class oj {
 
     final static void c(int param0) {
         if (param0 != -2290) {
-          oj.a(false);
+          IntrusiveDeque.a(false);
         }
         if (ob.field_b != null) {
           ob.field_b.a(true);
@@ -29,8 +29,8 @@ final class oj {
         }
     }
 
-    final gg b(byte param0) {
-        gg var2 = this.field_c;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_d) {
           this.field_c = null;
           return null;
@@ -40,13 +40,13 @@ final class oj {
         return var2;
     }
 
-    final gg d(byte param0) {
-        gg var2 = this.field_d.field_g;
+    final IntrusiveNode d(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_g;
         if (var2 == this.field_d) {
           return null;
         }
         if (param0 >= -7) {
-          this.field_d = (gg) null;
+          this.field_d = (IntrusiveNode) null;
         }
         var2.c(20);
         return var2;
@@ -59,7 +59,7 @@ final class oj {
         return this.field_d == this.field_d.field_g ? true : false;
     }
 
-    final static void a(pb param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -74,7 +74,7 @@ final class oj {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        pb var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -161,7 +161,7 @@ final class oj {
         }
     }
 
-    final void a(int param0, gg param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
           if (param0 != -1) {
             field_b = -120;
@@ -186,9 +186,9 @@ final class oj {
     }
 
     final void a(byte param0) {
-        gg var2;
+        IntrusiveNode var2;
         int var3;
-        gg var4;
+        IntrusiveNode var4;
         var3 = stellarshard.field_B;
         while (true) {
           var2 = this.field_d.field_g;
@@ -199,23 +199,23 @@ final class oj {
           break;
         }
         if (param0 != -8) {
-          var4 = (gg) null;
-          this.a(95, (gg) null);
+          var4 = (IntrusiveNode) null;
+          this.a(95, (IntrusiveNode) null);
         }
         this.field_c = null;
         return;
     }
 
-    public oj() {
-        this.field_d = new gg();
+    public IntrusiveDeque() {
+        this.field_d = new IntrusiveNode();
         this.field_d.field_g = this.field_d;
         this.field_d.field_c = this.field_d;
     }
 
-    final void b(int param0, gg param1) {
+    final void b(int param0, IntrusiveNode param1) {
         try {
           if (param0 >= -39) {
-            this.field_d = (gg) null;
+            this.field_d = (IntrusiveNode) null;
           }
           if (null != param1.field_c) {
             param1.c(20);
@@ -229,8 +229,8 @@ final class oj {
         }
     }
 
-    final gg b(int param0) {
-        gg var2 = this.field_d.field_g;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_d.field_g;
         if (var2 == this.field_d) {
           this.field_c = null;
           return null;

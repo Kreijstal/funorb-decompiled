@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class ga implements Iterator {
-    private gg field_b;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode field_b;
     private int field_d;
     static String field_a;
-    private ai field_e;
-    private gg field_c;
+    private IterableNodeHashTable field_e;
+    private IntrusiveNode field_c;
 
     public final void remove() {
         if (this.field_b == null) {
@@ -18,7 +18,7 @@ final class ga implements Iterator {
         this.field_b = null;
     }
 
-    final static void a(int param0, pb param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           if (param0 != -8039) {
             field_a = (String) null;
@@ -64,8 +64,8 @@ final class ga implements Iterator {
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        gg var3;
-        gg var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = stellarshard.field_B;
         if (this.field_e.field_e[-1 + this.field_d] != this.field_c) {
           var4 = this.field_c;
@@ -92,7 +92,7 @@ final class ga implements Iterator {
         this.field_d = param0;
     }
 
-    ga(ai param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_b = null;
         try {
           this.field_e = param0;

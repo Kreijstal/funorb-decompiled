@@ -15,7 +15,7 @@ final class bf {
         int var2Lifetime4;
         var3 = stellarshard.field_B;
         if (param0 == -8250) {
-          L4: {
+          regionExit1: {
             if ((param1 <= 0 ||
               param1 >= 128) &&
               (param1 < 160 ||
@@ -129,7 +129,7 @@ final class bf {
                   }
                 }
               }
-              break L4;
+              break regionExit1;
             }
             var2 = (byte)param1;
           }

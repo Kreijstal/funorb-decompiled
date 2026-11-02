@@ -122,7 +122,7 @@ final class rc extends ci {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var3 = s.a(param2, param0, (byte) 3);
+          var3 = DualLinkDequeIterator.a(param2, param0, (byte) 3);
           if (var3 != null) {
             stackIn_7_0 = var3;
             return stackIn_7_0;

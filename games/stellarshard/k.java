@@ -6,7 +6,7 @@ final class k {
     static String field_c;
     static String field_a;
     static long field_d;
-    static fh field_b;
+    static BufferedSocket field_b;
 
     final static void a(int param0) {
         try {
@@ -25,7 +25,7 @@ final class k {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                fh.field_m = 1 + (int)(var3.longValue() / 1048576L);
+                BufferedSocket.field_m = 1 + (int)(var3.longValue() / 1048576L);
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;
@@ -69,10 +69,10 @@ final class k {
           }
           var5_int = 0;
           while (true) {
-            if (gg.field_h.length <= var5_int) {
+            if (IntrusiveNode.field_h.length <= var5_int) {
               return;
             }
-            param1 = gg.field_h[var5_int];
+            param1 = IntrusiveNode.field_h[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;
@@ -119,18 +119,18 @@ final class k {
     }
 
     final static void a(pf param0, int param1) {
-        pb var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new pb(param0.a("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
+          var2 = new Sprite(param0.a("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
           var3 = var2.field_v;
           var4 = var2.field_y;
           kg.d(false);
-          wh.field_a = new pb(var3, param1 * var4 / 4);
+          wh.field_a = new Sprite(var3, param1 * var4 / 4);
           wh.field_a.e();
           var2.d(0, 0);
-          fb.field_h = new pb(var3, var4 - wh.field_a.field_y);
+          fb.field_h = new Sprite(var3, var4 - wh.field_a.field_y);
           fb.field_h.e();
           var2.d(0, -wh.field_a.field_y);
           fb.field_h.field_s = wh.field_a.field_y;

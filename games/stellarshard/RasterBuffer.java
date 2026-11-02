@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vi {
+abstract class RasterBuffer {
     java.awt.Image field_b;
     static int[] field_c;
     int[] field_e;
@@ -97,7 +97,7 @@ abstract class vi {
           var22Lifetime2 = cc.field_n;
           var23Lifetime2 = cc.field_p;
           var24Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var24Lifetime2 < param0.field_n) {
               var25Lifetime1 = param0.field_f[var24Lifetime2];
@@ -111,7 +111,7 @@ abstract class vi {
               if (var31 != 0) {
                 if (stackIn_60_0 < stackIn_60_1) {
                   stackIn_69_0 = ~hc.field_f.length;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -132,7 +132,7 @@ abstract class vi {
                 if (param4) {
                   aa.field_c[var24Lifetime2] = var28Lifetime1 >> fc.field_e;
                   kf.field_b[var24Lifetime2] = var29Lifetime1 >> fc.field_e;
-                  be.field_b[var24Lifetime2] = var30Lifetime1;
+                  MouseHandler.field_b[var24Lifetime2] = var30Lifetime1;
                 }
                 var24Lifetime2++;
                 continue;
@@ -168,7 +168,7 @@ abstract class vi {
                   var27Lifetime1Lifetime1 = param0.field_q[var24Lifetime2];
                   ua.field_e[var24Lifetime2] = (var25Lifetime1Lifetime1 * var13 + var16 * var26Lifetime1Lifetime1 + var19 * var27Lifetime1Lifetime1 >> 16) + var10;
                   nk.field_a[var24Lifetime2] = var11 + (var20 * var27Lifetime1Lifetime1 + var14 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var17 >> 16);
-                  eb.field_b[var24Lifetime2] = var12 + (var25Lifetime1Lifetime1 * var15 - (-(var26Lifetime1Lifetime1 * var18) - var27Lifetime1Lifetime1 * var21) >> 16);
+                  KeyHandler.field_b[var24Lifetime2] = var12 + (var25Lifetime1Lifetime1 * var15 - (-(var26Lifetime1Lifetime1 * var18) - var27Lifetime1Lifetime1 * var21) >> 16);
                   var24Lifetime2++;
                   if (var31 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -198,7 +198,7 @@ abstract class vi {
                   }
                   stackIn_69_0 = ~hc.field_f.length;
                   if (var31 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_69_0 >= ~var19) {
                     break;
@@ -285,7 +285,7 @@ abstract class vi {
         try {
           field_c = null;
           if (param0 <= 79) {
-            vi.a(true);
+            RasterBuffer.a(true);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "vi.B(" + param0 + ')');

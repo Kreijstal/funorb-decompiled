@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hf extends sk {
-    static oj field_i;
+    static IntrusiveDeque field_i;
     private String field_d;
     static String field_g;
     private String field_h;
@@ -46,7 +46,7 @@ final class hf extends sk {
         }
     }
 
-    final void a(int param0, ka param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a(102, this.field_h);
           param1.a(false, this.field_d);
@@ -59,14 +59,14 @@ final class hf extends sk {
     }
 
     final static java.applet.Applet a(byte param0) {
-        if (ac.field_c != null) {
-          return ac.field_c;
+        if (GameApplet.field_c != null) {
+          return GameApplet.field_c;
         }
         if (param0 > -2) {
-          field_i = (oj) null;
-          return (java.applet.Applet) ((Object) bc.field_j);
+          field_i = (IntrusiveDeque) null;
+          return (java.applet.Applet) ((Object) ProxySocketConnector.field_j);
         }
-        return (java.applet.Applet) ((Object) bc.field_j);
+        return (java.applet.Applet) ((Object) ProxySocketConnector.field_j);
     }
 
     public static void b(int param0) {
@@ -182,7 +182,7 @@ final class hf extends sk {
     static {
         field_g = "Game ending in ";
         field_j = null;
-        field_i = new oj();
+        field_i = new IntrusiveDeque();
         field_e = new sd[1000];
     }
 }

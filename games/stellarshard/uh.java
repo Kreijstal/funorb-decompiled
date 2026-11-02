@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uh {
-    private gg field_c;
+    private IntrusiveNode field_c;
     private int field_d;
-    private gg field_a;
+    private IntrusiveNode field_a;
     private int field_e;
-    private gg[] field_b;
+    private IntrusiveNode[] field_b;
 
     final static void a(int param0, int param1, int param2, int param3) {
         lg.field_b = param3;
@@ -18,11 +18,11 @@ final class uh {
         kl.field_k = param2;
     }
 
-    final gg a(long param0, int param1) {
-        gg var6 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var6 = null;
         int var7 = stellarshard.field_B;
         int var4 = 33 % ((-51 - param1) / 53);
-        gg var5 = this.field_b[(int)(param0 & (long)(this.field_d - 1))];
+        IntrusiveNode var5 = this.field_b[(int)(param0 & (long)(this.field_d - 1))];
         this.field_c = var5.field_g;
         while (this.field_c != var5) {
           if (~this.field_c.field_j == ~param0) {
@@ -89,9 +89,9 @@ final class uh {
         }
     }
 
-    final gg b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         int fieldTemp$0 = 0;
-        gg var2;
+        IntrusiveNode var2;
         int var3;
         var3 = stellarshard.field_B;
         if (this.field_e > 0 &&
@@ -146,7 +146,7 @@ final class uh {
           var3 = param0.e(12, 8);
           var4 = new wh[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!mh.a(param0, (byte) -77)) {
+            if (!ImageProducerRasterBuffer.a(param0, (byte) -77)) {
               var6 = param0.e(eh.a(var5 - 1, (byte) -109), param1 ^ -9);
               var4[var5] = var4[var6];
             } else {
@@ -177,14 +177,14 @@ final class uh {
         }
     }
 
-    final gg a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int var2 = -68 % ((param0 - 32) / 59);
         this.field_e = 0;
         return this.b((byte) 63);
     }
 
-    final void a(gg param0, long param1, int param2) {
-        gg var5 = null;
+    final void a(IntrusiveNode param0, long param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param0.field_c != null) {
             param0.c(20);
@@ -202,13 +202,13 @@ final class uh {
 
     uh(int param0) {
         int var2 = 0;
-        gg dupTemp$0 = null;
-        gg var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_e = 0;
-        this.field_b = new gg[param0];
+        this.field_b = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new gg();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
           var3.field_c = var3;

@@ -188,7 +188,7 @@ final class nd extends ig {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ah.a((java.awt.Component) ((Object) param1), false);
+          DualLinkNode.a((java.awt.Component) ((Object) param1), false);
           sl.a((java.awt.Component) ((Object) param1), (byte) 103);
           if (param0 != -26621) {
             var3 = (CharSequence) null;

@@ -22,11 +22,11 @@ final class kc {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        pb var6 = null;
-        pb var7 = null;
-        pb var8 = null;
-        pb var7Lifetime1;
-        pb var7Lifetime2;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
+        Sprite var7Lifetime1;
+        Sprite var7Lifetime2;
         int var3Lifetime1;
         var4 = stellarshard.field_B;
         try {

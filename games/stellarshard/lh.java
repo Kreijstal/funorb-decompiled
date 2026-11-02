@@ -22,7 +22,7 @@ final class lh {
     static volatile boolean field_f;
     static int field_d;
 
-    final static boolean a(ej param0, byte param1) {
+    final static boolean a(PlatformTaskDispatcher param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -83,7 +83,7 @@ final class lh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ka var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -100,7 +100,7 @@ final class lh {
         int var13Lifetime1Lifetime1;
         var16 = stellarshard.field_B;
         try {
-          var17 = new ka(sl.a((byte) -64, param1));
+          var17 = new PacketBuffer(sl.a((byte) -64, param1));
           var4 = var17.f(4);
           if (var4 >= 5 &&
             7 >= var4) {
@@ -269,7 +269,7 @@ final class lh {
     lh(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_m = bg.a(param0.length, param0, 0);
+          this.field_m = DualLinkDeque.a(param0.length, param0, 0);
           if (this.field_m != param1) {
             throw new RuntimeException();
           }
@@ -277,7 +277,7 @@ final class lh {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_s = bc.a(0, 0, param0.length, param0);
+            this.field_s = ProxySocketConnector.a(0, 0, param0.length, param0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_s[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

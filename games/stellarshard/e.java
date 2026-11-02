@@ -6,7 +6,7 @@ final class e {
     static wh[] field_d;
     static String field_b;
     static String[] field_f;
-    static pb[] field_g;
+    static Sprite[] field_g;
     static boolean field_c;
     static int field_e;
 
@@ -49,7 +49,7 @@ final class e {
 
     static {
         field_b = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
-        field_g = new pb[16];
+        field_g = new Sprite[16];
         field_f = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_e = -1;
     }

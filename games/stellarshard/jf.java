@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends gg {
+final class jf extends IntrusiveNode {
     static int[] field_k;
     static String field_l;
     static pf field_m;
     int field_o;
-    static pb[] field_n;
+    static Sprite[] field_n;
 
     final static void e(int param0) {
         int var7 = 0;
@@ -32,18 +32,18 @@ final class jf extends gg {
           var14 = ae.field_N;
           var2 = var14.f(4);
           if (var2 == 0) {
-            var11 = ac.d((byte) 127);
+            var11 = GameApplet.d((byte) 127);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((ka) ((Object) var5)).f(4);
+            var6 = ((PacketBuffer) ((Object) var5)).f(4);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((ka) ((Object) var5)).b(false);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).b(false);
             }
             var13 = (he) (pl.field_W.b(-78));
             if (var13 == null) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             var13.field_m = var3;
@@ -54,21 +54,21 @@ final class jf extends gg {
           if (var2 != 1) {
             if (var2 != 2) {
               qe.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
             } else {
               var15 = (he) (pl.field_W.b(-98));
               if (var15 == null) {
-                oj.c(-2290);
+                IntrusiveDeque.c(-2290);
                 return;
               }
-              var15.field_m = ac.d((byte) 126);
+              var15.field_m = GameApplet.d((byte) 126);
               var15.field_n = true;
               var15.c(20);
             }
           } else {
-            var12 = (kl) (nl.field_e.b(-97));
+            var12 = (kl) (SocketConnector.field_e.b(-97));
             if (var12 == null) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             var12.c(20);

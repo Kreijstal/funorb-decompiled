@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class wj extends fb {
-    private fh field_s;
+    private BufferedSocket field_s;
     static String[] field_t;
 
     public static void d(byte param0) {
@@ -15,7 +15,7 @@ final class wj extends fb {
     private final void a(int param0, boolean param1) {
         try {
           IOException iOException = null;
-          ka stackIn_7_0 = null;
+          PacketBuffer stackIn_7_0 = null;
           boolean stackIn_7_1 = false;
           int stackIn_8_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -35,7 +35,7 @@ final class wj extends fb {
             } else {
               stackIn_8_2 = 2;
             }
-            ((ka) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2);
+            ((PacketBuffer) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2);
             this.field_c.a(param0 - 24175, 0L);
             this.field_s.a(this.field_c.field_r, 0, 121, this.field_c.field_r.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -146,7 +146,7 @@ final class wj extends fb {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  oj.c(-2290);
+                  IntrusiveDeque.c(-2290);
                   ta.field_u = false;
                   stackIn_29_0 = var7Lifetime1;
                   return stackIn_29_0;
@@ -231,7 +231,7 @@ final class wj extends fb {
             }
             if (ih.field_a == sl.field_d &&
               cd.e((byte) 123)) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               if (ja.field_t == 7 &&
                 !ta.field_u) {
                 ta.field_u = true;
@@ -241,7 +241,7 @@ final class wj extends fb {
               if (7 == ja.field_t) {
                 ja.field_t = 3;
               }
-              ga.field_a = ae.field_N.e((byte) 116);
+              NodeHashTableIterator.field_a = ae.field_N.e((byte) 116);
               ta.field_u = false;
               stackIn_82_0 = ja.field_t;
               return stackIn_82_0;
@@ -249,9 +249,9 @@ final class wj extends fb {
             if (ob.field_b == null) {
               if (ta.field_u) {
                 if (tk.b(125) <= 30000L) {
-                  ga.field_a = wb.field_h;
+                  NodeHashTableIterator.field_a = wb.field_h;
                 } else {
-                  ga.field_a = hj.field_a;
+                  NodeHashTableIterator.field_a = hj.field_a;
                 }
                 ta.field_u = false;
                 stackIn_92_0 = 3;
@@ -444,7 +444,7 @@ final class wj extends fb {
                       this.field_r = var14_ref;
                       stackIn_78_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_78_0;
-                      this.field_r.field_G = new ka(var15 + var9 + this.field_r.field_F);
+                      this.field_r.field_G = new PacketBuffer(var15 + var9 + this.field_r.field_F);
                       this.field_r.field_G.a(false, var10);
                       this.field_r.field_G.b(0, var9);
                       this.field_a.field_k = 0;
@@ -582,7 +582,7 @@ final class wj extends fb {
               }
               this.field_s = null;
             }
-            this.field_s = (fh) (param1);
+            this.field_s = (BufferedSocket) (param1);
             this.e((byte) -84);
             this.a(24215, param0);
             this.field_r = null;
@@ -664,7 +664,7 @@ final class wj extends fb {
     final static void c(byte param0) {
         int var1_int = 0;
         int var2 = 0;
-        pb var2_ref_pb = null;
+        Sprite var2_ref_pb = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -673,12 +673,12 @@ final class wj extends fb {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        pb var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        pb var11 = null;
-        pb var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        pb var16 = null;
+        Sprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -719,7 +719,7 @@ final class wj extends fb {
             vf.field_E.a("benefits", (byte) -109)) {
             tk.field_c = qd.a(nh.field_g, "headline", "benefits", (byte) 81);
             pl.field_T = qd.a(nh.field_g, "blurbpane", "benefits", (byte) 78);
-            fe.field_a = qd.a(nh.field_g, "button", "benefits", (byte) 78);
+            MouseWheelInput.field_a = qd.a(nh.field_g, "button", "benefits", (byte) 78);
             dd.field_a = qd.a(nh.field_g, "signup_text", "benefits", (byte) 57);
             na.field_e = qd.a(nh.field_g, "menu_text", "benefits", (byte) 42);
             ui.field_F = qd.a(nh.field_g, "button_frame", "benefits", (byte) 59);
@@ -730,13 +730,13 @@ final class wj extends fb {
             var2 = ti.field_i;
             var3 = ti.field_b;
             ti.a(pk.field_i);
-            var11 = new pb(ea.field_l.field_v + 4, ea.field_l.field_y + 4);
+            var11 = new Sprite(ea.field_l.field_v + 4, ea.field_l.field_y + 4);
             var11.e();
             ea.field_l.c(2, 2, ki.field_x);
-            oj.a(var11, 1, 0, var11.field_y, 2, 0, var11.field_v, true);
+            IntrusiveDeque.a(var11, 1, 0, var11.field_y, 2, 0, var11.field_v, true);
             ea.field_l = var11;
             bk.field_b = ea.field_l.f();
-            var12 = new pb(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_v / 2;
             var12.e();
             o.field_h.c(h.a(ph.field_E, 0, new String[]{vd.field_d}), var6, 40, 16777215, -1);
@@ -744,14 +744,14 @@ final class wj extends fb {
             o.field_h.c(h.a(vd.field_a, 0, new String[]{vg.field_r}), var6, 110, 16777215, -1);
             fj.field_f.c(h.a(rb.field_t, 0, new String[]{vg.field_r}), var6, 130, 16777215, -1);
             o.field_h.c(cm.field_b, var6, 180, 16777215, -1);
-            fj.field_f.c(nl.field_d, var6, 200, 16777215, -1);
-            oj.a(var12, 1, 0, var12.field_y, 3, 0, var12.field_v, true);
+            fj.field_f.c(SocketConnector.field_d, var6, 200, 16777215, -1);
+            IntrusiveDeque.a(var12, 1, 0, var12.field_y, 3, 0, var12.field_v, true);
             pl.field_T.e();
             var12.e(-pl.field_T.field_t + 18, 241 - pl.field_T.field_s);
             for (var7 = 0; pk.field_d.length > var7; var7++) {
               dl.field_C[var7].e();
               fj.field_f.a(pk.field_d[var7], 3, 3, -6 + dl.field_C[var7].field_v, dl.field_C[var7].field_y - 6, ki.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
-              oj.a(dl.field_C[var7], 1, 0, dl.field_C[var7].field_y, 3, 0, dl.field_C[var7].field_v, true);
+              IntrusiveDeque.a(dl.field_C[var7], 1, 0, dl.field_C[var7].field_y, 3, 0, dl.field_C[var7].field_v, true);
             }
             pk.field_d = null;
             q.field_b = dd.field_a.a();
@@ -759,26 +759,26 @@ final class wj extends fb {
             ob.a(117, 0, 64, ti.field_i, ti.field_b * 2 / 3, 0);
             ti.a(var27, var2, var3);
             ti.b(pk.field_i);
-            wc.field_y = 231 + (fe.field_a.field_v - ui.field_F.field_v) / 2;
-            cm.field_a = (fe.field_a.field_v - ui.field_F.field_v) / 2 + 434;
-            af.field_l = (fe.field_a.field_y - ui.field_F.field_y) / 2 + 390;
+            wc.field_y = 231 + (MouseWheelInput.field_a.field_v - ui.field_F.field_v) / 2;
+            cm.field_a = (MouseWheelInput.field_a.field_v - ui.field_F.field_v) / 2 + 434;
+            af.field_l = (MouseWheelInput.field_a.field_y - ui.field_F.field_y) / 2 + 390;
             nh.field_g = null;
-            vi.field_a = 390 + (-ui.field_F.field_y + fe.field_a.field_y) / 2;
+            RasterBuffer.field_a = 390 + (-ui.field_F.field_y + MouseWheelInput.field_a.field_y) / 2;
           }
           if (ve.field_a == null) {
             return;
           }
-          if (null != ug.field_f &&
+          if (null != IntrusiveDequeCursor.field_f &&
             null != o.field_h) {
             var28 = ti.field_a;
             var2Lifetime1 = ti.field_i;
             var3Lifetime1 = ti.field_b;
             ti.a(pk.field_i);
-            var14 = h.a(hj.field_b, 0, new String[]{ai.field_a[ic.field_a]});
+            var14 = h.a(hj.field_b, 0, new String[]{IterableNodeHashTable.field_a[ic.field_a]});
             var5 = o.field_h.b(var14, vh.field_i);
             var6Lifetime1 = o.field_h.b(var14, vh.field_i, o.field_h.field_N + o.field_h.field_r);
             var7Lifetime1 = (vh.field_i - var5) / 2 + kk.field_o;
-            var8 = (i.field_a - var6Lifetime1) / 2 + vi.field_d;
+            var8 = (i.field_a - var6Lifetime1) / 2 + RasterBuffer.field_d;
             var7Lifetime1 -= 3;
             var5 += 6;
             var6Lifetime1 += 6;
@@ -786,66 +786,66 @@ final class wj extends fb {
             if (var7Lifetime1 < 0) {
               var9_int = -var7Lifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_int;
-              ug.field_f.field_w = ug.field_f.field_w + 2 * var9_int;
+              IntrusiveDequeCursor.field_f.field_w = IntrusiveDequeCursor.field_f.field_w + 2 * var9_int;
               pk.field_g = pk.field_g - var9_int;
               var5 = var5 + var9_int * 2;
-              ug.field_f.field_t = ug.field_f.field_t + var9_int;
+              IntrusiveDequeCursor.field_f.field_t = IntrusiveDequeCursor.field_f.field_t + var9_int;
               kk.field_o = kk.field_o + var9_int;
             }
-            if (var5 + var7Lifetime1 > ug.field_f.field_w) {
-              var9_intLifetime1 = var5 + var7Lifetime1 - ug.field_f.field_w;
-              ug.field_f.field_w = ug.field_f.field_w + var9_intLifetime1 * 2;
+            if (var5 + var7Lifetime1 > IntrusiveDequeCursor.field_f.field_w) {
+              var9_intLifetime1 = var5 + var7Lifetime1 - IntrusiveDequeCursor.field_f.field_w;
+              IntrusiveDequeCursor.field_f.field_w = IntrusiveDequeCursor.field_f.field_w + var9_intLifetime1 * 2;
               var5 = var5 + 2 * var9_intLifetime1;
               pk.field_g = pk.field_g - var9_intLifetime1;
               kk.field_o = kk.field_o + var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
-              ug.field_f.field_t = ug.field_f.field_t + var9_intLifetime1;
+              IntrusiveDequeCursor.field_f.field_t = IntrusiveDequeCursor.field_f.field_t + var9_intLifetime1;
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
-              vi.field_d = vi.field_d + var9_intLifetime2;
+              RasterBuffer.field_d = RasterBuffer.field_d + var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
-              ug.field_f.field_x = ug.field_f.field_x + 2 * var9_intLifetime2;
+              IntrusiveDequeCursor.field_f.field_x = IntrusiveDequeCursor.field_f.field_x + 2 * var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
               t.field_a = t.field_a - var9_intLifetime2;
-              ug.field_f.field_s = ug.field_f.field_s + var9_intLifetime2;
+              IntrusiveDequeCursor.field_f.field_s = IntrusiveDequeCursor.field_f.field_s + var9_intLifetime2;
             }
-            if (ug.field_f.field_x < var6Lifetime1 + var8) {
-              var9_intLifetime3 = -ug.field_f.field_x + var8 + var6Lifetime1;
-              ug.field_f.field_s = ug.field_f.field_s + var9_intLifetime3;
-              ug.field_f.field_x = ug.field_f.field_x + var9_intLifetime3 * 2;
+            if (IntrusiveDequeCursor.field_f.field_x < var6Lifetime1 + var8) {
+              var9_intLifetime3 = -IntrusiveDequeCursor.field_f.field_x + var8 + var6Lifetime1;
+              IntrusiveDequeCursor.field_f.field_s = IntrusiveDequeCursor.field_f.field_s + var9_intLifetime3;
+              IntrusiveDequeCursor.field_f.field_x = IntrusiveDequeCursor.field_f.field_x + var9_intLifetime3 * 2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
               t.field_a = t.field_a - var9_intLifetime3;
-              vi.field_d = vi.field_d + var9_intLifetime3;
+              RasterBuffer.field_d = RasterBuffer.field_d + var9_intLifetime3;
             }
-            ug.field_f.b();
-            var9 = new pb(ug.field_f.field_w, ug.field_f.field_x);
+            IntrusiveDequeCursor.field_f.b();
+            var9 = new Sprite(IntrusiveDequeCursor.field_f.field_w, IntrusiveDequeCursor.field_f.field_x);
             var9.e();
-            o.field_h.a(var14, kk.field_o, vi.field_d, vh.field_i, i.field_a, 16777215, -1, 1, 1, o.field_h.field_N + o.field_h.field_r);
-            oj.a(var9, 1, 0, var9.field_x, 3, 0, var9.field_w, true);
-            ug.field_f.e();
+            o.field_h.a(var14, kk.field_o, RasterBuffer.field_d, vh.field_i, i.field_a, 16777215, -1, 1, 1, o.field_h.field_N + o.field_h.field_r);
+            IntrusiveDeque.a(var9, 1, 0, var9.field_x, 3, 0, var9.field_w, true);
+            IntrusiveDequeCursor.field_f.e();
             var9.e(0, 0);
-            jd.field_a = new pb(640, 480);
+            jd.field_a = new Sprite(640, 480);
             jd.field_a.e();
-            ug.field_f.b(pk.field_g + (ug.field_f.field_w >> 1), (ug.field_f.field_x >> 1) + t.field_a, bl.field_d, 4096);
-            ug.field_f = null;
+            IntrusiveDequeCursor.field_f.b(pk.field_g + (IntrusiveDequeCursor.field_f.field_w >> 1), (IntrusiveDequeCursor.field_f.field_x >> 1) + t.field_a, bl.field_d, 4096);
+            IntrusiveDequeCursor.field_f = null;
             jd.field_a.d();
             ti.a(var28, var2Lifetime1, var3Lifetime1);
             ti.b(pk.field_i);
           }
-          if (be.field_f != null &&
+          if (MouseHandler.field_f != null &&
             null != fj.field_f) {
             var29 = ti.field_a;
             var2Lifetime2 = ti.field_i;
             var3Lifetime2 = ti.field_b;
             ti.a(pk.field_i);
-            var16 = new pb(412, 43);
-            var5_ref_String = h.a(wg.field_b, 0, new String[]{be.field_f});
-            be.field_f = null;
+            var16 = new Sprite(412, 43);
+            var5_ref_String = h.a(ClientException.field_b, 0, new String[]{MouseHandler.field_f});
+            MouseHandler.field_f = null;
             var16.e();
             fj.field_f.a(var5_ref_String, 3, 3, -6 + var16.field_v, var16.field_y - 6, 16777215, -1, 0, 1, fj.field_f.field_r + fj.field_f.field_N);
-            oj.a(var16, 1, 0, var16.field_y, 3, 0, var16.field_v, true);
+            IntrusiveDeque.a(var16, 1, 0, var16.field_y, 3, 0, var16.field_v, true);
             ve.field_a.e();
             var16.e(199 - ve.field_a.field_t, 83 - ve.field_a.field_s);
             ti.a(var29, var2Lifetime2, var3Lifetime2);
@@ -863,7 +863,7 @@ final class wj extends fb {
             var7Lifetime2 = 20 + (var6Lifetime2 + eh.field_f.field_w);
             ve.field_a.e();
             fj.field_f.a(li.field_a, var7Lifetime2 - ve.field_a.field_t, fj.field_f.field_r - ve.field_a.field_s + (155 + fj.field_f.field_N), 16777215, -1);
-            oj.a(ve.field_a, 1, -4 + (var7Lifetime2 - ve.field_a.field_t), 50, 3, 155 - ve.field_a.field_s, var4, true);
+            IntrusiveDeque.a(ve.field_a, 1, -4 + (var7Lifetime2 - ve.field_a.field_t), 50, 3, 155 - ve.field_a.field_s, var4, true);
             var8Lifetime1 = -ve.field_a.field_s + (155 - (-fj.field_f.field_r - fj.field_f.field_N + (-3 + eh.field_f.field_x)) / 2);
             eh.field_f.e(-ve.field_a.field_t + var6Lifetime2, var8Lifetime1);
             ti.a(var30, var2Lifetime3, var3Lifetime3);
@@ -884,9 +884,9 @@ final class wj extends fb {
           if (jd.field_a != null) {
             jd.field_a.e(0, 0);
           }
-          if (null != fe.field_a &&
+          if (null != MouseWheelInput.field_a &&
             null != ui.field_F) {
-            fe.field_a.e(231, 390);
+            MouseWheelInput.field_a.e(231, 390);
             var2_ref_pb = dd.field_a;
             if (cd.field_L.field_f == 0) {
               var2_ref_pb = q.field_b;
@@ -902,24 +902,24 @@ final class wj extends fb {
             }
             var3Lifetime4 = stackIn_48_0 + (stackIn_48_1 * ih.b(stackIn_48_2 << stackIn_49_3, 64763) >> 16);
             if (var3Lifetime4 > 0) {
-              fe.field_a.d(230, 389, var3Lifetime4);
-              fe.field_a.d(232, 389, var3Lifetime4);
-              fe.field_a.d(232, 391, var3Lifetime4);
-              fe.field_a.d(230, 391, var3Lifetime4);
+              MouseWheelInput.field_a.d(230, 389, var3Lifetime4);
+              MouseWheelInput.field_a.d(232, 389, var3Lifetime4);
+              MouseWheelInput.field_a.d(232, 391, var3Lifetime4);
+              MouseWheelInput.field_a.d(230, 391, var3Lifetime4);
               var2_ref_pb.d(1, 1, var3Lifetime4);
               var2_ref_pb.d(-1, 1, var3Lifetime4);
               var2_ref_pb.d(1, -1, var3Lifetime4);
               var2_ref_pb.d(-1, -1, var3Lifetime4);
             }
             stackIn_54_0 = (cd.field_L.field_f == 0);
-            tk.a(stackIn_54_0, wc.field_y, vi.field_a, -127);
+            tk.a(stackIn_54_0, wc.field_y, RasterBuffer.field_a, -127);
           }
-          if (null != fe.field_a &&
+          if (null != MouseWheelInput.field_a &&
             null != ui.field_F) {
-            fe.field_a.e(434, 390);
+            MouseWheelInput.field_a.e(434, 390);
             na.field_e.e(0, 0);
             if (1 == cd.field_L.field_f) {
-              ob.a(116, 436, 64, fe.field_a.field_v - 4, 7 * fe.field_a.field_y / 12, 392);
+              ob.a(116, 436, 64, MouseWheelInput.field_a.field_v - 4, 7 * MouseWheelInput.field_a.field_y / 12, 392);
             }
             stackIn_63_0 = (1 == cd.field_L.field_f);
             tk.a(stackIn_63_0, cm.field_a, af.field_l, -108);
@@ -928,8 +928,8 @@ final class wj extends fb {
             var2Lifetime4 = 357 - ea.field_l.field_x / 2;
             ea.field_l.e(-ea.field_l.field_w + 269, var2Lifetime4);
             bk.field_b.e(586, var2Lifetime4);
-            if (var2Lifetime4 < eb.field_a &&
-              eb.field_a < ea.field_l.field_y + var2Lifetime4) {
+            if (var2Lifetime4 < KeyHandler.field_a &&
+              KeyHandler.field_a < ea.field_l.field_y + var2Lifetime4) {
               var3Lifetime5 = 40 + (ih.b(gj.field_v << 4, 64763) * 40 >> 16);
               if (var3Lifetime5 <= 0) {
                 kc.a(36);

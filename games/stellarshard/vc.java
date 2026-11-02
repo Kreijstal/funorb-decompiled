@@ -25,7 +25,7 @@ final class vc {
         field_f = null;
     }
 
-    final static pb a(pf param0, int param1, int param2, int param3) {
+    final static Sprite a(pf param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -85,7 +85,7 @@ final class vc {
           int var1_int = 0;
           IOException var1 = null;
           int var2 = 0;
-          ka var3 = null;
+          PacketBuffer var3 = null;
           if (4 <= od.field_v.field_i) {
             if (od.field_v.field_g == -1) {
               return 3;
@@ -110,8 +110,8 @@ final class vc {
               }
             }
             if (kc.field_b == 2) {
-              k.field_b = new fh((java.net.Socket) (dl.field_A.field_b), fa.field_p);
-              var3 = new ka(13);
+              k.field_b = new BufferedSocket((java.net.Socket) (dl.field_A.field_b), fa.field_p);
+              var3 = new PacketBuffer(13);
               bk.a(fd.field_nb, false, sk.field_b, var3, ld.field_C);
               var3.a(false, 15);
               var3.b(0, n.field_d);

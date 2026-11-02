@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bi extends ah {
+class bi extends DualLinkNode {
     static int field_r;
     static int[][] field_s;
     static String field_t;

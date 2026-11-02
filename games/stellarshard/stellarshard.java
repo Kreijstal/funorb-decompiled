@@ -11,10 +11,10 @@ public final class stellarshard extends rb implements cf {
     private int field_R;
     private int field_J;
     static th field_E;
-    private pb field_F;
+    private Sprite field_F;
     private int[] field_S;
     static int[] field_U;
-    private pb field_G;
+    private Sprite field_G;
     private int field_I;
     private int field_Q;
     static String[] field_L;
@@ -96,7 +96,7 @@ public final class stellarshard extends rb implements cf {
             tf.field_a.a(0)) {
             oa.field_D = true;
           }
-          boolean decompiledSharedTail0 = !(!ah.a(-1));
+          boolean decompiledSharedTail0 = !(!DualLinkNode.a(-1));
           if (!decompiledSharedTail0) {
             this.c(127, te.field_c);
             oc.field_d = false;
@@ -117,11 +117,11 @@ public final class stellarshard extends rb implements cf {
               tl.field_c = 5;
             }
           }
-          s.field_i = false;
+          DualLinkDequeIterator.field_i = false;
           ll.a(16);
           nc.field_H = 0;
           var2_int = -73 % ((param0 - 31) / 34);
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[19], 100, pk.field_h * 2);
           }
           return;
@@ -140,7 +140,7 @@ public final class stellarshard extends rb implements cf {
           if (pk.a(-12663, 0) &&
             0.004 > Math.random()) {
             var2_int = (int)(9.0 * Math.random()) + 42;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[var2_int], 50 + (int)(Math.random() * 50.0), 2 * pk.field_h);
             }
           }
@@ -227,7 +227,7 @@ public final class stellarshard extends rb implements cf {
           var16 = sk.field_a[10];
           var18 = sk.field_a[11];
           var20 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             stackIn_6_0 = -7;
             if (stackIn_6_0 < ~var20) {
               var21 = ag.field_b[var20];
@@ -254,7 +254,7 @@ public final class stellarshard extends rb implements cf {
                 var27++;
               }
               var27Lifetime1 = 0;
-              L8: while (true) {
+              scanLoop2: while (true) {
                 stackIn_16_0 = ~var27Lifetime1;
                 stackIn_16_1 = -5;
                 if (stackIn_16_0 > stackIn_16_1) {
@@ -287,12 +287,12 @@ public final class stellarshard extends rb implements cf {
                     var28++;
                   }
                   var27Lifetime1++;
-                  continue L8;
+                  continue scanLoop2;
                 }
                 break;
               }
               var20++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -319,22 +319,22 @@ public final class stellarshard extends rb implements cf {
           if (param0 < 21) {
             return;
           }
-          ac.field_h.a();
-          ka.field_m.a();
+          GameApplet.field_h.a();
+          PacketBuffer.field_m.a();
           stackIn_6_1 = 119;
-          stackIn_7_2 = (s.field_e != null);
+          stackIn_7_2 = (DualLinkDequeIterator.field_e != null);
           this.b(stackIn_6_1, stackIn_7_2);
           if (qd.field_h) {
             this.o(122);
             qd.field_h = false;
           }
-          if (s.field_e != null &&
-            s.field_e.field_c) {
+          if (DualLinkDequeIterator.field_e != null &&
+            DualLinkDequeIterator.field_e.field_c) {
             ke.a(4);
-            nd.a(-26621, s.field_e);
-            s.field_e.a(ic.field_d, -57);
+            nd.a(-26621, DualLinkDequeIterator.field_e);
+            DualLinkDequeIterator.field_e.a(ic.field_d, -57);
             qd.field_j.requestFocus();
-            s.field_e = null;
+            DualLinkDequeIterator.field_e = null;
           }
           if (ee.b(122)) {
             this.k(-11);
@@ -355,16 +355,16 @@ public final class stellarshard extends rb implements cf {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (hf.field_f) {
-            if ((be.field_g != null) &&
-              (decompiledFrameRemainder0 = !(!be.field_g.field_n))) {
-              tl.field_a = tl.field_a & ~be.field_g.field_m[0];
-              sd.field_d = sd.field_d | be.field_g.field_m[0];
-              be.field_g = null;
+            if ((MouseHandler.field_g != null) &&
+              (decompiledFrameRemainder0 = !(!MouseHandler.field_g.field_n))) {
+              tl.field_a = tl.field_a & ~MouseHandler.field_g.field_m[0];
+              sd.field_d = sd.field_d | MouseHandler.field_g.field_m[0];
+              MouseHandler.field_g = null;
               if (na.field_j != null &&
                 tl.field_a == 0) {
                 oc.field_d = false;
               }
-              hi.b((byte) 109);
+              DelegatingCanvas.b((byte) 109);
               var2 = (kl) (ue.field_c.b(-91));
               while (var2 != null) {
                 tc.a(var2, 4, false);
@@ -380,28 +380,28 @@ public final class stellarshard extends rb implements cf {
             }
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0)) {
-              if ((null != gg.field_f) &&
-                (decompiledFrameRemainder0 = !(!gg.field_f.field_m))) {
-                if (of.field_A < gg.field_f.field_s[0]) {
-                  of.field_A = gg.field_f.field_s[0];
+              if ((null != IntrusiveNode.field_f) &&
+                (decompiledFrameRemainder0 = !(!IntrusiveNode.field_f.field_m))) {
+                if (of.field_A < IntrusiveNode.field_f.field_s[0]) {
+                  of.field_A = IntrusiveNode.field_f.field_s[0];
                 }
-                gg.field_f = null;
+                IntrusiveNode.field_f = null;
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (!fd.d((byte) -21)) {
                   if (wk.a(113)) {
                     stackIn_81_1 = 0;
-                    stackIn_82_2 = (null != s.field_e);
+                    stackIn_82_2 = (null != DualLinkDequeIterator.field_e);
                     var2_int = oa.a((rb) (this), stackIn_81_1, stackIn_82_2);
                     switch (var2_int) {
                       case 1:
-                        if (null == s.field_e) {
+                        if (null == DualLinkDequeIterator.field_e) {
                           break;
                         }
-                        nd.a(-26621, s.field_e);
-                        s.field_e.a(ic.field_d, -71);
-                        s.field_e = null;
+                        nd.a(-26621, DualLinkDequeIterator.field_e);
+                        DualLinkDequeIterator.field_e.a(ic.field_d, -71);
+                        DualLinkDequeIterator.field_e = null;
                         qd.field_j.requestFocus();
                       default:
                         break;
@@ -411,10 +411,10 @@ public final class stellarshard extends rb implements cf {
                           break;
                         }
                       case 2:
-                        if (null != s.field_e) {
-                          nd.a(-26621, s.field_e);
-                          s.field_e.a(ic.field_d, -15);
-                          s.field_e = null;
+                        if (null != DualLinkDequeIterator.field_e) {
+                          nd.a(-26621, DualLinkDequeIterator.field_e);
+                          DualLinkDequeIterator.field_e.a(ic.field_d, -15);
+                          DualLinkDequeIterator.field_e = null;
                           qd.field_j.requestFocus();
                         }
                         df.a(false, hf.a((byte) -84));
@@ -430,10 +430,10 @@ public final class stellarshard extends rb implements cf {
                 if (decompiledFrameRemainder0) {
                   var2_int = vd.a((byte) -61);
                   if (var2_int == 2 &&
-                    s.field_e != null) {
-                    nd.a(-26621, s.field_e);
-                    s.field_e.a(ic.field_d, -15);
-                    s.field_e = null;
+                    DualLinkDequeIterator.field_e != null) {
+                    nd.a(-26621, DualLinkDequeIterator.field_e);
+                    DualLinkDequeIterator.field_e.a(ic.field_d, -15);
+                    DualLinkDequeIterator.field_e = null;
                     qd.field_j.requestFocus();
                   }
                   if (var2_int == 3) {
@@ -453,7 +453,7 @@ public final class stellarshard extends rb implements cf {
             this.a(true, (byte) -111);
           }
           do {
-            if (!fh.a((byte) 73, i.field_e)) {
+            if (!BufferedSocket.a((byte) 73, i.field_e)) {
               ue.a((byte) 85, 0);
               break;
             }
@@ -466,7 +466,7 @@ public final class stellarshard extends rb implements cf {
           if (2 != var2_int) {
             return;
           }
-          jj.a(true, 0, 8, 240, 320, 8, 0, (pb[]) null, (pb[]) null, l.field_f.field_N, 0, qj.field_a.field_N, qj.field_a, l.field_f);
+          jj.a(true, 0, 8, 240, 320, 8, 0, (Sprite[]) null, (Sprite[]) null, l.field_f.field_N, 0, qj.field_a.field_N, qj.field_a, l.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -485,9 +485,9 @@ public final class stellarshard extends rb implements cf {
           if (bi.field_u == null) {
             if (param1 > 0 &&
               !e.field_c &&
-              !ah.a(-1)) {
+              !DualLinkNode.a(-1)) {
               ue.field_a = param1;
-              bi.field_u = bb.a(5, gg.field_i, cl.field_a, si.field_gb, 3, new int[]{param1}, 65530, 0, qb.field_k);
+              bi.field_u = bb.a(5, IntrusiveNode.field_i, cl.field_a, si.field_gb, 3, new int[]{param1}, 65530, 0, qb.field_k);
               if (field_B == 0) {
                 return;
               }
@@ -544,7 +544,7 @@ public final class stellarshard extends rb implements cf {
               this.field_H.a(sg.field_a, 19);
               sg.field_a.a(0.0, 0.0, 1.0, (byte) -20, 0.5);
               this.field_H.a(sg.field_a, 103);
-              ea.field_m = new pb(80, 160);
+              ea.field_m = new Sprite(80, 160);
               ea.field_m.e();
               var5 = 0;
               break;
@@ -568,7 +568,7 @@ public final class stellarshard extends rb implements cf {
           do {
             if (!(var6_float <= 40.0f)) {
               pd.field_h.a((byte) -107);
-              ei.field_D = new pb[12];
+              ei.field_D = new Sprite[12];
               fk.field_k = new int[48];
               break;
             }
@@ -577,17 +577,17 @@ public final class stellarshard extends rb implements cf {
             var6_float = (float)((double)var6_float + 0.1);
           } while (var12 == 0);
           var5 = 0;
-          L9: while (true) {
+          scanLoop1: while (true) {
             if (var5 < 12) {
               fk.field_k[0 + var5 * 4] = (int)(640.0 * Math.random()) << 4;
               fk.field_k[var5 * 4 + 1] = (int)(Math.random() * 480.0) << 4;
               fk.field_k[2 + var5 * 4] = (int)(33.0 * Math.random() - 16.0);
               fk.field_k[3 + 4 * var5] = (int)(33.0 * Math.random() - 16.0);
-              ei.field_D[var5] = new pb(256, 256);
+              ei.field_D[var5] = new Sprite(256, 256);
               ei.field_D[var5].e();
               stackIn_33_0 = 0;
               if (var12 != 0) {
-                break L9;
+                break scanLoop1;
               }
               var6 = stackIn_33_0;
               while (var6 < 4) {
@@ -598,9 +598,9 @@ public final class stellarshard extends rb implements cf {
                 var6++;
               }
               var5++;
-              continue L9;
+              continue scanLoop1;
             }
-            lc.field_k = new pb(640, 480);
+            lc.field_k = new Sprite(640, 480);
             lc.field_k.e();
             stackIn_33_0 = 0;
             break;
@@ -652,14 +652,14 @@ public final class stellarshard extends rb implements cf {
               stackIn_62_1 = 0;
             }
             ba.a(stackIn_62_0, stackIn_62_1 != 0, 10);
-            ac.field_h = ba.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
-            ka.field_m = ba.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
+            GameApplet.field_h = ba.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
+            PacketBuffer.field_m = ba.a(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
             ll.field_c = new hl();
             nj.field_o = new hl();
-            ac.field_h.a(ll.field_c);
-            ka.field_m.a(nj.field_o);
-            fe.field_e = param0;
-            s.field_i = false;
+            GameApplet.field_h.a(ll.field_c);
+            PacketBuffer.field_m.a(nj.field_o);
+            MouseWheelInput.field_e = param0;
+            DualLinkDequeIterator.field_i = false;
             wh.field_c = 0;
             ke.field_a = 16777215;
             kg.field_D = 255;
@@ -687,7 +687,7 @@ public final class stellarshard extends rb implements cf {
           ue.field_a = 0;
           bi.field_u = null;
           cl.field_a = cl.field_a + te.field_c;
-          s.field_i = true;
+          DualLinkDequeIterator.field_i = true;
           if (qi.field_a > 10) {
             e.field_e = 0;
           }
@@ -854,11 +854,11 @@ public final class stellarshard extends rb implements cf {
         var15 = field_B;
         try {
           if (ni.field_e != this.field_Q ||
-            eb.field_a != this.field_O ||
+            KeyHandler.field_a != this.field_O ||
             0 != gh.field_c) {
             this.field_Q = ni.field_e;
             v.field_e = true;
-            this.field_O = eb.field_a;
+            this.field_O = KeyHandler.field_a;
             ld.field_F = -1;
           }
           if (si.field_jb[98]) {
@@ -885,7 +885,7 @@ public final class stellarshard extends rb implements cf {
           }
           cl.field_a = cl.field_a + 1;
           if (0 != gh.field_c) {
-            qb.field_k = qb.field_k - gg.field_i;
+            qb.field_k = qb.field_k - IntrusiveNode.field_i;
             si.field_gb = si.field_gb + 1;
             hk.field_p = hk.field_p + lh.field_d;
             ed.field_b = ed.field_b + 1;
@@ -916,7 +916,7 @@ public final class stellarshard extends rb implements cf {
             this.field_R = this.field_R - 1;
           }
           if (null != na.field_j) {
-            if (!s.field_i) {
+            if (!DualLinkDequeIterator.field_i) {
               sg.field_a.a(1.0, 0.0, 0.0, (byte) -20, 0.001);
               this.field_H.a(sg.field_a, -127);
               sg.field_a.a(0.0, 0.0, 1.0, (byte) -20, 0.0005);
@@ -1120,7 +1120,7 @@ public final class stellarshard extends rb implements cf {
             boolean decompiledFrameCompleted13 = true;
             if (stackIn_205_0 == stackIn_205_1) {
               var2_int = 8;
-              if (!ah.a(-1) &&
+              if (!DualLinkNode.a(-1) &&
                 !oc.field_d) {
                 var2_int = 9;
               }
@@ -1152,7 +1152,7 @@ public final class stellarshard extends rb implements cf {
             }
           }
           if (null != na.field_j &&
-            s.field_i) {
+            DualLinkDequeIterator.field_i) {
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (!qh.c(103)))) {
               stackIn_270_0 = gi.field_f;
@@ -1203,7 +1203,7 @@ public final class stellarshard extends rb implements cf {
             if (jg.field_pb <= 0) {
               wh.field_c = 1;
               jg.field_pb = 0;
-              if (fe.field_e) {
+              if (MouseWheelInput.field_e) {
                 ll.field_c.a(sb.field_e[36], 100, pk.field_h * 2);
               }
             }
@@ -1225,8 +1225,8 @@ public final class stellarshard extends rb implements cf {
           if (wh.field_c == 3) {
             jg.field_pb = jg.field_pb + 1;
             if (1 == jg.field_pb &&
-              fe.field_e &&
-              !s.field_i) {
+              MouseWheelInput.field_e &&
+              !DualLinkDequeIterator.field_i) {
               ll.field_c.a(sb.field_e[37], 100, pk.field_h * 2);
             }
             if (jg.field_pb > 250) {
@@ -1242,7 +1242,7 @@ public final class stellarshard extends rb implements cf {
             }
           }
           al.field_c = qi.field_a % 7 * 6912 + qi.field_a % 10 * 19 + 851968 * (qi.field_a % 14);
-          if (!s.field_i) {
+          if (!DualLinkDequeIterator.field_i) {
             al.field_c = 858899;
           }
           if (nc.field_H == 1) {
@@ -1282,7 +1282,7 @@ public final class stellarshard extends rb implements cf {
           if (null == a.field_h[0] ||
             a.field_h[0].field_m != -1) {
             stackIn_368_0 = 0;
-            if (s.field_i) {
+            if (DualLinkDequeIterator.field_i) {
               stackIn_369_1 = 0;
             } else {
               stackIn_369_1 = 1;
@@ -1300,7 +1300,7 @@ public final class stellarshard extends rb implements cf {
           boolean decompiledFrameRemainder20 = true;
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameCompleted6 = true;
-          if (s.field_i) {
+          if (DualLinkDequeIterator.field_i) {
             boolean decompiledFrameRemainder16 = true;
             boolean decompiledFrameCompleted10 = true;
             boolean decompiledFrameRemainder15 = true;
@@ -1315,7 +1315,7 @@ public final class stellarshard extends rb implements cf {
               dupTemp$3.field_k = dupTemp$3.field_k + 0.05 * Math.cos(2.0 * ((double)a.field_h[0].field_h * 3.141592653589793) / 256.0);
               dupTemp$4 = a.field_h[0];
               dupTemp$4.field_d = dupTemp$4.field_d + 0.05 * Math.sin(2.0 * (3.141592653589793 * (double)a.field_h[0].field_h) / 256.0);
-              if (fe.field_e &&
+              if (MouseWheelInput.field_e &&
                 og.field_a <= 0) {
                 ll.field_c.a(sb.field_e[0], 100, pk.field_h / 4);
                 og.field_a = 5;
@@ -1390,7 +1390,7 @@ public final class stellarshard extends rb implements cf {
                 dupTemp$7.field_k = dupTemp$7.field_k - 0.1 * Math.cos(3.141592653589793 * (double)a.field_h[0].field_h * 2.0 / 256.0);
                 dupTemp$8 = a.field_h[0];
                 dupTemp$8.field_d = dupTemp$8.field_d - 0.1 * Math.sin((double)a.field_h[0].field_h * 3.141592653589793 * 2.0 / 256.0);
-                if (fe.field_e &&
+                if (MouseWheelInput.field_e &&
                   og.field_a <= 0) {
                   ll.field_c.a(sb.field_e[35], 100, pk.field_h / 2);
                   og.field_a = 7;
@@ -1491,7 +1491,7 @@ public final class stellarshard extends rb implements cf {
                   og.field_a = 10;
                   stackIn_484_0 = gj.field_r;
                   stackIn_484_1 = 10;
-                  if (fe.field_e) {
+                  if (MouseWheelInput.field_e) {
                     stackIn_485_2 = pk.field_h / 2;
                   } else {
                     stackIn_485_2 = 0;
@@ -1503,7 +1503,7 @@ public final class stellarshard extends rb implements cf {
                     ll.field_c.a(gj.field_r);
                     stackIn_491_0 = gj.field_r;
                     stackIn_491_1 = 10;
-                    if (fe.field_e) {
+                    if (MouseWheelInput.field_e) {
                       stackIn_492_2 = pk.field_h / 2;
                     } else {
                       stackIn_492_2 = 0;
@@ -1517,7 +1517,7 @@ public final class stellarshard extends rb implements cf {
                 ll.field_c.a(gj.field_r);
                 stackIn_491_0 = gj.field_r;
                 stackIn_491_1 = 10;
-                if (fe.field_e) {
+                if (MouseWheelInput.field_e) {
                   stackIn_492_2 = pk.field_h / 2;
                 } else {
                   stackIn_492_2 = 0;
@@ -1587,7 +1587,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (decompiledFrameRemainder20) {
               if (0 < a.field_h[0].field_g) {
-                L128: {
+                regionExit1: {
                   boolean decompiledFrameRemainder14 = true;
                   boolean decompiledFrameRemainder13 = true;
                   boolean decompiledFrameRemainder12 = true;
@@ -1615,7 +1615,7 @@ public final class stellarshard extends rb implements cf {
                     var15 != 0)) &&
                     (decompiledFrameRemainder13 = (var2_int != 9))) {
                     if (var2_int != 10) {
-                      break L128;
+                      break regionExit1;
                     }
                     decompiledFrameRemainder14 = (var15 != 0);
                   }
@@ -1630,15 +1630,15 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder6) &&
                     (decompiledFrameRemainder5) &&
                     (decompiledFrameRemainder4)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (a.field_h[0].field_i > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[27], 100, 2 * pk.field_h);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
@@ -1651,15 +1651,15 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder7) &&
                     (decompiledFrameRemainder6) &&
                     (decompiledFrameRemainder5)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (0 < a.field_h[0].field_i) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[38], 100, pk.field_h * 2);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
@@ -1671,15 +1671,15 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder8) &&
                     (decompiledFrameRemainder7) &&
                     (decompiledFrameRemainder6)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (a.field_h[0].field_i > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[33], 100, pk.field_h * 2);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
@@ -1690,15 +1690,15 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder9) &&
                     (decompiledFrameRemainder8) &&
                     (decompiledFrameRemainder7)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (a.field_h[0].field_i > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[1], 100, pk.field_h * 2);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
@@ -1708,15 +1708,15 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder10) &&
                     (decompiledFrameRemainder9) &&
                     (decompiledFrameRemainder8)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (a.field_h[0].field_i > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[21], 100, 2 * pk.field_h);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
@@ -1725,16 +1725,16 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder11) &&
                     (decompiledFrameRemainder10) &&
                     (decompiledFrameRemainder9)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (0 < af.field_o) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[24], 100, 2 * pk.field_h);
                     af.field_o = 3;
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
@@ -1742,74 +1742,74 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameRemainder12) &&
                     (decompiledFrameRemainder11) &&
                     (decompiledFrameRemainder10)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (0 < a.field_h[0].field_i) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[39], 100, pk.field_h * 2);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
                     (decompiledFrameRemainder13) &&
                     (decompiledFrameRemainder12) &&
                     (decompiledFrameRemainder11)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (a.field_h[0].field_i > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[22], 100, 2 * pk.field_h);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
                     (decompiledFrameRemainder13) &&
                     (decompiledFrameRemainder12)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (a.field_h[0].field_i > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[34], 100, 2 * pk.field_h);
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameRemainder14) &&
                     (decompiledFrameRemainder13)) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (af.field_o > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[20], 100, pk.field_h * 2);
                     af.field_o = (int)(Math.random() * 10.0) + 15;
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
                   if (decompiledFrameRemainder14) {
-                    if (!fe.field_e) {
-                      break L128;
+                    if (!MouseWheelInput.field_e) {
+                      break regionExit1;
                     }
                     if (af.field_o > 0) {
-                      break L128;
+                      break regionExit1;
                     }
                     ll.field_c.a(sb.field_e[7], 100, 2 * pk.field_h);
                     af.field_o = 5;
                     if (var15 == 0) {
-                      break L128;
+                      break regionExit1;
                     }
                   }
-                  if (fe.field_e &&
+                  if (MouseWheelInput.field_e &&
                     a.field_h[0].field_i == -1) {
                     ll.field_c.a(sb.field_e[25], 100, pk.field_h * 2);
                   }
@@ -2319,7 +2319,7 @@ public final class stellarshard extends rb implements cf {
           if ((decompiledFrameCompleted5) &&
             (decompiledFrameCompleted4) &&
             (decompiledFrameCompleted3)) {
-            stackIn_981_0Lifetime1 = s.field_i ? 1 : 0;
+            stackIn_981_0Lifetime1 = DualLinkDequeIterator.field_i ? 1 : 0;
             decompiledFrameRemainder17 = (stackIn_981_0Lifetime1 != 0);
             if ((decompiledFrameRemainder17) &&
               (decompiledFrameRemainder17 = (na.field_j == null))) {
@@ -2375,7 +2375,7 @@ public final class stellarshard extends rb implements cf {
           var3 = 0;
           var4 = 0;
           var5 = 0;
-          L230: while (true) {
+          scanLoop2: while (true) {
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameRemainder19 = true;
             boolean decompiledFrameRemainder1 = true;
@@ -2423,7 +2423,7 @@ public final class stellarshard extends rb implements cf {
                 continue;
               }
             } else {
-              decompiledFrameRemainder2 = !(!s.field_i);
+              decompiledFrameRemainder2 = !(!DualLinkDequeIterator.field_i);
               if (((decompiledFrameRemainder2) &&
                 (decompiledFrameRemainder2 = !(!pk.a(-12663, 0)))) &&
                 (decompiledFrameRemainder1 = (null != a.field_h[0])) &&
@@ -2452,7 +2452,7 @@ public final class stellarshard extends rb implements cf {
                   pk.field_c = 25 + var6 * 25;
                   var7 = 160 - var6 * 32;
                   if (var7 > 0 &&
-                    fe.field_e) {
+                    MouseWheelInput.field_e) {
                     ll.field_c.a(sb.field_e[46], var7, pk.field_h * 6);
                   }
                 }
@@ -2464,7 +2464,7 @@ public final class stellarshard extends rb implements cf {
               while (var9 < 1000) {
                 var10 = a.field_h[var9];
                 if (var15 != 0) {
-                  break L230;
+                  break scanLoop2;
                 }
                 if (var10 != null &&
                   var10.field_m != -1 &&
@@ -2489,7 +2489,7 @@ public final class stellarshard extends rb implements cf {
                 }
                 ag.field_a = ag.field_a + var9Lifetime1;
                 if (!(256 >= ag.field_a)) {
-                  if (fe.field_e) {
+                  if (MouseWheelInput.field_e) {
                     ll.field_c.a(sb.field_e[13], var9Lifetime1, pk.field_h * 64 / 50);
                   }
                   ag.field_a = 0;
@@ -2506,8 +2506,8 @@ public final class stellarshard extends rb implements cf {
             break;
           }
           var6 = 0;
-          L255: while (true) {
-            L256: {
+          scanLoop3: while (true) {
+            regionExit4: {
               boolean decompiledFrameRemainder21 = true;
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder18 = true;
@@ -2570,10 +2570,10 @@ public final class stellarshard extends rb implements cf {
                   do {
                     var5++;
                     if (var15 != 0) {
-                      break L256;
+                      break regionExit4;
                     }
                     if (var5 >= 3000) {
-                      break L256;
+                      break regionExit4;
                     }
                     stackIn_1258_0 = null;
                     stackIn_1217_0 = stackIn_1258_0;
@@ -2593,7 +2593,7 @@ public final class stellarshard extends rb implements cf {
                       ((vl) (Object) stackIn_1220_0).a(var3, var2_int, param0);
                     }
                     var5++;
-                    break L256;
+                    break regionExit4;
                   }
                 }
                 if (stackIn_1217_0 != stackIn_1217_1) {
@@ -2610,7 +2610,7 @@ public final class stellarshard extends rb implements cf {
               while (var5 < 1000) {
                 stackIn_1258_0 = null;
                 if (var15 != 0) {
-                  break L255;
+                  break scanLoop3;
                 }
                 if (stackIn_1258_0 != hf.field_e[var5]) {
                   hf.field_e[var5] = hf.field_e[var5].a(0);
@@ -2622,7 +2622,7 @@ public final class stellarshard extends rb implements cf {
               while (var5 < 1000) {
                 stackIn_1258_0 = null;
                 if (var15 != 0) {
-                  break L255;
+                  break scanLoop3;
                 }
                 if (stackIn_1258_0 != a.field_h[var5]) {
                   a.field_h[var5].a((byte) -110, var2_int, var3);
@@ -2636,7 +2636,7 @@ public final class stellarshard extends rb implements cf {
               while (var5 < 3000) {
                 stackIn_1258_0 = null;
                 if (var15 != 0) {
-                  break L255;
+                  break scanLoop3;
                 }
                 stackIn_1217_0 = stackIn_1258_0;
                 stackIn_1217_1 = wk.field_b[var5];
@@ -2649,7 +2649,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (qi.field_a >= 10 &&
               mk.field_k <= 0 &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               nc.field_A = nc.field_A - 1;
               if (nc.field_A <= 0) {
                 a.field_h[0] = null;
@@ -2673,8 +2673,8 @@ public final class stellarshard extends rb implements cf {
           }
           boolean decompiledFrameRemainder0 = true;
           if (stackIn_1258_0 == na.field_j ||
-            s.field_i) {
-            if (!s.field_i) {
+            DualLinkDequeIterator.field_i) {
+            if (!DualLinkDequeIterator.field_i) {
               if (wh.field_c <= 1 &&
                 ni.field_a) {
                 return;
@@ -2801,7 +2801,7 @@ public final class stellarshard extends rb implements cf {
           if (param3) {
             var4_int++;
           }
-          stackIn_13_0 = mh.field_h[var4_int];
+          stackIn_13_0 = ImageProducerRasterBuffer.field_h[var4_int];
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2814,20 +2814,20 @@ public final class stellarshard extends rb implements cf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != s.field_e) {
-            nd.a(-26621, s.field_e);
-            s.field_e.a(ic.field_d, -101);
-            s.field_e = null;
+          if (null != DualLinkDequeIterator.field_e) {
+            nd.a(-26621, DualLinkDequeIterator.field_e);
+            DualLinkDequeIterator.field_e.a(ic.field_d, -101);
+            DualLinkDequeIterator.field_e = null;
             qd.field_j.requestFocus();
           }
-          if (null != ac.field_h) {
-            ac.field_h.e();
+          if (null != GameApplet.field_h) {
+            GameApplet.field_h.e();
           }
           if (param0 <= 47) {
             return;
           }
-          if (null != ka.field_m) {
-            ka.field_m.e();
+          if (null != PacketBuffer.field_m) {
+            PacketBuffer.field_m.e();
           }
           t.a(false);
           return;
@@ -2847,19 +2847,19 @@ public final class stellarshard extends rb implements cf {
         try {
           stellarshard.r(50);
           ni.a(-78);
-          eb.a(-1);
+          KeyHandler.a(-1);
           ob.a(30063);
           rl.a((byte) -84);
           rb.m(-12);
-          wg.a((byte) -107);
-          ac.b(-53);
-          be.a((byte) -20);
-          fe.a(31147);
+          ClientException.a((byte) -107);
+          GameApplet.b(-53);
+          MouseHandler.a((byte) -20);
+          MouseWheelInput.a(31147);
           ti.a();
           pf.a(30300);
           t.a(param0 ^ 6079);
           wi.a((byte) -93);
-          ka.a((byte) -14);
+          PacketBuffer.a((byte) -14);
           ih.a(38858);
           te.a((byte) -84);
           hj.a(121);
@@ -2874,28 +2874,28 @@ public final class stellarshard extends rb implements cf {
           bl.a(false);
           sf.a(false);
           ci.c(-1);
-          vi.b((byte) 82);
+          RasterBuffer.b((byte) 82);
           fj.a((byte) 59);
           va.a((byte) 88);
           jb.a(0);
           vl.a(-118);
           mb.a(false);
-          oj.a(true);
+          IntrusiveDeque.a(true);
           jj.a(param0 + 19045);
           d.e();
           ba.d();
           ag.a((byte) 126);
-          gg.b((byte) -127);
+          IntrusiveNode.b((byte) -127);
           fb.c(-2918);
           rk.a(true);
           vh.b((byte) 48);
-          fh.a((byte) 89);
+          BufferedSocket.a((byte) 89);
           jf.a(-15917);
           ha.i(param0 + 244);
           pk.a((byte) 96);
           cc.b();
-          ie.e(-28692);
-          ah.a((byte) -31);
+          SpriteState.e(-28692);
+          DualLinkNode.a((byte) -31);
           ra.b(-14755);
           qf.a(-15967);
           gf.a(-118);
@@ -2969,7 +2969,7 @@ public final class stellarshard extends rb implements cf {
           aa.a((byte) 77);
           si.f(-16412);
           sb.a((byte) 105);
-          hi.a((byte) -92);
+          DelegatingCanvas.a((byte) -92);
           e.a(186);
           vj.a((byte) 104);
           i.b(64);
@@ -2987,7 +2987,7 @@ public final class stellarshard extends rb implements cf {
           dg.h(32);
           ui.e((byte) -29);
           g.d((byte) 109);
-          ug.c(param0 ^ -72);
+          IntrusiveDequeCursor.c(param0 ^ -72);
           q.a((byte) 84);
           oc.a(0);
           ch.a((byte) -56);
@@ -2999,9 +2999,9 @@ public final class stellarshard extends rb implements cf {
           dd.b(-26269);
           pe.a(param0 ^ -126);
           ce.a((byte) 125);
-          nl.a((byte) 64);
+          SocketConnector.a((byte) 64);
           rc.d(23805);
-          mh.a(2188);
+          ImageProducerRasterBuffer.a(2188);
           sc.b();
           gh.a((byte) 125);
           we.b((byte) 116);
@@ -3027,14 +3027,14 @@ public final class stellarshard extends rb implements cf {
           dl.i(80);
           of.d((byte) -120);
           li.a((byte) 89);
-          ai.a(-1);
-          bg.a((byte) -117);
+          IterableNodeHashTable.a(-1);
+          DualLinkDeque.a((byte) -117);
           gj.d((byte) -66);
           ld.g(param0 + 13566);
-          bc.b((byte) 55);
+          ProxySocketConnector.b((byte) 55);
           td.b((byte) -17);
-          ga.a((byte) 3);
-          s.a(false);
+          NodeHashTableIterator.a((byte) 3);
+          DualLinkDequeIterator.a(false);
           u.a(540);
           b.b(true);
           ll.b(512);
@@ -3089,9 +3089,9 @@ public final class stellarshard extends rb implements cf {
           throw ma.a((Throwable) ((Object) var2), "stellarshard.IA(" + param0 + ')');
         }
         if (var3 != 0) {
-          var4 = ac.field_m;
+          var4 = GameApplet.field_m;
           var4++;
-          ac.field_m = var4;
+          GameApplet.field_m = var4;
         }
     }
 
@@ -3106,17 +3106,17 @@ public final class stellarshard extends rb implements cf {
         int stackIn_275_0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
-        pb[] var4 = null;
+        Sprite[] var4 = null;
         int var4_int = 0;
         ek[] var4_array = null;
-        pb var4_ref = null;
+        Sprite var4_ref = null;
         gk var4_ref2 = null;
         int var5 = 0;
         int[] var5_ref_int__ = null;
         int var6_int = 0;
         Object var6 = null;
         pa var7 = null;
-        pb var7_ref = null;
+        Sprite var7_ref = null;
         int var8_int = 0;
         int[] var8 = null;
         int var9 = 0;
@@ -3139,21 +3139,21 @@ public final class stellarshard extends rb implements cf {
               wk.field_a.c((byte) -111)) {
               if (mf.field_b.a((byte) -36) &&
                 mf.field_b.c((byte) -111)) {
-                if (ka.field_n.a((byte) -36) &&
-                  ka.field_n.c((byte) -111)) {
+                if (PacketBuffer.field_n.a((byte) -36) &&
+                  PacketBuffer.field_n.c((byte) -111)) {
                   if (bh.field_a.a((byte) -36) &&
                     bh.field_a.c((byte) -111)) {
                     if (fc.field_a.a((byte) -36) &&
                       fc.field_a.a("basic", (byte) -109)) {
-                      if (be.field_d.a((byte) -36) &&
-                        be.field_d.c((byte) -111)) {
+                      if (MouseHandler.field_d.a((byte) -36) &&
+                        MouseHandler.field_d.c((byte) -111)) {
                         if (jf.field_m.a((byte) -36) &&
                           jf.field_m.c((byte) -111)) {
                           rd.a((byte) -72, 70.0f, ve.field_b);
                           if (!param0) {
                             return;
                           }
-                          hi.b((byte) 109);
+                          DelegatingCanvas.b((byte) 109);
                           this.d(-20880);
                           var3 = new qh(22050, ba.field_m);
                           if (!pk.a(-12663, 0)) {
@@ -3231,21 +3231,21 @@ public final class stellarshard extends rb implements cf {
                           wk.field_a = null;
                           mf.field_b = null;
                           if (pk.a(-12663, 0)) {
-                            oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_Halloween", ka.field_n, "");
+                            oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_Halloween", PacketBuffer.field_n, "");
                             if (var11 != 0) {
-                              oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_ingame", ka.field_n, "");
+                              oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
                             }
                           } else {
-                            oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_ingame", ka.field_n, "");
+                            oe.field_a = ij.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
                           }
-                          ka.field_n = null;
+                          PacketBuffer.field_n = null;
                           rg.g(-33);
                           return;
                         }
                         rd.a((byte) -115, 60.0f, ak.a("", he.field_o, jf.field_m, (byte) 51, lj.field_B));
                         return;
                       }
-                      rd.a((byte) -105, 50.0f, ak.a("", mb.field_c, be.field_d, (byte) 51, le.field_l));
+                      rd.a((byte) -105, 50.0f, ak.a("", mb.field_c, MouseHandler.field_d, (byte) 51, le.field_l));
                       return;
                     }
                     rd.a((byte) -96, 40.0f, ak.a("basic", lg.field_e, fc.field_a, (byte) 51, am.field_e));
@@ -3254,7 +3254,7 @@ public final class stellarshard extends rb implements cf {
                   rd.a((byte) -89, 30.0f, ak.a("", lg.field_e, bh.field_a, (byte) 51, am.field_e));
                   return;
                 }
-                rd.a((byte) -63, 20.0f, ak.a("", qh.field_f, ka.field_n, (byte) 51, qd.field_e));
+                rd.a((byte) -63, 20.0f, ak.a("", qh.field_f, PacketBuffer.field_n, (byte) 51, qd.field_e));
                 return;
               }
               rd.a((byte) -90, 10.0f, ak.a("", qh.field_f, mf.field_b, (byte) 51, qd.field_e));
@@ -3271,21 +3271,21 @@ public final class stellarshard extends rb implements cf {
             if (param1 >= -60) {
               this.a(70, -17);
             }
-            vf.field_L = fe.field_c;
+            vf.field_L = MouseWheelInput.field_c;
             lg.field_b = 5883647;
             aj.a(50, 11236);
             ef.a(50, (byte) 63);
-            fe.field_c = new d(oe.field_a);
+            MouseWheelInput.field_c = new d(oe.field_a);
             if (vf.field_L != null) {
               nj.field_o.b(vf.field_L);
               vf.field_L.c();
               nj.field_o.a(vf.field_L);
             }
-            vf.field_L = fe.field_c;
+            vf.field_L = MouseWheelInput.field_c;
             nj.field_o.a(vf.field_L);
-            vf.field_L.d(ai.field_c / 2);
-            if (!ah.a(-1)) {
-              be.field_g = ab.a(-5094, 4);
+            vf.field_L.d(IterableNodeHashTable.field_c / 2);
+            if (!DualLinkNode.a(-1)) {
+              MouseHandler.field_g = ab.a(-5094, 4);
               wh.a(-124);
             }
             hf.field_f = true;
@@ -3303,7 +3303,7 @@ public final class stellarshard extends rb implements cf {
             uf.field_g = qd.a(fc.field_a, "unachieved", "basic", (byte) 106);
             ce.field_a = qd.a(fc.field_a, "locked", "basic", (byte) 60);
             af.field_n = qd.a(fc.field_a, "orbcoin", "basic", (byte) 111);
-            var4 = new pb[16];
+            var4 = new Sprite[16];
             var4 = ml.a("", (byte) 85, bh.field_a, "powerups");
             var5 = 0;
             do {
@@ -3311,14 +3311,14 @@ public final class stellarshard extends rb implements cf {
                 var5 = 0;
                 break;
               }
-              var3 = new pb(96, 96);
-              ((pb) (var3)).e();
+              var3 = new Sprite(96, 96);
+              ((Sprite) (var3)).e();
               var4[var5].b(48, 48, 0, 4096);
-              e.field_g[var5] = (pb) (var3);
+              e.field_g[var5] = (Sprite) (var3);
               var5++;
             } while (var11 == 0);
             while (64 > var5) {
-              cm.field_d[var5] = new pb(96, 96);
+              cm.field_d[var5] = new Sprite(96, 96);
               var5++;
               if (var11 != 0) {
                 return;
@@ -3429,24 +3429,24 @@ public final class stellarshard extends rb implements cf {
                 }
                 var10_ref_bj = var7.a(128, 341, 50, 50, -50);
                 if (1 == var4_int) {
-                  fe.field_d[cg.field_c][var6_int] = new pb(96, 96);
-                  fe.field_d[cg.field_c][var6_int].e();
+                  MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
+                  MouseWheelInput.field_d[cg.field_c][var6_int].e();
                   ti.f(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
-                  fe.field_d[cg.field_c][var6_int].d();
+                  MouseWheelInput.field_d[cg.field_c][var6_int].d();
                 }
                 if (0 == var4_int) {
-                  fe.field_d[cg.field_c][var6_int] = new pb(96, 96);
-                  fe.field_d[cg.field_c][var6_int].e();
+                  MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
+                  MouseWheelInput.field_d[cg.field_c][var6_int].e();
                   ti.f(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
-                  fe.field_d[cg.field_c][var6_int].d();
+                  MouseWheelInput.field_d[cg.field_c][var6_int].d();
                 }
                 if (var4_int == 2 ||
                   var4_int == 4) {
-                  rd.field_a[cg.field_c - 8][var6_int >> 2] = new pb(96, 96);
+                  rd.field_a[cg.field_c - 8][var6_int >> 2] = new Sprite(96, 96);
                   rd.field_a[-8 + cg.field_c][var6_int >> 2].e();
                   ti.f(0, 0, 96, 96, 0);
                   cc.a();
@@ -3454,7 +3454,7 @@ public final class stellarshard extends rb implements cf {
                   rd.field_a[-8 + cg.field_c][var6_int >> 2].d();
                 }
                 if (var4_int == 3) {
-                  cm.field_d[var6_int >> 1] = new pb(96, 96);
+                  cm.field_d[var6_int >> 1] = new Sprite(96, 96);
                   cm.field_d[var6_int >> 1].e();
                   ti.f(0, 0, 96, 96, 0);
                   cc.a();
@@ -3482,14 +3482,14 @@ public final class stellarshard extends rb implements cf {
           if (null == l.field_f) {
             rd.a((byte) -53, 98.0f, ua.field_g);
             this.d(-20880);
-            fh.field_k = ml.a("", (byte) 98, bh.field_a, "slider");
+            BufferedSocket.field_k = ml.a("", (byte) 98, bh.field_a, "slider");
             fg.field_P = ml.a("", (byte) 124, bh.field_a, "frame");
             fg.field_P[4] = null;
             wc.field_s = qd.a(bh.field_a, "stel", "", (byte) 107);
             pl.field_R = qd.a(bh.field_a, "lar", "", (byte) 93);
             aa.field_b = qd.a(bh.field_a, "central_iceblock", "", (byte) 81);
             ml.a("", (byte) -32, bh.field_a, "menu");
-            rh.field_a = new pb[12];
+            rh.field_a = new Sprite[12];
             var3 = null;
             var4_intLifetime1 = 0;
             boolean decompiledNaturalLoopExit1 = false;
@@ -3508,9 +3508,9 @@ public final class stellarshard extends rb implements cf {
                 if (var4_intLifetime1 == 9) {
                   var3 = ml.a("", (byte) 119, bh.field_a, "anim_shatter4");
                 }
-                rh.field_a[var4_intLifetime1 - 0] = (pb) (((Object[]) (var3))[0]);
-                rh.field_a[var4_intLifetime1 + 1] = (pb) (((Object[]) (var3))[1]);
-                rh.field_a[2 + var4_intLifetime1] = (pb) (((Object[]) (var3))[2]);
+                rh.field_a[var4_intLifetime1 - 0] = (Sprite) (((Object[]) (var3))[0]);
+                rh.field_a[var4_intLifetime1 + 1] = (Sprite) (((Object[]) (var3))[1]);
+                rh.field_a[2 + var4_intLifetime1] = (Sprite) (((Object[]) (var3))[2]);
                 rh.field_a[var4_intLifetime1 + 0].d();
                 rh.field_a[1 + var4_intLifetime1].d();
                 rh.field_a[2 + var4_intLifetime1].d();
@@ -3520,7 +3520,7 @@ public final class stellarshard extends rb implements cf {
               break;
             }
             if (decompiledNaturalLoopExit1) {
-              fa.field_k = new pb[15];
+              fa.field_k = new Sprite[15];
               stackIn_202_0 = 0;
             }
             var4_intLifetime1Lifetime1 = stackIn_202_0;
@@ -3543,9 +3543,9 @@ public final class stellarshard extends rb implements cf {
                 if (var4_intLifetime1Lifetime1 == 12) {
                   var3 = ml.a("", (byte) -25, bh.field_a, "anim_shine5");
                 }
-                fa.field_k[var4_intLifetime1Lifetime1 + 0] = (pb) (((Object[]) (var3))[0]);
-                fa.field_k[1 + var4_intLifetime1Lifetime1] = (pb) (((Object[]) (var3))[1]);
-                fa.field_k[2 + var4_intLifetime1Lifetime1] = (pb) (((Object[]) (var3))[2]);
+                fa.field_k[var4_intLifetime1Lifetime1 + 0] = (Sprite) (((Object[]) (var3))[0]);
+                fa.field_k[1 + var4_intLifetime1Lifetime1] = (Sprite) (((Object[]) (var3))[1]);
+                fa.field_k[2 + var4_intLifetime1Lifetime1] = (Sprite) (((Object[]) (var3))[2]);
                 fa.field_k[0 + var4_intLifetime1Lifetime1].d();
                 fa.field_k[1 + var4_intLifetime1Lifetime1].d();
                 fa.field_k[2 + var4_intLifetime1Lifetime1].d();
@@ -3556,7 +3556,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (decompiledNaturalLoopExit0) {
               qd.a(bh.field_a, "title", "", (byte) 119);
-              qj.field_a = ae.a("", "b12", bh.field_a, -115, be.field_d);
+              qj.field_a = ae.a("", "b12", bh.field_a, -115, MouseHandler.field_d);
               stackIn_226_0 = 7;
             }
             var4_array = new ek[stackIn_226_0];
@@ -3577,7 +3577,7 @@ public final class stellarshard extends rb implements cf {
             var4_array[5] = el.a("keyboard_right", bh.field_a, (byte) -116, "");
             var4_array[6] = el.a("keyboard_down", bh.field_a, (byte) 126, "");
             qj.field_a.a(var4_array, var5_ref_int__);
-            l.field_f = ae.a("", "b122", bh.field_a, -117, be.field_d);
+            l.field_f = ae.a("", "b122", bh.field_a, -117, MouseHandler.field_d);
             rg.g(-33);
             return;
           }
@@ -3585,13 +3585,13 @@ public final class stellarshard extends rb implements cf {
           this.d(-20880);
           var3 = ml.a("", (byte) 80, bh.field_a, "screenshots");
           sd.a(qd.a(bh.field_a, "mbfg", "", (byte) 104), (byte) 60, "Stellar Shard");
-          ga.a(-8039, qd.a(bh.field_a, "smalllogo", "", (byte) 124));
+          NodeHashTableIterator.a(-8039, qd.a(bh.field_a, "smalllogo", "", (byte) 124));
           te.a(8, 129, 1500, 0, qd.a(bh.field_a, "mbpb", "", (byte) 124), 40, 134, 97, 0);
-          q.a(118, (pb[]) (var3));
-          ie.field_u = null;
+          q.a(118, (Sprite[]) (var3));
+          SpriteState.field_u = null;
           fb.a(192, sg.field_c, 0, (java.applet.Applet) (this), -1, 16777215);
-          var4_ref = new pb(128, 128);
-          mf.field_a = new pb[64];
+          var4_ref = new Sprite(128, 128);
+          mf.field_a = new Sprite[64];
           var5 = 0;
           while (true) {
             stackIn_236_0 = ~var5;
@@ -3618,7 +3618,7 @@ public final class stellarshard extends rb implements cf {
                 ti.d(1, 1, 0, 0, 496, 496);
                 var8 = ti.field_a;
                 var9 = 0;
-                L61: while (true) {
+                scanLoop1: while (true) {
                   if (var8.length > var9) {
                     stackIn_261_0 = ~var8[var9];
                     stackIn_261_1 = -1;
@@ -3633,7 +3633,7 @@ public final class stellarshard extends rb implements cf {
                     stackIn_261_0Lifetime1 = ~var9;
                     stackIn_261_1Lifetime1 = -5;
                     if (stackIn_261_0Lifetime1 <= stackIn_261_1Lifetime1) {
-                      break L61;
+                      break scanLoop1;
                     }
                     stackIn_236_0 = 0;
                     var10 = stackIn_236_0;
@@ -3670,7 +3670,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if (decompiledFrameRemainder0) {
-              be.field_d = null;
+              MouseHandler.field_d = null;
               bh.field_a = null;
               stackIn_275_0 = -33;
             }
@@ -3704,7 +3704,7 @@ public final class stellarshard extends rb implements cf {
             field_U[8] = 5;
           }
           cl.field_a = cl.field_a + si.field_gb;
-          gg.field_i = gg.field_i + 1;
+          IntrusiveNode.field_i = IntrusiveNode.field_i + 1;
           lg.field_f = lg.field_f - 127;
           hk.field_p = hk.field_p + 127;
           if (7 == e.field_e) {
@@ -3746,7 +3746,7 @@ public final class stellarshard extends rb implements cf {
               of.field_A = 50;
             }
             var3_ref_fk = new fk(0, -1 + qi.field_a, 0, 0, 0, 0);
-            if (!ah.a(-1)) {
+            if (!DualLinkNode.a(-1)) {
               hf.a(var3_ref_fk, 89, 5);
               if (var5 != 0) {
                 tf.field_a.b(-113, var3_ref_fk);
@@ -3760,11 +3760,11 @@ public final class stellarshard extends rb implements cf {
           if (10 <= qi.field_a &&
             nc.field_A <= 0 &&
             mk.field_k <= 0 &&
-            s.field_i) {
+            DualLinkDequeIterator.field_i) {
             nc.field_A = 1500;
           }
           if (null == this.field_F) {
-            this.field_F = new pb(640, 480);
+            this.field_F = new Sprite(640, 480);
           }
           if (qi.field_a > 50) {
             qi.field_a = 50;
@@ -3927,28 +3927,28 @@ public final class stellarshard extends rb implements cf {
           }
           if (mk.field_k > 0 &&
             lh.a(ic.field_d, (byte) 115)) {
-            s.field_e = wb.a(0, -107, 480, ic.field_d, 640, 0);
-            if (null != s.field_e) {
-              nc.a(s.field_e, (byte) 121);
+            DualLinkDequeIterator.field_e = wb.a(0, -107, 480, ic.field_d, 640, 0);
+            if (null != DualLinkDequeIterator.field_e) {
+              nc.a(DualLinkDequeIterator.field_e, (byte) 121);
             }
           }
           stackIn_24_0 = qj.field_a.field_N;
           stackIn_24_1 = 0;
           stackIn_24_2 = l.field_f.field_N;
-          if (ah.a(-1)) {
+          if (DualLinkNode.a(-1)) {
             stackIn_25_3 = 0;
           } else {
             if (mk.field_k <= 0) {
               stackIn_25_3 = 1;
             } else {
-              if (null == s.field_e) {
+              if (null == DualLinkDequeIterator.field_e) {
                 stackIn_25_3 = 3;
               } else {
                 stackIn_25_3 = 2;
               }
             }
           }
-          vf.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_25_3, (pb[]) null, 320, qj.field_a, 8, (pb[]) null, 8, 8 + qj.field_a.field_N, l.field_f.field_N, 260, true, 240, l.field_f);
+          vf.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_25_3, (Sprite[]) null, 320, qj.field_a, 8, (Sprite[]) null, 8, 8 + qj.field_a.field_N, l.field_f.field_N, 260, true, 240, l.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4049,8 +4049,8 @@ public final class stellarshard extends rb implements cf {
         int var9Lifetime3Lifetime1;
         var20 = field_B;
         try {
-          if (s.field_e != null) {
-            stackIn_5_0 = s.field_e;
+          if (DualLinkDequeIterator.field_e != null) {
+            stackIn_5_0 = DualLinkDequeIterator.field_e;
           } else {
             stackIn_5_0 = qd.field_j;
           }
@@ -4058,7 +4058,7 @@ public final class stellarshard extends rb implements cf {
           if (ee.b(93)) {
             stackIn_11_0 = var2;
             stackIn_11_1 = -11;
-            if (s.field_e != null) {
+            if (DualLinkDequeIterator.field_e != null) {
               stackIn_12_2 = true;
             } else {
               stackIn_12_2 = ua.field_b;
@@ -4070,11 +4070,11 @@ public final class stellarshard extends rb implements cf {
             i.a((java.awt.Canvas) (var2), -113);
             return;
           }
-          if (null != be.field_g) {
+          if (null != MouseHandler.field_g) {
             i.a((java.awt.Canvas) (var2), -101);
             return;
           }
-          if (null != gg.field_f) {
+          if (null != IntrusiveNode.field_f) {
             i.a((java.awt.Canvas) (var2), -99);
             return;
           }
@@ -4094,7 +4094,7 @@ public final class stellarshard extends rb implements cf {
             }
           }
           if ((decompiledFrameCompleted6) && (null == na.field_j &&
-            !s.field_i && (!(wh.field_c <= 1) ||
+            !DualLinkDequeIterator.field_i && (!(wh.field_c <= 1) ||
             !ni.field_a))) {
             na.field_j = new ij(this);
             if (!ni.field_a) {
@@ -4120,7 +4120,7 @@ public final class stellarshard extends rb implements cf {
             el.field_I > 0 &&
             na.field_j == null) {
             this.field_F.e(0, 0, 5 * el.field_I);
-            if (!s.field_i) {
+            if (!DualLinkDequeIterator.field_i) {
               el.field_I = el.field_I - 1;
             }
           }
@@ -4138,7 +4138,7 @@ public final class stellarshard extends rb implements cf {
             var3 += 8;
             var4 += 2;
           } while (var20 == 0);
-          L17: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted5 = true;
             if (var3 < 1000) {
               stackIn_126_0 = null;
@@ -4170,10 +4170,10 @@ public final class stellarshard extends rb implements cf {
                 ti.f(0, 0, 640, 480, 0);
                 pd.field_h.a((byte) -107);
                 if (var20 != 0) {
-                  this.field_G = new pb(640, 480);
+                  this.field_G = new Sprite(640, 480);
                 }
               } else {
-                this.field_G = new pb(640, 480);
+                this.field_G = new Sprite(640, 480);
               }
               var3 = 0;
               boolean decompiledNaturalLoopExit0 = false;
@@ -4192,7 +4192,7 @@ public final class stellarshard extends rb implements cf {
               }
               while (1000 > var3) {
                 if (var20 != 0) {
-                  break L17;
+                  break scanLoop1;
                 }
                 stackIn_126_0Lifetime1 = null;
                 if (stackIn_126_0Lifetime1 != hf.field_e[var3]) {
@@ -4296,7 +4296,7 @@ public final class stellarshard extends rb implements cf {
                 }
               } else {
                 if (pk.a(param0 ^ 24825, 0) &&
-                  s.field_i) {
+                  DualLinkDequeIterator.field_i) {
                   if (ag.field_a > 0 &&
                     128 > ag.field_a) {
                     ti.e(10, 330, 4, 16711680);
@@ -4328,7 +4328,7 @@ public final class stellarshard extends rb implements cf {
               }
               break;
             }
-            if (s.field_i) {
+            if (DualLinkDequeIterator.field_i) {
               var5_int = 148;
               ti.b(1, 351, var5_int, 128, 65280, 64);
               ti.d(2, 352, var5_int - 1, 478);
@@ -4404,7 +4404,7 @@ public final class stellarshard extends rb implements cf {
               qj.field_a.c(var6, -1 + (var5_int / 2 + 2), 356, 0, -1);
               qj.field_a.c(var6, 1 + (var5_int / 2 - 1), 356, 16777215, -1);
             }
-            if (!s.field_i && (na.field_j == null ||
+            if (!DualLinkDequeIterator.field_i && (na.field_j == null ||
               tl.field_c != 8 &&
               tl.field_c != 1 &&
               tl.field_c != 3 &&
@@ -4434,7 +4434,7 @@ public final class stellarshard extends rb implements cf {
                 fa.field_k[0].a(0, 128, 310, (byte) 54, 90);
               }
             }
-            if (s.field_i) {
+            if (DualLinkDequeIterator.field_i) {
               var5 = h.a(hh.field_d, 0, new String[]{"" + qi.field_a});
               var6_intLifetime3 = nj.field_f[0];
               nj.field_f[0] = qi.field_a * 64 / 50;
@@ -4458,7 +4458,7 @@ public final class stellarshard extends rb implements cf {
                 var7_ref = gf.field_a;
               }
               if (e.field_e == 2) {
-                var7_ref = ka.field_l;
+                var7_ref = PacketBuffer.field_l;
               }
               if (3 == e.field_e) {
                 var7_ref = he.field_l;
@@ -4467,7 +4467,7 @@ public final class stellarshard extends rb implements cf {
                 var7_ref = td.field_e;
               }
               if (e.field_e == 5) {
-                var7_ref = nl.field_f;
+                var7_ref = SocketConnector.field_f;
               }
               if (e.field_e == 6) {
                 var7_ref = qh.field_h;
@@ -4521,7 +4521,7 @@ public final class stellarshard extends rb implements cf {
               }
               if (4 == nc.field_H) {
                 var11 = 12;
-                var10 = wg.field_e;
+                var10 = ClientException.field_e;
               }
               if (null != var10) {
                 var10 = ((String) (var10)).toUpperCase();
@@ -4677,7 +4677,7 @@ public final class stellarshard extends rb implements cf {
               }
               nj.field_f[0] = var6_intLifetime3;
               if (this.field_J > 0) {
-                var5Lifetime4 = ah.field_k;
+                var5Lifetime4 = DualLinkNode.field_k;
               }
             }
             if (ig.field_D > 0) {
@@ -4693,7 +4693,7 @@ public final class stellarshard extends rb implements cf {
               ti.b(0, 0, 640, 480, 16777215, this.field_R);
             }
             if (nc.field_A > 0 &&
-              s.field_i &&
+              DualLinkDequeIterator.field_i &&
               mk.field_k <= 0) {
               var6Lifetime1 = dd.field_i + nc.field_A / 50 + ef.field_o;
               l.field_f.a(var6Lifetime1, 32, -l.field_f.field_N + 68, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
@@ -4701,7 +4701,7 @@ public final class stellarshard extends rb implements cf {
               l.field_f.a(var6Lifetime1, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
             }
             if (nc.field_A > 0 &&
-              s.field_i &&
+              DualLinkDequeIterator.field_i &&
               qi.field_a >= 50) {
               var6Lifetime2 = lk.field_g + hf.field_g + nc.field_A / 50 + ef.field_o;
               l.field_f.a(var6Lifetime2, 32, 68 - l.field_f.field_N, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
@@ -4758,17 +4758,17 @@ public final class stellarshard extends rb implements cf {
             }
             if (id.b(param0 ^ 20876) &&
               !fd.d((byte) -21)) {
-              if (null != s.field_e) {
+              if (null != DualLinkDequeIterator.field_e) {
                 stackIn_511_0 = true;
               } else {
                 stackIn_511_0 = ua.field_b;
               }
-              bc.a(stackIn_511_0, -102);
+              ProxySocketConnector.a(stackIn_511_0, -102);
             }
-            if (null == s.field_e) {
+            if (null == DualLinkDequeIterator.field_e) {
               stackIn_516_0 = qd.field_j;
             } else {
-              stackIn_516_0 = s.field_e;
+              stackIn_516_0 = DualLinkDequeIterator.field_e;
             }
             pd.a((java.awt.Canvas) (stackIn_516_0), 0, 0, (byte) -73);
             return;
@@ -4826,10 +4826,10 @@ public final class stellarshard extends rb implements cf {
           wk.field_a = wl.a(1, 2);
           var2_int = 122 / ((-3 - param0) / 34);
           mf.field_b = wl.a(1, 3);
-          ka.field_n = wl.a(1, 4);
-          be.field_d = wl.a(1, 5);
+          PacketBuffer.field_n = wl.a(1, 4);
+          MouseHandler.field_d = wl.a(1, 5);
           jf.field_m = wl.a(1, 7);
-          jg.a(ie.field_u, fc.field_a, (byte) 118);
+          jg.a(SpriteState.field_u, fc.field_a, (byte) 118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

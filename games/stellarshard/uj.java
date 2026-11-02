@@ -7,7 +7,7 @@ final class uj {
     static wb field_d;
     int[] field_a;
     static boolean field_f;
-    static oj field_e;
+    static IntrusiveDeque field_e;
 
     final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
         int var8 = 0;
@@ -33,7 +33,7 @@ final class uj {
             var6 = 0;
             var7 = param0.length();
             if (param1 < 74) {
-              field_e = (oj) null;
+              field_e = (IntrusiveDeque) null;
             }
             for (var8 = 0; var8 < var7; var8++) {
               boolean decompiledFrameRemainder0 = true;

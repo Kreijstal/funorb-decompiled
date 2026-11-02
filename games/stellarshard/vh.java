@@ -4,7 +4,7 @@
 final class vh {
     private rk field_j;
     private ph field_f;
-    private ka field_d;
+    private PacketBuffer field_d;
     private java.math.BigInteger field_b;
     private wc[] field_a;
     static int field_i;
@@ -236,7 +236,7 @@ final class vh {
         java.math.BigInteger var6_ref_java_math_BigInteger;
         int var6;
         int var9;
-        ka var11;
+        PacketBuffer var11;
         byte[] var12;
         java.math.BigInteger var13;
         byte[] var14;
@@ -254,7 +254,7 @@ final class vh {
         if (this.field_f.field_w) {
           return false;
         }
-        var11 = new ka(this.field_f.g(-27203));
+        var11 = new PacketBuffer(this.field_f.g(-27203));
         var11.field_k = 5;
         var3 = var11.f(4);
         var11.field_k = var11.field_k + 72 * var3;
@@ -274,7 +274,7 @@ final class vh {
           throw new RuntimeException();
         }
         var6 = -19 % ((param0 - 54) / 60);
-        var16 = bc.a(0, 5, -5 + (-var14.length + var11.field_k), var11.field_r);
+        var16 = ProxySocketConnector.a(0, 5, -5 + (-var14.length + var11.field_k), var11.field_r);
         for (var8 = 0; var8 < 64; var8++) {
           if (var16[var8] != var5[1 + var8]) {
             throw new RuntimeException();

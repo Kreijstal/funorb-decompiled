@@ -4,7 +4,7 @@
 final class pf {
     private wf field_e;
     private lh field_h;
-    static oj field_b;
+    static IntrusiveDeque field_b;
     static boolean field_c;
     private int field_g;
     private Object[] field_f;
@@ -48,12 +48,12 @@ final class pf {
         field_b = null;
     }
 
-    final static pb[] a(String param0, byte param1, String param2, pf param3) {
+    final static Sprite[] a(String param0, byte param1, String param2, pf param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        pb[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -248,8 +248,8 @@ final class pf {
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = mh.a(param1, (byte) -124) ? 1 : 0;
-          var4 = mh.a(param1, (byte) -44) ? 1 : 0;
+          var3 = ImageProducerRasterBuffer.a(param1, (byte) -124) ? 1 : 0;
+          var4 = ImageProducerRasterBuffer.a(param1, (byte) -44) ? 1 : 0;
           var5 = new n();
           var5.field_n = (short)param1.e(16, 8);
           var5.field_f = vh.a((byte) 87, var5.field_f, param0, param1);
@@ -276,10 +276,10 @@ final class pf {
             var5.field_s = vh.a((byte) 84, var5.field_s, 16, param1);
             var5.field_I = vh.a((byte) 116, var5.field_I, 16, param1);
           }
-          if (mh.a(param1, (byte) -79)) {
+          if (ImageProducerRasterBuffer.a(param1, (byte) -79)) {
             var5.field_c = vh.a((byte) 22, var5.field_c, 16, param1);
           }
-          if (mh.a(param1, (byte) -126)) {
+          if (ImageProducerRasterBuffer.a(param1, (byte) -126)) {
             var5.field_g = wh.a(16, param1, var5.field_g, (byte) 50);
             var6 = 0;
             for (var7 = 0; var5.field_g.length > var7; var7++) {
@@ -357,7 +357,7 @@ final class pf {
           param1 < 0 ||
           this.field_h.field_g.length <= param0 ||
           this.field_h.field_g[param0] <= param1) {
-          if (!fe.field_b) {
+          if (!MouseWheelInput.field_b) {
             return false;
           }
           throw new IllegalArgumentException(param0 + " " + param1);
@@ -477,7 +477,7 @@ final class pf {
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + gg.a(param1, "\n", "%0a", 97));
+        System.out.println("Error: " + IntrusiveNode.a(param1, "\n", "%0a", 97));
         if (param0 != 17651) {
           pf.a(20);
         }
@@ -587,7 +587,7 @@ final class pf {
           0 != this.field_h.field_g[param0]) {
           return true;
         }
-        if (!fe.field_b) {
+        if (!MouseWheelInput.field_b) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(param0));
@@ -716,10 +716,10 @@ final class pf {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ka var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        ka var29 = null;
-        ka var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -771,7 +771,7 @@ final class pf {
             var35 = tf.a(2, true, this.field_f[param1]);
             var25 = var35;
             var9 = var25;
-            var26 = new ka(var35);
+            var26 = new PacketBuffer(var35);
             var26.a(99, param3, 5, var26.field_r.length);
             decompiledFrameRemainder0 = false;
           }
@@ -789,7 +789,7 @@ final class pf {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param3 != null);
-            throw ma.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(bg.a(var9.length, var9, 0)).append(" ").append(bg.a(var9.length - 2, var9, 0)).append(" ").append(this.field_h.field_l[param1]).append(" ").append(this.field_h.field_m).toString());
+            throw ma.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(DualLinkDeque.a(var9.length, var9, 0)).append(" ").append(DualLinkDeque.a(var9.length - 2, var9, 0)).append(" ").append(this.field_h.field_l[param1]).append(" ").append(this.field_h.field_m).toString());
           }
           if (this.field_a) {
             this.field_f[param1] = null;
@@ -800,7 +800,7 @@ final class pf {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var5_int * (var12 * 4);
-              var29 = new ka(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var29.field_k = var11;
               var15_int = 0;
@@ -848,7 +848,7 @@ final class pf {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var5_int * (var12 * 4);
-              var31 = new ka(var43);
+              var31 = new PacketBuffer(var43);
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
@@ -969,7 +969,7 @@ final class pf {
             CharSequence var3 = (CharSequence) null;
             pf.a((CharSequence) null, (byte) 96);
           }
-          be.a(param0, "", (byte) 110);
+          MouseHandler.a(param0, "", (byte) 110);
           wf.a(63, param0);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pf.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -992,6 +992,6 @@ final class pf {
     }
 
     static {
-        field_b = new oj();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -3,7 +3,7 @@
  */
 class rg extends ig {
     private String[] field_G;
-    private oj field_H;
+    private IntrusiveDeque field_H;
     static int field_F;
     private ja field_K;
     static ua field_J;
@@ -243,7 +243,7 @@ class rg extends ig {
         int var17;
         int var8Lifetime1;
         var17 = stellarshard.field_B;
-        this.field_H = new oj();
+        this.field_H = new IntrusiveDeque();
         var2 = 0;
         var3 = (pj) ((Object) this.field_u);
         var5 = -101 / ((param0 + 30) / 33);
@@ -304,7 +304,7 @@ class rg extends ig {
           this.field_K = null;
           if (this.field_q) {
             var5_int = -this.field_w - param2 + ni.field_e;
-            var6 = -param0 + eb.field_a - this.field_k;
+            var6 = -param0 + KeyHandler.field_a - this.field_k;
             this.field_K = this.b(var5_int, -127, var6);
           }
         } catch (RuntimeException runtimeException) {

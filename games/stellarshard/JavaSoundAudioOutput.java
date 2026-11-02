@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class m extends ba {
+final class JavaSoundAudioOutput extends ba {
     private int field_x;
     private javax.sound.sampled.AudioFormat field_y;
     private javax.sound.sampled.SourceDataLine field_w;
@@ -30,7 +30,7 @@ final class m extends ba {
         this.field_w.write(this.field_v, 0, var1 << 1);
     }
 
-    m() {
+    JavaSoundAudioOutput() {
     }
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {

@@ -37,7 +37,7 @@ final class tc extends id {
 
     final static void a(kl param0, int param1, boolean param2) {
         try {
-          nl.field_e.b(-104, param0);
+          SocketConnector.field_e.b(-104, param0);
           if (param2) {
             field_u = (java.applet.Applet) null;
           }
@@ -65,7 +65,7 @@ final class tc extends id {
         field_q = null;
     }
 
-    final void a(int param0, pb[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         db[] var3 = null;
         db var5 = null;
@@ -156,7 +156,7 @@ final class tc extends id {
         var1.a((byte) 62);
     }
 
-    final void a(int param0, int param1, pb[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         int var4_intLifetime1;
         try {
@@ -171,7 +171,7 @@ final class tc extends id {
         }
     }
 
-    final void a(boolean param0, pb param1) {
+    final void a(boolean param0, Sprite param1) {
         int var4 = 0;
         db[] var3 = null;
         db var5 = null;
@@ -234,7 +234,7 @@ final class tc extends id {
           if (param4 != 4549) {
             tc.c(22);
           }
-          gg.a(126, param3.field_p + (param1 + param3.field_w), param3.field_k + param2, param2 + param3.field_k + param3.field_t, param1 + param3.field_w);
+          IntrusiveNode.a(126, param3.field_p + (param1 + param3.field_w), param3.field_k + param2, param2 + param3.field_k + param3.field_t, param1 + param3.field_w);
           if (var10 != null) {
             param0 = param0 & var10.field_E;
           }

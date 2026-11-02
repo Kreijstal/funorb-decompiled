@@ -40,7 +40,7 @@ final class se extends g implements oi {
     public se() {
         super(0, 0, 476, 225, (uk) null);
         this.field_D = new ig(gk.field_g, (lf) null);
-        this.field_F = new ig(bc.field_h, (lf) null);
+        this.field_F = new ig(ProxySocketConnector.field_h, (lf) null);
         this.field_I = new ig(o.field_c, (lf) null);
         b var1 = new b();
         this.field_D.field_u = (uk) ((Object) var1);
@@ -55,7 +55,7 @@ final class se extends g implements oi {
         this.field_F.field_v = (lf) (this);
         this.field_D.field_v = (lf) (this);
         this.field_I.field_v = (lf) (this);
-        this.field_D.field_x = hi.field_c;
+        this.field_D.field_x = DelegatingCanvas.field_c;
         this.field_I.field_x = ua.field_f;
         this.b(4, this.field_F);
         this.b(4, this.field_D);
@@ -75,7 +75,7 @@ final class se extends g implements oi {
     }
 
     final static void a(int param0, int param1) {
-        gg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         kl var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -85,10 +85,10 @@ final class se extends g implements oi {
           if (param1 >= -67) {
             field_E = (String[]) null;
           }
-          var4 = (kl) (nl.field_e.b(-103));
+          var4 = (kl) (SocketConnector.field_e.b(-103));
           while (var4 != null) {
             ca.a(param0, var4, (byte) 93);
-            var4 = (kl) (nl.field_e.b((byte) 117));
+            var4 = (kl) (SocketConnector.field_e.b((byte) 117));
           }
           var2 = pl.field_W.b(-79);
           while (var2 != null) {

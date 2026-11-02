@@ -23,7 +23,7 @@ final class ij extends ib {
           }
           var2_int = 0;
           var3 = this.field_j - 1;
-          if (s.field_i) {
+          if (DualLinkDequeIterator.field_i) {
             var3 -= 3;
             if (!(mk.field_k > 0)) {
               var3--;
@@ -76,15 +76,15 @@ final class ij extends ib {
             }
             this.field_l = this.field_l - 1;
             if (this.field_l == 0 &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               this.field_l = -1 + var3;
             }
             if (1 == this.field_l &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               this.field_l = this.field_l - 1;
             }
             if (var2_int > this.field_l &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               this.field_l = 1;
             }
             if (var2_int <= this.field_l) {
@@ -105,15 +105,15 @@ final class ij extends ib {
             }
             this.field_l = this.field_l + 1;
             if (this.field_l == 2 &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               this.field_l = var2_int;
             }
             if (this.field_l == 1 &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               this.field_l = this.field_l + 1;
             }
             if (this.field_l >= var3 &&
-              s.field_i) {
+              DualLinkDequeIterator.field_i) {
               this.field_l = 1;
             }
             if (this.field_l < var2_int) {
@@ -156,7 +156,7 @@ final class ij extends ib {
               stackIn_14_0 = -1;
               return stackIn_14_0;
             }
-            if (s.field_i &&
+            if (DualLinkDequeIterator.field_i &&
               tl.field_c == 0) {
               if (var4_int >= 1) {
                 var4_int++;
@@ -198,10 +198,10 @@ final class ij extends ib {
           }
           if (tl.field_c != 2 ||
             param3 != 8 ||
-            ah.a(-1)) {
+            DualLinkNode.a(-1)) {
             if (0 == tl.field_c) {
               if (1 != param3 ||
-                s.field_i ||
+                DualLinkDequeIterator.field_i ||
                 !(of.field_A > 1)) {
                 if (param3 != 3) {
                   if (4 != param3) {
@@ -217,16 +217,16 @@ final class ij extends ib {
                   }
                   boolean decompiledFrameRemainder0 = true;
                   if (this.field_o) {
-                    ai.field_c = param1 - 320;
-                    if (ai.field_c < 0) {
-                      ai.field_c = 0;
+                    IterableNodeHashTable.field_c = param1 - 320;
+                    if (IterableNodeHashTable.field_c < 0) {
+                      IterableNodeHashTable.field_c = 0;
                     }
-                    if (ai.field_c > 100) {
-                      ai.field_c = 100;
+                    if (IterableNodeHashTable.field_c > 100) {
+                      IterableNodeHashTable.field_c = 100;
                     }
                     decompiledFrameRemainder0 = (vf.field_L == null);
                     if (decompiledFrameRemainder0) {
-                      vf.field_L = fe.field_c;
+                      vf.field_L = MouseWheelInput.field_c;
                       nj.field_o.a(vf.field_L);
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
@@ -239,18 +239,18 @@ final class ij extends ib {
                       vf.field_L.c();
                       vf.field_L = null;
                       if (var8 != 0) {
-                        vf.field_L = fe.field_c;
+                        vf.field_L = MouseWheelInput.field_c;
                         nj.field_o.a(vf.field_L);
                       }
                     } else {
-                      vf.field_L = fe.field_c;
+                      vf.field_L = MouseWheelInput.field_c;
                       nj.field_o.a(vf.field_L);
                     }
                   }
                   if (vf.field_L == null) {
                     return;
                   }
-                  vf.field_L.d(ai.field_c / 2);
+                  vf.field_L.d(IterableNodeHashTable.field_c / 2);
                   if (var8 == 0) {
                     return;
                   }
@@ -264,11 +264,11 @@ final class ij extends ib {
                   if ((!(param1 < (320 - l.field_f.b(vl.field_h)))) &&
                     (!(param1 >= 320)) &&
                     (!param5)) {
-                    stackIn_108_0 = !(fe.field_e);
-                    fe.field_e = stackIn_108_0;
+                    stackIn_108_0 = !(MouseWheelInput.field_e);
+                    MouseWheelInput.field_e = stackIn_108_0;
                     if (var8 != 0) {
                       pk.field_h = param1 - 320;
-                      fe.field_e = true;
+                      MouseWheelInput.field_e = true;
                       if (pk.field_h < 0) {
                         pk.field_h = 0;
                       }
@@ -279,7 +279,7 @@ final class ij extends ib {
                   }
                 } else {
                   pk.field_h = param1 - 320;
-                  fe.field_e = true;
+                  MouseWheelInput.field_e = true;
                   if (pk.field_h < 0) {
                     pk.field_h = 0;
                   }
@@ -287,7 +287,7 @@ final class ij extends ib {
                     pk.field_h = 100;
                   }
                 }
-                if (!fe.field_e) {
+                if (!MouseWheelInput.field_e) {
                   return;
                 }
                 if (param5) {
@@ -352,7 +352,7 @@ final class ij extends ib {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (1 == param0 &&
-            !s.field_i &&
+            !DualLinkDequeIterator.field_i &&
             of.field_A > 1 &&
             tl.field_c == 0) {
             qi.field_a = qi.field_a - 1;
@@ -368,16 +368,16 @@ final class ij extends ib {
               decompiledFrameRemainder0 = !(pk.field_h >= 10);
               if (decompiledFrameRemainder0) {
                 pk.field_h = 10;
-                fe.field_e = false;
+                MouseWheelInput.field_e = false;
               }
             }
             if ((decompiledFrameRemainder0) &&
               (param0 != 3 ||
               var4 != 0) &&
               (4 == param0)) {
-              ai.field_c = ai.field_c - 12;
-              if (ai.field_c < 10) {
-                ai.field_c = 10;
+              IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 12;
+              if (IterableNodeHashTable.field_c < 10) {
+                IterableNodeHashTable.field_c = 10;
                 if (vf.field_L != null) {
                   nj.field_o.b(vf.field_L);
                   vf.field_L.c();
@@ -385,7 +385,7 @@ final class ij extends ib {
                 }
               }
               if (null != vf.field_L) {
-                vf.field_L.d(ai.field_c / 2);
+                vf.field_L.d(IterableNodeHashTable.field_c / 2);
               }
             }
           }
@@ -412,7 +412,7 @@ final class ij extends ib {
         var4 = stellarshard.field_B;
         try {
           if (pk.a(-12663, 0) &&
-            fe.field_e) {
+            MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[51 + (int)(Math.random() * 10.0)], (int)(Math.random() * 100.0) + 50, pk.field_h * 2);
           }
           if (param0 != 424) {
@@ -422,7 +422,7 @@ final class ij extends ib {
             if (tl.field_c == 3 && (fb.field_n == 0 ||
               1 == gh.field_c)) {
               if (param1 == 8 &&
-                ah.a(param0 ^ -425)) {
+                DualLinkNode.a(param0 ^ -425)) {
                 am.a(3, 3, param0 ^ 466);
                 if (var4 == 0) {
                   return;
@@ -469,7 +469,7 @@ final class ij extends ib {
             }
             if (2 == tl.field_c) {
               if (param1 == 8 &&
-                ah.a(-1)) {
+                DualLinkNode.a(-1)) {
                 am.a(2, 2, param0 - 544);
                 if (var4 == 0) {
                   return;
@@ -524,7 +524,7 @@ final class ij extends ib {
                 tl.field_c = 0;
                 n.field_L = 255;
                 gh.field_d = null;
-                if (!ah.a(-1)) {
+                if (!DualLinkNode.a(-1)) {
                   if (0 < ue.field_a) {
                     tl.field_c = 2;
                   }
@@ -549,7 +549,7 @@ final class ij extends ib {
                 return;
               }
               var3_int = this.field_j;
-              if (s.field_i) {
+              if (DualLinkDequeIterator.field_i) {
                 var3_int -= 3;
                 if (mk.field_k <= 0) {
                   var3_int--;
@@ -581,7 +581,7 @@ final class ij extends ib {
                       qi.field_a = qi.field_a - 1;
                     }
                     nf.field_r = false;
-                    s.field_i = true;
+                    DualLinkDequeIterator.field_i = true;
                     tl.field_a = 0;
                     decompiledFrameRemainder0 = (qi.field_a == 0);
                     if (decompiledFrameRemainder0) {
@@ -594,14 +594,14 @@ final class ij extends ib {
                   if (decompiledFrameRemainder0) {
                     if (1 != param1) {
                       if (param1 == 3) {
-                        stackIn_220_0 = !(fe.field_e);
-                        fe.field_e = stackIn_220_0;
+                        stackIn_220_0 = !(MouseWheelInput.field_e);
+                        MouseWheelInput.field_e = stackIn_220_0;
                         decompiledFrameRemainder0 = (var4 != 0);
                       }
                       if (decompiledFrameRemainder0) {
                         if (4 == param1) {
                           if (null == vf.field_L) {
-                            vf.field_L = fe.field_c;
+                            vf.field_L = MouseWheelInput.field_c;
                             nj.field_o.a(vf.field_L);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
@@ -629,7 +629,7 @@ final class ij extends ib {
                           }
                           if (decompiledFrameRemainder0) {
                             if (param1 == 7) {
-                              if (!s.field_i) {
+                              if (!DualLinkDequeIterator.field_i) {
                                 if (tl.field_c != 3) {
                                   n.field_L = 255;
                                 }
@@ -649,21 +649,21 @@ final class ij extends ib {
                             if (decompiledFrameRemainder0) {
                               if ((param1 != 6) &&
                                 (decompiledFrameRemainder0 = (param1 == 5))) {
-                                if (null == s.field_e) {
+                                if (null == DualLinkDequeIterator.field_e) {
                                   vc.field_h.l((byte) -119);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
-                                  nd.a(-26621, s.field_e);
-                                  s.field_e.a(ic.field_d, -105);
-                                  s.field_e = null;
+                                  nd.a(-26621, DualLinkDequeIterator.field_e);
+                                  DualLinkDequeIterator.field_e.a(ic.field_d, -105);
+                                  DualLinkDequeIterator.field_e = null;
                                   qd.field_j.requestFocus();
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
                               }
                               if ((decompiledFrameRemainder0) &&
-                                (decompiledFrameRemainder0 = !(s.field_i))) {
-                                if (!ah.a(-1)) {
+                                (decompiledFrameRemainder0 = !(DualLinkDequeIterator.field_i))) {
+                                if (!DualLinkNode.a(-1)) {
                                   gh.field_d = bk.a(3, 10, 1, param0 ^ 441, 5);
                                 }
                                 if (2 != tl.field_c) {
@@ -691,7 +691,7 @@ final class ij extends ib {
                         if (!(of.field_A > 1)) {
                           ea.e((byte) 93);
                           vc.field_h.m((byte) 127);
-                          s.field_i = true;
+                          DualLinkDequeIterator.field_i = true;
                           qe.field_e = 0;
                           nf.field_r = true;
                           stellarshard.field_K = true;
@@ -706,10 +706,10 @@ final class ij extends ib {
                             nc.field_H = 0;
                             a.field_h[0].field_g = -150;
                             na.field_j = null;
-                            if (s.field_e != null) {
-                              nd.a(-26621, s.field_e);
-                              s.field_e.a(ic.field_d, -104);
-                              s.field_e = null;
+                            if (DualLinkDequeIterator.field_e != null) {
+                              nd.a(-26621, DualLinkDequeIterator.field_e);
+                              DualLinkDequeIterator.field_e.a(ic.field_d, -104);
+                              DualLinkDequeIterator.field_e = null;
                               qd.field_j.requestFocus();
                             }
                             df.a(false, hf.a((byte) -93));
@@ -720,10 +720,10 @@ final class ij extends ib {
                         a.field_h[0].field_g = -150;
                         na.field_j = null;
                         if (var4 != 0) {
-                          if (s.field_e != null) {
-                            nd.a(-26621, s.field_e);
-                            s.field_e.a(ic.field_d, -104);
-                            s.field_e = null;
+                          if (DualLinkDequeIterator.field_e != null) {
+                            nd.a(-26621, DualLinkDequeIterator.field_e);
+                            DualLinkDequeIterator.field_e.a(ic.field_d, -104);
+                            DualLinkDequeIterator.field_e = null;
                             qd.field_j.requestFocus();
                           }
                           df.a(false, hf.a((byte) -93));
@@ -733,10 +733,10 @@ final class ij extends ib {
                   }
                 }
               } else {
-                if (s.field_e != null) {
-                  nd.a(-26621, s.field_e);
-                  s.field_e.a(ic.field_d, -104);
-                  s.field_e = null;
+                if (DualLinkDequeIterator.field_e != null) {
+                  nd.a(-26621, DualLinkDequeIterator.field_e);
+                  DualLinkDequeIterator.field_e.a(ic.field_d, -104);
+                  DualLinkDequeIterator.field_e = null;
                   qd.field_j.requestFocus();
                 }
                 df.a(false, hf.a((byte) -93));
@@ -755,7 +755,7 @@ final class ij extends ib {
                 }
               }
               if (1 >= of.field_A &&
-                !s.field_i) {
+                !DualLinkDequeIterator.field_i) {
                 stackIn_348_1 = 3;
               } else {
                 stackIn_348_1 = 2;
@@ -811,7 +811,7 @@ final class ij extends ib {
           n.field_L = 255;
           tl.field_c = 0;
           this.field_l = 0;
-          if (!s.field_i &&
+          if (!DualLinkDequeIterator.field_i &&
             of.field_A <= 1) {
             this.field_l = 1;
           }
@@ -846,7 +846,7 @@ final class ij extends ib {
           if (param1 != -9) {
             return;
           }
-          if (s.field_i &&
+          if (DualLinkDequeIterator.field_i &&
             0 < param2) {
             boolean decompiledSharedTail0 = (param2 == 1);
             if (!decompiledSharedTail0) {
@@ -888,9 +888,9 @@ final class ij extends ib {
               }
               if (of.field_A > 1) {
                 ic.a(qf.field_f, param2, -1, false, 320, var5_int, param3);
-                fh.field_k[0].e(316, param3 + 3);
-                fh.field_k[2].e(418, 3 + param3);
-                fh.field_k[1].e(-3 + ((100 * qi.field_a - 100) / (-1 + of.field_A) + 320), 3 + param3);
+                BufferedSocket.field_k[0].e(316, param3 + 3);
+                BufferedSocket.field_k[2].e(418, 3 + param3);
+                BufferedSocket.field_k[1].e(-3 + ((100 * qi.field_a - 100) / (-1 + of.field_A) + 320), 3 + param3);
                 if (var6 == 0) {
                   return;
                 }
@@ -901,16 +901,16 @@ final class ij extends ib {
               }
             }
             if (3 == param2) {
-              if (!fe.field_e) {
+              if (!MouseWheelInput.field_e) {
                 ic.a(ch.field_d, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
                 }
               }
               ic.a(eh.field_b, param2, -1, false, 320, var5_int, param3);
-              fh.field_k[0].e(316, 2 + param3);
-              fh.field_k[2].e(418, 2 + param3);
-              fh.field_k[1].e(320 + pk.field_h - 3, 2 + param3);
+              BufferedSocket.field_k[0].e(316, 2 + param3);
+              BufferedSocket.field_k[2].e(418, 2 + param3);
+              BufferedSocket.field_k[1].e(320 + pk.field_h - 3, 2 + param3);
               if (var6 == 0) {
                 return;
               }
@@ -928,7 +928,7 @@ final class ij extends ib {
                     if (param2 != 8) {
                       return;
                     }
-                    if (s.field_i) {
+                    if (DualLinkDequeIterator.field_i) {
                       return;
                     }
                     ic.a(il.field_x, param2, -1, false, 320, var5_int, param3);
@@ -936,15 +936,15 @@ final class ij extends ib {
                       return;
                     }
                   }
-                  if (s.field_i) {
+                  if (DualLinkDequeIterator.field_i) {
                     return;
                   }
-                  ic.a(nl.field_b, param2, -1, false, 320, var5_int, param3);
+                  ic.a(SocketConnector.field_b, param2, -1, false, 320, var5_int, param3);
                   if (var6 == 0) {
                     return;
                   }
                 }
-                if (s.field_i) {
+                if (DualLinkDequeIterator.field_i) {
                   return;
                 }
                 ic.a(ta.field_r, param2, -1, false, 320, var5_int, param3);
@@ -952,11 +952,11 @@ final class ij extends ib {
                   return;
                 }
               }
-              if (s.field_i &&
+              if (DualLinkDequeIterator.field_i &&
                 mk.field_k <= 0) {
                 return;
               }
-              if (s.field_e == null) {
+              if (DualLinkDequeIterator.field_e == null) {
                 if (!lh.a(ic.field_d, (byte) -119)) {
                   stackIn_120_0 = (param0) ? 16777215 : 8421504;
                   var5_int = stackIn_120_0;
@@ -972,10 +972,10 @@ final class ij extends ib {
               }
             }
             if (vf.field_L != null) {
-              ic.a(fe.field_f, param2, -1, false, 320, var5_int, param3);
-              fh.field_k[0].e(316, 2 + param3);
-              fh.field_k[2].e(418, param3 + 2);
-              fh.field_k[1].e(ai.field_c + 317, 2 + param3);
+              ic.a(MouseWheelInput.field_f, param2, -1, false, 320, var5_int, param3);
+              BufferedSocket.field_k[0].e(316, 2 + param3);
+              BufferedSocket.field_k[2].e(418, param3 + 2);
+              BufferedSocket.field_k[1].e(IterableNodeHashTable.field_c + 317, 2 + param3);
               if (var6 == 0) {
                 return;
               }
@@ -1000,7 +1000,7 @@ final class ij extends ib {
             this.field_p = -111;
           }
           if (param1 == 1 &&
-            !s.field_i &&
+            !DualLinkDequeIterator.field_i &&
             of.field_A > 1 &&
             tl.field_c == 0) {
             qi.field_a = qi.field_a + 1;
@@ -1016,24 +1016,24 @@ final class ij extends ib {
             if (param1 != 4) {
               return;
             }
-            ai.field_c = ai.field_c + 12;
-            if (ai.field_c > 100) {
-              ai.field_c = 100;
+            IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 12;
+            if (IterableNodeHashTable.field_c > 100) {
+              IterableNodeHashTable.field_c = 100;
             }
             if (null == vf.field_L) {
-              vf.field_L = fe.field_c;
+              vf.field_L = MouseWheelInput.field_c;
               nj.field_o.a(vf.field_L);
             }
             if (vf.field_L == null) {
               return;
             }
-            vf.field_L.d(ai.field_c / 2);
+            vf.field_L.d(IterableNodeHashTable.field_c / 2);
             if (var4 == 0) {
               return;
             }
           }
           pk.field_h = pk.field_h + 12;
-          fe.field_e = true;
+          MouseWheelInput.field_e = true;
           if (pk.field_h > 100) {
             pk.field_h = 100;
           }
@@ -1103,8 +1103,8 @@ final class ij extends ib {
           param0 = param0 + var8_int / 2;
           if (ni.field_e > (-4 - var8_int + param0) &&
             param0 >= ni.field_e &&
-            param3 - l.field_f.field_N < eb.field_a &&
-            eb.field_a <= param3 &&
+            param3 - l.field_f.field_N < KeyHandler.field_a &&
+            KeyHandler.field_a <= param3 &&
             param4) {
             if (param6 != 5883647) {
               param6 = 16748431;
@@ -1295,13 +1295,13 @@ final class ij extends ib {
           }
           if ((decompiledFrameRemainder3) &&
             (tl.field_c == 7)) {
-            if (ah.a(-1)) {
+            if (DualLinkNode.a(-1)) {
               n.field_L = 255;
               tl.field_c = fg.field_O;
               decompiledFrameRemainder3 = (var14 != 0);
             }
             if (decompiledFrameRemainder3) {
-              be.field_g = ab.a(-5094, 4);
+              MouseHandler.field_g = ab.a(-5094, 4);
               tl.field_c = ea.field_p;
               if (tl.field_c == 4) {
                 qf.a((byte) -125);
@@ -1467,7 +1467,7 @@ final class ij extends ib {
           }
           if (stackIn_156_0 == stackIn_156_1) {
             this.field_u = -1;
-            if (!s.field_i) {
+            if (!DualLinkDequeIterator.field_i) {
             }
           }
           if (tl.field_c == 1) {
@@ -1477,7 +1477,7 @@ final class ij extends ib {
             ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             var2_intLifetime1 = 84;
             var3Lifetime1 = 104;
-            qj.field_a.c(be.field_a, 320, var3Lifetime1 + 12, 10742263, -1);
+            qj.field_a.c(MouseHandler.field_a, 320, var3Lifetime1 + 12, 10742263, -1);
             var3Lifetime1 += 14;
             qj.field_a.c(hj.field_c, 320, var3Lifetime1 + 12, 10742263, -1);
             var3Lifetime1 += 22;
@@ -1494,7 +1494,7 @@ final class ij extends ib {
             qj.field_a.a(gf.field_a, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
             e.field_g[2].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.a(ka.field_l, var2_intLifetime1 + 68, var3Lifetime1 + 12, 16777215, -1);
+            qj.field_a.a(PacketBuffer.field_l, var2_intLifetime1 + 68, var3Lifetime1 + 12, 16777215, -1);
             e.field_g[3].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
             qj.field_a.a(he.field_l, 68 + var2_intLifetime1, 12 + var3Lifetime1, 16777215, -1);
@@ -1505,7 +1505,7 @@ final class ij extends ib {
             var3Lifetime1Lifetime1 = var4Lifetime1;
             e.field_g[5].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(nl.field_f, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
+            qj.field_a.a(SocketConnector.field_f, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
             e.field_g[6].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
             qj.field_a.a(qh.field_h, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime1, 16777215, -1);
@@ -1525,7 +1525,7 @@ final class ij extends ib {
             qj.field_a.a(fc.field_c, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime2, 16777215, -1);
             e.field_g[12].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.a(wg.field_e, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
+            qj.field_a.a(ClientException.field_e, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
             e.field_g[13].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
             qj.field_a.a(nb.field_O, 68 + var2_intLifetime1, var3Lifetime1Lifetime2 + 12, 16777215, -1);
@@ -1561,13 +1561,13 @@ final class ij extends ib {
             ti.b(128, 105, 384, 295, 0, 192);
             ed.a(-6313, 119, 98, fg.field_P, 402, 302);
             ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
-            if (ah.a(-1)) {
+            if (DualLinkNode.a(-1)) {
               qj.field_a.c(pd.field_p, 320, 159, 0, -1);
               qj.field_a.c(pd.field_p, 320, 161, 0, -1);
               qj.field_a.c(pd.field_p, 319, 160, 0, -1);
               qj.field_a.c(pd.field_p, 321, 160, 0, -1);
               qj.field_a.c(pd.field_p, 320, 160, 16777215, -1);
-              if (ah.a(param0 ^ -86)) {
+              if (DualLinkNode.a(param0 ^ -86)) {
                 qj.field_a.a(hj.field_e, 220, 192, 200, 200, 16777215, 0, 1, 0, qj.field_a.field_N);
               }
               ic.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
@@ -1741,7 +1741,7 @@ final class ij extends ib {
             if (oc.field_d) {
               ic.a(ta.field_r, 8, -1, false, 320, 5883647, 411);
             }
-            if (ah.a(param0 - 86)) {
+            if (DualLinkNode.a(param0 - 86)) {
               ic.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
             }
             var2_intLifetime3 = 180;
@@ -1749,7 +1749,7 @@ final class ij extends ib {
             if (oc.field_d) {
               stackIn_289_0 = tl.field_a;
             } else {
-              if (!ah.a(-1)) {
+              if (!DualLinkNode.a(-1)) {
                 stackIn_289_0 = sd.field_d;
               } else {
                 stackIn_289_0 = 0;
@@ -1773,8 +1773,8 @@ final class ij extends ib {
                     var8Lifetime1 = 0;
                     if (var2_intLifetime3 <= ni.field_e &&
                       ni.field_e <= (32 + var2_intLifetime3) &&
-                      eb.field_a >= var3Lifetime3 &&
-                      var3Lifetime3 + 32 >= eb.field_a) {
+                      KeyHandler.field_a >= var3Lifetime3 &&
+                      var3Lifetime3 + 32 >= KeyHandler.field_a) {
                       this.field_r = var7Lifetime2;
                       var8Lifetime1 = 2;
                       if (this.field_u != -1) {
@@ -1804,8 +1804,8 @@ final class ij extends ib {
                         this.field_u == -1 &&
                         !(var2_intLifetime3 > ni.field_e) &&
                         !((32 + var2_intLifetime3) < ni.field_e) &&
-                        !(var3Lifetime3 > eb.field_a) &&
-                        !(eb.field_a > var3Lifetime3 + 32)) {
+                        !(var3Lifetime3 > KeyHandler.field_a) &&
+                        !(KeyHandler.field_a > var3Lifetime3 + 32)) {
                         qj.field_a.c(rc.field_e[var7Lifetime2], 320, 230, 16777215, -1);
                         var6Lifetime2 = 0;
                         if ((1 << var7Lifetime2 & var4Lifetime2) != 0) {
@@ -1850,7 +1850,7 @@ final class ij extends ib {
                   var7Lifetime2 = 330 - (-(qj.field_a.field_N * 5 / 2) + 96);
                   var7Lifetime2 = var7Lifetime2 + qj.field_a.field_N;
                   qj.field_a.c(id.field_l, 320, var7Lifetime2, 10742263, -1);
-                  if (ah.a(-1)) {
+                  if (DualLinkNode.a(-1)) {
                     qj.field_a.c(hj.field_e, 320, var7Lifetime2 + 100, 10742263, -1);
                   }
                 }

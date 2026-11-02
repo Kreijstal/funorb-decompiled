@@ -332,7 +332,7 @@ final class sc extends bj {
           field_m = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_I; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_g[var8Lifetime1] != -2) {
               var9 = this.field_U[var8Lifetime1];
               var10 = this.field_O[var8Lifetime1];
@@ -379,7 +379,7 @@ final class sc extends bj {
                       var28 = field_J[var27];
                       if (var28 == 64) {
                         if (field_m == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_m;
                         field_m = field_m + 1;
@@ -394,7 +394,7 @@ final class sc extends bj {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(o.field_f + cc.field_n, tc.field_v + cc.field_p, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
@@ -421,7 +421,7 @@ final class sc extends bj {
                     var16Lifetime2 = field_J[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_m == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_m;
                       field_m = field_m + 1;

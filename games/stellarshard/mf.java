@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mf {
-    static pb[] field_a;
+    static Sprite[] field_a;
     static pf field_b;
     private static String field_z;
 

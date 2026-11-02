@@ -5,7 +5,7 @@ final class bk {
     private boolean field_d;
     private String field_a;
     static String field_e;
-    static pb field_b;
+    static Sprite field_b;
     private boolean field_c;
 
     public static void a(int param0) {
@@ -28,7 +28,7 @@ final class bk {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, ka param3, int param4) {
+    final static void a(int param0, boolean param1, int param2, PacketBuffer param3, int param4) {
         try {
           param3.a(param1, 12);
           param3.c(17, -117);

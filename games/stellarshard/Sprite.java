@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pb extends ie {
+class Sprite extends SpriteState {
     int[] field_z;
 
     void a(int param0, int param1, int param2) {
@@ -45,7 +45,7 @@ class pb extends ie {
           if (var6 <= 0) {
             return;
           }
-          pb.b(ti.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(ti.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -91,7 +91,7 @@ class pb extends ie {
           if (var5 <= 0) {
             return;
           }
-          pb.a(0, ti.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, ti.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -210,7 +210,7 @@ class pb extends ie {
         }
     }
 
-    pb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_w = param0;
         this.field_x = param1;
         this.field_t = param2;
@@ -287,7 +287,7 @@ class pb extends ie {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          pb.a(ti.field_a, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(ti.field_a, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -427,7 +427,7 @@ class pb extends ie {
           if (var6 <= 0) {
             return;
           }
-          pb.a(ti.field_a, this.field_z, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.a(ti.field_a, this.field_z, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -529,7 +529,7 @@ class pb extends ie {
         int var4 = param0 + (this.field_v >> 1) > ti.field_c ? ti.field_c - param0 << 1 : this.field_v;
         int var5 = param1 < ti.field_f ? ti.field_f - param1 << 1 : 0;
         int var6 = param1 + (this.field_y >> 1) > ti.field_l ? ti.field_l - param1 << 1 : this.field_y;
-        pb.a(this.field_z, var5 * this.field_v + var3, (param1 + (var5 >> 1)) * ti.field_i + (param0 + (var3 >> 1)), (this.field_v << 1) - (var4 - var3) + (this.field_v & 1), ti.field_i - (var4 - var3 >> 1), this.field_v, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_z, var5 * this.field_v + var3, (param1 + (var5 >> 1)) * ti.field_i + (param0 + (var3 >> 1)), (this.field_v << 1) - (var4 - var3) + (this.field_v & 1), ti.field_i - (var4 - var3 >> 1), this.field_v, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -670,9 +670,9 @@ class pb extends ie {
             return;
           }
           if (param2 == 256) {
-            pb.a(0, 0, 0, ti.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, ti.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            pb.a(0, 0, 0, ti.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, ti.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1350,9 +1350,9 @@ class pb extends ie {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            pb.a(0, 0, 0, var8, this.field_z, ti.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.a(0, 0, 0, var8, this.field_z, ti.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            pb.a(0, 0, 0, var8, this.field_z, ti.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.a(0, 0, 0, var8, this.field_z, ti.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -1378,10 +1378,10 @@ class pb extends ie {
         }
     }
 
-    final pb f() {
+    final Sprite f() {
         int var2 = 0;
         int var3 = 0;
-        pb var1 = new pb(this.field_v, this.field_y);
+        Sprite var1 = new Sprite(this.field_v, this.field_y);
         var1.field_w = this.field_w;
         var1.field_x = this.field_x;
         var1.field_t = this.field_w - this.field_v - this.field_t;
@@ -1435,7 +1435,7 @@ class pb extends ie {
           if (var5 <= 0) {
             return;
           }
-          pb.b(ti.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.b(ti.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2046,14 +2046,14 @@ class pb extends ie {
           if (var5 <= 0) {
             return;
           }
-          pb.a(ti.field_a, this.field_z, var4, var3, var6, var5, var7, var8);
+          Sprite.a(ti.field_a, this.field_z, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final pb a() {
+    final Sprite a() {
         int var3 = 0;
-        pb var1 = new pb(this.field_v, this.field_y);
+        Sprite var1 = new Sprite(this.field_v, this.field_y);
         var1.field_w = this.field_w;
         var1.field_x = this.field_x;
         var1.field_t = this.field_t;
@@ -2106,7 +2106,7 @@ class pb extends ie {
           if (var6 <= 0) {
             return;
           }
-          pb.b(ti.field_a, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.b(ti.field_a, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2152,7 +2152,7 @@ class pb extends ie {
           if (var6 <= 0) {
             return;
           }
-          pb.a(ti.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(ti.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2413,12 +2413,12 @@ class pb extends ie {
         int var4Lifetime2;
         int var5Lifetime1;
         var1 = this.field_y - 1;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var1 >= 0) {
             var2 = var1 * this.field_v;
             for (var3 = 0; var3 < this.field_v; var3++) {
               if (this.field_z[var2 + var3] != 0) {
-                break L1;
+                break scanLoop1;
               }
             }
             var1--;
@@ -2427,12 +2427,12 @@ class pb extends ie {
           break;
         }
         var2Lifetime1 = 0;
-        L4: while (true) {
+        scanLoop2: while (true) {
           if (var2Lifetime1 < var1) {
             var3Lifetime1 = var2Lifetime1 * this.field_v;
             for (var4 = 0; var4 < this.field_v; var4++) {
               if (this.field_z[var3Lifetime1 + var4] != 0) {
-                break L4;
+                break scanLoop2;
               }
             }
             var2Lifetime1++;
@@ -2441,11 +2441,11 @@ class pb extends ie {
           break;
         }
         var3Lifetime2 = this.field_v - 1;
-        L7: while (true) {
+        scanLoop3: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
               if (this.field_z[var4Lifetime1 * this.field_v + var3Lifetime2] != 0) {
-                break L7;
+                break scanLoop3;
               }
             }
             var3Lifetime2--;
@@ -2454,11 +2454,11 @@ class pb extends ie {
           break;
         }
         var4Lifetime2 = 0;
-        L10: while (true) {
+        scanLoop4: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
               if (this.field_z[var5 * this.field_v + var4Lifetime2] != 0) {
-                break L10;
+                break scanLoop4;
               }
             }
             var4Lifetime2++;
@@ -2506,7 +2506,7 @@ class pb extends ie {
         return false;
     }
 
-    pb(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_z = new int[param0 * param1];
         this.field_w = param0;
         this.field_v = param0;
@@ -2516,7 +2516,7 @@ class pb extends ie {
         this.field_t = 0;
     }
 
-    pb(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

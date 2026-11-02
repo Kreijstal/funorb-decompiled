@@ -4,7 +4,7 @@
 final class aa {
     static int[] field_c;
     private static long[] field_a;
-    static pb field_b;
+    static Sprite field_b;
 
     final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;

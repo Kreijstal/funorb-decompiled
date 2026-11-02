@@ -5,10 +5,10 @@ final class sb {
     static ek[] field_c;
     static ud[] field_e;
     private int field_d;
-    private ah[] field_f;
+    private DualLinkNode[] field_f;
     private long field_h;
     static byte[] field_i;
-    private ah field_g;
+    private DualLinkNode field_g;
     static int field_b;
     static String field_a;
 
@@ -32,12 +32,12 @@ final class sb {
         int var1 = -82 % ((44 - param0) / 45);
     }
 
-    final ah a(boolean param0) {
-        ah var2;
-        ah var3;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
-        ah var2Lifetime1;
-        ah var3Lifetime1;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         var4 = stellarshard.field_B;
         if (this.field_g == null) {
           return null;
@@ -79,12 +79,12 @@ final class sb {
 
     sb(int param0) {
         int var2 = 0;
-        ah dupTemp$0 = null;
-        ah var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_d = param0;
-        this.field_f = new ah[param0];
+        this.field_f = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new ah();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_f[var2] = dupTemp$0;
           var3.field_m = var3;
@@ -92,11 +92,11 @@ final class sb {
         }
     }
 
-    final ah a(long param0, int param1) {
-        ah var5 = null;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var5 = null;
         int var6 = stellarshard.field_B;
         this.field_h = param0;
-        ah var4 = this.field_f[(int)(param0 & (long)(-1 + this.field_d))];
+        DualLinkNode var4 = this.field_f[(int)(param0 & (long)(-1 + this.field_d))];
         this.field_g = var4.field_m;
         while (var4 != this.field_g) {
           if (param0 == this.field_g.field_o) {
@@ -110,11 +110,11 @@ final class sb {
           this.field_g = null;
           return null;
         }
-        return (ah) null;
+        return (DualLinkNode) null;
     }
 
-    final void a(ah param0, long param1, int param2) {
-        ah var5 = null;
+    final void a(DualLinkNode param0, long param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param0.field_l) {
             param0.c((byte) 36);

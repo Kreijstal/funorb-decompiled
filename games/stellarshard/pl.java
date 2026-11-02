@@ -5,15 +5,15 @@ import java.util.*;
 
 final class pl extends ae implements je {
     static Random field_P;
-    static pb field_T;
+    static Sprite field_T;
     static String field_V;
     private w field_X;
     static int[] field_S;
     static int field_U;
     private int field_O;
-    static oj field_W;
+    static IntrusiveDeque field_W;
     static long[] field_Q;
-    static pb field_R;
+    static Sprite field_R;
 
     final void l(int param0) {
         super.l(param0);
@@ -24,7 +24,7 @@ final class pl extends ae implements je {
 
     public final w a(byte param0) {
         if (param0 < 19) {
-          field_W = (oj) null;
+          field_W = (IntrusiveDeque) null;
         }
         return this.field_X;
     }
@@ -39,7 +39,7 @@ final class pl extends ae implements je {
         if (param0 != 3690) {
           return (String) null;
         }
-        nc.b((byte) 98, ni.field_e - this.field_O + this.field_p, eb.field_a);
+        nc.b((byte) 98, ni.field_e - this.field_O + this.field_p, KeyHandler.field_a);
         return this.field_x;
     }
 
@@ -66,10 +66,10 @@ final class pl extends ae implements je {
         if (!(lk.field_h <= 2)) {
           lk.field_h = 2;
         }
-        ka.field_p = (12 & param1) >> 2;
+        PacketBuffer.field_p = (12 & param1) >> 2;
         rl.field_a = 3 & param1;
-        if (2 < ka.field_p) {
-          ka.field_p = 2;
+        if (2 < PacketBuffer.field_p) {
+          PacketBuffer.field_p = 2;
         }
         if (2 < rl.field_a) {
           rl.field_a = 2;
@@ -109,7 +109,7 @@ final class pl extends ae implements je {
         try {
           var1_int = 0;
           if (param0 != 63) {
-            field_T = (pb) null;
+            field_T = (Sprite) null;
           }
           while (true) {
             if (var1_int >= 1000) {
@@ -136,7 +136,7 @@ final class pl extends ae implements je {
         field_P = new Random();
         field_S = new int[8192];
         field_U = 0;
-        field_W = new oj();
+        field_W = new IntrusiveDeque();
         field_Q = new long[1000];
     }
 }

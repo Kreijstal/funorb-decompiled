@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class og {
-    static fe field_c;
+    static MouseWheelInput field_c;
     static int[] field_b;
     static int field_a;
     static int[][] field_d;
@@ -20,23 +20,23 @@ final class og {
         field_b = null;
     }
 
-    final static nl a(byte param0, String param1, int param2) {
-        bc var3 = null;
+    final static SocketConnector a(byte param0, String param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        bc stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new bc();
+          var3 = new ProxySocketConnector();
           if (param0 >= -119) {
-            field_c = (fe) null;
+            field_c = (MouseWheelInput) null;
           }
-          ((nl) ((Object) var3)).field_g = param2;
-          ((nl) ((Object) var3)).field_c = param1;
+          ((SocketConnector) ((Object) var3)).field_g = param2;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_3_0 = var3;
-          return (nl) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

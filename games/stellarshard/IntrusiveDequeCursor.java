@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug {
-    private oj field_e;
+final class IntrusiveDequeCursor {
+    private IntrusiveDeque field_e;
     static String[] field_c;
     static String field_b;
-    static pb field_f;
-    private gg field_a;
+    static Sprite field_f;
+    private IntrusiveNode field_a;
     static String field_d;
 
-    final gg b(int param0, gg param1) {
-        gg var3 = null;
+    final IntrusiveNode b(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        gg stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -30,7 +30,7 @@ final class ug {
           if (this.field_e.field_d == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
-            return (gg) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_a = var3.field_g;
           stackIn_10_0 = var3;
@@ -49,9 +49,9 @@ final class ug {
         }
     }
 
-    final gg a(int param0) {
+    final IntrusiveNode a(int param0) {
         int var2 = 26 % ((4 - param0) / 50);
-        gg var3 = this.field_a;
+        IntrusiveNode var3 = this.field_a;
         if (var3 != this.field_e.field_d) {
           this.field_a = var3.field_c;
           return var3;
@@ -60,11 +60,11 @@ final class ug {
         return null;
     }
 
-    final gg a(boolean param0) {
-        gg var2 = null;
-        gg var2Lifetime1;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (!param0) {
-          this.field_a = (gg) null;
+          this.field_a = (IntrusiveNode) null;
           var2 = this.field_a;
           if (var2 == this.field_e.field_d) {
             this.field_a = null;
@@ -82,11 +82,11 @@ final class ug {
         return var2Lifetime1;
     }
 
-    final gg a(int param0, gg param1) {
-        gg var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        gg stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -107,7 +107,7 @@ final class ug {
           }
           this.field_a = null;
           stackIn_7_0 = null;
-          return (gg) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -124,14 +124,14 @@ final class ug {
 
     final static int b(int param0) {
         if (param0 != 1) {
-          field_f = (pb) null;
+          field_f = (Sprite) null;
           return 1;
         }
         return 1;
     }
 
-    final gg a(byte param0) {
-        gg var2 = this.field_e.field_d.field_c;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_e.field_d.field_c;
         if (var2 == this.field_e.field_d) {
           this.field_a = null;
           return null;
@@ -189,7 +189,7 @@ final class ug {
         field_d = null;
     }
 
-    ug(oj param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -197,11 +197,11 @@ final class ug {
         }
     }
 
-    final gg b(byte param0) {
-        gg var2 = null;
-        gg var2Lifetime1;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 <= 114) {
-          field_f = (pb) null;
+          field_f = (Sprite) null;
           var2 = this.field_e.field_d.field_g;
           if (this.field_e.field_d != var2) {
             this.field_a = var2.field_g;

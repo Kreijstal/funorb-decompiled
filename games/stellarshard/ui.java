@@ -5,7 +5,7 @@ abstract class ui extends g {
     private int field_E;
     private ei field_H;
     boolean field_G;
-    static pb field_F;
+    static Sprite field_F;
     static li field_C;
     static String field_D;
     static String field_B;
@@ -23,7 +23,7 @@ abstract class ui extends g {
           return;
         }
         if (rj.field_s == null) {
-          rj.field_s = new pb(this.field_p, this.field_t);
+          rj.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(rj.field_s, 1);
           ti.d();
           this.b(param1 + 58, 0, 0);
@@ -33,7 +33,7 @@ abstract class ui extends g {
           return;
         }
         if (this.field_p > rj.field_s.field_v) {
-          rj.field_s = new pb(this.field_p, this.field_t);
+          rj.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(rj.field_s, 1);
           ti.d();
           this.b(param1 + 58, 0, 0);
@@ -43,7 +43,7 @@ abstract class ui extends g {
           return;
         }
         if (this.field_t > rj.field_s.field_y) {
-          rj.field_s = new pb(this.field_p, this.field_t);
+          rj.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(rj.field_s, 1);
           ti.d();
           this.b(param1 + 58, 0, 0);

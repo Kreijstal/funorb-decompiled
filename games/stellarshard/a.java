@@ -5,7 +5,7 @@ final class a {
     int field_a;
     int field_c;
     int field_e;
-    static ka field_b;
+    static PacketBuffer field_b;
     static String field_g;
     static qe[] field_h;
     int field_f;
@@ -21,19 +21,19 @@ final class a {
         }
     }
 
-    final static pb[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 > -106) {
-          return (pb[]) null;
+          return (Sprite[]) null;
         }
-        pb[] var6 = new pb[9];
-        pb[] var5 = var6;
-        pb dupTemp$0 = cl.a(param0, -41, param2);
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = cl.a(param0, -41, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        pb dupTemp$1 = cl.a(param1, -117, param2);
+        Sprite dupTemp$1 = cl.a(param1, -117, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

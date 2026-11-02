@@ -73,7 +73,7 @@ final class mj extends g implements md, oi, rf {
         }
         if (ta.field_m == o.field_l) {
           o.field_l = ok.field_a;
-          return hi.field_d;
+          return DelegatingCanvas.field_d;
         }
         return null;
     }
@@ -405,11 +405,11 @@ final class mj extends g implements md, oi, rf {
         int var1 = 1;
         this.field_D = new nd("", (lf) null, var1 != 0);
         this.field_I = new ig(ta.field_k, (lf) null);
-        this.field_J = new ig(bc.field_h, (lf) null);
+        this.field_J = new ig(ProxySocketConnector.field_h, (lf) null);
         this.field_N.field_x = fc.field_d;
         this.field_H.field_x = fk.field_r;
         this.field_K.field_x = ib.field_m;
-        this.field_G.field_x = wg.field_d;
+        this.field_G.field_x = ClientException.field_d;
         this.field_B.field_x = bi.field_t;
         this.field_C.field_x = si.field_B;
         this.field_D.field_x = ci.field_c;

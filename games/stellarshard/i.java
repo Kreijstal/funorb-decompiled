@@ -3,7 +3,7 @@
  */
 abstract class i {
     static th field_d;
-    static oj field_c;
+    static IntrusiveDeque field_c;
     static int field_a;
     static int[] field_e;
     static int field_b;
@@ -88,6 +88,6 @@ abstract class i {
     static {
         field_d = new th();
         field_e = new int[256];
-        field_c = new oj();
+        field_c = new IntrusiveDeque();
     }
 }

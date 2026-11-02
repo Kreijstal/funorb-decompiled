@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends gg {
+final class le extends IntrusiveNode {
     static String field_l;
     static int field_k;
     static String field_q;
@@ -134,346 +134,346 @@ final class le extends gg {
         byte[] var2Lifetime84;
         try {
           b.field_u = param0;
-          var2 = mh.a(false, "achievement_names,0");
+          var2 = ImageProducerRasterBuffer.a(false, "achievement_names,0");
           if (null != var2) {
             rc.field_e[0] = se.a(0, var2);
           }
-          var2Lifetime1 = mh.a(false, "achievement_names,1");
+          var2Lifetime1 = ImageProducerRasterBuffer.a(false, "achievement_names,1");
           if (var2Lifetime1 != null) {
             rc.field_e[1] = se.a(0, var2Lifetime1);
           }
-          var2Lifetime2 = mh.a(false, "achievement_names,2");
+          var2Lifetime2 = ImageProducerRasterBuffer.a(false, "achievement_names,2");
           if (var2Lifetime2 != null) {
             rc.field_e[2] = se.a(0, var2Lifetime2);
           }
-          var2Lifetime3 = mh.a(false, "achievement_names,3");
+          var2Lifetime3 = ImageProducerRasterBuffer.a(false, "achievement_names,3");
           if (null != var2Lifetime3) {
             rc.field_e[3] = se.a(ih.a(param1, 26949), var2Lifetime3);
           }
-          var2Lifetime4 = mh.a(false, "achievement_names,4");
+          var2Lifetime4 = ImageProducerRasterBuffer.a(false, "achievement_names,4");
           if (null != var2Lifetime4) {
             rc.field_e[4] = se.a(param1 - 26949, var2Lifetime4);
           }
-          var2Lifetime5 = mh.a(false, "achievement_names,5");
+          var2Lifetime5 = ImageProducerRasterBuffer.a(false, "achievement_names,5");
           if (var2Lifetime5 != null) {
             rc.field_e[5] = se.a(0, var2Lifetime5);
           }
-          var2Lifetime6 = mh.a(false, "achievement_names,6");
+          var2Lifetime6 = ImageProducerRasterBuffer.a(false, "achievement_names,6");
           if (null != var2Lifetime6) {
             rc.field_e[6] = se.a(0, var2Lifetime6);
           }
-          var2Lifetime7 = mh.a(false, "achievement_names,7");
+          var2Lifetime7 = ImageProducerRasterBuffer.a(false, "achievement_names,7");
           if (null != var2Lifetime7) {
             rc.field_e[7] = se.a(0, var2Lifetime7);
           }
-          var2Lifetime8 = mh.a(false, "achievement_names,8");
+          var2Lifetime8 = ImageProducerRasterBuffer.a(false, "achievement_names,8");
           if (null != var2Lifetime8) {
             rc.field_e[8] = se.a(0, var2Lifetime8);
           }
-          var2Lifetime9 = mh.a(false, "achievement_names,9");
+          var2Lifetime9 = ImageProducerRasterBuffer.a(false, "achievement_names,9");
           if (null != var2Lifetime9) {
             rc.field_e[9] = se.a(0, var2Lifetime9);
           }
-          var2Lifetime10 = mh.a(false, "achievement_names,10");
+          var2Lifetime10 = ImageProducerRasterBuffer.a(false, "achievement_names,10");
           if (var2Lifetime10 != null) {
             rc.field_e[10] = se.a(0, var2Lifetime10);
           }
-          var2Lifetime11 = mh.a(false, "achievement_names,11");
+          var2Lifetime11 = ImageProducerRasterBuffer.a(false, "achievement_names,11");
           if (param1 != 26949) {
             return;
           }
           if (null != var2Lifetime11) {
             rc.field_e[11] = se.a(0, var2Lifetime11);
           }
-          var2Lifetime12 = mh.a(false, "achievement_names,12");
+          var2Lifetime12 = ImageProducerRasterBuffer.a(false, "achievement_names,12");
           if (var2Lifetime12 != null) {
             rc.field_e[12] = se.a(param1 - 26949, var2Lifetime12);
           }
-          var2Lifetime13 = mh.a(false, "achievement_names,13");
+          var2Lifetime13 = ImageProducerRasterBuffer.a(false, "achievement_names,13");
           if (var2Lifetime13 != null) {
             rc.field_e[13] = se.a(0, var2Lifetime13);
           }
-          var2Lifetime14 = mh.a(false, "achievement_criteria,0");
+          var2Lifetime14 = ImageProducerRasterBuffer.a(false, "achievement_criteria,0");
           if (null != var2Lifetime14) {
             hc.field_t[0] = se.a(param1 - 26949, var2Lifetime14);
           }
-          var2Lifetime15 = mh.a(false, "achievement_criteria,1");
+          var2Lifetime15 = ImageProducerRasterBuffer.a(false, "achievement_criteria,1");
           if (null != var2Lifetime15) {
             hc.field_t[1] = se.a(0, var2Lifetime15);
           }
-          var2Lifetime16 = mh.a(false, "achievement_criteria,2");
+          var2Lifetime16 = ImageProducerRasterBuffer.a(false, "achievement_criteria,2");
           if (var2Lifetime16 != null) {
             hc.field_t[2] = se.a(ih.a(param1, 26949), var2Lifetime16);
           }
-          var2Lifetime17 = mh.a(false, "achievement_criteria,3");
+          var2Lifetime17 = ImageProducerRasterBuffer.a(false, "achievement_criteria,3");
           if (var2Lifetime17 != null) {
             hc.field_t[3] = se.a(ih.a(param1, 26949), var2Lifetime17);
           }
-          var2Lifetime18 = mh.a(false, "achievement_criteria,4");
+          var2Lifetime18 = ImageProducerRasterBuffer.a(false, "achievement_criteria,4");
           if (var2Lifetime18 != null) {
             hc.field_t[4] = se.a(ih.a(param1, 26949), var2Lifetime18);
           }
-          var2Lifetime19 = mh.a(false, "achievement_criteria,5");
+          var2Lifetime19 = ImageProducerRasterBuffer.a(false, "achievement_criteria,5");
           if (var2Lifetime19 != null) {
             hc.field_t[5] = se.a(0, var2Lifetime19);
           }
-          var2Lifetime20 = mh.a(false, "achievement_criteria,6");
+          var2Lifetime20 = ImageProducerRasterBuffer.a(false, "achievement_criteria,6");
           if (null != var2Lifetime20) {
             hc.field_t[6] = se.a(0, var2Lifetime20);
           }
-          var2Lifetime21 = mh.a(false, "achievement_criteria,7");
+          var2Lifetime21 = ImageProducerRasterBuffer.a(false, "achievement_criteria,7");
           if (var2Lifetime21 != null) {
             hc.field_t[7] = se.a(param1 - 26949, var2Lifetime21);
           }
-          var2Lifetime22 = mh.a(false, "achievement_criteria,8");
+          var2Lifetime22 = ImageProducerRasterBuffer.a(false, "achievement_criteria,8");
           if (var2Lifetime22 != null) {
             hc.field_t[8] = se.a(0, var2Lifetime22);
           }
-          var2Lifetime23 = mh.a(false, "achievement_criteria,9");
+          var2Lifetime23 = ImageProducerRasterBuffer.a(false, "achievement_criteria,9");
           if (var2Lifetime23 != null) {
             hc.field_t[9] = se.a(0, var2Lifetime23);
           }
-          var2Lifetime24 = mh.a(false, "achievement_criteria,10");
+          var2Lifetime24 = ImageProducerRasterBuffer.a(false, "achievement_criteria,10");
           if (var2Lifetime24 != null) {
             hc.field_t[10] = se.a(param1 - 26949, var2Lifetime24);
           }
-          var2Lifetime25 = mh.a(false, "achievement_criteria,11");
+          var2Lifetime25 = ImageProducerRasterBuffer.a(false, "achievement_criteria,11");
           if (var2Lifetime25 != null) {
             hc.field_t[11] = se.a(param1 - 26949, var2Lifetime25);
           }
-          var2Lifetime26 = mh.a(false, "achievement_criteria,12");
+          var2Lifetime26 = ImageProducerRasterBuffer.a(false, "achievement_criteria,12");
           if (null != var2Lifetime26) {
             hc.field_t[12] = se.a(param1 - 26949, var2Lifetime26);
           }
-          var2Lifetime27 = mh.a(false, "achievement_criteria,13");
+          var2Lifetime27 = ImageProducerRasterBuffer.a(false, "achievement_criteria,13");
           if (var2Lifetime27 != null) {
             hc.field_t[13] = se.a(0, var2Lifetime27);
           }
-          var2Lifetime28 = mh.a(false, "levelcolonno");
+          var2Lifetime28 = ImageProducerRasterBuffer.a(false, "levelcolonno");
           if (null != var2Lifetime28) {
             hh.field_d = se.a(0, var2Lifetime28);
           }
-          var2Lifetime29 = mh.a(false, "gravitywell");
+          var2Lifetime29 = ImageProducerRasterBuffer.a(false, "gravitywell");
           if (var2Lifetime29 != null) {
             jf.field_l = se.a(0, var2Lifetime29);
           }
-          var2Lifetime30 = mh.a(false, "splitsinto4");
+          var2Lifetime30 = ImageProducerRasterBuffer.a(false, "splitsinto4");
           if (null != var2Lifetime30) {
             hc.field_h = se.a(0, var2Lifetime30);
           }
-          var2Lifetime31 = mh.a(false, "shootsround");
+          var2Lifetime31 = ImageProducerRasterBuffer.a(false, "shootsround");
           if (null != var2Lifetime31) {
             he.field_k = se.a(0, var2Lifetime31);
           }
-          var2Lifetime32 = mh.a(false, "shoots");
+          var2Lifetime32 = ImageProducerRasterBuffer.a(false, "shoots");
           if (null != var2Lifetime32) {
             mc.field_b = se.a(param1 - 26949, var2Lifetime32);
           }
-          var2Lifetime33 = mh.a(false, "homesin");
+          var2Lifetime33 = ImageProducerRasterBuffer.a(false, "homesin");
           if (null != var2Lifetime33) {
             ci.field_d = se.a(param1 ^ 26949, var2Lifetime33);
           }
-          var2Lifetime34 = mh.a(false, "collectme");
+          var2Lifetime34 = ImageProducerRasterBuffer.a(false, "collectme");
           if (var2Lifetime34 != null) {
             cd.field_P = se.a(param1 - 26949, var2Lifetime34);
           }
-          var2Lifetime35 = mh.a(false, "musoff");
+          var2Lifetime35 = ImageProducerRasterBuffer.a(false, "musoff");
           if (null != var2Lifetime35) {
             rc.field_f = se.a(0, var2Lifetime35);
           }
-          var2Lifetime36 = mh.a(false, "musicspaces");
+          var2Lifetime36 = ImageProducerRasterBuffer.a(false, "musicspaces");
           if (null != var2Lifetime36) {
-            fe.field_f = se.a(param1 ^ 26949, var2Lifetime36);
+            MouseWheelInput.field_f = se.a(param1 ^ 26949, var2Lifetime36);
           }
-          var2Lifetime37 = mh.a(false, "sndoff");
+          var2Lifetime37 = ImageProducerRasterBuffer.a(false, "sndoff");
           if (var2Lifetime37 != null) {
             ch.field_d = se.a(param1 ^ 26949, var2Lifetime37);
           }
-          var2Lifetime38 = mh.a(false, "soundspaces");
+          var2Lifetime38 = ImageProducerRasterBuffer.a(false, "soundspaces");
           if (var2Lifetime38 != null) {
             eh.field_b = se.a(0, var2Lifetime38);
           }
-          var2Lifetime39 = mh.a(false, "levelspaces");
+          var2Lifetime39 = ImageProducerRasterBuffer.a(false, "levelspaces");
           if (null != var2Lifetime39) {
             qf.field_f = se.a(0, var2Lifetime39);
           }
-          var2Lifetime40 = mh.a(false, "startlevel");
+          var2Lifetime40 = ImageProducerRasterBuffer.a(false, "startlevel");
           if (var2Lifetime40 != null) {
             kf.field_c = se.a(0, var2Lifetime40);
           }
-          var2Lifetime41 = mh.a(false, "fsoff");
+          var2Lifetime41 = ImageProducerRasterBuffer.a(false, "fsoff");
           if (null != var2Lifetime41) {
             gf.field_b = se.a(0, var2Lifetime41);
           }
-          var2Lifetime42 = mh.a(false, "achievecaps");
+          var2Lifetime42 = ImageProducerRasterBuffer.a(false, "achievecaps");
           if (var2Lifetime42 != null) {
             se.a(param1 - 26949, var2Lifetime42);
           }
-          var2Lifetime43 = mh.a(false, "achievethisgame");
+          var2Lifetime43 = ImageProducerRasterBuffer.a(false, "achievethisgame");
           if (var2Lifetime43 != null) {
             se.a(param1 - 26949, var2Lifetime43);
           }
-          var2Lifetime44 = mh.a(false, "pleasewaitforhs");
+          var2Lifetime44 = ImageProducerRasterBuffer.a(false, "pleasewaitforhs");
           if (null != var2Lifetime44) {
             wk.field_g = se.a(0, var2Lifetime44);
           }
-          var2Lifetime45 = mh.a(false, "lastscorecolon");
+          var2Lifetime45 = ImageProducerRasterBuffer.a(false, "lastscorecolon");
           if (var2Lifetime45 != null) {
             vg.field_s = se.a(0, var2Lifetime45);
           }
-          var2Lifetime46 = mh.a(false, "highscorecaps");
+          var2Lifetime46 = ImageProducerRasterBuffer.a(false, "highscorecaps");
           if (null != var2Lifetime46) {
             se.a(0, var2Lifetime46);
           }
-          var2Lifetime47 = mh.a(false, "controls");
+          var2Lifetime47 = ImageProducerRasterBuffer.a(false, "controls");
           if (null != var2Lifetime47) {
             cm.field_e = se.a(param1 ^ 26949, var2Lifetime47);
           }
-          var2Lifetime48 = mh.a(false, "turnship");
+          var2Lifetime48 = ImageProducerRasterBuffer.a(false, "turnship");
           if (null != var2Lifetime48) {
             nb.field_N = se.a(0, var2Lifetime48);
           }
-          var2Lifetime49 = mh.a(false, "megalaser");
+          var2Lifetime49 = ImageProducerRasterBuffer.a(false, "megalaser");
           if (null != var2Lifetime49) {
             rd.field_b = se.a(param1 - 26949, var2Lifetime49);
           }
-          var2Lifetime50 = mh.a(false, "lightninggun");
+          var2Lifetime50 = ImageProducerRasterBuffer.a(false, "lightninggun");
           if (null != var2Lifetime50) {
             ja.field_k = se.a(0, var2Lifetime50);
           }
-          var2Lifetime51 = mh.a(false, "flamecannon");
+          var2Lifetime51 = ImageProducerRasterBuffer.a(false, "flamecannon");
           if (null != var2Lifetime51) {
             nb.field_O = se.a(param1 ^ 26949, var2Lifetime51);
           }
-          var2Lifetime52 = mh.a(false, "phoenixdevice");
+          var2Lifetime52 = ImageProducerRasterBuffer.a(false, "phoenixdevice");
           if (null != var2Lifetime52) {
-            wg.field_e = se.a(0, var2Lifetime52);
+            ClientException.field_e = se.a(0, var2Lifetime52);
           }
-          var2Lifetime53 = mh.a(false, "invunerability");
+          var2Lifetime53 = ImageProducerRasterBuffer.a(false, "invunerability");
           if (var2Lifetime53 != null) {
             fc.field_c = se.a(param1 - 26949, var2Lifetime53);
           }
-          var2Lifetime54 = mh.a(false, "phaseshield");
+          var2Lifetime54 = ImageProducerRasterBuffer.a(false, "phaseshield");
           if (var2Lifetime54 != null) {
             ha.field_x = se.a(0, var2Lifetime54);
           }
-          var2Lifetime55 = mh.a(false, "nuke");
+          var2Lifetime55 = ImageProducerRasterBuffer.a(false, "nuke");
           if (null != var2Lifetime55) {
             te.field_b = se.a(0, var2Lifetime55);
           }
-          var2Lifetime56 = mh.a(false, "shipshield");
+          var2Lifetime56 = ImageProducerRasterBuffer.a(false, "shipshield");
           if (null != var2Lifetime56) {
             pe.field_a = se.a(0, var2Lifetime56);
           }
-          var2Lifetime57 = mh.a(false, "supercannon");
+          var2Lifetime57 = ImageProducerRasterBuffer.a(false, "supercannon");
           if (var2Lifetime57 != null) {
             we.field_e = se.a(0, var2Lifetime57);
           }
-          var2Lifetime58 = mh.a(false, "ioncannon");
+          var2Lifetime58 = ImageProducerRasterBuffer.a(false, "ioncannon");
           if (var2Lifetime58 != null) {
             qh.field_h = se.a(0, var2Lifetime58);
           }
-          var2Lifetime59 = mh.a(false, "wavegun");
+          var2Lifetime59 = ImageProducerRasterBuffer.a(false, "wavegun");
           if (var2Lifetime59 != null) {
-            nl.field_f = se.a(0, var2Lifetime59);
+            SocketConnector.field_f = se.a(0, var2Lifetime59);
           }
-          var2Lifetime60 = mh.a(false, "laser");
+          var2Lifetime60 = ImageProducerRasterBuffer.a(false, "laser");
           if (var2Lifetime60 != null) {
             td.field_e = se.a(0, var2Lifetime60);
           }
-          var2Lifetime61 = mh.a(false, "heavycannon");
+          var2Lifetime61 = ImageProducerRasterBuffer.a(false, "heavycannon");
           if (null != var2Lifetime61) {
             he.field_l = se.a(0, var2Lifetime61);
           }
-          var2Lifetime62 = mh.a(false, "bouncegun");
+          var2Lifetime62 = ImageProducerRasterBuffer.a(false, "bouncegun");
           if (null != var2Lifetime62) {
-            ka.field_l = se.a(0, var2Lifetime62);
+            PacketBuffer.field_l = se.a(0, var2Lifetime62);
           }
-          var2Lifetime63 = mh.a(false, "iongun");
+          var2Lifetime63 = ImageProducerRasterBuffer.a(false, "iongun");
           if (var2Lifetime63 != null) {
             gf.field_a = se.a(0, var2Lifetime63);
           }
-          var2Lifetime64 = mh.a(false, "trigun");
+          var2Lifetime64 = ImageProducerRasterBuffer.a(false, "trigun");
           if (null != var2Lifetime64) {
             ei.field_A = se.a(0, var2Lifetime64);
           }
-          var2Lifetime65 = mh.a(false, "instruct2");
+          var2Lifetime65 = ImageProducerRasterBuffer.a(false, "instruct2");
           if (null != var2Lifetime65) {
             pl.field_V = se.a(0, var2Lifetime65);
           }
-          var2Lifetime66 = mh.a(false, "instruct1");
+          var2Lifetime66 = ImageProducerRasterBuffer.a(false, "instruct1");
           if (var2Lifetime66 != null) {
             hj.field_c = se.a(0, var2Lifetime66);
           }
-          var2Lifetime67 = mh.a(false, "instruct0");
+          var2Lifetime67 = ImageProducerRasterBuffer.a(false, "instruct0");
           if (null != var2Lifetime67) {
-            be.field_a = se.a(0, var2Lifetime67);
+            MouseHandler.field_a = se.a(0, var2Lifetime67);
           }
-          var2Lifetime68 = mh.a(false, "instructionscaps");
+          var2Lifetime68 = ImageProducerRasterBuffer.a(false, "instructionscaps");
           if (var2Lifetime68 != null) {
             se.a(0, var2Lifetime68);
           }
-          var2Lifetime69 = mh.a(false, "currentscore");
+          var2Lifetime69 = ImageProducerRasterBuffer.a(false, "currentscore");
           if (var2Lifetime69 != null) {
             wc.field_l = se.a(0, var2Lifetime69);
           }
-          var2Lifetime70 = mh.a(false, "currentlevel");
+          var2Lifetime70 = ImageProducerRasterBuffer.a(false, "currentlevel");
           if (null != var2Lifetime70) {
             sg.field_d = se.a(param1 ^ 26949, var2Lifetime70);
           }
-          var2Lifetime71 = mh.a(false, "continuegame");
+          var2Lifetime71 = ImageProducerRasterBuffer.a(false, "continuegame");
           if (var2Lifetime71 != null) {
             dj.field_c = se.a(0, var2Lifetime71);
           }
-          var2Lifetime72 = mh.a(false, "gameending");
+          var2Lifetime72 = ImageProducerRasterBuffer.a(false, "gameending");
           if (var2Lifetime72 != null) {
             hf.field_g = se.a(0, var2Lifetime72);
           }
-          var2Lifetime73 = mh.a(false, "congrats");
+          var2Lifetime73 = ImageProducerRasterBuffer.a(false, "congrats");
           if (var2Lifetime73 != null) {
             lk.field_g = se.a(0, var2Lifetime73);
           }
-          var2Lifetime74 = mh.a(false, "secs");
+          var2Lifetime74 = ImageProducerRasterBuffer.a(false, "secs");
           if (null != var2Lifetime74) {
             ef.field_o = se.a(0, var2Lifetime74);
           }
-          var2Lifetime75 = mh.a(false, "freegameend");
+          var2Lifetime75 = ImageProducerRasterBuffer.a(false, "freegameend");
           if (var2Lifetime75 != null) {
             dd.field_i = se.a(param1 ^ 26949, var2Lifetime75);
           }
-          var2Lifetime76 = mh.a(false, "helpthang");
+          var2Lifetime76 = ImageProducerRasterBuffer.a(false, "helpthang");
           if (null != var2Lifetime76) {
-            ah.field_k = se.a(0, var2Lifetime76);
+            DualLinkNode.field_k = se.a(0, var2Lifetime76);
           }
-          var2Lifetime77 = mh.a(false, "scorecol");
+          var2Lifetime77 = ImageProducerRasterBuffer.a(false, "scorecol");
           if (null != var2Lifetime77) {
             ce.field_f = se.a(param1 - 26949, var2Lifetime77);
           }
-          var2Lifetime78 = mh.a(false, "pressesc");
+          var2Lifetime78 = ImageProducerRasterBuffer.a(false, "pressesc");
           if (null != var2Lifetime78) {
             bb.field_f = se.a(0, var2Lifetime78);
           }
-          var2Lifetime79 = mh.a(false, "achievcaps");
+          var2Lifetime79 = ImageProducerRasterBuffer.a(false, "achievcaps");
           if (var2Lifetime79 != null) {
             te.field_a = se.a(0, var2Lifetime79);
           }
-          var2Lifetime80 = mh.a(false, "scancaps");
+          var2Lifetime80 = ImageProducerRasterBuffer.a(false, "scancaps");
           if (var2Lifetime80 != null) {
             wb.field_i = se.a(0, var2Lifetime80);
           }
-          var2Lifetime81 = mh.a(false, "anomaly_detected");
+          var2Lifetime81 = ImageProducerRasterBuffer.a(false, "anomaly_detected");
           if (var2Lifetime81 != null) {
             nd.field_F = se.a(0, var2Lifetime81);
           }
-          var2Lifetime82 = mh.a(false, "captions,0");
+          var2Lifetime82 = ImageProducerRasterBuffer.a(false, "captions,0");
           if (null != var2Lifetime82) {
             sg.field_c[0] = se.a(ih.a(param1, 26949), var2Lifetime82);
           }
-          var2Lifetime83 = mh.a(false, "captions,1");
+          var2Lifetime83 = ImageProducerRasterBuffer.a(false, "captions,1");
           if (var2Lifetime83 != null) {
             sg.field_c[1] = se.a(0, var2Lifetime83);
           }
-          var2Lifetime84 = mh.a(false, "captions,2");
+          var2Lifetime84 = ImageProducerRasterBuffer.a(false, "captions,2");
           if (var2Lifetime84 != null) {
             sg.field_c[2] = se.a(param1 - 26949, var2Lifetime84);
           }

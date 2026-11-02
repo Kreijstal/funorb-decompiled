@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei extends dg {
-    private oj field_C;
-    static pb[] field_D;
+    private IntrusiveDeque field_C;
+    static Sprite[] field_D;
     static String field_E;
     static int[] field_I;
     static ck field_G;
@@ -14,7 +14,7 @@ final class ei extends dg {
 
     final void i(int param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(this.field_C);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_C);
         if (param0 != -21535) {
           field_H = (byte[][]) null;
         }
@@ -42,7 +42,7 @@ final class ei extends dg {
 
     final void f(byte param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(this.field_C);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_C);
         if (param0 >= -126) {
           this.d((byte) -45);
         }
@@ -58,7 +58,7 @@ final class ei extends dg {
 
     final void e(byte param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(this.field_C);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_C);
         ui var3 = (ui) (var2.b((byte) 124));
         while (var3 != null) {
           var3.field_G = false;
@@ -91,7 +91,7 @@ final class ei extends dg {
         if (this.field_u != null) {
           this.field_u.a(true, param3, param2, (rj) (this), param1 + 4606);
         }
-        ug var5 = new ug(this.field_C);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_C);
         if (param1 != -57) {
           return;
         }
@@ -103,14 +103,14 @@ final class ei extends dg {
     }
 
     final rj a(int param0) {
-        ug var2;
+        IntrusiveDequeCursor var2;
         ui var3;
         int var4;
         var4 = stellarshard.field_B;
         if (param0 != 257) {
           field_E = (String) null;
         }
-        var2 = new ug(this.field_C);
+        var2 = new IntrusiveDequeCursor(this.field_C);
         var3 = (ui) (var2.b((byte) 115));
         while (var3 != null) {
           if (var3.field_G) {
@@ -123,7 +123,7 @@ final class ei extends dg {
 
     final ui d(byte param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(this.field_C);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_C);
         ui var3 = (ui) (var2.b((byte) 116));
         while (var3 != null) {
           if (var3.field_G) {
@@ -167,7 +167,7 @@ final class ei extends dg {
 
     public ei() {
         super(0, 0, ml.field_b, vf.field_F, (uk) null, (lf) null);
-        this.field_C = new oj();
+        this.field_C = new IntrusiveDeque();
     }
 
     static {

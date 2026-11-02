@@ -9,7 +9,7 @@ final class pk {
     static int[] field_j;
     static int[] field_i;
     static String[] field_d;
-    static eb field_e;
+    static KeyHandler field_e;
     static String field_b;
     static qc field_a;
 
@@ -41,18 +41,18 @@ final class pk {
           var4_int = 63 / ((-39 - param3) / 62);
           if (255 == param2) {
             stackIn_5_0 = !(u.field_k >= 13);
-            hi.field_d = dg.a(stackIn_5_0, 0);
+            DelegatingCanvas.field_d = dg.a(stackIn_5_0, 0);
             return;
           }
           if (param2 < 100) {
-            hi.field_d = fb.a(param2, true, param0);
+            DelegatingCanvas.field_d = fb.a(param2, true, param0);
             return;
           }
           if (105 >= param2) {
-            hi.field_d = gj.a(true, param1);
+            DelegatingCanvas.field_d = gj.a(true, param1);
             return;
           }
-          hi.field_d = fb.a(param2, true, param0);
+          DelegatingCanvas.field_d = fb.a(param2, true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,6 +111,6 @@ final class pk {
         field_f = "Passwords can only contain letters and numbers";
         field_h = 100;
         field_i = new int[4];
-        field_e = new eb();
+        field_e = new KeyHandler();
     }
 }

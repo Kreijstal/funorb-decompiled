@@ -6,10 +6,10 @@ final class fg extends ig {
     int field_F;
     int field_I;
     int field_J;
-    static oj field_G;
+    static IntrusiveDeque field_G;
     int field_L;
     int field_H;
-    static pb[] field_P;
+    static Sprite[] field_P;
     static int field_O;
     static int field_M;
     static float field_K;
@@ -80,6 +80,6 @@ final class fg extends ig {
     }
 
     static {
-        field_G = new oj();
+        field_G = new IntrusiveDeque();
     }
 }

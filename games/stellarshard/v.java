@@ -12,8 +12,8 @@ final class v implements Runnable {
     private re field_a;
     private java.net.URL field_f;
     static boolean field_e;
-    private ej field_d;
-    private ka field_h;
+    private PlatformTaskDispatcher field_d;
+    private PacketBuffer field_h;
 
     protected final void finalize() {
         if (null != this.field_g) {
@@ -90,8 +90,8 @@ final class v implements Runnable {
         if (!param0) {
           v.a(true);
         }
-        if (ah.field_q != null) {
-          return (java.awt.Container) ((Object) ah.field_q);
+        if (DualLinkNode.field_q != null) {
+          return (java.awt.Container) ((Object) DualLinkNode.field_q);
         }
         return (java.awt.Container) ((Object) hf.a((byte) -112));
     }
@@ -170,7 +170,7 @@ final class v implements Runnable {
         return false;
     }
 
-    final ka b(int param0) {
+    final PacketBuffer b(int param0) {
         if (~this.field_c == param0) {
           return this.field_h;
         }
@@ -201,7 +201,7 @@ final class v implements Runnable {
           if (var2 == 0) {
             var4 = (af) (pf.field_b.b(-79));
             if (var4 == null) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             var5 = -var10.field_k + ue.field_b;
@@ -229,7 +229,7 @@ final class v implements Runnable {
                 break;
               }
               if (var5_ref_fk == null) {
-                oj.c(-2290);
+                IntrusiveDeque.c(-2290);
                 return;
               }
               var5_ref_fk.c(20);
@@ -237,7 +237,7 @@ final class v implements Runnable {
             }
             else {
               qe.a(-115, "LR1: " + bh.b((byte) -96), (Throwable) null);
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
             }
           }
           if (param0 >= -41) {
@@ -251,11 +251,11 @@ final class v implements Runnable {
         }
     }
 
-    v(ej param0, java.net.URL param1, int param2) {
+    v(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_d = param0;
           this.field_f = param1;
-          this.field_h = new ka(param2);
+          this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "v.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

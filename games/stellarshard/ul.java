@@ -3,7 +3,7 @@
  */
 final class ul extends g implements oi {
     static int field_G;
-    static pb field_B;
+    static Sprite field_B;
     private String[] field_E;
     static String field_H;
     private rf field_F;

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jd {
-    static pb field_a;
+    static Sprite field_a;
     private static String field_z;
 
     public static void a(int param0) {
         field_a = null;
         if (param0 > -122) {
-          field_a = (pb) null;
+          field_a = (Sprite) null;
         }
     }
 

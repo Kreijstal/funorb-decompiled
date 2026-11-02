@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dd {
-    static oj field_g;
+    static IntrusiveDeque field_g;
     static int field_d;
     private int[] field_c;
-    static pb field_a;
+    static Sprite field_a;
     static String field_h;
     static String field_b;
     static int field_e;
@@ -215,7 +215,7 @@ final class dd {
           var7_int = 0;
           param4 = param4 + param2;
           var8 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param0[var8];
             if (0 <= var9) {
               var7_int++;
@@ -229,7 +229,7 @@ final class dd {
               param2++;
               param3[incrementValue$1] = (byte)(~var10);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -245,7 +245,7 @@ final class dd {
               param2++;
               param3[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -261,7 +261,7 @@ final class dd {
               param2++;
               param3[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -277,7 +277,7 @@ final class dd {
               param2++;
               param3[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -293,7 +293,7 @@ final class dd {
               param2++;
               param3[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -309,7 +309,7 @@ final class dd {
               param2++;
               param3[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -325,7 +325,7 @@ final class dd {
               param2++;
               param3[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param2 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -341,7 +341,7 @@ final class dd {
               param2++;
               param3[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param4 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -379,7 +379,7 @@ final class dd {
     }
 
     static {
-        field_g = new oj();
+        field_g = new IntrusiveDeque();
         field_h = "Email: ";
         field_b = "Orb coins: <%0>";
         field_f = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";

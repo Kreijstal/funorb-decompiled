@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends gg {
+final class nf extends IntrusiveNode {
     int field_t;
     int field_p;
     int field_l;
@@ -41,9 +41,9 @@ final class nf extends gg {
             return;
           }
           if (0 == var2) {
-            var3_ref_mk = (mk) (gg.field_b.b(-96));
+            var3_ref_mk = (mk) (IntrusiveNode.field_b.b(-96));
             if (var3_ref_mk == null) {
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             var4_int = var9.f(4);
@@ -58,12 +58,12 @@ final class nf extends gg {
               var3_ref_mk.c(20);
               return;
             }
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             return;
           }
           if (var2 != 1) {
             qe.a(-111, "A1: " + bh.b((byte) -127), (Throwable) null);
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             return;
           }
           var3 = var9.b(false);
@@ -79,7 +79,7 @@ final class nf extends gg {
             var4.c(20);
             return;
           }
-          oj.c(-2290);
+          IntrusiveDeque.c(-2290);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -70,14 +70,14 @@ final class ff extends nh {
           }
         }
         if (!param0) {
-          ug.field_b = ni.a(false, 80, var9);
+          IntrusiveDequeCursor.field_b = ni.a(false, 80, var9);
           rc.field_k = null;
           return new nj(param0);
         }
         var6 = var9.c((byte) 62);
         try {
           var10 = qh.field_e.a(32767, var6);
-          ug.field_b = var10.e(0);
+          IntrusiveDequeCursor.field_b = var10.e(0);
           if (!oe.field_d.equals(wf.field_b)) {
             stackIn_23_0 = var10.field_y;
           } else {
@@ -89,7 +89,7 @@ final class ff extends nh {
           var7 = (Exception) (Object) decompiledCaughtException;
           qe.a(-105, "CC1", (Throwable) ((Object) var7));
           rc.field_k = null;
-          ug.field_b = null;
+          IntrusiveDequeCursor.field_b = null;
           return new nj(param0);
         }
         return new nj(param0);

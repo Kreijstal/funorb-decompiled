@@ -3,7 +3,7 @@
  */
 final class tk {
     static String field_a;
-    static pb field_c;
+    static Sprite field_c;
     static int field_b;
 
     final static void a(int param0) {
@@ -50,7 +50,7 @@ final class tk {
         if (param0 < 124) {
           return 12L;
         }
-        return ih.a((byte) -98) - ka.field_o;
+        return ih.a((byte) -98) - PacketBuffer.field_o;
     }
 
     public static void a(byte param0) {

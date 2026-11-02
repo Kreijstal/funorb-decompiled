@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cm {
-    static oj field_c;
+    static IntrusiveDeque field_c;
     static int field_a;
-    static pb[] field_d;
+    static Sprite[] field_d;
     static String field_b;
     static String field_e;
 
@@ -25,6 +25,6 @@ final class cm {
     static {
         field_b = "EXCLUSIVE";
         field_e = "Back-Thrust - <img=6>     Fire - <img=1> or <img=2>     Options - <img=3>";
-        field_d = new pb[64];
+        field_d = new Sprite[64];
     }
 }

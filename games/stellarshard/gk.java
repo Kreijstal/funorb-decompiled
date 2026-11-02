@@ -26,10 +26,10 @@ final class gk {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        ka stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
-        ka stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         String stackIn_18_2 = null;
         int stackIn_33_0 = 0;
@@ -94,7 +94,7 @@ final class gk {
               uc.field_c.a(-104, var14);
               uc.field_c.a(-106, var8);
               var15 = (CharSequence) ((Object) param3);
-              uc.field_c.a(-117, gg.a(var15, param6));
+              uc.field_c.a(-117, IntrusiveNode.a(var15, param6));
               uc.field_c.c(param0, -127);
               uc.field_c.a(false, param4);
               uc.field_c.a(false, var9);
@@ -119,7 +119,7 @@ final class gk {
               } else {
                 stackIn_15_2 = var14;
               }
-              ((ka) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
               stackIn_17_0 = uc.field_c;
               stackIn_17_1 = 126;
               if (!param5.a(5)) {
@@ -127,7 +127,7 @@ final class gk {
               } else {
                 stackIn_18_2 = var8;
               }
-              ((ka) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
               pg.field_fb.a(false, 16);
               pg.field_fb.field_k = pg.field_fb.field_k + 1;
               var9 = pg.field_fb.field_k;
@@ -148,18 +148,18 @@ final class gk {
             } else {
               if (var9Lifetime1 == 248) {
                 aa.a(hf.a((byte) -64), false);
-                ga.field_a = pg.field_eb;
-                oj.c(-2290);
+                NodeHashTableIterator.field_a = pg.field_eb;
+                IntrusiveDeque.c(-2290);
                 ta.field_u = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                qe.b(64, ug.b(1));
+                qe.b(64, IntrusiveDequeCursor.b(1));
                 nb.field_M = new Boolean(h.a(ae.field_N, 31184));
                 ae.field_N.field_k = 0;
               } else {
-                sl.field_d = bg.field_c;
+                sl.field_d = DualLinkDeque.field_c;
                 ja.field_t = var9Lifetime1;
                 ue.field_b = -1;
               }
@@ -175,14 +175,14 @@ final class gk {
                 for (var12 = 0; var12 < var11; var12++) {
                   fc.field_b[var12] = ae.field_N.f((byte) 94);
                 }
-                oj.c(-2290);
+                IntrusiveDeque.c(-2290);
                 ta.field_u = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
             }
           }
-          if (sl.field_d == bg.field_c &&
+          if (sl.field_d == DualLinkDeque.field_c &&
             cd.e((byte) 123)) {
             if (ja.field_t == 255) {
               var9_ref_String = ae.field_N.a(0);
@@ -190,9 +190,9 @@ final class gk {
                 dj.a(false, hf.a((byte) -101), var9_ref_String);
               }
             } else {
-              ga.field_a = ae.field_N.e((byte) 96);
+              NodeHashTableIterator.field_a = ae.field_N.e((byte) 96);
             }
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             ta.field_u = false;
             stackIn_55_0 = ja.field_t;
             return stackIn_55_0;
@@ -200,9 +200,9 @@ final class gk {
           if (null == ob.field_b) {
             if (ta.field_u) {
               if (tk.b(127) > 30000L) {
-                ga.field_a = hj.field_a;
+                NodeHashTableIterator.field_a = hj.field_a;
               } else {
-                ga.field_a = wb.field_h;
+                NodeHashTableIterator.field_a = wb.field_h;
               }
               ta.field_u = false;
               stackIn_63_0 = 249;

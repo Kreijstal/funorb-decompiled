@@ -7,7 +7,7 @@ class id implements uk, pj {
     int field_c;
     int field_h;
     int field_i;
-    static oj field_g;
+    static IntrusiveDeque field_g;
     bd field_a;
     private boolean field_b;
     int field_d;
@@ -58,7 +58,7 @@ class id implements uk, pj {
           }
           var10 = var18.a(111, var8);
           var11 = var18.a(62, var9);
-          gg.a(23, param4 + (param0.field_w + param0.field_p), param2 + param0.field_k, param0.field_t + param0.field_k + param2, param0.field_w + param4);
+          IntrusiveNode.a(23, param4 + (param0.field_w + param0.field_p), param2 + param0.field_k, param0.field_t + param0.field_k + param2, param0.field_w + param4);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_a[var12];
             if (var10 != var12) {
@@ -131,7 +131,7 @@ class id implements uk, pj {
               stackIn_5_3 = var13.field_a[1 + var7].field_b;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            gg.a(61, param4 - (-param3.field_w - param3.field_p), param3.field_k + param2, param2 - (-param3.field_k - param3.field_t), param3.field_w + param4);
+            IntrusiveNode.a(61, param4 - (-param3.field_w - param3.field_p), param3.field_k + param2, param2 - (-param3.field_k - param3.field_t), param3.field_w + param4);
             n.field_i.a(this.field_n, var11, 10066329, var10, var10, var12);
             id.b((byte) -58);
           }
@@ -292,7 +292,7 @@ class id implements uk, pj {
     public static void a(int param0) {
         field_g = null;
         if (param0 != 1392322465) {
-          field_g = (oj) null;
+          field_g = (IntrusiveDeque) null;
           field_l = null;
           return;
         }
@@ -316,7 +316,7 @@ class id implements uk, pj {
         var13 = stellarshard.field_B;
         try {
           boolean decompiledFrameRemainder0 = true;
-          gg.a(83, param3 + (param6.field_w + param6.field_p), param2 + param6.field_k, param6.field_k + param2 + param6.field_t, param6.field_w + param3);
+          IntrusiveNode.a(83, param3 + (param6.field_w + param6.field_p), param2 + param6.field_k, param6.field_k + param2 + param6.field_t, param6.field_w + param3);
           var9_int = this.a(param0 - 27246, param6);
           var10 = this.a((byte) -89, param6);
           if (!this.field_b) {
@@ -798,7 +798,7 @@ class id implements uk, pj {
     }
 
     static {
-        field_g = new oj();
+        field_g = new IntrusiveDeque();
         field_l = "Mouse over an icon for details";
     }
 }

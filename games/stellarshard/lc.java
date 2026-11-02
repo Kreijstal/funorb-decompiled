@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lc extends lk {
-    static pb field_k;
+    static Sprite field_k;
     static String field_m;
     static String field_o;
     private ae field_n;
@@ -142,7 +142,7 @@ final class lc extends lk {
 
     final static li[] e(byte param0) {
         if (param0 == 33) {
-          return new li[]{ua.field_a, de.field_d, il.field_u, g.field_z, g.field_A, ok.field_c, bb.field_m, va.field_b, kf.field_a, ef.field_n, ui.field_C, s.field_f, be.field_c, tf.field_b};
+          return new li[]{ua.field_a, de.field_d, il.field_u, g.field_z, g.field_A, ok.field_c, bb.field_m, va.field_b, kf.field_a, ef.field_n, ui.field_C, DualLinkDequeIterator.field_f, MouseHandler.field_c, tf.field_b};
         }
         return (li[]) null;
     }
@@ -156,33 +156,33 @@ final class lc extends lk {
           param0 = param0 & 8191;
           if (param0 < 4096) {
             if (2048 <= param0) {
-              stackIn_19_0 = -fh.field_h[-2048 + param0];
+              stackIn_19_0 = -BufferedSocket.field_h[-2048 + param0];
             } else {
-              stackIn_19_0 = fh.field_h[-param0 + 2048];
+              stackIn_19_0 = BufferedSocket.field_h[-param0 + 2048];
             }
             return stackIn_19_0;
           }
           if (6144 > param0) {
-            stackIn_15_0 = -fh.field_h[6144 - param0];
+            stackIn_15_0 = -BufferedSocket.field_h[6144 - param0];
           } else {
-            stackIn_15_0 = fh.field_h[param0 - 6144];
+            stackIn_15_0 = BufferedSocket.field_h[param0 - 6144];
           }
           return stackIn_15_0;
         }
-        field_k = (pb) null;
+        field_k = (Sprite) null;
         param0 = param0 & 8191;
         if (param0 < 4096) {
           if (2048 <= param0) {
-            stackIn_9_0 = -fh.field_h[-2048 + param0];
+            stackIn_9_0 = -BufferedSocket.field_h[-2048 + param0];
           } else {
-            stackIn_9_0 = fh.field_h[-param0 + 2048];
+            stackIn_9_0 = BufferedSocket.field_h[-param0 + 2048];
           }
           return stackIn_9_0;
         }
         if (6144 > param0) {
-          stackIn_5_0 = -fh.field_h[6144 - param0];
+          stackIn_5_0 = -BufferedSocket.field_h[6144 - param0];
         } else {
-          stackIn_5_0 = fh.field_h[param0 - 6144];
+          stackIn_5_0 = BufferedSocket.field_h[param0 - 6144];
         }
         return stackIn_5_0;
     }

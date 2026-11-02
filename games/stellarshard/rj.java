@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class rj extends gg {
+class rj extends IntrusiveNode {
     vk field_r;
     lf field_v;
     uk field_u;
@@ -16,7 +16,7 @@ class rj extends gg {
     int field_o;
     int field_t;
     int field_n;
-    static pb field_s;
+    static Sprite field_s;
     int field_w;
 
     public static void b(boolean param0) {
@@ -40,7 +40,7 @@ class rj extends gg {
           if (param1) {
             return;
           }
-          var5_int = this.a((byte) 126, param0, eb.field_a, ni.field_e, param2) ? 1 : 0;
+          var5_int = this.a((byte) 126, param0, KeyHandler.field_a, ni.field_e, param2) ? 1 : 0;
           stackIn_4_0 = this.field_q;
           if (var5_int != 0) {
             stackIn_5_1 = 0;
@@ -204,13 +204,13 @@ class rj extends gg {
         dl var20;
         var7 = stellarshard.field_B;
         if (param1 < -116) {
-          L0: {
+          regionExit1: {
             this.a(param2, false, param3, this);
             var5 = this.e(0) ? 1 : 0;
             if (param0) {
               if (ke.field_b != 0 &&
                 var5 != 0) {
-                this.a(param2, eb.field_a, this, ni.field_e, 63, ke.field_b, param3);
+                this.a(param2, KeyHandler.field_a, this, ni.field_e, 63, ke.field_b, param3);
                 if (gh.field_c != 0) {
                   if (this.a(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                     param0 = false;
@@ -228,7 +228,7 @@ class rj extends gg {
                         cl.a(this.d(3690), (byte) 96);
                         return param0;
                       }
-                      this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+                      this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
                       var15 = lk.field_e;
                       var6 = var15;
                       if (var15 != null) {
@@ -257,7 +257,7 @@ class rj extends gg {
                   cl.a(this.d(3690), (byte) 96);
                   return param0;
                 }
-                this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+                this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
                 var17 = lk.field_e;
                 var6 = var17;
                 if (var17 != null) {
@@ -300,7 +300,7 @@ class rj extends gg {
                           cl.a(this.d(3690), (byte) 96);
                           return param0;
                         }
-                        this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+                        this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
                         var19 = lk.field_e;
                         var6 = var19;
                         if (var19 != null) {
@@ -325,14 +325,14 @@ class rj extends gg {
                 }
               }
               if (0 != fb.field_n) {
-                break L0;
+                break regionExit1;
               }
               if (nb.field_H == 0) {
                 nb.field_H = fb.field_n;
                 cl.a(this.d(3690), (byte) 96);
                 return param0;
               }
-              this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+              this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
               var20 = lk.field_e;
               if (var20 != null) {
                 if (var20.field_v instanceof jh) {
@@ -341,7 +341,7 @@ class rj extends gg {
                 lk.field_e = null;
               }
               if (var7 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             if (var5 != 0 &&
@@ -380,7 +380,7 @@ class rj extends gg {
                 cl.a(this.d(3690), (byte) 96);
                 return param0;
               }
-              this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+              this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
               var8 = lk.field_e;
               var6 = var8;
               if (var8 != null) {
@@ -413,7 +413,7 @@ class rj extends gg {
                 cl.a(this.d(3690), (byte) 96);
                 return param0;
               }
-              this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+              this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
               var9 = lk.field_e;
               var6 = var9;
               if (var9 != null) {
@@ -431,7 +431,7 @@ class rj extends gg {
               cl.a(this.d(3690), (byte) 96);
               return param0;
             }
-            this.a(param2, eb.field_a, this, ni.field_e, 63, ke.field_b, param3);
+            this.a(param2, KeyHandler.field_a, this, ni.field_e, 63, ke.field_b, param3);
             if (gh.field_c != 0) {
               if (this.a(this, di.field_b, gh.field_c, oc.field_e, param3, (byte) 88, param2)) {
                 param0 = false;
@@ -449,7 +449,7 @@ class rj extends gg {
                     cl.a(this.d(3690), (byte) 96);
                     return param0;
                   }
-                  this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+                  this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
                   var11 = lk.field_e;
                   var6 = var11;
                   if (var11 != null) {
@@ -478,7 +478,7 @@ class rj extends gg {
               cl.a(this.d(3690), (byte) 96);
               return param0;
             }
-            this.a(eb.field_a, -109, this, param3, param2, ni.field_e);
+            this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
             var13 = lk.field_e;
             var6 = var13;
             if (var13 != null) {
@@ -542,7 +542,7 @@ class rj extends gg {
 
     void c(boolean param0) {
         if (!param0) {
-          field_s = (pb) null;
+          field_s = (Sprite) null;
         }
     }
 
@@ -574,7 +574,7 @@ class rj extends gg {
 
     final static void c(byte param0) {
         if (param0 != -94) {
-          field_s = (pb) null;
+          field_s = (Sprite) null;
           if (cg.field_a) {
             qh.field_d = true;
             va.a(true, -844);
@@ -1054,7 +1054,7 @@ class rj extends gg {
           }
           ta.field_q = 2147483647;
           ce.field_b = -2147483648;
-          fh.field_b = 0;
+          BufferedSocket.field_b = 0;
           if (param0 > -13) {
             rj.a((byte) 107, 88);
           }
@@ -1093,7 +1093,7 @@ class rj extends gg {
         }
         ta.field_q = 2147483647;
         ce.field_b = -2147483648;
-        fh.field_b = 0;
+        BufferedSocket.field_b = 0;
         if (param0 > -13) {
           rj.a((byte) 107, 88);
         }

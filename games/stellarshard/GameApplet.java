@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class ac extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static java.applet.Applet field_c;
     static sb field_k;
     static sb field_n;
@@ -19,7 +19,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         try {
-          ej dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
           StringBuilder stackIn_21_1 = null;
           String stackIn_22_2 = null;
@@ -33,7 +33,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
           try {
             try {
               var8_int = -5 / ((-44 - param4) / 51);
-              if (bc.field_j != null) {
+              if (ProxySocketConnector.field_j != null) {
                 aj.field_b = aj.field_b + 1;
                 if (3 > aj.field_b) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -45,13 +45,13 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
               lg.field_d = param3;
               td.field_d = param2;
               dd.field_d = param2;
-              bc.field_j = this;
+              ProxySocketConnector.field_j = this;
               df.field_c = 0;
               fb.field_f = 0;
               lk.field_j = param5;
               kg.field_H = param5;
               tc.field_u = hf.a((byte) -96);
-              dupTemp$0 = new ej(param0, param6, param1, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param1, true);
               ic.field_d = dupTemp$0;
               fb.field_d = dupTemp$0;
               var9 = ic.field_d.a((Runnable) (this), 1, 0);
@@ -97,7 +97,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         java.applet.AppletContext stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ah.field_q != null) {
+          if (DualLinkNode.field_q != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -192,7 +192,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ah.field_q) {
+          if (null != DualLinkNode.field_q) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -264,7 +264,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void start() {
-        if (bc.field_j != this ||
+        if (ProxySocketConnector.field_j != this ||
           qc.field_b) {
           return;
         }
@@ -324,7 +324,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (ah.field_q != null) {
+        if (DualLinkNode.field_q != null) {
           return null;
         }
         if (null != field_c &&
@@ -338,7 +338,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
 
     public abstract void init();
 
-    protected ac() {
+    protected GameApplet() {
         this.field_g = false;
     }
 
@@ -397,11 +397,11 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (ej.field_g != null) {
-                var1 = ej.field_g.toLowerCase();
+              if (PlatformTaskDispatcher.field_g != null) {
+                var1 = PlatformTaskDispatcher.field_g.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = ej.field_r;
+                  var2 = PlatformTaskDispatcher.field_r;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -443,8 +443,8 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (ej.field_r != null))) {
-                stackIn_64_0 = ej.field_r.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_r != null))) {
+                stackIn_64_0 = PlatformTaskDispatcher.field_r.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -453,8 +453,8 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (ej.field_r.length() > var1_int) {
-                    var3 = ej.field_r.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_r.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_r.charAt(var1_int);
                     stackIn_77_0 = ~var3;
                     stackIn_77_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -477,11 +477,11 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = bc.field_j;
+                var1 = ProxySocketConnector.field_j;
                 if (null != field_c) {
                   var1 = field_c;
                 }
-                var2_ref = ej.field_w;
+                var2_ref = PlatformTaskDispatcher.field_w;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -547,7 +547,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 107) {
-            ac.b(-49);
+            GameApplet.b(-49);
           }
           stackIn_10_0 = (ja.field_m != null) && (ja.field_m.d(2));
           return stackIn_10_0;
@@ -576,30 +576,30 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (ah.field_q == null) {
+            if (DualLinkNode.field_q == null) {
               if (null == field_c) {
-                var2 = bc.field_j;
+                var2 = ProxySocketConnector.field_j;
                 if (var4 != 0) {
                   var2 = field_c;
-                  var2 = ah.field_q;
+                  var2 = DualLinkNode.field_q;
                 }
               } else {
                 var2 = field_c;
                 if (var4 != 0) {
-                  var2 = ah.field_q;
+                  var2 = DualLinkNode.field_q;
                 }
               }
             } else {
-              var2 = ah.field_q;
+              var2 = DualLinkNode.field_q;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          qd.field_j = (java.awt.Canvas) ((Object) new hi((java.awt.Component) (this)));
+          qd.field_j = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) qd.field_j));
           qd.field_j.setSize(lk.field_j, td.field_d);
           qd.field_j.setVisible(true);
-          if (ah.field_q == var2) {
-            var3 = ah.field_q.getInsets();
+          if (DualLinkNode.field_q == var2) {
+            var3 = DualLinkNode.field_q.getInsets();
             qd.field_j.setLocation(fb.field_f + var3.left, df.field_c + var3.top);
             if (var4 != 0) {
               qd.field_j.setLocation(fb.field_f, df.field_c);
@@ -673,7 +673,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
             }
           }
           this.c((byte) -128);
-          if (null != ah.field_q) {
+          if (null != DualLinkNode.field_q) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -730,7 +730,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (this == bc.field_j &&
+          if (this == ProxySocketConnector.field_j &&
             !qc.field_b) {
             of.field_F = true;
             if (wl.field_ab &&
@@ -770,7 +770,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ah.field_q) {
+          if (null != DualLinkNode.field_q) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
@@ -840,14 +840,14 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
             of.field_F = true;
             qd.field_j.setSize(lk.field_j, td.field_d);
             qd.field_j.setVisible(true);
-            boolean decompiledSharedTail0 = (null != ah.field_q &&
+            boolean decompiledSharedTail0 = (null != DualLinkNode.field_q &&
               la.field_L == null);
             if (!decompiledSharedTail0) {
               qd.field_j.setLocation(fb.field_f, df.field_c);
               decompiledSharedTail0 = (stellarshard.field_B != 0);
             }
             if (decompiledSharedTail0) {
-              var6 = ah.field_q.getInsets();
+              var6 = DualLinkNode.field_q.getInsets();
               qd.field_j.setLocation(var6.left + fb.field_f, var6.top + df.field_c);
             }
           }
@@ -864,7 +864,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == bc.field_j &&
+          if (this == ProxySocketConnector.field_j &&
             !qc.field_b) {
             gk.field_h = ih.a((byte) -98);
             jj.a((byte) -127, 5000L);
@@ -881,7 +881,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void stop() {
-        if (bc.field_j != this ||
+        if (ProxySocketConnector.field_j != this ||
           qc.field_b) {
           return;
         }

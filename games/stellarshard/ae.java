@@ -129,7 +129,7 @@ class ae extends ig {
         try {
           if (super.a(param0, param1, param2, param3, param4, (byte) 38, param6) &&
             this.field_u instanceof pj) {
-            var8_int = ((pj) ((Object) this.field_u)).a(-109, (rj) (this), param4, eb.field_a, param6, ni.field_e);
+            var8_int = ((pj) ((Object) this.field_u)).a(-109, (rj) (this), param4, KeyHandler.field_a, param6, ni.field_e);
             stackIn_4_1 = 81;
             if (var8_int == -1) {
               stackIn_5_2 = 0;
@@ -272,7 +272,7 @@ class ae extends ig {
           if (this.field_o == 1) {
             if (this.field_u instanceof pj) {
               var5 = (pj) ((Object) this.field_u);
-              var6 = var5.a(73, (rj) (this), param2, eb.field_a, param0, ni.field_e);
+              var6 = var5.a(73, (rj) (this), param2, KeyHandler.field_a, param0, ni.field_e);
               if (-1 != var6) {
                 if (this.field_L &&
                   var6 < this.field_F &&

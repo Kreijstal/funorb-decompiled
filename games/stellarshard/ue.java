@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ue {
     static int field_a;
-    static oj field_c;
+    static IntrusiveDeque field_c;
     static int field_b;
     static int field_d;
     static hc field_e;
@@ -30,7 +30,7 @@ final class ue {
           wb.field_b = nh.a(var3, false);
           return;
         }
-        field_c = (oj) null;
+        field_c = (IntrusiveDeque) null;
         wf.field_b = ae.field_N.e((byte) 95);
         CharSequence var2 = (CharSequence) ((Object) wf.field_b);
         wb.field_b = nh.a(var2, false);
@@ -55,7 +55,7 @@ final class ue {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                oj.c(-2290);
+                IntrusiveDeque.c(-2290);
               }
               pg.field_fb.field_k = 0;
             }
@@ -70,6 +70,6 @@ final class ue {
     }
 
     static {
-        field_c = new oj();
+        field_c = new IntrusiveDeque();
     }
 }

@@ -155,7 +155,7 @@ final class df implements uk {
             break;
           }
           if (var3 == null) {
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
             return;
           }
           var4 = var16.f(4);
@@ -167,17 +167,17 @@ final class df implements uk {
             }
             rj.a((byte) -26, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              fe.a(var16, 12726);
+              MouseWheelInput.a(var16, 12726);
               if (var6_intLifetime1 != 0) {
-                bg.a((byte) 79, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_intLifetime1);
+                DualLinkDeque.a((byte) 79, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_intLifetime1);
               } else {
-                bg.a((byte) 78, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_intLifetime1);
+                DualLinkDeque.a((byte) 78, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_intLifetime1);
               }
             }
             kb.a(var5, (byte) 47);
             var6 = new String[2][var5];
             var20 = new int[2][4 * var5];
-            var8 = fh.field_b;
+            var8 = BufferedSocket.field_b;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {

@@ -250,7 +250,7 @@ final class tj {
         return field_q;
     }
 
-    final void a(ka param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_f = new qg();

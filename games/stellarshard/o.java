@@ -77,7 +77,7 @@ abstract class o {
         String var11;
         int var12;
         int var13;
-        wg var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -105,8 +105,8 @@ abstract class o {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = stellarshard.field_B;
-        if (param1 instanceof wg) {
-          var14 = (wg) ((Object) param1);
+        if (param1 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param1);
           param1 = var14.field_a;
           var2 = var14.field_f + " | ";
           var11 = var2;
@@ -196,7 +196,7 @@ abstract class o {
           if ((param0.field_c >= 0 &&
             7 >= param0.field_c ||
             !(param0.field_c < 13) &&
-            !(param0.field_c >= 16)) && fe.field_e) {
+            !(param0.field_c >= 16)) && MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[32], 100, 2 * pk.field_h);
           }
           b.a(param0.field_c, 6);
@@ -217,12 +217,12 @@ abstract class o {
             }
             nc.field_H = 1;
             stellarshard.field_U[10] = stellarshard.field_U[10] + 1;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[31], 100, pk.field_h * 2);
             }
           }
           if (9 == param0.field_c) {
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[28], 100, 2 * pk.field_h);
             }
             ig.field_D = 255;
@@ -251,7 +251,7 @@ abstract class o {
             nf.field_r = false;
             nc.field_H = 2;
             stellarshard.field_U[11] = stellarshard.field_U[11] + 1;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[30], 100, pk.field_h * 2);
             }
           }
@@ -259,7 +259,7 @@ abstract class o {
             nf.field_r = false;
             gh.field_b = 1500;
             nc.field_H = 3;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[29], 100, 2 * pk.field_h);
             }
           }
@@ -268,7 +268,7 @@ abstract class o {
             nf.field_r = false;
             nc.field_H = 4;
             stellarshard.field_U[13] = stellarshard.field_U[13] + 1;
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[0], 100, pk.field_h * 2);
             }
           }
@@ -290,7 +290,7 @@ abstract class o {
               pk.a(-12663, 0)) {
               hj.a(242, 13, 1);
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[41], 100, 3 * pk.field_h);
             }
           }

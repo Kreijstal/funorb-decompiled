@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends kd {
+final class gd extends PcmStream {
     private int field_z;
     private int field_B;
     private int field_t;
@@ -38,7 +38,7 @@ final class gd extends kd {
         this.field_x = param0;
     }
 
-    final kd d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -516,7 +516,7 @@ final class gd extends kd {
         this.field_z = gd.c(this.field_o, this.field_t);
     }
 
-    final kd c() {
+    final PcmStream c() {
         return null;
     }
 

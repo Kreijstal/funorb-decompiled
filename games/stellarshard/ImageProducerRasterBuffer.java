@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class mh extends vi implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_k;
     static byte[][] field_j;
-    static pb[] field_i;
+    static Sprite[] field_i;
     private java.awt.image.ImageConsumer field_l;
     static String[] field_h;
 
@@ -27,7 +27,7 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
           field_i = null;
           return;
         }
-        field_i = (pb[]) null;
+        field_i = (Sprite[]) null;
         field_j = (byte[][]) null;
         field_h = null;
         field_i = null;
@@ -207,7 +207,7 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
         return param0 == this.field_l;
     }
 
-    mh() {
+    ImageProducerRasterBuffer() {
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {

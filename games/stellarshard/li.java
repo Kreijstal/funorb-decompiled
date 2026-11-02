@@ -21,7 +21,7 @@ final class li {
         var4 = stellarshard.field_B;
         try {
           try {
-            if (!ej.field_k.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_k.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "stellarshard": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/stellarshard"
+      },
+      "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
+      "sources": {
+        "files": 301,
+        "sha256": "05a8330e296a32ba6b2953d920c61caf6d82dc7dacebc62075fdf986cca7021c"
+      },
+      "dictionary": {
+        "path": "decompilation/stellarshard-naming.json",
+        "sha256": "f803880adb20650493c395e725c13ee32cb7c6a633b4232251f4cc58394e8b63"
+      },
+      "readingGuide": {
+        "path": "games/stellarshard/README.md",
+        "sha256": "1390bcf632ad9bc173e5302d8bacd05f58c065cdd278d9aacd6e6d92242cf0a0"
+      },
+      "rulesSha256": "dbc918316ea6af8b46346157ec650a2e0318443a1a5cdebdbbe9f6c18d48491d",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12106,6 +12130,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 301,
+          "sha256": "05a8330e296a32ba6b2953d920c61caf6d82dc7dacebc62075fdf986cca7021c"
         }
       },
       "sumoblitz": {

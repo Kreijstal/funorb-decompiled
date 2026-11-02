@@ -3,7 +3,7 @@
  */
 final class pd extends vk {
     private bd field_t;
-    static pb field_s;
+    static Sprite field_s;
     private int field_o;
     static String[] field_g;
     static lj field_e;
@@ -11,7 +11,7 @@ final class pd extends vk {
     private int field_n;
     private String field_m;
     private int field_k;
-    static vi field_h;
+    static RasterBuffer field_h;
     private boolean field_r;
     static int field_q;
     static long[] field_j;
@@ -40,7 +40,7 @@ final class pd extends vk {
           var7 = param4.b(param1);
           var8.field_a[0] = -(var7 >> 1) + param3;
           var8.field_a[param1.length()] = (var7 >> 1) + param3;
-          mh.a(1, 0, param1, var8, param4);
+          ImageProducerRasterBuffer.a(1, 0, param1, var8, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -156,7 +156,7 @@ final class pd extends vk {
               } else {
                 stackIn_41_1 = this.a(var13, false, param2, param4.b(var13));
               }
-              mh.a(stackIn_40_0, stackIn_41_1, var13, var14, param4);
+              ImageProducerRasterBuffer.a(stackIn_40_0, stackIn_41_1, var13, var14, param4);
             }
             var11 = var11 + param1;
             this.field_a[var12Lifetime1] = var14;
@@ -238,7 +238,7 @@ final class pd extends vk {
           var8 = var7;
           var7.field_a[param3] = param0;
           var8.field_a[param2.length()] = param1.b(param2) + param0;
-          mh.a(param3 + 1, 0, param2, var8, param1);
+          ImageProducerRasterBuffer.a(param3 + 1, 0, param2, var8, param1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -264,13 +264,13 @@ final class pd extends vk {
           this.field_o = 2;
           this.field_r = true;
           if (param4 != 22) {
-            field_h = (vi) null;
+            field_h = (RasterBuffer) null;
           }
           var8 = this.a(param2, false, param3, param1);
           var9 = var8;
           var9.field_a[0] = param0 - param1.b(param3);
           var9.field_a[param3.length()] = param0;
-          mh.a(1, 0, param3, var9, param1);
+          ImageProducerRasterBuffer.a(1, 0, param3, var9, param1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -361,7 +361,7 @@ final class pd extends vk {
         long var10 = 0L;
         long var12 = 0L;
         int var14 = 0;
-        field_s = new pb(270, 70);
+        field_s = new Sprite(270, 70);
         field_l = new long[8][256];
         field_j = new long[11];
         int var0 = 0;

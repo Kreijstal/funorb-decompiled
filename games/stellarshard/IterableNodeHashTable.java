@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ai implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static nj[] field_d;
     static String field_g;
-    private gg field_f;
+    private IntrusiveNode field_f;
     int field_b;
     static String[] field_a;
-    gg[] field_e;
+    IntrusiveNode[] field_e;
     static int field_c;
 
     final static void a(byte param0) {
@@ -17,7 +17,7 @@ final class ai implements Iterable {
         ak.field_a = true;
         if (param0 <= 62) {
           String var2 = (String) null;
-          ai.a((String) null, (String) null, (String) null, -14);
+          IterableNodeHashTable.a((String) null, (String) null, (String) null, -14);
         }
     }
 
@@ -118,16 +118,16 @@ final class ai implements Iterable {
           sf.field_f = new pg(na.field_d, af.field_r);
           na.field_d.a((byte) -128, (rj) (sf.field_f));
           if (param1 != -1) {
-            ai.a(100);
+            IterableNodeHashTable.a(100);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ai.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final gg a(long param0, int param1) {
-        gg var4;
-        gg var5;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = stellarshard.field_B;
         var4 = this.field_e[(int)((long)(param1 + this.field_b) & param0)];
@@ -148,8 +148,8 @@ final class ai implements Iterable {
         return var5;
     }
 
-    final void a(byte param0, gg param1, long param2) {
-        gg var5 = null;
+    final void a(byte param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param1.field_c) {
             param1.c(20);
@@ -157,7 +157,7 @@ final class ai implements Iterable {
           var5 = this.field_e[(int)((long)(this.field_b - 1) & param2)];
           param1.field_g = var5;
           if (param0 <= 1) {
-            ai.a((byte) 37);
+            IterableNodeHashTable.a((byte) 37);
           }
           param1.field_c = var5.field_c;
           param1.field_c.field_g = param1;
@@ -169,10 +169,10 @@ final class ai implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ga(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    private ai() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

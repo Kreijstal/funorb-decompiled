@@ -59,13 +59,13 @@ final class sl {
         byte[] var6 = null;
         Object var7 = null;
         String[] var9 = null;
-        ka var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new ka(param1);
+          var10 = new PacketBuffer(param1);
           var3 = var10.f(4);
           if (param0 >= -57) {
             var9 = (String[]) null;
@@ -173,7 +173,7 @@ final class sl {
         }
     }
 
-    private final void a(int param0, byte[] param1, ka param2) {
+    private final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;

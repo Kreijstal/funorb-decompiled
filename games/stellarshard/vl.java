@@ -100,7 +100,7 @@ final class vl {
                     var3.field_c != 13) {
                     var3.field_g = var3.field_g - 1;
                   }
-                  if (fe.field_e &&
+                  if (MouseWheelInput.field_e &&
                     a.field_h[0] != null) {
                     var31 = -a.field_h[0].field_a + this.field_c;
                     var33 = this.field_k - a.field_h[0].field_l;
@@ -129,7 +129,7 @@ final class vl {
         }
     }
 
-    final void a(int param0, pb param1) {
+    final void a(int param0, Sprite param1) {
         boolean discarded$0 = false;
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;

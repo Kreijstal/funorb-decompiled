@@ -224,11 +224,11 @@ class ig extends rj {
           }
           if (this.field_o != 0 &&
             fb.field_n != this.field_o) {
-            if (this.a((byte) 126, param0, eb.field_a, ni.field_e, param2) &&
+            if (this.a((byte) 126, param0, KeyHandler.field_a, ni.field_e, param2) &&
               fb.field_n == 0) {
-              this.a(eb.field_a - param0, ni.field_e - param2, this.field_o, 119);
+              this.a(KeyHandler.field_a - param0, ni.field_e - param2, this.field_o, 119);
             }
-            this.a(eb.field_a, -128, param3, param2, param0, ni.field_e);
+            this.a(KeyHandler.field_a, -128, param3, param2, param0, ni.field_e);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ig.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

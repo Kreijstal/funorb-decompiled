@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ah extends gg {
-    ah field_m;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode field_m;
     static java.awt.Frame field_q;
-    static pb[] field_p;
+    static Sprite[] field_p;
     static String field_k;
-    ah field_l;
+    DualLinkNode field_l;
     static String field_n;
     long field_o;
 
@@ -48,7 +48,7 @@ class ah extends gg {
 
     final static boolean a(int param0) {
         if (param0 != -1) {
-          ah.d(12);
+          DualLinkNode.d(12);
           return cg.field_a;
         }
         return cg.field_a;
@@ -62,7 +62,7 @@ class ah extends gg {
         return vh.a(true, hf.a((byte) -6));
     }
 
-    protected ah() {
+    protected DualLinkNode() {
     }
 
     static {

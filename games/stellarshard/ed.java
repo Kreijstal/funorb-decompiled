@@ -4,10 +4,10 @@
 final class ed {
     static double field_c;
     static ml field_d;
-    static pb[] field_a;
+    static Sprite[] field_a;
     static int field_b;
 
-    final static void a(int param0, int param1, int param2, pb[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -176,7 +176,7 @@ final class ed {
     public static void a(int param0) {
         field_a = null;
         if (param0 > -24) {
-          field_a = (pb[]) null;
+          field_a = (Sprite[]) null;
         }
         field_d = null;
     }

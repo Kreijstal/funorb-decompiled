@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends gg {
+final class he extends IntrusiveNode {
     static String field_k;
     static String field_o;
     static String field_l;
@@ -84,19 +84,19 @@ final class he extends gg {
         }
     }
 
-    final static pb[] a(byte param0, int param1) {
-        pb[] var3 = null;
-        pb[] var2 = null;
-        pb[] var3Lifetime1;
-        pb[] var2Lifetime1;
+    final static Sprite[] a(byte param0, int param1) {
+        Sprite[] var3 = null;
+        Sprite[] var2 = null;
+        Sprite[] var3Lifetime1;
+        Sprite[] var2Lifetime1;
         if (param0 <= -107) {
-          var3 = new pb[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = cl.a(param1, 1, 64);
           return var2;
         }
         field_k = (String) null;
-        var3Lifetime1 = new pb[9];
+        var3Lifetime1 = new Sprite[9];
         var2Lifetime1 = var3Lifetime1;
         var3Lifetime1[4] = cl.a(param1, 1, 64);
         return var2Lifetime1;

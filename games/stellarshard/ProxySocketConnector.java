@@ -4,10 +4,10 @@
 import java.io.*;
 import java.util.*;
 
-final class bc extends nl {
+final class ProxySocketConnector extends SocketConnector {
     static int field_i;
     private java.net.ProxySelector field_k;
-    static ac field_j;
+    static GameApplet field_j;
     static String field_h;
 
     final java.net.Socket b(int param0) throws IOException {
@@ -90,7 +90,7 @@ final class bc extends nl {
         var9 = 0;
         if (param0 > -127) {
           var14 = (byte[]) null;
-          bc.a(-89, 82, 75, (byte[]) null);
+          ProxySocketConnector.a(-89, 82, 75, (byte[]) null);
         }
         while (var8.length > var9) {
           var10 = var8[var9];
@@ -113,7 +113,7 @@ final class bc extends nl {
           var9++;
         }
         if (var7 != null) {
-          throw bc.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
         return this.a(-28548);
     }
@@ -236,7 +236,7 @@ final class bc extends nl {
         vc.a((byte) -78, param0, true);
     }
 
-    bc() {
+    ProxySocketConnector() {
         this.field_k = java.net.ProxySelector.getDefault();
     }
 

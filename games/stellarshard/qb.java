@@ -66,7 +66,7 @@ final class qb extends lk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a((byte) 115, param1) == qj.field_c) {
-            stackIn_2_0 = s.field_g;
+            stackIn_2_0 = DualLinkDequeIterator.field_g;
             return stackIn_2_0;
           }
           var3_int = -30 % ((20 - param0) / 40);

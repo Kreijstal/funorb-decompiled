@@ -5,16 +5,16 @@ import java.util.*;
 
 class g extends rj implements f {
     static li field_z;
-    oj field_y;
+    IntrusiveDeque field_y;
     static li field_A;
 
     g(int param0, int param1, int param2, int param3, uk param4) {
         super(param0, param1, param2, param3, param4, (lf) null);
-        this.field_y = new oj();
+        this.field_y = new IntrusiveDeque();
     }
 
     void a(int param0, byte param1, int param2, int param3) {
-        ug var5 = null;
+        IntrusiveDequeCursor var5 = null;
         rj var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -25,7 +25,7 @@ class g extends rj implements f {
             this.field_u != null) {
             this.field_u.a(true, param3, param2, (rj) (this), 4549);
           }
-          var5 = new ug(this.field_y);
+          var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (rj) (var5.a((byte) -83));
           while (var6 != null) {
             var6.a(param0, (byte) -57, param2 + this.field_k, param3 + this.field_w);
@@ -64,7 +64,7 @@ class g extends rj implements f {
 
     final void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
-        ug var7 = null;
+        IntrusiveDequeCursor var7 = null;
         int var8 = 0;
         rj var9 = null;
         int var10 = 0;
@@ -75,7 +75,7 @@ class g extends rj implements f {
         var10 = stellarshard.field_B;
         try {
           var8 = 42 % ((param1 + 50) / 57);
-          var7 = new ug(this.field_y);
+          var7 = new IntrusiveDequeCursor(this.field_y);
           var9 = (rj) (var7.b((byte) 122));
           while (var9 != null) {
             if (var9.b(48)) {
@@ -103,7 +103,7 @@ class g extends rj implements f {
     }
 
     final boolean a(int param0, rj param1) {
-        ug var3 = null;
+        IntrusiveDequeCursor var3 = null;
         rj var4 = null;
         int var5 = 0;
         boolean stackIn_7_0 = false;
@@ -116,9 +116,9 @@ class g extends rj implements f {
         RuntimeException var3_ref = null;
         var5 = stellarshard.field_B;
         try {
-          var3 = new ug(this.field_y);
+          var3 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != -2147483648) {
-            this.field_y = (oj) null;
+            this.field_y = (IntrusiveDeque) null;
           }
           var4 = (rj) (var3.b((byte) 120));
           boolean decompiledNaturalLoopExit0 = false;
@@ -154,7 +154,7 @@ class g extends rj implements f {
     }
 
     void a(int param0, boolean param1, int param2, rj param3) {
-        ug var5 = null;
+        IntrusiveDequeCursor var5 = null;
         rj var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -168,7 +168,7 @@ class g extends rj implements f {
           if (param1) {
             this.g(111);
           }
-          var5 = new ug(this.field_y);
+          var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (rj) (var5.b((byte) 126));
           while (null != var6) {
             if (var6.b(48)) {
@@ -196,7 +196,7 @@ class g extends rj implements f {
     }
 
     rj a(byte param0) {
-        ug var2 = null;
+        IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         rj var3 = null;
         int var4 = 0;
@@ -205,7 +205,7 @@ class g extends rj implements f {
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
-          var2 = new ug(this.field_y);
+          var2 = new IntrusiveDequeCursor(this.field_y);
           var3 = (rj) (var2.b((byte) 123));
           if (param0 != -45) {
             this.a((rj) null, (byte) 114);
@@ -231,7 +231,7 @@ class g extends rj implements f {
     }
 
     final boolean a(int param0, int param1, rj param2, int param3, int param4, int param5, int param6) {
-        ug var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         rj var9 = null;
         int var10 = 0;
@@ -244,15 +244,15 @@ class g extends rj implements f {
         boolean stackOut_3_0;
         var10 = stellarshard.field_B;
         try {
-          var8 = new ug(this.field_y);
+          var8 = new IntrusiveDequeCursor(this.field_y);
           var9 = (rj) (var8.b((byte) 125));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var9 != null) {
               stackOut_3_0 = var9.b(48);
               stackIn_19_0 = stackOut_3_0 ? 1 : 0;
               stackIn_4_0 = stackOut_3_0;
               if (var10 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_4_0) {
                 if (var9.e(0) &&
@@ -324,7 +324,7 @@ class g extends rj implements f {
     }
 
     boolean a(int param0, int param1, char param2, rj param3) {
-        ug var5 = null;
+        IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
         rj var6_ref_rj = null;
         int var6 = 0;
@@ -339,18 +339,18 @@ class g extends rj implements f {
         boolean stackOut_6_0;
         var7 = stellarshard.field_B;
         try {
-          var5 = new ug(this.field_y);
+          var5 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != 29657) {
             this.a(true);
           }
           var6_ref_rj = (rj) (var5.b((byte) 119));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var6_ref_rj != null) {
               stackOut_6_0 = var6_ref_rj.b(48);
               stackIn_22_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var6_ref_rj.e(0) &&
@@ -389,7 +389,7 @@ class g extends rj implements f {
     }
 
     final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        ug var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         rj var9 = null;
         int var10 = 0;
@@ -405,15 +405,15 @@ class g extends rj implements f {
           if (param5 <= 24) {
             return false;
           }
-          var8 = new ug(this.field_y);
+          var8 = new IntrusiveDequeCursor(this.field_y);
           var9 = (rj) (var8.b((byte) 117));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var9 != null) {
               stackOut_6_0 = var9.b(48);
               stackIn_17_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var9.a(param0, param1, param2, param3, this.field_w + param4, (byte) 59, param6 + this.field_k)) {
@@ -443,13 +443,13 @@ class g extends rj implements f {
 
     private final void g(int param0) {
         RuntimeException runtimeException = null;
-        ug var2 = null;
+        IntrusiveDequeCursor var2 = null;
         rj var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
-          var2 = new ug(this.field_y);
+          var2 = new IntrusiveDequeCursor(this.field_y);
           var3 = (rj) (var2.b((byte) 115));
           while (null != var3) {
             var3.f(0);
@@ -470,11 +470,11 @@ class g extends rj implements f {
     }
 
     final boolean a(rj param0, byte param1) {
-        ug var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         rj var5 = null;
-        ug var6 = null;
+        IntrusiveDequeCursor var6 = null;
         rj var7 = null;
         int var8 = 0;
         boolean stackIn_9_0 = false;
@@ -492,7 +492,7 @@ class g extends rj implements f {
             return false;
           }
           var4 = 73 / ((param1 - 17) / 38);
-          var3 = new ug(this.field_y);
+          var3 = new IntrusiveDequeCursor(this.field_y);
           var5 = (rj) (var3.b((byte) 125));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
@@ -501,7 +501,7 @@ class g extends rj implements f {
             stackIn_9_0 = stackOut_8_0;
             if (var8 == 0) {
               if (stackIn_9_0) {
-                var6 = new ug(this.field_y);
+                var6 = new IntrusiveDequeCursor(this.field_y);
                 var6.b(4993, var5);
                 var7 = (rj) (var6.a(true));
                 while (var7 != null) {
@@ -582,7 +582,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(118, "error_js5io");
                 if (var2 != null) {
-                  eb.field_d = se.a(0, var2);
+                  KeyHandler.field_d = se.a(0, var2);
                 }
                 var2 = ca.a(99, "error_js5connect_full");
                 if (null != var2) {
@@ -594,7 +594,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(85, "login_gameupdated");
                 if (var2 != null) {
-                  ah.field_n = se.a(param1 - 1, var2);
+                  DualLinkNode.field_n = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(108, "create_unable");
                 if (null != var2) {
@@ -633,11 +633,11 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 + 123, "ticketing_xunread");
                 if (var2 != null) {
-                  be.field_e = se.a(param1 - 1, var2);
+                  MouseHandler.field_e = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(param1 + 109, "ticketing_gotowebsite");
                 if (null != var2) {
-                  nl.field_a = se.a(0, var2);
+                  SocketConnector.field_a = se.a(0, var2);
                 }
                 var2 = ca.a(122, "ticketing_waitingformessages");
                 if (var2 != null) {
@@ -1589,11 +1589,11 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(96, "login");
                 if (null != var2) {
-                  oj.field_a = se.a(0, var2);
+                  IntrusiveDeque.field_a = se.a(0, var2);
                 }
                 var2 = ca.a(86, "goback");
                 if (null != var2) {
-                  bc.field_h = se.a(0, var2);
+                  ProxySocketConnector.field_h = se.a(0, var2);
                 }
                 var2 = ca.a(86, "otheroptions");
             }
@@ -2019,7 +2019,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(119, "login_create_tooltip");
                 if (var2 != null) {
-                  hi.field_c = se.a(0, var2);
+                  DelegatingCanvas.field_c = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 124, "login_justplay_tooltip");
                 if (null != var2) {
@@ -2051,7 +2051,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 + 126, "create_password_tooltip");
                 if (var2 != null) {
-                  wg.field_d = se.a(0, var2);
+                  ClientException.field_d = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 105, "create_password_hint");
                 if (var2 != null) {
@@ -2155,7 +2155,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 + 90, "create_alert_invalidemail");
                 if (null != var2) {
-                  s.field_g = se.a(0, var2);
+                  DualLinkDequeIterator.field_g = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 111, "create_alert_email_unavailable");
                 if (null != var2) {
@@ -2439,7 +2439,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 ^ 90, "achievements");
                 if (null != var2) {
-                  nl.field_b = se.a(0, var2);
+                  SocketConnector.field_b = se.a(0, var2);
                 }
                 var2 = ca.a(87, "achievementsthisgame");
                 if (var2 != null) {
@@ -3241,7 +3241,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(97, "mb_including_gamename");
                 if (var2 != null) {
-                  wg.field_b = se.a(0, var2);
+                  ClientException.field_b = se.a(0, var2);
                 }
                 var2 = ca.a(98, "mb_full_access_1");
                 if (null != var2) {
@@ -3265,7 +3265,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 ^ 92, "mb_exclusive_2");
                 if (var2 != null) {
-                  nl.field_d = se.a(param1 - 1, var2);
+                  SocketConnector.field_d = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(95, "me_extra_benefits");
                 if (null != var2) {
@@ -3293,11 +3293,11 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(111, "rating_mode_name,0");
                 if (var2 != null) {
-                  ug.field_c[0] = se.a(0, var2);
+                  IntrusiveDequeCursor.field_c[0] = se.a(0, var2);
                 }
                 var2 = ca.a(96, "rating_mode_name,1");
                 if (var2 != null) {
-                  ug.field_c[1] = se.a(0, var2);
+                  IntrusiveDequeCursor.field_c[1] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 106, "rating_mode_long_name,0");
                 if (var2 != null) {
@@ -3429,31 +3429,31 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(87, "mustlogin4,1");
                 if (var2 != null) {
-                  mh.field_h[1] = se.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[1] = se.a(0, var2);
                 }
                 var2 = ca.a(105, "mustlogin4,2");
                 if (null != var2) {
-                  mh.field_h[2] = se.a(ih.a(param1, 1), var2);
+                  ImageProducerRasterBuffer.field_h[2] = se.a(ih.a(param1, 1), var2);
                 }
                 var2 = ca.a(108, "mustlogin4,3");
                 if (var2 != null) {
-                  mh.field_h[3] = se.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[3] = se.a(0, var2);
                 }
                 var2 = ca.a(95, "mustlogin4,4");
                 if (null != var2) {
-                  mh.field_h[4] = se.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[4] = se.a(0, var2);
                 }
                 var2 = ca.a(100, "mustlogin4,5");
                 if (null != var2) {
-                  mh.field_h[5] = se.a(ih.a(param1, 1), var2);
+                  ImageProducerRasterBuffer.field_h[5] = se.a(ih.a(param1, 1), var2);
                 }
                 var2 = ca.a(124, "mustlogin4,6");
                 if (null != var2) {
-                  mh.field_h[6] = se.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[6] = se.a(0, var2);
                 }
                 var2 = ca.a(116, "mustlogin4,7");
                 if (var2 != null) {
-                  mh.field_h[7] = se.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[7] = se.a(0, var2);
                 }
                 var2 = ca.a(113, "mustlogin_notloggedin");
                 if (var2 != null) {
@@ -3489,55 +3489,55 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 + 120, "subscription_cost_monthly,0");
                 if (null != var2) {
-                  ai.field_a[0] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[0] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 86, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  ai.field_a[1] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[1] = se.a(0, var2);
                 }
                 var2 = ca.a(109, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  ai.field_a[2] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[2] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 101, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  ai.field_a[3] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[3] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 89, "subscription_cost_monthly,4");
                 if (var2 != null) {
-                  ai.field_a[4] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[4] = se.a(0, var2);
                 }
                 var2 = ca.a(100, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  ai.field_a[5] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[5] = se.a(0, var2);
                 }
                 var2 = ca.a(120, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  ai.field_a[6] = se.a(param1 - 1, var2);
+                  IterableNodeHashTable.field_a[6] = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(126, "subscription_cost_monthly,7");
                 if (var2 != null) {
-                  ai.field_a[7] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[7] = se.a(0, var2);
                 }
                 var2 = ca.a(125, "subscription_cost_monthly,8");
                 if (null != var2) {
-                  ai.field_a[8] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[8] = se.a(0, var2);
                 }
                 var2 = ca.a(117, "subscription_cost_monthly,9");
                 if (null != var2) {
-                  ai.field_a[9] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[9] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 86, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  ai.field_a[10] = se.a(ih.a(param1, 1), var2);
+                  IterableNodeHashTable.field_a[10] = se.a(ih.a(param1, 1), var2);
                 }
                 var2 = ca.a(102, "subscription_cost_monthly,11");
                 if (null != var2) {
-                  ai.field_a[11] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[11] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 88, "subscription_cost_monthly,12");
                 if (null != var2) {
-                  ai.field_a[12] = se.a(0, var2);
+                  IterableNodeHashTable.field_a[12] = se.a(0, var2);
                 }
                 var2 = ca.a(90, "sentence_separator");
                 if (null != var2) {
@@ -3588,7 +3588,7 @@ class g extends rj implements f {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException runtimeException = null;
-        ug var5 = null;
+        IntrusiveDequeCursor var5 = null;
         rj var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -3601,14 +3601,14 @@ class g extends rj implements f {
         RuntimeException decompiledCaughtException = null;
         var8 = stellarshard.field_B;
         try {
-          var5 = new ug(this.field_y);
+          var5 = new IntrusiveDequeCursor(this.field_y);
           var6 = (rj) (var5.b((byte) 115));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (null != var6) {
               discarded$2 = param2.append('\n');
               stackIn_13_0 = 0;
               if (var8 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var7 = stackIn_13_0;
               while (var7 <= param0) {
@@ -3617,7 +3617,7 @@ class g extends rj implements f {
               }
               var6.a(param0 + 1, false, param2, param3);
               var6 = (rj) (var5.a(true));
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = param1;
             break;
@@ -3648,13 +3648,13 @@ class g extends rj implements f {
 
     final void c(boolean param0) {
         RuntimeException runtimeException = null;
-        ug var2 = null;
+        IntrusiveDequeCursor var2 = null;
         rj var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
-          var2 = new ug(this.field_y);
+          var2 = new IntrusiveDequeCursor(this.field_y);
           if (!param0) {
             this.a(-114, -125, (rj) null, -28, 57, -83, 71);
           }
@@ -3675,7 +3675,7 @@ class g extends rj implements f {
     }
 
     final String d(int param0) {
-        ug var2 = null;
+        IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         rj var3 = null;
         String var4 = null;
@@ -3688,7 +3688,7 @@ class g extends rj implements f {
           if (param0 != 3690) {
             field_z = (li) null;
           }
-          var2 = new ug(this.field_y);
+          var2 = new IntrusiveDequeCursor(this.field_y);
           var3 = (rj) (var2.b((byte) 122));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
@@ -3724,7 +3724,7 @@ class g extends rj implements f {
         try {
           this.field_y.b(-48, param1);
           if (param0 != 4) {
-            this.field_y = (oj) null;
+            this.field_y = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3742,9 +3742,9 @@ class g extends rj implements f {
     }
 
     final boolean a(rj param0, int param1) {
-        ug var3 = null;
+        IntrusiveDequeCursor var3 = null;
         rj var4 = null;
-        ug var5 = null;
+        IntrusiveDequeCursor var5 = null;
         rj var6 = null;
         int var7 = 0;
         boolean stackIn_10_0 = false;
@@ -3765,7 +3765,7 @@ class g extends rj implements f {
           if (this.field_y.a(0)) {
             return false;
           }
-          var3 = new ug(this.field_y);
+          var3 = new IntrusiveDequeCursor(this.field_y);
           var4 = (rj) (var3.a((byte) -120));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
@@ -3774,7 +3774,7 @@ class g extends rj implements f {
             stackIn_10_0 = stackOut_9_0;
             if (var7 == 0) {
               if (stackIn_10_0) {
-                var5 = new ug(this.field_y);
+                var5 = new IntrusiveDequeCursor(this.field_y);
                 var5.a(-25888, var4);
                 var6 = (rj) (var5.a(69));
                 while (var6 != null) {
@@ -3830,12 +3830,12 @@ class g extends rj implements f {
     final int a(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ug var3 = null;
+        IntrusiveDequeCursor var3 = null;
         rj var4 = null;
         int var5 = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
-        ug stackIn_14_0 = null;
+        IntrusiveDequeCursor stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3846,7 +3846,7 @@ class g extends rj implements f {
             return stackIn_3_0;
           }
           var2_int = 0;
-          var3 = new ug(this.field_y);
+          var3 = new IntrusiveDequeCursor(this.field_y);
           var4 = (rj) (var3.b((byte) 116));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
@@ -3858,7 +3858,7 @@ class g extends rj implements f {
               }
               stackIn_14_0 = var3;
               stackIn_15_1 = !(param0);
-              var4 = (rj) (((ug) (Object) stackIn_14_0).a(stackIn_15_1));
+              var4 = (rj) (((IntrusiveDequeCursor) (Object) stackIn_14_0).a(stackIn_15_1));
               continue;
             }
             break;

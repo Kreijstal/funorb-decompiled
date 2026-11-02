@@ -7,7 +7,7 @@ final class sf {
     static int[] field_d;
     static String field_e;
     static pg field_f;
-    static be field_c;
+    static MouseHandler field_c;
 
     public static void a(boolean param0) {
         if (!param0) {
@@ -52,6 +52,6 @@ final class sf {
         field_a = new cg();
         field_e = "OK";
         field_d = new int[128];
-        field_c = new be();
+        field_c = new MouseHandler();
     }
 }

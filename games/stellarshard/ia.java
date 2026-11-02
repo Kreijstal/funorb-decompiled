@@ -22,7 +22,7 @@ final class ia extends tb implements oi {
             if (param1 == nb.field_K) {
               this.field_t = this.field_t + 10;
               var3 = wh.field_d;
-              if (ac.b((byte) 124)) {
+              if (GameApplet.b((byte) 124)) {
                 this.field_t = this.field_t + 20;
                 var3 = dl.field_B;
               }

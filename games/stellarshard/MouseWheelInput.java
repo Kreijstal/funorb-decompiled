@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fe {
+abstract class MouseWheelInput {
     static boolean field_e;
     static boolean field_b;
     static d field_c;
     static char[] field_g;
-    static pb[][] field_d;
-    static pb field_a;
+    static Sprite[][] field_d;
+    static Sprite field_a;
     static String field_f;
 
     abstract void a(int param0, java.awt.Component param1);
@@ -56,16 +56,16 @@ abstract class fe {
         if (param0 == 31147) {
           field_c = null;
           field_a = null;
-          field_d = (pb[][]) null;
+          field_d = (Sprite[][]) null;
           return;
         }
         field_g = (char[]) null;
         field_c = null;
         field_a = null;
-        field_d = (pb[][]) null;
+        field_d = (Sprite[][]) null;
     }
 
-    final static void a(ka param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -97,6 +97,6 @@ abstract class fe {
         field_b = false;
         field_g = new char[]{(char)91, (char)93, (char)35};
         field_f = "Music          ";
-        field_d = new pb[8][128];
+        field_d = new Sprite[8][128];
     }
 }

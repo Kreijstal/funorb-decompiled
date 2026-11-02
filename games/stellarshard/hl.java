@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends kd {
-    private oj field_o;
-    private oj field_r;
+final class hl extends PcmStream {
+    private IntrusiveDeque field_o;
+    private IntrusiveDeque field_r;
     private int field_q;
     private int field_p;
 
@@ -46,10 +46,10 @@ final class hl extends kd {
     }
 
     private final void d(int param0) {
-        kd var2 = (kd) (this.field_o.b(-92));
+        PcmStream var2 = (PcmStream) (this.field_o.b(-92));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (kd) (this.field_o.b((byte) -57));
+          var2 = (PcmStream) (this.field_o.b((byte) -57));
         }
     }
 
@@ -126,11 +126,11 @@ final class hl extends kd {
         return;
     }
 
-    final kd c() {
-        return (kd) (this.field_o.b((byte) 124));
+    final PcmStream c() {
+        return (PcmStream) (this.field_o.b((byte) 124));
     }
 
-    final synchronized void b(kd param0) {
+    final synchronized void b(PcmStream param0) {
         param0.c(20);
     }
 
@@ -138,7 +138,7 @@ final class hl extends kd {
         return 0;
     }
 
-    final synchronized void a(kd param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_o.a(-1, param0);
     }
 
@@ -146,7 +146,7 @@ final class hl extends kd {
         param0.c(20);
         param0.a();
         param0.field_k = null;
-        gg var2 = this.field_r.field_d.field_g;
+        IntrusiveNode var2 = this.field_r.field_d.field_g;
         if (var2 == this.field_r.field_d) {
           this.field_q = -1;
         } else {
@@ -155,18 +155,18 @@ final class hl extends kd {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        kd var4 = (kd) (this.field_o.b(-81));
+        PcmStream var4 = (PcmStream) (this.field_o.b(-81));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (kd) (this.field_o.b((byte) 77));
+          var4 = (PcmStream) (this.field_o.b((byte) 77));
         }
     }
 
-    final kd d() {
-        return (kd) (this.field_o.b(-125));
+    final PcmStream d() {
+        return (PcmStream) (this.field_o.b(-125));
     }
 
-    private final void a(gg param0, p param1) {
+    private final void a(IntrusiveNode param0, p param1) {
         while (true) {
           if (param0 == this.field_r.field_d) {
             kk.a(103, param1, param0);
@@ -189,8 +189,8 @@ final class hl extends kd {
     }
 
     public hl() {
-        this.field_o = new oj();
-        this.field_r = new oj();
+        this.field_o = new IntrusiveDeque();
+        this.field_r = new IntrusiveDeque();
         this.field_q = -1;
         this.field_p = 0;
     }

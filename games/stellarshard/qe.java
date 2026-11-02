@@ -10,7 +10,7 @@ final class qe {
     int field_i;
     int field_n;
     double field_l;
-    private pb[] field_f;
+    private Sprite[] field_f;
     int field_h;
     static boolean field_o;
     double field_d;
@@ -303,7 +303,7 @@ final class qe {
             if (var6Lifetime6 > 128) {
               var6Lifetime6 = 128;
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[8], 100, var6Lifetime6 * pk.field_h / 78);
             }
             this.field_i = 0;
@@ -336,7 +336,7 @@ final class qe {
             if (var6Lifetime1 > 128) {
               var6Lifetime1 = 128;
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[5], 100, var6Lifetime1 * pk.field_h / 78);
             }
           }
@@ -359,7 +359,7 @@ final class qe {
             if (var6Lifetime2 > 128) {
               var6Lifetime2 = 128;
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[6], 100, var6Lifetime2 * pk.field_h / 78);
             }
           }
@@ -439,7 +439,7 @@ final class qe {
             this.field_g = 50;
           }
           if (this.field_i > 12000) {
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[28], 100, 2 * pk.field_h);
             }
             for (var3_intLifetime1 = 0; var3_intLifetime1 < 256; var3_intLifetime1++) {
@@ -468,7 +468,7 @@ final class qe {
               if (var6Lifetime3 > 128) {
                 var6Lifetime3 = 128;
               }
-              if (fe.field_e) {
+              if (MouseWheelInput.field_e) {
                 ll.field_c.a(sb.field_e[26], 100, pk.field_h * var6Lifetime3 / 78);
               }
             }
@@ -483,7 +483,7 @@ final class qe {
             if (var6Lifetime3 > 128) {
               var6Lifetime3 = 128;
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[26], 100, pk.field_h * var6Lifetime3 / 78);
             }
           }
@@ -503,7 +503,7 @@ final class qe {
             if (128 < var6Lifetime4) {
               var6Lifetime4 = 128;
             }
-            if (fe.field_e) {
+            if (MouseWheelInput.field_e) {
               ll.field_c.a(sb.field_e[23], 100, pk.field_h * var6Lifetime4 / 78);
             }
           }
@@ -536,7 +536,7 @@ final class qe {
                 if (var6Lifetime5 > 128) {
                   var6Lifetime5 = 128;
                 }
-                if (fe.field_e) {
+                if (MouseWheelInput.field_e) {
                   ll.field_c.a(sb.field_e[8], 100, pk.field_h * var6Lifetime5 / 78);
                 }
                 var15 = new vl(3, this);
@@ -561,7 +561,7 @@ final class qe {
               if (var6Lifetime5Lifetime1 > 128) {
                 var6Lifetime5Lifetime1 = 128;
               }
-              if (fe.field_e) {
+              if (MouseWheelInput.field_e) {
                 ll.field_c.a(sb.field_e[8], 100, var6Lifetime5Lifetime1 * pk.field_h / 78);
               }
               var16 = new vl(3, this);
@@ -611,7 +611,7 @@ final class qe {
             }
             this.field_k = this.field_k - Math.cos(3.141592653589793 * (double)this.field_h * 2.0 / 256.0) * 0.1;
             this.field_d = this.field_d - Math.sin(2.0 * ((double)this.field_h * 3.141592653589793) / 256.0) * 0.1;
-            if (fe.field_e &&
+            if (MouseWheelInput.field_e &&
               og.field_a <= 0) {
               ll.field_c.a(sb.field_e[35], 100, pk.field_h);
               og.field_a = 7;
@@ -645,7 +645,7 @@ final class qe {
 
     final static void a(int param0, String param1, Throwable param2) {
         try {
-          ej stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           int stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -675,10 +675,10 @@ final class qe {
               var3 = var3 + param1;
             }
             pf.a(17651, var3);
-            var3 = gg.a(var3, "%3a", ":", 85);
-            var3 = gg.a(var3, "%40", "@", 85);
-            var3 = gg.a(var3, "%26", "&", 71);
-            var8 = gg.a(var3, "%23", "#", 63);
+            var3 = IntrusiveNode.a(var3, "%3a", ":", 85);
+            var3 = IntrusiveNode.a(var3, "%40", "@", 85);
+            var3 = IntrusiveNode.a(var3, "%26", "&", 71);
+            var8 = IntrusiveNode.a(var3, "%23", "#", 63);
             if (tc.field_u == null) {
               return;
             }
@@ -697,7 +697,7 @@ final class qe {
               stackIn_14_3 = null;
               stackIn_14_6 = "" + al.field_b;
             }
-            var4 = ((ej) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(ej.field_g).append("&v2=").append(ej.field_r).append("&e=").append(var8).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var8).toString()));
             var5 = -92 / ((param0 + 65) / 38);
             while (var4.field_f == 0) {
               jj.a((byte) -120, 1L);
@@ -870,7 +870,7 @@ final class qe {
         int var2;
         int var3;
         int var4;
-        pb var4_ref_pb;
+        Sprite var4_ref_pb;
         int var5;
         int var6;
         int var7;
@@ -903,9 +903,9 @@ final class qe {
         int var31;
         int var32;
         int var33;
-        pb var34;
-        pb var35;
-        pb var36;
+        Sprite var34;
+        Sprite var35;
+        Sprite var36;
         int[] var37;
         int[] var38;
         int var20Lifetime1;
@@ -1628,7 +1628,7 @@ final class qe {
         }
     }
 
-    final pb b(int param0) {
+    final Sprite b(int param0) {
         int var2 = 0;
         if (this.field_m == 11) {
           var2 = this.field_c;
@@ -1653,7 +1653,7 @@ final class qe {
           return this.field_f[this.field_h / 2];
         }
         if (param0 != 640) {
-          return (pb) null;
+          return (Sprite) null;
         }
         return this.field_f[0];
     }
@@ -1773,14 +1773,14 @@ final class qe {
         var5 = 16777215;
         if (1 == this.field_m) {
           var5 = 8947848;
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[9], 100, pk.field_h * 2);
           }
           var4 = 80;
           stellarshard.field_U[0] = stellarshard.field_U[0] + 1;
         }
         if (this.field_m == 3) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[16], 100, 2 * pk.field_h);
           }
           var5 = 16777215;
@@ -1788,7 +1788,7 @@ final class qe {
           stellarshard.field_U[1] = stellarshard.field_U[1] + 1;
         }
         if (this.field_m == 5) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[13], 100, pk.field_h * 2);
           }
           var4 = 150;
@@ -1796,7 +1796,7 @@ final class qe {
           stellarshard.field_U[3] = stellarshard.field_U[3] + 1;
         }
         if (0 == this.field_m) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[10], 100, pk.field_h * 2);
           }
           var5 = 8947848;
@@ -1804,27 +1804,27 @@ final class qe {
         }
         if (this.field_m == 2) {
           var4 = 50;
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[17], 100, 2 * pk.field_h);
           }
           var5 = 16777215;
         }
         if (this.field_m == 4) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[14], 100, 2 * pk.field_h);
           }
           var5 = 8947967;
           var4 = 50;
         }
         if (this.field_m == 8) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[11], 100, pk.field_h * 2);
           }
           var5 = 8947848;
           var4 = 10;
         }
         if (9 == this.field_m) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[18], 100, pk.field_h * 2);
           }
           var5 = 16777215;
@@ -1833,7 +1833,7 @@ final class qe {
         if (this.field_m == 10) {
           var4 = 10;
           var5 = 8947967;
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[15], 100, pk.field_h * 2);
           }
         }
@@ -1844,7 +1844,7 @@ final class qe {
             hj.a(244, 11, 1);
           }
           var5 = 16711680;
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var4 = 100;
@@ -1856,7 +1856,7 @@ final class qe {
           if (fieldTemp$1 == 20) {
             hj.a(244, 11, 1);
           }
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var4 = 100;
@@ -1869,7 +1869,7 @@ final class qe {
           if (fieldTemp$2 == 20) {
             hj.a(244, 11, 1);
           }
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var4 = 1000;
@@ -1885,20 +1885,20 @@ final class qe {
           }
           var4 = 250;
           var5 = 16711680;
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
           }
           stellarshard.field_U[9] = stellarshard.field_U[9] + 1;
         }
         if (this.field_m == 7) {
           var4 = 250;
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var5 = 16711680;
         }
         if (6 == this.field_m) {
-          if (fe.field_e) {
+          if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, pk.field_h * 2);
           }
           var4 = 250;
@@ -2048,7 +2048,7 @@ final class qe {
         if (param0 != 100) {
           this.field_d = 0.12426570427502562;
         }
-        if (fe.field_e &&
+        if (MouseWheelInput.field_e &&
           a.field_h[0] != null) {
           var3 = this.field_a - a.field_h[0].field_a;
           var5 = -a.field_h[0].field_l + this.field_l;
@@ -2157,7 +2157,7 @@ final class qe {
                 var2_int = -ae.field_N.field_k + param1;
               }
               ob.field_b.a(ae.field_N.field_k, (byte) -64, ae.field_N.field_r, var2_int);
-              ka.field_o = ih.a((byte) -98);
+              PacketBuffer.field_o = ih.a((byte) -98);
               ae.field_N.field_k = ae.field_N.field_k + var2_int;
               if (ae.field_N.field_k < param1) {
                 return false;
@@ -2169,11 +2169,11 @@ final class qe {
               tk.b(param0 + 61) <= 30000L) {
               return false;
             }
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            oj.c(-2290);
+            IntrusiveDeque.c(-2290);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -2312,7 +2312,7 @@ final class qe {
         }
         if (0 <= param0 &&
           param0 < 8) {
-          this.field_f = fe.field_d[param0];
+          this.field_f = MouseWheelInput.field_d[param0];
         }
         if (8 <= param0) {
           this.field_f = rd.field_a[-8 + param0];

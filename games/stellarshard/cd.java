@@ -5,7 +5,7 @@ final class cd extends rg {
     private int field_N;
     private String field_Q;
     static String field_P;
-    private pb field_O;
+    private Sprite field_O;
     static qd field_L;
     private w field_R;
 
@@ -158,28 +158,28 @@ final class cd extends rg {
         int var13;
         String var17;
         Object var18;
-        pb var19;
-        pb var20;
-        pb var21;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
         String var22;
         Object var23;
-        pb var24;
-        pb var25;
-        pb var26;
+        Sprite var24;
+        Sprite var25;
+        Sprite var26;
         String var27;
         Object var28;
-        pb var29;
-        pb var30;
-        pb var31;
+        Sprite var29;
+        Sprite var30;
+        Sprite var31;
         Object var32;
-        pb var33;
-        pb var34;
-        pb var35;
+        Sprite var33;
+        Sprite var34;
+        Sprite var35;
         Object var36;
-        pb var37;
-        pb var38;
-        pb var39;
-        pb var40;
+        Sprite var37;
+        Sprite var38;
+        Sprite var39;
+        Sprite var40;
         pj var41;
         pj var42;
         pj var43;
@@ -227,30 +227,30 @@ final class cd extends rg {
           if (eh.field_c != var6 &&
             var6 != vk.field_d) {
             if (var6 == qj.field_c) {
-              var21 = ah.field_p[2];
+              var21 = DualLinkNode.field_p[2];
               var21.d(var9, -(var21.field_y >> 1) + var10, 256);
               return;
             }
             if (var6 != lg.field_c) {
               return;
             }
-            var20 = ah.field_p[1];
+            var20 = DualLinkNode.field_p[1];
             var20.d(var9, var10 - (var20.field_y >> 1), 256);
             return;
           }
-          var19 = ah.field_p[0];
+          var19 = DualLinkNode.field_p[0];
           var11 = var19.field_w << 1;
           var12 = var19.field_x << 1;
           if (null == this.field_O) {
-            this.field_O = new pb(var11, var12);
+            this.field_O = new Sprite(var11, var12);
             hj.a(this.field_O, param1 ^ -58);
           } else {
             if (this.field_O.field_v < var11) {
-              this.field_O = new pb(var11, var12);
+              this.field_O = new Sprite(var11, var12);
               hj.a(this.field_O, param1 ^ -58);
             } else {
               if (var12 > this.field_O.field_y) {
-                this.field_O = new pb(var11, var12);
+                this.field_O = new Sprite(var11, var12);
                 hj.a(this.field_O, param1 ^ -58);
               } else {
                 hj.a(this.field_O, param1 ^ -58);
@@ -277,30 +277,30 @@ final class cd extends rg {
           if (eh.field_c != var6 &&
             var6 != vk.field_d) {
             if (var6 == qj.field_c) {
-              var26 = ah.field_p[2];
+              var26 = DualLinkNode.field_p[2];
               var26.d(var9Lifetime1, -(var26.field_y >> 1) + var10Lifetime1, 256);
               return;
             }
             if (var6 != lg.field_c) {
               return;
             }
-            var25 = ah.field_p[1];
+            var25 = DualLinkNode.field_p[1];
             var25.d(var9Lifetime1, var10Lifetime1 - (var25.field_y >> 1), 256);
             return;
           }
-          var24 = ah.field_p[0];
+          var24 = DualLinkNode.field_p[0];
           var11Lifetime1 = var24.field_w << 1;
           var12Lifetime1 = var24.field_x << 1;
           if (null == this.field_O) {
-            this.field_O = new pb(var11Lifetime1, var12Lifetime1);
+            this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
             hj.a(this.field_O, param1 ^ -58);
           } else {
             if (this.field_O.field_v < var11Lifetime1) {
-              this.field_O = new pb(var11Lifetime1, var12Lifetime1);
+              this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
               hj.a(this.field_O, param1 ^ -58);
             } else {
               if (var12Lifetime1 > this.field_O.field_y) {
-                this.field_O = new pb(var11Lifetime1, var12Lifetime1);
+                this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
                 hj.a(this.field_O, param1 ^ -58);
               } else {
                 hj.a(this.field_O, param1 ^ -58);
@@ -329,33 +329,33 @@ final class cd extends rg {
           if (eh.field_c != var6Lifetime1 &&
             var6Lifetime1 != vk.field_d) {
             if (var6Lifetime1 == qj.field_c) {
-              var31 = ah.field_p[2];
+              var31 = DualLinkNode.field_p[2];
               var31.d(var9Lifetime2, -(var31.field_y >> 1) + var10Lifetime2, 256);
               return;
             }
             if (var6Lifetime1 != lg.field_c) {
               return;
             }
-            var30 = ah.field_p[1];
+            var30 = DualLinkNode.field_p[1];
             var30.d(var9Lifetime2, var10Lifetime2 - (var30.field_y >> 1), 256);
             return;
           }
-          var29 = ah.field_p[0];
+          var29 = DualLinkNode.field_p[0];
           var11Lifetime2 = var29.field_w << 1;
           var12Lifetime2 = var29.field_x << 1;
           if (null == this.field_O) {
-            this.field_O = new pb(var11Lifetime2, var12Lifetime2);
+            this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
             hj.a(this.field_O, param1 ^ -58);
           } else {
             if (this.field_O.field_v < var11Lifetime2) {
-              this.field_O = new pb(var11Lifetime2, var12Lifetime2);
+              this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
               hj.a(this.field_O, param1 ^ -58);
             } else {
               if (var12Lifetime2 <= this.field_O.field_y) {
                 hj.a(this.field_O, param1 ^ -58);
                 ti.d();
               } else {
-                this.field_O = new pb(var11Lifetime2, var12Lifetime2);
+                this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
                 hj.a(this.field_O, param1 ^ -58);
               }
             }
@@ -376,33 +376,33 @@ final class cd extends rg {
           if (eh.field_c != var6Lifetime2 &&
             var6Lifetime2 != vk.field_d) {
             if (var6Lifetime2 == qj.field_c) {
-              var35 = ah.field_p[2];
+              var35 = DualLinkNode.field_p[2];
               var35.d(var9Lifetime3, -(var35.field_y >> 1) + var10Lifetime3, 256);
               return;
             }
             if (var6Lifetime2 != lg.field_c) {
               return;
             }
-            var34 = ah.field_p[1];
+            var34 = DualLinkNode.field_p[1];
             var34.d(var9Lifetime3, var10Lifetime3 - (var34.field_y >> 1), 256);
             return;
           }
-          var33 = ah.field_p[0];
+          var33 = DualLinkNode.field_p[0];
           var11Lifetime3 = var33.field_w << 1;
           var12Lifetime3 = var33.field_x << 1;
           if (null == this.field_O) {
-            this.field_O = new pb(var11Lifetime3, var12Lifetime3);
+            this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
             hj.a(this.field_O, param1 ^ -58);
           } else {
             if (this.field_O.field_v < var11Lifetime3) {
-              this.field_O = new pb(var11Lifetime3, var12Lifetime3);
+              this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
               hj.a(this.field_O, param1 ^ -58);
             } else {
               if (var12Lifetime3 <= this.field_O.field_y) {
                 hj.a(this.field_O, param1 ^ -58);
                 ti.d();
               } else {
-                this.field_O = new pb(var11Lifetime3, var12Lifetime3);
+                this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
                 hj.a(this.field_O, param1 ^ -58);
               }
             }
@@ -418,22 +418,22 @@ final class cd extends rg {
         var9Lifetime4 = this.field_w + param3;
         var10Lifetime4 = var45.a((byte) 117, (rj) (this), param2) + (var45.b((rj) (this), (byte) 111).a(17201) >> 1);
         if (eh.field_c == var6Lifetime3) {
-          var38 = ah.field_p[0];
+          var38 = DualLinkNode.field_p[0];
           var11Lifetime4 = var38.field_w << 1;
           var12Lifetime4 = var38.field_x << 1;
           if (null == this.field_O) {
-            this.field_O = new pb(var11Lifetime4, var12Lifetime4);
+            this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
             hj.a(this.field_O, param1 ^ -58);
           } else {
             if (this.field_O.field_v < var11Lifetime4) {
-              this.field_O = new pb(var11Lifetime4, var12Lifetime4);
+              this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
               hj.a(this.field_O, param1 ^ -58);
             } else {
               if (var12Lifetime4 <= this.field_O.field_y) {
                 hj.a(this.field_O, param1 ^ -58);
                 ti.d();
               } else {
-                this.field_O = new pb(var11Lifetime4, var12Lifetime4);
+                this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
                 hj.a(this.field_O, param1 ^ -58);
               }
             }
@@ -445,18 +445,18 @@ final class cd extends rg {
         }
         if (var6Lifetime3 != vk.field_d) {
           if (var6Lifetime3 == qj.field_c) {
-            var40 = ah.field_p[2];
+            var40 = DualLinkNode.field_p[2];
             var40.d(var9Lifetime4, -(var40.field_y >> 1) + var10Lifetime4, 256);
             return;
           }
           if (var6Lifetime3 != lg.field_c) {
             return;
           }
-          var39 = ah.field_p[1];
+          var39 = DualLinkNode.field_p[1];
           var39.d(var9Lifetime4, var10Lifetime4 - (var39.field_y >> 1), 256);
           return;
         }
-        var37 = ah.field_p[0];
+        var37 = DualLinkNode.field_p[0];
         var11Lifetime5 = var37.field_w << 1;
         var12Lifetime5 = var37.field_x << 1;
         if (null != this.field_O &&
@@ -465,11 +465,11 @@ final class cd extends rg {
             hj.a(this.field_O, param1 ^ -58);
             ti.d();
           } else {
-            this.field_O = new pb(var11Lifetime5, var12Lifetime5);
+            this.field_O = new Sprite(var11Lifetime5, var12Lifetime5);
             hj.a(this.field_O, param1 ^ -58);
           }
         } else {
-          this.field_O = new pb(var11Lifetime5, var12Lifetime5);
+          this.field_O = new Sprite(var11Lifetime5, var12Lifetime5);
           hj.a(this.field_O, param1 ^ -58);
         }
         var37.b(112, 144, var37.field_w << 4, var37.field_x << 4, -this.field_N << 10, 4096);
@@ -479,7 +479,7 @@ final class cd extends rg {
 
     final static String h(int param0) {
         if (rk.field_f < 2) {
-          return ug.field_d;
+          return IntrusiveDequeCursor.field_d;
         }
         if (null != pg.field_db) {
           if (!pg.field_db.a((byte) -36)) {

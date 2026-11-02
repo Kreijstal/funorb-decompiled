@@ -238,14 +238,14 @@ final class n {
         }
     }
 
-    final static pb a(pb param0, byte param1, boolean param2) {
+    final static Sprite a(Sprite param0, byte param1, boolean param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        pb stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_29_0 = 0;
-        pb stackIn_40_0 = null;
+        Sprite stackIn_40_0 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -264,7 +264,7 @@ final class n {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        pb var15 = null;
+        Sprite var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -284,7 +284,7 @@ final class n {
           var6 = 1;
           var7 = 1;
           if (param1 > -30) {
-            stackIn_6_0 = (pb) null;
+            stackIn_6_0 = (Sprite) null;
             return stackIn_6_0;
           }
           var8_int = 0;
@@ -307,13 +307,13 @@ final class n {
           }
           var8 = new int[stackIn_12_0];
           var9Lifetime1 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var7 > var9Lifetime1) {
               var10 = 0;
               var11 = 0;
               stackIn_29_0 = 1;
               if (var20 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var12 = stackIn_29_0;
               while (var11 < 4) {
@@ -329,7 +329,7 @@ final class n {
               }
               var8[var9Lifetime1] = var10;
               var9Lifetime1++;
-              continue L3;
+              continue scanLoop1;
             }
             var9Lifetime1 = 255 * rc.a((byte) -61, param0.field_z[var6]) + rc.a((byte) -61, param0.field_z[var6 + 1]);
             var6 += 2;
@@ -346,13 +346,13 @@ final class n {
           var6 += 2;
           var14 = rc.a((byte) -61, param0.field_z[var6]) * 255 + rc.a((byte) -61, param0.field_z[var6 + 1]);
           var6 += 2;
-          var15 = new pb(var13, var14);
+          var15 = new Sprite(var13, var14);
           var15.field_t = var9Lifetime1;
           var15.field_s = var10;
           var15.field_w = var11;
           var15.field_x = var12Lifetime1;
           var16 = 0;
-          L10: while (var16 < var15.field_z.length) {
+          scanLoop2: while (var16 < var15.field_z.length) {
             var17 = 0;
             var18 = 0;
             var19 = 1;
@@ -373,7 +373,7 @@ final class n {
               break;
             }
             if (var20 == 0) {
-              continue L10;
+              continue scanLoop2;
             }
             break;
           }
@@ -422,8 +422,8 @@ final class n {
           var1 = ae.field_N;
           var2 = var1.f(4);
           if (var2 == 0) {
-            if (ac.field_n == null) {
-              ac.field_n = new sb(128);
+            if (GameApplet.field_n == null) {
+              GameApplet.field_n = new sb(128);
               stellarshard.field_T = 0;
             }
             stackIn_12_0 = (var1.f(4) != 1) ? 0 : 1;
@@ -441,12 +441,12 @@ final class n {
             if (var5_ref == null) {
               var5_ref = ee.a(var6_ref, (byte) -98);
               if (var5_ref != null) {
-                ac.field_n.a(var5_ref, (long)var7_ref.hashCode(), 1);
+                GameApplet.field_n.a(var5_ref, (long)var7_ref.hashCode(), 1);
               }
             }
             if (null == var5_ref) {
               var5_ref = new fd();
-              ac.field_n.a(var5_ref, (long)var7_ref.hashCode(), 1);
+              GameApplet.field_n.a(var5_ref, (long)var7_ref.hashCode(), 1);
               fieldTemp$1 = stellarshard.field_T;
               stellarshard.field_T = stellarshard.field_T + 1;
               var5_ref.field_ob = fieldTemp$1;
@@ -473,7 +473,7 @@ final class n {
             }
             if (var2 != 4) {
               qe.a(106, "F1: " + bh.b((byte) -108), (Throwable) null);
-              oj.c(-2290);
+              IntrusiveDeque.c(-2290);
               return;
             }
             bi.field_r = 1;
@@ -483,9 +483,9 @@ final class n {
             pl.b((byte) 105, var4);
             return;
           }
-          if (ac.field_k == null) {
-            ac.field_k = new sb(128);
-            bc.field_i = 0;
+          if (GameApplet.field_k == null) {
+            GameApplet.field_k = new sb(128);
+            ProxySocketConnector.field_i = 0;
           }
           var3Lifetime1 = var1.e((byte) 83);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -497,14 +497,14 @@ final class n {
           if (var6 == null) {
             var6 = ck.a(true, var5);
             if (var6 != null) {
-              ac.field_k.a(var6, (long)nh.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), 1);
+              GameApplet.field_k.a(var6, (long)nh.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), 1);
             }
           }
           if (null == var6) {
             var6 = new fd();
-            ac.field_k.a(var6, (long)nh.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), 1);
-            fieldTemp$0 = bc.field_i;
-            bc.field_i = bc.field_i + 1;
+            GameApplet.field_k.a(var6, (long)nh.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), 1);
+            fieldTemp$0 = ProxySocketConnector.field_i;
+            ProxySocketConnector.field_i = ProxySocketConnector.field_i + 1;
             var6.field_ob = fieldTemp$0;
             cm.field_c.b(-99, var6);
           }
@@ -515,7 +515,7 @@ final class n {
           var6.field_rb = var4_ref_StringLifetime1;
           var6.c(param0 ^ 16);
           var7 = (fd) (cm.field_c.b(param0 - 95));
-          L7: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
               stackOut_53_0 = uh.a(var7, 200, var6);
@@ -530,7 +530,7 @@ final class n {
             }
             if (decompiledFrameRemainder0) {
               if (null == var7) {
-                break L7;
+                break scanLoop1;
               }
               stackIn_61_0 = param0 + 108;
             }

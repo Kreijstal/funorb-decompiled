@@ -26,16 +26,16 @@ final class kb {
         RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
-          de.a(0, 1, ta.field_q, fh.field_b, param0, true, oe.field_c);
+          de.a(0, 1, ta.field_q, BufferedSocket.field_b, param0, true, oe.field_c);
           if (param1 < 7) {
             field_f = (String[]) null;
           }
-          for (var2_int = 0; var2_int < fh.field_b; var2_int++) {
+          for (var2_int = 0; var2_int < BufferedSocket.field_b; var2_int++) {
             fj.field_b[param0 + var2_int] = var2_int;
           }
-          de.a(param0, 1, af.field_k, fh.field_b + param0, param0 + param0, false, ce.field_b);
-          if (param0 < fh.field_b) {
-            fh.field_b = param0;
+          de.a(param0, 1, af.field_k, BufferedSocket.field_b + param0, param0 + param0, false, ce.field_b);
+          if (param0 < BufferedSocket.field_b) {
+            BufferedSocket.field_b = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ final class kb {
           var4 = 1;
           var6 = 1;
         }
-        pd.field_u = nl.a(-119, var4 * var2, var6 * var2);
+        pd.field_u = SocketConnector.a(-119, var4 * var2, var6 * var2);
     }
 
     final long b(int param0) throws IOException {

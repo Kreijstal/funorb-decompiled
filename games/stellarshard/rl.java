@@ -6,7 +6,7 @@ final class rl {
     static String[] field_c;
     static int field_b;
 
-    final static void a(int param0, ka param1, java.math.BigInteger param2, java.math.BigInteger param3, byte[] param4, int param5, int param6) {
+    final static void a(int param0, PacketBuffer param1, java.math.BigInteger param2, java.math.BigInteger param3, byte[] param4, int param5, int param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -40,7 +40,7 @@ final class rl {
           }
           if (null == a.field_b ||
             !(a.field_b.field_r.length >= var7_int)) {
-            a.field_b = new ka(var7_int);
+            a.field_b = new PacketBuffer(var7_int);
           }
           a.field_b.field_k = 0;
           a.field_b.a(param5, param6, (byte) -13, param4);
@@ -51,7 +51,7 @@ final class rl {
           a.field_b.a((byte) 12, var13);
           if (null == kl.field_r ||
             !(kl.field_r.field_r.length >= 100)) {
-            kl.field_r = new ka(100);
+            kl.field_r = new PacketBuffer(100);
           }
           kl.field_r.field_k = 0;
           kl.field_r.a(false, 10);

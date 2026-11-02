@@ -5,7 +5,7 @@ final class ph extends ki {
     int field_C;
     static long field_B;
     static int field_D;
-    ka field_G;
+    PacketBuffer field_G;
     byte field_F;
     static String field_E;
 

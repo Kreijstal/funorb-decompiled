@@ -140,14 +140,14 @@ abstract class tb extends ui {
         if (param0 <= -33) {
           ih.field_d = null;
           gj.field_w = null;
-          vi.field_c = null;
+          RasterBuffer.field_c = null;
           vc.field_b = null;
           return;
         }
         field_K = 80;
         ih.field_d = null;
         gj.field_w = null;
-        vi.field_c = null;
+        RasterBuffer.field_c = null;
         vc.field_b = null;
     }
 

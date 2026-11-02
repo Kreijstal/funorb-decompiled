@@ -22,7 +22,7 @@ class nh extends sk {
         }
         dupTemp$2 = ih.a((byte) -98);
         t.field_d = dupTemp$2;
-        ka.field_o = dupTemp$2;
+        PacketBuffer.field_o = dupTemp$2;
         if (am.field_c.field_f != 1) {
         }
         sl.field_d = lh.field_n;
@@ -37,7 +37,7 @@ class nh extends sk {
         return ea.field_o;
     }
 
-    final void a(int param0, ka param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a((byte) 122, this.field_j);
           if (param0 != 95) {
@@ -139,7 +139,7 @@ class nh extends sk {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
-            if (s.a(45, (char) var7)) {
+            if (DualLinkDequeIterator.a(45, (char) var7)) {
               var8 = of.a(-119, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

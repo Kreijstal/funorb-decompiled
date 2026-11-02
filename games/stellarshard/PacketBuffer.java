@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ka extends gg {
+class PacketBuffer extends IntrusiveNode {
     static int field_q;
     static int field_p;
     static pf field_n;
@@ -646,7 +646,7 @@ class ka extends gg {
         return (255 & this.field_r[this.field_k - 1]) + ((this.field_r[-3 + this.field_k] << 16 & 16711680) + ((255 & this.field_r[-2 + this.field_k]) << 8));
     }
 
-    ka(int param0) {
+    PacketBuffer(int param0) {
         this.field_k = 0;
         this.field_r = ee.a(param0, true);
     }
@@ -678,7 +678,7 @@ class ka extends gg {
         this.field_r[fieldTemp$6] = (byte)(int)param1;
     }
 
-    ka(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_k = 0;
           this.field_r = param0;

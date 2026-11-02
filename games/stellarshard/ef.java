@@ -44,7 +44,7 @@ final class ef extends lk {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_l)) {
-            var3 = hi.a(param1, true);
+            var3 = DelegatingCanvas.a(param1, true);
             if (!var3.a(true)) {
               stackIn_7_0 = vk.field_d;
               return stackIn_7_0;

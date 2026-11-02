@@ -16,7 +16,7 @@ final class kj {
         if (var3 == null) {
           return null;
         }
-        return new kj(new ka(var3));
+        return new kj(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,7 +59,7 @@ final class kj {
         return var3;
     }
 
-    private kj(ka param0) {
+    private kj(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new tj[10];
@@ -80,6 +80,6 @@ final class kj {
         if (var3 == null) {
           return null;
         }
-        return new kj(new ka(var3));
+        return new kj(new PacketBuffer(var3));
     }
 }

@@ -93,7 +93,7 @@ abstract class wl extends tb {
     final static void a(int param0, int param1, String param2) {
         int var3_int = 0;
         try {
-          ie.field_r = false;
+          SpriteState.field_r = false;
           ck.field_db = false;
           if (param1 != -8440) {
             String var4 = (String) null;
@@ -117,7 +117,7 @@ abstract class wl extends tb {
               pi.a(false);
             }
             if (var3_int != 0) {
-              if (ie.field_r) {
+              if (SpriteState.field_r) {
                 param2 = h.a(oa.field_F, 0, new String[]{param2});
               }
               if (ak.field_a) {

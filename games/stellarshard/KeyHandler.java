@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int[] field_b;
     private static int[] field_c;
     static String field_d;
@@ -43,7 +43,7 @@ final class eb implements java.awt.event.KeyListener, java.awt.event.FocusListen
             } else {
               var6 = qe.$cfr$intArgs$a$590e95718a07(-103, stellarshard.field_L[var3_int], true);
               var4 = var4 + nh.field_f;
-              var7 = s.field_b - (var6 >> 1);
+              var7 = DualLinkDequeIterator.field_b - (var6 >> 1);
               if (ma.a(param0, var7 - le.field_k, var4, (byte) -86, na.field_a + (nh.field_h << 1), param1, var6 + (le.field_k << 1))) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
@@ -73,7 +73,7 @@ final class eb implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & 1 + l.field_h;
               if (var3 != di.field_a) {
                 sf.field_d[l.field_h] = -1;
-                ac.field_i[l.field_h] = (char)var2_int;
+                GameApplet.field_i[l.field_h] = (char)var2_int;
                 l.field_h = var3;
               }
             }
@@ -118,7 +118,7 @@ final class eb implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 1 + l.field_h & 127;
               if (var3 != di.field_a) {
                 sf.field_d[l.field_h] = var2_int;
-                ac.field_i[l.field_h] = (char)0;
+                GameApplet.field_i[l.field_h] = (char)0;
                 l.field_h = var3;
               }
             }

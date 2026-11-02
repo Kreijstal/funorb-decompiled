@@ -41,7 +41,7 @@ final class qg {
         this.field_k = 0;
     }
 
-    final void a(ka param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_e = param0.f(4);
         this.field_j = new int[this.field_e];
@@ -52,7 +52,7 @@ final class qg {
         }
     }
 
-    final void b(ka param0) {
+    final void b(PacketBuffer param0) {
         this.field_h = param0.f(4);
         this.field_d = param0.b(false);
         this.field_i = param0.b(false);

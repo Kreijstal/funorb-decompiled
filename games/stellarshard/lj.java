@@ -284,7 +284,7 @@ final class lj extends g implements rf, oi {
         if (!this.e((byte) 34)) {
           return;
         }
-        gg.a(this.field_E.field_m, 97);
+        IntrusiveNode.a(this.field_E.field_m, 97);
         int var2 = 72 / ((59 - param0) / 49);
     }
 

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class od extends ah {
+final class od extends DualLinkNode {
     private int[] field_t;
     static fb field_v;
     static int field_r;
@@ -56,7 +56,7 @@ final class od extends ah {
         return stackIn_13_0;
     }
 
-    final void a(ka param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -119,7 +119,7 @@ final class od extends ah {
         return var2.toString();
     }
 
-    private final void a(ka param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -132,7 +132,7 @@ final class od extends ah {
         int var6 = 0;
         li var7 = null;
         int var9 = 0;
-        ka var10 = null;
+        PacketBuffer var10 = null;
         var9 = stellarshard.field_B;
         try {
           if (param2 != 1) {
@@ -168,8 +168,8 @@ final class od extends ah {
             this.field_u = qj.a('<', param0.e((byte) 106), 10287);
           }
           if (param1 != -11682) {
-            var10 = (ka) null;
-            this.a((ka) null, 76, -96);
+            var10 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 76, -96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

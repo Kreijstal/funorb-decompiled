@@ -5,7 +5,7 @@ final class la extends g implements ec, oi {
     private boolean field_N;
     static th field_O;
     private ig field_E;
-    static oj field_I;
+    static IntrusiveDeque field_I;
     private boolean field_P;
     private ae field_K;
     private boolean field_M;
@@ -56,7 +56,7 @@ final class la extends g implements ec, oi {
           this.field_Q = (ae) ((Object) new pl(param0, (lf) (this), 100));
           this.field_K = (ae) ((Object) new pl("", (lf) (this), 20));
           if (!this.field_P) {
-            this.field_D = new ig(oj.field_a, (lf) null);
+            this.field_D = new ig(IntrusiveDeque.field_a, (lf) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_N) {
@@ -89,7 +89,7 @@ final class la extends g implements ec, oi {
           }
           this.field_Q.field_x = k.field_a;
           if (this.field_E != null) {
-            this.field_E.field_x = hi.field_c;
+            this.field_E.field_x = DelegatingCanvas.field_c;
           }
           if (!this.field_P) {
             if (this.field_N) {
@@ -203,7 +203,7 @@ final class la extends g implements ec, oi {
           var6[var4] = param1;
         }
         if (param0 < 64) {
-          field_I = (oj) null;
+          field_I = (IntrusiveDeque) null;
         }
         return new String(var3);
     }
@@ -433,6 +433,6 @@ final class la extends g implements ec, oi {
 
     static {
         field_O = new th();
-        oj discarded$0 = new oj();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

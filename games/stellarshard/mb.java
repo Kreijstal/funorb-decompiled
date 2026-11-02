@@ -3,7 +3,7 @@
  */
 final class mb {
     static String field_c;
-    static oj field_b;
+    static IntrusiveDeque field_b;
     static String field_a;
 
     final static void a(int param0, byte[] param1) {
@@ -33,8 +33,8 @@ final class mb {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ka var16 = null;
-        ka var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -46,7 +46,7 @@ final class mb {
         int var4Lifetime5;
         var15 = stellarshard.field_B;
         try {
-          var16 = new ka(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.field_k = -2 + param1.length;
           sb.field_b = var17.c((byte) 40);
@@ -56,7 +56,7 @@ final class mb {
           lj.field_D = new byte[sb.field_b][];
           ak.field_c = new int[sb.field_b];
           sk.field_c = new boolean[sb.field_b];
-          vi.field_c = new int[sb.field_b];
+          RasterBuffer.field_c = new int[sb.field_b];
           var17.field_k = param1.length + (-7 - sb.field_b * 8);
           nc.field_G = var17.c((byte) 86);
           wd.field_b = var17.c((byte) 39);
@@ -65,7 +65,7 @@ final class mb {
             ak.field_c[var4] = var16.c((byte) 30);
           }
           for (var4Lifetime1 = 0; sb.field_b > var4Lifetime1; var4Lifetime1++) {
-            vi.field_c[var4Lifetime1] = var17.c((byte) 95);
+            RasterBuffer.field_c[var4Lifetime1] = var17.c((byte) 95);
           }
           for (var4Lifetime2 = 0; sb.field_b > var4Lifetime2; var4Lifetime2++) {
             vc.field_b[var4Lifetime2] = var17.c((byte) 30);
@@ -205,7 +205,7 @@ final class mb {
 
     static {
         field_c = "Waiting for fonts";
-        field_b = new oj();
+        field_b = new IntrusiveDeque();
         field_a = "Account created successfully!";
     }
 }

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kd extends gg {
+abstract class PcmStream extends IntrusiveNode {
     gb field_l;
-    kd field_k;
+    PcmStream field_k;
     volatile boolean field_m;
     int field_n;
 
@@ -21,15 +21,15 @@ abstract class kd extends gg {
         }
     }
 
-    abstract kd c();
+    abstract PcmStream c();
 
     abstract void a(int param0);
 
-    abstract kd d();
+    abstract PcmStream d();
 
     abstract int b();
 
-    kd() {
+    PcmStream() {
         this.field_m = true;
     }
 }

@@ -26,7 +26,7 @@ final class jb {
         try {
           int var4_int = -23 % ((param3 + 27) / 50);
           sa.field_h = param1;
-          ka.field_q = param0;
+          PacketBuffer.field_q = param0;
           eh.field_a = param2;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "jb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -51,7 +51,7 @@ final class jb {
     final boolean d(int param0) {
         if (param0 != 2) {
           this.field_n = 0.2115049809217453f;
-          if (this.field_d > fh.field_m) {
+          if (this.field_d > BufferedSocket.field_m) {
             return false;
           }
           if (mk.field_k > 0) {
@@ -59,7 +59,7 @@ final class jb {
           }
           return false;
         }
-        if (this.field_d > fh.field_m) {
+        if (this.field_d > BufferedSocket.field_m) {
           return false;
         }
         if (mk.field_k > 0) {
@@ -92,7 +92,7 @@ final class jb {
               return;
             }
             this.field_g = this.field_o;
-            if (fh.field_m < this.field_d) {
+            if (BufferedSocket.field_m < this.field_d) {
               this.field_f = false;
             } else {
               this.a((byte) -15);
@@ -117,7 +117,7 @@ final class jb {
               return;
             }
             this.field_g = this.field_o;
-            if (fh.field_m < this.field_d) {
+            if (BufferedSocket.field_m < this.field_d) {
               this.field_f = false;
             } else {
               this.a((byte) -15);

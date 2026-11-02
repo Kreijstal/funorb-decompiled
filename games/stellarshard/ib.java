@@ -11,7 +11,7 @@ abstract class ib {
     int field_l;
     int field_b;
     private boolean field_f;
-    static oj field_c;
+    static IntrusiveDeque field_c;
     int field_i;
     static String[] field_h;
     static String field_m;
@@ -29,7 +29,7 @@ abstract class ib {
           } else {
             this.b(param3, -1);
           }
-          rl.field_b = oj.field_b;
+          rl.field_b = IntrusiveDeque.field_b;
           return;
         }
         rl.field_b = rl.field_b - 1;
@@ -119,7 +119,7 @@ abstract class ib {
           if (0 == fb.field_n) {
             this.field_f = false;
             if (qc.field_a) {
-              var2 = this.a((byte) 59, eb.field_a, ni.field_e);
+              var2 = this.a((byte) 59, KeyHandler.field_a, ni.field_e);
               if (var2 != -1) {
                 this.field_l = var2;
                 this.field_n = false;
@@ -143,7 +143,7 @@ abstract class ib {
             if (!this.field_f) {
               this.field_f = false;
               if (qc.field_a) {
-                var2 = this.a((byte) 59, eb.field_a, ni.field_e);
+                var2 = this.a((byte) 59, KeyHandler.field_a, ni.field_e);
                 if (var2 != -1) {
                   this.field_l = var2;
                   this.field_n = false;
@@ -157,7 +157,7 @@ abstract class ib {
             } else {
               var2 = this.field_l;
               if (var2 != -1) {
-                this.a(fb.field_n, ni.field_e, (byte) 8, var2, -(var2 * this.field_a) + (eb.field_a - this.field_b), true);
+                this.a(fb.field_n, ni.field_e, (byte) 8, var2, -(var2 * this.field_a) + (KeyHandler.field_a - this.field_b), true);
               }
             }
           }
@@ -184,7 +184,7 @@ abstract class ib {
 
     static {
         field_d = "Service unavailable";
-        field_c = new oj();
+        field_c = new IntrusiveDeque();
         field_g = 0;
         field_m = "Type your email address again to make sure it's correct";
         field_h = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};

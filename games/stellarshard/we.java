@@ -18,7 +18,7 @@ final class we {
         if (param0 != 15) {
           field_a = -116L;
         }
-        oc.field_c = new oj();
+        oc.field_c = new IntrusiveDeque();
     }
 
     public static void b(byte param0) {
@@ -187,7 +187,7 @@ final class we {
         try {
           ck.field_db = true;
           ak.field_a = param0 ? true : false;
-          ei.field_G = new ck(na.field_d, s.field_c, param2, gk.field_a, ak.field_a);
+          ei.field_G = new ck(na.field_d, DualLinkDequeIterator.field_c, param2, gk.field_a, ak.field_a);
           if (param1 != 12757) {
             field_e = (String) null;
           }
@@ -294,7 +294,7 @@ final class we {
             stackIn_2_0 = null;
             return (ub) (stackIn_2_0);
           }
-          var2 = new ub(param0, ak.field_c, vi.field_c, vc.field_b, ih.field_d, ih.field_b);
+          var2 = new ub(param0, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, ih.field_b);
           tb.f((byte) -128);
           if (param1 != 1) {
             we.a((byte) 22);

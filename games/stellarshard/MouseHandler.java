@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static li field_c;
     static String field_e;
     static String field_f;
@@ -33,10 +33,10 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (sf.field_c != null) {
-            ac.field_e = 0;
+            GameApplet.field_e = 0;
             pg.field_gb = -1;
             ak.field_e = -1;
-            hi.field_a = true;
+            DelegatingCanvas.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "be.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -52,7 +52,7 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != sf.field_c) {
-            ac.field_e = 0;
+            GameApplet.field_e = 0;
             oc.field_b = param0.getX();
             wl.field_R = param0.getY();
             ih.a((byte) -98);
@@ -70,7 +70,7 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             if ((var2_int & 8) == 0) {
             }
-            hi.field_a = true;
+            DelegatingCanvas.field_a = true;
           }
           if (!param0.isPopupTrigger()) {
             return;
@@ -97,10 +97,10 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (null != sf.field_c) {
-            ac.field_e = 0;
+            GameApplet.field_e = 0;
             pg.field_gb = param0.getX();
             ak.field_e = param0.getY();
-            hi.field_a = true;
+            DelegatingCanvas.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "be.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -116,9 +116,9 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != sf.field_c) {
-            ac.field_e = 0;
+            GameApplet.field_e = 0;
             ib.field_g = 0;
-            hi.field_a = true;
+            DelegatingCanvas.field_a = true;
             var2_int = param0.getModifiers();
             if ((8 & var2_int) != 0) {
             }
@@ -149,10 +149,10 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (null != sf.field_c) {
-            ac.field_e = 0;
+            GameApplet.field_e = 0;
             pg.field_gb = param0.getX();
             ak.field_e = param0.getY();
-            hi.field_a = true;
+            DelegatingCanvas.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "be.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -234,10 +234,10 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (sf.field_c != null) {
-            ac.field_e = 0;
+            GameApplet.field_e = 0;
             pg.field_gb = param0.getX();
             ak.field_e = param0.getY();
-            hi.field_a = true;
+            DelegatingCanvas.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "be.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');

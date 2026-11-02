@@ -3,19 +3,19 @@
  */
 abstract class tf {
     static String field_c;
-    static oj field_a;
+    static IntrusiveDeque field_a;
     static li field_b;
 
     final static void a(int param0) {
         int var1 = ok.a((byte) 125);
         int var2 = kb.b((byte) 98);
         if (param0 == 0) {
-          eh.field_a.a(true, var1 + (ka.field_q << 1), var2 + (sa.field_h << 1), rg.field_F - sa.field_h, -ka.field_q + od.field_r);
+          eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (sa.field_h << 1), rg.field_F - sa.field_h, -PacketBuffer.field_q + od.field_r);
           kl.a(true);
           return;
         }
         tf.b(-92);
-        eh.field_a.a(true, var1 + (ka.field_q << 1), var2 + (sa.field_h << 1), rg.field_F - sa.field_h, -ka.field_q + od.field_r);
+        eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (sa.field_h << 1), rg.field_F - sa.field_h, -PacketBuffer.field_q + od.field_r);
         kl.a(true);
     }
 
@@ -73,7 +73,7 @@ abstract class tf {
         }
     }
 
-    final static void a(int param0, int param1, pb[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -105,7 +105,7 @@ abstract class tf {
 
     static {
         field_c = "Not yet achieved";
-        field_a = new oj();
+        field_a = new IntrusiveDeque();
         field_b = new li(15, 0, 1, 0);
     }
 }

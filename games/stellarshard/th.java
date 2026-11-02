@@ -16,7 +16,7 @@ final class th {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        ai.a(param1, -1, (String) null, param0);
+        IterableNodeHashTable.a(param1, -1, (String) null, param0);
         if (param2 != 4) {
           th.a(false, true, -6);
         }
@@ -113,7 +113,7 @@ final class th {
             CharSequence var5 = (CharSequence) null;
             th.a(-70, false, 43, (CharSequence) null);
           }
-          gg.field_d = param2;
+          IntrusiveNode.field_d = param2;
           ki.a(ti.field_i / 2, ti.field_b / 2, -116);
           qe.a(param0.field_x, -29770, param1.field_r + param1.field_x, param1.field_x, param0.field_r + param0.field_x);
         } catch (RuntimeException runtimeException) {
@@ -156,12 +156,12 @@ final class th {
     }
 
     final static void a(byte param0) {
-        pb var1 = null;
-        pb var3 = null;
+        Sprite var1 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = stellarshard.field_B;
         try {
-          var1 = new pb(540, 140);
+          var1 = new Sprite(540, 140);
           hj.a(var1, 1);
           cc.a();
           int var2 = 104 / ((param0 + 41) / 39);

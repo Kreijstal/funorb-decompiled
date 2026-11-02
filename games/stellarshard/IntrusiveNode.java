@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gg {
-    gg field_c;
-    static oj field_b;
+class IntrusiveNode {
+    IntrusiveNode field_c;
+    static IntrusiveDeque field_b;
     long field_j;
     static long field_a;
     static int field_d;
     static int field_i;
     static byte[] field_e;
     static af field_f;
-    gg field_g;
+    IntrusiveNode field_g;
     static int[] field_h;
 
     final static void a(String param0, int param1) {
@@ -18,7 +18,7 @@ class gg {
           df.a(param1 ^ -11, param0);
           we.a(false, param1 + 12660, ul.field_H);
           if (param1 != 97) {
-            gg.b((byte) -95);
+            IntrusiveNode.b((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "gg.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -32,7 +32,7 @@ class gg {
         var5 = stellarshard.field_B;
         var4 = param0.indexOf(param2);
         if (param3 <= 35) {
-          gg.a(-103, -1, -45, -55, 12);
+          IntrusiveNode.a(-103, -1, -45, -55, 12);
         }
         while (true) {
           if (var4 == -1) {
@@ -81,7 +81,7 @@ class gg {
           this.field_c = null;
           return;
         }
-        field_b = (oj) null;
+        field_b = (IntrusiveDeque) null;
         this.field_c = null;
     }
 
@@ -115,7 +115,7 @@ class gg {
           var7 = var8;
           var3 = var7;
           if (param1) {
-            gg.a(-62, 112, -30, 61, -127);
+            IntrusiveNode.a(-62, 112, -30, 61, -127);
           }
           var4 = 0;
           while (var2_int > var4) {
@@ -166,7 +166,7 @@ class gg {
         field_i = 1;
         field_f = null;
         field_e = new byte[520];
-        field_b = new oj();
+        field_b = new IntrusiveDeque();
         field_h = new int[1024];
     }
 }

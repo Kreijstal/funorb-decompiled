@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends gg {
+final class fk extends IntrusiveNode {
     static int[] field_k;
     int field_p;
     int field_l;
@@ -66,7 +66,7 @@ final class fk extends gg {
             if (param3 < 71) {
               return;
             }
-            if (ej.field_k.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_k.startsWith("win") &&
               li.a(param2, (byte) -5)) {
               return;
             }

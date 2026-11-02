@@ -39,7 +39,7 @@ final class sd {
             return stackIn_4_0;
           }
           if (255 < var2_int) {
-            stackIn_8_0 = bg.field_a;
+            stackIn_8_0 = DualLinkDeque.field_a;
             return stackIn_8_0;
           }
           var3 = qj.a('.', param1, 10287);
@@ -50,7 +50,7 @@ final class sd {
           var4 = var3;
           if (param0 != -96) {
             var9 = (String) null;
-            sd.a((pb) null, (byte) 119, (String) null);
+            sd.a((Sprite) null, (byte) 119, (String) null);
           }
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
@@ -60,7 +60,7 @@ final class sd {
               return stackIn_19_0;
             }
           }
-          stackIn_22_0 = eb.a(var3[-1 + var3.length], param0 ^ -30);
+          stackIn_22_0 = KeyHandler.a(var3[-1 + var3.length], param0 ^ -30);
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ final class sd {
         this.field_g = this.field_g * 0.99999;
         hk.field_p = hk.field_p - 1;
         lg.field_f = lg.field_f + 1;
-        if (!s.field_i) {
+        if (!DualLinkDequeIterator.field_i) {
           return null;
         }
         if (this.field_h < -384.0) {
@@ -147,7 +147,7 @@ final class sd {
             var4 = gf.field_a;
           }
           if (-2 == this.field_e) {
-            var4 = ka.field_l;
+            var4 = PacketBuffer.field_l;
           }
           if (this.field_e == -3) {
             var4 = he.field_l;
@@ -156,7 +156,7 @@ final class sd {
             var4 = td.field_e;
           }
           if (this.field_e == -5) {
-            var4 = nl.field_f;
+            var4 = SocketConnector.field_f;
           }
           if (this.field_e == -6) {
             var4 = qh.field_h;
@@ -177,7 +177,7 @@ final class sd {
             var4 = fc.field_c;
           }
           if (this.field_e == -12) {
-            var4 = wg.field_e;
+            var4 = ClientException.field_e;
           }
           if (-13 == this.field_e) {
             var4 = nb.field_O;
@@ -208,10 +208,10 @@ final class sd {
         }
     }
 
-    final static void a(pb param0, byte param1, String param2) {
+    final static void a(Sprite param0, byte param1, String param2) {
         try {
           ve.field_a = param0;
-          be.field_f = param2;
+          MouseHandler.field_f = param2;
           if (param1 != 60) {
             String var4 = (String) null;
             sd.a((byte) 87, (String) null);

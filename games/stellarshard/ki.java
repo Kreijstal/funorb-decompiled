@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ki extends ah {
+abstract class ki extends DualLinkNode {
     static int field_t;
     boolean field_y;
     volatile boolean field_w;
@@ -18,7 +18,7 @@ abstract class ki extends ah {
     final static void f(int param0) {
         jf.d(-1);
         gk.field_a = true;
-        ie.field_r = true;
+        SpriteState.field_r = true;
         na.field_d.e((byte) 67);
         if (param0 >= 57) {
           we.a(false, 12757, ak.field_b);
@@ -45,11 +45,11 @@ abstract class ki extends ah {
         if (param2 > -115) {
           ki.a(-70, -86, 61);
           eh.field_g = param1;
-          s.field_b = param0;
+          DualLinkDequeIterator.field_b = param0;
           return;
         }
         eh.field_g = param1;
-        s.field_b = param0;
+        DualLinkDequeIterator.field_b = param0;
     }
 
     ki() {

@@ -9,7 +9,7 @@ final class qh {
     static boolean field_d;
     private int[][] field_i;
     static String field_f;
-    static pb[] field_a;
+    static Sprite[] field_a;
     static wk field_e;
     private int field_c;
     private int field_b;
@@ -37,7 +37,7 @@ final class qh {
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
         if (param0 < 52) {
-          field_a = (pb[]) null;
+          field_a = (Sprite[]) null;
         }
         var1_ref = pk.field_e;
         synchronized (var1_ref) {
@@ -45,7 +45,7 @@ final class qh {
             return false;
           }
           gi.field_f = sf.field_d[di.field_a];
-          uc.field_b = ac.field_i[di.field_a];
+          uc.field_b = GameApplet.field_i[di.field_a];
           di.field_a = 127 & di.field_a + 1;
           stackIn_7_0 = true;
         }
@@ -381,7 +381,7 @@ final class qh {
         if (param0 == param1) {
           return;
         }
-        var3 = fe.a(-102, param0, param1);
+        var3 = MouseWheelInput.a(-102, param0, param1);
         param0 = param0 / var3;
         param1 = param1 / var3;
         this.field_b = param0;

@@ -34,7 +34,7 @@ final class ca {
           var6 = param3.a(param2, 16, param0);
           var5 = var6;
           if (var6 != null) {
-            stackIn_7_0 = new jj(new ka(var6), param4);
+            stackIn_7_0 = new jj(new PacketBuffer(var6), param4);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -109,7 +109,7 @@ final class ca {
         }
     }
 
-    final static void a(ka param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;

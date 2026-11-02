@@ -350,10 +350,10 @@ final class d extends p {
           this.field_lb = this.field_lb + 1;
         }
         for (var15 = 0; var15 < this.field_y.field_r; var15++) {
-          L55: {
+          regionExit1: {
             if (this.field_ob != 0) {
               if (this.field_n[var15] < 0) {
-                break L55;
+                break regionExit1;
               }
               var16 = this.field_n[var15];
             } else {

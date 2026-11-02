@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class s implements Iterator {
-    private ah field_d;
+final class DualLinkDequeIterator implements Iterator {
+    private DualLinkNode field_d;
     static boolean field_i;
-    private ah field_h;
+    private DualLinkNode field_h;
     static int field_b;
     static li field_f;
     static bd field_c;
     static va field_e;
-    private bg field_a;
+    private DualLinkDeque field_a;
     static String field_g;
 
     public final boolean hasNext() {
@@ -44,7 +44,7 @@ final class s implements Iterator {
           }
           var3_int = param0.length();
           if (param2 != 3) {
-            s.a(true);
+            DualLinkDequeIterator.a(true);
           }
           if (1 <= var3_int &&
             var3_int <= 12) {
@@ -131,7 +131,7 @@ final class s implements Iterator {
             }
             return true;
           }
-          var2Lifetime1 = fe.field_g;
+          var2Lifetime1 = MouseWheelInput.field_g;
           var3Lifetime1 = 9 % ((-57 - param0) / 61);
           var8 = 0;
           var4Lifetime1 = var8;
@@ -161,18 +161,18 @@ final class s implements Iterator {
     public final Object next() {
         Object var1 = this.field_h;
         if (this.field_a.field_b != var1) {
-          this.field_h = ((ah) (var1)).field_m;
+          this.field_h = ((DualLinkNode) (var1)).field_m;
         } else {
           this.field_h = null;
           var1 = null;
         }
-        this.field_d = (ah) (var1);
+        this.field_d = (DualLinkNode) (var1);
         return var1;
     }
 
     public static void a(boolean param0) {
         if (param0) {
-          s.a(54, 'v');
+          DualLinkDequeIterator.a(54, 'v');
         }
         field_e = null;
         field_g = null;
@@ -180,7 +180,7 @@ final class s implements Iterator {
         field_c = null;
     }
 
-    s(bg param0) {
+    DualLinkDequeIterator(DualLinkDeque param0) {
         this.field_d = null;
         try {
           this.field_a = param0;

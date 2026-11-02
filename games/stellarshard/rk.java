@@ -253,7 +253,7 @@ final class rk implements Runnable {
         }
     }
 
-    rk(ej param0) {
+    rk(PlatformTaskDispatcher param0) {
         re var2 = null;
         this.field_d = new al();
         this.field_e = 0;
