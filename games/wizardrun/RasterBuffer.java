@@ -65,24 +65,24 @@ abstract class RasterBuffer {
           var9_int = param7 + param6 + (param2.field_u - param8);
           var10 = param7 + (param6 + (param2.field_u + param0));
           var11 = (param2.field_p >> 1) + (param5 + param2.field_v);
-          SoftwareRasterizer.b(var9_int, param3, var10, var11 + param1);
+          SoftwareRasterizer.intersectClip(var9_int, param3, var10, var11 + param1);
           param2.a(-1 + param6, param5 - 1, param4);
           param2.a(param6 - 1, 1 + param5, param4);
-          SoftwareRasterizer.a(ld.field_b);
-          SoftwareRasterizer.b(var9_int + 1, 0, var10 + 1, param1 + var11);
+          SoftwareRasterizer.restoreClip(ld.field_b);
+          SoftwareRasterizer.intersectClip(var9_int + 1, 0, var10 + 1, param1 + var11);
           param2.a(1 + param6, param5 - 1, param4);
           param2.a(param6 + 1, 1 + param5, param4);
-          SoftwareRasterizer.a(ld.field_b);
+          SoftwareRasterizer.restoreClip(ld.field_b);
           var10Lifetime1 = -param7 + param2.field_u + param2.field_z + param6 - param8;
           var9_intLifetime1 = param6 + param2.field_z + (param2.field_u - (param7 + param0));
-          SoftwareRasterizer.b(var9_intLifetime1, var11 - param1, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1, var11 - param1, var10Lifetime1, 480);
           param2.a(-1 + param6, -1 + param5, param4);
           param2.a(param6 - 1, param5 + 1, param4);
-          SoftwareRasterizer.a(ld.field_b);
-          SoftwareRasterizer.b(var9_intLifetime1 + 1, -param1 + var11, 1 + var10Lifetime1, 480);
+          SoftwareRasterizer.restoreClip(ld.field_b);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1 + 1, -param1 + var11, 1 + var10Lifetime1, 480);
           param2.a(1 + param6, param5 - 1, param4);
           param2.a(1 + param6, param5 + 1, param4);
-          SoftwareRasterizer.a(ld.field_b);
+          SoftwareRasterizer.restoreClip(ld.field_b);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "df.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -160,10 +160,10 @@ abstract class RasterBuffer {
             ra.field_p = vg.loadSprite(param0 + 13, "arrow", qk.field_j, "benefits");
             v.field_b = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
             bk.field_a = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
-            var27 = SoftwareRasterizer.field_k;
-            var2 = SoftwareRasterizer.field_h;
-            var3 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.b(ld.field_b);
+            var27 = SoftwareRasterizer.pixels;
+            var2 = SoftwareRasterizer.width;
+            var3 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ld.field_b);
             var11 = new Sprite(4 + ra.field_p.field_z, ra.field_p.field_p + 4);
             var11.b();
             ra.field_p.e(2, 2, ug.field_H);
@@ -190,9 +190,9 @@ abstract class RasterBuffer {
             SpriteState.field_w = null;
             pa.field_a = ei.field_l.e();
             pa.field_a.b();
-            l.a(2 * SoftwareRasterizer.field_d / 3, (byte) -105, 0, 0, SoftwareRasterizer.field_h, 64);
+            l.a(2 * SoftwareRasterizer.height / 3, (byte) -105, 0, 0, SoftwareRasterizer.width, 64);
             SoftwareRasterizer.a(var27, var2, var3);
-            SoftwareRasterizer.a(ld.field_b);
+            SoftwareRasterizer.restoreClip(ld.field_b);
             wk.field_c = 231 + (-ef.field_H.field_z + mj.field_b.field_z) / 2;
             qc.field_L = 390 + (-ef.field_H.field_p + mj.field_b.field_p) / 2;
             qk.field_j = null;
@@ -204,10 +204,10 @@ abstract class RasterBuffer {
           }
           if (uk.field_b != null &&
             null != v.field_b) {
-            var28 = SoftwareRasterizer.field_k;
-            var2Lifetime1 = SoftwareRasterizer.field_h;
-            var3Lifetime1 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.b(ld.field_b);
+            var28 = SoftwareRasterizer.pixels;
+            var2Lifetime1 = SoftwareRasterizer.width;
+            var3Lifetime1 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ld.field_b);
             var14 = di.a(new String[]{uc.field_d[bb.field_k]}, (byte) 49, si.field_b);
             var5 = v.field_b.c(var14, MouseWheelInput.field_a);
             var6Lifetime1 = v.field_b.a(var14, MouseWheelInput.field_a, v.field_b.field_B + v.field_b.field_M);
@@ -266,14 +266,14 @@ abstract class RasterBuffer {
             uk.field_b = null;
             ac.field_s.a();
             SoftwareRasterizer.a(var28, var2Lifetime1, var3Lifetime1);
-            SoftwareRasterizer.a(ld.field_b);
+            SoftwareRasterizer.restoreClip(ld.field_b);
           }
           if (null != pc.field_r &&
             bk.field_a != null) {
-            var29 = SoftwareRasterizer.field_k;
-            var2Lifetime2 = SoftwareRasterizer.field_h;
-            var3Lifetime2 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.b(ld.field_b);
+            var29 = SoftwareRasterizer.pixels;
+            var2Lifetime2 = SoftwareRasterizer.width;
+            var3Lifetime2 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ld.field_b);
             var16 = new Sprite(412, 43);
             var5_ref_String = di.a(new String[]{pc.field_r}, (byte) 79, field_b);
             pc.field_r = null;
@@ -283,14 +283,14 @@ abstract class RasterBuffer {
             od.field_f.b();
             var16.e(199 - od.field_f.field_u, 83 - od.field_f.field_v);
             SoftwareRasterizer.a(var29, var2Lifetime2, var3Lifetime2);
-            SoftwareRasterizer.a(ld.field_b);
+            SoftwareRasterizer.restoreClip(ld.field_b);
           }
           if (null != ag.field_v &&
             bk.field_a != null) {
-            var30 = SoftwareRasterizer.field_k;
-            var2Lifetime3 = SoftwareRasterizer.field_h;
-            var3Lifetime3 = SoftwareRasterizer.field_d;
-            SoftwareRasterizer.b(ld.field_b);
+            var30 = SoftwareRasterizer.pixels;
+            var2Lifetime3 = SoftwareRasterizer.width;
+            var3Lifetime3 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ld.field_b);
             var4 = 6 + bk.field_a.c(lg.field_b, 640);
             var5Lifetime1 = ag.field_v.field_x + (var4 + 20);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -301,10 +301,10 @@ abstract class RasterBuffer {
             var8Lifetime1 = -((-bk.field_a.field_B - bk.field_a.field_M - 3 + ag.field_v.field_s) / 2) + 155 - od.field_f.field_v;
             ag.field_v.e(var6Lifetime2 - od.field_f.field_u, var8Lifetime1);
             SoftwareRasterizer.a(var30, var2Lifetime3, var3Lifetime3);
-            SoftwareRasterizer.a(ld.field_b);
+            SoftwareRasterizer.restoreClip(ld.field_b);
             ag.field_v = null;
           }
-          SoftwareRasterizer.b(ld.field_b);
+          SoftwareRasterizer.saveClip(ld.field_b);
           SoftwareRasterizer.a(16, 16, 608, 112, 15, nh.field_n, wd.field_g);
           SoftwareRasterizer.a(231, 144, 393, 232, 15, nh.field_n, wd.field_g);
           if (null != ab.field_c) {

@@ -54,11 +54,11 @@ final class vl implements bf {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.c(param0 + param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
+          SoftwareRasterizer.fillRect(param0 + param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
           var8 = param0 + param2.field_o + this.field_m;
           var9 = param1 + param2.field_l + this.field_b;
           SoftwareRasterizer.b(var8, var9, this.field_l, this.field_p, 5592405);
-          SoftwareRasterizer.c(var8, var9, this.field_l, this.field_p, var7);
+          SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_p, var7);
           if (!param3) {
             this.field_p = 11;
           }

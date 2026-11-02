@@ -20,22 +20,22 @@ final class pj extends mi {
         var9 = wizardrun.field_H;
         if (param7 < param0) {
           if (param0 < param4) {
-            a.a(param6, param5, param0, param2, SoftwareRasterizer.field_k, param3, param4, -20476, param7);
+            a.a(param6, param5, param0, param2, SoftwareRasterizer.pixels, param3, param4, -20476, param7);
           } else {
             if (param4 <= param7) {
-              a.a(param3, param5, param7, param6, SoftwareRasterizer.field_k, param2, param0, -20476, param4);
+              a.a(param3, param5, param7, param6, SoftwareRasterizer.pixels, param2, param0, -20476, param4);
             } else {
-              a.a(param3, param5, param4, param2, SoftwareRasterizer.field_k, param6, param0, -20476, param7);
+              a.a(param3, param5, param4, param2, SoftwareRasterizer.pixels, param6, param0, -20476, param7);
             }
           }
         } else {
           if (param7 < param4) {
-            a.a(param6, param5, param7, param3, SoftwareRasterizer.field_k, param2, param4, -20476, param0);
+            a.a(param6, param5, param7, param3, SoftwareRasterizer.pixels, param2, param4, -20476, param0);
           } else {
             if (param4 > param0) {
-              a.a(param2, param5, param4, param3, SoftwareRasterizer.field_k, param6, param7, -20476, param0);
+              a.a(param2, param5, param4, param3, SoftwareRasterizer.pixels, param6, param7, -20476, param0);
             } else {
-              a.a(param2, param5, param0, param6, SoftwareRasterizer.field_k, param3, param7, -20476, param4);
+              a.a(param2, param5, param0, param6, SoftwareRasterizer.pixels, param3, param7, -20476, param4);
             }
           }
         }

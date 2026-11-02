@@ -155,7 +155,7 @@ final class uk {
 
     final static void a(byte param0, boolean param1, boolean param2) {
         if (param2) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, 0, 192);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         } else {
           SoftwareRasterizer.d();
         }

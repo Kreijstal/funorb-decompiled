@@ -12,31 +12,31 @@ final class ua extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * SoftwareRasterizer.field_h;
-        var9 = SoftwareRasterizer.field_h - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.width;
+        var9 = SoftwareRasterizer.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < SoftwareRasterizer.field_i) {
-          var12 = SoftwareRasterizer.field_i - param2;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop - param2;
           param4 = param4 - var12;
-          param2 = SoftwareRasterizer.field_i;
+          param2 = SoftwareRasterizer.clipTop;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRasterizer.field_h;
+          var8 = var8 + var12 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > SoftwareRasterizer.field_b) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_b);
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_c) {
-          var12Lifetime1 = SoftwareRasterizer.field_c - param1;
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer.clipLeft - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = SoftwareRasterizer.field_c;
+          param1 = SoftwareRasterizer.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > SoftwareRasterizer.field_l) {
-          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_l;
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.clipRight;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -44,9 +44,9 @@ final class ua extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            ua.a(SoftwareRasterizer.field_k, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            ua.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            gb.a(SoftwareRasterizer.field_k, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            gb.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -60,31 +60,31 @@ final class ua extends BitmapFont {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * SoftwareRasterizer.field_h;
-        var10 = SoftwareRasterizer.field_h - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.width;
+        var10 = SoftwareRasterizer.width - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < SoftwareRasterizer.field_i) {
-          var13 = SoftwareRasterizer.field_i - param2;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var13 = SoftwareRasterizer.clipTop - param2;
           param4 = param4 - var13;
-          param2 = SoftwareRasterizer.field_i;
+          param2 = SoftwareRasterizer.clipTop;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRasterizer.field_h;
+          var9 = var9 + var13 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > SoftwareRasterizer.field_b) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_b);
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_c) {
-          var13Lifetime1 = SoftwareRasterizer.field_c - param1;
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer.clipLeft - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = SoftwareRasterizer.field_c;
+          param1 = SoftwareRasterizer.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > SoftwareRasterizer.field_l) {
-          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_l;
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.clipRight;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -92,9 +92,9 @@ final class ua extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            ua.a(SoftwareRasterizer.field_k, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            ua.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            gb.a(SoftwareRasterizer.field_k, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            gb.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }

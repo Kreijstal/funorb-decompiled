@@ -129,7 +129,7 @@ final class a {
                   if (cj.field_d <= param8) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_h;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -182,7 +182,7 @@ final class a {
               }
               var9_int = var9_int + var11;
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_h;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.width;
             }
             return;
           }

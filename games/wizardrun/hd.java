@@ -93,7 +93,7 @@ final class hd extends UiWidget {
             param0.e(var6, param1);
           }
           bb.b(4);
-          if (SoftwareRasterizer.field_c <= param2 + this.field_D.field_z) {
+          if (SoftwareRasterizer.clipLeft <= param2 + this.field_D.field_z) {
             ud.a(this.field_K, false);
             param0.e(-this.field_A, 0);
             param0.e(this.field_J * 2 - this.field_A, 0);
@@ -101,7 +101,7 @@ final class hd extends UiWidget {
             bb.b(4);
             this.field_K.e(param2, param1);
           }
-          if (var5_int - this.field_D.field_z <= SoftwareRasterizer.field_l) {
+          if (var5_int - this.field_D.field_z <= SoftwareRasterizer.clipRight) {
             ud.a(this.field_K, false);
             for (var7 = this.field_r - this.field_D.field_z + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
@@ -147,7 +147,7 @@ final class hd extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         bb.b(4);

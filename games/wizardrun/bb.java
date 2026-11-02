@@ -101,7 +101,7 @@ class bb extends uh {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.a(var1.field_q, var1.field_v, var1.field_o);
-        SoftwareRasterizer.c(var1.field_r, var1.field_u, var1.field_s, var1.field_p);
+        SoftwareRasterizer.setClip(var1.field_r, var1.field_u, var1.field_s, var1.field_p);
         var1.field_q = null;
         qa.field_q.a(var1, false);
         if (param0 == 4) {

@@ -11,7 +11,7 @@ final class ClientException extends RuntimeException {
         if (param0 != 0) {
           return;
         }
-        SoftwareRasterizer.b(param2, param3, param4, param1);
+        SoftwareRasterizer.intersectClip(param2, param3, param4, param1);
     }
 
     final static void a(int param0) {

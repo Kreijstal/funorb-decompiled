@@ -169,7 +169,7 @@ final class od {
           if (-1 == var7) {
             var7 = this.field_g.field_B + this.field_g.field_M;
           }
-          var9 = SoftwareRasterizer.field_h >> 2;
+          var9 = SoftwareRasterizer.width >> 2;
           var10 = this.field_g.b(param3);
           var11 = this.field_g.field_M + this.field_g.field_B;
           var12 = 1;
@@ -195,15 +195,15 @@ final class od {
             }
           }
           var13 = param0;
-          if (SoftwareRasterizer.field_h < var5_int + (var13 + var10)) {
-            var13 = -var10 + (SoftwareRasterizer.field_h - var5_int);
+          if (SoftwareRasterizer.width < var5_int + (var13 + var10)) {
+            var13 = -var10 + (SoftwareRasterizer.width - var5_int);
           }
           var14Lifetime1 = 32 - this.field_g.field_q + param1;
-          if (var6 + var14Lifetime1 + var11 > SoftwareRasterizer.field_d) {
+          if (var6 + var14Lifetime1 + var11 > SoftwareRasterizer.height) {
             var14Lifetime1 = -var6 + (-var11 + param1);
           }
-          SoftwareRasterizer.a(var13, var14Lifetime1, var10 + var5_int, var11 + var6, this.field_e);
-          SoftwareRasterizer.c(1 + var13, var14Lifetime1 + 1, -2 + (var5_int + var10), var6 + (var11 - 2), this.field_p);
+          SoftwareRasterizer.drawRectOutline(var13, var14Lifetime1, var10 + var5_int, var11 + var6, this.field_e);
+          SoftwareRasterizer.fillRect(1 + var13, var14Lifetime1 + 1, -2 + (var5_int + var10), var6 + (var11 - 2), this.field_p);
           this.field_g.a(param3, var13 + this.field_l, var14Lifetime1 + this.field_r, var10, var11, this.field_q, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -336,15 +336,15 @@ final class od {
           }
           var6 = this.field_g.field_q + this.field_g.field_B;
           var7 = param2;
-          if (6 + var5_int + var7 > SoftwareRasterizer.field_h) {
-            var7 = -6 + (-var5_int + SoftwareRasterizer.field_h);
+          if (6 + var5_int + var7 > SoftwareRasterizer.width) {
+            var7 = -6 + (-var5_int + SoftwareRasterizer.width);
           }
           var8 = 32 - this.field_g.field_q + param1;
-          if (var6 + var8 + 6 > SoftwareRasterizer.field_d) {
-            var8 = -6 - var6 + SoftwareRasterizer.field_d;
+          if (var6 + var8 + 6 > SoftwareRasterizer.height) {
+            var8 = -6 - var6 + SoftwareRasterizer.height;
           }
-          SoftwareRasterizer.a(var7, var8, var5_int + 6, var6 + 6, this.field_q);
-          SoftwareRasterizer.c(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_p);
+          SoftwareRasterizer.drawRectOutline(var7, var8, var5_int + 6, var6 + 6, this.field_q);
+          SoftwareRasterizer.fillRect(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_p);
           this.field_g.c(param0, 3 + var7, var8 - (-3 - this.field_g.field_q), this.field_q, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

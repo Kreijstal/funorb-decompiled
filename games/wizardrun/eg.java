@@ -3771,7 +3771,7 @@ final class eg extends qh {
           ph.d(-31782);
           int var10 = -88 / ((15 - param1) / 44);
           var16.b();
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d);
+          SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.b();
           var16.c(0, 0);

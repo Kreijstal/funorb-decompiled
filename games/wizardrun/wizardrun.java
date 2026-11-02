@@ -930,9 +930,9 @@ public final class wizardrun extends GameShell {
               if (var4_int == 0) {
                 break;
               }
-              SoftwareRasterizer.c(1 + (320 - GameShell.field_x.field_x / 2), 0, 320 - GameShell.field_x.field_x / 2 + (-2 + GameShell.field_x.field_x) * ii.field_e[var4_int].field_p / var5, 480);
+              SoftwareRasterizer.setClip(1 + (320 - GameShell.field_x.field_x / 2), 0, 320 - GameShell.field_x.field_x / 2 + (-2 + GameShell.field_x.field_x) * ii.field_e[var4_int].field_p / var5, 480);
               GameShell.field_x.e(320 - GameShell.field_x.field_x / 2, var6);
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.resetClip();
               break;
             }
           }
@@ -954,7 +954,7 @@ public final class wizardrun extends GameShell {
                 var4_int++;
                 GameGraphicsResources.wizardFont2.b(var3_ref_String__[incrementValue$1], var5 + 15, 25, 16777215, -1);
               }
-              SoftwareRasterizer.c(440, 0, 440 + 2 * fi.field_x, 64);
+              SoftwareRasterizer.setClip(440, 0, 440 + 2 * fi.field_x, 64);
               var4_int = 0;
               for (var5 = 440; var5 <= 610; var5 += 20) {
                 ok.selectStarSprites[0].a(var5, 0, 30, 30);
@@ -968,7 +968,7 @@ public final class wizardrun extends GameShell {
                   ok.selectStarSprites[0].a(var5 + 5, 5, 20, 20);
                 }
               }
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.resetClip();
             }
             var3 = 2;
             if (qh.field_g > 0) {
@@ -1317,11 +1317,11 @@ public final class wizardrun extends GameShell {
                 for (var9 = 172; 268 > var9; var9 += 14) {
                   ok.selectStarSprites[0].b(var9, -14 + var3 - 6, 28, 28, 64);
                 }
-                SoftwareRasterizer.c(0, 0, 174 + var8 * 108 / 104, 480);
+                SoftwareRasterizer.setClip(0, 0, 174 + var8 * 108 / 104, 480);
                 for (var9 = 172; var9 < 268; var9 += 14) {
                   ok.selectStarSprites[0].a(var9, -20 + var3, 28, 28);
                 }
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.resetClip();
                 ok.selectStarSprites[0].a(var8 * 108 / 104 + 174, -10 + (var3 - 6), -103, 30, 0);
                 ok.selectStarSprites[0].a(174 + 108 * var8 / 104, -6 + var3 + 10, -99, 30, 0);
                 ok.selectStarSprites[0].a(174 + var8 * 108 / 104, var3 - 6, -95, 40, 0);
@@ -1342,11 +1342,11 @@ public final class wizardrun extends GameShell {
                 for (var9 = 172; var9 < 268; var9 += 14) {
                   ok.selectStarSprites[0].b(var9, -6 + (-14 + var3), 28, 28, 64);
                 }
-                SoftwareRasterizer.c(0, 0, 108 * var8 / 200 + 172 + 2, 480);
+                SoftwareRasterizer.setClip(0, 0, 108 * var8 / 200 + 172 + 2, 480);
                 for (var9 = 172; var9 < 268; var9 += 14) {
                   ok.selectStarSprites[0].a(var9, -14 + (var3 - 6), 28, 28);
                 }
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.resetClip();
                 ok.selectStarSprites[0].a(2 + var8 * 108 / 200 + 172, -6 + var3 - 10, -112, 30, 0);
                 ok.selectStarSprites[0].a(2 + (var8 * 108 / 200 + 172), 10 + (-6 + var3), -114, 30, 0);
                 ok.selectStarSprites[0].a(2 + (108 * var8 / 200 + 172), -6 + var3, -96, 40, 0);
@@ -1362,7 +1362,7 @@ public final class wizardrun extends GameShell {
           }
           stackIn_52_0Lifetime1 = 11;
           if (stackIn_52_0Lifetime1 == sf.field_h) {
-            SoftwareRasterizer.c(16, 153, 608, 311, 13158);
+            SoftwareRasterizer.fillRect(16, 153, 608, 311, 13158);
             ig.a(pd.frameSprites, 16, (byte) -110, 311, 608, 153);
             GameGraphicsResources.wizardFont2.b(uh.field_b, 320, GameGraphicsResources.wizardFont2.field_M + 169, 16777215, -1);
             var3 = 96;
@@ -1394,12 +1394,12 @@ public final class wizardrun extends GameShell {
                   }
                 }
                 if (var5 != qh.field_l) {
-                  SoftwareRasterizer.a(var5 * var3 + 32, 208, var3, var4_int, 0);
+                  SoftwareRasterizer.drawRectOutline(var5 * var3 + 32, 208, var3, var4_int, 0);
                   SoftwareRasterizer.a(32 + var5 * var3, 208, var3, var4_int, 1, 8421376);
                   SoftwareRasterizer.a(var3 * var5 + 32, 208, var3, var4_int, 2, 16776960);
                   SoftwareRasterizer.a(var5 * var3 + 32, 208, var3, var4_int, 3, 8421376);
                 } else {
-                  SoftwareRasterizer.a(var3 * var5 + 32, 208, var3, var4_int, 0);
+                  SoftwareRasterizer.drawRectOutline(var3 * var5 + 32, 208, var3, var4_int, 0);
                   SoftwareRasterizer.a(32 + var3 * var5, 208, var3, var4_int, 1, 16776960);
                   SoftwareRasterizer.a(var3 * var5 + 32, 208, var3, var4_int, 2, 16777215);
                   SoftwareRasterizer.a(var3 * var5 + 32, 208, var3, var4_int, 3, 16776960);
@@ -1408,7 +1408,7 @@ public final class wizardrun extends GameShell {
                   (var6 + var3) > pg.field_n &&
                   fi.field_B >= var7 &&
                   (var7 + var4_int) > fi.field_B) {
-                  SoftwareRasterizer.a(var3 * var5 + 32, 208, var3, var4_int, 16777215);
+                  SoftwareRasterizer.drawRectOutline(var3 * var5 + 32, 208, var3, var4_int, 16777215);
                   if (sh.field_c == 1) {
                     BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
                     wg.field_b = wg.field_b + var5 * 6;
@@ -1528,9 +1528,9 @@ public final class wizardrun extends GameShell {
           if (5 == sf.field_h) {
             cb.field_f = -1;
             var3 = 5 * GameGraphicsResources.wizardFont2.field_M / 2 + 231;
-            SoftwareRasterizer.c(314, 119, 254, 94, 13158);
+            SoftwareRasterizer.fillRect(314, 119, 254, 94, 13158);
             ig.a(pd.frameSprites, 309, (byte) -110, 104, 264, 114);
-            SoftwareRasterizer.c(249, 5 + var3 - 68, 382, 198, 13158);
+            SoftwareRasterizer.fillRect(249, 5 + var3 - 68, 382, 198, 13158);
             ig.a(pd.frameSprites, 244, (byte) -110, 208, 392, -64 + var3 - 4);
             var3 = 345;
             var4_int = 130;
@@ -1680,7 +1680,7 @@ public final class wizardrun extends GameShell {
           stackIn_224_0Lifetime1 = sf.field_h;
           stackIn_224_1Lifetime1 = 2;
           if (stackIn_224_0Lifetime1 == stackIn_224_1Lifetime1) {
-            SoftwareRasterizer.c(290, 125, 340, 300, 13158);
+            SoftwareRasterizer.fillRect(290, 125, 340, 300, 13158);
             ig.a(pd.frameSprites, 285, (byte) -110, 310, 350, 120);
             var21 = new StringBuilder(0);
             var5_ref_String = var21.toString();
@@ -1809,13 +1809,13 @@ public final class wizardrun extends GameShell {
                         }
                       }
                       if (decompiledFrameRemainder1) {
-                        SoftwareRasterizer.c(0, 0, 510 - a.font12.b(q.field_l) / 2, 640);
+                        SoftwareRasterizer.setClip(0, 0, 510 - a.font12.b(q.field_l) / 2, 640);
                         a.font12.c(var5_ref_String, 2 + var15, 10 + var3, 0, -1);
                         a.font12.c(var5_ref_String, var15 + 4, var3 + 10, 0, -1);
                         a.font12.c(var5_ref_String, 3 + var15, var3 + 9, 0, -1);
                         a.font12.c(var5_ref_String, var15 + 3, var3 + 11, 0, -1);
                         a.font12.c(var5_ref_String, var15 + 3, 10 + var3, var13Lifetime1, -1);
-                        SoftwareRasterizer.c();
+                        SoftwareRasterizer.resetClip();
                         var5_ref_String = 1 + var16 / 6 + "-" + (1 + var16 % 6);
                         if (1 + var16 / 6 == 7) {
                           var5_ref_String = q.field_l;
@@ -1875,7 +1875,7 @@ public final class wizardrun extends GameShell {
             var4_intLifetime1 = -var4_intLifetime1;
           }
           var4_intLifetime1 += 240;
-          SoftwareRasterizer.c(5 + (-(GameGraphicsResources.wizardFont2.b(bb.field_j) / 2) + 320 - 16), -11 - GameGraphicsResources.wizardFont2.field_M + var4_intLifetime1, GameGraphicsResources.wizardFont2.b(bb.field_j) + 32 - 10, -10 + hj.wizardFont.field_M + 16, 13158);
+          SoftwareRasterizer.fillRect(5 + (-(GameGraphicsResources.wizardFont2.b(bb.field_j) / 2) + 320 - 16), -11 - GameGraphicsResources.wizardFont2.field_M + var4_intLifetime1, GameGraphicsResources.wizardFont2.b(bb.field_j) + 32 - 10, -10 + hj.wizardFont.field_M + 16, 13158);
           ig.a(pd.frameSprites, -16 - GameGraphicsResources.wizardFont2.b(bb.field_j) / 2 + 320, (byte) -110, 16 + hj.wizardFont.field_M, 32 + GameGraphicsResources.wizardFont2.b(bb.field_j), var4_intLifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
           this.drawOutlinedText(var4_intLifetime1, bb.field_j, 16777215, -57, 319);
           if (qh.field_l == 0 &&
@@ -1884,7 +1884,7 @@ public final class wizardrun extends GameShell {
             if (0 == ql.field_c &&
               ef.field_F != bb.field_j) {
               var6Lifetime1 = GameGraphicsResources.wizardFont2.b(ol.field_d);
-              SoftwareRasterizer.c(5 + (320 - var6Lifetime1 / 2 - 16), 5 + (-GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16)), var6Lifetime1 + 32 - 10, 118 + hj.wizardFont.field_M, 13158);
+              SoftwareRasterizer.fillRect(5 + (320 - var6Lifetime1 / 2 - 16), 5 + (-GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16)), var6Lifetime1 + 32 - 10, 118 + hj.wizardFont.field_M, 13158);
               ig.a(pd.frameSprites, -16 + (320 - var6Lifetime1 / 2), (byte) -110, hj.wizardFont.field_M + 128, var6Lifetime1 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
               this.drawOutlinedText(var5Lifetime1, r.field_c, 16777215, 123, 319);
               var5Lifetime1 += 32;
@@ -1895,7 +1895,7 @@ public final class wizardrun extends GameShell {
             }
             if (1 == ql.field_c) {
               var6Lifetime1Lifetime1 = 500;
-              SoftwareRasterizer.c(304 - var6Lifetime1Lifetime1 / 2 + 5, -GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16 + 5), -10 + var6Lifetime1Lifetime1 + 32, 96 + (hj.wizardFont.field_M - 10), 13158);
+              SoftwareRasterizer.fillRect(304 - var6Lifetime1Lifetime1 / 2 + 5, -GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16 + 5), -10 + var6Lifetime1Lifetime1 + 32, 96 + (hj.wizardFont.field_M - 10), 13158);
               ig.a(pd.frameSprites, -16 + (-(var6Lifetime1Lifetime1 / 2) + 320), (byte) -110, hj.wizardFont.field_M + 96, var6Lifetime1Lifetime1 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
               GameGraphicsResources.wizardFont2.a(fa.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 + (-16 + var5Lifetime1 - (-4 - (-GameGraphicsResources.wizardFont2.field_M - 1))), var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(fa.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 - 16) - 1, var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
@@ -1908,7 +1908,7 @@ public final class wizardrun extends GameShell {
                 var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.b(ol.field_d);
               }
               if (608 >= var6Lifetime1Lifetime2) {
-                SoftwareRasterizer.c(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), -10 + (32 + var6Lifetime1Lifetime2), hj.wizardFont.field_M + 150, 13158);
+                SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), -10 + (32 + var6Lifetime1Lifetime2), hj.wizardFont.field_M + 150, 13158);
                 ig.a(pd.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, hj.wizardFont.field_M + 160, var6Lifetime1Lifetime2 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
                 this.drawOutlinedText(var5Lifetime1, cd.field_h, 16777215, -102, 319);
                 var5Lifetime1 += 32;
@@ -1918,7 +1918,7 @@ public final class wizardrun extends GameShell {
                 var5Lifetime1 += 32;
               } else {
                 var6Lifetime1Lifetime2 = 608;
-                SoftwareRasterizer.c(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16 + 5, -10 + (32 + var6Lifetime1Lifetime2), 128 + (hj.wizardFont.field_M - 10), 13158);
+                SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16 + 5, -10 + (32 + var6Lifetime1Lifetime2), 128 + (hj.wizardFont.field_M - 10), 13158);
                 ig.a(pd.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, hj.wizardFont.field_M + 128, 32 + var6Lifetime1Lifetime2, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16);
                 var28 = cd.field_h + " " + vl.field_a + " " + ld.field_a;
                 a.font12.a(var28, 32, -20 + var5Lifetime1, 575, 48, 0, 0, 1, 1, 14);
@@ -1936,7 +1936,7 @@ public final class wizardrun extends GameShell {
             }
             if (ql.field_c == 3) {
               var6Lifetime1Lifetime3 = 600;
-              SoftwareRasterizer.c(-11 + (-(var6Lifetime1Lifetime3 / 2) + 320), -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), 22 + var6Lifetime1Lifetime3, 160 + (hj.wizardFont.field_M - 10), 13158);
+              SoftwareRasterizer.fillRect(-11 + (-(var6Lifetime1Lifetime3 / 2) + 320), -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), 22 + var6Lifetime1Lifetime3, 160 + (hj.wizardFont.field_M - 10), 13158);
               ig.a(pd.frameSprites, -16 - var6Lifetime1Lifetime3 / 2 + 320, (byte) -110, 160 + hj.wizardFont.field_M, 32 + var6Lifetime1Lifetime3, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 102, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 319, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
               GameGraphicsResources.wizardFont2.a(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
@@ -1964,7 +1964,7 @@ public final class wizardrun extends GameShell {
                 GameGraphicsResources.wizardFont2.b(var7_ref_String__[incrementValue$4], var10Lifetime1 - 140 + 15, var5Lifetime1 + 25, 16777215, -1);
               }
               var8Lifetime1Lifetime2 = 0;
-              SoftwareRasterizer.c(0, 0, 395 + var9Lifetime1, 480);
+              SoftwareRasterizer.setClip(0, 0, 395 + var9Lifetime1, 480);
               for (var10Lifetime1Lifetime1 = 440 + var9Lifetime1; 610 + var9Lifetime1 >= var10Lifetime1Lifetime1; var10Lifetime1Lifetime1 += 20) {
                 ok.selectStarSprites[0].a(-140 + var10Lifetime1Lifetime1, var5Lifetime1 + 0, 30, 30);
                 incrementValue$3 = var8Lifetime1Lifetime2;
@@ -1977,7 +1977,7 @@ public final class wizardrun extends GameShell {
                   ok.selectStarSprites[0].a(-140 + (var10Lifetime1Lifetime1 + 5), 5 + var5Lifetime1, 20, 20);
                 }
               }
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.resetClip();
               var5Lifetime1 += 24;
               var5Lifetime1 += 32;
               GameGraphicsResources.wizardFont2.a(lc.field_c + " " + sd.field_e, -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
@@ -1989,7 +1989,7 @@ public final class wizardrun extends GameShell {
             stackIn_567_1Lifetime1 = ~ql.field_c;
             if (stackIn_567_0Lifetime1 == stackIn_567_1Lifetime1) {
               var6Lifetime1Lifetime4 = GameGraphicsResources.wizardFont2.b(ab.field_b);
-              SoftwareRasterizer.c(-11 - var6Lifetime1Lifetime4 / 2 + 320, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 11, 22 + var6Lifetime1Lifetime4, 96 + (hj.wizardFont.field_M - 10), 13158);
+              SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime4 / 2 + 320, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 11, 22 + var6Lifetime1Lifetime4, 96 + (hj.wizardFont.field_M - 10), 13158);
               ig.a(pd.frameSprites, -16 + (-(var6Lifetime1Lifetime4 / 2) + 320), (byte) -110, hj.wizardFont.field_M + 96, var6Lifetime1Lifetime4 + 32, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(ab.field_b + " " + he.field_r, 320 - var6Lifetime1Lifetime4 / 2, -25 + var5Lifetime1, var6Lifetime1Lifetime4, 480, 0, 0, 1, 0, 22);
               GameGraphicsResources.wizardFont2.a(ab.field_b + " " + he.field_r, -(var6Lifetime1Lifetime4 / 2) + 319, -24 + var5Lifetime1, var6Lifetime1Lifetime4, 480, 0, 0, 1, 0, 22);
@@ -1998,7 +1998,7 @@ public final class wizardrun extends GameShell {
             }
             if (ql.field_c == 5) {
               var6Lifetime1Lifetime5 = GameGraphicsResources.wizardFont2.b(ol.field_d);
-              SoftwareRasterizer.c(-11 - var6Lifetime1Lifetime5 / 2 + 320, -11 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M, var6Lifetime1Lifetime5 + 22, 128 + hj.wizardFont.field_M - 10, 13158);
+              SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime5 / 2 + 320, -11 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M, var6Lifetime1Lifetime5 + 22, 128 + hj.wizardFont.field_M - 10, 13158);
               ig.a(pd.frameSprites, 304 - var6Lifetime1Lifetime5 / 2, (byte) -110, hj.wizardFont.field_M + 128, var6Lifetime1Lifetime5 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
               this.drawOutlinedText(var5Lifetime1, jd.field_c, 16777215, -52, 319);
               var5Lifetime1 += 32;
@@ -2116,7 +2116,7 @@ public final class wizardrun extends GameShell {
         stackIn_651_0Lifetime1 = -10;
         stackIn_651_1Lifetime1 = ~sf.field_h;
         if (stackIn_651_0Lifetime1 == stackIn_651_1Lifetime1) {
-          SoftwareRasterizer.c(0, 0, 640, 480, 0);
+          SoftwareRasterizer.fillRect(0, 0, 640, 480, 0);
           RasterBuffer.a(2);
         }
         var3Lifetime2 = 8 / ((param0 + 43) / 50);
@@ -2177,7 +2177,7 @@ public final class wizardrun extends GameShell {
         }
         if (this.field_I > 0 &&
           GameApplet.field_e == null) {
-          SoftwareRasterizer.c(0, 0, 640, 480, 0);
+          SoftwareRasterizer.fillRect(0, 0, 640, 480, 0);
         }
         if (se.field_a > 0) {
           SoftwareRasterizer.d(0, 0, 640, 480, 0, se.field_a);
@@ -2219,7 +2219,7 @@ public final class wizardrun extends GameShell {
               var5Lifetime5 = 123 - var6Lifetime4 / 2;
             }
           }
-          SoftwareRasterizer.c(4, var5Lifetime5 - 4, 48 + GameGraphicsResources.wizardFont2.b(SpriteState.field_t[var33_ref.field_n]), 40, 13158);
+          SoftwareRasterizer.fillRect(4, var5Lifetime5 - 4, 48 + GameGraphicsResources.wizardFont2.b(SpriteState.field_t[var33_ref.field_n]), 40, 13158);
           ig.a(pd.frameSprites, 0, (byte) -110, 48, 8 + (GameGraphicsResources.wizardFont2.b(SpriteState.field_t[var33_ref.field_n]) + 48), var5Lifetime5 - 8);
           ui.field_a[var33_ref.field_n].a(8, var5Lifetime5, 32, 32);
           GameGraphicsResources.wizardFont2.c(SpriteState.field_t[var33_ref.field_n], 48, GameGraphicsResources.wizardFont2.field_M + var5Lifetime5, 16776960, -1);
@@ -2230,7 +2230,7 @@ public final class wizardrun extends GameShell {
           }
         } else {
           SoftwareRasterizer.d(0, 0, 640, 480, 0, 128);
-          SoftwareRasterizer.c(-3 - IntrusiveDequeCursor.c((byte) -117) / 2 + 320, 240 - (lb.a((byte) 47) / 2 + 5), 6 + IntrusiveDequeCursor.c((byte) 84), 10 + lb.a((byte) 47), 0);
+          SoftwareRasterizer.fillRect(-3 - IntrusiveDequeCursor.c((byte) -117) / 2 + 320, 240 - (lb.a((byte) 47) / 2 + 5), 6 + IntrusiveDequeCursor.c((byte) 84), 10 + lb.a((byte) 47), 0);
           of.a(72);
         }
         if (ke.field_w) {

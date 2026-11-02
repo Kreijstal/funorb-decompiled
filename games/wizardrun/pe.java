@@ -129,17 +129,17 @@ class pe extends UiWidget implements bg {
           SoftwareRasterizer.f(param4, param0 + param2, 1 + param3, 12105912);
           var5_int = 1;
           var6 = param0;
-          if (param2 + var5_int < SoftwareRasterizer.field_i) {
-            var5_int = SoftwareRasterizer.field_i - param2;
+          if (param2 + var5_int < SoftwareRasterizer.clipTop) {
+            var5_int = SoftwareRasterizer.clipTop - param2;
           }
-          if (var6 + param2 > SoftwareRasterizer.field_b) {
-            var6 = -param2 + SoftwareRasterizer.field_b;
+          if (var6 + param2 > SoftwareRasterizer.clipBottom) {
+            var6 = -param2 + SoftwareRasterizer.clipBottom;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = var7 * 48 / param0 + 152;
             var9 = var8 << 16 | var8 << 8 | var8;
-            SoftwareRasterizer.field_k[param4 + SoftwareRasterizer.field_h * (param2 + var7)] = var9;
-            SoftwareRasterizer.field_k[param3 + (param4 + SoftwareRasterizer.field_h * (var7 + param2))] = var9;
+            SoftwareRasterizer.pixels[param4 + SoftwareRasterizer.width * (param2 + var7)] = var9;
+            SoftwareRasterizer.pixels[param3 + (param4 + SoftwareRasterizer.width * (var7 + param2))] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

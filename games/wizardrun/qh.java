@@ -552,8 +552,8 @@ class qh {
         int var3Lifetime1;
         var4 = wizardrun.field_H;
         try {
-          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.c(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRect(244, 198, 367, 141, 0);
           if (null == f.field_d) {
             if (null != bk.field_a) {
               bk.field_a.a(wj.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

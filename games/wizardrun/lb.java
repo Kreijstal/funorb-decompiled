@@ -48,37 +48,37 @@ final class lb {
           param4 = param4 + param3.field_v;
           var7 = param3.field_u * var6_int + (param1 << 8);
           param2 = param2 + param3.field_u;
-          var8 = param2 + SoftwareRasterizer.field_h * param4;
+          var8 = param2 + SoftwareRasterizer.width * param4;
           var9 = 0;
           if (param5 >= -80) {
             field_f = (String[]) null;
           }
           var10 = param3.field_p;
           var11 = param3.field_z;
-          var12 = SoftwareRasterizer.field_h - var11;
+          var12 = SoftwareRasterizer.width - var11;
           var13 = 0;
-          if (SoftwareRasterizer.field_i > param4) {
-            var14 = -param4 + SoftwareRasterizer.field_i;
+          if (SoftwareRasterizer.clipTop > param4) {
+            var14 = -param4 + SoftwareRasterizer.clipTop;
             var9 = var9 + var14 * var11;
-            param4 = SoftwareRasterizer.field_i;
+            param4 = SoftwareRasterizer.clipTop;
             var10 = var10 - var14;
-            var8 = var8 + var14 * SoftwareRasterizer.field_h;
+            var8 = var8 + var14 * SoftwareRasterizer.width;
           }
-          if (SoftwareRasterizer.field_c > param2) {
-            var14Lifetime1 = SoftwareRasterizer.field_c - param2;
+          if (SoftwareRasterizer.clipLeft > param2) {
+            var14Lifetime1 = SoftwareRasterizer.clipLeft - param2;
             var7 = var7 + var6_int * var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var12 = var12 + var14Lifetime1;
-            param2 = SoftwareRasterizer.field_c;
+            param2 = SoftwareRasterizer.clipLeft;
             var13 = var13 + var14Lifetime1;
           }
-          if (SoftwareRasterizer.field_b < var10 + param4) {
-            var10 = var10 - (param4 + var10 - SoftwareRasterizer.field_b);
+          if (SoftwareRasterizer.clipBottom < var10 + param4) {
+            var10 = var10 - (param4 + var10 - SoftwareRasterizer.clipBottom);
           }
-          if (SoftwareRasterizer.field_l < param2 + var11) {
-            var14Lifetime2 = -SoftwareRasterizer.field_l + var11 + param2;
+          if (SoftwareRasterizer.clipRight < param2 + var11) {
+            var14Lifetime2 = -SoftwareRasterizer.clipRight + var11 + param2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -97,11 +97,11 @@ final class lb {
                   var17 = param3.field_B[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 <= 255) {
-                      var18 = SoftwareRasterizer.field_k[var8];
+                      var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & (16711935 & var17) * var15 + (16711935 & var18) * var16 >> 8;
-                      SoftwareRasterizer.field_k[var8] = (kl.b(16711838, kl.b(65280, var18) * var16 + var15 * kl.b(var17, 65280)) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (kl.b(16711838, kl.b(65280, var18) * var16 + var15 * kl.b(var17, 65280)) >> 8) + var19;
                     } else {
-                      SoftwareRasterizer.field_k[var8] = var17;
+                      SoftwareRasterizer.pixels[var8] = var17;
                     }
                   }
                   var8++;

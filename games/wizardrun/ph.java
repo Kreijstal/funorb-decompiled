@@ -77,11 +77,11 @@ final class ph extends ge {
               for (var10 = var9; var10 < -12 + var9 + 108; var10 += 14) {
                 ok.selectStarSprites[0].b(var10, var8 - 14 - 6, 28, 28, 64);
               }
-              SoftwareRasterizer.c(0, 0, 2 + (var7Lifetime2 * 108 / 104 + var9), 480);
+              SoftwareRasterizer.setClip(0, 0, 2 + (var7Lifetime2 * 108 / 104 + var9), 480);
               for (var10Lifetime2 = var9; 108 + var9 + 2 - 14 > var10Lifetime2; var10Lifetime2 += 14) {
                 ok.selectStarSprites[0].a(var10Lifetime2, -20 + var8, 28, 28);
               }
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.resetClip();
               ok.selectStarSprites[0].a(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
               ok.selectStarSprites[0].a(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
               ok.selectStarSprites[0].a(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
@@ -107,11 +107,11 @@ final class ph extends ge {
                 for (var10Lifetime1 = var9Lifetime1; 2 + (var9Lifetime1 + 108) - 14 > var10Lifetime1; var10Lifetime1 += 14) {
                   ok.selectStarSprites[0].b(var10Lifetime1, -6 + (-14 + var8Lifetime1), 28, 28, 64);
                 }
-                SoftwareRasterizer.c(0, 0, 2 + (var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200), 480);
+                SoftwareRasterizer.setClip(0, 0, 2 + (var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200), 480);
                 for (var10Lifetime1Lifetime1 = var9Lifetime1; var10Lifetime1Lifetime1 < -14 + (110 + var9Lifetime1); var10Lifetime1Lifetime1 += 14) {
                   ok.selectStarSprites[0].a(var10Lifetime1Lifetime1, -6 + (var8Lifetime1 - 14), 28, 28);
                 }
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.resetClip();
                 ok.selectStarSprites[0].a(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
                 ok.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
                 ok.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
@@ -229,7 +229,7 @@ final class ph extends ge {
         if (var1 == null) {
           var1 = new ei();
         }
-        var1.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_d, SoftwareRasterizer.field_c, SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, param0 ^ 9202, SoftwareRasterizer.field_l, SoftwareRasterizer.field_i);
+        var1.a(SoftwareRasterizer.pixels, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.width, param0 ^ 9202, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop);
         if (param0 != -31782) {
           field_o = 6;
         }

@@ -35,19 +35,19 @@ final class oh {
         int[] var30 = null;
         var19 = wizardrun.field_H;
         try {
-          if (param2 < SoftwareRasterizer.field_c) {
-            param3 = param3 - (-param2 + SoftwareRasterizer.field_c);
-            param2 = SoftwareRasterizer.field_c;
+          if (param2 < SoftwareRasterizer.clipLeft) {
+            param3 = param3 - (-param2 + SoftwareRasterizer.clipLeft);
+            param2 = SoftwareRasterizer.clipLeft;
           }
-          if (SoftwareRasterizer.field_i > param6) {
-            param0 = param0 - (SoftwareRasterizer.field_i - param6);
-            param6 = SoftwareRasterizer.field_i;
+          if (SoftwareRasterizer.clipTop > param6) {
+            param0 = param0 - (SoftwareRasterizer.clipTop - param6);
+            param6 = SoftwareRasterizer.clipTop;
           }
-          if (SoftwareRasterizer.field_l < param3 + param2) {
-            param3 = SoftwareRasterizer.field_l - param2;
+          if (SoftwareRasterizer.clipRight < param3 + param2) {
+            param3 = SoftwareRasterizer.clipRight - param2;
           }
-          if (param0 + param6 > SoftwareRasterizer.field_b) {
-            param0 = -param6 + SoftwareRasterizer.field_b;
+          if (param0 + param6 > SoftwareRasterizer.clipBottom) {
+            param0 = -param6 + SoftwareRasterizer.clipBottom;
           }
           if (param3 > 0 &&
             0 < param0) {
@@ -55,13 +55,13 @@ final class oh {
               field_b = (kl) null;
             }
             var21 = param1.e();
-            var30 = SoftwareRasterizer.field_k;
-            var10 = SoftwareRasterizer.field_h;
-            var11 = SoftwareRasterizer.field_d;
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[4];
-            SoftwareRasterizer.b(var29);
+            SoftwareRasterizer.saveClip(var29);
             param1.b();
-            SoftwareRasterizer.b(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param2 + param6 * param1.field_z;
             var14 = param1.field_z - param3;
             var25 = var21.field_B;
@@ -97,7 +97,7 @@ final class oh {
             }
             var21.e(-param1.field_u, -param1.field_v);
             SoftwareRasterizer.a(var30, var10, var11);
-            SoftwareRasterizer.a(var29);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

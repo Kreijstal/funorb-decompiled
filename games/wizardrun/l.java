@@ -73,30 +73,30 @@ final class l extends ff {
         int var12 = 0;
         var12 = wizardrun.field_H;
         try {
-          if (SoftwareRasterizer.field_c > param3) {
-            param4 = param4 - (-param3 + SoftwareRasterizer.field_c);
-            param3 = SoftwareRasterizer.field_c;
+          if (SoftwareRasterizer.clipLeft > param3) {
+            param4 = param4 - (-param3 + SoftwareRasterizer.clipLeft);
+            param3 = SoftwareRasterizer.clipLeft;
           }
-          if (param3 + param4 > SoftwareRasterizer.field_l) {
-            param4 = -param3 + SoftwareRasterizer.field_l;
+          if (param3 + param4 > SoftwareRasterizer.clipRight) {
+            param4 = -param3 + SoftwareRasterizer.clipRight;
           }
-          if (SoftwareRasterizer.field_i > param2) {
-            param0 = param0 - (SoftwareRasterizer.field_i - param2);
-            param2 = SoftwareRasterizer.field_i;
+          if (SoftwareRasterizer.clipTop > param2) {
+            param0 = param0 - (SoftwareRasterizer.clipTop - param2);
+            param2 = SoftwareRasterizer.clipTop;
           }
           if (param1 != -105) {
             l.a((byte) -126);
           }
-          if (SoftwareRasterizer.field_b < param2 + param0) {
-            param0 = -param2 + SoftwareRasterizer.field_b;
+          if (SoftwareRasterizer.clipBottom < param2 + param0) {
+            param0 = -param2 + SoftwareRasterizer.clipBottom;
           }
           if (0 < param4 &&
             param0 > 0) {
-            var6_int = param3 + SoftwareRasterizer.field_h * param2;
-            var7 = -param4 + SoftwareRasterizer.field_h;
+            var6_int = param3 + SoftwareRasterizer.width * param2;
+            var7 = -param4 + SoftwareRasterizer.width;
             for (param2 = -param0; 0 > param2; param2++) {
               for (param3 = -param4; param3 < 0; param3++) {
-                var8 = SoftwareRasterizer.field_k[var6_int];
+                var8 = SoftwareRasterizer.pixels[var6_int];
                 if (((var8 & 65280) >> 8) > param5 &&
                   (255 & var8 >> 8) >= (16711680 & var8) >> 16) {
                   var9 = -60 + (510 & var8 >> 15);
@@ -106,7 +106,7 @@ final class l extends ff {
                   var10 = var8 & 65280;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.field_k[var6_int] = sd.a(var11, sd.a(var10, var9 << 16));
+                  SoftwareRasterizer.pixels[var6_int] = sd.a(var11, sd.a(var10, var9 << 16));
                 }
                 var6_int++;
               }

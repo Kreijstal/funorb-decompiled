@@ -35,7 +35,7 @@ final class wb implements bf {
           var15 = param2 instanceof ug ? (ug) (param2) : null;
           if (var15 == null) {
           }
-          SoftwareRasterizer.c(param2.field_o + param0, param2.field_l + param1, param2.field_r, param2.field_n, this.field_g);
+          SoftwareRasterizer.fillRect(param2.field_o + param0, param2.field_l + param1, param2.field_r, param2.field_n, this.field_g);
           var7 = var15.field_J + param0 + param2.field_o;
           var8 = var15.field_L + param1 + param2.field_l;
           if (!param3) {

@@ -57,7 +57,7 @@ final class dg {
         SoftwareRasterizer.d();
         gf.k(-120);
         if (var5 < 256) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, 0, 256 - var5);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           bb.b(4);
           if (jd.field_f < 150) {
             s.field_a.a(var3, var4);

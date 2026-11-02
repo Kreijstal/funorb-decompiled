@@ -34,7 +34,7 @@ final class eh implements bf {
             stackIn_4_0 = (UiWidget) (param2);
           }
           var12 = (vb) (stackIn_4_0);
-          SoftwareRasterizer.c(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, this.field_a);
+          SoftwareRasterizer.fillRect(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, this.field_a);
           if (var12 != null) {
           }
           var7 = -(2 * var12.field_G) + param2.field_r;

@@ -159,8 +159,8 @@ abstract class rg extends tj {
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (var8 >= SoftwareRasterizer.field_i &&
-            SoftwareRasterizer.field_b > var8) {
+          if (var8 >= SoftwareRasterizer.clipTop &&
+            SoftwareRasterizer.clipBottom > var8) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_r;
@@ -173,7 +173,7 @@ abstract class rg extends tj {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  SoftwareRasterizer.field_k[var8 * SoftwareRasterizer.field_h + param0 + var10] = var13;
+                  SoftwareRasterizer.pixels[var8 * SoftwareRasterizer.width + param0 + var10] = var13;
                 }
                 var10++;
               }
@@ -190,7 +190,7 @@ abstract class rg extends tj {
                   } else {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRasterizer.field_k[var11 + SoftwareRasterizer.field_h * var8 + param0] = var15;
+                    SoftwareRasterizer.pixels[var11 + SoftwareRasterizer.width * var8 + param0] = var15;
                   }
                   var13Lifetime1++;
                   var11++;

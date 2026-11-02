@@ -52,14 +52,14 @@ final class e {
             var8 = param0[1].field_x;
             param0[0].d(param4, param1, param2);
             param0[2].d(param4 + param5 - var7, param1, param2);
-            SoftwareRasterizer.b(ac.field_q);
-            SoftwareRasterizer.b(var6_int + param4, param1, param4 + param5 - var7, param1 + param0[1].field_s);
+            SoftwareRasterizer.saveClip(ac.field_q);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param1, param4 + param5 - var7, param1 + param0[1].field_s);
             var9 = param4 + var6_int;
             var10 = -var7 + param5 + param4;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param0[1].d(param4, param1, param2);
             }
-            SoftwareRasterizer.a(ac.field_q);
+            SoftwareRasterizer.restoreClip(ac.field_q);
             return;
           }
           return;

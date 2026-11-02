@@ -2,58 +2,58 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareRasterizer {
-    static int field_d;
+    static int height;
     private static int[] field_a;
-    static int field_b;
-    static int field_i;
+    static int clipBottom;
+    static int clipTop;
     private static int[] field_j;
     static int[] field_f;
-    static int[] field_k;
-    static int field_c;
-    static int field_l;
-    static int field_h;
+    static int[] pixels;
+    static int clipLeft;
+    static int clipRight;
+    static int width;
     private static int[] field_e;
     static int[] field_g;
 
-    final static void a(int[] param0) {
-        field_c = param0[0];
-        field_i = param0[1];
-        field_l = param0[2];
-        field_b = param0[3];
+    final static void restoreClip(int[] param0) {
+        clipLeft = param0[0];
+        clipTop = param0[1];
+        clipRight = param0[2];
+        clipBottom = param0[3];
         SoftwareRasterizer.b();
     }
 
     final static void f(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (param1 >= field_i) {
-          if (param1 >= field_b) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_c) {
-            param2 = param2 - (field_c - param0);
-            param0 = field_c;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_l) {
-            param2 = field_l - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
-          var4 = param0 + param1 * field_h;
+          var4 = param0 + param1 * width;
           for (var5 = 0; var5 < param2; var5++) {
-            field_k[var4 + var5] = param3;
+            pixels[var4 + var5] = param3;
           }
           return;
         }
     }
 
-    final static void c() {
-        field_c = 0;
-        field_i = 0;
-        field_l = field_h;
-        field_b = field_d;
+    final static void resetClip() {
+        clipLeft = 0;
+        clipTop = 0;
+        clipRight = width;
+        clipBottom = height;
         SoftwareRasterizer.b();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawRectOutline(int param0, int param1, int param2, int param3, int param4) {
         SoftwareRasterizer.f(param0, param1, param2, param4);
         SoftwareRasterizer.f(param0, param1 + param3 - 1, param2, param4);
         SoftwareRasterizer.e(param0, param1, param3, param4);
@@ -61,35 +61,35 @@ final class SoftwareRasterizer {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.a(field_k, 0, param2 + param3 * field_h, param0, param2, param4, field_h - param4, param5);
-        SoftwareRasterizer.a(field_k, 0, param2 + param3 * field_h, param1, param3, param5, field_h - param4, param2, param4);
+        SoftwareRasterizer.a(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
+        SoftwareRasterizer.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }
         if (param1 < 0) {
           param1 = 0;
         }
-        if (param2 > field_h) {
-          param2 = field_h;
+        if (param2 > width) {
+          param2 = width;
         }
-        if (param3 > field_d) {
-          param3 = field_d;
+        if (param3 > height) {
+          param3 = height;
         }
-        field_c = param0;
-        field_i = param1;
-        field_l = param2;
-        field_b = param3;
+        clipLeft = param0;
+        clipTop = param1;
+        clipRight = param2;
+        clipBottom = param3;
         SoftwareRasterizer.b();
     }
 
-    final static void b(int[] param0) {
-        param0[0] = field_c;
-        param0[1] = field_i;
-        param0[2] = field_l;
-        param0[3] = field_b;
+    final static void saveClip(int[] param0) {
+        param0[0] = clipLeft;
+        param0[1] = clipTop;
+        param0[2] = clipRight;
+        param0[3] = clipBottom;
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -169,12 +169,12 @@ final class SoftwareRasterizer {
         if (var13 < 0) {
           var13 = 0;
         }
-        var14 = param7 + var13 * field_h;
+        var14 = param7 + var13 * width;
         var15 = param4 + param3;
         var16 = 0;
-        if (var15 >= field_d) {
-          var16 = var15 - field_d + 1;
-          var15 = field_d - 1;
+        if (var15 >= height) {
+          var16 = var15 - height + 1;
+          var15 = height - 1;
         }
         var17 = var15 - var13 + 1;
         while (var13 <= var15) {
@@ -187,7 +187,7 @@ final class SoftwareRasterizer {
           var14 = var14 + param6;
           var13++;
         }
-        var14 = var14 + var16 * field_h;
+        var14 = var14 + var16 * width;
         for (var18Lifetime1 = 0; var18Lifetime1 < param8; var18Lifetime1++) {
           incrementValue$7 = param2;
           param2++;
@@ -199,12 +199,12 @@ final class SoftwareRasterizer {
         if (0 < var18Lifetime2) {
           var18Lifetime2 = 0;
         }
-        var19 = param7 + (param4 - param3) * field_h;
+        var19 = param7 + (param4 - param3) * width;
         if (var13Lifetime1 < var18Lifetime2) {
-          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * field_h;
+          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * width;
         }
         while (var13Lifetime1 < var18Lifetime2) {
-          if (var13Lifetime1 + param4 + param5 + param3 < field_b) {
+          if (var13Lifetime1 + param4 + param5 + param3 < clipBottom) {
             for (var20 = 0; var20 < param8; var20++) {
               param1 = param0[var14++];
               var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -214,7 +214,7 @@ final class SoftwareRasterizer {
             var14 = var14 + param6;
             var17++;
           } else {
-            var14 = var14 + field_h;
+            var14 = var14 + width;
           }
           for (var20Lifetime3 = 0; var20Lifetime3 < param8; var20Lifetime3++) {
             var21 = var27[var20Lifetime3] / var17;
@@ -227,7 +227,7 @@ final class SoftwareRasterizer {
           param2 = param2 + param6;
           var13Lifetime1++;
         }
-        var18Lifetime3 = field_d - param4 - param5 - param3;
+        var18Lifetime3 = height - param4 - param5 - param3;
         if (0 < var18Lifetime3) {
           var18Lifetime3 = 0;
         }
@@ -391,12 +391,12 @@ final class SoftwareRasterizer {
         var8 = param0 + param4;
         var9 = param1 + param4;
         var10 = param1;
-        if (var10 < field_i) {
-          var10 = field_i;
+        if (var10 < clipTop) {
+          var10 = clipTop;
         }
         var11 = param1 + param3;
-        if (var11 > field_b) {
-          var11 = field_b;
+        if (var11 > clipBottom) {
+          var11 = clipBottom;
         }
         var12 = param2 - param4 - param4 - 1;
         var13 = var10;
@@ -413,20 +413,20 @@ final class SoftwareRasterizer {
             if (var18 > var14 &&
               var17 > var14) {
               var19 = var8 - var15 + 1;
-              if (var19 < field_c) {
-                var19 = field_c;
+              if (var19 < clipLeft) {
+                var19 = clipLeft;
               }
               var20 = var8 + var12 + var15;
-              if (var20 > field_l) {
-                var20 = field_l;
+              if (var20 > clipRight) {
+                var20 = clipRight;
               }
-              var21 = var19 + var13 * field_h;
+              var21 = var19 + var13 * width;
               for (var22 = var19; var22 < var20; var22++) {
-                var23 = field_k[var21];
+                var23 = pixels[var21];
                 var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
                 incrementValue$5 = var21;
                 var21++;
-                field_k[incrementValue$5] = param5 + var23;
+                pixels[incrementValue$5] = param5 + var23;
               }
               var13++;
               incrementValue$4 = var16;
@@ -443,26 +443,26 @@ final class SoftwareRasterizer {
         }
         var16Lifetime1 = var13 - var9;
         var19Lifetime1 = param0;
-        if (var19Lifetime1 < field_c) {
-          var19Lifetime1 = field_c;
+        if (var19Lifetime1 < clipLeft) {
+          var19Lifetime1 = clipLeft;
         }
         var20Lifetime1 = param0 + param2;
-        if (var20Lifetime1 > field_l) {
-          var20Lifetime1 = field_l;
+        if (var20Lifetime1 > clipRight) {
+          var20Lifetime1 = clipRight;
         }
-        var21Lifetime1 = var19Lifetime1 + var13 * field_h;
-        var22Lifetime1 = field_h + var19Lifetime1 - var20Lifetime1;
+        var21Lifetime1 = var19Lifetime1 + var13 * width;
+        var22Lifetime1 = width + var19Lifetime1 - var20Lifetime1;
         var23Lifetime1 = param1 + param3 - param4 - 1;
-        if (var23Lifetime1 > field_b) {
-          var23Lifetime1 = field_b;
+        if (var23Lifetime1 > clipBottom) {
+          var23Lifetime1 = clipBottom;
         }
         while (var13 < var23Lifetime1) {
           for (var24 = var19Lifetime1; var24 < var20Lifetime1; var24++) {
-            var25 = field_k[var21Lifetime1];
+            var25 = pixels[var21Lifetime1];
             var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
             incrementValue$3 = var21Lifetime1;
             var21Lifetime1++;
-            field_k[incrementValue$3] = param5 + var25;
+            pixels[incrementValue$3] = param5 + var25;
           }
           var13++;
           var21Lifetime1 = var21Lifetime1 + var22Lifetime1;
@@ -484,20 +484,20 @@ final class SoftwareRasterizer {
             break;
           }
           var19Lifetime2 = var8 - var15Lifetime1;
-          if (var19Lifetime2 < field_c) {
-            var19Lifetime2 = field_c;
+          if (var19Lifetime2 < clipLeft) {
+            var19Lifetime2 = clipLeft;
           }
           var20Lifetime2 = var8 + var12 + var15Lifetime1;
-          if (var20Lifetime2 > field_l - 1) {
-            var20Lifetime2 = field_l - 1;
+          if (var20Lifetime2 > clipRight - 1) {
+            var20Lifetime2 = clipRight - 1;
           }
-          var21Lifetime2 = var19Lifetime2 + var13 * field_h;
+          var21Lifetime2 = var19Lifetime2 + var13 * width;
           for (var22Lifetime2 = var19Lifetime2; var22Lifetime2 <= var20Lifetime2; var22Lifetime2++) {
-            var23Lifetime2 = field_k[var21Lifetime2];
+            var23Lifetime2 = pixels[var21Lifetime2];
             var23Lifetime2 = ((var23Lifetime2 & 16711935) * var7 >> 8 & 16711935) + ((var23Lifetime2 & 65280) * var7 >> 8 & 65280);
             incrementValue$2 = var21Lifetime2;
             var21Lifetime2++;
-            field_k[incrementValue$2] = param5 + var23Lifetime2;
+            pixels[incrementValue$2] = param5 + var23Lifetime2;
           }
           var13++;
           var18Lifetime1 = var18Lifetime1 + (var16Lifetime2 + var16Lifetime2);
@@ -546,19 +546,19 @@ final class SoftwareRasterizer {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          SoftwareRasterizer.a(param0, param1, param3);
+          SoftwareRasterizer.setPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
           param2 = -param2;
         }
         var4 = param1 - param2;
-        if (var4 < field_i) {
-          var4 = field_i;
+        if (var4 < clipTop) {
+          var4 = clipTop;
         }
         var5 = param1 + param2 + 1;
-        if (var5 > field_b) {
-          var5 = field_b;
+        if (var5 > clipBottom) {
+          var5 = clipBottom;
         }
         var6 = var4;
         var7 = param2 * param2;
@@ -574,18 +574,18 @@ final class SoftwareRasterizer {
             if (var11 > var7 &&
               var10 > var7) {
               var12 = param0 - var8 + 1;
-              if (var12 < field_c) {
-                var12 = field_c;
+              if (var12 < clipLeft) {
+                var12 = clipLeft;
               }
               var13 = param0 + var8;
-              if (var13 > field_l) {
-                var13 = field_l;
+              if (var13 > clipRight) {
+                var13 = clipRight;
               }
-              var14 = var12 + var6 * field_h;
+              var14 = var12 + var6 * width;
               for (var15 = var12; var15 < var13; var15++) {
                 incrementValue$4 = var14;
                 var14++;
-                field_k[incrementValue$4] = param3;
+                pixels[incrementValue$4] = param3;
               }
               var6++;
               incrementValue$3 = var9;
@@ -617,18 +617,18 @@ final class SoftwareRasterizer {
             break;
           }
           var12Lifetime1 = param0 - var8Lifetime1;
-          if (var12Lifetime1 < field_c) {
-            var12Lifetime1 = field_c;
+          if (var12Lifetime1 < clipLeft) {
+            var12Lifetime1 = clipLeft;
           }
           var13Lifetime1 = param0 + var8Lifetime1;
-          if (var13Lifetime1 > field_l - 1) {
-            var13Lifetime1 = field_l - 1;
+          if (var13Lifetime1 > clipRight - 1) {
+            var13Lifetime1 = clipRight - 1;
           }
-          var14Lifetime1 = var12Lifetime1 + var6 * field_h;
+          var14Lifetime1 = var12Lifetime1 + var6 * width;
           for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
             incrementValue$2 = var14Lifetime1;
             var14Lifetime1++;
-            field_k[incrementValue$2] = param3;
+            pixels[incrementValue$2] = param3;
           }
           var6++;
           var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
@@ -640,10 +640,10 @@ final class SoftwareRasterizer {
     }
 
     final static void a(int[] param0, int param1, int param2) {
-        field_k = param0;
-        field_h = param1;
-        field_d = param2;
-        SoftwareRasterizer.c(0, 0, param1, param2);
+        pixels = param0;
+        width = param1;
+        height = param2;
+        SoftwareRasterizer.setClip(0, 0, param1, param2);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -679,15 +679,15 @@ final class SoftwareRasterizer {
         if (0 < var9) {
           var9 = 0;
         }
-        var10 = field_h - param4 - param5 - param3;
+        var10 = width - param4 - param5 - param3;
         if (0 < var10) {
           var10 = 0;
         }
         var11 = 0;
         var12 = param4 + param3 + 1;
-        if (field_h < var12) {
-          var11 = var12 - field_h;
-          var12 = field_h;
+        if (width < var12) {
+          var11 = var12 - width;
+          var12 = width;
         }
         for (var13 = -param7; var13 < 0; var13++) {
           var14 = 0;
@@ -717,7 +717,7 @@ final class SoftwareRasterizer {
           param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
           for (var19Lifetime1 = 1 - param5; var19Lifetime1 < var9; var19Lifetime1++) {
             var18++;
-            if (param4 + param5 + var19Lifetime1 + param3 < field_l) {
+            if (param4 + param5 + var19Lifetime1 + param3 < clipRight) {
               param1 = param0[var17];
               var17++;
               var14 = var14 + (param1 >> 16 & 255);
@@ -818,29 +818,29 @@ final class SoftwareRasterizer {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
-        if (param0 >= field_c) {
-          if (param0 >= field_l) {
+        if (param0 >= clipLeft) {
+          if (param0 >= clipRight) {
             return;
           }
-          if (param1 < field_i) {
-            param2 = param2 - (field_i - param1);
-            param1 = field_i;
+          if (param1 < clipTop) {
+            param2 = param2 - (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param1 + param2 > field_b) {
-            param2 = field_b - param1;
+          if (param1 + param2 > clipBottom) {
+            param2 = clipBottom - param1;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_h;
+          var12 = param0 + param1 * width;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_k[var12] >> 16 & 255) * var5;
-            var10 = (field_k[var12] >> 8 & 255) * var5;
-            var11 = (field_k[var12] & 255) * var5;
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            field_k[var12] = var14;
-            var12 = var12 + field_h;
+            pixels[var12] = var14;
+            var12 = var12 + width;
           }
           return;
         }
@@ -885,7 +885,7 @@ final class SoftwareRasterizer {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          SoftwareRasterizer.c(param0, param1, param2, param3, param5);
+          SoftwareRasterizer.fillRect(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -894,12 +894,12 @@ final class SoftwareRasterizer {
         var6 = param0 + param4;
         var7 = param1 + param4;
         var8 = param1;
-        if (var8 < field_i) {
-          var8 = field_i;
+        if (var8 < clipTop) {
+          var8 = clipTop;
         }
         var9 = param1 + param3;
-        if (var9 > field_b) {
-          var9 = field_b;
+        if (var9 > clipBottom) {
+          var9 = clipBottom;
         }
         var10 = param2 - param4 - param4 - 1;
         var11 = var8;
@@ -916,18 +916,18 @@ final class SoftwareRasterizer {
             if (var16 > var12 &&
               var15 > var12) {
               var17 = var6 - var13 + 1;
-              if (var17 < field_c) {
-                var17 = field_c;
+              if (var17 < clipLeft) {
+                var17 = clipLeft;
               }
               var18 = var6 + var10 + var13;
-              if (var18 > field_l) {
-                var18 = field_l;
+              if (var18 > clipRight) {
+                var18 = clipRight;
               }
-              var19 = var17 + var11 * field_h;
+              var19 = var17 + var11 * width;
               for (var20 = var17; var20 < var18; var20++) {
                 incrementValue$5 = var19;
                 var19++;
-                field_k[incrementValue$5] = param5;
+                pixels[incrementValue$5] = param5;
               }
               var11++;
               incrementValue$4 = var14;
@@ -944,24 +944,24 @@ final class SoftwareRasterizer {
         }
         var14Lifetime1 = var11 - var7;
         var17Lifetime1 = param0;
-        if (var17Lifetime1 < field_c) {
-          var17Lifetime1 = field_c;
+        if (var17Lifetime1 < clipLeft) {
+          var17Lifetime1 = clipLeft;
         }
         var18Lifetime1 = param0 + param2;
-        if (var18Lifetime1 > field_l) {
-          var18Lifetime1 = field_l;
+        if (var18Lifetime1 > clipRight) {
+          var18Lifetime1 = clipRight;
         }
-        var19Lifetime1 = var17Lifetime1 + var11 * field_h;
-        var20Lifetime1 = field_h + var17Lifetime1 - var18Lifetime1;
+        var19Lifetime1 = var17Lifetime1 + var11 * width;
+        var20Lifetime1 = width + var17Lifetime1 - var18Lifetime1;
         var21 = param1 + param3 - param4 - 1;
-        if (var21 > field_b) {
-          var21 = field_b;
+        if (var21 > clipBottom) {
+          var21 = clipBottom;
         }
         while (var11 < var21) {
           for (var22 = var17Lifetime1; var22 < var18Lifetime1; var22++) {
             incrementValue$3 = var19Lifetime1;
             var19Lifetime1++;
-            field_k[incrementValue$3] = param5;
+            pixels[incrementValue$3] = param5;
           }
           var11++;
           var19Lifetime1 = var19Lifetime1 + var20Lifetime1;
@@ -983,18 +983,18 @@ final class SoftwareRasterizer {
             break;
           }
           var17Lifetime2 = var6 - var13Lifetime1;
-          if (var17Lifetime2 < field_c) {
-            var17Lifetime2 = field_c;
+          if (var17Lifetime2 < clipLeft) {
+            var17Lifetime2 = clipLeft;
           }
           var18Lifetime2 = var6 + var10 + var13Lifetime1;
-          if (var18Lifetime2 > field_l - 1) {
-            var18Lifetime2 = field_l - 1;
+          if (var18Lifetime2 > clipRight - 1) {
+            var18Lifetime2 = clipRight - 1;
           }
-          var19Lifetime2 = var17Lifetime2 + var11 * field_h;
+          var19Lifetime2 = var17Lifetime2 + var11 * width;
           for (var20Lifetime2 = var17Lifetime2; var20Lifetime2 <= var18Lifetime2; var20Lifetime2++) {
             incrementValue$2 = var19Lifetime2;
             var19Lifetime2++;
-            field_k[incrementValue$2] = param5;
+            pixels[incrementValue$2] = param5;
           }
           var11++;
           var16Lifetime1 = var16Lifetime1 + (var14Lifetime2 + var14Lifetime2);
@@ -1006,7 +1006,7 @@ final class SoftwareRasterizer {
     }
 
     public static void a() {
-        field_k = null;
+        pixels = null;
         field_f = null;
         field_g = null;
         field_e = null;
@@ -1049,18 +1049,18 @@ final class SoftwareRasterizer {
           param2 = param2 << 16;
           var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
-          if (param1 < field_i) {
-            param0 = param0 + var5 * (field_i - param1);
-            param1 = field_i;
+          if (param1 < clipTop) {
+            param0 = param0 + var5 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_b) {
-            param3 = field_b - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           while (param1 <= param3) {
             var6 = param0 >> 16;
-            if (var6 >= field_c &&
-              var6 < field_l) {
-              field_k[var6 + param1 * field_h] = param4;
+            if (var6 >= clipLeft &&
+              var6 < clipRight) {
+              pixels[var6 + param1 * width] = param4;
             }
             param0 = param0 + var5;
             param1++;
@@ -1072,25 +1072,25 @@ final class SoftwareRasterizer {
         param3 = param3 << 16;
         var5Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
-        if (param0 < field_c) {
-          param1 = param1 + var5Lifetime1 * (field_c - param0);
-          param0 = field_c;
+        if (param0 < clipLeft) {
+          param1 = param1 + var5Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_l) {
-          param2 = field_l - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         while (param0 <= param2) {
           var6Lifetime1 = param1 >> 16;
-          if (var6Lifetime1 >= field_i &&
-            var6Lifetime1 < field_b) {
-            field_k[param0 + var6Lifetime1 * field_h] = param4;
+          if (var6Lifetime1 >= clipTop &&
+            var6Lifetime1 < clipBottom) {
+            pixels[param0 + var6Lifetime1 * width] = param4;
           }
           param1 = param1 + var5Lifetime1;
           param0++;
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void desaturateRect(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1099,37 +1099,37 @@ final class SoftwareRasterizer {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_c) {
-          param2 = param2 - (field_c - param0);
-          param0 = field_c;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param0 + param2 > field_l) {
-          param2 = field_l - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 < field_i) {
-          param3 = param3 - (field_i - param1);
-          param1 = field_i;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param1 + param3 > field_b) {
-          param3 = field_b - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var4 = param0 + param1 * field_h;
+        int var4 = param0 + param1 * width;
         if (param2 > 0) {
           if (param3 <= 0) {
             return;
           }
           for (var5 = 0; var5 < param3; var5++) {
             for (var6 = 0; var6 < param2; var6++) {
-              var7 = field_k[var4];
+              var7 = pixels[var4];
               var8 = var7 >> 15 & 510;
               var9 = var7 >> 8 & 255;
               var10 = var7 & 255;
               var11 = (var10 + var8) / 3 + var9 >> 1;
               incrementValue$0 = var4;
               var4++;
-              field_k[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
+              pixels[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
             }
-            var4 = var4 + (field_h - param2);
+            var4 = var4 + (width - param2);
           }
           return;
         }
@@ -1143,31 +1143,31 @@ final class SoftwareRasterizer {
         int var7;
         int var8;
         int var11;
-        if (param0 < field_c) {
-          param2 = param2 - (field_c - param0);
-          param0 = field_c;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_i) {
-          param3 = param3 - (field_i - param1);
-          param1 = field_i;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_l) {
-          param2 = field_l - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_b) {
-          param3 = field_b - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
         param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
         var6 = 256 - param5;
-        var7 = field_h - param2;
-        var8 = param0 + param1 * field_h;
+        var7 = width - param2;
+        var8 = param0 + param1 * width;
         for (var9 = 0; var9 < param3; var9++) {
           for (var10 = -param2; var10 < 0; var10++) {
-            var11 = field_k[var8];
+            var11 = pixels[var8];
             var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
             incrementValue$0 = var8;
             var8++;
-            field_k[incrementValue$0] = param4 + var11;
+            pixels[incrementValue$0] = param4 + var11;
           }
           var8 = var8 + var7;
         }
@@ -1197,7 +1197,7 @@ final class SoftwareRasterizer {
         int var22Lifetime2;
         int var22Lifetime3;
         if (param4 == 0) {
-          SoftwareRasterizer.a(param0, param1, param2, param3, param5);
+          SoftwareRasterizer.drawRectOutline(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -1207,69 +1207,69 @@ final class SoftwareRasterizer {
         var7 = param1 + param4;
         var8 = param0 + param2 - param4 - 1;
         var9 = param1 + param3 - param4 - 1;
-        if (field_l > field_c) {
-          if (field_b <= field_i) {
+        if (clipRight > clipLeft) {
+          if (clipBottom <= clipTop) {
             return;
           }
-          if (param0 + param2 > field_c) {
-            if (param0 < field_l &&
-              param1 + param3 >= field_i &&
-              param1 < field_b) {
-              var10 = var6 + (var7 - param4) * field_h;
-              var11 = var8 + (var7 - param4) * field_h;
-              var12 = var6 + var7 * field_h;
-              var13 = var8 + var7 * field_h;
-              var14 = var6 + var9 * field_h;
-              var15 = var8 + var9 * field_h;
-              var16 = var6 + (var9 + param4) * field_h;
-              var17 = var8 + (var9 + param4) * field_h;
+          if (param0 + param2 > clipLeft) {
+            if (param0 < clipRight &&
+              param1 + param3 >= clipTop &&
+              param1 < clipBottom) {
+              var10 = var6 + (var7 - param4) * width;
+              var11 = var8 + (var7 - param4) * width;
+              var12 = var6 + var7 * width;
+              var13 = var8 + var7 * width;
+              var14 = var6 + var9 * width;
+              var15 = var8 + var9 * width;
+              var16 = var6 + (var9 + param4) * width;
+              var17 = var8 + (var9 + param4) * width;
               var18 = param4;
               var19 = 0;
               var20 = param4 * param4;
               var21 = var20 - var18;
-              if (param0 >= field_c &&
-                param0 + param2 < field_l &&
-                param1 >= field_i &&
-                param1 + param3 < field_b) {
-                for (var22 = var12; var22 <= var14; var22 = var22 + field_h) {
-                  field_k[var22 - var18] = param5;
+              if (param0 >= clipLeft &&
+                param0 + param2 < clipRight &&
+                param1 >= clipTop &&
+                param1 + param3 < clipBottom) {
+                for (var22 = var12; var22 <= var14; var22 = var22 + width) {
+                  pixels[var22 - var18] = param5;
                 }
-                for (var22Lifetime1 = var13; var22Lifetime1 <= var15; var22Lifetime1 = var22Lifetime1 + field_h) {
-                  field_k[var22Lifetime1 + var18] = param5;
+                for (var22Lifetime1 = var13; var22Lifetime1 <= var15; var22Lifetime1 = var22Lifetime1 + width) {
+                  pixels[var22Lifetime1 + var18] = param5;
                 }
                 for (var22Lifetime2 = var10; var22Lifetime2 <= var11; var22Lifetime2++) {
-                  field_k[var22Lifetime2] = param5;
+                  pixels[var22Lifetime2] = param5;
                 }
                 for (var22Lifetime3 = var16; var22Lifetime3 <= var17; var22Lifetime3++) {
-                  field_k[var22Lifetime3] = param5;
+                  pixels[var22Lifetime3] = param5;
                 }
                 while (true) {
                   incrementValue$0 = var19;
                   var19++;
                   var21 = var21 + (incrementValue$0 + var19);
-                  var12 = var12 - field_h;
-                  var13 = var13 - field_h;
-                  var14 = var14 + field_h;
-                  var15 = var15 + field_h;
+                  var12 = var12 - width;
+                  var13 = var13 - width;
+                  var14 = var14 + width;
+                  var15 = var15 + width;
                   if (var21 > var20) {
                     var18--;
                     var21 = var21 - (var18 + var18);
-                    var10 = var10 + field_h;
-                    var11 = var11 + field_h;
-                    var16 = var16 - field_h;
-                    var17 = var17 - field_h;
+                    var10 = var10 + width;
+                    var11 = var11 + width;
+                    var16 = var16 - width;
+                    var17 = var17 - width;
                   }
                   if (var18 < var19) {
                     return;
                   }
-                  field_k[var10 - var19] = param5;
-                  field_k[var11 + var19] = param5;
-                  field_k[var12 - var18] = param5;
-                  field_k[var13 + var18] = param5;
-                  field_k[var14 - var18] = param5;
-                  field_k[var15 + var18] = param5;
-                  field_k[var16 - var19] = param5;
-                  field_k[var17 + var19] = param5;
+                  pixels[var10 - var19] = param5;
+                  pixels[var11 + var19] = param5;
+                  pixels[var12 - var18] = param5;
+                  pixels[var13 + var18] = param5;
+                  pixels[var14 - var18] = param5;
+                  pixels[var15 + var18] = param5;
+                  pixels[var16 - var19] = param5;
+                  pixels[var17 + var19] = param5;
                 }
               }
               SoftwareRasterizer.e(param0, param1 + var18, param3 - var18 - var18, param5);
@@ -1280,71 +1280,71 @@ final class SoftwareRasterizer {
                 incrementValue$1 = var19;
                 var19++;
                 var21 = var21 + (incrementValue$1 + var19);
-                var12 = var12 - field_h;
-                var13 = var13 - field_h;
-                var14 = var14 + field_h;
-                var15 = var15 + field_h;
+                var12 = var12 - width;
+                var13 = var13 - width;
+                var14 = var14 + width;
+                var15 = var15 + width;
                 if (var21 > var20) {
                   var18--;
                   var21 = var21 - (var18 + var18);
-                  var10 = var10 + field_h;
-                  var11 = var11 + field_h;
-                  var16 = var16 - field_h;
-                  var17 = var17 - field_h;
+                  var10 = var10 + width;
+                  var11 = var11 + width;
+                  var16 = var16 - width;
+                  var17 = var17 - width;
                 }
                 if (var18 < var19) {
                   return;
                 }
-                if (var7 - var18 >= field_i &&
-                  var7 - var18 < field_b) {
-                  if (var6 - var19 >= field_c &&
-                    var6 - var19 < field_l) {
-                    field_k[var10 - var19] = param5;
+                if (var7 - var18 >= clipTop &&
+                  var7 - var18 < clipBottom) {
+                  if (var6 - var19 >= clipLeft &&
+                    var6 - var19 < clipRight) {
+                    pixels[var10 - var19] = param5;
                   }
-                  if (var8 + var19 >= field_c &&
-                    var8 + var19 < field_l) {
-                    field_k[var11 + var19] = param5;
-                  }
-                }
-                if (var7 - var19 >= field_i &&
-                  var7 - var19 < field_b) {
-                  if (var6 - var18 >= field_c &&
-                    var6 - var18 < field_l) {
-                    field_k[var12 - var18] = param5;
-                  }
-                  if (var8 + var18 >= field_c &&
-                    var8 + var18 < field_l) {
-                    field_k[var13 + var18] = param5;
+                  if (var8 + var19 >= clipLeft &&
+                    var8 + var19 < clipRight) {
+                    pixels[var11 + var19] = param5;
                   }
                 }
-                if (var9 + var19 >= field_i &&
-                  var9 + var19 < field_b) {
-                  if (var6 - var18 >= field_c &&
-                    var6 - var18 < field_l) {
-                    field_k[var14 - var18] = param5;
+                if (var7 - var19 >= clipTop &&
+                  var7 - var19 < clipBottom) {
+                  if (var6 - var18 >= clipLeft &&
+                    var6 - var18 < clipRight) {
+                    pixels[var12 - var18] = param5;
                   }
-                  if (var8 + var18 >= field_c &&
-                    var8 + var18 < field_l) {
-                    field_k[var15 + var18] = param5;
+                  if (var8 + var18 >= clipLeft &&
+                    var8 + var18 < clipRight) {
+                    pixels[var13 + var18] = param5;
                   }
                 }
-                if (var9 + var18 < field_i) {
+                if (var9 + var19 >= clipTop &&
+                  var9 + var19 < clipBottom) {
+                  if (var6 - var18 >= clipLeft &&
+                    var6 - var18 < clipRight) {
+                    pixels[var14 - var18] = param5;
+                  }
+                  if (var8 + var18 >= clipLeft &&
+                    var8 + var18 < clipRight) {
+                    pixels[var15 + var18] = param5;
+                  }
+                }
+                if (var9 + var18 < clipTop) {
                   continue;
                 }
-                if (var9 + var18 >= field_b) {
+                if (var9 + var18 >= clipBottom) {
                   continue;
                 }
-                if (var6 - var19 >= field_c &&
-                  var6 - var19 < field_l) {
-                  field_k[var16 - var19] = param5;
+                if (var6 - var19 >= clipLeft &&
+                  var6 - var19 < clipRight) {
+                  pixels[var16 - var19] = param5;
                 }
-                if (var8 + var19 < field_c) {
+                if (var8 + var19 < clipLeft) {
                   continue;
                 }
-                if (var8 + var19 >= field_l) {
+                if (var8 + var19 >= clipRight) {
                   continue;
                 }
-                field_k[var17 + var19] = param5;
+                pixels[var17 + var19] = param5;
               }
             }
             return;
@@ -1364,38 +1364,38 @@ final class SoftwareRasterizer {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int var0 = 0;
-        int var1 = field_h * field_d - 7;
+        int var1 = width * height - 7;
         while (var0 < var1) {
           incrementValue$0 = var0;
           var0++;
-          field_k[incrementValue$0] = 0;
+          pixels[incrementValue$0] = 0;
           incrementValue$1 = var0;
           var0++;
-          field_k[incrementValue$1] = 0;
+          pixels[incrementValue$1] = 0;
           incrementValue$2 = var0;
           var0++;
-          field_k[incrementValue$2] = 0;
+          pixels[incrementValue$2] = 0;
           incrementValue$3 = var0;
           var0++;
-          field_k[incrementValue$3] = 0;
+          pixels[incrementValue$3] = 0;
           incrementValue$4 = var0;
           var0++;
-          field_k[incrementValue$4] = 0;
+          pixels[incrementValue$4] = 0;
           incrementValue$5 = var0;
           var0++;
-          field_k[incrementValue$5] = 0;
+          pixels[incrementValue$5] = 0;
           incrementValue$6 = var0;
           var0++;
-          field_k[incrementValue$6] = 0;
+          pixels[incrementValue$6] = 0;
           incrementValue$7 = var0;
           var0++;
-          field_k[incrementValue$7] = 0;
+          pixels[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
           incrementValue$8 = var0;
           var0++;
-          field_k[incrementValue$8] = 0;
+          pixels[incrementValue$8] = 0;
         }
     }
 
@@ -1411,30 +1411,30 @@ final class SoftwareRasterizer {
         int var11 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
-        if (param1 >= field_i) {
-          if (param1 >= field_b) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_c) {
-            param2 = param2 - (field_c - param0);
-            param0 = field_c;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_l) {
-            param2 = field_l - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_h;
+          var12 = param0 + param1 * width;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_k[var12] >> 16 & 255) * var5;
-            var10 = (field_k[var12] >> 8 & 255) * var5;
-            var11 = (field_k[var12] & 255) * var5;
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
             incrementValue$0 = var12;
             var12++;
-            field_k[incrementValue$0] = var14;
+            pixels[incrementValue$0] = var14;
           }
           return;
         }
@@ -1443,23 +1443,23 @@ final class SoftwareRasterizer {
     private final static void e(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= field_c) {
-          if (param0 >= field_l) {
+        if (param0 >= clipLeft) {
+          if (param0 >= clipRight) {
             return;
           }
-          if (param1 < field_i) {
-            param2 = param2 - (field_i - param1);
-            param1 = field_i;
+          if (param1 < clipTop) {
+            param2 = param2 - (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param1 + param2 > field_b) {
-            param2 = field_b - param1;
+          if (param1 + param2 > clipBottom) {
+            param2 = clipBottom - param1;
           }
-          var4 = param0 + param1 * field_h;
+          var4 = param0 + param1 * width;
           var5 = 0;
           while (var5 < param2) {
-            field_k[var4] = param3;
+            pixels[var4] = param3;
             var5++;
-            var4 = var4 + field_h;
+            var4 = var4 + width;
           }
           return;
         }
@@ -1483,23 +1483,23 @@ final class SoftwareRasterizer {
         int var13;
         var6 = 0;
         var7 = 65536 / param3;
-        if (param0 < field_c) {
-          param2 = param2 - (field_c - param0);
-          param0 = field_c;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_i) {
-          var6 = var6 + (field_i - param1) * var7;
-          param3 = param3 - (field_i - param1);
-          param1 = field_i;
+        if (param1 < clipTop) {
+          var6 = var6 + (clipTop - param1) * var7;
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_l) {
-          param2 = field_l - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_b) {
-          param3 = field_b - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        var8 = field_h - param2;
-        var9 = param0 + param1 * field_h;
+        var8 = width - param2;
+        var9 = param0 + param1 * width;
         for (var10 = -param3; var10 < 0; var10++) {
           var11 = 65536 - var6 >> 8;
           var12 = var6 >> 8;
@@ -1507,75 +1507,75 @@ final class SoftwareRasterizer {
           for (var14 = -param2; var14 < 0; var14++) {
             incrementValue$0 = var9;
             var9++;
-            field_k[incrementValue$0] = var13;
+            pixels[incrementValue$0] = var13;
           }
           var9 = var9 + var8;
           var6 = var6 + var7;
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param0 >= field_c) {
-          if (param1 < field_i ||
-            param0 >= field_l ||
-            param1 >= field_b) {
+    final static void setPixel(int param0, int param1, int param2) {
+        if (param0 >= clipLeft) {
+          if (param1 < clipTop ||
+            param0 >= clipRight ||
+            param1 >= clipBottom) {
             return;
           }
-          field_k[param0 + param1 * field_h] = param2;
+          pixels[param0 + param1 * width] = param2;
           return;
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRect(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_c) {
-          param2 = param2 - (field_c - param0);
-          param0 = field_c;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_i) {
-          param3 = param3 - (field_i - param1);
-          param1 = field_i;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_l) {
-          param2 = field_l - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_b) {
-          param3 = field_b - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var5 = field_h - param2;
-        int var6 = param0 + param1 * field_h;
+        int var5 = width - param2;
+        int var6 = param0 + param1 * width;
         for (var7 = -param3; var7 < 0; var7++) {
           for (var8 = -param2; var8 < 0; var8++) {
             incrementValue$0 = var6;
             var6++;
-            field_k[incrementValue$0] = param4;
+            pixels[incrementValue$0] = param4;
           }
           var6 = var6 + var5;
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
-        if (field_c < param0) {
-          field_c = param0;
+    final static void intersectClip(int param0, int param1, int param2, int param3) {
+        if (clipLeft < param0) {
+          clipLeft = param0;
         }
-        if (field_i < param1) {
-          field_i = param1;
+        if (clipTop < param1) {
+          clipTop = param1;
         }
-        if (field_l > param2) {
-          field_l = param2;
+        if (clipRight > param2) {
+          clipRight = param2;
         }
-        if (field_b > param3) {
-          field_b = param3;
+        if (clipBottom > param3) {
+          clipBottom = param3;
         }
         SoftwareRasterizer.b();
     }
 
     static {
-        field_b = 0;
-        field_c = 0;
-        field_i = 0;
-        field_l = 0;
+        clipBottom = 0;
+        clipLeft = 0;
+        clipTop = 0;
+        clipRight = 0;
     }
 }
