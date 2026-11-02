@@ -43,7 +43,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -58,17 +58,17 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               vf.a(-13891, (char) var2_int)) {
-              var3 = Bounce.field_F + 1 & 127;
+              var3 = BounceDown.field_F + 1 & 127;
               if (oh.field_a != var3) {
-                pf.field_A[Bounce.field_F] = -1;
-                fk.field_b[Bounce.field_F] = (char)var2_int;
-                Bounce.field_F = var3;
+                pf.field_A[BounceDown.field_F] = -1;
+                fk.field_b[BounceDown.field_F] = (char)var2_int;
+                BounceDown.field_F = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "nf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "nf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,11 +105,11 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           if (0 <= var2_int) {
-            var3 = Bounce.field_F + 1 & 127;
+            var3 = BounceDown.field_F + 1 & 127;
             if (var3 != oh.field_a) {
-              pf.field_A[Bounce.field_F] = var2_int;
-              fk.field_b[Bounce.field_F] = (char)0;
-              Bounce.field_F = var3;
+              pf.field_A[BounceDown.field_F] = var2_int;
+              fk.field_b[BounceDown.field_F] = (char)0;
+              BounceDown.field_F = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -130,7 +130,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             db.field_R = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class pf extends ak {
     static String field_B;
 
     final void d(byte param0) {
-        int var4 = Bounce.field_N;
+        int var4 = BounceDown.field_N;
         ea var2 = new ea(this.field_E);
         if (param0 <= 109) {
           field_A = (int[]) null;
@@ -33,7 +33,7 @@ final class pf extends ak {
     }
 
     final void l(int param0) {
-        int var4 = Bounce.field_N;
+        int var4 = BounceDown.field_N;
         if (param0 != -26623) {
           return;
         }
@@ -86,7 +86,7 @@ final class pf extends ak {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class pf extends ak {
         ea var2;
         ri var3;
         int var4;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         var2 = new ea(this.field_E);
         var3 = (ri) (var2.a(22092));
         if (param0) {
@@ -110,7 +110,7 @@ final class pf extends ak {
     }
 
     final void k(int param0) {
-        int var4 = Bounce.field_N;
+        int var4 = BounceDown.field_N;
         ea var2 = new ea(this.field_E);
         ri var3 = (ri) (var2.a(22092));
         while (var3 != null) {
@@ -186,12 +186,12 @@ final class pf extends ak {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var7 = Bounce.field_N;
+        int var7 = BounceDown.field_N;
         if (null != this.field_j) {
           this.field_j.a(param1, (lk) (this), (byte) 3, true, param3);
         }
@@ -213,11 +213,11 @@ final class pf extends ak {
             throw new IllegalArgumentException();
           }
           var3 = (ri) (param0);
-          this.field_E.a((byte) 83, (ai) (var3));
+          this.field_E.a((byte) 83, (IntrusiveNode) (var3));
           var3.field_D = true;
           var3.a((lk) (this), param1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "pf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "pf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class pf extends ak {
         ea var2;
         ri var3;
         int var4;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         var2 = new ea(this.field_E);
         if (param0 != 0) {
           this.d((byte) -47);

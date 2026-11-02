@@ -51,7 +51,7 @@ final class cl extends al {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class cl extends al {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "cl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "cl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class cl extends al {
         try {
           this.field_l = new bd(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class cl extends al {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -170,10 +170,10 @@ final class cl extends al {
         jc var5_ref_jc = null;
         int[] var6 = null;
         int var8 = 0;
-        ii var9 = null;
+        CipherPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = jc.field_g;
@@ -228,7 +228,7 @@ final class cl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "cl.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "cl.A(" + param0 + ')');
         }
     }
 

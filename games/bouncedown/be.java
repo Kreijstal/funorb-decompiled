@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends ai {
+final class be extends IntrusiveNode {
     uk field_g;
     byte[] field_h;
 
@@ -110,7 +110,7 @@ final class be extends ai {
         this.field_g = null;
     }
 
-    private be(wi param0) {
+    private be(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -139,7 +139,7 @@ final class be extends ai {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        wi stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_84_1 = 0;
         int stackIn_85_2 = 0;
         int stackIn_91_0 = 0;
@@ -192,7 +192,7 @@ final class be extends ai {
         int var48;
         int var49;
         int var50;
-        wi var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -413,7 +413,7 @@ final class be extends ai {
         var50 = param0.field_h;
         param0.field_h = param0.field_h + var5 * 3;
         this.field_h = new byte[var4];
-        var51 = new wi(this.field_h);
+        var51 = new PacketBuffer(this.field_h);
         var51.b(1297377380, (byte) -46);
         var51.b(6, (byte) 47);
         stackIn_84_0 = var51;
@@ -423,7 +423,7 @@ final class be extends ai {
         } else {
           stackIn_85_2 = 1;
         }
-        ((wi) (Object) stackIn_84_0).e(stackIn_84_1, stackIn_85_2);
+        ((PacketBuffer) (Object) stackIn_84_0).e(stackIn_84_1, stackIn_85_2);
         var51.e(-750655096, var2);
         var51.e(-750655096, var3);
         param0.field_h = var13Lifetime1;
@@ -639,6 +639,6 @@ final class be extends ai {
         if (var3 == null) {
           return null;
         }
-        return new be(new wi(var3));
+        return new be(new PacketBuffer(var3));
     }
 }

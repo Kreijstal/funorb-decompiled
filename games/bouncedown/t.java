@@ -19,7 +19,7 @@ final class t extends eg {
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

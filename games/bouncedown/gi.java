@@ -47,7 +47,7 @@ final class gi {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class gi {
         lh var2;
         int var3;
         lh var4;
-        var3 = Bounce.field_N;
+        var3 = BounceDown.field_N;
         if (param0 != 0) {
           this.a(10);
         }
@@ -118,14 +118,14 @@ final class gi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8;
         int var9;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         var8 = 115 % ((param0 + 65) / 38);
         if (param2 > param1) {
           if (param4 > param2) {

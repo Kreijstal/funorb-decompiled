@@ -54,7 +54,7 @@ final class kg {
           param0.field_m = this.field_m;
           param0.field_e = this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class kg {
         int var16Lifetime2;
         int var16Lifetime3;
         int var17Lifetime2;
-        var19 = Bounce.field_N;
+        var19 = BounceDown.field_N;
         try {
           if (param3 >= 0 &&
             param2 < qk.field_g) {
@@ -291,7 +291,7 @@ final class kg {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class kg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class kg {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ final class kg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -534,7 +534,7 @@ final class kg {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

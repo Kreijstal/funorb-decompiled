@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class wh implements Iterable {
-    ug field_a;
+    DualLinkNode field_a;
     static String[] field_c;
     static volatile int field_d;
     static eh field_b;
 
-    final void a(int param0, ug param1) {
+    final void a(int param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -26,7 +26,7 @@ final class wh implements Iterable {
           if (param0 == 6753) {
             return;
           }
-          this.field_a = (ug) null;
+          this.field_a = (DualLinkNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class wh implements Iterable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -46,11 +46,11 @@ final class wh implements Iterable {
         return (Iterator) ((Object) new di(this));
     }
 
-    final ug a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 != 14) {
-          return (ug) null;
+          return (DualLinkNode) null;
         }
-        ug var2 = this.field_a.field_l;
+        DualLinkNode var2 = this.field_a.field_l;
         if (this.field_a != var2) {
           var2.a(92);
           return var2;
@@ -83,7 +83,7 @@ final class wh implements Iterable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

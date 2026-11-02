@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ai {
+class IntrusiveNode {
     static java.awt.Frame field_b;
     static gk field_e;
     long field_d;
-    ai field_c;
-    ai field_f;
+    IntrusiveNode field_c;
+    IntrusiveNode field_f;
     static String[] field_a;
 
     final void c(int param0) {
@@ -30,7 +30,7 @@ class ai {
           return;
         }
         String var2 = (String) null;
-        ai.a(false, (java.awt.Color) null, 3, (String) null, 98);
+        IntrusiveNode.a(false, (java.awt.Color) null, 3, (String) null, 98);
         field_e = null;
     }
 
@@ -140,7 +140,7 @@ class ai {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 

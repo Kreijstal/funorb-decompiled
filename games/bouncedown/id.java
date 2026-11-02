@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends ai {
+final class id extends IntrusiveNode {
     static uf field_i;
     static boolean field_g;
     int[] field_h;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Bounce extends kk {
+public final class BounceDown extends GameClient {
     static tg field_G;
     private int field_I;
     private boolean field_E;
@@ -24,7 +24,7 @@ public final class Bounce extends kk {
             vc.e((byte) -44);
           }
           pa.field_c = fa.a((byte) -76, 1);
-          ai.field_e = fa.a((byte) -76, 2);
+          IntrusiveNode.field_e = fa.a((byte) -76, 2);
           if (param0 != -16) {
             this.e(-122);
           }
@@ -36,7 +36,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "Bounce.MA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "Bounce.MA(" + param0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ public final class Bounce extends kk {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -95,22 +95,22 @@ public final class Bounce extends kk {
         RuntimeException var2 = null;
         var3 = field_N;
         try {
-          Bounce.k((byte) -99);
+          BounceDown.k((byte) -99);
           kc.a(17345);
           nf.a(-60);
           ab.b((byte) -104);
           hi.a(false);
           ua.a(-24750);
           jl.a(87);
-          kk.g((byte) 115);
-          ga.a((byte) 72);
-          fj.e((byte) 118);
+          GameClient.g((byte) 115);
+          ClientException.a((byte) 72);
+          AppletShell.e((byte) 118);
           ha.a(false);
           kf.a((byte) 53);
           na.c();
           gk.b(false);
           ob.a(640);
-          wi.c((byte) -127);
+          PacketBuffer.c((byte) -127);
           of.a(true);
           dk.a(true);
           je.a(-23556);
@@ -133,14 +133,14 @@ public final class Bounce extends kk {
           vi.a((byte) 74);
           jf.e(-18695);
           pc.c(-14582);
-          dg.a((byte) 64);
-          ud.a(100);
+          Platform.a((byte) 64);
+          Slime.a(100);
           qf.b(-107);
           i.a(118);
           e.h();
           mj.c(4);
-          ai.a((byte) 110);
-          ii.l(0);
+          IntrusiveNode.a((byte) 110);
+          CipherPacketBuffer.l(0);
           og.a((byte) 106);
           f.a(-7355);
           uk.c(113);
@@ -175,7 +175,7 @@ public final class Bounce extends kk {
           oh.a((byte) -59);
           oc.a(false);
           tj.a();
-          ug.b((byte) 115);
+          DualLinkNode.b((byte) 115);
           li.a(111);
           nk.a(-74);
           bk.a(-23);
@@ -320,9 +320,9 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "Bounce.HA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "Bounce.HA(" + param0 + ')');
         }
-        if (fj.field_j != 0) {
+        if (AppletShell.field_j != 0) {
           var3++;
           field_N = var3;
         }
@@ -330,21 +330,21 @@ public final class Bounce extends kk {
 
     private final void l(int param0) {
         int fieldTemp$0 = 0;
-        ud dupTemp$1 = null;
-        ud dupTemp$2 = null;
-        ud dupTemp$3 = null;
-        ud dupTemp$4 = null;
-        ud dupTemp$5 = null;
-        ud dupTemp$6 = null;
-        ud dupTemp$7 = null;
-        ud dupTemp$8 = null;
-        ud dupTemp$9 = null;
-        ud dupTemp$10 = null;
-        ud dupTemp$11 = null;
-        ud dupTemp$12 = null;
-        ud dupTemp$14 = null;
-        ud dupTemp$15 = null;
-        dg dupTemp$13 = null;
+        Slime dupTemp$1 = null;
+        Slime dupTemp$2 = null;
+        Slime dupTemp$3 = null;
+        Slime dupTemp$4 = null;
+        Slime dupTemp$5 = null;
+        Slime dupTemp$6 = null;
+        Slime dupTemp$7 = null;
+        Slime dupTemp$8 = null;
+        Slime dupTemp$9 = null;
+        Slime dupTemp$10 = null;
+        Slime dupTemp$11 = null;
+        Slime dupTemp$12 = null;
+        Slime dupTemp$14 = null;
+        Slime dupTemp$15 = null;
+        Platform dupTemp$13 = null;
         boolean stackIn_225_0 = false;
         boolean stackIn_233_0 = false;
         pk stackIn_241_0 = null;
@@ -366,7 +366,7 @@ public final class Bounce extends kk {
         int var6 = 0;
         int var7 = 0;
         int var10 = 0;
-        dg dupTemp$13Lifetime1;
+        Platform dupTemp$13Lifetime1;
         int stackIn_464_0Lifetime1;
         int stackIn_464_1Lifetime1;
         int var5Lifetime1;
@@ -783,7 +783,7 @@ public final class Bounce extends kk {
             ca.a(false);
           }
           var2_int = 0;
-          L84: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var2_int < vk.field_b) {
               stackIn_464_0 = ~he.field_n[var2_int].field_n;
@@ -793,7 +793,7 @@ public final class Bounce extends kk {
                   dupTemp$13 = ua.field_c[var2_int];
                   dupTemp$13.field_h = dupTemp$13.field_h - ta.field_c;
                   stackIn_478_0 = $cfr$dcmpl(-16.0, ua.field_c[var2_int].field_h);
-                  break L84;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -839,7 +839,7 @@ public final class Bounce extends kk {
                 dupTemp$13Lifetime1.field_h = dupTemp$13Lifetime1.field_h - ta.field_c;
                 stackIn_478_0 = $cfr$dcmpl(-16.0, ua.field_c[var2_int].field_h);
                 if (var10 != 0) {
-                  break L84;
+                  break scanLoop1;
                 }
                 if (stackIn_478_0 > 0) {
                   ua.field_c[var2_int].a(116, qb.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
@@ -862,7 +862,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2_ref2), "Bounce.OA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref2), "Bounce.OA(" + param0 + ')');
         }
     }
 
@@ -961,7 +961,7 @@ public final class Bounce extends kk {
               if (decompiledFrameRemainder0) {
                 stackIn_71_1 = -119;
                 stackIn_72_2 = (null != sj.field_f);
-                var2_intLifetime2 = oj.a((kk) (this), stackIn_71_1, stackIn_72_2);
+                var2_intLifetime2 = oj.a((GameClient) (this), stackIn_71_1, stackIn_72_2);
                 if (1 != var2_intLifetime2) {
                   if (2 == var2_intLifetime2) {
                     if (null != sj.field_f) {
@@ -1019,7 +1019,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2_ref), "Bounce.V(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "Bounce.V(" + param0 + ')');
         }
     }
 
@@ -1093,16 +1093,16 @@ public final class Bounce extends kk {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              Bounce.a(var9, var8, 22668, param3, param4, param5, param6);
+              BounceDown.a(var9, var8, 22668, param3, param4, param5, param6);
               stackIn_44_0 = param0;
             }
-            Bounce.a(stackIn_44_0, param1, param2, var8, var10, param5, param6);
+            BounceDown.a(stackIn_44_0, param1, param2, var8, var10, param5, param6);
             return;
           }
           var7_intLifetime1 = -1 + param1;
-          L7: while (true) {
+          scanLoop1: while (true) {
             stackIn_12_0 = ~var7_intLifetime1;
-            L8: while (stackIn_12_0 < ~param3) {
+            scanLoop2: while (stackIn_12_0 < ~param3) {
               var8Lifetime1 = param3;
               while (var7_intLifetime1 > var8Lifetime1) {
                 var9Lifetime1 = w.field_f[var8Lifetime1];
@@ -1111,7 +1111,7 @@ public final class Bounce extends kk {
                 stackIn_12_0 = stackOut_15_0 ? 1 : 0;
                 stackIn_16_0 = stackOut_15_0;
                 if (var14 != 0) {
-                  continue L8;
+                  continue scanLoop2;
                 }
                 if (stackIn_16_0) {
                   w.field_f[var8Lifetime1] = var10Lifetime1;
@@ -1121,7 +1121,7 @@ public final class Bounce extends kk {
               }
               var7_intLifetime1--;
               if (var14 == 0) {
-                continue L7;
+                continue scanLoop1;
               }
               return;
             }
@@ -1131,7 +1131,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var7), "Bounce.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var7), "Bounce.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1139,7 +1139,7 @@ public final class Bounce extends kk {
         try {
           this.a(11, (byte) 122, "bouncedown");
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "Bounce.init()");
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "Bounce.init()");
         }
     }
 
@@ -1167,7 +1167,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "Bounce.CA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "Bounce.CA(" + param0 + ')');
         }
     }
 
@@ -1177,7 +1177,7 @@ public final class Bounce extends kk {
           field_G = null;
           int var1_int = -98 / ((-25 - param0) / 60);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "Bounce.SA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "Bounce.SA(" + param0 + ')');
         }
     }
 
@@ -1196,12 +1196,12 @@ public final class Bounce extends kk {
           if (ca.field_e != null) {
             if (null != pa.field_c && (!pa.field_c.c(-79) ||
               !pa.field_c.a((byte) -41))) {
-              hg.a(hg.a(nl.field_a, pa.field_c, 130, fj.field_k), -99, 10.0f);
+              hg.a(hg.a(nl.field_a, pa.field_c, 130, AppletShell.field_k), -99, 10.0f);
               return;
             }
-            if (ai.field_e != null && (!ai.field_e.c(51) ||
-              !ai.field_e.a((byte) -109))) {
-              hg.a(hg.a(nl.field_a, ai.field_e, 130, fj.field_k), -114, 20.0f);
+            if (IntrusiveNode.field_e != null && (!IntrusiveNode.field_e.c(51) ||
+              !IntrusiveNode.field_e.a((byte) -109))) {
+              hg.a(hg.a(nl.field_a, IntrusiveNode.field_e, 130, AppletShell.field_k), -114, 20.0f);
               return;
             }
             if (null != pk.field_D && (!pk.field_D.c(67) ||
@@ -1246,19 +1246,19 @@ public final class Bounce extends kk {
             il.field_a[9] = ei.a(pa.field_c, "", "squish").b().a(var3);
             hg.a(di.field_a, -21, 90.0f);
             this.e(4);
-            il.field_a[11] = te.a(ai.field_e, "", "slime_eek").a().a(var3);
-            il.field_a[12] = te.a(ai.field_e, "", "slime_falls").a().a(var3);
-            il.field_a[13] = te.a(ai.field_e, "", "slime_laughs").a().a(var3);
-            il.field_a[14] = te.a(ai.field_e, "", "slime_ooh").a().a(var3);
-            il.field_a[15] = te.a(ai.field_e, "", "slime_ow").a().a(var3);
+            il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().a(var3);
+            il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().a(var3);
+            il.field_a[13] = te.a(IntrusiveNode.field_e, "", "slime_laughs").a().a(var3);
+            il.field_a[14] = te.a(IntrusiveNode.field_e, "", "slime_ooh").a().a(var3);
+            il.field_a[15] = te.a(IntrusiveNode.field_e, "", "slime_ow").a().a(var3);
             hg.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.e(4);
             sd.field_mb = be.a(ca.field_e, "", "bounce down title screen");
             wj.field_c = be.a(ca.field_e, "", "bounce");
             ca.field_e = null;
-            cf.field_d = new i(pa.field_c, ai.field_e);
-            ai.field_e = null;
+            cf.field_d = new i(pa.field_c, IntrusiveNode.field_e);
+            IntrusiveNode.field_e = null;
             pa.field_c = null;
             vc.e((byte) -44);
             return;
@@ -1284,7 +1284,7 @@ public final class Bounce extends kk {
                 ua.field_b = 0;
                 break;
               }
-              ua.field_c[var3_int] = new dg();
+              ua.field_c[var3_int] = new Platform();
               var3_int++;
             } while (var5 == 0);
             var3_int = 0;
@@ -1296,9 +1296,9 @@ public final class Bounce extends kk {
                 ua.field_b = ua.field_b + 1;
                 ua.field_c[ua.field_b].a(60, 6, (double)(int)(384.0 * Math.random() + 64.0));
                 ua.field_b = ua.field_b + 1;
-                he.field_n[0] = new ud();
-                he.field_n[1] = new ud();
-                he.field_n[2] = new ud();
+                he.field_n[0] = new Slime();
+                he.field_n[1] = new Slime();
+                he.field_n[2] = new Slime();
                 ui.a(50, (byte) 127);
                 jl.field_h = this;
                 break;
@@ -1348,13 +1348,13 @@ public final class Bounce extends kk {
             mb.field_q = nc.a("background", ub.field_a, "", 0);
           }
           pc.field_o = nc.a("wall", ub.field_a, "", param1 - 3134);
-          wi.field_j = nc.a("topspikes", ub.field_a, "", param1 ^ 3134);
+          PacketBuffer.field_j = nc.a("topspikes", ub.field_a, "", param1 ^ 3134);
           vb.field_m = vh.a(ub.field_a, "", (byte) -68, "squish");
           se.field_A = nc.a("spikes", ub.field_a, "", param1 ^ 3134);
           nc.a("scorebox", ub.field_a, "", 0);
           hd.field_a = vh.a(ub.field_a, "", (byte) -115, "pupils");
           ci.field_G = vh.a(ub.field_a, "", (byte) 111, "pops");
-          dg.field_a = vh.a(ub.field_a, "", (byte) 119, "players");
+          Platform.field_a = vh.a(ub.field_a, "", (byte) 119, "players");
           va.field_d = vh.a(ub.field_a, "", (byte) -38, "newhighscore");
           re.field_a = nc.a("plat1", ub.field_a, "", 0);
           a.field_f = nc.a("plat1b", ub.field_a, "", 0);
@@ -1370,7 +1370,7 @@ public final class Bounce extends kk {
           wb.field_e = vh.a(ub.field_a, "", (byte) 10, "plat4shr");
           nl.field_d = vh.a(ub.field_a, "", (byte) -15, "plat4spi");
           nc.a("clickme", ub.field_a, "", param1 - 3134);
-          ug.field_h = vh.a(ub.field_a, "", (byte) 108, "achievements");
+          DualLinkNode.field_h = vh.a(ub.field_a, "", (byte) 108, "achievements");
           cf.field_c = nc.a("unachieved", j.field_j, "basic", 0);
           nc.a("orbcoin", j.field_j, "basic", 0);
           pe.field_a = vh.a(ub.field_a, "", (byte) 114, "wins");
@@ -1398,7 +1398,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3_ref3), "Bounce.PA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3_ref3), "Bounce.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1423,7 +1423,7 @@ public final class Bounce extends kk {
           eg.field_n = 0;
           this.a(true, false, 22422, false, false);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "Bounce.EA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "Bounce.EA(" + param0 + ')');
         }
     }
 
@@ -1448,7 +1448,7 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "Bounce.NA(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "Bounce.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1531,10 +1531,10 @@ public final class Bounce extends kk {
           var3 = 64;
           mb.field_q.b(0, 0);
           na.e(var3, 0, var3 + 512, 446);
-          wi.field_j.a(var3, eg.field_n);
-          wi.field_j.a(128 + var3, eg.field_n);
-          wi.field_j.a(var3 + 256, eg.field_n);
-          wi.field_j.a(384 + var3, eg.field_n);
+          PacketBuffer.field_j.a(var3, eg.field_n);
+          PacketBuffer.field_j.a(128 + var3, eg.field_n);
+          PacketBuffer.field_j.a(var3 + 256, eg.field_n);
+          PacketBuffer.field_j.a(384 + var3, eg.field_n);
           var4 = i.field_a / 8 % 8;
           var5_int = 0;
           do {
@@ -1558,7 +1558,7 @@ public final class Bounce extends kk {
             ua.field_c[var5_int].a(1, var3);
             var5_int++;
           } while (var9 == 0);
-          L10: while (true) {
+          scanLoop1: while (true) {
             if (vk.field_b > var5_int) {
               he.field_n[var5_int].a(var5_int, false, var3);
               var5_int++;
@@ -1567,7 +1567,7 @@ public final class Bounce extends kk {
               }
             } else {
               if (ka.field_o == null) {
-                break L10;
+                break scanLoop1;
               }
               he.field_n[0].field_n = 3;
               he.field_n[1].field_n = 3;
@@ -1579,7 +1579,7 @@ public final class Bounce extends kk {
             ka.field_o.field_d) {
             vk.field_b = 3;
           }
-          L14: {
+          regionExit2: {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameCompleted1 = true;
             na.d();
@@ -1592,7 +1592,7 @@ public final class Bounce extends kk {
               if (vk.field_b > 0) {
                 var5_int = 1;
                 while (!(he.field_n[0].field_n <= var5_int)) {
-                  dg.field_a[0].b(8 * (var5_int * 2 - he.field_n[0].field_n) + var3 / 2, 0, param0 - 741572383, 32, var3 / 2 + 16);
+                  Platform.field_a[0].b(8 * (var5_int * 2 - he.field_n[0].field_n) + var3 / 2, 0, param0 - 741572383, 32, var3 / 2 + 16);
                   var5_int++;
                   if (var9 != 0) {
                     decompiledFrameCompleted2 = false;
@@ -1604,7 +1604,7 @@ public final class Bounce extends kk {
                 (vk.field_b > 1)) {
                 var5_int = 1;
                 while (!(var5_int >= he.field_n[1].field_n)) {
-                  dg.field_a[1].b(640 - var3 / 2 + (-he.field_n[1].field_n + 2 * var5_int) * 8, 0, -741572379, 32, var3 / 2 + 16);
+                  Platform.field_a[1].b(640 - var3 / 2 + (-he.field_n[1].field_n + 2 * var5_int) * 8, 0, -741572379, 32, var3 / 2 + 16);
                   var5_int++;
                   if (var9 != 0) {
                     decompiledFrameCompleted1 = false;
@@ -1616,7 +1616,7 @@ public final class Bounce extends kk {
                 (2 < vk.field_b)) {
                 var5_int = 1;
                 while (!(he.field_n[2].field_n <= var5_int)) {
-                  dg.field_a[2].b(8 * (var5_int * 2 - he.field_n[2].field_n) + var3 / 2, 0, -741572379, 32, 16 + var3 / 2 + 240);
+                  Platform.field_a[2].b(8 * (var5_int * 2 - he.field_n[2].field_n) + var3 / 2, 0, -741572379, 32, 16 + var3 / 2 + 240);
                   var5_int++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -1628,7 +1628,7 @@ public final class Bounce extends kk {
             if ((decompiledFrameCompleted0) && (he.field_n[0].field_n > 0 &&
               he.field_n[1].field_n > 0 &&
               he.field_n[2].field_n > 0)) {
-              break L14;
+              break regionExit2;
             }
             if (-1 == jk.field_q) {
               var5_int = -1;
@@ -1684,7 +1684,7 @@ public final class Bounce extends kk {
                 }
               }
               if (var9 == 0) {
-                break L14;
+                break regionExit2;
               }
             }
             if (wj.field_e > 255) {
@@ -1696,7 +1696,7 @@ public final class Bounce extends kk {
               }
               jk.field_q = -1;
               var5_int = 0;
-              L37: while (true) {
+              scanLoop3: while (true) {
                 if (3 > var5_int) {
                   he.field_n[var5_int].a(true);
                   var5_int++;
@@ -1705,7 +1705,7 @@ public final class Bounce extends kk {
                   }
                 } else {
                   if (!u.field_g) {
-                    break L37;
+                    break scanLoop3;
                   }
                   u.field_g = false;
                 }
@@ -1827,7 +1827,7 @@ public final class Bounce extends kk {
             na.b(4, var6_intLifetime1 - 4, 56 + od.field_f.b(lj.field_b[var5_ref.field_h]), 40, 0);
             na.b(5, var6_intLifetime1 - 3, od.field_f.b(lj.field_b[var5_ref.field_h]) + 54, 38, 16741888);
             na.b(6, var6_intLifetime1 - 2, 52 + od.field_f.b(lj.field_b[var5_ref.field_h]), 36, 0);
-            ug.field_h[var5_ref.field_h].b(8, var6_intLifetime1, 32, 32);
+            DualLinkNode.field_h[var5_ref.field_h].b(8, var6_intLifetime1, 32, 32);
             od.field_f.b(lj.field_b[var5_ref.field_h], 47, var6_intLifetime1 + od.field_f.field_s, 0, 0);
             od.field_f.b(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + (-1 + var6_intLifetime1), 0, 0);
             od.field_f.b(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + var6_intLifetime1, 16746496, -1);
@@ -1896,7 +1896,7 @@ public final class Bounce extends kk {
           if (!decompiledSharedTail0) {
             na.a(0, 0, 640, 480, 0, 128);
             na.e(-7 - hj.a(24777) / 2 + 320, 240 - (nd.a(-21065) / 2 + 8), 14 + hj.a(24777), 16 + nd.a(-21065), 0);
-            wi.a(ig.field_d, 12, 12, (byte) -126);
+            PacketBuffer.a(ig.field_d, 12, 12, (byte) -126);
             decompiledSharedTail0 = (var9 != 0);
           }
           if ((decompiledSharedTail0) &&
@@ -1910,11 +1910,11 @@ public final class Bounce extends kk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2_ref), "Bounce.U(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "Bounce.U(" + param0 + ')');
         }
     }
 
-    public Bounce() {
+    public BounceDown() {
         this.field_K = 0;
         this.field_H = 0;
     }

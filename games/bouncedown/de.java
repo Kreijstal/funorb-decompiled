@@ -29,7 +29,7 @@ final class de extends ah {
           this.field_a.position(0);
           this.field_a.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

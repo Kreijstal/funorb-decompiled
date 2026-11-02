@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends wi {
+final class CipherPacketBuffer extends PacketBuffer {
     static String field_l;
     static int field_k;
     static int[] field_n;
@@ -29,7 +29,7 @@ final class ii extends wi {
           od.field_f.a(param1, param0, -1 + param2, 0, 0);
           od.field_f.a(param1, param0, param2, param3, -1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class ii extends wi {
         lg.field_b = new gh();
         if (param0 != 8) {
           String var2 = (String) null;
-          ii.a((Throwable) null, (String) null);
+          CipherPacketBuffer.a((Throwable) null, (String) null);
           ed.field_c.a(10768, lg.field_b);
           return;
         }
@@ -70,7 +70,7 @@ final class ii extends wi {
             this.f(60, 33);
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -83,20 +83,20 @@ final class ii extends wi {
         return this.field_i[fieldTemp$0] - this.field_o.b((byte) 123) & 255;
     }
 
-    ii(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
-    ii(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final static ga a(Throwable param0, String param1) {
-        ga var2 = null;
-        if (!(param0 instanceof ga)) {
-          var2 = new ga(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (ga) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
@@ -111,7 +111,7 @@ final class ii extends wi {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var5_int = 0;
           if (param1 != 8) {
@@ -134,13 +134,13 @@ final class ii extends wi {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final int f(int param0, int param1) {
         int incrementValue$0 = 0;
-        int var6 = Bounce.field_N;
+        int var6 = BounceDown.field_N;
         int var3 = this.field_m >> 3;
         int var4 = 8 - (this.field_m & param0);
         this.field_m = this.field_m + param1;

@@ -7,8 +7,8 @@ final class dh implements Iterator {
     private m field_c;
     private int field_f;
     static java.math.BigInteger field_b;
-    private ai field_h;
-    private ai field_g;
+    private IntrusiveNode field_h;
+    private IntrusiveNode field_g;
     static String field_d;
     static pc field_a;
     static String field_e;
@@ -39,7 +39,7 @@ final class dh implements Iterator {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           na.a(param3, param0, param2 + 1, 10000536);
           na.a(param3, param0 + param4, param2 + 1, 12105912);
@@ -64,15 +64,15 @@ final class dh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var5), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var5), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        ai var1;
+        IntrusiveNode var1;
         int var2;
-        var2 = Bounce.field_N;
+        var2 = BounceDown.field_N;
         if (this.field_h != this.field_c.field_b[-1 + this.field_f]) {
           var1 = this.field_h;
           this.field_g = var1;
@@ -95,7 +95,7 @@ final class dh implements Iterator {
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
-        var2 = Bounce.field_N;
+        var2 = BounceDown.field_N;
         if (this.field_c.field_b[-1 + this.field_f] != this.field_h) {
           return true;
         }
@@ -128,7 +128,7 @@ final class dh implements Iterator {
           na.a();
           pj.a(true, 1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class dh implements Iterator {
           this.field_c = param0;
           this.a(-1);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

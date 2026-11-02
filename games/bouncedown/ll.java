@@ -44,7 +44,7 @@ final class ll extends lk {
         int var6 = this.field_i + param1;
         this.a(this.field_z[0], var5, (byte) -23, var6);
         if (this.field_F < 65536) {
-          ai.a(this.field_k + var5, this.field_m + var6, var6, (this.field_k * this.field_F >> 16) + var5, -19852);
+          IntrusiveNode.a(this.field_k + var5, this.field_m + var6, var6, (this.field_k * this.field_F >> 16) + var5, -19852);
           this.a(this.field_z[1], var5, (byte) -108, var6);
           ve.a(-121);
         }
@@ -58,7 +58,7 @@ final class ll extends lk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = Bounce.field_N;
+        int var13 = BounceDown.field_N;
         tg var14 = new tg(2 * this.field_K, this.field_m);
         int var8Lifetime1;
         int var9Lifetime1;
@@ -115,7 +115,7 @@ final class ll extends lk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class ll extends lk {
         int stackIn_13_0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (param0 != -15083) {
             stackIn_3_0 = 28;
@@ -150,7 +150,7 @@ final class ll extends lk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "ll.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "ll.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -175,10 +175,10 @@ final class ll extends lk {
         int var7 = 0;
         int var8 = 0;
         int var7Lifetime1;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var5_int = this.field_k + param1;
-          ai.a(var5_int - this.field_M.field_s, this.field_m + param3, param3, this.field_M.field_s + param1, -19852);
+          IntrusiveNode.a(var5_int - this.field_M.field_s, this.field_m + param3, param3, this.field_M.field_s + param1, -19852);
           for (var6 = param1 - this.field_w; var6 < var5_int; var6 = var6 + param0.field_s) {
             param0.a(var6, param3);
           }
@@ -213,7 +213,7 @@ final class ll extends lk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class ll extends lk {
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        int var9 = Bounce.field_N;
+        int var9 = BounceDown.field_N;
         int var2 = this.field_m >> 1;
         tg var3 = new tg(var2, this.field_m);
         kh.a(var3, 1);

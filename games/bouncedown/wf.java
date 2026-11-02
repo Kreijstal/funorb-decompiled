@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wf extends ai {
+abstract class wf extends IntrusiveNode {
     ic field_j;
     wf field_h;
     volatile boolean field_i;

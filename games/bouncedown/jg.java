@@ -94,7 +94,7 @@ final class jg extends ak {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           var5 = ja.field_c;
           var1 = var5;
@@ -114,7 +114,7 @@ final class jg extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "jg.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "jg.A(" + param0 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class jg extends ak {
           this.field_x = param0;
           this.field_E = 256;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

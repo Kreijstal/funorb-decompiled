@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class j extends ai {
+final class j extends IntrusiveNode {
     long field_h;
     static gk field_j;
     int field_g;
@@ -112,7 +112,7 @@ final class j extends ai {
         int var1 = -119 % ((param0 + 35) / 46);
         ee.field_c = true;
         q.field_N.k(-20281);
-        fj.a(false, vb.field_o, -1);
+        AppletShell.a(false, vb.field_o, -1);
     }
 
     j(long param0, int param1, byte[] param2) {
@@ -121,7 +121,7 @@ final class j extends ai {
           this.field_g = param1;
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

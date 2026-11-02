@@ -10,14 +10,14 @@ final class sb {
         throw new IllegalStateException();
     }
 
-    final static void a(wi param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
           int var3_int = 0;
           Exception var3 = null;
           int var5 = 0;
-          wi var6 = null;
+          PacketBuffer var6 = null;
           byte[] var7 = null;
           byte[] var8 = null;
           byte[] var9 = null;
@@ -28,7 +28,7 @@ final class sb {
           String stackIn_20_2 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2_ref = null;
-          var5 = Bounce.field_N;
+          var5 = BounceDown.field_N;
           try {
             var10 = new byte[24];
             var8 = var10;
@@ -59,8 +59,8 @@ final class sb {
             }
             param0.a(0, true, 24, var11);
             if (param1 != 25) {
-              var6 = (wi) null;
-              sb.a((wi) null, (byte) -47);
+              var6 = (PacketBuffer) null;
+              sb.a((PacketBuffer) null, (byte) -47);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -73,7 +73,7 @@ final class sb {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

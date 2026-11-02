@@ -51,7 +51,7 @@ final class ei {
         if (var3 == null) {
           return null;
         }
-        return new ei(new wi(var3));
+        return new ei(new PacketBuffer(var3));
     }
 
     final ue b() {
@@ -64,10 +64,10 @@ final class ei {
         if (var3 == null) {
           return null;
         }
-        return new ei(new wi(var3));
+        return new ei(new PacketBuffer(var3));
     }
 
-    private ei(wi param0) {
+    private ei(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new gg[10];

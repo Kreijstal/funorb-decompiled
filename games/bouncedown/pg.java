@@ -53,7 +53,7 @@ final class pg {
           if (param0 != 2) {
             pg.a(103);
           }
-          if (wi.e((byte) 104)) {
+          if (PacketBuffer.e((byte) 104)) {
             var8.j((byte) -52);
             return true;
           }
@@ -93,7 +93,7 @@ final class pg {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class pg {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (null == param2.field_e) {
             return;
@@ -150,7 +150,7 @@ final class pg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

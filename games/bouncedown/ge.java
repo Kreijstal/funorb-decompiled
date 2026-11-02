@@ -8,7 +8,7 @@ final class ge {
 
     final static ph[] b(int param0) {
         if (param0 == 27579) {
-          return new ph[]{nj.field_k, w.field_g, ug.field_k};
+          return new ph[]{nj.field_k, w.field_g, DualLinkNode.field_k};
         }
         return (ph[]) null;
     }

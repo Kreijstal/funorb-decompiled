@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends ai {
+final class ui extends IntrusiveNode {
     static String field_j;
     static String field_k;
     static vf field_o;
@@ -20,7 +20,7 @@ final class ui extends ai {
           int var2_int = 98 / ((51 - param1) / 61);
           hb.field_H = 1000000000L / (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class ui extends ai {
         int var27Lifetime1;
         int var28Lifetime1;
         int var29Lifetime1;
-        var31 = Bounce.field_N;
+        var31 = BounceDown.field_N;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -99,19 +99,19 @@ final class ui extends ai {
           var21Lifetime1 = param4[0] - param3[0];
           var22Lifetime1 = param4[1] - param3[1];
           var23Lifetime1 = param4[2] - param3[2];
-          var9 = var23Lifetime1 * param3[5] + (var22Lifetime1 * param3[4] + var21Lifetime1 * param3[3]) >> 16 - kk.field_s;
+          var9 = var23Lifetime1 * param3[5] + (var22Lifetime1 * param3[4] + var21Lifetime1 * param3[3]) >> 16 - GameClient.field_s;
           var11 = param3[11] * var23Lifetime1 + var22Lifetime1 * param3[10] + param3[9] * var21Lifetime1 >> 16;
-          var10 = var21Lifetime1 * param3[6] + var22Lifetime1 * param3[7] + param3[8] * var23Lifetime1 >> 16 - kk.field_s;
+          var10 = var21Lifetime1 * param3[6] + var22Lifetime1 * param3[7] + param3[8] * var23Lifetime1 >> 16 - GameClient.field_s;
           var21Lifetime2 = qk.field_f;
           var22Lifetime2 = qk.field_e;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param6.field_k) {
               var24Lifetime1 = param6.field_g[var23Lifetime2];
               var25Lifetime1 = param6.field_C[var23Lifetime2];
               var26Lifetime1 = param6.field_J[var23Lifetime2];
-              var27Lifetime1 = var9 + (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var26Lifetime1 * var18) >> 16 - kk.field_s);
-              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var19 * var26Lifetime1) >> -kk.field_s + 16);
+              var27Lifetime1 = var9 + (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var26Lifetime1 * var18) >> 16 - GameClient.field_s);
+              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var19 * var26Lifetime1) >> -GameClient.field_s + 16);
               var29Lifetime1 = var11 + (var24Lifetime1 * var14 + var17 * var25Lifetime1 + var26Lifetime1 * var20 >> 16);
               stackIn_62_0 = -51;
               stackIn_62_1 = ~var29Lifetime1;
@@ -130,8 +130,8 @@ final class ui extends ai {
                   r.field_c[var23Lifetime2] = -2147483648;
                 }
                 if (param2) {
-                  ld.field_j[var23Lifetime2] = var27Lifetime1 >> kk.field_s;
-                  wb.field_c[var23Lifetime2] = var28Lifetime1 >> kk.field_s;
+                  ld.field_j[var23Lifetime2] = var27Lifetime1 >> GameClient.field_s;
+                  wb.field_c[var23Lifetime2] = var28Lifetime1 >> GameClient.field_s;
                   bd.field_n[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -188,7 +188,7 @@ final class ui extends ai {
                   stackIn_62_0 = uc.field_D.length;
                   stackIn_62_1 = var18;
                   if (var31 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_62_0 <= stackIn_62_1) {
                     break;
@@ -231,7 +231,7 @@ final class ui extends ai {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class ui extends ai {
         try {
           field_j = null;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class ui extends ai {
           this.field_h = param1;
           this.field_i = param3;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

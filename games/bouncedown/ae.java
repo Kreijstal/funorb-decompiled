@@ -9,7 +9,7 @@ final class ae {
     static int field_f;
     private int[] field_e;
     static uf field_g;
-    static wi field_a;
+    static PacketBuffer field_a;
     static String field_d;
 
     public static void a(byte param0) {
@@ -38,7 +38,7 @@ final class ae {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           var2_int = param1.length();
           var3 = 0;
@@ -61,7 +61,7 @@ final class ae {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class ae {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           if (0 == param5) {
             stackIn_4_0 = 0;
@@ -116,7 +116,7 @@ final class ae {
           param5 = param5 + param2;
           var7_int = param4;
           var8 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param3[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -130,7 +130,7 @@ final class ae {
               param2++;
               param0[incrementValue$1] = (byte)(~var10);
               if (param5 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -146,7 +146,7 @@ final class ae {
               param2++;
               param0[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param5 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -162,7 +162,7 @@ final class ae {
               param2++;
               param0[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param2 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -178,7 +178,7 @@ final class ae {
               param2++;
               param0[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param5 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -194,7 +194,7 @@ final class ae {
               param2++;
               param0[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param2 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -210,7 +210,7 @@ final class ae {
               param2++;
               param0[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param2 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -242,7 +242,7 @@ final class ae {
               param2++;
               param0[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param2 >= param5) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -268,7 +268,7 @@ final class ae {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -284,10 +284,10 @@ final class ae {
         String var18 = null;
         String var19 = null;
         int var12 = 0;
-        ga var14 = null;
+        ClientException var14 = null;
         String var2 = null;
         String var11 = null;
-        int var13 = Bounce.field_N;
+        int var13 = BounceDown.field_N;
         String var2Lifetime1;
         String var11Lifetime1;
         String var11Lifetime2;
@@ -296,8 +296,8 @@ final class ae {
         String var11Lifetime1Lifetime2;
         String var11Lifetime1Lifetime3;
         String var11Lifetime1Lifetime4;
-        if (param1 instanceof ga) {
-          var14 = (ga) ((Object) param1);
+        if (param1 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param1);
           var2 = var14.field_a + " | ";
           param1 = var14.field_e;
         } else {

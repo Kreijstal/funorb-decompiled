@@ -13,7 +13,7 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_f = true;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
             jb.a(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

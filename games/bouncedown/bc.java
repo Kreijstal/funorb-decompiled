@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bc {
-    ai field_b;
-    private ai field_c;
+    IntrusiveNode field_b;
+    private IntrusiveNode field_c;
     static int field_a;
 
-    final ai a(byte param0) {
-        ai var2 = this.field_b.field_c;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_b.field_c;
         if (var2 == this.field_b) {
           this.field_c = null;
           return null;
@@ -19,11 +19,11 @@ final class bc {
         return var2;
     }
 
-    final ai c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         if (param0 != -52) {
           this.b(108);
         }
-        ai var2 = this.field_b.field_c;
+        IntrusiveNode var2 = this.field_b.field_c;
         if (this.field_b == var2) {
           return null;
         }
@@ -31,10 +31,10 @@ final class bc {
         return var2;
     }
 
-    final ai b(byte param0) {
-        ai var2 = this.field_b.field_f;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_b.field_f;
         if (param0 <= 9) {
-          return (ai) null;
+          return (IntrusiveNode) null;
         }
         if (var2 == this.field_b) {
           this.field_c = null;
@@ -44,8 +44,8 @@ final class bc {
         return var2;
     }
 
-    final ai d(byte param0) {
-        ai var2 = this.field_c;
+    final IntrusiveNode d(byte param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_b) {
           this.field_c = null;
           return null;
@@ -62,10 +62,10 @@ final class bc {
         return this.field_b == this.field_b.field_c ? true : false;
     }
 
-    final ai e(byte param0) {
-        ai var2 = this.field_b.field_f;
+    final IntrusiveNode e(byte param0) {
+        IntrusiveNode var2 = this.field_b.field_f;
         if (param0 <= 55) {
-          return (ai) null;
+          return (IntrusiveNode) null;
         }
         if (var2 == this.field_b) {
           return null;
@@ -74,37 +74,37 @@ final class bc {
         return var2;
     }
 
-    final void a(int param0, ai param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
           if (null != param1.field_f) {
             param1.c(2);
           }
           if (param0 != 1) {
-            this.field_c = (ai) null;
+            this.field_c = (IntrusiveNode) null;
           }
           param1.field_c = this.field_b;
           param1.field_f = this.field_b.field_f;
           param1.field_f.field_c = param1;
           param1.field_c.field_f = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "bc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "bc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ai a(int param0) {
-        ai var2 = this.field_c;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_b) {
           this.field_c = null;
           return null;
         }
         this.field_c = var2.field_f;
         if (param0 != -18158) {
-          this.field_c = (ai) null;
+          this.field_c = (IntrusiveNode) null;
         }
         return var2;
     }
 
-    final void a(byte param0, ai param1) {
+    final void a(byte param0, IntrusiveNode param1) {
         if (null != param1.field_f) {
           param1.c(param0 ^ 81);
         }
@@ -117,13 +117,13 @@ final class bc {
           param1.field_f.field_c = param1;
           param1.field_c.field_f = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "bc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "bc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0) {
-        ai var3 = null;
-        int var4 = Bounce.field_N;
+        IntrusiveNode var3 = null;
+        int var4 = BounceDown.field_N;
         int var2 = 81 % ((-6 - param0) / 51);
         while (true) {
           var3 = this.field_b.field_c;
@@ -136,7 +136,7 @@ final class bc {
     }
 
     public bc() {
-        this.field_b = new ai();
+        this.field_b = new IntrusiveNode();
         this.field_b.field_f = this.field_b;
         this.field_b.field_c = this.field_b;
     }
@@ -153,7 +153,7 @@ final class bc {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           var3 = 4 / ((-61 - param1) / 32);
           var2_int = param0.length();
@@ -173,7 +173,7 @@ final class bc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

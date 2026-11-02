@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oi extends ai {
+abstract class oi extends IntrusiveNode {
     int field_g;
 
     abstract int a(rb param0);

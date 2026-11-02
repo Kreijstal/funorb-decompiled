@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kk extends fj {
+abstract class GameClient extends AppletShell {
     String field_r;
     private int field_q;
     private int field_x;
@@ -32,7 +32,7 @@ abstract class kk extends fj {
         int var2;
         bl var3;
         int var4;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         var2 = wa.field_d;
         if (64 > var2 &&
           ib.field_m[var2]) {
@@ -66,7 +66,7 @@ abstract class kk extends fj {
                                 return;
                               }
                               if (var2 == 18) {
-                                dg.b(param0 + 20);
+                                Platform.b(param0 + 20);
                                 return;
                               }
                               ti.a((Throwable) null, (byte) 100, "MGS1: " + la.a(-112));
@@ -151,7 +151,7 @@ abstract class kk extends fj {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         if (vd.field_b != null) {
           if (null == sj.field_f) {
             var6 = oa.a((byte) 126);
@@ -178,7 +178,7 @@ abstract class kk extends fj {
             kc.a((byte) 18);
             va.a(2);
             cl.a(u.field_a, true, 2);
-            ud.b(-20);
+            Slime.b(-20);
             dl.field_b = true;
             nj.field_n = fa.a(126) + 15000L;
           }
@@ -263,7 +263,7 @@ abstract class kk extends fj {
           sa.field_k = 1;
         }
         if (1 == sa.field_k) {
-          if (ud.field_a != 0) {
+          if (Slime.field_a != 0) {
             jb.field_a = fa.a((byte) -76, jd.field_g);
           }
           pa.field_i = jc.a(ne.field_n, false, 1, 0, true);
@@ -321,7 +321,7 @@ abstract class kk extends fj {
           sa.field_k = 10;
         }
         if (sa.field_k == 10) {
-          if (0 != ud.field_a) {
+          if (0 != Slime.field_a) {
             sd.field_pb = fa.a((byte) -76, lg.field_a);
           }
           sa.field_k = 11;
@@ -330,7 +330,7 @@ abstract class kk extends fj {
         if (sa.field_k == 11) {
           if (null != sd.field_pb && (!sd.field_pb.c(-121) ||
             !sd.field_pb.a((byte) -62))) {
-            hg.a(hg.a(pc.field_p, sd.field_pb, 130, ii.field_l), -66, 0.0f);
+            hg.a(hg.a(pc.field_p, sd.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -434,11 +434,11 @@ abstract class kk extends fj {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        ud.field_a = this.field_y;
-        pd.a(true, ud.field_a);
-        pa.a(this.field_r, this.field_v, param6, this.field_D, this.field_u, this.field_m, 25342, 5000, this.field_x, this.field_q, param3, ck.field_e, 5000, ud.field_a);
-        rk.a(param3, this.field_q, this.field_r, 0, this.field_v, ud.field_a, ck.field_e, this.field_u, this.field_x);
-        wi.g(param5 - 8717);
+        Slime.field_a = this.field_y;
+        pd.a(true, Slime.field_a);
+        pa.a(this.field_r, this.field_v, param6, this.field_D, this.field_u, this.field_m, 25342, 5000, this.field_x, this.field_q, param3, ck.field_e, 5000, Slime.field_a);
+        rk.a(param3, this.field_q, this.field_r, 0, this.field_v, Slime.field_a, ck.field_e, this.field_u, this.field_x);
+        PacketBuffer.g(param5 - 8717);
         hg.field_k = ek.c(0);
         l.a(0, ch.field_h);
         lg.field_a = param0;
@@ -488,11 +488,11 @@ abstract class kk extends fj {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          wi var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = Bounce.field_N;
-          var4 = ff.a(param2, ud.field_a, 8786, va.field_a);
+          var8 = BounceDown.field_N;
+          var4 = ff.a(param2, Slime.field_a, 8786, va.field_a);
           if (0 == var4) {
             throw new IllegalStateException();
           }
@@ -692,7 +692,7 @@ abstract class kk extends fj {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ abstract class kk extends fj {
         try {
           this.a(param0, 480, (byte) 52, param2, 640);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "kk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "kk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -725,7 +725,7 @@ abstract class kk extends fj {
     final void g(int param0) {
         int discarded$1 = 0;
         int discarded$2 = 0;
-        int var3 = Bounce.field_N;
+        int var3 = BounceDown.field_N;
         if (hi.a((byte) -113)) {
           discarded$1 = this.a(false, false, sj.field_f != null ? true : false);
         } else {
@@ -747,7 +747,7 @@ abstract class kk extends fj {
         }
     }
 
-    protected kk() {
+    protected GameClient() {
     }
 
     static {

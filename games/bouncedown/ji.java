@@ -18,7 +18,7 @@ class ji extends ng {
         int var1 = 39 / ((-41 - param0) / 51);
     }
 
-    final void a(boolean param0, wi param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         try {
           if (param0) {
             this.field_c = (String) null;
@@ -26,7 +26,7 @@ class ji extends ng {
           param1.a(252186072, this.field_e);
           param1.b(this.field_c, (byte) -118);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ class ji extends ng {
           this.field_e = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

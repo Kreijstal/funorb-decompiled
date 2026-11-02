@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends RuntimeException {
+final class ClientException extends RuntimeException {
     Throwable field_e;
     String field_a;
     static uf field_c;
@@ -17,11 +17,11 @@ final class ga extends RuntimeException {
         field_f = null;
         field_c = null;
         if (param0 != 72) {
-          ga.a((byte) 101);
+          ClientException.a((byte) 101);
         }
     }
 
-    ga(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_a = param1;
         this.field_e = param0;
     }

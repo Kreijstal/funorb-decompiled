@@ -42,7 +42,7 @@ final class k extends lc implements rc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class k extends lc implements rc {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           if (param0 < 6) {
             return;
@@ -63,7 +63,7 @@ final class k extends lc implements rc {
             return;
           }
           if (this.field_z == param4) {
-            ii.n(8);
+            CipherPacketBuffer.n(8);
             return;
           }
           if (this.field_F != param4) {
@@ -81,7 +81,7 @@ final class k extends lc implements rc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

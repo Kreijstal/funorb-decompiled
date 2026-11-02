@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends ai {
+final class kl extends IntrusiveNode {
     int field_v;
     int field_C;
     int field_A;

@@ -42,7 +42,7 @@ final class hj {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = Bounce.field_N;
+        var19 = BounceDown.field_N;
         try {
           var5_int = wb.a((byte) 100, (-param4 + param3) * 3);
           var6 = 3 * param4;
@@ -154,7 +154,7 @@ final class hj {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class hj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "hj.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "hj.A(" + param0 + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class hj {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = Bounce.field_N;
+        var19 = BounceDown.field_N;
         try {
           var5_int = wb.a((byte) 100, (-param4 + param3) * 3);
           var6 = 3 * param4;
@@ -329,7 +329,7 @@ final class hj {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 }

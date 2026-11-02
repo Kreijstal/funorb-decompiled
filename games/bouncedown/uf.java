@@ -52,7 +52,7 @@ final class uf {
           if (ae.field_g == this) {
             return true;
           }
-          if (dg.field_e != this) {
+          if (Platform.field_e != this) {
             return b.field_b == this ? true : false;
           }
           return true;
@@ -60,7 +60,7 @@ final class uf {
         if (ae.field_g == this) {
           return true;
         }
-        if (dg.field_e == this) {
+        if (Platform.field_e == this) {
           return true;
         }
         if (b.field_b != this) {

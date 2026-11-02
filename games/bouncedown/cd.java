@@ -80,7 +80,7 @@ final class cd {
         return this.field_a[param0] * 2;
     }
 
-    final void a(wi param0, hl param1) {
+    final void a(PacketBuffer param0, hl param1) {
         int var3;
         int var4;
         int var5;

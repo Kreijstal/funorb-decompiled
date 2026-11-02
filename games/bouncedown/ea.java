@@ -5,13 +5,13 @@ final class ea {
     private bc field_d;
     static int field_b;
     static boolean field_f;
-    private ai field_a;
+    private IntrusiveNode field_a;
     static String field_c;
     static gk field_e;
 
-    final ai a(byte param0) {
-        ai var2 = null;
-        ai var2Lifetime1;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 33) {
           this.field_d = (bc) null;
           var2 = this.field_a;
@@ -31,9 +31,9 @@ final class ea {
         return null;
     }
 
-    final ai a(int param0) {
-        ai var2 = null;
-        ai var2Lifetime1;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 22092) {
           this.field_d = (bc) null;
           var2 = this.field_d.field_b.field_c;
@@ -53,12 +53,12 @@ final class ea {
         return var2Lifetime1;
     }
 
-    final ai b(ai param0, int param1) {
-        ai var3 = null;
+    final IntrusiveNode b(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_6_0 = null;
-        ai stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -72,7 +72,7 @@ final class ea {
           if (var3 == this.field_d.field_b) {
             this.field_a = null;
             stackIn_6_0 = null;
-            return (ai) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           this.field_a = var3.field_c;
           var4 = -84 % ((3 - param1) / 63);
@@ -88,15 +88,15 @@ final class ea {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final ai e(int param0) {
+    final IntrusiveNode e(int param0) {
         if (param0 != 50) {
-          return (ai) null;
+          return (IntrusiveNode) null;
         }
-        ai var2 = this.field_d.field_b.field_f;
+        IntrusiveNode var2 = this.field_d.field_b.field_f;
         if (var2 == this.field_d.field_b) {
           this.field_a = null;
           return null;
@@ -106,14 +106,14 @@ final class ea {
     }
 
     final static void a(int param0, int param1) {
-        ii var2 = hh.field_p;
+        CipherPacketBuffer var2 = hh.field_p;
         var2.a(true, param1);
         var2.a(1, (byte) 65);
         var2.a(param0, (byte) 71);
     }
 
-    final ai c(int param0) {
-        ai var2 = this.field_a;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_a;
         if (param0 >= -82) {
           field_c = (String) null;
           if (this.field_d.field_b == var2) {
@@ -140,12 +140,12 @@ final class ea {
         }
     }
 
-    final ai a(ai param0, int param1) {
-        ai var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_5_0 = null;
-        ai stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -159,7 +159,7 @@ final class ea {
           if (this.field_d.field_b == var3) {
             this.field_a = null;
             stackIn_5_0 = null;
-            return (ai) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_a = var3.field_f;
           var4 = -55 % ((59 - param1) / 37);
@@ -175,7 +175,7 @@ final class ea {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class ea {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class ea {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

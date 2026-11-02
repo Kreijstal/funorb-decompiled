@@ -27,12 +27,12 @@ final class pd {
         qh.field_e = aj.field_e[param1];
         if (param0) {
           pc.field_p = hc.field_d[param1];
-          ii.field_l = nl.field_b[param1];
+          CipherPacketBuffer.field_l = nl.field_b[param1];
           return;
         }
         field_a = (jf[]) null;
         pc.field_p = hc.field_d[param1];
-        ii.field_l = nl.field_b[param1];
+        CipherPacketBuffer.field_l = nl.field_b[param1];
     }
 
     final static rg a(int param0, String param1) {
@@ -71,7 +71,7 @@ final class pd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

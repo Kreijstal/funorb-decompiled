@@ -33,7 +33,7 @@ class vc extends wd {
         ui var15;
         int var16;
         int var7Lifetime1;
-        var16 = Bounce.field_N;
+        var16 = BounceDown.field_N;
         this.field_C = new bc();
         var2 = 0;
         var3 = (sf) ((Object) this.field_j);
@@ -106,7 +106,7 @@ class vc extends wd {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (param0 != -3) {
             vc.e((byte) -57);
@@ -139,7 +139,7 @@ class vc extends wd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ class vc extends wd {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         try {
           if (this.field_D == null ||
             this.field_D.length <= param1) {
@@ -203,7 +203,7 @@ class vc extends wd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ class vc extends wd {
 
     final static void e(byte param0) {
         int var1_int = 0;
-        int var2 = Bounce.field_N;
+        int var2 = BounceDown.field_N;
         int var1_intLifetime1;
         ff.field_D.a(false);
         if (param0 != -44) {
@@ -231,7 +231,7 @@ class vc extends wd {
           }
           nl.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vc.SA(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vc.SA(" + param0 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ class vc extends wd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -289,7 +289,7 @@ class vc extends wd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ class vc extends wd {
         ui var4;
         ui var5;
         int var6;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         var4 = (ui) (this.field_C.a((byte) -57));
         if (param0 != 1) {
           field_G = (si) null;
@@ -340,7 +340,7 @@ class vc extends wd {
         try {
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

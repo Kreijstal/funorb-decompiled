@@ -362,7 +362,7 @@ final class mi {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           var3_int = 0;
           if (param1 != 122) {
@@ -379,7 +379,7 @@ final class mi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "mi.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "mi.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -395,11 +395,11 @@ final class mi {
     }
 
     final static void a(int param0, int param1, he param2) {
-        ii var7 = null;
-        ii var8 = null;
+        CipherPacketBuffer var7 = null;
+        CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Bounce.field_N;
+        int var6 = BounceDown.field_N;
         try {
           var7 = hh.field_p;
           var8 = var7;
@@ -424,7 +424,7 @@ final class mi {
           var8.b(var4, -1);
           var8.b(-var4 + var8.field_h, true);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

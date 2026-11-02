@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends ai {
+final class kj extends IntrusiveNode {
     byte[] field_h;
     static String field_g;
     static int field_i;
@@ -17,7 +17,7 @@ final class kj extends ai {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

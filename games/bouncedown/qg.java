@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qg extends ai {
+final class qg extends IntrusiveNode {
     int field_i;
     static mf field_g;
     int field_h;
@@ -14,7 +14,7 @@ final class qg extends ai {
     }
 
     final static int a(int param0, int param1) {
-        int var3 = Bounce.field_N;
+        int var3 = BounceDown.field_N;
         ih.field_X = 0;
         if (param0 != -23888) {
           field_g = (mf) null;
@@ -48,7 +48,7 @@ final class qg extends ai {
         return -1;
     }
 
-    final static byte[] a(boolean param0, byte[] param1, int param2, ii param3) {
+    final static byte[] a(boolean param0, byte[] param1, int param2, CipherPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -63,7 +63,7 @@ final class qg extends ai {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           if (!param0) {
             stackIn_3_0 = (byte[]) null;
@@ -106,7 +106,7 @@ final class qg extends ai {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

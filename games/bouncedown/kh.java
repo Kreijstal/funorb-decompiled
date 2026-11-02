@@ -22,7 +22,7 @@ final class kh {
           return (ne) null;
         }
         if (var4 != null) {
-          var3.a(-124, new wi(var4));
+          var3.a(-124, new PacketBuffer(var4));
         }
         if (32768 > param0) {
           this.field_a.a(var3, (long)param0, 1);
@@ -60,7 +60,7 @@ final class kh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class kh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

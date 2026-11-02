@@ -3,7 +3,7 @@
  */
 final class jl {
     static bc field_f;
-    static Bounce field_h;
+    static BounceDown field_h;
     static String field_e;
     static int[] field_b;
     static long field_g;
@@ -74,7 +74,7 @@ final class jl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -27,7 +27,7 @@ final class vi implements Runnable {
         long var5 = 0L;
         int var7 = 0;
         int var8 = 0;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var1_int = 0;
           var3 = 115 % ((param0 - 53) / 58);
@@ -49,7 +49,7 @@ final class vi implements Runnable {
           var4 = 0;
           if (var1_int != 0 &&
             0 <= cf.field_f.field_b) {
-            var4 = ii.field_n[cf.field_f.field_b];
+            var4 = CipherPacketBuffer.field_n[cf.field_f.field_b];
             if (var4 == 2 ||
               var4 == 5) {
               hb.d((byte) 105);
@@ -74,7 +74,7 @@ final class vi implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "vi.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "vi.A(" + param0 + ')');
         }
     }
 
@@ -114,11 +114,11 @@ final class vi implements Runnable {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        ii var27 = null;
+        CipherPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
-        var26 = Bounce.field_N;
+        var26 = BounceDown.field_N;
         try {
           var27 = jc.field_g;
           if (param0 != 1) {
@@ -248,7 +248,7 @@ final class vi implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "vi.G(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "vi.G(" + param0 + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class vi implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class vi implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ final class vi implements Runnable {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var4 = new md();
           var4.field_p = 1;
@@ -396,7 +396,7 @@ final class vi implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ final class vi implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -452,7 +452,7 @@ final class vi implements Runnable {
           Object var2 = null;
           Exception var2_ref = null;
           String var6 = null;
-          var5 = Bounce.field_N;
+          var5 = BounceDown.field_N;
           while (!this.field_a) {
             var2 = this.field_d;
             synchronized (var2) {
@@ -515,7 +515,7 @@ final class vi implements Runnable {
           }
           this.field_e = (Thread) (var2.field_e);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

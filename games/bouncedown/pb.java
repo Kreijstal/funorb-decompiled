@@ -29,7 +29,7 @@ final class pb {
         int var2 = 67 / ((param0 + 37) / 44);
     }
 
-    final static boolean a(wi param0, byte param1) {
+    final static boolean a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -58,7 +58,7 @@ final class pb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class pb {
         int var5;
         int var6;
         int var5Lifetime1;
-        var6 = Bounce.field_N;
+        var6 = BounceDown.field_N;
         var2 = this.field_i;
         var4 = 56 % ((74 - param0) / 36);
         var3 = this.field_s;
@@ -305,7 +305,7 @@ final class pb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

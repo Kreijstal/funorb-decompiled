@@ -3,19 +3,19 @@
  */
 final class hc {
     static String[] field_e;
-    private ug field_a;
+    private DualLinkNode field_a;
     private int field_c;
-    private ug[] field_f;
+    private DualLinkNode[] field_f;
     static String[] field_d;
     private long field_b;
 
-    final ug b(int param0) {
-        ug var2;
-        ug var3;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
-        ug var2Lifetime1;
-        ug var3Lifetime1;
-        var4 = Bounce.field_N;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
+        var4 = BounceDown.field_N;
         if (this.field_a == null) {
           return null;
         }
@@ -54,8 +54,8 @@ final class hc {
         return var3Lifetime1;
     }
 
-    final void a(long param0, ug param1, int param2) {
-        ug var5 = null;
+    final void a(long param0, DualLinkNode param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (param1.field_i != null) {
             param1.a(96);
@@ -68,7 +68,7 @@ final class hc {
           param1.field_j = param0;
           param1.field_l.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "hc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "hc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class hc {
         tg var6 = null;
         tg var3 = null;
         int var4 = 0;
-        int var5 = Bounce.field_N;
+        int var5 = BounceDown.field_N;
         if (param2 < -121) {
           var6 = new tg(param0, param0);
           var3 = var6;
@@ -134,7 +134,7 @@ final class hc {
             stackIn_13_0 = var5;
             return stackIn_13_0;
           }
-          stackIn_4_0 = ga.field_f;
+          stackIn_4_0 = ClientException.field_f;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class hc {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -176,17 +176,17 @@ final class hc {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final ug a(long param0, int param1) {
-        ug var4;
-        ug var5;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        ug var4Lifetime1;
-        ug var5Lifetime1;
-        var6 = Bounce.field_N;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
+        var6 = BounceDown.field_N;
         this.field_b = param0;
         if (param1 == 0) {
           var4 = this.field_f[(int)((long)(-1 + this.field_c) & param0)];
@@ -321,12 +321,12 @@ final class hc {
 
     hc(int param0) {
         int var2 = 0;
-        ug dupTemp$0 = null;
-        ug var3 = null;
-        this.field_f = new ug[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_f = new DualLinkNode[param0];
         this.field_c = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new ug();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_f[var2] = dupTemp$0;
           var3.field_l = var3;

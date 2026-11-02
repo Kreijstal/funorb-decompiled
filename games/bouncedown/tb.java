@@ -23,7 +23,7 @@ final class tb extends v {
           Exception var5 = null;
           int var6 = 0;
           lf var4_refLifetime1;
-          var6 = Bounce.field_N;
+          var6 = BounceDown.field_N;
           try {
             if (null != this.field_q) {
               try {
@@ -92,7 +92,7 @@ final class tb extends v {
             } else {
               stackIn_30_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -120,7 +120,7 @@ final class tb extends v {
     private final void a(boolean param0, byte param1) {
         try {
           IOException iOException = null;
-          wi stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_6_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -135,7 +135,7 @@ final class tb extends v {
             } else {
               stackIn_6_1 = 2;
             }
-            ((wi) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 68);
+            ((PacketBuffer) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 68);
             this.field_a.a(0L, (byte) -29);
             if (param1 != 119) {
               return;
@@ -210,7 +210,7 @@ final class tb extends v {
           int var15 = 0;
           int var16 = 0;
           lf var2Lifetime1;
-          var16 = Bounce.field_N;
+          var16 = BounceDown.field_N;
           if (null != this.field_q) {
             var2_long = fa.a(param0 ^ -54);
             var4 = (int)(-this.field_k + var2_long);
@@ -288,7 +288,7 @@ final class tb extends v {
                 this.field_q.a(this.field_b.field_p.field_i, true, var6, this.field_b.field_p.field_h);
                 if (0 != this.field_j) {
                   for (var7 = 0; var7 < var6; var7++) {
-                    this.field_b.field_p.field_i[var7 + this.field_b.field_p.field_h] = (byte)ud.a((int) this.field_b.field_p.field_i[var7 + this.field_b.field_p.field_h], (int) this.field_j);
+                    this.field_b.field_p.field_i[var7 + this.field_b.field_p.field_h] = (byte)Slime.a((int) this.field_b.field_p.field_i[var7 + this.field_b.field_p.field_h], (int) this.field_j);
                   }
                 }
                 this.field_b.field_p.field_h = this.field_b.field_p.field_h + var6;
@@ -310,7 +310,7 @@ final class tb extends v {
                 this.field_q.a(this.field_c.field_i, true, var5, this.field_c.field_h);
                 if (this.field_j != 0) {
                   for (var6 = 0; var5 > var6; var6++) {
-                    this.field_c.field_i[this.field_c.field_h + var6] = (byte)ud.a((int) this.field_c.field_i[this.field_c.field_h + var6], (int) this.field_j);
+                    this.field_c.field_i[this.field_c.field_h + var6] = (byte)Slime.a((int) this.field_c.field_i[this.field_c.field_h + var6], (int) this.field_j);
                   }
                 }
                 this.field_c.field_h = this.field_c.field_h + var5;
@@ -365,7 +365,7 @@ final class tb extends v {
                     stackIn_64_0 = (var10 == 0) ? 5 : 9;
                     var15 = stackIn_64_0;
                     this.field_b = var14_ref;
-                    this.field_b.field_p = new wi(var15 + (var9 + this.field_b.field_s));
+                    this.field_b.field_p = new PacketBuffer(var15 + (var9 + this.field_b.field_s));
                     this.field_b.field_p.a(var10, (byte) 126);
                     this.field_b.field_p.b(var9, (byte) 76);
                     this.field_c.field_h = 0;

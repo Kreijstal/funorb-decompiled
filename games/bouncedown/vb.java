@@ -32,9 +32,9 @@ final class vb implements fc {
     final static int a(boolean param0, String param1, int param2, int param3, ve param4, int param5, ve param6) {
         int var13 = 0;
         int stackIn_4_0 = 0;
-        wi stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
-        wi stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         String stackIn_18_1 = null;
         int stackIn_28_0 = 0;
         int stackIn_43_0 = 0;
@@ -70,7 +70,7 @@ final class vb implements fc {
         int var9Lifetime1;
         int var9Lifetime2;
         var16 = null;
-        var14 = Bounce.field_N;
+        var14 = BounceDown.field_N;
         try {
           var15 = param4.c((byte) -56);
           var11_ref_String = var15;
@@ -83,7 +83,7 @@ final class vb implements fc {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (ga.field_c == pj.field_a) {
+          if (ClientException.field_c == pj.field_a) {
             lk.field_p = null;
             hh.field_p.field_h = 0;
             if (param1 == null) {
@@ -96,14 +96,14 @@ final class vb implements fc {
               } else {
                 stackIn_15_1 = var15;
               }
-              ((wi) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -67);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -67);
               stackIn_17_0 = lb.field_g;
               if (!param6.a((byte) 56)) {
                 stackIn_18_1 = "";
               } else {
                 stackIn_18_1 = var8;
               }
-              ((wi) (Object) stackIn_17_0).a(stackIn_18_1, (byte) -67);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) -67);
               hh.field_p.a(16, (byte) 94);
               hh.field_p.field_h = hh.field_p.field_h + 1;
               var9 = hh.field_p.field_h;
@@ -204,7 +204,7 @@ final class vb implements fc {
               if (ph.a((byte) 76) > 30000L) {
                 ib.field_o = jh.field_t;
               } else {
-                ib.field_o = dg.field_k;
+                ib.field_o = Platform.field_k;
               }
               fa.field_a = false;
               stackIn_60_0 = 249;
@@ -239,7 +239,7 @@ final class vb implements fc {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class vb implements fc {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class vb implements fc {
           this.field_i = param1;
           this.field_h = param9;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

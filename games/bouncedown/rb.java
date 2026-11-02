@@ -79,7 +79,7 @@ final class rb extends wf {
     }
 
     final synchronized void a(wf param0) {
-        this.field_n.a((byte) 83, (ai) (param0));
+        this.field_n.a((byte) 83, (IntrusiveNode) (param0));
     }
 
     final synchronized void a(int param0) {
@@ -126,7 +126,7 @@ final class rb extends wf {
     private final void a(oi param0) {
         param0.c(2);
         param0.a();
-        ai var2 = this.field_l.field_b.field_c;
+        IntrusiveNode var2 = this.field_l.field_b.field_c;
         if (var2 == this.field_l.field_b) {
           this.field_k = -1;
         } else {
@@ -134,7 +134,7 @@ final class rb extends wf {
         }
     }
 
-    private final void a(ai param0, oi param1) {
+    private final void a(IntrusiveNode param0, oi param1) {
         while (true) {
           if (param0 == this.field_l.field_b) {
             lf.a(param0, param1, -17957);

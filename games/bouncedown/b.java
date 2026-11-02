@@ -35,14 +35,14 @@ final class b {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = Bounce.field_N;
+          var9 = BounceDown.field_N;
           try {
             if (null == dh.field_a &&
               !ok.a(param5, 118)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (ga.field_c == pj.field_a) {
+            if (ClientException.field_c == pj.field_a) {
               if (param5) {
                 var10 = (String) null;
                 bj.field_E = ck.a(param3, (String) null, l.field_b, 107, false);
@@ -96,11 +96,11 @@ final class b {
                 }
               }
               if (decompiledFrameRemainder0) {
-                pj.field_a = dg.field_e;
+                pj.field_a = Platform.field_e;
                 pe.field_d = -1;
               }
             }
-            if (dg.field_e == pj.field_a &&
+            if (Platform.field_e == pj.field_a &&
               va.b(1)) {
               l.field_b = jc.field_g.f((byte) -121);
               hi.field_c = jc.field_g.d((byte) -75);
@@ -197,7 +197,7 @@ final class b {
                 if (ph.a((byte) -110) > 30000L) {
                   ib.field_o = jh.field_t;
                 } else {
-                  ib.field_o = dg.field_k;
+                  ib.field_o = Platform.field_k;
                 }
                 fa.field_a = false;
                 stackIn_96_0 = 3;
@@ -226,7 +226,7 @@ final class b {
             } else {
               stackIn_106_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

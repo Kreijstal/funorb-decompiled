@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rj extends ai {
+final class rj extends IntrusiveNode {
     static String field_h;
     private int[] field_p;
     int field_m;
@@ -23,10 +23,10 @@ final class rj extends ai {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           qk.c();
-          kk.field_s = 11;
+          GameClient.field_s = 11;
           if (param0 != 255) {
             field_g = 35;
           }
@@ -45,7 +45,7 @@ final class rj extends ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "rj.D(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "rj.D(" + param0 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class rj extends ai {
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           if (param0 < 84) {
             return true;
@@ -130,7 +130,7 @@ final class rj extends ai {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ final class rj extends ai {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        wi var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         ch var40 = null;
         byte[] var41 = null;
@@ -279,7 +279,7 @@ final class rj extends ai {
           this.field_k = new ue[128];
           this.field_l = new ch[128];
           this.field_i = new byte[128];
-          var38 = new wi(param0);
+          var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.field_i[var3 + var38.field_h] != 0; var3++) {
           }
           var55 = new byte[var3];
@@ -653,7 +653,7 @@ final class rj extends ai {
           } else {
             stackIn_209_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
         }
     }
 

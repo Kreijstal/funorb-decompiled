@@ -63,12 +63,12 @@ class ih extends fd {
     }
 
     final static void a(int param0, int param1) {
-        ai var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ke var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = Bounce.field_N;
+        var3 = BounceDown.field_N;
         try {
           var4 = (ke) (uk.field_d.a((byte) -107));
           while (var4 != null) {
@@ -87,7 +87,7 @@ class ih extends fd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2_ref), "ih.B(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "ih.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ class ih extends fd {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           if (param1 == null) {
             stackIn_3_0 = ub.field_e;
@@ -164,7 +164,7 @@ class ih extends fd {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ class ih extends fd {
           } else {
             stackIn_96_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ class ih extends fd {
             this.field_fb = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ih.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ih.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

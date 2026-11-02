@@ -23,7 +23,7 @@ final class aj {
     private final int a(int param0, int param1) {
         int var3;
         int var4;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         var3 = this.field_d.length;
         if (param1 < 66) {
           this.field_b = -94;

@@ -19,7 +19,7 @@ final class dd implements Runnable {
         RuntimeException var1_ref = null;
         Throwable var3 = null;
         String var5 = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           this.field_b = true;
           try {
@@ -62,7 +62,7 @@ final class dd implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), field_z);
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), field_z);
         }
     }
 

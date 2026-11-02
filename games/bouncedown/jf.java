@@ -22,7 +22,7 @@ final class jf {
         try {
           this.b(param0, param1, param1.length, 11842);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class jf {
     private final void d(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
-        int var4 = Bounce.field_N;
+        int var4 = BounceDown.field_N;
         this.field_e = 0;
         if (~this.field_b != ~this.field_l) {
           this.field_d.a(this.field_b, 20663);
@@ -117,7 +117,7 @@ final class jf {
         int var11 = 0;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = Bounce.field_N;
+        var11 = BounceDown.field_N;
         try {
           var3_int = param0.length();
           var4 = var3_int;
@@ -199,7 +199,7 @@ final class jf {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class jf {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           try {
             if ((long)param2 + this.field_b > this.field_c) {
@@ -304,7 +304,7 @@ final class jf {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ final class jf {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           if (param0 != -52) {
             jf.a(30, true, 104);
@@ -354,7 +354,7 @@ final class jf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -377,7 +377,7 @@ final class jf {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime1Lifetime1;
-        var14 = Bounce.field_N;
+        var14 = BounceDown.field_N;
         try {
           try {
             if (param2 + param0 > param1.length) {
@@ -503,7 +503,7 @@ final class jf {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -538,7 +538,7 @@ final class jf {
         int var7;
         int var6Lifetime1;
         boolean decompiledFrameRemainder0 = true;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         if (this.field_a != (long)param0) {
           if (this.field_l != this.field_a) {
             this.field_d.a(this.field_a, 20663);
@@ -637,7 +637,7 @@ final class jf {
         double var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = Bounce.field_N;
+        var19 = BounceDown.field_N;
         try {
           qh.field_g = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, param0, 0, 65536};
           var1_int = q.field_G.length;
@@ -703,7 +703,7 @@ final class jf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "jf.F(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "jf.F(" + param0 + ')');
         }
     }
 
@@ -721,7 +721,7 @@ final class jf {
           this.field_j = new byte[param1];
           this.field_b = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

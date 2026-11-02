@@ -38,7 +38,7 @@ final class ka extends wf {
         int var10 = 0;
         pi var11 = null;
         int var12 = 0;
-        var12 = Bounce.field_N;
+        var12 = BounceDown.field_N;
         try {
           if ((this.field_p.field_l[param3.field_E] & 4) != 0 &&
             param3.field_C < 0) {
@@ -103,7 +103,7 @@ final class ka extends wf {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class ka extends wf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class ka extends wf {
         int var5 = 0;
         kl var6 = null;
         int var7 = 0;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           this.field_l.a(param0, param1, param2);
           var6 = (kl) (this.field_m.a((byte) -49));
@@ -218,7 +218,7 @@ final class ka extends wf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class ka extends wf {
           param0.removeFocusListener(nj.field_o);
           c.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ka.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ka.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class ka extends wf {
         kl var3;
         int var4;
         boolean stackIn_4_0 = false;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         this.field_l.a(param0);
         var3 = (kl) (this.field_m.a((byte) -91));
         while (var3 != null) {
@@ -289,7 +289,7 @@ final class ka extends wf {
         try {
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

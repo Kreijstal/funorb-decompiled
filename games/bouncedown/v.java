@@ -9,8 +9,8 @@ abstract class v {
     ml field_m;
     int field_g;
     long field_k;
-    wi field_a;
-    wi field_c;
+    PacketBuffer field_a;
+    PacketBuffer field_c;
     byte field_j;
     volatile int field_d;
     volatile int field_l;
@@ -27,7 +27,7 @@ abstract class v {
 
     final boolean b(boolean param0) {
         if (param0) {
-          this.field_c = (wi) null;
+          this.field_c = (PacketBuffer) null;
         }
         return this.c(-8217) >= 20 ? true : false;
     }
@@ -64,7 +64,7 @@ abstract class v {
         RuntimeException var6 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           if (param4 != -110) {
             v.b(76);
@@ -185,7 +185,7 @@ abstract class v {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -234,11 +234,11 @@ abstract class v {
         this.field_e = new ml();
         this.field_h = new ml();
         this.field_m = new ml();
-        this.field_a = new wi(6);
+        this.field_a = new PacketBuffer(6);
         this.field_j = (byte) 0;
         this.field_l = 0;
         this.field_d = 0;
-        this.field_c = new wi(10);
+        this.field_c = new PacketBuffer(10);
     }
 
     static {

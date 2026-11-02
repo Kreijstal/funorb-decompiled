@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fd extends ug {
+class fd extends DualLinkNode {
     static tg field_m;
     static tg[] field_n;
     static String field_o;
@@ -26,7 +26,7 @@ class fd extends ug {
           var2 = te.a(param0, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "fd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -26,7 +26,7 @@ final class lh {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = Bounce.field_N;
+        var9 = BounceDown.field_N;
         try {
           var11 = new char[param2];
           var10 = var11;
@@ -66,7 +66,7 @@ final class lh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class lh {
         CharSequence var9 = null;
         int var10 = 0;
         CharSequence var11 = null;
-        var10 = Bounce.field_N;
+        var10 = BounceDown.field_N;
         try {
           if (param1 == 0) {
             stackIn_3_0 = "";
@@ -149,7 +149,7 @@ final class lh {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 

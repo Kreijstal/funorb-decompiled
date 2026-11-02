@@ -46,7 +46,7 @@ final class kc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -72,7 +72,7 @@ final class kc {
         byte[] var21;
         int[] var10;
         int[] var22;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         var1 = new tg[nj.field_p];
         for (var2 = 0; nj.field_p > var2; var2++) {
           var3 = ih.field_V[var2] * qh.field_i[var2];

@@ -4,9 +4,9 @@
 final class re {
     static tg field_a;
 
-    final static boolean a(int param0, ii param1) {
+    final static boolean a(int param0, CipherPacketBuffer param1) {
         RuntimeException var2 = null;
-        ii var3 = null;
+        CipherPacketBuffer var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -14,8 +14,8 @@ final class re {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 24) {
-            var3 = (ii) null;
-            re.a(-18, (ii) null);
+            var3 = (CipherPacketBuffer) null;
+            re.a(-18, (CipherPacketBuffer) null);
           }
           stackIn_5_0 = (1 == param1.f(7, 1));
           return stackIn_5_0;
@@ -29,7 +29,7 @@ final class re {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -41,7 +41,7 @@ final class re {
           uk.field_d.a(1, param1);
           qh.a(param1, param2, -22762);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "re.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "re.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

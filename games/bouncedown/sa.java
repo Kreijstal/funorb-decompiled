@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sa extends ai {
+final class sa extends IntrusiveNode {
     int field_g;
     int field_m;
     static int field_k;
@@ -14,7 +14,7 @@ final class sa extends ai {
     boolean field_i;
     String[][] field_h;
 
-    final static void a(byte param0, ii param1) {
+    final static void a(byte param0, CipherPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -64,7 +64,7 @@ final class sa extends ai {
           var16 = null;
           var22 = null;
           var23 = null;
-          var12 = Bounce.field_N;
+          var12 = BounceDown.field_N;
           try {
             var14 = (hh) (ob.field_c.a((byte) -83));
             var19 = var14;
@@ -217,7 +217,7 @@ final class sa extends ai {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -271,7 +271,7 @@ final class sa extends ai {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -30,7 +30,7 @@ final class qe extends ng {
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var3_int = 0;
           if (param1 >= -91) {
@@ -45,7 +45,7 @@ final class qe extends ng {
               var6 = vh.a(true, se.field_E[var3_int], true);
               var4 = var4 + hj.field_a;
               var7 = bi.field_h - (var6 >> 1);
-              if (ef.a(var4, -kk.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (kk.field_z << 1) + var6, param0, param2)) {
+              if (ef.a(var4, -GameClient.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (GameClient.field_z << 1) + var6, param0, param2)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
@@ -58,7 +58,7 @@ final class qe extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var3), "qe.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var3), "qe.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class qe extends ng {
         int var2 = 66 / ((13 - param0) / 36);
     }
 
-    final void a(boolean param0, wi param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         try {
           param1.a(this.field_h, (byte) -67);
           if (param0) {
@@ -75,7 +75,7 @@ final class qe extends ng {
           }
           param1.b(this.field_d, (byte) -103);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "qe.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qe.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class qe extends ng {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = Bounce.field_N;
+        var8 = BounceDown.field_N;
         try {
           var2_int = param1.length();
           if (0 == var2_int) {
@@ -134,7 +134,7 @@ final class qe extends ng {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class qe extends ng {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class qe extends ng {
           this.field_h = param0;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

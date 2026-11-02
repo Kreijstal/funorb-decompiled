@@ -5,8 +5,8 @@ import java.util.*;
 
 final class m implements Iterable {
     int field_d;
-    private ai field_f;
-    ai[] field_b;
+    private IntrusiveNode field_f;
+    IntrusiveNode[] field_b;
     static bc field_e;
     static bc field_c;
     static int field_g;
@@ -21,12 +21,12 @@ final class m implements Iterable {
         }
     }
 
-    final ai a(byte param0, long param1) {
-        ai var4;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var4;
         int var5;
-        ai var6;
+        IntrusiveNode var6;
         int var7;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         var5 = -117 / ((param0 - 20) / 36);
         var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
         this.field_f = var4.field_c;
@@ -46,8 +46,8 @@ final class m implements Iterable {
         return var6;
     }
 
-    final void a(int param0, long param1, ai param2) {
-        ai var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param0 > -95) {
             this.iterator();
@@ -62,7 +62,7 @@ final class m implements Iterable {
           param2.field_d = param1;
           param2.field_c.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "m.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "m.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

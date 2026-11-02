@@ -53,7 +53,7 @@ final class w {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,7 +70,7 @@ final class w {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           var2 = 70 % ((37 - param0) / 51);
           var1_int = ja.field_c[0];
@@ -83,7 +83,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "w.C(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "w.C(" + param0 + ')');
         }
     }
 

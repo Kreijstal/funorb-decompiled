@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tj extends ug {
+abstract class tj extends DualLinkNode {
     int field_x;
     private int[] field_H;
     int field_p;

@@ -22,7 +22,7 @@ final class hf {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           if (lf.field_q == null) {
             return null;
@@ -63,7 +63,7 @@ final class hf {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class hf {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          wi var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= tb.field_p.field_l) {
             if (-1 == tb.field_p.field_d) {
               return 3;
@@ -106,17 +106,17 @@ final class hf {
             }
             if (ih.field_X == 2) {
               mf.field_a = new pc((java.net.Socket) (md.field_q.field_e), vc.field_G);
-              var2 = new wi(13);
-              fj.a(pe.field_c, 6, mf.field_e, var2, fi.field_c);
+              var2 = new PacketBuffer(13);
+              AppletShell.a(pe.field_c, 6, mf.field_e, var2, fi.field_c);
               var2.a(15, (byte) 98);
               var2.b(uj.field_s, (byte) 40);
               mf.field_a.a(13, var2.field_i, 0, 0);
               ih.field_X = ih.field_X + 1;
-              kk.field_B = 30000L + fa.a(76);
+              GameClient.field_B = 30000L + fa.a(76);
             }
             if (ih.field_X == 3) {
               if (mf.field_a.d(0) <= 0) {
-                if (kk.field_B < fa.a(125)) {
+                if (GameClient.field_B < fa.a(125)) {
                   stackIn_31_0 = qg.a(-23888, -2);
                   return stackIn_31_0;
                 }
@@ -165,7 +165,7 @@ final class hf {
         int stackIn_21_0 = 0;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = Bounce.field_N;
+        var2 = BounceDown.field_N;
         try {
           stackIn_3_0 = q.field_N;
           stackIn_3_1 = dk.field_c;
@@ -205,7 +205,7 @@ final class hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "hf.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "hf.A(" + param0 + ')');
         }
     }
 

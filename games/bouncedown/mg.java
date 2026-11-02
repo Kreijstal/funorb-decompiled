@@ -61,7 +61,7 @@ final class mg extends al {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class mg extends al {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           var5 = oc.field_a;
           var1 = var5;
@@ -96,7 +96,7 @@ final class mg extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1_ref), "mg.E(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1_ref), "mg.E(" + param0 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class mg extends al {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw ii.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+            throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -203,7 +203,7 @@ final class mg extends al {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class mg extends al {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

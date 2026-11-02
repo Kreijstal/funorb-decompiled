@@ -12,7 +12,7 @@ final class od {
     private final void a(Object param0, long param1, boolean param2, int param3) {
         eg var6 = null;
         t var6_ref = null;
-        int var7 = Bounce.field_N;
+        int var7 = BounceDown.field_N;
         try {
           if (param3 > this.field_d) {
             throw new IllegalStateException();
@@ -31,7 +31,7 @@ final class od {
           this.field_e.a(6753, var6_ref);
           ((eg) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "od.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "od.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class od {
         try {
           this.a(param0, param1, false, param2);
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "od.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "od.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class od {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

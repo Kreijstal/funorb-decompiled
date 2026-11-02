@@ -11,7 +11,7 @@ abstract class ng {
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
-        int var7 = Bounce.field_N;
+        int var7 = BounceDown.field_N;
         tg[] var1 = new tg[nj.field_p];
         for (var2 = 0; var2 < nj.field_p; var2++) {
           var3 = qh.field_i[var2] * ih.field_V[var2];
@@ -83,7 +83,7 @@ abstract class ng {
         uc.field_A = -2147483648;
     }
 
-    abstract void a(boolean param0, wi param1);
+    abstract void a(boolean param0, PacketBuffer param1);
 
     public static void b(int param0) {
         if (param0 != 2) {
@@ -103,7 +103,7 @@ abstract class ng {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = Bounce.field_N;
+        var5 = BounceDown.field_N;
         try {
           if (Character.isISOControl(param1)) {
             return false;
@@ -133,7 +133,7 @@ abstract class ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2_ref), "ng.D(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2_ref), "ng.D(" + param0 + ',' + param1 + ')');
         }
     }
 

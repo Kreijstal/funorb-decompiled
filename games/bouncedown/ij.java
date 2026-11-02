@@ -26,7 +26,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var2), "ij.C(" + param0 + ',' + param1 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var2), "ij.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -221,107 +221,107 @@ final class ij {
           }
           var2Lifetime29 = mg.a((byte) 48, "ins,0");
           if (var2Lifetime29 != null) {
-            Bounce.field_A[0] = c.a(0, var2Lifetime29);
+            BounceDown.field_A[0] = c.a(0, var2Lifetime29);
           }
           var2Lifetime30 = mg.a((byte) 48, "ins,1");
           if (null != var2Lifetime30) {
-            Bounce.field_A[1] = c.a(0, var2Lifetime30);
+            BounceDown.field_A[1] = c.a(0, var2Lifetime30);
           }
           var2Lifetime31 = mg.a((byte) 48, "ins,2");
           if (var2Lifetime31 != null) {
-            Bounce.field_A[2] = c.a(0, var2Lifetime31);
+            BounceDown.field_A[2] = c.a(0, var2Lifetime31);
           }
           var2Lifetime32 = mg.a((byte) 48, "ins,3");
           if (null != var2Lifetime32) {
-            Bounce.field_A[3] = c.a(0, var2Lifetime32);
+            BounceDown.field_A[3] = c.a(0, var2Lifetime32);
           }
           var2Lifetime33 = mg.a((byte) 48, "ins,4");
           if (var2Lifetime33 != null) {
-            Bounce.field_A[4] = c.a(0, var2Lifetime33);
+            BounceDown.field_A[4] = c.a(0, var2Lifetime33);
           }
           var2Lifetime34 = mg.a((byte) 48, "ins,5");
           if (var2Lifetime34 != null) {
-            Bounce.field_A[5] = c.a(0, var2Lifetime34);
+            BounceDown.field_A[5] = c.a(0, var2Lifetime34);
           }
           var2Lifetime35 = mg.a((byte) 48, "ins,6");
           if (null != var2Lifetime35) {
-            Bounce.field_A[6] = c.a(0, var2Lifetime35);
+            BounceDown.field_A[6] = c.a(0, var2Lifetime35);
           }
           var2Lifetime36 = mg.a((byte) 48, "ins,7");
           if (var2Lifetime36 != null) {
-            Bounce.field_A[7] = c.a(0, var2Lifetime36);
+            BounceDown.field_A[7] = c.a(0, var2Lifetime36);
           }
           var2Lifetime37 = mg.a((byte) 48, "ins,8");
           if (null != var2Lifetime37) {
-            Bounce.field_A[8] = c.a(0, var2Lifetime37);
+            BounceDown.field_A[8] = c.a(0, var2Lifetime37);
           }
           var2Lifetime38 = mg.a((byte) 48, "ins,9");
           if (var2Lifetime38 != null) {
-            Bounce.field_A[9] = c.a(0, var2Lifetime38);
+            BounceDown.field_A[9] = c.a(0, var2Lifetime38);
           }
           var2Lifetime39 = mg.a((byte) 48, "ins,10");
           if (var2Lifetime39 != null) {
-            Bounce.field_A[10] = c.a(0, var2Lifetime39);
+            BounceDown.field_A[10] = c.a(0, var2Lifetime39);
           }
           var2Lifetime40 = mg.a((byte) 48, "ins,11");
           if (var2Lifetime40 != null) {
-            Bounce.field_A[11] = c.a(0, var2Lifetime40);
+            BounceDown.field_A[11] = c.a(0, var2Lifetime40);
           }
           var2Lifetime41 = mg.a((byte) 48, "ins,12");
           if (var2Lifetime41 != null) {
-            Bounce.field_A[12] = c.a(0, var2Lifetime41);
+            BounceDown.field_A[12] = c.a(0, var2Lifetime41);
           }
           var2Lifetime42 = mg.a((byte) 48, "ins,13");
           if (var2Lifetime42 != null) {
-            Bounce.field_A[13] = c.a(0, var2Lifetime42);
+            BounceDown.field_A[13] = c.a(0, var2Lifetime42);
           }
           var2Lifetime43 = mg.a((byte) 48, "ins,14");
           if (var2Lifetime43 != null) {
-            Bounce.field_A[14] = c.a(0, var2Lifetime43);
+            BounceDown.field_A[14] = c.a(0, var2Lifetime43);
           }
           var2Lifetime44 = mg.a((byte) 48, "ins,15");
           if (null != var2Lifetime44) {
-            Bounce.field_A[15] = c.a(0, var2Lifetime44);
+            BounceDown.field_A[15] = c.a(0, var2Lifetime44);
           }
           var2Lifetime45 = mg.a((byte) 48, "ins,16");
           if (var2Lifetime45 != null) {
-            Bounce.field_A[16] = c.a(0, var2Lifetime45);
+            BounceDown.field_A[16] = c.a(0, var2Lifetime45);
           }
           var2Lifetime46 = mg.a((byte) 48, "ins,17");
           if (var2Lifetime46 != null) {
-            Bounce.field_A[17] = c.a(0, var2Lifetime46);
+            BounceDown.field_A[17] = c.a(0, var2Lifetime46);
           }
           var2Lifetime47 = mg.a((byte) 48, "ins,18");
           if (null != var2Lifetime47) {
-            Bounce.field_A[18] = c.a(0, var2Lifetime47);
+            BounceDown.field_A[18] = c.a(0, var2Lifetime47);
           }
           var2Lifetime48 = mg.a((byte) 48, "ins,19");
           if (var2Lifetime48 != null) {
-            Bounce.field_A[19] = c.a(0, var2Lifetime48);
+            BounceDown.field_A[19] = c.a(0, var2Lifetime48);
           }
           var2Lifetime49 = mg.a((byte) 48, "ins,20");
           if (var2Lifetime49 != null) {
-            Bounce.field_A[20] = c.a(0, var2Lifetime49);
+            BounceDown.field_A[20] = c.a(0, var2Lifetime49);
           }
           var2Lifetime50 = mg.a((byte) 48, "ins,21");
           if (var2Lifetime50 != null) {
-            Bounce.field_A[21] = c.a(0, var2Lifetime50);
+            BounceDown.field_A[21] = c.a(0, var2Lifetime50);
           }
           var2Lifetime51 = mg.a((byte) 48, "ins,22");
           if (var2Lifetime51 != null) {
-            Bounce.field_A[22] = c.a(0, var2Lifetime51);
+            BounceDown.field_A[22] = c.a(0, var2Lifetime51);
           }
           var2Lifetime52 = mg.a((byte) 48, "ins,23");
           if (null != var2Lifetime52) {
-            Bounce.field_A[23] = c.a(0, var2Lifetime52);
+            BounceDown.field_A[23] = c.a(0, var2Lifetime52);
           }
           var2Lifetime53 = mg.a((byte) 48, "ins,24");
           if (null != var2Lifetime53) {
-            Bounce.field_A[24] = c.a(0, var2Lifetime53);
+            BounceDown.field_A[24] = c.a(0, var2Lifetime53);
           }
           var2Lifetime54 = mg.a((byte) 48, "ins,25");
           if (null != var2Lifetime54) {
-            Bounce.field_A[25] = c.a(0, var2Lifetime54);
+            BounceDown.field_A[25] = c.a(0, var2Lifetime54);
           }
           var2Lifetime55 = mg.a((byte) 48, "p1");
           if (var2Lifetime55 != null) {
@@ -372,7 +372,7 @@ final class ij {
           } else {
             stackIn_232_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_231_0), ((StringBuilder) (Object) stackIn_231_1).append(stackIn_232_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_231_0), ((StringBuilder) (Object) stackIn_231_1).append(stackIn_232_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "ij.B(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var1), "ij.B(" + param0 + ')');
         }
     }
 
@@ -403,7 +403,7 @@ final class ij {
           field_b = null;
           field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw ii.a((Throwable) ((Object) runtimeException), "ij.A(" + param0 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ij.A(" + param0 + ')');
         }
     }
 
@@ -445,7 +445,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var6), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CipherPacketBuffer.a((Throwable) ((Object) var6), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

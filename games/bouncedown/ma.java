@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ma extends ug {
+abstract class ma extends DualLinkNode {
     int field_s;
     int field_p;
     int field_t;
@@ -58,7 +58,7 @@ abstract class ma extends ug {
         int var6 = 0;
         int var7 = 0;
         int var5Lifetime1;
-        var7 = Bounce.field_N;
+        var7 = BounceDown.field_N;
         try {
           var2_long = 0L;
           var4 = param1.length();
@@ -102,7 +102,7 @@ abstract class ma extends ug {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

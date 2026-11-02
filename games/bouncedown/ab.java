@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends ai {
+final class ab extends IntrusiveNode {
     static String field_g;
     int field_h;
 
@@ -25,7 +25,7 @@ final class ab extends ai {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = Bounce.field_N;
+        var4 = BounceDown.field_N;
         try {
           if (param1 != -12) {
             return true;
@@ -53,7 +53,7 @@ final class ab extends ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw CipherPacketBuffer.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
