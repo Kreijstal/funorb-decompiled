@@ -18,7 +18,7 @@ final class ts {
         field_e = null;
     }
 
-    final static void a(int param0, jn param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, IntrusiveDeque param1, int param2, int param3, int param4, int param5) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;
@@ -57,7 +57,7 @@ final class ts {
               var12 = var13;
               var10 = var12;
               var8Lifetime2 = var10;
-              param1.a((ms) (new vt(64, param0, param5, param4, (int)var13[0] << 8, (int)var13[1] << 8, 0)), (byte) 39);
+              param1.a((IntrusiveNode) (new vt(64, param0, param5, param4, (int)var13[0] << 8, (int)var13[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -78,7 +78,7 @@ final class ts {
             dupTemp$0 = kt.a((byte) -10, var8Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1)));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param1.a((ms) (new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1)), (byte) 39);
+            param1.a((IntrusiveNode) (new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class ts {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

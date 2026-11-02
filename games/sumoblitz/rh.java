@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends hj {
+final class rh extends PcmStream {
     static int field_p;
     static ri[] field_q;
-    jn field_t;
+    IntrusiveDeque field_t;
     static int[] field_s;
     static boolean[] field_r;
-    private bs field_u;
-    al field_o;
+    private MidiPcmStream field_u;
+    PcmStreamMixer field_o;
 
     final void b(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
@@ -58,12 +58,12 @@ final class rh extends hj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void a(uu param0, int[] param1, int param2, int param3, int param4, int param5) {
-        bs stackIn_14_0 = null;
+        MidiPcmStream stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         uu stackIn_14_2 = null;
         boolean stackIn_15_3;
@@ -78,7 +78,7 @@ final class rh extends hj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        mf var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         uu var13 = null;
         var12 = Sumoblitz.field_L ? 1 : 0;
@@ -89,7 +89,7 @@ final class rh extends hj {
           }
           if ((4 & this.field_u.field_J[param0.field_y]) != 0 &&
             param0.field_x < 0) {
-            var7_int = this.field_u.field_x[param0.field_y] / du.field_k;
+            var7_int = this.field_u.field_x[param0.field_y] / AudioOutput.field_k;
             while (true) {
               var8 = (var7_int + (1048575 - param0.field_t)) / var7_int;
               if (var8 > param5) {
@@ -100,22 +100,22 @@ final class rh extends hj {
               param4 = param4 + var8;
               param0.field_t = param0.field_t + (-1048576 + var8 * var7_int);
               param5 = param5 - var8;
-              var9 = du.field_k / 100;
+              var9 = AudioOutput.field_k / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
               }
               var11 = param0.field_z;
               if (this.field_u.field_R[param0.field_y] != 0) {
-                param0.field_z = mf.a(param0.field_B, var11.e(), 0, var11.i());
+                param0.field_z = PcmSampleStream.a(param0.field_B, var11.e(), 0, var11.i());
                 stackIn_14_0 = this.field_u;
                 stackIn_14_1 = 114;
                 stackIn_14_2 = (uu) (param0);
                 stackIn_15_3 = !(param0.field_A.field_k[param0.field_E] >= 0);
-                ((bs) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
+                ((MidiPcmStream) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
                 param0.field_z.b(var9, var11.g());
               } else {
-                param0.field_z = mf.a(param0.field_B, var11.e(), var11.g(), var11.i());
+                param0.field_z = PcmSampleStream.a(param0.field_B, var11.e(), var11.g(), var11.i());
               }
               if (param0.field_A.field_k[param0.field_E] < 0) {
                 param0.field_z.c(-1);
@@ -146,7 +146,7 @@ final class rh extends hj {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class rh extends hj {
         return 0;
     }
 
-    final hj a() {
+    final PcmStream a() {
         uu var1 = (uu) (this.field_t.b(-127));
         if (var1 == null) {
           return null;
@@ -192,7 +192,7 @@ final class rh extends hj {
         if (null == var1.field_z) {
           return this.c();
         }
-        return (hj) ((Object) var1.field_z);
+        return (PcmStream) ((Object) var1.field_z);
     }
 
     public static void a(byte param0) {
@@ -209,7 +209,7 @@ final class rh extends hj {
     }
 
     private final void a(uu param0, int param1, int param2) {
-        bs stackIn_8_0 = null;
+        MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         uu stackIn_8_2 = null;
         boolean stackIn_9_3;
@@ -224,19 +224,19 @@ final class rh extends hj {
         try {
           if ((4 & this.field_u.field_J[param0.field_y]) != 0 &&
             param0.field_x < 0) {
-            var4_int = this.field_u.field_x[param0.field_y] / du.field_k;
+            var4_int = this.field_u.field_x[param0.field_y] / AudioOutput.field_k;
             var5 = (var4_int + 1048575 - param0.field_t) / var4_int;
             param0.field_t = param1 * var4_int + param0.field_t & 1048575;
             if (param1 >= var5) {
               if (this.field_u.field_R[param0.field_y] == 0) {
-                param0.field_z = mf.a(param0.field_B, param0.field_z.e(), param0.field_z.g(), param0.field_z.i());
+                param0.field_z = PcmSampleStream.a(param0.field_B, param0.field_z.e(), param0.field_z.g(), param0.field_z.i());
               } else {
-                param0.field_z = mf.a(param0.field_B, param0.field_z.e(), 0, param0.field_z.i());
+                param0.field_z = PcmSampleStream.a(param0.field_B, param0.field_z.e(), 0, param0.field_z.i());
                 stackIn_8_0 = this.field_u;
                 stackIn_8_1 = -56;
                 stackIn_8_2 = (uu) (param0);
                 stackIn_9_3 = !(param0.field_A.field_k[param0.field_E] >= 0);
-                ((bs) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
+                ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               }
               if (param0.field_A.field_k[param0.field_E] < 0) {
                 param0.field_z.c(-1);
@@ -261,11 +261,11 @@ final class rh extends hj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final hj c() {
+    final PcmStream c() {
         uu var1;
         int var2;
         var2 = Sumoblitz.field_L ? 1 : 0;
@@ -275,18 +275,18 @@ final class rh extends hj {
             return null;
           }
           if (var1.field_z != null) {
-            return (hj) ((Object) var1.field_z);
+            return (PcmStream) ((Object) var1.field_z);
           }
         }
     }
 
-    rh(bs param0) {
-        this.field_t = new jn();
-        this.field_o = new al();
+    rh(MidiPcmStream param0) {
+        this.field_t = new IntrusiveDeque();
+        this.field_o = new PcmStreamMixer();
         try {
           this.field_u = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

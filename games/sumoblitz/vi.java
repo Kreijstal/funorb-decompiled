@@ -58,8 +58,8 @@ final class vi extends nt {
         si.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
         si.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
         si.a(370, 38, 200, 2, new int[]{33}, 12, 440);
-        t.field_q = (int)((double)ma.field_b.a(fn.field_u[12], 0) * 1.5);
-        int var1 = (int)((double)ma.field_b.a(fn.field_u[13], 0) * 1.5);
+        t.field_q = (int)((double)ma.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
+        int var1 = (int)((double)ma.field_b.a(GameClientShell.field_u[13], 0) * 1.5);
         if (t.field_q < var1) {
           t.field_q = var1;
         }
@@ -76,7 +76,7 @@ final class vi extends nt {
         }
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -102,7 +102,7 @@ final class vi extends nt {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -211,15 +211,15 @@ final class vi extends nt {
               var14++;
               var9Lifetime1++;
             }
-            var3.b(false);
+            var3.unlink(false);
             return;
           }
-          var3.b(false);
+          var3.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "vi.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "vi.A(" + param0 + ')');
         }
     }
 
@@ -248,7 +248,7 @@ final class vi extends nt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "vi.D(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "vi.D(" + param0 + ',' + param1 + ')');
         }
     }
 

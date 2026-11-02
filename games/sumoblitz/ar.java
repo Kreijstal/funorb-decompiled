@@ -4,34 +4,34 @@
 class ar extends wp {
     static te field_N;
     private s field_J;
-    static String field_F;
+    static String connectionTimedOutPleaseText;
     private String[] field_I;
     static int field_G;
-    private jn field_H;
-    static String field_M;
-    static wb field_E;
+    private IntrusiveDeque field_H;
+    static String pointsRemainingText;
+    static Sprite field_E;
     static tf field_L;
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        this.a(-50, param2, param0, ((de) ((Object) this.field_w)).b((pk) (this), (byte) 116), param3);
+        this.a(-50, param2, param0, ((de) ((Object) this.field_w)).b((UiWidget) (this), (byte) 116), param3);
         if (param1) {
-          pk var6 = (pk) null;
-          this.a(-89, -87, (pk) null, -5);
+          UiWidget var6 = (UiWidget) null;
+          this.a(-89, -87, (UiWidget) null, -5);
         }
     }
 
     public static void f(byte param0) {
         field_E = null;
-        field_M = null;
+        pointsRemainingText = null;
         field_N = null;
         if (param0 >= -115) {
-          field_E = (wb) null;
+          field_E = (Sprite) null;
         }
-        field_F = null;
+        connectionTimedOutPleaseText = null;
         field_L = null;
     }
 
-    void a(int param0, int param1, pk param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -60,7 +60,7 @@ class ar extends wp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -100,14 +100,14 @@ class ar extends wp {
             } else {
               var6 = null;
             }
-            var11.field_p = var11.field_p + 4;
+            var11.position = var11.position + 4;
             if (!var11.e((byte) -9)) {
               kk.a((byte) -127);
               return;
             }
             var10.field_o = true;
             var10.field_m = (byte[]) (var6);
-            var10.b(false);
+            var10.unlink(false);
           } else {
             if (var2 == 1) {
               var4 = var11.c(true);
@@ -123,17 +123,17 @@ class ar extends wp {
                 kk.a((byte) -123);
                 return;
               }
-              var5_ref_db.b(false);
+              var5_ref_db.unlink(false);
               return;
             }
-            ms.a("A1: " + di.b((byte) -9), (Throwable) null, 0);
+            IntrusiveNode.reportClientError("A1: " + di.b((byte) -9), (Throwable) null, 0);
             kk.a((byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ar.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ar.E(" + param0 + ')');
         }
     }
 
@@ -157,12 +157,12 @@ class ar extends wp {
         int var16;
         int var7Lifetime1;
         var16 = Sumoblitz.field_L ? 1 : 0;
-        this.field_H = new jn();
+        this.field_H = new IntrusiveDeque();
         var2 = 0;
         var3 = (de) ((Object) this.field_w);
-        var4 = var3.b(-3, (pk) (this));
+        var4 = var3.b(-3, (UiWidget) (this));
         if (param0 != 9) {
-          field_F = (String) null;
+          connectionTimedOutPleaseText = (String) null;
         }
         while (true) {
           var5 = this.field_m.indexOf("<hotspot=", var2);
@@ -198,7 +198,7 @@ class ar extends wp {
             if (var10 != null) {
               ((s) (var10)).field_r = var15;
             }
-            this.field_H.a((ms) (var15), (byte) 39);
+            this.field_H.a((IntrusiveNode) (var15), (byte) 39);
             var10 = var15;
           }
         }
@@ -210,7 +210,7 @@ class ar extends wp {
         try {
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -220,7 +220,7 @@ class ar extends wp {
         this.a(9);
     }
 
-    boolean a(pk param0, byte param1) {
+    boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -242,7 +242,7 @@ class ar extends wp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -283,8 +283,8 @@ class ar extends wp {
         }
         s var6 = this.field_J;
         if (var6 != null) {
-          var7 = var9.a(param0, (pk) (this), 16098);
-          var8 = var9.b(param1, (pk) (this), 0);
+          var7 = var9.a(param0, (UiWidget) (this), 16098);
+          var8 = var9.b(param1, (UiWidget) (this), 0);
           do {
             pp.a(-2 + (var6.field_l + var8), var6.field_t + 2, -13181, -2 + (var7 + var6.field_s), 2 + var6.field_p);
             var6 = var6.field_r;
@@ -306,7 +306,7 @@ class ar extends wp {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 > -44) {
-            field_F = (String) null;
+            connectionTimedOutPleaseText = (String) null;
           }
           if (null == this.field_I ||
             this.field_I.length <= param2) {
@@ -332,7 +332,7 @@ class ar extends wp {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ class ar extends wp {
           return null;
         }
         if (param0 != -6696) {
-          field_F = (String) null;
+          connectionTimedOutPleaseText = (String) null;
         }
         if (this.field_I.length <= this.field_J.field_q) {
           return null;
@@ -364,9 +364,9 @@ class ar extends wp {
     }
 
     static {
-        field_F = "Connection timed out. Please try using a different server.";
+        connectionTimedOutPleaseText = "Connection timed out. Please try using a different server.";
         field_G = 0;
-        field_M = "points remaining: <%0>";
+        pointsRemainingText = "points remaining: <%0>";
         field_N = new te(8);
         field_L = new tf();
     }

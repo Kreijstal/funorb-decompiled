@@ -7,7 +7,7 @@ final class qs extends fj implements nh {
     private int field_i;
     private int field_f;
 
-    qs(ir param0, iw param1, int param2, int param3, int param4, byte[] param5) {
+    qs(DirectXGraphicsToolkit param0, iw param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, io.field_g, false, param3 * param2 * param4);
         int var14 = 0;
         int var8;
@@ -21,7 +21,7 @@ final class qs extends fj implements nh {
         this.field_f = param4;
         this.field_g = param2;
         this.field_i = param3;
-        this.field_h = this.field_b.field_Cc.a(param2, param3, param4, 1, 0, ir.a(param1, -99, this.field_c), 1);
+        this.field_h = this.field_b.field_Cc.a(param2, param3, param4, 1, 0, DirectXGraphicsToolkit.a(param1, -99, this.field_c), 1);
         var15 = this.field_b.field_Jc;
         var8 = this.field_h.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
         if (!jagdx.gv.b(var8, -94)) {

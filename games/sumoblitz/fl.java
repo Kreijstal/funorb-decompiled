@@ -3,7 +3,7 @@
  */
 final class fl extends gm {
     private sm field_t;
-    static String field_s;
+    static String waitingForExtraDataText;
     static int field_p;
     static int field_n;
     static byte[][] field_o;
@@ -13,10 +13,10 @@ final class fl extends gm {
     public static void b(int param0) {
         field_r = null;
         if (param0 != 0) {
-          field_s = (String) null;
+          waitingForExtraDataText = (String) null;
         }
         field_o = (byte[][]) null;
-        field_s = null;
+        waitingForExtraDataText = null;
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
@@ -41,12 +41,12 @@ final class fl extends gm {
         try {
           param0.a(this, param1, -26407);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
-        pk stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -54,7 +54,7 @@ final class fl extends gm {
         RuntimeException var6 = null;
         sm var7 = null;
         sm var9 = null;
-        wb[] var10 = null;
+        Sprite[] var10 = null;
         wp var11 = null;
         sm var12 = null;
         sm var13 = null;
@@ -64,7 +64,7 @@ final class fl extends gm {
           if (!(param0 instanceof wp)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (pk) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           }
           var11 = (wp) (stackIn_3_0);
           kw.a(param1 + param0.field_v + param0.field_p, param1 + param0.field_v, 1, param4 + param0.field_r, param0.field_r + (param4 + param0.field_q));
@@ -95,8 +95,8 @@ final class fl extends gm {
             }
           }
           if (param2 != 5592405) {
-            var10 = (wb[]) null;
-            this.a((wb[]) null, -110);
+            var10 = (Sprite[]) null;
+            this.a((Sprite[]) null, -110);
           }
           if (param0.d(-1)) {
             var14 = this.field_q[5];
@@ -111,7 +111,7 @@ final class fl extends gm {
             }
           }
           this.field_t.a(param1, this, param4, -66, param0);
-          su.a((byte) -70);
+          ClientException.a((byte) -70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class fl extends gm {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class fl extends gm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class fl extends gm {
         var1.a(true);
     }
 
-    final void a(wb[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         sm[] var3 = null;
         sm var5 = null;
@@ -226,11 +226,11 @@ final class fl extends gm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, wb param1) {
+    final void a(int param0, Sprite param1) {
         int var5 = 0;
         sm[] var3 = null;
         int var4 = 0;
@@ -264,21 +264,21 @@ final class fl extends gm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final sm a(boolean param0, int param1) {
         if (param0) {
-          wb[] var4 = (wb[]) null;
-          this.a((byte) -126, (wb[]) null, -97);
+          Sprite[] var4 = (Sprite[]) null;
+          this.a((byte) -126, (Sprite[]) null, -97);
         }
         sm dupTemp$0 = new sm();
         this.field_q[param1] = dupTemp$0;
         return dupTemp$0;
     }
 
-    final void a(byte param0, wb[] param1, int param2) {
+    final void a(byte param0, Sprite[] param1, int param2) {
         int var4_int = 0;
         int var4_intLifetime1;
         try {
@@ -289,12 +289,12 @@ final class fl extends gm {
           this.field_q[param2].field_j = param1;
           var4_intLifetime1 = -9 % ((param0 - 57) / 52);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fl.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fl.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        field_s = "Waiting for extra data";
+        waitingForExtraDataText = "Waiting for extra data";
         field_n = 0;
         field_p = -1;
     }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends rq {
+final class ni extends ShaderEffect {
     static String field_g;
     static ri[] field_h;
     static String field_f;
-    static jn field_e;
+    static IntrusiveDeque field_e;
 
     final void a(int param0, int param1, int param2) {
         try {
@@ -13,7 +13,7 @@ final class ni extends rq {
             ni.a(-3, -84, 61, -17, 112);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -40,11 +40,11 @@ final class ni extends rq {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    ni(aw param0) {
+    ni(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
@@ -54,11 +54,11 @@ final class ni extends rq {
             this.c(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, ki param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2612_0;
             StringBuilder stackIn_2612_1;
@@ -69,9 +69,9 @@ final class ni extends rq {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            ki param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ki initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2612_0 = null;
@@ -87,11 +87,11 @@ final class ni extends rq {
                 ce.field_q = param1;
                 var2 = rc.a("loginm3", (byte) -23);
                 if (var2 != null) {
-                  ar.field_F = uu.a(0, var2);
+                  ar.connectionTimedOutPleaseText = uu.a(0, var2);
                 }
                 var2 = rc.a("loginm2", (byte) -23);
                 if (var2 != null) {
-                  nd.field_G = uu.a(0, var2);
+                  nd.errorConnectingToServerText = uu.a(0, var2);
                 }
                 var2 = rc.a("loginm1", (byte) -23);
                 if (var2 != null) {
@@ -99,7 +99,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("idlemessage20min", (byte) -23);
                 if (var2 != null) {
-                  ab.field_d = uu.a(param0 - 7, var2);
+                  ab.weClosedTheConnectionText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("error_js5crc", (byte) -23);
                 if (null != var2) {
@@ -111,23 +111,23 @@ final class ni extends rq {
                 }
                 var2 = rc.a("error_js5connect_full", (byte) -23);
                 if (var2 != null) {
-                  bn.field_O = uu.a(param0 - 7, var2);
+                  bn.dataServerFullOrText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("error_js5connect", (byte) -23);
                 if (null != var2) {
-                  ao.field_z = uu.a(0, var2);
+                  ao.unableToConnectToText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_gameupdated", (byte) -23);
                 if (var2 != null) {
-                  s.field_k = uu.a(0, var2);
+                  s.thisGameHasBeenText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_unable", (byte) -23);
                 if (null != var2) {
-                  qk.field_R = uu.a(0, var2);
+                  qk.unfortunatelyWeAreUnableText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_ineligible", (byte) -23);
                 if (null != var2) {
-                  rn.field_a = uu.a(param0 ^ 7, var2);
+                  rn.unfortunatelyYouAreNotText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("usernameprompt", (byte) -23);
                 if (null != var2) {
@@ -151,15 +151,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("ticketing_oneunread", (byte) -23);
                 if (var2 != null) {
-                  kq.field_O = uu.a(0, var2);
+                  kq.youHave1UnreadText = uu.a(0, var2);
                 }
                 var2 = rc.a("ticketing_xunread", (byte) -23);
                 if (var2 != null) {
-                  ph.field_d = uu.a(0, var2);
+                  ph.youHaveUnreadMessagesText = uu.a(0, var2);
                 }
                 var2 = rc.a("ticketing_gotowebsite", (byte) -23);
                 if (null != var2) {
-                  lv.field_f = uu.a(0, var2);
+                  lv.visitTheAccountManagementText = uu.a(0, var2);
                 }
                 var2 = rc.a("ticketing_waitingformessages", (byte) -23);
                 if (null != var2) {
@@ -715,7 +715,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("loading", (byte) -23);
                 if (null != var2) {
-                  li.field_y = uu.a(0, var2);
+                  li.loadingText = uu.a(0, var2);
                 }
                 var2 = rc.a("offline", (byte) -23);
                 if (var2 != null) {
@@ -1071,7 +1071,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("pleasetryagain", (byte) -23);
                 if (null != var2) {
-                  se.field_c = uu.a(param0 - 7, var2);
+                  se.pleaseTryAgainInText = uu.a(param0 - 7, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -1081,23 +1081,23 @@ final class ni extends rq {
                 }
                 var2 = rc.a("playfreeversion", (byte) -23);
                 if (var2 != null) {
-                  ch.field_e = uu.a(0, var2);
+                  ch.playFreeVersionText = uu.a(0, var2);
                 }
                 var2 = rc.a("reloadgame", (byte) -23);
                 if (var2 != null) {
-                  vf.field_e = uu.a(param0 - 7, var2);
+                  vf.reloadGameText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("toserverlist", (byte) -23);
                 if (null != var2) {
-                  lq.field_c = uu.a(0, var2);
+                  lq.toServerListText = uu.a(0, var2);
                 }
                 var2 = rc.a("tocustomersupport", (byte) -23);
                 if (null != var2) {
-                  eq.field_w = uu.a(param0 - 7, var2);
+                  eq.toCustomerSupportText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("changedisplayname", (byte) -23);
                 if (null != var2) {
-                  pl.field_s = uu.a(param0 ^ 7, var2);
+                  pl.changeDisplayNameText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("returntohomepage", (byte) -23);
                 if (var2 != null) {
@@ -1113,11 +1113,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("login", (byte) -23);
                 if (var2 != null) {
-                  ma.field_c = uu.a(0, var2);
+                  ma.logInText = uu.a(0, var2);
                 }
                 var2 = rc.a("goback", (byte) -23);
                 if (var2 != null) {
-                  jc.field_e = uu.a(0, var2);
+                  jc.goBackText = uu.a(0, var2);
                 }
                 var2 = rc.a("otheroptions", (byte) -23);
                 if (null != var2) {
@@ -1137,7 +1137,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("logging_in", (byte) -23);
                 if (null != var2) {
-                  us.field_m = uu.a(0, var2);
+                  us.loggingInText = uu.a(0, var2);
                 }
                 var2 = rc.a("reconnect", (byte) -23);
                 if (var2 != null) {
@@ -1157,11 +1157,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("connectionlost_reconnecting", (byte) -23);
                 if (null != var2) {
-                  qe.field_b = uu.a(0, var2);
+                  qe.connectionLostAttemptingToText = uu.a(0, var2);
                 }
                 var2 = rc.a("connectionlost_withreason", (byte) -23);
                 if (null != var2) {
-                  hh.field_b = uu.a(0, var2);
+                  hh.connectionLostText = uu.a(0, var2);
                 }
                 var2 = rc.a("passwordverificationrequired", (byte) -23);
                 if (var2 != null) {
@@ -1169,15 +1169,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("invalidpass", (byte) -23);
                 if (null != var2) {
-                  ov.field_g = uu.a(param0 - 7, var2);
+                  RasterBuffer.invalidPasswordText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("retry", (byte) -23);
                 if (var2 != null) {
-                  ii.field_b = uu.a(0, var2);
+                  ii.retryText = uu.a(0, var2);
                 }
                 var2 = rc.a("back", (byte) -23);
                 if (var2 != null) {
-                  cq.field_c = uu.a(0, var2);
+                  cq.backText = uu.a(0, var2);
                 }
                 var2 = rc.a("exitfullscreenmode", (byte) -23);
                 if (null != var2) {
@@ -1185,15 +1185,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("quittowebsite", (byte) -23);
                 if (null != var2) {
-                  of.field_k = uu.a(0, var2);
+                  of.quitToWebsiteText = uu.a(0, var2);
                 }
                 var2 = rc.a("connectionrestored", (byte) -23);
                 if (var2 != null) {
-                  fh.field_j = uu.a(0, var2);
+                  ImageProducerRasterBuffer.connectionRestoredText = uu.a(0, var2);
                 }
                 var2 = rc.a("warning_ifyouquit", (byte) -23);
                 if (null != var2) {
-                  rv.field_a = uu.a(0, var2);
+                  rv.warningIfYouQuitText = uu.a(0, var2);
                 }
                 var2 = rc.a("warning_ifyouquitorleavepage", (byte) -23);
                 if (var2 != null) {
@@ -1281,7 +1281,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("checking", (byte) -23);
                 if (null != var2) {
-                  hi.field_g = uu.a(0, var2);
+                  hi.checkingText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_namealreadytaken", (byte) -23);
                 if (var2 != null) {
@@ -1333,11 +1333,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("openinpopupwindow", (byte) -23);
                 if (var2 != null) {
-                  sb.field_e = uu.a(0, var2);
+                  sb.openInPopupWindowText = uu.a(0, var2);
                 }
                 var2 = rc.a("create", (byte) -23);
                 if (null != var2) {
-                  ff.field_o = uu.a(0, var2);
+                  ff.createText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_pleasechooseapassword", (byte) -23);
                 if (var2 != null) {
@@ -1353,7 +1353,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("creatingyouraccount", (byte) -23);
                 if (var2 != null) {
-                  su.field_c = uu.a(0, var2);
+                  ClientException.creatingYourAccountText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_youmustaccept", (byte) -23);
                 if (var2 != null) {
@@ -1381,58 +1381,58 @@ final class ni extends rq {
                 }
                 var2 = rc.a("monthnames,0", (byte) -23);
                 if (null != var2) {
-                  lf.field_d[0] = uu.a(0, var2);
+                  lf.monthNames[0] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,1", (byte) -23);
                 if (null != var2) {
-                  lf.field_d[1] = uu.a(0, var2);
+                  lf.monthNames[1] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,2", (byte) -23);
                 if (var2 != null) {
-                  lf.field_d[2] = uu.a(0, var2);
+                  lf.monthNames[2] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,3", (byte) -23);
                 if (null != var2) {
-                  lf.field_d[3] = uu.a(jg.a(param0, 7), var2);
+                  lf.monthNames[3] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("monthnames,4", (byte) -23);
                 if (null != var2) {
-                  lf.field_d[4] = uu.a(param0 - 7, var2);
+                  lf.monthNames[4] = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("monthnames,5", (byte) -23);
                 if (var2 != null) {
-                  lf.field_d[5] = uu.a(0, var2);
+                  lf.monthNames[5] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,6", (byte) -23);
                 if (var2 != null) {
-                  lf.field_d[6] = uu.a(0, var2);
+                  lf.monthNames[6] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,7", (byte) -23);
                 if (var2 != null) {
-                  lf.field_d[7] = uu.a(0, var2);
+                  lf.monthNames[7] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,8", (byte) -23);
                 if (param0 != 7) {
                   finished = true; return;
                 }
                 if (var2 != null) {
-                  lf.field_d[8] = uu.a(0, var2);
+                  lf.monthNames[8] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,9", (byte) -23);
                 if (var2 != null) {
-                  lf.field_d[9] = uu.a(jg.a(param0, 7), var2);
+                  lf.monthNames[9] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("monthnames,10", (byte) -23);
                 if (null != var2) {
-                  lf.field_d[10] = uu.a(0, var2);
+                  lf.monthNames[10] = uu.a(0, var2);
                 }
                 var2 = rc.a("monthnames,11", (byte) -23);
                 if (null != var2) {
-                  lf.field_d[11] = uu.a(0, var2);
+                  lf.monthNames[11] = uu.a(0, var2);
                 }
                 var2 = rc.a("create_welcome", (byte) -23);
                 if (null != var2) {
-                  qn.field_h = uu.a(0, var2);
+                  qn.creatingAJagexAccountText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_u13_welcome", (byte) -23);
                 if (null != var2) {
@@ -1440,7 +1440,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_createanaccount", (byte) -23);
                 if (null != var2) {
-                  ms.field_i = uu.a(param0 ^ 7, var2);
+                  IntrusiveNode.createAFreeAccountText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_username", (byte) -23);
                 if (var2 != null) {
@@ -1448,27 +1448,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_displayname", (byte) -23);
                 if (var2 != null) {
-                  un.field_c = uu.a(0, var2);
+                  un.playerNameText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_password", (byte) -23);
                 if (var2 != null) {
-                  pi.field_g = uu.a(param0 - 7, var2);
+                  pi.passwordText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_password_confirm", (byte) -23);
                 if (var2 != null) {
-                  ht.field_b = uu.a(0, var2);
+                  ht.confirmPasswordText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_email", (byte) -23);
                 if (null != var2) {
-                  ks.field_u = uu.a(0, var2);
+                  ks.emailLoginText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_email_confirm", (byte) -23);
                 if (null != var2) {
-                  pq.field_N = uu.a(0, var2);
+                  pq.confirmEmailText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_age", (byte) -23);
                 if (var2 != null) {
-                  fm.field_a = uu.a(0, var2);
+                  fm.ageText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_u13_email", (byte) -23);
                 if (null != var2) {
@@ -1496,43 +1496,43 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_suggestions", (byte) -23);
                 if (null != var2) {
-                  ia.field_a = uu.a(0, var2);
+                  NodeHashTableIterator.suggestedNamesText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_more_suggestions", (byte) -23);
                 if (var2 != null) {
-                  dt.field_h = uu.a(0, var2);
+                  BufferedSocket.moreSuggestionsText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_select_alternative", (byte) -23);
                 if (null != var2) {
-                  ji.field_b = uu.a(0, var2);
+                  ji.useThisAlternativeAsText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_optin_news", (byte) -23);
                 if (null != var2) {
-                  lv.field_e = uu.a(0, var2);
+                  lv.pleaseSendMeNewsText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_agreeterms", (byte) -23);
                 if (var2 != null) {
-                  cn.field_P = uu.a(0, var2);
+                  cn.byClickingCreateYouText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_u13terms", (byte) -23);
                 if (null != var2) {
-                  qv.field_l = uu.a(param0 - 7, var2);
+                  qv.asYouAreUnderText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("login_username_email", (byte) -23);
                 if (null != var2) {
-                  ej.field_g = uu.a(0, var2);
+                  OpenGlEnvironmentWaterEffect.loginText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_username", (byte) -23);
                 if (null != var2) {
-                  ph.field_h = uu.a(0, var2);
+                  ph.usernameText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_email", (byte) -23);
                 if (null != var2) {
-                  ow.field_b = uu.a(0, var2);
+                  ow.emailText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_username_tooltip", (byte) -23);
                 if (var2 != null) {
-                  cn.field_hb = uu.a(0, var2);
+                  cn.theAccountNameYouText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_password_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1544,11 +1544,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("login_create_tooltip", (byte) -23);
                 if (var2 != null) {
-                  aj.field_x = uu.a(0, var2);
+                  aj.createYourOwnFreeText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_justplay_tooltip", (byte) -23);
                 if (null != var2) {
-                  hg.field_t = uu.a(0, var2);
+                  hg.playTheGameWithoutText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_back_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1556,7 +1556,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("login_no_displayname", (byte) -23);
                 if (null != var2) {
-                  gs.field_c = uu.a(0, var2);
+                  gs.youNeedToChooseText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_username_tooltip", (byte) -23);
                 if (null != var2) {
@@ -1568,39 +1568,39 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_displayname_tooltip", (byte) -23);
                 if (var2 != null) {
-                  rq.field_a = uu.a(0, var2);
+                  ShaderEffect.enterTheNameYouText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_displayname_hint", (byte) -23);
                 if (null != var2) {
-                  oq.field_r = uu.a(0, var2);
+                  oq.playerNamesCanBeText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_password_tooltip", (byte) -23);
                 if (null != var2) {
-                  pl.field_q = uu.a(0, var2);
+                  pl.enterAPasswordForText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_password_hint", (byte) -23);
                 if (null != var2) {
-                  qw.field_c = uu.a(0, var2);
+                  qw.passwordsMustBeBetweenText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_password_confirm_tooltip", (byte) -23);
                 if (null != var2) {
-                  tj.field_k = uu.a(0, var2);
+                  tj.typeYourPasswordAgainText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_email_tooltip", (byte) -23);
                 if (null != var2) {
-                  pi.field_f = uu.a(0, var2);
+                  pi.yourEmailAddressIsText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_email_confirm_tooltip", (byte) -23);
                 if (var2 != null) {
-                  kn.field_d = uu.a(param0 - 7, var2);
+                  kn.typeYourEmailAddressText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_age_tooltip", (byte) -23);
                 if (null != var2) {
-                  dc.field_bb = uu.a(0, var2);
+                  dc.typeYourAgeInText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_optin_news_tooltip", (byte) -23);
                 if (var2 != null) {
-                  gr.field_g = uu.a(0, var2);
+                  gr.updatesWillSentToText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_u13_email_tooltip", (byte) -23);
                 if (null != var2) {
@@ -1632,47 +1632,47 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_username_available", (byte) -23);
                 if (null != var2) {
-                  ck.field_b = uu.a(param0 ^ 7, var2);
+                  ck.nameIsAvailableText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_namelength", (byte) -23);
                 if (null != var2) {
-                  qq.field_Q = uu.a(param0 ^ 7, var2);
+                  qq.namesShouldContainAText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_namechars", (byte) -23);
                 if (null != var2) {
-                  fu.field_F = uu.a(param0 - 7, var2);
+                  fu.namesCanOnlyContainText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_alert_nameleadingspace", (byte) -23);
                 if (null != var2) {
-                  m.field_T = uu.a(param0 ^ 7, var2);
+                  m.namesCannotStartOrText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_doublespace", (byte) -23);
                 if (var2 != null) {
-                  ma.field_a = uu.a(0, var2);
+                  ma.namesCannotContainConsecutiveText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passchars", (byte) -23);
                 if (var2 != null) {
-                  ur.field_X = uu.a(0, var2);
+                  ur.passwordsCanOnlyContainText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passrepeated", (byte) -23);
                 if (var2 != null) {
-                  mc.field_J = uu.a(0, var2);
+                  mc.thisPasswordContainsRepeatedText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passlength", (byte) -23);
                 if (null != var2) {
-                  sg.field_k = uu.a(0, var2);
+                  sg.passwordsMustBeBetweenText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsname", (byte) -23);
                 if (var2 != null) {
-                  vr.field_F = uu.a(param0 ^ 7, var2);
+                  vr.thisPasswordContainsYourText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsemail", (byte) -23);
                 if (var2 != null) {
-                  pc.field_a = uu.a(0, var2);
+                  pc.thisPasswordContainsYourText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsname_partial", (byte) -23);
                 if (var2 != null) {
-                  mm.field_e = uu.a(param0 - 7, var2);
+                  mm.thisPasswordIsPartText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_alert_checkname", (byte) -23);
                 if (null != var2) {
@@ -1680,11 +1680,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_alert_invalidemail", (byte) -23);
                 if (null != var2) {
-                  aj.field_t = uu.a(0, var2);
+                  aj.pleaseCheckIfAddressText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_email_unavailable", (byte) -23);
                 if (var2 != null) {
-                  oj.field_b = uu.a(param0 ^ 7, var2);
+                  oj.emailAddressIsUnavailableText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_invaliddate", (byte) -23);
                 if (var2 != null) {
@@ -1692,7 +1692,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_alert_invalidage", (byte) -23);
                 if (null != var2) {
-                  gn.field_g = uu.a(0, var2);
+                  gn.pleaseEnterYourAgeText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_alert_yearrange", (byte) -23);
                 if (null != var2) {
@@ -1700,19 +1700,19 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_alert_mismatch", (byte) -23);
                 if (var2 != null) {
-                  gq.field_p = uu.a(0, var2);
+                  gq.thisEntryDoesnTText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_passwordvalid", (byte) -23);
                 if (var2 != null) {
-                  ka.field_a = uu.a(param0 ^ 7, var2);
+                  ka.passwordIsValidText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_emailvalid", (byte) -23);
                 if (var2 != null) {
-                  nw.field_h = uu.a(0, var2);
+                  ProxySocketConnector.emailIsValidText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_account_success", (byte) -23);
                 if (null != var2) {
-                  vl.field_b = uu.a(0, var2);
+                  vl.accountCreatedSuccessfullyText = uu.a(0, var2);
                 }
                 var2 = rc.a("invalid_name", (byte) -23);
                 if (var2 != null) {
@@ -1808,7 +1808,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("waitingfor_graphics", (byte) -23);
                 if (var2 != null) {
-                  m.field_V = uu.a(0, var2);
+                  m.waitingForGraphicsText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_models", (byte) -23);
                 if (null != var2) {
@@ -1816,27 +1816,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("waitingfor_fonts", (byte) -23);
                 if (var2 != null) {
-                  ce.field_l = uu.a(0, var2);
+                  ce.waitingForFontsText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  fn.field_A = uu.a(0, var2);
+                  GameClientShell.waitingForSoundEffectsText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_music", (byte) -23);
                 if (null != var2) {
-                  ve.field_l = uu.a(0, var2);
+                  ve.waitingForMusicText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_instruments", (byte) -23);
                 if (var2 != null) {
-                  jf.field_a = uu.a(0, var2);
+                  jf.waitingForInstrumentsText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_levels", (byte) -23);
                 if (var2 != null) {
-                  nm.field_n = uu.a(0, var2);
+                  nm.waitingForLevelsText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_extradata", (byte) -23);
                 if (var2 != null) {
-                  fl.field_s = uu.a(param0 - 7, var2);
+                  fl.waitingForExtraDataText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("waitingfor_languages", (byte) -23);
                 if (var2 != null) {
@@ -1852,7 +1852,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("loading_graphics", (byte) -23);
                 if (null != var2) {
-                  es.field_j = uu.a(0, var2);
+                  es.loadingGraphicsText = uu.a(0, var2);
                 }
                 var2 = rc.a("loading_models", (byte) -23);
                 if (null != var2) {
@@ -1860,27 +1860,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("loading_fonts", (byte) -23);
                 if (null != var2) {
-                  ow.field_a = uu.a(0, var2);
+                  ow.loadingFontsText = uu.a(0, var2);
                 }
                 var2 = rc.a("loading_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  hq.field_a = uu.a(0, var2);
+                  hq.loadingSoundEffectsText = uu.a(0, var2);
                 }
                 var2 = rc.a("loading_music", (byte) -23);
                 if (var2 != null) {
-                  gt.field_hb = uu.a(param0 ^ 7, var2);
+                  gt.loadingMusicText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("loading_instruments", (byte) -23);
                 if (var2 != null) {
-                  sg.field_i = uu.a(0, var2);
+                  sg.loadingInstrumentsText = uu.a(0, var2);
                 }
                 var2 = rc.a("loading_levels", (byte) -23);
                 if (null != var2) {
-                  b.field_f = uu.a(0, var2);
+                  b.loadingLevelsText = uu.a(0, var2);
                 }
                 var2 = rc.a("loading_extradata", (byte) -23);
                 if (null != var2) {
-                  rd.field_m = uu.a(param0 - 7, var2);
+                  rd.loadingExtraDataText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("loading_languages", (byte) -23);
                 if (var2 != null) {
@@ -1896,7 +1896,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("unpacking_graphics", (byte) -23);
                 if (null != var2) {
-                  kn.field_e = uu.a(0, var2);
+                  kn.unpackingGraphicsText = uu.a(0, var2);
                 }
                 var2 = rc.a("unpacking_models", (byte) -23);
                 if (var2 != null) {
@@ -1904,15 +1904,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("unpacking_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  hv.field_e = uu.a(0, var2);
+                  hv.unpackingSoundEffectsText = uu.a(0, var2);
                 }
                 var2 = rc.a("unpacking_music", (byte) -23);
                 if (null != var2) {
-                  su.field_d = uu.a(param0 - 7, var2);
+                  ClientException.unpackingMusicText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("unpacking_levels", (byte) -23);
                 if (null != var2) {
-                  om.field_n = uu.a(0, var2);
+                  om.unpackingLevelsText = uu.a(0, var2);
                 }
                 var2 = rc.a("unpacking_languages", (byte) -23);
                 if (var2 != null) {
@@ -1928,7 +1928,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("instructions", (byte) -23);
                 if (null != var2) {
-                  cp.field_k = uu.a(0, var2);
+                  cp.instructionsText = uu.a(0, var2);
                 }
                 var2 = rc.a("tutorial", (byte) -23);
                 if (null != var2) {
@@ -1940,15 +1940,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("sound_colon", (byte) -23);
                 if (null != var2) {
-                  ff.field_n = uu.a(0, var2);
+                  ff.soundText = uu.a(0, var2);
                 }
                 var2 = rc.a("music_colon", (byte) -23);
                 if (var2 != null) {
-                  gu.field_h = uu.a(param0 - 7, var2);
+                  gu.musicText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("fullscreen", (byte) -23);
                 if (null != var2) {
-                  ki.field_j = uu.a(param0 - 7, var2);
+                  ResourceArchive.field_j = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("screensize", (byte) -23);
                 if (null != var2) {
@@ -1956,7 +1956,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("highscores", (byte) -23);
                 if (var2 != null) {
-                  os.field_a = uu.a(0, var2);
+                  MouseInputHandler.field_a = uu.a(0, var2);
                 }
                 var2 = rc.a("rankings", (byte) -23);
                 if (var2 != null) {
@@ -1964,7 +1964,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("achievements", (byte) -23);
                 if (null != var2) {
-                  kf.field_t = uu.a(param0 ^ 7, var2);
+                  kf.achievementsText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("achievementsthisgame", (byte) -23);
                 if (null != var2) {
@@ -1980,11 +1980,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("quit", (byte) -23);
                 if (var2 != null) {
-                  ov.field_d = uu.a(0, var2);
+                  RasterBuffer.quitText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_createaccount", (byte) -23);
                 if (var2 != null) {
-                  go.field_o = uu.a(0, var2);
+                  go.logInCreateAccountText = uu.a(0, var2);
                 }
                 var2 = rc.a("tohighscores", (byte) -23);
                 if (null != var2) {
@@ -2018,7 +2018,7 @@ final class ni extends rq {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  rf.field_c = uu.a(param0 ^ 7, var2);
+                  rf.menuText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("selectlevel", (byte) -23);
                 if (null != var2) {
@@ -2038,7 +2038,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("resumegame", (byte) -23);
                 if (null != var2) {
-                  ll.field_c = uu.a(0, var2);
+                  ll.resumeGameText = uu.a(0, var2);
                 }
                 var2 = rc.a("resumetutorial", (byte) -23);
                 if (var2 != null) {
@@ -2066,7 +2066,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("endgame", (byte) -23);
                 if (null != var2) {
-                  nj.field_e = uu.a(0, var2);
+                  nj.endGameText = uu.a(0, var2);
                 }
                 var2 = rc.a("endtutorial", (byte) -23);
                 if (null != var2) {
@@ -2086,7 +2086,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("previous", (byte) -23);
                 if (null != var2) {
-                  gk.field_H = uu.a(0, var2);
+                  gk.previousText = uu.a(0, var2);
                 }
                 var2 = rc.a("prev", (byte) -23);
                 if (null != var2) {
@@ -2094,7 +2094,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("next", (byte) -23);
                 if (null != var2) {
-                  in.field_B = uu.a(0, var2);
+                  in.nextText = uu.a(0, var2);
                 }
                 var2 = rc.a("graphics_colon", (byte) -23);
                 if (var2 != null) {
@@ -2114,7 +2114,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("returntogame", (byte) -23);
                 if (var2 != null) {
-                  id.field_m = uu.a(0, var2);
+                  id.returnToGameText = uu.a(0, var2);
                 }
                 var2 = rc.a("endgameresign", (byte) -23);
                 if (null != var2) {
@@ -2142,7 +2142,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("cont", (byte) -23);
                 if (null != var2) {
-                  wd.field_h = uu.a(0, var2);
+                  wd.continueText = uu.a(0, var2);
                 }
                 var2 = rc.a("continue_spectating", (byte) -23);
                 if (null != var2) {
@@ -2178,11 +2178,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("graphics_quality_high", (byte) -23);
                 if (null != var2) {
-                  mn.field_k = uu.a(0, var2);
+                  mn.highText = uu.a(0, var2);
                 }
                 var2 = rc.a("graphics_quality_low", (byte) -23);
                 if (null != var2) {
-                  bc.field_b = uu.a(0, var2);
+                  bc.lowText = uu.a(0, var2);
                 }
                 var2 = rc.a("graphics_mode", (byte) -23);
                 if (var2 != null) {
@@ -2306,15 +2306,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("mouseoveranicon", (byte) -23);
                 if (null != var2) {
-                  hk.field_b = uu.a(param0 - 7, var2);
+                  hk.mouseOverAnIconText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("notyetachieved", (byte) -23);
                 if (var2 != null) {
-                  gi.field_f = uu.a(0, var2);
+                  gi.notYetAchievedText = uu.a(0, var2);
                 }
                 var2 = rc.a("achieved", (byte) -23);
                 if (null != var2) {
-                  ab.field_e = uu.a(0, var2);
+                  ab.achievedText = uu.a(0, var2);
                 }
                 var2 = rc.a("orbpoints", (byte) -23);
                 if (null != var2) {
@@ -2342,7 +2342,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("no_highscores", (byte) -23);
                 if (null != var2) {
-                  ng.field_e = uu.a(param0 ^ 7, var2);
+                  ng.noHighscoresText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("hs_name", (byte) -23);
                 if (var2 != null) {
@@ -2522,27 +2522,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("quickchat_shortcut_help,0", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[0] = uu.a(0, var2);
+                  IntrusiveNode.field_j[0] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,1", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[1] = uu.a(0, var2);
+                  IntrusiveNode.field_j[1] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,2", (byte) -23);
                 if (var2 != null) {
-                  ms.field_j[2] = uu.a(0, var2);
+                  IntrusiveNode.field_j[2] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,3", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[3] = uu.a(jg.a(param0, 7), var2);
+                  IntrusiveNode.field_j[3] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,4", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[4] = uu.a(0, var2);
+                  IntrusiveNode.field_j[4] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,5", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[5] = uu.a(0, var2);
+                  IntrusiveNode.field_j[5] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,0", (byte) -23);
                 if (var2 != null) {
@@ -2610,15 +2610,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("members_expansion_benefits,0", (byte) -23);
                 if (null != var2) {
-                  mo.field_o[0] = uu.a(0, var2);
+                  mo.membershipBenefitLines[0] = uu.a(0, var2);
                 }
                 var2 = rc.a("members_expansion_benefits,1", (byte) -23);
                 if (var2 != null) {
-                  mo.field_o[1] = uu.a(jg.a(param0, 7), var2);
+                  mo.membershipBenefitLines[1] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("members_expansion_benefits,2", (byte) -23);
                 if (null != var2) {
-                  mo.field_o[2] = uu.a(0, var2);
+                  mo.membershipBenefitLines[2] = uu.a(0, var2);
                 }
                 var2 = rc.a("members_expansion_price_top", (byte) -23);
                 if (var2 != null) {
@@ -2694,27 +2694,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fs_accept_beforeaccept", (byte) -23);
                 if (var2 != null) {
-                  fd.field_i = uu.a(param0 ^ 7, var2);
+                  fd.clickText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("fs_button_accept", (byte) -23);
                 if (var2 != null) {
-                  km.field_m = uu.a(0, var2);
+                  km.acceptText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_afteraccept", (byte) -23);
                 if (null != var2) {
-                  ws.field_a = uu.a(0, var2);
+                  ws.toKeepFullscreenOrText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_button_cancel", (byte) -23);
                 if (var2 != null) {
-                  up.field_b = uu.a(0, var2);
+                  up.cancelText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_aftercancel", (byte) -23);
                 if (var2 != null) {
-                  oh.field_b = uu.a(param0 ^ 7, var2);
+                  oh.toReturnToTheText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("fs_accept_countdown_sing", (byte) -23);
                 if (null != var2) {
-                  qo.field_c = uu.a(0, var2);
+                  ClientExceptionSupport.ifYouDoNothingText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_countdown_pl", (byte) -23);
                 if (null != var2) {
@@ -2722,15 +2722,15 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fs_nonmember", (byte) -23);
                 if (var2 != null) {
-                  ms.field_c = uu.a(0, var2);
+                  IntrusiveNode.fullscreenPlayIsAnText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_button_close", (byte) -23);
                 if (null != var2) {
-                  jh.field_I = uu.a(0, var2);
+                  jh.closeText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_button_members", (byte) -23);
                 if (null != var2) {
-                  pp.field_f = uu.a(0, var2);
+                  pp.membersText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_unavailable", (byte) -23);
                 if (var2 != null) {
@@ -2738,27 +2738,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fs_unavailable_try_signed_applet", (byte) -23);
                 if (var2 != null) {
-                  fr.field_lb = uu.a(0, var2);
+                  fr.unfortunatelyYourConfigurationDoesnText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_focus", (byte) -23);
                 if (null != var2) {
-                  sr.field_c = uu.a(0, var2);
+                  LimitedRandomAccessFile.field_c = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_focus_or_resolution", (byte) -23);
                 if (null != var2) {
-                  c.field_t = uu.a(0, var2);
+                  c.unfortunatelyThereWasAText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_timeout", (byte) -23);
                 if (null != var2) {
-                  ua.field_i = uu.a(0, var2);
+                  ua.fullscreenModeWasCancelledText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_button_tryagain", (byte) -23);
                 if (null != var2) {
-                  kq.field_Q = uu.a(0, var2);
+                  kq.tryAgainText = uu.a(0, var2);
                 }
                 var2 = rc.a("graphics_ui_fs_countdown", (byte) -23);
                 if (var2 != null) {
-                  c.field_q = uu.a(0, var2);
+                  c.ifYouDoNothingText = uu.a(0, var2);
                 }
                 var2 = rc.a("mb_caption_title", (byte) -23);
                 if (var2 != null) {
@@ -2798,7 +2798,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("hs_friend_tip", (byte) -23);
                 if (null != var2) {
-                  bv.field_b = uu.a(param0 - 7, var2);
+                  bv.friendsCanBeAddedText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_friend_tip_multi", (byte) -23);
                 if (null != var2) {
@@ -2806,51 +2806,51 @@ final class ni extends rq {
                 }
                 var2 = rc.a("hs_mode_name,0", (byte) -23);
                 if (null != var2) {
-                  dj.field_r[0] = uu.a(param0 - 7, var2);
+                  dj.scoreFilterLabels[0] = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_mode_name,1", (byte) -23);
                 if (null != var2) {
-                  dj.field_r[1] = uu.a(0, var2);
+                  dj.scoreFilterLabels[1] = uu.a(0, var2);
                 }
                 var2 = rc.a("hs_mode_name,2", (byte) -23);
                 if (null != var2) {
-                  dj.field_r[2] = uu.a(0, var2);
+                  dj.scoreFilterLabels[2] = uu.a(0, var2);
                 }
                 var2 = rc.a("rating_mode_name,0", (byte) -23);
                 if (null != var2) {
-                  cj.field_c[0] = uu.a(param0 - 7, var2);
+                  cj.leaderboardSortLabels[0] = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("rating_mode_name,1", (byte) -23);
                 if (null != var2) {
-                  cj.field_c[1] = uu.a(0, var2);
+                  cj.leaderboardSortLabels[1] = uu.a(0, var2);
                 }
                 var2 = rc.a("rating_mode_long_name,0", (byte) -23);
                 if (null != var2) {
-                  ia.field_c[0] = uu.a(jg.a(param0, 7), var2);
+                  NodeHashTableIterator.leaderboardSortStatusLabels[0] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("rating_mode_long_name,1", (byte) -23);
                 if (var2 != null) {
-                  ia.field_c[1] = uu.a(param0 - 7, var2);
+                  NodeHashTableIterator.leaderboardSortStatusLabels[1] = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_fixed_size", (byte) -23);
                 if (var2 != null) {
-                  kp.field_b = uu.a(param0 - 7, var2);
+                  kp.classicText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_resizable", (byte) -23);
                 if (var2 != null) {
-                  hq.field_c = uu.a(param0 - 7, var2);
+                  hq.resizableText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_fullscreen", (byte) -23);
                 if (var2 != null) {
-                  dj.field_o = uu.a(0, var2);
+                  dj.fullScreenText = uu.a(0, var2);
                 }
                 var2 = rc.a("graphics_config_done", (byte) -23);
                 if (var2 != null) {
-                  jh.field_A = uu.a(param0 - 7, var2);
+                  jh.backText = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_apply", (byte) -23);
                 if (var2 != null) {
-                  dn.field_a = uu.a(0, var2);
+                  dn.applyText = uu.a(0, var2);
                 }
                 var2 = rc.a("graphics_config_title", (byte) -23);
                 if (var2 != null) {
@@ -2858,23 +2858,23 @@ final class ni extends rq {
                 }
                 var2 = rc.a("graphics_config_instruction", (byte) -23);
                 if (var2 != null) {
-                  sl.field_e = uu.a(param0 ^ 7, var2);
+                  sl.largeScreenSizesAndText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("graphics_config_need_memory", (byte) -23);
                 if (var2 != null) {
-                  lw.field_c = uu.a(0, var2);
+                  lw.moreMemoryIsRequiredText = uu.a(0, var2);
                 }
                 var2 = rc.a("pleasewait_dotdotdot", (byte) -23);
                 if (null != var2) {
-                  mm.field_b = uu.a(0, var2);
+                  mm.pleaseWaitText = uu.a(0, var2);
                 }
                 var2 = rc.a("serviceunavailable", (byte) -23);
                 if (null != var2) {
-                  wl.field_b = uu.a(0, var2);
+                  wl.serviceUnavailableText = uu.a(0, var2);
                 }
                 var2 = rc.a("createtouse", (byte) -23);
                 if (null != var2) {
-                  tj.field_o = uu.a(0, var2);
+                  tj.createAFreeAccountText = uu.a(0, var2);
                 }
                 var2 = rc.a("achievementsoffline", (byte) -23);
                 if (null != var2) {
@@ -2886,11 +2886,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("DEFAULT_PLAYER_NAME", (byte) -23);
                 if (var2 != null) {
-                  kq.field_R = uu.a(0, var2);
+                  kq.playerText = uu.a(0, var2);
                 }
                 var2 = rc.a("mustlogin1", (byte) -23);
                 if (var2 != null) {
-                  b.field_d = uu.a(param0 ^ 7, var2);
+                  b.youAreNotCurrentlyText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mustlogin2,1", (byte) -23);
                 if (var2 != null) {
@@ -2950,7 +2950,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("discard", (byte) -23);
                 if (null != var2) {
-                  vp.field_b = uu.a(param0 ^ 7, var2);
+                  vp.discardText = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mustlogin4,1", (byte) -23);
                 if (null != var2) {
@@ -3093,11 +3093,11 @@ final class ni extends rq {
                   } else {
                     stackIn_2613_2 = "{...}";
                   }
-                  throw qo.a((Throwable) ((Object) stackIn_2612_0), ((StringBuilder) (Object) stackIn_2612_1).append(stackIn_2613_2).append(')').toString());
+                  throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_2612_0), ((StringBuilder) (Object) stackIn_2612_1).append(stackIn_2613_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2621_0 = (!kc.field_o);
-                  kc.field_o = stackIn_2621_0;
+                  stackIn_2621_0 = (!GameApplet.field_o);
+                  GameApplet.field_o = stackIn_2621_0;
                 }
             }
         }
@@ -3111,7 +3111,7 @@ final class ni extends rq {
             this.a(-51, -107, -8);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3121,7 +3121,7 @@ final class ni extends rq {
             this.a(false, (byte) 126);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.J(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3135,19 +3135,19 @@ final class ni extends rq {
           field_h = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.N(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.N(" + param0 + ')');
         }
     }
 
-    final static wb[] a(int param0, int param1, int param2, int param3, int param4) {
-        wb dupTemp$2 = null;
-        wb dupTemp$3 = null;
-        wb[] var5 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite dupTemp$2 = null;
+        Sprite dupTemp$3 = null;
+        Sprite[] var5 = null;
         RuntimeException var5_ref = null;
-        wb[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new wb[9];
+          var5 = new Sprite[9];
           dupTemp$2 = wg.a(param1, param4, jg.a(param2, 3));
           var5[6] = dupTemp$2;
           var5[3] = dupTemp$2;
@@ -3166,7 +3166,7 @@ final class ni extends rq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var5_ref), "ni.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var5_ref), "ni.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3181,7 +3181,7 @@ final class ni extends rq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "ni.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "ni.G(" + param0 + ')');
         }
     }
 

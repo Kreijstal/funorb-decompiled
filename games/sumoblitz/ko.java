@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ko extends ms {
+abstract class ko extends IntrusiveNode {
     private int field_k;
     private int field_o;
     private float field_l;
     private int field_n;
     private int field_r;
-    static jn field_m;
+    static IntrusiveDeque field_m;
     private int field_q;
     static int field_p;
 
     final static void a(int param0, int param1) {
-        ms var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hg var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -25,7 +25,7 @@ abstract class ko extends ms {
             var4 = (hg) (hi.field_f.d((byte) 18));
           }
           if (param0 != 0) {
-            field_m = (jn) null;
+            field_m = (IntrusiveDeque) null;
           }
           var2 = wr.field_E.b(-105);
           while (var2 != null) {
@@ -36,7 +36,7 @@ abstract class ko extends ms {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ abstract class ko extends ms {
     }
 
     static {
-        field_m = new jn();
+        field_m = new IntrusiveDeque();
         field_p = 0;
     }
 }

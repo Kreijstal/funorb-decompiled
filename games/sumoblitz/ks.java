@@ -4,7 +4,7 @@
 final class ks extends ff {
     static int field_v;
     static ri[] field_w;
-    static String field_u;
+    static String emailLoginText;
     static cp field_x;
     static ri field_t;
     private byte[] field_s;
@@ -27,29 +27,29 @@ final class ks extends ff {
         field_w = null;
         if (param0 == -11701) {
           field_t = null;
-          field_u = null;
+          emailLoginText = null;
           field_x = null;
           return;
         }
-        fs var2 = (fs) null;
-        ks.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (fs) null, (fs) null);
+        PacketBuffer var2 = (PacketBuffer) null;
+        ks.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
         field_t = null;
-        field_u = null;
+        emailLoginText = null;
         field_x = null;
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2, fs param3, fs param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2, PacketBuffer param3, PacketBuffer param4) {
         if (param2) {
           return;
         }
         try {
-          sr.a(param0, param4.field_p, param4.field_n, param1, (byte) -29, param3, 0);
+          LimitedRandomAccessFile.a(param0, param4.position, param4.payload, param1, (byte) -29, param3, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ks.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ks.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static wb[] a(byte param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 <= -5) {
           return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
         }
@@ -57,12 +57,12 @@ final class ks extends ff {
         return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
     }
 
-    final static ha a(int param0, java.awt.Canvas param1, d param2, boolean param3, int param4, ki param5) {
+    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, d param2, boolean param3, int param4, ResourceArchive param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         java.awt.Dimension var8 = null;
-        ha stackIn_5_0 = null;
+        GraphicsToolkit stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -82,7 +82,7 @@ final class ks extends ff {
           if (!param3) {
             field_x = (cp) null;
           }
-          stackIn_5_0 = ha.a(param0, param1, -1, param4, param2, var7, var6_int, param5);
+          stackIn_5_0 = GraphicsToolkit.a(param0, param1, -1, param4, param2, var7, var6_int, param5);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class ks extends ff {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ks extends ff {
     }
 
     static {
-        field_u = "Email (Login):";
+        emailLoginText = "Email (Login):";
         field_v = 0;
     }
 }

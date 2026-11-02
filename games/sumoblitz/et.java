@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class et extends du {
+final class et extends AudioOutput {
     private int field_y;
     private javax.sound.sampled.AudioFormat field_w;
     private byte[] field_x;
     private boolean field_v;
     private javax.sound.sampled.SourceDataLine field_z;
-    private static String field_A;
+    private static String soundmaxText;
 
     final void g() {
         if (this.field_z != null) {
@@ -62,7 +62,7 @@ final class et extends du {
             if (var5 != null) {
               var6 = var5.getName();
               if (var6 != null &&
-                var6.toLowerCase().indexOf(field_A) >= 0) {
+                var6.toLowerCase().indexOf(soundmaxText) >= 0) {
                 this.field_v = true;
               }
             }
@@ -128,6 +128,6 @@ final class et extends du {
     }
 
     static {
-        field_A = "soundmax";
+        soundmaxText = "soundmax";
     }
 }

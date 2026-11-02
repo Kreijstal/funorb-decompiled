@@ -16,7 +16,7 @@ abstract class dw implements v {
 
     abstract gf b(byte param0);
 
-    final static void a(ki param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         qp[] var3 = null;
         qp[] var2 = null;
         qp[] var4 = null;
@@ -241,7 +241,7 @@ abstract class dw implements v {
           rc.field_l[25] = eb.field_b.a(63, "ball armoured hit 4");
           rc.field_l[26] = eb.field_b.a(-120, "ball armoured hit5");
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "dw.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dw.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

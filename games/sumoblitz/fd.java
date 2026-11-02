@@ -7,7 +7,7 @@ final class fd extends uw {
     private long[] field_h;
     private int field_f;
     private long field_l;
-    static String field_i;
+    static String clickText;
     static long field_k;
     private long field_e;
     private long field_j;
@@ -43,13 +43,13 @@ final class fd extends uw {
           if (param6 != 0) {
             fd.c(127);
           }
-          if (hm.field_a != nw.field_e) {
+          if (hm.field_a != ProxySocketConnector.field_e) {
             return false;
           }
           var8 = new uk(rf.field_a, param0);
           var7 = var8;
           rf.field_a.a((byte) 111, var8);
-          if (fh.c(param6 ^ -123)) {
+          if (ImageProducerRasterBuffer.c(param6 ^ -123)) {
             var8.f(true);
             return true;
           }
@@ -57,7 +57,7 @@ final class fd extends uw {
           vr.field_G = param1;
           in.field_C = param3;
           eg.field_l = null;
-          nw.field_e = ad.field_p;
+          ProxySocketConnector.field_e = ad.field_p;
           bi.field_d = param4;
           lq.field_d = param5;
           return true;
@@ -89,12 +89,12 @@ final class fd extends uw {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     public static void c(int param0) {
-        field_i = null;
+        clickText = null;
         int var1 = 121 % ((75 - param0) / 32);
         field_d = null;
     }
@@ -180,7 +180,7 @@ final class fd extends uw {
     }
 
     static {
-        field_i = "Click";
+        clickText = "Click";
         field_k = 0L;
         field_d = new Random();
     }

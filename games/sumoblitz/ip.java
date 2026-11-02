@@ -45,7 +45,7 @@ final class ip extends ml {
             }
             return;
           }
-          pu.field_e.a(cc.field_j, c.field_r, true, param0 - 1886067878);
+          pu.field_e.a(JaggrabDownloader.field_j, c.field_r, true, param0 - 1886067878);
           if (param0 != 1886067877) {
             ip.d((byte) -127);
           }
@@ -57,7 +57,7 @@ final class ip extends ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ip.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ip.D(" + param0 + ')');
         }
     }
 

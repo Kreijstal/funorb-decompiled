@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class co implements cr {
-    private ir field_e;
+    private DirectXGraphicsToolkit field_e;
     private int field_b;
     private boolean field_c;
     private jagdx.IDirect3DIndexBuffer field_f;
@@ -91,7 +91,7 @@ final class co implements cr {
         return null;
     }
 
-    co(ir param0, io param1, boolean param2) {
+    co(DirectXGraphicsToolkit param0, io param1, boolean param2) {
         this.field_c = false;
         this.field_e = param0;
         this.field_g = param2 ? true : false;

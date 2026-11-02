@@ -7,7 +7,7 @@ final class mr {
     static of field_f;
     private d field_c;
     private sd field_d;
-    private aw field_a;
+    private HardwareGraphicsToolkit field_a;
 
     public static void a(byte param0) {
         field_b = null;
@@ -37,54 +37,54 @@ final class mr {
         wm var12;
         float[] var39;
         int stackIn_9_0 = 0;
-        aw stackIn_13_0;
+        HardwareGraphicsToolkit stackIn_13_0;
         int stackIn_13_1;
         iw stackIn_13_2;
         int stackIn_13_3;
         boolean stackIn_14_4 = false;
-        aw stackIn_23_0 = null;
+        HardwareGraphicsToolkit stackIn_23_0 = null;
         int[] stackIn_23_1 = null;
         int stackIn_23_2 = 0;
         boolean stackIn_24_3 = false;
-        aw stackIn_29_0 = null;
+        HardwareGraphicsToolkit stackIn_29_0 = null;
         int[] stackIn_29_1 = null;
         int stackIn_29_2 = 0;
         boolean stackIn_30_3 = false;
-        aw stackIn_34_0 = null;
+        HardwareGraphicsToolkit stackIn_34_0 = null;
         int[] stackIn_34_1 = null;
         int stackIn_34_2 = 0;
         boolean stackIn_35_3;
-        aw stackIn_40_0 = null;
+        HardwareGraphicsToolkit stackIn_40_0 = null;
         int[] stackIn_40_1 = null;
         int stackIn_40_2 = 0;
         boolean stackIn_41_3 = false;
         int stackIn_48_0 = 0;
-        aw stackIn_52_0;
+        HardwareGraphicsToolkit stackIn_52_0;
         int stackIn_52_1;
         iw stackIn_52_2;
         int stackIn_52_3;
         boolean stackIn_53_4 = false;
-        aw stackIn_57_0 = null;
+        HardwareGraphicsToolkit stackIn_57_0 = null;
         int[] stackIn_57_1 = null;
         int stackIn_57_2 = 0;
         boolean stackIn_58_3 = false;
-        aw stackIn_62_0 = null;
+        HardwareGraphicsToolkit stackIn_62_0 = null;
         int[] stackIn_62_1 = null;
         int stackIn_62_2 = 0;
         boolean stackIn_63_3 = false;
-        aw stackIn_66_0 = null;
+        HardwareGraphicsToolkit stackIn_66_0 = null;
         int[] stackIn_66_1 = null;
         int stackIn_66_2 = 0;
         boolean stackIn_67_3 = false;
-        aw stackIn_72_0 = null;
+        HardwareGraphicsToolkit stackIn_72_0 = null;
         int[] stackIn_72_1 = null;
         int stackIn_72_2 = 0;
         boolean stackIn_73_3 = false;
-        aw stackIn_77_0 = null;
+        HardwareGraphicsToolkit stackIn_77_0 = null;
         int[] stackIn_77_1 = null;
         int stackIn_77_2 = 0;
         boolean stackIn_78_3;
-        aw stackIn_83_0 = null;
+        HardwareGraphicsToolkit stackIn_83_0 = null;
         int[] stackIn_83_1 = null;
         int stackIn_83_2 = 0;
         boolean stackIn_84_3 = false;
@@ -137,7 +137,7 @@ final class mr {
               stackIn_13_2 = nl.field_p;
               stackIn_13_3 = 110;
               stackIn_14_4 = (var12.field_k == 0) ? false : true;
-              var4 = ((aw) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
+              var4 = ((HardwareGraphicsToolkit) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
               var4.a(var12.field_i, var12.field_l, true);
               this.field_d.a((long)param1, var4, (byte) 19);
               return var4;
@@ -155,7 +155,7 @@ final class mr {
             stackIn_23_1 = var7;
             stackIn_23_2 = var6;
             stackIn_24_3 = (var12.field_k == 0) ? false : true;
-            var13 = ((aw) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_24_3, -97, var6);
+            var13 = ((HardwareGraphicsToolkit) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_24_3, -97, var6);
             var13.a(var12.field_i, var12.field_l, true);
             this.field_d.a((long)param1, var13, (byte) 19);
             return var13;
@@ -166,7 +166,7 @@ final class mr {
             stackIn_29_1 = var7Lifetime5;
             stackIn_29_2 = var6;
             stackIn_30_3 = (var12.field_k == 0) ? false : true;
-            var18 = ((aw) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, -97, var6);
+            var18 = ((HardwareGraphicsToolkit) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, -97, var6);
             var18.a(var12.field_i, var12.field_l, true);
             this.field_d.a((long)param1, var18, (byte) 19);
             return var18;
@@ -177,7 +177,7 @@ final class mr {
             stackIn_40_1 = var7Lifetime6;
             stackIn_40_2 = var6;
             stackIn_41_3 = (var12.field_k == 0) ? false : true;
-            var23 = ((aw) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3, -97, var6);
+            var23 = ((HardwareGraphicsToolkit) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3, -97, var6);
             var23.a(var12.field_i, var12.field_l, true);
             this.field_d.a((long)param1, var23, (byte) 19);
             return var23;
@@ -187,7 +187,7 @@ final class mr {
           stackIn_34_1 = var7Lifetime7;
           stackIn_34_2 = var6;
           stackIn_35_3 = (var12.field_k == 0) ? false : true;
-          var4Lifetime3 = ((aw) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -97, var6);
+          var4Lifetime3 = ((HardwareGraphicsToolkit) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -97, var6);
           var4Lifetime3.a(var12.field_i, var12.field_l, true);
           this.field_d.a((long)param1, var4Lifetime3, (byte) 19);
           return var4Lifetime3;
@@ -209,7 +209,7 @@ final class mr {
             stackIn_72_1 = var7Lifetime1;
             stackIn_72_2 = var6Lifetime1;
             stackIn_73_3 = (var29.field_k == 0) ? false : true;
-            var33 = ((aw) (Object) stackIn_72_0).a(stackIn_72_1, stackIn_72_2, stackIn_73_3, -97, var6Lifetime1);
+            var33 = ((HardwareGraphicsToolkit) (Object) stackIn_72_0).a(stackIn_72_1, stackIn_72_2, stackIn_73_3, -97, var6Lifetime1);
             var33.a(var29.field_i, var29.field_l, true);
             this.field_d.a((long)param1, var33, (byte) 19);
             return var33;
@@ -220,7 +220,7 @@ final class mr {
             stackIn_83_1 = var7Lifetime1Lifetime1;
             stackIn_83_2 = var6Lifetime1;
             stackIn_84_3 = (var29.field_k == 0) ? false : true;
-            var34 = ((aw) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, stackIn_84_3, -97, var6Lifetime1);
+            var34 = ((HardwareGraphicsToolkit) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, stackIn_84_3, -97, var6Lifetime1);
             var34.a(var29.field_i, var29.field_l, true);
             this.field_d.a((long)param1, var34, (byte) 19);
             return var34;
@@ -230,7 +230,7 @@ final class mr {
           stackIn_77_1 = var7Lifetime1Lifetime2;
           stackIn_77_2 = var6Lifetime1;
           stackIn_78_3 = (var29.field_k == 0) ? false : true;
-          var4Lifetime1 = ((aw) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_77_2, stackIn_78_3, -97, var6Lifetime1);
+          var4Lifetime1 = ((HardwareGraphicsToolkit) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_77_2, stackIn_78_3, -97, var6Lifetime1);
           var4Lifetime1.a(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var4Lifetime1, (byte) 19);
           return var4Lifetime1;
@@ -242,7 +242,7 @@ final class mr {
           stackIn_52_2 = nl.field_p;
           stackIn_52_3 = 110;
           stackIn_53_4 = (var29.field_k == 0) ? false : true;
-          var4Lifetime2 = ((aw) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);
+          var4Lifetime2 = ((HardwareGraphicsToolkit) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);
           var4Lifetime2.a(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var4Lifetime2, (byte) 19);
           return var4Lifetime2;
@@ -253,7 +253,7 @@ final class mr {
           stackIn_57_1 = var7Lifetime2;
           stackIn_57_2 = var6Lifetime1;
           stackIn_58_3 = (var29.field_k == 0) ? false : true;
-          var30 = ((aw) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_58_3, -97, var6Lifetime1);
+          var30 = ((HardwareGraphicsToolkit) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_58_3, -97, var6Lifetime1);
           var30.a(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var30, (byte) 19);
           return var30;
@@ -264,7 +264,7 @@ final class mr {
           stackIn_66_1 = var7Lifetime3;
           stackIn_66_2 = var6Lifetime1;
           stackIn_67_3 = (var29.field_k == 0) ? false : true;
-          var31 = ((aw) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, stackIn_67_3, -97, var6Lifetime1);
+          var31 = ((HardwareGraphicsToolkit) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, stackIn_67_3, -97, var6Lifetime1);
           var31.a(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var31, (byte) 19);
           return var31;
@@ -274,7 +274,7 @@ final class mr {
         stackIn_62_1 = var7Lifetime4;
         stackIn_62_2 = var6Lifetime1;
         stackIn_63_3 = (var29.field_k == 0) ? false : true;
-        var32 = ((aw) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_63_3, -97, var6Lifetime1);
+        var32 = ((HardwareGraphicsToolkit) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_63_3, -97, var6Lifetime1);
         var32.a(var29.field_i, var29.field_l, true);
         this.field_d.a((long)param1, var32, (byte) 19);
         return var32;
@@ -342,17 +342,17 @@ final class mr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
-    mr(aw param0, d param1) {
+    mr(HardwareGraphicsToolkit param0, d param1) {
         this.field_d = new sd(256);
         try {
           this.field_a = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

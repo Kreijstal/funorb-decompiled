@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class tl extends ms {
+final class tl extends IntrusiveNode {
     static int field_t;
     int field_n;
     private int field_w;
@@ -17,9 +17,9 @@ final class tl extends ms {
     static int field_v;
     private int field_l;
     private int field_o;
-    private jn field_r;
+    private IntrusiveDeque field_r;
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, GraphicsToolkit param1) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -91,7 +91,7 @@ final class tl extends ms {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -103,11 +103,11 @@ final class tl extends ms {
     private final int d(byte param0) {
         int var2;
         int var3;
-        ha var4;
+        GraphicsToolkit var4;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0 < 28) {
-          var4 = (ha) null;
-          this.a(77, (ha) null);
+          var4 = (GraphicsToolkit) null;
+          this.a(77, (GraphicsToolkit) null);
         }
         var2 = -1414832128;
         if (this.field_n == 0) {
@@ -169,7 +169,7 @@ final class tl extends ms {
           }
           this.field_w = -this.field_w;
         } else {
-          if (this.field_x > -52 + rj.field_c << 8 &&
+          if (this.field_x > -52 + ArchiveCatalog.field_c << 8 &&
             this.field_w >= 0) {
             if (0 == this.field_w) {
               this.field_w = -256;
@@ -195,9 +195,9 @@ final class tl extends ms {
         if (1 == this.field_m && (this.field_w != 0 ||
           this.field_p != 0)) {
           if (0 == this.field_u % 2) {
-            this.field_r.a((ms) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + this.field_n, true)), (byte) 39);
+            this.field_r.a((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + this.field_n, true)), (byte) 39);
           } else {
-            this.field_r.a((ms) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + this.field_n, false)), (byte) 39);
+            this.field_r.a((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + this.field_n, false)), (byte) 39);
           }
         }
         if (param0 != -31255) {
@@ -206,7 +206,7 @@ final class tl extends ms {
         var4 = (nt) (this.field_r.b(param0 ^ -31326));
         while (var4 != null) {
           if (var4.a(-2567)) {
-            var4.b(false);
+            var4.unlink(false);
           }
           var4 = (nt) (this.field_r.d((byte) 18));
         }
@@ -216,12 +216,12 @@ final class tl extends ms {
     }
 
     private final boolean e(int param0) {
-        cb var2;
+        IntrusiveDequeCursor var2;
         nm var3;
         int var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = new cb(is.field_c);
+        var2 = new IntrusiveDequeCursor(is.field_c);
         if (param0 > -106) {
           field_v = -85;
         }
@@ -273,7 +273,7 @@ final class tl extends ms {
         this.field_n = param1;
         this.field_l = 5120;
         this.field_x = param2;
-        this.field_r = new jn();
+        this.field_r = new IntrusiveDeque();
     }
 
     static {

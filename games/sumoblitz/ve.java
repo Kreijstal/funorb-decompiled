@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ve extends ms {
+abstract class ve extends IntrusiveNode {
     private boolean field_n;
-    static String field_l;
+    static String waitingForMusicText;
     fr field_m;
     static ri field_k;
 
@@ -15,7 +15,7 @@ abstract class ve extends ms {
         return this.field_n;
     }
 
-    final static wg a(byte param0, on param1, byte[] param2, int param3) {
+    final static wg a(byte param0, OpenGlGraphicsToolkit param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -62,19 +62,19 @@ abstract class ve extends ms {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         field_k = null;
         int var1 = 106 / ((param0 - 71) / 40);
-        field_l = null;
+        waitingForMusicText = null;
     }
 
     abstract void c(int param0);
 
-    final static ki a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, int param3, boolean param4) {
         if (param0 == 11880) {
           return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
         }
@@ -86,11 +86,11 @@ abstract class ve extends ms {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_l = "Waiting for music";
+        waitingForMusicText = "Waiting for music";
     }
 }

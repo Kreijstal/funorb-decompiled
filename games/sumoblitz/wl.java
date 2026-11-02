@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class wl {
-    static String field_b;
+    static String serviceUnavailableText;
     private gj field_c;
     private int field_a;
     private int field_d;
@@ -65,7 +65,7 @@ final class wl {
                 this.field_e.a(to.field_t, 6, (byte) -50, 0);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -81,7 +81,7 @@ final class wl {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (255 & to.field_t[6]) + (16711680 & to.field_t[4] << 16) + ((to.field_t[5] & 255) << 8);
                         var13 = to.field_t[7] & 255;
@@ -97,7 +97,7 @@ final class wl {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = to.field_t[9] & 255;
                         var10 = ((255 & to.field_t[7]) << 8) + (((to.field_t[6] & 255) << 16) + (255 & to.field_t[8]));
@@ -188,7 +188,7 @@ final class wl {
             } else {
               stackIn_73_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -202,9 +202,9 @@ final class wl {
     }
 
     public static void a(byte param0) {
-        field_b = null;
+        serviceUnavailableText = null;
         if (param0 != -90) {
-          field_b = (String) null;
+          serviceUnavailableText = (String) null;
         }
     }
 
@@ -368,7 +368,7 @@ final class wl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -382,11 +382,11 @@ final class wl {
           this.field_d = param0;
           this.field_a = param3;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     static {
-        field_b = "Service unavailable";
+        serviceUnavailableText = "Service unavailable";
     }
 }

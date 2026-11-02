@@ -11106,6 +11106,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "sumoblitz": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/sumoblitz"
+      },
+      "inputTreeSha256": "dfdbde2d64759f8dd722b88882ac48873a91678b6b97428875939f419d9e9bcc",
+      "sources": {
+        "files": 586,
+        "sha256": "69f6f1f06cd54fdebbaaea360898dc93c2e45bb2bae2ee5deb75a07e63e0f141"
+      },
+      "dictionary": {
+        "path": "decompilation/sumoblitz-naming.json",
+        "sha256": "a689ab2e7188e4bc80524be4cfa84223b7563a8c8787be6a0f6f24651b28464e"
+      },
+      "readingGuide": {
+        "path": "games/sumoblitz/README.md",
+        "sha256": "84ad5923cd2850517cb3fbe67dca3b5a4009a8628821c711ccd925fae126fcc8"
+      },
+      "rulesSha256": "7ad69107e9d230dc5e8e9395c7bd54081e68d7b7a29cae1125d11527a55b14c9",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12839,6 +12863,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 586,
+          "sha256": "69f6f1f06cd54fdebbaaea360898dc93c2e45bb2bae2ee5deb75a07e63e0f141"
         }
       },
       "terraphoenix": {

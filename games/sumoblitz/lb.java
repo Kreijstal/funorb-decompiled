@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lb {
-    static String[] field_c;
+    static String[] yesNoLabels;
     static int field_b;
     static long field_a;
 
     public static void a(int param0) {
-        field_c = null;
+        yesNoLabels = null;
         if (param0 != 0) {
-          field_c = (String[]) null;
+          yesNoLabels = (String[]) null;
         }
     }
 
@@ -45,12 +45,12 @@ final class lb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
         field_b = 0;
-        field_c = new String[]{"Yes", "No"};
+        yesNoLabels = new String[]{"Yes", "No"};
     }
 }

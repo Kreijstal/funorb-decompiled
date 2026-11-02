@@ -26,7 +26,7 @@ final class qu {
         int[][] stackIn_41_0 = null;
         int stackIn_42_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ha var2 = null;
+        GraphicsToolkit var2 = null;
         RuntimeException var2_ref = null;
         int var3_int = 0;
         int[] var3 = null;
@@ -98,7 +98,7 @@ final class qu {
           }
           var3 = nf.a(this.field_c[lg.field_c % 500], (byte) -118, 480, this.field_g[lg.field_c % 500]);
           var4_intLifetime1 = 0;
-          L11: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var4_intLifetime1 < 480) {
               var2.a(var3[var4_intLifetime1] - 16777216, param0 + 23, var4_intLifetime1, 640, 0);
@@ -108,7 +108,7 @@ final class qu {
               }
             } else {
               if (ul.field_f == 0) {
-                ej.field_i.a((int)this.field_a, (int)this.field_f, 0, 1140850688, 1);
+                OpenGlEnvironmentWaterEffect.field_i.a((int)this.field_a, (int)this.field_f, 0, 1140850688, 1);
                 if (null != ni.field_e) {
                   var4 = (gw) (ni.field_e.b(125));
                   while (var4 != null) {
@@ -126,7 +126,7 @@ final class qu {
               (ul.field_f == 1)) {
               this.a(24, var2);
               if (var9 == 0) {
-                break L11;
+                break scanLoop1;
               }
             }
             this.b(-109, var2);
@@ -137,11 +137,11 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "qu.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "qu.I(" + param0 + ')');
         }
     }
 
-    private final void a(int param0, ha param1) {
+    private final void a(int param0, GraphicsToolkit param1) {
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_23_0 = 0;
@@ -166,7 +166,7 @@ final class qu {
           var3_int = 0;
           var4 = (lg.field_c >> 1) % ok.field_f.length;
           var5 = 32;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var5 < 608) {
               ok.field_f[0].a(var5, 5, 1, var3_int << 24, 1);
@@ -181,7 +181,7 @@ final class qu {
                   var4++;
                   stackIn_23_0 = ~ok.field_f.length;
                   stackIn_23_1 = ~var4;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -207,7 +207,7 @@ final class qu {
                 stackIn_23_0 = ~ok.field_f.length;
                 stackIn_23_1 = ~var4;
                 if (var6 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (stackIn_23_0 == stackIn_23_1) {
                   var4 = 0;
@@ -233,11 +233,11 @@ final class qu {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    final void a(int param0, ha param1, boolean param2) {
+    final void a(int param0, GraphicsToolkit param1, boolean param2) {
         Object stackIn_20_0 = null;
         int stackIn_34_0 = 0;
         to stackIn_44_0 = null;
@@ -322,10 +322,10 @@ final class qu {
               ng.field_f[1].a((float)(ua.field_d >> 8), (float)(-64 + (field_l >> 8)), 4096, 16384, 1, 0, 2);
               ng.field_f[0].a((float)(ua.field_d >> 8), (float)(field_l >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
               if (var6 != 0) {
-                pn.field_t.a((ua.field_d >> 8) - (pn.field_t.c() >> 1), (field_l >> 8) - (pn.field_t.a() >> 1), 1, 0, 2);
+                OpenGlUnderwaterEffect.field_t.a((ua.field_d >> 8) - (OpenGlUnderwaterEffect.field_t.c() >> 1), (field_l >> 8) - (OpenGlUnderwaterEffect.field_t.a() >> 1), 1, 0, 2);
               }
             } else {
-              pn.field_t.a((ua.field_d >> 8) - (pn.field_t.c() >> 1), (field_l >> 8) - (pn.field_t.a() >> 1), 1, 0, 2);
+              OpenGlUnderwaterEffect.field_t.a((ua.field_d >> 8) - (OpenGlUnderwaterEffect.field_t.c() >> 1), (field_l >> 8) - (OpenGlUnderwaterEffect.field_t.a() >> 1), 1, 0, 2);
             }
           }
           boolean decompiledFrameCompleted0 = true;
@@ -380,14 +380,14 @@ final class qu {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void e(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        cb var3 = null;
+        IntrusiveDequeCursor var3 = null;
         nm var4 = null;
         int var5 = 0;
         ah var6 = null;
@@ -397,17 +397,17 @@ final class qu {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2_int = 0;
-          var3 = new cb(is.field_c);
+          var3 = new IntrusiveDequeCursor(is.field_c);
           if (param0 < 59) {
             return;
           }
           var4 = (nm) (var3.b((byte) -80));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var4 != null) {
               var4.a(1048149637);
               stackIn_20_0 = 0;
               if (var7 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var5 = stackIn_20_0;
               while (var5 < aa.field_a.length) {
@@ -420,7 +420,7 @@ final class qu {
                 var5++;
               }
               var4 = (nm) (var3.b(0));
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_20_0 = var2_int;
             break;
@@ -433,7 +433,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.P(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.P(" + param0 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class qu {
             field_i = (float[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.O(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.O(" + param0 + ')');
         }
     }
 
@@ -656,7 +656,7 @@ final class qu {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -679,7 +679,7 @@ final class qu {
             stackIn_4_0 = stackOut_3_0;
             if (var4 == 0) {
               if (stackIn_4_0) {
-                var2.b(false);
+                var2.unlink(false);
               }
               var2 = (gw) (ni.field_e.d((byte) 18));
               continue;
@@ -694,7 +694,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.F(" + param0 + ')');
         }
     }
 
@@ -722,30 +722,30 @@ final class qu {
                 gn.a(27, true);
                 if (2 == var3.field_n) {
                   b.field_c = true;
-                  rn.a(ee.field_a[2] + "+", var2.field_C >> 8, var2.field_z >> 8, 16732416, 28807);
+                  rn.a(UpgradeStatNames.names[2] + "+", var2.field_C >> 8, var2.field_z >> 8, 16732416, 28807);
                 } else if (var3.field_n != 0) {
                   if (var3.field_n == 1) {
                     cl.field_w = true;
-                    rn.a(ee.field_a[1] + "+", var2.field_C >> 8, var2.field_z >> 8, 12714108, param0 + 43661);
+                    rn.a(UpgradeStatNames.names[1] + "+", var2.field_C >> 8, var2.field_z >> 8, 12714108, param0 + 43661);
                   } else if (3 != var3.field_n) {
                     if (4 == var3.field_n) {
                       cl.field_w = true;
-                      rn.a(ee.field_a[4], var2.field_C >> 8, var2.field_z >> 8, 44031, param0 + 43661);
+                      rn.a(UpgradeStatNames.names[4], var2.field_C >> 8, var2.field_z >> 8, 44031, param0 + 43661);
                     }
                   } else {
                     cl.field_w = true;
-                    rn.a(ee.field_a[3], var2.field_C >> 8, var2.field_z >> 8, 16711680, 28807);
+                    rn.a(UpgradeStatNames.names[3], var2.field_C >> 8, var2.field_z >> 8, 16711680, 28807);
                   }
                 } else {
-                  hl.field_e = true;
-                  rn.a(ee.field_a[0] + "+", var2.field_C >> 8, var2.field_z >> 8, 32780, 28807);
+                  SecondaryNodeDeque.field_e = true;
+                  rn.a(UpgradeStatNames.names[0] + "+", var2.field_C >> 8, var2.field_z >> 8, 32780, 28807);
                 }
                 vb.field_E = true;
-                var3.b(false);
+                var3.unlink(false);
               }
             }
             if (var3.field_q <= 0) {
-              var3.b(false);
+              var3.unlink(false);
             }
             var3 = (tl) (bj.field_b.d((byte) 18));
           }
@@ -756,7 +756,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "qu.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "qu.E(" + param0 + ')');
         }
     }
 
@@ -779,10 +779,10 @@ final class qu {
           if (ku.field_j < 2) {
             return;
           }
-          L4: {
-            L5: {
-              L6: {
-                L7: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
                   boolean decompiledFrameRemainder0 = true;
                   var2_int = tg.field_a;
                   if (var2_int != 13 && (var2_int != 35 ||
@@ -795,16 +795,16 @@ final class qu {
                     if (decompiledFrameRemainder0) {
                       switch (var2_int) {
                         case 12:
-                          break L7;
+                          break regionExit4;
                         case 11:
-                          break L6;
+                          break regionExit3;
                         case 10:
-                          break L5;
+                          break regionExit2;
                         default:
                           return;
                         case 9:
                           if (var3 == 0) {
-                            break L4;
+                            break regionExit1;
                           }
                           break;
                       }
@@ -850,7 +850,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "qu.J(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qu.J(" + param0 + ')');
         }
     }
 
@@ -862,7 +862,7 @@ final class qu {
             field_i = (float[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.L(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.L(" + param0 + ')');
         }
     }
 
@@ -871,16 +871,16 @@ final class qu {
         RuntimeException var2 = null;
         try {
           if (param0 != -120) {
-            this.a(109, (ha) null);
+            this.a(109, (GraphicsToolkit) null);
           }
-          hb.field_a = null;
+          GameKeyHandler.field_a = null;
           ig.field_b.e(116);
           in.field_z = 0;
           f.field_w = false;
           fb.field_a = 0;
-          ha.field_f = 0;
+          GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
-          wj.field_e = 0;
+          OpenGlTransparentWaterEffect.field_e = 0;
           iw.field_b = 0;
           kn.field_b = 0;
           te.field_c = 0;
@@ -893,11 +893,11 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "qu.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qu.G(" + param0 + ')');
         }
     }
 
-    private final void b(int param0, ha param1) {
+    private final void b(int param0, GraphicsToolkit param1) {
         int stackIn_10_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
@@ -1002,7 +1002,7 @@ final class qu {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -1061,7 +1061,7 @@ final class qu {
                 break;
               }
               if (stackIn_31_0) {
-                var3.b(false);
+                var3.unlink(false);
               }
               var3 = (nt) (rc.field_m.d((byte) 18));
             }
@@ -1080,7 +1080,7 @@ final class qu {
             return;
           }
           if (param1 >= -65) {
-            this.a(-55, (ha) null);
+            this.a(-55, (GraphicsToolkit) null);
           }
           if (iw.field_b - uc.field_f == 100 &&
             !td.field_m &&
@@ -1090,7 +1090,7 @@ final class qu {
           boolean decompiledFrameRemainder2 = true;
           if (nd.field_F > 0) {
             ts.field_a = ts.field_a + 8;
-            ha.field_f = ha.field_f + 10;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
             fb.field_a = fb.field_a - 5;
             kn.field_b = kn.field_b - 3;
             iw.field_b = iw.field_b + 1;
@@ -1104,9 +1104,9 @@ final class qu {
                 if (var6 != 0) {
                   if (gj.a((byte) -84, 10) >= 5) {
                     fb.field_a = fb.field_a - 1;
-                    ha.field_f = ha.field_f - 1;
+                    GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   } else {
-                    ha.field_f = ha.field_f - 1;
+                    GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   }
                 }
               }
@@ -1114,10 +1114,10 @@ final class qu {
               if (gj.a((byte) -84, 10) >= 5) {
                 fb.field_a = fb.field_a - 1;
                 if (var6 != 0) {
-                  ha.field_f = ha.field_f - 1;
+                  GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                 }
               } else {
-                ha.field_f = ha.field_f - 1;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
               }
             }
           }
@@ -1162,7 +1162,7 @@ final class qu {
                 if (wn.a(field_l, var3_ref.field_m, -105, var3_ref.field_C, ua.field_d, var3_ref.field_z)) {
                   ro.a(var3_ref, (byte) 113);
                   if (ul.field_f == 0) {
-                    rc.field_m.a((ms) (new fi(ua.field_d, field_l, -1)), (byte) 39);
+                    rc.field_m.a((IntrusiveNode) (new fi(ua.field_d, field_l, -1)), (byte) 39);
                   }
                   gn.a(30, true);
                 }
@@ -1174,7 +1174,7 @@ final class qu {
             }
             if (fa.field_b == 30 &&
               0 == ul.field_f) {
-              rc.field_m.a((ms) (new gb(ua.field_d, field_l, -1)), (byte) 39);
+              rc.field_m.a((IntrusiveNode) (new gb(ua.field_d, field_l, -1)), (byte) 39);
             }
             if (30 == fa.field_b) {
               gn.a(32, true);
@@ -1191,7 +1191,7 @@ final class qu {
             stackIn_151_0 = stackOut_150_0;
             if (var6 == 0) {
               if (stackIn_151_0) {
-                var3_ref2.b(false);
+                var3_ref2.unlink(false);
               }
               var3_ref2 = (to) (ig.field_b.d((byte) 18));
               continue;
@@ -1202,14 +1202,14 @@ final class qu {
             stackIn_158_0 = ~an.field_a;
           }
           if (stackIn_158_0 != -1) {
-            boolean decompiledSharedTail0 = (-sr.field_b + iw.field_b != 5);
+            boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + iw.field_b != 5);
             if (!decompiledSharedTail0) {
-              rn.a(ff.field_m, 320, 240, 16755456, 28807);
+              rn.a(ff.warningText, 320, 240, 16755456, 28807);
               decompiledSharedTail0 = (var6 != 0);
             }
             if ((decompiledSharedTail0) &&
-              (10 == -sr.field_b + iw.field_b)) {
-              rn.a(ff.field_m, 320, 255, 16776960, 28807);
+              (10 == -LimitedRandomAccessFile.field_b + iw.field_b)) {
+              rn.a(ff.warningText, 320, 255, 16776960, 28807);
             }
           }
           boolean decompiledFrameCompleted1 = true;
@@ -1236,7 +1236,7 @@ final class qu {
                 if (incrementValue$0 <= 0) {
                   break;
                 }
-                oc.a(uj.a(Math.max(7, fi.a((int)(Math.log((double)in.field_z) / Math.log(10.0)), ki.field_b, (byte) -96)), fi.a(588, ki.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8), false);
+                oc.a(uj.a(Math.max(7, fi.a((int)(Math.log((double)in.field_z) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), fi.a(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8), false);
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1246,7 +1246,7 @@ final class qu {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            wj.d(22403);
+            OpenGlTransparentWaterEffect.d(22403);
           }
           if (decompiledFrameCompleted1) {
             if (param0 &&
@@ -1261,7 +1261,7 @@ final class qu {
             if ((gt.field_bb) &&
               (decompiledFrameRemainder0 = (0 == iw.field_b % 250)) &&
               (decompiledFrameRemainder0 = !(jc.b(true) >= (aa.field_a.length - 1)))) {
-              var4 = uj.a(1, fi.a(588, ki.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+              var4 = uj.a(1, fi.a(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
               oc.a(var4, false);
               decompiledFrameRemainder0 = (var6 != 0);
             }
@@ -1296,8 +1296,8 @@ final class qu {
                     break;
                   }
                   if (~an.field_a != ~(-1 + ku.field_J.length)) {
-                    sr.field_b = iw.field_b;
-                    rn.a(ff.field_m, 320, 225, 16711680, 28807);
+                    LimitedRandomAccessFile.field_b = iw.field_b;
+                    rn.a(ff.warningText, 320, 225, 16711680, 28807);
                   }
                   an.field_a = an.field_a + 1;
                   gn.a(14, true);
@@ -1330,7 +1330,7 @@ final class qu {
                   th.b(24753, 251, 4);
                 }
                 if (nq.field_i == 5 &&
-                  !hl.field_e) {
+                  !SecondaryNodeDeque.field_e) {
                   th.b(24753, 250, 5);
                 }
                 if (nq.field_i == 5 &&
@@ -1355,7 +1355,7 @@ final class qu {
                     th.b(24753, 252, 3);
                   }
                   if (oh.field_e == 25) {
-                    if (ki.field_f == 10) {
+                    if (ResourceArchive.field_f == 10) {
                       th.b(24753, 255, 0);
                     }
                     if (iv.field_i == 10) {
@@ -1406,7 +1406,7 @@ final class qu {
           if (null != aa.field_a[0]) {
             var4Lifetime1 = aa.field_a[0];
             if (var4Lifetime1.i(-2)) {
-              this.a(231, 6356832, pu.field_a);
+              this.a(231, 6356832, pu.blastReadyText);
             }
             if (var4Lifetime1.g((byte) -59) &&
               this.field_b) {
@@ -1445,7 +1445,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3_ref3), "qu.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3_ref3), "qu.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1456,7 +1456,7 @@ final class qu {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ig.field_b.a((ms) (new to(param2, param1)), (byte) 39);
+          ig.field_b.a((IntrusiveNode) (new to(param2, param1)), (byte) 39);
           if (param0 != 231) {
             this.c(-6);
           }
@@ -1471,7 +1471,7 @@ final class qu {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1520,8 +1520,8 @@ final class qu {
           if (lg.field_c % param0 == 0 ||
             this.field_h == this.field_a &&
             this.field_m == this.field_f) {
-            var2_int = fi.a(640 + ej.field_i.c(), ki.field_b, (byte) -96) - ej.field_i.c();
-            var3 = fi.a(480 + ej.field_i.a(), ki.field_b, (byte) -96) - ej.field_i.a();
+            var2_int = fi.a(640 + OpenGlEnvironmentWaterEffect.field_i.c(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.c();
+            var3 = fi.a(480 + OpenGlEnvironmentWaterEffect.field_i.a(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.a();
             this.field_d = (-this.field_f + (double)var3) / 2500.0;
             this.field_e = (-this.field_a + (double)var2_int) / 2500.0;
           }
@@ -1529,19 +1529,19 @@ final class qu {
             ni.field_e != null) {
             var2_intLifetime1 = 0;
             var3Lifetime1 = 0;
-            if (0 == fi.a(2, ki.field_b, (byte) -96)) {
-              var2_intLifetime1 = fi.a(163840, ki.field_b, (byte) -96);
+            if (0 == fi.a(2, ResourceArchive.field_b, (byte) -96)) {
+              var2_intLifetime1 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
               if (var10 != 0) {
-                var3Lifetime1 = fi.a(163840, ki.field_b, (byte) -96);
+                var3Lifetime1 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
               }
             } else {
-              var3Lifetime1 = fi.a(163840, ki.field_b, (byte) -96);
+              var3Lifetime1 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
             }
-            var4 = fi.a(65536, ki.field_b, (byte) -96);
+            var4 = fi.a(65536, ResourceArchive.field_b, (byte) -96);
             var5 = Math.random() / 500.0;
-            var7 = 1 + fi.a(256, ki.field_b, (byte) -96);
-            var8 = 1 + fi.a(256, ki.field_b, (byte) -96);
-            if (fi.a(2, ki.field_b, (byte) -96) == 0) {
+            var7 = 1 + fi.a(256, ResourceArchive.field_b, (byte) -96);
+            var8 = 1 + fi.a(256, ResourceArchive.field_b, (byte) -96);
+            if (fi.a(2, ResourceArchive.field_b, (byte) -96) == 0) {
               if (var2_intLifetime1 > 0) {
                 var8 = var8 * -1;
                 var3Lifetime1 = 122880;
@@ -1574,25 +1574,25 @@ final class qu {
               stackIn_29_7 = 0;
             }
             var9 = new gw(stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, (double)var4, var5, var7, var8);
-            ni.field_e.a((ms) (var9), (byte) 39);
+            ni.field_e.a((IntrusiveNode) (var9), (byte) 39);
           }
           if (lg.field_c % 200 == 0 &&
             ni.field_e != null) {
             var2_intLifetime2 = 0;
             var3Lifetime2 = 0;
-            if (0 != fi.a(2, ki.field_b, (byte) -96)) {
-              var3Lifetime2 = fi.a(163840, ki.field_b, (byte) -96);
+            if (0 != fi.a(2, ResourceArchive.field_b, (byte) -96)) {
+              var3Lifetime2 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
               if (var10 != 0) {
-                var2_intLifetime2 = fi.a(163840, ki.field_b, (byte) -96);
+                var2_intLifetime2 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
               }
             } else {
-              var2_intLifetime2 = fi.a(163840, ki.field_b, (byte) -96);
+              var2_intLifetime2 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
             }
-            var4Lifetime1 = fi.a(65536, ki.field_b, (byte) -96);
+            var4Lifetime1 = fi.a(65536, ResourceArchive.field_b, (byte) -96);
             var5Lifetime1 = Math.random() / 1000.0;
-            var7Lifetime1 = fi.a(64, ki.field_b, (byte) -96) + 1;
-            var8Lifetime1 = 1 + fi.a(64, ki.field_b, (byte) -96);
-            if (fi.a(2, ki.field_b, (byte) -96) == 0) {
+            var7Lifetime1 = fi.a(64, ResourceArchive.field_b, (byte) -96) + 1;
+            var8Lifetime1 = 1 + fi.a(64, ResourceArchive.field_b, (byte) -96);
+            if (fi.a(2, ResourceArchive.field_b, (byte) -96) == 0) {
               if (0 < var2_intLifetime2) {
                 var3Lifetime2 = 122880;
                 var8Lifetime1 = var8Lifetime1 * -1;
@@ -1625,13 +1625,13 @@ final class qu {
               stackIn_52_7 = 0;
             }
             var9Lifetime1 = new gw(stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_51_5, stackIn_51_6, stackIn_52_7, (double)var4Lifetime1, var5Lifetime1, var7Lifetime1, var8Lifetime1);
-            ni.field_e.a((ms) (var9Lifetime1), (byte) 39);
+            ni.field_e.a((IntrusiveNode) (var9Lifetime1), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "qu.R(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qu.R(" + param0 + ')');
         }
     }
 
@@ -1641,27 +1641,27 @@ final class qu {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 54 / ((-65 - param0) / 47);
-          if (null == hb.field_a &&
+          if (null == GameKeyHandler.field_a &&
             0 < te.field_c &&
             !f.field_w) {
             boolean decompiledSharedTail0 = !(!gt.field_bb);
             if (!decompiledSharedTail0) {
-              hb.field_a = new id(0, 65535, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
+              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              hb.field_a = new id(1, 65534, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
+              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
             }
             if (!vs.b((byte) 9)) {
-              kp.a(3, hb.field_a, 79);
+              kp.a(3, GameKeyHandler.field_a, 79);
             }
-            hb.field_a = null;
+            GameKeyHandler.field_a = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.D(" + param0 + ')');
         }
     }
 
@@ -1671,11 +1671,11 @@ final class qu {
           }
           int var2_int = 31 / ((-57 - param0) / 49);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.Q(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.Q(" + param0 + ')');
         }
     }
 
-    private final void a(byte param0, ha param1) {
+    private final void a(byte param0, GraphicsToolkit param1) {
         int stackIn_40_0 = 0;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
@@ -1712,33 +1712,33 @@ final class qu {
                 } else {
                   to.field_s[3].a(-to.field_s[4].c() + 567, 0);
                   to.field_s[4].a(567, 0);
-                  qv.field_k.a(19, 85, -11753985, ps.field_b + "" + in.field_z, (byte) -21, -1);
-                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.field_b + "</col>" + in.field_z, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.field_x + "" + (oh.field_e + 1) + " " + fq.field_e + "" + pd.field_p + "x " + as.field_x + "" + nd.field_F + "", 19, -11753985, 74);
+                  qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + in.field_z, (byte) -21, -1);
+                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.field_z, (byte) -18, -1);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.field_e + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + as.livesText + "" + nd.field_F + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.field_x + "</col>" + (1 + oh.field_e) + "<col=ffffff> " + fq.field_e + "</col>" + pd.field_p + "x" + "<col=ffffff> " + as.field_x + "</col>" + nd.field_F + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.field_e) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + as.livesText + "</col>" + nd.field_F + "", 19, -4720129, 120);
             }
-            mu.field_B[0].a(139, 448);
-            mu.field_B[1].a(-16 + to.field_s[0].c() + 155, 448);
+            SpriteState.field_B[0].a(139, 448);
+            SpriteState.field_B[1].a(-16 + to.field_s[0].c() + 155, 448);
             var5Lifetime1 = 145 + 2 * to.field_s[1].c();
             while (true) {
               if (var5Lifetime1 < 408) {
-                mu.field_B[2].a(-6 + var5Lifetime1, 448);
+                SpriteState.field_B[2].a(-6 + var5Lifetime1, 448);
                 var5Lifetime1 = var5Lifetime1 + to.field_s[1].c();
                 if (var7 == 0) {
                   continue;
                 }
               } else {
-                mu.field_B[3].a(-to.field_s[4].c() + 475 - 16, 448);
-                mu.field_B[4].a(459, 448);
-                qv.field_k.a(473, 320, -11753985, tj.field_l + dp.b(iw.field_b, -23620) + "", (byte) -73, -1);
-                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + tj.field_l + "</col>" + dp.b(iw.field_b, -23620) + "</col>", (byte) -76, -1);
+                SpriteState.field_B[3].a(-to.field_s[4].c() + 475 - 16, 448);
+                SpriteState.field_B[4].a(459, 448);
+                qv.field_k.a(473, 320, -11753985, tj.timeText + dp.b(iw.field_b, -23620) + "", (byte) -73, -1);
+                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + tj.timeText + "</col>" + dp.b(iw.field_b, -23620) + "</col>", (byte) -76, -1);
               }
               if (gt.field_bb) {
-                qv.field_k.a(473, 175, -11753985, ps.field_b + "" + in.field_z, (byte) -125, -1);
-                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.field_b + "</col>" + in.field_z, (byte) -112, -1);
+                qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + in.field_z, (byte) -125, -1);
+                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.field_z, (byte) -112, -1);
               }
               pr.field_k[0].a(3, 42);
               var3.a((byte) 75, 395 - var4.d((byte) -106) + 42, 42 + pr.field_k[0].a(), 0, 40);
@@ -1786,7 +1786,7 @@ final class qu {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -1808,7 +1808,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "qu.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qu.K(" + param0 + ')');
         }
     }
 
@@ -1816,16 +1816,16 @@ final class qu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          hb.field_a = null;
+          GameKeyHandler.field_a = null;
           ig.field_b.e(119);
-          wj.field_e = 0;
+          OpenGlTransparentWaterEffect.field_e = 0;
           in.field_z = 0;
           kn.field_b = 0;
           ld.field_C = param0;
           f.field_w = false;
           te.field_c = 0;
           oh.field_e = param0;
-          ha.field_f = 0;
+          GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           iw.field_b = 0;
           fb.field_a = 0;
@@ -1844,7 +1844,7 @@ final class qu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var4), "qu.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "qu.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1852,14 +1852,14 @@ final class qu {
         jp discarded$0 = null;
         lp discarded$1 = null;
         try {
-          ni.field_e = new jn();
-          rc.field_m = new jn();
+          ni.field_e = new IntrusiveDeque();
+          rc.field_m = new IntrusiveDeque();
           this.a(127);
           discarded$0 = new jp();
           ld.field_N = new bw();
           discarded$1 = new lp();
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qu.<init>()");
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.<init>()");
         }
     }
 

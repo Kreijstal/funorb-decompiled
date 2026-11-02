@@ -11,9 +11,9 @@ final class cl extends nt {
     static ri[] field_v;
     static int[] field_z;
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException var3 = null;
-        ha var4 = null;
+        GraphicsToolkit var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -27,8 +27,8 @@ final class cl extends nt {
           if (param1 <= -121) {
             return;
           }
-          var4 = (ha) null;
-          this.a((ha) null, 121);
+          var4 = (GraphicsToolkit) null;
+          this.a((GraphicsToolkit) null, 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,7 +40,7 @@ final class cl extends nt {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -53,46 +53,46 @@ final class cl extends nt {
     }
 
     final static void e(int param0) {
-        if (null != fn.field_u) {
+        if (null != GameClientShell.field_u) {
           return;
         }
-        fn.field_u = new String[34];
-        fn.field_u[16] = vp.field_b;
-        fn.field_u[1] = ll.field_c;
-        fn.field_u[5] = rf.field_c;
-        fn.field_u[11] = ov.field_d;
-        fn.field_u[14] = kf.field_t;
-        fn.field_u[6] = rf.field_c;
-        fn.field_u[12] = ff.field_n;
-        fn.field_u[7] = nj.field_e;
-        fn.field_u[0] = k.field_a;
-        fn.field_u[3] = cp.field_k;
+        GameClientShell.field_u = new String[34];
+        GameClientShell.field_u[16] = vp.discardText;
+        GameClientShell.field_u[1] = ll.resumeGameText;
+        GameClientShell.field_u[5] = rf.menuText;
+        GameClientShell.field_u[11] = RasterBuffer.quitText;
+        GameClientShell.field_u[14] = kf.achievementsText;
+        GameClientShell.field_u[6] = rf.menuText;
+        GameClientShell.field_u[12] = ff.soundText;
+        GameClientShell.field_u[7] = nj.endGameText;
+        GameClientShell.field_u[0] = k.startGameText;
+        GameClientShell.field_u[3] = cp.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
-        fn.field_u[15] = go.field_o;
-        fn.field_u[4] = ki.field_j;
-        fn.field_u[2] = os.field_a;
-        fn.field_u[13] = gu.field_h;
-        fn.field_u[21] = hd.field_I;
-        fn.field_u[25] = ea.field_b;
-        fn.field_u[18] = gk.field_H;
-        fn.field_u[10] = dj.field_r[2];
-        fn.field_u[27] = ni.field_g;
-        fn.field_u[23] = pt.field_b;
-        fn.field_u[24] = nq.field_f;
-        fn.field_u[17] = in.field_B;
-        fn.field_u[28] = ss.field_a;
-        fn.field_u[19] = dn.field_b;
-        fn.field_u[22] = td.field_l;
-        dt.field_i = new String[]{mn.field_k, bc.field_b};
-        fn.field_u[33] = mm.field_d;
-        fn.field_u[26] = lh.field_p;
-        fn.field_u[9] = dj.field_r[1];
-        fn.field_u[20] = nt.field_l;
-        fn.field_u[32] = mm.field_d;
-        fn.field_u[8] = dj.field_r[0];
-        fn.field_u[29] = hv.field_a;
-        fn.field_u[30] = ou.field_g;
-        fn.field_u[31] = ls.field_l;
+        GameClientShell.field_u[15] = go.logInCreateAccountText;
+        GameClientShell.field_u[4] = ResourceArchive.field_j;
+        GameClientShell.field_u[2] = MouseInputHandler.field_a;
+        GameClientShell.field_u[13] = gu.musicText;
+        GameClientShell.field_u[21] = hd.regularText;
+        GameClientShell.field_u[25] = ea.difficultyText;
+        GameClientShell.field_u[18] = gk.previousText;
+        GameClientShell.field_u[10] = dj.scoreFilterLabels[2];
+        GameClientShell.field_u[27] = ni.field_g;
+        GameClientShell.field_u[23] = pt.challengeText;
+        GameClientShell.field_u[24] = nq.optionsText;
+        GameClientShell.field_u[17] = in.nextText;
+        GameClientShell.field_u[28] = ss.restartLevelText;
+        GameClientShell.field_u[19] = dn.arcadeGameText;
+        GameClientShell.field_u[22] = td.editorText;
+        BufferedSocket.field_i = new String[]{mn.highText, bc.lowText};
+        GameClientShell.field_u[33] = mm.levelSelectText;
+        GameClientShell.field_u[26] = lh.resetStatsText;
+        GameClientShell.field_u[9] = dj.scoreFilterLabels[1];
+        GameClientShell.field_u[20] = nt.challengeText;
+        GameClientShell.field_u[32] = mm.levelSelectText;
+        GameClientShell.field_u[8] = dj.scoreFilterLabels[0];
+        GameClientShell.field_u[29] = hv.reassignText;
+        GameClientShell.field_u[30] = ou.field_g;
+        GameClientShell.field_u[31] = ls.continueText;
     }
 
     final boolean a(int param0) {
@@ -156,15 +156,15 @@ final class cl extends nt {
           this.field_x = param7;
           this.field_y = param5;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, lt param1, int param2) {
         pl var5 = as.field_v;
         var5.g(param2, param0 ^ -105);
-        var5.field_p = var5.field_p + 1;
-        int var4 = var5.field_p;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.b((byte) 84, 1);
         var5.b((byte) 103, param1.field_k);
         if (param0 != -97) {
@@ -177,9 +177,9 @@ final class cl extends nt {
           var5.e(48, param1.field_q);
           var5.e(48, param1.field_l);
           var5.a(var4, false);
-          var5.c(var5.field_p - var4, param0 - 13648);
+          var5.c(var5.position - var4, param0 - 13648);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

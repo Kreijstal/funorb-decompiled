@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends ms {
+final class id extends IntrusiveNode {
     int field_k;
     int[] field_q;
     int field_n;
@@ -9,14 +9,14 @@ final class id extends ms {
     int field_p;
     int field_o;
     int field_l;
-    static String field_m;
+    static String returnToGameText;
     int field_t;
     int field_r;
 
     public static void c(boolean param0) {
-        field_m = null;
+        returnToGameText = null;
         if (param0) {
-          field_m = (String) null;
+          returnToGameText = (String) null;
         }
     }
 
@@ -37,7 +37,7 @@ final class id extends ms {
             try {
               var4 = Class.forName("jw");
               if (param3 > -83) {
-                field_m = (String) null;
+                returnToGameText = (String) null;
               }
               var5 = (ce) (var4.newInstance());
               var5.a(param2, param1, param0, 122);
@@ -61,7 +61,7 @@ final class id extends ms {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,11 +84,11 @@ final class id extends ms {
           this.field_k = param5;
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_m = "Return to game";
+        returnToGameText = "Return to game";
     }
 }

@@ -70,7 +70,7 @@ final class w {
         var3 = param0.field_g;
         var4 = param0.field_o;
         var5 = param0.field_B;
-        var15 = ov.field_a;
+        var15 = RasterBuffer.field_a;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_s;
@@ -79,11 +79,11 @@ final class w {
         var10 = param0.field_C;
         var11 = var10;
         var12 = param0.field_e + 1;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
               if (var10 == 0) {
-                break L0;
+                break scanLoop1;
               }
               if (var3 != 1) {
                 var8[var9] = (byte)var2;
@@ -96,7 +96,7 @@ final class w {
             }
             if (var10 == 0) {
               var3 = 1;
-              break L0;
+              break scanLoop1;
             }
             var8[var9] = (byte)var2;
             var9++;
@@ -117,11 +117,11 @@ final class w {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var3 = 3;
                 var7 = var15Lifetime1[var7];
@@ -129,11 +129,11 @@ final class w {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
@@ -144,17 +144,17 @@ final class w {
                 var5 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
-                continue L0;
+                continue scanLoop1;
               }
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             } else {
               var5 = var1;
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             }
             var8[var9] = (byte)var2;
@@ -172,7 +172,7 @@ final class w {
         param0.field_g = var3;
         param0.field_o = var4;
         param0.field_B = var5;
-        ov.field_a = var6;
+        RasterBuffer.field_a = var6;
         param0.field_s = var7;
         param0.field_p = var8;
         param0.field_r = var9;
@@ -264,8 +264,8 @@ final class w {
         var24 = null;
         var25 = null;
         param0.field_c = 1;
-        if (ov.field_a == null) {
-          ov.field_a = new int[param0.field_c * 100000];
+        if (RasterBuffer.field_a == null) {
+          RasterBuffer.field_a = new int[param0.field_c * 100000];
         }
         var26 = 1;
         while (true) {
@@ -436,14 +436,14 @@ final class w {
                 param0.field_q[var4] = param0.field_q[var4] + param0.field_q[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(ov.field_a[var4] & 255);
+                var1 = (byte)(RasterBuffer.field_a[var4] & 255);
                 dupTemp$1 = param0.field_q[var1 & 255];
-                ov.field_a[dupTemp$1] = ov.field_a[dupTemp$1] | var4 << 8;
+                RasterBuffer.field_a[dupTemp$1] = RasterBuffer.field_a[dupTemp$1] | var4 << 8;
                 param0.field_q[var1 & 255] = param0.field_q[var1 & 255] + 1;
               }
-              param0.field_s = ov.field_a[param0.field_x] >> 8;
+              param0.field_s = RasterBuffer.field_a[param0.field_x] >> 8;
               param0.field_o = 0;
-              param0.field_s = ov.field_a[param0.field_s];
+              param0.field_s = RasterBuffer.field_a[param0.field_s];
               param0.field_B = (byte)(param0.field_s & 255);
               param0.field_s = param0.field_s >> 8;
               param0.field_o = param0.field_o + 1;
@@ -507,7 +507,7 @@ final class w {
               }
               dupTemp$0 = param0.field_u[var1 & 255] & 255;
               param0.field_A[dupTemp$0] = param0.field_A[dupTemp$0] + 1;
-              ov.field_a[var14] = param0.field_u[var1 & 255] & 255;
+              RasterBuffer.field_a[var14] = param0.field_u[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -564,7 +564,7 @@ final class w {
             var1 = param0.field_u[param0.field_z[param0.field_t[0]] & 255];
             param0.field_A[var1 & 255] = param0.field_A[var1 & 255] + var15;
             while (var15 > 0) {
-              ov.field_a[var14] = var1 & 255;
+              RasterBuffer.field_a[var14] = var1 & 255;
               var14++;
               var15--;
             }

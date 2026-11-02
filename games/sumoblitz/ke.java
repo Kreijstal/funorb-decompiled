@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke {
-    static kc field_a;
+    static GameApplet field_a;
     static ri[] field_c;
     static byte[][] field_b;
     static int field_d;
 
     public static void b(boolean param0) {
         if (!param0) {
-          field_a = (kc) null;
+          field_a = (GameApplet) null;
           field_c = null;
           field_b = (byte[][]) null;
           return;
@@ -27,7 +27,7 @@ final class ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 87) {
-            field_a = (kc) null;
+            field_a = (GameApplet) null;
           }
           stackIn_3_0 = ah.field_J.a(param1, "", -1);
           return stackIn_3_0;
@@ -41,7 +41,7 @@ final class ke {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ final class ke {
           return;
         }
         if (an.field_a < ku.field_J.length) {
-          g.field_c = 0;
+          SocketConnector.field_c = 0;
           ig.b(120);
           uc.field_f = iw.field_b;
           kp.field_a = false;

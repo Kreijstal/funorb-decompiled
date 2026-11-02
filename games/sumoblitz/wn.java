@@ -18,7 +18,7 @@ final class wn {
     }
 
     final static void a(boolean param0) {
-        if (!ms.field_a) {
+        if (!IntrusiveNode.field_a) {
           throw new IllegalStateException();
         }
         pu.field_m = param0;

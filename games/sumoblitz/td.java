@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class td extends ms {
+final class td extends IntrusiveNode {
     byte[] field_q;
-    static String field_l;
+    static String editorText;
     qp[] field_o;
     byte[] field_t;
     mq[] field_n;
@@ -89,12 +89,12 @@ final class td extends ms {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
-        field_l = null;
+        editorText = null;
         if (param0 <= 62) {
           td.a(86, -115L);
         }
@@ -125,7 +125,7 @@ final class td extends ms {
             var4 = js.field_J;
           }
           if (param0 >= 120) {
-            stackIn_12_0 = ej.a(param2, (String) (var4), -1, (String) (var3), -1);
+            stackIn_12_0 = OpenGlEnvironmentWaterEffect.a(param2, (String) (var4), -1, (String) (var3), -1);
             return stackIn_12_0;
           }
           stackIn_10_0 = (java.net.URL) null;
@@ -146,7 +146,7 @@ final class td extends ms {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class td extends ms {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "td.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "td.B(" + param0 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class td extends ms {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        fs var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         mq var40 = null;
         byte[] var41 = null;
@@ -392,8 +392,8 @@ final class td extends ms {
           this.field_p = new int[128];
           this.field_t = new byte[128];
           this.field_r = new byte[128];
-          var38 = new fs(param0);
-          for (var3 = 0; var38.field_n[var38.field_p + var3] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -402,10 +402,10 @@ final class td extends ms {
             var4[var5] = var38.d(true);
           }
           var3++;
-          var38.field_p = var38.field_p + 1;
-          var5Lifetime1 = var38.field_p;
-          var38.field_p = var38.field_p + var3;
-          for (var6 = 0; 0 != var38.field_n[var6 + var38.field_p]; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; 0 != var38.payload[var6 + var38.position]; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -414,10 +414,10 @@ final class td extends ms {
             var7[var8] = var38.d(true);
           }
           var6++;
-          var38.field_p = var38.field_p + 1;
-          var8Lifetime1 = var38.field_p;
-          var38.field_p = var38.field_p + var6;
-          for (var9 = 0; var38.field_n[var9 + var38.field_p] != 0; var9++) {
+          var38.position = var38.position + 1;
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var9 + var38.position] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -426,7 +426,7 @@ final class td extends ms {
             var10[var11_int] = var38.d(true);
           }
           var9++;
-          var38.field_p = var38.field_p + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -484,7 +484,7 @@ final class td extends ms {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_n[var38.field_p + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -492,7 +492,7 @@ final class td extends ms {
           for (var19 = 0; var19 < var17; var19++) {
             var18[var19] = var38.d(true);
           }
-          var38.field_p = var38.field_p + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
@@ -533,7 +533,7 @@ final class td extends ms {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_n[incrementValue$6];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
               this.field_r[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -547,7 +547,7 @@ final class td extends ms {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_n[incrementValue$3] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
                 if (var56.length > var21Lifetime2) {
                   var20Lifetime4 = var7[var21Lifetime2++];
                 } else {
@@ -763,12 +763,12 @@ final class td extends ms {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 
     static {
-        field_l = "editor";
+        editorText = "editor";
         field_m = true;
     }
 }

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends pj {
+final class wh extends DualLinkNode {
     int field_v;
     private fr field_u;
     private long field_t;
     static int field_x;
-    static String field_r;
+    static String clickToAssignPointsText;
     static int field_s;
     static String[] field_w;
 
     public static void a(int param0) {
-        field_r = null;
+        clickToAssignPointsText = null;
         if (param0 != -1) {
           return;
         }
@@ -39,7 +39,7 @@ final class wh extends pj {
             var1 = kf.f(1);
           }
           if (var1.length() == 0) {
-            var1 = kq.field_R;
+            var1 = kq.playerText;
           }
           return var1;
         }
@@ -48,7 +48,7 @@ final class wh extends pj {
           var1 = kf.f(1);
         }
         if (var1.length() == 0) {
-          var1 = kq.field_R;
+          var1 = kq.playerText;
         }
         return var1;
     }
@@ -71,12 +71,12 @@ final class wh extends pj {
           this.field_v = param1 * param2;
           this.field_t = this.field_u.field_y.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        field_r = "click to assign points <br> right-click to remove points";
+        clickToAssignPointsText = "click to assign points <br> right-click to remove points";
         field_x = 64;
         field_w = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }

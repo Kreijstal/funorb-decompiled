@@ -6,12 +6,12 @@ final class we extends ie {
     static int[] field_z;
     static int[] field_B;
 
-    we(int param0, int param1, int param2, int param3, mh param4, pk param5) {
+    we(int param0, int param1, int param2, int param3, mh param4, UiWidget param5) {
         super(param0, param1, param2, param3, param4, (qm) null);
         try {
           this.field_y = param5;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "we.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "we.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class we extends ie {
             }
             return;
           }
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
           if (this.field_q == 0) {
             return;
           }
@@ -56,7 +56,7 @@ final class we extends ie {
         }
         if (param3 == 0 &&
           this.field_w != null) {
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
           if (this.field_q == 0) {
             return;
           }
@@ -79,7 +79,7 @@ final class we extends ie {
         ks.field_x.b((byte) -84);
     }
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -102,7 +102,7 @@ final class we extends ie {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -10,32 +10,32 @@ final class jq {
     final static void a(int param0, int param1) {
         if (param1 == 13586) {
           pi.field_b = wh.field_w[param0];
-          ek.field_k = nm.field_u[param0];
-          mm.field_c = qi.field_a[param0];
+          ek.field_k = nm.waitingForTextTranslations[param0];
+          mm.field_c = qi.loadingTextTranslations[param0];
           return;
         }
         field_a = (mi) null;
         pi.field_b = wh.field_w[param0];
-        ek.field_k = nm.field_u[param0];
-        mm.field_c = qi.field_a[param0];
+        ek.field_k = nm.waitingForTextTranslations[param0];
+        mm.field_c = qi.loadingTextTranslations[param0];
     }
 
-    final static void a(int param0, wb param1) {
+    final static void a(int param0, Sprite param1) {
         try {
-          kc.j(82);
-          lk.a(param1.field_C, param1.field_z, param1.field_w);
+          GameApplet.j(82);
+          lk.a(param1.pixels, param1.field_z, param1.field_w);
           if (param0 != 7161) {
             jq.a(-84, -69);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "jq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 < 99) {
-          wb var2 = (wb) null;
-          jq.a(87, (wb) null);
+          Sprite var2 = (Sprite) null;
+          jq.a(87, (Sprite) null);
           field_a = null;
           return;
         }

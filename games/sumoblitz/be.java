@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be extends nt {
-    static ki field_s;
+    static ResourceArchive field_s;
     private boolean field_u;
     private static long[] field_v;
     static da field_t;
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var4Lifetime1;
         try {
           var3_int = (int)((double)this.field_p / 100.0 * 255.0);
           if (param1 > -121) {
-            ha var5 = (ha) null;
-            this.a((ha) null, 95);
+            GraphicsToolkit var5 = (GraphicsToolkit) null;
+            this.a((GraphicsToolkit) null, 95);
           }
           var3_int += 20;
           var4 = 0;
@@ -26,7 +26,7 @@ final class be extends nt {
           }
           vl.field_c.a((float)this.field_k, (float)this.field_o, var4Lifetime1, 0, 0, (var3_int << 24) + this.field_q, 1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

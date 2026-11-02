@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends ms {
-    static String field_m;
+final class rd extends IntrusiveNode {
+    static String loadingExtraDataText;
     int[] field_k;
     static int field_q;
     byte[][][] field_u;
@@ -48,11 +48,11 @@ final class rd extends ms {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(Object param0, wi param1, int param2) {
+    final static void a(Object param0, PlatformTaskDispatcher param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -103,7 +103,7 @@ final class rd extends ms {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,9 +114,9 @@ final class rd extends ms {
         iu.field_e = param0;
     }
 
-    final static boolean a(ki param0, byte param1, ki param2, ki param3) {
+    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        wi var5 = null;
+        PlatformTaskDispatcher var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -129,8 +129,8 @@ final class rd extends ms {
           if (param3.b((byte) 127) &&
             param3.a("commonui", 100)) {
             if (param1 < 120) {
-              var5 = (wi) null;
-              rd.a((Object) null, (wi) null, 63);
+              var5 = (PlatformTaskDispatcher) null;
+              rd.a((Object) null, (PlatformTaskDispatcher) null, 63);
             }
             if (!param0.b((byte) 127)) {
               return false;
@@ -167,7 +167,7 @@ final class rd extends ms {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -178,10 +178,10 @@ final class rd extends ms {
         if (param0) {
           return;
         }
-        field_m = null;
+        loadingExtraDataText = null;
     }
 
     static {
-        field_m = "Loading extra data";
+        loadingExtraDataText = "Loading extra data";
     }
 }

@@ -10,8 +10,8 @@ final class uv extends gm {
 
     final static int b(int param0) {
         if (param0 != -25843) {
-          jn var2 = (jn) null;
-          uv.a(-92, -128, -112, -123, (jn) null, -24);
+          IntrusiveDeque var2 = (IntrusiveDeque) null;
+          uv.a(-92, -128, -112, -123, (IntrusiveDeque) null, -24);
           return -hu.field_b + dj.field_n;
         }
         return -hu.field_b + dj.field_n;
@@ -22,11 +22,11 @@ final class uv extends gm {
           this.field_e = kw.field_b;
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "uv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, jn param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, IntrusiveDeque param4, int param5) {
         float[] dupTemp$2 = null;
         int var6_int = 0;
         float[] var7 = null;
@@ -59,7 +59,7 @@ final class uv extends gm {
             var10 = var12;
             var7Lifetime2 = var10;
             var8 = new vt(24, param3, param1, param0, (int)var13[0] << 8, (int)var13[1] << 8, 0);
-            param4.a((ms) (var8), (byte) 39);
+            param4.a((IntrusiveNode) (var8), (byte) 39);
             var6_int++;
           }
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 8; var6_intLifetime1++) {
@@ -68,7 +68,7 @@ final class uv extends gm {
             var11 = dupTemp$2;
             var7Lifetime1Lifetime1 = dupTemp$2;
             var8Lifetime1 = new vt(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
-            param4.a((ms) (var8Lifetime1), (byte) 39);
+            param4.a((IntrusiveNode) (var8Lifetime1), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,11 +81,11 @@ final class uv extends gm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -145,7 +145,7 @@ final class uv extends gm {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class uv extends gm {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

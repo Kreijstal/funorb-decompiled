@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib extends rq {
+final class ib extends ShaderEffect {
     private float field_e;
     static int[][] field_g;
     private sk field_f;
@@ -25,13 +25,13 @@ final class ib extends rq {
         this.field_e = -0.03486540541052818f;
     }
 
-    ib(aw param0, sk param1) {
+    ib(HardwareGraphicsToolkit param0, sk param1) {
         super(param0);
         this.field_e = 0.0f;
         try {
           this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class ib extends rq {
           }
           this.field_b.a(param2, 126);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ib.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ib.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,11 +106,11 @@ final class ib extends rq {
         }
         gk.field_o.a(false, lt.field_m);
         gk.field_o = null;
-        if (vv.field_b == null) {
+        if (SecondaryNodeDequeIterator.field_b == null) {
           qn.field_f.requestFocus();
           return;
         }
-        vv.field_b.e(2);
+        SecondaryNodeDequeIterator.field_b.e(2);
         qn.field_f.requestFocus();
     }
 

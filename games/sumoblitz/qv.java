@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qv extends ms {
-    static String field_l;
+final class qv extends IntrusiveNode {
+    static String asYouAreUnderText;
     static String field_o;
     int[] field_m;
     int field_n;
@@ -11,15 +11,15 @@ final class qv extends ms {
     final static void a(int param0) {
         ts.field_a = ts.field_a + 13;
         if (param0 != 2) {
-          field_l = (String) null;
+          asYouAreUnderText = (String) null;
         }
         fb.field_a = fb.field_a - 9;
         kn.field_b = kn.field_b - 4;
-        ha.field_f = ha.field_f + 18;
+        GraphicsToolkit.field_f = GraphicsToolkit.field_f + 18;
     }
 
     final static void a(int param0, int param1) {
-        mf var2 = fh.field_n[param0];
+        PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[param0];
         if (param1 != 4) {
           CharSequence var3 = (CharSequence) null;
           qv.a(false, -82, (CharSequence) null);
@@ -51,7 +51,7 @@ final class qv extends ms {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param2 == null) {
-            stackIn_4_0 = qq.field_Q;
+            stackIn_4_0 = qq.namesShouldContainAText;
             return stackIn_4_0;
           }
           var3_int = param2.length();
@@ -72,25 +72,25 @@ final class qv extends ms {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_28_0 = ma.field_a;
+                    stackIn_28_0 = ma.namesCannotContainConsecutiveText;
                     return stackIn_28_0;
                   }
                 }
                 if (var5 > 0) {
-                  stackIn_33_0 = m.field_T;
+                  stackIn_33_0 = m.namesCannotStartOrText;
                   return stackIn_33_0;
                 }
                 var6Lifetime1 = -54 / ((48 - param1) / 41);
                 stackIn_35_0 = null;
                 return (String) (stackIn_35_0);
               }
-              stackIn_19_0 = m.field_T;
+              stackIn_19_0 = m.namesCannotStartOrText;
               return stackIn_19_0;
             }
-            stackIn_14_0 = qq.field_Q;
+            stackIn_14_0 = qq.namesShouldContainAText;
             return stackIn_14_0;
           }
-          stackIn_9_0 = qq.field_Q;
+          stackIn_9_0 = qq.namesShouldContainAText;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,12 +102,12 @@ final class qv extends ms {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
     public static void c(int param0) {
-        field_l = null;
+        asYouAreUnderText = null;
         field_k = null;
         if (param0 != 18) {
           field_k = (da) null;
@@ -120,6 +120,6 @@ final class qv extends ms {
     }
 
     static {
-        field_l = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        asYouAreUnderText = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }
 }

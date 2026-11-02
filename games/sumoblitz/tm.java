@@ -9,17 +9,17 @@ final class tm implements mh {
     static jr field_a;
     static int[] field_c;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         try {
           if (param2 != 5592405) {
             field_a = (jr) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "tm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static void a(boolean param0, byte param1, wi param2, int param3, int param4, int param5, int param6, int param7, int param8, String param9, boolean param10, int param11, int param12, long param13) {
+    final static void a(boolean param0, byte param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, int param8, String param9, boolean param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -73,7 +73,7 @@ final class tm implements mh {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,7 +84,7 @@ final class tm implements mh {
 
     final static int a(int param0, int param1) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        dt.field_p = null;
+        BufferedSocket.field_p = null;
         tj.field_n = null;
         cd.field_d = 0;
         int var2 = ie.field_x;

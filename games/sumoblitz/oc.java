@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends rq {
+final class oc extends ShaderEffect {
     static int field_f;
     static int field_e;
     static long field_g;
@@ -13,7 +13,7 @@ final class oc extends rq {
         this.field_b.a(true, true);
     }
 
-    oc(aw param0) {
+    oc(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
@@ -34,7 +34,7 @@ final class oc extends rq {
         int var9 = 0;
         int var10 = 0;
         ah var11 = null;
-        cb var12 = null;
+        IntrusiveDequeCursor var12 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -69,7 +69,7 @@ final class oc extends rq {
               }
             }
           }
-          var12 = new cb(is.field_c);
+          var12 = new IntrusiveDequeCursor(is.field_c);
           var3 = (nm) (var12.b((byte) -80));
           if (param1) {
             return;
@@ -101,7 +101,7 @@ final class oc extends rq {
           if (-param0.field_m + param0.field_z < 6656) {
             param0.field_z = param0.field_z + (26 << param0.field_m + 9);
           }
-          if (param0.field_m + param0.field_C > rj.field_c - 26 << 8) {
+          if (param0.field_m + param0.field_C > ArchiveCatalog.field_c - 26 << 8) {
             param0.field_C = param0.field_C - (26 << 9 + param0.field_m);
           }
           if (rl.field_k - 26 << 8 < param0.field_m + param0.field_z) {
@@ -130,7 +130,7 @@ final class oc extends rq {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class oc extends rq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "oc.N(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "oc.N(" + param0 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class oc extends rq {
           hc.field_c = new gt(rf.field_a, tq.field_a, param0, pg.field_a, ih.field_c);
           rf.field_a.a((byte) 108, hc.field_c);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -195,13 +195,13 @@ final class oc extends rq {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        pn.field_p[se.field_d] = param3;
+        OpenGlUnderwaterEffect.field_p[se.field_d] = param3;
         pd.field_q[se.field_d] = se.field_d;
         lj.field_a[se.field_d] = param5;
         if (!(param5 >= qu.field_k)) {
           ab.field_c = param5;
         }
-        if (!(kc.field_l >= param5)) {
+        if (!(GameApplet.field_l >= param5)) {
           field_f = param5;
         }
         jf.field_f[se.field_d] = param1;
@@ -245,7 +245,7 @@ final class oc extends rq {
           }
           this.field_b.h(109, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "oc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

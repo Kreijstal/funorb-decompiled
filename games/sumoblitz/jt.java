@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jt extends pj {
+abstract class jt extends DualLinkNode {
     static int field_r;
     static int field_w;
     static int field_s;
     static hr field_y;
     static int field_u;
     static cp field_v;
-    static wi field_t;
+    static PlatformTaskDispatcher field_t;
     static long field_x;
     int field_z;
 
@@ -42,10 +42,10 @@ abstract class jt extends pj {
 
     final static boolean a(byte param0) {
         int var1 = 102 / ((param0 + 27) / 59);
-        if (vv.field_b == null) {
+        if (SecondaryNodeDequeIterator.field_b == null) {
           return false;
         }
-        if (vv.field_b.c(-1)) {
+        if (SecondaryNodeDequeIterator.field_b.c(-1)) {
           return true;
         }
         return false;

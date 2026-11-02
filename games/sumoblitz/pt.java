@@ -6,7 +6,7 @@ import java.util.*;
 abstract class pt {
     static java.util.zip.CRC32 field_c;
     static volatile boolean field_a;
-    static String field_b;
+    static String challengeText;
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (param0) {
@@ -30,24 +30,24 @@ abstract class pt {
         if (param0 <= 12) {
           return;
         }
-        field_b = null;
+        challengeText = null;
         field_c = null;
     }
 
-    final static void a(pj param0, int param1, pj param2) {
-        if (null != param2.field_o) {
-          param2.c(-5106);
+    final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
+        if (null != param2.secondaryPrevious) {
+          param2.unlinkSecondary(-5106);
         }
         if (param1 != 2066481250) {
           return;
         }
         try {
-          param2.field_o = param0;
-          param2.field_m = param0.field_m;
-          param2.field_o.field_m = param2;
-          param2.field_m.field_o = param2;
+          param2.secondaryPrevious = param0;
+          param2.secondaryNext = param0.secondaryNext;
+          param2.secondaryPrevious.secondaryNext = param2;
+          param2.secondaryNext.secondaryPrevious = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pt.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pt.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ abstract class pt {
               kk.a((byte) -127);
               return;
             }
-            var5_int = gu.field_d - var10.field_p;
+            var5_int = gu.field_d - var10.position;
             var12 = var4_ref_qv.field_m;
             var11 = var12;
             var6 = var11;
@@ -90,7 +90,7 @@ abstract class pt {
             for (var7 = 0; var7 < var5_int; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.e(-31302) << eb.a(768, var7 << 8));
             }
-            var4_ref_qv.b(false);
+            var4_ref_qv.unlink(false);
             return;
           }
           if (1 == var2) {
@@ -105,19 +105,19 @@ abstract class pt {
               break;
             }
             if (var5 != null) {
-              var5.b(false);
+              var5.unlink(false);
               return;
             }
             kk.a((byte) -114);
             return;
           }
-          ms.a("LR1: " + di.b((byte) 126), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("LR1: " + di.b((byte) 126), (Throwable) null, 0);
           kk.a((byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "pt.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "pt.I(" + param0 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ abstract class pt {
         throw new Error();
     }
 
-    final static String a(String param0, ki param1, String param2, boolean param3, String param4) {
+    final static String a(String param0, ResourceArchive param1, String param2, boolean param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -177,13 +177,13 @@ abstract class pt {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     static {
         field_c = new java.util.zip.CRC32();
-        field_b = "challenge";
+        challengeText = "challenge";
         field_a = true;
     }
 }

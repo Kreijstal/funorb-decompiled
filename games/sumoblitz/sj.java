@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static al field_c;
+    static PcmStreamMixer field_c;
     static long field_a;
     static ts field_b;
 
@@ -102,7 +102,7 @@ final class sj {
               if (var4 != nj.field_a.field_g) {
                 stackIn_48_0 = vp.field_e;
               } else {
-                stackIn_48_0 = fs.field_k;
+                stackIn_48_0 = PacketBuffer.field_k;
               }
               var9 = stackIn_48_0;
               if (var9 != null) {
@@ -111,10 +111,10 @@ final class sj {
               var1_int = var1_int + ag.field_b;
             }
             if (var4 < 0) {
-              qq.field_R.b(var6, var8Lifetime1, var1_int + ia.field_d, var5, -1);
-              var1_int = var1_int + fn.field_t;
+              qq.field_R.b(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
+              var1_int = var1_int + GameClientShell.field_t;
             } else {
-              ns.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
+              MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
               var1_int = var1_int + (qc.field_a + (ag.field_b + ga.field_h));
             }
           }
@@ -122,7 +122,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "sj.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "sj.C(" + param0 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class sj {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!g.a(param0, 0, param2)) {
+          if (!SocketConnector.a(param0, 0, param2)) {
             return false;
           }
           var3_int = 0;
@@ -407,7 +407,7 @@ final class sj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends hj {
+final class ud extends PcmStream {
     private tv field_t;
     private int field_C;
     static hr[] field_q;
@@ -13,10 +13,10 @@ final class ud extends hj {
     private tv field_v;
     private int field_z;
     private int field_B;
-    private bs field_D;
+    private MidiPcmStream field_D;
     private boolean field_w;
-    bs field_r;
-    bs field_x;
+    MidiPcmStream field_r;
+    MidiPcmStream field_x;
     private int field_o;
 
     public static void c(int param0) {
@@ -28,9 +28,9 @@ final class ud extends hj {
     final synchronized void a(int param0, int param1, tv param2, boolean param3, int param4, int param5) {
         boolean stackIn_22_1 = false;
         int stackIn_34_0 = 0;
-        bs stackIn_43_0 = null;
+        MidiPcmStream stackIn_43_0 = null;
         boolean stackIn_44_1 = false;
-        bs stackIn_53_0 = null;
+        MidiPcmStream stackIn_53_0 = null;
         boolean stackIn_54_1 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -39,7 +39,7 @@ final class ud extends hj {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        wb[] var9 = null;
+        Sprite[] var9 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (this.field_u &&
@@ -66,8 +66,8 @@ final class ud extends hj {
             return;
           }
           if (param0 != 1) {
-            var9 = (wb[]) null;
-            ud.a(57, -30, 8, 30, (wb[]) null);
+            var9 = (Sprite[]) null;
+            ud.a(57, -30, 8, 30, (Sprite[]) null);
           }
           stackIn_22_1 = (param3);
           this.field_u = stackIn_22_1;
@@ -99,7 +99,7 @@ final class ud extends hj {
             if (param2 != null) {
               stackIn_53_0 = this.field_r;
               stackIn_54_1 = !(param3);
-              ((bs) (Object) stackIn_53_0).a(stackIn_54_1, param2, param0 + 67);
+              ((MidiPcmStream) (Object) stackIn_53_0).a(stackIn_54_1, param2, param0 + 67);
               this.a(param1, (byte) 45, this.field_r, param5);
             }
             this.field_C = -param4;
@@ -111,7 +111,7 @@ final class ud extends hj {
             if (param2 != null) {
               stackIn_43_0 = this.field_x;
               stackIn_44_1 = !(param3);
-              ((bs) (Object) stackIn_43_0).a(stackIn_44_1, param2, 121);
+              ((MidiPcmStream) (Object) stackIn_43_0).a(stackIn_44_1, param2, 121);
               this.a(param1, (byte) -114, this.field_x, param5);
             }
             this.field_C = param4;
@@ -127,11 +127,11 @@ final class ud extends hj {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wb[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -173,17 +173,17 @@ final class ud extends hj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    private final void a(int param0, byte param1, bs param2, int param3) {
+    private final void a(int param0, byte param1, MidiPcmStream param2, int param3) {
         try {
           param2.a((byte) -86, -1, param3);
           param2.b(param0, 0);
           int var5_int = -21 / ((param1 + 28) / 47);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ud.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class ud extends hj {
         this.field_B = param1;
     }
 
-    private final void a(bs param0, int param1, bs param2) {
+    private final void a(MidiPcmStream param0, int param1, MidiPcmStream param2) {
         try {
           if (param1 > -55) {
             this.d();
@@ -203,11 +203,11 @@ final class ud extends hj {
           this.field_r = param0;
           this.field_x = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ud.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final hj c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -312,7 +312,7 @@ final class ud extends hj {
         return 2;
     }
 
-    final hj a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -388,7 +388,7 @@ final class ud extends hj {
               }
             }
           }
-          if (du.field_o) {
+          if (AudioOutput.field_o) {
             stackIn_33_0 = param2 << 1;
           } else {
             stackIn_33_0 = param2;
@@ -410,7 +410,7 @@ final class ud extends hj {
                 }
                 this.field_x.b(this.field_s, 0, param2);
                 this.field_r.b(this.field_A, 0, param2);
-                if (!du.field_o) {
+                if (!AudioOutput.field_o) {
                   stackIn_48_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -436,7 +436,7 @@ final class ud extends hj {
               this.field_s = new int[var6];
             }
             this.field_D.b(this.field_s, 0, param2);
-            if (du.field_o) {
+            if (AudioOutput.field_o) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_61_0 = localTemp$1;
@@ -462,18 +462,18 @@ final class ud extends hj {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    ud(bs param0, bs param1) {
+    ud(MidiPcmStream param0, MidiPcmStream param1) {
         this.field_B = 256;
         this.field_w = false;
         this.field_z = 0;
         try {
           this.a(param1, -79, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

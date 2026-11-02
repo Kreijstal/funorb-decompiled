@@ -3,15 +3,15 @@
  */
 final class oj implements mh {
     static int field_a;
-    static String field_b;
+    static String emailAddressIsUnavailableText;
 
     public static void a(int param0) {
         if (param0 != -4) {
           field_a = 101;
-          field_b = null;
+          emailAddressIsUnavailableText = null;
           return;
         }
-        field_b = null;
+        emailAddressIsUnavailableText = null;
     }
 
     final static boolean b(int param0, int param1, int param2) {
@@ -22,7 +22,7 @@ final class oj implements mh {
         return (34 & param0) != 0 ? true : false;
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -30,11 +30,11 @@ final class oj implements mh {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        wb var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param4 + param0.field_r;
           if (param2 != 5592405) {
-            field_b = (String) null;
+            emailAddressIsUnavailableText = (String) null;
           }
           var7 = param1 + param0.field_v;
           nn.a(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
@@ -58,7 +58,7 @@ final class oj implements mh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class oj implements mh {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          field_b = (String) null;
+          emailAddressIsUnavailableText = (String) null;
           if (pu.field_e == null) {
             return false;
           }
@@ -96,6 +96,6 @@ final class oj implements mh {
     }
 
     static {
-        field_b = "Email address is unavailable";
+        emailAddressIsUnavailableText = "Email address is unavailable";
     }
 }

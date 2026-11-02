@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends ha {
+final class qa extends GraphicsToolkit {
     private int field_s;
     private ce field_n;
     private java.awt.Canvas field_l;
@@ -32,7 +32,7 @@ final class qa extends ha {
     private int field_L;
     private rp[] field_i;
     private sd field_E;
-    private static String field_I;
+    private static String offText;
 
     final void f(int param0) {
         le var4 = null;
@@ -1297,7 +1297,7 @@ final class qa extends ha {
         var7 = 0;
         var8 = param1;
         var9 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var9 < param4) {
             for (var10 = 0; var10 < param3; var10++) {
               incrementValue$4 = var8;
@@ -1306,7 +1306,7 @@ final class qa extends ha {
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
-                break L1;
+                break scanLoop1;
               }
             }
             var9++;
@@ -1850,7 +1850,7 @@ final class qa extends ha {
         java.awt.Dimension var5 = null;
         ce var4 = (ce) (this.field_K.a(122, (long)param0.hashCode()));
         if (var4 != null) {
-          var4.b(false);
+          var4.unlink(false);
           var4 = id.a(param1, param2, param0, -91);
           this.field_K.a(var4, -1, (long)param0.hashCode());
           if (this.field_l == param0 &&
@@ -1938,7 +1938,7 @@ final class qa extends ha {
         java.awt.Graphics var3 = null;
         if (this.field_l == null ||
           this.field_n == null) {
-          throw new IllegalStateException(field_I);
+          throw new IllegalStateException(offText);
         }
         try {
           var3 = this.field_l.getGraphics();
@@ -1982,6 +1982,6 @@ final class qa extends ha {
     }
 
     static {
-        field_I = "off";
+        offText = "off";
     }
 }

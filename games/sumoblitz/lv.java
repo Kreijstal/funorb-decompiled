@@ -6,8 +6,8 @@ final class lv extends bq {
     private boolean field_j;
     private sn field_k;
     private ch field_h;
-    static String field_f;
-    static String field_e;
+    static String visitTheAccountManagementText;
+    static String pleaseSendMeNewsText;
     private boolean field_g;
 
     lv(fr param0, ch param1) {
@@ -28,13 +28,13 @@ final class lv extends bq {
             this.field_j = null != this.field_k ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "lv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, boolean param1) {
         if (param0 >= -30) {
-          field_e = (String) null;
+          pleaseSendMeNewsText = (String) null;
         }
     }
 
@@ -64,13 +64,13 @@ final class lv extends bq {
 
     public static void c(int param0) {
         if (param0 != 3) {
-          field_f = (String) null;
-          field_f = null;
-          field_e = null;
+          visitTheAccountManagementText = (String) null;
+          visitTheAccountManagementText = null;
+          pleaseSendMeNewsText = null;
           return;
         }
-        field_f = null;
-        field_e = null;
+        visitTheAccountManagementText = null;
+        pleaseSendMeNewsText = null;
     }
 
     final static jj a(java.applet.Applet param0, int param1) {
@@ -119,7 +119,7 @@ final class lv extends bq {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class lv extends bq {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class lv extends bq {
         if (param0 <= -125) {
           return;
         }
-        field_e = (String) null;
+        pleaseSendMeNewsText = (String) null;
     }
 
     final boolean b(byte param0) {
@@ -199,8 +199,8 @@ final class lv extends bq {
     }
 
     static {
-        field_e = "Please send me news and updates (I can unsubscribe at any time)";
+        pleaseSendMeNewsText = "Please send me news and updates (I can unsubscribe at any time)";
         field_i = 0;
-        field_f = "Visit the Account Management section on the main site to view.";
+        visitTheAccountManagementText = "Visit the Account Management section on the main site to view.";
     }
 }

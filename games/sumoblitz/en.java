@@ -131,11 +131,11 @@ abstract class en {
                 var5 = var5 & 4095;
                 var21 = var6 - 4096;
                 var22 = var7 - 4096;
-                var17 = mu.field_y[var5];
-                var18 = mu.field_y[var6];
+                var17 = SpriteState.field_y[var5];
+                var18 = SpriteState.field_y[var6];
                 var20 = var5 - 4096;
                 var23 = this.field_f[var15];
-                var19 = mu.field_y[var7];
+                var19 = SpriteState.field_y[var7];
                 var24 = this.field_f[var16];
                 var27 = this.field_f[var13 + var24];
                 var25 = this.field_f[var23 + var13];
@@ -211,7 +211,7 @@ abstract class en {
         if (param0 != -23517) {
           field_h = (String) null;
         }
-        stackIn_7_0 = (10 <= jv.field_a) && (!ms.field_a) && (!nt.a((byte) 116));
+        stackIn_7_0 = (10 <= jv.field_a) && (!IntrusiveNode.field_a) && (!nt.a((byte) 116));
         return stackIn_7_0;
     }
 

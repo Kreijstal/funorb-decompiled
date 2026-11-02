@@ -7,9 +7,9 @@ final class m extends hf {
     private String field_U;
     private boolean field_P;
     private pq field_Q;
-    static ov field_R;
-    static String field_V;
-    static String field_T;
+    static RasterBuffer field_R;
+    static String waitingForGraphicsText;
+    static String namesCannotStartOrText;
     private boolean field_S;
     static gj[] field_O;
 
@@ -20,7 +20,7 @@ final class m extends hf {
         try {
           lr.a(false, param0, (byte) 127, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "m.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "m.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class m extends hf {
           }
           return;
         }
-        field_V = (String) null;
+        waitingForGraphicsText = (String) null;
         super.b(112, param1, param2);
         tq.field_a.a(this.field_W, param1 + (this.field_q >> 1), param2 + 103, 16777215, -1);
         if (null != this.field_U) {
@@ -44,16 +44,16 @@ final class m extends hf {
     }
 
     public static void e(boolean param0) {
-        field_T = null;
+        namesCannotStartOrText = null;
         field_O = null;
         if (param0) {
-          field_V = null;
+          waitingForGraphicsText = null;
           field_R = null;
           field_X = null;
           return;
         }
-        field_T = (String) null;
-        field_V = null;
+        namesCannotStartOrText = (String) null;
+        waitingForGraphicsText = null;
         field_R = null;
         field_X = null;
     }
@@ -79,7 +79,7 @@ final class m extends hf {
           this.field_P = false;
           this.a(this.field_Q, 124);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class m extends hf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            field_T = (String) null;
+            namesCannotStartOrText = (String) null;
           }
           stackIn_5_0 = (param3) ? 0 : 1;
           if (this.field_P) {
@@ -131,13 +131,13 @@ final class m extends hf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
         field_X = new iw(3);
-        field_T = "Names cannot start or end with space or underscore";
-        field_V = "Waiting for graphics";
+        namesCannotStartOrText = "Names cannot start or end with space or underscore";
+        waitingForGraphicsText = "Waiting for graphics";
     }
 }

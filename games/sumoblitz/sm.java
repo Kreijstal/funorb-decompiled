@@ -5,10 +5,10 @@ final class sm {
     static ne[] field_c;
     static byte[] field_b;
     private int field_g;
-    wb field_i;
+    Sprite field_i;
     private int field_d;
     private int field_h;
-    wb[] field_j;
+    Sprite[] field_j;
     private boolean field_e;
     private int field_a;
     private int field_f;
@@ -27,7 +27,7 @@ final class sm {
           param0.field_f = this.field_f;
           param0.field_j = this.field_j;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class sm {
         return this;
     }
 
-    final sm a(wb[] param0, int param1) {
+    final sm a(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         sm stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -76,7 +76,7 @@ final class sm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class sm {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class sm {
         this.field_e = false;
     }
 
-    final void a(int param0, fl param1, int param2, int param3, pk param4) {
+    final void a(int param0, fl param1, int param2, int param3, UiWidget param4) {
         vn stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -296,11 +296,11 @@ final class sm {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
-    final void a(int param0, pk param1, int param2, fl param3, int param4, sm param5) {
+    final void a(int param0, UiWidget param1, int param2, fl param3, int param4, sm param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -339,7 +339,7 @@ final class sm {
           }
           if (param2 > -1) {
             var8 = (sm) null;
-            this.a(32, (pk) null, -99, (fl) null, 16, (sm) null);
+            this.a(32, (UiWidget) null, -99, (fl) null, 16, (sm) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -364,7 +364,7 @@ final class sm {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

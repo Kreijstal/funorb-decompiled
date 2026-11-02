@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ig {
-    static jn field_b;
+    static IntrusiveDeque field_b;
     static pl field_a;
 
     final static boolean b(int param0) {
@@ -38,7 +38,7 @@ final class ig {
           var4 = 26 / ((67 - param0) / 42);
           for (var5 = 0; var5 < var2.length; var5++) {
             if (var2[var5] != null &&
-              var2[var5].field_F == g.field_c) {
+              var2[var5].field_F == SocketConnector.field_c) {
               var6 = var2[var5];
               var7 = var6.field_C;
               var8 = var6.field_z;
@@ -48,7 +48,7 @@ final class ig {
               oc.a(uj.a(var9, var7, var10, (byte) 84, var8), false);
             }
           }
-          g.field_c = g.field_c + 1;
+          SocketConnector.field_c = SocketConnector.field_c + 1;
           if (var3 != 0) {
             return false;
           }
@@ -56,7 +56,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ig.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ig.A(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class ig {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param1) {
-            field_b = (jn) null;
+            field_b = (IntrusiveDeque) null;
           }
           if (!qn.field_e.field_f) {
             stackIn_6_0 = -1;
@@ -115,16 +115,16 @@ final class ig {
             stackIn_14_0 = -1;
             return stackIn_14_0;
           }
-          var3 = pn.field_n + var10;
-          if (!ha.field_e.b("", var3, -1)) {
+          var3 = OpenGlUnderwaterEffect.field_n + var10;
+          if (!GraphicsToolkit.field_e.b("", var3, -1)) {
             stackIn_17_0 = -1;
             return stackIn_17_0;
           }
-          if (!ha.field_e.a(var3, 100)) {
-            stackIn_20_0 = ha.field_e.a(var3, (byte) 33);
+          if (!GraphicsToolkit.field_e.a(var3, 100)) {
+            stackIn_20_0 = GraphicsToolkit.field_e.a(var3, (byte) 33);
             return stackIn_20_0;
           }
-          var15 = ha.field_e.a("", var3, -1);
+          var15 = GraphicsToolkit.field_e.a("", var3, -1);
           var13 = var15;
           var4 = var13;
           var5 = null;
@@ -185,7 +185,7 @@ final class ig {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -198,6 +198,6 @@ final class ig {
     }
 
     static {
-        field_b = new jn();
+        field_b = new IntrusiveDeque();
     }
 }

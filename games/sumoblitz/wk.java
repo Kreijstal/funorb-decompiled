@@ -4,7 +4,7 @@
 final class wk extends na {
     private nq field_g;
     private String field_e;
-    static os field_h;
+    static MouseInputHandler field_h;
     static String field_f;
     private boolean field_i;
 
@@ -15,7 +15,7 @@ final class wk extends na {
         try {
           this.field_g = new nq(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,10 +39,10 @@ final class wk extends na {
             return stackIn_4_0;
           }
           if (this.a((byte) 26, param1) != qr.field_e) {
-            stackIn_9_0 = nw.field_h;
+            stackIn_9_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_9_0;
           }
-          stackIn_7_0 = oj.field_b;
+          stackIn_7_0 = oj.emailAddressIsUnavailableText;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class wk extends na {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class wk extends na {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_e)) {
-            var3 = ov.a(param0 ^ 27, param1);
+            var3 = RasterBuffer.a(param0 ^ 27, param1);
             if (!var3.a(true)) {
               stackIn_7_0 = kt.field_a;
               return stackIn_7_0;
@@ -98,7 +98,7 @@ final class wk extends na {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -111,6 +111,6 @@ final class wk extends na {
     }
 
     static {
-        field_h = new os();
+        field_h = new MouseInputHandler();
     }
 }

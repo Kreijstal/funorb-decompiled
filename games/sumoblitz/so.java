@@ -9,7 +9,7 @@ final class so {
           if (5 > gj.a((byte) -84, 10)) {
             fb.field_a = fb.field_a - param0;
           } else {
-            ha.field_f = ha.field_f - param0;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
           }
           if (gj.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - param0;
@@ -23,7 +23,7 @@ final class so {
             ts.field_a = ts.field_a + param0;
           }
           if (gj.a((byte) -84, 10) >= 5) {
-            ha.field_f = ha.field_f + param0;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + param0;
           } else {
             fb.field_a = fb.field_a + param0;
           }
@@ -36,7 +36,7 @@ final class so {
 
     final static boolean a(byte param0) {
         int var1 = 59 / ((50 - param0) / 50);
-        return sr.field_d;
+        return LimitedRandomAccessFile.field_d;
     }
 
     static {

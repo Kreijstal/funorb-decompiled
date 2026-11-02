@@ -4,7 +4,7 @@
 final class bj {
     private String field_f;
     static tg field_c;
-    static jn field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     private boolean field_e;
     static ri field_g;
@@ -37,7 +37,7 @@ final class bj {
 
     final String b(int param0) {
         if (param0 <= 16) {
-          field_b = (jn) null;
+          field_b = (IntrusiveDeque) null;
           return this.field_f;
         }
         return this.field_f;
@@ -75,7 +75,7 @@ final class bj {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

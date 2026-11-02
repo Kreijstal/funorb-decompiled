@@ -5,10 +5,10 @@ import java.io.*;
 
 final class kq extends hf implements ai {
     static ri[] field_S;
-    static String field_Q;
-    static String field_R;
+    static String tryAgainText;
+    static String playerText;
     static ri field_T;
-    static String field_O;
+    static String youHave1UnreadText;
     private wp field_U;
     private wp field_P;
 
@@ -42,15 +42,15 @@ final class kq extends hf implements ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     kq(dg param0) {
         super(param0, 200, 130);
-        pk var2 = null;
+        UiWidget var2 = null;
         try {
-          var2 = new pk(ms.field_c, (qm) null);
+          var2 = new UiWidget(IntrusiveNode.fullscreenPlayIsAnText, (qm) null);
           var2.field_r = 0;
           var2.field_v = 50;
           var2.field_p = 80;
@@ -58,27 +58,27 @@ final class kq extends hf implements ai {
           var2.field_w = (mh) ((Object) new gm(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var2, 60);
           if (vs.b((byte) 9)) {
-            this.field_U = this.a(25566, (qm) (this), pp.field_f);
+            this.field_U = this.a(25566, (qm) (this), pp.membersText);
           }
-          this.field_P = this.a(25566, (qm) (this), jh.field_I);
+          this.field_P = this.a(25566, (qm) (this), jh.closeText);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void k(int param0) {
         field_S = null;
-        field_Q = null;
-        field_R = null;
+        tryAgainText = null;
+        playerText = null;
         if (param0 == 50) {
           field_T = null;
-          field_O = null;
+          youHave1UnreadText = null;
           return;
         }
         File var2 = (File) null;
         kq.a(85, (File) null, (byte) 19);
         field_T = null;
-        field_O = null;
+        youHave1UnreadText = null;
     }
 
     final static byte[] a(int param0, File param1, byte param2) {
@@ -99,7 +99,7 @@ final class kq extends hf implements ai {
               var3 = var4;
               nt.a(var4, 7039, param1, param0);
               if (param2 <= 41) {
-                field_Q = (String) null;
+                tryAgainText = (String) null;
               }
               stackIn_3_0 = var4;
               return stackIn_3_0;
@@ -119,7 +119,7 @@ final class kq extends hf implements ai {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -177,7 +177,7 @@ final class kq extends hf implements ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -226,11 +226,11 @@ final class kq extends hf implements ai {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -240,10 +240,10 @@ final class kq extends hf implements ai {
         try {
           if (param3 == 98) {
             if (null != this.field_U) {
-              this.field_U.a((pk) (this), (byte) 61);
+              this.field_U.a((UiWidget) (this), (byte) 61);
               return true;
             }
-            this.field_P.a((pk) (this), (byte) 61);
+            this.field_P.a((UiWidget) (this), (byte) 61);
             return true;
           }
           if (param2 < 9) {
@@ -253,7 +253,7 @@ final class kq extends hf implements ai {
             stackIn_13_0 = super.a(param0, param1, (byte) 69, param3);
             return stackIn_13_0;
           }
-          this.field_P.a((pk) (this), (byte) 61);
+          this.field_P.a((UiWidget) (this), (byte) 61);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -265,13 +265,13 @@ final class kq extends hf implements ai {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
-        field_O = "You have 1 unread message!";
-        field_R = "Player";
-        field_Q = "Try again";
+        youHave1UnreadText = "You have 1 unread message!";
+        playerText = "Player";
+        tryAgainText = "Try again";
     }
 }

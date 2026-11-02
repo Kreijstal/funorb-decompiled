@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class dq extends dp {
-    private wb[] field_D;
-    private wb field_G;
+    private Sprite[] field_D;
+    private Sprite field_G;
     static int[] field_s;
     private int field_cb;
     private boolean field_z;
@@ -12,35 +12,35 @@ class dq extends dp {
     private int field_O;
     private int field_N;
     private vn field_C;
-    private wb field_A;
+    private Sprite field_A;
     static ri[] field_v;
     private boolean field_R;
     private int field_ab;
     private int field_E;
     private int field_S;
-    private wb[] field_u;
+    private Sprite[] field_u;
     private int field_V;
     private int field_H;
-    private wb field_W;
+    private Sprite field_W;
     private boolean field_J;
-    static ki field_Z;
+    static ResourceArchive field_Z;
     private int field_U;
     private int field_Q;
     private int field_bb;
     private int field_L;
-    private wb field_db;
+    private Sprite field_db;
     private int field_fb;
     private int field_B;
     private int field_I;
-    private wb[] field_eb;
+    private Sprite[] field_eb;
     private String field_t;
-    private wb[] field_T;
+    private Sprite[] field_T;
     private boolean field_Y;
     private int field_w;
     private int field_K;
     private boolean field_y;
-    private wb[] field_X;
-    private wb field_r;
+    private Sprite[] field_X;
+    private Sprite field_r;
     private String field_F;
 
     final static void a(byte param0, int param1) {
@@ -62,7 +62,7 @@ class dq extends dp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "dq.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "dq.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ class dq extends dp {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,13 +232,13 @@ class dq extends dp {
         this.field_fb = -2147483648;
         this.field_y = false;
         try {
-          this.field_h = param0;
+          this.key = param0;
           this.a(param1, (byte) -128);
           if (param6 != null) {
             this.field_F = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "dq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

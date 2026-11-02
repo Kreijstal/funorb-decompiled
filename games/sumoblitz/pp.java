@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pp implements Runnable {
-    volatile du[] field_c;
+    volatile AudioOutput[] field_c;
     volatile boolean field_b;
-    static String field_f;
-    static String[] field_e;
-    wi field_g;
+    static String membersText;
+    static String[] padTypeNames;
+    PlatformTaskDispatcher field_g;
     volatile boolean field_a;
     static gm field_d;
     static int field_h;
@@ -120,7 +120,7 @@ final class pp implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var5), "pp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var5), "pp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -128,17 +128,17 @@ final class pp implements Runnable {
         field_d = null;
         if (param0 != 2) {
           pp.a(-25);
-          field_f = null;
-          field_e = null;
+          membersText = null;
+          padTypeNames = null;
           return;
         }
-        field_f = null;
-        field_e = null;
+        membersText = null;
+        padTypeNames = null;
     }
 
     public final void run() {
         int var1_int = 0;
-        du var2 = null;
+        AudioOutput var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -164,7 +164,7 @@ final class pp implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            ms.a((String) null, (Throwable) ((Object) var1), 0);
+            IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var1), 0);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {
@@ -180,14 +180,14 @@ final class pp implements Runnable {
     }
 
     pp() {
-        this.field_c = new du[2];
+        this.field_c = new AudioOutput[2];
         this.field_a = false;
         this.field_b = false;
     }
 
     static {
-        field_e = new String[]{"Accelerator pad", "Ice pad", "Teleporter pad", "Pinball bouncer", "Attractor", "Repeller", "Spike pad", "Landmine"};
-        field_f = "Members";
+        padTypeNames = new String[]{"Accelerator pad", "Ice pad", "Teleporter pad", "Pinball bouncer", "Attractor", "Repeller", "Spike pad", "Landmine"};
+        membersText = "Members";
     }
 
     @SuppressWarnings("unchecked")

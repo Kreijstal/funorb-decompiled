@@ -8,22 +8,22 @@ abstract class hf extends rg {
     private int field_G;
     static String[] field_F;
     static hr[] field_H;
-    static String[] field_L;
+    static String[] membershipPromoLines;
     private int field_N;
     private int field_K;
 
     boolean h(int param0) {
         this.f((byte) -128);
         if (param0 != 0) {
-          wi var3 = (wi) null;
-          hf.a(true, (wi) null, -72, -89, 23, -11);
+          PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
+          hf.a(true, (PlatformTaskDispatcher) null, -72, -89, 23, -11);
         }
         return super.h(0);
     }
 
-    final static hr a(ha param0, ri param1, byte param2) {
+    final static hr a(GraphicsToolkit param0, ri param1, byte param2) {
         RuntimeException var3 = null;
-        wi var4 = null;
+        PlatformTaskDispatcher var4 = null;
         hr stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -33,8 +33,8 @@ abstract class hf extends rg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -11) {
-            var4 = (wi) null;
-            hf.a(false, (wi) null, -97, 35, 94, -35);
+            var4 = (PlatformTaskDispatcher) null;
+            hf.a(false, (PlatformTaskDispatcher) null, -97, 35, 94, -35);
           }
           stackIn_3_0 = param0.a(param1, false);
           return stackIn_3_0;
@@ -54,7 +54,7 @@ abstract class hf extends rg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ abstract class hf extends rg {
         }
         field_H = null;
         field_F = null;
-        field_L = null;
+        membershipPromoLines = null;
     }
 
     void b(int param0, int param1, int param2) {
@@ -189,7 +189,7 @@ abstract class hf extends rg {
         }
     }
 
-    final static java.awt.Frame a(boolean param0, wi param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(boolean param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_8_0 = null;
         Object stackIn_35_0 = null;
@@ -247,7 +247,7 @@ abstract class hf extends rg {
           if (var11.field_c != 2) {
             return var7;
           }
-          wj.a(var7, param1, false);
+          OpenGlTransparentWaterEffect.a(var7, param1, false);
           stackIn_41_0 = null;
           return (java.awt.Frame) (stackIn_41_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -260,7 +260,7 @@ abstract class hf extends rg {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -328,6 +328,6 @@ abstract class hf extends rg {
     }
 
     static {
-        field_L = new String[]{"Access the new turrets!", "Challenging levels!", "Diabolical bosses!"};
+        membershipPromoLines = new String[]{"Access the new turrets!", "Challenging levels!", "Diabolical bosses!"};
     }
 }

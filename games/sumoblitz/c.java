@@ -3,12 +3,12 @@
  */
 final class c extends nl {
     static int field_s;
-    static String field_q;
+    static String ifYouDoNothingText;
     static int field_r;
-    static String field_t;
+    static String unfortunatelyThereWasAText;
     static int[] field_u;
 
-    final String a(boolean param0, pk param1) {
+    final String a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -31,20 +31,20 @@ final class c extends nl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     public static void c(int param0) {
         if (param0 == 22760) {
-          field_t = null;
-          field_q = null;
+          unfortunatelyThereWasAText = null;
+          ifYouDoNothingText = null;
           field_u = null;
           return;
         }
-        field_q = (String) null;
-        field_t = null;
-        field_q = null;
+        ifYouDoNothingText = (String) null;
+        unfortunatelyThereWasAText = null;
+        ifYouDoNothingText = null;
         field_u = null;
     }
 
@@ -97,13 +97,13 @@ final class c extends nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1_ref), "c.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "c.K(" + param0 + ')');
         }
     }
 
     static {
-        field_q = "If you do nothing the game will revert to normal view once the timer reaches 0.";
-        field_t = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
+        ifYouDoNothingText = "If you do nothing the game will revert to normal view once the timer reaches 0.";
+        unfortunatelyThereWasAText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_u = new int[]{1, 1, 1};
     }
 }

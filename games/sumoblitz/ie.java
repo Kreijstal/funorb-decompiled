@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class ie extends pk implements ug {
+abstract class ie extends UiWidget implements ug {
     static int field_x;
-    pk field_y;
+    UiWidget field_y;
 
-    private final boolean a(boolean param0, pk param1) {
+    private final boolean a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -16,7 +16,7 @@ abstract class ie extends pk implements ug {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            this.field_y = (pk) null;
+            this.field_y = (UiWidget) null;
           }
           stackIn_7_0 = (this.field_y != null) && (!this.field_y.d(-1)) && (this.field_y.a(param1, (byte) 61));
           return stackIn_7_0;
@@ -30,7 +30,7 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -87,11 +87,11 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -114,11 +114,11 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean a(pk param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -141,7 +141,7 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ abstract class ie extends pk implements ug {
             }
             return;
           }
-          this.field_w.a((pk) (this), param1, 5592405, true, param0);
+          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
         }
         if (null != this.field_y) {
           this.field_y.a(this.field_r + param0, this.field_v + param1, (byte) -38, param3);
@@ -204,7 +204,7 @@ abstract class ie extends pk implements ug {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
@@ -223,7 +223,7 @@ abstract class ie extends pk implements ug {
             if (param2 >= 9) {
               return false;
             }
-            this.field_y = (pk) null;
+            this.field_y = (UiWidget) null;
             return false;
           }
           if (hw.field_b[81]) {
@@ -242,11 +242,11 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, pk param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
@@ -271,7 +271,7 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ abstract class ie extends pk implements ug {
             }
             va.a(false, param2);
           } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ie.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ie.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -348,15 +348,15 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    pk f(int param0) {
-        pk var2 = null;
-        pk var2Lifetime1;
+    UiWidget f(int param0) {
+        UiWidget var2 = null;
+        UiWidget var2Lifetime1;
         if (param0 != 16777216) {
-          this.field_y = (pk) null;
+          this.field_y = (UiWidget) null;
           var2 = this.field_y;
           if (var2 == null) {
             return null;
@@ -376,7 +376,7 @@ abstract class ie extends pk implements ug {
         return null;
     }
 
-    void a(pk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -401,7 +401,7 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -427,10 +427,10 @@ abstract class ie extends pk implements ug {
         return var3;
     }
 
-    private final boolean a(pk param0, boolean param1) {
+    private final boolean a(UiWidget param0, boolean param1) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
-        pk var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -438,8 +438,8 @@ abstract class ie extends pk implements ug {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var4 = (pk) null;
-            discarded$1 = this.a((pk) null, false);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((UiWidget) null, false);
           }
           stackIn_7_0 = (null != this.field_y) && (!this.field_y.d(-1)) && (this.field_y.a(param0, (byte) 61));
           return stackIn_7_0;
@@ -453,11 +453,11 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, pk param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -480,7 +480,7 @@ abstract class ie extends pk implements ug {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param6).append(')').toString());
         }
     }
 

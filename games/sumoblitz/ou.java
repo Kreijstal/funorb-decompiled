@@ -29,13 +29,13 @@ final class ou extends na {
           }
           if (nq.field_g.field_o) {
             kh.field_e = kh.field_e | nq.field_g.field_k;
-            wj.field_e = wj.field_e & ~nq.field_g.field_k;
+            OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~nq.field_g.field_k;
             nt.field_r = true;
             nq.field_g = null;
           }
         }
         if (null == ah.field_g) {
-          ki.b(6);
+          ResourceArchive.b(6);
         }
     }
 
@@ -84,7 +84,7 @@ final class ou extends na {
             this.field_f = param1;
           }
           if (this.field_e) {
-            return ck.field_b;
+            return ck.nameIsAvailableText;
           }
           stackIn_16_0 = au.field_e;
           return stackIn_16_0;
@@ -98,7 +98,7 @@ final class ou extends na {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class ou extends na {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -206,10 +206,10 @@ final class ou extends na {
         int var7Lifetime1Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          sr.field_d = true;
+          LimitedRandomAccessFile.field_d = true;
           cl.field_s = param1;
           if (0 == cl.field_s) {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ms.field_c);
+            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
             bf.field_c = new String[var4];
             eb.field_a = new int[var4];
@@ -221,14 +221,14 @@ final class ou extends na {
               bf.field_c[var5] = mb.field_c[var5];
             }
             bf.field_c[-3 + var4] = "";
-            bf.field_c[-2 + var4] = pp.field_f;
+            bf.field_c[-2 + var4] = pp.membersText;
             eb.field_a[-2 + var4] = 0;
             jo.field_b[0] = 4;
-            bf.field_c[-1 + var4] = jh.field_I;
+            bf.field_c[-1 + var4] = jh.closeText;
             eb.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (cl.field_s == 1) {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ms.field_c);
+            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
             eb.field_a = new int[var4];
             bf.field_c = new String[var4];
@@ -240,13 +240,13 @@ final class ou extends na {
               bf.field_c[var5] = mb.field_c[var5];
             }
             bf.field_c[-2 + var4] = "";
-            bf.field_c[-1 + var4] = jh.field_I;
+            bf.field_c[-1 + var4] = jh.closeText;
             eb.field_a[var4 - 1] = 0;
             jo.field_b[0] = 5;
           } else if (cl.field_s != 2) {
             if (cl.field_s == 3) {
               if (!lt.field_m.field_f) {
-                var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, fr.field_lb);
+                var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, fr.unfortunatelyYourConfigurationDoesnText);
               } else {
                 var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ni.field_f);
               }
@@ -261,11 +261,11 @@ final class ou extends na {
                 bf.field_c[var5] = mb.field_c[var5];
               }
               bf.field_c[-2 + var4] = "";
-              bf.field_c[-1 + var4] = jh.field_I;
+              bf.field_c[-1 + var4] = jh.closeText;
               eb.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == cl.field_s) {
-              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, sr.field_c);
+              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               bf.field_c = new String[var4];
               eb.field_a = new int[var4];
@@ -277,14 +277,14 @@ final class ou extends na {
                 bf.field_c[var5] = mb.field_c[var5];
               }
               bf.field_c[-2 + var4] = "";
-              bf.field_c[var4 - 1] = jh.field_I;
+              bf.field_c[var4 - 1] = jh.closeText;
               eb.field_a[var4 - 1] = 0;
               jo.field_b[0] = 5;
             } else {
               if (cl.field_s != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ua.field_i);
+              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ua.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
               eb.field_a = new int[var4];
               bf.field_c = new String[var4];
@@ -296,15 +296,15 @@ final class ou extends na {
                 bf.field_c[var5] = mb.field_c[var5];
               }
               bf.field_c[-3 + var4] = "";
-              bf.field_c[var4 - 2] = kq.field_Q;
+              bf.field_c[var4 - 2] = kq.tryAgainText;
               eb.field_a[-2 + var4] = 0;
               jo.field_b[0] = 3;
-              bf.field_c[var4 - 1] = jh.field_I;
+              bf.field_c[var4 - 1] = jh.closeText;
               eb.field_a[var4 - 1] = 1;
               jo.field_b[1] = 5;
             }
           } else {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(qo.field_c, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(mb.field_c[var5])) {
@@ -355,16 +355,16 @@ final class ou extends na {
               eb.field_a[var8] = -1;
             }
             jo.field_b = new int[2];
-            bf.field_c[0] = fd.field_i;
-            bf.field_c[1] = km.field_m;
+            bf.field_c[0] = fd.clickText;
+            bf.field_c[1] = km.acceptText;
             eb.field_a[1] = 0;
             jo.field_b[1] = 2;
             jo.field_b[0] = 5;
             eb.field_a[3] = 1;
             bf.field_c[5] = "";
-            bf.field_c[3] = up.field_b;
-            bf.field_c[2] = ws.field_a;
-            bf.field_c[4] = oh.field_b;
+            bf.field_c[3] = up.cancelText;
+            bf.field_c[2] = ws.toKeepFullscreenOrText;
+            bf.field_c[4] = oh.toReturnToTheText;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_41_0 = bf.field_c;
               stackIn_41_1 = var8Lifetime2 + 6;
@@ -429,7 +429,7 @@ final class ou extends na {
             if (0 <= eb.field_a[var4Lifetime2]) {
               stackIn_117_1 = ga.field_h;
             } else {
-              stackIn_117_1 = fn.field_t;
+              stackIn_117_1 = GameClientShell.field_t;
             }
             rf.field_d = stackIn_116_0 + stackIn_117_1;
           }
@@ -441,7 +441,7 @@ final class ou extends na {
           while (bf.field_c.length > var5Lifetime3) {
             var7Lifetime2 = eb.field_a[var5Lifetime3];
             if (var7Lifetime2 < 0) {
-              var6Lifetime1 = var6Lifetime1 + fn.field_t;
+              var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
               var8Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(-116, bf.field_c[var5Lifetime3], true);
               var9 = -(var8Lifetime1 >> 1) + oj.field_a;
@@ -464,7 +464,7 @@ final class ou extends na {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

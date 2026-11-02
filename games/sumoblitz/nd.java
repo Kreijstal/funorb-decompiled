@@ -11,11 +11,11 @@ final class nd extends ao {
     private int field_D;
     private int[] field_J;
     static int field_F;
-    static String field_G;
+    static String errorConnectingToServerText;
     private int field_C;
     private int field_E;
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
@@ -62,7 +62,7 @@ final class nd extends ao {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class nd extends ao {
           this.b(-1, var4, var3_int);
           this.d(var4, 0, var3_int);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class nd extends ao {
           this.a((byte) 50, var10);
           this.a(-7170, var9);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -134,13 +134,13 @@ final class nd extends ao {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        fs var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new fs(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.e(-31302);
           var4 = var9.c(true);
           if (0 <= var4 && (bn.field_R == 0 ||
@@ -183,7 +183,7 @@ final class nd extends ao {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -220,17 +220,17 @@ final class nd extends ao {
             return false;
           }
           long dupTemp$0 = wq.a(-38);
-          rj.field_a = dupTemp$0;
+          ArchiveCatalog.field_a = dupTemp$0;
           jt.field_x = dupTemp$0;
           if (tm.field_a.field_c != 1) {
             kw.field_c = lr.field_b;
           } else {
             try {
-              qk.field_O = new dt((java.net.Socket) (tm.field_a.field_d), jt.field_t);
+              qk.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.field_d), jt.field_t);
               var4 = ig.field_a;
               var5 = var4;
-              as.field_v.field_p = 0;
-              var5.field_p = 0;
+              as.field_v.position = 0;
+              var5.position = 0;
               li.field_r = param1 ? -2 : -1;
               vb.field_I = param1 ? -2 : -1;
               ur.field_Q = param1 ? -2 : -1;
@@ -255,7 +255,7 @@ final class nd extends ao {
         if (param0 != -16099) {
           return;
         }
-        field_G = null;
+        errorConnectingToServerText = null;
     }
 
     private final void d(int param0, int param1, int param2) {
@@ -281,7 +281,7 @@ final class nd extends ao {
         int var3;
         int var4;
         int var6;
-        pk var5;
+        UiWidget var5;
         var6 = Sumoblitz.field_L ? 1 : 0;
         var2 = 0;
         var3 = 0;
@@ -315,7 +315,7 @@ final class nd extends ao {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         int var4 = this.field_J != null ? this.field_J.length : 0;
-        pk[] var5 = new pk[param1 * var4];
+        UiWidget[] var5 = new UiWidget[param1 * var4];
         if (null != this.field_x &&
           this.field_x.length > 0 &&
           var5.length > 0 &&
@@ -326,12 +326,12 @@ final class nd extends ao {
         }
         this.field_x = var5;
         if (param0 != -1) {
-          pk var8 = (pk) null;
-          this.a(-101, 118, (pk) null);
+          UiWidget var8 = (UiWidget) null;
+          this.a(-101, 118, (UiWidget) null);
         }
     }
 
-    final void a(int param0, int param1, pk param2) {
+    final void a(int param0, int param1, UiWidget param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -347,7 +347,7 @@ final class nd extends ao {
           }
           this.field_D = this.field_D + 1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nd.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nd.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -375,13 +375,13 @@ final class nd extends ao {
           this.e(var4, var3_int, param0 ^ param0);
           this.a((byte) 87, var4, var3_int);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        pk var9 = null;
+        UiWidget var9 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -389,8 +389,8 @@ final class nd extends ao {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -42) {
-            var9 = (pk) null;
-            this.a((pk) null, 107, -24, -6, 81, 67, -125);
+            var9 = (UiWidget) null;
+            this.a((UiWidget) null, 107, -24, -6, 81, 67, -125);
           }
           stackIn_3_0 = super.a(param0, -77, param2, param3, param4, param5, param6);
           return stackIn_3_0;
@@ -404,13 +404,13 @@ final class nd extends ao {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     private final void e(int param0, int param1, int param2) {
         int var4 = this.field_A == null ? 0 : this.field_A.length;
-        pk[] var5 = new pk[param0 * var4];
+        UiWidget[] var5 = new UiWidget[param0 * var4];
         if (this.field_x != null &&
           this.field_x.length > 0 &&
           0 < var5.length &&
@@ -423,7 +423,7 @@ final class nd extends ao {
         this.field_x = var5;
     }
 
-    private final void a(pk param0, int param1, int param2, int param3) {
+    private final void a(UiWidget param0, int param1, int param2, int param3) {
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_1 = 0;
@@ -528,11 +528,11 @@ final class nd extends ao {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
-        field_G = "Error connecting to server. Please try using a different server.";
+        errorConnectingToServerText = "Error connecting to server. Please try using a different server.";
     }
 }

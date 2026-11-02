@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bv implements mh {
-    static String field_b;
+    static String friendsCanBeAddedText;
     private int field_a;
     private int field_d;
     private vn field_c;
@@ -10,10 +10,10 @@ final class bv implements mh {
     public static void b(int param0) {
         if (param0 < 38) {
           bv.a(31);
-          field_b = null;
+          friendsCanBeAddedText = null;
           return;
         }
-        field_b = null;
+        friendsCanBeAddedText = null;
     }
 
     public bv() {
@@ -22,7 +22,7 @@ final class bv implements mh {
         this.field_c = kw.field_b;
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -81,7 +81,7 @@ final class bv implements mh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class bv implements mh {
           this.field_c = param0;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -104,6 +104,6 @@ final class bv implements mh {
     }
 
     static {
-        field_b = "Friends can be added in multiplayer<nbsp>games";
+        friendsCanBeAddedText = "Friends can be added in multiplayer<nbsp>games";
     }
 }

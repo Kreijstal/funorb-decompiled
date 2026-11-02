@@ -5,7 +5,7 @@ final class rc extends bp implements ef {
     static int field_j;
     static qp[] field_l;
     static ri field_i;
-    static jn field_m;
+    static IntrusiveDeque field_m;
     static int field_k;
 
     public final void a(int param0) {
@@ -30,11 +30,11 @@ final class rc extends bp implements ef {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "rc.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rc.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    rc(on param0, int param1, boolean param2, int[][] param3) {
+    rc(OpenGlGraphicsToolkit param0, int param1, boolean param2, int[][] param3) {
         super(param0, 34067, nl.field_p, io.field_g, param1 * (param1 * 6), param2);
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
@@ -77,7 +77,7 @@ final class rc extends bp implements ef {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class rc extends bp implements ef {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

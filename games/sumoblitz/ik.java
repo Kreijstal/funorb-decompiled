@@ -4,7 +4,7 @@
 final class ik {
     private nj[] field_a;
     private d field_e;
-    static ki field_d;
+    static ResourceArchive field_d;
     private boolean field_b;
     private bk field_c;
 
@@ -22,7 +22,7 @@ final class ik {
             this.field_b = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ik.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class ik {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class ik {
         bk var8 = null;
         int var9 = 0;
         int var10 = 0;
-        ha var11 = null;
+        GraphicsToolkit var11 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3 = null;
@@ -266,7 +266,7 @@ final class ik {
                   }
                 }
                 try {
-                  var11 = ks.a(var6.field_c, param1, this.field_e, true, var6.field_g, ha.field_g);
+                  var11 = ks.a(var6.field_c, param1, this.field_e, true, var6.field_g, GraphicsToolkit.field_g);
                   if (var11 != null) {
                     var8 = new bk(var11, var6, param1);
                     if (var6.a(var8, (byte) -36)) {
@@ -313,13 +313,13 @@ final class ik {
           } else {
             stackIn_116_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
         }
     }
 
-    final ha a(int param0) {
+    final GraphicsToolkit a(int param0) {
         if (param0 >= -89) {
-          return (ha) null;
+          return (GraphicsToolkit) null;
         }
         if (this.field_c == null) {
           return null;
@@ -328,19 +328,19 @@ final class ik {
     }
 
     ik(int param0, int param1, d param2) {
-        this(kd.a((byte) -123, param0), vo.b(param1, -1), param2, lt.field_m, ms.b(-16754));
+        this(kd.a((byte) -123, param0), vo.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
     }
 
-    private ik(ki param0, ki param1, d param2, wi param3, nj[] param4) {
+    private ik(ResourceArchive param0, ResourceArchive param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {
         this.field_b = false;
         try {
-          ha.field_g = param1;
+          GraphicsToolkit.field_g = param1;
           this.field_e = param2;
           sn.field_d = param0;
           ow.a(-18527, param0, param3);
           this.a(param4, 97);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

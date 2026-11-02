@@ -40,7 +40,7 @@ final class tq {
         try {
           this.field_b = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "tq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class tq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (oc.field_e <= in.field_z) {
-            hb.a(param1, -1);
+            GameKeyHandler.a(param1, -1);
             oc.field_e = (int)((double)oc.field_e + 1.5 * (double)oc.field_e);
           }
           if (param0 == -106) {
@@ -98,7 +98,7 @@ final class tq {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

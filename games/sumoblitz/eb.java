@@ -3,9 +3,9 @@
  */
 final class eb {
     private cs field_d;
-    static ki field_f;
+    static ResourceArchive field_f;
     static og field_b;
-    private jn field_e;
+    private IntrusiveDeque field_e;
     private fr field_c;
     static int[] field_a;
 
@@ -38,7 +38,7 @@ final class eb {
 
     final void a(byte param0) {
         int var2;
-        ms var3;
+        IntrusiveNode var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         var2 = -61 / ((param0 - 13) / 45);
@@ -49,12 +49,12 @@ final class eb {
         var3 = this.field_e.b(86);
         while (this.field_e.field_e != var3) {
           ((ve) (var3)).c(50);
-          var3 = var3.field_b;
+          var3 = var3.next;
         }
     }
 
     eb(fr param0) {
-        this.field_e = new jn();
+        this.field_e = new IntrusiveDeque();
         try {
           this.field_c = param0;
           if (this.field_c.field_xc) {
@@ -70,7 +70,7 @@ final class eb {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

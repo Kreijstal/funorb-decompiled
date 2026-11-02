@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kp {
-    static String field_b;
+    static String classicText;
     static boolean field_a;
 
     final static int a(of param0, int param1, id param2, int param3) {
@@ -69,18 +69,18 @@ final class kp {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 == -1) {
-          field_b = null;
+          classicText = null;
           return;
         }
         id var2 = (id) null;
         kp.a((of) null, -64, (id) null, -29);
-        field_b = null;
+        classicText = null;
     }
 
     final static void a(int param0, id param1, int param2) {
@@ -89,15 +89,15 @@ final class kp {
             id var4 = (id) null;
             kp.a((of) null, 14, (id) null, -12);
           }
-          ow.field_f.a((ms) (param1), (byte) 39);
+          ow.field_f.a((IntrusiveNode) (param1), (byte) 39);
           km.a((byte) 69, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        field_b = "Classic";
+        classicText = "Classic";
         field_a = false;
     }
 }

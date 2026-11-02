@@ -16,7 +16,7 @@ final class tf {
         throw new IllegalStateException();
     }
 
-    final static bo a(ki param0, byte param1, int param2, int param3, ki param4) {
+    final static bo a(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         bo stackIn_5_0 = null;
         bo stackIn_7_0 = null;
@@ -52,7 +52,7 @@ final class tf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

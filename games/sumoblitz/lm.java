@@ -44,7 +44,7 @@ final class lm {
           RuntimeException var2_ref2 = null;
           var7 = Sumoblitz.field_L ? 1 : 0;
           try {
-            if (rq.field_d) {
+            if (ShaderEffect.field_d) {
               return true;
             }
             try {
@@ -74,7 +74,7 @@ final class lm {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

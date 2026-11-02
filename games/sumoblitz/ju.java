@@ -33,7 +33,7 @@ final class ju extends ua implements cr {
 
     final static void g(int param0) {
         wt.field_h[1] = iv.field_i;
-        wt.field_h[0] = ki.field_f;
+        wt.field_h[0] = ResourceArchive.field_f;
         wt.field_h[2] = hc.field_f;
         pl.field_u = wt.field_h[1] + wt.field_h[0] - 2 + (wt.field_h[2] - 1);
         if (param0 < 100) {
@@ -46,7 +46,7 @@ final class ju extends ua implements cr {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (ig.field_a.field_p >= param1) {
+          if (ig.field_a.position >= param1) {
             return true;
           }
           if (null == qk.field_O) {
@@ -65,16 +65,16 @@ final class ju extends ua implements cr {
               kk.a((byte) -118);
               return false;
             }
-            if (-ig.field_a.field_p + param1 < var2_int) {
-              var2_int = -ig.field_a.field_p + param1;
+            if (-ig.field_a.position + param1 < var2_int) {
+              var2_int = -ig.field_a.position + param1;
             }
-            qk.field_O.a(param0 ^ 99, ig.field_a.field_p, var2_int, ig.field_a.field_n);
+            qk.field_O.a(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
             jt.field_x = wq.a(-47);
-            ig.field_a.field_p = ig.field_a.field_p + var2_int;
-            if (ig.field_a.field_p < param1) {
+            ig.field_a.position = ig.field_a.position + var2_int;
+            if (ig.field_a.position < param1) {
               return false;
             }
-            ig.field_a.field_p = 0;
+            ig.field_a.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,12 +98,12 @@ final class ju extends ua implements cr {
         super.a((byte) -87, this.field_o.field_j * param1);
     }
 
-    ju(on param0, io param1, boolean param2) {
+    ju(OpenGlGraphicsToolkit param0, io param1, boolean param2) {
         super(param0, 34963, param2);
         try {
           this.field_o = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

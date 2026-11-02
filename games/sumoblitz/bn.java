@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bn extends ar {
-    private wb field_K;
+    private Sprite field_K;
     static int field_R;
     private v field_Q;
     static int field_T;
     private String field_U;
     private int field_S;
-    static String field_O;
+    static String dataServerFullOrText;
     static boolean field_P;
 
     final String c(int param0) {
@@ -18,9 +18,9 @@ final class bn extends ar {
         return (String) null;
     }
 
-    final boolean a(pk param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
-        pk var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -29,8 +29,8 @@ final class bn extends ar {
           if (param1 == 61) {
             return false;
           }
-          var4 = (pk) null;
-          this.a((pk) null, (byte) 73);
+          var4 = (UiWidget) null;
+          this.a((UiWidget) null, (byte) 73);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,17 +42,17 @@ final class bn extends ar {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_S = this.field_S + 1;
           super.a(param0, 83, param2, param3);
           int var5_int = -76 / ((param1 + 25) / 45);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bn.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -70,30 +70,30 @@ final class bn extends ar {
         int var10;
         int var11;
         int var12;
-        wb var16;
-        wb var18;
-        wb var19;
-        wb var20;
+        Sprite var16;
+        Sprite var18;
+        Sprite var19;
+        Sprite var20;
         String var21;
-        wb var23;
-        wb var24;
-        wb var25;
+        Sprite var23;
+        Sprite var24;
+        Sprite var25;
         String var26;
-        wb var28;
-        wb var29;
-        wb var30;
+        Sprite var28;
+        Sprite var29;
+        Sprite var30;
         String var31;
-        wb var33;
-        wb var34;
-        wb var35;
+        Sprite var33;
+        Sprite var34;
+        Sprite var35;
         String var36;
-        wb var38;
-        wb var39;
-        wb var44;
-        wb var45;
-        wb var47;
-        wb var48;
-        wb var49;
+        Sprite var38;
+        Sprite var39;
+        Sprite var44;
+        Sprite var45;
+        Sprite var47;
+        Sprite var48;
+        Sprite var49;
         de var50;
         de var51;
         de var52;
@@ -143,7 +143,7 @@ final class bn extends ar {
               var5 = this.field_U;
             }
           } else {
-            var5 = hi.field_g;
+            var5 = hi.checkingText;
           }
           if (!var5.equals(this.field_m)) {
             this.field_m = var5;
@@ -153,7 +153,7 @@ final class bn extends ar {
           var6Lifetime5 = this.field_Q.c(-106);
           var50 = (de) ((Object) this.field_w);
           var9 = this.field_r + param0;
-          var10 = var50.b(param1, (pk) (this), 0) + (var50.b(-3, (pk) (this)).a(true) >> 1);
+          var10 = var50.b(param1, (UiWidget) (this), 0) + (var50.b(-3, (UiWidget) (this)).a(true) >> 1);
           if (var6Lifetime5 != mb.field_f &&
             kt.field_a != var6Lifetime5) {
             if (qr.field_e == var6Lifetime5) {
@@ -172,15 +172,15 @@ final class bn extends ar {
           var11 = var20.field_z << 1;
           var12 = var20.field_w << 1;
           if (this.field_K == null) {
-            this.field_K = new wb(var11, var12);
+            this.field_K = new Sprite(var11, var12);
             jq.a(7161, this.field_K);
           } else {
             if (var11 > this.field_K.field_x) {
-              this.field_K = new wb(var11, var12);
+              this.field_K = new Sprite(var11, var12);
               jq.a(7161, this.field_K);
             } else {
               if (this.field_K.field_u < var12) {
-                this.field_K = new wb(var11, var12);
+                this.field_K = new Sprite(var11, var12);
                 jq.a(7161, this.field_K);
               } else {
                 jq.a(7161, this.field_K);
@@ -189,14 +189,14 @@ final class bn extends ar {
             }
           }
           var20.a(112, 144, var20.field_z << 4, var20.field_w << 4, -this.field_S << 10, 4096);
-          su.a((byte) -50);
+          ClientException.a((byte) -50);
           this.field_K.d(-(var20.field_z >> 1) + var9, -var20.field_w + var10, 256);
           return;
         }
         this.a(-71, -15, (byte) -42, -1);
         var6Lifetime1 = this.field_Q.c(-126);
         if (var6Lifetime1 == mb.field_f) {
-          var21 = hi.field_g;
+          var21 = hi.checkingText;
           if (!var21.equals(this.field_m)) {
             this.field_m = var21;
             this.a(9);
@@ -205,7 +205,7 @@ final class bn extends ar {
           var6Lifetime1 = this.field_Q.c(-106);
           var51 = (de) ((Object) this.field_w);
           var9Lifetime1 = this.field_r + param0;
-          var10Lifetime1 = var51.b(param1, (pk) (this), 0) + (var51.b(-3, (pk) (this)).a(true) >> 1);
+          var10Lifetime1 = var51.b(param1, (UiWidget) (this), 0) + (var51.b(-3, (UiWidget) (this)).a(true) >> 1);
           if (var6Lifetime1 != mb.field_f &&
             kt.field_a != var6Lifetime1) {
             if (qr.field_e == var6Lifetime1) {
@@ -224,15 +224,15 @@ final class bn extends ar {
           var11Lifetime1 = var25.field_z << 1;
           var12Lifetime1 = var25.field_w << 1;
           if (this.field_K == null) {
-            this.field_K = new wb(var11Lifetime1, var12Lifetime1);
+            this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
             jq.a(7161, this.field_K);
           } else {
             if (var11Lifetime1 > this.field_K.field_x) {
-              this.field_K = new wb(var11Lifetime1, var12Lifetime1);
+              this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
               jq.a(7161, this.field_K);
             } else {
               if (this.field_K.field_u < var12Lifetime1) {
-                this.field_K = new wb(var11Lifetime1, var12Lifetime1);
+                this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
                 jq.a(7161, this.field_K);
               } else {
                 jq.a(7161, this.field_K);
@@ -241,12 +241,12 @@ final class bn extends ar {
             }
           }
           var25.a(112, 144, var25.field_z << 4, var25.field_w << 4, -this.field_S << 10, 4096);
-          su.a((byte) -50);
+          ClientException.a((byte) -50);
           this.field_K.d(-(var25.field_z >> 1) + var9Lifetime1, -var25.field_w + var10Lifetime1, 256);
           return;
         }
         if (var6Lifetime1 == kt.field_a) {
-          var26 = hi.field_g;
+          var26 = hi.checkingText;
           if (!var26.equals(this.field_m)) {
             this.field_m = var26;
             this.a(9);
@@ -255,7 +255,7 @@ final class bn extends ar {
           var6Lifetime1 = this.field_Q.c(-106);
           var52 = (de) ((Object) this.field_w);
           var9Lifetime2 = this.field_r + param0;
-          var10Lifetime2 = var52.b(param1, (pk) (this), 0) + (var52.b(-3, (pk) (this)).a(true) >> 1);
+          var10Lifetime2 = var52.b(param1, (UiWidget) (this), 0) + (var52.b(-3, (UiWidget) (this)).a(true) >> 1);
           if (var6Lifetime1 != mb.field_f &&
             kt.field_a != var6Lifetime1) {
             if (qr.field_e == var6Lifetime1) {
@@ -274,24 +274,24 @@ final class bn extends ar {
           var11Lifetime2 = var30.field_z << 1;
           var12Lifetime2 = var30.field_w << 1;
           if (this.field_K == null) {
-            this.field_K = new wb(var11Lifetime2, var12Lifetime2);
+            this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
             jq.a(7161, this.field_K);
           } else {
             if (var11Lifetime2 > this.field_K.field_x) {
-              this.field_K = new wb(var11Lifetime2, var12Lifetime2);
+              this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
               jq.a(7161, this.field_K);
             } else {
               if (this.field_K.field_u >= var12Lifetime2) {
                 jq.a(7161, this.field_K);
                 lk.b();
               } else {
-                this.field_K = new wb(var11Lifetime2, var12Lifetime2);
+                this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
                 jq.a(7161, this.field_K);
               }
             }
           }
           var30.a(112, 144, var30.field_z << 4, var30.field_w << 4, -this.field_S << 10, 4096);
-          su.a((byte) -50);
+          ClientException.a((byte) -50);
           this.field_K.d(-(var30.field_z >> 1) + var9Lifetime2, -var30.field_w + var10Lifetime2, 256);
           return;
         }
@@ -305,7 +305,7 @@ final class bn extends ar {
           var6Lifetime2 = this.field_Q.c(-106);
           var53 = (de) ((Object) this.field_w);
           var9Lifetime3 = this.field_r + param0;
-          var10Lifetime3 = var53.b(param1, (pk) (this), 0) + (var53.b(-3, (pk) (this)).a(true) >> 1);
+          var10Lifetime3 = var53.b(param1, (UiWidget) (this), 0) + (var53.b(-3, (UiWidget) (this)).a(true) >> 1);
           if (var6Lifetime2 != mb.field_f &&
             kt.field_a != var6Lifetime2) {
             if (qr.field_e == var6Lifetime2) {
@@ -324,24 +324,24 @@ final class bn extends ar {
           var11Lifetime3 = var35.field_z << 1;
           var12Lifetime3 = var35.field_w << 1;
           if (this.field_K == null) {
-            this.field_K = new wb(var11Lifetime3, var12Lifetime3);
+            this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
             jq.a(7161, this.field_K);
           } else {
             if (var11Lifetime3 > this.field_K.field_x) {
-              this.field_K = new wb(var11Lifetime3, var12Lifetime3);
+              this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
               jq.a(7161, this.field_K);
             } else {
               if (this.field_K.field_u >= var12Lifetime3) {
                 jq.a(7161, this.field_K);
                 lk.b();
               } else {
-                this.field_K = new wb(var11Lifetime3, var12Lifetime3);
+                this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
                 jq.a(7161, this.field_K);
               }
             }
           }
           var35.a(112, 144, var35.field_z << 4, var35.field_w << 4, -this.field_S << 10, 4096);
-          su.a((byte) -50);
+          ClientException.a((byte) -50);
           this.field_K.d(-(var35.field_z >> 1) + var9Lifetime3, -var35.field_w + var10Lifetime3, 256);
           return;
         }
@@ -351,7 +351,7 @@ final class bn extends ar {
           var6Lifetime3 = this.field_Q.c(-106);
           var55 = (de) ((Object) this.field_w);
           var9Lifetime4 = this.field_r + param0;
-          var10Lifetime4 = var55.b(param1, (pk) (this), 0) + (var55.b(-3, (pk) (this)).a(true) >> 1);
+          var10Lifetime4 = var55.b(param1, (UiWidget) (this), 0) + (var55.b(-3, (UiWidget) (this)).a(true) >> 1);
           if (var6Lifetime3 != mb.field_f &&
             kt.field_a != var6Lifetime3) {
             if (qr.field_e == var6Lifetime3) {
@@ -375,15 +375,15 @@ final class bn extends ar {
               jq.a(7161, this.field_K);
               lk.b();
             } else {
-              this.field_K = new wb(var11Lifetime4, var12Lifetime4);
+              this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
               jq.a(7161, this.field_K);
             }
           } else {
-            this.field_K = new wb(var11Lifetime4, var12Lifetime4);
+            this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
             jq.a(7161, this.field_K);
           }
           var49.a(112, 144, var49.field_z << 4, var49.field_w << 4, -this.field_S << 10, 4096);
-          su.a((byte) -50);
+          ClientException.a((byte) -50);
           this.field_K.d(-(var49.field_z >> 1) + var9Lifetime4, -var49.field_w + var10Lifetime4, 256);
           return;
         }
@@ -393,7 +393,7 @@ final class bn extends ar {
         var6Lifetime4 = this.field_Q.c(-106);
         var54 = (de) ((Object) this.field_w);
         var9Lifetime5 = this.field_r + param0;
-        var10Lifetime5 = var54.b(param1, (pk) (this), 0) + (var54.b(-3, (pk) (this)).a(true) >> 1);
+        var10Lifetime5 = var54.b(param1, (UiWidget) (this), 0) + (var54.b(-3, (UiWidget) (this)).a(true) >> 1);
         if (var6Lifetime4 == mb.field_f) {
           var38 = fw.field_m[0];
           var11Lifetime5 = var38.field_z << 1;
@@ -404,15 +404,15 @@ final class bn extends ar {
               jq.a(7161, this.field_K);
               lk.b();
             } else {
-              this.field_K = new wb(var11Lifetime5, var12Lifetime5);
+              this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
               jq.a(7161, this.field_K);
             }
           } else {
-            this.field_K = new wb(var11Lifetime5, var12Lifetime5);
+            this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
             jq.a(7161, this.field_K);
           }
           var38.a(112, 144, var38.field_z << 4, var38.field_w << 4, -this.field_S << 10, 4096);
-          su.a((byte) -50);
+          ClientException.a((byte) -50);
           this.field_K.d(-(var38.field_z >> 1) + var9Lifetime5, -var38.field_w + var10Lifetime5, 256);
           return;
         }
@@ -439,15 +439,15 @@ final class bn extends ar {
             jq.a(7161, this.field_K);
             lk.b();
           } else {
-            this.field_K = new wb(var11Lifetime6, var12Lifetime6);
+            this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
             jq.a(7161, this.field_K);
           }
         } else {
-          this.field_K = new wb(var11Lifetime6, var12Lifetime6);
+          this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
           jq.a(7161, this.field_K);
         }
         var39.a(112, 144, var39.field_z << 4, var39.field_w << 4, -this.field_S << 10, 4096);
-        su.a((byte) -50);
+        ClientException.a((byte) -50);
         this.field_K.d(-(var39.field_z >> 1) + var9Lifetime5, -var39.field_w + var10Lifetime5, 256);
         return;
     }
@@ -485,18 +485,18 @@ final class bn extends ar {
           this.field_Q = param0;
           this.a(-60, param2, param3, param5, param4);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public static void g(byte param0) {
-        field_O = null;
+        dataServerFullOrText = null;
         int var1 = -83 / ((param0 + 17) / 49);
     }
 
     static {
         field_T = 5;
-        field_O = "Data server full or too many connections from your address. Please try again in a few minutes.";
+        dataServerFullOrText = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_P = false;
         field_R = 0;
     }

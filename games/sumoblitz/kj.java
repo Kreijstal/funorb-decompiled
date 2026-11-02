@@ -33,7 +33,7 @@ final class kj extends bq {
           this.field_b.g(0, 80);
           this.field_f.a(true);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,22 +63,22 @@ final class kj extends bq {
         int var8Lifetime1;
         this.field_b.g(1, 109);
         if (var7 != 0) {
-          kc.field_e[1] = 0.0f;
-          kc.field_e[0] = var6;
-          kc.field_e[2] = 0.0f;
-          kc.field_e[3] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8192, 9474, kc.field_e, 0);
-          kc.field_e[2] = 0.0f;
-          kc.field_e[3] = var4 * (float)this.field_b.field_Ac % 1.0f;
-          kc.field_e[1] = var6;
-          kc.field_e[0] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8193, 9474, kc.field_e, 0);
+          GameApplet.field_e[1] = 0.0f;
+          GameApplet.field_e[0] = var6;
+          GameApplet.field_e[2] = 0.0f;
+          GameApplet.field_e[3] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8192, 9474, GameApplet.field_e, 0);
+          GameApplet.field_e[2] = 0.0f;
+          GameApplet.field_e[3] = var4 * (float)this.field_b.field_Ac % 1.0f;
+          GameApplet.field_e[1] = var6;
+          GameApplet.field_e[0] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8193, 9474, GameApplet.field_e, 0);
           if (this.field_g.field_g) {
-            kc.field_e[2] = 0.0f;
-            kc.field_e[0] = 0.0f;
-            kc.field_e[1] = 0.0f;
-            kc.field_e[3] = (float)this.field_b.field_Ac * var5 % 1.0f;
-            jaggl.OpenGL.glTexGenfv(8194, 9473, kc.field_e, 0);
+            GameApplet.field_e[2] = 0.0f;
+            GameApplet.field_e[0] = 0.0f;
+            GameApplet.field_e[1] = 0.0f;
+            GameApplet.field_e[3] = (float)this.field_b.field_Ac * var5 % 1.0f;
+            jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
           } else {
             var8 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
             this.field_b.a(90, this.field_g.field_a[var8 % 16]);
@@ -90,22 +90,22 @@ final class kj extends bq {
           }
           return;
         }
-        kc.field_e[3] = 0.0f;
-        kc.field_e[0] = 0.0f;
-        kc.field_e[1] = 0.0f;
-        kc.field_e[2] = var6;
-        jaggl.OpenGL.glTexGenfv(8192, 9474, kc.field_e, 0);
-        kc.field_e[2] = 0.0f;
-        kc.field_e[3] = var4 * (float)this.field_b.field_Ac % 1.0f;
-        kc.field_e[1] = var6;
-        kc.field_e[0] = 0.0f;
-        jaggl.OpenGL.glTexGenfv(8193, 9474, kc.field_e, 0);
+        GameApplet.field_e[3] = 0.0f;
+        GameApplet.field_e[0] = 0.0f;
+        GameApplet.field_e[1] = 0.0f;
+        GameApplet.field_e[2] = var6;
+        jaggl.OpenGL.glTexGenfv(8192, 9474, GameApplet.field_e, 0);
+        GameApplet.field_e[2] = 0.0f;
+        GameApplet.field_e[3] = var4 * (float)this.field_b.field_Ac % 1.0f;
+        GameApplet.field_e[1] = var6;
+        GameApplet.field_e[0] = 0.0f;
+        jaggl.OpenGL.glTexGenfv(8193, 9474, GameApplet.field_e, 0);
         if (this.field_g.field_g) {
-          kc.field_e[2] = 0.0f;
-          kc.field_e[0] = 0.0f;
-          kc.field_e[1] = 0.0f;
-          kc.field_e[3] = (float)this.field_b.field_Ac * var5 % 1.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, kc.field_e, 0);
+          GameApplet.field_e[2] = 0.0f;
+          GameApplet.field_e[0] = 0.0f;
+          GameApplet.field_e[1] = 0.0f;
+          GameApplet.field_e[3] = (float)this.field_b.field_Ac * var5 % 1.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
         } else {
           var8Lifetime1 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
           this.field_b.a(90, this.field_g.field_a[var8Lifetime1 % 16]);
@@ -141,7 +141,7 @@ final class kj extends bq {
           Throwable decompiledCaughtException = null;
           java.net.MalformedURLException var4_ref = null;
           try {
-            if (wi.field_o.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_o.startsWith("win") &&
               rs.a(param3, -2528)) {
               return;
             }
@@ -150,7 +150,7 @@ final class kj extends bq {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              ms.a("MGR1: " + param3, (Throwable) null, 0);
+              IntrusiveNode.reportClientError("MGR1: " + param3, (Throwable) null, 0);
             }
             if (param0 == -23166) {
               return;
@@ -174,7 +174,7 @@ final class kj extends bq {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -199,7 +199,7 @@ final class kj extends bq {
           this.field_b.a(46, param2);
           this.field_b.c(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

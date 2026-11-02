@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class ng extends rq {
+final class ng extends ShaderEffect {
     private ef[] field_i;
     static hr[] field_f;
     private boolean field_h;
     private boolean field_g;
-    static String field_e;
+    static String noHighscoresText;
 
     final void a(boolean param0, byte param1) {
         this.field_b.a((byte) -83, lf.field_e, vi.field_v);
@@ -22,7 +22,7 @@ final class ng extends rq {
         if (param0 != 0) {
           return;
         }
-        field_e = null;
+        noHighscoresText = null;
     }
 
     final boolean b(byte param0) {
@@ -83,14 +83,14 @@ final class ng extends rq {
         }
     }
 
-    final static ki a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
         try {
           int var6_int = 0;
           IOException var6 = null;
           Object var7 = null;
           Object var8 = null;
           am var9 = null;
-          ki stackIn_11_0 = null;
+          ResourceArchive stackIn_11_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6_int = 100 % ((param1 + 29) / 42);
@@ -115,7 +115,7 @@ final class ng extends rq {
             if (param4) {
               var9.c((byte) -81);
             }
-            stackIn_11_0 = new ki(var9, param2, param0);
+            stackIn_11_0 = new ResourceArchive(var9, param2, param0);
             return stackIn_11_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,11 +137,11 @@ final class ng extends rq {
           this.field_b.a(param2, 125);
           this.field_b.h(84, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ng(aw param0) {
+    ng(HardwareGraphicsToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
@@ -238,7 +238,7 @@ final class ng extends rq {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -283,6 +283,6 @@ final class ng extends rq {
     }
 
     static {
-        field_e = "No highscores";
+        noHighscoresText = "No highscores";
     }
 }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends pj implements ft {
+final class kf extends DualLinkNode implements ft {
     int field_x;
     static ah field_u;
-    static ki field_v;
+    static ResourceArchive field_v;
     int field_s;
     private int field_y;
     private int field_D;
@@ -14,7 +14,7 @@ final class kf extends pj implements ft {
     int field_A;
     private int field_r;
     static ri[] field_w;
-    static String field_t;
+    static String achievementsText;
 
     final void a(boolean param0, int param1, int param2) {
         if (!param0) {
@@ -70,16 +70,16 @@ final class kf extends pj implements ft {
         int var2 = 0;
         int var4 = 0;
         int var5 = 0;
-        fs var6 = null;
+        PacketBuffer var6 = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6 = new fs(ah.field_g);
+          var6 = new PacketBuffer(ah.field_g);
           var2 = var6.e(-31302);
           if (var2 < 1) {
             return;
           }
           bl.field_e = var6.e(-31302);
-          ki.field_f = var6.e(-31302);
+          ResourceArchive.field_f = var6.e(-31302);
           iv.field_i = var6.e(-31302);
           hc.field_f = var6.e(-31302);
           if (param0 <= 92) {
@@ -113,7 +113,7 @@ final class kf extends pj implements ft {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "kf.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kf.F(" + param0 + ')');
         }
     }
 
@@ -134,14 +134,14 @@ final class kf extends pj implements ft {
           field_w = null;
           field_v = null;
           field_u = null;
-          field_t = null;
+          achievementsText = null;
           return;
         }
         field_w = (ri[]) null;
         field_w = null;
         field_v = null;
         field_u = null;
-        field_t = null;
+        achievementsText = null;
     }
 
     final static String a(CharSequence param0, byte param1) {
@@ -174,7 +174,7 @@ final class kf extends pj implements ft {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -186,17 +186,17 @@ final class kf extends pj implements ft {
           this.field_x = param3;
           this.field_A = param2;
           this.field_D = param1;
-          jaggl.OpenGL.glGenRenderbuffersEXT(1, pj.field_q, 0);
-          this.field_y = pj.field_q[0];
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, DualLinkNode.field_q, 0);
+          this.field_y = DualLinkNode.field_q[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_y);
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_D, this.field_A, this.field_x);
           this.field_s = this.field_A * (this.field_x * this.field_C.d(this.field_D, -72));
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        field_t = "Achievements";
+        achievementsText = "Achievements";
     }
 }

@@ -20,7 +20,7 @@ abstract class qt {
           }
           nk.b();
           sq.field_a = new int[260];
-          jn.field_b = 11;
+          IntrusiveDeque.field_b = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
             sq.field_a[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
@@ -35,7 +35,7 @@ abstract class qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "qt.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "qt.E(" + param0 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ abstract class qt {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new lj(gi.c((byte) -2), kc.a(param0 - 3));
+        return new lj(gi.c((byte) -2), GameApplet.a(param0 - 3));
     }
 
     final void b(byte param0) {

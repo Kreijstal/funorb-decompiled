@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo extends sp implements ai {
+final class fo extends WidgetContainer implements ai {
     private wp field_C;
     private wp field_A;
     private wp field_B;
@@ -14,14 +14,14 @@ final class fo extends sp implements ai {
         if (param2 <= -35) {
           var5 = this.field_r + param0;
           var6 = param1 + this.field_v;
-          kw.field_b.a(qn.field_h, 20 + var5, var6 + 20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
+          kw.field_b.a(qn.creatingAJagexAccountText, 20 + var5, var6 + 20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
           super.a(param0, param1, (byte) -96, param3);
           return;
         }
         this.field_B = (wp) null;
         var5Lifetime1 = this.field_r + param0;
         var6Lifetime1 = param1 + this.field_v;
-        kw.field_b.a(qn.field_h, 20 + var5Lifetime1, var6Lifetime1 + 20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
+        kw.field_b.a(qn.creatingAJagexAccountText, 20 + var5Lifetime1, var6Lifetime1 + 20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
         super.a(param0, param1, (byte) -96, param3);
     }
 
@@ -35,7 +35,7 @@ final class fo extends sp implements ai {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param2 == this.field_A) {
-            mu.e(0);
+            SpriteState.e(0);
           } else {
             if (param2 != this.field_B) {
               if (this.field_C == param2) {
@@ -60,14 +60,14 @@ final class fo extends sp implements ai {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public fo() {
         super(0, 0, 476, 225, (mh) null);
-        this.field_B = new wp(ms.field_i, (qm) null);
-        this.field_A = new wp(jc.field_e, (qm) null);
+        this.field_B = new wp(IntrusiveNode.createAFreeAccountText, (qm) null);
+        this.field_A = new wp(jc.goBackText, (qm) null);
         this.field_C = new wp(tm.field_b, (qm) null);
         ue var1 = new ue();
         this.field_B.field_w = (mh) ((Object) var1);
@@ -81,15 +81,15 @@ final class fo extends sp implements ai {
         this.field_B.a(-112, -var3 + this.field_q >> 1, -(var2 * 2) + this.field_p - 78, 30, var3);
         this.field_A.field_o = (qm) (this);
         this.field_B.field_o = (qm) (this);
-        this.field_B.field_t = aj.field_x;
+        this.field_B.field_t = aj.createYourOwnFreeText;
         this.field_C.field_o = (qm) (this);
-        this.field_C.field_t = hg.field_t;
+        this.field_C.field_t = hg.playTheGameWithoutText;
         this.a(this.field_A, 120);
         this.a(this.field_B, 70);
         this.a(this.field_C, 83);
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -123,7 +123,7 @@ final class fo extends sp implements ai {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

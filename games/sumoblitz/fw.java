@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class fw extends ms {
-    ha field_k;
-    static wb[] field_m;
+final class fw extends IntrusiveNode {
+    GraphicsToolkit field_k;
+    static Sprite[] field_m;
     pm field_l;
 
     final static cp c(boolean param0) {
@@ -60,7 +60,7 @@ final class fw extends ms {
               return false;
             }
             if (param0 <= 123) {
-              field_m = (wb[]) null;
+              field_m = (Sprite[]) null;
             }
             var4 = null;
             if (var4 == null) {
@@ -107,7 +107,7 @@ final class fw extends ms {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -123,12 +123,12 @@ final class fw extends ms {
         }
     }
 
-    fw(ha param0, pm param1) {
+    fw(GraphicsToolkit param0, pm param1) {
         try {
           this.field_l = param1;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

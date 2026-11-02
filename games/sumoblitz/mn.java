@@ -11,7 +11,7 @@ final class mn {
     static ri field_c;
     private int field_h;
     private gn[] field_l;
-    static String field_k;
+    static String highText;
     static int field_i;
     static ri[] field_b;
 
@@ -21,7 +21,7 @@ final class mn {
           if (null != he.field_n) {
             he.field_n.k(-43);
           }
-          aw.j((byte) 89);
+          HardwareGraphicsToolkit.j((byte) 89);
           if (param0 != -116) {
             field_g = (String[]) null;
             return;
@@ -31,7 +31,7 @@ final class mn {
         if (null != he.field_n) {
           he.field_n.k(-43);
         }
-        aw.j((byte) 89);
+        HardwareGraphicsToolkit.j((byte) 89);
         if (param0 != -116) {
           field_g = (String[]) null;
           return;
@@ -85,7 +85,7 @@ final class mn {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -93,8 +93,8 @@ final class mn {
         pl var5 = as.field_v;
         pl var3 = var5;
         var5.g(param2, 8);
-        var5.field_p = var5.field_p + 1;
-        int var4 = var5.field_p;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         if (param1 > -5) {
           return;
         }
@@ -107,11 +107,11 @@ final class mn {
             var5.b((byte) 52, 0);
           }
           var5.a(var4, false);
-          var5.field_p = var5.field_p - 4;
+          var5.position = var5.position - 4;
           param0.field_m = var5.c(true);
-          var5.c(-var4 + var5.field_p, -13745);
+          var5.c(-var4 + var5.position, -13745);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class mn {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class mn {
         field_b = null;
         field_j = null;
         field_c = null;
-        field_k = null;
+        highText = null;
         if (param0 == 17) {
           return;
         }
@@ -201,7 +201,7 @@ final class mn {
     }
 
     static {
-        field_k = "High";
+        highText = "High";
         field_i = 0;
     }
 }

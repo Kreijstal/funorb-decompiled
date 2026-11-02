@@ -3,7 +3,7 @@
  */
 abstract class uw {
     static String[] field_b;
-    static wb field_a;
+    static Sprite field_a;
     static String[] field_c;
 
     final int b(int param0, long param1) {
@@ -57,7 +57,7 @@ abstract class uw {
               return;
             }
             if (param6 != 1955582416) {
-              field_a = (wb) null;
+              field_a = (Sprite) null;
             }
             var14 = param3 - param2;
             if (param8 == param2) {
@@ -211,7 +211,7 @@ abstract class uw {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

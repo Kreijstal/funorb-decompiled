@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fm implements mh {
-    static String field_a;
+    static String ageText;
     static qr field_b;
 
     public static void a(byte param0) {
         if (param0 >= -100) {
           fm.a((byte) -19);
         }
-        field_a = null;
+        ageText = null;
         field_b = null;
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -63,12 +63,12 @@ final class fm implements mh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
-        field_a = "Age:";
+        ageText = "Age:";
         field_b = new qr();
     }
 }

@@ -9,9 +9,9 @@ final class vm {
     final static int a(int param0) {
         if (param0 > -30) {
           vm.a(-16);
-          return (int)(1000000000L / pj.field_p);
+          return (int)(1000000000L / DualLinkNode.field_p);
         }
-        return (int)(1000000000L / pj.field_p);
+        return (int)(1000000000L / DualLinkNode.field_p);
     }
 
     public static void a(byte param0) {

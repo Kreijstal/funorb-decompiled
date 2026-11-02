@@ -28,7 +28,7 @@ final class jg {
         return param0 ^ param1;
     }
 
-    final void a(byte[] param0, byte param1, fs param2) {
+    final void a(byte[] param0, byte param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -39,8 +39,8 @@ final class jg {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2.field_n[param2.field_p] == 31 &&
-              param2.field_n[1 + param2.field_p] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[1 + param2.position] == -117) {
               if (null == this.field_c) {
                 this.field_c = new java.util.zip.Inflater(true);
               }
@@ -48,7 +48,7 @@ final class jg {
                 this.field_c = (java.util.zip.Inflater) null;
               }
               try {
-                this.field_c.setInput(param2.field_n, 10 + param2.field_p, param2.field_n.length + (-param2.field_p - 10 - 8));
+                this.field_c.setInput(param2.payload, 10 + param2.position, param2.payload.length + (-param2.position - 10 - 8));
                 this.field_c.inflate(param0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,7 +76,7 @@ final class jg {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

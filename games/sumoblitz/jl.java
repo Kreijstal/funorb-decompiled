@@ -79,7 +79,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "jl.B(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "jl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class jl {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -175,7 +175,7 @@ final class jl {
         }
     }
 
-    jl(aw param0) {
+    jl(HardwareGraphicsToolkit param0) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -270,16 +270,16 @@ final class jl {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
-    final void a(int param0, aw param1) {
+    final void a(int param0, HardwareGraphicsToolkit param1) {
         try {
           int var3_int = -4 % ((param0 - 65) / 32);
           this.field_c.a(24, (byte) -35, 786336);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "jl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -51,22 +51,22 @@ final class ae {
         return new qp(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static ae a(ki param0, int param1, int param2) {
+    final static ae a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a((byte) 87, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new ae(new fs(var3));
+        return new ae(new PacketBuffer(var3));
     }
 
-    private ae(fs param0) {
+    private ae(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new qg[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.e(-31302);
           if (var3 != 0) {
-            param0.field_p = param0.field_p - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new qg();
             this.field_b[var2].a(param0);
           }

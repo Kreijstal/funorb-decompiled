@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq extends sp implements oe, ai {
+final class vq extends WidgetContainer implements oe, ai {
     private qq field_B;
     private wp field_A;
     pe field_E;
-    static String field_D;
+    static String areYouSureYouText;
     private wp field_C;
 
     private final boolean e(byte param0) {
@@ -47,7 +47,7 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class vq extends sp implements oe, ai {
           stackIn_11_0 = (param3 >= param5) ? param5 : param3;
           var9 = stackIn_11_0;
           if (param1 != 23143) {
-            field_D = (String) null;
+            areYouSureYouText = (String) null;
           }
           var10 = param3 >> 1;
           var11 = param5 >> 1;
@@ -153,7 +153,7 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -161,10 +161,10 @@ final class vq extends sp implements oe, ai {
         super(0, 0, 496, 0, (mh) null);
         this.field_B = new qq("", (qm) null, 12);
         gm var1 = new gm(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
-        pk var2 = new pk(gs.field_c, var1, (qm) null);
+        UiWidget var2 = new UiWidget(gs.youNeedToChooseText, var1, (qm) null);
         this.field_C = new wp(tf.field_a, (qm) null);
         this.field_A = new wp(te.field_h, (qm) null);
-        this.field_B.field_t = rq.field_a;
+        this.field_B.field_t = ShaderEffect.enterTheNameYouText;
         this.field_B.a((byte) 127, new ou(this.field_B));
         this.field_C.field_x = false;
         this.field_C.field_w = (mh) ((Object) new ue());
@@ -176,7 +176,7 @@ final class vq extends sp implements oe, ai {
         int var5 = 200;
         this.a(var2, 81);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, 7541, 170, this.field_B, oq.field_r, un.field_c));
+        var3 = var3 + (5 + this.a(var3, 7541, 170, this.field_B, oq.playerNamesCanBeText, un.playerNameText));
         this.field_C.a(126, 496 - var5 >> 1, var3, 40, var5);
         this.field_A.a(-57, 3 + var4, var3 + 15, 40, 60);
         this.field_A.field_o = (qm) (this);
@@ -189,7 +189,7 @@ final class vq extends sp implements oe, ai {
         this.a(116, 0, 0, 55 + (var3 + var4), 496);
     }
 
-    private final int a(byte param0, pk param1, int param2, int param3, String param4, String param5, int param6) {
+    private final int a(byte param0, UiWidget param1, int param2, int param3, String param4, String param5, int param6) {
         RuntimeException var8 = null;
         bn var9 = null;
         int var10 = 0;
@@ -234,7 +234,7 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -270,21 +270,21 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void g(int param0) {
         if (param0 >= 105) {
-          field_D = null;
+          areYouSureYouText = null;
           return;
         }
         byte[] var2 = (byte[]) null;
         vq.a(71, -40, (byte[]) null, -64, 111, 108, -111);
-        field_D = null;
+        areYouSureYouText = null;
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_13_0 = false;
@@ -318,11 +318,11 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final int a(int param0, int param1, int param2, pk param3, String param4, String param5) {
+    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -335,7 +335,7 @@ final class vq extends sp implements oe, ai {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 7541) {
-            field_D = (String) null;
+            areYouSureYouText = (String) null;
           }
           stackIn_3_0 = this.a((byte) 107, param3, param0, param2, param5, param4, 35);
           return stackIn_3_0;
@@ -361,17 +361,17 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           int var5_int = -111 / ((-25 - param1) / 45);
           super.a(param0, -86, param2, param3);
           this.field_C.field_x = this.e((byte) 91);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "vq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class vq extends sp implements oe, ai {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == this.field_A) {
-            mu.e(0);
+            SpriteState.e(0);
           } else {
             if (this.field_C == param2) {
               this.e(true);
@@ -404,11 +404,11 @@ final class vq extends sp implements oe, ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
-        field_D = "Are you sure you want to reset your stats?";
+        areYouSureYouText = "Are you sure you want to reset your stats?";
     }
 }

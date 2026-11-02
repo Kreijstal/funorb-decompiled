@@ -47,7 +47,7 @@ final class ds {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class ds {
         if (param0 <= 33) {
           ds.a(-65);
           aa.field_a[0] = (ah) ((Object) new fe(81920, 61440));
-          aa.field_a[0].field_I = ki.field_f;
+          aa.field_a[0].field_I = ResourceArchive.field_f;
           aa.field_a[0].field_t = hc.field_f;
           aa.field_a[0].field_y = iv.field_i;
           aa.field_a[0].c((byte) 35);
@@ -68,7 +68,7 @@ final class ds {
           return;
         }
         aa.field_a[0] = (ah) ((Object) new fe(81920, 61440));
-        aa.field_a[0].field_I = ki.field_f;
+        aa.field_a[0].field_I = ResourceArchive.field_f;
         aa.field_a[0].field_t = hc.field_f;
         aa.field_a[0].field_y = iv.field_i;
         aa.field_a[0].c((byte) 35);

@@ -18,7 +18,7 @@ final class gb extends nt {
         field_t = null;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int var3_int = (int)(255.0 * ((double)this.field_p / 30.0));
         int var4 = 0;
         if (param1 > -121) {
@@ -33,7 +33,7 @@ final class gb extends nt {
           var4 = var4 * 2;
           am.field_j[4].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), var4, 0, 1, var3_int << 24, 1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

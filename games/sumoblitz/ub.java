@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends ms {
+final class ub extends IntrusiveNode {
     byte[] field_k;
     int field_l;
     long field_m;
@@ -128,16 +128,16 @@ final class ub extends ms {
           this.field_k = param2;
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static wb[] a(ki param0, String param1, byte param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        wb[] stackIn_2_0 = null;
-        wb[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -149,7 +149,7 @@ final class ub extends ms {
         try {
           var4_int = param0.a(0, param1);
           if (param2 != -56) {
-            stackIn_2_0 = (wb[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var5 = param0.a(var4_int, param3, (byte) 126);
@@ -177,7 +177,7 @@ final class ub extends ms {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

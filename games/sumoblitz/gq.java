@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gq extends ve {
-    static String field_p;
+    static String thisEntryDoesnTText;
     static ri[] field_o;
     static int[] field_q;
 
@@ -28,13 +28,13 @@ final class gq extends ve {
 
     final void c(int param0) {
         if (param0 != 50) {
-          field_p = (String) null;
+          thisEntryDoesnTText = (String) null;
         }
     }
 
     public static void c(boolean param0) {
         field_q = null;
-        field_p = null;
+        thisEntryDoesnTText = null;
         field_o = null;
         if (param0) {
           gq.c(true);
@@ -46,7 +46,7 @@ final class gq extends ve {
     }
 
     static {
-        field_p = "This entry doesn't match";
+        thisEntryDoesnTText = "This entry doesn't match";
         field_q = new int[]{0, 50, 75, 75, 100, 150};
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo extends rq {
+final class uo extends ShaderEffect {
     private boolean field_f;
     static nj[] field_e;
 
@@ -30,7 +30,7 @@ final class uo extends rq {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -56,7 +56,7 @@ final class uo extends rq {
         int var2Lifetime4;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0) {
-          L4: {
+          regionExit1: {
             if ((param1 <= 0 ||
               param1 >= 128) &&
               (param1 < 160 ||
@@ -170,7 +170,7 @@ final class uo extends rq {
                   }
                 }
               }
-              break L4;
+              break regionExit1;
             }
             var2 = (byte)param1;
           }
@@ -665,7 +665,7 @@ final class uo extends rq {
         return true;
     }
 
-    uo(aw param0) {
+    uo(HardwareGraphicsToolkit param0) {
         super(param0);
         this.field_f = false;
     }
@@ -714,7 +714,7 @@ final class uo extends rq {
             uo.a(true, (CharSequence[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "uo.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uo.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class eh {
     static int field_c;
-    static wb field_b;
+    static Sprite field_b;
     static int field_a;
     private static String field_z;
 
@@ -14,6 +14,6 @@ final class eh {
 
     static {
         field_z = "eh.A(";
-        field_b = new wb(270, 70);
+        field_b = new Sprite(270, 70);
     }
 }

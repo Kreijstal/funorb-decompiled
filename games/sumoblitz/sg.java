@@ -4,7 +4,7 @@
 final class sg {
     int field_p;
     int[] field_b;
-    static String field_i;
+    static String loadingInstrumentsText;
     private int[][] field_o;
     private byte[] field_g;
     static long field_j;
@@ -19,7 +19,7 @@ final class sg {
     private int[] field_n;
     int[][] field_s;
     int[] field_r;
-    static String field_k;
+    static String passwordsMustBeBetweenText;
     int[] field_f;
 
     private final void a(byte[] param0, byte param1) {
@@ -52,7 +52,7 @@ final class sg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        fs var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -71,7 +71,7 @@ final class sg {
           if (param1 != -56) {
             return;
           }
-          var17 = new fs(nd.a(-1, param0));
+          var17 = new PacketBuffer(nd.a(-1, param0));
           var4 = var17.e(param1 ^ 31346);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -237,7 +237,7 @@ final class sg {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -245,8 +245,8 @@ final class sg {
         if (param0 > -67) {
           return;
         }
-        field_k = null;
-        field_i = null;
+        passwordsMustBeBetweenText = null;
+        loadingInstrumentsText = null;
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -276,12 +276,12 @@ final class sg {
           }
           this.a(param0, (byte) -56);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_i = "Loading instruments";
-        field_k = "Passwords must be between 5 and 20 characters long";
+        loadingInstrumentsText = "Loading instruments";
+        passwordsMustBeBetweenText = "Passwords must be between 5 and 20 characters long";
     }
 }

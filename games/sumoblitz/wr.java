@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wr extends wp {
-    static jn field_E;
+    static IntrusiveDeque field_E;
     static ci field_G;
     static int field_F;
 
@@ -11,7 +11,7 @@ final class wr extends wp {
         try {
           this.field_C = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -20,7 +20,7 @@ final class wr extends wp {
         try {
           this.field_w = ks.field_x.field_i;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class wr extends wp {
               param1.field_E = 256;
             }
           } else {
-            if (rj.field_c - 52 < var4 &&
+            if (ArchiveCatalog.field_c - 52 < var4 &&
               param1.field_E > 0) {
               param1.field_E = -param1.field_E;
               if (param1.field_E == 0) {
@@ -158,14 +158,14 @@ final class wr extends wp {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_G = null;
         if (param0 != 454) {
-          field_E = (jn) null;
+          field_E = (IntrusiveDeque) null;
         }
         field_E = null;
     }
@@ -175,7 +175,7 @@ final class wr extends wp {
         try {
           this.field_w = ks.field_x.field_i;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class wr extends wp {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -214,13 +214,13 @@ final class wr extends wp {
         super.b(param0, param1, param2, param3);
     }
 
-    final static wc a(boolean param0, fs param1, boolean param2) {
+    final static wc a(boolean param0, PacketBuffer param1, boolean param2) {
         int var9 = 0;
         int incrementValue$0 = 0;
         int stackIn_11_0 = 0;
-        fs stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        fs stackIn_19_0 = null;
+        PacketBuffer stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         wc stackIn_37_0 = null;
         RuntimeException stackIn_40_0 = null;
@@ -245,7 +245,7 @@ final class wr extends wp {
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param0) {
-            param1.field_p = 0;
+            param1.position = 0;
           }
           var17 = new ah[100];
           var3 = var17;
@@ -264,13 +264,13 @@ final class wr extends wp {
           for (var9 = 0; var9 < var8; var9++) {
             var10 = param1.e(-31302);
             var11 = param1.e(-31302);
-            stackIn_16_0 = (fs) (param1);
+            stackIn_16_0 = (PacketBuffer) (param1);
             stackIn_17_1 = !(param2);
-            var12 = ((fs) (Object) stackIn_16_0).c(stackIn_17_1);
+            var12 = ((PacketBuffer) (Object) stackIn_16_0).c(stackIn_17_1);
             var13 = param1.c(true);
-            stackIn_19_0 = (fs) (param1);
+            stackIn_19_0 = (PacketBuffer) (param1);
             stackIn_20_1 = !(param2);
-            ((fs) (Object) stackIn_19_0).d(stackIn_20_1);
+            ((PacketBuffer) (Object) stackIn_19_0).d(stackIn_20_1);
             var14 = 0;
             if (var5 > 4) {
               var14 = param1.e(-31302);
@@ -298,7 +298,7 @@ final class wr extends wp {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -347,11 +347,11 @@ final class wr extends wp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
-        field_E = new jn();
+        field_E = new IntrusiveDeque();
     }
 }

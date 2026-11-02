@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk {
-    static jn field_a;
-    static String[] field_b;
+    static IntrusiveDeque field_a;
+    static String[] weekdayShortNames;
     static int field_c;
 
     public final String toString() {
@@ -17,16 +17,16 @@ final class dk {
         return (540800 & param0) != 0 ? true : false;
     }
 
-    final static ns a(byte param0) {
+    final static MouseWheelInput a(byte param0) {
         try {
           Throwable var1 = null;
-          ns stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 > -125) {
               field_c = -74;
             }
-            stackIn_3_0 = (ns) (Class.forName("gp").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class dk {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        weekdayShortNames = null;
         field_a = null;
         if (param0 > -31) {
           dk.a(-122);
@@ -49,7 +49,7 @@ final class dk {
     }
 
     static {
-        field_a = new jn();
-        field_b = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        field_a = new IntrusiveDeque();
+        weekdayShortNames = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

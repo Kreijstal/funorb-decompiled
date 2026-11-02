@@ -5,7 +5,7 @@ import java.util.*;
 
 final class qw {
     static int field_b;
-    static String field_c;
+    static String passwordsMustBeBetweenText;
     static hr[] field_a;
 
     final static boolean a(int param0, char param1) {
@@ -13,7 +13,7 @@ final class qw {
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (param0 != 57) {
-          field_c = (String) null;
+          passwordsMustBeBetweenText = (String) null;
           if (param1 < 48) {
             if (param1 >= 65 &&
               param1 <= 90) {
@@ -85,7 +85,7 @@ final class qw {
         if (param0 > -116) {
           return;
         }
-        field_c = null;
+        passwordsMustBeBetweenText = null;
     }
 
     final static void a(byte param0) {
@@ -133,7 +133,7 @@ final class qw {
             if (6 <= var3) {
               var3 = 5;
             }
-            var6 = uj.a(var3, 26 + fi.a(588, ki.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+            var6 = uj.a(var3, 26 + fi.a(588, ResourceArchive.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
             oc.a(var6, false);
             return;
           }
@@ -161,7 +161,7 @@ final class qw {
           if (var3Lifetime1 >= 7) {
             var3Lifetime1 = 6;
           }
-          var7 = uj.a(param1.field_Q, 26 + fi.a(588, ki.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+          var7 = uj.a(param1.field_Q, 26 + fi.a(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
           oc.a(var7, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,11 +174,11 @@ final class qw {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
     static {
-        field_c = "Passwords must be between 5 and 20 letters and numbers";
+        passwordsMustBeBetweenText = "Passwords must be between 5 and 20 letters and numbers";
     }
 }

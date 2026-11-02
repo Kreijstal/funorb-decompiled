@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends sp implements ai {
+final class pe extends WidgetContainer implements ai {
     private oe field_A;
     static ri[] field_F;
     private wp[] field_C;
     static gj field_E;
-    static String field_D;
+    static String orbPointsText;
     private String[] field_B;
 
     final static void a(int param0, float param1, String param2) {
@@ -17,7 +17,7 @@ final class pe extends sp implements ai {
             field_F = (ri[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class pe extends sp implements ai {
         if (param0 != -18490) {
           field_F = (ri[]) null;
         }
-        field_D = null;
+        orbPointsText = null;
     }
 
     final void a(String[] param0, boolean param1) {
@@ -61,11 +61,11 @@ final class pe extends sp implements ai {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_C[var5] = new wp(this.field_B[var5], (qm) (this));
               this.field_C[var5].field_w = (mh) ((Object) var4);
-              this.field_C[var5].field_t = ji.field_b;
+              this.field_C[var5].field_t = ji.useThisAlternativeAsText;
               this.field_C[var5].a(103, 0, 16 * var5 + 20, 15, 80);
               this.a(this.field_C[var5], 64);
             }
-            this.field_C[var3_int] = new wp(dt.field_h, (qm) (this));
+            this.field_C[var3_int] = new wp(BufferedSocket.moreSuggestionsText, (qm) (this));
             this.field_C[var3_int].field_w = (mh) ((Object) var4);
             this.field_C[var3_int].a(126, 0, 20 + 16 * var3_int + 16, 15, 100);
             this.a(this.field_C[var3_int], 89);
@@ -83,7 +83,7 @@ final class pe extends sp implements ai {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,11 +92,11 @@ final class pe extends sp implements ai {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_11_0 = false;
@@ -130,7 +130,7 @@ final class pe extends sp implements ai {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -194,29 +194,29 @@ final class pe extends sp implements ai {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(ki param0, ki param1, int param2, ki param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         ci.field_g = ri.b(param3, "", "fontalpha");
-        g.field_a = gd.a(param1, (byte) -79, "font", "");
+        SocketConnector.field_a = gd.a(param1, (byte) -79, "font", "");
         mn.field_b = ri.b(param3, "", "fontglow");
-        hu.field_c = g.field_a;
-        wj.field_i = ri.b(param3, "", "smallfontalpha");
+        hu.field_c = SocketConnector.field_a;
+        OpenGlTransparentWaterEffect.field_i = ri.b(param3, "", "smallfontalpha");
         qr.field_a = gd.a(param1, (byte) -39, "smallfont", "");
         au.field_j = ri.b(param3, "", "glowfontalpha");
         sv.field_a = qr.field_a;
         ld.field_F = ri.b(param3, "", "boldfontalpha");
         ma.field_b = gd.a(param1, (byte) -36, "boldfont", "");
-        nw.field_f = ri.b(param3, "", "boldglowfontalpha");
+        ProxySocketConnector.field_f = ri.b(param3, "", "boldglowfontalpha");
         sq.field_b = ma.field_b;
         field_F = ri.b(param3, "", "menu_frame");
         rh.field_q = ri.b(param3, "", "tooltip_kit");
         hi.field_b = ri.b(param3, "", "achievements");
         gk.field_N = ri.a(param0, "basic", "unachieved");
         ud.field_p = ri.a(param0, "basic", "locked");
-        ms.field_d = ri.a(param3, "", "titleimage");
+        IntrusiveNode.field_d = ri.a(param3, "", "titleimage");
         rc.field_i = ri.a(param3, "", "lock");
         hc.field_b = ri.a(param3, "", "heart");
         oi.field_d = ri.a(param3, "", "skull");
@@ -231,9 +231,9 @@ final class pe extends sp implements ai {
           hh.field_a = ri.b(param3, "", "button_over");
           sk.field_c = ri.b(param3, "", "button_on");
           gq.field_o = ri.b(param3, "", "chargebar_vertical");
-          cb.field_e = ri.a(param3, "", "congratulations");
+          IntrusiveDequeCursor.field_e = ri.a(param3, "", "congratulations");
           ve.field_k = ri.a(param3, "", "mouse");
-          dt.field_n = ri.a(param3, "", "keyboard");
+          BufferedSocket.field_n = ri.a(param3, "", "keyboard");
           rl.field_l = ri.b(param3, "", "player");
           kk.field_e = ri.b(param3, "", "mook");
           ks.field_w = ri.b(param3, "", "fast");
@@ -255,7 +255,7 @@ final class pe extends sp implements ai {
           kf.field_w = ri.b(param3, "", "particle_ring");
           bj.field_g = ri.a(param3, "", "particle_sprinkle");
           ks.field_t = ri.a(param3, "", "particle_star");
-          rq.field_c = ri.a(param3, "", "particle_pixel");
+          ShaderEffect.field_c = ri.a(param3, "", "particle_pixel");
           ue.field_p = ri.a(param3, "", "particle_pixel_alpha");
           pc.field_c = ri.a(param3, "", "ghost");
           no.field_c = ri.a(param3, "", "ghost_cloud");
@@ -265,11 +265,11 @@ final class pe extends sp implements ai {
           wf.field_a = ri.a(param3, "", "driftinglight_snow");
           ml.field_p = ri.a(param3, "", "driftinglight_rough");
           th.field_C = ri.a(param3, "", "shockwave");
-          os.field_b = ri.b(param3, "", "lightningrod");
+          MouseInputHandler.field_b = ri.b(param3, "", "lightningrod");
           sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
           hp.field_n = ri.b(param3, "", "electricity");
           ni.field_h = ri.b(param3, "", "electricity_flip");
-          rj.field_f = ri.a(param3, "", "attract");
+          ArchiveCatalog.field_f = ri.a(param3, "", "attract");
           uu.field_o = ri.a(param3, "", "repulse");
           lr.field_c = ri.a(param3, "", "icepatch");
           ei.field_b = ri.b(param3, "", "attractor");
@@ -286,7 +286,7 @@ final class pe extends sp implements ai {
           rl.field_o = ri.a(param3, "", "gravitywell_field");
           pq.field_F = ri.b(param3, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class pe extends sp implements ai {
         }
         vn var5 = kw.field_b;
         if (this.field_B != null) {
-          var5.a(ia.field_a, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
+          var5.a(NodeHashTableIterator.suggestedNamesText, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
         }
         if (param2 > -35) {
           this.a(120, -19, (byte) -32, 10);
@@ -305,7 +305,7 @@ final class pe extends sp implements ai {
     }
 
     static {
-        field_D = "Orb Points";
+        orbPointsText = "Orb Points";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

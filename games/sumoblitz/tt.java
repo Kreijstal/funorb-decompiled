@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tt extends ms {
-    static String field_k;
+abstract class tt extends IntrusiveNode {
+    static String defeatText;
     static int field_l;
 
-    final static wb[] a(byte param0, int param1, ki param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
-        wb[] stackIn_5_0 = null;
-        wb[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -21,7 +21,7 @@ abstract class tt extends ms {
             stackIn_7_0 = ul.a(255);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (wb[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,27 +33,27 @@ abstract class tt extends ms {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         if (param0 == 30692) {
-          ki.field_f = c.field_u[0];
+          ResourceArchive.field_f = c.field_u[0];
           iv.field_i = c.field_u[1];
           hc.field_f = c.field_u[2];
           return;
         }
-        field_k = (String) null;
-        ki.field_f = c.field_u[0];
+        defeatText = (String) null;
+        ResourceArchive.field_f = c.field_u[0];
         iv.field_i = c.field_u[1];
         hc.field_f = c.field_u[2];
     }
 
     public static void c(boolean param0) {
-        field_k = null;
+        defeatText = null;
         if (!param0) {
-          field_k = (String) null;
+          defeatText = (String) null;
         }
     }
 
@@ -96,7 +96,7 @@ abstract class tt extends ms {
     }
 
     static {
-        field_k = "DEFEAT.";
+        defeatText = "DEFEAT.";
         field_l = 256;
     }
 }

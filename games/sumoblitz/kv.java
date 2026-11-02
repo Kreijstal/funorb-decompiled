@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kv {
-    static wb field_a;
+    static Sprite field_a;
     private static String field_z;
 
     public static void a(byte param0) {

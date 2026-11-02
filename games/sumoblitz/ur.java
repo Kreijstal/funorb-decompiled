@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ur extends hf {
-    private pk field_V;
+    private UiWidget field_V;
     private int field_W;
     private int field_S;
-    static String field_X;
+    static String passwordsCanOnlyContainText;
     private in field_P;
     private int field_Z;
     static float field_R;
@@ -15,7 +15,7 @@ abstract class ur extends hf {
     private int field_T;
     static int field_O;
 
-    ur(dg param0, pk param1, int param2, int param3, int param4) {
+    ur(dg param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_q + 12, param1.field_p + (12 + param2));
         try {
           this.field_U = param2;
@@ -24,7 +24,7 @@ abstract class ur extends hf {
           this.field_Z = param4;
           this.b(param1, -125);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ur.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ur.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ abstract class ur extends hf {
         int fieldTemp$1 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         if (null != this.field_Y) {
-          if (this.field_Y == sr.field_i) {
+          if (this.field_Y == LimitedRandomAccessFile.field_i) {
             fieldTemp$0 = this.field_W + 1;
             this.field_W = this.field_W + 1;
             if (fieldTemp$0 != this.field_T) {
@@ -106,7 +106,7 @@ abstract class ur extends hf {
         return super.h(param0 ^ 0);
     }
 
-    boolean a(pk param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -139,15 +139,15 @@ abstract class ur extends hf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void b(pk param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         try {
           int var3_int = -16 / ((param1 + 72) / 51);
           if (this.field_P != null) {
-            this.field_P.b(false);
+            this.field_P.unlink(false);
           }
           if (param0 == null) {
             this.field_P = new in();
@@ -158,21 +158,21 @@ abstract class ur extends hf {
           this.a(this.field_P, 124);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ur.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ur.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void b(byte param0, pk param1) {
+    void b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        pk var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -87) {
-            var4 = (pk) null;
-            this.b((pk) null, 78);
+            var4 = (UiWidget) null;
+            this.b((UiWidget) null, 78);
           }
           this.field_V = param1;
           if (lw.field_a == this.field_Y) {
@@ -180,10 +180,10 @@ abstract class ur extends hf {
             this.field_W = 0;
             return;
           }
-          if (this.field_Y == sr.field_i) {
+          if (this.field_Y == LimitedRandomAccessFile.field_i) {
             return;
           }
-          this.field_Y = sr.field_i;
+          this.field_Y = LimitedRandomAccessFile.field_i;
           this.field_W = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,21 +196,21 @@ abstract class ur extends hf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     public static void k(int param0) {
         if (param0 != 0) {
           ur.k(65);
-          field_X = null;
+          passwordsCanOnlyContainText = null;
           return;
         }
-        field_X = null;
+        passwordsCanOnlyContainText = null;
     }
 
     final void i(int param0) {
-        if (this.field_Y == sr.field_i) {
+        if (this.field_Y == LimitedRandomAccessFile.field_i) {
           return;
         }
         this.field_W = param0;
@@ -222,6 +222,6 @@ abstract class ur extends hf {
 
     static {
         field_Q = -1;
-        field_X = "Passwords can only contain letters and numbers";
+        passwordsCanOnlyContainText = "Passwords can only contain letters and numbers";
     }
 }

@@ -43,5 +43,5 @@ final class a implements e {
         this.HA(this.field_nativeid, param0, param1, param2);
     }
 
-    private final native void HA(long param0, ha param1, int param2, int param3);
+    private final native void HA(long param0, GraphicsToolkit param1, int param2, int param3);
 }

@@ -77,7 +77,7 @@ final class vt extends nt {
         if (var6 < 0) {
           return -1;
         }
-        var7 = cb.b(-22415, var6);
+        var7 = IntrusiveDequeCursor.b(-22415, var6);
         var8 = (var7 - param2 << param4) / param3;
         var9 = (-var7 - param2 << param4) / param3;
         if (var8 >= 0 &&
@@ -99,7 +99,7 @@ final class vt extends nt {
         return var9;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -125,7 +125,7 @@ final class vt extends nt {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

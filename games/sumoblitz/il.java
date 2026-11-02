@@ -28,7 +28,7 @@ final class il {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = qo.field_a;
+              stackIn_7_0 = ClientExceptionSupport.field_a;
               return stackIn_7_0;
             }
             var3 = param0.substring(0, var2_int);
@@ -36,7 +36,7 @@ final class il {
             if (param1 < 0) {
               field_b = (hr) null;
             }
-            var5 = g.a((byte) -126, var3);
+            var5 = SocketConnector.a((byte) -126, var3);
             if (var5 == null) {
               stackIn_14_0 = lh.a(var4, -1);
               return stackIn_14_0;
@@ -56,11 +56,11 @@ final class il {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, ki param1) {
+    final static boolean a(boolean param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -103,7 +103,7 @@ final class il {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class il {
     }
 
     final static void a(byte param0, String param1) {
-        System.out.println("Error: " + aw.a("%0a", param1, "\n", true));
+        System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", param1, "\n", true));
         if (param0 < 4) {
           il.a(81);
         }

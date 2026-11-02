@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class nm extends ms {
+final class nm extends IntrusiveNode {
     private int field_A;
     int field_m;
     private boolean field_z;
     int field_y;
-    static String[] field_u;
-    static String field_n;
+    static String[] waitingForTextTranslations;
+    static String waitingForLevelsText;
     private int field_o;
     private int field_B;
     int field_l;
@@ -19,19 +19,19 @@ final class nm extends ms {
     private int field_v;
     private int field_k;
     private int field_t;
-    private jn field_w;
+    private IntrusiveDeque field_w;
     int field_q;
     private int field_p;
 
     public static void c(int param0) {
         try {
-          field_n = null;
-          field_u = null;
+          waitingForLevelsText = null;
+          waitingForTextTranslations = null;
           if (param0 != 1432625512) {
-            nm.a((fs) null, (byte) -50);
+            nm.a((PacketBuffer) null, (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class nm extends ms {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,8 +103,8 @@ final class nm extends ms {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        jn var5 = null;
-        cb var6 = null;
+        IntrusiveDeque var5 = null;
+        IntrusiveDequeCursor var6 = null;
         int var7 = 0;
         nm var8 = null;
         int var9 = 0;
@@ -237,8 +237,8 @@ final class nm extends ms {
             (decompiledFrameRemainder2)) {
             var3_int = -param0.field_C + this.field_B;
             var4 = -param0.field_z + this.field_r;
-            param0.field_E = (int)((double)param0.field_E + 0.00016 * (double)ov.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A + (double)ov.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)param0.field_o);
+            param0.field_E = (int)((double)param0.field_E + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)param0.field_o);
+            param0.field_A = (int)((double)param0.field_A + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)param0.field_o);
             param0.field_D = true;
             tq.a(-111, fi.a(4, he.field_o, (byte) -96) + 6, false);
             decompiledFrameRemainder7 = (var17 != 0);
@@ -259,7 +259,7 @@ final class nm extends ms {
             (decompiledFrameRemainder4)) {
             var5 = is.field_c;
             var7 = 0;
-            var6 = new cb(var5);
+            var6 = new IntrusiveDequeCursor(var5);
             var8 = (nm) (var6.b((byte) -80));
             while (true) {
               if (null != var8) {
@@ -315,8 +315,8 @@ final class nm extends ms {
             (decompiledFrameCompleted0)) {
             var3_intLifetime2 = this.field_q - param0.field_C;
             var4Lifetime2 = -param0.field_z + this.field_l;
-            param0.field_E = (int)((double)param0.field_E + (double)ov.a(param1 ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A + (double)ov.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)param0.field_o);
+            param0.field_E = (int)((double)param0.field_E + (double)RasterBuffer.a(param1 ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)param0.field_o);
+            param0.field_A = (int)((double)param0.field_A + (double)RasterBuffer.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)param0.field_o);
             this.field_z = true;
             tq.a(-119, 1, true);
             decompiledFrameRemainder7 = (var17 != 0);
@@ -325,8 +325,8 @@ final class nm extends ms {
             (decompiledFrameCompleted0)) {
             var4Lifetime1 = this.field_l - param0.field_z;
             var3_intLifetime1 = -param0.field_C + this.field_q;
-            param0.field_E = (int)((double)param0.field_E - (double)ov.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A - 0.000035 * (double)ov.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)param0.field_o);
+            param0.field_E = (int)((double)param0.field_E - (double)RasterBuffer.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)param0.field_o);
+            param0.field_A = (int)((double)param0.field_A - 0.000035 * (double)RasterBuffer.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)param0.field_o);
             this.field_z = true;
             tq.a(-123, 2, true);
           }
@@ -344,7 +344,7 @@ final class nm extends ms {
           } else {
             stackIn_165_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_164_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_164_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -373,11 +373,11 @@ final class nm extends ms {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
         String stackIn_98_2 = null;
@@ -518,7 +518,7 @@ final class nm extends ms {
           } else {
             stackIn_98_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -570,7 +570,7 @@ final class nm extends ms {
             stackIn_33_0 = stackOut_32_0;
             if (var3 == 0) {
               if (stackIn_33_0) {
-                var2.b(false);
+                var2.unlink(false);
               }
               var2 = (nt) (this.field_w.d((byte) 18));
               continue;
@@ -585,22 +585,22 @@ final class nm extends ms {
           if (stackIn_40_0 == -6 &&
             this.field_p % 50 == 0 &&
             ul.field_f == 0) {
-            this.field_w.a((ms) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
+            this.field_w.a((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
           }
           if (this.field_y == 4 &&
             0 == this.field_p % 50 &&
             ul.field_f == 0) {
-            this.field_w.a((ms) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
+            this.field_w.a((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "nm.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "nm.E(" + param0 + ')');
         }
     }
 
-    final static void a(fs param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -637,7 +637,7 @@ final class nm extends ms {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -702,12 +702,12 @@ final class nm extends ms {
           if (param0 != -115) {
             this.a(89);
           }
-          this.field_w = new jn();
+          this.field_w = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "nm.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "nm.F(" + param0 + ')');
         }
     }
 
@@ -723,7 +723,7 @@ final class nm extends ms {
           this.field_r = (int)((double)this.field_l + var4);
           this.field_B = (int)(var7 + (double)this.field_q);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nm.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.I(" + param0 + ')');
         }
     }
 
@@ -736,12 +736,12 @@ final class nm extends ms {
           this.field_y = param0;
           this.a((byte) -115);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        field_n = "Waiting for levels";
-        field_u = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
+        waitingForLevelsText = "Waiting for levels";
+        waitingForTextTranslations = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
     }
 }

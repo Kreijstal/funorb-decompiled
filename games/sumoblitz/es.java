@@ -8,7 +8,7 @@ final class es extends bq {
     private float field_g;
     private tq field_k;
     private float[] field_e;
-    static String field_j;
+    static String loadingGraphicsText;
 
     final boolean b(byte param0) {
         if (param0 > -64) {
@@ -22,7 +22,7 @@ final class es extends bq {
         if (param0 != 4) {
           return;
         }
-        field_j = null;
+        loadingGraphicsText = null;
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -171,7 +171,7 @@ final class es extends bq {
             this.a(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "es.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "es.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class es extends bq {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -318,6 +318,6 @@ final class es extends bq {
     }
 
     static {
-        field_j = "Loading graphics";
+        loadingGraphicsText = "Loading graphics";
     }
 }

@@ -10,7 +10,7 @@ abstract class pb {
     int field_g;
     int field_e;
 
-    final static cq a(int param0, int param1, int param2, int param3, wi param4, int param5) {
+    final static cq a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         cq var7 = null;
@@ -51,16 +51,16 @@ abstract class pb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final static ts[] a(int param0) {
         if (param0 >= 10) {
-          return new ts[]{go.field_n, ov.field_i, sj.field_b, wj.field_h, lm.field_a, f.field_t, rf.field_e, pj.field_n, vd.field_b, qo.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
+          return new ts[]{go.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, f.field_t, rf.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
         }
         field_b = (nb) null;
-        return new ts[]{go.field_n, ov.field_i, sj.field_b, wj.field_h, lm.field_a, f.field_t, rf.field_e, pj.field_n, vd.field_b, qo.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
+        return new ts[]{go.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, f.field_t, rf.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
     }
 
     public static void b(int param0) {

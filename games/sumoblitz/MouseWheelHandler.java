@@ -1,0 +1,36 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
+    private int field_d;
+
+    final synchronized int a(int param0) {
+        int var2 = this.field_d;
+        int var3 = 6 % ((param0 - 68) / 32);
+        this.field_d = 0;
+        return var2;
+    }
+
+    final void a(boolean param0, java.awt.Component param1) {
+        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+        if (!param0) {
+          this.field_d = -70;
+        }
+    }
+
+    MouseWheelHandler() {
+        this.field_d = 0;
+    }
+
+    final void a(java.awt.Component param0, byte param1) {
+        if (param1 != 76) {
+          return;
+        }
+        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+    }
+
+    public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
+        this.field_d = this.field_d + param0.getWheelRotation();
+        param0.consume();
+    }
+}

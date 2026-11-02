@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cv extends sp implements pw, ai {
+final class cv extends WidgetContainer implements pw, ai {
     static tg field_F;
     private wp field_A;
     static int[] field_G;
@@ -24,7 +24,7 @@ final class cv extends sp implements pw, ai {
         RuntimeException var3 = null;
         try {
           if (this.field_H == param0) {
-            this.field_I.a((pk) (this), (byte) 61);
+            this.field_I.a((UiWidget) (this), (byte) 61);
           }
           if (param0 == this.field_I) {
             this.e((byte) -23);
@@ -43,7 +43,7 @@ final class cv extends sp implements pw, ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class cv extends sp implements pw, ai {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class cv extends sp implements pw, ai {
           this.field_H = (dh) ((Object) new qq(param0, (qm) (this), 100));
           this.field_I = (dh) ((Object) new qq("", (qm) (this), 20));
           if (!this.field_B) {
-            this.field_A = new wp(ma.field_c, (qm) null);
+            this.field_A = new wp(ma.logInText, (qm) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_J) {
@@ -156,15 +156,15 @@ final class cv extends sp implements pw, ai {
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = cq.field_c;
+              stackIn_19_3 = cq.backText;
             }
             this.field_N = new wp(stackIn_19_3, (qm) null);
             if (this.field_M) {
-              this.field_D = new wp(ms.field_i, (qm) (this));
+              this.field_D = new wp(IntrusiveNode.createAFreeAccountText, (qm) (this));
             }
           } else {
-            this.field_A = new wp(ii.field_b, (qm) null);
-            this.field_N = new wp(of.field_k, (qm) null);
+            this.field_A = new wp(ii.retryText, (qm) null);
+            this.field_N = new wp(of.quitToWebsiteText, (qm) null);
             this.field_H.field_x = false;
           }
           this.field_H.field_w = (mh) ((Object) new nl(10000536));
@@ -174,20 +174,20 @@ final class cv extends sp implements pw, ai {
           if (this.field_N != null) {
             this.field_N.field_w = (mh) ((Object) var6);
           }
-          this.field_H.field_t = cn.field_hb;
+          this.field_H.field_t = cn.theAccountNameYouText;
           if (null != this.field_D) {
             this.field_D.field_w = (mh) ((Object) var6);
           }
           if (null != this.field_D) {
-            this.field_D.field_t = aj.field_x;
+            this.field_D.field_t = aj.createYourOwnFreeText;
           }
           if (this.field_B) {
-            this.field_N.field_t = rv.field_a;
+            this.field_N.field_t = rv.warningIfYouQuitText;
           } else {
             if (!this.field_J) {
               this.field_N.field_w = (mh) ((Object) new bv());
             } else {
-              this.field_N.field_t = hg.field_t;
+              this.field_N.field_t = hg.playTheGameWithoutText;
               this.field_N.field_w = (mh) ((Object) new bv());
             }
           }
@@ -196,23 +196,23 @@ final class cv extends sp implements pw, ai {
           if (this.field_K != null) {
             this.field_v = this.field_v + (var7.a(this.field_K, -40 + this.field_q, var7.field_s) + 5);
           }
-          var8 = ej.field_g;
+          var8 = OpenGlEnvironmentWaterEffect.loginText;
           var9 = lv.a(ra.c(2), 1);
           if (go.field_m != var9) {
             if (tr.field_j == var9) {
-              var8 = ph.field_h;
+              var8 = ph.usernameText;
             }
           } else {
-            var8 = ow.field_b;
+            var8 = ow.emailText;
           }
           dupTemp$0 = new rt(10, this.field_v, this.field_q - 20, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(dupTemp$0, 80);
-          this.field_v = this.field_v + (((pk) ((Object) var12)).field_p + 5);
-          dupTemp$1 = new rt(10, this.field_v, -20 + this.field_q, 25, this.field_I, false, 80, 3, var7, 16777215, pi.field_g);
+          this.field_v = this.field_v + (((UiWidget) ((Object) var12)).field_p + 5);
+          dupTemp$1 = new rt(10, this.field_v, -20 + this.field_q, 25, this.field_I, false, 80, 3, var7, 16777215, pi.passwordText);
           var13 = dupTemp$1;
           this.a(dupTemp$1, 107);
-          this.field_v = this.field_v + (((pk) ((Object) var13)).field_p + 5);
+          this.field_v = this.field_v + (((UiWidget) ((Object) var13)).field_p + 5);
           this.field_A.field_o = (qm) (this);
           if (this.field_D != null) {
             this.field_D.field_o = (qm) (this);
@@ -266,7 +266,7 @@ final class cv extends sp implements pw, ai {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class cv extends sp implements pw, ai {
         if (param0) {
           field_O = -86;
         }
-        return cb.field_c;
+        return IntrusiveDequeCursor.field_c;
     }
 
     final void h(int param0) {
@@ -293,7 +293,7 @@ final class cv extends sp implements pw, ai {
         }
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -327,7 +327,7 @@ final class cv extends sp implements pw, ai {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ final class cv extends sp implements pw, ai {
             this.field_A = (wp) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cv.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cv.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ final class cv extends sp implements pw, ai {
           var3.a(false, var4, (byte) 67);
           this.field_I.i(param0 + 3498);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cv.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cv.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

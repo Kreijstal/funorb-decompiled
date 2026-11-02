@@ -46,7 +46,7 @@ final class rt extends ie {
         }
     }
 
-    rt(int param0, int param1, int param2, int param3, pk param4, boolean param5, int param6, int param7, vn param8, int param9, String param10) {
+    rt(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, vn param8, int param9, String param10) {
         super(param0, param1, param2, param3, (mh) null, (qm) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -108,7 +108,7 @@ final class rt extends ie {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

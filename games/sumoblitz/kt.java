@@ -35,7 +35,7 @@ final class kt {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -81,14 +81,14 @@ final class kt {
             nj.field_a.field_g >= 0) {
             var3 = jo.field_b[nj.field_a.field_g];
             if (var3 == 2) {
-              ha.b(23639);
+              GraphicsToolkit.b(23639);
             } else if (var3 == 5) {
-              ha.b(23639);
+              GraphicsToolkit.b(23639);
             }
           } else {
             if (var2 != 0 &&
               cl.field_s != 2) {
-              ha.b(23639);
+              GraphicsToolkit.b(23639);
             }
           }
           if (var3 == 0 &&
@@ -105,7 +105,7 @@ final class kt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "kt.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kt.A(" + param0 + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class gr extends bq {
     private ch field_j;
     static int[] field_h;
     private boolean field_k;
-    static String field_g;
+    static String updatesWillSentToText;
     private sn field_i;
     private boolean field_f;
     static int field_l;
@@ -52,7 +52,7 @@ final class gr extends bq {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class gr extends bq {
     }
 
     public static void c(byte param0) {
-        field_g = null;
+        updatesWillSentToText = null;
         field_h = null;
         if (param0 != -19) {
           field_e = true;
@@ -153,7 +153,7 @@ final class gr extends bq {
             this.field_f = null != this.field_i ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class gr extends bq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 53) {
-            field_g = (String) null;
+            updatesWillSentToText = (String) null;
           }
           stackIn_3_0 = sj.a(false, 126, param0);
           return stackIn_3_0;
@@ -232,13 +232,13 @@ final class gr extends bq {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_h = new int[1000];
-        field_g = "Updates will sent to the email address you've given";
+        updatesWillSentToText = "Updates will sent to the email address you've given";
         field_e = false;
     }
 }

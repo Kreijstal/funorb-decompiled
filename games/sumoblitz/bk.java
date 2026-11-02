@@ -4,7 +4,7 @@
 final class bk {
     long field_f;
     static ri[] field_b;
-    ha field_g;
+    GraphicsToolkit field_g;
     static int[] field_e;
     nj field_d;
     private cj field_a;
@@ -27,13 +27,13 @@ final class bk {
         return this.field_a;
     }
 
-    bk(ha param0, nj param1, java.awt.Canvas param2) {
+    bk(GraphicsToolkit param0, nj param1, java.awt.Canvas param2) {
         try {
           this.field_c = param2;
           this.field_g = param0;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

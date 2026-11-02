@@ -3,7 +3,7 @@
  */
 abstract class da {
     private ta field_b;
-    private ha field_a;
+    private GraphicsToolkit field_a;
 
     final void a(int param0, int param1, int param2, String param3, byte param4, int param5) {
         if (param4 > -7) {
@@ -16,7 +16,7 @@ abstract class da {
           this.a(param2, param5, 60);
           this.a(-274, param0, (hr[]) null, param1, 0, 0, param3, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ abstract class da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param11 != -8787) {
-            this.field_a = (ha) null;
+            this.field_a = (GraphicsToolkit) null;
           }
           stackIn_3_0 = this.a(param13, param6, param2, param5, param12, param0, param1, param10, 0, param8, param4, param3, param14, param9, 92, param15, param7);
           return stackIn_3_0;
@@ -67,7 +67,7 @@ abstract class da {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param14).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -77,12 +77,12 @@ abstract class da {
         }
         try {
           if (param5 < 40) {
-            this.field_a = (ha) null;
+            this.field_a = (GraphicsToolkit) null;
           }
           this.a(param4, param0, 60);
           this.a(-274, param3, (hr[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ abstract class da {
               mn.field_i = mn.field_i & -16777216 | 16777215 & ea.a((byte) -73, var6, 16);
             } else {
               if (param0.equals("/col")) {
-                mn.field_i = 16777215 & fs.field_l | -16777216 & mn.field_i;
+                mn.field_i = 16777215 & PacketBuffer.field_l | -16777216 & mn.field_i;
               }
             }
             if (!param0.startsWith("argb=")) {
@@ -130,7 +130,7 @@ abstract class da {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(fs.field_l, jv.field_b, 60);
+                                      this.a(PacketBuffer.field_l, jv.field_b, 60);
                                     }
                                   } else {
                                     jj.field_b = jv.field_b;
@@ -161,7 +161,7 @@ abstract class da {
                   vo.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8, 16);
                 }
               } else {
-                mn.field_i = fs.field_l;
+                mn.field_i = PacketBuffer.field_l;
               }
             } else {
               var7 = (CharSequence) ((Object) param0.substring(5));
@@ -182,7 +182,7 @@ abstract class da {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ abstract class da {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_50_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_50_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -488,17 +488,17 @@ abstract class da {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
-    final static void a(ki param0, ki param1, int param2, ki param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         ne[] var14 = null;
         int var11_int = 0;
-        wb var15 = null;
-        wb var18 = null;
-        wb var11 = null;
-        wb var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
@@ -511,9 +511,9 @@ abstract class da {
         jm.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
         kw.field_b = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         tq.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
-        wb var17 = new wb(param3.a("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
+        Sprite var17 = new Sprite(param3.a("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
         mc.a((byte) 83, param0, "dropdown", "commonui");
-        ne[] var5 = rq.a("screen_options", param0, 73, "commonui");
+        ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
         sb.field_d = new ne[4];
         sm.field_c = new ne[4];
         kn.field_f = new ne[4];
@@ -541,23 +541,23 @@ abstract class da {
           return;
         }
         try {
-          kc.j(70);
+          GameApplet.j(70);
           var17.d();
           lk.g(0, 0, lk.field_b, lk.field_c);
-          var15 = new wb(var9, var9);
+          var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.d();
           var17.c(0, 0);
-          var11 = new wb(var9, var9);
+          var11 = new Sprite(var9, var9);
           var11.d();
           var17.c(var9 - var17.field_x, 0);
-          var12 = new wb(-(2 * var9) + var17.field_x, var9);
+          var12 = new Sprite(-(2 * var9) + var17.field_x, var9);
           var12.d();
           var17.c(-var9, 0);
-          su.a((byte) -73);
-          jp.field_j = new wb[]{var15, var12, var11};
+          ClientException.a((byte) -73);
+          jp.field_j = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -571,13 +571,13 @@ abstract class da {
           this.a(param1, param2, 60);
           this.a(-274, param3, (hr[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private final void a(int param0, int param1, int param2) {
         lb.field_b = 0;
-        fs.field_l = param0;
+        PacketBuffer.field_l = param0;
         mn.field_i = param0;
         if (param1 == -1) {
           param1 = 0;
@@ -592,18 +592,18 @@ abstract class da {
         jj.field_b = param1;
     }
 
-    da(ha param0, ta param1) {
+    da(GraphicsToolkit param0, ta param1) {
         try {
           this.field_b = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(cd param0, int param1, cd param2) {
         RuntimeException var3 = null;
-        ki var4 = null;
+        ResourceArchive var4 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -615,8 +615,8 @@ abstract class da {
             return true;
           }
           if (param1 > -11) {
-            var4 = (ki) null;
-            da.a((ki) null, (ki) null, 47, (ki) null);
+            var4 = (ResourceArchive) null;
+            da.a((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
           }
           if (param0.field_a != param2.field_a) {
             return false;
@@ -641,7 +641,7 @@ abstract class da {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -696,7 +696,7 @@ abstract class da {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

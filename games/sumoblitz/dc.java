@@ -3,32 +3,32 @@
  */
 final class dc extends ur {
     static hr[] field_ab;
-    static String field_bb;
+    static String typeYourAgeInText;
 
-    final void b(byte param0, pk param1) {
+    final void b(byte param0, UiWidget param1) {
         try {
           if (param0 >= -87) {
             field_ab = (hr[]) null;
           }
           super.b((byte) -96, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    dc(dg param0, pk param1) {
+    dc(dg param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
     public static void m(int param0) {
         if (param0 < 89) {
-          field_bb = (String) null;
+          typeYourAgeInText = (String) null;
           field_ab = null;
-          field_bb = null;
+          typeYourAgeInText = null;
           return;
         }
         field_ab = null;
-        field_bb = null;
+        typeYourAgeInText = null;
     }
 
     final static void l(int param0) {
@@ -41,6 +41,6 @@ final class dc extends ur {
     }
 
     static {
-        field_bb = "Type your age in years";
+        typeYourAgeInText = "Type your age in years";
     }
 }

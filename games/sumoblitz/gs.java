@@ -3,7 +3,7 @@
  */
 final class gs {
     static dk field_a;
-    static String field_c;
+    static String youNeedToChooseText;
     static int[] field_b;
 
     public static void a(byte param0) {
@@ -12,7 +12,7 @@ final class gs {
           return;
         }
         field_a = null;
-        field_c = null;
+        youNeedToChooseText = null;
     }
 
     final static void a(java.awt.Component param0, boolean param1) {
@@ -24,12 +24,12 @@ final class gs {
           param0.addMouseMotionListener(wk.field_h);
           param0.addFocusListener(wk.field_h);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
         field_a = new dk();
-        field_c = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
+        youNeedToChooseText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
     }
 }

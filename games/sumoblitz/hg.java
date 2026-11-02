@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends ms {
-    static String field_t;
+final class hg extends IntrusiveNode {
+    static String playTheGameWithoutText;
     int field_u;
     int field_n;
     static float[] field_l;
@@ -59,7 +59,7 @@ final class hg extends ms {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class hg extends ms {
           int[] var2 = (int[]) null;
           hg.a(-33, (int[]) null);
         }
-        field_t = null;
+        playTheGameWithoutText = null;
         field_k = null;
         field_o = null;
     }
@@ -86,7 +86,7 @@ final class hg extends ms {
 
     static {
         int var2 = 0;
-        field_t = "Play the game without logging in just yet";
+        playTheGameWithoutText = "Play the game without logging in just yet";
         field_k = new float[16384];
         field_l = new float[16384];
         double var0 = 0.0003834951969714103;

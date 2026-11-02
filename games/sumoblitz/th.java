@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends sp implements ca, ai {
+final class th extends WidgetContainer implements ca, ai {
     static ri field_C;
     static int field_H;
     private uk field_G;
@@ -9,7 +9,7 @@ final class th extends sp implements ca, ai {
     static hr field_B;
     private ar field_F;
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -43,7 +43,7 @@ final class th extends sp implements ca, ai {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -61,15 +61,15 @@ final class th extends sp implements ca, ai {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_G = param0;
-          this.field_D = new wp(wd.field_h, (qm) null);
+          this.field_D = new wp(wd.continueText, (qm) null);
           this.field_D.field_w = (mh) ((Object) new ue());
-          var7 = ic.a(qv.field_l, new String[]{this.a((byte) 43), this.g(116)}, (byte) -128);
+          var7 = ic.a(qv.asYouAreUnderText, new String[]{this.a((byte) 43), this.g(116)}, (byte) -128);
           var3 = 20;
           var4 = new gm(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
           this.field_F = new ar(var7, var4);
           this.field_F.field_t = "";
-          this.field_F.a(-57, sb.field_e, 0);
-          this.field_F.a(-66, sb.field_e, 1);
+          this.field_F.a(-57, sb.openInPopupWindowText, 0);
+          this.field_F.a(-66, sb.openInPopupWindowText, 1);
           this.field_F.field_o = (qm) (this);
           this.field_F.field_q = -40 + this.field_q;
           this.field_F.a(var3, false, 26, -40 + this.field_q);
@@ -92,7 +92,7 @@ final class th extends sp implements ca, ai {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -108,26 +108,26 @@ final class th extends sp implements ca, ai {
             return;
           }
           kh.field_e = kh.field_e | var3_int;
-          wj.field_e = wj.field_e | var3_int;
-          pl.field_v.a((ms) (new ge(param2)), (byte) 39);
+          OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
+          pl.field_v.a((IntrusiveNode) (new ge(param2)), (byte) 39);
           if (gj.a((byte) -84, 10) >= 5) {
             fb.field_a = fb.field_a + iw.field_b;
           } else {
-            ha.field_f = ha.field_f + iw.field_b;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.field_b;
           }
           if (gj.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - te.field_c;
           } else {
             kn.field_b = kn.field_b - te.field_c;
           }
-          ia.a(param2, (byte) -82);
+          NodeHashTableIterator.a(param2, (byte) -82);
           if (param0 != 24753) {
             return;
           }
           boolean decompiledFrameRemainder1 = true;
           if (3 == param2) {
             kn.field_b = kn.field_b - ld.field_C;
-            ha.field_f = ha.field_f + oh.field_e;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.field_e;
             ts.field_a = ts.field_a - nq.field_i;
           } else {
             if (param2 != 4 &&
@@ -135,7 +135,7 @@ final class th extends sp implements ca, ai {
               6 != param2 &&
               param2 != 7) {
               if (param2 == 10) {
-                ha.field_f = ha.field_f + oh.field_e;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.field_e;
               } else {
                 if ((param2 == 0 ||
                   param2 == 1 ||
@@ -150,7 +150,7 @@ final class th extends sp implements ca, ai {
             }
           }
           if (!f.field_w) {
-            pn.field_q.a((ms) (new hg(param2, param1, ha.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
+            OpenGlUnderwaterEffect.field_q.a((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 != param2) {
@@ -159,7 +159,7 @@ final class th extends sp implements ca, ai {
               6 != param2 &&
               param2 != 7) {
               if (10 == param2) {
-                ha.field_f = ha.field_f - oh.field_e;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.field_e;
               } else {
                 if ((param2 == 0 ||
                   param2 == 1 ||
@@ -174,11 +174,11 @@ final class th extends sp implements ca, ai {
             }
           } else {
             kn.field_b = kn.field_b + ld.field_C;
-            ha.field_f = ha.field_f - oh.field_e;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.field_e;
             ts.field_a = ts.field_a + nq.field_i;
           }
           if (5 > gj.a((byte) -84, 10)) {
-            ha.field_f = ha.field_f - iw.field_b;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - iw.field_b;
           } else {
             fb.field_a = fb.field_a - iw.field_b;
           }
@@ -191,7 +191,7 @@ final class th extends sp implements ca, ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "th.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "th.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class th extends sp implements ca, ai {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -249,18 +249,18 @@ final class th extends sp implements ca, ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "th.H(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "th.H(" + param0 + ')');
         }
     }
 
     final static void e(boolean param0) {
         try {
-          ha.field_d = fd.field_i + " <b>" + km.field_m + "</b> " + ws.field_a + " <b>" + up.field_b + "</b> " + oh.field_b + "<br>" + "<br>" + c.field_q;
+          GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + oh.toReturnToTheText + "<br>" + "<br>" + c.ifYouDoNothingText;
           if (!param0) {
             th.e(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "th.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.I(" + param0 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class th extends sp implements ca, ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "th.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "th.F(" + param0 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class th extends sp implements ca, ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ final class th extends sp implements ca, ai {
           field_C = null;
           field_B = null;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "th.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.G(" + param0 + ')');
         }
     }
 

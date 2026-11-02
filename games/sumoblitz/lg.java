@@ -16,10 +16,10 @@ final class lg extends qt {
     public lg() {
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        ha var5 = null;
+        GraphicsToolkit var5 = null;
         int var6 = 0;
         hr[] var7 = null;
         int var8 = 0;
@@ -31,7 +31,7 @@ final class lg extends qt {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           wo.a(up.field_c, 360, -5, -16777216, 3, param0, 650, 50, 1, true);
-          hc.field_e.a(vq.field_D, -1, -16777216, 150, 320, 0);
+          hc.field_e.a(vq.areYouSureYouText, -1, -16777216, 150, 320, 0);
           if (param1 != 22707) {
             lg.a(73, 17, -78);
           }
@@ -43,9 +43,9 @@ final class lg extends qt {
             var7 = up.field_c;
             wo.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
             if (var4 != this.field_a) {
-              hc.field_e.a(lb.field_c[var4], -1, -16777216, 260, 100 + var3_int, 0);
+              hc.field_e.a(lb.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
-              be.field_t.a(lb.field_c[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
+              be.field_t.a(lb.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
             }
             var3_int += 300;
             var4++;
@@ -61,7 +61,7 @@ final class lg extends qt {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class lg extends qt {
                 } else {
                   if (0 == this.field_a) {
                     ll.c(89);
-                    pk.d((byte) -83);
+                    UiWidget.d((byte) -83);
                     this.b((byte) -127);
                   } else {
                     this.b((byte) -128);
@@ -107,7 +107,7 @@ final class lg extends qt {
             }
             if (0 == this.field_a) {
               ll.c(89);
-              pk.d((byte) -83);
+              UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
             }
@@ -122,7 +122,7 @@ final class lg extends qt {
             if (this.field_a != -1) {
               if (0 == this.field_a) {
                 ll.c(89);
-                pk.d((byte) -83);
+                UiWidget.d((byte) -83);
                 this.b((byte) -127);
                 return;
               }
@@ -138,7 +138,7 @@ final class lg extends qt {
             }
             if (0 == this.field_a) {
               ll.c(89);
-              pk.d((byte) -83);
+              UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
             }
@@ -159,7 +159,7 @@ final class lg extends qt {
               }
               if (0 == this.field_a) {
                 ll.c(89);
-                pk.d((byte) -83);
+                UiWidget.d((byte) -83);
                 this.b((byte) -127);
                 return;
               }
@@ -174,7 +174,7 @@ final class lg extends qt {
             }
             if (0 == this.field_a) {
               ll.c(89);
-              pk.d((byte) -83);
+              UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
             }
@@ -191,7 +191,7 @@ final class lg extends qt {
             }
             if (0 == this.field_a) {
               ll.c(89);
-              pk.d((byte) -83);
+              UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
             }
@@ -206,7 +206,7 @@ final class lg extends qt {
           }
           if (0 == this.field_a) {
             ll.c(89);
-            pk.d((byte) -83);
+            UiWidget.d((byte) -83);
             this.b((byte) -127);
             return;
           }

@@ -16,8 +16,8 @@ final class vg implements mh {
     private int field_e;
     private int field_h;
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
-        pk stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -32,7 +32,7 @@ final class vg implements mh {
           if (!(param0 instanceof wr)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (pk) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           }
           var11 = (wr) (stackIn_3_0);
           if (var11 != null) {
@@ -66,7 +66,7 @@ final class vg implements mh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class vg implements mh {
           this.field_a = param3;
           this.field_j = param7;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

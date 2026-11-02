@@ -7,7 +7,7 @@ final class ue extends gm {
     private int field_q;
     static ri field_p;
     static volatile boolean field_o;
-    private wb[] field_r;
+    private Sprite[] field_r;
 
     public ue() {
         this(2188450, 2591221, 9543);
@@ -20,7 +20,7 @@ final class ue extends gm {
         field_p = null;
     }
 
-    public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -70,7 +70,7 @@ final class ue extends gm {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class ue extends gm {
                   var20 = var28.e(-31302);
                   var21 = jh.field_B[var20].field_c;
                   var22 = var28.a((byte) 113);
-                  var24 = var28.field_p;
+                  var24 = var28.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = jh.field_B[var20].field_a;
@@ -190,7 +190,7 @@ final class ue extends gm {
                     var8[1][var13] = qv.field_o;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var28.field_p = var24;
+                    var28.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
@@ -204,7 +204,7 @@ final class ue extends gm {
                     var8[2][var14] = var21;
                     var9[2][var14] = jh.field_B[var20].field_a;
                     var10[2][var14] = var22;
-                    var28.field_p = var24;
+                    var28.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
@@ -216,7 +216,7 @@ final class ue extends gm {
               }
             }
             var4_ref_of.field_q = true;
-            var4_ref_of.b(false);
+            var4_ref_of.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -235,16 +235,16 @@ final class ue extends gm {
               return;
             }
             var6.field_s = var4;
-            var6.b(false);
+            var6.unlink(false);
             return;
           }
-          ms.a("HS1: " + di.b((byte) -124), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("HS1: " + di.b((byte) -124), (Throwable) null, 0);
           kk.a((byte) -121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ue.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ue.C(" + param0 + ')');
         }
     }
 

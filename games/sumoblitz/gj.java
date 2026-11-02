@@ -12,7 +12,7 @@ final class gj {
     private long field_b;
     private int field_h;
     private long field_c;
-    private sr field_j;
+    private LimitedRandomAccessFile field_j;
     private long field_g;
     private int field_f;
     private long field_a;
@@ -88,7 +88,7 @@ final class gj {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -242,7 +242,7 @@ final class gj {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -394,7 +394,7 @@ final class gj {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class gj {
           int var3_int = 47 / ((84 - param1) / 39);
           this.a(param0.length, 0, param0, -127);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -464,7 +464,7 @@ final class gj {
         }
     }
 
-    gj(sr param0, int param1, int param2) throws IOException {
+    gj(LimitedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_h = 0;
         this.field_b = -1L;
@@ -478,7 +478,7 @@ final class gj {
           this.field_e = new byte[param1];
           this.field_d = 0L;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fr extends ha {
+final class fr extends GraphicsToolkit {
     private int field_s;
     private long field_ob;
     private java.awt.Canvas field_ab;
@@ -13,7 +13,7 @@ final class fr extends ha {
     jaggl.OpenGL field_y;
     private Hashtable field_Gb;
     private int field_Z;
-    static String field_lb;
+    static String unfortunatelyYourConfigurationDoesnText;
     private ic field_O;
     private kk field_Pb;
     int field_X;
@@ -21,7 +21,7 @@ final class fr extends ha {
     private iv field_Kb;
     int field_Bc;
     private gq field_U;
-    private jn field_oc;
+    private IntrusiveDeque field_oc;
     jaclib.memory.heap.NativeHeap field_pb;
     int field_Ac;
     private boolean field_jc;
@@ -42,13 +42,13 @@ final class fr extends ha {
     int field_Xb;
     private int field_V;
     private int field_ic;
-    private jn field_fb;
-    private jn field_j;
-    private jn field_q;
-    private jn field_tc;
-    private jn field_fc;
-    private jn field_qb;
-    private jn field_cc;
+    private IntrusiveDeque field_fb;
+    private IntrusiveDeque field_j;
+    private IntrusiveDeque field_q;
+    private IntrusiveDeque field_tc;
+    private IntrusiveDeque field_fc;
+    private IntrusiveDeque field_qb;
+    private IntrusiveDeque field_cc;
     private int field_nb;
     private long field_vc;
     private int field_Ab;
@@ -306,7 +306,7 @@ final class fr extends ha {
           param0[1] = this.field_Wb;
           param0[3] = this.field_Eb;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fr.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fr.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -324,8 +324,8 @@ final class fr extends ha {
 
     final synchronized void b(int param0, int param1, int param2) {
         ge var4 = new ge(param2);
-        var4.field_h = (long)param0;
-        this.field_fc.a((ms) (var4), (byte) 39);
+        var4.key = (long)param0;
+        this.field_fc.a((IntrusiveNode) (var4), (byte) 39);
         int var5 = 33 % ((param1 - 32) / 38);
     }
 
@@ -333,7 +333,7 @@ final class fr extends ha {
         if (param0 != 66) {
           return;
         }
-        field_lb = null;
+        unfortunatelyYourConfigurationDoesnText = null;
     }
 
     private final void f(byte param0) {
@@ -380,7 +380,7 @@ final class fr extends ha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -416,7 +416,7 @@ final class fr extends ha {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ final class fr extends ha {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -569,7 +569,7 @@ final class fr extends ha {
         dl discarded$0 = new dl();
         dl discarded$1 = new dl();
         this.field_jc = false;
-        this.field_oc = new jn();
+        this.field_oc = new IntrusiveDeque();
         this.field_Jb = -1;
         this.field_qc = -1;
         this.field_m = new mw[4];
@@ -578,13 +578,13 @@ final class fr extends ha {
         this.field_dc = new mw[4];
         this.field_Db = new ro();
         this.field_nc = new te(16);
-        this.field_fb = new jn();
-        this.field_j = new jn();
-        this.field_q = new jn();
-        this.field_tc = new jn();
-        this.field_fc = new jn();
-        this.field_qb = new jn();
-        this.field_cc = new jn();
+        this.field_fb = new IntrusiveDeque();
+        this.field_j = new IntrusiveDeque();
+        this.field_q = new IntrusiveDeque();
+        this.field_tc = new IntrusiveDeque();
+        this.field_fc = new IntrusiveDeque();
+        this.field_qb = new IntrusiveDeque();
+        this.field_cc = new IntrusiveDeque();
         dl discarded$2 = new dl();
         this.field_M = new dl();
         this.field_mc = new dl();
@@ -773,7 +773,7 @@ final class fr extends ha {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -822,8 +822,8 @@ final class fr extends ha {
           this.field_Ub = 26;
         }
         ge var4 = new ge(param2);
-        var4.field_h = (long)param0;
-        this.field_j.a((ms) (var4), (byte) 39);
+        var4.key = (long)param0;
+        this.field_j.a((IntrusiveNode) (var4), (byte) 39);
     }
 
     final void d() {
@@ -831,7 +831,7 @@ final class fr extends ha {
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        ms var1 = this.field_oc.b(79);
+        IntrusiveNode var1 = this.field_oc.b(79);
         while (var1 != null) {
           ((ad) (var1)).a(-4009);
           var1 = this.field_oc.d((byte) 18);
@@ -933,7 +933,7 @@ final class fr extends ha {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -956,7 +956,7 @@ final class fr extends ha {
           this.field_mb = false;
         }
         if (param0) {
-          this.field_cc = (jn) null;
+          this.field_cc = (IntrusiveDeque) null;
         }
     }
 
@@ -1004,7 +1004,7 @@ final class fr extends ha {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -1019,7 +1019,7 @@ final class fr extends ha {
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fr.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fr.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1066,8 +1066,8 @@ final class fr extends ha {
     }
 
     final synchronized void a(int param0, byte param1) {
-        ms var3 = new ms();
-        var3.field_h = (long)param0;
+        IntrusiveNode var3 = new IntrusiveNode();
+        var3.key = (long)param0;
         int var4 = -109 / ((25 - param1) / 42);
         this.field_qb.a(var3, (byte) 39);
     }
@@ -1077,7 +1077,7 @@ final class fr extends ha {
         if (param0 > -1) {
           this.field_bb = -108;
         }
-        this.field_tc.a((ms) (var3), (byte) 39);
+        this.field_tc.a((IntrusiveNode) (var3), (byte) 39);
     }
 
     final void b() {
@@ -1166,7 +1166,7 @@ final class fr extends ha {
               var3.c((byte) -36, 0.0f);
               var3.c((byte) -36, 0.0f);
             }
-            this.field_Rb = this.a(20, false, (byte) -23, var3.field_p, var3.field_n);
+            this.field_Rb = this.a(20, false, (byte) -23, var3.position, var3.payload);
             discarded$2 = new jq(this.field_Rb, 5126, 3, 0);
             discarded$3 = new jq(this.field_Rb, 5126, 2, 12);
             this.field_O.a(this, false);
@@ -1182,7 +1182,7 @@ final class fr extends ha {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1274,8 +1274,8 @@ final class fr extends ha {
     final synchronized void a(int param0, int param1, byte param2) {
         int var5 = -72 % ((53 - param2) / 38);
         ge var4 = new ge(param1);
-        var4.field_h = (long)param0;
-        this.field_q.a((ms) (var4), (byte) 39);
+        var4.key = (long)param0;
+        this.field_q.a((IntrusiveNode) (var4), (byte) 39);
     }
 
     private final void g(int param0) {
@@ -1326,7 +1326,7 @@ final class fr extends ha {
 
     final za c(int param0) {
         ad var2 = new ad(param0);
-        this.field_oc.a((ms) (var2), (byte) 39);
+        this.field_oc.a((IntrusiveNode) (var2), (byte) 39);
         return (za) ((Object) var2);
     }
 
@@ -1388,9 +1388,9 @@ final class fr extends ha {
     }
 
     final synchronized void a(long param0, byte param1) {
-        ms var4 = new ms();
+        IntrusiveNode var4 = new IntrusiveNode();
         int var5 = 35 / ((-24 - param1) / 54);
-        var4.field_h = param0;
+        var4.key = param0;
         this.field_cc.a(var4, (byte) 39);
     }
 
@@ -1412,7 +1412,7 @@ final class fr extends ha {
           this.field_hc = param1;
           this.field_hc.c(195);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fr.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fr.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1610,8 +1610,8 @@ final class fr extends ha {
         ge var7;
         ge var8;
         ge var9;
-        ms var10;
-        ms var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         ge var12;
         var4 = Sumoblitz.field_L ? 1 : 0;
         var2 = 0;
@@ -1620,7 +1620,7 @@ final class fr extends ha {
           var5 = (ge) (this.field_j.c(9));
           incrementValue$5 = var2;
           var2++;
-          gr.field_h[incrementValue$5] = (int)var5.field_h;
+          gr.field_h[incrementValue$5] = (int)var5.key;
           this.field_Xb = this.field_Xb - var5.field_m;
           if (var2 != 1000) {
             continue;
@@ -1633,7 +1633,7 @@ final class fr extends ha {
             var6 = (ge) (this.field_q.c(9));
             incrementValue$1 = var2;
             var2++;
-            gr.field_h[incrementValue$1] = (int)var6.field_h;
+            gr.field_h[incrementValue$1] = (int)var6.key;
             this.field_p = this.field_p - var6.field_m;
             if (var2 != 1000) {
               continue;
@@ -1648,7 +1648,7 @@ final class fr extends ha {
             var6 = (ge) (this.field_q.c(9));
             incrementValue$0 = var2;
             var2++;
-            gr.field_h[incrementValue$0] = (int)var6.field_h;
+            gr.field_h[incrementValue$0] = (int)var6.key;
             this.field_p = this.field_p - var6.field_m;
             if (var2 != 1000) {
               continue;
@@ -1677,7 +1677,7 @@ final class fr extends ha {
             var8 = (ge) (this.field_fc.c(9));
             incrementValue$3 = var2;
             var2++;
-            gr.field_h[incrementValue$3] = (int)var8.field_h;
+            gr.field_h[incrementValue$3] = (int)var8.key;
             this.field_V = this.field_V - var8.field_m;
             if (1000 != var2) {
               continue;
@@ -1692,7 +1692,7 @@ final class fr extends ha {
             var8 = (ge) (this.field_fc.c(9));
             incrementValue$2 = var2;
             var2++;
-            gr.field_h[incrementValue$2] = (int)var8.field_h;
+            gr.field_h[incrementValue$2] = (int)var8.key;
             this.field_V = this.field_V - var8.field_m;
             if (1000 != var2) {
               continue;
@@ -1707,19 +1707,19 @@ final class fr extends ha {
         }
         while (!this.field_fb.a((byte) -119)) {
           var9 = (ge) (this.field_fb.c(9));
-          jaggl.OpenGL.glDeleteLists((int)var9.field_h, var9.field_m);
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
         }
         while (!this.field_qb.a((byte) -124)) {
           var10 = this.field_qb.c(9);
-          jaggl.OpenGL.glDeleteProgramARB((int)var10.field_h);
+          jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
         while (!this.field_cc.a((byte) -67)) {
           var11 = this.field_cc.c(9);
-          jaggl.OpenGL.glDeleteObjectARB(var11.field_h);
+          jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
         while (!this.field_fb.a((byte) -96)) {
           var12 = (ge) (this.field_fb.c(9));
-          jaggl.OpenGL.glDeleteLists((int)var12.field_h, var12.field_m);
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
         }
         this.field_Pb.a(122);
         if (100663296 < this.e((byte) 7) &&
@@ -1759,7 +1759,7 @@ final class fr extends ha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1810,7 +1810,7 @@ final class fr extends ha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1900,7 +1900,7 @@ final class fr extends ha {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -2034,7 +2034,7 @@ final class fr extends ha {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -2046,7 +2046,7 @@ final class fr extends ha {
         kf var3 = null;
         wh var3_ref = null;
         RuntimeException var3_ref2 = null;
-        pj var4 = null;
+        DualLinkNode var4 = null;
         int var6 = 0;
         wh var7 = null;
         wh var8 = null;
@@ -2073,8 +2073,8 @@ final class fr extends ha {
                   var4 = this.field_Db.c((byte) 126);
                   if (var4 != null) {
                     var10 = (kf) (var4);
-                    var10.c(-5106);
-                    var10.b(false);
+                    var10.unlinkSecondary(-5106);
+                    var10.unlink(false);
                     var10.g(-127);
                     this.field_ic = this.field_ic - var10.field_s;
                     continue;
@@ -2100,8 +2100,8 @@ final class fr extends ha {
                 var4 = this.field_Db.c((byte) 126);
                 if (var4 != null) {
                   var8 = (wh) (var4);
-                  var8.c(-5106);
-                  var8.b(false);
+                  var8.unlinkSecondary(-5106);
+                  var8.unlink(false);
                   this.field_y.releasePbuffer(var8.e(-99));
                   this.field_ic = this.field_ic - var8.field_v;
                   continue;
@@ -2129,7 +2129,7 @@ final class fr extends ha {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2160,14 +2160,14 @@ final class fr extends ha {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void h(byte param0) {
         jaggl.OpenGL.glViewport(this.field_pc, this.field_bb, this.field_Z, this.field_Ec);
         if (param0 >= -16) {
-          this.field_qb = (jn) null;
+          this.field_qb = (IntrusiveDeque) null;
         }
     }
 
@@ -2196,7 +2196,7 @@ final class fr extends ha {
           this.field_Fb = param1;
           this.field_Fb.d(param0 ^ 4725);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fr.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fr.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2443,7 +2443,7 @@ final class fr extends ha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2459,7 +2459,7 @@ final class fr extends ha {
           this.field_nb = this.field_nb & -32;
         }
         if (param0 <= 52) {
-          this.field_oc = (jn) null;
+          this.field_oc = (IntrusiveDeque) null;
         }
     }
 
@@ -2481,6 +2481,6 @@ final class fr extends ha {
     }
 
     static {
-        field_lb = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
+        unfortunatelyYourConfigurationDoesnText = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }
 }

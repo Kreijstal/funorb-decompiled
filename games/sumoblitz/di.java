@@ -23,18 +23,18 @@ final class di extends ak {
           gn.a(34 + fi.a(4, he.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
-          im.field_b.a((ms) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
-          im.field_b.a((ms) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
-          im.field_b.a((ms) (new eq(50, -1024 + kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
+          im.field_b.a((IntrusiveNode) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
+          im.field_b.a((IntrusiveNode) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
+          im.field_b.a((IntrusiveNode) (new eq(50, -1024 + kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
         } else {
-          im.field_b.a((ms) (new eq(50, kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
-          im.field_b.a((ms) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, kf.field_u.field_z - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
-          im.field_b.a((ms) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1024 + kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
+          im.field_b.a((IntrusiveNode) (new eq(50, kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
+          im.field_b.a((IntrusiveNode) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, kf.field_u.field_z - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
+          im.field_b.a((IntrusiveNode) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1024 + kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
         }
         nt var2 = (nt) (im.field_b.b(68));
         while (var2 != null) {
           if (var2.a(-2567)) {
-            var2.b(false);
+            var2.unlink(false);
             if (var2 instanceof vi &&
               fi.a(3, he.field_o, (byte) -96) == 1 &&
               !((vi) (var2)).field_u) {
@@ -61,7 +61,7 @@ final class di extends ak {
           var1 = var7 + ":";
           for (var3 = 0; var3 < gu.field_d; var3++) {
             var8 = var1 + ' ';
-            var4 = ig.field_a.field_n[var3] & 255;
+            var4 = ig.field_a.payload[var3] & 255;
             var5 = var4 >> 4;
             var4 = var4 & 15;
             if (10 <= var5) {
@@ -83,11 +83,11 @@ final class di extends ak {
 
     public di() {
         super(12);
-        im.field_b = new jn();
+        im.field_b = new IntrusiveDeque();
     }
 
-    final void a(int param0, ha param1, int param2) {
-        ha var8 = null;
+    final void a(int param0, GraphicsToolkit param1, int param2) {
+        GraphicsToolkit var8 = null;
         hr[] var5 = null;
         nt var7 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
@@ -105,7 +105,7 @@ final class di extends ak {
           kf.field_u.a(param1, param2 + 21754);
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

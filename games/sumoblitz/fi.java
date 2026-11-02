@@ -52,11 +52,11 @@ final class fi extends nt {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         int var3_int = 0;
         if (param1 >= -121) {
           return;
@@ -70,7 +70,7 @@ final class fi extends nt {
           var3_int = var3_int * (-this.field_p + 100);
           kw.field_a.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), var3_int, 0, 1, this.field_q, 2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class fi extends nt {
           var7 = aj.field_y.get(11);
           var8 = aj.field_y.get(12);
           var9 = aj.field_y.get(13);
-          return dk.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bq.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return dk.weekdayShortNames[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bq.monthShortNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class is {
-    private ki field_d;
+    private ResourceArchive field_d;
     static boolean field_b;
     private sd field_f;
-    private ki field_e;
-    static jn field_c;
+    private ResourceArchive field_e;
+    static IntrusiveDeque field_c;
     static boolean field_a;
 
     final static void b(int param0) {
@@ -35,7 +35,7 @@ final class is {
           }
           var3 = new oq();
           if (var4 != null) {
-            var3.a(new fs(var4), true);
+            var3.a(new PacketBuffer(var4), true);
           }
           if (param1 >= ~param0) {
             var3.e(param1 ^ 32885);
@@ -112,7 +112,7 @@ final class is {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

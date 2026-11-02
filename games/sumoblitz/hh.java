@@ -8,8 +8,8 @@ final class hh extends IOException {
     static nb field_c;
     static ri[] field_a;
     static hr[] field_e;
-    static String field_b;
-    static al field_d;
+    static String connectionLostText;
+    static PcmStreamMixer field_d;
 
     final static void a(boolean param0, int param1, java.awt.Color param2, boolean param3, String param4) {
         RuntimeException stackIn_22_0 = null;
@@ -102,7 +102,7 @@ final class hh extends IOException {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class hh extends IOException {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        connectionLostText = null;
         field_a = null;
         field_d = null;
         int var1 = -11 % ((param0 - 24) / 60);
@@ -121,6 +121,6 @@ final class hh extends IOException {
 
     static {
         field_c = new nb(2);
-        field_b = "Connection lost. <%0>";
+        connectionLostText = "Connection lost. <%0>";
     }
 }

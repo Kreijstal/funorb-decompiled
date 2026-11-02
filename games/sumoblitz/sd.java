@@ -5,24 +5,24 @@ import java.io.*;
 
 final class sd {
     private int field_d;
-    private hl field_h;
+    private SecondaryNodeDeque field_h;
     private int field_g;
-    static fs field_e;
-    static String field_b;
-    private um field_c;
+    static PacketBuffer field_e;
+    static String achievementsThisGameText;
+    private IterableNodeHashTable field_c;
     static ri[] field_a;
     static int field_f;
 
-    final static ov a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer a(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          ov var5 = null;
-          fh var5_ref = null;
-          ov stackIn_2_0 = null;
-          ov stackIn_4_0 = null;
-          fh stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -30,9 +30,9 @@ final class sd {
           try {
             try {
               var4 = Class.forName("rk");
-              var5 = (ov) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               if (param2 != 0) {
-                stackIn_2_0 = (ov) null;
+                stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
               var5.a(param3, param0, param1, param2 - 119);
@@ -41,10 +41,10 @@ final class sd {
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new fh();
-              ((ov) ((Object) var5_ref)).a(param3, param0, param1, -125);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, param1, -125);
               stackIn_6_0 = var5_ref;
-              return (ov) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -56,7 +56,7 @@ final class sd {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -80,8 +80,8 @@ final class sd {
           }
           var4 = var2;
           var2 = (jt) (this.field_c.a(-1));
-          var4.b(false);
-          var4.c(-5106);
+          var4.unlink(false);
+          var4.unlinkSecondary(-5106);
           this.field_d = this.field_d + var4.field_z;
         }
         if (param0 == -92) {
@@ -100,21 +100,21 @@ final class sd {
         }
         Object var5 = var7.c((byte) -81);
         if (var5 == null) {
-          var7.b(false);
-          var7.c(-5106);
+          var7.unlink(false);
+          var7.unlinkSecondary(-5106);
           this.field_d = this.field_d + var7.field_z;
           return null;
         }
         if (var7.e(115)) {
           var6 = new av(var5, var7.field_z);
-          this.field_c.a(-20657, var6, var7.field_h);
-          this.field_h.a((pj) (var6), (byte) -122);
-          ((jt) ((Object) var6)).field_l = 0L;
-          var7.b(false);
-          var7.c(-5106);
+          this.field_c.a(-20657, var6, var7.key);
+          this.field_h.a((DualLinkNode) (var6), (byte) -122);
+          ((jt) ((Object) var6)).secondaryKey = 0L;
+          var7.unlink(false);
+          var7.unlinkSecondary(-5106);
         } else {
-          this.field_h.a((pj) (var7), (byte) -124);
-          var7.field_l = 0L;
+          this.field_h.a((DualLinkNode) (var7), (byte) -124);
+          var7.secondaryKey = 0L;
         }
         if (param1 <= 43) {
           this.field_d = 126;
@@ -135,22 +135,22 @@ final class sd {
         while (var3 != null) {
           if (var3.e(param1 ^ -22690)) {
             if (var3.c((byte) -62) == null) {
-              var3.b(false);
-              var3.c(-5106);
+              var3.unlink(false);
+              var3.unlinkSecondary(-5106);
               this.field_d = this.field_d + var3.field_z;
             }
           } else {
-            fieldTemp$0 = var3.field_l + 1L;
-            var3.field_l = var3.field_l + 1L;
+            fieldTemp$0 = var3.secondaryKey + 1L;
+            var3.secondaryKey = var3.secondaryKey + 1L;
             if (fieldTemp$0 <= (long)param0) {
               var3 = (jt) (this.field_h.a((byte) -122));
               continue;
             }
             var4 = new kl(var3.c((byte) -102), var3.field_z);
-            this.field_c.a(param1 ^ -2104, var4, var3.field_h);
+            this.field_c.a(param1 ^ -2104, var4, var3.key);
             pt.a(var3, 2066481250, var4);
-            var3.b(false);
-            var3.c(-5106);
+            var3.unlink(false);
+            var3.unlinkSecondary(-5106);
           }
           var3 = (jt) (this.field_h.a((byte) -122));
         }
@@ -240,7 +240,7 @@ final class sd {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_p;
+            var4 = param0.position;
             param0.e(48, var17.field_t);
             for (var5 = 0; var17.field_p > var5; var5++) {
               if (var17.field_k[var5] == 0) {
@@ -348,7 +348,7 @@ final class sd {
               }
             }
             param0.a(var4, false);
-            var17.b(false);
+            var17.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -360,7 +360,7 @@ final class sd {
             } else {
               stackIn_67_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -410,8 +410,8 @@ final class sd {
         RuntimeException var3 = null;
         try {
           if (param0 != null) {
-            param0.b(false);
-            param0.c(-5106);
+            param0.unlink(false);
+            param0.unlinkSecondary(-5106);
             this.field_d = this.field_d + param0.field_z;
           }
           if (param1 != -124) {
@@ -428,7 +428,7 @@ final class sd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ final class sd {
             this.a(-95L, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -460,8 +460,8 @@ final class sd {
           }
           var4 = var2;
           var2 = (jt) (this.field_c.a(-1));
-          var4.b(false);
-          var4.c(-5106);
+          var4.unlink(false);
+          var4.unlinkSecondary(-5106);
           this.field_d = this.field_d + var4.field_z;
         }
         return null;
@@ -522,7 +522,7 @@ final class sd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -539,7 +539,7 @@ final class sd {
           field_a = (ri[]) null;
         }
         field_a = null;
-        field_b = null;
+        achievementsThisGameText = null;
         field_e = null;
     }
 
@@ -560,16 +560,16 @@ final class sd {
           var6_ref = new av(param2, param0);
           this.field_c.a(-20657, var6_ref, param3);
           int var7 = 2 % ((12 - param1) / 33);
-          this.field_h.a((pj) (var6_ref), (byte) -122);
-          ((jt) ((Object) var6_ref)).field_l = 0L;
+          this.field_h.a((DualLinkNode) (var6_ref), (byte) -122);
+          ((jt) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     private sd(int param0, int param1) {
         int var3;
-        this.field_h = new hl();
+        this.field_h = new SecondaryNodeDeque();
         this.field_d = param0;
         this.field_g = param0;
         for (var3 = 1; var3 + var3 < param0; var3 = var3 + var3) {
@@ -578,11 +578,11 @@ final class sd {
           }
           break;
         }
-        this.field_c = new um(var3);
+        this.field_c = new IterableNodeHashTable(var3);
     }
 
     static {
-        field_e = new fs(256);
-        field_b = "ACHIEVEMENTS THIS GAME";
+        field_e = new PacketBuffer(256);
+        achievementsThisGameText = "ACHIEVEMENTS THIS GAME";
     }
 }

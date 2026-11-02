@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends ms implements e {
+final class p extends IntrusiveNode implements e {
     private static long field_n;
     int field_m;
     private static boolean field_k;

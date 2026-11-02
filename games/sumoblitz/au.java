@@ -83,7 +83,7 @@ final class au extends bq {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class au extends bq {
           this.field_b.a(41, param2);
           this.field_b.c(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "au.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,11 +187,11 @@ final class au extends bq {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(int param0, ki param1) {
+    final static void a(int param0, ResourceArchive param1) {
         nt.field_m[0] = tv.a(param1, "titlescreen_track");
         nt.field_m[1] = tv.a(param1, "track2");
         nt.field_m[2] = tv.a(param1, "track3");
@@ -206,7 +206,7 @@ final class au extends bq {
           nt.field_m[7] = tv.a(param1, "defeat_track");
           nt.field_m[8] = tv.a(param1, "challenge_mode_track");
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "au.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -226,9 +226,9 @@ final class au extends bq {
           ht.field_h = ht.field_h + 1;
           ar.field_G = b.field_a;
           ko.field_p = kl.field_C;
-          pi.field_e = hl.field_b;
-          sl.field_d = ki.field_i;
-          ki.field_i = false;
+          pi.field_e = SecondaryNodeDeque.field_b;
+          sl.field_d = ResourceArchive.field_i;
+          ResourceArchive.field_i = false;
           hk.field_c = kb.field_i;
           nb.field_a = jg.field_d;
           if (param0 < 93) {

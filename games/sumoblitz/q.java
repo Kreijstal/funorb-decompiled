@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class q extends ms {
+final class q extends IntrusiveNode {
     private static float[] field_E;
     private float[] field_P;
     private static int[] field_Q;
@@ -155,7 +155,7 @@ final class q extends ms {
         field_t = true;
     }
 
-    final static q a(ki param0, String param1, String param2) {
+    final static q a(ResourceArchive param0, String param1, String param2) {
         try {
           q var4_ref = null;
           if (!q.a(param0)) {
@@ -199,7 +199,7 @@ final class q extends ms {
         field_Q = null;
     }
 
-    final static q a(ki param0, int param1, int param2) {
+    final static q a(ResourceArchive param0, int param1, int param2) {
         try {
           q var4_ref = null;
           if (!q.a(param0)) {
@@ -253,7 +253,7 @@ final class q extends ms {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        fs var2 = new fs(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_H = var2.c(true);
         this.field_B = var2.c(true);
         this.field_r = var2.c(true);
@@ -742,7 +742,7 @@ final class q extends ms {
         return var1;
     }
 
-    private final static boolean a(ki param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_t) {
           var1 = param0.a((byte) 95, 0, 0);

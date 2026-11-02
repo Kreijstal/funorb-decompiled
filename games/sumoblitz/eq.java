@@ -6,13 +6,13 @@ final class eq extends nt {
     private double field_s;
     static int[] field_v;
     private boolean field_u;
-    static String field_w;
+    static String toCustomerSupportText;
 
     public static void e(int param0) {
         if (param0 != 3190) {
           return;
         }
-        field_w = null;
+        toCustomerSupportText = null;
         field_v = null;
     }
 
@@ -23,7 +23,7 @@ final class eq extends nt {
         this.field_u = param5 ? true : false;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -49,12 +49,12 @@ final class eq extends nt {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_v = new int[8192];
-        field_w = "To Customer Support";
+        toCustomerSupportText = "To Customer Support";
     }
 }

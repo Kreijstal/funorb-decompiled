@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ws {
     static int field_b;
-    static String field_a;
+    static String toKeepFullscreenOrText;
 
     final static int a(io param0, byte param1) {
         RuntimeException var2 = null;
@@ -68,13 +68,13 @@ final class ws {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static boolean b(byte param0) {
         if (param0 != 52) {
-          field_a = (String) null;
+          toKeepFullscreenOrText = (String) null;
           return is.field_b;
         }
         return is.field_b;
@@ -83,14 +83,14 @@ final class ws {
     public static void a(byte param0) {
         if (param0 != -71) {
           field_b = -48;
-          field_a = null;
+          toKeepFullscreenOrText = null;
           return;
         }
-        field_a = null;
+        toKeepFullscreenOrText = null;
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
-        su var14 = null;
+        ClientException var14 = null;
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
@@ -112,10 +112,10 @@ final class ws {
         String var11Lifetime6;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        if (!(param1 instanceof su)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (su) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           var2 = var14.field_a + " | ";
           var11 = var2;
           var2 = var11;
@@ -182,6 +182,6 @@ final class ws {
     }
 
     static {
-        field_a = "to keep fullscreen or";
+        toKeepFullscreenOrText = "to keep fullscreen or";
     }
 }

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends ms {
+final class lh extends IntrusiveNode {
     static il field_n;
     byte[] field_m;
     static ri field_k;
     boolean field_o;
     static ji field_l;
-    static String field_p;
+    static String resetStatsText;
 
     public static void a(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;
-        field_p = null;
+        resetStatsText = null;
         int var1 = -90 / ((param0 - 71) / 51);
     }
 
@@ -39,7 +39,7 @@ final class lh extends ms {
         try {
           var2_int = param0.length();
           if (param1 == ~var2_int) {
-            stackIn_3_0 = qo.field_a;
+            stackIn_3_0 = ClientExceptionSupport.field_a;
             return stackIn_3_0;
           }
           if (255 < var2_int) {
@@ -48,13 +48,13 @@ final class lh extends ms {
           }
           var3 = cn.a('.', param0, -27224);
           if (var3.length < 2) {
-            stackIn_11_0 = qo.field_a;
+            stackIn_11_0 = ClientExceptionSupport.field_a;
             return stackIn_11_0;
           }
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = fh.a(var6, -1);
+            var7 = ImageProducerRasterBuffer.a(var6, -1);
             if (var7 != null) {
               stackIn_17_0 = var7;
               return stackIn_17_0;
@@ -72,7 +72,7 @@ final class lh extends ms {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -82,6 +82,6 @@ final class lh extends ms {
     static {
         field_n = new il();
         field_l = new ji();
-        field_p = "reset stats";
+        resetStatsText = "reset stats";
     }
 }

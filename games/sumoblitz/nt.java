@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-class nt extends ms {
+class nt extends IntrusiveNode {
     int field_q;
-    static String field_l;
+    static String challengeText;
     int field_o;
     static qp[][] field_n;
     static boolean field_r;
@@ -22,14 +22,14 @@ class nt extends ms {
         return this.field_p == 0 ? true : false;
     }
 
-    void a(ha param0, int param1) {
+    void a(GraphicsToolkit param0, int param1) {
         if (param1 >= -121) {
           return;
         }
         try {
           ua.field_g[0].a((float)this.field_k, (float)this.field_o, 1848 - (int)((double)this.field_p / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ class nt extends ms {
           }
           var4.close();
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -84,14 +84,14 @@ class nt extends ms {
     public static void d(int param0) {
         field_m = null;
         field_n = (qp[][]) null;
-        field_l = null;
+        challengeText = null;
         if (param0 != 31295) {
           field_r = true;
         }
     }
 
     static {
-        field_l = "challenge";
+        challengeText = "challenge";
         field_n = new qp[3][];
         field_m = new tv[9];
     }

@@ -4,8 +4,8 @@
 import java.io.*;
 
 final class ji {
-    static String field_a;
-    static String field_b;
+    static String abcdefghijklmnopqrstuvwxyzabcdefghijText;
+    static String useThisAlternativeAsText;
 
     final static int a(boolean param0) {
         try {
@@ -16,7 +16,7 @@ final class ji {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          fs var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= jk.field_b.field_d) {
             if (jk.field_b.field_j == -1) {
               return 3;
@@ -28,28 +28,28 @@ final class ji {
           }
           try {
             if (cd.field_d == 0) {
-              dt.field_p = gk.field_u.a((byte) 51, gd.field_a, ie.field_x);
+              BufferedSocket.field_p = gk.field_u.a((byte) 51, gd.field_a, ie.field_x);
               cd.field_d = cd.field_d + 1;
             }
             if (!param0) {
-              field_b = (String) null;
+              useThisAlternativeAsText = (String) null;
             }
             if (cd.field_d == 1) {
-              if (dt.field_p.field_c == 2) {
+              if (BufferedSocket.field_p.field_c == 2) {
                 stackIn_16_0 = tm.a(-1, -84);
                 return stackIn_16_0;
               }
-              if (dt.field_p.field_c == 1) {
+              if (BufferedSocket.field_p.field_c == 1) {
                 cd.field_d = cd.field_d + 1;
               }
             }
             if (cd.field_d == 2) {
-              tj.field_n = new dt((java.net.Socket) (dt.field_p.field_d), gk.field_u);
-              var2 = new fs(13);
+              tj.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.field_d), gk.field_u);
+              var2 = new PacketBuffer(13);
               sb.a(ow.field_e, 127, bt.field_d, rd.field_l, var2);
               var2.b((byte) 127, 15);
               var2.e(48, qq.field_P);
-              tj.field_n.a(0, -2, var2.field_n, 13);
+              tj.field_n.a(0, -2, var2.payload, 13);
               cd.field_d = cd.field_d + 1;
               gb.field_s = wq.a(-109) + 30000L;
             }
@@ -72,7 +72,7 @@ final class ji {
               return -1;
             }
             jk.field_b.a(vk.field_e, (byte) 114, tj.field_n);
-            dt.field_p = null;
+            BufferedSocket.field_p = null;
             tj.field_n = null;
             cd.field_d = 0;
             stackIn_35_0 = 0;
@@ -148,7 +148,7 @@ final class ji {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -176,7 +176,7 @@ final class ji {
             var3[-1 + var2_int - var4] = param0.charAt(var4);
           }
           if (param1 <= 61) {
-            field_b = (String) null;
+            useThisAlternativeAsText = (String) null;
           }
           stackIn_7_0 = new String(var3);
           return stackIn_7_0;
@@ -190,20 +190,20 @@ final class ji {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
-        field_a = null;
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = null;
         if (param0 != 0) {
           return;
         }
-        field_b = null;
+        useThisAlternativeAsText = null;
     }
 
     static {
-        field_b = "Use this alternative as your account name";
-        field_a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        useThisAlternativeAsText = "Use this alternative as your account name";
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }
 }

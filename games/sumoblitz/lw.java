@@ -3,7 +3,7 @@
  */
 final class lw {
     static jf field_a;
-    static String field_c;
+    static String moreMemoryIsRequiredText;
     static int field_b;
     private static String field_z;
 
@@ -12,12 +12,12 @@ final class lw {
         if (param0 != -1685) {
           return;
         }
-        field_c = null;
+        moreMemoryIsRequiredText = null;
     }
 
     static {
         field_z = "lw.A(";
         field_a = new jf();
-        field_c = "More memory is required to run in different resolutions. Try updating your version of Java or changing your Java settings.";
+        moreMemoryIsRequiredText = "More memory is required to run in different resolutions. Try updating your version of Java or changing your Java settings.";
     }
 }

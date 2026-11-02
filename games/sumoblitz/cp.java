@@ -5,7 +5,7 @@ final class cp {
     mh field_i;
     int field_l;
     int field_m;
-    static String field_k;
+    static String instructionsText;
     mh field_f;
     int field_u;
     int field_d;
@@ -70,7 +70,7 @@ final class cp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class cp {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class cp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class cp {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -267,14 +267,14 @@ final class cp {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(vn param0, byte param1) {
         gm var17 = null;
         fl var4 = null;
-        wb[] var5 = null;
+        Sprite[] var5 = null;
         mg var16 = null;
         mg var18 = null;
         int var7_int = 0;
@@ -283,12 +283,12 @@ final class cp {
         va discarded$0 = null;
         iu discarded$1 = null;
         fl var8 = null;
-        wb[] var9 = null;
-        wb[] var10 = null;
-        wb dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         fl var11 = null;
         fl var12 = null;
-        wb var13 = null;
+        Sprite var13 = null;
         fl var14 = null;
         fl var19 = null;
         int var15 = Sumoblitz.field_L ? 1 : 0;
@@ -314,16 +314,16 @@ final class cp {
           var4.a(false, 0).c(15658734, 17818).a(ta.a(8947848, 92, 10066329, 7829367), 2147483647);
           var4.a(false, 1).a(ta.a(11184810, 126, 10066329, 13421772), 2147483647);
           var4.a(false, 3).a(ta.a(8947848, 97, 7829367, 10066329), 2147483647).a(1, -1).b(1, 1);
-          var5 = new wb[9];
+          var5 = new Sprite[9];
           var16 = new mg(32, 32);
           var18 = var16;
-          for (var7_int = 0; var18.field_C.length > var7_int; var7_int++) {
-            var16.field_C[var7_int] = 1077952576;
+          for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
           if (param1 >= -37) {
             this.field_i = (mh) null;
           }
-          var5[4] = (wb) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(false, 4).a(true, true).a(var5, 2147483647);
           var4.a(false, 5).a(ks.a((byte) -71, 0, 65793, 0, 0), 2147483647).a(true, true).c(-1, 17818);
           this.field_h = (mh) ((Object) var4);
@@ -341,22 +341,22 @@ final class cp {
           var8.a(false, 0).a(ta.a(15658734, 102, 7829367, 10066329), 2147483647).c(1118481, 17818).d(-1, 30149);
           var8.a(false, 4).a(true, true).a(var5, 2147483647);
           this.field_j = (mh) ((Object) var8);
-          var9 = new wb[9];
-          var9[4] = new wb(2, 1);
-          var10 = new wb[9];
-          var10[4] = new wb(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_C = new int[]{6710886, 7829367};
-          var10[4].field_C = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new fl();
           var12 = new fl();
           var11.a((byte) 116, var9, 0);
           var12.a((byte) 115, var10, 0);
           this.field_f = (mh) ((Object) var12);
           this.field_p = (mh) ((Object) var4);
-          var13 = new wb(7, 4);
+          var13 = new Sprite(7, 4);
           this.field_g = 10;
-          var13.field_C = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new fl(var4, true);
           var14.a(-84, var13.b());
           var13.c();
@@ -369,7 +369,7 @@ final class cp {
           var19 = new fl(var4, true);
           var19.a(-29, var13);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cp.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cp.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class cp {
           return;
         }
         field_c = null;
-        field_k = null;
+        instructionsText = null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -390,7 +390,7 @@ final class cp {
     }
 
     final void b(byte param0) {
-        su.a((byte) -59);
+        ClientException.a((byte) -59);
         if (param0 >= -63) {
           byte[] var3 = (byte[]) null;
           cp.a((byte[]) null, 126);
@@ -403,6 +403,6 @@ final class cp {
 
     static {
         field_c = new int[128];
-        field_k = "Instructions";
+        instructionsText = "Instructions";
     }
 }

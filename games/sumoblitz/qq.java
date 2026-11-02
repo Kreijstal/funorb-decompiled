@@ -5,18 +5,18 @@ final class qq extends dh implements op {
     private int field_T;
     static int field_P;
     private v field_S;
-    static String field_Q;
+    static String namesShouldContainAText;
     static vn field_R;
 
     public static void l(int param0) {
         if (param0 != -15648) {
           field_R = (vn) null;
           field_R = null;
-          field_Q = null;
+          namesShouldContainAText = null;
           return;
         }
         field_R = null;
-        field_Q = null;
+        namesShouldContainAText = null;
     }
 
     final void a(byte param0, v param1) {
@@ -24,7 +24,7 @@ final class qq extends dh implements op {
           int var3_int = 2 % ((param0 - 72) / 46);
           this.field_S = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class qq extends dh implements op {
     final void g(byte param0) {
         super.g((byte) 127);
         if (param0 <= 78) {
-          field_Q = (String) null;
+          namesShouldContainAText = (String) null;
           if (null != this.field_S) {
             this.field_S.a((byte) -117);
             return;
@@ -56,7 +56,7 @@ final class qq extends dh implements op {
         this.field_S.a((byte) -117);
     }
 
-    final static dj a(int param0, mf param1) {
+    final static dj a(int param0, PcmSampleStream param1) {
         dj var2 = null;
         RuntimeException var2_ref = null;
         dj stackIn_3_0 = null;
@@ -69,7 +69,7 @@ final class qq extends dh implements op {
             qq.b(-31, 81, 66);
           }
           var2 = new dj(param1, param1);
-          jf.field_c.a((ms) (var2), (byte) 39);
+          jf.field_c.a((IntrusiveNode) (var2), (byte) 39);
           sj.field_c.b(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -83,7 +83,7 @@ final class qq extends dh implements op {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -107,17 +107,17 @@ final class qq extends dh implements op {
         return this.field_t;
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.a(param0, -86, param2, param3);
           int var5_int = 126 % ((param1 + 25) / 45);
           this.field_T = ko.field_p - (this.field_r + param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     static {
-        field_Q = "Names should contain a maximum of 12 characters";
+        namesShouldContainAText = "Names should contain a maximum of 12 characters";
     }
 }

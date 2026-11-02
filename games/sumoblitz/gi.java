@@ -9,7 +9,7 @@ final class gi extends bq {
     static int[] field_k;
     static int field_h;
     static int field_i;
-    static String field_f;
+    static String notYetAchievedText;
 
     final void b(int param0) {
         if (param0 > -125) {
@@ -45,17 +45,17 @@ final class gi extends bq {
         if (param0 == 8192) {
           field_g = null;
           field_k = null;
-          field_f = null;
+          notYetAchievedText = null;
           return;
         }
-        field_f = (String) null;
+        notYetAchievedText = (String) null;
         field_g = null;
         field_k = null;
-        field_f = null;
+        notYetAchievedText = null;
     }
 
     final static String c(byte param0) {
-        if (nw.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == ad.field_p) {
           return vr.field_G;
         }
         if (vm.field_c == ad.field_p) {
@@ -73,7 +73,7 @@ final class gi extends bq {
     final void a(int param0, boolean param1) {
         this.field_b.a(20685, 8448, 260);
         if (param0 > -30) {
-          field_f = (String) null;
+          notYetAchievedText = (String) null;
         }
     }
 
@@ -161,7 +161,7 @@ final class gi extends bq {
           this.field_l = new pr(this.field_b, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
           this.field_l.a(false, (byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class gi extends bq {
             this.field_l = (pr) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -239,6 +239,6 @@ final class gi extends bq {
     static {
         field_g = new qr();
         field_k = new int[8192];
-        field_f = "Not yet achieved";
+        notYetAchievedText = "Not yet achieved";
     }
 }

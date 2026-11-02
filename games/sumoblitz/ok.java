@@ -261,7 +261,7 @@ final class ok {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -303,7 +303,7 @@ final class ok {
         int var13Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
-          pn.field_k = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          OpenGlUnderwaterEffect.field_k = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = mr.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -311,21 +311,21 @@ final class ok {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_gk = mr.field_b[var3];
             var4_ref_gk.a(false);
-            cb.a((byte) 79, var3);
+            IntrusiveDequeCursor.a((byte) 79, var3);
             var5 = var4_ref_gk.field_T + var4_ref_gk.field_t >> 1;
             var6 = var4_ref_gk.field_j + var4_ref_gk.field_f >> 1;
             var7 = var4_ref_gk.field_P + var4_ref_gk.field_S >> 1;
-            var8 = pn.field_k[9] >> 2;
-            var9 = pn.field_k[10] >> 2;
-            var10_int = pn.field_k[11] >> 2;
+            var8 = OpenGlUnderwaterEffect.field_k[9] >> 2;
+            var9 = OpenGlUnderwaterEffect.field_k[10] >> 2;
+            var10_int = OpenGlUnderwaterEffect.field_k[11] >> 2;
             var11 = var9 * uc.field_b[4] + uc.field_b[3] * var8 + uc.field_b[5] * var10_int >> 14;
             var12 = var10_int * uc.field_b[8] + uc.field_b[7] * var9 + var8 * uc.field_b[6] >> 14;
             var13 = uc.field_b[11] * var10_int + (uc.field_b[9] * var8 + uc.field_b[10] * var9) >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var12 * var6 >> 16;
           }
-          var3Lifetime1 = pn.field_k[9] >> 8;
-          var4 = pn.field_k[10] >> 8;
-          var5Lifetime1 = pn.field_k[11] >> 8;
+          var3Lifetime1 = OpenGlUnderwaterEffect.field_k[9] >> 8;
+          var4 = OpenGlUnderwaterEffect.field_k[10] >> 8;
+          var5Lifetime1 = OpenGlUnderwaterEffect.field_k[11] >> 8;
           var6Lifetime1 = td.field_u << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ic.b(var6Lifetime1, -431) >> 8;
@@ -356,18 +356,18 @@ final class ok {
             }
             var21[var16] = -2147483648;
             var17 = mr.field_b[var16];
-            cb.a((byte) 79, var16);
+            IntrusiveDequeCursor.a((byte) 79, var16);
             for (var18 = 0; 3 > var18; var18++) {
               uc.field_b[var18] = uc.field_b[var18] + kh.field_c[var15][var18];
             }
-            up.a(pn.field_k, uc.field_b, false, false, var17, true, -1622738130);
+            up.a(OpenGlUnderwaterEffect.field_k, uc.field_b, false, false, var17, true, -1622738130);
             qu.a(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ok.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ok.F(" + param0 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class ok {
           }
           this.c((byte) -34);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

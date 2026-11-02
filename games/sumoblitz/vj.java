@@ -41,7 +41,7 @@ final class vj {
         return this.field_i - this.field_k >> 15;
     }
 
-    final void b(fs param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
         this.field_c = param0.e(-31302);
         this.field_e = new int[this.field_c];
@@ -52,7 +52,7 @@ final class vj {
         }
     }
 
-    final void a(fs param0) {
+    final void a(PacketBuffer param0) {
         this.field_a = param0.e(-31302);
         this.field_b = param0.c(true);
         this.field_d = param0.c(true);

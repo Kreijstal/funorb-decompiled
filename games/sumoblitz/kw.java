@@ -7,7 +7,7 @@ final class kw {
     static hr field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        kc.j(125);
+        GameApplet.j(125);
         lk.e(param3, param1, param4, param0);
         if (param2 != 1) {
           field_b = (vn) null;
@@ -76,7 +76,7 @@ final class kw {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class kw {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 }

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dn {
-    static String field_b;
-    static String field_a;
+    static String arcadeGameText;
+    static String applyText;
 
     public static void a(int param0) {
         if (param0 != -3) {
           return;
         }
-        field_a = null;
-        field_b = null;
+        applyText = null;
+        arcadeGameText = null;
     }
 
     final static String b(int param0) {
@@ -24,31 +24,31 @@ final class dn {
           return mm.field_c;
         }
         if (!wd.field_j.b((byte) 127)) {
-          return m.field_V;
+          return m.waitingForGraphicsText;
         }
         if (!wd.field_j.a("commonui", 100)) {
-          return es.field_j + " - " + wd.field_j.a("commonui", (byte) 33) + "%";
+          return es.loadingGraphicsText + " - " + wd.field_j.a("commonui", (byte) 33) + "%";
         }
         if (param0 <= 90) {
           dn.b(-125);
         }
         if (!eb.field_f.b((byte) 127)) {
-          return ce.field_l;
+          return ce.waitingForFontsText;
         }
         if (!eb.field_f.a("commonui", 100)) {
-          return ow.field_a + " - " + eb.field_f.a("commonui", (byte) 33) + "%";
+          return ow.loadingFontsText + " - " + eb.field_f.a("commonui", (byte) 33) + "%";
         }
         if (!hw.field_a.b((byte) 127)) {
-          return fl.field_s;
+          return fl.waitingForExtraDataText;
         }
         if (!hw.field_a.a(true)) {
-          return rd.field_m + " - " + hw.field_a.a(0) + "%";
+          return rd.loadingExtraDataText + " - " + hw.field_a.a(0) + "%";
         }
-        return mm.field_b;
+        return mm.pleaseWaitText;
     }
 
     static {
-        field_b = "arcade game";
-        field_a = "Apply";
+        arcadeGameText = "arcade game";
+        applyText = "Apply";
     }
 }

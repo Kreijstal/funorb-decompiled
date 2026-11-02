@@ -15,7 +15,7 @@ final class kd {
         field_b = null;
     }
 
-    final static ki a(byte param0, int param1) {
+    final static ResourceArchive a(byte param0, int param1) {
         int var2 = 39 % ((param0 + 45) / 59);
         if (sn.field_d != null) {
           return sn.field_d;
@@ -64,7 +64,7 @@ final class kd {
         if (256 > var5) {
           lk.b(0, 0, lk.field_b, lk.field_c, 0, 256 - var5);
         }
-        su.a((byte) -69);
+        ClientException.a((byte) -69);
         if (td.field_u >= 150) {
           kh.field_a.a(var3 + 15, 10 + var4, var5);
           var6 = td.field_u - 125;

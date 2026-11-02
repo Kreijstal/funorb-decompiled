@@ -16,7 +16,7 @@ final class or extends bp implements ru {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "or.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class or extends bp implements ru {
           if (qw.a(57, param1)) {
             return true;
           }
-          var6 = bs.field_o;
+          var6 = MidiPcmStream.field_o;
           var2 = var6;
           if (param0 != 61) {
             field_k = -127;
@@ -50,7 +50,7 @@ final class or extends bp implements ru {
               return true;
             }
           }
-          var2Lifetime1 = fs.field_m;
+          var2Lifetime1 = PacketBuffer.field_m;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param1 == var4Lifetime1) {
@@ -61,7 +61,7 @@ final class or extends bp implements ru {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "or.S(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "or.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class or extends bp implements ru {
         super.a(param0);
     }
 
-    or(on param0, iw param1, io param2, int param3, int param4) {
+    or(OpenGlGraphicsToolkit param0, iw param1, io param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param3 * param4, false);
         try {
           this.field_i = param3;
@@ -96,11 +96,11 @@ final class or extends bp implements ru {
           this.field_e.a((ed) (this), 92);
           jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-27), param3, param4, 0, te.a(-21339, this.field_c), ws.a(this.field_g, (byte) 119), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    or(on param0, iw param1, int param2, int param3, byte[] param4, int param5, int param6) {
+    or(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, byte[] param4, int param5, int param6) {
         super(param0, 34037, param1, io.field_g, param2 * param3, false);
         try {
           this.field_i = param2;
@@ -112,7 +112,7 @@ final class or extends bp implements ru {
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class or extends bp implements ru {
         return false;
     }
 
-    or(on param0, iw param1, int param2, int param3, float[] param4, int param5, int param6) {
+    or(OpenGlGraphicsToolkit param0, iw param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, io.field_d, param2 * param3, false);
         try {
           this.field_j = param3;
@@ -140,11 +140,11 @@ final class or extends bp implements ru {
           jaggl.OpenGL.glTexImage2Df(this.field_h, 0, this.e(-103), param2, param3, 0, te.a(-21339, this.field_c), 5126, param4, param5 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    or(on param0, int param1, int param2, int[] param3, int param4, int param5) {
+    or(OpenGlGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         super(param0, 34037, nl.field_p, io.field_g, param2 * param1, false);
         try {
           this.field_j = param2;
@@ -154,7 +154,7 @@ final class or extends bp implements ru {
           jaggl.OpenGL.glTexImage2Di(this.field_h, 0, 6408, this.field_i, this.field_j, 0, 32993, this.field_e.field_Ec, param3, 4 * param4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

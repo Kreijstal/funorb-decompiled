@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qr {
-    static jn field_c;
+    static IntrusiveDeque field_c;
     static ta field_a;
     static gf field_e;
     static int[] field_d;
@@ -34,7 +34,7 @@ final class qr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -49,7 +49,7 @@ final class qr {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          vk.a(qu.field_k, kc.field_l, (byte) -107, se.field_d, param1, 0, true);
+          vk.a(qu.field_k, GameApplet.field_l, (byte) -107, se.field_d, param1, 0, true);
           if (param0 != 13136) {
             field_d = (int[]) null;
           }
@@ -64,7 +64,7 @@ final class qr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "qr.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qr.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class qr {
     }
 
     static {
-        field_c = new jn();
+        field_c = new IntrusiveDeque();
         field_e = new gf();
         field_d = new int[8192];
     }

@@ -4,15 +4,15 @@
 final class ph {
     static ri[] field_a;
     static qu field_b;
-    static String field_d;
-    private pj field_e;
+    static String youHaveUnreadMessagesText;
+    private DualLinkNode field_e;
     private ro field_g;
     private int field_f;
-    static String field_h;
+    static String usernameText;
     private te field_c;
 
-    final pj a(byte param0, long param1) {
-        pj var4 = (pj) (this.field_c.a(param0 ^ -60, param1));
+    final DualLinkNode a(byte param0, long param1) {
+        DualLinkNode var4 = (DualLinkNode) (this.field_c.a(param0 ^ -60, param1));
         if (param0 != -88) {
           this.a((byte) -122, 80L);
         }
@@ -22,8 +22,8 @@ final class ph {
         return var4;
     }
 
-    final void a(long param0, pj param1, int param2) {
-        pj var5 = null;
+    final void a(long param0, DualLinkNode param1, int param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -34,12 +34,12 @@ final class ph {
             this.field_f = this.field_f - 1;
           } else {
             var5 = this.field_g.b((byte) 72);
-            var5.b(false);
-            var5.c(-5106);
+            var5.unlink(false);
+            var5.unlinkSecondary(-5106);
             if (this.field_e == var5) {
               var5 = this.field_g.b((byte) 72);
-              var5.b(false);
-              var5.c(-5106);
+              var5.unlink(false);
+              var5.unlinkSecondary(-5106);
             }
           }
           this.field_c.a(param1, -1, param0);
@@ -58,7 +58,7 @@ final class ph {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -67,15 +67,15 @@ final class ph {
           return;
         }
         field_b = null;
-        field_h = null;
-        field_d = null;
+        usernameText = null;
+        youHaveUnreadMessagesText = null;
         field_a = null;
     }
 
     final static void a(byte param0) {
         f.field_s = null;
         if (param0 > -77) {
-          field_h = (String) null;
+          usernameText = (String) null;
         }
         gf.field_a = null;
     }
@@ -139,7 +139,7 @@ final class ph {
               return;
             }
             if (param14 != -48) {
-              field_d = (String) null;
+              youHaveUnreadMessagesText = (String) null;
             }
             var34 = -param13 + param12;
             if (param13 == param16) {
@@ -410,13 +410,13 @@ final class ph {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
     ph(int param0) {
         int var2 = 0;
-        this.field_e = new pj();
+        this.field_e = new DualLinkNode();
         this.field_g = new ro();
         this.field_f = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
@@ -425,7 +425,7 @@ final class ph {
     }
 
     static {
-        field_h = "Username: ";
-        field_d = "You have <%0> unread messages!";
+        usernameText = "Username: ";
+        youHaveUnreadMessagesText = "You have <%0> unread messages!";
     }
 }

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class se {
-    static String field_b;
-    static String field_c;
+    static String abcdefghijklmnopqrstuvwxyzabcdefghijText;
+    static String pleaseTryAgainInText;
     static int field_d;
-    static String field_a;
+    static String scoreText;
 
     final static int a(int param0) {
         int var1_int = 0;
@@ -20,7 +20,7 @@ abstract class se {
         RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
-          rf.field_a.a(wr.field_F, ha.field_b, true, param0 - 19887);
+          rf.field_a.a(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
           rf.field_a.h(-90);
           while (wd.c(param0 ^ -19954)) {
             rf.field_a.a(np.field_c, tg.field_a, true);
@@ -46,7 +46,7 @@ abstract class se {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (nw.field_e != ad.field_p) {
+          if (ProxySocketConnector.field_e != ad.field_p) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }
@@ -55,7 +55,7 @@ abstract class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "se.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "se.K(" + param0 + ')');
         }
     }
 
@@ -133,11 +133,11 @@ abstract class se {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    abstract void a(fs param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = -24 % ((-63 - param0) / 40);
@@ -154,14 +154,14 @@ abstract class se {
         if (param0 != 8192) {
           field_d = 19;
         }
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = null;
+        scoreText = null;
+        pleaseTryAgainInText = null;
     }
 
     static {
-        field_b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
-        field_c = "Please try again in a few minutes.";
-        field_a = "Score";
+        abcdefghijklmnopqrstuvwxyzabcdefghijText = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
+        pleaseTryAgainInText = "Please try again in a few minutes.";
+        scoreText = "Score";
     }
 }

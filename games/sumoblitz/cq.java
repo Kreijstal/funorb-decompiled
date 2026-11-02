@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
-    static String field_c;
+    static String backText;
     java.awt.Frame field_b;
     volatile boolean field_a;
 
@@ -10,7 +10,7 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -19,11 +19,11 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_c = (String) null;
-          field_c = null;
+          backText = (String) null;
+          backText = null;
           return;
         }
-        field_c = null;
+        backText = null;
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -39,11 +39,11 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(boolean param0, wi param1) {
+    final void a(boolean param0, PlatformTaskDispatcher param1) {
         try {
-          wj.a(this.field_b, param1, param0);
+          OpenGlTransparentWaterEffect.a(this.field_b, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,6 +51,6 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        field_c = "Back";
+        backText = "Back";
     }
 }

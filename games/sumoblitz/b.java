@@ -3,17 +3,17 @@
  */
 final class b {
     static volatile int field_a;
-    static String field_d;
+    static String youAreNotCurrentlyText;
     static boolean field_c;
     private fr field_e;
-    static String field_f;
+    static String loadingLevelsText;
     private sn field_b;
 
     public static void a(byte param0) {
-        field_f = null;
-        field_d = null;
+        loadingLevelsText = null;
+        youAreNotCurrentlyText = null;
         if (param0 != -69) {
-          field_f = (String) null;
+          loadingLevelsText = (String) null;
         }
     }
 
@@ -21,7 +21,7 @@ final class b {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class b {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -174,9 +174,9 @@ final class b {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((fs) ((Object) var5)).e(param0 - 1218);
+            var6 = ((PacketBuffer) ((Object) var5)).e(param0 - 1218);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((fs) ((Object) var5)).c(true);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).c(true);
             }
             var16_ref = (eg) (wr.field_E.b(-120));
             if (var16_ref == null) {
@@ -186,7 +186,7 @@ final class b {
             var16_ref.field_o = true;
             var16_ref.field_k = var17[0];
             var16_ref.field_m = var3;
-            var16_ref.b(false);
+            var16_ref.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -199,9 +199,9 @@ final class b {
               var14.field_m = lr.a(-14808);
               var14.field_o = true;
               var14.field_k = var14.field_m[0];
-              var14.b(false);
+              var14.unlink(false);
             } else {
-              ms.a("A1: " + di.b((byte) 110), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("A1: " + di.b((byte) 110), (Throwable) null, 0);
               kk.a((byte) -120);
             }
           } else {
@@ -210,19 +210,19 @@ final class b {
               kk.a((byte) -113);
               return;
             }
-            var12.b(false);
+            var12.unlink(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "b.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "b.D(" + param0 + ')');
         }
     }
 
     static {
         field_a = 0;
-        field_d = "You are not currently logged in to the<nbsp>game.";
-        field_f = "Loading levels";
+        youAreNotCurrentlyText = "You are not currently logged in to the<nbsp>game.";
+        loadingLevelsText = "Loading levels";
     }
 }

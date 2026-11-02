@@ -53,7 +53,7 @@ final class sc extends ua implements pv {
         return true;
     }
 
-    sc(on param0, boolean param1) {
+    sc(OpenGlGraphicsToolkit param0, boolean param1) {
         super(param0, 34962, param1);
     }
 

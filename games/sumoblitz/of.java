@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends ms {
+final class of extends IntrusiveNode {
     static java.awt.Frame field_n;
     int field_p;
     static int[] field_t;
     String[][] field_o;
     long[][] field_r;
     int[][] field_m;
-    static String field_k;
+    static String quitToWebsiteText;
     boolean field_q;
     int field_l;
     int field_s;
@@ -26,7 +26,7 @@ final class of extends ms {
         var5.field_s = param0;
         var5.field_l = param4;
         var5.field_p = param2;
-        oi.field_b.a((ms) (var5), (byte) 39);
+        oi.field_b.a((IntrusiveNode) (var5), (byte) 39);
         if (param1 == 1) {
           pd.a((byte) -65, param3, var5);
           return var5;
@@ -78,7 +78,7 @@ final class of extends ms {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -94,7 +94,7 @@ final class of extends ms {
         }
     }
 
-    final static boolean a(fs param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -122,13 +122,13 @@ final class of extends ms {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static String c(int param0) {
         int var1 = -4 / ((param0 - 48) / 36);
-        if (nw.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == ad.field_p) {
           return in.field_C;
         }
         if (!ut.field_o.a(true)) {
@@ -151,13 +151,13 @@ final class of extends ms {
     public static void a(int param0) {
         if (param0 == -26437) {
           field_n = null;
-          field_k = null;
+          quitToWebsiteText = null;
           field_t = null;
           return;
         }
         of.c(-86);
         field_n = null;
-        field_k = null;
+        quitToWebsiteText = null;
         field_t = null;
     }
 
@@ -166,6 +166,6 @@ final class of extends ms {
 
     static {
         field_t = new int[8192];
-        field_k = "Quit to website";
+        quitToWebsiteText = "Quit to website";
     }
 }

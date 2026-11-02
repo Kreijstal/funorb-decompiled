@@ -8,7 +8,7 @@ final class up {
     static boolean[] field_g;
     static hr[] field_c;
     private static int[] field_f;
-    static String field_b;
+    static String cancelText;
 
     final static void a(int[] param0, int[] param1, boolean param2, boolean param3, gk param4, boolean param5, int param6) {
         int stackIn_62_0 = 0;
@@ -92,27 +92,27 @@ final class up {
           var21Lifetime1 = param1[0] - param0[0];
           var22Lifetime1 = -param0[1] + param1[1];
           var23Lifetime1 = -param0[2] + param1[2];
-          var9 = var21Lifetime1 * param0[3] + (param0[4] * var22Lifetime1 + param0[5] * var23Lifetime1) >> 16 - jn.field_b;
+          var9 = var21Lifetime1 * param0[3] + (param0[4] * var22Lifetime1 + param0[5] * var23Lifetime1) >> 16 - IntrusiveDeque.field_b;
           var11 = param0[11] * var23Lifetime1 + param0[10] * var22Lifetime1 + var21Lifetime1 * param0[9] >> 16;
-          var10 = var21Lifetime1 * param0[6] + var22Lifetime1 * param0[7] + param0[8] * var23Lifetime1 >> 16 - jn.field_b;
+          var10 = var21Lifetime1 * param0[6] + var22Lifetime1 * param0[7] + param0[8] * var23Lifetime1 >> 16 - IntrusiveDeque.field_b;
           var21Lifetime2 = nk.field_e;
           var22Lifetime2 = nk.field_b;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param4.field_D) {
               var24Lifetime1 = param4.field_Q[var23Lifetime2];
               var25Lifetime1 = param4.field_B[var23Lifetime2];
               var26Lifetime1 = param4.field_r[var23Lifetime2];
-              var27Lifetime1 = (var12 * var24Lifetime1 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> -jn.field_b + 16) + var9;
-              var28Lifetime1 = (var24Lifetime1 * var13 + var25Lifetime1 * var16 + var19 * var26Lifetime1 >> -jn.field_b + 16) + var10;
+              var27Lifetime1 = (var12 * var24Lifetime1 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> -IntrusiveDeque.field_b + 16) + var9;
+              var28Lifetime1 = (var24Lifetime1 * var13 + var25Lifetime1 * var16 + var19 * var26Lifetime1 >> -IntrusiveDeque.field_b + 16) + var10;
               var29Lifetime1 = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var24Lifetime1 * var14 >> 16) + var11;
               stackIn_62_0 = var29Lifetime1;
               stackIn_62_1 = 50;
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
                   stackIn_71_0 = var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -131,8 +131,8 @@ final class up {
                   gi.field_k[var23Lifetime2] = -2147483648;
                 }
                 if (param3) {
-                  eq.field_v[var23Lifetime2] = var27Lifetime1 >> jn.field_b;
-                  ad.field_q[var23Lifetime2] = var28Lifetime1 >> jn.field_b;
+                  eq.field_v[var23Lifetime2] = var27Lifetime1 >> IntrusiveDeque.field_b;
+                  ad.field_q[var23Lifetime2] = var28Lifetime1 >> IntrusiveDeque.field_b;
                   field_f[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -194,7 +194,7 @@ final class up {
                   }
                   stackIn_71_0 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_71_0 >= of.field_t.length) {
                     break;
@@ -236,7 +236,7 @@ final class up {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -251,12 +251,12 @@ final class up {
           if (param0 > -9) {
             up.a((int[]) null, (int[]) null, true, true, (gk) null, false, 41);
           }
-          field_b = null;
+          cancelText = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "up.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "up.B(" + param0 + ')');
         }
     }
 
@@ -264,6 +264,6 @@ final class up {
         field_d = false;
         field_f = new int[8192];
         field_g = new boolean[25];
-        field_b = "Cancel";
+        cancelText = "Cancel";
     }
 }

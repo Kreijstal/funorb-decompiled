@@ -3,17 +3,17 @@
  */
 final class ea {
     static ts field_a;
-    static String field_b;
+    static String difficultyText;
 
     public static void b(int param0) {
         int var1 = -48 % ((-58 - param0) / 49);
         field_a = null;
-        field_b = null;
+        difficultyText = null;
     }
 
-    final static al a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 14263) {
-          field_b = (String) null;
+          difficultyText = (String) null;
           return sj.field_c;
         }
         return sj.field_c;
@@ -28,7 +28,7 @@ final class ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -73) {
-            field_b = (String) null;
+            difficultyText = (String) null;
           }
           stackIn_3_0 = uv.a(param2, param1, true, (byte) -86);
           return stackIn_3_0;
@@ -42,7 +42,7 @@ final class ea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class ea {
           vi.field_y = new dc(rf.field_a, no.field_a);
           rf.field_a.a((byte) 104, vi.field_y);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -25) {
-            field_b = (String) null;
+            difficultyText = (String) null;
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = tc.field_f.equals(uk.a(param1 ^ 24, var3));
@@ -99,11 +99,11 @@ final class ea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(ki param0, boolean param1, byte param2, ki param3, ki param4) {
+    final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         ut.field_o = aj.a(false, "");
         ut.field_o.a(113, false);
         da.a(param4, param3, 17474, param0);
@@ -113,14 +113,14 @@ final class ea {
         try {
           ro.b(246);
           vm.field_c = hm.field_a;
-          nw.field_e = hm.field_a;
+          ProxySocketConnector.field_e = hm.field_a;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_a = new ts(12, 0, 1, 0);
-        field_b = "Difficulty: ";
+        difficultyText = "Difficulty: ";
     }
 }

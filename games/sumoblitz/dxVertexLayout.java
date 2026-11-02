@@ -4,7 +4,7 @@
 public class dxVertexLayout extends hq {
     jagdx.IDirect3DVertexDeclaration field_d;
 
-    dxVertexLayout(ir param0, hu[] param1) {
+    dxVertexLayout(DirectXGraphicsToolkit param0, hu[] param1) {
         int var5 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

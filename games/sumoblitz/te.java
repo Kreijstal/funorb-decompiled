@@ -2,29 +2,29 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class te {
-    private ms[] field_i;
+    private IntrusiveNode[] field_i;
     static int field_c;
     private int field_b;
     private int field_a;
     static iw field_f;
-    private ms field_e;
-    private ms field_d;
-    static jn field_g;
+    private IntrusiveNode field_e;
+    private IntrusiveNode field_d;
+    static IntrusiveDeque field_g;
     static String field_h;
 
-    final ms a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         int fieldTemp$0 = 0;
-        ms var2;
+        IntrusiveNode var2;
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_b > 0 &&
           this.field_i[this.field_b - 1] != this.field_d) {
           var2 = this.field_d;
-          this.field_d = var2.field_b;
+          this.field_d = var2.next;
           return var2;
         }
         if (!param0) {
-          return (ms) null;
+          return (IntrusiveNode) null;
         }
         do {
           if (this.field_a <= this.field_b) {
@@ -32,27 +32,27 @@ final class te {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var2 = this.field_i[fieldTemp$0].field_b;
+          var2 = this.field_i[fieldTemp$0].next;
         } while (this.field_i[-1 + this.field_b] == var2);
-        this.field_d = var2.field_b;
+        this.field_d = var2.next;
         return var2;
     }
 
-    final ms a(int param0, long param1) {
-        ms var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         if (param0 < 102) {
-          return (ms) null;
+          return (IntrusiveNode) null;
         }
-        ms var4 = this.field_i[(int)(param1 & (long)(-1 + this.field_a))];
-        this.field_e = var4.field_b;
+        IntrusiveNode var4 = this.field_i[(int)(param1 & (long)(-1 + this.field_a))];
+        this.field_e = var4.next;
         while (this.field_e != var4) {
-          if (~param1 == ~this.field_e.field_h) {
+          if (~param1 == ~this.field_e.key) {
             var5 = this.field_e;
-            this.field_e = this.field_e.field_b;
+            this.field_e = this.field_e.next;
             return var5;
           }
-          this.field_e = this.field_e.field_b;
+          this.field_e = this.field_e.next;
         }
         this.field_e = null;
         return null;
@@ -60,8 +60,8 @@ final class te {
 
     final void c(int param0) {
         int var2 = 0;
-        ms var3 = null;
-        ms var4 = null;
+        IntrusiveNode var3 = null;
+        IntrusiveNode var4 = null;
         int var5 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != 6407) {
           return;
@@ -69,11 +69,11 @@ final class te {
         for (var2 = 0; this.field_a > var2; var2++) {
           var3 = this.field_i[var2];
           while (true) {
-            var4 = var3.field_b;
+            var4 = var3.next;
             if (var4 == var3) {
               break;
             }
-            var4.b(false);
+            var4.unlink(false);
           }
         }
         this.field_d = null;
@@ -89,10 +89,10 @@ final class te {
         field_g = null;
     }
 
-    final ms a(int param0) {
+    final IntrusiveNode a(int param0) {
         this.field_b = 0;
         if (param0 < 36) {
-          return (ms) null;
+          return (IntrusiveNode) null;
         }
         return this.a(true);
     }
@@ -101,23 +101,23 @@ final class te {
         if (param0) {
           field_h = (String) null;
         }
-        return (is.a(!param0 ? true : false, param1, param2) | oj.b(param1, param2, -126) | pk.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
+        return (is.a(!param0 ? true : false, param1, param2) | oj.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
     }
 
-    final void a(ms param0, int param1, long param2) {
-        ms var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param0.field_g != null) {
-            param0.b(false);
+          if (param0.previous != null) {
+            param0.unlink(false);
           }
           var5 = this.field_i[(int)(param2 & (long)(param1 + this.field_a))];
-          param0.field_g = var5.field_g;
-          param0.field_b = var5;
-          param0.field_g.field_b = param0;
-          param0.field_b.field_g = param0;
-          param0.field_h = param2;
+          param0.previous = var5.previous;
+          param0.next = var5;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "te.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "te.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,30 +174,30 @@ final class te {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     te(int param0) {
         int var2 = 0;
-        ms dupTemp$0 = null;
-        ms var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_b = 0;
         this.field_a = param0;
-        this.field_i = new ms[param0];
+        this.field_i = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ms();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_i[var2] = dupTemp$0;
-          var3.field_b = var3;
-          var3.field_g = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 
     static {
         field_c = 0;
         field_f = new iw(1);
-        field_g = new jn();
+        field_g = new IntrusiveDeque();
         field_h = "Cancel";
     }
 }

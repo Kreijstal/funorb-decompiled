@@ -3,8 +3,8 @@
  */
 final class qc {
     private int field_d;
-    static bs field_e;
-    static fs field_c;
+    static MidiPcmStream field_e;
+    static PacketBuffer field_c;
     private boolean field_f;
     private int field_b;
     static int field_a;
@@ -31,7 +31,7 @@ final class qc {
           }
           for (var5 = 0; var5 < param0.length(); var5++) {
             if (!jl.a((byte) 110, param0.charAt(var5))) {
-              stackIn_11_0 = fu.field_F;
+              stackIn_11_0 = fu.namesCanOnlyContainText;
               return stackIn_11_0;
             }
           }
@@ -46,11 +46,11 @@ final class qc {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(ha param0, int param1) {
+    final void a(GraphicsToolkit param0, int param1) {
         String var10 = null;
         String var11 = null;
         int var7 = 0;
@@ -63,28 +63,28 @@ final class qc {
         int var3_int = Sumoblitz.field_J.length > this.field_d ? 380 : 320;
         int var4 = 200;
         int var5 = 160;
-        String var9 = sr.field_j[this.field_d * 2];
+        String var9 = LimitedRandomAccessFile.droneDescriptions[this.field_d * 2];
         qv.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
         uq.field_a.a(var9, -1, -1, var4, var3_int, 0);
         if (param1 != -4475) {
           return;
         }
         try {
-          var10 = sr.field_j[2 * this.field_d + 1];
+          var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.field_d + 1];
           var3_int -= 10;
-          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, g.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
-          bq.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, g.field_a.field_i, -8787, var10, (aa) null, 1, 0);
+          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
+          bq.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (aa) null, 1, 0);
           if (this.field_b <= 0) {
             var4 += 115;
             var3_int -= 50;
-            var11 = ge.field_l;
+            var11 = ge.clickToContinueText;
             var7 = -this.field_b << 3;
             var8 = var7 % 510 <= 255 ? var7 % 255 : 510 - var7 % 255;
             qv.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
             uq.field_a.a(var11, -1, -1, var4, var3_int, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class qc {
 
     private final void b(int param0, int param1) {
         if (param1 > -11) {
-          field_e = (bs) null;
+          field_e = (MidiPcmStream) null;
         }
         this.field_d = param0;
     }
@@ -147,7 +147,7 @@ final class qc {
         this.field_f = false;
     }
 
-    final static ha a(int param0, int param1, int param2, java.awt.Canvas param3, d param4) {
+    final static GraphicsToolkit a(int param0, int param1, int param2, java.awt.Canvas param3, d param4) {
         RuntimeException var5 = null;
         oa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -161,7 +161,7 @@ final class qc {
             qc.b((byte) 64);
           }
           stackIn_3_0 = new oa(param3, param4, param1, param0);
-          return (ha) ((Object) stackIn_3_0);
+          return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -178,7 +178,7 @@ final class qc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

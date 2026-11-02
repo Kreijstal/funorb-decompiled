@@ -3,12 +3,12 @@
  */
 final class pc {
     static ri field_c;
-    static String field_a;
-    static jn field_d;
+    static String thisPasswordContainsYourText;
+    static IntrusiveDeque field_d;
     static ri[] field_b;
 
     public static void a(int param0) {
-        field_a = null;
+        thisPasswordContainsYourText = null;
         if (param0 > 1) {
           field_b = null;
           field_d = null;
@@ -47,6 +47,6 @@ final class pc {
     }
 
     static {
-        field_a = "This password contains your email address, and would be easy to guess";
+        thisPasswordContainsYourText = "This password contains your email address, and would be easy to guess";
     }
 }

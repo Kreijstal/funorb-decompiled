@@ -22,7 +22,7 @@ final class fb {
           }
           bk.field_e[1] = fd.field_d.nextInt();
           bk.field_e[2] = (int)(oc.field_g >> 32);
-          sd.field_e.field_p = 0;
+          sd.field_e.position = 0;
           bk.field_e[3] = (int)oc.field_g;
           sd.field_e.e(48, bk.field_e[0]);
           sd.field_e.e(48, bk.field_e[1]);
@@ -31,14 +31,14 @@ final class fb {
           av.a(sd.field_e, true);
           sd.field_e.b(param2 + 12917, param3);
           param4.a(sd.field_e, (byte) -113);
-          as.field_v.field_p = 0;
+          as.field_v.position = 0;
           if (param0) {
             as.field_v.b((byte) 89, 18);
           } else {
             as.field_v.b((byte) 96, 16);
           }
-          as.field_v.field_p = as.field_v.field_p + 2;
-          var5_int = as.field_v.field_p;
+          as.field_v.position = as.field_v.position + 2;
+          var5_int = as.field_v.position;
           as.field_v.e(48, rh.field_p);
           as.field_v.a(false, jm.field_b);
           var6 = 0;
@@ -64,7 +64,7 @@ final class fb {
             as.field_v.b(rp.field_b, (byte) 19);
           }
           ks.a(gh.field_a, oh.field_c, false, as.field_v, sd.field_e);
-          as.field_v.a(param2 + 12793, as.field_v.field_p - var5_int);
+          as.field_v.a(param2 + 12793, as.field_v.position - var5_int);
           gt.a(param2 + 12793, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ final class fb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

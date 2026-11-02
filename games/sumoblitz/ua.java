@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class ua implements ot {
-    on field_f;
+    OpenGlGraphicsToolkit field_f;
     private int field_b;
     private int field_e;
     private boolean field_j;
@@ -14,14 +14,14 @@ abstract class ua implements ot {
     private jaclib.memory.heap.NativeHeapBuffer field_m;
     private int field_k;
     static int[] field_h;
-    static String field_i;
+    static String fullscreenModeWasCancelledText;
     static int field_a;
     static hr[] field_g;
     static int field_d;
 
-    final static wb[] a(int param0, int param1) {
-        wb[] var3 = new wb[9];
-        wb[] var2 = var3;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = wg.a(64, param0, 3);
         if (param1 >= -114) {
           ua.a(63, -120);
@@ -95,22 +95,22 @@ abstract class ua implements ot {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final static void a(int param0, ah param1) {
         try {
           kf.field_u = param1;
-          im.field_b = new jn();
+          im.field_b = new IntrusiveDeque();
           up.field_a = fi.a(640, he.field_o, (byte) -96) << 8;
           cv.field_E = fi.a(480, he.field_o, (byte) -96) << 8;
-          sr.d(22030);
+          LimitedRandomAccessFile.d(22030);
           if (param0 != 35040) {
             ua.a(116, -119);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ua.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ua.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,13 +148,13 @@ abstract class ua implements ot {
     }
 
     final static void f(int param0) {
-        if (null == vv.field_b) {
+        if (null == SecondaryNodeDequeIterator.field_b) {
           throw new IllegalStateException("NGR");
         }
         if (param0 != -5812) {
           field_n = (tg) null;
         }
-        vv.field_b.field_g = true;
+        SecondaryNodeDequeIterator.field_b.field_g = true;
         jl.a(param0 + 5837, 1);
     }
 
@@ -194,7 +194,7 @@ abstract class ua implements ot {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ abstract class ua implements ot {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ abstract class ua implements ot {
         }
     }
 
-    ua(on param0, int param1, boolean param2) {
+    ua(OpenGlGraphicsToolkit param0, int param1, boolean param2) {
         this.field_b = 0;
         this.field_c = -1;
         try {
@@ -298,12 +298,12 @@ abstract class ua implements ot {
           this.field_f = param0;
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
-        field_i = null;
+        fullscreenModeWasCancelledText = null;
         int var1 = -96 / ((param0 + 61) / 57);
         field_h = null;
         field_g = null;
@@ -334,7 +334,7 @@ abstract class ua implements ot {
             this.field_b = 0;
           }
           if (param1 != 92) {
-            this.field_f = (on) null;
+            this.field_f = (OpenGlGraphicsToolkit) null;
           }
           stackIn_12_0 = var3_int;
           return stackIn_12_0 != 0;
@@ -348,14 +348,14 @@ abstract class ua implements ot {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_n = new tg();
         field_h = new int[8192];
-        field_i = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
+        fullscreenModeWasCancelledText = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_a = 0;
     }
 }

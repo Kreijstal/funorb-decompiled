@@ -10,7 +10,7 @@ final class gk {
     int[] field_F;
     short[] field_g;
     short[] field_y;
-    static String field_H;
+    static String previousText;
     int[] field_i;
     short[] field_B;
     short[] field_b;
@@ -24,7 +24,7 @@ final class gk {
     int[] field_M;
     short[] field_e;
     int[] field_J;
-    static wi field_O;
+    static PlatformTaskDispatcher field_O;
     static ri field_N;
     private boolean field_d;
     short[] field_h;
@@ -44,7 +44,7 @@ final class gk {
     short field_c;
     int field_T;
     short[] field_r;
-    static wi field_u;
+    static PlatformTaskDispatcher field_u;
     short[] field_K;
     short[] field_R;
     short field_D;
@@ -87,7 +87,7 @@ final class gk {
 
     public static void a(int param0) {
         field_N = null;
-        field_H = null;
+        previousText = null;
         field_v = null;
         field_o = null;
         if (param0 != 0) {
@@ -196,6 +196,6 @@ final class gk {
     }
 
     static {
-        field_H = "Previous";
+        previousText = "Previous";
     }
 }

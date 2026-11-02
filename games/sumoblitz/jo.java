@@ -50,11 +50,11 @@ final class jo {
           return var2_ref_byte__Lifetime1;
         }
         if (30000 == param1 &&
-          0 < fh.field_k) {
-          fieldTemp$5 = fh.field_k - 1;
-          fh.field_k = fh.field_k - 1;
+          0 < ImageProducerRasterBuffer.field_k) {
+          fieldTemp$5 = ImageProducerRasterBuffer.field_k - 1;
+          ImageProducerRasterBuffer.field_k = ImageProducerRasterBuffer.field_k - 1;
           var2_ref_byte__Lifetime2 = ke.field_b[fieldTemp$5];
-          ke.field_b[fh.field_k] = null;
+          ke.field_b[ImageProducerRasterBuffer.field_k] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (null != gk.field_w) {

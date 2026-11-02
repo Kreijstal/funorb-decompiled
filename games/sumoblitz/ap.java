@@ -4,7 +4,7 @@
 final class ap implements pv {
     private boolean field_d;
     private byte field_e;
-    private ir field_c;
+    private DirectXGraphicsToolkit field_c;
     jagdx.IDirect3DVertexBuffer field_b;
     private int field_a;
     private int field_g;
@@ -114,7 +114,7 @@ final class ap implements pv {
         return this.field_e;
     }
 
-    ap(ir param0, boolean param1) {
+    ap(DirectXGraphicsToolkit param0, boolean param1) {
         this.field_d = false;
         this.field_c = param0;
         this.field_f = param1 ? true : false;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends sp implements ai {
+final class ld extends WidgetContainer implements ai {
     private wp field_I;
     boolean field_A;
     private int field_M;
@@ -29,7 +29,7 @@ final class ld extends sp implements ai {
         this.field_B.a(114, 0, 0, var2, this.field_q);
         this.field_J = new mc(0, 0, 0, 0, new tm(), this.field_B, (mh) null);
         if (var4 != 0) {
-          this.field_J.a(1332, true, hb.a((byte) 35));
+          this.field_J.a(1332, true, GameKeyHandler.a((byte) 35));
         }
         this.field_J.a(-126, 0, this.field_M, this.field_p - this.field_M, this.field_q);
         this.field_A = true;
@@ -62,7 +62,7 @@ final class ld extends sp implements ai {
         int var6 = 101 % ((28 - param0) / 63);
     }
 
-    final boolean a(pk param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -79,7 +79,7 @@ final class ld extends sp implements ai {
             if (!(this.field_o instanceof fc)) {
               return true;
             }
-            ((fc) (this.field_o)).a(this.field_K, (pk) (this), -90);
+            ((fc) (this.field_o)).a(this.field_K, (UiWidget) (this), -90);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,11 +92,11 @@ final class ld extends sp implements ai {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean a(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -119,7 +119,7 @@ final class ld extends sp implements ai {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -144,12 +144,12 @@ final class ld extends sp implements ai {
         field_N = null;
     }
 
-    final void a(int param0, int param1, pk param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           int var5_int = -76 % ((-25 - param1) / 45);
           super.a(param0, 85, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ld.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ld extends sp implements ai {
         if (param0 != 65) {
           return;
         }
-        this.field_J.b(false);
+        this.field_J.unlink(false);
     }
 
     private final void c(int param0, int param1, int param2, int param3, int param4) {
@@ -226,13 +226,13 @@ final class ld extends sp implements ai {
 
     final static void a(String param0, byte param1) {
         try {
-          rj.a((byte) -94, param0);
+          ArchiveCatalog.a((byte) -94, param0);
           if (param1 != -47) {
             field_C = 74;
           }
-          oc.a(us.field_m, false, (byte) -89);
+          oc.a(us.loggingInText, false, (byte) -89);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ld.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class ld extends sp implements ai {
         return this.field_A;
     }
 
-    final boolean a(pk param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         boolean stackIn_61_0 = false;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -349,7 +349,7 @@ final class ld extends sp implements ai {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -379,7 +379,7 @@ final class ld extends sp implements ai {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -399,7 +399,7 @@ final class ld extends sp implements ai {
           this.a(this.field_O, 125);
           this.a(this.field_I, 74);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -439,7 +439,7 @@ final class ld extends sp implements ai {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ final class ld extends sp implements ai {
           this.k(-1);
           this.field_L = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ld.LA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.LA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

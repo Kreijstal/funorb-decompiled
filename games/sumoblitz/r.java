@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class r extends pj {
+abstract class r extends DualLinkNode {
     static int[] field_r;
 
     final static br a(boolean param0, byte param1) {
@@ -71,7 +71,7 @@ abstract class r extends pj {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          ms.a("CC1", (Throwable) ((Object) var6), 0);
+          IntrusiveNode.reportClientError("CC1", (Throwable) ((Object) var6), 0);
           tm.field_c = null;
           oi.field_c = null;
           return new br(param0);

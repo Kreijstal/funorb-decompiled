@@ -19,9 +19,9 @@ final class am extends rb {
     private int field_v;
     private boolean field_l;
     private int field_g;
-    private jn field_s;
+    private IntrusiveDeque field_s;
     private boolean field_o;
-    private jn field_n;
+    private IntrusiveDeque field_n;
     private long field_t;
     private boolean field_m;
 
@@ -114,7 +114,7 @@ final class am extends rb {
     final void b(int param0) {
         rw discarded$0 = null;
         rw discarded$1 = null;
-        ms var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
@@ -129,11 +129,11 @@ final class am extends rb {
         }
         var2 = this.field_s.b(-72);
         while (var2 != null) {
-          var3 = (int)var2.field_h;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_x.field_d > var3) {
               if (this.field_x.field_m[var3] == 0) {
-                var2.b(false);
+                var2.unlink(false);
               } else {
                 if (this.field_p[var3] == 0) {
                   discarded$0 = this.a(var3, 1, 30561);
@@ -142,14 +142,14 @@ final class am extends rb {
                   discarded$1 = this.a(var3, 2, 30561);
                 }
                 if (this.field_p[var3] == 1) {
-                  var2.b(false);
+                  var2.unlink(false);
                 }
               }
             } else {
-              var2.b(false);
+              var2.unlink(false);
             }
           } else {
-            var2.b(false);
+            var2.unlink(false);
           }
           var2 = this.field_s.d((byte) 18);
         }
@@ -181,7 +181,7 @@ final class am extends rb {
           param1 == 0 &&
           !var12.field_t &&
           var12.field_u) {
-          var12.b(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -217,7 +217,7 @@ final class am extends rb {
               var4 = this.field_r.a(this.field_u, true, param0, (byte) -87, (byte) 2);
             }
           }
-          this.field_k.a((ms) (var4), param2 ^ -30562, (long)param0);
+          this.field_k.a((IntrusiveNode) (var4), param2 ^ -30562, (long)param0);
         }
         if (((rw) (var4)).field_u) {
           return null;
@@ -261,7 +261,7 @@ final class am extends rb {
                 this.field_p[param0] = (byte) 1;
               }
               if (!((rw) (var4)).field_t) {
-                ((rw) (var4)).b(false);
+                ((rw) (var4)).unlink(false);
               }
               stackIn_92_0 = var4;
               return (rw) (stackIn_92_0);
@@ -271,13 +271,13 @@ final class am extends rb {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_p[param0] = (byte)-1;
-            ((rw) (var4)).b(false);
+            ((rw) (var4)).unlink(false);
             if (((rw) (var4)).field_t) {
               if (this.field_r.a(param2 - 30551)) {
                 return null;
               }
               var4 = this.field_r.a(this.field_u, true, param0, (byte) 78, (byte) 2);
-              this.field_k.a((ms) (var4), -1, (long)param0);
+              this.field_k.a((IntrusiveNode) (var4), -1, (long)param0);
             }
             return null;
           }
@@ -310,11 +310,11 @@ final class am extends rb {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_r.b(14702);
-          ((rw) (var4)).b(false);
+          ((rw) (var4)).unlink(false);
           if (((rw) (var4)).field_t &&
             !this.field_r.a(param2 - 30435)) {
             var4 = this.field_r.a(this.field_u, true, param0, (byte) -69, (byte) 2);
-            this.field_k.a((ms) (var4), -1, (long)param0);
+            this.field_k.a((IntrusiveNode) (var4), -1, (long)param0);
           }
           return null;
         }
@@ -327,7 +327,7 @@ final class am extends rb {
           }
         }
         if (!((rw) (var4)).field_t) {
-          ((rw) (var4)).b(false);
+          ((rw) (var4)).unlink(false);
         }
         return (rw) (var4);
     }
@@ -338,7 +338,7 @@ final class am extends rb {
           return null;
         }
         byte[] var4 = var3.d(param1);
-        var3.b(param1);
+        var3.unlink(param1);
         return var4;
     }
 
@@ -348,7 +348,7 @@ final class am extends rb {
         }
         this.field_o = true;
         if (this.field_n == null) {
-          this.field_n = new jn();
+          this.field_n = new IntrusiveDeque();
         }
         int var2 = -71 / ((param0 + 2) / 46);
     }
@@ -372,14 +372,14 @@ final class am extends rb {
         rw discarded$2 = null;
         int var2_int;
         rw var2;
-        ms var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ms var6;
-        ms var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        ms var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (null != this.field_n) {
@@ -390,30 +390,30 @@ final class am extends rb {
             var2_int = 1;
             var3 = this.field_n.b(122);
             while (var3 != null) {
-              var4 = (int)var3.field_h;
+              var4 = (int)var3.key;
               if (this.field_p[var4] == 0) {
                 discarded$1 = this.a(var4, 1, 30561);
               }
               if (0 != this.field_p[var4]) {
-                var3.b(false);
+                var3.unlink(false);
               } else {
                 var2_int = 0;
               }
               var3 = this.field_n.d((byte) 18);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_g < this.field_x.field_m.length) {
                 if (this.field_x.field_m[this.field_g] != 0) {
                   if (250 <= this.field_q.field_e) {
                     var2_int = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (this.field_p[this.field_g] == 0) {
                     discarded$0 = this.a(this.field_g, 1, 30561);
                   }
                   if (0 == this.field_p[this.field_g]) {
-                    var7 = new ms();
-                    var7.field_h = (long)this.field_g;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_g;
                     this.field_n.a(var7, (byte) 39);
                     var2_int = 0;
                   }
@@ -434,30 +434,30 @@ final class am extends rb {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_n.b(89);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_h;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_p[var4Lifetime1] != 1) {
                   discarded$3 = this.a(var4Lifetime1, 2, 30561);
                 }
                 if (this.field_p[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(false);
+                  var3Lifetime1.unlink(false);
                 }
                 var3Lifetime1 = this.field_n.d((byte) 18);
               }
-              L10: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_x.field_m.length > this.field_g) {
                   if (this.field_x.field_m[this.field_g] != 0) {
                     if (this.field_r.b(true)) {
                       var2_intLifetime1 = 0;
-                      break L10;
+                      break scanLoop2;
                     }
                     if (this.field_p[this.field_g] != 1) {
                       discarded$2 = this.a(this.field_g, 2, 30561);
                     }
                     if (this.field_p[this.field_g] != 1) {
-                      var6 = new ms();
-                      var6.field_h = (long)this.field_g;
+                      var6 = new IntrusiveNode();
+                      var6.key = (long)this.field_g;
                       var2_intLifetime1 = 0;
                       this.field_n.a(var6, (byte) 39);
                     }
@@ -492,7 +492,7 @@ final class am extends rb {
                 if (!var2.field_t) {
                   throw new RuntimeException();
                 }
-                var2.b(false);
+                var2.unlink(false);
               }
             }
             var2 = (rw) (this.field_k.a(true));
@@ -523,7 +523,7 @@ final class am extends rb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -544,14 +544,14 @@ final class am extends rb {
         RuntimeException var10 = null;
         this.field_k = new te(16);
         this.field_g = 0;
-        this.field_s = new jn();
+        this.field_s = new IntrusiveDeque();
         this.field_t = 0L;
         try {
           this.field_h = param1;
           this.field_u = param0;
           if (this.field_h != null) {
             this.field_l = true;
-            this.field_n = new jn();
+            this.field_n = new IntrusiveDeque();
           } else {
             this.field_l = false;
           }
@@ -601,7 +601,7 @@ final class am extends rb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

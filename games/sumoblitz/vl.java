@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl {
-    static String field_b;
-    jn field_d;
+    static String accountCreatedSuccessfullyText;
+    IntrusiveDeque field_d;
     static hr field_c;
     static int field_a;
     int field_e;
@@ -21,19 +21,19 @@ final class vl {
         if (param0 != 113) {
           return;
         }
-        field_b = null;
+        accountCreatedSuccessfullyText = null;
     }
 
-    vl(jn param0, int param1) {
+    vl(IntrusiveDeque param0, int param1) {
         try {
           this.field_d = param0;
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        field_b = "Account created successfully!";
+        accountCreatedSuccessfullyText = "Account created successfully!";
     }
 }

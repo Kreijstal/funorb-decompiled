@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class gd {
-    static String field_o;
+    static String achievementsText;
     static long[] field_k;
     ro field_l;
     static String field_a;
@@ -13,14 +13,14 @@ abstract class gd {
     ro field_g;
     long field_e;
     int field_c;
-    fs field_n;
-    fs field_b;
+    PacketBuffer field_n;
+    PacketBuffer field_b;
     volatile int field_d;
     volatile int field_j;
     byte field_m;
     fv field_i;
 
-    final static ta a(ki param0, byte param1, String param2, String param3) {
+    final static ta a(ResourceArchive param0, byte param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -70,7 +70,7 @@ abstract class gd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -78,26 +78,26 @@ abstract class gd {
         long var6 = (long)param2 + ((long)param0 << 32);
         fv var8 = new fv();
         var8.field_t = param1 ? true : false;
-        var8.field_l = var6;
+        var8.secondaryKey = var6;
         var8.field_z = param4;
         int var9 = -16 % ((0 - param3) / 43);
         if (param1) {
           if (!(this.d(-2115911413) < 20)) {
             throw new RuntimeException();
           }
-          this.field_l.a((pj) (var8), (byte) -118);
+          this.field_l.a((DualLinkNode) (var8), (byte) -118);
         } else {
           if (!(this.a((byte) -120) < 20)) {
             throw new RuntimeException();
           }
-          this.field_f.a((pj) (var8), (byte) -107);
+          this.field_f.a((DualLinkNode) (var8), (byte) -107);
         }
         return var8;
     }
 
     abstract void b(int param0);
 
-    final static void a(int param0, int param1, jn param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, IntrusiveDeque param2, int param3, int param4, int param5) {
         float[] dupTemp$0 = null;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
@@ -135,7 +135,7 @@ abstract class gd {
               var12 = var13;
               var10 = var12;
               var8Lifetime2 = var10;
-              param2.a((ms) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
+              param2.a((IntrusiveNode) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -151,7 +151,7 @@ abstract class gd {
             dupTemp$0 = kt.a((byte) -20, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param2.a((ms) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
+            param2.a((IntrusiveNode) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,7 +164,7 @@ abstract class gd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ abstract class gd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1_ref), "gd.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "gd.K(" + param0 + ')');
         }
     }
 
@@ -223,13 +223,13 @@ abstract class gd {
         lh var2Lifetime1;
         if (param0 == -82) {
           var2 = new lh();
-          no.field_d.a((ms) (var2), (byte) 39);
+          no.field_d.a((IntrusiveNode) (var2), (byte) 39);
           jg.b(param0 + 11126, param1);
           return var2;
         }
         field_k = (long[]) null;
         var2Lifetime1 = new lh();
-        no.field_d.a((ms) (var2Lifetime1), (byte) 39);
+        no.field_d.a((IntrusiveNode) (var2Lifetime1), (byte) 39);
         jg.b(param0 + 11126, param1);
         return var2Lifetime1;
     }
@@ -239,7 +239,7 @@ abstract class gd {
           return this.a((byte) -100) >= 20 ? true : false;
         }
         String var3 = (String) null;
-        gd.a((ki) null, (byte) -79, (String) null, (String) null);
+        gd.a((ResourceArchive) null, (byte) -79, (String) null, (String) null);
         return this.a((byte) -100) >= 20 ? true : false;
     }
 
@@ -247,12 +247,12 @@ abstract class gd {
         if (param0 < -82) {
           return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
         }
-        this.field_n = (fs) null;
+        this.field_n = (PacketBuffer) null;
         return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
     }
 
     public static void a(boolean param0) {
-        field_o = null;
+        achievementsText = null;
         if (param0) {
           gd.a((byte) -88, 27);
           field_a = null;
@@ -272,15 +272,15 @@ abstract class gd {
         this.field_h = new ro();
         this.field_f = new ro();
         this.field_g = new ro();
-        this.field_n = new fs(6);
+        this.field_n = new PacketBuffer(6);
         this.field_d = 0;
         this.field_j = 0;
         this.field_m = (byte) 0;
-        this.field_b = new fs(10);
+        this.field_b = new PacketBuffer(10);
     }
 
     static {
         field_k = new long[32];
-        field_o = "ACHIEVEMENTS";
+        achievementsText = "ACHIEVEMENTS";
     }
 }

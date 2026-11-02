@@ -30,7 +30,7 @@ final class ti implements Runnable {
           synchronized (var6) {
             var7 = (ql) (this.field_d.a(110));
             while (var7 != null) {
-              if (~(long)param2 == ~var7.field_l &&
+              if (~(long)param2 == ~var7.secondaryKey &&
                 var7.field_w == param0 &&
                 var7.field_y == 2) {
                 var4.field_u = false;
@@ -56,7 +56,7 @@ final class ti implements Runnable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class ti implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ti implements Runnable {
         try {
           var3_ref = this.field_d;
           synchronized (var3_ref) {
-            this.field_d.a((pj) (param0), (byte) -120);
+            this.field_d.a((DualLinkNode) (param0), (byte) -120);
             this.field_e = this.field_e + 1;
             this.field_d.notifyAll();
           }
@@ -142,7 +142,7 @@ final class ti implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class ti implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new ql();
-          var5.field_l = (long)param0;
+          var5.secondaryKey = (long)param0;
           var5.field_w = param3;
           var5.field_x = param1;
           var5.field_t = false;
@@ -182,7 +182,7 @@ final class ti implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class ti implements Runnable {
         try {
           var4 = new ql();
           var4.field_y = 3;
-          var4.field_l = (long)param0;
+          var4.secondaryKey = (long)param0;
           var5 = 119 % ((56 - param1) / 55);
           var4.field_t = false;
           var4.field_w = param2;
@@ -215,11 +215,11 @@ final class ti implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    ti(wi param0) {
+    ti(PlatformTaskDispatcher param0) {
         jr var2 = null;
         this.field_d = new ro();
         this.field_c = false;
@@ -234,7 +234,7 @@ final class ti implements Runnable {
           }
           this.field_a = (Thread) (var2.field_d);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -271,11 +271,11 @@ final class ti implements Runnable {
             }
             try {
               if (var7.field_y == 2) {
-                var7.field_w.a(var7.field_x, (int)var7.field_l, var7.field_x.length, 0);
+                var7.field_w.a(var7.field_x, (int)var7.secondaryKey, var7.field_x.length, 0);
                 var7.field_u = false;
               } else {
                 if (var7.field_y == 3) {
-                  var7.field_x = var7.field_w.a(85, (int)var7.field_l);
+                  var7.field_x = var7.field_w.a(85, (int)var7.secondaryKey);
                   var7.field_u = false;
                 } else {
                   var7.field_u = false;
@@ -285,7 +285,7 @@ final class ti implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ms.a((String) null, (Throwable) ((Object) var2_ref), 0);
+              IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var2_ref), 0);
               var7.field_u = false;
             }
           }
