@@ -38,7 +38,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           int var2_int = 110 / ((55 - param0) / 40);
           ((ou) (this.field_A.a(109))).e(-1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "js.H(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.H(" + param0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
               return;
             }
             if (var2 != 4) {
-              IntrusiveNode.a("F1: " + di.b((byte) 104), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("F1: " + di.b((byte) 104), (Throwable) null, 0);
               kk.a((byte) -112);
               if (param0 <= 71) {
                 field_G = (ts) null;
@@ -289,7 +289,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           }
           var6_ref.field_jb = var4_ref_StringLifetime1;
           var6_ref.field_gb = (String) (var3Lifetime1);
-          var6_ref.b(false);
+          var6_ref.unlink(false);
           var7_ref = (cn) (pc.field_d.b(-104));
           scanLoop1: while (true) {
             if (null != var7_ref) {
@@ -318,7 +318,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1_ref), "js.CA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "js.CA(" + param0 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
             js.g(1);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "js.O(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.O(" + param0 + ')');
         }
     }
 
@@ -360,7 +360,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "js.P(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "js.P(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "js.J(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "js.J(" + param0 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
             js.f((byte) -20);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "js.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.E(" + param0 + ')');
         }
     }
 
@@ -435,7 +435,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -556,7 +556,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -596,7 +596,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -622,7 +622,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           this.field_H = new wr("", (qm) null, var1_int != 0);
           this.field_M = new wp(ff.createText, (qm) null);
           this.field_D = new wp(jc.goBackText, (qm) null);
-          this.field_A.field_t = rq.enterTheNameYouText;
+          this.field_A.field_t = ShaderEffect.enterTheNameYouText;
           this.field_I.field_t = pi.yourEmailAddressIsText;
           this.field_E.field_t = kn.typeYourEmailAddressText;
           this.field_N.field_t = pl.enterAPasswordForText;
@@ -680,7 +680,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           this.a(this.field_B, 108);
           this.a(-39, 0, 0, var6 + (var3 + 55), 496);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "js.<init>()");
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.<init>()");
         }
     }
 
@@ -723,7 +723,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -771,7 +771,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -788,7 +788,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "js.V(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "js.V(" + param0 + ')');
         }
     }
 
@@ -810,7 +810,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "js.AA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "js.AA(" + param0 + ')');
         }
     }
 

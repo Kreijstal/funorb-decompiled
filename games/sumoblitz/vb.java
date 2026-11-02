@@ -6,7 +6,7 @@ final class vb extends wp {
     static int field_I;
     int field_G;
     int field_K;
-    static ki field_J;
+    static ResourceArchive field_J;
     static boolean field_E;
     int field_M;
     int field_L;
@@ -74,7 +74,7 @@ final class vb extends wp {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

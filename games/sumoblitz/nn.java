@@ -46,7 +46,7 @@ abstract class nn {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ abstract class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var5), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var5), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ abstract class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "nn.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "nn.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ abstract class nn {
           }
           lk.a(mo.field_t);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nn.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nn.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

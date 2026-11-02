@@ -9,7 +9,7 @@ final class hh extends IOException {
     static ri[] field_a;
     static hr[] field_e;
     static String connectionLostText;
-    static al field_d;
+    static PcmStreamMixer field_d;
 
     final static void a(boolean param0, int param1, java.awt.Color param2, boolean param3, String param4) {
         RuntimeException stackIn_22_0 = null;
@@ -102,7 +102,7 @@ final class hh extends IOException {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

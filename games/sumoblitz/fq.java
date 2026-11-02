@@ -18,7 +18,7 @@ final class fq extends hq {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,9 +3,9 @@
  */
 final class tn extends jb {
     final static void b(int param0, int param1, int param2) {
-        if (null == pn.field_p ||
-          !(param0 <= pn.field_p.length)) {
-          pn.field_p = new int[param0 * 2];
+        if (null == OpenGlUnderwaterEffect.field_p ||
+          !(param0 <= OpenGlUnderwaterEffect.field_p.length)) {
+          OpenGlUnderwaterEffect.field_p = new int[param0 * 2];
         }
         if (null == lj.field_a) {
           lj.field_a = new int[param0 * 2];
@@ -287,7 +287,7 @@ final class tn extends jb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

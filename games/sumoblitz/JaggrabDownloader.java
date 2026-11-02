@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class cc implements Runnable {
+final class JaggrabDownloader implements Runnable {
     private jr field_c;
     private DataInputStream field_h;
     private java.net.URL field_a;
@@ -159,7 +159,7 @@ final class cc implements Runnable {
               break;
             }
             if (this.field_d.payload.length == this.field_d.position) {
-              throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_a));
+              throw JaggrabDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -195,19 +195,19 @@ final class cc implements Runnable {
         return null;
     }
 
-    cc(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    JaggrabDownloader(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_b = param0;
           this.field_a = param1;
           this.field_d = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 < 121) {
-          cc.a(82);
+          JaggrabDownloader.a(82);
           field_i = null;
           return;
         }

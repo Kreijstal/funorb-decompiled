@@ -14,7 +14,7 @@ final class ih {
             ih.a(-113);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class ih {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -175,10 +175,10 @@ final class ih {
         try {
           hc.field_f = wt.field_h[2];
           iv.field_i = wt.field_h[1];
-          ki.field_f = wt.field_h[0];
+          ResourceArchive.field_f = wt.field_h[0];
           int var1_int = -21 / ((param0 + 59) / 40);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }
     }
 

@@ -25,11 +25,11 @@ final class lq {
           param1.addKeyListener(wd.field_e);
           param1.addFocusListener(wd.field_e);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "lq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(ki param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
@@ -39,8 +39,8 @@ final class lq {
           var4 = var6.field_u;
           GameApplet.j(103);
           if (param1 >= -62) {
-            ki var5 = (ki) null;
-            lq.a(-58, (String) null, (String) null, (ki) null);
+            ResourceArchive var5 = (ResourceArchive) null;
+            lq.a(-58, (String) null, (String) null, (ResourceArchive) null);
           }
           kh.field_a = new Sprite(var3, var4 * 3 / 4);
           kh.field_a.d();
@@ -51,11 +51,11 @@ final class lq {
           mq.field_a.field_A = kh.field_a.field_u;
           ClientException.a((byte) 71);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static String a(int param0, String param1, String param2, ki param3) {
+    final static String a(int param0, String param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -101,7 +101,7 @@ final class lq {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class kf extends DualLinkNode implements ft {
     int field_x;
     static ah field_u;
-    static ki field_v;
+    static ResourceArchive field_v;
     int field_s;
     private int field_y;
     private int field_D;
@@ -79,7 +79,7 @@ final class kf extends DualLinkNode implements ft {
             return;
           }
           bl.field_e = var6.e(-31302);
-          ki.field_f = var6.e(-31302);
+          ResourceArchive.field_f = var6.e(-31302);
           iv.field_i = var6.e(-31302);
           hc.field_f = var6.e(-31302);
           if (param0 <= 92) {
@@ -113,7 +113,7 @@ final class kf extends DualLinkNode implements ft {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "kf.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kf.F(" + param0 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class kf extends DualLinkNode implements ft {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class kf extends DualLinkNode implements ft {
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_D, this.field_A, this.field_x);
           this.field_s = this.field_A * (this.field_x * this.field_C.d(this.field_D, -72));
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

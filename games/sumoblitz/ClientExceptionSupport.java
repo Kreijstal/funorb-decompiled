@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qo {
+final class ClientExceptionSupport {
     static ts field_b;
     static String ifYouDoNothingText;
     static dk field_a;
     private static String field_z;
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapWithContext(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -26,7 +26,7 @@ final class qo {
           return;
         }
         String var2 = (String) null;
-        qo.a((Throwable) null, (String) null);
+        ClientExceptionSupport.wrapWithContext((Throwable) null, (String) null);
         field_a = null;
         field_b = null;
         ifYouDoNothingText = null;

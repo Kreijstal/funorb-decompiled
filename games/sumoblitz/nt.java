@@ -29,7 +29,7 @@ class nt extends IntrusiveNode {
         try {
           ua.field_g[0].a((float)this.field_k, (float)this.field_o, 1848 - (int)((double)this.field_p / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ class nt extends IntrusiveNode {
           }
           var4.close();
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

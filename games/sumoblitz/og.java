@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class og {
-    private ki field_a;
+    private ResourceArchive field_a;
     private te field_b;
     static boolean[] field_d;
-    private ki field_e;
+    private ResourceArchive field_e;
     private te field_c;
 
     private final qp a(String param0, int param1, int[] param2) {
@@ -44,7 +44,7 @@ final class og {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class og {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_a = (ki) null;
+            this.field_a = (ResourceArchive) null;
           }
           stackIn_3_0 = this.a(-2, param1, (int[]) null);
           return stackIn_3_0;
@@ -78,7 +78,7 @@ final class og {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class og {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class og {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class og {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class og {
             stackIn_16_0 = null;
             return (qp) (stackIn_16_0);
           }
-          var9.b(param2);
+          var9.unlink(param2);
           this.field_c.a(var8Lifetime1, -1, var6);
           stackIn_18_0 = var8Lifetime1;
           return stackIn_18_0;
@@ -285,7 +285,7 @@ final class og {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -338,7 +338,7 @@ final class og {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -375,7 +375,7 @@ final class og {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class og {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ final class og {
             return stackIn_5_0;
           }
           if (param0 > -65) {
-            this.field_a = (ki) null;
+            this.field_a = (ResourceArchive) null;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -452,18 +452,18 @@ final class og {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    og(ki param0, ki param1) {
+    og(ResourceArchive param0, ResourceArchive param1) {
         this.field_b = new te(256);
         this.field_c = new te(256);
         try {
           this.field_a = param1;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

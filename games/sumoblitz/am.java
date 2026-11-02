@@ -133,7 +133,7 @@ final class am extends rb {
           if (var3 >= 0) {
             if (this.field_x.field_d > var3) {
               if (this.field_x.field_m[var3] == 0) {
-                var2.b(false);
+                var2.unlink(false);
               } else {
                 if (this.field_p[var3] == 0) {
                   discarded$0 = this.a(var3, 1, 30561);
@@ -142,14 +142,14 @@ final class am extends rb {
                   discarded$1 = this.a(var3, 2, 30561);
                 }
                 if (this.field_p[var3] == 1) {
-                  var2.b(false);
+                  var2.unlink(false);
                 }
               }
             } else {
-              var2.b(false);
+              var2.unlink(false);
             }
           } else {
-            var2.b(false);
+            var2.unlink(false);
           }
           var2 = this.field_s.d((byte) 18);
         }
@@ -181,7 +181,7 @@ final class am extends rb {
           param1 == 0 &&
           !var12.field_t &&
           var12.field_u) {
-          var12.b(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -261,7 +261,7 @@ final class am extends rb {
                 this.field_p[param0] = (byte) 1;
               }
               if (!((rw) (var4)).field_t) {
-                ((rw) (var4)).b(false);
+                ((rw) (var4)).unlink(false);
               }
               stackIn_92_0 = var4;
               return (rw) (stackIn_92_0);
@@ -271,7 +271,7 @@ final class am extends rb {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_p[param0] = (byte)-1;
-            ((rw) (var4)).b(false);
+            ((rw) (var4)).unlink(false);
             if (((rw) (var4)).field_t) {
               if (this.field_r.a(param2 - 30551)) {
                 return null;
@@ -310,7 +310,7 @@ final class am extends rb {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_r.b(14702);
-          ((rw) (var4)).b(false);
+          ((rw) (var4)).unlink(false);
           if (((rw) (var4)).field_t &&
             !this.field_r.a(param2 - 30435)) {
             var4 = this.field_r.a(this.field_u, true, param0, (byte) -69, (byte) 2);
@@ -327,7 +327,7 @@ final class am extends rb {
           }
         }
         if (!((rw) (var4)).field_t) {
-          ((rw) (var4)).b(false);
+          ((rw) (var4)).unlink(false);
         }
         return (rw) (var4);
     }
@@ -338,7 +338,7 @@ final class am extends rb {
           return null;
         }
         byte[] var4 = var3.d(param1);
-        var3.b(param1);
+        var3.unlink(param1);
         return var4;
     }
 
@@ -395,7 +395,7 @@ final class am extends rb {
                 discarded$1 = this.a(var4, 1, 30561);
               }
               if (0 != this.field_p[var4]) {
-                var3.b(false);
+                var3.unlink(false);
               } else {
                 var2_int = 0;
               }
@@ -441,7 +441,7 @@ final class am extends rb {
                 if (this.field_p[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(false);
+                  var3Lifetime1.unlink(false);
                 }
                 var3Lifetime1 = this.field_n.d((byte) 18);
               }
@@ -492,7 +492,7 @@ final class am extends rb {
                 if (!var2.field_t) {
                   throw new RuntimeException();
                 }
-                var2.b(false);
+                var2.unlink(false);
               }
             }
             var2 = (rw) (this.field_k.a(true));
@@ -523,7 +523,7 @@ final class am extends rb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -601,7 +601,7 @@ final class am extends rb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

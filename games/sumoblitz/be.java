@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be extends nt {
-    static ki field_s;
+    static ResourceArchive field_s;
     private boolean field_u;
     private static long[] field_v;
     static da field_t;
@@ -26,7 +26,7 @@ final class be extends nt {
           }
           vl.field_c.a((float)this.field_k, (float)this.field_o, var4Lifetime1, 0, 0, (var3_int << 24) + this.field_q, 1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

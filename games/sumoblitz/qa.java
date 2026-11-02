@@ -1850,7 +1850,7 @@ final class qa extends GraphicsToolkit {
         java.awt.Dimension var5 = null;
         ce var4 = (ce) (this.field_K.a(122, (long)param0.hashCode()));
         if (var4 != null) {
-          var4.b(false);
+          var4.unlink(false);
           var4 = id.a(param1, param2, param0, -91);
           this.field_K.a(var4, -1, (long)param0.hashCode());
           if (this.field_l == param0 &&

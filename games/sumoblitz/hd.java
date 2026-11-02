@@ -7,7 +7,7 @@ final class hd extends ac {
     static String regularText;
     static Sprite[] field_O;
     private vn field_P;
-    static ki field_H;
+    static ResourceArchive field_H;
     int field_J;
     int field_N;
     int field_L;
@@ -124,7 +124,7 @@ final class hd extends ac {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class hd extends ac {
           this.field_J = this.field_P.field_I + this.field_P.field_s;
           this.a(-22994, param3, param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

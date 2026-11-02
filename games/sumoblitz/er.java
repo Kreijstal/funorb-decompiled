@@ -7,7 +7,7 @@ final class er {
     private int field_d;
     int field_e;
     private boolean field_f;
-    static ki field_c;
+    static ResourceArchive field_c;
     private int field_a;
     private int field_b;
     int field_g;
@@ -16,7 +16,7 @@ final class er {
         GraphicsToolkit var2 = nq.field_h.a(-117);
         bq.field_c = var2.a(SocketConnector.field_a, ci.field_g, true);
         gt.field_db = var2.a(hu.field_c, mn.field_b, true);
-        uq.field_a = var2.a(qr.field_a, wj.field_i, true);
+        uq.field_a = var2.a(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
         qv.field_k = var2.a(sv.field_a, au.field_j, true);
         hc.field_e = var2.a(ma.field_b, ld.field_F, true);
         be.field_t = var2.a(sq.field_b, ProxySocketConnector.field_f, true);
@@ -46,7 +46,7 @@ final class er {
         ak.field_a = aj.a(kr.field_b, var2, 28513);
         mr.field_e = aj.a(qk.field_V, var2, 28513);
         if (param0) {
-          field_c = (ki) null;
+          field_c = (ResourceArchive) null;
           ts.field_e = aj.a(ph.field_a, var2, 28513);
           hh.field_e = aj.a(jd.field_h, var2, 28513);
           ct.field_A = aj.a(bk.field_b, var2, 28513);
@@ -62,12 +62,12 @@ final class er {
           ua.field_g = aj.a(kf.field_w, var2, 28513);
           hf.a(var2, bj.field_g, (byte) -11);
           hf.a(var2, ks.field_t, (byte) -11);
-          hf.a(var2, rq.field_c, (byte) -11);
+          hf.a(var2, ShaderEffect.field_c, (byte) -11);
           im.field_a = hf.a(var2, ue.field_p, (byte) -11);
           mn.field_j = hf.a(var2, pc.field_c, (byte) -11);
           dj.field_l = hf.a(var2, no.field_c, (byte) -11);
           hv.field_b = hf.a(var2, rt.field_E, (byte) -11);
-          ej.field_i = hf.a(var2, mn.field_c, (byte) -11);
+          OpenGlEnvironmentWaterEffect.field_i = hf.a(var2, mn.field_c, (byte) -11);
           an.field_f = hf.a(var2, gw.field_C, (byte) -11);
           wm.field_a = hf.a(var2, wf.field_a, (byte) -11);
           si.field_d = hf.a(var2, ml.field_p, (byte) -11);
@@ -76,7 +76,7 @@ final class er {
           ml.field_w = aj.a(sd.field_a, var2, 28513);
           ok.field_f = aj.a(hp.field_n, var2, 28513);
           ff.field_k = aj.a(ni.field_h, var2, 28513);
-          hf.a(var2, ResourceArchive.field_f, (byte) -11);
+          hf.a(var2, ArchiveCatalog.field_f, (byte) -11);
           hf.a(var2, uu.field_o, (byte) -11);
           si.field_e = hf.a(var2, lr.field_c, (byte) -11);
           aj.a(ei.field_b, var2, 28513);
@@ -88,7 +88,7 @@ final class er {
           uc.field_e = aj.a(mc.field_F, var2, 28513);
           o.field_b = aj.a(om.field_m, var2, 28513);
           ng.field_f = aj.a(ke.field_c, var2, 28513);
-          pn.field_t = hf.a(var2, tc.field_i, (byte) -11);
+          OpenGlUnderwaterEffect.field_t = hf.a(var2, tc.field_i, (byte) -11);
           f.field_r = aj.a(hc.field_a, var2, 28513);
           vl.field_c = hf.a(var2, rl.field_o, (byte) -11);
           wo.field_b = new hr[]{mn.field_j, dj.field_l, hv.field_b};
@@ -111,12 +111,12 @@ final class er {
         ua.field_g = aj.a(kf.field_w, var2, 28513);
         hf.a(var2, bj.field_g, (byte) -11);
         hf.a(var2, ks.field_t, (byte) -11);
-        hf.a(var2, rq.field_c, (byte) -11);
+        hf.a(var2, ShaderEffect.field_c, (byte) -11);
         im.field_a = hf.a(var2, ue.field_p, (byte) -11);
         mn.field_j = hf.a(var2, pc.field_c, (byte) -11);
         dj.field_l = hf.a(var2, no.field_c, (byte) -11);
         hv.field_b = hf.a(var2, rt.field_E, (byte) -11);
-        ej.field_i = hf.a(var2, mn.field_c, (byte) -11);
+        OpenGlEnvironmentWaterEffect.field_i = hf.a(var2, mn.field_c, (byte) -11);
         an.field_f = hf.a(var2, gw.field_C, (byte) -11);
         wm.field_a = hf.a(var2, wf.field_a, (byte) -11);
         si.field_d = hf.a(var2, ml.field_p, (byte) -11);
@@ -125,7 +125,7 @@ final class er {
         ml.field_w = aj.a(sd.field_a, var2, 28513);
         ok.field_f = aj.a(hp.field_n, var2, 28513);
         ff.field_k = aj.a(ni.field_h, var2, 28513);
-        hf.a(var2, ResourceArchive.field_f, (byte) -11);
+        hf.a(var2, ArchiveCatalog.field_f, (byte) -11);
         hf.a(var2, uu.field_o, (byte) -11);
         si.field_e = hf.a(var2, lr.field_c, (byte) -11);
         aj.a(ei.field_b, var2, 28513);
@@ -137,7 +137,7 @@ final class er {
         uc.field_e = aj.a(mc.field_F, var2, 28513);
         o.field_b = aj.a(om.field_m, var2, 28513);
         ng.field_f = aj.a(ke.field_c, var2, 28513);
-        pn.field_t = hf.a(var2, tc.field_i, (byte) -11);
+        OpenGlUnderwaterEffect.field_t = hf.a(var2, tc.field_i, (byte) -11);
         f.field_r = aj.a(hc.field_a, var2, 28513);
         vl.field_c = hf.a(var2, rl.field_o, (byte) -11);
         wo.field_b = new hr[]{mn.field_j, dj.field_l, hv.field_b};
@@ -228,7 +228,7 @@ final class er {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "er.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "er.K(" + param0 + ')');
         }
     }
 

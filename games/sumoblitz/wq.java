@@ -26,7 +26,7 @@ final class wq {
             var3 = var2.field_l;
           } else {
             if (var2 != null) {
-              var2.b(false);
+              var2.unlink(false);
             }
             var3 = new pm(param0);
             ar.field_N.a(new fw(param0, var3), -1, (long)param0.field_a);
@@ -48,7 +48,7 @@ final class wq {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class wq {
         allHiscoresText = null;
     }
 
-    final static void a(boolean param0, ki param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         gk stackIn_10_0;
         int stackIn_10_1;
         int stackIn_10_2;
@@ -136,7 +136,7 @@ final class wq {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

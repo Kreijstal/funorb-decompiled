@@ -98,7 +98,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void X(int param0) {
-        jaggl.OpenGL.glTexEnvi(8960, 34162, rq.a(-9267, this.field_B[this.field_mc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.a(-9267, this.field_B[this.field_mc]));
         if (param0 >= -80) {
           this.b(true);
         }
@@ -394,7 +394,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -456,7 +456,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -641,7 +641,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 
@@ -649,7 +649,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 >= -74) {
           this.field_ad = 99;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, rq.a(-9267, this.field_K[this.field_mc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.a(-9267, this.field_K[this.field_mc]));
     }
 
     final void b() {
@@ -667,7 +667,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "on.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -713,11 +713,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    OpenGlGraphicsToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ki param4, int param5) {
+    OpenGlGraphicsToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;
@@ -938,7 +938,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -997,7 +997,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1064,7 +1064,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1210,7 +1210,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -1244,7 +1244,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1285,7 +1285,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glTexEnvi(8960, param0 + 34200, !param1 ? 770 : 771);
           int var5_int = -37 % ((param2 - 1) / 45);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "on.BF(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.BF(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1298,7 +1298,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           var4 = (Long) (param1);
           this.field_Yc.releaseSurface(param0, var4.longValue());
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "on.JE(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.JE(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1348,7 +1348,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1389,7 +1389,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -1448,7 +1448,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1474,7 +1474,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             this.A(-86);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "on.BE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.BE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1487,20 +1487,20 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         int var2 = -24 / ((-6 - param0) / 54);
     }
 
-    final rq d(int param0, int param1) {
+    final ShaderEffect d(int param0, int param1) {
         int var3;
         if (param0 != 0) {
           this.field_Pc = (IntrusiveDeque) null;
         }
         var3 = param1;
         if (var3 == 3) {
-          return (rq) ((Object) new pn(this, this.field_ab));
+          return (ShaderEffect) ((Object) new OpenGlUnderwaterEffect(this, this.field_ab));
         }
         if (var3 == 4) {
-          return (rq) ((Object) new wj(this, this.field_ab, this.field_Mb));
+          return (ShaderEffect) ((Object) new OpenGlTransparentWaterEffect(this, this.field_ab, this.field_Mb));
         }
         if (var3 == 8) {
-          return (rq) ((Object) new ej(this, this.field_ab, this.field_Mb));
+          return (ShaderEffect) ((Object) new OpenGlEnvironmentWaterEffect(this, this.field_ab, this.field_Mb));
         }
         return super.d(0, param1);
     }
@@ -1524,7 +1524,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void bb(int param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_l == sr.field_a) {
+        if (this.field_l == LimitedRandomAccessFile.field_a) {
           jaggl.OpenGL.glBlendFunc(770, 771);
         } else {
           if (this.field_l == lh.field_n) {
@@ -1623,7 +1623,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -1658,7 +1658,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 

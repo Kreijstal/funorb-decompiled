@@ -8,7 +8,7 @@ final class sb {
     static jg field_b;
     static ne[] field_d;
 
-    final static GraphicsToolkit a(ki param0, int param1, d param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(ResourceArchive param0, int param1, d param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         OpenGlGraphicsToolkit var8 = null;
@@ -63,7 +63,7 @@ final class sb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -73,13 +73,13 @@ final class sb {
           param4.b(-42, 17);
           if (param1 <= 77) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
-            sb.a((ki) null, -117, (d) null, (java.awt.Canvas) null, 97);
+            sb.a((ResourceArchive) null, -117, (d) null, (java.awt.Canvas) null, 97);
           }
           param4.b(117, param3);
           param4.b(117, param2);
           param4.b((byte) 52, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class sb {
         field_d = null;
     }
 
-    final static void a(int param0, ki param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var5_int = 0;
         int var9 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -176,7 +176,7 @@ final class sb {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

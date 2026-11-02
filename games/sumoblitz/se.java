@@ -55,7 +55,7 @@ abstract class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "se.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "se.K(" + param0 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ abstract class se {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

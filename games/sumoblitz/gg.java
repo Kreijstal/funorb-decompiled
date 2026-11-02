@@ -5,7 +5,7 @@ import java.util.*;
 
 final class gg extends DualLinkNode {
     byte[] field_s;
-    static ki field_r;
+    static ResourceArchive field_r;
     static qr field_t;
 
     final static boolean a(String param0, String param1, int param2) {
@@ -57,13 +57,13 @@ final class gg extends DualLinkNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-          field_r = (ki) null;
+          field_r = (ResourceArchive) null;
         }
         field_t = null;
         field_r = null;
@@ -119,7 +119,7 @@ final class gg extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "gg.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "gg.B(" + param0 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class gg extends DualLinkNode {
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

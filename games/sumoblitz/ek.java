@@ -22,7 +22,7 @@ final class ek extends ht {
           jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, be.a(false, this.field_a), 5121, (byte[]) null, 0);
           this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -66,8 +66,8 @@ final class ek extends ht {
           }
           if (decompiledFrameRemainder0) {
             if (!up.field_d) {
-              if (qf.field_a >= fn.field_s) {
-                stackIn_17_0 = (fn.field_s + sb.field_c > qf.field_a) ? 1 : 0;
+              if (qf.field_a >= GameClientShell.field_s) {
+                stackIn_17_0 = (GameClientShell.field_s + sb.field_c > qf.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -79,12 +79,12 @@ final class ek extends ht {
               qf.field_a = 0;
             } else {
               if (up.field_d) {
-                qf.field_a = fn.field_s;
+                qf.field_a = GameClientShell.field_s;
               } else {
                 if (var2_int == 0) {
                   qf.field_a = 0;
                 } else {
-                  qf.field_a = fn.field_s;
+                  qf.field_a = GameClientShell.field_s;
                 }
               }
             }
@@ -101,7 +101,7 @@ final class ek extends ht {
           hp.field_l = param0;
           var2_intLifetime1 = -62 % ((-74 - param1) / 35);
           if (!up.field_d &&
-            qf.field_a < fn.field_s &&
+            qf.field_a < GameClientShell.field_s &&
             sl.field_d) {
             qf.field_a = 0;
             za.field_k = dm.field_e;
@@ -125,7 +125,7 @@ final class ek extends ht {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -152,12 +152,12 @@ final class ek extends ht {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     final static void b(boolean param0, int param1) {
-        mf var2 = mf.a(rc.field_l[param1], 100, 96);
+        PcmSampleStream var2 = PcmSampleStream.a(rc.field_l[param1], 100, 96);
         if (param0) {
           var2.c(-1);
           qq.a(18416, var2);

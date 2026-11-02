@@ -39,7 +39,7 @@ final class lh extends IntrusiveNode {
         try {
           var2_int = param0.length();
           if (param1 == ~var2_int) {
-            stackIn_3_0 = qo.field_a;
+            stackIn_3_0 = ClientExceptionSupport.field_a;
             return stackIn_3_0;
           }
           if (255 < var2_int) {
@@ -48,7 +48,7 @@ final class lh extends IntrusiveNode {
           }
           var3 = cn.a('.', param0, -27224);
           if (var3.length < 2) {
-            stackIn_11_0 = qo.field_a;
+            stackIn_11_0 = ClientExceptionSupport.field_a;
             return stackIn_11_0;
           }
           var4 = var3;
@@ -72,7 +72,7 @@ final class lh extends IntrusiveNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

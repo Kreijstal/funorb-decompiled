@@ -51,7 +51,7 @@ class UiWidget extends IntrusiveNode {
             this.field_p = 20;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pk.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pk.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ class UiWidget extends IntrusiveNode {
               this.c((byte) 115);
             }
           } else {
-            if (0 == pn.field_r) {
+            if (0 == OpenGlUnderwaterEffect.field_r) {
               if (hk.field_c != 0) {
                 if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
                   if (var5 != 0) {
@@ -351,7 +351,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
               } else {
-                this.a(param0, pn.field_r, -1, param1, pi.field_e, this, ko.field_p);
+                this.a(param0, OpenGlUnderwaterEffect.field_r, -1, param1, pi.field_e, this, ko.field_p);
                 if (hk.field_c != 0) {
                   if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
                     this.c((byte) -116);
@@ -383,9 +383,9 @@ class UiWidget extends IntrusiveNode {
         } else {
           regionExit1: {
             if (param2) {
-              if (0 != pn.field_r &&
+              if (0 != OpenGlUnderwaterEffect.field_r &&
                 var5 != 0) {
-                this.a(param0, pn.field_r, -1, param1, pi.field_e, this, ko.field_p);
+                this.a(param0, OpenGlUnderwaterEffect.field_r, -1, param1, pi.field_e, this, ko.field_p);
                 if (hk.field_c != 0) {
                   if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
                     this.c((byte) -116);
@@ -635,7 +635,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -745,7 +745,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -770,7 +770,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -839,7 +839,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -912,7 +912,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -974,7 +974,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -989,7 +989,7 @@ class UiWidget extends IntrusiveNode {
           this.field_v = param1;
           this.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

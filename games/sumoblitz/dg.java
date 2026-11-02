@@ -30,7 +30,7 @@ final class dg extends ie {
         rg var3 = (rg) (var2.b((byte) -80));
         while (var3 != null) {
           if (var3.g(-28778)) {
-            var3.b(false);
+            var3.unlink(false);
           }
           var3 = (rg) (var2.b(0));
         }
@@ -46,7 +46,7 @@ final class dg extends ie {
         rg var3 = (rg) (var2.b((byte) -80));
         while (var3 != null) {
           if (var3.h(0)) {
-            var3.b(false);
+            var3.unlink(false);
           }
           var3 = (rg) (var2.b(0));
         }
@@ -131,7 +131,7 @@ final class dg extends ie {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

@@ -68,7 +68,7 @@ final class ci {
 
     final void a(long param0, int param1, DualLinkNode param2) {
         if (null != param2.secondaryPrevious) {
-          param2.c(-5106);
+          param2.unlinkSecondary(-5106);
         }
         DualLinkNode var5 = this.field_a[(int)((long)(this.field_f - 1) & param0)];
         param2.secondaryPrevious = var5.secondaryPrevious;
@@ -81,7 +81,7 @@ final class ci {
           param2.secondaryNext.secondaryPrevious = param2;
           param2.secondaryKey = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

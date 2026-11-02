@@ -54,7 +54,7 @@ abstract class hf extends rg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ abstract class hf extends rg {
           if (var11.field_c != 2) {
             return var7;
           }
-          wj.a(var7, param1, false);
+          OpenGlTransparentWaterEffect.a(var7, param1, false);
           stackIn_41_0 = null;
           return (java.awt.Frame) (stackIn_41_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -260,7 +260,7 @@ abstract class hf extends rg {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

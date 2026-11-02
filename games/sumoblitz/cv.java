@@ -43,7 +43,7 @@ final class cv extends WidgetContainer implements pw, ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class cv extends WidgetContainer implements pw, ai {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class cv extends WidgetContainer implements pw, ai {
           if (this.field_K != null) {
             this.field_v = this.field_v + (var7.a(this.field_K, -40 + this.field_q, var7.field_s) + 5);
           }
-          var8 = ej.loginText;
+          var8 = OpenGlEnvironmentWaterEffect.loginText;
           var9 = lv.a(ra.c(2), 1);
           if (go.field_m != var9) {
             if (tr.field_j == var9) {
@@ -266,7 +266,7 @@ final class cv extends WidgetContainer implements pw, ai {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -327,7 +327,7 @@ final class cv extends WidgetContainer implements pw, ai {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ final class cv extends WidgetContainer implements pw, ai {
             this.field_A = (wp) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cv.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cv.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ final class cv extends WidgetContainer implements pw, ai {
           var3.a(false, var4, (byte) 67);
           this.field_I.i(param0 + 3498);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cv.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cv.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

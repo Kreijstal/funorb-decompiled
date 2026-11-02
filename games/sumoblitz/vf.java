@@ -5,7 +5,7 @@ final class vf {
     static int field_b;
     static qr field_c;
     static String reloadGameText;
-    static ki field_a;
+    static ResourceArchive field_a;
     static int field_d;
 
     final static void a(byte param0) {
@@ -31,7 +31,7 @@ final class vf {
         vi.field_y.b((byte) -94, ro.field_a);
     }
 
-    final static bo a(ki param0, boolean param1, String param2, String param3, ki param4) {
+    final static bo a(ResourceArchive param0, boolean param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -82,7 +82,7 @@ final class vf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -92,8 +92,8 @@ final class vf {
 
     public static void b(int param0) {
         if (param0 != 1) {
-          ki var2 = (ki) null;
-          vf.a((ki) null, false, (String) null, (String) null, (ki) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          vf.a((ResourceArchive) null, false, (String) null, (String) null, (ResourceArchive) null);
           field_a = null;
           reloadGameText = null;
           field_c = null;
@@ -123,7 +123,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "vf.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "vf.B(" + param0 + ')');
         }
     }
 

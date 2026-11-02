@@ -29,7 +29,7 @@ final class mi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "mi.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "mi.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

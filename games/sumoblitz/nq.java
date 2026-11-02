@@ -46,7 +46,7 @@ final class nq extends na {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class nq extends na {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "nq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "nq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class nq extends na {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class nq extends na {
         try {
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

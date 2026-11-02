@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends rq {
+final class ni extends ShaderEffect {
     static String field_g;
     static ri[] field_h;
     static String field_f;
@@ -13,7 +13,7 @@ final class ni extends rq {
             ni.a(-3, -84, 61, -17, 112);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class ni extends rq {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -54,11 +54,11 @@ final class ni extends rq {
             this.c(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, ki param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2612_0;
             StringBuilder stackIn_2612_1;
@@ -69,9 +69,9 @@ final class ni extends rq {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            ki param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ki initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2612_0 = null;
@@ -1520,7 +1520,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("login_username_email", (byte) -23);
                 if (null != var2) {
-                  ej.loginText = uu.a(0, var2);
+                  OpenGlEnvironmentWaterEffect.loginText = uu.a(0, var2);
                 }
                 var2 = rc.a("login_username", (byte) -23);
                 if (null != var2) {
@@ -1568,7 +1568,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_displayname_tooltip", (byte) -23);
                 if (var2 != null) {
-                  rq.enterTheNameYouText = uu.a(0, var2);
+                  ShaderEffect.enterTheNameYouText = uu.a(0, var2);
                 }
                 var2 = rc.a("create_displayname_hint", (byte) -23);
                 if (null != var2) {
@@ -1820,7 +1820,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("waitingfor_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  fn.waitingForSoundEffectsText = uu.a(0, var2);
+                  GameClientShell.waitingForSoundEffectsText = uu.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_music", (byte) -23);
                 if (null != var2) {
@@ -1948,7 +1948,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fullscreen", (byte) -23);
                 if (null != var2) {
-                  ki.field_j = uu.a(param0 - 7, var2);
+                  ResourceArchive.field_j = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("screensize", (byte) -23);
                 if (null != var2) {
@@ -2714,7 +2714,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fs_accept_countdown_sing", (byte) -23);
                 if (null != var2) {
-                  qo.ifYouDoNothingText = uu.a(0, var2);
+                  ClientExceptionSupport.ifYouDoNothingText = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_countdown_pl", (byte) -23);
                 if (null != var2) {
@@ -2742,7 +2742,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fs_focus", (byte) -23);
                 if (null != var2) {
-                  sr.field_c = uu.a(0, var2);
+                  LimitedRandomAccessFile.field_c = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_focus_or_resolution", (byte) -23);
                 if (null != var2) {
@@ -3093,7 +3093,7 @@ final class ni extends rq {
                   } else {
                     stackIn_2613_2 = "{...}";
                   }
-                  throw qo.a((Throwable) ((Object) stackIn_2612_0), ((StringBuilder) (Object) stackIn_2612_1).append(stackIn_2613_2).append(')').toString());
+                  throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_2612_0), ((StringBuilder) (Object) stackIn_2612_1).append(stackIn_2613_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2621_0 = (!GameApplet.field_o);
@@ -3111,7 +3111,7 @@ final class ni extends rq {
             this.a(-51, -107, -8);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3121,7 +3121,7 @@ final class ni extends rq {
             this.a(false, (byte) 126);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.J(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3135,7 +3135,7 @@ final class ni extends rq {
           field_h = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ni.N(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.N(" + param0 + ')');
         }
     }
 
@@ -3166,7 +3166,7 @@ final class ni extends rq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var5_ref), "ni.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var5_ref), "ni.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3181,7 +3181,7 @@ final class ni extends rq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "ni.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "ni.G(" + param0 + ')');
         }
     }
 

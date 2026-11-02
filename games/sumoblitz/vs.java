@@ -40,7 +40,7 @@ final class vs {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class vs {
             var5_ref_ub = (ub) (un.field_b.b(-99));
             if (var5_ref_ub != null &&
               var2_long > var5_ref_ub.field_m) {
-              var5_ref_ub.b(false);
+              var5_ref_ub.unlink(false);
               gu.field_d = var5_ref_ub.field_k.length;
               ig.field_a.position = 0;
               for (var6_int = 0; var6_int < gu.field_d; var6_int++) {
@@ -108,7 +108,7 @@ final class vs {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
         stackIn_17_0 = lq.field_b;
         try {
@@ -158,7 +158,7 @@ final class vs {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 

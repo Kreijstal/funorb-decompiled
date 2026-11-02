@@ -18,7 +18,7 @@ final class go extends bp implements nh {
           }
           super.a(param0, param1 ^ 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "go.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "go.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class go extends bp implements nh {
           jaggl.OpenGL.glTexImage3Dub(this.field_h, 0, this.e(-11), this.field_i, this.field_k, this.field_l, 0, te.a(-21339, this.field_c), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

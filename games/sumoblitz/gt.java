@@ -25,7 +25,7 @@ class gt extends ur implements ai {
           ie.a(-118, "", param1);
           of.a(param0 + 9732, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gt.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gt.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ class gt extends ur implements ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ class gt extends ur implements ai {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ class gt extends ur implements ai {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ class gt extends ur implements ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -226,13 +226,13 @@ class gt extends ur implements ai {
           if (qk.field_O != null && (0 > param1 ||
             ga.field_j == kw.field_c)) {
             if (as.field_v.position == 0 &&
-              (ResourceArchive.field_a + 10000L) < wq.a(param0 - 14)) {
+              (ArchiveCatalog.field_a + 10000L) < wq.a(param0 - 14)) {
               as.field_v.g(param1, 8);
             }
             if (as.field_v.position > param0) {
               try {
                 qk.field_O.a(0, -2, as.field_v.payload, as.field_v.position);
-                ResourceArchive.field_a = wq.a(-21);
+                ArchiveCatalog.field_a = wq.a(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -255,7 +255,7 @@ class gt extends ur implements ai {
         if (qn.field_f != null) {
           wr.a(true, qn.field_f);
         }
-        rq.a(false);
+        ShaderEffect.a(false);
         jm.b(28679);
         if (param0 != 0) {
           field_gb = (jh) null;
@@ -337,7 +337,7 @@ class gt extends ur implements ai {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ class gt extends ur implements ai {
           this.field_ib.field_J = true;
           this.a(this.field_ib, 78);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ class gt extends ur implements ai {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 }

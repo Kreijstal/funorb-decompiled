@@ -3,17 +3,17 @@
  */
 abstract class GraphicsToolkit {
     d field_h;
-    static ki field_e;
+    static ResourceArchive field_e;
     static int field_b;
     int field_a;
     static int field_f;
     static String field_d;
-    static ki field_g;
+    static ResourceArchive field_g;
     static pm field_c;
 
     abstract void f(int param0, int param1);
 
-    final synchronized static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, int param3, d param4, int param5, int param6, ki param7) {
+    final synchronized static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, int param3, d param4, int param5, int param6, ResourceArchive param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_3_0 = null;
         GraphicsToolkit stackIn_6_0 = null;
@@ -72,7 +72,7 @@ abstract class GraphicsToolkit {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ abstract class GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -2) {
-            field_g = (ki) null;
+            field_g = (ResourceArchive) null;
           }
           stackIn_3_0 = this.a(param5, param0, param3, param4, param2, true);
           return stackIn_3_0;
@@ -105,7 +105,7 @@ abstract class GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ abstract class GraphicsToolkit {
 
     final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         if (null != param2.previous) {
-          param2.b(false);
+          param2.unlink(false);
         }
         if (param0 != -2) {
           return;
@@ -134,7 +134,7 @@ abstract class GraphicsToolkit {
           param2.previous.next = param2;
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ha.AG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ha.AG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -172,7 +172,7 @@ abstract class GraphicsToolkit {
     abstract vc a(bu param0, nr param1);
 
     final static void b(int param0) {
-        sr.field_d = false;
+        LimitedRandomAccessFile.field_d = false;
         uw.field_b = null;
         uw.field_c = null;
         if (param0 != 23639) {
@@ -213,7 +213,7 @@ abstract class GraphicsToolkit {
         try {
           this.a(this.a(param0, param1 ? this.a(param0.c(), param0.a()) : null));
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ha.MF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ha.MF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -234,11 +234,11 @@ abstract class GraphicsToolkit {
     final static void a(byte param0, String param1) {
         try {
           if (param0 < 106) {
-            ki var3 = (ki) null;
-            GraphicsToolkit.a(-117, (java.awt.Canvas) null, -59, 3, (d) null, -128, -20, (ki) null);
+            ResourceArchive var3 = (ResourceArchive) null;
+            GraphicsToolkit.a(-117, (java.awt.Canvas) null, -59, 3, (d) null, -128, -20, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ha.EG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ha.EG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -266,7 +266,7 @@ abstract class GraphicsToolkit {
           }
           this.field_a = var2_int;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

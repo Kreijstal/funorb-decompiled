@@ -43,8 +43,8 @@ final class tr extends ak {
           hc.field_e.a(mm.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
           wo.a(up.field_c, 60, 44, var4_int, 3, param1, 325, 370, 1, true);
           ud.field_q[0].a(80.0f, 402.0f, 1600, 0, 1, 0, 2);
-          qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ki.field_f), (byte) -110, -1);
-          uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ki.field_f), (byte) -35, -1);
+          qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
+          uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.field_f), (byte) -35, -1);
           ud.field_q[1].a(130.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 142, var4_int | 5023231, Integer.toString(iv.field_i), (byte) -101, -1);
           uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(iv.field_i), (byte) -36, -1);
@@ -61,7 +61,7 @@ final class tr extends ak {
           var6 += 127;
           var7 = 0;
           for (var8 = 108; -120 + rl.field_k > var8; var8 += 52) {
-            for (var9 = 44; ResourceArchive.field_c - 96 > var9; var9 += 112) {
+            for (var9 = 44; ArchiveCatalog.field_c - 96 > var9; var9 += 112) {
               if (var7 == 1 + bl.field_e &&
                 param0 >= 250 &&
                 !mq.a(8230, 25)) {
@@ -142,7 +142,7 @@ final class tr extends ak {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -70,7 +70,7 @@ final class ue extends gm {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class ue extends gm {
               }
             }
             var4_ref_of.field_q = true;
-            var4_ref_of.b(false);
+            var4_ref_of.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -235,16 +235,16 @@ final class ue extends gm {
               return;
             }
             var6.field_s = var4;
-            var6.b(false);
+            var6.unlink(false);
             return;
           }
-          IntrusiveNode.a("HS1: " + di.b((byte) -124), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("HS1: " + di.b((byte) -124), (Throwable) null, 0);
           kk.a((byte) -121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ue.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ue.C(" + param0 + ')');
         }
     }
 

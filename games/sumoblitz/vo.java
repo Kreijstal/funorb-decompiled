@@ -105,7 +105,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -170,10 +170,10 @@ final class vo extends ao implements ai {
         this.b(var3 > var2 ? (this.field_H.field_r - var2 << 16) / (var3 - var2) : 0, (byte) -6);
     }
 
-    final static ki b(int param0, int param1) {
-        ki stackIn_7_0 = null;
+    final static ResourceArchive b(int param0, int param1) {
+        ResourceArchive stackIn_7_0 = null;
         if (param1 != -1) {
-          return (ki) null;
+          return (ResourceArchive) null;
         }
         if (GraphicsToolkit.field_g == null &&
           param0 != -1) {
@@ -228,7 +228,7 @@ final class vo extends ao implements ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "vo.V(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "vo.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -446,7 +446,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -644,7 +644,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -727,7 +727,7 @@ final class vo extends ao implements ai {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

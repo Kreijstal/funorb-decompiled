@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rq {
+abstract class ShaderEffect {
     static String enterTheNameYouText;
     static boolean field_d;
     static ri field_c;
@@ -19,7 +19,7 @@ abstract class rq {
           if (!param0) {
             return;
           }
-          rq.c(106);
+          ShaderEffect.c(106);
           return;
         }
         var1 = wd.field_e;
@@ -27,7 +27,7 @@ abstract class rq {
           wd.field_e = null;
         }
         if (param0) {
-          rq.c(106);
+          ShaderEffect.c(106);
         }
     }
 
@@ -65,11 +65,11 @@ abstract class rq {
         }
     }
 
-    rq(HardwareGraphicsToolkit param0) {
+    ShaderEffect(HardwareGraphicsToolkit param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ abstract class rq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -9267) {
-            rq.c(38);
+            ShaderEffect.c(38);
           }
           if (param1 == lf.field_e) {
             stackIn_4_0 = 7681;
@@ -119,11 +119,11 @@ abstract class rq {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final static ne[] a(String param0, ki param1, int param2, String param3) {
+    final static ne[] a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -166,7 +166,7 @@ abstract class rq {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

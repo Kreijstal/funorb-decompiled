@@ -6,7 +6,7 @@ final class iw {
     static int field_b;
     int field_c;
 
-    final static ne a(int param0, int param1, ki param2, int param3) {
+    final static ne a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ne stackIn_6_0 = null;
@@ -34,7 +34,7 @@ final class iw {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uu extends IntrusiveNode {
-    mf field_z;
+    PcmSampleStream field_z;
     int field_D;
     int field_y;
     static qr field_l;
@@ -50,7 +50,7 @@ final class uu extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class uu extends IntrusiveNode {
           var2.c(true);
           var2.c(true);
           var2.c(true);
-          var1.b(param0);
+          var1.unlink(param0);
           return;
         }
         kk.a((byte) -110);

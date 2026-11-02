@@ -29,13 +29,13 @@ final class ou extends na {
           }
           if (nq.field_g.field_o) {
             kh.field_e = kh.field_e | nq.field_g.field_k;
-            wj.field_e = wj.field_e & ~nq.field_g.field_k;
+            OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~nq.field_g.field_k;
             nt.field_r = true;
             nq.field_g = null;
           }
         }
         if (null == ah.field_g) {
-          ki.b(6);
+          ResourceArchive.b(6);
         }
     }
 
@@ -98,7 +98,7 @@ final class ou extends na {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class ou extends na {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class ou extends na {
         int var7Lifetime1Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          sr.field_d = true;
+          LimitedRandomAccessFile.field_d = true;
           cl.field_s = param1;
           if (0 == cl.field_s) {
             var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
@@ -265,7 +265,7 @@ final class ou extends na {
               eb.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == cl.field_s) {
-              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, sr.field_c);
+              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               bf.field_c = new String[var4];
               eb.field_a = new int[var4];
@@ -304,7 +304,7 @@ final class ou extends na {
               jo.field_b[1] = 5;
             }
           } else {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(qo.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(mb.field_c[var5])) {
@@ -429,7 +429,7 @@ final class ou extends na {
             if (0 <= eb.field_a[var4Lifetime2]) {
               stackIn_117_1 = ga.field_h;
             } else {
-              stackIn_117_1 = fn.field_t;
+              stackIn_117_1 = GameClientShell.field_t;
             }
             rf.field_d = stackIn_116_0 + stackIn_117_1;
           }
@@ -441,7 +441,7 @@ final class ou extends na {
           while (bf.field_c.length > var5Lifetime3) {
             var7Lifetime2 = eb.field_a[var5Lifetime3];
             if (var7Lifetime2 < 0) {
-              var6Lifetime1 = var6Lifetime1 + fn.field_t;
+              var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
               var8Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(-116, bf.field_c[var5Lifetime3], true);
               var9 = -(var8Lifetime1 >> 1) + oj.field_a;
@@ -464,7 +464,7 @@ final class ou extends na {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

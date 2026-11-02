@@ -28,7 +28,7 @@ final class jq {
             jq.a(-84, -69);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "jq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

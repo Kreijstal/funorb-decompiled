@@ -17,7 +17,7 @@ final class pe extends WidgetContainer implements ai {
             field_F = (ri[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class pe extends WidgetContainer implements ai {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class pe extends WidgetContainer implements ai {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class pe extends WidgetContainer implements ai {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -194,16 +194,16 @@ final class pe extends WidgetContainer implements ai {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(ki param0, ki param1, int param2, ki param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         ci.field_g = ri.b(param3, "", "fontalpha");
         SocketConnector.field_a = gd.a(param1, (byte) -79, "font", "");
         mn.field_b = ri.b(param3, "", "fontglow");
         hu.field_c = SocketConnector.field_a;
-        wj.field_i = ri.b(param3, "", "smallfontalpha");
+        OpenGlTransparentWaterEffect.field_i = ri.b(param3, "", "smallfontalpha");
         qr.field_a = gd.a(param1, (byte) -39, "smallfont", "");
         au.field_j = ri.b(param3, "", "glowfontalpha");
         sv.field_a = qr.field_a;
@@ -255,7 +255,7 @@ final class pe extends WidgetContainer implements ai {
           kf.field_w = ri.b(param3, "", "particle_ring");
           bj.field_g = ri.a(param3, "", "particle_sprinkle");
           ks.field_t = ri.a(param3, "", "particle_star");
-          rq.field_c = ri.a(param3, "", "particle_pixel");
+          ShaderEffect.field_c = ri.a(param3, "", "particle_pixel");
           ue.field_p = ri.a(param3, "", "particle_pixel_alpha");
           pc.field_c = ri.a(param3, "", "ghost");
           no.field_c = ri.a(param3, "", "ghost_cloud");
@@ -269,7 +269,7 @@ final class pe extends WidgetContainer implements ai {
           sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
           hp.field_n = ri.b(param3, "", "electricity");
           ni.field_h = ri.b(param3, "", "electricity_flip");
-          ResourceArchive.field_f = ri.a(param3, "", "attract");
+          ArchiveCatalog.field_f = ri.a(param3, "", "attract");
           uu.field_o = ri.a(param3, "", "repulse");
           lr.field_c = ri.a(param3, "", "icepatch");
           ei.field_b = ri.b(param3, "", "attractor");
@@ -286,7 +286,7 @@ final class pe extends WidgetContainer implements ai {
           rl.field_o = ri.a(param3, "", "gravitywell_field");
           pq.field_F = ri.b(param3, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

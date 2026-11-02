@@ -22,7 +22,7 @@ final class lf extends ka {
           var2 = (dj) (jf.field_c.b(81));
           while (var2 != null) {
             if (!var2.field_k.a(false)) {
-              var2.b(false);
+              var2.unlink(false);
             } else {
               var2.field_q.f(128 + var2.field_p * kr.field_c >> 8);
             }
@@ -35,7 +35,7 @@ final class lf extends ka {
               if (stackIn_14_0) {
                 var2Lifetime1.field_q.f(128 + kr.field_c * var2Lifetime1.field_p >> 8);
               } else {
-                var2Lifetime1.b(false);
+                var2Lifetime1.unlink(false);
               }
               var2Lifetime1 = (dj) (s.field_u.d((byte) 18));
             }
@@ -45,16 +45,16 @@ final class lf extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "lf.E(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "lf.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void b(byte param0) {
         int var2 = 0;
-        mf[] var1 = null;
-        mf var3 = null;
+        PcmSampleStream[] var1 = null;
+        PcmSampleStream var3 = null;
         int var4 = 0;
-        mf[] var5 = null;
+        PcmSampleStream[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
@@ -72,7 +72,7 @@ final class lf extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1_ref), "lf.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "lf.C(" + param0 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class lf extends ka {
           discarded$3 = new jq((fk) null, 5121, 4, 0);
           discarded$4 = new ke();
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

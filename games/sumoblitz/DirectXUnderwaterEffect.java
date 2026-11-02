@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends rq {
+final class DirectXUnderwaterEffect extends ShaderEffect {
     private static float[] field_h;
     private jagdx.IDirect3DVertexShader field_n;
     private jagdx.IDirect3DVertexShader field_f;
@@ -255,7 +255,7 @@ final class ol extends rq {
         this.a(false, -14);
     }
 
-    ol(DirectXGraphicsToolkit param0, ki param1) {
+    DirectXUnderwaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;

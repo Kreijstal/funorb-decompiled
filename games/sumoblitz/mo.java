@@ -171,7 +171,7 @@ final class mo extends tt {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 

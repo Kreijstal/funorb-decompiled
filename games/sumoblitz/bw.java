@@ -57,7 +57,7 @@ final class bw extends qt {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class bw extends qt {
         String var3 = null;
         long var4 = 0L;
         try {
-          rq.field_d = true;
+          ShaderEffect.field_d = true;
           var2 = "tuhstatbut";
           if (param0) {
             java.applet.Applet var6 = (java.applet.Applet) null;
@@ -148,7 +148,7 @@ final class bw extends qt {
           var4 = -1L;
           gj.a(var4, param1, true, var3, var2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bw.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bw.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

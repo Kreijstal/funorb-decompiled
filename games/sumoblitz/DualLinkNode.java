@@ -10,7 +10,7 @@ class DualLinkNode extends IntrusiveNode {
     static long field_p;
     long secondaryKey;
 
-    final void c(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.secondaryPrevious == null) {
           return;
         }

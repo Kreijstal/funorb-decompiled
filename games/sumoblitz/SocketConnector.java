@@ -74,7 +74,7 @@ abstract class SocketConnector {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ abstract class SocketConnector {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = qo.field_a;
+            stackIn_3_0 = ClientExceptionSupport.field_a;
             return stackIn_3_0;
           }
           if (var2_int > 64) {
@@ -173,7 +173,7 @@ abstract class SocketConnector {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 

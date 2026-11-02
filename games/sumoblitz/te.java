@@ -73,7 +73,7 @@ final class te {
             if (var4 == var3) {
               break;
             }
-            var4.b(false);
+            var4.unlink(false);
           }
         }
         this.field_d = null;
@@ -108,7 +108,7 @@ final class te {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
-            param0.b(false);
+            param0.unlink(false);
           }
           var5 = this.field_i[(int)(param2 & (long)(param1 + this.field_a))];
           param0.previous = var5.previous;
@@ -117,7 +117,7 @@ final class te {
           param0.next.previous = param0;
           param0.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "te.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "te.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class te {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

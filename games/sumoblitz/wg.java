@@ -26,7 +26,7 @@ final class wg {
           while (bf.field_c.length > var3_int) {
             var5 = eb.field_a[var3_int];
             if (var5 < 0) {
-              var4 = var4 + fn.field_t;
+              var4 = var4 + GameClientShell.field_t;
             } else {
               var6 = gt.$cfr$intArgs$a$590e95718a07(-59, bf.field_c[var3_int], true);
               var7 = oj.field_a - (var6 >> 1);
@@ -44,7 +44,7 @@ final class wg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "wg.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "wg.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class wg {
           this.field_b = param2;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

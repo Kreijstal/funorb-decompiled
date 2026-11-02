@@ -45,7 +45,7 @@ final class gw extends nt {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -57,8 +57,8 @@ final class gw extends nt {
         this.field_z = param5;
         this.field_s = param9;
         this.field_u = param7;
-        this.field_y = fi.a(2048, ki.field_b, (byte) -96) + 512;
-        this.field_D = fi.a(128, ki.field_b, (byte) -96);
+        this.field_y = fi.a(2048, ResourceArchive.field_b, (byte) -96) + 512;
+        this.field_D = fi.a(128, ResourceArchive.field_b, (byte) -96);
     }
 
     final boolean a(int param0) {

@@ -36,7 +36,7 @@ abstract class ko extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ',' + param1 + ')');
         }
     }
 

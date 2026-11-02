@@ -36,7 +36,7 @@ final class so {
 
     final static boolean a(byte param0) {
         int var1 = 59 / ((50 - param0) / 50);
-        return sr.field_d;
+        return LimitedRandomAccessFile.field_d;
     }
 
     static {

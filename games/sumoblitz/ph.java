@@ -34,12 +34,12 @@ final class ph {
             this.field_f = this.field_f - 1;
           } else {
             var5 = this.field_g.b((byte) 72);
-            var5.b(false);
-            var5.c(-5106);
+            var5.unlink(false);
+            var5.unlinkSecondary(-5106);
             if (this.field_e == var5) {
               var5 = this.field_g.b((byte) 72);
-              var5.b(false);
-              var5.c(-5106);
+              var5.unlink(false);
+              var5.unlinkSecondary(-5106);
             }
           }
           this.field_c.a(param1, -1, param0);
@@ -58,7 +58,7 @@ final class ph {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class ph {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 

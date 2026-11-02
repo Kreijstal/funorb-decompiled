@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pn extends rq {
+final class OpenGlUnderwaterEffect extends ShaderEffect {
     static int[] field_k;
     static String field_n;
     private wg field_f;
@@ -90,7 +90,7 @@ final class pn extends rq {
         this.a(true, 123);
     }
 
-    pn(OpenGlGraphicsToolkit param0, ki param1) {
+    OpenGlUnderwaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
@@ -157,13 +157,13 @@ final class pn extends rq {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final void a(boolean param0, byte param1) {
         if (param1 >= -71) {
-          pn.d(26);
+          OpenGlUnderwaterEffect.d(26);
         }
     }
 
@@ -194,7 +194,7 @@ final class pn extends rq {
 
     final boolean b(byte param0) {
         if (param0 >= -8) {
-          pn.d(21);
+          OpenGlUnderwaterEffect.d(21);
           return this.field_u;
         }
         return this.field_u;
@@ -249,7 +249,7 @@ final class pn extends rq {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

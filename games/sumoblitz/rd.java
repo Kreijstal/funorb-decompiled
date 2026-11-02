@@ -48,7 +48,7 @@ final class rd extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class rd extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class rd extends IntrusiveNode {
         iu.field_e = param0;
     }
 
-    final static boolean a(ki param0, byte param1, ki param2, ki param3) {
+    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         PlatformTaskDispatcher var5 = null;
         RuntimeException stackIn_19_0 = null;
@@ -167,7 +167,7 @@ final class rd extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

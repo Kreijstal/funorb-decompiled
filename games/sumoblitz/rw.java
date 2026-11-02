@@ -56,7 +56,7 @@ abstract class rw extends DualLinkNode {
           var1.b(0, 0);
           ClientException.a((byte) 76);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "rw.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rw.B(" + param0 + ')');
         }
     }
 

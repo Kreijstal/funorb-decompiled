@@ -152,7 +152,7 @@ final class ri {
         return var3;
     }
 
-    final static ri[] a(ki param0, String param1) {
+    final static ri[] a(ResourceArchive param0, String param1) {
         byte[] var2 = param0.a((byte) 111, param1);
         if (var2 == null) {
           return null;
@@ -160,7 +160,7 @@ final class ri {
         return ri.a(var2);
     }
 
-    final static ri[] b(ki param0, String param1, String param2) {
+    final static ri[] b(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, -1);
         if (var3 == null) {
           return null;
@@ -168,7 +168,7 @@ final class ri {
         return ri.a(var3);
     }
 
-    final static ri a(ki param0, String param1, String param2) {
+    final static ri a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, -1);
         if (var3 == null) {
           return null;

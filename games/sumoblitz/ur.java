@@ -24,7 +24,7 @@ abstract class ur extends hf {
           this.field_Z = param4;
           this.b(param1, -125);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ur.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ur.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ abstract class ur extends hf {
         int fieldTemp$1 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         if (null != this.field_Y) {
-          if (this.field_Y == sr.field_i) {
+          if (this.field_Y == LimitedRandomAccessFile.field_i) {
             fieldTemp$0 = this.field_W + 1;
             this.field_W = this.field_W + 1;
             if (fieldTemp$0 != this.field_T) {
@@ -139,7 +139,7 @@ abstract class ur extends hf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ abstract class ur extends hf {
         try {
           int var3_int = -16 / ((param1 + 72) / 51);
           if (this.field_P != null) {
-            this.field_P.b(false);
+            this.field_P.unlink(false);
           }
           if (param0 == null) {
             this.field_P = new in();
@@ -158,7 +158,7 @@ abstract class ur extends hf {
           this.a(this.field_P, 124);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ur.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ur.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -180,10 +180,10 @@ abstract class ur extends hf {
             this.field_W = 0;
             return;
           }
-          if (this.field_Y == sr.field_i) {
+          if (this.field_Y == LimitedRandomAccessFile.field_i) {
             return;
           }
-          this.field_Y = sr.field_i;
+          this.field_Y = LimitedRandomAccessFile.field_i;
           this.field_W = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,7 +196,7 @@ abstract class ur extends hf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ abstract class ur extends hf {
     }
 
     final void i(int param0) {
-        if (this.field_Y == sr.field_i) {
+        if (this.field_Y == LimitedRandomAccessFile.field_i) {
           return;
         }
         this.field_W = param0;

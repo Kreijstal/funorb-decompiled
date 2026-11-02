@@ -4,7 +4,7 @@
 final class k {
     static String startGameText;
 
-    final static boolean a(ki param0, int param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, int param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -33,7 +33,7 @@ final class k {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -48,7 +48,7 @@ final class k {
           var3.b((byte) 111, param0.field_k);
           var3.b(-10, param0.field_o);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "k.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "k.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

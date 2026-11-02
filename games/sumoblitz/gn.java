@@ -6,7 +6,7 @@ final class gn {
     static String pleaseEnterYourAgeText;
     static boolean field_b;
     String field_f;
-    ki field_a;
+    ResourceArchive field_a;
     static boolean field_d;
     String field_h;
     String field_c;
@@ -63,7 +63,7 @@ final class gn {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

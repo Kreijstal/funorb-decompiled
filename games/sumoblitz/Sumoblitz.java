@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class Sumoblitz extends fn {
+public final class Sumoblitz extends GameClientShell {
     static int[] field_G;
     static hr[] field_J;
     private boolean field_F;
@@ -65,7 +65,7 @@ public final class Sumoblitz extends fn {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "Sumoblitz.L(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "Sumoblitz.L(" + param0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "Sumoblitz.TA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "Sumoblitz.TA(" + param0 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "Sumoblitz.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "Sumoblitz.C(" + param0 + ')');
         }
     }
 
@@ -293,7 +293,7 @@ public final class Sumoblitz extends fn {
             }
             if (so.a((byte) 103)) {
               lk.a(0, 0, lk.field_b, lk.field_c);
-              pn.d((byte) -7);
+              OpenGlUnderwaterEffect.d((byte) -7);
             }
             if (param0 != ra.field_e) {
               var4_intLifetime1 = 256 * eh.field_a / 30;
@@ -343,12 +343,12 @@ public final class Sumoblitz extends fn {
                 var8_ref_String = rb.achievementNames[var4.field_m];
                 if (qw.field_a.length > var4.field_m) {
                   var7 += 65;
-                  qw.field_a[var4.field_m].a(-32 + ResourceArchive.field_c - 180 + 85, 45, 64, 64, 0, 16777215 | var5_int << 24, 1);
+                  qw.field_a[var4.field_m].a(-32 + ArchiveCatalog.field_c - 180 + 85, 45, 64, 64, 0, 16777215 | var5_int << 24, 1);
                 }
               }
-              bq.field_c.a(150, var5_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, -1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
-              bq.field_c.a(150, var5_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, 1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
-              bq.field_c.a(150, var5_int << 24 | 16777215, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, var7, -1, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
+              bq.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, -1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
+              bq.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, 1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
+              bq.field_c.a(150, var5_int << 24 | 16777215, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var7, -1, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
             }
             boolean decompiledFrameRemainder0 = true;
             if (oj.a(false)) {
@@ -411,7 +411,7 @@ public final class Sumoblitz extends fn {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw qo.a((Throwable) ((Object) var2_ref), "Sumoblitz.I(" + param0 + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "Sumoblitz.I(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -425,7 +425,7 @@ public final class Sumoblitz extends fn {
         RuntimeException var2 = null;
         try {
           if (null != vf.field_a) {
-            ResourceArchive.a(vf.field_a, -5);
+            ArchiveCatalog.a(vf.field_a, -5);
             vf.field_a = null;
             ls.b(param0 - 21961);
           }
@@ -448,7 +448,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "Sumoblitz.QA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "Sumoblitz.QA(" + param0 + ')');
         }
     }
 
@@ -460,7 +460,7 @@ public final class Sumoblitz extends fn {
         try {
           field_G = null;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "Sumoblitz.UA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "Sumoblitz.UA(" + param0 + ')');
         }
     }
 
@@ -508,7 +508,7 @@ public final class Sumoblitz extends fn {
                 oq.a(-24233);
                 ad.c(0);
                 if (5 == nj.field_b &&
-                  0 == wj.field_e) {
+                  0 == OpenGlTransparentWaterEffect.field_e) {
                   nj.field_b = 2;
                   av.a(-7753, false, 2);
                 }
@@ -571,7 +571,7 @@ public final class Sumoblitz extends fn {
           }
           if ((decompiledFrameRemainder0) &&
             (decompiledSharedTail0)) {
-            rg.a((byte) 55, pn.field_r);
+            rg.a((byte) 55, OpenGlUnderwaterEffect.field_r);
             if (this.a(true, true)) {
               sa.field_j = true;
             }
@@ -579,7 +579,7 @@ public final class Sumoblitz extends fn {
           var2_int = 35 % ((37 - param0) / 61);
           if (!vs.b((byte) 9)) {
             do {
-              var3_ref_hg = (hg) (pn.field_q.c(9));
+              var3_ref_hg = (hg) (OpenGlUnderwaterEffect.field_q.c(9));
               if (var3_ref_hg == null) {
                 if (var4 == 0) {
                   break;
@@ -606,7 +606,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "Sumoblitz.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "Sumoblitz.D(" + param0 + ')');
         }
     }
 
@@ -623,22 +623,22 @@ public final class Sumoblitz extends fn {
             return false;
           }
           if (var2.c()) {
-            wj.field_k = false;
+            OpenGlTransparentWaterEffect.field_k = false;
             ul.field_f = 0;
             if (field_L) {
               ul.field_f = 1;
-              wj.field_k = true;
+              OpenGlTransparentWaterEffect.field_k = true;
             }
           } else {
             ul.field_f = 1;
-            wj.field_k = true;
+            OpenGlTransparentWaterEffect.field_k = true;
           }
           er.a(false);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "Sumoblitz.RA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "Sumoblitz.RA(" + param0 + ')');
         }
     }
 
@@ -753,7 +753,7 @@ public final class Sumoblitz extends fn {
                                           }
                                           if (so.a((byte) 124)) {
                                             lk.a(0, 0, lk.field_b, lk.field_c);
-                                            pn.d((byte) -7);
+                                            OpenGlUnderwaterEffect.d((byte) -7);
                                           }
                                           if (0 != ra.field_e) {
                                             var5_int = eh.field_a * 256 / 30;
@@ -801,7 +801,7 @@ public final class Sumoblitz extends fn {
                                             if (0 <= var5.field_m) {
                                               var9_ref_String = rb.achievementNames[var5.field_m];
                                               if (!(qw.field_a.length <= var5.field_m)) {
-                                                qw.field_a[var5.field_m].a(-32 + (85 + ResourceArchive.field_c - 180), 45, 64, 64, 0, 16777215 | var6_int << 24, 1);
+                                                qw.field_a[var5.field_m].a(-32 + (85 + ArchiveCatalog.field_c - 180), 45, 64, 64, 0, 16777215 | var6_int << 24, 1);
                                                 var8 += 65;
                                                 if (var11 != 0) {
                                                   var9_ref_String = aa.arcadeModeUnlockedText;
@@ -810,9 +810,9 @@ public final class Sumoblitz extends fn {
                                             } else {
                                               var9_ref_String = aa.arcadeModeUnlockedText;
                                             }
-                                            bq.field_c.a(150, var6_int << 24, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                                            bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                                            bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                                            bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                                            bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                                            bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                                           }
                                           boolean decompiledSharedTail8 = !(oj.a(false));
                                           if (!decompiledSharedTail8) {
@@ -897,10 +897,10 @@ public final class Sumoblitz extends fn {
                         pe.a(20, 30.0f, ProxySocketConnector.a(jf.waitingForInstrumentsText, (byte) 85, 0, gg.field_r, sg.loadingInstrumentsText));
                         return false;
                       }
-                      pe.a(20, 20.0f, pt.a("", er.field_c, fn.waitingForSoundEffectsText, true, hq.loadingSoundEffectsText));
+                      pe.a(20, 20.0f, pt.a("", er.field_c, GameClientShell.waitingForSoundEffectsText, true, hq.loadingSoundEffectsText));
                       return false;
                     }
-                    pe.a(20, 10.0f, pt.a("", SecondaryNodeDeque.field_d, fn.waitingForSoundEffectsText, true, hq.loadingSoundEffectsText));
+                    pe.a(20, 10.0f, pt.a("", SecondaryNodeDeque.field_d, GameClientShell.waitingForSoundEffectsText, true, hq.loadingSoundEffectsText));
                     return false;
                   }
                   pe.a(20, 5.0f, pt.a("arial13", vb.field_J, ce.waitingForFontsText, true, ow.loadingFontsText));
@@ -954,7 +954,7 @@ public final class Sumoblitz extends fn {
                     }
                     if (so.a((byte) 118)) {
                       lk.a(0, 0, lk.field_b, lk.field_c);
-                      pn.d((byte) -7);
+                      OpenGlUnderwaterEffect.d((byte) -7);
                     }
                     if (ra.field_e != 0) {
                       var5_int = eh.field_a * 256 / 30;
@@ -999,7 +999,7 @@ public final class Sumoblitz extends fn {
                         var9_ref_String = rb.achievementNames[var5.field_m];
                         if (!(var5.field_m >= qw.field_a.length)) {
                           var8 += 65;
-                          qw.field_a[var5.field_m].a(-180 + ResourceArchive.field_c + 85 - 32, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                          qw.field_a[var5.field_m].a(-180 + ArchiveCatalog.field_c + 85 - 32, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                           if (var11 != 0) {
                             var9_ref_String = aa.arcadeModeUnlockedText;
                           }
@@ -1007,9 +1007,9 @@ public final class Sumoblitz extends fn {
                       } else {
                         var9_ref_String = aa.arcadeModeUnlockedText;
                       }
-                      bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                     }
                     stackIn_276_0 = !param1;
                     boolean decompiledFrameRemainder4 = true;
@@ -1120,7 +1120,7 @@ public final class Sumoblitz extends fn {
                     }
                     if (so.a((byte) 109)) {
                       lk.a(0, 0, lk.field_b, lk.field_c);
-                      pn.d((byte) -7);
+                      OpenGlUnderwaterEffect.d((byte) -7);
                     }
                     if (ra.field_e != 0) {
                       var5_int = eh.field_a * 256 / 30;
@@ -1170,12 +1170,12 @@ public final class Sumoblitz extends fn {
                         var9_ref_String = rb.achievementNames[var5.field_m];
                         if (qw.field_a.length > var5.field_m) {
                           var8 += 65;
-                          qw.field_a[var5.field_m].a(ResourceArchive.field_c - 180 + 53, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                          qw.field_a[var5.field_m].a(ArchiveCatalog.field_c - 180 + 53, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                         }
                       }
-                      bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, var8 - 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var8 - 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                     }
                     boolean decompiledFrameRemainder2 = true;
                     if (oj.a(false)) {
@@ -1297,7 +1297,7 @@ public final class Sumoblitz extends fn {
                       }
                       if (so.a((byte) -36)) {
                         lk.a(0, 0, lk.field_b, lk.field_c);
-                        pn.d((byte) -7);
+                        OpenGlUnderwaterEffect.d((byte) -7);
                       }
                       if (ra.field_e != 0) {
                         var5_int = 256 * eh.field_a / 30;
@@ -1351,12 +1351,12 @@ public final class Sumoblitz extends fn {
                           var9_ref_String = rb.achievementNames[var5.field_m];
                           if (qw.field_a.length > var5.field_m) {
                             var8 += 65;
-                            qw.field_a[var5.field_m].a(-127 + ResourceArchive.field_c, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                            qw.field_a[var5.field_m].a(-127 + ArchiveCatalog.field_c, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                           }
                         }
-                        bq.field_c.a(150, var6_int << 24, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                        bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                        bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ResourceArchive.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                        bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                        bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                        bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                       }
                       boolean decompiledSharedTail2 = !(oj.a(false));
                       if (!decompiledSharedTail2) {
@@ -1496,7 +1496,7 @@ public final class Sumoblitz extends fn {
                   }
                   if (so.a((byte) -50)) {
                     lk.a(0, 0, lk.field_b, lk.field_c);
-                    pn.d((byte) -7);
+                    OpenGlUnderwaterEffect.d((byte) -7);
                   }
                   if (ra.field_e != 0) {
                     var5_int = eh.field_a * 256 / 30;
@@ -1541,7 +1541,7 @@ public final class Sumoblitz extends fn {
                       var9_ref_String = rb.achievementNames[var5.field_m];
                       if (!(var5.field_m >= qw.field_a.length)) {
                         var8 += 65;
-                        qw.field_a[var5.field_m].a(-32 + (85 + (ResourceArchive.field_c - 180)), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                        qw.field_a[var5.field_m].a(-32 + (85 + (ArchiveCatalog.field_c - 180)), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                         if (var11 != 0) {
                           var9_ref_String = aa.arcadeModeUnlockedText;
                         }
@@ -1549,9 +1549,9 @@ public final class Sumoblitz extends fn {
                     } else {
                       var9_ref_String = aa.arcadeModeUnlockedText;
                     }
-                    bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                    bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, var8 + 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                    bq.field_c.a(150, 16777215 | var6_int << 24, 0, 170, -180 + ResourceArchive.field_c, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                    bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                    bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var8 + 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                    bq.field_c.a(150, 16777215 | var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                   }
                   boolean decompiledSharedTail0 = !(oj.a(false));
                   if (!decompiledSharedTail0) {
@@ -1620,7 +1620,7 @@ public final class Sumoblitz extends fn {
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw qo.a((Throwable) ((Object) var3_ref), "Sumoblitz.PA(" + param0 + ',' + param1 + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3_ref), "Sumoblitz.PA(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1649,13 +1649,13 @@ public final class Sumoblitz extends fn {
           bi.a((byte) 84);
           GameKeyHandler.a(-2851);
           wv.a(true);
-          fn.k(119);
+          GameClientShell.k(119);
           ClientException.b((byte) -18);
-          cc.a(126);
+          JaggrabDownloader.a(126);
           MouseInputHandler.a(8);
           MouseWheelInput.a((byte) -75);
           lk.a();
-          ki.a((byte) 35);
+          ResourceArchive.a((byte) 35);
           wf.a(116);
           ws.a((byte) -71);
           hk.a(0);
@@ -1678,7 +1678,7 @@ public final class Sumoblitz extends fn {
           vm.a((byte) 118);
           gd.a(!param0);
           ti.a(87);
-          ResourceArchive.a(2);
+          ArchiveCatalog.a(2);
           BufferedSocket.d(68);
           IntrusiveNode.b((byte) 80);
           ta.a(false);
@@ -1687,7 +1687,7 @@ public final class Sumoblitz extends fn {
           uu.a((byte) 115);
           sh.g();
           rh.a((byte) 81);
-          du.h();
+          AudioOutput.h();
           dn.a(-3);
           kp.a(-1);
           sg.a(-95);
@@ -1722,7 +1722,7 @@ public final class Sumoblitz extends fn {
           ps.a(28);
           er.b(true);
           nt.d(31295);
-          qo.a(false);
+          ClientExceptionSupport.a(false);
           kh.a(2);
           dr.c(false);
           fe.n((byte) -68);
@@ -1747,7 +1747,7 @@ public final class Sumoblitz extends fn {
           SpriteState.a(-109);
           DualLinkNode.d(37);
           UpgradeStatNames.a(1600);
-          sr.c(100);
+          LimitedRandomAccessFile.c(100);
           wo.a(92);
           wn.a(0);
           kw.a((byte) -88);
@@ -1858,7 +1858,7 @@ public final class Sumoblitz extends fn {
           ko.d(0);
           tf.a((byte) 17);
           mr.a((byte) -109);
-          rq.c(-119);
+          ShaderEffect.c(-119);
           em.a(true);
           il.a(26238);
           jl.c(786336);
@@ -1936,9 +1936,9 @@ public final class Sumoblitz extends fn {
           sq.a(-127);
           rc.b(124);
           go.a((byte) -17);
-          pn.d(12);
-          wj.d((byte) 79);
-          ej.d(!param0);
+          OpenGlUnderwaterEffect.d(12);
+          OpenGlTransparentWaterEffect.d((byte) 79);
+          OpenGlEnvironmentWaterEffect.d(!param0);
           oh.a((byte) -60);
           ua.a((byte) 13);
           ju.a(param0);
@@ -2019,7 +2019,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "Sumoblitz.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "Sumoblitz.E(" + param0 + ')');
         }
     }
 
@@ -2032,7 +2032,7 @@ public final class Sumoblitz extends fn {
         try {
           this.a(13, "sumoblitz", 480);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "Sumoblitz.init()");
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "Sumoblitz.init()");
         }
     }
 
@@ -2097,7 +2097,7 @@ public final class Sumoblitz extends fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "Sumoblitz.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "Sumoblitz.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

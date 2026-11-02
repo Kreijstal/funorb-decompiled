@@ -50,7 +50,7 @@ final class sl extends ln implements fk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "sl.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "sl.C(" + param0 + ',' + param1 + ')');
         }
     }
 

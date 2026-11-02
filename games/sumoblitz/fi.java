@@ -52,7 +52,7 @@ final class fi extends nt {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class fi extends nt {
           var3_int = var3_int * (-this.field_p + 100);
           kw.field_a.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), var3_int, 0, 1, this.field_q, 2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

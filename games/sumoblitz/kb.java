@@ -30,7 +30,7 @@ abstract class kb {
 
     abstract void b(int param0);
 
-    final static Sprite[] a(String param0, ki param1, boolean param2, String param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -75,7 +75,7 @@ abstract class kb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ abstract class kb {
           jaggl.OpenGL.glBufferDataARBub(param1, this.field_h, param2, 0, this.field_e ? 35040 : 35044);
           this.field_g.field_Xb = this.field_g.field_Xb + this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

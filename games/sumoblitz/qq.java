@@ -24,7 +24,7 @@ final class qq extends dh implements op {
           int var3_int = 2 % ((param0 - 72) / 46);
           this.field_S = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class qq extends dh implements op {
         this.field_S.a((byte) -117);
     }
 
-    final static dj a(int param0, mf param1) {
+    final static dj a(int param0, PcmSampleStream param1) {
         dj var2 = null;
         RuntimeException var2_ref = null;
         dj stackIn_3_0 = null;
@@ -83,7 +83,7 @@ final class qq extends dh implements op {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class qq extends dh implements op {
           int var5_int = 126 % ((param1 + 25) / 45);
           this.field_T = ko.field_p - (this.field_r + param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -19,7 +19,7 @@ final class qv extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1) {
-        mf var2 = ImageProducerRasterBuffer.field_n[param0];
+        PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[param0];
         if (param1 != 4) {
           CharSequence var3 = (CharSequence) null;
           qv.a(false, -82, (CharSequence) null);
@@ -102,7 +102,7 @@ final class qv extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

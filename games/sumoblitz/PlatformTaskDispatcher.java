@@ -8,7 +8,7 @@ final class PlatformTaskDispatcher implements Runnable {
     java.awt.EventQueue field_g;
     private static volatile long field_c;
     static String field_o;
-    sr field_l;
+    LimitedRandomAccessFile field_l;
     static String field_u;
     private ep field_w;
     private static String field_s;
@@ -18,26 +18,26 @@ final class PlatformTaskDispatcher implements Runnable {
     private boolean field_m;
     private Object field_r;
     static java.lang.reflect.Method field_e;
-    sr[] field_i;
+    LimitedRandomAccessFile[] field_i;
     boolean field_f;
     boolean field_t;
     private jr field_k;
-    sr field_n;
+    LimitedRandomAccessFile field_n;
     private jr field_x;
     private Thread field_a;
     private Object field_v;
-    sr field_d;
+    LimitedRandomAccessFile field_d;
     private bm field_b;
 
-    private final static sr a(String param0, boolean param1, String param2, int param3) {
+    private final static LimitedRandomAccessFile a(String param0, boolean param1, String param2, int param3) {
         try {
           int var6 = 0;
-          sr stackIn_15_0 = null;
+          LimitedRandomAccessFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          sr var8 = null;
+          LimitedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
           if (!param1) {
@@ -59,7 +59,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!(0 < var7.length()) ||
               new File(var7).exists()) {
               try {
-                var8 = new sr(new File(var7, var4), "rw", 10000L);
+                var8 = new LimitedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -88,7 +88,7 @@ final class PlatformTaskDispatcher implements Runnable {
         var7 = this;
         synchronized (var7) {
           if (param3) {
-            this.field_d = (sr) null;
+            this.field_d = (LimitedRandomAccessFile) null;
           }
           if (this.field_x == null) {
             this.field_k = var6;
@@ -186,7 +186,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          sr var3_ref = null;
+          LimitedRandomAccessFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
           hh var3_ref3 = null;
@@ -441,7 +441,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     final jr a(int param0, Class param1, String param2, Class[] param3) {
         if (param0 != 0) {
-          this.field_i = (sr[]) null;
+          this.field_i = (LimitedRandomAccessFile[]) null;
         }
         return this.a(new Object[]{param1, param2, param3}, 0, 0, false, 8);
     }
@@ -607,12 +607,12 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         el.a(0, field_j, field_p);
         if (this.field_f) {
-          this.field_n = new sr(el.a((String) null, field_j, 95, "random.dat"), "rw", 25L);
-          this.field_l = new sr(el.a("main_file_cache.dat2", (byte) -8), "rw", 314572800L);
-          this.field_d = new sr(el.a("main_file_cache.idx255", (byte) -8), "rw", 1048576L);
-          this.field_i = new sr[param2];
+          this.field_n = new LimitedRandomAccessFile(el.a((String) null, field_j, 95, "random.dat"), "rw", 25L);
+          this.field_l = new LimitedRandomAccessFile(el.a("main_file_cache.dat2", (byte) -8), "rw", 314572800L);
+          this.field_d = new LimitedRandomAccessFile(el.a("main_file_cache.idx255", (byte) -8), "rw", 1048576L);
+          this.field_i = new LimitedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_i[var5_int] = new sr(el.a("main_file_cache.idx" + var5_int, (byte) -8), "rw", 1048576L);
+            this.field_i[var5_int] = new LimitedRandomAccessFile(el.a("main_file_cache.idx" + var5_int, (byte) -8), "rw", 1048576L);
           }
           if (this.field_t) {
             try {

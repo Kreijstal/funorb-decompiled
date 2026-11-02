@@ -5,11 +5,11 @@ final class wd extends se {
     private String field_i;
     static GameKeyHandler field_e;
     private String field_g;
-    static ki field_j;
+    static ResourceArchive field_j;
     static String continueText;
-    static du field_f;
+    static AudioOutput field_f;
 
-    final static ki a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 == 125) {
           return ng.a(1, -74, true, param0, false, false);
         }
@@ -26,7 +26,7 @@ final class wd extends se {
             this.a((PacketBuffer) null, (byte) 29);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class wd extends se {
           this.field_i = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

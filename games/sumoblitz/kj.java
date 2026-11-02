@@ -33,7 +33,7 @@ final class kj extends bq {
           this.field_b.g(0, 80);
           this.field_f.a(true);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class kj extends bq {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              IntrusiveNode.a("MGR1: " + param3, (Throwable) null, 0);
+              IntrusiveNode.reportClientError("MGR1: " + param3, (Throwable) null, 0);
             }
             if (param0 == -23166) {
               return;
@@ -174,7 +174,7 @@ final class kj extends bq {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -199,7 +199,7 @@ final class kj extends bq {
           this.field_b.a(46, param2);
           this.field_b.c(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

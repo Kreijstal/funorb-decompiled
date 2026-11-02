@@ -60,7 +60,7 @@ class ar extends wp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ class ar extends wp {
             }
             var10.field_o = true;
             var10.field_m = (byte[]) (var6);
-            var10.b(false);
+            var10.unlink(false);
           } else {
             if (var2 == 1) {
               var4 = var11.c(true);
@@ -123,17 +123,17 @@ class ar extends wp {
                 kk.a((byte) -123);
                 return;
               }
-              var5_ref_db.b(false);
+              var5_ref_db.unlink(false);
               return;
             }
-            IntrusiveNode.a("A1: " + di.b((byte) -9), (Throwable) null, 0);
+            IntrusiveNode.reportClientError("A1: " + di.b((byte) -9), (Throwable) null, 0);
             kk.a((byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ar.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ar.E(" + param0 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ class ar extends wp {
         try {
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -242,7 +242,7 @@ class ar extends wp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ class ar extends wp {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

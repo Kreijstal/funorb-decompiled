@@ -13,7 +13,7 @@ final class uk extends gt implements ai {
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class uk extends gt implements ai {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class uk extends gt implements ai {
           kh.a(false);
           this.n(-7);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "uk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class uk extends gt implements ai {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class uk extends gt implements ai {
             }
             return false;
           }
-          var2 = ki.c((byte) 94);
+          var2 = ResourceArchive.c((byte) 94);
           if (var2 == null) {
             if (param0 == -28778) {
               return super.g(param0 + 0);

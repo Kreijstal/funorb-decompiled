@@ -6,7 +6,7 @@ final class pi {
     static hr field_d;
     static String passwordText;
     static int field_e;
-    static ki field_c;
+    static ResourceArchive field_c;
     static String field_b;
     static String yourEmailAddressIsText;
 
@@ -95,7 +95,7 @@ final class pi {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

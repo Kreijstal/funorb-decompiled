@@ -117,7 +117,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class ProxySocketConnector extends SocketConnector {
         emailIsValidText = null;
         if (param0 != 1183) {
           String var2 = (String) null;
-          ProxySocketConnector.a((String) null, (byte) 106, 118, (ki) null, (String) null);
+          ProxySocketConnector.a((String) null, (byte) 106, 118, (ResourceArchive) null, (String) null);
         }
     }
 
@@ -213,7 +213,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ final class ProxySocketConnector extends SocketConnector {
         throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
     }
 
-    final static String a(String param0, byte param1, int param2, ki param3, String param4) {
+    final static String a(String param0, byte param1, int param2, ResourceArchive param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -365,7 +365,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

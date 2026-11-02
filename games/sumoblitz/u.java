@@ -20,7 +20,7 @@ final class u extends hf implements ai {
           if (ku.field_I != param1) {
             if (am.field_e == param1) {
               this.field_p = this.field_p + 10;
-              var3 = sr.field_c;
+              var3 = LimitedRandomAccessFile.field_c;
               if (jt.a((byte) -96)) {
                 this.field_p = this.field_p + 20;
                 var3 = c.unfortunatelyThereWasAText;
@@ -59,11 +59,11 @@ final class u extends hf implements ai {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static td a(ki param0, int param1, int param2) {
+    final static td a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -95,7 +95,7 @@ final class u extends hf implements ai {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class u extends hf implements ai {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -177,13 +177,13 @@ final class u extends hf implements ai {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(tv param0, int param1, byte param2, int param3, boolean param4) {
         RuntimeException var5 = null;
-        ki var6 = null;
+        ResourceArchive var6 = null;
         ud stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
@@ -203,8 +203,8 @@ final class u extends hf implements ai {
           if (param2 == -87) {
             return;
           }
-          var6 = (ki) null;
-          u.a((ki) null, -117, -123);
+          var6 = (ResourceArchive) null;
+          u.a((ResourceArchive) null, -117, -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ final class u extends hf implements ai {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

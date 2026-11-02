@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sr {
+final class LimitedRandomAccessFile {
     private RandomAccessFile field_h;
     private long field_e;
     private long field_f;
@@ -28,7 +28,7 @@ final class sr {
           var5_int = this.field_h.read(param0, param3, param2);
           if (param1 != 2) {
             var6 = (PacketBuffer) null;
-            sr.a((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (PacketBuffer) null, 22);
+            LimitedRandomAccessFile.a((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (PacketBuffer) null, 22);
           }
           if (var5_int > 0) {
             this.field_e = this.field_e + (long)var5_int;
@@ -45,7 +45,7 @@ final class sr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class sr {
         si.a(115, 38, 148, param0 - 22028, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
         iv.field_g[0] = new ak(0);
         if (param0 != 22030) {
-          sr.d(35);
+          LimitedRandomAccessFile.d(35);
         }
     }
 
@@ -80,7 +80,7 @@ final class sr {
           }
           this.field_e = this.field_e + (long)param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sr.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sr.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class sr {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -189,19 +189,19 @@ final class sr {
         }
         if (param0 != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
-          sr.a((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (PacketBuffer) null, 24);
+          LimitedRandomAccessFile.a((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (PacketBuffer) null, 24);
         }
     }
 
     final long a(int param0) throws IOException {
         if (param0 <= 34) {
           PacketBuffer var3 = (PacketBuffer) null;
-          sr.a((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (PacketBuffer) null, -103);
+          LimitedRandomAccessFile.a((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (PacketBuffer) null, -103);
         }
         return this.field_h.length();
     }
 
-    sr(File param0, String param1, long param2) throws IOException {
+    LimitedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -221,7 +221,7 @@ final class sr {
           }
           this.field_h.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

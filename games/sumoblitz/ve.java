@@ -62,7 +62,7 @@ abstract class ve extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ abstract class ve extends IntrusiveNode {
 
     abstract void c(int param0);
 
-    final static ki a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, int param3, boolean param4) {
         if (param0 == 11880) {
           return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
         }
@@ -86,7 +86,7 @@ abstract class ve extends IntrusiveNode {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

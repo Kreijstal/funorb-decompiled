@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends rq {
+final class DirectXEnvironmentWaterEffect extends ShaderEffect {
     private sk field_k;
     private DirectXGraphicsToolkit field_h;
     private static float[] field_f;
@@ -176,7 +176,7 @@ final class tb extends rq {
         }
     }
 
-    tb(DirectXGraphicsToolkit param0, ki param1, sk param2) {
+    DirectXEnvironmentWaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1, sk param2) {
         super(param0);
         boolean stackIn_14_1 = false;
         this.field_k = param2;

@@ -111,7 +111,7 @@ class ff extends en {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ class ff extends en {
         this.field_p = 0;
     }
 
-    final static void a(byte param0, ki param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         try {
           rc.field_l[0] = eb.field_b.b(0, "fence_hum_bg_loop");
           rc.field_l[2] = eb.field_b.b(0, "landmine_red_flash");
@@ -178,9 +178,9 @@ class ff extends en {
           rc.field_l[9] = eb.field_b.b(0, "accelerator_pad_4");
           rc.field_l[11] = eb.field_b.b(0, "attractor_pulse_loop");
           rc.field_l[12] = eb.field_b.b(0, "repeller_pulse_loop");
-          ImageProducerRasterBuffer.field_n[0] = mf.a(rc.field_l[4], 100, 96);
-          ImageProducerRasterBuffer.field_n[1] = mf.a(rc.field_l[11], 100, 96);
-          ImageProducerRasterBuffer.field_n[2] = mf.a(rc.field_l[12], 100, 96);
+          ImageProducerRasterBuffer.field_n[0] = PcmSampleStream.a(rc.field_l[4], 100, 96);
+          ImageProducerRasterBuffer.field_n[1] = PcmSampleStream.a(rc.field_l[11], 100, 96);
+          ImageProducerRasterBuffer.field_n[2] = PcmSampleStream.a(rc.field_l[12], 100, 96);
           rc.field_l[17] = eb.field_b.b(0, "menu_mouseover");
           rc.field_l[18] = eb.field_b.b(0, "multiplier_upgrade");
           rc.field_l[19] = eb.field_b.b(0, "npc_bomb_charge_and_explode1");
@@ -201,7 +201,7 @@ class ff extends en {
             ff.a(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ff.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ff.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

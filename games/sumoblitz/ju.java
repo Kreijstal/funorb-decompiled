@@ -33,7 +33,7 @@ final class ju extends ua implements cr {
 
     final static void g(int param0) {
         wt.field_h[1] = iv.field_i;
-        wt.field_h[0] = ki.field_f;
+        wt.field_h[0] = ResourceArchive.field_f;
         wt.field_h[2] = hc.field_f;
         pl.field_u = wt.field_h[1] + wt.field_h[0] - 2 + (wt.field_h[2] - 1);
         if (param0 < 100) {
@@ -103,7 +103,7 @@ final class ju extends ua implements cr {
         try {
           this.field_o = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

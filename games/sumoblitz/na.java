@@ -13,7 +13,7 @@ abstract class na extends dw implements pw {
             this.field_d = (dh) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "na.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -41,15 +41,15 @@ abstract class na extends dw implements pw {
         try {
           this.a((byte) -101);
           if (param1 > -127) {
-            ki var4 = (ki) null;
-            na.a(-98, -50, (ki) null, -100);
+            ResourceArchive var4 = (ResourceArchive) null;
+            na.a(-98, -50, (ResourceArchive) null, -100);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "na.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static Sprite a(int param0, int param1, ki param2, int param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -77,7 +77,7 @@ abstract class na extends dw implements pw {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ abstract class na extends dw implements pw {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

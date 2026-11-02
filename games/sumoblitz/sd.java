@@ -56,7 +56,7 @@ final class sd {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -80,8 +80,8 @@ final class sd {
           }
           var4 = var2;
           var2 = (jt) (this.field_c.a(-1));
-          var4.b(false);
-          var4.c(-5106);
+          var4.unlink(false);
+          var4.unlinkSecondary(-5106);
           this.field_d = this.field_d + var4.field_z;
         }
         if (param0 == -92) {
@@ -100,8 +100,8 @@ final class sd {
         }
         Object var5 = var7.c((byte) -81);
         if (var5 == null) {
-          var7.b(false);
-          var7.c(-5106);
+          var7.unlink(false);
+          var7.unlinkSecondary(-5106);
           this.field_d = this.field_d + var7.field_z;
           return null;
         }
@@ -110,8 +110,8 @@ final class sd {
           this.field_c.a(-20657, var6, var7.key);
           this.field_h.a((DualLinkNode) (var6), (byte) -122);
           ((jt) ((Object) var6)).secondaryKey = 0L;
-          var7.b(false);
-          var7.c(-5106);
+          var7.unlink(false);
+          var7.unlinkSecondary(-5106);
         } else {
           this.field_h.a((DualLinkNode) (var7), (byte) -124);
           var7.secondaryKey = 0L;
@@ -135,8 +135,8 @@ final class sd {
         while (var3 != null) {
           if (var3.e(param1 ^ -22690)) {
             if (var3.c((byte) -62) == null) {
-              var3.b(false);
-              var3.c(-5106);
+              var3.unlink(false);
+              var3.unlinkSecondary(-5106);
               this.field_d = this.field_d + var3.field_z;
             }
           } else {
@@ -149,8 +149,8 @@ final class sd {
             var4 = new kl(var3.c((byte) -102), var3.field_z);
             this.field_c.a(param1 ^ -2104, var4, var3.key);
             pt.a(var3, 2066481250, var4);
-            var3.b(false);
-            var3.c(-5106);
+            var3.unlink(false);
+            var3.unlinkSecondary(-5106);
           }
           var3 = (jt) (this.field_h.a((byte) -122));
         }
@@ -348,7 +348,7 @@ final class sd {
               }
             }
             param0.a(var4, false);
-            var17.b(false);
+            var17.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -360,7 +360,7 @@ final class sd {
             } else {
               stackIn_67_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -410,8 +410,8 @@ final class sd {
         RuntimeException var3 = null;
         try {
           if (param0 != null) {
-            param0.b(false);
-            param0.c(-5106);
+            param0.unlink(false);
+            param0.unlinkSecondary(-5106);
             this.field_d = this.field_d + param0.field_z;
           }
           if (param1 != -124) {
@@ -428,7 +428,7 @@ final class sd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ final class sd {
             this.a(-95L, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -460,8 +460,8 @@ final class sd {
           }
           var4 = var2;
           var2 = (jt) (this.field_c.a(-1));
-          var4.b(false);
-          var4.c(-5106);
+          var4.unlink(false);
+          var4.unlinkSecondary(-5106);
           this.field_d = this.field_d + var4.field_z;
         }
         return null;
@@ -522,7 +522,7 @@ final class sd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -563,7 +563,7 @@ final class sd {
           this.field_h.a((DualLinkNode) (var6_ref), (byte) -122);
           ((jt) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

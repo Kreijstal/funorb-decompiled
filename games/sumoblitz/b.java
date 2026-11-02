@@ -21,7 +21,7 @@ final class b {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class b {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class b {
             var16_ref.field_o = true;
             var16_ref.field_k = var17[0];
             var16_ref.field_m = var3;
-            var16_ref.b(false);
+            var16_ref.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -199,9 +199,9 @@ final class b {
               var14.field_m = lr.a(-14808);
               var14.field_o = true;
               var14.field_k = var14.field_m[0];
-              var14.b(false);
+              var14.unlink(false);
             } else {
-              IntrusiveNode.a("A1: " + di.b((byte) 110), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("A1: " + di.b((byte) 110), (Throwable) null, 0);
               kk.a((byte) -120);
             }
           } else {
@@ -210,13 +210,13 @@ final class b {
               kk.a((byte) -113);
               return;
             }
-            var12.b(false);
+            var12.unlink(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "b.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "b.D(" + param0 + ')');
         }
     }
 

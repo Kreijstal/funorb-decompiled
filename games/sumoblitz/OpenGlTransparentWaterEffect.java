@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends rq {
+final class OpenGlTransparentWaterEffect extends ShaderEffect {
     private sk field_f;
     static ts field_h;
     private OpenGlGraphicsToolkit field_j;
@@ -22,10 +22,10 @@ final class wj extends rq {
     final void a(int param0, int param1, ed param2) {
         try {
           if (param1 != 18834) {
-            wj.d(-57);
+            OpenGlTransparentWaterEffect.d(-57);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class wj extends rq {
         field_i = null;
         if (param0 != 79) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-          wj.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, false);
+          OpenGlTransparentWaterEffect.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, false);
         }
     }
 
@@ -80,7 +80,7 @@ final class wj extends rq {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class wj extends rq {
     final void a(boolean param0, byte param1) {
         this.field_b.a((byte) -83, cv.field_F, lf.field_e);
         if (param1 >= -71) {
-          wj.d(-46);
+          OpenGlTransparentWaterEffect.d(-46);
         }
     }
 
@@ -303,11 +303,11 @@ final class wj extends rq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "wj.H(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "wj.H(" + param0 + ')');
         }
     }
 
-    wj(OpenGlGraphicsToolkit param0, ki param1, sk param2) {
+    OpenGlTransparentWaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1, sk param2) {
         super(param0);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -351,7 +351,7 @@ final class wj extends rq {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

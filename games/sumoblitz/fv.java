@@ -12,8 +12,8 @@ final class fv extends rw {
         field_y = null;
         field_v = null;
         if (param0 != 62) {
-          ki var2 = (ki) null;
-          fv.a(-52, (ki) null, (ki) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          fv.a(-52, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
@@ -27,13 +27,13 @@ final class fv extends rw {
         return 50;
     }
 
-    final static void a(int param0, ki param1, ki param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 != 7966) {
             fv.d((byte) 80);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class fv extends rw {
             var2 = (dj) (jf.field_c.b(107));
             while (var2 != null) {
               if (!var2.field_k.a(false)) {
-                var2.b(false);
+                var2.unlink(false);
               }
               var2 = (dj) (jf.field_c.d((byte) 18));
             }
@@ -64,7 +64,7 @@ final class fv extends rw {
               var2Lifetime1 = (dj) (s.field_u.b(-105));
               while (var2Lifetime1 != null) {
                 if (!var2Lifetime1.field_k.a(false)) {
-                  var2Lifetime1.b(false);
+                  var2Lifetime1.unlink(false);
                 }
                 var2Lifetime1 = (dj) (s.field_u.d((byte) 18));
               }
@@ -81,7 +81,7 @@ final class fv extends rw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "fv.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "fv.G(" + param0 + ')');
         }
     }
 

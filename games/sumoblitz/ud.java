@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends hj {
+final class ud extends PcmStream {
     private tv field_t;
     private int field_C;
     static hr[] field_q;
@@ -127,7 +127,7 @@ final class ud extends hj {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class ud extends hj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class ud extends hj {
           param2.b(param0, 0);
           int var5_int = -21 / ((param1 + 28) / 47);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ud.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -203,11 +203,11 @@ final class ud extends hj {
           this.field_r = param0;
           this.field_x = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ud.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final hj c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -312,7 +312,7 @@ final class ud extends hj {
         return 2;
     }
 
-    final hj a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -388,7 +388,7 @@ final class ud extends hj {
               }
             }
           }
-          if (du.field_o) {
+          if (AudioOutput.field_o) {
             stackIn_33_0 = param2 << 1;
           } else {
             stackIn_33_0 = param2;
@@ -410,7 +410,7 @@ final class ud extends hj {
                 }
                 this.field_x.b(this.field_s, 0, param2);
                 this.field_r.b(this.field_A, 0, param2);
-                if (!du.field_o) {
+                if (!AudioOutput.field_o) {
                   stackIn_48_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -436,7 +436,7 @@ final class ud extends hj {
               this.field_s = new int[var6];
             }
             this.field_D.b(this.field_s, 0, param2);
-            if (du.field_o) {
+            if (AudioOutput.field_o) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_61_0 = localTemp$1;
@@ -462,7 +462,7 @@ final class ud extends hj {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ final class ud extends hj {
         try {
           this.a(param1, -79, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

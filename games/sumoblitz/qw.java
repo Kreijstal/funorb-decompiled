@@ -133,7 +133,7 @@ final class qw {
             if (6 <= var3) {
               var3 = 5;
             }
-            var6 = uj.a(var3, 26 + fi.a(588, ki.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+            var6 = uj.a(var3, 26 + fi.a(588, ResourceArchive.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
             oc.a(var6, false);
             return;
           }
@@ -161,7 +161,7 @@ final class qw {
           if (var3Lifetime1 >= 7) {
             var3Lifetime1 = 6;
           }
-          var7 = uj.a(param1.field_Q, 26 + fi.a(588, ki.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+          var7 = uj.a(param1.field_Q, 26 + fi.a(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
           oc.a(var7, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,7 +174,7 @@ final class qw {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

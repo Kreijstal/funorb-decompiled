@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends rq {
+final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     static String loginText;
     private boolean field_e;
     private sk field_f;
@@ -35,7 +35,7 @@ final class ej extends rq {
         }
         if (param0 != 34023) {
           int[] var10 = (int[]) null;
-          ej.a(-97, -68, (byte[]) null, (byte[][]) null, (int[]) null, (byte) 113, (byte[][]) null, (int[]) null);
+          OpenGlEnvironmentWaterEffect.a(-97, -68, (byte[]) null, (byte[][]) null, (int[]) null, (byte) 113, (byte[][]) null, (int[]) null);
         }
     }
 
@@ -47,7 +47,7 @@ final class ej extends rq {
         field_i = null;
     }
 
-    ej(OpenGlGraphicsToolkit param0, ki param1, sk param2) {
+    OpenGlEnvironmentWaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1, sk param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -99,7 +99,7 @@ final class ej extends rq {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class ej extends rq {
           }
           if (param1 != 18834) {
             var5 = (String) null;
-            ej.a((java.net.URL) null, (String) null, -103, (String) null, 108);
+            OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -103, (String) null, 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -136,7 +136,7 @@ final class ej extends rq {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class ej extends rq {
         ef var3 = this.field_b.d((byte) 122);
         if (param1 != 20186) {
           String var6 = (String) null;
-          ej.a((java.net.URL) null, (String) null, -110, (String) null, 111);
+          OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -110, (String) null, 111);
         }
         if (this.field_e &&
           var3 != null) {
@@ -305,7 +305,7 @@ final class ej extends rq {
             } else {
               stackIn_51_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param4).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -351,7 +351,7 @@ final class ej extends rq {
           var9 = var8_int + param7[param0];
           var10 = param4[param1];
           if (param5 != -75) {
-            ej.d(false);
+            OpenGlEnvironmentWaterEffect.d(false);
           }
           var11 = param7[param1] + var10;
           var12 = var8_int;
@@ -416,7 +416,7 @@ final class ej extends rq {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

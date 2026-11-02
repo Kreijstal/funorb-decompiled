@@ -5,7 +5,7 @@ abstract class tt extends IntrusiveNode {
     static String defeatText;
     static int field_l;
 
-    final static Sprite[] a(byte param0, int param1, ki param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_5_0 = null;
         Sprite[] stackIn_7_0 = null;
@@ -33,19 +33,19 @@ abstract class tt extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         if (param0 == 30692) {
-          ki.field_f = c.field_u[0];
+          ResourceArchive.field_f = c.field_u[0];
           iv.field_i = c.field_u[1];
           hc.field_f = c.field_u[2];
           return;
         }
         defeatText = (String) null;
-        ki.field_f = c.field_u[0];
+        ResourceArchive.field_f = c.field_u[0];
         iv.field_i = c.field_u[1];
         hc.field_f = c.field_u[2];
     }

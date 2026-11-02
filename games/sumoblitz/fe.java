@@ -19,7 +19,7 @@ final class fe extends ah {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -12 % ((-31 - param0) / 63);
-          stackIn_1_0 = qq.a(18416, mf.a(param1, 100, 96));
+          stackIn_1_0 = qq.a(18416, PcmSampleStream.a(param1, 100, 96));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -31,7 +31,7 @@ final class fe extends ah {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bs extends hj {
+final class bs extends PcmStream {
     private int field_E;
     private int[] field_L;
     private int[] field_H;
@@ -42,7 +42,7 @@ final class bs extends hj {
         return this.field_v.c();
     }
 
-    final synchronized hj c() {
+    final synchronized PcmStream c() {
         return null;
     }
 
@@ -116,7 +116,7 @@ final class bs extends hj {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class bs extends hj {
             var7 = Math.sin((double)(511 & param1.field_C) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_B.field_n * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)du.field_k);
+          var5Lifetime1 = (int)(0.5 + (double)(param1.field_B.field_n * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_k);
           stackIn_13_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,7 +214,7 @@ final class bs extends hj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class bs extends hj {
         return;
     }
 
-    final synchronized boolean a(og param0, tv param1, int param2, ki param3, int param4) {
+    final synchronized boolean a(og param0, tv param1, int param2, ResourceArchive param3, int param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -366,12 +366,12 @@ final class bs extends hj {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final synchronized hj a() {
-        return (hj) ((Object) this.field_s);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_s);
     }
 
     final synchronized int d() {
@@ -408,7 +408,7 @@ final class bs extends hj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -419,7 +419,7 @@ final class bs extends hj {
           }
           this.a(param0, true, true, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -442,11 +442,11 @@ final class bs extends hj {
         int var11 = 0;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          param3.field_u = du.field_k / 100;
+          param3.field_u = AudioOutput.field_k / 100;
           if (param3.field_x >= 0 && (param3.field_z == null ||
             param3.field_z.h())) {
             param3.a(0);
-            param3.b(false);
+            param3.unlink(false);
             if (param3.field_q > 0 &&
               this.field_P[param3.field_y][param3.field_q] == param3) {
               this.field_P[param3.field_y][param3.field_q] = null;
@@ -569,7 +569,7 @@ final class bs extends hj {
           }
           param3.a(0);
           if (param3.field_x >= 0) {
-            param3.b(false);
+            param3.unlink(false);
             if (param3.field_q > 0 &&
               this.field_P[param3.field_y][param3.field_q] == param3) {
               this.field_P[param3.field_y][param3.field_q] = null;
@@ -592,7 +592,7 @@ final class bs extends hj {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -669,7 +669,7 @@ final class bs extends hj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -842,9 +842,9 @@ final class bs extends hj {
         var7.field_v = 0;
         var7.field_n = 0;
         if (0 == this.field_R[param2]) {
-          var7.field_z = mf.a(var6, this.a(true, var7), this.c(255, var7), this.a(16384, var7));
+          var7.field_z = PcmSampleStream.a(var6, this.a(true, var7), this.c(255, var7), this.a(16384, var7));
           if (var10 != 0) {
-            var7.field_z = mf.a(var6, this.a(true, var7), 0, this.a(16384, var7));
+            var7.field_z = PcmSampleStream.a(var6, this.a(true, var7), 0, this.a(16384, var7));
             stackIn_17_1 = 110;
             stackIn_17_2 = var7;
             if (var11.field_k[param3] >= 0) {
@@ -857,7 +857,7 @@ final class bs extends hj {
             this.a((byte) stackIn_17_1, stackIn_17_2, stackIn_18_3);
           }
         } else {
-          var7.field_z = mf.a(var6, this.a(true, var7), 0, this.a(16384, var7));
+          var7.field_z = PcmSampleStream.a(var6, this.a(true, var7), 0, this.a(16384, var7));
           stackIn_17_1 = 110;
           stackIn_17_2 = var7;
           if (var11.field_k[param3] >= 0) {
@@ -902,7 +902,7 @@ final class bs extends hj {
           if (param1.field_x < 0) {
             return true;
           }
-          param1.b(false);
+          param1.unlink(false);
           if (0 < param1.field_q &&
             param1 == this.field_P[param1.field_y][param1.field_q]) {
             this.field_P[param1.field_y][param1.field_q] = null;
@@ -918,7 +918,7 @@ final class bs extends hj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -1174,7 +1174,7 @@ final class bs extends hj {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (this.field_v.c()) {
-            var4_int = this.field_E * this.field_v.field_d / du.field_k;
+            var4_int = this.field_E * this.field_v.field_d / AudioOutput.field_k;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_O;
               if (0L <= -var5 + this.field_q) {
@@ -1212,7 +1212,7 @@ final class bs extends hj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1250,7 +1250,7 @@ final class bs extends hj {
             if (param1 < 0 ||
               ~var3.field_y == ~param1) {
               if (null != var3.field_z) {
-                var3.field_z.d(du.field_k / 100);
+                var3.field_z.d(AudioOutput.field_k / 100);
                 if (var3.field_z.k()) {
                   this.field_s.field_o.b(var3.field_z);
                 }
@@ -1259,7 +1259,7 @@ final class bs extends hj {
               if (var3.field_x < 0) {
                 this.field_t[var3.field_y][var3.field_E] = null;
               }
-              var3.b(false);
+              var3.unlink(false);
             }
             var3 = (uu) (this.field_s.field_t.d((byte) 18));
             continue;
@@ -1293,7 +1293,7 @@ final class bs extends hj {
           var7_int = var8 * ((-1 + var8 + var7_int) / var8);
           this.field_u = ((param3 >> 1) + var7_int) / param3;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "bs.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bs.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -1456,7 +1456,7 @@ final class bs extends hj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -1475,7 +1475,7 @@ final class bs extends hj {
         boolean decompiledFrameCompleted0 = true;
         var6 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_v.c()) {
-          var2 = this.field_E * this.field_v.field_d / du.field_k;
+          var2 = this.field_E * this.field_v.field_d / AudioOutput.field_k;
           while (true) {
             var3 = this.field_O + (long)param0 * (long)var2;
             if (-var3 + this.field_q >= 0L) {

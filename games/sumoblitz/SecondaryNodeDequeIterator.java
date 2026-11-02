@@ -30,7 +30,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (this.field_e == null) {
           throw new IllegalStateException();
         }
-        this.field_e.c(-5106);
+        this.field_e.unlinkSecondary(-5106);
         this.field_e = null;
     }
 
@@ -71,7 +71,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "vv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "vv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_e = null;
           this.field_c = this.field_d.field_c.secondaryNext;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "vv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

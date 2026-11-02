@@ -5,7 +5,7 @@ import java.io.*;
 
 class IntrusiveNode {
     static String fullscreenPlayIsAnText;
-    static cc field_e;
+    static JaggrabDownloader field_e;
     IntrusiveNode next;
     static ri field_d;
     IntrusiveNode previous;
@@ -27,7 +27,7 @@ class IntrusiveNode {
         }
     }
 
-    final void b(boolean param0) {
+    final void unlink(boolean param0) {
         if (null == this.previous) {
           return;
         }
@@ -38,12 +38,12 @@ class IntrusiveNode {
           this.next = null;
           return;
         }
-        this.b(false);
+        this.unlink(false);
         this.previous = null;
         this.next = null;
     }
 
-    final static void a(String param0, Throwable param1, int param2) {
+    final static void reportClientError(String param0, Throwable param1, int param2) {
         try {
           PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
@@ -85,7 +85,7 @@ class IntrusiveNode {
               return;
             }
             if (param2 != 0) {
-              field_e = (cc) null;
+              field_e = (JaggrabDownloader) null;
             }
             stackIn_14_0 = gk.field_O;
             stackIn_14_1 = 116;
@@ -144,7 +144,7 @@ class IntrusiveNode {
           return uo.field_e;
         }
         Throwable var2 = (Throwable) null;
-        IntrusiveNode.a((String) null, (Throwable) null, 74);
+        IntrusiveNode.reportClientError((String) null, (Throwable) null, 74);
         return uo.field_e;
     }
 

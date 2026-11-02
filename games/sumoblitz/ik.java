@@ -4,7 +4,7 @@
 final class ik {
     private nj[] field_a;
     private d field_e;
-    static ki field_d;
+    static ResourceArchive field_d;
     private boolean field_b;
     private bk field_c;
 
@@ -22,7 +22,7 @@ final class ik {
             this.field_b = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ik.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class ik {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class ik {
           } else {
             stackIn_116_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class ik {
         this(kd.a((byte) -123, param0), vo.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
     }
 
-    private ik(ki param0, ki param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {
+    private ik(ResourceArchive param0, ResourceArchive param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {
         this.field_b = false;
         try {
           GraphicsToolkit.field_g = param1;
@@ -340,7 +340,7 @@ final class ik {
           ow.a(-18527, param0, param3);
           this.a(param4, 97);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

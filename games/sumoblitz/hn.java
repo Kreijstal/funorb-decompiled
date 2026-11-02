@@ -27,7 +27,7 @@ final class hn extends kb implements fk {
             field_k = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

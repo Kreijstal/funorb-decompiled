@@ -34,7 +34,7 @@ final class di extends ak {
         nt var2 = (nt) (im.field_b.b(68));
         while (var2 != null) {
           if (var2.a(-2567)) {
-            var2.b(false);
+            var2.unlink(false);
             if (var2 instanceof vi &&
               fi.a(3, he.field_o, (byte) -96) == 1 &&
               !((vi) (var2)).field_u) {
@@ -105,7 +105,7 @@ final class di extends ak {
           kf.field_u.a(param1, param2 + 21754);
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

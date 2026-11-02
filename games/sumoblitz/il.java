@@ -28,7 +28,7 @@ final class il {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = qo.field_a;
+              stackIn_7_0 = ClientExceptionSupport.field_a;
               return stackIn_7_0;
             }
             var3 = param0.substring(0, var2_int);
@@ -56,11 +56,11 @@ final class il {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, ki param1) {
+    final static boolean a(boolean param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -103,7 +103,7 @@ final class il {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

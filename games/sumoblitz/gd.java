@@ -20,7 +20,7 @@ abstract class gd {
     byte field_m;
     fv field_i;
 
-    final static ta a(ki param0, byte param1, String param2, String param3) {
+    final static ta a(ResourceArchive param0, byte param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -70,7 +70,7 @@ abstract class gd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ abstract class gd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ abstract class gd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1_ref), "gd.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "gd.K(" + param0 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ abstract class gd {
           return this.a((byte) -100) >= 20 ? true : false;
         }
         String var3 = (String) null;
-        gd.a((ki) null, (byte) -79, (String) null, (String) null);
+        gd.a((ResourceArchive) null, (byte) -79, (String) null, (String) null);
         return this.a((byte) -100) >= 20 ? true : false;
     }
 

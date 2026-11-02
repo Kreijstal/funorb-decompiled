@@ -24,7 +24,7 @@ final class gs {
           param0.addMouseMotionListener(wk.field_h);
           param0.addFocusListener(wk.field_h);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

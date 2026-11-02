@@ -3,7 +3,7 @@
  */
 final class eb {
     private cs field_d;
-    static ki field_f;
+    static ResourceArchive field_f;
     static og field_b;
     private IntrusiveDeque field_e;
     private fr field_c;
@@ -70,7 +70,7 @@ final class eb {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

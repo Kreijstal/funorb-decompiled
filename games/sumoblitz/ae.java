@@ -51,7 +51,7 @@ final class ae {
         return new qp(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static ae a(ki param0, int param1, int param2) {
+    final static ae a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a((byte) 87, param2, param1);
         if (var3 == null) {
           return null;

@@ -21,7 +21,7 @@ final class kr {
         field_b = null;
     }
 
-    final static Sprite[] a(int param0, ki param1, int param2, int param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -49,7 +49,7 @@ final class kr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

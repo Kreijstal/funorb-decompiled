@@ -23,7 +23,7 @@ final class kk {
         field_b = null;
     }
 
-    final static ne[] a(int param0, int param1, int param2, ki param3) {
+    final static ne[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ne[] stackIn_6_0 = null;
@@ -51,19 +51,19 @@ final class kk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
-        ki var2 = null;
-        ki var2Lifetime1;
+        ResourceArchive var2 = null;
+        ResourceArchive var2Lifetime1;
         if (qk.field_O != null) {
           qk.field_O.a((byte) -102);
           qk.field_O = null;
           if (param0 > -108) {
-            var2 = (ki) null;
-            kk.a(-15, -46, 72, (ki) null);
+            var2 = (ResourceArchive) null;
+            kk.a(-15, -46, 72, (ResourceArchive) null);
             return;
           }
           return;
@@ -71,8 +71,8 @@ final class kk {
         if (param0 <= -108) {
           return;
         }
-        var2Lifetime1 = (ki) null;
-        kk.a(-15, -46, 72, (ki) null);
+        var2Lifetime1 = (ResourceArchive) null;
+        kk.a(-15, -46, 72, (ResourceArchive) null);
     }
 
     final us a(int param0, int param1) {
@@ -306,7 +306,7 @@ final class kk {
           this.field_c = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class et extends du {
+final class et extends AudioOutput {
     private int field_y;
     private javax.sound.sampled.AudioFormat field_w;
     private byte[] field_x;

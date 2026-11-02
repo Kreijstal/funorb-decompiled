@@ -91,7 +91,7 @@ final class t extends gd {
             } else {
               stackIn_28_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -306,7 +306,7 @@ final class t extends gd {
                       this.field_i.field_x = 0;
                     }
                   } else {
-                    this.field_i.c(-5106);
+                    this.field_i.unlinkSecondary(-5106);
                     this.field_i.field_u = false;
                     this.field_i = null;
                   }

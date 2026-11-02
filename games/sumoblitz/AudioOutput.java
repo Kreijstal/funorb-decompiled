@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class du {
+class AudioOutput {
     private static pp field_i;
     int[] field_p;
     static boolean field_o;
@@ -9,13 +9,13 @@ class du {
     private static int field_m;
     private boolean field_f;
     static int field_k;
-    private hj field_l;
+    private PcmStream field_l;
     private long field_u;
-    private hj[] field_t;
+    private PcmStream[] field_t;
     private int field_r;
     private boolean field_e;
     private int field_h;
-    private hj[] field_b;
+    private PcmStream[] field_b;
     private int field_n;
     private int field_c;
     private int field_q;
@@ -40,7 +40,7 @@ class du {
         }
     }
 
-    final static du a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           et var4 = null;
           Throwable var4_ref = null;
@@ -68,14 +68,14 @@ class du {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((du) ((Object) stackIn_10_0)).field_p = new int[stackIn_10_1 * stackIn_11_2];
-              ((du) ((Object) var4)).field_a = param3;
-              ((du) ((Object) var4)).a(param1);
-              ((du) ((Object) var4)).field_s = (param3 & -1024) + 1024;
-              if (((du) ((Object) var4)).field_s > 16384) {
-                ((du) ((Object) var4)).field_s = 16384;
+              ((AudioOutput) ((Object) stackIn_10_0)).field_p = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioOutput) ((Object) var4)).field_a = param3;
+              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).field_s = (param3 & -1024) + 1024;
+              if (((AudioOutput) ((Object) var4)).field_s > 16384) {
+                ((AudioOutput) ((Object) var4)).field_s = 16384;
               }
-              ((du) ((Object) var4)).a(((du) ((Object) var4)).field_s);
+              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_s);
               if (field_m > 0 &&
                 field_i == null) {
                 field_i = new pp();
@@ -86,14 +86,14 @@ class du {
                 if (field_i.field_c[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_i.field_c[param2] = (du) ((Object) var5);
+                field_i.field_c[param2] = (AudioOutput) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (du) ((Object) stackIn_21_0);
+              return (AudioOutput) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new du();
+              return new AudioOutput();
             }
           }
           throw new IllegalArgumentException();
@@ -104,14 +104,14 @@ class du {
         }
     }
 
-    private final static void b(hj param0) {
+    private final static void b(PcmStream param0) {
         param0.field_n = false;
         if (param0.field_l != null) {
           param0.field_l.field_k = 0;
         }
-        hj var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
-          du.b(var1);
+          AudioOutput.b(var1);
           var1 = param0.c();
         }
     }
@@ -123,7 +123,7 @@ class du {
         return this.field_s;
     }
 
-    final synchronized void a(hj param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_l = param0;
     }
 
@@ -161,20 +161,20 @@ class du {
         int var7_int;
         Object var7;
         int var8_int;
-        hj[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        hj var11;
+        PcmStream var11;
         rr var12;
         int var13;
-        hj var14;
+        PcmStream var14;
         int var15_int;
-        hj var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        hj var14Lifetime1;
-        hj var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_o) {
           var3 = var3 << 1;
@@ -184,7 +184,7 @@ class du {
         if (this.field_l != null &&
           this.field_c <= 0) {
           this.field_c = this.field_c + (field_k >> 4);
-          du.b(this.field_l);
+          AudioOutput.b(this.field_l);
           this.a(this.field_l, this.field_l.b());
           var4 = 0;
           var5 = 255;
@@ -235,12 +235,12 @@ class du {
                     var15 = var11.field_m;
                     var11.field_m = null;
                     if (var10 != null) {
-                      ((hj) (var10)).field_m = var15;
+                      ((PcmStream) (var10)).field_m = var15;
                     } else {
                       this.field_t[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_b[var7_int] = (hj) (var10);
+                      this.field_b[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -261,8 +261,8 @@ class du {
             this.field_b[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((hj) (var7)).field_m;
-              ((hj) (var7)).field_m = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_m;
+              ((PcmStream) (var7)).field_m = null;
               var7 = var10Lifetime1;
             }
           }
@@ -395,9 +395,9 @@ class du {
         }
     }
 
-    private final void a(hj param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        hj var4 = this.field_b[var3];
+        PcmStream var4 = this.field_b[var3];
         if (var4 == null) {
           this.field_t[var3] = param0;
         } else {
@@ -420,14 +420,14 @@ class du {
     void g() {
     }
 
-    du() {
+    AudioOutput() {
         this.field_f = false;
         this.field_g = 32;
         this.field_u = wq.a(-12);
         this.field_e = true;
-        this.field_t = new hj[8];
+        this.field_t = new PcmStream[8];
         this.field_h = 0;
-        this.field_b = new hj[8];
+        this.field_b = new PcmStream[8];
         this.field_c = 0;
         this.field_n = 0;
         this.field_d = 0L;

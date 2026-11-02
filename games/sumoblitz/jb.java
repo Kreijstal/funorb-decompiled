@@ -16,7 +16,7 @@ class jb extends se {
             this.a((PacketBuffer) null, (byte) -83);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ class jb extends se {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ class jb extends se {
             }
             va.a(false, param2);
           } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "jb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -201,7 +201,7 @@ class jb extends se {
                 }
                 else {
                   kk.a((byte) -128);
-                  sr.field_g = false;
+                  LimitedRandomAccessFile.field_g = false;
                   stackIn_33_0 = var6_intLifetime1;
                   return stackIn_33_0;
                 }
@@ -252,7 +252,7 @@ class jb extends se {
               } else {
                 go.field_m.a(true, ra.c(2));
               }
-              sr.field_g = false;
+              LimitedRandomAccessFile.field_g = false;
               if (var6 != null) {
                 jb.a((byte) -118, var6, ra.c(2));
               }
@@ -287,8 +287,8 @@ class jb extends se {
               lt.a((byte) 119)) {
               kk.a((byte) -115);
               if (iw.field_a == 7 &&
-                !sr.field_g) {
-                sr.field_g = true;
+                !LimitedRandomAccessFile.field_g) {
+                LimitedRandomAccessFile.field_g = true;
                 stackIn_85_0 = -1;
                 return stackIn_85_0;
               }
@@ -296,24 +296,24 @@ class jb extends se {
                 iw.field_a = 3;
               }
               MouseWheelInput.field_c = ig.field_a.d(-1);
-              sr.field_g = false;
+              LimitedRandomAccessFile.field_g = false;
               stackIn_83_0 = iw.field_a;
               return stackIn_83_0;
             }
             if (qk.field_O == null) {
-              if (sr.field_g) {
+              if (LimitedRandomAccessFile.field_g) {
                 if (uc.b(26560) <= 30000L) {
                   MouseWheelInput.field_c = nd.errorConnectingToServerText;
                 } else {
                   MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
                 }
-                sr.field_g = false;
+                LimitedRandomAccessFile.field_g = false;
                 stackIn_94_0 = 3;
                 return stackIn_94_0;
               }
               var6_intLifetime2 = vp.field_a;
               vp.field_a = nb.field_b;
-              sr.field_g = true;
+              LimitedRandomAccessFile.field_g = true;
               nb.field_b = var6_intLifetime2;
             }
             stackIn_96_0 = -1;
@@ -334,7 +334,7 @@ class jb extends se {
             } else {
               stackIn_103_2 = "{...}";
             }
-            throw qo.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -351,7 +351,7 @@ class jb extends se {
         return hh.field_c;
     }
 
-    final static Sprite a(String param0, String param1, int param2, ki param3) {
+    final static Sprite a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -393,7 +393,7 @@ class jb extends se {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ class jb extends se {
           this.field_g = param0;
           this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "jb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -56,7 +56,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "ig.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ig.A(" + param0 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class ig {
             stackIn_14_0 = -1;
             return stackIn_14_0;
           }
-          var3 = pn.field_n + var10;
+          var3 = OpenGlUnderwaterEffect.field_n + var10;
           if (!GraphicsToolkit.field_e.b("", var3, -1)) {
             stackIn_17_0 = -1;
             return stackIn_17_0;
@@ -185,7 +185,7 @@ final class ig {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(')').toString());
         }
     }
 

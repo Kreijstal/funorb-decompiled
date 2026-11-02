@@ -11,7 +11,7 @@ final class ea {
         difficultyText = null;
     }
 
-    final static al a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 14263) {
           difficultyText = (String) null;
           return sj.field_c;
@@ -42,7 +42,7 @@ final class ea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class ea {
           vi.field_y = new dc(rf.field_a, no.field_a);
           rf.field_a.a((byte) 104, vi.field_y);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -99,11 +99,11 @@ final class ea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(ki param0, boolean param1, byte param2, ki param3, ki param4) {
+    final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         ut.field_o = aj.a(false, "");
         ut.field_o.a(113, false);
         da.a(param4, param3, 17474, param0);
@@ -115,7 +115,7 @@ final class ea {
           vm.field_c = hm.field_a;
           ProxySocketConnector.field_e = hm.field_a;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

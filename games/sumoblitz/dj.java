@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj extends IntrusiveNode {
-    mf field_q;
+    PcmSampleStream field_q;
     static String fullScreenText;
     static String[] scoreFilterLabels;
     static hr field_l;
@@ -36,14 +36,14 @@ final class dj extends IntrusiveNode {
         scoreFilterLabels = null;
     }
 
-    dj(mf param0, IntrusiveNode param1) {
+    dj(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_q = param0;
           this.field_p = param0.g();
           this.field_k = param1;
           this.field_q.f(128 + this.field_p * kr.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

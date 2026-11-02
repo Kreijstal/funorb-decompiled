@@ -166,14 +166,14 @@ final class pu extends hr {
     final static void a(byte param0) {
         if (param0 <= -25) {
           c.field_u[1] = iv.field_i;
-          c.field_u[0] = ki.field_f;
+          c.field_u[0] = ResourceArchive.field_f;
           c.field_u[2] = hc.field_f;
           ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
           return;
         }
         blastReadyText = (String) null;
         c.field_u[1] = iv.field_i;
-        c.field_u[0] = ki.field_f;
+        c.field_u[0] = ResourceArchive.field_f;
         c.field_u[2] = hc.field_f;
         ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
     }
@@ -239,7 +239,7 @@ final class pu extends hr {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

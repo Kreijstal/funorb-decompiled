@@ -14,14 +14,14 @@ final class io {
     static ci field_b;
     static float[] field_a;
 
-    final static void a(int param0, mf param1) {
+    final static void a(int param0, PcmSampleStream param1) {
         try {
           sj.field_c.a(param1);
           if (param0 < 93) {
             io.a(-28);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

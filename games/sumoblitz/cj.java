@@ -29,7 +29,7 @@ final class cj {
           var3.f(this.field_b, this.field_a);
           param0.field_f = this.field_f;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class cj {
           this.field_a = var3.XA();
           this.field_f = param1.field_f;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -52,7 +52,7 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.previous != null) {
-            param0.b(false);
+            param0.unlink(false);
           }
           param0.previous = this.field_e;
           param0.next = this.field_e.next;
@@ -73,7 +73,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class IntrusiveDeque {
 
     final void a(IntrusiveNode param0, byte param1) {
         if (param0.previous != null) {
-          param0.b(false);
+          param0.unlink(false);
         }
         param0.next = this.field_e;
         param0.previous = this.field_e.previous;
@@ -113,7 +113,7 @@ final class IntrusiveDeque {
         try {
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class IntrusiveDeque {
         }
         IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e != var2) {
-          var2.b(false);
+          var2.unlink(false);
           return var2;
         }
         return null;
@@ -135,12 +135,12 @@ final class IntrusiveDeque {
           return null;
         }
         if (param0 == 9) {
-          var2.b(false);
+          var2.unlink(false);
           return var2;
         }
         IntrusiveNode var3 = (IntrusiveNode) null;
         this.a((IntrusiveNode) null, (byte) 81);
-        var2.b(false);
+        var2.unlink(false);
         return var2;
     }
 
@@ -173,7 +173,7 @@ final class IntrusiveDeque {
           if (this.field_e == var2) {
             break;
           }
-          var2.b(false);
+          var2.unlink(false);
         }
         if (param0 >= 114) {
           this.field_a = null;

@@ -25,7 +25,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "hb.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var7 = fi.a(5, he.field_o, (byte) -96);
           bj.field_b.a((IntrusiveNode) (new tl(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

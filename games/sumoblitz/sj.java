@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static al field_c;
+    static PcmStreamMixer field_c;
     static long field_a;
     static ts field_b;
 
@@ -112,7 +112,7 @@ final class sj {
             }
             if (var4 < 0) {
               qq.field_R.b(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
-              var1_int = var1_int + fn.field_t;
+              var1_int = var1_int + GameClientShell.field_t;
             } else {
               MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
               var1_int = var1_int + (qc.field_a + (ag.field_b + ga.field_h));
@@ -122,7 +122,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "sj.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "sj.C(" + param0 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class sj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -36,7 +36,7 @@ abstract class pt {
 
     final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
         if (null != param2.secondaryPrevious) {
-          param2.c(-5106);
+          param2.unlinkSecondary(-5106);
         }
         if (param1 != 2066481250) {
           return;
@@ -47,7 +47,7 @@ abstract class pt {
           param2.secondaryPrevious.secondaryNext = param2;
           param2.secondaryNext.secondaryPrevious = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "pt.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pt.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ abstract class pt {
             for (var7 = 0; var7 < var5_int; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.e(-31302) << eb.a(768, var7 << 8));
             }
-            var4_ref_qv.b(false);
+            var4_ref_qv.unlink(false);
             return;
           }
           if (1 == var2) {
@@ -105,19 +105,19 @@ abstract class pt {
               break;
             }
             if (var5 != null) {
-              var5.b(false);
+              var5.unlink(false);
               return;
             }
             kk.a((byte) -114);
             return;
           }
-          IntrusiveNode.a("LR1: " + di.b((byte) 126), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("LR1: " + di.b((byte) 126), (Throwable) null, 0);
           kk.a((byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1), "pt.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "pt.I(" + param0 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ abstract class pt {
         throw new Error();
     }
 
-    final static String a(String param0, ki param1, String param2, boolean param3, String param4) {
+    final static String a(String param0, ResourceArchive param1, String param2, boolean param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -177,7 +177,7 @@ abstract class pt {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

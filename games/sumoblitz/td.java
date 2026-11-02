@@ -89,7 +89,7 @@ final class td extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class td extends IntrusiveNode {
             var4 = js.field_J;
           }
           if (param0 >= 120) {
-            stackIn_12_0 = ej.a(param2, (String) (var4), -1, (String) (var3), -1);
+            stackIn_12_0 = OpenGlEnvironmentWaterEffect.a(param2, (String) (var4), -1, (String) (var3), -1);
             return stackIn_12_0;
           }
           stackIn_10_0 = (java.net.URL) null;
@@ -146,7 +146,7 @@ final class td extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class td extends IntrusiveNode {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "td.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "td.B(" + param0 + ')');
         }
     }
 
@@ -763,7 +763,7 @@ final class td extends IntrusiveNode {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 

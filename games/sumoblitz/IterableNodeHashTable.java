@@ -55,7 +55,7 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var5 = null;
         try {
           if (param1.previous != null) {
-            param1.b(false);
+            param1.unlink(false);
           }
           if (param0 != -20657) {
             this.field_d = -114;
@@ -67,7 +67,7 @@ final class IterableNodeHashTable implements Iterable {
           param1.key = param2;
           param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "um.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "um.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

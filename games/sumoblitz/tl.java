@@ -91,7 +91,7 @@ final class tl extends IntrusiveNode {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class tl extends IntrusiveNode {
           }
           this.field_w = -this.field_w;
         } else {
-          if (this.field_x > -52 + ResourceArchive.field_c << 8 &&
+          if (this.field_x > -52 + ArchiveCatalog.field_c << 8 &&
             this.field_w >= 0) {
             if (0 == this.field_w) {
               this.field_w = -256;
@@ -206,7 +206,7 @@ final class tl extends IntrusiveNode {
         var4 = (nt) (this.field_r.b(param0 ^ -31326));
         while (var4 != null) {
           if (var4.a(-2567)) {
-            var4.b(false);
+            var4.unlink(false);
           }
           var4 = (nt) (this.field_r.d((byte) 18));
         }

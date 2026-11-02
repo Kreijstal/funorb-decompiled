@@ -31,7 +31,7 @@ final class nm extends IntrusiveNode {
             nm.a((PacketBuffer) null, (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class nm extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -344,7 +344,7 @@ final class nm extends IntrusiveNode {
           } else {
             stackIn_165_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_164_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_164_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class nm extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -518,7 +518,7 @@ final class nm extends IntrusiveNode {
           } else {
             stackIn_98_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -570,7 +570,7 @@ final class nm extends IntrusiveNode {
             stackIn_33_0 = stackOut_32_0;
             if (var3 == 0) {
               if (stackIn_33_0) {
-                var2.b(false);
+                var2.unlink(false);
               }
               var2 = (nt) (this.field_w.d((byte) 18));
               continue;
@@ -596,7 +596,7 @@ final class nm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2_ref), "nm.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "nm.E(" + param0 + ')');
         }
     }
 
@@ -637,7 +637,7 @@ final class nm extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ final class nm extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "nm.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "nm.F(" + param0 + ')');
         }
     }
 
@@ -723,7 +723,7 @@ final class nm extends IntrusiveNode {
           this.field_r = (int)((double)this.field_l + var4);
           this.field_B = (int)(var7 + (double)this.field_q);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nm.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.I(" + param0 + ')');
         }
     }
 
@@ -736,7 +736,7 @@ final class nm extends IntrusiveNode {
           this.field_y = param0;
           this.a((byte) -115);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "nm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

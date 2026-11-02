@@ -10,5 +10,5 @@ abstract class md extends IntrusiveNode {
         throw new Error();
     }
 
-    abstract int a(al param0);
+    abstract int a(PcmStreamMixer param0);
 }

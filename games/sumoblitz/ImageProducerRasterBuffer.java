@@ -6,7 +6,7 @@ import java.util.*;
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static String connectionRestoredText;
     static int field_k;
-    static mf[] field_n;
+    static PcmSampleStream[] field_n;
     private java.awt.image.ImageConsumer field_l;
     private java.awt.image.ColorModel field_m;
 
@@ -31,13 +31,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static boolean c(int param0) {
         if (param0 > -83) {
-          field_n = (mf[]) null;
+          field_n = (PcmSampleStream[]) null;
         }
         return lm.a(59, ra.c(2));
     }
@@ -46,7 +46,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fh.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_m);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fh.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = qo.field_a;
+            stackIn_4_0 = ClientExceptionSupport.field_a;
             return stackIn_4_0;
           }
           if (var2_int > 63) {
@@ -135,7 +135,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.b((byte) 55);
           param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
           this.a(-1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -298,6 +298,6 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     static {
         field_k = 0;
         connectionRestoredText = "Connection restored.";
-        field_n = new mf[3];
+        field_n = new PcmSampleStream[3];
     }
 }

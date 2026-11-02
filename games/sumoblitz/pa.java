@@ -19,7 +19,7 @@ final class pa {
             return;
           }
           var1.field_k.w(true);
-          var1.b(false);
+          var1.unlink(false);
           stackIn_4_0 = (IntrusiveDeque) (field_b);
         }
     }

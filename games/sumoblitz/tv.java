@@ -104,7 +104,7 @@ final class tv extends IntrusiveNode {
         }
     }
 
-    final static tv a(ki param0, String param1) {
+    final static tv a(ResourceArchive param0, String param1) {
         byte[] var2 = param0.a((byte) 121, param1);
         if (var2 == null) {
           return null;

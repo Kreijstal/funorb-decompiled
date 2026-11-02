@@ -16,7 +16,7 @@ abstract class da {
           this.a(param2, param5, 60);
           this.a(-274, param0, (hr[]) null, param1, 0, 0, param3, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ abstract class da {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param14).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ abstract class da {
           this.a(param4, param0, 60);
           this.a(-274, param3, (hr[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ abstract class da {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ abstract class da {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw qo.a((Throwable) (stackIn_50_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_50_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -488,11 +488,11 @@ abstract class da {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
-    final static void a(ki param0, ki param1, int param2, ki param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         ne[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
@@ -513,7 +513,7 @@ abstract class da {
         tq.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.a("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
         mc.a((byte) 83, param0, "dropdown", "commonui");
-        ne[] var5 = rq.a("screen_options", param0, 73, "commonui");
+        ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
         sb.field_d = new ne[4];
         sm.field_c = new ne[4];
         kn.field_f = new ne[4];
@@ -557,7 +557,7 @@ abstract class da {
           ClientException.a((byte) -73);
           jp.field_j = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -571,7 +571,7 @@ abstract class da {
           this.a(param1, param2, 60);
           this.a(-274, param3, (hr[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -597,13 +597,13 @@ abstract class da {
           this.field_b = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(cd param0, int param1, cd param2) {
         RuntimeException var3 = null;
-        ki var4 = null;
+        ResourceArchive var4 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -615,8 +615,8 @@ abstract class da {
             return true;
           }
           if (param1 > -11) {
-            var4 = (ki) null;
-            da.a((ki) null, (ki) null, 47, (ki) null);
+            var4 = (ResourceArchive) null;
+            da.a((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
           }
           if (param0.field_a != param2.field_a) {
             return false;
@@ -641,7 +641,7 @@ abstract class da {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -696,7 +696,7 @@ abstract class da {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

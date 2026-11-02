@@ -132,7 +132,7 @@ final class vu extends ab {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 

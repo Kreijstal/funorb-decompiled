@@ -36,7 +36,7 @@ final class ta {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -327,7 +327,7 @@ final class ta {
           } else {
             stackIn_185_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_184_1).append(stackIn_185_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_184_1).append(stackIn_185_2).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ final class ta {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ final class ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var3), "ta.E(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ta.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -641,7 +641,7 @@ final class ta {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -660,7 +660,7 @@ final class ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var4), "ta.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "ta.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -682,7 +682,7 @@ final class ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var4), "ta.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "ta.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -695,7 +695,7 @@ final class ta {
             field_b = -45;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ')');
         }
     }
 
@@ -832,7 +832,7 @@ final class ta {
                     stackIn_50_1 = 32;
                     if (stackIn_50_0 != stackIn_50_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.field_j[var9Lifetime2][var10Lifetime2] = (byte)ej.a(var9Lifetime2, var10Lifetime2, this.field_g, var7, var6, (byte) -75, var8, var5);
+                      this.field_j[var9Lifetime2][var10Lifetime2] = (byte)OpenGlEnvironmentWaterEffect.a(var9Lifetime2, var10Lifetime2, this.field_g, var7, var6, (byte) -75, var8, var5);
                     }
                     var10Lifetime2++;
                   }
@@ -863,7 +863,7 @@ final class ta {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
         }
     }
 

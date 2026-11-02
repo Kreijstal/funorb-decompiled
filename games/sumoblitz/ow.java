@@ -210,7 +210,7 @@ final class ow {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class ow {
         throw new Error();
     }
 
-    final static void a(int param0, ki param1, PlatformTaskDispatcher param2) {
+    final static void a(int param0, ResourceArchive param1, PlatformTaskDispatcher param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -230,24 +230,24 @@ final class ow {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           GraphicsToolkit.field_e = param1;
-          pn.field_n = "";
+          OpenGlUnderwaterEffect.field_n = "";
           if (param0 != -18527) {
             ow.a((byte) 19);
           }
           qn.field_e = param2;
           if (!en.field_h.startsWith("win")) {
             if (en.field_h.startsWith("linux")) {
-              pn.field_n = pn.field_n + "linux/";
+              OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "linux/";
             } else {
               if (en.field_h.startsWith("mac")) {
-                pn.field_n = pn.field_n + "macos/";
+                OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "macos/";
               }
             }
           } else {
-            pn.field_n = pn.field_n + "windows/";
+            OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "windows/";
           }
           if (qn.field_e.field_t) {
-            pn.field_n = pn.field_n + "msjava/";
+            OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "msjava/";
             return;
           }
           if (!en.field_d.startsWith("amd64") &&
@@ -257,16 +257,16 @@ final class ow {
               !en.field_d.startsWith("i586") &&
               !en.field_d.startsWith("x86")) {
               if (en.field_d.startsWith("ppc")) {
-                pn.field_n = pn.field_n + "ppc/";
+                OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "ppc/";
                 return;
               }
-              pn.field_n = pn.field_n + "universal/";
+              OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "universal/";
               return;
             }
-            pn.field_n = pn.field_n + "x86/";
+            OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "x86/";
             return;
           }
-          pn.field_n = pn.field_n + "x86_64/";
+          OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "x86_64/";
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,7 +284,7 @@ final class ow {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

@@ -15,7 +15,7 @@ final class kd {
         field_b = null;
     }
 
-    final static ki a(byte param0, int param1) {
+    final static ResourceArchive a(byte param0, int param1) {
         int var2 = 39 % ((param0 + 45) / 59);
         if (sn.field_d != null) {
           return sn.field_d;

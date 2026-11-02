@@ -55,7 +55,7 @@ final class fu extends wp {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw qo.a((Throwable) ((Object) var1), "fu.I(" + param0 + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "fu.I(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,7 +158,7 @@ final class fu extends wp {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

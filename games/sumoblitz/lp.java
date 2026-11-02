@@ -19,7 +19,7 @@ final class lp extends ak {
           uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 90, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + in.field_z + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "lp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

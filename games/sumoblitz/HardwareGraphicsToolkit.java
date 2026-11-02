@@ -10,7 +10,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_Sb;
     jaclib.memory.heap.NativeHeapBuffer field_z;
     static tf field_t;
-    ki field_ab;
+    ResourceArchive field_ab;
     private jagex3.graphics2.hw.NativeInterface field_nc;
     private IntrusiveDeque field_lb;
     int field_rb;
@@ -41,7 +41,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     ut[] field_V;
     int field_Kb;
     boolean field_tb;
-    private rq[] field_X;
+    private ShaderEffect[] field_X;
     float[] field_G;
     int field_F;
     private int field_L;
@@ -55,7 +55,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private int field_mb;
     int field_Y;
     boolean field_Rb;
-    private rq field_m;
+    private ShaderEffect field_m;
     private jaclib.memory.Stream field_cb;
     private int field_Hb;
     tg[] field_B;
@@ -226,7 +226,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -480,7 +480,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -524,7 +524,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -565,7 +565,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           this.a(param1, false, (byte) 54, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "aw.ID(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.ID(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -577,7 +577,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.a(125, this.field_nb);
           this.a(param0, param0 ^ 0, param2, param1);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "aw.VE(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.VE(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -589,7 +589,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_wb[this.field_mc] = param0;
           this.j(param1 ^ 28752);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "aw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -714,7 +714,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var1_ref), "aw.N(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "aw.N(" + param0 + ')');
         }
     }
 
@@ -750,7 +750,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_gb = ((he) (param0)).field_p;
           this.field_z = this.field_gb.a(32768, false);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "aw.OB(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.OB(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -785,7 +785,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           param0[2] = this.field_F;
           param0[1] = this.field_vb;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "aw.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -871,7 +871,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1095,7 +1095,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1184,7 +1184,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1232,7 +1232,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             var5 = 1;
             var4 = 1;
-            var3 = sr.field_a;
+            var3 = LimitedRandomAccessFile.field_a;
           }
           stackIn_14_0 = (this.field_u) ? 0 : 1;
           stackIn_17_1 = (var5 != 0) ? 0 : 1;
@@ -1344,7 +1344,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1456,13 +1456,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     abstract void X(int param0);
 
-    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, d param2, ki param3, int param4, int param5) {
+    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         wm var9 = null;
@@ -1512,7 +1512,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_w = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
         this.field_sc = 512;
         this.field_fc = new float[16];
-        this.field_l = sr.field_a;
+        this.field_l = LimitedRandomAccessFile.field_a;
         this.field_zb = false;
         this.field_Z = true;
         this.field_y = 0;
@@ -1521,7 +1521,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Kb = -1;
         this.field_N = 1;
         this.field_u = true;
-        this.field_X = new rq[10];
+        this.field_X = new ShaderEffect[10];
         this.field_p = false;
         this.field_tc = 128;
         this.field_i = false;
@@ -1605,7 +1605,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1641,7 +1641,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1652,7 +1652,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         try {
           this.a((byte) 72, param1, false, false, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "aw.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1804,7 +1804,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1866,7 +1866,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var8;
         var8 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != 2147483647) {
-          this.field_m = (rq) null;
+          this.field_m = (ShaderEffect) null;
         }
         param3 = param3 & this.o((byte) 24);
         if (!param3 && (param5 == 4 ||
@@ -2194,7 +2194,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void a(int param0, boolean param1, byte param2, mi param3);
 
-    rq d(int param0, int param1) {
+    ShaderEffect d(int param0, int param1) {
         int var3;
         int var4;
         hu[] var5;
@@ -2205,18 +2205,18 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         var3 = param1;
         if (var3 == 6) {
-          return (rq) ((Object) new oc(this));
+          return (ShaderEffect) ((Object) new oc(this));
         }
         if (var3 == 1) {
-          return (rq) ((Object) new ng(this));
+          return (ShaderEffect) ((Object) new ng(this));
         }
         if (2 == var3) {
-          return (rq) ((Object) new ib(this, this.field_Mb));
+          return (ShaderEffect) ((Object) new ib(this, this.field_Mb));
         }
         if (7 != var3) {
-          return (rq) ((Object) new ni(this));
+          return (ShaderEffect) ((Object) new ni(this));
         }
-        return (rq) ((Object) new uo(this));
+        return (ShaderEffect) ((Object) new uo(this));
     }
 
     abstract void cb(int param0);

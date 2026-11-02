@@ -128,11 +128,11 @@ final class ub extends IntrusiveNode {
           this.field_k = param2;
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Sprite[] a(ki param0, String param1, byte param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -177,7 +177,7 @@ final class ub extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

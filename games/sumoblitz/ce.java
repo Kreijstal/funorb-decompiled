@@ -4,7 +4,7 @@
 abstract class ce extends IntrusiveNode {
     int field_n;
     static js field_o;
-    static ki field_q;
+    static ResourceArchive field_q;
     int[] field_m;
     int field_k;
     static int[] field_p;

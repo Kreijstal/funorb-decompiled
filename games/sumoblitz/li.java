@@ -53,7 +53,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
             this.field_t = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "li.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "li.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
           this.c(true);
           this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "li.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "li.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "li.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "li.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
           param0.drawImage(this.field_x, -param4 + param6, -param2 + param1, (java.awt.image.ImageObserver) ((Object) this.field_w));
           param0.setClip(var9);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "li.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "li.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
           param0.setColorModel(this.field_s);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "li.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "li.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

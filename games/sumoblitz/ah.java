@@ -43,7 +43,7 @@ class ah {
     private boolean field_n;
     int field_d;
     int field_p;
-    static ki field_J;
+    static ResourceArchive field_J;
     int field_A;
     int field_e;
     boolean field_D;
@@ -183,7 +183,7 @@ class ah {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -387,7 +387,7 @@ class ah {
         var4 = (nt) (this.field_q.b(118));
         while (var4 != null) {
           if (var4.a(-2567)) {
-            var4.b(false);
+            var4.unlink(false);
           }
           var4 = (nt) (this.field_q.d((byte) 18));
         }
@@ -1065,7 +1065,7 @@ class ah {
           } else {
             stackIn_128_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_127_0), ((StringBuilder) (Object) stackIn_127_1).append(stackIn_128_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_127_0), ((StringBuilder) (Object) stackIn_127_1).append(stackIn_128_2).append(',').append(param1).append(')').toString());
         }
     }
 

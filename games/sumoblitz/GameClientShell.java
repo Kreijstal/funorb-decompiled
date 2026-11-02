@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fn extends GameApplet {
+abstract class GameClientShell extends GameApplet {
     private int field_r;
     private int field_w;
     private int field_E;
@@ -73,7 +73,7 @@ abstract class fn extends GameApplet {
           ip.d(1886067877);
         }
         if (null != as.field_w) {
-          pn.field_r = as.field_w.a(-88);
+          OpenGlUnderwaterEffect.field_r = as.field_w.a(-88);
         }
         if (param1 >= -97) {
           this.field_D = (String) null;
@@ -86,7 +86,7 @@ abstract class fn extends GameApplet {
             this.field_B = false;
             kk.a((byte) -112);
             we.a((byte) 16);
-            ResourceArchive.a((byte) 87, 2, ab.weClosedTheConnectionText);
+            ArchiveCatalog.a((byte) 87, 2, ab.weClosedTheConnectionText);
             GraphicsToolkit.a(-36);
             ts.field_d = true;
             sj.field_a = 15000L + wq.a(-96);
@@ -132,18 +132,18 @@ abstract class fn extends GameApplet {
             if (10 <= jv.field_a) {
               we.a((byte) 70);
               if (gr.field_l == 3) {
-                ResourceArchive.a((byte) -97, 256, o.field_a);
+                ArchiveCatalog.a((byte) -97, 256, o.field_a);
               } else {
                 if (gr.field_l == 4) {
-                  ResourceArchive.a((byte) 61, 256, eg.field_n);
+                  ArchiveCatalog.a((byte) 61, 256, eg.field_n);
                 } else {
                   if (gr.field_l == 2) {
-                    ResourceArchive.a((byte) 90, 256, bn.dataServerFullOrText);
+                    ArchiveCatalog.a((byte) 90, 256, bn.dataServerFullOrText);
                   } else {
                     if (gr.field_l == 5) {
-                      ResourceArchive.a((byte) -113, 5, s.thisGameHasBeenText);
+                      ArchiveCatalog.a((byte) -113, 5, s.thisGameHasBeenText);
                     } else {
-                      ResourceArchive.a((byte) -97, 256, ao.unableToConnectToText);
+                      ArchiveCatalog.a((byte) -97, 256, ao.unableToConnectToText);
                     }
                   }
                 }
@@ -175,7 +175,7 @@ abstract class fn extends GameApplet {
           if (dk.field_c != 0) {
             hd.field_H = wd.a(u.field_P, (byte) 125);
           }
-          wd.field_j = ve.a(11880, true, pn.field_i, 1, false);
+          wd.field_j = ve.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
           eb.field_f = ve.a(11880, true, pp.field_h, 1, false);
           hw.field_a = ve.a(11880, true, ra.field_f, 1, false);
           pi.field_c = wd.field_j;
@@ -298,7 +298,7 @@ abstract class fn extends GameApplet {
             this.a("reconnect", 21253);
           }
           we.a((byte) 63);
-          ResourceArchive.a((byte) 114, var2, MouseWheelInput.field_c);
+          ArchiveCatalog.a((byte) 114, var2, MouseWheelInput.field_c);
           ts.field_d = true;
           sj.field_a = 15000L + wq.a(-50);
           return var2;
@@ -334,7 +334,7 @@ abstract class fn extends GameApplet {
               rm.a((byte) 126);
             } else {
               if (jv.field_a != 0) {
-                rg.a((byte) 55, pn.field_r);
+                rg.a((byte) 55, OpenGlUnderwaterEffect.field_r);
               } else {
                 discarded$34 = this.a(16981, false, false);
               }
@@ -387,7 +387,7 @@ abstract class fn extends GameApplet {
                                 bq.a(8192);
                                 return;
                               }
-                              IntrusiveNode.a("MGS1: " + di.b((byte) -22), (Throwable) null, 0);
+                              IntrusiveNode.reportClientError("MGS1: " + di.b((byte) -22), (Throwable) null, 0);
                               kk.a((byte) -128);
                               return;
                             }
@@ -417,7 +417,7 @@ abstract class fn extends GameApplet {
           }
           return;
         }
-        IntrusiveNode.a("MGS2: " + di.b((byte) 86), (Throwable) null, 0);
+        IntrusiveNode.reportClientError("MGS2: " + di.b((byte) 86), (Throwable) null, 0);
         kk.a((byte) -112);
         return;
     }
@@ -527,7 +527,7 @@ abstract class fn extends GameApplet {
         try {
           this.a(param0, param2 ^ 480, 640, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "fn.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fn.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -580,7 +580,7 @@ abstract class fn extends GameApplet {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
-            IntrusiveNode.a((String) null, (Throwable) ((Object) var6_ref), param1 ^ 0);
+            IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var6_ref), param1 ^ 0);
             this.a("crash", 21253);
           }
           return;
@@ -594,7 +594,7 @@ abstract class fn extends GameApplet {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -613,7 +613,7 @@ abstract class fn extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Sumoblitz.field_L ? 1 : 0;
-          var4 = sb.a(param1, pn.field_r, dk.field_c, (byte) 81);
+          var4 = sb.a(param1, OpenGlUnderwaterEffect.field_r, dk.field_c, (byte) 81);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -657,7 +657,7 @@ abstract class fn extends GameApplet {
                   jv.field_a = 10;
                   IntrusiveNode.field_a = false;
                 } else {
-                  ResourceArchive.a((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
+                  ArchiveCatalog.a((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
                   MouseWheelInput.field_c = null;
                 }
               }
@@ -699,7 +699,7 @@ abstract class fn extends GameApplet {
           if (var4 == 13) {
             try {
               if (null == IntrusiveNode.field_e) {
-                IntrusiveNode.field_e = new cc(lt.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                IntrusiveNode.field_e = new JaggrabDownloader(lt.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (IntrusiveNode.field_e.a((byte) -110)) {
                 var12 = IntrusiveNode.field_e.b((byte) 126);
@@ -715,7 +715,7 @@ abstract class fn extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              IntrusiveNode.a("S1", (Throwable) ((Object) var5), 0);
+              IntrusiveNode.reportClientError("S1", (Throwable) ((Object) var5), 0);
               var10 = (String) null;
               GraphicsToolkit.a((byte) 111, (String) null);
               IntrusiveNode.field_e = null;
@@ -756,7 +756,7 @@ abstract class fn extends GameApplet {
         wp.field_z[16] = true;
     }
 
-    protected fn() {
+    protected GameClientShell() {
     }
 
     private final void a(boolean param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
@@ -774,7 +774,7 @@ abstract class fn extends GameApplet {
         db.a(false, qn.field_f);
         ak.field_f = param7;
         u.field_P = param4;
-        pn.field_i = param5;
+        OpenGlUnderwaterEffect.field_i = param5;
         ra.field_f = param3;
         pp.field_h = param6;
         this.p(-1);

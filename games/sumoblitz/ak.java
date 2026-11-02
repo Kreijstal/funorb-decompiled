@@ -89,7 +89,7 @@ class ak {
         if (!param0) {
           stackIn_7_0 = kh.field_e;
         } else {
-          stackIn_7_0 = wj.field_e;
+          stackIn_7_0 = OpenGlTransparentWaterEffect.field_e;
         }
         var14 = stackIn_7_0;
         var15 = -1;
@@ -378,7 +378,7 @@ class ak {
           var7 = this.b(param1, 50);
           discarded$0 = this.f(-116, param1);
           var8 = kd.field_a[this.field_h][param1];
-          var9 = fn.field_u[var8].toUpperCase();
+          var9 = GameClientShell.field_u[var8].toUpperCase();
           if (var9 == null) {
             var9 = "ERROR: missing text";
           }
@@ -506,7 +506,7 @@ class ak {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1015,9 +1015,9 @@ class ak {
                     }
                     av.a(-7753, param0, 0);
                     ll.a(17534);
-                    wj.field_e = 0;
+                    OpenGlTransparentWaterEffect.field_e = 0;
                     kh.field_e = 0;
-                    pn.field_q.e(115);
+                    OpenGlUnderwaterEffect.field_q.e(115);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1119,7 +1119,7 @@ class ak {
                       kq.l(34168);
                     }
                     if (this.field_g.g(116224)) {
-                      ResourceArchive.a((byte) -6);
+                      ArchiveCatalog.a((byte) -6);
                     }
                     if (!this.field_g.b((byte) 52)) {
                       break regionExit2;
@@ -1171,7 +1171,7 @@ class ak {
                       break regionExit2;
                     }
                     qc.a(param0, true, false);
-                    if (wj.field_e == 0) {
+                    if (OpenGlTransparentWaterEffect.field_e == 0) {
                       av.a(-7753, param0, 2);
                       if (var9 == 0) {
                         break regionExit2;
@@ -1215,7 +1215,7 @@ class ak {
                         break regionExit2;
                       }
                       stackIn_247_0 = 4025;
-                      if (wj.field_e != 0) {
+                      if (OpenGlTransparentWaterEffect.field_e != 0) {
                         stackIn_248_1 = 5;
                       } else {
                         stackIn_248_1 = 2;
@@ -1394,7 +1394,7 @@ class ak {
             this.field_h == 8) {
             wo.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.c() / 2) - 20), param0 << 24, var4_int, param1, MouseWheelInput.field_b.c() + 40, -5, 1, true);
             if (ul.field_f == 0 &&
-              !wj.field_k) {
+              !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
             } else {
               stackIn_18_0 = 1;
@@ -1428,11 +1428,11 @@ class ak {
                   stackIn_32_0 = qv.field_k;
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != te.field_c);
-                  stackIn_36_3 = (wj.field_e != 0);
+                  stackIn_36_3 = (OpenGlTransparentWaterEffect.field_e != 0);
                   ((da) (Object) stackIn_32_0).a(fl.a(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | param0 << 24, -1, var7 + var6Lifetime1, 320, 0);
                   stackIn_38_0 = qv.field_k;
                   stackIn_38_1 = 26;
-                  stackIn_39_2 = (wj.field_e != 0);
+                  stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_41_3 = false;
                   stackIn_42_4 = (0 != te.field_c);
                   ((da) (Object) stackIn_38_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), param0 << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
@@ -1440,17 +1440,17 @@ class ak {
                   stackIn_44_1 = 0;
                   stackIn_45_2 = (te.field_c != 0);
                   stackIn_47_3 = false;
-                  stackIn_48_4 = (0 != wj.field_e);
+                  stackIn_48_4 = (0 != OpenGlTransparentWaterEffect.field_e);
                   ((da) (Object) stackIn_44_0).a(vi.a(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), param0 << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
                   uq.field_a.a(b.youAreNotCurrentlyText, param0 << 24 | 16777215, -1, var6Lifetime1, 320, 0);
                   stackIn_50_0 = uq.field_a;
                   stackIn_50_1 = false;
                   stackIn_51_2 = (te.field_c != 0);
-                  stackIn_54_3 = (wj.field_e != 0);
+                  stackIn_54_3 = (OpenGlTransparentWaterEffect.field_e != 0);
                   ((da) (Object) stackIn_50_0).a(fl.a(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), param0 << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
                   stackIn_56_0 = uq.field_a;
                   stackIn_56_1 = 26;
-                  stackIn_57_2 = (wj.field_e != 0);
+                  stackIn_57_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_59_3 = false;
                   stackIn_60_4 = (0 != te.field_c);
                   ((da) (Object) stackIn_56_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), param0 << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
@@ -1458,7 +1458,7 @@ class ak {
                   stackIn_62_1 = 0;
                   stackIn_63_2 = (te.field_c != 0);
                   stackIn_65_3 = false;
-                  stackIn_66_4 = (wj.field_e != 0);
+                  stackIn_66_4 = (OpenGlTransparentWaterEffect.field_e != 0);
                   ((da) (Object) stackIn_62_0).a(vi.a(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | param0 << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
                   if (var8 != 0) {
                     this.h(param0, 1);
@@ -1504,7 +1504,7 @@ class ak {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1760,7 +1760,7 @@ class ak {
         return 48;
     }
 
-    final static void a(ki param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         q var2 = null;
         try {
           if (param1 != 100) {
@@ -1770,7 +1770,7 @@ class ak {
           var2 = q.a(param0, "jagex logo2.packvorbis", "");
           var2.c();
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -2044,7 +2044,7 @@ class ak {
           be.field_t.a(param0, 5023231 | param1 << 24, -1, 96, 320, 0);
           hc.field_e.a(param0, 16777215 | param1 << 24, -1, 96, 320, 0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

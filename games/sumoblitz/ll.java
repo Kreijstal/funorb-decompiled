@@ -21,12 +21,12 @@ final class ll {
         iv.field_i = 1;
         hc.field_f = 1;
         if (param0 >= 40) {
-          ki.field_f = 1;
+          ResourceArchive.field_f = 1;
           la.a(ql.field_A, 0, 25, -1);
           return;
         }
         field_a = (long[][]) null;
-        ki.field_f = 1;
+        ResourceArchive.field_f = 1;
         la.a(ql.field_A, 0, 25, -1);
     }
 
@@ -38,7 +38,7 @@ final class ll {
           go.field_j = new int[25];
           bl.field_e = -1;
           wm.field_f = new boolean[25];
-          ki.field_f = 1;
+          ResourceArchive.field_f = 1;
           up.field_g = new boolean[25];
           iv.field_i = 1;
           qn.field_d = new boolean[25];
@@ -52,7 +52,7 @@ final class ll {
         go.field_j = new int[25];
         bl.field_e = -1;
         wm.field_f = new boolean[25];
-        ki.field_f = 1;
+        ResourceArchive.field_f = 1;
         up.field_g = new boolean[25];
         iv.field_i = 1;
         qn.field_d = new boolean[25];

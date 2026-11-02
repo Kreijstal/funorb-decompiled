@@ -71,7 +71,7 @@ abstract class r extends DualLinkNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          IntrusiveNode.a("CC1", (Throwable) ((Object) var6), 0);
+          IntrusiveNode.reportClientError("CC1", (Throwable) ((Object) var6), 0);
           tm.field_c = null;
           oi.field_c = null;
           return new br(param0);

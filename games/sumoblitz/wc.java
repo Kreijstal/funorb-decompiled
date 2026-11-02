@@ -19,7 +19,7 @@ final class wc {
         return var2;
     }
 
-    final static boolean a(ki param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -42,7 +42,7 @@ final class wc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class wc {
           this.field_a = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

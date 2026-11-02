@@ -23,7 +23,7 @@ class dq extends dp {
     private int field_H;
     private Sprite field_W;
     private boolean field_J;
-    static ki field_Z;
+    static ResourceArchive field_Z;
     private int field_U;
     private int field_Q;
     private int field_bb;
@@ -62,7 +62,7 @@ class dq extends dp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) ((Object) var2), "dq.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "dq.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ class dq extends dp {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ class dq extends dp {
             this.field_F = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "dq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

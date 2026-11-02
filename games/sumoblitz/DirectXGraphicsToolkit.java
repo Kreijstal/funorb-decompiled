@@ -516,7 +516,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == rv.field_b) {
           return 3;
         }
-        if (cc.field_i == param0) {
+        if (JaggrabDownloader.field_i == param0) {
           return 1;
         }
         if (np.field_h == param0) {
@@ -630,7 +630,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void bb(int param0) {
-        if (sr.field_a == this.field_l) {
+        if (LimitedRandomAccessFile.field_a == this.field_l) {
           this.field_Cc.SetRenderState(19, 5);
           this.field_Cc.SetRenderState(20, 6);
         } else {
@@ -742,20 +742,20 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.J(param0 + param0);
     }
 
-    final rq d(int param0, int param1) {
+    final ShaderEffect d(int param0, int param1) {
         int var3;
         if (param0 != 0) {
           this.f(-24);
         }
         var3 = param1;
         if (3 == var3) {
-          return (rq) ((Object) new ol(this, this.field_ab));
+          return (ShaderEffect) ((Object) new DirectXUnderwaterEffect(this, this.field_ab));
         }
         if (4 == var3) {
-          return (rq) ((Object) new vh(this, this.field_ab, this.field_Mb));
+          return (ShaderEffect) ((Object) new DirectXTransparentWaterEffect(this, this.field_ab, this.field_Mb));
         }
         if (var3 == 8) {
-          return (rq) ((Object) new tb(this, this.field_ab, this.field_Mb));
+          return (ShaderEffect) ((Object) new DirectXEnvironmentWaterEffect(this, this.field_ab, this.field_Mb));
         }
         return super.d(0, param1);
     }
@@ -914,7 +914,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     final void a(int param0, int param1, int param2, ck param3) {
         if (param1 != 0) {
           Integer var6 = (Integer) null;
-          DirectXGraphicsToolkit.createToolkit((java.awt.Canvas) null, (d) null, (ki) null, (Integer) null);
+          DirectXGraphicsToolkit.createToolkit((java.awt.Canvas) null, (d) null, (ResourceArchive) null, (Integer) null);
         }
         this.field_Cc.DrawPrimitive(DirectXGraphicsToolkit.a(param3, (byte) -121), param0, param2);
     }
@@ -939,7 +939,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         super.d();
     }
 
-    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ki param10, int param11) {
+    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -1063,7 +1063,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.BeginScene();
     }
 
-    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, ki param2, Integer param3) {
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, ResourceArchive param2, Integer param3) {
         DirectXGraphicsToolkit stackIn_42_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;

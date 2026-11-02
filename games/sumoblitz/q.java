@@ -155,7 +155,7 @@ final class q extends IntrusiveNode {
         field_t = true;
     }
 
-    final static q a(ki param0, String param1, String param2) {
+    final static q a(ResourceArchive param0, String param1, String param2) {
         try {
           q var4_ref = null;
           if (!q.a(param0)) {
@@ -199,7 +199,7 @@ final class q extends IntrusiveNode {
         field_Q = null;
     }
 
-    final static q a(ki param0, int param1, int param2) {
+    final static q a(ResourceArchive param0, int param1, int param2) {
         try {
           q var4_ref = null;
           if (!q.a(param0)) {
@@ -742,7 +742,7 @@ final class q extends IntrusiveNode {
         return var1;
     }
 
-    private final static boolean a(ki param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_t) {
           var1 = param0.a((byte) 95, 0, 0);

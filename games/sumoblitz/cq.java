@@ -10,7 +10,7 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,9 +41,9 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(boolean param0, PlatformTaskDispatcher param1) {
         try {
-          wj.a(this.field_b, param1, param0);
+          OpenGlTransparentWaterEffect.a(this.field_b, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

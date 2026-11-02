@@ -40,7 +40,7 @@ final class cl extends nt {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -53,46 +53,46 @@ final class cl extends nt {
     }
 
     final static void e(int param0) {
-        if (null != fn.field_u) {
+        if (null != GameClientShell.field_u) {
           return;
         }
-        fn.field_u = new String[34];
-        fn.field_u[16] = vp.discardText;
-        fn.field_u[1] = ll.resumeGameText;
-        fn.field_u[5] = rf.menuText;
-        fn.field_u[11] = RasterBuffer.quitText;
-        fn.field_u[14] = kf.achievementsText;
-        fn.field_u[6] = rf.menuText;
-        fn.field_u[12] = ff.soundText;
-        fn.field_u[7] = nj.endGameText;
-        fn.field_u[0] = k.startGameText;
-        fn.field_u[3] = cp.instructionsText;
+        GameClientShell.field_u = new String[34];
+        GameClientShell.field_u[16] = vp.discardText;
+        GameClientShell.field_u[1] = ll.resumeGameText;
+        GameClientShell.field_u[5] = rf.menuText;
+        GameClientShell.field_u[11] = RasterBuffer.quitText;
+        GameClientShell.field_u[14] = kf.achievementsText;
+        GameClientShell.field_u[6] = rf.menuText;
+        GameClientShell.field_u[12] = ff.soundText;
+        GameClientShell.field_u[7] = nj.endGameText;
+        GameClientShell.field_u[0] = k.startGameText;
+        GameClientShell.field_u[3] = cp.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
-        fn.field_u[15] = go.logInCreateAccountText;
-        fn.field_u[4] = ki.field_j;
-        fn.field_u[2] = MouseInputHandler.field_a;
-        fn.field_u[13] = gu.musicText;
-        fn.field_u[21] = hd.regularText;
-        fn.field_u[25] = ea.difficultyText;
-        fn.field_u[18] = gk.previousText;
-        fn.field_u[10] = dj.scoreFilterLabels[2];
-        fn.field_u[27] = ni.field_g;
-        fn.field_u[23] = pt.challengeText;
-        fn.field_u[24] = nq.optionsText;
-        fn.field_u[17] = in.nextText;
-        fn.field_u[28] = ss.restartLevelText;
-        fn.field_u[19] = dn.arcadeGameText;
-        fn.field_u[22] = td.editorText;
+        GameClientShell.field_u[15] = go.logInCreateAccountText;
+        GameClientShell.field_u[4] = ResourceArchive.field_j;
+        GameClientShell.field_u[2] = MouseInputHandler.field_a;
+        GameClientShell.field_u[13] = gu.musicText;
+        GameClientShell.field_u[21] = hd.regularText;
+        GameClientShell.field_u[25] = ea.difficultyText;
+        GameClientShell.field_u[18] = gk.previousText;
+        GameClientShell.field_u[10] = dj.scoreFilterLabels[2];
+        GameClientShell.field_u[27] = ni.field_g;
+        GameClientShell.field_u[23] = pt.challengeText;
+        GameClientShell.field_u[24] = nq.optionsText;
+        GameClientShell.field_u[17] = in.nextText;
+        GameClientShell.field_u[28] = ss.restartLevelText;
+        GameClientShell.field_u[19] = dn.arcadeGameText;
+        GameClientShell.field_u[22] = td.editorText;
         BufferedSocket.field_i = new String[]{mn.highText, bc.lowText};
-        fn.field_u[33] = mm.levelSelectText;
-        fn.field_u[26] = lh.resetStatsText;
-        fn.field_u[9] = dj.scoreFilterLabels[1];
-        fn.field_u[20] = nt.challengeText;
-        fn.field_u[32] = mm.levelSelectText;
-        fn.field_u[8] = dj.scoreFilterLabels[0];
-        fn.field_u[29] = hv.reassignText;
-        fn.field_u[30] = ou.field_g;
-        fn.field_u[31] = ls.continueText;
+        GameClientShell.field_u[33] = mm.levelSelectText;
+        GameClientShell.field_u[26] = lh.resetStatsText;
+        GameClientShell.field_u[9] = dj.scoreFilterLabels[1];
+        GameClientShell.field_u[20] = nt.challengeText;
+        GameClientShell.field_u[32] = mm.levelSelectText;
+        GameClientShell.field_u[8] = dj.scoreFilterLabels[0];
+        GameClientShell.field_u[29] = hv.reassignText;
+        GameClientShell.field_u[30] = ou.field_g;
+        GameClientShell.field_u[31] = ls.continueText;
     }
 
     final boolean a(int param0) {
@@ -156,7 +156,7 @@ final class cl extends nt {
           this.field_x = param7;
           this.field_y = param5;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class cl extends nt {
           var5.a(var4, false);
           var5.c(var5.position - var4, param0 - 13648);
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

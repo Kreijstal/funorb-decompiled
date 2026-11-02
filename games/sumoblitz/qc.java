@@ -46,7 +46,7 @@ final class qc {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -63,14 +63,14 @@ final class qc {
         int var3_int = Sumoblitz.field_J.length > this.field_d ? 380 : 320;
         int var4 = 200;
         int var5 = 160;
-        String var9 = sr.droneDescriptions[this.field_d * 2];
+        String var9 = LimitedRandomAccessFile.droneDescriptions[this.field_d * 2];
         qv.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
         uq.field_a.a(var9, -1, -1, var4, var3_int, 0);
         if (param1 != -4475) {
           return;
         }
         try {
-          var10 = sr.droneDescriptions[2 * this.field_d + 1];
+          var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.field_d + 1];
           var3_int -= 10;
           gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
           bq.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (aa) null, 1, 0);
@@ -84,7 +84,7 @@ final class qc {
             uq.field_a.a(var11, -1, -1, var4, var3_int, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class qc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

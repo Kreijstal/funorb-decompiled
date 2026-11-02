@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
-    static ki field_d;
+    static ResourceArchive field_d;
     DualLinkNode field_c;
     static volatile int field_b;
     static boolean field_e;
@@ -17,14 +17,14 @@ final class SecondaryNodeDeque implements Iterable {
           SecondaryNodeDeque.a(102);
           var2 = this.field_c.secondaryNext;
           if (var2 != this.field_c) {
-            var2.c(param0 - 5045);
+            var2.unlinkSecondary(param0 - 5045);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_c.secondaryNext;
         if (var2Lifetime1 != this.field_c) {
-          var2Lifetime1.c(param0 - 5045);
+          var2Lifetime1.unlinkSecondary(param0 - 5045);
           return var2Lifetime1;
         }
         return null;
@@ -66,7 +66,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class SecondaryNodeDeque implements Iterable {
 
     final void a(DualLinkNode param0, byte param1) {
         if (param0.secondaryPrevious != null) {
-          param0.c(-5106);
+          param0.unlinkSecondary(-5106);
         }
         param0.secondaryNext = this.field_c;
         param0.secondaryPrevious = this.field_c.secondaryPrevious;
@@ -120,7 +120,7 @@ final class SecondaryNodeDeque implements Iterable {
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "hl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

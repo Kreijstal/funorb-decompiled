@@ -117,7 +117,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            IntrusiveNode.a((String) null, (Throwable) ((Object) var1_ref), 0);
+            IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var1_ref), 0);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -233,7 +233,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class BufferedSocket implements Runnable {
           this.field_k = this.field_m.getOutputStream();
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw qo.a((Throwable) ((Object) runtimeException), "dt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

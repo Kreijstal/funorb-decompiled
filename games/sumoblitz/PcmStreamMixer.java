@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends hj {
+final class PcmStreamMixer extends PcmStream {
     private IntrusiveDeque field_q;
     private IntrusiveDeque field_o;
     private int field_p;
@@ -38,7 +38,7 @@ final class al extends hj {
         return;
     }
 
-    final synchronized void b(hj param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_q.a(param0, -10295);
     }
 
@@ -118,10 +118,10 @@ final class al extends hj {
     }
 
     private final void c(int param0) {
-        hj var2 = (hj) (this.field_q.b(105));
+        PcmStream var2 = (PcmStream) (this.field_q.b(105));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (hj) (this.field_q.d((byte) 18));
+          var2 = (PcmStream) (this.field_q.d((byte) 18));
         }
     }
 
@@ -130,7 +130,7 @@ final class al extends hj {
     }
 
     private final void a(md param0) {
-        param0.b(false);
+        param0.unlink(false);
         param0.a();
         IntrusiveNode var2 = this.field_o.field_e.next;
         if (var2 == this.field_o.field_e) {
@@ -140,27 +140,27 @@ final class al extends hj {
         }
     }
 
-    final synchronized void a(hj param0) {
-        param0.b(false);
+    final synchronized void a(PcmStream param0) {
+        param0.unlink(false);
     }
 
-    final hj c() {
-        return (hj) (this.field_q.d((byte) 18));
+    final PcmStream c() {
+        return (PcmStream) (this.field_q.d((byte) 18));
     }
 
-    final hj a() {
-        return (hj) (this.field_q.b(104));
+    final PcmStream a() {
+        return (PcmStream) (this.field_q.b(104));
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        hj var4 = (hj) (this.field_q.b(-91));
+        PcmStream var4 = (PcmStream) (this.field_q.b(-91));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (hj) (this.field_q.d((byte) 18));
+          var4 = (PcmStream) (this.field_q.d((byte) 18));
         }
     }
 
-    public al() {
+    public PcmStreamMixer() {
         this.field_q = new IntrusiveDeque();
         this.field_o = new IntrusiveDeque();
         this.field_r = -1;

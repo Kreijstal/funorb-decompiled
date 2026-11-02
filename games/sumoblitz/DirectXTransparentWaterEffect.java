@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends rq {
+final class DirectXTransparentWaterEffect extends ShaderEffect {
     private static float[] field_g;
     private jagdx.IDirect3DVertexShader field_e;
     private sk field_h;
@@ -124,7 +124,7 @@ final class vh extends rq {
         }
     }
 
-    vh(DirectXGraphicsToolkit param0, ki param1, sk param2) {
+    DirectXTransparentWaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1, sk param2) {
         super(param0);
         this.field_f = param0;
         this.field_h = param2;
