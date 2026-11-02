@@ -9,7 +9,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ShatteredPlansClient.a(I)V#0"
+      "renamedSymbol": "B:ShatteredPlansClient.update(I)V#0"
     },
     {
       "symbol": "B:ap.a([II)V#0",
@@ -2156,6 +2156,46 @@
       "renamedSymbol": "F:IntrusiveNode.next:LIntrusiveNode;"
     },
     {
+      "symbol": "M:ShatteredPlansClient.a(I)V",
+      "originalName": "a",
+      "to": "update",
+      "evidence": "Abstract per-tick hook that the private runUpdate calls after recording the tick time. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShatteredPlansClient.update(I)V"
+    },
+    {
+      "symbol": "M:ShatteredPlansClient.a(Z)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Abstract hook that the termination routine calls before it removes the canvas. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShatteredPlansClient.shutdown(Z)V"
+    },
+    {
+      "symbol": "M:ShatteredPlansClient.c(I)V",
+      "originalName": "c",
+      "to": "initialise",
+      "evidence": "Abstract hook that run calls once after creating the canvas and before the main loop. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShatteredPlansClient.initialise(I)V"
+    },
+    {
+      "symbol": "M:ShatteredPlansClient.d(I)V",
+      "originalName": "d",
+      "to": "draw",
+      "evidence": "Abstract per-frame hook that the private runDraw calls after recording the paint time. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShatteredPlansClient.draw(I)V"
+    },
+    {
+      "symbol": "M:ShatteredPlansClient.g(I)V",
+      "originalName": "g",
+      "to": "disposeResources",
+      "evidence": "Abstract hook that the termination routine calls after it removes the canvas and dispatcher. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShatteredPlansClient.disposeResources(I)V"
+    },
+    {
       "symbol": "M:db.a(B)Z",
       "originalName": "a",
       "to": "isEmpty",
@@ -2722,6 +2762,102 @@
       "evidence": "Creates a BattleEvent, appends it and returns it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TurnEventLog.recordBattle([ILStar;I[LPlayer;)LBattleEvent;"
+    },
+    {
+      "symbol": "M:kf.a(B)V",
+      "originalName": "a",
+      "to": "runUpdate",
+      "evidence": "Records the tick time in a ring of 32, copies the focus flag and calls update.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.runUpdate(B)V"
+    },
+    {
+      "symbol": "M:kf.a(BIIILjava/lang/String;II)V",
+      "originalName": "a",
+      "to": "startup",
+      "evidence": "Stores the canvas size, creates the PlatformTaskDispatcher and starts the run thread.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.startup(BIIILjava/lang/String;II)V"
+    },
+    {
+      "symbol": "M:kf.a(BLjava/lang/String;)V",
+      "originalName": "a",
+      "to": "fail",
+      "evidence": "Shows a failure page for the given reason key such as wrongjava or crash.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.fail(BLjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:kf.a(I)V",
+      "originalName": "a",
+      "to": "update",
+      "evidence": "Abstract per-tick hook that the private runUpdate calls after recording the tick time.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.update(I)V"
+    },
+    {
+      "symbol": "M:kf.a(IZ)V",
+      "originalName": "a",
+      "to": "terminate",
+      "evidence": "Runs once under a lock, calls shutdown, removes the canvas, disposes resources and may exit.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.terminate(IZ)V"
+    },
+    {
+      "symbol": "M:kf.a(Z)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Abstract hook that the termination routine calls before it removes the canvas.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.shutdown(Z)V"
+    },
+    {
+      "symbol": "M:kf.c(B)V",
+      "originalName": "c",
+      "to": "runDraw",
+      "evidence": "Records the paint time, resizes the canvas every fifty frames and calls draw.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.runDraw(B)V"
+    },
+    {
+      "symbol": "M:kf.c(I)V",
+      "originalName": "c",
+      "to": "initialise",
+      "evidence": "Abstract hook that run calls once after creating the canvas and before the main loop.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.initialise(I)V"
+    },
+    {
+      "symbol": "M:kf.d(I)V",
+      "originalName": "d",
+      "to": "draw",
+      "evidence": "Abstract per-frame hook that the private runDraw calls after recording the paint time.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.draw(I)V"
+    },
+    {
+      "symbol": "M:kf.e(I)V",
+      "originalName": "e",
+      "to": "closeAudioPlayers",
+      "evidence": "Closes the two PcmPlayerService outputs when they exist.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.closeAudioPlayers(I)V"
+    },
+    {
+      "symbol": "M:kf.f(I)V",
+      "originalName": "f",
+      "to": "createCanvas",
+      "evidence": "Replaces the canvas with a new DelegatingCanvas in the container and sets size and location.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.createCanvas(I)V"
+    },
+    {
+      "symbol": "M:kf.g(I)V",
+      "originalName": "g",
+      "to": "disposeResources",
+      "evidence": "Abstract hook that the termination routine calls after it removes the canvas and dispatcher.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.disposeResources(I)V"
     },
     {
       "symbol": "M:ln.a(BLln;)V",
@@ -3460,6 +3596,110 @@
       "renamedSymbol": "M:Territory.firstStar(I)LStar;"
     },
     {
+      "symbol": "M:tl.a(IIIIZIII)V",
+      "originalName": "a",
+      "to": "initialiseShell",
+      "evidence": "Creates the helper frame, input handlers, raster and network settings of the shell.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.initialiseShell(IIIIZIII)V"
+    },
+    {
+      "symbol": "M:tl.a(IIILjava/lang/String;I)V",
+      "originalName": "a",
+      "to": "readAppletParameters",
+      "evidence": "Reads gameport1, gameport2, servernum, instanceid and related applet parameters.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.readAppletParameters(IIILjava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:tl.a(Ljava/lang/String;IB)V",
+      "originalName": "a",
+      "to": "configureGame",
+      "evidence": "Passes 480, 640 and the game name to the parameter reader.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.configureGame(Ljava/lang/String;IB)V"
+    },
+    {
+      "symbol": "M:tl.a(ZZIZZZZ)V",
+      "originalName": "a",
+      "to": "allowOpcodeGroups",
+      "evidence": "Calls the opcode-allowing methods selected by its boolean flags.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcodeGroups(ZZIZZZZ)V"
+    },
+    {
+      "symbol": "M:tl.b(IZ)V",
+      "originalName": "b",
+      "to": "allowBaseOpcodes",
+      "evidence": "Sets the allowed flags of opcodes 0, 3, 7, 8, 16, 17 and 18.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowBaseOpcodes(IZ)V"
+    },
+    {
+      "symbol": "M:tl.d(B)V",
+      "originalName": "d",
+      "to": "allowOpcodes11To13",
+      "evidence": "Sets the allowed flags of server opcodes 11, 12 and 13.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcodes11To13(B)V"
+    },
+    {
+      "symbol": "M:tl.g(B)V",
+      "originalName": "g",
+      "to": "allowOpcode1",
+      "evidence": "Sets the allowed flag of server opcode 1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcode1(B)V"
+    },
+    {
+      "symbol": "M:tl.h(B)V",
+      "originalName": "h",
+      "to": "allowOpcode2",
+      "evidence": "Sets the allowed flag of server opcode 2.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcode2(B)V"
+    },
+    {
+      "symbol": "M:tl.h(I)V",
+      "originalName": "h",
+      "to": "allowOpcode4",
+      "evidence": "Sets the allowed flag of server opcode 4.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcode4(I)V"
+    },
+    {
+      "symbol": "M:tl.i(B)I",
+      "originalName": "i",
+      "to": "serviceConnection",
+      "evidence": "Returns -1, 0 or 1 for the connection state and starts a reconnect on other results.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.serviceConnection(B)I"
+    },
+    {
+      "symbol": "M:tl.j(I)V",
+      "originalName": "j",
+      "to": "allowOpcode6",
+      "evidence": "Sets the allowed flag of server opcode 6.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcode6(I)V"
+    },
+    {
+      "symbol": "M:tl.k(B)V",
+      "originalName": "k",
+      "to": "allowOpcode5",
+      "evidence": "Sets the allowed flag of server opcode 5.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.allowOpcode5(B)V"
+    },
+    {
+      "symbol": "M:tl.l(B)V",
+      "originalName": "l",
+      "to": "initialiseOpcodeLengths",
+      "evidence": "Fills the table of fixed and variable packet lengths per opcode.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tl.initialiseOpcodeLengths(B)V"
+    },
+    {
       "symbol": "M:ui.a(BLdc;Lkq;)V",
       "originalName": "a",
       "to": "showResults",
@@ -3543,7 +3783,7 @@
   "symbols": [
     {
       "symbol": "B:ShatteredPlansClient.a(I)V#0",
-      "renamedSymbol": "B:ShatteredPlansClient.a(I)V#0",
+      "renamedSymbol": "B:ShatteredPlansClient.update(I)V#0",
       "originalName": "L17",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -52053,7 +52293,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#0",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#0",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -52064,7 +52304,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#1",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#1",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -52075,7 +52315,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#10",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#10",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#10",
       "originalName": "stackIn_111_0",
       "renamedName": "stackIn_111_0",
       "declaration": {
@@ -52086,7 +52326,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#11",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#11",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#11",
       "originalName": "stackIn_114_0",
       "renamedName": "stackIn_114_0",
       "declaration": {
@@ -52097,7 +52337,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#12",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#12",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#12",
       "originalName": "stackIn_118_0",
       "renamedName": "stackIn_118_0",
       "declaration": {
@@ -52108,7 +52348,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#13",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#13",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#13",
       "originalName": "stackIn_126_0",
       "renamedName": "stackIn_126_0",
       "declaration": {
@@ -52119,7 +52359,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#14",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#14",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#14",
       "originalName": "stackIn_127_1",
       "renamedName": "stackIn_127_1",
       "declaration": {
@@ -52130,7 +52370,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#15",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#15",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#15",
       "originalName": "stackIn_150_0",
       "renamedName": "stackIn_150_0",
       "declaration": {
@@ -52141,7 +52381,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#16",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#16",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#16",
       "originalName": "stackIn_150_1",
       "renamedName": "stackIn_150_1",
       "declaration": {
@@ -52152,7 +52392,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#17",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#17",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#17",
       "originalName": "stackIn_167_0",
       "renamedName": "stackIn_167_0",
       "declaration": {
@@ -52163,7 +52403,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#18",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#18",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#18",
       "originalName": "stackIn_172_0",
       "renamedName": "stackIn_172_0",
       "declaration": {
@@ -52174,7 +52414,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#19",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#19",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#19",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -52185,7 +52425,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#2",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#2",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#2",
       "originalName": "var11_int",
       "renamedName": "var11_int",
       "declaration": {
@@ -52196,7 +52436,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#20",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#20",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#20",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -52207,7 +52447,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#21",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#21",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#21",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -52218,7 +52458,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#22",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#22",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#22",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -52229,7 +52469,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#23",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#23",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#23",
       "originalName": "var3_ref_lq",
       "renamedName": "var3_ref_lq",
       "declaration": {
@@ -52240,7 +52480,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#24",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#24",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#24",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -52251,7 +52491,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#25",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#25",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#25",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -52262,7 +52502,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#26",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#26",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#26",
       "originalName": "var5_ref_vr",
       "renamedName": "var5_ref_vr",
       "declaration": {
@@ -52273,7 +52513,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#27",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#27",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#27",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -52284,7 +52524,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#28",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#28",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#28",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -52295,7 +52535,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#29",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#29",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#29",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -52306,7 +52546,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#3",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#3",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#3",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -52317,7 +52557,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#30",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#30",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#30",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -52328,7 +52568,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#31",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#31",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#31",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -52339,7 +52579,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#32",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#32",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#32",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -52350,7 +52590,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#33",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#33",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#33",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -52361,7 +52601,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#34",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#34",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#34",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -52372,7 +52612,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#35",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#35",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#35",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -52383,7 +52623,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#36",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#36",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#36",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -52394,7 +52634,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#37",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#37",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#37",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -52405,7 +52645,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#38",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#38",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#38",
       "originalName": "var15_ref",
       "renamedName": "var15_ref",
       "declaration": {
@@ -52416,7 +52656,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#39",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#39",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#39",
       "originalName": "var15_ref2",
       "renamedName": "var15_ref2",
       "declaration": {
@@ -52427,7 +52667,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#4",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#4",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#4",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -52438,7 +52678,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#40",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#40",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#40",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -52449,7 +52689,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#41",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#41",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#41",
       "originalName": "stackIn_97_0Lifetime1",
       "renamedName": "stackIn_97_0Lifetime1",
       "declaration": {
@@ -52460,7 +52700,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#42",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#42",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#42",
       "originalName": "stackIn_97_1Lifetime1",
       "renamedName": "stackIn_97_1Lifetime1",
       "declaration": {
@@ -52471,7 +52711,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#43",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#43",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#43",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -52482,7 +52722,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#44",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#44",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#44",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -52493,7 +52733,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#45",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#45",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#45",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -52504,7 +52744,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#46",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#46",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#46",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -52515,7 +52755,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#47",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#47",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#47",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -52526,7 +52766,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#48",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#48",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#48",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -52537,7 +52777,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#49",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#49",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#49",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -52548,7 +52788,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#5",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#5",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#5",
       "originalName": "stackIn_46_2",
       "renamedName": "stackIn_46_2",
       "declaration": {
@@ -52559,7 +52799,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#50",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#50",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#50",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -52570,7 +52810,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#6",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#6",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#6",
       "originalName": "stackIn_97_0",
       "renamedName": "stackIn_97_0",
       "declaration": {
@@ -52581,7 +52821,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#7",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#7",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#7",
       "originalName": "stackIn_97_1",
       "renamedName": "stackIn_97_1",
       "declaration": {
@@ -52592,7 +52832,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#8",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#8",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#8",
       "originalName": "stackIn_102_0",
       "renamedName": "stackIn_102_0",
       "declaration": {
@@ -52603,7 +52843,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.a(I)V#9",
-      "renamedSymbol": "L:ShatteredPlansClient.a(I)V#9",
+      "renamedSymbol": "L:ShatteredPlansClient.update(I)V#9",
       "originalName": "stackIn_105_0",
       "renamedName": "stackIn_105_0",
       "declaration": {
@@ -52889,7 +53129,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.c(I)V#0",
-      "renamedSymbol": "L:ShatteredPlansClient.c(I)V#0",
+      "renamedSymbol": "L:ShatteredPlansClient.initialise(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -52933,7 +53173,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#0",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#0",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -52944,7 +53184,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#1",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#1",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -52955,7 +53195,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#10",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#10",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -52966,7 +53206,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#11",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#11",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#11",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -52977,7 +53217,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#12",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#12",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -52988,7 +53228,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#13",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#13",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -52999,7 +53239,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#14",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#14",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#14",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -53010,7 +53250,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#15",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#15",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#15",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -53021,7 +53261,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#16",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#16",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#16",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -53032,7 +53272,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#17",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#17",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#17",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -53043,7 +53283,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#18",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#18",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#18",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -53054,7 +53294,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#19",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#19",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#19",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -53065,7 +53305,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#2",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#2",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#2",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -53076,7 +53316,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#20",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#20",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#20",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -53087,7 +53327,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#21",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#21",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#21",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -53098,7 +53338,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#22",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#22",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#22",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -53109,7 +53349,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#3",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#3",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#3",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -53120,7 +53360,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#4",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#4",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#4",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -53131,7 +53371,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#5",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#5",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#5",
       "originalName": "stackIn_71_1",
       "renamedName": "stackIn_71_1",
       "declaration": {
@@ -53142,7 +53382,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#6",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#6",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -53153,7 +53393,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#7",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#7",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#7",
       "originalName": "var3_ref_he",
       "renamedName": "var3_ref_he",
       "declaration": {
@@ -53164,7 +53404,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#8",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#8",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#8",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -53175,7 +53415,7 @@
     },
     {
       "symbol": "L:ShatteredPlansClient.d(I)V#9",
-      "renamedSymbol": "L:ShatteredPlansClient.d(I)V#9",
+      "renamedSymbol": "L:ShatteredPlansClient.draw(I)V#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -166871,7 +167111,7 @@
     },
     {
       "symbol": "L:kf.a(B)V#0",
-      "renamedSymbol": "L:GameApplet.a(B)V#0",
+      "renamedSymbol": "L:GameApplet.runUpdate(B)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -166882,7 +167122,7 @@
     },
     {
       "symbol": "L:kf.a(B)V#1",
-      "renamedSymbol": "L:GameApplet.a(B)V#1",
+      "renamedSymbol": "L:GameApplet.runUpdate(B)V#1",
       "originalName": "var2_long",
       "renamedName": "var2_long",
       "declaration": {
@@ -166893,7 +167133,7 @@
     },
     {
       "symbol": "L:kf.a(B)V#2",
-      "renamedSymbol": "L:GameApplet.a(B)V#2",
+      "renamedSymbol": "L:GameApplet.runUpdate(B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -166904,7 +167144,7 @@
     },
     {
       "symbol": "L:kf.a(B)V#3",
-      "renamedSymbol": "L:GameApplet.a(B)V#3",
+      "renamedSymbol": "L:GameApplet.runUpdate(B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -166915,7 +167155,7 @@
     },
     {
       "symbol": "L:kf.a(B)V#4",
-      "renamedSymbol": "L:GameApplet.a(B)V#4",
+      "renamedSymbol": "L:GameApplet.runUpdate(B)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -166926,7 +167166,7 @@
     },
     {
       "symbol": "L:kf.a(B)V#5",
-      "renamedSymbol": "L:GameApplet.a(B)V#5",
+      "renamedSymbol": "L:GameApplet.runUpdate(B)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -167047,7 +167287,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#0",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#0",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -167058,7 +167298,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#1",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#1",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#1",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -167069,7 +167309,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#10",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#10",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#10",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -167080,7 +167320,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#11",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#11",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -167091,7 +167331,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#12",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#12",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -167102,7 +167342,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#2",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#2",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#2",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -167113,7 +167353,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#3",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#3",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#3",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -167124,7 +167364,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#4",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#4",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -167135,7 +167375,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#5",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#5",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -167146,7 +167386,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#6",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#6",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#6",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -167157,7 +167397,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#7",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#7",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#7",
       "originalName": "var8_ref2",
       "renamedName": "var8_ref2",
       "declaration": {
@@ -167168,7 +167408,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#8",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#8",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -167179,7 +167419,7 @@
     },
     {
       "symbol": "L:kf.a(BIIILjava/lang/String;II)V#9",
-      "renamedSymbol": "L:GameApplet.a(BIIILjava/lang/String;II)V#9",
+      "renamedSymbol": "L:GameApplet.startup(BIIILjava/lang/String;II)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -167190,7 +167430,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -167201,7 +167441,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#1",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -167212,7 +167452,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#10",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#10",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#10",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -167223,7 +167463,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#11",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#11",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -167234,7 +167474,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#12",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#12",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -167245,7 +167485,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#2",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#2",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#2",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -167256,7 +167496,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#3",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#3",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -167267,7 +167507,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#4",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#4",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -167278,7 +167518,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#5",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#5",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -167289,7 +167529,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#6",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#6",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#6",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -167300,7 +167540,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#7",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#7",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#7",
       "originalName": "var3_ref2",
       "renamedName": "var3_ref2",
       "declaration": {
@@ -167311,7 +167551,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#8",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#8",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -167322,7 +167562,7 @@
     },
     {
       "symbol": "L:kf.a(BLjava/lang/String;)V#9",
-      "renamedSymbol": "L:GameApplet.a(BLjava/lang/String;)V#9",
+      "renamedSymbol": "L:GameApplet.fail(BLjava/lang/String;)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -167333,7 +167573,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#0",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#0",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#0",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -167344,7 +167584,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#1",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#1",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -167355,7 +167595,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#2",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#2",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -167366,7 +167606,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#3",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#3",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -167377,7 +167617,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#4",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#4",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#4",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -167388,7 +167628,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#5",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#5",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -167399,7 +167639,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#6",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#6",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#6",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -167410,7 +167650,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#7",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#7",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#7",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -167421,7 +167661,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#8",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#8",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#8",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -167432,7 +167672,7 @@
     },
     {
       "symbol": "L:kf.a(IZ)V#9",
-      "renamedSymbol": "L:GameApplet.a(IZ)V#9",
+      "renamedSymbol": "L:GameApplet.terminate(IZ)V#9",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -167982,7 +168222,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#0",
-      "renamedSymbol": "L:GameApplet.c(B)V#0",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#0",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -167993,7 +168233,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#1",
-      "renamedSymbol": "L:GameApplet.c(B)V#1",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#1",
       "originalName": "var2_long",
       "renamedName": "var2_long",
       "declaration": {
@@ -168004,7 +168244,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#2",
-      "renamedSymbol": "L:GameApplet.c(B)V#2",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -168015,7 +168255,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#3",
-      "renamedSymbol": "L:GameApplet.c(B)V#3",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#3",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -168026,7 +168266,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#4",
-      "renamedSymbol": "L:GameApplet.c(B)V#4",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -168037,7 +168277,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#5",
-      "renamedSymbol": "L:GameApplet.c(B)V#5",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -168048,7 +168288,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#6",
-      "renamedSymbol": "L:GameApplet.c(B)V#6",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -168059,7 +168299,7 @@
     },
     {
       "symbol": "L:kf.c(B)V#7",
-      "renamedSymbol": "L:GameApplet.c(B)V#7",
+      "renamedSymbol": "L:GameApplet.runDraw(B)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -168081,7 +168321,7 @@
     },
     {
       "symbol": "L:kf.e(I)V#0",
-      "renamedSymbol": "L:GameApplet.e(I)V#0",
+      "renamedSymbol": "L:GameApplet.closeAudioPlayers(I)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -168092,7 +168332,7 @@
     },
     {
       "symbol": "L:kf.e(I)V#1",
-      "renamedSymbol": "L:GameApplet.e(I)V#1",
+      "renamedSymbol": "L:GameApplet.closeAudioPlayers(I)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -168103,7 +168343,7 @@
     },
     {
       "symbol": "L:kf.e(I)V#2",
-      "renamedSymbol": "L:GameApplet.e(I)V#2",
+      "renamedSymbol": "L:GameApplet.closeAudioPlayers(I)V#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -168114,7 +168354,7 @@
     },
     {
       "symbol": "L:kf.f(I)V#0",
-      "renamedSymbol": "L:GameApplet.f(I)V#0",
+      "renamedSymbol": "L:GameApplet.createCanvas(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -168125,7 +168365,7 @@
     },
     {
       "symbol": "L:kf.f(I)V#1",
-      "renamedSymbol": "L:GameApplet.f(I)V#1",
+      "renamedSymbol": "L:GameApplet.createCanvas(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -168136,7 +168376,7 @@
     },
     {
       "symbol": "L:kf.f(I)V#2",
-      "renamedSymbol": "L:GameApplet.f(I)V#2",
+      "renamedSymbol": "L:GameApplet.createCanvas(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -168147,7 +168387,7 @@
     },
     {
       "symbol": "L:kf.f(I)V#3",
-      "renamedSymbol": "L:GameApplet.f(I)V#3",
+      "renamedSymbol": "L:GameApplet.createCanvas(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -168158,7 +168398,7 @@
     },
     {
       "symbol": "L:kf.f(I)V#4",
-      "renamedSymbol": "L:GameApplet.f(I)V#4",
+      "renamedSymbol": "L:GameApplet.createCanvas(I)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -267961,7 +268201,7 @@
     },
     {
       "symbol": "L:tl.a(IIIIZIII)V#0",
-      "renamedSymbol": "L:tl.a(IIIIZIII)V#0",
+      "renamedSymbol": "L:tl.initialiseShell(IIIIZIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -267972,7 +268212,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#0",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#0",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#0",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -267983,7 +268223,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#1",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#1",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#1",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -267994,7 +268234,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#10",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#10",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -268005,7 +268245,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#11",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#11",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -268016,7 +268256,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#12",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#12",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -268027,7 +268267,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#13",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#13",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#13",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -268038,7 +268278,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#2",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#2",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#2",
       "originalName": "stackIn_26_1",
       "renamedName": "stackIn_26_1",
       "declaration": {
@@ -268049,7 +268289,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#3",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#3",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#3",
       "originalName": "stackIn_27_2",
       "renamedName": "stackIn_27_2",
       "declaration": {
@@ -268060,7 +268300,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#4",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#4",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -268071,7 +268311,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#5",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#5",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -268082,7 +268322,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#6",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#6",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#6",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -268093,7 +268333,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#7",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#7",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#7",
       "originalName": "var6_ref2",
       "renamedName": "var6_ref2",
       "declaration": {
@@ -268104,7 +268344,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#8",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#8",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -268115,7 +268355,7 @@
     },
     {
       "symbol": "L:tl.a(IIILjava/lang/String;I)V#9",
-      "renamedSymbol": "L:tl.a(IIILjava/lang/String;I)V#9",
+      "renamedSymbol": "L:tl.readAppletParameters(IIILjava/lang/String;I)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -268126,7 +268366,7 @@
     },
     {
       "symbol": "L:tl.a(Ljava/lang/String;IB)V#0",
-      "renamedSymbol": "L:tl.a(Ljava/lang/String;IB)V#0",
+      "renamedSymbol": "L:tl.configureGame(Ljava/lang/String;IB)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -268137,7 +268377,7 @@
     },
     {
       "symbol": "L:tl.a(Ljava/lang/String;IB)V#1",
-      "renamedSymbol": "L:tl.a(Ljava/lang/String;IB)V#1",
+      "renamedSymbol": "L:tl.configureGame(Ljava/lang/String;IB)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -268731,7 +268971,7 @@
     },
     {
       "symbol": "L:tl.h(B)V#0",
-      "renamedSymbol": "L:tl.h(B)V#0",
+      "renamedSymbol": "L:tl.allowOpcode2(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -268742,7 +268982,7 @@
     },
     {
       "symbol": "L:tl.i(B)I#0",
-      "renamedSymbol": "L:tl.i(B)I#0",
+      "renamedSymbol": "L:tl.serviceConnection(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -299718,9 +299958,9 @@
     },
     {
       "symbol": "M:ShatteredPlansClient.a(I)V",
-      "renamedSymbol": "M:ShatteredPlansClient.a(I)V",
+      "renamedSymbol": "M:ShatteredPlansClient.update(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "update",
       "declaration": {
         "file": "ShatteredPlansClient.java",
         "start": 3106,
@@ -299740,9 +299980,9 @@
     },
     {
       "symbol": "M:ShatteredPlansClient.a(Z)V",
-      "renamedSymbol": "M:ShatteredPlansClient.a(Z)V",
+      "renamedSymbol": "M:ShatteredPlansClient.shutdown(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "ShatteredPlansClient.java",
         "start": 1670,
@@ -299762,9 +300002,9 @@
     },
     {
       "symbol": "M:ShatteredPlansClient.c(I)V",
-      "renamedSymbol": "M:ShatteredPlansClient.c(I)V",
+      "renamedSymbol": "M:ShatteredPlansClient.initialise(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "initialise",
       "declaration": {
         "file": "ShatteredPlansClient.java",
         "start": 1873,
@@ -299795,9 +300035,9 @@
     },
     {
       "symbol": "M:ShatteredPlansClient.d(I)V",
-      "renamedSymbol": "M:ShatteredPlansClient.d(I)V",
+      "renamedSymbol": "M:ShatteredPlansClient.draw(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "draw",
       "declaration": {
         "file": "ShatteredPlansClient.java",
         "start": 44189,
@@ -299806,9 +300046,9 @@
     },
     {
       "symbol": "M:ShatteredPlansClient.g(I)V",
-      "renamedSymbol": "M:ShatteredPlansClient.g(I)V",
+      "renamedSymbol": "M:ShatteredPlansClient.disposeResources(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "disposeResources",
       "declaration": {
         "file": "ShatteredPlansClient.java",
         "start": 27687,
@@ -317725,9 +317965,9 @@
     },
     {
       "symbol": "M:kf.a(B)V",
-      "renamedSymbol": "M:GameApplet.a(B)V",
+      "renamedSymbol": "M:GameApplet.runUpdate(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "runUpdate",
       "declaration": {
         "file": "kf.java",
         "start": 34574,
@@ -317747,9 +317987,9 @@
     },
     {
       "symbol": "M:kf.a(BIIILjava/lang/String;II)V",
-      "renamedSymbol": "M:GameApplet.a(BIIILjava/lang/String;II)V",
+      "renamedSymbol": "M:GameApplet.startup(BIIILjava/lang/String;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startup",
       "declaration": {
         "file": "kf.java",
         "start": 20845,
@@ -317758,9 +317998,9 @@
     },
     {
       "symbol": "M:kf.a(BLjava/lang/String;)V",
-      "renamedSymbol": "M:GameApplet.a(BLjava/lang/String;)V",
+      "renamedSymbol": "M:GameApplet.fail(BLjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fail",
       "declaration": {
         "file": "kf.java",
         "start": 28337,
@@ -317769,9 +318009,9 @@
     },
     {
       "symbol": "M:kf.a(I)V",
-      "renamedSymbol": "M:GameApplet.a(I)V",
+      "renamedSymbol": "M:GameApplet.update(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "update",
       "declaration": {
         "file": "kf.java",
         "start": 2491,
@@ -317780,9 +318020,9 @@
     },
     {
       "symbol": "M:kf.a(IZ)V",
-      "renamedSymbol": "M:GameApplet.a(IZ)V",
+      "renamedSymbol": "M:GameApplet.terminate(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "terminate",
       "declaration": {
         "file": "kf.java",
         "start": 35600,
@@ -317813,9 +318053,9 @@
     },
     {
       "symbol": "M:kf.a(Z)V",
-      "renamedSymbol": "M:GameApplet.a(Z)V",
+      "renamedSymbol": "M:GameApplet.shutdown(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "kf.java",
         "start": 39065,
@@ -317857,9 +318097,9 @@
     },
     {
       "symbol": "M:kf.c(B)V",
-      "renamedSymbol": "M:GameApplet.c(B)V",
+      "renamedSymbol": "M:GameApplet.runDraw(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "runDraw",
       "declaration": {
         "file": "kf.java",
         "start": 30651,
@@ -317868,9 +318108,9 @@
     },
     {
       "symbol": "M:kf.c(I)V",
-      "renamedSymbol": "M:GameApplet.c(I)V",
+      "renamedSymbol": "M:GameApplet.initialise(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "initialise",
       "declaration": {
         "file": "kf.java",
         "start": 30549,
@@ -317879,9 +318119,9 @@
     },
     {
       "symbol": "M:kf.d(I)V",
-      "renamedSymbol": "M:GameApplet.d(I)V",
+      "renamedSymbol": "M:GameApplet.draw(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "draw",
       "declaration": {
         "file": "kf.java",
         "start": 2525,
@@ -317901,9 +318141,9 @@
     },
     {
       "symbol": "M:kf.e(I)V",
-      "renamedSymbol": "M:GameApplet.e(I)V",
+      "renamedSymbol": "M:GameApplet.closeAudioPlayers(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "closeAudioPlayers",
       "declaration": {
         "file": "kf.java",
         "start": 2563,
@@ -317912,9 +318152,9 @@
     },
     {
       "symbol": "M:kf.f(I)V",
-      "renamedSymbol": "M:GameApplet.f(I)V",
+      "renamedSymbol": "M:GameApplet.createCanvas(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "createCanvas",
       "declaration": {
         "file": "kf.java",
         "start": 39113,
@@ -317945,9 +318185,9 @@
     },
     {
       "symbol": "M:kf.g(I)V",
-      "renamedSymbol": "M:GameApplet.g(I)V",
+      "renamedSymbol": "M:GameApplet.disposeResources(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "disposeResources",
       "declaration": {
         "file": "kf.java",
         "start": 977,
@@ -333851,9 +334091,9 @@
     },
     {
       "symbol": "M:tl.a(IIIIZIII)V",
-      "renamedSymbol": "M:tl.a(IIIIZIII)V",
+      "renamedSymbol": "M:tl.initialiseShell(IIIIZIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initialiseShell",
       "declaration": {
         "file": "tl.java",
         "start": 5892,
@@ -333862,9 +334102,9 @@
     },
     {
       "symbol": "M:tl.a(IIILjava/lang/String;I)V",
-      "renamedSymbol": "M:tl.a(IIILjava/lang/String;I)V",
+      "renamedSymbol": "M:tl.readAppletParameters(IIILjava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readAppletParameters",
       "declaration": {
         "file": "tl.java",
         "start": 20833,
@@ -333873,9 +334113,9 @@
     },
     {
       "symbol": "M:tl.a(Ljava/lang/String;IB)V",
-      "renamedSymbol": "M:tl.a(Ljava/lang/String;IB)V",
+      "renamedSymbol": "M:tl.configureGame(Ljava/lang/String;IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureGame",
       "declaration": {
         "file": "tl.java",
         "start": 845,
@@ -333928,9 +334168,9 @@
     },
     {
       "symbol": "M:tl.a(ZZIZZZZ)V",
-      "renamedSymbol": "M:tl.a(ZZIZZZZ)V",
+      "renamedSymbol": "M:tl.allowOpcodeGroups(ZZIZZZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "allowOpcodeGroups",
       "declaration": {
         "file": "tl.java",
         "start": 9738,
@@ -333939,9 +334179,9 @@
     },
     {
       "symbol": "M:tl.b(IZ)V",
-      "renamedSymbol": "M:tl.b(IZ)V",
+      "renamedSymbol": "M:tl.allowBaseOpcodes(IZ)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "allowBaseOpcodes",
       "declaration": {
         "file": "tl.java",
         "start": 27436,
@@ -333961,9 +334201,9 @@
     },
     {
       "symbol": "M:tl.d(B)V",
-      "renamedSymbol": "M:tl.d(B)V",
+      "renamedSymbol": "M:tl.allowOpcodes11To13(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "allowOpcodes11To13",
       "declaration": {
         "file": "tl.java",
         "start": 647,
@@ -333994,9 +334234,9 @@
     },
     {
       "symbol": "M:tl.g(B)V",
-      "renamedSymbol": "M:tl.g(B)V",
+      "renamedSymbol": "M:tl.allowOpcode1(B)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "allowOpcode1",
       "declaration": {
         "file": "tl.java",
         "start": 6902,
@@ -334005,9 +334245,9 @@
     },
     {
       "symbol": "M:tl.h(B)V",
-      "renamedSymbol": "M:tl.h(B)V",
+      "renamedSymbol": "M:tl.allowOpcode2(B)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "allowOpcode2",
       "declaration": {
         "file": "tl.java",
         "start": 19845,
@@ -334016,9 +334256,9 @@
     },
     {
       "symbol": "M:tl.h(I)V",
-      "renamedSymbol": "M:tl.h(I)V",
+      "renamedSymbol": "M:tl.allowOpcode4(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "allowOpcode4",
       "declaration": {
         "file": "tl.java",
         "start": 509,
@@ -334027,9 +334267,9 @@
     },
     {
       "symbol": "M:tl.i(B)I",
-      "renamedSymbol": "M:tl.i(B)I",
+      "renamedSymbol": "M:tl.serviceConnection(B)I",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "serviceConnection",
       "declaration": {
         "file": "tl.java",
         "start": 19987,
@@ -334060,9 +334300,9 @@
     },
     {
       "symbol": "M:tl.j(I)V",
-      "renamedSymbol": "M:tl.j(I)V",
+      "renamedSymbol": "M:tl.allowOpcode6(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "allowOpcode6",
       "declaration": {
         "file": "tl.java",
         "start": 24272,
@@ -334071,9 +334311,9 @@
     },
     {
       "symbol": "M:tl.k(B)V",
-      "renamedSymbol": "M:tl.k(B)V",
+      "renamedSymbol": "M:tl.allowOpcode5(B)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "allowOpcode5",
       "declaration": {
         "file": "tl.java",
         "start": 18669,
@@ -334093,9 +334333,9 @@
     },
     {
       "symbol": "M:tl.l(B)V",
-      "renamedSymbol": "M:tl.l(B)V",
+      "renamedSymbol": "M:tl.initialiseOpcodeLengths(B)V",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "initialiseOpcodeLengths",
       "declaration": {
         "file": "tl.java",
         "start": 10337,
@@ -339241,7 +339481,7 @@
     },
     {
       "symbol": "P:ShatteredPlansClient.a(I)V#0",
-      "renamedSymbol": "P:ShatteredPlansClient.a(I)V#0",
+      "renamedSymbol": "P:ShatteredPlansClient.update(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -339285,7 +339525,7 @@
     },
     {
       "symbol": "P:ShatteredPlansClient.a(Z)V#0",
-      "renamedSymbol": "P:ShatteredPlansClient.a(Z)V#0",
+      "renamedSymbol": "P:ShatteredPlansClient.shutdown(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -339318,7 +339558,7 @@
     },
     {
       "symbol": "P:ShatteredPlansClient.c(I)V#0",
-      "renamedSymbol": "P:ShatteredPlansClient.c(I)V#0",
+      "renamedSymbol": "P:ShatteredPlansClient.initialise(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -339362,7 +339602,7 @@
     },
     {
       "symbol": "P:ShatteredPlansClient.d(I)V#0",
-      "renamedSymbol": "P:ShatteredPlansClient.d(I)V#0",
+      "renamedSymbol": "P:ShatteredPlansClient.draw(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -339373,7 +339613,7 @@
     },
     {
       "symbol": "P:ShatteredPlansClient.g(I)V#0",
-      "renamedSymbol": "P:ShatteredPlansClient.g(I)V#0",
+      "renamedSymbol": "P:ShatteredPlansClient.disposeResources(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385298,7 +385538,7 @@
     },
     {
       "symbol": "P:kf.a(B)V#0",
-      "renamedSymbol": "P:GameApplet.a(B)V#0",
+      "renamedSymbol": "P:GameApplet.runUpdate(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385353,7 +385593,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#0",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#0",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385364,7 +385604,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#1",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#1",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -385375,7 +385615,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#2",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#2",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -385386,7 +385626,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#3",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#3",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -385397,7 +385637,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#4",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#4",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -385408,7 +385648,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#5",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#5",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -385419,7 +385659,7 @@
     },
     {
       "symbol": "P:kf.a(BIIILjava/lang/String;II)V#6",
-      "renamedSymbol": "P:GameApplet.a(BIIILjava/lang/String;II)V#6",
+      "renamedSymbol": "P:GameApplet.startup(BIIILjava/lang/String;II)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -385430,7 +385670,7 @@
     },
     {
       "symbol": "P:kf.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "P:GameApplet.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "P:GameApplet.fail(BLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385441,7 +385681,7 @@
     },
     {
       "symbol": "P:kf.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "P:GameApplet.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "P:GameApplet.fail(BLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -385452,7 +385692,7 @@
     },
     {
       "symbol": "P:kf.a(I)V#0",
-      "renamedSymbol": "P:GameApplet.a(I)V#0",
+      "renamedSymbol": "P:GameApplet.update(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385463,7 +385703,7 @@
     },
     {
       "symbol": "P:kf.a(IZ)V#0",
-      "renamedSymbol": "P:GameApplet.a(IZ)V#0",
+      "renamedSymbol": "P:GameApplet.terminate(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385474,7 +385714,7 @@
     },
     {
       "symbol": "P:kf.a(IZ)V#1",
-      "renamedSymbol": "P:GameApplet.a(IZ)V#1",
+      "renamedSymbol": "P:GameApplet.terminate(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -385562,7 +385802,7 @@
     },
     {
       "symbol": "P:kf.a(Z)V#0",
-      "renamedSymbol": "P:GameApplet.a(Z)V#0",
+      "renamedSymbol": "P:GameApplet.shutdown(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385617,7 +385857,7 @@
     },
     {
       "symbol": "P:kf.c(B)V#0",
-      "renamedSymbol": "P:GameApplet.c(B)V#0",
+      "renamedSymbol": "P:GameApplet.runDraw(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385628,7 +385868,7 @@
     },
     {
       "symbol": "P:kf.c(I)V#0",
-      "renamedSymbol": "P:GameApplet.c(I)V#0",
+      "renamedSymbol": "P:GameApplet.initialise(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385639,7 +385879,7 @@
     },
     {
       "symbol": "P:kf.d(I)V#0",
-      "renamedSymbol": "P:GameApplet.d(I)V#0",
+      "renamedSymbol": "P:GameApplet.draw(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385650,7 +385890,7 @@
     },
     {
       "symbol": "P:kf.e(I)V#0",
-      "renamedSymbol": "P:GameApplet.e(I)V#0",
+      "renamedSymbol": "P:GameApplet.closeAudioPlayers(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385661,7 +385901,7 @@
     },
     {
       "symbol": "P:kf.f(I)V#0",
-      "renamedSymbol": "P:GameApplet.f(I)V#0",
+      "renamedSymbol": "P:GameApplet.createCanvas(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385694,7 +385934,7 @@
     },
     {
       "symbol": "P:kf.g(I)V#0",
-      "renamedSymbol": "P:GameApplet.g(I)V#0",
+      "renamedSymbol": "P:GameApplet.disposeResources(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424480,7 +424720,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#0",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#0",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424491,7 +424731,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#1",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#1",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424502,7 +424742,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#2",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#2",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -424513,7 +424753,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#3",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#3",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -424524,7 +424764,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#4",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#4",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -424535,7 +424775,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#5",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#5",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -424546,7 +424786,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#6",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#6",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -424557,7 +424797,7 @@
     },
     {
       "symbol": "P:tl.a(IIIIZIII)V#7",
-      "renamedSymbol": "P:tl.a(IIIIZIII)V#7",
+      "renamedSymbol": "P:tl.initialiseShell(IIIIZIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -424568,7 +424808,7 @@
     },
     {
       "symbol": "P:tl.a(IIILjava/lang/String;I)V#0",
-      "renamedSymbol": "P:tl.a(IIILjava/lang/String;I)V#0",
+      "renamedSymbol": "P:tl.readAppletParameters(IIILjava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424579,7 +424819,7 @@
     },
     {
       "symbol": "P:tl.a(IIILjava/lang/String;I)V#1",
-      "renamedSymbol": "P:tl.a(IIILjava/lang/String;I)V#1",
+      "renamedSymbol": "P:tl.readAppletParameters(IIILjava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424590,7 +424830,7 @@
     },
     {
       "symbol": "P:tl.a(IIILjava/lang/String;I)V#2",
-      "renamedSymbol": "P:tl.a(IIILjava/lang/String;I)V#2",
+      "renamedSymbol": "P:tl.readAppletParameters(IIILjava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -424601,7 +424841,7 @@
     },
     {
       "symbol": "P:tl.a(IIILjava/lang/String;I)V#3",
-      "renamedSymbol": "P:tl.a(IIILjava/lang/String;I)V#3",
+      "renamedSymbol": "P:tl.readAppletParameters(IIILjava/lang/String;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -424612,7 +424852,7 @@
     },
     {
       "symbol": "P:tl.a(IIILjava/lang/String;I)V#4",
-      "renamedSymbol": "P:tl.a(IIILjava/lang/String;I)V#4",
+      "renamedSymbol": "P:tl.readAppletParameters(IIILjava/lang/String;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -424623,7 +424863,7 @@
     },
     {
       "symbol": "P:tl.a(Ljava/lang/String;IB)V#0",
-      "renamedSymbol": "P:tl.a(Ljava/lang/String;IB)V#0",
+      "renamedSymbol": "P:tl.configureGame(Ljava/lang/String;IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424634,7 +424874,7 @@
     },
     {
       "symbol": "P:tl.a(Ljava/lang/String;IB)V#1",
-      "renamedSymbol": "P:tl.a(Ljava/lang/String;IB)V#1",
+      "renamedSymbol": "P:tl.configureGame(Ljava/lang/String;IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424645,7 +424885,7 @@
     },
     {
       "symbol": "P:tl.a(Ljava/lang/String;IB)V#2",
-      "renamedSymbol": "P:tl.a(Ljava/lang/String;IB)V#2",
+      "renamedSymbol": "P:tl.configureGame(Ljava/lang/String;IB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -424799,7 +425039,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#0",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#0",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424810,7 +425050,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#1",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#1",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424821,7 +425061,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#2",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#2",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -424832,7 +425072,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#3",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#3",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -424843,7 +425083,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#4",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#4",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -424854,7 +425094,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#5",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#5",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -424865,7 +425105,7 @@
     },
     {
       "symbol": "P:tl.a(ZZIZZZZ)V#6",
-      "renamedSymbol": "P:tl.a(ZZIZZZZ)V#6",
+      "renamedSymbol": "P:tl.allowOpcodeGroups(ZZIZZZZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -424876,7 +425116,7 @@
     },
     {
       "symbol": "P:tl.b(IZ)V#0",
-      "renamedSymbol": "P:tl.b(IZ)V#0",
+      "renamedSymbol": "P:tl.allowBaseOpcodes(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424887,7 +425127,7 @@
     },
     {
       "symbol": "P:tl.b(IZ)V#1",
-      "renamedSymbol": "P:tl.b(IZ)V#1",
+      "renamedSymbol": "P:tl.allowBaseOpcodes(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -424909,7 +425149,7 @@
     },
     {
       "symbol": "P:tl.d(B)V#0",
-      "renamedSymbol": "P:tl.d(B)V#0",
+      "renamedSymbol": "P:tl.allowOpcodes11To13(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424942,7 +425182,7 @@
     },
     {
       "symbol": "P:tl.g(B)V#0",
-      "renamedSymbol": "P:tl.g(B)V#0",
+      "renamedSymbol": "P:tl.allowOpcode1(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424953,7 +425193,7 @@
     },
     {
       "symbol": "P:tl.h(B)V#0",
-      "renamedSymbol": "P:tl.h(B)V#0",
+      "renamedSymbol": "P:tl.allowOpcode2(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424964,7 +425204,7 @@
     },
     {
       "symbol": "P:tl.h(I)V#0",
-      "renamedSymbol": "P:tl.h(I)V#0",
+      "renamedSymbol": "P:tl.allowOpcode4(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424975,7 +425215,7 @@
     },
     {
       "symbol": "P:tl.i(B)I#0",
-      "renamedSymbol": "P:tl.i(B)I#0",
+      "renamedSymbol": "P:tl.serviceConnection(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425008,7 +425248,7 @@
     },
     {
       "symbol": "P:tl.j(I)V#0",
-      "renamedSymbol": "P:tl.j(I)V#0",
+      "renamedSymbol": "P:tl.allowOpcode6(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425019,7 +425259,7 @@
     },
     {
       "symbol": "P:tl.k(B)V#0",
-      "renamedSymbol": "P:tl.k(B)V#0",
+      "renamedSymbol": "P:tl.allowOpcode5(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425041,7 +425281,7 @@
     },
     {
       "symbol": "P:tl.l(B)V#0",
-      "renamedSymbol": "P:tl.l(B)V#0",
+      "renamedSymbol": "P:tl.initialiseOpcodeLengths(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -437288,7 +437528,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "af42607bda5efc6d2cb4859b78b5667d08183448870a6015e55c64e5d6f1b6b7",
+      "outputSha256": "47f4227fdaec4b4955d7620bbc261087e11a4fd0ae407bb1726ad8d2b4f083f0",
       "edits": [
         {
           "start": 128,
@@ -437305,11 +437545,32 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 1670,
+          "end": 1671,
+          "symbol": "M:ShatteredPlansClient.a(Z)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 1727,
+          "end": 1728,
+          "symbol": "M:ShatteredPlansClient.a(I)V",
+          "original": "a",
+          "renamed": "update"
+        },
+        {
           "start": 1753,
           "end": 1755,
           "symbol": "C:kf",
           "original": "kf",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 1756,
+          "end": 1757,
+          "symbol": "M:kf.e(I)V",
+          "original": "e",
+          "renamed": "closeAudioPlayers"
         },
         {
           "start": 1808,
@@ -437324,6 +437585,20 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 1873,
+          "end": 1874,
+          "symbol": "M:ShatteredPlansClient.c(I)V",
+          "original": "c",
+          "renamed": "initialise"
+        },
+        {
+          "start": 1902,
+          "end": 1903,
+          "symbol": "M:tl.a(IIIIZIII)V",
+          "original": "a",
+          "renamed": "initialiseShell"
         },
         {
           "start": 1954,
@@ -437361,6 +437636,13 @@
           "renamed": "StarAnnotation"
         },
         {
+          "start": 2482,
+          "end": 2483,
+          "symbol": "M:tl.a(ZZIZZZZ)V",
+          "original": "a",
+          "renamed": "allowOpcodeGroups"
+        },
+        {
           "start": 2539,
           "end": 2541,
           "symbol": "C:td",
@@ -437387,6 +437669,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 3106,
+          "end": 3107,
+          "symbol": "M:ShatteredPlansClient.a(I)V",
+          "original": "a",
+          "renamed": "update"
         },
         {
           "start": 3486,
@@ -438119,6 +438408,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 17000,
+          "end": 17001,
+          "symbol": "M:tl.i(B)I",
+          "original": "i",
+          "renamed": "serviceConnection"
+        },
+        {
           "start": 17120,
           "end": 17122,
           "symbol": "C:se",
@@ -438217,6 +438513,13 @@
           "renamed": "StrongCacheEntry"
         },
         {
+          "start": 22028,
+          "end": 22029,
+          "symbol": "M:ShatteredPlansClient.d(I)V",
+          "original": "d",
+          "renamed": "draw"
+        },
+        {
           "start": 22046,
           "end": 22048,
           "symbol": "C:ii",
@@ -438271,6 +438574,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 22302,
+          "end": 22303,
+          "symbol": "M:ShatteredPlansClient.d(I)V",
+          "original": "d",
+          "renamed": "draw"
         },
         {
           "start": 22366,
@@ -438474,6 +438784,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 25264,
+          "end": 25265,
+          "symbol": "M:ShatteredPlansClient.d(I)V",
+          "original": "d",
+          "renamed": "draw"
         },
         {
           "start": 25632,
@@ -438684,6 +439001,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 27687,
+          "end": 27688,
+          "symbol": "M:ShatteredPlansClient.g(I)V",
+          "original": "g",
+          "renamed": "disposeResources"
         },
         {
           "start": 27776,
@@ -439687,6 +440011,13 @@
           "renamed": "DebouncedValidator"
         },
         {
+          "start": 37008,
+          "end": 37009,
+          "symbol": "M:tl.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "configureGame"
+        },
+        {
           "start": 37696,
           "end": 37698,
           "symbol": "C:gs",
@@ -440296,6 +440627,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 44189,
+          "end": 44190,
+          "symbol": "M:ShatteredPlansClient.d(I)V",
+          "original": "d",
+          "renamed": "draw"
+        },
+        {
           "start": 44710,
           "end": 44712,
           "symbol": "C:bi",
@@ -440616,6 +440954,13 @@
           "symbol": "C:rq",
           "original": "rq",
           "renamed": "LinkPainter"
+        },
+        {
+          "start": 49558,
+          "end": 49559,
+          "symbol": "M:ShatteredPlansClient.a(Z)V",
+          "original": "a",
+          "renamed": "shutdown"
         },
         {
           "start": 49585,
@@ -491566,7 +491911,7 @@
       "original": "kf.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a4098c3daad888d3277bbb28abdc6623e2cd1f5d96da28762e1d8698913bb778",
-      "outputSha256": "9e33a3fd75bfa4e34a6c5319b820d8e95df2fc0da02647bd228e0beb1c322ae8",
+      "outputSha256": "2a87ea8843ddcc4d98422d26adc4eccd02e4db1726395635a9b8ec4010871485",
       "edits": [
         {
           "start": 60,
@@ -491574,6 +491919,34 @@
           "symbol": "C:kf",
           "original": "kf",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 977,
+          "end": 978,
+          "symbol": "M:kf.g(I)V",
+          "original": "g",
+          "renamed": "disposeResources"
+        },
+        {
+          "start": 2491,
+          "end": 2492,
+          "symbol": "M:kf.a(I)V",
+          "original": "a",
+          "renamed": "update"
+        },
+        {
+          "start": 2525,
+          "end": 2526,
+          "symbol": "M:kf.d(I)V",
+          "original": "d",
+          "renamed": "draw"
+        },
+        {
+          "start": 2563,
+          "end": 2564,
+          "symbol": "M:kf.e(I)V",
+          "original": "e",
+          "renamed": "closeAudioPlayers"
         },
         {
           "start": 2851,
@@ -491618,6 +491991,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 9436,
+          "end": 9437,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
           "start": 10270,
           "end": 10272,
           "symbol": "C:go",
@@ -491630,6 +492010,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 10418,
+          "end": 10419,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
         },
         {
           "start": 10748,
@@ -491681,6 +492068,13 @@
           "renamed": "GameState"
         },
         {
+          "start": 12679,
+          "end": 12680,
+          "symbol": "M:kf.f(I)V",
+          "original": "f",
+          "renamed": "createCanvas"
+        },
+        {
           "start": 12714,
           "end": 12716,
           "symbol": "C:in",
@@ -491693,6 +492087,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 12813,
+          "end": 12814,
+          "symbol": "M:kf.c(I)V",
+          "original": "c",
+          "renamed": "initialise"
         },
         {
           "start": 13357,
@@ -491716,11 +492117,39 @@
           "renamed": "DerelictVictoryChecker"
         },
         {
+          "start": 13595,
+          "end": 13596,
+          "symbol": "M:kf.c(B)V",
+          "original": "c",
+          "renamed": "runDraw"
+        },
+        {
+          "start": 13742,
+          "end": 13743,
+          "symbol": "M:kf.a(B)V",
+          "original": "a",
+          "renamed": "runUpdate"
+        },
+        {
           "start": 14080,
           "end": 14082,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "GameKeyHandler"
+        },
+        {
+          "start": 14148,
+          "end": 14149,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
+          "start": 14204,
+          "end": 14205,
+          "symbol": "M:kf.a(IZ)V",
+          "original": "a",
+          "renamed": "terminate"
         },
         {
           "start": 15028,
@@ -491737,6 +492166,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 20845,
+          "end": 20846,
+          "symbol": "M:kf.a(BIIILjava/lang/String;II)V",
+          "original": "a",
+          "renamed": "startup"
+        },
+        {
           "start": 20961,
           "end": 20963,
           "symbol": "C:qb",
@@ -491749,6 +492185,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 21665,
+          "end": 21666,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
         },
         {
           "start": 21975,
@@ -491800,6 +492243,13 @@
           "renamed": "GameKeyHandler"
         },
         {
+          "start": 22863,
+          "end": 22864,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
           "start": 24429,
           "end": 24431,
           "symbol": "C:me",
@@ -491835,11 +492285,32 @@
           "renamed": "Archive"
         },
         {
+          "start": 28337,
+          "end": 28338,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
           "start": 28934,
           "end": 28936,
           "symbol": "C:kq",
           "original": "kq",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 30549,
+          "end": 30550,
+          "symbol": "M:kf.c(I)V",
+          "original": "c",
+          "renamed": "initialise"
+        },
+        {
+          "start": 30651,
+          "end": 30652,
+          "symbol": "M:kf.c(B)V",
+          "original": "c",
+          "renamed": "runDraw"
         },
         {
           "start": 31281,
@@ -491875,6 +492346,20 @@
           "symbol": "C:gs",
           "original": "gs",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 32081,
+          "end": 32082,
+          "symbol": "M:kf.d(I)V",
+          "original": "d",
+          "renamed": "draw"
+        },
+        {
+          "start": 32631,
+          "end": 32632,
+          "symbol": "M:kf.a(IZ)V",
+          "original": "a",
+          "renamed": "terminate"
         },
         {
           "start": 33229,
@@ -491933,6 +492418,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 34574,
+          "end": 34575,
+          "symbol": "M:kf.a(B)V",
+          "original": "a",
+          "renamed": "runUpdate"
+        },
+        {
           "start": 34852,
           "end": 34854,
           "symbol": "C:ca",
@@ -491966,6 +492458,55 @@
           "symbol": "C:br",
           "original": "br",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 35223,
+          "end": 35224,
+          "symbol": "M:kf.a(I)V",
+          "original": "a",
+          "renamed": "update"
+        },
+        {
+          "start": 35600,
+          "end": 35601,
+          "symbol": "M:kf.a(IZ)V",
+          "original": "a",
+          "renamed": "terminate"
+        },
+        {
+          "start": 36126,
+          "end": 36127,
+          "symbol": "M:kf.a(Z)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 37230,
+          "end": 37231,
+          "symbol": "M:kf.g(I)V",
+          "original": "g",
+          "renamed": "disposeResources"
+        },
+        {
+          "start": 39065,
+          "end": 39066,
+          "symbol": "M:kf.a(Z)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 39113,
+          "end": 39114,
+          "symbol": "M:kf.f(I)V",
+          "original": "f",
+          "renamed": "createCanvas"
+        },
+        {
+          "start": 39678,
+          "end": 39679,
+          "symbol": "M:kf.c(B)V",
+          "original": "c",
+          "renamed": "runDraw"
         },
         {
           "start": 40564,
@@ -540913,7 +541454,7 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "1e25b4ee223ec590ed017659aa28e65cf00d89a2b554dcb3fbba48696475976c",
+      "outputSha256": "7f9ae2ab27435c877c60167746f5a7f594ca23bc873f8f99223949ebfdab7e56",
       "edits": [
         {
           "start": 64,
@@ -540921,6 +541462,34 @@
           "symbol": "C:kf",
           "original": "kf",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 509,
+          "end": 510,
+          "symbol": "M:tl.h(I)V",
+          "original": "h",
+          "renamed": "allowOpcode4"
+        },
+        {
+          "start": 647,
+          "end": 648,
+          "symbol": "M:tl.d(B)V",
+          "original": "d",
+          "renamed": "allowOpcodes11To13"
+        },
+        {
+          "start": 845,
+          "end": 846,
+          "symbol": "M:tl.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "configureGame"
+        },
+        {
+          "start": 918,
+          "end": 919,
+          "symbol": "M:tl.a(IIILjava/lang/String;I)V",
+          "original": "a",
+          "renamed": "readAppletParameters"
         },
         {
           "start": 1601,
@@ -541091,6 +541660,13 @@
           "renamed": "GameKeyHandler"
         },
         {
+          "start": 5892,
+          "end": 5893,
+          "symbol": "M:tl.a(IIIIZIII)V",
+          "original": "a",
+          "renamed": "initialiseShell"
+        },
+        {
           "start": 6294,
           "end": 6296,
           "symbol": "C:jq",
@@ -541126,11 +541702,39 @@
           "renamed": "SliderPainter"
         },
         {
+          "start": 6831,
+          "end": 6832,
+          "symbol": "M:tl.l(B)V",
+          "original": "l",
+          "renamed": "initialiseOpcodeLengths"
+        },
+        {
+          "start": 6902,
+          "end": 6903,
+          "symbol": "M:tl.g(B)V",
+          "original": "g",
+          "renamed": "allowOpcode1"
+        },
+        {
+          "start": 6992,
+          "end": 6993,
+          "symbol": "M:tl.d(B)V",
+          "original": "d",
+          "renamed": "allowOpcodes11To13"
+        },
+        {
           "start": 7215,
           "end": 7217,
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 7270,
+          "end": 7271,
+          "symbol": "M:tl.b(IZ)V",
+          "original": "b",
+          "renamed": "allowBaseOpcodes"
         },
         {
           "start": 7596,
@@ -541180,6 +541784,69 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 9738,
+          "end": 9739,
+          "symbol": "M:tl.a(ZZIZZZZ)V",
+          "original": "a",
+          "renamed": "allowOpcodeGroups"
+        },
+        {
+          "start": 9934,
+          "end": 9935,
+          "symbol": "M:tl.b(IZ)V",
+          "original": "b",
+          "renamed": "allowBaseOpcodes"
+        },
+        {
+          "start": 9985,
+          "end": 9986,
+          "symbol": "M:tl.g(B)V",
+          "original": "g",
+          "renamed": "allowOpcode1"
+        },
+        {
+          "start": 10048,
+          "end": 10049,
+          "symbol": "M:tl.h(B)V",
+          "original": "h",
+          "renamed": "allowOpcode2"
+        },
+        {
+          "start": 10109,
+          "end": 10110,
+          "symbol": "M:tl.h(I)V",
+          "original": "h",
+          "renamed": "allowOpcode4"
+        },
+        {
+          "start": 10162,
+          "end": 10163,
+          "symbol": "M:tl.k(B)V",
+          "original": "k",
+          "renamed": "allowOpcode5"
+        },
+        {
+          "start": 10224,
+          "end": 10225,
+          "symbol": "M:tl.j(I)V",
+          "original": "j",
+          "renamed": "allowOpcode6"
+        },
+        {
+          "start": 10282,
+          "end": 10283,
+          "symbol": "M:tl.d(B)V",
+          "original": "d",
+          "renamed": "allowOpcodes11To13"
+        },
+        {
+          "start": 10337,
+          "end": 10338,
+          "symbol": "M:tl.l(B)V",
+          "original": "l",
+          "renamed": "initialiseOpcodeLengths"
         },
         {
           "start": 10948,
@@ -541355,6 +542022,41 @@
           "symbol": "C:nr",
           "original": "nr",
           "renamed": "StarAbandonedEvent"
+        },
+        {
+          "start": 14036,
+          "end": 14037,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
+          "start": 14189,
+          "end": 14190,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
+          "start": 14271,
+          "end": 14272,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
+          "start": 14367,
+          "end": 14368,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
+          "start": 14474,
+          "end": 14475,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
         },
         {
           "start": 14606,
@@ -541826,6 +542528,13 @@
           "renamed": "StandardMapGenerator"
         },
         {
+          "start": 18176,
+          "end": 18177,
+          "symbol": "M:kf.f(I)V",
+          "original": "f",
+          "renamed": "createCanvas"
+        },
+        {
           "start": 18575,
           "end": 18577,
           "symbol": "C:pc",
@@ -541847,6 +542556,20 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 18669,
+          "end": 18670,
+          "symbol": "M:tl.k(B)V",
+          "original": "k",
+          "renamed": "allowOpcode5"
+        },
+        {
+          "start": 18759,
+          "end": 18760,
+          "symbol": "M:tl.h(I)V",
+          "original": "h",
+          "renamed": "allowOpcode4"
+        },
+        {
           "start": 19139,
           "end": 19141,
           "symbol": "C:wb",
@@ -541866,6 +542589,20 @@
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "ArchiveSource"
+        },
+        {
+          "start": 19845,
+          "end": 19846,
+          "symbol": "M:tl.h(B)V",
+          "original": "h",
+          "renamed": "allowOpcode2"
+        },
+        {
+          "start": 19987,
+          "end": 19988,
+          "symbol": "M:tl.i(B)I",
+          "original": "i",
+          "renamed": "serviceConnection"
         },
         {
           "start": 20136,
@@ -541896,6 +542633,13 @@
           "renamed": "LinkPainter"
         },
         {
+          "start": 20611,
+          "end": 20612,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
+        },
+        {
           "start": 20656,
           "end": 20658,
           "symbol": "C:oh",
@@ -541910,11 +542654,32 @@
           "renamed": "SecondaryNodeDequeIterator"
         },
         {
+          "start": 20833,
+          "end": 20834,
+          "symbol": "M:tl.a(IIILjava/lang/String;I)V",
+          "original": "a",
+          "renamed": "readAppletParameters"
+        },
+        {
+          "start": 22758,
+          "end": 22759,
+          "symbol": "M:kf.a(BIIILjava/lang/String;II)V",
+          "original": "a",
+          "renamed": "startup"
+        },
+        {
           "start": 23078,
           "end": 23080,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "GameKeyHandler"
+        },
+        {
+          "start": 23157,
+          "end": 23158,
+          "symbol": "M:kf.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "fail"
         },
         {
           "start": 23997,
@@ -541936,6 +542701,20 @@
           "symbol": "C:rm",
           "original": "rm",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 24272,
+          "end": 24273,
+          "symbol": "M:tl.j(I)V",
+          "original": "j",
+          "renamed": "allowOpcode6"
+        },
+        {
+          "start": 24365,
+          "end": 24366,
+          "symbol": "M:tl.h(B)V",
+          "original": "h",
+          "renamed": "allowOpcode2"
         },
         {
           "start": 24447,
@@ -541978,6 +542757,13 @@
           "symbol": "M:dc.a(Lqb;B)[Lgl;",
           "original": "a",
           "renamed": "queryDisplayModes"
+        },
+        {
+          "start": 27436,
+          "end": 27437,
+          "symbol": "M:tl.b(IZ)V",
+          "original": "b",
+          "renamed": "allowBaseOpcodes"
         }
       ]
     },
@@ -568181,10 +568967,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "f0a8a7588af7730d2cfb41a09065bac402b41078653bc59c079b8ce7b5d00973",
+    "rulesSha256": "536d476f07cb3f18be30c6131c73a907d033c271f25ea4f2938d175936642420",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "4e1a3bb884b2f6cf47a9da142b79848a9129c30f054d2683d534cbf21ef86abd",
+    "outputTreeSha256": "7d28bed025894f3bb37a750f7faaa36d2053ca4d702c0c7b5e69e25d23b16396",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

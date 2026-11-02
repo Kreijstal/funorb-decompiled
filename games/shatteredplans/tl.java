@@ -19,14 +19,14 @@ abstract class tl extends GameApplet {
     private int field_A;
     private boolean field_y;
 
-    private final void h(int param0) {
+    private final void allowOpcode4(int param0) {
         ud.field_c[4] = true;
         if (param0 != 3) {
           field_D = -48;
         }
     }
 
-    private final void d(byte param0) {
+    private final void allowOpcodes11To13(byte param0) {
         ud.field_c[11] = true;
         ud.field_c[12] = true;
         if (param0 > -8) {
@@ -35,9 +35,9 @@ abstract class tl extends GameApplet {
         ud.field_c[13] = true;
     }
 
-    final void a(String param0, int param1, byte param2) {
+    final void configureGame(String param0, int param1, byte param2) {
         try {
-          this.a(480, param1, -85, param0, 640);
+          this.readAppletParameters(480, param1, -85, param0, 640);
           int var4_int = -28 % ((57 - param2) / 47);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -181,7 +181,7 @@ abstract class tl extends GameApplet {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+    final void initialiseShell(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         if (param0 != 256) {
@@ -201,14 +201,14 @@ abstract class tl extends GameApplet {
         ArchiveRequest.field_p = param1;
         SliderPainter.field_j = param6;
         lo.field_B = param7;
-        this.l((byte) 64);
+        this.initialiseOpcodeLengths((byte) 64);
         qj.b((byte) -120);
     }
 
-    private final void g(byte param0) {
+    private final void allowOpcode1(byte param0) {
         ud.field_c[1] = true;
         if (param0 > -81) {
-          this.d((byte) -17);
+          this.allowOpcodes11To13((byte) -17);
         }
     }
 
@@ -220,7 +220,7 @@ abstract class tl extends GameApplet {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = BufferedCacheFile.field_e;
         if (param0 > -55) {
-          this.b(-69, true);
+          this.allowBaseOpcodes(-69, true);
         }
         if (var2 < 64 &&
           ud.field_c[var2]) {
@@ -299,32 +299,32 @@ abstract class tl extends GameApplet {
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6) {
+    final void allowOpcodeGroups(boolean param0, boolean param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6) {
         if (param2 != -2839) {
           this.field_A = 104;
         }
-        this.b(-73, true);
+        this.allowBaseOpcodes(-73, true);
         if (param6) {
-          this.g((byte) -111);
+          this.allowOpcode1((byte) -111);
         }
         if (param5) {
-          this.h((byte) 43);
+          this.allowOpcode2((byte) 43);
         }
         if (param0) {
-          this.h(3);
+          this.allowOpcode4(3);
         }
         if (param4) {
-          this.k((byte) -63);
+          this.allowOpcode5((byte) -63);
         }
         if (param1) {
-          this.j(-31193);
+          this.allowOpcode6(-31193);
         }
         if (param3) {
-          this.d((byte) -45);
+          this.allowOpcodes11To13((byte) -45);
         }
     }
 
-    private final void l(byte param0) {
+    private final void initialiseOpcodeLengths(byte param0) {
         ae.field_a[9] = -1;
         ae.field_a[10] = -1;
         ae.field_a[4] = -1;
@@ -451,20 +451,20 @@ abstract class tl extends GameApplet {
           } else {
             if (3 != qj.field_g) {
               if (4 == qj.field_g) {
-                this.a((byte) -120, "js5io");
+                this.fail((byte) -120, "js5io");
               } else {
                 if (qj.field_g != 2) {
                   if (5 != qj.field_g) {
-                    this.a((byte) -110, "js5connect");
+                    this.fail((byte) -110, "js5connect");
                   } else {
-                    this.a((byte) -85, "outofdate");
+                    this.fail((byte) -85, "outofdate");
                   }
                 } else {
-                  this.a((byte) 33, "js5connect_full");
+                  this.fail((byte) 33, "js5connect_full");
                 }
               }
             } else {
-              this.a((byte) 54, "js5crc");
+              this.fail((byte) 54, "js5crc");
             }
           }
         }
@@ -585,7 +585,7 @@ abstract class tl extends GameApplet {
         if (!param0 &&
           IntrusiveDeque.field_c) {
           StandardMapGenerator.a(tm.field_i, (byte) 125);
-          this.f(0);
+          this.createCanvas(0);
           re.a(tm.field_i, false);
         }
         if (ud.field_c[8]) {
@@ -608,10 +608,10 @@ abstract class tl extends GameApplet {
         DerelictVictoryChecker.a((byte) 112, GameScreen.f((byte) 126), var2);
     }
 
-    private final void k(byte param0) {
+    private final void allowOpcode5(byte param0) {
         ud.field_c[5] = true;
         if (param0 > -22) {
-          this.h(99);
+          this.allowOpcode4(99);
         }
     }
 
@@ -653,7 +653,7 @@ abstract class tl extends GameApplet {
         }
     }
 
-    private final void h(byte param0) {
+    private final void allowOpcode2(byte param0) {
         ud.field_c[2] = true;
         int var2 = -9 % ((param0 + 55) / 57);
     }
@@ -661,7 +661,7 @@ abstract class tl extends GameApplet {
     protected tl() {
     }
 
-    final int i(byte param0) {
+    final int serviceConnection(byte param0) {
         if (this.field_e) {
           return -1;
         }
@@ -687,7 +687,7 @@ abstract class tl extends GameApplet {
           return var2;
         }
         if (!vm.field_Nb) {
-          this.a((byte) 58, "reconnect");
+          this.fail((byte) 58, "reconnect");
         }
         IntrusiveNode.b(-11);
         bf.a((byte) -126, var2, nl.field_c);
@@ -696,7 +696,7 @@ abstract class tl extends GameApplet {
         return var2;
     }
 
-    private final void a(int param0, int param1, int param2, String param3, int param4) {
+    private final void readAppletParameters(int param0, int param1, int param2, String param3, int param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -742,13 +742,13 @@ abstract class tl extends GameApplet {
               this.field_B = Integer.parseInt(var9);
             }
             cm.field_f = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a((byte) -50, param1, param0, 32, param3, this.field_r, param4);
+            this.startup((byte) -50, param1, param0, 32, param3, this.field_r, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             GameKeyHandler.a(-29901, (Throwable) ((Object) var6_ref), (String) null);
-            this.a((byte) -95, "crash");
+            this.fail((byte) -95, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -774,10 +774,10 @@ abstract class tl extends GameApplet {
         ue.a(GameScreen.f((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 
-    private final void j(int param0) {
+    private final void allowOpcode6(int param0) {
         ud.field_c[6] = true;
         if (param0 != -31193) {
-          this.h((byte) -62);
+          this.allowOpcode2((byte) -62);
         }
     }
 
@@ -860,7 +860,7 @@ abstract class tl extends GameApplet {
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void allowBaseOpcodes(int param0, boolean param1) {
         ud.field_c[0] = true;
         ud.field_c[17] = true;
         ud.field_c[8] = param1;

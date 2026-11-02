@@ -44,19 +44,19 @@ public final class ShatteredPlansClient extends tl {
         }
     }
 
-    final void a(boolean param0) {
+    final void shutdown(boolean param0) {
         if (param0) {
-          this.a(-37);
+          this.update(-37);
         }
-        GameApplet.e(120);
+        GameApplet.closeAudioPlayers(120);
         if (null != bj.field_K) {
           BufferedCacheFile.c(0);
         }
         Dialog.f((byte) 89);
     }
 
-    final void c(int param0) {
-        this.a(param0 + 257, 1, 14, 25, false, 0, 2, 4);
+    final void initialise(int param0) {
+        this.initialiseShell(param0 + 257, 1, 14, 25, false, 0, 2, 4);
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_u.d(128, (byte) -110, 9);
         var3.field_r.d(128, (byte) -110, 9);
@@ -70,7 +70,7 @@ public final class ShatteredPlansClient extends tl {
         ah.field_P = 2458760;
         StarAnnotation.field_n = 2805974;
         em.a(us.b(0), 1);
-        this.a(false, true, -2839, true, true, false, false);
+        this.allowOpcodeGroups(false, true, -2839, true, true, false, false);
         SliderWidget.field_K = TaskAi.field_a;
         ae.field_a[71] = 4;
         ae.field_a[74] = -2;
@@ -92,7 +92,7 @@ public final class ShatteredPlansClient extends tl {
         ae.field_a[65] = 1;
     }
 
-    final void a(int param0) {
+    final void update(int param0) {
         try {
           int fieldTemp$0 = 0;
           int fieldTemp$1 = 0;
@@ -488,7 +488,7 @@ public final class ShatteredPlansClient extends tl {
             q.g(-108);
           }
           if (ArchiveRequest.f(-11)) {
-            var6 = this.i((byte) 16);
+            var6 = this.serviceConnection((byte) 16);
             if (var6 == 0 ||
               var6 == 1) {
               vs.a(4, (byte) -103);
@@ -588,7 +588,7 @@ public final class ShatteredPlansClient extends tl {
         if (null == cm.field_a) {
           if (StrongCacheEntry.field_z != null) {
             nj.a(75.0f, 2, cq.field_I);
-            this.d(1);
+            this.draw(1);
             SpriteState.a(StrongCacheEntry.field_z, DualLinkNode.field_n, param0 - 47);
             DualLinkNode.field_n = null;
             StrongCacheEntry.field_z = null;
@@ -597,7 +597,7 @@ public final class ShatteredPlansClient extends tl {
           }
           if (IntrusiveNodeHashTable.field_g != null) {
             nj.a(90.0f, 2, PasswordValidator.field_p);
-            this.d(1);
+            this.draw(1);
             ck.a(ms.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, la.field_k, (byte) -8);
             rl.field_f = null;
             IntrusiveNodeHashTable.field_g = null;
@@ -673,7 +673,7 @@ public final class ShatteredPlansClient extends tl {
                                   la.field_k.a(-1)) {
                                   dp.e(-23771);
                                   nj.a(65.0f, 2, jp.field_xb);
-                                  this.d(param0 - 81);
+                                  this.draw(param0 - 81);
                                   if (!param1) {
                                     return false;
                                   }
@@ -723,7 +723,7 @@ public final class ShatteredPlansClient extends tl {
         return false;
     }
 
-    final void g(int param0) {
+    final void disposeResources(int param0) {
         ShatteredPlansClient.m((byte) -46);
         he.a(23811);
         IntrusiveDeque.c(0);
@@ -1126,7 +1126,7 @@ public final class ShatteredPlansClient extends tl {
     }
 
     public final void init() {
-        this.a("shatteredplans", 15, (byte) 112);
+        this.configureGame("shatteredplans", 15, (byte) 112);
     }
 
     private final void b(boolean param0, boolean param1) {
@@ -1345,7 +1345,7 @@ public final class ShatteredPlansClient extends tl {
         la.field_k = SoundCache.a(13, 52);
     }
 
-    final void d(int param0) {
+    final void draw(int param0) {
         Object stackIn_3_0 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_18_0 = false;
@@ -1503,7 +1503,7 @@ public final class ShatteredPlansClient extends tl {
           mp.field_b.d((int)(var7 >> 10) + "kb", 4, 2 * mp.field_b.field_J + 8, 16777215, -1);
         }
         if (param0 != 1) {
-          this.a(true);
+          this.shutdown(true);
         }
         WeightedCacheEntry.a(110, 0, (java.awt.Canvas) (var2), 0);
     }
