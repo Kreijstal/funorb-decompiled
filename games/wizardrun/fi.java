@@ -69,10 +69,10 @@ final class fi extends ml {
 
     final static void f(int param0) {
         try {
-          if (ub.field_t != null) {
+          if (UiWidget.field_t != null) {
             try {
-              ub.field_t.a(0L, (byte) -64);
-              ub.field_t.a(18729, nk.field_N.payload, 24, nk.field_N.position);
+              UiWidget.field_t.a(0L, (byte) -64);
+              UiWidget.field_t.a(18729, nk.field_N.payload, 24, nk.field_N.position);
             } catch (Exception exception) {
             }
           }

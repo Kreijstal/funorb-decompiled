@@ -4,7 +4,7 @@
 final class bd {
     static rc field_b;
     static IntrusiveDeque field_a;
-    static o[] field_c;
+    static Sprite[] field_c;
 
     final static ClientException a(Throwable param0, String param1) {
         ClientException var2 = null;
@@ -55,7 +55,7 @@ final class bd {
 
     final static void a(int param0) {
         kc.field_H = jl.c(4);
-        u.field_A = new wi();
+        GameShell.field_A = new wi();
         if (param0 <= -26) {
           di.a(true, true, 117);
           return;

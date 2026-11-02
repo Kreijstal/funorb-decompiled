@@ -9,7 +9,7 @@ final class kc extends pl {
     private int field_K;
     private dk field_F;
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_K = this.field_K + 1;
           super.a(param0, param1, param2, param3);
@@ -30,10 +30,10 @@ final class kc extends pl {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        o var15 = null;
-        o var18 = null;
-        o var12 = null;
-        o var21 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var12 = null;
+        Sprite var21 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = wizardrun.field_H;
@@ -51,7 +51,7 @@ final class kc extends pl {
           var9 = var15.field_x << 1;
           var10 = var15.field_s << 1;
           if (null == ue.field_d) {
-            ue.field_d = new o(var9, var10);
+            ue.field_d = new Sprite(var9, var10);
             ud.a(ue.field_d, false);
             var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -this.field_K << 10, 4096);
             bb.b(4);
@@ -59,7 +59,7 @@ final class kc extends pl {
             return;
           }
           if (ue.field_d.field_z < var9) {
-            ue.field_d = new o(var9, var10);
+            ue.field_d = new Sprite(var9, var10);
             ud.a(ue.field_d, false);
             var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -this.field_K << 10, 4096);
             bb.b(4);
@@ -68,13 +68,13 @@ final class kc extends pl {
           }
           if (ue.field_d.field_p >= var10) {
             ud.a(ue.field_d, false);
-            ed.d();
+            SoftwareRasterizer.d();
             var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -this.field_K << 10, 4096);
             bb.b(4);
             ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
             return;
           }
-          ue.field_d = new o(var9, var10);
+          ue.field_d = new Sprite(var9, var10);
           ud.a(ue.field_d, false);
           var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -this.field_K << 10, 4096);
           bb.b(4);
@@ -86,7 +86,7 @@ final class kc extends pl {
           var9Lifetime1 = var18.field_x << 1;
           var10Lifetime1 = var18.field_s << 1;
           if (null == ue.field_d) {
-            ue.field_d = new o(var9Lifetime1, var10Lifetime1);
+            ue.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
             ud.a(ue.field_d, false);
             var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -this.field_K << 10, 4096);
             bb.b(4);
@@ -94,7 +94,7 @@ final class kc extends pl {
             return;
           }
           if (ue.field_d.field_z < var9Lifetime1) {
-            ue.field_d = new o(var9Lifetime1, var10Lifetime1);
+            ue.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
             ud.a(ue.field_d, false);
             var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -this.field_K << 10, 4096);
             bb.b(4);
@@ -103,13 +103,13 @@ final class kc extends pl {
           }
           if (ue.field_d.field_p >= var10Lifetime1) {
             ud.a(ue.field_d, false);
-            ed.d();
+            SoftwareRasterizer.d();
             var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -this.field_K << 10, 4096);
             bb.b(4);
             ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
             return;
           }
-          ue.field_d = new o(var9Lifetime1, var10Lifetime1);
+          ue.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
           ud.a(ue.field_d, false);
           var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -this.field_K << 10, 4096);
           bb.b(4);
@@ -128,7 +128,7 @@ final class kc extends pl {
         }
     }
 
-    final boolean a(ub param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

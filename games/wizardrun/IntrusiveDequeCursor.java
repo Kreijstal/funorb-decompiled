@@ -6,7 +6,7 @@ final class IntrusiveDequeCursor {
     private IntrusiveDeque field_d;
     static String field_c;
     static boolean field_g;
-    static o field_b;
+    static Sprite field_b;
     private IntrusiveNode field_a;
     static char[] field_e;
 
@@ -45,7 +45,7 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -59) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
           if (param0 != null) {
             var3 = param0;

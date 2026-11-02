@@ -4,7 +4,7 @@
 class ee extends DualLinkNode {
     static int field_p;
     static int field_r;
-    static o field_q;
+    static Sprite field_q;
 
     final static void a(java.awt.Component param0, int param1) {
         try {

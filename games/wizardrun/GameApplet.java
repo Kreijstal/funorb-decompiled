@@ -586,8 +586,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (u.field_A != null) {
-            u.field_A.g(-5903);
+          if (GameShell.field_A != null) {
+            GameShell.field_A.g(-5903);
           }
           if (ProxySocketConnector.field_e != null) {
             ProxySocketConnector.field_e.k(param0 + 21);

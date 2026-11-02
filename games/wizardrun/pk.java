@@ -15,11 +15,11 @@ final class pk extends IntrusiveNode {
     jh[] field_m;
     int[] field_j;
 
-    final static void a(o param0, boolean param1) {
+    final static void a(Sprite param0, boolean param1) {
         try {
           if (param1) {
-            o var3 = (o) null;
-            pk.a((o) null, true);
+            Sprite var3 = (Sprite) null;
+            pk.a((Sprite) null, true);
           }
           ag.field_v = param0;
         } catch (RuntimeException runtimeException) {

@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class mi extends ub implements bg {
-    ub field_F;
+abstract class mi extends UiWidget implements bg {
+    UiWidget field_F;
     static ga field_z;
     static kl soundArchive;
     static kl field_E;
@@ -13,9 +13,9 @@ abstract class mi extends ub implements bg {
     static wc[] field_B;
     static bh field_A;
 
-    void a(int param0, int param1, int param2, ub param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         boolean discarded$1 = false;
-        ub var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -27,8 +27,8 @@ abstract class mi extends ub implements bg {
             this.field_F.a(10000536, param1 + this.field_l, param2 + this.field_o, param3);
           }
           if (param0 != 10000536) {
-            var6 = (ub) null;
-            discarded$1 = this.b((ub) null, -77);
+            var6 = (UiWidget) null;
+            discarded$1 = this.b((UiWidget) null, -77);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    private final boolean a(ub param0, byte param1) {
+    private final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -111,7 +111,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    final boolean a(ub param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -138,7 +138,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    final boolean a(ub param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -329,16 +329,16 @@ abstract class mi extends ub implements bg {
     final int e(byte param0) {
         boolean discarded$0 = false;
         if (param0 <= 23) {
-          ub var3 = (ub) null;
-          discarded$0 = this.a((ub) null, (byte) 92);
+          UiWidget var3 = (UiWidget) null;
+          discarded$0 = this.a((UiWidget) null, (byte) 92);
         }
         return null == this.field_F ? 0 : this.field_F.e((byte) 112);
     }
 
     final boolean d(byte param0) {
         if (param0 != 53) {
-          ub var3 = (ub) null;
-          this.a('i', 63, (byte) -120, (ub) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a('i', 63, (byte) -120, (UiWidget) null);
         }
         return this.a((byte) -112) != null ? true : false;
     }
@@ -357,7 +357,7 @@ abstract class mi extends ub implements bg {
             return false;
           }
           for (var3_int = param2; param0.length() > var3_int; var3_int++) {
-            if (!df.a(param0.charAt(var3_int), true)) {
+            if (!RasterBuffer.a(param0.charAt(var3_int), true)) {
               return false;
             }
           }
@@ -376,7 +376,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+    void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -407,7 +407,7 @@ abstract class mi extends ub implements bg {
     void a(int param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
           null != this.field_w) {
-          this.field_w.a(param0, param3, (ub) (this), true, true);
+          this.field_w.a(param0, param3, (UiWidget) (this), true, true);
         }
         if (this.field_F != null) {
           this.field_F.a(param0 + this.field_o, 0, param2, param3 + this.field_l);
@@ -444,7 +444,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    private final boolean b(ub param0, int param1) {
+    private final boolean b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -471,7 +471,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
@@ -497,7 +497,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder var6 = null;
@@ -557,11 +557,11 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    ub a(byte param0) {
-        ub var2 = this.field_F;
+    UiWidget a(byte param0) {
+        UiWidget var2 = this.field_F;
         if (param0 > -29) {
-          ub var3 = (ub) null;
-          this.a(-35, (byte) -44, -59, -12, 44, -70, (ub) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-35, (byte) -44, -59, -12, 44, -70, (UiWidget) null);
         }
         if (var2 == null) {
           return null;

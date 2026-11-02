@@ -3,7 +3,7 @@
  */
 final class v {
     static boolean[] field_e;
-    static vd field_b;
+    static BitmapFont field_b;
     static boolean field_a;
     static String field_c;
     static IntrusiveDeque field_d;

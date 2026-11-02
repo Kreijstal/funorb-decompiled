@@ -292,7 +292,7 @@ final class IsaacRandom {
             if (ki.field_E != null &&
               ki.field_E.field_b) {
               di.a((byte) 60);
-              kj.field_b.b((ub) (new vg(kj.field_b, cf.field_f)), (byte) 96);
+              kj.field_b.b((UiWidget) (new vg(kj.field_b, cf.field_f)), (byte) 96);
             }
             return;
           }

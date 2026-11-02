@@ -3,8 +3,8 @@
  */
 final class fa {
     static ai field_a;
-    static o field_c;
-    static o[] field_b;
+    static Sprite field_c;
+    static Sprite[] field_b;
     static String field_d;
 
     final static void a(long param0, String param1, boolean param2, String param3, java.applet.Applet param4) {

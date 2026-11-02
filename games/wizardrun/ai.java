@@ -27,11 +27,11 @@ final class ai extends IntrusiveNode {
     final static void a(boolean param0, byte param1, String param2, boolean param3) {
         try {
           ki.h((byte) 98);
-          u.field_A.d(false);
+          GameShell.field_A.d(false);
           r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
-          td.field_f = new kb(u.field_A, r.field_b);
-          u.field_A.b((ub) (td.field_f), (byte) 117);
+          td.field_f = new kb(GameShell.field_A, r.field_b);
+          GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -65,11 +65,11 @@ final class ai extends IntrusiveNode {
     final static void $cfr$intArgs$a$87b210a2f664(boolean param0, int param1, String param2, boolean param3) {
         try {
           ki.h((byte) 98);
-          u.field_A.d(false);
+          GameShell.field_A.d(false);
           r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
-          td.field_f = new kb(u.field_A, r.field_b);
-          u.field_A.b((ub) (td.field_f), (byte) 117);
+          td.field_f = new kb(GameShell.field_A, r.field_b);
+          GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

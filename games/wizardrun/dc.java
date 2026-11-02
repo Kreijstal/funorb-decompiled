@@ -11,7 +11,7 @@ final class dc extends IntrusiveNode {
     static String field_q;
     static double field_j;
     static String field_o;
-    static o[] field_s;
+    static Sprite[] field_s;
     int field_k;
     int field_p;
 
@@ -47,11 +47,11 @@ final class dc extends IntrusiveNode {
         }
     }
 
-    final static o[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        o[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -63,7 +63,7 @@ final class dc extends IntrusiveNode {
         int[] var22;
         byte[] var23;
         var8 = wizardrun.field_H;
-        var1 = new o[wb.field_f];
+        var1 = new Sprite[wb.field_f];
         for (var2 = 0; wb.field_f > var2; var2++) {
           var3 = ImageProducerRasterBuffer.field_k[var2] * MouseInputHandler.field_b[var2];
           var21 = mf.field_j[var2];
@@ -73,7 +73,7 @@ final class dc extends IntrusiveNode {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var10[var6_int] = ic.field_b[kl.b((int) var21[var6_int], 255)];
             }
-            var1[var2] = new o(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var22);
+            var1[var2] = new Sprite(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var22);
           } else {
             var23 = ue.field_e[var2];
             var17 = new int[var3];
@@ -82,7 +82,7 @@ final class dc extends IntrusiveNode {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = sd.a(ic.field_b[kl.b((int) var21[var7], 255)], kl.b(255, (int) var23[var7]) << 24);
             }
-            var1[var2] = (o) ((Object) new be(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var17));
           }
         }
         ClientException.a(0);

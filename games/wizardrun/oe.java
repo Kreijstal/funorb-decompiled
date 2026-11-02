@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oe {
-    static o field_a;
+    static Sprite field_a;
     static ol[] field_d;
     private int[] field_b;
     static char[] field_c;
@@ -46,10 +46,10 @@ final class oe {
           if (param0 != -86) {
             oe.a(100);
           }
-          var2 = df.field_c.b((byte) 49);
+          var2 = RasterBuffer.field_c.b((byte) 49);
           while (var2 != null) {
-            ub.a(0, param1);
-            var2 = df.field_c.d(8192);
+            UiWidget.a(0, param1);
+            var2 = RasterBuffer.field_c.d(8192);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

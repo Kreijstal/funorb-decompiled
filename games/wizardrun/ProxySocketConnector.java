@@ -50,7 +50,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("idlemessage20min", (byte) -99);
                 if (null != var2) {
-                  df.field_e = nf.a((byte) 110, var2);
+                  RasterBuffer.field_e = nf.a((byte) 110, var2);
                 }
                 var2 = ra.a("error_js5crc", (byte) -115);
                 if (var2 != null) {
@@ -1407,7 +1407,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_password_confirm", (byte) -107);
                 if (var2 != null) {
-                  df.field_i = nf.a((byte) 122, var2);
+                  RasterBuffer.field_i = nf.a((byte) 122, var2);
                 }
                 var2 = ra.a("create_email", (byte) -100);
                 if (var2 != null) {
@@ -1527,7 +1527,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_password_tooltip", (byte) -128);
                 if (null != var2) {
-                  u.field_v = nf.a((byte) 111, var2);
+                  GameShell.field_v = nf.a((byte) 111, var2);
                 }
                 var2 = ra.a("create_password_hint", (byte) -100);
                 if (null != var2) {
@@ -1547,7 +1547,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_age_tooltip", (byte) -104);
                 if (null != var2) {
-                  jj.field_c = nf.a((byte) 123, var2);
+                  GameGraphicsResources.field_c = nf.a((byte) 123, var2);
                 }
                 var2 = ra.a("create_optin_news_tooltip", (byte) -117);
                 if (var2 != null) {
@@ -2717,7 +2717,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("mb_including_gamename", (byte) -112);
                 if (null != var2) {
-                  df.field_b = nf.a((byte) 125, var2);
+                  RasterBuffer.field_b = nf.a((byte) 125, var2);
                 }
                 var2 = ra.a("mb_full_access_1", (byte) -116);
                 if (var2 != null) {
@@ -2819,7 +2819,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("pleasewait_dotdotdot", (byte) -102);
                 if (null != var2) {
-                  u.field_u = nf.a((byte) 96, var2);
+                  GameShell.field_u = nf.a((byte) 96, var2);
                 }
                 var2 = ra.a("serviceunavailable", (byte) -110);
                 if (var2 != null) {

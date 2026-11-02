@@ -9,7 +9,7 @@ class DualLinkNode extends IntrusiveNode {
     static nk field_k;
     long secondaryKey;
     DualLinkNode secondaryNext;
-    static o field_m;
+    static Sprite field_m;
     static int field_n;
 
     final void unlink(boolean param0) {
@@ -45,12 +45,12 @@ class DualLinkNode extends IntrusiveNode {
         var6 = wizardrun.field_H;
         try {
           if (param0 != -2) {
-            field_m = (o) null;
+            field_m = (Sprite) null;
           }
           var9 = nk.field_N;
           var2 = var9.f(param0 + 257);
           if (var2 == 0) {
-            var8 = (tc) (df.field_c.b((byte) 107));
+            var8 = (tc) (RasterBuffer.field_c.b((byte) 107));
             if (var8 == null) {
               ql.a(-78);
               return;

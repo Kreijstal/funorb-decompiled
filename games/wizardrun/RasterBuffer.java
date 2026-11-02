@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class df {
+abstract class RasterBuffer {
     static IntrusiveDeque field_c;
     int field_h;
     int[] field_f;
@@ -47,7 +47,7 @@ abstract class df {
 
     public static void a(byte param0) {
         if (param0 != 75) {
-          df.a((byte) -6);
+          RasterBuffer.a((byte) -6);
         }
         field_b = null;
         field_e = null;
@@ -55,7 +55,7 @@ abstract class df {
         field_i = null;
     }
 
-    final static void a(int param0, int param1, o param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -65,24 +65,24 @@ abstract class df {
           var9_int = param7 + param6 + (param2.field_u - param8);
           var10 = param7 + (param6 + (param2.field_u + param0));
           var11 = (param2.field_p >> 1) + (param5 + param2.field_v);
-          ed.b(var9_int, param3, var10, var11 + param1);
+          SoftwareRasterizer.b(var9_int, param3, var10, var11 + param1);
           param2.a(-1 + param6, param5 - 1, param4);
           param2.a(param6 - 1, 1 + param5, param4);
-          ed.a(ld.field_b);
-          ed.b(var9_int + 1, 0, var10 + 1, param1 + var11);
+          SoftwareRasterizer.a(ld.field_b);
+          SoftwareRasterizer.b(var9_int + 1, 0, var10 + 1, param1 + var11);
           param2.a(1 + param6, param5 - 1, param4);
           param2.a(param6 + 1, 1 + param5, param4);
-          ed.a(ld.field_b);
+          SoftwareRasterizer.a(ld.field_b);
           var10Lifetime1 = -param7 + param2.field_u + param2.field_z + param6 - param8;
           var9_intLifetime1 = param6 + param2.field_z + (param2.field_u - (param7 + param0));
-          ed.b(var9_intLifetime1, var11 - param1, var10Lifetime1, 480);
+          SoftwareRasterizer.b(var9_intLifetime1, var11 - param1, var10Lifetime1, 480);
           param2.a(-1 + param6, -1 + param5, param4);
           param2.a(param6 - 1, param5 + 1, param4);
-          ed.a(ld.field_b);
-          ed.b(var9_intLifetime1 + 1, -param1 + var11, 1 + var10Lifetime1, 480);
+          SoftwareRasterizer.a(ld.field_b);
+          SoftwareRasterizer.b(var9_intLifetime1 + 1, -param1 + var11, 1 + var10Lifetime1, 480);
           param2.a(1 + param6, param5 - 1, param4);
           param2.a(1 + param6, param5 + 1, param4);
-          ed.a(ld.field_b);
+          SoftwareRasterizer.a(ld.field_b);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "df.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -92,7 +92,7 @@ abstract class df {
         if (param0 <= 19) {
           field_a = -35;
         }
-        ed.a(this.field_f, this.field_d, this.field_h);
+        SoftwareRasterizer.a(this.field_f, this.field_d, this.field_h);
     }
 
     final static void a(int param0) {
@@ -104,7 +104,7 @@ abstract class df {
         int stackIn_65_0 = 0;
         boolean stackIn_66_1 = false;
         RuntimeException decompiledCaughtException = null;
-        o var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -116,12 +116,12 @@ abstract class df {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        o var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        o var11 = null;
-        o var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        o var16 = null;
+        Sprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -158,19 +158,19 @@ abstract class df {
             ae.field_c = vg.loadSprite(15, "menu_text", qk.field_j, "benefits");
             ef.field_H = vg.loadSprite(15, "button_frame", qk.field_j, "benefits");
             ra.field_p = vg.loadSprite(param0 + 13, "arrow", qk.field_j, "benefits");
-            v.field_b = (vd) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
-            bk.field_a = (vd) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
-            var27 = ed.field_k;
-            var2 = ed.field_h;
-            var3 = ed.field_d;
-            ed.b(ld.field_b);
-            var11 = new o(4 + ra.field_p.field_z, ra.field_p.field_p + 4);
+            v.field_b = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
+            bk.field_a = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
+            var27 = SoftwareRasterizer.field_k;
+            var2 = SoftwareRasterizer.field_h;
+            var3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(ld.field_b);
+            var11 = new Sprite(4 + ra.field_p.field_z, ra.field_p.field_p + 4);
             var11.b();
             ra.field_p.e(2, 2, ug.field_H);
             oh.a(var11.field_p, var11, 0, var11.field_z, 2, (byte) 45, 0, 1);
             ra.field_p = var11;
             IntrusiveDequeCursor.field_b = ra.field_p.c();
-            var12 = new o(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_z / 2;
             var12.b();
             v.field_b.b(di.a(new String[]{td.field_d}, (byte) 53, of.field_l), var6, 40, 16777215, -1);
@@ -182,17 +182,17 @@ abstract class df {
             oh.a(var12.field_p, var12, 0, var12.field_z, 3, (byte) 82, 0, 1);
             MouseWheelInput.field_b.b();
             var12.e(18 - MouseWheelInput.field_b.field_u, -MouseWheelInput.field_b.field_v + 241);
-            for (var7 = 0; nl.field_w.length > var7; var7++) {
+            for (var7 = 0; SpriteState.field_w.length > var7; var7++) {
               dc.field_s[var7].b();
-              bk.field_a.a(nl.field_w[var7], 3, 3, dc.field_s[var7].field_z - 6, -6 + dc.field_s[var7].field_p, ug.field_H, -1, 1, 1, bk.field_a.field_B + bk.field_a.field_M);
+              bk.field_a.a(SpriteState.field_w[var7], 3, 3, dc.field_s[var7].field_z - 6, -6 + dc.field_s[var7].field_p, ug.field_H, -1, 1, 1, bk.field_a.field_B + bk.field_a.field_M);
               oh.a(dc.field_s[var7].field_p, dc.field_s[var7], 0, dc.field_s[var7].field_z, 3, (byte) 37, 0, 1);
             }
-            nl.field_w = null;
+            SpriteState.field_w = null;
             pa.field_a = ei.field_l.e();
             pa.field_a.b();
-            l.a(2 * ed.field_d / 3, (byte) -105, 0, 0, ed.field_h, 64);
-            ed.a(var27, var2, var3);
-            ed.a(ld.field_b);
+            l.a(2 * SoftwareRasterizer.field_d / 3, (byte) -105, 0, 0, SoftwareRasterizer.field_h, 64);
+            SoftwareRasterizer.a(var27, var2, var3);
+            SoftwareRasterizer.a(ld.field_b);
             wk.field_c = 231 + (-ef.field_H.field_z + mj.field_b.field_z) / 2;
             qc.field_L = 390 + (-ef.field_H.field_p + mj.field_b.field_p) / 2;
             qk.field_j = null;
@@ -204,10 +204,10 @@ abstract class df {
           }
           if (uk.field_b != null &&
             null != v.field_b) {
-            var28 = ed.field_k;
-            var2Lifetime1 = ed.field_h;
-            var3Lifetime1 = ed.field_d;
-            ed.b(ld.field_b);
+            var28 = SoftwareRasterizer.field_k;
+            var2Lifetime1 = SoftwareRasterizer.field_h;
+            var3Lifetime1 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(ld.field_b);
             var14 = di.a(new String[]{uc.field_d[bb.field_k]}, (byte) 49, si.field_b);
             var5 = v.field_b.c(var14, MouseWheelInput.field_a);
             var6Lifetime1 = v.field_b.a(var14, MouseWheelInput.field_a, v.field_b.field_B + v.field_b.field_M);
@@ -254,27 +254,27 @@ abstract class df {
               var8 = var8 + var9_intLifetime3;
             }
             uk.field_b.d();
-            var9 = new o(uk.field_b.field_x, uk.field_b.field_s);
+            var9 = new Sprite(uk.field_b.field_x, uk.field_b.field_s);
             var9.b();
             v.field_b.a(var14, jg.field_m, cb.field_a, MouseWheelInput.field_a, r.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
             oh.a(var9.field_s, var9, 0, var9.field_x, 3, (byte) 98, 0, 1);
             uk.field_b.b();
             var9.e(0, 0);
-            ac.field_s = new o(640, 480);
+            ac.field_s = new Sprite(640, 480);
             ac.field_s.b();
             uk.field_b.b(sl.field_r + (uk.field_b.field_x >> 1), ka.field_i + (uk.field_b.field_s >> 1), kk.field_xb, 4096);
             uk.field_b = null;
             ac.field_s.a();
-            ed.a(var28, var2Lifetime1, var3Lifetime1);
-            ed.a(ld.field_b);
+            SoftwareRasterizer.a(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.a(ld.field_b);
           }
           if (null != pc.field_r &&
             bk.field_a != null) {
-            var29 = ed.field_k;
-            var2Lifetime2 = ed.field_h;
-            var3Lifetime2 = ed.field_d;
-            ed.b(ld.field_b);
-            var16 = new o(412, 43);
+            var29 = SoftwareRasterizer.field_k;
+            var2Lifetime2 = SoftwareRasterizer.field_h;
+            var3Lifetime2 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(ld.field_b);
+            var16 = new Sprite(412, 43);
             var5_ref_String = di.a(new String[]{pc.field_r}, (byte) 79, field_b);
             pc.field_r = null;
             var16.b();
@@ -282,15 +282,15 @@ abstract class df {
             oh.a(var16.field_p, var16, 0, var16.field_z, 3, (byte) 60, 0, 1);
             od.field_f.b();
             var16.e(199 - od.field_f.field_u, 83 - od.field_f.field_v);
-            ed.a(var29, var2Lifetime2, var3Lifetime2);
-            ed.a(ld.field_b);
+            SoftwareRasterizer.a(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.a(ld.field_b);
           }
           if (null != ag.field_v &&
             bk.field_a != null) {
-            var30 = ed.field_k;
-            var2Lifetime3 = ed.field_h;
-            var3Lifetime3 = ed.field_d;
-            ed.b(ld.field_b);
+            var30 = SoftwareRasterizer.field_k;
+            var2Lifetime3 = SoftwareRasterizer.field_h;
+            var3Lifetime3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(ld.field_b);
             var4 = 6 + bk.field_a.c(lg.field_b, 640);
             var5Lifetime1 = ag.field_v.field_x + (var4 + 20);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -300,13 +300,13 @@ abstract class df {
             oh.a(50, od.field_f, var7Lifetime2 - od.field_f.field_u - 4, var4, 3, (byte) 90, -od.field_f.field_v + 155, 1);
             var8Lifetime1 = -((-bk.field_a.field_B - bk.field_a.field_M - 3 + ag.field_v.field_s) / 2) + 155 - od.field_f.field_v;
             ag.field_v.e(var6Lifetime2 - od.field_f.field_u, var8Lifetime1);
-            ed.a(var30, var2Lifetime3, var3Lifetime3);
-            ed.a(ld.field_b);
+            SoftwareRasterizer.a(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.a(ld.field_b);
             ag.field_v = null;
           }
-          ed.b(ld.field_b);
-          ed.a(16, 16, 608, 112, 15, nh.field_n, wd.field_g);
-          ed.a(231, 144, 393, 232, 15, nh.field_n, wd.field_g);
+          SoftwareRasterizer.b(ld.field_b);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, nh.field_n, wd.field_g);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, nh.field_n, wd.field_g);
           if (null != ab.field_c) {
             ab.field_c.e(0, 0);
           }
@@ -314,7 +314,7 @@ abstract class df {
             MouseWheelInput.field_b.e(0, 0);
           }
           if (param0 != 2) {
-            df.b((byte) -119);
+            RasterBuffer.b((byte) -119);
           }
           od.field_f.e(0, 0);
           if (null != ac.field_s) {
@@ -324,13 +324,13 @@ abstract class df {
             null != ef.field_H) {
             mj.field_b.e(231, 390);
             var1 = ei.field_l;
-            if (jj.field_d.field_g == 0) {
+            if (GameGraphicsResources.field_d.field_g == 0) {
               var1 = pa.field_a;
             }
             var1.e(0, 0);
             stackIn_50_0 = 40;
             stackIn_50_1 = hj.field_c;
-            if (jj.field_d.field_g == 0) {
+            if (GameGraphicsResources.field_d.field_g == 0) {
               stackIn_51_2 = 4;
             } else {
               stackIn_51_2 = 3;
@@ -347,18 +347,18 @@ abstract class df {
               var1.a(-1, -1, var2Lifetime4);
             }
             stackIn_56_0 = 2;
-            stackIn_57_1 = (jj.field_d.field_g == 0);
+            stackIn_57_1 = (GameGraphicsResources.field_d.field_g == 0);
             SecondaryNodeDeque.a(stackIn_56_0, stackIn_57_1, wk.field_c, qc.field_L);
           }
           if (mj.field_b != null &&
             null != ef.field_H) {
             mj.field_b.e(434, 390);
             ae.field_c.e(0, 0);
-            if (jj.field_d.field_g == 1) {
+            if (GameGraphicsResources.field_d.field_g == 1) {
               l.a(7 * mj.field_b.field_p / 12, (byte) -105, 392, 436, mj.field_b.field_z - 4, 64);
             }
             stackIn_65_0 = 2;
-            stackIn_66_1 = (1 == jj.field_d.field_g);
+            stackIn_66_1 = (1 == GameGraphicsResources.field_d.field_g);
             SecondaryNodeDeque.a(stackIn_65_0, stackIn_66_1, hj.field_f, hf.field_b);
           }
           if (ra.field_p != null) {

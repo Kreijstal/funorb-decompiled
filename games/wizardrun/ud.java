@@ -46,13 +46,13 @@ final class ud implements Runnable {
             return;
           }
           if (!w.a((byte) -117)) {
-            ed.d();
+            SoftwareRasterizer.d();
             dg.a(320, 240, (byte) -97);
             fc.a((byte) 80, 0, param2, 0);
             return;
           }
           if (ml.field_t != 0) {
-            uc.a(false, param2);
+            uc.drawLoadingScreen(false, param2);
             return;
           }
           uk.a((byte) -123, param1, false);
@@ -290,13 +290,13 @@ final class ud implements Runnable {
         return false;
     }
 
-    final static void a(o param0, boolean param1) {
+    final static void a(Sprite param0, boolean param1) {
         if (param1) {
           return;
         }
         try {
           ph.d(-31782);
-          ed.a(param0.field_B, param0.field_x, param0.field_s);
+          SoftwareRasterizer.a(param0.field_B, param0.field_x, param0.field_s);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ud.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

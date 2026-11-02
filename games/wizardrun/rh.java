@@ -141,7 +141,7 @@ final class rh extends mf {
             this.a(126, (String) null);
           }
           var5 = var4;
-          if (ub.a(var5, param1 ^ -125)) {
+          if (UiWidget.a(var5, param1 ^ -125)) {
             stackIn_7_0 = bh.field_d;
             return stackIn_7_0;
           }

@@ -150,7 +150,7 @@ final class jk {
               }
               stackIn_60_0 = 74;
             }
-            u.$cfr$intArgs$a$894bb1585d61(stackIn_60_0, var7_ref, var6_ref);
+            GameShell.$cfr$intArgs$a$894bb1585d61(stackIn_60_0, var7_ref, var6_ref);
             if (var8 == 0) {
               return;
             }

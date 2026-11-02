@@ -4,7 +4,7 @@
 final class mg extends PacketBuffer {
     static String[] field_q;
     private int field_p;
-    static o field_s;
+    static Sprite field_s;
     private IsaacRandom field_r;
 
     final static ai a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
@@ -80,7 +80,7 @@ final class mg extends PacketBuffer {
 
     public static void h(byte param0) {
         if (param0 != -102) {
-          field_s = (o) null;
+          field_s = (Sprite) null;
           field_s = null;
           field_q = null;
           return;

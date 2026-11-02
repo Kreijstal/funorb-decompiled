@@ -53,7 +53,7 @@ final class re extends pe implements ng, qd {
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_14_0 = false;
@@ -113,12 +113,12 @@ final class re extends pe implements ng, qd {
           this.field_J.field_r = -40 + this.field_r;
           this.field_J.a(var3, (byte) 61, this.field_r - 40, 26);
           var3 = var3 + (this.field_J.field_n + 15);
-          this.a((ub) (this.field_J), (byte) 83);
+          this.a((UiWidget) (this.field_J), (byte) 83);
           var5 = 4;
           var6 = 200;
           this.field_H.a(127, var3, 40, var6, 300 - var6 >> 1);
           this.field_H.field_s = (ce) (this);
-          this.a((ub) (this.field_H), (byte) 126);
+          this.a((UiWidget) (this.field_H), (byte) 126);
           this.a(127, 0, var5 + var3 + 55, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');

@@ -87,7 +87,7 @@ final class vi extends k {
     private final void a(IntrusiveNode param0, nb param1) {
         while (true) {
           if (param0 == this.field_p.field_a) {
-            u.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
+            GameShell.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
             this.field_o = ((nb) (this.field_p.field_a.next)).field_i;
             return;
           }
@@ -97,7 +97,7 @@ final class vi extends k {
           }
           break;
         }
-        u.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
+        GameShell.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
         this.field_o = ((nb) (this.field_p.field_a.next)).field_i;
         return;
     }

@@ -4,12 +4,12 @@
 final class ra extends IntrusiveNode {
     static uf field_j;
     int field_n;
-    static o field_p;
+    static Sprite field_p;
     static String field_i;
     static int field_k;
     static String field_l;
     static int field_o;
-    static o[] wizardNoHatSprites;
+    static Sprite[] wizardNoHatSprites;
 
     public static void c(int param0) {
         field_j = null;

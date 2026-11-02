@@ -177,7 +177,7 @@ final class SecondaryNodeDeque implements Iterable {
             var4 = -40 + ef.field_H.field_z;
           }
         }
-        df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
+        RasterBuffer.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
     }
 
     static {

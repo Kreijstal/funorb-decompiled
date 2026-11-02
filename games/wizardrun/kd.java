@@ -117,25 +117,25 @@ final class kd {
             }
           }
           if (param1) {
-            jj.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, MouseInputHandler.field_e));
-            if (jj.field_d.b(param0 ^ -587)) {
-              if (jj.field_d.field_g == 0) {
+            GameGraphicsResources.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, MouseInputHandler.field_e));
+            if (GameGraphicsResources.field_d.b(param0 ^ -587)) {
+              if (GameGraphicsResources.field_d.field_g == 0) {
                 stackIn_66_0 = 3;
                 return stackIn_66_0;
               }
-              if (jj.field_d.field_g == 1) {
+              if (GameGraphicsResources.field_d.field_g == 1) {
                 stackIn_69_0 = 2;
                 return stackIn_69_0;
               }
             }
             while (ae.a(103)) {
-              jj.field_d.a((byte) 11, 0);
-              if (jj.field_d.b(-1)) {
-                if (jj.field_d.field_g == 0) {
+              GameGraphicsResources.field_d.a((byte) 11, 0);
+              if (GameGraphicsResources.field_d.b(-1)) {
+                if (GameGraphicsResources.field_d.field_g == 0) {
                   stackIn_76_0 = 3;
                   return stackIn_76_0;
                 }
-                if (1 == jj.field_d.field_g) {
+                if (1 == GameGraphicsResources.field_d.field_g) {
                   stackIn_80_0 = 1;
                   return stackIn_80_0;
                 }

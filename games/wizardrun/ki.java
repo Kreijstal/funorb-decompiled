@@ -12,7 +12,7 @@ final class ki extends pe implements qd {
     private pl field_K;
     static char[] field_G;
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -70,9 +70,9 @@ final class ki extends pe implements qd {
         this.field_J.field_s = (ce) (this);
         this.field_K.field_p = hb.field_i;
         this.field_J.field_p = hf.field_a;
-        this.a((ub) (this.field_H), (byte) 101);
-        this.a((ub) (this.field_K), (byte) 47);
-        this.a((ub) (this.field_J), (byte) 46);
+        this.a((UiWidget) (this.field_H), (byte) 101);
+        this.a((UiWidget) (this.field_K), (byte) 47);
+        this.a((UiWidget) (this.field_J), (byte) 46);
     }
 
     public static void g(byte param0) {

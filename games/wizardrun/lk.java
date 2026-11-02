@@ -3,17 +3,17 @@
  */
 final class lk {
     static int field_a;
-    static o[] field_b;
+    static Sprite[] field_b;
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != -1) {
           String var2 = (String) null;
-          lk.a(47, (vd) null, 92, (fg) null, (String) null);
+          lk.a(47, (BitmapFont) null, 92, (fg) null, (String) null);
         }
     }
 
-    final static void a(int param0, vd param1, int param2, fg param3, String param4) {
+    final static void a(int param0, BitmapFont param1, int param2, fg param3, String param4) {
         int var8 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

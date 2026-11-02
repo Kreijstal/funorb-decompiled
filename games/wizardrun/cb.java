@@ -17,14 +17,14 @@ final class cb {
         field_e = null;
     }
 
-    final static o[] a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        o[] var10;
-        o[] var11_ref_o__;
+        Sprite[] var10;
+        Sprite[] var11_ref_o__;
         int var11;
         int var12;
-        o var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -35,7 +35,7 @@ final class cb {
         int var12Lifetime4;
         var15 = wizardrun.field_H;
         var9 = param2 + (param4 + param8);
-        var10 = new o[]{new o(var9, var9), new o(param6, var9), new o(var9, var9), new o(var9, param6), new o(64, 64), new o(var9, param6), new o(var9, var9), new o(param6, var9), new o(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         var11_ref_o__ = var10;
         for (var12 = 0; var11_ref_o__.length > var12; var12++) {
           var13 = var11_ref_o__[var12];

@@ -9,7 +9,7 @@ final class wg {
     static IntrusiveDeque field_c;
     boolean field_h;
     static String[] field_a;
-    static o field_e;
+    static Sprite field_e;
 
     final static String a(String param0, int param1, String param2, String param3) {
         StringBuilder discarded$2 = null;
@@ -95,16 +95,16 @@ final class wg {
         }
     }
 
-    final static o[] a(int param0, int param1) {
-        o[] var3 = null;
-        o[] var2 = null;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = null;
+        Sprite[] var2 = null;
         if (param1 == 9) {
-          var3 = new o[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = id.a((byte) 98, param0, 64);
           return var2;
         }
-        return (o[]) null;
+        return (Sprite[]) null;
     }
 
     public static void a(boolean param0) {

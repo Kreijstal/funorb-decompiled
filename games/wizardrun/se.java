@@ -84,16 +84,16 @@ final class se {
         }
     }
 
-    final static o a(int param0, kl param1, int param2, int param3) {
+    final static Sprite a(int param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
-        o stackIn_2_0 = null;
+        Sprite stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 46) {
-            stackIn_2_0 = (o) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (h.a(param0, param2, param1, -124)) {

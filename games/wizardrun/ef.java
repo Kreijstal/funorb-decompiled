@@ -3,7 +3,7 @@
  */
 final class ef extends pl {
     static String field_G;
-    static o field_H;
+    static Sprite field_H;
     static String field_F;
 
     public static void d(int param0) {

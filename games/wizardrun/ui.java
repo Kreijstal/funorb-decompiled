@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
-    static o[] field_a;
+    static Sprite[] field_a;
     java.awt.Frame field_c;
     volatile boolean field_b;
 
@@ -39,11 +39,11 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
     ui() {
     }
 
-    final static void a(boolean param0, o[] param1) {
+    final static void a(boolean param0, Sprite[] param1) {
         try {
           f.field_d = param1;
           if (!param0) {
-            field_a = (o[]) null;
+            field_a = (Sprite[]) null;
           }
           if (null != f.field_d &&
             param1.length < 3) {

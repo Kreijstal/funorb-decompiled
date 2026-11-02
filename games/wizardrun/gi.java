@@ -37,7 +37,7 @@ final class gi {
           re.field_G.f(uh.field_d[1], 613003928);
           re.field_G.f(uh.field_d[2], 613003928);
           re.field_G.f(uh.field_d[3], 613003928);
-          u.a(re.field_G, -18);
+          GameShell.a(re.field_G, -18);
           re.field_G.b(-1947079288, param4);
           param1.a(4, re.field_G);
           n.field_b.position = 0;

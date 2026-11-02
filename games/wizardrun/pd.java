@@ -4,7 +4,7 @@
 final class pd extends mi {
     static String field_G;
     static String[] field_I;
-    static o[] frameSprites;
+    static Sprite[] frameSprites;
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;
@@ -157,7 +157,7 @@ final class pd extends mi {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+    final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         pj var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -195,7 +195,7 @@ final class pd extends mi {
         }
     }
 
-    private pd(int param0, int param1, int param2, int param3, bf param4, ce param5, ub param6) {
+    private pd(int param0, int param1, int param2, int param3, bf param4, ce param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_F = param6;

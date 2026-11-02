@@ -10,7 +10,7 @@ final class NodeHashTableIterator implements Iterator {
     static String[] field_l;
     static String field_b;
     static String[] field_e;
-    static o field_d;
+    static Sprite field_d;
     private IntrusiveNode field_h;
     private int field_f;
     static int field_g;
@@ -185,7 +185,7 @@ final class NodeHashTableIterator implements Iterator {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 >= -28) {
-          field_d = (o) null;
+          field_d = (Sprite) null;
         }
         if (null != tc.field_m) {
           var1 = tc.field_m;

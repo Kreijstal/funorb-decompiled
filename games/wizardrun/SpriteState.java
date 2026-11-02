@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nl extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     static int field_r;
     int field_v;
     static String[] field_w;
@@ -52,7 +52,7 @@ abstract class nl extends DualLinkNode {
           Throwable decompiledCaughtException = null;
           try {
             if (!param1) {
-              nl.d(-100);
+              SpriteState.d(-100);
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
@@ -85,7 +85,7 @@ abstract class nl extends DualLinkNode {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    nl() {
+    SpriteState() {
     }
 
     static {

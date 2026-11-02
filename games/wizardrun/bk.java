@@ -6,10 +6,10 @@ import java.io.*;
 final class bk implements Runnable {
     static IntrusiveDeque field_d;
     PlatformTaskDispatcher field_c;
-    static vd field_a;
+    static BitmapFont field_a;
     volatile boolean field_e;
     volatile boolean field_g;
-    static o field_b;
+    static Sprite field_b;
     volatile c[] field_f;
 
     public final void run() {

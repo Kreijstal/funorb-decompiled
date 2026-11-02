@@ -5,7 +5,7 @@ final class ve {
     static char[] field_a;
     static String field_b;
     static volatile int field_d;
-    static o[] wizardSprites;
+    static Sprite[] wizardSprites;
 
     final static void a(String param0, String[] param1, byte param2, int param3) {
         RuntimeException var4 = null;
@@ -63,7 +63,7 @@ final class ve {
     final static void a(int param0, String param1) {
         System.out.println("Error: " + md.a("%0a", param1, 28834, "\n"));
         if (param0 < 74) {
-          wizardSprites = (o[]) null;
+          wizardSprites = (Sprite[]) null;
         }
     }
 

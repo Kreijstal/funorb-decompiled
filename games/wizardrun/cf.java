@@ -7,7 +7,7 @@ final class cf extends af {
     private int field_p;
     static bh field_n;
     private int field_h;
-    private vd field_j;
+    private BitmapFont field_j;
     private String field_q;
     private int field_l;
     private int field_o;
@@ -15,7 +15,7 @@ final class cf extends af {
     static lg field_f;
     static String field_m;
 
-    private final fg a(String param0, int param1, int param2, vd param3) {
+    private final fg a(String param0, int param1, int param2, BitmapFont param3) {
         fg var5 = null;
         RuntimeException var5_ref = null;
         fg var6 = null;
@@ -57,7 +57,7 @@ final class cf extends af {
         }
     }
 
-    final void a(int param0, byte param1, vd param2, int param3, String param4) {
+    final void a(int param0, byte param1, BitmapFont param2, int param3, String param4) {
         fg var8 = null;
         fg var9 = null;
         if (param4 == null) {
@@ -106,7 +106,7 @@ final class cf extends af {
         GameApplet.h(0);
     }
 
-    final void a(vd param0, String param1, int param2, boolean param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, boolean param3, int param4) {
         fg var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -201,7 +201,7 @@ final class cf extends af {
         return new wc(param1);
     }
 
-    final void a(String param0, int param1, int param2, int param3, byte param4, vd param5, int param6, int param7) {
+    final void a(String param0, int param1, int param2, int param3, byte param4, BitmapFont param5, int param6, int param7) {
         fg stackIn_37_0;
         fg stackIn_37_1;
         int stackIn_37_2;
@@ -210,7 +210,7 @@ final class cf extends af {
         fg stackIn_38_1 = null;
         int stackIn_38_4 = 0;
         int stackIn_41_0 = 0;
-        vd stackIn_41_1 = null;
+        BitmapFont stackIn_41_1 = null;
         int stackIn_42_2 = 0;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
@@ -305,7 +305,7 @@ final class cf extends af {
             if (var13 != null) {
               var14.field_e[var13.length()] = param5.b(var13);
               stackIn_41_0 = -76;
-              stackIn_41_1 = (vd) (param5);
+              stackIn_41_1 = (BitmapFont) (param5);
               if (param2 != 3) {
                 stackIn_42_2 = 0;
               } else {
@@ -337,7 +337,7 @@ final class cf extends af {
         }
     }
 
-    final void a(int param0, byte param1, int param2, String param3, vd param4) {
+    final void a(int param0, byte param1, int param2, String param3, BitmapFont param4) {
         fg var7 = null;
         fg var8 = null;
         if (param1 > -71) {
@@ -372,10 +372,10 @@ final class cf extends af {
     public cf() {
     }
 
-    final static o[] a(int param0, int param1, kl param2, int param3) {
+    final static Sprite[] a(int param0, int param1, kl param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        o[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -383,7 +383,7 @@ final class cf extends af {
         try {
           if (!h.a(param0, param3, param2, -126)) {
             stackIn_2_0 = null;
-            return (o[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param1 != 30736) {
             field_m = (String) null;

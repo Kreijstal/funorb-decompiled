@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends ub {
-    private o field_K;
+final class hd extends UiWidget {
+    private Sprite field_K;
     private int field_B;
     static uf field_C;
-    private o[] field_G;
+    private Sprite[] field_G;
     private int field_H;
-    private o field_y;
+    private Sprite field_y;
     private int field_A;
     private int field_J;
     private int field_L;
@@ -15,19 +15,19 @@ final class hd extends ub {
     static String field_E;
     boolean field_I;
     private int field_F;
-    private o field_D;
+    private Sprite field_D;
 
     private final void a(int param0) {
-        this.field_G = new o[]{this.a(this.field_B, this.field_H, (byte) -11), this.a(this.field_L, this.field_F, (byte) -11)};
+        this.field_G = new Sprite[]{this.a(this.field_B, this.field_H, (byte) -11), this.a(this.field_L, this.field_F, (byte) -11)};
         this.field_D = this.d(10706);
         this.field_y = this.field_D.c();
         if (param0 != -24060) {
-          this.field_G = (o[]) null;
+          this.field_G = (Sprite[]) null;
         }
-        this.field_K = new o(this.field_n >> 1, this.field_n);
+        this.field_K = new Sprite(this.field_n >> 1, this.field_n);
     }
 
-    private final o a(int param0, int param1, byte param2) {
+    private final Sprite a(int param0, int param1, byte param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -36,14 +36,14 @@ final class hd extends ub {
         int var11 = 0;
         int var12 = 0;
         int var13 = wizardrun.field_H;
-        o var14 = new o(this.field_J * 2, this.field_n);
+        Sprite var14 = new Sprite(this.field_J * 2, this.field_n);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         ud.a(var14, false);
         int var5 = this.field_n >> 1;
         if (param2 != -11) {
-          return (o) null;
+          return (Sprite) null;
         }
         for (var6 = 0; this.field_n > var6; var6++) {
           var7 = (-1 + 2 * this.field_J) * (var6 >> 1) % (this.field_J * 2);
@@ -52,13 +52,13 @@ final class hd extends ub {
           var10 = -var5 + var6;
           var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
           var12 = var11 < 256 ? (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 8 : var8 | var9;
-          ed.f(var7, var6, this.field_J, var12);
+          SoftwareRasterizer.f(var7, var6, this.field_J, var12);
           var9Lifetime1 = 65280 & param0;
-          ed.f(-(this.field_J * 2) + var7, var6, this.field_J, var12);
+          SoftwareRasterizer.f(-(this.field_J * 2) + var7, var6, this.field_J, var12);
           var8Lifetime1 = param0 & 16711935;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var9Lifetime1 * var11) >>> 8;
-          ed.f(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
-          ed.f(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
+          SoftwareRasterizer.f(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
+          SoftwareRasterizer.f(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
         bb.b(4);
         return var14;
@@ -75,7 +75,7 @@ final class hd extends ub {
         }
     }
 
-    private final void a(o param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -93,7 +93,7 @@ final class hd extends ub {
             param0.e(var6, param1);
           }
           bb.b(4);
-          if (ed.field_c <= param2 + this.field_D.field_z) {
+          if (SoftwareRasterizer.field_c <= param2 + this.field_D.field_z) {
             ud.a(this.field_K, false);
             param0.e(-this.field_A, 0);
             param0.e(this.field_J * 2 - this.field_A, 0);
@@ -101,7 +101,7 @@ final class hd extends ub {
             bb.b(4);
             this.field_K.e(param2, param1);
           }
-          if (var5_int - this.field_D.field_z <= ed.field_l) {
+          if (var5_int - this.field_D.field_z <= SoftwareRasterizer.field_l) {
             ud.a(this.field_K, false);
             for (var7 = this.field_r - this.field_D.field_z + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
@@ -127,16 +127,16 @@ final class hd extends ub {
         }
     }
 
-    private final o d(int param0) {
+    private final Sprite d(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = wizardrun.field_H;
         int var2 = this.field_n >> 1;
-        o var3 = new o(var2, this.field_n);
+        Sprite var3 = new Sprite(var2, this.field_n);
         if (param0 != 10706) {
-          return (o) null;
+          return (Sprite) null;
         }
         ud.a(var3, false);
         for (var4 = 0; var4 < this.field_n; var4++) {
@@ -147,7 +147,7 @@ final class hd extends ub {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            ed.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         bb.b(4);
@@ -160,7 +160,7 @@ final class hd extends ub {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 <= 108) {
-          this.field_K = (o) null;
+          this.field_K = (Sprite) null;
         }
         super.a(122, param1, param2, param3, param4);
         this.a(-24060);
@@ -209,7 +209,7 @@ final class hd extends ub {
         }
     }
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

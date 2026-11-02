@@ -315,7 +315,7 @@ final class sl extends na {
         }
     }
 
-    final static o g(int param0) {
+    final static Sprite g(int param0) {
         int var4_int = 0;
         int var5 = wizardrun.field_H;
         int var1 = MouseInputHandler.field_b[0] * ImageProducerRasterBuffer.field_k[0];
@@ -324,7 +324,7 @@ final class sl extends na {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = ic.field_b[kl.b((int) var2[var4_int], 255)];
         }
-        o var4 = new o(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[param0], MouseInputHandler.field_b[0], var3);
+        Sprite var4 = new Sprite(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[param0], MouseInputHandler.field_b[0], var3);
         ClientException.a(param0 ^ 0);
         return var4;
     }

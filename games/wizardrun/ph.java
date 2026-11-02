@@ -39,20 +39,20 @@ final class ph extends ge {
           if (param2 == 1) {
             var6 = vk.field_o;
             if (param1) {
-              var7 = jj.wizardFont2.b(var6);
-              ok.field_d[2].e(268 - (var7 / 2 + ok.field_d[2].field_z), param0);
-              ok.field_d[2].e(var7 / 2 + 268, param0);
+              var7 = GameGraphicsResources.wizardFont2.b(var6);
+              ok.selectStarSprites[2].e(268 - (var7 / 2 + ok.selectStarSprites[2].field_z), param0);
+              ok.selectStarSprites[2].e(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
             }
-            jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-            jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-            jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-            jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-            jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-            jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-            jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
             return;
           }
           if ((param2 != 5 ||
@@ -68,23 +68,23 @@ final class ph extends ge {
               var7Lifetime2 = stackIn_54_0;
               var8 = 20 + param0;
               var9 = 260;
-              ok.field_d[0].a(2 + var9 + 0, -6 + var8 - 10, -118, 20, 0);
-              ok.field_d[0].a(2 + var9 - 0, -6 + (var8 + 10), -86, 20, 0);
-              ok.field_d[0].a(2 + (0 + var9), -6 + var8, -105, 30, 0);
-              ok.field_d[0].a(108 + var9 + 2, -10 + (-6 + var8), -98, 20, 0);
-              ok.field_d[0].a(var9 + 108 + 2, var8 - 6 + 10, -121, 20, 0);
-              ok.field_d[0].a(2 + var9 + 108, -6 + var8, -90, 30, 0);
+              ok.selectStarSprites[0].a(2 + var9 + 0, -6 + var8 - 10, -118, 20, 0);
+              ok.selectStarSprites[0].a(2 + var9 - 0, -6 + (var8 + 10), -86, 20, 0);
+              ok.selectStarSprites[0].a(2 + (0 + var9), -6 + var8, -105, 30, 0);
+              ok.selectStarSprites[0].a(108 + var9 + 2, -10 + (-6 + var8), -98, 20, 0);
+              ok.selectStarSprites[0].a(var9 + 108 + 2, var8 - 6 + 10, -121, 20, 0);
+              ok.selectStarSprites[0].a(2 + var9 + 108, -6 + var8, -90, 30, 0);
               for (var10 = var9; var10 < -12 + var9 + 108; var10 += 14) {
-                ok.field_d[0].b(var10, var8 - 14 - 6, 28, 28, 64);
+                ok.selectStarSprites[0].b(var10, var8 - 14 - 6, 28, 28, 64);
               }
-              ed.c(0, 0, 2 + (var7Lifetime2 * 108 / 104 + var9), 480);
+              SoftwareRasterizer.c(0, 0, 2 + (var7Lifetime2 * 108 / 104 + var9), 480);
               for (var10Lifetime2 = var9; 108 + var9 + 2 - 14 > var10Lifetime2; var10Lifetime2 += 14) {
-                ok.field_d[0].a(var10Lifetime2, -20 + var8, 28, 28);
+                ok.selectStarSprites[0].a(var10Lifetime2, -20 + var8, 28, 28);
               }
-              ed.c();
-              ok.field_d[0].a(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
-              ok.field_d[0].a(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
-              ok.field_d[0].a(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
+              SoftwareRasterizer.c();
+              ok.selectStarSprites[0].a(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
+              ok.selectStarSprites[0].a(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
+              ok.selectStarSprites[0].a(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
               var6 = qc.field_N + "       ";
               decompiledFrameRemainder0 = false;
             }
@@ -98,43 +98,43 @@ final class ph extends ge {
                 var7Lifetime2Lifetime1 = stackIn_27_0;
                 var8Lifetime1 = param0 + 20;
                 var9Lifetime1 = 260;
-                ok.field_d[0].a(0 + var9Lifetime1 + 2, -16 + var8Lifetime1, -121, 20, 0);
-                ok.field_d[0].a(var9Lifetime1 - 0 + 2, -6 + var8Lifetime1 + 10, -115, 20, 0);
-                ok.field_d[0].a(2 + var9Lifetime1, var8Lifetime1 - 6, -125, 30, 0);
-                ok.field_d[0].a(var9Lifetime1 + 110, -10 + (-6 + var8Lifetime1), -126, 20, 0);
-                ok.field_d[0].a(var9Lifetime1 + 110, -6 + (var8Lifetime1 + 10), -116, 20, 0);
-                ok.field_d[0].a(2 + (108 + var9Lifetime1), var8Lifetime1 - 6, -88, 30, 0);
+                ok.selectStarSprites[0].a(0 + var9Lifetime1 + 2, -16 + var8Lifetime1, -121, 20, 0);
+                ok.selectStarSprites[0].a(var9Lifetime1 - 0 + 2, -6 + var8Lifetime1 + 10, -115, 20, 0);
+                ok.selectStarSprites[0].a(2 + var9Lifetime1, var8Lifetime1 - 6, -125, 30, 0);
+                ok.selectStarSprites[0].a(var9Lifetime1 + 110, -10 + (-6 + var8Lifetime1), -126, 20, 0);
+                ok.selectStarSprites[0].a(var9Lifetime1 + 110, -6 + (var8Lifetime1 + 10), -116, 20, 0);
+                ok.selectStarSprites[0].a(2 + (108 + var9Lifetime1), var8Lifetime1 - 6, -88, 30, 0);
                 for (var10Lifetime1 = var9Lifetime1; 2 + (var9Lifetime1 + 108) - 14 > var10Lifetime1; var10Lifetime1 += 14) {
-                  ok.field_d[0].b(var10Lifetime1, -6 + (-14 + var8Lifetime1), 28, 28, 64);
+                  ok.selectStarSprites[0].b(var10Lifetime1, -6 + (-14 + var8Lifetime1), 28, 28, 64);
                 }
-                ed.c(0, 0, 2 + (var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200), 480);
+                SoftwareRasterizer.c(0, 0, 2 + (var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200), 480);
                 for (var10Lifetime1Lifetime1 = var9Lifetime1; var10Lifetime1Lifetime1 < -14 + (110 + var9Lifetime1); var10Lifetime1Lifetime1 += 14) {
-                  ok.field_d[0].a(var10Lifetime1Lifetime1, -6 + (var8Lifetime1 - 14), 28, 28);
+                  ok.selectStarSprites[0].a(var10Lifetime1Lifetime1, -6 + (var8Lifetime1 - 14), 28, 28);
                 }
-                ed.c();
-                ok.field_d[0].a(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
-                ok.field_d[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
-                ok.field_d[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
+                SoftwareRasterizer.c();
+                ok.selectStarSprites[0].a(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
+                ok.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
+                ok.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
                 var6 = qk.field_i + "       ";
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (param2 != 4) {
                   if (param1) {
-                    var7Lifetime2Lifetime2 = jj.wizardFont2.b(var6);
-                    ok.field_d[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.field_d[2].field_z), param0);
-                    ok.field_d[2].e(var7Lifetime2Lifetime2 / 2 + 268, param0);
+                    var7Lifetime2Lifetime2 = GameGraphicsResources.wizardFont2.b(var6);
+                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.selectStarSprites[2].field_z), param0);
+                    ok.selectStarSprites[2].e(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
                   }
-                  jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-                  jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-                  jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-                  jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-                  jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-                  jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-                  jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
                 if (!e.a(-114)) {
@@ -147,20 +147,20 @@ final class ph extends ge {
                 }
                 else {
                   if (param1) {
-                    var7Lifetime2Lifetime3 = jj.wizardFont2.b(var6);
-                    ok.field_d[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.field_d[2].field_z), param0);
-                    ok.field_d[2].e(var7Lifetime2Lifetime3 / 2 + 268, param0);
+                    var7Lifetime2Lifetime3 = GameGraphicsResources.wizardFont2.b(var6);
+                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.selectStarSprites[2].field_z), param0);
+                    ok.selectStarSprites[2].e(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
                   }
-                  jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-                  jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-                  jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-                  jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-                  jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-                  jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-                  jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
               }
@@ -172,20 +172,20 @@ final class ph extends ge {
             }
             var6 = od.field_o;
             if (param1) {
-              var7Lifetime3 = jj.wizardFont2.b(var6);
-              ok.field_d[2].e(268 - (var7Lifetime3 / 2 + ok.field_d[2].field_z), param0);
-              ok.field_d[2].e(var7Lifetime3 / 2 + 268, param0);
+              var7Lifetime3 = GameGraphicsResources.wizardFont2.b(var6);
+              ok.selectStarSprites[2].e(268 - (var7Lifetime3 / 2 + ok.selectStarSprites[2].field_z), param0);
+              ok.selectStarSprites[2].e(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
             }
-            jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-            jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-            jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-            jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-            jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-            jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-            jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
             return;
           }
         }
@@ -198,20 +198,20 @@ final class ph extends ge {
           }
         }
         if (param1) {
-          var7Lifetime1 = jj.wizardFont2.b(var6);
-          ok.field_d[2].e(268 - (var7Lifetime1 / 2 + ok.field_d[2].field_z), param0);
-          ok.field_d[2].e(var7Lifetime1 / 2 + 268, param0);
+          var7Lifetime1 = GameGraphicsResources.wizardFont2.b(var6);
+          ok.selectStarSprites[2].e(268 - (var7Lifetime1 / 2 + ok.selectStarSprites[2].field_z), param0);
+          ok.selectStarSprites[2].e(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {
           ph.a((byte) 46);
         }
-        jj.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-        jj.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-        jj.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-        jj.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-        jj.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-        jj.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-        jj.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
+        GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
     }
 
     ph() {
@@ -229,7 +229,7 @@ final class ph extends ge {
         if (var1 == null) {
           var1 = new ei();
         }
-        var1.a(ed.field_k, ed.field_d, ed.field_c, ed.field_b, ed.field_h, param0 ^ 9202, ed.field_l, ed.field_i);
+        var1.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_d, SoftwareRasterizer.field_c, SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, param0 ^ 9202, SoftwareRasterizer.field_l, SoftwareRasterizer.field_i);
         if (param0 != -31782) {
           field_o = 6;
         }
@@ -332,9 +332,9 @@ final class ph extends ge {
               ee.field_p = 104;
             }
             if ((!(!pk.field_s)) &&
-              (!(nl.field_y > 0))) {
+              (!(SpriteState.field_y > 0))) {
               tl.field_a.a(si.soundEffects[0], 100, ee.field_p * 256 / 100);
-              nl.field_y = 25;
+              SpriteState.field_y = 25;
             }
             decompiledFrameRemainder0 = false;
           }
@@ -359,9 +359,9 @@ final class ph extends ge {
               hc.field_o = 200;
             }
             if (pk.field_s &&
-              nl.field_y <= 0) {
+              SpriteState.field_y <= 0) {
               tl.field_a.a(si.soundEffects[0], 100, 256 * ee.field_p / 100);
-              nl.field_y = 25;
+              SpriteState.field_y = 25;
             }
             if (hc.field_o >= 10) {
               if (!tl.field_e) {

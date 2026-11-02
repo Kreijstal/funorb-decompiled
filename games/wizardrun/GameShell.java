@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-abstract class u extends GameApplet {
+abstract class GameShell extends GameApplet {
     private boolean field_B;
     String field_y;
     private int field_w;
     private int field_r;
     private int field_p;
     static String field_u;
-    static o field_x;
+    static Sprite field_x;
     private int field_C;
     static String field_o;
     private boolean field_n;
@@ -53,7 +53,7 @@ abstract class u extends GameApplet {
           return var2;
         }
         if (ml.field_t == 11 &&
-          nl.field_r == 0) {
+          SpriteState.field_r == 0) {
           vc.a(260);
         }
         return var2;
@@ -196,35 +196,35 @@ abstract class u extends GameApplet {
             this.field_n = false;
             ql.a(-92);
             ci.a((byte) -124);
-            nj.a(param0 ^ -4124, df.field_e, 2);
+            nj.a(param0 ^ -4124, RasterBuffer.field_e, 2);
             qh.a(false);
             t.field_c = true;
             sb.field_c = 15000L + d.a((byte) 25);
           }
         }
-        if (nl.field_r == -1 ||
-          nl.field_r == 0) {
-          stackIn_26_0 = (-1 != nl.field_r) ? 0 : 1;
+        if (SpriteState.field_r == -1 ||
+          SpriteState.field_r == 0) {
+          stackIn_26_0 = (-1 != SpriteState.field_r) ? 0 : 1;
           var3Lifetime1 = stackIn_26_0;
-          nl.field_r = ab.c(14326);
+          SpriteState.field_r = ab.c(14326);
           if (var3Lifetime1 != 0 &&
-            0 == nl.field_r &&
+            0 == SpriteState.field_r &&
             11 == ml.field_t &&
             !h.b(true)) {
             vc.a(260);
           }
-          if (nl.field_r != -1 &&
-            0 != nl.field_r) {
+          if (SpriteState.field_r != -1 &&
+            0 != SpriteState.field_r) {
             sb.field_c = d.a((byte) 36) + 15000L;
           }
         }
-        if (nl.field_r != -1 &&
-          nl.field_r != 0) {
+        if (SpriteState.field_r != -1 &&
+          SpriteState.field_r != 0) {
           if (ri.field_a < 10) {
-            if (3 != nl.field_r) {
-              if (nl.field_r != 4) {
-                if (nl.field_r != 2) {
-                  if (nl.field_r != 5) {
+            if (3 != SpriteState.field_r) {
+              if (SpriteState.field_r != 4) {
+                if (SpriteState.field_r != 2) {
+                  if (SpriteState.field_r != 5) {
                     this.a("js5connect", (byte) 126);
                   } else {
                     this.a("outofdate", (byte) 126);
@@ -241,16 +241,16 @@ abstract class u extends GameApplet {
           } else {
             if (ml.field_t >= 10) {
               ci.a((byte) -125);
-              if (nl.field_r == 3) {
+              if (SpriteState.field_r == 3) {
                 nj.a(10, ai.field_r, 256);
               } else {
-                if (nl.field_r == 4) {
+                if (SpriteState.field_r == 4) {
                   nj.a(10, ld.field_f, 256);
                 } else {
-                  if (nl.field_r == 2) {
+                  if (SpriteState.field_r == 2) {
                     nj.a(param0 ^ -4124, ne.field_d, 256);
                   } else {
-                    if (nl.field_r == 5) {
+                    if (SpriteState.field_r == 5) {
                       nj.a(10, ki.field_L, 5);
                     } else {
                       nj.a(param0 + 4124, mi.field_C, 256);
@@ -262,18 +262,18 @@ abstract class u extends GameApplet {
             }
           }
         }
-        if ((nl.field_r != -1 &&
-          nl.field_r != 0 ||
+        if ((SpriteState.field_r != -1 &&
+          SpriteState.field_r != 0 ||
           h.b(true)) &&
           sb.field_c <= d.a((byte) 22)) {
           t.field_c = false;
-          if (-1 != nl.field_r &&
-            nl.field_r != 0) {
-            nl.field_r = -1;
+          if (-1 != SpriteState.field_r &&
+            SpriteState.field_r != 0) {
+            SpriteState.field_r = -1;
             oh.a((byte) -117);
           }
         }
-        if (nl.field_r == 0 &&
+        if (SpriteState.field_r == 0 &&
           !h.b(true)) {
           cb.field_c = false;
         }
@@ -285,10 +285,10 @@ abstract class u extends GameApplet {
           if (0 != mh.field_tb) {
             qh.field_c = si.a(46, hj.field_a);
           }
-          ub.field_x = l.a(sf.field_g, param0 ^ 1784758027, false, 1, true);
+          UiWidget.field_x = l.a(sf.field_g, param0 ^ 1784758027, false, 1, true);
           vj.field_b = l.a(jg.field_o, -1784753947, false, 1, true);
           cc.field_a = l.a(DualLinkNode.field_n, param0 - 1784749833, false, 1, true);
-          bb.field_h = ub.field_x;
+          bb.field_h = UiWidget.field_x;
           ri.field_a = 2;
           md.field_c = vj.field_b;
         }
@@ -301,7 +301,7 @@ abstract class u extends GameApplet {
               if (qh.field_c.a((byte) 29, "")) {
                 ProxySocketConnector.a(0, qh.field_c);
                 qh.field_c = null;
-                jj.b(param0 + 4114);
+                GameGraphicsResources.b(param0 + 4114);
               }
             }
           }
@@ -310,13 +310,13 @@ abstract class u extends GameApplet {
           }
         }
         if (3 == ri.field_a &&
-          of.a(ub.field_x, cc.field_a, (byte) -1, vj.field_b) &&
+          of.a(UiWidget.field_x, cc.field_a, (byte) -1, vj.field_b) &&
           lc.a(param0 + 4114, cc.field_a)) {
           pg.a(-382);
           mi.d(3);
           vc.field_M = false;
-          dg.field_a = wj.field_G;
-          dj.a(param0 ^ -6284, cc.field_a, ub.field_x, vj.field_b, IntrusiveDequeCursor.field_g);
+          dg.loadingMessage = wj.field_G;
+          dj.a(param0 ^ -6284, cc.field_a, UiWidget.field_x, vj.field_b, IntrusiveDequeCursor.field_g);
           if (rf.field_c ||
             null != l.field_K) {
             stackIn_106_0 = !(rf.field_c);
@@ -330,14 +330,14 @@ abstract class u extends GameApplet {
           }
           if (null == pk.field_n) {
             pk.field_n = sl.d((byte) 126);
-            mk.field_f = u.r(8300);
+            mk.field_f = GameShell.r(8300);
           }
           ec.a(cc.field_a, (byte) -82, mk.field_f, pk.field_n);
           vj.field_b = null;
           cc.field_a = null;
-          ub.field_x = null;
+          UiWidget.field_x = null;
           ae.a((java.applet.Applet) (this), param0 ^ -4213);
-          jj.b(0);
+          GameGraphicsResources.b(0);
           ri.field_a = 10;
         }
         if (10 == ri.field_a) {
@@ -392,7 +392,7 @@ abstract class u extends GameApplet {
           param2.previous = param1.previous;
           param2.next = param1;
           if (param0 != 74) {
-            u.n(-127);
+            GameShell.n(-127);
           }
           param2.previous.next = param2;
           param2.next.previous = param2;
@@ -404,7 +404,7 @@ abstract class u extends GameApplet {
     private final void k(int param0) {
         field_z[5] = true;
         if (param0 > -77) {
-          u.n(111);
+          GameShell.n(111);
         }
     }
 
@@ -448,10 +448,10 @@ abstract class u extends GameApplet {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (ub.field_t != null) {
+            if (UiWidget.field_t != null) {
               try {
-                ub.field_t.a(0L, (byte) 113);
-                ub.field_t.a(var6, 9350);
+                UiWidget.field_t.a(0L, (byte) 113);
+                UiWidget.field_t.a(var6, 9350);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var2[var3_int]) {
                     continue;
@@ -471,7 +471,7 @@ abstract class u extends GameApplet {
             }
             param0.a(var2, 0, 24, -99);
             if (param1 != -18) {
-              u.r(5);
+              GameShell.r(5);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -512,7 +512,7 @@ abstract class u extends GameApplet {
     private final static int r(int param0) {
         if (param0 != 8300) {
           IntrusiveNode var2 = (IntrusiveNode) null;
-          u.$cfr$intArgs$a$894bb1585d61(86, (IntrusiveNode) null, (IntrusiveNode) null);
+          GameShell.$cfr$intArgs$a$894bb1585d61(86, (IntrusiveNode) null, (IntrusiveNode) null);
         }
         return sk.field_v;
     }
@@ -548,7 +548,7 @@ abstract class u extends GameApplet {
               pd.field_I = null;
               bh.field_g = null;
             }
-            var11 = df.b((byte) -52);
+            var11 = RasterBuffer.b((byte) -52);
             if (var11 != null) {
               vg.a(var11.booleanValue(), 3289);
             }
@@ -562,9 +562,9 @@ abstract class u extends GameApplet {
             }
           }
           if (var4 == 3) {
-            if (-1 != nl.field_r &&
-              nl.field_r != 0) {
-              nl.field_r = -1;
+            if (-1 != SpriteState.field_r &&
+              SpriteState.field_r != 0) {
+              SpriteState.field_r = -1;
               oh.a((byte) -128);
             }
             if (!param2) {
@@ -618,7 +618,7 @@ abstract class u extends GameApplet {
             this.l(-45);
           }
           if (var4 == 12) {
-            rb.a(jj.a(true), -1926289535, jg.f(1));
+            rb.a(GameGraphicsResources.a(true), -1926289535, jg.f(1));
           }
           if (var4 == 13) {
             try {
@@ -773,7 +773,7 @@ abstract class u extends GameApplet {
         rl.a(-19);
     }
 
-    protected u() {
+    protected GameShell() {
     }
 
     public static void n(int param0) {
@@ -893,7 +893,7 @@ abstract class u extends GameApplet {
     private final void l(int param0) {
         field_z[1] = true;
         if (param0 < 88) {
-          u.n(63);
+          GameShell.n(63);
         }
     }
 
@@ -951,7 +951,7 @@ abstract class u extends GameApplet {
           param2.previous = param1.previous;
           param2.next = param1;
           if (param0 != 74) {
-            u.n(-127);
+            GameShell.n(-127);
           }
           param2.previous.next = param2;
           param2.next.previous = param2;

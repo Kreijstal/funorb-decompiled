@@ -7,8 +7,8 @@ final class jl extends ll {
     static kl bossSoundArchive;
     static int field_r;
     static int field_s;
-    private o[] field_x;
-    static o field_w;
+    private Sprite[] field_x;
+    static Sprite field_w;
     private int field_p;
     private int field_t;
     private int field_q;
@@ -133,7 +133,7 @@ final class jl extends ll {
         }
     }
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -203,14 +203,14 @@ final class jl extends ll {
           s.field_b.field_r = 0;
         }
         if (param0 != 4) {
-          field_w = (o) null;
+          field_w = (Sprite) null;
         }
         return s.field_b;
     }
 
     public static void d(int param0) {
         if (param0 != 2763306) {
-          field_w = (o) null;
+          field_w = (Sprite) null;
         }
         field_w = null;
         bossSoundArchive = null;

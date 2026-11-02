@@ -36,7 +36,7 @@ final class i {
             nk.field_N = new mg(param8);
             n.field_b = new mg(param9);
             bl.field_a = param0;
-            df.field_a = param2;
+            RasterBuffer.field_a = param2;
             bl.field_d = param5;
             sb.field_e = param13;
             cb.field_g = param3;
@@ -51,7 +51,7 @@ final class i {
             aa.field_nb = param7;
             if (null != sb.field_e.field_c) {
               try {
-                ub.field_t = new si(sb.field_e.field_c, 64, 0);
+                UiWidget.field_t = new si(sb.field_e.field_c, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

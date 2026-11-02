@@ -49,7 +49,7 @@ final class p extends og implements wa {
         }
     }
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         if (param0 != 10000536) {
           return;
         }
@@ -88,15 +88,15 @@ final class p extends og implements wa {
         return this.field_T;
     }
 
-    final static void a(byte param0, String param1, boolean param2, float param3) {
+    final static void drawProgressBar(byte param0, String param1, boolean param2, float param3) {
         try {
           if (ProxySocketConnector.field_e == null) {
-            ProxySocketConnector.field_e = new hk(u.field_A, bh.field_a);
-            u.field_A.b((ub) (ProxySocketConnector.field_e), (byte) 126);
+            ProxySocketConnector.field_e = new hk(GameShell.field_A, bh.field_a);
+            GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 126);
           }
           int var4_int = 25 % ((param0 + 75) / 34);
           ProxySocketConnector.field_e.a(param1, param3, 2113632, param2);
-          ed.d();
+          SoftwareRasterizer.d();
           od.a(-117, true);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "p.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

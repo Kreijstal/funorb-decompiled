@@ -6,7 +6,7 @@ abstract class MouseWheelInput {
     static String field_d;
     static int field_a;
     static String field_e;
-    static o field_b;
+    static Sprite field_b;
     static String field_f;
 
     final static boolean a(byte param0) {
@@ -84,7 +84,7 @@ abstract class MouseWheelInput {
           }
           var4 = -var2_int + var3;
           if (param0 > -48) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
           if (var4 < 1) {
             return null;

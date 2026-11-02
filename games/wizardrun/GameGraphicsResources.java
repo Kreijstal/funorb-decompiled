@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj {
-    static o[] gemSprites;
+final class GameGraphicsResources {
+    static Sprite[] gemSprites;
     static gb wizardFont2;
     static String field_c;
     static rj field_d;

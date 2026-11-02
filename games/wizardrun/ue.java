@@ -8,7 +8,7 @@ final class ue {
     static String field_b;
     private ab field_g;
     private ab field_a;
-    static o field_d;
+    static Sprite field_d;
     static byte[][] field_e;
 
     public static void a(int param0) {

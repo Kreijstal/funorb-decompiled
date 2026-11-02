@@ -9,7 +9,7 @@ class mh extends gf implements qd {
     static volatile int field_pb;
     static kl field_jb;
     static String field_lb;
-    private vd field_qb;
+    private BitmapFont field_qb;
     static int field_tb;
     private hd field_ub;
     private boolean field_kb;
@@ -25,7 +25,7 @@ class mh extends gf implements qd {
         this.c(var2, param0 - 119);
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -314,7 +314,7 @@ class mh extends gf implements qd {
         }
     }
 
-    mh(wi param0, vd param1, String param2, boolean param3, boolean param4) {
+    mh(wi param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vc((mh) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param1;
@@ -324,7 +324,7 @@ class mh extends gf implements qd {
           this.field_nb = param4 ? true : false;
           this.field_ub = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ub.field_I = true;
-          this.a((ub) (this.field_ub), (byte) 127);
+          this.a((UiWidget) (this.field_ub), (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -9,18 +9,18 @@ abstract class r implements dk {
     static String field_c;
     static int field_a;
 
-    final static o[] a(int param0, kl param1, int param2, int param3) {
+    final static Sprite[] a(int param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
-        o[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        o[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 13469) {
-            stackIn_2_0 = (o[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (h.a(param3, param0, param1, -120)) {
@@ -28,7 +28,7 @@ abstract class r implements dk {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (o[]) (stackIn_5_0);
+          return (Sprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -61,21 +61,21 @@ abstract class r implements dk {
     abstract ok b(boolean param0);
 
     final static void c(int param0) {
-        o var1 = null;
-        o var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = wizardrun.field_H;
         try {
-          var1 = new o(540, 140);
+          var1 = new Sprite(540, 140);
           ud.a(var1, false);
           cj.c();
-          ed.d();
+          SoftwareRasterizer.d();
           jd.field_f = 0;
           gf.k(param0 ^ -301);
           var2 = var1.e();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            ed.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
           }
           ag.field_t.b();
           var1.a(0, 0);

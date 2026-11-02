@@ -5,7 +5,7 @@ final class pa {
     static String field_d;
     private static long[] field_b;
     static IntrusiveDeque field_e;
-    static o field_a;
+    static Sprite field_a;
     static String field_f;
     static int field_c;
 
@@ -19,7 +19,7 @@ final class pa {
 
     final static boolean a(byte param0) {
         if (param0 != -106) {
-          field_a = (o) null;
+          field_a = (Sprite) null;
         }
         return pl.field_E == wc.field_j ? true : false;
     }

@@ -90,11 +90,11 @@ abstract class uh {
     abstract sd a(boolean param0);
 
     final static void a(byte param0) {
-        u.field_A.d(false);
+        GameShell.field_A.d(false);
         if (ProxySocketConnector.field_e == null) {
-          ProxySocketConnector.field_e = new hk(u.field_A, bh.field_a);
+          ProxySocketConnector.field_e = new hk(GameShell.field_A, bh.field_a);
         }
-        u.field_A.b((ub) (ProxySocketConnector.field_e), (byte) 73);
+        GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 73);
         int var1 = -118 % ((76 - param0) / 49);
     }
 

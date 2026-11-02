@@ -23,7 +23,7 @@ final class jc extends mi {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        o var6 = null;
+        Sprite var6 = null;
         if (param2 != param1) {
           return;
         }
@@ -34,7 +34,7 @@ final class jc extends mi {
           return;
         }
         if (this.field_G != 256) {
-          var6 = new o(this.field_F.field_r, this.field_F.field_n);
+          var6 = new Sprite(this.field_F.field_r, this.field_F.field_n);
           ud.a(var6, false);
           this.field_F.a(0, 0, param2, 0);
           bb.b(4);
@@ -49,7 +49,7 @@ final class jc extends mi {
         this.field_G = 256;
     }
 
-    jc(ub param0) {
+    jc(UiWidget param0) {
         super(param0.field_o, param0.field_l, param0.field_r, param0.field_n, (bf) null, (ce) null);
         try {
           param0.a(114, 0, this.field_n, this.field_r, 0);

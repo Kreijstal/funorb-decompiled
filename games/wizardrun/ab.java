@@ -9,7 +9,7 @@ final class ab {
     private int field_a;
     private IntrusiveNode[] field_d;
     private IntrusiveNode field_f;
-    static o field_c;
+    static Sprite field_c;
 
     final IntrusiveNode b(int param0) {
         int fieldTemp$0 = 0;
@@ -99,24 +99,24 @@ final class ab {
         if (param0 == 14326) {
           return 0;
         }
-        field_c = (o) null;
+        field_c = (Sprite) null;
         return 0;
     }
 
     final static void a(kl param0, byte param1) {
-        o var2 = null;
+        Sprite var2 = null;
         int var4 = 0;
         int var5 = 0;
         try {
           int var3 = -63 % ((param1 + 44) / 42);
-          var2 = new o(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
+          var2 = new Sprite(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
           var4 = var2.field_z;
           var5 = var2.field_p;
           ph.d(-31782);
-          af.field_a = new o(var4, var5 * 3 / 4);
+          af.field_a = new Sprite(var4, var5 * 3 / 4);
           af.field_a.b();
           var2.c(0, 0);
-          ee.field_q = new o(var4, -af.field_a.field_p + var5);
+          ee.field_q = new Sprite(var4, -af.field_a.field_p + var5);
           ee.field_q.b();
           var2.c(0, -af.field_a.field_p);
           ee.field_q.field_v = af.field_a.field_p;

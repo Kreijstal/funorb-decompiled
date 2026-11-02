@@ -20,7 +20,7 @@ class qb extends ll {
         field_q = null;
     }
 
-    qb(vd param0, int param1) {
+    qb(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_M, -1, 2147483647, false);
     }
 
@@ -70,7 +70,7 @@ class qb extends ll {
         }
     }
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         try {
           if (param4) {
             pe.a(param2.field_n, (byte) -14, param1 + param2.field_l, param2.field_r, param0 + param2.field_o);

@@ -146,11 +146,11 @@ final class pi {
               stackIn_38_0 = null;
             }
             var21 = stackIn_38_0;
-            var22 = nl.field_A[var15Lifetime1];
+            var22 = SpriteState.field_A[var15Lifetime1];
             var23 = d.field_c[var15Lifetime1];
-            var24 = nl.field_A[var16];
+            var24 = SpriteState.field_A[var16];
             var25 = d.field_c[var16];
-            var26 = nl.field_A[var17];
+            var26 = SpriteState.field_A[var17];
             var27 = d.field_c[var17];
             if (var18 == var19 &&
               var19 == var20) {
@@ -207,14 +207,14 @@ final class pi {
         }
     }
 
-    final static o[] b(int param0) {
+    final static Sprite[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = wizardrun.field_H;
-        o[] var1 = new o[wb.field_f];
+        Sprite[] var1 = new Sprite[wb.field_f];
         for (var2 = param0; var2 < wb.field_f; var2++) {
           var3 = MouseInputHandler.field_b[var2] * ImageProducerRasterBuffer.field_k[var2];
           var4 = mf.field_j[var2];
@@ -222,7 +222,7 @@ final class pi {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = ic.field_b[kl.b(255, (int) var4[var6])];
           }
-          var1[var2] = new o(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
+          var1[var2] = new Sprite(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
         }
         ClientException.a(param0 ^ 0);
         return var1;

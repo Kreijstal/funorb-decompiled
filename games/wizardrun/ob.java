@@ -3,7 +3,7 @@
  */
 final class ob {
     int field_a;
-    static o field_c;
+    static Sprite field_c;
     int field_b;
 
     final void b(int param0) {
@@ -49,7 +49,7 @@ final class ob {
           }
           return var2;
         }
-        field_c = (o) null;
+        field_c = (Sprite) null;
         var2Lifetime1 = 20 * this.field_a + this.field_b;
         if (var2Lifetime1 < 0) {
           var2Lifetime1 = 0;

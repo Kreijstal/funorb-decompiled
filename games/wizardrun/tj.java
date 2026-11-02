@@ -125,9 +125,9 @@ abstract class tj extends pe {
           return;
         }
         if (ei.field_n == null) {
-          ei.field_n = new o(this.field_r, this.field_n);
+          ei.field_n = new Sprite(this.field_r, this.field_n);
           ud.a(ei.field_n, false);
-          ed.d();
+          SoftwareRasterizer.d();
           this.b(param1, -1, 0);
           super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
           bb.b(4);
@@ -135,9 +135,9 @@ abstract class tj extends pe {
           return;
         }
         if (this.field_r > ei.field_n.field_z) {
-          ei.field_n = new o(this.field_r, this.field_n);
+          ei.field_n = new Sprite(this.field_r, this.field_n);
           ud.a(ei.field_n, false);
-          ed.d();
+          SoftwareRasterizer.d();
           this.b(param1, -1, 0);
           super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
           bb.b(4);
@@ -145,9 +145,9 @@ abstract class tj extends pe {
           return;
         }
         if (this.field_n > ei.field_n.field_p) {
-          ei.field_n = new o(this.field_r, this.field_n);
+          ei.field_n = new Sprite(this.field_r, this.field_n);
           ud.a(ei.field_n, false);
-          ed.d();
+          SoftwareRasterizer.d();
           this.b(param1, -1, 0);
           super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
           bb.b(4);
@@ -155,7 +155,7 @@ abstract class tj extends pe {
           return;
         }
         ud.a(ei.field_n, false);
-        ed.d();
+        SoftwareRasterizer.d();
         this.b(param1, -1, 0);
         super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
         bb.b(4);
@@ -208,7 +208,7 @@ abstract class tj extends pe {
         var9 = wizardrun.field_H;
         try {
           var10 = (CharSequence) ((Object) param0);
-          var3_int = ok.a(param2, var10, (byte) 75);
+          var3_int = ok.countCharacter(param2, var10, (byte) 75);
           var4 = new String[var3_int + 1];
           if (param1 != -22710) {
             field_G = (rc) null;
@@ -240,12 +240,12 @@ abstract class tj extends pe {
         }
     }
 
-    final ub d(int param0) {
-        ub var2 = super.d(param0);
+    final UiWidget d(int param0) {
+        UiWidget var2 = super.d(param0);
         if (var2 != null) {
           return var2;
         }
-        return (ub) (this);
+        return (UiWidget) (this);
     }
 
     tj(wi param0, int param1, int param2) {

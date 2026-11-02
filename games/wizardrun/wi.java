@@ -14,7 +14,7 @@ final class wi extends mi {
         this.field_I = new IntrusiveDeque();
     }
 
-    final ub a(byte param0) {
+    final UiWidget a(byte param0) {
         IntrusiveDequeCursor var2;
         tj var3;
         int var4;
@@ -81,7 +81,7 @@ final class wi extends mi {
         return null;
     }
 
-    final void b(ub param0, byte param1) {
+    final void b(UiWidget param0, byte param1) {
         tj var3 = null;
         try {
           if (!(param0 instanceof tj)) {
@@ -93,7 +93,7 @@ final class wi extends mi {
           }
           this.field_I.a(var3, -5441);
           var3.field_H = true;
-          var3.a((ub) (this), 8);
+          var3.a((UiWidget) (this), 8);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "wi.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -102,16 +102,16 @@ final class wi extends mi {
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = wizardrun.field_H;
         if (this.field_w != null) {
-          this.field_w.a(param0, param3, (ub) (this), true, true);
+          this.field_w.a(param0, param3, (UiWidget) (this), true, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_I);
         if (param1 != 0) {
           return;
         }
-        ub var6 = (ub) (var5.b((byte) 69));
+        UiWidget var6 = (UiWidget) (var5.b((byte) 69));
         while (var6 != null) {
           var6.a(this.field_o + param0, 0, param2, param3 + this.field_l);
-          var6 = (ub) (var5.a(true));
+          var6 = (UiWidget) (var5.a(true));
         }
     }
 
@@ -137,7 +137,7 @@ final class wi extends mi {
         if (param0 <= 102) {
           field_L = (ad) null;
         }
-        this.field_F = (ub) ((Object) this.f(0));
+        this.field_F = (UiWidget) ((Object) this.f(0));
     }
 
     static {

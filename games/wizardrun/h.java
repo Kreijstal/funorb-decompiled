@@ -3,7 +3,7 @@
  */
 final class h extends IntrusiveNode {
     private int[] field_i;
-    static o[] field_j;
+    static Sprite[] field_j;
     byte[] field_q;
     static long field_m;
     static int[] field_s;

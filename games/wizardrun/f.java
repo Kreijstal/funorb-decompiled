@@ -4,7 +4,7 @@
 final class f {
     static wg[] field_a;
     static String[] field_b;
-    static o[] field_d;
+    static Sprite[] field_d;
     static boolean field_c;
     static String field_f;
     static boolean field_e;

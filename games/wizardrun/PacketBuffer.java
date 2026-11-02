@@ -6,7 +6,7 @@ class PacketBuffer extends IntrusiveNode {
     static ok field_o;
     byte[] payload;
     int position;
-    static vd field_i;
+    static BitmapFont field_i;
     static kl field_n;
     static ji field_j;
 
@@ -145,7 +145,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)param1;
         if (param0 != 11) {
-          field_i = (vd) null;
+          field_i = (BitmapFont) null;
         }
     }
 

@@ -43,7 +43,7 @@ final class le {
     short[] field_H;
     short field_L;
     int[] field_e;
-    static vd field_j;
+    static BitmapFont field_j;
     static int field_b;
     static int field_i;
 

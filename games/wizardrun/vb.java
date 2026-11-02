@@ -9,7 +9,7 @@ final class vb extends pl {
     int field_J;
     private int field_K;
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var13 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -91,9 +91,9 @@ final class vb extends pl {
         return this.field_H.a(-5);
     }
 
-    final static o[] c(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] c(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -3) {
-          return (o[]) null;
+          return (Sprite[]) null;
         }
         return cb.a(param4, param2, 1, true, 1, param3, 3, param1, 1);
     }

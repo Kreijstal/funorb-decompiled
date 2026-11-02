@@ -8,7 +8,7 @@ final class qj {
     static String field_f;
     static String field_a;
     static int field_d;
-    private o[] field_g;
+    private Sprite[] field_g;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 1) {
@@ -155,7 +155,7 @@ final class qj {
         }
     }
 
-    qj(o[] param0) {
+    qj(Sprite[] param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

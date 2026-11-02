@@ -8,7 +8,7 @@ final class vc extends pe implements qd {
     private mh field_L;
     private int[] field_E;
     static MouseWheelInput field_K;
-    private vd field_J;
+    private BitmapFont field_J;
     private int field_H;
     private pl[] field_F;
 
@@ -29,7 +29,7 @@ final class vc extends pe implements qd {
           var5 = -2 + this.field_n;
           this.a(param0 ^ 111, 0, this.field_n + 34, this.field_r, param0);
           var4.a(110, var5, 30, this.field_r - 14, 7);
-          this.a((ub) (var4), (byte) 98);
+          this.a((UiWidget) (var4), (byte) 98);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,7 +79,7 @@ final class vc extends pe implements qd {
         }
     }
 
-    vc(mh param0, vd param1, String param2) {
+    vc(mh param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (bf) null);
         int var4_int = 0;
         this.field_H = 0;

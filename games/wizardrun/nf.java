@@ -34,7 +34,7 @@ final class nf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, o[] param4) {
+    final static void a(int param0, int param1, int param2, byte param3, Sprite[] param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -58,14 +58,14 @@ final class nf {
             var7 = param4[1].field_x;
             param4[0].e(param0, param1);
             param4[2].e(param2 + param0 - var6, param1);
-            ed.b(ac.field_q);
-            ed.b(var5_int + param0, param1, param0 + param2 - var6, param4[1].field_s + param1);
+            SoftwareRasterizer.b(ac.field_q);
+            SoftwareRasterizer.b(var5_int + param0, param1, param0 + param2 - var6, param4[1].field_s + param1);
             var8 = var5_int + param0;
             var9 = -var6 + param0 + param2;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
               param4[1].e(param0, param1);
             }
-            ed.a(ac.field_q);
+            SoftwareRasterizer.a(ac.field_q);
             return;
           }
           return;

@@ -9,7 +9,7 @@ final class sg {
     static int field_f;
     private si field_c;
     private int field_e;
-    static o[][] field_b;
+    static Sprite[][] field_b;
 
     final byte[] a(boolean param0, int param1) {
         try {
@@ -211,9 +211,9 @@ final class sg {
 
     public static void b(byte param0) {
         if (param0 != 111) {
-          field_b = (o[][]) null;
+          field_b = (Sprite[][]) null;
         }
-        field_b = (o[][]) null;
+        field_b = (Sprite[][]) null;
     }
 
     private final boolean a(int param0, byte[] param1, int param2, boolean param3, boolean param4) {

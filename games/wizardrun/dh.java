@@ -59,7 +59,7 @@ final class dh {
               return stackIn_18_0;
             }
           }
-          stackIn_21_0 = u.b(var3[var3.length - 1], (byte) -125);
+          stackIn_21_0 = GameShell.b(var3[var3.length - 1], (byte) -125);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

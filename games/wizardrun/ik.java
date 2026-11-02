@@ -8,7 +8,7 @@ final class ik extends mi {
     static String field_H;
     static tb field_G;
     private int field_J;
-    private vd field_N;
+    private BitmapFont field_N;
     private boolean field_O;
     static int field_K;
 
@@ -16,7 +16,7 @@ final class ik extends mi {
         ki.h((byte) 91);
         wi.field_J = true;
         lc.field_d = true;
-        u.field_A.d(false);
+        GameShell.field_A.d(false);
         int var1 = -82 / ((param0 - 71) / 54);
         fc.a(uh.field_f, false, -124);
     }
@@ -32,7 +32,7 @@ final class ik extends mi {
         this.field_N.a(this.field_I, var5 + var7 + this.field_L, this.field_L + var6, this.field_M - this.field_L, -(2 * this.field_L) + this.field_n, this.field_J, -1, !this.field_O ? 2 : 0, 1, this.field_N.field_M);
     }
 
-    ik(int param0, int param1, int param2, int param3, ub param4, boolean param5, int param6, int param7, vd param8, int param9, String param10) {
+    ik(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (bf) null, (ce) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

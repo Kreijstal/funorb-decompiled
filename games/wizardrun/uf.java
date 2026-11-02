@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uf {
-    static vd field_c;
+    static BitmapFont field_c;
     static String field_b;
     private String field_a;
 

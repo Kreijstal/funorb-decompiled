@@ -46,11 +46,11 @@ final class id {
         }
     }
 
-    final static o a(byte param0, int param1, int param2) {
+    final static Sprite a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = wizardrun.field_H;
-        o var6 = new o(param2, param2);
-        o var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         if (param0 <= 51) {
           id.a((byte) -66, -95, 21);
         }

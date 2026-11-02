@@ -5,7 +5,7 @@ final class ac extends DualLinkNode {
     static int field_r;
     private String[] field_v;
     static int[] field_q;
-    static o field_s;
+    static Sprite field_s;
     private int[] field_w;
     static int field_t;
     int[] field_p;
@@ -155,7 +155,7 @@ final class ac extends DualLinkNode {
 
     public static void e(int param0) {
         if (param0 != 0) {
-          field_s = (o) null;
+          field_s = (Sprite) null;
         }
         field_s = null;
         field_q = null;

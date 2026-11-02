@@ -4,7 +4,7 @@
 final class vf extends IntrusiveNode {
     int field_i;
     int field_k;
-    static o[] field_j;
+    static Sprite[] field_j;
 
     final static ne a(byte param0) {
         int var1 = 61 / ((param0 - 19) / 39);

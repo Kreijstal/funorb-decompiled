@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ub extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     static boolean field_m;
     int field_l;
     int field_i;
@@ -57,7 +57,7 @@ class ub extends IntrusiveNode {
             param0.length() >= ca.field_f &&
             param0.length() <= af.field_e) {
             if (param1 <= 43) {
-              ub.a(117, -70);
+              UiWidget.a(117, -70);
             }
             return false;
           }
@@ -76,7 +76,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    boolean a(ub param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -132,7 +132,7 @@ class ub extends IntrusiveNode {
           }
           if (this.field_w != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_w instanceof ub)) {
+            if (!(this.field_w instanceof UiWidget)) {
               discarded$5 = param3.append(this.field_w);
               if (var6 != 0) {
                 param3 = this.a(param2, (byte) 102, param1 + 1, param3);
@@ -146,7 +146,7 @@ class ub extends IntrusiveNode {
           }
           if (null != this.field_s) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_s instanceof ub)) {
+            if (!(this.field_s instanceof UiWidget)) {
               discarded$7 = param3.append(this.field_s);
               if (var6 == 0) {
                 return;
@@ -213,7 +213,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    boolean a(char param0, int param1, byte param2, ub param3) {
+    boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -528,7 +528,7 @@ class ub extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            this.a(-68, -40, -26, -46, (ub) null, -33);
+            this.a(-68, -40, -26, -46, (UiWidget) null, -33);
           }
           stackIn_16_0 = (param1 >= param3 + this.field_o) && (param0 >= this.field_l + param4) && (this.field_r + param3 + this.field_o > param1) && ((this.field_n + (param4 + this.field_l)) > param0);
           return stackIn_16_0;
@@ -539,7 +539,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+    void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -585,7 +585,7 @@ class ub extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 23) {
-            ub.f((byte) 70);
+            UiWidget.f((byte) 70);
           }
           stackIn_4_0 = 0;
           return stackIn_4_0;
@@ -596,7 +596,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    boolean a(ub param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -604,7 +604,7 @@ class ub extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -23023) {
-            this.a((ub) null, 28, 74, 38, 125, 87, 3);
+            this.a((UiWidget) null, 28, 74, 38, 125, 87, 3);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -698,7 +698,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
@@ -838,51 +838,51 @@ class ub extends IntrusiveNode {
           PacketBuffer.field_n = param1;
           var2 = uf.a("achievement_names,0", 107);
           if (null != var2) {
-            nl.field_t[0] = nf.a((byte) 100, var2);
+            SpriteState.field_t[0] = nf.a((byte) 100, var2);
           }
           var2Lifetime1 = uf.a("achievement_names,1", 111);
           if (null != var2Lifetime1) {
-            nl.field_t[1] = nf.a((byte) 84, var2Lifetime1);
+            SpriteState.field_t[1] = nf.a((byte) 84, var2Lifetime1);
           }
           var2Lifetime2 = uf.a("achievement_names,2", 122);
           if (var2Lifetime2 != null) {
-            nl.field_t[2] = nf.a((byte) 94, var2Lifetime2);
+            SpriteState.field_t[2] = nf.a((byte) 94, var2Lifetime2);
           }
           var2Lifetime3 = uf.a("achievement_names,3", 111);
           if (null != var2Lifetime3) {
-            nl.field_t[3] = nf.a((byte) 125, var2Lifetime3);
+            SpriteState.field_t[3] = nf.a((byte) 125, var2Lifetime3);
           }
           var2Lifetime4 = uf.a("achievement_names,4", 120);
           if (null != var2Lifetime4) {
-            nl.field_t[4] = nf.a((byte) 113, var2Lifetime4);
+            SpriteState.field_t[4] = nf.a((byte) 113, var2Lifetime4);
           }
           var2Lifetime5 = uf.a("achievement_names,5", 122);
           if (null != var2Lifetime5) {
-            nl.field_t[5] = nf.a((byte) 114, var2Lifetime5);
+            SpriteState.field_t[5] = nf.a((byte) 114, var2Lifetime5);
           }
           var2Lifetime6 = uf.a("achievement_names,6", 110);
           if (var2Lifetime6 != null) {
-            nl.field_t[6] = nf.a((byte) 126, var2Lifetime6);
+            SpriteState.field_t[6] = nf.a((byte) 126, var2Lifetime6);
           }
           var2Lifetime7 = uf.a("achievement_names,7", 108);
           if (var2Lifetime7 != null) {
-            nl.field_t[7] = nf.a((byte) 111, var2Lifetime7);
+            SpriteState.field_t[7] = nf.a((byte) 111, var2Lifetime7);
           }
           var2Lifetime8 = uf.a("achievement_names,8", 119);
           if (null != var2Lifetime8) {
-            nl.field_t[8] = nf.a((byte) 86, var2Lifetime8);
+            SpriteState.field_t[8] = nf.a((byte) 86, var2Lifetime8);
           }
           var2Lifetime9 = uf.a("achievement_names,9", 107);
           if (null != var2Lifetime9) {
-            nl.field_t[9] = nf.a((byte) 93, var2Lifetime9);
+            SpriteState.field_t[9] = nf.a((byte) 93, var2Lifetime9);
           }
           var2Lifetime10 = uf.a("achievement_names,10", 123);
           if (null != var2Lifetime10) {
-            nl.field_t[10] = nf.a((byte) 84, var2Lifetime10);
+            SpriteState.field_t[10] = nf.a((byte) 84, var2Lifetime10);
           }
           var2Lifetime11 = uf.a("achievement_names,11", 119);
           if (var2Lifetime11 != null) {
-            nl.field_t[11] = nf.a((byte) 109, var2Lifetime11);
+            SpriteState.field_t[11] = nf.a((byte) 109, var2Lifetime11);
           }
           var2Lifetime12 = uf.a("achievement_criteria,0", 120);
           if (null != var2Lifetime12) {
@@ -1177,7 +1177,7 @@ class ub extends IntrusiveNode {
           }
           var2Lifetime84 = uf.a("thebea", 117);
           if (var2Lifetime84 != null) {
-            u.field_o = nf.a((byte) 89, var2Lifetime84);
+            GameShell.field_o = nf.a((byte) 89, var2Lifetime84);
           }
           var2Lifetime85 = uf.a("thevil", 109);
           if (null != var2Lifetime85) {
@@ -1267,7 +1267,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, ub param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         boolean stackIn_6_0 = false;
@@ -1279,7 +1279,7 @@ class ub extends IntrusiveNode {
         try {
           var5_int = this.b(fi.field_B, pg.field_n, 0, param2, param1) ? 1 : 0;
           if (param0 != 10000536) {
-            ub.a(101, (kl) null);
+            UiWidget.a(101, (kl) null);
           }
           stackIn_6_0 = this.field_v;
           if (var5_int != 0) {
@@ -1309,16 +1309,16 @@ class ub extends IntrusiveNode {
         }
     }
 
-    ub(String param0, ce param1) {
+    UiWidget(String param0, ce param1) {
         this(param0, kc.field_H.field_u, param1);
     }
 
-    protected ub() {
+    protected UiWidget() {
         this.field_i = 0;
         this.field_j = 0;
     }
 
-    ub(String param0, bf param1, ce param2) {
+    UiWidget(String param0, bf param1, ce param2) {
         RuntimeException runtimeException = null;
         qe var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -1367,7 +1367,7 @@ class ub extends IntrusiveNode {
         }
     }
 
-    ub(int param0, int param1, int param2, int param3, bf param4, ce param5) {
+    UiWidget(int param0, int param1, int param2, int param3, bf param4, ce param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

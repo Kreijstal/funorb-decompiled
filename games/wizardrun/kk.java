@@ -7,7 +7,7 @@ final class kk extends mh implements qd {
     static boolean field_yb;
     private boolean field_Cb;
     static String field_vb;
-    static o[] field_Bb;
+    static Sprite[] field_Bb;
     static int field_zb;
     private boolean field_Ab;
 

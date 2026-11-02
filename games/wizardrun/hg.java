@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hg {
-    static o field_d;
+    static Sprite field_d;
     static ok field_c;
     static java.awt.Image field_b;
     static int field_a;

@@ -21,7 +21,7 @@ final class cj {
     }
 
     final static void c() {
-        cj.a(ed.field_c, ed.field_i, ed.field_l, ed.field_b);
+        cj.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l, SoftwareRasterizer.field_b);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -32,10 +32,10 @@ final class cj {
         if (field_a.length < field_d) {
           field_a = new int[rd.a(field_d, false)];
         }
-        int var4 = param1 * ed.field_h + param0;
+        int var4 = param1 * SoftwareRasterizer.field_h + param0;
         for (var5 = 0; var5 < field_d; var5++) {
           field_a[var5] = var4;
-          var4 = var4 + ed.field_h;
+          var4 = var4 + SoftwareRasterizer.field_h;
         }
     }
 

@@ -5,7 +5,7 @@ final class dg {
     static int field_c;
     static int field_f;
     static boolean field_b;
-    static String field_a;
+    static String loadingMessage;
     static int field_d;
     static int field_e;
 
@@ -13,10 +13,10 @@ final class dg {
         if (param0 != 256) {
           byte[] var2 = (byte[]) null;
           dg.a((byte[]) null, -61);
-          field_a = null;
+          loadingMessage = null;
           return;
         }
-        field_a = null;
+        loadingMessage = null;
     }
 
     final static boolean b(int param0) {
@@ -54,10 +54,10 @@ final class dg {
         ud.a(s.field_a, false);
         cj.c();
         var6 = 14 % ((param2 + 9) / 50);
-        ed.d();
+        SoftwareRasterizer.d();
         gf.k(-120);
         if (var5 < 256) {
-          ed.d(0, 0, ed.field_h, ed.field_d, 0, 256 - var5);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, 0, 256 - var5);
           bb.b(4);
           if (jd.field_f < 150) {
             s.field_a.a(var3, var4);

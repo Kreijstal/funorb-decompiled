@@ -6,7 +6,7 @@ import java.util.*;
 abstract class hl {
     static Calendar field_c;
     static int field_a;
-    static df field_b;
+    static RasterBuffer field_b;
     private static String field_z;
 
     abstract int a(boolean param0, int param1);

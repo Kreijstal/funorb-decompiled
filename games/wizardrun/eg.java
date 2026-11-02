@@ -6,7 +6,7 @@ final class eg extends qh {
     static long field_C;
     int field_x;
     static String field_t;
-    o field_q;
+    Sprite field_q;
     private int field_m;
     int field_o;
     int field_w;
@@ -21,15 +21,15 @@ final class eg extends qh {
     int field_y;
 
     private final void a(int param0, int param1, boolean param2, String param3, int param4) {
-        jj.wizardFont2.b(param3, -1 + param1, param4, 0, -1);
-        jj.wizardFont2.b(param3, param1 + 1, param4, 0, -1);
-        jj.wizardFont2.b(param3, param1, -1 + param4, 0, -1);
-        jj.wizardFont2.b(param3, param1, 1 + param4, 0, -1);
+        GameGraphicsResources.wizardFont2.b(param3, -1 + param1, param4, 0, -1);
+        GameGraphicsResources.wizardFont2.b(param3, param1 + 1, param4, 0, -1);
+        GameGraphicsResources.wizardFont2.b(param3, param1, -1 + param4, 0, -1);
+        GameGraphicsResources.wizardFont2.b(param3, param1, 1 + param4, 0, -1);
         if (!param2) {
           return;
         }
         try {
-          jj.wizardFont2.b(param3, param1, param4, param0, -1);
+          GameGraphicsResources.wizardFont2.b(param3, param1, param4, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -519,11 +519,11 @@ final class eg extends qh {
                               this.field_o == 2) &&
                               (qh.field_l == 5 &&
                               ve.a((byte) 123, 0))) {
-                              jj.gemSprites[8].e(var2, var3);
+                              GameGraphicsResources.gemSprites[8].e(var2, var3);
                             } else {
-                              jj.gemSprites[this.field_o].e(var2, var3);
+                              GameGraphicsResources.gemSprites[this.field_o].e(var2, var3);
                             }
-                            this.field_q = jj.gemSprites[this.field_o];
+                            this.field_q = GameGraphicsResources.gemSprites[this.field_o];
                             this.field_y = var2;
                             this.field_A = var3;
                             break regionExit1;
@@ -751,7 +751,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 50 &&
                   nk.field_T < 100) {
-                  var11 = jj.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
+                  var11 = GameGraphicsResources.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
                   var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
@@ -768,7 +768,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 100 &&
                   nk.field_T < 150) {
-                  var11 = jj.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
+                  var11 = GameGraphicsResources.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
                   var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -785,7 +785,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 150 &&
                   nk.field_T < 200) {
-                  var11 = jj.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
+                  var11 = GameGraphicsResources.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
                   var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -1056,92 +1056,92 @@ final class eg extends qh {
         String var3;
         ol.field_e = true;
         if (3 == this.field_B) {
-          tl.field_a.a(nl.secondarySoundEffects[3], 100, ee.field_p * 256 / 100);
+          tl.field_a.a(SpriteState.secondarySoundEffects[3], 100, ee.field_p * 256 / 100);
         } else {
           if (this.field_B == 4) {
-            tl.field_a.a(nl.secondarySoundEffects[4], 100, ee.field_p * 256 / 100);
+            tl.field_a.a(SpriteState.secondarySoundEffects[4], 100, ee.field_p * 256 / 100);
           } else {
             if (5 == this.field_B) {
-              tl.field_a.a(nl.secondarySoundEffects[5], 100, ee.field_p * 256 / 100);
+              tl.field_a.a(SpriteState.secondarySoundEffects[5], 100, ee.field_p * 256 / 100);
             } else {
               if (this.field_B == 6) {
-                tl.field_a.a(nl.secondarySoundEffects[7], 100, ee.field_p * 256 / 100);
+                tl.field_a.a(SpriteState.secondarySoundEffects[7], 100, ee.field_p * 256 / 100);
               } else {
                 if (this.field_B == 8) {
-                  tl.field_a.a(nl.secondarySoundEffects[8], 100, 256 * ee.field_p / 100);
+                  tl.field_a.a(SpriteState.secondarySoundEffects[8], 100, 256 * ee.field_p / 100);
                 } else {
                   if (this.field_B == 7) {
-                    tl.field_a.a(nl.secondarySoundEffects[9], 100, 256 * ee.field_p / 100);
+                    tl.field_a.a(SpriteState.secondarySoundEffects[9], 100, 256 * ee.field_p / 100);
                   } else {
                     if (this.field_B == 9) {
-                      tl.field_a.a(nl.secondarySoundEffects[10], 100, 256 * ee.field_p / 100);
+                      tl.field_a.a(SpriteState.secondarySoundEffects[10], 100, 256 * ee.field_p / 100);
                     } else {
                       if (this.field_B == 10) {
-                        tl.field_a.a(nl.secondarySoundEffects[11], 100, 256 * ee.field_p / 100);
+                        tl.field_a.a(SpriteState.secondarySoundEffects[11], 100, 256 * ee.field_p / 100);
                       } else {
                         if (this.field_B == 12) {
-                          tl.field_a.a(nl.secondarySoundEffects[13], 100, ee.field_p * 256 / 100);
+                          tl.field_a.a(SpriteState.secondarySoundEffects[13], 100, ee.field_p * 256 / 100);
                         } else {
                           if (this.field_B == 14) {
-                            tl.field_a.a(nl.secondarySoundEffects[14], 100, ee.field_p * 256 / 100);
+                            tl.field_a.a(SpriteState.secondarySoundEffects[14], 100, ee.field_p * 256 / 100);
                           } else {
                             if (this.field_B == 13) {
-                              tl.field_a.a(nl.secondarySoundEffects[15], 100, 256 * ee.field_p / 100);
+                              tl.field_a.a(SpriteState.secondarySoundEffects[15], 100, 256 * ee.field_p / 100);
                             } else {
                               if (this.field_B == 15) {
-                                tl.field_a.a(nl.secondarySoundEffects[16], 100, 256 * ee.field_p / 100);
+                                tl.field_a.a(SpriteState.secondarySoundEffects[16], 100, 256 * ee.field_p / 100);
                               } else {
                                 if (this.field_B == 16) {
-                                  tl.field_a.a(nl.secondarySoundEffects[19], 100, ee.field_p * 256 / 100);
+                                  tl.field_a.a(SpriteState.secondarySoundEffects[19], 100, ee.field_p * 256 / 100);
                                 } else {
                                   if (this.field_B == 17) {
-                                    tl.field_a.a(nl.secondarySoundEffects[21], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.a(SpriteState.secondarySoundEffects[21], 100, 256 * ee.field_p / 100);
                                   } else {
                                     if (22 == this.field_B) {
-                                      tl.field_a.a(nl.secondarySoundEffects[22], 100, ee.field_p * 256 / 100);
+                                      tl.field_a.a(SpriteState.secondarySoundEffects[22], 100, ee.field_p * 256 / 100);
                                     } else {
                                       if (this.field_B == 24) {
-                                        tl.field_a.a(nl.secondarySoundEffects[23], 100, 256 * ee.field_p / 100);
+                                        tl.field_a.a(SpriteState.secondarySoundEffects[23], 100, 256 * ee.field_p / 100);
                                       } else {
                                         if (this.field_B == 23) {
-                                          tl.field_a.a(nl.secondarySoundEffects[24], 100, ee.field_p * 256 / 100);
+                                          tl.field_a.a(SpriteState.secondarySoundEffects[24], 100, ee.field_p * 256 / 100);
                                         } else {
                                           if (26 == this.field_B) {
-                                            tl.field_a.a(nl.secondarySoundEffects[26], 100, ee.field_p * 256 / 100);
+                                            tl.field_a.a(SpriteState.secondarySoundEffects[26], 100, ee.field_p * 256 / 100);
                                           } else {
                                             if (this.field_B == 29) {
-                                              tl.field_a.a(nl.secondarySoundEffects[27], 100, 256 * ee.field_p / 100);
+                                              tl.field_a.a(SpriteState.secondarySoundEffects[27], 100, 256 * ee.field_p / 100);
                                             } else {
                                               if (31 == this.field_B) {
-                                                tl.field_a.a(nl.secondarySoundEffects[28], 100, ee.field_p * 256 / 100);
+                                                tl.field_a.a(SpriteState.secondarySoundEffects[28], 100, ee.field_p * 256 / 100);
                                               } else {
                                                 if (30 == this.field_B) {
-                                                  tl.field_a.a(nl.secondarySoundEffects[29], 100, 256 * ee.field_p / 100);
+                                                  tl.field_a.a(SpriteState.secondarySoundEffects[29], 100, 256 * ee.field_p / 100);
                                                 } else {
                                                   if (this.field_B == 32) {
-                                                    tl.field_a.a(nl.secondarySoundEffects[30], 100, 256 * ee.field_p / 100);
+                                                    tl.field_a.a(SpriteState.secondarySoundEffects[30], 100, 256 * ee.field_p / 100);
                                                   } else {
                                                     if (this.field_B == 33) {
-                                                      tl.field_a.a(nl.secondarySoundEffects[31], 100, 256 * ee.field_p / 100);
+                                                      tl.field_a.a(SpriteState.secondarySoundEffects[31], 100, 256 * ee.field_p / 100);
                                                     } else {
                                                       if (this.field_B == 36) {
-                                                        tl.field_a.a(nl.secondarySoundEffects[32], 100, 256 * ee.field_p / 100);
+                                                        tl.field_a.a(SpriteState.secondarySoundEffects[32], 100, 256 * ee.field_p / 100);
                                                       } else {
                                                         if (param0) {
                                                           var3 = (String) null;
                                                           this.a(-17, 111, false, (String) null, 55);
                                                         }
                                                         if (this.field_B == 38) {
-                                                          tl.field_a.a(nl.secondarySoundEffects[33], 100, ee.field_p * 256 / 100);
+                                                          tl.field_a.a(SpriteState.secondarySoundEffects[33], 100, ee.field_p * 256 / 100);
                                                         } else {
                                                           if (this.field_B == 37) {
-                                                            tl.field_a.a(nl.secondarySoundEffects[34], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.a(SpriteState.secondarySoundEffects[34], 100, ee.field_p * 256 / 100);
                                                           } else {
                                                             if (39 == this.field_B) {
-                                                              tl.field_a.a(nl.secondarySoundEffects[35], 100, ee.field_p * 256 / 100);
+                                                              tl.field_a.a(SpriteState.secondarySoundEffects[35], 100, ee.field_p * 256 / 100);
                                                             } else {
                                                               if (this.field_B == 40) {
-                                                                tl.field_a.a(nl.secondarySoundEffects[37], 100, 256 * ee.field_p / 100);
+                                                                tl.field_a.a(SpriteState.secondarySoundEffects[37], 100, 256 * ee.field_p / 100);
                                                               } else {
                                                                 tl.field_a.a(si.soundEffects[9], 100, ee.field_p * 256 / 100);
                                                               }
@@ -1899,7 +1899,7 @@ final class eg extends qh {
                                       17 > this.field_i.field_b) {
                                       if (((this.field_z == 1)) &&
                                         ((this.field_n == 3))) {
-                                        tl.field_a.a(nl.secondarySoundEffects[12], 100, 256 * ee.field_p / 100);
+                                        tl.field_a.a(SpriteState.secondarySoundEffects[12], 100, 256 * ee.field_p / 100);
                                       }
                                       decompiledFrameRemainder0 = false;
                                     }
@@ -2085,7 +2085,7 @@ final class eg extends qh {
                                         od.field_k = od.field_k + 1;
                                         stackIn_535_0 = (pk.field_s) ? 0 : 1;
                                         if (stackIn_535_0 != 1) {
-                                          tl.field_a.a(nl.secondarySoundEffects[17], 100, ee.field_p * 256 / 100);
+                                          tl.field_a.a(SpriteState.secondarySoundEffects[17], 100, ee.field_p * 256 / 100);
                                         }
                                       }
                                       this.e(false);
@@ -2163,7 +2163,7 @@ final class eg extends qh {
                                           od.field_k = od.field_k + 1;
                                           stackIn_574_0 = !(pk.field_s);
                                           if (!stackIn_574_0) {
-                                            tl.field_a.a(nl.secondarySoundEffects[18], 100, ee.field_p * 256 / 100);
+                                            tl.field_a.a(SpriteState.secondarySoundEffects[18], 100, ee.field_p * 256 / 100);
                                           }
                                         }
                                         this.e(false);
@@ -2508,7 +2508,7 @@ final class eg extends qh {
                                                             stackIn_774_1 = 1;
                                                           }
                                                           if (stackIn_773_0 == stackIn_774_1) {
-                                                            tl.field_a.a(nl.secondarySoundEffects[25], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.a(SpriteState.secondarySoundEffects[25], 100, ee.field_p * 256 / 100);
                                                           }
                                                         }
                                                         if (this.field_s > 0) {
@@ -3364,7 +3364,7 @@ final class eg extends qh {
                                                                                         ii.field_e[od.field_k].field_w = (int)(Math.random() * 100.0);
                                                                                         od.field_k = od.field_k + 1;
                                                                                         if (pk.field_s) {
-                                                                                          tl.field_a.a(nl.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
+                                                                                          tl.field_a.a(SpriteState.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
                                                                                         }
                                                                                       }
                                                                                       if (25 > this.field_n) {
@@ -3718,7 +3718,7 @@ final class eg extends qh {
     }
 
     final static void a(kl param0, int param1, kl param2, kl param3) {
-        o var16 = null;
+        Sprite var16 = null;
         db[] var5 = null;
         db[][] var6 = null;
         int[][] var17 = null;
@@ -3726,9 +3726,9 @@ final class eg extends qh {
         int[][] var7 = null;
         db[] var10_ref_db__ = null;
         int var11_int = 0;
-        o var11 = null;
-        o var12 = null;
-        o var13 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
+        Sprite var13 = null;
         int var8 = 0;
         int var9 = 0;
         int var14 = wizardrun.field_H;
@@ -3740,10 +3740,10 @@ final class eg extends qh {
           hg.field_d = vg.loadSprite(15, "jagex_logo_grey", param3, "commonui");
           vf.field_j = pe.loadSpriteStrip("commonui", param3, "button", 121);
           te.field_k = pc.a((byte) 125, "commonui", param3, "validation");
-          e.field_b = (vd) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
-          gh.field_b = (vd) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
-          PacketBuffer.field_i = (vd) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
-          var16 = new o(param2.a(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
+          e.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
+          gh.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
+          PacketBuffer.field_i = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
+          var16 = new Sprite(param2.a(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
           mf.a("commonui", "dropdown", param3, (byte) -108);
           var5 = re.a(param3, "commonui", "screen_options", 112);
           IterableNodeHashTable.field_f = new db[4];
@@ -3771,18 +3771,18 @@ final class eg extends qh {
           ph.d(-31782);
           int var10 = -88 / ((15 - param1) / 44);
           var16.b();
-          ed.d(0, 0, ed.field_h, ed.field_d);
-          var11 = new o(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.b();
           var16.c(0, 0);
-          var12 = new o(var9Lifetime1, var9Lifetime1);
+          var12 = new Sprite(var9Lifetime1, var9Lifetime1);
           var12.b();
           var16.c(-var16.field_z + var9Lifetime1, 0);
-          var13 = new o(var16.field_z - var9Lifetime1 * 2, var9Lifetime1);
+          var13 = new Sprite(var16.field_z - var9Lifetime1 * 2, var9Lifetime1);
           var13.b();
           var16.c(-var9Lifetime1, 0);
           bb.b(4);
-          vf.field_j = new o[]{var11, var13, var12};
+          vf.field_j = new Sprite[]{var11, var13, var12};
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "eg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -3793,14 +3793,14 @@ final class eg extends qh {
         int stackIn_21_1 = 0;
         int var4;
         int var5;
-        o[] var6;
+        Sprite[] var6;
         int var7;
         int var8;
         double var9;
         int var12;
         var12 = wizardrun.field_H;
         if (param2 != 62) {
-          this.field_q = (o) null;
+          this.field_q = (Sprite) null;
         }
         var4 = this.field_f.field_b * 32 / 240 + 32 * this.field_i.field_b;
         var5 = 32 * (15 - this.field_i.field_a) - (32 + this.field_f.field_a * 32 / 240);
@@ -3889,7 +3889,7 @@ final class eg extends qh {
               if (stackIn_13_0 != stackIn_14_1) {
                 if (pk.field_s) {
                   if (6 == this.field_B) {
-                    tl.field_a.a(nl.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
+                    tl.field_a.a(SpriteState.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
                   } else {
                     tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
                   }

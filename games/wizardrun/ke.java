@@ -11,7 +11,7 @@ final class ke extends qb {
         this(gh.field_b, param0);
     }
 
-    private ke(vd param0, int param1) {
+    private ke(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -24,7 +24,7 @@ final class ke extends qb {
         field_v = null;
     }
 
-    final String b(ub param0, byte param1) {
+    final String b(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

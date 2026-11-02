@@ -137,10 +137,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         var2 = wizardrun.field_H;
         try {
-          u.field_A.a(126, true, qa.field_s, dg.field_f);
-          u.field_A.g((byte) 105);
+          GameShell.field_A.a(126, true, qa.field_s, dg.field_f);
+          GameShell.field_A.g((byte) 105);
           while (ae.a(param0 ^ -20316)) {
-            u.field_A.a(-90, vk.field_r, ae.field_a);
+            GameShell.field_A.a(-90, vk.field_r, ae.field_a);
           }
           if (w.field_a != -1) {
             var1_int = w.field_a;

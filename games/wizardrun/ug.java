@@ -19,9 +19,9 @@ final class ug extends pl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          sg.field_b = new o[6][];
-          ok.field_e = new o[6][5][];
-          bd.field_c = new o[6];
+          sg.field_b = new Sprite[6][];
+          ok.field_e = new Sprite[6][5][];
+          bd.field_c = new Sprite[6];
           ok.field_e[0][0] = pe.loadSpriteStrip("", mi.field_E, "monster00", 110);
           ok.field_e[0][1] = pe.loadSpriteStrip("", mi.field_E, "monster01", 125);
           ok.field_e[0][2] = pe.loadSpriteStrip("", mi.field_E, "monster02", 121);
@@ -75,7 +75,7 @@ final class ug extends pl {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -201,10 +201,10 @@ final class ug extends pl {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = nl.field_A[var9];
+                var12 = SpriteState.field_A[var9];
                 var13 = d.field_c[var9];
-                var14 = -var12 + nl.field_A[var10];
-                var15 = -var12 + nl.field_A[var11];
+                var14 = -var12 + SpriteState.field_A[var10];
+                var15 = -var12 + SpriteState.field_A[var11];
                 var16 = -var13 + d.field_c[var10];
                 var17 = d.field_c[var11] - var13;
               }
@@ -478,10 +478,10 @@ final class ug extends pl {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = nl.field_A[var9];
+                var12 = SpriteState.field_A[var9];
                 var13 = d.field_c[var9];
-                var14 = -var12 + nl.field_A[var10];
-                var15 = -var12 + nl.field_A[var11];
+                var14 = -var12 + SpriteState.field_A[var10];
+                var15 = -var12 + SpriteState.field_A[var11];
                 var16 = -var13 + d.field_c[var10];
                 var17 = d.field_c[var11] - var13;
               }

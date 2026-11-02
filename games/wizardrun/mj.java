@@ -5,7 +5,7 @@ import java.io.*;
 
 final class mj {
     static String field_d;
-    static o field_b;
+    static Sprite field_b;
     static boolean field_c;
     static int[] field_a;
 
@@ -266,7 +266,7 @@ final class mj {
         field_a = null;
         field_d = null;
         if (param0 != 13214) {
-          field_b = (o) null;
+          field_b = (Sprite) null;
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gh {
-    static vd field_b;
+    static BitmapFont field_b;
     static Boolean field_c;
     static String[] field_a;
 

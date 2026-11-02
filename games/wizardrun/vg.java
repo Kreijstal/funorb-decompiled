@@ -15,7 +15,7 @@ final class vg extends rg implements qd {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ub var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == mk.field_e) {
@@ -35,7 +35,7 @@ final class vg extends rg implements qd {
               }
             }
           }
-          var4 = new ub((String) (var3), (ce) null);
+          var4 = new UiWidget((String) (var3), (ce) null);
           var4.field_l = 50;
           var4.field_n = 80;
           var4.field_r = this.field_r;
@@ -171,12 +171,12 @@ final class vg extends rg implements qd {
         field_W = null;
     }
 
-    final static o loadSprite(int param0, String param1, kl param2, String param3) {
+    final static Sprite loadSprite(int param0, String param1, kl param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        o stackIn_2_0 = null;
-        o stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -187,7 +187,7 @@ final class vg extends rg implements qd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 15) {
-            stackIn_2_0 = (o) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           var4_int = param2.b(param0 - 16, param3);
@@ -259,7 +259,7 @@ final class vg extends rg implements qd {
           var5 = this.field_n - 6;
           this.field_n = this.field_n + 38;
           var4.a(123, var5, 30, this.field_r - 30, 15);
-          this.a((ub) (var4), (byte) 48);
+          this.a((UiWidget) (var4), (byte) 48);
           this.c(117);
           if (param0 != 23813) {
             var6 = (String) null;

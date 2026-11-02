@@ -8,7 +8,7 @@ final class qa extends ll {
     private la[] field_t;
     static IntrusiveDeque field_q;
 
-    final void a(byte param0, o[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         int var4 = 0;
         la[] var3 = null;
         la var5 = null;
@@ -92,7 +92,7 @@ final class qa extends ll {
         var1.a(0);
     }
 
-    final void a(int param0, o[] param1, byte param2) {
+    final void a(int param0, Sprite[] param1, byte param2) {
         int var5 = 0;
         try {
           int var4_int = -120 / ((43 - param2) / 36);
@@ -106,7 +106,7 @@ final class qa extends ll {
         }
     }
 
-    final void a(byte param0, o param1) {
+    final void a(byte param0, Sprite param1) {
         int var4 = 0;
         la[] var3 = null;
         la var5 = null;
@@ -197,10 +197,10 @@ final class qa extends ll {
         }
     }
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
-        ub stackIn_3_0 = null;
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         la stackIn_33_0 = null;
-        ub stackIn_33_1 = null;
+        UiWidget stackIn_33_1 = null;
         boolean stackIn_34_2 = false;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
@@ -218,7 +218,7 @@ final class qa extends ll {
           if (!(param2 instanceof pl)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (ub) (param2);
+            stackIn_3_0 = (UiWidget) (param2);
           }
           var10 = (pl) (stackIn_3_0);
           ClientException.a(0, param1 - (-param2.field_l - param2.field_n), param0 + param2.field_o, param2.field_l + param1, param0 + param2.field_o + param2.field_r);
@@ -264,7 +264,7 @@ final class qa extends ll {
             }
           }
           stackIn_33_0 = this.field_p;
-          stackIn_33_1 = (ub) (param2);
+          stackIn_33_1 = (UiWidget) (param2);
           stackIn_34_2 = !(param3);
           ((la) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_34_2, param1, this, param0);
           bb.b(4);

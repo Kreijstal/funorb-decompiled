@@ -16,7 +16,7 @@ final class bl {
         }
     }
 
-    final static int a(byte param0, vd param1, String[] param2, int param3, String param4) {
+    final static int a(byte param0, BitmapFont param1, String[] param2, int param3, String param4) {
         int var10 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

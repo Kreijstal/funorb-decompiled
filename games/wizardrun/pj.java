@@ -20,22 +20,22 @@ final class pj extends mi {
         var9 = wizardrun.field_H;
         if (param7 < param0) {
           if (param0 < param4) {
-            a.a(param6, param5, param0, param2, ed.field_k, param3, param4, -20476, param7);
+            a.a(param6, param5, param0, param2, SoftwareRasterizer.field_k, param3, param4, -20476, param7);
           } else {
             if (param4 <= param7) {
-              a.a(param3, param5, param7, param6, ed.field_k, param2, param0, -20476, param4);
+              a.a(param3, param5, param7, param6, SoftwareRasterizer.field_k, param2, param0, -20476, param4);
             } else {
-              a.a(param3, param5, param4, param2, ed.field_k, param6, param0, -20476, param7);
+              a.a(param3, param5, param4, param2, SoftwareRasterizer.field_k, param6, param0, -20476, param7);
             }
           }
         } else {
           if (param7 < param4) {
-            a.a(param6, param5, param7, param3, ed.field_k, param2, param4, -20476, param0);
+            a.a(param6, param5, param7, param3, SoftwareRasterizer.field_k, param2, param4, -20476, param0);
           } else {
             if (param4 > param0) {
-              a.a(param2, param5, param4, param3, ed.field_k, param6, param7, -20476, param0);
+              a.a(param2, param5, param4, param3, SoftwareRasterizer.field_k, param6, param7, -20476, param0);
             } else {
-              a.a(param2, param5, param0, param6, ed.field_k, param3, param7, -20476, param4);
+              a.a(param2, param5, param0, param6, SoftwareRasterizer.field_k, param3, param7, -20476, param4);
             }
           }
         }
@@ -110,7 +110,7 @@ final class pj extends mi {
         this.field_J = this.field_l;
     }
 
-    final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+    final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_q = 0;
@@ -119,7 +119,7 @@ final class pj extends mi {
         }
     }
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_24_1 = 0;
@@ -193,7 +193,7 @@ final class pj extends mi {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
@@ -305,7 +305,7 @@ final class pj extends mi {
         }
     }
 
-    private pj(int param0, int param1, int param2, int param3, bf param4, ce param5, ub param6, boolean param7, boolean param8) {
+    private pj(int param0, int param1, int param2, int param3, bf param4, ce param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_J = 2147483647;
         this.field_N = 2147483647;

@@ -9,7 +9,7 @@ final class wc {
     int[] field_l;
     int field_d;
     static ga field_j;
-    static o field_f;
+    static Sprite field_f;
     static int field_k;
     private long field_e;
     private String field_b;

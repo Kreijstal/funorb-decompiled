@@ -544,16 +544,16 @@ class qh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        o var6 = null;
-        o var7 = null;
-        o var8 = null;
-        o var7Lifetime1;
-        o var7Lifetime2;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
+        Sprite var7Lifetime1;
+        Sprite var7Lifetime2;
         int var3Lifetime1;
         var4 = wizardrun.field_H;
         try {
-          ed.a(243, 197, 369, 143, 16777215);
-          ed.c(244, 198, 367, 141, 0);
+          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.c(244, 198, 367, 141, 0);
           if (null == f.field_d) {
             if (null != bk.field_a) {
               bk.field_a.a(wj.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

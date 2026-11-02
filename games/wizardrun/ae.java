@@ -4,7 +4,7 @@
 final class ae {
     static String field_b;
     static char field_a;
-    static o field_c;
+    static Sprite field_c;
 
     final static void a(boolean param0, byte param1, le param2, boolean param3, int[] param4, boolean param5, int[] param6) {
         int stackIn_63_0 = 0;
@@ -115,7 +115,7 @@ final class ae {
               }
               else {
                 if (stackIn_63_0 >= stackIn_63_1) {
-                  nl.field_A[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  SpriteState.field_A[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   d.field_c[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;

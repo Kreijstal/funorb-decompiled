@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vd extends DualLinkNode {
+abstract class BitmapFont extends DualLinkNode {
     private static StringBuilder field_p;
     private int[] field_v;
     private int[] field_w;
@@ -257,10 +257,10 @@ abstract class vd extends DualLinkNode {
               }
               param1 = param1 + this.field_G[var8];
               if (field_D != -1) {
-                ed.f(var11, param2 + (int)((double)this.field_E * 0.7), param1 - var11, field_D);
+                SoftwareRasterizer.f(var11, param2 + (int)((double)this.field_E * 0.7), param1 - var11, field_D);
               }
               if (field_H != -1) {
-                ed.f(var11, param2 + this.field_E + 1, param1 - var11, field_H);
+                SoftwareRasterizer.f(var11, param2 + this.field_E + 1, param1 - var11, field_H);
               }
               var5 = var8;
             }
@@ -474,7 +474,7 @@ abstract class vd extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_u[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)vd.a(var15, var16, var17, this.field_G, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_u[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_G, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -866,7 +866,7 @@ abstract class vd extends DualLinkNode {
         this.b(param0, param1 - this.b(param0), param2);
     }
 
-    vd(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

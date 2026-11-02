@@ -54,57 +54,57 @@ final class gk {
         if (param12 == -719) {
           if (param14 > param1) {
             if (param14 < param10) {
-              nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, ed.field_k, param15, param0, param2);
+              nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, SoftwareRasterizer.field_k, param15, param0, param2);
               return;
             }
             if (param1 >= param10) {
-              nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, ed.field_k, param8, param3, param13);
+              nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, SoftwareRasterizer.field_k, param8, param3, param13);
               return;
             }
-            nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, ed.field_k, param15, param11, param13);
+            nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, SoftwareRasterizer.field_k, param15, param11, param13);
             return;
           }
           if (param10 > param1) {
-            nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, ed.field_k, param9, param3, param2);
+            nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, SoftwareRasterizer.field_k, param9, param3, param2);
             return;
           }
           if (param10 <= param14) {
-            nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, ed.field_k, param8, param0, param4);
+            nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, SoftwareRasterizer.field_k, param8, param0, param4);
             return;
           }
-          nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, ed.field_k, param9, param11, param4);
+          nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, SoftwareRasterizer.field_k, param9, param11, param4);
           return;
         }
         field_g = (int[]) null;
         if (param14 > param1) {
           if (param14 < param10) {
-            nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, ed.field_k, param15, param0, param2);
+            nh.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, SoftwareRasterizer.field_k, param15, param0, param2);
             return;
           }
           if (param1 >= param10) {
-            nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, ed.field_k, param8, param3, param13);
+            nh.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, SoftwareRasterizer.field_k, param8, param3, param13);
             return;
           }
-          nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, ed.field_k, param15, param11, param13);
+          nh.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, SoftwareRasterizer.field_k, param15, param11, param13);
           return;
         }
         if (param10 > param1) {
-          nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, ed.field_k, param9, param3, param2);
+          nh.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, SoftwareRasterizer.field_k, param9, param3, param2);
           return;
         }
         if (param10 <= param14) {
-          nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, ed.field_k, param8, param0, param4);
+          nh.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, SoftwareRasterizer.field_k, param8, param0, param4);
           return;
         }
-        nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, ed.field_k, param9, param11, param4);
+        nh.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, SoftwareRasterizer.field_k, param9, param11, param4);
     }
 
-    final static void a(int param0, int param1, vd param2, vd param3) {
+    final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           le.field_j = param2;
           uf.field_c = param3;
           kc.field_I = param1;
-          kj.a(1048576, ed.field_d / 2, ed.field_h / 2);
+          kj.a(1048576, SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_h / 2);
           if (param0 <= 15) {
             field_o = (int[]) null;
           }

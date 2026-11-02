@@ -4,8 +4,8 @@
 final class ag extends ig {
     static java.math.BigInteger field_s;
     private Object field_r;
-    static o field_v;
-    static o field_t;
+    static Sprite field_v;
+    static Sprite field_t;
     static String field_w;
     static int field_u;
 
@@ -81,7 +81,7 @@ final class ag extends ig {
     static {
         field_s = new java.math.BigInteger("65537");
         field_w = "Hold down SPACE or <%0> key to charge your starpower.";
-        field_t = new o(270, 70);
+        field_t = new Sprite(270, 70);
         field_u = -1;
     }
 }

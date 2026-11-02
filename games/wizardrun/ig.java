@@ -7,7 +7,7 @@ abstract class ig extends DualLinkNode {
 
     abstract Object e(int param0);
 
-    final static void a(o[] param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void a(Sprite[] param0, int param1, byte param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -86,73 +86,73 @@ abstract class ig extends DualLinkNode {
             }
             var18 = var14;
             var19 = var15;
-            ed.b(td.field_a);
+            SoftwareRasterizer.b(td.field_a);
             if (var18 > var19) {
               var19 = param3 * var8 / (var9 + var8) + param5;
               var18 = param3 * var8 / (var9 + var8) + param5;
             }
             if (null != param0[0]) {
-              ed.b(param1, param5, var16, var18);
+              SoftwareRasterizer.b(param1, param5, var16, var18);
               param0[0].e(param1, param5);
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[2] != null) {
-              ed.b(var17, param5, var10, var18);
+              SoftwareRasterizer.b(var17, param5, var10, var18);
               param0[2].e(var13, param5);
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[6] != null) {
-              ed.b(param1, var19, var16, var11);
+              SoftwareRasterizer.b(param1, var19, var16, var11);
               param0[6].e(param1, var15);
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[8] != null) {
-              ed.b(var17, var19, var10, var11);
+              SoftwareRasterizer.b(var17, var19, var10, var11);
               param0[8].e(var13, var15);
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[1] != null &&
               param0[1].field_x != 0) {
-              ed.b(var16, param5, var17, var18);
+              SoftwareRasterizer.b(var16, param5, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_x) {
                 param0[1].e(var20, param5);
               }
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[7] != null &&
               param0[7].field_x != 0) {
-              ed.b(var16, var19, var17, var11);
+              SoftwareRasterizer.b(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].field_x) {
                 param0[7].e(var20Lifetime1, var15);
               }
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[3] != null &&
               0 != param0[3].field_s) {
-              ed.b(param1, var18, var16, var19);
+              SoftwareRasterizer.b(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].field_s) {
                 param0[3].e(param1, var20Lifetime2);
               }
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (null != param0[5] &&
               param0[5].field_s != 0) {
-              ed.b(var17, var18, var10, var19);
+              SoftwareRasterizer.b(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param0[5].field_s) {
                 param0[5].e(var13, var20Lifetime3);
               }
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
             }
             if (param0[4] != null &&
               0 != param0[4].field_x &&
               0 != param0[4].field_s) {
-              ed.b(var16, var18, var17, var19);
+              SoftwareRasterizer.b(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_s) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_x) {
                   param0[4].e(var21, var20Lifetime4);
                 }
               }
-              ed.a(td.field_a);
+              SoftwareRasterizer.a(td.field_a);
               return;
             }
             return;
