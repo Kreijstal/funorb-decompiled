@@ -118,14 +118,14 @@ final class wd {
           } else {
             param2.field_Mc = -1;
           }
-          param2.field_fc = param0.g((byte) -104);
+          param2.field_fc = param0.readLong((byte) -104);
           var8 = param0.position;
-          param2.field_Xb = param0.h(1);
+          param2.field_Xb = param0.readString(1);
           if (var7 != 0) {
             param2.field_hc = new String[param2.field_wc];
             param0.position = var8;
             for (var9 = 0; var9 < param2.field_wc; var9++) {
-              param2.field_hc[var9] = param0.h(1);
+              param2.field_hc[var9] = param0.readString(1);
             }
             return;
           }

@@ -102,61 +102,61 @@ final class jm extends IntrusiveNode {
               var20 = param1 * var9 / (var9 + var10) + param0;
               var19 = param1 * var9 / (var9 + var10) + param0;
             }
-            SoftwareRaster.b(var26);
+            SoftwareRaster.getClip(var26);
             if (param2[0] != null) {
-              SoftwareRaster.h(param4, param0, var17, var19);
+              SoftwareRaster.intersectClip(param4, param0, var17, var19);
               param2[0].a(param4, param0);
-              SoftwareRaster.a(var26);
+              SoftwareRaster.setClip(var26);
             }
             if (null != param2[2]) {
-              SoftwareRaster.h(var18, param0, var11, var19);
+              SoftwareRaster.intersectClip(var18, param0, var11, var19);
               param2[2].a(var14, param0);
-              SoftwareRaster.a(var26);
+              SoftwareRaster.setClip(var26);
             }
             if (null != param2[6]) {
-              SoftwareRaster.h(param4, var20, var17, var12);
+              SoftwareRaster.intersectClip(param4, var20, var17, var12);
               param2[6].a(param4, var16);
-              SoftwareRaster.a(var26);
+              SoftwareRaster.setClip(var26);
             }
             if (param2[8] != null) {
-              SoftwareRaster.h(var18, var20, var11, var12);
+              SoftwareRaster.intersectClip(var18, var20, var11, var12);
               param2[8].a(var14, var16);
-              SoftwareRaster.a(var26);
+              SoftwareRaster.setClip(var26);
             }
             if (null != param2[1] &&
               param2[1].field_z != 0) {
-              SoftwareRaster.h(var17, param0, var18, var19);
+              SoftwareRaster.intersectClip(var17, param0, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param2[1].field_z) {
                 param2[1].a(var21, param0);
               }
-              SoftwareRaster.a(var29);
+              SoftwareRaster.setClip(var29);
             }
             if (param2[7] != null &&
               param2[7].field_z != 0) {
-              SoftwareRaster.h(var17, var20, var18, var12);
+              SoftwareRaster.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param2[7].field_z) {
                 param2[7].a(var21Lifetime1, var16);
               }
-              SoftwareRaster.a(var29);
+              SoftwareRaster.setClip(var29);
             }
             if (param2[3] != null &&
               param2[3].field_B != 0) {
-              SoftwareRaster.h(param4, var19, var17, var20);
+              SoftwareRaster.intersectClip(param4, var19, var17, var20);
               param2[3].drawScaled(param4, var15, var7, var16 - var15);
-              SoftwareRaster.a(var29);
+              SoftwareRaster.setClip(var29);
             }
             if (null != param2[5] &&
               0 != param2[5].field_B) {
-              SoftwareRaster.h(var18, var19, var11, var20);
+              SoftwareRaster.intersectClip(var18, var19, var11, var20);
               param2[5].drawScaled(var14, var15, var8, var16 - var15);
-              SoftwareRaster.a(var29);
+              SoftwareRaster.setClip(var29);
             }
             if (param2[4] != null &&
               0 != param2[4].field_z &&
               0 != param2[4].field_B) {
-              SoftwareRaster.h(var17, var19, var18, var20);
+              SoftwareRaster.intersectClip(var17, var19, var18, var20);
               param2[4].drawScaled(var13, var15, -var13 + var14, -var15 + var16);
-              SoftwareRaster.a(var29);
+              SoftwareRaster.setClip(var29);
               return;
             }
             return;

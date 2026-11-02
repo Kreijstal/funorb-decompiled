@@ -214,16 +214,16 @@ final class te {
             }
             stackIn_14_0 = (1 != var1.readUnsignedByte((byte) -111)) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.h(1);
+            var4_ref_String = var1.readString(1);
             if (var3_int != 0) {
-              var5 = var1.h(1);
+              var5 = var1.readString(1);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
             var6 = TextLayout.a(var4_ref_String, (byte) -41);
-            var7 = var1.h(1);
+            var7 = var1.readString(1);
             var8 = AlphaContainer.a(1, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -266,7 +266,7 @@ final class te {
               return;
             }
             DisplayNameForm.field_P = 1;
-            var3 = var1.h(1);
+            var3 = var1.readString(1);
             FullscreenFocusCanvas.field_f = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -90);
             in.a((byte) 46, var4);
@@ -276,12 +276,12 @@ final class te {
             DelegatingCanvas.field_a = new dk(128);
             vd.field_h = 0;
           }
-          var3Lifetime1 = var1.h(1);
+          var3Lifetime1 = var1.readString(1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(1);
-          var5Lifetime1 = var1.h(1);
+          var4_ref_StringLifetime1 = var1.readString(1);
+          var5Lifetime1 = var1.readString(1);
           var6Lifetime1 = wi.a(var4_ref_StringLifetime1, (byte) 122);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = wi.a(var5Lifetime1, (byte) 114);

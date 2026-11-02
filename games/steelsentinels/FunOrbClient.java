@@ -50,7 +50,7 @@ abstract class FunOrbClient extends GameApplet {
             }
             var11 = RasterSnapshot.a(true);
             if (var11 != null) {
-              fl.a((byte) 97, var11.booleanValue());
+              TeamColourTinter.a((byte) 97, var11.booleanValue());
             }
           }
           if (2 == var4) {
@@ -62,9 +62,9 @@ abstract class FunOrbClient extends GameApplet {
             }
           }
           if (3 == var4) {
-            if (fl.field_d != -1 &&
-              fl.field_d != 0) {
-              fl.field_d = -1;
+            if (TeamColourTinter.field_d != -1 &&
+              TeamColourTinter.field_d != 0) {
+              TeamColourTinter.field_d = -1;
               bi.b(param2 ^ 7004);
             }
             if (!param0) {
@@ -262,7 +262,7 @@ abstract class FunOrbClient extends GameApplet {
           return var2;
         }
         if (uj.field_d == 11 &&
-          fl.field_d == 0) {
+          TeamColourTinter.field_d == 0) {
           CombatWorld.c(11828);
         }
         return var2;
@@ -453,58 +453,58 @@ abstract class FunOrbClient extends GameApplet {
             ProxySocketConnector.field_l = mm.a(-94) + 15000L;
           }
         }
-        if (-1 == fl.field_d ||
-          fl.field_d == 0) {
-          stackIn_24_0 = (fl.field_d != -1) ? 0 : 1;
+        if (-1 == TeamColourTinter.field_d ||
+          TeamColourTinter.field_d == 0) {
+          stackIn_24_0 = (TeamColourTinter.field_d != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          fl.field_d = CipherPacketBuffer.j(param0 + 16);
+          TeamColourTinter.field_d = CipherPacketBuffer.j(param0 + 16);
           if (var3Lifetime1 != 0) {
-            if (fl.field_d == 0) {
+            if (TeamColourTinter.field_d == 0) {
               if (11 == uj.field_d) {
                 if (!ri.a(param0 ^ 16731216)) {
                   CombatWorld.c(11828);
-                  if (fl.field_d != -1 &&
-                    fl.field_d != 0) {
+                  if (TeamColourTinter.field_d != -1 &&
+                    TeamColourTinter.field_d != 0) {
                     ProxySocketConnector.field_l = mm.a(127) + 15000L;
                   }
                 } else {
-                  if (fl.field_d != -1 &&
-                    fl.field_d != 0) {
+                  if (TeamColourTinter.field_d != -1 &&
+                    TeamColourTinter.field_d != 0) {
                     ProxySocketConnector.field_l = mm.a(127) + 15000L;
                   }
                 }
               } else {
-                if (fl.field_d != -1 &&
-                  fl.field_d != 0) {
+                if (TeamColourTinter.field_d != -1 &&
+                  TeamColourTinter.field_d != 0) {
                   ProxySocketConnector.field_l = mm.a(127) + 15000L;
                 }
               }
             } else {
-              if (fl.field_d != -1 &&
-                fl.field_d != 0) {
+              if (TeamColourTinter.field_d != -1 &&
+                TeamColourTinter.field_d != 0) {
                 ProxySocketConnector.field_l = mm.a(127) + 15000L;
               }
             }
           } else {
-            if (fl.field_d != -1 &&
-              fl.field_d != 0) {
+            if (TeamColourTinter.field_d != -1 &&
+              TeamColourTinter.field_d != 0) {
               ProxySocketConnector.field_l = mm.a(127) + 15000L;
             }
           }
         }
-        if (fl.field_d != -1 &&
-          fl.field_d != 0) {
+        if (TeamColourTinter.field_d != -1 &&
+          TeamColourTinter.field_d != 0) {
           if (10 <= AccountTermsPanel.field_Q) {
             if (uj.field_d >= 10) {
               of.a(10);
-              if (fl.field_d == 3) {
+              if (TeamColourTinter.field_d == 3) {
                 cl.a(Bzip2State.field_F, 256, 1);
               } else {
-                if (fl.field_d == 4) {
+                if (TeamColourTinter.field_d == 4) {
                   cl.a(un.field_c, 256, 1);
                 } else {
-                  if (2 != fl.field_d) {
-                    if (fl.field_d != 5) {
+                  if (2 != TeamColourTinter.field_d) {
+                    if (TeamColourTinter.field_d != 5) {
                       cl.a(AlternateUsernameCredentials.field_s, 256, 1);
                     } else {
                       cl.a(Projectile.field_R, 5, 1);
@@ -517,14 +517,14 @@ abstract class FunOrbClient extends GameApplet {
               tf.field_b = true;
             }
           } else {
-            if (fl.field_d == 3) {
+            if (TeamColourTinter.field_d == 3) {
               this.a("js5crc", -16946);
             } else {
-              if (fl.field_d == 4) {
+              if (TeamColourTinter.field_d == 4) {
                 this.a("js5io", -16946);
               } else {
-                if (fl.field_d != 2) {
-                  if (fl.field_d == 5) {
+                if (TeamColourTinter.field_d != 2) {
+                  if (TeamColourTinter.field_d == 5) {
                     this.a("outofdate", -16946);
                   } else {
                     this.a("js5connect", param0 ^ -16949);
@@ -536,18 +536,18 @@ abstract class FunOrbClient extends GameApplet {
             }
           }
         }
-        if ((fl.field_d != -1 &&
-          fl.field_d != 0 ||
+        if ((TeamColourTinter.field_d != -1 &&
+          TeamColourTinter.field_d != 0 ||
           ri.a(16731221)) &&
           ProxySocketConnector.field_l <= mm.a(-111)) {
           tf.field_b = false;
-          if (fl.field_d != -1 &&
-            fl.field_d != 0) {
-            fl.field_d = -1;
+          if (TeamColourTinter.field_d != -1 &&
+            TeamColourTinter.field_d != 0) {
+            TeamColourTinter.field_d = -1;
             bi.b(-102);
           }
         }
-        if (fl.field_d == 0 &&
+        if (TeamColourTinter.field_d == 0 &&
           !ri.a(param0 ^ 16731216)) {
           rg.field_h = false;
         }

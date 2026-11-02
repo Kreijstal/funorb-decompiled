@@ -33,7 +33,7 @@ final class DialWidgetPainter implements WidgetPainter {
         double var9Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        SoftwareRaster.a(param0 + param1.field_o, param4 + param1.field_z, param1.field_x, param1.field_E, this.field_m);
+        SoftwareRaster.fillRectangle(param0 + param1.field_o, param4 + param1.field_z, param1.field_x, param1.field_E, this.field_m);
         if (var14 != null) {
         }
         if (param2 != -30) {
@@ -53,7 +53,7 @@ final class DialWidgetPainter implements WidgetPainter {
           var9Lifetime1 = (double)var14.field_eb * 3.141592653589793 * 2.0 / (double)var14.field_bb;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_ab);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_ab);
-          SoftwareRaster.d(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRaster.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_o) {
             var13 = this.field_s + var14.field_cb + var14.field_ab;
             this.field_o.a(param1.field_y, param0 + param1.field_o + var13, this.field_h + param4 + param1.field_z, -var13 - this.field_s + param1.field_x, param1.field_E - (this.field_s << 1), this.field_r, this.field_d, 1, 1, 0);

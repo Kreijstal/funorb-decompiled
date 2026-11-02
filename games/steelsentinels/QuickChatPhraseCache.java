@@ -34,7 +34,7 @@ final class QuickChatPhraseCache {
           var7 = var8.position;
           var8.writeByte((byte) 112, param3);
           if (2 == param3) {
-            var8.a(param1, -115);
+            var8.writeString(param1, -115);
           }
           if (param5 == null) {
             var8.writeShort(param4, 117);

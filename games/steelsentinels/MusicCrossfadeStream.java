@@ -320,10 +320,10 @@ final class MusicCrossfadeStream extends PcmStream {
             if (param1 >= -13) {
               return;
             }
-            var7 = CombatWorld.a(":", var3, "%3a", 98);
-            var8 = CombatWorld.a("@", var7, "%40", 101);
-            var9 = CombatWorld.a("&", var8, "%26", -20);
-            var10 = CombatWorld.a("#", var9, "%23", 97);
+            var7 = CombatWorld.replaceAll(":", var3, "%3a", 98);
+            var8 = CombatWorld.replaceAll("@", var7, "%40", 101);
+            var9 = CombatWorld.replaceAll("&", var8, "%26", -20);
+            var10 = CombatWorld.replaceAll("#", var9, "%23", 97);
             if (null == SingleChildContainer.field_O) {
               return;
             }
@@ -422,7 +422,7 @@ final class MusicCrossfadeStream extends PcmStream {
               var9 = var9 * 6 / 7;
               SoftwareRaster.field_g[var10] = DateOfBirthValidator.a(DateOfBirthValidator.a(var11 << 16, var12 << 8), var13);
             }
-            SoftwareRaster.d(var2, var6, -var6 + var7, 4210752);
+            SoftwareRaster.drawVerticalLine(var2, var6, -var6 + var7, 4210752);
             if (var8 >= 0) {
               var10Lifetime1 = var2 + (var6 - 1) * SoftwareRaster.field_c;
               var11Lifetime1 = (SoftwareRaster.field_g[var10Lifetime1] & 16711680) >> 16;

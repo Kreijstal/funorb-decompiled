@@ -144,7 +144,7 @@ final class Sentinel extends IntrusiveNode {
         Explosion var7_ref_jb;
         int var8_int;
         String var8;
-        ne var8_ref;
+        FallingPickup var8_ref;
         String var9;
         int var10;
         Projectile var11;
@@ -553,7 +553,7 @@ final class Sentinel extends IntrusiveNode {
         }
         if (this.field_hb != -1) {
           this.world.field_N = this.world.field_N + this.field_hb * 100;
-          var8_ref = new ne(this.world, this.field_hb);
+          var8_ref = new FallingPickup(this.world, this.field_hb);
           var8_ref.field_z = var3;
           var8_ref.field_I = var4;
           this.world.field_e.addLast(3, var8_ref);
@@ -1561,7 +1561,7 @@ final class Sentinel extends IntrusiveNode {
             this.field_R = 0;
           }
         }
-        if (!this.pendingCommands.f(7) &&
+        if (!this.pendingCommands.isEmpty(7) &&
           ((SentinelCommand) (this.pendingCommands.first(13058))).startTick <= this.world.simulationTick + 25) {
           var3Lifetime4 = 0;
         }
@@ -4066,7 +4066,7 @@ final class Sentinel extends IntrusiveNode {
         }
         SoftwareRaster.c(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
         var9 = WeightedLruCache.a(this.activeModuleType, (byte) -102);
-        SoftwareRaster.h(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
+        SoftwareRaster.drawRectangleOutlineAlpha(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
         if (param3 != 45) {
           var11 = (int[]) null;
           this.a(82, -14, (int[]) null, -75);
@@ -4077,15 +4077,15 @@ final class Sentinel extends IntrusiveNode {
           var13 = var14;
           var12 = var13;
           var10 = var12;
-          SoftwareRaster.b(var14);
-          SoftwareRaster.h(-(var7 / 2) + param2, -var6 + param0, param2 + var7 / 2, -var6 + (param0 + var8));
+          SoftwareRaster.getClip(var14);
+          SoftwareRaster.intersectClip(-(var7 / 2) + param2, -var6 + param0, param2 + var7 / 2, -var6 + (param0 + var8));
         }
         var9.c(-(var5 / 2) + param2, -var5 + param0);
         if (this.field_xb) {
           BoundedUrlRequest.field_d.drawCentered(Integer.toString((49 + this.field_v) / 50), param2, -2 + (param0 - var5), 16777215, 0);
         }
         if (var10 != null) {
-          SoftwareRaster.a((int[]) (var10));
+          SoftwareRaster.setClip((int[]) (var10));
         }
         return;
     }
@@ -4748,7 +4748,7 @@ final class Sentinel extends IntrusiveNode {
             var29 = SoftwareRaster.field_b;
             var30 = SoftwareRaster.field_l;
             var31 = SoftwareRaster.field_d;
-            SoftwareRaster.h(0, 0, 640, var26 + var24_int);
+            SoftwareRaster.intersectClip(0, 0, 640, var26 + var24_int);
             if (200 > this.field_Qb) {
               var26 = var26 + (-(this.field_Qb * var24_int / 200) + var24_int);
             }
@@ -4830,8 +4830,8 @@ final class Sentinel extends IntrusiveNode {
         }
         if (this.field_Cb) {
           var18Lifetime3 = this.getTeamColour((byte) -122);
-          SoftwareRaster.c(var15Lifetime1, -var11Lifetime2 + var16Lifetime1, -(-4 + this.world.simulationTick / 10 & 7) + (var11Lifetime2 + 7), var18Lifetime3);
-          SoftwareRaster.c(var15Lifetime1, var16Lifetime1 - var11Lifetime2, -(7 & this.world.simulationTick / 10) + var11Lifetime2 + 7, var18Lifetime3);
+          SoftwareRaster.drawCircleOutline(var15Lifetime1, -var11Lifetime2 + var16Lifetime1, -(-4 + this.world.simulationTick / 10 & 7) + (var11Lifetime2 + 7), var18Lifetime3);
+          SoftwareRaster.drawCircleOutline(var15Lifetime1, var16Lifetime1 - var11Lifetime2, -(7 & this.world.simulationTick / 10) + var11Lifetime2 + 7, var18Lifetime3);
         }
         var18Lifetime4 = 4;
         if (-var18Lifetime4 + (var15Lifetime1 - var11Lifetime2) <= param3 &&

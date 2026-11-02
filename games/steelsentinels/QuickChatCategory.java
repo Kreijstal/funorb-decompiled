@@ -105,7 +105,7 @@ final class QuickChatCategory extends DualNode {
         var7 = SteelSentinels.obfuscationControl;
         try {
           if (1 == param1) {
-            this.field_D = param0.h(1);
+            this.field_D = param0.readString(1);
           } else {
             if (param1 == 2) {
               var4_int = param0.readUnsignedByte((byte) -59);

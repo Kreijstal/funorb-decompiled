@@ -783,7 +783,7 @@ abstract class ch extends UiComponent implements UiContainerMarker {
         RuntimeException var5 = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          SoftwareRaster.h(param3, param0, param1, param4, 12105914);
+          SoftwareRaster.drawRectangleOutline(param3, param0, param1, param4, 12105914);
           SoftwareRaster.e(1 + param3, param0 + 1, param1 - 2, -2 + param4, 10461345, 16251129);
           var5_int = 64;
           if (param2 != 32308) {
@@ -791,7 +791,7 @@ abstract class ch extends UiComponent implements UiContainerMarker {
           }
           var6 = 1;
           while (var6 < 6) {
-            SoftwareRaster.h(param3 + var6, var6 + param0, param1 - 2 * var6, -(2 * var6) + param4, 16251129, var5_int);
+            SoftwareRaster.drawRectangleOutlineAlpha(param3 + var6, var6 + param0, param1 - 2 * var6, -(2 * var6) + param4, 16251129, var5_int);
             var5_int = var5_int >> 1;
             var6++;
             if (var7 != 0) {

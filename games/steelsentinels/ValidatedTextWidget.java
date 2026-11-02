@@ -87,16 +87,16 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         try {
           dj.field_k[0] = rb.field_g.nextInt();
           dj.field_k[1] = rb.field_g.nextInt();
-          ne.field_y.position = 0;
+          FallingPickup.field_y.position = 0;
           dj.field_k[param1] = (int)(TextButton.field_G >> 32);
           dj.field_k[3] = (int)TextButton.field_G;
-          ne.field_y.writeInt(true, dj.field_k[0]);
-          ne.field_y.writeInt(true, dj.field_k[1]);
-          ne.field_y.writeInt(true, dj.field_k[2]);
-          ne.field_y.writeInt(true, dj.field_k[3]);
-          IntKeyLookup.a(125, ne.field_y);
-          ne.field_y.writeShort(param4, 18);
-          param3.a(ne.field_y, false);
+          FallingPickup.field_y.writeInt(true, dj.field_k[0]);
+          FallingPickup.field_y.writeInt(true, dj.field_k[1]);
+          FallingPickup.field_y.writeInt(true, dj.field_k[2]);
+          FallingPickup.field_y.writeInt(true, dj.field_k[3]);
+          IntKeyLookup.a(125, FallingPickup.field_y);
+          FallingPickup.field_y.writeShort(param4, 18);
+          param3.a(FallingPickup.field_y, false);
           mm.field_g.position = 0;
           if (!param0) {
             mm.field_g.writeByte((byte) 126, 16);
@@ -125,12 +125,12 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           if (var7 == null) {
             var7 = "";
           }
-          mm.field_g.a(var7, -67);
+          mm.field_g.writeString(var7, -67);
           if (null != EmailCredentials.field_k) {
-            mm.field_g.a(13588, EmailCredentials.field_k);
+            mm.field_g.writePrefixedString(13588, EmailCredentials.field_k);
           }
-          qi.a(AccountNoticeDialog.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
-          mm.field_g.c(param1 ^ 28, -var5_int + mm.field_g.position);
+          qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, mm.field_g, qe.field_d, 5);
+          mm.field_g.writeShortLengthPrefix(param1 ^ 28, -var5_int + mm.field_g.position);
           gj.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

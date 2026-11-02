@@ -195,7 +195,7 @@ final class QuickChatPhraseDefinition extends DualNode {
         var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 == 1) {
-            this.field_G = ModalStack.a('<', false, param1.h(1));
+            this.field_G = ModalStack.a('<', false, param1.readString(1));
           } else {
             if (param0 == 2) {
               var4_int = param1.readUnsignedByte((byte) -114);

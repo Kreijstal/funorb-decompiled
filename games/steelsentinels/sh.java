@@ -20,11 +20,11 @@ final class sh {
         param2++;
         SoftwareRaster.setClip(param4, param3, param4 + param1, param3 + param2);
         MidiPcmStream.field_db.f(param4, param3 - 17);
-        SoftwareRaster.c();
-        SoftwareRaster.c(param4, param3, param1, 0, 128);
-        SoftwareRaster.c(param4, param3 + 1, param1, 0, 96);
-        SoftwareRaster.c(param4, param3 + 2, param1, 0, 64);
-        SoftwareRaster.c(param4, param3 + 3, param1, 0, 32);
+        SoftwareRaster.resetClip();
+        SoftwareRaster.drawHorizontalLineAlpha(param4, param3, param1, 0, 128);
+        SoftwareRaster.drawHorizontalLineAlpha(param4, param3 + 1, param1, 0, 96);
+        SoftwareRaster.drawHorizontalLineAlpha(param4, param3 + 2, param1, 0, 64);
+        SoftwareRaster.drawHorizontalLineAlpha(param4, param3 + 3, param1, 0, 32);
     }
 
     final static void a(int param0, boolean param1, boolean param2) {

@@ -267,7 +267,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     }
 
     final static void b(int param0) {
-        GrowableIntList.field_l = rf.field_d.h(1);
+        GrowableIntList.field_l = rf.field_d.readString(1);
         CharSequence var2 = (CharSequence) ((Object) GrowableIntList.field_l);
         MembershipPromotionScreen.field_r = AlphaContainer.a(1, var2);
         if (param0 > -47) {

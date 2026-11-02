@@ -896,7 +896,7 @@ final class BufferedRandomAccessFile {
                       var16_int = 0;
                       if (1 == var13_ref_nk.field_Q) {
                         var17_ref = LoadingProgressDialog.b(var13_ref_nk.componentId, (byte) -85);
-                        var18_ref_int__ = ne.a(var13_ref_nk.componentId, (byte) 28);
+                        var18_ref_int__ = FallingPickup.a(var13_ref_nk.componentId, (byte) 28);
                         var69 = (int[]) var17_ref;
                         var44 = var69;
                         var19_ref = var44;
@@ -1095,9 +1095,9 @@ final class BufferedRandomAccessFile {
                   if (param0 != 6993661) {
                     field_j = -1;
                   }
-                  if (var5 != fl.field_a) {
+                  if (var5 != TeamColourTinter.field_a) {
                     GameApplet.field_l = true;
-                    fl.field_a = var5;
+                    TeamColourTinter.field_a = var5;
                     ad.field_h = true;
                     kf.field_s = true;
                   }
@@ -1137,9 +1137,9 @@ final class BufferedRandomAccessFile {
             if (param0 != 6993661) {
               field_j = -1;
             }
-            if (var5 != fl.field_a) {
+            if (var5 != TeamColourTinter.field_a) {
               GameApplet.field_l = true;
-              fl.field_a = var5;
+              TeamColourTinter.field_a = var5;
               ad.field_h = true;
               kf.field_s = true;
             }
@@ -1157,7 +1157,7 @@ final class BufferedRandomAccessFile {
           if (decompiledFrameRemainder0) {
             var6 = jj.field_e.field_z;
             jj.field_e.bindRasterTarget();
-            SoftwareRaster.a(0, 0, var6, var6, 0);
+            SoftwareRaster.fillRectangle(0, 0, var6, var6, 0);
             var7_int = NodeDeque.a((byte) 105, uc.field_b[0]);
             if (var7_int < 0 ||
               !(CachedTextLayout.field_E.length > var7_int)) {

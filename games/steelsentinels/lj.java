@@ -68,7 +68,7 @@ final class lj {
           var3.position = var3.position + 1;
           var4 = var3.position;
           var3.writeByte((byte) 114, 0);
-          var3.a(param0, param1 ^ 43);
+          var3.writeString(param0, param1 ^ 43);
           var3.backpatchByteLength((byte) -46, -var4 + var3.position);
           stackIn_36_0 = null;
           return (String) (stackIn_36_0);

@@ -69,7 +69,7 @@ final class na {
             return;
           }
           if (var2 == 1) {
-            var4_int = var10.f(27);
+            var4_int = var10.readSignedSmart(27);
             var5_ref_rn = (rn) (BoundedRandomAccessFile.field_r.first(13058));
             while (var5_ref_rn != null) {
               if (var5_ref_rn.field_p != var3 ||

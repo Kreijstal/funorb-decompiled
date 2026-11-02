@@ -183,7 +183,7 @@ final class ve {
           var17.position = -(8 * rl.field_d) + (-7 + param1.length - 3 * (var3 - 1));
           ba.field_d = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            ba.field_d[var4Lifetime4] = var17.a(false);
+            ba.field_d[var4Lifetime4] = var17.readUnsignedMedium(false);
             if (ba.field_d[var4Lifetime4] == 0) {
               ba.field_d[var4Lifetime4] = 1;
             }

@@ -65,7 +65,7 @@ final class ParticleEffect extends DualNode {
           var9 = 2 * param1 + param5;
           var10 = MouseWheelInput.field_c / 10 % 2;
           while (var10 < var8) {
-            SoftwareRaster.f(param4 + (-param1 + var10), param3 - param1, var9, 0, 100);
+            SoftwareRaster.drawVerticalLineAlpha(param4 + (-param1 + var10), param3 - param1, var9, 0, 100);
             var10 += 2;
             if (var11 == 0) {
               continue;

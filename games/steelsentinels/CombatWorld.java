@@ -164,7 +164,7 @@ final class CombatWorld {
         Sentinel var5_ref_mb = null;
         Projectile var5_ref_wl = null;
         int var6_int = 0;
-        ne var6 = null;
+        FallingPickup var6 = null;
         int[] var6_array = null;
         int var7 = 0;
         Object var8 = null;
@@ -550,10 +550,10 @@ final class CombatWorld {
               }
               var4 = 0;
               var5_ref_jc = new NodeIterator(this.field_e);
-              var6 = (ne) (var5_ref_jc.b(2));
+              var6 = (FallingPickup) (var5_ref_jc.b(2));
               while (var6 != null) {
                 var4 = var4 + var6.field_O;
-                var6 = (ne) (var5_ref_jc.next(2));
+                var6 = (FallingPickup) (var5_ref_jc.next(2));
                 if (var15 != 0) {
                   decompiledFrameCompleted3 = false;
                   break;
@@ -1221,15 +1221,15 @@ final class CombatWorld {
                 var8_int = this.random.nextIntBounded(60, 5);
               }
             }
-            var9 = new ne(this, this.a(false, var8_int));
-            ((ne) (var9)).field_z = this.random.nextIntBounded(80, this.terrain.getProfileLength(obfuscationGuard ^ 68) << 4);
-            ((ne) (var9)).field_I = -180000;
+            var9 = new FallingPickup(this, this.a(false, var8_int));
+            ((FallingPickup) (var9)).field_z = this.random.nextIntBounded(80, this.terrain.getProfileLength(obfuscationGuard ^ 68) << 4);
+            ((FallingPickup) (var9)).field_I = -180000;
             this.field_e.addLast(3, (IntrusiveNode) (var9));
           }
-          var8 = (ne) (this.field_e.first(13058));
+          var8 = (FallingPickup) (this.field_e.first(13058));
           scanLoop8: while (true) {
             if (var8 != null) {
-              ((ne) (var8)).c((byte) 87);
+              ((FallingPickup) (var8)).c((byte) 87);
               stackIn_1133_0 = null;
               stackIn_1133_1 = var8;
               if (var15 != 0) {
@@ -1240,12 +1240,12 @@ final class CombatWorld {
                 }
                 break scanLoop8;
               }
-              if (stackIn_1133_0 != ((ne) (stackIn_1133_1)).field_T ||
-                !(((ne) (var8)).field_K > 0)) {
-                ((ne) (var8)).unlink(4);
-                this.field_f = this.field_f - ((ne) (var8)).field_O * 50;
+              if (stackIn_1133_0 != ((FallingPickup) (stackIn_1133_1)).field_T ||
+                !(((FallingPickup) (var8)).field_K > 0)) {
+                ((FallingPickup) (var8)).unlink(4);
+                this.field_f = this.field_f - ((FallingPickup) (var8)).field_O * 50;
               }
-              var8 = (ne) (this.field_e.next((byte) -40));
+              var8 = (FallingPickup) (this.field_e.next((byte) -40));
               continue;
             }
             var8 = (Sentinel) (this.sentinels.first(obfuscationGuard + 13031));
@@ -1316,7 +1316,7 @@ final class CombatWorld {
             var8 = (Projectile) (this.field_db.first(13058));
             do {
               if (null == var8) {
-                this.explosions.a(obfuscationGuard - 2, this.field_C);
+                this.explosions.moveAllTo(obfuscationGuard - 2, this.field_C);
                 break;
               }
               ((Projectile) (var8)).advanceProjectile(-1);
@@ -1332,7 +1332,7 @@ final class CombatWorld {
                 }
               } else {
                 if (this.particles != null) {
-                  this.pendingParticles.a(35, this.particles);
+                  this.pendingParticles.moveAllTo(35, this.particles);
                   var8 = (ParticleEffect) (this.particles.first(13058));
                   while (null != var8) {
                     ((ParticleEffect) (var8)).advanceParticle((byte) 60);
@@ -1361,7 +1361,7 @@ final class CombatWorld {
 
           }
           this.pendingRemovals.clear(8150);
-          this.projectiles.a(114, this.field_db);
+          this.projectiles.moveAllTo(114, this.field_db);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1401,7 +1401,7 @@ final class CombatWorld {
           var1 = new RgbSprite(540, 140);
           IterableNodeHashTable.a(var1, (byte) -82);
           lf.a();
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           DateOfBirthValidator.field_h = 0;
           LoginForm.a(param0);
           var2 = var1.copySprite();
@@ -1809,8 +1809,8 @@ final class CombatWorld {
               } else {
                 var5 = -1;
               }
-              if (var6.secondaryCommands.f(7) &&
-                var6.pendingCommands.f(7)) {
+              if (var6.secondaryCommands.isEmpty(7) &&
+                var6.pendingCommands.isEmpty(7)) {
                 if (109 == var8Lifetime1Lifetime1) {
                   this.a(var9, (Sentinel) (var7), 16384, var10, var5, var6);
                 }
@@ -3244,10 +3244,10 @@ final class CombatWorld {
         try {
           if (SentinelAnimationEditor.field_q != null &&
             SentinelAnimationEditor.field_q[param1] != null) {
-            fl.a((byte) 28, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
+            TeamColourTinter.a((byte) 28, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
           }
           if (param0 != -2483) {
-            CombatWorld.a((String) null, (String) null, (String) null, -92);
+            CombatWorld.replaceAll((String) null, (String) null, (String) null, -92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3981,27 +3981,27 @@ final class CombatWorld {
         }
     }
 
-    final static String a(String param0, String param1, String param2, int param3) {
+    final static String replaceAll(String needle, String haystack, String replacement, int obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         String stackIn_5_0 = null;
         var6 = SteelSentinels.obfuscationControl;
-        var4_int = -125 % ((param3 - 51) / 32);
-        var5 = param1.indexOf(param0);
+        var4_int = -125 % ((obfuscationGuard - 51) / 32);
+        var5 = haystack.indexOf(needle);
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var5 == -1))) {
-          param1 = param1.substring(0, var5) + param2 + param1.substring(param0.length() + var5);
-          stackIn_5_0 = (String) (param1);
+          haystack = haystack.substring(0, var5) + replacement + haystack.substring(needle.length() + var5);
+          stackIn_5_0 = (String) (haystack);
           if (var6 == 0) {
-            var5 = ((String) (Object) stackIn_5_0).indexOf(param0, var5 + param2.length());
+            var5 = ((String) (Object) stackIn_5_0).indexOf(needle, var5 + replacement.length());
             continue;
           }
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          stackIn_5_0 = (String) (param1);
+          stackIn_5_0 = (String) (haystack);
         }
         return stackIn_5_0;
     }
@@ -5604,12 +5604,12 @@ final class CombatWorld {
             scanLoop1: while (true) {
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameRemainder0 = true;
-              if (!var4.secondaryCommands.f(7)) {
+              if (!var4.secondaryCommands.isEmpty(7)) {
                 stackIn_18_0 = param0;
-                stackIn_18_1 = ((SentinelCommand) (var4.secondaryCommands.b(1063677678))).startTick;
+                stackIn_18_1 = ((SentinelCommand) (var4.secondaryCommands.last(1063677678))).startTick;
                 if (var5 != 0) {
                   if (stackIn_18_0 >= stackIn_18_1) {
-                    var4.pendingCommands.b(param1 + 1063649009).unlink(4);
+                    var4.pendingCommands.last(param1 + 1063649009).unlink(4);
                     decompiledFrameRemainder0 = false;
                   }
                   decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
@@ -5617,23 +5617,23 @@ final class CombatWorld {
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0) &&
                   (stackIn_18_0 <= stackIn_18_1)) {
-                  var4.secondaryCommands.b(1063677678).unlink(4);
+                  var4.secondaryCommands.last(1063677678).unlink(4);
                   continue;
                 }
               }
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder0)) {
-                while (!var4.pendingCommands.f(7)) {
+                while (!var4.pendingCommands.isEmpty(7)) {
                   stackIn_23_0 = var4;
                   if (var5 != 0) {
                     break scanLoop1;
                   }
-                  stackIn_18_0Lifetime1 = ((SentinelCommand) (((NodeDeque) (Object) stackIn_23_0.pendingCommands).b(param1 + 1063649009))).startTick;
+                  stackIn_18_0Lifetime1 = ((SentinelCommand) (((NodeDeque) (Object) stackIn_23_0.pendingCommands).last(param1 + 1063649009))).startTick;
                   stackIn_18_1Lifetime1 = param0;
                   if (stackIn_18_0Lifetime1 < stackIn_18_1Lifetime1) {
                     break;
                   }
-                  var4.pendingCommands.b(param1 + 1063649009).unlink(4);
+                  var4.pendingCommands.last(param1 + 1063649009).unlink(4);
                 }
               }
               stackIn_23_0 = var4;
@@ -5922,7 +5922,7 @@ final class CombatWorld {
             decompiledFrameRemainder1 = (0 == (this.simulationTick & 15));
           }
           if ((decompiledFrameRemainder1) &&
-            (param4.pendingCommands.f(7))) {
+            (param4.pendingCommands.isEmpty(7))) {
             boolean decompiledFrameRemainder0 = true;
             var8 = new SentinelCommand(3, 0, 10 + this.simulationTick);
             var8.targetWorldX = (this.simulationTick * 77 % (this.terrain.getProfileLength(-123) / 4) - this.terrain.getProfileLength(1) / 8 << 4) + param0.worldX;
@@ -6242,7 +6242,7 @@ final class CombatWorld {
         RuntimeException var11_ref = null;
         int[][] var12 = null;
         int var13_int = 0;
-        ne var13 = null;
+        FallingPickup var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -6437,7 +6437,7 @@ final class CombatWorld {
           }
           if (2 == this.terrain.getTerrainType(72) &&
             this.playerCount > 1) {
-            var13 = new ne(this, 43);
+            var13 = new FallingPickup(this, 43);
             var13.field_z = (this.terrain.getProfileLength(-119) << 4) / 2;
             this.field_e.addLast(3, var13);
           }

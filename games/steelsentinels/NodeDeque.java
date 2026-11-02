@@ -240,7 +240,7 @@ final class NodeDeque {
         }
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -295,7 +295,7 @@ final class NodeDeque {
         }
     }
 
-    private final void a(NodeDeque param0, int param1, IntrusiveNode param2) {
+    private final void moveTailTo(NodeDeque param0, int param1, IntrusiveNode param2) {
         RuntimeException runtimeException = null;
         IntrusiveNode var4 = null;
         RuntimeException stackIn_10_0 = null;
@@ -309,7 +309,7 @@ final class NodeDeque {
           this.sentinel.previous = param2.previous;
           param2.previous.next = this.sentinel;
           if (param1 != -16775) {
-            this.a(2);
+            this.previous(2);
           }
           if (param2 != this.sentinel) {
             param2.previous = param0.sentinel.previous;
@@ -338,7 +338,7 @@ final class NodeDeque {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode removeFirst(boolean param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
@@ -450,7 +450,7 @@ final class NodeDeque {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isEmpty(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -782,7 +782,7 @@ final class NodeDeque {
         }
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode traverseFrom(byte param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -827,14 +827,14 @@ final class NodeDeque {
         }
     }
 
-    final void a(int param0, NodeDeque param1) {
+    final void moveAllTo(int param0, NodeDeque param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, -16775, this.sentinel.next);
+          this.moveTailTo(param1, -16775, this.sentinel.next);
           if (param0 < 8) {
             field_d = 72;
           }
@@ -853,7 +853,7 @@ final class NodeDeque {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_7_0 = null;
@@ -889,7 +889,7 @@ final class NodeDeque {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         IntrusiveNode stackIn_2_0 = null;

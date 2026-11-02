@@ -962,11 +962,11 @@ final class SentinelDesigner {
         int var21Lifetime1Lifetime1;
         var24 = SteelSentinels.obfuscationControl;
         try {
-          SoftwareRaster.h(30, 70, 580, 350, 5789784);
-          SoftwareRaster.h(34, 74, 60, 342, 930889);
-          SoftwareRaster.h(546, 74, 60, 342, 930889);
-          SoftwareRaster.h(98, 74, 61, 23, 930889);
-          SoftwareRaster.h(481, 74, 61, 23, 930889);
+          SoftwareRaster.drawRectangleOutline(30, 70, 580, 350, 5789784);
+          SoftwareRaster.drawRectangleOutline(34, 74, 60, 342, 930889);
+          SoftwareRaster.drawRectangleOutline(546, 74, 60, 342, 930889);
+          SoftwareRaster.drawRectangleOutline(98, 74, 61, 23, 930889);
+          SoftwareRaster.drawRectangleOutline(481, 74, 61, 23, 930889);
           var3_int = 930889;
           var4 = IterableNodeHashTable.field_i;
           IterableNodeHashTable.field_i = 0;
@@ -1010,13 +1010,13 @@ final class SentinelDesigner {
           if (param0 != 48) {
             return;
           }
-          SoftwareRaster.h(163, 74, 314, 23, 930889);
+          SoftwareRaster.drawRectangleOutline(163, 74, 314, 23, 930889);
           pl.field_U.drawCentered(SocketConnector.a(am.field_e, -63, new String[]{Integer.toString(1 + BattleTerrain.field_i), Integer.toString(SceneWidgetNode.field_C.length)}), 320, 74 + (pl.field_U.field_U + 23) / 2, 1021128, -1);
-          SoftwareRaster.h(98, 101, 444, 154, 5789784);
-          SoftwareRaster.d(262, 259, 157, 930889);
-          SoftwareRaster.h(98, 259, 444, 157, 1130327);
-          SoftwareRaster.h(266, 263, 272, 23, 1130327);
-          SoftwareRaster.h(266, 290, 272, 122, 2697513);
+          SoftwareRaster.drawRectangleOutline(98, 101, 444, 154, 5789784);
+          SoftwareRaster.drawVerticalLine(262, 259, 157, 930889);
+          SoftwareRaster.drawRectangleOutline(98, 259, 444, 157, 1130327);
+          SoftwareRaster.drawRectangleOutline(266, 263, 272, 23, 1130327);
+          SoftwareRaster.drawRectangleOutline(266, 290, 272, 122, 2697513);
           var6 = 78;
           var7 = 0;
           do {
@@ -1024,8 +1024,8 @@ final class SentinelDesigner {
               var7 = 120;
               break;
             }
-            SoftwareRaster.h(37, var6, 54, 18, 2697513);
-            SoftwareRaster.h(549, var6, 54, 18, 2697513);
+            SoftwareRaster.drawRectangleOutline(37, var6, 54, 18, 2697513);
+            SoftwareRaster.drawRectangleOutline(549, var6, 54, 18, 2697513);
             var6 += 21;
             var7++;
           } while (var24 == 0);
@@ -1313,7 +1313,7 @@ final class SentinelDesigner {
                   }
                   var22 = 15;
                   var23 = var6 - var22;
-                  SoftwareRaster.h(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 16777215, 192);
+                  SoftwareRaster.drawRectangleOutlineAlpha(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 16777215, 192);
                   SoftwareRaster.c(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 0, 192);
                   BoundedUrlRequest.field_d.drawLeft(var19Lifetime1, 4 + var21Lifetime2, 11 + var23, 16777215, -1);
                 }
@@ -1587,7 +1587,7 @@ final class SentinelDesigner {
         try {
           var2_int = va.field_d;
           va.field_d = -1;
-          SoftwareRaster.a(0, 50, 640, 430, 0);
+          SoftwareRaster.fillRectangle(0, 50, 640, 430, 0);
           if (param0 <= 112) {
             return;
           }
@@ -1833,12 +1833,12 @@ final class SentinelDesigner {
             va.field_d = 15;
             if ((var12 != 0) && (ViewportController.field_j &&
               0 == (MouseWheelInput.field_c & 16))) {
-              SoftwareRaster.h(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
+              SoftwareRaster.drawRectangleOutline(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
             }
           } else {
             if (ViewportController.field_j &&
               0 == (MouseWheelInput.field_c & 16)) {
-              SoftwareRaster.h(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
+              SoftwareRaster.drawRectangleOutline(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
             }
           }
           if (va.field_d != -1 &&
@@ -3221,7 +3221,7 @@ final class SentinelDesigner {
     }
 
     final static void a(String param0, int param1) {
-        System.out.println("Error: " + CombatWorld.a("%0a", param0, "\n", param1 ^ -29743));
+        System.out.println("Error: " + CombatWorld.replaceAll("%0a", param0, "\n", param1 ^ -29743));
         if (param1 != -29771) {
           field_e = -33;
         }
@@ -3278,8 +3278,8 @@ final class SentinelDesigner {
           if (param0 >= -55) {
             return;
           }
-          SoftwareRaster.h(40, 80, 560, 330, 3487029);
-          SoftwareRaster.h(41, 81, 558, 328, 3487029);
+          SoftwareRaster.drawRectangleOutline(40, 80, 560, 330, 3487029);
+          SoftwareRaster.drawRectangleOutline(41, 81, 558, 328, 3487029);
           if (ni.b(25)) {
             this.j(60);
             if (SteelSentinels.obfuscationControl == 0) {
@@ -3314,7 +3314,7 @@ final class SentinelDesigner {
             boolean decompiledSharedTail0 = (ClientException.field_e ||
               LoginForm.field_U != 0);
             if (!decompiledSharedTail0) {
-              SoftwareRaster.a(jj.field_a.field_Rb, jj.field_a.field_cb, jj.field_a.field_zb, jj.field_a.field_Lb, 0);
+              SoftwareRaster.fillRectangle(jj.field_a.field_Rb, jj.field_a.field_cb, jj.field_a.field_zb, jj.field_a.field_Lb, 0);
               jj.field_a.a(true, (byte) 127);
               decompiledSharedTail0 = (var3 != 0);
             }
@@ -3778,7 +3778,7 @@ final class SentinelDesigner {
                       stackIn_356_3 = 150;
                     }
                     ((RgbSprite) (Object) stackIn_355_0).drawAdditive(stackIn_355_1, stackIn_355_2, stackIn_356_3);
-                    SoftwareRaster.c();
+                    SoftwareRaster.resetClip();
                   }
                 }}}}
           if (var4_int != 20 &&
@@ -3792,7 +3792,7 @@ final class SentinelDesigner {
             stackIn_367_0 = VerticalScrollbar.field_ac * 170 / 256;
           }
           var22Lifetime2 = stackIn_367_0;
-          SoftwareRaster.a(-1 + (var22Lifetime2 + var16Lifetime1), 3 + var15Lifetime1, 170 + (-var22Lifetime2 + 1), -6 + var17Lifetime1, 0);
+          SoftwareRaster.fillRectangle(-1 + (var22Lifetime2 + var16Lifetime1), 3 + var15Lifetime1, 170 + (-var22Lifetime2 + 1), -6 + var17Lifetime1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3853,7 +3853,7 @@ final class SentinelDesigner {
             while (!(var15 >= QuickChatPhraseCache.field_h.length - 1)) {
               var16 = QuickChatPhraseCache.field_h[var15];
               var17 = QuickChatPhraseCache.field_h[var15 + 1];
-              SoftwareRaster.a(var16 + 3, var13_int, var17 - (var16 + 5), var14, 12105);
+              SoftwareRaster.fillRectangle(var16 + 3, var13_int, var17 - (var16 + 5), var14, 12105);
               var15++;
               if (var18 == 0) {
                 continue;
@@ -3978,14 +3978,14 @@ final class SentinelDesigner {
               var8 = 1021128;
               var9 = qi.field_d.field_x[var4];
               var10 = qi.field_d.field_z[var4];
-              SoftwareRaster.h(48, 88, 544, 286, 1130327);
+              SoftwareRaster.drawRectangleOutline(48, 88, 544, 286, 1130327);
               var11_int = 1;
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (!(var11_int < EmailAvailabilityValidator.field_v.length)))) {
                 stackIn_34_0 = EmailAvailabilityValidator.field_v[var11_int];
                 stackIn_34_1 = 88;
                 if (var16 == 0) {
-                  SoftwareRaster.d(stackIn_34_0, stackIn_34_1, 265, 1130327);
+                  SoftwareRaster.drawVerticalLine(stackIn_34_0, stackIn_34_1, 265, 1130327);
                   var11_int++;
                   continue;
                 }
@@ -4000,8 +4000,8 @@ final class SentinelDesigner {
               ((BitmapFont) ((Object) var2)).drawLeft(AccountRequestDialog.field_Ib[1], 5 + EmailAvailabilityValidator.field_v[1], var7, var8, -1);
               ((BitmapFont) ((Object) var2)).c(AccountRequestDialog.field_Ib[2], -1 + EmailAvailabilityValidator.field_v[3] - 5, var7, var8, -1);
               ((BitmapFont) ((Object) var2)).c(AccountRequestDialog.field_Ib[3], -5 + EmailAvailabilityValidator.field_v[4] - 1, var7, var8, -1);
-              SoftwareRaster.g(48, 109, 544, 1130327);
-              SoftwareRaster.g(48, 353, 544, 1130327);
+              SoftwareRaster.drawHorizontalLine(48, 109, 544, 1130327);
+              SoftwareRaster.drawHorizontalLine(48, 353, 544, 1130327);
               var7Lifetime2 = 126;
               var6 = im.field_d;
               var11_intLifetime1 = 0;
@@ -4254,7 +4254,7 @@ final class SentinelDesigner {
           var3 -= 8;
           var4 += 8;
           var5 += 8;
-          SoftwareRaster.h(var3, var2_int, -var3 + var4, -var2_int + var5, 6316128);
+          SoftwareRaster.drawRectangleOutline(var3, var2_int, -var3 + var4, -var2_int + var5, 6316128);
           var6 = this.a(0, (byte) 108) + 4;
           var7 = -var6 + (-4 + this.g(127, 1));
           var8 = this.b(0, (byte) -125);
@@ -4319,14 +4319,14 @@ final class SentinelDesigner {
           var3 += 8;
           var2_intLifetime1 = 6 + (var8 + var9);
           var4 -= 8;
-          SoftwareRaster.h(var6, var8, var7, var9, var10);
+          SoftwareRaster.drawRectangleOutline(var6, var8, var7, var9, var10);
           var5Lifetime1 = -8 + this.b(2, (byte) -109);
-          SoftwareRaster.h(var3, var2_intLifetime1, var4 - var3, -var2_intLifetime1 + var5Lifetime1, 2061990);
+          SoftwareRaster.drawRectangleOutline(var3, var2_intLifetime1, var4 - var3, -var2_intLifetime1 + var5Lifetime1, 2061990);
           var13Lifetime1 = 100;
           var14Lifetime1 = 110;
           var15Lifetime1 = var2_intLifetime1 + 20;
           var16Lifetime1 = 10 + var3;
-          SoftwareRaster.h(var16Lifetime1, var15Lifetime1, var13Lifetime1, var14Lifetime1, var10);
+          SoftwareRaster.drawRectangleOutline(var16Lifetime1, var15Lifetime1, var13Lifetime1, var14Lifetime1, var10);
           var17 = var13Lifetime1 + var16Lifetime1 + 10;
           if (param0 != 21345) {
             return;
@@ -4917,8 +4917,8 @@ final class SentinelDesigner {
         var12 = SteelSentinels.obfuscationControl;
         try {
           var2 = pl.field_U;
-          SoftwareRaster.h(40, 80, 560, 330, 3487029);
-          SoftwareRaster.h(41, 81, 558, 328, 3487029);
+          SoftwareRaster.drawRectangleOutline(40, 80, 560, 330, 3487029);
+          SoftwareRaster.drawRectangleOutline(41, 81, 558, 328, 3487029);
           if (ni.b(25)) {
             this.e(1021128);
             return;
@@ -4960,8 +4960,8 @@ final class SentinelDesigner {
               var5 = wb.field_d;
               var6 = qi.field_j.field_z[EmailCredentials.field_j];
               var7 = qi.field_j.field_x[EmailCredentials.field_j];
-              SoftwareRaster.h(48, 88, 544, 286, 1130327);
-              SoftwareRaster.g(48, 109, 544, 1130327);
+              SoftwareRaster.drawRectangleOutline(48, 88, 544, 286, 1130327);
+              SoftwareRaster.drawHorizontalLine(48, 109, 544, 1130327);
               var8 = 1;
               do {
                 if (!(QuickChatPhraseCache.field_h.length - 1 > var8)) {
@@ -4975,7 +4975,7 @@ final class SentinelDesigner {
                   var8 = 0;
                   break;
                 }
-                SoftwareRaster.d(QuickChatPhraseCache.field_h[var8], 88, 286, 1130327);
+                SoftwareRaster.drawVerticalLine(QuickChatPhraseCache.field_h[var8], 88, 286, 1130327);
                 var8++;
               } while (var12 == 0);
               var9 = 0;
@@ -5364,7 +5364,7 @@ final class SentinelDesigner {
                       if (stackIn_121_0 < stackIn_121_1) {
                         var6 = FunOrbClient.field_z[var5];
                         rn.field_D[var6 >> 5] = ec.a(rn.field_D[var6 >> 5], ~(1 << ec.a(var6, 31)));
-                        var7 = ne.a(var6, (byte) 28);
+                        var7 = FallingPickup.a(var6, (byte) 28);
                         var8 = var7;
                         stackIn_385_0 = 0;
                         var9_int = stackIn_385_0;
@@ -5440,7 +5440,7 @@ final class SentinelDesigner {
                     while (var5 < var4) {
                       var6 = FunOrbClient.field_z[var5];
                       rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ec.a(var6, 31));
-                      var7 = ne.a(var6, (byte) 28);
+                      var7 = FallingPickup.a(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
                       if (var12 != 0) {
@@ -5594,7 +5594,7 @@ final class SentinelDesigner {
                       ArchiveRequest.field_D[var5] = 0;
                       var5++;
                     } while (var12 == 0);
-                    var6_ref_int__ = ne.a(var5, (byte) 28);
+                    var6_ref_int__ = FallingPickup.a(var5, (byte) 28);
                     var7 = var6_ref_int__;
                     var8_int = 0;
                     do {
@@ -5654,7 +5654,7 @@ final class SentinelDesigner {
                     while (var5 < 3) {
                       var6 = FunOrbClient.field_z[var5];
                       rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ec.a(31, var6));
-                      var7 = ne.a(var6, (byte) 28);
+                      var7 = FallingPickup.a(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
                       if (var12 != 0) {
@@ -6042,7 +6042,7 @@ final class SentinelDesigner {
             if (var8 + var5_int < 450 + this.field_k) {
               SoftwareRaster.c(550, var8 + var5_int, 10, this.field_k + 450 - (var8 + var5_int), var7, 192);
             }
-            SoftwareRaster.c();
+            SoftwareRaster.resetClip();
             ArchiveProvider.field_b.a((-ArchiveProvider.field_b.field_z + 640) / 2, -this.field_h + 15);
             if (!ni.b(param0 + 98) &&
               NodeDeque.field_d >= 2) {
@@ -6170,8 +6170,8 @@ final class SentinelDesigner {
           }
           if (this.field_c != 0) {
             var5_int = this.d((byte) 114);
-            CachedArchiveProvider.field_j.a(0, -5, 80, 7);
-            CachedArchiveProvider.field_j.a(0, 474 - var5_int, 80, 2 + var5_int / 8);
+            CachedArchiveProvider.field_j.drawTiled(0, -5, 80, 7);
+            CachedArchiveProvider.field_j.drawTiled(0, 474 - var5_int, 80, 2 + var5_int / 8);
             CachedTextLayout.c(103);
             if (var3 != 0 ||
               this.field_c == 7 &&
@@ -6188,49 +6188,49 @@ final class SentinelDesigner {
                   var7_ref = null;
                 }
                 if (null != var6) {
-                  SoftwareRaster.a(0, 50, var6.field_Rb, -var5_int + 430, 0);
+                  SoftwareRaster.fillRectangle(0, 50, var6.field_Rb, -var5_int + 430, 0);
                   if (var6.field_cb > 50) {
-                    SoftwareRaster.a(var6.field_Rb, 50, var6.field_zb, var6.field_cb - 50, 0);
+                    SoftwareRaster.fillRectangle(var6.field_Rb, 50, var6.field_zb, var6.field_cb - 50, 0);
                   }
                   if ((var6.field_Lb + var6.field_cb) < (430 - var5_int)) {
-                    SoftwareRaster.a(var6.field_Rb, var6.field_cb + var6.field_Lb, var6.field_zb, 430 + (-var5_int - var6.field_cb) - var6.field_Lb, 0);
+                    SoftwareRaster.fillRectangle(var6.field_Rb, var6.field_cb + var6.field_Lb, var6.field_zb, 430 + (-var5_int - var6.field_cb) - var6.field_Lb, 0);
                   }
                   boolean decompiledSharedTail0 = (null != var7_ref);
                   if (!decompiledSharedTail0) {
-                    SoftwareRaster.a(var6.field_zb + var6.field_Rb, 50, -var6.field_zb - var6.field_Rb + 640, -var5_int + 430, 0);
+                    SoftwareRaster.fillRectangle(var6.field_zb + var6.field_Rb, 50, -var6.field_zb - var6.field_Rb + 640, -var5_int + 430, 0);
                     decompiledSharedTail0 = (var19 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    SoftwareRaster.a(var6.field_zb + var6.field_Rb, 50, -var6.field_Rb + (((SceneWidget) (var7_ref)).field_Rb - var6.field_zb), 430 - var5_int, 0);
+                    SoftwareRaster.fillRectangle(var6.field_zb + var6.field_Rb, 50, -var6.field_Rb + (((SceneWidget) (var7_ref)).field_Rb - var6.field_zb), 430 - var5_int, 0);
                   }
                 }
                 if (null != var7_ref) {
                   if (null == var6) {
-                    SoftwareRaster.a(0, 50, ((SceneWidget) (var7_ref)).field_Rb, 430 - var5_int, 0);
+                    SoftwareRaster.fillRectangle(0, 50, ((SceneWidget) (var7_ref)).field_Rb, 430 - var5_int, 0);
                   }
                   if (((SceneWidget) (var7_ref)).field_cb > 50) {
-                    SoftwareRaster.a(((SceneWidget) (var7_ref)).field_Rb, 0, ((SceneWidget) (var7_ref)).field_zb, ((SceneWidget) (var7_ref)).field_cb, 0);
+                    SoftwareRaster.fillRectangle(((SceneWidget) (var7_ref)).field_Rb, 0, ((SceneWidget) (var7_ref)).field_zb, ((SceneWidget) (var7_ref)).field_cb, 0);
                   }
                   if (((SceneWidget) (var7_ref)).field_Lb + ((SceneWidget) (var7_ref)).field_cb < -var5_int + 430) {
-                    SoftwareRaster.a(((SceneWidget) (var7_ref)).field_Rb, ((SceneWidget) (var7_ref)).field_Lb + ((SceneWidget) (var7_ref)).field_cb, ((SceneWidget) (var7_ref)).field_zb, -((SceneWidget) (var7_ref)).field_cb + 480 - ((SceneWidget) (var7_ref)).field_Lb, 0);
+                    SoftwareRaster.fillRectangle(((SceneWidget) (var7_ref)).field_Rb, ((SceneWidget) (var7_ref)).field_Lb + ((SceneWidget) (var7_ref)).field_cb, ((SceneWidget) (var7_ref)).field_zb, -((SceneWidget) (var7_ref)).field_cb + 480 - ((SceneWidget) (var7_ref)).field_Lb, 0);
                   }
-                  SoftwareRaster.a(((SceneWidget) (var7_ref)).field_zb + ((SceneWidget) (var7_ref)).field_Rb, 50, 640 - ((SceneWidget) (var7_ref)).field_Rb - ((SceneWidget) (var7_ref)).field_zb, -var5_int + 430, 0);
+                  SoftwareRaster.fillRectangle(((SceneWidget) (var7_ref)).field_zb + ((SceneWidget) (var7_ref)).field_Rb, 50, 640 - ((SceneWidget) (var7_ref)).field_Rb - ((SceneWidget) (var7_ref)).field_zb, -var5_int + 430, 0);
                 }
                 if (var6 == null &&
                   null == var7_ref) {
-                  SoftwareRaster.a(0, 50, 640, 630 - var5_int, 0);
+                  SoftwareRaster.fillRectangle(0, 50, 640, 630 - var5_int, 0);
                 }
                 if (var19 != 0) {
-                  SoftwareRaster.a(0, 50, 640, -var5_int + 430, 0);
+                  SoftwareRaster.fillRectangle(0, 50, 640, -var5_int + 430, 0);
                 }
               }
             } else {
-              SoftwareRaster.a(0, 50, 640, -var5_int + 430, 0);
+              SoftwareRaster.fillRectangle(0, 50, 640, -var5_int + 430, 0);
             }
             IterableDualNodeDeque.a((byte) -95, TextButton.field_U, 640, 49, 0, 431 - var5_int);
             var6_int = 50 - MidiPcmStream.field_db.field_B;
             MidiPcmStream.field_db.a(0, var6_int - this.field_h);
-            SoftwareRaster.c(0, -this.field_h + 49, 640, 0, 128);
+            SoftwareRaster.drawHorizontalLineAlpha(0, -this.field_h + 49, 640, 0, 128);
             sh.a(-16088, 640, var5_int, 480 - var5_int + this.field_k, 0);
           }
           if (this.field_c == 17) {
@@ -6339,7 +6339,7 @@ final class SentinelDesigner {
                                     }
                                     var6_int = stackIn_460_0;
                                     var7 = 74;
-                                    SoftwareRaster.h(-4 + this.g(127, var5_int + 0), var7, this.a(var5_int - 0, (byte) 115) - (this.g(126, 0 + var5_int) - 8), -var7 + (4 + this.b(9 + var5_int, (byte) -103)) + (this.c(25, var5_int + 9) + var6_int), 3158064);
+                                    SoftwareRaster.drawRectangleOutline(-4 + this.g(127, var5_int + 0), var7, this.a(var5_int - 0, (byte) 115) - (this.g(126, 0 + var5_int) - 8), -var7 + (4 + this.b(9 + var5_int, (byte) -103)) + (this.c(25, var5_int + 9) + var6_int), 3158064);
                                     var5_int += 10;
                                     continue;
                                   }
@@ -6394,7 +6394,7 @@ final class SentinelDesigner {
                                     }
                                     var7 = stackIn_417_0;
                                     var8 = 74;
-                                    SoftwareRaster.h(this.g(126, var6_int + 0) - 4, var8, this.a(0 + var6_int, (byte) 112) - (this.g(126, 0 + var6_int) - 8), this.b(9 + var6_int, (byte) 32) - (-this.c(25, 9 + var6_int) - 4) + (-var8 + var7), 3158064);
+                                    SoftwareRaster.drawRectangleOutline(this.g(126, var6_int + 0) - 4, var8, this.a(0 + var6_int, (byte) 112) - (this.g(126, 0 + var6_int) - 8), this.b(9 + var6_int, (byte) 32) - (-this.c(25, 9 + var6_int) - 4) + (-var8 + var7), 3158064);
                                     var6_int += 10;
                                     continue;
                                   }
@@ -7562,7 +7562,7 @@ final class SentinelDesigner {
             while (var13 < 4) {
               var14 = EmailAvailabilityValidator.field_v[var13];
               var15 = EmailAvailabilityValidator.field_v[1 + var13];
-              SoftwareRaster.a(var14 + 3, var11_int, -var14 + var15 - 5, var12, 12105);
+              SoftwareRaster.fillRectangle(var14 + 3, var11_int, -var14 + var15 - 5, var12, 12105);
               var13++;
               if (var16 != 0) {
                 decompiledFrameCompleted0 = false;

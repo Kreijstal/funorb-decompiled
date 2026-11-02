@@ -1639,7 +1639,7 @@ final class MidiPcmStream extends PcmStream {
           boolean decompiledFrameCompleted0 = true;
           this.a(param2, (byte) -87, param0, 64);
           if (0 != (2 & this.field_F[param2])) {
-            var5 = (MusicPatchNode) (this.field_v.field_F.b(1063677678));
+            var5 = (MusicPatchNode) (this.field_v.field_F.last(1063677678));
             while (null != var5) {
               stackIn_17_0 = ~var5.field_t;
               stackIn_17_1 = ~param2;
@@ -1658,7 +1658,7 @@ final class MidiPcmStream extends PcmStream {
                 var5.field_z = param0;
                 return;
               }
-              var5 = (MusicPatchNode) (this.field_v.field_F.a(-2137));
+              var5 = (MusicPatchNode) (this.field_v.field_F.previous(-2137));
             }
           }
           if (decompiledFrameCompleted0) {

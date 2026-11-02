@@ -106,13 +106,13 @@ final class MarkerSliderPainter implements WidgetPainter {
             stackIn_4_0 = null;
           }
           var12 = (MarkerSlider) (stackIn_4_0);
-          SoftwareRaster.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_m);
+          SoftwareRaster.fillRectangle(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_m);
           if (var12 != null) {
           }
           var7 = -(2 * var12.field_Y) + param1.field_x;
           var8 = var12.field_Y + (param1.field_o + param0);
           var9 = var12.field_ab + (param1.field_z + param4);
-          SoftwareRaster.d(var8, var9, var7 + var8, var9, this.field_k);
+          SoftwareRaster.drawLine(var8, var9, var7 + var8, var9, this.field_k);
           for (var10 = -1 + var12.h(24129); var10 >= 0; var10--) {
             SoftwareRaster.e(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
           }

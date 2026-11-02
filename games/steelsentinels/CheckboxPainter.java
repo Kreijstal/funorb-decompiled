@@ -56,17 +56,17 @@ final class CheckboxPainter implements WidgetPainter {
             param3 = param3 & var12.field_K;
           }
           var7 = 5592405;
-          SoftwareRaster.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_l);
+          SoftwareRaster.fillRectangle(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_l);
           if (param3) {
             var7 = 16777215;
           }
           var8 = this.field_p + (param1.field_o + param0);
           var9 = this.field_k + param1.field_z + param4;
-          SoftwareRaster.e(var8, var9, this.field_e, this.field_h, 5592405);
-          SoftwareRaster.a(var8, var9, this.field_e, this.field_h, var7);
+          SoftwareRaster.drawDropShadow(var8, var9, this.field_e, this.field_h, 5592405);
+          SoftwareRaster.fillRectangle(var8, var9, this.field_e, this.field_h, var7);
           if (var12.field_T) {
-            SoftwareRaster.d(var8, var9, this.field_e + var8, var9 + this.field_h, 1);
-            SoftwareRaster.d(var8 + this.field_e, var9, var8, var9 + this.field_h, 1);
+            SoftwareRaster.drawLine(var8, var9, this.field_e + var8, var9 + this.field_h, 1);
+            SoftwareRaster.drawLine(var8 + this.field_e, var9, var8, var9 + this.field_h, 1);
           }
           if (param2 != -30) {
             var11 = (java.applet.Applet) null;

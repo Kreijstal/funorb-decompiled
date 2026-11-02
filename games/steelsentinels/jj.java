@@ -105,7 +105,7 @@ final class jj {
             }
             if (rn.field_v == ClientException.field_d &&
               ve.a((byte) -108, 8)) {
-              TextButton.field_G = rf.field_d.g((byte) -115);
+              TextButton.field_G = rf.field_d.readLong((byte) -115);
               rf.field_d.position = 0;
               ValidatedTextWidget.a(param4, 2, param3, MidiPcmStream.field_T, param1);
               rn.field_v = uf.field_g;
@@ -138,12 +138,12 @@ final class jj {
             }
             if (Projectile.field_N == rn.field_v &&
               LoginForm.n(121)) {
-              PasswordFieldPainter.field_w = rf.field_d.g((byte) -101);
+              PasswordFieldPainter.field_w = rf.field_d.readLong((byte) -101);
               gj.field_b = param5;
               NodeDeque.field_d = rf.field_d.readUnsignedByte((byte) -65);
               di.field_h = rf.field_d.readUnsignedByte((byte) -54);
               rd.field_b = rf.field_d.readUnsignedShort((byte) -60);
-              var6 = rf.field_d.g(-122);
+              var6 = rf.field_d.readNullableString(-122);
               var7 = rf.field_d.readUnsignedByte((byte) -128);
               if (0 != (1 & var7)) {
                 ed.b((byte) -105);
@@ -171,7 +171,7 @@ final class jj {
                   AccountTermsPanel.field_Y[var8] = rf.field_d.readByte((byte) -2);
                 }
               }
-              GrowableIntList.field_l = rf.field_d.h(1);
+              GrowableIntList.field_l = rf.field_d.readString(1);
               var11 = (CharSequence) ((Object) GrowableIntList.field_l);
               MembershipPromotionScreen.field_r = AlphaContainer.a(1, var11);
               ReflectionCheck.field_o = rf.field_d.readUnsignedByte((byte) -106);
@@ -226,7 +226,7 @@ final class jj {
               if (ch.field_N == 7) {
                 ch.field_N = 3;
               }
-              di.field_e = rf.field_d.h(1);
+              di.field_e = rf.field_d.readString(1);
               AlphaContainer.field_T = false;
               stackIn_96_0 = ch.field_N;
               return stackIn_96_0;

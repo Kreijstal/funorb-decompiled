@@ -36,7 +36,7 @@ final class tm {
         stackIn_16_1 = 12;
         stackIn_17_2 = (param2) && (!param1) && (!im.field_b) && (null == nf.field_b) && (null == ni.field_a);
         ((SceneWidget) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
-        stackIn_21_0 = fl.field_b;
+        stackIn_21_0 = TeamColourTinter.field_b;
         stackIn_21_1 = 22;
         stackIn_22_2 = (param2) && (!param1) && (im.field_b);
         ((SceneWidget) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);

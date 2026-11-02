@@ -110,13 +110,13 @@ final class SocialListEntry extends SceneWidget {
         if (SentinelCommand.field_t <= 0) {
           if (bd.field_c > 0) {
             if (GzipDecoder.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
+              SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           } else {
             if (fj.field_f > 0 &&
               GzipDecoder.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
+              SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           }
@@ -125,12 +125,12 @@ final class SocialListEntry extends SceneWidget {
             if ((!(bd.field_c <= 0) ||
               !(fj.field_f <= 0)) &&
               GzipDecoder.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
+              SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           } else {
-            SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-            fl.field_b.a(param0, (byte) 127);
+            SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
+            TeamColourTinter.field_b.a(param0, (byte) 127);
             if (bd.field_c <= 0 &&
               fj.field_f <= 0) {
               if (param1 <= -25) {
@@ -141,7 +141,7 @@ final class SocialListEntry extends SceneWidget {
               return;
             }
             if (GzipDecoder.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
+              SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           }

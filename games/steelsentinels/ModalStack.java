@@ -91,45 +91,45 @@ final class ModalStack extends SingleChildContainer {
             mm.field_g.position = 0;
             TextHotspotWidget.field_bb = null;
             if (param0 == null) {
-              ne.field_y.position = 0;
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
-              stackIn_16_0 = ne.field_y;
+              FallingPickup.field_y.position = 0;
+              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+              stackIn_16_0 = FallingPickup.field_y;
               stackIn_16_1 = 13588;
               if (!param5.a((byte) 51)) {
                 stackIn_17_2 = "";
               } else {
                 stackIn_17_2 = var15;
               }
-              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
-              stackIn_19_0 = ne.field_y;
+              ((PacketBuffer) (Object) stackIn_16_0).writePrefixedString(stackIn_16_1, stackIn_17_2);
+              stackIn_19_0 = FallingPickup.field_y;
               stackIn_19_1 = 13588;
               if (!param6.a((byte) 51)) {
                 stackIn_20_2 = "";
               } else {
                 stackIn_20_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
+              ((PacketBuffer) (Object) stackIn_19_0).writePrefixedString(stackIn_19_1, stackIn_20_2);
               mm.field_g.writeByte((byte) 127, 16);
               mm.field_g.position = mm.field_g.position + 1;
               var9 = mm.field_g.position;
-              qi.a(AccountNoticeDialog.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
+              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, mm.field_g, qe.field_d, 5);
               mm.field_g.backpatchByteLength((byte) -32, -var9 + mm.field_g.position);
             } else {
               var9 = 0;
-              ne.field_y.position = 0;
+              FallingPickup.field_y.position = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
-              ne.field_y.a(13588, var15);
-              ne.field_y.a(13588, var8);
+              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+              FallingPickup.field_y.writePrefixedString(13588, var15);
+              FallingPickup.field_y.writePrefixedString(13588, var8);
               var17 = (CharSequence) ((Object) param0);
-              ne.field_y.a(13588, AccountChoicePanel.a(-105, var17));
-              ne.field_y.writeShort(param4, 104);
-              ne.field_y.writeByte((byte) 124, param2);
-              ne.field_y.writeByte((byte) 117, var9);
+              FallingPickup.field_y.writePrefixedString(13588, AccountChoicePanel.a(-105, var17));
+              FallingPickup.field_y.writeShort(param4, 104);
+              FallingPickup.field_y.writeByte((byte) 124, param2);
+              FallingPickup.field_y.writeByte((byte) 117, var9);
               mm.field_g.writeByte((byte) 117, 18);
               mm.field_g.position = mm.field_g.position + 2;
               var10 = mm.field_g.position;
@@ -137,9 +137,9 @@ final class ModalStack extends SingleChildContainer {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              mm.field_g.a(var11_ref_String, -63);
-              qi.a(AccountNoticeDialog.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
-              mm.field_g.c(30, -var10 + mm.field_g.position);
+              mm.field_g.writeString(var11_ref_String, -63);
+              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, mm.field_g, qe.field_d, 5);
+              mm.field_g.writeShortLengthPrefix(30, -var10 + mm.field_g.position);
             }
             gj.a(0, -1);
             rn.field_v = mc.field_c;
@@ -184,7 +184,7 @@ final class ModalStack extends SingleChildContainer {
               if (ve.a((byte) -97, var10Lifetime1)) {
                 var11 = vh.field_d.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  vh.field_d[var12] = rf.field_d.e((byte) -97);
+                  vh.field_d[var12] = rf.field_d.readPrefixedString((byte) -97);
                 }
                 LoginForm.m(-46);
                 AlphaContainer.field_T = false;
@@ -196,12 +196,12 @@ final class ModalStack extends SingleChildContainer {
           if (RegistrationRequestDialog.field_Yb == rn.field_v &&
             LoginForm.n(37)) {
             if (ch.field_N == 255) {
-              var9_ref_String = rf.field_d.g(-77);
+              var9_ref_String = rf.field_d.readNullableString(-77);
               if (var9_ref_String != null) {
                 ri.a(var9_ref_String, Projectile.d((byte) -21), 124);
               }
             } else {
-              di.field_e = rf.field_d.h(1);
+              di.field_e = rf.field_d.readString(1);
             }
             LoginForm.m(-98);
             AlphaContainer.field_T = false;

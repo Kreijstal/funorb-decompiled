@@ -126,8 +126,8 @@ final class UiTheme {
           if (var10 + (var13Lifetime1 + var6) > SoftwareRaster.field_j) {
             var13Lifetime1 = -var6 - var10 + param1;
           }
-          SoftwareRaster.h(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_t);
-          SoftwareRaster.a(1 + var12, var13Lifetime1 + 1, -2 + var5_int + var9, var10 + (var6 - 2), this.field_n);
+          SoftwareRaster.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_t);
+          SoftwareRaster.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + var5_int + var9, var10 + (var6 - 2), this.field_n);
           this.field_v.a(param3, this.field_g + var12, this.field_a + var13Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
           if (param0 == 102) {
             return;
@@ -172,8 +172,8 @@ final class UiTheme {
           if (param2 != -22) {
             return;
           }
-          SoftwareRaster.h(var7, var8, 6 + var5_int, 6 + var6, this.field_k);
-          SoftwareRaster.a(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_n);
+          SoftwareRaster.drawRectangleOutline(var7, var8, 6 + var5_int, 6 + var6, this.field_k);
+          SoftwareRaster.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_n);
           this.field_v.drawLeft(param0, var7 + 3, this.field_v.field_U + var8 + 3, this.field_k, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ final class UiTheme {
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        SoftwareRaster.d(param4, param0, param5, param1, param2);
+        SoftwareRaster.drawLine(param4, param0, param5, param1, param2);
         if (param3 > -53) {
           this.a(14, -110, -118, (byte) 18, -35, -121);
         }

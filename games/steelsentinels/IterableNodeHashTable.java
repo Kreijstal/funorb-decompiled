@@ -58,8 +58,8 @@ final class IterableNodeHashTable implements Iterable {
           if (ok.field_d[param1] > ok.field_d[param2]) {
             return false;
           }
-          var4 = Sentinel.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
-          var5 = jm.field_r[param2] + ne.field_G[param2] + Sentinel.field_T[param2];
+          var4 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + jm.field_r[param1];
+          var5 = jm.field_r[param2] + FallingPickup.field_G[param2] + Sentinel.field_T[param2];
           var6 = -10 % ((-27 - param0) / 47);
           if (var4 < var5) {
             return true;
@@ -81,8 +81,8 @@ final class IterableNodeHashTable implements Iterable {
         if (eb.field_u[param1] > eb.field_u[param2]) {
           return false;
         }
-        var4Lifetime1 = Sentinel.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
-        var5Lifetime1 = jm.field_r[param2] + ne.field_G[param2] + Sentinel.field_T[param2];
+        var4Lifetime1 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + jm.field_r[param1];
+        var5Lifetime1 = jm.field_r[param2] + FallingPickup.field_G[param2] + Sentinel.field_T[param2];
         var6Lifetime1 = -10 % ((-27 - param0) / 47);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;

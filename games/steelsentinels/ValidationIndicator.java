@@ -247,7 +247,7 @@ final class ValidationIndicator extends TextButton {
             var9 <= qf.field_f.field_A &&
             var10 <= qf.field_f.field_F) {
             IterableNodeHashTable.a(qf.field_f, (byte) -71);
-            SoftwareRaster.b();
+            SoftwareRaster.clear();
           } else {
             qf.field_f = new RgbSprite(var9, var10);
             IterableNodeHashTable.a(qf.field_f, (byte) -108);

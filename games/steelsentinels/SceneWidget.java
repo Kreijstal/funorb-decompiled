@@ -409,7 +409,7 @@ class SceneWidget extends SceneWidgetNode {
         if (param8 <= 15) {
           this.field_ub = -78;
         }
-        SoftwareRaster.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_cb + this.field_Lb);
+        SoftwareRaster.intersectClip(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_cb + this.field_Lb);
         param0 = param0 & this.field_T;
         if (!this.field_R) {
           param4 = this.field_kb;
@@ -648,7 +648,7 @@ class SceneWidget extends SceneWidgetNode {
         var10 = SoftwareRaster.field_l;
         var11 = SoftwareRaster.field_b;
         var12 = SoftwareRaster.field_d;
-        SoftwareRaster.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_Lb + this.field_cb);
+        SoftwareRaster.intersectClip(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_Lb + this.field_cb);
         var13 = 0;
         if (!SocketConnector.field_d &&
           param0 &&
@@ -676,10 +676,10 @@ class SceneWidget extends SceneWidgetNode {
         stackIn_38_1 = (this.field_K) && (this.field_W == WeightedLruCache.field_d) && (param0);
         this.field_kb = stackIn_38_1;
         if (this.field_M != null) {
-          var14 = (SceneWidget) (this.field_M.b(1063677678));
+          var14 = (SceneWidget) (this.field_M.last(1063677678));
           while (var14 != null) {
             var14.a(param0, this.field_zb, this.field_cb, this.field_Lb, (byte) 1, this.field_Rb);
-            var14 = (SceneWidget) (this.field_M.a(-2137));
+            var14 = (SceneWidget) (this.field_M.previous(-2137));
           }
         }
         if (this.field_K) {
@@ -789,11 +789,11 @@ class SceneWidget extends SceneWidgetNode {
         SceneWidget var4 = null;
         int var3 = SteelSentinels.obfuscationControl;
         if (null != this.field_M) {
-          var4 = (SceneWidget) (this.field_M.b(1063677678));
+          var4 = (SceneWidget) (this.field_M.last(1063677678));
           while (var4 != null) {
             var4.field_R = true;
             var4.h(42);
-            var4 = (SceneWidget) (this.field_M.a(-2137));
+            var4 = (SceneWidget) (this.field_M.previous(-2137));
           }
         }
         int var2 = 126 % ((param0 + 23) / 57);

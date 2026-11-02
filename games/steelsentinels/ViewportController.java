@@ -251,8 +251,8 @@ final class ViewportController {
           var6 = 2 + SocketConnector.field_b * var4;
           var7 = UiContainer.a(12, 127, var2_int, var5);
           var8 = QuickChatHelpDialog.a(var3, 0, 20, var6);
-          SoftwareRaster.h(var7, var8, var5, var6, 0);
-          SoftwareRaster.a(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
+          SoftwareRaster.drawRectangleOutline(var7, var8, var5, var6, 0);
+          SoftwareRaster.fillRectangle(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
           bd.field_f.field_L.a(param0, 3 + var7, param1 + var8 - (-km.field_g + bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, SocketConnector.field_b);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "jg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

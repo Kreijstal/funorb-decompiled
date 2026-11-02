@@ -245,8 +245,8 @@ final class ln {
           IOException var2 = null;
           var3 = SteelSentinels.obfuscationControl;
           try {
-            if (ne.field_N != null) {
-              ne.field_N.b(111);
+            if (FallingPickup.field_N != null) {
+              FallingPickup.field_N.b(111);
             }
             if (param0 != -8601) {
               field_b = (String) null;

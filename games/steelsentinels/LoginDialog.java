@@ -155,7 +155,7 @@ final class LoginDialog extends ContentTransitionDialog {
         if (MenuInputState.field_p) {
           Sprite.field_l.a(Explosion.field_C, 126);
         }
-        Sprite.field_l.a(fl.field_c, 122);
+        Sprite.field_l.a(TeamColourTinter.field_c, 122);
         BoundedRandomAccessFile.field_f = new uf(ThreeSliceButtonPainter.field_p, Sprite.field_l);
         QuickChatMenu.field_Ub = new SceneWidget(0L, (SceneWidget) null);
         QuickChatMenu.field_Ub.a(BoundedRandomAccessFile.field_f.field_d, param0 - 734);

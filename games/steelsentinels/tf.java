@@ -79,7 +79,7 @@ final class tf {
 
     final static void a(int param0, boolean param1) {
         if (null != qf.field_e) {
-          SoftwareRaster.f(SoftwareRaster.field_i, SoftwareRaster.field_l, -SoftwareRaster.field_i + SoftwareRaster.field_b, SoftwareRaster.field_d - SoftwareRaster.field_l);
+          SoftwareRaster.halveBrightnessRectangle(SoftwareRaster.field_i, SoftwareRaster.field_l, -SoftwareRaster.field_i + SoftwareRaster.field_b, SoftwareRaster.field_d - SoftwareRaster.field_l);
           qf.field_e.a(param1, (byte) 127);
         }
         if (param0 != 0) {

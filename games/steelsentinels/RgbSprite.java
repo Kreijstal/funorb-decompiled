@@ -704,7 +704,7 @@ class RgbSprite extends wi {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void copyOpaqueRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -1901,7 +1901,7 @@ class RgbSprite extends wi {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawTiled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         for (var5 = 0; var5 < param3; var5++) {
@@ -2300,7 +2300,7 @@ class RgbSprite extends wi {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.field_g, this.field_E, var4, var3, var6, var5, var7, var8);
+          RgbSprite.copyOpaqueRows(SoftwareRaster.field_g, this.field_E, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

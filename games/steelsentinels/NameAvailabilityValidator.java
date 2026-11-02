@@ -48,12 +48,12 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         RuntimeException var5 = null;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          SoftwareRaster.h(param0, param1, param2, param3, 12105914);
+          SoftwareRaster.drawRectangleOutline(param0, param1, param2, param3, 12105914);
           SoftwareRaster.e(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
           var6 = -126 / ((param4 - 69) / 50);
           var5_int = 64;
           for (var7 = 1; var7 <= 6; var7++) {
-            SoftwareRaster.h(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
+            SoftwareRaster.drawRectangleOutlineAlpha(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
             var5_int = var5_int >> 1;
           }
           return;

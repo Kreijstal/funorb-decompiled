@@ -119,12 +119,12 @@ final class DropTargetWidget extends SingleChildContainer {
             }
             if (GzipDecoder.field_c &&
               nf.field_b.field_wc >= nf.field_b.field_Ub) {
-              fl.field_c.field_T = false;
+              TeamColourTinter.field_c.field_T = false;
               TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
               ue.a(0, TabbedPanel.field_Sb.field_Ub);
             } else {
               TabbedPanel.field_Sb.field_Tb.field_S = null;
-              fl.field_c.field_T = true;
+              TeamColourTinter.field_c.field_T = true;
               WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
             }
           } else {
@@ -146,12 +146,12 @@ final class DropTargetWidget extends SingleChildContainer {
             }
             if (GzipDecoder.field_c &&
               nf.field_b.field_wc >= nf.field_b.field_Ub) {
-              fl.field_c.field_T = false;
+              TeamColourTinter.field_c.field_T = false;
               TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
               ue.a(0, TabbedPanel.field_Sb.field_Ub);
             } else {
               TabbedPanel.field_Sb.field_Tb.field_S = null;
-              fl.field_c.field_T = true;
+              TeamColourTinter.field_c.field_T = true;
               WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
             }
           }
@@ -188,12 +188,12 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               if (GzipDecoder.field_c &&
                 nf.field_b.field_wc >= nf.field_b.field_Ub) {
-                fl.field_c.field_T = false;
+                TeamColourTinter.field_c.field_T = false;
                 TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
                 ue.a(0, TabbedPanel.field_Sb.field_Ub);
               } else {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
-                fl.field_c.field_T = true;
+                TeamColourTinter.field_c.field_T = true;
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               }
             } else {
@@ -215,12 +215,12 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               if (GzipDecoder.field_c &&
                 nf.field_b.field_wc >= nf.field_b.field_Ub) {
-                fl.field_c.field_T = false;
+                TeamColourTinter.field_c.field_T = false;
                 TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
                 ue.a(0, TabbedPanel.field_Sb.field_Ub);
               } else {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
-                fl.field_c.field_T = true;
+                TeamColourTinter.field_c.field_T = true;
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               }
             }
@@ -257,12 +257,12 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               if (GzipDecoder.field_c &&
                 nf.field_b.field_wc >= nf.field_b.field_Ub) {
-                fl.field_c.field_T = false;
+                TeamColourTinter.field_c.field_T = false;
                 TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
                 ue.a(0, TabbedPanel.field_Sb.field_Ub);
               } else {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
-                fl.field_c.field_T = true;
+                TeamColourTinter.field_c.field_T = true;
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               }
             } else {
@@ -284,15 +284,15 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               if (!GzipDecoder.field_c) {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
-                fl.field_c.field_T = true;
+                TeamColourTinter.field_c.field_T = true;
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               } else {
                 if (nf.field_b.field_wc < nf.field_b.field_Ub) {
                   TabbedPanel.field_Sb.field_Tb.field_S = null;
-                  fl.field_c.field_T = true;
+                  TeamColourTinter.field_c.field_T = true;
                   WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
                 } else {
-                  fl.field_c.field_T = false;
+                  TeamColourTinter.field_c.field_T = false;
                   TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
                   ue.a(0, TabbedPanel.field_Sb.field_Ub);
                 }

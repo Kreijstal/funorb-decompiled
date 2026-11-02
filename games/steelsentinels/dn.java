@@ -459,7 +459,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_game_friends_only");
                 if (null != var2) {
-                  ne.field_H = IntKeyLookup.a(13, var2);
+                  FallingPickup.field_H = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_game_friends");
                 if (var2 != null) {
