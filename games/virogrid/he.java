@@ -1,50 +1,50 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends UiWidget {
+final class he extends km {
     int field_ic;
     boolean field_Ib;
-    static UiWidget field_Jb;
+    static km field_Jb;
     static int field_nc;
     int field_fc;
     boolean field_Sb;
-    UiWidget field_oc;
+    km field_oc;
     int field_lc;
     int field_Mb;
     boolean field_Rb;
-    UiWidget field_Yb;
-    UiWidget field_Gb;
-    UiWidget field_rc;
-    UiWidget field_Kb;
+    km field_Yb;
+    km field_Gb;
+    km field_rc;
+    km field_Kb;
     long field_gc;
-    UiWidget field_bc;
+    km field_bc;
     int field_ac;
     static String field_cc;
-    UiWidget field_Vb;
+    km field_Vb;
     boolean field_dc;
-    UiWidget field_Lb;
+    km field_Lb;
     boolean field_kc;
     static fe field_Xb;
-    UiWidget field_Fb;
-    UiWidget field_uc;
-    UiWidget field_Ob;
+    km field_Fb;
+    km field_uc;
+    km field_Ob;
     byte[] field_Pb;
     static int field_ec;
-    UiWidget[] field_jc;
+    km[] field_jc;
     static String field_Wb;
-    UiWidget field_qc;
-    UiWidget field_Tb;
+    km field_qc;
+    km field_Tb;
     String[] field_Zb;
     String field_Qb;
     int field_Eb;
-    UiWidget field_Nb;
+    km field_Nb;
     boolean field_sc;
     long field_Hb;
     static jm field_pc;
     int field_mc;
     boolean field_Ub;
-    UiWidget field_hc;
-    UiWidget field_tc;
+    km field_hc;
+    km field_tc;
     int field_vc;
 
     final static Sprite[] a(Sprite[] param0, int param1) {
@@ -170,13 +170,13 @@ final class he extends UiWidget {
           dh.field_n = 0 == sh.field_qb.readUnsignedByte(11132) ? true : false;
           return;
         }
-        field_Jb = (UiWidget) null;
+        field_Jb = (km) null;
         wg.field_f = false;
         dh.field_n = 0 == sh.field_qb.readUnsignedByte(11132) ? true : false;
     }
 
     he(int param0) {
-        super(0L, (UiWidget) null);
+        super(0L, (km) null);
         this.field_Pb = new byte[param0];
     }
 

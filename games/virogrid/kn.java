@@ -322,7 +322,7 @@ final class kn extends ec {
         }
     }
 
-    kn(fi param0) {
+    kn(UiWidget param0) {
         super(param0.field_l, param0.field_u, param0.field_g, param0.field_m, (ol) null, (cd) null);
         try {
           param0.a(this.field_m, true, 0, 0, this.field_g);

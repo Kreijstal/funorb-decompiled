@@ -20,7 +20,7 @@ final class ae implements ol {
         field_e = null;
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

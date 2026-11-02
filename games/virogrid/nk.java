@@ -4,8 +4,8 @@
 class nk extends tg {
     private String[] field_F;
     static String field_M;
-    static UiWidget field_H;
-    static UiWidget field_I;
+    static km field_H;
+    static km field_I;
     private IntrusiveDeque field_G;
     static String field_J;
     private pb field_L;
@@ -42,8 +42,8 @@ class nk extends tg {
         gm var5 = (gm) ((Object) this.field_w);
         pb var6 = this.field_L;
         if (var6 != null) {
-          var7 = var5.a(param1, (fi) (this), param0 ^ -7537);
-          var8 = var5.b(param0 - 587719076, (fi) (this), param2);
+          var7 = var5.a(param1, (UiWidget) (this), param0 ^ -7537);
+          var8 = var5.b(param0 - 587719076, (UiWidget) (this), param2);
           do {
             b.a(-2 + (var8 + var6.field_g), (byte) 69, -2 + var6.field_r + var7, var6.field_j + 2, 2 + var6.field_s);
             var6 = var6.field_q;
@@ -75,7 +75,7 @@ class nk extends tg {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        this.a(((gm) ((Object) this.field_w)).a((fi) (this), param3 ^ -12), true, param1, param2, param0);
+        this.a(((gm) ((Object) this.field_w)).a((UiWidget) (this), param3 ^ -12), true, param1, param2, param0);
         if (param3 != -125) {
           this.b((byte) -28, -103, -84, -16);
         }
@@ -109,7 +109,7 @@ class nk extends tg {
         }
         var2 = 0;
         var3 = (gm) ((Object) this.field_w);
-        var4 = var3.a((fi) (this), (byte) -122);
+        var4 = var3.a((UiWidget) (this), (byte) -122);
         while (true) {
           var5 = this.field_n.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -155,7 +155,7 @@ class nk extends tg {
         this.e(-121);
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -201,7 +201,7 @@ class nk extends tg {
         }
     }
 
-    boolean a(fi param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

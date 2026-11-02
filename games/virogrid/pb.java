@@ -5,7 +5,7 @@ final class pb extends IntrusiveNode {
     static String field_m;
     int field_o;
     int field_j;
-    static UiWidget field_p;
+    static km field_p;
     static String field_k;
     static int[] field_i;
     pb field_q;
@@ -18,7 +18,7 @@ final class pb extends IntrusiveNode {
 
     final static boolean a(int param0) {
         if (param0 != 4) {
-          field_p = (UiWidget) null;
+          field_p = (km) null;
           if (null == kk.field_q) {
             return false;
           }

@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class gf extends fi implements ja {
-    fi[] field_E;
+abstract class gf extends UiWidget implements ja {
+    UiWidget[] field_E;
     static String field_B;
     static String field_C;
     static lc field_z;
@@ -13,7 +13,7 @@ abstract class gf extends fi implements ja {
     static String field_y;
     static String field_x;
 
-    private final boolean b(fi param0, int param1) {
+    private final boolean b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -56,15 +56,15 @@ abstract class gf extends fi implements ja {
 
     abstract void c(byte param0);
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var7 = 0;
-        fi[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        fi var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
-        fi[] var10 = null;
+        UiWidget[] var10 = null;
         boolean stackIn_17_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -126,12 +126,12 @@ abstract class gf extends fi implements ja {
 
     void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
-        fi var6;
+        UiWidget var6;
         int var7;
         var7 = Virogrid.field_F ? 1 : 0;
         if (param3 == 0 &&
           this.field_w != null) {
-          this.field_w.a(param1, (fi) (this), true, param2, -23294);
+          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         if (param0 != 37) {
           return;
@@ -146,13 +146,13 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    final boolean a(fi param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         int var4 = 0;
-        fi[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
-        fi var5 = null;
+        UiWidget var5 = null;
         int var6 = 0;
-        fi[] var7 = null;
+        UiWidget[] var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -162,7 +162,7 @@ abstract class gf extends fi implements ja {
           var7 = this.field_E;
           var3 = var7;
           if (param1 != -8515) {
-            this.field_E = (fi[]) null;
+            this.field_E = (UiWidget[]) null;
           }
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
@@ -186,14 +186,14 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
-        fi[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        fi var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
         StringBuilder var12 = null;
-        fi[] var13 = null;
+        UiWidget[] var13 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -234,8 +234,8 @@ abstract class gf extends fi implements ja {
     final int b(byte param0) {
         int var4 = 0;
         int var2;
-        fi[] var3;
-        fi var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = Virogrid.field_F ? 1 : 0;
@@ -262,10 +262,10 @@ abstract class gf extends fi implements ja {
         int var8 = 0;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$4 = null;
-        fi var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
         StringBuilder var10 = null;
-        fi[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -316,13 +316,13 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    final boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
-        fi[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        fi var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        fi[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -361,12 +361,12 @@ abstract class gf extends fi implements ja {
         super(param0, param1, param2, param3, param4, (cd) null);
     }
 
-    private final fi a(int param0) {
+    private final UiWidget a(int param0) {
         int var3 = 0;
-        fi[] var2;
-        fi var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        fi[] var6;
+        UiWidget[] var6;
         var5 = Virogrid.field_F ? 1 : 0;
         if (this.field_E == null) {
           return null;
@@ -386,18 +386,18 @@ abstract class gf extends fi implements ja {
         return null;
     }
 
-    private final boolean a(int param0, fi param1, int param2) {
+    private final boolean a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        fi var5 = null;
-        fi var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fi var6Lifetime1;
-        fi var6Lifetime2;
+        UiWidget var6Lifetime1;
+        UiWidget var6Lifetime2;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           if (null == this.field_E) {
@@ -437,11 +437,11 @@ abstract class gf extends fi implements ja {
 
     final void c(int param0) {
         int var3 = 0;
-        fi[] var2;
-        fi var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        fi[] var7;
-        fi var6;
+        UiWidget[] var7;
+        UiWidget var6;
         var5 = Virogrid.field_F ? 1 : 0;
         var7 = this.field_E;
         var2 = var7;
@@ -452,16 +452,16 @@ abstract class gf extends fi implements ja {
           }
         }
         if (param0 != -1) {
-          var6 = (fi) null;
-          this.a((fi) null, -37);
+          var6 = (UiWidget) null;
+          this.a((UiWidget) null, -37);
         }
     }
 
     final String d(int param0) {
         int var3 = 0;
-        fi discarded$0 = null;
-        fi[] var2;
-        fi var4;
+        UiWidget discarded$0 = null;
+        UiWidget[] var2;
+        UiWidget var4;
         int var6;
         String var5;
         var6 = Virogrid.field_F ? 1 : 0;
@@ -507,7 +507,7 @@ abstract class gf extends fi implements ja {
         return false;
     }
 
-    private final boolean c(fi param0, int param1) {
+    private final boolean c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String var4 = null;
         boolean stackIn_3_0 = false;
@@ -747,11 +747,11 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    private final boolean a(fi param0, int param1, byte param2) {
+    private final boolean a(UiWidget param0, int param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        fi var5 = null;
-        fi var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -806,12 +806,12 @@ abstract class gf extends fi implements ja {
         field_A = null;
     }
 
-    final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var8 = 0;
-        fi[] var7 = null;
-        fi var9 = null;
+        UiWidget[] var7 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        fi[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -831,7 +831,7 @@ abstract class gf extends fi implements ja {
             }
           }
           if (param5 < 73) {
-            this.field_E = (fi[]) null;
+            this.field_E = (UiWidget[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -848,12 +848,12 @@ abstract class gf extends fi implements ja {
         }
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
-        fi[] var5 = null;
+    void a(int param0, int param1, UiWidget param2, int param3) {
+        UiWidget[] var5 = null;
         int var6 = 0;
-        fi var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        fi[] var9 = null;
+        UiWidget[] var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

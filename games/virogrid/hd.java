@@ -142,7 +142,7 @@ final class hd {
                       param1.a(4, 88);
                     } else {
                       param1.a(2, 125);
-                      param1.a((String) (var10), (byte) -102);
+                      param1.writeString((String) (var10), (byte) -102);
                     }
                   } else {
                     if (4 == var6_int) {

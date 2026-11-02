@@ -4,7 +4,7 @@
 final class ab extends gf implements ta {
     static String field_I;
     static int[] field_H;
-    static UiWidget field_K;
+    static km field_K;
     static il field_L;
     private jb field_M;
     static bk field_G;
@@ -16,7 +16,7 @@ final class ab extends gf implements ta {
         this.field_M = new jb(new cc(10000536), wd.field_a, 0, 0, 140, 25);
         this.field_M.a(2, new al());
         this.field_N = new tg(md.field_c, (cd) (this));
-        this.field_E = new fi[]{(fi) ((Object) this.field_M), (fi) ((Object) this.field_N)};
+        this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_M), (UiWidget) ((Object) this.field_N)};
         this.field_N.field_w = (ol) ((Object) new hf());
         this.d(false);
     }
@@ -110,7 +110,7 @@ final class ab extends gf implements ta {
             stackIn_20_0 = qi.field_a;
             return stackIn_20_0;
           }
-          if (fm.a(param1, param0 ^ -1369854407)) {
+          if (WhirlpoolDigest.a(param1, param0 ^ -1369854407)) {
             stackIn_23_0 = oi.a(new String[]{param1}, kk.field_o, 2);
             return stackIn_23_0;
           }
@@ -119,7 +119,7 @@ final class ab extends gf implements ta {
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.a(0, param0 ^ -25);
-          var6.a(param1, (byte) -112);
+          var6.writeString(param1, (byte) -112);
           var6.b(var6.position - var4, param0 - 74);
           if (param0 == 73) {
             return null;
@@ -142,7 +142,7 @@ final class ab extends gf implements ta {
         }
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param1 < 113) {
             ab.b(-49, -84);

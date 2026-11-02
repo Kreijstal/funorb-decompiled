@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends UiWidget {
+final class fe extends km {
     static String field_Kb;
     static boolean field_Fb;
     private StringBuilder field_Eb;
     static String field_Lb;
-    private UiWidget field_Jb;
-    private UiWidget field_Hb;
+    private km field_Jb;
+    private km field_Hb;
     private int field_Ib;
     static boolean field_Gb;
 
@@ -276,7 +276,7 @@ final class fe extends UiWidget {
         }
     }
 
-    fe(int param0, int param1, int param2, int param3, String param4, UiWidget param5, UiWidget param6, UiWidget param7) {
+    fe(int param0, int param1, int param2, int param3, String param4, km param5, km param6, km param7) {
         super(0L, param5);
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -296,9 +296,9 @@ final class fe extends UiWidget {
         int var13 = 0;
         this.field_Ib = 0;
         try {
-          this.field_Jb = new UiWidget(0L, param6, param4);
+          this.field_Jb = new km(0L, param6, param4);
           this.a(0, this.field_Jb);
-          this.field_Hb = new UiWidget(0L, param7);
+          this.field_Hb = new km(0L, param7);
           this.field_Hb.field_E = 16764006;
           this.a(0, this.field_Hb);
           this.field_Hb.field_eb = "|";

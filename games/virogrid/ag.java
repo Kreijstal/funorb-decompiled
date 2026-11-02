@@ -12,7 +12,7 @@ final class ag extends java.awt.Canvas {
     static int field_e;
     static int[] field_a;
     static int[] field_h;
-    static UiWidget field_d;
+    static km field_d;
 
     final static boolean c(int param0) {
         boolean stackIn_10_0 = false;
@@ -24,7 +24,7 @@ final class ag extends java.awt.Canvas {
           if (md.a(false)) {
             return true;
           }
-          if (null != UiWidget.field_yb) {
+          if (null != km.field_yb) {
             stackIn_20_0 = true;
           } else {
             if (af.a(false)) {
@@ -41,7 +41,7 @@ final class ag extends java.awt.Canvas {
         if (md.a(false)) {
           return true;
         }
-        if (null != UiWidget.field_yb) {
+        if (null != km.field_yb) {
           stackIn_10_0 = true;
         } else {
           if (af.a(false)) {

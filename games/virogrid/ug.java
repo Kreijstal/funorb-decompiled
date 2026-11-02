@@ -16,7 +16,7 @@ final class ug {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        fm var5 = null;
+        WhirlpoolDigest var5 = null;
         byte[] var6 = null;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
@@ -29,7 +29,7 @@ final class ug {
           } else {
             var4 = param0;
           }
-          var5 = new fm();
+          var5 = new WhirlpoolDigest();
           var5.a(-44);
           var5.a((long)(param1 * 8), param3, var4);
           var6 = new byte[64];

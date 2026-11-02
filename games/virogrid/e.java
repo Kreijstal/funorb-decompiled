@@ -162,7 +162,7 @@ abstract class e extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_F = fm.a(var4, false);
+                field_F = WhirlpoolDigest.a(var4, false);
               }
             } else {
               field_E = field_v;
@@ -270,7 +270,7 @@ abstract class e extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = fm.a(var13, false);
+                                  var10 = WhirlpoolDigest.a(var13, false);
                                   var11_ref_ah = this.field_o[var10];
                                   if (this.field_s == null) {
                                     stackIn_27_0 = var11_ref_ah.field_i;
@@ -545,7 +545,7 @@ abstract class e extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = fm.a(var10, false);
+                                  var9_int = WhirlpoolDigest.a(var10, false);
                                   var4 = var4 + this.field_o[var9_int].field_j;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -853,7 +853,7 @@ abstract class e extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = fm.a(var18, false);
+                                    var16_int = WhirlpoolDigest.a(var18, false);
                                     var4 = var4 + this.field_o[var16_int].field_j;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends UiWidget {
-    private UiWidget field_Eb;
+final class ga extends km {
+    private km field_Eb;
     private int[] field_Kb;
     private int field_Ib;
     private int field_Pb;
     private int field_Lb;
     private int field_Fb;
-    private UiWidget field_Hb;
+    private km field_Hb;
     static dl field_Ob;
     private Sprite[] field_Jb;
     private int field_Qb;
@@ -77,7 +77,7 @@ final class ga extends UiWidget {
 
     final void a(int param0, String param1, int param2) {
         try {
-          this.field_Gb[this.field_Qb] = new hk(0L, (UiWidget) null, (UiWidget) null, this.field_Eb, (Sprite) null, param1);
+          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, (Sprite) null, param1);
           this.field_Gb[this.field_Qb].field_x = this.field_Jb;
           this.field_Gb[this.field_Qb].field_ib = true;
           this.field_Gb[this.field_Qb].field_D = param0;
@@ -91,7 +91,7 @@ final class ga extends UiWidget {
 
     final void a(String param0, byte param1, int param2, Sprite param3) {
         try {
-          this.field_Gb[this.field_Qb] = new hk(0L, (UiWidget) null, (UiWidget) null, this.field_Eb, param3, param0);
+          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, param3, param0);
           this.field_Gb[this.field_Qb].field_x = this.field_Jb;
           this.field_Gb[this.field_Qb].field_ib = true;
           this.field_Gb[this.field_Qb].field_D = 1;
@@ -114,7 +114,7 @@ final class ga extends UiWidget {
         return ql.field_q.a((byte) 19);
     }
 
-    ga(UiWidget param0, Sprite[] param1, UiWidget param2, UiWidget param3, int param4, int param5, int param6, int param7, int param8) {
+    ga(km param0, Sprite[] param1, km param2, km param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Nb = -2;
         this.field_Kb = new int[256];
@@ -144,7 +144,7 @@ final class ga extends UiWidget {
         int var8Lifetime1;
         var11 = Virogrid.field_F ? 1 : 0;
         if (this.field_Qb == 0) {
-          this.field_Gb[this.field_Qb] = new hk(0L, (UiWidget) null, (UiWidget) null, this.field_Hb, (Sprite) null, cg.field_a);
+          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Hb, (Sprite) null, cg.field_a);
           this.field_Gb[this.field_Qb].field_D = 1;
           this.a(0, this.field_Gb[this.field_Qb]);
           this.field_Kb[this.field_Qb] = -1;

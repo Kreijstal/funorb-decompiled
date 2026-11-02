@@ -11,7 +11,7 @@ final class th extends DualLinkNode {
     static String field_r;
     static String[][] field_p;
     static il field_y;
-    static UiWidget[] field_o;
+    static km[] field_o;
     static String field_s;
     static boolean field_q;
 
@@ -213,7 +213,7 @@ final class th extends DualLinkNode {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 == 1) {
-            this.field_w = ql.a(param2.h(-122), (byte) -123, '<');
+            this.field_w = ql.a(param2.readString(-122), (byte) -123, '<');
           } else {
             if (param0 == 2) {
               var4_int = param2.readUnsignedByte(11132);

@@ -314,7 +314,7 @@ final class nm {
           } else if (2 != IntrusiveDeque.field_d) {
             if (IntrusiveDeque.field_d == 3) {
               if (!ei.field_c.field_a) {
-                var4 = sf.a((byte) 127, fd.field_x, j.field_h, rf.field_b, CellFlip.field_l);
+                var4 = sf.a((byte) 127, WidgetContainer.field_x, j.field_h, rf.field_b, CellFlip.field_l);
               } else {
                 var4 = sf.a((byte) 120, Js5Archive.field_h, j.field_h, rf.field_b, CellFlip.field_l);
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rd extends fd implements fg {
+abstract class rd extends WidgetContainer implements fg {
     private al field_D;
 
     rd(int param0, int param1, int param2, int param3, ol param4) {

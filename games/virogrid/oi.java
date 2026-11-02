@@ -9,7 +9,7 @@ final class oi {
     static StringBuilder field_h;
     static volatile long field_b;
     static IntrusiveDeque field_a;
-    static sc[] field_c;
+    static MusicTrack[] field_c;
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         int discarded$0 = 0;
@@ -381,7 +381,7 @@ final class oi {
                 continue;
               }
               var5++;
-              var8 = fm.a((CharSequence) ((Object) var7_ref_String), false);
+              var8 = WhirlpoolDigest.a((CharSequence) ((Object) var7_ref_String), false);
               var4 = var4 + (-var5 + var6_int + args[var8].length());
               continue;
             }
@@ -414,7 +414,7 @@ final class oi {
               continue;
             }
             var5Lifetime1++;
-            var10 = fm.a((CharSequence) ((Object) var9), false);
+            var10 = WhirlpoolDigest.a((CharSequence) ((Object) var9), false);
             discarded$0 = var6.append(param1.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);
@@ -442,7 +442,7 @@ final class oi {
     final static void a(boolean param0, int param1) {
         mi.a(param0, -8241);
         if (param1 != 6) {
-          field_c = (sc[]) null;
+          field_c = (MusicTrack[]) null;
         }
         we.a(false, param0);
     }
@@ -499,7 +499,7 @@ final class oi {
         }
         var3 = 1141646;
         if (param1 != 16290) {
-          field_c = (sc[]) null;
+          field_c = (MusicTrack[]) null;
         }
         var4 = hd.field_b.field_H + 64;
         var5 = var4;
@@ -908,13 +908,13 @@ final class oi {
                                 switch (var5) {
                                   case 26:
                                     if (this.field_f.c(-1)) {
-                                      eg.field_y = (eg.field_y + 1) % sh.field_yb.length;
+                                      eg.field_y = (eg.field_y + 1) % sh.turnDurations.length;
                                       break regionExit1;
                                     }
                                     if (!this.field_f.d(26505)) {
                                       break regionExit2;
                                     }
-                                    eg.field_y = (-1 - (-sh.field_yb.length - eg.field_y)) % sh.field_yb.length;
+                                    eg.field_y = (-1 - (-sh.turnDurations.length - eg.field_y)) % sh.turnDurations.length;
                                     break regionExit1;
                                   default:
                                     break regionExit1;
@@ -933,10 +933,10 @@ final class oi {
                                 }
                               }
                               if (this.field_f.c(-1)) {
-                                ll.field_b = (ll.field_b + 1) % ra.field_a.length;
+                                ll.field_b = (ll.field_b + 1) % ra.gridSizes.length;
                               } else {
                                 if (!(!this.field_f.d(26505))) {
-                                  ll.field_b = (ra.field_a.length - 1 + ll.field_b) % ra.field_a.length;
+                                  ll.field_b = (ra.gridSizes.length - 1 + ll.field_b) % ra.gridSizes.length;
                                 }
                               }
                               break regionExit1;
@@ -1188,7 +1188,7 @@ final class oi {
         var13 = this.a(param3, (byte) -123);
         var14 = var10 - var9;
         var15 = this.a(param3, (byte) 56);
-        fd.a(param2, 6752, var14, var9, param1, var11, var15);
+        WidgetContainer.a(param2, 6752, var14, var9, param1, var11, var15);
         stackIn_52_0 = (!param1) ? 8437759 : 16777215;
         var16 = stackIn_52_0;
         if (17 == var6 &&

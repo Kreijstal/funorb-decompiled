@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends fd implements bo, ta {
+final class ca extends WidgetContainer implements bo, ta {
     private boolean field_T;
     private wa field_E;
     private wa field_K;
@@ -238,12 +238,12 @@ final class ca extends fd implements bo, ta {
           }
           dupTemp$0 = new ej(10, this.field_u, this.field_g - 20, 25, this.field_E, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((fi) (dupTemp$0), (byte) -78);
-          this.field_u = this.field_u + (5 + ((fi) ((Object) var12)).field_m);
+          this.a((UiWidget) (dupTemp$0), (byte) -78);
+          this.field_u = this.field_u + (5 + ((UiWidget) ((Object) var12)).field_m);
           dupTemp$1 = new ej(10, this.field_u, this.field_g - 20, 25, this.field_K, false, 80, 3, var7, 16777215, hm.field_b);
           var13 = dupTemp$1;
-          this.a((fi) (dupTemp$1), (byte) -78);
-          this.field_u = this.field_u + (5 + ((fi) ((Object) var13)).field_m);
+          this.a((UiWidget) (dupTemp$1), (byte) -78);
+          this.field_u = this.field_u + (5 + ((UiWidget) ((Object) var13)).field_m);
           this.field_F.field_o = (cd) (this);
           if (this.field_J != null) {
             this.field_J.field_o = (cd) (this);
@@ -273,12 +273,12 @@ final class ca extends fd implements bo, ta {
             }
           }
           this.a(this.field_u + 3, true, 0, 0, this.field_g);
-          this.a((fi) (this.field_F), (byte) -78);
+          this.a((UiWidget) (this.field_F), (byte) -78);
           if (null != this.field_J) {
-            this.a((fi) (this.field_J), (byte) -78);
+            this.a((UiWidget) (this.field_J), (byte) -78);
           }
           if (null != this.field_P) {
-            this.a((fi) (this.field_P), (byte) -78);
+            this.a((UiWidget) (this.field_P), (byte) -78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -313,7 +313,7 @@ final class ca extends fd implements bo, ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -358,7 +358,7 @@ final class ca extends fd implements bo, ta {
         RuntimeException var3 = null;
         try {
           if (this.field_E == param1) {
-            this.field_K.a((fi) (this), -8515);
+            this.field_K.a((UiWidget) (this), -8515);
           }
           if (param0) {
             field_G = 96;
@@ -510,7 +510,7 @@ final class ca extends fd implements bo, ta {
 
     public final void a(int param0, tg param1, int param2, int param3, int param4) {
         int var7 = 0;
-        fi var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -519,8 +519,8 @@ final class ca extends fd implements bo, ta {
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != 12085) {
-            var8 = (fi) null;
-            this.a((fi) null, '\026', 57, -15);
+            var8 = (UiWidget) null;
+            this.a((UiWidget) null, '\026', 57, -15);
           }
           if (this.field_F == param1) {
             this.a((byte) -127);

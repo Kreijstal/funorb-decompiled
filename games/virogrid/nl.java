@@ -132,8 +132,8 @@ final class nl extends aj {
         }
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
-        fi stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -150,7 +150,7 @@ final class nl extends aj {
           if (!(param1 instanceof tg)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (fi) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var10 = (tg) (stackIn_3_0);
           GameApplet.a(param1.field_m + param3 + param1.field_u, 6, param0 + param1.field_l, param1.field_g + param0 + param1.field_l, param3 + param1.field_u);

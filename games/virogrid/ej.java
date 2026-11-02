@@ -15,7 +15,7 @@ final class ej extends ec {
     private boolean field_J;
     static String field_F;
 
-    ej(int param0, int param1, int param2, int param3, fi param4, boolean param5, int param6, int param7, e param8, int param9, String param10) {
+    ej(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, e param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ol) null, (cd) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

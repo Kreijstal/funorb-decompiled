@@ -4,7 +4,7 @@
 final class ee {
     static String field_f;
     static String field_b;
-    static UiWidget field_e;
+    static km field_e;
     static il field_a;
     static wl field_c;
     static String field_d;
@@ -157,7 +157,7 @@ final class ee {
         if (param0 < 15) {
           return;
         }
-        fi.field_t.b(new jl(), (byte) -53);
+        UiWidget.field_t.b(new jl(), (byte) -53);
     }
 
     public static void b(byte param0) {

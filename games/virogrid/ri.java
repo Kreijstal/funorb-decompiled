@@ -59,17 +59,17 @@ final class ri {
         }
     }
 
-    final static UiWidget b(byte param0) {
+    final static km b(byte param0) {
         RuntimeException var1 = null;
-        UiWidget stackIn_2_0 = null;
-        UiWidget stackIn_4_0 = null;
+        km stackIn_2_0 = null;
+        km stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 27) {
             stackIn_4_0 = ao.d(true);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (UiWidget) null;
+          stackIn_2_0 = (km) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,16 +145,16 @@ final class ri {
             }
             stackIn_11_0 = (1 != var1.readUnsignedByte(11132)) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.h(-122);
+            var4_ref_String = var1.readString(-122);
             if (var3_int != 0) {
-              var5 = var1.h(-118);
+              var5 = var1.readString(-118);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
             var6 = kh.a((byte) 119, var4_ref_String);
-            var7_ref = var1.h(-119);
+            var7_ref = var1.readString(-119);
             var8 = c.a((CharSequence) ((Object) var4_ref_String), true);
             if (null == var8) {
               var8 = var4_ref_String;
@@ -193,7 +193,7 @@ final class ri {
             }
             if (4 == var2) {
               oa.field_q = 1;
-              var3 = var1.h(-122);
+              var3 = var1.readString(-122);
               wl.field_a = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte(11132);
               nn.a(true, var4);
@@ -210,12 +210,12 @@ final class ri {
             oa.field_h = new kf(128);
             sg.field_j = 0;
           }
-          var3Lifetime1 = var1.h(-128);
+          var3Lifetime1 = var1.readString(-128);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(-119);
-          var5Lifetime1 = var1.h(-120);
+          var4_ref_StringLifetime1 = var1.readString(-119);
+          var5Lifetime1 = var1.readString(-120);
           var6Lifetime1 = j.a(0, var4_ref_StringLifetime1);
           if (null == var6Lifetime1) {
             var6Lifetime1 = j.a(0, var5Lifetime1);

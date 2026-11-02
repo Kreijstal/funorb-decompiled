@@ -15,8 +15,8 @@ final class qn extends tg {
     static Js5Archive field_I;
     static java.util.zip.CRC32 field_S;
     static String field_L;
-    static UiWidget field_J;
-    static UiWidget field_H;
+    static km field_J;
+    static km field_H;
     static PlatformTaskDispatcher field_R;
 
     public static void c(byte param0) {
@@ -117,7 +117,7 @@ final class qn extends tg {
         }
     }
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;

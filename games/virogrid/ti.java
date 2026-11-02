@@ -7,7 +7,7 @@ final class ti implements ol {
     static e field_g;
     private int field_e;
     static String field_c;
-    static UiWidget field_h;
+    static km field_h;
     static kf field_i;
     private e field_d;
     static int field_b;
@@ -28,7 +28,7 @@ final class ti implements ol {
 
     final static String a(int param0) {
         int var1 = 89 % ((53 - param0) / 57);
-        return sh.field_qb.h(-121);
+        return sh.field_qb.readString(-121);
     }
 
     final static void a(boolean param0, int param1) {
@@ -71,7 +71,7 @@ final class ti implements ol {
         field_g = (e) null;
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

@@ -107,7 +107,7 @@ final class vc extends dc {
           this.field_gb.field_z = true;
           this.field_cb = false;
           this.field_ib = false;
-          this.a((fi) (this.field_gb), (byte) -78);
+          this.a((UiWidget) (this.field_gb), (byte) -78);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

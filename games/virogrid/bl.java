@@ -103,7 +103,7 @@ final class bl extends nb {
             var11++;
           }
           lc.field_b.a((byte) -68, param1);
-          lc.field_b.a(param2, param5, (byte) 122);
+          lc.field_b.encryptRsa(param2, param5, (byte) 122);
           param3.a(lc.field_b.payload, lc.field_b.position, 0, (byte) 20);
           param3.a(am.field_e.payload, am.field_e.position, 0, (byte) 9);
           return;

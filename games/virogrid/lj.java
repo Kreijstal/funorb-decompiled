@@ -80,8 +80,8 @@ final class lj implements ol {
         }
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
-        fi stackIn_4_0 = null;
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -94,7 +94,7 @@ final class lj implements ol {
         int var10 = 0;
         try {
           if (param1 instanceof gn) {
-            stackIn_4_0 = (fi) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }
@@ -103,7 +103,7 @@ final class lj implements ol {
             param2 = param2 & var6.field_C;
           }
           if (param4 != -23294) {
-            this.a(107, (fi) null, true, -95, -123);
+            this.a(107, (UiWidget) null, true, -95, -123);
           }
           var7 = 5592405;
           Rasterizer.b(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);

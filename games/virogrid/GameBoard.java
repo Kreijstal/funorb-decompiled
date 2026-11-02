@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameBoard {
-    private int field_s;
-    int[] field_q;
+    private int sizeSetting;
+    int[] candidateSourceRows;
     int field_b;
     int currentPlayer;
-    boolean field_n;
+    boolean boardFilled;
     static um field_j;
     int field_v;
     static boolean field_i;
@@ -14,13 +14,13 @@ final class GameBoard {
     int candidateCount;
     boolean field_g;
     int field_r;
-    int[] field_e;
-    int field_w;
-    boolean field_x;
+    int[] candidateDestRows;
+    int lastMoveDestColumn;
+    boolean playerWipedOut;
     static String field_o;
     byte[][] cells;
-    int difficulty;
-    int field_a;
+    int timeSetting;
+    int lastMoveSourceColumn;
     int field_D;
     private boolean[] field_h;
     int turnCount;
@@ -29,12 +29,12 @@ final class GameBoard {
     int[] pieceCounts;
     static String field_F;
     static String[][] field_d;
-    int field_B;
-    int field_m;
-    int field_k;
+    int lastMovePlayer;
+    int lastMoveDestRow;
+    int lastMoveSourceRow;
     String[] playerNames;
-    int[] field_G;
-    int[] field_t;
+    int[] candidateDestColumns;
+    int[] candidateSourceColumns;
 
     private final void a(int param0, int param1, byte param2) {
         int var5 = 0;
@@ -45,7 +45,7 @@ final class GameBoard {
         var6 = Virogrid.field_F ? 1 : 0;
         this.cells = new byte[param0][param1];
         if (param2 != -108) {
-          this.field_G = (int[]) null;
+          this.candidateDestColumns = (int[]) null;
         }
         for (var4 = 0; var4 < param0; var4++) {
           for (var5 = 0; var5 < param1; var5++) {
@@ -64,14 +64,14 @@ final class GameBoard {
           this.pieceCounts[var7] = 2;
           var7++;
         }
-        this.field_a = -1;
-        this.field_B = -1;
-        this.field_k = -1;
-        this.field_x = false;
-        this.field_m = -1;
-        this.field_n = false;
+        this.lastMoveSourceColumn = -1;
+        this.lastMovePlayer = -1;
+        this.lastMoveSourceRow = -1;
+        this.playerWipedOut = false;
+        this.lastMoveDestRow = -1;
+        this.boardFilled = false;
         this.field_g = false;
-        this.field_w = -1;
+        this.lastMoveDestColumn = -1;
     }
 
     final boolean cellEquals(byte param0, int param1, int param2, byte param3) {
@@ -405,42 +405,42 @@ final class GameBoard {
           this.bestScore < param1) {
           this.candidateCount = 0;
         }
-        if (this.candidateCount >= this.field_e.length) {
-          var13 = new int[this.field_e.length * 2];
+        if (this.candidateCount >= this.candidateDestRows.length) {
+          var13 = new int[this.candidateDestRows.length * 2];
           var7_ref_int__ = var13;
-          var8 = new int[this.field_e.length * 2];
-          var9 = new int[2 * this.field_e.length];
-          var10 = new int[2 * this.field_e.length];
-          for (var11 = 0; var11 < this.field_e.length; var11++) {
-            var13[var11] = this.field_e[var11];
-            var8[var11] = this.field_G[var11];
-            var9[var11] = this.field_q[var11];
-            var10[var11] = this.field_t[var11];
+          var8 = new int[this.candidateDestRows.length * 2];
+          var9 = new int[2 * this.candidateDestRows.length];
+          var10 = new int[2 * this.candidateDestRows.length];
+          for (var11 = 0; var11 < this.candidateDestRows.length; var11++) {
+            var13[var11] = this.candidateDestRows[var11];
+            var8[var11] = this.candidateDestColumns[var11];
+            var9[var11] = this.candidateSourceRows[var11];
+            var10[var11] = this.candidateSourceColumns[var11];
           }
-          this.field_t = var10;
-          this.field_q = var9;
-          this.field_G = var8;
-          this.field_e = var7_ref_int__;
+          this.candidateSourceColumns = var10;
+          this.candidateSourceRows = var9;
+          this.candidateDestColumns = var8;
+          this.candidateDestRows = var7_ref_int__;
         }
-        this.field_e[this.candidateCount] = param0;
+        this.candidateDestRows[this.candidateCount] = param0;
         var7 = 55 / ((43 - param3) / 48);
-        this.field_G[this.candidateCount] = param5;
-        this.field_q[this.candidateCount] = param2;
-        this.field_t[this.candidateCount] = param4;
+        this.candidateDestColumns[this.candidateCount] = param5;
+        this.candidateSourceRows[this.candidateCount] = param2;
+        this.candidateSourceColumns[this.candidateCount] = param4;
         this.bestScore = param1;
         this.candidateCount = this.candidateCount + 1;
     }
 
     final void c(int param0, int param1) {
         int var3;
-        this.field_n = false;
-        this.field_x = false;
+        this.boardFilled = false;
+        this.playerWipedOut = false;
         var3 = param0;
         if (var3 == 1) {
-          this.field_x = true;
+          this.playerWipedOut = true;
         } else {
           if (var3 == 2) {
-            this.field_n = true;
+            this.boardFilled = true;
           }
         }
         if (param1 != 2) {
@@ -465,7 +465,7 @@ final class GameBoard {
         }
         var2Lifetime1 = 1;
         if (param0 != 20602) {
-          this.difficulty = -14;
+          this.timeSetting = -14;
         }
         for (var3 = 0; this.cells.length > var3; var3++) {
           for (var4 = 0; var4 < this.cells[0].length; var4++) {
@@ -478,7 +478,7 @@ final class GameBoard {
           }
         }
         stackIn_22_1 = (var2Lifetime1 != 0);
-        this.field_n = stackIn_22_1;
+        this.boardFilled = stackIn_22_1;
         if (var2Lifetime1 != 0) {
           if (this.pieceCounts[0] > this.pieceCounts[1]) {
             this.finishGame(-124, 0);
@@ -492,14 +492,14 @@ final class GameBoard {
           return true;
         }
         if (this.pieceCounts[0] == 0) {
-          this.field_x = true;
+          this.playerWipedOut = true;
           this.finishGame(-101, 1);
           return true;
         }
         if (this.pieceCounts[1] != 0) {
           return false;
         }
-        this.field_x = true;
+        this.playerWipedOut = true;
         this.finishGame(-38, 0);
         return true;
     }
@@ -568,14 +568,14 @@ final class GameBoard {
           }
         }
         stackIn_17_1 = (var2Lifetime1 != 0);
-        this.field_n = stackIn_17_1;
+        this.boardFilled = stackIn_17_1;
         if (var2Lifetime1 == 0) {
           if (0 != this.pieceCounts[0]) {
             if (this.pieceCounts[1] == 0) {
-              this.field_x = true;
+              this.playerWipedOut = true;
             }
           } else {
-            this.field_x = true;
+            this.playerWipedOut = true;
           }
         }
         var3Lifetime1 = 44 / ((-11 - param0) / 62);
@@ -665,11 +665,11 @@ final class GameBoard {
           if (var13[1 - param3] < var18[param3]) {
           }
         }
-        this.field_a = param1;
-        this.field_B = param3;
-        this.field_w = param5;
-        this.field_m = param4;
-        this.field_k = param0;
+        this.lastMoveSourceColumn = param1;
+        this.lastMovePlayer = param3;
+        this.lastMoveDestColumn = param5;
+        this.lastMoveDestRow = param4;
+        this.lastMoveSourceRow = param0;
         return var12;
     }
 
@@ -681,7 +681,7 @@ final class GameBoard {
           return false;
         }
         if (param3 != 2) {
-          this.field_w = 30;
+          this.lastMoveDestColumn = 30;
           return true;
         }
         return true;
@@ -689,7 +689,7 @@ final class GameBoard {
 
     final void setTurn(int param0, int param1, int param2) {
         if (param2 != 21428) {
-          this.field_a = 70;
+          this.lastMoveSourceColumn = 70;
         }
         this.currentPlayer = param0;
         this.turnCount = param1;
@@ -793,11 +793,11 @@ final class GameBoard {
         var20 = Virogrid.field_F ? 1 : 0;
         var21 = new int[]{-1, -1, -1, 0, 0, 1, 1, 1, 2, 2, 2, 0, 0, -2, -2, -2};
         var24 = var21;
-        this.field_e = new int[this.cells.length * this.cells[param1].length];
+        this.candidateDestRows = new int[this.cells.length * this.cells[param1].length];
         var4 = new int[]{-1, 0, 1, -1, 1, -1, 0, 1, 0, -2, 2, -2, 2, -2, 0, 2};
-        this.field_G = new int[this.cells.length * this.cells[0].length];
-        this.field_q = new int[this.cells[0].length * this.cells.length];
-        this.field_t = new int[this.cells[0].length * this.cells.length];
+        this.candidateDestColumns = new int[this.cells.length * this.cells[0].length];
+        this.candidateSourceRows = new int[this.cells[0].length * this.cells.length];
+        this.candidateSourceColumns = new int[this.cells[0].length * this.cells.length];
         this.candidateCount = 0;
         this.bestScore = -2147483648;
         var5 = (byte)this.currentPlayer;
@@ -885,21 +885,21 @@ final class GameBoard {
 
     GameBoard(int param0, String[] param1, int param2, int param3) {
         this.field_h = new boolean[2];
-        this.field_B = -1;
-        this.field_m = -1;
-        this.field_k = -1;
-        this.field_w = -1;
-        this.field_a = -1;
+        this.lastMovePlayer = -1;
+        this.lastMoveDestRow = -1;
+        this.lastMoveSourceRow = -1;
+        this.lastMoveDestColumn = -1;
+        this.lastMoveSourceColumn = -1;
         try {
-          this.difficulty = param0;
+          this.timeSetting = param0;
           if (param1.length != 2) {
             throw new RuntimeException();
           }
           this.field_v = param2;
           this.currentPlayer = param2;
           this.playerNames = param1;
-          this.field_s = param3;
-          this.a(ra.field_a[this.field_s], ra.field_a[this.field_s], (byte) -108);
+          this.sizeSetting = param3;
+          this.a(ra.gridSizes[this.sizeSetting], ra.gridSizes[this.sizeSetting], (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "uf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class in extends IntrusiveNode {
+abstract class AudioStream extends IntrusiveNode {
     tj field_j;
     int field_i;
     volatile boolean field_g;
-    in field_h;
+    AudioStream field_h;
 
     int a() {
         return 255;
@@ -23,13 +23,13 @@ abstract class in extends IntrusiveNode {
         }
     }
 
-    protected in() {
+    protected AudioStream() {
         this.field_g = true;
     }
 
     abstract void a(int param0);
 
-    abstract in c();
+    abstract AudioStream c();
 
-    abstract in b();
+    abstract AudioStream b();
 }

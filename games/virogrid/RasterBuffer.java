@@ -70,7 +70,7 @@ abstract class RasterBuffer {
 
     abstract void a(byte param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static oj a(UiWidget param0, UiWidget param1, u param2, int param3, UiWidget param4) {
+    final static oj a(km param0, km param1, u param2, int param3, km param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

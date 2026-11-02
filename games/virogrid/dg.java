@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends fi {
+final class dg extends UiWidget {
     static int field_x;
     private Sprite[] field_D;
     private int field_K;
@@ -9,7 +9,7 @@ final class dg extends fi {
     boolean field_z;
     private int field_y;
     private Sprite field_I;
-    static UiWidget field_E;
+    static km field_E;
     static String field_G;
     private Sprite field_B;
     private int field_J;
@@ -284,7 +284,7 @@ final class dg extends fi {
         }
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends UiWidget {
-    static UiWidget field_Ib;
+final class na extends km {
+    static km field_Ib;
     static String field_Eb;
-    private UiWidget field_Jb;
+    private km field_Jb;
     static lc field_Fb;
     static String field_Gb;
     static int field_Hb;
@@ -66,7 +66,7 @@ final class na extends UiWidget {
         field_Gb = null;
     }
 
-    na(UiWidget param0, UiWidget param1, UiWidget param2, UiWidget param3, UiWidget param4, UiWidget param5) {
+    na(km param0, km param1, km param2, km param3, km param4, km param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -83,27 +83,27 @@ final class na extends UiWidget {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        UiWidget var8 = null;
-        UiWidget var9 = null;
+        km var8 = null;
+        km var9 = null;
         int var10 = 0;
         int var11 = 0;
-        UiWidget var13 = null;
-        UiWidget var14 = null;
+        km var13 = null;
+        km var14 = null;
         int var15 = 0;
-        UiWidget var17 = null;
+        km var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new UiWidget(0L, param1, je.field_G.toUpperCase());
+          var17 = new km(0L, param1, je.field_G.toUpperCase());
           var17.field_lb = 1;
-          this.field_Jb = new UiWidget(0L, param2);
-          var8 = new UiWidget(0L, param3);
-          var9 = new UiWidget(0L, param3, ImageProducerRasterBuffer.field_q);
+          this.field_Jb = new km(0L, param2);
+          var8 = new km(0L, param3);
+          var9 = new km(0L, param3, ImageProducerRasterBuffer.field_q);
           var9.field_lb = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; dl.field_a.length > var12; var12++) {
-            var13 = new UiWidget(0L, param3, lb.field_b[var12]);
-            var14 = new UiWidget(0L, param3, dl.field_a[var12]);
+            var13 = new km(0L, param3, lb.field_b[var12]);
+            var14 = new km(0L, param3, dl.field_a[var12]);
             var15 = param3.field_C.a(dl.field_a[var12]);
             var13.a(20, 15, 65, (byte) -76, var10);
             if (var11 < var15) {

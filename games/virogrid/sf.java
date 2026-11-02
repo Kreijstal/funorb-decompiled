@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends fd implements ta {
+final class sf extends WidgetContainer implements ta {
     static double field_M;
     private tg[] field_E;
     private String field_D;
@@ -47,7 +47,7 @@ final class sf extends fd implements ta {
           var5 = this.field_m - 2;
           this.a(this.field_m + 34, true, 0, 0, this.field_g);
           var4.a(30, true, var5, 7, -14 + this.field_g);
-          this.a((fi) (var4), (byte) -78);
+          this.a((UiWidget) (var4), (byte) -78);
           if (param1 != 260) {
             this.field_L = (e) null;
           }

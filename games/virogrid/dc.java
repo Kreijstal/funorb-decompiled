@@ -10,7 +10,7 @@ abstract class dc extends gg {
     private int field_ab;
     static int field_O;
     private int field_T;
-    static UiWidget field_R;
+    static km field_R;
     private int field_U;
     private int field_S;
     static boolean[] field_Y;

@@ -40,7 +40,7 @@ final class kk extends qe {
             return stackIn_4_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = fm.a(var5, false);
+          var3_int = WhirlpoolDigest.a(var5, false);
           if (var3_int > 0 &&
             130 >= var3_int) {
             return bm.field_i;

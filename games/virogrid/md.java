@@ -126,9 +126,9 @@ final class md {
           if (var7 == null) {
             var7 = "";
           }
-          gk.field_g.a(var7, (byte) -63);
+          gk.field_g.writeString(var7, (byte) -63);
           if (null != mj.field_B) {
-            gk.field_g.b(mj.field_B, (byte) 127);
+            gk.field_g.writeZeroPrefixedString(mj.field_B, (byte) 127);
           }
           nl.a(on.field_a, gg.field_D, gk.field_g, ch.field_i, param1);
           gk.field_g.c(-var5_int + gk.field_g.position, -3991);

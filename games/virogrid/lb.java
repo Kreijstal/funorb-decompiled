@@ -35,7 +35,7 @@ final class lb {
         boolean stackIn_70_6;
         Object stackIn_73_0 = null;
         int stackIn_91_0 = 0;
-        UiWidget stackIn_159_0 = null;
+        km stackIn_159_0 = null;
         int stackIn_159_1 = 0;
         int stackIn_159_2 = 0;
         int stackIn_160_3 = 0;
@@ -55,11 +55,11 @@ final class lb {
         Object var11 = null;
         lk var12 = null;
         int var13 = 0;
-        UiWidget var14 = null;
-        UiWidget var15 = null;
-        UiWidget var16 = null;
-        UiWidget var17 = null;
-        UiWidget var18 = null;
+        km var14 = null;
+        km var15 = null;
+        km var16 = null;
+        km var17 = null;
+        km var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -159,19 +159,19 @@ final class lb {
                 return;
               }
               if (null == var12.field_W) {
-                var12.field_Lb = new UiWidget(0L, gg.field_F);
+                var12.field_Lb = new km(0L, gg.field_F);
                 var12.a(0, var12.field_Lb);
-                var12.field_Kb = new UiWidget(0L, jd.field_d);
+                var12.field_Kb = new km(0L, jd.field_d);
                 if (ql.field_d) {
                   var12.a(0, var12.field_Kb);
                 }
                 var12.field_Kb.field_lb = 2;
-                var12.field_Yb = new UiWidget(0L, ti.field_h);
+                var12.field_Yb = new km(0L, ti.field_h);
                 var12.a(param4 - 21547, var12.field_Yb);
                 var12.b((byte) 42);
-                var12.field_Hb = new UiWidget(0L, id.field_a);
+                var12.field_Hb = new km(0L, id.field_a);
                 var12.a(param4 ^ 21547, var12.field_Hb);
-                var12.field_Mb = new UiWidget(0L, kf.field_g);
+                var12.field_Mb = new km(0L, kf.field_g);
                 var13 = 1;
                 var12.a(0, var12.field_Mb);
               }
@@ -280,24 +280,24 @@ final class lb {
                 } else {
                   stackIn_160_3 = 42;
                 }
-                ((UiWidget) (Object) stackIn_159_0).a(stackIn_159_1, stackIn_159_2, -stackIn_160_3 + (var12.field_K - var25_int), (byte) -50, var19);
+                ((km) (Object) stackIn_159_0).a(stackIn_159_1, stackIn_159_2, -stackIn_160_3 + (var12.field_K - var25_int), (byte) -50, var19);
                 var12.field_Kb.field_V = Integer.toString(var12.field_Vb);
                 var12.field_Kb.a(-40 + var12.field_K, pg.field_e, 40, (byte) -51, var19);
                 var19 = var19 + pg.field_e;
                 if (!var12.field_Lb.field_S ||
                   var22 == 0) {
                   if ((!(!var12.field_Lb.field_S)) &&
-                    ((null != fd.field_A)) &&
-                    ((fd.field_A[var12.field_Ub] != null))) {
-                    wc.field_g = fd.field_A[var12.field_Ub];
+                    ((null != WidgetContainer.field_A)) &&
+                    ((WidgetContainer.field_A[var12.field_Ub] != null))) {
+                    wc.field_g = WidgetContainer.field_A[var12.field_Ub];
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
                   wc.field_g = var12.field_Eb;
-                  if (fd.field_A != null &&
-                    fd.field_A[var12.field_Ub] != null) {
-                    wc.field_g = wc.field_g + " - " + fd.field_A[var12.field_Ub];
+                  if (WidgetContainer.field_A != null &&
+                    WidgetContainer.field_A[var12.field_Ub] != null) {
+                    wc.field_g = wc.field_g + " - " + WidgetContainer.field_A[var12.field_Ub];
                   }
                 }
               }
@@ -313,7 +313,7 @@ final class lb {
                 var12.field_kb = var19 - var12.field_ub;
               }
               if (var13 != 0) {
-                param2.field_Jb.a(2, var12, (UiWidget) (var11), (byte) 108);
+                param2.field_Jb.a(2, var12, (km) (var11), (byte) 108);
               }
               boolean decompiledFrameRemainder0 = true;
               if (var12.field_nb != 0 &&
@@ -1041,7 +1041,7 @@ final class lb {
                 }
                 var2 = rh.a("waiting_for_x_to_start_game", (byte) -61);
                 if (null != var2) {
-                  fm.field_c = i.a(-2022, var2);
+                  WhirlpoolDigest.field_c = i.a(-2022, var2);
                 }
                 var2 = rh.a("game_options_changed", (byte) -115);
                 if (var2 != null) {
@@ -2103,7 +2103,7 @@ final class lb {
                 }
                 var2 = rh.a("create_alert_doublespace", (byte) -74);
                 if (var2 != null) {
-                  UiWidget.field_P = i.a(-2022, var2);
+                  km.field_P = i.a(-2022, var2);
                 }
                 var2 = rh.a("create_alert_passchars", (byte) -67);
                 if (var2 != null) {
@@ -3193,7 +3193,7 @@ final class lb {
                 }
                 var2 = rh.a("fs_unavailable_try_signed_applet", (byte) -81);
                 if (var2 != null) {
-                  fd.field_x = i.a(param0 - 2021, var2);
+                  WidgetContainer.field_x = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("fs_focus", (byte) -73);
                 if (null != var2) {

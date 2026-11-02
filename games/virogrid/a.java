@@ -101,7 +101,7 @@ final class a extends cc {
         super(param0, param1);
     }
 
-    final String c(fi param0, int param1) {
+    final String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;

@@ -82,7 +82,7 @@ final class g {
             stackIn_12_0 = sa.field_p;
             return stackIn_12_0;
           }
-          if (fm.a(param0, -1369854352)) {
+          if (WhirlpoolDigest.a(param0, -1369854352)) {
             stackIn_15_0 = oi.a(new String[]{param0}, lc.field_d, 2);
             return stackIn_15_0;
           }
@@ -99,7 +99,7 @@ final class g {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.a(2, 76);
-          var5.a(param0, (byte) -96);
+          var5.writeString(param0, (byte) -96);
           var5.b(var5.position - var4, -1);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);

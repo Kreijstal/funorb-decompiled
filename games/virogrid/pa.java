@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa extends in {
+final class pa extends AudioStream {
     IntrusiveDeque field_k;
     private i field_m;
     static ob field_l;
-    static UiWidget field_o;
+    static km field_o;
     r field_n;
 
     final static int[] a(int param0, int param1, int param2) {
@@ -203,7 +203,7 @@ final class pa extends in {
               hd.field_d = sh.field_qb.readUnsignedByte(11132);
               og.field_s = sh.field_qb.readUnsignedByte(11132);
               bn.field_d = sh.field_qb.readUnsignedShort((byte) -64);
-              var6 = sh.field_qb.f(param3 ^ -97);
+              var6 = sh.field_qb.readOptionalString(param3 ^ -97);
               var7 = sh.field_qb.readUnsignedByte(param3 ^ -11077);
               if ((var7 & 1) != 0) {
                 oe.a(0);
@@ -231,7 +231,7 @@ final class pa extends in {
                   lj.field_d[var8] = sh.field_qb.readByte((byte) 114);
                 }
               }
-              mi.field_d = sh.field_qb.h(param3 - 69);
+              mi.field_d = sh.field_qb.readString(param3 - 69);
               var10 = (CharSequence) ((Object) mi.field_d);
               wn.field_n = c.a(var10, true);
               mf.field_h = sh.field_qb.readUnsignedByte(11132);
@@ -286,7 +286,7 @@ final class pa extends in {
               if (7 == ci.field_q) {
                 ci.field_q = 3;
               }
-              GameKeyHandler.field_g = sh.field_qb.h(param3 ^ 68);
+              GameKeyHandler.field_g = sh.field_qb.readString(param3 ^ 68);
               fh.field_e = false;
               stackIn_97_0 = ci.field_q;
               return stackIn_97_0;
@@ -334,20 +334,20 @@ final class pa extends in {
         }
     }
 
-    final in c() {
+    final AudioStream c() {
         wn var1 = (wn) (this.field_k.a((byte) -77));
         if (var1 == null) {
           return null;
         }
         if (var1.field_p != null) {
-          return (in) ((Object) var1.field_p);
+          return (AudioStream) ((Object) var1.field_p);
         }
         return this.b();
     }
 
     public static void c(boolean param0) {
         if (!param0) {
-          field_o = (UiWidget) null;
+          field_o = (km) null;
         }
         field_l = null;
         field_o = null;
@@ -518,7 +518,7 @@ final class pa extends in {
         }
     }
 
-    final in b() {
+    final AudioStream b() {
         wn var1_ref = null;
         int var2 = Virogrid.field_F ? 1 : 0;
         do {
@@ -527,7 +527,7 @@ final class pa extends in {
             return null;
           }
         } while (null == var1_ref.field_p);
-        return (in) ((Object) var1_ref.field_p);
+        return (AudioStream) ((Object) var1_ref.field_p);
     }
 
     pa(i param0) {

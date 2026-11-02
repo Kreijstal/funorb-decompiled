@@ -235,7 +235,7 @@ public final class Virogrid extends od {
         }
     }
 
-    final void c(boolean param0) {
+    final void initializeGame(boolean param0) {
         i var3 = null;
         i stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -251,7 +251,7 @@ public final class Virogrid extends od {
           stackIn_3_2 = 9;
           stackIn_4_3 = !(param0);
           ((i) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3);
-          pe.a((java.awt.Component) ((Object) fi.field_v), var3, ei.field_c, param0, (byte) -18, 22050);
+          pe.a((java.awt.Component) ((Object) UiWidget.field_v), var3, ei.field_c, param0, (byte) -18, 22050);
           this.a(false, true, -118, true, false, false, false);
           PacketBuffer.field_i[60] = 4;
           PacketBuffer.field_i[67] = 1;
@@ -292,11 +292,11 @@ public final class Virogrid extends od {
             if (wm.field_w != null) {
               al.a(mi.field_e, param0 ^ -37, 80.0f);
               this.b(true);
-              oi.field_c = new sc[4];
-              oi.field_c[0] = sc.a(wm.field_w, "", "ataxx titlescreen");
-              oi.field_c[1] = sc.a(wm.field_w, "", "tetralink ingame 1");
-              oi.field_c[2] = sc.a(wm.field_w, "", "tetralink ingame 2");
-              oi.field_c[3] = sc.a(wm.field_w, "", "tetralink ingame 3");
+              oi.field_c = new MusicTrack[4];
+              oi.field_c[0] = MusicTrack.a(wm.field_w, "", "ataxx titlescreen");
+              oi.field_c[1] = MusicTrack.a(wm.field_w, "", "tetralink ingame 1");
+              oi.field_c[2] = MusicTrack.a(wm.field_w, "", "tetralink ingame 2");
+              oi.field_c[3] = MusicTrack.a(wm.field_w, "", "tetralink ingame 3");
               for (var3_int = 0; var3_int < 4; var3_int++) {
                 vg.field_B.a(BufferedSocket.field_d, 0, af.field_g, oi.field_c[var3_int], 0);
               }
@@ -749,7 +749,7 @@ public final class Virogrid extends od {
         var7 = field_F ? 1 : 0;
         try {
           if (null == ih.field_b) {
-            stackIn_5_0 = fi.field_v;
+            stackIn_5_0 = UiWidget.field_v;
           } else {
             stackIn_5_0 = ih.field_b;
           }
@@ -809,7 +809,7 @@ public final class Virogrid extends od {
           } else {
             if (ak.b(-31609)) {
               stackIn_61_0 = (ih.field_b != null) || (fe.field_Gb);
-              fd.a(stackIn_61_0, -20248);
+              WidgetContainer.a(stackIn_61_0, -20248);
             } else {
               if (!eg.a((byte) 47)) {
                 if (!this.field_I.b((byte) 64)) {
@@ -831,7 +831,7 @@ public final class Virogrid extends od {
                 var4 = 24 + rh.a(-16118);
                 var5 = pg.a(true) + 26;
                 dg.b(var5, -125, var4);
-                fm.a(false);
+                WhirlpoolDigest.a(false);
               }
             }
           }
@@ -990,7 +990,7 @@ public final class Virogrid extends od {
         }
     }
 
-    final void c(int param0) {
+    final void tickGame(int param0) {
         boolean discarded$0 = false;
         String[] array$1 = null;
         boolean stackIn_8_1 = false;
@@ -1036,7 +1036,7 @@ public final class Virogrid extends od {
         var11 = field_F ? 1 : 0;
         try {
           lj.c(param0 ^ -28791807);
-          tl.field_l = UiWidget.e(param0 ^ -125);
+          tl.field_l = km.e(param0 ^ -125);
           kh.a(false);
           if (null != ih.field_b &&
             ih.field_b.field_a) {
@@ -1186,7 +1186,7 @@ public final class Virogrid extends od {
               hm.field_c = 9;
               qe.field_k = false;
               em.field_c = 128.0f;
-              kn.field_J = sh.field_qb.h(-117);
+              kn.field_J = sh.field_qb.readString(-117);
               continue;
             }
             if (ci.field_q == 14) {
@@ -1295,9 +1295,9 @@ public final class Virogrid extends od {
                   var7 = sh.field_qb.readUnsignedByte(11132);
                   ((GameSession) (var2)).board.applyMove(var6, var7, (byte) 119, var3Lifetime2Lifetime1, var4_intLifetime2, var5Lifetime1);
                   ((GameSession) (var2)).animator.syncWithBoard(((GameSession) (var2)).online, 31626);
-                  ((GameSession) (var2)).animator.field_k = -1;
+                  ((GameSession) (var2)).animator.selectedColumn = -1;
                   ((GameSession) (var2)).field_D = false;
-                  ((GameSession) (var2)).animator.field_c = -1;
+                  ((GameSession) (var2)).animator.selectedRow = -1;
                   continue;
                 }
                 if (ci.field_q == 62) {
@@ -2008,7 +2008,7 @@ public final class Virogrid extends od {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new Sprite(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) ((Object) fi.field_v));
+          var2 = new Sprite(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
           var3 = var2.field_w;
           var4 = var2.field_p;
           lm.a(0);
@@ -2078,7 +2078,7 @@ public final class Virogrid extends od {
         }
     }
 
-    final void d(int param0) {
+    final void shutdown(int param0) {
         int var3 = field_F ? 1 : 0;
         try {
           Virogrid.u(240);
@@ -2149,7 +2149,7 @@ public final class Virogrid extends od {
           gi.a((byte) -103);
           en.g(0);
           qm.j(124);
-          UiWidget.f(param0 + 2147483647);
+          km.f(param0 + 2147483647);
           ga.i(param0 ^ -91);
           ao.g(-119);
           dj.a(false);
@@ -2254,12 +2254,12 @@ public final class Virogrid extends od {
           ql.a((byte) -87);
           rj.a(6);
           ie.b(0);
-          fi.c(false);
+          UiWidget.c(false);
           tg.a((byte) -78);
           ec.a(param0 - 3298);
           dc.h(-126);
           gg.g(-1);
-          fd.e(1);
+          WidgetContainer.e(1);
           IntrusiveDequeCursor.d(param0 ^ 0);
           jk.a((byte) 110);
           nj.b();
@@ -2281,7 +2281,7 @@ public final class Virogrid extends od {
           ch.a(0);
           hl.a();
           sg.d(-2);
-          fm.a((byte) -54);
+          WhirlpoolDigest.a((byte) -54);
           hd.a(3881);
           d.e((byte) -73);
           fe.h(32498);

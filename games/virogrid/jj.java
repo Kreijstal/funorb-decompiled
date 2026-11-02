@@ -11,8 +11,8 @@ final class jj {
     Sprite field_c;
     static hh field_f;
     static String field_g;
-    static UiWidget field_a;
-    static UiWidget field_m;
+    static km field_a;
+    static km field_m;
     static String field_i;
     private int field_h;
     static GameApplet field_n;
@@ -144,7 +144,7 @@ final class jj {
         return this;
     }
 
-    final static void a(int param0, UiWidget param1, byte[] param2, int param3, UiWidget param4, int param5, int param6, int param7, int param8, UiWidget param9) {
+    final static void a(int param0, km param1, byte[] param2, int param3, km param4, int param5, int param6, int param7, int param8, km param9) {
         int var11 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -248,7 +248,7 @@ final class jj {
         return this;
     }
 
-    final void a(fi param0, int param1, nl param2, int param3, int param4) {
+    final void a(UiWidget param0, int param1, nl param2, int param3, int param4) {
         e stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -358,13 +358,13 @@ final class jj {
 
     final jj b(int param0, int param1) {
         if (param1 != -26973) {
-          field_m = (UiWidget) null;
+          field_m = (km) null;
         }
         this.field_e = param0;
         return this;
     }
 
-    final void a(int param0, nl param1, byte param2, jj param3, fi param4, int param5) {
+    final void a(int param0, nl param1, byte param2, jj param3, UiWidget param4, int param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;

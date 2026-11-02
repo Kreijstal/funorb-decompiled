@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class eb implements Iterable {
-    static UiWidget field_b;
+    static km field_b;
     static int field_f;
     static String field_a;
     static int field_d;
     static String field_g;
     DualLinkNode field_e;
-    static UiWidget field_c;
+    static km field_c;
 
     final void a(boolean param0, DualLinkNode param1) {
         RuntimeException stackIn_8_0 = null;
@@ -74,21 +74,21 @@ final class eb implements Iterable {
     final static void a(boolean param0, boolean param1, int param2, boolean param3) {
         int stackIn_11_0 = 0;
         String stackIn_24_0 = null;
-        UiWidget stackIn_36_0 = null;
+        km stackIn_36_0 = null;
         String stackIn_37_1 = null;
-        UiWidget stackIn_39_0 = null;
+        km stackIn_39_0 = null;
         String[] stackIn_39_1 = null;
         String stackIn_40_2 = null;
-        UiWidget stackIn_70_0 = null;
+        km stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        UiWidget stackIn_75_0 = null;
+        km stackIn_75_0 = null;
         boolean stackIn_76_1 = false;
-        UiWidget stackIn_80_0 = null;
+        km stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        UiWidget var5 = null;
-        UiWidget var6 = null;
+        km var5 = null;
+        km var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -99,9 +99,9 @@ final class eb implements Iterable {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        UiWidget var15 = null;
+        km var15 = null;
         String var16 = null;
-        UiWidget var17 = null;
+        km var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -245,13 +245,13 @@ final class eb implements Iterable {
           }
           stackIn_70_0 = ao.field_Eb;
           stackIn_71_1 = (param3) && (!param1) && (!ad.field_h);
-          ((UiWidget) (Object) stackIn_70_0).a(stackIn_71_1, (byte) 89);
+          ((km) (Object) stackIn_70_0).a(stackIn_71_1, (byte) 89);
           stackIn_75_0 = dm.field_r;
           stackIn_76_1 = (param3) && (!param1) && (!ad.field_h);
-          ((UiWidget) (Object) stackIn_75_0).a(stackIn_76_1, (byte) 103);
+          ((km) (Object) stackIn_75_0).a(stackIn_76_1, (byte) 103);
           stackIn_80_0 = pm.field_n;
           stackIn_81_1 = (param3) && (!param1) && (ad.field_h);
-          ((UiWidget) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 100);
+          ((km) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 100);
           he.field_pc.field_c.g(0);
           if (param0) {
             field_f = 123;

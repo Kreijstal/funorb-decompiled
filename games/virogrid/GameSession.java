@@ -20,8 +20,8 @@ final class GameSession {
     boolean field_t;
     int field_v;
     static byte[] field_f;
-    private int field_h;
-    private int field_x;
+    private int hoverColumn;
+    private int hoverRow;
     private int field_k;
     private int tickCount;
     private int field_m;
@@ -421,15 +421,15 @@ final class GameSession {
         int var6 = 0;
         int var7 = 0;
         this.field_D = false;
-        this.animator.field_k = -1;
-        this.animator.field_c = -1;
+        this.animator.selectedColumn = -1;
+        this.animator.selectedRow = -1;
         this.board.collectBestMoves(param0, 0);
         if (this.board.candidateCount > 0) {
           var3 = id.field_r % this.board.candidateCount;
-          var4 = this.board.field_e[var3];
-          var5 = this.board.field_G[var3];
-          var6 = this.board.field_q[var3];
-          var7 = this.board.field_t[var3];
+          var4 = this.board.candidateDestRows[var3];
+          var5 = this.board.candidateDestColumns[var3];
+          var6 = this.board.candidateSourceRows[var3];
+          var7 = this.board.candidateSourceColumns[var3];
           if (!this.online) {
             this.performMove(-13020, var6, var5, var7, var4);
           } else {
@@ -553,9 +553,9 @@ final class GameSession {
             }
             if (!(this.board.currentPlayer < 0) ||
               this.board.currentPlayer == -1 &&
-              this.board.field_n) {
-              if (!this.board.field_n) {
-                if (this.board.field_x) {
+              this.board.boardFilled) {
+              if (!this.board.boardFilled) {
+                if (this.board.playerWipedOut) {
                   if (this.online &&
                     this.localPlayer == 1 - this.board.currentPlayer) {
                     var7_ref_StringLifetime1 = id.field_f;
@@ -800,15 +800,15 @@ final class GameSession {
           }
           var8 = (CellFlip) (this.animator.flips.a((byte) -117));
           while (var8 != null) {
-            stackIn_15_0 = (var8.field_q) ? 12517376 : 16777215;
+            stackIn_15_0 = (var8.newOwnerIsFirstPlayer) ? 12517376 : 16777215;
             var9Lifetime1 = stackIn_15_0;
             if (param1) {
-              stackIn_18_0 = this.field_B + (140 + this.cellSize * var8.field_g);
+              stackIn_18_0 = this.field_B + (140 + this.cellSize * var8.row);
             } else {
-              stackIn_18_0 = -this.field_B + 500 - var8.field_g * this.cellSize;
+              stackIn_18_0 = -this.field_B + 500 - var8.row * this.cellSize;
             }
             var6Lifetime1 = stackIn_18_0;
-            var7Lifetime1 = -(this.cellSize * var8.field_k) - this.field_p + 370;
+            var7Lifetime1 = -(this.cellSize * var8.column) - this.field_p + 370;
             if (var8.phase != 0) {
               if (var8.phase == 1) {
                 Rasterizer.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var7Lifetime1, var9Lifetime1);
@@ -904,7 +904,7 @@ final class GameSession {
             hd.field_b.b(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
           } else {
             if (this.board.field_g) {
-              var6_int = 1 - this.board.field_B;
+              var6_int = 1 - this.board.lastMovePlayer;
               var7_ref_String = oi.a(new String[]{this.board.playerNames[var6_int]}, ee.field_f, 2);
               if (this.online &&
                 this.localPlayer == var6_int) {
@@ -986,7 +986,7 @@ final class GameSession {
                 break regionExit1;
               }
               if (b.field_Db) {
-                if (this.animator.field_c == -1) {
+                if (this.animator.selectedRow == -1) {
                   var6 = ee.field_b;
                   for (var7 = 0; var7 < this.board.cells.length; var7++) {
                     for (var8 = 0; this.board.cells[0].length > var8; var8++) {
@@ -1003,8 +1003,8 @@ final class GameSession {
             if ((!this.online &&
               this.board.turnCount > 0 ||
               (!(this.board.turnCount <= 1) ||
-              this.animator.field_c != -1)) &&
-              this.board.cells[0].length / 2 == this.field_h) {
+              this.animator.selectedRow != -1)) &&
+              this.board.cells[0].length / 2 == this.hoverColumn) {
               var6 = "";
             }
             if (var6.length() > 0) {
@@ -1166,8 +1166,8 @@ final class GameSession {
           }
           var5 = stackIn_6_0;
           if (!this.board.finished) {
-            if (this.animator.field_c != -1) {
-              stackIn_14_0 = (this.animator.field_k != -1) ? 1 : 0;
+            if (this.animator.selectedRow != -1) {
+              stackIn_14_0 = (this.animator.selectedColumn != -1) ? 1 : 0;
             } else {
               stackIn_14_0 = 0;
             }
@@ -1185,8 +1185,8 @@ final class GameSession {
             var12 = -var12;
           }
           if (var10 != 0) {
-            var8 = this.cellScreenX(param1, 4347, this.animator.field_c);
-            var9 = this.cellScreenY(this.animator.field_k, 5975);
+            var8 = this.cellScreenX(param1, 4347, this.animator.selectedRow);
+            var9 = this.cellScreenY(this.animator.selectedColumn, 5975);
             Rasterizer.c(var8, var9, this.field_d, 16776964);
             Rasterizer.c(var8, var9, 1 + this.field_d, 16776964);
             Rasterizer.c(var8, var9, this.field_d, 263172);
@@ -1215,9 +1215,9 @@ final class GameSession {
               if (var15_int == -1) {
                 Rasterizer.c(var8Lifetime1, var9Lifetime1, this.field_o - 3, 263172);
                 if (var10 != 0) {
-                  var16 = this.board.classifyMove(var7, this.animator.field_c, (byte) 99, var6, this.animator.field_k);
+                  var16 = this.board.classifyMove(var7, this.animator.selectedRow, (byte) 99, var6, this.animator.selectedColumn);
                   if (var16 != -1) {
-                    this.a(var8Lifetime1, -var14 + this.field_d, this.b(this.animator.field_c, this.animator.field_k, -2096, var4_int, var13), var9Lifetime1, false);
+                    this.a(var8Lifetime1, -var14 + this.field_d, this.b(this.animator.selectedRow, this.animator.selectedColumn, -2096, var4_int, var13), var9Lifetime1, false);
                   }
                 }
               }
@@ -1231,8 +1231,8 @@ final class GameSession {
                 this.localPlayer == this.board.currentPlayer) && (!this.board.finished &&
                 this.animator.displayedCells[var6Lifetime1][var7Lifetime1] == this.board.currentPlayer &&
                 this.animator.field_h[var6Lifetime1][var7Lifetime1])) {
-                if (this.animator.field_c != var6Lifetime1 ||
-                  this.animator.field_k != var7Lifetime1) {
+                if (this.animator.selectedRow != var6Lifetime1 ||
+                  this.animator.selectedColumn != var7Lifetime1) {
                   stackIn_58_0 = var8Lifetime2 << 4;
                   stackIn_58_1 = var9Lifetime2 << 4;
                   stackIn_58_2 = var11;
@@ -1244,8 +1244,8 @@ final class GameSession {
                   }
                   Rasterizer.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_59_4);
                 }
-                if (this.turnTimer > sh.field_yb[this.board.difficulty] - 200 &&
-                  this.turnTimer < -150 + sh.field_yb[this.board.difficulty]) {
+                if (this.turnTimer > sh.turnDurations[this.board.timeSetting] - 200 &&
+                  this.turnTimer < -150 + sh.turnDurations[this.board.timeSetting]) {
                   Rasterizer.f(var8Lifetime2, var9Lifetime2, this.field_d + 1, 16776964);
                 }
               }
@@ -1258,27 +1258,27 @@ final class GameSession {
               var9Lifetime3 = this.cellScreenY(var7Lifetime2, param2 + 5966);
               var15_intLifetime1 = this.b(var6Lifetime2, var7Lifetime2, -2096, var4_int, var13);
               if (-1 != var15_intLifetime1) {
-                if (this.animator.field_c == var6Lifetime2 &&
-                  this.animator.field_k == var7Lifetime2) {
+                if (this.animator.selectedRow == var6Lifetime2 &&
+                  this.animator.selectedColumn == var7Lifetime2) {
                   Rasterizer.c(var8Lifetime3, var9Lifetime3, this.field_o - 3, 263172);
                   var16Lifetime1 = -this.field_k + this.field_d;
                   this.a(var8Lifetime3, var16Lifetime1, var15_intLifetime1, var9Lifetime3, false);
                 } else {
                   if (this.animator.displayedCells[var6Lifetime2][var7Lifetime2] != -1 &&
                     this.animator.displayedCells[var6Lifetime2][var7Lifetime2] != this.board.currentPlayer) {
-                    var16Lifetime1 = -this.field_x + var6Lifetime2;
+                    var16Lifetime1 = -this.hoverRow + var6Lifetime2;
                     if (var16Lifetime1 < 0) {
                       var16Lifetime1 = -var16Lifetime1;
                     }
-                    var17 = var7Lifetime2 - this.field_h;
+                    var17 = var7Lifetime2 - this.hoverColumn;
                     if (var17 < 0) {
                       var17 = -var17;
                     }
                     if (var16Lifetime1 <= 1 &&
                       var17 <= 1 && (!this.online ||
                       this.localPlayer == this.board.currentPlayer) && (!this.board.finished &&
-                      this.animator.field_c != -1 &&
-                      this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.field_x, this.animator.field_k, 2, this.animator.field_c, this.field_h))) {
+                      this.animator.selectedRow != -1 &&
+                      this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
                       Rasterizer.c(var8Lifetime3, var9Lifetime3, -3 + this.field_o, 263172);
                       this.a(var8Lifetime3, -(var5 >> 1) + this.field_d, var15_intLifetime1, var9Lifetime3, false);
                     } else {
@@ -1295,25 +1295,25 @@ final class GameSession {
           }
           if ((!this.online ||
             this.localPlayer == this.board.currentPlayer) && !this.board.finished) {
-            if (!this.board.cellEquals((byte) 127, this.field_h, this.field_x, (byte)this.board.currentPlayer)) {
-              if ((this.animator.field_c != -1) &&
-                (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.field_x, this.animator.field_k, 2, this.animator.field_c, this.field_h))) {
-                var8Lifetime4 = this.cellScreenX(param1, 4347, this.field_x);
-                var9Lifetime4 = this.cellScreenY(this.field_h, 5975);
+            if (!this.board.cellEquals((byte) 127, this.hoverColumn, this.hoverRow, (byte)this.board.currentPlayer)) {
+              if ((this.animator.selectedRow != -1) &&
+                (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
+                var8Lifetime4 = this.cellScreenX(param1, 4347, this.hoverRow);
+                var9Lifetime4 = this.cellScreenY(this.hoverColumn, 5975);
                 Rasterizer.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
               }
             } else {
-              var8Lifetime4 = this.cellScreenX(param1, 4347, this.field_x);
-              var9Lifetime4 = this.cellScreenY(this.field_h, 5975);
+              var8Lifetime4 = this.cellScreenX(param1, 4347, this.hoverRow);
+              var9Lifetime4 = this.cellScreenY(this.hoverColumn, 5975);
               Rasterizer.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
             }
           }
           var15 = (CellFlip) (this.animator.flips.a((byte) -70));
           while (var15 != null) {
-            stackIn_110_0 = (var15.field_q) ? 30136 : 16777215;
+            stackIn_110_0 = (var15.newOwnerIsFirstPlayer) ? 30136 : 16777215;
             var16Lifetime2 = stackIn_110_0;
-            var8Lifetime5 = this.cellScreenX(param1, 4347, var15.field_g);
-            var9Lifetime5 = this.cellScreenY(var15.field_k, 5975);
+            var8Lifetime5 = this.cellScreenX(param1, 4347, var15.row);
+            var9Lifetime5 = this.cellScreenY(var15.column, 5975);
             if (var15.phase != 0) {
               if (var15.phase != 1) {
                 this.a(var8Lifetime5, this.field_d, var16Lifetime2, var9Lifetime5, false);
@@ -1329,12 +1329,12 @@ final class GameSession {
             }
             var15 = (CellFlip) (this.animator.flips.a(param2 + 16204));
           }
-          if (this.board.field_B >= 0) {
-            var16Lifetime3 = this.b(param2 ^ 193, this.board.field_B);
-            var17Lifetime1 = this.cellScreenX(param1, param2 ^ 4338, this.board.field_k);
-            var18 = this.cellScreenY(this.board.field_a, 5975);
-            var8Lifetime6 = this.cellScreenX(param1, 4347, this.board.field_m);
-            var9Lifetime6 = this.cellScreenY(this.board.field_w, 5975);
+          if (this.board.lastMovePlayer >= 0) {
+            var16Lifetime3 = this.b(param2 ^ 193, this.board.lastMovePlayer);
+            var17Lifetime1 = this.cellScreenX(param1, param2 ^ 4338, this.board.lastMoveSourceRow);
+            var18 = this.cellScreenY(this.board.lastMoveSourceColumn, 5975);
+            var8Lifetime6 = this.cellScreenX(param1, 4347, this.board.lastMoveDestRow);
+            var9Lifetime6 = this.cellScreenY(this.board.lastMoveDestColumn, 5975);
             this.a(var9Lifetime6, var18, false, var16Lifetime3, var17Lifetime1, var8Lifetime6);
           }
           this.drawStatusPanel(68, param1);
@@ -1395,12 +1395,12 @@ final class GameSession {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         var7 = Virogrid.field_F ? 1 : 0;
-        if (this.field_x == param0 &&
-          this.field_h == param1 && (!this.online ||
+        if (this.hoverRow == param0 &&
+          this.hoverColumn == param1 && (!this.online ||
           this.localPlayer == this.board.currentPlayer) && !this.board.finished) {
-          if ((!this.board.cellEquals((byte) 127, this.field_h, this.field_x, (byte)this.board.currentPlayer)) &&
-            (decompiledFrameRemainder0 = (-1 != this.animator.field_c))) {
-            decompiledFrameRemainder0 = !(!this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.field_x, this.animator.field_k, 2, this.animator.field_c, this.field_h));
+          if ((!this.board.cellEquals((byte) 127, this.hoverColumn, this.hoverRow, (byte)this.board.currentPlayer)) &&
+            (decompiledFrameRemainder0 = (-1 != this.animator.selectedRow))) {
+            decompiledFrameRemainder0 = !(!this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn));
           }
           if (decompiledFrameRemainder0) {
             param4 = param4 + param3 * 4;
@@ -1476,9 +1476,9 @@ final class GameSession {
         var3 = 0;
         for (var4 = 0; this.board.cells.length > var4; var4++) {
           for (var5 = 0; var5 < this.board.cells[0].length; var5++) {
-            if (this.field_x == var4 &&
-              var5 == this.field_h) {
-              var6 = this.board.classifyMove(var5, this.animator.field_c, (byte) 99, var4, this.animator.field_k);
+            if (this.hoverRow == var4 &&
+              var5 == this.hoverColumn) {
+              var6 = this.board.classifyMove(var5, this.animator.selectedRow, (byte) 99, var4, this.animator.selectedColumn);
               if (var6 != -1 &&
                 var6 == 1) {
                 var3 = 1;
@@ -1736,8 +1736,8 @@ final class GameSession {
                 (!this.board.finished &&
                 this.animator.displayedCells[var5Lifetime1][var11] == this.board.currentPlayer &&
                 this.animator.field_h[var5Lifetime1][var11] &&
-                this.turnTimer > -200 + sh.field_yb[this.board.difficulty] &&
-                -150 + sh.field_yb[this.board.difficulty] > this.turnTimer)) {
+                this.turnTimer > -200 + sh.turnDurations[this.board.timeSetting] &&
+                -150 + sh.turnDurations[this.board.timeSetting] > this.turnTimer)) {
                 Rasterizer.f(var7Lifetime1, var8Lifetime1, this.field_o, 16776964);
               }
               var11++;
@@ -1745,38 +1745,38 @@ final class GameSession {
           }
           if ((!this.online ||
             this.board.currentPlayer == this.localPlayer) && !this.board.finished) {
-            if (!this.board.cellEquals((byte) 127, this.field_h, this.field_x, (byte)this.board.currentPlayer)) {
-              if ((this.animator.field_c != -1) &&
-                (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.field_x, this.animator.field_k, 2, this.animator.field_c, this.field_h))) {
+            if (!this.board.cellEquals((byte) 127, this.hoverColumn, this.hoverRow, (byte)this.board.currentPlayer)) {
+              if ((this.animator.selectedRow != -1) &&
+                (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
                 if (param2) {
-                  stackIn_53_0 = this.field_B + (140 + this.field_x * this.cellSize);
+                  stackIn_53_0 = this.field_B + (140 + this.hoverRow * this.cellSize);
                 } else {
-                  stackIn_53_0 = -this.field_B + 500 - this.field_x * this.cellSize;
+                  stackIn_53_0 = -this.field_B + 500 - this.hoverRow * this.cellSize;
                 }
                 var7Lifetime2 = stackIn_53_0;
-                var8Lifetime2 = -(this.cellSize * this.field_h) + (-this.field_p + 370);
+                var8Lifetime2 = -(this.cellSize * this.hoverColumn) + (-this.field_p + 370);
                 Rasterizer.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
               }
             } else {
               if (param2) {
-                stackIn_53_0 = this.field_B + (140 + this.field_x * this.cellSize);
+                stackIn_53_0 = this.field_B + (140 + this.hoverRow * this.cellSize);
               } else {
-                stackIn_53_0 = -this.field_B + 500 - this.field_x * this.cellSize;
+                stackIn_53_0 = -this.field_B + 500 - this.hoverRow * this.cellSize;
               }
               var7Lifetime2 = stackIn_53_0;
-              var8Lifetime2 = -(this.cellSize * this.field_h) + (-this.field_p + 370);
+              var8Lifetime2 = -(this.cellSize * this.hoverColumn) + (-this.field_p + 370);
               Rasterizer.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
             }
           }
-          if (this.animator.field_c != -1 &&
-            -1 != this.animator.field_k) {
+          if (this.animator.selectedRow != -1 &&
+            -1 != this.animator.selectedColumn) {
             if (param2) {
-              stackIn_59_0 = this.animator.field_c * this.cellSize + (140 + this.field_B);
+              stackIn_59_0 = this.animator.selectedRow * this.cellSize + (140 + this.field_B);
             } else {
-              stackIn_59_0 = -(this.cellSize * this.animator.field_c) + (-this.field_B + 500);
+              stackIn_59_0 = -(this.cellSize * this.animator.selectedRow) + (-this.field_B + 500);
             }
             var7Lifetime3 = stackIn_59_0;
-            var8Lifetime3 = -this.field_p + (370 - this.animator.field_k * this.cellSize);
+            var8Lifetime3 = -this.field_p + (370 - this.animator.selectedColumn * this.cellSize);
             Rasterizer.f(var7Lifetime3, var8Lifetime3, this.field_o, 16776964);
             Rasterizer.f(var7Lifetime3, var8Lifetime3, 1 + this.field_o, 16776964);
           }
@@ -1887,8 +1887,8 @@ final class GameSession {
             if (this.animator.flips.b((byte) 64)) {
               this.chooseAiMove(this.field_m, -11272);
             }
-            this.animator.field_k = -1;
-            this.animator.field_c = -1;
+            this.animator.selectedColumn = -1;
+            this.animator.selectedRow = -1;
             this.field_D = false;
             return;
           }
@@ -1915,48 +1915,48 @@ final class GameSession {
             if (var13 < 0) {
               var13 = var13 - this.cellSize;
             }
-            this.field_x = var12Lifetime1;
+            this.hoverRow = var12Lifetime1;
             var13 = var13 / this.cellSize;
-            this.field_h = var13;
+            this.hoverColumn = var13;
             if (param5 != 1) {
               if (param5 != 2) {
                 return;
               }
-              if (this.animator.field_c == -1) {
+              if (this.animator.selectedRow == -1) {
                 return;
               }
               vm.$cfr$intArgs$a$45c25716b3df(30, of.field_b);
-              this.animator.field_c = -1;
-              this.animator.field_k = -1;
+              this.animator.selectedRow = -1;
+              this.animator.selectedColumn = -1;
               return;
             }
-            var15 = this.animator.field_c;
-            var16 = this.animator.field_k;
-            if (this.animator.field_c != -1 &&
-              this.animator.field_k != -1) {
-              if (this.board.isLegalMove(this.board.currentPlayer, var12Lifetime1, this.animator.field_k, param7 + 66, this.animator.field_c, var13)) {
+            var15 = this.animator.selectedRow;
+            var16 = this.animator.selectedColumn;
+            if (this.animator.selectedRow != -1 &&
+              this.animator.selectedColumn != -1) {
+              if (this.board.isLegalMove(this.board.currentPlayer, var12Lifetime1, this.animator.selectedColumn, param7 + 66, this.animator.selectedRow, var13)) {
                 if (this.online) {
                   if (this.board.currentPlayer == this.localPlayer) {
-                    this.a(this.animator.field_c, this.animator.field_k, var13, var12Lifetime1, (byte) 85);
-                    this.animator.field_c = -1;
-                    this.animator.field_k = -1;
+                    this.a(this.animator.selectedRow, this.animator.selectedColumn, var13, var12Lifetime1, (byte) 85);
+                    this.animator.selectedRow = -1;
+                    this.animator.selectedColumn = -1;
                     this.field_D = false;
                   }
                 } else {
-                  this.performMove(param7 ^ 13028, this.animator.field_c, var13, this.animator.field_k, var12Lifetime1);
-                  this.animator.field_k = -1;
+                  this.performMove(param7 ^ 13028, this.animator.selectedRow, var13, this.animator.selectedColumn, var12Lifetime1);
+                  this.animator.selectedColumn = -1;
                   this.field_D = false;
-                  this.animator.field_c = -1;
+                  this.animator.selectedRow = -1;
                 }
               } else {
                 if (!this.board.cellEquals((byte) 127, var13, var12Lifetime1, (byte)this.board.currentPlayer)) {
                   vm.$cfr$intArgs$a$45c25716b3df(30, of.field_b);
                 }
-                this.animator.field_k = -1;
-                this.animator.field_c = -1;
+                this.animator.selectedColumn = -1;
+                this.animator.selectedRow = -1;
               }
             }
-            if (-1 != this.animator.field_c) {
+            if (-1 != this.animator.selectedRow) {
               return;
             }
             if (this.board.cellEquals((byte) 127, var13, var12Lifetime1, (byte)this.board.currentPlayer)) {
@@ -1966,8 +1966,8 @@ final class GameSession {
               }
               if (!this.online ||
                 this.board.currentPlayer == this.localPlayer) {
-                this.animator.field_c = var12Lifetime1;
-                this.animator.field_k = var13;
+                this.animator.selectedRow = var12Lifetime1;
+                this.animator.selectedColumn = var13;
                 return;
               }
             }
@@ -1984,7 +1984,7 @@ final class GameSession {
           this.board.restart(0);
           this.animator = new CellAnimator(this.board, this.localPlayer);
           this.animator.resetToBoard(false);
-          this.turnTimer = sh.field_yb[this.board.difficulty];
+          this.turnTimer = sh.turnDurations[this.board.timeSetting];
           vm.$cfr$intArgs$a$45c25716b3df(30, qd.field_i);
           BufferedSocket.a(true, (byte) -106);
           this.field_q = -1;
@@ -2046,7 +2046,7 @@ final class GameSession {
           this.field_n = 0;
         } else {
           this.board.advanceTurn(param0 ^ 12970);
-          this.turnTimer = sh.field_yb[this.board.difficulty];
+          this.turnTimer = sh.turnDurations[this.board.timeSetting];
         }
     }
 
@@ -2070,9 +2070,9 @@ final class GameSession {
         this.field_l = false;
         this.field_c = 0;
         this.field_a = "";
-        this.field_x = 0;
+        this.hoverRow = 0;
         this.field_k = 0;
-        this.field_h = 0;
+        this.hoverColumn = 0;
         try {
           stackIn_4_1 = (param0);
           this.online = stackIn_4_1;
@@ -2097,7 +2097,7 @@ final class GameSession {
           this.board = new GameBoard(stackIn_9_3, stackIn_9_4, stackIn_10_5, param5);
           if (!this.online) {
             this.board.setTurn(0, 0, 21428);
-            this.turnTimer = sh.field_yb[this.board.difficulty];
+            this.turnTimer = sh.turnDurations[this.board.timeSetting];
           }
           this.animator = new CellAnimator(this.board, this.localPlayer);
           this.tickCount = 0;

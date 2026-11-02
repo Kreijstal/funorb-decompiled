@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl extends fd implements ta {
+final class jl extends WidgetContainer implements ta {
     static int field_E;
     private tg field_I;
     static String field_D;
@@ -29,7 +29,7 @@ final class jl extends fd implements ta {
           var7 = var8.position;
           var8.a(param1, -69);
           if (param1 == 2) {
-            var8.a(param2, (byte) -102);
+            var8.writeString(param2, (byte) -102);
           }
           if (param5 != null) {
             en.a(true, param5, var8);
@@ -110,7 +110,7 @@ final class jl extends fd implements ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -167,9 +167,9 @@ final class jl extends fd implements ta {
         this.field_I.field_o = (cd) (this);
         this.field_G.field_h = mh.field_j;
         this.field_I.field_h = fn.field_f;
-        this.a((fi) (this.field_H), (byte) -78);
-        this.a((fi) (this.field_G), (byte) -78);
-        this.a((fi) (this.field_I), (byte) -78);
+        this.a((UiWidget) (this.field_H), (byte) -78);
+        this.a((UiWidget) (this.field_G), (byte) -78);
+        this.a((UiWidget) (this.field_I), (byte) -78);
     }
 
     final static boolean a(int param0) {

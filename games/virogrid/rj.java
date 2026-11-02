@@ -15,9 +15,9 @@ final class rj implements ol {
     static int field_l;
     static int field_h;
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         int var10 = 0;
-        fi stackIn_6_0 = null;
+        UiWidget stackIn_6_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -27,18 +27,18 @@ final class rj implements ol {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        fi var12 = null;
+        UiWidget var12 = null;
         gb var13 = null;
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           if (param4 != -23294) {
-            var12 = (fi) null;
-            this.a(62, (fi) null, true, -29, -102);
+            var12 = (UiWidget) null;
+            this.a(62, (UiWidget) null, true, -29, -102);
           }
           if (!(param1 instanceof gb)) {
             stackIn_6_0 = null;
           } else {
-            stackIn_6_0 = (fi) (param1);
+            stackIn_6_0 = (UiWidget) (param1);
           }
           var13 = (gb) (stackIn_6_0);
           if (var13 == null) {

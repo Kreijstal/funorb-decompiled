@@ -18,7 +18,7 @@ class wa extends tg {
     static int field_K;
     static String field_S;
     static String field_L;
-    static UiWidget field_I;
+    static km field_I;
 
     final void a(String param0, int param1, boolean param2) {
         int dupTemp$1 = 0;
@@ -87,7 +87,7 @@ class wa extends tg {
         int var6;
         int var7;
         int var8;
-        fi var9;
+        UiWidget var9;
         gm var11;
         ie var12;
         gm var13;
@@ -107,9 +107,9 @@ class wa extends tg {
         }
         if (param0 > 63) {
           var13 = (gm) ((Object) this.field_w);
-          var14 = var13.a((fi) (this), (byte) -124);
+          var14 = var13.a((UiWidget) (this), (byte) -124);
           var4 = var14.a(3209);
-          var5 = var13.b((fi) (this), true);
+          var5 = var13.b((UiWidget) (this), true);
           var6 = var13.a(0) >> 1;
           if (var5 - var6 > var4) {
             this.field_k = 0;
@@ -134,12 +134,12 @@ class wa extends tg {
           this.field_k = -var5 + var6;
           return;
         }
-        var9 = (fi) null;
-        this.a((fi) null, '*', 68, -11);
+        var9 = (UiWidget) null;
+        this.a((UiWidget) null, '*', 68, -11);
         var11 = (gm) ((Object) this.field_w);
-        var12 = var11.a((fi) (this), (byte) -124);
+        var12 = var11.a((UiWidget) (this), (byte) -124);
         var4Lifetime1 = var12.a(3209);
-        var5Lifetime1 = var11.b((fi) (this), true);
+        var5Lifetime1 = var11.b((UiWidget) (this), true);
         var6Lifetime1 = var11.a(0) >> 1;
         if (var5Lifetime1 - var6Lifetime1 > var4Lifetime1) {
           this.field_k = 0;
@@ -188,7 +188,7 @@ class wa extends tg {
         }
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         gm var7 = null;
@@ -202,7 +202,7 @@ class wa extends tg {
           if (this.field_i == 1) {
             if (this.field_w instanceof gm) {
               var7 = (gm) ((Object) this.field_w);
-              var6 = var7.a(param0, param3, hk.field_Jb, (fi) (this), true, nl.field_u);
+              var6 = var7.a(param0, param3, hk.field_Jb, (UiWidget) (this), true, nl.field_u);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_G > var6 &&
@@ -305,7 +305,7 @@ class wa extends tg {
         return var3;
     }
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int stackIn_5_1 = 0;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_21_0 = null;
@@ -318,7 +318,7 @@ class wa extends tg {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
             this.field_w instanceof gm) {
-            var8_int = ((gm) ((Object) this.field_w)).a(param3, param5, hk.field_Jb, (fi) (this), true, nl.field_u);
+            var8_int = ((gm) ((Object) this.field_w)).a(param3, param5, hk.field_Jb, (UiWidget) (this), true, nl.field_u);
             if (-1 != var8_int) {
               stackIn_5_1 = var8_int;
             } else {
@@ -382,7 +382,7 @@ class wa extends tg {
         return (String) null;
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_55_1 = 0;
         int stackIn_62_1 = 0;
@@ -550,17 +550,17 @@ class wa extends tg {
         if (param3 != 0) {
           return;
         }
-        this.field_w.a(param1, (fi) (this), this.field_C, param2, -23294);
+        this.field_w.a(param1, (UiWidget) (this), this.field_C, param2, -23294);
         if (!(this.field_w instanceof gm)) {
           return;
         }
         gm var8 = (gm) ((Object) this.field_w);
         if (this.field_J != this.field_R) {
-          var8.a((byte) -49, this.field_J, param1, (fi) (this), this.field_R, param2);
+          var8.a((byte) -49, this.field_J, param1, (UiWidget) (this), this.field_R, param2);
         }
         long var6 = hc.a(-9986);
         if ((-this.field_Q + var6) % 1000L < 500L) {
-          var8.a(param1, this.field_J, true, (fi) (this), param2);
+          var8.a(param1, this.field_J, true, (UiWidget) (this), param2);
           return;
         }
     }

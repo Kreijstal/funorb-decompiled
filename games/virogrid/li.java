@@ -34,14 +34,14 @@ final class li {
         }
         if (!this.field_s) {
           if (fl.field_i < this.field_l) {
-            fi.field_s = (this.field_l - fl.field_i) / 2;
+            UiWidget.field_s = (this.field_l - fl.field_i) / 2;
           } else {
             if (this.field_l > 0) {
-              fi.field_s = 0;
+              UiWidget.field_s = 0;
             }
           }
           if (fl.field_i != this.field_h ||
-            this.field_r != UiWidget.field_B) {
+            this.field_r != km.field_B) {
             this.field_n.a(this.field_r, this.field_h, (byte) 125);
           }
           return;
@@ -89,9 +89,9 @@ final class li {
 
     final h a(int param0) {
         this.field_g = fl.field_i;
-        this.field_v = UiWidget.field_B;
+        this.field_v = km.field_B;
         this.field_n.a(this.field_p, this.field_e, (byte) 106);
-        UiWidget.field_Db = false;
+        km.field_Db = false;
         if (param0 != 11) {
           li.a(true);
         }
@@ -485,14 +485,14 @@ final class li {
           }
         }
         if (var2 != fl.field_i ||
-          var3 != UiWidget.field_B) {
+          var3 != km.field_B) {
           this.field_n.a(var3, var2, (byte) 40);
         }
         if (param0 != 22) {
           this.field_e = 41;
         }
         if (this.field_l > 0) {
-          fi.field_s = (this.field_l - fl.field_i) / 2;
+          UiWidget.field_s = (this.field_l - fl.field_i) / 2;
         }
     }
 

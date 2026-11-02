@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-class fd extends fi implements ja {
+class WidgetContainer extends UiWidget implements ja {
     static String field_x;
-    static UiWidget field_y;
+    static km field_y;
     static String[] field_A;
     static int[] field_B;
     IntrusiveDeque field_z;
     static int field_C;
 
-    fd(int param0, int param1, int param2, int param3, ol param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, ol param4) {
         super(param0, param1, param2, param3, param4, (cd) null);
         this.field_z = new IntrusiveDeque();
     }
@@ -24,13 +24,13 @@ class fd extends fi implements ja {
         if (param0 != -39) {
           field_x = (String) null;
         }
-        fi var4 = (fi) (var3.c(12677));
+        UiWidget var4 = (UiWidget) (var3.c(12677));
         while (var4 != null) {
           var5 = var4.b((byte) -39);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (fi) (var3.b(41));
+          var4 = (UiWidget) (var3.b(41));
         }
         return var2;
     }
@@ -40,7 +40,7 @@ class fd extends fi implements ja {
         int var7 = 0;
         StringBuilder discarded$4 = null;
         IntrusiveDequeCursor var5 = null;
-        fi var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -55,14 +55,14 @@ class fd extends fi implements ja {
             field_C = 97;
           }
           var5 = new IntrusiveDequeCursor(this.field_z);
-          var6 = (fi) (var5.c(12677));
+          var6 = (UiWidget) (var5.c(12677));
           while (var6 != null) {
             discarded$3 = param1.append('\n');
             for (var7 = 0; var7 <= param2; var7++) {
               discarded$4 = param1.append(' ');
             }
             var6.a(param0, (byte) 121, 1 + param2, param1);
-            var6 = (fi) (var5.b(41));
+            var6 = (UiWidget) (var5.b(41));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ class fd extends fi implements ja {
         Rasterizer.c(param3 + var7, var7 + param5, -var8 + param2, param6 - var8, -var7 + ((param6 >> 1) - 2), 2);
     }
 
-    final void a(fi param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         try {
           this.field_z.a(param0, (byte) -58);
           if (param1 != -78) {
@@ -155,10 +155,10 @@ class fd extends fi implements ja {
         }
     }
 
-    final boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        fi var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -170,14 +170,14 @@ class fd extends fi implements ja {
           if (param5 != 0) {
             this.f(false);
           }
-          var9 = (fi) (var8.c(param5 ^ 12677));
+          var9 = (UiWidget) (var8.c(param5 ^ 12677));
           while (var9 != null) {
             if (var9.b(false)) {
               if (var9.f(true) &&
                 var9.a(param0, param1, param2, param3, param4, 0, param6)) {
                 return true;
               }
-              var9 = (fi) (var8.b(41));
+              var9 = (UiWidget) (var8.b(41));
               continue;
             }
             break;
@@ -222,11 +222,11 @@ class fd extends fi implements ja {
         }
     }
 
-    final boolean b(int param0, fi param1) {
+    final boolean b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
-        fi var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_23_0 = null;
@@ -242,21 +242,21 @@ class fd extends fi implements ja {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_z);
-          var4 = (fi) (var8.a((byte) 48));
+          var4 = (UiWidget) (var8.a((byte) 48));
           while (var4 != null) {
             if (var4.f(true)) {
               var5 = new IntrusiveDequeCursor(this.field_z);
               var5.b(1, var4);
-              var6 = (fi) (var5.a(-1));
+              var6 = (UiWidget) (var5.a(-1));
               while (var6 != null) {
                 if (!var6.a(param1, param0 - 8517)) {
-                  var6 = (fi) (var5.a(param0 - 3));
+                  var6 = (UiWidget) (var5.a(param0 - 3));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (fi) (var8.a(param0 ^ -3));
+            var4 = (UiWidget) (var8.a(param0 ^ -3));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,22 +276,22 @@ class fd extends fi implements ja {
     private final void d(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
-        fi var3 = (fi) (var2.c(12677));
+        UiWidget var3 = (UiWidget) (var2.c(12677));
         if (param0 >= -17) {
           field_A = (String[]) null;
         }
         while (var3 != null) {
           var3.d(false);
-          var3 = (fi) (var2.b(41));
+          var3 = (UiWidget) (var2.b(41));
         }
     }
 
-    boolean a(fi param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        fi var9 = null;
+        UiWidget var9 = null;
         IntrusiveDequeCursor var10 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_19_0 = null;
@@ -301,14 +301,14 @@ class fd extends fi implements ja {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           var10 = new IntrusiveDequeCursor(this.field_z);
-          var9 = (fi) (var10.c(12677));
+          var9 = (UiWidget) (var10.c(12677));
           while (var9 != null) {
             if (var9.b(false)) {
               if (var9.f(true) &&
                 var9.a(param0, param1, param2, -122)) {
                 return true;
               }
-              var9 = (fi) (var10.b(41));
+              var9 = (UiWidget) (var10.b(41));
               continue;
             }
             break;
@@ -338,10 +338,10 @@ class fd extends fi implements ja {
         }
     }
 
-    final boolean a(fi param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -350,7 +350,7 @@ class fd extends fi implements ja {
         var5 = Virogrid.field_F ? 1 : 0;
         try {
           var3 = new IntrusiveDequeCursor(this.field_z);
-          var4 = (fi) (var3.c(12677));
+          var4 = (UiWidget) (var3.c(12677));
           if (param1 != -8515) {
             this.f(false);
           }
@@ -358,7 +358,7 @@ class fd extends fi implements ja {
             if (var4.a(param0, -8515)) {
               return true;
             }
-            var4 = (fi) (var3.b(41));
+            var4 = (UiWidget) (var3.b(41));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -393,18 +393,18 @@ class fd extends fi implements ja {
     void a(byte param0, int param1, int param2, int param3) {
         int var7 = Virogrid.field_F ? 1 : 0;
         if (param0 != 37) {
-          fi var8 = (fi) null;
-          this.a(-9, (fi) null);
+          UiWidget var8 = (UiWidget) null;
+          this.a(-9, (UiWidget) null);
         }
         if (param3 == 0 &&
           this.field_w != null) {
-          this.field_w.a(param1, (fi) (this), true, param2, -23294);
+          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_z);
-        fi var6 = (fi) (var5.a((byte) 48));
+        UiWidget var6 = (UiWidget) (var5.a((byte) 48));
         while (var6 != null) {
           var6.a((byte) 37, this.field_l + param1, this.field_u + param2, param3);
-          var6 = (fi) (var5.a(-1));
+          var6 = (UiWidget) (var5.a(-1));
         }
     }
 
@@ -415,11 +415,11 @@ class fd extends fi implements ja {
         return this.c((byte) -3) != null ? true : false;
     }
 
-    final boolean a(int param0, fi param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
-        fi var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_23_0 = null;
@@ -435,20 +435,20 @@ class fd extends fi implements ja {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_z);
-          var4 = (fi) (var8.c(12677));
+          var4 = (UiWidget) (var8.c(12677));
           while (var4 != null) {
             if (var4.f(true)) {
               var5 = new IntrusiveDequeCursor(this.field_z);
               var5.a(param0 + 16150, var4);
-              var6 = (fi) (var5.b(41));
+              var6 = (UiWidget) (var5.b(41));
               while (var6 != null) {
                 if (var6.a(param1, param0 + 7719)) {
                   return true;
                 }
-                var6 = (fi) (var5.b(41));
+                var6 = (UiWidget) (var5.b(41));
               }
             }
-            var4 = (fi) (var8.b(41));
+            var4 = (UiWidget) (var8.b(41));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -465,10 +465,10 @@ class fd extends fi implements ja {
         }
     }
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        fi var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -480,13 +480,13 @@ class fd extends fi implements ja {
           if (param2) {
             this.d((byte) -71);
           }
-          var9 = (fi) (var8.c(12677));
+          var9 = (UiWidget) (var8.c(12677));
           while (var9 != null) {
             if (var9.b(false)) {
               if (var9.a(param0, param1, false, this.field_l + param3, param4, param5 + this.field_u, param6)) {
                 return true;
               }
-              var9 = (fi) (var8.b(41));
+              var9 = (UiWidget) (var8.b(41));
               continue;
             }
             break;
@@ -512,10 +512,10 @@ class fd extends fi implements ja {
         if (param0 != -1) {
           return;
         }
-        fi var3 = (fi) (var2.c(12677));
+        UiWidget var3 = (UiWidget) (var2.c(12677));
         while (var3 != null) {
           var3.c(-1);
-          var3 = (fi) (var2.b(41));
+          var3 = (UiWidget) (var2.b(41));
         }
     }
 
@@ -523,13 +523,13 @@ class fd extends fi implements ja {
         String var4 = null;
         int var5 = Virogrid.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
-        fi var3 = (fi) (var2.c(12677));
+        UiWidget var3 = (UiWidget) (var2.c(12677));
         while (var3 != null) {
           var4 = var3.d(70);
           if (var4 != null) {
             return var4;
           }
-          var3 = (fi) (var2.b(41));
+          var3 = (UiWidget) (var2.b(41));
         }
         if (param0 > 35) {
           return null;
@@ -538,29 +538,29 @@ class fd extends fi implements ja {
         return null;
     }
 
-    fi c(byte param0) {
+    UiWidget c(byte param0) {
         IntrusiveDequeCursor var2;
-        fi var3;
+        UiWidget var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_z);
         if (param0 != -3) {
           field_x = (String) null;
         }
-        var3 = (fi) (var2.c(param0 + 12680));
+        var3 = (UiWidget) (var2.c(param0 + 12680));
         while (var3 != null) {
           if (var3.f(true)) {
             return var3;
           }
-          var3 = (fi) (var2.b(41));
+          var3 = (UiWidget) (var2.b(41));
         }
         return null;
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
-        fi var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -573,11 +573,11 @@ class fd extends fi implements ja {
           if (param1 < 113) {
             field_C = 3;
           }
-          var6 = (fi) (var5.c(12677));
+          var6 = (UiWidget) (var5.c(12677));
           while (var6 != null) {
             if (var6.b(false)) {
               var6.a(param0 + this.field_l, 124, param2, this.field_u + param3);
-              var6 = (fi) (var5.b(41));
+              var6 = (UiWidget) (var5.b(41));
               continue;
             }
             break;
@@ -597,9 +597,9 @@ class fd extends fi implements ja {
         }
     }
 
-    final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         IntrusiveDequeCursor var7 = null;
-        fi var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -609,11 +609,11 @@ class fd extends fi implements ja {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           var7 = new IntrusiveDequeCursor(this.field_z);
-          var8 = (fi) (var7.c(12677));
+          var8 = (UiWidget) (var7.c(12677));
           while (var8 != null) {
             if (var8.b(false)) {
               var8.a(param0, param1, param2 + this.field_l, param3, this.field_u + param4, 104);
-              var8 = (fi) (var7.b(41));
+              var8 = (UiWidget) (var7.b(41));
               continue;
             }
             break;

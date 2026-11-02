@@ -182,9 +182,9 @@ final class ci extends qe {
         }
     }
 
-    final static UiWidget j(int param0) {
+    final static km j(int param0) {
         if (param0 >= -109) {
-          return (UiWidget) null;
+          return (km) null;
         }
         return cg.b(1463);
     }

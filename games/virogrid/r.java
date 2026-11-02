@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r extends in {
+final class r extends AudioStream {
     private IntrusiveDeque field_m;
     private IntrusiveDeque field_l;
     private int field_k;
     private int field_n;
 
-    final in c() {
-        return (in) (this.field_m.a((byte) -115));
+    final AudioStream c() {
+        return (AudioStream) (this.field_m.a((byte) -115));
     }
 
-    final in b() {
-        return (in) (this.field_m.a(16213));
+    final AudioStream b() {
+        return (AudioStream) (this.field_m.a(16213));
     }
 
     final synchronized void a(int param0) {
@@ -53,10 +53,10 @@ final class r extends in {
     }
 
     private final void c(int param0) {
-        in var2 = (in) (this.field_m.a((byte) -106));
+        AudioStream var2 = (AudioStream) (this.field_m.a((byte) -106));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (in) (this.field_m.a(16213));
+          var2 = (AudioStream) (this.field_m.a(16213));
         }
     }
 
@@ -128,10 +128,10 @@ final class r extends in {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        in var4 = (in) (this.field_m.a((byte) -44));
+        AudioStream var4 = (AudioStream) (this.field_m.a((byte) -44));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (in) (this.field_m.a(16213));
+          var4 = (AudioStream) (this.field_m.a(16213));
         }
     }
 
@@ -152,7 +152,7 @@ final class r extends in {
         }
     }
 
-    final synchronized void a(in param0) {
+    final synchronized void a(AudioStream param0) {
         this.field_m.b(param0, (byte) -45);
     }
 

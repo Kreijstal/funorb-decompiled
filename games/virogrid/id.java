@@ -18,7 +18,7 @@ final class id {
     static int field_r;
     static int field_c;
     int field_q;
-    static UiWidget field_a;
+    static km field_a;
     ol field_b;
     private int field_d;
 
@@ -26,7 +26,7 @@ final class id {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
-        UiWidget stackIn_6_0 = null;
+        km stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         int stackIn_10_2;
@@ -40,10 +40,10 @@ final class id {
           f.field_b = Rasterizer.field_f;
           eb.field_f = Rasterizer.field_e;
           je.f(-17491);
-          dd.field_b.a(36, 0, 0, -2 + (fd.field_y.field_ub - 40), fd.field_y.field_K);
+          dd.field_b.a(36, 0, 0, -2 + (WidgetContainer.field_y.field_ub - 40), WidgetContainer.field_y.field_K);
           qd.field_f.a(0, pg.field_e, ij.field_k.field_K, (byte) -75, 0);
           if (param0 >= -96) {
-            field_a = (UiWidget) null;
+            field_a = (km) null;
           }
           var1_int = pg.field_e + 2;
           stackIn_6_0 = ij.field_m;
@@ -61,9 +61,9 @@ final class id {
           } else {
             stackIn_11_5 = var1_int;
           }
-          ((UiWidget) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_10_2, stackIn_10_3, (byte) stackIn_10_4, stackIn_11_5);
+          ((km) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_10_2, stackIn_10_3, (byte) stackIn_10_4, stackIn_11_5);
           rc.d(-20);
-          s.field_b.a(0, 40, fd.field_y.field_K, (byte) -55, fd.field_y.field_ub - 40);
+          s.field_b.a(0, 40, WidgetContainer.field_y.field_K, (byte) -55, WidgetContainer.field_y.field_ub - 40);
           ng.field_Z.a(0, 30, hg.field_p.field_K, (byte) -44, 0);
           nk.field_I.a(0, hg.field_p.field_ub - 40 - 32, hg.field_p.field_K, (byte) -116, 30);
           f.field_c.a(5, 30, 68, (byte) -69, 5);
@@ -373,7 +373,7 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 32) {
-            field_a = (UiWidget) null;
+            field_a = (km) null;
           }
           param0 = param0 & 8191;
           if (param0 < 4096) {
@@ -404,7 +404,7 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 54) {
-            field_a = (UiWidget) null;
+            field_a = (km) null;
           }
           var2_int = 0;
           if (0 == param0) {

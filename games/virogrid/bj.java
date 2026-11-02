@@ -125,9 +125,9 @@ final class bj extends IntrusiveNode {
             var2 != 4) {
             if (5 == var2) {
               var3_long = ((PacketBuffer) ((Object) var1)).e((byte) -60);
-              var27 = ((PacketBuffer) ((Object) var1)).h(-127);
-              var6 = ((PacketBuffer) ((Object) var1)).h(-124);
-              var28 = ((PacketBuffer) ((Object) var1)).h(-119);
+              var27 = ((PacketBuffer) ((Object) var1)).readString(-127);
+              var6 = ((PacketBuffer) ((Object) var1)).readString(-124);
+              var28 = ((PacketBuffer) ((Object) var1)).readString(-119);
               var29 = db.a(var3_long, false);
               var8 = var29;
               stackIn_102_0 = (var6.equals("")) ? 0 : 1;
@@ -244,8 +244,8 @@ final class bj extends IntrusiveNode {
                   var2 != 17) {
                   if (var2 == 18) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).e((byte) -60);
-                    var19 = ((PacketBuffer) ((Object) var1)).h(-118);
-                    var20 = ((PacketBuffer) ((Object) var1)).h(-118);
+                    var19 = ((PacketBuffer) ((Object) var1)).readString(-118);
+                    var20 = ((PacketBuffer) ((Object) var1)).readString(-118);
                     var7 = GameSession.a(var3_longLifetime2, (byte) -127);
                     if (var7 == null) {
                       var7 = new lk(var19, var20, var3_longLifetime2);

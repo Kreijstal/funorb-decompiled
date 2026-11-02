@@ -4,7 +4,7 @@
 final class gn extends tg {
     static Js5Archive field_G;
     static String field_H;
-    static UiWidget field_F;
+    static km field_F;
     static String field_I;
 
     final void b(byte param0, int param1, int param2, int param3) {

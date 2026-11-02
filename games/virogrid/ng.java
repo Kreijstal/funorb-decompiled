@@ -10,7 +10,7 @@ final class ng extends nk {
     private Sprite field_S;
     static String field_Y;
     static volatile int field_Q;
-    static UiWidget field_Z;
+    static km field_Z;
     static int[] field_O;
     private int field_U;
     static int field_P;
@@ -96,7 +96,7 @@ final class ng extends nk {
           var6 = this.field_R.a(param0 - 22280);
           var31 = (gm) ((Object) this.field_w);
           var9 = this.field_l + param1;
-          var10 = var31.b(-587719039, (fi) (this), param2) + (var31.a((fi) (this), (byte) -123).a((byte) 20) >> 1);
+          var10 = var31.b(-587719039, (UiWidget) (this), param2) + (var31.a((UiWidget) (this), (byte) -123).a((byte) 20) >> 1);
           if (ImageProducerRasterBuffer.field_r != var6 &&
             te.field_d != var6) {
             if (var6 == ee.field_c) {
@@ -151,7 +151,7 @@ final class ng extends nk {
           var6Lifetime1 = this.field_R.a(param0 - 22280);
           var33 = (gm) ((Object) this.field_w);
           var9Lifetime1 = this.field_l + param1;
-          var10Lifetime1 = var33.b(-587719039, (fi) (this), param2) + (var33.a((fi) (this), (byte) -123).a((byte) 20) >> 1);
+          var10Lifetime1 = var33.b(-587719039, (UiWidget) (this), param2) + (var33.a((UiWidget) (this), (byte) -123).a((byte) 20) >> 1);
           if (ImageProducerRasterBuffer.field_r != var6Lifetime1 &&
             te.field_d != var6Lifetime1) {
             if (var6Lifetime1 == ee.field_c) {
@@ -195,7 +195,7 @@ final class ng extends nk {
         var6Lifetime2 = this.field_R.a(param0 - 22280);
         var32 = (gm) ((Object) this.field_w);
         var9Lifetime2 = this.field_l + param1;
-        var10Lifetime2 = var32.b(-587719039, (fi) (this), param2) + (var32.a((fi) (this), (byte) -123).a((byte) 20) >> 1);
+        var10Lifetime2 = var32.b(-587719039, (UiWidget) (this), param2) + (var32.a((UiWidget) (this), (byte) -123).a((byte) 20) >> 1);
         if (ImageProducerRasterBuffer.field_r == var6Lifetime2) {
           var23 = bf.field_p[0];
           var11Lifetime2 = var23.field_u << 1;
@@ -261,17 +261,17 @@ final class ng extends nk {
         this.field_S.e(var9Lifetime2 - (var24.field_u >> 1), -var24.field_z + var10Lifetime2, 256);
     }
 
-    final boolean a(fi param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -8515) {
-            var4 = (fi) null;
-            this.a(-119, 56, (fi) null, -7);
+            var4 = (UiWidget) null;
+            this.a(-119, 56, (UiWidget) null, -7);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class ng extends nk {
         }
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_U = this.field_U + 1;
           super.a(param0, 114, param2, param3);

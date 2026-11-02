@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fa extends IntrusiveNode {
-    static UiWidget field_n;
+    static km field_n;
     static String field_h;
     static long field_l;
     static double field_k;
@@ -11,7 +11,7 @@ final class fa extends IntrusiveNode {
     byte[] field_g;
     static String field_m;
 
-    final static UiWidget c(int param0) {
+    final static km c(int param0) {
         if (param0 != 16777215) {
           fa.d(64);
         }

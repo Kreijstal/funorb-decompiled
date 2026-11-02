@@ -21,7 +21,7 @@ final class vg extends ec {
         field_J = null;
     }
 
-    private vg(int param0, int param1, int param2, int param3, ol param4, cd param5, fi param6) {
+    private vg(int param0, int param1, int param2, int param3, ol param4, cd param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_x = param6;
@@ -30,7 +30,7 @@ final class vg extends ec {
         }
     }
 
-    final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         ce var7 = null;
         ce var8 = null;

@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends UiWidget {
+final class hk extends km {
     static long field_Kb;
     static int field_Jb;
     static String field_Ib;
     static int field_Hb;
     static String field_Gb;
-    private UiWidget field_Nb;
+    private km field_Nb;
     static volatile int field_Mb;
     static String field_Eb;
-    UiWidget field_Fb;
+    km field_Fb;
     static boolean[] field_Lb;
     static e field_Ob;
 
@@ -153,7 +153,7 @@ final class hk extends UiWidget {
         this.b(param6, -94, param4);
     }
 
-    hk(long param0, UiWidget param1, UiWidget param2, UiWidget param3, Sprite param4, String param5) {
+    hk(long param0, km param1, km param2, km param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -170,12 +170,12 @@ final class hk extends UiWidget {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Nb = new UiWidget(0L, param2);
+            this.field_Nb = new km(0L, param2);
             this.field_Nb.field_qb = param4;
             this.a(0, this.field_Nb);
           }
           if (param5 != null) {
-            this.field_Fb = new UiWidget(0L, param3, param5);
+            this.field_Fb = new km(0L, param3, param5);
             this.a(0, this.field_Fb);
             this.b((byte) 42);
           } else {

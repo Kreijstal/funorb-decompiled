@@ -1,929 +1,611 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class UiWidget extends ke {
-    int field_fb;
-    e field_C;
-    Sprite[] field_x;
-    Sprite field_y;
-    Sprite field_qb;
-    private int field_U;
-    private int field_wb;
-    int field_tb;
-    int field_J;
-    static bg field_yb;
-    private int field_M;
-    Sprite field_sb;
-    int field_ab;
-    int field_w;
-    String field_V;
-    private boolean field_mb;
-    int field_E;
-    int field_K;
-    int field_Bb;
-    Sprite field_rb;
-    int field_kb;
-    boolean field_X;
-    boolean field_G;
-    int field_Q;
-    int field_db;
-    static volatile boolean field_Db;
-    private int field_v;
-    static int field_pb;
-    int field_R;
-    IntrusiveDeque field_W;
-    static String field_P;
-    int field_Cb;
-    int field_hb;
-    int field_D;
-    int field_bb;
-    private int field_I;
-    int field_F;
-    boolean field_S;
-    int field_nb;
-    private int field_Ab;
-    int field_H;
-    int field_O;
-    private boolean field_Z;
-    Sprite field_jb;
-    private int field_ob;
-    Sprite[] field_L;
-    boolean field_Y;
-    int field_zb;
-    Sprite[] field_vb;
-    private boolean field_gb;
-    static int field_B;
-    String field_eb;
-    int field_ub;
-    int field_lb;
-    Sprite[] field_cb;
-    Sprite[] field_T;
-    int field_z;
-    private int field_N;
-    boolean field_xb;
-    int field_A;
-    boolean field_ib;
+import java.util.*;
 
-    final void a(boolean param0, int param1) {
-        this.a(param0, 0, Rasterizer.field_e, 0, 0, Rasterizer.field_f, false, false, false, false, true);
-        if (param1 != 24960) {
-          this.field_mb = true;
+class UiWidget extends IntrusiveNode {
+    cd field_o;
+    int field_k;
+    int field_g;
+    int field_q;
+    int field_l;
+    ol field_w;
+    static int[] field_j;
+    static java.awt.Canvas field_v;
+    int field_m;
+    static de field_t;
+    int field_u;
+    String field_h;
+    String field_n;
+    ie field_r;
+    boolean field_p;
+    static int field_s;
+    int field_i;
+
+    final static Boolean e(boolean param0) {
+        if (!param0) {
+          return (Boolean) null;
+        }
+        Boolean var1 = ia.field_b;
+        ia.field_b = null;
+        return var1;
+    }
+
+    void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+        try {
+          if (param5 <= 73) {
+            this.a((Hashtable) null, (byte) -23, 50, (StringBuilder) null);
+          }
+          this.field_i = 0;
+        } catch (RuntimeException runtimeException) {
+          throw kg.a((Throwable) ((Object) runtimeException), "fi.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void b(int param0, UiWidget param1) {
-        boolean stackIn_94_1 = false;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        String stackIn_102_2 = null;
+    final boolean a(int param0, int param1, int param2, byte param3, int param4) {
+        boolean stackIn_8_0 = false;
+        if (param3 < 7) {
+          this.field_o = (cd) null;
+        }
+        stackIn_8_0 = (param4 + this.field_l <= param1) && (param2 >= param0 + this.field_u) && (param4 + (this.field_l + this.field_g) > param1) && (this.field_m + this.field_u + param0 > param2);
+        return stackIn_8_0;
+    }
+
+    final boolean a(int param0, char param1, int param2) {
+        if (this.f(true) &&
+          this.a(this, param1, param0, 21)) {
+          return true;
+        }
+        if (param2 > -65) {
+          this.a(19, 14, (byte) 51, true);
+        }
+        int var4 = param0;
+        if (var4 != 80) {
+          return false;
+        }
+        return this.a(this, -8515);
+    }
+
+    StringBuilder a(Hashtable param0, byte param1, int param2, StringBuilder param3) {
+        RuntimeException var5 = null;
+        StringBuilder stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
-          if (param0 != 18003) {
-            this.a(true, (byte) -11);
+          if (param1 <= 118) {
+            this.a(-22, '﾿', 96);
           }
-          if (param1 != null) {
-            if (param1.field_x != null) {
-              this.field_x = param1.field_x;
-            }
-            if (param1.field_xb) {
-              this.field_xb = param1.field_xb;
-            }
-            if (param1.field_gb) {
-              this.field_gb = param1.field_gb;
-            }
-            if (param1.field_eb != null) {
-              this.field_eb = param1.field_eb;
-            }
-            if (0 <= param1.field_A) {
-              this.field_A = param1.field_A;
-            }
-            if (null != param1.field_jb) {
-              this.field_jb = param1.field_jb;
-            }
-            if (null != param1.field_sb) {
-              this.field_sb = param1.field_sb;
-            }
-            if (0 != param1.field_z) {
-              this.field_z = param1.field_z;
-            }
-            if (param1.field_T != null) {
-              this.field_T = param1.field_T;
-            }
-            if (null != param1.field_y) {
-              this.field_y = param1.field_y;
-            }
-            if (param1.field_C != null) {
-              this.field_C = param1.field_C;
-            }
-            if (0 <= param1.field_ab) {
-              this.field_ab = param1.field_ab;
-            }
-            if (null != param1.field_L) {
-              this.field_L = param1.field_L;
-            }
-            if (param1.field_ib) {
-              this.field_ib = param1.field_ib;
-            }
-            if (param1.field_db >= 0) {
-              this.field_db = param1.field_db;
-            }
-            if (null != param1.field_V) {
-              this.field_V = param1.field_V;
-            }
-            if (null != param1.field_vb) {
-              this.field_vb = param1.field_vb;
-            }
-            if (null != param1.field_qb) {
-              this.field_qb = param1.field_qb;
-            }
-            if (!param1.field_Y) {
-              this.field_Y = param1.field_Y;
-            }
-            if (param1.field_E != 0) {
-              this.field_E = param1.field_E;
-            }
-            if (param1.field_fb != 0) {
-              this.field_fb = param1.field_fb;
-            }
-            if (param1.field_H != 256) {
-              this.field_H = param1.field_H;
-            }
-            if (param1.field_rb != null) {
-              this.field_rb = param1.field_rb;
-            }
-            if (0 <= param1.field_bb) {
-              this.field_bb = param1.field_bb;
-            }
-            if (param1.field_cb != null) {
-              this.field_cb = param1.field_cb;
-            }
-            if (param1.field_mb) {
-              this.field_mb = param1.field_mb;
-            }
-            if (-2147483648 != param1.field_N) {
-              this.field_N = param1.field_N;
-            }
-            if (0 != param1.field_v) {
-              this.field_v = param1.field_v;
-            }
-            if (param1.field_hb != -2147483648) {
-              this.field_hb = param1.field_hb;
-            }
-            if (param1.field_R != -2147483648) {
-              this.field_R = param1.field_R;
-            }
-            if (param1.field_lb != 0) {
-              this.field_lb = param1.field_lb;
-            }
-            if (0 != param1.field_D) {
-              this.field_D = param1.field_D;
-            }
-            if (-2147483648 != param1.field_O) {
-              this.field_O = param1.field_O;
-            }
-            if (param1.field_zb != -2147483648) {
-              this.field_zb = param1.field_zb;
-            }
-            if (param1.field_X) {
-              this.field_X = param1.field_X;
-            }
-            stackIn_94_1 = (this.field_gb) && (param1.field_Z);
-            this.field_Z = stackIn_94_1;
-            if (param1.field_wb != 0) {
-              this.field_wb = param1.field_wb;
-            }
-            if (-2147483648 != param1.field_I) {
-              this.field_I = param1.field_I;
-            }
+          if (this.a(param0, param2, 34, param3)) {
+            this.a(param2, param0, (byte) 127, param3);
           }
-          return;
+          stackIn_6_0 = (StringBuilder) (param3);
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("fi.MA(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    boolean a(UiWidget param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == -8515) {
+            return false;
+          }
+          this.a((UiWidget) null, 9, true, -68, -47, 99, 20);
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_101_0 = var3;
-          stackIn_101_1 = new StringBuilder().append("km.W(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_102_2 = "null";
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("fi.G(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
           } else {
-            stackIn_102_2 = "{...}";
+            stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
+          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    UiWidget(long param0, UiWidget param1, String param2) {
-        this(param0, param1, 0, 0, 0, 0, param2);
-    }
-
-    final void a(boolean param0, byte param1) {
-        ch.field_b = !param0 ? true : false;
-        if (param1 < 88) {
-          UiWidget.e(36);
-        }
-        vl.field_d = !param0 ? true : false;
-        this.a(Rasterizer.field_f, Rasterizer.field_e, 0, true, true, 0);
-    }
-
-    public static void f(int param0) {
-        field_yb = null;
-        if (param0 != 2147483647) {
-          return;
-        }
-        field_P = null;
-    }
-
-    final void b(byte param0) {
-        UiWidget var4 = null;
-        int var3 = Virogrid.field_F ? 1 : 0;
-        if (param0 != 42) {
-          return;
-        }
-        if (null != this.field_W) {
-          var4 = (UiWidget) (this.field_W.b(false));
-          while (var4 != null) {
-            var4.field_mb = true;
-            var4.b((byte) 42);
-            var4 = (UiWidget) (this.field_W.e(9003));
-          }
-        }
-    }
-
-    UiWidget(long param0, UiWidget param1) {
-        this(param0, param1, 0, 0, 0, 0, (String) null);
-    }
-
-    final void a(int param0, UiWidget param1) {
-        if (param0 != 0) {
-          return;
-        }
-        try {
-          if (this.field_W == null) {
-            this.field_W = new IntrusiveDeque();
-          }
-          this.field_W.a(param1, (byte) -36);
-        } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "km.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    final static void d(byte param0) {
-        int var8_int = 0;
-        int var19 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
+    final boolean a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+        StringBuilder discarded$1 = null;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        oc var4 = null;
-        hn var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        String[][] var8 = null;
-        String[][] var9 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var20 = 0;
-        String var21 = null;
-        long var22 = 0L;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        hg var28 = null;
-        long[][] var35 = null;
-        int[][] var36 = null;
-        int var25Lifetime1;
-        int var25Lifetime2;
-        var26 = Virogrid.field_F ? 1 : 0;
         try {
-          var28 = sh.field_qb;
-          var2 = var28.readUnsignedByte(11132);
-          if (var2 == 0) {
-            var3 = var28.readUnsignedShort((byte) 87);
-            var4 = (oc) (fn.field_a.a((byte) -77));
-            while (var4 != null) {
-              if (var4.field_j != var3) {
-                var4 = (oc) (fn.field_a.a(16213));
-                continue;
-              }
-              break;
-            }
-            if (var4 == null) {
-              tn.a(false);
-              return;
-            }
-            var5 = var28.readUnsignedByte(11132);
-            if (var5 != 0) {
-              var6 = var4.field_g;
-              qd.field_m[0].field_g = mi.field_d;
-              qd.field_m[0].field_e = false;
-              var7 = var4.field_m;
-              qd.field_m[0].field_d = null;
-              for (var8_int = 1; var8_int < var5; var8_int++) {
-                qd.field_m[var8_int].field_g = var28.h(param0 ^ -59);
-                qd.field_m[var8_int].field_e = false;
-                if (var28.readUnsignedByte(11132) == 1) {
-                  qd.field_m[var8_int].field_d = var28.h(param0 - 204);
-                } else {
-                  qd.field_m[var8_int].field_d = null;
-                }
-              }
-              var8 = new String[3][var6];
-              var9 = new String[3][var6];
-              var35 = new long[3][var6];
-              var36 = new int[3][var6 * var7];
-              var12 = 0;
-              var13 = 0;
-              var14 = 0;
-              var15 = 0;
-              var16 = 0;
-              var17 = 0;
-              var18 = var28.readUnsignedByte(11132);
-              if (var18 > 0) {
-                for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.readUnsignedByte(11132);
-                  var21 = qd.field_m[var20].field_g;
-                  var22 = var28.e((byte) -60);
-                  var24 = var28.position;
-                  if (var19 < var6) {
-                    var8[0][var12] = var21;
-                    var9[0][var12] = qd.field_m[var20].field_d;
-                    var35[0][var12] = var22;
-                    var12++;
-                    for (var25 = 0; var25 < var7; var25++) {
-                      incrementValue$0 = var15;
-                      var15++;
-                      var36[0][incrementValue$0] = var28.readInt((byte) 93);
-                    }
-                  }
-                  if (var21 != null &&
-                    PacketBuffer.a(var21, true)) {
-                    var8[1][var13] = mi.field_d;
-                    var9[1][var13] = null;
-                    var35[1][var13] = var22;
-                    var13++;
-                    var28.position = var24;
-                    for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
-                      incrementValue$1 = var16;
-                      var16++;
-                      var36[1][incrementValue$1] = var28.readInt((byte) 103);
-                    }
-                  }
-                  if (var6 > var14 &&
-                    !qd.field_m[var20].field_e) {
-                    qd.field_m[var20].field_e = true;
-                    var8[2][var14] = var21;
-                    var9[2][var14] = qd.field_m[var20].field_d;
-                    var35[2][var14] = var22;
-                    var14++;
-                    var28.position = var24;
-                    for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
-                      incrementValue$2 = var17;
-                      var17++;
-                      var36[2][incrementValue$2] = var28.readInt((byte) 127);
-                    }
-                  }
-                }
-              }
-            }
-            var4.a(false);
-          } else if (var2 == 1) {
-            var3 = var28.readUnsignedShort((byte) 83);
-            var28.e((byte) -60);
-            var4_ref = (hn) (qn.field_P.a((byte) -44));
-            while (var4_ref != null) {
-              if (~var3 != ~var4_ref.field_j) {
-                var4_ref = (hn) (qn.field_P.a(16213));
-                continue;
-              }
-              break;
-            }
-            if (var4_ref == null) {
-              tn.a(false);
-              return;
-            }
-            var4_ref.a(false);
-          } else {
-            en.a("HS1: " + rg.a(true), (Throwable) null, 1);
-            tn.a(false);
+          if (param2 != 34) {
+            this.a((UiWidget) null, -111, true, 107, -55, -73, 65);
           }
-          if (param0 != 76) {
-            field_yb = (bg) null;
+          if (param0.containsKey(this)) {
+            discarded$1 = param3.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
+            return false;
           }
-          return;
+          param0.put(this, this);
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var1), "km.CA(" + param0 + ')');
-        }
-    }
-
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        this.field_Cb = 0;
-        this.field_tb = param0;
-        this.field_ob = 0;
-        this.field_ub = param1;
-        this.field_F = param4;
-        if (param3 >= -40) {
-          this.field_ib = true;
-        }
-        this.field_kb = 0;
-        this.field_K = param2;
-        this.field_M = 0;
-    }
-
-    final static int e(int param0) {
-        if (param0 > -53) {
-          UiWidget.a(-109, -67, 3);
-        }
-        return ng.field_Q;
-    }
-
-    final int a(int param0, byte param1) {
-        UiWidget var4 = null;
-        int var5 = 0;
-        int var4_int = 0;
-        int var6 = Virogrid.field_F ? 1 : 0;
-        int var3 = 0;
-        int var4_intLifetime1;
-        if (null != this.field_V &&
-          null != this.field_C) {
-          var4_int = this.field_C.c(this.field_V, param0);
-          if (var4_int > var3) {
-            var3 = var4_int;
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("fi.IB(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-        }
-        if (null != this.field_qb) {
-          var4_intLifetime1 = this.field_qb.field_u;
-          if (var4_intLifetime1 > var3) {
-            var3 = var4_intLifetime1;
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
+          throw kg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
-        if (param1 < 68) {
-          this.a(-4, -89, -47, true, false, 60);
-        }
-        if (null != this.field_W) {
-          var4 = (UiWidget) (this.field_W.a((byte) -46));
-          while (var4 != null) {
-            var5 = var4.field_tb + var4.field_K;
-            if (var5 > var3) {
-              var3 = var5;
-            }
-            var4 = (UiWidget) (this.field_W.a(16213));
-          }
-        }
-        return var3;
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
-        boolean stackIn_31_1 = false;
-        boolean stackIn_39_1 = false;
+    void a(int param0, boolean param1, int param2, int param3, int param4) {
+        this.field_m = param0;
+        this.field_g = param4;
+        if (!param1) {
+          this.field_k = 87;
+        }
+        this.field_l = param3;
+        this.field_u = param2;
+    }
+
+    void c(int param0) {
+        if (param0 != -1) {
+          this.d(33);
+        }
+    }
+
+    final void d(boolean param0) {
+        this.a(this.field_m, true, this.field_u, this.field_l, this.field_g);
+        if (param0) {
+          this.a(-67, 127, 95);
+        }
+    }
+
+    boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+        RuntimeException var8 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param5 == 0) {
+            return false;
+          }
+          this.field_g = -122;
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_6_0 = var8;
+          stackIn_6_1 = new StringBuilder().append("fi.TA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    final boolean a(int param0, int param1, byte param2, boolean param3) {
+        int var5;
+        ce var6;
         int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        UiWidget var13;
-        int var14;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        int var7Lifetime3;
-        var14 = Virogrid.field_F ? 1 : 0;
-        if (this.field_M > 0) {
-          var7 = -(-this.field_M >> 2);
-        } else {
-          var7 = this.field_M >> 2;
-        }
-        this.field_M = this.field_M - var7;
-        this.field_tb = this.field_tb + var7;
-        if (this.field_Cb > 0) {
-          var7Lifetime1 = -(-this.field_Cb >> 2);
-        } else {
-          var7Lifetime1 = this.field_Cb >> 2;
-        }
-        this.field_Cb = this.field_Cb - var7Lifetime1;
-        this.field_F = this.field_F + var7Lifetime1;
-        if (this.field_ob > 0) {
-          var7Lifetime2 = -(-this.field_ob >> 2);
-        } else {
-          var7Lifetime2 = this.field_ob >> 2;
-        }
-        this.field_K = this.field_K + var7Lifetime2;
-        this.field_ob = this.field_ob - var7Lifetime2;
-        if (0 < this.field_kb) {
-          var7Lifetime3 = -(-this.field_kb >> 2);
-        } else {
-          var7Lifetime3 = this.field_kb >> 2;
-        }
-        this.field_ub = this.field_ub + var7Lifetime3;
-        if (!param4) {
-          return;
-        }
-        this.field_Bb = param5 + this.field_tb;
-        this.field_J = this.field_F + param2;
-        this.field_kb = this.field_kb - var7Lifetime3;
-        param3 = param3 & this.field_Y;
-        var8 = Rasterizer.field_i;
-        var9 = Rasterizer.field_g;
-        var10 = Rasterizer.field_k;
-        var11 = Rasterizer.field_h;
-        Rasterizer.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
-        var12 = 0;
-        if (!vl.field_d &&
-          param3 &&
-          oi.field_g != 0 &&
-          ii.field_b >= Rasterizer.field_i &&
-          Rasterizer.field_k > ii.field_b &&
-          a.field_y >= Rasterizer.field_g &&
-          Rasterizer.field_h > a.field_y) {
-          this.field_U = -this.field_J + a.field_y;
-          this.field_nb = oi.field_g;
-          var12 = 1;
-          this.field_w = oi.field_g;
-          this.field_Q = -this.field_Bb + ii.field_b;
-        } else {
-          this.field_nb = 0;
-          if (oi.field_g != 0) {
-            this.field_w = 0;
+        regionExit1: {
+          var7 = Virogrid.field_F ? 1 : 0;
+          this.a(param1, 116, this, param0);
+          var5 = this.f(true) ? 1 : 0;
+          if (!param3) {
+            if (var5 == 0) {
+              break regionExit1;
+            }
+            if (oi.field_g == 0) {
+              break regionExit1;
+            }
+            this.c(-1);
+          }
+          if (param3 ||
+            var7 != 0) {
+            if (0 != og.field_b &&
+              var5 != 0) {
+              this.a(param1, this, og.field_b, param0, nl.field_u, 0, hk.field_Jb);
+            }
+            if (0 != oi.field_g) {
+              if (!this.a(this, oi.field_g, false, param1, a.field_y, param0, ii.field_b)) {
+                if (var5 != 0) {
+                  this.c(-1);
+                  if (var7 != 0) {
+                    param3 = false;
+                  }
+                }
+              } else {
+                param3 = false;
+              }
+            }
+            if (0 == j.field_e &&
+              en.field_Jb != 0) {
+              this.a(hk.field_Jb, nl.field_u, param1, this, param0, 111);
+              var6 = ra.field_b;
+              if (var6 != null) {
+                if (var6.field_o instanceof ik) {
+                  ((ik) (var6.field_o)).a(82, (vg) null, var6);
+                }
+                ra.field_b = null;
+              }
+            }
           }
         }
-        stackIn_31_1 = (!ch.field_b) && (Rasterizer.field_i <= nl.field_u) && (Rasterizer.field_k > nl.field_u) && (hk.field_Jb >= Rasterizer.field_g) && (hk.field_Jb < Rasterizer.field_h);
-        this.field_G = stackIn_31_1;
-        if (0 == j.field_e) {
-          this.field_w = 0;
+        en.field_Jb = j.field_e;
+        em.a(true, this.d(59));
+        if (param2 < -126) {
+          return param3;
         }
-        stackIn_39_1 = (this.field_G) && (j.field_e == this.field_w) && (param3);
-        this.field_S = stackIn_39_1;
-        if (this.field_W != null) {
-          var13 = (UiWidget) (this.field_W.b(false));
-          while (var13 != null) {
-            var13.a(this.field_ub, this.field_K, this.field_J, param3, param4, this.field_Bb);
-            var13 = (UiWidget) (this.field_W.e(9003));
-          }
-        }
-        if (this.field_G) {
-          ch.field_b = true;
-        }
-        if (var12 != 0) {
-          vl.field_d = true;
-        }
-        Rasterizer.a(var8, var9, var10, var11);
-        if (this.field_w != 0 &&
-          this.field_X) {
-          this.field_F = hk.field_Jb + (-this.field_U - param2);
-          this.field_tb = nl.field_u + (-this.field_Q - param5);
-          if (this.field_tb < 0) {
-            this.field_tb = 0;
-          }
-          if (0 > this.field_F) {
-            this.field_F = 0;
-          }
-          if (-this.field_K + param1 < this.field_tb) {
-            this.field_tb = -this.field_K + param1;
-          }
-          this.field_M = 0;
-          this.field_Bb = param5 + this.field_tb;
-          if (param0 - this.field_ub < this.field_F) {
-            this.field_F = param0 - this.field_ub;
-          }
-          this.field_Cb = 0;
-          this.field_J = param2 + this.field_F;
-        }
+        return false;
     }
 
-    final void a(int param0, UiWidget param1, UiWidget param2, byte param3) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
+    final void a(int param0, Hashtable param1, byte param2, StringBuilder param3) {
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
+        var6 = Virogrid.field_F ? 1 : 0;
         try {
-          if (param2 == null) {
-            param1.field_F = 0;
-            param1.field_Cb = 0;
-          } else {
-            param1.field_F = param0 + (param2.field_ub + param2.field_F);
-            param1.field_Cb = param2.field_kb + param2.field_Cb;
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_l).append(",").append(this.field_u).append(" ").append(this.field_g).append("x").append(this.field_m);
+          if (this.field_n != null) {
+            discarded$1 = param3.append(" text=\"").append(this.field_n).append('"');
           }
-          if (param3 < 60) {
-            this.field_ab = -41;
+          if (this.field_p) {
+            discarded$2 = param3.append(" mouseover");
+          }
+          if (this.f(true)) {
+            discarded$3 = param3.append(" focused");
+          }
+          if (this.field_w != null) {
+            discarded$4 = param3.append(" renderer=");
+            if (!(this.field_w instanceof UiWidget)) {
+              discarded$5 = param3.append(this.field_w);
+              if (var6 != 0) {
+                param3 = this.a(param1, (byte) 119, param0 + 1, param3);
+              }
+            } else {
+              param3 = this.a(param1, (byte) 119, param0 + 1, param3);
+            }
+          }
+          if (param2 <= 125) {
+            return;
+          }
+          if (null != this.field_o) {
+            discarded$6 = param3.append(" listener=");
+            if (!(this.field_o instanceof UiWidget)) {
+              discarded$7 = param3.append(this.field_o);
+              if (var6 != 0) {
+                param3 = this.a(param1, (byte) 126, 1 + param0, param3);
+              }
+            } else {
+              param3 = this.a(param1, (byte) 126, 1 + param0, param3);
+            }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("km.AA(").append(param0).append(',');
+          stackIn_24_0 = var5;
+          stackIn_24_1 = new StringBuilder().append("fi.JB(").append(param0).append(',');
           if (param1 == null) {
-            stackIn_9_2 = "null";
+            stackIn_25_2 = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            stackIn_25_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+        }
+    }
+
+    int b(byte param0) {
+        if (param0 != -39) {
+          this.toString();
+          return 0;
+        }
+        return 0;
+    }
+
+    public final String toString() {
+        return this.a(new Hashtable(), (byte) 123, 0, new StringBuilder()).toString();
+    }
+
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = 81 % ((-75 - param3) / 36);
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_4_0 = var5;
+          stackIn_4_1 = new StringBuilder().append("fi.AA(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    UiWidget(String param0, cd param1) {
+        this(param0, vi.field_g.field_j, param1);
+    }
+
+    String d(int param0) {
+        if (param0 < 35) {
+          return (String) null;
+        }
+        if (!this.field_p) {
+          return null;
+        }
+        return this.field_h;
+    }
+
+    void a(int param0, int param1, UiWidget param2, int param3) {
+        int var5_int = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_1 = 0;
+        boolean stackIn_11_1 = false;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          var5_int = this.a(param3, nl.field_u, hk.field_Jb, (byte) 22, param0) ? 1 : 0;
+          stackIn_3_0 = (var5_int != 0) ? 0 : 1;
+          if (this.field_p) {
+            stackIn_6_1 = 0;
+          } else {
+            stackIn_6_1 = 1;
+          }
+          if (stackIn_3_0 != stackIn_6_1) {
+            stackIn_11_1 = (var5_int != 0);
+            this.field_p = stackIn_11_1;
+            if (this.field_o != null &&
+              this.field_o instanceof ni) {
+              ((ni) (this.field_o)).a((byte) 109, var5_int != 0, this);
+            }
+          }
+          if (param1 < 113) {
+            this.a(92, (Hashtable) null, (byte) 86, (StringBuilder) null);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_19_0 = var5;
+          stackIn_19_1 = new StringBuilder().append("fi.E(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
-            stackIn_12_2 = "null";
+            stackIn_20_2 = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            stackIn_20_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw kg.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final int c(byte param0) {
-        if (param0 < 31) {
-          this.a(true, -46, -65, 118);
+    public static void c(boolean param0) {
+        field_t = null;
+        if (param0) {
+          UiWidget.c(false);
         }
-        return this.a(2147483647, (byte) 105);
+        field_j = null;
+        field_v = null;
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, boolean param6, boolean param7, boolean param8, boolean param9, boolean param10) {
-        boolean stackIn_5_0 = false;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        Sprite[] var16;
-        Sprite var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23_int;
-        String var23;
-        UiWidget var23_ref;
-        int var24;
-        int var25;
-        String var26;
-        String var23Lifetime1;
-        String var23Lifetime2;
-        var25 = Virogrid.field_F ? 1 : 0;
-        this.field_J = param1 + this.field_F;
-        this.field_Bb = param4 + this.field_tb;
-        var12 = Rasterizer.field_i;
-        var13 = Rasterizer.field_g;
-        var14 = Rasterizer.field_k;
-        var15 = Rasterizer.field_h;
-        Rasterizer.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
-        param10 = param10 & this.field_Y;
-        if (!this.field_mb) {
-          param8 = this.field_S;
-          param9 = this.field_xb;
-          stackIn_5_0 = (this.field_w != 0);
-          param7 = stackIn_5_0;
+    void a(byte param0, int param1, int param2, int param3) {
+        if (param0 != 37) {
+          this.a(15, (Hashtable) null, (byte) 35, (StringBuilder) null);
         }
-        var16 = this.field_vb;
-        var17 = this.field_qb;
-        var18 = this.field_E;
-        var19 = param3;
-        if (!param10) {
-          if (null != this.field_L) {
-            var16 = this.field_L;
-          }
-          if (this.field_db >= 0) {
-            var18 = this.field_db;
-          }
-          if (this.field_rb != null) {
-            var17 = this.field_rb;
-          }
+        if (0 == param3 &&
+          this.field_w != null) {
+          this.field_w.a(param1, this, true, param2, -23294);
         }
-        var20 = 0;
-        if (param8) {
-          if (this.field_N != -2147483648) {
-            var19 = this.field_N;
+    }
+
+    boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+        RuntimeException var8 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2) {
+            return true;
           }
-          if (null != this.field_x) {
-            var16 = this.field_x;
+          if (!this.a(param5, param6, param4, (byte) 27, param3)) {
+            return false;
           }
-          if (null != this.field_sb) {
-            var17 = this.field_sb;
-          }
-          if (this.field_ab >= 0) {
-            var18 = this.field_ab;
-          }
-          if (this.field_I != -2147483648) {
-            var20 = this.field_I;
-          }
-        }
-        if (param7) {
-          if (0 <= this.field_A) {
-            var18 = this.field_A;
-          }
-          if (null != this.field_T) {
-            var16 = this.field_T;
-          }
-          if (this.field_R != -2147483648) {
-            var19 = this.field_R;
-          }
-          if (this.field_O != -2147483648) {
-            var20 = this.field_O;
-          }
-          if (this.field_y != null) {
-            var17 = this.field_y;
-          }
-        }
-        if (param9) {
-          if (null != this.field_jb) {
-            var17 = this.field_jb;
-          }
-          if (null != this.field_cb) {
-            var16 = this.field_cb;
-          }
-          if (this.field_zb != -2147483648) {
-            var20 = this.field_zb;
-          }
-          if (this.field_hb != -2147483648) {
-            var19 = this.field_hb;
-          }
-          if (this.field_bb >= 0) {
-            var18 = this.field_bb;
-          }
-        }
-        var21 = var19 + this.field_v;
-        var22 = this.field_wb + var20;
-        if (this.field_ib) {
-          tm.a(param4, param1, false, param2, param5, var16);
-        } else {
-          tm.a(this.field_Bb, this.field_J, false, this.field_K, this.field_ub, var16);
-        }
-        if (var17 != null) {
-          var23_int = this.field_Bb + var21;
-          var24 = var22 + this.field_J;
-          if (this.field_lb == 1) {
-            var23_int = var23_int + (-var17.field_u + this.field_K) / 2;
-          }
-          if (1 == this.field_D) {
-            var24 = var24 + (this.field_ub - var17.field_z) / 2;
-          }
-          if (this.field_lb == 2) {
-            var23_int = var23_int + (-var17.field_u + this.field_K);
-          }
-          if (this.field_D == 2) {
-            var24 = var24 + (-var17.field_z + this.field_ub);
-          }
-          if (256 <= this.field_Ab) {
-            var17.d(var23_int, var24);
+          this.field_i = param1;
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_9_0 = var8;
+          stackIn_9_1 = new StringBuilder().append("fi.NA(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
           } else {
-            var17.a(var23_int, var24, this.field_Ab);
+            stackIn_10_2 = "{...}";
           }
+          throw kg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
-        boolean decompiledFrameRemainder0 = true;
-        if (null != this.field_V &&
-          this.field_C != null) {
-          var26 = this.field_V;
-          var23 = var26;
-          var23Lifetime1 = var26;
-          var23Lifetime2 = var26;
-          if (param0 &&
-            this.field_eb != null) {
-            var23Lifetime2 = var26 + this.field_eb;
-          }
-          if (this.field_C.a(var23Lifetime2) <= this.field_K - 2 * this.field_z &&
-            0 > var23Lifetime2.indexOf("<br>")) {
-            if (this.field_D != 1) {
-              if (this.field_D == 2) {
-                var22 = var22 + (-this.field_C.field_H + (-this.field_C.field_G + this.field_ub));
-              }
-            } else {
-              var22 = var22 + (-this.field_C.field_G + (this.field_ub - this.field_C.field_H)) / 2;
-            }
-            if (this.field_lb == 0) {
-              this.field_C.c(var23Lifetime2, this.field_Bb + (this.field_z + var21), var22 + (this.field_J + this.field_C.field_H), var18, -1, this.field_H);
-            } else {
-              if (this.field_lb == 1) {
-                this.field_C.b(var23Lifetime2, (this.field_K - 2 * this.field_z) / 2 + (this.field_z + this.field_Bb + var21), this.field_C.field_H + this.field_J + var22, var18, -1, this.field_H);
-              } else {
-                if (2 != this.field_lb) {
-                  this.field_C.a(var23Lifetime2, this.field_z + this.field_Bb + var21, this.field_J + var22, -(this.field_z * 2) + this.field_K, this.field_ub, var18, -1, this.field_H, this.field_lb, this.field_D, this.field_fb);
-                } else {
-                  this.field_C.a(var23Lifetime2, this.field_z + this.field_Bb + (var21 - (this.field_z * 2 - this.field_K)), this.field_J + (var22 + this.field_C.field_H), var18, -1, this.field_H);
-                }
-              }
-            }
-            decompiledFrameRemainder0 = false;
-          }
-          else {
-            this.field_C.a(var23Lifetime2, this.field_z + (this.field_Bb + var21), var22 + this.field_J, -(2 * this.field_z) + this.field_K, this.field_ub, var18, -1, this.field_H, this.field_lb, this.field_D, this.field_fb);
-          }
-        }
-        if (null != this.field_W) {
-          var23_ref = (UiWidget) (this.field_W.a((byte) -49));
-          while (var23_ref != null) {
-            var23_ref.a(param0, var20 + this.field_J, this.field_K, 0, this.field_Bb + var19, this.field_ub, this.field_Z, param7, param8, param9, param10);
-            var23_ref = (UiWidget) (this.field_W.a(16213));
-          }
-        }
-        Rasterizer.a(var12, var13, var14, var15);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        UiWidget var10_ref_km = null;
-        int var9 = 0;
-        int var11 = Virogrid.field_F ? 1 : 0;
-        int var5 = -this.field_F;
-        int var6 = -this.field_Cb + var5;
-        int var7 = this.field_ub;
-        int var8 = this.field_kb + var7;
-        int var9Lifetime1;
+    final void a(int param0, int param1, int param2) {
+        int var4;
+        int var5_int;
+        String var5;
+        int var6;
+        var6 = Virogrid.field_F ? 1 : 0;
+        var4 = this.b((byte) -39);
+        var5_int = param0;
+        while (var5_int <= var4) {
+          this.a((byte) 37, param2, param1, var5_int);
+          var5_int++;
+          if (var6 == 0) {
+            continue;
+          }
+          break;
+        }
+        var5 = ph.c(-15025);
+        if (var5 != null) {
+          vi.field_g.a(mc.field_a, 5, ge.field_b, var5);
+        }
+    }
+
+    boolean f(boolean param0) {
         if (!param0) {
-          var9 = 0;
-          var10_ref_km = (UiWidget) (this.field_W.a((byte) -74));
-          while (var10_ref_km != null) {
-            var10_ref_km.field_Cb = var9 - var10_ref_km.field_F;
-            var9 = var9 + (var10_ref_km.field_ub + var10_ref_km.field_kb + param1);
-            var10_ref_km = (UiWidget) (this.field_W.a(16213));
-          }
-          var8 = -param1 + var9;
+          this.field_p = true;
+          return false;
         }
-        var9Lifetime1 = -param3 + var8;
-        if (var9Lifetime1 < var6) {
-          var6 = var9Lifetime1;
-        }
-        if (var6 < 0) {
-          var6 = 0;
-        }
-        int var10 = var7 - param3;
-        if (var10 < var5) {
-          var5 = var10;
-        }
-        if (var5 < param2) {
-          var5 = 0;
-        }
-        this.field_Cb = var5 - var6;
-        this.field_F = -var5;
-        this.field_kb = -var7 + var8;
-        this.field_ub = var7;
-    }
-
-    final static void a(int param0, int param1, int param2) {
-        uh.field_c = param0;
-        sk.field_d = param1;
-        int var3 = -21 / ((-5 - param2) / 60);
+        return false;
     }
 
     protected UiWidget() {
-        this.field_R = -2147483648;
-        this.field_hb = -2147483648;
-        this.field_db = -1;
-        this.field_bb = -1;
-        this.field_Ab = 256;
-        this.field_I = -2147483648;
-        this.field_H = 256;
-        this.field_zb = -2147483648;
-        this.field_gb = false;
-        this.field_Y = true;
-        this.field_Z = false;
-        this.field_O = -2147483648;
-        this.field_N = -2147483648;
-        this.field_A = -1;
-        this.field_ab = -1;
+        this.field_q = 0;
+        this.field_k = 0;
     }
 
-    UiWidget(long param0, UiWidget param1, int param2, int param3, int param4, int param5, String param6) {
-        this.field_R = -2147483648;
-        this.field_hb = -2147483648;
-        this.field_db = -1;
-        this.field_bb = -1;
-        this.field_Ab = 256;
-        this.field_I = -2147483648;
-        this.field_H = 256;
-        this.field_zb = -2147483648;
-        this.field_gb = false;
-        this.field_Y = true;
-        this.field_Z = false;
-        this.field_O = -2147483648;
-        this.field_N = -2147483648;
-        this.field_A = -1;
-        this.field_ab = -1;
+    UiWidget(String param0, ol param1, cd param2) {
+        RuntimeException runtimeException = null;
+        gm var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        this.field_q = 0;
+        this.field_k = 0;
         try {
-          this.field_ub = param5;
-          this.field_F = param3;
-          this.field_K = param4;
-          this.field_tb = param2;
-          this.key = param0;
-          this.b(18003, param1);
-          if (param6 != null) {
-            this.field_V = param6;
+          this.field_w = param1;
+          this.field_o = param2;
+          this.field_n = param0;
+          if (this.field_w instanceof gm) {
+            var4 = (gm) ((Object) this.field_w);
+            this.field_g = var4.a(this, false);
+            this.field_m = var4.a(this, 80);
           }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_6_0 = runtimeException;
+          stackIn_6_1 = new StringBuilder().append("fi.<init>(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    UiWidget(int param0, int param1, int param2, int param3, ol param4, cd param5) {
+        this.field_q = 0;
+        this.field_k = 0;
+        try {
+          this.field_g = param2;
+          this.field_u = param1;
+          this.field_l = param0;
+          this.field_m = param3;
+          this.field_o = param5;
+          this.field_w = param4;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "km.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_pb = 0;
-        field_P = "Names cannot contain consecutive spaces";
-        field_Db = false;
+        int var1 = 0;
+        int var2 = 0;
+        int var0;
+        field_j = new int[256];
+        for (var1 = 0; var1 < 256; var1++) {
+          var0 = var1;
+          for (var2 = 0; var2 < 8; var2++) {
+            if ((var0 & 1) != 1) {
+              var0 = var0 >>> 1;
+            } else {
+              var0 = -306674912 ^ var0 >>> 1;
+            }
+          }
+          field_j[var1] = var0;
+        }
+        field_s = 0;
     }
 }

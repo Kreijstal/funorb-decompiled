@@ -9,11 +9,11 @@ final class ei {
     static boolean[] field_d;
     static boolean field_a;
 
-    final static void a(int param0, sc param1) {
+    final static void a(int param0, MusicTrack param1) {
         try {
           if (param0 != 0) {
-            sc var3 = (sc) null;
-            ei.a(-102, (sc) null);
+            MusicTrack var3 = (MusicTrack) null;
+            ei.a(-102, (MusicTrack) null);
           }
           di.a(param1, param0 ^ 109, true);
         } catch (RuntimeException runtimeException) {

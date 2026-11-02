@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends in {
+final class jh extends AudioStream {
     private int field_q;
     private int field_n;
     private int field_l;
@@ -62,7 +62,7 @@ final class jh extends in {
         return param5;
     }
 
-    final in b() {
+    final AudioStream b() {
         return null;
     }
 
@@ -1275,7 +1275,7 @@ final class jh extends in {
         return this.field_t != 0;
     }
 
-    final in c() {
+    final AudioStream c() {
         return null;
     }
 

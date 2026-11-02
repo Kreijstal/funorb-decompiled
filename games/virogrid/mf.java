@@ -9,7 +9,7 @@ final class mf extends hm {
     private long field_g;
     private long field_n;
     private long field_l;
-    static UiWidget field_j;
+    static km field_j;
     static String field_f;
     private int field_m;
     static String field_i;

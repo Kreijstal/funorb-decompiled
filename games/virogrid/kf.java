@@ -9,7 +9,7 @@ final class kf {
     static il field_c;
     private long field_d;
     private int field_b;
-    static UiWidget field_g;
+    static km field_g;
     private DualLinkNode[] field_f;
     private int field_a;
 
@@ -110,7 +110,7 @@ final class kf {
         try {
           var7_int = gk.field_g.position;
           gk.field_g.a((byte) -66, param2);
-          gk.field_g.a(param4, (byte) -119);
+          gk.field_g.writeString(param4, (byte) -119);
           gk.field_g.a(param1, 55);
           gk.field_g.a(!param5 ? 0 : 1, 125);
           gk.field_g.b(-var7_int + gk.field_g.position, -1);

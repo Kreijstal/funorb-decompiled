@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class en extends UiWidget {
-    private UiWidget field_Ib;
+final class en extends km {
+    private km field_Ib;
     static int[] field_Hb;
-    private UiWidget field_Gb;
+    private km field_Gb;
     static String field_Eb;
     static int field_Jb;
     static boolean field_Fb;
@@ -100,11 +100,11 @@ final class en extends UiWidget {
         }
     }
 
-    private en(long param0, UiWidget param1, UiWidget param2, String param3) {
-        super(param0, (UiWidget) null);
+    private en(long param0, km param1, km param2, String param3) {
+        super(param0, (km) null);
         try {
-          this.field_Ib = new UiWidget(0L, param1);
-          this.field_Gb = new UiWidget(0L, param2);
+          this.field_Ib = new km(0L, param1);
+          this.field_Gb = new km(0L, param2);
           this.field_Gb.field_V = param3;
           this.a(0, this.field_Ib);
           this.a(0, this.field_Gb);
@@ -175,8 +175,8 @@ final class en extends UiWidget {
         this(param0, param1.field_Ib, param1.field_Gb, param2);
     }
 
-    en(long param0, Sprite param1, Sprite param2, int param3, UiWidget param4, String param5) {
-        this(param0, (UiWidget) null, param4, param5);
+    en(long param0, Sprite param1, Sprite param2, int param3, km param4, String param5) {
+        this(param0, (km) null, param4, param5);
         try {
           this.field_Ib.field_D = param3;
           this.field_Ib.field_jb = param1;

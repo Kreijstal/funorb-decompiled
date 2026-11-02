@@ -245,7 +245,7 @@ final class w extends tg {
         return null;
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param1 <= 113) {
             w.a((byte) -19, -106L, -21);
@@ -257,7 +257,7 @@ final class w extends tg {
         }
     }
 
-    final boolean a(fi param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

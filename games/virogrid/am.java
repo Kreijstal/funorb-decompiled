@@ -26,7 +26,7 @@ final class am {
         if (null != kk.field_q) {
           kk.field_q.a((byte) -122);
         }
-        fi.field_v.requestFocus();
+        UiWidget.field_v.requestFocus();
         if (param0 == -16) {
           return;
         }

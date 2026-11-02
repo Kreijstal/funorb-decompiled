@@ -7,7 +7,7 @@ final class sd {
     static String field_d;
     static int field_e;
     static ga field_f;
-    static UiWidget field_a;
+    static km field_a;
     static String field_b;
 
     public static void a(byte param0) {

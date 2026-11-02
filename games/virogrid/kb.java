@@ -32,7 +32,7 @@ final class kb {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           var3_int = ih.field_c;
-          cm.field_h = new UiWidget(0L, (UiWidget) null);
+          cm.field_h = new km(0L, (km) null);
           if (null == param2) {
             en.a("QC1", (Throwable) null, 1);
             return;
@@ -137,7 +137,7 @@ final class kb {
         }
     }
 
-    final static void a(UiWidget param0, UiWidget param1, qm param2, UiWidget param3, UiWidget param4, UiWidget param5, UiWidget param6, UiWidget param7, boolean param8, int param9, e param10, UiWidget param11) {
+    final static void a(km param0, km param1, qm param2, km param3, km param4, km param5, km param6, km param7, boolean param8, int param9, e param10, km param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -168,7 +168,7 @@ final class kb {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        UiWidget var17 = null;
+        km var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -198,26 +198,26 @@ final class kb {
           var13[2] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          we.field_c = new UiWidget(0L, param7);
-          wc.field_k = new UiWidget(0L, param6);
+          we.field_c = new km(0L, param7);
+          wc.field_k = new km(0L, param6);
           we.field_c.a(0, wc.field_k);
-          var17 = new UiWidget(0L, (UiWidget) null);
+          var17 = new km(0L, (km) null);
           var17.field_W = new IntrusiveDeque();
           ne.field_c = new um(0L, var17, param4, param2);
           wc.field_k.a(0, ne.field_c);
-          qa.field_d = new UiWidget(0L, param5);
+          qa.field_d = new km(0L, param5);
           wc.field_k.a(0, qa.field_d);
-          di.field_n = new UiWidget(0L, param3);
+          di.field_n = new km(0L, param3);
           di.field_n.field_C = hk.field_Ob;
           qa.field_d.a(0, di.field_n);
           qa.field_d.b((byte) 42);
-          wa.field_I = new UiWidget(0L, (UiWidget) null);
+          wa.field_I = new km(0L, (km) null);
           wa.field_I.field_vb = var16;
           qa.field_d.a(0, wa.field_I);
-          ak.field_d = new UiWidget[5];
-          th.field_o = new UiWidget[5];
-          ln.field_i = new UiWidget[5];
-          og.field_g = new UiWidget[5];
+          ak.field_d = new km[5];
+          th.field_o = new km[5];
+          ln.field_i = new km[5];
+          og.field_g = new km[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -243,11 +243,11 @@ final class kb {
                 var19 = stackIn_27_0;
               }
               if (decompiledFrameRemainder0) {
-                ln.field_i[var18] = new UiWidget(0L, param11);
-                ak.field_d[var18] = new UiWidget(0L, wh.field_d, var19);
-                og.field_g[var18] = new UiWidget(0L, (UiWidget) null);
+                ln.field_i[var18] = new km(0L, param11);
+                ak.field_d[var18] = new km(0L, wh.field_d, var19);
+                og.field_g[var18] = new km(0L, (km) null);
                 og.field_g[var18].field_D = 1;
-                th.field_o[var18] = new UiWidget(0L, wh.field_d);
+                th.field_o[var18] = new km(0L, wh.field_d);
                 th.field_o[var18].field_D = 1;
                 ln.field_i[var18].a(0, ak.field_d[var18]);
                 ln.field_i[var18].a(0, og.field_g[var18]);
@@ -262,7 +262,7 @@ final class kb {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            af.field_d = new UiWidget(0L, param0);
+            af.field_d = new km(0L, param0);
             af.field_d.field_V = ac.field_a;
             we.field_c.a(0, af.field_d);
             stackIn_31_0 = wl.b((byte) -101) ? 1 : 0;

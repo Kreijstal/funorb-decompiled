@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends in {
+final class eg extends AudioStream {
     static String field_t;
     private int[] field_w;
     private int[] field_q;
@@ -9,12 +9,12 @@ final class eg extends in {
     static String field_G;
     private i field_x;
     private int field_r;
-    private sc field_B;
+    private MusicTrack field_B;
     static String field_z;
-    private sc field_E;
+    private MusicTrack field_E;
     static String field_p;
     private int field_v;
-    private sc field_u;
+    private MusicTrack field_u;
     private int field_k;
     private i field_A;
     static String field_s;
@@ -25,9 +25,9 @@ final class eg extends in {
     static int field_y;
     static String field_F;
 
-    final static UiWidget d(int param0) {
+    final static km d(int param0) {
         if (param0 != 1048576) {
-          return (UiWidget) null;
+          return (km) null;
         }
         return hj.c(112);
     }
@@ -246,11 +246,11 @@ final class eg extends in {
         return rk.field_f;
     }
 
-    final in b() {
+    final AudioStream b() {
         return null;
     }
 
-    final in c() {
+    final AudioStream c() {
         return null;
     }
 
@@ -319,7 +319,7 @@ final class eg extends in {
         field_p = null;
     }
 
-    final synchronized void a(sc param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final synchronized void a(MusicTrack param0, int param1, int param2, boolean param3, int param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_33_0 = 0;
         i stackIn_41_0 = null;

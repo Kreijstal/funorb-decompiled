@@ -6,7 +6,7 @@ final class ln {
     static String field_c;
     static String field_a;
     private IntrusiveNode field_e;
-    static UiWidget[] field_i;
+    static km[] field_i;
     private IntrusiveNode[] field_b;
     private int field_h;
     static int field_g;
@@ -22,9 +22,9 @@ final class ln {
           ch.a(true);
           return true;
         }
-        if (UiWidget.field_yb != null &&
-          UiWidget.field_yb.d(false)) {
-          UiWidget.field_yb = null;
+        if (km.field_yb != null &&
+          km.field_yb.d(false)) {
+          km.field_yb = null;
           ch.a(true);
           return true;
         }
@@ -246,12 +246,12 @@ final class ln {
                   var7_int != 2) {
                   if (var7_int == 3 ||
                     var7_int == 4) {
-                    var21 = param3.h(-117);
-                    var22 = param3.h(-117);
+                    var21 = param3.readString(-117);
+                    var22 = param3.readString(-117);
                     var10 = param3.readUnsignedByte(11132);
                     var11 = new String[var10];
                     for (var12_int = 0; var12_int < var10; var12_int++) {
-                      var11[var12_int] = param3.h(-117);
+                      var11[var12_int] = param3.readString(-117);
                     }
                     var23 = new byte[var10][];
                     var20 = var23;
@@ -276,9 +276,9 @@ final class ln {
                     var19.field_j[var6] = var23;
                   }
                 } else {
-                  var16 = param3.h(-122);
+                  var16 = param3.readString(-122);
                   var8 = var16;
-                  var17 = param3.h(-118);
+                  var17 = param3.readString(-118);
                   var9 = var17;
                   var10 = 0;
                   if (1 == var7_int) {

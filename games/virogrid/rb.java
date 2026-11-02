@@ -16,22 +16,22 @@ final class rb {
         }
     }
 
-    final static UiWidget a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, e param8, int param9, int param10, int param11, int param12) {
-        UiWidget var13 = null;
+    final static km a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, e param8, int param9, int param10, int param11, int param12) {
+        km var13 = null;
         RuntimeException var13_ref = null;
-        UiWidget stackIn_2_0 = null;
-        UiWidget stackIn_4_0 = null;
+        km stackIn_2_0 = null;
+        km stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new UiWidget(0L, (UiWidget) null);
+          var13 = new km(0L, (km) null);
           var13.field_vb = wa.a((byte) 60, param11, param3);
           var13.field_x = wa.a((byte) -111, param6, param4);
           var13.field_T = wa.a((byte) 37, param7, param2);
           if (param1 != -4841) {
-            stackIn_2_0 = (UiWidget) null;
+            stackIn_2_0 = (km) null;
             return stackIn_2_0;
           }
           var13.field_cb = wa.a((byte) -89, param0, param12);

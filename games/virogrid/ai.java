@@ -12,7 +12,7 @@ final class ai {
     String field_d;
     static String field_b;
 
-    final static void a(int param0, um param1, int[] param2, String param3, long param4, String param5, int param6, UiWidget param7, int param8) {
+    final static void a(int param0, um param1, int[] param2, String param3, long param4, String param5, int param6, km param7, int param8) {
         try {
           if (param8 <= 43) {
             ai.b(false);

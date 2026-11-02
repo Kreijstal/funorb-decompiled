@@ -21,7 +21,7 @@ final class de extends mb {
         field_rb = null;
     }
 
-    final void b(fi param0, byte param1) {
+    final void b(UiWidget param0, byte param1) {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -29,7 +29,7 @@ final class de extends mb {
         }
     }
 
-    de(je param0, fi param1) {
+    de(je param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

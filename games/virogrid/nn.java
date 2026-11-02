@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nn {
-    static UiWidget field_b;
+    static km field_b;
     static int field_a;
 
     final static void a(Sprite[][] param0, Sprite[][] param1, int param2, byte[] param3, byte[] param4, Js5Archive param5, Js5Archive param6, boolean param7, int param8, String[][] param9, String[][] param10, String[] param11, int[] param12, int param13, Js5Archive param14) {
@@ -176,7 +176,7 @@ final class nn {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 53) {
-          field_b = (UiWidget) null;
+          field_b = (km) null;
         }
     }
 

@@ -6,7 +6,7 @@ final class ed {
     static int field_b;
     static String field_e;
     static Sprite field_d;
-    static UiWidget field_c;
+    static km field_c;
     static int field_a;
 
     public static void a(byte param0) {
@@ -39,7 +39,7 @@ final class ed {
         try {
           var4_int = -1;
           for (var5 = param1; param0 > var5; var5++) {
-            var4_int = fi.field_j[(var4_int ^ param2[var5]) & 255] ^ var4_int >>> 8;
+            var4_int = UiWidget.field_j[(var4_int ^ param2[var5]) & 255] ^ var4_int >>> 8;
           }
           var4_int = ~var4_int;
           if (param3 != -26459) {

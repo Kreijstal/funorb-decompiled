@@ -12,7 +12,7 @@ final class cj {
     String field_i;
     boolean field_j;
     int field_k;
-    UiWidget field_t;
+    km field_t;
     long field_p;
     String field_d;
     int field_e;

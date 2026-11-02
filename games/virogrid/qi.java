@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qi {
-    static sc field_b;
+    static MusicTrack field_b;
     static int field_d;
-    static UiWidget field_e;
+    static km field_e;
     static int field_f;
     static String field_a;
     static wk field_c;

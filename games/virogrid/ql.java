@@ -221,7 +221,7 @@ final class ql implements ol {
         }
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         qn var14 = null;
         int var7 = 0;
         int var8 = 0;

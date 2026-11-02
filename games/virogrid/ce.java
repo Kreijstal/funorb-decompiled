@@ -16,7 +16,7 @@ final class ce extends ec {
     static String field_H;
     private int field_L;
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_8_0 = 0;
@@ -59,7 +59,7 @@ final class ce extends ec {
         }
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
         int stackIn_26_1 = 0;
@@ -274,7 +274,7 @@ final class ce extends ec {
         }
     }
 
-    private ce(int param0, int param1, int param2, int param3, ol param4, cd param5, fi param6, boolean param7, boolean param8) {
+    private ce(int param0, int param1, int param2, int param3, ol param4, cd param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_J = 2147483647;
         this.field_M = 2147483647;
@@ -326,7 +326,7 @@ final class ce extends ec {
           gg.field_D.a(param0, 112);
           gg.field_D.a(param1, param2 ^ -82);
           gg.field_D.a((byte) 65, param3);
-          gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
+          gg.field_D.encryptRsa(on.field_a, ch.field_i, (byte) 86);
           gk.field_g.g(18, 8);
           fieldTemp$0 = gk.field_g.position + 1;
           gk.field_g.position = gk.field_g.position + 1;
@@ -342,7 +342,7 @@ final class ce extends ec {
         gg.field_D.a(param0, 112);
         gg.field_D.a(param1, param2 ^ -82);
         gg.field_D.a((byte) 65, param3);
-        gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
+        gg.field_D.encryptRsa(on.field_a, ch.field_i, (byte) 86);
         gk.field_g.g(18, 8);
         int fieldTemp$1 = gk.field_g.position + 1;
         gk.field_g.position = gk.field_g.position + 1;
@@ -363,8 +363,8 @@ final class ce extends ec {
 
     final static void f(int param0) {
         am.a((byte) -16);
-        if (fi.field_v != null) {
-          af.a((byte) -103, fi.field_v);
+        if (UiWidget.field_v != null) {
+          af.a((byte) -103, UiWidget.field_v);
         }
         nm.d(param0 ^ 13628);
         lh.a(true);
@@ -379,7 +379,7 @@ final class ce extends ec {
         }
     }
 
-    final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         super.a(param0, param1, param2, param3, param4, 108);
         if (param5 < 73) {
           return;

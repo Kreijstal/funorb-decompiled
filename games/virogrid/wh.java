@@ -3,8 +3,8 @@
  */
 abstract class wh {
     static rm[] field_b;
-    static UiWidget field_d;
-    static UiWidget field_a;
+    static km field_d;
+    static km field_a;
     static int[] field_c;
 
     abstract void a(byte[] param0, byte param1);
@@ -70,10 +70,10 @@ abstract class wh {
               }
               gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
               gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
-              gg.field_D.b(var14, (byte) -87);
-              gg.field_D.b(var8, (byte) -125);
+              gg.field_D.writeZeroPrefixedString(var14, (byte) -87);
+              gg.field_D.writeZeroPrefixedString(var8, (byte) -125);
               var15 = (CharSequence) ((Object) param4);
-              gg.field_D.b(na.a((byte) 51, var15), (byte) 118);
+              gg.field_D.writeZeroPrefixedString(na.a((byte) 51, var15), (byte) 118);
               gg.field_D.a((byte) -88, param0);
               gg.field_D.a(param2, -69);
               gg.field_D.a(var9, -66);
@@ -84,7 +84,7 @@ abstract class wh {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              gk.field_g.a(var11_ref_String, (byte) -75);
+              gk.field_g.writeString(var11_ref_String, (byte) -75);
               nl.a(on.field_a, gg.field_D, gk.field_g, ch.field_i, 0);
               gk.field_g.c(-var10 + gk.field_g.position, -3991);
             } else {
@@ -97,14 +97,14 @@ abstract class wh {
               } else {
                 stackIn_12_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_11_0).b(stackIn_12_1, (byte) 109);
+              ((PacketBuffer) (Object) stackIn_11_0).writeZeroPrefixedString(stackIn_12_1, (byte) 109);
               stackIn_14_0 = gg.field_D;
               if (!param6.a(0)) {
                 stackIn_15_1 = "";
               } else {
                 stackIn_15_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_14_0).b(stackIn_15_1, (byte) -32);
+              ((PacketBuffer) (Object) stackIn_14_0).writeZeroPrefixedString(stackIn_15_1, (byte) -32);
               gk.field_g.a(16, -90);
               gk.field_g.position = gk.field_g.position + 1;
               var9 = gk.field_g.position;
@@ -165,9 +165,9 @@ abstract class wh {
           if (k.field_a == ug.field_a &&
             GameSession.c((byte) 48)) {
             if (255 != ci.field_q) {
-              GameKeyHandler.field_g = sh.field_qb.h(-118);
+              GameKeyHandler.field_g = sh.field_qb.readString(-118);
             } else {
-              var9_ref_String = sh.field_qb.f(123);
+              var9_ref_String = sh.field_qb.readOptionalString(123);
               if (var9_ref_String != null) {
                 jd.a(-51, var9_ref_String, mb.g((byte) 37));
               }

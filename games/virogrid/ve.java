@@ -10,7 +10,7 @@ final class ve extends qe {
     static int field_o;
     static int field_s;
     static int[] field_A;
-    static UiWidget field_w;
+    static km field_w;
     static int[] field_B;
     static String field_n;
     static ao field_q;

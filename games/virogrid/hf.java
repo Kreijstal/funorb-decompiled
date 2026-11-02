@@ -13,7 +13,7 @@ final class hf extends aj {
     static sh field_w;
     static int[] field_z;
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;

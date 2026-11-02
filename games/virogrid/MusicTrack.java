@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc extends IntrusiveNode {
+final class MusicTrack extends IntrusiveNode {
     ln field_h;
     byte[] field_g;
 
-    final static sc a(Js5Archive param0, String param1, String param2) {
+    final static MusicTrack a(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
         }
-        return new sc(new PacketBuffer(var3));
+        return new MusicTrack(new PacketBuffer(var3));
     }
 
     final void a() {
@@ -116,7 +116,7 @@ final class sc extends IntrusiveNode {
         this.field_h = null;
     }
 
-    private sc(PacketBuffer param0) {
+    private MusicTrack(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;

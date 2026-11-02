@@ -19,7 +19,7 @@ final class og implements Runnable {
     static String field_n;
     private int field_h;
     static String[] field_o;
-    static UiWidget[] field_g;
+    static km[] field_g;
     static String[] field_t;
     private un field_d;
     private java.net.URL field_r;
@@ -193,7 +193,7 @@ final class og implements Runnable {
           var5.position = var5.position + 1;
           var7 = var5.position;
           var5.a(3, 124);
-          var5.a(param3, (byte) -96);
+          var5.writeString(param3, (byte) -96);
           var5.b(-var7 + var5.position, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
@@ -386,7 +386,7 @@ final class og implements Runnable {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.a(1, -98);
-          var9.a(param0, (byte) -40);
+          var9.writeString(param0, (byte) -40);
           var9.b(-var5 + var9.position, -1);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class da extends IntrusiveNode {
-    static UiWidget field_n;
+    static km field_n;
     int field_q;
     int field_l;
     static int[] field_g;
@@ -58,7 +58,7 @@ final class da extends IntrusiveNode {
             var5 < nb.field_s) {
             var10_int = id.a(var8_ref_cj.field_n, (byte) 82);
             if (var8_ref_cj.b(-6761) >= var10_int && (var8_ref_cj.field_j ||
-              !fm.a(var8_ref_cj.field_i, -1369854352))) {
+              !WhirlpoolDigest.a(var8_ref_cj.field_i, -1369854352))) {
               var9 = 1;
             }
           }
@@ -75,7 +75,7 @@ final class da extends IntrusiveNode {
               var10 = re.a((byte) -100, var8_ref_cj);
               var11 = var10 + e.b(var8_ref_cj.field_h);
               var12 = qd.a(param0 ^ -18302, var8_ref_cj);
-              var8_ref_cj.field_t = new UiWidget(0L, wh.field_d, var11);
+              var8_ref_cj.field_t = new km(0L, wh.field_d, var11);
               var6 = var6 + param3;
               var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 1) - (8355711 & var12 >> 1) + var12;
               var8_ref_cj.field_t.field_A = -(var12 >> 1 & 8355711) + var12 + (wh.field_d.field_A >> 1 & 8355711);

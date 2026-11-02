@@ -65,7 +65,7 @@ final class vi extends bk {
           return;
         }
         try {
-          param1.b(this.field_e, (byte) 112);
+          param1.writeZeroPrefixedString(this.field_e, (byte) 112);
           param1.c(this.field_i, (byte) 82);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

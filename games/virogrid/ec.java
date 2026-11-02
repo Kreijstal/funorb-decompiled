@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-abstract class ec extends fi implements ja {
+abstract class ec extends UiWidget implements ja {
     static String field_y;
     static float field_z;
-    fi field_x;
+    UiWidget field_x;
     static String field_D;
     static String field_A;
-    static UiWidget field_C;
+    static km field_C;
 
-    final boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -43,7 +43,7 @@ abstract class ec extends fi implements ja {
         String var2 = super.d(41);
         String var3Lifetime1;
         if (param0 < 35) {
-          field_C = (UiWidget) null;
+          field_C = (km) null;
           if (this.field_x == null) {
             return var2;
           }
@@ -73,7 +73,7 @@ abstract class ec extends fi implements ja {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -120,10 +120,10 @@ abstract class ec extends fi implements ja {
         return null != this.g(!param0 ? true : false) ? true : false;
     }
 
-    private final boolean a(fi param0, boolean param1) {
+    private final boolean a(UiWidget param0, boolean param1) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -131,8 +131,8 @@ abstract class ec extends fi implements ja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            var4 = (fi) null;
-            discarded$1 = this.a((byte) -30, (fi) null);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((byte) -30, (UiWidget) null);
           }
           stackIn_7_0 = (this.field_x != null) && (!this.field_x.f(true)) && (this.field_x.a(param0, -8515));
           return stackIn_7_0;
@@ -150,7 +150,7 @@ abstract class ec extends fi implements ja {
         }
     }
 
-    final boolean a(fi param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -218,10 +218,10 @@ abstract class ec extends fi implements ja {
         }
     }
 
-    private final boolean a(byte param0, fi param1) {
+    private final boolean a(byte param0, UiWidget param1) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -229,8 +229,8 @@ abstract class ec extends fi implements ja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -50) {
-            var4 = (fi) null;
-            discarded$1 = this.a((byte) 59, (fi) null);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((byte) 59, (UiWidget) null);
           }
           stackIn_7_0 = (this.field_x != null) && (!this.field_x.f(true)) && (this.field_x.a(param1, -8515));
           return stackIn_7_0;
@@ -268,7 +268,7 @@ abstract class ec extends fi implements ja {
         StringBuilder discarded$6 = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        fi var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -282,8 +282,8 @@ abstract class ec extends fi implements ja {
             discarded$7 = param1.append(' ');
           }
           if (param2 != 8651) {
-            var7 = (fi) null;
-            discarded$5 = this.a((fi) null, true);
+            var7 = (UiWidget) null;
+            discarded$5 = this.a((UiWidget) null, true);
           }
           if (this.field_x != null) {
             this.field_x.a(param0, (byte) 122, param3 + 1, param1);
@@ -314,7 +314,7 @@ abstract class ec extends fi implements ja {
     void a(byte param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
           this.field_w != null) {
-          this.field_w.a(param1, (fi) (this), true, param2, -23294);
+          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         if (param0 != 37) {
           field_y = (String) null;
@@ -324,7 +324,7 @@ abstract class ec extends fi implements ja {
         }
     }
 
-    boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -358,14 +358,14 @@ abstract class ec extends fi implements ja {
           }
           return;
         }
-        fi var3 = (fi) null;
-        boolean discarded$3 = this.a((fi) null, true);
+        UiWidget var3 = (UiWidget) null;
+        boolean discarded$3 = this.a((UiWidget) null, true);
         if (this.field_x != null) {
           this.field_x.c(-1);
         }
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -374,7 +374,7 @@ abstract class ec extends fi implements ja {
         try {
           super.a(param0, 122, param2, param3);
           if (param1 <= 113) {
-            this.field_x = (fi) null;
+            this.field_x = (UiWidget) null;
           }
           if (null == this.field_x) {
             return;
@@ -395,9 +395,9 @@ abstract class ec extends fi implements ja {
         }
     }
 
-    fi g(boolean param0) {
-        fi var2 = null;
-        fi var2Lifetime1;
+    UiWidget g(boolean param0) {
+        UiWidget var2 = null;
+        UiWidget var2Lifetime1;
         if (param0) {
           field_D = (String) null;
           var2 = this.field_x;
@@ -423,12 +423,12 @@ abstract class ec extends fi implements ja {
         if (param0 == -39) {
           return this.field_x != null ? this.field_x.b((byte) -39) : 0;
         }
-        fi var3 = (fi) null;
-        this.a((fi) null, 66);
+        UiWidget var3 = (UiWidget) null;
+        this.a((UiWidget) null, 66);
         return this.field_x != null ? this.field_x.b((byte) -39) : 0;
     }
 
-    void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -464,8 +464,8 @@ abstract class ec extends fi implements ja {
         if (param0 < -2) {
           return;
         }
-        fi var3 = (fi) null;
-        boolean discarded$0 = this.a((byte) -16, (fi) null);
+        UiWidget var3 = (UiWidget) null;
+        boolean discarded$0 = this.a((byte) -16, (UiWidget) null);
     }
 
     static {

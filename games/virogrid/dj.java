@@ -14,7 +14,7 @@ final class dj {
     static ml[] field_f;
     ga field_a;
     String field_g;
-    UiWidget field_d;
+    km field_d;
     static int field_e;
 
     private final boolean b(int param0, int param1, int param2) {
@@ -151,7 +151,7 @@ final class dj {
             var7 = this.a(1);
             var4 = var7;
             var5 = j.a(param0 ^ 4, this.field_g);
-            var6 = fm.a(this.field_g, -1369854352) ? 1 : 0;
+            var6 = WhirlpoolDigest.a(this.field_g, -1369854352) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_a.a(1, oi.a(new String[]{var7}, vj.field_a, 2), 4);
@@ -202,7 +202,7 @@ final class dj {
         if (param1 != 17) {
           return false;
         }
-        UiWidget.field_yb = new bg(this.field_d.field_Bb, this.field_d.field_J, this.field_d.field_K, this.field_d.field_ub, param0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, this.field_g, this.field_i);
+        km.field_yb = new bg(this.field_d.field_Bb, this.field_d.field_J, this.field_d.field_K, this.field_d.field_ub, param0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, this.field_g, this.field_i);
         return true;
     }
 
@@ -518,12 +518,12 @@ final class dj {
                   sb.a(this.field_b, param1, param2 ^ -14533);
                 } else {
                   if (param0 == 15) {
-                    fm.a(this.field_b, 3, param1);
+                    WhirlpoolDigest.a(this.field_b, 3, param1);
                   } else {
                     if (param0 != 16) {
                       return false;
                     }
-                    fm.a(0, param2 + 6, param1);
+                    WhirlpoolDigest.a(0, param2 + 6, param1);
                   }
                 }
               }
@@ -536,7 +536,7 @@ final class dj {
         return true;
     }
 
-    dj(UiWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    dj(km param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_a = new ga(sd.field_f);
           this.field_k = param6;

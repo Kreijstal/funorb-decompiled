@@ -96,11 +96,11 @@ final class BufferedSocket implements Runnable {
         }
         stackIn_9_0 = (1 != var8.readUnsignedByte(11132)) ? 0 : 1;
         var4 = stackIn_9_0;
-        vc.field_hb = var8.h(-118);
+        vc.field_hb = var8.readString(-118);
         if (var4 == 0) {
           vl.field_k = vc.field_hb;
         } else {
-          vl.field_k = var8.h(-118);
+          vl.field_k = var8.readString(-118);
         }
         if (td.field_h != 1 &&
           4 != td.field_h) {
@@ -108,7 +108,7 @@ final class BufferedSocket implements Runnable {
           ef.field_b = 0;
         } else {
           ef.field_b = var8.readUnsignedShort((byte) 49);
-          pb.field_l = var8.h(-127);
+          pb.field_l = var8.readString(-127);
         }
         if (param0) {
           var5 = var8.readUnsignedShort((byte) -77);

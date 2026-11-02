@@ -43,10 +43,10 @@ final class wl {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, sc param3, boolean param4) {
+    final static void a(int param0, int param1, int param2, MusicTrack param3, boolean param4) {
         RuntimeException var5 = null;
         eg stackIn_2_0;
-        sc stackIn_2_1;
+        MusicTrack stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
         boolean stackIn_3_4 = false;
@@ -56,7 +56,7 @@ final class wl {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_2_0 = wc.field_f;
-          stackIn_2_1 = (sc) (param3);
+          stackIn_2_1 = (MusicTrack) (param3);
           stackIn_2_2 = param2;
           stackIn_2_3 = param0;
           stackIn_3_4 = !(param4);

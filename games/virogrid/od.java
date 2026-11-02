@@ -16,7 +16,7 @@ abstract class od extends GameApplet {
     private int field_z;
     private boolean field_x;
     private boolean field_u;
-    static UiWidget field_y;
+    static km field_y;
     private int field_k;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
@@ -31,7 +31,7 @@ abstract class od extends GameApplet {
         ch.a(this.field_p, ei.field_c, this.field_z, param0, this.field_v, ih.field_c, 86, this.field_r, this.field_w);
         lb.a(42);
         sb.field_d = s.a((byte) -110);
-        nn.a(fi.field_v, (byte) -128);
+        nn.a(UiWidget.field_v, (byte) -128);
         ae.field_a = param1;
         ck.field_c = param2;
         ka.field_j = param5;
@@ -82,7 +82,7 @@ abstract class od extends GameApplet {
               jf.field_b = null;
               GameKeyHandler.field_g = null;
             }
-            var12 = fi.e(true);
+            var12 = UiWidget.e(true);
             if (var12 != null) {
               mj.a(0, var12.booleanValue());
             }
@@ -410,7 +410,7 @@ abstract class od extends GameApplet {
           var3 = 1200 * wh.a((byte) 5);
           if (this.field_q ||
             !(lj.c(-28791807) <= var3) &&
-            !(UiWidget.e(-87) <= var3)) {
+            !(km.e(-87) <= var3)) {
             this.field_q = false;
             tn.a(false);
             ve.c((byte) -50);
@@ -594,10 +594,10 @@ abstract class od extends GameApplet {
           }
         }
         if (!param0 &&
-          UiWidget.field_Db) {
-          af.a((byte) -116, fi.field_v);
+          km.field_Db) {
+          af.a((byte) -116, UiWidget.field_v);
           this.e(21616);
-          nn.a(fi.field_v, (byte) -124);
+          nn.a(UiWidget.field_v, (byte) -124);
         }
         if (di.field_r[8]) {
           rc.c(-1);
@@ -805,7 +805,7 @@ abstract class od extends GameApplet {
                 }
               }
             } else {
-              UiWidget.d((byte) 76);
+              km.d((byte) 76);
             }
           } else {
             BufferedSocket.e(-2);

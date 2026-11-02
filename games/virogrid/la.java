@@ -39,7 +39,7 @@ final class la extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, sc param3) {
+    final static void a(int param0, int param1, boolean param2, MusicTrack param3) {
         Object var4 = null;
         Throwable var5 = null;
         Object stackIn_19_0 = null;
@@ -93,8 +93,8 @@ final class la extends IntrusiveNode {
           }
           return;
         }
-        sc var3 = (sc) null;
-        la.a(22, -99, true, (sc) null);
+        MusicTrack var3 = (MusicTrack) null;
+        la.a(22, -99, true, (MusicTrack) null);
         if (var2 != null) {
           var2.a(0, we.field_c.field_J, we.field_c.field_Bb);
         }

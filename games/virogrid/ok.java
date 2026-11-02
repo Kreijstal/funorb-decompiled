@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok extends fd implements im, ta {
+final class ok extends WidgetContainer implements im, ta {
     private b field_H;
     static String field_K;
     static int field_L;
@@ -19,7 +19,7 @@ final class ok extends fd implements im, ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -175,12 +175,12 @@ final class ok extends fd implements im, ta {
           this.field_D.field_o = (cd) (this);
           this.field_D.a(-40 + this.field_g, var3, 26, (byte) -125);
           var3 = var3 + (this.field_D.field_m + 15);
-          this.a((fi) (this.field_D), (byte) -78);
+          this.a((UiWidget) (this.field_D), (byte) -78);
           var5 = 4;
           var6 = 200;
           this.field_I.a(40, true, var3, -var6 + 300 >> 1, var6);
           this.field_I.field_o = (cd) (this);
-          this.a((fi) (this.field_I), (byte) -78);
+          this.a((UiWidget) (this.field_I), (byte) -78);
           this.a(var5 + (55 + var3), true, 0, 0, 300);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ')');

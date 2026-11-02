@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm {
+final class WhirlpoolDigest {
     private long[] field_f;
     private byte[] field_d;
     private byte[] field_e;
@@ -210,7 +210,7 @@ final class fm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1369854352) {
-            fm.a((byte) 80);
+            WhirlpoolDigest.a((byte) 80);
           }
           stackIn_5_0 = (kh.a((byte) 61, param0) != null);
           return stackIn_5_0;
@@ -317,7 +317,7 @@ final class fm {
 
     public static void a(byte param0) {
         if (param0 != -54) {
-          fm.a((byte) 0);
+          WhirlpoolDigest.a((byte) 0);
         }
         field_c = null;
     }
@@ -394,7 +394,7 @@ final class fm {
         }
     }
 
-    fm() {
+    WhirlpoolDigest() {
         this.field_d = new byte[32];
         this.field_f = new long[8];
         this.field_e = new byte[64];

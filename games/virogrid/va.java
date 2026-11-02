@@ -70,7 +70,7 @@ final class va {
 
     final static void a(boolean param0) {
         tk.field_b = new qh();
-        fi.field_t.b(tk.field_b, (byte) -53);
+        UiWidget.field_t.b(tk.field_b, (byte) -53);
         if (param0) {
           field_d = (String) null;
         }

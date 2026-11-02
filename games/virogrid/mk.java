@@ -34,7 +34,7 @@ final class mk extends dc implements ta {
           var5 = -6 + this.field_m;
           this.field_m = this.field_m + 38;
           var4.a(30, true, var5, 15, -14 + this.field_g - 16);
-          this.a((fi) (var4), (byte) -78);
+          this.a((UiWidget) (var4), (byte) -78);
           var6 = -20 % ((param2 + 24) / 62);
           this.d(false);
           stackIn_1_0 = var4;
@@ -135,7 +135,7 @@ final class mk extends dc implements ta {
     mk(je param0, ra param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -159,9 +159,9 @@ final class mk extends dc implements ta {
               }
             }
           } else {
-            var3 = fd.field_x;
+            var3 = WidgetContainer.field_x;
           }
-          var4 = new fi((String) (var3), (cd) null);
+          var4 = new UiWidget((String) (var3), (cd) null);
           var4.field_u = 50;
           var4.field_m = 80;
           var4.field_l = 0;

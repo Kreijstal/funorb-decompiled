@@ -42,7 +42,7 @@ final class cf {
           dk.field_j = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo12", param3));
           dj.field_h = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14", param3));
           on.field_b = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14bold", param3));
-          var17 = new Sprite(param1.a("button.gif", 100, ""), (java.awt.Component) ((Object) fi.field_v));
+          var17 = new Sprite(param1.a("button.gif", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
           vc.a(param0, "dropdown", "commonui", (byte) 39);
           var5 = ke.a("screen_options", "commonui", param0, 32370);
           dk.field_q = new rm[4];

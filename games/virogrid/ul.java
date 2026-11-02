@@ -4,7 +4,7 @@
 final class ul {
     static int[] field_h;
     static dl field_c;
-    static UiWidget field_a;
+    static km field_a;
     static String field_b;
     static String field_f;
     int field_d;

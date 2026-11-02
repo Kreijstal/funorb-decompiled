@@ -86,7 +86,7 @@ final class sj {
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 <= var4) {
-              this.field_b = var18.d(true);
+              this.field_b = var18.readLargeSmart(true);
             } else {
               this.field_b = var18.readUnsignedShort((byte) 106);
             }
@@ -107,7 +107,7 @@ final class sj {
               }
             } else {
               for (var11 = 0; var11 < this.field_b; var11++) {
-                dupTemp$1 = var8 + var18.d(true);
+                dupTemp$1 = var8 + var18.readLargeSmart(true);
                 var8 = dupTemp$1;
                 this.field_c[var11] = dupTemp$1;
                 if (this.field_c[var11] > var9) {
@@ -149,7 +149,7 @@ final class sj {
             }
             if (var4 >= 7) {
               for (var11Lifetime5 = 0; this.field_b > var11Lifetime5; var11Lifetime5++) {
-                this.field_n[this.field_c[var11Lifetime5]] = var18.d(true);
+                this.field_n[this.field_c[var11Lifetime5]] = var18.readLargeSmart(true);
               }
               for (var11Lifetime5 = 0; var11Lifetime5 < this.field_b; var11Lifetime5++) {
                 var12 = this.field_c[var11Lifetime5];
@@ -159,7 +159,7 @@ final class sj {
                 array$2 = new int[var13];
                 this.field_r[var12] = array$2;
                 for (var15 = 0; var13 > var15; var15++) {
-                  dupTemp$3 = var8Lifetime1 + var18.d(true);
+                  dupTemp$3 = var8Lifetime1 + var18.readLargeSmart(true);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_r[var12];
                   dupTemp$4[var15] = dupTemp$3;

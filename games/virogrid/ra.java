@@ -6,7 +6,7 @@ final class ra {
     static String field_c;
     static String field_d;
     static ce field_b;
-    static int[] field_a;
+    static int[] gridSizes;
 
     public static void a(boolean param0) {
         field_d = null;
@@ -15,7 +15,7 @@ final class ra {
         if (param0) {
           return;
         }
-        field_a = null;
+        gridSizes = null;
         field_b = null;
     }
 
@@ -82,6 +82,6 @@ final class ra {
         field_c = "<%0>'s game";
         field_d = "Join <%0>'s game";
         field_e = new byte[]{(byte)7, (byte)3};
-        field_a = new int[]{7, 9, 11};
+        gridSizes = new int[]{7, 9, 11};
     }
 }

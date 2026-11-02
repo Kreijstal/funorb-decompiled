@@ -12,7 +12,7 @@ final class wn extends IntrusiveNode {
     int field_o;
     int field_u;
     rc field_E;
-    static UiWidget field_m;
+    static km field_m;
     static String field_n;
     int field_s;
     int field_F;

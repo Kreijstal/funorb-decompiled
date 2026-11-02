@@ -5,7 +5,7 @@ class cc extends aj {
     static float field_x;
     static Sprite field_u;
     static String[] field_v;
-    static UiWidget field_w;
+    static km field_w;
 
     final static lc[] a(byte param0) {
         if (param0 == -104) {
@@ -15,7 +15,7 @@ class cc extends aj {
         return new lc[]{pm.field_q, dn.field_d, db.field_z, pn.field_z, gf.field_z, na.field_Fb, af.field_l, ud.field_c, lm.field_i, ji.field_b, dk.field_s, oj.field_Xb, vl.field_f, oe.field_e};
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -128,7 +128,7 @@ class cc extends aj {
           }
           param1.field_gc = param3.e((byte) -60);
           var7 = param3.position;
-          param1.field_Qb = param3.h(-119);
+          param1.field_Qb = param3.readString(-119);
           if (var6 == 0) {
             param1.field_Zb = null;
             return;
@@ -136,7 +136,7 @@ class cc extends aj {
           param3.position = var7;
           param1.field_Zb = new String[param1.field_ic];
           for (var8 = 0; param1.field_ic > var8; var8++) {
-            param1.field_Zb[var8] = param3.h(-119);
+            param1.field_Zb[var8] = param3.readString(-119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

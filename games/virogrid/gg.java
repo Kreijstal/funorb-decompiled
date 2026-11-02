@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gg extends fd {
+abstract class gg extends WidgetContainer {
     private je field_L;
     static int[][] field_E;
-    static UiWidget field_F;
+    static km field_F;
     boolean field_G;
     static String[] field_I;
     static PacketBuffer field_D;
-    static UiWidget field_M;
+    static km field_M;
     static String field_N;
     private int field_H;
     static String field_J;
@@ -63,12 +63,12 @@ abstract class gg extends fd {
         field_M = null;
     }
 
-    final fi c(byte param0) {
-        fi var2 = super.c(param0);
+    final UiWidget c(byte param0) {
+        UiWidget var2 = super.c(param0);
         if (var2 != null) {
           return var2;
         }
-        return (fi) (this);
+        return (UiWidget) (this);
     }
 
     private final int e(byte param0) {
@@ -100,7 +100,7 @@ abstract class gg extends fd {
     final void c(int param0, int param1, int param2) {
         this.a(param0, true, mn.field_a - param0 >> 1, mm.field_i - param2 >> 1, param2);
         if (param1 < 106) {
-          field_F = (UiWidget) null;
+          field_F = (km) null;
         }
     }
 
@@ -150,7 +150,7 @@ abstract class gg extends fd {
     final static void a(int param0, wg param1, boolean param2, int param3) {
         try {
           if (!param2) {
-            field_F = (UiWidget) null;
+            field_F = (km) null;
           }
           jf.field_o = param1;
           oe.field_f = param0;

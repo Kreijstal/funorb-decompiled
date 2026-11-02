@@ -106,7 +106,7 @@ final class u extends DualLinkNode {
               }
             }
           } else {
-            this.field_v = param1.h(param0 - 121);
+            this.field_v = param1.readString(param0 - 121);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

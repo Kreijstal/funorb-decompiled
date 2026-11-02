@@ -56,8 +56,8 @@ final class te extends IOException {
     final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
-        if (null != UiWidget.field_yb) {
-          var3 = UiWidget.field_yb.a(2105376, param0);
+        if (null != km.field_yb) {
+          var3 = km.field_yb.a(2105376, param0);
           if (var3 == -2) {
             if (param1 >= -118) {
               field_f = (IntrusiveDeque) null;
@@ -66,10 +66,10 @@ final class te extends IOException {
             return;
           }
           if (var3 != -1) {
-            var4 = UiWidget.field_yb.h(140) ? 1 : 0;
-            kf.a(param2, var3, UiWidget.field_yb.field_Mb, 125, UiWidget.field_yb.e((byte) -72), var4 != 0);
+            var4 = km.field_yb.h(140) ? 1 : 0;
+            kf.a(param2, var3, km.field_yb.field_Mb, 125, km.field_yb.e((byte) -72), var4 != 0);
           }
-          UiWidget.field_yb = null;
+          km.field_yb = null;
           ch.a(true);
         }
         if (param1 < -118) {

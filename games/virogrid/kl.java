@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class kl extends fd implements ta {
+final class kl extends WidgetContainer implements ta {
     private String[] field_H;
     private tg[] field_F;
     private fc field_G;
@@ -63,12 +63,12 @@ final class kl extends fd implements ta {
               this.field_F[var5].field_w = (ol) ((Object) var4);
               this.field_F[var5].field_h = jj.field_i;
               this.field_F[var5].a(15, true, 20 + 16 * var5, 0, 80);
-              this.a((fi) (this.field_F[var5]), (byte) -78);
+              this.a((UiWidget) (this.field_F[var5]), (byte) -78);
             }
             this.field_F[var3_int] = new tg(rj.field_i, (cd) (this));
             this.field_F[var3_int].field_w = (ol) ((Object) var4);
             this.field_F[var3_int].a(15, true, 20 - (-(var3_int * 16) - 16), 0, 100);
-            this.a((fi) (this.field_F[var3_int]), (byte) -78);
+            this.a((UiWidget) (this.field_F[var3_int]), (byte) -78);
             return;
           }
           this.field_H = null;
@@ -212,7 +212,7 @@ final class kl extends fd implements ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;

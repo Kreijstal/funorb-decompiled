@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um extends UiWidget {
-    UiWidget field_Jb;
+final class um extends km {
+    km field_Jb;
     static String field_Ib;
-    UiWidget field_Eb;
+    km field_Eb;
     static volatile int field_Fb;
     static int field_Gb;
     qm field_Hb;
@@ -100,10 +100,10 @@ final class um extends UiWidget {
         }
     }
 
-    um(long param0, UiWidget param1, UiWidget param2, qm param3) {
-        super(param0, (UiWidget) null);
+    um(long param0, km param1, km param2, qm param3) {
+        super(param0, (km) null);
         try {
-          this.field_Eb = new UiWidget(0L, param2);
+          this.field_Eb = new km(0L, param2);
           this.field_Hb = new qm(0L, param3);
           this.a(0, this.field_Eb);
           this.a(0, this.field_Hb);

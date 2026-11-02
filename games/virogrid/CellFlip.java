@@ -3,16 +3,16 @@
  */
 final class CellFlip extends IntrusiveNode {
     int field_h;
-    boolean field_q;
+    boolean newOwnerIsFirstPlayer;
     int phase;
-    static UiWidget field_o;
-    int field_k;
+    static km field_o;
+    int column;
     static int[] field_p;
     static String field_m;
     static boolean field_i;
     static String[] field_l;
     int field_n;
-    int field_g;
+    int row;
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -98,20 +98,20 @@ final class CellFlip extends IntrusiveNode {
 
     CellFlip(int param0, int param1, boolean param2) {
         this.phase = 0;
-        this.field_g = param1;
-        this.field_q = param2 ? true : false;
+        this.row = param1;
+        this.newOwnerIsFirstPlayer = param2 ? true : false;
         this.field_h = 0;
-        this.field_k = param0;
+        this.column = param0;
     }
 
     CellFlip(bi param0, boolean param1) {
         try {
-          this.field_q = param1 ? true : false;
+          this.newOwnerIsFirstPlayer = param1 ? true : false;
           this.phase = 0;
-          this.field_g = param0.field_b;
+          this.row = param0.field_b;
           this.field_h = 0;
           this.field_n = 0;
-          this.field_k = param0.field_a;
+          this.column = param0.field_a;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

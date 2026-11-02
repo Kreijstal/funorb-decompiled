@@ -4,7 +4,7 @@
 final class di extends qe {
     private String field_s;
     static int field_o;
-    static UiWidget field_n;
+    static km field_n;
     private boolean field_p;
     static IntrusiveDeque field_v;
     static String field_q;
@@ -140,8 +140,8 @@ final class di extends qe {
           field_n = null;
           return;
         }
-        sc var2 = (sc) null;
-        di.a((sc) null, -36, true);
+        MusicTrack var2 = (MusicTrack) null;
+        di.a((MusicTrack) null, -36, true);
         field_v = null;
         field_u = null;
         field_t = null;
@@ -171,7 +171,7 @@ final class di extends qe {
         return (id) null;
     }
 
-    final static void a(sc param0, int param1, boolean param2) {
+    final static void a(MusicTrack param0, int param1, boolean param2) {
         try {
           la.a(-1, 256, param2, param0);
           int var3_int = -19 / ((param1 - 65) / 42);

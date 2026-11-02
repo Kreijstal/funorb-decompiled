@@ -85,7 +85,7 @@ final class je extends ec {
         int var1 = (-640 + eb.field_f) / 2;
         int var2 = ve.field_t * ve.field_t;
         int var3 = var2 - kh.field_d * kh.field_d;
-        fd.field_y.a(-(199 * var3 / var2) + var1, -124 + Rasterizer.field_f - 90, 199, (byte) -115, 90);
+        WidgetContainer.field_y.a(-(199 * var3 / var2) + var1, -124 + Rasterizer.field_f - 90, 199, (byte) -115, 90);
         if (param0 != -17491) {
           je.h(84);
         }
@@ -103,7 +103,7 @@ final class je extends ec {
           var3 = (gg) (var2.b(41));
         }
         int var4 = 91 / ((param0 - 65) / 38);
-        this.field_x = (fi) ((Object) this.c((byte) 51));
+        this.field_x = (UiWidget) ((Object) this.c((byte) 51));
     }
 
     final gg c(byte param0) {
@@ -138,7 +138,7 @@ final class je extends ec {
         }
     }
 
-    final void a(int param0, fi param1) {
+    final void a(int param0, UiWidget param1) {
         gg var3 = null;
         try {
           if (!(param1 instanceof gg)) {
@@ -150,7 +150,7 @@ final class je extends ec {
           }
           this.field_F.b(var3, (byte) -45);
           var3.field_G = true;
-          var3.a((fi) (this), param0 ^ -8515);
+          var3.a((UiWidget) (this), param0 ^ -8515);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "je.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -170,7 +170,7 @@ final class je extends ec {
         this.field_x = null;
     }
 
-    final fi g(boolean param0) {
+    final UiWidget g(boolean param0) {
         IntrusiveDequeCursor var2;
         gg var3;
         int var4;
@@ -192,16 +192,16 @@ final class je extends ec {
     final void a(byte param0, int param1, int param2, int param3) {
         int var7 = Virogrid.field_F ? 1 : 0;
         if (null != this.field_w) {
-          this.field_w.a(param1, (fi) (this), true, param2, -23294);
+          this.field_w.a(param1, (UiWidget) (this), true, param2, -23294);
         }
         if (param0 != 37) {
           return;
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_F);
-        fi var6 = (fi) (var5.a((byte) 48));
+        UiWidget var6 = (UiWidget) (var5.a((byte) 48));
         while (var6 != null) {
           var6.a((byte) 37, this.field_l + param1, param2 + this.field_u, param3);
-          var6 = (fi) (var5.a(-1));
+          var6 = (UiWidget) (var5.a(-1));
         }
     }
 

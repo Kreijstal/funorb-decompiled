@@ -8,28 +8,28 @@ final class ak {
     static int field_a;
     static String[] field_b;
     static int[] field_f;
-    static UiWidget[] field_d;
+    static km[] field_d;
     static Sprite field_e;
 
-    final static void a(int param0, UiWidget param1) {
-        UiWidget var5 = null;
-        UiWidget var2 = null;
+    final static void a(int param0, km param1) {
+        km var5 = null;
+        km var2 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
-        UiWidget var2Lifetime1;
+        km var2Lifetime1;
         try {
-          var5 = (UiWidget) (param1.field_W.a((byte) -89));
+          var5 = (km) (param1.field_W.a((byte) -89));
           var2 = var5;
           while (var5 != null) {
             var5.field_ub = 0;
             var5.field_Cb = 0;
             var5.field_kb = 0;
             var5.field_F = 0;
-            var5 = (UiWidget) (param1.field_W.a(param0 - 164));
+            var5 = (km) (param1.field_W.a(param0 - 164));
             var2Lifetime1 = var5;
           }
           if (param0 != 16377) {
-            UiWidget var4 = (UiWidget) null;
-            ak.a(97, (UiWidget) null);
+            km var4 = (km) null;
+            ak.a(97, (km) null);
           }
           param1.field_F = 0;
           param1.field_kb = 0;
@@ -117,7 +117,7 @@ final class ak {
         se.field_f[5] = eg.field_G;
         se.field_f[4] = s.field_h;
         if (param0 != -7597) {
-          field_d = (UiWidget[]) null;
+          field_d = (km[]) null;
         }
         se.field_f[11] = ql.field_e;
         se.field_f[18] = wm.field_Q;

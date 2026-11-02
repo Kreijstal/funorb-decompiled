@@ -117,20 +117,20 @@ final class ub extends nb {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var9 = fi.field_v.getGraphics();
+            var9 = UiWidget.field_v.getGraphics();
             if (null == oh.field_c) {
               oh.field_c = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, fl.field_i, UiWidget.field_B);
+              var9.fillRect(0, 0, fl.field_i, km.field_B);
             }
             if (param0 == null) {
               param0 = new java.awt.Color(140, 17, 17);
             }
             try {
               if (null == oj.field_Gb) {
-                oj.field_Gb = fi.field_v.createImage(304, 34);
+                oj.field_Gb = UiWidget.field_v.createImage(304, 34);
               }
               var10 = oj.field_Gb.getGraphics();
               var10.setColor(param0);
@@ -143,12 +143,12 @@ final class ub extends nb {
               var10.setFont(oh.field_c);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(oj.field_Gb, fl.field_i / 2 - 152, -18 + UiWidget.field_B / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(oj.field_Gb, fl.field_i / 2 - 152, -18 + km.field_B / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + fl.field_i / 2;
-              var8 = -18 + UiWidget.field_B / 2;
+              var8 = -18 + km.field_B / 2;
               var9.setColor(param0);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, 3 * param3, 30);
@@ -164,12 +164,12 @@ final class ub extends nb {
             }
             var9.setFont(oh.field_c);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(tm.field_k, fl.field_i / 2 - tm.field_k.length() * 6 / 2, -26 + UiWidget.field_B / 2);
+            var9.drawString(tm.field_k, fl.field_i / 2 - tm.field_k.length() * 6 / 2, -26 + km.field_B / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            fi.field_v.repaint();
+            UiWidget.field_v.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

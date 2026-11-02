@@ -138,7 +138,7 @@ final class pe extends IntrusiveNode {
             rc.field_h[0] = mi.field_d;
             var5 = var3.field_g;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              rc.field_h[var6_int] = var13.h(-121);
+              rc.field_h[var6_int] = var13.readString(-121);
             }
             fj.a((byte) 125, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -148,9 +148,9 @@ final class pe extends IntrusiveNode {
                 var3.field_u = lm.field_j;
                 var3.field_h = ve.field_s;
                 var3.field_q = ng.field_X;
-                fd.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
+                WidgetContainer.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
               } else {
-                fd.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
+                WidgetContainer.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
               }
             }
             sb.a(var5, (byte) 46);

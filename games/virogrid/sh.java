@@ -12,7 +12,7 @@ class sh extends mb implements ta {
     private boolean field_zb;
     static int field_rb;
     static IntrusiveDeque field_tb;
-    static int[] field_yb;
+    static int[] turnDurations;
     private boolean field_wb;
     static hg field_qb;
     static int[] field_ub;
@@ -77,7 +77,7 @@ class sh extends mb implements ta {
     }
 
     public static void g(boolean param0) {
-        field_yb = null;
+        turnDurations = null;
         field_sb = null;
         field_tb = null;
         if (!param0) {
@@ -97,7 +97,7 @@ class sh extends mb implements ta {
         return Rasterizer.field_e - param3;
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -229,7 +229,7 @@ class sh extends mb implements ta {
             pi.a("tochangedisplayname.ws", -17713, mb.g((byte) 75));
           }
           if (param0 != 12085) {
-            field_yb = (int[]) null;
+            turnDurations = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -587,7 +587,7 @@ class sh extends mb implements ta {
           this.field_xb = false;
           this.field_pb = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_pb.field_z = true;
-          this.a((fi) (this.field_pb), (byte) -78);
+          this.a((UiWidget) (this.field_pb), (byte) -78);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -689,6 +689,6 @@ class sh extends mb implements ta {
     static {
         field_sb = "Name is available";
         field_tb = new IntrusiveDeque();
-        field_yb = new int[]{6000, 4500, 3000, 2250, 1500, 1000, 500};
+        turnDurations = new int[]{6000, 4500, 3000, 2250, 1500, 1000, 500};
     }
 }

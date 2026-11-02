@@ -57,7 +57,7 @@ abstract class ie {
         int var7Lifetime1;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
-          fd.field_B = new int[param5];
+          WidgetContainer.field_B = new int[param5];
           o.field_d = new int[param0];
           var6_int = 0;
           if (param2 != 28476) {
@@ -74,7 +74,7 @@ abstract class ie {
           var6_intLifetime1 = var10;
           while (var10 < param5) {
             var7Lifetime1 = -(var10 * param1) + 370 - param4;
-            fd.field_B[var10] = var7Lifetime1;
+            WidgetContainer.field_B[var10] = var7Lifetime1;
             var10++;
           }
           return;

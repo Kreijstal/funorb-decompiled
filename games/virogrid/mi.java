@@ -36,8 +36,8 @@ abstract class mi implements le {
           vi.b((byte) -126);
           tm.field_l.a((byte) 76);
           aa.field_a = new ca(pm.field_g, (String) null, kb.field_c, param1, param2);
-          fi.field_t = new de(tm.field_l, aa.field_a);
-          tm.field_l.a(0, fi.field_t);
+          UiWidget.field_t = new de(tm.field_l, aa.field_a);
+          tm.field_l.a(0, UiWidget.field_t);
           if (!param3) {
             field_c = 59;
           }
