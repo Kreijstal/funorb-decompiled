@@ -138,15 +138,15 @@ final class uh extends WidgetContainer implements pa, n {
               this.field_K = new eb(IndexedSpriteState.field_j, (sc) (this));
             }
           }
-          this.field_N.field_l = (WidgetActionListener) ((Object) new ng(10000536));
-          this.field_R.field_l = (WidgetActionListener) ((Object) new ah(10000536));
+          this.field_N.listener = (WidgetActionListener) ((Object) new ng(10000536));
+          this.field_R.listener = (WidgetActionListener) ((Object) new ah(10000536));
           var6 = new ic();
-          this.field_F.field_l = (WidgetActionListener) ((Object) var6);
+          this.field_F.listener = (WidgetActionListener) ((Object) var6);
           if (null != this.field_G) {
-            this.field_G.field_l = (WidgetActionListener) ((Object) var6);
+            this.field_G.listener = (WidgetActionListener) ((Object) var6);
           }
           if (this.field_K != null) {
-            this.field_K.field_l = (WidgetActionListener) ((Object) var6);
+            this.field_K.listener = (WidgetActionListener) ((Object) var6);
           }
           this.field_N.field_x = hi.field_Z;
           if (this.field_K != null) {
@@ -157,15 +157,15 @@ final class uh extends WidgetContainer implements pa, n {
           } else {
             if (this.field_Q) {
               this.field_G.field_x = qf.field_b;
-              this.field_G.field_l = (WidgetActionListener) ((Object) new qh());
+              this.field_G.listener = (WidgetActionListener) ((Object) new qh());
             } else {
-              this.field_G.field_l = (WidgetActionListener) ((Object) new qh());
+              this.field_G.listener = (WidgetActionListener) ((Object) new qh());
             }
           }
-          this.field_u = 15;
+          this.y = 15;
           var7 = qk.field_e;
           if (null != this.field_I) {
-            this.field_u = this.field_u + (var7.a(this.field_I, this.field_p - 40, var7.field_s) + 5);
+            this.y = this.y + (var7.a(this.field_I, this.width - 40, var7.field_s) + 5);
           }
           var8 = WidgetContainer.field_D;
           var9 = vk.a(false, dg.a(false));
@@ -176,15 +176,15 @@ final class uh extends WidgetContainer implements pa, n {
               var8 = mm.field_a;
             }
           }
-          dupTemp$0 = new j(10, this.field_u, this.field_p - 20, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new j(10, this.y, this.width - 20, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) 95, dupTemp$0);
-          this.field_u = this.field_u + (((UiWidget) ((Object) var12)).field_n + 5);
-          dupTemp$1 = new j(10, this.field_u, this.field_p - 20, 25, this.field_R, false, 80, 3, var7, 16777215, eb.field_E);
+          this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
+          dupTemp$1 = new j(10, this.y, this.width - 20, 25, this.field_R, false, 80, 3, var7, 16777215, eb.field_E);
           var13 = dupTemp$1;
           this.b((byte) 95, dupTemp$1);
           this.field_F.field_r = (sc) (this);
-          this.field_u = this.field_u + (((UiWidget) ((Object) var13)).field_n + 5);
+          this.y = this.y + (((UiWidget) ((Object) var13)).height + 5);
           if (null != this.field_K) {
             this.field_K.field_r = (sc) (this);
           }
@@ -192,27 +192,27 @@ final class uh extends WidgetContainer implements pa, n {
             this.field_G.field_r = (sc) (this);
           }
           if (null != this.field_K) {
-            this.field_F.a(this.field_u, (byte) 83, -95 + this.field_p, 85, 30);
-            this.field_u = this.field_u + 60;
+            this.field_F.a(this.y, (byte) 83, -95 + this.width, 85, 30);
+            this.y = this.y + 60;
           } else {
-            this.field_F.a(this.field_u, (byte) 94, -10 + (-6 + this.field_p), 8, 30);
-            this.field_u = this.field_u + 35;
+            this.field_F.a(this.y, (byte) 94, -10 + (-6 + this.width), 8, 30);
+            this.y = this.y + 35;
           }
           if (this.field_K != null) {
-            this.field_K.a(this.field_u, (byte) 83, -10 + (-6 + this.field_p), 8, 30);
-            this.field_u = this.field_u + 35;
+            this.field_K.a(this.y, (byte) 83, -10 + (-6 + this.width), 8, 30);
+            this.y = this.y + 35;
           }
           if (null != this.field_G) {
             if (!this.field_O &&
               !this.field_Q) {
-              this.field_G.a(this.field_u, (byte) 99, 40, 8, 20);
-              this.field_u = this.field_u + 25;
+              this.field_G.a(this.y, (byte) 99, 40, 8, 20);
+              this.y = this.y + 25;
             } else {
-              this.field_G.a(this.field_u, (byte) 94, -10 + (this.field_p - 6), 8, 30);
-              this.field_u = this.field_u + 35;
+              this.field_G.a(this.y, (byte) 94, -10 + (this.width - 6), 8, 30);
+              this.y = this.y + 35;
             }
           }
-          this.a(0, (byte) 93, this.field_p, 0, 3 + this.field_u);
+          this.a(0, (byte) 93, this.width, 0, 3 + this.y);
           this.b((byte) 95, this.field_F);
           if (this.field_K != null) {
             this.b((byte) 95, this.field_K);
@@ -292,13 +292,13 @@ final class uh extends WidgetContainer implements pa, n {
     }
 
     final String d(boolean param0) {
-        if (this.field_N.field_o == null) {
+        if (this.field_N.text == null) {
           return "";
         }
         if (param0) {
           return (String) null;
         }
-        return this.field_N.field_o;
+        return this.field_N.text;
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -350,10 +350,10 @@ final class uh extends WidgetContainer implements pa, n {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_I) {
-          qk.field_e.a(this.field_I, this.field_w + param0 + 20, this.field_u + (param3 + 15), -40 + this.field_p, this.field_n, 16777215, -1, 1, 0, qk.field_e.field_s);
+          qk.field_e.a(this.field_I, this.x + param0 + 20, this.y + (param3 + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, qk.field_e.field_s);
         }
         if (this.field_K != null) {
-          SoftwareRasterizer.d(param0 + 10, param3 + 134, this.field_p - 20, 4210752);
+          SoftwareRasterizer.d(param0 + 10, param3 + 134, this.width - 20, 4210752);
         }
         if (param1 > -106) {
           this.field_R = (ej) null;
@@ -411,9 +411,9 @@ final class uh extends WidgetContainer implements pa, n {
           this.a(-35, 9, -77, 87);
         }
         if (ja.a(true) ||
-          !(this.field_N.field_o.length() <= 0) &&
-          !(this.field_R.field_o.length() <= 0)) {
-          ae.a(this.field_R.field_o, (byte) 75, this.field_N.field_o);
+          !(this.field_N.text.length() <= 0) &&
+          !(this.field_R.text.length() <= 0)) {
+          ae.a(this.field_R.text, (byte) 75, this.field_N.text);
         }
     }
 

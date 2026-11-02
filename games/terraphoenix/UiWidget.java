@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    WidgetActionListener field_l;
+    WidgetActionListener listener;
     static String field_t;
     int field_j;
     int field_y;
@@ -14,14 +14,14 @@ class UiWidget extends IntrusiveNode {
     boolean field_s;
     static String field_h;
     static String field_i;
-    int field_n;
+    int height;
     String field_x;
-    int field_p;
+    int width;
     sc field_r;
-    int field_u;
+    int y;
     int field_v;
-    int field_w;
-    String field_o;
+    int x;
+    String text;
 
     final static ec b(String param0, int param1) {
         RuntimeException var2 = null;
@@ -89,8 +89,8 @@ class UiWidget extends IntrusiveNode {
           if (0 != param2) {
             return;
           }
-          if (this.field_l != null) {
-            this.field_l.a(param3, this, param0, -24381, true);
+          if (this.listener != null) {
+            this.listener.a(param3, this, param0, -24381, true);
             return;
           }
           return;
@@ -98,8 +98,8 @@ class UiWidget extends IntrusiveNode {
         if (0 != param2) {
           return;
         }
-        if (this.field_l != null) {
-          this.field_l.a(param3, this, param0, -24381, true);
+        if (this.listener != null) {
+          this.listener.a(param3, this, param0, -24381, true);
           return;
         }
     }
@@ -192,7 +192,7 @@ class UiWidget extends IntrusiveNode {
 
     void e(int param0) {
         if (param0 > 0) {
-          this.field_n = 83;
+          this.height = 83;
         }
     }
 
@@ -434,13 +434,13 @@ class UiWidget extends IntrusiveNode {
     }
 
     void a(int param0, byte param1, int param2, int param3, int param4) {
-        this.field_p = param2;
+        this.width = param2;
         if (param1 <= 45) {
           return;
         }
-        this.field_w = param3;
-        this.field_u = param0;
-        this.field_n = param4;
+        this.x = param3;
+        this.y = param0;
+        this.height = param4;
     }
 
     void a(UiWidget param0, int param1, int param2, int param3) {
@@ -537,11 +537,11 @@ class UiWidget extends IntrusiveNode {
 
     final void c(int param0) {
         if (param0 == 0) {
-          this.a(this.field_u, (byte) 92, this.field_p, this.field_w, this.field_n);
+          this.a(this.y, (byte) 92, this.width, this.x, this.height);
           return;
         }
         this.field_j = -18;
-        this.a(this.field_u, (byte) 92, this.field_p, this.field_w, this.field_n);
+        this.a(this.y, (byte) 92, this.width, this.x, this.height);
     }
 
     final void a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
@@ -563,9 +563,9 @@ class UiWidget extends IntrusiveNode {
         int var6 = 0;
         var6 = Terraphoenix.field_V;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_w).append(",").append(this.field_u).append(" ").append(this.field_p).append("x").append(this.field_n);
-          if (null != this.field_o) {
-            discarded$1 = param3.append(" text=\"").append(this.field_o).append('"');
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (null != this.text) {
+            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
           if (this.field_s) {
             discarded$2 = param3.append(" mouseover");
@@ -576,10 +576,10 @@ class UiWidget extends IntrusiveNode {
           if (param2 != 27) {
             this.a(15, (byte) 16, 121, -54, 36);
           }
-          if (this.field_l != null) {
+          if (this.listener != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_l instanceof UiWidget)) {
-              discarded$5 = param3.append(this.field_l);
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$5 = param3.append(this.listener);
               if (var6 != 0) {
                 param3 = this.a(34, param3, 1 + param1, param0);
               }
@@ -679,27 +679,27 @@ class UiWidget extends IntrusiveNode {
         if (param2) {
           var7 = (String) null;
           UiWidget.b((String) null, -102);
-          if (param0 + this.field_w > param4) {
+          if (param0 + this.x > param4) {
             return false;
           }
-          if (param1 + this.field_u > param3) {
+          if (param1 + this.y > param3) {
             return false;
           }
-          if (param4 >= this.field_w + (param0 + this.field_p)) {
+          if (param4 >= this.x + (param0 + this.width)) {
             return false;
           }
-          if (param3 >= param1 + this.field_u + this.field_n) {
+          if (param3 >= param1 + this.y + this.height) {
             return false;
           }
           return true;
         }
-        if (param0 + this.field_w > param4) {
+        if (param0 + this.x > param4) {
           return false;
         }
-        if (param1 + this.field_u > param3) {
+        if (param1 + this.y > param3) {
           return false;
         }
-        stackIn_18_0 = (param4 < this.field_w + (param0 + this.field_p)) && (param3 < param1 + this.field_u + this.field_n);
+        stackIn_18_0 = (param4 < this.x + (param0 + this.width)) && (param3 < param1 + this.y + this.height);
         return stackIn_18_0;
     }
 
@@ -739,13 +739,13 @@ class UiWidget extends IntrusiveNode {
         this.field_y = 0;
         this.field_v = 0;
         try {
-          this.field_o = param0;
+          this.text = param0;
           this.field_r = param2;
-          this.field_l = param1;
-          if (this.field_l instanceof w) {
-            var4 = (w) ((Object) this.field_l);
-            this.field_p = var4.a(this, (byte) 102);
-            this.field_n = var4.b(this, (byte) 116);
+          this.listener = param1;
+          if (this.listener instanceof w) {
+            var4 = (w) ((Object) this.listener);
+            this.width = var4.a(this, (byte) 102);
+            this.height = var4.b(this, (byte) 116);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -756,12 +756,12 @@ class UiWidget extends IntrusiveNode {
         this.field_y = 0;
         this.field_v = 0;
         try {
-          this.field_n = param3;
-          this.field_w = param0;
+          this.height = param3;
+          this.x = param0;
           this.field_r = param5;
-          this.field_p = param2;
-          this.field_l = param4;
-          this.field_u = param1;
+          this.width = param2;
+          this.listener = param4;
+          this.y = param1;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

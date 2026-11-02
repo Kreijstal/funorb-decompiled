@@ -26,12 +26,12 @@ final class hm extends UiWidget {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Terraphoenix.field_V;
-        int var2 = this.field_n >> 1;
-        Sprite var3 = new Sprite(var2, this.field_n);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         il.a(1, var3);
-        for (var4 = param0; var4 < this.field_n; var4++) {
+        for (var4 = param0; var4 < this.height; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)((this.field_n - var4) * var4);
+            var6 = (double)var5 * (double)var5 / (double)((this.height - var4) * var4);
             var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(1.0 - var6);
@@ -49,14 +49,14 @@ final class hm extends UiWidget {
         if (param2 != 0) {
           return;
         }
-        int var5 = param0 + this.field_w;
-        int var6 = this.field_u + param3;
+        int var5 = param0 + this.x;
+        int var6 = this.y + param3;
         if (param1 > -106) {
           discarded$0 = this.b(-89, -2, 111);
         }
         this.a(this.field_D[0], var6, var5, -1);
         if (65536 > this.field_M) {
-          di.a(var5 + this.field_p, var6, 16105, var6 + this.field_n, (this.field_M * this.field_p >> 16) + var5);
+          di.a(var5 + this.width, var6, 16105, var6 + this.height, (this.field_M * this.width >> 16) + var5);
           this.a(this.field_D[1], var6, var5, -1);
           MessageKeys.a(false);
         }
@@ -79,16 +79,16 @@ final class hm extends UiWidget {
         int var11 = 0;
         int var12 = 0;
         int var13 = Terraphoenix.field_V;
-        Sprite var14 = new Sprite(2 * this.field_K, this.field_n);
+        Sprite var14 = new Sprite(2 * this.field_K, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         il.a(1, var14);
-        int var5 = this.field_n >> 1;
+        int var5 = this.height >> 1;
         if (param1 != -27888) {
           return (Sprite) null;
         }
-        for (var6 = 0; this.field_n > var6; var6++) {
+        for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (this.field_K * 2 - 1) % (this.field_K * 2);
           var8 = param0 & 16711935;
           var9 = param0 & 65280;
@@ -124,8 +124,8 @@ final class hm extends UiWidget {
             var9 = (UiWidget) null;
             this.a((UiWidget) null, 26, 3, -111);
           }
-          var5_int = this.field_p + param2;
-          di.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.field_n, this.field_C.field_r + param2);
+          var5_int = this.width + param2;
+          di.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.height, this.field_C.field_r + param2);
           for (var6 = -this.field_A + param2; var6 < var5_int; var6 = var6 + param0.field_r) {
             param0.b(var6, param1);
           }
@@ -140,7 +140,7 @@ final class hm extends UiWidget {
           }
           if (SoftwareRasterizer.field_f >= -this.field_C.field_r + var5_int) {
             il.a(1, this.field_I);
-            for (var7 = -this.field_C.field_r + (this.field_p + this.field_A); 2 * this.field_K < var7; var7 = var7 - 2 * this.field_K) {
+            for (var7 = -this.field_C.field_r + (this.width + this.field_A); 2 * this.field_K < var7; var7 = var7 - 2 * this.field_K) {
             }
             param0.b(-var7, 0);
             param0.b(-var7 + this.field_K * 2, 0);
@@ -303,7 +303,7 @@ final class hm extends UiWidget {
         int var2 = -120 % ((12 - param0) / 40);
         this.field_C = this.a(0);
         this.field_z = this.field_C.e();
-        this.field_I = new Sprite(this.field_n >> 1, this.field_n);
+        this.field_I = new Sprite(this.height >> 1, this.height);
     }
 
     hm(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

@@ -193,13 +193,13 @@ final class pd {
     }
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.removeMouseListener(a.field_d);
+        param1.removeMouseListener(a.mouseHandler);
         if (param0 > -2) {
           return;
         }
         try {
-          param1.removeMouseMotionListener(a.field_d);
-          param1.removeFocusListener(a.field_d);
+          param1.removeMouseMotionListener(a.mouseHandler);
+          param1.removeFocusListener(a.mouseHandler);
           wa.field_p = 0;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

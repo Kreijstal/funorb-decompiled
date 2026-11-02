@@ -7,10 +7,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (a.field_d != null) {
+          if (a.mouseHandler != null) {
             ng.field_t = 0;
-            ie.field_d = -1;
-            ch.field_d = -1;
+            ie.mouseX = -1;
+            ch.mouseY = -1;
             sj.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -20,10 +20,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != a.field_d) {
+          if (null != a.mouseHandler) {
             ng.field_t = 0;
-            ie.field_d = param0.getX();
-            ch.field_d = param0.getY();
+            ie.mouseX = param0.getX();
+            ch.mouseY = param0.getY();
             sj.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -38,7 +38,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (a.field_d == null) {
+          if (a.mouseHandler == null) {
             return;
           }
           wa.field_p = 0;
@@ -65,7 +65,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != a.field_d) {
+          if (null != a.mouseHandler) {
             ng.field_t = 0;
             IsaacCipher.field_l = param0.getX();
             qd.field_i = param0.getY();
@@ -123,7 +123,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (a.field_d != null) {
+          if (a.mouseHandler != null) {
             ng.field_t = 0;
             wa.field_p = 0;
             sj.field_c = true;
@@ -159,10 +159,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != a.field_d) {
+          if (null != a.mouseHandler) {
             ng.field_t = 0;
-            ie.field_d = param0.getX();
-            ch.field_d = param0.getY();
+            ie.mouseX = param0.getX();
+            ch.mouseY = param0.getY();
             sj.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -172,10 +172,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (a.field_d != null) {
+          if (a.mouseHandler != null) {
             ng.field_t = 0;
-            ie.field_d = param0.getX();
-            ch.field_d = param0.getY();
+            ie.mouseX = param0.getX();
+            ch.mouseY = param0.getY();
             sj.field_c = true;
           }
         } catch (RuntimeException runtimeException) {

@@ -286,7 +286,7 @@ class eb extends UiWidget {
         this.field_H = false;
         this.field_z = true;
         this.field_A = true;
-        this.field_l = vc.field_c.field_e;
+        this.listener = vc.field_c.field_e;
     }
 
     void a(int param0, int param1, byte param2, int param3) {

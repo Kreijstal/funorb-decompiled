@@ -323,15 +323,15 @@ final class fc {
     final static void b(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = a.field_d;
+        var1 = a.mouseHandler;
         synchronized (var1) {
           oh.field_f = wa.field_p;
           ng.field_t = ng.field_t + 1;
-          ef.field_j = ie.field_d;
+          ef.field_j = ie.mouseX;
           if (param0 != 43) {
             field_h = (String) null;
           }
-          MouseWheelInput.field_b = ch.field_d;
+          MouseWheelInput.field_b = ch.mouseY;
           ja.field_l = sj.field_c;
           sj.field_c = false;
           ma.field_I = sh.field_z;

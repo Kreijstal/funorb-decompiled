@@ -59,16 +59,16 @@ final class ga {
               hm.field_N = hm.field_N + 1;
             }
             if (1 == hm.field_N) {
-              if (bj.field_c.field_d == 2) {
+              if (bj.field_c.status == 2) {
                 stackIn_14_0 = o.a(-1, (byte) -112);
                 return stackIn_14_0;
               }
-              if (bj.field_c.field_d == 1) {
+              if (bj.field_c.status == 1) {
                 hm.field_N = hm.field_N + 1;
               }
             }
             if (hm.field_N == 2) {
-              gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.field_e), mc.field_b);
+              gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.result), mc.field_b);
               var2 = new PacketBuffer(13);
               ej.a(ng.field_y, -25563, var2, tj.field_wb, ai.field_c);
               var2.writeByte(15, -121);
@@ -78,7 +78,7 @@ final class ga {
               t.field_b = 30000L + ll.a(1000);
             }
             if (hm.field_N == 3) {
-              if (gi.field_l.a(0) > 0) {
+              if (gi.field_l.available(0) > 0) {
                 var1_int = gi.field_l.b(0);
                 if (var1_int != 0) {
                   stackIn_30_0 = o.a(var1_int, (byte) -112);

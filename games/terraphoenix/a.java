@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static MouseInputHandler field_d;
+    static MouseInputHandler mouseHandler;
     static FullscreenFocusCanvas field_b;
     static String field_a;
     static int[] field_c;
@@ -68,7 +68,7 @@ final class a {
 
     public static void a(int param0) {
         field_b = null;
-        field_d = null;
+        mouseHandler = null;
         field_e = null;
         field_a = null;
         if (param0 > 8) {
@@ -80,7 +80,7 @@ final class a {
     }
 
     static {
-        field_d = new MouseInputHandler();
+        mouseHandler = new MouseInputHandler();
         field_a = "Passwords can only contain letters and numbers";
         field_e = "Instructions";
     }

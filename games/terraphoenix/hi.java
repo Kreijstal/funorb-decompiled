@@ -88,10 +88,10 @@ final class hi extends ei implements n {
           if (param0) {
             field_W = (IndexedSprite[]) null;
           }
-          var4.field_l = (WidgetActionListener) ((Object) new ic());
-          var5 = -6 + this.field_n;
-          this.field_n = this.field_n + 38;
-          var4.a(var5, (byte) 80, -16 + (-14 + this.field_p), 15, 30);
+          var4.listener = (WidgetActionListener) ((Object) new ic());
+          var5 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.a(var5, (byte) 80, -16 + (-14 + this.width), 15, 30);
           this.b((byte) 95, var4);
           this.c(0);
           stackIn_3_0 = var4;
@@ -133,24 +133,24 @@ final class hi extends ei implements n {
           } else {
             if (ProxySocketConnector.field_e != param1) {
               if (param1 == gi.field_r) {
-                this.field_n = this.field_n + 30;
+                this.height = this.height + 30;
                 var3 = va.field_a;
               }
             } else {
               var3 = tb.field_i;
-              this.field_n = this.field_n + 10;
+              this.height = this.height + 10;
               if (ea.a(-20512)) {
                 var3 = nf.field_a;
-                this.field_n = this.field_n + 20;
+                this.height = this.height + 20;
               }
             }
           }
           var4 = new UiWidget((String) (var3), (sc) null);
-          var4.field_n = 80;
-          var4.field_u = 50;
-          var4.field_p = this.field_p;
-          var4.field_w = 0;
-          var4.field_l = (WidgetActionListener) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.height = 80;
+          var4.y = 50;
+          var4.width = this.width;
+          var4.x = 0;
+          var4.listener = (WidgetActionListener) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 95, var4);
           this.field_X = this.a(false, RasterBuffer.field_e, (sc) (this));
           return;

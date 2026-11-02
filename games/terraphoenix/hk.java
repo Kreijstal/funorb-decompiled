@@ -213,7 +213,7 @@ final class hk {
           if (lk.field_d == null) {
             return;
           }
-          lk.field_d.a((java.awt.Component) ((Object) param0), (byte) -105);
+          lk.field_d.unregister((java.awt.Component) ((Object) param0), (byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

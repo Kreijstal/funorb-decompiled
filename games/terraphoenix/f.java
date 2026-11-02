@@ -37,14 +37,14 @@ final class f implements WidgetActionListener {
         int var12Lifetime1;
         try {
           var14 = !(param1 instanceof gh) ? null : (gh) (param1);
-          SoftwareRasterizer.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_d);
+          SoftwareRasterizer.f(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_d);
           if (param3 != -24381) {
             this.field_b = 13;
           }
           if (var14 == null) {
           }
-          var7 = var14.field_R + (param2 + param1.field_w);
-          var8 = param0 + param1.field_u + var14.field_M;
+          var7 = var14.field_R + (param2 + param1.x);
+          var8 = param0 + param1.y + var14.field_M;
           SoftwareRasterizer.e(var7, var8, var14.field_Q, this.field_b);
           if (var14.field_P != -1) {
             var9 = 3.141592653589793 * (double)var14.field_P * 2.0 / (double)var14.field_K;
@@ -59,7 +59,7 @@ final class f implements WidgetActionListener {
           SoftwareRasterizer.c(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_k) {
             var13 = var14.field_Q + (var14.field_R + this.field_c);
-            this.field_k.a(param1.field_o, var13 + (param1.field_w + param2), this.field_j + param0 + param1.field_u, -this.field_c + (-var13 + param1.field_p), param1.field_n - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);
+            this.field_k.a(param1.text, var13 + (param1.x + param2), this.field_j + param0 + param1.y, -this.field_c + (-var13 + param1.width), param1.height - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "f.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

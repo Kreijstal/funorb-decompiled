@@ -15,12 +15,12 @@ abstract class ei extends kh {
           this.b(98, param2, param1);
           return;
         }
-        this.field_S = this.field_p;
+        this.field_S = this.width;
         if (param3 != -80) {
           return;
         }
         this.field_P = param1;
-        this.field_Q = this.field_n;
+        this.field_Q = this.height;
         this.field_U = param2;
         this.field_T = param0;
         this.field_V = 0;
@@ -226,7 +226,7 @@ abstract class ei extends kh {
         int var15Lifetime1;
         int var13Lifetime2;
         var16 = Terraphoenix.field_V;
-        SoftwareRasterizer.b(6 + param0, param1 + 35, this.field_p - 12, this.field_n - 40, 2105376, 0);
+        SoftwareRasterizer.b(6 + param0, param1 + 35, this.width - 12, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -239,7 +239,7 @@ abstract class ei extends kh {
               regionExit2: {
                 var9 = (var6 - var5) * var7 / var4 + var5;
                 var10 = 0;
-                var11 = this.field_p;
+                var11 = this.width;
                 if (var7 <= 20) {
                   while (var10 <= 20) {
                     var12 = (-var7 + 20) * (20 - var7) + (20 - var10) * (20 - var10);
@@ -318,14 +318,14 @@ abstract class ei extends kh {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
           SoftwareRasterizer.d(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.d(this.field_p + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.d(this.width + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        hd.field_o.b(this.field_p + param0 - 90, 10 + param1);
-        gd.a(param1 + 35, BattleState.field_p, 5 + param0, 121, this.field_p - 10);
-        gd.a(-22 + (this.field_n + param1), qb.field_f, param0, 126, this.field_p);
-        var4Lifetime2 = this.field_n - 79;
+        hd.field_o.b(this.width + param0 - 90, 10 + param1);
+        gd.a(param1 + 35, BattleState.field_p, 5 + param0, 121, this.width - 10);
+        gd.a(-22 + (this.height + param1), qb.field_f, param0, 126, this.width);
+        var4Lifetime2 = this.height - 79;
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
@@ -334,7 +334,7 @@ abstract class ei extends kh {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
           SoftwareRasterizer.d(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.d(-6 + (param0 + this.field_p), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.d(-6 + (param0 + this.width), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -342,13 +342,13 @@ abstract class ei extends kh {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.addMouseListener(a.field_d);
+          param0.addMouseListener(a.mouseHandler);
           if (param1 != -24289) {
             String var3 = (String) null;
             ei.a(-4, (String) null);
           }
-          param0.addMouseMotionListener(a.field_d);
-          param0.addFocusListener(a.field_d);
+          param0.addMouseMotionListener(a.mouseHandler);
+          param0.addFocusListener(a.mouseHandler);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ei.HB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

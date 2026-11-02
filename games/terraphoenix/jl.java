@@ -302,9 +302,9 @@ final class jl extends jc {
     }
 
     jl(UiWidget param0) {
-        super(param0.field_w, param0.field_u, param0.field_p, param0.field_n, (WidgetActionListener) null, (sc) null);
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetActionListener) null, (sc) null);
         try {
-          param0.a(0, (byte) 112, this.field_p, 0, this.field_n);
+          param0.a(0, (byte) 112, this.width, 0, this.height);
           this.field_F = param0;
           this.field_J = 256;
         } catch (RuntimeException runtimeException) {
@@ -323,17 +323,17 @@ final class jl extends jc {
           return;
         }
         if (this.field_J == 256) {
-          this.field_F.a(this.field_w + param0, -124, param2, this.field_u + param3);
+          this.field_F.a(this.x + param0, -124, param2, this.y + param3);
           return;
         }
         if (param1 >= -106) {
           jl.g((byte) -79);
         }
-        Sprite var6 = new Sprite(this.field_F.field_p, this.field_F.field_n);
+        Sprite var6 = new Sprite(this.field_F.width, this.field_F.height);
         il.a(1, var6);
         this.field_F.a(0, -128, param2, 0);
         MessageKeys.a(false);
-        var6.a(param0 + this.field_w, param3 + this.field_u, this.field_J);
+        var6.a(param0 + this.x, param3 + this.y, this.field_J);
     }
 
     static {

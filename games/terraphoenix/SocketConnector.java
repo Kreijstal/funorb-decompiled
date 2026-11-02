@@ -9,7 +9,7 @@ abstract class SocketConnector {
     int port;
     String host;
 
-    abstract java.net.Socket b(boolean param0) throws IOException;
+    abstract java.net.Socket createSocket(boolean obfuscationGuard) throws IOException;
 
     final static Sprite[] a(Archive param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
@@ -48,8 +48,8 @@ abstract class SocketConnector {
         rf.field_p = null;
     }
 
-    final java.net.Socket a(boolean param0) throws IOException {
-        if (param0) {
+    final java.net.Socket createDirectSocket(boolean obfuscationGuard) throws IOException {
+        if (obfuscationGuard) {
           return new java.net.Socket(this.host, this.port);
         }
         SocketConnector.a(28);

@@ -138,18 +138,18 @@ final class ProxySocketConnector extends SocketConnector {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_p; var4++) {
               if (null != var13.field_s[var4]) {
-                if (var13.field_s[var4].field_d == 2) {
+                if (var13.field_s[var4].status == 2) {
                   var13.field_r[var4] = -5;
                 }
-                if (var13.field_s[var4].field_d == 0) {
+                if (var13.field_s[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var13.field_j[var4] != null) {
-                if (2 == var13.field_j[var4].field_d) {
+                if (2 == var13.field_j[var4].status) {
                   var13.field_r[var4] = -6;
                 }
-                if (0 == var13.field_j[var4].field_d) {
+                if (0 == var13.field_j[var4].status) {
                   var3 = 1;
                 }
               }
@@ -167,19 +167,19 @@ final class ProxySocketConnector extends SocketConnector {
                 try {
                   var6_int = var17.field_k[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
+                    var15 = (java.lang.reflect.Field) (var17.field_s[var5].result);
                     var8 = var15.getInt((Object) null);
                     param1.writeByte(0, -106);
                     param1.writeInt(var8, 8959);
                   } else {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_s[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_m[var5]);
                       param1.writeByte(0, -102);
                     } else {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
+                        var26 = (java.lang.reflect.Field) (var17.field_s[var5].result);
                         var8 = var26.getModifiers();
                         param1.writeByte(0, -93);
                         param1.writeInt(var8, 8959);
@@ -187,7 +187,7 @@ final class ProxySocketConnector extends SocketConnector {
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_j[var5].field_e);
+                    var28 = (java.lang.reflect.Method) (var17.field_j[var5].result);
                     var25 = var17.field_o[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
@@ -208,7 +208,7 @@ final class ProxySocketConnector extends SocketConnector {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var17.field_j[var5].field_e);
+                      var27 = (java.lang.reflect.Method) (var17.field_j[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param1.writeByte(0, 74);
                       param1.writeInt(var8Lifetime1, 8959);
@@ -314,7 +314,7 @@ final class ProxySocketConnector extends SocketConnector {
         Class var15 = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_3_0 = this.a(true);
+            stackIn_3_0 = this.createDirectSocket(true);
             return stackIn_3_0;
           }
           var3 = param0.address();
@@ -476,7 +476,7 @@ final class ProxySocketConnector extends SocketConnector {
         this.field_j = java.net.ProxySelector.getDefault();
     }
 
-    final java.net.Socket b(boolean param0) throws IOException {
+    final java.net.Socket createSocket(boolean obfuscationGuard) throws IOException {
         int var9 = 0;
         int stackIn_5_0 = 0;
         java.net.ProxySelector stackIn_8_0;
@@ -546,7 +546,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a(true);
+          return this.createDirectSocket(true);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -571,13 +571,13 @@ final class ProxySocketConnector extends SocketConnector {
             var12_ref2 = (IOException) (Object) decompiledCaughtException;
           }
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           ProxySocketConnector.b(56);
         }
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
-        return this.a(true);
+        return this.createDirectSocket(true);
     }
 
     static {

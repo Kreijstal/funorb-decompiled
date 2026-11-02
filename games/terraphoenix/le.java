@@ -339,17 +339,17 @@ final class le extends di {
           if (param1 <= 82) {
             le.a(false);
           }
-          if (bd.field_k.field_d == 0) {
+          if (bd.field_k.status == 0) {
             return false;
           }
           dupTemp$1 = ll.a(1000);
           bl.field_h = dupTemp$1;
           dm.field_c = dupTemp$1;
-          if (1 != bd.field_k.field_d) {
+          if (1 != bd.field_k.status) {
             mh.field_a = ba.field_b;
           } else {
             try {
-              ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.field_e), da.field_g);
+              ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.result), da.field_g);
               di.field_l.position = 0;
               var4 = LevelEditor.field_j;
               var5 = var4;

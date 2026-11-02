@@ -273,19 +273,19 @@ final class wh implements Runnable {
     }
 
     wh(PlatformTaskDispatcher param0) {
-        mf var2 = null;
+        AsyncRequest var2 = null;
         this.field_c = new hl();
         this.field_f = false;
         this.field_b = 0;
         try {
-          var2 = param0.a((Runnable) (this), (byte) -21, 5);
-          while (0 == var2.field_d) {
+          var2 = param0.requestThread((Runnable) (this), (byte) -21, 5);
+          while (0 == var2.status) {
             gi.a((byte) -37, 10L);
           }
-          if (var2.field_d == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_d = (Thread) (var2.field_e);
+          this.field_d = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

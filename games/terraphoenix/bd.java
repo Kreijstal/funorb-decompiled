@@ -17,7 +17,7 @@ final class bd {
     static String field_j;
     private int field_g;
     static int field_a;
-    static mf field_k;
+    static AsyncRequest field_k;
 
     final bd a(int param0, int param1) {
         this.field_l = param1;
@@ -51,21 +51,21 @@ final class bd {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          jl.a(this.field_b, param1.field_n, param0 + param1.field_u, param1.field_p, (byte) 18, param1.field_w + param2);
+          jl.a(this.field_b, param1.height, param0 + param1.y, param1.width, (byte) 18, param1.x + param2);
           if (null != this.field_c) {
-            var6_int = this.field_g + param1.field_w + param2;
+            var6_int = this.field_g + param1.x + param2;
             if (1 == param4.field_h) {
-              var6_int = var6_int + (-this.field_c.field_q + param1.field_p) / 2;
+              var6_int = var6_int + (-this.field_c.field_q + param1.width) / 2;
             }
-            var7 = this.field_h + (param0 + param1.field_u);
+            var7 = this.field_h + (param0 + param1.y);
             if (param4.field_a == 1) {
-              var7 = var7 + (param1.field_n - this.field_c.field_u) / 2;
+              var7 = var7 + (param1.height - this.field_c.field_u) / 2;
             }
             if (param4.field_h == 2) {
-              var6_int = var6_int + (-this.field_c.field_q + param1.field_p);
+              var6_int = var6_int + (-this.field_c.field_q + param1.width);
             }
             if (param4.field_a == 2) {
-              var7 = var7 + (param1.field_n - this.field_c.field_u);
+              var7 = var7 + (param1.height - this.field_c.field_u);
             }
             this.field_c.b(var6_int, var7);
           }
@@ -80,15 +80,15 @@ final class bd {
             } else {
               stackIn_19_2 = this.field_g;
             }
-            stackIn_21_2 = stackIn_19_2 + (param2 + param1.field_w + param4.field_d);
+            stackIn_21_2 = stackIn_19_2 + (param2 + param1.x + param4.field_d);
             if (this.field_h == -2147483648) {
               stackIn_22_3 = 0;
             } else {
               stackIn_22_3 = this.field_h;
             }
-            stackIn_24_3 = stackIn_22_3 + (param1.field_u + param0) + param4.field_b;
-            stackIn_24_4 = -param4.field_l + (param1.field_p - param4.field_d);
-            stackIn_24_5 = param1.field_n - param4.field_b - param4.field_f;
+            stackIn_24_3 = stackIn_22_3 + (param1.y + param0) + param4.field_b;
+            stackIn_24_4 = -param4.field_l + (param1.width - param4.field_d);
+            stackIn_24_5 = param1.height - param4.field_b - param4.field_f;
             stackIn_24_6 = this.field_n;
             stackIn_24_7 = this.field_l;
             if (this.field_e != -2147483648) {
@@ -145,7 +145,7 @@ final class bd {
           String var3 = null;
           Exception var3_ref = null;
           int var4 = 0;
-          mf var5 = null;
+          AsyncRequest var5 = null;
           DataInputStream var6 = null;
           int var7 = 0;
           String var8 = null;
@@ -187,12 +187,12 @@ final class bd {
               stackIn_14_2 = null;
               stackIn_14_5 = "" + pf.field_c;
             }
-            var5 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var11).toString()), -71);
-            while (var5.field_d == 0) {
+            var5 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var11).toString()), -71);
+            while (var5.status == 0) {
               gi.a((byte) -122, 1L);
             }
-            if (var5.field_d == 1) {
-              var6 = (DataInputStream) (var5.field_e);
+            if (var5.status == 1) {
+              var6 = (DataInputStream) (var5.result);
               var6.read();
               var6.close();
             }

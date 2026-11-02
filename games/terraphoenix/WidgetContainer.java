@@ -146,7 +146,7 @@ class WidgetContainer extends UiWidget implements sf {
           field_z = (vb) null;
         }
         if (null != ig.field_e) {
-          ig.field_e.a((byte) -126);
+          ig.field_e.close((byte) -126);
           ig.field_e = null;
         }
     }
@@ -189,7 +189,7 @@ class WidgetContainer extends UiWidget implements sf {
           var9 = (UiWidget) (var11.a((byte) -13));
           while (var9 != null) {
             if (var9.a((byte) -109)) {
-              if (var9.a(false, param1, param2 + this.field_u, param3 + this.field_w, param4, param5, param6)) {
+              if (var9.a(false, param1, param2 + this.y, param3 + this.x, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var11.c(102));
@@ -234,7 +234,7 @@ class WidgetContainer extends UiWidget implements sf {
           var8 = (UiWidget) (var7.a((byte) -13));
           while (var8 != null) {
             if (var8.a((byte) -111)) {
-              var8.a(97, param1, this.field_u + param2, this.field_w + param3, param4, param5);
+              var8.a(97, param1, this.y + param2, this.x + param3, param4, param5);
               var8 = (UiWidget) (var7.c(45));
               continue;
             }
@@ -274,7 +274,7 @@ class WidgetContainer extends UiWidget implements sf {
           var6 = (UiWidget) (var5.a((byte) -13));
           while (var6 != null) {
             if (var6.a((byte) -117)) {
-              var6.a(param0, this.field_u + param1, this.field_w + param2, 73);
+              var6.a(param0, this.y + param1, this.x + param2, 73);
               var6 = (UiWidget) (var5.c(66));
               continue;
             }
@@ -506,8 +506,8 @@ class WidgetContainer extends UiWidget implements sf {
     void a(int param0, int param1, int param2, int param3) {
         int var7 = Terraphoenix.field_V;
         if (param2 == 0 &&
-          this.field_l != null) {
-          this.field_l.a(param3, (UiWidget) (this), param0, -24381, true);
+          this.listener != null) {
+          this.listener.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         k var5 = new k(this.field_C);
         if (param1 >= -106) {
@@ -515,7 +515,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
         UiWidget var6 = (UiWidget) (var5.b(59));
         while (var6 != null) {
-          var6.a(param0 + this.field_w, -128, param2, param3 + this.field_u);
+          var6.a(param0 + this.x, -128, param2, param3 + this.y);
           var6 = (UiWidget) (var5.d(-119));
         }
     }

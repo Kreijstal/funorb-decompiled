@@ -32,88 +32,88 @@ abstract class kh extends WidgetContainer {
         }
         if (this.field_G >= 256) {
           if (0 == param2) {
-            this.a(this.field_w + param0, param3 + this.field_u, (byte) 82);
+            this.a(this.x + param0, param3 + this.y, (byte) 82);
             super.a(param0, -124, param2, param3);
             return;
           }
           return;
         }
         if (hf.field_y == null) {
-          hf.field_y = new Sprite(this.field_p, this.field_n);
+          hf.field_y = new Sprite(this.width, this.height);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
-            super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+            super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
-            hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+            hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
             return;
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
-          super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+          super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
-        if (this.field_p > hf.field_y.field_r) {
-          hf.field_y = new Sprite(this.field_p, this.field_n);
+        if (this.width > hf.field_y.field_r) {
+          hf.field_y = new Sprite(this.width, this.height);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
-            super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+            super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
-            hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+            hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
             return;
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
-          super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+          super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
-        if (this.field_n > hf.field_y.field_t) {
-          hf.field_y = new Sprite(this.field_p, this.field_n);
+        if (this.height > hf.field_y.field_t) {
+          hf.field_y = new Sprite(this.width, this.height);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
-            super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+            super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
-            hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+            hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
             return;
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
-          super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+          super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
         if (param1 <= -106) {
           il.a(1, hf.field_y);
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
-          super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+          super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
         this.field_G = 14;
         il.a(1, hf.field_y);
         SoftwareRasterizer.a();
         this.a(0, 0, (byte) 82);
-        super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
+        super.a(-param0 - this.x, -127, param2, -param3 - this.y);
         MessageKeys.a(false);
-        hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
+        hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
     }
 
     private final int h(int param0) {

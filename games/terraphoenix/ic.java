@@ -61,8 +61,8 @@ final class ic extends fd {
           }
           stackIn_19_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          bk.a(param0 + param1.field_u + (-this.field_y[0].field_u + param1.field_n >> 1), var7, param1.field_w + param2, param1.field_p, this.field_y, 0);
-          this.field_j.a(param1.field_o, param2 + param1.field_w, param1.field_u + (param0 - 2), param1.field_p, param1.field_n, var8, -1, 1, 1, this.field_j.field_s);
+          bk.a(param0 + param1.y + (-this.field_y[0].field_u + param1.height >> 1), var7, param1.x + param2, param1.width, this.field_y, 0);
+          this.field_j.a(param1.text, param2 + param1.x, param1.y + (param0 - 2), param1.width, param1.height, var8, -1, 1, 1, this.field_j.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

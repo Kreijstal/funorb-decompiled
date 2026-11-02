@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bj {
-    static mf field_c;
+    static AsyncRequest field_c;
     static jg field_f;
     static String field_b;
     static int[] field_d;

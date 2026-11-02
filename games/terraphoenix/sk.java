@@ -36,10 +36,10 @@ final class sk implements WidgetActionListener {
           var12 = (wi) (stackIn_4_0);
           if (var12 == null) {
           }
-          SoftwareRasterizer.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_c);
-          var7 = -(2 * var12.field_M) + param1.field_p;
-          var8 = var12.field_M + param2 + param1.field_w;
-          var9 = var12.field_K + (param0 + param1.field_u);
+          SoftwareRasterizer.f(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_c);
+          var7 = -(2 * var12.field_M) + param1.width;
+          var8 = var12.field_M + param2 + param1.x;
+          var9 = var12.field_K + (param0 + param1.y);
           SoftwareRasterizer.c(var8, var9, var8 + var7, var9, this.field_j);
           if (param3 != -24381) {
             sk.a(false);
@@ -50,7 +50,7 @@ final class sk implements WidgetActionListener {
           if (null == this.field_g) {
             return;
           }
-          this.field_g.c(var12.field_o, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
+          this.field_g.c(var12.text, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

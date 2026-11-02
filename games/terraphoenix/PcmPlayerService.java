@@ -116,7 +116,7 @@ class PcmPlayerService {
                 field_g == null) {
                 field_g = new nf();
                 field_g.field_e = param0;
-                param0.a((Runnable) ((Object) field_g), (byte) -21, field_m);
+                param0.requestThread((Runnable) ((Object) field_g), (byte) -21, field_m);
               }
               if (field_g != null) {
                 if (field_g.field_d[param2] != null) {

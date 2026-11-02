@@ -47,16 +47,16 @@ abstract class rf extends DualLinkNode {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == a.field_d) {
+        if (null == a.mouseHandler) {
           if (param0 >= 81) {
             return;
           }
           field_y = (String) null;
           return;
         }
-        var1 = a.field_d;
+        var1 = a.mouseHandler;
         synchronized (var1) {
-          a.field_d = null;
+          a.mouseHandler = null;
         }
         if (param0 < 81) {
           field_y = (String) null;

@@ -32,7 +32,7 @@ final class ib extends ej implements v {
           return null;
         }
         if (param0 > 70) {
-          sh.a((byte) -122, MouseWheelInput.field_b, -this.field_Z + this.field_p + ef.field_j);
+          sh.a((byte) -122, MouseWheelInput.field_b, -this.field_Z + this.width + ef.field_j);
           return this.field_x;
         }
         return (String) null;
@@ -59,7 +59,7 @@ final class ib extends ej implements v {
             this.f(-56);
           }
           super.a(param0, param1, param2, 77);
-          this.field_Z = -param2 - this.field_w + ef.field_j;
+          this.field_Z = -param2 - this.x + ef.field_j;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ib.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

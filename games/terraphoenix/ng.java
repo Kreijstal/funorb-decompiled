@@ -17,7 +17,7 @@ class ng extends fd {
     public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
-            ah.a(param1.field_n, 128, param1.field_p, param2 + param1.field_w, param1.field_u + param0);
+            ah.a(param1.height, 128, param1.width, param2 + param1.x, param1.y + param0);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

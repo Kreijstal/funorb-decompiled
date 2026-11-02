@@ -57,7 +57,7 @@ abstract class vc {
             return false;
           }
           try {
-            var2_int = ig.field_e.a(0);
+            var2_int = ig.field_e.available(0);
             if (var2_int > 0) {
               if (param1 - LevelEditor.field_j.position < var2_int) {
                 var2_int = param1 - LevelEditor.field_j.position;

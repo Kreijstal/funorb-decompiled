@@ -4,7 +4,7 @@
 final class ie {
     static PacketBuffer field_b;
     static String field_c;
-    static volatile int field_d;
+    static volatile int mouseX;
     static String field_a;
 
     final static int a(byte param0, int param1, CharSequence param2) {
@@ -52,7 +52,7 @@ final class ie {
     }
 
     static {
-        field_d = -1;
+        mouseX = -1;
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_a = "No Highscores";
     }

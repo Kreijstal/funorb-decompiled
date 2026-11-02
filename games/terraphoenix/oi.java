@@ -15,12 +15,12 @@ final class oi extends WidgetContainer implements n {
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, -126, param2, param3);
         if (param1 < -106) {
-          this.field_I.a(this.field_N, param0 - (-this.field_w - 14), 10 + (param3 + this.field_u), -28 + this.field_p, this.field_n, 16777215, -1, 0, 0, this.field_I.field_s);
+          this.field_I.a(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
           return;
         }
         String var6 = (String) null;
         this.a((byte) 29, (sc) null, (String) null);
-        this.field_I.a(this.field_N, param0 - (-this.field_w - 14), 10 + (param3 + this.field_u), -28 + this.field_p, this.field_n, 16777215, -1, 0, 0, this.field_I.field_s);
+        this.field_I.a(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
     }
 
     private final void b(int param0, int param1) {
@@ -120,10 +120,10 @@ final class oi extends WidgetContainer implements n {
             this.a(-103, (String) null, (byte) -64);
           }
           var4 = new eb(param2, param1);
-          var4.field_l = (WidgetActionListener) ((Object) new ic());
-          var5 = -2 + this.field_n;
-          this.a(0, (byte) 107, this.field_p, 0, 34 + this.field_n);
-          var4.a(var5, (byte) 85, this.field_p - 14, 7, 30);
+          var4.listener = (WidgetActionListener) ((Object) new ic());
+          var5 = -2 + this.height;
+          this.a(0, (byte) 107, this.width, 0, 34 + this.height);
+          var4.a(var5, (byte) 85, this.width - 14, 7, 30);
           this.b((byte) 95, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;

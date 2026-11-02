@@ -65,11 +65,11 @@ abstract class jc extends UiWidget implements sf {
 
     void a(int param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
-          null != this.field_l) {
-          this.field_l.a(param3, (UiWidget) (this), param0, -24381, true);
+          null != this.listener) {
+          this.listener.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         if (null != this.field_F) {
-          this.field_F.a(this.field_w + param0, -124, param2, this.field_u + param3);
+          this.field_F.a(this.x + param0, -124, param2, this.y + param3);
         }
         if (param1 >= -106) {
           this.a(25, (byte) -75, -102, -86, -98);
@@ -129,7 +129,7 @@ abstract class jc extends UiWidget implements sf {
         }
         try {
           if (null != this.field_F) {
-            this.field_F.a(param0, param1 + this.field_u, this.field_w + param2, 57);
+            this.field_F.a(param0, param1 + this.y, this.x + param2, 57);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "jc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -147,7 +147,7 @@ abstract class jc extends UiWidget implements sf {
             field_E = (String) null;
           }
           if (null != this.field_F) {
-            this.field_F.a(47, param1, this.field_u + param2, param3 + this.field_w, param4, param5);
+            this.field_F.a(47, param1, this.y + param2, param3 + this.x, param4, param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ abstract class jc extends UiWidget implements sf {
           if (param0) {
             return false;
           }
-          stackIn_7_0 = (null != this.field_F) && (this.field_F.a(false, param1, this.field_u + param2, param3 + this.field_w, param4, param5, param6));
+          stackIn_7_0 = (null != this.field_F) && (this.field_F.a(false, param1, this.y + param2, param3 + this.x, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

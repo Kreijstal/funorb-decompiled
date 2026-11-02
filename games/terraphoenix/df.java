@@ -41,7 +41,7 @@ final class df extends eb {
     private df(String param0, WidgetActionListener param1, sc param2) {
         super(param0, param1, param2);
         try {
-          this.field_l = vc.field_c.field_q;
+          this.listener = vc.field_c.field_q;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -59,7 +59,7 @@ final class df extends eb {
     private df(String param0, sc param1) {
         this(param0, vc.field_c.field_n, param1);
         try {
-          this.field_l = vc.field_c.field_q;
+          this.listener = vc.field_c.field_q;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

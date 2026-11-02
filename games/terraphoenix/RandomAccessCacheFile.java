@@ -133,11 +133,11 @@ final class RandomAccessCacheFile {
           }
           for (var2 = 0; var1.field_p > var2; var2++) {
             if (var4.field_s[var2] != null &&
-              var4.field_s[var2].field_d == 0) {
+              var4.field_s[var2].status == 0) {
               return false;
             }
             if (null != var4.field_j[var2] &&
-              var4.field_j[var2].field_d == 0) {
+              var4.field_j[var2].status == 0) {
               return false;
             }
           }

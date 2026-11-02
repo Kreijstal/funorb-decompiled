@@ -60,7 +60,7 @@ final class wi extends eb {
             return false;
           }
           var8_int = param1 - param3 - this.field_M;
-          var9 = this.field_p - this.field_M * 2;
+          var9 = this.width - this.field_M * 2;
           if (var9 < var8_int) {
             var8_int = var9;
           }

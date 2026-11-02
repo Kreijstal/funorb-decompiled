@@ -14,7 +14,7 @@ final class BufferedSocket implements Runnable {
     private byte[] field_m;
     private OutputStream field_c;
     static o field_d;
-    private mf field_i;
+    private AsyncRequest field_i;
     static int field_k;
     private int field_j;
 
@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
             this.field_m = new byte[this.field_f];
           }
           if (param2 != -97) {
-            this.a((byte) -76);
+            this.close((byte) -76);
           }
           var5 = this;
           synchronized (var5) {
@@ -52,7 +52,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_i) {
-              this.field_i = this.field_h.a((Runnable) (this), (byte) -21, 3);
+              this.field_i = this.field_h.requestThread((Runnable) (this), (byte) -21, 3);
             }
             this.notifyAll();
           }
@@ -71,11 +71,11 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int a(int param0) throws IOException {
+    final int available(int obfuscationGuard) throws IOException {
         if (this.field_g) {
           return 0;
         }
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           this.field_l = false;
           return this.field_b.available();
         }
@@ -86,7 +86,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(byte param0) {
+    final void close(byte obfuscationGuard) {
         try {
           int var2 = 0;
           InterruptedException var3 = null;
@@ -102,14 +102,14 @@ final class BufferedSocket implements Runnable {
             this.field_g = true;
             this.notifyAll();
           }
-          var2 = -36 % ((-82 - param0) / 40);
+          var2 = -36 % ((-82 - obfuscationGuard) / 40);
           if (this.field_i != null) {
-            while (0 == this.field_i.field_d) {
+            while (0 == this.field_i.status) {
               gi.a((byte) -26, 1L);
             }
-            if (this.field_i.field_d == 1) {
+            if (this.field_i.status == 1) {
               try {
-                ((Thread) (this.field_i.field_e)).join();
+                ((Thread) (this.field_i.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -127,8 +127,8 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void c(int param0) throws IOException {
-        if (param0 != 10509) {
+    final void throwPendingError(int obfuscationGuard) throws IOException {
+        if (obfuscationGuard != 10509) {
           this.finalize();
           if (this.field_g) {
             return;
@@ -150,7 +150,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a((byte) 37);
+        this.close((byte) 37);
     }
 
     public final void run() {

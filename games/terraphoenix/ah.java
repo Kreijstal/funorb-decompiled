@@ -88,7 +88,7 @@ final class ah extends ng {
           if (param1 != 32032) {
             field_D = (String) null;
           }
-          stackIn_3_0 = uh.a(0, param0.field_o.length(), '*');
+          stackIn_3_0 = uh.a(0, param0.text.length(), '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

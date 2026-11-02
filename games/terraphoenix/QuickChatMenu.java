@@ -211,10 +211,10 @@ final class QuickChatMenu {
             var18.field_i = param2.readInt((byte) -107);
             var18.field_o = new byte[var18.field_p][][];
             var18.field_k = new int[var18.field_p];
-            var18.field_j = new mf[var18.field_p];
+            var18.field_j = new AsyncRequest[var18.field_p];
             var18.field_m = new int[var18.field_p];
             var18.field_r = new int[var18.field_p];
-            var18.field_s = new mf[var18.field_p];
+            var18.field_s = new AsyncRequest[var18.field_p];
             for (var5 = 0; var18.field_p > var5; var5++) {
               try {
                 var6_int = param2.readUnsignedByte(-16384);

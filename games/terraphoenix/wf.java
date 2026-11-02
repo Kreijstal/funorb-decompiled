@@ -3,13 +3,13 @@
  */
 final class wf extends IntrusiveNode {
     static int field_q;
-    mf[] field_j;
+    AsyncRequest[] field_j;
     int field_p;
     int field_i;
     static int field_l;
     static boolean field_h;
     static int field_n;
-    mf[] field_s;
+    AsyncRequest[] field_s;
     int[] field_r;
     int[] field_k;
     int[] field_m;

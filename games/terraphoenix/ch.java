@@ -7,7 +7,7 @@ final class ch {
     private int field_e;
     static String field_h;
     static Archive field_g;
-    static volatile int field_d;
+    static volatile int mouseY;
     private int field_f;
     int field_i;
     static int field_c;
@@ -170,7 +170,7 @@ final class ch {
             param1--;
             if (param1 < 0) {
               if (param2 != 15169) {
-                field_d = -12;
+                mouseY = -12;
               }
               return;
             }
@@ -951,6 +951,6 @@ final class ch {
 
     static {
         field_h = "Evacuate with data";
-        field_d = -1;
+        mouseY = -1;
     }
 }

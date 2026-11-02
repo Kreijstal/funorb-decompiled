@@ -19,21 +19,21 @@ final class kj implements WidgetActionListener {
         int var7 = 0;
         Sprite var8 = null;
         try {
-          var6_int = param2 + param1.field_w;
-          var7 = param1.field_u + param0;
-          ah.a(param1.field_n, 128, param1.field_p, var6_int, var7);
+          var6_int = param2 + param1.x;
+          var7 = param1.y + param0;
+          ah.a(param1.height, 128, param1.width, var6_int, var7);
           if (param3 != -24381) {
             return;
           }
           var8 = og.field_c[1];
           if (param1 instanceof eb &&
             ((eb) (param1)).field_C) {
-            var8.d((-var8.field_q + param1.field_p >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.field_n >> 1), 256);
+            var8.d((-var8.field_q + param1.width >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.height >> 1), 256);
           }
           if (!param1.d(-118)) {
             return;
           }
-          ed.a(-4 + param1.field_p, -4 + param1.field_n, 2 + var7, 52, var6_int + 2);
+          ed.a(-4 + param1.width, -4 + param1.height, 2 + var7, 52, var6_int + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -26,8 +26,8 @@ class vj extends eb {
           super.a(param0, param1, param2, 104);
           this.field_N = null;
           if (this.field_s) {
-            var5_int = -this.field_w - param2 + ef.field_j;
-            var6 = MouseWheelInput.field_b - param1 - this.field_u;
+            var5_int = -this.x - param2 + ef.field_j;
+            var6 = MouseWheelInput.field_b - param1 - this.y;
             this.field_N = this.a(2, var5_int, var6);
           }
           return;
@@ -173,17 +173,17 @@ class vj extends eb {
           this.a(-95, (String) null, (byte) -110);
         }
         var2 = 0;
-        var3 = (w) ((Object) this.field_l);
+        var3 = (w) ((Object) this.listener);
         var4 = var3.a((UiWidget) (this), -19302);
         while (true) {
-          var5 = this.field_o.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           }
-          var7 = this.field_o.indexOf(">", var5);
-          var6 = this.field_o.substring(var5 + 9, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_o.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.b(var5, 0);
           var9 = var4.b(var2, 0);
           var10 = null;
@@ -243,7 +243,7 @@ class vj extends eb {
         super(param0, (sc) null);
         this.field_N = null;
         try {
-          this.field_l = param1;
+          this.listener = param1;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -259,7 +259,7 @@ class vj extends eb {
         if (param1 > -106) {
           this.field_N = (hh) null;
         }
-        w var9 = (w) ((Object) this.field_l);
+        w var9 = (w) ((Object) this.listener);
         hh var6 = this.field_N;
         if (var6 == null) {
         } else {
@@ -273,7 +273,7 @@ class vj extends eb {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(param0, (byte) 88, param3, param2, ((w) ((Object) this.field_l)).b((UiWidget) (this), (byte) 112));
+        this.a(param0, (byte) 88, param3, param2, ((w) ((Object) this.listener)).b((UiWidget) (this), (byte) 112));
         if (param1 >= -4) {
           field_L = (String) null;
         }
@@ -297,8 +297,8 @@ class vj extends eb {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, param2, param3);
-        int var5 = param3 - this.field_w;
-        int var6 = -this.field_u + param0;
+        int var5 = param3 - this.x;
+        int var6 = -this.y + param0;
         hh var7 = this.a(param2 + 4, var5, var6);
         if (var7 != null &&
           this.field_r != null) {

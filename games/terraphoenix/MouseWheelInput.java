@@ -8,9 +8,9 @@ abstract class MouseWheelInput {
     static long[] field_d;
     static boolean field_a;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void register(int obfuscationGuard, java.awt.Component component);
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void unregister(java.awt.Component component, byte obfuscationGuard);
 
     final static int[] a(int param0, int param1, int param2) {
         int var7 = 0;
@@ -79,7 +79,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract int a(int param0);
+    abstract int consumeWheelDelta(int obfuscationGuard);
 
     public static void a(boolean param0) {
         field_d = null;

@@ -56,26 +56,26 @@ final class qh implements WidgetActionListener {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_o + "</u>", param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
+          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param1.y + param0, param1.width, param1.height, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
           if (!param1.d(param3 ^ 24395)) {
             return;
           }
-          var7 = this.field_e.b(param1.field_o);
+          var7 = this.field_e.b(param1.text);
           var8 = this.field_e.field_p + this.field_e.field_s;
-          var9 = param2 + param1.field_w;
+          var9 = param2 + param1.x;
           if (2 == this.field_a) {
-            var9 = var9 + (param1.field_p - var7);
+            var9 = var9 + (param1.width - var7);
           } else {
             if (this.field_a == 1) {
-              var9 = var9 + (param1.field_p - var7 >> 1);
+              var9 = var9 + (param1.width - var7 >> 1);
             }
           }
-          var10 = param0 + param1.field_u;
+          var10 = param0 + param1.y;
           if (this.field_f == 2) {
-            var10 = var10 + (param1.field_n - var8);
+            var10 = var10 + (param1.height - var8);
           } else {
             if (1 == this.field_f) {
-              var10 = var10 + (param1.field_n - var8 >> 1);
+              var10 = var10 + (param1.height - var8 >> 1);
             }
           }
           ed.a(4 + var7, var8, 2 + var10, 52, -2 + var9);

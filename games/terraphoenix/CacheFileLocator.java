@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-public class la {
+public class CacheFileLocator {
     private static int field_d;
     private static String field_a;
     private static String field_b;
@@ -36,10 +36,10 @@ public class la {
 
     public static File a(String param0, int param1) {
         int var2 = 124 / ((param1 - 66) / 59);
-        return la.a(param0, field_a, false, field_d);
+        return CacheFileLocator.a(param0, field_a, false, field_d);
     }
 
-    private la() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 

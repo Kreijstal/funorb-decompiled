@@ -168,9 +168,9 @@ final class dd extends eb {
         if (param2 != 0) {
           return;
         }
-        var5 = (this.field_p >> 1) + param0 + this.field_w;
+        var5 = (this.width >> 1) + param0 + this.x;
         if (param1 <= -106) {
-          var6 = (this.field_n >> 1) + (param3 + this.field_u);
+          var6 = (this.height >> 1) + (param3 + this.y);
           var8 = this.field_K.a(-16323);
           if (kj.field_d == var8) {
             var16 = og.field_c[0];
@@ -229,7 +229,7 @@ final class dd extends eb {
           return;
         }
         field_O = (String[]) null;
-        var6Lifetime1 = (this.field_n >> 1) + (param3 + this.field_u);
+        var6Lifetime1 = (this.height >> 1) + (param3 + this.y);
         var8Lifetime1 = this.field_K.a(-16323);
         if (kj.field_d == var8Lifetime1) {
           var20 = og.field_c[0];

@@ -337,7 +337,7 @@ abstract class GameShell extends GameApplet {
           vk.a(-8177);
         }
         if (lk.field_d != null) {
-          vj.field_P = lk.field_d.a(125);
+          vj.field_P = lk.field_d.consumeWheelDelta(125);
         }
         if (ra.c((byte) 66)) {
           var3 = 1200 * uc.j((byte) -127);

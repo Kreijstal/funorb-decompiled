@@ -405,8 +405,8 @@ final class ki extends vj {
         } else {
           var5 = eg.field_k;
         }
-        if (!var5.equals(this.field_o)) {
-          this.field_o = var5;
+        if (!var5.equals(this.text)) {
+          this.text = var5;
           this.b(true);
         }
         super.a(param0, -118, param2, param3);
@@ -414,8 +414,8 @@ final class ki extends vj {
           field_S = (String) null;
         }
         var6Lifetime1 = this.field_X.a(-16323);
-        var8 = (w) ((Object) this.field_l);
-        var9 = param0 + this.field_w;
+        var8 = (w) ((Object) this.listener);
+        var9 = param0 + this.x;
         var10 = var8.a((UiWidget) (this), param3, (byte) -72) + (var8.a((UiWidget) (this), -19302).c(5859) >> 1);
         if (kj.field_d != var6Lifetime1 &&
           var6Lifetime1 != oh.field_b) {

@@ -140,7 +140,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         ef[] var4 = null;
         ef var6 = null;
         int var7 = 0;
-        mf var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Terraphoenix.field_V;
@@ -150,14 +150,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return stackIn_3_0;
           }
           var8 = param0.a(-84);
-          while (var8.field_d == 0) {
+          while (var8.status == 0) {
             gi.a((byte) -64, 10L);
           }
-          if (var8.field_d == 2) {
+          if (var8.status == 2) {
             stackIn_9_0 = new ef[]{};
             return stackIn_9_0;
           }
-          var10 = (int[]) (var8.field_e);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new ef[var10.length >> 2];

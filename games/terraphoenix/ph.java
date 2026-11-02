@@ -234,7 +234,7 @@ final class ph extends di {
         java.awt.Frame var7 = null;
         int var9 = 0;
         ef[] var10 = null;
-        mf var11 = null;
+        AsyncRequest var11 = null;
         var9 = Terraphoenix.field_V;
         try {
           if (!param0.b(2)) {
@@ -263,17 +263,17 @@ final class ph extends di {
             }
           }
           var11 = param0.a(param5, param2, true, param1, param3);
-          while (var11.field_d == 0) {
+          while (var11.status == 0) {
             gi.a((byte) -63, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
           if (param4 != 10) {
             field_m = (int[]) null;
           }
-          if (var11.field_d != 2) {
+          if (var11.status != 2) {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
@@ -307,7 +307,7 @@ final class ph extends di {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_p.field_o.toLowerCase();
+          var3 = this.field_p.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == param1) {
             stackIn_3_0 = qf.field_d;
@@ -370,7 +370,7 @@ final class ph extends di {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_p.field_o.toLowerCase();
+          var7 = this.field_p.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = null;
@@ -443,7 +443,7 @@ final class ph extends di {
             var8 = (bm) null;
             ph.a(-49, (bm) null, -94, 122);
           }
-          var9 = this.field_s.field_o.toLowerCase();
+          var9 = this.field_s.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (0 < var9.length()) {
             if (var4.length() <= 0) {

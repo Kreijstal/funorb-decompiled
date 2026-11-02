@@ -73,16 +73,16 @@ class ej extends eb {
             return;
           }
           if (this.field_U != -1) {
-            var3_int = this.field_U - this.field_o.length();
+            var3_int = this.field_U - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          if (this.field_K != this.field_o.length()) {
-            this.field_o = this.field_o.substring(0, this.field_K) + param0 + this.field_o.substring(this.field_K, this.field_o.length());
+          if (this.field_K != this.text.length()) {
+            this.text = this.text.substring(0, this.field_K) + param0 + this.text.substring(this.field_K, this.text.length());
           } else {
-            this.field_o = this.field_o + param0;
+            this.text = this.text + param0;
           }
           this.field_K = this.field_K + param0.length();
           this.field_T = this.field_K;
@@ -177,10 +177,10 @@ class ej extends eb {
           this.field_y = 0;
           return;
         }
-        if (!(this.field_l instanceof w)) {
+        if (!(this.listener instanceof w)) {
           return;
         }
-        var10 = (w) ((Object) this.field_l);
+        var10 = (w) ((Object) this.listener);
         var3 = var10.a((UiWidget) (this), -19302);
         var4 = var3.b(0);
         var5 = var10.a(28889, (UiWidget) (this));
@@ -239,7 +239,7 @@ class ej extends eb {
           var4 = this.field_K > this.field_T ? this.field_K : this.field_T;
           this.field_K = var3;
           this.field_T = var3;
-          this.field_o = this.field_o.substring(0, var3) + this.field_o.substring(var4, this.field_o.length());
+          this.text = this.text.substring(0, var3) + this.text.substring(var4, this.text.length());
           this.i(126);
         }
     }
@@ -250,12 +250,12 @@ class ej extends eb {
         int var3Lifetime1;
         if (param0 == -18031) {
           var3 = this.field_T < this.field_K ? this.field_K : this.field_T;
-          return this.field_o.substring(var2, var3);
+          return this.text.substring(var2, var3);
         }
         PacketBuffer var4 = (PacketBuffer) null;
         ej.a(-116, -28, (PacketBuffer) null, 31, 71);
         var3Lifetime1 = this.field_T < this.field_K ? this.field_K : this.field_T;
-        return this.field_o.substring(var2, var3Lifetime1);
+        return this.text.substring(var2, var3Lifetime1);
     }
 
     private final int o(int param0) {
@@ -263,12 +263,12 @@ class ej extends eb {
         int var3;
         int var4;
         var4 = Terraphoenix.field_V;
-        var2 = this.field_o.length();
+        var2 = this.text.length();
         if (var2 == this.field_K) {
           return this.field_K;
         }
         for (var3 = this.field_K + param0; var2 > var3; var3++) {
-          if (this.field_o.charAt(var3 - 1) == 32) {
+          if (this.text.charAt(var3 - 1) == 32) {
             return var3;
           }
         }
@@ -287,16 +287,16 @@ class ej extends eb {
           if (param2 == null) {
             param2 = "";
           }
-          this.field_o = param2;
+          this.text = param2;
           var4_int = param2.length();
           if (-1 != this.field_U &&
             this.field_U < var4_int) {
-            this.field_o = this.field_o.substring(0, this.field_U);
+            this.text = this.text.substring(0, this.field_U);
           }
           if (param1 >= -117) {
             field_S = -91;
           }
-          dupTemp$1 = this.field_o.length();
+          dupTemp$1 = this.text.length();
           this.field_T = dupTemp$1;
           this.field_K = dupTemp$1;
           if (param0) {
@@ -342,8 +342,8 @@ class ej extends eb {
           if (this.field_j != 1) {
             return;
           }
-          if (this.field_l instanceof w) {
-            var7 = (w) ((Object) this.field_l);
+          if (this.listener instanceof w) {
+            var7 = (w) ((Object) this.listener);
             var6 = var7.a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param1, param2);
             if (var6 != -1) {
               if (this.field_O &&
@@ -373,7 +373,7 @@ class ej extends eb {
     final void a(int param0, int param1, int param2, int param3) {
         long var6;
         w var8;
-        if (this.field_l == null) {
+        if (this.listener == null) {
           if (param1 < -106) {
             return;
           }
@@ -387,15 +387,15 @@ class ej extends eb {
           this.field_T = -91;
           return;
         }
-        this.field_l.a(param3, (UiWidget) (this), param0, -24381, this.field_A);
-        if (!(this.field_l instanceof w)) {
+        this.listener.a(param3, (UiWidget) (this), param0, -24381, this.field_A);
+        if (!(this.listener instanceof w)) {
           if (param1 < -106) {
             return;
           }
           this.field_T = -91;
           return;
         }
-        var8 = (w) ((Object) this.field_l);
+        var8 = (w) ((Object) this.listener);
         if (this.field_K != this.field_T) {
           var8.b(0, param3, param0, (UiWidget) (this), this.field_K, this.field_T);
         }
@@ -438,7 +438,7 @@ class ej extends eb {
         this.field_O = false;
         this.field_Q = 0L;
         try {
-          this.field_l = vc.field_c.field_i;
+          this.listener = vc.field_c.field_i;
           this.field_U = param2;
           this.a(true, (byte) -120, param0);
           this.field_W = true;
@@ -449,7 +449,7 @@ class ej extends eb {
     }
 
     final void k(int param0) {
-        this.field_o = "";
+        this.text = "";
         this.field_K = 0;
         this.field_T = 0;
         if (param0 == -1) {
@@ -489,8 +489,8 @@ class ej extends eb {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
-            this.field_l instanceof w) {
-            var8_int = ((w) ((Object) this.field_l)).a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param2, param3);
+            this.listener instanceof w) {
+            var8_int = ((w) ((Object) this.listener)).a(ef.field_j, -3477, MouseWheelInput.field_b, (UiWidget) (this), param2, param3);
             stackIn_5_1 = 19;
             if (var8_int != -1) {
               stackIn_6_2 = var8_int;
@@ -505,7 +505,7 @@ class ej extends eb {
               this.field_T = this.l(-1);
               this.field_K = this.o(1);
               if (this.field_K > 0 &&
-                32 == this.field_o.charAt(this.field_K - 1)) {
+                32 == this.text.charAt(this.field_K - 1)) {
                 this.field_K = this.field_K - 1;
               }
               this.field_L = this.field_K;
@@ -539,7 +539,7 @@ class ej extends eb {
           return this.field_K;
         }
         for (var2 = this.field_K - 1; 0 < var2; var2--) {
-          if (this.field_o.charAt(var2 - 1) == 32) {
+          if (this.text.charAt(var2 - 1) == 32) {
             return var2;
           }
         }
@@ -582,14 +582,14 @@ class ej extends eb {
               this.i((byte) 62);
             }
             if (this.field_U == -1 ||
-              !(this.field_o.length() >= this.field_U)) {
-              if (this.field_K < this.field_o.length()) {
-                this.field_o = this.field_o.substring(0, this.field_K) + param0 + this.field_o.substring(this.field_K, this.field_o.length());
+              !(this.text.length() >= this.field_U)) {
+              if (this.field_K < this.text.length()) {
+                this.text = this.text.substring(0, this.field_K) + param0 + this.text.substring(this.field_K, this.text.length());
                 this.field_K = this.field_K + 1;
                 this.field_T = this.field_K;
               } else {
-                this.field_o = this.field_o + param0;
-                dupTemp$0 = this.field_o.length();
+                this.text = this.text + param0;
+                dupTemp$0 = this.text.length();
                 this.field_K = dupTemp$0;
                 this.field_T = dupTemp$0;
               }
@@ -615,7 +615,7 @@ class ej extends eb {
               }
               if (param3 != 96) {
                 if (param3 == 97) {
-                  if (this.field_K < this.field_o.length()) {
+                  if (this.field_K < this.text.length()) {
                     stackIn_66_1 = 19;
                     if (bh.field_e[82]) {
                       stackIn_67_2 = this.o(1);
@@ -631,7 +631,7 @@ class ej extends eb {
                     return true;
                   }
                   if (param3 == 103) {
-                    this.a((byte) 19, this.field_o.length());
+                    this.a((byte) 19, this.text.length());
                     return true;
                   }
                   if (param3 == 84) {
@@ -671,7 +671,7 @@ class ej extends eb {
                 this.i((byte) -102);
                 return true;
               }
-              if (this.field_K < this.field_o.length()) {
+              if (this.field_K < this.text.length()) {
                 this.field_T = this.field_K + 1;
                 this.i((byte) -102);
                 return true;

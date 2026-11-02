@@ -13,9 +13,9 @@ final class cg extends WidgetContainer implements n {
         if (param1 > -106) {
           return;
         }
-        int var5 = param0 + this.field_w;
-        int var6 = this.field_u + param3;
-        qk.field_e.a(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.field_p, this.field_n - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
+        int var5 = param0 + this.x;
+        int var6 = this.y + param3;
+        qk.field_e.a(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.width, this.height - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
         super.a(param0, -125, param2, param3);
     }
 
@@ -140,15 +140,15 @@ final class cg extends WidgetContainer implements n {
         this.field_G = new eb(sl.field_f, (sc) null);
         this.field_J = new eb(aj.field_c, (sc) null);
         ic var1 = new ic();
-        this.field_F.field_l = (WidgetActionListener) ((Object) var1);
-        this.field_G.field_l = (WidgetActionListener) ((Object) var1);
-        this.field_J.field_l = (WidgetActionListener) ((Object) var1);
+        this.field_F.listener = (WidgetActionListener) ((Object) var1);
+        this.field_G.listener = (WidgetActionListener) ((Object) var1);
+        this.field_J.listener = (WidgetActionListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_G.a(-var2 + (this.field_n - 48), (byte) 48, var4, this.field_p - var3 >> 1, 30);
-        this.field_J.a(this.field_n - 48 - var2, (byte) 51, var4, var4 + (-var3 + this.field_p >> 1) + var2, 30);
-        this.field_F.a(-(2 * var2) - 78 + this.field_n, (byte) 111, var3, this.field_p - var3 >> 1, 30);
+        this.field_G.a(-var2 + (this.height - 48), (byte) 48, var4, this.width - var3 >> 1, 30);
+        this.field_J.a(this.height - 48 - var2, (byte) 51, var4, var4 + (-var3 + this.width >> 1) + var2, 30);
+        this.field_F.a(-(2 * var2) - 78 + this.height, (byte) 111, var3, this.width - var3 >> 1, 30);
         this.field_G.field_r = (sc) (this);
         this.field_F.field_r = (sc) (this);
         this.field_J.field_r = (sc) (this);

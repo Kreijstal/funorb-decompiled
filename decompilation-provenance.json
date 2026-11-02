@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
       "sources": {
         "files": 311,
-        "sha256": "22aa271c065908469ecc27bf62b13ba5851aa2ec8be8c6e1bb6ce4122d0609a0"
+        "sha256": "1713239b76082d685984af8c5bec8850f84640faa586a8509681fc0969ae60f0"
       },
       "dictionary": {
         "path": "decompilation/terraphoenix-naming.json",
-        "sha256": "51f95acd2d6be43be9ed6e856aad2c569ce4104c4156a254905e748e59ab0276"
+        "sha256": "afddad6a83b7370fbdbf0e47b087127dc9fba132e954f54c4a6588a223395c7e"
       },
       "readingGuide": {
         "path": "games/terraphoenix/README.md",
-        "sha256": "c54dfda6e19c34fc62d797d1218b9800a22d51b3f819a330f502f4ae412aa4a9"
+        "sha256": "3877208428c0b9944b21207b79edfdc52ba8b8fec29980ef5a8694ee359bc1da"
       },
-      "rulesSha256": "fd7603535c2593e784ece3bd980997c1ac281742b8d6b78c25257d127eae302c",
+      "rulesSha256": "faa4733e2f98e709e9894ff90d53c986b50c83a459d0691ad27a007b747c9562",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12225,7 +12225,7 @@
         },
         "publishedSources": {
           "files": 311,
-          "sha256": "22aa271c065908469ecc27bf62b13ba5851aa2ec8be8c6e1bb6ce4122d0609a0"
+          "sha256": "1713239b76082d685984af8c5bec8850f84640faa586a8509681fc0969ae60f0"
         }
       },
       "tetralink": {

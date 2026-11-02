@@ -172,9 +172,9 @@ final class ae extends WidgetContainer implements rg, n {
         this.field_J.field_x = p.field_g;
         this.field_J.a(new ia(this.field_J), 5859);
         this.field_K.field_A = false;
-        this.field_K.field_l = (WidgetActionListener) ((Object) new ic());
-        this.field_O.field_l = (WidgetActionListener) ((Object) new qh());
-        this.field_J.field_l = (WidgetActionListener) ((Object) new ng(10000536));
+        this.field_K.listener = (WidgetActionListener) ((Object) new ic());
+        this.field_O.listener = (WidgetActionListener) ((Object) new qh());
+        this.field_J.listener = (WidgetActionListener) ((Object) new ng(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -189,7 +189,7 @@ final class ae extends WidgetContainer implements rg, n {
         this.b((byte) 95, this.field_K);
         this.b((byte) 95, this.field_O);
         this.field_N = new am((rg) (this));
-        this.field_N.a(20, (byte) 68, -60 - this.field_J.field_p + (-this.field_J.field_w + this.field_p), 60 + (this.field_J.field_p + this.field_J.field_w), 150);
+        this.field_N.a(20, (byte) 68, -60 - this.field_J.width + (-this.field_J.x + this.width), 60 + (this.field_J.width + this.field_J.x), 150);
         this.b((byte) 95, this.field_N);
         this.a(0, (byte) 94, 496, 0, var3 - (-55 - var4));
     }
@@ -215,10 +215,10 @@ final class ae extends WidgetContainer implements rg, n {
           }
           var10 = new j(20, param2, param0 + 120, 25, param6, false, 120, 3, qk.field_e, 16777215, param3);
           this.b((byte) 95, var10);
-          var9 = new ki(((v) ((Object) param6)).a(29730), param5, 126, var10.field_n + param2, param0 + 25, param4);
+          var9 = new ki(((v) ((Object) param6)).a(29730), param5, 126, var10.height + param2, param0 + 25, param4);
           var9.field_r = (sc) (this);
           this.b((byte) 95, var9);
-          stackIn_4_0 = var10.field_n + var9.field_n;
+          stackIn_4_0 = var10.height + var9.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ final class ae extends WidgetContainer implements rg, n {
         if (param0 != 50) {
           return;
         }
-        vf.a(this.field_J.field_o, param0 - 17);
+        vf.a(this.field_J.text, param0 - 17);
     }
 
     public final void a(String param0, int param1) {

@@ -24,7 +24,7 @@ final class mg extends di {
             var4 = ((v) ((Object) this.field_n)).a(29730);
             if (var4 != null) {
               if (var4.a(-16323) == dg.field_c &&
-                !param0.equals(this.field_n.field_o)) {
+                !param0.equals(this.field_n.text)) {
                 stackIn_7_0 = hl.field_e;
                 return stackIn_7_0;
               }
@@ -32,7 +32,7 @@ final class mg extends di {
               return stackIn_9_0;
             }
           }
-          if (param0.equals(this.field_n.field_o)) {
+          if (param0.equals(this.field_n.text)) {
             return null;
           }
           stackIn_13_0 = hl.field_e;
@@ -81,7 +81,7 @@ final class mg extends di {
           if (param1 != 0) {
             field_p = (int[]) null;
           }
-          if (param0.equals(this.field_n.field_o)) {
+          if (param0.equals(this.field_n.text)) {
             stackIn_11_0 = dg.field_c;
           } else {
             stackIn_11_0 = qf.field_d;

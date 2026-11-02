@@ -125,7 +125,7 @@ final class am extends WidgetContainer implements n {
           ei.a((java.awt.Component) ((Object) param1), -24289);
           var2_int = -55 / ((param0 + 23) / 48);
           if (null != lk.field_d) {
-            lk.field_d.a(0, (java.awt.Component) ((Object) param1));
+            lk.field_d.register(0, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,13 +170,13 @@ final class am extends WidgetContainer implements n {
             this.field_L = new eb[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_L[var5] = new eb(this.field_I[var5], (sc) (this));
-              this.field_L[var5].field_l = (WidgetActionListener) ((Object) var4);
+              this.field_L[var5].listener = (WidgetActionListener) ((Object) var4);
               this.field_L[var5].field_x = g.field_ab;
               this.field_L[var5].a(16 * var5 + 20, (byte) 117, 80, 0, 15);
               this.b((byte) 95, this.field_L[var5]);
             }
             this.field_L[var3_int] = new eb(re.field_d, (sc) (this));
-            this.field_L[var3_int].field_l = (WidgetActionListener) ((Object) var4);
+            this.field_L[var3_int].listener = (WidgetActionListener) ((Object) var4);
             this.field_L[var3_int].a(var3_int * 16 + 16 + 20, (byte) 127, 100, 0, 15);
             this.b((byte) 95, this.field_L[var3_int]);
             return;
@@ -246,7 +246,7 @@ final class am extends WidgetContainer implements n {
         }
         BitmapFont var5 = qk.field_e;
         if (null != this.field_I) {
-          var5.a(tb.field_l, this.field_w + param0, this.field_u + param3, this.field_p, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
+          var5.a(tb.field_l, this.x + param0, this.y + param3, this.width, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
         }
     }
 

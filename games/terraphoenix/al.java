@@ -38,7 +38,7 @@ abstract class al extends ei {
           if (param0 == null) {
             this.field_Z = new jl();
           } else {
-            param0.a(6 + this.field_cb, (byte) 53, param0.field_p, 6, param0.field_n);
+            param0.a(6 + this.field_cb, (byte) 53, param0.width, 6, param0.height);
             this.field_Z = new jl(param0);
           }
           this.b((byte) 95, this.field_Z);
@@ -60,7 +60,7 @@ abstract class al extends ei {
             field_bb = (int[]) null;
           }
           if (qb.field_h == this.field_fb) {
-            this.a(this.field_eb, this.field_Y.field_p + 12, 12 + this.field_cb + this.field_Y.field_n, (byte) -80);
+            this.a(this.field_eb, this.field_Y.width + 12, 12 + this.field_cb + this.field_Y.height, (byte) -80);
             this.field_ab = 0;
             return;
           }
@@ -104,7 +104,7 @@ abstract class al extends ei {
     }
 
     al(d param0, UiWidget param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_p, param1.field_n + (param2 + 12));
+        super(param0, 12 + param1.width, param1.height + (param2 + 12));
         try {
           this.field_cb = param2;
           this.field_db = param3;
@@ -119,7 +119,7 @@ abstract class al extends ei {
     final void j(int param0) {
         if (null != this.field_fb) {
           if (this.field_fb != dc.field_n) {
-            this.b(98, this.field_cb + 12 + this.field_Y.field_n, 12 + this.field_Y.field_p);
+            this.b(98, this.field_cb + 12 + this.field_Y.height, 12 + this.field_Y.width);
             this.b(this.field_Y, (byte) -68);
           }
           this.field_fb = null;
@@ -162,7 +162,7 @@ abstract class al extends ei {
             return super.f((byte) -121);
           }
           this.field_fb = qb.field_h;
-          this.a(this.field_eb, 12 + this.field_Y.field_p, 12 - (-this.field_cb - this.field_Y.field_n), (byte) -80);
+          this.a(this.field_eb, 12 + this.field_Y.width, 12 - (-this.field_cb - this.field_Y.height), (byte) -80);
           this.field_Z.field_J = 0;
           this.field_ab = 0;
           if (param0 == -121) {

@@ -37,7 +37,7 @@ final class hf extends fd {
             stackIn_5_0 = null;
           }
           var10 = (eb) (stackIn_5_0);
-          di.a(param1.field_p + param1.field_w + param2, param0 + param1.field_u, 16105, param1.field_n + param1.field_u + param0, param1.field_w + param2);
+          di.a(param1.width + param1.x + param2, param0 + param1.y, 16105, param1.height + param1.y + param0, param1.x + param2);
           if (var10 != null) {
             param4 = param4 & var10.field_A;
           }

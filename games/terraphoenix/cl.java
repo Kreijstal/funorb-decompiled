@@ -18,7 +18,7 @@ final class cl extends WidgetContainer implements jf, n {
         try {
           this.field_H = param0;
           this.field_G = new eb(rj.field_e, (sc) null);
-          this.field_G.field_l = (WidgetActionListener) ((Object) new ic());
+          this.field_G.listener = (WidgetActionListener) ((Object) new ic());
           var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, rf.field_y);
           var3 = 20;
           var4 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
@@ -27,9 +27,9 @@ final class cl extends WidgetContainer implements jf, n {
           this.field_F.a(0, ig.field_b, (byte) 126);
           this.field_F.a(1, ig.field_b, (byte) 25);
           this.field_F.field_r = (sc) (this);
-          this.field_F.field_p = -40 + this.field_p;
-          this.field_F.b(var3, -96, 26, -40 + this.field_p);
-          var3 = var3 + (15 + this.field_F.field_n);
+          this.field_F.width = -40 + this.width;
+          this.field_F.b(var3, -96, 26, -40 + this.width);
+          var3 = var3 + (15 + this.field_F.height);
           this.b((byte) 95, this.field_F);
           var5 = 4;
           var6 = 200;

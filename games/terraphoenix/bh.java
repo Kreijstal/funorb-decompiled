@@ -9,11 +9,11 @@ final class bh implements Runnable {
     private DataInputStream field_m;
     private java.net.URL field_l;
     static boolean field_f;
-    private mf field_n;
-    private mf field_g;
+    private AsyncRequest field_n;
+    private AsyncRequest field_g;
     static String field_j;
     static boolean[] field_e;
-    private mf field_k;
+    private AsyncRequest field_k;
     private PlatformTaskDispatcher field_o;
     static int field_a;
     static String field_h;
@@ -38,18 +38,18 @@ final class bh implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_n) {
-          if (null != this.field_n.field_e) {
+          if (null != this.field_n.result) {
             try {
-              ((DataInputStream) (this.field_n.field_e)).close();
+              ((DataInputStream) (this.field_n.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_n = null;
         }
         if (null != this.field_g) {
-          if (null != this.field_g.field_e) {
+          if (null != this.field_g.result) {
             try {
-              ((java.net.Socket) (this.field_g.field_e)).close();
+              ((java.net.Socket) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -90,12 +90,12 @@ final class bh implements Runnable {
         }
         if (this.field_c == 0) {
           if (null == this.field_n) {
-            this.field_n = this.field_o.a(this.field_l, 111);
+            this.field_n = this.field_o.requestUrl(this.field_l, 111);
           }
-          if (this.field_n.field_d == 0) {
+          if (this.field_n.status == 0) {
             return false;
           }
-          if (this.field_n.field_d != 1) {
+          if (this.field_n.status != 1) {
             this.field_c = this.field_c + 1;
             this.field_n = null;
             return false;
@@ -105,10 +105,10 @@ final class bh implements Runnable {
           if (null == this.field_g) {
             this.field_g = this.field_o.a(443, this.field_l.getHost(), (byte) 60);
           }
-          if (0 == this.field_g.field_d) {
+          if (0 == this.field_g.status) {
             return false;
           }
-          if (this.field_g.field_d != 1) {
+          if (this.field_g.status != 1) {
             this.field_g = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -117,10 +117,10 @@ final class bh implements Runnable {
         if (null == this.field_m) {
           try {
             if (this.field_c == 0) {
-              this.field_m = (DataInputStream) (this.field_n.field_e);
+              this.field_m = (DataInputStream) (this.field_n.result);
             }
             if (this.field_c == 1) {
-              var4 = (java.net.Socket) (this.field_g.field_e);
+              var4 = (java.net.Socket) (this.field_g.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -139,12 +139,12 @@ final class bh implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (this.field_k == null) {
-              this.field_k = this.field_o.a((Runnable) (this), (byte) -21, 5);
+              this.field_k = this.field_o.requestThread((Runnable) (this), (byte) -21, 5);
             }
-            if (this.field_k.field_d == 0) {
+            if (this.field_k.status == 0) {
               return false;
             }
-            if (this.field_k.field_d == 1) {
+            if (this.field_k.status == 1) {
               return false;
             }
             this.finalize();
@@ -153,12 +153,12 @@ final class bh implements Runnable {
           }
         }
         if (this.field_k == null) {
-          this.field_k = this.field_o.a((Runnable) (this), (byte) -21, 5);
+          this.field_k = this.field_o.requestThread((Runnable) (this), (byte) -21, 5);
         }
-        if (this.field_k.field_d == 0) {
+        if (this.field_k.status == 0) {
           return false;
         }
-        if (this.field_k.field_d != 1) {
+        if (this.field_k.status != 1) {
           this.finalize();
           this.field_c = this.field_c + 1;
         }

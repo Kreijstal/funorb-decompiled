@@ -183,7 +183,7 @@ class fd implements WidgetActionListener, w {
           }
           var10 = var18.b(var8, 0);
           var11 = var18.b(var9, 0);
-          di.a(param2 + param3.field_w + param3.field_p, param3.field_u + param1, 16105, param3.field_u + param1 + param3.field_n, param2 + param3.field_w);
+          di.a(param2 + param3.x + param3.width, param3.y + param1, 16105, param3.y + param1 + param3.height, param2 + param3.x);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_f[var12];
             if (var10 != var12) {
@@ -202,7 +202,7 @@ class fd implements WidgetActionListener, w {
               stackIn_20_0 = var18.a(var9, 0);
             }
             var15 = stackIn_20_0;
-            vc.field_c.a(this.field_r, this.a(var14, param3, param2, (byte) 126), var13.field_e + param3.field_v + (this.field_b + param1) + param3.field_u, this.field_r >>> 24, param0 ^ 2, var13.field_a, var15 - var14);
+            vc.field_c.a(this.field_r, this.a(var14, param3, param2, (byte) 126), var13.field_e + param3.field_v + (this.field_b + param1) + param3.y, this.field_r >>> 24, param0 ^ 2, var13.field_a, var15 - var14);
           }
           MessageKeys.a(false);
           return;
@@ -292,7 +292,7 @@ class fd implements WidgetActionListener, w {
               stackIn_5_3 = var13.field_f[1 + var7].field_e;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            di.a(param2.field_w + (param3 + param2.field_p), param1 + param2.field_u, param4 ^ -17264, param2.field_n + (param2.field_u + param1), param3 + param2.field_w);
+            di.a(param2.x + (param3 + param2.width), param1 + param2.y, param4 ^ -17264, param2.height + (param2.y + param1), param3 + param2.x);
             vc.field_c.a(this.field_g, var10, var10, var12, var11, true);
             MessageKeys.a(false);
           }
@@ -326,7 +326,7 @@ class fd implements WidgetActionListener, w {
           if (param1 != 32032) {
             this.a(61);
           }
-          stackIn_3_0 = param0.field_o;
+          stackIn_3_0 = param0.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -363,7 +363,7 @@ class fd implements WidgetActionListener, w {
         int var12Lifetime1;
         var13 = Terraphoenix.field_V;
         try {
-          di.a(param5.field_p + (param3 + param5.field_w), param4 + param5.field_u, param6 + 16035, param5.field_u + (param4 + param5.field_n), param5.field_w + param3);
+          di.a(param5.width + (param3 + param5.x), param4 + param5.y, param6 + 16035, param5.y + (param4 + param5.height), param5.x + param3);
           if (param6 != 70) {
             return;
           }
@@ -431,7 +431,7 @@ class fd implements WidgetActionListener, w {
             var4 = (fd) null;
             this.a((fd) null, -10);
           }
-          stackIn_3_0 = param1.field_n - this.field_b - this.field_f;
+          stackIn_3_0 = param1.height - this.field_b - this.field_f;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -512,7 +512,7 @@ class fd implements WidgetActionListener, w {
             var4 = (UiWidget) null;
             this.c(-45, (UiWidget) null);
           }
-          stackIn_3_0 = param1.field_p - this.field_d - this.field_l;
+          stackIn_3_0 = param1.width - this.field_d - this.field_l;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -615,7 +615,7 @@ class fd implements WidgetActionListener, w {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -33) {
-            stackIn_4_0 = param2 + param0.field_v + param0.field_u + (param3 + this.field_b);
+            stackIn_4_0 = param2 + param0.field_v + param0.y + (param3 + this.field_b);
             return stackIn_4_0;
           }
           stackIn_2_0 = 78;
@@ -656,7 +656,7 @@ class fd implements WidgetActionListener, w {
           if (param3 <= 123) {
             this.field_a = -33;
           }
-          stackIn_3_0 = param1.field_w + (param2 + (this.field_d + param1.field_y)) + param0;
+          stackIn_3_0 = param1.x + (param2 + (this.field_d + param1.field_y)) + param0;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

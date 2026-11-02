@@ -49,9 +49,9 @@ final class ea implements WidgetActionListener {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.f(param1.field_w + param2, param1.field_u + param0, param1.field_p, param1.field_n, this.field_q);
-          var8 = param1.field_w + (param2 + this.field_g);
-          var9 = this.field_l + (param1.field_u + param0);
+          SoftwareRasterizer.f(param1.x + param2, param1.y + param0, param1.width, param1.height, this.field_q);
+          var8 = param1.x + (param2 + this.field_g);
+          var9 = this.field_l + (param1.y + param0);
           SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, 5592405);
           SoftwareRasterizer.f(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_C) {
@@ -60,7 +60,7 @@ final class ea implements WidgetActionListener {
           }
           if (this.field_h != null) {
             var10 = this.field_i + this.field_g + this.field_a;
-            this.field_h.a(param1.field_o, param1.field_w + param2 + var10, this.field_b + (param0 + param1.field_u), param1.field_p - this.field_a - var10, param1.field_n - (this.field_a << 1), this.field_p, this.field_f, this.field_c, this.field_d, 0);
+            this.field_h.a(param1.text, param1.x + param2 + var10, this.field_b + (param0 + param1.y), param1.width - this.field_a - var10, param1.height - (this.field_a << 1), this.field_p, this.field_f, this.field_c, this.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

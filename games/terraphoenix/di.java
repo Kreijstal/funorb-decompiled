@@ -25,7 +25,7 @@ abstract class di extends af implements pa {
         if (param0 != 117) {
           this.e(-90);
         }
-        stackIn_7_0 = (null == this.field_j.field_o) || (this.field_j.field_o.length() == 0);
+        stackIn_7_0 = (null == this.field_j.text) || (this.field_j.text.length() == 0);
         return stackIn_7_0;
     }
 
@@ -61,7 +61,7 @@ abstract class di extends af implements pa {
         if (param0 != 0) {
           field_e = 120;
         }
-        return this.b(this.field_j.field_o, 0);
+        return this.b(this.field_j.text, 0);
     }
 
     public static void d(byte param0) {
@@ -109,7 +109,7 @@ abstract class di extends af implements pa {
         if (param0 != 0) {
           field_h = (String[]) null;
         }
-        return this.a(this.field_j.field_o, -81);
+        return this.a(this.field_j.text, -81);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

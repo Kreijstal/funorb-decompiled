@@ -26,8 +26,8 @@ final class gh extends eb {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          var8_int = param1 + (-this.field_R + (-this.field_w - param3));
-          var9 = param6 - (this.field_M + this.field_u + param2);
+          var8_int = param1 + (-this.field_R + (-this.x - param3));
+          var9 = param6 - (this.field_M + this.y + param2);
           if (var9 * var9 + var8_int * var8_int < this.field_Q * this.field_Q) {
             var10 = Math.atan2((double)var9, (double)var8_int) - kd.field_b;
             if (!(var10 < 0.0)) {

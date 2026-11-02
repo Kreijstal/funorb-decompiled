@@ -28,13 +28,13 @@ final class d extends jc {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = Terraphoenix.field_V;
-        if (null != this.field_l) {
-          this.field_l.a(param3, (UiWidget) (this), param0, -24381, true);
+        if (null != this.listener) {
+          this.listener.a(param3, (UiWidget) (this), param0, -24381, true);
         }
         k var5 = new k(this.field_A);
         UiWidget var6 = (UiWidget) (var5.b(94));
         while (var6 != null) {
-          var6.a(param0 + this.field_w, -122, param2, param3 + this.field_u);
+          var6.a(param0 + this.x, -122, param2, param3 + this.y);
           var6 = (UiWidget) (var5.d(-96));
         }
         if (param1 > -106) {

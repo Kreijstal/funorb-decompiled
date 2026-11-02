@@ -68,19 +68,19 @@ final class cb extends jc {
             this.field_j == 1) {
             var5_int = -param2 + (ef.field_j - this.field_A);
             var6 = -param1 + (MouseWheelInput.field_b - this.field_K);
-            if (var5_int != this.field_w ||
-              this.field_u != var6) {
-              this.field_w = var5_int;
-              this.field_u = var6;
+            if (var5_int != this.x ||
+              this.y != var6) {
+              this.x = var5_int;
+              this.y = var6;
               if (this.field_r instanceof hc) {
                 ((hc) (this.field_r)).a(-29856, param2, this, param1);
               }
             }
           } else {
             if (this.field_L) {
-              if (this.field_N != this.field_w) {
-                var5_int = this.field_N - this.field_w;
-                stackIn_12_1 = this.field_w;
+              if (this.field_N != this.x) {
+                var5_int = this.field_N - this.x;
+                stackIn_12_1 = this.x;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_13_2 = var5_int >> 1;
                 } else {
@@ -90,11 +90,11 @@ final class cb extends jc {
                     stackIn_13_2 = -1;
                   }
                 }
-                this.field_w = stackIn_12_1 + stackIn_13_2;
+                this.x = stackIn_12_1 + stackIn_13_2;
               }
-              if (this.field_u != this.field_M) {
-                var5_int = this.field_M - this.field_u;
-                stackIn_17_1 = this.field_u;
+              if (this.y != this.field_M) {
+                var5_int = this.field_M - this.y;
+                stackIn_17_1 = this.y;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int > 0) {
                     stackIn_20_2 = 1;
@@ -104,7 +104,7 @@ final class cb extends jc {
                 } else {
                   stackIn_20_2 = var5_int >> 1;
                 }
-                this.field_u = stackIn_17_1 + stackIn_20_2;
+                this.y = stackIn_17_1 + stackIn_20_2;
               }
             }
           }
@@ -149,9 +149,9 @@ final class cb extends jc {
           if (param4 != 1) {
             return true;
           }
-          this.field_K = param6 + (-this.field_u - param2);
+          this.field_K = param6 + (-this.y - param2);
           SpriteState.field_w = this;
-          this.field_A = -param3 + (param1 - this.field_w);
+          this.field_A = -param3 + (param1 - this.x);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,9 +221,9 @@ final class cb extends jc {
 
     final void a(int param0) {
         super.a(param0 ^ param0);
-        this.field_F.a(0, (byte) 85, this.field_p, 0, this.field_n);
-        this.field_N = this.field_w;
-        this.field_M = this.field_u;
+        this.field_F.a(0, (byte) 85, this.width, 0, this.height);
+        this.field_N = this.x;
+        this.field_M = this.y;
     }
 
     final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {

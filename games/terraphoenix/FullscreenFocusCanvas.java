@@ -82,7 +82,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
-        mf var3 = null;
+        AsyncRequest var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -94,11 +94,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         var4 = Terraphoenix.field_V;
         try {
           while (true) {
-            var3 = param0.a(param2, -121);
-            while (var3.field_d == 0) {
+            var3 = param0.requestFrame(param2, -121);
+            while (var3.status == 0) {
               gi.a((byte) -41, 10L);
             }
-            if (1 != var3.field_d) {
+            if (1 != var3.status) {
               gi.a((byte) -78, 100L);
               continue;
             }

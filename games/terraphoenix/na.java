@@ -76,7 +76,7 @@ final class na extends ei {
 
     final void a(int param0, int param1, byte param2) {
         super.a(param0, param1, param2);
-        be.field_x.c(this.field_eb, param0 + (this.field_p >> 1), param1 + 103, 16777215, -1);
+        be.field_x.c(this.field_eb, param0 + (this.width >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_bb) {
           SoftwareRasterizer.d(20 + param0, -7 + (120 + param1), 260, 8421504);
           be.field_x.a(this.field_bb, 20 + param0, param1 + 128, 260, 100, 16777215, -1, 1, 0, be.field_x.field_s);
