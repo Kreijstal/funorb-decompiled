@@ -228,7 +228,7 @@ final class em extends hi {
             return stackIn_15_0;
           }
           if (this.b(param1, (byte) -99)) {
-            stackIn_19_0 = pl.field_f;
+            stackIn_19_0 = NodeHashTableIterator.field_f;
             return stackIn_19_0;
           }
           if (0 >= var6.length()) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc extends ca {
+final class mc extends IntrusiveNode {
     static int field_j;
     byte[] field_h;
     static int field_g;
@@ -210,11 +210,11 @@ final class mc extends ca {
             if (var19 == 0) {
               if (stackIn_13_0) {
                 var12 = a.field_t[var9];
-                var13 = ph.field_x[var9];
+                var13 = NetworkGameClient.field_x[var9];
                 var14 = -var12 + a.field_t[var10];
                 var15 = -var12 + a.field_t[var11];
-                var16 = ph.field_x[var10] - var13;
-                var17 = ph.field_x[var11] - var13;
+                var16 = NetworkGameClient.field_x[var10] - var13;
+                var17 = NetworkGameClient.field_x[var11] - var13;
               }
               if (!stackIn_13_0 ||
                 !(0 <= -(var16 * var15) + var17 * var14)) {

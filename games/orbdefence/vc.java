@@ -44,7 +44,7 @@ final class vc {
           var9 = param2;
           var11 = 31;
           var12 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var11 >= 0) {
               var12 = var12 + ((this.field_l[var11] & 255) + (255 & (int)var9));
               this.field_l[var11] = (byte)var12;
@@ -59,7 +59,7 @@ final class vc {
                 var8 = 255 & param1[var5_int] << var6 | (255 & param1[var5_int + 1]) >>> -var6 + 8;
                 stackIn_27_0 = var8;
                 if (var13 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (stackIn_27_0 >= 0 &&
                   var8 < 256) {
@@ -243,13 +243,13 @@ final class vc {
           var7_ref.field_db = var5_ref_StringLifetime1;
           var7_ref.b(57);
           var8_ref = (ti) (lf.field_b.b((byte) 126));
-          L13: while (true) {
+          scanLoop1: while (true) {
             if (var8_ref != null) {
               stackIn_59_0 = var7_ref;
               stackIn_59_1 = 100;
               stackIn_59_2 = var8_ref;
               if (var9 != 0) {
-                break L13;
+                break scanLoop1;
               }
               if (oj.a(stackIn_59_0, stackIn_59_1, stackIn_59_2)) {
                 var8_ref = (ti) (lf.field_b.d(853));
@@ -377,11 +377,11 @@ final class vc {
             this.field_c[var2_int] = j.a(arrayValue$1, dupTemp$0);
             var2_int++;
           } while (var6 == 0);
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var2_int <= 10) {
               stackIn_61_0 = 0;
               if (var6 != 0) {
-                break L6;
+                break scanLoop1;
               }
               var3 = stackIn_61_0;
               while (var3 < 8) {
@@ -423,7 +423,7 @@ final class vc {
                 var3++;
               }
               var2_int++;
-              continue L6;
+              continue scanLoop1;
             }
             stackIn_61_0 = 0;
             break;
@@ -505,7 +505,7 @@ final class vc {
               if (0 != var6_intLifetime1 ||
                 var9 != 0) {
                 ab.field_l = var6_intLifetime1;
-                tf.field_c = -1;
+                GameAppletShell.field_c = -1;
                 dh.field_bb = hf.field_l;
               }
               cd.field_t.field_i = 0;
@@ -526,18 +526,18 @@ final class vc {
               if (var6_intLifetime2 == 0 ||
                 var6_intLifetime2 == 1) {
                 dh.field_bb = lm.field_e;
-                tf.field_c = -1;
+                GameAppletShell.field_c = -1;
               }
               if (var6_intLifetime2 != 0 &&
                 var6_intLifetime2 != 1 || var9 != 0) {
                 if (var6_intLifetime2 != 8) {
                   dh.field_bb = hf.field_l;
-                  tf.field_c = -1;
+                  GameAppletShell.field_c = -1;
                 }
                 if (var6_intLifetime2 == 8 ||
                   var9 != 0) {
                   th.a(127);
-                  ea.field_a = false;
+                  FullscreenFocusCanvas.field_a = false;
                   stackIn_55_0 = var6_intLifetime2;
                   return stackIn_55_0;
                 }}}
@@ -570,10 +570,10 @@ final class vc {
                 cd.field_t.b((byte) 90);
                 cd.field_t.l(0);
                 cf.field_c = cd.field_t.j(98203176);
-                ij.field_h = new byte[cf.field_c];
+                ImageProducerRasterBuffer.field_h = new byte[cf.field_c];
                 var8 = 0;
                 while (!(cf.field_c <= var8)) {
-                  ij.field_h[var8] = cd.field_t.d(-20398);
+                  ImageProducerRasterBuffer.field_h[var8] = cd.field_t.d(-20398);
                   var8++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -597,11 +597,11 @@ final class vc {
               } else {
                 mj.field_l.a(12423, uj.b((byte) -120));
               }
-              ea.field_a = false;
+              FullscreenFocusCanvas.field_a = false;
               if (null != var6) {
                 kb.a(uj.b((byte) -120), false, var6);
               }
-              L23: {
+              regionExit1: {
                 if (0 >= tc.field_b &&
                   !jd.field_b) {
                   try {
@@ -617,7 +617,7 @@ final class vc {
                     }
                   }
                   if (decompiledRegionSelector0 == 0) {
-                    break L23;
+                    break regionExit1;
                   }
                 }
                 try {
@@ -647,8 +647,8 @@ final class vc {
               ce.a(-114)) {
               th.a(114);
               if (7 == ab.field_l &&
-                !ea.field_a) {
-                ea.field_a = true;
+                !FullscreenFocusCanvas.field_a) {
+                FullscreenFocusCanvas.field_a = true;
                 stackIn_136_0 = -1;
                 return stackIn_136_0;
               }
@@ -656,12 +656,12 @@ final class vc {
                 ab.field_l = 3;
               }
               kk.field_Y = cd.field_t.g(2);
-              ea.field_a = false;
+              FullscreenFocusCanvas.field_a = false;
               stackIn_142_0 = ab.field_l;
               return stackIn_142_0;
             }
             if (null == p.field_d) {
-              if (ea.field_a) {
+              if (FullscreenFocusCanvas.field_a) {
                 if (30000L < ed.b(-1)) {
                   kk.field_Y = ee.field_c;
                   if (var9 != 0) {
@@ -670,14 +670,14 @@ final class vc {
                 } else {
                   kk.field_Y = dj.field_j;
                 }
-                ea.field_a = false;
+                FullscreenFocusCanvas.field_a = false;
                 stackIn_156_0 = 3;
                 return stackIn_156_0;
               }
               var6_intLifetime3 = eg.field_v;
               eg.field_v = sj.field_x;
               sj.field_x = var6_intLifetime3;
-              ea.field_a = true;
+              FullscreenFocusCanvas.field_a = true;
             }
             stackIn_159_0 = -1;
             return stackIn_159_0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class OrbDefence extends ph {
+public final class OrbDefence extends NetworkGameClient {
     static String field_C;
     static String field_E;
     public static boolean field_D;
@@ -50,7 +50,7 @@ public final class OrbDefence extends ph {
             em.b((byte) 118);
             if (ad.a((byte) -72)) {
               bg.a(-2027485778);
-              ij.b(0);
+              ImageProducerRasterBuffer.b(0);
               if (5 == kf.field_c &&
                 dm.field_f == 0) {
                 kf.field_c = 2;
@@ -169,7 +169,7 @@ public final class OrbDefence extends ph {
         int var2 = 13 / ((-73 - param0) / 49);
         hl.field_N = qk.a(8, -32585);
         lg.field_c = qk.a(9, -32585);
-        mc.a(j.field_b, -29608, tf.field_d);
+        mc.a(j.field_b, -29608, GameAppletShell.field_d);
     }
 
     final static void a(byte[] param0, byte param1) {
@@ -374,14 +374,14 @@ public final class OrbDefence extends ph {
         im.a(9);
         wf.a(71);
         jm.a(-1178583839);
-        qh.c(118);
+        KeyboardListener.c(118);
         rl.b((byte) -126);
         uk.a(param0);
-        ph.g(-97);
+        NetworkGameClient.g(-97);
         ui.a(-10013);
-        tf.b(13695);
+        GameAppletShell.b(13695);
         uj.c(0);
-        gk.a(8);
+        MouseInputListener.a(8);
         pe.b(121);
         ul.b();
         ki.a(false);
@@ -402,9 +402,9 @@ public final class OrbDefence extends ph {
         wh.a(-122);
         na.a(-20008);
         aa.a((byte) -14);
-        fh.a((byte) -27);
+        RasterBuffer.a((byte) -27);
         l.b(124);
-        ea.a(29967);
+        FullscreenFocusCanvas.a(29967);
         jk.a((byte) 65);
         vd.b(13461);
         ja.c(-92);
@@ -415,7 +415,7 @@ public final class OrbDefence extends ph {
         pi.a(param0);
         dj.c((byte) 78);
         cb.a((byte) -95);
-        ca.a(40);
+        IntrusiveNode.a(40);
         lj.d(116);
         mh.a(1);
         he.c(22);
@@ -451,7 +451,7 @@ public final class OrbDefence extends ph {
         nj.c();
         qa.b();
         sd.a((byte) -30);
-        o.a((byte) -128);
+        DualLinkNode.a((byte) -128);
         ia.a((byte) 125);
         fe.a((byte) 126);
         f.a((byte) -69);
@@ -497,7 +497,7 @@ public final class OrbDefence extends ph {
         tb.a(-9698);
         sf.b((byte) 7);
         k.a((byte) -112);
-        al.a((byte) 3);
+        DelegatingCanvas.a((byte) 3);
         bh.a(-21000);
         ll.a(14);
         ac.a();
@@ -528,7 +528,7 @@ public final class OrbDefence extends ph {
         pg.a(-12150);
         bk.a(48);
         g.b((byte) -22);
-        ij.b((byte) 68);
+        ImageProducerRasterBuffer.b((byte) 68);
         db.a(-101);
         mc.c(12);
         od.b((byte) -87);
@@ -564,14 +564,14 @@ public final class OrbDefence extends ph {
         dd.c((byte) -119);
         mm.k(21006);
         ba.b(50);
-        ek.b(-1);
-        qe.a(param0);
+        IterableNodeHashTable.b(-1);
+        DualLinkDeque.a(param0);
         nf.h(127);
         lc.i(96);
         md.d(-77);
         ih.a(-127);
-        pl.a(-1);
-        ol.a(false);
+        NodeHashTableIterator.a(-1);
+        DualLinkDequeIterator.a(false);
         gj.c(false);
         vg.c(false);
         hb.a(119);
@@ -734,7 +734,7 @@ public final class OrbDefence extends ph {
         int var3 = 112 / ((param0 + 4) / 39);
         lj var2 = new lj();
         var2.a(128, 9, (byte) 125);
-        gj.a(22050, var2, true, 1024, (java.awt.Component) ((Object) tf.field_f), wc.field_c);
+        gj.a(22050, var2, true, 1024, (java.awt.Component) ((Object) GameAppletShell.field_f), wc.field_c);
         he.field_C = 16777215;
         lf.field_e = 15632639;
         mf.field_c = 16777215;
@@ -770,14 +770,14 @@ public final class OrbDefence extends ph {
               j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, bk.field_a, "arialbold14"), (byte) 118);
               return false;
             }
-            if (tf.field_d.b(-1) &&
-              tf.field_d.b((byte) 121, "arialbold14")) {
+            if (GameAppletShell.field_d.b(-1) &&
+              GameAppletShell.field_d.b((byte) 121, "arialbold14")) {
               if (!j.field_b.b((byte) 81, "arial13")) {
                 j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 - 14513, bk.field_a, "arial13"), (byte) 112);
                 return false;
               }
-              if (tf.field_d.b(param1 - 98) &&
-                tf.field_d.b((byte) -84, "arial13")) {
+              if (GameAppletShell.field_d.b(param1 - 98) &&
+                GameAppletShell.field_d.b((byte) -84, "arial13")) {
                 if (kd.field_q.b(-1) &&
                   kd.field_q.c(7715)) {
                   if (ig.field_hb.b(-1) &&
@@ -863,10 +863,10 @@ public final class OrbDefence extends ph {
                 j.a(10.0f, ed.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
                 return false;
               }
-              j.a(5.0f, ed.a(hi.field_e, tf.field_d, -14416, bk.field_a, "arial13"), (byte) 122);
+              j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, bk.field_a, "arial13"), (byte) 122);
               return false;
             }
-            j.a(5.0f, ed.a(hi.field_e, tf.field_d, -14416, bk.field_a, "arialbold14"), (byte) 113);
+            j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, bk.field_a, "arialbold14"), (byte) 113);
             return false;
           }
           j.a(3.0f, ed.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
@@ -929,17 +929,17 @@ public final class OrbDefence extends ph {
           return false;
         }
         if (null != j.field_b) {
-          j.a(90.0f, ek.field_c, (byte) 119);
+          j.a(90.0f, IterableNodeHashTable.field_c, (byte) 119);
           this.d((byte) -113);
-          al.field_d = fk.a(j.field_b, "unachieved", 45, "basic");
+          DelegatingCanvas.field_d = fk.a(j.field_b, "unachieved", 45, "basic");
           me.field_n = fk.a(j.field_b, "locked", -90, "basic");
           jm.field_b = fk.a(j.field_b, "orbcoin", 105, "basic");
-          sl.a(2408, al.field_d);
+          sl.a(2408, DelegatingCanvas.field_d);
           sl.a(param1 ^ 2313, me.field_n);
           sl.a(param1 ^ 2313, jm.field_b);
-          ob.field_I = b.a("", "arialbold14", param1 - 202, tf.field_d, j.field_b);
-          jd.field_c = b.a("", "arial13", 90, tf.field_d, j.field_b);
-          tf.field_d = null;
+          ob.field_I = b.a("", "arialbold14", param1 - 202, GameAppletShell.field_d, j.field_b);
+          jd.field_c = b.a("", "arial13", 90, GameAppletShell.field_d, j.field_b);
+          GameAppletShell.field_d = null;
           j.field_b = null;
           vd.a(param1 ^ 59);
           return false;
@@ -1006,16 +1006,16 @@ public final class OrbDefence extends ph {
         p.a(param1 ^ 13894, "", bh.field_d, "turrets");
         gd.field_b = p.a(13863, "", bh.field_d, "explosion");
         p.a(13863, "", bh.field_d, "bosses");
-        gk.field_a = fk.a(bh.field_d, "in_game_shine", -79, "");
+        MouseInputListener.field_a = fk.a(bh.field_d, "in_game_shine", -79, "");
         ad.field_e = fk.a(bh.field_d, "in_game_swarm_bar", param1 ^ -8, "");
         dh.field_X = fk.a(bh.field_d, "in_game_topbar_center", 38, "");
         ck.field_c = new hj[2];
         ck.field_c[0] = fk.a(bh.field_d, "in_game_turret_unavailable", -119, "");
         ck.field_c[1] = fk.a(bh.field_d, "in_game_turret_available", -62, "");
-        qh.field_d = new hj[3];
-        qh.field_d[0] = fk.a(bh.field_d, "in_game_topbutton_blue", 83, "");
-        qh.field_d[1] = fk.a(bh.field_d, "in_game_topbutton_green", -60, "");
-        qh.field_d[2] = fk.a(bh.field_d, "in_game_topbutton_grey", 71, "");
+        KeyboardListener.field_d = new hj[3];
+        KeyboardListener.field_d[0] = fk.a(bh.field_d, "in_game_topbutton_blue", 83, "");
+        KeyboardListener.field_d[1] = fk.a(bh.field_d, "in_game_topbutton_green", -60, "");
+        KeyboardListener.field_d[2] = fk.a(bh.field_d, "in_game_topbutton_grey", 71, "");
         f.field_w = p.a(13863, "", bh.field_d, "frame");
         bk.field_d = p.a(13863, "", bh.field_d, "button_frame");
         qc.field_f = p.a(13863, "", bh.field_d, "button_raised");
@@ -1057,9 +1057,9 @@ public final class OrbDefence extends ph {
         jm.field_b.d(0, 0, var6Lifetime2, var6Lifetime2);
         jm.field_b = null;
         cb.field_a.a(-40);
-        o.a(80, (byte) -38, (java.applet.Applet) (this), tk.field_r, 0, 255);
+        DualLinkNode.a(80, (byte) -38, (java.applet.Applet) (this), tk.field_r, 0, 255);
         var7 = fk.a(bh.field_d, "mb_frames", param1 ^ 38, "");
-        ij.a(-63, ui.field_e, var7);
+        ImageProducerRasterBuffer.a(-63, ui.field_e, var7);
         pj.a(param1 - 97, fk.a(bh.field_d, "mb_logo", 40, ""));
         bk.a(90, p.a(13863, "", bh.field_d, "mb_sshots"));
         var13 = fk.a(bh.field_d, "mb_pricing_bg", 60, "");
@@ -1079,7 +1079,7 @@ public final class OrbDefence extends ph {
         int var3;
         var3 = field_D ? 1 : 0;
         if (va.field_d >= 2 &&
-          ek.field_a[41]) {
+          IterableNodeHashTable.field_a[41]) {
           lb.field_g = 16777215;
           fc.field_d = true;
         }

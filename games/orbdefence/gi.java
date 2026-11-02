@@ -122,49 +122,49 @@ final class gi {
         if (param4 < -7) {
           if (param3 >= param6) {
             if (param3 < param1) {
-              al.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
+              DelegatingCanvas.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
               return;
             }
             if (param1 > param6) {
-              al.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
+              DelegatingCanvas.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
               return;
             }
-            al.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
+            DelegatingCanvas.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
             return;
           }
           if (param6 < param1) {
-            al.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
+            DelegatingCanvas.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
             return;
           }
           if (param1 <= param3) {
-            al.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
+            DelegatingCanvas.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
             return;
           }
-          al.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
+          DelegatingCanvas.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
           return;
         }
         field_e = 95;
         if (param3 >= param6) {
           if (param3 < param1) {
-            al.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
+            DelegatingCanvas.a(ul.field_b, param3, param2, param7, 30979, param5, param6, param0, param1);
             return;
           }
           if (param1 > param6) {
-            al.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
+            DelegatingCanvas.a(ul.field_b, param1, param7, param2, 30979, param5, param6, param0, param3);
             return;
           }
-          al.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
+          DelegatingCanvas.a(ul.field_b, param6, param7, param5, 30979, param2, param1, param0, param3);
           return;
         }
         if (param6 < param1) {
-          al.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
+          DelegatingCanvas.a(ul.field_b, param6, param2, param5, 30979, param7, param3, param0, param1);
           return;
         }
         if (param1 <= param3) {
-          al.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
+          DelegatingCanvas.a(ul.field_b, param3, param5, param7, 30979, param2, param1, param0, param6);
           return;
         }
-        al.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
+        DelegatingCanvas.a(ul.field_b, param1, param5, param2, 30979, param7, param3, param0, param6);
     }
 
     static int a(int param0, int param1) {

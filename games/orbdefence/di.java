@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class di extends ca {
+abstract class di extends IntrusiveNode {
     ng field_h;
     int field_i;
     di field_f;

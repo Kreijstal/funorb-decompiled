@@ -109,8 +109,8 @@ final class kk extends te {
         hj var15;
         hj var16;
         qd var6Lifetime1;
-        L0: {
-          L1: {
+        regionExit1: {
+          regionExit2: {
             var13 = OrbDefence.field_D ? 1 : 0;
             var6 = this.field_T.d(-7847);
             if (ml.field_a != var6 &&
@@ -118,13 +118,13 @@ final class kk extends te {
               var5 = this.field_T.a(param2 ^ 1048451);
               if (var5 == null) {
                 var5 = this.field_R;
-                break L1;
+                break regionExit2;
               }
               if (!(var5.equals(this.field_l))) {
                 this.field_l = var5;
                 this.a((byte) -127);
               }
-              break L0;
+              break regionExit1;
             }
             var5 = pi.field_g;
           }

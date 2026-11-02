@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ca {
+class IntrusiveNode {
     static boolean field_b;
-    ca field_c;
+    IntrusiveNode field_c;
     long field_d;
-    ca field_e;
+    IntrusiveNode field_e;
     static String field_a;
 
     final static short[] a(short[] param0, int param1, boolean param2, se param3) {
@@ -36,7 +36,7 @@ class ca {
           var5 = param3.h(4, 8);
           if (param2) {
             var9 = (se) null;
-            ca.a((short[]) null, -25, true, (se) null);
+            IntrusiveNode.a((short[]) null, -25, true, (se) null);
           }
           var6 = (short)param3.h(16, 8);
           if (0 < var5) {
@@ -144,7 +144,7 @@ class ca {
         this.field_c.field_e = this.field_e;
         if (param0 != 57) {
           se var3 = (se) null;
-          ca.a((short[]) null, 120, true, (se) null);
+          IntrusiveNode.a((short[]) null, 120, true, (se) null);
         }
         this.field_e.field_c = this.field_c;
         this.field_e = null;
@@ -156,7 +156,7 @@ class ca {
           return false;
         }
         if (!param0) {
-          ca.a(-7);
+          IntrusiveNode.a(-7);
         }
         return true;
     }

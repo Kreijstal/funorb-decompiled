@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mg extends ca {
+class mg extends IntrusiveNode {
     static va field_m;
     static boolean field_g;
     int field_i;
     static String field_h;
     byte[] field_j;
-    static ea field_k;
+    static FullscreenFocusCanvas field_k;
     static int field_f;
     static im field_l;
 
@@ -132,7 +132,7 @@ class mg extends ca {
         this.field_i = this.field_i + 1;
         this.field_j[fieldTemp$4] = (byte)(int)(param0 >> 24);
         if (param1 != -16943) {
-          field_k = (ea) null;
+          field_k = (FullscreenFocusCanvas) null;
         }
         int fieldTemp$5 = this.field_i;
         this.field_i = this.field_i + 1;
@@ -251,8 +251,8 @@ class mg extends ca {
             mg.a(-118, (byte) -31);
           }
           vl.field_d = ic.field_g;
-          kd.field_d = tf.field_m;
-          tf.field_m = false;
+          kd.field_d = GameAppletShell.field_m;
+          GameAppletShell.field_m = false;
           gi.field_e = eh.field_c;
           ig.field_fb = vg.field_p;
           bg.field_c = id.field_b;

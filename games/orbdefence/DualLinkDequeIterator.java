@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class ol implements Iterator {
+final class DualLinkDequeIterator implements Iterator {
     static ba field_f;
-    private qe field_g;
-    private o field_c;
+    private DualLinkDeque field_g;
+    private DualLinkNode field_c;
     static int field_h;
     static int field_b;
     static int field_a;
-    private o field_i;
+    private DualLinkNode field_i;
     static int field_d;
     static int field_e;
     static int field_j;
@@ -18,12 +18,12 @@ final class ol implements Iterator {
     public final Object next() {
         Object var1 = this.field_i;
         if (var1 != this.field_g.field_a) {
-          this.field_i = ((o) (var1)).field_f;
+          this.field_i = ((DualLinkNode) (var1)).field_f;
         } else {
           this.field_i = null;
           var1 = null;
         }
-        this.field_c = (o) (var1);
+        this.field_c = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -46,7 +46,7 @@ final class ol implements Iterator {
           var6.b(param1.field_l, param0 + 30328);
           if (param0 != -30329) {
             String var5 = (String) null;
-            ol.a((String) null, -82);
+            DualLinkDequeIterator.a((String) null, -82);
           }
           var6.b(param1.field_f, -1);
           var6.b(param1.field_n, -1);
@@ -73,7 +73,7 @@ final class ol implements Iterator {
         }
     }
 
-    ol(qe param0) {
+    DualLinkDequeIterator(DualLinkDeque param0) {
         this.field_c = null;
         try {
           this.field_g = param0;

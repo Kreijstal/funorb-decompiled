@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class o extends ca {
+class DualLinkNode extends IntrusiveNode {
     static int field_j;
-    o field_f;
-    o field_g;
+    DualLinkNode field_f;
+    DualLinkNode field_g;
     long field_h;
     static String field_i;
 
@@ -36,7 +36,7 @@ class o extends ca {
           return;
         }
         String[] var3 = (String[]) null;
-        o.a(5, (byte) -99, (java.applet.Applet) null, (String[]) null, 44, -56);
+        DualLinkNode.a(5, (byte) -99, (java.applet.Applet) null, (String[]) null, 44, -56);
         this.field_g = null;
     }
 
@@ -88,9 +88,9 @@ class o extends ca {
           if (lf.field_c == null) {
             lf.field_c = "0";
           }
-          pl.field_a = param2.getParameter("overxachievements");
-          if (pl.field_a == null) {
-            pl.field_a = "0";
+          NodeHashTableIterator.field_a = param2.getParameter("overxachievements");
+          if (NodeHashTableIterator.field_a == null) {
+            NodeHashTableIterator.field_a = "0";
           }
           var6 = param2.getParameter("currency");
           if (var6 == null) {
@@ -104,7 +104,7 @@ class o extends ca {
           }
           hd.field_t = param0;
           var7 = -51 / ((param1 - 18) / 56);
-          pl.field_d = param5;
+          NodeHashTableIterator.field_d = param5;
           uh.field_a = param4;
           il.field_e = new hj[param3.length];
           for (var8 = 0; param3.length > var8; var8++) {
@@ -132,7 +132,7 @@ class o extends ca {
         }
     }
 
-    protected o() {
+    protected DualLinkNode() {
     }
 
     static {

@@ -32,7 +32,7 @@ final class dk {
         bg.a(false);
         int var1 = -84 / ((15 - param0) / 63);
         vh.field_j = true;
-        ca.field_b = true;
+        IntrusiveNode.field_b = true;
         bm.field_d.n(7920);
         vd.a(false, -536866817, hi.field_f);
     }

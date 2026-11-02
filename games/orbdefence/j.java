@@ -43,7 +43,7 @@ final class j {
               var2 = 0;
             }
           }
-          for (var3 = 0; ea.field_d.length > var3; var3++) {
+          for (var3 = 0; FullscreenFocusCanvas.field_d.length > var3; var3++) {
             var4 = dd.field_B[var3];
             if (0 > var4) {
               var5 = he.field_C;
@@ -54,7 +54,7 @@ final class j {
                 var5 = mf.field_c;
               }
             }
-            var6 = ea.field_d[var3];
+            var6 = FullscreenFocusCanvas.field_d[var3];
             if (kg.field_m == 2 &&
               1 == var2) {
               if (pj.field_o.length < fd.field_e.length) {
@@ -102,13 +102,13 @@ final class j {
               var9 = stackIn_46_0;
               var1_int = var1_int + gg.field_N;
               if (var9 != null) {
-                var9.a(-123, -mj.field_f + var8Lifetime1, el.field_D + (ol.field_b << 1), var1_int, var7Lifetime1 + (mj.field_f << 1));
+                var9.a(-123, -mj.field_f + var8Lifetime1, el.field_D + (DualLinkDequeIterator.field_b << 1), var1_int, var7Lifetime1 + (mj.field_f << 1));
               }
-              var1_int = var1_int + ol.field_b;
+              var1_int = var1_int + DualLinkDequeIterator.field_b;
             }
             if (var4 >= 0) {
               ck.field_g.b(var6, var8Lifetime1, vl.field_f + var1_int, var5, -1);
-              var1_int = var1_int + (ol.field_b - (-gg.field_N - el.field_D));
+              var1_int = var1_int + (DualLinkDequeIterator.field_b - (-gg.field_N - el.field_D));
             } else {
               jd.field_a.b(var6, var8Lifetime1, var1_int + fe.field_c, var5, -1);
               var1_int = var1_int + d.field_j;

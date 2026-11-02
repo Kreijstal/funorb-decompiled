@@ -185,7 +185,7 @@ abstract class ej extends sg {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        qe.field_c.c(-90 + param0 + this.field_m, param1 + 10);
+        DualLinkDeque.field_c.c(-90 + param0 + this.field_m, param1 + 10);
         sa.a(param2 ^ param2, sd.field_f, param0 + 5, this.field_m - 10, 35 + param1);
         sa.a(param2 ^ -9111, he.field_y, param0, this.field_m, -22 + (param1 + this.field_r));
         var6Lifetime2 = 127;

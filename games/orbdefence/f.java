@@ -42,7 +42,7 @@ final class f {
             this.field_u = -105;
           }
           var5_int = param1 - param0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             stackIn_6_0 = ~var5_int;
             stackIn_6_1 = ~(param0 + param1);
             if (stackIn_6_0 >= stackIn_6_1) {
@@ -62,7 +62,7 @@ final class f {
                 var6++;
               }
               var5_int++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -108,9 +108,9 @@ final class f {
         lb dupTemp$2 = null;
         int stackIn_354_0 = 0;
         int stackIn_354_1 = 0;
-        ca stackIn_399_0 = null;
-        ca stackIn_399_1 = null;
-        ca stackIn_421_0 = null;
+        IntrusiveNode stackIn_399_0 = null;
+        IntrusiveNode stackIn_399_1 = null;
+        IntrusiveNode stackIn_421_0 = null;
         int stackIn_457_0 = 0;
         int stackIn_476_0 = 0;
         int stackIn_476_1 = 0;
@@ -125,7 +125,7 @@ final class f {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ca var3_ref_ca = null;
+        IntrusiveNode var3_ref_ca = null;
         oj var3_ref_oj = null;
         int var4 = 0;
         pd var4_ref_pd = null;
@@ -292,7 +292,7 @@ final class f {
               0 < this.field_x) {
               var2_intLifetime2 = 1;
               var4 = 1;
-              gk.a(mh.field_a[var3Lifetime2 + 31], (byte) -11);
+              MouseInputListener.a(mh.field_a[var3Lifetime2 + 31], (byte) -11);
               if (var3Lifetime2 == 1) {
                 var2_intLifetime2 = 4;
               }
@@ -514,15 +514,15 @@ final class f {
             this.field_g = this.field_g + 3000;
           }
           var2_intLifetime1 = 0;
-          L90: while (true) {
+          scanLoop1: while (true) {
             if (var2_intLifetime1 == 0) {
               var2_intLifetime1 = 1;
               stackIn_421_0 = this.field_r.field_d.field_e;
               if (var12 != 0) {
-                break L90;
+                break scanLoop1;
               }
               var3_ref_ca = stackIn_421_0;
-              L92: while (true) {
+              scanLoop2: while (true) {
                 stackIn_399_0 = this.field_r.field_d;
                 stackIn_399_1 = var3_ref_ca;
                 while (stackIn_399_0 != stackIn_399_1) {
@@ -538,14 +538,14 @@ final class f {
                       var4_ref_pd.field_y != 4)) {
                       var5.field_e = var4_ref_pd.field_e;
                       var4_ref_pd.field_c = var5.field_c;
-                      var4_ref_pd.field_e = (ca) ((Object) var5);
-                      var5.field_c = (ca) ((Object) var4_ref_pd);
-                      var5.field_e.field_c = (ca) ((Object) var5);
-                      var4_ref_pd.field_c.field_e = (ca) ((Object) var4_ref_pd);
+                      var4_ref_pd.field_e = (IntrusiveNode) ((Object) var5);
+                      var5.field_c = (IntrusiveNode) ((Object) var4_ref_pd);
+                      var5.field_e.field_c = (IntrusiveNode) ((Object) var5);
+                      var4_ref_pd.field_c.field_e = (IntrusiveNode) ((Object) var4_ref_pd);
                       var2_intLifetime1 = 0;
                     }
                     var3_ref_ca = var3_ref_ca.field_e;
-                    continue L92;
+                    continue scanLoop2;
                   }
                   break;
                 }
@@ -567,7 +567,7 @@ final class f {
           } while (var12 == 0);
           var3Lifetime1 = 0;
           var4_ref_pdLifetime1 = (pd) (this.field_r.b((byte) 114));
-          L102: while (true) {
+          scanLoop3: while (true) {
             if (var4_ref_pdLifetime1 != null) {
               var4_ref_pdLifetime1.c(1);
               stackIn_476_0 = ~var4_ref_pdLifetime1.field_m;
@@ -606,7 +606,7 @@ final class f {
                   if (var4_ref_pdLifetime1.field_y != 8) {
                     var4_ref_pdLifetime1.field_o = 0;
                   }
-                  gk.a(mh.field_a[55], (byte) -11);
+                  MouseInputListener.a(mh.field_a[55], (byte) -11);
                   hd.field_j = fd.field_d;
                   wl.field_a = 320;
                   md.field_f = 240;
@@ -622,7 +622,7 @@ final class f {
                   stackIn_476_0 = ~var4_ref_pdLifetime1.field_m;
                   stackIn_476_1 = -1;
                   if (var12 != 0) {
-                    break L102;
+                    break scanLoop3;
                   }
                   if (stackIn_476_0 > stackIn_476_1) {
                     var4_ref_pdLifetime1.field_m = 0;
@@ -825,7 +825,7 @@ final class f {
             stackIn_66_0 = ~this.field_f.field_o[var2.field_h * this.field_f.field_c + var2.field_g];
             stackIn_66_1 = -8;
             if (var7 == 0) {
-              L4: {
+              regionExit1: {
                 boolean decompiledFrameCompleted0 = true;
                 if (stackIn_66_0 != stackIn_66_1 ||
                   -1 == var2.field_C) {
@@ -947,7 +947,7 @@ final class f {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new hj(param0.a("", 1, "final_frame.jpg"), (java.awt.Component) ((Object) tf.field_f));
+          var2 = new hj(param0.a("", 1, "final_frame.jpg"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           if (param1 != -17763) {
             return;
           }
@@ -1003,32 +1003,32 @@ final class f {
           var4 = eg.a(param0, param1 + 26662) ? 1 : 0;
           var5 = new wd();
           var5.field_c = (short)param0.h(16, param1 ^ 24);
-          var5.field_R = ca.a(var5.field_R, 16, false, param0);
-          var5.field_x = ca.a(var5.field_x, 16, false, param0);
-          var5.field_Q = ca.a(var5.field_Q, 16, false, param0);
+          var5.field_R = IntrusiveNode.a(var5.field_R, 16, false, param0);
+          var5.field_x = IntrusiveNode.a(var5.field_x, 16, false, param0);
+          var5.field_Q = IntrusiveNode.a(var5.field_Q, 16, false, param0);
           var5.field_u = (short)param0.h(16, 8);
-          var5.field_M = ca.a(var5.field_M, 16, false, param0);
-          var5.field_e = ca.a(var5.field_e, 16, false, param0);
-          var5.field_l = ca.a(var5.field_l, param1, false, param0);
+          var5.field_M = IntrusiveNode.a(var5.field_M, 16, false, param0);
+          var5.field_e = IntrusiveNode.a(var5.field_e, 16, false, param0);
+          var5.field_l = IntrusiveNode.a(var5.field_l, param1, false, param0);
           if (var3 != 0) {
             var5.field_w = (short)param0.h(16, param1 - 8);
-            var5.field_K = ca.a(var5.field_K, 16, false, param0);
-            var5.field_H = ca.a(var5.field_H, 16, false, param0);
-            var5.field_G = ca.a(var5.field_G, 16, false, param0);
-            var5.field_q = ca.a(var5.field_q, 16, false, param0);
-            var5.field_y = ca.a(var5.field_y, 16, false, param0);
-            var5.field_i = ca.a(var5.field_i, 16, false, param0);
+            var5.field_K = IntrusiveNode.a(var5.field_K, 16, false, param0);
+            var5.field_H = IntrusiveNode.a(var5.field_H, 16, false, param0);
+            var5.field_G = IntrusiveNode.a(var5.field_G, 16, false, param0);
+            var5.field_q = IntrusiveNode.a(var5.field_q, 16, false, param0);
+            var5.field_y = IntrusiveNode.a(var5.field_y, 16, false, param0);
+            var5.field_i = IntrusiveNode.a(var5.field_i, 16, false, param0);
           }
           if (var4 != 0) {
             param0.h(16, param1 ^ 24);
-            var5.field_n = ca.a(var5.field_n, 16, false, param0);
-            var5.field_B = ca.a(var5.field_B, 16, false, param0);
-            var5.field_h = ca.a(var5.field_h, 16, false, param0);
-            var5.field_s = ca.a(var5.field_s, 16, false, param0);
-            var5.field_a = ca.a(var5.field_a, 16, false, param0);
+            var5.field_n = IntrusiveNode.a(var5.field_n, 16, false, param0);
+            var5.field_B = IntrusiveNode.a(var5.field_B, 16, false, param0);
+            var5.field_h = IntrusiveNode.a(var5.field_h, 16, false, param0);
+            var5.field_s = IntrusiveNode.a(var5.field_s, 16, false, param0);
+            var5.field_a = IntrusiveNode.a(var5.field_a, 16, false, param0);
           }
           if (eg.a(param0, 26678)) {
-            var5.field_N = ca.a(var5.field_N, 16, false, param0);
+            var5.field_N = IntrusiveNode.a(var5.field_N, 16, false, param0);
           }
           if (eg.a(param0, param1 ^ 26662)) {
             var5.field_t = aa.a(param0, var5.field_t, 16, 20783);
@@ -1164,18 +1164,18 @@ final class f {
             if (null != var3) {
               var5 = oj.a((byte) 47, var3.field_C);
               stackIn_4_0 = ~var3.field_C;
-              L2: while (true) {
+              scanLoop1: while (true) {
                 if (stackIn_4_0 != 0) {
                   var6 = 0;
                   while (true) {
                     stackIn_8_0 = var6;
                     stackIn_8_1 = var5;
                     if (stackIn_8_0 >= stackIn_8_1) {
-                      break L2;
+                      break scanLoop1;
                     }
                     stackIn_4_0 = 0;
                     if (var8 != 0) {
-                      continue L2;
+                      continue scanLoop1;
                     }
                     var7 = stackIn_4_0;
                     while (var5 > var7) {

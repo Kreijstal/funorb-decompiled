@@ -52,12 +52,12 @@ final class id {
             bm.field_a = wb.a(new CharSequence[]{(CharSequence) ((Object) bm.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ci.field_p)}, (byte) -123);
           }
           oj.field_q.q(4210752);
-          o.d(-1);
+          DualLinkNode.d(-1);
         }
     }
 
     final static void b(boolean param0) {
-        if (ji.field_b == -ol.field_h + 0) {
+        if (ji.field_b == -DualLinkDequeIterator.field_h + 0) {
           if (!param0) {
             ji.field_b = ji.field_b + 1;
             return;
@@ -66,7 +66,7 @@ final class id {
           ji.field_b = ji.field_b + 1;
           return;
         }
-        if (ji.field_b == -ol.field_h + 250) {
+        if (ji.field_b == -DualLinkDequeIterator.field_h + 250) {
           if (!param0) {
             ji.field_b = ji.field_b + 1;
             return;

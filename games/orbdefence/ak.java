@@ -92,7 +92,7 @@ final class ak extends jl {
                 var4 = this.field_n.a(15937, param0, true, this.field_t, (byte) 2);
               }
             }
-            this.field_p.a((long)param0, (byte) 127, (ca) (var4));
+            this.field_p.a((long)param0, (byte) 127, (IntrusiveNode) (var4));
           }
           if (((wj) (var4)).field_l) {
             return null;
@@ -149,7 +149,7 @@ final class ak extends jl {
               }
               if (!this.field_n.d(-9)) {
                 var4 = this.field_n.a(15937, param0, true, this.field_t, (byte) 2);
-                this.field_p.a((long)param0, (byte) -8, (ca) (var4));
+                this.field_p.a((long)param0, (byte) -8, (IntrusiveNode) (var4));
               }
               stackIn_84_0 = null;
               return (wj) (stackIn_84_0);
@@ -192,7 +192,7 @@ final class ak extends jl {
             }
             if (!this.field_n.d(-88)) {
               var4 = this.field_n.a(15937, param0, true, this.field_t, (byte) 2);
-              this.field_p.a((long)param0, (byte) -99, (ca) (var4));
+              this.field_p.a((long)param0, (byte) -99, (IntrusiveNode) (var4));
             }
             stackIn_111_0 = null;
             return (wj) (stackIn_111_0);
@@ -313,7 +313,7 @@ final class ak extends jl {
         wj discarded$0 = null;
         wj discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
-        ca var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -450,13 +450,13 @@ final class ak extends jl {
         int var2_int = 0;
         wj var2_ref = null;
         RuntimeException var2_ref2 = null;
-        ca var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ca var6 = null;
-        ca var7 = null;
+        IntrusiveNode var6 = null;
+        IntrusiveNode var7 = null;
         wj var2_refLifetime1;
-        ca var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
         var2 = null;
@@ -493,7 +493,7 @@ final class ak extends jl {
                     discarded$0 = this.a(this.field_o, (byte) 43, 1);
                   }
                   if (this.field_g[this.field_o] == 0) {
-                    var7 = new ca();
+                    var7 = new IntrusiveNode();
                     var7.field_d = (long)this.field_o;
                     this.field_m.a(-121, var7);
                     var2_int = 0;
@@ -538,7 +538,7 @@ final class ak extends jl {
                       discarded$2 = this.a(this.field_o, (byte) 63, 2);
                     }
                     if (this.field_g[this.field_o] != 1) {
-                      var6 = new ca();
+                      var6 = new IntrusiveNode();
                       var6.field_d = (long)this.field_o;
                       this.field_m.a(-90, var6);
                       var2_intLifetime1 = 0;

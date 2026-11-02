@@ -111,7 +111,7 @@ final class ug extends hi {
           param4 -= 2;
           param3 -= 2;
           ul.a(param2, param1, param4, param3, 394758, 1710618);
-          gk.field_a.e(param2, param1, param4, param3, 64);
+          MouseInputListener.field_a.e(param2, param1, param4, param3, 64);
           return;
         }
     }

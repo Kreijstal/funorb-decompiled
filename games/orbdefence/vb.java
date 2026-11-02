@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends ca {
+final class vb extends IntrusiveNode {
     static im field_h;
     static int[] field_g;
     static v field_f;

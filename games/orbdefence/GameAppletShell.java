@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class tf extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static int field_c;
     static java.awt.Canvas field_f;
     static ki field_d;
@@ -492,7 +492,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
           field_d = null;
           field_f = null;
           if (param0 != 13695) {
-            tf.b(46);
+            GameAppletShell.b(46);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "tf.R(" + param0 + ')');
@@ -585,7 +585,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               lm.field_d = param1;
               em.field_r = 0;
               th.field_e = param4;
-              ph.field_u = param4;
+              NetworkGameClient.field_u = param4;
               cg.field_f = uj.b((byte) -120);
               dupTemp$0 = new be(param6, param5, param2, true);
               wc.field_c = dupTemp$0;
@@ -662,11 +662,11 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
             ud.field_f = (32000 + (var6_int >> 1)) / var6_int;
           }
           ab.field_f = 31 & 1 + ab.field_f;
-          fieldTemp$1 = ol.field_j;
-          ol.field_j = ol.field_j + 1;
+          fieldTemp$1 = DualLinkDequeIterator.field_j;
+          DualLinkDequeIterator.field_j = DualLinkDequeIterator.field_j + 1;
           if (50 < fieldTemp$1) {
             hh.field_c = true;
-            ol.field_j = ol.field_j - 50;
+            DualLinkDequeIterator.field_j = DualLinkDequeIterator.field_j - 50;
             field_f.setSize(bd.field_k, th.field_e);
             field_f.setVisible(true);
             boolean decompiledSharedTail0 = (null != h.field_J &&
@@ -720,7 +720,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
 
-    protected tf() {
+    protected GameAppletShell() {
         this.field_h = false;
     }
 
@@ -754,7 +754,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                 if (var2.width < md.field_j) {
                   return;
                 }
-                if (ph.field_u > var2.height) {
+                if (NetworkGameClient.field_u > var2.height) {
                   return;
                 }
               }
@@ -817,7 +817,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          field_f = (java.awt.Canvas) ((Object) new al((java.awt.Component) (this)));
+          field_f = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           if (param0 < 40) {
             field_c = -118;
           }

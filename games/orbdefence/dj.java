@@ -104,8 +104,8 @@ final class dj {
         try {
           sd.field_f = p.a(13863, "commonui", param2, "frame_top");
           he.field_y = p.a(13863, "commonui", param2, "frame_bottom");
-          qe.field_c = fk.a(param2, "jagex_logo_grey", 91, "commonui");
-          ea.field_b = p.a(13863, "commonui", param2, "button");
+          DualLinkDeque.field_c = fk.a(param2, "jagex_logo_grey", 91, "commonui");
+          FullscreenFocusCanvas.field_b = p.a(13863, "commonui", param2, "button");
           wd.field_C = t.a("commonui", param2, "validation", -69);
           pc.field_bb = (kc) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
           lm.field_f = (kc) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
@@ -114,7 +114,7 @@ final class dj {
             dj.a((ki) null, (byte) 9, (ki) null, (ki) null);
           }
           qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
-          var18 = new hj(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) tf.field_f));
+          var18 = new hj(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           uc.a(false, "commonui", param2, "dropdown");
           var5 = fl.a(-9945, param2, "commonui", "screen_options");
           kk.field_P = new qg[4];
@@ -154,7 +154,7 @@ final class dj {
           var12.d();
           var18.b(-var9Lifetime1, 0);
           oc.g((byte) -105);
-          ea.field_b = new hj[]{var16, var12, var11};
+          FullscreenFocusCanvas.field_b = new hj[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

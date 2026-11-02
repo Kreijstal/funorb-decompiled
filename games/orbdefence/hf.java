@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf extends ca {
+final class hf extends IntrusiveNode {
     int field_j;
     static hj[] field_g;
     static int field_i;
-    ca field_f;
+    IntrusiveNode field_f;
     static tl field_l;
     bb field_h;
     static int field_k;
@@ -36,13 +36,13 @@ final class hf extends ca {
 
     final static void a(v param0, ki param1, int param2, int param3) {
         try {
-          ol.field_h = ok.a((byte) 84) * param2 / param3;
+          DualLinkDequeIterator.field_h = ok.a((byte) 84) * param2 / param3;
           fb.a(-2, param1);
-          fh.a(param1, -237);
+          RasterBuffer.a(param1, -237);
           f.a(param1, -17763);
           OrbDefence.d(false);
           ta.j(0);
-          ji.field_b = -ol.field_h + 0;
+          ji.field_b = -DualLinkDequeIterator.field_h + 0;
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -56,7 +56,7 @@ final class hf extends ca {
         field_l = null;
     }
 
-    hf(bb param0, ca param1) {
+    hf(bb param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
           this.field_j = param0.j();

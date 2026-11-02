@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends o {
+final class oe extends DualLinkNode {
     private int[][] field_l;
     private int[] field_k;
     private int[] field_o;
@@ -164,7 +164,7 @@ final class oe extends o {
         ja.field_e = stackIn_3_0;
         wb.field_d = var3 & 127;
         bh.field_c = var8.b((byte) 90);
-        tf.field_l = var8.c((byte) -89);
+        GameAppletShell.field_l = var8.c((byte) -89);
         if (wb.field_d == 2) {
           pc.field_X = var8.j(98203176);
           gb.field_b = var8.a((byte) -30);

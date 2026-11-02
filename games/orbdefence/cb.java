@@ -11,7 +11,7 @@ final class cb implements Runnable {
     private int field_l;
     private int field_h;
     static im field_b;
-    static fh field_a;
+    static RasterBuffer field_a;
     private eb field_f;
     private OutputStream field_i;
     private InputStream field_m;

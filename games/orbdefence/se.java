@@ -129,7 +129,7 @@ final class se extends mg {
         int var3_intLifetime2;
         try {
           oe.field_p = false;
-          ca.field_b = false;
+          IntrusiveNode.field_b = false;
           if (oj.field_q != null &&
             oj.field_q.field_A) {
             if (param2 == 8) {
@@ -147,7 +147,7 @@ final class se extends mg {
               dc.a((byte) -108);
             }
             if (var3_int != 0) {
-              if (ca.field_b) {
+              if (IntrusiveNode.field_b) {
                 param0 = t.a(-415993727, new String[]{param0}, kg.field_g);
               }
               if (jc.field_j) {

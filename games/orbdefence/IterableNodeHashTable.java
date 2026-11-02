@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ek implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     int field_d;
     static String field_c;
     static int[] field_e;
     static boolean[] field_a;
-    private ca field_f;
-    ca[] field_b;
+    private IntrusiveNode field_f;
+    IntrusiveNode[] field_b;
 
     final static int a(int param0, int param1) {
         int var2 = 0;
@@ -21,7 +21,7 @@ final class ek implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new pl(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static void c(int param0) {
@@ -30,7 +30,7 @@ final class ek implements Iterable {
           cd.field_t.b((byte) 90);
           return;
         }
-        ek.a(28, 69);
+        IterableNodeHashTable.a(28, 69);
         cd.field_t.b((byte) 90);
     }
 
@@ -45,8 +45,8 @@ final class ek implements Iterable {
         field_e = null;
     }
 
-    final void a(ca param0, int param1, long param2) {
-        ca var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param0.field_c) {
             param0.b(57);
@@ -65,9 +65,9 @@ final class ek implements Iterable {
         }
     }
 
-    final ca a(long param0, int param1) {
-        ca var4;
-        ca var5;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = OrbDefence.field_D ? 1 : 0;
         var4 = this.field_b[(int)((long)(param1 + this.field_d) & param0)];
@@ -88,13 +88,13 @@ final class ek implements Iterable {
         return var5;
     }
 
-    private ek() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
     final static void a(int param0) {
         if (param0 > -58) {
-          ek.c(126);
+          IterableNodeHashTable.c(126);
         }
     }
 

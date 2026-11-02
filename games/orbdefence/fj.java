@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends ca {
+final class fj extends IntrusiveNode {
     mh field_g;
     byte[] field_f;
 

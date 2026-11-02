@@ -52,17 +52,17 @@ final class ob extends ta implements ff, ai {
             this.field_A = (te) null;
           }
           if (param1 == 0) {
-            ol.a("terms.ws", 1);
+            DualLinkDequeIterator.a("terms.ws", 1);
             return;
           }
           if (param1 == 1) {
-            ol.a("privacy.ws", param2 - 100);
+            DualLinkDequeIterator.a("privacy.ws", param2 - 100);
             return;
           }
           if (param1 != 2) {
             return;
           }
-          ol.a("conduct.ws", param2 - 100);
+          DualLinkDequeIterator.a("conduct.ws", param2 - 100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -89,7 +89,7 @@ final class vk extends jc {
         }
     }
 
-    final static void a(ca param0, byte param1, ca param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -136,7 +136,7 @@ final class vk extends jc {
 
     private vk(int param0, int param1, int param2) {
         this.field_g = qc.field_b;
-        this.field_A = ea.field_b;
+        this.field_A = FullscreenFocusCanvas.field_b;
         this.field_u = param1;
         this.field_x = param0;
         this.field_z = param2;
@@ -148,7 +148,7 @@ final class vk extends jc {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$0b89e0d19fbb(ca param0, int param1, ca param2) {
+    final static void $cfr$intArgs$a$0b89e0d19fbb(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

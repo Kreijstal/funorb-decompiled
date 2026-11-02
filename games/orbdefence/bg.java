@@ -149,7 +149,7 @@ final class bg {
           var21Lifetime2 = wi.field_h;
           var22Lifetime2 = wi.field_d;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param1.field_c) {
               var24Lifetime1 = param1.field_R[var23Lifetime2];
               var25Lifetime1 = param1.field_x[var23Lifetime2];
@@ -164,7 +164,7 @@ final class bg {
                   dg.field_B[var23Lifetime2] = -2147483648;
                 } else {
                   a.field_t[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-                  ph.field_x[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  NetworkGameClient.field_x[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;
                   }
@@ -232,7 +232,7 @@ final class bg {
                   stackIn_68_0 = var18;
                   stackIn_68_1 = ee.field_g.length;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_68_0 >= stackIn_68_1) {
                     break;

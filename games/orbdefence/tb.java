@@ -8,10 +8,10 @@ final class tb {
 
     final static java.awt.Canvas a(byte param0) {
         if (param0 > 107) {
-          return null != mg.field_k ? (java.awt.Canvas) ((Object) mg.field_k) : tf.field_f;
+          return null != mg.field_k ? (java.awt.Canvas) ((Object) mg.field_k) : GameAppletShell.field_f;
         }
         field_b = (String[]) null;
-        return null != mg.field_k ? (java.awt.Canvas) ((Object) mg.field_k) : tf.field_f;
+        return null != mg.field_k ? (java.awt.Canvas) ((Object) mg.field_k) : GameAppletShell.field_f;
     }
 
     final static int a(int param0, int param1, int param2) {

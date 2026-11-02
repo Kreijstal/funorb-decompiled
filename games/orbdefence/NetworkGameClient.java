@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ph extends tf {
+abstract class NetworkGameClient extends GameAppletShell {
     static int[] field_x;
     private boolean field_z;
     private int field_y;
@@ -55,7 +55,7 @@ abstract class ph extends tf {
         nc.a(wj.field_m, this.field_y, param7, this.field_n, (byte) 93, this.field_q, this.field_s, wc.field_c, this.field_p);
         k.a(0);
         mj.field_i = de.a((byte) -112);
-        l.a(tf.field_f, 59);
+        l.a(GameAppletShell.field_f, 59);
         pj.field_p = param3;
         cb.field_e = param5;
         ve.field_Q = param6;
@@ -71,7 +71,7 @@ abstract class ph extends tf {
         if (param0 >= -108) {
           this.i(-72);
         }
-        int var4 = tf.field_c - 1;
+        int var4 = GameAppletShell.field_c - 1;
         byte[] var5 = new byte[var4];
         cd.field_t.a(-29, 0, var5, var4);
         ke.a(bk.a(var5, -12465), var3 != 0, (byte) -94, uj.b((byte) -120));
@@ -117,7 +117,7 @@ abstract class ph extends tf {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = kg.a(am.b(-28), uh.b(param1 ^ -5), this.field_o, na.a((byte) -105), qh.a(-42), 200, jf.j(989270945));
+            var5_intLifetime1 = kg.a(am.b(-28), uh.b(param1 ^ -5), this.field_o, na.a((byte) -105), KeyboardListener.a(-42), 200, jf.j(989270945));
             if (-1 != var5_intLifetime1) {
               fa.a(-111, var5_intLifetime1, vd.field_e, kk.field_Y);
               kk.field_Y = null;
@@ -128,9 +128,9 @@ abstract class ph extends tf {
             this.field_w = 13L;
           }
           if (var4 == 3) {
-            if (o.field_j != -1 &&
-              o.field_j != 0) {
-              o.field_j = -1;
+            if (DualLinkNode.field_j != -1 &&
+              DualLinkNode.field_j != 0) {
+              DualLinkNode.field_j = -1;
               hh.c(param1 ^ -24061);
             }
             if (param0) {
@@ -166,7 +166,7 @@ abstract class ph extends tf {
             hi.field_k = 10;
           }
           if (var4 == 7) {
-            tf.a(uj.b((byte) -120), -6407);
+            GameAppletShell.a(uj.b((byte) -120), -6407);
           }
           if (var4 == 8) {
             ad.a(~param1, uj.b((byte) -120));
@@ -293,7 +293,7 @@ abstract class ph extends tf {
                                 return;
                               }
                               if (var2 == 18) {
-                                ek.c(117);
+                                IterableNodeHashTable.c(117);
                                 return;
                               }
                               pe.a((byte) -13, (Throwable) null, "MGS1: " + sj.b(true));
@@ -307,7 +307,7 @@ abstract class ph extends tf {
                             gb.b(-122);
                           }
                         } else {
-                          fb.a(cd.field_t, tf.field_c, -31, wc.field_c);
+                          fb.a(cd.field_t, GameAppletShell.field_c, -31, wc.field_c);
                         }
                       } else {
                         this.i(-22);
@@ -407,7 +407,7 @@ abstract class ph extends tf {
         if (var2 == 0 ||
           var2 == 1) {
           if (vk.field_w[1]) {
-            ij.a((byte) -34, 2);
+            ImageProducerRasterBuffer.a((byte) -34, 2);
           }
           if (vk.field_w[2]) {
             qj.a(3, 7287);
@@ -477,51 +477,51 @@ abstract class ph extends tf {
             lm.field_c = 15000L + ji.b(-103);
           }
         }
-        if (-1 == o.field_j ||
-          o.field_j == 0) {
-          stackIn_23_0 = (-1 != o.field_j) ? 0 : 1;
+        if (-1 == DualLinkNode.field_j ||
+          DualLinkNode.field_j == 0) {
+          stackIn_23_0 = (-1 != DualLinkNode.field_j) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          o.field_j = bh.a((byte) 117);
+          DualLinkNode.field_j = bh.a((byte) 117);
           if (var3Lifetime1 != 0 &&
-            o.field_j == 0 &&
+            DualLinkNode.field_j == 0 &&
             hi.field_k == 11 &&
             !sg.c(true)) {
             id.a(false);
           }
-          if (-1 != o.field_j &&
-            o.field_j != 0) {
+          if (-1 != DualLinkNode.field_j &&
+            DualLinkNode.field_j != 0) {
             lm.field_c = ji.b(123) + 15000L;
           }
         }
-        if (-1 != o.field_j &&
-          o.field_j != 0) {
+        if (-1 != DualLinkNode.field_j &&
+          DualLinkNode.field_j != 0) {
           if (10 <= vh.field_n) {
             if (hi.field_k >= 10) {
               md.b((byte) -86);
-              if (o.field_j != 3) {
-                if (o.field_j == 4) {
+              if (DualLinkNode.field_j != 3) {
+                if (DualLinkNode.field_j == 4) {
                   se.a(cg.field_h, (byte) 109, 256);
                 } else {
-                  if (o.field_j == 2) {
+                  if (DualLinkNode.field_j == 2) {
                     se.a(ql.field_a, (byte) -118, 256);
                   } else {
-                    if (o.field_j != 5) {
-                      se.a(pl.field_h, (byte) 63, 256);
+                    if (DualLinkNode.field_j != 5) {
+                      se.a(NodeHashTableIterator.field_h, (byte) 63, 256);
                     } else {
                       se.a(nf.field_k, (byte) -82, 5);
                     }
                   }
                 }
               } else {
-                se.a(o.field_i, (byte) -127, 256);
+                se.a(DualLinkNode.field_i, (byte) -127, 256);
               }
               fa.field_a = true;
             }
           } else {
-            if (o.field_j != 3) {
-              if (o.field_j != 4) {
-                if (o.field_j != 2) {
-                  if (5 != o.field_j) {
+            if (DualLinkNode.field_j != 3) {
+              if (DualLinkNode.field_j != 4) {
+                if (DualLinkNode.field_j != 2) {
+                  if (5 != DualLinkNode.field_j) {
                     this.a(119, "js5connect");
                   } else {
                     this.a(99, "outofdate");
@@ -537,18 +537,18 @@ abstract class ph extends tf {
             }
           }
         }
-        if ((-1 != o.field_j &&
-          o.field_j != 0 ||
+        if ((-1 != DualLinkNode.field_j &&
+          DualLinkNode.field_j != 0 ||
           sg.c(true)) &&
           ji.b(-125) >= lm.field_c) {
           fa.field_a = false;
-          if (o.field_j != -1 &&
-            0 != o.field_j) {
-            o.field_j = -1;
+          if (DualLinkNode.field_j != -1 &&
+            0 != DualLinkNode.field_j) {
+            DualLinkNode.field_j = -1;
             hh.c(24060);
           }
         }
-        if (0 == o.field_j &&
+        if (0 == DualLinkNode.field_j &&
           !sg.c(true)) {
           mf.field_d = false;
         }
@@ -565,7 +565,7 @@ abstract class ph extends tf {
           wb.field_b = hm.a(48, true, false, nl.field_b, 1);
           j.field_b = og.field_g;
           vh.field_n = 2;
-          tf.field_d = am.field_b;
+          GameAppletShell.field_d = am.field_b;
         }
         if (vh.field_n == 2) {
           if (null != lf.field_a &&
@@ -588,7 +588,7 @@ abstract class ph extends tf {
           dk.a(1, og.field_g, wb.field_b, am.field_b) &&
           tk.a(wb.field_b, 26810)) {
           ak.b(22176);
-          ek.a(-96);
+          IterableNodeHashTable.a(-96);
           tl.field_e = cj.field_c;
           pa.field_b = false;
           gj.a(am.field_b, (byte) 33, wb.field_b, jc.field_b, og.field_g);
@@ -651,9 +651,9 @@ abstract class ph extends tf {
         }
         if (!param1 &&
           vc.field_a) {
-          hl.a(tf.field_f, 118);
+          hl.a(GameAppletShell.field_f, 118);
           this.e(99);
-          l.a(tf.field_f, -123);
+          l.a(GameAppletShell.field_f, -123);
         }
         if (vk.field_w[8]) {
           od.a(192);
@@ -768,13 +768,13 @@ abstract class ph extends tf {
         }
         if (var2 == 0) {
           if (hi.field_k == 11 &&
-            o.field_j == 0) {
+            DualLinkNode.field_j == 0) {
             id.a(false);
           }
         } else {
           if (1 == var2) {
             if (hi.field_k == 11 &&
-              o.field_j == 0) {
+              DualLinkNode.field_j == 0) {
               id.a(false);
             }
           } else {
@@ -798,7 +798,7 @@ abstract class ph extends tf {
         field_x = null;
     }
 
-    protected ph() {
+    protected NetworkGameClient() {
     }
 
     static {

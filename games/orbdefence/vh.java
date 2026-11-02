@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends ca {
+final class vh extends IntrusiveNode {
     int field_p;
     int field_f;
     int field_m;

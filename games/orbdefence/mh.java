@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mh {
-    private ca field_g;
+    private IntrusiveNode field_g;
     private int field_h;
     private int field_d;
-    private ca[] field_e;
-    private ca field_c;
+    private IntrusiveNode[] field_e;
+    private IntrusiveNode field_c;
     static java.awt.Frame field_b;
     static String field_f;
     static dl[] field_a;
 
-    final void a(long param0, byte param1, ca param2) {
-        ca var5 = null;
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param2.field_c != null) {
             param2.b(57);
@@ -29,18 +29,18 @@ final class mh {
         }
     }
 
-    final ca c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        ca var4;
-        ca var5;
-        ca var17;
-        ca var18;
-        ca var22;
-        ca var31;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var17;
+        IntrusiveNode var18;
+        IntrusiveNode var22;
+        IntrusiveNode var31;
         var3 = OrbDefence.field_D ? 1 : 0;
         if (this.field_h <= 0) {
           if (param0 < -55) {
@@ -120,7 +120,7 @@ final class mh {
         field_b = (java.awt.Frame) null;
     }
 
-    final ca a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 < 115) {
           this.a((byte) -8);
           this.field_h = 0;
@@ -132,13 +132,13 @@ final class mh {
 
     mh(int param0) {
         int var2 = 0;
-        ca dupTemp$1 = null;
-        ca var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_h = 0;
         this.field_d = param0;
-        this.field_e = new ca[param0];
+        this.field_e = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new ca();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
           var3.field_e = var3;
@@ -146,13 +146,13 @@ final class mh {
         }
     }
 
-    final ca a(long param0, int param1) {
-        ca var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = OrbDefence.field_D ? 1 : 0;
         if (param1 != -1) {
-          return (ca) null;
+          return (IntrusiveNode) null;
         }
-        ca var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
+        IntrusiveNode var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
         this.field_g = var4.field_e;
         while (this.field_g != var4) {
           if (~this.field_g.field_d == ~param0) {

@@ -44,7 +44,7 @@ final class nd {
               var3_int = 1;
               hh.field_c = false;
             }
-            hc.a((byte) -96, var3_int != 0, tj.a(-112), ca.a(false), sk.field_H);
+            hc.a((byte) -96, var3_int != 0, tj.a(-112), IntrusiveNode.a(false), sk.field_H);
           } else {
             if (rf.l(-28)) {
               if (hi.field_k == 0) {

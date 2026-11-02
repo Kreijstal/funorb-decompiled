@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class pj extends ca {
+class pj extends IntrusiveNode {
     int field_v;
     String field_i;
     ag field_h;
@@ -485,12 +485,12 @@ class pj extends ca {
               return param2;
             }
             this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-            var8 = al.field_c;
+            var8 = DelegatingCanvas.field_c;
             if (var8 != null) {
               if (var8.field_h instanceof wk) {
                 ((wk) (var8.field_h)).a(-114, var8, (mm) null);
               }
-              al.field_c = null;
+              DelegatingCanvas.field_c = null;
             }
             if (var7 != 0 &&
               var5 != 0 &&
@@ -519,12 +519,12 @@ class pj extends ca {
                   return param2;
                 }
                 this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-                var9 = al.field_c;
+                var9 = DelegatingCanvas.field_c;
                 if (var9 != null) {
                   if (var9.field_h instanceof wk) {
                     ((wk) (var9.field_h)).a(-114, var9, (mm) null);
                   }
-                  al.field_c = null;
+                  DelegatingCanvas.field_c = null;
                 }
                 if (gi.field_e != 0) {
                   this.h(0);
@@ -546,12 +546,12 @@ class pj extends ca {
             return param2;
           }
           this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-          var10 = al.field_c;
+          var10 = DelegatingCanvas.field_c;
           if (var10 != null) {
             if (var10.field_h instanceof wk) {
               ((wk) (var10.field_h)).a(-114, var10, (mm) null);
             }
-            al.field_c = null;
+            DelegatingCanvas.field_c = null;
           }
           if (var7 != 0 &&
             var5 != 0 &&
@@ -568,13 +568,13 @@ class pj extends ca {
             if (of.field_G == 0 &&
               ud.field_j != 0) {
               this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-              var15 = al.field_c;
+              var15 = DelegatingCanvas.field_c;
               var6 = var15;
               if (var15 != null) {
                 if (var15.field_h instanceof wk) {
                   ((wk) (var15.field_h)).a(-114, var15, (mm) null);
                 }
-                al.field_c = null;
+                DelegatingCanvas.field_c = null;
               }
               if (var7 != 0 &&
                 gi.field_e != 0) {
@@ -594,13 +594,13 @@ class pj extends ca {
               if (of.field_G == 0 &&
                 ud.field_j != 0) {
                 this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-                var16 = al.field_c;
+                var16 = DelegatingCanvas.field_c;
                 var6Lifetime1 = var16;
                 if (var16 != null) {
                   if (var16.field_h instanceof wk) {
                     ((wk) (var16.field_h)).a(-114, var16, (mm) null);
                   }
-                  al.field_c = null;
+                  DelegatingCanvas.field_c = null;
                 }
                 if (gi.field_e != 0) {
                   this.h(0);
@@ -622,13 +622,13 @@ class pj extends ca {
             return param2;
           }
           this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-          var17 = al.field_c;
+          var17 = DelegatingCanvas.field_c;
           var6Lifetime2 = var17;
           if (var17 != null) {
             if (var17.field_h instanceof wk) {
               ((wk) (var17.field_h)).a(-114, var17, (mm) null);
             }
-            al.field_c = null;
+            DelegatingCanvas.field_c = null;
           }
           if (var7 != 0 &&
             gi.field_e != 0) {
@@ -650,12 +650,12 @@ class pj extends ca {
             return param2;
           }
           this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-          var11 = al.field_c;
+          var11 = DelegatingCanvas.field_c;
           if (var11 != null) {
             if (var11.field_h instanceof wk) {
               ((wk) (var11.field_h)).a(-114, var11, (mm) null);
             }
-            al.field_c = null;
+            DelegatingCanvas.field_c = null;
           }
           if (var7 != 0 &&
             var5 != 0 &&
@@ -681,12 +681,12 @@ class pj extends ca {
           return param2;
         }
         this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
-        var14 = al.field_c;
+        var14 = DelegatingCanvas.field_c;
         if (var14 != null) {
           if (var14.field_h instanceof wk) {
             ((wk) (var14.field_h)).a(-114, var14, (mm) null);
           }
-          al.field_c = null;
+          DelegatingCanvas.field_c = null;
         }
         if (var7 != 0 &&
           var5 != 0 &&

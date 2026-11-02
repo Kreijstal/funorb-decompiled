@@ -53,7 +53,7 @@ final class ql {
         try {
           var5 = (qf) (vb.field_h.b((byte) 119));
           while (var5 != null) {
-            ol.a(-30329, var5, param0);
+            DualLinkDequeIterator.a(-30329, var5, param0);
             var5 = (qf) (vb.field_h.d(853));
           }
           var2_int = -104 / ((param1 + 19) / 32);

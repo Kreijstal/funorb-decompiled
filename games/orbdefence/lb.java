@@ -26,7 +26,7 @@ final class lb {
         if (ne.field_b != null) {
           ne.field_b.c((byte) -113);
         }
-        tf.field_f.requestFocus();
+        GameAppletShell.field_f.requestFocus();
     }
 
     final void a(byte param0, int param1) {
@@ -67,7 +67,7 @@ final class lb {
           var12 = cd.field_t;
           var2 = var12.b((byte) 90);
           if (var2 == 0) {
-            var10 = qh.b(8);
+            var10 = KeyboardListener.b(8);
             var16 = var10;
             var13 = var16;
             var3 = var13;
@@ -105,7 +105,7 @@ final class lb {
                   th.a(121);
                   return;
                 }
-                var15.field_f = qh.b(8);
+                var15.field_f = KeyboardListener.b(8);
                 var15.field_g = true;
                 var15.field_i = var15.field_f[0];
                 var15.b(57);

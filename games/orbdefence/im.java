@@ -4,11 +4,11 @@
 final class im {
     static int[] field_a;
     static String field_b;
-    ca field_d;
-    private ca field_c;
+    IntrusiveNode field_d;
+    private IntrusiveNode field_c;
 
-    final ca a(byte param0) {
-        ca var2 = this.field_d.field_c;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_c;
         if (this.field_d == var2) {
           return null;
         }
@@ -17,8 +17,8 @@ final class im {
         return var2;
     }
 
-    final ca d(int param0) {
-        ca var2 = this.field_c;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (this.field_d == var2) {
           this.field_c = null;
           return null;
@@ -30,8 +30,8 @@ final class im {
         return var2;
     }
 
-    final ca b(byte param0) {
-        ca var2 = this.field_d.field_e;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_e;
         if (var2 == this.field_d) {
           this.field_c = null;
           return null;
@@ -48,20 +48,20 @@ final class im {
         return this.field_d.field_e == this.field_d ? true : false;
     }
 
-    final ca d(byte param0) {
-        ca var2 = this.field_d.field_c;
+    final IntrusiveNode d(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_c;
         if (var2 == this.field_d) {
           this.field_c = null;
           return null;
         }
         this.field_c = var2.field_c;
         if (param0 != -122) {
-          this.field_c = (ca) null;
+          this.field_c = (IntrusiveNode) null;
         }
         return var2;
     }
 
-    final void a(int param0, ca param1) {
+    final void a(int param0, IntrusiveNode param1) {
         if (null != param1.field_c) {
           param1.b(57);
         }
@@ -94,9 +94,9 @@ final class im {
     final int c(byte param0) {
         int var4 = OrbDefence.field_D ? 1 : 0;
         int var2 = 0;
-        ca var3 = this.field_d.field_e;
+        IntrusiveNode var3 = this.field_d.field_e;
         if (param0 != 52) {
-          this.field_d = (ca) null;
+          this.field_d = (IntrusiveNode) null;
         }
         while (this.field_d != var3) {
           var2++;
@@ -113,8 +113,8 @@ final class im {
         field_a = null;
     }
 
-    final ca b(int param0) {
-        ca var2 = this.field_c;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (param0 != 10708) {
           this.a((byte) 52);
         }
@@ -127,12 +127,12 @@ final class im {
     }
 
     public im() {
-        this.field_d = new ca();
+        this.field_d = new IntrusiveNode();
         this.field_d.field_e = this.field_d;
         this.field_d.field_c = this.field_d;
     }
 
-    final void a(ca param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         if (param0.field_c != null) {
           param0.b(57);
         }
@@ -150,7 +150,7 @@ final class im {
     }
 
     final void a(boolean param0) {
-        ca var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = OrbDefence.field_D ? 1 : 0;
         while (true) {
           var2 = this.field_d.field_e;
@@ -165,11 +165,11 @@ final class im {
         this.field_c = null;
     }
 
-    final ca e(int param0) {
+    final IntrusiveNode e(int param0) {
         if (param0 != 0) {
-          this.field_c = (ca) null;
+          this.field_c = (IntrusiveNode) null;
         }
-        ca var2 = this.field_d.field_e;
+        IntrusiveNode var2 = this.field_d.field_e;
         if (this.field_d == var2) {
           return null;
         }

@@ -4,7 +4,7 @@
 final class ad {
     String field_d;
     String field_c;
-    static qh field_b;
+    static KeyboardListener field_b;
     int field_a;
     String field_f;
     ki field_g;
@@ -153,6 +153,6 @@ final class ad {
     }
 
     static {
-        field_b = new qh();
+        field_b = new KeyboardListener();
     }
 }

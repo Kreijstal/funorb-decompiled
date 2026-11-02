@@ -392,7 +392,7 @@ final class pk extends ta implements jb, ai {
 
     private final void k(int param0) {
         pj var3;
-        if (qe.b(14388) ||
+        if (DualLinkDeque.b(14388) ||
           !(this.field_N.field_l.length() <= 0) &&
           !(this.field_C.field_l.length() <= 0)) {
           vf.a((byte) 108, this.field_C.field_l, this.field_N.field_l);

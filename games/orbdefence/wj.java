@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wj extends o {
+abstract class wj extends DualLinkNode {
     static int field_m;
     static vl field_o;
     static ml field_k;
@@ -17,10 +17,10 @@ abstract class wj extends o {
           if (bm.field_e) {
             return null;
           }
-          if (sd.field_g < gk.field_b) {
+          if (sd.field_g < MouseInputListener.field_b) {
             return null;
           }
-          if (gk.field_b + df.field_i > sd.field_g) {
+          if (MouseInputListener.field_b + df.field_i > sd.field_g) {
             return ce.field_c;
           }
           return null;
@@ -28,10 +28,10 @@ abstract class wj extends o {
         if (bm.field_e) {
           return null;
         }
-        if (sd.field_g < gk.field_b) {
+        if (sd.field_g < MouseInputListener.field_b) {
           return null;
         }
-        if (gk.field_b + df.field_i > sd.field_g) {
+        if (MouseInputListener.field_b + df.field_i > sd.field_g) {
           return ce.field_c;
         }
         return null;

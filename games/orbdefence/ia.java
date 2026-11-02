@@ -31,7 +31,7 @@ abstract class ia {
     }
 
     final static void b(int param0, int param1) {
-        ij.field_g = param0;
+        ImageProducerRasterBuffer.field_g = param0;
         if (ml.field_c != null) {
           ml.field_c.b(param0, 111);
         }

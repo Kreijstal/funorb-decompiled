@@ -27,10 +27,10 @@ final class qk {
 
     final static ki a(int param0, int param1) {
         if (param1 == -32585) {
-          return al.a(true, 5200, param0, 1, false, false);
+          return DelegatingCanvas.a(true, 5200, param0, 1, false, false);
         }
         field_b = (String) null;
-        return al.a(true, 5200, param0, 1, false, false);
+        return DelegatingCanvas.a(true, 5200, param0, 1, false, false);
     }
 
     static {

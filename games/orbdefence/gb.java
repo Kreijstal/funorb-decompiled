@@ -6,10 +6,10 @@ final class gb {
     static int field_d;
     static String field_e;
     private int field_a;
-    private qe field_c;
+    private DualLinkDeque field_c;
     static String field_h;
     static String[] field_g;
-    private ek field_i;
+    private IterableNodeHashTable field_i;
     private int field_f;
 
     private final void a(nf param0, int param1) {
@@ -95,7 +95,7 @@ final class gb {
     private final void a(int param0, long param1) {
         nf var4 = (nf) (this.field_i.a(param1, -1));
         if (param0 != 2) {
-          this.field_c = (qe) null;
+          this.field_c = (DualLinkDeque) null;
         }
         this.a(var4, 0);
     }
@@ -161,36 +161,36 @@ final class gb {
           if (kg.field_m == 0) {
             var3_int = th.a(jd.field_a, ta.field_y, li.field_c, vi.field_I, -60);
             var4 = var3_int + 3;
-            ea.field_d = new String[var4];
+            FullscreenFocusCanvas.field_d = new String[var4];
             dd.field_B = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               dd.field_B[var5] = -1;
             }
             gg.field_O = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              ea.field_d[var5] = li.field_c[var5];
+              FullscreenFocusCanvas.field_d[var5] = li.field_c[var5];
             }
-            ea.field_d[-3 + var4] = "";
-            ea.field_d[-2 + var4] = p.field_f;
+            FullscreenFocusCanvas.field_d[-3 + var4] = "";
+            FullscreenFocusCanvas.field_d[-2 + var4] = p.field_f;
             dd.field_B[-2 + var4] = 0;
             gg.field_O[0] = 4;
-            ea.field_d[-1 + var4] = th.field_d;
+            FullscreenFocusCanvas.field_d[-1 + var4] = th.field_d;
             dd.field_B[var4 - 1] = 1;
             gg.field_O[1] = 5;
           } else if (kg.field_m == 1) {
             var3_int = th.a(jd.field_a, ta.field_y, li.field_c, vi.field_I, -77);
             var4 = var3_int + 2;
-            ea.field_d = new String[var4];
+            FullscreenFocusCanvas.field_d = new String[var4];
             dd.field_B = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               dd.field_B[var5] = -1;
             }
             gg.field_O = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              ea.field_d[var5] = li.field_c[var5];
+              FullscreenFocusCanvas.field_d[var5] = li.field_c[var5];
             }
-            ea.field_d[-2 + var4] = "";
-            ea.field_d[var4 - 1] = th.field_d;
+            FullscreenFocusCanvas.field_d[-2 + var4] = "";
+            FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;
             dd.field_B[-1 + var4] = 0;
             gg.field_O[0] = 5;
           } else if (kg.field_m != 2) {
@@ -201,33 +201,33 @@ final class gb {
                 var3_int = th.a(jd.field_a, dg.field_C, li.field_c, vi.field_I, -98);
               }
               var4 = 2 + var3_int;
-              ea.field_d = new String[var4];
+              FullscreenFocusCanvas.field_d = new String[var4];
               dd.field_B = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 dd.field_B[var5] = -1;
               }
               gg.field_O = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                ea.field_d[var5] = li.field_c[var5];
+                FullscreenFocusCanvas.field_d[var5] = li.field_c[var5];
               }
-              ea.field_d[var4 - 2] = "";
-              ea.field_d[var4 - 1] = th.field_d;
+              FullscreenFocusCanvas.field_d[var4 - 2] = "";
+              FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;
               dd.field_B[-1 + var4] = 0;
               gg.field_O[0] = 5;
             } else if (4 == kg.field_m) {
               var3_int = th.a(jd.field_a, fi.field_a, li.field_c, vi.field_I, -89);
               var4 = var3_int + 2;
-              ea.field_d = new String[var4];
+              FullscreenFocusCanvas.field_d = new String[var4];
               dd.field_B = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 dd.field_B[var5] = -1;
               }
               gg.field_O = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                ea.field_d[var5] = li.field_c[var5];
+                FullscreenFocusCanvas.field_d[var5] = li.field_c[var5];
               }
-              ea.field_d[-2 + var4] = "";
-              ea.field_d[-1 + var4] = th.field_d;
+              FullscreenFocusCanvas.field_d[-2 + var4] = "";
+              FullscreenFocusCanvas.field_d[-1 + var4] = th.field_d;
               dd.field_B[var4 - 1] = 0;
               gg.field_O[0] = 5;
             } else {
@@ -237,19 +237,19 @@ final class gb {
               var3_int = th.a(jd.field_a, lh.field_a, li.field_c, vi.field_I, -52);
               var4 = var3_int + 3;
               dd.field_B = new int[var4];
-              ea.field_d = new String[var4];
+              FullscreenFocusCanvas.field_d = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 dd.field_B[var5] = -1;
               }
               gg.field_O = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                ea.field_d[var5] = li.field_c[var5];
+                FullscreenFocusCanvas.field_d[var5] = li.field_c[var5];
               }
-              ea.field_d[var4 - 3] = "";
-              ea.field_d[var4 - 2] = ge.field_o;
+              FullscreenFocusCanvas.field_d[var4 - 3] = "";
+              FullscreenFocusCanvas.field_d[var4 - 2] = ge.field_o;
               dd.field_B[-2 + var4] = 0;
               gg.field_O[0] = 3;
-              ea.field_d[var4 - 1] = th.field_d;
+              FullscreenFocusCanvas.field_d[var4 - 1] = th.field_d;
               dd.field_B[-1 + var4] = 1;
               gg.field_O[1] = 5;
             }
@@ -300,23 +300,23 @@ final class gb {
             var6 = stackIn_36_0;
             var7 = var6 + (var5 + 7);
             dd.field_B = new int[var7];
-            ea.field_d = new String[var7];
+            FullscreenFocusCanvas.field_d = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
               dd.field_B[var8] = -1;
             }
-            ea.field_d[0] = sa.field_g;
+            FullscreenFocusCanvas.field_d[0] = sa.field_g;
             dd.field_B[1] = 0;
-            ea.field_d[1] = lc.field_s;
+            FullscreenFocusCanvas.field_d[1] = lc.field_s;
             gg.field_O = new int[2];
-            ea.field_d[3] = mj.field_k;
+            FullscreenFocusCanvas.field_d[3] = mj.field_k;
             dd.field_B[3] = 1;
-            ea.field_d[4] = te.field_J;
-            ea.field_d[2] = ii.field_a;
+            FullscreenFocusCanvas.field_d[4] = te.field_J;
+            FullscreenFocusCanvas.field_d[2] = ii.field_a;
             gg.field_O[1] = 2;
             gg.field_O[0] = 5;
-            ea.field_d[5] = "";
+            FullscreenFocusCanvas.field_d[5] = "";
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_43_0 = ea.field_d;
+              stackIn_43_0 = FullscreenFocusCanvas.field_d;
               stackIn_43_1 = var8Lifetime2 + 6;
               if (0 <= fd.field_e.length + (var8Lifetime2 - var5)) {
                 stackIn_44_2 = fd.field_e[var8Lifetime2 + fd.field_e.length - var5];
@@ -325,10 +325,10 @@ final class gb {
               }
               stackIn_43_0[stackIn_43_1] = stackIn_44_2;
             }
-            ea.field_d[var5 + 6] = null;
+            FullscreenFocusCanvas.field_d[var5 + 6] = null;
             dd.field_B[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_48_0 = ea.field_d;
+              stackIn_48_0 = FullscreenFocusCanvas.field_d;
               stackIn_48_1 = 7 + var5 + var8Lifetime3;
               stackIn_48_2 = sj.field_u.length;
               stackIn_48_3 = var8Lifetime3;
@@ -343,9 +343,9 @@ final class gb {
           }
           ab.field_j.field_i = gg.field_O.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < ea.field_d.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < FullscreenFocusCanvas.field_d.length; var4Lifetime1++) {
             stackIn_93_0 = !(dd.field_B[var4Lifetime1] < 0);
-            var5Lifetime1 = hg.a(stackIn_93_0, ea.field_d[var4Lifetime1], 0);
+            var5Lifetime1 = hg.a(stackIn_93_0, FullscreenFocusCanvas.field_d[var4Lifetime1], 0);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -371,8 +371,8 @@ final class gb {
           }
           ha.field_o = -(var3_intLifetime1 >> 1) + fd.field_c;
           lc.field_q = -(var3_intLifetime1 >> 1) + (fd.field_c + var3_intLifetime1);
-          rf.field_C = (gg.field_N + ol.field_b << 1) * ab.field_j.field_i;
-          for (var4Lifetime2 = 0; var4Lifetime2 < ea.field_d.length; var4Lifetime2++) {
+          rf.field_C = (gg.field_N + DualLinkDequeIterator.field_b << 1) * ab.field_j.field_i;
+          for (var4Lifetime2 = 0; var4Lifetime2 < FullscreenFocusCanvas.field_d.length; var4Lifetime2++) {
             stackIn_116_0 = rf.field_C;
             if (dd.field_B[var4Lifetime2] >= 0) {
               stackIn_117_1 = el.field_D;
@@ -382,23 +382,23 @@ final class gb {
             rf.field_C = stackIn_116_0 + stackIn_117_1;
           }
           sd.field_h = sf.field_T - (rf.field_C >> 1);
-          qd.field_d = new int[ea.field_d.length][];
+          qd.field_d = new int[FullscreenFocusCanvas.field_d.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = sd.field_h;
-          while (ea.field_d.length > var4Lifetime3) {
+          while (FullscreenFocusCanvas.field_d.length > var4Lifetime3) {
             var6Lifetime1 = dd.field_B[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + d.field_j;
             } else {
-              var7Lifetime2 = hg.a(true, ea.field_d[var4Lifetime3], 0);
+              var7Lifetime2 = hg.a(true, FullscreenFocusCanvas.field_d[var4Lifetime3], 0);
               var8Lifetime1 = fd.field_c - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + gg.field_N;
               qd.field_d[var4Lifetime3] = new int[4];
               qd.field_d[var4Lifetime3][0] = var8Lifetime1 - mj.field_f;
               qd.field_d[var4Lifetime3][1] = var5Lifetime3;
               qd.field_d[var4Lifetime3][2] = var7Lifetime2 + (mj.field_f << 1);
-              var5Lifetime3 = var5Lifetime3 + ((ol.field_b << 1) + gg.field_N + el.field_D);
-              qd.field_d[var4Lifetime3][3] = el.field_D + (ol.field_b << 1);
+              var5Lifetime3 = var5Lifetime3 + ((DualLinkDequeIterator.field_b << 1) + gg.field_N + el.field_D);
+              qd.field_d[var4Lifetime3][3] = el.field_D + (DualLinkDequeIterator.field_b << 1);
             }
             var4Lifetime3++;
           }

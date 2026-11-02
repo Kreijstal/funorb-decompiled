@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class d extends ca {
+final class d extends IntrusiveNode {
     int field_i;
     static boolean field_g;
     static boolean field_k;

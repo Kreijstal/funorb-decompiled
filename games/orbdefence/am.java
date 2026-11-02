@@ -74,7 +74,7 @@ final class am {
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
-        ca var2 = null;
+        IntrusiveNode var2 = null;
         ha var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;

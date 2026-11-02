@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends ca {
+final class fb extends IntrusiveNode {
     static ba field_i;
     int field_h;
     int[] field_g;

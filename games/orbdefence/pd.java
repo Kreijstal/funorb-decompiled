@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends ca {
+final class pd extends IntrusiveNode {
     int field_z;
     private int field_A;
     int field_B;
@@ -74,25 +74,25 @@ final class pd extends ca {
         int var17Lifetime1;
         int var18Lifetime1;
         var27 = OrbDefence.field_D ? 1 : 0;
-        var4 = 320 - param0 + ol.field_e * this.field_u;
-        var5 = 240 + (-param2 + this.field_z * ol.field_e);
+        var4 = 320 - param0 + DualLinkDequeIterator.field_e * this.field_u;
+        var5 = 240 + (-param2 + this.field_z * DualLinkDequeIterator.field_e);
         this.field_v = 320.0 / (double)(Math.abs(-320 + var4) + 320);
-        var6 = he.field_u[this.field_y] + qh.field_c[this.field_s.field_f.field_o[this.field_t]];
+        var6 = he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
         if (0 < var6) {
           if (this.field_k != 0) {
             if (1 == this.field_k) {
-              var4 = var4 + this.field_g * ol.field_e / var6;
+              var4 = var4 + this.field_g * DualLinkDequeIterator.field_e / var6;
             } else {
               if (this.field_k == 2) {
-                var5 = var5 - ol.field_e * this.field_g / var6;
+                var5 = var5 - DualLinkDequeIterator.field_e * this.field_g / var6;
               } else {
                 if (3 == this.field_k) {
-                  var4 = var4 - ol.field_e * this.field_g / var6;
+                  var4 = var4 - DualLinkDequeIterator.field_e * this.field_g / var6;
                 }
               }
             }
           } else {
-            var5 = var5 + ol.field_e * this.field_g / var6;
+            var5 = var5 + DualLinkDequeIterator.field_e * this.field_g / var6;
           }
         }
         if (this.field_h <= 0) {
@@ -299,7 +299,7 @@ final class pd extends ca {
         if (this.field_y != 12 &&
           this.field_s.field_f.field_e[this.field_t]) {
           if (this.field_f == 0) {
-            ea.a(param0 ^ 11, mh.field_a[57], (int)(this.field_v * 96.0));
+            FullscreenFocusCanvas.a(param0 ^ 11, mh.field_a[57], (int)(this.field_v * 96.0));
           }
           gd.field_c = gd.field_c + 1;
           this.field_f = 2;
@@ -312,8 +312,8 @@ final class pd extends ca {
           }
           this.field_g = var2;
         }
-        if (he.field_u[this.field_y] + qh.field_c[this.field_s.field_f.field_o[this.field_t]] < this.field_g) {
-          this.field_g = he.field_u[this.field_y] + qh.field_c[this.field_s.field_f.field_o[this.field_t]];
+        if (he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]] < this.field_g) {
+          this.field_g = he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
         }
         if (0 > this.field_g) {
           var3 = this.field_u;
@@ -453,7 +453,7 @@ final class pd extends ca {
             this.field_s.field_f.field_m[this.field_t] = true;
           }
           if (var7 != 0) {
-            this.field_g = he.field_u[this.field_y] + qh.field_c[this.field_s.field_f.field_o[this.field_t]];
+            this.field_g = he.field_u[this.field_y] + KeyboardListener.field_c[this.field_s.field_f.field_o[this.field_t]];
           } else {
             this.field_g = 0;
           }

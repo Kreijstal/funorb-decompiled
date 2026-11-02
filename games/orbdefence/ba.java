@@ -53,7 +53,7 @@ final class ba {
           ul.e(257, 2, 50, 8947848, 32);
           ul.e(390, 2, 50, 8947848, 32);
           ul.e(391, 2, 50, 8947848, 32);
-          gk.field_a.e(2, 2, 636, 50, 32);
+          MouseInputListener.field_a.e(2, 2, 636, 50, 32);
           if (param0 != -27) {
             ba.a(-15);
           }
